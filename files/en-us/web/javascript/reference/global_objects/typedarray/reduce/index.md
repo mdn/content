@@ -116,6 +116,6 @@ same polyfill can be used here: replace `Array.prototype.reduce` with
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.reduce` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.reduce` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray.prototype.reduceRight()")}}
 - {{jsxref("Array.prototype.reduce()")}}

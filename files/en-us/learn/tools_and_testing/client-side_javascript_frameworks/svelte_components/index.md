@@ -114,8 +114,8 @@ Let's get started.
 
 We'll begin by creating our `FilterButton.svelte`.
 
-1.  First of all, create a new file — `components/FilterButton.svelte`.
-2.  Inside this file we will declare a `filter` prop, and then copy the relevant markup over to it from `Todos.svelte`. Add the following content into the file:
+1. First of all, create a new file — `components/FilterButton.svelte`.
+2. Inside this file we will declare a `filter` prop, and then copy the relevant markup over to it from `Todos.svelte`. Add the following content into the file:
 
     ```html
     <script>
@@ -141,13 +141,13 @@ We'll begin by creating our `FilterButton.svelte`.
     </div>
     ```
 
-3.  Back in our `Todos.svelte` component, we want to make use of our `FilterButton` component. First of all, we need to import it — add the following line at the top of the `Todos.svelte <script>` section:
+3. Back in our `Todos.svelte` component, we want to make use of our `FilterButton` component. First of all, we need to import it — add the following line at the top of the `Todos.svelte <script>` section:
 
     ```js
     import FilterButton from './FilterButton.svelte'
     ```
 
-4.  Now, replace the `filters` `<div>` with a call to the `FilterButton` component, which takes the current filter as a prop — the below line is all you need:
+4. Now, replace the `filters` `<div>` with a call to the `FilterButton` component, which takes the current filter as a prop — the below line is all you need:
 
     ```html
     <FilterButton {filter} />
@@ -171,7 +171,7 @@ export let onclick = (clicked) => {}
 
 And we'll declare the following reactive statement — `$: onclick(filter)` — to call the `onclick` handler whenever the `filter` variable is updated.
 
-1.  The `<script>` section of our `FilterButton` component should end up looking like this — update it now:
+1. The `<script>` section of our `FilterButton` component should end up looking like this — update it now:
 
     ```js
     <script>
@@ -181,7 +181,7 @@ And we'll declare the following reactive statement — `$: onclick(filter)` — 
     </script>
     ```
 
-2.  Now when we call `FilterButton` inside `Todos.svelte` we'll need to specify the handler. Update it like this:
+2. Now when we call `FilterButton` inside `Todos.svelte` we'll need to specify the handler. Update it like this:
 
     ```html
     <FilterButton {filter} onclick={ (clicked) => filter = clicked }/>
@@ -197,7 +197,7 @@ It works OK, but Svelte provides us an easier and more straightforward way to ac
 
 Using `bind`, we will tell Svelte that any changes made to the `filter` prop in the `FilterButton` component should propagate back up to the parent component, `Todos`. That is, we will bind the `filter` variable's value in the parent to its value in the child.
 
-1.  In `Todos.svelte`, update the call to the `FilterButton` component as follows:
+1. In `Todos.svelte`, update the call to the `FilterButton` component as follows:
 
     ```html
     <FilterButton bind:filter={filter} />
@@ -205,7 +205,7 @@ Using `bind`, we will tell Svelte that any changes made to the `filter` prop in 
 
     As usual, Svelte provides us with a nice shorthand — `bind:value={value}` is equivalent to `bind:value`. So in the above example you could just write `<FilterButton bind:filter />`.
 
-2.  The child component can now modify the value of the parent's filter variable, so we no longer need the `onclick` prop. Modify your `FilterButton` `<script>` like this:
+2. The child component can now modify the value of the parent's filter variable, so we no longer need the `onclick` prop. Modify your `FilterButton` `<script>` like this:
 
     ```html
     <script>
@@ -213,7 +213,7 @@ Using `bind`, we will tell Svelte that any changes made to the `filter` prop in 
     </script>
     ```
 
-3.  Try your app again, and you should still see your filters working correctly.
+3. Try your app again, and you should still see your filters working correctly.
 
 ## Creating our Todo component
 
@@ -221,8 +221,8 @@ Now we will create a `Todo` component to encapsulate each individual todo — in
 
 Our `Todo` component will receive a single `todo` object as a prop. Let's declare the `todo` prop and move the code from the Todos component. Just for now, we'll replace the call to `removeTodo` with an alert. We'll add that functionality back in later on.
 
-1.  Create a new component file — `components/Todo.svelte`.
-2.  Put the following contents inside this file:
+1. Create a new component file — `components/Todo.svelte`.
+2. Put the following contents inside this file:
 
     ```html
     <script>
@@ -248,13 +248,13 @@ Our `Todo` component will receive a single `todo` object as a prop. Let's declar
     </div>
     ```
 
-3.  Now we need to import our `Todo` component into `Todos.svelte`. Go to this file now, and add the following `import` statement below your previous one:
+3. Now we need to import our `Todo` component into `Todos.svelte`. Go to this file now, and add the following `import` statement below your previous one:
 
     ```js
     import Todo from './Todo.svelte'
     ```
 
-4.  Next, we need to update our `{#each}` block to include a `<Todo>` component for each todo, rather than the code that has been moved out to `Todo.svelte`. We are also passing the current `todo` object into the component as a prop.
+4. Next, we need to update our `{#each}` block to include a `<Todo>` component for each todo, rather than the code that has been moved out to `Todo.svelte`. We are also passing the current `todo` object into the component as a prop.
 
     Update the `{#each}` block inside `Todos.svelte` like so:
 
@@ -286,14 +286,14 @@ To create custom events we'll use the `createEventDispatcher` utility. This will
 
 We'll edit our `Todo` component to emit a `remove` event, passing the todo being removed as additional information.
 
-1.  First of all, add the following lines to the top of the `Todo` component's `<script>` section:
+1. First of all, add the following lines to the top of the `Todo` component's `<script>` section:
 
     ```js
     import { createEventDispatcher } from 'svelte'
     const dispatch = createEventDispatcher()
     ```
 
-2.  Now update the _Delete_ button in the markup section of the same file to look like so:
+2. Now update the _Delete_ button in the markup section of the same file to look like so:
 
     ```html
     <button type="button" class="btn btn__danger" on:click={() => dispatch('remove', todo)}>
@@ -303,7 +303,7 @@ We'll edit our `Todo` component to emit a `remove` event, passing the todo being
 
     With `dispatch('remove', todo)` we are emitting a `remove` event, and passing as additional data the `todo` being deleted. The handler will be called with an event object available, with the additional data available in the `event.detail` property.
 
-3.  Now we have to listen to that event from inside `Todos.svelte` and act accordingly. Go back to this file and update your `<Todo>` component call like so:
+3. Now we have to listen to that event from inside `Todos.svelte` and act accordingly. Go back to this file and update your `<Todo>` component call like so:
 
     ```html
     <Todo {todo} on:remove={e => removeTodo(e.detail)} />
@@ -311,7 +311,7 @@ We'll edit our `Todo` component to emit a `remove` event, passing the todo being
 
     Our handler receives the `e` parameter (the event object), which as described before holds the todo being deleted in the `detail` property.
 
-4.  At this point, if you try out your app again, you should see that the _Delete_ functionality now works again! So our custom event has worked as we hoped. In addition, the `remove` event listener is sending the data change back up to the parent, so our "x out of y items completed" status heading will now update appropriately when todos are deleted.
+4. At this point, if you try out your app again, you should see that the _Delete_ functionality now works again! So our custom event has worked as we hoped. In addition, the `remove` event listener is sending the data change back up to the parent, so our "x out of y items completed" status heading will now update appropriately when todos are deleted.
 
 Now we'll take care of the `update` event, so that our parent component can get notified of any modified todo.
 
@@ -321,14 +321,14 @@ We still have to implement functionality to allow us to edit existing todos. We'
 
 ### Handling the events
 
-1.  We'll need one variable to track whether we are in editing mode and another to store the name of the task being updated. Add the following variable definitions at the bottom of the `<script>` section of the `Todo` component:
+1. We'll need one variable to track whether we are in editing mode and another to store the name of the task being updated. Add the following variable definitions at the bottom of the `<script>` section of the `Todo` component:
 
     ```js
     let editing = false                     // track editing mode
     let name = todo.name                    // hold the name of the todo being edited
     ```
 
-2.  We have to decide what events our `Todo` component will emit:
+2. We have to decide what events our `Todo` component will emit:
 
     - We could emit different events for the status toggle and editing of the name. (e.g. `updateTodoStatus` and `updateTodoName`).
     - Or we could take a more generic approach and emit a single `update` event for both operations.
@@ -346,7 +346,7 @@ We still have to implement functionality to allow us to edit existing todos. We'
 
     Here we are using the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to return the original todo with the modifications applied to it.
 
-3.  Next we'll create different functions to handle each user action. When the Todo is in editing mode, the user can save or cancel the changes. When it's not in editing mode, the user can delete the todo, edit it, or toggle its status between completed and active.
+3. Next we'll create different functions to handle each user action. When the Todo is in editing mode, the user can save or cancel the changes. When it's not in editing mode, the user can delete the todo, edit it, or toggle its status between completed and active.
 
     Add the following set of functions below your previous function to handle these actions:
 
@@ -455,7 +455,7 @@ The `<input>`'s `value` property will be bound to the `name` variable, and the b
 - When `onCancel()` is invoked, `name` is restored to its original value (when passed in as a prop) and we exit editing mode (by setting `editing` to `false`).
 - When `onSave()` in invoked, we run the `update()` function — passing it the modified `name` — and exit editing mode.
 
-We also disable the _Save_ button when the `<input>` is empty, using the `disabled={!name}` attribute, and allow the user to cancel the edit using the <kbd>Escape</kbd> key, like this:
+We also disable the _Save_ button when the `<input>` is empty, using the `disabled={!name}` attribute, and allow the user to cancel the edit using the <kbd>Escape</kbd> key, like this:
 
 ```js
 on:keydown={e => e.key === 'Escape' && onCancel()}.
@@ -463,7 +463,7 @@ on:keydown={e => e.key === 'Escape' && onCancel()}.
 
 We also use `todo.id` to create unique ids for the new input controls and labels.
 
-1.  The complete updated markup of our `Todo` component looks like the following. Update yours now:
+1. The complete updated markup of our `Todo` component looks like the following. Update yours now:
 
     ```html
     <div class="stack-small">
@@ -505,7 +505,7 @@ We also use `todo.id` to create unique ids for the new input controls and labels
 
     > **Note:** We could further split this into two different components, one for editing the todo and the other for displaying it. In the end, it boils down to how comfortable you feel dealing with this level of complexity in a single component. You should also consider whether splitting it further would enable reusing this component in a different context.
 
-2.  To get the update functionality working, we have to handle the `update` event from the `Todos` component. In its `<script>` section, add this handler:
+2. To get the update functionality working, we have to handle the `update` event from the `Todos` component. In its `<script>` section, add this handler:
 
     ```js
     function updateTodo(todo) {
@@ -516,7 +516,7 @@ We also use `todo.id` to create unique ids for the new input controls and labels
 
     We find the `todo` by `id` in our `todos` array, and update its content using spread syntax. In this case we could have also just used `todos[i] = todo`, but this implementation is more bullet-proof, allowing the `Todo` component to return only the updated parts of the todo.
 
-3.  Next we have to listen for the `update` event on our `<Todo>` component call, and run our `updateTodo()` function when this occurs to change the `name` and `completed` status. Update your \<Todo> call like this:
+3. Next we have to listen for the `update` event on our `<Todo>` component call, and run our `updateTodo()` function when this occurs to change the `name` and `completed` status. Update your \<Todo> call like this:
 
     ```js
     {#each filterTodos(filter, todos) as todo (todo.id)}
@@ -525,14 +525,14 @@ We also use `todo.id` to create unique ids for the new input controls and labels
           on:update={e => updateTodo(e.detail)}
           on:remove={e => removeTodo(e.detail)}
         />
-      </li>
+      </li>
     ```
 
-4.  Try your app again, and you should see that you can delete, add, edit, cancel editing of, and toggle completion status of todos! And our "x out of y items completed" status heading will now update appropriately when todos are completed.
+4. Try your app again, and you should see that you can delete, add, edit, cancel editing of, and toggle completion status of todos! And our "x out of y items completed" status heading will now update appropriately when todos are completed.
 
 As you can see, it's easy to implement the "props-down, events-up" pattern in Svelte. Nevertheless, for simple components `bind` can be a good choice; Svelte will let you choose.
 
-> **Note:** Svelte provides more advanced mechanisms to share information among components: the [Context API](https://svelte.dev/docs#setContext) and [Stores](https://svelte.dev/docs#svelte_store). The Context API provides a mechanism for components and their descendants to "talk" to each other without passing around data and functions as props, or dispatching lots of events. Stores allows you to share reactive data among components that are not hierarchically related. We will look at Stores later on in the series.
+> **Note:** Svelte provides more advanced mechanisms to share information among components: the [Context API](https://svelte.dev/docs#setContext) and [Stores](https://svelte.dev/docs#svelte_store). The Context API provides a mechanism for components and their descendants to "talk" to each other without passing around data and functions as props, or dispatching lots of events. Stores allows you to share reactive data among components that are not hierarchically related. We will look at Stores later on in the series.
 
 ## The code so far
 

@@ -63,11 +63,11 @@ if (condition) {
 
 Here we've got:
 
-1.  The keyword `if` followed by some parentheses.
-2.  A condition to test, placed inside the parentheses (typically "is this value bigger than this other value?", or "does this value exist?"). The condition makes use of the [comparison operators](/en-US/docs/Learn/JavaScript/First_steps/Math#comparison_operators) we discussed in the last module and returns `true` or `false`.
-3.  A set of curly braces, inside which we have some code — this can be any code we like, and it only runs if the condition returns `true`.
-4.  The keyword `else`.
-5.  Another set of curly braces, inside which we have some more code — this can be any code we like, and it only runs if the condition is not `true` — or in other words, the condition is `false`.
+1. The keyword `if` followed by some parentheses.
+2. A condition to test, placed inside the parentheses (typically "is this value bigger than this other value?", or "does this value exist?"). The condition makes use of the [comparison operators](/en-US/docs/Learn/JavaScript/First_steps/Math#comparison_operators) we discussed in the last module and returns `true` or `false`.
+3. A set of curly braces, inside which we have some code — this can be any code we like, and it only runs if the condition returns `true`.
+4. The keyword `else`.
+5. Another set of curly braces, inside which we have some more code — this can be any code we like, and it only runs if the condition is not `true` — or in other words, the condition is `false`.
 
 This code is pretty human-readable — it is saying "**if** the **condition** returns `true`, run code A, **else** run code B"
 
@@ -155,10 +155,10 @@ function setWeather() {
 
 {{ EmbedLiveSample('else_if', '100%', 100, "", "") }}
 
-1.  Here we've got an HTML {{htmlelement("select")}} element allowing us to make different weather choices, and a simple paragraph.
-2.  In the JavaScript, we are storing a reference to both the {{htmlelement("select")}} and {{htmlelement("p")}} elements, and adding an event listener to the `<select>` element so that when its value is changed, the `setWeather()` function is run.
-3.  When this function is run, we first set a variable called `choice` to the current value selected in the `<select>` element. We then use a conditional statement to show different text inside the paragraph depending on what the value of `choice` is. Notice how all the conditions are tested in `else if() {...}` blocks, except for the first one, which is tested in an `if() {...}` block.
-4.  The very last choice, inside the `else {...}` block, is basically a "last resort" option — the code inside it will be run if none of the conditions are `true`. In this case, it serves to empty the text out of the paragraph if nothing is selected, for example, if a user decides to re-select the "--Make a choice--" placeholder option shown at the beginning.
+1. Here we've got an HTML {{htmlelement("select")}} element allowing us to make different weather choices, and a simple paragraph.
+2. In the JavaScript, we are storing a reference to both the {{htmlelement("select")}} and {{htmlelement("p")}} elements, and adding an event listener to the `<select>` element so that when its value is changed, the `setWeather()` function is run.
+3. When this function is run, we first set a variable called `choice` to the current value selected in the `<select>` element. We then use a conditional statement to show different text inside the paragraph depending on what the value of `choice` is. Notice how all the conditions are tested in `else if() {...}` blocks, except for the first one, which is tested in an `if() {...}` block.
+4. The very last choice, inside the `else {...}` block, is basically a "last resort" option — the code inside it will be run if none of the conditions are `true`. In this case, it serves to empty the text out of the paragraph if nothing is selected, for example, if a user decides to re-select the "--Make a choice--" placeholder option shown at the beginning.
 
 > **Note:** You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html) ([see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html) on there also.)
 
@@ -303,13 +303,13 @@ switch (expression) {
 
 Here we've got:
 
-1.  The keyword `switch`, followed by a set of parentheses.
-2.  An expression or value inside the parentheses.
-3.  The keyword `case`, followed by a choice that the expression/value could be, followed by a colon.
-4.  Some code to run if the choice matches the expression.
-5.  A `break` statement, followed by a semi-colon. If the previous choice matches the expression/value, the browser stops executing the code block here, and moves on to any code that appears below the switch statement.
-6.  As many other cases (bullets 3–5) as you like.
-7.  The keyword `default`, followed by exactly the same code pattern as one of the cases (bullets 3–5), except that `default` does not have a choice after it, and you don't need to `break` statement as there is nothing to run after this in the block anyway. This is the default option that runs if none of the choices match.
+1. The keyword `switch`, followed by a set of parentheses.
+2. An expression or value inside the parentheses.
+3. The keyword `case`, followed by a choice that the expression/value could be, followed by a colon.
+4. Some code to run if the choice matches the expression.
+5. A `break` statement, followed by a semi-colon. If the previous choice matches the expression/value, the browser stops executing the code block here, and moves on to any code that appears below the switch statement.
+6. As many other cases (bullets 3–5) as you like.
+7. The keyword `default`, followed by exactly the same code pattern as one of the cases (bullets 3–5), except that `default` does not have a choice after it, and you don't need to `break` statement as there is nothing to run after this in the block anyway. This is the default option that runs if none of the choices match.
 
 > **Note:** You don't have to include the `default` section — you can safely omit it if there is no chance that the expression could end up equaling an unknown value. If there is a chance of this, however, you need to include it to handle unknown cases.
 
@@ -423,8 +423,8 @@ In this example, you are going to help us finish a simple calendar application. 
 
 We need you to write a conditional statement inside the `onchange` handler function, just below the `// ADD CONDITIONAL HERE` comment. It should:
 
-1.  Look at the selected month (stored in the `choice` variable. This will be the `<select>` element value after the value changes, so "January" for example.)
-2.  Set a variable called `days` to be equal to the number of days in the selected month. To do this you'll have to look up the number of days in each month of the year. You can ignore leap years for the purposes of this example.
+1. Look at the selected month (stored in the `choice` variable. This will be the `<select>` element value after the value changes, so "January" for example.)
+2. Set a variable called `days` to be equal to the number of days in the selected month. To do this you'll have to look up the number of days in each month of the year. You can ignore leap years for the purposes of this example.
 
 Hints:
 

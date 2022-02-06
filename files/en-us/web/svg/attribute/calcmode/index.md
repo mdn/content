@@ -15,10 +15,10 @@ The default mode is `linear`, however if the attribute does not support linear i
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("animate")}}
-*   {{SVGElement("animateColor")}}
-*   {{SVGElement("animateMotion")}}
-*   {{SVGElement("animateTransform")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("animateColor")}}
+- {{SVGElement("animateMotion")}}
+- {{SVGElement("animateTransform")}}
 
 ## Usage notes
 
@@ -42,14 +42,14 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `discrete`
-    *   : This specifies that the animation function will jump from one value to the next without any interpolation.
-*   `linear`
-    *   : Simple linear interpolation between values is used to calculate the animation function. Except for {{SVGElement("animateMotion")}}, this is the default value.
-*   `paced`
-    *   : Defines interpolation to produce an even pace of change across the animation. This is only supported for values that define a linear numeric range, and for which some notion of "distance" between points can be calculated (e.g. position, width, height, etc.). If paced is specified, any {{SVGAttr("keyTimes")}} or {{SVGAttr("keySplines")}} will be ignored. For {{SVGElement("animateMotion")}}, this is the default value.
-*   `spline`
-    *   : Interpolates from one value in the {{SVGAttr("values")}} list to the next according to a time function defined by a cubic Bézier spline. The points of the spline are defined in the {{SVGAttr("keyTimes")}} attribute, and the control points for each interval are defined in the {{SVGAttr("keySplines")}} attribute.
+- `discrete`
+  - : This specifies that the animation function will jump from one value to the next without any interpolation.
+- `linear`
+  - : Simple linear interpolation between values is used to calculate the animation function. Except for {{SVGElement("animateMotion")}}, this is the default value.
+- `paced`
+  - : Defines interpolation to produce an even pace of change across the animation. This is only supported for values that define a linear numeric range, and for which some notion of "distance" between points can be calculated (e.g. position, width, height, etc.). If paced is specified, any {{SVGAttr("keyTimes")}} or {{SVGAttr("keySplines")}} will be ignored. For {{SVGElement("animateMotion")}}, this is the default value.
+- `spline`
+  - : Interpolates from one value in the {{SVGAttr("values")}} list to the next according to a time function defined by a cubic Bézier spline. The points of the spline are defined in the {{SVGAttr("keyTimes")}} attribute, and the control points for each interval are defined in the {{SVGAttr("keySplines")}} attribute.
 
 ## Specifications
 
@@ -81,4 +81,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-*   [SMIL Animation specification](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#AccumulateAttribute)
+- [SMIL Animation specification](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#AccumulateAttribute)

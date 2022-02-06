@@ -16,6 +16,8 @@ The **`NetworkInformation`** interface provides information about the connection
 
 {{AvailableInWorkers}}
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _This interface also inherits properties of its parent, {{domxref("EventTarget")}}._

@@ -190,11 +190,11 @@ $ wasm-pack build --target web
 
 This does a number of things (and they take a lot of time, especially the first time you run `wasm-pack`). To learn about them in detail, check out [this blog post on Mozilla Hacks](https://hacks.mozilla.org/2018/04/hello-wasm-pack/). In short, `wasm-pack build`:
 
-1.  Compiles your Rust code to WebAssembly.
-2.  Runs `wasm-bindgen` on that WebAssembly, generating a JavaScript file that wraps up that WebAssembly file into a module the browser can understand.
-3.  Creates a `pkg` directory and move that JavaScript file and your WebAssembly code into it.
-4.  Reads your `Cargo.toml` and produces an equivalent `package.json`.
-5.  Copies your `README.md` (if you have one) into the package.
+1. Compiles your Rust code to WebAssembly.
+2. Runs `wasm-bindgen` on that WebAssembly, generating a JavaScript file that wraps up that WebAssembly file into a module the browser can understand.
+3. Creates a `pkg` directory and move that JavaScript file and your WebAssembly code into it.
+4. Reads your `Cargo.toml` and produces an equivalent `package.json`.
+5. Copies your `README.md` (if you have one) into the package.
 
 The end result? You have a package inside of the `pkg` directory.
 

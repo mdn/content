@@ -28,6 +28,8 @@ To create a new `XREquirectLayer`, call either:
 
 To present layers to the XR device, add them to the `layers` render state using {{domxref("XRSession.updateRenderState()")}}.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _Inherits properties from its parent, {{domxref("XRCompositionLayer")}}._

@@ -19,6 +19,8 @@ The **`OrientationSensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/S
 
 If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
 
+{{InheritanceDiagram}}
+
 ## Interfaces based on OrientationSensor
 
 Below is a list of interfaces based on the OrientationSensor interface.
@@ -34,7 +36,7 @@ Below is a list of interfaces based on the OrientationSensor interface.
 ## Methods
 
 - {{domxref("OrientationSensor.populateMatrix()")}}
-  - : Populates the given object with the rotation matrix based on the latest sensor reading. The rotation maxtrix is shown below.
+  - : Populates the given object with the rotation matrix based on the latest sensor reading. The rotation matrix is shown below.
 
 ## Examples
 
@@ -60,7 +62,7 @@ sensor.start();
 
 ### Permissions Example
 
-Using orientation sensors requires requsting permissions for multiple device sensors. Because the {{domxref('Permissions')}} interface uses promises, a good way to request permissions is to use {{jsxref('Promise.all')}}.
+Using orientation sensors requires requesting permissions for multiple device sensors. Because the {{domxref('Permissions')}} interface uses promises, a good way to request permissions is to use {{jsxref('Promise.all')}}.
 
 ```js
 const sensor = new AbsoluteOrientationSensor();

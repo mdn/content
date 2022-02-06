@@ -14,6 +14,8 @@ browser-compat: api.AbortSignal
 
 The **`AbortSignal`** interface represents a signal object that allows you to communicate with a DOM request (such as a fetch request) and abort it if required via an {{domxref("AbortController")}} object.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _The AbortSignal interface also inherits properties from its parent interface, {{domxref("EventTarget")}}._

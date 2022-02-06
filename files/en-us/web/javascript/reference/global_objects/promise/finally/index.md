@@ -100,7 +100,7 @@ fetch(myRequest).then(function(response) {
 
 ## See also
 
-- A polyfill of `Promise.prototype.finally` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
+- [Polyfill of `Promise.prototype.finally` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.prototype.then()")}}
 - {{jsxref("Promise.prototype.catch()")}}

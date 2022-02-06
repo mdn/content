@@ -131,7 +131,7 @@ The `border-radius` property is specified as:
     </tr>
     <tr>
       <td><em>bottom-right</em></td>
-      <td><img alt="bottom-rigth.png" src="bottom-rigth.png" /></td>
+      <td><img alt="bottom-right.png" src="bottom-right.png" /></td>
       <td>
         Is a {{cssxref("&lt;length&gt;")}} or a
         {{cssxref("&lt;percentage&gt;")}} denoting a radius to use

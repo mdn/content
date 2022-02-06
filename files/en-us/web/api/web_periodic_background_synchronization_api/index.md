@@ -107,7 +107,7 @@ self.addEventListener('periodicsync', event => {
 
 | Specification                                                                              |
 | ------------------------------------------------------------------------------------------ |
-| [Web Periodic Background Syncronization](https://wicg.github.io/periodic-background-sync/) |
+| [Web Periodic Background Synchronization](https://wicg.github.io/periodic-background-sync/) |
 
 ## Browser compatibility
 

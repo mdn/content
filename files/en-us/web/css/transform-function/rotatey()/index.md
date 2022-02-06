@@ -56,7 +56,7 @@ rotateY(a)
       </td>
       <td>
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd
@@ -89,13 +89,13 @@ rotateY(a)
                   <mo>)</mo></mtd
                 ></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td>
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd
@@ -131,7 +131,7 @@ rotateY(a)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>

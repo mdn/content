@@ -11,7 +11,7 @@ browser-compat: http.headers.Digest
 
 The **`Digest`** response HTTP header provides a {{Glossary("digest")}} of the _selected representation_ of the requested resource.
 
-Representations are different forms of a particular resource that might be returned from a request: for example, the same resource might be formatted in a particular media type such as XML or JSON, localised to a particular written language or geographical region, and/or compressed or otherwise encoded for transmission.
+Representations are different forms of a particular resource that might be returned from a request: for example, the same resource might be formatted in a particular media type such as XML or JSON, localized to a particular written language or geographical region, and/or compressed or otherwise encoded for transmission.
 The _selected representation_ is the actual format of a resource that is returned following [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation), and can be determined from the response's {{Glossary("Representation header","Representation headers")}}.
 
 The digest applies to the whole representation of a resource, not to a particular message.

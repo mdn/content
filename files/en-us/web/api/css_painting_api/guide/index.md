@@ -12,9 +12,9 @@ The CSS Paint API is designed to enable developers to programmatically define im
 
 To programmatically create an image used by a CSS stylesheet we need to work through a few steps:
 
-1.  Define a paint worklet using the [`registerPaint()`](/en-US/docs/Web/API/PaintWorklet/registerPaint) function
-2.  Register the worklet
-3.  Include the `{{cssxref('image/paint()','paint()')}}` CSS function
+1. Define a paint worklet using the [`registerPaint()`](/en-US/docs/Web/API/PaintWorklet/registerPaint) function
+2. Register the worklet
+3. Include the `{{cssxref('image/paint()','paint()')}}` CSS function
 
 To elaborate over these steps, we're going to start by creating a half-highlight background, like on this header:
 
@@ -136,8 +136,8 @@ registerPaint('headerHighlight', class {
 
 This code example has two differences from our first example:
 
-1.  We've included a second argument, which is the paint size.
-2.  We've changed the dimensions and positioning of our rectangle to be relative to the size of the element box rather than absolute values.
+1. We've included a second argument, which is the paint size.
+2. We've changed the dimensions and positioning of our rectangle to be relative to the size of the element box rather than absolute values.
 
 We can pass the second parameter into the `paint()` function to give us access to the width and the height of the element, via `.width` and `.height` properties.
 

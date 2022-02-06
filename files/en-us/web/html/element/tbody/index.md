@@ -16,7 +16,7 @@ browser-compat: html.elements.tbody
 
 {{HTMLRef}}
 
-The **`<tbody>`** [HTML](/en-US/docs/Web/HTML) element encapsulates a set of table rows ({{HTMLElement("tr")}} elements), indicating that they comprise the body of the table ({{HTMLELement("table")}}).
+The **`<tbody>`** [HTML](/en-US/docs/Web/HTML) element encapsulates a set of table rows ({{HTMLElement("tr")}} elements), indicating that they comprise the body of the table ({{HTMLElement("table")}}).
 
 {{EmbedInteractiveExample("pages/tabbed/tbody.html","tabbed-taller")}}
 

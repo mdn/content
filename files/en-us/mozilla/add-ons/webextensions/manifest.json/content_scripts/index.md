@@ -39,8 +39,8 @@ Instructs the browser to load [content scripts](/en-US/docs/Mozilla/Add-ons/WebE
 
 This key is an array. Each item is an object which:
 
-- **must** contain a key named **`matches`**, which specifies the URL patterns to be matched in order for the scripts to be loaded;
-- **may** contain keys named **`js`** and **`css`**, which list scripts and/or stylesheets to be loaded into matching pages; and
+- **must** contain a key named **`matches`**, which specifies the URL patterns to be matched in order for the scripts to be loaded;
+- **may** contain keys named **`js`** and **`css`**, which list scripts and/or stylesheets to be loaded into matching pages; and
 - **may** contain a number of other properties that control finer aspects of how and when content scripts are loaded.
 
 Details of all the keys you can include are given in the table below.
@@ -164,7 +164,7 @@ Details of all the keys you can include are given in the table below.
         <pre class="brush: json">
 "js": ["jquery.js", "my-content-script.js"]</pre
         >
-        <p>...then <code>"my-content-script.js"</code> can use jQuery.</p>
+        <p>...then <code>"my-content-script.js"</code> can use jQuery.</p>
         <p>
           The files are injected after any files in
           <code><a href="#css">css</a></code
@@ -218,7 +218,7 @@ Details of all the keys you can include are given in the table below.
           </p>
           <p>
             Note that in Firefox, content scripts won't be injected into empty
-            iframes at <code>"document_start"</code>, even if you specify that
+            iframes at <code>"document_start"</code>, even if you specify that
             value in <code><a href="#run_at">run_at</a></code> .
           </p>
         </div>
@@ -301,7 +301,7 @@ To match one of these properties, a URL must match at least one of the items in 
 "matches": ["*://*.example.org/*", "*://*.example.com/*"]
 ```
 
-Both `http://example.org/` and `http://example.com/` will match.
+Both `http://example.org/` and `http://example.com/` will match.
 
 Since `matches` is the only mandatory key, the other three keys are used to limit further the URLs that match. To match the key as a whole, a URL must:
 
@@ -316,8 +316,8 @@ A _glob_ is just a string that may contain wildcards.
 
 There are two types of wildcard, and you can combine them in the same glob:
 
-1.  `*` matches zero or more characters
-2.  `?` matches exactly one character.
+1. `*` matches zero or more characters
+2. `?` matches exactly one character.
 
 For example: `"*na?i"` would match `"illuminati"` and `"annunaki"`, but not `"sagnarelli"`.
 
@@ -332,7 +332,7 @@ For example: `"*na?i"` would match `"illuminati"` and `"annunaki"`, but not `"sa
 ]
 ```
 
-This injects a single content script `borderify.js` into all pages under `mozilla.org` or any of its subdomains, whether served over HTTP or HTTPS.
+This injects a single content script `borderify.js` into all pages under `mozilla.org` or any of its subdomains, whether served over HTTP or HTTPS.
 
 ```json
   "content_scripts": [
@@ -344,9 +344,9 @@ This injects a single content script `borderify.js` into all pages under `mozil
   ]
 ```
 
-This injects two content scripts into all pages under `mozilla.org` or any of its subdomains except `developer.mozilla.org`, whether served over HTTP or HTTPS.
+This injects two content scripts into all pages under `mozilla.org` or any of its subdomains except `developer.mozilla.org`, whether served over HTTP or HTTPS.
 
-The content scripts see the same view of the DOM and are injected in the order they appear in the array, so `borderify.js` can see global variables added by `jquery.js`.
+The content scripts see the same view of the DOM and are injected in the order they appear in the array, so `borderify.js` can see global variables added by `jquery.js`.
 
 ## Browser compatibility
 

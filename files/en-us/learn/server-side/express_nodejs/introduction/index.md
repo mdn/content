@@ -42,7 +42,7 @@ In this first Express article we answer the questions "What is Node?" and "What 
 
 ## Introducing Node
 
-[Node](https://nodejs.org/) (or more formally _Node.js_) is an open-source, cross-platform runtime environment that allows developers to create all kinds of server-side tools and applications in [JavaScript](/en-US/docs/Glossary/JavaScript). The runtime is intended for use outside of a browser context (i.e. running directly on a computer or server OS). As such, the environment omits browser-specific JavaScript APIs and adds support for more traditional OS APIs including HTTP and file system libraries.
+[Node](https://nodejs.org/) (or more formally _Node.js_) is an open-source, cross-platform runtime environment that allows developers to create all kinds of server-side tools and applications in [JavaScript](/en-US/docs/Glossary/JavaScript). The runtime is intended for use outside of a browser context (i.e. running directly on a computer or server OS). As such, the environment omits browser-specific JavaScript APIs and adds support for more traditional OS APIs including HTTP and file system libraries.
 
 From a web server development perspective Node has a number of benefits:
 
@@ -59,14 +59,14 @@ You can use Node.js to create a simple web server using the Node HTTP package.
 
 The following example creates a web server that listens for any kind of HTTP request on the URL `http://127.0.0.1:8000/` — when a request is received, the script will respond with the string: "Hello World". If you have already installed node, you can follow these steps to try out the example:
 
-1.  Open Terminal (on Windows, open the command line utility)
-2.  Create the folder where you want to save the program, for example, `test-node` and then enter it by entering the following command into your terminal:
+1. Open Terminal (on Windows, open the command line utility)
+2. Create the folder where you want to save the program, for example, `test-node` and then enter it by entering the following command into your terminal:
 
     ```bash
     cd test-node
     ```
 
-3.  Using your favorite text editor, create a file called `hello.js` and paste the following code into it:
+3. Using your favorite text editor, create a file called `hello.js` and paste the following code into it:
 
     ```js
     // Load HTTP module
@@ -91,14 +91,14 @@ The following example creates a web server that listens for any kind of HTTP req
     })
     ```
 
-4.  Save the file in the folder you created above.
-5.  Go back to the terminal and type the following command:
+4. Save the file in the folder you created above.
+5. Go back to the terminal and type the following command:
 
     ```bash
     node hello.js
     ```
 
-Finally, navigate to `http://localhost:8000` in your web browser; you should see the text "**Hello World**" in the upper left of an otherwise empty web page.
+Finally, navigate to `http://localhost:8000` in your web browser; you should see the text "**Hello World**" in the upper left of an otherwise empty web page.
 
 ## Web Frameworks
 
@@ -119,15 +119,15 @@ While _Express_ itself is fairly minimalist, developers have created compatible 
 
 ## Where did Node and Express come from?
 
-Node was initially released, for Linux only, in 2009. The NPM package manager was released in 2010, and native Windows support was added in 2012. At time of writing the current LTS release is Node v12.18.4 while the latest release is Node 14.13.0. This is a tiny snapshot of a rich history; delve into [Wikipedia](https://en.wikipedia.org/wiki/Node.js#History) if you want to know more.
+Node was initially released, for Linux only, in 2009. The NPM package manager was released in 2010, and native Windows support was added in 2012. At time of writing the current LTS release is Node v12.18.4 while the latest release is Node 14.13.0. This is a tiny snapshot of a rich history; delve into [Wikipedia](https://en.wikipedia.org/wiki/Node.js#History) if you want to know more.
 
-Express was initially released in November 2010 and is currently on version 4.17.1 of the API (with 5.0 in "alpha"). You can check out the [changelog](https://expressjs.com/en/changelog/4x.html) for information about changes in the current release, and [GitHub](https://github.com/expressjs/express/blob/master/History.md) for more detailed historical release notes.
+Express was initially released in November 2010 and is currently on version 4.17.1 of the API (with 5.0 in "alpha"). You can check out the [changelog](https://expressjs.com/en/changelog/4x.html) for information about changes in the current release, and [GitHub](https://github.com/expressjs/express/blob/master/History.md) for more detailed historical release notes.
 
 ## How popular are Node and Express?
 
 The popularity of a web framework is important because it is an indicator of whether it will continue to be maintained, and what resources are likely to be available in terms of documentation, add-on libraries, and technical support.
 
-There isn't any readily-available and definitive measure of the popularity of server-side frameworks (although you can estimate popularity using mechanisms like counting the number of GitHub projects and StackOverflow questions for each platform). A better question is whether Node and Express are "popular enough" to avoid the problems of unpopular platforms. Are they continuing to evolve? Can you get help if you need it? Is there an opportunity for you to get paid work if you learn Express?
+There isn't any readily-available and definitive measure of the popularity of server-side frameworks (although you can estimate popularity using mechanisms like counting the number of GitHub projects and StackOverflow questions for each platform). A better question is whether Node and Express are "popular enough" to avoid the problems of unpopular platforms. Are they continuing to evolve? Can you get help if you need it? Is there an opportunity for you to get paid work if you learn Express?
 
 Based on the number of [high profile companies](https://expressjs.com/en/resources/companies-using-express.html) that use Express, the number of people contributing to the codebase, and the number of people providing both free and paid for support, then yes, _Express_ is a popular framework!
 
@@ -163,11 +163,11 @@ const app = express();
 const port = 3000;
 
 app.get('/', function(req, res) {
-  res.send('Hello World!')
+  res.send('Hello World!')
 });
 
 app.listen(port, function() {
-  console.log(`Example app listening on port ${port}!`)
+  console.log(`Example app listening on port ${port}!`)
 });
 ```
 
@@ -222,7 +222,7 @@ module.exports = {
 };
 ```
 
-> **Note:** You can think of `exports` as a [shortcut](https://nodejs.org/api/modules.html#modules_exports_shortcut) to `module.exports` within a given module. In fact, `exports` is just a variable that gets initialized to the value of `module.exports` before the module is evaluated. That value is a reference to an object (empty object in this case). This means that `exports` holds a reference to the same object referenced by `module.exports`. It also means that by assigning another value to `exports` it's no longer bound to `module.exports`.
+> **Note:** You can think of `exports` as a [shortcut](https://nodejs.org/api/modules.html#modules_exports_shortcut) to `module.exports` within a given module. In fact, `exports` is just a variable that gets initialized to the value of `module.exports` before the module is evaluated. That value is a reference to an object (empty object in this case). This means that `exports` holds a reference to the same object referenced by `module.exports`. It also means that by assigning another value to `exports` it's no longer bound to `module.exports`.
 
 For a lot more information about modules see [Modules](https://nodejs.org/api/modules.html#modules_modules) (Node API docs).
 
@@ -244,11 +244,11 @@ setTimeout(function() {
 console.log('Second');
 ```
 
-Using non-blocking asynchronous APIs is even more important on Node than in the browser because _Node_ is a single-threaded event-driven execution environment. "Single threaded" means that all requests to the server are run on the same thread (rather than being spawned off into separate processes). This model is extremely efficient in terms of speed and server resources, but it does mean that if any of your functions call synchronous methods that take a long time to complete, they will block not just the current request, but every other request being handled by your web application.
+Using non-blocking asynchronous APIs is even more important on Node than in the browser because _Node_ is a single-threaded event-driven execution environment. "Single threaded" means that all requests to the server are run on the same thread (rather than being spawned off into separate processes). This model is extremely efficient in terms of speed and server resources, but it does mean that if any of your functions call synchronous methods that take a long time to complete, they will block not just the current request, but every other request being handled by your web application.
 
 There are a number of ways for an asynchronous API to notify your application that it has completed. The most common way is to register a callback function when you invoke the asynchronous API, that will be called back when the operation completes. This is the approach used above.
 
-> **Note:** Using callbacks can be quite "messy" if you have a sequence of dependent asynchronous operations that must be performed in order because this results in multiple levels of nested callbacks. This problem is commonly known as "callback hell". This problem can be reduced by good coding practices (see <http://callbackhell.com/>), using a module like [async](https://www.npmjs.com/package/async), or even moving to ES6 features like [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+> **Note:** Using callbacks can be quite "messy" if you have a sequence of dependent asynchronous operations that must be performed in order because this results in multiple levels of nested callbacks. This problem is commonly known as "callback hell". This problem can be reduced by good coding practices (see <http://callbackhell.com/>), using a module like [async](https://www.npmjs.com/package/async), or even moving to ES6 features like [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 > **Note:** A common convention for Node and Express is to use error-first callbacks. In this convention, the first value in your _callback functions_ is an error value, while subsequent arguments contain success data. There is a good explanation of why this approach is useful in this blog: [The Node.js Way - Understanding Error-First Callbacks](https://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js) (fredkschott.com).
 
@@ -258,7 +258,7 @@ In our _Hello World_ Express example (see above), we defined a (callback) route 
 
 ```js
 app.get('/', function(req, res) {
-  res.send('Hello World!')
+  res.send('Hello World!')
 });
 ```
 
@@ -268,7 +268,7 @@ The callback function takes a request and a response object as arguments. In thi
 
 The _Express application_ object also provides methods to define route handlers for all the other HTTP verbs, which are mostly used in exactly the same way:
 
-`checkout()`, `copy()`, **`delete()`**, **`get()`**, `head()`, `lock()`, `merge()`, `mkactivity()`, `mkcol()`, `move()`, `m-search()`, `notify()`, `options()`, `patch()`, **`post()`**, `purge()`, **`put()`**, `report()`, `search()`, `subscribe()`, `trace()`, `unlock()`, `unsubscribe()`.
+`checkout()`, `copy()`, **`delete()`**, **`get()`**, `head()`, `lock()`, `merge()`, `mkactivity()`, `mkcol()`, `move()`, `m-search()`, `notify()`, `options()`, `patch()`, **`post()`**, `purge()`, **`put()`**, `report()`, `search()`, `subscribe()`, `trace()`, `unlock()`, `unsubscribe()`.
 
 There is a special routing method, `app.all()`, which will be called in response to any HTTP method. This is used for loading middleware functions at a particular path for all request methods. The following example (from the Express documentation) shows a handler that will be executed for requests to `/secret` irrespective of the HTTP verb used (provided it is supported by the [http module](https://nodejs.org/api/http.html#http_http_methods)).
 
@@ -343,7 +343,7 @@ app.use(logger('dev'));
 
 You can write your own middleware functions, and you are likely to have to do so (if only to create error handling code). The **only** difference between a middleware function and a route handler callback is that middleware functions have a third argument `next`, which middleware functions are expected to call if they are not that which completes the request cycle (when the middleware function is called, this contains the _next_ function that must be called).
 
-You can add a middleware function to the processing chain for _all responses_ with `app.use()`, or for a specific HTTP verb using the associated method: `app.get()`, `app.post()`, etc. Routes are specified in the same way for both cases, though the route is optional when calling `app.use()`.
+You can add a middleware function to the processing chain for _all responses_ with `app.use()`, or for a specific HTTP verb using the associated method: `app.get()`, `app.post()`, etc. Routes are specified in the same way for both cases, though the route is optional when calling `app.use()`.
 
 The example below shows how you can add the middleware function using both approaches, and with/without a route.
 
@@ -353,8 +353,8 @@ const app = express();
 
 // An example middleware function
 let a_middleware_function = function(req, res, next) {
-  // ... perform some operations
-  next(); // Call next() so Express will call the next middleware function in the chain.
+  // ... perform some operations
+  next(); // Call next() so Express will call the next middleware function in the chain.
 }
 
 // Function added with use() for all routes and verbs
@@ -428,7 +428,7 @@ These can return any content required, but must be called after all other `app.u
 
 Express comes with a built-in error handler, which takes care of any remaining errors that might be encountered in the app. This default error-handling middleware function is added at the end of the middleware function stack. If you pass an error to `next()` and you do not handle it in an error handler, it will be handled by the built-in error handler; the error will be written to the client with the stack trace.
 
-> **Note:** The stack trace is not included in the production environment. To run it in production mode you need to set the environment variable `NODE_ENV` to '`production'`.
+> **Note:** The stack trace is not included in the production environment. To run it in production mode you need to set the environment variable `NODE_ENV` to '`production'`.
 
 > **Note:** HTTP404 and other "error" status codes are not treated as errors. If you want to handle these, you can add a middleware function to do so. For more information see the [FAQ](https://expressjs.com/en/starter/faq.html#how-do-i-handle-404-responses).
 
@@ -465,12 +465,12 @@ const MongoClient = require('mongodb').MongoClient;
 MongoClient.connect('mongodb://localhost:27017/animals', function(err, client){
    if(err) throw err;
 
-   let db = client.db('animals');
-   db.collection('mammals').find().toArray(function(err, result){
+   let db = client.db('animals');
+   db.collection('mammals').find().toArray(function(err, result){
      if(err) throw err;
-     console.log(result);
-     client.close();
-   });
+     console.log(result);
+     client.close();
+   });
 });
 ```
 
@@ -529,7 +529,7 @@ Of course Express is deliberately a very lightweight web application framework, 
 - [Using middleware](https://expressjs.com/en/guide/using-middleware.html) (Express docs)
 - [Writing middleware for use in Express apps](https://expressjs.com/en/guide/writing-middleware.html) (Express docs)
 - [Database integration](https://expressjs.com/en/guide/database-integration.html) (Express docs)
-- [Serving static files in Express](https://expressjs.com/en/starter/static-files.html) (Express docs)
+- [Serving static files in Express](https://expressjs.com/en/starter/static-files.html) (Express docs)
 - [Error handling](https://expressjs.com/en/guide/error-handling.html) (Express docs)
 
 {{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}

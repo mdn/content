@@ -34,7 +34,7 @@ First, we create space to build the keyboard into. We will be programmatically c
 </div>
 ```
 
-The {{HTMLElement("div")}} named `"container"` is the scrollable box that lets the keyboard be scrolled horiontally if it's too wide for the available space. The keys themselves will be inserted into the block of class `"keyboard"`.
+The {{HTMLElement("div")}} named `"container"` is the scrollable box that lets the keyboard be scrolled horizontally if it's too wide for the available space. The keys themselves will be inserted into the block of class `"keyboard"`.
 
 #### The settings bar
 
@@ -188,9 +188,9 @@ let oscList = [];
 let mainGainNode = null;
 ```
 
-1.  `audioContext` is set to reference the global {{domxref("AudioContext")}} object (or `webkitAudioContext` if necessary).
-2.  `oscList` is set up to be ready to contain a list of all currently-playing oscillators. It starts off empty, since there are none playing yet.
-3.  `mainGainNode` is set to null; during the setup process, it will be configured to contain a {{domxref("GainNode")}} which all playing oscillators will connect to and play through to allow the overall volume to be controlled using a single slider control.
+1. `audioContext` is set to reference the global {{domxref("AudioContext")}} object (or `webkitAudioContext` if necessary).
+2. `oscList` is set up to be ready to contain a list of all currently-playing oscillators. It starts off empty, since there are none playing yet.
+3. `mainGainNode` is set to null; during the setup process, it will be configured to contain a {{domxref("GainNode")}} which all playing oscillators will connect to and play through to allow the overall volume to be controlled using a single slider control.
 
 ```js
 let keyboard = document.querySelector(".keyboard");
@@ -441,15 +441,15 @@ function setup() {
 setup();
 ```
 
-1.  The table which maps note names and octaves to their frequencies is created by calling `createNoteTable()`.
-2.  An event handler is established (by calling our old friend {{domxref("EventTarget.addEventListener", "addEventListener()")}} to handle {{event("change")}} events on the main gain control. This will update the main gain node's volume to the new value of the control.
-3.  Next, we iterate over each octave in the note frequencies table. For each octave, we use {{jsxref("Object.entries()")}} to get a list of the notes in that octave.
-4.  Create a {{HTMLElement("div")}} to contain that octave's notes (so we can have a small bit of space drawn between octaves), and set its class name to "octave"
-5.  For each key in the octave, we check to see if the note's name has more than one character. We skip these, because we're leaving out the sharp notes in this example. If the note's name is only one character, then we call `createKey()`, specifying the note string, octave, and frequency. The returned element is appended to the octave element created  in step 4.
-6.  When each octave element has been built, it's appended to the keyboard.
-7.  Once the keyboard has been constructed, we scroll the note "B" in octave 5 into view; this has the effect of ensuring that middle-C is visible along with its surrounding keys.
-8.  Then a new custom waveform is built using {{domxref("BaseAudioContext.createPeriodicWave()")}}. This waveform will be used any time the user selects "Custom" from the waveform picker control.
-9.  Finally, the oscillator list is initialized to ensure that it's ready to receive information identifying which oscillators are associated with which keys.
+1. The table which maps note names and octaves to their frequencies is created by calling `createNoteTable()`.
+2. An event handler is established (by calling our old friend {{domxref("EventTarget.addEventListener", "addEventListener()")}} to handle {{event("change")}} events on the main gain control. This will update the main gain node's volume to the new value of the control.
+3. Next, we iterate over each octave in the note frequencies table. For each octave, we use {{jsxref("Object.entries()")}} to get a list of the notes in that octave.
+4. Create a {{HTMLElement("div")}} to contain that octave's notes (so we can have a small bit of space drawn between octaves), and set its class name to "octave"
+5. For each key in the octave, we check to see if the note's name has more than one character. We skip these, because we're leaving out the sharp notes in this example. If the note's name is only one character, then we call `createKey()`, specifying the note string, octave, and frequency. The returned element is appended to the octave element created in step 4.
+6. When each octave element has been built, it's appended to the keyboard.
+7. Once the keyboard has been constructed, we scroll the note "B" in octave 5 into view; this has the effect of ensuring that middle-C is visible along with its surrounding keys.
+8. Then a new custom waveform is built using {{domxref("BaseAudioContext.createPeriodicWave()")}}. This waveform will be used any time the user selects "Custom" from the waveform picker control.
+9. Finally, the oscillator list is initialized to ensure that it's ready to receive information identifying which oscillators are associated with which keys.
 
 #### Creating a key
 

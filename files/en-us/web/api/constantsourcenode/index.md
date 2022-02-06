@@ -17,6 +17,8 @@ The `ConstantSourceNode` interface—part of the Web Audio API—represents an a
 
 A `ConstantSourceNode` has no inputs and exactly one monaural (one-channel) output. The output's value is always the same as the value of the {{domxref("ConstantSourceNode.offset", "offset")}} parameter.
 
+{{InheritanceDiagram}}
+
 <table class="properties">
   <tbody>
     <tr>

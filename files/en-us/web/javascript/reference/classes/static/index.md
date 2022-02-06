@@ -39,9 +39,9 @@ static {
 
 The following example demonstrates several things:
 
-1.  How a static member (method or property) is defined on a class.
-2.  That a class with a static member can be sub-classed.
-3.  How a static member can and cannot be called.
+1. How a static member (method or property) is defined on a class.
+2. That a class with a static member can be sub-classed.
+3. How a static member can and cannot be called.
 
 ```js
 class Triple {

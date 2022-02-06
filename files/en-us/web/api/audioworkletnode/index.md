@@ -17,6 +17,8 @@ browser-compat: api.AudioWorkletNode
 
 The **`AudioWorkletNode`** interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) represents a base class for a user-defined {{domxref("AudioNode")}}, which can be connected to an audio routing graph along with other nodes. It has an associated {{domxref("AudioWorkletProcessor")}}, which does the actual audio processing in a Web Audio rendering thread.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}}

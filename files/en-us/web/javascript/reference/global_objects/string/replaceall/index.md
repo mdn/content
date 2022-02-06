@@ -134,7 +134,7 @@ This will work:
 
 ## See also
 
-- A polyfill of `String.prototype.replaceAll` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.replaceAll` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.replace", "String.prototype.replace()")}}
 - {{jsxref("String.prototype.match", "String.prototype.match()")}}
 - {{jsxref("RegExp.prototype.exec", "RegExp.prototype.exec()")}}

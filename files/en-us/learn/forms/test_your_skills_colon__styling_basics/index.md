@@ -22,9 +22,9 @@ This aim of this skill test is to assess whether you've understood our [Styling 
 
 Our basic form styling assessment is fairly free-form, and you have a lot of flexibility over what you end up doing here. But your CSS should aim to fulfill the following requirements:
 
-1.  Add some kind of lightweight "reset" to make fonts, padding, margin, and sizing more consistent to begin with.
-2.  On top of that, add in some nice, consistent styling for the inputs and button.
-3.  Use some kind of layout technique to make the inputs and labels line up neatly.
+1. Add some kind of lightweight "reset" to make fonts, padding, margin, and sizing more consistent to begin with.
+2. On top of that, add in some nice, consistent styling for the inputs and button.
+3. Use some kind of layout technique to make the inputs and labels line up neatly.
 
 > **Callout:**
 >
@@ -36,8 +36,8 @@ You can practice these examples in the Interactive Editors above.
 
 If you would like your work assessed, or are stuck and want to ask for help:
 
-1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
-2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
+2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
 
     - A descriptive title such as "Assessment wanted for Styling basics 1 skill test".
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.

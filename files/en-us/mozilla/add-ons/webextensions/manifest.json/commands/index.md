@@ -49,8 +49,8 @@ The `commands` key is an object, and each shortcut is a property of it. **The pr
 
 Each shortcut's value is an object, with up to 2 properties:
 
-1.  `suggested_key`: the combination of keys that activate the shortcut.
-2.  `description`: a string that describes the shortcut; i.e. what it does.
+1. `suggested_key`: the combination of keys that activate the shortcut.
+2. `description`: a string that describes the shortcut; i.e. what it does.
 
 The `suggested_key` property is an object with any of the following properties (all strings):
 
@@ -85,7 +85,7 @@ For example:
 
 This JSON defines 2 shortcuts:
 
-1.  `"toggle-feature"`, accessed with
+1. `"toggle-feature"`, accessed with
 
     <kbd>Ctrl</kbd>
 
@@ -111,7 +111,7 @@ This JSON defines 2 shortcuts:
 
     on all other platforms.
 
-2.  `"do-another-thing"`, accessed with
+2. `"do-another-thing"`, accessed with
 
     <kbd>Ctrl</kbd>
 
@@ -165,9 +165,9 @@ There are two valid formats for shortcut keys: as a **key combination** or as a 
 
 Key combinations must consist of 2 or 3 keys:
 
-1.  **modifier** (mandatory, except for function keys). This can be any of: `"Ctrl"`, `"Alt"`, `"Command"`, or `"MacCtrl"`.
-2.  **secondary modifier** (optional). If supplied, this must be either `"Shift"` or (for Firefox ≥ 63) any one of `"Ctrl"`, `"Alt"`, `"Command"`, or `"MacCtrl"`. Must not be the modifier already used as the main modifier.
-3.  **key** (mandatory). This can be any one of:
+1. **modifier** (mandatory, except for function keys). This can be any of: `"Ctrl"`, `"Alt"`, `"Command"`, or `"MacCtrl"`.
+2. **secondary modifier** (optional). If supplied, this must be either `"Shift"` or (for Firefox ≥ 63) any one of `"Ctrl"`, `"Alt"`, `"Command"`, or `"MacCtrl"`. Must not be the modifier already used as the main modifier.
+3. **key** (mandatory). This can be any one of:
 
     - the letters `A`–`Z`
     - the numbers `0`–`9`

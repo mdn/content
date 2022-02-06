@@ -19,7 +19,7 @@ The **`MediaStreamTrackEvent`** interface represents events which indicate that 
 
 {{InheritanceDiagram}}
 
-The events based on this interface are {{event("addtrack")}} and {{event("removetrack")}}
+The events based on this interface are {{event("addtrack")}} and {{event("removetrack")}}.
 
 ## Properties
 

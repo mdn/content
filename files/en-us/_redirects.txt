@@ -367,7 +367,6 @@
 /en-US/docs/CSS/-webkit-opacity	/en-US/docs/Web/CSS/opacity
 /en-US/docs/CSS/-webkit-perspective	/en-US/docs/Web/CSS/perspective
 /en-US/docs/CSS/-webkit-perspective-origin	/en-US/docs/Web/CSS/perspective-origin
-/en-US/docs/CSS/-webkit-print-color-adjust	/en-US/docs/Web/CSS/-webkit-print-color-adjust
 /en-US/docs/CSS/-webkit-text-size-adjust	/en-US/docs/Web/CSS/text-size-adjust
 /en-US/docs/CSS/-webkit-transform	/en-US/docs/Web/CSS/transform
 /en-US/docs/CSS/-webkit-transform-origin	/en-US/docs/Web/CSS/transform-origin
@@ -4010,7 +4009,7 @@
 /en-US/docs/HTTP_Transaction_Model	/en-US/docs/Web/HTTP
 /en-US/docs/HTTP_access_control	/en-US/docs/Web/HTTP/CORS
 /en-US/docs/How_to_Turn_Off_Form_Autocompletion	/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion
-/en-US/docs/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL	/en-US/docs/Web/API/XMLHttpRequest/How_to_check_the_secruity_state_of_an_XMLHTTPRequest_over_SSL
+/en-US/docs/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL	/en-US/docs/Web/API/XMLHttpRequest
 /en-US/docs/How_to_create_a_DOM_tree	/en-US/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree
 /en-US/docs/How_to_start_contributions_to_Mozilla	/en-US/docs/MDN/Contribute/Getting_started
 /en-US/docs/ICC_color_correction_in_Firefox	/en-US/docs/Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox
@@ -5705,6 +5704,7 @@
 /en-US/docs/Mozilla/Firefox/Releases/developers	/en-US/docs/Mozilla/Firefox/Releases/63
 /en-US/docs/Mozilla/MathML_Project/Fonts	/en-US/docs/Web/MathML/Fonts
 /en-US/docs/Mozilla/Performance/Scroll-linked_effects	https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html
+/en-US/docs/Mozilla/Projects/NSS/NSS_Sample_Code/NSS_Sample_Code_Utililies_1	/en-US/docs/Mozilla/Projects/NSS/NSS_Sample_Code/NSS_Sample_Code_Utilities_1
 /en-US/docs/Mozilla/QA/Bug_writing_guidelines	https://bugzilla.mozilla.org/page.cgi?id=bug-writing.html
 /en-US/docs/Mozilla/QA/Writing_xpcshell-based_unit_tests	https://firefox-source-docs.mozilla.org/testing/xpcshell/index.html
 /en-US/docs/Mozilla/Tech/Xray_vision	https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html
@@ -7516,7 +7516,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oncancel	/en-US/docs/Web/API/GlobalEventHandlers/oncancel
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oncanplay	/en-US/docs/Web/API/GlobalEventHandlers/oncanplay
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oncanplaythrough	/en-US/docs/Web/API/GlobalEventHandlers/oncanplaythrough
-/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oncuechange	/en-US/docs/Web/API/GlobalEventHandlers/oncuechange
+/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oncuechange	/en-US/docs/Web/API/TextTrack/cuechange_event
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.ondurationchange	/en-US/docs/Web/API/GlobalEventHandlers/ondurationchange
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onemptied	/en-US/docs/Web/API/GlobalEventHandlers/onemptied
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onended	/en-US/docs/Web/API/GlobalEventHandlers/onended
@@ -7531,6 +7531,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onplay	/en-US/docs/Web/API/GlobalEventHandlers/onplay
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.ontouchend	/en-US/docs/Web/API/GlobalEventHandlers/ontouchend
 /en-US/docs/Web/API/GlobalEventHandlers/dragexit_event	/en-US/docs/Web/API/Document/dragleave_event
+/en-US/docs/Web/API/GlobalEventHandlers/oncuechange	/en-US/docs/Web/API/TextTrack/cuechange_event
 /en-US/docs/Web/API/GlobalEventHandlers/ondragexit	/en-US/docs/Web/API/GlobalEventHandlers/ondragleave
 /en-US/docs/Web/API/GlobalEventHandlers/onmozfullscreenchange	/en-US/docs/Web/API/Document/onfullscreenchange
 /en-US/docs/Web/API/GlobalEventHandlers/onmozfullscreenerror	/en-US/docs/Web/API/Document/onfullscreenerror
@@ -8582,6 +8583,13 @@
 /en-US/docs/Web/API/Selection/empty	/en-US/docs/Web/API/Selection/removeAllRanges
 /en-US/docs/Web/API/Selection/setPosition	/en-US/docs/Web/API/Selection/collapse
 /en-US/docs/Web/API/Selection_API	/en-US/docs/Web/API/Selection
+/en-US/docs/Web/API/Sensor/onactivate	/en-US/docs/Web/API/Sensor/activate_event
+/en-US/docs/Web/API/Sensor/onerror	/en-US/docs/Web/API/Sensor/error_event
+/en-US/docs/Web/API/Sensor/onreading	/en-US/docs/Web/API/Sensor/reading_event
+/en-US/docs/Web/API/Serial/onconnect	/en-US/docs/Web/API/SerialPort/connect_event
+/en-US/docs/Web/API/Serial/ondisconnect	/en-US/docs/Web/API/SerialPort/disconnect_event
+/en-US/docs/Web/API/SerialPort/onconnect	/en-US/docs/Web/API/SerialPort/connect_event
+/en-US/docs/Web/API/SerialPort/ondisconnect	/en-US/docs/Web/API/SerialPort/disconnect_event
 /en-US/docs/Web/API/ServiceWorker.onstatechange	/en-US/docs/Web/API/ServiceWorker/onstatechange
 /en-US/docs/Web/API/ServiceWorker.scriptURL	/en-US/docs/Web/API/ServiceWorker/scriptURL
 /en-US/docs/Web/API/ServiceWorker.state	/en-US/docs/Web/API/ServiceWorker/state
@@ -8679,7 +8687,12 @@
 /en-US/docs/Web/API/TextEncoder.encode	/en-US/docs/Web/API/TextEncoder/encode
 /en-US/docs/Web/API/TextEncoder.encoding	/en-US/docs/Web/API/TextEncoder/encoding
 /en-US/docs/Web/API/TextMetrics.width	/en-US/docs/Web/API/TextMetrics/width
-/en-US/docs/Web/API/TextTrackList/removeTrack	/en-US/docs/Web/API/TextTrackList/removeTrack_event
+/en-US/docs/Web/API/TextTrackCue/onenter	/en-US/docs/Web/API/TextTrackCue/enter_event
+/en-US/docs/Web/API/TextTrackCue/onexit	/en-US/docs/Web/API/TextTrackCue/exit_event
+/en-US/docs/Web/API/TextTrackList/onaddtrack	/en-US/docs/Web/API/TextTrackList/addtrack_event
+/en-US/docs/Web/API/TextTrackList/onchange	/en-US/docs/Web/API/TextTrackList/change_event
+/en-US/docs/Web/API/TextTrackList/onremovetrack	/en-US/docs/Web/API/TextTrackList/removetrack_event
+/en-US/docs/Web/API/TextTrackList/removeTrack	/en-US/docs/Web/API/TextTrackList/removetrack_event
 /en-US/docs/Web/API/TimeRanges.end	/en-US/docs/Web/API/TimeRanges/end
 /en-US/docs/Web/API/TimeRanges.length	/en-US/docs/Web/API/TimeRanges/length
 /en-US/docs/Web/API/TimeRanges.start	/en-US/docs/Web/API/TimeRanges/start
@@ -8814,13 +8827,16 @@
 /en-US/docs/Web/API/VideoPlaybackQuality.totalFrameDelay	/en-US/docs/Web/API/VideoPlaybackQuality/totalFrameDelay
 /en-US/docs/Web/API/VideoPlaybackQuality.totalVideoFrames	/en-US/docs/Web/API/VideoPlaybackQuality/totalVideoFrames
 /en-US/docs/Web/API/VideoTrackList/TextTrackList.length	/en-US/docs/Web/API/TextTrackList/length
-/en-US/docs/Web/API/VideoTrackList/TextTrackList.onaddtrack	/en-US/docs/Web/API/TextTrackList/onaddtrack
-/en-US/docs/Web/API/VideoTrackList/TextTrackList.onchange	/en-US/docs/Web/API/TextTrackList/onchange
-/en-US/docs/Web/API/VideoTrackList/TextTrackList.onremovetrack	/en-US/docs/Web/API/TextTrackList/onremovetrack
-/en-US/docs/Web/API/VideoTrackList/TextTrackList.removeTrack	/en-US/docs/Web/API/TextTrackList/removeTrack_event
+/en-US/docs/Web/API/VideoTrackList/TextTrackList.onaddtrack	/en-US/docs/Web/API/TextTrackList/addtrack_event
+/en-US/docs/Web/API/VideoTrackList/TextTrackList.onchange	/en-US/docs/Web/API/TextTrackList/change_event
+/en-US/docs/Web/API/VideoTrackList/TextTrackList.onremovetrack	/en-US/docs/Web/API/TextTrackList/removetrack_event
+/en-US/docs/Web/API/VideoTrackList/TextTrackList.removeTrack	/en-US/docs/Web/API/TextTrackList/removetrack_event
 /en-US/docs/Web/API/VideoTrackList/TextTrackList:_addtrack_event	/en-US/docs/Web/API/TextTrackList/addtrack_event
 /en-US/docs/Web/API/VideoTrackList/TextTrackList:_change_event	/en-US/docs/Web/API/TextTrackList/change_event
 /en-US/docs/Web/API/VideoTrackList/getTrackById()	/en-US/docs/Web/API/TextTrackList/getTrackById
+/en-US/docs/Web/API/VideoTrackList/onaddtrack	/en-US/docs/Web/API/VideoTrackList/addtrack_event
+/en-US/docs/Web/API/VideoTrackList/onchange	/en-US/docs/Web/API/VideoTrackList/change_event
+/en-US/docs/Web/API/VideoTrackList/onremovetrack	/en-US/docs/Web/API/VideoTrackList/removetrack_event
 /en-US/docs/Web/API/VisualViewport/onresize	/en-US/docs/Web/API/VisualViewport/resize_event
 /en-US/docs/Web/API/VisualViewport/onscroll	/en-US/docs/Web/API/VisualViewport/scroll_event
 /en-US/docs/Web/API/WEBGL_compressed_texture_es3	/en-US/docs/Web/API/WEBGL_compressed_texture_etc
@@ -9097,6 +9113,8 @@
 /en-US/docs/Web/API/XMLDocument.load	/en-US/docs/Web/API/XMLDocument/load
 /en-US/docs/Web/API/XMLHttpRequest/FormData	/en-US/docs/Web/API/FormData
 /en-US/docs/Web/API/XMLHttpRequest/FormData/Using_FormData_Objects	/en-US/docs/Web/API/FormData/Using_FormData_Objects
+/en-US/docs/Web/API/XMLHttpRequest/How_to_check_the_secruity_state_of_an_XMLHTTPRequest_over_SSL	/en-US/docs/Web/API/XMLHttpRequest
+/en-US/docs/Web/API/XMLHttpRequest/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL	/en-US/docs/Web/API/XMLHttpRequest
 /en-US/docs/Web/API/XMLHttpRequest/XMLHttpRequest.response	/en-US/docs/Web/API/XMLHttpRequest/response
 /en-US/docs/Web/API/XMLHttpRequest/responseresponseText	/en-US/docs/Web/API/XMLHttpRequest/responseText
 /en-US/docs/Web/API/XMLHttpRequestResponseType	/en-US/docs/Web/API/XMLHttpRequest/responseType
@@ -10010,6 +10028,7 @@
 /en-US/docs/Web/CSS/-webkit-order	/en-US/docs/Web/CSS/order
 /en-US/docs/Web/CSS/-webkit-perspective	/en-US/docs/Web/CSS/perspective
 /en-US/docs/Web/CSS/-webkit-perspective-origin	/en-US/docs/Web/CSS/perspective-origin
+/en-US/docs/Web/CSS/-webkit-print-color-adjust	/en-US/docs/Web/CSS/print-color-adjust
 /en-US/docs/Web/CSS/-webkit-radial-gradient	/en-US/docs/Web/CSS/gradient/radial-gradient()
 /en-US/docs/Web/CSS/-webkit-repeating-linear-gradient	/en-US/docs/Web/CSS/gradient/repeating-linear-gradient()
 /en-US/docs/Web/CSS/-webkit-repeating-radial-gradient	/en-US/docs/Web/CSS/gradient/repeating-radial-gradient()
@@ -10174,6 +10193,7 @@
 /en-US/docs/Web/CSS/box_model	/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 /en-US/docs/Web/CSS/calc	/en-US/docs/Web/CSS/calc()
 /en-US/docs/Web/CSS/clamp	/en-US/docs/Web/CSS/clamp()
+/en-US/docs/Web/CSS/color-adjust	/en-US/docs/Web/CSS/print-color-adjust
 /en-US/docs/Web/CSS/color-interpolation	/en-US/docs/Web/SVG/Attribute/color-interpolation
 /en-US/docs/Web/CSS/color-interpolation-filters	/en-US/docs/Web/SVG/Attribute/color-interpolation-filters
 /en-US/docs/Web/CSS/conic-gradient	/en-US/docs/Web/CSS/gradient/conic-gradient()

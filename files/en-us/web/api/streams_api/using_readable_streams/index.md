@@ -138,10 +138,10 @@ return pump();
 
 This is the standard pattern you’ll see when using stream readers:
 
-1.  You write a function that starts off by reading the stream.
-2.  If there is no more stream to read, you return out of the function.
-3.  If there is more stream to read, you process the current chunk then run the function again.
-4.  You keep running the function recursively until there is no more stream to read, in which case step 2 is followed.
+1. You write a function that starts off by reading the stream.
+2. If there is no more stream to read, you return out of the function.
+3. If there is more stream to read, you process the current chunk then run the function again.
+4. You keep running the function recursively until there is no more stream to read, in which case step 2 is followed.
 
 ## Creating your own custom readable stream
 
@@ -176,10 +176,10 @@ The constructor takes two objects as parameters. The first object is required, a
 
 The first object can contain up to five members, only the first of which is required:
 
-1.  `start(controller)` — A method that is called once, immediately after the `ReadableStream` is constructed. Inside this method, you should include code that sets up the stream functionality, e.g. beginning generation of data or otherwise getting access to the source.
-2.  `pull(controller)` — A method that, when included, is called repeatedly until the stream’s internal queue is full. This can be used to control the stream as more chunks are enqueued.
-3.  `cancel()` — A method that, when included, will be called if the app signals that the stream is to be cancelled (e.g. if {{domxref("ReadableStream.cancel()")}} is called). The contents should do whatever is necessary to release access to the stream source.
-4.  `type` and `autoAllocateChunkSize` — These are used — when included — to signify that the stream is to be a bytestream. Bytestreams will be covered separately in a future tutorial, as they are somewhat different in purpose and use case to regular (default) streams. They are also not implemented anywhere as yet.
+1. `start(controller)` — A method that is called once, immediately after the `ReadableStream` is constructed. Inside this method, you should include code that sets up the stream functionality, e.g. beginning generation of data or otherwise getting access to the source.
+2. `pull(controller)` — A method that, when included, is called repeatedly until the stream’s internal queue is full. This can be used to control the stream as more chunks are enqueued.
+3. `cancel()` — A method that, when included, will be called if the app signals that the stream is to be cancelled (e.g. if {{domxref("ReadableStream.cancel()")}} is called). The contents should do whatever is necessary to release access to the stream source.
+4. `type` and `autoAllocateChunkSize` — These are used — when included — to signify that the stream is to be a bytestream. Bytestreams will be covered separately in a future tutorial, as they are somewhat different in purpose and use case to regular (default) streams. They are also not implemented anywhere as yet.
 
 Looking at our simple example code again, you can see that our `ReadableStream()` constructor only includes a single method — `start()`, which serves to read all the data out of our fetch stream.
 

@@ -34,7 +34,7 @@ CSS and JavaScript, when used properly, also have the potential to allow for acc
       <th scope="row">Objective:</th>
       <td>
         To gain familiarity with using CSS and JavaScript appropriately in your
-        web documents to maximise accessibility and not detract from it.
+        web documents to maximize accessibility and not detract from it.
       </td>
     </tr>
   </tbody>
@@ -92,7 +92,7 @@ You should:
 
 See [HTML text fundamentals](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) and [Styling text](/en-US/docs/Learn/CSS/Styling_text) for more information.
 
-#### Emphasised text
+#### Emphasized text
 
 Inline markup that confers specific emphasis to the text that it wraps:
 
@@ -102,7 +102,7 @@ Inline markup that confers specific emphasis to the text that it wraps:
 <p>Water droplets collecting on surfaces is called <strong>condensation</strong>.</p>
 ```
 
-You might want to add some simple coloring to your emphasised text:
+You might want to add some simple coloring to your emphasized text:
 
 ```css
 strong, em {
@@ -110,7 +110,7 @@ strong, em {
 }
 ```
 
-You will however rarely need to style emphasis elements in any significant way. The standard conventions of bold and italic text are very recognisable, and changing the style can cause confusion. For more on emphasis, see [Emphasis and importance](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#emphasis_and_importance).
+You will however rarely need to style emphasis elements in any significant way. The standard conventions of bold and italic text are very recognizable, and changing the style can cause confusion. For more on emphasis, see [Emphasis and importance](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#emphasis_and_importance).
 
 #### Abbreviations
 
@@ -217,7 +217,7 @@ On the other hand, you shouldn't use {{cssxref("visibility")}}`:hidden` or {{css
 
 It is possible for users to override your styles with their own custom styles, for example:
 
-- See Sarah Maddox's [How to use a custom style sheet (CSS) with Firefox](https://www.itsupportguides.com/knowledge-base/computer-accessibility/how-to-use-a-custom-style-sheet-css-with-firefox/) for a useful guide covering how to do this manually in Firefox, and [How to use a custom style sheet (CSS) with Internet Explorer](https://www.itsupportguides.com/knowledge-base/computer-accessibility/how-to-use-a-custom-style-sheet-css-with-internet-explorer/) by Adrian Gordon for the equivalent IE instructions.
+- See Sarah Maddox's [How to use a custom style sheet (CSS) with Firefox](https://www.itsupportguides.com/knowledge-base/computer-accessibility/how-to-use-a-custom-style-sheet-css-with-firefox/) for a useful guide covering how to do this manually in Firefox, and [How to use a custom style sheet (CSS) with Internet Explorer](https://www.itsupportguides.com/knowledge-base/computer-accessibility/how-to-use-a-custom-style-sheet-css-with-internet-explorer/) by Adrian Gordon for the equivalent IE instructions.
 - It is probably easier to do it using an extension, for example the Stylish extension is available for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/stylish/), [Safari](https://safari-extensions.apple.com/details/?id=com.sobolev.stylish-5555L95H45), [Opera](https://addons.opera.com/en/extensions/details/stylish/), and [Chrome](https://chrome.google.com/webstore/detail/stylish/fjnbnpbmkenffdnngjfgmeleoegfcffe).
 
 Users might do this for a variety of reasons. A visually impaired user might want to make the text bigger on all websites they visit, or a user with severe color deficiency might want to put all websites in high contrast colors that are easy for them to see. Whatever the need, you should be comfortable with this, and make your designs flexible enough so that such changes will work in your design. As an example, you might want to make sure your main content area can handle bigger text (maybe it will start to scroll to allow it all to be seen), and won't just hide it, or break completely.
@@ -296,16 +296,16 @@ For each input that doesn't have a value filled in when the form is submitted, w
 
 ```js
 function createLink(testItem) {
-  const listItem = document.createElement('li');
-  const anchor = document.createElement('a');
+  const listItem = document.createElement('li');
+  const anchor = document.createElement('a');
 
-  anchor.textContent = testItem.input.name + ' field is empty: fill in your ' + testItem.input.name + '.';
-  anchor.href = '#' + testItem.input.name;
-  anchor.onclick = function() {
-    testItem.input.focus();
-  };
-  listItem.appendChild(anchor);
-  errorList.appendChild(listItem);
+  anchor.textContent = testItem.input.name + ' field is empty: fill in your ' + testItem.input.name + '.';
+  anchor.href = '#' + testItem.input.name;
+  anchor.onclick = function() {
+    testItem.input.focus();
+  };
+  listItem.appendChild(anchor);
+  errorList.appendChild(listItem);
 }
 ```
 

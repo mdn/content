@@ -70,5 +70,5 @@ console.log(uint8); // Uint8Array [ 1, 2, 3, 1, 2, 3, 0, 0 ]
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.copyWithin` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.copyWithin` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray")}}

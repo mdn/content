@@ -73,5 +73,5 @@ if (typeof globalThis.setTimeout !== 'function') {
 
 ## See also
 
-- A polyfill of `globalThis` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-globalthis)
+- [Polyfill of `globalThis` in `core-js`](https://github.com/zloirock/core-js#ecmascript-globalthis)
 - {{jsxref("Operators/this", "this")}}

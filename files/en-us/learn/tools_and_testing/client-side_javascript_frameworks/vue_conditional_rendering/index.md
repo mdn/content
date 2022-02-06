@@ -308,9 +308,9 @@ And there you have it — you should now be able to edit and delete items from t
 
 This is great so far, but we've actually introduced a bug by adding in the edit functionality. Try doing this:
 
-1.  Check (or uncheck) one of the todo checkboxes.
-2.  Press the "Edit" button for that todo item.
-3.  Cancel the edit by pressing the "Cancel" button.
+1. Check (or uncheck) one of the todo checkboxes.
+2. Press the "Edit" button for that todo item.
+3. Cancel the edit by pressing the "Cancel" button.
 
 Note the state of the checkbox after you cancel — not only has the app forgotten the state of the checkbox, but the done status of that todo item is now out of whack. If you try checking (or unchecking) it again, the completed count will change in the opposite way to what you'd expect. This is because the `isDone` inside `data` is only given the value `this.done` on component load.
 
@@ -318,13 +318,13 @@ Fixing this is fortunately quite easy — we can do this by converting our `isDo
 
 So, let's implement the fix:
 
-1.  Remove the following line from inside our `data()` property:
+1. Remove the following line from inside our `data()` property:
 
     ```js
     isDone: this.done,
     ```
 
-2.  Add the following block below the data() { } block:
+2. Add the following block below the data() { } block:
 
     ```js
     computed: {

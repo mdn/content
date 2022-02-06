@@ -14,6 +14,8 @@ browser-compat: api.IIRFilterNode
 
 The **`IIRFilterNode`** interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) is a {{domxref("AudioNode")}} processor which implements a general **{{interwiki("wikipedia", "infinite impulse response")}}** (IIR)  filter; this type of filter can be used to implement tone control devices and graphic equalizers as well. It lets the parameters of the filter response be specified, so that it can be tuned as needed.
 
+{{InheritanceDiagram}}
+
 <table class="properties">
   <tbody>
     <tr>

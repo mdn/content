@@ -30,6 +30,8 @@ The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)'s **`XRInputSourceE
 
 To learn more about handling inputs in a WebXR project, see the article [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/Inputs).
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("XRInputSourceEvent.XRInputSourceEvent", "XRInputSourceEvent()")}}

@@ -125,7 +125,7 @@ let shallowCopySpread = [...fruits]
 // ["Strawberry", "Mango"]
 ```
 
-This is a shallow copy made using the [spread sequence](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) operator:
+This is a [shallow copy](/en-US/docs/Glossary/Shallow_copy) made using the [spread sequence](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) operator:
 Other ways to copy an array are discussed below in [Copying an array](#copying_an_array).
 
 ### Accessing array elements
@@ -309,9 +309,9 @@ let shallowCopyFrom = Array.from(fruits)
 // ["Strawberry", "Mango"]
 ```
 
-These all create a _shallow copy_; top-level elements containing primitive values are copied, but if the array contains nested objects or arrays, those will reference elements in the original array.
+These all create a [_shallow copy_](/en-US/docs/Glossary/Shallow_copy); top-level elements containing primitive values are copied, but if the array contains nested objects or arrays, those will reference elements in the original array.
 
-If you need a _deep copy_ of all elements — that is, in which even nested arrays don’t just reference elements in the original array but instead are also copied — one approach is to use {{jsxref("JSON.stringify()")}} to convert the array to a JSON string, and then {{jsxref("JSON.parse()")}} to convert the string back into an array.
+If you need a [_deep copy_](/en-US/docs/Glossary/Deep_copy) of all elements — that is, in which even nested arrays don’t just reference elements in the original array but instead are also copied — one approach is to use {{jsxref("JSON.stringify()")}} to convert the array to a JSON string, and then {{jsxref("JSON.parse()")}} to convert the string back into an array.
 
 ```js
 let deepCopy = JSON.parse(JSON.stringify(fruits));

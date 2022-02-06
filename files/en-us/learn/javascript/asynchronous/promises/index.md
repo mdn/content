@@ -78,9 +78,9 @@ To fully understand why promises are a good thing, it helps to think back to old
 
 Let's talk about ordering pizza as an analogy. There are certain steps that you have to take for your order to be successful, which doesn't really make sense to try to execute out of order, or in order but before each previous step has quite finished:
 
-1.  You choose what toppings you want. This can take a while if you are indecisive, and may fail if you just can't make up your mind, or decide to get a curry instead.
-2.  You then place your order. This can take a while to return a pizza and may fail if the restaurant does not have the required ingredients to cook it.
-3.  You then collect your pizza and eat. This might fail if, say, you forgot your wallet so can't pay for the pizza!
+1. You choose what toppings you want. This can take a while if you are indecisive, and may fail if you just can't make up your mind, or decide to get a curry instead.
+2. You then place your order. This can take a while to return a pizza and may fail if the restaurant does not have the required ingredients to cook it.
+3. You then collect your pizza and eat. This might fail if, say, you forgot your wallet so can't pay for the pizza!
 
 With old-style [callbacks](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing#callbacks), a pseudo-code representation of the above functionality might look something like this:
 
@@ -167,9 +167,9 @@ In the first example, we'll use the [`fetch()`](/en-US/docs/Web/API/fetch) metho
 
 > **Note:** The following example will not work if you just run it directly from the file (i.e. via a `file://` URL). You need to run it through a [local testing server](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server), or use an online solution such as [Glitch](https://glitch.com/) or [GitHub pages](/en-US/docs/Learn/Common_questions/Using_Github_pages).
 
-1.  First of all, download our [simple HTML template](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) and the [sample image file](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/coffee.jpg) that we'll fetch.
-2.  Add a {{htmlelement("script")}} element at the bottom of the HTML {{htmlelement("body")}}.
-3.  Inside your {{HTMLElement("script")}} element, add the following line:
+1. First of all, download our [simple HTML template](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) and the [sample image file](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/coffee.jpg) that we'll fetch.
+2. Add a {{htmlelement("script")}} element at the bottom of the HTML {{htmlelement("body")}}.
+3. Inside your {{HTMLElement("script")}} element, add the following line:
 
     ```js
     let promise = fetch('coffee.jpg');
@@ -177,7 +177,7 @@ In the first example, we'll use the [`fetch()`](/en-US/docs/Web/API/fetch) metho
 
     This calls the `fetch()` method, passing it the URL of the image to fetch from the network as a parameter. This can also take an options object as an optional second parameter, but we are just using the simplest version for now. We are storing the promise object returned by `fetch()` inside a variable called `promise`. As we said before, this object represents an intermediate state that is initially neither success nor failure — the official term for a promise in this state is **pending**.
 
-4.  To respond to the successful completion of the operation whenever that occurs (in this case, when a {{domxref("Response")}} is returned), we invoke the [`.then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) method of the promise object. The callback inside the `.then()` block runs only when the promise call completes successfully and returns the {{domxref("Response")}} object — in promise-speak, when it has been **fulfilled**. It is passed the returned {{domxref("Response")}} object as a parameter.
+4. To respond to the successful completion of the operation whenever that occurs (in this case, when a {{domxref("Response")}} is returned), we invoke the [`.then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) method of the promise object. The callback inside the `.then()` block runs only when the promise call completes successfully and returns the {{domxref("Response")}} object — in promise-speak, when it has been **fulfilled**. It is passed the returned {{domxref("Response")}} object as a parameter.
 
     > **Note:** The way that a `.then()` block works is similar to when you add an event listener to an object using `AddEventListener()`. It doesn't run until an event occurs (when the promise fulfills). The most notable difference is that a `.then()` will only run once for each time it is used, whereas an event listener could be invoked multiple times.
 
@@ -199,15 +199,15 @@ In the first example, we'll use the [`fetch()`](/en-US/docs/Web/API/fetch) metho
 
     ```js
     let promise2 = promise.then(response => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      } else {
-        return response.blob();
-      }
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      } else {
+        return response.blob();
+      }
     });
     ```
 
-5.  Each call to `.then()` creates a new promise. This is very useful; because the `blob()` method also returns a promise, we can handle the `Blob` object it returns on fulfillment by invoking the `.then()` method of the second promise. Because we want to do something a bit more complex to the blob than just run a single method on it and return the result, we'll need to wrap the function body in curly braces this time (otherwise it'll throw an error).
+5. Each call to `.then()` creates a new promise. This is very useful; because the `blob()` method also returns a promise, we can handle the `Blob` object it returns on fulfillment by invoking the `.then()` method of the second promise. Because we want to do something a bit more complex to the blob than just run a single method on it and return the result, we'll need to wrap the function body in curly braces this time (otherwise it'll throw an error).
 
     Add the following to the end of your code:
 
@@ -217,7 +217,7 @@ In the first example, we'll use the [`fetch()`](/en-US/docs/Web/API/fetch) metho
     });
     ```
 
-6.  Now let's fill in the body of the `.then()` callback. Add the following lines inside the curly braces:
+6. Now let's fill in the body of the `.then()` callback. Add the following lines inside the curly braces:
 
     ```js
     let objectURL = URL.createObjectURL(myBlob);
@@ -255,20 +255,20 @@ This is a very longhand way of writing this out; we've deliberately done this to
 ```js
 fetch('coffee.jpg')
 .then(response => {
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  } else {
-    return response.blob();
-  }
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  } else {
+    return response.blob();
+  }
 })
 .then(myBlob => {
-  let objectURL = URL.createObjectURL(myBlob);
-  let image = document.createElement('img');
-  image.src = objectURL;
-  document.body.appendChild(image);
+  let objectURL = URL.createObjectURL(myBlob);
+  let image = document.createElement('img');
+  image.src = objectURL;
+  document.body.appendChild(image);
 })
 .catch(e => {
-  console.log('There has been a problem with your fetch operation: ' + e.message);
+  console.log('There has been a problem with your fetch operation: ' + e.message);
 });
 ```
 
@@ -280,11 +280,11 @@ Bear in mind that the value returned by a fulfilled promise becomes the paramete
 
 There was a lot to cover in the above section, so let's go back over it quickly to give you a short guide that you can bookmark and use to refresh your memory in the future. You should also go over the above section again a few more times to make sure these concepts stick.
 
-1.  When a promise is created, it is neither in a success or failure state. It is said to be **pending**.
-2.  When a promise returns, it is said to be **resolved**.
+1. When a promise is created, it is neither in a success or failure state. It is said to be **pending**.
+2. When a promise returns, it is said to be **resolved**.
 
-    1.  A successfully resolved promise is said to be **fulfilled**. It returns a value, which can be accessed by chaining a `.then()` block onto the end of the promise chain. The callback function inside the `.then()` block will contain the promise's return value.
-    2.  An unsuccessful resolved promise is said to be **rejected**. It returns a **reason**, an error message stating why the promise was rejected. This reason can be accessed by chaining a `.catch()` block onto the end of the promise chain.
+    1. A successfully resolved promise is said to be **fulfilled**. It returns a value, which can be accessed by chaining a `.then()` block onto the end of the promise chain. The callback function inside the `.then()` block will contain the promise's return value.
+    2. An unsuccessful resolved promise is said to be **rejected**. It returns a **reason**, an error message stating why the promise was rejected. This reason can be accessed by chaining a `.catch()` block onto the end of the promise chain.
 
 ## Running code in response to multiple promises fulfilling
 
@@ -298,15 +298,15 @@ Promise.all([a, b, c]).then(values => {
 });
 ```
 
-If they all fulfil, the chained `.then()` block's callback function will be passed an array containing all those results as a parameter. If any of the promises passed to `Promise.all()` reject, the whole block will reject.
+If they all fulfil, the chained `.then()` block's callback function will be passed an array containing all those results as a parameter. If any of the promises passed to `Promise.all()` reject, the whole block will reject.
 
 This can be very useful. Imagine that we’re fetching information to dynamically populate a UI feature on our page with content. In many cases, it makes sense to receive all the data and only then show the complete content, rather than displaying partial information.
 
 Let's build another example to show this in action.
 
-1.  Download a fresh copy of our [page template](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html), and again put a `<script>` element just before the closing `</body>` tag.
-2.  Download our source files ([coffee.jpg](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/coffee.jpg), [tea.jpg](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/tea.jpg), and [description.txt](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/description.txt)), or feel free to substitute your own.
-3.  In our script, we'll first define a function that returns the promises we want to send to `Promise.all()`. This would be easy if we just wanted to run the `Promise.all()` block in response to three `fetch()` operations completing. We could just do something like:
+1. Download a fresh copy of our [page template](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html), and again put a `<script>` element just before the closing `</body>` tag.
+2. Download our source files ([coffee.jpg](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/coffee.jpg), [tea.jpg](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/tea.jpg), and [description.txt](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/description.txt)), or feel free to substitute your own.
+3. In our script, we'll first define a function that returns the promises we want to send to `Promise.all()`. This would be easy if we just wanted to run the `Promise.all()` block in response to three `fetch()` operations completing. We could just do something like:
 
     ```js
     let a = fetch(url1);
@@ -324,37 +324,37 @@ Let's build another example to show this in action.
 
     ```js
     function fetchAndDecode(url, type) {
-      return fetch(url).then(response => {
-        if(!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        } else {
-          if(type === 'blob') {
-            return response.blob();
-          } else if(type === 'text') {
-            return response.text();
-          }
-        }
-      })
-      .catch(e => {
-        console.log(`There has been a problem with your fetch operation for resource "${url}": ` + e.message);
-      });
+      return fetch(url).then(response => {
+        if(!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        } else {
+          if(type === 'blob') {
+            return response.blob();
+          } else if(type === 'text') {
+            return response.text();
+          }
+        }
+      })
+      .catch(e => {
+        console.log(`There has been a problem with your fetch operation for resource "${url}": ` + e.message);
+      });
     }
     ```
 
     This looks a bit complex, so let's run through it step by step:
 
-    1.  First of all, we define the function, passing it a URL and a string representing the type of resource it is fetching.
-    2.  Inside the function body, we have a similar structure to what we saw in the first example — we call the `fetch()` function to fetch the resource at the specified URL, then chain it onto another promise that returns the decoded (or "read") response body. This was always the `blob()` method in the previous example.
-    3.  However, two things are different here:
+    1. First of all, we define the function, passing it a URL and a string representing the type of resource it is fetching.
+    2. Inside the function body, we have a similar structure to what we saw in the first example — we call the `fetch()` function to fetch the resource at the specified URL, then chain it onto another promise that returns the decoded (or "read") response body. This was always the `blob()` method in the previous example.
+    3. However, two things are different here:
 
         - First of all, the second promise we return is different depending on what the `type` value is. Inside the `.then()` callback function, we include a simple `if ... else if` statement to return a different promise depending on what type of file we need to decode (in this case we've got a choice of `blob` or `text`, but it would be easy to extend this to deal with other types as well).
         - Second, we have added the `return` keyword before the `fetch()` call. The effect this has is to run the entire chain and then run the final result (i.e. the promise returned by `blob()` or `text()`) as the return value of the function we've just defined. In effect, the `return` statements pass the results back up the chain to the top.
 
-    4.  At the end of the block, we chain on a `.catch()` call, to handle any error cases that may occur with any of the promises passed in the array to `.all()`. If any of the promises reject, the `.catch()` block will let you know which one had a problem. The `.all()` block (see below) will still fulfill, but it won't display the resources that had problems. Remember that, once you handle the promise with a  `.catch()` block, the resulting promise is considered resolved but with a value of `undefined`; that's why in this case the `.all()` block will always get fulfilled. If you wanted the `.all()` to reject, you'd have to chain the `.catch()` block on to the end of the `.all()` instead.
+    4. At the end of the block, we chain on a `.catch()` call, to handle any error cases that may occur with any of the promises passed in the array to `.all()`. If any of the promises reject, the `.catch()` block will let you know which one had a problem. The `.all()` block (see below) will still fulfill, but it won't display the resources that had problems. Remember that, once you handle the promise with a `.catch()` block, the resulting promise is considered resolved but with a value of `undefined`; that's why in this case the `.all()` block will always get fulfilled. If you wanted the `.all()` to reject, you'd have to chain the `.catch()` block on to the end of the `.all()` instead.
 
     The code inside the function body is async and promise-based, therefore in effect, the entire function acts like a promise — convenient.
 
-4.  Next, we call our function three times to begin the process of fetching and decoding the images and text and store each of the returned promises in a variable. Add the following below your previous code:
+4. Next, we call our function three times to begin the process of fetching and decoding the images and text and store each of the returned promises in a variable. Add the following below your previous code:
 
     ```js
     let coffee = fetchAndDecode('coffee.jpg', 'blob');
@@ -362,7 +362,7 @@ Let's build another example to show this in action.
     let description = fetchAndDecode('description.txt', 'text');
     ```
 
-5.  Next, we will define a `Promise.all()` block to run some code only when all three of the promises stored above have successfully fulfilled. To begin with, add a block with an empty callback function inside the `.then()` call, like so:
+5. Next, we will define a `Promise.all()` block to run some code only when all three of the promises stored above have successfully fulfilled. To begin with, add a block with an empty callback function inside the `.then()` call, like so:
 
     ```js
     Promise.all([coffee, tea, description]).then(values => {
@@ -372,7 +372,7 @@ Let's build another example to show this in action.
 
     You can see that it takes an array containing the promises as a parameter. The `.then()` callback function will only run when all three promises resolve; when that happens, it will be passed an array containing the results from the individual promises (i.e. the decoded response bodies), kind of like \[coffee-results, tea-results, description-results].
 
-6.  Finally, add the following inside the callback. Here we use some fairly simple sync code to store the results in separate variables (creating object URLs from the blobs), then display the images and text on the page.
+6. Finally, add the following inside the callback. Here we use some fairly simple sync code to store the results in separate variables (creating object URLs from the blobs), then display the images and text on the page.
 
     ```js
     console.log(values);
@@ -395,7 +395,7 @@ Let's build another example to show this in action.
     document.body.appendChild(para);
     ```
 
-7.  Save and refresh and you should see your UI components all loaded, albeit in a not particularly attractive way!
+7. Save and refresh and you should see your UI components all loaded, albeit in a not particularly attractive way!
 
 The code we provided here for displaying the items is fairly rudimentary but works as an explainer for now.
 
@@ -442,14 +442,14 @@ For a real example, take a look at our [promise-finally.html demo](https://mdn.g
 function fetchAndDecode(url, type) {
   return fetch(url).then(response => {
     if(!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    } else {
-      if(type === 'blob') {
-        return response.blob();
-      } else if(type === 'text') {
-        return response.text();
-      }
-    }
+      throw new Error(`HTTP error! status: ${response.status}`);
+    } else {
+      if(type === 'blob') {
+        return response.blob();
+      } else if(type === 'text') {
+        return response.text();
+      }
+    }
   })
   .catch(e => {
     console.log(`There has been a problem with your fetch operation for resource "${url}": ` + e.message);
@@ -535,9 +535,9 @@ Here we are passing two arguments into a custom function — a message to do som
 
 Inside the Promise constructor, we do several checks inside `if ... else` structures:
 
-1.  First of all, we check to see if the message is appropriate for being alerted. If it is an empty string or not a string at all, we reject the promise with a suitable error message.
-2.  Next, we check to see if the interval is an appropriate interval value. If it is negative or not a number, we reject the promise with a suitable error message.
-3.  Finally, if the parameters both look OK, we resolve the promise with the specified message after the specified interval has passed using `setTimeout()`.
+1. First of all, we check to see if the message is appropriate for being alerted. If it is an empty string or not a string at all, we reject the promise with a suitable error message.
+2. Next, we check to see if the interval is an appropriate interval value. If it is negative or not a number, we reject the promise with a suitable error message.
+3. Finally, if the parameters both look OK, we resolve the promise with the specified message after the specified interval has passed using `setTimeout()`.
 
 Since the `timeoutPromise()` function returns a `Promise`, we can chain `.then()`, `.catch()`, etc. onto it to make use of its functionality. Let's use it now — replace the previous `timeoutPromise` usage with this one:
 

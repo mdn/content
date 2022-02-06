@@ -11,7 +11,7 @@ The **`origin`** attribute specifies the origin of motion for an animation. It h
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("animateMotion")}}
+- {{SVGElement("animateMotion")}}
 
 ## Context notes
 
@@ -67,4 +67,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-*   [Definition of `origin` in SMIL Animation specification](https://www.w3.org/TR/smil-animation/#MotionOriginAttribute)
+- [Definition of `origin` in SMIL Animation specification](https://www.w3.org/TR/smil-animation/#MotionOriginAttribute)

@@ -259,16 +259,16 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 
 #### Gradients
 
-  - {{CSSxRef("linear-gradient","-moz-linear-gradient")}} {{Deprecated_Inline}}
-  - {{CSSxRef("radial-gradient","-moz-radial-gradient")}} {{Deprecated_Inline}}
+- {{CSSxRef("linear-gradient","-moz-linear-gradient")}} {{Deprecated_Inline}}
+- {{CSSxRef("radial-gradient","-moz-radial-gradient")}} {{Deprecated_Inline}}
 
 #### Elements
 
-  - {{CSSxRef("element","-moz-element")}}
+- {{CSSxRef("element","-moz-element")}}
 
 #### Sub-images
 
-  - {{CSSxRef("-moz-image-rect")}}
+- {{CSSxRef("-moz-image-rect")}}
 
 ### {{CSSxRef("border-color")}}
 

@@ -53,9 +53,9 @@ Inherited into roles:
 
 ## See Also
 
--  The [`rowspan`](/en-US/docs/Web/HTML/Element/td#attr-rowspan) attribute on {{HTMLElement('td')}}
--  [`aria-rowindex`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-rowindex)
--  [`aria-colspan`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-colspan)
+- The [`rowspan`](/en-US/docs/Web/HTML/Element/td#attr-rowspan) attribute on {{HTMLElement('td')}}
+- [`aria-rowindex`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-rowindex)
+- [`aria-colspan`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-colspan)
 
 <section id="Quick_links">
 <strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>

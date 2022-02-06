@@ -75,6 +75,6 @@ if (Number.isFinite === undefined) Number.isFinite = function(value) {
 
 ## See also
 
-- A polyfill of `Number.isFinite` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [Polyfill of `Number.isFinite` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
 - The {{jsxref("Number")}} object it belongs to.
 - The global function {{jsxref("isFinite")}}.

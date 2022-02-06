@@ -19,11 +19,11 @@ This attribute is applied only to text written in a vertical {{SVGAttr("writing-
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("altGlyph")}}
-*   {{SVGElement("textPath")}}
-*   {{SVGElement("text")}}
-*   {{SVGElement("tref")}}
-*   {{SVGElement("tspan")}}
+- {{SVGElement("altGlyph")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("text")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
 
 ## Context notes
 
@@ -51,17 +51,17 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `auto`
-    *   : Fullwidth {{Glossary("ideographic")}} and fullwidth Latin text will be set with a glyph orientation of 0 degrees. Ideographic punctuation and other ideographic characters having alternate horizontal and vertical forms will use the vertical form of the glyph. Text which is not fullwidth will be set with a glyph orientation of 90 degrees.
+- `auto`
+  - : Fullwidth {{Glossary("ideographic")}} and fullwidth Latin text will be set with a glyph orientation of 0 degrees. Ideographic punctuation and other ideographic characters having alternate horizontal and vertical forms will use the vertical form of the glyph. Text which is not fullwidth will be set with a glyph orientation of 90 degrees.
 
-        This reorientation rule applies only to the first-level non-ideographic text. All further embedding of writing modes or bidirectional processing will be based on the first-level rotation.
+    This reorientation rule applies only to the first-level non-ideographic text. All further embedding of writing modes or bidirectional processing will be based on the first-level rotation.
 
-        > **Note:** Text set in this "rotated" manner may contain ligatures or other glyph combining and reordering common to the language and script. (This presentation form does not disable auto-ligature formation or similar context-driven variations.)
+    > **Note:** Text set in this "rotated" manner may contain ligatures or other glyph combining and reordering common to the language and script. (This presentation form does not disable auto-ligature formation or similar context-driven variations.)
 
-        The determination of which characters should be auto-rotated may vary across user agents. The determination is based on a complex interaction between country, language, script, character properties, font, and character context.
-*   `<angle>`
-    *   : The value of the angle is restricted to 0, 90, 180, and 270 degrees. If another angle is specified, it is rounded to the closest of the permitted values.
-        A value of `0deg` indicates that all glyphs are set with the top of the glyphs oriented towards the reference orientation. A value of `90deg` indicates an orientation of 90 degrees clockwise from the reference orientation.
+    The determination of which characters should be auto-rotated may vary across user agents. The determination is based on a complex interaction between country, language, script, character properties, font, and character context.
+- `<angle>`
+  - : The value of the angle is restricted to 0, 90, 180, and 270 degrees. If another angle is specified, it is rounded to the closest of the permitted values.
+    A value of `0deg` indicates that all glyphs are set with the top of the glyphs oriented towards the reference orientation. A value of `90deg` indicates an orientation of 90 degrees clockwise from the reference orientation.
 
 ## Specifications
 

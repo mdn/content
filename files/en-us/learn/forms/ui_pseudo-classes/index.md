@@ -59,9 +59,9 @@ The original pseudo-classes available to us (as of [CSS 2.1](https://www.w3.org/
 
 These basic pseudo-classes should be familiar to you now. More recently, the [CSS Selector Level 3](https://www.w3.org/TR/css3-selectors/) and [CSS Basic UI Level 3](https://dev.w3.org/csswg/css3-ui/#pseudo-classes) added more pseudo-classes related to HTML forms that provide several other useful targeting conditions that you can take advantage of. We'll discuss these in more detail in the sections below, but briefly, the main ones we'll be looking at are:
 
-- {{cssxref(':required')}} and {{cssxref(':optional')}}: Targets required or optional form controls.
+- {{cssxref(':required')}} and {{cssxref(':optional')}}: Targets required or optional form controls.
 - {{cssxref(":valid")}} and {{cssxref(":invalid")}}, and {{cssxref(":in-range")}} and {{cssxref(":out-of-range")}}: Target form controls that are valid/invalid according to form validation constraints set on them, or in-range/out-of-range.
-- {{cssxref(":enabled")}} and {{cssxref(":disabled")}}, and {{cssxref(":read-only")}} and {{cssxref(":read-write")}}: Target enabled or disabled form controls (e.g. with the `disabled` HTML attribute set), and read-write or read-only form controls (e.g. with the `readonly` HTML attribute set).
+- {{cssxref(":enabled")}} and {{cssxref(":disabled")}}, and {{cssxref(":read-only")}} and {{cssxref(":read-write")}}: Target enabled or disabled form controls (e.g. with the `disabled` HTML attribute set), and read-write or read-only form controls (e.g. with the `readonly` HTML attribute set).
 - {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}, and {{cssxref(":default")}}: Respectively target checkboxes and radio buttons that are checked, in an indeterminate state (neither checked or not checked), and the default selected option when the page loads (e.g. an [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) with the `checked` attribute set, or an [`<option>`](/en-US/docs/Web/HTML/Element/option) element with the `selected` attribute set).
 
 There are many others too, but the ones listed above are the most obviously useful. Some of the others are aimed at solving very specific niche problems, or not very well supported in browsers yet. The ones listed above all have pretty good browser support, but of course, you should test your form implementations carefully to make sure they work for your target audience.
@@ -278,7 +278,7 @@ Notice how the required text inputs are invalid when empty, but valid when they 
 
 ### In-range and out-of-range data
 
-As we hinted at above, there are two other related pseudo-classes to consider — {{cssxref(":in-range")}} and {{cssxref(":out-of-range")}}. These match numeric inputs where range limits are specified by the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max","input")}}, when their data is inside or outside the specified range, respectvely.
+As we hinted at above, there are two other related pseudo-classes to consider — {{cssxref(":in-range")}} and {{cssxref(":out-of-range")}}. These match numeric inputs where range limits are specified by the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max","input")}}, when their data is inside or outside the specified range, respectively.
 
 > **Note:** Numeric input types are `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`.
 
@@ -338,7 +338,7 @@ This works quite nicely — when the page first loads, "Required" is shown, alon
 
 ## Styling enabled and disabled inputs, and read-only and read-write
 
-An enabled element is an element that can be activated; it can be selected, clicked on, typed into, etc.  A disabled element on the other hand cannot be interacted with in any way, and its data isn't even sent to the server
+An enabled element is an element that can be activated; it can be selected, clicked on, typed into, etc. A disabled element on the other hand cannot be interacted with in any way, and its data isn't even sent to the server
 
 These two states can be targeted using {{cssxref(":enabled")}} and {{cssxref(":disabled")}}. Why are disabled inputs useful? Well, sometimes if some data does not apply to a certain user, you might not even want to submit that data when they submit the form. A classic example is a shipping form — commonly you'll get asked if you want to use the same address for billing and shipping; if so, you can just send a single address to the server, and might as well just disable the billing address fields.
 
@@ -458,15 +458,15 @@ If you try the live example, you'll see that the top set of form elements are no
 ```css
 input:-moz-read-only, textarea:-moz-read-only,
 input:read-only, textarea:read-only {
-  border: 0;
-  box-shadow: none;
-  background-color: white;
+  border: 0;
+  box-shadow: none;
+  background-color: white;
 }
 
 textarea:-moz-read-write,
 textarea:read-write {
-  box-shadow: inset 1px 1px 3px #ccc;
-  border-radius: 5px;
+  box-shadow: inset 1px 1px 3px #ccc;
+  border-radius: 5px;
 }
 ```
 
@@ -485,11 +485,11 @@ As we've seen in earlier articles in the module, {{HTMLElement("input/radio", "r
 
 ### :checked
 
-When checked, they will be matched by the {{cssxref(":checked")}} pseudo-class.
+When checked, they will be matched by the {{cssxref(":checked")}} pseudo-class.
 
 The most common use of this is to add a different style onto the checkbox/radiobutton when it is checked, in cases where you've removed the system default styling with `appearance: none;` and want to build the styles back up yourself. We saw examples of this in the previous article when we talked about [Using `appearance: none` on radios/checkboxes](/en-US/docs/Learn/Forms/Advanced_form_styling#using_appearance_none_on_radioscheckboxes).
 
-As a recap, the `:checked` code from our [Styled radio buttons](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html) example looks like so:
+As a recap, the `:checked` code from our [Styled radio buttons](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html) example looks like so:
 
 ```css
 input[type="radio"]::before {
@@ -521,7 +521,7 @@ Basically, we build the styling for the radio button "inner circle" using the `:
 
 As mentioned above, the {{cssxref(":default")}} pseudo-class matches radios/checkboxes that are checked by default, on page load, even when unchecked. This could be useful for adding an indicator to a list of options to remind the user what the defaults (or starting options) were, in case they want to reset their choices.
 
-Also mentioned above radios/checkboxes will be matched by the {{cssxref(":indeterminate")}} pseudo-class when they are in a state where they are neither checked nor unchecked. But what does this mean? Elements that are indeterminate include:
+Also mentioned above radios/checkboxes will be matched by the {{cssxref(":indeterminate")}} pseudo-class when they are in a state where they are neither checked nor unchecked. But what does this mean? Elements that are indeterminate include:
 
 - {{HTMLElement("input/radio")}} inputs, when all radio buttons in a same-named group are unchecked
 - {{HTMLElement("input/checkbox")}} inputs whose `indeterminate` property is set to `true` via JavaScript
@@ -603,11 +603,11 @@ The following are fairly well-supported in modern browsers:
 
 - The {{cssxref(":focus-within")}} pseudo-class matches an element that has received focus or _contains_ an element that has received focus. This is useful if you want a whole form to highlight in some way when an input inside it is focused.
 - The {{cssxref(":focus-visible")}} pseudo-class matches focused elements that received focus via keyboard interaction (rather than touch or mouse) — useful if you want to show a different style for keyboard focus compared to mouse (or other) focus.
-- The {{cssxref(":placeholder-shown")}} pseudo-class matches {{htmlelement('input')}} and {{htmlelement('textarea')}} elements that have their placeholder showing (i.e. the contents of the [`placeholder`](/en-US/docs/Web/HTML/Attributes/placeholder) attribute) because the value of the element is empty.
+- The {{cssxref(":placeholder-shown")}} pseudo-class matches {{htmlelement('input')}} and {{htmlelement('textarea')}} elements that have their placeholder showing (i.e. the contents of the [`placeholder`](/en-US/docs/Web/HTML/Attributes/placeholder) attribute) because the value of the element is empty.
 
 The following are also interesting, but as yet not well-supported in browsers:
 
-- The {{cssxref(":blank")}} pseudo-class selects empty form controls. {{cssxref(":empty")}} also matches elements that have no children, like {{HTMLElement("input")}}, but it is more general — it also matches other empty elements like {{HTMLElement("br")}} and {{HTMLElement("hr")}}. `:empty` has reasonable browser support; the `:blank` pseudo-class's specification is not yet finished, so it not yet supported in any browser.
+- The {{cssxref(":blank")}} pseudo-class selects empty form controls. {{cssxref(":empty")}} also matches elements that have no children, like {{HTMLElement("input")}}, but it is more general — it also matches other empty elements like {{HTMLElement("br")}} and {{HTMLElement("hr")}}. `:empty` has reasonable browser support; the `:blank` pseudo-class's specification is not yet finished, so it not yet supported in any browser.
 - The [`:user-invalid`](https://drafts.csswg.org/selectors-4/#user-invalid-pseudo) pseudo-class, when supported, will be similar to {{cssxref(":invalid")}}, but with better user experience. If the value is valid when the input receives focus, the element may match `:invalid` as the user enters data if the value is temporarily invalid, but will only match `:user-invalid` when the element loses focus. If the value was originally invalid, it will match both `:invalid` and `:user-invalid` for the whole duration of the focus. In a similar manner to `:invalid`, it will stop matching `:user-invalid` if the value does become valid.
 
 ## Test your skills!

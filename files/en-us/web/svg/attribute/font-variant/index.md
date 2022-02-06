@@ -14,11 +14,11 @@ The **`font-variant`** attribute indicates whether the text is to be rendered us
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("altGlyph")}}
-*   {{SVGElement("text")}}
-*   {{SVGElement("textPath")}}
-*   {{SVGElement("tref")}}
-*   {{SVGElement("tspan")}}
+- {{SVGElement("altGlyph")}}
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
 
 ## Example
 
@@ -30,8 +30,8 @@ html, body, svg {
 
 ```html
 <svg viewBox="0 0 250 30" xmlns="http://www.w3.org/2000/svg">
-  <text y="20" font-variant="normal">Normal text</text>
-  <text x="100" y="20" font-variant="small-caps">Small-caps text</text>
+  <text y="20" font-variant="normal">Normal text</text>
+  <text x="100" y="20" font-variant="small-caps">Small-caps text</text>
 </svg>
 ```
 
@@ -123,4 +123,4 @@ For a description of the values, please refer to the [CSS `font-variant`](/en-US
 
 ## See also
 
-*   {{cssxref("font-variant", "CSS font-variant")}}
+- {{cssxref("font-variant", "CSS font-variant")}}

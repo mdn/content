@@ -19,6 +19,8 @@ A _pointer_ is a hardware agnostic representation of input devices (such as a mo
 
 A pointer's _hit test_ is the process a browser uses to determine the target element for a pointer event. Typically, this is determined by considering the pointer's location and also the visual layout of elements in a document on screen media.
 
+{{InheritanceDiagram}}
+
 ## Constructors
 
 - {{domxref("PointerEvent.PointerEvent", "PointerEvent()")}}

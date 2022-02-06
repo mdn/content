@@ -39,6 +39,8 @@ The form control that a label is labeling is called the _labeled control_ of the
 <input id="username">
 <label for="username">Forgot your username?</label>
 ```
+  
+Elements that can be associated with a `<label>` element include {{HTMLElement('button')}}, {{HTMLElement('input')}} (except for `type="hidden"`), {{HTMLElement('meter')}}, {{HTMLElement('output')}}, {{HTMLElement('progress')}}, {{HTMLElement('select')}} and {{HTMLElement('textarea')}}.
 
 ## Attributes
 

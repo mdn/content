@@ -28,7 +28,7 @@ For example:
 The only sequence which is not allowed within a CDATA section is the closing sequence
 of a CDATA section itself, `]]>`.
 
-> **Note:* CDATA sections should not be used within HTML they are considered as comments and not displayed.
+> **Note:** CDATA sections should not be used within HTML they are considered as comments and not displayed.
 
 {{InheritanceDiagram}}
 

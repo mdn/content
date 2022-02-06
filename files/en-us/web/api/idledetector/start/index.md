@@ -30,7 +30,7 @@ IdleDetector.start(options);
 - `options`{{optional_inline}}
   - : An object with the following properties:
     - `threshold`: The minimum number of idle milliseconds before reporting should begin.
-    - `signal`: A reference to an {{domxref('AbortSignal')}} instance allowing you to abort idel detection.
+    - `signal`: A reference to an {{domxref('AbortSignal')}} instance allowing you to abort idle detection.
 
 ### Return Value
 

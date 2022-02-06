@@ -98,7 +98,7 @@ Math.log1p(-2); // NaN
 
 ## See also
 
-- A polyfill of `Math.log1p` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [Polyfill of `Math.log1p` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math.exp()")}}
 - {{jsxref("Math.log()")}}
 - {{jsxref("Math.expm1()")}}

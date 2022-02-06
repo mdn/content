@@ -72,7 +72,7 @@ Math.sign();      // NaN
 
 ## See also
 
-- A polyfill of `Math.sign` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [Polyfill of `Math.sign` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
 - [A
   polyfill](https://github.com/behnammodi/polyfill/blob/master/math.polyfill.js)
 - {{jsxref("Math.abs()")}}

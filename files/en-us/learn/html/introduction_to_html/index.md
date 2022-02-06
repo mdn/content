@@ -58,7 +58,3 @@ The following assessments will test your understanding of the HTML basics covere
   - : We all learn to write a letter sooner or later; it is also a useful example to test out text formatting skills. In this assessment, you'll be given a letter to mark up.
 - [Structuring a page of content](/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)
   - : This assessment tests your ability to use HTML to structure a simple page of content, containing a header, a footer, a navigation menu, main content, and a sidebar.
-
-> **Callout:**
->
-> Help us improve our guides and tutorials like this one by taking [our survey here](https://www.surveygizmo.com/s3/4871248/MDN-Guides-Survey).

@@ -190,14 +190,14 @@ Above all, it is up to you to find a comfortable coding style that results in ac
 
 Let's put these ideas into practice and build a slightly more involved form — a payment form. This form will contain a number of control types that you may not yet understand. Don't worry about this for now; you'll find out how they work in the next article ([Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls)). For now, read the descriptions carefully as you follow the below instructions, and start to form an appreciation of which wrapper elements we are using to structure the form, and why.
 
-1.  To start with, make a local copy of our [blank template file](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) and the [CSS for our payment form](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css) in a new directory on your computer.
-2.  Apply the CSS to the HTML by adding the following line inside the HTML {{htmlelement("head")}}:
+1. To start with, make a local copy of our [blank template file](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) and the [CSS for our payment form](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css) in a new directory on your computer.
+2. Apply the CSS to the HTML by adding the following line inside the HTML {{htmlelement("head")}}:
 
     ```html
     <link href="payment-form.css" rel="stylesheet">
     ```
 
-3.  Next, create your form by adding the outer {{htmlelement("form")}} element:
+3. Next, create your form by adding the outer {{htmlelement("form")}} element:
 
     ```html
     <form>
@@ -205,14 +205,14 @@ Let's put these ideas into practice and build a slightly more involved form — 
     </form>
     ```
 
-4.  Inside the `<form>` tags, add a heading and paragraph to inform users how required fields are marked:
+4. Inside the `<form>` tags, add a heading and paragraph to inform users how required fields are marked:
 
     ```html
     <h1>Payment form</h1>
     <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
     ```
 
-5.  Next we'll add a larger section of code into the form, below our previous entry. Here you'll see that we are wrapping the contact information fields inside a distinct {{htmlelement("section")}} element. Moreover, we have a set of three radio buttons, each of which we are putting inside its own list ({{htmlelement("li")}}) element. We also have two standard text {{htmlelement("input")}}s and their associated {{htmlelement("label")}} elements, each contained inside a {{htmlelement("p")}}, and a password input for entering a password. Add this code to your form:
+5. Next we'll add a larger section of code into the form, below our previous entry. Here you'll see that we are wrapping the contact information fields inside a distinct {{htmlelement("section")}} element. Moreover, we have a set of three radio buttons, each of which we are putting inside its own list ({{htmlelement("li")}}) element. We also have two standard text {{htmlelement("input")}}s and their associated {{htmlelement("label")}} elements, each contained inside a {{htmlelement("p")}}, and a password input for entering a password. Add this code to your form:
 
     ```html
     <section>

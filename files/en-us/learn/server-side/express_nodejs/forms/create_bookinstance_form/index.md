@@ -10,7 +10,7 @@ tags:
 ---
 This subarticle shows how to define a page/form to create `BookInstance` objects. This is very much like the form we used to create `Book` objects.
 
-## Import validation and sanitisation methods
+## Import validation and sanitization methods
 
 Open **/controllers/bookinstanceController.js**, and add the following lines at the top of the file:
 
@@ -52,7 +52,7 @@ Find the exported `bookinstance_create_post()` controller method and replace it 
 // Handle BookInstance create on POST.
 exports.bookinstance_create_post = [
 
-    // Validate and sanitise fields.
+    // Validate and sanitize fields.
     body('book', 'Book must be specified').trim().isLength({ min: 1 }).escape(),
     body('imprint', 'Imprint must be specified').trim().isLength({ min: 1 }).escape(),
     body('status').escape(),

@@ -82,7 +82,7 @@ This guideline focuses on making content as compatible as possible, not only wit
     </tr>
     <tr>
       <td>
-        4.1.3 Status Messages (AA) <em
+        4.1.3 Status Messages (AA) <em
           ><a
             href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
             rel="noopener"
@@ -92,7 +92,7 @@ This guideline focuses on making content as compatible as possible, not only wit
       </td>
       <td>
         <p>
-          Assistive technology users are made aware of new status messages added
+          Assistive technology users are made aware of new status messages added
           to the page.
         </p>
       </td>
@@ -112,7 +112,7 @@ This guideline focuses on making content as compatible as possible, not only wit
 
 - [WCAG](en-US/docs/Web/Accessibility/Understanding_WCAG)
 
-  1.  [Perceivable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
-  2.  [Operable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable)
-  3.  [Understandable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable)
-  4.  Robust
+  1. [Perceivable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
+  2. [Operable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable)
+  3. [Understandable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable)
+  4. Robust

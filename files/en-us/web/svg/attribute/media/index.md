@@ -12,7 +12,7 @@ The **`media`** attribute specifies a {{Glossary("media query")}} that must be m
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("style")}}
+- {{SVGElement("style")}}
 
 ## Example
 
@@ -63,10 +63,10 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `<media-query-list>`
-    *   : This value holds a media query that needs to match in order for the style sheet to be applied.
+- `<media-query-list>`
+  - : This value holds a media query that needs to match in order for the style sheet to be applied.
 
-        If not specified, the style sheet is applied unconditionally.
+    If not specified, the style sheet is applied unconditionally.
 
 ## Specifications
 

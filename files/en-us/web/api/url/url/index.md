@@ -86,5 +86,5 @@ let d = new URL('/en-US/docs', b);                     // =
 
 ## See also
 
-- A polyfill of `URL` is available in [`core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
+- [Polyfill of `URL` in `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
 - The interface it belongs to: {{domxref("URL")}}.

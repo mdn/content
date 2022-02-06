@@ -22,6 +22,8 @@ To use this sensor, the user must grant permission to the `'accelerometer'`, `'g
 
 If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("AbsoluteOrientationSensor.AbsoluteOrientationSensor", "AbsoluteOrientationSensor()")}}
@@ -31,13 +33,13 @@ If a feature policy blocks use of a feature it is because your code is inconsist
 
 _No specific properties; inherits methods from its ancestors {{domxref('OrientationSensor')}} and {{domxref('Sensor')}}._
 
-### Event handlers
-
-_No specific event handlers; inherits methods from its ancestor, {{domxref('Sensor')}}._
-
 ## Methods
 
 _No specific methods; inherits methods from its ancestors {{domxref('OrientationSensor')}} and {{domxref('Sensor')}}._
+
+## Events
+
+_No specific events; inherits methods from its ancestor, {{domxref('Sensor')}}._
 
 ## Examples
 

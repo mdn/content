@@ -70,9 +70,9 @@ On browsers that don't support inputs of type `email`, a `email` input falls bac
 
 The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} which is automatically validated as conforming to e-mail syntax. More specifically, there are three possible value formats that will pass validation:
 
-1.  An empty string ("") indicating that the user did not enter a value or that the value was removed.
-2.  A single properly-formed e-mail address. This doesn't necessarily mean the e-mail address exists, but it is at least formatted correctly. In simple terms, this means `username@domain` or `username@domain.tld`. There's more to it than that, of course; see {{anch("Validation")}} for a {{Glossary("regular expression")}} that matches the e-mail address validation algorithm.
-3.  If and only if the {{htmlattrxref("multiple", "input")}} attribute is specified, the value can be a list of properly-formed comma-separated e-mail addresses. Any trailing and leading whitespace is removed from each address in the list.
+1. An empty string ("") indicating that the user did not enter a value or that the value was removed.
+2. A single properly-formed e-mail address. This doesn't necessarily mean the e-mail address exists, but it is at least formatted correctly. In simple terms, this means `username@domain` or `username@domain.tld`. There's more to it than that, of course; see {{anch("Validation")}} for a {{Glossary("regular expression")}} that matches the e-mail address validation algorithm.
+3. If and only if the {{htmlattrxref("multiple", "input")}} attribute is specified, the value can be a list of properly-formed comma-separated e-mail addresses. Any trailing and leading whitespace is removed from each address in the list.
 
 See {{anch("Validation")}} for details on how e-mail addresses are validated to ensure that they're formatted properly.
 

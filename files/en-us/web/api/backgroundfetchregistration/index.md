@@ -14,6 +14,8 @@ The **`BackgroundFetchRegistration`** interface of the {{domxref('Background Fet
 
 A `BackgroundFetchRegistration` instance is returned by the {{domxref("BackgroundFetchManager.fetch()")}} or {{domxref("BackgroundFetchManager.get()")}} methods, and therefore there has no constructor.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 The following properties are available synchronously, as convenience properties copied from those in the `BackgroundFetchRegistration` instance.

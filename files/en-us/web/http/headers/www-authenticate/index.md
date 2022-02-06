@@ -87,7 +87,7 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
     > **Note:** For more information/options see [HTTP Authentication > Authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes)
 - **realm=**\<realm> {{optional_inline}}
   - : A string describing a protected area.
-    A realm allows a server to partition up the areas it protects (if supported by a scheme that allows such partitioning), and informs users about which paricular username/password are required.
+    A realm allows a server to partition up the areas it protects (if supported by a scheme that allows such partitioning), and informs users about which particular username/password are required.
     If no realm is specified, clients often display a formatted hostname instead.
 - `<token68>` {{optional_inline}}
   - : A token that may be useful for some schemes. The token allows the 66 unreserved URI characters plus a few others.
@@ -102,17 +102,17 @@ Generally you will need to check the relevant specifications for these (keys for
   - : As above.
 - **`charset="UTF-8"`** {{optional_inline}}
   - : Tells the client the server's preferred encoding scheme when submitting a username and password.
-      The only allowed value is the case-insensitive string "UTF-8".
-      This does not relate to the encoding of the realm string.
+    The only allowed value is the case-insensitive string "UTF-8".
+    This does not relate to the encoding of the realm string.
 
 ### Digest
 
 - **`<realm>`** {{optional_inline}}
   - : String indicating which username/password to use.
-      Minimally should include the host name, but might indicate the users or group that have access.
+    Minimally should include the host name, but might indicate the users or group that have access.
 - **`domain`** {{optional_inline}}
   - : A quoted, space-separated list of URI prefixes that define all the locations where the authentication information may be be used.
-      If this key is not is not specified then the authentication information may be used anywhere on the web root.
+    If this key is not is not specified then the authentication information may be used anywhere on the web root.
 - **`nonce`**
   - : A server-specified quoted string that the server can use to control the lifetime in which particular credentials will be considered valid.
     This must be uniquely generated each time a 401 response is made, and may be regenerated more often (for example, allowing a digest to be used only once).
@@ -123,19 +123,19 @@ Generally you will need to check the relevant specifications for these (keys for
     This is opaque to the client. The server is recommended to include Base64 or hexadecimal data.
 - **`stale`** {{optional_inline}}
   - : A case-insensitive flag indicating that the previous request from the client was rejected because the `nonce` used is too old (stale).
-      If this is `true` the request can be re-tried using the same username/password encrypted using the new `nonce`.
-      If it is any other value then the username/password are invalid and must be re-requested from the user.
+    If this is `true` the request can be re-tried using the same username/password encrypted using the new `nonce`.
+    If it is any other value then the username/password are invalid and must be re-requested from the user.
 - **`algorithm`**   {{optional_inline}}
   - : Algorithm used to produce the digest.
-      Valid non-session values are: `"MD5"` (default if not specified), `"SHA-256"`, `"SHA-512"`.
-      Valid session values are: `"MD5-sess"`, `"SHA-256-sess"`, `"SHA-512-sess"`.
+    Valid non-session values are: `"MD5"` (default if not specified), `"SHA-256"`, `"SHA-512"`.
+    Valid session values are: `"MD5-sess"`, `"SHA-256-sess"`, `"SHA-512-sess"`.
 - **`qop`**
-  - : Quoted string indicating the quality of protection supported by the server. This must be supplied, and unrecognised options must be ignored.
-      - `"auth"`: Authentication
-      - `"auth-int"`: Authentication with integrity protection
+  - : Quoted string indicating the quality of protection supported by the server. This must be supplied, and unrecognized options must be ignored.
+    - `"auth"`: Authentication
+    - `"auth-int"`: Authentication with integrity protection
 - **`charset="UTF-8"`** {{optional_inline}}
   - : Tells the client the server's preferred encoding scheme when submitting a username and password.
-      The only allowed value is the case-insensitive string "UTF-8".
+    The only allowed value is the case-insensitive string "UTF-8".
 - **`userhash`** {{optional_inline}}
   - : A server may specify `"true"` to indicate that it supports username hashing (default is `"false"`)
 

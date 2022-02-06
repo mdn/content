@@ -123,9 +123,9 @@ The FIN bit tells whether this is the last message in a series. If it's 0, then 
 
 To read the payload data, you must know when to stop reading. That's why the payload length is important to know. Unfortunately, this is somewhat complicated. To read it, follow these steps:
 
-1.  Read bits 9-15 (inclusive) and interpret that as an unsigned integer. If it's 125 or less, then that's the length; you're **done**. If it's 126, go to step 2. If it's 127, go to step 3.
-2.  Read the next 16 bits and interpret those as an unsigned integer. You're **done**.
-3.  Read the next 64 bits and interpret those as an unsigned integer. (The most significant bit _must_ be 0.) You're **done**.
+1. Read bits 9-15 (inclusive) and interpret that as an unsigned integer. If it's 125 or less, then that's the length; you're **done**. If it's 126, go to step 2. If it's 127, go to step 3.
+2. Read the next 16 bits and interpret those as an unsigned integer. You're **done**.
+3. Read the next 64 bits and interpret those as an unsigned integer. (The most significant bit _must_ be 0.) You're **done**.
 
 ### Reading and Unmasking the Data
 

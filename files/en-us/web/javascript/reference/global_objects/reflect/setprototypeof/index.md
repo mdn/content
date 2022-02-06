@@ -78,6 +78,6 @@ Reflect.setPrototypeOf(target, proto)  // false
 
 ## See also
 
-- A polyfill of `Reflect.setPrototypeOf` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [Polyfill of `Reflect.setPrototypeOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
 - {{jsxref("Object.setPrototypeOf()")}}

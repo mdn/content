@@ -46,20 +46,20 @@ matrix(a, b, c, d, tx, ty)
     <tr>
       <td rowspan="2">
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mi>a</mi> </mtd><mtd><mi>c</mi> </mtd></mtr
               ><mtr
                 ><mtd><mi>b</mi> </mtd><mtd><mi>d</mi></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td>
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mi>a</mi> </mtd><mtd><mi>c</mi> </mtd
@@ -71,13 +71,13 @@ matrix(a, b, c, d, tx, ty)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td rowspan="2">
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mi>a</mi> </mtd><mtd><mi>c</mi> </mtd
@@ -89,13 +89,13 @@ matrix(a, b, c, d, tx, ty)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td rowspan="2">
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mi>a</mi> </mtd><mtd><mi>c</mi> </mtd
@@ -110,7 +110,7 @@ matrix(a, b, c, d, tx, ty)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>

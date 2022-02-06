@@ -206,7 +206,7 @@ arr.every( (elem, index, arr) => {
 
 ## See also
 
-- A polyfill of `Array.prototype.every` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.every` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.some()")}}
 - {{jsxref("Array.prototype.find()")}}

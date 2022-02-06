@@ -21,6 +21,8 @@ You can create a `MediaQueryList` by calling {{DOMxRef("Window.matchMedia", "mat
 
 This is very useful for adaptive design, since this makes it possible to observe a document to detect when its media queries change, instead of polling the values periodically, and allows you to programmatically make changes to a document based on media query status.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _The `MediaQueryList` interface inherits properties from its parent interface, {{DOMxRef("EventTarget")}}._

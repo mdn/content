@@ -18,11 +18,11 @@ The paint order of the text decoration, i.e. the fill and stroke, is determined 
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("altGlyph")}}
-*   {{SVGElement("text")}}
-*   {{SVGElement("textPath")}}
-*   {{SVGElement("tref")}}
-*   {{SVGElement("tspan")}}
+- {{SVGElement("altGlyph")}}
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
 
 ## Example
 
@@ -34,8 +34,8 @@ html, body, svg {
 
 ```html
 <svg viewBox="0 0 250 50" xmlns="http://www.w3.org/2000/svg">
-  <text y="20" text-decoration="underline">Underlined text</text>
-  <text x="0" y="40" text-decoration="line-through">Struck-through text</text>
+  <text y="20" text-decoration="underline">Underlined text</text>
+  <text x="0" y="40" text-decoration="line-through">Struck-through text</text>
 </svg>
 ```
 
@@ -131,4 +131,4 @@ For a description of the values, please refer to the [CSS `text-decoration`](/en
 
 ## See also
 
-*   {{cssxref("text-decoration", "CSS text-decoration")}}
+- {{cssxref("text-decoration", "CSS text-decoration")}}

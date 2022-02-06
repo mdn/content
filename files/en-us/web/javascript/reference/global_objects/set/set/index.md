@@ -64,5 +64,5 @@ mySet.add(o)
 
 ## See also
 
-- A polyfill of `Set` is available in [`core-js`](https://github.com/zloirock/core-js#set)
+- [Polyfill of `Set` in `core-js`](https://github.com/zloirock/core-js#set)
 - {{jsxref("Set")}}

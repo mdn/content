@@ -39,12 +39,12 @@ For live services streaming, the LIVE profile is a requirement. The stream switc
 
 Other reasons to use LIVE profile over Ondemand for VOD content may be:
 
-1.  Your client or server does not support range requests
-2.  Your server cannot cache range requests efficiently
-3.  Your server cannot prefetch range requests efficiently
-4.  The SIDX\* is large and having to load it first slows down startup a little
-5.  You want to use the original files for both DASH and other forms of delivery (such as Microsoft Smooth Streaming) as a transition strategy
-6.  You can use the same media files for both live transmission and VOD at a later stage
+1. Your client or server does not support range requests
+2. Your server cannot cache range requests efficiently
+3. Your server cannot prefetch range requests efficiently
+4. The SIDX\* is large and having to load it first slows down startup a little
+5. You want to use the original files for both DASH and other forms of delivery (such as Microsoft Smooth Streaming) as a transition strategy
+6. You can use the same media files for both live transmission and VOD at a later stage
 
 \*SIDX or SegmentIndexBox is a structure describing a segment by giving its earliest presentation time and other meta-data and can often make up a large portion of the MPD file.
 

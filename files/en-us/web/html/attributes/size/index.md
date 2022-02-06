@@ -17,7 +17,7 @@ The `size` attribute has no impact on constraint validation.
 
 ## Examples
 
-By adding `size` on some input types, the width of the input can be controlled. Adding size on a select changes the height, definining how many options are visible in the closed state.
+By adding `size` on some input types, the width of the input can be controlled. Adding size on a select changes the height, defining how many options are visible in the closed state.
 
 ```html
 <label for="fruit">Enter a fruit</label> <input type="text" size="15" id="fruit">

@@ -43,10 +43,10 @@ performance.mark(measureName, markOptions)
 - `markOptions` {{optional_inline}}
   - : An object for specifying a timestamp and additional metadata for the mark.
 
-      - `detail`
-        - : Arbitrary metadata to include in the mark.
-      - `startTime`
-        - : {{domxref("DOMHighResTimeStamp")}} to use as the mark time.
+    - `detail`
+      - : Arbitrary metadata to include in the mark.
+    - `startTime`
+      - : {{domxref("DOMHighResTimeStamp")}} to use as the mark time.
 
 ### Return value
 

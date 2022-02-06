@@ -66,45 +66,45 @@ Here are some notes on the classes we use:
 
 ### (A) To get the embedded object for an embedded object char:
 
-1.  `linkIndex = IAHyperText::getLinkIndex(offset)`
-2.  `IAHyperLink\*object = IAHyperText::getLink(linkIndex)`
-3.  `IAccessible\* accessible = QI/QS(object)`
+1. `linkIndex = IAHyperText::getLinkIndex(offset)`
+2. `IAHyperLink\*object = IAHyperText::getLink(linkIndex)`
+3. `IAccessible\* accessible = QI/QS(object)`
 
 ### (B) To get the offset in the parent text for a given embedded object:
 
-1.  `QI/QA` to `IAHyperLink`
-2.  If not successful, then it is not embedded in text, so it's position in parent should be determined just by `IA2::indexInParent`, which will return its child offset within the parent. Examples of objects not embedded in text are the child options in list boxes and combo boxes.
-3.  otherwise, use `IAHyperLink::getStartIndex()` to find the index in parent. In Firefox, the results of getEndIndex will always be the startIndex + 1, because links are always just represented by a single embedded object character
+1. `QI/QA` to `IAHyperLink`
+2. If not successful, then it is not embedded in text, so it's position in parent should be determined just by `IA2::indexInParent`, which will return its child offset within the parent. Examples of objects not embedded in text are the child options in list boxes and combo boxes.
+3. otherwise, use `IAHyperLink::getStartIndex()` to find the index in parent. In Firefox, the results of getEndIndex will always be the startIndex + 1, because links are always just represented by a single embedded object character
 
 ### (C) To get the next char fom a given offset in an accessible text:
 
-1.  If current `char` is `0` (end of string), then we are on a hard line break: get next node (typical depth first search), and set the current offset = 0
-2.  `IAText::ch = getCharacterAtOffset(++offset);`
-3.  If `ch` == embedded object char (`0xfffc`) then get object for that offset (see A above), then set the current offset to -1, and go to step 2
-4.  if `ch == 0` then we must determine whether we're on a hard line break:
+1. If current `char` is `0` (end of string), then we are on a hard line break: get next node (typical depth first search), and set the current offset = 0
+2. `IAText::ch = getCharacterAtOffset(++offset);`
+3. If `ch` == embedded object char (`0xfffc`) then get object for that offset (see A above), then set the current offset to -1, and go to step 2
+4. if `ch == 0` then we must determine whether we're on a hard line break:
 
-    1.  If the current accessible's `IA2` role is `SECTION`, `HEADING` or `PARAGRAPH then we are on a hard line break, so stop
-    2.  get the offset in the parent text for this object (see B above), and then repeat step (C)2 above
+    1. If the current accessible's `IA2` role is `SECTION`, `HEADING` or `PARAGRAPH then we are on a hard line break, so stop
+    2. get the offset in the parent text for this object (see B above), and then repeat step (C)2 above
 
-5.  done
+5. done
 
 ### (D) To get the next word or line:
 
-1.  Look one character ahead.
-2.  If the next character does not exist, proceed to the next accessible in depth first search order and recurse on the first character until a non-embed is found.
-3.  If the current character falls within a text substring, locate the line ending of that substring or the next embed, whichever comes first:
+1. Look one character ahead.
+2. If the next character does not exist, proceed to the next accessible in depth first search order and recurse on the first character until a non-embed is found.
+3. If the current character falls within a text substring, locate the line ending of that substring or the next embed, whichever comes first:
 
-    1.  Get the current line start and end offsets.
-    2.  Compute the item offset relative to the start of this line
-    3.  Search forward from the starting offset for an embed character
-    4.  If an embed character is found, continue processing with offset = index plus the line start index
-    5.  If an embed character is not found:
+    1. Get the current line start and end offsets.
+    2. Compute the item offset relative to the start of this line
+    3. Search forward from the starting offset for an embed character
+    4. If an embed character is found, continue processing with offset = index plus the line start index
+    5. If an embed character is not found:
 
-        1.  If the line ending is equal to one less than the length of all text in the accessible, proceed to the next accessible in dept first search order and recurse on the first character until a non-embed is found.
-        2.  Otherwise, continue processing with offset = the index at the end of the line.
+        1. If the line ending is equal to one less than the length of all text in the accessible, proceed to the next accessible in dept first search order and recurse on the first character until a non-embed is found.
+        2. Otherwise, continue processing with offset = the index at the end of the line.
 
-    6.  If the character at the offset is an embed, proceed to its corresponding accessible and recurse on the first character until a non-embed is found.
-    7.  Otherwise, the offset marks the start of a new line.
+    6. If the character at the offset is an embed, proceed to its corresponding accessible and recurse on the first character until a non-embed is found.
+    7. Otherwise, the offset marks the start of a new line.
 
 Navigating to the next word follows a similar pattern. Navigating previous requires returning to the embed character in the parent accessible when the point of regard reaches the end of text in the corresponding child accessible for the embed.
 

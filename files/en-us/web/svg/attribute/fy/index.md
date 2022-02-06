@@ -12,7 +12,7 @@ The **`fy`** attribute defines the y-axis coordinate of the focal point for a ra
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("radialGradient")}}
+- {{SVGElement("radialGradient")}}
 
 ## Example
 

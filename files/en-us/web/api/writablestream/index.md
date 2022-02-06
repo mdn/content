@@ -12,7 +12,7 @@ browser-compat: api.WritableStream
 ---
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
-The **`WritableStream`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) provides a standard abstraction for writing streaming data to a destination, known as a sink. This object comes with built-in backpressure and queuing.
+The **`WritableStream`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) provides a standard abstraction for writing streaming data to a destination, known as a sink. This object comes with built-in backpressure and queuing.
 
 ## Constructor
 
@@ -22,7 +22,7 @@ The **`WritableStream`** interface of the [Streams API](/en-US/docs/Web/API/Stre
 ## Properties
 
 - {{domxref("WritableStream.locked")}} {{readonlyinline}}
-  - : A boolean indicating whether the `WritableStream` is locked to a writer.
+  - : A boolean indicating whether the `WritableStream` is locked to a writer.
 
 ## Methods
 
@@ -35,7 +35,7 @@ The **`WritableStream`** interface of the [Streams API](/en-US/docs/Web/API/Stre
 
 ## Examples
 
-The following example illustrates several features of this interface.  It shows the creation of the `WritableStream` with a custom sink and an API-supplied queueing strategy. It then calls a function called `sendMessage()`, passing the newly created stream and a string. Inside this function it calls the stream's `getWriter()` method, which returns an instance of {{domxref("WritableStreamDefaultWriter")}}. A `forEach()` call is used to write each chunk of the string to the stream. Finally, `write()` and `close()` return promises that are processed to deal with success or failure of chunks and streams.
+The following example illustrates several features of this interface. It shows the creation of the `WritableStream` with a custom sink and an API-supplied queueing strategy. It then calls a function called `sendMessage()`, passing the newly created stream and a string. Inside this function it calls the stream's `getWriter()` method, which returns an instance of {{domxref("WritableStreamDefaultWriter")}}. A `forEach()` call is used to write each chunk of the string to the stream. Finally, `write()` and `close()` return promises that are processed to deal with success or failure of chunks and streams.
 
 ```js
 const list = document.querySelector('ul');
@@ -122,4 +122,4 @@ Because of how backpressure is supported in the API, its implementation in code 
 
 ## See also
 
-- [WHATWG Stream Visualiser](https://whatwg-stream-visualizer.glitch.me/), for a basic visualisation of readable, writable, and transform streams.
+- [WHATWG Stream Visualizer](https://whatwg-stream-visualizer.glitch.me/), for a basic visualization of readable, writable, and transform streams.

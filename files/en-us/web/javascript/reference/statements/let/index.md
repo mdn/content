@@ -198,10 +198,10 @@ switch(x) {
 
 ### Temporal dead zone (TDZ)
 
-`let` variables cannot be read/written until they have been fully
-initialized, which happens when they are declared (if no initial value is specified on
+`let` variables cannot be read/written until they have been
+declared. If no initial value is specified on
 declaration, the variable is initialized with a value of
-`undefined`). Accessing the variable before the initialization results in a
+`undefined`. Accessing the variable before the declaration results in a
 {{jsxref("ReferenceError")}}.
 
 > **Note:** This differs from {{jsxref("Statements/var", "var", "var_hoisting")}} variables,
@@ -209,7 +209,7 @@ declaration, the variable is initialized with a value of
 > are declared.
 
 The variable is said to be in a "temporal dead zone" (TDZ) from the start of the block
-until the initialization has completed.
+until the declaration has completed.
 
 ```js example-bad
 { // TDZ starts at beginning of scope

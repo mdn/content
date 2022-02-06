@@ -15,6 +15,8 @@ browser-compat: api.MIDIInput
 
 The **`MIDIInput`** interface of the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) receives messages from a MIDI input port.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _This interface doesn't implement any specific properties, but inherits properties from {{domxref("MIDIPort")}}._

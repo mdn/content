@@ -663,8 +663,7 @@ slug: 'Mozilla/Projects/NSS/Reference/NSS_tools_:_certutil'
  <br>
     For example:<br>
  $ certutil -C -c "my-ca-cert" -i /home/certs/cert.req -o cert.cer -m 010<br>
-  -v 12 -w 1 -d sql:/home/my/sharednssdb -1 nonRepudiation,dataEncipherme<br>
- nt -5 sslClient -6 clientAuth -7 <a class="link-mailto" href="mailto:jsmith@example.com">jsmith@example.com</a><br>
+  -v 12 -w 1 -d sql:/home/my/sharednssdb -1 nonRepudiation,dataEncipherment -5 sslClient -6 clientAuth -7 <a class="link-mailto" href="mailto:jsmith@example.com">jsmith@example.com</a><br>
  <br>
     Generating Key Pairs<br>
  <br>
@@ -858,8 +857,7 @@ slug: 'Mozilla/Projects/NSS/Reference/NSS_tools_:_certutil'
     location must be referenced through the token name (-h) as well<br>
     as any directory path. If there is no external token used, the<br>
     default value is internal.<br>
- certutil -T -d [sql:]directory -h token-name -0 security-officer-passwor<br>
- d<br>
+ certutil -T -d [sql:]directory -h token-name -0 security-officer-password<br>
  <br>
     Many networks have dedicated personnel who handle changes to<br>
     security tokens (the security officer). This person must supply<br>

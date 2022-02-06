@@ -28,8 +28,8 @@ A map API _could_ be implemented in JavaScript with two arrays (one for keys, on
 
 Such an implementation would have two main inconveniences:
 
-1.  The first one is an *O(*n*)* set and search (_n_ being the number of keys in the map) since both operations must iterate through the list of keys to find a matching value.
-2.  The second inconvenience is a memory leak because the arrays ensure that references to each key and each value are maintained indefinitely. These references prevent the keys from being garbage collected, even if there are no other references to the object. This would also prevent the corresponding values from being garbage collected.
+1. The first one is an *O(*n*)* set and search (_n_ being the number of keys in the map) since both operations must iterate through the list of keys to find a matching value.
+2. The second inconvenience is a memory leak because the arrays ensure that references to each key and each value are maintained indefinitely. These references prevent the keys from being garbage collected, even if there are no other references to the object. This would also prevent the corresponding values from being garbage collected.
 
 By contrast, in a `WeakMap`, a key object refers strongly to its contents as long as the key is not garbage collected, but weakly from then on. As such, a `WeakMap`:
 
@@ -126,7 +126,7 @@ class ClearableWeakMap {
 
 ## See also
 
-- A polyfill of `WeakMap` is available in [`core-js`](https://github.com/zloirock/core-js#weakmap)
+- [Polyfill of `WeakMap` in `core-js`](https://github.com/zloirock/core-js#weakmap)
 - [WeakMap object](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object) in the [Keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections) guide
 - [Hiding Implementation Details with ECMAScript 6 WeakMaps](https://fitzgeraldnick.com/weblog/53/)
 - {{jsxref("Map")}}

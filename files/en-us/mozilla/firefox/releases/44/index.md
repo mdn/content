@@ -86,7 +86,7 @@ Highlights:
 - The [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) bindings in the global level have been made compliant with ES2015 semantics. See {{bug(589199)}} and the blog post ["Breaking changes in let and const in Firefox Nightly 44"](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/). In addition, `let` is now available to default Web JavaScript (strict and non-strict) and does not require a version opt-in anymore ({{bug(932517)}}).
 - If [typed arrays'](/en-US/docs/Web/JavaScript/Typed_arrays) (like {{jsxref("Int8Array", "Int8Array")}}) and {{jsxref("ArrayBuffer", "ArrayBuffer")}}) constructors are called as a function without the {{jsxref("Operators/new", "new")}} operator, a {{jsxref("TypeError")}} is now thrown as per the ES2015 specification ({{bug(980945)}}, {{bug(1214936)}}).
 - The {{jsxref("RegExp")}} sticky flag now follows the ES2015 standard for [anchored sticky regular expressions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky#anchored_sticky_flag) ({{bug(773687)}}).
-- The [JavaScript shell](/en-US/docs/Mozilla/Projects/SpiderMonkey/Introduction_to_the_JavaScript_shell) (SpiderMonkey's REPL) now defaults to the default, Web-compatible JS version (and not JS1.7+ anymore) ({{bug(1192329)}}).
+- The JavaScript shell (SpiderMonkey's REPL) now defaults to the default, Web-compatible JS version (and not JS1.7+ anymore) ({{bug(1192329)}}).
 
 #### Removals
 
@@ -137,7 +137,7 @@ Highlights:
 - The event handlers {{domxref("ServiceWorkerGlobalScope.onbeforeevicted")}} and {{domxref("ServiceWorkerGlobalScope.onevicted")}} have been removed as they weren't following the spec. They will be reintroduced in the future, but their removal will allow feature detection to work as expected ({{bug(1218142)}}).
 - In the {{domxref("FetchEvent.FetchEvent", "FetchEvent()")}} constructor, if the `isReload` member is not present in the options dictionary, it now defaults to `false` ({{bug(1216401)}}).
 - The {{domxref("Client.frameType")}} property is now implemented on the right interface; it was on {{domxref("WindowClient")}} before ({{bug(1218146)}}).
-- When [AppCache](/en-US/docs/Web/HTML/Using_the_application_cache) is used to provide offline support for a page, a warning message is now displayed in the console advising developers to use [Service workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers) instead ({{bug("1204581")}}.)
+- When AppCache is used to provide offline support for a page, a warning message is now displayed in the console advising developers to use [Service workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers) instead ({{bug("1204581")}}.)
 - Service workers have been enabled by default in Gecko.
 
 #### WebRTC

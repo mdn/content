@@ -20,6 +20,8 @@ browser-compat: api.XRSystem
 
 The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) interface **`XRSystem`** provides methods which let you get access to an {{domxref("XRSession")}} object representing a WebXR session. With that `XRSession` in hand, you can use it to interact with the Augmented Reality (AR) or Virtual Reality (VR) device.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _While `XRSystem` directly offers no properties, it does inherit properties from its parent interface, {{domxref("EventTarget")}}._

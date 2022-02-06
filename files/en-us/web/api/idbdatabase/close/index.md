@@ -41,7 +41,7 @@ DBOpenRequest.onerror = function(event) {
 };
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += "<li>Database initialised.</li>";
+  note.innerHTML += "<li>Database initialized.</li>";
 
   // store the result of opening the database in the db variable.
   db = DBOpenRequest.result;

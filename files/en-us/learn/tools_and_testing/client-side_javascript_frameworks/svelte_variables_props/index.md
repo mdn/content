@@ -86,7 +86,7 @@ Our `Todos.svelte` component is currently just displaying static markup; let's s
 
 The state of our component will be represented by these three top-level variables.
 
-1.  Create a `<script>` section at the top of `src/components/Todos.svelte` and give it some content, as follows:
+1. Create a `<script>` section at the top of `src/components/Todos.svelte` and give it some content, as follows:
 
     ```html
     <script>
@@ -103,14 +103,14 @@ The state of our component will be represented by these three top-level variable
 
     Now let's do something with that information.
 
-2.  Let's start by showing a status message. Find the `<h2>` heading with an `id` of `list-heading` and replace the hardcoded number of active and completed tasks with dynamic expressions:
+2. Let's start by showing a status message. Find the `<h2>` heading with an `id` of `list-heading` and replace the hardcoded number of active and completed tasks with dynamic expressions:
 
     ```html
     <h2 id="list-heading">{completedTodos} out of {totalTodos} items completed</h2>
     ```
 
-3.  Go to the app, and you should see the "2 out of 3 items completed" message as before, but this time the information is coming from the `todos` array.
-4.  To prove it, go to that array, and try changing some of the todo object's completed property values, and even add a new todo object. Observe how the numbers in the message are updated appropriately.
+3. Go to the app, and you should see the "2 out of 3 items completed" message as before, but this time the information is coming from the `todos` array.
+4. To prove it, go to that array, and try changing some of the todo object's completed property values, and even add a new todo object. Observe how the numbers in the message are updated appropriately.
 
 ## Dynamically generating the todos from the data
 
@@ -120,7 +120,7 @@ HTML doesn't have a way of expressing logic — like conditionals and loops. Sve
 
 Let's give it a try.
 
-1.  Replace the existing `<ul>` element with the following simplified version to get an idea of how it works:
+1. Replace the existing `<ul>` element with the following simplified version to get an idea of how it works:
 
     ```html
     <ul>
@@ -134,11 +134,11 @@ Let's give it a try.
     </ul>
     ```
 
-2.  Go back to the app; you'll see something like this:
+2. Go back to the app; you'll see something like this:
 
     ![very simple todo list output created using an each block](01-each-block.png)
 
-3.  Now we've seen that this is working, let's generate a complete todo item with each loop of the `{#each}` directive, and inside embed the information from the `todos` array: `id`, `name`, and `completed`. Replace your existing `<ul>` block with the following:
+3. Now we've seen that this is working, let's generate a complete todo item with each loop of the `{#each}` directive, and inside embed the information from the `todos` array: `id`, `name`, and `completed`. Replace your existing `<ul>` block with the following:
 
     ```html
     <!-- Todos -->
@@ -176,7 +176,7 @@ We've turned our static markup into a dynamic template ready to display the task
 
 With a hardcoded list of todos, our `Todos` component is not very useful. To turn our component into a general purpose To-Do editor we should allow the parent of this component to pass in the list of todos to edit. This would allow us to save them to a web service or local storage and later retrieve them for update. So let's turn the array into a `prop`.
 
-1.  In `Todos.svelte`, replace the existing `let todos = ...`  block with `export let todos = []`.
+1. In `Todos.svelte`, replace the existing `let todos = ...` block with `export let todos = []`.
 
     ```js
     export let todos = []
@@ -188,8 +188,8 @@ With a hardcoded list of todos, our `Todos` component is not very useful. To tur
 
     So with `export let todos = []`, we are telling Svelte that our `Todos.svelte` component will accept a `todos` attribute, which when omitted will be initialized to an empty array.
 
-2.  Have a look at the app, and you'll see the "Nothing to do here!" message. This is because we are currently not passing any value into it from `App.svelte`, so it's using the default value.
-3.  Now let's move our todos to `App.svelte` and pass them to the `Todos.svelte` component as a prop. Update `src/App.svelte` as follows:
+2. Have a look at the app, and you'll see the "Nothing to do here!" message. This is because we are currently not passing any value into it from `App.svelte`, so it's using the default value.
+3. Now let's move our todos to `App.svelte` and pass them to the `Todos.svelte` component as a prop. Update `src/App.svelte` as follows:
 
     ```js
     <script>
@@ -205,7 +205,7 @@ With a hardcoded list of todos, our `Todos` component is not very useful. To tur
     <Todos todos={todos} />
     ```
 
-4.  When the attribute and the variable have the same name, Svelte allows you to just specify the variable as a handy shortcut, so we can rewrite our last line like this. Try this now.
+4. When the attribute and the variable have the same name, Svelte allows you to just specify the variable as a handy shortcut, so we can rewrite our last line like this. Try this now.
 
     ```js
     <Todos {todos} />
@@ -217,7 +217,7 @@ At this point your todos should render just like they did before, except that no
 
 Let's add some functionality to toggle the task status. Svelte has the `on:eventname` directive for listening to DOM events. Let's add a handler to the `on:click` event of the checkbox input to toggle the completed value.
 
-1.  Update the `<input type="checkbox">` element inside `src/components/Todos.svelte` as follows:
+1. Update the `<input type="checkbox">` element inside `src/components/Todos.svelte` as follows:
 
     ```html
     <input type="checkbox" id="todo-{todo.id}"
@@ -226,7 +226,7 @@ Let's add some functionality to toggle the task status. Svelte has the `on:event
     />
     ```
 
-2.  Next we'll add a function to remove a todo from our `todos` array. At the bottom of the `Todos.svelte` `<script>` section, add the `removeTodo()` function like so:
+2. Next we'll add a function to remove a todo from our `todos` array. At the bottom of the `Todos.svelte` `<script>` section, add the `removeTodo()` function like so:
 
     ```js
     function removeTodo(todo) {
@@ -234,7 +234,7 @@ Let's add some functionality to toggle the task status. Svelte has the `on:event
     }
     ```
 
-3.  We'll call it via the _Delete_ button. Update it with a `click` event, like so:
+3. We'll call it via the _Delete_ button. Update it with a `click` event, like so:
 
     ```html
     <button type="button" class="btn btn__danger"
@@ -284,13 +284,13 @@ Behind the scenes the Svelte compiler will parse and analyze our code to make a 
 
 Now onto the next major task for this article — let's add some functionality for adding new todos.
 
-1.  First, we'll create a variable to hold the text of the new todo. Add this declaration to the `<script>` section of `Todos.svelte` file:
+1. First, we'll create a variable to hold the text of the new todo. Add this declaration to the `<script>` section of `Todos.svelte` file:
 
     ```js
     let newTodoName = ''
     ```
 
-2.  Now we will use this value in the `<input>` for adding new tasks. To do that we need to bind our `newTodoName` variable to the `todo-0` input, so that the `newTodoName` variable value stays in sync with the input's `value` property. We could do something like this:
+2. Now we will use this value in the `<input>` for adding new tasks. To do that we need to bind our `newTodoName` variable to the `todo-0` input, so that the `newTodoName` variable value stays in sync with the input's `value` property. We could do something like this:
 
     ```js
     <input value={newTodoName} on:keydown={(e) => newTodoName = e.target.value} />
@@ -310,7 +310,7 @@ Now onto the next major task for this article — let's add some functionality f
     <input bind:value={newTodoName} type="text" id="todo-0" autocomplete="off" class="input input__lg" />
     ```
 
-3.  An easy way to test that this works is to add a reactive statement to log the contents of `newTodoName`. Add this snippet at the end of the `<script>` section:
+3. An easy way to test that this works is to add a reactive statement to log the contents of `newTodoName`. Add this snippet at the end of the `<script>` section:
 
     ```js
     $: console.log('newTodoName: ', newTodoName)
@@ -318,8 +318,8 @@ Now onto the next major task for this article — let's add some functionality f
 
     > **Note:** As you may have noticed, reactive statements aren't limited to variable declarations. You can put _any_ JavaScript statement after the `$:` sign.
 
-4.  Now try going back to `localhost:5042`, pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> to open your browser console and typing something into the input field. You should see your entries logged. At this point, you can delete the reactive `console.log()` if you wish.
-5.  Next up we'll create a function to add the new todo — `addTodo()` — which will push a new `todo` object onto the `todos` array. Add this to the bottom of your `<script>` block inside `src/components/Todos.svelte`:
+4. Now try going back to `localhost:5042`, pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> to open your browser console and typing something into the input field. You should see your entries logged. At this point, you can delete the reactive `console.log()` if you wish.
+5. Next up we'll create a function to add the new todo — `addTodo()` — which will push a new `todo` object onto the `todos` array. Add this to the bottom of your `<script>` block inside `src/components/Todos.svelte`:
 
     ```js
     function addTodo() {
@@ -330,7 +330,7 @@ Now onto the next major task for this article — let's add some functionality f
 
     > **Note:** For the moment we are just assigning the same `id` to every todo, but don't worry, we will fix that soon.
 
-6.  Now we want to update our HTML so that we call `addTodo()` whenever the form is submitted. Update the NewTodo form's opening tag like so:
+6. Now we want to update our HTML so that we call `addTodo()` whenever the form is submitted. Update the NewTodo form's opening tag like so:
 
     ```html
     <form on:submit|preventDefault={addTodo}>
@@ -338,7 +338,7 @@ Now onto the next major task for this article — let's add some functionality f
 
     The [`on:eventname`](https://svelte.dev/docs#on_element_event) directive supports adding modifiers to the DOM event with the `|` character. In this case, the `preventDefault` modifier tells Svelte to generate the code to call `event.preventDefault()` before running the handler. Explore the previous link to see what other modifiers are available.
 
-7.  If you try adding new todos at this point, the new todos are added to the todos array but our UI is not updated. Remember that in Svelte [reactivity is triggered with assignments](https://svelte.dev/docs#2_Assignments_are_reactive). That means that the `addTodo()` function is executed, the element is added to the `todos` array, but Svelte won't detect that the push method modified the array, so it won't refresh the tasks `<ul>`.
+7. If you try adding new todos at this point, the new todos are added to the todos array but our UI is not updated. Remember that in Svelte [reactivity is triggered with assignments](https://svelte.dev/docs#2_Assignments_are_reactive). That means that the `addTodo()` function is executed, the element is added to the `todos` array, but Svelte won't detect that the push method modified the array, so it won't refresh the tasks `<ul>`.
 
     Just adding `todos = todos` to the end of the `addTodo()` function would solve the problem, but it seems strange to have to include that at the end of the function. Instead, we'll take out the `push()` method and use [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to achieve the same result — we'll assign a value to the `todos` array equal to the `todos` array plus the new object.
 
@@ -357,7 +357,7 @@ Now onto the next major task for this article — let's add some functionality f
 
 If you try to add new todos in your app now, you'll be able to add a new todo and have it appear in the UI! Once. If you try it a second time, it won't work, and you'll get a console message saying "Error: Cannot have duplicate keys in a keyed each". We need unique IDs for our todos!
 
-1.  Let's declare a `newTodoId` variable calculated from the number of todos plus 1, and make it reactive. Add the following snippet to the `<script>` section:
+1. Let's declare a `newTodoId` variable calculated from the number of todos plus 1, and make it reactive. Add the following snippet to the `<script>` section:
 
     ```js
     let newTodoId
@@ -372,7 +372,7 @@ If you try to add new todos in your app now, you'll be able to add a new todo an
 
     > **Note:** As you can see, reactive statements are not limited to one-liners. The following would work too, but it is a little less readable: `$: newTodoId = totalTodos ? Math.max(...todos.map(t => t.id)) + 1 : 1`
 
-2.  How does Svelte achieve this? The compiler parses the whole reactive statement, and detects that it depends on the `totalTodos` variable and the `todos` array. So whenever either of them is modified, this code is re-evaluated, updating `newTodoId` accordingly.
+2. How does Svelte achieve this? The compiler parses the whole reactive statement, and detects that it depends on the `totalTodos` variable and the `todos` array. So whenever either of them is modified, this code is re-evaluated, updating `newTodoId` accordingly.
 
     Let's use this in our `addTodo()` function — update it like so:
 
@@ -387,7 +387,7 @@ If you try to add new todos in your app now, you'll be able to add a new todo an
 
 Finally for this article, let's implement the ability to filter our todos by status. We'll create a variable to hold the current filter, and a helper function that will return the filtered todos.
 
-1.  At the bottom of our `<script>` section add the following:
+1. At the bottom of our `<script>` section add the following:
 
     ```js
     let filter = 'all'
@@ -401,7 +401,7 @@ Finally for this article, let's implement the ability to filter our todos by sta
 
     The `filterTodos()` function will receive the current filter and the list of todos, and return a new array of todos filtered accordingly.
 
-2.  Let's update the filter button markup to make it dynamic and update the current filter when the user presses one of the filter buttons. Update it like this:
+2. Let's update the filter button markup to make it dynamic and update the current filter when the user presses one of the filter buttons. Update it like this:
 
     ```html
     <div class="filters btn-group stack-exception">
@@ -433,7 +433,7 @@ Finally for this article, let's implement the ability to filter our todos by sta
 
     Whenever we click on a button we update the filter variable by issuing `on:click={()=> filter = 'all'}`. Read on to find out how Svelte reactivity will take care of the rest.
 
-3.  Now we just need to use the helper function in the `{#each}` loop; update it like this:
+3. Now we just need to use the helper function in the `{#each}` loop; update it like this:
 
     ```html
     ...

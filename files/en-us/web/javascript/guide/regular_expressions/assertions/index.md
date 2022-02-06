@@ -200,11 +200,11 @@ console.log(2, buggyMultiline); // fix  'traa' => 'tree'.
 
 // 3) Use \b to match characters right on border between a word and a space.
 buggyMultiline = buggyMultiline.replace(/\bi/gim,'t');
-console.log(3, buggyMultiline); // fix  'ihe' but does not touch 'light'.
+console.log(3, buggyMultiline); // fix  'ihe' but do not touch 'light'.
 
 // 4) Use \B to match characters inside borders of an entity.
 fixedMultiline = buggyMultiline.replace(/\Bo/gim,'e');
-console.log(4, fixedMultiline); // fix  'greon' but does not touch 'on'.
+console.log(4, fixedMultiline); // fix  'greon' but do not touch 'on'.
 ```
 
 ### Matching the beginning of input using a ^ control character
@@ -226,7 +226,7 @@ In the second example `^` is used both for matching at the beginning of input 
 ```js
 let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 
-// Selecting fruits that dose not start by 'A' by a /^[^A]/ regex.
+// Selecting fruits that do not start by 'A' with a /^[^A]/ regex.
 // In this example, two meanings of '^' control symbol are represented:
 // 1) Matching beginning of the input
 // 2) A negated or complemented character class: [^A]

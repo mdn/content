@@ -34,7 +34,7 @@ tags:
 
 ### JavaScript
 
-[EcmaScript 2015](/en-US/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) implementation continues!
+[EcmaScript 2015](/en-US/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) implementation continues!
 
 - The method {{jsxref("Array.of()")}} is now implemented on [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) ({{bug("866849")}}).
 - Support for the methods {{jsxref("Array.prototype.find()")}} and {{jsxref("Array.prototype.findIndex()")}} has been added ({{bug("885553")}}).
@@ -42,7 +42,7 @@ tags:
 - The methods {{jsxref("Map.prototype.forEach()")}} and {{jsxref("Set.prototype.forEach()")}} are now implemented ({{bug("866847")}}).
 - New mathematical methods have been implemented on [`Math`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math): `Math.log10()`, `Math.log2()`, `Math.log1p()`, `Math.expm1()`, `Math.cosh()`, `Math.sinh()`, `Math.tanh()`, `Math.acosh()`, `Math.asinh()`, `Math.atanh()`, `Math.trunc()`, `Math.sign()` and `Math.cbrt()` ({{bug("717379")}}).
 - Support for binary and octal integer literals has been added: `0b10101010`, `0B1010`, `0o777`, `0O237` are now valid ({{bug("894026")}}).
-- The machine epsilon constant, that is the smallest representible number that added to 1 will not be 1, is now available as {{jsxref("Global_Objects/Number/EPSILON", "Number.EPSILON")}} ({{bug("885798")}}).
+- The machine epsilon constant, that is the smallest representable number that added to 1 will not be 1, is now available as {{jsxref("Global_Objects/Number/EPSILON", "Number.EPSILON")}} ({{bug("885798")}}).
 - [Typed arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) have been updated to [no longer search in the prototype chain for indexed properties](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#indexed_property_access) ({{bug("829896")}}).
 
 ### Interfaces/APIs/DOM

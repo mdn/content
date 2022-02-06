@@ -15,6 +15,8 @@ browser-compat: api.CSSMathMin
 
 The **`CSSMathMin`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the CSS {{CSSXref('min()','min()')}} function.  It inherits properties and methods from its parent {{domxref('CSSNumericValue')}}.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("CSSMathMin.CSSMathMin()")}}

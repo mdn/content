@@ -135,7 +135,7 @@ The CSS code styles the box as well as the text inside it.
 This code is very simple. All it does is attach an event handler to the "Hello world!" text that makes an alert appear when it is clicked.
 
 ```js
-var el = document.getElementById('item');
+let el = document.getElementById('item');
 el.onclick = function() {
   alert('Owww, stop poking me!');
 }

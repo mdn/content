@@ -102,7 +102,7 @@ arr instanceof Array; // false
 
 ## See also
 
-- A polyfill of `Array.isArray` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.isArray` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - [A
   polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
 - {{jsxref("Array")}}

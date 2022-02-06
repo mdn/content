@@ -229,7 +229,7 @@ To position `overlay` using these implicit named lines is the same as positionin
 
 {{ EmbedLiveSample('Implicit_Grid_lines_from_named_areas', '500', '330') }}
 
-Given that we have this ability to position create lines from named areas and areas from named lines it is worth taking a little bit of time to plan your naming strategy when starting out creating your grid layout. By selecting names that will make sense to you and your team you will help everyone to use the layouts you create more easily.
+Given that we have this ability to position created lines from named areas and areas from named lines, it is worth taking a little bit of time to plan your naming strategy when starting out creating your grid layout. By selecting names that will make sense to you and your team you will help everyone to use the layouts you create more easily.
 
 ## Multiple lines with the same name with repeat()
 

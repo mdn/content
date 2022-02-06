@@ -18,6 +18,8 @@ You can obtain a `MediaStream` object either by using the constructor or by call
 
 Some user agents subclass this interface to provide more precise information or functionality, like in {{domxref("CanvasCaptureMediaStreamTrack")}}.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("MediaStream.MediaStream", "MediaStream()")}}

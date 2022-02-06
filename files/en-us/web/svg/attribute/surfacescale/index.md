@@ -13,8 +13,8 @@ The **`surfaceScale`** attribute represents the height of the surface for a ligh
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feDiffuseLighting")}}
-*   {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feDiffuseLighting")}}
+- {{SVGElement("feSpecularLighting")}}
 
 ## Example
 
@@ -130,4 +130,4 @@ For {{SVGElement("feDiffuseLighting")}}, `surfaceScale` defines the height of th
 
 ## See also
 
-*   [Description of Phong reflection model on Wikipedia](https://en.wikipedia.org/wiki/Phong_reflection_model)
+- [Description of Phong reflection model on Wikipedia](https://en.wikipedia.org/wiki/Phong_reflection_model)

@@ -68,7 +68,7 @@ unescape('%u0107');     // "ć"
 
 ## See also
 
-- A polyfill of `unescape` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `unescape` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("decodeURI")}}
 - {{jsxref("decodeURIComponent")}}
 - {{jsxref("escape")}}

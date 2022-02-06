@@ -14,6 +14,8 @@ browser-compat: api.RTCDTMFToneChangeEvent
 
 The **`RTCDTMFToneChangeEvent`** interface represents events sent to indicate that {{Glossary("DTMF")}} tones have started or finished playing. This interface is used by the {{event("tonechange")}} event.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _In addition to the properties of {{domxref("Event")}}, this interface offers the following:_

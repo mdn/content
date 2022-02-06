@@ -84,6 +84,6 @@ Reflect.apply(''.charAt, 'ponies', [3])
 
 ## See also
 
-- A polyfill of `Reflect.apply` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [Polyfill of `Reflect.apply` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
 - {{jsxref("Function.prototype.apply()")}}

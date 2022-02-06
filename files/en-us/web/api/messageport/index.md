@@ -16,6 +16,8 @@ The **`MessagePort`** interface of the [Channel Messaging API](/en-US/docs/Web/A
 
 {{AvailableInWorkers}}
 
+{{InheritanceDiagram}}
+
 ## Methods
 
 _Inherits methods from its parent, {{domxref("EventTarget")}}_

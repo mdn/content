@@ -21,22 +21,22 @@ html,body,svg { height:100% }
 
 ```html
 <svg viewBox="0 0 100 100">
-  <clipPath id="myClip">
+  <clipPath id="myClip">
     <!--
       Everything outside the circle will be
       clipped and therefore invisible.
     -->
-    <circle cx="40" cy="35" r="35" />
-  </clipPath>
+    <circle cx="40" cy="35" r="35" />
+  </clipPath>
 
   <!-- The original black heart, for reference -->
-  <path id="heart" d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" />
+  <path id="heart" d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" />
 
   <!--
     Only the portion of the red heart
     inside the clip circle is visible.
   -->
-  <use clip-path="url(#myClip)" href="#heart" fill="red" />
+  <use clip-path="url(#myClip)" href="#heart" fill="red" />
 </svg>
 ```
 
@@ -59,20 +59,20 @@ By default, {{cssxref("pointer-events")}} are not dispatched on clipped regions.
 
 ## Attributes
 
-*   {{SVGAttr("clipPathUnits")}}
-    *   : Defines the coordinate system for the contents of the `<clipPath>` element.
-        *Value type*: `userSpaceOnUse`|`objectBoundingBox` ; *Default value*: `userSpaceOnUse`; *Animatable*: **yes**
+- {{SVGAttr("clipPathUnits")}}
+  - : Defines the coordinate system for the contents of the `<clipPath>` element.
+    *Value type*: `userSpaceOnUse`|`objectBoundingBox` ; *Default value*: `userSpaceOnUse`; *Animatable*: **yes**
 
 ### Global attributes
 
-*   [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
-    *   : Most notably: {{SVGAttr('id')}}
-*   [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
-    *   : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-*   [Conditional Processing Attributes](/en-US/docs/Web/SVG/Attribute/Conditional_Processing)
-    *   : Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
-*   [Presentation Attributes](/en-US/docs/Web/SVG/Attribute/Presentation)
-    *   : Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
+- [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
+  - : Most notably: {{SVGAttr('id')}}
+- [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
+  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+- [Conditional Processing Attributes](/en-US/docs/Web/SVG/Attribute/Conditional_Processing)
+  - : Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+- [Presentation Attributes](/en-US/docs/Web/SVG/Attribute/Presentation)
+  - : Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 
 ## Usage notes
 
@@ -88,5 +88,5 @@ By default, {{cssxref("pointer-events")}} are not dispatched on clipped regions.
 
 ## Related
 
-*   Other clipping and masking SVG elements: {{SVGElement("mask")}}
-*   Some CSS properties: {{cssxref("clip-path")}}, {{cssxref("pointer-events")}}
+- Other clipping and masking SVG elements: {{SVGElement("mask")}}
+- Some CSS properties: {{cssxref("clip-path")}}, {{cssxref("pointer-events")}}

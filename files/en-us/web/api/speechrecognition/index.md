@@ -17,6 +17,8 @@ The **`SpeechRecognition`** interface of the [Web Speech API](/en-US/docs/Web/AP
 
 > **Note:** On some browsers, like Chrome, using Speech Recognition on a web page involves a server-based recognition engine. Your audio is sent to a web service for recognition processing, so it won't work offline.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("SpeechRecognition.SpeechRecognition()")}}

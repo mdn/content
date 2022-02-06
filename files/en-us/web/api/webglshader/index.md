@@ -11,6 +11,8 @@ browser-compat: api.WebGLShader
 
 The **WebGLShader** is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and can either be a vertex or a fragment shader. A {{domxref("WebGLProgram")}} requires both types of shaders.
 
+{{InheritanceDiagram}}
+
 ## Description
 
 To create a **WebGLShader** use {{domxref("WebGLRenderingContext.createShader")}}, then hook up the GLSL source code using {{domxref("WebGLRenderingContext.shaderSource()")}}, and finally invoke {{domxref("WebGLRenderingContext.compileShader()")}} to finish and compile the shader. At this point the **WebGLShader** is still not in a usable form and must still be attached to a {{domxref("WebGLProgram")}}.

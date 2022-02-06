@@ -13,7 +13,7 @@ The **`xlink:show`** attribute indicates how a linked resource should be opened 
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("a")}}
+- {{SVGElement("a")}}
 
 ## Usage notes
 
@@ -37,16 +37,16 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `new`
-    *   : This value specifies that the referenced resource is opened in a new window or tab. This is similar to the effect achieved by an HTML {{HTMLElement("a")}} element with {{HTMLAttrDef("target")}} set to `_blank`.
-*   `replace`
-    *   : This value specifies that the referenced resource is opened in the same window or tab. This is similar to the effect achieved by an HTML {{HTMLElement("a")}} element with {{HTMLAttrDef("target")}} set to `_self`.
-*   `embed`
-    *   : This value specifies that instead of linking to the resource it will be loaded and shown within the document. This is similar to the effect achieved by an HTML {{HTMLElement("img")}} element.
-*   `other`
-    *   : This value indicates that other markup present in the link, i.e. the {{SVGAttr("target")}} attribute, determines its behavior.
-*   `none`
-    *   : This value specifies that there is no indication for how to refer to the linked resource.
+- `new`
+  - : This value specifies that the referenced resource is opened in a new window or tab. This is similar to the effect achieved by an HTML {{HTMLElement("a")}} element with {{HTMLAttrDef("target")}} set to `_blank`.
+- `replace`
+  - : This value specifies that the referenced resource is opened in the same window or tab. This is similar to the effect achieved by an HTML {{HTMLElement("a")}} element with {{HTMLAttrDef("target")}} set to `_self`.
+- `embed`
+  - : This value specifies that instead of linking to the resource it will be loaded and shown within the document. This is similar to the effect achieved by an HTML {{HTMLElement("img")}} element.
+- `other`
+  - : This value indicates that other markup present in the link, i.e. the {{SVGAttr("target")}} attribute, determines its behavior.
+- `none`
+  - : This value specifies that there is no indication for how to refer to the linked resource.
 
 ## Specifications
 
@@ -75,4 +75,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-*   [Definition of the `xlink:show` attribute in the XLink specification](https://www.w3.org/TR/xlink/#show-att)
+- [Definition of the `xlink:show` attribute in the XLink specification](https://www.w3.org/TR/xlink/#show-att)

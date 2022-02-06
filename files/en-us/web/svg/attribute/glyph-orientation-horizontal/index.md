@@ -19,11 +19,11 @@ This attribute is applied only to text written in a horizontal {{SVGAttr("writin
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("altGlyph")}}
-*   {{SVGElement("textPath")}}
-*   {{SVGElement("text")}}
-*   {{SVGElement("tref")}}
-*   {{SVGElement("tspan")}}
+- {{SVGElement("altGlyph")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("text")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
 
 ## Context notes
 
@@ -50,9 +50,9 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `<angle>`
-    *   : The value of the angle is restricted to 0, 90, 180, and 270 degrees. If another angle is specified, it is rounded to the closest of the permitted values.
-        A value of `0deg` indicates that all glyphs are set with the top of the glyphs oriented towards the reference orientation. A value of `90deg` indicates an orientation of 90 degrees clockwise from the reference orientation.
+- `<angle>`
+  - : The value of the angle is restricted to 0, 90, 180, and 270 degrees. If another angle is specified, it is rounded to the closest of the permitted values.
+    A value of `0deg` indicates that all glyphs are set with the top of the glyphs oriented towards the reference orientation. A value of `90deg` indicates an orientation of 90 degrees clockwise from the reference orientation.
 
 ## Specifications
 

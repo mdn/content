@@ -81,10 +81,10 @@ This gives us the following result:
 
 You'll see that we've got four items in the `box-shadow` property value:
 
-1.  The first length value is the **horizontal offset** — the distance to the right the shadow is offset from the original box (or left, if the value is negative).
-2.  The second length value is the **vertical offset** — the distance downwards that the shadow is offset from the original box (or upwards, if the value is negative).
-3.  The third length value is the **blur radius** — the amount of blurring applied to the shadow.
-4.  The color value is the **base color** of the shadow.
+1. The first length value is the **horizontal offset** — the distance to the right the shadow is offset from the original box (or left, if the value is negative).
+2. The second length value is the **vertical offset** — the distance downwards that the shadow is offset from the original box (or upwards, if the value is negative).
+3. The third length value is the **blur radius** — the amount of blurring applied to the shadow.
+4. The color value is the **base color** of the shadow.
 
 You can use any length and color units that would make sense to do so to define these values.
 
@@ -111,12 +111,12 @@ article {
 }
 
 .multiple {
-  box-shadow: 1px 1px 1px black,
-              2px 2px 1px black,
-              3px 3px 1px red,
-              4px 4px 1px red,
-              5px 5px 1px black,
-              6px 6px 1px black;
+  box-shadow: 1px 1px 1px black,
+              2px 2px 1px black,
+              3px 3px 1px red,
+              4px 4px 1px red,
+              5px 5px 1px black,
+              6px 6px 1px black;
 }
 ```
 
@@ -172,17 +172,17 @@ When the button is pressed in, the active state causes the first box shadow to b
 
 ## Filters
 
-While you can't change the composure of an image using CSS, there are some creative things you can do. One very nice property, which can help you bring interest to your designs, is the  {{cssxref("filter")}} property. This property enables Photoshop-like filters right from CSS.
+While you can't change the composure of an image using CSS, there are some creative things you can do. One very nice property, which can help you bring interest to your designs, is the {{cssxref("filter")}} property. This property enables Photoshop-like filters right from CSS.
 
 In the example below we have used two different values for filter. The `first` is `blur()` — this function can be passed a value to indicate how much the image should be blurred.
 
-The second is `grayscale()`; by using a percentage we are setting how much color we want to be removed.
+The second is `grayscale()`; by using a percentage we are setting how much color we want to be removed.
 
 {{EmbedGHLiveSample("css-examples/learn/images/filter.html", '100%', 700)}}
 
 **Play with the percentage and pixel parameters in the live example to see how the images change. You could also swap the values for some others. Try `contrast(200%)`, `invert(100%)` or `hue-rotate(20deg)` on the live example above. Take a look at the MDN page for [`filter`](/en-US/docs/Web/CSS/filter) for many other options you could try.**
 
-You can apply filters to any element and not just images. Some of the filter options available do very similar things to other CSS features, for example `drop-shadow()` works in a very similar way and gives a similar effect to [`box-shadow`](/en-US/docs/Web/CSS/box-shadow) or [`text-shadow`](/en-US/docs/Web/CSS/text-shadow).  The really nice thing about filters however, is that they work on the exact shapes of the content inside the box, not just the box itself as one big chunk, so it is worth knowing the difference.
+You can apply filters to any element and not just images. Some of the filter options available do very similar things to other CSS features, for example `drop-shadow()` works in a very similar way and gives a similar effect to [`box-shadow`](/en-US/docs/Web/CSS/box-shadow) or [`text-shadow`](/en-US/docs/Web/CSS/text-shadow). The really nice thing about filters however, is that they work on the exact shapes of the content inside the box, not just the box itself as one big chunk, so it is worth knowing the difference.
 
 In this next example we are applying our filter to a box, and comparing it to a box shadow. As you can see, the drop-shadow filter follows the exact shape of the text and border dashes. The box shadow just follows the square of the box.
 
@@ -212,7 +212,7 @@ Again, let's look at some examples so we can understand this better. First, {{cs
 </div>
 ```
 
-Now some CSS — we are adding to the `<div>` one background image and a green background color:
+Now some CSS — we are adding to the `<div>` one background image and a green background color:
 
 ```css
 div {
@@ -303,7 +303,7 @@ This gives us the following results:
 
 You can see here that the multiply mix blend has blended together not only the two background images, but also the color from the `<div>` below it too.
 
-> **Note:** Don't worry if you don't understand some of the layout properties above, like {{cssxref("position")}}, {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("z-index")}}, etc. We will cover these in detail in our [CSS Layout](/en-US/docs/Learn/CSS/CSS_layout) module.
+> **Note:** Don't worry if you don't understand some of the layout properties above, like {{cssxref("position")}}, {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("z-index")}}, etc. We will cover these in detail in our [CSS Layout](/en-US/docs/Learn/CSS/CSS_layout) module.
 
 ## CSS shapes
 

@@ -17,6 +17,8 @@ The **`XRLightProbe`** interface of the [WebXR Device API](/en-US/docs/Web/API/
 
 This object doesn't itself contain lighting values, but it is used to collect lighting states for each {{domxref("XRFrame")}}. See {{domxref("XRLightEstimate")}} for the estimated lighting values for an `XRLightProbe`.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 - `XRLightProbe.onreflectionchange`

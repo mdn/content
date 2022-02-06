@@ -18,6 +18,8 @@ The {{domxref("StereoPannerNode.pan", "pan")}} property takes a unitless value b
 
 ![](stereopannernode.png)
 
+{{InheritanceDiagram}}
+
 <table class="properties">
   <tbody>
     <tr>

@@ -13,9 +13,9 @@ The **`vert-adv-y`** attribute indicates the vertical advance after rendering a 
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("font")}}
-*   {{SVGElement("glyph")}}
-*   {{SVGElement("missing-glyph")}}
+- {{SVGElement("font")}}
+- {{SVGElement("glyph")}}
+- {{SVGElement("missing-glyph")}}
 
 ## font
 
@@ -44,8 +44,8 @@ For {{SVGElement("font")}} elements, `vert-adv-y` specifies the default vertical
   </tbody>
 </table>
 
-*   `<number>`
-    *   : This value indicates the default vertical advance of the glyph in vertical direction
+- `<number>`
+  - : This value indicates the default vertical advance of the glyph in vertical direction
 
 ## glyph, missing-glyph
 
@@ -76,8 +76,8 @@ For {{SVGElement("glyph")}} and {{SVGElement("missing-glyph")}} elements, `vert-
   </tbody>
 </table>
 
-*   `<number>`
-    *   : This value indicates the vertical advance of the glyph in vertical direction
+- `<number>`
+  - : This value indicates the vertical advance of the glyph in vertical direction
 
 ## Specifications
 
@@ -116,5 +116,5 @@ For {{SVGElement("glyph")}} and {{SVGElement("missing-glyph")}} elements, `vert-
 
 ## See also
 
-*   {{SVGAttr("horiz-adv-x")}}
-*   {{SVGAttr("units-per-em")}}
+- {{SVGAttr("horiz-adv-x")}}
+- {{SVGAttr("units-per-em")}}

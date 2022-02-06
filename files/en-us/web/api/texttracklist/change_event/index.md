@@ -10,34 +10,21 @@ browser-compat: api.TextTrackList.change_event
 ---
 {{APIRef}}
 
-The `change` event is fired when a text track is made active or inactive, or a {{domxref('textTrackList')}} is otherwise changed.
+The **`change`** event is fired when a text track is made active or inactive, or a {{domxref('TextTrackList')}} is otherwise changed.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/TextTrackList/onchange"
-            >onchange</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('change', event => { })
+
+onchange = event => { }
+```
+
+## Event type
+
+A generic {{DOMxRef("Event")}} with no added properties.
 
 ## Examples
 

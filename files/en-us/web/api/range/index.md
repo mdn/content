@@ -14,6 +14,8 @@ A range can be created by using the {{ domxref("Document.createRange()") }} meth
 
 There also is the {{domxref("Range.Range()", "Range()")}} constructor available.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _There are no inherited properties._

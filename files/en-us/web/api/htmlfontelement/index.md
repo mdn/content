@@ -13,6 +13,8 @@ browser-compat: api.HTMLFontElement
 
 Implements the document object model (DOM) representation of the font element. The HTML Font Element {{HTMLElement("font")}} defines the font size, font face and color of text.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._

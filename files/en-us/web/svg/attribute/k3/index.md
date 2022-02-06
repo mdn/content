@@ -19,7 +19,7 @@ result = k1*i1*i2 + k2*i1 + k3*i2 + k4
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feComposite")}}
+- {{SVGElement("feComposite")}}
 
 ## Example
 

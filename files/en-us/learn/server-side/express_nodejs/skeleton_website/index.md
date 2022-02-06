@@ -182,14 +182,14 @@ At the end of the output, the generator provides instructions on how to install 
 
 At this point, we have a complete skeleton project. The website doesn't actually _do_ very much yet, but it's worth running it to show that it works.
 
-1.  First, install the dependencies (the `install` command will fetch all the dependency packages listed in the project's **package.json** file).
+1. First, install the dependencies (the `install` command will fetch all the dependency packages listed in the project's **package.json** file).
 
     ```bash
     cd express-locallibrary-tutorial
     npm install
     ```
 
-2.  Then run the application.
+2. Then run the application.
 
     - On the Windows CMD prompt, use this command:
 
@@ -211,7 +211,7 @@ At this point, we have a complete skeleton project. The website doesn't actually
       DEBUG=express-locallibrary-tutorial:* npm start
       ```
 
-3.  Then load `http://localhost:3000/` in your browser to access the app.
+3. Then load `http://localhost:3000/` in your browser to access the app.
 
 You should see a browser page that looks like this:
 

@@ -24,7 +24,8 @@ session history stack.
 ## Syntax
 
 ```js
-history.pushState(state, title [, url])
+history.pushState(state, title)
+history.pushState(state, title, url)
 ```
 
 ### Parameters
