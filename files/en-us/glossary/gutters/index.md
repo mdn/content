@@ -31,7 +31,7 @@ In the example below we have a three-column and two-row track grid, with 20-pixe
 ```css
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(3,1.2fr);
+  grid-template-columns: repeat(3, 1.2fr);
   grid-auto-rows: 45%;
   column-gap: 20px;
   row-gap: 20px;
