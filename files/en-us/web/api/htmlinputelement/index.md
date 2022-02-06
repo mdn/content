@@ -508,7 +508,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td>{{domxref("HTMLInputElement.accessKey", "accessKey")}}</td>
+      <td>{{domxref("HTMLElement.accessKey", "accessKey")}}</td>
       <td>
         <em><code>string</code>: </em><strong>Returns</strong> a string
         containing a single character that switches input focus to the control
