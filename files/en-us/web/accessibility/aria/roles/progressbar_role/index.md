@@ -30,7 +30,7 @@ If the `progressbar` role is applied to an HTML {{HTMLElement('progress')}} elem
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow)
-  - : Only present and required if the value is not indeterminate. Set to a decimal value between 0, or `aria-valuemin` if present, and `aria-valuemax` indicating the current value of the progressbar.
+  - : Only present and required if the value is not indeterminate. Set to a decimal value between `0`, or `aria-valuemin` if present, and `aria-valuemax` indicating the current value of the progress bar.
 - [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext)
   - : Assistive technologies often present the value of `aria-valuenow` as a percentage. If this would not be accurate use this property to make the progressbar value understandable.
 - [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin)
