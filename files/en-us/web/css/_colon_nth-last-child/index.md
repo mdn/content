@@ -166,5 +166,5 @@ li:nth-last-child(3) ~ li {
 
 ## See also
 
-- {{Cssxref(":nth-child")}}, {{Cssxref(":nth-last-of-type")}}
+- {{Cssxref(":nth-child")}}, {{Cssxref(":nth-last-of-type")}}, {{Cssxref("&lt;an-plus-b&gt;")}}
 - [Quantity Queries for CSS](https://alistapart.com/article/quantity-queries-for-css)
