@@ -32,7 +32,7 @@ including{{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "mo
   "number")}}, and {{HTMLElement("input/range", "range")}}.
 
 Given `<input id="myTime" type="time" max="17:00" step="900" value="17:00">`,
-invoking `myTime.step(3)` will change the value to 16:15, decresing the
+invoking `myTime.step(3)` will change the value to 16:15, decreasing the
 time by `3 * 900`, or 45 minutes. `myTime.step()`, with no
 parameter, would have resulted in `16:45`, as `n` defaults to
 `1`.
