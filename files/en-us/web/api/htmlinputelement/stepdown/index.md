@@ -13,13 +13,13 @@ browser-compat: api.HTMLInputElement.stepDown
 {{APIRef("HTML DOM")}}
 
 The
-**`HTMLInputElement.stepDown([n])`** method decrements the
+**`HTMLInputElement.stepDown([n])`** method decreases the
 value of a numeric type of  {{HTMLElement("input")}} element by the value of the
 [`step`](/en-US/docs/Web/HTML/Attributes/step) attribute or up
 to `n` multiples of the step attribute if a number is passed as the
 parameter.
 
-The method, when invoked, decrements the
+The method, when invoked, decreases the
 {{htmlattrxref("value","input")}} by ({{htmlattrxref("step","input")}} \* n), where n
 defaults to 1 if not specified, and
 [`step`](/en-US/docs/Web/HTML/Attributes/step) defaults to the
@@ -32,19 +32,19 @@ including{{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "mo
   "number")}}, and {{HTMLElement("input/range", "range")}}.
 
 Given `<input id="myTime" type="time" max="17:00" step="900" value="17:00">`,
-invoking `myTime.step(3)` will change the value to 16:15, decrementing the
+invoking `myTime.step(3)` will change the value to 16:15, decresing the
 time by `3 * 900`, or 45 minutes. `myTime.step()`, with no
 parameter, would have resulted in `16:45`, as `n` defaults to
 `1`.
 
 ```html
-<!--  decrements by intervals of 900 seconds (15 minute) -->
+<!--  decreases by intervals of 900 seconds (15 minute) -->
 <input type="time" max="17:00" step="900">
 
-<!-- decrements by intervals of 7 days (one week) -->
+<!-- decreases by intervals of 7 days (one week) -->
 <input type="date" max="2019-12-25" step="7">
 
-<!-- decrements by intervals of 12 months (one year) -->
+<!-- decreases by intervals of 12 months (one year) -->
 <input type="month" max="2019-12" step="12">
 ```
 
@@ -79,7 +79,7 @@ The method will not cause the value to go below the
 [`min`](/en-US/docs/Web/HTML/Attributes/min) value set or defy the
 constraints set by the
 [`step`](/en-US/docs/Web/HTML/Attributes/step) attribute. A
-negative value for `n` will increment the value, but will not increment
+negative value for `n` will increase the value, but will not increase
 beyond the [`max`](/en-US/docs/Web/HTML/Attributes/max) value.
 
 If the value before invoking the `stepDown()` method is invalid, for
@@ -93,7 +93,7 @@ support the `step` attribute (see the list of supported input types above), or i
 
 - {{domxref("HTMLInputElement.stepDown()")}}
 
-  - : Decrements the {{htmlattrxref("value","input")}} by
+  - : Decreases the {{htmlattrxref("value","input")}} by
     ({{htmlattrxref("step","input")}} \* n), where n defaults to 1 if not specified. Throws
     an `InvalidStateError` exception:
 
@@ -116,14 +116,14 @@ element.stepDown( [ stepDecrement ] );
 
   - : The optional  `stepDecrement` parameter is a numeric value.  If no parameter is passed, _stepDecrement_ defaults to 1.
 
-    If the value is a float, the value will decrement as if
+    If the value is a float, the value will decrease as if
     [`Math.floor(stepDecrement)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)
-    was passed. If the value is negative, the value will be incremented instead of
-    decremented.
+    was passed. If the value is negative, the value will be increased instead of
+    decreased.
 
 ## Example
 
-Click the button in this example to decrement the {{HTMLElement("input/number",
+Click the button in this example to decrease the {{HTMLElement("input/number",
   "number")}} input type:
 
 ### HTML
@@ -135,7 +135,7 @@ Click the button in this example to decrement the {{HTMLElement("input/number",
   </label>
 </p>
 <p>
-  <label>Enter how many values of step you would like to decrement by or leave it blank:
+  <label>Enter how many values of step you would like to decrease by or leave it blank:
    <input type="number" step="1" id="decrementer" min="-2" max="15">
   </label>
 </p>
@@ -155,7 +155,7 @@ function stepondown() {
   let input = document.getElementById('theNumber');
   let val = document.getElementById('decrementer').value;
 
-  if (val) {  /* decrement with a parameter */
+  if (val) {  /* decrease with a parameter */
     input.stepDown(val);
   } else {    /* or without a parameter. Try it with 0, 5, -2, etc. */
     input.stepDown();
@@ -179,7 +179,7 @@ Note if you don't pass a parameter to the `stepDown()` method, it defaults
 to 1. Any other value is a multiplier of the `step` attribute value, which in
 this case is 5. If we pass `4` as the _`stepDecrement`_, the input will `stepDown` by
 `4 * 5`, or `20`. If the parameter is `0`, the number will not be
-decremented. The `stepDown()` method will not allow the input to go out of range, in this
+decreased. The `stepDown()` method will not allow the input to go out of range, in this
 case stopping when it reaches 0 and rounding down and floats that are passed as a
 parameter.
 
