@@ -23,7 +23,7 @@ The `ReadableStreamBYOBReader` interface of the [Streams API](/en-US/docs/Web/AP
 ## Properties
 
 - {{domxref("ReadableStreamBYOBReader.closed")}} {{readonlyInline}}
-  - : Returns a {{jsxref("Promise")}} that fulfills when the stream closes or the reader's lock is released, or rejects if the stream throws an error. This property enables you to write code that responds to an end to the streaming process.
+  - : Returns a {{jsxref("Promise")}} that fulfills when the stream closes, or rejects if the stream throws an error or the reader's lock is released. This property enables you to write code that responds to an end to the streaming process.
 
 ## Methods
 
