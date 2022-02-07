@@ -30,7 +30,7 @@ for await (const variable of iterable) {
 - `variable`
   - : On each iteration a value of a different property is assigned to
     `variable`. `variable` may be declared
-    with `const`, `let`, or `var`.
+    with `const`, `let`, or `var` (prefer `const`).
 - `iterable`
   - : Object whose iterable properties are to be iterated over.
 
@@ -41,27 +41,24 @@ for await (const variable of iterable) {
 You can also iterate over an object that explicitly implements async iterable protocol:
 
 ```js
+const LIMIT = 3;
+
 const asyncIterable = {
   [Symbol.asyncIterator]() {
     return {
       i: 0,
       next() {
-        if (this.i < 3) {
-          return Promise.resolve({ value: this.i++, done: false });
-        }
-
-        return Promise.resolve({ done: true });
+        const done = this.i === LIMIT;
+        const value = done ? undefined : this.i++;
+        return Promise.resolve({ value, done });
       }
     };
   }
 };
 
-(async function() {
-   for await (let num of asyncIterable) {
-     console.log(num);
-   }
-})();
-
+for await (const num of asyncIterable) {
+  console.log({ num });
+}
 // 0
 // 1
 // 2
@@ -80,11 +77,9 @@ async function* asyncGenerator() {
   }
 }
 
-(async function() {
-  for await (let num of asyncGenerator()) {
-    console.log(num);
-  }
-})();
+for await (const num of asyncGenerator()) {
+  console.log({ num });
+}
 // 0
 // 1
 // 2
@@ -102,15 +97,14 @@ async function* streamAsyncIterable(stream) {
   try {
     while (true) {
       const { done, value } = await reader.read();
-      if (done) {
-        return;
-      }
+      if (done) return;
       yield value;
     }
   } finally {
     reader.releaseLock();
   }
 }
+
 // Fetches data from url and calculates response size using the async generator.
 async function getResponseSize(url) {
   const response = await fetch(url);
@@ -144,11 +138,9 @@ function* generator() {
   yield 4;
 }
 
-(async function() {
-  for await (let num of generator()) {
-    console.log(num);
-  }
-})();
+for await (const num of generator()) {
+  console.log(num);
+}
 // 0
 // 1
 // 2
@@ -157,7 +149,7 @@ function* generator() {
 
 // compare with for-of loop:
 
-for (let numOrPromise of generator()) {
+for (const numOrPromise of generator()) {
   console.log(numOrPromise);
 }
 // 0
@@ -183,19 +175,17 @@ function* generatorWithRejectedPromises() {
     yield 4;
     throw 5;
   } finally {
-    console.log('called finally')
+    console.log('called finally');
   }
 }
 
-(async function() {
-  try {
-    for await (let num of generatorWithRejectedPromises()) {
-      console.log(num);
-    }
-  } catch (e) {
-    console.log('caught', e)
+try {
+  for await (const num of generatorWithRejectedPromises()) {
+    console.log(num);
   }
-})();
+} catch (e) {
+  console.log('caught', e);
+}
 // 0
 // 1
 // 2
@@ -204,11 +194,11 @@ function* generatorWithRejectedPromises() {
 // compare with for-of loop:
 
 try {
-  for (let numOrPromise of generatorWithRejectedPromises()) {
+  for (const numOrPromise of generatorWithRejectedPromises()) {
     console.log(numOrPromise);
   }
 } catch (e) {
-  console.log('caught', e)
+  console.log('caught', e);
 }
 // 0
 // 1
@@ -225,15 +215,13 @@ appropriate form of the loop, `for await...of` for the async generator and
 loop.
 
 ```js
-(async function() {
-  try {
-    for (let numOrPromise of generatorWithRejectedPromises()) {
-      console.log(await numOrPromise);
-    }
-  } catch (e) {
-    console.log('caught', e)
+try {
+  for (const numOrPromise of generatorWithRejectedPromises()) {
+    console.log(await numOrPromise);
   }
-})()
+} catch (e) {
+  console.log('caught', e);
+}
 // 0
 // 1
 // 2
