@@ -983,6 +983,50 @@ With this feature enabled, Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) 
   </tbody>
 </table>
 
+### WebVR API
+
+#### WebVR API (Disabled)
+
+The deprecated [WebVR API](/en-US/docs/Web/API/WebVR_API) is on the path for removal.
+It is disabled by default on all builds {{bug(1750902)}}.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version removed</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>98</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>98</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>98</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>98</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.vr.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+
 ### HTML DOM API
 
 #### HTMLMediaElement method: setSinkId()
