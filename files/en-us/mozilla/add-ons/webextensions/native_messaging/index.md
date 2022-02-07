@@ -6,17 +6,17 @@ tags:
 ---
 {{AddonSidebar}}
 
-**Native messaging** enables an extension to exchange messages with a native application, installed on the user's computer. The native messaging serves the extensions without additional accesses over the web.
+**Native messaging** enables an extension to exchange messages with a native application, installed on the user's computer. The native messaging serves the extensions without additional accesses over the web.
 
-Password managers: The native application manages, stores, and encrypts passwords. Then the native application communicates with the extension to populate web forms.
+Password managers: The native application manages, stores, and encrypts passwords. Then the native application communicates with the extension to populate web forms.
 
-Native messaging also enables extensions to access resources that are not accessible through WebExtension APIs (e.g, particular hardwares).
+Native messaging also enables extensions to access resources that are not accessible through WebExtension APIs (e.g, particular hardwares).
 
-The native application is not installed or managed by the browser. The native application is installed, using the underlying operating system's installation machinery. Create a JSON file called the "host manifest" or "app manifest". Install the JSON file in a defined location. The app manifest file will describe how the browser can connect to the native application.
+The native application is not installed or managed by the browser. The native application is installed, using the underlying operating system's installation machinery. Create a JSON file called the "host manifest" or "app manifest". Install the JSON file in a defined location. The app manifest file will describe how the browser can connect to the native application.
 
-The extension must request the `"nativeMessaging"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) or [optional permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) in the `manifest.json` file. Also, the native application must grant permission for the extension by including the ID in the `"allowed_extensions"` field of the app manifest.
+The extension must request the `"nativeMessaging"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) or [optional permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) in the `manifest.json` file. Also, the native application must grant permission for the extension by including the ID in the `"allowed_extensions"` field of the app manifest.
 
-After installing, the extension can exchange JSON messages with the native application. Use a set of functions in the {{WebExtAPIRef("runtime")}} API. On the native app side, messages are received using standard input (`stdin`) and sent using standard output (`stdout`).
+After installing, the extension can exchange JSON messages with the native application. Use a set of functions in the {{WebExtAPIRef("runtime")}} API. On the native app side, messages are received using standard input (`stdin`) and sent using standard output (`stdout`).
 
 ![](native-messaging.png)
 
@@ -31,10 +31,10 @@ There's a complete example in the ["`native-messaging`" directory](https://githu
 
 ### Extension manifest
 
-Extension communicating with a native application:
+Extension communicating with a native application:
 
-- Set the `"nativeMessaging"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) or [optional permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) in the [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
-- Specify your add-on ID explicitly. Use the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) manifest key. (The app's manifest will identify the set of extensions that allow connecting to the IDs).
+- Set the `"nativeMessaging"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) or [optional permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) in the [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
+- Specify your add-on ID explicitly. Use the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) manifest key. (The app's manifest will identify the set of extensions that allow connecting to the IDs).
 
 Example `manifest.json` file:
 
@@ -127,7 +127,7 @@ python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"
 
 #### Registry
 
-The browser finds the extension based on registry keys which are located in a specific location. You need to add them either programmatically with your final application or manually if you are using the example from GitHub. For more details, refer to [Manifest location](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#manifest_location).
+The browser finds the extension based on registry keys which are located in a specific location. You need to add them either programmatically with your final application or manually if you are using the example from GitHub. For more details, refer to [Manifest location](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#manifest_location).
 
 Following with the `ping_pong` example, if using Firefox (see [this page for Chrome](https://developer.chrome.com/apps/nativeMessaging#native-messaging-host-location)), two registry entries should be created for the messaging to work:
 
@@ -147,7 +147,7 @@ Given the above setup, an extension can exchange JSON messages with a native app
 
 ### Extension side
 
-Native messaging cannot directly be used in content scripts. You must [do it indirectly via background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts).
+Native messaging cannot directly be used in content scripts. You must [do it indirectly via background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts).
 
 There are two patterns to use here: **connection-based messaging** and **connectionless messaging**.
 
@@ -160,9 +160,9 @@ Two arguments are passed to the native app when it starts:
 - The complete path to the app manifest.
 - (new in Firefox 55) the ID (as given in the [browser_specific_settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) `manifest.json` key) of the add-on that started it.
 
-> **Note:** Chrome  handles the passed arguments differently:
+> **Note:** Chrome handles the passed arguments differently:
 >
-> - On Linux and Mac, Chrome passes _one_ argument: the origin of the extension that started it (in the form `chrome-extension://[extensionID]`). This enables the app to identify the extension.
+> - On Linux and Mac, Chrome passes _one_ argument: the origin of the extension that started it (in the form `chrome-extension://[extensionID]`). This enables the app to identify the extension.
 > - On Windows, Chrome passes _two_ arguments: the first is the origin of the extension, and the second is a handle to the Chrome native window that started the app.
 
 The application stays running until the extension calls `Port.disconnect()` or the page that connected to it is closed.
@@ -201,7 +201,7 @@ With this pattern you call {{WebExtAPIRef("runtime.sendNativeMessage()")}}, pass
 - the JSON message to send
 - optionally, a callback.
 
-A new instance of the app is created for each message. The app passes two arguments when starting:
+A new instance of the app is created for each message. The app passes two arguments when starting:
 
 - the complete path to the app manifest
 - (new in Firefox 55) the ID (as given in the [browser_specific_settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) manifest.json key) of the add-on that started it.
@@ -395,7 +395,7 @@ If you connected to the native application using `runtime.connectNative()`, then
 To close the native application:
 
 - On \*nix systems like macOS and Linux, the browser sends `SIGTERM` to the native application, then `SIGKILL` after the application has had a chance to exit gracefully. These signals propagate to any subprocesses unless they break away into a new process group.
-- On Windows, the browser puts the native application's process into a [Job object](<https://msdn.microsoft.com/en-us/library/windows/desktop/ms684161(v=vs.85).aspx>), and kills the job. If the native application launches any additional processes and wants them to remain open after the native application itself is killed, then the native application must launch the additional process with the [`CREATE_BREAKAWAY_FROM_JOB`](<https://msdn.microsoft.com/en-us/library/windows/desktop/ms684863(v=vs.85).aspx>) flag.
+- On Windows, the browser puts the native application's process into a [Job object](<https://msdn.microsoft.com/library/windows/desktop/ms684161(v=vs.85).aspx>), and kills the job. If the native application launches any additional processes and wants them to remain open after the native application itself is killed, then the native application must launch the additional process with the [`CREATE_BREAKAWAY_FROM_JOB`](<https://msdn.microsoft.com/library/windows/desktop/ms684863(v=vs.85).aspx>) flag.
 
 ## Troubleshooting
 

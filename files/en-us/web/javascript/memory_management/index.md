@@ -203,4 +203,4 @@ node --expose-gc --inspect index.js
 
 #### See also
 
-- [Kangax article on how to register event handler and avoid memory leaks (2010)](https://msdn.microsoft.com/en-us/magazine/ff728624.aspx)
+- [Kangax article on how to register event handler and avoid memory leaks (2010)](https://msdn.microsoft.com/magazine/ff728624.aspx)

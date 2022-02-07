@@ -23,7 +23,7 @@ Data URLs are composed of four parts: a prefix (`data:`), a [MIME type](/en-US/d
 data:[<mediatype>][;base64],<data>
 ```
 
-The `mediatype` is a [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) string, such as `'image/jpeg'` for a JPEG image file. If omitted, defaults to `text/plain;charset=US-ASCII`
+The `mediatype` is a [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) string, such as `'image/jpeg'` for a JPEG image file. If omitted, defaults to `text/plain;charset=US-ASCII`
 
 If the data contains [characters defined in RFC 3986 as reserved characters](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2), or contains space characters, newline characters, or other non-printing characters, those characters must be [percent-encoded](/en-US/docs/Glossary/percent-encoding) (_aka_ “URL-encoded”).
 
@@ -66,7 +66,7 @@ base64 a.txt>b.txt
 
 ### Encoding on Microsoft Windows
 
-On Windows, [Convert.ToBase64String](https://docs.microsoft.com/en-us/dotnet/api/system.convert.tobase64string?view=net-5.0) from PowerShell can be used to perform the Base64 encoding:
+On Windows, [Convert.ToBase64String](https://docs.microsoft.com/dotnet/api/system.convert.tobase64string?view=net-5.0) from PowerShell can be used to perform the Base64 encoding:
 
 ```bash
 [convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes("hello"))
