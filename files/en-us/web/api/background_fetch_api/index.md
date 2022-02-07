@@ -7,7 +7,7 @@ tags:
   - Reference
   - Background Fetch API
   - Experimental
-browser-compat: api.ServiceWorkerRegistration.backgroundFetch
+browser-compat: api.BackgroundFetchManager
 ---
 {{DefaultAPISidebar("Background Fetch API")}} {{SeeCompatTable}}
 
