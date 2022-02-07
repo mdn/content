@@ -17,6 +17,7 @@ tags:
   - width
 browser-compat: css.properties.max-block-size
 ---
+
 {{CSSRef}}
 
 The **`max-block-size`** [CSS](/en-US/docs/Web/CSS) property specifies the maximum size of an element in the direction opposite that of the writing direction as specified by {{cssxref("writing-mode")}}. That is, if the writing direction is horizontal, then `max-block-size` is equivalent to {{cssxref("max-height")}}; if the writing direction is vertical, `max-block-size` is the same as {{cssxref("max-width")}}.
@@ -40,7 +41,7 @@ max-block-size: 25em;
 max-block-size: 75%;
 
 /* Keyword values */
-max-block-size: auto;
+max-block-size: none;
 max-block-size: max-content;
 max-block-size: min-content;
 max-block-size: fit-content(20em);
@@ -73,10 +74,10 @@ The `max-block-size` property's value can be any value that's legal for the {{cs
 
 The values of `writing-mode` affect the mapping of `max-block-size` to `max-width` or `max-height` as follows:
 
-| Values of `writing-mode`                                                                                                                                                                              | `max-block-size` is equivalent to |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
-| `horizontal-tb`, `lr` {{deprecated_inline}}, `lr-tb` {{deprecated_inline}}, `rl` {{deprecated_inline}}, `rb` {{deprecated_inline}}, `rb-rl` {{deprecated_inline}}  | {{cssxref("max-height")}}  |
-| `vertical-rl`, `vertical-lr`, `sideways-rl` {{experimental_inline}}, `sideways-lr` {{experimental_inline}}, `tb` {{deprecated_inline}}, `tb-rl` {{deprecated_inline}} | {{cssxref("max-width")}}  |
+| Values of `writing-mode`                                                                                                                                              | `max-block-size` is equivalent to |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
+| `horizontal-tb`, `lr` {{deprecated_inline}}, `lr-tb` {{deprecated_inline}}, `rl` {{deprecated_inline}}, `rb` {{deprecated_inline}}, `rb-rl` {{deprecated_inline}}     | {{cssxref("max-height")}}         |
+| `vertical-rl`, `vertical-lr`, `sideways-rl` {{experimental_inline}}, `sideways-lr` {{experimental_inline}}, `tb` {{deprecated_inline}}, `tb-rl` {{deprecated_inline}} | {{cssxref("max-width")}}          |
 
 > **Note:** The `writing-mode` values `sideways-lr` and `sideways-rl` were removed from the CSS Writing Modes Level 3 specification late in its design process. They may be restored in Level 4.
 
@@ -105,24 +106,18 @@ The HTML establishes the two {{HTMLElement("div")}} blocks that will be presente
 ```html
 <p>Writing mode <code>horizontal-tb</code> (the default):</p>
 <div class="standard-box horizontal">
-  Call me Ishmael. Some years ago—never mind how
-  long precisely—having little or no money in my
-  purse, and nothing particular to interest me on
-  shore, I thought I would sail about a little and see
-  the watery part of the world. It is a way I have of
-  driving off the spleen and regulating the
-  circulation.
+  Call me Ishmael. Some years ago—never mind how long precisely—having little or
+  no money in my purse, and nothing particular to interest me on shore, I
+  thought I would sail about a little and see the watery part of the world. It
+  is a way I have of driving off the spleen and regulating the circulation.
 </div>
 
 <p>Writing mode <code>vertical-rl</code>:</p>
 <div class="standard-box vertical">
-  Call me Ishmael. Some years ago—never mind how
-  long precisely—having little or no money in my
-  purse, and nothing particular to interest me on
-  shore, I thought I would sail about a little and see
-  the watery part of the world. It is a way I have of
-  driving off the spleen and regulating the
-  circulation.
+  Call me Ishmael. Some years ago—never mind how long precisely—having little or
+  no money in my purse, and nothing particular to interest me on shore, I
+  thought I would sail about a little and see the watery part of the world. It
+  is a way I have of driving off the spleen and regulating the circulation.
 </div>
 ```
 
