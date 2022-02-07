@@ -22,19 +22,19 @@ for each array element.
 
 ```js
 // Arrow function
-forEach((element) => { /* ... */ } )
-forEach((element, index) => { /* ... */ } )
-forEach((element, index, array) => { /* ... */ } )
+forEach((element) => { /* ... */ });
+forEach((element, index) => { /* ... */ });
+forEach((element, index, array) => { /* ... */ });
 
 // Callback function
-forEach(callbackFn)
-forEach(callbackFn, thisArg)
+forEach(callbackFn);
+forEach(callbackFn, thisArg);
 
 // Inline callback function
-forEach(function(element) { /* ... */ })
-forEach(function(element, index) { /* ... */ })
-forEach(function(element, index, array){ /* ... */ })
-forEach(function(element, index, array) { /* ... */ }, thisArg)
+forEach(function(element) { /* ... */ });
+forEach(function(element, index) { /* ... */ });
+forEach(function(element, index, array){ /* ... */ });
+forEach(function(element, index, array) { /* ... */ }, thisArg);
 ```
 
 ### Parameters
@@ -125,19 +125,16 @@ effects at the end of a chain.
 > implications while using promises (or async functions) as `forEach` callback.
 >
 > ```js
-> let ratings = [5, 4, 5];
+> const ratings = [5, 4, 5];
 > let sum = 0;
 >
-> let sumFunction = async function (a, b)
-> {
->   return a + b
-> }
+> const sumFunction = async (a, b) => a + b;
 >
-> ratings.forEach(async function(rating) {
->   sum = await sumFunction(sum, rating)
-> })
+> ratings.forEach(async (rating) => {
+>   sum = await sumFunction(sum, rating);
+> });
 >
-> console.log(sum)
+> console.log(sum);
 > // Naively expected output: 14
 > // Actual output: 0
 > ```
@@ -161,9 +158,9 @@ that `fun.call` evaluates to the original value of
 if (!Array.prototype['forEach']) {
 
   Array.prototype.forEach = function(callback, thisArg) {
-
-    if (this == null) { throw new TypeError('Array.prototype.forEach called on null or undefined'); }
-
+    if (this === null) {
+      throw new TypeError('Array.prototype.forEach called on null or undefined');
+    }
     var T, k;
     // 1. Let O be the result of calling toObject() passing the
     // |this| value as the argument.
@@ -176,7 +173,9 @@ if (!Array.prototype['forEach']) {
 
     // 4. If isCallable(callback) is false, throw a TypeError exception.
     // See: https://es5.github.io/#x9.11
-    if (typeof callback !== "function") { throw new TypeError(callback + ' is not a function'); }
+    if (typeof callback !== 'function') {
+      throw new TypeError(callback + ' is not a function');
+    }
 
     // 5. If thisArg was supplied, let T be thisArg; else let
     // T be undefined.
@@ -187,7 +186,6 @@ if (!Array.prototype['forEach']) {
 
     // 7. Repeat, while k < len
     while (k < len) {
-
       var kValue;
 
       // a. Let Pk be ToString(k).
@@ -219,15 +217,15 @@ if (!Array.prototype['forEach']) {
 ### No operation for uninitialized values (sparse arrays)
 
 ```js
-const arraySparse = [1,3,,7]
-let numCallbackRuns = 0
+const arraySparse = [1, 3,, 7];
+let numCallbackRuns = 0;
 
-arraySparse.forEach(function(element) {
-  console.log(element)
-  numCallbackRuns++
-})
+arraySparse.forEach((element) => {
+  console.log({ element });
+  numCallbackRuns++;
+});
 
-console.log("numCallbackRuns: ", numCallbackRuns)
+console.log({ numCallbackRuns });
 
 // 1
 // 3
@@ -239,18 +237,18 @@ console.log("numCallbackRuns: ", numCallbackRuns)
 ### Converting a for loop to forEach
 
 ```js
-const items = ['item1', 'item2', 'item3']
-const copyItems = []
+const items = ['item1', 'item2', 'item3'];
+const copyItems = [];
 
 // before
 for (let i = 0; i < items.length; i++) {
-  copyItems.push(items[i])
+  copyItems.push(items[i]);
 }
 
 // after
-items.forEach(function(item){
-  copyItems.push(item)
-})
+items.forEach((item) => {
+  copyItems.push(item);
+});
 ```
 
 ### Printing the contents of an array
@@ -265,13 +263,13 @@ items.forEach(function(item){
 The following code logs a line for each element in an array:
 
 ```js
-function logArrayElements(element, index, array) {
-  console.log('a[' + index + '] = ' + element)
-}
+const logArrayElements = (element, index, array) => {
+  console.log('a[' + index + '] = ' + element);
+};
 
 // Notice that index 2 is skipped, since there is no item at
 // that position in the array...
-[2, 5, , 9].forEach(logArrayElements)
+[2, 5,, 9].forEach(logArrayElements);
 // logs:
 // a[0] = 2
 // a[1] = 5
@@ -288,19 +286,18 @@ function Counter() {
   this.sum = 0
   this.count = 0
 }
+
 Counter.prototype.add = function(array) {
   array.forEach(function countEntry(entry) {
-    this.sum += entry
-    ++this.count
-  }, this)
-}
+    this.sum += entry;
+    ++this.count;
+  }, this);
+};
 
-const obj = new Counter()
-obj.add([2, 5, 9])
-obj.count
-// 3
-obj.sum
-// 16
+const obj = new Counter();
+obj.add([2, 5, 9]);
+console.log(obj.count); // 3
+console.log(obj.sum); // 16
 ```
 
 Since the `thisArg` parameter (`this`) is provided to
@@ -321,20 +318,18 @@ and is presented to explain how `Array.prototype.forEach()` works by using
 ECMAScript 5 `Object.*` meta property functions.
 
 ```js
-function copy(obj) {
-  const copy = Object.create(Object.getPrototypeOf(obj))
-  const propNames = Object.getOwnPropertyNames(obj)
+const copy = (obj) => {
+  const copy = Object.create(Object.getPrototypeOf(obj));
+  const propNames = Object.getOwnPropertyNames(obj);
+  propNames.forEach((name) => {
+    const desc = Object.getOwnPropertyDescriptor(obj, name);
+    Object.defineProperty(copy, name, desc);
+  });
+  return copy;
+};
 
-  propNames.forEach(function(name) {
-    const desc = Object.getOwnPropertyDescriptor(obj, name)
-    Object.defineProperty(copy, name, desc)
-  })
-
-  return copy
-}
-
-const obj1 = { a: 1, b: 2 }
-const obj2 = copy(obj1) // obj2 looks like obj1 now
+const obj1 = { a: 1, b: 2 };
+const obj2 = copy(obj1); // obj2 looks like obj1 now
 ```
 
 ### Modifying the array during iteration
@@ -349,15 +344,15 @@ Because element `four` is now at an earlier position in the array,
 `forEach()` does not make a copy of the array before iterating.
 
 ```js
-let words = ['one', 'two', 'three', 'four']
-words.forEach(function(word) {
-  console.log(word)
+const words = ['one', 'two', 'three', 'four'];
+words.forEach((word) => {
+  console.log(word);
   if (word === 'two') {
-    words.shift() //'one' will delete from array
+    words.shift(); //'one' will delete from array
   }
-}) // one // two // four
+}); // one // two // four
 
-console.log(words);  //['two', 'three', 'four']
+console.log(words); // ['two', 'three', 'four']
 ```
 
 ### Flatten an array
@@ -366,24 +361,21 @@ The following example is only here for learning purpose. If you want to flatten 
 array using built-in methods you can use {{jsxref("Array.prototype.flat()")}}.
 
 ```js
-function flatten(arr) {
-  const result = []
-
-  arr.forEach(function(i) {
+const flatten = (arr) => {
+  const result = [];
+  arr.forEach((i) => {
     if (Array.isArray(i)) {
-      result.push(...flatten(i))
+      result.push(...flatten(i));
     } else {
-      result.push(i)
+      result.push(i);
     }
-  })
-
-  return result
+  });
+  return result;
 }
 
 // Usage
-const nested = [1, 2, 3, [4, 5, [6, 7], 8, 9]]
-
-flatten(nested) // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+const nested = [1, 2, 3, [4, 5, [6, 7], 8, 9]];
+console.log(flatten(nested)); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
 ## Specifications
