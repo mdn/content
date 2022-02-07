@@ -149,7 +149,7 @@ This example shows how to access items in the `fruits` array by specifying the i
 // The index of an array’s first element is always 0.
 fruits[0] // Apple
 
-// The index of an array’s first element is always 1.
+// The index of an array’s second element is always 1.
 fruits[1] // Banana
 
 // The index of an array’s last element is always one
