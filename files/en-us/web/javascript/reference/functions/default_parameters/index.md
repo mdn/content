@@ -233,14 +233,30 @@ f(2)  // [2, undefined]
 
 You can use default value assignment with the
 {{jsxref("Operators/Destructuring_assignment", "destructuring assignment", "", 1)}}
-notation:
+notation. 
+
+A common way of doing it consist in destructuring and assigning the values, and then assign an empty object/array to that destructured object, e.g:`{z = 3} = {}` . 
+By doing it this way it is possible to pass an empty array/object to the function and still have those values prefilled:
 
 ```js
-function f([x, y] = [1, 2], {z: z} = {z: 3}) {
-  return x + y + z
+function preArray([x = 1, y = 2] = []) {
+  return x + y
 }
 
-f()  // 6
+preArray()      // 3
+preArray([])    // 3
+preArray([2])   // 4
+preArray([2,3]) // 5
+
+
+// Works the same for Objects:
+function preObj( {z = 3} = {}) {
+  return z
+}
+
+preObj()        // 3
+preObj({})      // 3
+preObj({z: 2})  // 2
 ```
 
 ## Specifications
