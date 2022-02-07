@@ -72,7 +72,7 @@ toValueOf
 Try accessing one of them:
 
 ```js
-myObject.toString();
+myObject.toString(); // "[object Object]"
 ```
 
 What are these extra properties, and where do they come from?
