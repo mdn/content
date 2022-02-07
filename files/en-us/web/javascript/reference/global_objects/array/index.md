@@ -161,16 +161,13 @@ fruits[fruits.length - 1] // Banana
 fruits[99] // undefined
 ```
 
-### Call a function on each element in an array
+### Find the index of an item in an array
 
-This example uses the [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) method to call a function on each element in the `fruits` array; the function causes each item to be logged to the console, along with the item’s index number.
+This example uses the [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) method to find the position (index) of the string "`Banana`" in the `fruits` array.
 
 ```js
-fruits.forEach(function(item, index, array) {
-  console.log(item, index)
-})
-// Apple 0
-// Banana 1
+console.log(fruits.indexOf('Banana'))
+// 1
 ```
 
 ### Append an item to an array
@@ -212,25 +209,13 @@ console.log(newLength)
 // 2
 ```
 
-### Find the index of an item in an array
-
-This example uses the [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) method to find the position (index) of the string "`Banana`" in the `fruits` array, which gets assigned to the `pos` variable.
-
-```js
-fruits.push('Mango') // ["Strawberry", "Banana", "Mango"]
-
-let pos = fruits.indexOf('Banana')
-console.log(pos)
-// 1
-```
-
 ### Remove a single item by index
 
-This example uses the [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method to remove the string "`Banana`" from the `fruits` array — by specifying the index position of "`Banana`", which the previous example assigned to the `pos` variable.
+This example uses the [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method to remove the string "`Banana`" from the `fruits` array — by specifying the index position of "`Banana`".
 
 ```js
 // This is how to remove a single item.
-let removedItem = fruits.splice(pos, 1)
+let removedItem = fruits.splice(fruits.indexOf('Banana'), 1)
 
 console.log(fruits)
 // ["Strawberry", "Mango"]
@@ -265,6 +250,18 @@ console.log(fruits)
 // removed, which we assigned above to 'removedItems'.
 console.log(removedItems)
 // ["Banana", "Strawberry"]
+```
+
+### Call a function on each element in an array
+
+This example uses the [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) method to call a function on each element in the `fruits` array; the function causes each item to be logged to the console, along with the item’s index number.
+
+```js
+fruits.forEach(function(item, index, array) {
+  console.log(item, index)
+})
+// Apple 0
+// Banana 1
 ```
 
 ### Copy an array
