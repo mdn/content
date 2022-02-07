@@ -986,7 +986,6 @@ It is disabled by default on all builds {{bug(1750902)}}.
   </tbody>
 </table>
 
-
 ### HTML DOM API
 
 #### HTMLMediaElement method: setSinkId()
