@@ -235,7 +235,7 @@ browser.browserAction.onClicked.addListener(() => {
 
 On the application side, you use standard input to receive messages and standard output to send them.
 
-Each message is serialized using JSON, UTF-8 encoded and is preceded with a 32-bit value containing the message length in native byte order.
+Each message is serialized using JSON, UTF-8 encoded and is preceded with an unsigned 32-bit value containing the message length in native byte order.
 
 The maximum size of a single message from the application is 1 MB. The maximum size of a message sent to the application is 4 GB.
 
