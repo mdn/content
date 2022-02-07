@@ -16,7 +16,7 @@ The `progressbar` role defines an element that displays the progress status for 
 
 ## Description
 
-The `progressbar` range widget indicates that a request has been received and the application is making progress toward completing the requested action. 
+The `progressbar` range widget indicates that a request has been received and the application is making progress toward completing the requested action.
 
 Authors **may** set aria-valuemin and aria-valuemax to indicate the minimum and maximum progress indicator values. Otherwise, their implicit values follow the same rules as HTML's [`<input type="range"`>]():
 
@@ -69,11 +69,11 @@ Using semantic HTML, this could be written as:
 
 ## Best Practices
 
-If the progress bar is describing the loading progress of a particular region of a page, include the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attribute to reference the progress bar's status, and set the [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy) attribute to `true` on the region until it is finished loading. 
+If the progress bar is describing the loading progress of a particular region of a page, include the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attribute to reference the progress bar's status, and set the [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy) attribute to `true` on the region until it is finished loading.
 
 ### Prefer HTML
 
-It is recommended to use a native {{HTMLElement("progress")}} or [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range) elements rather than the `progressbar` role. 
+It is recommended to use a native {{HTMLElement("progress")}} or [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range) elements rather than the `progressbar` role.
 
 ## Specifications
 

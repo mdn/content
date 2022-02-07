@@ -22,7 +22,7 @@ This interface is accessible through the {{domxref("VRDisplay.capabilities")}} p
 
 ## Properties
 
-- {{domxref("VRDisplayCapabilities.canPresent")}} {{deprecated_inline}}{{readonlyInline}} 
+- {{domxref("VRDisplayCapabilities.canPresent")}} {{deprecated_inline}}{{readonlyInline}}
   - : Returns a boolean value stating whether the VR display is capable of presenting content (e.g. through an HMD).
 - {{domxref("VRDisplayCapabilities.hasExternalDisplay")}} {{deprecated_inline}}{{readonlyInline}}
   - : Returns a boolean value stating whether the VR display is separate from the device's primary display.

@@ -43,7 +43,6 @@ This article provides information about the changes in Firefox 98 that will affe
 
 #### Media, WebRTC, and Web Audio
 
-
 #### Removals
 
 - The deprecated [WebVR API](/en-US/docs/Web/API/WebVR_API) is now disabled by default on all builds (previously it was enabled on Windows, macOS, and all nightly/dev builds).

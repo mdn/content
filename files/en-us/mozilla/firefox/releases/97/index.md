@@ -34,7 +34,6 @@ No notable changes
 - The CSS [`scrollbar-gutter`](/en-US/docs/Web/CSS/scrollbar-gutter) property is now supported. This gives developers control over reserved space for the scrollbar, preventing unwanted layout changes as the content grows.
   See {{bug(1715112)}} for more details.
 
-
 ### JavaScript
 
 No notable changes
@@ -50,7 +49,6 @@ No notable changes
   This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/docs/Web/API/SVGPathElement), `SVGAnimatedPathData`.
   (See {{bug(1388931)}} for more details.)
 
-
 ### APIs
 
 - `AnimationFrameProvider` is now available in a [`DedicatedWorkerGlobalScope`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope). This means the [`requestAnimationFrame`](/en-US/docs/Web/API/window/requestAnimationFrame) and [`cancelAnimationFrame`](/en-US/docs/Web/API/Window/cancelAnimationFrame) methods can be used within a dedicated worker.
@@ -65,7 +63,6 @@ No notable changes
 - The convenience method {{domxref("AbortSignal.throwIfAborted()")}} can be used to check if a signal has been aborted, and if so throw the {{domxref("AbortSignal.reason()")}}.
   This makes it easier for developers to handle abort signals in code where you can't simply pass the signal to an abortable method. ({{bug(1745372)}}).
 
-
 ### WebDriver conformance (Marionette)
 
 - `Marionette:Quit` accepts a new boolean parameter, `safeMode`, to restart Firefox in safe mode ({{bug(1144075)}}).
@@ -75,7 +72,6 @@ No notable changes
 
 - `cookieStoreId` in {{WebExtAPIRef("tabs.query")}} supports an array of strings. This enables queries to match tabs against more than one cookie store ID ({{bug(1730931)}}).
 - `cookieStoreId` added to {{WebExtAPIRef("contentScripts.register")}}. This enables extensions to register container-specific content scripts ({{bug(1470651)}}).
-
 
 ## Older versions
 
