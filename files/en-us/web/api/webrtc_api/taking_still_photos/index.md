@@ -281,6 +281,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
 .output {
   width: 340px;
   display:inline-block;
+  vertical-align: top;
 }
 
 #startbutton {
