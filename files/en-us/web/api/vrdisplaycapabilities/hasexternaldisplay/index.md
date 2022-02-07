@@ -3,7 +3,7 @@ title: VRDisplayCapabilities.hasExternalDisplay
 slug: Web/API/VRDisplayCapabilities/hasExternalDisplay
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -21,13 +21,7 @@ The **`hasExternalDisplay`** read-only property of the {{domxref("VRDisplayCapab
 
 > **Note:** If presenting VR content would obscure other content on the device, this will return `false`, in which case the application should not attempt to mirror VR content or update non-VR UI because that content will not be visible.
 
-## Syntax
-
-```js
-var hasAnExternalDisplay = vrDisplayCapabilitiesInstance.hasExternalDisplay;
-```
-
-### Value
+## Value
 
 A boolean value.
 

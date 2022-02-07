@@ -3,7 +3,7 @@ title: VRFrameData.rightProjectionMatrix
 slug: Web/API/VRFrameData/rightProjectionMatrix
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -23,13 +23,7 @@ This value may be passed directly to WebGL’s {{domxref("WebGLRenderingContext.
 
 > **Warning:** It is highly recommended that applications use this matrix without modification. Failure to use this projection matrix when rendering may cause the presented frame to be distorted or badly aligned, resulting in varying degrees of user discomfort.
 
-## Syntax
-
-```js
-var myRPM = vrFrameDataInstance.rightProjectionMatrix;
-```
-
-### Value
+## Value
 
 A {{jsxref("Float32Array")}} object.
 

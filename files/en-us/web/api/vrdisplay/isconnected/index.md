@@ -4,7 +4,6 @@ slug: Web/API/VRDisplay/isConnected
 tags:
   - API
   - Deprecated
-  - Experimental
   - Property
   - Reference
   - VR
@@ -20,13 +19,7 @@ The **`isConnected`** read-only property of the {{domxref("VRDisplay")}} interfa
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Syntax
-
-```js
-var isItConnected = vrDisplayInstance.isConnected;
-```
-
-### Value
+## Value
 
 A boolean value; `true` means the display is connected; `false` means it isn't.
 

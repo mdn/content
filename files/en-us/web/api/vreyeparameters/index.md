@@ -3,7 +3,6 @@ title: VREyeParameters
 slug: Web/API/VREyeParameters
 tags:
   - API
-  - Experimental
   - Deprecated
   - Landing
   - Reference

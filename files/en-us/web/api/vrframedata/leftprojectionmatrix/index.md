@@ -3,7 +3,7 @@ title: VRFrameData.leftProjectionMatrix
 slug: Web/API/VRFrameData/leftProjectionMatrix
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -25,11 +25,7 @@ This value may be passed directly to WebGL’s {{domxref("WebGLRenderingContext.
 
 ## Syntax
 
-```js
-var myLPM = vrFrameDataInstance.leftProjectionMatrix;
-```
-
-### Value
+## Value
 
 A {{jsxref("Float32Array")}} object.
 

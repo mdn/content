@@ -3,7 +3,7 @@ title: VRDisplay.requestPresent()
 slug: Web/API/VRDisplay/requestPresent
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Method
   - Reference
   - VR

@@ -3,7 +3,7 @@ title: VRDisplay.submitFrame()
 slug: Web/API/VRDisplay/submitFrame
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Method
   - Reference
   - VR
@@ -24,7 +24,7 @@ The frame should subsequently be rendered using the {{domxref("VRPose")}} and ma
 ## Syntax
 
 ```js
-vrDisplayInstance.submitFrame();
+submitFrame()
 ```
 
 ### Parameters

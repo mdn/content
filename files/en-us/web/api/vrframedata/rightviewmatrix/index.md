@@ -3,7 +3,7 @@ title: VRFrameData.rightViewMatrix
 slug: Web/API/VRFrameData/rightViewMatrix
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -23,13 +23,7 @@ This value may be passed directly to WebGL’s {{domxref("WebGLRenderingContext.
 
 > **Warning:** It is highly recommended that applications use this matrix when rendering.
 
-## Syntax
-
-```js
-var myRVM = vrFrameDataInstance.rightViewMatrix;
-```
-
-### Value
+## Value
 
 A {{jsxref("Float32Array")}} object.
 
