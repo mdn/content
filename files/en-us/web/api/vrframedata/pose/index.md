@@ -19,7 +19,6 @@ The **`pose`** read-only property of the {{domxref("VRFrameData")}} interface re
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-
 ## Value
 
 A {{domxref("VRPose")}} object.

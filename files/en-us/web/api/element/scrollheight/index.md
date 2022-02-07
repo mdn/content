@@ -166,7 +166,7 @@ onload = function () {
 
 - [MSDN:
   Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer
-  9](<https://docs.microsoft.com/en-us/previous-versions/hh781509(v=vs.85)>)
+  9](<https://docs.microsoft.com/previous-versions/hh781509(v=vs.85)>)
 - {{domxref("Element.clientHeight")}}
 - {{domxref("HTMLElement.offsetHeight")}}
 - [Determining
