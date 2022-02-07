@@ -41,7 +41,7 @@ A {{WebExtAPIRef("webRequest.StreamFilter")}} object that you can use to monitor
 
 ## Examples
 
-This example shows a minimal implementation that passes through the stream data and closes the filter stream when the stream finishes receiving data. The code would be called from a {{WebExtAPIRef("webRequest")}} event listner and the event listner provides `details`.
+This example shows a minimal implementation that passes through the stream data and closes the filter stream when the stream finishes receiving data. The code would be called from a {{WebExtAPIRef("webRequest")}} event listener and the event listener provides `details`.
 
 ```js
 let filter = browser.webRequest.filterResponseData(details.requestId);
