@@ -512,46 +512,6 @@ The {{cssxref("math-style")}} property indicates whether MathML equations should
   </tbody>
 </table>
 
-### @layer rule and layer() function
-
-The [`@layer`](en-US/docs/Web/CSS/@layer) rule declares a cascade layer, which allows declaration of styles and can be imported via the [`@import`](/en-US/docs/Web/CSS/@import) rule using the `layer()` function. (See {{bug(1699217)}} for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>94</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>94</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>94</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>94</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.cascade-layers.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ### Property: hyphenate-character
 
 The {{cssxref("hyphenate-character")}} property can be used to set a string that is used instead of a hyphen character (`-`) at the end of a hyphenation line break.
@@ -1349,6 +1309,53 @@ The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref
   </tbody>
 </table>
 
+#### ElementInternals: Form associated custom element methods and properties
+
+New {{domxref("ElementInternals")}} properties and methods that allow a custom elements to interact with a form:
+
+- property: {{domxref("ElementInternals.form","form")}} gets the form associated with the element
+- property: {{domxref("ElementInternals.labels","labels")}} gets the list of labels associated with the element
+- property: {{domxref("ElementInternals.willValidate", "willValidate")}} checks if a custom form element will be validated.
+- method: {{domxref("ElementInternals.setFormValue()","setFormValue()")}} set the sanitized value and user-entered data, if needed.
+
+See these bugs for details: {{bug(1556362)}}, {{bug(1556373)}}, {{bug(1556365)}}, {{bug(1556449)}}.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>95</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>95</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>95</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>95</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.webcomponents.formAssociatedCustomElement.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### Payment Request API
 
 #### Primary payment handling
@@ -1740,132 +1747,6 @@ The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP respo
       <th>Preference name</th>
       <td colspan="2">
         <code>privacy.clearsitedata.cache.enabled</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-### HTTP Set-Cookie: `SameSite=Lax` by default
-
-HTTP cookies (set using [Set-Cookie](/en-US/docs/Web/HTTP/Headers/Set-Cookie) are assumed to implicitly set `SameSite=Lax` if the [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) directive is not specified. Previously the default was `SameSite=None`.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>69</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>69</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>69</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>69</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-        <code>network.cookie.sameSite.laxByDefault</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-### HTTP Set-Cookie: `SameSite=None` require a secure context
-
-HTTP cookies (set using [Set-Cookie](/en-US/docs/Web/HTTP/Headers/Set-Cookie)) that specify the directive [`SameSite=None`](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) require a secure context.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>69</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>69</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>69</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>69</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-        <code>network.cookie.sameSite.noneRequiresSecure</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-### HTTP Set-Cookie: SameSite is schemeful
-
-HTTP cookies sent from the same domain but using different schemes (for example http or https) are now considered to be from different sites with respect to the cookie [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) directive.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>69</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>69</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>69</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>69</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-        <code>network.cookie.sameSite.schemeful</code>
       </td>
     </tr>
   </tbody>
