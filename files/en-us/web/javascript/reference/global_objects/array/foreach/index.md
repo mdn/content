@@ -158,7 +158,7 @@ that `fun.call` evaluates to the original value of
 if (!Array.prototype['forEach']) {
 
   Array.prototype.forEach = function(callback, thisArg) {
-    if (this === null) {
+    if (this === null || this === undefined) {
       throw new TypeError('Array.prototype.forEach called on null or undefined');
     }
     var T, k;
