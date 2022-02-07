@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.Array
 ---
 {{JSRef}}
 
-The **`Array`** object represents an [array](https://en.wikipedia.org/wiki/Array_data_structure), and has members for [performing common array operations](#examples).
+The **`Array`** object represents an [array](/en-US/docs/Learn/JavaScript/First_steps/Arrays), and has members for [performing common array operations](#examples).
 
 ## Description
 
@@ -122,6 +122,8 @@ In JavaScript, arrays aren’t [primitives](/en-US/docs/Glossary/Primitive) but 
 ## Examples
 
 This section provides some examples of common array operations in JavaScript. All the examples use an array of strings, named `fruits`, which is created in the first example.
+
+> **Note:** If you’re not yet familiar with array basics, consider first reading [JavaScript First Steps: Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays), which [explains what arrays are](/en-US/docs/Learn/JavaScript/First_steps/Arrays#what_is_an_array), and includes other examples of common array operations.
 
 ### Create an array
 
