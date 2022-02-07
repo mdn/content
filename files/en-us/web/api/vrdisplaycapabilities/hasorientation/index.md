@@ -4,7 +4,6 @@ slug: Web/API/VRDisplayCapabilities/hasOrientation
 tags:
   - API
   - Deprecated
-  - Experimental
   - Property
   - Reference
   - VR
@@ -20,13 +19,7 @@ The **`hasOrientation`** read-only property of the {{domxref("VRDisplayCapabilit
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Syntax
-
-```js
-var hasItGotOrientation = vrDisplayCapabilitiesInstance.hasOrientation;
-```
-
-### Value
+## Value
 
 A boolean value.
 

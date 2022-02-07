@@ -3,7 +3,6 @@ title: VRPose.timestamp
 slug: Web/API/VRPose/timeStamp
 tags:
   - API
-  - Experimental
   - Deprecated
   - Property
   - Reference
@@ -14,7 +13,7 @@ tags:
   - timeStamp
 browser-compat: api.VRPose.timestamp
 ---
-{{deprecated_header}}{{APIRef("WebVR API")}}{{SeeCompatTable}}
+{{deprecated_header}}{{APIRef("WebVR API")}}
 
 The **`timestamp`** read-only property of the {{domxref("VRPose")}} interface returns the current time stamp of the system — a monotonically increasing value representing the time since the current app was started.
 
@@ -24,13 +23,7 @@ This property is useful for determining if position data has been updated, and w
 
 > **Warning:** This version of `timestamp` has been removed from the spec — instead, timestamps are returned when {{domxref("VRDisplay.getFrameData()")}} is called — see {{domxref("VRFrameData.timestamp")}}.
 
-## Syntax
-
-```js
-var myTimeStamp = VRPose.timestamp;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}} representing the timestamp, in seconds.
 

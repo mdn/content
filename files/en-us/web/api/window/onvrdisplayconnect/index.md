@@ -3,7 +3,7 @@ title: Window.onvrdisplayconnect
 slug: Web/API/Window/onvrdisplayconnect
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR

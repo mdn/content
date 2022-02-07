@@ -3,7 +3,6 @@ title: VREyeParameters.recommendedFieldOfView
 slug: Web/API/VREyeParameters/recommendedFieldOfView
 tags:
   - API
-  - Experimental
   - Deprecated
   - Property
   - Reference
@@ -14,19 +13,13 @@ tags:
   - recommendedFieldOfView
 browser-compat: api.VREyeParameters.recommendedFieldOfView
 ---
-{{deprecated_header}}{{APIRef("WebVR API")}}{{SeeCompatTable}}
+{{deprecated_header}}{{APIRef("WebVR API")}}
 
 The **`recommendedFieldOfView`** read-only property of the {{domxref("VREyeParameters")}} interface describes the recommended field of view for the current eye — ideally based on user calibration.
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Syntax
-
-```js
-var recFOV = myEyeParameters.recommendedFieldOfView;
-```
-
-### Value
+## Value
 
 A {{domxref("VRFieldOfView")}} object.
 

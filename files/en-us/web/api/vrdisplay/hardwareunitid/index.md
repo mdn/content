@@ -3,7 +3,6 @@ title: VRDisplay.hardwareUnitId
 slug: Web/API/VRDisplay/hardwareUnitId
 tags:
   - API
-  - Experimental
   - Deprecated
   - Property
   - Reference
@@ -14,19 +13,13 @@ tags:
   - hardwareUnitId
 browser-compat: api.VRDisplay.hardwareUnitId
 ---
-{{deprecated_header}}{{APIRef("WebVR API")}}{{SeeCompatTable}}
+{{APIRef("WebVR API")}}{{deprecated_header}}
 
 The **`hardwareUnitId`** read-only property of the {{domxref("VRDisplay")}} interface returns the distinct hardware ID for the overall hardware unit that this `VRDevice` is a part of. All devices that are part of the same physical piece of hardware will have the same `hardwareUnitId`.
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Syntax
-
-```js
-var hardwareID = VRDevice.hardwareUnitId;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} containing the ID of the overall hardware unit.
 

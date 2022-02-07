@@ -3,7 +3,6 @@ title: VREyeParameters.renderRect
 slug: Web/API/VREyeParameters/renderRect
 tags:
   - API
-  - Experimental
   - Deprecated
   - Property
   - Reference
@@ -14,19 +13,13 @@ tags:
   - renderRect
 browser-compat: api.VREyeParameters.renderRect
 ---
-{{deprecated_header}}{{APIRef("WebVR API")}}{{SeeCompatTable}}
+{{deprecated_header}}{{APIRef("WebVR API")}}
 
 The **`renderRect`** read-only property of the {{domxref("VREyeParameters")}} interface _specifies_ the viewport of a canvas into which visuals for the current eye should be rendered.
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Syntax
-
-```js
-var myRenderRect = MyEyeParameters.renderRect;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMRect")}} object.
 

@@ -4,7 +4,6 @@ slug: Web/API/VRDisplay/getPose
 tags:
   - API
   - Deprecated
-  - Experimental
   - Method
   - Reference
   - VR
@@ -25,7 +24,7 @@ The **`getPose()`** method of the {{domxref("VRDisplay")}} interface returns a {
 ## Syntax
 
 ```js
-var myPose = vrDisplayInstance.getPose();
+getPose()
 ```
 
 ### Parameters

@@ -4,7 +4,7 @@ slug: Web/API/Window/onvrdisplayfocus
 tags:
   - API
   - Event Handler
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR

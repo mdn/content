@@ -3,7 +3,6 @@ title: VREyeParameters.offset
 slug: Web/API/VREyeParameters/offset
 tags:
   - API
-  - Experimental
   - Deprecated
   - Property
   - Reference
@@ -22,13 +21,7 @@ The **`offset`** read-only property of the {{domxref("VREyeParameters")}} interf
 
 This value should represent half the user’s interpupillary distance (IPD), but may also represent the distance from the center point of the headset to the center point of the lens for the given eye.
 
-## Syntax
-
-```js
-var myOffset = eyeParametersInstance.offset;
-```
-
-### Value
+## Value
 
 A {{jsxref("Float32Array")}} representing a vector describing the offset from the center point between the users eyes to the center of the eye in meters.
 
