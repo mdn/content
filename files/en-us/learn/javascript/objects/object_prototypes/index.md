@@ -75,7 +75,7 @@ Try accessing one of them:
 myObject.toString(); // "[object Object]"
 ```
 
-It works (even if it's not obvious what toString() does).
+It works (even if it's not obvious what `toString()` does).
 
 What are these extra properties, and where do they come from?
 
