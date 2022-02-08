@@ -49,7 +49,7 @@ Listen to this event using [`addEventListener()`](/en-US/docs/Web/API/EventTarge
 
 - [`voiceschanged`](/en-US/docs/Web/API/SpeechSynthesis/voiceschanged_event)
   - : Fired when the list of {{domxref("SpeechSynthesisVoice")}} objects that would be returned by the {{domxref("SpeechSynthesis.getVoices()")}} method has changed.
-    Also available via the [`onvoiceschanged`](/en-US/docs/Web/API/SpeechSynthesis/onvoiceschanged) property.
+    Also available via the `onvoiceschanged` property.
 
 ## Examples
 

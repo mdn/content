@@ -267,7 +267,7 @@ function populateVoiceList() {
 }
 ```
 
-When we come to run the function, we do the following. This is because Firefox doesn't support {{domxref("SpeechSynthesis.onvoiceschanged")}}, and will just return a list of voices when {{domxref("SpeechSynthesis.getVoices()")}} is fired. With Chrome however, you have to wait for the event to fire before populating the list, hence the if statement seen below.
+When we come to run the function, we do the following. This is because Firefox doesn't support the {{domxref("SpeechSynthesis.voiceschanged_event", "voiceschanged")}} event, and will just return a list of voices when {{domxref("SpeechSynthesis.getVoices()")}} is fired. With Chrome, however, you have to wait for the event to fire before populating the list, hence the if statement seen below.
 
 ```js
 populateVoiceList();
@@ -300,7 +300,7 @@ inputForm.onsubmit = function(event) {
   synth.speak(utterThis);
 ```
 
-In the final part of the handler, we include an {{domxref("SpeechSynthesisUtterance.onpause")}} handler to demonstrate how {{domxref("SpeechSynthesisEvent")}} can be put to good use. When {{domxref("SpeechSynthesis.pause()")}} is invoked, this returns a message reporting the character number and name that the speech was paused at.
+In the final part of the handler, we include an {{domxref("SpeechSynthesisUtterance.pause_event", "pause")}} event to demonstrate how {{domxref("SpeechSynthesisEvent")}} can be put to good use. When {{domxref("SpeechSynthesis.pause()")}} is invoked, this returns a message reporting the character number and name that the speech was paused at.
 
 ```js
    utterThis.onpause = function(event) {

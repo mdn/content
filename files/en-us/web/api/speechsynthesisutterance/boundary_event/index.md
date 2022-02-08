@@ -11,32 +11,34 @@ browser-compat: api.SpeechSynthesisUtterance.boundary_event
 
 The **`boundary`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is fired when the spoken utterance reaches a word or sentence boundary.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("SpeechSynthesisEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/onboundary"
-            >onboundary</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('boundary', event => { })
+
+onboundary = event => { }
+```
+
+## Event type
+
+A {{domxref("SpeechSynthesisEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("SpeechSynthesisEvent")}}
+
+## Event properties
+
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
+
+- {{domxref("SpeechSynthesisEvent.charIndex", "charIndex")}} {{readonlyinline}}
+  - : Returns the index position of the character in the {{domxref("SpeechSynthesisUtterance.text")}} that was being spoken when the event was triggered.
+- {{domxref("SpeechSynthesisEvent.elapsedTime", "elapsedTime")}} {{readonlyinline}}
+  - : Returns the elapsed time in seconds after the {{domxref("SpeechSynthesisUtterance.text")}} started being spoken that the event was triggered at.
+- {{domxref("SpeechSynthesisEvent.name", "name")}} {{readonlyinline}}
+  - : Returns the name associated with certain types of events occurring as the {{domxref("SpeechSynthesisUtterance.text")}} is being spoken: the name of the [SSML](https://www.w3.org/TR/speech-synthesis/#S3.3.2) marker reached in the case of a {{event("mark")}} event, or the type of boundary reached in the case of a {{event("boundary")}} event.
+- {{domxref("SpeechSynthesisEvent.utterance", "utterance")}} {{readonlyinline}}
+  - : Returns the {{domxref("SpeechSynthesisUtterance")}} instance that the event was triggered on.
 
 ## Examples
 
@@ -48,7 +50,7 @@ utterThis.addEventListener('boundary', function(event) {
 });
 ```
 
-Or use the [`onboundary`](/en-US/docs/Web/API/SpeechSynthesisUtterance/onboundary) event handler property:
+Or use the `onboundary` event handler property:
 
 ```js
 utterThis.onboundary = function(event) {
@@ -67,4 +69,3 @@ utterThis.onboundary = function(event) {
 ## See also
 
 - [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)
-- [`onboundary`](/en-US/docs/Web/API/SpeechSynthesisUtterance/onboundary)

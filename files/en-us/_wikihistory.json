@@ -77122,19 +77122,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/SpeechSynthesis/onvoiceschanged": {
-    "modified": "2020-10-15T21:40:36.474Z",
-    "contributors": [
-      "sideshowbarker",
-      "Konrud",
-      "fscholz",
-      "lucian95",
-      "abbycar",
-      "tomayac",
-      "chrisdavidmills",
-      "dev.mnr.j"
-    ]
-  },
   "Web/API/SpeechSynthesis/pause": {
     "modified": "2020-10-15T21:40:35.999Z",
     "contributors": [
@@ -77320,72 +77307,6 @@
       "ShaneHudson",
       "fscholz",
       "erikadoyle",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/SpeechSynthesisUtterance/onboundary": {
-    "modified": "2020-10-15T21:40:41.308Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "abbycar",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/SpeechSynthesisUtterance/onend": {
-    "modified": "2020-10-15T21:40:41.445Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "connorshea",
-      "abbycar",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/SpeechSynthesisUtterance/onerror": {
-    "modified": "2020-10-15T21:40:43.379Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "abbycar",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/SpeechSynthesisUtterance/onmark": {
-    "modified": "2020-10-15T21:40:43.313Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "connorshea",
-      "abbycar",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/SpeechSynthesisUtterance/onpause": {
-    "modified": "2020-10-15T21:40:43.681Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "abbycar",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/SpeechSynthesisUtterance/onresume": {
-    "modified": "2020-10-15T21:40:43.667Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "abbycar",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/SpeechSynthesisUtterance/onstart": {
-    "modified": "2020-10-15T21:40:43.783Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "connorshea",
-      "abbycar",
       "chrisdavidmills"
     ]
   },
