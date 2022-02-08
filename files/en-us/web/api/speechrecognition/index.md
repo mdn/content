@@ -73,10 +73,10 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
   - : Fired when the speech recognition service returns a result — a word or phrase has been positively recognized and this has been communicated back to the app.
     Also available via the [`onresult`](/en-US/docs/Web/API/SpeechRecognition/onresult) property.
 - [`soundstart`](/en-US/docs/Web/API/SpeechRecognition/soundstart_event)
-  - : Fired when any sound — recognisable speech or not — has been detected.
+  - : Fired when any sound — recognizable speech or not — has been detected.
     Also available via the [`onsoundstart`](/en-US/docs/Web/API/SpeechRecognition/onsoundstart) property.
 - [`soundend`](/en-US/docs/Web/API/SpeechRecognition/soundend_event)
-  - : Fired when any sound — recognisable speech or not — has stopped being detected.
+  - : Fired when any sound — recognizable speech or not — has stopped being detected.
     Also available via the [`onsoundend`](/en-US/docs/Web/API/SpeechRecognition/onsoundend) property.
 - [`speechstart`](/en-US/docs/Web/API/SpeechRecognition/speechstart_event)
   - : Fired when sound that is recognized by the speech recognition service as speech has been detected.

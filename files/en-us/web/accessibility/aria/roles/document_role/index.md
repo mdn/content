@@ -9,7 +9,7 @@ tags:
   - Reference
 ---
 
-The `document` role is for focusable content within complex composite [widgets](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role) or [applications](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role) for which assistive technologies can switch reading context back to a reading modelement.
+The `document` role is for focusable content within complex composite [widgets](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role) or [applications](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role) for which assistive technologies can switch reading context back to a reading mode.
 
 ## Description
 
