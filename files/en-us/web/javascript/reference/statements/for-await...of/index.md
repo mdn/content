@@ -47,10 +47,10 @@ const asyncIterable = {
   [Symbol.asyncIterator]() {
     return {
       i: 0,
-      next() {
+      async next() {
         const done = this.i === LIMIT;
         const value = done ? undefined : this.i++;
-        return Promise.resolve({ value, done });
+        return { value, done };
       }
     };
   }
