@@ -58,7 +58,7 @@ height: unset;
   - : The intrinsic minimum height.
 - `fit-content`
   - : Box will use the available space, but never more than `max-content`
-- {{cssxref("&lt;clamp()&gt;")}}
+- {{cssxref("clamp()")}}
   - : Enables selecting a middle value within a range of values between a defined minimum and maximum
 
 ## Accessibility concerns
