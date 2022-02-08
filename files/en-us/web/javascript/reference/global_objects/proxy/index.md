@@ -14,7 +14,7 @@ The `Proxy` object enables you to create a proxy for another object, which can i
 
 ## Description
 
-A `Proxy` is a wrapper for an object that you can use to change the way properties are retrieved and set, and you can alter other operations.
+The `Proxy` object allows you to create an object that can be used in place of the original object, but which may redefine fundamental `Object` operations like getting, setting, and defining properties. Proxy objects are commonly used to log property accesses, validate, format, or sanitize inputs, and so on.
 
 You create a Proxy with two parameters:
 
