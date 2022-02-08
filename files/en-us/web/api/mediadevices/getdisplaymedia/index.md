@@ -128,7 +128,7 @@ async function startCapture(displayMediaOptions) {
 }
 ```
 
-This uses {{jsxref("await")}} to asynchronously wait for `getDisplayMedia()`
+This uses {{jsxref("Operators/await", "await")}} to asynchronously wait for `getDisplayMedia()`
 to resolve with a {{domxref("MediaStream")}} which contains the display contents as
 requested by the specified options. The stream is then returned to the caller for use,
 perhaps for adding to a WebRTC call using {{domxref("RTCPeerConnection.addTrack()")}} to
