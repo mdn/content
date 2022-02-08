@@ -38,8 +38,6 @@ _`SpeechRecognition` also inherits properties from its parent interface, {{domxr
   - : Controls whether interim results should be returned (`true`) or not (`false`.) Interim results are results that are not yet final (e.g. the {{domxref("SpeechRecognitionResult.isFinal")}} property is `false`.)
 - {{domxref("SpeechRecognition.maxAlternatives")}}
   - : Sets the maximum number of {{domxref("SpeechRecognitionAlternative")}}s provided per result. The default value is 1.
-- {{domxref("SpeechRecognition.serviceURI")}} {{deprecated_inline}}
-  - : Specifies the location of the speech recognition service used by the current `SpeechRecognition` to handle the actual recognition. The default is the user agent's default speech service.
 
 ## Methods
 

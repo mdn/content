@@ -76875,16 +76875,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/SpeechRecognition/serviceURI": {
-    "modified": "2020-10-15T21:40:14.773Z",
-    "contributors": [
-      "sideshowbarker",
-      "wortwart",
-      "lucian95",
-      "jpmedley",
-      "chrisdavidmills"
-    ]
-  },
   "Web/API/SpeechRecognition/soundend_event": {
     "modified": "2020-10-15T21:40:25.694Z",
     "contributors": [
