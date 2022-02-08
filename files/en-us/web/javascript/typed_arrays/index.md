@@ -63,7 +63,7 @@ These are some examples of APIs that make use of typed arrays; there are others,
 First of all, we will need to create a buffer, here with a fixed length of 16-bytes:
 
 ```js
-let buffer = new ArrayBuffer(16);
+const buffer = new ArrayBuffer(16);
 ```
 
 At this point, we have a chunk of memory whose bytes are all pre-initialized to 0. There's not a lot we can do with it, though. We can confirm that it is indeed 16 bytes long, and that's about it:
@@ -79,7 +79,7 @@ if (buffer.byteLength === 16) {
 Before we can really work with this buffer, we need to create a view. Let's create a view that treats the data in the buffer as an array of 32-bit signed integers:
 
 ```js
-let int32View = new Int32Array(buffer);
+const int32View = new Int32Array(buffer);
 ```
 
 Now we can access the fields in the array just like a normal array:
@@ -97,7 +97,7 @@ This fills out the 4 entries in the array (4 entries at 4 bytes each makes 16 to
 Things start to get really interesting when you consider that you can create multiple views onto the same data. For example, given the code above, we can continue like this:
 
 ```js
-let int16View = new Int16Array(buffer);
+const int16View = new Int16Array(buffer);
 
 for (let i = 0; i < int16View.length; i++) {
   console.log('Entry ' + i + ': ' + int16View[i]);
@@ -134,13 +134,13 @@ struct someStruct {
 You can access a buffer containing data in this format like this:
 
 ```js
-let buffer = new ArrayBuffer(24);
+const buffer = new ArrayBuffer(24);
 
 // ... read the data into the buffer ...
 
-let idView = new Uint32Array(buffer, 0, 1);
-let usernameView = new Uint8Array(buffer, 4, 16);
-let amountDueView = new Float32Array(buffer, 20, 1);
+const idView = new Uint32Array(buffer, 0, 1);
+const usernameView = new Uint8Array(buffer, 4, 16);
+const amountDueView = new Float32Array(buffer, 20, 1);
 ```
 
 Then you can access, for example, the amount due with `amountDueView[0]`.
