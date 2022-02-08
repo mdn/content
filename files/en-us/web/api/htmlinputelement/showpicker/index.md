@@ -39,24 +39,24 @@ element.showPicker();
 
 ## Example
 
-Click the button in this example to show a browser date picker.
+Click the button in this example to show a file picker.
 
 ### HTML
 
 ```html
-<input type="date">
-<button>Show the date picker</button>
+<input type="file">
+<button>Show the file picker</button>
 ```
 
 ### JavaScript
 
 ```js
 const button = document.querySelector("button");
-const dateInput = document.querySelector("input");
+const fileInput = document.querySelector("input");
 
 button.addEventListener("click", () => {
   try {
-    dateInput.showPicker();
+    fileInput.showPicker();
     // A date picker is shown.
   } catch (error) {
     window.alert(error);
