@@ -21,7 +21,7 @@ MultiModal Annotation markup language (EMMA) — XML — representation of the
 result.
 
 > **Note:** EMMA is defined in the specification [EMMA: Extensible MultiModal Annotation markup
-> language](https://www.w3.org/TR/emma/). You can see muliple EMMA examples in the spec.
+> language](https://www.w3.org/TR/emma/). You can see multiple EMMA examples in the spec.
 
 ## Syntax
 

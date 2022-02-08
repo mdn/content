@@ -86,7 +86,7 @@ inputSources.forEach((input) => {
 });
 ```
 
-For each input in the llist, the callback dispatches gamepad inputs to
+For each input in the list, the callback dispatches gamepad inputs to
 a `checkGamepad()` with the input's {{domxref("Gamepad")}} object, taken from
 its {{domxref("XRInputSource.gamepad", "gamepad")}} property, as an input
 

@@ -52,7 +52,7 @@ tags:
 
 - The blink effect for `text-decoration: blink;` has no more effect, but is still a valid value ({{bug(857820)}}).
 - In-flow {{cssxref("::after")}} and {{cssxref("::before")}} pseudo-elements are now flex items ({{bug(867454)}}).
-- The way to compute [viewport units](/en-US/docs/Web/CSS/length#viewport-percentage_lengths) has been changed. In conjunction with `overflow:auto`, space taken by eventual scrollbars is not substracted from the viewport, whereas in the case of `overflow:scroll`, it is. ({{bug(811403)}})
+- The way to compute [viewport units](/en-US/docs/Web/CSS/length#viewport-percentage_lengths) has been changed. In conjunction with `overflow:auto`, space taken by eventual scrollbars is not subtracted from the viewport, whereas in the case of `overflow:scroll`, it is. ({{bug(811403)}})
 
 ### MathML
 

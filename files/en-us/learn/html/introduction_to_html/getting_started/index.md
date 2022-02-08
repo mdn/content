@@ -733,7 +733,7 @@ To write an HTML comment, wrap it in the special markers `<!--` and `-->`. For e
 <!-- <p>I am!</p> -->
 ```
 
-As you can see below, only the first paragraph displays in the live output.
+As you can see below, only the first paragraph is displayed in the live output.
 
 {{ EmbedLiveSample('HTML_comments', 700, 100, "", "") }}
 

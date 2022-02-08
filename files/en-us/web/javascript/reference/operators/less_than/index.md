@@ -22,7 +22,7 @@ x < y
 
 ## Description
 
-The operands are compared using the [Abstract Relational Comparison](https://tc39.es/ecma262/#sec-abstract-relational-comparison) algorithm, which is roughly summarised below:
+The operands are compared using the [Abstract Relational Comparison](https://tc39.es/ecma262/#sec-abstract-relational-comparison) algorithm, which is roughly summarized below:
 
 - First, objects are converted to primitives using [`Symbol.ToPrimitive`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) with the `hint` parameter be `'number'`.
 - If both values are strings, they are compared as strings, based on the values of the Unicode code points they contain.

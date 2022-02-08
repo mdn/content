@@ -46,7 +46,7 @@ new XRSessionEvent(type, eventInitDict)
 ### Return value
 
 A newly-created {{domxref("XRSessionEvent")}} object representing an object of the
-specfied type and configured as described by the `eventInitDict` parameter.
+specified type and configured as described by the `eventInitDict` parameter.
 
 ## Examples
 
