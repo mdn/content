@@ -9002,7 +9002,6 @@
 /en-US/docs/Web/API/Slottable	/en-US/docs/Web/API/Element
 /en-US/docs/Web/API/Slottable/assignedSlot	/en-US/docs/Web/API/Element/assignedSlot
 /en-US/docs/Web/API/SourceBufferList/SourceBuffer	/en-US/docs/Web/API/SourceBufferList
-/en-US/docs/Web/API/SpeechRecognition/SpeechRecognition.serviceURI	/en-US/docs/Web/API/SpeechRecognition/serviceURI
 /en-US/docs/Web/API/SpeechRecognition/start()	/en-US/docs/Web/API/SpeechRecognition/start
 /en-US/docs/Web/API/SpeechRecognitionEvent/SpeechRecognitionEvent.resultIndex	/en-US/docs/Web/API/SpeechRecognitionEvent/resultIndex
 /en-US/docs/Web/API/SpeechRecognitionEvent/SpeechRecognitionEvent.results	/en-US/docs/Web/API/SpeechRecognitionEvent/results
