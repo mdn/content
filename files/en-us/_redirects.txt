@@ -9006,6 +9006,14 @@
 /en-US/docs/Web/API/SpeechRecognitionEvent/SpeechRecognitionEvent.resultIndex	/en-US/docs/Web/API/SpeechRecognitionEvent/resultIndex
 /en-US/docs/Web/API/SpeechRecognitionEvent/SpeechRecognitionEvent.results	/en-US/docs/Web/API/SpeechRecognitionEvent/results
 /en-US/docs/Web/API/SpeechSynthesis/SpeechSynthesis.cancel	/en-US/docs/Web/API/SpeechSynthesis/cancel
+/en-US/docs/Web/API/SpeechSynthesis/onvoiceschanged	/en-US/docs/Web/API/SpeechSynthesis/voiceschanged_event
+/en-US/docs/Web/API/SpeechSynthesisUtterance/onboundary	/en-US/docs/Web/API/SpeechSynthesisUtterance/boundary_event
+/en-US/docs/Web/API/SpeechSynthesisUtterance/onend	/en-US/docs/Web/API/SpeechSynthesisUtterance/end_event
+/en-US/docs/Web/API/SpeechSynthesisUtterance/onerror	/en-US/docs/Web/API/SpeechSynthesisUtterance/error_event
+/en-US/docs/Web/API/SpeechSynthesisUtterance/onmark	/en-US/docs/Web/API/SpeechSynthesisUtterance/mark_event
+/en-US/docs/Web/API/SpeechSynthesisUtterance/onpause	/en-US/docs/Web/API/SpeechSynthesisUtterance/pause_event
+/en-US/docs/Web/API/SpeechSynthesisUtterance/onresume	/en-US/docs/Web/API/SpeechSynthesisUtterance/resume_event
+/en-US/docs/Web/API/SpeechSynthesisUtterance/onstart	/en-US/docs/Web/API/SpeechSynthesisUtterance/start_event
 /en-US/docs/Web/API/StereoPannerNode.pan	/en-US/docs/Web/API/StereoPannerNode/pan
 /en-US/docs/Web/API/Storage.clear	/en-US/docs/Web/API/Storage/clear
 /en-US/docs/Web/API/Storage.getItem	/en-US/docs/Web/API/Storage/getItem
