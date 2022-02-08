@@ -238,18 +238,18 @@ However, it evaluates from left to right:
     1. The `y` on this assignment’s left-hand evaluates
        into a reference to the variable named `y`.
     2. The inner array literal `[ f(), x = g() ]` starts to evaluate.
-       1. The function call `f()` prints "F!" to the console and
-         then evaluates to the number `2`.
-       2. The assignment expression `x = g()` starts to evaluate.
-          1. The `x` on this assignment’s left-hand side evaluates
-             into a reference to the variable named `x`.
-          2. The function call `g()` prints "G!" to the console and
-             then evaluates to the number `3`.
-          3. That `3` result from `f()` is assigned to `x`.
-       3. The assignment expression `x = g()` has now finished evaluating;
-         its result is the new value of `x`, which is `3`.
-         That `3` result becomes the next element
-         in the inner array literal (after the `2` from the `f()`).
+        1. The function call `f()` prints "F!" to the console and
+           then evaluates to the number `2`.
+        2. The assignment expression `x = g()` starts to evaluate.
+            1. The `x` on this assignment’s left-hand side evaluates
+               into a reference to the variable named `x`.
+            2. The function call `g()` prints "G!" to the console and
+               then evaluates to the number `3`.
+            3. That `3` result from `g()` is assigned to `x`.
+        3. The assignment expression `x = g()` has now finished evaluating;
+           its result is the new value of `x`, which is `3`.
+           That `3` result becomes the next element
+           in the inner array literal (after the `2` from the `f()`).
     3. The inner array literal `[ f(), x = g() ]`
        has now finished evaluating;
        its result is an array with two values: `[ 2, 3 ]`.
