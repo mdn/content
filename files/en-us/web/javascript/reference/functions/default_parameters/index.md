@@ -240,18 +240,18 @@ By doing it this way it is possible to pass an empty array/object to the functio
 
 ```js
 function preArray([x = 1, y = 2] = []) {
-  return x + y
+  return x + y;
 }
 
-preArray()      // 3
-preArray([])    // 3
-preArray([2])   // 4
-preArray([2,3]) // 5
+preArray();      // 3
+preArray([]);    // 3
+preArray([2]);   // 4
+preArray([2, 3]); // 5
 
 
 // Works the same for Objects:
-function preObj( {z = 3} = {}) {
-  return z
+function preObj({z = 3} = {}) {
+  return z;
 }
 
 preObj()        // 3
