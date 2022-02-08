@@ -9002,6 +9002,17 @@
 /en-US/docs/Web/API/Slottable	/en-US/docs/Web/API/Element
 /en-US/docs/Web/API/Slottable/assignedSlot	/en-US/docs/Web/API/Element/assignedSlot
 /en-US/docs/Web/API/SourceBufferList/SourceBuffer	/en-US/docs/Web/API/SourceBufferList
+/en-US/docs/Web/API/SpeechRecognition/onaudioend	/en-US/docs/Web/API/SpeechRecognition/audioend_event
+/en-US/docs/Web/API/SpeechRecognition/onaudiostart	/en-US/docs/Web/API/SpeechRecognition/audiostart_event
+/en-US/docs/Web/API/SpeechRecognition/onend	/en-US/docs/Web/API/SpeechRecognition/end_event
+/en-US/docs/Web/API/SpeechRecognition/onerror	/en-US/docs/Web/API/SpeechRecognition/error_event
+/en-US/docs/Web/API/SpeechRecognition/onnomatch	/en-US/docs/Web/API/SpeechRecognition/nomatch_event
+/en-US/docs/Web/API/SpeechRecognition/onresult	/en-US/docs/Web/API/SpeechRecognition/result_event
+/en-US/docs/Web/API/SpeechRecognition/onsoundend	/en-US/docs/Web/API/SpeechRecognition/soundend_event
+/en-US/docs/Web/API/SpeechRecognition/onsoundstart	/en-US/docs/Web/API/SpeechRecognition/soundstart_event
+/en-US/docs/Web/API/SpeechRecognition/onspeechend	/en-US/docs/Web/API/SpeechRecognition/speechend_event
+/en-US/docs/Web/API/SpeechRecognition/onspeechstart	/en-US/docs/Web/API/SpeechRecognition/speechstart_event
+/en-US/docs/Web/API/SpeechRecognition/onstart	/en-US/docs/Web/API/SpeechRecognition/start_event
 /en-US/docs/Web/API/SpeechRecognition/start()	/en-US/docs/Web/API/SpeechRecognition/start
 /en-US/docs/Web/API/SpeechRecognitionEvent/SpeechRecognitionEvent.resultIndex	/en-US/docs/Web/API/SpeechRecognitionEvent/resultIndex
 /en-US/docs/Web/API/SpeechRecognitionEvent/SpeechRecognitionEvent.results	/en-US/docs/Web/API/SpeechRecognitionEvent/results
