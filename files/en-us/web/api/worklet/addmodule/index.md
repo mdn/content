@@ -65,7 +65,7 @@ following errors to the rejection handler.
 ```js
 const audioCtx = new AudioContext();
 const audioWorklet = audioCtx.audioWorklet;
-await audioWorklet.addModule('modules/bypassFilter.js', {
+audioWorklet.addModule('modules/bypassFilter.js', {
   credentials: 'omit',
 });
 ```
