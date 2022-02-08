@@ -75,6 +75,8 @@ Try accessing one of them:
 myObject.toString(); // "[object Object]"
 ```
 
+It works (even if it's not obvious what toString() does).
+
 What are these extra properties, and where do they come from?
 
 Every object in JavaScript has a built-in property, which is called its **prototype**. The prototype is itself an object, so the prototype will have its own prototype, making what's called a **prototype chain**. The chain ends when we reach a prototype that has `null` for its own prototype.
