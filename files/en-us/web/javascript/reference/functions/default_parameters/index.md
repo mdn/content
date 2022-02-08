@@ -254,9 +254,9 @@ function preObj({z = 3} = {}) {
   return z;
 }
 
-preObj()        // 3
-preObj({})      // 3
-preObj({z: 2})  // 2
+preObj();          // 3
+preObj({});        // 3
+preObj({ z: 2 });  // 2
 ```
 
 ## Specifications
