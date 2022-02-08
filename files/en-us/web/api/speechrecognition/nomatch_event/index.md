@@ -54,7 +54,7 @@ recognition.addEventListener('nomatch', function() {
 });
 ```
 
-Or use the [`onnomatch`](/en-US/docs/Web/API/SpeechRecognition/onnomatch) event handler property:
+Or use the `onnomatch` event handler property:
 
 ```js
 recognition.onnomatch = function() {
