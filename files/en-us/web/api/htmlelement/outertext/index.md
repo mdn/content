@@ -27,6 +27,7 @@ When used as a setter it replaces the current node with the given text, converti
 ## Example
 
 This example highlights the fundamental difference between `outerText` and `innerText` when used as setters.
+It originates from [Stackoverflow here](https://stackoverflow.com/questions/18481382/what-is-the-difference-between-innertext-and-outertext/18481435#18481435).
 
 Consider a page that contains the following HTML:
 ```html
