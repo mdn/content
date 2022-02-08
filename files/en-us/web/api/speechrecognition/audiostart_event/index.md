@@ -14,32 +14,23 @@ browser-compat: api.SpeechRecognition.audiostart_event
 
 The **`audiostart`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is fired when the user agent has started to capture audio for speech recognition.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler</th>
-      <td>
-        {{domxref("SpeechRecognition/onaudiostart", "onaudiostart")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('audiostart', event => { })
+
+onaudiostart = event => { }
+```
+
+## Event type
+
+A generic {{DOMxRef("Event")}} with no added properties.
 
 ## Examples
 
-You can use the `audiostart` event in an {{domxref("SpeechRecognition/onaudiostart", "onaudiostart")}} method:
+You can use the `audiostart` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
 var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
@@ -49,7 +40,7 @@ recognition.addEventListener('audiostart', function() {
 });
 ```
 
-Or use the [onaudiostart](/en-US/docs/Web/API/SpeechRecognition/onaudiostart) event handler property:
+Or use the `onaudiostart` event handler property:
 
 ```js
 recognition.onaudiostart = function() {
@@ -68,4 +59,3 @@ recognition.onaudiostart = function() {
 ## See also
 
 - [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)
-- {{domxref("SpeechRecognition/onaudiostart", "onaudiostart")}} event handler property
