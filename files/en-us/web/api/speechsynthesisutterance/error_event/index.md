@@ -23,7 +23,7 @@ onerror = event => { }
 
 ## Event type
 
-An {{domxref("SpeechSynthesisErrorEvent")}}. Inherits from {{domxref("SpeechSynthesisEvent")}} and {{domxref("Event")}}.
+A {{domxref("SpeechSynthesisErrorEvent")}}. Inherits from {{domxref("SpeechSynthesisEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("SpeechSynthesisErrorEvent")}}
 

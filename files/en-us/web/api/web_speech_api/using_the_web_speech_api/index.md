@@ -267,7 +267,7 @@ function populateVoiceList() {
 }
 ```
 
-When we come to run the function, we do the following. This is because Firefox doesn't support `onvoiceschanged`, and will just return a list of voices when {{domxref("SpeechSynthesis.getVoices()")}} is fired. With Chrome however, you have to wait for the event to fire before populating the list, hence the if statement seen below.
+When we come to run the function, we do the following. This is because Firefox doesn't support the {{domxref("SpeechSynthesis.voiceschanged_event", "voiceschanged")}} event, and will just return a list of voices when {{domxref("SpeechSynthesis.getVoices()")}} is fired. With Chrome, however, you have to wait for the event to fire before populating the list, hence the if statement seen below.
 
 ```js
 populateVoiceList();

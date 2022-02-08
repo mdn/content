@@ -23,7 +23,7 @@ onboundary = event => { }
 
 ## Event type
 
-An {{domxref("SpeechSynthesisEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("SpeechSynthesisEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("SpeechSynthesisEvent")}}
 
