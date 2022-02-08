@@ -39,25 +39,25 @@ element.showPicker();
 
 ## Example
 
-Click the button in this example to show a file picker.
+Click the button in this example to show a color picker.
 
 ### HTML
 
 ```html
-<input type="file">
-<button>Show the file picker</button>
+<input type="color">
+<button>Show the color picker</button>
 ```
 
 ### JavaScript
 
 ```js
 const button = document.querySelector("button");
-const fileInput = document.querySelector("input");
+const colorInput = document.querySelector("input");
 
 button.addEventListener("click", () => {
   try {
-    fileInput.showPicker();
-    // A date picker is shown.
+    colorInput.showPicker();
+    // A color picker is shown.
   } catch (error) {
     window.alert(error);
     // Use external library when this fails.
