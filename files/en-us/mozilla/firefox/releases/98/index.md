@@ -25,8 +25,6 @@ This article provides information about the changes in Firefox 98 that will affe
 
 ### JavaScript
 
-- The properties `colorSpaceConversion`, `resizeWidth` and `resizeHeight` can be passed to the method {{domxref("createImageBitmap()")}} using the `options` object ({{bug(1748868)}} and {{bug(1733559)}}).
-
 #### Removals
 
 ### HTTP
@@ -40,6 +38,9 @@ This article provides information about the changes in Firefox 98 that will affe
 ### APIs
 
 #### DOM
+
+- The properties `colorSpaceConversion`, `resizeWidth` and `resizeHeight` can be passed to the method {{domxref("createImageBitmap()")}} using the `options` object ({{bug(1748868)}} and {{bug(1733559)}}).
+
 
 #### Media, WebRTC, and Web Audio
 
