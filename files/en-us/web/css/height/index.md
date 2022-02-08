@@ -56,8 +56,10 @@ height: unset;
   - : The intrinsic preferred height.
 - `min-content`
   - : The intrinsic minimum height.
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
-  - : Uses the fit-content formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, <length-percentage>))`.
+- `fit-content`
+  - : Box will use the available space, but never more than `max-content`
+- {{cssxref("&lt;clamp()&gt;")}}
+  - : Enables selecting a middle value within a range of values between a defined minimum and maximum
 
 ## Accessibility concerns
 
