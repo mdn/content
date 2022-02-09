@@ -22,7 +22,7 @@ var pcaEvent = new PresentationConnectionAvailableInit(typeArg, eventInit)
 ### Parameters
 
 - `typeArg`
-  - : A {{jsxref("DOMSTring")}} giving the name of the event. For this event it should be `connectionavailable`.
+  - : A {{jsxref("DOMString")}} giving the name of the event. For this event it should be `connectionavailable`.
 - `eventInit`
   - : A `PresentationConnectionAvailableInit` dictionary, which only contains a reference to a `PresentationConnection` object.
 
