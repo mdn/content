@@ -19,7 +19,7 @@ The **`getPose()`** method of the {{domxref("VRDisplay")}} interface returns a {
 
 > **Note:** This method was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 >
-> It was evendeprecated there — instead, you should use {{domxref("VRDisplay.getFrameData()")}}, which also provides a {{domxref("VRPose")}} object.
+> It was even deprecated there — instead, you should use {{domxref("VRDisplay.getFrameData()")}}, which also provides a {{domxref("VRPose")}} object.
 
 ## Syntax
 

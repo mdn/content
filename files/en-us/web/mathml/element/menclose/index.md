@@ -72,7 +72,7 @@ The MathML `<menclose>` element renders its content inside an enclosing notation
 
 ## Gecko-specific notes
 
-- Addtional values for the `notation` attribute have been added in the following releases:
+- Additional values for the `notation` attribute have been added in the following releases:
 
   - `madruwb` in Gecko 2.0 {{GeckoRelease("2.0")}}.
   - `updiagonalarrow` in Gecko 24.0 {{GeckoRelease("24.0")}}

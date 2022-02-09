@@ -11,7 +11,7 @@ tags:
   - MediaStream Image Capture API
   - Method
   - Reference
-  - grapFrame
+  - grabFrame
 browser-compat: api.ImageCapture.grabFrame
 ---
 {{APIRef("MediaStream Image")}}

@@ -51,7 +51,7 @@ The various widget role are used to define common interactive patterns. Similar 
 - [tabpanel](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role)
 - [treeitem](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role)
 
-Avoid using [button](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role), [checkbox](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role), [gridcell](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), [link](/en-US/docs/Web/Accessibility/ARIA/Roles/link_role), [menuitem](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [menuitemcheckbox](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role), [menuitemradio](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role), [option](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role), [progressbar](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role), [radio](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role), and [textbox](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role), which we've  included for completeness. For most, semantic equivalents with accessible interactivity are available and supported. See the individual role documention for more information.
+Avoid using [button](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role), [checkbox](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role), [gridcell](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), [link](/en-US/docs/Web/Accessibility/ARIA/Roles/link_role), [menuitem](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [menuitemcheckbox](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role), [menuitemradio](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role), [option](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role), [progressbar](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role), [radio](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role), and [textbox](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role), which we've  included for completeness. For most, semantic equivalents with accessible interactivity are available and supported. See the individual role documentation for more information.
 
 #### Composite widget roles
 
@@ -62,7 +62,7 @@ Avoid using [button](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role), [che
 - [tree](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role)
 - [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
 
-Avoid using [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [listbox](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role), and [radiogroup](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role), which we've included for completeness. See the individual role documention for more information.
+Avoid using [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [listbox](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role), and [radiogroup](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role), which we've included for completeness. See the individual role documentation for more information.
 
 Note that there is also a widget role (`role="widget"`), which is an abstract role and not in the widget role category.
 
