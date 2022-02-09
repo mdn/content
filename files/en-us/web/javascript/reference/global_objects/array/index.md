@@ -131,13 +131,13 @@ This example shows two ways to create new array — first by using [array litera
 
 ```js
 // 'fruits' array created using array literal notation.
-let fruits = ['Apple', 'Banana']
-console.log(fruits.length)
+const fruits = ['Apple', 'Banana'];
+console.log(fruits.length);
 // 2
 
 // 'fruits' array created using the Array() constructor.
-let fruits = new Array('Apple', 'Banana');
-console.log(fruits.length)
+const fruits = new Array('Apple', 'Banana');
+console.log(fruits.length);
 // 2
 ```
 
@@ -166,7 +166,7 @@ fruits[99] // undefined
 This example uses the [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) method to find the position (index) of the string "`Banana`" in the `fruits` array.
 
 ```js
-console.log(fruits.indexOf('Banana'))
+console.log(fruits.indexOf('Banana'));
 // 1
 ```
 
@@ -175,8 +175,8 @@ console.log(fruits.indexOf('Banana'))
 This example uses the [`push()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) method to append a new string, "`Orange`" to the `fruits` array — changing the length of the array. The `forEach()` method returns the array’s new length, which gets assigned to the `newLength` variable.
 
 ```js
-let newLength = fruits.push('Orange') // ["Apple", "Banana", "Orange"]
-console.log(newLength)
+const newLength = fruits.push('Orange'); // ["Apple", "Banana", "Orange"]
+console.log(newLength);
 // 3
 ```
 
@@ -186,7 +186,7 @@ This example uses the [`pop()`](/en-US/docs/Web/JavaScript/Reference/Global_Obje
 
 ```js
 // Remove 'Orange' from the end of 'fruits'.
-let last = fruits.pop() // ["Apple", "Banana"]
+const last = fruits.pop(); // ["Apple", "Banana"]
 ```
 
 ### Remove the first item from an array
@@ -195,7 +195,7 @@ This example uses the [`shift()`](/en-US/docs/Web/JavaScript/Reference/Global_Ob
 
 ```js
 // Remove 'Apple' from the front of 'fruits'.
-let first = fruits.shift() // ["Banana"]
+const first = fruits.shift(); // ["Banana"]
 ```
 
 ### Add a new first item to an array
@@ -204,8 +204,8 @@ This example uses the [`unshift()`](/en-US/docs/Web/JavaScript/Reference/Global_
 
 ```js
 // Add 'Strawberry' to the front of 'fruits'.
-let newLength = fruits.unshift('Strawberry') // ["Strawberry", "Banana"]
-console.log(newLength)
+const newLength = fruits.unshift('Strawberry'); // ["Strawberry", "Banana"]
+console.log(newLength);
 // 2
 ```
 
@@ -216,15 +216,15 @@ Removed elements (in this case "`Banana`"), are returned by the method in a new 
 
 ```js
 // This is how to remove a single item.
-let removedItem = fruits.splice(fruits.indexOf('Banana'), 1)
+const removedItem = fruits.splice(fruits.indexOf('Banana'), 1);
 
-console.log(fruits)
+console.log(fruits);
 // ["Strawberry", "Mango"]
 // So, 'fruits' has been changed in place.
 
 // fruits.splice(pos, 1) returns an array of the items
 // removed, which we assigned above to 'removedItem'.
-console.log(removedItem)
+console.log(removedItem);
 // ['Banana']
 ```
 
@@ -233,7 +233,7 @@ console.log(removedItem)
 This example uses the [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method to remove the strings "`Banana`" and "`Strawberry`" from the `fruits` array — by specifying the index position of "`Banana`", along with a count of the number of total items to remove.
 
 ```js
-let fruits = ['Apple', 'Banana', 'Strawberry', 'Mango']
+const fruits = ['Apple', 'Banana', 'Strawberry', 'Mango'];
 
 let pos = 1
 let n = 2
@@ -241,9 +241,9 @@ let n = 2
 // This is how to remove multiple items: 'n' is the total
 // number of items to remove, starting at the index
 // position 'pos' and progressing toward the end of array.
-let removedItems = fruits.splice(pos, n)
+const removedItems = fruits.splice(pos, n);
 
-console.log(fruits)
+console.log(fruits);
 // ["Apple", "Mango"]
 // So, 'fruits' has been changed in place.
 
@@ -288,16 +288,17 @@ fruitsCopy = fruits.slice()
 All built-in array-copy operations ([spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from), [`Array.prototype.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), and [`Array.prototype.concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)) create [shallow copies](/en-US/docs/Glossary/Shallow_copy). If you instead want a [deep copy](/en-US/docs/Glossary/Shallow_copy) of an array, you can use {{jsxref("JSON.stringify()")}} to convert the array to a JSON string, and then {{jsxref("JSON.parse()")}} to convert the string back into a new array that’s completely independent from the original array.
 
 ```js
-let deepCopy = JSON.parse(JSON.stringify(fruits));
+const deepCopy = (o) => JSON.parse(JSON.stringify(o));
+const fruits2 = deepCopy(fruits);
 ```
 
 Finally, it’s important to understand that assigning an existing array to a new variable doesn’t create a copy of either the array or its elements. Instead the new variable is just a reference, or alias, to the original array; that is, the original array’s name and the new variable name are just two names for the exact same object — and so, if you make any changes at all either to value of the original array or to the value of the new variable, the other will change, too:
 
 ```js
-let fruits = ['Strawberry', 'Mango']
-let fruitsAlias = fruits;
+const fruits = ['Strawberry', 'Mango'];
+const fruitsAlias = fruits;
 // Any changes to the 'fruits' array change 'fruitsAlias' too.
-fruits.unshift('Apple', 'Banana')
+fruits.unshift('Apple', 'Banana');
 console.log(fruits);
 // ['Apple', 'Banana', 'Strawberry', 'Mango']
 console.log(fruitsAlias);
@@ -311,7 +312,7 @@ console.log(fruitsAlias);
 The following creates a chessboard as a two-dimensional array of strings. The first move is made by copying the `'p'` in `board[6][4]` to `board[4][4]`. The old position at `[6][4]` is made blank.
 
 ```js
-let board = [
+const board = [
   ['R','N','B','Q','K','B','N','R'],
   ['P','P','P','P','P','P','P','P'],
   [' ',' ',' ',' ',' ',' ',' ',' '],
@@ -319,14 +320,14 @@ let board = [
   [' ',' ',' ',' ',' ',' ',' ',' '],
   [' ',' ',' ',' ',' ',' ',' ',' '],
   ['p','p','p','p','p','p','p','p'],
-  ['r','n','b','q','k','b','n','r'] ]
+  ['r','n','b','q','k','b','n','r'] ];
 
-console.log(board.join('\n') + '\n\n')
+console.log(board.join('\n') + '\n\n');
 
 // Move King's Pawn forward 2
-board[4][4] = board[6][4]
-board[6][4] = ' '
-console.log(board.join('\n'))
+board[4][4] = board[6][4];
+board[6][4] = ' ';
+console.log(board.join('\n'));
 ```
 
 Here is the output:
@@ -354,14 +355,14 @@ r,n,b,q,k,b,n,r
 ### Using an array to tabulate a set of values
 
 ```js
-values = []
+const values = [];
 for (let x = 0; x < 10; x++){
  values.push([
   2 ** x,
-  2 * x ** 2
- ])
+  2 * x ** 2,
+ ]);
 }
-console.table(values)
+console.table(values);
 ```
 
 Results in
