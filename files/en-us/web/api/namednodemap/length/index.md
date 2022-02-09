@@ -14,7 +14,7 @@ is the number of objects stored in the map.
 
 ## Value
 
-An number containing the number of objects in the map
+A number containing the number of objects in the map
 
 ## Example
 
