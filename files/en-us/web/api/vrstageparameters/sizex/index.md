@@ -16,7 +16,7 @@ browser-compat: api.VRStageParameters.sizeX
 ---
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-The **`sizeX`** read-only property of the {{domxref("VRStageParameters")}} interface *returns the w*idth of the play-area bounds in meters.
+The **`sizeX`** read-only property of the {{domxref("VRStageParameters")}} interface _returns the width_ of the play-area bounds in meters.
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 

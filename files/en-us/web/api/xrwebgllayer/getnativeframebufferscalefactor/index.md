@@ -73,7 +73,7 @@ recommended resolution as identified by the `XRSession` by this value will
 result in the actual native resolution of the XR hardware.
 
 The recommended WebGL frame buffer resolution is the best possible estimate of the
-resolution necessary to contain all of fthe {{domxref("XRView")}}s needed by the device
+resolution necessary to contain all of the {{domxref("XRView")}}s needed by the device
 while at the same time providing typical applications an acceptable balance of image
 quality and performance.
 

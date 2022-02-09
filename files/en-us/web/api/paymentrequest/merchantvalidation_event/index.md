@@ -48,7 +48,7 @@ See {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchan
 
 ## Examples
 
-In this example, an event handler is established for the `merchantvalidation` event. It uses the {{domxref("fetch()")}} to send a request to its own server with an argument of the payment method's validation URL, obtained from the event's {{domxref("MerchantValidationEvent.validationURL", "validationURL")}} property. The merchant server should access the validation URL in accordance with the payment method documention. Typically, a client should not access the validation URL.
+In this example, an event handler is established for the `merchantvalidation` event. It uses the {{domxref("fetch()")}} to send a request to its own server with an argument of the payment method's validation URL, obtained from the event's {{domxref("MerchantValidationEvent.validationURL", "validationURL")}} property. The merchant server should access the validation URL in accordance with the payment method documentation. Typically, a client should not access the validation URL.
 
 ```js
 request.addEventListener("merchantvalidation", event => {
