@@ -20,7 +20,7 @@ removeNamedItem(attrName);
 ### Parameters
 
 - `attrName`
-  - : the name of the attribute to remove from the map.
+  - : The name of the attribute to remove from the map.
 
 ### Return value
 
