@@ -20,7 +20,7 @@ getNamedItemNS(namespace, localName);
 
 - `namespace`
   - : A string with the namespace URI of the desired attribute.
-    > **Warning:** `namespace`is the URI of the namespace, not the prefix.
+    > **Warning:** `namespace` is the URI of the namespace, not the prefix.
 - `localName`
   - : A string with the localName of the desired attribute.
 
