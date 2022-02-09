@@ -115,7 +115,7 @@ npm run dev
 
 > **Note:** degit doesn't do any kind of magic — it just lets you download and unzip the latest version of a git repo's contents. This is much quicker than using `git clone` because it will not download all the history of the repo, or create a complete local clone.
 
-After running `npm run dev`, Svelte will compile and build your application. It will start a local server at `localhost:5042`. Svelte will watch for file updates, and automatically recompile and refresh the app for you when changes are made to the source files. Your browser will display something like this:
+After running `npm run dev`, Svelte will compile and build your application. It will start a local server at `localhost:8080`. Svelte will watch for file updates, and automatically recompile and refresh the app for you when changes are made to the source files. Your browser will display something like this:
 
 ![A simple start page that says hello world, and gives a link to the official svelte tutorials](01-svelte-starter-app.png)
 
