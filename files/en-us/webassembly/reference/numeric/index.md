@@ -12,12 +12,13 @@ tags:
 
 WebAssembly numeric instructions.
 
-# Constants
+## Constants
 
 - [`Const`](/en-US/docs/WebAssembly/Reference/Numeric/Const)
   - : Declare a constant numbers.
 
 ## Comparison
+
 - [`Equal`](/en-US/docs/WebAssembly/Reference/Numeric/Equal)
   - : Check if two numbers are equal.
 
