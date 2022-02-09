@@ -28,7 +28,7 @@ item(index);
 
 ### Return value
 
-An {{domxref("Attr")}} or `null`if the number is greater than or equal to the `length` of
+An {{domxref("Attr")}} or `null` if the number is greater than or equal to the `length` of
 the map.
 
 ## Example
