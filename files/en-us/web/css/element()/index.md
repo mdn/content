@@ -91,8 +91,8 @@ the `<div id="css-source">` inside `<div id="css-result">`.
 
 ## See also
 
-- {{cssxref("image()", "image()")}}
-- {{cssxref("image-set()", "image-set()")}}
+- {{cssxref("image/image()", "image()")}}
+- {{cssxref("image/image-set()", "image-set()")}}
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("&lt;gradient&gt;")}}
 - {{cssxref("element()")}}
