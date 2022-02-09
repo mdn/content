@@ -25,7 +25,7 @@ setNamedItemNS(attr);
 ### Parameters
 
 - `attr`
-  - : the attribute to insert in the map.
+  - : The attribute to insert in the map.
 
 ### Return value
 
