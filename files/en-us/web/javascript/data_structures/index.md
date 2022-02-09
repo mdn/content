@@ -190,8 +190,8 @@ Associates a key with a value, and has the following attributes:
           loops.<br />See also
           <a
             href="/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties"
-            >Enumerability and ownership of properties</a
-          >.
+            >Enumerability and ownership of properties.</a
+          >
         </p>
       </td>
       <td><code>false</code></td>
@@ -287,6 +287,7 @@ Please have a look at the [reference](/en-US/docs/Web/JavaScript/Reference/Globa
 ## Determining types using the `typeof` operator
 
 The `typeof` operator can help you to find the type of your variable.
+
 
 Please read the [reference page](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) for more details and edge cases.
 
