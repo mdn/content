@@ -30,6 +30,9 @@ The **`Intl`** object is the namespace for the ECMAScript Internationalization A
   - : Constructor for objects that enable plural-sensitive formatting and language-specific rules for plurals.
 - {{jsxref("Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat", "Intl.RelativeTimeFormat()")}}
   - : Constructor for objects that enable language-sensitive relative time formatting.
+- {{jsxref("Global_Objects/Intl/Segmenter/Segmenter", "Intl.Segmenter()")}}
+  - : Constructor for objects that enable locale-sensitive text segmentation.
+
 
 ## Static methods
 
@@ -138,6 +141,7 @@ log("de-DE");
   - {{jsxref("Intl/PluralRules", "Intl.PluralRules")}}
   - {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
   - {{jsxref("Intl/Locale", "Intl.Locale")}}
+  - {{jsxref("Intl/Segmenter", "Intl.Segmenter")}}
 
 - Methods
 
