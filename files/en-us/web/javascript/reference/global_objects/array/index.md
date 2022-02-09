@@ -191,6 +191,21 @@ This example uses the [`pop()`](/en-US/docs/Web/JavaScript/Reference/Global_Obje
 const last = fruits.pop(); // ["Apple", "Banana"]
 ```
 
+> **Note:** `pop()` can only be used to remove the last item from an array. To remove multiple items from the end of an array, see the next example.
+
+### Remove multiple items from the end of an array
+
+This example uses the [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method to remove the last 3 items from the `fruits` array.
+
+```js
+const fruits = ['Apple', 'Banana', 'Strawberry', 'Mango', 'Cherry'];
+const removedItems = fruits.splice(fruits.length - 3);
+console.log(fruits);
+// ["Apple", "Banana"]
+console.log(removedItems);
+// ["Strawberry", "Mango", "Cherry"]
+```
+
 ### Remove the first item from an array
 
 This example uses the [`shift()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift) method to remove the first item ("`Apple`") from the `fruits` array.
@@ -198,6 +213,21 @@ This example uses the [`shift()`](/en-US/docs/Web/JavaScript/Reference/Global_Ob
 ```js
 // Remove 'Apple' from the front of 'fruits'.
 const first = fruits.shift(); // ["Banana"]
+```
+
+> **Note:** `shift()` can only be used to remove the first item from an array. To remove multiple items from the beginning of an array, see the next example.
+
+### Remove multiple items from the beginning of an array
+
+This example uses the [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method to remove the first 4 items from the `fruits` array.
+
+```js
+const fruits = ['Apple', 'Strawberry', 'Mango', 'Cherry', 'Banana'];
+const removedItems = fruits.splice(0, 4);
+console.log(fruits);
+// ["Banana"]
+console.log(removedItems);
+// ["Apple", "Strawberry", "Mango", "Cherry"]
 ```
 
 ### Add a new first item to an array
@@ -227,7 +257,7 @@ console.log(fruits);
 // fruits.splice(pos, 1) returns an array of the items
 // removed, which we assigned above to 'removedItem'.
 console.log(removedItem);
-// ['Banana']
+// ["Banana"]
 ```
 
 ### Remove multiple items by index
