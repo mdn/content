@@ -19,46 +19,40 @@ A menu is often a list of common actions or functions that the user can invoke. 
 
 A `menu` widget is usually opened, or made visible, by activating a menu button, choosing an item in a menu that opens a sub menu, or by invoking a command, such as <kbd>Shift + F10</kbd> in Windows, that opens a context specific menu. 
 
-When a user activates a choice in a menu, the menu usually closes unless the choice opened a submenu. 
+When a user activates a choice in a menu, the menu usually closes, unless the menu choice action is to opening a submenu, in which case the menu remains open as the submenu is opened. 
 
-When a menu opens, keyboard focus is placed on the first menu item. To be keyboard accessible, you need to manage focus for all descendants for every instance of the `menu` role.  All menu items within the menu are focusable. 
+When a menu opens, keyboard focus is placed on the first menu item. To be keyboard accessible, you need to [manage focus](https://usability.yale.edu/web-accessibility/articles/focus-keyboard-operability) for all descendants: all menu items within the `menu` are focusable. The menu button which opens the menu and the menu items, rather than the menu itself, are the focusable elements. 
 
-The menu button which opens the menu and the menu items, rather than the menu, are the focusable elements. Menu items include [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role), and [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role). Disabled menu items are focusable but cannot be activated. These menu items can be grouped in elements with the [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role, and separated by elements with role [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role). Neither `group` nor `separator` receive focus or are interactive. 
+Menu items include [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role), and [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role). [Disabled](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) menu items are focusable but cannot be activated. These menu items can be grouped in elements with the [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role, and separated by elements with role [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role). Neither `group` nor `separator` receive focus or are interactive. 
 
 If a `menu` is opened as a result of a context action, <kbd>Escape</kbd> or <kbd>Enter</kbd> may return focus to the invoking context. 
 
-Elements with the role `menu` have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) value of `vertical`.
+Elements with the role `menu` have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) value of `vertical`. Include `aria-orientation="horizontal"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation).
 
-A menu that is visually persistent is a [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role). 
-
+If the menu is visually persistent, consider the [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role) instead. 
 
 ### Associated WAI-ARIA roles, states, and properties
 
 A `menu` is a container of items that represent choices. The element serving as the menu has a role of either `menu` or `menubar`. Related roles and properties include:
 
-- [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role), and [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
+- [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role), and [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role) roles
   - : Menu items. The role of items contained in a menu as child elements of the containing `menu` or `menubar`. 
-- [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
+- [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role
   - :  Menu items can be nested in a [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) 
-- [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role)
+- [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) role
   - : A divider that separates and distinguishes sections of content or groups of menu items within the menu 
-- {{HTMLAttrXref('tabindex')}}
+
+  
+- {{HTMLAttrXref('tabindex')}} attribute
   - : The menu container has tabindex set to -1 or 0. Each item in the menu has tabindex set to -1, except in a menubar, where the first item has tabindex set to 0.
--  [`aria-activedescendant`]() 
-   - : Set to the ID of the focused item.
+-  [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) 
+   - : Set to the ID of the focused item, if there is one.
 - [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) 
-  - : indicates whether the menu orientation is horizontal or vertical; defaults to `vertical` if omitted. 
-
-
-If a menubar has a visible label, the element with role menubar has aria-labelledby set to a value that refers to the labelling element. Otherwise, the menubar element has a label provided by aria-label.
-If a menubar is vertically oriented, it has aria-orientation set to vertical. The default value of aria-orientation for a menubar is horizontal.
-An element with role menu either has:
-aria-labelledby set to a value that refers to the menuitem or button that controls its display.
-A label provided by aria-label.
-If a menu is horizontally oriented, it has aria-orientation set to horizontal. The default value of aria-orientation for a menu is vertical.
-NOTE
-If aria-owns is set on the menu container to include elements that are not DOM children of the container, those elements will appear in the reading order in the sequence they are referenced and after any items that are DOM children. Scripts that manage focus need to ensure the visual focus order matches this assistive technology reading order.
-
+  - : indicates whether the menu orientation is horizontal or vertical; defaults to `vertical` if omitted.
+- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+  - : The `menu` is required to have an accessible name.  Use `aria-labelledby` if a visible label is present, otherwise use `aria-label`. The `aria-labelledby` should set to a value that refers to the `menuitem` or `button` that controls its display.
+- [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
+  - : Only set on the menu container to include elements that are not DOM children of the container. If set, those elements will appear in the reading order in the sequence they are referenced and after any items that are DOM children. When managing focus, ensure the visual focus order matches this assistive technology reading order.
 
 ### Keyboard interactions
 
@@ -129,8 +123,6 @@ The `aria-label="Color: purple"` is set on the `menu` element. It defines the ac
 
 ## See Also
 
-
-- [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role)
 - [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role)
 - [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
 - [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
