@@ -7248,6 +7248,7 @@
 /en-US/docs/Web/API/AudioParam.value	/en-US/docs/Web/API/AudioParam/value
 /en-US/docs/Web/API/AudioWorkletNode/AudioWorkletNode.parameters	/en-US/docs/Web/API/AudioWorkletNode/parameters
 /en-US/docs/Web/API/AudioWorkletNodeOptions	/en-US/docs/Web/API/AudioWorkletNode/AudioWorkletNode
+/en-US/docs/Web/API/BackgroundFetchRegistration/onprogress	/en-US/docs//Web/API/BackgroundFetchRegistration/progress_event
 /en-US/docs/Web/API/Barcode_Detector_API	/en-US/docs/Web/API/Barcode_Detection_API
 /en-US/docs/Web/API/BaseAudioContext/resume	/en-US/docs/Web/API/AudioContext/resume
 /en-US/docs/Web/API/BatteryManager.charging	/en-US/docs/Web/API/BatteryManager/charging
