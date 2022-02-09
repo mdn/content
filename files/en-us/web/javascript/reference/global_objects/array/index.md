@@ -290,7 +290,7 @@ All built-in array-copy operations ([spread syntax](/en-US/docs/Web/JavaScript/R
 let deepCopy = JSON.parse(JSON.stringify(fruits));
 ```
 
-Finally, it’s important to understand that assigning an existing array to a new variable doesn’t create a copy. Instead the new variable is just a reference, or alias, to the original; that is, the original array’s name and the new variable name are just two names for the exact same object — and so, if you make any changes at all either to value of the original array or to the value of the new variable, the other will change, too:
+Finally, it’s important to understand that assigning an existing array to a new variable doesn’t create a copy of either the array or its elements. Instead the new variable is just a reference, or alias, to the original array; that is, the original array’s name and the new variable name are just two names for the exact same object — and so, if you make any changes at all either to value of the original array or to the value of the new variable, the other will change, too:
 
 ```js
 let fruits = ['Strawberry', 'Mango']
