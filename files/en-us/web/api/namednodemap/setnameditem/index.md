@@ -9,7 +9,7 @@ browser-compat: api.NamedNodeMap.setNamedItem
 {{APIRef("DOM")}}
 
 The **`setNamedItem()`** method of the {{domxref("NamedNodeMap")}} interface
-put the {{domxref("Attr")}} identified by its name in the map.
+puts the {{domxref("Attr")}} identified by its name in the map.
 If there was already an {{domxref("Attr")}} with the same name in the map,
 it is _replaced_.
 
