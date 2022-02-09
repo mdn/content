@@ -89,7 +89,7 @@ choose to halve the resolution. In this case, the value returned by
 `XRWebGLLayer.getNativeFramebufferScaleFactor()` will be 2.0. This method of
 dividing the frame buffer between views is shown in the following diagram.
 
-![Diagram showing frame buffer as scalled to half resolution](twoviewsoneframe-scaledby2.svg)
+![Diagram showing frame buffer as scaled to half resolution](twoviewsoneframe-scaledby2.svg)
 
 Now the width and height of the frame buffer are 50% what they were before, resulting
 in a total frame buffer size of 1280 by 720 pixels, with each eye's half of the buffer
