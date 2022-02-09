@@ -43,7 +43,7 @@ Listen to this event using [`addEventListener()`](/en-US/docs/Web/API/EventTarge
 
 - [`abort`](/en-US/docs/Web/API/AbortSignal/abort_event)
   - : Invoked when the DOM requests the signal is communicating with is/are aborted.
-    Also available via the [`onabort`](/en-US/docs/Web/API/AbortSignal/onabort) property.
+    Also available via the `onabort` property.
 
 ## Examples
 
