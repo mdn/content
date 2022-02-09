@@ -26,7 +26,7 @@ setNamedItem(attr);
 
 ### Return value
 
-Return the old attribute if replaced, or `null` if the attribute is new.
+Returns the old attribute if replaced, or `null` if the attribute is new.
 
 ### Exceptions
 
