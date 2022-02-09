@@ -235,8 +235,8 @@ You can use default value assignment with the
 {{jsxref("Operators/Destructuring_assignment", "destructuring assignment", "", 1)}}
 notation. 
 
-A common way of doing it consist in destructuring and assigning the values, and then assign an empty object/array to that destructured object, e.g:`{ z = 3 } = {}` . 
-By doing it this way it is possible to pass an empty array/object to the function and still have those values prefilled:
+A common way of doing that is to assign an empty object/array to the destructured object/array; for example: `[x = 1, y = 2] = []` . 
+By doing it that way, you make it possible to pass an empty array/object to the function and still have those values prefilled:
 
 ```js
 function preFilledArray([x = 1, y = 2] = []) {
@@ -253,9 +253,9 @@ function preFilledObject({z = 3} = {}) {
   return z;
 }
 
-preObj();          // 3
-preObj({});        // 3
-preObj({ z: 2 });  // 2
+preFilledObject();          // 3
+preFilledObject({});        // 3
+preFilledObject({ z: 2 });  // 2
 ```
 
 ## Specifications
