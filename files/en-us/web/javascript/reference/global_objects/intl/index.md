@@ -33,7 +33,6 @@ The **`Intl`** object is the namespace for the ECMAScript Internationalization A
 - {{jsxref("Global_Objects/Intl/Segmenter/Segmenter", "Intl.Segmenter()")}}
   - : Constructor for objects that enable locale-sensitive text segmentation.
 
-
 ## Static methods
 
 - {{jsxref("Intl.getCanonicalLocales()")}}

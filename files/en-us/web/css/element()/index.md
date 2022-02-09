@@ -54,14 +54,14 @@ This example uses a hidden {{HTMLElement("div")}} as a background. The backgroun
 
 The {{HTMLElement("div")}} element with the ID "myBackground1" is used as the background for the content including the paragraph "This box uses the element with the #myBackground1 ID as its background!".
 
-
 ### Page Preview
 
 This <a href="https://iamvdo.me/en/blog/css-element-function">
 example based on Vincent De Oliveira's</a> creates a preview of
-the `<div id="css-source">` inside `<div id="css-result">`. 
+the `<div id="css-source">` inside `<div id="css-result">`.
 
 #### HTML
+
 ```html
 <div id="css-source">
     <h1>Page Preview</h1>
@@ -69,7 +69,9 @@ the `<div id="css-source">` inside `<div id="css-result">`.
 <div id="css-result">
 </div>
 ```
+
 #### CSS
+
 ```css
 #css-result {
     background: -moz-element(#css-source) no-repeat;
@@ -79,8 +81,11 @@ the `<div id="css-source">` inside `<div id="css-result">`.
     border: dashed;
 }
 ```
+
 #### Result
+
 {{EmbedLiveSample("Page_Preview")}}
+
 ## Specifications
 
 {{Specifications}}

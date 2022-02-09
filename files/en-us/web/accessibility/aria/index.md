@@ -16,8 +16,7 @@ It supplements HTML so that interactions and widgets commonly used in applicatio
 
 [The first rule of ARIA](https://www.w3.org/TR/using-aria/#rule1) use is <q>"If you can use a native HTML element or attribute with the semantics and behavior you require already built in, instead of re-purposing an element and adding an ARIA role, state or property to make it accessible, then do so."</q>
 
-> **Note:** There is a saying "No ARIA is better than bad ARIA." In [WebAim’s survey of over one million home pages](https://webaim.org/projects/million#aria), they found that Home pages with ARIA present averaged 41% more detected errors than those without ARIA. While ARIA is designed to make web pages more accessible, if used incorrectly, it can do more harm than good. 
-
+> **Note:** There is a saying "No ARIA is better than bad ARIA." In [WebAim’s survey of over one million home pages](https://webaim.org/projects/million#aria), they found that Home pages with ARIA present averaged 41% more detected errors than those without ARIA. While ARIA is designed to make web pages more accessible, if used incorrectly, it can do more harm than good.
 
 Here's the markup for a progress bar widget:
 
@@ -48,7 +47,7 @@ function updateProgress(percentComplete) {
 }
 ```
 
-All content that is available to non-assitive technology users must be made available to assistive technologies. Similarly, no features should be included targeting assistive technology users that aren't also accessible to those not using assistive technologies. The above progressbar needs to be styled to make it look like a progressbar. 
+All content that is available to non-assistive technology users must be made available to assistive technologies. Similarly, no features should be included targeting assistive technology users that aren't also accessible to those not using assistive technologies. The above progressbar needs to be styled to make it look like a progressbar.
 
 It would have been much simpler to use the semantic {{HTMLElement('progress')}} instead:
 
