@@ -26155,13 +26155,6 @@
       "fscholz"
     ]
   },
-  "Web/API/AbortSignal/onabort": {
-    "modified": "2020-10-29T06:23:31.502Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz"
-    ]
-  },
   "Web/API/AbsoluteOrientationSensor": {
     "modified": "2020-10-15T22:08:42.127Z",
     "contributors": [
