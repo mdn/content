@@ -9,7 +9,7 @@ browser-compat: api.NamedNodeMap.removeNamedItem
 {{APIRef("DOM")}}
 
 The **`removeNamedItem()`** method of the {{domxref("NamedNodeMap")}} interface
-remove the {{domxref("Attr")}} corresponding to the given name from the map.
+removes the {{domxref("Attr")}} corresponding to the given name from the map.
 
 ## Syntax
 
