@@ -32,7 +32,7 @@ where:
 
 ## Examples
 
-These examples can be [viewed live](https://media.prod.mdn.mozit.cloud/samples/cssref/moz-element.html) in builds of Firefox that support `-moz-element()`.
+These examples work in builds of Firefox that support `-moz-element()`.
 
 ### A somewhat realistic example
 
@@ -50,25 +50,37 @@ This example uses a hidden {{HTMLElement("div")}} as a background. The backgroun
 </div>
 ```
 
+{{EmbedLiveSample("A_somewhat_realistic_example")}}
+
 The {{HTMLElement("div")}} element with the ID "myBackground1" is used as the background for the content including the paragraph "This box uses the element with the #myBackground1 ID as its background!".
 
-![](example1.png)
 
-### A somewhat more bizarre example
+### Page Preview
 
-This example uses a hidden {{HTMLElement("button")}} element in a repeating pattern as its background. This demonstrates that you can use arbitrary elements as background, but doesn't necessarily demonstrate good design practices.
+This <a href="https://iamvdo.me/en/blog/css-element-function">
+example based on Vincent De Oliveira's</a> creates a preview of
+the `<div id="css-source">` inside `<div id="css-result">`. 
 
+#### HTML
 ```html
-<div style="width:400px; height:100px; background:-moz-element(#myBackground2);">
+<div id="css-source">
+    <h1>Page Preview</h1>
 </div>
-
-<div style="overflow:hidden; height:0;">
-  <button id="myBackground2" type="button">Evil button!</button>
+<div id="css-result">
 </div>
 ```
-
-![](example2.png)
-
+#### CSS
+```css
+#css-result {
+    background: -moz-element(#css-source) no-repeat;
+    width: 256px;
+    height: 32px;
+    background-size: 80%;
+    border: dashed;
+}
+```
+#### Result
+{{EmbedLiveSample("Page_Preview")}}
 ## Specifications
 
 {{Specifications}}
@@ -79,8 +91,8 @@ This example uses a hidden {{HTMLElement("button")}} element in a repeating patt
 
 ## See also
 
-- {{cssxref("image()", "image()")}}
-- {{cssxref("image-set()", "image-set()")}}
+- {{cssxref("image/image()", "image()")}}
+- {{cssxref("image/image-set()", "image-set()")}}
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("&lt;gradient&gt;")}}
 - {{cssxref("element()")}}
