@@ -37,7 +37,7 @@ The output will look like this:
 
 ### Recursion is limited by stack size
 
-The following JavaScript code defines a function that returns a number of max call stack size available for it in JavaScript runtime.
+The following code defines a function that returns the maximum call-stack size available in the JavaScript runtime in which the code is run.
 
 ```js
 const getMaxCallStackSize = (i) => {
