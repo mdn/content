@@ -11,10 +11,23 @@ browser-compat: api.AbortSignal.abort_event
 
 The **`abort`** event of the {{domxref("AbortSignal")}} is fired when the associated request is aborted, i.e. using {{domxref("AbortController.abort()")}}.
 
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('abort', event => { })
+
+onabort = event => { }
+```
+
+## Event type
+
+A generic {{DOMxRef("Event")}} with no added properties.
 
 ## Examples
 
-In the following snippets, we create a new `AbortController` object, and get its {{domxref("AbortSignal")}} (available using the `signal` property). Later on we check whether or not the signal has been aborted using an event handler property, 
+In the following snippets, we create a new `AbortController` object, and get its {{domxref("AbortSignal")}} (available using the `signal` property). Later on we check whether or not the signal has been aborted using an event handler property,
 
 You can detect the `abort` event using an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
