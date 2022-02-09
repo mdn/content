@@ -30,6 +30,8 @@ From Firefox 52 onwards, instead of returning `BlockingResponse`, the listener c
 
 If you use `"blocking"`, you must have the ["webRequestBlocking" API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) in your manifest.json.
 
+Be aware that you can not run webRequest.onBeforeRequest in  a content script, you must use a background script, see [web Extension API's](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis) for the list of content script supported API's.
+
 ## Syntax
 
 ```js
