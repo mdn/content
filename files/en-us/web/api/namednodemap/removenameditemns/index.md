@@ -23,7 +23,7 @@ removeNamedItem(namespace, localName);
   - : The namespace of the attribute to remove from the map
     > **Warning:** `namespace`is the URI of the namespace, not the prefix.
 - `localName`
-  - : the local name of the attribute to remove from the map.
+  - : The local name of the attribute to remove from the map.
 
 ### Return value
 
