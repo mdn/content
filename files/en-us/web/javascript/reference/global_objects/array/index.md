@@ -212,6 +212,7 @@ console.log(newLength)
 ### Remove a single item by index
 
 This example uses the [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method to remove the string "`Banana`" from the `fruits` array — by specifying the index position of "`Banana`".
+Removed elements (in this case "`Banana`"), are returned by the method in a new array.
 
 ```js
 // This is how to remove a single item.
