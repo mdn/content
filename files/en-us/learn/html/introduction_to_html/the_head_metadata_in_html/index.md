@@ -54,7 +54,7 @@ Let's revisit the simple [HTML document we covered in the previous article](/en-
 </html>
 ```
 
-The HTML head is the contents of the {{htmlelement("head")}} element — unlike the contents of the {{htmlelement("body")}} element (which are displayed on the page when loaded in a browser), the head's content is not displayed on the page. Instead, the head's job is to contain {{glossary("Metadata", "metadata")}} about the document. In the above example, the head is quite small:
+The HTML head is the contents of the {{htmlelement("head")}} element. Unlike the contents of the {{htmlelement("body")}} element (which are displayed on the page when loaded in a browser), the head's content is not displayed on the page. Instead, the head's job is to contain {{glossary("Metadata", "metadata")}} about the document. In the above example, the head is quite small:
 
 ```html
 <head>
@@ -63,7 +63,7 @@ The HTML head is the contents of the {{htmlelement("head")}} element — unlike 
 </head>
 ```
 
-In larger pages however, the head can get quite full. Try going to some of your favorite websites and use the [developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) to check out their head contents. Our aim here is not to show you how to use everything that can possibly be put in the head, but rather to teach you how to use the major elements that you'll want to include in the head, and give you some familiarity. Let's get started.
+In larger pages however, the head can get quite large. Try going to some of your favorite websites and use the [developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) to check out their head contents. Our aim here is not to show you how to use everything that can possibly be put in the head, but rather to teach you how to use the major elements that you'll want to include in the head, and give you some familiarity. Let's get started.
 
 ## Adding a title
 
