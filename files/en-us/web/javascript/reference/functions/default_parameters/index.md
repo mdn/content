@@ -239,18 +239,17 @@ A common way of doing it consist in destructuring and assigning the values, and 
 By doing it this way it is possible to pass an empty array/object to the function and still have those values prefilled:
 
 ```js
-function preArray([x = 1, y = 2] = []) {
+function preFilledArray([x = 1, y = 2] = []) {
   return x + y;
 }
 
-preArray();      // 3
-preArray([]);    // 3
-preArray([2]);   // 4
-preArray([2, 3]); // 5
+preFilledArray();       // 3
+preFilledArray([]);     // 3
+preFilledArray([2]);    // 4
+preFilledArray([2, 3]); // 5
 
-
-// Works the same for Objects:
-function preObj({z = 3} = {}) {
+// Works the same for objects:
+function preFilledObject({z = 3} = {}) {
   return z;
 }
 
