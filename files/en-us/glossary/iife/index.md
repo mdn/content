@@ -11,27 +11,39 @@ tags:
 An **IIFE** (Immediately Invoked Function Expression) is a {{glossary("JavaScript")}} {{glossary("function")}} that runs as soon as it is defined.
 The name IIFE is promoted by Ben Alman in [his blog](https://web.archive.org/web/20171201033208/http://benalman.com/news/2010/11/immediately-invoked-function-expression/#iife).
 
-```js
+<table>
+<thead>
+<tr>
+<th>IIFE</td>
+<th><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow function</a> IIFE</th>
+<th><a href="/en-US/docs/Web/JavaScript/Reference/Operators/async_function">async</a> IIFE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<pre class="brush: js notranslate">
 (function () {
-  statements
+  /* ... */
 })();
-```
-
-or {{jsxref("Functions/Arrow_functions", "Arrow function expression")}} as a modern and shorter solution:
-
-```js
+</pre>
+</td>
+<td>
+<pre class="brush: js notranslate">
 (() => {
-  statements
+  /* ... */
 })();
-```
-
-or Immediately Invoked {{jsxref("Operators/async_function", "Async function")}} Expression (async IIFE) to execute await in JavaScript engines where we have no {{jsxref("Operators/await#top_level_await", "to-level await")}} support:
-
-```js
+</pre>
+</td>
+<td>
+<pre class="brush: js notranslate">
 (async () => {
-  statements
+  /* ... */
 })();
-```
+</pre>
+</tr>
+</tbody>
+</table>
 
 It is a design pattern which is also known as a {{glossary("Self-Executing Anonymous Function")}} and contains two major parts:
 
@@ -161,7 +173,7 @@ When clicked, these buttons alert 0 and 1.
 
 ## See also
 
-- [Quick example](/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Functions) (at the end of the "Functions" section, right before "Custom objects")
+- [Quick example](/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#functions) (at the end of the "Functions" section, right before "Custom objects")
 - {{interwiki("wikipedia", "Immediately-invoked function expression", "IIFE")}} (Wikipedia)
 - [Glossary](/en-US/docs/Glossary)
 
