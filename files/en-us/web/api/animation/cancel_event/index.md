@@ -3,13 +3,8 @@ title: 'Animation: cancel event'
 slug: Web/API/Animation/cancel_event
 tags:
   - API
-  - Animation
-  - Event Handler
-  - Property
+  - Event
   - Reference
-  - Web Animations
-  - oncancel
-  - web animations api
 browser-compat: api.Animation.cancel_event
 ---
 {{ APIRef("Web Animations") }}
