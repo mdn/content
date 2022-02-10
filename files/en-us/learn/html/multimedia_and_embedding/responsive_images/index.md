@@ -115,7 +115,7 @@ The `srcset` and `sizes` attributes look complicated, but they're not too hard t
 
 1. An **image filename** (`elva-fairy-480w.jpg`)
 2. A space
-3. The image's **intrinsic width in pixels** (`480w`) — note that this uses the `w` unit, not `px` as you might expect. An image's [intrinsic size](/en-US/docs/Glossary/intrinsic_size) is its real size, which can be found by inspecting the image file on your computer (for example, on a Mac you can select the image in Finder and press
+3. The image's **intrinsic width in pixels** (`480w`) — note that this uses the `w` unit, not `px` as you might expect. An image's [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size) is its real size, which can be found by inspecting the image file on your computer (for example, on a Mac you can select the image in Finder and press
 
     <kbd>Cmd</kbd>
 
@@ -131,7 +131,7 @@ The `srcset` and `sizes` attributes look complicated, but they're not too hard t
 2. A space
 3. The **width of the slot** the image will fill when the media condition is true (`480px`)
 
-> **Note:** For the slot width, you may provide an absolute length (`px`, `em`) or a length relative to the viewport (`vw`), but not percentages. You may have noticed that the last slot width has no media condition (this is the default that is chosen when none of the media conditions are true). The browser ignores everything after the first matching condition, so be careful how you order the media conditions.
+> **Note:** For the slot width, rather than providing an absolute width (for example, `480px`), you can alternatively provide a width relative to the viewport (for example, `50vw`) — but not a percentage. You may have noticed that the last slot width has no media condition (this is the default that is chosen when none of the media conditions are true). The browser ignores everything after the first matching condition, so be careful how you order the media conditions.
 
 So, with these attributes in place, the browser will:
 
@@ -208,7 +208,7 @@ When the browser starts to load a page, it starts to download (preload) any imag
 
 ### Use modern image formats boldly
 
-New image formats like [WebP](/en-US/docs/Web/Media/Formats/Image_types#WebP_image) and [AVIF](/en-US/docs/Web/Media/Formats/Image_types#AVIF_image) can maintain a low file size and high quality at the same time. These formats now have relatively broad browser support but little "historical depth".
+New image formats like [WebP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) and [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) can maintain a low file size and high quality at the same time. These formats now have relatively broad browser support but little "historical depth".
 
 `<picture>` lets us continue catering to older browsers. You can supply MIME types inside `type` attributes so the browser can immediately reject unsupported file types:
 
