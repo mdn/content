@@ -35,7 +35,7 @@ However, in this article we will mainly be concentrating on some of the new feat
 
 There are two types of controller you'll encounter with VR hardware:
 
-- 6DoF (six-degrees-of-freedom) controllers provide access to both positional and orientation data — they can manipulate a VR scene and the objects it contains with movement but also rotatation. A good example is the HTC VIVE controllers.
+- 6DoF (six-degrees-of-freedom) controllers provide access to both positional and orientation data — they can manipulate a VR scene and the objects it contains with movement but also rotation. A good example is the HTC VIVE controllers.
 - 3DoF (three-degrees-of-freedom) controllers provide orientation but not positional data. A good example is the Google Daydream controller, which can be rotated to point to different things in 3D space like a laser pointer, but can't be moved inside a 3D scene.
 
 ## Basic controller access
@@ -193,7 +193,7 @@ if(gp) {
 
 Here we get the connected gamepads with {{domxref("Navigator.getGamepads")}}, then store the first gamepad detected in the `gp` variable. As we only need one gamepad for this demo, we'll just ignore the others.
 
-The next thing we do is to get the {{domxref("GamepadPose")}} object for the controller stored in gpPose (by querying {{domxref("Gamepad.pose")}}), and also store the current gamepad position and orientation for this frame in variables so they are easuy to access later. We also display the post stats for this frame in the DOM using the `displayPoseStats()` function. All of this is only done if `gp` actually has a value (if a gamepad is connected), which stops the demo erroring if we don't have our gamepad connected.
+The next thing we do is to get the {{domxref("GamepadPose")}} object for the controller stored in gpPose (by querying {{domxref("Gamepad.pose")}}), and also store the current gamepad position and orientation for this frame in variables so they are easy to access later. We also display the post stats for this frame in the DOM using the `displayPoseStats()` function. All of this is only done if `gp` actually has a value (if a gamepad is connected), which stops the demo erroring if we don't have our gamepad connected.
 
 Slightly later in the code, you can find this block:
 

@@ -33,7 +33,7 @@ No changes
 - {{jsxref("Intl/DateTimeFormat/formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}} and {{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}} are now supported in release builds. The `formatRange()` method returns a localized and formatted string for the range between two {{jsxref("Date")}} objects (e.g. "1/05/21 – 1/10/21"). The `formatRangeToParts()` method returns an array containing the locale-specific _parts_ of a formatted date range ({{bug(1653024)}}).
 - The {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat() constructor")}} allows four new `timeZoneName` options for formatting how the timezone is displayed. These include the localized GMT formats `shortOffset` and `longOffset`, and the generic non-location formats `shortGeneric` and `longGeneric` ({{bug(1653024)}}).
 - The {{jsxref("Global_Objects/Error/Error", "Error() constructor")}} can now take the error `cause` as value in the `option` parameter.
-  This allows code to catch errors and throw new/modifed versions that retain the original error and stack trace ({{bug(1679653)}}).
+  This allows code to catch errors and throw new/modified versions that retain the original error and stack trace ({{bug(1679653)}}).
 
 ### HTTP
 

@@ -21,7 +21,7 @@ values passed. The passed values must be of the same type.
 ## Syntax
 
 ```js
-var cssUnitValue = CSSNumericValue.min(number1 ... numbern);
+var cssUnitValue = CSSNumericValue.min(number1 ... numberN);
 ```
 
 ### Parameters

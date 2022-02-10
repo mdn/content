@@ -305,7 +305,7 @@ AV1 Image File Format (AVIF) is a powerful, open source, royalty-free file forma
 > It offers state-of-the-art features and performance, without the encumbrance of complicated licensing and patent royalties that have hampered comparable alternatives.
 
 AV1 is a coding format that was originally designed for video transmission over the Internet.
-The format benefits from the signficant advances in video encoding in recent years, and may potentially benefit from the associated support for hardware rendering.
+The format benefits from the significant advances in video encoding in recent years, and may potentially benefit from the associated support for hardware rendering.
 However it also has disadvantages for some cases, as video and image encoding have some different requirements.
 
 The format offers:
@@ -431,7 +431,7 @@ Theoretically, several compression algorithms are supported, and the image data 
       <th scope="row">Specification</th>
       <td>
         No specification; however, Microsoft provides general documentation of the format at
-        <a href="https://docs.microsoft.com/en-us/windows/desktop/gdi/bitmap-storage">docs.microsoft.com/en-us/windows/desktop/gdi/bitmap-storage</a>
+        <a href="https://docs.microsoft.com/windows/desktop/gdi/bitmap-storage">docs.microsoft.com/en-us/windows/desktop/gdi/bitmap-storage</a>
       </td>
     </tr>
     <tr>
@@ -505,7 +505,7 @@ Theoretically, several compression algorithms are supported, and the image data 
     <tr>
       <th scope="row">Licensing</th>
       <td>
-        Covered by the <a href="https://docs.microsoft.com/en-us/openspecs/dev_center/ms-devcentlp/1c24c7c8-28b0-4ce1-a47d-95fe1ff504bc">Microsoft Open Specification Promise</a>;
+        Covered by the <a href="https://docs.microsoft.com/openspecs/dev_center/ms-devcentlp/1c24c7c8-28b0-4ce1-a47d-95fe1ff504bc">Microsoft Open Specification Promise</a>;
         while Microsoft holds patents against BMP, they have published a promise not to assert its patent rights as long as specific conditions are met.
         This is not the same as a license, however. BMP is included under the Windows Metafile Format (<code>.wmf</code>).
       </td>

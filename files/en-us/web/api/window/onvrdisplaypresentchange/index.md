@@ -3,7 +3,6 @@ title: Window.onvrdisplaypresentchange
 slug: Web/API/Window/onvrdisplaypresentchange
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - VR

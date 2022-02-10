@@ -80,8 +80,8 @@ This difference really becomes apparent when you get to how the content is actua
 Simple descriptions basically just involve usage of `aria-description` on an element to provide a description that can’t be gotten from the element’s text alone. As an example, let’s say you have a poll/voting UI widget that shows numbers of votes, but you want to summarize the purpose of the widget in a clear description because the UI does not make it clear:
 
 ```html
-<section aria-description="Choose your favourite fruit — the fruit with the highest number of votes will be added to the lunch options next week.">
-  <p>Pick your favourite fruit:</p>
+<section aria-description="Choose your favorite fruit — the fruit with the highest number of votes will be added to the lunch options next week.">
+  <p>Pick your favorite fruit:</p>
   <form>
     <ul>
       <li><label>Apple: <input type="radio" name="fruit" value="apple"></label></li>
@@ -95,7 +95,7 @@ Simple descriptions basically just involve usage of `aria-description` on an ele
 If the descriptive text does appear in the UI, you can link the description to the widget using `aria-describedby`, like so:
 
 ```html
-<p id="fruit-desc">Choose your favourite fruit — the fruit with the highest number of votes will be added to the lunch options next week.</p>
+<p id="fruit-desc">Choose your favorite fruit — the fruit with the highest number of votes will be added to the lunch options next week.</p>
 
 <section aria-describedby="fruit-desc">
   <form>

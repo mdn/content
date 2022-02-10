@@ -3,7 +3,7 @@ title: VRPose.linearAcceleration
 slug: Web/API/VRPose/linearAcceleration
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -21,13 +21,7 @@ The **`linearAcceleration`** read-only property of the {{domxref("VRPose")}} int
 
 In other words, the current acceleration of the sensor, along the `x`, `y`, and `z` axes.
 
-## Syntax
-
-```js
-var myLinearAcceleration = VRPose.linearAcceleration;
-```
-
-### Value
+## Value
 
 A {{jsxref("Float32Array")}}, or `null` if the VR sensor is not able to provide linear acceleration data.
 

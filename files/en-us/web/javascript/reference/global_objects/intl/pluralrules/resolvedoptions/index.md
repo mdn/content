@@ -39,7 +39,7 @@ The resulting object has the following properties:
     the key-value pairs that were requested and are supported for this locale are
     included in `locale`.
 - `pluralCategories`
-  - : An {{jsxref("Array")}} of plural categories used by the given locale, seleced from
+  - : An {{jsxref("Array")}} of plural categories used by the given locale, selected from
     the list "`zero`", "`one`", "`two`",
     "`few`", "`many`" and "`other`".
 - `type`

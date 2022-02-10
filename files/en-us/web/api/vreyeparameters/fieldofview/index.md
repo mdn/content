@@ -4,7 +4,6 @@ slug: Web/API/VREyeParameters/fieldOfView
 tags:
   - API
   - Deprecated
-  - Experimental
   - Property
   - Reference
   - VR
@@ -20,13 +19,7 @@ The **`fieldOfView`** read-only property of the {{domxref("VREyeParameters")}} i
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Syntax
-
-```js
-var myFOV = eyeParametersInstance.fieldOfView;
-```
-
-### Value
+## Value
 
 A {{domxref("VRFieldOfView")}} object.
 

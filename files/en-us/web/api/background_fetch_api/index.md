@@ -6,8 +6,10 @@ tags:
   - Overview
   - Reference
   - Background Fetch API
+  - Experimental
+browser-compat: api.BackgroundFetchManager
 ---
-{{DefaultAPISidebar("Background Fetch API")}}
+{{DefaultAPISidebar("Background Fetch API")}} {{SeeCompatTable}}
 
 The **Background Fetch API** provides a method for managing downloads that may take a significant amount of time such as movies, audio files, and software.
 
@@ -15,7 +17,7 @@ The **Background Fetch API** provides a method for managing downloads that may t
 
 When a web application requires the user to download large files, this often presents a problem in that the user needs to stay connected to the page for the download to complete. If they lose connectivity, close the tab or navigate away from the page the download stops.
 
-The {{domxref("Background Sync API")}} provides a way for service workers to defer processing until a user is connected; however it can't be used for long running tasks such as downloading a large file. Background Sync requires that the service worker stays alive until the fetch is completed, and to conserve battery life and to prevent unwanted tasks happening in the background the browser will at some point terminate the task.
+The {{domxref("Background Synchronization API")}} provides a way for service workers to defer processing until a user is connected; however it can't be used for long running tasks such as downloading a large file. Background Sync requires that the service worker stays alive until the fetch is completed, and to conserve battery life and to prevent unwanted tasks happening in the background the browser will at some point terminate the task.
 
 The Background Fetch API solves this problem. It creates a way for a web developer to tell the browser to perform some fetches in the background, for example when the user clicks a button to download a video file. The browser then performs the fetches in a user-visible way, displaying progress to the user and giving them a method to cancel the download. Once the download is complete the browser then opens the service worker, at which point your application can do something with the response if required.
 
@@ -70,6 +72,10 @@ You can find a demo application which implements Background Fetch [here](https:/
 | Specification                                                |
 | ------------------------------------------------------------ |
 | [Background Fetch](https://wicg.github.io/background-fetch/) |
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

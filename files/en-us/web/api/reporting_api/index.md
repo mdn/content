@@ -126,7 +126,7 @@ This causes a deprecation report to be generated; because of the event handler w
 
 ## Browser compatibility
 
-Support is at an early stage right now. Firefox supports the JavaScript API and the `Report-To` header behind prefs:
+Support is at an early stage right now. Firefox supports the JavaScript API and the `Report-To` header behind preferences:
 
 - JavaScript API: `dom.reporting.enabled` (enabled in nightly only)
 - HTTP header: `dom.reporting.header.enabled`

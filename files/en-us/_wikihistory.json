@@ -26155,13 +26155,6 @@
       "fscholz"
     ]
   },
-  "Web/API/AbortSignal/onabort": {
-    "modified": "2020-10-29T06:23:31.502Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz"
-    ]
-  },
   "Web/API/AbsoluteOrientationSensor": {
     "modified": "2020-10-15T22:08:42.127Z",
     "contributors": [
@@ -76770,118 +76763,10 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/SpeechRecognition/onaudioend": {
-    "modified": "2020-10-15T21:40:17.489Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "lucian95",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/SpeechRecognition/onaudiostart": {
-    "modified": "2020-10-15T21:40:18.350Z",
-    "contributors": [
-      "sideshowbarker",
-      "lucian95",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/SpeechRecognition/onend": {
-    "modified": "2020-10-15T21:40:17.597Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "lucian95",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/SpeechRecognition/onerror": {
-    "modified": "2020-10-15T21:40:17.074Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "lucian95",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/SpeechRecognition/onnomatch": {
-    "modified": "2020-10-15T21:40:17.819Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "lucian95",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/SpeechRecognition/onresult": {
-    "modified": "2020-10-15T21:40:18.025Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "lucian95",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/SpeechRecognition/onsoundend": {
-    "modified": "2020-10-15T21:40:18.685Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "lucian95",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/SpeechRecognition/onsoundstart": {
-    "modified": "2020-10-15T21:40:19.100Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "lucian95",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/SpeechRecognition/onspeechend": {
-    "modified": "2020-10-15T21:40:18.784Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "lucian95",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/SpeechRecognition/onspeechstart": {
-    "modified": "2020-10-15T21:40:17.803Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "lucian95",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/SpeechRecognition/onstart": {
-    "modified": "2020-10-15T21:40:19.751Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "lucian95",
-      "chrisdavidmills"
-    ]
-  },
   "Web/API/SpeechRecognition/result_event": {
     "modified": "2020-10-15T21:40:18.165Z",
     "contributors": [
       "fscholz",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/SpeechRecognition/serviceURI": {
-    "modified": "2020-10-15T21:40:14.773Z",
-    "contributors": [
-      "sideshowbarker",
-      "wortwart",
-      "lucian95",
-      "jpmedley",
       "chrisdavidmills"
     ]
   },
@@ -77132,19 +77017,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/SpeechSynthesis/onvoiceschanged": {
-    "modified": "2020-10-15T21:40:36.474Z",
-    "contributors": [
-      "sideshowbarker",
-      "Konrud",
-      "fscholz",
-      "lucian95",
-      "abbycar",
-      "tomayac",
-      "chrisdavidmills",
-      "dev.mnr.j"
-    ]
-  },
   "Web/API/SpeechSynthesis/pause": {
     "modified": "2020-10-15T21:40:35.999Z",
     "contributors": [
@@ -77330,72 +77202,6 @@
       "ShaneHudson",
       "fscholz",
       "erikadoyle",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/SpeechSynthesisUtterance/onboundary": {
-    "modified": "2020-10-15T21:40:41.308Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "abbycar",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/SpeechSynthesisUtterance/onend": {
-    "modified": "2020-10-15T21:40:41.445Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "connorshea",
-      "abbycar",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/SpeechSynthesisUtterance/onerror": {
-    "modified": "2020-10-15T21:40:43.379Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "abbycar",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/SpeechSynthesisUtterance/onmark": {
-    "modified": "2020-10-15T21:40:43.313Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "connorshea",
-      "abbycar",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/SpeechSynthesisUtterance/onpause": {
-    "modified": "2020-10-15T21:40:43.681Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "abbycar",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/SpeechSynthesisUtterance/onresume": {
-    "modified": "2020-10-15T21:40:43.667Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "abbycar",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/SpeechSynthesisUtterance/onstart": {
-    "modified": "2020-10-15T21:40:43.783Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "connorshea",
-      "abbycar",
       "chrisdavidmills"
     ]
   },

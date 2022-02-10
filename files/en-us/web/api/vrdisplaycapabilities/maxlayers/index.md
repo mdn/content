@@ -3,7 +3,7 @@ title: VRDisplayCapabilities.maxLayers
 slug: Web/API/VRDisplayCapabilities/maxLayers
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -19,13 +19,7 @@ The **`maxLayers`** read-only property of the {{domxref("VRDisplayCapabilities")
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Syntax
-
-```js
-var maximumLayers = vrDisplayCapabilitiesInstance.maxLayers;
-```
-
-### Value
+## Value
 
 A number, which must be 1 if {{domxref("VRDisplayCapabilities.canPresent")}} is `true`, or 0 otherwise.
 

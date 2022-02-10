@@ -47,11 +47,11 @@ The `feMergeNode` takes the result of another filter to be processed by its pare
 
 ### Global attributes
 
-* [Core attributes](/en-US/docs/Web/SVG/Attribute#core)
+- [Core attributes](/en-US/docs/Web/SVG/Attribute#core)
 
 ### Specific attributes
 
-* {{ SVGAttr("in") }}
+- {{ SVGAttr("in") }}
 
 ## DOM Interface
 
@@ -67,10 +67,10 @@ This element implements the [`SVGFEMergeNodeElement`](/en-US/docs/DOM/SVGFEMerge
 
 ## See also
 
-* {{ SVGElement("filter") }}
-* {{ SVGElement("animate") }}
-* {{ SVGElement("set") }}
-* {{ SVGElement("feMerge") }}
-* [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)
+- {{ SVGElement("filter") }}
+- {{ SVGElement("animate") }}
+- {{ SVGElement("set") }}
+- {{ SVGElement("feMerge") }}
+- [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)
 
 {{SVGRef}}

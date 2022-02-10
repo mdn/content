@@ -11,32 +11,19 @@ browser-compat: api.SpeechRecognition.soundend_event
 
 The **`soundend`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is fired when any sound — recognizable speech or not — has stopped being detected.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/SpeechRecognition/onsoundend"
-            >onsoundend</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('soundend', event => { })
+
+onsoundend = event => { }
+```
+
+## Event type
+
+A generic {{DOMxRef("Event")}} with no added properties.
 
 ## Examples
 
@@ -50,7 +37,7 @@ recognition.addEventListener('soundend', function(event) {
 });
 ```
 
-Or use the [`onsoundend`](/en-US/docs/Web/API/SpeechRecognition/onsoundend) event handler property:
+Or use the `onsoundend` event handler property:
 
 ```js
 recognition.onsoundend = function(event) {

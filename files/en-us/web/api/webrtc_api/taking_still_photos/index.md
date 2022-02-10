@@ -24,7 +24,7 @@ You can also jump straight to the [Demo](#demo) if you like.
 
 ## The HTML markup
 
-[Our HTML interface](#HTML) has two main operational sections: the stream and capture panel and the presentation panel. Each of these is presented side-by-side in its own {{HTMLElement("div")}} to facilitate styling and control.
+[Our HTML interface](#html) has two main operational sections: the stream and capture panel and the presentation panel. Each of these is presented side-by-side in its own {{HTMLElement("div")}} to facilitate styling and control.
 
 The first panel on the left contains two components: a {{HTMLElement("video")}} element, which will receive the stream from WebRTC, and a {{HTMLElement("button")}} the user clicks to capture a video frame.
 
@@ -281,6 +281,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
 .output {
   width: 340px;
   display:inline-block;
+  vertical-align: top;
 }
 
 #startbutton {
@@ -328,7 +329,23 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
   var photo = null;
   var startbutton = null;
 
+  function showViewLiveResultButton() {
+    if (window.self !== window.top) {
+      // Ensure that if our document is in a frame, we get the user
+      // to first open it in its own tab or window. Otherwise, it
+      // won’t be able to request permission for camera access.
+      document.querySelector(".contentarea").remove();
+      const button = document.createElement("button");
+      button.textContent = "View live result of the example code above";
+      document.body.append(button);
+      button.addEventListener('click', () => window.open(location.href));
+      return true;
+    }
+    return false;
+  }
+
   function startup() {
+    if (showViewLiveResultButton()) { return; }
     video = document.getElementById('video');
     canvas = document.getElementById('canvas');
     photo = document.getElementById('photo');
@@ -411,7 +428,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
 
 ### Result
 
-{{EmbedLiveSample('Demo', 700, 500)}}
+{{EmbedLiveSample('Demo', '100%', 30)}}
 
 ## Fun with filters
 
@@ -425,7 +442,7 @@ You can, if needed, restrict the set of permitted video sources to a specific de
 
 ## See also
 
-- [Sample code on Github](https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill)
+- [Sample code on GitHub](https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill)
 - {{domxref("MediaDevices.getUserMedia")}}
 - {{SectionOnPage("/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images", "Using frames from a video")}}
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}

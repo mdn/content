@@ -3,7 +3,7 @@ title: VRPose.angularVelocity
 slug: Web/API/VRPose/angularVelocity
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -21,13 +21,7 @@ The **`angularVelocity`** read-only property of the {{domxref("VRPose")}} interf
 
 In other words, the current velocity at which the sensor is rotating around the `x`, `y`, and `z` axes.
 
-## Syntax
-
-```js
-var myAngularVelocity = VRPose.angularVelocity;
-```
-
-### Value
+## Value
 
 A {{jsxref("Float32Array")}}, or `null` if the VR sensor is not able to provide angular velocity information.
 

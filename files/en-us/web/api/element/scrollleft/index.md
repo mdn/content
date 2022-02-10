@@ -102,6 +102,6 @@ button.onclick = function () {
 ## See also
 
 - [MSDN's Measuring Element
-  Dimension and Location](<https://msdn.microsoft.com/en-us/library/hh781509(v=vs.85).aspx> "MSDN Measuring Element Dimension and Location")
+  Dimension and Location](<https://msdn.microsoft.com/library/hh781509(v=vs.85).aspx> "MSDN Measuring Element Dimension and Location")
 - {{domxref("Element.scrollTop")}}
 - {{domxref("Element.scrollTo()")}}

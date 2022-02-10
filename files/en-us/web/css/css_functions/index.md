@@ -181,7 +181,7 @@ These functions may be used wherever an {{cssxref("&lt;image&gt;")}} is valid as
 - {{cssxref("gradient/conic-gradient()", "conic-gradient()")}}
   - : Conic gradients transition colors progressively around a circle.
 - {{cssxref("image/image()","image()")}} {{Experimental_Inline}}
-  - : Defines an {{cssxref("&lt;image&gt;")}} in a similar fashion to the {{cssxref("url()")}} function, but with added functionality including specifying the image's directionality, specifying fallback images for when the preferred image is not supported
+  - : Defines an {{cssxref("&lt;image&gt;")}} in a similar fashion to the {{cssxref("url()")}} function, but with added functionality including specifying the image's directionality and fallback images for when the preferred image is not supported.
 - {{cssxref("image/image-set()","image-set()")}} {{Experimental_Inline}}
   - : A method of letting the browser pick the most appropriate CSS image from a given set, primarily for high pixel density screens.
 - {{cssxref("gradient/linear-gradient()","linear-gradient()")}}
