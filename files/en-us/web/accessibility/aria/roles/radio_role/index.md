@@ -85,8 +85,6 @@ If any of the radio roles in a group has `aria-required="true"` set, it is as if
       - : The radio is checked.
     - `false`
       - : The radio is not checked.
-    - `mixed`
-      - : The radio is mixed (neither checked nor unchecked).
 
 - [`tabindex="0"`](/en-US/docs/Web/HTML/Global_attributes/tabindex)
   - : Used to make it focusable so the assistive technology user can tab to it and start reading right away.
