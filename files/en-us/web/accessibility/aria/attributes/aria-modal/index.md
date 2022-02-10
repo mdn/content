@@ -19,7 +19,7 @@ Setting `aria-modal="true"`on `dialog` and `alertdialog` containers indicates th
 
 Modal dialogs are when content is displayed and the user's interaction is limited to only that section until it is dismissed. 
 
-When creating modal dialogs, `aria-modal="true"` tells assistive technologies that the windows underneath the current dialog are not exposed or available for interaction; that they are inert. User navigation is limited to the modal elements itself. 
+When creating modal dialogs, `aria-modal="true"` tells assistive technologies that the windows underneath the current dialog are not part of the modal content.
 
 When a modal element is displayed, focus is placed in the modal. Assistive technology (<abbr>AT</abbr>) navigates the modal's content (unless focus has explicitly been set elsewhere). Focus is essentialled "trapped" inside the modal when it's visible, until is is dismissed. The `aria-modal` attribute helps AT communicate the bounds of the modal and distinguishes it from the rest of the page's content.
 
