@@ -61,4 +61,3 @@ animation.oncancel = event => { animation.effect.target.remove(); };
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
 - {{domxref("Animation")}}
-- The {{event("cancel")}} event
