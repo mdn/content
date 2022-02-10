@@ -7097,6 +7097,9 @@
 /en-US/docs/Web/API/AnalyserNode.minDecibels	/en-US/docs/Web/API/AnalyserNode/minDecibels
 /en-US/docs/Web/API/AnalyserNode.smoothingTimeConstant	/en-US/docs/Web/API/AnalyserNode/smoothingTimeConstant
 /en-US/docs/Web/API/Animation/Animation.Animation()	/en-US/docs/Web/API/Animation/Animation
+/en-US/docs/Web/API/Animation/oncancel	/en-US/docs/Web/API/Animation/cancel_event
+/en-US/docs/Web/API/Animation/onfinish	/en-US/docs/Web/API/Animation/finish_event
+/en-US/docs/Web/API/Animation/onremove	/en-US/docs/Web/API/Animation/remove_event
 /en-US/docs/Web/API/AnimationEffect/timing	/en-US/docs/Web/API/AnimationEffect/getTiming
 /en-US/docs/Web/API/AnimationEffectReadOnly	/en-US/docs/Web/API/AnimationEffect
 /en-US/docs/Web/API/AnimationEffectReadOnly/getComputedTiming	/en-US/docs/Web/API/AnimationEffect/getComputedTiming

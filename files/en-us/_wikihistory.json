@@ -26588,6 +26588,19 @@
       "rachelnabors"
     ]
   },
+  "Web/API/Animation/cancel_event": {
+    "modified": "2020-10-15T21:46:14.542Z",
+    "contributors": [
+      "mfuji09",
+      "fscholz",
+      "jpmedley",
+      "birtles",
+      "Sheppy",
+      "chrisdavidmills",
+      "PushpitaPikuDey",
+      "rachelnabors"
+    ]
+  },
   "Web/API/Animation/commitStyles": {
     "modified": "2020-10-15T22:28:57.736Z",
     "contributors": [
@@ -26632,6 +26645,17 @@
       "kscarfone"
     ]
   },
+  "Web/API/Animation/finish_event": {
+    "modified": "2020-10-15T21:46:14.563Z",
+    "contributors": [
+      "fscholz",
+      "jpmedley",
+      "birtles",
+      "Sheppy",
+      "chrisdavidmills",
+      "rachelnabors"
+    ]
+  },
   "Web/API/Animation/finished": {
     "modified": "2020-10-15T21:46:03.836Z",
     "contributors": [
@@ -26651,36 +26675,6 @@
       "Sheppy",
       "chrisdavidmills",
       "rachelnabors"
-    ]
-  },
-  "Web/API/Animation/oncancel": {
-    "modified": "2020-10-15T21:46:14.542Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "jpmedley",
-      "birtles",
-      "Sheppy",
-      "chrisdavidmills",
-      "PushpitaPikuDey",
-      "rachelnabors"
-    ]
-  },
-  "Web/API/Animation/onfinish": {
-    "modified": "2020-10-15T21:46:14.563Z",
-    "contributors": [
-      "fscholz",
-      "jpmedley",
-      "birtles",
-      "Sheppy",
-      "chrisdavidmills",
-      "rachelnabors"
-    ]
-  },
-  "Web/API/Animation/onremove": {
-    "modified": "2020-10-15T22:28:59.950Z",
-    "contributors": [
-      "chrisdavidmills"
     ]
   },
   "Web/API/Animation/pause": {
@@ -26760,6 +26754,12 @@
       "birtles",
       "chrisdavidmills",
       "rachelnabors"
+    ]
+  },
+  "Web/API/Animation/remove_event": {
+    "modified": "2020-10-15T22:28:59.950Z",
+    "contributors": [
+      "chrisdavidmills"
     ]
   },
   "Web/API/Animation/replaceState": {

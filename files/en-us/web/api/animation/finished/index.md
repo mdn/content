@@ -4,7 +4,6 @@ slug: Web/API/Animation/finished
 tags:
   - API
   - Animation
-  - Experimental
   - Property
   - Reference
   - Web Animations
@@ -12,7 +11,7 @@ tags:
   - web animations api
 browser-compat: api.Animation.finished
 ---
-{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
+{{ APIRef("Web Animations") }}
 
 The **`Animation.finished`** read-only property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns a {{jsxref("Promise")}} which resolves once the animation has finished playing.
 
