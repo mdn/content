@@ -53,7 +53,7 @@ const asyncIterable = {
         return Promise.resolve({ done: true });
       },
       return() {
-        // return will be called if the consumer called `break` or `return` early in the loop.
+        // return will be called if the consumer called 'break' or 'return' early in the loop.
         return { done: true }
       }
     };
