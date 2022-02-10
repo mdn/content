@@ -10,16 +10,19 @@ tags:
   - Reference
 ---
 
-The `aria-modal` attribute indicates whether an element is modal when displayed. When an element is modal, navigation is limited to the modal itself and the background (the ancestors and siblings of the modal) is hidden.
-
+The `aria-modal` attribute indicates whether an element is modal when displayed. 
 
 ## Description
 
-Setting `aria-modal="true"`on `dialog` and `alertdialog` containers indicates the presence of a "modal" element, letting the user know the ability to interact with, or access other content on the page requires the modal dialog to be closed or otherwise lose focus. 
+A section of content is "modal" means navigation is limited to the area itself and the background (the ancestors and siblings of the modal) is hidden. Setting `aria-modal="true"` on [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) and [`alertdialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role) containers indicates the presence of a "modal" element to users of assistive technology, but does not actually make the element modal. The features that make the element actually modal must be implemented by the developer. 
 
-Modal dialogs are when content is displayed and the user's interaction is limited to only that section until it is dismissed. 
+> **Note:** ARIA only modifies the accessibility tree, modifying how assistive technology presents the content to your users. ARIA doesn't change anything about an element's function or behavior. To create a modal effect you must use JavaScript to manage behavior, focus, and ARIA states.
 
-When creating modal dialogs, `aria-modal="true"` tells assistive technologies that the windows underneath the current dialog are not part of the modal content.
+Relevant only on `dialog` and `alertdialog` containers, setting `aria-modal="true"` tells assistive technologies to  let the user know the ability to interact with, or access other content on the page requires the modal dialog to be closed or otherwise lose focus.
+
+Modal dialogs are when content is displayed and the user's interaction is limited to only that section until it is dismissed.
+
+When creating modal dialogs, aria-modal="true" tells assistive technologies that the windows underneath the current dialog are not part of the modal content.
 
 When a modal element is displayed, focus should be placed in the modal. Focus needs to be "trapped" inside the modal when it is visible, until is is dismissed. Assistive technology (<abbr>AT</abbr>) can then navigate the modal's content and understand the scope of the modal's content. `aria-modal` attribute helps AT communicate the bounds of the modal and distinguishes it from the rest of the page's content. When dismissed, focus should return to the element that triggered the modal.
 
