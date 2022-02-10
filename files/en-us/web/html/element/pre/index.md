@@ -95,7 +95,7 @@ A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}}
 ### Example
 
 ```html
-<figure role="img" aria-labelledby="cow-caption">
+<figure aria-labelledby="cow-caption">
   <pre>
       ___________________________
   &lt; I'm an expert in my field. &gt;
