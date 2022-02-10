@@ -30,7 +30,7 @@ Ensure the modal is controllable using only its descendant elements. If a modal 
 
 When a modal element is displayed, authors **should** mark all other contents as inert (such as "inert subtrees" in HTML). There is an [`inert`](/en-US/docs/Web/API/HTMLElement/inert) attribute that, when supported, will be a boolean attribute that indicates, by its presence, that the element and all its shadow-including descendants is to be made inert. Until `inert` is fully supported, all other content should be [made inert using JavaScript](https://whistlr.info/2021/inert/).
 
-When supported, inluding `aria-modal="true"` on a [`dialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) or [`alertdialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role), removes the requirement of putting [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) on background content as the `aria-modal` informs assistive technologies that content outside a dialog is inert. Setting `aria-hidden` on all content outside a dialog to make it inert for AT users is still an option, but no longer required. 
+When supported, inluding `aria-modal="true"` on a [`dialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) or [`alertdialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role), removes the requirement of putting [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) on background content as the `aria-modal` informs assistive technologies that content outside a dialog is inert.  
 
 If a dialog is not modal -- there is no inert background and focus isn't confined to the dialog -- either include `aria-modal="false"` or omit the attribute altogether. 
 
