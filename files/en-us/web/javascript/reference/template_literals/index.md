@@ -272,7 +272,7 @@ latex`\unicode`
 
 Tagged templates should allow the embedding of languages (for example [DSLs](https://en.wikipedia.org/wiki/Domain-specific_language), or [LaTeX](https://en.wikipedia.org/wiki/LaTeX)), where other escapes sequences
 are common. The ECMAScript proposal [Template Literal
-Revision](https://tc39.github.io/proposal-template-literal-revision/) (Stage 4, to be integrated in the ECMAScript 2018 standard) removes the
+Revision](https://tc39.github.io/proposal-template-literal-revision/) (integrated in the ECMAScript 2018 standard) removed the
 syntax restriction of ECMAScript escape sequences from tagged templates.
 
 However, illegal escape sequences must still be represented in the “cooked”

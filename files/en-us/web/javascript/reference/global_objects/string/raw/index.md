@@ -15,8 +15,7 @@ browser-compat: javascript.builtins.String.raw
 The static **`String.raw()`** method
 is a tag function of [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals).
 This is _similar_ to the `r` prefix in Python, or the `@`
-prefix in C# for string literals. (But it is not _identical_; see explanations
-in [this issue](https://bugs.chromium.org/p/v8/issues/detail?id=5016).)
+prefix in C# for string literals.
 It's used to get the raw string form of template literals, that is, substitutions (e.g.
 `${foo}`) are processed, but escapes (e.g. `\n`) are not.
 
