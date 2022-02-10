@@ -14,9 +14,9 @@ The `radiogroup` role is a group of `radio` buttons.
 
 Radio groups are collections describing a set of related [`radio`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role) options. A `radiogroup` is a type of [`select`](/en-US/docs/Web/Accessibility/ARIA/Roles/select_role) list that can only have a single entry, or `radio`, checked at any one time. 
 
-When using HTML's native input radio button, [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio), the radio group is defined by giving each of radio buttons in the group the same [`name`](/en-US/docs/Web/HTML/Element/input#attr-name). Once a radio group is established, selecting any radio button in that group automatically deselects any currently-selected radio button in the same group.
+When using HTML's native input radio button, [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio), the radio group is defined by giving each of input radio buttons in the group the same [`name`](/en-US/docs/Web/HTML/Element/input#attr-name). Once a group of same-named input radio buttons is established, selecting any input radio button in that group automatically deselects any currently-selected input radio button in the same group.
 
-It is recommended to create radio groups by using same-named HTML radio buttons, but, if you must use ARIA roles and attributes instead of semantic HTML form controls, custom buttons can and should act like native HTML radio input buttons. 
+It is recommended to create radio groups by using same-named HTML input radio buttons, but, if you must use ARIA roles and attributes instead of semantic HTML form controls, custom `radio` buttons can and should act like native HTML radio input buttons. 
 
 When using non-semantic elements as radio buttons, you must ensure your users can only select one radio button from the group at a time. When one item in the group is checked, having their [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute set to `true`, the previously checked item becomes unchecked, with its `aria-checked` attribute becoming `false`. The `aria-checked` attribute is set on the associated `radio` roles, not on the `radiogroup` itself.
 
