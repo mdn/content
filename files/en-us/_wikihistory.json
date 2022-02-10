@@ -90313,36 +90313,6 @@
       "MashKao"
     ]
   },
-  "Web/API/XMLHttpRequest/onreadystatechange": {
-    "modified": "2020-10-15T21:36:57.266Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "Konservator-mn",
-      "anonyco",
-      "ikarasz",
-      "vapier",
-      "SteveVS",
-      "ExE-Boss",
-      "nolcay",
-      "erikadoyle",
-      "Ende93",
-      "david_ross",
-      "merksam",
-      "kaashan",
-      "sean-roberts",
-      "afrianjunior",
-      "MashKao",
-      ".",
-      "jsx",
-      "maybe",
-      "akinjide",
-      "teoli",
-      "imme_emosol",
-      "JiangSheng",
-      "mlcheng"
-    ]
-  },
   "Web/API/XMLHttpRequest/open": {
     "modified": "2020-10-15T21:40:00.147Z",
     "contributors": [
@@ -90399,6 +90369,36 @@
       "erikadoyle",
       "jsx",
       "jcanepa"
+    ]
+  },
+  "Web/API/XMLHttpRequest/readystatechange_event": {
+    "modified": "2020-10-15T21:36:57.266Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mfuji09",
+      "Konservator-mn",
+      "anonyco",
+      "ikarasz",
+      "vapier",
+      "SteveVS",
+      "ExE-Boss",
+      "nolcay",
+      "erikadoyle",
+      "Ende93",
+      "david_ross",
+      "merksam",
+      "kaashan",
+      "sean-roberts",
+      "afrianjunior",
+      "MashKao",
+      ".",
+      "jsx",
+      "maybe",
+      "akinjide",
+      "teoli",
+      "imme_emosol",
+      "JiangSheng",
+      "mlcheng"
     ]
   },
   "Web/API/XMLHttpRequest/response": {
@@ -90603,66 +90603,6 @@
       "kosvrouvas",
       "RomitChaks",
       "kscarfone"
-    ]
-  },
-  "Web/API/XMLHttpRequestEventTarget/onabort": {
-    "modified": "2020-10-15T21:43:02.578Z",
-    "contributors": [
-      "ExE-Boss",
-      "erikadoyle",
-      "blainesch",
-      "teoli",
-      "rolfedh",
-      "Sheppy"
-    ]
-  },
-  "Web/API/XMLHttpRequestEventTarget/onerror": {
-    "modified": "2020-10-15T21:43:01.033Z",
-    "contributors": [
-      "ExE-Boss",
-      "erikadoyle",
-      "teoli",
-      "rolfedh",
-      "Sheppy"
-    ]
-  },
-  "Web/API/XMLHttpRequestEventTarget/onload": {
-    "modified": "2020-10-15T21:43:03.505Z",
-    "contributors": [
-      "ExE-Boss",
-      "ChrisBrownie55",
-      "CornerKitten",
-      "direvus",
-      "ferhtgoldaraz",
-      "erikadoyle",
-      "teoli",
-      "rolfedh",
-      "Sheppy"
-    ]
-  },
-  "Web/API/XMLHttpRequestEventTarget/onloadstart": {
-    "modified": "2020-10-15T21:43:01.513Z",
-    "contributors": [
-      "rossisi",
-      "ExE-Boss",
-      "erikadoyle",
-      "teoli",
-      "rolfedh",
-      "Sheppy"
-    ]
-  },
-  "Web/API/XMLHttpRequestEventTarget/onprogress": {
-    "modified": "2020-10-15T21:45:23.450Z",
-    "contributors": [
-      "eltociear",
-      "ExE-Boss",
-      "sheeldotme",
-      "yan",
-      "erikadoyle",
-      "nekjine",
-      "donnapep",
-      "teoli",
-      "Taoja"
     ]
   },
   "Web/API/XMLSerializer": {
