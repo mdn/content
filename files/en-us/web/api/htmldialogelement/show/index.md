@@ -78,9 +78,9 @@ button.
         }
       }
 
-      // Update button opens a modal dialog
+      // Update button opens a modeless dialog
       updateButton.addEventListener('click', function() {
-        dialog.showModal();
+        dialog.show();
         openCheck(dialog);
       });
 
