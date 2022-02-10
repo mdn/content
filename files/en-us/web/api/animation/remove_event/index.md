@@ -17,7 +17,7 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 
 ```js
 addEventListener('remove', event => { })
-remove = event => { }
+onremove = event => { }
 ```
 
 ## Event type
