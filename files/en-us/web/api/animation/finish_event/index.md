@@ -47,7 +47,7 @@ _In addition to the properties lsited below, properties from the parent interfac
 ## Examples
 
 `Animation.onfinish` is used several times in the Alice in Web Animations API Land
-[Growing/Shrinking Alice Game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010).
+[Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010).
 Here is one instance where we add pointer events back to an element after
 its opacity animation has faded it in:
 
