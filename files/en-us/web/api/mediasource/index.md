@@ -37,15 +37,6 @@ The **`MediaSource`** interface of the [Media Source Extensions API](/en-US/docs
 - {{domxref("MediaSource.duration")}}
   - : Gets and sets the duration of the current media being presented.
 
-### Event handlers
-
-- {{domxref("MediaSource.onsourceclose")}}
-  - : The event handler for the `sourceclose` event.
-- {{domxref("MediaSource.onsourceended")}}
-  - : The event handler for the `sourceended` event.
-- {{domxref("MediaSource.onsourceopen")}}
-  - : The event handler for the `sourceopen` event.
-
 ## Methods
 
 _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
@@ -60,6 +51,15 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
   - : Removes the given {{domxref("SourceBuffer")}} from the {{domxref("MediaSource.sourceBuffers")}} list.
 - {{domxref("MediaSource.setLiveSeekableRange()")}}
   - : Sets the range that the user can seek to in the media element.
+
+### Events
+
+- {{domxref("MediaSource.sourceclose_event", "sourceclose")}}
+  - : Fired when the `MediaSource` instance is not attached to a media element anymore.
+- {{domxref("MediaSource.sourceended_event", "sourceended")}}
+  - : Fired when the `MediaSource` instance is still attached to a media element, but {{domxref("MediaSource.endOfStream", "endOfStream()")}} has been called.
+- {{domxref("MediaSource.sourceopen_event", "sourceopen")}}
+  - : Fired when the `MediaSource` instance has been opened by a media element and is ready for data to be appended to the {{domxref("SourceBuffer")}} objects in {{domxref("MediaSource.sourceBuffers", "sourceBuffers")}}.
 
 ## Static methods
 
