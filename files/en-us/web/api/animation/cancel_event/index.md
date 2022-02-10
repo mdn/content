@@ -22,10 +22,6 @@ addEventListener('cancel', event => { })
 oncancel = event => { }
 ```
 
-### Value
-
-A function to be executed when the animation is cancelled, or `null` if there is no {{event("cancel")}} event handler.
-
 ## Event type
 
 An {{domxref("AnimationPlaybackEvent")}}. Inherits from {{domxref("Event")}}.
