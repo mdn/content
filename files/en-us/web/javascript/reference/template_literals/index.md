@@ -52,7 +52,7 @@ curly braces (`${expression}`). The expressions in the
 placeholders and the text between the backticks (\` \`) get passed to a function.
 
 The default function just concatenates the parts into a single string. If there is an
-expression preceding the template literal (`tag` here), this is
+expression preceding the template literal, this is
 called a **tagged template**. In that case, the tag expression (usually
 a function) gets called with the template literal, which you can then manipulate before
 outputting.
