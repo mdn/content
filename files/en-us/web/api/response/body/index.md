@@ -16,7 +16,7 @@ The **`body`** read-only property of the {{domxref("Response")}} interface is a 
 
 ## Value
 
-A {{domxref("ReadableStream")}}.
+A {{domxref("ReadableStream")}}, or [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null) for any response that has no body.
 
 ## Example
 
