@@ -11,7 +11,7 @@ tags:
   - web animations api
 browser-compat: api.Animation.pause
 ---
-{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
+{{ APIRef("Web Animations") }}
 
 The **`pause()`** method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("Animation")}} interface suspends playback of the animation.
 

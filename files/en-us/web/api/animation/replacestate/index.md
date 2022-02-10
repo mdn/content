@@ -4,7 +4,6 @@ slug: Web/API/Animation/replaceState
 tags:
   - API
   - Animation
-  - Experimental
   - Property
   - Reference
   - replaceState
@@ -46,9 +45,7 @@ document.body.addEventListener('mousemove', evt => {
 
   //anim.persist()
 
-  anim.onremove = function() {
-    console.log('Animation removed');
-  }
+  anim.onremove = event => {console.log('Animation removed');}
 
   console.log(anim.replaceState);
 });
