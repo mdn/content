@@ -9,7 +9,7 @@ browser-compat: api.Animation.remove_event
 ---
 {{ APIRef("Web Animations") }}
 
-The **`remove`** event of the {{domxref("Animation")}} interface is fore when the animation is removed (i.e., put into an `active` replace state).
+The **`remove`** event of the {{domxref("Animation")}} interface fires when the animation is removed (i.e., put into an `active` replace state).
 
 ## Syntax
 
