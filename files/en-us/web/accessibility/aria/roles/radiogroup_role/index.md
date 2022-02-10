@@ -14,7 +14,7 @@ The `radiogroup` role is a group of radio buttons.
 
 Radio groups are collections of radio buttons; they describe a set of related options. A `radiogroup` is a type of [`select`](/en-US/docs/Web/Accessibility/ARIA/Roles/select_role) list that can only have a single entry, or [`radio`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role), checked at any one time. 
 
-When using HTML's native radio button, [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio),  the radio group is defined by giving each of radio buttons in the group the same [`name`](/en-US/docs/Web/HTML/Element/input#attr-name). Once a radio group is established, selecting any radio button in that group automatically deselects any currently-selected radio button in the same group.
+When using HTML's native radio button, [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio), the radio group is defined by giving each of radio buttons in the group the same [`name`](/en-US/docs/Web/HTML/Element/input#attr-name). Once a radio group is established, selecting any radio button in that group automatically deselects any currently-selected radio button in the same group.
 
 It is recommended to create radio groups by using same-named HTML radio buttons, but, if you must use ARIA roles and attributes instead of semantic HTML form controls, custom buttons can and should act like native HTML radio buttons. 
 
