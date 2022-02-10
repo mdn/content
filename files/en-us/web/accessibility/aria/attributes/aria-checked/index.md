@@ -1,6 +1,6 @@
 ---
 title: 'aria-checked'
-slug: web/Accessibility/ARIA/Attributes/aria-checked
+slug: Web/Accessibility/ARIA/Attributes/aria-checked
 tags: 
   - Accessibility
   - ARIA
