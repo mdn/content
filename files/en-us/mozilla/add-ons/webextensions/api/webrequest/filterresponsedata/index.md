@@ -46,7 +46,7 @@ This example shows a minimal implementation that passes through the stream data 
 ```js
 let filter = browser.webRequest.filterResponseData(details.requestId);
 filter.ondata = event => {
-  console.log(`filter.ondata received ${e.data.byteLength} bytes`);
+  console.log(`filter.ondata received ${event.data.byteLength} bytes`);
   filter.write(event.data);
 };
 filter.onstop = event => {
