@@ -7617,6 +7617,8 @@
 /en-US/docs/Web/API/Document/oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
 /en-US/docs/Web/API/Document/ondblclick	/en-US/docs/Web/API/GlobalEventHandlers/ondblclick
 /en-US/docs/Web/API/Document/onfocus	/en-US/docs/Web/API/GlobalEventHandlers/onfocus
+/en-US/docs/Web/API/Document/onfullscreenchange	/en-US/docs/Web/API/Document/fullscreenchange_event
+/en-US/docs/Web/API/Document/onfullscreenerror	/en-US/docs/Web/API/Document/fullscreenerror_event
 /en-US/docs/Web/API/Document/oninput	/en-US/docs/Web/API/GlobalEventHandlers/oninput
 /en-US/docs/Web/API/Document/onkeydown	/en-US/docs/Web/API/GlobalEventHandlers/onkeydown
 /en-US/docs/Web/API/Document/onkeypress	/en-US/docs/Web/API/GlobalEventHandlers/onkeypress
@@ -7903,8 +7905,8 @@
 /en-US/docs/Web/API/GlobalEventHandlers/dragexit_event	/en-US/docs/Web/API/Document/dragleave_event
 /en-US/docs/Web/API/GlobalEventHandlers/oncuechange	/en-US/docs/Web/API/TextTrack/cuechange_event
 /en-US/docs/Web/API/GlobalEventHandlers/ondragexit	/en-US/docs/Web/API/GlobalEventHandlers/ondragleave
-/en-US/docs/Web/API/GlobalEventHandlers/onmozfullscreenchange	/en-US/docs/Web/API/Document/onfullscreenchange
-/en-US/docs/Web/API/GlobalEventHandlers/onmozfullscreenerror	/en-US/docs/Web/API/Document/onfullscreenerror
+/en-US/docs/Web/API/GlobalEventHandlers/onmozfullscreenchange	/en-US/docs/Web/API/Document/fullscreenchange_event
+/en-US/docs/Web/API/GlobalEventHandlers/onmozfullscreenerror	/en-US/docs/Web/API/Document/fullscreenerror_event
 /en-US/docs/Web/API/GlobalEventHandlers/onpointerdown/drag	/en-US/docs/Web/API/GlobalEventHandlers/ondrag
 /en-US/docs/Web/API/GlobalFetch/GlobalFetch.fetch()	/en-US/docs/Web/API/fetch
 /en-US/docs/Web/API/GlobalFetch/fetch	/en-US/docs/Web/API/fetch

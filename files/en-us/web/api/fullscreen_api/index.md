@@ -58,13 +58,6 @@ _The Fullscreen API defines two events which can be used to detect when full-scr
 
 > **Note:** These event handler properties are _not_ available as HTML content attributes. In other words, you cannot specify event handlers for {{Event("fullscreenchange")}} and {{Event("fullscreenerror")}} in the HTML content. They must be added by JavaScript code.
 
-#### Event handlers on documents
-
-- {{DOMxRef("Document.onfullscreenchange")}}
-  - : An event handler for the {{Event("fullscreenchange")}} event that's bubbled up to the {{DOMxRef("Document")}} when any {{DOMxRef("Element")}} in that document is placed into full-screen mode, or exits full-screen mode.
-- {{DOMxRef("Document.onfullscreenerror")}}
-  - : An event handler for the {{Event("fullscreenerror")}} event that gets bubbled up to the {{DOMxRef("Document")}} when an error occurs while trying to enable or disable full-screen mode for any {{DOMxRef("Element")}} in that document.
-
 #### Event handlers on elements
 
 - {{DOMxRef("Element.onfullscreenchange")}}

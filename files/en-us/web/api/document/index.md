@@ -134,10 +134,6 @@ _The `Document` interface is extended with additional event handlers defined in 
   - : Represents the event handling code for the {{domxref("Document/copy_event", "copy")}} event.
 - {{DOMxRef("Document.oncut")}} {{Non-standard_Inline}}
   - : Represents the event handling code for the {{domxref("Document/cut_event", "cut")}} event.
-- {{DOMxRef("Document.onfullscreenchange")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Document/fullscreenchange_event", "fullscreenchange")}} event is raised.
-- {{DOMxRef("Document.onfullscreenerror")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Document/fullscreenerror_event", "fullscreenerror")}} event is raised.
 - {{DOMxRef("Document.onpaste")}} {{Non-standard_Inline}}
   - : Represents the event handling code for the {{domxref("Document/paste_event", "paste")}} event.
 - {{DOMxRef("Document.onreadystatechange")}}
@@ -394,7 +390,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{DOMxRef("Document/fullscreenchange_event", "fullscreenchange")}}
   - : Fired when the `Document` transitions into or out of [full-screen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
-    Also available via the {{DOMxRef("Document.onfullscreenchange", "onfullscreenchange")}} property.
 - [`fullscreenerror`](/en-US/docs/Web/API/Document/fullscreenerror_event)
   - : Fired if an error occurs while attempting to switch into or out of [full-screen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
     Also available via the {{DOMxRef("Document.onfullscreenerror", "onfullscreenerror")}} property.
