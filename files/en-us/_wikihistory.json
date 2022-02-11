@@ -38175,30 +38175,6 @@
       "Johnjbarton"
     ]
   },
-  "Web/API/Document/onfullscreenchange": {
-    "modified": "2020-10-15T21:46:43.611Z",
-    "contributors": [
-      "mfuji09",
-      "vasklund",
-      "Sheppy",
-      "fscholz",
-      "adyouri",
-      "jpmedley",
-      "SphinxKnight",
-      "sebastianross",
-      "teoli"
-    ]
-  },
-  "Web/API/Document/onfullscreenerror": {
-    "modified": "2020-10-15T21:46:44.196Z",
-    "contributors": [
-      "mfuji09",
-      "Sheppy",
-      "fscholz",
-      "jpmedley",
-      "teoli"
-    ]
-  },
   "Web/API/Document/onoffline": {
     "modified": "2019-03-23T23:14:56.082Z",
     "contributors": [
