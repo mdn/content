@@ -123,13 +123,13 @@ In JavaScript, arrays aren’t [primitives](/en-US/docs/Glossary/Primitive) but 
 
 ## Examples
 
-This section provides some examples of common array operations in JavaScript. All the examples use an array of strings, named `fruits`, which is created in the first example.
+This section provides some examples of common array operations in JavaScript.
 
 > **Note:** If you’re not yet familiar with array basics, consider first reading [JavaScript First Steps: Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays), which [explains what arrays are](/en-US/docs/Learn/JavaScript/First_steps/Arrays#what_is_an_array), and includes other examples of common array operations.
 
 ### Create an array
 
-This example shows two ways to create new array — first by using [array literal notation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array#array_literal_notation), and then by using the [`Array()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array) constructor.
+This example shows three ways to create new array: first using [array literal notation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array#array_literal_notation), then using the [`Array()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array) constructor, and finally using [`String.prototype.split()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) to build the array from a string.
 
 ```js
 // 'fruits' array created using array literal notation.
@@ -141,6 +141,22 @@ console.log(fruits.length);
 const fruits = new Array('Apple', 'Banana');
 console.log(fruits.length);
 // 2
+
+// 'fruits' array created using String.prototype.split().
+const fruits = 'Apple, Banana'.split(', ');
+console.log(fruits.length);
+// 2
+```
+
+### Create a string from an array
+
+This example uses the [`join()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join) method to create a string from the `fruits` array.
+
+```js
+const fruits = ['Apple', 'Banana'];
+const fruitsString = fruits.join(', ');
+console.log(fruitsString);
+// "Apple, Banana"
 ```
 
 ### Access an array item by its index
@@ -148,19 +164,21 @@ console.log(fruits.length);
 This example shows how to access items in the `fruits` array by specifying the index number of their position in the array.
 
 ```js
+const fruits = ['Apple', 'Banana'];
+
 // The index of an array’s first element is always 0.
-fruits[0] // Apple
+fruits[0]; // Apple
 
 // The index of an array’s second element is always 1.
-fruits[1] // Banana
+fruits[1]; // Banana
 
 // The index of an array’s last element is always one
 // less than the length of the array.
-fruits[fruits.length - 1] // Banana
+fruits[fruits.length - 1]; // Banana
 
 // Using a index number larger than the array’s length
 // returns 'undefined'.
-fruits[99] // undefined
+fruits[99]; // undefined
 ```
 
 ### Find the index of an item in an array
@@ -168,27 +186,50 @@ fruits[99] // undefined
 This example uses the [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) method to find the position (index) of the string "`Banana`" in the `fruits` array.
 
 ```js
+const fruits = ['Apple', 'Banana'];
 console.log(fruits.indexOf('Banana'));
 // 1
 ```
 
-### Append an item to an array
+### Check if an array contains a certain item
 
-This example uses the [`push()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) method to append a new string, "`Orange`" to the `fruits` array — changing the length of the array. The `forEach()` method returns the array’s new length, which gets assigned to the `newLength` variable.
+This example shows two ways to check if the `fruits` array contains "`Banana`" and "`Cherry`": first with the [`includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method, and then with the [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) method to test for an index value that’s not `-1`.
 
 ```js
-const newLength = fruits.push('Orange'); // ["Apple", "Banana", "Orange"]
+const fruits = ['Apple', 'Banana'];
+
+fruits.includes('Banana'); // true
+fruits.includes('Cherry'); // false
+
+// If indexOf() doesn’t return -1, the array contains the given item.
+fruits.indexOf('Banana') !== -1; // true
+fruits.indexOf('Cherry') !== -1; // false
+```
+
+### Append an item to an array
+
+This example uses the [`push()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) method to append a new string to the `fruits` array.
+
+```js
+const fruits = ['Apple', 'Banana'];
+const newLength = fruits.push('Orange');
+console.log(fruits);
+// ["Apple", "Banana", "Orange"]
 console.log(newLength);
 // 3
 ```
 
 ### Remove the last item from an array
 
-This example uses the [`pop()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) method to remove the last item ("`Orange`") from the `fruits` array.
+This example uses the [`pop()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) method to remove the last item from the `fruits` array.
 
 ```js
-// Remove 'Orange' from the end of 'fruits'.
-const last = fruits.pop(); // ["Apple", "Banana"]
+const fruits = ['Apple', 'Banana', 'Orange'];
+const removedItem = fruits.pop();
+console.log(fruits);
+// ["Apple", "Banana"]
+console.log(removedItem);
+// Orange
 ```
 
 > **Note:** `pop()` can only be used to remove the last item from an array. To remove multiple items from the end of an array, see the next example.
@@ -199,7 +240,22 @@ This example uses the [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_O
 
 ```js
 const fruits = ['Apple', 'Banana', 'Strawberry', 'Mango', 'Cherry'];
-const removedItems = fruits.splice(fruits.length - 3);
+const start = -3;
+const removedItems = fruits.splice(start);
+console.log(fruits);
+// ["Apple", "Banana"]
+console.log(removedItems);
+// ["Strawberry", "Mango", "Cherry"]
+```
+
+### Truncate an array down to just its first _N_ items
+
+This example uses the [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method to truncate the `fruits` array down to just its first 2 items.
+
+```js
+const fruits = ['Apple', 'Banana', 'Strawberry', 'Mango', 'Cherry'];
+const start = 2;
+const removedItems = fruits.splice(start);
 console.log(fruits);
 // ["Apple", "Banana"]
 console.log(removedItems);
@@ -208,35 +264,43 @@ console.log(removedItems);
 
 ### Remove the first item from an array
 
-This example uses the [`shift()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift) method to remove the first item ("`Apple`") from the `fruits` array.
+This example uses the [`shift()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift) method to remove the first item from the `fruits` array.
 
 ```js
-// Remove 'Apple' from the front of 'fruits'.
-const first = fruits.shift(); // ["Banana"]
+const fruits = ['Apple', 'Banana'];
+const removedItem = fruits.shift();
+console.log(fruits);
+// ["Banana"]
+console.log(removedItem);
+// Apple
 ```
 
 > **Note:** `shift()` can only be used to remove the first item from an array. To remove multiple items from the beginning of an array, see the next example.
 
 ### Remove multiple items from the beginning of an array
 
-This example uses the [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method to remove the first 4 items from the `fruits` array.
+This example uses the [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method to remove the first 3 items from the `fruits` array.
 
 ```js
-const fruits = ['Apple', 'Strawberry', 'Mango', 'Cherry', 'Banana'];
-const removedItems = fruits.splice(0, 4);
+const fruits = ['Apple', 'Strawberry', 'Cherry', 'Banana', 'Mango'];
+const start = 0;
+const deleteCount = 3;
+const removedItems = fruits.splice(start, deleteCount);
 console.log(fruits);
-// ["Banana"]
+// ["Banana", "Mango"]
 console.log(removedItems);
-// ["Apple", "Strawberry", "Mango", "Cherry"]
+// ["Apple", "Strawberry", "Cherry"]
 ```
 
 ### Add a new first item to an array
 
-This example uses the [`unshift()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift) method to add, at index `0`, a new item ("`Strawberry`") to the `fruits` array — making it the new first item in the array.
+This example uses the [`unshift()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift) method to add, at index `0`, a new item to the `fruits` array — making it the new first item in the array.
 
 ```js
-// Add 'Strawberry' to the front of 'fruits'.
-const newLength = fruits.unshift('Strawberry'); // ["Strawberry", "Banana"]
+const fruits = ['Banana', 'Mango'];
+const newLength = fruits.unshift('Strawberry');
+console.log(fruits);
+// ["Strawberry", "Banana", "Mango"]
 console.log(newLength);
 // 2
 ```
@@ -244,19 +308,15 @@ console.log(newLength);
 ### Remove a single item by index
 
 This example uses the [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method to remove the string "`Banana`" from the `fruits` array — by specifying the index position of "`Banana`".
-Removed elements (in this case "`Banana`"), are returned by the method in a new array.
 
 ```js
-// This is how to remove a single item.
-const removedItem = fruits.splice(fruits.indexOf('Banana'), 1);
-
+const fruits = ['Strawberry', 'Banana', 'Mango'];
+const start = fruits.indexOf('Banana');
+const deleteCount = 1;
+const removedItems = fruits.splice(start, deleteCount);
 console.log(fruits);
 // ["Strawberry", "Mango"]
-// So, 'fruits' has been changed in place.
-
-// fruits.splice(pos, 1) returns an array of the items
-// removed, which we assigned above to 'removedItem'.
-console.log(removedItem);
+console.log(removedItems);
 // ["Banana"]
 ```
 
@@ -266,35 +326,78 @@ This example uses the [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_O
 
 ```js
 const fruits = ['Apple', 'Banana', 'Strawberry', 'Mango'];
-
-let pos = 1
-let n = 2
-
-// This is how to remove multiple items: 'n' is the total
-// number of items to remove, starting at the index
-// position 'pos' and progressing toward the end of array.
-const removedItems = fruits.splice(pos, n);
-
+const start = 1;
+const deleteCount = 2;
+const removedItems = fruits.splice(start, deleteCount);
 console.log(fruits);
 // ["Apple", "Mango"]
-// So, 'fruits' has been changed in place.
-
-// fruits.splice(pos, 1) returns an array of the items
-// removed, which we assigned above to 'removedItems'.
-console.log(removedItems)
+console.log(removedItems);
 // ["Banana", "Strawberry"]
 ```
+
+### Replace multiple items in an array
+
+This example uses the [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method to replace the last 2 items in the `fruits` array with new items.
+
+```js
+const fruits = ['Apple', 'Banana', 'Strawberry'];
+const start = -2;
+const deleteCount = 2;
+const removedItems = fruits.splice(start, deleteCount, 'Mango', 'Cherry');
+console.log(fruits);
+// ["Apple", "Mango", "Cherry"]
+console.log(removedItems);
+// ["Banana", "Strawberry"]
+```
+
+### Iterate over an array
+
+This example uses a [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop to iterate over the `fruits` array, logging each item to the console.
+
+```js
+const fruits = ['Apple', 'Mango', 'Cherry'];
+for (const fruit of fruits) {
+  console.log(fruit);
+}
+// Apple
+// Mango
+// Cherry
+```
+
+But `for...of` is just one of many ways to iterate over any array; for more ways, see [Loops and iteration](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration), and see the documentation for the [`every()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every), [`filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), [`flatMap()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap), [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`reduce()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce), and [`reduceRight()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight) methods — and see the next example, which uses the [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) method.
 
 ### Call a function on each element in an array
 
 This example uses the [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) method to call a function on each element in the `fruits` array; the function causes each item to be logged to the console, along with the item’s index number.
 
 ```js
+const fruits = ['Apple', 'Mango', 'Cherry'];
 fruits.forEach(function(item, index, array) {
-  console.log(item, index)
-})
+  console.log(item, index);
+});
 // Apple 0
-// Banana 1
+// Mango 1
+// Cherry 2
+```
+
+### Merge multiple arrays together
+
+This example uses the [`concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) method to merge the `fruits` array with a `moreFruits` array, to produce a new `combinedFruits` array. Notice that `fruits` and `moreFruits` remain unchanged.
+
+```js
+const fruits = ['Apple', 'Banana', 'Strawberry'];
+const moreFruits = ['Mango', 'Cherry'];
+const combinedFruits = fruits.concat(moreFruits);
+console.log(combinedFruits);
+// ["Apple", "Banana", "Strawberry", "Mango", "Cherry"]
+
+// The 'fruits' array remains unchanged.
+console.log(fruits);
+// ["Apple", "Banana", "Strawberry"]
+
+// The 'moreFruits' array also remains unchanged.
+console.log(moreFruits);
+// ["Mango", "Cherry"]
 ```
 
 ### Copy an array
@@ -302,33 +405,36 @@ fruits.forEach(function(item, index, array) {
 This example shows three ways to create a new array from the existing `fruits` array: first by using [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), then by using the [`from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from) method, and then by using the [`slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) method.
 
 ```js
-let fruitsCopy
+const fruits = ['Strawberry', 'Mango'];
 
 // Create a copy using spread syntax.
-fruitsCopy = [...fruits]
+const fruitsCopy = [...fruits];
 // ["Strawberry", "Mango"]
 
 // Create a copy using the from() method.
-fruitsCopy = Array.from(fruits)
+const fruitsCopy = Array.from(fruits);
 // ["Strawberry", "Mango"]
 
 // Create a copy using the slice() method.
-fruitsCopy = fruits.slice()
+const fruitsCopy = fruits.slice();
 // ["Strawberry", "Mango"]
 ```
 
-All built-in array-copy operations ([spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from), [`Array.prototype.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), and [`Array.prototype.concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)) create [shallow copies](/en-US/docs/Glossary/Shallow_copy). If you instead want a [deep copy](/en-US/docs/Glossary/Shallow_copy) of an array, you can use {{jsxref("JSON.stringify()")}} to convert the array to a JSON string, and then {{jsxref("JSON.parse()")}} to convert the string back into a new array that’s completely independent from the original array.
+All built-in array-copy operations ([spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from), [`Array.prototype.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), and [`Array.prototype.concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)) create [shallow copies](/en-US/docs/Glossary/Shallow_copy). If you instead want a [deep copy](/en-US/docs/Glossary/Deep_copy) of an array, you can use {{jsxref("JSON.stringify()")}} to convert the array to a JSON string, and then {{jsxref("JSON.parse()")}} to convert the string back into a new array that’s completely independent from the original array.
 
 ```js
-const deepCopy = (o) => JSON.parse(JSON.stringify(o));
-const fruits2 = deepCopy(fruits);
+const fruitsDeepCopy = JSON.parse(JSON.stringify(fruits));
 ```
 
-Finally, it’s important to understand that assigning an existing array to a new variable doesn’t create a copy of either the array or its elements. Instead the new variable is just a reference, or alias, to the original array; that is, the original array’s name and the new variable name are just two names for the exact same object — and so, if you make any changes at all either to value of the original array or to the value of the new variable, the other will change, too:
+You can also create deep copies using the [`structuredClone()`](/en-US/docs/Web/API/structuredClone) method, which has the advantage of allowing {{Glossary("transferable objects")}} in the source to be _transferred_ to the new copy, rather than just cloned.
+
+Finally, it’s important to understand that assigning an existing array to a new variable doesn’t create a copy of either the array or its elements. Instead the new variable is just a reference, or alias, to the original array; that is, the original array’s name and the new variable name are just two names for the exact same object (and so will always evaluate as [strictly equivalent](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#strict_equality_using_)). Therefore, if you make any changes at all either to the value of the original array or to the value of the new variable, the other will change, too:
 
 ```js
 const fruits = ['Strawberry', 'Mango'];
 const fruitsAlias = fruits;
+// 'fruits' and 'fruitsAlias' are the same object, strictly equivalent.
+fruits === fruitsAlias // true
 // Any changes to the 'fruits' array change 'fruitsAlias' too.
 fruits.unshift('Apple', 'Banana');
 console.log(fruits);
@@ -388,11 +494,11 @@ r,n,b,q,k,b,n,r
 
 ```js
 const values = [];
-for (let x = 0; x < 10; x++){
- values.push([
-  2 ** x,
-  2 * x ** 2,
- ]);
+for (let x = 0; x < 10; x++) {
+  values.push([
+    2 ** x,
+    2 * x ** 2,
+  ]);
 }
 console.table(values);
 ```
@@ -420,7 +526,7 @@ Results in
 Array elements are object properties in the same way that `toString` is a property (to be specific, however, `toString()` is a method). Nevertheless, trying to access an element of an array as follows throws a syntax error because the property name is not valid:
 
 ```js
-console.log(arr.0) // a syntax error
+console.log(arr.0); // a syntax error
 ```
 
 There is nothing special about JavaScript arrays and the properties that cause this. JavaScript properties that begin with a digit cannot be referenced with dot notation and must be accessed using bracket notation.
@@ -428,14 +534,14 @@ There is nothing special about JavaScript arrays and the properties that cause t
 For example, if you had an object with a property named `3d`, it can only be referenced using bracket notation.
 
 ```js
-let years = [1950, 1960, 1970, 1980, 1990, 2000, 2010]
-console.log(years.0)   // a syntax error
-console.log(years[0])  // works properly
+const years = [1950, 1960, 1970, 1980, 1990, 2000, 2010];
+console.log(years.0);   // a syntax error
+console.log(years[0]);  // works properly
 ```
 
 ```js
-renderer.3d.setTexture(model, 'character.png')     // a syntax error
-renderer['3d'].setTexture(model, 'character.png')  // works properly
+renderer.3d.setTexture(model, 'character.png');     // a syntax error
+renderer['3d'].setTexture(model, 'character.png');  // works properly
 ```
 
 In the `3d` example, `'3d'` *had* to be quoted (because it begins with a digit). But it's also possible to quote the array indexes as well (e.g., `years['2']` instead of `years[2]`), although it's not necessary.
@@ -443,10 +549,10 @@ In the `3d` example, `'3d'` *had* to be quoted (because it begins with a digit).
 The `2` in `years[2]` is coerced into a string by the JavaScript engine through an implicit `toString` conversion. As a result, `'2'` and `'02'` would refer to two different slots on the `years` object, and the following example could be `true`:
 
 ```js
-console.log(years['2'] != years['02'])
+console.log(years['2'] != years['02']);
 ```
 
-#### Relationship between length and numerical properties
+### Relationship between length and numerical properties
 
 A JavaScript array's {{jsxref("Array.length", "length")}} property and numerical properties are connected.
 
@@ -455,37 +561,36 @@ Several of the built-in array methods (e.g., {{jsxref("Array.join", "join()")}},
 Other methods (e.g., {{jsxref("Array.push", "push()")}}, {{jsxref("Array.splice", "splice()")}}, etc.) also result in updates to an array's {{jsxref("Array.length", "length")}} property.
 
 ```js
-const fruits = []
-fruits.push('banana', 'apple', 'peach')
-
-console.log(fruits.length) // 3
+const fruits = [];
+fruits.push('banana', 'apple', 'peach');
+console.log(fruits.length); // 3
 ```
 
 When setting a property on a JavaScript array when the property is a valid array index and that index is outside the current bounds of the array, the engine will update the array's {{jsxref("Array.length", "length")}} property accordingly:
 
 ```js
-fruits[5] = 'mango'
-console.log(fruits[5])            // 'mango'
-console.log(Object.keys(fruits))  // ['0', '1', '2', '5']
-console.log(fruits.length)        // 6
+fruits[5] = 'mango';
+console.log(fruits[5]);            // 'mango'
+console.log(Object.keys(fruits));  // ['0', '1', '2', '5']
+console.log(fruits.length);        // 6
 ```
 
 Increasing the {{jsxref("Array.length", "length")}}.
 
 ```js
-fruits.length = 10
-console.log(fruits)              // ['banana', 'apple', 'peach', empty x 2, 'mango', empty x 4]
-console.log(Object.keys(fruits)) // ['0', '1', '2', '5']
-console.log(fruits.length)       // 10
-console.log(fruits[8])           // undefined
+fruits.length = 10;
+console.log(fruits);              // ['banana', 'apple', 'peach', empty x 2, 'mango', empty x 4]
+console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
+console.log(fruits.length);       // 10
+console.log(fruits[8]);           // undefined
 ```
 
 Decreasing the {{jsxref("Array.length", "length")}} property does, however, delete elements.
 
 ```js
-fruits.length = 2
-console.log(Object.keys(fruits)) // ['0', '1']
-console.log(fruits.length)       // 2
+fruits.length = 2;
+console.log(Object.keys(fruits)); // ['0', '1']
+console.log(fruits.length);       // 2
 ```
 
 This is explained further on the {{jsxref("Array.length")}} page.
@@ -501,8 +606,8 @@ To help explain these properties and elements, see the following example and the
 // Remember matched b's and the following d
 // Ignore case
 
-const myRe = /d(b+)(d)/i
-const myArray = myRe.exec('cdbBdbsbz')
+const myRe = /d(b+)(d)/i;
+const myArray = myRe.exec('cdbBdbsbz');
 ```
 
 The properties and elements returned from this match are as follows:
