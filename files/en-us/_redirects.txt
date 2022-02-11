@@ -7486,6 +7486,7 @@
 /en-US/docs/Web/API/Constraint_validation/invalid_event	/en-US/docs/Web/API/HTMLInputElement/invalid_event
 /en-US/docs/Web/API/ConvolverNode.buffer	/en-US/docs/Web/API/ConvolverNode/buffer
 /en-US/docs/Web/API/ConvolverNode.normalize	/en-US/docs/Web/API/ConvolverNode/normalize
+/en-US/docs/Web/API/CookieStore/onchange	/en-US/docs/Web/API/CookieStore/change_event
 /en-US/docs/Web/API/Coordinates	/en-US/docs/Web/API/GeolocationCoordinates
 /en-US/docs/Web/API/Coordinates.accuracy	/en-US/docs/Web/API/GeolocationCoordinates/accuracy
 /en-US/docs/Web/API/Coordinates.altitude	/en-US/docs/Web/API/GeolocationCoordinates/altitude
