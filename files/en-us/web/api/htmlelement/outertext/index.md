@@ -26,7 +26,9 @@ When used as a setter it replaces the current node with the given text, converti
 
 ## Example
 
-This example highlights the fundamental difference between `outerText` and `innerText` when used as setters.
+This example highlights the fundamental difference between `outerText` and `innerText` when used as setters (they are the same when used by getters).
+
+> **Note:** The example is a modified version of [What is the difference between innerText and outerText?](https://stackoverflow.com/questions/18481382/what-is-the-difference-between-innertext-and-outertext/18481435#18481435) (Stack overflow) by [codingintrigue](https://stackoverflow.com/users/571194/codingintrigue), is licenced under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
 
 Consider a page that contains the following HTML:
 ```html
@@ -35,7 +37,7 @@ Consider a page that contains the following HTML:
 </div>
 ```
 
-The JavaScript `p.outerText = "Whole element replaced"` replaces the whole selected `p` element, changing the HTML to:
+`outerText` replaces the whole selected element, so the JavaScript `p.outerText = "Whole element replaced"` replaces the whole selected `p` element:
 
 ```html
 <div>
@@ -43,11 +45,11 @@ The JavaScript `p.outerText = "Whole element replaced"` replaces the whole selec
 </div>
 ```
 
-Whereas the JavaScript `p.innerText = "Element content replaced"` changes the content inside the selected `p` element:
+By contrast, `p.innerText = "Content inside element replaced"` replaces the content _inside_ the selected `p` element:
 
 ```html
 <div>
-  <p>Element content replaced</p>
+  <p>Content inside element replaced</p>
 </div>
 ```
 
