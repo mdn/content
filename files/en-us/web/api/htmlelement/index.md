@@ -78,7 +78,7 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}, and implements tho
   - : Returns a `double` containing the width of an element, relative to the layout.
 - {{DOMxRef("HTMLElement.outerText")}}
   - : Represents the rendered text content of a node and its descendants.
-    As a getter, it is the same as {{DOMxRef("HTMLElement.innerText")}} (it represents the "rendered" text content of an element and its descendants).
+    As a getter, it is the same as {{DOMxRef("HTMLElement.innerText")}} (it represents the rendered text content of an element and its descendants).
     As a setter, it replaces the selected node and its contents with the given value, converting any line breaks into {{HTMLElement("br")}} elements.
 - {{DOMxRef("HTMLElement.properties")}} {{Experimental_Inline}}{{ReadOnlyInline}}
   - : Returns a {{DOMxRef("HTMLPropertiesCollection")}}…

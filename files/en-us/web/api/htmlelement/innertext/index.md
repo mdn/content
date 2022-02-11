@@ -11,7 +11,7 @@ browser-compat: api.HTMLElement.innerText
 ---
 {{APIRef("HTML DOM")}}
 
-The **`innerText`** property of the {{domxref("HTMLElement")}} interface represents the "rendered" text content of a node and its descendants.
+The **`innerText`** property of the {{domxref("HTMLElement")}} interface represents the rendered text content of a node and its descendants.
 
 As a getter, it approximates the text the user would get if they highlighted the contents of the element with the cursor and then copied it to the clipboard.
 As a setter this will replace the element's children with the given value, converting any line breaks into {{HTMLElement("br")}} elements.
