@@ -27,31 +27,27 @@ When used as a setter it replaces the current node with the given text, converti
 ## Example
 
 This example highlights the fundamental difference between `outerText` and `innerText` when used as setters.
-It originates from [Stackoverflow here](https://stackoverflow.com/questions/18481382/what-is-the-difference-between-innertext-and-outertext/18481435#18481435).
 
 Consider a page that contains the following HTML:
 ```html
 <div>
-  <p>Change Me</p>
+  <p>Original content</p>
 </div>
 ```
 
-`outerText` replaces the whole selected node with the new text.
-JavaScript like `p.outerText = "Changed!"` replaces the whole `p` element, changing the HTML to:
+The JavaScript `p.outerText = "Whole element replaced"` replaces the whole selected `p` element, changing the HTML to:
 
 ```html
 <div>
-   Changed!
+   Whole element replaced
 </div>
 ```
 
-Whereas `innerText` changes the text within the selected element. 
-JavaScript like `p.innerText = "Changed!"` changes the content inside the selected `p`.
-The resulting HTML is:
+Whereas the JavaScript `p.innerText = "Element content replaced"` changes the content inside the selected `p` element:
 
 ```html
 <div>
-  <p>Changed!</p>
+  <p>Element content replaced</p>
 </div>
 ```
 
