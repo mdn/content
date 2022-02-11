@@ -105,7 +105,7 @@ There are several web technologies and features at play to manage privacy and se
     </tr>
     <tr>
       <td>
-        {{HTMLElement("iframe")}}'s {{htmlattrxref("allow")}}
+        {{HTMLElement("iframe")}}'s {{htmlattrxref("allow", "iframe")}}
         attribute
       </td>
       <td>
@@ -164,7 +164,7 @@ There are several web technologies and features at play to manage privacy and se
   </tbody>
 </table>
 
-Not all of these are generally directly used within code; notably, the [Permissions API](/en-US/docs/Web/API/Permissions_API), [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy), and the `allow` attribute on `<iframe>` elements are primary tools directly used by code to help secure a site and its content.
+Not all of these are generally directly used within code; notably, the [Permissions API](/en-US/docs/Web/API/Permissions_API), [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy), and the {{htmlattrxref("allow", "iframe")}} attribute on {{HTMLElement("iframe")}} elements are primary tools directly used by code to help secure a site and its content.
 
 ## Keeping personal data safe
 
