@@ -42,7 +42,7 @@ playEffect(type, params);
 
 ### Return value
 
-A promise that resolves with a value of `true` when the playEffect has successfully completed.
+A promise that resolves with `true` when the playEffect successfully completes.
 
 ## Examples
 
