@@ -28,10 +28,12 @@ A basic fetch request is really simple to set up. Have a look at the following c
 
 ```js
 fetch('http://example.com/movies.json')
-  .then(response => response.json())
-  .then(data => console.log(data));
+  .then(async response => {
+    const data = await response.json();
+    console.log(response)
+    console.log(data)
+  });
 ```
-
 Here we are fetching a JSON file across the network and printing it to the console. The simplest use of `fetch()` takes one argument — the path to the resource you want to fetch — and does not directly return the JSON response body but instead returns a promise that resolves with a {{domxref("Response")}} object.
 
 The {{domxref("Response")}} object, in turn, does not directly contain the actual JSON response body but is instead a representation of the entire HTTP response. So, to extract the JSON body content from the {{domxref("Response")}} object, we use the {{domxref("Response.json()", "json()")}} method, which returns a second promise that resolves with the result of parsing the response body text as JSON.
@@ -63,12 +65,14 @@ async function postData(url = '', data = {}) {
     referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
     body: JSON.stringify(data) // body data type must match "Content-Type" header
   });
-  return response.json(); // parses JSON response into native JavaScript objects
+  return response;
 }
 
 postData('https://example.com/answer', { answer: 42 })
-  .then(data => {
-    console.log(data); // JSON data parsed by `data.json()` call
+  .then(async response => {
+    // parses JSON response into native JavaScript objects
+    const data = await response.json(); 
+    console.log(data); 
   });
 ```
 
@@ -125,8 +129,8 @@ fetch('https://example.com/profile', {
   },
   body: JSON.stringify(data),
 })
-.then(response => response.json())
-.then(data => {
+.then(async response => {
+  const data = await response.json();
   console.log('Success:', data);
 })
 .catch((error) => {
@@ -149,8 +153,8 @@ fetch('https://example.com/profile/avatar', {
   method: 'PUT',
   body: formData
 })
-.then(response => response.json())
-.then(result => {
+.then(async response => {
+  const result = await response.json();
   console.log('Success:', result);
 })
 .catch(error => {
@@ -175,8 +179,8 @@ fetch('https://example.com/posts', {
   method: 'POST',
   body: formData,
 })
-.then(response => response.json())
-.then(result => {
+.then(async response => {
+  const result = await response.json();
   console.log('Success:', result);
 })
 .catch(error => {
@@ -231,18 +235,14 @@ run();
 ```
 
 ### Checking that the fetch was successful
-
-A {{domxref("fetch()")}} promise will reject with a {{jsxref("TypeError")}} when a network error is encountered or CORS is misconfigured on the server-side, although this usually means permission issues or similar — a 404 does not constitute a network error, for example. An accurate check for a successful `fetch()` would include checking that the promise resolved, then checking that the {{domxref("Response.ok")}} property has a value of true. The code would look something like this:
-
+A {{domxref("fetch()")}} promise will reject with a {{jsxref("TypeError")}} when a network error is encountered or CORS is misconfigured on the server-side, although this usually means permission issues or similar — a 404 does not constitute a network error, for example. An accurate check for a successful `fetch()` would include checking that the promise resolved, then checking that the {{domxref("Response.ok")}} property has a value of true. The code would look something like this:  
 ```js
 fetch('flowers.jpg')
-  .then(response => {
+  .then(async response => {
     if (!response.ok) {
       throw new Error('Network response was not OK');
     }
-    return response.blob();
-  })
-  .then(myBlob => {
+    const myBlob = await response.blob();
     myImage.src = URL.createObjectURL(myBlob);
   })
   .catch(error => {
@@ -265,8 +265,8 @@ const myRequest = new Request('flowers.jpg', {
 });
 
 fetch(myRequest)
-  .then(response => response.blob())
-  .then(myBlob => {
+  .then(async response => {
+    const myBlob = await response.blob();
     myImage.src = URL.createObjectURL(myBlob);
   });
 ```
@@ -335,15 +335,13 @@ A good use case for headers is checking whether the content type is correct befo
 
 ```js
 fetch(myRequest)
-  .then(response => {
-     const contentType = response.headers.get('content-type');
-     if (!contentType || !contentType.includes('application/json')) {
-       throw new TypeError("Oops, we haven't got JSON!");
-     }
-     return response.json();
-  })
-  .then(data => {
-      /* process your data further */
+  .then(async response => {
+    const contentType = response.headers.get('content-type');
+    if (!contentType || !contentType.includes('application/json')) {
+      throw new TypeError("Oops, we haven't got JSON!");
+    }
+    const data = await response.json();
+    /* process your data further */
   })
   .catch(error => console.error(error));
 ```
