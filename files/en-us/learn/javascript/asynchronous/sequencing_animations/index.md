@@ -40,7 +40,7 @@ If you open "index.html" in a browser you'll see three images arranged diagonall
 
 ![Screenshot of sequencing-animations assessment page](./sequencing-animations.png)
 
-When the page loads the first image rotates and shrinks until it disappears.
+The images are taken from our guide to [Using the Web Animations API](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API).
 
 ## Project brief
 
