@@ -149,12 +149,12 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
       <td>Invalid header name.</td>
       <td>
         <pre>
-          // space in "C ontent-Type"
-          const headers = {
-            'C ontent-Type': 'text/xml',
-            'Breaking-Bad': '<3',
-          };
-          fetch('https://example.com/', { headers });
+// space in "C ontent-Type"
+const headers = {
+  'C ontent-Type': 'text/xml',
+  'Breaking-Bad': '<3',
+};
+fetch('https://example.com/', { headers });
         </pre>
       </td>
     </tr>
@@ -164,11 +164,11 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
       </td>
       <td>
         <pre>
-          const headers = [
-            ['Content-Type', 'text/html', 'extra'],
-            ['Accept'],
-          ];
-          fetch('https://example.com/', { headers });
+const headers = [
+  ['Content-Type', 'text/html', 'extra'],
+  ['Accept'],
+];
+fetch('https://example.com/', { headers });
         </pre>
       </td>
     </tr>
@@ -178,21 +178,21 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
       </td>
       <td>
         <pre>
-          fetch('blob://example.com/', { mode: 'cors' });
+fetch('blob://example.com/', { mode: 'cors' });
         </pre>
       </td>
     </tr>
       <td>URL includes credentials.</td>
       <td>
         <pre>
-          fetch('https://user:password@example.com/');
+fetch('https://user:password@example.com/');
         </pre>
       </td>
     <tr>
       <td>Invalid referrer URL.</td>
       <td>
         <pre>
-          fetch('https://example.com/', { referrer: './abc\u0000df' });
+fetch('https://example.com/', { referrer: './abc\u0000df' });
         </pre>
       </td>
     </tr>
@@ -200,7 +200,7 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
       <td>Invalid modes (<code>navigate</code> and <code>websocket</code>).</td>
       <td>
         <pre>
-          fetch('https://example.com/', { mode: 'navigate' });
+fetch('https://example.com/', { mode: 'navigate' });
         </pre>
       </td>
     </tr>
@@ -210,10 +210,10 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
       </td>
       <td>
         <pre>
-          fetch('https://example.com/', {
-            cache: 'only-if-cached',
-            mode: 'no-cors',
-          });
+fetch('https://example.com/', {
+  cache: 'only-if-cached',
+  mode: 'no-cors',
+});
         </pre>
       </td>
     </tr>
@@ -224,7 +224,7 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
       </td>
       <td>
         <pre>
-          fetch('https://example.com/', { method: 'CONNECT' });
+fetch('https://example.com/', { method: 'CONNECT' });
         </pre>
       </td>
     </tr>
@@ -234,10 +234,10 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
       </td>
       <td>
         <pre>
-          fetch('https://example.com/', {
-            method: 'CONNECT',
-            mode: 'no-cors',
-          });
+fetch('https://example.com/', {
+  method: 'CONNECT',
+  mode: 'no-cors',
+});
         </pre>
       </td>
     </tr>
@@ -247,10 +247,10 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
       </td>
       <td>
         <pre>
-          fetch('https://example.com/', {
-            method: 'GET',
-            body: new FormData(),
-          });
+fetch('https://example.com/', {
+  method: 'GET',
+  body: new FormData(),
+});
         </pre>
       </td>
     </tr>
