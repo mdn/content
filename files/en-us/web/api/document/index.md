@@ -130,12 +130,6 @@ _The `Document` interface is extended with additional event handlers defined in 
   - : Represents the event handling code for the {{domxref("Document/afterscriptexecute_event", "afterscriptexecute")}} event.
 - {{DOMxRef("Document.onbeforescriptexecute")}} {{Non-standard_Inline}}
   - : Represents the event handling code for the {{domxref("Document/beforescriptexecute_event", "beforescriptexecute")}} event.
-- {{DOMxRef("Document.oncopy")}} {{Non-standard_Inline}}
-  - : Represents the event handling code for the {{domxref("Document/copy_event", "copy")}} event.
-- {{DOMxRef("Document.oncut")}} {{Non-standard_Inline}}
-  - : Represents the event handling code for the {{domxref("Document/cut_event", "cut")}} event.
-- {{DOMxRef("Document.onpaste")}} {{Non-standard_Inline}}
-  - : Represents the event handling code for the {{domxref("Document/paste_event", "paste")}} event.
 - {{DOMxRef("Document.onreadystatechange")}}
   - : Represents the event handling code for the {{domxref("Document/readystatechange_event", "readystatechange")}} event.
 - {{DOMxRef("GlobalEventHandlers.onselectionchange")}} {{Experimental_Inline}}
@@ -354,13 +348,10 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{DOMxRef("Document/copy_event", "copy")}}
   - : Fired when the user initiates a copy action through the browser's user interface.
-    Also available via the {{DOMxRef("HTMLElement/oncopy", "oncopy")}} property.
 - {{DOMxRef("Document/cut_event", "cut")}}
   - : Fired when the user initiates a cut action through the browser's user interface.
-    Also available via the {{DOMxRef("HTMLElement/oncut", "oncut")}} property.
 - {{DOMxRef("Document/paste_event", "paste")}}
   - : Fired when the user initiates a paste action through the browser's user interface.
-    Also available via the {{DOMxRef("HTMLElement/onpaste", "onpaste")}} property.
 
 ### Drag & drop events
 
