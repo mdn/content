@@ -43,7 +43,7 @@ An integer corresponding to the scrollHeight pixel value of the element.
 
 ### Determine if an element has been totally scrolled
 
-`scrollTop` is a non-rounded number, while `scrollHeight` and `clientHeight` are, so the only way to determine if the scroll area is scrolled to the bottom is by seeing if the scroll amount is close enough to some threashold, in this example `1`:
+`scrollTop` is a non-rounded number, while `scrollHeight` and `clientHeight` are rounded — so the only way to determine if the scroll area is scrolled to the bottom is by seeing if the scroll amount is close enough to some threshold (in this example `1`):
 
 ```js
 Math.abs(element.scrollHeight - element.clientHeight - element.scrollTop) < 1
