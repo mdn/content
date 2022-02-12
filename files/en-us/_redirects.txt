@@ -7722,6 +7722,8 @@
 /en-US/docs/Web/API/Element/mozRequestFullScreen	/en-US/docs/Web/API/Element/requestFullScreen
 /en-US/docs/Web/API/Element/msMatchesSelector	/en-US/docs/Web/API/Element/matches
 /en-US/docs/Web/API/Element/name	/en-US/docs/Web/API
+/en-US/docs/Web/API/Element/onfullscreenchange	/en-US/docs/Web/API/Element/fullscreenchange_event
+/en-US/docs/Web/API/Element/onfullscreenerror	/en-US/docs/Web/API/Element/fullscreenerror_event
 /en-US/docs/Web/API/Element/ongotpointercapture	/en-US/docs/Web/API/GlobalEventHandlers/ongotpointercapture
 /en-US/docs/Web/API/Element/onlostpointercapture	/en-US/docs/Web/API/GlobalEventHandlers/onlostpointercapture
 /en-US/docs/Web/API/Element/onwheel	/en-US/docs/Web/API/GlobalEventHandlers/onwheel

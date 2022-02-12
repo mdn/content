@@ -25,15 +25,14 @@ This event is not cancelable.
 ```js
 const requestor = document.querySelector('div');
 
-document.addEventListener('fullscreenerror', (event) => {
+function handleError(event) {
   console.error('an error occurred changing into fullscreen');
   console.log(event);
-});
+};
+
+document.addEventListener('fullscreenerror', handleError);
 // or
-document.onfullscreenerror = (event) => {
-  console.error('an error occurred changing into fullscreen');
-  console.log(event);
-});
+document.onfullscreenerror = handleError;
 
 requestor.requestFullscreen();
 ```

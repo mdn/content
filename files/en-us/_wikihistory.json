@@ -41889,21 +41889,6 @@
       "Jürgen Jeka"
     ]
   },
-  "Web/API/Element/onfullscreenchange": {
-    "modified": "2020-12-09T19:54:49.597Z",
-    "contributors": [
-      "bershanskiy",
-      "Sheppy"
-    ]
-  },
-  "Web/API/Element/onfullscreenerror": {
-    "modified": "2020-11-21T07:55:24.257Z",
-    "contributors": [
-      "sideshowbarker",
-      "mfuji09",
-      "Sheppy"
-    ]
-  },
   "Web/API/Element/openOrClosedShadowRoot": {
     "modified": "2020-10-15T22:08:25.724Z",
     "contributors": [
