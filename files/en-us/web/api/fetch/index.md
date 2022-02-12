@@ -154,7 +154,6 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
             'C ontent-Type': 'text/xml',
             'Breaking-Bad': '<3',
           };
-
           fetch('https://example.com/', { headers });
         </pre>
       </td>
@@ -169,7 +168,6 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
             ['Content-Type', 'text/html', 'extra'],
             ['Accept'],
           ];
-
           fetch('https://example.com/', { headers });
         </pre>
       </td>
