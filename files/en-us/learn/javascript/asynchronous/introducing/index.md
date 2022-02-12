@@ -209,7 +209,7 @@ The description we just saw of asynchronous functions might remind you of event 
 
 Some early asynchronous APIs used events in just this way. The {{domxref("XMLHttpRequest")}} API enables you to make HTTP requests to a remote server using JavaScript. Since this can take a long time, it's an asynchronous API, and you get notified about the progress and eventual completion of a request by attaching event listeners to the `XMLHttpRequest` object.
 
-The following example shows this in action. Press "Click to start request" to send a request. We create a new {{domxref("XMLHttpRequest")}} and listen for its {{domxref("XMLHttpRequest/loadend_event", "loadend")}} event. The handler logs a "Finished!" message along with the status text.
+The following example shows this in action. Press "Click to start request" to send a request. We create a new {{domxref("XMLHttpRequest")}} and listen for its {{domxref("XMLHttpRequest/loadend_event", "loadend")}} event. The handler logs a "Finished!" message along with the status code.
 
 After adding the event listener we send the request. Note that after this, we can log "Started XHR request": that is, our program can continue to run while the request is going on, and our event handler will be called when the request is complete.
 
@@ -236,7 +236,7 @@ document.querySelector('#xhr').addEventListener('click', () => {
   const xhr = new XMLHttpRequest();
 
   xhr.addEventListener('loadend', () => {
-    log.textContent = `${log.textContent}Finished with status: ${xhr.statusText}`;
+    log.textContent = `${log.textContent}Finished with status: ${xhr.status}`;
   });
 
   xhr.open('GET', 'https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json');
@@ -323,9 +323,12 @@ When we nest callbacks like this, it can also get very hard to handle errors: of
 
 For these reasons, most modern asynchronous APIs don't use callbacks. Instead, the foundation of asynchronous programming in JavaScript is the {{jsxref("Promise")}}, and that's the subject of the next article.
 
+{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
+
 ## In this module
 
 - **Introducing asynchronous JavaScript**
-- [How to use Promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Implementing a Promise-based API](/en-US/docs/Learn/JavaScript/Asynchronous/Implementing_a_Promise-based_API)
-- [Introducing Workers](/en-US/docs/Learn/JavaScript/Asynchronous/Workers)
+- [How to use promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
+- [Implementing a promise-based API](/en-US/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
+- [Introducing workers](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
+- [Assessment: sequencing animations](/en-US/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

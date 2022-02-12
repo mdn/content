@@ -1,11 +1,11 @@
 ---
-title: How to use Promises
+title: How to use promises
 slug: Learn/JavaScript/Asynchronous/Promises
 tags:
   - JavaScript
   - Learn
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_Promise-based_API", "Learn/JavaScript/Asynchronous")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
 
 **Promises** are the foundation of asynchronous programming in modern JavaScript. A promise is an object returned by an asynchronous function, which represents the current state of the operation. At the time the promise is returned to the caller, the operation often isn't finished, but the promise object provides methods to handle the eventual success or failure of the operation.
 
@@ -31,11 +31,17 @@ With a promise-based API, the asynchronous function starts the operation and ret
 
 ## Using the fetch() API
 
+> **Note:** In this article we will explore promises by copying code samples from the page into your browser's JavaScript console. To get set up for this:
+>
+> 1. open a browser tab and visit <https://example.org>
+> 2. in that tab, open the JavaScript console in your [browser's developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)
+> 3. when we show an example, copy it into the console. You will have to reload the page each time you enter a new example, or the console will complain that you have redeclared `fetchPromise`.
+
 In this example we'll download the JSON file from <https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json>, and log some information about it.
 
 To do this we'll make an **HTTP request** to the server. In an HTTP request, we send a request message to a remote server, and it sends us back a response. In this case we'll send a request to get a JSON file from the server. Remember in the last article, where we made HTTP requests using the {{domxref("XMLHttpRequest")}} API? Well, in this article we'll use the {{domxref("fetch", "fetch()")}} API, which is the modern, promise-based replacement for `XMLHttpRequest`.
 
-Visit <https://example.org>, open the browser's JavaScript console, then paste this into it:
+Copy this into your browser's JavaScript console:
 
 ```js
 const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
@@ -43,22 +49,35 @@ const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/
 console.log(fetchPromise);
 
 fetchPromise.then( response => {
-  console.log(`${response.status} ${response.statusText}`);
+  console.log(`Received response: ${response.status} ${response.statusText}`);
 });
+
+console.log("Started request...");
 ```
 
 Here we are:
-- calling the `fetch()` API, and assigning the return value to the `fetchPromise` variable
-- immediately after, logging the `fetchPromise` variable. This should output something like: `Promise { <state>: "pending" }`, telling us that we have a `Promise` object, and it has a `state` whose value is `"pending"`.  The `"pending"` state means that the fetch operation is still going on.
-- passing a handler function into the Promise's `then()` method. When (and if) the fetch operation succeeds, the promise will call our handler, passing in a {{domxref("Response")}} object, which contains the server's response.
+1. calling the `fetch()` API, and assigning the return value to the `fetchPromise` variable
+2. immediately after, logging the `fetchPromise` variable. This should output something like: `Promise { <state>: "pending" }`, telling us that we have a `Promise` object, and it has a `state` whose value is `"pending"`.  The `"pending"` state means that the fetch operation is still going on.
+3. passing a handler function into the Promise's **`then()`** method. When (and if) the fetch operation succeeds, the promise will call our handler, passing in a {{domxref("Response")}} object, which contains the server's response.
+4. Logging a message that we have started the request.
 
-This probably seems a lot like the example in the last article, where we added event handlers to the {{domxref("XMLHttpRequest")}} object. Instead of that, we're passing handlers into the `then()` method of the returned promise.
+The complete output should be something like:
+
+```
+Promise { <state>: "pending" }
+Started request...
+Received response: 200 OK
+```
+
+Note that `Started request...` is logged before we receive the response. Unlike a synchronous function, `fetch()` returns while the request is still going on, enabling our program to stay responsive.
+
+This probably seems a lot like the example in the last article, where we added event handlers to the {{domxref("XMLHttpRequest")}} object. Instead of that, we're passing a handler into the `then()` method of the returned promise.
 
 ##  Chaining promises
 
 With the `fetch()` API, once you get a `Response` object, you need to call another function to get the response data. In this case we want to get the response data as JSON, so we would call the {{domxref("Response/json", "json()")}} method of the `Response` object. It turns out that `json()` is also asynchronous. So this is a case where we have to call two successive asynchronous functions.
 
-We could do something like this:
+Try this:
 
 ```js
 const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
@@ -70,6 +89,8 @@ fetchPromise.then( response => {
   });
 });
 ```
+
+In this example, as before, we add a `then()` handler to the promise returned by `fetch()`. But this time our handler calls `response.json()`, and then passes a new `then()` handler into the promise returned by `response.json()`.
 
 This should log "baked beans" (the name of the first product inside "products.json").
 
@@ -162,7 +183,7 @@ The article [Let's talk about how to talk about promises](https://thenewtoys.dev
 
 The promise chain is what you need when your operation consists of several asynchronous functions, and you need each one to complete before starting the next one. But there are other ways you might need to combine asynchronous function calls, and the `Promise` API provides some helpers for them.
 
-Sometimes you need all the promises to be fulfilled, but they don't depend on each other. In case like that it's much more efficient to start them all off together, then be notified when they have all fulfilled. The {{jsxref("Promise/all", "Promise.all()")}} method is what you need here. It takes an array of promises, and returns a single promise.
+Sometimes you need all the promises to be fulfilled, but they don't depend on each other. In a case like that it's much more efficient to start them all off together, then be notified when they have all fulfilled. The {{jsxref("Promise/all", "Promise.all()")}} method is what you need here. It takes an array of promises, and returns a single promise.
 
 The promise returned by `Promise.all()` is:
 
@@ -247,7 +268,7 @@ The {{jsxref("Statements/async_function", "async")}} keyword gives you a simpler
 
 ```js
 async function myFunction() {
-  //
+  // This is an async function
 }
 ```
 
@@ -335,9 +356,9 @@ The `async` and `await` keywords make it easier to build an operation from a ser
 
 Promises work in the latest versions of all modern browsers; the only place where promise support will be a problem is in Opera Mini and IE11 and earlier versions.
 
-We didn't touch on all promise features in this article, just the most interesting and useful ones. As you start to learn more about promises, you'll come across further features and techniques.
+We didn't touch on all promise features in this article, just the most interesting and useful ones. As you start to learn more about promises, you'll come across more features and techniques.
 
-Most modern Web APIs are promise-based, so you'll need to understand promises to get the most out of them. Among those APIs are [WebRTC](/en-US/docs/Web/API/WebRTC_API), [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), [Media Capture and Streams](/en-US/docs/Web/API/Media_Streams_API), and many more.
+Many modern Web APIs are promise-based, including [WebRTC](/en-US/docs/Web/API/WebRTC_API), [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), [Media Capture and Streams](/en-US/docs/Web/API/Media_Streams_API), and many more.
 
 ## See also
 
@@ -346,11 +367,12 @@ Most modern Web APIs are promise-based, so you'll need to understand promises to
 - [We have a problem with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html) by Nolan Lawson
 - [Let's talk about how to talk about promises](https://thenewtoys.dev/blog/2021/02/08/lets-talk-about-how-to-talk-about-promises/)
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_Promise-based_API", "Learn/JavaScript/Asynchronous")}}
+{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
 
 ## In this module
 
 - [Introducing asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)
-- **How to use Promises**
-- [Implementing a Promise-based API](/en-US/docs/Learn/JavaScript/Asynchronous/Implementing_a_Promise-based_API)
-- [Introducing Workers](/en-US/docs/Learn/JavaScript/Asynchronous/Workers)
+- **How to use promises**
+- [Implementing a promise-based API](/en-US/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
+- [Introducing workers](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
+- [Assessment: sequencing animations](/en-US/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

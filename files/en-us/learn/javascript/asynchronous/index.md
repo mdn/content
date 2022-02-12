@@ -39,12 +39,17 @@ Asynchronous JavaScript is a fairly advanced topic, and you are advised to work 
 
 - [Introducing asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)
   - : In this article we'll see what **synchronous** and **asynchronous** programming are, why we often need to use asynchronous techniques, how asynchronous functions have historically been implemented in JavaScript, and what their problems are.
-- [How to use Promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
+- [How to use promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
   - : Here we'll introduce promises and show how to use promise-based APIs. We'll also introduce the `async` and `await` keywords.
-- [Implementing a Promise-based API](/en-US/docs/Learn/JavaScript/Asynchronous/Implementing_a_Promise-based_API)
-  - : In this article we'll see how to implement your own promise-based API.
-- [Introducing Workers](/en-US/docs/Learn/JavaScript/Asynchronous/Workers)
-  - :
+- [Implementing a promise-based API](/en-US/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
+  - : This article outlines how to implement your own promise-based API.
+- [Introducing workers](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
+  - : Workers enable you to run certain tasks in a separate thread, to keep your main code responsive. In this article we'll rewrite a long-running synchronous function to use a worker.
+
+## Assessments
+
+- [Sequencing animations](/en-US/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)
+  - : The assessment asks you to use promises to play a set of animations in a particular sequence.
 
 ## See also
 
