@@ -38,7 +38,7 @@ playEffect(type, params);
     - `strongMagnitude`: Rumble intensity of the low-frequency (strong) rumble motors, normalized to the range between 0.0 and 1.0.
     - `weakMagnitude`: Rumble intensity of the high-frequency (weak) rumble motors, normalized to the range between 0.0 and 1.0.
 
-> **Note:** Repeated calls to `playEffect()` override the previous calls if they are still ongoing.
+> **Note:** A new call to `playEffect()` overrides a previous ongoing call.
 
 ### Return value
 
