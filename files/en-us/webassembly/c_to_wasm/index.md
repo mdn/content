@@ -67,7 +67,7 @@ Now all that remains is for you to load the resulting `hello.html` in a browser 
 > **Note:** If you try to open generated HTML file (`hello.html`) directly from your local hard drive (e.g. `file://your_path/hello.html`), you will end up with an error message along the lines of _`both async and sync fetching of the wasm failed`._ You need to run your HTML file through an HTTP server (`http://`) — see [How do you set up a local testing server?](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server) for more information.
 
 If everything has worked as planned, you should see "Hello world" output in the Emscripten console appearing on the web page, and your browser’s JavaScript console. Congratulations, you’ve just compiled C to WebAssembly and run it in your browser!
-![image](https://user-images.githubusercontent.com/2392803/153691837-2e93abc9-73e3-411a-ad43-123ba392b7aa.png)
+![image](helloworld.png)
 
 ### Using a custom HTML template
 
