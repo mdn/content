@@ -34,10 +34,9 @@ JSON.stringify(value, replacer, space)
   - : The value to convert to a JSON string.
 - `replacer` {{optional_inline}}
   - : A function that alters the behavior of the stringification process, or an array of
-    values of type {{JSxRef("String")}} or {{JSxRef("Number")}} that serves as a whitelist for
-    selecting/filtering the properties of the value object to be included in the JSON
-    string. If this value is {{JSxRef("null")}} or not provided, all properties of the
-    object are included in the resulting JSON string.
+    {{JSxRef("String")}}s or {{JSxRef("Number")}}s that will be filtered from the object
+    and included in the JSON string. If this value is {{JSxRef("null")}} or not provided,
+    all properties of the object are included in the resulting JSON string.
 - `space` {{optional_inline}}
 
   - : A {{JSxRef("String")}} or {{JSxRef("Number")}} object that's used to insert white space (including indentation, line break characters, etc.) into the output JSON string for readability purposes.
