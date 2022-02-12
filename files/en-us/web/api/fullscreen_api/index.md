@@ -52,19 +52,6 @@ _The {{DOMxRef("Document")}} interface provides properties that can be used to d
 - {{DOMxRef("document.fullscreenEnabled")}}
   - : The `fullscreenEnabled` property tells you whether or not it is possible to engage full-screen mode. This is `false` if full-screen mode is not available for any reason (such as the `"fullscreen"` feature not being allowed, or full-screen mode not being supported).
 
-### Event handlers
-
-_The Fullscreen API defines two events which can be used to detect when full-screen mode is turned on and off, as well as when errors occur during the process of changing between full-screen and windowed modes. Event handlers for these events are available on the {{DOMxRef("Document")}} and {{DOMxRef("Element")}} interfaces._
-
-> **Note:** These event handler properties are _not_ available as HTML content attributes. In other words, you cannot specify event handlers for {{Event("fullscreenchange")}} and {{Event("fullscreenerror")}} in the HTML content. They must be added by JavaScript code.
-
-#### Event handlers on elements
-
-- {{DOMxRef("Element.onfullscreenchange")}}
-  - : An event handler which is called when the {{Event("fullscreenchange")}} event is sent to the element, indicating that the element has been placed into, or removed from, full-screen mode.
-- {{DOMxRef("Element.onfullscreenerror")}}
-  - : An event handler for the {{Event("fullscreenerror")}} event when sent to an element which has encountered an error while transitioning into or out of full-screen mode.
-
 ### Obsolete properties
 
 - {{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}

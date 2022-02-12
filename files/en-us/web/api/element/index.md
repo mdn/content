@@ -179,13 +179,6 @@ _The `Element` interface includes the following properties, defined on the `ARIA
 - {{domxref("Element.ariaValueText")}}
   - : Is a {{domxref("DOMString")}} reflecting the [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) attribute, which defines the human readable text alternative of aria-valuenow for a range widget.
 
-### Event handlers
-
-- {{domxref("Element.onfullscreenchange")}}
-  - : An event handler for the {{event("fullscreenchange")}} event, which is sent when the element enters or exits full-screen mode. This can be used to watch both for successful expected transitions, but also to watch for unexpected changes, such as when your app is running in the background.
-- {{domxref("Element.onfullscreenerror")}}
-  - : An event handler for the {{event("fullscreenerror")}} event, which is sent when an error occurs while attempting to change into full-screen mode.
-
 ## Methods
 
 _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own parent, {{DOMxRef("EventTarget")}}._
@@ -364,10 +357,8 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{domxref("Element/fullscreenchange_event", "fullscreenchange")}}
   - : Sent to an {{domxref("Element")}} when it transitions into or out of [full-screen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
-    Also available via the {{domxref("Element.onfullscreenchange", "onfullscreenchange")}} property.
 - {{domxref("Element/fullscreenerror_event", "fullscreenerror")}}
   - : Sent to an `Element` if an error occurs while attempting to switch it into or out of [full-screen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
-    Also available via the {{domxref("Element.onfullscreenerror", "onfullscreenerror")}} property.
 
 ### Keyboard events
 

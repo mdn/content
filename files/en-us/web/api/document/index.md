@@ -390,9 +390,8 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{DOMxRef("Document/fullscreenchange_event", "fullscreenchange")}}
   - : Fired when the `Document` transitions into or out of [full-screen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
-- [`fullscreenerror`](/en-US/docs/Web/API/Document/fullscreenerror_event)
+- {{DOMxRef("Document/fullscreenerror_event", "fullscreenerror")}}
   - : Fired if an error occurs while attempting to switch into or out of [full-screen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
-    Also available via the {{DOMxRef("Document.onfullscreenerror", "onfullscreenerror")}} property.
 
 ### Keyboard events
 
