@@ -217,7 +217,7 @@ string.
 
 ```js
 // A wildcard at the end of a pattern
-const pattern = new URLPattern('/books/', 'https://example.com');
+const pattern = new URLPattern('/books/*', 'https://example.com');
 console.log(pattern.test('https://example.com/books/123')); // true
 console.log(pattern.test('https://example.com/books')); // false
 console.log(pattern.test('https://example.com/books/')); // true
