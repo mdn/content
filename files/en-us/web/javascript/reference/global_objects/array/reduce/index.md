@@ -78,7 +78,9 @@ The value that results from running the “reducer” callback function to compl
 ## Description
 
 `reduce` takes two arguments, a callback function and an optional initial value.
-`reduce` calls the callback, as a function, once for each element after the first element present in the array, in ascending order.
+`reduce` calls the callback, as a function, once for each element in the array whenever
+an initial value is provided, in ascending order. If no initial value is provided,
+`reduce` calls the callback once for each element in the array after the first element.
 
 `reduce` returns whatever is returned from the callback on the final iteration.
 
