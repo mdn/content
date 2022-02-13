@@ -171,7 +171,7 @@ function buttonPressed(b) {
 }
 
 function gameLoop() {
-  var gamepads = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads : []);
+  var gamepads = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads() : []);
   if (!gamepads) {
     return;
   }
