@@ -51,6 +51,10 @@ Note that this is equivalent to the following {{Cssxref("Attribute_selectors", "
   color: #f33;
 }
 
+.blue {
+  color: #007bff;
+}
+
 .yellow-bg {
   background: #ffa;
 }
@@ -70,9 +74,16 @@ Note that this is equivalent to the following {{Cssxref("Attribute_selectors", "
 <p>This is just a regular paragraph.</p>
 ```
 
+If an element a `class` attribute containing several classes, and they defines same property/rule, then his value set by latest class declared in the CSS. The order of the class names in the `class` attribute is not important in this case.
+
+```html
+<p class="blue red">This paragraph has blue text.</p>
+<p class="red blue">This paragraph has blue text.</p>
+```
+
 ### Result
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('Examples', '600', '260')}}
 
 ## Specifications
 
