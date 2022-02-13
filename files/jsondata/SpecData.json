@@ -15,6 +15,11 @@
     "status": "CR"
   },
   "ARIA": {
+    "name": "Accessible Rich Internet Applications (WAI-ARIA)",
+    "url": "https://w3c.github.io/aria/",
+    "status": "Living"
+  },
+  "ARIA 1.1": {
     "name": "Accessible Rich Internet Applications (WAI-ARIA) 1.1",
     "url": "https://www.w3.org/TR/wai-aria-1.1/",
     "status": "REC"
