@@ -20,7 +20,7 @@ Learning some HTML, CSS, and JavaScript is useful if you want to become a web de
 
 ## Overview
 
-When someone describes a site as "accessible," they mean that any user can use all its features and content, regardless of how the user accesses the web — even and especially users with physical or mental impairments.
+When someone describes a site as "accessible", they mean that any user can use all its features and content, regardless of how the user accesses the web — even and especially users with physical or mental impairments.
 
 - Sites should be accessible to keyboard, mouse, and touch screen users, and any other way users access the web, including screen readers and voice assistants like Alexa and Google Home.
 - Applications should be understandable and usable by people regardless of auditory, visual, physical, or cognitive abilities.
