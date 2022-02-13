@@ -111,11 +111,12 @@ The corresponding background script looks like this:
 
 ```js
 // background-script.js
+Response({response: "Response from background script"});
+}
 
 function handleMessage(request, sender, sendResponse) {
-  console.log("Message from the content script: " +
-    request.greeting);
-  sendResponse({response: "Response from background script"});
+  console.log(`content script sent a message: ${request.content}`);
+  sendResponse({response: "response from background script"});
 }
 
 browser.runtime.onMessage.addListener(handleMessage);
