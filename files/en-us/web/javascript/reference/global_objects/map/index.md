@@ -84,7 +84,7 @@ cases:
       </td>
       <td>
         The keys of an <code>Object</code> must be either a
-        {{jsxref("String")}}, {{jsxref("Number")}}, or a {{jsxref("Symbol")}}.
+        {{jsxref("String")}} or a {{jsxref("Symbol")}}.
       </td>
     </tr>
     <tr>
