@@ -70,7 +70,7 @@ var myRequest = new Request(input[, init]);
       value of the request (e.g.,
       `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
 
-    If you construct a new `Request` from an existing `Request`, any options you set in the _init_ object for the new request replace any corresponding options set in the existing `Request`. For example:
+    If you construct a new `Request` from an existing `Request`, any options you set in the _init_ object for the new request replace any corresponding options set in the original `Request`. For example:
 
        ```js
        const oldRequest = new Request('https://github.com/mdn/content/issues/12959',
