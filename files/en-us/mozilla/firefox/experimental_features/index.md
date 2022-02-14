@@ -557,7 +557,7 @@ It can also be used to specify that the character is selected to be appropriate 
 
 ### Scroll-linked animations
 
-The {{cssxref('@scroll-timeline')}} at-rule and {{cssxref('animation-timeline')}} properties allow you to define animations that are linked to container scroll progress (rather than time).
+The {{cssxref('@scroll-timeline')}} at-rule and {{cssxref('animation-timeline')}} property allow you to define animations that are linked to container scroll progress (rather than time).
 Once specified, a scroll timeline is associated with a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) by using the `animation-timeline` property.
 For more information see {{bug(1676791)}} and {{bug(1676782)}}
 
