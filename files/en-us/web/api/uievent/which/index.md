@@ -23,7 +23,7 @@ Please see deprecated {{domxref("KeyboardEvent.charCode")}} and {{domxref("Keybo
 
 > **Note:** Consider {{domxref("KeyboardEvent.key")}} or {{domxref("KeyboardEvent.code")}} for new code.
 
-### Value for `MouseEvent` {{non-standard_inline}}
+### Value for MouseEvent {{non-standard_inline}}
 
 For {{domxref("MouseEvent")}}, `event.which` is a number representing a given button:
 
