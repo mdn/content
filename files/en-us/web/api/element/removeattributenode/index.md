@@ -24,16 +24,16 @@ removeAttributeNode(attributeNode)
 ### Parameters
 
 - `attributeNode`
-  - : The attribute node to remove from the element
+  - : The attribute node to remove from the element.
 
 ### Return value
 
-The attribute node that was removed
+The attribute node that was removed.
 
 ### Exceptions
 
 - `NotFoundError` {{DOMxRef("DOMException")}}
-  - : Thrown when the element's attribute list does not contain the attribute node
+  - : Thrown when the element's attribute list does not contain the attribute node.
 
 ## Example
 
