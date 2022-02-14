@@ -52,7 +52,7 @@ curly braces (`${expression}`). The expressions in the
 placeholders and the text between the backticks (\` \`) get passed to a function.
 
 The default function just concatenates the parts into a single string. If there is an
-expression preceding the template literal (`tag` here), this is
+expression preceding the template literal, this is
 called a **tagged template**. In that case, the tag expression (usually
 a function) gets called with the template literal, which you can then manipulate before
 outputting.
@@ -272,7 +272,7 @@ latex`\unicode`
 
 Tagged templates should allow the embedding of languages (for example [DSLs](https://en.wikipedia.org/wiki/Domain-specific_language), or [LaTeX](https://en.wikipedia.org/wiki/LaTeX)), where other escapes sequences
 are common. The ECMAScript proposal [Template Literal
-Revision](https://tc39.github.io/proposal-template-literal-revision/) (Stage 4, to be integrated in the ECMAScript 2018 standard) removes the
+Revision](https://tc39.github.io/proposal-template-literal-revision/) (integrated in the ECMAScript 2018 standard) removed the
 syntax restriction of ECMAScript escape sequences from tagged templates.
 
 However, illegal escape sequences must still be represented in the “cooked”

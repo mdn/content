@@ -4,16 +4,15 @@ slug: Web/API/Animation/persist
 tags:
   - API
   - Animation
-  - Experimental
   - Method
   - Reference
   - persist
   - web animations api
 browser-compat: api.Animation.persist
 ---
-{{APIRef("Web Animations")}}{{SeeCompatTable}}
+{{APIRef("Web Animations")}}
 
-The `persist()` method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("Animation")}} interface explicitly persists an animation, when it would otherwise be removed due to the browser's [Automatically removing filling animations](/en-US/docs/Web/API/Animation#automatically_removing_filling_animations) behavior.
+The `persist()` method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("Animation")}} interface explicitly persists an animation, when it would otherwise be removed due to the browser's [Automatically removing filling animations](/en-US/docs/Web/API/Animation#automatically_removing_filling_animations) behavior.
 
 ## Syntax
 
@@ -46,9 +45,7 @@ document.body.addEventListener('mousemove', evt => {
 
   //anim.persist()
 
-  anim.onremove = function() {
-    console.log('Animation removed');
-  }
+  anim.onremove = event => { console.log('Animation removed');}
 
   console.log(anim.replaceState);
 });

@@ -31,7 +31,7 @@ For users, the experience of a seemingly-native PWA is more comfortable and conv
 
 ## What browsers support installation?
 
-Installation is supported by Chrome for Android and Android WebView version 31 and later, Opera for Android 32 onward, Samsung Internet from version 4 onward, and Firefox for Android[version 58](/en-US/docs/Mozilla/Firefox/Releases/58) and later.
+Installation is supported by Chrome for Android and Android WebView version 31 and later, Opera for Android 32 onward, Samsung Internet from version 4 onward, and Firefox for Android [version 58](/en-US/docs/Mozilla/Firefox/Releases/58) and later.
 
 Safari on iOS is a little different. Some parts of the PWA ecosystem are supported, while others are not. iOS 13 introduced a much more comparable install experience, which is also described here.
 

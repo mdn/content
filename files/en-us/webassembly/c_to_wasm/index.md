@@ -47,12 +47,11 @@ This is the simplest case we'll look at, whereby you get emscripten to generate 
 2. Now, using the terminal window you used to enter the Emscripten compiler environment, navigate to the same directory as your `hello.c` file, and run the following command:
 
     ```bash
-    emcc hello.c -s WASM=1 -o hello.html
+    emcc hello.c -o hello.html
     ```
 
 The options we’ve passed in with the command are as follows:
 
-- `-s WASM=1` — Specifies that we want wasm output. If we don’t specify this, Emscripten will just output [asm.js](http://asmjs.org/), as it does by default.
 - `-o hello.html` — Specifies that we want Emscripten to generate an HTML page to run our code in (and a filename to use), as well as the wasm module and the JavaScript "glue" code to compile and instantiate the wasm so it can be used in the web environment.
 
 At this point in your source directory you should have:
@@ -68,6 +67,7 @@ Now all that remains is for you to load the resulting `hello.html` in a browser 
 > **Note:** If you try to open generated HTML file (`hello.html`) directly from your local hard drive (e.g. `file://your_path/hello.html`), you will end up with an error message along the lines of _`both async and sync fetching of the wasm failed`._ You need to run your HTML file through an HTTP server (`http://`) — see [How do you set up a local testing server?](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server) for more information.
 
 If everything has worked as planned, you should see "Hello world" output in the Emscripten console appearing on the web page, and your browser’s JavaScript console. Congratulations, you’ve just compiled C to WebAssembly and run it in your browser!
+![image](helloworld.png)
 
 ### Using a custom HTML template
 
@@ -87,7 +87,7 @@ Sometimes you will want to use a custom HTML template. Let's look at how we can 
 3. Now navigate into your new directory (again, in your Emscripten compiler environment terminal window), and run the following command:
 
     ```bash
-    emcc -o hello2.html hello2.c -O3 -s WASM=1 --shell-file html_template/shell_minimal.html
+    emcc -o hello2.html hello2.c -O3 --shell-file html_template/shell_minimal.html
     ```
 
     The options we've passed are slightly different this time:
@@ -97,7 +97,7 @@ Sometimes you will want to use a custom HTML template. Let's look at how we can 
 
 4. Now let's run this example. The above command will have generated `hello2.html`, which will have much the same content as the template with some glue code added into load the generated wasm, run it, etc. Open it in your browser and you'll see much the same output as the last example.
 
-> **Note:** You could specify outputting just the JavaScript "glue" file\* rather than the full HTML by specifying a .js file instead of an HTML file in the `-o` flag, e.g. `emcc -o hello2.js hello2.c -O3 -s WASM=1`. You could then build your custom HTML completely from scratch, although this is an advanced approach; it is usually easier to use the provided HTML template.
+> **Note:** You could specify outputting just the JavaScript "glue" file\* rather than the full HTML by specifying a .js file instead of an HTML file in the `-o` flag, e.g. `emcc -o hello2.js hello2.c -O3`. You could then build your custom HTML completely from scratch, although this is an advanced approach; it is usually easier to use the provided HTML template.
 >
 > - Emscripten requires a large variety of JavaScript "glue" code to handle memory allocation, memory leaks, and a host of other problems
 
@@ -136,7 +136,7 @@ If you have a function defined in your C code that you want to call as needed fr
 3. Now let's run the compilation step again. From inside your latest directory (and while inside your Emscripten compiler environment terminal window), compile your C code with the following command. (Note that we need to compile with `NO_EXIT_RUNTIME`, which is necessary as otherwise when `main()` exits the runtime would be shut down — necessary for proper C emulation, e.g., atexits are called — and it wouldn't be valid to call compiled code.)
 
     ```bash
-    emcc -o hello3.html hello3.c -O3 -s WASM=1 --shell-file html_template/shell_minimal.html -s NO_EXIT_RUNTIME=1 -s "EXTRA_EXPORTED_RUNTIME_METHODS=['ccall']"
+    emcc -o hello3.html hello3.c -O3 --shell-file html_template/shell_minimal.html -s NO_EXIT_RUNTIME=1 -s "EXTRA_EXPORTED_RUNTIME_METHODS=['ccall']"
     ```
 
 4. If you load the example in your browser again, you'll see the same thing as before!

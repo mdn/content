@@ -198,11 +198,7 @@ You can find a number of examples at our [webaudio-example repo](https://github.
 
 ## Specifications
 
-[Web Audio API](https://webaudio.github.io/web-audio-api/)
-
-| Specification |
-| ------------- |
-|               |
+{{Specifications("api.AudioContext")}}
 
 ## Browser compatibility
 

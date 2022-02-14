@@ -43,7 +43,7 @@ The `icons` member specifies an array of objects representing image files that c
   },
   {
     "src": "icon/hd_hi.svg",
-    "sizes": "72x72"
+    "sizes": "any"
   }
 ]
 ```
@@ -62,7 +62,11 @@ Image objects may contain the following values:
   <tbody>
     <tr>
       <td><code>sizes</code></td>
-      <td>A string containing space-separated image dimensions.</td>
+      <td>
+        A string containing space-separated image dimensions using the same syntax as the
+        {{ htmlattrxref("sizes", "link") }}
+        attribute.
+      </td>
     </tr>
     <tr>
       <td><code>src</code></td>

@@ -127,7 +127,7 @@ for cross-site tracking. As such, the following network APIs and caches are
 
 To prevent JavaScript accessible storage APIs being used for cross-site
 tracking, Firefox partitions accessible storage by top-level site. This
-mechanism ieans that, generally, a third-party embedded in one top-level site
+mechanism means that, generally, a third-party embedded in one top-level site
 cannot access data stored under another top-level site.
 
 However, unlike Network Partitioning, this boundary is dynamic and access
@@ -239,7 +239,7 @@ Information Panel](https://support.mozilla.org/en-US/kb/site-information-panel) 
 
 #### Test Preferences
 
-> **Warning:** Make sure to set these prefs in a separate
+> **Warning:** Make sure to set these preferences in a separate
 > Firefox profile or reset them after testing.
 
 ##### Disable Web Compatibility Features
@@ -266,7 +266,7 @@ Features disabled by the pref include:
 
 ##### Disable Heuristics
 
-The following prefs can be used to disable individual storage access
+The following preferences can be used to disable individual storage access
 heuristics via the
 [config editor](https://support.mozilla.org/en-US/kb/about-config-editor-firefox):
 

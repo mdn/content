@@ -41,6 +41,8 @@ And what's even better is that it is being developed as a web standard via the [
 
 ## API reference
 
+- [WebAssembly control flow](/en-US/docs/WebAssembly/Reference/Control_flow)
+  - : Reference documentation for the set of WebAssembly control-flow operators.
 - {{jsxref("Global_objects/WebAssembly", "WebAssembly")}}
   - : This object acts as the namespace for all WebAssembly related functionality.
 - {{jsxref("Global_objects/WebAssembly/Global", "WebAssembly.Global()")}}

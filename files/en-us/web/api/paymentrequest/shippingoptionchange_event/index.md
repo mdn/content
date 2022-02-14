@@ -62,7 +62,7 @@ paymentRequest.addEventListener("shippingoptionchange", event => {
 
 After calling a custom function, `calculateNewTotal()`, to compute the updated total based on the newly-selected shipping option as specified by the {{domxref("PaymentRequest.shippingOption", "shippingOption")}}. The revised total is submitted back to the payment request by calling the event's {{domxref("PaymentRequestUpdateEvent.updateWith", "updateWith()")}} method.
 
-You can also create an event handler for `shippingoptionchange` using its corresponding event handler property, {{domxref("PaymentReques.onshippingoptionchange", "onshippingoptionchange")}}:
+You can also create an event handler for `shippingoptionchange` using its corresponding event handler property, {{domxref("PaymentRequest.onshippingoptionchange", "onshippingoptionchange")}}:
 
 ```js
 paymentRequest.onshippingoptionchange = event => {

@@ -13,7 +13,7 @@ browser-compat: api.Selection.containsNode
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 
 The **`Selection.containsNode()`** method indicates whether a
-specfied node is part of the selection.
+specified node is part of the selection.
 
 ## Syntax
 

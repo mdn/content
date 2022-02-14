@@ -1,6 +1,6 @@
 ---
 title: 'aria-atomic'
-slug: web/Accessibility/ARIA/Attributes/aria-atomic
+slug: Web/Accessibility/ARIA/Attributes/aria-atomic
 tags: 
   - Accessibility
   - ARIA

@@ -18,8 +18,7 @@ of the {{domxref("Document")}} interface returns the {{domxref("Element")}} with
 
 Often `activeElement` will return a {{domxref("HTMLInputElement")}} or
 {{domxref("HTMLTextAreaElement")}} object if it has the text selection at the time. If
-so, you can get more detail by using the object's {{domxref("Document.selectionStart",
-  "selectionStart")}} and {{domxref("Document.selectionEnd", "selectionEnd")}} properties.
+so, you can get more detail by using the object's `selectionStart` and `selectionEnd` properties.
 Other times the focused element might be a {{HTMLElement("select")}} element (menu) or
 an {{HTMLElement("input")}} element, of `type` `"button"`,
 `"checkbox"`, or `"radio"`.

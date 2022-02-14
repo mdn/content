@@ -45,7 +45,7 @@ In the below example I have set `scroll-padding` to 40 pixels. When we snap to t
 
 {{EmbedGHLiveSample("css-examples/scroll-snap/scroll-padding.html", '100%', 700)}}
 
-This is potentially useful if you have a fixed element, for example a navigation bar, which could end up overlapping scrolled content. By using `scroll-padding` you can reserve a space for it as in the example below where my `<h1>` remains on screen as the content scrolls beneath it. Without padding, the heading would overlap some of the content when snapping happens.
+This is potentially useful if you have a fixed element, for example a navigation bar, which could end up overlapping scrolled content. By using `scroll-padding` you can reserve a space for it as in the example below where the `<h1>` remains on screen as the content scrolls beneath it. Without padding, the heading would overlap some of the content when snapping happens.
 
 {{EmbedGHLiveSample("css-examples/scroll-snap/scroll-padding-sticky.html", '100%', 700)}}
 

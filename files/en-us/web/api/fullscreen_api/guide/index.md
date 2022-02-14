@@ -161,22 +161,6 @@ For the moment not all browsers are implementing the unprefixed version of the A
       <td><code>msFullscreenElement</code></td>
     </tr>
     <tr>
-      <th scope="row">
-        {{DOMxRef("Document.onfullscreenchange")}}
-      </th>
-      <td><code>onwebkitfullscreenchange</code></td>
-      <td><code>onmozfullscreenchange</code></td>
-      <td><code>onmsfullscreenchange</code></td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{DOMxRef("Document.onfullscreenerror")}}
-      </th>
-      <td><code>onwebkitfullscreenerror</code></td>
-      <td><code>onmozfullscreenerror</code></td>
-      <td><code>onmsfullscreenerror</code></td>
-    </tr>
-    <tr>
       <th scope="row">{{DOMxRef("Document.exitFullscreen()")}}</th>
       <td><code>webkitExitFullscreen()</code></td>
       <td><code>mozCancelFullScreen()</code></td>

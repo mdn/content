@@ -60,7 +60,7 @@ console.log(total.current);  // expected output: 13
 total.reset();               // #count now = 7
 ```
 
-The "ash mark" (`#`) is what marks a field as being private. It also prevents private fields and property names from ever being in conflict: private names **must** start with `#`, whereas property names can **never** start that way.
+The "hash mark" (`#`) is what marks a field as being private. It also prevents private fields and property names from ever being in conflict: private names **must** start with `#`, whereas property names can **never** start that way.
 
 Having declared the private fields, they act as we saw in the public example. The only way to change the `#count` value is via the publicly available methods like `decrease()`, and because (in this example) there are no defined ways to alter it, the `#init` value is immutable. It's set when a new `PrivateCounter` is constructed, and can never be changed thereafter.
 

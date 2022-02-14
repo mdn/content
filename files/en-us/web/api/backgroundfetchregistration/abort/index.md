@@ -9,7 +9,7 @@ tags:
   - BackgroundFetchRegistration
 browser-compat: api.BackgroundFetchRegistration.abort
 ---
-{{DefaultAPISidebar("Background Fetch API")}}
+{{APIRef("Background Fetch API")}}
 
 The **`abort()`** method of the {{domxref("BackgroundFetchRegistration")}} interface aborts an active background fetch.
 
