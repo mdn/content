@@ -22,9 +22,6 @@ No notable changes
 - The CSS units `cap` and `ic` are now supported for use with {{cssxref("&lt;length&gt;")}} and {{cssxref("&lt;length-percentage&gt;")}} data types.
   For more information see {{bug(1702924)}} and {{bug(1531223)}}
 
-- The {{cssxref('@scroll-timeline')}} at-rule and {{cssxref('animation-timeline')}} property are now supported. This allows you to define an [`AnimationTimeline`](/en-US/docs/Web/API/AnimationTimeline), of which time values are determined by scrolling progress within a scroll container and not by minutes or seconds. Once specified, a scroll timeline is associated with a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) by using the `animation-timeline` property.
-  For more information see {{bug(1676791)}} and {{bug(1676782)}}
-
 - The CSS property `color-adjust` has been renamed to {{cssxref("print-color-adjust")}} to match the relevant specification.
   The `color-adjust` shorthand name is deprecated.
   See {{bug(747595)}} for details.
