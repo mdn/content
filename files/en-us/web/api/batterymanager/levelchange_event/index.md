@@ -1,29 +1,30 @@
 ---
-title: BatteryManager.onlevelchange
-slug: Web/API/BatteryManager/onlevelchange
+title: 'BatteryManager: levelchange event'
+slug: Web/API/BatteryManager/levelchange_event
 tags:
   - API
-  - Battery API
-  - Event Handler
-  - Property
+  - Event
+  - Deprecated
   - Reference
-browser-compat: api.BatteryManager.onlevelchange
+browser-compat: api.BatteryManager.levelchange_event
 ---
 {{deprecated_header}} {{APIRef("Battery API")}}
 
-The **`BatteryManager.onlevelchange`** property specifies an
-event listener to receive {{event("levelchange")}} events. These events occur when the
-battery {{domxref("BatteryManager.level","level")}} is updated.
+The **`levelchange`** event of the [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) is fired when the battery {{domxref("BatteryManager.level","level")}} property is updated.
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js
-navigator.battery.onlevelchange = funcRef
+addEventListener('levelchange', event => { });
+
+onlevelchange = event => { };
 ```
 
-Where `battery` is a {{domxref("BatteryManager")}} object, and
-`funcRef` is a function to be called when the {{event("levelchange")}} event
-occurs.
+## Event type
+
+_A generic {{domxref("Event")}}._
 
 ## Example
 
@@ -37,8 +38,8 @@ occurs.
 ### JavaScript
 
 ```js
-navigator.getBattery().then(function(battery) {
-  battery.onlevelchange = function(){
+navigator.getBattery().then(battery => {
+  battery.onlevelchange = () => {
     document.querySelector('#level').textContent = battery.level;
 
     if(battery.charging) {
