@@ -20,7 +20,7 @@ In JavaScript, arrays aren’t [primitives](/en-US/docs/Glossary/Primitive) but 
 
 - **JavaScript arrays are resizable** and **can contain a mix of different [data types](/en-US/docs/Web/JavaScript/Data_structures)**. (When those characteristics are undesirable, use [typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) instead.)
 
-- **JavaScript arrays are not associative arrays** and so, [array elements cannot be accessed using strings as indexes](#notes) but must be accessed using integers as indexes.
+- **JavaScript arrays are not associative arrays** and so, [array elements cannot be accessed using strings as indexes](#notes), but must be accessed using integers as indexes.
 
 - **JavaScript arrays are [zero-indexed](https://en.wikipedia.org/wiki/Zero-based_numbering)**: the first element of an array is at index `0`, the second is at index `1`, and so on — and the last element is at the value of the array's {{jsxref("Array.length", "length")}} property minus `1`.
 
