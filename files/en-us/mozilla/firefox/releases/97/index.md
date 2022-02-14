@@ -29,7 +29,7 @@ No notable changes
   The `color-adjust` shorthand name is deprecated.
   See {{bug(747595)}} for details.
 
-- CSS cascade layers are now available by default. The [`@layer`](en-US/docs/Web/CSS/@layer) rule declares a cascade layer, which allows declaration of styles and can be imported via the [`@import`](/en-US/docs/Web/CSS/@import) rule using the `layer()` function. See {{bug(1699217)}} for more details.
+- CSS cascade layers are now available by default. The [`@layer`](/en-US/docs/Web/CSS/@layer) rule declares a cascade layer, which allows declaration of styles and can be imported via the [`@import`](/en-US/docs/Web/CSS/@import) rule using the `layer()` function. See {{bug(1699217)}} for more details.
 
 - The CSS [`scrollbar-gutter`](/en-US/docs/Web/CSS/scrollbar-gutter) property is now supported. This gives developers control over reserved space for the scrollbar, preventing unwanted layout changes as the content grows.
   See {{bug(1715112)}} for more details.
