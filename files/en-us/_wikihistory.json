@@ -27968,16 +27968,6 @@
       "estelle"
     ]
   },
-  "Web/API/AudioScheduledSourceNode/onended": {
-    "modified": "2020-10-15T21:51:41.954Z",
-    "contributors": [
-      "chrisdavidmills",
-      "sideshowbarker",
-      "fscholz",
-      "Sheppy",
-      "jpmedley"
-    ]
-  },
   "Web/API/AudioScheduledSourceNode/start": {
     "modified": "2020-10-15T21:51:44.046Z",
     "contributors": [
