@@ -10,9 +10,9 @@ tags:
   - document structure role
 ---
 
-The `presentation` role and its synonym `none` remove an element's implicit ARIA semantics from being exposed to the accessibility tree. 
+The `presentation` role and its synonym `none` remove an element's implicit ARIA semantics from being exposed to the accessibility tree.
 
-The content of the element will still be available to assistive technologies; it is only the semantics of the container and in some instances required associated descendants which will no longer expose their mappings to the accessibility API.
+The content of the element will still be available to assistive technologies; it is only the semantics of the container — and in some instance, required associated descendants — which will no longer expose their mappings to the accessibility API.
 
 ## Description
 
