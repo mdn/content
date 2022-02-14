@@ -16,7 +16,7 @@ The **`UIEvent.which`** read-only property of the {{domxref("UIEvent")}} interfa
 
 ## Value
 
-### Value for `KeyboardEvent` {{non-standard_inline}}
+### Value for KeyboardEvent {{non-standard_inline}}
 
 For {{domxref("KeyboardEvent")}}, `event.which` contains the numeric code for a particular key pressed, depending on whether an alphanumeric or non-alphanumeric key was pressed.
 Please see deprecated {{domxref("KeyboardEvent.charCode")}} and {{domxref("KeyboardEvent.keyCode")}} for more details.
