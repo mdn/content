@@ -66,7 +66,7 @@ and returns a string in exponential notation.
 ```js
 let numObj = 12345.6789
 
-numObj.toFixed()       // Returns '12346': note rounding, no fractional part
+numObj.toFixed()       // Returns '12345': note rounding, no fractional part
 numObj.toFixed(1)      // Returns '12345.7': note rounding
 numObj.toFixed(6)      // Returns '12345.678900': note added zeros
 (1.23e+20).toFixed(2)  // Returns '123000000000000000000.00'
