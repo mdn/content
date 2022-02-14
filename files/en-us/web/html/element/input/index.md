@@ -563,7 +563,7 @@ A few additional non-standard attributes are listed following the descriptions o
 - {{htmlattrdef("accept")}}
   - : Valid for the `file` input type only, the `accept` attribute defines which file types are selectable in a `file` upload control. See the {{HTMLElement("input/file", "file")}} input type.
 - {{htmlattrdef("alt")}}
-  - : Valid for the `image` button only, the `alt` attribute provides alternative text for the image, displaying the value of the attribute if the image {{htmlattrxref("scr", "input", "", 1)}} is missing or otherwise fails to load. See the {{HTMLElement("input/image", "image")}} input type.
+  - : Valid for the `image` button only, the `alt` attribute provides alternative text for the image, displaying the value of the attribute if the image {{htmlattrxref("src", "input", "", 1)}} is missing or otherwise fails to load. See the {{HTMLElement("input/image", "image")}} input type.
 - {{htmlattrdef("autocomplete")}}
 
   - : (**Not** a Boolean attribute!) The [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute takes as its value a space-separated string that describes what, if any, type of autocomplete functionality the input should provide. A typical implementation of autocomplete recalls previous values entered in the same input field, but more complex forms of autocomplete can exist. For instance, a browser could integrate with a device's contacts list to autocomplete `email` addresses in an email input field. See {{SectionOnPage("/en-US/docs/Web/HTML/Attributes/autocomplete", "Values")}} for permitted values.
@@ -890,7 +890,7 @@ The following methods are provided by the {{domxref("HTMLInputElement")}} interf
 
 - {{domxref("HTMLInputElement.checkValidity", "checkValidity()")}}
   - : Returns `true` if the element's value passes validity checks; otherwise, returns `false` and fires an {{domxref("HTMLInputElement.invalid_event", "invalid")}} event at the element.
-- {{domxref("HTMLFormElement.reportValidity", "reportValidity()")}}
+- {{domxref("HTMLInputElement.reportValidity", "reportValidity()")}}
   - : Returns `true` if the element's value passes validity checks; otherwise, returns `false`, fires an {{domxref("HTMLInputElement.invalid_event", "invalid")}} event at the element, and (if the event isn't canceled) reports the problem to the user.
 - {{domxref("HTMLInputElement.select", "select()")}}
   - : Selects the entire content of the `<input>` element, if the element's content is selectable. For elements with no selectable text content (such as a visual color picker or calendar date input), this method does nothing.
