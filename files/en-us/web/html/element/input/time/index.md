@@ -93,7 +93,7 @@ The Edge `time` control is somewhat more elaborate, opening up an hour and minut
 
 ## Value
 
-A {{jsxref("String")}} containing the value of the time entered into the input.
+A string containing the value of the time entered into the input.
 
 ### Setting the value attribute
 
