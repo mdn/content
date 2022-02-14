@@ -34,8 +34,8 @@ _In addition to the properties listed below, properties from the parent interfac
   - : A string representing the origin of the message emitter.
 - {{domxref("MessageEvent.lastEventId", "lastEventId")}} {{readonlyInline}}
   - : A string representing a unique ID for the event.
-- {{domxref("MessageEvent.source". "source")}} {{readonlyInline}}
-  - : A _message event source_, which is either a {{domxref("WindowProxy")}}, a {{domxref("MessagePort")}}, or a {{domxref("ServiceWorker")}} object representing the message emitter.
+- {{domxref("MessageEvent.source", "source")}} {{readonlyInline}}
+  - : A _message event source_, which is either a {{glossary("WindowProxy")}}, a {{domxref("MessagePort")}}, or a {{domxref("ServiceWorker")}} object representing the message emitter.
 - {{domxref("MessageEvent.ports", "ports")}} {{readonlyInline}}
   - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
 
@@ -55,7 +55,7 @@ channel.addEventListener('messageerror', event => {
 });
 ```
 
-The same, but using the [`onmessage`](/en-US/docs/Web/API/BroadcastChannel/onmessage) and [`onmessageerror`](/en-US/docs/Web/API/BroadcastChannel/onmessageerror) event handler properties:
+The same, but using the `onmessage` and `onmessageerror` event handler properties:
 
 ```js
 const channel = new BroadcastChannel('example-channel');
