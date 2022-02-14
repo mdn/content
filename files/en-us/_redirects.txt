@@ -7343,8 +7343,10 @@
 /en-US/docs/Web/API/BroadcastChannel.BroadcastChannel	/en-US/docs/Web/API/BroadcastChannel/BroadcastChannel
 /en-US/docs/Web/API/BroadcastChannel.close	/en-US/docs/Web/API/BroadcastChannel/close
 /en-US/docs/Web/API/BroadcastChannel.name	/en-US/docs/Web/API/BroadcastChannel/name
-/en-US/docs/Web/API/BroadcastChannel.onmessage	/en-US/docs/Web/API/BroadcastChannel/onmessage
+/en-US/docs/Web/API/BroadcastChannel.onmessage	/en-US/docs/Web/API/BroadcastChannel/message_event
 /en-US/docs/Web/API/BroadcastChannel.postMessage	/en-US/docs/Web/API/BroadcastChannel/postMessage
+/en-US/docs/Web/API/BroadcastChannel/onmessage	/en-US/docs/Web/API/BroadcastChannel/message_event
+/en-US/docs/Web/API/BroadcastChannel/onmessageerror	/en-US/docs/Web/API/BroadcastChannel/messageerror_event
 /en-US/docs/Web/API/ByteLengthQueueingStrategy	/en-US/docs/Web/API/ByteLengthQueuingStrategy
 /en-US/docs/Web/API/ByteLengthQueueingStrategy/ByteLengthQueueingStrategy	/en-US/docs/Web/API/ByteLengthQueuingStrategy/ByteLengthQueuingStrategy
 /en-US/docs/Web/API/ByteLengthQueueingStrategy/size	/en-US/docs/Web/API/ByteLengthQueuingStrategy/size

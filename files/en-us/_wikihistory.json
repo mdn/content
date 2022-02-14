@@ -29722,24 +29722,6 @@
       "teoli"
     ]
   },
-  "Web/API/BroadcastChannel/onmessage": {
-    "modified": "2020-10-15T21:32:14.523Z",
-    "contributors": [
-      "gtk2k",
-      "fscholz",
-      "chrisdavidmills",
-      "nmve",
-      "jpmedley",
-      "teoli"
-    ]
-  },
-  "Web/API/BroadcastChannel/onmessageerror": {
-    "modified": "2020-10-15T21:56:50.077Z",
-    "contributors": [
-      "fscholz",
-      "chrisdavidmills"
-    ]
-  },
   "Web/API/BroadcastChannel/postMessage": {
     "modified": "2020-10-15T21:32:14.854Z",
     "contributors": [
