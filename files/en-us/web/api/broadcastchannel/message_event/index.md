@@ -23,7 +23,7 @@ onmessage = event => { }
 
 A {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
 
-{{InheritanceDiagram("TrackEvent")}}
+{{InheritanceDiagram("MessageEvent")}}
 
 ## Event properties
 
