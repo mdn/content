@@ -7,34 +7,37 @@ browser-compat: api.BroadcastChannel.messageerror_event
 ---
 {{APIRef}}
 
-The `messageerror` event is fired on a {{domxref('BroadcastChannel')}} object when a message arrives on the channel that can't be deserialized.
+The `messageerror` event is fired on a {{domxref('BroadcastChannel')}} object when a message that can't be deserialized arrives on the channel.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("MessageEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/BroadcastChannel/onmessageerror"
-            >onmessageerror</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('messageerror', event => { })
+onmessageerror = event => { }
+```
+
+## Event type
+
+A {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("TrackEvent")}}
+
+## Event properties
+
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
+
+- {{domxref("MessageEvent.data", "data")}} {{readonlyInline}}
+  - : The data sent by the message emitter.
+- {{domxref("MessageEvent.origin", "origin")}} {{readonlyInline}}
+  - : A string representing the origin of the message emitter.
+- {{domxref("MessageEvent.lastEventId", "lastEventId")}} {{readonlyInline}}
+  - : A string representing a unique ID for the event.
+- {{domxref("MessageEvent.source". "source")}} {{readonlyInline}}
+  - : A _message event source_, which is either a {{domxref("WindowProxy")}}, a {{domxref("MessagePort")}}, or a {{domxref("ServiceWorker")}} object representing the message emitter.
+- {{domxref("MessageEvent.ports", "ports")}} {{readonlyInline}}
+  - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
 
 ## Examples
 
@@ -43,11 +46,11 @@ This code uses [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventList
 ```js
 const channel = new BroadcastChannel('example-channel');
 
-channel.addEventListener('message', (event) => {
+channel.addEventListener('message', event => {
   received.textContent = event.data;
 });
 
-channel.addEventListener('messageerror', (event) => {
+channel.addEventListener('messageerror', event => {
   console.error(event);
 });
 ```
@@ -57,11 +60,11 @@ The same, but using the [`onmessage`](/en-US/docs/Web/API/BroadcastChannel/onmes
 ```js
 const channel = new BroadcastChannel('example-channel');
 
-channel.onmessage = (event) => {
+channel.onmessage = event => {
   received.textContent = event.data;
 };
 
-channel.onmessageerror = (event) => {
+channel.onmessageerror = event => {
   console.log(event);
 };
 ```
