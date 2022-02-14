@@ -115,7 +115,7 @@ Response({response: "Response from background script"});
 }
 
 function handleMessage(request, sender, sendResponse) {
-  console.log(`content script sent a message: ${request.content}`);
+  console.log(`A content script sent a message: ${request.content}`);
   sendResponse({response: "Response from background script"});
 }
 
