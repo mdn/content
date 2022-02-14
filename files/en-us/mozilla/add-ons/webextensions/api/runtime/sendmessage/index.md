@@ -99,7 +99,7 @@ function handleError(error) {
 
 function notifyBackgroundPage(e) {
   var sending = browser.runtime.sendMessage({
-    greeting: "Greeting from the content script"
+    content: "Greeting from the content script"
   });
   sending.then(handleResponse, handleError);
 }
@@ -113,10 +113,8 @@ The corresponding background script looks like this:
 // background-script.js
 
 function handleMessage(request, sender, sendResponse) {
-  console.log("Message from the content script: " +
-    request.greeting);
-  sendResponse({response: "Response from background script"});
-}
+  console.log(`A content script sent a message: ${request.content}`);
+ }
 
 browser.runtime.onMessage.addListener(handleMessage);
 ```
