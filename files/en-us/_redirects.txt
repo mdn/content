@@ -7161,11 +7161,11 @@
 /en-US/docs/Web/API/AudioBufferSourceNode.loop	/en-US/docs/Web/API/AudioBufferSourceNode/loop
 /en-US/docs/Web/API/AudioBufferSourceNode.loopEnd	/en-US/docs/Web/API/AudioBufferSourceNode/loopEnd
 /en-US/docs/Web/API/AudioBufferSourceNode.loopStart	/en-US/docs/Web/API/AudioBufferSourceNode/loopStart
-/en-US/docs/Web/API/AudioBufferSourceNode.onended	/en-US/docs/Web/API/AudioScheduledSourceNode/onended
+/en-US/docs/Web/API/AudioBufferSourceNode.onended	/en-US/docs/Web/API/AudioScheduledSourceNode/ended_event
 /en-US/docs/Web/API/AudioBufferSourceNode.playbackRate	/en-US/docs/Web/API/AudioBufferSourceNode/playbackRate
 /en-US/docs/Web/API/AudioBufferSourceNode.start	/en-US/docs/Web/API/AudioBufferSourceNode/start
 /en-US/docs/Web/API/AudioBufferSourceNode.stop	/en-US/docs/Web/API/AudioScheduledSourceNode/stop
-/en-US/docs/Web/API/AudioBufferSourceNode/onended	/en-US/docs/Web/API/AudioScheduledSourceNode/onended
+/en-US/docs/Web/API/AudioBufferSourceNode/onended	/en-US/docs/Web/API/AudioScheduledSourceNode/ended_event
 /en-US/docs/Web/API/AudioBufferSourceNode/stop	/en-US/docs/Web/API/AudioScheduledSourceNode/stop
 /en-US/docs/Web/API/AudioContext.createAnalyser	/en-US/docs/Web/API/BaseAudioContext/createAnalyser
 /en-US/docs/Web/API/AudioContext.createBiquadFilter	/en-US/docs/Web/API/BaseAudioContext/createBiquadFilter
@@ -7250,6 +7250,7 @@
 /en-US/docs/Web/API/AudioParam.setValueAtTime	/en-US/docs/Web/API/AudioParam/setValueAtTime
 /en-US/docs/Web/API/AudioParam.setValueCurveAtTime	/en-US/docs/Web/API/AudioParam/setValueCurveAtTime
 /en-US/docs/Web/API/AudioParam.value	/en-US/docs/Web/API/AudioParam/value
+/en-US/docs/Web/API/AudioScheduledSourceNode/onended	/en-US/docs/Web/API/AudioScheduledSourceNode/ended_event
 /en-US/docs/Web/API/AudioWorkletNode/AudioWorkletNode.parameters	/en-US/docs/Web/API/AudioWorkletNode/parameters
 /en-US/docs/Web/API/AudioWorkletNodeOptions	/en-US/docs/Web/API/AudioWorkletNode/AudioWorkletNode
 /en-US/docs/Web/API/BackgroundFetchRegistration/onprogress	/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event
@@ -7473,7 +7474,7 @@
 /en-US/docs/Web/API/Console.table	/en-US/docs/Web/API/console/table
 /en-US/docs/Web/API/Console/Console.countReset()	/en-US/docs/Web/API/console/countReset
 /en-US/docs/Web/API/Console/Console.timeLog()	/en-US/docs/Web/API/console/timeLog
-/en-US/docs/Web/API/ConstantSourceNode/onended	/en-US/docs/Web/API/AudioScheduledSourceNode/onended
+/en-US/docs/Web/API/ConstantSourceNode/onended	/en-US/docs/Web/API/AudioScheduledSourceNode/ended_event
 /en-US/docs/Web/API/ConstantSourceNode/start	/en-US/docs/Web/API/AudioScheduledSourceNode/start
 /en-US/docs/Web/API/ConstantSourceNode/stop	/en-US/docs/Web/API/AudioScheduledSourceNode/stop
 /en-US/docs/Web/API/ConstrainBoolean	/en-US/docs/Web/API/MediaTrackConstraints
@@ -8602,12 +8603,12 @@
 /en-US/docs/Web/API/Option	/en-US/docs/Web/API/HTMLOptionElement/Option
 /en-US/docs/Web/API/OscillatorNode.detune	/en-US/docs/Web/API/OscillatorNode/detune
 /en-US/docs/Web/API/OscillatorNode.frequency	/en-US/docs/Web/API/OscillatorNode/frequency
-/en-US/docs/Web/API/OscillatorNode.onended	/en-US/docs/Web/API/AudioScheduledSourceNode/onended
+/en-US/docs/Web/API/OscillatorNode.onended	/en-US/docs/Web/API/AudioScheduledSourceNode/ended_event
 /en-US/docs/Web/API/OscillatorNode.setPeriodicWave	/en-US/docs/Web/API/OscillatorNode/setPeriodicWave
 /en-US/docs/Web/API/OscillatorNode.start	/en-US/docs/Web/API/AudioScheduledSourceNode/start
 /en-US/docs/Web/API/OscillatorNode.stop	/en-US/docs/Web/API/AudioScheduledSourceNode/stop
 /en-US/docs/Web/API/OscillatorNode.type	/en-US/docs/Web/API/OscillatorNode/type
-/en-US/docs/Web/API/OscillatorNode/onended	/en-US/docs/Web/API/AudioScheduledSourceNode/onended
+/en-US/docs/Web/API/OscillatorNode/onended	/en-US/docs/Web/API/AudioScheduledSourceNode/ended_event
 /en-US/docs/Web/API/OscillatorNode/start	/en-US/docs/Web/API/AudioScheduledSourceNode/start
 /en-US/docs/Web/API/OscillatorNode/stop	/en-US/docs/Web/API/AudioScheduledSourceNode/stop
 /en-US/docs/Web/API/OverconstrainedError/message	/en-US/docs/Web/API/DOMException/message
