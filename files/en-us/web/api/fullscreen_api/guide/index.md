@@ -16,11 +16,11 @@ tags:
 ---
 {{DefaultAPISidebar("Fullscreen API")}}
 
-This article demonstrates how to use the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) to place a given element into full-screen mode, as well as how to detect when the browser enters or exits full-screen mode.
+This article demonstrates how to use the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) to place a given element into fullscreen mode, as well as how to detect when the browser enters or exits fullscreen mode.
 
-## Activating full-screen mode
+## Activating fullscreen mode
 
-Given an element that you'd like to present in full-screen mode (such as a {{HTMLElement("video")}}, for example), you can present it in full-screen mode by calling its {{DOMxRef("Element.requestFullscreen", "requestFullscreen()")}} method.
+Given an element that you'd like to present in fullscreen mode (such as a {{HTMLElement("video")}}, for example), you can present it in fullscreen mode by calling its {{DOMxRef("Element.requestFullscreen", "requestFullscreen()")}} method.
 
 Let's consider this {{HTMLElement("video")}} element:
 
@@ -31,7 +31,7 @@ Let's consider this {{HTMLElement("video")}} element:
 </video>
 ```
 
-We can put that video into full-screen mode as follows:
+We can put that video into fullscreen mode as follows:
 
 ```js
 var elem = document.getElementById("myvideo");

@@ -154,7 +154,7 @@ _The `Document` interface is extended with additional event handlers defined in 
 - {{DOMxRef("Document.fgColor")}} {{Deprecated_Inline}}
   - : Gets/sets the foreground color, or text color, of the current document.
 - {{DOMxRef("Document.fullscreen")}} {{deprecated_inline}}
-  - : `true` when the document is in {{DOMxRef("Using_full-screen_mode","full-screen mode")}}.
+  - : `true` when the document is in [fullscreen mode](/en-US/docs/Web/API/Fullscreen_API).
 - {{DOMxRef("Document.height")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : Gets/sets the height of the current document.
 - {{DOMxRef("Document.characterSet", "Document.inputEncoding")}} {{Deprecated_Inline}}{{ReadOnlyInline}}
@@ -380,9 +380,9 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 ### Fullscreen events
 
 - {{DOMxRef("Document/fullscreenchange_event", "fullscreenchange")}}
-  - : Fired when the `Document` transitions into or out of [full-screen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
+  - : Fired when the `Document` transitions into or out of [fullscreen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
 - {{DOMxRef("Document/fullscreenerror_event", "fullscreenerror")}}
-  - : Fired if an error occurs while attempting to switch into or out of [full-screen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
+  - : Fired if an error occurs while attempting to switch into or out of [fullscreen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
 
 ### Keyboard events
 
