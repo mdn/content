@@ -40,33 +40,31 @@ In this article we'll go through these features. It's worth keeping in mind that
 
 ## Classes and constructors
 
-You can declare a class using the {{jsxref("Statements/class", "class")}} keyword. Here's a class declaration for our `Person` from the previous article:
+You can declare a class using the {{jsxref("Statements/class", "class")}} keyword. Here's a class declaration for `Adder`:
 
 ```js
-class Person {
+class Adder {
+  value;
 
-  name;
-
-  constructor(name) {
-    this.name = name;
+  constructor(initial) {
+    this.value = initial;
   }
 
-  introduceSelf() {
-    console.log(`Hi! I'm ${this.name}`);
+  add(x) {
+    this.value += x;
   }
-
 }
 ```
 
-This declares a class called `Person`, with:
+This declares a class called `Adder`, with:
 
-- a `name` property.
-- a constructor that takes a `name` parameter that is used to initialize the new object's `name` property
-- an `introduceSelf()` method that can refer to the object's properties using `this`.
+- a `value` property;
+- a constructor that takes a `value` parameter that is used to initialize the new object's `value` property;
+- an `add()` method that can refer to the object's properties using `this`.
 
-The `name;` declaration is optional: you could omit it, and the line `this.name = name;` in the constructor will create the `name` property before initializing it. However, listing properties explicitly in the class declaration might make it easier for people reading your code to see which properties are part of this class.
+The `value` field declaration is optional: you could omit it, and the line `this.value = initial;` in the constructor will create the `value` property before initializing it. However, listing properties explicitly in the class declaration might make it easier for people reading your code to see which properties are part of this class.
 
-You could also initialize the property to a default value when you declare it, with a line like `name = '';`.
+You could also initialize the property to a default value when you declare it, with a line like `value = 0;`.
 
 The constructor is defined using the {{jsxref("Classes/constructor", "constructor")}} keyword. Just like a [constructor outside a class definition](/en-US/docs/Learn/JavaScript/Objects/Basics#introducing_constructors), it will:
 
@@ -75,77 +73,78 @@ The constructor is defined using the {{jsxref("Classes/constructor", "constructo
 - run the code in the constructor
 - return the new object.
 
-Given the class declaration code above, you can create and use a new `Person` instance like this:
+Given the class declaration code above, you can create and use a new `Adder` instance like this:
 
 ```js
-const giles = new Person('Giles');
-
-giles.introduceSelf(); // Hi! I'm Giles
+const adder = new Adder(0);
+adder.add(10);
+console.log(adder); // Adder { value: 10 }
 ```
 
-Note that we call the constructor using the name of the class, `Person` in this example.
+Note that we call the constructor using the name of the class, `Adder` in this example.
 
 ### Omitting constructors
 
 If you don't need to do any special initialization, you can omit the constructor, and a default constructor will be generated for you:
 
 ```js
-class Animal {
-
-  sleep() {
-    console.log('zzzzzzz');
+class Adder {
+  value = 0;
+  add(x) {
+    this.value += x
   }
-
 }
 
-const spot = new Animal();
-
-spot.sleep(); // 'zzzzzzz'
+const adder = new Adder(0);
+adder.add(10);
+console.log(adder); // Adder { value: 10 }
 ```
 
 ## Inheritance
 
-Given our `Person` class above, let's define the `Professor` subclass.
+Given our `Adder` class above, let's define the `AverageAdder` subclass.
 
 ```js
-class Professor extends Person {
-
-  teaches;
-
-  constructor(name, teaches) {
-    super(name);
-    this.teaches = teaches;
+class AverageAdder extends Adder {
+  constructor(initial) {
+    super(initial);
+    this.counter = 0;
   }
 
-  introduceSelf() {
-    console.log(`My name is ${this.name}, and I will be your ${this.teaches} professor.`);
+  add(x) {
+    super.add(x);
+    this.counter++;
   }
 
-  grade(paper) {
-    const grade = Math.floor(Math.random() * (5 - 1) + 1);
-    console.log(grade);
+  average() {
+    return this.value / this.counter;
   }
-
 }
 ```
 
 We use the {{jsxref("Classes/extends", "extends")}} keyword to say that this class inherits from another class.
 
-The `Professor` class adds a new property `teaches`, so we declare that.
+The `AverageAdder` class adds a new property `counter`, so we declare that.
 
-Since we want to set `teaches` when a new `Professor` is created, we define a constructor,  which takes the `name` and `teaches` as arguments. The first thing this constructor does is call the superclass constructor using {{jsxref("Operators/super", "super()")}}, passing up the `name` parameter. The superclass constructor takes care of setting `name`. After that the `Professor` constructor sets the `teaches` property.
+Class `AverageAdder` inherit a constructor from `Adder` which takes `initial` value as an arguments. The first thing this constructor does is call the superclass constructor using {{jsxref("Operators/super", "super()")}}, passing up the `initial` parameter. The superclass constructor takes care of setting `value`. After that the `AverageAdder` constructor sets the `counter` property.
 
 > **Note:** If a subclass has any of its own initialization to do, it **must** first call the superclass constructor using `super()`, passing up any parameters that the superclass constructor is expecting.
 
-We've also overridden the `introduceSelf()` method from the superclass, and added a new method `grade()`, to grade a paper (our professor isn't very good, and just assigns random grades to papers).
+We've also overridden the `add()` method from the superclass, and added a new method `average()`.
 
-With this declaration we can now create and use professors:
+With this declaration we can now create and use adder:
 
 ```js
-const walsh = new Professor('Walsh', 'Psychology');
-walsh.introduceSelf();  // 'My name is Walsh, and I will be your Psychology professor'
-
-walsh.grade('my paper'); // some random grade
+const adder = new AverageAdder(0);
+adder.add(10);
+console.log(adder); // Adder { value: 10, counter: 1 }
+console.log(adder.average()); // 10
+adder.add(20);
+console.log(adder); // Adder { value: 30, counter: 2 }
+console.log(adder.average()); // 15
+adder.add(0);
+console.log(adder); // Adder { value: 30, counter: 3 }
+console.log(adder.average()); // 10
 ```
 
 ## Encapsulation
@@ -155,62 +154,68 @@ Finally, let's see how to implement encapsulation in JavaScript. In the last art
 Here's a declaration of the `Student` class that does just that:
 
 ```js
-class Student extends Person {
+class Point {
+  #x;
+  #y;
 
-  #year;
-
-  constructor(name, year) {
-    super(name);
-    this.#year = year;
+  constructor(x, y) {
+    this.#x = x;
+    this.#y = y;
   }
 
-
-  introduceSelf() {
-    console.log(`Hi! I'm ${this.name}, and I'm in year ${this.#year}.`);
+  toString() {
+    return `(${this.#x}, ${this.#y})`;
   }
-
-  canStudyArchery() {
-    return this.#year > 1;
-  }
-
 }
 ```
 
-In this class declaration, `#year` is a [private data property](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields). We can construct a `Student` object, and it can use `#year` internally, but if code outside the object tries to access `#year` the browser throws an error:
+In this class declaration, `#x` is a [private data property](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields), and `#y` as well. We can construct a `Point` object, and it can use `#x` internally, but if code outside the object tries to access `#x` the JavaScript runtime throws an error:
 
 ```js
-const summers = new Student('Summers', 2);
-
-summers.introduceSelf(); // Hi! I'm Summers, and I'm in year 2.
-summers.canStudyArchery(); // true
-
-summers.#year; // SyntaxError
+const point = new Point(10, 10);
+console.log(point.toString()); // (10, 10)
+console.log(point.#x); // SyntaxError
 ```
 
 Private data properties must be declared in the class declaration, and their names start with `#`.
 
 ### Private methods
 
-You can have private methods as well as private data properties. Just like private data properties, their names start with `#`, and they can only be called by the object's own methods:
+You can have private methods as well as private data properties. Just like private data properties, their names start with `#`, and they can only be called by the object's own methods. Also you can define static private methods. Both cases are shown in the following example:
 
 ```js
-class Example {
+class Point {
+  #x;
+  #y;
 
-  somePublicMethod() {
-    this.#somePrivateMethod();
+  constructor(x, y) {
+    if (!Point.#validate(x, y)) {
+      throw new Error('Cordinate is not a Number');
+    }
+    this.#x = x;
+    this.#y = y;
   }
 
-  #somePrivateMethod() {
-    console.log('You called me?');
+  toString() {
+    if (this.#isOrigin()) return `(The origin)`;
+    return `(${this.#x}, ${this.#y})`;
   }
 
+  static #validate(x, y) {
+    return typeof x === 'number' && typeof y === 'number';
+  }
+
+  #isOrigin() {
+    return this.#x === 0 && this.#y === 0;
+  }
 }
 
-const myExample = new Example();
+const point = new Point(0, 0);
+console.log(point.toString()); // (The origin) instead of (0, 0)
+point.#isOrigin(); // SyntaxError
 
-myExample.somePublicMethod(); // 'You called me?'
-
-myExample.#somePrivateMethod(); // SyntaxError
+const dot = new Point('10, 'hello'); // Error: Cordinate is not a Number
+Point.#validate('10, 'hello'); // SyntaxError
 ```
 
 ## Test your skills!
