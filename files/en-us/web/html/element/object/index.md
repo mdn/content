@@ -132,16 +132,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Examples
 
-### Embed a flash movie
+### Embed a PDF
 
 ```html
-<!-- Embed a flash movie -->
-<object data="movie.swf"
-  type="application/x-shockwave-flash"></object>
-
-<!-- Embed a flash movie with parameters -->
-<object data="movie.swf" type="application/x-shockwave-flash">
-  <param name="foo" value="bar">
+<object type="application/pdf"
+    data="/media/examples/In-CC0.pdf"
+    width="250"
+    height="200">
 </object>
 ```
 
