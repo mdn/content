@@ -272,7 +272,7 @@ Having multiple virtual machines is very useful, particularly for Windows IE/Edg
 
 As mentioned in the last chapter, you can take a lot of the pain out of browser testing by using some kind of automation system. You can set up your own testing automation system ([Selenium](https://www.seleniumhq.org/) being the popular app of choice), which does take some setup, but can be very rewarding when you get it worked out.
 
-There are also commercial tools available such as [Sauce Labs](https://saucelabs.com/), [Browser Stack](https://www.browserstack.com/) and [LambdaTest](https://www.lambdatest.com/) that do this kind of thing for you, without you having to worry about the setup, if you wish to invest some money in your testing.
+There are also commercial tools available such as [Sauce Labs](https://saucelabs.com/), [Browser Stack](https://www.browserstack.com/) [HeadSpin](https://headspin.io/) and [LambdaTest](https://www.lambdatest.com/) that do this kind of thing for you, without you having to worry about the setup, if you wish to invest some money in your testing.
 
 Another alternative is to use no-code test automation tools such as [Endtest](https://endtest.io).
 
