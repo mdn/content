@@ -199,7 +199,7 @@ Inside the `style` tags, add the following CSS:
 form {
   /* Center the form on the page */
   margin: 0 auto;
-  width: 500px;
+  width: 400px;
   /* Form outline */
   padding: 1em;
   border: 1px solid #CCC;

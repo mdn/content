@@ -10,7 +10,7 @@ tags:
   - web animations api
 browser-compat: api.Animation.id
 ---
-{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
+{{ APIRef("Web Animations") }}
 
 The **`Animation.id`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns or sets a string used to identify the animation.
 
@@ -28,7 +28,7 @@ A {{domxref("DOMString")}} which can be used to identify the animation, or `null
 
 ## Examples
 
-In the [Follow the White Rabbit example](http://codepen.io/rachelnabors/pen/eJyWzm?editors=0010), you can assign the `rabbitDownAnimation` an `id` like so:
+In the [Follow the White Rabbit example](https://codepen.io/rachelnabors/pen/eJyWzm?editors=0010), you can assign the `rabbitDownAnimation` an `id` like so:
 
 ```js
 rabbitDownAnimation.effect.id = "rabbitGo";

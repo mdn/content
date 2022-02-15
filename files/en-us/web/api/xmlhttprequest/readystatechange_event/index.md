@@ -1,39 +1,34 @@
 ---
-title: XMLHttpRequest.onreadystatechange
-slug: Web/API/XMLHttpRequest/onreadystatechange
+title: 'XMLHttpRequest: readystatechange event'
+slug: Web/API/XMLHttpRequest/readystatechange_event
 tags:
   - API
   - Event
-  - Handler
-  - Property
   - Reference
   - XHR
   - XMLHttpRequest
-browser-compat: api.XMLHttpRequest.onreadystatechange
+browser-compat: api.XMLHttpRequest.readystatechange_event
 ---
 {{APIRef}}
 
-An [event handler](/en-US/docs/Web/Events/Event_handlers) that is called whenever the `readyState`
-attribute changes. The callback is called from the user interface thread. The
-**`XMLHttpRequest.onreadystatechange`** property contains the
-event handler to be called when the {{domxref("XMLHttpRequest/readystatechange_event",
-  "readystatechange")}} event is fired, that is every time the
-{{domxref("XMLHttpRequest.readyState", "readyState")}} property of the
-{{domxref("XMLHttpRequest")}} changes.
+The `readystatechange` event is fired whenever the {{domxref("XMLHttpRequest.readyState", "readyState")}} property of the {{domxref("XMLHttpRequest")}} changes.
 
 > **Warning:** This should not be used with synchronous requests and must
 > not be used from native code.
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js
-XMLHttpRequest.onreadystatechange = callback;
+addEventListener('readyState', event => { })
+
+onreadyState = event => { }
 ```
 
-### Values
+## Event type
 
-- `callback` is the function to be executed when the
-  `readyState` changes.
+A generic {{DOMxRef("Event")}} with no added properties.
 
 ## Examples
 

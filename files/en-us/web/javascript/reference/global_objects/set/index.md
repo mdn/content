@@ -62,7 +62,7 @@ The `Set` [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) m
   - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
 - {{jsxref("Set.prototype.values()")}}
   - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
-- {{jsxref("Set.prototype.keys()")}}
+- {{jsxref("Set.prototype.values", " Set.prototype.keys()")}}
   - : An alias for {{jsxref("Set.prototype.values()")}}.
 - {{jsxref("Set.prototype.entries()")}}
 

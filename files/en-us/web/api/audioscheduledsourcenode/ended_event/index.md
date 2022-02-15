@@ -18,30 +18,9 @@ browser-compat: api.AudioScheduledSourceNode.ended_event
 
 The `ended` event of the {{domxref("AudioScheduledSourceNode")}} interface is fired when the source node has stopped playing.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("AudioScheduledSourceNode.onended")}}</td>
-    </tr>
-  </tbody>
-</table>
-
-## Usage notes
-
 This event occurs when a {{domxref("AudioScheduledSourceNode")}} has stopped playing, either because it's reached a predetermined stop time, the full duration of the audio has been performed, or because the entire buffer has been played.
+
+This event is not cancelable and does not bubble.
 
 ## Examples
 

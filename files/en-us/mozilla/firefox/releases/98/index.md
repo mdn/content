@@ -37,9 +37,14 @@ This article provides information about the changes in Firefox 98 that will affe
 
 ### APIs
 
+- {{domxref("navigator.registerProtocolHandler()")}} can now register protocol handlers for the `ftp`, `sftp`, and `ftps` schemes ({{bug(1705202)}}).
+
 #### DOM
 
+
+- {{domxref("HTMLElement.outerText")}} is now supported ({{bug(1709790)}}).
 - The properties `colorSpaceConversion`, `resizeWidth` and `resizeHeight` can be passed to the method {{domxref("createImageBitmap()")}} using the `options` object ({{bug(1748868)}} and {{bug(1733559)}}).
+
 
 #### Media, WebRTC, and Web Audio
 

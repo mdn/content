@@ -3,9 +3,6 @@ title: BroadcastChannel.name
 slug: Web/API/BroadcastChannel/name
 tags:
   - Broadcast Channel API
-  - BroadcastChannel
-  - Experimental
-  - HTML API
   - Property
   - Read-only
   - Reference

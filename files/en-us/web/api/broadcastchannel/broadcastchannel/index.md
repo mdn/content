@@ -6,7 +6,6 @@ tags:
   - Broadcast Channel API
   - BroadcastChannel
   - Constructor
-  - Experimental
   - HTML API
   - Reference
 browser-compat: api.BroadcastChannel.BroadcastChannel

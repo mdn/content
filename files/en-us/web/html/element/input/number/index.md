@@ -63,7 +63,7 @@ On browsers that don't support inputs of type `number`, a `number` input falls b
 
 ## Value
 
-A {{jsxref("Number")}} representing the value of the number entered into the input. You can set a default value for the input by including a number inside the {{htmlattrxref("value", "input")}} attribute, like so:
+A number representing the value of the number entered into the input. You can set a default value for the input by including a number inside the {{htmlattrxref("value", "input")}} attribute, like so:
 
 ```html
 <input id="number" type="number" value="42">

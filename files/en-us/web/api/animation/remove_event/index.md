@@ -1,32 +1,39 @@
 ---
-title: Animation.onremove
-slug: Web/API/Animation/onremove
+title: 'Animation: remove event'
+slug: Web/API/Animation/remove_event
 tags:
   - API
-  - Animation
-  - Event Handler
-  - Experimental
-  - Property
   - Reference
-  - onremove
-  - web animations api
-browser-compat: api.Animation.onremove
+  - Event
+browser-compat: api.Animation.remove_event
 ---
-{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
+{{ APIRef("Web Animations") }}
 
-The {{domxref("Animation")}} interface's **`onremove`** property (from the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)) is the event handler for the {{event("remove")}} event. This event is sent when the animation is removed (i.e., put into an `active` replace state).
+The **`remove`** event of the {{domxref("Animation")}} interface fires when the animation is removed (i.e., put into an `active` replace state).
 
 ## Syntax
 
-```js
-var removeHandler = animation.onremove;
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-animation.onremove = removeHandler;
+```js
+addEventListener('remove', event => { })
+onremove = event => { }
 ```
 
-### Value
+## Event type
 
-A function to be called to handle the {{event("remove")}} event, or `null` if no `remove` event handler is set.
+An {{domxref("AnimationPlaybackEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("AnimationPlaybackEvent")}}
+
+## Event properties
+
+_In addition to the properties lsited below, properties from the parent interface, {{domxref("Event")}}, are available._
+
+- {{domxref("AnimationPlaybackEvent.currentTime")}} {{readonlyinline}}
+  - : The current time of the animation that generated the event.
+- {{domxref("AnimationPlaybackEvent.timelineTime")}} {{readonlyinline}}
+  - : The time value of the timeline of the animation that generated the event.
 
 ## Examples
 
@@ -45,9 +52,7 @@ document.body.addEventListener('mousemove', evt => {
 
   //anim.persist()
 
-  anim.onremove = function() {
-    console.log('Animation removed');
-  }
+  anim.onremove = event => { console.log('Animation removed');}
 
   console.log(anim.replaceState);
 });
@@ -68,4 +73,4 @@ A console message is logged each time an animation it removed, invoked when the 
 ## See also
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}}
+- {{domxref("Animation")}}, {{domxref("AnimationPlaybackEvent")}}

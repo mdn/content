@@ -30,13 +30,6 @@ _This interface also inherits properties from its parent, {{domxref("EventTarget
 - {{domxref("BroadcastChannel.name")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMString")}}, the name of the channel.
 
-### Event handlers
-
-- {{domxref("BroadcastChannel.onmessage")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) property that specifies the function to execute when a {{event("message")}} event is fired on this object.
-- {{domxref("BroadcastChannel.onmessageerror")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when a {{domxref("MessageEvent")}} of type {{domxref("MessageError")}} is fired—that is, when it receives a message that cannot be deserialized.
-
 ## Methods
 
 _This interface also inherits methods from its parent, {{domxref("EventTarget")}}._
@@ -50,10 +43,10 @@ _This interface also inherits methods from its parent, {{domxref("EventTarget")}
 
 - [`message`](/en-US/docs/Web/API/BroadcastChannel/message_event)
   - : Fired when a message arrives on the channel.
-    Also available via the [`onmessage`](/en-US/docs/Web/API/BroadcastChannel/onmessage) property.
+    Also available via the `onmessage` property.
 - [`messageerror`](/en-US/docs/Web/API/BroadcastChannel/messageerror_event)
   - : Fired when a message arrives that can't be deserialized.
-    Also available via the [`onmessageerror`](/en-US/docs/Web/API/BroadcastChannel/onmessageerror) property.
+    Also available via the `onmessageerror` property.
 
 ## Specifications
 
