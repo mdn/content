@@ -34,13 +34,13 @@ _Inherits methods from its parent interface:_ {{domxref("EventTarget")}}.
 ## Events
 
 - {{domxref("BatteryManager.chargingchange_event", "chargingchange")}}
-  - : Fired when the battery charging state (the {{domxref("BatteryManager.charging", "charging"}} property) is updated.
+  - : Fired when the battery charging state (the {{domxref("BatteryManager.charging", "charging")}} property) is updated.
 - {{domxref("BatteryManager.chargingtimechange_event", "chargingtimechange")}}
-  - : Fired when the battery charging time (the {{domxref("BatteryManager.chargingTime", "chargingTime"}} property) is updated.
+  - : Fired when the battery charging time (the {{domxref("BatteryManager.chargingTime", "chargingTime")}} property) is updated.
 - {{domxref("BatteryManager.dischargingtimechange_event", "dischargingtimechange")}}
-  - : Fired when the battery discharging time (the {{domxref("BatteryManager.dischargingTime", "dischargingTime"}} property) is updated.
+  - : Fired when the battery discharging time (the {{domxref("BatteryManager.dischargingTime", "dischargingTime")}} property) is updated.
 - {{domxref("BatteryManager.levelchange_event", "levelchange")}}
-  - : Fired when the battery level (the {{domxref("BatteryManager.level", "level"}} property) is updated.
+  - : Fired when the battery level (the {{domxref("BatteryManager.level", "level")}} property) is updated.
 
 ## Specifications
 
