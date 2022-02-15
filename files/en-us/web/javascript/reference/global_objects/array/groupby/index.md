@@ -11,15 +11,15 @@ browser-compat: javascript.builtins.Array.groupBy
 ---
 {{JSRef}}
 
-The `groupBy()` method groups the elements of the provided array according to the "category" values returned by a provided testing function.
-All elements with the same category are added to their own array, and each array is assigned to a property named with the associated category string.
+The **`groupBy()`** method groups the elements of the provided array according to the values returned by a provided testing function.
+The returned object has separate properties for each group, containing arrays with the elements in the group.
 
-{{EmbedInteractiveExample("pages/js/array-find.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/array-groupby.html")}}
 
-Note original and grouped arrays reference the same elements;
-If you modify an element that is an object, this will be reflected in both arrays. 
+Note that the returned object references the _same_ elements as the original array (not {{glossary("deep copy","deep copies")}}). 
+Changing the internal structure of these elements will be reflected in both the original array and the returned object.
 
-This method requires that every group is a string (or can be coerced to a string).
+This method can be used when group names can be represented by strings.
 If you need to group elements using a key that is some arbitrary object, use {{jsxref("Array.prototype.groupByToMap()")}} instead.
 
 ## Syntax
@@ -63,10 +63,10 @@ groupBy(function(element, index, array) { /* ... */ }, thisArg)
 
 ### Return value
 
-An [`Object`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) with properties for all groups, each assigned to an array with the elements of the associated group. 
+An [`Object`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) with properties for all groups, each assigned to an array containing the elements of the associated group. 
 The value is an object that does not inherit from `Object.prototype`.
 
-## Exceptions
+### Exceptions
 
 - `TypeError`
   - : The specified callback function is not callable.
@@ -74,7 +74,7 @@ The value is an object that does not inherit from `Object.prototype`.
 ## Description
 
 The `groupBy()` method executes the `callbackFn` function once for each index of the array, returning a string (or value that can be coerced to a string) indicating the group of the element.
-A new property and array is created in the result object corresponding to each unique group name that is returned by the callback.
+A new property and array is created in the result object for each unique group name that is returned by the callback.
 Each element is added to the array in the property that corresponds to its group.
 
 `callbackFn` is invoked for _every_ index of the array, not just those with assigned values.
@@ -96,9 +96,8 @@ Therefore:
 
 ## Examples
 
-This example shows how we might group objects using different approaches.
-
-First we define the array of different types of food that we would like to group by type, and also by whether it needs to be reordered.
+First we define an array containing objects representing an inventory of different foodstuffs.
+Each food has a `type`, which might need to be stored differently, and a `quantity` that can be used to determine when we need to reorder each item.
 
 ```js
 const inventory = [
@@ -110,31 +109,59 @@ const inventory = [
 ];
 ```
 
-In the simplest case we can just sort on the value of one of the keys in the object.
-Here we pass in the element and return the value of that element 
+The code below groups the elements by the value of their `type` property.
 
 ```js
 let result = inventory.groupBy( ({ type }) => type );
-/* result is:
+
+/* Result is:
 { 
-  vegetables:  [ { name: "apples", type: "vegetables", quantity: 5 } ],
-  fruit: [ { name: "bananas", type: "fruit", quantity: 0 },  { name: "cherries", type: "fruit", quantity: 5 } ], 
-  meat: [ { name: "goat", type: "meat", quantity: 23 },  { name: "fish", type: "meat", quantity: 22 } ] 
+  vegetables: [ 
+    { name: "apples", type: "vegetables", quantity: 5 } 
+  ],
+  fruit: [
+    { name: "bananas", type: "fruit", quantity: 0 },
+    { name: "cherries", type: "fruit", quantity: 5 }
+  ], 
+  meat: [
+    { name: "goat", type: "meat", quantity: 23 },
+    { name: "fish", type: "meat", quantity: 22 }
+  ] 
 }
 */
 ```
 
-Here we pass in the `quantity, and then use it to group on whether or not we need to reorder:
+The arrow function just returns the `type` of each array element each time it is called.
+Note that the function argument `{ type }` is a basic example of [object destructuring syntax for function arguments](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_fields_from_objects_passed_as_a_function_parameter).
+This unpacks the `type` property of an object passed as a parameter, and assigns it to a variable named `type` in the body of the function.
+This is a very succinct way to access the relevant values of elements within a function.
+
+We can also create groups inferred from values in one or more properties of the elements.
+Below is a very similar example that uses a callback function and the `quantity` field to define that an element is in the `ok` or `reorder` groups.
 ```js
-result = inventory.groupBy( ({ quantity }) => quantity > 5 ? 'ok' : 'reorder' );
-console.log(result);
+function myCallback( { quantity } ) {
+  return quantity > 5 ? 'ok' : 'reorder';
+}
+
+result = inventory.groupBy( myCallback );
+
 /* Result is:
 { 
-  reorder: [ { name: "apples", type: "vegetables", quantity: 5 },  { name: "bananas", type: "fruit", quantity: 0 },  { name: "cherries", type: "fruit", quantity: 5 }], 
-  ok: [ { name: "goat", type: "meat", quantity: 23 },  { name: "fish", type: "meat", quantity: 22 }] }
+  reorder: [
+    { name: "apples", type: "vegetables", quantity: 5 },
+    { name: "bananas", type: "fruit", quantity: 0 },
+    { name: "cherries", type: "fruit", quantity: 5 }
+  ], 
+  ok: [
+    { name: "goat", type: "meat", quantity: 23 },
+    { name: "fish", type: "meat", quantity: 22 }
+  ] 
+}
+*/
 ```
 
-The following example uses the callback function syntax: .... NOT DONE YET - perhaps do the case above.
+The callback syntax provides access to the array and current index, so it is possible to implement grouping strategies based on th values of other elements in the array. 
+
 
 ## Specifications
 
