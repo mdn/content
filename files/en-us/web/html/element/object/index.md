@@ -132,13 +132,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Examples
 
-### Embed a PDF
+### Embed a YouTube Video
 
 ```html
-<object type="application/pdf"
-    data="/media/examples/In-CC0.pdf"
-    width="250"
-    height="200">
+<object type="video/mp4"
+    data="https://www.youtube.com/watch?v=Sp9ZfSvpf7A"
+    width="1280"
+    height="720">
 </object>
 ```
 
