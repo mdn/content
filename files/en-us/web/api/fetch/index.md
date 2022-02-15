@@ -219,8 +219,8 @@ fetch('https://example.com/', {
     </tr>
     <tr>
       <td>
-        If the request method is an invalid name token or one of forbidden headers.
-        <code>CONNECT</code>, <code>TRACE</code> or <code>TRACK</code>
+        If the request method is an invalid name token or one of forbidden headers 
+        (<code>'CONNECT'</code>, <code>'TRACE'</code> or <code>'TRACK'</code>).
       </td>
       <td>
         <pre>
@@ -231,7 +231,7 @@ fetch('https://example.com/', { method: 'CONNECT' });
     <tr>
       <td>
         If the request mode is "no-cors" and the request method is not a CORS-safe-listed method 
-        (<code>GET</code>, <code>HEAD</code>, or <code>POST</code>).
+        (<code>'GET'</code>, <code>'HEAD'</code>, or <code>'POST'</code>).
       </td>
       <td>
         <pre>
@@ -244,7 +244,7 @@ fetch('https://example.com/', {
     </tr>
     <tr>
       <td>
-        If the request method is <code>GET</code> or <code>HEAD</code> and the body is non-null or not undefined.
+        If the request method is <code>'GET'</code> or <code>'HEAD'</code> and the body is non-null or not undefined.
       </td>
       <td>
         <pre>
