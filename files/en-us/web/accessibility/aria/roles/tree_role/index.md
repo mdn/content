@@ -72,7 +72,7 @@ Elements with the role `tree` have an implicit [`aria-orientation`](/en-US/docs/
 
 ### Keyboard interactions
 
-For a vertically oriented tree:
+For a vertically oriented `tree`, which is the default orientation:
 
 <table>
 <tr>
@@ -80,7 +80,7 @@ For a vertically oriented tree:
 <td>
 When focus is on a closed node, opens the node; focus does not move.
 When focus is on a open node, moves focus to the first child node.
-When focus is on an end node, does nothing.
+When focus is on an end node (a tree item with no children), does nothing.
 </td>
 </tr>
 <tr>
@@ -88,7 +88,7 @@ When focus is on an end node, does nothing.
 <td>
 When focus is on an open node, closes the node.
 When focus is on a child node that is also either an end node or a closed node, moves focus to its parent node.
-When focus is on a root node that is also either an end node or a closed node, does nothing.
+When focus is on a closed `tree`, does nothing.
 </td>
 </tr>
 <tr>
@@ -114,12 +114,12 @@ End</kbd></td>
 </tr>
 <tr>
 <td><kbd>Enter</kbd></td>
-<td> activates a node, i.e., performs its default action. For parent nodes, one possible default action is to open or close the node. In single-select trees where selection does not follow focus (see note below), the default action is typically to select the focused node.
+<td>Performs the defaul the currently focused node, i.e., performs its default action. For parent nodes, one possible default action is to open or close the node. In single-select trees where selection does not follow focus (see note below), the default action is typically to select the focused node.
 </td>
 </tr>
 <tr>
-<td>Type a character</td>
-<td> focus moves to the next node with a name that starts with the typed character. If multiple characters are typed in rapid succession,  focus moves to the next node with a name that starts with the string of characters typed.
+<td>Type a character*</td>
+<td>Focus moves to the next node with a name that starts with the typed character. If multiple characters are typed in rapid succession,  focus moves to the next node with a name that starts with the string of characters typed.
 </td>
 </tr>
 <tr>
@@ -130,10 +130,14 @@ End</kbd></td>
 </tr>
 </table>
 
-Type-ahead is recommended for all trees, especially for trees with more than 7 root nodes
+* Type-ahead is recommended for all trees, especially for trees with more than 7 root nodes
 
-Selection in multi-select trees: Authors may implement either of two interaction models to support multiple selection: a recommended model that does not require the user to hold a modifier key, such as Shift or Control, while navigating the list or an alternative model that does require modifier keys to be held while navigating in order to avoid losing selection states.
-Recommended selection model -- holding a modifier key while moving focus is not necessary:
+### Multi-select keyboard interactions
+
+There are two interaction models for multi-select trees: While you can require that users press a modifier key, such as <kbd>Shift</kbd> or <kbd>Control</kbd> while navigating the list in order to avoid losing selection states, the model that does not require the user to hold a modifier key is recommended. 
+
+Recommended multi user select model:
+
 <table>
 <tr>
 <td><kbd>Space</kbd></td>
@@ -172,7 +176,8 @@ Recommended selection model -- holding a modifier key while moving focus is not 
 </table>
 
 
-Alternative selection model -- Moving focus without holding the Shift or Control modifier unselects all selected nodes except for the focused node:
+Alternative multi-selection model, wherein moving focus without holding the <kbd>Shift</kbd> or <kbd>Control</kbd> modifier unselects all selected nodes except for the focused node:
+
 <table>
 <tr>
 <td><kbd>Shift + Down Arrow</kbd></td>
