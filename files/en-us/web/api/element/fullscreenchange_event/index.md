@@ -20,6 +20,20 @@ To find out whether the `Element` is entering or exiting fullscreen mode, check 
 
 This event is not cancelable.
 
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('fullscreenchange', event => { });
+
+onfullscreenchange = event => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
+
 ## Examples
 
 In this example, a handler for the `fullscreenchange` event is added to the element whose ID is `fullscreen-div`.

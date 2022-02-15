@@ -20,6 +20,20 @@ For some reasons that switching into fullscreen mode might fail, see [the guide 
 
 This event is not cancelable.
 
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('fullscreenerror', event => { });
+
+onfullscreenerror = event => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
+
 ## Examples
 
 ```js
