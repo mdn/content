@@ -372,7 +372,7 @@ drawChart({
 > You could have also written the function without the right-hand side assignment.
 > However, if you leave out the right-hand side assignment, the function will look for at least one argument to be supplied when invoked, whereas in its current form, you can call **`drawChart()`** without supplying any parameters.
 > The current approach is useful if you want to be able to call the function without supplying any parameters.
-> The other approah is useful when you want to ensure an object is passed to the function.
+> The other approach is useful when you want to ensure an object is passed to the function.
 > For more information see [Default parameters > Destructured parameter with default value assignment](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters#destructured_parameter_with_default_value_assignment).
 
 #### Nested object and array destructuring
