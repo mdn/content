@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Array.find
 ---
 {{JSRef}}
 
-The `find()` method returns the value of the first
+The `find()` method returns the first
 element in the provided array that satisfies the provided testing function. If no
 values satisfy the testing function, {{jsxref("undefined")}} is returned.
 
@@ -63,14 +63,16 @@ find(function(element, index, array) { /* ... */ }, thisArg)
     - `array` {{optional_inline}}
       - : The array that `find` was called on.
 
+    The callback must return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate a matching element has been found.
+
 - `thisArg` {{optional_inline}}
   - : Object to use as {{jsxref("Operators/this", "this")}} inside
     `callbackFn`.
 
 ### Return value
 
-The **value** of the **first element** in the array that
-satisfies the provided testing function. Otherwise, {{jsxref("undefined")}} is returned.
+The first element in the array that satisfies the provided testing function.
+Otherwise, {{jsxref("undefined")}} is returned.
 
 ## Description
 
