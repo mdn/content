@@ -87,4 +87,4 @@ See also [the example in the specification](https://www.w3.org/TR/battery-status
 
 ## See also
 
-- [Hacks blog post - Using the Battery API](http://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)
+- [Hacks blog post - Using the Battery API](https://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)
