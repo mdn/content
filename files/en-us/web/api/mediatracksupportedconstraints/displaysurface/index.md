@@ -47,7 +47,7 @@ supported by the device and user agent.
 
 This method sets up the constraints object specifying the options for the call to
 {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}. It adds the
-`displaySurface` constraint (requesting that only full-screen sharing be
+`displaySurface` constraint (requesting that only fullscreen sharing be
 allowed) only if it is known to be supported by the browser. Capturing is then started
 by calling `getDisplayMedia()` and attaching the returned stream to the video
 element referenced by the variable `videoElem`.

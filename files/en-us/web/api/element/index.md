@@ -266,7 +266,7 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
 - {{DOMxRef("Element.replaceWith()")}}
   - : Replaces the element in the children list of its parent with a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects.
 - {{DOMxRef("Element.requestFullscreen()")}} {{Experimental_Inline}}
-  - : Asynchronously asks the browser to make the element full-screen.
+  - : Asynchronously asks the browser to make the element fullscreen.
 - {{DOMxRef("Element.requestPointerLock()")}} {{Experimental_Inline}}
   - : Allows to asynchronously ask for the pointer to be locked on the given element.
 - {{domxref("Element.scroll()")}}
@@ -356,9 +356,9 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 ### Fullscreen events
 
 - {{domxref("Element/fullscreenchange_event", "fullscreenchange")}}
-  - : Sent to an {{domxref("Element")}} when it transitions into or out of [full-screen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
+  - : Sent to an {{domxref("Element")}} when it transitions into or out of [fullscreen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
 - {{domxref("Element/fullscreenerror_event", "fullscreenerror")}}
-  - : Sent to an `Element` if an error occurs while attempting to switch it into or out of [full-screen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
+  - : Sent to an `Element` if an error occurs while attempting to switch it into or out of [fullscreen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
 
 ### Keyboard events
 
