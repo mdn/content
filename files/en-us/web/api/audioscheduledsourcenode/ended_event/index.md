@@ -22,6 +22,20 @@ This event occurs when a {{domxref("AudioScheduledSourceNode")}} has stopped pla
 
 This event is not cancelable and does not bubble.
 
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('ended', event => { });
+
+onended = event => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
+
 ## Examples
 
 In this simple example, an event listener for the `ended` event is set up to enable a "Start" button in the user interface when the node stops playing:
@@ -32,7 +46,7 @@ node.addEventListener('ended', () => {
 })
 ```
 
-You can also set up the event handler using the {{domxref("AudioScheduledSourceNode.onended")}} property:
+You can also set up the event handler using the `onended` property:
 
 ```js
 node.onended = function() {
