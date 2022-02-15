@@ -90,8 +90,9 @@ If you don't need to do any special initialization, you can omit the constructor
 ```js
 class Adder {
   value = 0;
+
   add(x) {
-    this.value += x
+    this.value += x;
   }
 }
 
