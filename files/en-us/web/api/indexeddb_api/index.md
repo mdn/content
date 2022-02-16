@@ -73,7 +73,7 @@ To get access to a database, call [`open()`](/en-US/docs/Web/API/IDBFactory/open
 This specification fires events with the following custom interface:
 
 - {{domxref("IDBVersionChangeEvent")}}
-  - : The `IDBVersionChangeEvent` interface indicates that the version of the database has changed, as the result of an {{domxref("IDPOpenDBRequest.upgradeneeded_event", "IDBOpenDBRequest.onupgradeneeded")}} event handler function.
+  - : The `IDBVersionChangeEvent` interface indicates that the version of the database has changed, as the result of an {{domxref("IDBOpenDBRequest.upgradeneeded_event", "IDBOpenDBRequest.onupgradeneeded")}} event handler function.
 
 ### Obsolete interfaces
 
