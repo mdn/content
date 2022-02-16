@@ -48,7 +48,7 @@ When a message is posted, a [`message`](/en-us/docs/Web/API/BroadcastChannel/mes
 
 ```js
 // A handler that only logs the event to the console:
-bc.onmessage = event => { console.log(eve t); }
+bc.onmessage = event => { console.log(event); }
 ```
 
 ### Disconnecting a channel
