@@ -28,7 +28,7 @@ _Inherits properties from its parent {{domxref("EventTarget")}}._
     allows the user to open. A BluetoothDevice representing the beacon would be available
     through `navigator.bluetooth.referringDevice`.
 
-### Events
+## Events
 
 - {{domxref("Bluetooth.availabilitychanged_event", "availabilitychanged")}}
   - : An event that fires when Bluetooth capabilities have changed in availability.
