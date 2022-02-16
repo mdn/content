@@ -13,10 +13,7 @@ browser-compat: javascript.operators.class
 ---
 {{jsSidebar("Operators")}}
 
-The **class expression** is one way to define a
-class in ECMAScript 2015. Similar to {{jsxref("Operators/function", "function
-    expressions", "", "true")}}, class expressions can be named or unnamed. If named, the
-name of the class is local to the class body only.
+The **class expression** is one way to define a class in ECMAScript 2015. Similar to {{jsxref("Operators/function", "function expressions", "", "true")}}, class expressions can be named or unnamed. If named, the name of the class is local to the class body only.
 
 JavaScript classes use prototype-based inheritance.
 
@@ -25,81 +22,73 @@ JavaScript classes use prototype-based inheritance.
 ## Syntax
 
 ```js
-const MyClass = class [className] [extends otherClassName] {
+const ClassIdentifier = class [ClassName] [extends ParentClassName] {
   // class body
-}
+};
 ```
 
 ## Description
 
-A class expression has a similar syntax to a {{jsxref("Statements/class", "class
-  declaration (statement)", "", "true")}}. As with `class` statements, the body
-of a `class` expression is executed in {{jsxref("Strict_mode", "strict mode",
-  "", 1)}}.
+A class expression has a similar syntax to a {{jsxref("Statements/class", "class declaration (statement)", "", "true")}}. As with `class` statements, the body of a `class` expression is executed in {{jsxref("Strict_mode", "strict mode", "", 1)}}.
 
-There are several differences between class expressions and
-{{jsxref("Statements/class", "class statements", "", "true")}}, however:
+There is s difference between class expression and {{jsxref("Statements/class", "class statements", "", "true")}}: class expressions may omit the class name ("binding identifier"), which is not possible with {{jsxref("Statements/class", "class statements", "", "true")}}.
 
-- Class expressions may omit the class name ("binding identifier"), which is not
-  possible with {{jsxref("Statements/class", "class statements", "", "true")}}.
-- Class expressions allow you to redefine (re-declare) classes **without
-  throwing** a {{jsxref("Global_Objects/SyntaxError", "SyntaxError")}}. This is
-  not the case with {{jsxref("Statements/class", "class statements", "", "true")}}.
-
-The `constructor` method is optional. Classes generated with class
-expressions will always respond to {{jsxref("Operators/typeof", "typeof")}} with the
-value "`function`".
+The `constructor` method is optional. Classes generated with class expressions will always respond to {{jsxref("Operators/typeof", "typeof")}} with the value "`function`".
 
 ```js
-'use strict';
-let Foo = class {};  // constructor property is optional
-Foo = class {};      // Re-declaration is allowed
+const Abstraction = class {};  // constructor property is optional
 
-typeof Foo;             // returns "function"
-typeof class {};        // returns "function"
+console.log(Abstraction.name);                        // Abstraction
+console.log(Abstraction.prototype.constructor.name);  // Abstraction
 
-Foo instanceof Object;   // true
-Foo instanceof Function; // true
-class Foo {}            // Throws SyntaxError (class declarations do not allow re-declaration)
+console.log(typeof Abstraction);             // function
+console.log(Abstraction.constructor.name);  // Function
+
+console.log(Abstraction instanceof Object);    // true
+console.log(Abstraction instanceof Function);  // true
 ```
 
 ## Examples
 
 ### A simple class expression
 
-This is just a simple anonymous class expression which you can refer to using the
-variable `Foo`.
+This is just a simple anonymous class expression which you can refer to using the identifier `Abstraction`.
 
 ```js
-const Foo = class {
+const Abstraction = class {
   constructor() {}
-  bar() {
+  toString() {
     return 'Hello World!';
   }
 };
 
-const instance = new Foo();
-instance.bar();  // "Hello World!"
-Foo.name;        // "Foo"
+const instance = new Abstraction();
+console.log(instance.toString());  // Hello World!
 ```
 
 ### Named class expressions
 
-If you want to refer to the current class inside the class body, you can create a
-_named class expression_. The name is only visible within the scope of the class
-expression itself.
+If you want to refer to the current class inside the class body, you can create a _named class expression_. The name is only visible within the scope of the class expression itself.
 
 ```js
-const Foo = class NamedFoo {
-  constructor() {}
-  whoIsThere() {
-    return NamedFoo.name;
+const usage = (ClassIdentifier) => {
+  const instance = new ClassIdentifier();
+  console.log(instance.whoIsThere());  // InternalName
+  console.log(ClassIdentifier.name);   // InternalName
+  try {
+    console.log(InternalName.name);
+  } catch (error) {
+    console.log(error.message); // ReferenceError: InternalName is not defined
   }
-}
-const bar = new Foo();
-bar.whoIsThere();  // "NamedFoo"
-NamedFoo.name;     // ReferenceError: NamedFoo is not defined
-Foo.name;          // "NamedFoo"
+};
+
+usage(
+  class InternalName {
+    whoIsThere() {
+      return InternalName.name;
+    }
+  }
+);
 ```
 
 ## Specifications
