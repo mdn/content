@@ -87,9 +87,9 @@ The `preload` attribute allows you to specify a preference for how the browser p
 
 `preload` can take 3 different values:
 
-1.  `none`: Don't download anything before the play button is pressed.
-2.  `metadata`: Download the audio metadata; this is usually the best option, as it allows you to access and display information such as audio length, and allow the browser to work out which audio file it should use.
-3.  `auto`: Download the whole audio file as soon as possible. This is generally not a good option unless you can guarantee your users will have a fast network connection.
+1. `none`: Don't download anything before the play button is pressed.
+2. `metadata`: Download the audio metadata; this is usually the best option, as it allows you to access and display information such as audio length, and allow the browser to work out which audio file it should use.
+3. `auto`: Download the whole audio file as soon as possible. This is generally not a good option unless you can guarantee your users will have a fast network connection.
 
 > **Note:** This value is often ignored on mobile platforms.
 
@@ -207,9 +207,9 @@ if (myAudio.canPlayType('audio/mpeg')) {
 
 `canPlayType()` returns one of three values:
 
-1.  `probably`
-2.  `maybe`
-3.  "" (an empty string)
+1. `probably`
+2. `maybe`
+3. "" (an empty string)
 
 In practice, we usually check if the result is true or false. Non-empty strings are true.
 

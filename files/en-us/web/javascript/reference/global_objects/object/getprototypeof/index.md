@@ -72,7 +72,7 @@ since Opera 10.50.
 
 ## See also
 
-- A polyfill of `Object.getPrototypeOf` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Polyfill of `Object.getPrototypeOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
 - {{jsxref("Object/proto","Object.prototype.__proto__")}}

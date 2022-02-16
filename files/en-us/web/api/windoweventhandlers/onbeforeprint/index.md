@@ -7,7 +7,7 @@ tags:
   - HTML DOM
   - Property
   - Reference
-  - Wiindow
+  - Window
   - printing
 browser-compat: api.WindowEventHandlers.onbeforeprint
 ---

@@ -115,6 +115,6 @@ The above behavior is how many browsers actually implement
 
 ## See also
 
-- A polyfill of `NodeList.prototype.forEach` is available in [`core-js`](https://github.com/zloirock/core-js#iterable-dom-collections)
+- [Polyfill of `NodeList.prototype.forEach` in `core-js`](https://github.com/zloirock/core-js#iterable-dom-collections)
 - {{domxref("Node")}}
 - {{domxref("NodeList")}}

@@ -10,30 +10,30 @@ tags:
 ---
 {{MDNSidebar}}
 
-When writing documentation about an API, the sources of information are many: the specifications describe what should be implemented as well as the model, and the implementations describe what has actually been put in the browsers. WebIDL files are a very condensed way of giving a lot, but not all, of the information about the API. This document provides a reference to help understand WebIDL syntax.
+When writing documentation about an API, the sources of information are many: the specifications describe what should be implemented as well as the model, and the implementations describe what has actually been put in the browsers. WebIDL files are a very condensed way of giving a lot, but not all, of the information about the API. This document provides a reference to help understand WebIDL syntax.
 
-IDL stands for **_Interface Definition Language_** and it is designed to describe APIs. In the wider world of computing there are several kinds of IDL. In the world of browsers, the IDL we use is called _WebIDL_. Two kinds of WebIDL are available: the one given in the WebIDL spec, and the one implemented in browsers. The spec is the canonical reference, and the browser WebIDL describes what is actually implemented in a particular browser, and contains additional things such as annotations, information about non-standard elements, and browser-specific extensions to the IDL specification.
+IDL stands for **_Interface Definition Language_** and it is designed to describe APIs. In the wider world of computing there are several kinds of IDL. In the world of browsers, the IDL we use is called _WebIDL_. Two kinds of WebIDL are available: the one given in the WebIDL spec, and the one implemented in browsers. The spec is the canonical reference, and the browser WebIDL describes what is actually implemented in a particular browser, and contains additional things such as annotations, information about non-standard elements, and browser-specific extensions to the IDL specification.
 
 ## Where to find WebIDL files
 
 WebIDL can be found in multiple locations:
 
 - Each specification contains WebIDL inside the text: it is a very convenient way to convey precise definition. These describe the syntax of the API. Though the canonical reference, we have to keep in mind that they may differ from the actual implementation. On MDN we want to be practical and document what the Web platform really is, not what it ideally should be. So double check what is there with implementations (and don't hesitate to file bugs if you discover incoherence).
-- Three browser engines use (modified) WebIDL as part as their toolchain: Gecko, Chromium/Blink, and WebCore/WebKit. Pre-Chromium versions of Edge used it internally, but these are unfortunately not public.
+- Three browser engines use (modified) WebIDL as part as their toolchain: Gecko, Chromium/Blink, and WebCore/WebKit. Pre-Chromium versions of Edge used it internally, but these are unfortunately not public.
 
-  - For Gecko, all WebIDL files are grouped in a single directory: <https://dxr.mozilla.org/mozilla-central/source/dom/webidl/>. Their extension is `.webidl`. There are other `*.idl` files in the Gecko source tree but they are not WebIDL, so you can ignore them. Older versions of Gecko have some of their WebIDL scattered around somewhat, and may even use Mozilla's IDL instead of WebIDL to describe some Web interfaces, but this won't be a problem in any recent Gecko code.
-  - For Chromium, they are located in two locations, both subtrees of the source code's [`renderer/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/) directory: [`core/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/core/) and [`modules/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/modules/). Chromium source code has IDL files in other locations, but these are part of the testing system and not relevant to API implementations.
+  - For Gecko, all WebIDL files are grouped in a single directory: <https://dxr.mozilla.org/mozilla-central/source/dom/webidl/>. Their extension is `.webidl`. There are other `*.idl` files in the Gecko source tree but they are not WebIDL, so you can ignore them. Older versions of Gecko have some of their WebIDL scattered around somewhat, and may even use Mozilla's IDL instead of WebIDL to describe some Web interfaces, but this won't be a problem in any recent Gecko code.
+  - For Chromium, they are located in two locations, both subtrees of the source code's [`renderer/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/) directory: [`core/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/core/) and [`modules/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/modules/). Chromium source code has IDL files in other locations, but these are part of the testing system and not relevant to API implementations.
   - For WebCore, they are scattered around the source code, so you need to dig a bit more: E.g. <https://github.com/WebKit/webkit/blob/master/Source/WebCore/html/DOMTokenList.idl>
 
 ## Different dialects of WebIDL
 
 WebIDL is defined in [its specification](https://heycam.github.io/webidl/). But it has been designed to be extended to convey more information, and browser vendors have done so:
 
-- For Gecko, MDN has the [documentation](/en-US/docs/Mozilla/WebIDL_bindings) of its dialectal WebIDL.
+- For Gecko, Mozilla created the [documentation](https://firefox-source-docs.mozilla.org/dom/webIdlBindings/index.html) of its dialectal WebIDL.
 - For Chromium, Google also created a [document](https://www.chromium.org/blink/webidl) to describe its extensions.
 - For WebCore, Apple also made available a [page](https://trac.webkit.org/wiki/WebKitIDL) for its dialect.
 
-> **Note:** We describe here only the subset of WebIDL which is most useful when writing documentation. There are many more annotations useful for implementers; refer to the four documents linked above to have a complete overview.
+> **Note:** We describe here only the subset of WebIDL which is most useful when writing documentation. There are many more annotations useful for implementers; refer to the four documents linked above to have a complete overview.
 
 ## Interfaces
 
@@ -51,7 +51,7 @@ Each WebIDL interface, being a true interface or a mixin, has its own page in th
 
 ### Inheritance chain
 
-The parent, if any, of a given interface is defined after the interface name, following a colon (`':'`). There can be only one parent per interface.
+The parent, if any, of a given interface is defined after the interface name, following a colon (`':'`). There can be only one parent per interface.
 
 ```js
 interface HTMLMediaElement : HTMLElement {…}
@@ -205,7 +205,7 @@ interface MyInterface {
 
 ## Properties
 
-You can recognize the definition of a property by the presence of the `attribute` keyword.
+You can recognize the definition of a property by the presence of the `attribute` keyword.
 
 ### Name of the property
 
@@ -281,7 +281,7 @@ _Although this property is read-only, it will not throw if it is modified (even 
 
 The return value of a property can be either a copy of an internal object, a newly created synthetic object, or a reference to an internal object.
 
-Basic objects with types like {{jsxref("String")}} (being an IDL `DOMString`, or other), {{jsxref("Number")}} (being an IDL `byte`, `octet`, `unsigned int`, or other), and {{jsxref("Boolean")}} are always copied and nothing special has to be noted about them (it is natural behavior expected by a JavaScript developer.)
+Basic objects with types like {{jsxref("String")}} (being an IDL `DOMString`, or other), {{jsxref("Number")}} (being an IDL `byte`, `octet`, `unsigned int`, or other), and {{jsxref("Boolean")}} are always copied and nothing special has to be noted about them (it is natural behavior expected by a JavaScript developer.)
 
 For interface objects, the default is to return a _reference_ to the internal object. This has to be mentioned both in the short description in the interface page, and in the description in the specific sub-pages.
 
@@ -301,7 +301,7 @@ _The **`HTMLMediaElement.buffered`** read-only property returns a new \\{{domxre
 and
 
 - _\\{{domxref("HTMLMediaElement.buffered")}}\\{{readonlyinline}}_
-  - : _Returns a new \\{{domxref("TimeRanges")}} object that …_
+  - : _Returns a new \\{{domxref("TimeRanges")}} object that …_
 
 In the case of a reference to a collection object (like `HTMLCollection`, `HTMLFormElementsCollection`, or `HTMLOptionsCollection`, always without `[NewObject]`), we make it explicit that changes to the underlying object will be available via the returned reference. To mark this, we qualify the collection as a **live** `HTMLCollection` (or `HTMLFormElementsCollections`, or `HTMLOptionsCollection`), both in the interface description and in the subpage.
 
@@ -359,7 +359,7 @@ The parameters of a method are listed in the Syntax section of the method sub-pa
 DOMString canPlayType(DOMString type);
 ```
 
-The return value type is indicated first inside the parentheses — in the above case the value is an object of type `DOMString`. if followed by a question mark (`'?'`), a value of `null` can be returned too, and the documentation must explain _when_ this may happen. If no question mark is present, like here,  the return value can't be `null`.
+The return value type is indicated first inside the parentheses — in the above case the value is an object of type `DOMString`. if followed by a question mark (`'?'`), a value of `null` can be returned too, and the documentation must explain _when_ this may happen. If no question mark is present, like here, the return value can't be `null`.
 
 The keyword `void` means that there is no return value. It is not a return value type. If the WebIDL entry reads `void`, the _Return value_ section in the docs should contain only a simple _None_.
 
@@ -447,8 +447,8 @@ Such an iterator allows to use the syntax `for (var p in object)` as a shorthand
 
 > **Note:** the value pairs to iterate over can be defined in two different ways:
 >
-> 1.  Outside the webidl file, in the prose accompanying it. Such a prose is in the spec and usually starts with: _"The [values to iterate over](https://heycam.github.io/webidl/#dfn-values-to-iterate-over)…"_.
-> 2.  In the webidl file, implicitly, if the interface supports indexed properties, that is when the interface has a `getter` methods with a parameter of type `unsigned long`.
+> 1. Outside the webidl file, in the prose accompanying it. Such a prose is in the spec and usually starts with: _"The [values to iterate over](https://heycam.github.io/webidl/#dfn-values-to-iterate-over)…"_.
+> 2. In the webidl file, implicitly, if the interface supports indexed properties, that is when the interface has a `getter` methods with a parameter of type `unsigned long`.
 
 #### Pair iterator
 
@@ -471,7 +471,7 @@ Such an iterator allows to use the syntax `for (var p in object)` as a shorthand
 
 ### Set-like methods
 
-An interface may be defined as _set-like_, meaning that it represents an _ordered set of values_ will have the following methods: `entries()`, `keys()`,  `values()`, `forEach(),` and `has()` (it also has the `size` property). They also supports the use of {{jsxref("Statements/for...of", "for...of")}} on an object implementing this interface. The set-like can be prefixed `readonly` or not. If not read-only, the methods to modify the set are also implemented: `add()`, `clear()`, and `delete()`.
+An interface may be defined as _set-like_, meaning that it represents an _ordered set of values_ will have the following methods: `entries()`, `keys()`, `values()`, `forEach(),` and `has()` (it also has the `size` property). They also supports the use of {{jsxref("Statements/for...of", "for...of")}} on an object implementing this interface. The set-like can be prefixed `readonly` or not. If not read-only, the methods to modify the set are also implemented: `add()`, `clear()`, and `delete()`.
 
 ```js
 setlike<valueType>

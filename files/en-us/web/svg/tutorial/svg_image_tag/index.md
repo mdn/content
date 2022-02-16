@@ -27,8 +27,8 @@ In this basic example, a .jpg image referenced by an {{ SVGAttr("href") }} attri
 
 There are some important things to take note of (referenced from the [W3 specs](https://www.w3.org/TR/SVG/struct.html#ImageElement)):
 
-*   If you do not set the `x` or `y` attributes, they will be set to `0`.
-*   If you do not set the `height` or `width` attributes, they will be set to `0`.
-*   Having a `height` or `width` attribute of `0` will disable rendering of the image.
+- If you do not set the `x` or `y` attributes, they will be set to `0`.
+- If you do not set the `height` or `width` attributes, they will be set to `0`.
+- Having a `height` or `width` attribute of `0` will disable rendering of the image.
 
 {{ PreviousNext("Web/SVG/Tutorial/SVG_Fonts", "Web/SVG/Tutorial/Tools_for_SVG") }}

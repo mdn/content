@@ -116,7 +116,7 @@ if (typeof self.queueMicrotask !== "function") {
 
 ## See also
 
-- A polyfill of `queueMicrotask` is available in [`core-js`](https://github.com/zloirock/core-js#queuemicrotask)
+- [Polyfill of `queueMicrotask` in `core-js`](https://github.com/zloirock/core-js#queuemicrotask)
 - [Using microtasks in
   JavaScript with queueMicrotask()](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide)
 - [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)

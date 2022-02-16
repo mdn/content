@@ -7,7 +7,7 @@ tags:
   - Media
   - Media Capture and Streams API
   - Media Streams API
-  - MediaTrackSupportedConstriants
+  - MediaTrackSupportedConstraints
   - Property
   - Reference
   - Volume

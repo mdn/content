@@ -30,7 +30,7 @@ masonry-auto-flow: next ordered;
 /* Global values */
 masonry-auto-flow: inherit;
 masonry-auto-flow: initial;
-maosnry-auto-flow: revert;
+masonry-auto-flow: revert;
 masonry-auto-flow: unset;
 ```
 

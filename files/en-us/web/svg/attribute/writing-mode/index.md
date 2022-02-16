@@ -15,11 +15,11 @@ The **`writing-mode`** attribute specifies whether the initial inline-progressio
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("altGlyph")}}
-*   {{SVGElement("text")}}
-*   {{SVGElement("textPath")}}
-*   {{SVGElement("tref")}}
-*   {{SVGElement("tspan")}}
+- {{SVGElement("altGlyph")}}
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
 
 ## Usage notes
 
@@ -43,12 +43,12 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `horizontal-tb`
-    *   : This value defines a top-to-bottom block flow direction. Both the writing mode and the typographic mode are horizontal.
-*   `vertical-rl`
-    *   : This value defines a right-to-left block flow direction. Both the writing mode and the typographic mode are vertical.
-*   `vertical-lr`
-    *   : This value defines a left-to-right block flow direction. Both the writing mode and the typographic mode are vertical.
+- `horizontal-tb`
+  - : This value defines a top-to-bottom block flow direction. Both the writing mode and the typographic mode are horizontal.
+- `vertical-rl`
+  - : This value defines a right-to-left block flow direction. Both the writing mode and the typographic mode are vertical.
+- `vertical-lr`
+  - : This value defines a left-to-right block flow direction. Both the writing mode and the typographic mode are vertical.
 
 ## Specifications
 
@@ -94,4 +94,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-*   {{cssxref("writing-mode", "CSS writing-mode")}}
+- {{cssxref("writing-mode", "CSS writing-mode")}}

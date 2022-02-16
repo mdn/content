@@ -3,7 +3,6 @@ title: VRPose.hasOrientation
 slug: Web/API/VRPose/hasOrientation
 tags:
   - API
-  - Experimental
   - Deprecated
   - Property
   - Reference
@@ -14,19 +13,13 @@ tags:
   - hasOrientation
 browser-compat: api.VRPose.hasOrientation
 ---
-{{deprecated_header}}{{APIRef("WebVR API")}}{{SeeCompatTable}}
+{{deprecated_header}}{{APIRef("WebVR API")}}
 
 The **`hasOrientation`** read-only property of the {{domxref("VRPose")}} interface returns a boolean indicating whether the {{domxref("VRPose.orientation")}} property is valid (i.e. if the hardware is currently registering a valid orientation). If it is `false`, the orientation property will return `null`.
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Syntax
-
-```js
-var myHasOrientation = VRPositionState.hasOrientation;
-```
-
-### Value
+## Value
 
 A boolean value.
 

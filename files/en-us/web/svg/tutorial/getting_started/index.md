@@ -33,39 +33,39 @@ Copy the code and paste it in a file demo1.svg. Then open the file in Firefox. I
 
 The rendering process involves the following:
 
-1.  We start with the {{SVGElement("svg")}} root element:
+1. We start with the {{SVGElement("svg")}} root element:
 
-    *   a doctype declaration as known from (X)HTML should be left off because DTD based SVG validation leads to more problems than it solves
-    *   before SVG 2, to identify the version of the SVG for other types of validation the `version` and `baseProfile` attributes should always be used instead. Both `version` and `baseProfile` attributes are deprecated in SVG 2.
-    *   as an XML dialect, SVG must always bind the namespaces correctly (in the xmlns attribute). See the [Namespaces Crash Course](/en-US/docs/Web/SVG/Namespaces_Crash_Course) page for more info.
-2.  The background is set to red by drawing a rectangle {{SVGElement("rect")}} that covers the complete image area.
-3.  A green circle {{SVGElement("circle")}} with a radius of 80px is drawn atop the center of the red rectangle (center of circle offset 150px to the right, and 100px downward from the top left corner).
-4.  The text "SVG" is drawn. The interior of each letter is filled in with white. The text is positioned by setting an anchor where we want the midpoint to be: in this case, the midpoint should correspond to the center of the green circle. Fine adjustments can be made to the font size and vertical position to ensure the final result is aesthetically pleasing.
+    - a doctype declaration as known from (X)HTML should be left off because DTD based SVG validation leads to more problems than it solves
+    - before SVG 2, to identify the version of the SVG for other types of validation the `version` and `baseProfile` attributes should always be used instead. Both `version` and `baseProfile` attributes are deprecated in SVG 2.
+    - as an XML dialect, SVG must always bind the namespaces correctly (in the xmlns attribute). See the [Namespaces Crash Course](/en-US/docs/Web/SVG/Namespaces_Crash_Course) page for more info.
+2. The background is set to red by drawing a rectangle {{SVGElement("rect")}} that covers the complete image area.
+3. A green circle {{SVGElement("circle")}} with a radius of 80px is drawn atop the center of the red rectangle (center of circle offset 150px to the right, and 100px downward from the top left corner).
+4. The text "SVG" is drawn. The interior of each letter is filled in with white. The text is positioned by setting an anchor where we want the midpoint to be: in this case, the midpoint should correspond to the center of the green circle. Fine adjustments can be made to the font size and vertical position to ensure the final result is aesthetically pleasing.
 
 ### Basic properties of SVG files
 
-*   The first important thing to notice is the order of rendering elements. The globally valid rule for SVG files is, that *later* elements are rendered *atop previous* elements. The further down an element is the more it will be visible.
-*   SVG files on the web can be displayed directly in the browser or embedded in HTML files via several methods:
+- The first important thing to notice is the order of rendering elements. The globally valid rule for SVG files is, that *later* elements are rendered *atop previous* elements. The further down an element is the more it will be visible.
+- SVG files on the web can be displayed directly in the browser or embedded in HTML files via several methods:
 
-    *   If the HTML is XHTML and is delivered as type `application/xhtml+xml`, the SVG can be directly embedded in the XML source.
-    *   If the HTML is HTML5, and the browser is a conforming HTML5 browser, the SVG can also be directly embedded. However, there may be syntax changes necessary to conform to the HTML5 specification.
-    *   The SVG file can be referenced with an `object` element:
+  - If the HTML is XHTML and is delivered as type `application/xhtml+xml`, the SVG can be directly embedded in the XML source.
+  - If the HTML is HTML5, and the browser is a conforming HTML5 browser, the SVG can also be directly embedded. However, there may be syntax changes necessary to conform to the HTML5 specification.
+  - The SVG file can be referenced with an `object` element:
 
-        ```html
-        <object data="image.svg" type="image/svg+xml" />
-        ```
+    ```html
+    <object data="image.svg" type="image/svg+xml"></object>
+    ```
 
-    *   Likewise an `iframe` element can be used:
+  - Likewise an `iframe` element can be used:
 
-        ```html
-        <iframe src="image.svg"></iframe>
-        ```
+    ```html
+    <iframe src="image.svg"></iframe>
+    ```
 
-    *   An `img` element can theoretically be used too. However, this technique doesn't work in Firefox before 4.0.
-    *   Finally, SVG can be created dynamically with JavaScript and injected into the HTML DOM. With this method, replacement technologies can be implemented for browsers which normally can't process SVG.
+  - An `img` element can theoretically be used too. However, this technique doesn't work in Firefox before 4.0.
+  - Finally, SVG can be created dynamically with JavaScript and injected into the HTML DOM. With this method, replacement technologies can be implemented for browsers which normally can't process SVG.
 
-    See [this dedicated article](/en-US/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction) which deals with the topic in-depth.
-*   How SVG handles sizes and units will be explained [on the next page](/en-US/docs/Web/SVG/Tutorial/Positions).
+  See [this dedicated article](/en-US/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction) which deals with the topic in-depth.
+- How SVG handles sizes and units will be explained [on the next page](/en-US/docs/Web/SVG/Tutorial/Positions).
 
 ### SVG file types
 

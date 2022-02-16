@@ -132,7 +132,7 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support a numb
 - {{CSSxRef("padding-inline-start","-webkit-padding-start")}}\*\*
 - {{CSSxRef("-webkit-perspective-origin-x", "-webkit-perspective-origin-x")}}
 - {{CSSxRef("-webkit-perspective-origin-y", "-webkit-perspective-origin-y")}}
-- {{CSSxRef("-webkit-print-color-adjust", "-webkit-print-color-adjust")}}
+- {{CSSxRef("print-color-adjust", "-webkit-print-color-adjust")}}
 
 ### R-S
 
@@ -161,7 +161,7 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support a numb
 - {{CSSxRef("-webkit-user-modify", "-webkit-user-modify")}}
 
 \* A few are on the standards, unprefixed track
-\*\* New syntax has been standardized. Property links to the new synax. Old prefixed syntax is still supported in some browsers.
+\*\* New syntax has been standardized. Property links to the new syntax. Old prefixed syntax is still supported in some browsers.
 
 ## WebKit-prefixed properties on the standards track
 

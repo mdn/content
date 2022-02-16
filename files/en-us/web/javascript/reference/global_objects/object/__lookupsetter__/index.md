@@ -70,7 +70,7 @@ Object.getOwnPropertyDescriptor(obj, 'foo').set;
 
 ## See also
 
-- A polyfill of `Object.prototype.__lookupSetter__` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Polyfill of `Object.prototype.__lookupSetter__` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.prototype.__lookupGetter__()")}}
 - {{jsxref("Functions/set", "set")}} operator
 - {{jsxref("Object.getOwnPropertyDescriptor()")}} and

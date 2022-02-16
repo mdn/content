@@ -13,7 +13,7 @@ The **`elevation`** attribute specifies the direction angle for the light source
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feDistantLight")}}
+- {{SVGElement("feDistantLight")}}
 
 ## Example
 

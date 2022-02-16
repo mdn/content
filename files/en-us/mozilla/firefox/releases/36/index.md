@@ -124,9 +124,9 @@ _No change._
 - Add badges to [`sdk/ui`](en-US/Add-ons/SDK/High-Level_APIs/ui) buttons ({{bug(994280)}}).
 - Implemented global `require` function to access sdk modules anywhere ({{bug(1070927)}}), using:
 
-<!---->
-
-    var { require } = Cu.import("resource://gre/modules/commonjs/toolkit/require.js", {});
+  ```js
+  var { require } = Cu.import("resource://gre/modules/commonjs/toolkit/require.js", {});
+  ```
 
 #### Details
 

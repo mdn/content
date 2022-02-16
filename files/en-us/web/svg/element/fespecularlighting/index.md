@@ -23,21 +23,21 @@ This filter primitive produces an image which contains the specular reflection p
 
 ### Global attributes
 
-*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-*   [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-*   [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
-*   {{SVGAttr("class")}}
-*   {{SVGAttr("style")}}
+- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
+- [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
 
 ### Specific attributes
 
-*   {{SVGAttr("in")}}
-*   {{SVGAttr("surfaceScale")}}
-*   {{SVGAttr("specularConstant")}}
-*   {{SVGAttr("specularExponent")}}
-*   {{SVGAttr("kernelUnitLength")}}
+- {{SVGAttr("in")}}
+- {{SVGAttr("surfaceScale")}}
+- {{SVGAttr("specularConstant")}}
+- {{SVGAttr("specularExponent")}}
+- {{SVGAttr("kernelUnitLength")}}
 
-## DOM Interface
+## DOM Interface
 
 This element implements the {{domxref("SVGFESpecularLightingElement")}} interface.
 
@@ -46,15 +46,15 @@ This element implements the {{domxref("SVGFESpecularLightingElement")}} interfac
 ```html
 <svg height="200" width="200" viewBox="0 0 220 220"
     xmlns="http://www.w3.org/2000/svg">
-  <filter id = "filter">
-    <feSpecularLighting result="specOut"
+  <filter id = "filter">
+    <feSpecularLighting result="specOut"
         specularExponent="20" lighting-color="#bbbbbb">
-      <fePointLight x="50" y="75" z="200"/>
-    </feSpecularLighting>
-    <feComposite in="SourceGraphic" in2="specOut"
+      <fePointLight x="50" y="75" z="200"/>
+    </feSpecularLighting>
+    <feComposite in="SourceGraphic" in2="specOut"
         operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
-  </filter>
-  <circle cx="110" cy="110" r="100" style="filter:url(#filter)"/>
+  </filter>
+  <circle cx="110" cy="110" r="100" style="filter:url(#filter)"/>
 </svg>
 ```
 
@@ -72,23 +72,23 @@ This element implements the {{domxref("SVGFESpecularLightingElement")}} interfac
 
 ## See also
 
-*   {{SVGElement("filter")}}
-*   {{SVGElement("feBlend")}}
-*   {{SVGElement("feColorMatrix")}}
-*   {{SVGElement("feComponentTransfer")}}
-*   {{SVGElement("feComposite")}}
-*   {{SVGElement("feConvolveMatrix")}}
-*   {{SVGElement("feDiffuseLighting")}}
-*   {{SVGElement("feDisplacementMap")}}
-*   {{SVGElement("feDistantLight")}}
-*   {{SVGElement("feFlood")}}
-*   {{SVGElement("feGaussianBlur")}}
-*   {{SVGElement("feImage")}}
-*   {{SVGElement("feMerge")}}
-*   {{SVGElement("feMorphology")}}
-*   {{SVGElement("feOffset")}}
-*   {{SVGElement("fePointLight")}}
-*   {{SVGElement("feSpotLight")}}
-*   {{SVGElement("feTile")}}
-*   {{SVGElement("feTurbulence")}}
-*   [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)
+- {{SVGElement("filter")}}
+- {{SVGElement("feBlend")}}
+- {{SVGElement("feColorMatrix")}}
+- {{SVGElement("feComponentTransfer")}}
+- {{SVGElement("feComposite")}}
+- {{SVGElement("feConvolveMatrix")}}
+- {{SVGElement("feDiffuseLighting")}}
+- {{SVGElement("feDisplacementMap")}}
+- {{SVGElement("feDistantLight")}}
+- {{SVGElement("feFlood")}}
+- {{SVGElement("feGaussianBlur")}}
+- {{SVGElement("feImage")}}
+- {{SVGElement("feMerge")}}
+- {{SVGElement("feMorphology")}}
+- {{SVGElement("feOffset")}}
+- {{SVGElement("fePointLight")}}
+- {{SVGElement("feSpotLight")}}
+- {{SVGElement("feTile")}}
+- {{SVGElement("feTurbulence")}}
+- [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)

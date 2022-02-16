@@ -40,35 +40,31 @@ numerical properties may not behave in any meaningful manner.
 
 ### Reversing the elements in an array
 
-The following example creates an array `a`, containing three elements, then
+The following example creates an array `items`, containing three elements, then
 reverses the array. The call to `reverse()` returns a reference to the
-reversed array `a`.
+reversed array `items`.
 
 ```js
-const a = [1, 2, 3];
+const items = [1, 2, 3];
+console.log(items); // [1, 2, 3]
 
-console.log(a); // [1, 2, 3]
-
-a.reverse();
-
-console.log(a); // [3, 2, 1]
+items.reverse();
+console.log(items); // [3, 2, 1]
 ```
 
 ### Reversing the elements in an array-like object
 
-The following example creates an array-like object `a`, containing three
+The following example creates an array-like object `obj`, containing three
 elements and a length property, then reverses the array-like object. The call to
 `reverse()` returns a reference to the reversed array-like object
-`a`.
+`obj`.
 
 ```js
-const a = {0: 1, 1: 2, 2: 3, length: 3};
+const obj = {0: 1, 1: 2, 2: 3, length: 3};
+console.log(obj); // {0: 1, 1: 2, 2: 3, length: 3}
 
-console.log(a); // {0: 1, 1: 2, 2: 3, length: 3}
-
-Array.prototype.reverse.call(a); //same syntax for using apply()
-
-console.log(a); // {0: 3, 1: 2, 2: 1, length: 3}
+Array.prototype.reverse.call(obj); //same syntax for using apply()
+console.log(obj); // {0: 3, 1: 2, 2: 1, length: 3}
 ```
 
 ## Specifications

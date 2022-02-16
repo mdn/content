@@ -49,7 +49,7 @@ response so far while the request is still in the `LOADING`
 
 This example presents a function, `load()`, which loads and processes a page
 from the server. It works by creating an {{domxref("XMLHttpRequest")}} object and
-creating a listener for {{event("readystatechange")}} events such that when
+creating a listener for {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}} events such that when
 `readyState` changes to `DONE` (4), the `response` is
 obtained and passed into the callback function provided to `load()`.
 

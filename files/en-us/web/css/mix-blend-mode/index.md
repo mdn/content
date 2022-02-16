@@ -70,7 +70,7 @@ mix-blend-mode: unset;
         <div class="container normal">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <defs>
                 <linearGradient id="red">
                   <stop offset="0"    stop-color="hsl(0,100%,50%)" />
@@ -96,7 +96,7 @@ mix-blend-mode: unset;
         <div class="container multiply">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -108,7 +108,7 @@ mix-blend-mode: unset;
         <div class="container darken">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -120,7 +120,7 @@ mix-blend-mode: unset;
         <div class="container screen">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -132,7 +132,7 @@ mix-blend-mode: unset;
         <div class="container lighten">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -144,7 +144,7 @@ mix-blend-mode: unset;
         <div class="container overlay">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -156,7 +156,7 @@ mix-blend-mode: unset;
         <div class="container color-dodge">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -168,7 +168,7 @@ mix-blend-mode: unset;
         <div class="container color-burn">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -180,7 +180,7 @@ mix-blend-mode: unset;
         <div class="container hard-light">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -192,7 +192,7 @@ mix-blend-mode: unset;
         <div class="container soft-light">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -204,7 +204,7 @@ mix-blend-mode: unset;
         <div class="container difference">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -216,7 +216,7 @@ mix-blend-mode: unset;
         <div class="container exclusion">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -228,7 +228,7 @@ mix-blend-mode: unset;
         <div class="container hue">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -240,7 +240,7 @@ mix-blend-mode: unset;
         <div class="container saturation">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -252,7 +252,7 @@ mix-blend-mode: unset;
         <div class="container color">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -264,7 +264,7 @@ mix-blend-mode: unset;
         <div class="container luminosity">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -280,7 +280,7 @@ mix-blend-mode: unset;
         <div class="container normal">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -292,7 +292,7 @@ mix-blend-mode: unset;
         <div class="container multiply">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -304,7 +304,7 @@ mix-blend-mode: unset;
         <div class="container darken">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -316,7 +316,7 @@ mix-blend-mode: unset;
         <div class="container screen">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -328,7 +328,7 @@ mix-blend-mode: unset;
         <div class="container lighten">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -340,7 +340,7 @@ mix-blend-mode: unset;
         <div class="container overlay">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -352,7 +352,7 @@ mix-blend-mode: unset;
         <div class="container color-dodge">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -364,7 +364,7 @@ mix-blend-mode: unset;
         <div class="container color-burn">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -376,7 +376,7 @@ mix-blend-mode: unset;
         <div class="container hard-light">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -388,7 +388,7 @@ mix-blend-mode: unset;
         <div class="container soft-light">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -400,7 +400,7 @@ mix-blend-mode: unset;
         <div class="container difference">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -412,7 +412,7 @@ mix-blend-mode: unset;
         <div class="container exclusion">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -424,7 +424,7 @@ mix-blend-mode: unset;
         <div class="container hue">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -436,7 +436,7 @@ mix-blend-mode: unset;
         <div class="container saturation">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -448,7 +448,7 @@ mix-blend-mode: unset;
         <div class="container color">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
@@ -460,7 +460,7 @@ mix-blend-mode: unset;
         <div class="container luminosity">
           <div class="group">
             <div class="item firefox"></div>
-            <svg viewBox="0 0 150 150">
+            <svg class="item" viewBox="0 0 150 150">
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
               <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>

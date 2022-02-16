@@ -14,6 +14,8 @@ browser-compat: api.AbortSignal
 
 The **`AbortSignal`** interface represents a signal object that allows you to communicate with a DOM request (such as a fetch request) and abort it if required via an {{domxref("AbortController")}} object.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _The AbortSignal interface also inherits properties from its parent interface, {{domxref("EventTarget")}}._
@@ -22,14 +24,6 @@ _The AbortSignal interface also inherits properties from its parent interface, {
   - : A {{Glossary("Boolean")}} that indicates whether the request(s) the signal is communicating with is/are aborted (`true`) or not (`false`).
 - {{domxref("AbortSignal.reason")}} {{readonlyInline}}
   - : A JavaScript value providing the abort reason, once the signal has aborted.
-
-## Events
-
-Listen to this event using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
-
-- [`abort`](/en-US/docs/Web/API/AbortSignal/abort_event)
-  - : Invoked when the DOM requests the signal is communicating with is/are aborted.
-    Also available via the [`onabort`](/en-US/docs/Web/API/AbortSignal/onabort) property.
 
 ## Methods
 
@@ -42,6 +36,14 @@ _The **`AbortSignal`** interface inherits methods from its parent interface, {{d
 
 - {{domxref("AbortSignal.abort()")}}
   - : Returns an **`AbortSignal`** instance that is already set as aborted.
+
+## Events
+
+Listen to this event using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
+
+- [`abort`](/en-US/docs/Web/API/AbortSignal/abort_event)
+  - : Invoked when the DOM requests the signal is communicating with is/are aborted.
+    Also available via the `onabort` property.
 
 ## Examples
 

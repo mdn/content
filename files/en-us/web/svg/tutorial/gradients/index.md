@@ -57,7 +57,7 @@ To use a gradient, we have to reference it from an object's `fill` or `stroke` a
 
 The `<linearGradient>` element also takes several other attributes, which specify the size and appearance of the gradient. The orientation of the gradient is controlled by two points, designated by the attributes `x1`, `x2`, `y1`, and `y2`. These attributes define a line along which the gradient travels. The gradient defaults to a horizontal orientation, but it can be rotated by changing these. Gradient2 in the above example is designed to create a vertical gradient.
 
-```
+```html
 <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
 ```
 

@@ -144,7 +144,7 @@ Click the button in this example to increment the {{HTMLElement("input/number",
 </p>
 <p>
   <label>Enter how many values of step you would like to increment by or leave it blank:
-   <input type="number" step="1" id="incrementer" min="0" max="25">
+   <input type="number" step="1" id="incrementor" min="0" max="25">
   </label>
 </p>
 <input type="button" value="Increment" id="theButton">
@@ -161,7 +161,7 @@ button.addEventListener('click', function() {
 
 function steponup() {
   let input = document.getElementById('theNumber')
-  let val = document.getElementById('incrementer').value
+  let val = document.getElementById('incrementor').value
 
   if (val) {  /* increment with a parameter */
     input.stepUp(val)

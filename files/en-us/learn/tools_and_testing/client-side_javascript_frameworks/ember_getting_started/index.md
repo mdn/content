@@ -80,7 +80,7 @@ Ember can also be used with native mobile apps with a native-mobile bridge to Ja
 
 ## Opinions
 
-EmberJS is one of the most opinionated front-end frameworks out there. But what does it mean to be opinionated? In Ember, opinions are a set of conventions that help increase the efficiency of developers at the cost of having to learn those conventions. As conventions are defined and shared, the opinions that back those conventions help reduce the menial differences between apps — a common goal among all opinionated frameworks, across any language and ecosystem.  Developers are then more easily able to switch between projects and applications without having to completely relearn the architecture, patterns, conventions, etc.
+EmberJS is one of the most opinionated front-end frameworks out there. But what does it mean to be opinionated? In Ember, opinions are a set of conventions that help increase the efficiency of developers at the cost of having to learn those conventions. As conventions are defined and shared, the opinions that back those conventions help reduce the menial differences between apps — a common goal among all opinionated frameworks, across any language and ecosystem. Developers are then more easily able to switch between projects and applications without having to completely relearn the architecture, patterns, conventions, etc.
 
 As you work through this series of tutorials, you'll notice Ember's opinions — such as strict naming conventions of component files.
 
@@ -127,8 +127,8 @@ That said, because this tutorial is a focus on the JavaScript side of making a s
 
 Ember uses a command-line interface (CLI) tool for building and scaffolding parts of your application.
 
-1.  You'll need node and npm installed before you can install ember-cli. [Go here to find out how to install node and npm](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups), if you haven't already got them.
-2.  Now type the following into your terminal to install ember-cli:
+1. You'll need node and npm installed before you can install ember-cli. [Go here to find out how to install node and npm](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups), if you haven't already got them.
+2. Now type the following into your terminal to install ember-cli:
 
     ```
     npm install -g ember-cli
@@ -136,7 +136,7 @@ Ember uses a command-line interface (CLI) tool for building and scaffolding part
 
     This tool provides the `ember` program in your terminal, which is used to create, build, develop, test, and scaffold your application (run `ember --help` for a full list of commands and their options).
 
-3.  To create a brand new application, type the following in your terminal. This creates a new directory inside the current directory you are in called todomvc, containing the scaffolding for a new Ember app. Make sure you navigate to somewhere appropriate in the terminal before you run it. (Good suggestions are your "desktop" or "documents" directories, so that it is easy to find):
+3. To create a brand new application, type the following in your terminal. This creates a new directory inside the current directory you are in called todomvc, containing the scaffolding for a new Ember app. Make sure you navigate to somewhere appropriate in the terminal before you run it. (Good suggestions are your "desktop" or "documents" directories, so that it is easy to find):
 
     ```bash
     ember new todomvc
@@ -165,18 +165,18 @@ You'll need a code editor before continuing to interact with your brand new proj
 
 Installing shared assets, as we're about to do, isn't normally a required step for new projects, but it allows us to use existing shared CSS so we don't need to try to guess at what CSS is needed to create the TodoMVC styles.
 
-1.  First, enter into your `todomvc` directory in the terminal, for example using `cd todomvc` in macOS/Linux.
-2.  Now run the following command to place the common todomvc CSS inside your app:
+1. First, enter into your `todomvc` directory in the terminal, for example using `cd todomvc` in macOS/Linux.
+2. Now run the following command to place the common todomvc CSS inside your app:
 
     ```bash
     npm install --save-dev todomvc-app-css todomvc-common
     ```
 
-3.  Next, find the [ember-cli-build.js](https://github.com/ember-cli/ember-cli/blob/master/blueprints/app/files/ember-cli-build.js) file inside the todomvc directory (it's right there inside the root) and open it in your chosen code editor. ember-cli-build.js is responsible for configuring details about how your project is built — including bundling all your files together, asset minification, and creating sourcemaps — with reasonable defaults, so you don't typically need to worry about this file.
+3. Next, find the [ember-cli-build.js](https://github.com/ember-cli/ember-cli/blob/master/blueprints/app/files/ember-cli-build.js) file inside the todomvc directory (it's right there inside the root) and open it in your chosen code editor. ember-cli-build.js is responsible for configuring details about how your project is built — including bundling all your files together, asset minification, and creating sourcemaps — with reasonable defaults, so you don't typically need to worry about this file.
 
     We will however add lines to the ember-cli-build.js file to import our shared CSS files, so that they become part of our build without having to explicitly [`@import`](/en-US/docs/Web/CSS/@import) them into the `app.css` file (this would require URL rewrites at build time and therefore be less efficient and more complicated to set up).
 
-4.  In `ember-cli-build.js`, find the following code:
+4. In `ember-cli-build.js`, find the following code:
 
     ```js
     let app = new EmberApp(defaults, {
@@ -184,7 +184,7 @@ Installing shared assets, as we're about to do, isn't normally a required step f
       });
     ```
 
-5.  Add the following lines underneath it before saving the file:
+5. Add the following lines underneath it before saving the file:
 
     ```js
       app.import('node_modules/todomvc-common/base.css');
@@ -193,7 +193,7 @@ Installing shared assets, as we're about to do, isn't normally a required step f
 
     For more information on what `ember-cli-build.js` does, and for other ways in which you can customize your build / pipeline, the Ember Guides have a page on [Addons and Dependencies](https://guides.emberjs.com/release/addons-and-dependencies/).
 
-6.  Finally, find `app.css`, located at `app/styles/app.css`, and paste in the following:
+6. Finally, find `app.css`, located at `app/styles/app.css`, and paste in the following:
 
     ```css
     :focus,
@@ -233,7 +233,7 @@ If everything is working correctly, you should see a page like this:
 
 ![The default start page when you create a new ember app, with a cartoon mascot, saying congratulations](ember-start-page.png)
 
-> **Note:** on Windows systems without [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/install-win10), you will experience slower build-times overall compared to macOS, Linux, and Windows _with_ WSL.
+> **Note:** on Windows systems without [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/windows/wsl/install-win10), you will experience slower build-times overall compared to macOS, Linux, and Windows _with_ WSL.
 
 ## Summary
 

@@ -20,6 +20,8 @@ The `AudioScheduledSourceNode` interface—part of the Web Audio API—is a pare
 
 Unless stated otherwise, nodes based upon `AudioScheduledSourceNode` output silence when not playing (that is, before `start()` is called and after `stop()` is called). Silence is represented, as always, by a stream of samples with the value zero (0).
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _Inherits properties from its parent interface, {{domxref("AudioNode")}}._

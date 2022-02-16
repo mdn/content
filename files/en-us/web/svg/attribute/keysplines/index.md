@@ -16,10 +16,10 @@ If there are any errors in the keySplines specification (bad values, too many or
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("animate")}}
-*   {{SVGElement("animateColor")}}
-*   {{SVGElement("animateMotion")}}
-*   {{SVGElement("animateTransform")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("animateColor")}}
+- {{SVGElement("animateMotion")}}
+- {{SVGElement("animateTransform")}}
 
 ## Example
 
@@ -68,13 +68,13 @@ html, body, svg {
 
 The attribute value is a semicolon-separated list of control point descriptions.
 
-*   `<control-point>`
-    *   : Each control point description is a set of four values: `x1 y1 x2 y2`, describing the Bézier control points for one time segment. The {{SVGAttr("keyTimes")}} values that define the associated segment are the Bézier "anchor points", and the `keySplines` values are the control points. Thus, there must be one fewer sets of control points than there are {{SVGAttr("keyTimes")}}.
+- `<control-point>`
+  - : Each control point description is a set of four values: `x1 y1 x2 y2`, describing the Bézier control points for one time segment. The {{SVGAttr("keyTimes")}} values that define the associated segment are the Bézier "anchor points", and the `keySplines` values are the control points. Thus, there must be one fewer sets of control points than there are {{SVGAttr("keyTimes")}}.
 
-        The values of `x1 y1 x2 y2` must all be in the range 0 to 1.
+    The values of `x1 y1 x2 y2` must all be in the range 0 to 1.
 
-*   Safari issues
-    *   :`keyTimes` values should be separated with semicolumn without space before, f.e: `keyTimes="0; 0.25; 0.5; 0.75; 1"`
+- Safari issues
+  - :`keyTimes` values should be separated with semicolon without space before, f.e: `keyTimes="0; 0.25; 0.5; 0.75; 1"`
 
 ## Specifications
 
@@ -110,4 +110,4 @@ The attribute value is a semicolon-separated list of control point descriptions.
 
 ## See also
 
-* [Bézier curve](/en-US/docs/Glossary/Bézier_curve)
+- [Bézier curve](/en-US/docs/Glossary/Bézier_curve)

@@ -20,7 +20,7 @@ The Background Synchronization API provides a way to defer tasks to be run in a 
 
 ## Background Synchronization Concepts and Usage
 
-The Background Sync API allows web applications to defer server synchronization work to their service worker to handle at a later time, if the device is offline. Uses may include sending requests in the background if they couldn't be sent while the application was being used.
+The Background Sync API allows web applications to defer server synchronization work to their service worker to handle at a later time, if the device is offline. Uses may include sending requests in the background if they couldn't be sent while the application was being used.
 
 For example, an email client application could let its users compose and send messages at any time, even when the device has no network connection. The application frontend just registers a sync request and the service worker gets alerted when the network is present again and handles the sync.
 

@@ -15,8 +15,8 @@ If a given Unicode character within the set has multiple corresponding `<glyph>`
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("hkern")}}
-*   {{SVGElement("vkern")}}
+- {{SVGElement("hkern")}}
+- {{SVGElement("vkern")}}
 
 ## Context notes
 
@@ -46,8 +46,8 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `[ <character> | <urange> ]#`
-    *   : This value indicates a comma-separated sequence of Unicode characters and/or ranges of Unicode characters, which identify a set of possible first glyphs in a kerning pair.
+- `[ <character> | <urange> ]#`
+  - : This value indicates a comma-separated sequence of Unicode characters and/or ranges of Unicode characters, which identify a set of possible first glyphs in a kerning pair.
 
 ## Specifications
 

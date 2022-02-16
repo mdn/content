@@ -3,7 +3,7 @@ title: VRPose.angularAcceleration
 slug: Web/API/VRPose/angularAcceleration
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -21,13 +21,7 @@ The **`angularAcceleration`** read-only property of the {{domxref("VRPose")}} in
 
 In other words, the current acceleration of the sensor's rotation around the `x`, `y`, and `z` axes.
 
-## Syntax
-
-```js
-var myAngularAcceleration = VRPose.angularAcceleration;
-```
-
-### Value
+## Value
 
 A {{jsxref("Float32Array")}}, or `null` if the VR sensor is not able to provide angular acceleration information.
 

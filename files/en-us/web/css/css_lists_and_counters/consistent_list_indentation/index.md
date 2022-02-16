@@ -48,9 +48,9 @@ If we dropped this list into a document as-is, there would be no apparent indent
 
 To avoid this and get some indentation, there are only three options available to browser implementors.
 
-1.  Give each `<li>` element a left margin.
-2.  Give the `<ul>` element a left margin.
-3.  Give the `<ul>` element some left padding.
+1. Give each `<li>` element a left margin.
+2. Give the `<ul>` element a left margin.
+3. Give the `<ul>` element some left padding.
 
 As it turns out, nobody seems to have used the first option. The second option was taken by Internet Explorer, and Opera. The third was adopted by Firefox.
 

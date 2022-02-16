@@ -53,20 +53,20 @@ While we do have working edit functionality, we aren't providing a great experie
 
 To understand what's currently happening:
 
-1.  Reload your page, then press
+1. Reload your page, then press
 
     <kbd>Tab</kbd>
 
     . You should see a focus outline on the input for adding new to-do items.
 
-2.  Press
+2. Press
 
     <kbd>Tab</kbd>
 
     again. The focus should move to the "Add" button.
 
-3.  Hit it again, and it'll be on the first checkbox. One more time, and focus should be on the first "Edit" button.
-4.  Activate the "Edit" button by pressing
+3. Hit it again, and it'll be on the first checkbox. One more time, and focus should be on the first "Edit" button.
+4. Activate the "Edit" button by pressing
 
     <kbd>Enter</kbd>
 
@@ -164,16 +164,16 @@ So how does this work? Well, Vue components undergo a series of events, known as
 
 Vue lets you run methods at various stages of this lifecycle using **lifecycle methods**. This can be useful for things like data fetching, where you may need to get your data before your component renders, or after a property changes. The list of lifecycle methods are below, in the order that they fire.
 
-1.  `beforeCreate()` — Runs before the instance of your component is created. Data and events are not yet available.
-2.  `created()` — Runs after your component is initialized but before the component is added to the VDOM. This is often where data fetching occurs.
-3.  `beforeMount()` — Runs after your template is compiled, but before your component is rendered to the actual DOM.
-4.  `mounted()` — Runs after your component is mounted to the DOM. Can access `refs` here.
-5.  `beforeUpdate()` — Runs whenever data in your component changes, but before the changes are rendered to the DOM.
-6.  `updated()` — Runs whenever data in your component has changed and after the changes are rendered to the DOM.
-7.  `beforeDestroy()` — Runs before a component is removed from the DOM.
-8.  `destroyed()` — Runs after a component has been removed from the DOM
-9.  `activated()` — Only used in components wrapped in a special `keep-alive` tag. Runs after the  component is activated.
-10. `deactivated()` — only used in components wrapped in a special `keep-alive` tag.  Runs after the component is deactivated.
+1. `beforeCreate()` — Runs before the instance of your component is created. Data and events are not yet available.
+2. `created()` — Runs after your component is initialized but before the component is added to the VDOM. This is often where data fetching occurs.
+3. `beforeMount()` — Runs after your template is compiled, but before your component is rendered to the actual DOM.
+4. `mounted()` — Runs after your component is mounted to the DOM. Can access `refs` here.
+5. `beforeUpdate()` — Runs whenever data in your component changes, but before the changes are rendered to the DOM.
+6. `updated()` — Runs whenever data in your component has changed and after the changes are rendered to the DOM.
+7. `beforeDestroy()` — Runs before a component is removed from the DOM.
+8. `destroyed()` — Runs after a component has been removed from the DOM
+9. `activated()` — Only used in components wrapped in a special `keep-alive` tag. Runs after the component is activated.
+10. `deactivated()` — only used in components wrapped in a special `keep-alive` tag. Runs after the component is deactivated.
 
 > **Note:** The Vue Docs provide a [nice diagram for visualizing when these hooks happen](https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram). This article from the [Digital Ocean Community Blog dives into the lifecycle methods more deeply](https://www.digitalocean.com/community/tutorials/vuejs-component-lifecycle).
 

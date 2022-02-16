@@ -13,9 +13,9 @@ When working with Media Source Extensions, it is likely that you need to conditi
 
 ## Getting started
 
-1.  The first and most important step is to ensure that your files are comprised of a container and codec that users' browsers support.
-2.  Depending on the codec, you might need to fragment the file to comply with the [ISO BMFF spec](https://www.w3.org/TR/mse-byte-stream-format-isobmff/).
-3.  (Optional) If you decide to use Dynamic Adaptive Streaming over HTTP (DASH) for adaptive bitrate streaming, you need to transcode your assets into multiple resolutions. Most DASH clients expect a corresponding Media Presentation Description (MPD) manifest file, which is typically generated while generating the multiple resolution asset files.
+1. The first and most important step is to ensure that your files are comprised of a container and codec that users' browsers support.
+2. Depending on the codec, you might need to fragment the file to comply with the [ISO BMFF spec](https://www.w3.org/TR/mse-byte-stream-format-isobmff/).
+3. (Optional) If you decide to use Dynamic Adaptive Streaming over HTTP (DASH) for adaptive bitrate streaming, you need to transcode your assets into multiple resolutions. Most DASH clients expect a corresponding Media Presentation Description (MPD) manifest file, which is typically generated while generating the multiple resolution asset files.
 
 Below we'll cover all of these steps, but first let's look at a toolchain we can use to do this fairly easily.
 
@@ -29,9 +29,9 @@ If you're looking to follow the steps listed here, but don't have any media to e
 
 When working with MSE, the following tools are a must have:
 
-1.  [ffmpeg](http://ffmpeg.org/) — A command-line utility for transcoding your media into the required formats. You can download a version for your system at the [Download FFmpeg page](http://ffmpeg.org/download.html). Extract the executable from the archive file and add it's location to your PATH statement. OSX users can also use [homebrew](http://brew.sh/) to install ffmpeg.
-2.  [Bento4](https://github.com/axiomatic-systems/Bento4) — A set of command-line utilities for getting asset metadata and creating content for DASH. To install, you'll need to build/compile the application yourself from the provided project files/source files, depending on your OS and preferences. See the [Building instructions](https://github.com/axiomatic-systems/Bento4#building) for more details. The prebuilt file is [here](https://www.bento4.com/downloads/). Put the contents of the `bin` directory in the same place as ffmpeg.
-3.  python2 — Bento4 uses it.
+1. [ffmpeg](http://ffmpeg.org/) — A command-line utility for transcoding your media into the required formats. You can download a version for your system at the [Download FFmpeg page](http://ffmpeg.org/download.html). Extract the executable from the archive file and add it's location to your PATH statement. OSX users can also use [homebrew](http://brew.sh/) to install ffmpeg.
+2. [Bento4](https://github.com/axiomatic-systems/Bento4) — A set of command-line utilities for getting asset metadata and creating content for DASH. To install, you'll need to build/compile the application yourself from the provided project files/source files, depending on your OS and preferences. See the [Building instructions](https://github.com/axiomatic-systems/Bento4#building) for more details. The prebuilt file is [here](https://www.bento4.com/downloads/). Put the contents of the `bin` directory in the same place as ffmpeg.
+3. python2 — Bento4 uses it.
 
 Get these installed successfully before moving to the next step.
 

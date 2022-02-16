@@ -13,7 +13,7 @@ tags:
 
 **Custom properties** (sometimes referred to as **CSS variables** or **cascading variables**) are entities defined by CSS authors that contain specific values to be reused throughout a document. They are set using custom property notation (e.g., **`--main-color: black;`**) and are accessed using the {{cssxref("var()", "var()")}} function (e.g., `color: var(--main-color);`).
 
-Complex websites have very large amounts of CSS, often with a lot of repeated values. For example, the same color might be used in hundreds of different places, requiring global search and replace if that color needs to change. Custom properties allow a value to be stored in one place, then referenced in multiple other places. An additional benefit is semantic identifiers. For example, `--main-text-color` is easier to understand than `#00ff00`, especially if this same color is also used in other contexts.
+Complex websites have very large amounts of CSS, often with a lot of repeated values. For example, the same color might be used in hundreds of different places, requiring global search and replace if that color needs to change. Custom properties allow a value to be stored in one place, then referenced in multiple other places. An additional benefit is semantic identifiers. For example, `--main-text-color` is easier to understand than `#00ff00`, especially if this same color is also used in other contexts.
 
 Custom properties are subject to the cascade and inherit their value from their parent.
 
@@ -245,8 +245,8 @@ p { color: var(--text-color); }
 
 As expected, the browser substitutes the value of `--text-color` in place of `var(--text-color)`, but `16px` is not a valid property value for {{cssxref("color")}}. After substitution, the property doesn’t make any sense. The browser handles this situation in two steps:
 
-1.  Check if the property color is inheritable. Yes, but `<p>` doesn't have any parent with color property. So move on to the next step.
-2.  Set the value to its **default initial value**, i.e., black.
+1. Check if the property color is inheritable. Yes, but `<p>` doesn't have any parent with color property. So move on to the next step.
+2. Set the value to its **default initial value**, i.e., black.
 
 ### Result
 

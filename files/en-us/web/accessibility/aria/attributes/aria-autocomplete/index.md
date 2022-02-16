@@ -1,6 +1,6 @@
 ---
 title: 'aria-autocomplete'
-slug: web/Accessibility/ARIA/Attributes/aria-autocomplete
+slug: Web/Accessibility/ARIA/Attributes/aria-autocomplete
 tags: 
   - Accessibility
   - ARIA
@@ -29,10 +29,10 @@ When implementing autocomplete functionality, ensure the suggested portion of th
 
 When implementing a list of values, DOM focus should remain on the text input while the suggestion list is displayed.
 
- - include [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls) with the value of the id of the suggested list of values.
- - include [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) matching the role of the element that contains the collection of suggested values.
- - manage focus, if required, including using [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) if the collection container supports.
- - use the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) state on the element with role [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role) to communicate that the list is displayed.
+- include [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls) with the value of the id of the suggested list of values.
+- include [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) matching the role of the element that contains the collection of suggested values.
+- manage focus, if required, including using [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) if the collection container supports.
+- use the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) state on the element with role [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role) to communicate that the list is displayed.
 
 If an autocomplete list value is automatically accepted when the field loses focus, the list must be contained in a role that supports `aria-activedescendant`, with the value of `aria-activedescendant` on the input field dynamically adjusted to refer to the element containing the selected suggestion.
 

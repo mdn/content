@@ -23,6 +23,8 @@ Numeric values such as pose positions are thus coordinates in the corresponding 
 
 > **Note:** The `XRSpace` interface is never used directly; instead, all spaces are created using one of the interfaces based on `XRSpace`. At this time, those are {{domxref("XRReferenceSpace")}}, {{domxref("XRBoundedReferenceSpace")}}, and {{domxref("XRJointSpace")}}.
 
+{{InheritanceDiagram}}
+
 ## Interfaces based on XRSpace
 
 Below is a list of interfaces based on the `XRSpace` interface.

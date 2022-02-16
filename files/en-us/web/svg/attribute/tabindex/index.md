@@ -53,8 +53,8 @@ html, body, svg {
   </tbody>
 </table>
 
-*   valid integer
-    *   : Relative order of the element for the purposes of sequential focus navigation.
+- valid integer
+  - : Relative order of the element for the purposes of sequential focus navigation.
 
 ## Specifications
 
@@ -83,4 +83,4 @@ html, body, svg {
 
 ## See also
 
-*   [HTML `tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex)
+- [HTML `tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex)

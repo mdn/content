@@ -32,6 +32,8 @@ The `MediaStreamAudioSourceNode` takes the audio from the _first_ {{domxref("Med
 
 The number of channels output by the node matches the number of tracks found in the selected audio track.
 
+{{InheritanceDiagram}}
+
 <table class="properties">
   <tbody>
     <tr>

@@ -11,7 +11,7 @@ The **`clipPathUnits`** attribute indicates which coordinate system to use for t
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement('clipPath')}}
+- {{SVGElement('clipPath')}}
 
 ## Example
 
@@ -68,10 +68,10 @@ For {{SVGElement('clipPath')}}, `clipPathUnits` define the coordinate system in 
   </tbody>
 </table>
 
-*   userSpaceOnUse
-    *   : This value indicates that all coordinates inside the {{SVGElement('clipPath')}} element refer to the user coordinate system as defined when the clipping path was created.
-*   objectBoundingBox
-    *   : This value indicates that all coordinates inside the {{SVGElement('clipPath')}} element are relative to the bounding box of the element the clipping path is applied to. It means that the origin of the coordinate system is the top left corner of the object bounding box and the width and height of the object bounding box are considered to have a length of 1 unit value.
+- userSpaceOnUse
+  - : This value indicates that all coordinates inside the {{SVGElement('clipPath')}} element refer to the user coordinate system as defined when the clipping path was created.
+- objectBoundingBox
+  - : This value indicates that all coordinates inside the {{SVGElement('clipPath')}} element are relative to the bounding box of the element the clipping path is applied to. It means that the origin of the coordinate system is the top left corner of the object bounding box and the width and height of the object bounding box are considered to have a length of 1 unit value.
 
 ## Specifications
 

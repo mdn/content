@@ -18,8 +18,8 @@ over the full surface area of the app window, turning the control buttons (maxim
 
 Before using this feature, the following conditions must be true:
 
-* The Web App Manifest's [`display_override`](/en-US/docs/Web/Manifest/display_override) member must be set to `window-controls-overlay`.
-* The Progressive Web App must be installed on a desktop operating system.
+- The Web App Manifest's [`display_override`](/en-US/docs/Web/Manifest/display_override) member must be set to `window-controls-overlay`.
+- The Progressive Web App must be installed on a desktop operating system.
 
 ## Main concepts
 
@@ -29,8 +29,8 @@ Progressive Web Apps installed on desktop devices can be displayed in standalone
 
 As seen above, the app window is made of two main areas:
 
-* The title bar area at the top.
-* The application content area at the bottom, which displays the HTML content from the PWA.
+- The title bar area at the top.
+- The application content area at the bottom, which displays the HTML content from the PWA.
 
 The title bar area contains the system-critical maximize, minimize, and close buttons (their position may vary across operating systems), the name of the application (which comes from the `<title>` HTML element in the page), and possibly user-agent-specific PWA buttons.
 

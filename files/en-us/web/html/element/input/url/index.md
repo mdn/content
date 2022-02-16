@@ -36,7 +36,10 @@ On browsers that don't support inputs of type `url`, a `url` input falls back to
     </tr>
     <tr>
       <td><strong>Events</strong></td>
-      <td>{{event("change")}} and {{event("input")}}</td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} and
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
     </tr>
     <tr>
       <td><strong>Supported Common Attributes</strong></td>
@@ -75,8 +78,8 @@ On browsers that don't support inputs of type `url`, a `url` input falls back to
 
 The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} which is automatically validated as conforming to URL syntax. More specifically, there are two possible value formats that will pass validation:
 
-1.  An empty string ("") indicating that the user did not enter a value or that the value was removed.
-2.  A single properly-formed absolute URL. This doesn't necessarily mean the URL address exists, but it is at least formatted correctly. In simple terms, this means `urlscheme://restofurl`.
+1. An empty string ("") indicating that the user did not enter a value or that the value was removed.
+2. A single properly-formed absolute URL. This doesn't necessarily mean the URL address exists, but it is at least formatted correctly. In simple terms, this means `urlscheme://restofurl`.
 
 See {{anch("Validation")}} for details on how URLs are validated to ensure that they're formatted properly.
 
@@ -211,7 +214,7 @@ The physical size of the input box can be controlled using the {{htmlattrxref("s
 
 ```html
 <input id="myURL" name="myURL" type="url"
-       size="30">
+       size="30">
 ```
 
 {{ EmbedLiveSample('Physical_input_element_size', 600, 40) }}
@@ -224,7 +227,7 @@ The example below creates a 30-character wide URL address entry box, requiring t
 
 ```html
 <input id="myURL" name="myURL" type="url"
-       size="30" minlength="10" maxlength="80">
+       size="30" minlength="10" maxlength="80">
 ```
 
 {{EmbedLiveSample("Element_value_length", 600, 40) }}
@@ -250,13 +253,13 @@ Taking it a step further, you can provide a list of default options from which t
 
 ```html
 <input id="myURL" name="myURL" type="url"
-       list="defaultURLs">
+       list="defaultURLs">
 
 <datalist id="defaultURLs">
-  <option value="https://developer.mozilla.org/">
-  <option value="http://www.google.com/">
-  <option value="http://www.microsoft.com/">
-  <option value="https://www.mozilla.org/">
+  <option value="https://developer.mozilla.org/">
+  <option value="http://www.google.com/">
+  <option value="http://www.microsoft.com/">
+  <option value="https://www.mozilla.org/">
   <option value="http://w3.org/">
 </datalist>
 ```
@@ -271,13 +274,13 @@ You can opt to include the {{htmlattrxref("label", "option")}} attribute on one 
 
 ```html
 <input id="myURL" name="myURL" type="url"
-       list="defaultURLs">
+       list="defaultURLs">
 
 <datalist id="defaultURLs">
-  <option value="https://developer.mozilla.org/" label="MDN Web Docs">
-  <option value="http://www.google.com/" label="Google">
-  <option value="http://www.microsoft.com/" label="Microsoft">
-  <option value="https://www.mozilla.org/" label="Mozilla">
+  <option value="https://developer.mozilla.org/" label="MDN Web Docs">
+  <option value="http://www.google.com/" label="Google">
+  <option value="http://www.microsoft.com/" label="Microsoft">
+  <option value="https://www.mozilla.org/" label="Mozilla">
   <option value="http://w3.org/" label="W3C">
 </datalist>
 ```
@@ -347,22 +350,22 @@ div {
 
 ```html
 <form>
-  <div>
-    <label for="myURL">Enter the problem website address:</label>
-    <input id="myURL" name="myURL" type="url"
-           required pattern=".*\.myco\..*"
-           title="The URL must be in a Myco domain">
-    <span class="validity"></span>
-  </div>
-  <div>
-    <label for="myComment">What is the problem?</label>
-    <input id="myComment" name="myComment" type="text"
-           required>
-    <span class="validity"></span>
-  </div>
-  <div>
-    <button>Submit</button>
-  </div>
+  <div>
+    <label for="myURL">Enter the problem website address:</label>
+    <input id="myURL" name="myURL" type="url"
+           required pattern=".*\.myco\..*"
+           title="The URL must be in a Myco domain">
+    <span class="validity"></span>
+  </div>
+  <div>
+    <label for="myComment">What is the problem?</label>
+    <input id="myComment" name="myComment" type="text"
+           required>
+    <span class="validity"></span>
+  </div>
+  <div>
+    <button>Submit</button>
+  </div>
 </form>
 ```
 

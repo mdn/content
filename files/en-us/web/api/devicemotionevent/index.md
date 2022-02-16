@@ -19,6 +19,8 @@ The `DeviceMotionEvent` provides web developers with information about the speed
 
 > **Warning:** Currently, Firefox and Chrome do not handle the coordinates the same way. Take care about this while using them.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{DOMxRef("DeviceMotionEvent.DeviceMotionEvent()")}} {{Non-standard_Inline}}

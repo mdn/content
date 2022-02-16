@@ -21,17 +21,17 @@ The **`<hatchpath>`** [SVG](/en-US/docs/Web/SVG) element defines a hatch path us
 
 ### Global attributes
 
-*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-*   [Global event attributes](/en-US/docs/Web/SVG/Attribute#global_event_attributes)
-*   [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-*   [Style attributes](/en-US/docs/Web/SVG/Attribute#style_attributes)
+- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+- [Global event attributes](/en-US/docs/Web/SVG/Attribute#global_event_attributes)
+- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
+- [Style attributes](/en-US/docs/Web/SVG/Attribute#style_attributes)
 
 ### Specific attributes
 
-*   {{SVGAttr("d")}}
-*   {{SVGAttr("offset")}}
+- {{SVGAttr("d")}}
+- {{SVGAttr("offset")}}
 
-## DOM Interface
+## DOM Interface
 
 This element implements the {{domxref("SVGHatchpathElement")}} interface.
 
@@ -42,9 +42,9 @@ This element implements the {{domxref("SVGHatchpathElement")}} interface.
 ```html
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <hatch id="hatch" hatchUnits="userSpaceOnUse" pitch="5"
+    <hatch id="hatch" hatchUnits="userSpaceOnUse" pitch="5"
         rotate="135">
-      <hatchpath stroke="#a080ff" stroke-width="2"/>
+      <hatchpath stroke="#a080ff" stroke-width="2"/>
     </hatch>
   </defs>
 
@@ -63,4 +63,4 @@ This element implements the {{domxref("SVGHatchpathElement")}} interface.
 
 ## See also
 
-*   {{SVGElement("hatch")}}
+- {{SVGElement("hatch")}}

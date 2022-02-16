@@ -89,9 +89,9 @@ This looks weird, doesn't it? That's because the only way to play an animation a
 
 Here's what happens when the `play()` function gets called:
 
-1.  The box's list of CSS classes is reset to `"box"`. This has the effect of removing any other classes currently applied to the box, including the `"changing"` class that handles animation. In other words, we're removing the animation effect from the box. However, changes to the class list don't take effect until the style recomputation is complete and a refresh has occurred to reflect the change.
-2.  To be sure that the styles are recalculated, we use {{domxref("window.requestAnimationFrame()")}}, specifying a callback. Our callback gets executed just before the next repaint of the document. The problem for us is that because it's before the repaint, the style recomputation hasn't actually happened yet! So...
-3.  Our callback cleverly calls `requestAnimationFrame()` a second time! This time, the callback is run before the next repaint, which is after the style recomputation has occurred. This callback adds the `"changing"` class back onto the box, so that the repaint will start the animation once again.
+1. The box's list of CSS classes is reset to `"box"`. This has the effect of removing any other classes currently applied to the box, including the `"changing"` class that handles animation. In other words, we're removing the animation effect from the box. However, changes to the class list don't take effect until the style recomputation is complete and a refresh has occurred to reflect the change.
+2. To be sure that the styles are recalculated, we use {{domxref("window.requestAnimationFrame()")}}, specifying a callback. Our callback gets executed just before the next repaint of the document. The problem for us is that because it's before the repaint, the style recomputation hasn't actually happened yet! So...
+3. Our callback cleverly calls `requestAnimationFrame()` a second time! This time, the callback is run before the next repaint, which is after the style recomputation has occurred. This callback adds the `"changing"` class back onto the box, so that the repaint will start the animation once again.
 
 Of course, we also need to add an event handler to our "Run" button so it'll actually do something:
 
@@ -107,32 +107,32 @@ document.querySelector(".runButton").addEventListener("click", play, false);
 
 Removing the {{cssxref("animation-name")}} applied to an element will make it jump or cut to its next state. If instead you'd like the animation to complete and then come to a stop you have to try a different approach. The main tricks are:
 
-1.  Make your animation as self-contained as possible. This means you should not rely on `animation-direction: alternate`. Instead you should explicitly write a keyframe animation that goes through the full animation in one forward repetition.
-2.  Use JavaScript and clear the animation being used when the `animationiteration` event fires.
+1. Make your animation as self-contained as possible. This means you should not rely on `animation-direction: alternate`. Instead you should explicitly write a keyframe animation that goes through the full animation in one forward repetition.
+2. Use JavaScript and clear the animation being used when the `animationiteration` event fires.
 
 The following demo shows how you'd achieve the aforementioned JavaScript technique:
 
 ```css
 .slidein {
-  animation-duration: 5s;
-  animation-name: slidein;
-  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
 }
 
 .stopped {
-  animation-name: none;
+  animation-name: none;
 }
 
 @keyframes slidein {
-  0% {
-    margin-left: 0%;
-  }
-  50% {
-    margin-left: 50%;
-  }
-  100% {
-    margin-left: 0%;
-  }
+  0% {
+    margin-left: 0%;
+  }
+  50% {
+    margin-left: 50%;
+  }
+  100% {
+    margin-left: 0%;
+  }
 }
 ```
 
@@ -145,14 +145,14 @@ let watchme = document.getElementById('watchme')
 
 watchme.className = 'slidein'
 const listener = (e) => {
-  watchme.className = 'slidein stopped'
+  watchme.className = 'slidein stopped'
 }
 watchme.addEventListener('click', () =>
-  watchme.addEventListener('animationiteration', listener, false)
+  watchme.addEventListener('animationiteration', listener, false)
 )
 ```
 
-Demo <https://jsfiddle.net/morenoh149/5ty5a4oy/>
+Demo <https://jsfiddle.net/morenoh149/5ty5a4oy/>
 
 ## See also
 

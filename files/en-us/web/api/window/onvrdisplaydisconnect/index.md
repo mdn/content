@@ -3,7 +3,7 @@ title: Window.onvrdisplaydisconnect
 slug: Web/API/Window/onvrdisplaydisconnect
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR

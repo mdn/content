@@ -94,17 +94,20 @@ separator.
 
 ### Using `split()`
 
-When the string is empty, `split()` returns an array containing one empty
+When the string is empty and no separator is specified, `split()` returns an array containing one empty
 string, rather than an empty array. If the string and separator are both empty
 strings, an empty array is returned.
 
 ```js
-const myString = ''
-const splits = myString.split()
+const emptyString = '';
 
-console.log(splits)
+// string is empty and no separator is specified
+console.log(emptyString.split());
+// [""]
 
-// ↪ [""]
+// string and separator are both empty strings
+console.log(emptyString.split(emptyString));
+// []
 ```
 
 The following example defines a function that splits a string into an array of strings

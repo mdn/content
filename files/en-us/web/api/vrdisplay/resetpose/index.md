@@ -4,7 +4,6 @@ slug: Web/API/VRDisplay/resetPose
 tags:
   - API
   - Deprecated
-  - Experimental
   - Method
   - Reference
   - VR
@@ -27,7 +26,7 @@ The VRDisplay's reported roll and pitch do not change when `resetPose()` is call
 ## Syntax
 
 ```js
-vrDisplayInstance.resetPose();
+resetPose()
 ```
 
 ### Parameters

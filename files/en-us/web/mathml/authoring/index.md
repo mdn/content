@@ -345,7 +345,7 @@ latexmlc --dest foo.html --splitat=section foo.tex
 
 ## Optical Character & Handwriting Recognition
 
-[Inftyreader](https://www.inftyreader.org/) is able to perform some Optical Character Recognition, including translation of mathematical equations into MathML. Other tools can do handwriting recognition such as the [Windows Math Input Panel](<https://msdn.microsoft.com/en-us/library/windows/desktop/dd371698(v=vs.85).aspx>) or the online converter [Web Equation](https://webdemo.myscript.com/views/math.html).
+[Inftyreader](https://www.inftyreader.org/) is able to perform some Optical Character Recognition, including translation of mathematical equations into MathML. Other tools can do handwriting recognition such as the [Windows Math Input Panel](<https://msdn.microsoft.com/library/windows/desktop/dd371698(v=vs.85).aspx>) or the online converter [Web Equation](https://webdemo.myscript.com/views/math.html).
 
 ### Original Document Information
 

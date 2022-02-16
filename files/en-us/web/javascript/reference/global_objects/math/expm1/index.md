@@ -59,7 +59,7 @@ Math.expm1(1);  // 1.718281828459045
 
 ## See also
 
-- A polyfill of `Math.expm1` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [Polyfill of `Math.expm1` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math.E")}}
 - {{jsxref("Math.exp()")}}
 - {{jsxref("Math.log()")}}

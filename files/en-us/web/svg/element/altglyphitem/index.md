@@ -24,13 +24,13 @@ The **`<altGlyphItem>`** element provides a set of candidates for glyph substitu
 
 ### Global attributes
 
-*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core)
+- [Core attributes](/en-US/docs/Web/SVG/Attribute#core)
 
 ### Specific attributes
 
 *None*
 
-## DOM Interface
+## DOM Interface
 
 This element implements the {{domxref("SVGAltGlyphItemElement")}} interface.
 
@@ -44,6 +44,6 @@ This element implements the {{domxref("SVGAltGlyphItemElement")}} interface.
 
 ## See also
 
-*   {{SVGElement("glyph")}}
-*   {{SVGElement("glyphRef")}}
-*   {{SVGElement("altGlyphDef")}}
+- {{SVGElement("glyph")}}
+- {{SVGElement("glyphRef")}}
+- {{SVGElement("altGlyphDef")}}

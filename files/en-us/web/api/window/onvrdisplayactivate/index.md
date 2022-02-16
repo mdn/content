@@ -4,7 +4,7 @@ slug: Web/API/Window/onvrdisplayactivate
 tags:
   - API
   - Event Handler
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -19,9 +19,7 @@ browser-compat: api.Window.onvrdisplayactivate
 
 The **`onvrdisplayactivate`** property of the
 {{domxref("Window")}} interface represents an event handler that will run when a display
-is able to be presented to (when the {{event("vrdisplayactivate")}} event fires), for
-example if an HMD has been moved to bring it out of standby, or woken up by being put
-on.
+is able to be presented to (when the {{event("vrdisplayactivate")}} event fires), for example if an HMD has been moved to bring it out of standby, or woken up by being put on.
 
 > **Note:** This event handler was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 

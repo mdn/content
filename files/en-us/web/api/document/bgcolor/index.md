@@ -21,7 +21,7 @@ current document.
 
 ```js
 color = document.bgColor
-document.bgColor =color
+document.bgColor = color
 ```
 
 ### Parameters

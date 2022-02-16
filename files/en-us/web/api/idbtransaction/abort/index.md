@@ -19,7 +19,7 @@ interface rolls back all the changes to objects in the database associated with 
 transaction.
 
 All pending {{domxref("IDBRequest")}} objects created during this transaction have
-their {{domxref("IDBRequest.error")}} attribute set to {{exception("AbortError")}}.
+their {{domxref("IDBRequest.error")}} attribute set to {{exception("AbortError")}}.
 
 {{AvailableInWorkers}}
 
@@ -49,7 +49,7 @@ example live](https://mdn.github.io/to-do-notifications/).)
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+  note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable. This is used a lot below
   db = DBOpenRequest.result;

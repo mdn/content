@@ -14,12 +14,12 @@ This attribute has the same parameter values as defined for the {{ cssxref("clip
 
 You can use this attribute with the following SVG elements:
 
-*   {{ SVGElement("svg") }}
-*   {{ SVGElement("symbol") }}
-*   {{ SVGElement("image") }}
-*   {{ SVGElement("foreignObject") }}
-*   {{ SVGElement("pattern") }}
-*   {{ SVGElement("marker") }}
+- {{ SVGElement("svg") }}
+- {{ SVGElement("symbol") }}
+- {{ SVGElement("image") }}
+- {{ SVGElement("foreignObject") }}
+- {{ SVGElement("pattern") }}
+- {{ SVGElement("marker") }}
 
 ## Example
 

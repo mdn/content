@@ -1515,7 +1515,7 @@ There are many tools available for encoding audio. The simplest are those which 
 A few popular options:
 
 - [FFmpeg](https://ffmpeg.org/)
-  - : Arguably the best-known and most widely regarded open source codec packages available, FFmpeg supports the majority of the most popular audio formats and provides command-line tools and libraries for encoding, decoding, and performing format conversions of both audio and video. Binaries are available for macOS, Linux, and Windows.
+  - : Arguably the best-known and most widely regarded open source codec package available, FFmpeg supports the majority of the most popular audio formats and provides command-line tools and libraries for encoding, decoding, and performing format conversions of both audio and video. Binaries are available for macOS, Linux, and Windows.
 - [Handbrake](https://handbrake.fr/)
   - : A highly popular open source front-end to FFmpeg which adds a graphical user interface that makes it much easier to control the wide variety of options FFmpeg offers while encoding audio and/or video. Binaries are available for macOS, Linux, and Windows.
 - [Audacity](https://www.audacityteam.org/)

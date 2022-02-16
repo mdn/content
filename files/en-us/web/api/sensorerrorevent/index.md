@@ -15,7 +15,9 @@ browser-compat: api.SensorErrorEvent
 ---
 {{APIRef("Sensor API")}}
 
-The **`SensorErrorEvent`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) provides information about errors thrown by a {{domxref('Sensor')}} or derivated interface.
+The **`SensorErrorEvent`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) provides information about errors thrown by a {{domxref('Sensor')}} or derived interface.
+
+{{InheritanceDiagram}}
 
 ## Constructor
 
@@ -25,7 +27,7 @@ The **`SensorErrorEvent`** interface of the [Sensor APIs](/en-US/docs/Web/API/Se
 ## Properties
 
 - {{domxref('SensorErrorEvent.error')}} {{readonlyinline}}
-  - : Returns the {{domxref('DOMException')}} object passed in the event's contructor.
+  - : Returns the {{domxref('DOMException')}} object passed in the event's constructor.
 
 ## Specifications
 

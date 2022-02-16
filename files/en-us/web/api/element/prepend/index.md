@@ -62,7 +62,7 @@ div.prepend("Headline: ");
 console.log(div.textContent); // "Headline: Some text"
 ```
 
-### Appending an element and text
+### Prepending an element and text
 
 ```js
 let div = document.createElement("div");

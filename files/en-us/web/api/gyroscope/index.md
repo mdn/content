@@ -21,6 +21,8 @@ To use this sensor, the user must grant permission to the `'gyroscope'` device s
 
 If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("Gyroscope.Gyroscope", "Gyroscope()")}}
@@ -35,9 +37,17 @@ If a feature policy blocks use of a feature it is because your code is inconsist
 - {{domxref('Gyroscope.z')}} {{readonlyinline}}
   - : Returns a double, containing the angular velocity of the device along the device's z axis.
 
+## Methods
+
+_`Gyroscope` doesn't have own methods. However, it inherits methods from its parent interfaces, {{domxref("Sensor")}} and {{domxref("EventTarget")}}._
+
+## Events
+
+_`Gyroscope` doesn't have own events. However, it inherits events from its parent interface, {{domxref('Sensor')}}._
+
 ## Example
 
-The gyroscope is typically read in the {{domxref('Sensor.onreading')}} event callback. In the example below this occurs sixty times a second.
+The gyroscope is typically read in the {{domxref('Sensor.reading_event', 'reading')}} event callback. In the example below this occurs sixty times a second.
 
 ```js
 let gyroscope = new Gyroscope({frequency: 60});

@@ -13,7 +13,7 @@ The **`unicode-range`** attribute defines the range of [ISO 10646](https://www.i
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("font-face")}}
+- {{SVGElement("font-face")}}
 
 ## Usage notes
 
@@ -42,8 +42,8 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `<urange>#`
-    *   : This value is a comma-separated list of ISO 10646 characters possibly covered by the glyphs in the font.
+- `<urange>#`
+  - : This value is a comma-separated list of ISO 10646 characters possibly covered by the glyphs in the font.
 
 ## Specifications
 
@@ -72,4 +72,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-*   [ISO 10646 - Universal Coded Character Set (UCS)](https://www.iso.org/standard/56921.html)
+- [ISO 10646 - Universal Coded Character Set (UCS)](https://www.iso.org/standard/56921.html)

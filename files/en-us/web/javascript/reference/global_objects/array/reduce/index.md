@@ -20,7 +20,7 @@ The final result of running the reducer across all elements of the array is a si
 
 The first time that the callback is run there is no "return value of the previous calculation".
 If supplied, an initial value may be used in its place.
-Otherwise array element 0 is used as the initial value and iteration starts from the next element (index 1 instead of index 0).
+Otherwise the array element at index 0 is used as the initial value and iteration starts from the next element (index 1 instead of index 0).
 
 Perhaps the easiest-to-understand case for `reduce()` is to return the sum of all the elements in an array:
 
@@ -518,9 +518,9 @@ const triple = x => 3 * x
 const quadruple = x => 4 * x
 
 // Function composition enabling pipe functionality
-const pipe = (...functions) => input => functions.reduce(
+const pipe = (...functions) => initialValue => functions.reduce(
     (acc, fn) => fn(acc),
-    input
+    initialValue
 )
 
 // Composed functions for multiplication of specific values
@@ -563,5 +563,5 @@ if (!Array.prototype.mapUsingReduce) {
 
 ## See also
 
-- A polyfill of `Array.prototype.reduce` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.reduce` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.reduceRight()")}}

@@ -35,7 +35,7 @@ var promise = USBDevice.controlTransferIn(setup, length)
       transfer is `"standard"` (common to all USB devices)
       `"class"` (common to an industry-standard class of devices) or
       `"vendor"`.
-    - `recipient`: Specifices the target of the transfer on the device, one
+    - `recipient`: Specifies the target of the transfer on the device, one
       of `"device"`, `"interface"`, `"endpoint"`, or
       `"other"`.
     - `request`: A vendor-specific command.

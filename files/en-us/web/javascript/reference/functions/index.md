@@ -46,7 +46,7 @@ The parameters of a function call are the function's _arguments_. Arguments may 
 (in the case of [primitive values](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#primitive_values))
 or _by reference_ (in the case of [objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#objects)).
 This means that if a function reassigns a primitive type parameter, the value won't change outside the function. In the case of
-an object type parameter, if it's reassigned or mutated, the change will impact outside of the function.
+an object type parameter, if its properties are mutated, the change will impact outside of the function.
 See the following example:
 
 ```js
@@ -142,7 +142,7 @@ It is also possible to provide a name inside the definition in order to create a
 **named** function expression:
 
 ```js
-var myFunction = function namedFunction(){
+var myFunction = function namedFunction() {
     statements
 }
 ```
@@ -435,7 +435,7 @@ the global scope (which all functions inherit).
 /*
  * Declare and initialize a variable 'p' (global)
  * and a function 'myFunc' (to change the scope) inside which
- * declare a varible with same name 'p' (current) and
+ * declare a variable with same name 'p' (current) and
  * define three functions using three different ways:-
  *     1. function declaration
  *     2. function expression

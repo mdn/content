@@ -58,7 +58,7 @@ Almost any web content can be converted to a link so that when clicked or otherw
 
 For example, the BBC homepage contains many links that point not only to multiple news stories, but also different areas of the site (navigation functionality), login/registration pages (user tools), and more.
 
-![frontpage of bbc.co.uk, showing many news items, and navigation menu functionality](updated-bbc-website.png)
+![front page of bbc.co.uk, showing many news items, and navigation menu functionality](updated-bbc-website.png)
 
 ## Anatomy of a link
 
@@ -186,7 +186,7 @@ An absolute URL will always point to the same location, no matter where it's use
 **relative URL**: Points to a location that is _relative_ to the file you are linking from, more like what we looked at in the previous section.
 For example, if we wanted to link from our example file at `https://www.example.com/projects/index.html` to a PDF file in the same directory, the URL would just be the filename — `project-brief.pdf` — no extra information needed. If the PDF was available in a subdirectory inside `projects` called `pdfs`, the relative link would be `pdfs/project-brief.pdf` (the equivalent absolute URL would be `https://www.example.com/projects/pdfs/project-brief.pdf`.)
 
-A relative URL will point to different places depending on the actual location of the file you refer from — for example if we moved our `index.html` file out of the `projects` directory and into the **root** of the web site (the top level, not in any directories), the `pdfs/project-brief.pdf` relative URL link inside it would now point to a file located at `https://www.example.com/pdfs/project-brief.pdf`, not a file located at `https://www.example.com/projects/pdfs/project-brief.pdf`.
+A relative URL will point to different places depending on the actual location of the file you refer from — for example if we moved our `index.html` file out of the `projects` directory and into the **root** of the web site (the top level, not in any directories), the `pdfs/project-brief.pdf` relative URL link inside it would now point to a file located at `https://www.example.com/pdfs/project-brief.pdf`, not a file located at `https://www.example.com/projects/pdfs/project-brief.pdf`.
 
 Of course, the location of the `project-brief.pdf` file and `pdfs` folder won't suddenly change because you moved the `index.html` file — this would make your link point to the wrong place, so it wouldn't work if clicked on. You need to be careful!
 
@@ -327,7 +327,7 @@ Here's an example that includes a cc, bcc, subject and body:
 > This is standard URL query notation.
 > Read [The GET method](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data#the_get_method) to understand what URL query notation is more commonly used for.
 
-Here are a few other sample `mailto` URLs:
+Here are a few other sample `mailto` URLs:
 
 - <mailto:>
 - <mailto:nowhere@mozilla.org>

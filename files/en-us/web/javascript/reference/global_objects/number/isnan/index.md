@@ -95,6 +95,6 @@ Number.isNaN = Number.isNaN || function isNaN(input) {
 
 ## See also
 
-- A polyfill of `Number.isNaN` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [Polyfill of `Number.isNaN` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
 - {{jsxref("Number")}}
 - {{jsxref("isNaN", "isNaN()")}}

@@ -13,8 +13,8 @@ The **`format`** attribute indicates the format of the given font.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("altGlyph")}}
-*   {{SVGElement("glyphRef")}}
+- {{SVGElement("altGlyph")}}
+- {{SVGElement("glyphRef")}}
 
 ## Context notes
 
@@ -35,51 +35,51 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `<string>`
-    *   : This value specifies the format of the given font.
+- `<string>`
+  - : This value specifies the format of the given font.
 
-        Here is a list of font formats and their strings that can be used as values for this attribute:
+    Here is a list of font formats and their strings that can be used as values for this attribute:
 
-        <table class="no-markdown">
-          <tbody>
-            <tr>
-              <th>Format string</th>
-              <th>Format</th>
-            </tr>
-            <tr>
-              <td><code>truedoc-pfr</code></td>
-              <td>TrueDoc™ Portable Font Resource</td>
-            </tr>
-            <tr>
-              <td><code>embedded-opentype</code></td>
-              <td>Embedded OpenType</td>
-            </tr>
-            <tr>
-              <td><code>type-1</code></td>
-              <td>PostScript™ Type 1</td>
-            </tr>
-            <tr>
-              <td><code>truetype</code></td>
-              <td>TrueType</td>
-            </tr>
-            <tr>
-              <td><code>opentype</code></td>
-              <td>OpenType, including TrueType Open</td>
-            </tr>
-            <tr>
-              <td><code>truetype-gx</code></td>
-              <td>TrueType with GX extensions</td>
-            </tr>
-            <tr>
-              <td><code>speedo</code></td>
-              <td>Speedo</td>
-            </tr>
-            <tr>
-              <td><code>intellifont</code></td>
-              <td>Intellifont</td>
-            </tr>
-          </tbody>
-        </table>
+    <table class="no-markdown">
+      <tbody>
+        <tr>
+          <th>Format string</th>
+          <th>Format</th>
+        </tr>
+        <tr>
+          <td><code>truedoc-pfr</code></td>
+          <td>TrueDoc™ Portable Font Resource</td>
+        </tr>
+        <tr>
+          <td><code>embedded-opentype</code></td>
+          <td>Embedded OpenType</td>
+        </tr>
+        <tr>
+          <td><code>type-1</code></td>
+          <td>PostScript™ Type 1</td>
+        </tr>
+        <tr>
+          <td><code>truetype</code></td>
+          <td>TrueType</td>
+        </tr>
+        <tr>
+          <td><code>opentype</code></td>
+          <td>OpenType, including TrueType Open</td>
+        </tr>
+        <tr>
+          <td><code>truetype-gx</code></td>
+          <td>TrueType with GX extensions</td>
+        </tr>
+        <tr>
+          <td><code>speedo</code></td>
+          <td>Speedo</td>
+        </tr>
+        <tr>
+          <td><code>intellifont</code></td>
+          <td>Intellifont</td>
+        </tr>
+      </tbody>
+    </table>
 
 ## Specifications
 
@@ -115,4 +115,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-*   [List of font formats defined in CSS 2 (outdated specification)](https://www.w3.org/TR/2008/REC-CSS2-20080411/fonts.html#referencing)
+- [List of font formats defined in CSS 2 (outdated specification)](https://www.w3.org/TR/2008/REC-CSS2-20080411/fonts.html#referencing)

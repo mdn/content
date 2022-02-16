@@ -33,7 +33,7 @@ How do you pull it up? Three ways:
 
 - **_Menu bar:_**
 
-  - **Firefox:** Menu ![](2014-01-10-13-08-08-f52b8c.png) _➤ Web Developer ➤ Toggle Tools,_ or _Tools ➤_ _Web Developer ➤ Toggle Tools_
+  - **Firefox:** Menu ![](2014-01-10-13-08-08-f52b8c.png) _➤ Web Developer ➤ Toggle Tools,_ or _Tools ➤_ _Web Developer ➤ Toggle Tools_
   - **Chrome:** _More tools ➤ Developer tools_
   - **Safari:** _Develop ➤ Show Web Inspector._ If you can't see the _Develop_ menu, go to _Safari ➤ Preferences ➤ Advanced_, and check the _Show Develop menu in menu bar_ checkbox.
   - **Opera**: _Developer ➤ Developer tools_
@@ -108,7 +108,7 @@ You'll notice a number of clickable tabs at the top of the CSS Viewer:
 Find more out about the Inspector in different browsers:
 
 - [Firefox Page inspector](/en-US/docs/Tools/Page_Inspector)
-- [IE DOM Explorer](https://msdn.microsoft.com/en-us/library/ie/dn255008%28v=vs.85%29.aspx)
+- [IE DOM Explorer](https://msdn.microsoft.com/library/ie/dn255008%28v=vs.85%29.aspx)
 - [Chrome DOM inspector](https://developer.chrome.com/docs/devtools/dom/) (Opera's inspector works the same as this)
 - [Safari DOM inspector and style explorer](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1)
 
@@ -120,13 +120,13 @@ The JavaScript debugger allows you to watch the value of variables and set break
 
 To get to the debugger:
 
-**Firefox**: Select ![](2014-01-10-13-08-08-f52b8c.png) ➤ _Web Developer_ ➤ _Debugger_ or press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> to open the JavaScript Debugger. If the tools are already displayed, click on the **Debugger** tab.
+**Firefox**: Select ![](2014-01-10-13-08-08-f52b8c.png) ➤ _Web Developer_ ➤ _Debugger_ or press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> to open the JavaScript Debugger. If the tools are already displayed, click on the **Debugger** tab.
 
 **Chrome**: Open the Developer tools and then select the **Sources** tab. (Opera works the same way.)
 
 **Edge and Internet Explorer 11**: Press <kbd>F12</kbd> and then, <kbd>Ctrl</kbd> + <kbd>3</kbd>, or if the tools are already displayed, click on the Debugger tab.
 
-**Safari**: Open the Developer Tools and then select the Debugger tab.
+**Safari**: Open the Developer Tools and then select the Debugger tab.
 
 ### Exploring the debugger
 
@@ -148,7 +148,7 @@ Set breakpoints where you want to pause execution. In the following image, the h
 
 The right-hand pane shows a list of the watch expressions you have added and breakpoints you have set.
 
-In the image, the first section, **Watch expressions**, shows that the listItems variable has been added. You can expand the list to view the values in the array.
+In the image, the first section, **Watch expressions**, shows that the listItems variable has been added. You can expand the list to view the values in the array.
 
 The next section, **Breakpoints**, lists the breakpoints set on the page. In example.js, a breakpoint has been set on the statement `listItems.push(inputNewItem.value);`
 
@@ -165,7 +165,7 @@ The final section, **Scopes**, shows what values are visible from various points
 Find more out about the JavaScript debugger in different browsers:
 
 - [Firefox JavaScript Debugger](/en-US/docs/Tools/Debugger)
-- [Microsoft Edge Debugger](https://docs.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/devtools-guide/debugger)
+- [Microsoft Edge Debugger](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/devtools-guide/debugger)
 - [Chrome Debugger](https://developer.chrome.com/docs/devtools/javascript/)
 - [Safari Debugger](https://developer.apple.com/safari/tools/)
 
@@ -175,7 +175,7 @@ The JavaScript console is an incredibly useful tool for debugging JavaScript tha
 
 If the developer tools are already open, click or press the Console tab.
 
-If not, Firefox allows you to open the console directly using <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> or using the menu command: Menu ![](2014-01-10-13-08-08-f52b8c.png) _➤ Web Developer ➤ Web Console,_ or _Tools ➤_ _Web Developer ➤ Web Console._ On other browser, open the developer tools and then click the Console tab.
+If not, Firefox allows you to open the console directly using <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> or using the menu command: Menu ![](2014-01-10-13-08-08-f52b8c.png) _➤ Web Developer ➤ Web Console,_ or _Tools ➤_ _Web Developer ➤ Web Console._ On other browser, open the developer tools and then click the Console tab.
 
 This will give you a window like the following:
 
@@ -183,15 +183,15 @@ This will give you a window like the following:
 
 To see what happens, try entering the following snippets of code into the console one by one (and then pressing Enter):
 
-1.  ```js
+1. ```js
     alert('hello!');
     ```
 
-2.  ```js
+2. ```js
     document.querySelector('html').style.backgroundColor = 'purple';
     ```
 
-3.  ```js
+3. ```js
     const myWordmark = document.createElement('img');
     myWordmark.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
     document.querySelector('h1').appendChild(myWordmark);
@@ -199,15 +199,15 @@ To see what happens, try entering the following snippets of code into the consol
 
 Now try entering the following incorrect versions of the code and see what you get.
 
-1.  ```js
+1. ```js
     alert('hello!);
     ```
 
-2.  ```js
+2. ```js
     document.cheeseSelector('html').style.backgroundColor = 'purple';
     ```
 
-3.  ```js
+3. ```js
     const myWordmark = document.createElement('img');
     myBanana.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
     document.querySelector('h1').appendChild(myWordmark);
@@ -220,7 +220,7 @@ You'll start to see the kind of errors that the browser returns. Often these err
 Find more out about the JavaScript console in different browsers:
 
 - [Firefox Web Console](/en-US/docs/Tools/Web_Console)
-- [IE JavaScript console](https://msdn.microsoft.com/en-us/library/ie/dn255006%28v=vs.85%29.aspx)
+- [IE JavaScript console](https://msdn.microsoft.com/library/ie/dn255006%28v=vs.85%29.aspx)
 - [Chrome JavaScript Console](https://developer.chrome.com/docs/devtools/console/) (Opera's inspector works the same as this)
 - [Safari Console](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1)
 

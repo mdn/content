@@ -85,6 +85,7 @@ milliseconds) with `0.1 * elapsed`. The element's final position is 200px
 ```js
 const element = document.getElementById('some-element-you-want-to-animate');
 let start, previousTimeStamp;
+let done = false
 
 function step(timestamp) {
   if (start === undefined) {
@@ -96,11 +97,12 @@ function step(timestamp) {
     // Math.min() is used here to make sure the element stops at exactly 200px
     const count = Math.min(0.1 * elapsed, 200);
     element.style.transform = 'translateX(' + count + 'px)';
+    if (count === 200) done = true;
   }
 
   if (elapsed < 2000) { // Stop the animation after 2 seconds
     previousTimeStamp = timestamp
-    window.requestAnimationFrame(step);
+    !done && window.requestAnimationFrame(step);
   }
 }
 

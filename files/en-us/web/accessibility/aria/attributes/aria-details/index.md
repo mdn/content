@@ -43,7 +43,7 @@ When it comes to definition and term roles, the `aria-details` would be included
 </p>
 
 <p role="definition" id="bezier">A <strong>Bézier curve</strong>,
- (Prounounced \ ˈbe-zē-ˌā \)
+ (Pronounced \ ˈbe-zē-ˌā \)
  <i aria-description="English pronunciation">BEH-zee-ay</i>) is a mathematically 
  described curve used in computer graphics and animation. The curve is defined 
  by a set of control points with a minimum of two. Web related graphics 

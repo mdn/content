@@ -10,13 +10,15 @@ tags:
   - content indexing
 browser-compat: api.ContentIndexEvent
 ---
-{{draft}}{{DefaultAPISidebar("Content Index API")}}
+{{DefaultAPISidebar("Content Index API")}}
 
 The **`ContentIndexEvent`** interface of the {{domxref('Content Index API')}} defines the object used to represent the {{Event('contentdelete')}} event.
 
 This event is sent to the {{domxref('ServiceWorkerGlobalScope','global scope')}} of a {{domxref('ServiceWorker')}}. It contains the id of the indexed content to be removed.
 
 The {{Event('contentdelete')}} event is only fired when the deletion happens due to interaction with the browser's built-in user interface. It is not fired when the {{domxref('ContentIndex.delete')}} method is called.
+
+{{InheritanceDiagram}}
 
 ## Constructor
 
@@ -36,7 +38,7 @@ _While `ContentIndexEvent` offers no methods of its own, it inherits any specifi
 
 ## Examples
 
-This example shows the {{domxref('ServiceWorker','sevice worker')}} script listening for the {{domxref('ContentIndexEvent', 'contentdelete')}} event and logs the removed content index id.
+This example shows the {{domxref('ServiceWorker','service worker')}} script listening for the {{domxref('ContentIndexEvent', 'contentdelete')}} event and logs the removed content index id.
 
 ```js
 self.addEventListener('contentdelete', (event) => {

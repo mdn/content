@@ -7,28 +7,33 @@ tags:
   - Mozilla
   - Release
 ---
-{{FirefoxSidebar}}{{draft}}
+{{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 97 that will affect developers. Firefox 97 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta), and will ship on [February 8, 2022](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 97 that affect developers. Firefox 97 was released on February 8, 2022.
 
 ## Changes for web developers
 
-### Developer Tools
-
 ### HTML
 
-#### Removals
+No notable changes
 
 ### CSS
 
 - The CSS units `cap` and `ic` are now supported for use with {{cssxref("&lt;length&gt;")}} and {{cssxref("&lt;length-percentage&gt;")}} data types.
-  For more information see {{bug(1702924)}} and {{bug(1531223)}}.
+  For more information see {{bug(1702924)}} and {{bug(1531223)}}
 
-#### Removals
+- The CSS property `color-adjust` has been renamed to {{cssxref("print-color-adjust")}} to match the relevant specification.
+  The `color-adjust` shorthand name is deprecated.
+  See {{bug(747595)}} for details.
+
+- CSS cascade layers are now available by default. The [`@layer`](/en-US/docs/Web/CSS/@layer) rule declares a cascade layer, which allows declaration of styles and can be imported via the [`@import`](/en-US/docs/Web/CSS/@import) rule using the `layer()` function. See {{bug(1699217)}} for more details.
+
+- The CSS [`scrollbar-gutter`](/en-US/docs/Web/CSS/scrollbar-gutter) property is now supported. This gives developers control over reserved space for the scrollbar, preventing unwanted layout changes as the content grows.
+  See {{bug(1715112)}} for more details.
 
 ### JavaScript
 
-#### Removals
+No notable changes
 
 ### SVG
 
@@ -41,15 +46,10 @@ This article provides information about the changes in Firefox 97 that will affe
   This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/docs/Web/API/SVGPathElement), `SVGAnimatedPathData`.
   (See {{bug(1388931)}} for more details.)
 
-### HTTP
-
-#### Removals
-
-### Security
-
-#### Removals
-
 ### APIs
+
+- `AnimationFrameProvider` is now available in a [`DedicatedWorkerGlobalScope`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope). This means the [`requestAnimationFrame`](/en-US/docs/Web/API/window/requestAnimationFrame) and [`cancelAnimationFrame`](/en-US/docs/Web/API/Window/cancelAnimationFrame) methods can be used within a dedicated worker.
+  (See {{bug(1388931)}} for more details.)
 
 #### DOM
 
@@ -60,28 +60,15 @@ This article provides information about the changes in Firefox 97 that will affe
 - The convenience method {{domxref("AbortSignal.throwIfAborted()")}} can be used to check if a signal has been aborted, and if so throw the {{domxref("AbortSignal.reason()")}}.
   This makes it easier for developers to handle abort signals in code where you can't simply pass the signal to an abortable method. ({{bug(1745372)}}).
 
-#### Media, WebRTC, and Web Audio
-
-#### Removals
-
-### WebAssembly
-
-#### Removals
-
 ### WebDriver conformance (Marionette)
 
 - `Marionette:Quit` accepts a new boolean parameter, `safeMode`, to restart Firefox in safe mode ({{bug(1144075)}}).
-
-#### Removals
+- Improved stability for `WebDriver:NewSession` and `WebDriver:NewWindow` when waiting for the current or initial document to be loaded ({{bug(1739369)}}, {{bug(1747359)}}).
 
 ## Changes for add-on developers
 
 - `cookieStoreId` in {{WebExtAPIRef("tabs.query")}} supports an array of strings. This enables queries to match tabs against more than one cookie store ID ({{bug(1730931)}}).
 - `cookieStoreId` added to {{WebExtAPIRef("contentScripts.register")}}. This enables extensions to register container-specific content scripts ({{bug(1470651)}}).
-
-#### Removals
-
-### Other
 
 ## Older versions
 

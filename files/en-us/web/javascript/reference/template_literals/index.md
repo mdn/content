@@ -17,9 +17,9 @@ browser-compat: javascript.grammar.template_literals
 
 Template literals are literals delimited with backticks (<code>`</code>), allowing embedded expressions called *substitutions*.
 
-* *Untagged* template literals result in strings, which makes them useful for string interpolation (and multiline strings, since unescaped newlines are allowed).
+- *Untagged* template literals result in strings, which makes them useful for string interpolation (and multiline strings, since unescaped newlines are allowed).
 
-* *Tagged* template literals call a function (the *tag function*) with an array of any text segments from the literal followed by arguments with the values of any substitutions, which is useful for [DSLs](https://en.wikipedia.org/wiki/Domain-specific_language).
+- *Tagged* template literals call a function (the *tag function*) with an array of any text segments from the literal followed by arguments with the values of any substitutions, which is useful for [DSLs](https://en.wikipedia.org/wiki/Domain-specific_language).
 
 Template literals are sometimes informally called *template strings*, but they aren't string literals and can't be used everywhere a string literal can be used. Also, a tagged template literal may not result in a string; it's up to the tag function what it creates (if anything).
 
@@ -33,6 +33,9 @@ Template literals are sometimes informally called *template strings*, but they a
  string text line 2`
 
 `string text ${expression} string text`
+
+// Re-usable template:
+const templateFn = expression => `string text ${expression} string text`;
 
 // Tagged, this calls the function "example" with the template as the
 // first argument and substitution values as subsequent arguments:
@@ -49,7 +52,7 @@ curly braces (`${expression}`). The expressions in the
 placeholders and the text between the backticks (\` \`) get passed to a function.
 
 The default function just concatenates the parts into a single string. If there is an
-expression preceding the template literal (`tag` here), this is
+expression preceding the template literal, this is
 called a **tagged template**. In that case, the tag expression (usually
 a function) gets called with the template literal, which you can then manipulate before
 outputting.
@@ -269,7 +272,7 @@ latex`\unicode`
 
 Tagged templates should allow the embedding of languages (for example [DSLs](https://en.wikipedia.org/wiki/Domain-specific_language), or [LaTeX](https://en.wikipedia.org/wiki/LaTeX)), where other escapes sequences
 are common. The ECMAScript proposal [Template Literal
-Revision](https://tc39.github.io/proposal-template-literal-revision/) (Stage 4, to be integrated in the ECMAScript 2018 standard) removes the
+Revision](https://tc39.github.io/proposal-template-literal-revision/) (integrated in the ECMAScript 2018 standard) removed the
 syntax restriction of ECMAScript escape sequences from tagged templates.
 
 However, illegal escape sequences must still be represented in the “cooked”

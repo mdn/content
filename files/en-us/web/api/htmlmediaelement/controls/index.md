@@ -18,7 +18,7 @@ interface controls for playing the media item will be displayed.
 ## Syntax
 
 ```js
-var ctrls = video.controls;
+var myControls = video.controls;
 audio.controls = true;
 ```
 

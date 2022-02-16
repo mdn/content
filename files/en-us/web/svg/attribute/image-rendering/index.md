@@ -17,7 +17,7 @@ The resampling is always done in a truecolor (e.g., 24-bit) color space even if 
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("image")}}
+- {{SVGElement("image")}}
 
 ## Usage notes
 
@@ -41,12 +41,12 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `auto`
-    *   : Indicates that the user agent shall make appropriate tradeoffs to balance speed and quality, but quality shall be given more importance than speed.
-*   `optimizeSpeed`
-    *   : Indicates that the user agent shall emphasize rendering speed over quality.
-*   `optimizeQuality`
-    *   : Indicates that the user agent shall emphasize quality over rendering speed.
+- `auto`
+  - : Indicates that the user agent shall make appropriate tradeoffs to balance speed and quality, but quality shall be given more importance than speed.
+- `optimizeSpeed`
+  - : Indicates that the user agent shall emphasize rendering speed over quality.
+- `optimizeQuality`
+  - : Indicates that the user agent shall emphasize quality over rendering speed.
 
 ## Specifications
 
@@ -89,4 +89,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-*   {{cssxref("image-rendering", "CSS image-rendering")}}
+- {{cssxref("image-rendering", "CSS image-rendering")}}

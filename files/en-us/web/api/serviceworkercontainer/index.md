@@ -19,6 +19,8 @@ The `ServiceWorkerContainer` interface of the [Service Worker API](/en-US/doc
 
 Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register()")}} method used to register service workers, and the {{domxref("ServiceWorkerContainer.controller")}} property used to determine whether or not the current page is actively controlled.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 - {{domxref("ServiceWorkerContainer.controller")}} {{readonlyinline}}

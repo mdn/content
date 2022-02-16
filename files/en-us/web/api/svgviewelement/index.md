@@ -13,6 +13,8 @@ browser-compat: api.SVGViewElement
 
 The **`SVGViewElement`** interface provides access to the properties of {{SVGElement("view")}} elements, as well as methods to manipulate them.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._

@@ -164,7 +164,7 @@ d.getFullYear()    // 1776
 
 ## See also
 
-- A polyfill of `Reflect.construct` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [Polyfill of `Reflect.construct` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
 - {{jsxref("Operators/new", "new")}}
 - [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target)

@@ -8,7 +8,7 @@ browser-compat: api.DOMMatrixReadOnly
 ---
 {{APIRef("Geometry Interfaces")}}
 
-The **`DOMMatrixReadOnly`** interface represents a read-only 4×4 matrix, suitable for 2D and 3D operations. The {{domxref("DOMMatrix")}} interrface—which is based upon `DOMMatrixReadOnly`—adds {{interwiki("wikipedia", "Immutable object", "mutability")}}, allowing you to alter the matrix after creating it.
+The **`DOMMatrixReadOnly`** interface represents a read-only 4×4 matrix, suitable for 2D and 3D operations. The {{domxref("DOMMatrix")}} interface — which is based upon `DOMMatrixReadOnly`—adds {{interwiki("wikipedia", "Immutable object", "mutability")}}, allowing you to alter the matrix after creating it.
 
 This interface should be available inside [web workers](/en-US/docs/Web/API/Web_Workers_API), though some implementations doesn't allow it yet.
 

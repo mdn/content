@@ -24,45 +24,45 @@ The **`<font-face>`** [SVG](/en-US/docs/Web/SVG) element corresponds to the CSS 
 
 ### Global attributes
 
-*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
 
 ### Specific attributes
 
-*   {{SVGAttr("font-family")}}
-*   {{SVGAttr("font-style")}}
-*   {{SVGAttr("font-variant")}}
-*   {{SVGAttr("font-weight")}}
-*   {{SVGAttr("font-stretch")}}
-*   {{SVGAttr("font-size")}}
-*   {{SVGAttr("unicode-range")}}
-*   {{SVGAttr("units-per-em")}}
-*   {{SVGAttr("panose-1")}}
-*   {{SVGAttr("stemv")}}
-*   {{SVGAttr("stemh")}}
-*   {{SVGAttr("slope")}}
-*   {{SVGAttr("cap-height")}}
-*   {{SVGAttr("x-height")}}
-*   {{SVGAttr("accent-height")}}
-*   {{SVGAttr("ascent")}}
-*   {{SVGAttr("descent")}}
-*   {{SVGAttr("widths")}}
-*   {{SVGAttr("bbox")}}
-*   {{SVGAttr("ideographic")}}
-*   {{SVGAttr("alphabetic")}}
-*   {{SVGAttr("mathematical")}}
-*   {{SVGAttr("hanging")}}
-*   {{SVGAttr("v-ideographic")}}
-*   {{SVGAttr("v-alphabetic")}}
-*   {{SVGAttr("v-mathematical")}}
-*   {{SVGAttr("v-hanging")}}
-*   {{SVGAttr("underline-position")}}
-*   {{SVGAttr("underline-thickness")}}
-*   {{SVGAttr("strikethrough-position")}}
-*   {{SVGAttr("strikethrough-thickness")}}
-*   {{SVGAttr("overline-position")}}
-*   {{SVGAttr("overline-thickness")}}
+- {{SVGAttr("font-family")}}
+- {{SVGAttr("font-style")}}
+- {{SVGAttr("font-variant")}}
+- {{SVGAttr("font-weight")}}
+- {{SVGAttr("font-stretch")}}
+- {{SVGAttr("font-size")}}
+- {{SVGAttr("unicode-range")}}
+- {{SVGAttr("units-per-em")}}
+- {{SVGAttr("panose-1")}}
+- {{SVGAttr("stemv")}}
+- {{SVGAttr("stemh")}}
+- {{SVGAttr("slope")}}
+- {{SVGAttr("cap-height")}}
+- {{SVGAttr("x-height")}}
+- {{SVGAttr("accent-height")}}
+- {{SVGAttr("ascent")}}
+- {{SVGAttr("descent")}}
+- {{SVGAttr("widths")}}
+- {{SVGAttr("bbox")}}
+- {{SVGAttr("ideographic")}}
+- {{SVGAttr("alphabetic")}}
+- {{SVGAttr("mathematical")}}
+- {{SVGAttr("hanging")}}
+- {{SVGAttr("v-ideographic")}}
+- {{SVGAttr("v-alphabetic")}}
+- {{SVGAttr("v-mathematical")}}
+- {{SVGAttr("v-hanging")}}
+- {{SVGAttr("underline-position")}}
+- {{SVGAttr("underline-thickness")}}
+- {{SVGAttr("strikethrough-position")}}
+- {{SVGAttr("strikethrough-thickness")}}
+- {{SVGAttr("overline-position")}}
+- {{SVGAttr("overline-thickness")}}
 
-## DOM Interface
+## DOM Interface
 
 This element implements the {{domxref("SVGFontFaceElement")}} interface.
 
@@ -76,6 +76,6 @@ This element implements the {{domxref("SVGFontFaceElement")}} interface.
 
 ## See also
 
-*   {{SVGElement("font")}}
-*   {{SVGElement("font-face-src")}}
-*   [SVG tutorial: SVG fonts](/en-US/docs/Web/SVG/Tutorial/SVG_fonts)
+- {{SVGElement("font")}}
+- {{SVGElement("font-face-src")}}
+- [SVG tutorial: SVG fonts](/en-US/docs/Web/SVG/Tutorial/SVG_fonts)

@@ -16,13 +16,13 @@ The global `aria-live` attribute indicates that an element will be updated, and 
 
 When content changes after initial load, assistive technology (AT) users may not "see" the changes. Some changes are important. Others are not. The `aria-live` attribute enables developers to inform user of updates and choose, based on importance and urgency, whether to immediately, proactively, or passively inform AT users of changes to the content.
 
-If a section of the screen updates, if it's styled in a way to be noticeable, most sighted users will generally notice live updates. Screen readers, on the other hand, only focus on one part of the page at a time; and that part may not be where the update is. The `aria-live` attribute provides a way for developers to annouce such changes to AT based on event triggers set by the developer rather than by user intiated actions so they are made aware that the content has changed.
+If a section of the screen updates, if it's styled in a way to be noticeable, most sighted users will generally notice live updates. Screen readers, on the other hand, only focus on one part of the page at a time; and that part may not be where the update is. The `aria-live` attribute provides a way for developers to announce such changes to AT based on event triggers set by the developer rather than by user initiated actions so they are made aware that the content has changed.
 
 ```html
 <div id="announce" aria-live="polite"></div>
 ```
 
-The `aria-live` attribute is set on an **empty** element. When an update to the page occures, the empty element with that `aria-live` attribute should be updated with a brief announcement informing the user an update has been made.
+The `aria-live` attribute is set on an **empty** element. When an update to the page occurs, the empty element with that `aria-live` attribute should be updated with a brief announcement informing the user an update has been made.
 
 ```html
 <div id="announce" aria-live="polite">
@@ -36,7 +36,7 @@ If you want all the contents of the live region to be read, used the [`aria-atom
 
 ### Choosing the `aria-live` value
 
-As some assitive technology users can't "see" live updates, the `aria-live` attribute is used to define what updated information the user should be:
+As some assistive technology users can't "see" live updates, the `aria-live` attribute is used to define what updated information the user should be:
 
 - Made aware of immediately,
 - Informed about if the opportunity avails itself, and

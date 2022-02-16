@@ -13,7 +13,7 @@ The **`x-height`** attribute indicates the height of lowercase glyphs in the fon
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("font-face")}}
+- {{SVGElement("font-face")}}
 
 ## Usage notes
 
@@ -40,8 +40,8 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `<number>`
-    *   : This value indicates the height of lowercase glyphs.
+- `<number>`
+  - : This value indicates the height of lowercase glyphs.
 
 ## Specifications
 
@@ -70,5 +70,5 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-*   {{SVGAttr("cap-height")}}
-*   {{SVGAttr("accent-height")}}
+- {{SVGAttr("cap-height")}}
+- {{SVGAttr("accent-height")}}

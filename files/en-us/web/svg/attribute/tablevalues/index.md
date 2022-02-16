@@ -11,10 +11,10 @@ The **`tableValues`** attribute defines a list of numbers defining a lookup tabl
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feFuncA")}}
-*   {{SVGElement("feFuncB")}}
-*   {{SVGElement("feFuncG")}}
-*   {{SVGElement("feFuncR")}}
+- {{SVGElement("feFuncA")}}
+- {{SVGElement("feFuncB")}}
+- {{SVGElement("feFuncG")}}
+- {{SVGElement("feFuncR")}}
 
 ## Example
 
@@ -37,16 +37,16 @@ html, body, svg {
 
   <filter id="componentTransfer1" x="0" y="0" width="100%" height="100%">
     <feComponentTransfer>
-      <feFuncR type="table" tableValues="0 1"/>
-      <feFuncG type="table" tableValues="0 1"/>
-      <feFuncB type="table" tableValues="0 1"/>
+      <feFuncR type="table" tableValues="0 1"/>
+      <feFuncG type="table" tableValues="0 1"/>
+      <feFuncB type="table" tableValues="0 1"/>
     </feComponentTransfer>
   </filter>
   <filter id="componentTransfer2" x="0" y="0" width="100%" height="100%">
     <feComponentTransfer>
-      <feFuncR type="table" tableValues="1 0"/>
-      <feFuncG type="table" tableValues="1 0"/>
-      <feFuncB type="table" tableValues="1 0"/>
+      <feFuncR type="table" tableValues="1 0"/>
+      <feFuncG type="table" tableValues="1 0"/>
+      <feFuncB type="table" tableValues="1 0"/>
     </feComponentTransfer>
   </filter>
 
@@ -84,10 +84,10 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `<list-of-numbers>`
-    *   : This value holds a comma- and/or space-separated list of {{cssxref("number")}}s, which define a lookup table for the color component transfer function. Each number can be between `0` and `1`.
+- `<list-of-numbers>`
+  - : This value holds a comma- and/or space-separated list of {{cssxref("number")}}s, which define a lookup table for the color component transfer function. Each number can be between `0` and `1`.
 
-        An empty list results in an identity transfer function.
+    An empty list results in an identity transfer function.
 
 ## Specifications
 

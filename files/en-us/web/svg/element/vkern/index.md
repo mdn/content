@@ -22,17 +22,17 @@ The **`<vkern>`** SVG element allows to fine-tweak the vertical distance between
 
 ### Global attributes
 
-*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
 
 ### Specific attributes
 
-*   {{SVGAttr("u1")}}
-*   {{SVGAttr("g1")}}
-*   {{SVGAttr("u2")}}
-*   {{SVGAttr("g2")}}
-*   {{SVGAttr("k")}}
+- {{SVGAttr("u1")}}
+- {{SVGAttr("g1")}}
+- {{SVGAttr("u2")}}
+- {{SVGAttr("g2")}}
+- {{SVGAttr("k")}}
 
-## DOM Interface
+## DOM Interface
 
 This element implements the {{domxref("SVGVKernElement")}} interface.
 
@@ -46,7 +46,7 @@ This element implements the {{domxref("SVGVKernElement")}} interface.
 
 ## See also
 
-*   {{SVGElement("font")}}
-*   {{SVGElement("glyph")}}
-*   {{SVGElement("hkern")}}
-*   [SVG tutorial: SVG fonts](/en-US/docs/Web/SVG/Tutorial/SVG_fonts)
+- {{SVGElement("font")}}
+- {{SVGElement("glyph")}}
+- {{SVGElement("hkern")}}
+- [SVG tutorial: SVG fonts](/en-US/docs/Web/SVG/Tutorial/SVG_fonts)

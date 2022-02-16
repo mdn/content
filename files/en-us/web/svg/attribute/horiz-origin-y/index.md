@@ -15,7 +15,7 @@ The **`horiz-origin-y`** attribute indicates the y-coordinate in the font coordi
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("font")}}
+- {{SVGElement("font")}}
 
 ## Usage notes
 
@@ -42,8 +42,8 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `<number>`
-    *   : This value indicates the x-coordinate of the origin of a glyph for horizontally oriented text.
+- `<number>`
+  - : This value indicates the x-coordinate of the origin of a glyph for horizontally oriented text.
 
 ## Specifications
 
@@ -72,6 +72,6 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-*   {{SVGAttr("horiz-origin-x")}}
-*   {{SVGAttr("vert-origin-x")}}
-*   {{SVGAttr("vert-origin-y")}}
+- {{SVGAttr("horiz-origin-x")}}
+- {{SVGAttr("vert-origin-x")}}
+- {{SVGAttr("vert-origin-y")}}

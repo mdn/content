@@ -31,7 +31,7 @@ where <image-set-option> = [ <image> | <string> ] <resolution> and
 - `<image>`
   - : The [`<image>`](/en-US/docs/Web/CSS/image) can be any image type except for an image set. The `image-set()` function may not be nested inside another `image-set()` function.
 - `<string>`
-  - : A `url()` to an image.
+  - : An url to an image.
 - `<resolution>`{{optional_inline}}
   - : [`<resolution>`](/en-US/docs/Web/CSS/resolution) units include `x` or `dppx`, for dots per pixel unit, `dpi`, for dots per inch, and `dpcm` for dots per centimeter. Every image within an `image-set()` must have a unique resolution.
 - `type(<string>)`{{optional_inline}}
@@ -61,8 +61,8 @@ There is no inbuilt fallback for `image-set()`; therefore to include a {{cssxref
 .box {
   background-image: url("large-balloons.jpg");
   background-image: image-set(
-    url("large-balloons.avif") type("image/avif"),
-    url("large-balloons.jpg") type("image/jpeg"));
+    "large-balloons.avif" type("image/avif"),
+    "large-balloons.jpg" type("image/jpeg"));
 }
 ```
 

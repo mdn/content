@@ -19,7 +19,7 @@ The [global attribute](/en-US/docs/Web/HTML/Global_attributes) **`itemtype`** sp
 
 Google and other major search engines support the [schema.org](http://schema.org/) vocabulary for structured data. This vocabulary defines a standard set of type names and property names. For example, `MusicEvent` indicates a concert performance, with [`startDate`](http://schema.org/startDate) and [`location`](http://schema.org/location) properties specifying the concert's key details. In this case, [`MusicEvent`](http://schema.org/MusicEvent)would be the URL used by `itemtype`, with `startDate` and location as `itemprop`'s which [`MusicEvent`](http://schema.org/MusicEvent) defines.
 
-> **Note:** More about `itemtype` attributes can be found at <http://schema.org/Thing>
+> **Note:** More about `itemtype` attributes can be found at <https://schema.org/Thing>
 
 - The **itemtype** attribute must have a value that is an unordered set of unique tokens which are case-sensitive, each is a valid and absolute URL, and all defined to use the same vocabulary. The attribute's value must have at least one token.
 - The item types must all be types defined in applicable specifications (such as [schema.org](http://schema.org/)), and must all be defined to use the same vocabulary.

@@ -51,7 +51,7 @@ in which case the empty {{domxref("DocumentFragment")}} is returned).
 
 ### Exceptions
 
-Pre-insert validiy
+Pre-insert validity
 
 ## Example
 

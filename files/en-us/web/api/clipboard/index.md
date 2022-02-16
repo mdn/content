@@ -19,6 +19,8 @@ browser-compat: api.Clipboard
 
 The **`Clipboard`** interface implements the [Clipboard API](/en-US/docs/Web/API/Clipboard_API), providing—if the user grants permission—both read and write access to the contents of the system clipboard. The Clipboard API can be used to implement cut, copy, and paste features within a web application.
 
+{{InheritanceDiagram}}
+
 The system clipboard is exposed through the global {{domxref("Navigator.clipboard")}} property.
 
 Calls to the methods of the `Clipboard` object will not succeed if the user hasn't granted the needed permissions using the [Permissions API](/en-US/docs/Web/API/Permissions_API) and the `"clipboard-read"` or `"clipboard-write"` permission as appropriate.

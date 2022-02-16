@@ -4,7 +4,7 @@ slug: Web/API/Window/onvrdisplaydeactivate
 tags:
   - API
   - Event Handler
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR

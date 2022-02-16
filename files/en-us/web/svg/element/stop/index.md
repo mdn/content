@@ -22,14 +22,14 @@ html,body,svg { height:100% }
 <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
-    <linearGradient id="myGradient" gradientTransform="rotate(90)">
+    <linearGradient id="myGradient" gradientTransform="rotate(90)">
       <stop offset="5%"  stop-color="gold" />
       <stop offset="95%" stop-color="red" />
     </linearGradient>
   </defs>
 
-  <!-- using my linear gradient -->
-  <circle cx="5" cy="5" r="4" fill="url('#myGradient')" />
+  <!-- using my linear gradient -->
+  <circle cx="5" cy="5" r="4" fill="url('#myGradient')" />
 </svg>
 ```
 
@@ -37,26 +37,26 @@ html,body,svg { height:100% }
 
 ## Attributes
 
-*   {{SVGAttr("offset")}}
-    *   : This attribute defines where the gradient stop is placed along the gradient vector.
-        *Value type*: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage); *Default value*: `0`; *Animatable*: **yes**
-*   {{SVGAttr("stop-color")}}
-    *   : This attribute defines the color of the gradient stop. It can be used as a CSS property.
-        *Value type*: `currentcolor`|[**\<color>**](/en-US/docs/Web/SVG/Content_type#color)|[**\<icccolor>**](/en-US/docs/Web/SVG/Content_type#icccolor); *Default value*: `black`; *Animatable*: **yes**
-*   {{SVGAttr("stop-opacity")}}
-    *   : This attribute defines the opacity of the gradient stop. It can be used as a CSS property.
-        *Value type*: [**\<opacity>**](/en-US/docs/Web/SVG/Content_type#opacity_value); *Default value*: `1`; *Animatable*: **yes**
+- {{SVGAttr("offset")}}
+  - : This attribute defines where the gradient stop is placed along the gradient vector.
+    *Value type*: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage); *Default value*: `0`; *Animatable*: **yes**
+- {{SVGAttr("stop-color")}}
+  - : This attribute defines the color of the gradient stop. It can be used as a CSS property.
+    *Value type*: `currentcolor`|[**\<color>**](/en-US/docs/Web/SVG/Content_type#color)|[**\<icccolor>**](/en-US/docs/Web/SVG/Content_type#icccolor); *Default value*: `black`; *Animatable*: **yes**
+- {{SVGAttr("stop-opacity")}}
+  - : This attribute defines the opacity of the gradient stop. It can be used as a CSS property.
+    *Value type*: [**\<opacity>**](/en-US/docs/Web/SVG/Content_type#opacity_value); *Default value*: `1`; *Animatable*: **yes**
 
 ### Global attributes
 
-*   [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
-    *   : Most notably: {{SVGAttr('id')}}
-*   [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
-    *   : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-*   Event Attributes
-    *   : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Document element event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
-*   [Presentation Attributes](/en-US/docs/Web/SVG/Attribute/Presentation)
-    *   : Most notably: {{SVGAttr('color')}}, {{SVGAttr('display')}}, {{SVGAttr('stop-color')}}, {{SVGAttr('stop-opacity')}}, {{SVGAttr('visibility')}}
+- [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
+  - : Most notably: {{SVGAttr('id')}}
+- [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
+  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+- Event Attributes
+  - : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Document element event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
+- [Presentation Attributes](/en-US/docs/Web/SVG/Attribute/Presentation)
+  - : Most notably: {{SVGAttr('color')}}, {{SVGAttr('display')}}, {{SVGAttr('stop-color')}}, {{SVGAttr('stop-opacity')}}, {{SVGAttr('visibility')}}
 
 ## Usage notes
 

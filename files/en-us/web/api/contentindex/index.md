@@ -10,7 +10,7 @@ tags:
   - content indexing
 browser-compat: api.ContentIndex
 ---
-{{draft}}{{DefaultAPISidebar("Content Index API")}}
+{{DefaultAPISidebar("Content Index API")}}
 
 The **`ContentIndex`** interface of the {{domxref('Content Index API')}} allows developers to register their offline enabled content with the browser.
 

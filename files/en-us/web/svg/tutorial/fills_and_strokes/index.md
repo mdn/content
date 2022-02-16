@@ -47,9 +47,9 @@ The second attribute affecting strokes is the `stroke-linecap` property, demonst
 
 There are three possible values for `stroke-linecap`:
 
-*   `butt` closes the line off with a straight edge that's normal (at 90 degrees) to the direction of the stroke and crosses its end.
-*   `square` has essentially the same appearance, but stretches the stroke slightly beyond the actual path. The distance that the stroke goes beyond the path is half the `stroke-width`.
-*   `round` produces a rounded effect on the end of the stroke. The radius of this curve is also controlled by the `stroke-width`.
+- `butt` closes the line off with a straight edge that's normal (at 90 degrees) to the direction of the stroke and crosses its end.
+- `square` has essentially the same appearance, but stretches the stroke slightly beyond the actual path. The distance that the stroke goes beyond the path is half the `stroke-width`.
+- `round` produces a rounded effect on the end of the stroke. The radius of this curve is also controlled by the `stroke-width`.
 
 Use `stroke-linejoin` to control how the joint between two line segments is drawn.
 

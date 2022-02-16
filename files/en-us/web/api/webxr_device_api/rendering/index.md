@@ -49,9 +49,9 @@ async function runXR(xrSession) {
 }
 ```
 
-After getting a reference space for the immersive world, this creates an offset reference space representing the position and orientation of the viewer by creating an {{domxref("XRRigidTransform")}} representing that position and orientation, then calling the {{domxref("XRReferenceSpace")}} method {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}}.
+After getting a reference space for the immersive world, this creates an offset reference space representing the position and orientation of the viewer by creating an {{domxref("XRRigidTransform")}} representing that position and orientation, then calling the {{domxref("XRReferenceSpace")}} method {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}}.
 
-Then the first animation frame is scheduled by calling the {{domxref("XRSession")}} method {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}, providing a callback function, `myDrawFrame()`, whose job is to render the frame.
+Then the first animation frame is scheduled by calling the {{domxref("XRSession")}} method {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}, providing a callback function, `myDrawFrame()`, whose job is to render the frame.
 
 Note that this code doesn't have a loop! Instead, the frame rendering code—in this case, a function named `myDrawFrame()`—is responsible for scheduling time to draw another frame by once again calling `requestAnimationFrame()`.
 
@@ -76,7 +76,7 @@ But not all displays run at 60 Hz; nowadays, higher performance displays are beg
 
 ### Time available to render each frame
 
-This makes using the most of the time available between frames critical. If the user's device is using a 60 Hz display, your callback will be called up to 60 times per second, and your goal is to do what you can to ensure that it doesn't get called less often than that. You achieve this by doing as much as is practicable off the main thread and by keeping your frame rendering callback as efficient as possible. The division of time into 60 Hz blocks with each block being used at least in part to render the scene is shown in the diagram below.
+This makes using the most of the time available between frames critical. If the user's device is using a 60 Hz display, your callback will be called up to 60 times per second, and your goal is to do what you can to ensure that it doesn't get called less often than that. You achieve this by doing as much as is practicable off the main thread and by keeping your frame rendering callback as efficient as possible. The division of time into 60 Hz blocks with each block being used at least in part to render the scene is shown in the diagram below.
 
 ![Renderer execution time per frame period](frames-and-refresh-rate.svg)
 
@@ -110,7 +110,7 @@ Your frame rendering callback function receives as input two parameters: the tim
 
 ### The optics of 3D
 
-We have two eyes for a reason: by having two eyes, each inherently sees the world from a slightly different angle. Since they're a known, fixed distance apart, our brains can do basic geometry and trigonometry and figure out the 3D nature of reality from that information. We also make use of perspective, size differences, and even our understanding of  how things usually look to figure out the details of that third dimension. These factors, among others, are the source of our {{interwiki("wikipedia", "depth perception")}}.
+We have two eyes for a reason: by having two eyes, each inherently sees the world from a slightly different angle. Since they're a known, fixed distance apart, our brains can do basic geometry and trigonometry and figure out the 3D nature of reality from that information. We also make use of perspective, size differences, and even our understanding of how things usually look to figure out the details of that third dimension. These factors, among others, are the source of our {{interwiki("wikipedia", "depth perception")}}.
 
 To create the illusion of three dimensions when rendering graphics, we need to simulate as many of these factors as we can. The more of these we simulate—and the more accurately we do so—the better we are able to trick the human brain into perceiving our images in 3D. The advantage to XR is that not only can we use the classic monocular techniques to simulate 3D graphics (perspective, size, and simulated parallax), but we can also simulate binocular vision—that is, vision using two eyes—by rendering the scene twice for each frame of animation—once for each eye.
 
@@ -130,7 +130,7 @@ Tha brain takes those signals from the left and right eyes and constructs a sing
 
 Once you have an `XRFrame` representing the state of the scene at a moment in time, you need to determine the positions of objects within the scene relative to the viewer so that you can render them. The viewer's position and orientation relative to a reference space is represented by an {{domxref("XRViewerPose")}} obtained by calling the {{domxref("XRFrame")}} method {{domxref("XRFrame.getViewerPose", "getViewerPose()")}}.
 
-The `XRFrame` doesn't directly keep track of the positions or orientations of the objects in your world. Instead, it offers a way to convert positions and orientations into the scene's coordinate system, and it collects the viwer's position and orientation data from the XR hardware, converts it into the reference space you've configured, and delivers it to your frame rendering code with a timestamp. You use that timestamp and your own data to determine how to render the scene.
+The `XRFrame` doesn't directly keep track of the positions or orientations of the objects in your world. Instead, it offers a way to convert positions and orientations into the scene's coordinate system, and it collects the viewer's position and orientation data from the XR hardware, converts it into the reference space you've configured, and delivers it to your frame rendering code with a timestamp. You use that timestamp and your own data to determine how to render the scene.
 
 After rendering the scene twice—once into the left half of the framebuffer and once into the right half of the framebuffer—the framebuffer is sent to the XR hardware, which displays each half of the framebuffer to the corresponding eye. This is often (but not always) done by drawing the image to a single screen and using lenses to transfer the correct half of that image to each eye.
 
@@ -223,7 +223,7 @@ The next step is to erase the framebuffer. While you can in theory skip this ste
 
 Since WebXR uses a single framebuffer for every view, with viewports upon the view being used to separate each eye's viewpoint within the framebuffer, we only need to clear a single framebuffer rather than cleaning it for each eye (or other viewpoints, if any) individually.
 
-Next, the time elapsed since the previous frame was rendered is calculated by subtracting from the current time as specified by the `currentFrameTime` parameter the saved time at which the last frame was rendered, `lastFrameTime`. The result is a {{domxref("DOMHighResTimeStamp")}} value indicating the number of milliseconds that have elapsed since the last frame was rendered. We can use this value while drawing the scene to ensure we move everything the appopriate distance given the true elapsed time, rather than assuming that the callback will be fired at a consistent frame rate. This elapsed time is saved in the variable `deltaTime`, and the value of `lastFrameTime` is replaced with this frame's time, ready to compute the differential for the next frame.
+Next, the time elapsed since the previous frame was rendered is calculated by subtracting from the current time as specified by the `currentFrameTime` parameter the saved time at which the last frame was rendered, `lastFrameTime`. The result is a {{domxref("DOMHighResTimeStamp")}} value indicating the number of milliseconds that have elapsed since the last frame was rendered. We can use this value while drawing the scene to ensure we move everything the appropriate distance given the true elapsed time, rather than assuming that the callback will be fired at a consistent frame rate. This elapsed time is saved in the variable `deltaTime`, and the value of `lastFrameTime` is replaced with this frame's time, ready to compute the differential for the next frame.
 
 It's now time to actually render the scene for each eye. We iterate over the views within the viewer poses's {{domxref("XRViewerPose.views", "views")}} array. For each of these {{domxref("XRView")}} objects representing an eye's perspective on the scene, we need to begin by limiting drawing to the area of the framebuffer which represents the current eye's visible image.
 
@@ -331,7 +331,7 @@ There are, of course, other things that probably need to happen each pass throug
 
 ### Handling user control inputs
 
-There are three methods by which users might provide input while using a WebXR application. First, WebXR supports directly handling inputs from the controllers which are integrated with the XR hardware itself. These input sources may include devices such as hand controllers, optical tracking systems, acclerometers and magnetometers, and other devices of that nature.
+There are three methods by which users might provide input while using a WebXR application. First, WebXR supports directly handling inputs from the controllers which are integrated with the XR hardware itself. These input sources may include devices such as hand controllers, optical tracking systems, accelerometers and magnetometers, and other devices of that nature.
 
 The second type of input is a gamepad that's connected through the XR system. This uses interfaces inherited from the [Gamepad API](/en-US/docs/Web/API/Gamepad_API) but you interact with them through WebXR.
 
@@ -353,7 +353,7 @@ For example, a virtual reality or augmented reality game might have enemy non-pl
 
 In addition, there may be objects and structures in motion. In a sports game, there may be a ball arcing through the air, its movement needing to be simulated. In racing games there may be cars or other vehicles, with moving parts to animate including the wheels. If there's water in the scene, it needs ripples or waves to look realistic. Parts of structures may be moving, such as doors, walls and floors (for some types of games), and so forth.
 
-Another common source of motion is the player themself. After interpreting inputs from the controls (both XR-affliated and otherwise), you need to apply those changes to the scene in order to simulate the user's movement. See the article [Movement, orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion) for details and a thorough example of how this works.
+Another common source of motion is the player themselves. After interpreting inputs from the controls (both XR-affiliated and otherwise), you need to apply those changes to the scene in order to simulate the user's movement. See the article [Movement, orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion) for details and a thorough example of how this works.
 
 ## Next steps
 

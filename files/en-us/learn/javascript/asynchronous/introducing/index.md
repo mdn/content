@@ -56,13 +56,13 @@ btn.addEventListener('click', () => {
 
 In this block, the lines are executed one after the other:
 
-1.  We grab a reference to a {{htmlelement("button")}} element that is already available in the DOM.
-2.  We add a [`click`](/en-US/docs/Web/API/Element/click_event) event listener to it so that when the button is clicked:
+1. We grab a reference to a {{htmlelement("button")}} element that is already available in the DOM.
+2. We add a [`click`](/en-US/docs/Web/API/Element/click_event) event listener to it so that when the button is clicked:
 
-    1.  An [`alert()`](/en-US/docs/Web/API/Window/alert) message appears.
-    2.  Once the alert is dismissed, we create a {{htmlelement("p")}} element.
-    3.  We then give it some text content.
-    4.  Finally, we append the paragraph to the document body.
+    1. An [`alert()`](/en-US/docs/Web/API/Window/alert) message appears.
+    2. Once the alert is dismissed, we create a {{htmlelement("p")}} element.
+    3. We then give it some text content.
+    4. Finally, we append the paragraph to the document body.
 
 While each operation is being processed, nothing else can happen — rendering is paused. This is because as we said in the [previous article](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing), [JavaScript is single threaded](/en-US/docs/Learn/JavaScript/Asynchronous/Concepts#javascript_is_single_threaded). Only one thing can happen at a time, on a single main thread, and everything else is blocked until an operation completes.
 
@@ -160,12 +160,12 @@ Promises are the new style of async code that you'll see used in modern Web APIs
 
 ```js
 fetch('products.json').then(function(response) {
-  return response.json();
+  return response.json();
 }).then(function(json) {
-  let products = json;
-  initialize(products);
+  let products = json;
+  initialize(products);
 }).catch(function(err) {
-  console.log('Fetch problem: ' + err.message);
+  console.log('Fetch problem: ' + err.message);
 });
 ```
 
@@ -193,7 +193,7 @@ However, promises are specifically made for handling async operations, and have 
 - You can chain multiple async operations together using multiple `.then()` operations, passing the result of one into the next one as an input. This is much harder to do with callbacks, which often ends up with a messy "pyramid of doom" (also known as [callback hell](http://callbackhell.com/)).
 - Promise callbacks are always called in the strict order they are placed in the event queue.
 - Error handling is much better — all errors are handled by a single `.catch()` block at the end of the block, rather than being individually handled in each level of the "pyramid".
-- Promises avoid inversion of control, unlike old-style callbacks, which lose full control of how the function will be executed when passing a callback to a third-party library.
+- Promises avoid inversion of control, unlike old-style callbacks, which lose full control of how the function will be executed when passing a callback to a third-party library.
 
 ## The nature of asynchronous code
 

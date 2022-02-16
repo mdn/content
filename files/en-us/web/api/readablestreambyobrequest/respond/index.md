@@ -11,7 +11,7 @@ tags:
   - respond
 browser-compat: api.ReadableStreamBYOBRequest.respond
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`error()`** method of the
 {{domxref("ReadableStreamBYOBRequest")}} interface xxx

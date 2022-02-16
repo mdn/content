@@ -9,7 +9,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 63 that will affect developers. Firefox 63 was released on October 23, 2018.
+This article provides information about the changes in Firefox 63 that will affect developers. Firefox 63 was released on October 23, 2018.
 
 ## Changes for web developers
 
@@ -35,14 +35,14 @@ This article provides information about the changes in Firefox 63 that will aff
 ### CSS
 
 - Support for the {{CSSxRef(":defined")}} pseudo-class has been added ({{bug(1331334)}}).
-- Support for {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}} and {{CSSxRef("gap")}} have been added in [Flexbox layout](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox#the_gap_properties) ({{bug(1398483)}}).
+- Support for {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}} and {{CSSxRef("gap")}} have been added in [Flexbox layout](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox#the_gap_properties) ({{bug(1398483)}}).
 - Re-enabled support for [webkit-prefixed pixel-density @media queries](/en-US/docs/Web/CSS/@media/-webkit-device-pixel-ratio) ({{bug(1444139)}}).
 - Support added for the [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) (Flexbox) properties {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}}, and {{CSSxRef("align-items")}} as well as the {{CSSxRef("justify-content")}} property ({{bug(1472843)}}).
 - Implemented the `path()` function for {{CSSxRef("offset-path")}} ({{bug(1429298)}}).
 - Implemented [syntax improvements from the Media Queries Level 4 specification](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax_improvements_in_level_4) ({{bug(1472843)}}).
-- Renamed `offset-*` properties to {{CSSxRef("inset-block-start")}}, {{CSSxRef("inset-block-end")}}, {{CSSxRef("inset-inline-start")}}, and {{CSSxRef("inset-inline-end")}} ({{bug(1464782)}}).
-- Added support for the [prefers-reduced-motion](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media feature ({{bug(1365045)}}, {{bug(1475462)}}).
-- Added flow relative values (`block`, `inline`) for the {{CSSxRef("resize")}} property ({{bug(1464786)}}).
+- Renamed `offset-*` properties to {{CSSxRef("inset-block-start")}}, {{CSSxRef("inset-block-end")}}, {{CSSxRef("inset-inline-start")}}, and {{CSSxRef("inset-inline-end")}} ({{bug(1464782)}}).
+- Added support for the [prefers-reduced-motion](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media feature ({{bug(1365045)}}, {{bug(1475462)}}).
+- Added flow relative values (`block`, `inline`) for the {{CSSxRef("resize")}} property ({{bug(1464786)}}).
 - Implemented flexbox layout for `safe` & `unsafe` values in {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}}, and {{CSSxRef("justify-content")}} ({{bug(1297774)}}).
 - The [logical properties](/en-US/docs/Web/CSS/CSS_Logical_Properties) (where appropriate) are now animatable ({{bug(1309752)}}).
 
@@ -58,7 +58,7 @@ _No changes._
 
 - The {{JSxRef("Symbol.prototype.description")}} property has been implemented ({{bug(1472170)}}).
 - The {{JSxRef("Object.fromEntries()")}} method has been added ({{bug(1469019)}}).
-- When you try to access a property of an undefined object, the error message is now much improved. Considering the case where `x` is undefined and you try to access `x.y`, instead of `TypeError: x is undefined` the console now returns the more descriptive [`x is undefined; can't access its "y" property`](/en-US/docs/Web/JavaScript/Reference/Errors/Cant_access_property) ({{bug(1259822)}}).
+- When you try to access a property of an undefined object, the error message is now much improved. Considering the case where `x` is undefined and you try to access `x.y`, instead of `TypeError: x is undefined` the console now returns the more descriptive [`x is undefined; can't access its "y" property`](/en-US/docs/Web/JavaScript/Reference/Errors/Cant_access_property) ({{bug(1259822)}}).
 
 #### Removals
 
@@ -68,14 +68,14 @@ _No changes._
 
 #### New APIs
 
-- The Shadow DOM ({{bug(1471947)}}) and Custom Elements ({{bug(1471948)}}) APIs have been enabled by default; See [Web components](/en-US/docs/Web/Web_Components) for more details.
-- The {{domxref("Media_Capabilities_API", "Media Capabilities API", "", "1")}} has been implemented ({{bug(1409664)}}).
-- The {{domxref("Clipboard", "Async Clipboard API", "", "1")}} has been implemented and enabled by default for all channels ({{bug(1461465)}}). As is the case with Chrome, Firefox currently implements only the {{domxref("Clipboard.writeText", "writeText()")}} and {{domxref("Clipboard.readText", "readText()")}} methods; however, unlike Chrome, `readText()` is only available in [browser extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).
+- The Shadow DOM ({{bug(1471947)}}) and Custom Elements ({{bug(1471948)}}) APIs have been enabled by default; See [Web components](/en-US/docs/Web/Web_Components) for more details.
+- The {{domxref("Media_Capabilities_API", "Media Capabilities API", "", "1")}} has been implemented ({{bug(1409664)}}).
+- The {{domxref("Clipboard", "Async Clipboard API", "", "1")}} has been implemented and enabled by default for all channels ({{bug(1461465)}}). As is the case with Chrome, Firefox currently implements only the {{domxref("Clipboard.writeText", "writeText()")}} and {{domxref("Clipboard.readText", "readText()")}} methods; however, unlike Chrome, `readText()` is only available in [browser extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).
 - The {{DOMxRef("SecurityPolicyViolationEvent")}} interface is now supported. It allows sending events when the {{HTTPHeader("Content-Security-Policy")}} is violated ({{bug(1472661)}}).
 
 #### DOM
 
-- The following portions of the {{domxref("Web_Animations_API", "Web Animations API", "", "1")}} have been enabled by default (see {{bug(1476158)}}):
+- The following portions of the {{domxref("Web_Animations_API", "Web Animations API", "", "1")}} have been enabled by default (see {{bug(1476158)}}):
 
   - The {{DOMxRef("Animation")}} properties {{DOMxRef("Animation.ready", "ready")}} and {{DOMxRef("Animation.finished", "finished")}}, specifying the `Animation` object's `ready` and `finished` {{JSxRef("Promise")}}s.
   - The {{DOMxRef("Animation")}} object's {{DOMxRef("Animation.effect", "effect")}} property.
@@ -83,9 +83,9 @@ _No changes._
 
 - The {{DOMxRef("Element.toggleAttribute()")}} method has been implemented ({{bug(1469592)}}).
 - The historical, previously non-standard, {{DOMxRef("Event.returnValue")}} property is now supported for compatibility purposes ({{bug(1452569)}}).
-- We implemented the {{DOMxRef("Window.event")}} property to improve web compatibility, now that it's become standard ({{bug(218415)}}). However, due to some web compat issues (e.g. {{bug(1479964)}}), this was quickly disabled in non-Nightly channels, hidden behind the `dom.window.event.enabled` pref ({{bug(1493869)}}).
+- We implemented the {{DOMxRef("Window.event")}} property to improve web compatibility, now that it's become standard ({{bug(218415)}}). However, due to some web compat issues (e.g. {{bug(1479964)}}), this was quickly disabled in non-Nightly channels, hidden behind the `dom.window.event.enabled` pref ({{bug(1493869)}}).
 - To bring Firefox into alignment with Edge and Chrome, the {{DOMxRef("Navigator/platform", "navigator.platform")}} property now returns `"Win32"` even when running on 64-bit Windows ({{bug(1472618)}}).
-- Prior to Firefox 63, links that open new windows that had `rel="noopener"`, as well as calls to {{DOMxRef("Window.open()")}} with the [`noopener`](/en-US/docs/Web/API/Window/open) window feature enabled would default to having all window features disabled so that you had to explicitly re-enable any standard features you wanted. Now, these windows have the same set of features enabled like any other window, and you need to explicitly turn off any you don't want ({{bug(1419960)}}).
+- Prior to Firefox 63, links that open new windows that had `rel="noopener"`, as well as calls to {{DOMxRef("Window.open()")}} with the [`noopener`](/en-US/docs/Web/API/Window/open) window feature enabled would default to having all window features disabled so that you had to explicitly re-enable any standard features you wanted. Now, these windows have the same set of features enabled like any other window, and you need to explicitly turn off any you don't want ({{bug(1419960)}}).
 
 #### DOM events
 
@@ -96,9 +96,9 @@ _No changes._
 - Microphone access now works simultaneously in multiple tabs, even within the same content process ({{bug(1404977)}}).
 - {{DOMxRef("RTCDataChannel")}} has been updated to support the sctp-sdp-21 data format for the data, in addition to the older sctp-sdp-05 format previously supported.
 - The {{DOMxRef("ConstantSourceNode")}} node type for Web Audio API now has a default channel count of 2 rather than 1, in order to match the specification ({{bug(1413283)}}).
-- The {{domxref("Web_Audio_API", "Web Audio API", "", "1")}} interface {{DOMxRef("AudioScheduledSourceNode")}} (and by extension, all the other node types based on it) now throw the correct exception when a negative value is specified for the node start time. That error is `RangeError` ({{bug(1413284)}}).
+- The {{domxref("Web_Audio_API", "Web Audio API", "", "1")}} interface {{DOMxRef("AudioScheduledSourceNode")}} (and by extension, all the other node types based on it) now throw the correct exception when a negative value is specified for the node start time. That error is `RangeError` ({{bug(1413284)}}).
 - The minimum and maximum permitted values for an {{DOMxRef("AudioParam")}} object's {{DOMxRef("AudioParam.value", "value")}} have been changed to the minimum negative single-precision floating-point value (-340,282,346,638,528,859,811,704,183,484,516,925,440) and the maximum positive single-precision floating-point value (+340,282,346,638,528,859,811,704,183,484,516,925,440) respectively ({{bug(1476695)}}).
-- The {{DOMxRef("SourceBuffer.changeType")}} method, which allows you to change codecs during an active stream, has been enabled by default. This is part of the {{domxref("Media_Source_Extensions_API", "Media Source Extensions API", "", "1")}} ({{bug(1481166)}}).
+- The {{DOMxRef("SourceBuffer.changeType")}} method, which allows you to change codecs during an active stream, has been enabled by default. This is part of the {{domxref("Media_Source_Extensions_API", "Media Source Extensions API", "", "1")}} ({{bug(1481166)}}).
 - The {{DOMxRef("AudioParam.setValueCurveAtTime()")}} method has been updated to correctly accept an array of floating-point values to indicate the parameter's values to change to over time. Previously, it required a {{jsxref("Float32Array")}} ({{bug(1421091)}}).
 - {{DOMxRef("AudioParam.setValueCurveAtTime()")}} has also been updated to correctly return a proper `TypeError` when a non-finite value is found in the `values` array ({{bug(1472095)}}).
 - In addition, `setValueCurveAtTime()` has been updated to ensure that, when the parameter finishes following the specified value curve after the duration elapses, the value of the parameter is set to the last value in the list of values to curve through ({{bug(1308436)}}).
@@ -169,7 +169,7 @@ _No changes._
 
 #### Theming
 
-- The default text color for {{WebExtAPIRef("browserAction")}} badges is now automatically set to black or white, to maximise contrast with the background ({{bug(1474110)}}).
+- The default text color for {{WebExtAPIRef("browserAction")}} badges is now automatically set to black or white, to maximize contrast with the background ({{bug(1474110)}}).
 - The `accentcolor` and `textcolor` properties of the [`theme`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) manifest key are now optional ({{bug(1413144)}}).
 - {{WebExtAPIRef("browserAction.getBadgeTextColor()")}} and {{WebExtAPIRef("browserAction.setBadgeTextColor()")}} enable you to get and set the text color of browser action badges ({{bug(1424620)}}).
 - The theme `colors` key in `manifest.json` now supports the `ntp_text` property to set the text color in a new tab, and the `ntp_background` property to set the color of a new tab ({{bug(1347204)}}).

@@ -13,7 +13,7 @@ The **`seed`** attribute represents the starting number for the pseudo random nu
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feTurbulence")}}
+- {{SVGElement("feTurbulence")}}
 
 ## Example
 

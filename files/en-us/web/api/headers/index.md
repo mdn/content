@@ -13,11 +13,11 @@ browser-compat: api.Headers
 ---
 {{APIRef("Fetch API")}}
 
-The **`Headers`** interface of the [Fetch API](/en-US/docs/Web/API/Fetch_API) allows you to perform various actions on [HTTP request and response headers](/en-US/docs/Web/HTTP/Headers). These actions include retrieving, setting, adding to, and removing headers from the list of the request's headers.
+The **`Headers`** interface of the [Fetch API](/en-US/docs/Web/API/Fetch_API) allows you to perform various actions on [HTTP request and response headers](/en-US/docs/Web/HTTP/Headers). These actions include retrieving, setting, adding to, and removing headers from the list of the request's headers.
 
-A `Headers` object has an associated header list, which is initially empty and consists of zero or more name and value pairs.  You can add to this using methods like {{domxref("Headers.append","append()")}} (see {{anch("Examples")}}.) In all methods of this interface, header names are matched by case-insensitive byte sequence.
+A `Headers` object has an associated header list, which is initially empty and consists of zero or more name and value pairs.  You can add to this using methods like {{domxref("Headers.append","append()")}} (see {{anch("Examples")}}.) In all methods of this interface, header names are matched by case-insensitive byte sequence.
 
-For security reasons, some headers can only be controlled by the user agent. These headers include the {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}  and {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.
+For security reasons, some headers can only be controlled by the user agent. These headers include the {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}  and {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.
 
 A Headers object also has an associated guard, which takes a value of `immutable`, `request`, `request-no-cors`, `response`, or `none`. This affects whether the {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, and {{domxref("Headers.append","append()")}} methods will mutate the header. For more information see {{Glossary("Guard")}}.
 
@@ -43,7 +43,7 @@ An object implementing `Headers` can directly be used in a {{jsxref("Statements/
 - {{domxref("Headers.forEach()")}}
   - : Executes a provided function once for each array element.
 - {{domxref("Headers.get()")}}
-  - : Returns a {{jsxref("String")}} sequence of all the values of a header within a `Headers` object with a given name.
+  - : Returns a {{jsxref("String")}} sequence of all the values of a header within a `Headers` object with a given name.
 - {{domxref("Headers.has()")}}
   - : Returns a boolean stating whether a `Headers` object contains a certain header.
 - {{domxref("Headers.keys()")}}

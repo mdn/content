@@ -22,15 +22,15 @@ To enable WebAssembly to be read and edited by humans, there is a textual repres
 
 ## S-expressions
 
-In both the binary and textual formats, the fundamental unit of code in WebAssembly is a module.  In the text format, a module is represented as one big S-expression.  S-expressions are a very old and very simple textual format for representing trees, and thus we can think of a module as a tree of nodes that describe the module’s structure and its code.  Unlike the Abstract Syntax Tree of a programming language, though, WebAssembly’s tree is pretty flat, mostly consisting of lists of instructions.
+In both the binary and textual formats, the fundamental unit of code in WebAssembly is a module. In the text format, a module is represented as one big S-expression. S-expressions are a very old and very simple textual format for representing trees, and thus we can think of a module as a tree of nodes that describe the module’s structure and its code. Unlike the Abstract Syntax Tree of a programming language, though, WebAssembly’s tree is pretty flat, mostly consisting of lists of instructions.
 
-First, let’s see what an S-expression looks like.  Each node in the tree goes inside a pair of parentheses — `( ... )`.  The first label inside the parenthesis tells you what type of node it is, and after that there is a space-separated list of either attributes or child nodes.  So that means the WebAssembly S-expression:
+First, let’s see what an S-expression looks like. Each node in the tree goes inside a pair of parentheses — `( ... )`. The first label inside the parenthesis tells you what type of node it is, and after that there is a space-separated list of either attributes or child nodes. So that means the WebAssembly S-expression:
 
 ```wasm
 (module (memory 1) (func))
 ```
 
-represents a tree with the root node “module” and two child nodes, a "memory" node with the attribute "1" and a "func" node.  We’ll see shortly what these nodes actually mean.
+represents a tree with the root node “module” and two child nodes, a "memory" node with the attribute "1" and a "func" node. We’ll see shortly what these nodes actually mean.
 
 ### The simplest module
 
@@ -91,7 +91,7 @@ After the signature, locals are listed with their type, for example `(local i32)
 
 Locals/parameters can be read and written by the body of the function with the `local.get` and `local.set` instructions.
 
-The `local.get`/`local.set` commands refer to the item to be got/set by its numeric index: parameters are referred to first, in order of their declaration, followed by locals in order of their declaration.  So given the following function:
+The `local.get`/`local.set` commands refer to the item to be got/set by its numeric index: parameters are referred to first, in order of their declaration, followed by locals in order of their declaration. So given the following function:
 
 ```wasm
 (func (param i32) (param f32) (local f64)
@@ -110,7 +110,7 @@ Thus you could rewrite our previous signature like so:
 (func (param $p1 i32) (param $p2 f32) (local $loc f64) …)
 ```
 
-And then could write `local.get $p1` instead of `local.get 0`, etc.  (Note that when this text gets converted to binary, though, the binary will contain only the integer.)
+And then could write `local.get $p1` instead of `local.get 0`, etc. (Note that when this text gets converted to binary, though, the binary will contain only the integer.)
 
 ## Stack machines
 
@@ -130,7 +130,7 @@ When a function is called, it starts with an empty stack which is gradually fill
 
 The stack contains exactly one `i32` value — the result of the expression (`$p + $p`), which is handled by `i32.add`. The return value of a function is just the final value left on the stack.
 
-The WebAssembly validation rules ensure the stack matches exactly: if you declare a `(result f32)`, then the stack must contain exactly one `f32` at the end.  If there is no result type, the stack must be empty.
+The WebAssembly validation rules ensure the stack matches exactly: if you declare a `(result f32)`, then the stack must contain exactly one `f32` at the end. If there is no result type, the stack must be empty.
 
 ## Our first function body
 
@@ -150,7 +150,7 @@ There are a lot more things that can be put inside function bodies, but we will 
 
 ### Calling the function
 
-Our function won’t do very much on its own — now we need to call it. How do we do that? Like in an ES2015 module, wasm functions must be explicitly exported by an `export` statement inside the module.
+Our function won’t do very much on its own — now we need to call it. How do we do that? Like in an ES2015 module, wasm functions must be explicitly exported by an `export` statement inside the module.
 
 Like locals, functions are identified by an index by default, but for convenience, they can be named. Let's start by doing this — first, we'll add a name preceded by a dollar sign, just after the `func` keyword:
 
@@ -184,9 +184,9 @@ Next, we’ll load our binary into a typed array called `addCode` (as described 
 
 ```js
 WebAssembly.instantiateStreaming(fetch('add.wasm'))
-  .then(obj => {
-    console.log(obj.instance.exports.add(1, 2));  // "3"
-  });
+  .then(obj => {
+    console.log(obj.instance.exports.add(1, 2));  // "3"
+  });
 ```
 
 > **Note:** You can find this example in GitHub as [add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)). Also see {{JSxRef("WebAssembly.instantiateStreaming()")}} for more details about the instantiate function.
@@ -223,9 +223,9 @@ The JavaScript code to call our above module looks like so:
 
 ```js
 WebAssembly.instantiateStreaming(fetch('call.wasm'))
- .then(obj => {
-    console.log(obj.instance.exports.getAnswerPlus1());  // "43"
-  });
+  .then(obj => {
+    console.log(obj.instance.exports.getAnswerPlus1());  // "43"
+  });
 ```
 
 ### Importing functions from JavaScript
@@ -260,9 +260,9 @@ var importObject = {
 };
 
 WebAssembly.instantiateStreaming(fetch('logger.wasm'), importObject)
-  .then(obj => {
-    obj.instance.exports.logIt();
-  });
+  .then(obj => {
+    obj.instance.exports.logIt();
+  });
 ```
 
 > **Note:** You can find this example on GitHub as [logger.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/logger.html)).
@@ -294,9 +294,9 @@ const global = new WebAssembly.Global({value: "i32", mutable: true}, 0);
 
 ### WebAssembly Memory
 
-The above example is a pretty terrible logging function: it only prints a single integer!  What if we wanted to log a text string? To deal with strings and other more complex data types, WebAssembly provides **memory** (although we also have {{anch("Reference types")}} in newer implementation of WebAssembly). According to WebAssembly, memory is just a large array of bytes that can grow over time. WebAssembly contains instructions like `i32.load` and `i32.store` for reading and writing from [linear memory](https://webassembly.org/docs/semantics/#linear-memory).
+The above example is a pretty terrible logging function: it only prints a single integer! What if we wanted to log a text string? To deal with strings and other more complex data types, WebAssembly provides **memory** (although we also have {{anch("Reference types")}} in newer implementation of WebAssembly). According to WebAssembly, memory is just a large array of bytes that can grow over time. WebAssembly contains instructions like `i32.load` and `i32.store` for reading and writing from [linear memory](https://webassembly.org/docs/semantics/#linear-memory).
 
-From JavaScript’s point of view, it’s as though memory is all inside one big (resizable) {{jsxref("ArrayBuffer")}}. That’s literally all that asm.js has to play with (except that it isn't resizable; see the asm.js [Programming model](http://asmjs.org/spec/latest/#programming-model)).
+From JavaScript’s point of view, it’s as though memory is all inside one big (resizable) {{jsxref("ArrayBuffer")}}. That’s literally all that asm.js has to play with (except that it isn't resizable; see the asm.js [Programming model](http://asmjs.org/spec/latest/#programming-model)).
 
 So a string is just a sequence of bytes somewhere inside this linear memory. Let's assume that we’ve written a suitable string of bytes to memory; how do we pass that string out to JavaScript?
 
@@ -310,7 +310,7 @@ While there are many different ways to encode a string’s length in the string 
 (import "console" "log" (func $log (param i32) (param i32)))
 ```
 
-On the JavaScript side, we can use the [TextDecoder API](/en-US/docs/Web/API/TextDecoder) to easily decode our bytes into a JavaScript string.  (We specify `utf8` here, but many other encodings are supported.)
+On the JavaScript side, we can use the [TextDecoder API](/en-US/docs/Web/API/TextDecoder) to easily decode our bytes into a JavaScript string. (We specify `utf8` here, but many other encodings are supported.)
 
 ```js
 function consoleLogString(offset, length) {
@@ -322,7 +322,7 @@ function consoleLogString(offset, length) {
 
 The last missing piece of the puzzle is where `consoleLogString` gets access to the WebAssembly `memory`. WebAssembly gives us a lot of flexibility here: we can either create a [`Memory`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) object in JavaScript and have the WebAssembly module import the memory, or we can have the WebAssembly module create the memory and export it to JavaScript.
 
-For simplicity, let's create it in JavaScript then import it into WebAssembly.  Our `import` statement is written as follows:
+For simplicity, let's create it in JavaScript then import it into WebAssembly. Our `import` statement is written as follows:
 
 ```wasm
 (import "js" "mem" (memory 1))
@@ -330,7 +330,7 @@ For simplicity, let's create it in JavaScript then import it into WebAssembly. 
 
 The `1` indicates that the imported memory must have at least 1 page of memory (WebAssembly defines a page to be 64KB.)
 
-So let's see a complete module that prints the string “Hi”.  In a normal compiled C program, you’d call a function to allocate some memory for the string, but since we’re just writing our own assembly here and we own the entire linear memory, we can just write the string contents into global memory using a `data` section.  Data sections allow a string of bytes to be written at a given offset at instantiation time and are similar to the `.data` sections in native executable formats.
+So let's see a complete module that prints the string “Hi”. In a normal compiled C program, you’d call a function to allocate some memory for the string, but since we’re just writing our own assembly here and we own the entire linear memory, we can just write the string contents into global memory using a `data` section. Data sections allow a string of bytes to be written at a given offset at instantiation time and are similar to the `.data` sections in native executable formats.
 
 Our final wasm module looks like this:
 
@@ -355,9 +355,9 @@ var memory = new WebAssembly.Memory({initial:1});
 var importObject = { console: { log: consoleLogString }, js: { mem: memory } };
 
 WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
-  .then(obj => {
-    obj.instance.exports.writeHi();
-  });
+  .then(obj => {
+    obj.instance.exports.writeHi();
+  });
 ```
 
 > **Note:** You can find the full source on GitHub as [logger2.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger2.html) ([also see it live](https://mdn.github.io/webassembly-examples/understanding-text-format/logger2.html)).
@@ -442,7 +442,7 @@ You could also declare the `call_indirect` parameter explicitly during the comma
 
 In a higher level, more expressive language like JavaScript, you could imagine doing the same thing with an array (or probably more likely, object) containing functions. The pseudo code would look something like `tbl[i]()`.
 
-So, back to the typechecking. Since WebAssembly is typechecked, and the `funcref` can be potentially any function signature, we have to supply the presumed signature of the callee at the callsite, hence we include the `$return_i32` type, to tell the program a function returning an `i32` is expected. If the callee doesn’t have a matching signature (say an `f32` is returned instead), a {{JSxRef("WebAssembly.RuntimeError")}} is thrown.
+So, back to the typechecking. Since WebAssembly is typechecked, and the `funcref` can be potentially any function signature, we have to supply the presumed signature of the callee at the callsite, hence we include the `$return_i32` type, to tell the program a function returning an `i32` is expected. If the callee doesn’t have a matching signature (say an `f32` is returned instead), a {{JSxRef("WebAssembly.RuntimeError")}} is thrown.
 
 So what links the `call_indirect` to the table we are calling? The answer is that there is only one table allowed right now per module instance, and that is what `call_indirect` is implicitly calling. In the future, when multiple tables are allowed, we would also need to specify a table identifier of some kind, along the lines of
 
@@ -471,11 +471,11 @@ We load it into a webpage using the following JavaScript:
 
 ```js
 WebAssembly.instantiateStreaming(fetch('wasm-table.wasm'))
-  .then(obj => {
-    console.log(obj.instance.exports.callByIndex(0)); // returns 42
-    console.log(obj.instance.exports.callByIndex(1)); // returns 13
-    console.log(obj.instance.exports.callByIndex(2)); // returns an error, because there is no index position 2 in the table
-  });
+  .then(obj => {
+    console.log(obj.instance.exports.callByIndex(0)); // returns 42
+    console.log(obj.instance.exports.callByIndex(1)); // returns 13
+    console.log(obj.instance.exports.callByIndex(2)); // returns an error, because there is no index position 2 in the table
+  });
 ```
 
 > **Note:** You can find this example on GitHub as [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html)).
@@ -523,11 +523,11 @@ Our `.wat` examples look like so:
 
 These work as follows:
 
-1.  The function `shared0func` is defined in `shared0.wat`, and stored in our imported table.
-2.  This function creates a constant containing the value `0`, and then uses the `i32.load` command to load the value contained in the provided memory index. The index provided is `0` — again, it implicitly pops the previous value off the stack. So `shared0func` loads and returns the value stored at memory index `0`.
-3.  In `shared1.wat`, we export a function called `doIt` — this function creates two constants containing the values `0` and `42`, then calls `i32.store` to store a provided value at a provided index of the imported memory. Again, it implicitly pops these values off the stack, so the result is that it stores the value `42` in memory index `0`,
-4.  In the last part of the function, we create a constant with value `0`, then call the function at this index 0 of the table, which is `shared0func`, stored there earlier by the `elem` block in `shared0.wat`.
-5.  When called, `shared0func` loads the `42` we stored in memory using the `i32.store` command in `shared1.wat`.
+1. The function `shared0func` is defined in `shared0.wat`, and stored in our imported table.
+2. This function creates a constant containing the value `0`, and then uses the `i32.load` command to load the value contained in the provided memory index. The index provided is `0` — again, it implicitly pops the previous value off the stack. So `shared0func` loads and returns the value stored at memory index `0`.
+3. In `shared1.wat`, we export a function called `doIt` — this function creates two constants containing the values `0` and `42`, then calls `i32.store` to store a provided value at a provided index of the imported memory. Again, it implicitly pops these values off the stack, so the result is that it stores the value `42` in memory index `0`,
+4. In the last part of the function, we create a constant with value `0`, then call the function at this index 0 of the table, which is `shared0func`, stored there earlier by the `elem` block in `shared0.wat`.
+5. When called, `shared0func` loads the `42` we stored in memory using the `i32.store` command in `shared1.wat`.
 
 > **Note:** The above expressions again pop values from the stack implicitly, but you could declare these explicitly inside the command calls instead, for example:
 >
@@ -547,10 +547,10 @@ var importObj = {
 };
 
 Promise.all([
-  WebAssembly.instantiateStreaming(fetch('shared0.wasm'), importObj),
-  WebAssembly.instantiateStreaming(fetch('shared1.wasm'), importObj)
+  WebAssembly.instantiateStreaming(fetch('shared0.wasm'), importObj),
+  WebAssembly.instantiateStreaming(fetch('shared1.wasm'), importObj)
 ]).then(function(results) {
-  console.log(results[1].instance.exports.doIt());  // prints 42
+  console.log(results[1].instance.exports.doIt());  // prints 42
 });
 ```
 
@@ -572,7 +572,7 @@ The new operations are:
 - `table.copy`: Copy from one region of a table to another.
 - `table.init`: Copy a region from an element segment.
 
-> **Note:** You can find more information in the [Bulk Memory Operations and Conditional Segment Initialization](https://github.com/WebAssembly/bulk-memory-operations/blob/master/proposals/bulk-memory-operations/Overview.md) proposal.
+> **Note:** You can find more information in the [Bulk Memory Operations and Conditional Segment Initialization](https://github.com/WebAssembly/bulk-memory-operations/blob/master/proposals/bulk-memory-operations/Overview.md) proposal.
 
 ## Reference types
 
@@ -648,5 +648,5 @@ This finishes our high-level tour of the major components of the WebAssembly tex
 
 ## See also
 
-- The main thing that wasn’t included is a comprehensive list of all the instructions that can occur in function bodies.  See the [WebAssembly semantics](https://webassembly.github.io/spec/core/exec/index.html) for a treatment of each instruction.
+- The main thing that wasn’t included is a comprehensive list of all the instructions that can occur in function bodies. See the [WebAssembly semantics](https://webassembly.github.io/spec/core/exec/index.html) for a treatment of each instruction.
 - See also the [grammar of the text format](https://github.com/WebAssembly/spec/blob/master/interpreter/README.md#s-expression-syntax) that is implemented by the spec interpreter.

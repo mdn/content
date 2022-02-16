@@ -29,11 +29,11 @@ This guide introduces the video codecs you're most likely to encounter or consid
 Due to the sheer size of uncompressed video data, it's necessary to compress it significantly in order to store it, let alone transmit it over a network. Imagine the amount of data needed to store uncompressed video:
 
 - A single frame of high definition (1920x1080) video in full color (4 bytes per pixel) is 8,294,400 bytes.
-- At a typical 30 frames per second, each second of HD video would occupy 248,832,000 bytes (\~249 MB).
-- A minute of HD video would need 14.93 GB of storage.
-- A fairly typical 30 minute video conference would need about 447.9 GB of storage, and a 2-hour movie would take _almost 1.79 **TB** (that is, 1790 GB)_.
+- At a typical 30 frames per second, each second of HD video would occupy 248,832,000 bytes (\~249 MB).
+- A minute of HD video would need 14.93 GB of storage.
+- A fairly typical 30 minute video conference would need about 447.9 GB of storage, and a 2-hour movie would take _almost 1.79 **TB** (that is, 1790 GB)_.
 
-Not only is the required storage space enormous, but the network bandwidth needed to transmit an uncompressed video like that would be enormous, at 249 MB/sec—not including audio and overhead. This is where video codecs come in. Just as audio codecs do for the sound data, video codecs compress the video data and encode it into a format that can later be decoded and played back or edited.
+Not only is the required storage space enormous, but the network bandwidth needed to transmit an uncompressed video like that would be enormous, at 249 MB/sec—not including audio and overhead. This is where video codecs come in. Just as audio codecs do for the sound data, video codecs compress the video data and encode it into a format that can later be decoded and played back or edited.
 
 Most video codecs are **lossy**, in that the decoded video does not precisely match the source. Some details may be lost; the amount of loss depends on the codec and how it's configured, but as a general rule, the more compression you achieve, the more loss of detail and fidelity will occur. Some lossless codecs do exist, but they are typically used for archival and storage for local playback rather than for use on a network.
 
@@ -1967,7 +1967,7 @@ The decision as to which codec or codecs to use begins with a series of question
 - Are there any browsers you're willing to sacrifice compatibility with?
 - How old is the oldest version of web browser you need to support? For example, do you need to work on every browser shipped in the past five years, or just the past one year?
 
-In the sections below, we offer recommended codec selections for specific use cases. For each use case, you'll find up to two reccommendations. If the codec which is considered best for the use case is proprietary or may require royalty payments, then two options are provided: first, an open and royalty-free option, followed by the proprietary one.
+In the sections below, we offer recommended codec selections for specific use cases. For each use case, you'll find up to two recommendations. If the codec which is considered best for the use case is proprietary or may require royalty payments, then two options are provided: first, an open and royalty-free option, followed by the proprietary one.
 
 If you are only able to offer a single version of each video, you can choose the format that's most appropriate for your needs.The first one is recommended as being a good combination of quality, performance, and compatibility. The second option will be the most broadly compatible choice, at the expense of some amount of quality, performance, and/or size.
 
@@ -1975,13 +1975,13 @@ If you are only able to offer a single version of each video, you can choose the
 
 First, let's look at the best options for videos presented on a typical web site such as a blog, informational site, small business web site where videos are used to demonstrate products (but not where the videos themselves are a product), and so forth.
 
-1.  A **[WebM](/en-US/docs/Web/Media/Formats/Containers#webm)** container using the **[VP9](#vp9)** codec for video and the **[Opus](/en-US/docs/Web/Media/Formats/Audio_codecs#opus)** codec for audio. These are all open, royalty-free formats which are generally well-supported, although only in quite recent browsers, which is why a fallback is a good idea.
+1. A **[WebM](/en-US/docs/Web/Media/Formats/Containers#webm)** container using the **[VP9](#vp9)** codec for video and the **[Opus](/en-US/docs/Web/Media/Formats/Audio_codecs#opus)** codec for audio. These are all open, royalty-free formats which are generally well-supported, although only in quite recent browsers, which is why a fallback is a good idea.
 
     ```js
     <video controls src="filename.webm"></video>
     ```
 
-2.  An **[MP4](/en-US/docs/Web/Media/Formats/Containers#mp4)** container and the **[AVC](#avc_h.264)** (**H.264**) video codec, ideally with **[AAC](/en-US/docs/Web/Media/Formats/Audio_codecs#aac)** as your audio codec. This is because the MP4 container with AVC and AAC codecs within is a broadly-supported combination—by every major browser, in fact—and the quality is typically good for most use cases. Make sure you verify your compliance with the license requirements, however.
+2. An **[MP4](/en-US/docs/Web/Media/Formats/Containers#mp4)** container and the **[AVC](#avc_h.264)** (**H.264**) video codec, ideally with **[AAC](/en-US/docs/Web/Media/Formats/Audio_codecs#aac)** as your audio codec. This is because the MP4 container with AVC and AAC codecs within is a broadly-supported combination—by every major browser, in fact—and the quality is typically good for most use cases. Make sure you verify your compliance with the license requirements, however.
 
     ```html
     <video controls>
@@ -1998,13 +1998,13 @@ First, let's look at the best options for videos presented on a typical web site
 
 If your mission is to present video at the highest possible quality, you will probably benefit from offering as many formats as possible, as the codecs capable of the best quality tend also to be the newest, and thus the most likely to have gaps in browser compatibility.
 
-1.  A WebM container using AV1 for video and Opus for audio. If you're able to use the High or Professional profile when encoding AV1, at a high level like 6.3, you can get very high bit rates at 4K or 8K resolution, while maintaining excellent video quality. Encoding your audio using Opus's Fullband profile at a 48 kHz sample rate maximizes the audio bandwidth captured, capturing nearly the entire frequency range that's within human hearing.
+1. A WebM container using AV1 for video and Opus for audio. If you're able to use the High or Professional profile when encoding AV1, at a high level like 6.3, you can get very high bit rates at 4K or 8K resolution, while maintaining excellent video quality. Encoding your audio using Opus's Fullband profile at a 48 kHz sample rate maximizes the audio bandwidth captured, capturing nearly the entire frequency range that's within human hearing.
 
     ```js
     <video controls src="filename.webm"></video>
     ```
 
-2.  An MP4 container using the [HEVC](#hevc_h.265) codec using one of the advanced Main profiles, such as Main 4:2:2 with 10 or 12 bits of color depth, or even the Main 4:4:4 profile at up to 16 bits per component. At a high bit rate, this provides excellent graphics quality with remarkable color reproduction. In addition, you can optionally include HDR metadata to provide high dynamic range video. For audio, use the AAC codec at a high sample rate (at least 48 kHz but ideally 96kHz) and encoded with complex encoding rather than fast encoding.
+2. An MP4 container using the [HEVC](#hevc_h.265) codec using one of the advanced Main profiles, such as Main 4:2:2 with 10 or 12 bits of color depth, or even the Main 4:4:4 profile at up to 16 bits per component. At a high bit rate, this provides excellent graphics quality with remarkable color reproduction. In addition, you can optionally include HDR metadata to provide high dynamic range video. For audio, use the AAC codec at a high sample rate (at least 48 kHz but ideally 96kHz) and encoded with complex encoding rather than fast encoding.
 
     ```html
     <video controls>
@@ -2051,7 +2051,7 @@ This example creates a `MediaRecorder` configured to record [AV1](#av1) video us
 
 Breaking down the value of the `codecs` parameter into its dot-delineated properties, we see the following:
 
-| Value  | Desccription                                                                                                                                                                                                                                                                             |
+| Value  | Description                                                                                                                                                                                                                                                                             |
 | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `av01` | The four-character code (4CC) designation identifying the [AV1](#av1) codec.                                                                                                                                                                                                             |
 | `2`    | The profile. A value of 2 indicates the Professional profile. A value of 1 is the High profile, while a value of 0 would specify the Main profile.                                                                                                                                       |
@@ -2061,7 +2061,7 @@ Breaking down the value of the `codecs` parameter into its dot-delineated proper
 | `000`  | The chroma subsampling mode, taken from [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) in the AV1 specification. A value of 000, combined with the monochrome mode value 0, indicates that we want 4:4:4 chroma subsampling, or no loss of color data. |
 | `09`   | The color primaries to use. This value comes from [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) in the AV1 specification; 9 indicates that we want to use BT.2020 color, which is used for HDR.                                                       |
 | `16`   | The transfer characteristics to use. This comes from [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) as well; 16 indicates that we want to use the characteristics for BT.2100 PQ color.                                                                |
-| `09`   | The matrix coefficents to use, from the [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) again. A value of 9 specifies that we want to use BT.2020 with variable luminance; this is also known as BT.2010 YbCbCr.                                        |
+| `09`   | The matrix coefficients to use, from the [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) again. A value of 9 specifies that we want to use BT.2020 with variable luminance; this is also known as BT.2010 YbCbCr.                                        |
 | `1`    | The video "full range" flag. A value of 1 indicates that we want the full color range to be used.                                                                                                                                                                                        |
 
 The documentation for your codec choices will probably offer information you'll use when constructing your `codecs` parameter.
@@ -2078,5 +2078,5 @@ The documentation for your codec choices will probably offer information you'll 
 - {{RFC(4381)}}: MIME Type Registrations for 3GPP2 Multimedia Files
 - {{RFC(4337)}}: MIME Type Registrations for MPEG-4
 - [Video codecs in Opera](https://dev.opera.com/articles/view/introduction-html5-video/#codecs)
-- [Video](https://msdn.microsoft.com/en-us/library/ff975073%28v=VS.85%29.aspx) and [audio](https://msdn.microsoft.com/en-us/library/ff975061%28v=vs.85%29.aspx) codecs in Internet Explorer
+- [Video](https://msdn.microsoft.com/library/ff975073%28v=VS.85%29.aspx) and [audio](https://msdn.microsoft.com/library/ff975061%28v=vs.85%29.aspx) codecs in Internet Explorer
 - [Video and audio codecs in Chrome](https://www.chromium.org/audio-video)

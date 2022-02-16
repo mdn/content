@@ -31,7 +31,7 @@ There is a deprecated source map syntax in a JavaScript source.
 
 JavaScript sources are often combined and minified to make delivering them from the server more efficient. With [source maps](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/), the debugger can map the code being executed to the original source files.
 
-The source map specification changed the syntax due to a conflict with IE whenever it was found in the page after `//@cc_on` was interpreted to turn on conditional compilation in the IE JScript engine. The [conditional compilation comment](https://msdn.microsoft.com/en-us/library/8ka90k2e%28v=vs.94%29.aspx) in IE is a little known feature, but it broke source maps with [jQuery](https://bugs.jquery.com/ticket/13274) and other libraries.
+The source map specification changed the syntax due to a conflict with IE whenever it was found in the page after `//@cc_on` was interpreted to turn on conditional compilation in the IE JScript engine. The [conditional compilation comment](https://msdn.microsoft.com/library/8ka90k2e%28v=vs.94%29.aspx) in IE is a little known feature, but it broke source maps with [jQuery](https://bugs.jquery.com/ticket/13274) and other libraries.
 
 ## Examples
 

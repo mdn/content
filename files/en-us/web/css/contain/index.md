@@ -22,9 +22,9 @@ This property is useful on pages that contain a lot of widgets that are all inde
 
 > **Note:** If applied (with value: `paint`, `strict` or `content`), this property creates:
 >
-> 1.  A new [containing block](/en-US/docs/Web/CSS/Containing_block) (for the descendants whose {{cssxref("position")}} property is `absolute` or `fixed`).
-> 2.  A new [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
-> 3.  A new [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context).
+> 1. A new [containing block](/en-US/docs/Web/CSS/Containing_block) (for the descendants whose {{cssxref("position")}} property is `absolute` or `fixed`).
+> 2. A new [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
+> 3. A new [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context).
 
 ## Syntax
 

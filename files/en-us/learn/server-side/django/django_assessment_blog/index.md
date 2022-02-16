@@ -153,7 +153,7 @@ The pages that need to be displayed, their URLs, and other requirements, are lis
             redirected back to the blog page they wanted to comment on.
           </li>
           <li>
-            Comment pages should include the name/link to the blogpost being
+            Comment pages should include the name/link to the blog post being
             commented on.
           </li>
         </ul>
@@ -262,19 +262,19 @@ This displays bio information for a blogger along with their blog posts list.
 
 The following sections describe what you need to do.
 
-1.  Create a skeleton project and web application for the site (as described in [Django Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website)). You might use 'diyblog' for the project name and 'blog' for the application name.
-2.  Create models for the Blog posts, Comments, and any other objects needed. When thinking about your design, remember:
+1. Create a skeleton project and web application for the site (as described in [Django Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website)). You might use 'diyblog' for the project name and 'blog' for the application name.
+2. Create models for the Blog posts, Comments, and any other objects needed. When thinking about your design, remember:
 
     - Each comment will have only one blog, but a blog may have many comments.
     - Blog posts and comments must be sorted by post date.
     - Not every user will necessarily be a blog author though any user may be a commenter.
     - Blog authors must also include bio information.
 
-3.  Run migrations for your new models and create a superuser.
-4.  Use the admin site to create some example blog posts and blog comments.
-5.  Create views, templates, and URL configurations for blog post and blogger list pages.
-6.  Create views, templates, and URL configurations for blog post and blogger detail pages.
-7.  Create a page with a form for adding new comments (remember to make this only available to logged in users!)
+3. Run migrations for your new models and create a superuser.
+4. Use the admin site to create some example blog posts and blog comments.
+5. Create views, templates, and URL configurations for blog post and blogger list pages.
+6. Create views, templates, and URL configurations for blog post and blogger detail pages.
+7. Create a page with a form for adding new comments (remember to make this only available to logged in users!)
 
 ## Hints and tips
 
@@ -282,14 +282,14 @@ This project is very similar to the [LocalLibrary](/en-US/docs/Learn/Server-side
 
 Some general hints:
 
-1.  The index page can be implemented as a basic function view and template (just like for the locallibrary).
-2.  The list view for blog posts and bloggers, and the detail view for blog posts can be created using the [generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views).
-3.  The list of blog posts for a particular author can be created by using a generic blog list view and filtering for blog objects that match the specified author.
+1. The index page can be implemented as a basic function view and template (just like for the locallibrary).
+2. The list view for blog posts and bloggers, and the detail view for blog posts can be created using the [generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views).
+3. The list of blog posts for a particular author can be created by using a generic blog list view and filtering for blog objects that match the specified author.
 
     - You will have to implement `get_queryset(self)` to do the filtering (much like in our library class `LoanedBooksAllListView`) and get the author information from the URL.
     - You will also need to pass the name of the author to the page in the context. To do this in a class-based view you need to implement `get_context_data()` (discussed below).
 
-4.  The _add comment_ form can be created using a function-based view (and associated model and form) or using a generic `CreateView`. If you use a `CreateView` (recommended) then:
+4. The _add comment_ form can be created using a function-based view (and associated model and form) or using a generic `CreateView`. If you use a `CreateView` (recommended) then:
 
     - You will also need to pass the name of the blog post to the comment page in the context (implement `get_context_data()` as discussed below).
     - The form should only display the comment "description" for user entry (date and associated blog post should not be editable). Since they won't be in the form itself, your code will need to set the comment's author in the `form_valid()` function so it can be saved into the model ([as described here](https://docs.djangoproject.com/en/3.1/topics/class-based-views/generic-editing/#models-and-request-user) — Django docs). In that same function we set the associated blog. A possible implementation is shown below (`pk` is a blog id passed in from the URL/URL configuration).
@@ -316,11 +316,11 @@ class SomeView(generic.ListView):
     ...
 
     def get_context_data(self, **kwargs):
-        # Call the base implementation first to get a context
-        context = super(SomeView, self).get_context_data(**kwargs)
-        # Get the blogger object from the "pk" URL parameter and add it to the context
-        context['blogger'] = get_object_or_404(BlogAuthor, pk = self.kwargs['pk'])
-        return context
+        # Call the base implementation first to get a context
+        context = super(SomeView, self).get_context_data(**kwargs)
+        # Get the blogger object from the "pk" URL parameter and add it to the context
+        context['blogger'] = get_object_or_404(BlogAuthor, pk = self.kwargs['pk'])
+        return context
 ```
 
 ## Assessment

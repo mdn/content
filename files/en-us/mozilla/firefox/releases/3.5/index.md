@@ -24,7 +24,7 @@ tags:
 
 - [Using audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
   - : Firefox 3.5 adds support for the HTML 5 [`audio`](/en-US/docs/Web/HTML/Element/audio) and [`video`](/en-US/docs/Web/HTML/Element/video) elements.
-- [Offline resources in Firefox](/en-US/docs/Web/HTML/Using_the_application_cache)
+- Offline resources in Firefox
   - : Firefox 3.5 now fully supports the HTML 5 offline resource specification.
 - [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
   - : The HTML 5 drag and drop API allows support for dragging and dropping items within and between web sites.  This also provides a simpler API for use by extensions and Mozilla-based applications.

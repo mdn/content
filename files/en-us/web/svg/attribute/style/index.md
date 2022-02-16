@@ -20,7 +20,7 @@ html,body,svg { height:100% }
 
 ```html
 <svg viewbox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
-  <rect width="80"  height="40" x="10" y="10"
+  <rect width="80"  height="40" x="10" y="10"
       style="fill: skyblue; stroke: cadetblue; stroke-width: 2;"/>
 </svg>
 ```
@@ -46,10 +46,10 @@ html,body,svg { height:100% }
   </tbody>
 </table>
 
-*   `<style>`
-    *   : The syntax of style data depends on the style sheet language. By default, the style sheet language is [CSS](/en-US/docs/Web/CSS).
+- `<style>`
+  - : The syntax of style data depends on the style sheet language. By default, the style sheet language is [CSS](/en-US/docs/Web/CSS).
 
-        > **Note:** In theory, [the `contentStyleType` attribute](/en-US/docs/Web/SVG/Attribute/contentStyleType) could be used to specify styling languages other than CSS, like [XSL(T)](/en-US/docs/Web/XSLT). However, this was never implemented satisfactorily in browsers, so you should not rely on it.
+    > **Note:** In theory, [the `contentStyleType` attribute](/en-US/docs/Web/SVG/Attribute/contentStyleType) could be used to specify styling languages other than CSS, like [XSL(T)](/en-US/docs/Web/XSLT). However, this was never implemented satisfactorily in browsers, so you should not rely on it.
 
 ## Specifications
 
@@ -85,5 +85,5 @@ html,body,svg { height:100% }
 
 ## See also
 
-*   {{SVGElement("style")}}
-*   [HTML `style` attribute](/en-US/docs/Web/HTML/Global_attributes/style)
+- {{SVGElement("style")}}
+- [HTML `style` attribute](/en-US/docs/Web/HTML/Global_attributes/style)

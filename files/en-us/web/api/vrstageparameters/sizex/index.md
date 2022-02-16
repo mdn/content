@@ -3,7 +3,7 @@ title: VRStageParameters.sizeX
 slug: Web/API/VRStageParameters/sizeX
 tags:
   - API
-  - Experimental
+
   - Deprecated
   - Property
   - Reference
@@ -16,19 +16,13 @@ browser-compat: api.VRStageParameters.sizeX
 ---
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-The **`sizeX`** read-only property of the {{domxref("VRStageParameters")}} interface *returns the w*idth of the play-area bounds in meters.
+The **`sizeX`** read-only property of the {{domxref("VRStageParameters")}} interface _returns the width_ of the play-area bounds in meters.
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 The bounds are defined as an axis-aligned rectangle on the floor, for safety purposes. Content should not require the user to move beyond these bounds; however, it is possible for the user to ignore the bounds resulting in position values outside of this rectangle. The center of the rectangle is at (0,0,0) in standing-space coordinates.
 
-## Syntax
-
-```js
-var mySizeX = vrStageParametersInstance.sizeX;
-```
-
-### Value
+## Value
 
 A float representing the width in meters.
 

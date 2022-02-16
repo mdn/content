@@ -19,7 +19,7 @@ browser-compat: css.properties.NameOfTheProperty
 > The frontmatter at the top of the page is used to define "page metadata".
 > The values should be updated appropriately for the particular property.
 >
-> ```
+> ```md
 > ---
 > title: NameOfTheProperty
 > slug: Web/CSS/NameOfTheProperty
@@ -36,23 +36,23 @@ browser-compat: css.properties.NameOfTheProperty
 >
 > - **title**
 >   - : Title heading displayed at top of page. Format as _NameOfTheProperty.
->       For example, the [`background-color`](/en-US/docs/Web/CSS/background-color) property has a title of _background-color_.
+>     For example, the [`background-color`](/en-US/docs/Web/CSS/background-color) property has a title of _background-color_.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/CSS/NameOfTheProperty`.
->       For example, the the [`background-color`](/en-US/docs/Web/CSS/background-color) property slug is `Web/CSS/background-color`.
+>     For example, the the [`background-color`](/en-US/docs/Web/CSS/background-color) property slug is `Web/CSS/background-color`.
 > - **tags**
 >   - : Always include the following tags: **CSS**, **Reference**, **CSS Property**, _NameOfTheProperty_ (e.g. **background-color**).
 >
->       Include the following tags as appropriate:
->       - Category of property: **Layout**, **Graphics**, **CSS Background**, **CSS Colors**, _other tags as appropriate_
->       - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete)).
->       - Any other tags that represent terms people might search for related to the technology.
+>     Include the following tags as appropriate:
+>     - Category of property: **Layout**, **Graphics**, **CSS Background**, **CSS Colors**, _other tags as appropriate_
+>     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete)).
+>     - Any other tags that represent terms people might search for related to the technology.
 > - **browser-compat**
 >   - : Replace the placeholder value <code>css.properties.NameOfTheProperty</code> with the query string for the property in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
->       The toolchain automatically uses the key to populate the compatibility and specifications sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros in those sections, respectively).
+>     The toolchain automatically uses the key to populate the compatibility and specifications sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros in those sections, respectively).
 >
->       Note that you may first need to create/update an entry for the property and its specification in our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a>.
->       See our [guide on how to do this](/en-US/docs/MDN/Structures/Compatibility_tables).
+>     Note that you may first need to create/update an entry for the property and its specification in our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a>.
+>     See our [guide on how to do this](/en-US/docs/MDN/Structures/Compatibility_tables).
 >
 > ---
 >

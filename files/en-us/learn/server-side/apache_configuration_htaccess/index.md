@@ -160,7 +160,7 @@ For example, the filename extensions of content files often define the content's
 
 Associates media types with one or more extensions to make sure the resources will be served appropriately.
 
-Servers should use text/javascript for JavaScript resources as indicated in the [HTML specification](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages)
+Servers should use text/javascript for JavaScript resources as indicated in the [HTML specification](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages)
 
 ```bash
 <IfModule mod_expires.c>
@@ -231,7 +231,7 @@ Use [AddDefaultCharset](https://httpd.apache.org/docs/current/mod/core.html#addd
 
 ```bash
 <IfModule mod_mime.c>
-  AddDefaultCharset utf-8
+  AddDefaultCharset utf-8
 </IfModule>
 ```
 
@@ -274,9 +274,9 @@ The basic pattern to enable `mod_rewrite` is a pre-requisite for all other tasks
 
 The required steps are:
 
-1.  Turn on the rewrite engine (this is necessary in order for the `RewriteRule` directives to work) as documented in the [RewriteEngine](https://httpd.apache.org/docs/current/mod/mod_rewrite.html#RewriteEngine) documentation
-2.  Enable the `FollowSymLinks` option if it isn't already. See [Core Options](https://httpd.apache.org/docs/current/mod/core.html#options) documentation
-3.  If your web host doesn't allow the `FollowSymlinks` option, you need to comment it out or remove it, and then uncomment the `Options +SymLinksIfOwnerMatch` line, but be aware of the [performance impact](https://httpd.apache.org/docs/current/misc/perf-tuning.html#symlinks)
+1. Turn on the rewrite engine (this is necessary in order for the `RewriteRule` directives to work) as documented in the [RewriteEngine](https://httpd.apache.org/docs/current/mod/mod_rewrite.html#RewriteEngine) documentation
+2. Enable the `FollowSymLinks` option if it isn't already. See [Core Options](https://httpd.apache.org/docs/current/mod/core.html#options) documentation
+3. If your web host doesn't allow the `FollowSymlinks` option, you need to comment it out or remove it, and then uncomment the `Options +SymLinksIfOwnerMatch` line, but be aware of the [performance impact](https://httpd.apache.org/docs/current/misc/perf-tuning.html#symlinks)
 
     - Some cloud hosting services will require you set `RewriteBase`
     - See [Rackspace FAQ](https://www.rackspace.com/knowledge_center/frequently-asked-question/why-is-modrewrite-not-working-on-my-site) and the [HTTPD documentation](https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewritebase)
@@ -317,7 +317,7 @@ If you're using cPanel AutoSSL or the Let's Encrypt webroot method to create you
 </IfModule>
 ```
 
-### Redirecting from www. URLs
+### Redirecting from www. URLs
 
 These directives will rewrite `www.example.com` to `example.com`.
 
@@ -336,7 +336,7 @@ The rule assumes by default that both HTTP and HTTPS environments are available 
   RewriteRule ^ - [E=PROTO:http]
 
   RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-  RewriteRule ^ %{ENV:PROTO}://%1%{REQUEST_URI} [R=301,L]
+  RewriteRule ^ %{ENV:PROTO}://%1%{REQUEST_URI} [R=301,L]
 </IfModule>
 ```
 
@@ -461,26 +461,26 @@ Be aware that Strict Transport Security is not revokable and you must ensure bei
 
 ## Prevent some browsers from MIME-sniffing the response
 
-1.  Restricts all fetches by default to the origin of the current website by setting the `default-src` directive to `'self'` - which acts as a fallback to all [Fetch directives](/en-US/docs/Glossary/Fetch_directive).
+1. Restricts all fetches by default to the origin of the current website by setting the `default-src` directive to `'self'` - which acts as a fallback to all [Fetch directives](/en-US/docs/Glossary/Fetch_directive).
 
     - This is convenient as you do not have to specify all Fetch directives that apply to your site, for example: `connect-src 'self'; font-src 'self'; script-src 'self'; style-src 'self'`, etc
     - This restriction also means that you must explicitly define from which site(s) your website is allowed to load resources from, otherwise it will be restricted to the same origin as the page making the request
 
-2.  Disallows the `<base>` element on the website. This is to prevent attackers from changing the locations of resources loaded from relative URLs
+2. Disallows the `<base>` element on the website. This is to prevent attackers from changing the locations of resources loaded from relative URLs
 
     - If you want to use the `<base>` element, then use `base-uri 'self'` instead
 
-3.  Only allows form submissions are from the current origin with: `form-action 'self'`
-4.  Prevents all websites (including your own) from embedding your webpages within e.g. the `<iframe>` or `<object>` element by setting: `frame-ancestors 'none'`.
+3. Only allows form submissions are from the current origin with: `form-action 'self'`
+4. Prevents all websites (including your own) from embedding your webpages within e.g. the `<iframe>` or `<object>` element by setting: `frame-ancestors 'none'`.
 
     - The `frame-ancestors`directive helps avoid [clickjacking](/en-US/docs/Glossary/Clickjacking) attacks and is similar to the `X-Frame-Options` header
     - Browsers that support the CSP header will ignore `X-Frame-Options` if `frame-ancestors` is also specified
 
-5.  Forces the browser to treat all the resources that are served over HTTP as if they were loaded securely over HTTPS by setting the `upgrade-insecure-requests` directive
+5. Forces the browser to treat all the resources that are served over HTTP as if they were loaded securely over HTTPS by setting the `upgrade-insecure-requests` directive
 
     - **`upgrade-insecure-requests` does not ensure HTTPS for the top-level navigation. If you want to force the website itself to be loaded over HTTPS you must include the `Strict-Transport-Security` header**
 
-6.  Includes the `Content-Security-Policy` header in all responses that are able to execute scripting. This includes the commonly used file types: HTML, XML and PDF documents. Although Javascript files can not execute scripts in a "browsing context", they are included to target [web workers](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#csp_in_workers)
+6. Includes the `Content-Security-Policy` header in all responses that are able to execute scripting. This includes the commonly used file types: HTML, XML and PDF documents. Although Javascript files can not execute scripts in a "browsing context", they are included to target [web workers](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#csp_in_workers)
 
 Some older browsers would try and guess the content type of a resource, even when it isn't properly set up on the server configuration. This reduces exposure to drive-by download attacks and cross-origin data leaks.
 
@@ -594,7 +594,7 @@ Compress all output labeled with one of the following media types using the [Add
       "font/opentype" \
       "font/otf" \
       "font/ttf" \
-      "image/bmp" \
+      "image/bmp" \
       "image/svg+xml" \
       "image/vnd.microsoft.icon" \
       "text/cache-manifest" \

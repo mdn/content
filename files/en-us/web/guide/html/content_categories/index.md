@@ -140,13 +140,17 @@ The script-supporting elements are:
 
 If an element has a transparent content model, then its contents must be structured such that they would be valid HTML 5, even if the transparent element were removed and replaced by the child elements.
 
-For example, the {{HTMLElement("del")}} and {{HTMLELement("ins")}} elements are transparent:
+For example, the {{HTMLElement("del")}} and {{HTMLElement("ins")}} elements are transparent:
 
-    <p>We hold these truths to be <del><em>sacred &amp; undeniable</em></del> <ins>self-evident</ins>.</p>
+```html
+<p>We hold these truths to be <del><em>sacred &amp; undeniable</em></del> <ins>self-evident</ins>.</p>
+```
 
 If those elements were removed, this fragment would still be valid HTML (if not correct English).
 
-    <p>We hold these truths to be <em>sacred &amp; undeniable</em> self-evident.</p>
+```html
+<p>We hold these truths to be <em>sacred &amp; undeniable</em> self-evident.</p>
+```
 
 ## Other content models
 

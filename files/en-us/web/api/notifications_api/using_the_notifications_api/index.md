@@ -192,6 +192,15 @@ It's possible to handle multiple notifications this way:
 window.addEventListener('load', function () {
   var button = document.getElementsByTagName('button')[0];
 
+  if (window.self !== window.top) {
+    // Ensure that if our document is in a frame, we get the user
+    // to first open it in its own tab or window. Otherwise, it
+    // won’t be able to request permission to send notifications.
+    button.textContent = "View live result of the example code above";
+    button.addEventListener('click', () => window.open(location.href));
+    return;
+  }
+
   button.addEventListener('click', function () {
     // If the user agreed to get notified
     // Let's try to send ten notifications
@@ -241,7 +250,7 @@ window.addEventListener('load', function () {
 });
 ```
 
-See the live result below:
+### Result
 
 {{ EmbedLiveSample('Tag_example', '100%', 30) }}
 

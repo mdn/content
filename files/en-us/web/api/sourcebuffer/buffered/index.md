@@ -14,7 +14,7 @@ tags:
   - buffered
 browser-compat: api.SourceBuffer.buffered
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{draft}}
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 The **`buffered`** read-only property of the
 {{domxref("SourceBuffer")}} interface returns the time ranges that are currently

@@ -10,7 +10,7 @@ browser-compat: api.HTMLBaseElement
 ---
 {{APIRef("HTML DOM")}}
 
-The **`HTMLBaseElement`** interface contains the base URI for a document. This object inherits all of the properties and methods as described in the {{domxref("HTMLElement")}} interface.
+The **`HTMLBaseElement`** interface contains the base URI for a document. This object inherits all of the properties and methods as described in the {{domxref("HTMLElement")}} interface.
 
 {{InheritanceDiagram}}
 

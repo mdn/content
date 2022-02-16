@@ -10,9 +10,9 @@ tags:
   - document structure role
 ---
 
-The `presentation` role and its synonym `none` remove an elements implicit native semantics, such as headings, lists, etc., from the accessibility tree.
+The `presentation` role and its synonym `none` remove an element's implicit ARIA semantics from being exposed to the accessibility tree.
 
-The content is still available to assistive technologies; just the semantics of the container and required associated nested descendants are no longer mapped to the accessibility API.
+The content of the element will still be available to assistive technologies; it is only the semantics of the container — and in some instance, required associated descendants — which will no longer expose their mappings to the accessibility API.
 
 ## Description
 
@@ -20,7 +20,7 @@ While ARIA is primarily used to express semantics, there are some situations whe
 
 Writing `<h2 role="presentation">Democracy Dies in Darkness</h2>` removes the heading semantics of the {{HTMLElement('h2')}} element, making it the equivalent of `<div>Democracy Dies in Darkness</div>`. The heading role semantics are removed, but the content itself is still available.
 
-When an element has required descendents, such as the various {{HTMLElement('table')}}, elements and {{HTMLElement('li')}}s children of a {{HTMLElement('ul')}} or {{HTMLElement('ol')}}, the `presentation` or `none`  role on the table or list removes the default semantics of the element on which it was applied and their required descendant elements.
+When an element has required descendants, such as the various {{HTMLElement('table')}}, elements and {{HTMLElement('li')}}s children of a {{HTMLElement('ul')}} or {{HTMLElement('ol')}}, the `presentation` or `none`  role on the table or list removes the default semantics of the element on which it was applied and their required descendant elements.
 
 If `presentation` or `none` is applied to a {{HTMLElement('table')}}  element, the descendant {{HTMLElement('caption')}}, {{HTMLElement('thead')}}, {{HTMLElement('tbody')}}, {{HTMLElement('tfoot')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, and {{HTMLElement('td')}} elements inherit the role and are thus not exposed to assistive technologies. But, elements inside of the {{HTMLElement('th')}} and {{HTMLElement('td')}} elements, including nested tables, are exposed to assistive technologies.
 
@@ -51,7 +51,7 @@ None. If a global ARIA state and property is set, `presentation` or `none` will 
 ## Examples
 
 ```html
-<img src="spacer.gif" role="none" alt="">
+<hr role="none">
 ```
 
 ## Specifications

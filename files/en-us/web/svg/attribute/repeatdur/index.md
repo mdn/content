@@ -12,11 +12,11 @@ The **`repeatDur`** attribute specifies the total duration for repeating an anim
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("animate")}}
-*   {{SVGElement("animateColor")}}
-*   {{SVGElement("animateMotion")}}
-*   {{SVGElement("animateTransform")}}
-*   {{SVGElement("set")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("animateColor")}}
+- {{SVGElement("animateMotion")}}
+- {{SVGElement("animateTransform")}}
+- {{SVGElement("set")}}
 
 ## Example
 
@@ -67,10 +67,10 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `<clock-value>`
-    *   : This value specifies the duration in presentation time to repeat the animation.
-*   `indefinite`
-    *   : This value indicates that the animation will be repeated indefinitely (i.e. until the document ends).
+- `<clock-value>`
+  - : This value specifies the duration in presentation time to repeat the animation.
+- `indefinite`
+  - : This value indicates that the animation will be repeated indefinitely (i.e. until the document ends).
 
 ## Specifications
 

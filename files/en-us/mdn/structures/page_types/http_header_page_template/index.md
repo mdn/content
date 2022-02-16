@@ -19,7 +19,7 @@ browser-compat: path.to.feature.NameOfTheHeader
 > The frontmatter at the top of the page is used to define "page metadata".
 > The values should be updated appropriately for the particular header.
 >
-> ```
+> ```md
 > ---
 > title: NameOfTheHeader
 > slug: Web/HTTP/Headers/NameOfTheHeader
@@ -43,16 +43,16 @@ browser-compat: path.to.feature.NameOfTheHeader
 > - **tags**
 >   - : Always include the following tags: **HTTP**, **Reference**, **HTTP Header**, _NameOfTheHeader_ (e.g. **Cache-Control**).
 >
->       Include the following tags as appropriate:
->       - Type of request/response: **Response header**, **Request header**, **Representation header**, **Payload header**, **Client hint**
->       - Header status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete)).
->       - Any other tags that represent terms people might search for related to the technology. For example the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) header includes the tag **Caching**.
+>     Include the following tags as appropriate:
+>     - Type of request/response: **Response header**, **Request header**, **Representation header**, **Payload header**, **Client hint**
+>     - Header status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete)).
+>     - Any other tags that represent terms people might search for related to the technology. For example the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) header includes the tag **Caching**.
 > - **browser-compat**
 >   - : Replace the placeholder value <code>path.to.feature.NameOfTheHeader</code> with the query string for the header in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
->       The toolchain automatically uses the key to populate the compatibility section (replacing the `\{{Compat}}` macro).
+>     The toolchain automatically uses the key to populate the compatibility section (replacing the `\{{Compat}}` macro).
 >
->       Note that you may first need to create/update an entry for the HTTP header in our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a>, and the entry for the header will need to include specification information.
->       See our [guide on how to do this](/en-US/docs/MDN/Structures/Compatibility_tables).
+>     Note that you may first need to create/update an entry for the HTTP header in our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a>, and the entry for the header will need to include specification information.
+>     See our [guide on how to do this](/en-US/docs/MDN/Structures/Compatibility_tables).
 >
 > ---
 >

@@ -8,11 +8,13 @@ tags:
   - BackgroundFetchRegistration
 browser-compat: api.BackgroundFetchRegistration
 ---
-{{DefaultAPISidebar("Background Fetch API")}}
+{{APIRef("Background Fetch API")}}
 
 The **`BackgroundFetchRegistration`** interface of the {{domxref('Background Fetch API','','',' ')}} represents an individual background fetch.
 
 A `BackgroundFetchRegistration` instance is returned by the {{domxref("BackgroundFetchManager.fetch()")}} or {{domxref("BackgroundFetchManager.get()")}} methods, and therefore there has no constructor.
+
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -50,17 +52,6 @@ The following properties are available synchronously, as convenience properties 
 - {{domxref("BackgroundFetchRegistration.recordsAvailable")}}{{ReadOnlyInline}}
   - : A {{jsxref("boolean")}} indicating whether the `recordsAvailable` flag is set.
 
-### Event handlers
-
-- {{domxref("BackgroundFetchRegistration.onprogress")}}
-
-  - : Fired when there is a change to any of the following properties:
-
-    - `uploaded`
-    - `downloaded`
-    - `result`
-    - `failureReason`
-
 ## Methods
 
 - {{domxref("BackgroundFetchRegistration.abort","BackgroundFetchRegistration.abort()")}}
@@ -69,6 +60,18 @@ The following properties are available synchronously, as convenience properties 
   - : Returns a single {{domxref("BackgroundFetchRecord")}} object which is the first match for the arguments.
 - {{domxref("BackgroundFetchRegistration.matchAll","BackgroundFetchRegistration.matchAll()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("BackgroundFetchRecord")}} objects containing requests and responses.
+
+## Events
+
+Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
+
+- [`progress`](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event)
+
+  - : Fired when there is a change to any of the following properties:
+    {{domxref("BackgroundFetchRegistration.uploaded", "uploaded")}},
+    {{domxref("BackgroundFetchRegistration.downloaded", "downloaded")}},
+    {{domxref("BackgroundFetchRegistration.result", "result")}} or
+    {{domxref("BackgroundFetchRegistration.failureReason", "failureReason")}}.
 
 ## Examples
 

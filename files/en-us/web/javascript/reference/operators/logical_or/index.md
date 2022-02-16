@@ -82,7 +82,7 @@ precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence))
 
 ```js
 true || false && false      // returns true, because && is executed first
-(true || false) && false    // returns false, because operator precedence cannot apply
+(true || false) && false    // returns false, because grouping has the highest precedence
 ```
 
 ## Examples

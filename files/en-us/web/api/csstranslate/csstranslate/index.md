@@ -12,7 +12,7 @@ tags:
   - Houdini
 browser-compat: api.CSSTranslate.CSSTranslate
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSTranslate()`** constructor creates a
 new {{domxref("CSSTranslate")}} object representing the [translate()](</en-US/docs/Web/CSS/transform-function/translate()>) value of the

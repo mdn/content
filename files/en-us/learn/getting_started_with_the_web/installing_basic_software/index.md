@@ -24,7 +24,7 @@ In _Installing basic software_, we show you what tools you need to do simple web
 - **A version control system**, to manage files on servers, collaborate on a project with a team, share code and assets and avoid editing conflicts. Right now, [Git](https://git-scm.com/) is the most popular version control system along with the [GitHub](https://github.com/) or [GitLab](https://gitlab.com) hosting service.
 - **An FTP program**, used on older web hosting accounts to manage files on servers ([Git](https://git-scm.com/) is increasingly replacing FTP for this purpose). There are loads of (S)FTP programs available including [Cyberduck](https://cyberduck.io/), [Fetch](https://fetchsoftworks.com/) and [FileZilla](https://filezilla-project.org/).
 - **An automation system,** like [Webpack](https://webpack.js.org/), [Grunt](https://gruntjs.com/), or [Gulp](https://gulpjs.com/) to automatically perform repetitive tasks, such as minifying code and running tests.
-- Libraries, frameworks, etc., to speed up writing common functionality. A library tends to be an existing JavaScript or CSS file that provides ready-rolled functionality for you to make use of in your code. A framework tend to take this idea further, offering a complete system with some custom syntaxes for you to write a web app on top of.
+- Libraries, frameworks, etc., to speed up writing common functionality. A library tends to be an existing JavaScript or CSS file that provides ready-rolled functionality for you to make use of in your code. A framework tends to take this idea further, offering a complete system with some custom syntaxes for you to write a web app on top of.
 - More tools besides!
 
 ## What tools do I actually need, right now?

@@ -80,9 +80,9 @@ Here's the HTML structure we will use.
 
 It contains some basic information like the document {{htmlelement("title")}}, and some CSS to set the `width` and `height` of the {{htmlelement("canvas")}} element that Three.js will insert on the page to be the full size of the viewport. The {{htmlelement("script")}} element in the {{htmlelement("head")}} includes the Three.js library in the page; we will write our code into three script tags in the {{htmlelement("body")}} tag:
 
-1.  The first one will contain the vertex shader.
-2.  The second one will contain the fragment shader.
-3.  The third one will contain the actual JavaScript code generating the scene.
+1. The first one will contain the vertex shader.
+2. The second one will contain the fragment shader.
+3. The third one will contain the actual JavaScript code generating the scene.
 
 Before reading on, copy this code to a new text file and save it in your working directory as `index.html`. We'll create a scene featuring a simple cube in this file to explain how the shaders work.
 

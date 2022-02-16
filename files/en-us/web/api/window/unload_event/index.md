@@ -57,9 +57,9 @@ Developers should avoid using this event.
 
 Especially on mobile, the `unload` event is not reliably fired. For example, the `unload` event is not fired at all in the following scenario:
 
-1.  A mobile user visits your page.
-2.  The user then switches to a different app.
-3.  Later, the user closes the browser from the app manager.
+1. A mobile user visits your page.
+2. The user then switches to a different app.
+3. Later, the user closes the browser from the app manager.
 
 Also, the `unload` event is not compatible with the [back/forward cache](https://web.dev/bfcache/) (bfcache), because many pages using this event assume that the page will not continue to exist after the event is fired. To combat this, some browsers (such as Firefox) will not place pages in the bfcache if they have unload listeners, and this is bad for performance. Others, such as Chrome, will not fire the `unload` when a user navigates away.
 
@@ -134,6 +134,6 @@ When the parent frame is unloaded, events will be fired in the order described b
   `beforeunload`/`unload`.
 - [Page
   Lifecycle API](https://developers.google.com/web/updates/2018/07/page-lifecycle-api#developer-recommendations-for-each-state) gives best-practices guidance on handling
-  page lifecyle behavior in your web applications.
-- [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle): a JavaScript library that deals with cross-browser inconsistencies in page lifecyle behavior.
+  page lifecycle behavior in your web applications.
+- [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle): a JavaScript library that deals with cross-browser inconsistencies in page lifecycle behavior.
 - [Back/forward cache](https://web.dev/bfcache/) explains what the back/forward cache is, and its implications for various page lifecycle events.

@@ -22,17 +22,17 @@ If you would like to contribute an example for the Layout Cookbook, then this pa
 
 A recipe consists of:
 
-1.  A live example, stored in the [CSS Examples GitHub repo](https://github.com/mdn/css-examples).
-2.  A downloadable version of that example, also stored in the CSS Examples repo.
-3.  A page in the [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook) section of the site that details:
+1. A live example, stored in the [CSS Examples GitHub repo](https://github.com/mdn/css-examples).
+2. A downloadable version of that example, also stored in the CSS Examples repo.
+3. A page in the [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook) section of the site that details:
 
-    1.  Requirements
-    2.  The recipe
-    3.  The choices made
-    4.  Any useful fallbacks or alternative methods
-    5.  Any accessibility concerns
-    6.  Browser compatibility
-    7.  Additional resources
+    1. Requirements
+    2. The recipe
+    3. The choices made
+    4. Any useful fallbacks or alternative methods
+    5. Any accessibility concerns
+    6. Browser compatibility
+    7. Additional resources
 
 ### 1. Build your pattern
 
@@ -62,9 +62,9 @@ If you have forked the repo and therefore have our CSS and JavaScript files alon
 
 #### Useful tips
 
-1.  Do not indent the CSS and HTML inside the textareas; instead bump it up against the start of the lines. This will look better when it is rendered.
-2.  If you have any required images, pop them into the directory with the examples. Or you are welcome to use any already there.
-3.  You can adjust the height of the textareas by changing the height in the inline styles.
+1. Do not indent the CSS and HTML inside the textareas; instead bump it up against the start of the lines. This will look better when it is rendered.
+2. If you have any required images, pop them into the directory with the examples. Or you are welcome to use any already there.
+3. You can adjust the height of the textareas by changing the height in the inline styles.
 
 ### 3. Create a downloadable version
 

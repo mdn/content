@@ -34,10 +34,8 @@ JSON.stringify(value, replacer, space)
   - : The value to convert to a JSON string.
 - `replacer` {{optional_inline}}
   - : A function that alters the behavior of the stringification process, or an array of
-    {{JSxRef("String")}} and {{JSxRef("Number")}} that serve as an allowlist for
-    selecting/filtering the properties of the value object to be included in the JSON
-    string. If this value is {{JSxRef("null")}} or not provided, all properties of the
-    object are included in the resulting JSON string.
+    strings or numbers naming properties of `value` that should be included in the output. If `replacer` is {{JSxRef("null")}} or not provided,
+    all properties of the object are included in the resulting JSON string.
 - `space` {{optional_inline}}
 
   - : A {{JSxRef("String")}} or {{JSxRef("Number")}} object that's used to insert white space (including indentation, line break characters, etc.) into the output JSON string for readability purposes.
@@ -75,7 +73,7 @@ A JSON string representing the given value, or undefined.
   valid JSON values. If any such values are encountered during conversion they are
   either omitted (when found in an object) or changed to {{JSxRef("null")}} (when found
   in an array). `JSON.stringify()` can return `undefined` when
-  passing in "pure" values like `JSON.stringify(function(){})` or
+  passing in "pure" values like `JSON.stringify(function() {})` or
   `JSON.stringify(undefined)`.
 - All {{JSxRef("Symbol")}}-keyed properties will be completely ignored, even when
   using the `replacer` function.
@@ -100,7 +98,7 @@ JSON.stringify([1, 'false', false]);   // '[1,"false",false]'
 JSON.stringify([NaN, null, Infinity]); // '[null,null,null]'
 JSON.stringify({ x: 5 });              // '{"x":5}'
 
-JSON.stringify(new Date(2006, 0, 2, 15, 4, 5))
+JSON.stringify(new Date(2006, 0, 2, 15, 4, 5));
 // '"2006-01-02T15:04:05.000Z"'
 
 JSON.stringify({ x: 5, y: 6 });
@@ -114,7 +112,7 @@ a['baz'] = 'quux';      // a: [ 0: 'foo', 1: 'bar', baz: 'quux' ]
 JSON.stringify(a);
 // '["foo","bar"]'
 
-JSON.stringify({ x: [10, undefined, function(){}, Symbol('')] });
+JSON.stringify({ x: [10, undefined, function() {}, Symbol('')] });
 // '{"x":[10,null,null,null]}'
 
 // Standard data structures
@@ -419,5 +417,5 @@ result of `JSON.stringify` do you need to carefully handle
 
 ## See also
 
-- A polyfill of modern `JSON.stringify` behavior (symbol and well-formed unicode) is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-function)
+- [Polyfill of modern `JSON.stringify` behavior (symbol and well-formed unicode) in `core-js`](https://github.com/zloirock/core-js#ecmascript-function)
 - {{JSxRef("JSON.parse()")}}

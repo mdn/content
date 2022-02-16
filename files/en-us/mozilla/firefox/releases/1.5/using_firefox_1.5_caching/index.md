@@ -45,9 +45,9 @@ Note: as of 10-2009 development versions of Safari added support for these new e
 
 Standard behavior for Web pages is:
 
-1.  User navigates to a page.
-2.  As the page loads, inline scripts run.
-3.  Once the page is loaded, the `onload` handler fires.
+1. User navigates to a page.
+2. As the page loads, inline scripts run.
+3. Once the page is loaded, the `onload` handler fires.
 
 Some pages include a fourth step. If a page uses an `unload` or `beforeunload` handler, it fires when the user navigates away from the page. If an `unload` handler is present, the page will not be cached.
 

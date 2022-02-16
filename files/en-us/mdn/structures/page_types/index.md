@@ -41,7 +41,7 @@ If you come across an old-style set of pages, we'd love for you to update them t
 However, we do appreciate that this could be a large amount of work.
 If the information to update is not too large, and you have some free time, by all means try updating it to the new style.
 
-If the work is more significant, then you should consider a few factors when prioritising the work:
+If the work is more significant, then you should consider a few factors when prioritizing the work:
 
 - How out-of-date is the information?
 - How low quality is the information?
@@ -145,7 +145,7 @@ A **CSS reference page** lists all the available syntax for a CSS feature such a
 ## HTTP header reference page
 
 An **HTTP header reference page** lists all the available directives that an HTTP header can contain, and explains the header's purpose and usage.
-It also provides examples, browser compatibility information, and other important expl.
+It also provides examples, browser compatibility information, and other important explanations.
 
 ### Example
 

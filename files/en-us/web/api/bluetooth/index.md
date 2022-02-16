@@ -16,6 +16,8 @@ The **`Bluetooth`** interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web
 {{jsxref("Promise")}} to a {{domxref("BluetoothDevice")}} object with the specified
 options.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _Inherits properties from its parent {{domxref("EventTarget")}}._

@@ -23,20 +23,20 @@ It is used within a lighting filter primitive: {{SVGElement("feDiffuseLighting")
 
 ### Global attributes
 
-*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
 
 ### Specific attributes
 
-*   {{SVGAttr("x")}}
-*   {{SVGAttr("y")}}
-*   {{SVGAttr("z")}}
-*   {{SVGAttr("pointsAtX")}}
-*   {{SVGAttr("pointsAtY")}}
-*   {{SVGAttr("pointsAtZ")}}
-*   {{SVGAttr("specularExponent")}}
-*   {{SVGAttr("limitingConeAngle")}}
+- {{SVGAttr("x")}}
+- {{SVGAttr("y")}}
+- {{SVGAttr("z")}}
+- {{SVGAttr("pointsAtX")}}
+- {{SVGAttr("pointsAtY")}}
+- {{SVGAttr("pointsAtZ")}}
+- {{SVGAttr("specularExponent")}}
+- {{SVGAttr("limitingConeAngle")}}
 
-## DOM Interface
+## DOM Interface
 
 This element implements the {{domxref("SVGFESpotLightElement")}} interface.
 
@@ -77,11 +77,11 @@ This element implements the {{domxref("SVGFESpotLightElement")}} interface.
 
 ## See also
 
-*   {{SVGElement("filter")}}
-*   {{SVGElement("animate")}}
-*   {{SVGElement("set")}}
-*   {{SVGElement("feDiffuseLighting")}}
-*   {{SVGElement("feSpecularLighting")}}
-*   {{SVGElement("feDistantLight")}}
-*   {{SVGElement("fePointLight")}}
-*   [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)
+- {{SVGElement("filter")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("set")}}
+- {{SVGElement("feDiffuseLighting")}}
+- {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feDistantLight")}}
+- {{SVGElement("fePointLight")}}
+- [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)

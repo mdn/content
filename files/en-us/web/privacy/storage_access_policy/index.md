@@ -79,11 +79,11 @@ HTTP Referrers
 
 ### What is not blocked by the policy?
 
-1.  This policy does not currently restrict third-party storage access for resources that are not classified as tracking resources. We may choose to apply additional restrictions to third-party storage access in the future.
-2.  The restrictions applied by the policy will not prevent third-party scripts classified as tracking resources from accessing storage in the main context of the page. These scripts can continue to use storage scoped to the top-level origin.
-3.  Origins classified as trackers will have access to their own storage when they are loaded in a first-party context.
-4.  Cross-origin resources loaded from the same eTLD+1 as the top-level context will still have access to their storage.
-5.  Origins normally classified as trackers will [not be blocked if the top-level page origin is determined to be from the same organization as them](https://github.com/mozilla-services/shavar-prod-lists#entity-list).
+1. This policy does not currently restrict third-party storage access for resources that are not classified as tracking resources. We may choose to apply additional restrictions to third-party storage access in the future.
+2. The restrictions applied by the policy will not prevent third-party scripts classified as tracking resources from accessing storage in the main context of the page. These scripts can continue to use storage scoped to the top-level origin.
+3. Origins classified as trackers will have access to their own storage when they are loaded in a first-party context.
+4. Cross-origin resources loaded from the same eTLD+1 as the top-level context will still have access to their storage.
+5. Origins normally classified as trackers will [not be blocked if the top-level page origin is determined to be from the same organization as them](https://github.com/mozilla-services/shavar-prod-lists#entity-list).
 
 ## Storage access grants
 
@@ -137,11 +137,11 @@ The [Network Monitor](/en-US/docs/Tools/Network_Monitor) in Firefox Developer To
 
 Curious how things will work if a third-party domain on your site were classified as a tracker? We’ve added a preference that allows you to add custom domains to the Tracking Protection URL classifier. To do so:
 
-1.  Type `about:config` in your address bar. If you are presented with a page that warns you "This may void your warranty!", click "I accept the risk!"
-2.  Search for the preference name "urlclassifier.trackingAnnotationTable.testEntries".
-3.  If the preference already exists, edit the preference value.
-4.  If the preference does not exist, click "String" and then "+" to create a new preference.
-5.  For the preference value enter comma separated origins that you’d like to have classified as trackers. E.g. "example.net,example.org".
+1. Type `about:config` in your address bar. If you are presented with a page that warns you "This may void your warranty!", click "I accept the risk!"
+2. Search for the preference name "urlclassifier.trackingAnnotationTable.testEntries".
+3. If the preference already exists, edit the preference value.
+4. If the preference does not exist, click "String" and then "+" to create a new preference.
+5. For the preference value enter comma separated origins that you’d like to have classified as trackers. E.g. "example.net,example.org".
 
 > **Warning:** Be sure to remove these entries after you have finished testing.
 
@@ -174,6 +174,6 @@ After these interactions, the provider will receive third-party storage access i
 
 This depends on how the third party has implemented the measurement tool, but generally ad conversion measurement will be more difficult. Consider the following examples:
 
-1.  You run an ad on a social media website that is seen several times by a user, but never clicked. That user later visits your website, which includes a conversion tracking tag from the same social media website. This type of conversion is often referred to as a “view-through conversion.” Since the social media website does not have access to their third-party storage, they will not recognize the user as the same user that saw the advertisements on their website and the conversion will not be tracked. We expect that most view-through conversion tracking techniques will no longer work, including those offered by display networks.
-2.  You run an ad on a display network or social media website that is clicked by a user. That user lands on your website, which includes a conversion tracking tag from the same website that displayed your ad. This type of conversion is often referred to as a “click-through conversion.” Since the social media site or display network will not have access to their third-party storage, they will not recognize the user as the same user that saw the advertisements on their website and the conversion will not be tracked. We expect that this version of click-through conversion will no longer work.
-3.  You run an ad that appears on a social media website. A user clicks on your advertisement and is taken to a landing page that contains a conversion tracking tag from the third-party network. On the social media website, the network annotates the advertisement landing page URL with a query parameter that signals that the visit was the result of a click on an advertisement. On your website, the display network’s tag checks the URL query parameters and saves any ad tracking parameters to first-party storage. If a user later completes a conversion event, the network’s tag checks first-party storage to determine which click (or clicks) was responsible for the visit. We expect that click-through conversion implemented in this way will continue to work.
+1. You run an ad on a social media website that is seen several times by a user, but never clicked. That user later visits your website, which includes a conversion tracking tag from the same social media website. This type of conversion is often referred to as a “view-through conversion.” Since the social media website does not have access to their third-party storage, they will not recognize the user as the same user that saw the advertisements on their website and the conversion will not be tracked. We expect that most view-through conversion tracking techniques will no longer work, including those offered by display networks.
+2. You run an ad on a display network or social media website that is clicked by a user. That user lands on your website, which includes a conversion tracking tag from the same website that displayed your ad. This type of conversion is often referred to as a “click-through conversion.” Since the social media site or display network will not have access to their third-party storage, they will not recognize the user as the same user that saw the advertisements on their website and the conversion will not be tracked. We expect that this version of click-through conversion will no longer work.
+3. You run an ad that appears on a social media website. A user clicks on your advertisement and is taken to a landing page that contains a conversion tracking tag from the third-party network. On the social media website, the network annotates the advertisement landing page URL with a query parameter that signals that the visit was the result of a click on an advertisement. On your website, the display network’s tag checks the URL query parameters and saves any ad tracking parameters to first-party storage. If a user later completes a conversion event, the network’s tag checks first-party storage to determine which click (or clicks) was responsible for the visit. We expect that click-through conversion implemented in this way will continue to work.

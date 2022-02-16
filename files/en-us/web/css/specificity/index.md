@@ -22,9 +22,9 @@ Specificity is a weight that is applied to a given CSS declaration, determined b
 
 The following list of selector types increases by specificity:
 
-1.  [Type selectors](/en-US/docs/Web/CSS/Type_selectors) (e.g., `h1`) and pseudo-elements (e.g., `::before`).
-2.  [Class selectors](/en-US/docs/Web/CSS/Class_selectors) (e.g., `.example`), attributes selectors (e.g., `[type="radio"]`) and pseudo-classes (e.g., `:hover`).
-3.  [ID selectors](/en-US/docs/Web/CSS/ID_selectors) (e.g., `#example`).
+1. [Type selectors](/en-US/docs/Web/CSS/Type_selectors) (e.g., `h1`) and pseudo-elements (e.g., `::before`).
+2. [Class selectors](/en-US/docs/Web/CSS/Class_selectors) (e.g., `.example`), attributes selectors (e.g., `[type="radio"]`) and pseudo-classes (e.g., `:hover`).
+3. [ID selectors](/en-US/docs/Web/CSS/ID_selectors) (e.g., `#example`).
 
 Universal selector ({{CSSxRef("Universal_selectors", "*")}}), combinators ({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/en-US/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}) and negation pseudo-class ({{CSSxRef(":not", ":not()")}}) have no effect on specificity. (The selectors declared _inside_ `:not()` do, however.)
 
@@ -45,8 +45,8 @@ When an `important` rule is used on a style declaration, this declaration overri
 
 **Instead of using `!important`, consider:**
 
-1.  Make better use of the CSS cascade
-2.  Use more specific rules. By indicating one or more elements before the element you're selecting, the rule becomes more specific and gets higher priority:
+1. Make better use of the CSS cascade
+2. Use more specific rules. By indicating one or more elements before the element you're selecting, the rule becomes more specific and gets higher priority:
 
     ```html
     <div id="test">
@@ -62,7 +62,7 @@ When an `important` rule is used on a style declaration, this declaration overri
 
     No matter the order, text will be green because that rule is most specific. (Also, the rule for blue overwrites the rule for red, notwithstanding the order of the rules)
 
-3.  As a nonsense special case for (2), duplicate simple selectors to increase specificity when you have nothing more to specify.
+3. As a nonsense special case for (2), duplicate simple selectors to increase specificity when you have nothing more to specify.
 
     ```css
     #myId#myId span { color: yellow; }

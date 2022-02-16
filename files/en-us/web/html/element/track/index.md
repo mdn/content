@@ -123,7 +123,17 @@ A media element cannot have more than one `track` with the same `kind`, `srclang
 
 ### Detecting cue changes
 
-{{page("/en-US/docs/Web/API/TextTrack/cuechange_event", "On the track element")}}
+The underlying {{domxref("TextTrack")}}, indicated by the {{domxref("HTMLTrackElement.track", "track")}} property, receives a `cuechange` event every time the currently-presented cue is changed. This happens even if the track isn't associated with a media element.
+
+If the track _is_ associated with a media element, using the {{HTMLElement("track")}} element as a child of the {{HTMLElement("audio")}} or {{HTMLElement("video")}} element, the `cuechange` event is also sent to the {{domxref("HTMLTrackElement")}}.
+
+```js
+let textTrackElem = document.getElementById("texttrack");
+
+textTrackElem.addEventListener("cuechange", event => {
+  let cues = event.target.track.activeCues;
+});
+```
 
 ## Examples
 

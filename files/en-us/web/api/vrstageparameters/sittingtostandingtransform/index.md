@@ -3,7 +3,6 @@ title: VRStageParameters.sittingToStandingTransform
 slug: Web/API/VRStageParameters/sittingToStandingTransform
 tags:
   - API
-  - Experimental
   - Deprecated
   - Property
   - Reference
@@ -22,13 +21,7 @@ The **`sittingToStandingTransform`** read-only property of the {{domxref("VRStag
 
 Basically, this can be passed into your WebGL code to transform the rendered view from a sitting to standing view.
 
-## Syntax
-
-```js
-var myTransform = vrStageParametersInstance.sittingToStandingTransform;
-```
-
-### Value
+## Value
 
 A 16-element {{jsxref("Float32Array")}} containing the components of a 4×4 transform matrix.
 

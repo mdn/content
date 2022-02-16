@@ -19,7 +19,7 @@ browser-compat: path.to.feature.NameOfTheElement
 > The frontmatter at the top of the page is used to define "page metadata".
 > The values should be updated appropriately for the particular element.
 >
-> ```
+> ```md
 > ---
 > title: '<NameOfTheElement>: The NameOfTheElement element'
 > slug: Web/HTML/Element/NameOfTheElement
@@ -37,25 +37,25 @@ browser-compat: path.to.feature.NameOfTheElement
 >
 > - **title**
 >   - : Title heading displayed at top of page.
->       Format as `'<NameOfTheElement>: Description of element's purpose'`.
->       For example, the [`<video>`](/en-US/docs/Web/HTML/Element/video) element has a _title_ of: **'\<video>: The Video Embed element'**.
+>     Format as `'<NameOfTheElement>: Description of element's purpose'`.
+>     For example, the [`<video>`](/en-US/docs/Web/HTML/Element/video) element has a _title_ of: **'\<video>: The Video Embed element'**.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
->       This will be formatted like `Web/HTML/Element/NameOfTheElement`, where the element name is in _lower case_.
->       For example, the [`<video>`](/en-US/docs/Web/HTML/Element/video) element has a _slug_ of `Web/HTML/Element/video`.
+>     This will be formatted like `Web/HTML/Element/NameOfTheElement`, where the element name is in _lower case_.
+>     For example, the [`<video>`](/en-US/docs/Web/HTML/Element/video) element has a _slug_ of `Web/HTML/Element/video`.
 > - **tags**
 >   - : Always include the following tags: **HTML**, **Element**, **Reference**,  the _NameOfTheElement_ (e.g. **video**).
 >
->       Include the following tags as appropriate:
->       - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete)), **Non-standard** (if it isn't on a standards track).
->       - Any other tags that represent possible search terms for the element.
->         For example, the [`<video>`](/en-US/docs/Web/HTML/Element/video) element includes the tags: **HTML Video**, **Multimedia**, **Media Player**, **Movie Playback**, etc.
+>     Include the following tags as appropriate:
+>     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete)), **Non-standard** (if it isn't on a standards track).
+>     - Any other tags that represent possible search terms for the element.
+>       For example, the [`<video>`](/en-US/docs/Web/HTML/Element/video) element includes the tags: **HTML Video**, **Multimedia**, **Media Player**, **Movie Playback**, etc.
 > - **browser-compat**
 >   - : Replace the placeholder value `html.elements.NameOfTheElement` with the query string for the element in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
->       The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros).
+>     The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros).
 >
->       Note that you may first need to create/update an entry for the element in our [Browser compat data repo](https://github.com/mdn/browser-compat-data), and the entry will need to include specification information.
->       See our [guide on how to do this](/en-US/docs/MDN/Structures/Compatibility_tables).
+>     Note that you may first need to create/update an entry for the element in our [Browser compat data repo](https://github.com/mdn/browser-compat-data), and the entry will need to include specification information.
+>     See our [guide on how to do this](/en-US/docs/MDN/Structures/Compatibility_tables).
 >
 > ---
 >
