@@ -70,8 +70,8 @@ IDBDatabase.transaction(storeNames, mode, options);
 
     As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to
     increase performance (see {{Bug("1112702")}}), which is the same behavior as other
-    IndexedDB-supporting browsers. Previously in a `readwrite` transaction
-    {{domxref("IDBTransaction.oncomplete")}} was fired only when all data was guaranteed
+    IndexedDB-supporting browsers. Previously in a `readwrite` transaction, a
+    {{domxref("IDBTransaction.complete_event", "complete")}} event was fired only when all data was guaranteed
     to have been flushed to disk. In Firefox 40+ the `complete` event is
     fired after the OS has been told to write the data but potentially before that data
     has actually been flushed to disk. The `complete` event may thus be

@@ -68,7 +68,7 @@ DBOpenRequest.onsuccess = event => {
 };
 ```
 
-Using the {{DOMxRef("IDBTransaction.oncomplete", "oncomplete")}} property:
+Using the `oncomplete` property:
 
 ```js
 // Open the database
@@ -116,4 +116,3 @@ DBOpenRequest.onsuccess = event => {
 ## See also
 
 - [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- {{DOMxRef("IDBTransaction.oncomplete", "oncomplete")}} event handler property
