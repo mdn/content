@@ -19,7 +19,7 @@ The **`chargingchange`** event of the [Battery Status API](/en-US/docs/Web/API/B
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('chargingtimechange', event => { });
+addEventListener('chargingchange', event => { });
 
 onchargintimechange = event => { };
 ```
