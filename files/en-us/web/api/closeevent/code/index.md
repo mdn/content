@@ -10,17 +10,17 @@ browser-compat: api.CloseEvent.code
 ---
 {{APIRef("Websockets API")}}
 
-The **`code`** read-only property of the {{domxref("CloseEvent")}} interface returns the close code sent by the server.
+The **`code`** read-only property of the {{domxref("CloseEvent")}} interface returns a [WebSocket connection close code](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5) indicating the reason the server gave for closing the connection.
 
 ### Value
 
-A status code. As detailed in the following table, sourced from [the IANA website](https://www.iana.org/assignments/websocket/websocket.xml#close-code-number):
+An integer [WebSocket connection close code](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5) in the range `1000`-`4999`, indicating the reason the server gave for closing the connection.
 
 <table class="no-markdown">
   <thead>
     <tr>
       <th>Status code</th>
-      <th>Name</th>
+      <th>Meaning</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -28,7 +28,7 @@ A status code. As detailed in the following table, sourced from [the IANA websit
     <tr>
       <td><code>0</code>–<code>999</code></td>
       <td></td>
-      <td><strong>Reserved and not used.</strong></td>
+      <td>Not used.</td>
     </tr>
     <tr>
       <td><code>1000</code></td>
@@ -49,7 +49,7 @@ A status code. As detailed in the following table, sourced from [the IANA websit
     </tr>
     <tr>
       <td><code>1002</code></td>
-      <td>Protocol Error</td>
+      <td>Protocol error</td>
       <td>
         The endpoint is terminating the connection due to a protocol error.
       </td>
@@ -65,23 +65,23 @@ A status code. As detailed in the following table, sourced from [the IANA websit
     </tr>
     <tr>
       <td><code>1004</code></td>
-      <td></td>
+      <td>Reserved</td>
       <td>
         <strong>Reserved.</strong> A meaning might be defined in the future.
       </td>
     </tr>
     <tr>
       <td><code>1005</code></td>
-      <td>No Status Received</td>
+      <td>No Status Rcvd</td>
       <td>
-        Indicates that no status code was provided even though one was expected.
+        <strong>Reserved.</strong> Indicates that no status code was provided even though one was expected.
       </td>
     </tr>
     <tr>
       <td><code>1006</code></td>
       <td>Abnormal Closure</td>
       <td>
-        Indicates that a connection was closed abnormally (that is, with no
+       <strong>Reserved.</strong> Indicates that a connection was closed abnormally (that is, with no
         close frame being sent) when a status code is expected.
       </td>
     </tr>
@@ -105,7 +105,7 @@ A status code. As detailed in the following table, sourced from [the IANA websit
     </tr>
     <tr>
       <td><code>1009</code></td>
-      <td>Message too big</td>
+      <td>Message Too Big</td>
       <td>
         The endpoint is terminating the connection because a data frame was
         received that is too large.
@@ -113,7 +113,7 @@ A status code. As detailed in the following table, sourced from [the IANA websit
     </tr>
     <tr>
       <td><code>1010</code></td>
-      <td>Missing Extension</td>
+      <td>Mandatory Ext.</td>
       <td>
         The client is terminating the connection because it expected the server
         to negotiate one or more extension, but the server didn't.
@@ -129,28 +129,22 @@ A status code. As detailed in the following table, sourced from [the IANA websit
     </tr>
     <tr>
       <td><code>1012</code></td>
-      <td>Service Restart</td>
+      <td><a href="http://www.ietf.org/mail-archive/web/hybi/current/msg09670.html">Service Restart</a></td>
       <td>
-        The server is terminating the connection because it is restarting. [<a
-          href="https://www.ietf.org/mail-archive/web/hybi/current/msg09670.html"
-          >Ref</a
-        >]
+        The server is terminating the connection because it is restarting.
       </td>
     </tr>
     <tr>
       <td><code>1013</code></td>
-      <td>Try Again Later</td>
+      <td><a href="http://www.ietf.org/mail-archive/web/hybi/current/msg09670.html">Try Again Later</a></td>
       <td>
         The server is terminating the connection due to a temporary condition,
-        e.g. it is overloaded and is casting off some of its clients. [<a
-          href="https://www.ietf.org/mail-archive/web/hybi/current/msg09670.html"
-          >Ref</a
-        >]
+        e.g. it is overloaded and is casting off some of its clients.
       </td>
     </tr>
     <tr>
       <td><code>1014</code></td>
-      <td>Bad Gateway</td>
+      <td><a href="https://www.ietf.org/mail-archive/web/hybi/current/msg10748.html">Bad Gateway</a></td>
       <td>
         The server was acting as a gateway or proxy and received an invalid
         response from the upstream server. This is similar to 502 HTTP Status
@@ -159,7 +153,7 @@ A status code. As detailed in the following table, sourced from [the IANA websit
     </tr>
     <tr>
       <td><code>1015</code></td>
-      <td>TLS Handshake</td>
+      <td>TLS handshake</td>
       <td>
         <strong>Reserved.</strong> Indicates that the connection was closed due
         to a failure to perform a TLS handshake (e.g., the server certificate
@@ -167,37 +161,30 @@ A status code. As detailed in the following table, sourced from [the IANA websit
       </td>
     </tr>
     <tr>
-      <td><code>1016</code>–<code>1999</code></td>
+      <td><code>1016</code>–<code>2999</code></td>
       <td></td>
       <td>
-        <strong>Reserved for future use by the WebSocket standard.</strong>
+        For definition by future revisions of the WebSocket Protocol specification, and for definition by extension specifications.
       </td>
-    </tr>
-    <tr>
-      <td><code>2000</code>–<code>2999</code></td>
-      <td></td>
-      <td><strong>Reserved for use by WebSocket extensions.</strong></td>
     </tr>
     <tr>
       <td><code>3000</code>–<code>3999</code></td>
       <td></td>
       <td>
-        Available for use by libraries and frameworks.
-        <strong>May not</strong> be used by applications. Available for
-        registration at the IANA via first-come, first-serve.
+        For use by libraries, frameworks, and applications. These status codes are <a href="https://www.iana.org/assignments/websocket/websocket.xml#close-code-number">registered directly with IANA</a>. The interpretation of these codes is undefined by the WebSocket protocol.
       </td>
     </tr>
     <tr>
       <td><code>4000</code>–<code>4999</code></td>
       <td></td>
-      <td>Available for use by applications.</td>
+      <td>
+         For private use, and thus can't be registered. Such codes can be used by prior agreements between WebSocket applications.  The interpretation of these codes is undefined by the WebSocket protocol.
+      </td>
     </tr>
   </tbody>
 </table>
 
-> **Note:** The 1xxx codes are only WebSocket-internal and not for the same meaning by the transported data (like when the application-layer protocol is invalid). The only permitted codes to be specified in Firefox are 1000 and 3000 to 4999 \[[Source](https://searchfox.org/mozilla-central/rev/bf81d741ff5dd11bb364ef21306da599032fd479/dom/websocket/WebSocket.cpp#2533), [Bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1467107)].
-
-## Examples
+## Example
 
 The following example prints the value of `code` to the console.
 
@@ -214,3 +201,8 @@ WebSocket.onclose = function(event) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [RFC 6455](https://www.rfc-editor.org/rfc/rfc6455.html) (the WebSocket Protocol specification)
+- [WebSocket Close Code Number Registry](https://www.iana.org/assignments/websocket/websocket.xml#close-code-number) (IANA)
