@@ -35,8 +35,6 @@ Content scripts can only access [a small subset of the WebExtension APIs](#webex
 >
 > Because these restrictions include addons.mozilla.org, users may attempt to use your extension immediately after installation—only to find that it doesn't work! You may want to add an appropriate warning, or an [onboarding page](https://extensionworkshop.com/documentation/develop/onboard-upboard-offboard-users/) to move users away from `addons.mozilla.org`.
 
-> **Note:** Values added to the global scope of a content script with `let foo` or `window.foo = "bar"` may disappear due to bug [1408996](https://bugzilla.mozilla.org/show_bug.cgi?id=1408996).
-
 ## Loading content scripts
 
 You can load a content script into a web page in one of three ways:
