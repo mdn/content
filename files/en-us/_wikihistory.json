@@ -28743,6 +28743,36 @@
       "Sheppy"
     ]
   },
+  "Web/API/BatteryManager/chargingchange_event": {
+    "modified": "2020-10-15T21:23:38.402Z",
+    "contributors": [
+      "fscholz",
+      "chrisdavidmills",
+      "Hugues-Antoine",
+      "Fernando_Bernal_Marin",
+      "Sebastianz",
+      "franciov",
+      "teoli",
+      "mounirlamouri",
+      "Sheppy",
+      "Jeremie"
+    ]
+  },
+  "Web/API/BatteryManager/chargingtimechange_event": {
+    "modified": "2020-10-15T21:23:37.770Z",
+    "contributors": [
+      "fscholz",
+      "chrisdavidmills",
+      "Hugues-Antoine",
+      "Fernando_Bernal_Marin",
+      "Sebastianz",
+      "franciov",
+      "teoli",
+      "mounirlamouri",
+      "Sheppy",
+      "Jeremie"
+    ]
+  },
   "Web/API/BatteryManager/dischargingTime": {
     "modified": "2020-10-15T21:22:02.807Z",
     "contributors": [
@@ -28755,6 +28785,22 @@
       "franciov",
       "Jeremie",
       "Sheppy"
+    ]
+  },
+  "Web/API/BatteryManager/dischargingtimechange_event": {
+    "modified": "2020-10-15T21:23:39.078Z",
+    "contributors": [
+      "fscholz",
+      "chrisdavidmills",
+      "tatellos",
+      "Hugues-Antoine",
+      "Fernando_Bernal_Marin",
+      "Sebastianz",
+      "franciov",
+      "teoli",
+      "mounirlamouri",
+      "Sheppy",
+      "Jeremie"
     ]
   },
   "Web/API/BatteryManager/level": {
@@ -28772,53 +28818,7 @@
       "Sheppy"
     ]
   },
-  "Web/API/BatteryManager/onchargingchange": {
-    "modified": "2020-10-15T21:23:38.402Z",
-    "contributors": [
-      "fscholz",
-      "chrisdavidmills",
-      "Hugues-Antoine",
-      "Fernando_Bernal_Marin",
-      "Sebastianz",
-      "franciov",
-      "teoli",
-      "mounirlamouri",
-      "Sheppy",
-      "Jeremie"
-    ]
-  },
-  "Web/API/BatteryManager/onchargingtimechange": {
-    "modified": "2020-10-15T21:23:37.770Z",
-    "contributors": [
-      "fscholz",
-      "chrisdavidmills",
-      "Hugues-Antoine",
-      "Fernando_Bernal_Marin",
-      "Sebastianz",
-      "franciov",
-      "teoli",
-      "mounirlamouri",
-      "Sheppy",
-      "Jeremie"
-    ]
-  },
-  "Web/API/BatteryManager/ondischargingtimechange": {
-    "modified": "2020-10-15T21:23:39.078Z",
-    "contributors": [
-      "fscholz",
-      "chrisdavidmills",
-      "tatellos",
-      "Hugues-Antoine",
-      "Fernando_Bernal_Marin",
-      "Sebastianz",
-      "franciov",
-      "teoli",
-      "mounirlamouri",
-      "Sheppy",
-      "Jeremie"
-    ]
-  },
-  "Web/API/BatteryManager/onlevelchange": {
+  "Web/API/BatteryManager/levelchange_event": {
     "modified": "2020-10-15T21:23:39.415Z",
     "contributors": [
       "mfluehr",
