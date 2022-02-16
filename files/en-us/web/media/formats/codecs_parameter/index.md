@@ -218,9 +218,9 @@ This codec parameter string's components are described in more detail in the tab
           The third digit in <code>CCC</code> indicates the chroma sample
           position, with a value of 0 indicating that the position is unknown
           and must be separately provided during decoding; a value of 1
-          indicating that the sample position is horizontally colocated with the
+          indicating that the sample position is horizontally collocated with the
           (0, 0) luma sample; and a value of 2 indicating that the sample
-          position is colocated with (0, 0) luma.
+          position is collocated with (0, 0) luma.
         </p>
         <p>The default value is <code>110</code> (4:2:0 chroma subsampling).</p>
       </td>
@@ -789,7 +789,7 @@ The first five components are required; everything from `cp` (color primaries) o
             <tr>
               <td><code>01</code></td>
               <td>
-                4:2:0 chroma subsampling with the samples colocated with luma
+                4:2:0 chroma subsampling with the samples collocated with luma
                 (0, 0)
               </td>
             </tr>

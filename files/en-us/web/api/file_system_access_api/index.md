@@ -173,6 +173,13 @@ writableStream.write({ type: "truncate", size: size })
 | ---------------------------------------------------- | ------------------------------------------------ | ------------------- |
 | {{SpecName('File System Access API')}} | {{Spec2('File System Access API')}} | Initial definition. |
 
+## Browser compatibility
+
+{{Compat("api.FileSystemHandle")}}
+{{Compat("api.FileSystemFileHandle")}}
+{{Compat("api.FileSystemDirectoryHandle")}}
+{{Compat("api.FileSystemWritableFileStream")}}
+
 ## See also
 
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

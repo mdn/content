@@ -294,7 +294,12 @@ console.log(aa); // 3
 console.log(bb); // 5
 ```
 
-#### Unpacking fields from objects passed as a function parameter
+#### Unpacking properties from objects passed as a function parameter
+
+Objects passed into function parameters can also be unpacked into variables, which may then be accessed within the function body.
+As for object assignment, the destructuring syntax allows for the new variable to have the same name or a different name than the original property, and to assign default values for the case when the original object does not define the property.
+
+Consider this object, which contains information about a user.
 
 ```js
 const user = {
@@ -305,22 +310,46 @@ const user = {
     lastName: 'Doe'
   }
 };
+```
 
+Here we show how to unpack a property of the passed object into a variable with the same name.
+The parameter value `{id}` indicates that the `id` property of the object passed to the function should be unpacked into a variable with the same name, which can then be used within the function.
+
+```js
 function userId({id}) {
   return id;
 }
 
+console.log(userId(user)); // 42
+```
+
+You can define the name of the unpacked variable.
+Here we unpack the property named `displayName`, and rename it to `dname` for use within the function body.
+
+```js
+function userDisplayName({displayName: dname}) {
+  return dname;
+}
+
+console.log(userDisplayName(user)); // `jdoe`
+```
+
+Nested objects can also be unpacked.
+The example below shows the property `fullname.firstName` being unpacked into a variable called `name`.
+
+```js
 function whois({displayName, fullName: {firstName: name}}) {
   return `${displayName} is ${name}`;
 }
 
-console.log(userId(user)); // 42
 console.log(whois(user));  // "jdoe is John"
 ```
 
-This unpacks the `id`, `displayName` and `firstName` from the user object and prints them.
-
 #### Setting a function parameter's default value
+
+Default values can be specified using `=`, and will be used as variable values if a specified property does not exist in the passed object.
+
+Below we show a function where the default size is `'big'`, default co-ordinates are `x: 0, y: 0` and default radius is 25.
 
 ```js
 function drawChart({size = 'big', coords = {x: 0, y: 0}, radius = 25} = {}) {
@@ -342,7 +371,9 @@ drawChart({
 >
 > You could have also written the function without the right-hand side assignment.
 > However, if you leave out the right-hand side assignment, the function will look for at least one argument to be supplied when invoked, whereas in its current form, you can call **`drawChart()`** without supplying any parameters.
-> The current design is useful if you want to be able to call the function without supplying any parameters. The other can be useful when you want to ensure an object is passed to the function.
+> The current approach is useful if you want to be able to call the function without supplying any parameters.
+> The other approach is useful when you want to ensure an object is passed to the function.
+> For more information see [Default parameters > Destructured parameter with default value assignment](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters#destructured_parameter_with_default_value_assignment).
 
 #### Nested object and array destructuring
 

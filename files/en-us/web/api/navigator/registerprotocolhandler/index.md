@@ -78,6 +78,8 @@ For example, `web+burger`, as shown in the {{anch("Example")}} below.
 Otherwise, the scheme must be one of the following:
 
 - `bitcoin`
+- `ftp`
+- `ftps`
 - `geo`
 - `im`
 - `irc`
@@ -89,6 +91,7 @@ Otherwise, the scheme must be one of the following:
 - `news`
 - `nntp`
 - `openpgp4fpr`
+- `sftp`
 - `sip`
 - `sms`
 - `smsto`

@@ -4,7 +4,6 @@ slug: Web/API/Animation/ready
 tags:
   - API
   - Animation
-  - Experimental
   - Property
   - Ready
   - Ready Promise
@@ -13,9 +12,9 @@ tags:
   - web animations api
 browser-compat: api.Animation.ready
 ---
-{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
+{{ APIRef("Web Animations") }}
 
-The read-only **`Animation.ready`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns a {{jsxref("Promise")}} which resolves when the animation is ready to play. A new promise is created every time the animation enters the `"pending"` [play state](/en-US/docs/Web/API/Animation/playState) as well as when the animation is canceled, since in both of those scenarios, the animation is ready to be started again.
+The read-only **`Animation.ready`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns a {{jsxref("Promise")}} which resolves when the animation is ready to play. A new promise is created every time the animation enters the `"pending"` [play state](/en-US/docs/Web/API/Animation/playState) as well as when the animation is canceled, since in both of those scenarios, the animation is ready to be started again.
 
 > **Note:** Since the same {{jsxref("Promise")}} is used for both pending `play` and pending `pause` requests, authors are advised to check the state of the animation when the promise is resolved.
 

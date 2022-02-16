@@ -73,7 +73,7 @@ for (let input of sources.entries()) {
 }
 ```
 
-For each input in the llist, gamepad inputs are dispatched to
+For each input in the list, gamepad inputs are dispatched to
 a `checkGamepad()` with the input's {{domxref("Gamepad")}} object, taken from
 its {{domxref("XRInputSource.gamepad", "gamepad")}} property, as an input
 

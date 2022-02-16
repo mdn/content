@@ -47,10 +47,16 @@ const asyncIterable = {
   [Symbol.asyncIterator]() {
     return {
       i: 0,
-      async next() {
-        const done = this.i === LIMIT;
-        const value = done ? undefined : this.i++;
-        return { value, done };
+      next() {
+        if (this.i < 3) {
+          return Promise.resolve({ value: this.i++, done: false });
+        }
+
+        return Promise.resolve({ done: true });
+      },
+      return() {
+        // This will be reached if the consumer called 'break' or 'return' early in the loop.
+        return { done: true }
       }
     };
   }

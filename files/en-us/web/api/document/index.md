@@ -130,16 +130,6 @@ _The `Document` interface is extended with additional event handlers defined in 
   - : Represents the event handling code for the {{domxref("Document/afterscriptexecute_event", "afterscriptexecute")}} event.
 - {{DOMxRef("Document.onbeforescriptexecute")}} {{Non-standard_Inline}}
   - : Represents the event handling code for the {{domxref("Document/beforescriptexecute_event", "beforescriptexecute")}} event.
-- {{DOMxRef("Document.oncopy")}} {{Non-standard_Inline}}
-  - : Represents the event handling code for the {{domxref("Document/copy_event", "copy")}} event.
-- {{DOMxRef("Document.oncut")}} {{Non-standard_Inline}}
-  - : Represents the event handling code for the {{domxref("Document/cut_event", "cut")}} event.
-- {{DOMxRef("Document.onfullscreenchange")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Document/fullscreenchange_event", "fullscreenchange")}} event is raised.
-- {{DOMxRef("Document.onfullscreenerror")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Document/fullscreenerror_event", "fullscreenerror")}} event is raised.
-- {{DOMxRef("Document.onpaste")}} {{Non-standard_Inline}}
-  - : Represents the event handling code for the {{domxref("Document/paste_event", "paste")}} event.
 - {{DOMxRef("Document.onreadystatechange")}}
   - : Represents the event handling code for the {{domxref("Document/readystatechange_event", "readystatechange")}} event.
 - {{DOMxRef("GlobalEventHandlers.onselectionchange")}} {{Experimental_Inline}}
@@ -164,7 +154,7 @@ _The `Document` interface is extended with additional event handlers defined in 
 - {{DOMxRef("Document.fgColor")}} {{Deprecated_Inline}}
   - : Gets/sets the foreground color, or text color, of the current document.
 - {{DOMxRef("Document.fullscreen")}} {{deprecated_inline}}
-  - : `true` when the document is in {{DOMxRef("Using_full-screen_mode","full-screen mode")}}.
+  - : `true` when the document is in [fullscreen mode](/en-US/docs/Web/API/Fullscreen_API).
 - {{DOMxRef("Document.height")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : Gets/sets the height of the current document.
 - {{DOMxRef("Document.characterSet", "Document.inputEncoding")}} {{Deprecated_Inline}}{{ReadOnlyInline}}
@@ -358,13 +348,10 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{DOMxRef("Document/copy_event", "copy")}}
   - : Fired when the user initiates a copy action through the browser's user interface.
-    Also available via the {{DOMxRef("HTMLElement/oncopy", "oncopy")}} property.
 - {{DOMxRef("Document/cut_event", "cut")}}
   - : Fired when the user initiates a cut action through the browser's user interface.
-    Also available via the {{DOMxRef("HTMLElement/oncut", "oncut")}} property.
 - {{DOMxRef("Document/paste_event", "paste")}}
   - : Fired when the user initiates a paste action through the browser's user interface.
-    Also available via the {{DOMxRef("HTMLElement/onpaste", "onpaste")}} property.
 
 ### Drag & drop events
 
@@ -393,11 +380,9 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 ### Fullscreen events
 
 - {{DOMxRef("Document/fullscreenchange_event", "fullscreenchange")}}
-  - : Fired when the `Document` transitions into or out of [full-screen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
-    Also available via the {{DOMxRef("Document.onfullscreenchange", "onfullscreenchange")}} property.
-- [`fullscreenerror`](/en-US/docs/Web/API/Document/fullscreenerror_event)
-  - : Fired if an error occurs while attempting to switch into or out of [full-screen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
-    Also available via the {{DOMxRef("Document.onfullscreenerror", "onfullscreenerror")}} property.
+  - : Fired when the `Document` transitions into or out of [fullscreen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
+- {{DOMxRef("Document/fullscreenerror_event", "fullscreenerror")}}
+  - : Fired if an error occurs while attempting to switch into or out of [fullscreen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
 
 ### Keyboard events
 

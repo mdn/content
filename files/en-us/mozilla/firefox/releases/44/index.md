@@ -165,7 +165,7 @@ Highlights:
 - {{domxref("FormData")}} objects now support a pair iterator, meaning that the methods {{domxref("FormData.entries()")}}, {{domxref("FormData.keys")}}, and {{domxref("FormData.values()")}} are now available; {{jsxref("Symbol.iterator")}} now also returns the default iterator for them ({{bug(1127703)}}).
 - When {{domxref("XMLHttpRequest.send()")}} is used with an HTML document, it now uses `text/html` instead of `application/xml` ({{bug(918771)}}).
 - Speech synthesis (text-to-speech) has been implemented in Firefox Desktop for Mac and Linux, hidden behind the `media.webspeech.synth.enabled` flag in `about:config` ({{bug("1003452")}}, {{bug("1003464")}}.) See [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) for more information.
-- Elements inside a {{HTMLElement("frame")}} or an {{HTMLElement('object')}} can't be set full-screen anymore ({{bug(1212299)}}).
+- Elements inside a {{HTMLElement("frame")}} or an {{HTMLElement('object')}} can't be set fullscreen anymore ({{bug(1212299)}}).
 - Sanitization of WOFF fonts is a bit more stricter, leading to more incorrect fonts being rejected, this sanitization is made a bit less stricter in Firefox 46 ({{bug(1193050)}} and {{bug (1244693)}}).
 
 ### MathML

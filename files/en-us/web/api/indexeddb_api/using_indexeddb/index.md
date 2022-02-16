@@ -80,10 +80,10 @@ The second parameter to the open method is the version of the database. The vers
 The first thing you'll want to do with almost all of the requests you generate is to add success and error handlers:
 
 ```js
-request.onerror = function(event) {
+request.onerror = event => {
   // Do something with request.errorCode!
 };
-request.onsuccess = function(event) {
+request.onsuccess = event => {
   // Do something with request.result!
 };
 ```
@@ -99,10 +99,10 @@ Now, assuming that the user allowed your request to create a database, and you'v
 ```js
 var db;
 var request = indexedDB.open("MyTestDatabase");
-request.onerror = function(event) {
+request.onerror = event => {
   console.log("Why didn't you allow my web app to use IndexedDB?!");
 };
-request.onsuccess = function(event) {
+request.onsuccess = event => {
   db = event.target.result;
 };
 ```
@@ -112,7 +112,7 @@ request.onsuccess = function(event) {
 As mentioned above, error events bubble. Error events are targeted at the request that generated the error, then the event bubbles to the transaction, and then finally to the database object. If you want to avoid adding error handlers to every request, you can instead add a single error handler on the database object, like so:
 
 ```js
-db.onerror = function(event) {
+db.onerror = event => {
   // Generic error handler for all errors targeted at this database's
   // requests!
   console.error("Database error: " + event.target.errorCode);
@@ -127,7 +127,7 @@ When you create a new database or increase the version number of an existing dat
 
 ```js
 // This event is only implemented in recent browsers
-request.onupgradeneeded = function(event) {
+request.onupgradeneeded = event => {
   // Save the IDBDatabase interface
   var db = event.target.result;
 
@@ -220,10 +220,10 @@ const dbName = "the_name";
 
 var request = indexedDB.open(dbName, 2);
 
-request.onerror = function(event) {
+request.onerror = event => {
   // Handle errors.
 };
-request.onupgradeneeded = function(event) {
+request.onupgradeneeded = event => {
   var db = event.target.result;
 
   // Create an objectStore to hold information about our customers. We're
@@ -241,7 +241,7 @@ request.onupgradeneeded = function(event) {
 
   // Use transaction oncomplete to make sure the objectStore creation is
   // finished before adding data into it.
-  objectStore.transaction.oncomplete = function(event) {
+  objectStore.transaction.oncomplete = event => {
     // Store values in the newly created objectStore.
     var customerObjectStore = db.transaction("customers", "readwrite").objectStore("customers");
     customerData.forEach(function(customer) {
@@ -271,7 +271,7 @@ We can create another object store with the key generator as below:
 // Open the indexedDB.
 var request = indexedDB.open(dbName, 3);
 
-request.onupgradeneeded = function (event) {
+request.onupgradeneeded = event => {
 
   var db = event.target.result;
 
@@ -298,7 +298,7 @@ To change the "schema" or structure of the database—which involves creating or
 
 To read the records of an existing object store, the transaction can either be in `readonly` or `readwrite` mode. To make changes to an existing object store, the transaction must be in `readwrite` mode. You open such transactions with {{domxref("IDBDatabase.transaction")}}. The method accepts two parameters: the `storeNames` (the scope, defined as an array of object stores that you want to access) and the `mode` (`readonly` or `readwrite`) for the transaction. The method returns a transaction object containing the {{domxref("IDBIndex.objectStore")}} method, which you can use to access your object store. By default, where no mode is specified, transactions open in `readonly` mode.
 
-> **Note:** As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see {{Bug("1112702")}}.) Previously in a `readwrite` transaction {{domxref("IDBTransaction.oncomplete")}} was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the `complete` event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The `complete` event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare most consumers should not need to concern themselves further. If you must ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the `complete` event by creating a transaction using the experimental (non-standard) `readwriteflush` mode (see {{domxref("IDBDatabase.transaction")}}).
+> **Note:** As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see {{Bug("1112702")}}.) Previously in a `readwrite` transaction, a {{domxref("IDBTransaction.complete_event", "complete")}} event was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the `complete` event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The `complete` event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare most consumers should not need to concern themselves further. If you must ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the `complete` event by creating a transaction using the experimental (non-standard) `readwriteflush` mode (see {{domxref("IDBDatabase.transaction")}}).
 
 You can speed up data access by using the right scope and mode in the transaction. Here are a couple of tips:
 
@@ -326,18 +326,18 @@ Now that you have a transaction, you'll need to get the object store from it. Tr
 
 ```js
 // Do something when all the data is added to the database.
-transaction.oncomplete = function(event) {
+transaction.oncomplete = event => {
   console.log("All done!");
 };
 
-transaction.onerror = function(event) {
+transaction.onerror = event => {
   // Don't forget to handle errors!
 };
 
 var objectStore = transaction.objectStore("customers");
-customerData.forEach(function(customer) {
+customerData.forEach(customer => {
   var request = objectStore.add(customer);
-  request.onsuccess = function(event) {
+  request.onsuccess = event => {
     // event.target.result === customer.ssn;
   };
 });
@@ -353,7 +353,7 @@ Removing data is very similar:
 var request = db.transaction(["customers"], "readwrite")
                 .objectStore("customers")
                 .delete("444-44-4444");
-request.onsuccess = function(event) {
+request.onsuccess = event => {
   // It's gone!
 };
 ```
@@ -366,10 +366,10 @@ Now that the database has some info in it, you can retrieve it in several ways. 
 var transaction = db.transaction(["customers"]);
 var objectStore = transaction.objectStore("customers");
 var request = objectStore.get("444-44-4444");
-request.onerror = function(event) {
+request.onerror = event => {
   // Handle errors!
 };
-request.onsuccess = function(event) {
+request.onsuccess = event => {
   // Do something with the request.result!
   console.log("Name for SSN 444-44-4444 is " + request.result.name);
 };
@@ -378,7 +378,7 @@ request.onsuccess = function(event) {
 That's a lot of code for a "simple" retrieval. Here's how you can shorten it up a bit, assuming that you handle errors at the database level:
 
 ```js
-db.transaction("customers").objectStore("customers").get("444-44-4444").onsuccess = function(event) {
+db.transaction("customers").objectStore("customers").get("444-44-4444").onsuccess = event => {
   console.log("Name for SSN 444-44-4444 is " + event.target.result.name);
 };
 ```
@@ -397,10 +397,10 @@ Now we've retrieved some data, updating it and inserting it back into the Indexe
 ```js
 var objectStore = db.transaction(["customers"], "readwrite").objectStore("customers");
 var request = objectStore.get("444-44-4444");
-request.onerror = function(event) {
+request.onerror = event => {
   // Handle errors!
 };
-request.onsuccess = function(event) {
+request.onsuccess = event => {
   // Get the old value that we want to update
   var data = event.target.result;
 
@@ -409,10 +409,10 @@ request.onsuccess = function(event) {
 
   // Put this updated object back into the database.
   var requestUpdate = objectStore.put(data);
-  requestUpdate.onerror = function(event) {
+  requestUpdate.onerror = event => {
      // Do something with the error
   };
-  requestUpdate.onsuccess = function(event) {
+  requestUpdate.onsuccess = event => {
      // Success - the data is updated!
   };
 };
@@ -429,7 +429,7 @@ Using `get()` requires that you know which key you want to retrieve. If you want
 ```js
 var objectStore = db.transaction("customers").objectStore("customers");
 
-objectStore.openCursor().onsuccess = function(event) {
+objectStore.openCursor().onsuccess = event => {
   var cursor = event.target.result;
   if (cursor) {
     console.log("Name for SSN " + cursor.key + " is " + cursor.value.name);
@@ -448,7 +448,7 @@ One common pattern with cursors is to retrieve all objects in an object store an
 ```js
 var customers = [];
 
-objectStore.openCursor().onsuccess = function(event) {
+objectStore.openCursor().onsuccess = event => {
   var cursor = event.target.result;
   if (cursor) {
     customers.push(cursor.value);
@@ -463,7 +463,7 @@ objectStore.openCursor().onsuccess = function(event) {
 > **Note:** Alternatively, you can use `getAll()` to handle this case (and `getAllKeys()`) . The following code does precisely the same thing as above:
 >
 > ```js
-> objectStore.getAll().onsuccess = function(event) {
+> objectStore.getAll().onsuccess = event => {
 >   console.log("Got all customers: " + event.target.result);
 > };
 > ```
@@ -481,7 +481,7 @@ Storing customer data using the SSN as a key is logical since the SSN uniquely i
 
 var index = objectStore.index("name");
 
-index.get("Donna").onsuccess = function(event) {
+index.get("Donna").onsuccess = event => {
   console.log("Donna's SSN is " + event.target.result.ssn);
 };
 ```
@@ -492,7 +492,7 @@ If you need to access all the entries with a given `name` you can use a cursor. 
 
 ```js
 // Using a normal cursor to grab whole customer record objects
-index.openCursor().onsuccess = function(event) {
+index.openCursor().onsuccess = event => {
   var cursor = event.target.result;
   if (cursor) {
     // cursor.key is a name, like "Bill", and cursor.value is the whole object.
@@ -502,7 +502,7 @@ index.openCursor().onsuccess = function(event) {
 };
 
 // Using a key cursor to grab customer record object keys
-index.openKeyCursor().onsuccess = function(event) {
+index.openKeyCursor().onsuccess = event => {
   var cursor = event.target.result;
   if (cursor) {
     // cursor.key is a name, like "Bill", and cursor.value is the SSN.
@@ -534,7 +534,7 @@ var upperBoundOpenKeyRange = IDBKeyRange.upperBound("Donna", true);
 var boundKeyRange = IDBKeyRange.bound("Bill", "Donna", false, true);
 
 // To use one of the key ranges, pass it in as the first argument of openCursor()/openKeyCursor()
-index.openCursor(boundKeyRange).onsuccess = function(event) {
+index.openCursor(boundKeyRange).onsuccess = event => {
   var cursor = event.target.result;
   if (cursor) {
     // Do something with the matches.
@@ -546,7 +546,7 @@ index.openCursor(boundKeyRange).onsuccess = function(event) {
 Sometimes you may want to iterate in descending order rather than in ascending order (the default direction for all cursors). Switching direction is accomplished by passing `prev` to the `openCursor()` function as the second argument:
 
 ```js
-objectStore.openCursor(boundKeyRange, "prev").onsuccess = function(event) {
+objectStore.openCursor(boundKeyRange, "prev").onsuccess = event => {
   var cursor = event.target.result;
   if (cursor) {
     // Do something with the entries.
@@ -558,7 +558,7 @@ objectStore.openCursor(boundKeyRange, "prev").onsuccess = function(event) {
 If you just want to specify a change of direction but not constrain the results shown, you can just pass in null as the first argument:
 
 ```js
-objectStore.openCursor(null, "prev").onsuccess = function(event) {
+objectStore.openCursor(null, "prev").onsuccess = event => {
   var cursor = event.target.result;
   if (cursor) {
     // Do something with the entries.
@@ -570,7 +570,7 @@ objectStore.openCursor(null, "prev").onsuccess = function(event) {
 Since the "name" index isn't unique, there might be multiple entries where `name` is the same. Note that such a situation cannot occur with object stores since the key must always be unique. If you wish to filter out duplicates during cursor iteration over indexes, you can pass `nextunique` (or `prevunique` if you're going backwards) as the direction parameter. When `nextunique` or `prevunique` is used, the entry with the lowest key is always the one returned.
 
 ```js
-index.openKeyCursor(null, "nextunique").onsuccess = function(event) {
+index.openKeyCursor(null, "nextunique").onsuccess = event => {
   var cursor = event.target.result;
   if (cursor) {
     // Do something with the entries.
@@ -588,19 +588,19 @@ When your web app changes in such a way that a version change is required for yo
 ```js
 var openReq = mozIndexedDB.open("MyTestDatabase", 2);
 
-openReq.onblocked = function(event) {
+openReq.onblocked = event => {
   // If some other tab is loaded with the database, then it needs to be closed
   // before we can proceed.
   console.log("Please close all other tabs with this site open!");
 };
 
-openReq.onupgradeneeded = function(event) {
+openReq.onupgradeneeded = event => {
   // All other databases have been closed. Set everything up.
   db.createObjectStore(/* ... */);
   useDatabase(db);
 };
 
-openReq.onsuccess = function(event) {
+openReq.onsuccess = event => {
   var db = event.target.result;
   useDatabase(db);
   return;
@@ -610,7 +610,7 @@ function useDatabase(db) {
   // Make sure to add a handler to be notified if another page requests a version
   // change. We must close the database. This allows the other page to upgrade the database.
   // If you don't do this then the upgrade won't happen until the user closes the tab.
-  db.onversionchange = function(event) {
+  db.onversionchange = event => {
     db.close();
     console.log("A new version of this page is ready. Please reload or close this tab!");
   };
@@ -633,7 +633,7 @@ When the browser shuts down (because the user chose the Quit or Exit option), th
 
 1. Each transaction on every affected database (or all open databases, in the case of browser shutdown) is aborted with an `AbortError`. The effect is the same as if {{domxref("IDBTransaction.abort()")}} is called on each transaction.
 2. Once all of the transactions have completed, the database connection is closed.
-3. Finally, the {{domxref("IDBDatabase")}} object representing the database connection receives a {{event("close")}} event. You can use the {{domxref("IDBDatabase.onclose")}} event handler to listen for these events, so that you know when a database is unexpectedly closed.
+3. Finally, the {{domxref("IDBDatabase")}} object representing the database connection receives a {{event("close")}} event. You can use the {{domxref("IDBDatabase.close_event", "IDBDatabase.onclose")}} event handler to listen for these events, so that you know when a database is unexpectedly closed.
 
 The behavior described above is new, and is only available as of the following browser releases: Firefox 50, Google Chrome 31 (approximately).
 
@@ -647,7 +647,7 @@ Second, you should never tie database transactions to unload events. If the unlo
 
 In fact, there is no way to guarantee that IndexedDB transactions will complete, even with normal browser shutdown. See {{ bug(870645) }}. As a workaround for this normal shutdown notification, you might track your transactions and add a `beforeunload` event to warn the user if any transactions have not yet completed at the time of unloading.
 
-At least with the addition of the abort notifications and {{domxref("IDBDatabase.onclose")}}, you can know when this has happened.
+At least with the addition of the abort notifications and {{domxref("IDBDatabase.close_event", "IDBDatabase.onclose")}}, you can know when this has happened.
 
 ## Locale-aware sorting
 

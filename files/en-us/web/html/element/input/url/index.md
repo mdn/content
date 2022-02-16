@@ -36,7 +36,10 @@ On browsers that don't support inputs of type `url`, a `url` input falls back to
     </tr>
     <tr>
       <td><strong>Events</strong></td>
-      <td>{{event("change")}} and {{event("input")}}</td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} and
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
     </tr>
     <tr>
       <td><strong>Supported Common Attributes</strong></td>

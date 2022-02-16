@@ -25,7 +25,7 @@ This interface is accessible through the {{domxref("VRDisplay.stageParameters")}
 - {{domxref("VRStageParameters.sittingToStandingTransform")}} {{deprecated_inline}}{{readonlyInline}}
   - : Contains a matrix that transforms the sitting-space view matrices of {{domxref("VRFrameData")}} to standing-space.
 - {{domxref("VRStageParameters.sizeX")}} {{deprecated_inline}}{{readonlyInline}}
-  - : *Returns the w*idth of the play-area bounds in meters.
+  - : _Returns the width_ of the play-area bounds in meters.
 - {{domxref("VRStageParameters.sizeY")}} {{deprecated_inline}}{{readonlyInline}}
   - : _Returns the depth_ of the play-area bounds in meters.
 

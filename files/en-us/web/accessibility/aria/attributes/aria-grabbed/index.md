@@ -34,7 +34,7 @@ The `aria-grabbed` property is expected to be replaced by a new feature in a fut
 - `false`
   - : The element is not currently selected for dragging, but can be made available for dragging by setting the property to `true`.
 - `undefined` (default)
-  - : The element does not support being dragge
+  - : The element does not support being dragged
 
 ## Associated roles
 

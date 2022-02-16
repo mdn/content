@@ -179,7 +179,7 @@ and whether decoding will be smooth and power efficient:</p>
     </select>
   </li>
   </ul>
-  <p><input type="button" value="Test this Video Configuration" id="tryit"></p>
+  <p><input type="button" value="Test this Video Configuration" id="try-it"></p>
 </form>
 
 <ul id="results"></ul>
@@ -191,9 +191,9 @@ and whether decoding will be smooth and power efficient:</p>
 let mc = {
   videoConfiguration : new Object(),
 
-  tryit: function () {
+  tryIt: function () {
    mc.createConfiguration();
-   mc.testit();
+   mc.testIt();
   },
 
   createConfiguration: function () {
@@ -210,7 +210,7 @@ let mc = {
     }
   },
 
-  testit: function () {
+  testIt: function () {
     let content = '';
     navigator.mediaCapabilities.decodingInfo(mc.videoConfiguration).then(result => {
       var li = document.createElement('li'),
@@ -232,7 +232,7 @@ let mc = {
   }
 }
 
-document.getElementById('tryit').addEventListener('click', mc.tryit);
+document.getElementById('try-it').addEventListener('click', mc.tryIt);
 ```
 
 ### Live Result

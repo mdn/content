@@ -71,7 +71,7 @@ _Also implements methods from the interface_ {{domxref("EventTarget")}}.
 - {{domxref("BaseAudioContext.createOscillator()")}}
   - : Creates an {{domxref("OscillatorNode")}}, a source representing a periodic waveform. It basically generates a tone.
 - {{domxref("BaseAudioContext.createPanner()")}}
-  - : Creates a {{domxref("PannerNode")}}, which is used to spatialise an incoming audio stream in 3D space.
+  - : Creates a {{domxref("PannerNode")}}, which is used to spatialize an incoming audio stream in 3D space.
 - {{domxref("BaseAudioContext.createPeriodicWave()")}}
   - : Creates a {{domxref("PeriodicWave")}}, used to define a periodic waveform that can be used to determine the output of an {{ domxref("OscillatorNode") }}.
 - {{domxref("BaseAudioContext.createScriptProcessor()")}} {{deprecated_inline}}
