@@ -38,129 +38,130 @@ After that we'll look at how in JavaScript constructors and the prototype chain 
   </tbody>
 </table>
 
-Object-oriented programming is about modeling a system as a collection of objects, which each represent some particular aspect of the system. Objects contain both functions (or methods) and data. An object provides a public interface to other code that wants to use it, but it maintains its own private internal state: this means that other parts of the system don't have to care about what is going on inside the object.
+Object-oriented programming is about modeling a system as a collection of objects, which each represent some particular aspect of the system. Objects contain both functions (or methods) and data (together `members`). An object provides a public interface to other code that wants to use it, but it maintains its own private internal state: this means that other parts of the system don't have to care about what is going on inside the object.
 
 ## Classes and instances
 
-In OOP, when we model a problem in terms of objects we create abstract definitions representing the types of object we want to have in our system. For example, if we were modeling a school, we might want to have objects representing professors. Every professor has some properties in common: they all have a name and a subject that they teach. Also, every professor can do certain things: for example, they can all grade a paper, and they can introduce themselves to their students at the start of the year.
+In OOP, when we model a problem in terms of objects we create abstract definitions representing the types of object we want to have in our system. For example, if we were modeling a planometry objects, we might want to have objects representing rectangles. Every rectangle has property `points` (array of points). Also, every rectangle can do certain things: calculate it's area.
 
-So `Professor` could be a **class** in our system, and the definition of the class lists the data and methods that every professor has.
+So `Rectangle` could be a **class** in our system, and the definition of the class lists the data and methods that every rectangle has.
 
-So in pseudocode a `Professor` class could be written like this:
+So in pseudocode a `Rectangle` class could be written like this:
 
 ```
-class Professor
+class Rectangle
     properties
-        name
-        teaches
+        points
     methods
-        grade(paper)
-        introduceSelf()
+        area()
 ```
 
-This defines a `Professor` class with:
+This defines a `Rectangle` class with:
 
-- two data properties: `name` and `teaches`
-- two methods: `grade()` to grade a paper, and `introduceSelf()` to introduce themselves.
+- property: `points` (array of Points);
+- method: `area()` to calculate rectangle area.
 
-On its own, a class doesn't do anything. It's a kind of template for creating concrete objects of that type. Each concrete professor we create is called an **instance** of the `Professor` class. The process of creating an instance is performed by a special function called a **constructor**. We pass the constructor values for any internal state that we want to initialize in the new instance.
+On its own, a class doesn't do anything. It's a kind of template for creating concrete objects of that type. Each concrete rectangle we create is called an **instance** of the `Rectangle` class. The process of creating an instance is performed by a special function called a **constructor**. We pass the constructor values for any internal state that we want to initialize in the new instance.
 
 Generally, the constructor is written out as part of the class definition, and it usually has the same name as the class itself:
 
 ```
-class Professor
+class Rectangle
     properties
-        name
-        teaches
+        points
     constructor
-        Professor(name, teaches)
+        Rectangle(x1, y1, x2, y2)
     methods
-        grade(paper)
-        introduceSelf()
+        area()
 ```
 
-This constructor takes two parameters so we can initialize the `name` and `teaches` properties when we create a new concrete professor.
+This constructor takes four parameters so we can initialize four points based on two pairs of coordinates (`x, y`) and store them into property `points` when we create a new concrete rectangle.
 
-Now we have a constructor we can create some professors. Programming languages often use the keyword `new` to signal that a constructor is being called.
+Now we have a constructor we can create some rectangles. Programming languages often use the keyword `new` to signal that a constructor is being called.
 
 ```js
-walsh = new Professor('Walsh', 'Psychology')
-lillian = new Professor('Lillian', 'Poetry')
+const rectangle = new Rectangle(10, 10, 30, -10);
 
-walsh.teaches  // 'Psychology'
-walsh.introduceSelf()  // 'My name is Professor Walsh, and I will be your Psychology professor'
+console.log(rectangle.points.length);  // 4
+console.log(rectangle.points.area());  // 400
 
-lillian.teaches  // 'Poetry'
-lillian.introduceSelf()  // 'My name is Professor Lillian, and I will be your Poetry professor'
+console.log(rectangle);
 ```
 
-This creates two objects, both instances of the `Professor` class.
+Output:
+
+```
+Rectangle {
+  points: [
+    { x: 10, y: 10 },
+    { x: 30, y: 10 },
+    { x: 30, y: -10 },
+    { x: 10, y: -10 }
+  ]
+}
+```
+
+This creates object, an instance of the `Rectangle` class, access its property and call methods.
 
 ## Inheritance
 
-Suppose in our school we also want to represent students. Unlike professors, students can't grade papers, don't teach a particular subject, and belong to a particular year.
-
-However, students do have a name and might also want to introduce themselves. So we might write out the definition of a student class like this:
+Suppose we also want to represent triangles. Unlike rectangles, triangles have just three vertices, and we have a different formula to calculate its area. However, triangles do have a list of points (vertices). So we might write out the definition of a triangle class like this:
 
 ```
-class Student
+class Triangle
     properties
-        name
-        year
+        points
     constructor
-        Student(name, year)
+        Triangle(x1, y1, x2, y2, x3, y3)
     methods
-        introduceSelf()
+        area()
 ```
 
-It would be helpful if we could represent the fact that students and professors share some properties: or more accurately, the fact that at some level they are the _same kind of thing_. **Inheritance** lets us do this.
+It would be helpful if we could represent the fact that triangles and rectangles share some properties: or more accurately, the fact that at some level they are the _same kind of thing_. **Inheritance** lets us do this.
 
-We start by observing that students and professors are both people, and people have names and want to introduce themselves. We can then model that by defining a new class `Person`, where we define all the common properties of people. Then `Professor` and `Student` can both **derive** from `Person`, adding their extra properties:
+We start by observing that triangles and rectangles are both polygons, and polygons have vertices and we have a generic formula to calculate area of any polygon. We can then model that by defining a new class `Polygon`, where we define all the common properties of polygon. Then `Rectangle` and `Triangle` can both **derive** from `Polygon`, adding their extra properties:
 
 ```
-class Person
+class Polygon
     properties
-        name
+        points
     constructor
-        Person(name)
+        Polygon(...points)
     methods
-        introduceSelf()
+        area()
 
-class Professor : extends Person
+class Rectangle
     properties
-        teaches
-    constructor
-        Professor(name, teaches)
+        points
+    constructor : extends Polygon
+        Rectangle(x1, y1, x2, y2)
     methods
-        grade(paper)
-        introduceSelf()
+        area()
 
-class Student : extends Person
+class Triangle : extends Polygon
     properties
-        year
+        points
     constructor
-        Student(name, year)
-    methods
-        introduceSelf()
+        Triangle(x1, y1, x2, y2, x3, y3)
 ```
 
-In this case we would say that `Person` is the **superclass** or **parent class** of both `Professor` and `Student`. Conversely `Professor` and `Student` are **subclasses** or **child classes** of `Person`.
+In this case we would say that `Polygon` is the **superclass** or **parent class** of both `Rectangle` and `Triangle`. Conversely `Rectangle` and `Triangle` are **subclasses** or **child classes** of `Polygon`.
 
-You might notice that `introduceSelf()` is defined in all three classes. The reason is that while all people want to introduce themselves, the way they do it is different:
+You might notice that `area()` is defined in `Polygon` and `Rectangle` classes. The reason is that `Polygon` implements generic `area()` method containing common formial for any polygon (including `Triangle`), while `Rectangle` has its own short method to calculate area:
 
 ```js
-walsh = new Professor('Walsh', 'Psychology')
-walsh.introduceSelf()  // 'My name is Professor Walsh, and I will be your Psychology professor'
+const triangle = new Triangle(0, 0, 15, 0, 0, 15);
+triangle.area();  // 112.5
 
-summers = new Student('Summers', 1)
-summers.introduceSelf() // 'My name is Summers, and I'm in the first year'
+const rectangle = new Rectangle(10, 10, 30, -10);
+rectangle.area();  // 400
 ```
 
-We might have a default implementation of `introduceSelf()` for people who aren't students _or_ professors:
+We might have a default implementation of `area()` for other shapes or use generic one inherited from `Polygon`.
 
 ```js
-pratt = new Person('Pratt')
-pratt.introduceSelf() // 'My name is Pratt'
+const polygon = new Polygon({ x: 0, y: 0 }, { x: 15, y: 0 }, { x: 0, y: 15 });
+polygon.area();  // 112.5
 ```
 
 This feature - when a method has the same name, but a different implementation in different classes - is called **polymorphism**. When a method in a subclass replaces the implementation of the version in the superclass, we say that the subclass **overrides** the version in the superclass.
@@ -171,49 +172,47 @@ Objects provide an interface to other code that wants to use them, but maintain 
 
 This is a useful feature because it enables the programmer to change the internal implementation of an object without having to find and update all the code that uses it: it creates a kind of firewall between this object and the rest of the system.
 
-For example, suppose students are allowed to study archery if they are in the second year or above. We could implement this just by exposing the student's `year` property, and other code could examine that to decide whether the student can take the course:
+For example let's add triangles ability to validate number of vertices. We could implement this just by accessing the triangle's `points` property, and other code could examine its length:
 
 ```js
-if (student.year > 1) {
-    // allow the student into the class
+if (polygon.points.length === 3) {
+  // it is triangle
 }
 ```
 
-The problem is, if we decide to change the criteria for allowing students to study archery - for example by also requiring the parent or guardian to give their permission - we'd need to update every place in our system that performs this test. It would be better to have a `canStudyArchery()` method on `Student` objects, that implements the logic in one place:
+The problem is, if we decide to change the criteria, we'd need to update every place in our system that performs this test. It would be better to have a `validateTriangle()` method on `Triangle` objects, that implements the logic in one place:
 
 ```
-class Student : extends Person
+class Triangle : extends Polygon
     properties
-       year
+        points
     constructor
-        Student(name, year)
+        Triangle(x1, y1, x2, y2, x3, y3)
     methods
-       introduceSelf()
-       canStudyArchery() { return this.year < 1 }
+        area()
+        validTriangle() { return this.points.length === 3; }
 ```
 
 ```js
-if (student.canStudyArchery()) {
-    // allow the student into the class
+if (triangle.validTriangle()) {
+  // it is triangle
 }
 ```
-
-That way, if we want to change the rules about studying archery, we only have to update the `Student` class, and all the code using it will still work.
 
 In many OOP languages, we can prevent other code from accessing an object's internal state by marking some properties as `private`. This will generate an error if code outside the object tries to access them:
 
 ```
-class Student : extends Person
+class Triangle : extends Polygon
     properties
-       private year
+        private points
     constructor
-        Student(name, year)
+        Triangle(x1, y1, x2, y2, x3, y3)
     methods
-       introduceSelf()
-       canStudyArchery() { return this.year < 1 }
+        area()
+        validTriangle() { return this.points.length === 3; }
 
-student = new Student('Weber', 1)
-student.year // error: 'year' is a private property of Student
+const triangle = new Triangle(0, 0, 15, 0, 0, 15);
+console.log(triangle.points.length);  // Error: 'points' is a private property of Triangle
 ```
 
 In languages that don't enforce access like this, programmers use naming conventions, such as starting the name with an underscore, to indicate that the property should be considered private.
@@ -226,7 +225,7 @@ In the previous two articles we looked at a couple of core JavaScript features: 
 
 - **constructors** in JavaScript provide us with something like a class definition, enabling us to define the "shape" of an object, including any methods it contains, in a single place. But prototypes can be used here, too. For example, if a method is defined on a constructor's `prototype` property, then all objects created using that constructor get that method via their prototype, and we don't need to define it in the constructor.
 
-- **the prototype chain** seems like a natural way to implement inheritance. For example, if we can have a `Student` object whose prototype is `Person`, then it can inherit `name` and override `introduceSelf()`.
+- **the prototype chain** seems like a natural way to implement inheritance. For example, if we can have a `Triangle` object whose prototype is `Polygon`, then it can inherit `points` and override `area()`.
 
 But it's worth understanding the differences between these features and the "classical" OOP concepts described above. We'll highlight a couple of them here.
 
