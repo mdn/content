@@ -54506,12 +54506,6 @@
       "jswisher"
     ]
   },
-  "Web/API/IDBDatabase/abort_event": {
-    "modified": "2020-10-15T22:14:46.670Z",
-    "contributors": [
-      "wbamberg"
-    ]
-  },
   "Web/API/IDBDatabase/close": {
     "modified": "2020-10-15T21:25:17.495Z",
     "contributors": [
@@ -54558,12 +54552,6 @@
       "chrahunt"
     ]
   },
-  "Web/API/IDBDatabase/error_event": {
-    "modified": "2020-10-15T22:14:45.297Z",
-    "contributors": [
-      "wbamberg"
-    ]
-  },
   "Web/API/IDBDatabase/name": {
     "modified": "2020-10-15T21:25:18.764Z",
     "contributors": [
@@ -54583,55 +54571,6 @@
       "jpmedley",
       "arronei",
       "libbymc",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/IDBDatabase/onabort": {
-    "modified": "2020-10-15T21:25:18.520Z",
-    "contributors": [
-      "sideshowbarker",
-      "wbamberg",
-      "CITguy",
-      "chrisdavidmills",
-      "fscholz",
-      "jpmedley",
-      "arronei",
-      "libbymc"
-    ]
-  },
-  "Web/API/IDBDatabase/onclose": {
-    "modified": "2020-10-15T21:49:13.932Z",
-    "contributors": [
-      "wbamberg",
-      "CITguy",
-      "fscholz",
-      "jpmedley",
-      "teoli",
-      "Sheppy"
-    ]
-  },
-  "Web/API/IDBDatabase/onerror": {
-    "modified": "2020-10-15T21:25:18.627Z",
-    "contributors": [
-      "sideshowbarker",
-      "wbamberg",
-      "CITguy",
-      "chrisdavidmills",
-      "fscholz",
-      "jpmedley",
-      "arronei",
-      "gnacu",
-      "libbymc"
-    ]
-  },
-  "Web/API/IDBDatabase/onversionchange": {
-    "modified": "2020-10-15T21:25:17.582Z",
-    "contributors": [
-      "sideshowbarker",
-      "wbamberg",
-      "CITguy",
-      "fscholz",
-      "jpmedley",
       "chrisdavidmills"
     ]
   },
@@ -55816,43 +55755,6 @@
       "libbymc",
       "inexorabletash",
       "jwhitlock"
-    ]
-  },
-  "Web/API/IDBTransaction/onabort": {
-    "modified": "2020-10-15T21:25:27.345Z",
-    "contributors": [
-      "sideshowbarker",
-      "wbamberg",
-      "CITguy",
-      "fscholz",
-      "chrisdavidmills",
-      "jpmedley",
-      "libbymc"
-    ]
-  },
-  "Web/API/IDBTransaction/oncomplete": {
-    "modified": "2020-10-15T21:25:27.356Z",
-    "contributors": [
-      "jorendorff-moz",
-      "sideshowbarker",
-      "wbamberg",
-      "CITguy",
-      "chrisdavidmills",
-      "fscholz",
-      "jpmedley",
-      "libbymc"
-    ]
-  },
-  "Web/API/IDBTransaction/onerror": {
-    "modified": "2020-10-15T21:25:27.339Z",
-    "contributors": [
-      "sideshowbarker",
-      "wbamberg",
-      "chrisdavidmills",
-      "fscholz",
-      "ylxdzsw",
-      "jpmedley",
-      "libbymc"
     ]
   },
   "Web/API/IDBTransactionSync": {
