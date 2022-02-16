@@ -554,7 +554,6 @@ It can also be used to specify that the character is selected to be appropriate 
   </tbody>
 </table>
 
-
 ### Scroll-linked animations
 
 The {{cssxref('@scroll-timeline')}} at-rule and {{cssxref('animation-timeline')}} property allow you to define animations that are linked to container scroll progress (rather than time).
@@ -596,8 +595,6 @@ For more information see {{bug(1676791)}} and {{bug(1676782)}}
     </tr>
   </tbody>
 </table>
-
-
 
 ## SVG
 
