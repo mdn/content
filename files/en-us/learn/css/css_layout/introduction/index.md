@@ -674,7 +674,7 @@ In the below example, we start with a block of HTML inside a containing `<div>` 
 </div>
 ```
 
-We're using a `column-width` of 200 pixels on that container, causing the browser to create as many 200 pixel columns as will fit. Whatever space is left between the columns will be shared.
+We're using a `column-width` of 200 pixels on that container, which the browser to create as many 200 pixel columns as it will fit. Whatever space is left between the columns will be shared.
 
 ```css hidden
 body { max-width: 800px; margin: 0 auto; }
