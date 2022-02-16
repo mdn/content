@@ -78,14 +78,14 @@ Inherits from: {{domxref("EventTarget")}}
 Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
 
 - [`abort`](/en-US/docs/Web/API/IDBTransaction/abort_event)
-  - : Fired when an `IndexedDB` transaction is aborted.
-    Also available via the [`onabort`](/en-US/docs/Web/API/IDBTransaction/onabort) property.
+  - : An event fired when the `IndexedDB` transaction is aborted.
+    Also available via the `onabort` property; this event bubbles to {{domxref("IDBDatabase")}}.
 - [`complete`](/en-US/docs/Web/API/IDBTransaction/complete_event)
-  - : Fired when a transaction successfully completes.
-    Also available via the [`oncomplete`](/en-US/docs/Web/API/IDBTransaction/oncomplete) property.
+  - : An event fired when the transaction successfully completes.
+    Also available via the `oncomplete` property.
 - [`error`](/en-US/docs/Web/API/IDBTransaction/error_event)
-  - : Fired when a request returns an error and the event bubbles up to the transaction object.
-    Also available via the [`onerror`](/en-US/docs/Web/API/IDBTransaction/onerror) property.
+  - : An event fired when a request returns an error and the event bubbles up to the connection object ({{domxref("IDBDatabase)}}).
+    Also available via the `onerror` property.
 
 ## Mode constants
 
