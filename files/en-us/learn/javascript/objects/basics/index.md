@@ -57,11 +57,11 @@ const person = {
   name: ['Bob', 'Smith'],
   age: 32,
   bio: function() {
-    console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
+    return `${this.name[0]} ${this.name[1]} is ${this.age} years old.`;
   },
-  introduceSelf: function() {
-    console.log(`Hi! I'm ${this.name[0]}.`);
-  }
+  introduce: function() {
+    return `Hi! I'm ${this.name[0]}.`;
+  },
 };
 ```
 
@@ -72,7 +72,7 @@ person.name
 person.name[0]
 person.age
 person.bio()
-person.introduceSelf()
+person.introduce()
 ```
 
 You have now got some data and functionality inside your object, and are now able to access them with some nice simple syntax!
@@ -83,7 +83,7 @@ So what is going on here? Well, an object is made up of multiple members, each o
 const objectName = {
   member1Name: member1Value,
   member2Name: member2Value,
-  member3Name: member3Value
+  member3Name: member3Value,
 };
 ```
 
@@ -96,10 +96,10 @@ const person = {
   name: ['Bob', 'Smith'],
   age: 32,
   bio() {
-    console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
+    return `${this.name[0]} ${this.name[1]} is ${this.age} years old.`;
   },
-  introduceSelf() {
-    console.log(`Hi! I'm ${this.name[0]}.`);
+  introduce() {
+    return `Hi! I'm ${this.name[0]}.`;
   }
 };
 ```
@@ -130,10 +130,7 @@ name: ['Bob', 'Smith'],
 to
 
 ```js
-name : {
-  first: 'Bob',
-  last: 'Smith'
-},
+name: { first: 'Bob', last: 'Smith' },
 ```
 
 To access these items you just need to chain the extra step onto the end with another dot. Try these in the JS console:
@@ -168,7 +165,7 @@ person.age
 person.name.first
 ```
 
-You can use
+You can use:
 
 ```js
 person['age']
@@ -197,9 +194,9 @@ Setting members doesn't just stop at updating the values of existing properties 
 
 ```js
 person['eyes'] = 'hazel';
-person.farewell = function() {
-  console.log('Bye everybody!');
-}
+person.toString = function() {
+  return `${this.name.first} ${this.name.last} (${this.age} y/o)`;
+};
 ```
 
 You can now test out your new members:
@@ -243,8 +240,8 @@ Adding a property to an object using the method above isn't possible with dot n
 You may have noticed something slightly strange in our methods. Look at this one for example:
 
 ```js
-introduceSelf() {
-  console.log(`Hi! I'm ${this.name[0]}.`);
+introduce() {
+  return `Hi! I'm ${this.name[0]}.`;
 }
 ```
 
@@ -257,20 +254,20 @@ Let's illustrate what we mean with a simplified pair of person objects:
 ```js
 const person1 = {
   name: 'Chris',
-  introduceSelf() {
-    console.log(`Hi! I'm ${this.name}.`);
+  introduce() {
+    return `Hi! I'm ${this.name}.`;
   }
 }
 
 const person2 = {
   name: 'Deepti',
-  introduceSelf() {
-    console.log(`Hi! I'm ${this.name}.`);
+  introduce() {
+    return `Hi! I'm ${this.name}.`;
   }
 }
 ```
 
-In this case, `person1.introduceSelf()` outputs "Hi! I'm Chris."; `person2.introduceSelf()` on the other hand outputs "Hi! I'm Deepti.", even though the method's code is exactly the same in each case. This isn't hugely useful when you are writing out object literals by hand, but it will be essential when we start using **constructors** to create more than one object from a single object definition, and that's the subject of the next section.
+In this case, `person1.introduce()` returns "Hi! I'm Chris."; `person2.introduce()` on the other hand outputs "Hi! I'm Deepti.", even though the method's code is exactly the same in each case. This isn't hugely useful when you are writing out object literals by hand, but it will be essential when we start using **constructors** to create more than one object from a single object definition, and that's the subject of the next section.
 
 ## Introducing constructors
 
@@ -284,9 +281,9 @@ The first version of this is just a function:
 function createPerson(name) {
   const obj = {};
   obj.name = name;
-  obj.introduceSelf = function() {
-    console.log(`Hi! I'm ${this.name}.`);
-  }
+  obj.introduce = function() {
+    return `Hi! I'm ${this.name}.`;
+  };
   return obj;
 }
 ```
@@ -294,20 +291,20 @@ function createPerson(name) {
 This function creates and returns a new object each time we call it. The object will have two members:
 
 - a property `name`
-- a method `introduceSelf()`.
+- a method `introduce()`.
 
-Note that `createPerson()` takes a parameter `name` to set the value of the `name` property, but the value of the `introduceSelf()` method will be the same for all objects created using this function. This is a very common pattern for creating objects. You can see here how being able to use `this` in the definition of `introduceSelf()` enables us to use the same code for every object we create.
+Note that `createPerson()` takes a parameter `name` to set the value of the `name` property, but the value of the `introduce()` method will be the same for all objects created using this function. This is a very common pattern for creating objects. You can see here how being able to use `this` in the definition of `introduce()` enables us to use the same code for every object we create.
 
 Now we can create as many objects as we like, reusing the definition:
 
 ```js
 const salva = createPerson('Salva');
 salva.name;
-salva.introduceSelf();
+salva.introduce();
 
 const frankie = createPerson('Frankie');
 frankie.name;
-frankie.introduceSelf();
+frankie.introduce();
 ```
 
 This works fine but is a bit long-winded: we have to create an empty object, initialize it, and return it. A better way is to use a **constructor**. A constructor is just a function called using the {{jsxref("operators/new", "new")}} keyword. When you call a constructor, it will:
@@ -322,8 +319,8 @@ Constructors, by convention, start with a capital letter and are named for the t
 ```js
 function Person(name) {
   this.name = name;
-  this.introduceSelf = function() {
-    console.log(`Hi! I'm ${this.name}.`);
+  this.introduce = function() {
+    return `Hi! I'm ${this.name}.`;
   }
 }
 ```
@@ -333,11 +330,11 @@ To call `Person()` as a constructor, we use `new`:
 ```js
 const salva = new Person('Salva');
 salva.name;
-salva.introduceSelf();
+salva.introduce();
 
 const frankie = new Person('Frankie');
 frankie.name;
-frankie.introduceSelf();
+frankie.introduce();
 ```
 
 ## You've been using objects all along
