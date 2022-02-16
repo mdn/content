@@ -29233,12 +29233,6 @@
       "bershanskiy"
     ]
   },
-  "Web/API/Bluetooth/onavailabilitychanged": {
-    "modified": "2020-10-15T22:28:48.266Z",
-    "contributors": [
-      "bershanskiy"
-    ]
-  },
   "Web/API/Bluetooth/referringDevice": {
     "modified": "2020-10-15T22:29:04.795Z",
     "contributors": [

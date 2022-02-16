@@ -30,9 +30,8 @@ _Inherits properties from its parent {{domxref("EventTarget")}}._
 
 ### Events
 
-- {{domxref("Bluetooth.onavailabilitychanged")}}
-  - : An event handler that runs when an event of type `availabilitychanged`
-    has fired.
+- {{domxref("Bluetooth.availabilitychanged_event", "availabilitychanged")}}
+  - : An event that fires when Bluetooth capabilities have changed in availability.
 
 ## Methods
 
