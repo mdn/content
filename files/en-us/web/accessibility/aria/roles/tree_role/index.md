@@ -9,15 +9,20 @@ tags:
   - ARIA roles
   - Tree role
   - composite widget role
+  - needs example
 ---
 
 A `tree` is a widget that allows the user to select one or more items from a hierarchically organized collection.
 
 ## Description
 
-A `tree` widget is a hierarchical list. Any item in the hierarchy may have child tree items, set with [`role="treeitem"`](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role). Tree items that have children can be expanded or collapsed, showing and hiding their children. 
+A `tree` widget is a hierarchical list with parent and child nodes that can expand and collapse. Any item in the hierarchy may have child tree items, set with [`role="treeitem"`](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role). Tree items that have children can be expanded or collapsed, showing and hiding their children. 
 
 An example of a `tree` is a file system selection user interface: a tree view displaying folders and files. Folder items can be expanded to reveal the contents of the folder -- which may be files, folders, or both -- and collapsed, hiding its contents. 
+
+ARIA tree views are navigated primarily with arrow keys on the keyboard instead of the <kbd>tab</kbd> key which is not common for browser content, though normal and expected keyboard in native applications. For this reason, before creating a tree view, consider alternative options to address the functionality you need. 
+
+> **Warning:** Tree views use naviation more similar to native applications than to web applications. For this reason, consider alternative options to address the functionality you need before creating a tree view. 
 
 ### Single and multiple select trees
 
@@ -45,7 +50,7 @@ Do not include `aria-expanded` on end nodes -- those without tree item children 
 
 All treeitems are contained in or owned by an element with role `tree`. If there are any tree items that are not direct descendants of the `tree` in the markup, include [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) on the owning tree container to include elements that are not DOM children of the container. These non-child owned elements will appear in the reading order in the sequence they are referenced and after any tree items that are DOM children. Scripts that manage focus need to ensure the visual focus order matches this assistive technology reading order. 
     
-If the complete set of available nodes is not present in the DOM due to dynamic loading as the user moves focus in or scrolls the tree, each node has [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level), [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-size), and [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) specified.
+If the complete set of available nodes is not present in the DOM due to dynamic loading as the user moves focus in or scrolls the tree, each node has [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level), [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize), and [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) specified.
 
 ### Accessible name
 
@@ -78,17 +83,19 @@ For a vertically oriented `tree`, which is the default orientation:
 <tr>
 <td><kbd>Right arrow</kbd></td>
 <td>
-When focus is on a closed node, opens the node; focus does not move.
-When focus is on a open node, moves focus to the first child node.
-When focus is on an end node (a tree item with no children), does nothing.
+<ul>
+<li>When focus is on a closed node, opens the node; focus does not move.
+<li>When focus is on a open node, moves focus to the first child node.
+<li>When focus is on an end node (a tree item with no children), does nothing.
 </td>
 </tr>
 <tr>
 <td><kbd>Left arrow</kbd></td>
 <td>
-When focus is on an open node, closes the node.
-When focus is on a child node that is also either an end node or a closed node, moves focus to its parent node.
-When focus is on a closed `tree`, does nothing.
+<ul>
+<li>When focus is on an open node, closes the node.
+<li>When focus is on a child node that is also either an end node or a closed node, moves focus to its parent node.
+<li>When focus is on a closed `tree`, does nothing.
 </td>
 </tr>
 <tr>
@@ -107,19 +114,21 @@ When focus is on a closed `tree`, does nothing.
 </td>
 </tr>
 <tr>
-<td><kbd>
-End</kbd></td>
-<td> Moves focus to the last node in the tree that is focusable without opening a node.
+<td><kbd>End</kbd></td>
+<td> Moves focus to the last node in the tree that is focusable without opening the node.
 </td>
 </tr>
 <tr>
 <td><kbd>Enter</kbd></td>
-<td>Performs the defaul the currently focused node, i.e., performs its default action. For parent nodes, one possible default action is to open or close the node. In single-select trees where selection does not follow focus (see note below), the default action is typically to select the focused node.
+<td>Performs the default action of the currently focused node. For parent nodes, it opens or closes the node. In single-select trees, if the node has no children, selects the current node if not already selected (which is the default action).
 </td>
 </tr>
 <tr>
 <td>Type a character*</td>
-<td>Focus moves to the next node with a name that starts with the typed character. If multiple characters are typed in rapid succession,  focus moves to the next node with a name that starts with the string of characters typed.
+<td>
+<ul>
+<li>Focus moves to the next node with a name that starts with the typed character. 
+<li>If multiple characters are typed in rapid succession, focus moves to the next node with a name that starts with the string of characters typed.
 </td>
 </tr>
 <tr>
@@ -130,13 +139,13 @@ End</kbd></td>
 </tr>
 </table>
 
-* Type-ahead is recommended for all trees, especially for trees with more than 7 root nodes
+\* Type-ahead is recommended for all trees, especially for trees with more than 7 root nodes
 
 ### Multi-select keyboard interactions
 
 There are two interaction models for multi-select trees: While you can require that users press a modifier key, such as <kbd>Shift</kbd> or <kbd>Control</kbd> while navigating the list in order to avoid losing selection states, the model that does not require the user to hold a modifier key is recommended. 
 
-Recommended multi user select model:
+#### Recommended multi user select model:
 
 <table>
 <tr>
@@ -176,7 +185,9 @@ Recommended multi user select model:
 </table>
 
 
-Alternative multi-selection model, wherein moving focus without holding the <kbd>Shift</kbd> or <kbd>Control</kbd> modifier unselects all selected nodes except for the focused node:
+#### Alternative multi-selection model
+
+The alternative multi-selection model is a modifier key model in which moving focus without holding a modifier key such as <kbd>Shift</kbd> or <kbd>Control</kbd> unselects all selected nodes except for the focused node:
 
 <table>
 <tr>
@@ -225,16 +236,6 @@ Alternative multi-selection model, wherein moving focus without holding the <kbd
 </td>
 </tr>
 </table>
-
-### Required JavaScript features
-
-## Examples
-
-## Accessibility Concerns
-
-## Best Practices
-
-### Prefer HTML
 
 ## Specifications
 
