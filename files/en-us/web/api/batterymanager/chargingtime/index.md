@@ -12,7 +12,7 @@ browser-compat: api.BatteryManager.chargingTime
 
 {{APIRef("Battery API")}}
 
-The **`BatterymMnager.chargingTime`** property indicates the amount of time, in seconds, that remain until the battery is fully charged or `0` if the battery is already fully charged. If the battery is currently
+The **`BatteryManager.chargingTime`** property indicates the amount of time, in seconds, that remain until the battery is fully charged or `0` if the battery is already fully charged. If the battery is currently
 discharging, its value is
 [`Infinity`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity). When its value changes, the [`chargingtimechange`](/en-US/docs/Web/API/BatteryManager/chargingtimechange_event) event is fired.
 
