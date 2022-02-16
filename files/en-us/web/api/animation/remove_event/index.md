@@ -28,7 +28,7 @@ An {{domxref("AnimationPlaybackEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-_In addition to the properties lsited below, properties from the parent interface, {{domxref("Event")}}, are available._
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
 - {{domxref("AnimationPlaybackEvent.currentTime")}} {{readonlyinline}}
   - : The current time of the animation that generated the event.

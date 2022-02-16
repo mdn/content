@@ -1,5 +1,5 @@
 ---
-title: 'BatteryManager: dischargintimechange event'
+title: 'BatteryManager: dischargingtimechange event'
 slug: Web/API/BatteryManager/dischargingtimechange_event
 tags:
   - API
