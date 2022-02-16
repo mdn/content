@@ -84,7 +84,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : An event fired when the transaction successfully completes.
     Also available via the `oncomplete` property.
 - [`error`](/en-US/docs/Web/API/IDBTransaction/error_event)
-  - : An event fired when a request returns an error and the event bubbles up to the connection object ({{domxref("IDBDatabase)}}).
+  - : An event fired when a request returns an error and the event bubbles up to the connection object ({{domxref("IDBDatabase")}}).
     Also available via the `onerror` property.
 
 ## Mode constants
