@@ -132,7 +132,6 @@ new Intl.NumberFormat(locales, options)
         - "`auto`" sign display for negative numbers only
         - "`exceptZero`" sign display for positive and negative
           numbers, but not zero
-        - "`negative`" sign display for negative numbers only, excluding negative zero.
         - "`never`" never display sign
 
     - `style`
