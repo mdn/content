@@ -13,56 +13,46 @@ browser-compat: javascript.statements.class
 ---
 {{jsSidebar("Statements")}}
 
-The **class declaration** creates a new class
-with a given name using prototype-based inheritance.
+The **class declaration** creates a new class with a given name using prototype-based inheritance.
 
 {{EmbedInteractiveExample("pages/js/statement-class.html")}}
 
-You can also define a class using a {{jsxref("Operators/class", "class expression",
-    "", 1)}}. But unlike a class expression, a class declaration doesn't allow an existing
-class to be declared again and will throw a {{jsxref("SyntaxError")}} if attempted.
+You can also define a class using a {{jsxref("Operators/class", "class expression", "", 1)}}. But unlike a class expression, a class declaration doesn't allow to reassign existing class identifier and will throw a {{jsxref("SyntaxError")}} if attempted.
 
 ## Syntax
 
 ```js
-class name [extends otherName] {
+class ClassName [extends ParentClassName] {
   // class body
 }
 ```
 
 ## Description
 
-The class body of a class declaration is executed in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). The
-`constructor` method is optional.
+The class body of a class declaration is executed in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). The `constructor` method is optional.
 
-Class declarations are not {{Glossary("Hoisting", "hoisted")}} (unlike [function
-declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function)).
+Class declarations are not {{Glossary("Hoisting", "hoisted")}} (unlike [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function)).
 
 ## Examples
 
 ### A simple class declaration
 
-In the following example, we first define a class named `Rectangle`, then
-extend it to create a class named `FilledRectangle`.
+In the following example, we first define a class named `Rectangle`, then extend it to create a class named `FilledRectangle`.
 
-Note that `super()`, used in the `constructor`, can only be used
-in constructors, and _must_ be called _before_ the `this`
-keyword can be used.
+Note that `super()`, used in the `constructor`, can only be used in constructors, and _must_ be called _before_ the `this` keyword can be used.
 
 ```js
 class Rectangle {
   constructor(height, width) {
-    this.name = 'Rectangle';
-    this.height = height;   
-    this.width = width; 
+    this.height = height;
+    this.width = width;
   }
 }
 
 class FilledRectangle extends Rectangle {
   constructor(height, width, color) {
     super(height, width);
-    this.name = 'Filled rectangle';
-    this.color = color;  
+    this.color = color;
   }
 }
 ```
@@ -72,16 +62,8 @@ class FilledRectangle extends Rectangle {
 Re-declaring a class using the class declaration throws a {{jsxref("SyntaxError")}}.
 
 ```js example-bad
-class Foo {};
-class Foo {}; // Uncaught SyntaxError: Identifier 'Foo' has already been declared
-```
-
-The same error is thrown when a class has been defined before using the class
-expression.
-
-```js example-bad
-let Foo = class {};
-class Foo {}; // Uncaught SyntaxError: Identifier 'Foo' has already been declared
+class Rectangle {};
+class Rectangle {}; // Uncaught SyntaxError: Identifier 'Rectangle' has already been declared
 ```
 
 ## Specifications
