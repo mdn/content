@@ -21,7 +21,7 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 ```js
 addEventListener('chargingchange', event => { });
 
-onchargintimechange = event => { };
+onchargingchange = event => { };
 ```
 
 ## Event type
