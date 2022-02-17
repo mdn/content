@@ -45,11 +45,11 @@ const LIMIT = 3;
 
 const asyncIterable = {
   [Symbol.asyncIterator]() {
+    let i = 0;
     return {
-      i: 0,
       next() {
-        const done = this.i === LIMIT;
-        const value = done ? undefined : this.i++;
+        const done = i === LIMIT;
+        const value = done ? undefined : i++;
         return Promise.resolve({ value, done });
       },
       return() {
