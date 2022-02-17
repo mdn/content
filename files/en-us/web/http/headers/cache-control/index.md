@@ -285,7 +285,7 @@ Note that the major browsers do not support requests with `no-store`.
 
 ### `max-age`
 
-The `max-age=N` request directive indicates that the client allows a stored response that is generated on the origin server within _N_ seconds.
+The `max-age=N` request directive indicates that the client allows a stored response that is generated on the origin server within _N_ seconds — where _N_ may be any non-negative integer (including `0`).
 
 ```
 Cache-Control: max-age=3600
@@ -300,6 +300,12 @@ Cache-Control: max-age=0
 ```
 
 `max-age=0` is a workaround for `no-cache`, because many old (HTTP/1.0) cache implementations don't support `no-cache`. Recently browsers are still using `max-age=0` in "reloading" — for backward compatibility — and alternatively using `no-cache` to cause a "force reloading".
+
+If the `max-age` value isn’t non-negative (for example, `-1`) or isn’t an integer (for example, `3599.99`), then the caching behavior is undefined. However, the [Calculating Freshness Lifetime](https://httpwg.org/specs/rfc7234.html#calculating.freshness.lifetime) section of the HTTP specification states:
+
+> Caches are encouraged to consider responses that have invalid freshness information to be stale.
+
+In other words, for any `max-age` value that isn’t an integer or isn’t non-negative, the caching behavior that’s encouraged is to treat the value as if it were `0`.
 
 ### `max-stale`
 
