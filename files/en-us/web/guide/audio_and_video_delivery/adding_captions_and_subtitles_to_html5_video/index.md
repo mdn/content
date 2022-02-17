@@ -326,5 +326,7 @@ If, after reading through this article you decide that you can't be bothered to 
   - : Supports WebVTT video subtitles.
 - [Radiant Media Player](https://www.radiantmediaplayer.com)
   - : Supports multi-languages WebVTT closed captions
+- [AblePlayer](https://ableplayer.github.io/ableplayer/)
+  - : Supports multi-languages WebVTT closed captions along with a clickable, interactive transcript for audio and video
 
 > **Note:** You can find an excellent list of HTML5 Video Players and their current "state" at [HTML5 Video Player Comparison](https://praegnanz.de/html5video/).
