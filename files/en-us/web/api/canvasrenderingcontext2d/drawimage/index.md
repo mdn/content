@@ -64,17 +64,10 @@ void ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
     scaling of the drawn image. If not specified, the image is not scaled in height when
     drawn. Note that this argument is not included in the 3-argument syntax.
 
-### Exceptions thrown
+### Exceptions
 
-- `INDEX_SIZE_ERR`
-  - : If the canvas or source rectangle width or height is zero.
-- `INVALID_STATE_ERR`
-  - : The image has no image data.
-- `TYPE_MISMATCH_ERR`
-  - : The specified source element isn't supported.
-- `NS_ERROR_NOT_AVAILABLE`
-  - : The image is not loaded yet. Use `.complete === true` and
-    `.onload` to determine when it is ready.
+- `InvalidStateError`
+  - : Thrown if the image has no image data or if the canvas or source rectangle width or height is zero.
 
 ## Examples
 
