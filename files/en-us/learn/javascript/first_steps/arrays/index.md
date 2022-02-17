@@ -160,8 +160,8 @@ The `pop()` method returns the item that was removed. To save that item in a new
 
 ```js
 const cities = ['Manchester', 'Liverpool'];
-const removedCities = cities.pop();
-console.log(removedCities);   // "Liverpool"
+const removedCity = cities.pop();
+console.log(removedCity);   // "Liverpool"
 ```
 
 To remove the first item from an array, use {{jsxref("Array.prototype.shift()","shift()")}}:
@@ -220,7 +220,9 @@ We give a function to the `map()`, and `map()` calls the function once for each 
 Sometimes you'll want to create a new array containing only the items in the original array that match some test. You can do this using {{jsxref("Array.prototype.filter()","filter()")}}. The code below takes an array of strings and filters out all strings that are less than 8 characters long:
 
 ```js
-const isLong = (city) => city.length > 8;
+function isLong(city) {
+  return city.length > 8;
+}
 const cities = ['London', 'Liverpool', 'Totnes', 'Edinburgh'];
 const longer = cities.filter(isLong);
 console.log(longer);  // [ "Liverpool", "Edinburgh" ]

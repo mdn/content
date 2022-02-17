@@ -30,7 +30,7 @@ for await (const variable of iterable) {
 - `variable`
   - : On each iteration a value of a different property is assigned to
     `variable`. `variable` may be declared
-    with `const`, `let`, or `var` (prefer `const`).
+    with `const`, `let`, or `var`.
 - `iterable`
   - : Object whose iterable properties are to be iterated over.
 
@@ -83,9 +83,11 @@ async function* asyncGenerator() {
   }
 }
 
-for await (const num of asyncGenerator()) {
-  console.log({ num });
-}
+(async () => {
+  for await (const num of asyncGenerator()) {
+    console.log({ num });
+  }
+})();
 // 0
 // 1
 // 2
@@ -144,9 +146,11 @@ function* generator() {
   yield 4;
 }
 
-for await (const num of generator()) {
-  console.log(num);
-}
+(async () => {
+  for await (const num of generator()) {
+    console.log(num);
+  }
+})();
 // 0
 // 1
 // 2
