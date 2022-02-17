@@ -550,7 +550,7 @@
       "events": []
     },
     "Geometry Interfaces": {
-      "interfaces": ["CSSMatrix", "DOMMatrix", "DOMMatrixReadOnly", "Point"],
+      "interfaces": ["CSSMatrix", "DOMMatrix", "DOMMatrixReadOnly", "DOMRect", "DOMRectReadOnly", "Point"],
       "methods": [],
       "properties": [],
       "events": []
