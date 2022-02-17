@@ -4,7 +4,6 @@ slug: Web/API/DOMRect
 tags:
   - API
   - DOM
-  - DOM Reference
   - DOMRect
   - Geometry
   - Geometry Interfaces
