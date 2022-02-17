@@ -3,17 +3,13 @@ title: DOMRectReadOnly.fromRect()
 slug: Web/API/DOMRectReadOnly/fromRect
 tags:
   - API
-  - DOM Reference
-  - DOMRect
   - DOMRectReadOnly
-  - Experimental
   - Geometry
   - Method
   - Reference
-  - fromRect()
 browser-compat: api.DOMRectReadOnly.fromRect
 ---
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("Geometry Interfaces")}}
 
 The **`fromRect()`** static method of the
 {{domxref("DOMRectReadOnly")}} object creates a new `DOMRectReadOnly`
