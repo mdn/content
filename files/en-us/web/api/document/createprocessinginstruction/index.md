@@ -30,7 +30,7 @@ piNode = document.createProcessingInstruction(target, data)
 
 ### Exceptions
 
-- `InvalidCharacterError`
+- `InvalidCharacterError` {{domxref("DOMException")}}
 
   - : Thrown if either of the following are true:
 
