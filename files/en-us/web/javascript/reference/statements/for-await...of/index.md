@@ -48,11 +48,9 @@ const asyncIterable = {
     return {
       i: 0,
       next() {
-        if (this.i < 3) {
-          return Promise.resolve({ value: this.i++, done: false });
-        }
-
-        return Promise.resolve({ done: true });
+        const done = this.i === LIMIT;
+        const value = done ? undefined : this.i++;
+        return Promise.resolve({ value, done });
       },
       return() {
         // This will be reached if the consumer called 'break' or 'return' early in the loop.
@@ -62,9 +60,11 @@ const asyncIterable = {
   }
 };
 
-for await (const num of asyncIterable) {
-  console.log({ num });
-}
+(async () => {
+  for await (const num of asyncIterable) {
+    console.log({ num });
+  }
+})();
 // 0
 // 1
 // 2
@@ -193,7 +193,7 @@ function* generatorWithRejectedPromises() {
   try {
     for await (const num of generatorWithRejectedPromises()) {
       console.log(num);
-  }
+    }
   } catch (e) {
     console.log('caught', e);
   }
@@ -231,7 +231,7 @@ loop.
   try {
     for (const numOrPromise of generatorWithRejectedPromises()) {
       console.log(await numOrPromise);
-  }
+    }
   } catch (e) {
     console.log('caught', e);
   }
