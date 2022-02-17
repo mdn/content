@@ -85,7 +85,7 @@ async function* asyncGenerator() {
 
 (async () => {
   for await (const num of asyncGenerator()) {
-    console.log({ num });
+    console.log(num);
   }
 })();
 // 0
