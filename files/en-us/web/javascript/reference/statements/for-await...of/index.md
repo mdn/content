@@ -54,7 +54,7 @@ const asyncIterable = {
       },
       return() {
         // This will be reached if the consumer called 'break' or 'return' early in the loop.
-        return { done: true }
+        return { done: true };
       }
     };
   }
@@ -62,7 +62,7 @@ const asyncIterable = {
 
 (async () => {
   for await (const num of asyncIterable) {
-    console.log({ num });
+    console.log(num);
   }
 })();
 // 0
