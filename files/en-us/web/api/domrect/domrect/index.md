@@ -6,41 +6,34 @@ tags:
   - Constructor
   - DOM Reference
   - DOMRect
-  - Experimental
   - Geometry
   - Reference
 browser-compat: api.DOMRect.DOMRect
 ---
-{{APIRef("DOM")}}{{ SeeCompatTable() }}
+{{APIRef("Geometry Interfaces")}}
 
 The **`DOMRect()`** constructor creates a new {{domxref("DOMRect")}} object.
 
 ## Syntax
 
 ```js
-var myDOMRect = new DOMRect(x, y, width, height);
+new DOMRect(x, y, width, height);
 ```
 
 ### Parameters
 
-- x
+- `x`
   - : The `x` coordinate of the `DOMRect`'s origin.
-- y
+- `y`
   - : The `y` coordinate of the `DOMRect`'s origin.
-- width
+- `width`
   - : The width of the `DOMRect`.
-- height
+- `height`
   - : The height of the `DOMRect`.
 
-## Examples
+### Return value
 
-To create a new `DOMRect`, you could run a line of code like so:
-
-```js
-myDOMRect = new DOMRect(0,0,100,100);
-// running 'myDOMRect' in the console would then return
-// DOMRect { x: 0, y: 0, width: 100, height: 100, top: 0, right: 100, bottom: 100, left: 0 }
-```
+A new {{domxref("DOMRect")}} object.
 
 ## Specifications
 
@@ -54,4 +47,4 @@ myDOMRect = new DOMRect(0,0,100,100);
 
 - {{domxref("DOMPoint")}}
 - {{domxref("DOMRect")}}
-- {{domxref("DOMRect.fromRect")}}
+- {{domxref("DOMRect.fromRect()")}}

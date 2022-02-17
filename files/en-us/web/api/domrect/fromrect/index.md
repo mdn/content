@@ -3,16 +3,13 @@ title: DOMRect.fromRect()
 slug: Web/API/DOMRect/fromRect
 tags:
   - API
-  - DOM Reference
   - DOMRect
-  - Experimental
   - Geometry
   - Method
   - Reference
-  - fromRect()
 browser-compat: api.DOMRect.fromRect
 ---
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("Geometry Interfaces")}}
 
 The **`fromRect()`** static method of the
 {{domxref("DOMRect")}} object creates a new `DOMRect`
