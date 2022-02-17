@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.Array.groupBy
 ---
 {{JSRef}}
 
-The **`groupBy()`** method groups the elements of the provided array according to the values returned by a provided testing function.
+The **`groupBy()`** method groups the elements of the calling array according to the values returned by a provided testing function.
 The returned object has separate properties for each group, containing arrays with the elements in the group.
 
 {{EmbedInteractiveExample("pages/js/array-groupby.html")}}
@@ -92,7 +92,7 @@ Therefore:
 - If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time `groupBy()` visits that element's index.
 - Elements that are {{jsxref("Operators/delete", "deleted")}} are still visited.
 
-> **Warning:** Concurrent modifications of the kind described in the previous paragraph frequently lead to hard-to-understand code and is generally to be avoided (except in special cases).
+> **Warning:** Concurrent modifications of the kind described above frequently lead to hard-to-understand code and are generally to be avoided (except in special cases).
 
 ## Examples
 

@@ -82,7 +82,7 @@ In JavaScript, arrays aren’t [primitives](/en-US/docs/Glossary/Primitive) but 
 - {{jsxref("Array.prototype.groupBy()")}}
   - : Groups the elements of an array according to the results of a test function.
     The resulting groups are accessed using object properties.
-  The groupBy() method groups the elements of the provided array according to the values returned by a provided testing function. The returned object has separate properties for each group, containing arrays with the elements in the group.
+  The `groupBy()` method groups the elements of the provided array according to the values returned by a provided testing function. The returned object has separate properties for each group, containing arrays with the elements in the group.
 
 - {{jsxref("Array.prototype.includes()")}}
   - : Determines whether the calling array contains a value, returning `true` or `false` as appropriate.
