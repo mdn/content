@@ -22,12 +22,6 @@ the {{domxref("FileReader.readyState","readyState")}} will be `DONE`.
 instanceOfFileReader.abort();
 ```
 
-### Exceptions
-
-- `DOM_FILE_ABORT_ERR`
-  - : Thrown when `abort` is called while no read operation is in progress
-    (that is, the state isn't `LOADING`).
-
 ## Specifications
 
 {{Specifications}}
