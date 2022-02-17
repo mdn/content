@@ -189,13 +189,15 @@ function* generatorWithRejectedPromises() {
   }
 }
 
-try {
-  for await (const num of generatorWithRejectedPromises()) {
-    console.log(num);
+(async () => {
+  try {
+    for await (const num of generatorWithRejectedPromises()) {
+      console.log(num);
   }
-} catch (e) {
-  console.log('caught', e);
-}
+  } catch (e) {
+    console.log('caught', e);
+  }
+})();
 // 0
 // 1
 // 2
@@ -225,13 +227,15 @@ appropriate form of the loop, `for await...of` for the async generator and
 loop.
 
 ```js
-try {
-  for (const numOrPromise of generatorWithRejectedPromises()) {
-    console.log(await numOrPromise);
+(async () => {
+  try {
+    for (const numOrPromise of generatorWithRejectedPromises()) {
+      console.log(await numOrPromise);
   }
-} catch (e) {
-  console.log('caught', e);
-}
+  } catch (e) {
+    console.log('caught', e);
+  }
+})();
 // 0
 // 1
 // 2
