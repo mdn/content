@@ -76,7 +76,7 @@ let executing = browser.tabs.executeScript(
 
       - : `string`. Code to inject, as a text string.
 
-        > **Warning:** Don’t use this property to interpolate untrusted data into JavaScript, as this could lead to a security issue.
+        > **Warning:** Don't use this property to interpolate untrusted data into JavaScript, as this could lead to a security issue.
 
     - `file` {{optional_inline}}
 

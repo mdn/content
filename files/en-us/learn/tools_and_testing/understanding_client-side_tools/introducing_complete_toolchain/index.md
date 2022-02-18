@@ -237,7 +237,7 @@ OK, let's get the initial project setup out the way.
 
     Code organization tends to be quite subjective from team to team. For this project, the source code will live in `src`.
 
-4. Making sure you are inside the root of the `will-it-miss` directory, enter the following command to start git’s source control functionality working on the directory:
+4. Making sure you are inside the root of the `will-it-miss` directory, enter the following command to start git's source control functionality working on the directory:
 
     ```bash
     git init
@@ -263,7 +263,7 @@ At this point, we'll get hold of the project's code files (HTML, CSS, JavaScript
 
 2. Now copy the contents of the project's `src` directory to your currently empty `src` directory.
 
-We have our project files in place. That’s all we need to do for now!
+We have our project files in place. That's all we need to do for now!
 
 > **Note:** To set up the project on your local machine, go to the root directory of the unzipped folder, open a terminal in that location, and execute the `npm install` command in the terminal. This will install all of the project dependencies that are stored in the \`package.json\` file.
 
@@ -279,7 +279,7 @@ There's two important things to note about the command you just ran. The first i
 
 The second important part of this install command is the `--save-dev` option. This tells the npm tool that these particular dependencies are only needed for development (npm therefore lists them in the `package.json` file under `devDependencies`, not `dependencies`). This means that if this project is installed in production mode these dependencies will not be installed. A "typical" project can have many development dependencies which are not needed to actually run the code in production. Keeping them as separate dependencies reduces any unnecessary work when deploying to production (which we will look at in the next chapter).
 
-Before starting on the development of the actual application code, a little configuration is required for our tools to work properly. It's not a prerequisite of developing for the web, but it's useful to have the tools configured correctly if they’re going to help catch errors during development — which eslint is particularly useful for.
+Before starting on the development of the actual application code, a little configuration is required for our tools to work properly. It's not a prerequisite of developing for the web, but it's useful to have the tools configured correctly if they're going to help catch errors during development — which eslint is particularly useful for.
 
 ### Configuring our tools
 
@@ -297,7 +297,7 @@ In the root of the project (not in the `src` directory), we will add configurati
 
     With these settings, when prettier formats JavaScript for you it will use single quotes for all your quoted values, and it won't use trailing commas (a newer feature of ECMAScript that will cause errors in older browsers). You can find more about [configuring Prettier](https://prettier.io/docs/en/configuration.html) in its documentation.
 
-3. Next up, we’ll configure eslint — create another file in the root of your `will-it-miss` directory called `.eslintrc.json`, and give it the following contents:
+3. Next up, we'll configure eslint — create another file in the root of your `will-it-miss` directory called `.eslintrc.json`, and give it the following contents:
 
     ```json
     {
@@ -355,9 +355,9 @@ In the root of the project (not in the `src` directory), we will add configurati
     npm install --save-dev eslint-plugin-react
     ```
 
-There’s a complete [list of eslint rules](https://eslint.org/docs/rules/) that you can tweak and configure to your heart's content and many companies and teams have published their [own eslint configurations](https://www.npmjs.com/search?q=keywords:eslintconfig), which can sometimes be useful either to get inspiration or to select one that you feel suits your own standards. A forewarning though: eslint configuration is a very deep rabbit hole!
+There's a complete [list of eslint rules](https://eslint.org/docs/rules/) that you can tweak and configure to your heart's content and many companies and teams have published their [own eslint configurations](https://www.npmjs.com/search?q=keywords:eslintconfig), which can sometimes be useful either to get inspiration or to select one that you feel suits your own standards. A forewarning though: eslint configuration is a very deep rabbit hole!
 
-That’s our dev environment setup complete at this point. Now, finally we're (very nearly) ready to code.
+That's our dev environment setup complete at this point. Now, finally we're (very nearly) ready to code.
 
 ## Build and transformation tools
 
@@ -402,7 +402,7 @@ Let's use the [postcss-preset-env](https://preset-env.cssdb.org/), which lets us
     }
     ```
 
-That’s all we need to do — remember that Parcel installs the dependencies for us by default!
+That's all we need to do — remember that Parcel installs the dependencies for us by default!
 
 Although this stage of our toolchain can be quite painful, because we've chosen a tool that purposely tries to reduce configuration and complexity, there's really nothing more we need to do during the development phase. Modules are correctly imported, nested CSS is correctly transformed to "regular CSS", and our development is unimpeded by the build process.
 
@@ -410,7 +410,7 @@ Now our software is ready to be written!
 
 ## Running the transformation
 
-To start working with our project, we’ll run the Parcel server on the command line. In its default mode it will watch for changes in your code and automatically install your dependencies. This is nice because we don't have to flit back and forth between the code and the command line.
+To start working with our project, we'll run the Parcel server on the command line. In its default mode it will watch for changes in your code and automatically install your dependencies. This is nice because we don't have to flit back and forth between the code and the command line.
 
 1. To start Parcel off in the background, go to your terminal and run the following command:
 
@@ -437,7 +437,7 @@ Another clever trick Parcel has up its sleeve is that any changes to your source
 
 1. Load up the file `src/components/App.js` in your favorite text editor.
 2. Search for the text "near misses", and replace it with something silly like "flying pigs".
-3. Save the file, then go straight back to the app running in your browser. You’ll notice that the browser has automatically refreshed, and the line “\<date> there will be \<number> near misses” at the top of the page has been changed!
+3. Save the file, then go straight back to the app running in your browser. You'll notice that the browser has automatically refreshed, and the line “\<date> there will be \<number> near misses” at the top of the page has been changed!
 
 You could also try using eslint and Prettier too — try deliberately removing a load of the whitespace from one of your files and try put prettier on it to clean it up, or introduce a syntax error into one of your JavaScript files and see what errors eslint gives you when you try to use Parcel to build it again.
 
@@ -445,9 +445,9 @@ You could also try using eslint and Prettier too — try deliberately removing a
 
 We've come a long way in this chapter, building up a rather nice local development environment to create an application in.
 
-At this point during web software development you would usually be crafting your code for the software you intend to build. Since this module is all about learning the tools around web development, not web development code itself, we won’t be teaching you any actual coding — you’ll find that information in the rest of MDN!
+At this point during web software development you would usually be crafting your code for the software you intend to build. Since this module is all about learning the tools around web development, not web development code itself, we won't be teaching you any actual coding — you'll find that information in the rest of MDN!
 
-Instead, we’ve written an example project for you to use your tools on. We’d suggest that you work through the rest of the chapter using our example code, and then you can try changing the contents of the src directory to your own project and publishing that on Netlify instead! And indeed, deploying to Netlify will be the end goal of the next chapter!
+Instead, we've written an example project for you to use your tools on. We'd suggest that you work through the rest of the chapter using our example code, and then you can try changing the contents of the src directory to your own project and publishing that on Netlify instead! And indeed, deploying to Netlify will be the end goal of the next chapter!
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Package_management","Learn/Tools_and_testing/Understanding_client-side_tools/Deployment", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 

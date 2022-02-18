@@ -16,7 +16,7 @@ slug: Tools/Debugger-API/Debugger.Frame
 
 <h2 id="Visible_frames">Visible frames</h2>
 
-<p>When inspecting the call stack, <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> does not reveal all the frames that are actually present on the stack: while it does reveal all frames running debuggee code, it omits frames running the debugger’s own code, and omits most frames running non-debuggee code. We call those stack frames a <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> does reveal <em>visible frames</em>.</p>
+<p>When inspecting the call stack, <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> does not reveal all the frames that are actually present on the stack: while it does reveal all frames running debuggee code, it omits frames running the debugger's own code, and omits most frames running non-debuggee code. We call those stack frames a <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> does reveal <em>visible frames</em>.</p>
 
 <p>A frame is a visible frame if any of the following are true:</p>
 
@@ -34,7 +34,7 @@ slug: Tools/Debugger-API/Debugger.Frame
 
 <p>The “immediate caller” rule means that, when debuggee code calls a non-debuggee function, it looks like a call to a primitive: you see a frame for the non-debuggee function that was accessible to the debuggee, but any further calls that function makes are treated as internal details, and omitted from the stack trace. If the non-debuggee function eventually calls back into debuggee code, then those frames are visible.</p>
 
-<p>(Note that the debuggee is not considered an “immediate caller” of handler methods it triggers. Even though the debuggee and debugger share the same JavaScript stack, frames pushed for SpiderMonkey’s calls to handler methods to report events in the debuggee are never considered visible frames.)</p>
+<p>(Note that the debuggee is not considered an “immediate caller” of handler methods it triggers. Even though the debuggee and debugger share the same JavaScript stack, frames pushed for SpiderMonkey's calls to handler methods to report events in the debuggee are never considered visible frames.)</p>
 
 <h2 id="Invocation_functions_and_“debugger”_frames"><span id="invf">Invocation</span> functions and “debugger” frames</h2>
 
@@ -44,7 +44,7 @@ slug: Tools/Debugger-API/Debugger.Frame
 
 <ol style="list-style-type: decimal;">
 	<li>
-	<p>Let<em>older</em> be the youngest visible frame on the stack, or <code>null</code> if there is no such frame. (This is never one of the debugger’s own frames; those never appear as <code>Debugger.Frame</code> instances.)</p>
+	<p>Let<em>older</em> be the youngest visible frame on the stack, or <code>null</code> if there is no such frame. (This is never one of the debugger's own frames; those never appear as <code>Debugger.Frame</code> instances.)</p>
 	</li>
 	<li>
 	<p>Push a <code>"debugger"</code> frame on the stack, with<em>older</em> as its <code>older</code> property.</p>
@@ -57,7 +57,7 @@ slug: Tools/Debugger-API/Debugger.Frame
 	</li>
 </ol>
 
-<p>When a debugger calls an invocation function to run debuggee code, that code’s continuation is the debugger, not the next debuggee code frame. Pushing a <code>"debugger"</code> frame makes this continuation explicit, and makes it easier to find the extent of the stack created for the invocation.</p>
+<p>When a debugger calls an invocation function to run debuggee code, that code's continuation is the debugger, not the next debuggee code frame. Pushing a <code>"debugger"</code> frame makes this continuation explicit, and makes it easier to find the extent of the stack created for the invocation.</p>
 
 <h2 id="Accessor_properties_of_the_Debugger.Frame_prototype_object">Accessor properties of the Debugger.Frame prototype object</h2>
 
@@ -119,7 +119,7 @@ slug: Tools/Debugger-API/Debugger.Frame
 	<dt><code>script</code></dt>
 	<dd>The script being executed in this frame (a <a href="Debugger.Script"><code>Debugger.Script</code></a> instance), or <code>null</code> on frames that do not represent calls to debuggee code. On frames whose <code>callee</code> property is not null, this is equal to <code>callee.script</code>.</dd>
 	<dt><code>offset</code></dt>
-	<dd>The offset of the bytecode instruction currently being executed in <code>script</code>, or <code>undefined</code> if the frame’s <code>script</code> property is <code>null</code>. For a <code>wasmcall</code> frame, this property throws a <code>TypeError</code>.</dd>
+	<dd>The offset of the bytecode instruction currently being executed in <code>script</code>, or <code>undefined</code> if the frame's <code>script</code> property is <code>null</code>. For a <code>wasmcall</code> frame, this property throws a <code>TypeError</code>.</dd>
 	<dt><code>environment</code></dt>
 	<dd>The lexical environment within which evaluation is taking place (a <a href="Debugger.Environment"><code>Debugger.Environment</code></a> instance), or <code>null</code> on frames that do not represent the evaluation of debuggee code, like calls non-debuggee functions, host functions or <code>"debugger"</code> frames.</dd>
 	<dt><code>callee</code></dt>
@@ -129,39 +129,39 @@ slug: Tools/Debugger-API/Debugger.Frame
 	<dt><code>constructing</code></dt>
 	<dd>True if this frame is for a function called as a constructor, false otherwise.</dd>
 	<dt><code>arguments</code></dt>
-	<dd>The arguments passed to the current frame, or <code>null</code> if this is not a <code>"call"</code> frame. When non-<code>null</code>, this is an object, allocated in the same global as the debugger, with <code>Array.prototype</code> on its prototype chain, a non-writable <code>length</code> property, and properties whose names are array indices. Each property is a read-only accessor property whose getter returns the current value of the corresponding parameter. When the referent frame is popped, the argument value’s properties’ getters throw an error.</dd>
+	<dd>The arguments passed to the current frame, or <code>null</code> if this is not a <code>"call"</code> frame. When non-<code>null</code>, this is an object, allocated in the same global as the debugger, with <code>Array.prototype</code> on its prototype chain, a non-writable <code>length</code> property, and properties whose names are array indices. Each property is a read-only accessor property whose getter returns the current value of the corresponding parameter. When the referent frame is popped, the argument value's properties' getters throw an error.</dd>
 </dl>
 
 <h2 id="Handler_methods_of_Debugger.Frame_instances">Handler methods of Debugger.Frame instances</h2>
 
 <p>Each <code>Debugger.Frame</code> instance inherits accessor properties holding handler functions for SpiderMonkey to call when given events occur in the frame.</p>
 
-<p>Calls to frames’ handler methods are cross-compartment, intra-thread calls: the call takes place in the thread to which the frame belongs, and runs in the compartment to which the handler method belongs.</p>
+<p>Calls to frames' handler methods are cross-compartment, intra-thread calls: the call takes place in the thread to which the frame belongs, and runs in the compartment to which the handler method belongs.</p>
 
 <p><code>Debugger.Frame</code> instances inherit the following handler method properties:</p>
 
 <dl>
 	<dt><code>onStep</code></dt>
 	<dd>
-	<p>This property must be either <code>undefined</code> or a function. If it is a function, SpiderMonkey calls it when execution in this frame makes a small amount of progress, passing no arguments and providing this <code>Debugger.Frame</code> instance as the <code>this</code>value. The function should return a <a href="Conventions#resumption-values" title="Debugger API: General Conventions: Resumption Values">resumption value</a> specifying how the debuggee’s execution should proceed.</p>
+	<p>This property must be either <code>undefined</code> or a function. If it is a function, SpiderMonkey calls it when execution in this frame makes a small amount of progress, passing no arguments and providing this <code>Debugger.Frame</code> instance as the <code>this</code>value. The function should return a <a href="Conventions#resumption-values" title="Debugger API: General Conventions: Resumption Values">resumption value</a> specifying how the debuggee's execution should proceed.</p>
 
 	<p>What constitutes “a small amount of progress” varies depending on the implementation, but it is fine-grained enough to implement useful “step” and “next” behavior.</p>
 
-	<p>If multiple <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instances each have <code>Debugger.Frame</code> instances for a given stack frame with <code>onStep</code> handlers set, their handlers are run in an unspecified order. If any <code>onStep</code> handler forces the frame to return early (by returning a resumption value other than <code>undefined</code>), any remaining debuggers’ <code>onStep</code> handlers do not run.</p>
+	<p>If multiple <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instances each have <code>Debugger.Frame</code> instances for a given stack frame with <code>onStep</code> handlers set, their handlers are run in an unspecified order. If any <code>onStep</code> handler forces the frame to return early (by returning a resumption value other than <code>undefined</code>), any remaining debuggers' <code>onStep</code> handlers do not run.</p>
 
 	<p>This property is ignored on frames that are not executing debuggee code, like <code>"call"</code> frames for calls to host functions and <code>"debugger"</code> frames.</p>
 	</dd>
 	<dt><code>onPop</code></dt>
 	<dd>
-	<p>This property must be either <code>undefined</code> or a function. If it is a function, SpiderMonkey calls it just before this frame is popped, passing a <a href="Conventions#completion-values" title="Debugger API: General Conventions: Completion Values">completion value</a> indicating how this frame’s execution completed, and providing this <code>Debugger.Frame</code> instance as the <code>this</code> value. The function should return a <a href="Conventions#resumption-values" title="Debugger API: General Conventions: Resumption Values">resumption value</a> indicating how execution should proceed. On newly created frames, this property’s value is <code>undefined</code>.</p>
+	<p>This property must be either <code>undefined</code> or a function. If it is a function, SpiderMonkey calls it just before this frame is popped, passing a <a href="Conventions#completion-values" title="Debugger API: General Conventions: Completion Values">completion value</a> indicating how this frame's execution completed, and providing this <code>Debugger.Frame</code> instance as the <code>this</code> value. The function should return a <a href="Conventions#resumption-values" title="Debugger API: General Conventions: Resumption Values">resumption value</a> indicating how execution should proceed. On newly created frames, this property's value is <code>undefined</code>.</p>
 
-	<p>When this handler is called, this frame’s current execution location, as reflected in its <code>offset</code> and <code>environment</code> properties, is the operation which caused it to be unwound. In frames returning or throwing an exception, the location is often a return or a throw statement. In frames propagating exceptions, the location is a call.</p>
+	<p>When this handler is called, this frame's current execution location, as reflected in its <code>offset</code> and <code>environment</code> properties, is the operation which caused it to be unwound. In frames returning or throwing an exception, the location is often a return or a throw statement. In frames propagating exceptions, the location is a call.</p>
 
-	<p>When an <code>onPop</code> call reports the completion of a construction call (that is, a function called via the <code>new</code> operator), the completion value passed to the handler describes the value returned by the function body. If this value is not an object, it may be different from the value produced by the <code>new</code> expression, which will be the value of the frame’s <code>this</code> property. (In ECMAScript terms, the <code>onPop</code> handler receives the value returned by the <code>[[Call]]</code> method, not the value returned by the <code>[[Construct]]</code> method.)</p>
+	<p>When an <code>onPop</code> call reports the completion of a construction call (that is, a function called via the <code>new</code> operator), the completion value passed to the handler describes the value returned by the function body. If this value is not an object, it may be different from the value produced by the <code>new</code> expression, which will be the value of the frame's <code>this</code> property. (In ECMAScript terms, the <code>onPop</code> handler receives the value returned by the <code>[[Call]]</code> method, not the value returned by the <code>[[Construct]]</code> method.)</p>
 
-	<p>When a debugger handler function forces a frame to complete early, by returning a <code>{ return:... }</code>, <code>{ throw:... }</code>, or <code>null</code> resumption value, SpiderMonkey calls the frame’s <code>onPop</code> handler, if any. The completion value passed in this case reflects the resumption value that caused the frame to complete.</p>
+	<p>When a debugger handler function forces a frame to complete early, by returning a <code>{ return:... }</code>, <code>{ throw:... }</code>, or <code>null</code> resumption value, SpiderMonkey calls the frame's <code>onPop</code> handler, if any. The completion value passed in this case reflects the resumption value that caused the frame to complete.</p>
 
-	<p>When SpiderMonkey calls an <code>onPop</code> handler for a frame that is throwing an exception or being terminated, and the handler returns <code>undefined</code>, then SpiderMonkey proceeds with the exception or termination. That is, an <code>undefined</code> resumption value leaves the frame’s throwing and termination process undisturbed.</p>
+	<p>When SpiderMonkey calls an <code>onPop</code> handler for a frame that is throwing an exception or being terminated, and the handler returns <code>undefined</code>, then SpiderMonkey proceeds with the exception or termination. That is, an <code>undefined</code> resumption value leaves the frame's throwing and termination process undisturbed.</p>
 
 	<p>If multiple <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instances each have <code>Debugger.Frame</code> instances for a given stack frame with <code>onPop</code> handlers set, their handlers are run in an unspecified order. The resumption value each handler returns establishes the completion value reported to the next handler.</p>
 
@@ -176,11 +176,11 @@ slug: Tools/Debugger-API/Debugger.Frame
 <dl>
 	<dt><code id="eval">eval(<em>code</em>, [<em>options</em>])</code></dt>
 	<dd>
-	<p>Evaluate<em>code</em> in the execution context of this frame, and return a <a href="Conventions#completion-values" title="Debugger API: General Conventions: Completion Values">completion value</a> describing how it completed.<em>Code</em> is a string. If this frame’s <code>environment</code> property is <code>null</code> or <code>type</code> property is <code>wasmcall</code>, throw a <code>TypeError</code>. All extant handler methods, breakpoints, and so on remain active during the call. This function follows the <a href="Debugger.Frame#invf" title="Debugger.Frame: Invocation Frames">invocation function conventions</a>.</p>
+	<p>Evaluate<em>code</em> in the execution context of this frame, and return a <a href="Conventions#completion-values" title="Debugger API: General Conventions: Completion Values">completion value</a> describing how it completed.<em>Code</em> is a string. If this frame's <code>environment</code> property is <code>null</code> or <code>type</code> property is <code>wasmcall</code>, throw a <code>TypeError</code>. All extant handler methods, breakpoints, and so on remain active during the call. This function follows the <a href="Debugger.Frame#invf" title="Debugger.Frame: Invocation Frames">invocation function conventions</a>.</p>
 
 	<p><em>Code</em>is interpreted as strict mode code when it contains a Use Strict Directive, or the code executing in this frame is strict mode code.</p>
 
-	<p>If<em>code</em> is not strict mode code, then variable declarations in<em>code</em> affect the environment of this frame. (In the terms used by the ECMAScript specification, the <code>VariableEnvironment</code> of the execution context for the eval code is the <code>VariableEnvironment</code> of the execution context that this frame represents.) If implementation restrictions prevent SpiderMonkey from extending this frame’s environment as requested, this call throws an Error exception.</p>
+	<p>If<em>code</em> is not strict mode code, then variable declarations in<em>code</em> affect the environment of this frame. (In the terms used by the ECMAScript specification, the <code>VariableEnvironment</code> of the execution context for the eval code is the <code>VariableEnvironment</code> of the execution context that this frame represents.) If implementation restrictions prevent SpiderMonkey from extending this frame's environment as requested, this call throws an Error exception.</p>
 
 	<p>If given,<em>options</em> should be an object whose properties specify details of how the evaluation should occur. The <code>eval</code> method recognizes the following properties:</p>
 
@@ -197,9 +197,9 @@ slug: Tools/Debugger-API/Debugger.Frame
 
 	<p>This method allows debugger code to introduce temporary bindings that are visible to the given debuggee code and which refer to debugger-held debuggee values, and do so without mutating any existing debuggee environment.</p>
 
-	<p>Note that, like <code>eval</code>, declarations in the<em>code</em> passed to <code>evalWithBindings</code> affect the environment of this frame, even as that environment is extended by bindings visible within<em>code</em>. (In the terms used by the ECMAScript specification, the <code>VariableEnvironment</code> of the execution context for the eval code is the <code>VariableEnvironment</code> of the execution context that this frame represents, and the<em>bindings</em> appear in a new declarative environment, which is the eval code’s <code>LexicalEnvironment</code>.) If implementation restrictions prevent SpiderMonkey from extending this frame’s environment as requested, this call throws an <code>Error</code> exception.</p>
+	<p>Note that, like <code>eval</code>, declarations in the<em>code</em> passed to <code>evalWithBindings</code> affect the environment of this frame, even as that environment is extended by bindings visible within<em>code</em>. (In the terms used by the ECMAScript specification, the <code>VariableEnvironment</code> of the execution context for the eval code is the <code>VariableEnvironment</code> of the execution context that this frame represents, and the<em>bindings</em> appear in a new declarative environment, which is the eval code's <code>LexicalEnvironment</code>.) If implementation restrictions prevent SpiderMonkey from extending this frame's environment as requested, this call throws an <code>Error</code> exception.</p>
 
-	<p>The<em>options</em> argument is as for <a href="Debugger.Frame#eval" title="Debugger.Frame: Eval"><code>Debugger.Frame.prototype.eval</code></a>, described above. Also like <code>eval</code>, if this frame’s <code>environment</code> property is <code>null</code> or <code>type</code> property is <code>wasmcall</code>, throw a <code>TypeError</code>.</p>
+	<p>The<em>options</em> argument is as for <a href="Debugger.Frame#eval" title="Debugger.Frame: Eval"><code>Debugger.Frame.prototype.eval</code></a>, described above. Also like <code>eval</code>, if this frame's <code>environment</code> property is <code>null</code> or <code>type</code> property is <code>wasmcall</code>, throw a <code>TypeError</code>.</p>
 	</dd>
 </dl>
 

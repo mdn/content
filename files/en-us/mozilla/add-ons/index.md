@@ -28,7 +28,7 @@ Extensions written using WebExtensions APIs for Firefox are designed to be cross
 
 ### Extension Workshop
 
-The [Firefox Extension Workshop](https://extensionworkshop.com) can help you develop extensions for Firefox and give your users simple, yet powerful ways to customize their browsing experience. You’ll find:
+The [Firefox Extension Workshop](https://extensionworkshop.com) can help you develop extensions for Firefox and give your users simple, yet powerful ways to customize their browsing experience. You'll find:
 
 - [Overview of the Firefox extension features](https://extensionworkshop.com/#about)
 - [Tools and processes for developing and testing](https://extensionworkshop.com/documentation/develop/)
@@ -40,7 +40,7 @@ The [Firefox Extension Workshop](https://extensionworkshop.com) can help you dev
 
 ### Extensions for Firefox for Android
 
-In 2020, Mozilla will release a new Firefox for Android experience. This new, high-performance browser for Android has been rebuilt from the ground up using GeckoView, Mozilla’s mobile browser engine. We are currently building support for the WebExtensions API on GeckoView.
+In 2020, Mozilla will release a new Firefox for Android experience. This new, high-performance browser for Android has been rebuilt from the ground up using GeckoView, Mozilla's mobile browser engine. We are currently building support for the WebExtensions API on GeckoView.
 
 ### Migrate an existing extension
 

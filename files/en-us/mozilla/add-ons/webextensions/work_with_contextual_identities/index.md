@@ -23,10 +23,10 @@ For more background on this feature, see:
 
 ## APIs for working with contextual identities
 
-To use the contextual identity features in extensions, you’ll work with two APIs:
+To use the contextual identity features in extensions, you'll work with two APIs:
 
 - {{WebExtAPIRef("contextualIdentities")}} which enable an extension to add, query, update, and delete contextual identities.
-- {{WebExtAPIRef("tabs")}} or more specifically {{WebExtAPIRef("tabs.create")}} which enables you to create a tab that uses a contextual identity’s container (cookies store).
+- {{WebExtAPIRef("tabs")}} or more specifically {{WebExtAPIRef("tabs.create")}} which enables you to create a tab that uses a contextual identity's container (cookies store).
 
 ## Permissions
 
@@ -34,7 +34,7 @@ To use the {{WebExtAPIRef("contextualIdentities")}} API you need to include the 
 
 ## Example walkthrough
 
-The example extension [contextual-identities](https://github.com/mdn/webextensions-examples/tree/master/contextual-identities) provides a toolbar button with a popup that lists the identities in the browser. For each identity, the extension provides options to create a new tab using it’s cookies container or remove all of the identity’s tabs.
+The example extension [contextual-identities](https://github.com/mdn/webextensions-examples/tree/master/contextual-identities) provides a toolbar button with a popup that lists the identities in the browser. For each identity, the extension provides options to create a new tab using it's cookies container or remove all of the identity's tabs.
 
 Here is a short video of the extension in action:
 
@@ -53,7 +53,7 @@ The main features of the [manifest.json](https://github.com/mdn/webextensions-ex
     ],
   ```
 
-- specification of the toolbar button (browseAction) that provides access to the extension’s features:
+- specification of the toolbar button (browseAction) that provides access to the extension's features:
 
   ```json
     "browser_action": {
@@ -67,7 +67,7 @@ The main features of the [manifest.json](https://github.com/mdn/webextensions-ex
 
 ## context.html
 
-A popup on the toolbar button provides the extension’s user interface. [context.html](https://github.com/mdn/webextensions-examples/blob/master/contextual-identities/context.html) implements this popup, but it’s just a shell into which the context.js script writes the list of contextual identities and their related options.
+A popup on the toolbar button provides the extension's user interface. [context.html](https://github.com/mdn/webextensions-examples/blob/master/contextual-identities/context.html) implements this popup, but it's just a shell into which the context.js script writes the list of contextual identities and their related options.
 
 ```html
   <body>
@@ -96,7 +96,7 @@ if (browser.contextualIdentities === undefined) {
 } else {
 ```
 
-Firefox installs with the contextual identity feature turned off, it’s turned on when an extension using the contextualIdentities API is installed. However, it's still possible for the user to turn the feature off, using an option on the preferences page (about:preferences), hence the need for the check.
+Firefox installs with the contextual identity feature turned off, it's turned on when an extension using the contextualIdentities API is installed. However, it's still possible for the user to turn the feature off, using an option on the preferences page (about:preferences), hence the need for the check.
 
 The script now uses contextualIdentities.query to determine whether there are any contextual identities defined in the browser. If there are none, a message is added to the popup and the script stops.
 
@@ -109,7 +109,7 @@ The script now uses contextualIdentities.query to determine whether there are an
       }
 ```
 
-If there are contextual identities present—Firefox comes with four default identities—the script loops through each one adding its name, styled in its chosen color, to the \<div> element. The function `createOptions()` then adds the options to “create” or “close all” to the \<div> before it’s added to the popup.
+If there are contextual identities present—Firefox comes with four default identities—the script loops through each one adding its name, styled in its chosen color, to the \<div> element. The function `createOptions()` then adds the options to “create” or “close all” to the \<div> before it's added to the popup.
 
 ```json
      for (let identity of identities) {
@@ -145,7 +145,7 @@ The script now waits for the user to select an option in the popup.
 function eventHandler(event) {
 ```
 
-If the user clicks the option to create a tab for an identity, one is opened using tabs.create by passing the identity’s cookie store ID.
+If the user clicks the option to create a tab for an identity, one is opened using tabs.create by passing the identity's cookie store ID.
 
 ```json
   if (event.target.dataset.action == 'create') {
@@ -156,7 +156,7 @@ If the user clicks the option to create a tab for an identity, one is opened usi
   }
 ```
 
-If the user selects the option to close all tabs for the identity, the script performs a tabs.query for all tabs that are using the identity’s cookie store. The script then passes this list of tabs to `tabs.remove`.
+If the user selects the option to close all tabs for the identity, the script performs a tabs.query for all tabs that are using the identity's cookie store. The script then passes this list of tabs to `tabs.remove`.
 
 ```json
   if (event.target.dataset.action == 'close-all') {

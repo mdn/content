@@ -6,7 +6,7 @@ slug: Tools/Debugger-API/Debugger.Memory
 
 <h1 id="Debugger.Memory">Debugger.Memory</h1>
 
-<p>The <a href="../Debugger-API" title="The Debugger API"><code>Debugger API</code></a> can help tools observe the debuggee’s memory use in various ways:</p>
+<p>The <a href="../Debugger-API" title="The Debugger API"><code>Debugger API</code></a> can help tools observe the debuggee's memory use in various ways:</p>
 
 <ul>
  <li>
@@ -20,7 +20,7 @@ slug: Tools/Debugger-API/Debugger.Memory
  </li>
 </ul>
 
-<p>If<em>dbg</em> is a <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instance, then the methods and accessor properties of <code><em>dbg</em>.memory</code> control how<em>dbg</em> observes its debuggees’ memory use. The <code><em>dbg</em>.memory</code> object is an instance of <code>Debugger.Memory</code>; its inherited accesors and methods are described below.</p>
+<p>If<em>dbg</em> is a <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instance, then the methods and accessor properties of <code><em>dbg</em>.memory</code> control how<em>dbg</em> observes its debuggees' memory use. The <code><em>dbg</em>.memory</code> object is an instance of <code>Debugger.Memory</code>; its inherited accesors and methods are described below.</p>
 
 <h3 id="Allocation_Site_Tracking">Allocation Site Tracking</h3>
 
@@ -38,15 +38,15 @@ slug: Tools/Debugger-API/Debugger.Memory
  </li>
 </ul>
 
-<p>Given a <a href="Debugger.Object"><code>Debugger.Object</code></a> instance<em>dobj</em> referring to some object, <code><em>dobj</em>.<a href="Debugger.Object#allocationsite" title="Debugger.Object: allocationSite">allocationSite</a></code> returns a <a href="https://firefox-source-docs.mozilla.org/js/SavedFrame/">saved call stack</a> indicating where<em>dobj</em>’s referent was allocated.</p>
+<p>Given a <a href="Debugger.Object"><code>Debugger.Object</code></a> instance<em>dobj</em> referring to some object, <code><em>dobj</em>.<a href="Debugger.Object#allocationsite" title="Debugger.Object: allocationSite">allocationSite</a></code> returns a <a href="https://firefox-source-docs.mozilla.org/js/SavedFrame/">saved call stack</a> indicating where<em>dobj</em>'s referent was allocated.</p>
 
 <h3 id="Allocation_Logging">Allocation Logging</h3>
 
-<p>If<em>dbg</em> is a <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instance, and <code><em>dbg</em>.memory.<a href="Debugger.Memory#trackingallocationsites" title="Debugger.Memory: trackingAllocationSites">trackingAllocationSites</a></code> is set to <code>true</code>, then the JavaScript engine logs each object allocated by<em>dbg</em>’s debuggee code. You can retrieve the current log by calling <code><em>dbg</em>.memory.<a href="Debugger.Memory#drain-alloc-log" title="Debugger.Memory: drainAllocationsLog">drainAllocationsLog</a></code>. You can control the limit on the log’s size by setting <code><em>dbg</em>.memory.<a href="Debugger.Memory#max-alloc-log" title="Debugger.Memory: maxAllocationsLogLength">maxAllocationsLogLength</a></code>.</p>
+<p>If<em>dbg</em> is a <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instance, and <code><em>dbg</em>.memory.<a href="Debugger.Memory#trackingallocationsites" title="Debugger.Memory: trackingAllocationSites">trackingAllocationSites</a></code> is set to <code>true</code>, then the JavaScript engine logs each object allocated by<em>dbg</em>'s debuggee code. You can retrieve the current log by calling <code><em>dbg</em>.memory.<a href="Debugger.Memory#drain-alloc-log" title="Debugger.Memory: drainAllocationsLog">drainAllocationsLog</a></code>. You can control the limit on the log's size by setting <code><em>dbg</em>.memory.<a href="Debugger.Memory#max-alloc-log" title="Debugger.Memory: maxAllocationsLogLength">maxAllocationsLogLength</a></code>.</p>
 
 <h3 id="Censuses">Censuses</h3>
 
-<p>A <em>census</em> is a complete traversal of the graph of all reachable memory items belonging to a particular <code>Debugger</code>‘s debuggees. It produces a count of those items, broken down by various criteria. If<em>dbg</em> is a <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instance, you can call <code><em>dbg</em>.memory.<a href="Debugger.Memory#take-census" title="Debugger.Memory: takeCensus">takeCensus</a></code> to conduct a census of its debuggees’ possessions.</p>
+<p>A <em>census</em> is a complete traversal of the graph of all reachable memory items belonging to a particular <code>Debugger</code>'s debuggees. It produces a count of those items, broken down by various criteria. If<em>dbg</em> is a <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instance, you can call <code><em>dbg</em>.memory.<a href="Debugger.Memory#take-census" title="Debugger.Memory: takeCensus">takeCensus</a></code> to conduct a census of its debuggees' possessions.</p>
 
 <h2 id="Accessor_Properties_of_the_Debugger.Memory.prototype_Object">Accessor Properties of the <code>Debugger.Memory.prototype</code> Object</h2>
 
@@ -67,7 +67,7 @@ slug: Tools/Debugger-API/Debugger.Memory
 
  <p>The default is 1, or logging every allocation.</p>
 
- <p>Note that in the presence of multiple <code>Debugger</code> instances observing the same allocations within a global’s scope, the maximum <code>allocationSamplingProbability</code> of all the <code>Debugger</code>s is used.</p>
+ <p>Note that in the presence of multiple <code>Debugger</code> instances observing the same allocations within a global's scope, the maximum <code>allocationSamplingProbability</code> of all the <code>Debugger</code>s is used.</p>
  </dd>
  <dt><code id="max-alloc-log">maxAllocationsLogLength</code></dt>
  <dd>The maximum number of allocation sites to accumulate in the allocations log at a time. This accessor can be both fetched and stored to. Its default value is <code>5000</code>.</dd>
@@ -77,9 +77,9 @@ slug: Tools/Debugger-API/Debugger.Memory
 
 <h2 id="Debugger.Memory_Handler_Functions">Debugger.Memory Handler Functions</h2>
 
-<p>Similar to <a href="../Debugger-API" title="The Debugger API"><code>Debugger</code>’s handler functions</a>, <code>Debugger.Memory</code> inherits accessor properties that store handler functions for SpiderMonkey to call when given events occur in debuggee code.</p>
+<p>Similar to <a href="../Debugger-API" title="The Debugger API"><code>Debugger</code>'s handler functions</a>, <code>Debugger.Memory</code> inherits accessor properties that store handler functions for SpiderMonkey to call when given events occur in debuggee code.</p>
 
-<p>Unlike <code>Debugger</code>‘s hooks, <code>Debugger.Memory</code>’s handlers’ return values are not significant, and are ignored. The handler functions receive the <code>Debugger.Memory</code>’s owning <code>Debugger</code> instance as their <code>this</code> value. The owning <code>Debugger</code>’s <code>uncaughtExceptionHandler</code> is still fired for errors thrown in <code>Debugger.Memory</code> hooks.</p>
+<p>Unlike <code>Debugger</code>'s hooks, <code>Debugger.Memory</code>'s handlers' return values are not significant, and are ignored. The handler functions receive the <code>Debugger.Memory</code>'s owning <code>Debugger</code> instance as their <code>this</code> value. The owning <code>Debugger</code>'s <code>uncaughtExceptionHandler</code> is still fired for errors thrown in <code>Debugger.Memory</code> hooks.</p>
 
 <p>On a new <code>Debugger.Memory</code> instance, each of these properties is initially <code>undefined</code>. Any value assigned to a debugging handler must be either a function or <code>undefined</code>; otherwise a <code>TypeError</code> is thrown.</p>
 
@@ -95,7 +95,7 @@ slug: Tools/Debugger-API/Debugger.Memory
  <dl>
   <dt><code>collections</code></dt>
   <dd>
-  <p>The <code>collections</code> property’s value is an array. Because SpiderMonkey’s collector is incremental, a full collection cycle may consist of multiple discrete collection slices with the JS mutator running interleaved. For each collection slice that occurred, there is an entry in the <code>collections</code> array with the following form:</p>
+  <p>The <code>collections</code> property's value is an array. Because SpiderMonkey's collector is incremental, a full collection cycle may consist of multiple discrete collection slices with the JS mutator running interleaved. For each collection slice that occurred, there is an entry in the <code>collections</code> array with the following form:</p>
 
   <pre class="language-js"><code>
 {
@@ -104,7 +104,7 @@ slug: Tools/Debugger-API/Debugger.Memory
 }
 </code></pre>
 
-  <p>Here the <em>timestamp</em> values are <a href="Conventions#timestamps" title="Debugger API: General Conventions: Timestamps">timestamps</a> of the GC slice’s start and end events.</p>
+  <p>Here the <em>timestamp</em> values are <a href="Conventions#timestamps" title="Debugger API: General Conventions: Timestamps">timestamps</a> of the GC slice's start and end events.</p>
   </dd>
   <dt><code>reason</code></dt>
   <dd>
@@ -148,7 +148,7 @@ slug: Tools/Debugger-API/Debugger.Memory
   </dd>
   <dt><code>nonincrementalReason</code></dt>
   <dd>
-  <p>If SpiderMonkey’s collector determined it could not incrementally collect garbage, and had to do a full GC all at once, this is a short string describing the reason it determined the full GC was necessary. Otherwise, <code>null</code> is returned. Known values include the following:</p>
+  <p>If SpiderMonkey's collector determined it could not incrementally collect garbage, and had to do a full GC all at once, this is a short string describing the reason it determined the full GC was necessary. Otherwise, <code>null</code> is returned. Known values include the following:</p>
 
   <ul>
    <li>“GC mode”</li>
@@ -158,7 +158,7 @@ slug: Tools/Debugger-API/Debugger.Memory
   </ul>
   </dd>
   <dt><code>gcCycleNumber</code></dt>
-  <dd>The GC cycle’s “number”. Does not correspond to the number of GC cycles that have run, but is guaranteed to be monotonically increasing.</dd>
+  <dd>The GC cycle's “number”. Does not correspond to the number of GC cycles that have run, but is guaranteed to be monotonically increasing.</dd>
  </dl>
  </dd>
 </dl>
@@ -167,13 +167,13 @@ slug: Tools/Debugger-API/Debugger.Memory
 
 <h2 id="Memory_Use_Analysis_Exposes_Implementation_Details">Memory Use Analysis Exposes Implementation Details</h2>
 
-<p>Memory analysis may yield surprising results, because browser implementation details that are transparent to content JavaScript often have visible effects on memory consumption. Web developers need to know their pages’ actual memory consumption on real browsers, so it is correct for the tool to expose these behaviors, as long as it is done in a way that helps developers make decisions about their own code.</p>
+<p>Memory analysis may yield surprising results, because browser implementation details that are transparent to content JavaScript often have visible effects on memory consumption. Web developers need to know their pages' actual memory consumption on real browsers, so it is correct for the tool to expose these behaviors, as long as it is done in a way that helps developers make decisions about their own code.</p>
 
-<p>This section covers some areas where Firefox’s actual behavior deviates from what one might expect from the specified behavior of the web platform.</p>
+<p>This section covers some areas where Firefox's actual behavior deviates from what one might expect from the specified behavior of the web platform.</p>
 
 <h3 id="Objects">Objects</h3>
 
-<p>SpiderMonkey objects usually use less memory than the naïve “table of properties with attributes” model would suggest. For example, it is typical for many objects to have identical sets of properties, with only the properties’ values varying from one object to the next. To take advantage of this regularity, SpiderMonkey objects with identical sets of properties may share their property metadata; only property values are stored directly in the object.</p>
+<p>SpiderMonkey objects usually use less memory than the naïve “table of properties with attributes” model would suggest. For example, it is typical for many objects to have identical sets of properties, with only the properties' values varying from one object to the next. To take advantage of this regularity, SpiderMonkey objects with identical sets of properties may share their property metadata; only property values are stored directly in the object.</p>
 
 <p>Array objects may also be optimized, if the set of live indices is dense.</p>
 
@@ -183,19 +183,19 @@ slug: Tools/Debugger-API/Debugger.Memory
 
 <ul>
  <li>
-  <p>Normal: the string’s text is counted in its size.</p>
+  <p>Normal: the string's text is counted in its size.</p>
  </li>
  <li>
   <p>Substring: the string is a substring of some other string, and points to that string for its storage. This representation may result in a small string retaining a very large string. However, the memory consumed by the string itself is a small constant independent of its size, since it is a reference to the larger string, a start position, and a length.</p>
  </li>
  <li>
-  <p>Concatenations: When asked to concatenate two strings, SpiderMonkey may elect to delay copying the strings’ data, and represent the result as a pointer to the two original strings. Again, such a string retains other strings, but the memory consumed by the string itself is a small constant independent of its size, since it is a pair of pointers.</p>
+  <p>Concatenations: When asked to concatenate two strings, SpiderMonkey may elect to delay copying the strings' data, and represent the result as a pointer to the two original strings. Again, such a string retains other strings, but the memory consumed by the string itself is a small constant independent of its size, since it is a pair of pointers.</p>
  </li>
 </ul>
 
 <p>SpiderMonkey converts strings from the more complex representations to the simpler ones when it pleases. Such conversions usually increase memory consumption.</p>
 
-<p>SpiderMonkey shares some strings amongst all web pages and browser JS. These shared strings, called <em>atoms</em>, are not included in censuses’ string counts.</p>
+<p>SpiderMonkey shares some strings amongst all web pages and browser JS. These shared strings, called <em>atoms</em>, are not included in censuses' string counts.</p>
 
 <h3 id="Scripts">Scripts</h3>
 
@@ -209,7 +209,7 @@ slug: Tools/Debugger-API/Debugger.Memory
   <p><em>Compressed source code</em>. SpiderMonkey compresses JavaScript source code, and de-compresses it on demand. Heuristics determine how long to retain the uncompressed code.</p>
  </li>
  <li>
-  <p><em>Bytecode</em>. This is SpiderMonkey’s parsed representation of JavaScript. Bytecode can be interpreted directly, or used as input to a just-in-time compiler. Source is parsed into bytecode on demand; functions that are never called are never parsed.</p>
+  <p><em>Bytecode</em>. This is SpiderMonkey's parsed representation of JavaScript. Bytecode can be interpreted directly, or used as input to a just-in-time compiler. Source is parsed into bytecode on demand; functions that are never called are never parsed.</p>
  </li>
  <li>
   <p><em>Machine code</em>. SpiderMonkey includes several just-in-time compilers, each of which translates JavaScript source or bytecode to machine code. Heuristics determine which code to compile, and which compiler to use. Machine code may be dropped in response to memory pressure, and regenerated as needed.</p>

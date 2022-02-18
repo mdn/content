@@ -103,7 +103,7 @@ Web frameworks will often take care of the character escaping for you. Django, f
 
 ### Cross-Site Request Forgery (CSRF)
 
-CSRF attacks allow a malicious user to execute actions using the credentials of another user without that user’s knowledge or consent.
+CSRF attacks allow a malicious user to execute actions using the credentials of another user without that user's knowledge or consent.
 
 This type of attack is best explained by example. John is a malicious user who knows that a particular site allows logged-in users to send money to a specified account using an HTTP `POST` request that includes the account name and an amount of money. John constructs a form that includes his bank details and an amount of money as hidden fields, and emails it to other site users (with the _Submit_ button disguised as a link to a "get rich quick" site).
 

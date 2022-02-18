@@ -28,7 +28,7 @@ In this example (which is used purely as a demonstration—do not do this), tabb
 
 ## Link Titles
 
-If you have a link that isn’t self-descriptive, or the link destination could benefit from being explained in more detail, you can add information to a link using the `title` attribute.
+If you have a link that isn't self-descriptive, or the link destination could benefit from being explained in more detail, you can add information to a link using the `title` attribute.
 
 ```html
 <p>I'm really bad at writing link text. <a href="inept.html" title="Why I'm rubbish at writing link text: An explanation and an apology.">Click here</a> to find out more.</p>
@@ -44,7 +44,7 @@ _Access keys_ provide easier navigation by assigning a _keyboard shortcut_ to a 
 
 ## Skip Links
 
-To aid tabbing, you can supply links that allow users to jump over chunks of your web page. You might want to allow someone to jump over a plethora of navigation links, for example, so they can just read a page’s main content rather than cycle through all of the links.
+To aid tabbing, you can supply links that allow users to jump over chunks of your web page. You might want to allow someone to jump over a plethora of navigation links, for example, so they can just read a page's main content rather than cycle through all of the links.
 
 ```html
 <header>

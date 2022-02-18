@@ -12,7 +12,7 @@ WebAssembly is a new type of code that can be run in modern web browsers — it 
 
 ## In a Nutshell
 
-WebAssembly has huge implications for the web platform — it provides a way to run code written in multiple languages on the web at near native speed, with client apps running on the web that previously couldn’t have done so.
+WebAssembly has huge implications for the web platform — it provides a way to run code written in multiple languages on the web at near native speed, with client apps running on the web that previously couldn't have done so.
 
 WebAssembly is designed to complement and run alongside JavaScript — using the WebAssembly JavaScript APIs, you can load WebAssembly modules into a JavaScript app and share functionality between the two. This allows you to take advantage of WebAssembly's performance and power and JavaScript's expressiveness and flexibility in the same apps, even if you don't know how to write WebAssembly code.
 
@@ -23,7 +23,7 @@ And what's even better is that it is being developed as a web standard via the [
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
   - : Get started by reading the high-level concepts behind WebAssembly — what it is, why it is so useful, how it fits into the web platform (and beyond), and how to use it.
 - [Compiling a New C/C++ Module to WebAssembly](/en-US/docs/WebAssembly/C_to_wasm)
-  - : When you’ve written code in C/C++, you can then compile it into .wasm using a tool like [Emscripten](https://emscripten.org/). Let’s look at how it works.
+  - : When you've written code in C/C++, you can then compile it into .wasm using a tool like [Emscripten](https://emscripten.org/). Let's look at how it works.
 - [Compiling an Existing C Module to WebAssembly](/en-US/docs/WebAssembly/existing_C_to_wasm)
   - : A core use-case for WebAssembly is to take the existing ecosystem of C libraries and allow developers to use them on the web.
 - [Compiling from Rust to WebAssembly](/en-US/docs/WebAssembly/Rust_to_wasm)
