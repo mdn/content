@@ -36,7 +36,7 @@ Font-relative lengths define the `<length>` value in terms of the size of a part
 > **Note:** These units, especially `em` and `rem`, are often used to create scalable layouts, which maintain the [vertical rhythm of the page](https://24ways.org/2006/compose-to-a-vertical-rhythm)  even when the user changes the font size.
 
 - `cap` {{experimental_inline}}
-  - : Represents the "cap height" (nominal height of capital letters) of the element’s {{Cssxref("font")}}.
+  - : Represents the "cap height" (nominal height of capital letters) of the element's {{Cssxref("font")}}.
 - `ch`
 
   - : Represents the width, or more precisely the {{Glossary("advance measure")}}, of the glyph "0" (zero, the Unicode character U+0030) in the element's {{Cssxref("font")}}.
@@ -65,9 +65,9 @@ Viewport-percentage lengths define the `<length>` value relative to the size of 
 - `vw`
   - : Equal to 1% of the width of the viewport's initial [containing block](/en-US/docs/Web/CSS/Containing_block).
 - `vi` {{experimental_inline}}
-  - : Equal to 1% of the size of the initial [containing block](/en-US/docs/Web/CSS/Containing_block), in the direction of the root element’s [inline axis](/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline).
+  - : Equal to 1% of the size of the initial [containing block](/en-US/docs/Web/CSS/Containing_block), in the direction of the root element's [inline axis](/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline).
 - `vb` {{experimental_inline}}
-  - : Equal to 1% of the size of the initial [containing block](/en-US/docs/Web/CSS/Containing_block), in the direction of the root element’s [block axis](/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline).
+  - : Equal to 1% of the size of the initial [containing block](/en-US/docs/Web/CSS/Containing_block), in the direction of the root element's [block axis](/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline).
 - `vmin`
   - : Equal to the smaller of `vw` and `vh`.
 - `vmax`

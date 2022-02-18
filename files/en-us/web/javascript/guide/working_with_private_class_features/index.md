@@ -8,13 +8,13 @@ tags:
 ---
 {{jsSidebar("JavaScript Guide")}}
 
-It’s common to want to make fields or methods private, but JavaScript has lacked such a feature since its inception. Conventions have arisen — such as prefixing fields and methods that should be treated as private with an underscore, like `_hidden` — but these are merely conventions. The underscored features are still fully public.
+It's common to want to make fields or methods private, but JavaScript has lacked such a feature since its inception. Conventions have arisen — such as prefixing fields and methods that should be treated as private with an underscore, like `_hidden` — but these are merely conventions. The underscored features are still fully public.
 
 Private class features deliver truly private fields and methods, with that privacy enforced by the language instead of convention. This confers benefits such as avoiding naming collisions between class features and the rest of the code base, and allowing classes to expose a very small interface to the rest of the code.
 
 ## Private fields
 
-To understand how private fields work, let’s first consider a class that has only public fields, but uses the constructor to encapsulate data—a somewhat common technique, even if it is a bit of a hack. The following class creates a basic count that accepts a starting number, allows that number to be increased or decreased, and can be reset to the original starting value or any other value.
+To understand how private fields work, let's first consider a class that has only public fields, but uses the constructor to encapsulate data—a somewhat common technique, even if it is a bit of a hack. The following class creates a basic count that accepts a starting number, allows that number to be increased or decreased, and can be reset to the original starting value or any other value.
 
 ```js example-bad
 class PublicCounter {
@@ -32,9 +32,9 @@ class PublicCounter {
 }
 ```
 
-The idea here is that once a new counter of this type is spawned, its starting value and its current value are not available to code outside the counter. The only way to modify the value of `_count` is through the defined methods, such as `increase()` and `reset()`. Similarly, `_init` can’t be modified, because there are no methods inside the class to do so, and outside code is unable to reach it.
+The idea here is that once a new counter of this type is spawned, its starting value and its current value are not available to code outside the counter. The only way to modify the value of `_count` is through the defined methods, such as `increase()` and `reset()`. Similarly, `_init` can't be modified, because there are no methods inside the class to do so, and outside code is unable to reach it.
 
-Here’s the same idea, only this time, we’ll use private fields.
+Here's the same idea, only this time, we'll use private fields.
 
 ```js
 class PrivateCounter {

@@ -14,7 +14,7 @@ tags:
 ---
 {{CSSRef}}
 
-In this article we will take a look at how Flexbox fits in with all the other CSS modules. We’ll find out which specifications you also need to take notice of if you want to learn flexbox, and find out why flexbox is different to some other modules.
+In this article we will take a look at how Flexbox fits in with all the other CSS modules. We'll find out which specifications you also need to take notice of if you want to learn flexbox, and find out why flexbox is different to some other modules.
 
 > **Note:** CSS versions 1 and 2 were a single monolithic specification where all of CSS was defined in one large document. As CSS became a more feature rich language, maintaining one huge specification became problematic, with different parts of CSS moving on at different speeds. CSS was therefore modularized, and the various CSS Specifications are different modules that make up CSS today. These modules relate to each other, and are at different stages of development.
 
@@ -102,7 +102,7 @@ In the following live example I have a flex container with three child elements.
 
 By adding `display: contents` to the wrapper around the nested elements, you can see that the item has disappeared from the layout, allowing the two sub-children to be laid out as if they were direct children of the flex container. You can try removing the `display: contents` line to see it return.
 
-Note that this only removes the box from the layout; the sub-children don’t become direct children in any other way. You can see that as I have used a direct child selector to add the background and borders to the flex items, this has not been applied to our nested children. They have been laid out as flex items, but as they are not direct children they do not get the other styling.
+Note that this only removes the box from the layout; the sub-children don't become direct children in any other way. You can see that as I have used a direct child selector to add the background and borders to the flex items, this has not been applied to our nested children. They have been laid out as flex items, but as they are not direct children they do not get the other styling.
 
 > **Warning:** Current implementations in most browsers will remove any element with `display: contents` from the accessibility tree (but descendants will remain). This will cause the element itself to no longer be announced by screen reading technology. This is incorrect behavior according to the specification, see [`display: contents`](/en-US/docs/Web/CSS/display#display_contents).
 

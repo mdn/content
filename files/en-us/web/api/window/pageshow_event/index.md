@@ -84,7 +84,7 @@ events.forEach(eventName =>
 ```html
 <p>Open the console and watch the output as you navigate to and from
 this page. Try loading new pages into this tab, then navigating forward
-and backward through history, noting the events’ output to the log.</p>
+and backward through history, noting the events' output to the log.</p>
 ```
 
 ### Results

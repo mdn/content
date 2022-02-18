@@ -19,7 +19,7 @@ The **`openCursor()`** method of the
 and, in a separate thread, returns a new {{domxref("IDBCursorWithValue")}} object.
 Used for iterating through an object store with a cursor.
 
-To determine if the add operation has completed successfully, listen for the results’s
+To determine if the add operation has completed successfully, listen for the results's
 `success` event.
 
 {{AvailableInWorkers}}

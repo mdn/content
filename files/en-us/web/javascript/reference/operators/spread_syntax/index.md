@@ -326,5 +326,5 @@ See {{jsxref("Function.prototype.apply", "apply()")}} for more details.
 
 ## See also
 
-- {{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}} (also ‘`...`’)
-- {{jsxref("Function.prototype.apply()")}} (also ‘`...`’)
+- {{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}} (also '`...`')
+- {{jsxref("Function.prototype.apply()")}} (also '`...`')

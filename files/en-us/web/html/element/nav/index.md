@@ -104,7 +104,7 @@ In this example, a `<nav>` block is used to contain an unordered list ({{HTMLEle
 </nav>
 ```
 
-The semantics of the `nav` element is that of providing links. However a `nav` element doesn’t have to contain a list, it can contain other kinds of content as well. In this navigation block, links are provided in prose:
+The semantics of the `nav` element is that of providing links. However a `nav` element doesn't have to contain a list, it can contain other kinds of content as well. In this navigation block, links are provided in prose:
 
 ```html
 <nav>

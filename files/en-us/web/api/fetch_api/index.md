@@ -18,7 +18,7 @@ The Fetch API provides an interface for fetching resources (including across the
 
 ## Concepts and usage
 
-Fetch provides a generic definition of {{DOMxRef("Request")}} and {{DOMxRef("Response")}} objects (and other things involved with network requests). This will allow them to be used wherever they are needed in the future, whether it’s for service workers, Cache API, and other similar things that handle or modify requests and responses, or any kind of use case that might require you to generate your responses programmatically (that is, the use of computer program or personal programming instructions).
+Fetch provides a generic definition of {{DOMxRef("Request")}} and {{DOMxRef("Response")}} objects (and other things involved with network requests). This will allow them to be used wherever they are needed in the future, whether it's for service workers, Cache API, and other similar things that handle or modify requests and responses, or any kind of use case that might require you to generate your responses programmatically (that is, the use of computer program or personal programming instructions).
 
 It also defines related concepts such as CORS and the HTTP Origin header semantics, supplanting their separate definitions elsewhere.
 
@@ -34,8 +34,8 @@ You can create a request and response directly using the {{DOMxRef("Request.Requ
 
 The `fetch` specification differs from `jQuery.ajax()` in three main ways:
 
-- The Promise returned from `fetch()` **won’t reject on HTTP error status** even if the response is an HTTP `404` or `500`. Instead, it will resolve normally (with `ok` status set to `false`), and it will only reject on network failure or if anything prevented the request from completing.
-- `fetch()` **won’t send cross-origin cookies** unless you set the _credentials_ [init option](/en-US/docs/Web/API/fetch#parameters) (to `include`).
+- The Promise returned from `fetch()` **won't reject on HTTP error status** even if the response is an HTTP `404` or `500`. Instead, it will resolve normally (with `ok` status set to `false`), and it will only reject on network failure or if anything prevented the request from completing.
+- `fetch()` **won't send cross-origin cookies** unless you set the _credentials_ [init option](/en-US/docs/Web/API/fetch#parameters) (to `include`).
 
   - In [April 2018](https://github.com/whatwg/fetch/pull/585), the spec changed the default credentials policy to `'same-origin'`. The following browsers shipped an outdated native fetch, and were updated in these versions: Firefox 61.0b13, Safari 12, Chrome 68.
   - If you are targeting older versions of these browsers, be sure to include `credentials: 'same-origin'` [init option](/en-US/docs/Web/API/fetch#parameters) on all api requests that may be affected by cookies/user login state.

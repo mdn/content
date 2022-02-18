@@ -49,11 +49,11 @@ You can use this attribute with the following SVG elements:
 - `auto` {{deprecated_inline}}
   - : The value is the dominant-baseline of the script to which the character belongs - i.e., use the dominant-baseline of the parent.
 - `baseline`
-  - : Uses the {{Glossary("dominant baseline")}} choice of the parent. Matches the box’s corresponding {{Glossary("baseline")}} to that of its parent.
+  - : Uses the {{Glossary("dominant baseline")}} choice of the parent. Matches the box's corresponding {{Glossary("baseline")}} to that of its parent.
 - `before-edge` {{deprecated_inline}}
   - : The alignment-point of the object being aligned is aligned with the "before-edge" baseline of the parent text content element.
 - `text-bottom`
-  - : Matches the bottom of the box to the top of the parent’s content area.
+  - : Matches the bottom of the box to the top of the parent's content area.
 - `text-before-edge`
   - : The alignment-point of the object being aligned is aligned with the "text-before-edge" baseline of the parent text content element.
 
@@ -61,23 +61,23 @@ You can use this attribute with the following SVG elements:
 - `middle`
   - : Aligns the vertical midpoint of the box with the baseline of the parent box plus half the x-height of the parent.
 - `central`
-  - : Matches the box’s central baseline to the central baseline of its parent.
+  - : Matches the box's central baseline to the central baseline of its parent.
 - `after-edge` {{deprecated_inline}}
   - : The alignment-point of the object being aligned is aligned with the "after-edge" baseline of the parent text content element.
 - `text-top`
-  - : Matches the top of the box to the top of the parent’s content area.
+  - : Matches the top of the box to the top of the parent's content area.
 - `text-after-edge`
   - : The alignment-point of the object being aligned is aligned with the "text-after-edge" baseline of the parent text content element.
 
     > **Note:** This keyword may be mapped to `text-bottom`.
 - `ideographic`
-  - : Matches the box’s ideographic character face under-side baseline to that of its parent.
+  - : Matches the box's ideographic character face under-side baseline to that of its parent.
 - `alphabetic`
-  - : Matches the box’s alphabetic baseline to that of its parent.
+  - : Matches the box's alphabetic baseline to that of its parent.
 - `hanging`
   - : The alignment-point of the object being aligned is aligned with the "hanging" baseline of the parent text content element.
 - `mathematical`
-  - : Matches the box’s mathematical baseline to that of its parent.
+  - : Matches the box's mathematical baseline to that of its parent.
 - `top`
   - : Aligns the top of the aligned subtree with the top of the line box.
 - `center`

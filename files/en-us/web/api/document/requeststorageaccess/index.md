@@ -39,7 +39,7 @@ Storage access is granted based on a series of checks described here:
 
 Assuming all of the requirements above are satisfied, Firefox will automatically grant
 storage access to the requesting origin on up to a threshold number of first-party
-sites in the current session for the duration of user’s session, up to a maximum of 24
+sites in the current session for the duration of user's session, up to a maximum of 24
 hours. After the requesting origin has exceeded the maximum allowable number of storage
 access grants, any future call to `requestStorageAccess()` during the same
 browsing session will prompt the user.
@@ -76,7 +76,7 @@ storage access to...
 
 - The user is prompted
 - If the user clicks “Allow” or “Allow on any site” the request is resolved.
-- If the user clicks “Don’t Allow”, the storage access request is rejected and the
+- If the user clicks “Don't Allow”, the storage access request is rejected and the
   requesting origin can re-request once it receives another user interaction.
 - If the user allows storage the requesting origin is given a persistent storage
   access grant on the current top-level site.
@@ -93,7 +93,7 @@ requesting origin has storage access to is decremented by one.
 > **Note:** If the requesting origin is not [classified
 > as a tracking origin](/en-US/docs/Web/Privacy/Storage_Access_Policy#tracking_protection_explained), the access request is automatically given an ephemeral
 > storage access grant, which will go away when the page is reloaded. The user is never
-> shown a prompt in this case, and calling `requestStorageAccess()` won’t
+> shown a prompt in this case, and calling `requestStorageAccess()` won't
 > have any side effects besides changing the value returned by
 > {{domxref("Document.hasStorageAccess()")}}.
 

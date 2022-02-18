@@ -75,7 +75,7 @@ Between the generator's code path, its `yield` operators, and the ability to
 specify a new starting value by passing it to {{jsxref("Generator.prototype.next()")}},
 generators offer enormous power and control.
 
-> **Warning:** Unfortunately, `next()` is asymmetric, but that can’t be helped: It always
+> **Warning:** Unfortunately, `next()` is asymmetric, but that can't be helped: It always
 > sends a value to the currently suspended `yield`, but returns the operand
 > of the following `yield`.
 

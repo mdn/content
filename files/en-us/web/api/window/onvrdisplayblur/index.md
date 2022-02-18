@@ -25,7 +25,7 @@ with a system menu or browser, to prevent tracking or loss of experience.
 
 > **Note:** This event handler was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-While a {{domxref("VRDisplay")}} is blurred it does not lose it’s presenting status
+While a {{domxref("VRDisplay")}} is blurred it does not lose it's presenting status
 ({{domxref("VRDisplay.isPresenting")}} continues to report `true`) but
 {{domxref("VRDisplay.getFrameData()")}} returns `false` without updating the
 provided {{domxref("VRFrameData")}} and {{domxref("VRDisplay.getPose()")}} returns a

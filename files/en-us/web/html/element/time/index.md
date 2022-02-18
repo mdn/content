@@ -96,7 +96,7 @@ This element is for presenting dates and times in a machine readable format. For
 
 This element should not be used for dates prior to the introduction of the Gregorian calendar (due to complications in calculating those dates).
 
-The _datetime value_ (the machine-readable value of the datetime) is the value of the element’s `datetime` attribute, which must be in the proper format (see below). If the element does not have a `datetime` attribute, **it must not have any element descendants**, and the _datetime value_ is the element’s child text content.
+The _datetime value_ (the machine-readable value of the datetime) is the value of the element's `datetime` attribute, which must be in the proper format (see below). If the element does not have a `datetime` attribute, **it must not have any element descendants**, and the _datetime value_ is the element's child text content.
 
 ### Valid datetime Values
 

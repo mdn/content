@@ -9,9 +9,9 @@ The "separate sites" approach to mobile Web development involves creating differ
 
 ## The good
 
-The first option is the most popular by far: use [user-agent detection](https://en.wikipedia.org/wiki/User_agent#User_agent_sniffing "User Agent Sniffing") to route users on phones to a separate mobile site, typically at m.example.com. In a nutshell, this technique uses server-side logic to solve all [three goals of mobile web development](http://blog.mozilla.com/webdev/2011/05/04/approaches-to-mobile-web-development-part-1-what-is-mobile-friendliness/ "Approaches to Mobile Web Development Part 1 – What is Mobile Friendliness?") at once — if the user’s browser looks like it’s on a phone, you serve them mobile content, formatted for their phone and optimized for speed.
+The first option is the most popular by far: use [user-agent detection](https://en.wikipedia.org/wiki/User_agent#User_agent_sniffing "User Agent Sniffing") to route users on phones to a separate mobile site, typically at m.example.com. In a nutshell, this technique uses server-side logic to solve all [three goals of mobile web development](http://blog.mozilla.com/webdev/2011/05/04/approaches-to-mobile-web-development-part-1-what-is-mobile-friendliness/ "Approaches to Mobile Web Development Part 1 – What is Mobile Friendliness?") at once — if the user's browser looks like it's on a phone, you serve them mobile content, formatted for their phone and optimized for speed.
 
-Conceptually simple, this is the easiest option to add to an existing site, especially if you are using a CMS or Web application that supports templates. Since only the mobile-specific content, styles, and scripts are sent to mobile users, this method also provides for the best performance out of any of the other options presented here. Finally, it also allows for completely different user experiences on desktop and mobile — they’re two different sites, after all!
+Conceptually simple, this is the easiest option to add to an existing site, especially if you are using a CMS or Web application that supports templates. Since only the mobile-specific content, styles, and scripts are sent to mobile users, this method also provides for the best performance out of any of the other options presented here. Finally, it also allows for completely different user experiences on desktop and mobile — they're two different sites, after all!
 
 ## The bad
 
@@ -25,11 +25,11 @@ Even more important than that, though, is the fact that user-agent detection is 
 
 This factor aside, there is one case where this strategy really shines over other methods. If the functionality you would like to provide to your users on mobile devices is extremely different from that on a desktop, then using separate sites is likely to be the [most practical choice](http://tripleodeon.com/2010/10/not-a-mobile-web-merely-a-320px-wide-one). This is because you have the option of sending completely separate HTML, JavaScript, and CSS to phones and PCs.
 
-Another case where you may be forced to use this approach is if you cannot, for whatever reason, modify your existing desktop site, and need to have a 100% separate mobile site. Though it’s not ideal, at least you have this option.
+Another case where you may be forced to use this approach is if you cannot, for whatever reason, modify your existing desktop site, and need to have a 100% separate mobile site. Though it's not ideal, at least you have this option.
 
 ## Examples
 
-Most of the major Web applications you see in the wild have chosen this path, including [Facebook](http://m.facebook.com/), [YouTube](http://m.youtube.com/), [Digg](http://m.digg.com/), and [Flickr](http://m.flickr.com/). In fact, Mozilla picked this strategy for the mobile versions of [addons.mozilla.org](https://addons.mozilla.org/) (AMO) and [support.mozilla.org](http://support.mozilla.com/) (SUMO). If you’d like to see the source code behind an example of this approach in action, feel free to check out the [github repository for AMO](https://github.com/jbalogh/zamboni/) or [SUMO](https://github.com/jsocol/kitsune).
+Most of the major Web applications you see in the wild have chosen this path, including [Facebook](http://m.facebook.com/), [YouTube](http://m.youtube.com/), [Digg](http://m.digg.com/), and [Flickr](http://m.flickr.com/). In fact, Mozilla picked this strategy for the mobile versions of [addons.mozilla.org](https://addons.mozilla.org/) (AMO) and [support.mozilla.org](http://support.mozilla.com/) (SUMO). If you'd like to see the source code behind an example of this approach in action, feel free to check out the [github repository for AMO](https://github.com/jbalogh/zamboni/) or [SUMO](https://github.com/jsocol/kitsune).
 
 ## Approaches to mobile Web development
 

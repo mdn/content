@@ -322,7 +322,7 @@ console.log(a.a); // print undefined
 console.log(b.a); // print undefined
 ```
 
-In the following example, calling `new Graph()` creates a `Graph` instance that has its own `vertices` property, and that doesn’t inherit any `vertices` property. So when the `vertices` property is deleted from that `Graph` instance, the instance then has neither its own `vertices` property nor any inherited `vertices` property.
+In the following example, calling `new Graph()` creates a `Graph` instance that has its own `vertices` property, and that doesn't inherit any `vertices` property. So when the `vertices` property is deleted from that `Graph` instance, the instance then has neither its own `vertices` property nor any inherited `vertices` property.
 
 ```js
 function Graph() {
@@ -552,7 +552,7 @@ console.log(inst.bar_prop)
       <th scope="row">Pro(s)</th>
       <td>
         Supported in all modern browsers. Allows the dynamic manipulation of an
-        object’s prototype and can even force a prototype on a prototype-less
+        object's prototype and can even force a prototype on a prototype-less
         object created with <code>Object.create(null)</code>.
       </td>
     </tr>

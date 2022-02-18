@@ -19,7 +19,7 @@ It can be one of the following:
 - `cors`: Response was received from a valid cross-origin request. [Certain headers and the body](https://fetch.spec.whatwg.org/#concept-filtered-response-cors) may be accessed.
 - `error`: Network error.
   No useful information describing the error is available.
-  The Response’s status is 0, headers are empty and immutable.
+  The Response's status is 0, headers are empty and immutable.
   This is the type for a Response obtained from `Response.error()`.
 - `opaque`: Response for “no-cors” request to cross-origin resource.
   [Severely restricted](https://fetch.spec.whatwg.org/#concept-filtered-response-opaque).

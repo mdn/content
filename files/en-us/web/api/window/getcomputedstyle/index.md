@@ -154,7 +154,7 @@ Java.
   `getPropertyValue(propName)` API or by indexing directly into the object
   such as `obj['z-index']` or `obj.zIndex`.
 - The values returned by `getComputedStyle` are {{CSSxRef("resolved_value",
-    "resolved values", "", 1)}}. These are usually the same as CSS 2.1’s
+    "resolved values", "", 1)}}. These are usually the same as CSS 2.1's
   {{CSSxRef("computed_value","computed values", "", 1)}}, but for some older properties
   like `width`, `height`, or `padding`, they are
   instead the same as {{CSSxRef("used_value","used values", "", 1)}}. Originally, CSS

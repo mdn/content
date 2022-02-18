@@ -11,7 +11,7 @@ tags:
 ---
 
 Houdini is a set of low-level APIs that exposes parts of the CSS engine,
-giving developers the power to extend CSS by hooking into the styling and layout process of a browser’s rendering engine.
+giving developers the power to extend CSS by hooking into the styling and layout process of a browser's rendering engine.
 Houdini is a group of APIs that give developers direct access to the {{domxref("CSS_Object_Model")}} (CSSOM),
 enabling developers to write code the browser can parse as CSS,
 thereby creating new CSS features without waiting for them to be implemented natively in browsers.

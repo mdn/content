@@ -12,7 +12,7 @@ Firefox includes a new storage access policy that blocks cookies and other site 
 
 This cookie policy has been available in Firefox since version 63. This documentation describes the policy that we intend to ship to Firefox Release users, but may not match what is implemented in the current Release version of Firefox. That's because we document new aspects of the policy as soon as they land in [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly), our pre-release channel. Firefox Nightly may also contain experimental features that we don't yet plan to ship to Release users; experimental features will not be included in this documentation, but may nevertheless impact the functionality of domains classified as trackers.
 
-We recommend sites test with [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly), as this includes the newest version of our protections. As described above, note that Nightly may include additional protections that end up getting removed or changed before they reach our Release users. We’ll keep this page updated with the newest information as we strengthen our protections.
+We recommend sites test with [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly), as this includes the newest version of our protections. As described above, note that Nightly may include additional protections that end up getting removed or changed before they reach our Release users. We'll keep this page updated with the newest information as we strengthen our protections.
 
 These protections are on by default in Nightly. The cookie policy can be enabled in other versions of Firefox through the [Content Blocking settings](https://support.mozilla.org/en-US/kb/content-blocking) (these steps will vary by version; the linked documentation includes a dropdown to select the appropriate Firefox version).
 
@@ -125,7 +125,7 @@ Please note that in the future we expect to make changes to how long storage acc
 
 ## Debugging
 
-We encourage site owners to test their sites, particularly those that rely on third-party content integrations. We’ve added several new features to Firefox to make testing easier.
+We encourage site owners to test their sites, particularly those that rely on third-party content integrations. We've added several new features to Firefox to make testing easier.
 
 ### Developer Tools notifications
 
@@ -135,13 +135,13 @@ The [Network Monitor](/en-US/docs/Tools/Network_Monitor) in Firefox Developer To
 
 ### Adding custom domains to the Tracking Protection list
 
-Curious how things will work if a third-party domain on your site were classified as a tracker? We’ve added a preference that allows you to add custom domains to the Tracking Protection URL classifier. To do so:
+Curious how things will work if a third-party domain on your site were classified as a tracker? We've added a preference that allows you to add custom domains to the Tracking Protection URL classifier. To do so:
 
 1. Type `about:config` in your address bar. If you are presented with a page that warns you "This may void your warranty!", click "I accept the risk!"
 2. Search for the preference name "urlclassifier.trackingAnnotationTable.testEntries".
 3. If the preference already exists, edit the preference value.
 4. If the preference does not exist, click "String" and then "+" to create a new preference.
-5. For the preference value enter comma separated origins that you’d like to have classified as trackers. E.g. "example.net,example.org".
+5. For the preference value enter comma separated origins that you'd like to have classified as trackers. E.g. "example.net,example.org".
 
 > **Warning:** Be sure to remove these entries after you have finished testing.
 
@@ -161,9 +161,9 @@ If these services are embedded into the main context of the page, they can conti
 
 ### I use third-party services for social login, like, and share button integration. Will my users still be able to make use of these services?
 
-This depends on how the social integration is implemented. We expect that many of the popular social integrations will continue to function as they do under Firefox’s current cookie policy with some minor differences in the user experience.
+This depends on how the social integration is implemented. We expect that many of the popular social integrations will continue to function as they do under Firefox's current cookie policy with some minor differences in the user experience.
 
-A social content provider that is classified as a tracker will not have access to their third-party cookies when the user first visits a new first party. Thus, the user may appear logged out to the service despite being logged in when they visit the provider’s website directly. Depending on the type of integration, the user may have to take some action to interact with the social content provider before the provider is given access to their cookies. For example:
+A social content provider that is classified as a tracker will not have access to their third-party cookies when the user first visits a new first party. Thus, the user may appear logged out to the service despite being logged in when they visit the provider's website directly. Depending on the type of integration, the user may have to take some action to interact with the social content provider before the provider is given access to their cookies. For example:
 
 - For social login, the user may have to click a login button on the first party.
 - For social like or share buttons, the user will have to first interact with the button in a logged-out state. Once they do, many social content providers will prompt them to log in.
@@ -176,4 +176,4 @@ This depends on how the third party has implemented the measurement tool, but ge
 
 1. You run an ad on a social media website that is seen several times by a user, but never clicked. That user later visits your website, which includes a conversion tracking tag from the same social media website. This type of conversion is often referred to as a “view-through conversion.” Since the social media website does not have access to their third-party storage, they will not recognize the user as the same user that saw the advertisements on their website and the conversion will not be tracked. We expect that most view-through conversion tracking techniques will no longer work, including those offered by display networks.
 2. You run an ad on a display network or social media website that is clicked by a user. That user lands on your website, which includes a conversion tracking tag from the same website that displayed your ad. This type of conversion is often referred to as a “click-through conversion.” Since the social media site or display network will not have access to their third-party storage, they will not recognize the user as the same user that saw the advertisements on their website and the conversion will not be tracked. We expect that this version of click-through conversion will no longer work.
-3. You run an ad that appears on a social media website. A user clicks on your advertisement and is taken to a landing page that contains a conversion tracking tag from the third-party network. On the social media website, the network annotates the advertisement landing page URL with a query parameter that signals that the visit was the result of a click on an advertisement. On your website, the display network’s tag checks the URL query parameters and saves any ad tracking parameters to first-party storage. If a user later completes a conversion event, the network’s tag checks first-party storage to determine which click (or clicks) was responsible for the visit. We expect that click-through conversion implemented in this way will continue to work.
+3. You run an ad that appears on a social media website. A user clicks on your advertisement and is taken to a landing page that contains a conversion tracking tag from the third-party network. On the social media website, the network annotates the advertisement landing page URL with a query parameter that signals that the visit was the result of a click on an advertisement. On your website, the display network's tag checks the URL query parameters and saves any ad tracking parameters to first-party storage. If a user later completes a conversion event, the network's tag checks first-party storage to determine which click (or clicks) was responsible for the visit. We expect that click-through conversion implemented in this way will continue to work.

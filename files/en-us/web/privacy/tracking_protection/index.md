@@ -11,7 +11,7 @@ tags:
 
 Firefox Desktop and Firefox for Android include built-in tracking protection. In Private Browsing windows (tabs, in Firefox for Android), Firefox will block content loaded from domains that track users across sites.
 
-If blocked content is part of the page layout, users may notice layout issues where Firefox blocked these loads. Sometimes users won’t notice at all, if the page grid works such that other page elements slide in to fill holes left by blocked elements.
+If blocked content is part of the page layout, users may notice layout issues where Firefox blocked these loads. Sometimes users won't notice at all, if the page grid works such that other page elements slide in to fill holes left by blocked elements.
 
 When Firefox blocks content, it logs a message to the Web Console like this:
 

@@ -255,7 +255,7 @@ Grid places items that have not been given a grid position in what is described 
 
 ### Items with placement properties
 
-The first thing grid will do is place any items that have a position. In the example below I have 12 grid items. Item 2 and item 5 have been placed using line based placement on the grid. You can see how those items are placed and the other items then auto-place in the spaces. The auto-placed items will place themselves before the placed items in DOM order, they don’t start after the position of a placed item that comes before them.
+The first thing grid will do is place any items that have a position. In the example below I have 12 grid items. Item 2 and item 5 have been placed using line based placement on the grid. You can see how those items are placed and the other items then auto-place in the spaces. The auto-placed items will place themselves before the placed items in DOM order, they don't start after the position of a placed item that comes before them.
 
 ```css hidden
 * {box-sizing: border-box;}
@@ -315,7 +315,7 @@ The first thing grid will do is place any items that have a position. In the exa
 
 You can use placement properties while still taking advantage of auto-placement. In this next example I have added to the layout by setting odd items to span two tracks both for rows and columns. I do this with the {{cssxref("grid-column-end")}} and {{cssxref("grid-row-end")}} properties and setting the value of this to `span 2`. What this means is that the start line of the item will be set by auto-placement, and the end line will span two tracks.
 
-You can see how this then leaves gaps in the grid, as for the auto-placed items if grid comes across an item that doesn’t fit into a track, it will move to the next row until it finds a space the item can fit in.
+You can see how this then leaves gaps in the grid, as for the auto-placed items if grid comes across an item that doesn't fit into a track, it will move to the next row until it finds a space the item can fit in.
 
 ```css hidden
 * {box-sizing: border-box;}
@@ -377,7 +377,7 @@ You can see how this then leaves gaps in the grid, as for the auto-placed items 
 
 ### Filling in the gaps
 
-So far, other than items we have specifically placed, grid is always progressing forward and keeping items in DOM order. This is generally what you want, if you are laying out a form for example you wouldn’t want the labels and fields to become jumbled up in order to fill in some gap. However sometimes, we are laying things out that don’t have a logical order and we would like to create a layout that doesn’t have gaps in it.
+So far, other than items we have specifically placed, grid is always progressing forward and keeping items in DOM order. This is generally what you want, if you are laying out a form for example you wouldn't want the labels and fields to become jumbled up in order to fill in some gap. However sometimes, we are laying things out that don't have a logical order and we would like to create a layout that doesn't have gaps in it.
 
 To do this, add the property {{cssxref("grid-auto-flow")}} with a value of `dense` to the container. This is the same property you use to change the flow order to `column`, so if you were working in columns you would add both values `grid-auto-flow: column dense`.
 
@@ -511,8 +511,8 @@ dd {
 
 {{ EmbedLiveSample('Use_cases_for_auto-placement', '500', '230') }}
 
-## What can’t we do with auto-placement (yet)?
+## What can't we do with auto-placement (yet)?
 
-There are a couple of things that often come up as questions. Currently we can’t do things like target every other cell of the grid with our items. A related issue may have already come to mind if you followed the last guide about named lines on the grid. It would be to define a rule that said “auto-place items against the next line named “n”, and grid would then skip other lines.There is [an issue raised about this](https://github.com/w3c/csswg-drafts/issues/796) on the CSSWG GitHub repository, and you would be welcome to add your own use cases to this.
+There are a couple of things that often come up as questions. Currently we can't do things like target every other cell of the grid with our items. A related issue may have already come to mind if you followed the last guide about named lines on the grid. It would be to define a rule that said “auto-place items against the next line named “n”, and grid would then skip other lines.There is [an issue raised about this](https://github.com/w3c/csswg-drafts/issues/796) on the CSSWG GitHub repository, and you would be welcome to add your own use cases to this.
 
 It may be that you come up with your own use cases for auto-placement or any other part of grid layout. If you do, raise them as issues or add to an existing issue that could solve your use case. This will help to make future versions of the specification better.

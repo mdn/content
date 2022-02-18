@@ -107,7 +107,7 @@ Responsive web apps use technologies like [media queries](/en-US/docs/Web/CSS/Me
 
 ### Secure
 
-The web platform provides a secure delivery mechanism that prevents snooping while simultaneously ensuring that content hasn’t been tampered with, as long as you take advantage of {{Glossary("HTTPS")}} and develop your apps with security in mind.
+The web platform provides a secure delivery mechanism that prevents snooping while simultaneously ensuring that content hasn't been tampered with, as long as you take advantage of {{Glossary("HTTPS")}} and develop your apps with security in mind.
 
 It's also easy for users to ensure that they're installing the right app, because its URL will match your site's domain. This is very different from apps in app stores, which may have a number of similarly-named apps, some of which may even be based on your own site, which only adds to the confusion. Web apps eliminate that confusion and ensure that users get the best possible experience.
 
@@ -127,7 +127,7 @@ In this series of articles we will examine the source code of a super simple web
 
 You can [see this app in action](https://mdn.github.io/pwa-examples/js13kpwa/) online, and the source code is [available on GitHub](https://github.com/mdn/pwa-examples/tree/master/js13kpwa). We'll be examining this code carefully over the course of this series of articles.
 
-For now, let's move to the second part of this series, where we’ll be looking at the structure of our example app.
+For now, let's move to the second part of this series, where we'll be looking at the structure of our example app.
 
 {{NextMenu("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps")}}
 

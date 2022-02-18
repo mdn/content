@@ -380,7 +380,7 @@ for (let table of document.querySelectorAll('table')) {
 
 ### Displaying large tables in small spaces
 
-A common issue with tables on the web is that they don’t natively work very well on small screens when the amount of content is large, and the way to make them scrollable isn’t obvious, especially when the markup may come from a CDN and cannot be modified to have a wrapper.
+A common issue with tables on the web is that they don't natively work very well on small screens when the amount of content is large, and the way to make them scrollable isn't obvious, especially when the markup may come from a CDN and cannot be modified to have a wrapper.
 
 This example provides one way to display tables in small spaces. We've hidden the HTML content as it is very large, and there is nothing remarkable about it. The CSS is more useful to inspect in this example.
 
@@ -559,7 +559,7 @@ This example provides one way to display tables in small spaces. We've hidden th
 </table>
 ```
 
-When looking at these styles you’ll notice that table’s {{cssxref("display")}} property has been set to `block`. While this allows scrolling, the table loses some of its integrity, and table cells try to become as small as possible. To mitigate this issue we've set {{cssxref("white-space")}} to `nowrap` on the `<tbody>`. However, we don’t do this for the `<thead>` to avoid long titles forcing columns to be wider than they need to be to display the data.
+When looking at these styles you'll notice that table's {{cssxref("display")}} property has been set to `block`. While this allows scrolling, the table loses some of its integrity, and table cells try to become as small as possible. To mitigate this issue we've set {{cssxref("white-space")}} to `nowrap` on the `<tbody>`. However, we don't do this for the `<thead>` to avoid long titles forcing columns to be wider than they need to be to display the data.
 
 To keep the table headers on the page while scrolling down we've set {{cssxref("position")}} to sticky on the `<th>` elements. Note that we have **not** set {{cssxref("border-collapse")}}  to `collapse`, as if we do the header cannot be separated correctly from the rest of the table.
 
@@ -664,7 +664,7 @@ Providing a declaration of `scope="col"` on a {{HTMLElement("th")}} element will
 
 ### Complicated tables
 
-Assistive technology such as screen readers may have difficulty parsing tables that are so complex that header cells can’t be associated in a strictly horizontal or vertical way. This is typically indicated by the presence of the {{htmlattrxref("colspan", "td")}} and {{htmlattrxref("rowspan", "td")}} attributes.
+Assistive technology such as screen readers may have difficulty parsing tables that are so complex that header cells can't be associated in a strictly horizontal or vertical way. This is typically indicated by the presence of the {{htmlattrxref("colspan", "td")}} and {{htmlattrxref("rowspan", "td")}} attributes.
 
 Ideally, consider alternate ways to present the table's content, including breaking it apart into a collection of smaller, related tables that don't have to rely on using the `colspan` and `rowspan` attributes. In addition to helping people who use assistive technology understand the table's content, this may also benefit people with cognitive concerns who may have difficulty understanding the associations the table layout is describing.
 

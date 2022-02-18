@@ -29,7 +29,7 @@ scroll-snap-destination: unset;
 ### Values
 
 - `<position>`
-  - : Specifies the offset of the snap destination from the start edge of the scroll container’s visual viewport. The first value gives the x coordinate of the snap destination, the second value its y coordinate.
+  - : Specifies the offset of the snap destination from the start edge of the scroll container's visual viewport. The first value gives the x coordinate of the snap destination, the second value its y coordinate.
 
 ## Formal definition
 

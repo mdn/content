@@ -39,7 +39,7 @@ In this section we'll walk you through a performance test, using Firefox, to see
 
 Before going through the example, please enable FPS tools first to see the current frame rate:
 
-1. In the URL bar, enter _about:config_; click the _I’ll be careful, I promise!_ button to enter the config screen.
+1. In the URL bar, enter _about:config_; click the _I'll be careful, I promise!_ button to enter the config screen.
     ![](pic1.png)
 2. In the search bar, search for the `layers.acceleration.draw-fps` preference.
 3. Double-click the entry to set the value to `true`. Now you will be able to see three little purple boxes at the upper left corner of the Firefox window. The first box represents FPS.
