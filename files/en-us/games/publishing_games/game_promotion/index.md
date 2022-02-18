@@ -26,7 +26,7 @@ You should definitely create your own website containing all the information abo
 
 You should also blog about everything related to your gamedev activities. Write about your development process, nasty bugs you encounter, funny stories, lessons learned, and the ups and downs of being a game developer. Continually publishing information about your games will help educate others, increase your reputation in the community, and further improve SEO. A further option is to publish [monthly reports](https://dev.end3r.com/?s=monthly+report) that summarize all your progress — it helps you see what you've accomplished throughout the month and what's still left to do, and it keeps reminding people that your game is coming out soon — building buzz is always good.
 
-While you can create your website from scratch, there are also tools that can help make the process easier.  [ManaKeep](https://manakeep.com) is a website builder made for indie game developers and provides a great starting point to create your website.  [Presskit()](https://dopresskit.com/) is a press kit builder that helps you create a press page to share with the media.
+While you can create your website from scratch, there are also tools that can help make the process easier.  [ManaKeep](https://manakeep.com) is a website builder made for indie game developers and provides a great starting point to create your website.  [Presskit()](https://dopresskit.com/) is a press kit builder that helps you create a press page to share with the media.
 
 ## Social media
 
@@ -38,7 +38,7 @@ Grow your fanbase by talking to them, sharing tips, offering discounts, giving a
 
 ## Game portals
 
-Using game portals is mostly concerned with [monetization](/en-US/docs/Games/Publishing_games/Game_monetization), but if you're not planning to [sell licenses](/en-US/docs/Games/Publishing_games/Game_monetization#licensing) to allow people to purchase your game and are intending to [implement adverts](/en-US/docs/Games/Publishing_games/Game_monetization#advertisements) or in-app purchases instead, promoting your game across free portals can be effective.
+Using game portals is mostly concerned with [monetization](/en-US/docs/Games/Publishing_games/Game_monetization), but if you're not planning to [sell licenses](/en-US/docs/Games/Publishing_games/Game_monetization#licensing) to allow people to purchase your game and are intending to [implement adverts](/en-US/docs/Games/Publishing_games/Game_monetization#advertisements) or in-app purchases instead, promoting your game across free portals can be effective.
 
 There are a number of different game portals to which you can send your games for publication. Some portals have their own APIs that allow you to authorize users, save their progress and process in-app purchases. You can also sell a full version of the game from inside your browser demo version, which will be a great move considering high competition, some developers even manage to make full browser versions. Most portals offer revenue share deals or will buy non exclusive license.
 
@@ -62,7 +62,7 @@ If portals you contact are not interested in your content because you don't have
 
 It's a rising trend — don't underestimate the power of YouTubers playing your game, talking about it and streaming their experience to give you lots of promotion. You should also be realistic however — don't think this alone will skyrocket your downloads or visits, and be prepared to deal with bad reviews as well as good ones.
 
-There are two options to get coverage from the YouTubers: first is you contact them directly and send a link to your game via email or private message. The second is earned in time - if you're known enough the YouTubers will contact you and ask for the link or build of your game. This [Big List of YouTubers](https://docs.google.com/spreadsheets/d/1MVrNBLVkL-VzKe4pFHHVx0bfCdInB3G2FVJbc9V4CUk/edit#gid=0) is a great place to start. You can find YouTube and Twitch.tv influencers at [gameInfluencer.com](https://gameinfluencer.com/) to help promote your game.
+There are two options to get coverage from the YouTubers: first is you contact them directly and send a link to your game via email or private message. The second is earned in time - if you're known enough the YouTubers will contact you and ask for the link or build of your game. This [Big List of YouTubers](https://docs.google.com/spreadsheets/d/1MVrNBLVkL-VzKe4pFHHVx0bfCdInB3G2FVJbc9V4CUk/edit#gid=0) is a great place to start. You can find YouTube and Twitch.tv influencers at [gameInfluencer.com](https://gameinfluencer.com/) to help promote your game.
 
 ## Events
 

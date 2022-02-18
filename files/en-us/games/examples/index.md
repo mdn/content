@@ -76,7 +76,7 @@ This page lists a number of impressive web technology demos for you to get inspi
   - : A sci-fi themed arcade puzzle game.
 
 **[Bullet Force](https://www.crazygames.com/game/bullet-force-multiplayer)**
-    3D multiplayer first-person shooter.
+    3D multiplayer first-person shooter.
 
 - [Elliot Quest](https://elliotquest.com/)
   - : 8-bit graphic retro adventure game.

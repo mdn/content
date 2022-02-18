@@ -32,7 +32,7 @@ if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
 }
 ```
 
-Instead of allowing the ball to bounce off all four walls, let's only allow three now — left, top and right. Hitting the bottom wall will end the game. We'll edit the second if block so it's an if else block that will trigger our "game over" state upon the ball colliding with the bottom edge of the canvas. For now we'll keep it simple, showing an alert message and restarting the game by reloading the page.
+Instead of allowing the ball to bounce off all four walls, let's only allow three now — left, top and right. Hitting the bottom wall will end the game. We'll edit the second if block so it's an if else block that will trigger our "game over" state upon the ball colliding with the bottom edge of the canvas. For now we'll keep it simple, showing an alert message and restarting the game by reloading the page.
 
 First, replace where you initially called `setInterval()`
 
@@ -54,7 +54,7 @@ if(y + dy < ballRadius) {
 } else if(y + dy > canvas.height-ballRadius) {
     alert("GAME OVER");
     document.location.reload();
-    clearInterval(interval); // Needed for Chrome to end game
+    clearInterval(interval); // Needed for Chrome to end game
 }
 ```
 
@@ -89,6 +89,6 @@ Here's the working code for you to compare yours against:
 
 ## Next steps
 
-We're doing quite well so far and our game is starting to feel a lot more worth playing now that you can lose! But it is still missing something. Let's move on  to the sixth chapter — [Build the brick field](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field) — and create some bricks for the ball to destroy.
+We're doing quite well so far and our game is starting to feel a lot more worth playing now that you can lose! But it is still missing something. Let's move on  to the sixth chapter — [Build the brick field](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field) — and create some bricks for the ball to destroy.
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}

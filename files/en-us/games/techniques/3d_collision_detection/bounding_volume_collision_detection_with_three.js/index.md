@@ -70,7 +70,7 @@ knotBSphere.radius = knot.geometry.radius * 2;
 
 ### Intersection tests
 
-#### Point vs. `Box3` / `Sphere`
+#### Point vs. `Box3` / `Sphere`
 
 Both `Box3` and `Sphere` have a **`containsPoint`** method to do this test.
 
@@ -79,7 +79,7 @@ var point = new THREE.Vector3(2, 4, 7);
 knotBBox.containsPoint(point);
 ```
 
-#### `Box3` vs. `Box3`
+#### `Box3` vs. `Box3`
 
 The **`Box3.intersectsBox`** method is available for performing this test.
 
@@ -89,7 +89,7 @@ knotBbox.intersectsBox(otherBox);
 
 > **Note:** This is different from the `Box3.containsBox` method, which checks whether the Box3 _fully_ wraps another one.
 
-#### `Sphere` vs. `Sphere`
+#### `Sphere` vs. `Sphere`
 
 In a similar fashion as before, there is a **`Sphere.intersectsSphere`** method to perform this test.
 
@@ -97,7 +97,7 @@ In a similar fashion as before, there is a **`Sphere.intersectsSphere`** method 
 knotBSphere.intersectsSphere(otherSphere);
 ```
 
-#### `Sphere` vs. `Box3`
+#### `Sphere` vs. `Box3`
 
 Unfortunately this test is not implemented in Three.js, but we can patch Sphere to implement a [Sphere vs. AABB intersection](/en-US/docs/Games/Techniques/3D_collision_detection) algorithm.
 
@@ -129,7 +129,7 @@ We have prepared some [live demos](https://mozdevs.github.io/gamedev-js-3d-aabb/
 
 ## Using `BoxHelper`
 
-As an alternative to using raw `Box3` and `Sphere` objects, Three.js has a useful object to make handling **bounding boxes easier: [`BoxHelper`](https://threejs.org/docs/#api/helpers/BoxHelper)** (previously `BoundingBoxHelper`, which has been deprecated). This helper takes a `Mesh` and calculates a bounding box volume for it (including its child meshes). This results in a new box `Mesh` representing the bounding box, which shows the bounding box's shape, and can passed to the previously seen `setFromObject` method in order to have a bounding box matching the `Mesh`.
+As an alternative to using raw `Box3` and `Sphere` objects, Three.js has a useful object to make handling **bounding boxes easier: [`BoxHelper`](https://threejs.org/docs/#api/helpers/BoxHelper)** (previously `BoundingBoxHelper`, which has been deprecated). This helper takes a `Mesh` and calculates a bounding box volume for it (including its child meshes). This results in a new box `Mesh` representing the bounding box, which shows the bounding box's shape, and can passed to the previously seen `setFromObject` method in order to have a bounding box matching the `Mesh`.
 
 `BoxHelper` is the **recommended** way to handle 3D collisions with bounding volumes in Three.js. You will miss sphere tests, but the tradeoffs are well worth it.
 
@@ -180,6 +180,6 @@ box3.containsPoint(point.position);
 
 ### Demos
 
-There are **two demos** you can take a look at on our [live demos page](https://mozdevs.github.io/gamedev-js-3d-aabb/). The [first one](https://mozdevs.github.io/gamedev-js-3d-aabb/api_point.html) showcases point vs. box collisions using `BoxHelper`. The [second one](https://mozdevs.github.io/gamedev-js-3d-aabb/api_box.html) performs box vs. box tests.
+There are **two demos** you can take a look at on our [live demos page](https://mozdevs.github.io/gamedev-js-3d-aabb/). The [first one](https://mozdevs.github.io/gamedev-js-3d-aabb/api_point.html) showcases point vs. box collisions using `BoxHelper`. The [second one](https://mozdevs.github.io/gamedev-js-3d-aabb/api_box.html) performs box vs. box tests.
 
 ![](screen_shot_2015-10-19_at_12.10.06.png)

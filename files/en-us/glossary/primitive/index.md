@@ -6,7 +6,7 @@ tags:
   - Glossary
   - JavaScript
 ---
-In {{Glossary("JavaScript")}}, a **primitive** (primitive value, primitive data type) is data that is not an {{Glossary("object")}} and has no {{glossary("method","methods")}}. There are 7 primitive data types: {{Glossary("string")}}, {{Glossary("number")}}, {{Glossary("bigint")}}, {{Glossary("boolean")}}, {{Glossary("undefined")}}, {{Glossary("symbol")}}, and {{Glossary("null")}}.
+In {{Glossary("JavaScript")}}, a **primitive** (primitive value, primitive data type) is data that is not an {{Glossary("object")}} and has no {{glossary("method","methods")}}. There are 7 primitive data types: {{Glossary("string")}}, {{Glossary("number")}}, {{Glossary("bigint")}}, {{Glossary("boolean")}}, {{Glossary("undefined")}}, {{Glossary("symbol")}}, and {{Glossary("null")}}.
 
 Most of the time, a primitive value is represented directly at the lowest level of the language implementation.
 
@@ -14,7 +14,7 @@ All primitives are **immutable**, i.e., they cannot be altered. It is important 
 
 ## Example
 
-This example will help you understand that primitive values are **immutable.**
+This example will help you understand that primitive values are **immutable.**
 
 ### JavaScript
 

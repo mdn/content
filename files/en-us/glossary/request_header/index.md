@@ -5,13 +5,13 @@ tags:
   - Glossary
   - WebMechanics
 ---
-A **request header** is an {{glossary("HTTP header")}} that can be used in an HTTP request to provide information about the request context, so that the server can tailor the response. For example, the {{HTTPHeader("Accept", "Accept-*")}} headers indicate the allowed and preferred formats of the response. Other headers can be used to supply authentication credentials (e.g.  {{HTTPHeader("Authorization")}}), to control caching, or to get information about the user agent or referrer, etc.
+A **request header** is an {{glossary("HTTP header")}} that can be used in an HTTP request to provide information about the request context, so that the server can tailor the response. For example, the {{HTTPHeader("Accept", "Accept-*")}} headers indicate the allowed and preferred formats of the response. Other headers can be used to supply authentication credentials (e.g.  {{HTTPHeader("Authorization")}}), to control caching, or to get information about the user agent or referrer, etc.
 
-Not all headers that can appear in a request are referred to as *request headers* by the specification. For example, the {{HTTPHeader("Content-Type")}} header is referred to as a {{glossary("representation header")}}.
+Not all headers that can appear in a request are referred to as *request headers* by the specification. For example, the {{HTTPHeader("Content-Type")}} header is referred to as a {{glossary("representation header")}}.
 
 In addition, [CORS](/en-US/docs/Glossary/CORS) defines a subset of request headers as {{glossary('simple header', 'simple headers')}}, request headers that are always considered authorized and are not explicitly listed in responses to {{glossary("preflight request", "preflight")}} requests.
 
-The HTTP message below shows a few request headers after a {{HTTPMethod("GET")}} request:
+The HTTP message below shows a few request headers after a {{HTTPMethod("GET")}} request:
 
 ```bash
 GET /home.html HTTP/1.1

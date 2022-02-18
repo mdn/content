@@ -11,4 +11,4 @@ A **CSS descriptor** defines the characteristics of an {{cssxref("at-rule")}}. A
 
 - A name
 - A value, which holds the component values
-- An "!important" flag, which in its default state is unset
+- An "!important" flag, which in its default state is unset
