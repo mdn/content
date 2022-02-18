@@ -41,7 +41,7 @@ var reloading = browser.tabs.reload(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the tab has been reloaded. If any error occurs, the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the tab has been reloaded. If any error occurs, the promise will be rejected with an error message.
 
 ## Examples
 

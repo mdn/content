@@ -47,22 +47,22 @@ The main features of the [manifest.json](https://github.com/mdn/webextensions-ex
 - the permissions request:
 
   ```json
-    "permissions": [
-        "contextualIdentities",
-        "cookies"
-    ],
+    "permissions": [
+        "contextualIdentities",
+        "cookies"
+    ],
   ```
 
 - specification of the toolbar button (browseAction) that provides access to the extension’s features:
 
   ```json
-    "browser_action": {
-      "browser_style": true,
-      "default_title": "Contextual Identities",
-      "default_popup": "context.html",
-      "default_icon": {
-        "128": "identity.svg"
-      }
+    "browser_action": {
+      "browser_style": true,
+      "default_title": "Contextual Identities",
+      "default_popup": "context.html",
+      "default_icon": {
+        "128": "identity.svg"
+      }
   ```
 
 ## context.html
@@ -70,12 +70,12 @@ The main features of the [manifest.json](https://github.com/mdn/webextensions-ex
 A popup on the toolbar button provides the extension’s user interface. [context.html](https://github.com/mdn/webextensions-examples/blob/master/contextual-identities/context.html) implements this popup, but it’s just a shell into which the context.js script writes the list of contextual identities and their related options.
 
 ```html
-  <body>
-    <div class="panel">
-      <div id="identity-list"></div>
-    </div>
-  <script src="context.js"></script>
-  </body>
+  <body>
+    <div class="panel">
+      <div id="identity-list"></div>
+    </div>
+  <script src="context.js"></script>
+  </body>
 ```
 
 ## context.js
@@ -92,7 +92,7 @@ It then checks whether the contextual identities feature is turned on in the bro
 
 ```json
 if (browser.contextualIdentities === undefined) {
-  div.innerText = 'browser.contextualIdentities not available. Check that the privacy.userContext.enabled pref is set to true, and reload the add-on.';
+  div.innerText = 'browser.contextualIdentities not available. Check that the privacy.userContext.enabled pref is set to true, and reload the add-on.';
 } else {
 ```
 
@@ -101,41 +101,41 @@ Firefox installs with the contextual identity feature turned off, it’s turned 
 The script now uses contextualIdentities.query to determine whether there are any contextual identities defined in the browser. If there are none, a message is added to the popup and the script stops.
 
 ```json
-  browser.contextualIdentities.query({})
-    .then((identities) => {
-      if (!identities.length) {
-        div.innerText = 'No identities returned from the API.';
-        return;
-      }
+  browser.contextualIdentities.query({})
+    .then((identities) => {
+      if (!identities.length) {
+        div.innerText = 'No identities returned from the API.';
+        return;
+      }
 ```
 
 If there are contextual identities present—Firefox comes with four default identities—the script loops through each one adding its name, styled in its chosen color, to the \<div> element. The function `createOptions()` then adds the options to “create” or “close all” to the \<div> before it’s added to the popup.
 
 ```json
-     for (let identity of identities) {
-       let row = document.createElement('div');
-       let span = document.createElement('span');
-       span.className = 'identity';
-       span.innerText = identity.name;
-       span.style = `color: ${identity.color}`;
-       console.log(identity);
-       row.appendChild(span);
-       createOptions(row, identity);
-       div.appendChild(row);
-     }
-  });
+     for (let identity of identities) {
+       let row = document.createElement('div');
+       let span = document.createElement('span');
+       span.className = 'identity';
+       span.innerText = identity.name;
+       span.style = `color: ${identity.color}`;
+       console.log(identity);
+       row.appendChild(span);
+       createOptions(row, identity);
+       div.appendChild(row);
+     }
+  });
 }
 
 function createOptions(node, identity) {
-  for (let option of ['Create', 'Close All']) {
-    let a = document.createElement('a');
-    a.href = '#';
-    a.innerText = option;
-    a.dataset.action = option.toLowerCase().replace(' ', '-');
-    a.dataset.identity = identity.cookieStoreId;
-    a.addEventListener('click', eventHandler);
-    node.appendChild(a);
-  }
+  for (let option of ['Create', 'Close All']) {
+    let a = document.createElement('a');
+    a.href = '#';
+    a.innerText = option;
+    a.dataset.action = option.toLowerCase().replace(' ', '-');
+    a.dataset.identity = identity.cookieStoreId;
+    a.addEventListener('click', eventHandler);
+    node.appendChild(a);
+  }
 }
 ```
 
@@ -148,25 +148,25 @@ function eventHandler(event) {
 If the user clicks the option to create a tab for an identity, one is opened using tabs.create by passing the identity’s cookie store ID.
 
 ```json
-  if (event.target.dataset.action == 'create') {
-    browser.tabs.create({
-      url: 'about:blank',
-      cookieStoreId: event.target.dataset.identity
-    });
-  }
+  if (event.target.dataset.action == 'create') {
+    browser.tabs.create({
+      url: 'about:blank',
+      cookieStoreId: event.target.dataset.identity
+    });
+  }
 ```
 
 If the user selects the option to close all tabs for the identity, the script performs a tabs.query for all tabs that are using the identity’s cookie store. The script then passes this list of tabs to `tabs.remove`.
 
 ```json
-  if (event.target.dataset.action == 'close-all') {
-    browser.tabs.query({
-      cookieStoreId: event.target.dataset.identity
-    }).then((tabs) => {
-      browser.tabs.remove(tabs.map((i) => i.id));
-    });
-  }
-  event.preventDefault();
+  if (event.target.dataset.action == 'close-all') {
+    browser.tabs.query({
+      cookieStoreId: event.target.dataset.identity
+    }).then((tabs) => {
+      browser.tabs.remove(tabs.map((i) => i.id));
+    });
+  }
+  event.preventDefault();
 }
 ```
 

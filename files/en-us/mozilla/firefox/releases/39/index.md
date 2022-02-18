@@ -28,7 +28,7 @@ Highlights:
 
 ### CSS
 
-- Support of the {{cssxref("&lt;string&gt;")}} type on {{cssxref("list-style-type")}}, as well as its shorthand property {{cssxref("list-style")}} has been implemented ({{bug(1144607)}}).
+- Support of the {{cssxref("&lt;string&gt;")}} type on {{cssxref("list-style-type")}}, as well as its shorthand property {{cssxref("list-style")}} has been implemented ({{bug(1144607)}}).
 - CSS Scroll Snapping has been implemented ({{bug(945584)}} and {{bug(1138658)}}).
 - Cascading of CSS Animations and CSS Transitions has been rewritten to match the latest specification ({{bug(1125455)}}).
 - Support for vertical scripts, with the {{cssxref("writing-mode")}} is now turned on by default on Nightly and Developer Edition, but not on Firefox Beta and Firefox Release ({{bug(1099032)}}). Note that implementation is not yet complete and some widgets, like tables, will not obey to all values.
@@ -50,8 +50,8 @@ Highlights:
 
 - When using [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (`=>`), a line terminator (`\n`) is no longer allowed after arrow function arguments (`() \n => {}`) ({{bug(1141392)}}).
 - {{jsxref("RegExp.prototype.toString")}} is now a generic function ({{bug(1079919)}}).
-- The non-standard `flags` argument of {{jsxref("String.prototype.match()")}}, {{jsxref("String.prototype.search()")}}, and {{jsxref("String.prototype.replace()")}} is now deprecated and throws a console warning ({{bug(1142351)}}).
-- The try/catch behavior of {{jsxref("Object.assign()")}} has been removed to conform with the latest ES2015 draft ({{bug(1103344)}}).
+- The non-standard `flags` argument of {{jsxref("String.prototype.match()")}}, {{jsxref("String.prototype.search()")}}, and {{jsxref("String.prototype.replace()")}} is now deprecated and throws a console warning ({{bug(1142351)}}).
+- The try/catch behavior of {{jsxref("Object.assign()")}} has been removed to conform with the latest ES2015 draft ({{bug(1103344)}}).
 
 ### Interfaces/APIs/DOM
 

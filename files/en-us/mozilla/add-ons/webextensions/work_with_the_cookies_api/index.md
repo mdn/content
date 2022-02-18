@@ -111,10 +111,10 @@ This example also uses the Tabs and Runtime APIs, but we’ll discuss those feat
 The key feature of the [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/manifest.json) file relating to the use of the Cookies API is the permissions request:
 
 ```json
-  "permissions": [
-      "tabs",
-      "cookies",
-      "<all_urls>"
+  "permissions": [
+      "tabs",
+      "cookies",
+      "<all_urls>"
 ],
 ```
 
@@ -136,32 +136,32 @@ It then loops through all the buttons assigning them their image and creating an
 
 ```js
 for(var i = 0; i < bgBtns.length; i++) {
-  var imgName = bgBtns[i].getAttribute('class');
-  var bgImg = 'url(\'images/' + imgName + '.png\')';
-  bgBtns[i].style.backgroundImage = bgImg;
+  var imgName = bgBtns[i].getAttribute('class');
+  var bgImg = 'url(\'images/' + imgName + '.png\')';
+  bgBtns[i].style.backgroundImage = bgImg;
 
-  bgBtns[i].onclick = function(e) {
+  bgBtns[i].onclick = function(e) {
 ```
 
 When a button is clicked, its corresponding listener function gets the button class name and then the icon path which it passes to the page’s content script ([updatebg.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/content_scripts/updatebg.js)) using a message. The content script then applies the icon to the web page’s background. Meanwhile, [bgpicker.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/popup/bgpicker.js) stores the details of the icon applied to the background in a cookie:
 
 ```js
-    cookieVal.image = fullURL;
-    browser.cookies.set({
-    url: tabs[0].url,
-    name: "bgpicker",
-    value: JSON.stringify(cookieVal)
-  })
+    cookieVal.image = fullURL;
+    browser.cookies.set({
+    url: tabs[0].url,
+    name: "bgpicker",
+    value: JSON.stringify(cookieVal)
+  })
 ```
 
 The color setting is handled in a similar way, triggered by a listener on the color input field. When a color is entered the active tab is discovered and the color selection details sent, using a message, to the page’s content script to be applied to the web page background. Then the color selection is added to the cookie:
 
 ```js
-    cookieVal.color = currColor;
-    browser.cookies.set({
-    url: tabs[0].url,
-    name: "bgpicker",
-    value: JSON.stringify(cookieVal)
+    cookieVal.color = currColor;
+    browser.cookies.set({
+    url: tabs[0].url,
+    name: "bgpicker",
+    value: JSON.stringify(cookieVal)
 ```
 
 When the user clicks the reset button, which has been assigned to the variable reset:
@@ -173,45 +173,45 @@ var reset = document.querySelector('.color-reset button');
 `reset.onclick` first finds the active tab. Then, using the tab’s ID it passes a message to the page’s content script ([updatebg.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/content_scripts/updatebg.js)) to get it to remove the icon and color from the page. The function then clears the cookie values (so the old values aren’t carried forward and written onto a cookie created for a new icon or color selection on the same page) before removing the cookie:
 
 ```js
-    cookieVal = { image : '',
-                  color : '' };
-    browser.cookies.remove({
-    url: tabs[0].url,
-    name: "bgpicker"
+    cookieVal = { image : '',
+                  color : '' };
+    browser.cookies.remove({
+    url: tabs[0].url,
+    name: "bgpicker"
 ```
 
 Also, so you can see what is going on with the cookies, the script reports on all changes to cookies in the console:
 
 ```js
 browser.cookies.onChanged.addListener((changeInfo) => {
-  console.log(`Cookie changed:\n
-    * Cookie: ${JSON.stringify(changeInfo.cookie)}\n
-    * Cause: ${changeInfo.cause}\n
-    * Removed: ${changeInfo.removed}`);
-  });
+  console.log(`Cookie changed:\n
+    * Cookie: ${JSON.stringify(changeInfo.cookie)}\n
+    * Cause: ${changeInfo.cause}\n
+    * Removed: ${changeInfo.removed}`);
+  });
 ```
 
 ### Scripts—background.js
 
-A background script ([background.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/background_scripts/background.js)) provides for the possibility that the user has chosen a background icon and color for the website in an earlier session. The script listens for changes in the active tab, either the user switching between tabs or changing the URL of the page displayed in the tab. When either of these events happen, `cookieUpdate()` is called.  `cookieUpdate()` in turn uses `getActiveTab()` to get the active tab ID. The function can then check whether a cookie for the extension exists, using the tab’s URL:
+A background script ([background.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/background_scripts/background.js)) provides for the possibility that the user has chosen a background icon and color for the website in an earlier session. The script listens for changes in the active tab, either the user switching between tabs or changing the URL of the page displayed in the tab. When either of these events happen, `cookieUpdate()` is called.  `cookieUpdate()` in turn uses `getActiveTab()` to get the active tab ID. The function can then check whether a cookie for the extension exists, using the tab’s URL:
 
 ```js
-    var gettingCookies = browser.cookies.get({
-      url: tabs[0].url,
-      name: "bgpicker"
-    });
+    var gettingCookies = browser.cookies.get({
+      url: tabs[0].url,
+      name: "bgpicker"
+    });
 ```
 
-If the `"bgpicker"` cookie exists for the website, the details of the icon and color selected earlier are retrieved and passed to the  content script [updatebg.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/content_scripts/updatebg.js) using messages:
+If the `"bgpicker"` cookie exists for the website, the details of the icon and color selected earlier are retrieved and passed to the  content script [updatebg.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/content_scripts/updatebg.js) using messages:
 
 ```js
-    gettingCookies.then((cookie) => {
-      if (cookie) {
-        var cookieVal = JSON.parse(cookie.value);
-        browser.tabs.sendMessage(tabs[0].id, {image: cookieVal.image});
-        browser.tabs.sendMessage(tabs[0].id, {color: cookieVal.color});
-      }
-    });
+    gettingCookies.then((cookie) => {
+      if (cookie) {
+        var cookieVal = JSON.parse(cookie.value);
+        browser.tabs.sendMessage(tabs[0].id, {image: cookieVal.image});
+        browser.tabs.sendMessage(tabs[0].id, {color: cookieVal.color});
+      }
+    });
 ```
 
 ## Other features

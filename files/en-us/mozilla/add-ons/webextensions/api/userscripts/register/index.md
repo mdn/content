@@ -38,26 +38,26 @@ await registeredUserScript.unregister();
     The `UserScriptOptions` object has the following properties:
 
     - `scriptMetadata` {{Optional_Inline}}
-      - : A `JSON` object containing arbitrary metadata properties associated with the registered user scripts. However, while arbitrary, the object must be serializable, so it is compatible with [the structured clone algorithm.](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) This metadata is used to pass details from the script to the [`API script`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts)[](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts). For example, providing details of a subset of the APIs that need to be injected by the [`API script`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts). The API  does not use this metadata,
+      - : A `JSON` object containing arbitrary metadata properties associated with the registered user scripts. However, while arbitrary, the object must be serializable, so it is compatible with [the structured clone algorithm.](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) This metadata is used to pass details from the script to the [`API script`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts)[](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts). For example, providing details of a subset of the APIs that need to be injected by the [`API script`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts). The API  does not use this metadata,
     - `allFrames` {{Optional_Inline}}
       - : Same as `all_frames` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
     - `excludeGlobs` {{Optional_Inline}}
-      - : Same as `exclude_globs` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
+      - : Same as `exclude_globs` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
     - `excludeMatches` {{Optional_Inline}}
-      - : Same as `exclude_matches` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
+      - : Same as `exclude_matches` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
     - `includeGlobs` {{Optional_Inline}}
-      - : Same as `include_globs` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
+      - : Same as `include_globs` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
     - `js`
       - : An array of objects. Each object has either a property named `file`, which is a URL starting at the extension's manifest.json and pointing to a JavaScript file to register, or a property named `code`, which contains JavaScript code to register.
     - `matchAboutBlank` {{Optional_Inline}}
-      - : Same as `match_about_blank` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
+      - : Same as `match_about_blank` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
     - `matches`
-      - : Same as `matches` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
+      - : Same as `matches` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
         The URL patterns provided in `matches` must be enabled by the host permissions defined in the manifest [`permission`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) property or enabled by the user from the [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) list. For example, if matches includes `https://mozilla.org/a` a script is only registered if host permissions include, for example, `https://mozilla.org/*`. If the URL pattern isn't enabled, the call to register fails with the error "Permission denied to register a user script for ORIGIN".
     - `runAt` {{Optional_Inline}}
-      - : Same as `run_at` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
+      - : Same as `run_at` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
 
-Unlike content script options, the userScriptOptions object does not have a css property. Use {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}} to dynamically register and unregister stylesheets.
+Unlike content script options, the userScriptOptions object does not have a css property. Use {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}} to dynamically register and unregister stylesheets.
 
 ### Return value
 

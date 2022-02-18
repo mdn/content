@@ -102,7 +102,7 @@ The `background` key is an object that may have one of the following two propert
         </p>
         <p>
           If you use this property, you can not specify background scripts using
-          <code>scripts</code>, but you can  include your own scripts from the
+          <code>scripts</code>, but you can  include your own scripts from the
           page, just like in a normal web page.
         </p>
       </td>
@@ -147,9 +147,9 @@ The `background` key can also contain the following optional property:
 ## Example
 
 ```json
-  "background": {
-    "scripts": ["jquery.js", "my-background.js"]
-  }
+  "background": {
+    "scripts": ["jquery.js", "my-background.js"]
+  }
 ```
 
 Load two background scripts.

@@ -31,7 +31,7 @@ To use the API, call `{{WebExtAPIRef("userScripts.register","register()")}}` pas
 ## Types
 
 - {{WebExtAPIRef("userScripts.RegisteredUserScript")}}
-  - : The `object` returned by the {{WebExtAPIRef("userScripts.register","register()")}} method. It represents the registered user scripts and is used to deregister the user scripts.
+  - : The `object` returned by the {{WebExtAPIRef("userScripts.register","register()")}} method. It represents the registered user scripts and is used to deregister the user scripts.
 
 ## Methods
 
@@ -41,7 +41,7 @@ To use the API, call `{{WebExtAPIRef("userScripts.register","register()")}}` pas
 ## Events
 
 - {{WebExtAPIRef("userScripts.onBeforeScript")}}
-  - : An event available to the API script, registered in[`"user_scripts"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts), that execute before a user script executes. Use it to trigger the export of the additional APIs provided by the API script, so they are available to the user script.
+  - : An event available to the API script, registered in[`"user_scripts"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts), that execute before a user script executes. Use it to trigger the export of the additional APIs provided by the API script, so they are available to the user script.
 
 ## Browser compatibility
 
