@@ -74,28 +74,28 @@ The basic set up for a `radiogroup` using non-semantic ARIA roles instead of sem
 <div role="radiogroup" aria-labelledby="question">
   <div id="question">
     Which is the best color?</div>
-  <ul id="radioGroup">
-    <li>
+  <div id="radioGroup">
+    <p>
       <span id="colorOption_0" tabindex="0"
         role="radio" aria-checked="false" aria-labelledby="purple"></span>
       <span id="purple">Purple</span>
-    </li>
-    <li>
+    </p>
+    <p>
       <span id="colorOption_1" tabindex="-1"
         role="radio" aria-checked="false"  aria-labelledby="aubergine"></span>
       <span id="aubergine">Aubergine</span>
-    </li>
-    <li>
+    </p>
+    <p>
       <span id="colorOption_2" tabindex="-1"
         role="radio" aria-checked="false" aria-labelledby="magenta"></span>
       <span id="magenta">Magenta</span>
-    </li>
-    <li>
+    </p>
+    <p>
       <span id="colorOption_3" tabindex="-1"
         role="radio" aria-checked="false" aria-labelledby="all"></span>
       <span id="all">All of the above</span>
-    </li>
-  </ul>
+    </p>
+  </div>
 </div>
 ```
 
@@ -104,24 +104,22 @@ This could have been written using semantic HTML, which requires no CSS or JavaS
 ```html
 <fieldset>
   <legend>Which is the best color?</legend>
-  <ul>
-    <li>
-      <input name="colorOption" type="radio" id="purple">
-      <label for="purple">Purple</label>
-    </li>
-    <li>
-      <input name="colorOption" type="radio" id="aubergine">
-      <label for="aubergine">Aubergine</label>
-    </li>
-    <li>
-      <input name="colorOption" type="radio" id="magenta">
-      <label for="magenta">Magenta</label>
-    </li>
-    <li>
-      <input name="colorOption" type="radio" id="all">
-      <label for="all">All of the above</label>
-    </li>
-  </ul>
+  <p>
+    <input name="colorOption" type="radio" id="purple">
+    <label for="purple">Purple</label>
+  </p>
+  <p>
+    <input name="colorOption" type="radio" id="aubergine">
+    <label for="aubergine">Aubergine</label>
+  </p>
+  <p>
+    <input name="colorOption" type="radio" id="magenta">
+    <label for="magenta">Magenta</label>
+  </p>
+  <li>
+    <input name="colorOption" type="radio" id="all">
+    <label for="all">All of the above</label>
+  </p>
 </fieldset>
 ```
 
