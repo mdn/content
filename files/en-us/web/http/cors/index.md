@@ -264,7 +264,7 @@ The CORS protocol originally required that behavior but [was subsequently change
 Until browsers catch up with the spec, you may be able to work around this limitation by doing one or both of the following:
 
 - Change the server-side behavior to avoid the preflight and/or to avoid the redirect
-- Change the request such that it is a [simple request](#simple_requests) that doesn’t cause a preflight
+- Change the request such that it is a [simple request](#simple_requests) that doesn't cause a preflight
 
 If that's not possible, then another way is to:
 

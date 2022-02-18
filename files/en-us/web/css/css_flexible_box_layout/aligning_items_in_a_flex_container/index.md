@@ -175,7 +175,7 @@ If you change `flex-direction` to one of the reverse values, then they will lay 
 
 ## Using auto margins for main axis alignment
 
-We don’t have a `justify-items` or `justify-self` property available to us on the main axis as our items are treated as a group on that axis. However it is possible to do some individual alignment in order to separate an item or a group of items from others by using auto margins along with flexbox.
+We don't have a `justify-items` or `justify-self` property available to us on the main axis as our items are treated as a group on that axis. However it is possible to do some individual alignment in order to separate an item or a group of items from others by using auto margins along with flexbox.
 
 A common pattern is a navigation bar where some key items are aligned to the right, with the main group on the left. You might think that this should be a use case for a `justify-self` property, however consider the image below. I have three items on one side and two on the other. If I were able to use `justify-self` on item _d_, it would also change the alignment of item _e_ that follows, which may or may not be my intention.
 

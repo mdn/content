@@ -36,7 +36,7 @@ The following example shows how:
 - For an attribute which has a namespace prefix, `getAttributeNames()` returns that namespace prefix along with the attribute name.
 - For an attribute which has no namespace prefix, `getAttributeNames()` returns just the attribute name, as-is.
 
-It’s important to understand that:
+It's important to understand that:
 
 1. An attribute can be present in the DOM with a namespace but lacking a namespace prefix.
 2. For an attribute in the DOM that has a namespace but lacks a namespace prefix, `getAttributeNames()` will return just the attribute name, with no indication that the attribute is in a namespace.

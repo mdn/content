@@ -333,7 +333,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
     if (window.self !== window.top) {
       // Ensure that if our document is in a frame, we get the user
       // to first open it in its own tab or window. Otherwise, it
-      // won’t be able to request permission for camera access.
+      // won't be able to request permission for camera access.
       document.querySelector(".contentarea").remove();
       const button = document.createElement("button");
       button.textContent = "View live result of the example code above";

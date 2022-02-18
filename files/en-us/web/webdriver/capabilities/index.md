@@ -144,7 +144,7 @@ This would be functionally equivalent in the new style:
 {"capabilities": {"firstMatch": [{"browserName": "firefox"}]}}
 ```
 
-But because there is only one `firstMatch` arm, and we know that session creation will fail if the server doesn’t have a Firefox installed, it is also equivalent to this:
+But because there is only one `firstMatch` arm, and we know that session creation will fail if the server doesn't have a Firefox installed, it is also equivalent to this:
 
 ```json
 {"capabilities": {"alwaysMatch": {"browserName": "firefox"}}}

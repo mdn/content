@@ -92,7 +92,7 @@ So to recap, the keys are equally spaced by default unless you specify an offset
 
 #### Representing timing properties
 
-We’ll also need to create an object of timing properties corresponding to the values in Alice’s animation:
+We'll also need to create an object of timing properties corresponding to the values in Alice's animation:
 
 ```js
 var aliceTiming = {
@@ -306,7 +306,7 @@ But while working on this animation, we might change Alice's duration a lot. Wou
 aliceChange.currentTime = aliceChange.effect.getComputedTiming().duration / 2;
 ```
 
-`effect` lets us access the animation’s keyframes and timing properties — `aliceChange.effect.getComputedTiming()` points to Alice’s timing object — this contains her [`duration`](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect). We can divide her duration in half to get the midpoint for her animation’s timeline, setting her to be normal height. Now we can reverse and play her animation in either direction to make her grow smaller or larger!
+`effect` lets us access the animation's keyframes and timing properties — `aliceChange.effect.getComputedTiming()` points to Alice's timing object — this contains her [`duration`](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect). We can divide her duration in half to get the midpoint for her animation's timeline, setting her to be normal height. Now we can reverse and play her animation in either direction to make her grow smaller or larger!
 
 And we can do the same thing when setting the cake and bottle durations:
 

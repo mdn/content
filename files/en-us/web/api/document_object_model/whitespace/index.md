@@ -26,7 +26,7 @@ In the case of HTML, whitespace is largely ignored — whitespace in between wor
   <h1>      Hello      World!     </h1>
 ```
 
-This source code contains a couple of line feeds after the `DOCTYPE` and a bunch of space characters before, after, and inside the `<h1>` element, but the browser doesn’t seem to care at all and just shows the words "Hello World!" as if these characters didn’t exist at all:
+This source code contains a couple of line feeds after the `DOCTYPE` and a bunch of space characters before, after, and inside the `<h1>` element, but the browser doesn't seem to care at all and just shows the words "Hello World!" as if these characters didn't exist at all:
 
 {{EmbedLiveSample('HTML_largely_ignores_whitespace')}}
 
@@ -66,11 +66,11 @@ Conserving whitespace characters in the DOM is useful in many ways, but there ar
 
 ### How does CSS process whitespace?
 
-Most whitespace characters are ignored, not all of them are. In the earlier example one of the spaces between "Hello" and "World!" still exists when the page is rendered in a browser. There are rules in the browser engine that decide which whitespace characters are useful and which aren’t — these are specified at least in part in [CSS Text Module Level 3](https://www.w3.org/TR/css-text-3), and especially the parts about the [CSS `white-space` property](https://www.w3.org/TR/css-text-3/#white-space-property) and [whitespace processing details](https://www.w3.org/TR/css-text-3/#white-space-processing), but we also offer an easier explanation below.
+Most whitespace characters are ignored, not all of them are. In the earlier example one of the spaces between "Hello" and "World!" still exists when the page is rendered in a browser. There are rules in the browser engine that decide which whitespace characters are useful and which aren't — these are specified at least in part in [CSS Text Module Level 3](https://www.w3.org/TR/css-text-3), and especially the parts about the [CSS `white-space` property](https://www.w3.org/TR/css-text-3/#white-space-property) and [whitespace processing details](https://www.w3.org/TR/css-text-3/#white-space-processing), but we also offer an easier explanation below.
 
 #### Example
 
-Let’s take another example. To make it easier, we’ve added a comment that shows all spaces with ◦, all tabs with ⇥ , and all line breaks with ⏎:
+Let's take another example. To make it easier, we've added a comment that shows all spaces with ◦, all tabs with ⇥ , and all line breaks with ⏎:
 
 This example:
 
@@ -144,7 +144,7 @@ Within this context, whitespace is treated very differently.
 
 #### Example
 
-Let’s take a look at an example to explain how. We've marked the whitespace characters as before.
+Let's take a look at an example to explain how. We've marked the whitespace characters as before.
 
 We have 3 text nodes that contain only whitespace, one before the first `<div>`, one between the 2 `<divs>`, and one after the second `<div>`.
 
@@ -172,7 +172,7 @@ This renders like so:
 
 We can summarize how the whitespace here is handled as follows (the may be some slight differences in exact behavior between browsers, but this basically works):
 
-1. Because we’re inside a block formatting context, everything must be a block, so our 3 text nodes also become blocks, just like the 2 `<div>`s. Blocks occupy the full width available and are stacked on top of each other, which means that we end up with a layout composed of this list of blocks:
+1. Because we're inside a block formatting context, everything must be a block, so our 3 text nodes also become blocks, just like the 2 `<div>`s. Blocks occupy the full width available and are stacked on top of each other, which means that we end up with a layout composed of this list of blocks:
 
     ```html
     <block>⏎⇥</block>
@@ -192,17 +192,17 @@ We can summarize how the whitespace here is handled as follows (the may be some 
     <block></block>
     ```
 
-3. The 3 empty blocks we now have are not going to occupy any space in the final layout, because they don’t contain anything, so we’ll end up with only 2 blocks taking up space in the page. People viewing the web page see the words "Hello" and "World!" on 2 separate lines as you’d expect 2 `<div>`s to be laid out. The browser engine has essentially ignored all of the whitespace that was added in the source code.
+3. The 3 empty blocks we now have are not going to occupy any space in the final layout, because they don't contain anything, so we'll end up with only 2 blocks taking up space in the page. People viewing the web page see the words "Hello" and "World!" on 2 separate lines as you'd expect 2 `<div>`s to be laid out. The browser engine has essentially ignored all of the whitespace that was added in the source code.
 
 ## Spaces in between inline and inline-block elements
 
 Let's move on to look at a few issues that can arise due to whitespace, and what can be done about them. First of all, we'll look at what happens with spaces in between inline and inline-block elements. In fact, we saw this already in our very first example, when we described how whitespace is processed inside inline formatting contexts.
 
-We said that there were rules to ignore most characters but that word-separating characters remain. When you’re only dealing with block-level elements such as `<p>` that only contain inline elements such as `<em>`, `<strong>`, `<span>`, etc., you don’t normally care about this because the extra whitespace that does make it to the layout is helpful to separate the words in the sentence.
+We said that there were rules to ignore most characters but that word-separating characters remain. When you're only dealing with block-level elements such as `<p>` that only contain inline elements such as `<em>`, `<strong>`, `<span>`, etc., you don't normally care about this because the extra whitespace that does make it to the layout is helpful to separate the words in the sentence.
 
 It gets more interesting however when you start using `inline-block` elements. These elements behave like inline elements on the outside, and blocks on the inside, and are often used to display more complex pieces of UI than just text, side-by-side on the same line, for example navigation menu items.
 
-Because they are blocks, many people expect that they will behave as such, but really they don’t. If there is formatting whitespace between adjacent inline elements, this will result in space in the layout, just like the spaces between words in text.
+Because they are blocks, many people expect that they will behave as such, but really they don't. If there is formatting whitespace between adjacent inline elements, this will result in space in the layout, just like the spaces between words in text.
 
 ### Example
 

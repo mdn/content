@@ -43,7 +43,7 @@ registerProtocolHandler(scheme, url, title)
 - `title` {{deprecated_inline}}
 
   - : A human-readable title string for the handler.
-    **This will be displayed to the user**, such as prompting “Allow this site to handle \[scheme] links?” or listing registered handlers in the browser’s settings.
+    **This will be displayed to the user**, such as prompting “Allow this site to handle \[scheme] links?” or listing registered handlers in the browser's settings.
 
     > **Note:** The title has been removed from the spec due to spoofing concerns.
     > The `title` should still be set because some browsers **still require it** (see the [compatibility table below](#browser_compatibility)).
@@ -56,7 +56,7 @@ registerProtocolHandler(scheme, url, title)
     This might happen if:
 
     - The registered scheme (protocol) is invalid, such as a scheme the browser handles itself (`https:`, `about:`, etc.)
-    - The handler URL’s {{Glossary("origin")}} does not match the origin of the page calling this API.
+    - The handler URL's {{Glossary("origin")}} does not match the origin of the page calling this API.
     - The browser requires that this function is called from a secure context.
     - The browser requires that the handler's URL be over HTTPS.
 

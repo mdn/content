@@ -23,7 +23,7 @@ In the olden days of web development, it was always seen as a good practice to a
 
 Without the `width` and `height` attributes, no placeholder space would be created, and when the image finally loaded you would get a noticeable jank in the page layout. This wasn't an attractive thing for your users to see, and could also result in performance issues due to the repainting required after each image loads, hence adding the attributes being a good idea.
 
-Let’s move forward a few years to the era of responsive design. To keep images from breaking out of their containers when the container becomes narrower than the image, developers started using CSS like the following:
+Let's move forward a few years to the era of responsive design. To keep images from breaking out of their containers when the container becomes narrower than the image, developers started using CSS like the following:
 
 ```css
 img {
@@ -69,7 +69,7 @@ The aspect ratio is then used to calculate the height and therefore the correct 
 
 The new mechanism currently only works on `<img>` elements before the image is loaded.
 
-Originally we were going to have the new mechanism apply the calculated sizing to `<img>` elements before and after the image has loaded. However, this caused a problem — a number of web sites actually use the `width` and `height` attributes incorrectly, setting an aspect ratio of something other than the image’s intrinsic aspect ratio.
+Originally we were going to have the new mechanism apply the calculated sizing to `<img>` elements before and after the image has loaded. However, this caused a problem — a number of web sites actually use the `width` and `height` attributes incorrectly, setting an aspect ratio of something other than the image's intrinsic aspect ratio.
 
 Once such an image loads, if the internal aspect ratio is still applied it will result in the `<img>` not displaying the image correctly. Therefore, once the image is loaded, we start using the intrinsic aspect ratio of the loaded image rather than the aspect ratio from the attributes, so it displays at the correct aspect ratio.
 

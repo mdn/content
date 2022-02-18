@@ -9,7 +9,7 @@ tags:
 ---
 {{APIRef("Canvas API")}}
 
-**`CanvasImageSource`** provides a mechanism for other interfaces to be used as image sources for some methods of the {{domxref("CanvasDrawImage")}} and {{domxref("CanvasFillStrokeStyles")}} interfaces. It’s just an internal helper type to simplify the specification. It’s not an interface and there are no objects implementing it.
+**`CanvasImageSource`** provides a mechanism for other interfaces to be used as image sources for some methods of the {{domxref("CanvasDrawImage")}} and {{domxref("CanvasFillStrokeStyles")}} interfaces. It's just an internal helper type to simplify the specification. It's not an interface and there are no objects implementing it.
 
 The interfaces that it allows to be used as image sources are the following:
 

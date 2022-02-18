@@ -16,8 +16,8 @@ browser-compat: api.IDBObjectStore.add
 The **`add()`** method of the {{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [structured clone](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) of the value, and stores the cloned value in the object store. This is for adding new records to an object store.
 
 To determine if the add operation has completed successfully, listen for the
-transaction’s `complete` event in addition to the
-`IDBObjectStore.add` request’s `success` event, because the
+transaction's `complete` event in addition to the
+`IDBObjectStore.add` request's `success` event, because the
 transaction may still fail after the success event fires. In other words, the success
 event is only triggered when the transaction has been successfully queued.
 

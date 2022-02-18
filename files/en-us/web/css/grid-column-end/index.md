@@ -11,7 +11,7 @@ browser-compat: css.properties.grid-column-end
 ---
 {{CSSRef}}
 
-The **`grid-column-end`** CSS property specifies a grid item’s end position within the grid column by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the block-end edge of its {{glossary("grid areas", "grid area")}}.
+The **`grid-column-end`** CSS property specifies a grid item's end position within the grid column by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the block-end edge of its {{glossary("grid areas", "grid area")}}.
 
 {{EmbedInteractiveExample("pages/css/grid-column-end.html")}}
 
@@ -43,10 +43,10 @@ grid-column-end: unset;
 ### Values
 
 - `auto`
-  - : Is a keyword indicating that the property contributes nothing to the grid item’s placement, indicating auto-placement, an automatic span, or a default span of `1`.
+  - : Is a keyword indicating that the property contributes nothing to the grid item's placement, indicating auto-placement, an automatic span, or a default span of `1`.
 - `<custom-ident>`
 
-  - : If there is a named line with the name '\<custom-ident>-end', it contributes the first such line to the grid item’s placement.
+  - : If there is a named line with the name '\<custom-ident>-end', it contributes the first such line to the grid item's placement.
 
     > **Note:** Named grid areas automatically generate implicit named lines of this form, so specifying `grid-column-end: foo;` will choose the end edge of that named grid area (unless another line named `foo-end` was explicitly specified before it).
 
@@ -54,7 +54,7 @@ grid-column-end: unset;
 
 - `<integer> && <custom-ident>?`
 
-  - : Contributes the nth grid line to the grid item’s placement. If a negative integer is given, it instead counts in reverse, starting from the end edge of the explicit grid.
+  - : Contributes the nth grid line to the grid item's placement. If a negative integer is given, it instead counts in reverse, starting from the end edge of the explicit grid.
 
     If a name is given as a \<custom-ident>, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines are assumed to have that name for the purpose of finding this position.
 
@@ -62,7 +62,7 @@ grid-column-end: unset;
 
 - `span && [ <integer> || <custom-ident> ]`
 
-  - : Contributes a grid span to the grid item’s placement such that the column end edge of the grid item’s grid area is n lines from the start edge.
+  - : Contributes a grid span to the grid item's placement such that the column end edge of the grid item's grid area is n lines from the start edge.
 
     If a name is given as a \<custom-ident>, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines on the side of the explicit grid corresponding to the search direction are assumed to have that name for the purpose of counting this span.
 

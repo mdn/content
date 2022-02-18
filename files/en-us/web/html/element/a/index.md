@@ -84,12 +84,12 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - `_self`: the current browsing context. (Default)
     - `_blank`: usually a new tab, but users can configure browsers to open a new window instead.
     - `_parent`: the parent browsing context of the current one. If no parent, behaves as `_self`.
-    - `_top`: the topmost browsing context (the "highest" context that’s an ancestor of the current one). If no ancestors, behaves as `_self`.
+    - `_top`: the topmost browsing context (the "highest" context that's an ancestor of the current one). If no ancestors, behaves as `_self`.
 
     > **Note:** Setting `target="_blank"` on `<a>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Link_types/noopener) which does not set `window.opener`. See [browser compatibility](#browser_compatibility) for support status.
 
 - {{HTMLAttrDef("type")}}
-  - : Hints at the linked URL’s format with a {{Glossary("MIME type")}}. No built-in functionality.
+  - : Hints at the linked URL's format with a {{Glossary("MIME type")}}. No built-in functionality.
 
 ### Deprecated attributes
 
@@ -111,7 +111,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
   - : Specified a reverse link; the opposite of [the `rel` attribute](#rel). Deprecated for being very confusing.
 - {{HTMLAttrDef("shape")}}{{Deprecated_Inline}}
 
-  - : The shape of the hyperlink’s region in an image map.
+  - : The shape of the hyperlink's region in an image map.
 
     > **Note:** Use the {{HTMLElement("area")}} element for image maps instead.
 
@@ -289,7 +289,7 @@ See {{RFC(3966)}} for syntax, additional features, and other details about the `
 
 ### Using the download attribute to save a \<canvas> as a PNG
 
-To save a {{HTMLElement("canvas")}} element’s contents as an image, you can create a link with a `download` attribute and the canvas data as a `data:` URL:
+To save a {{HTMLElement("canvas")}} element's contents as an image, you can create a link with a `download` attribute and the canvas data as a `data:` URL:
 
 #### Example painting app with save link
 
@@ -354,7 +354,7 @@ document.querySelector('a').addEventListener('click', event =>
 
 ## Security and privacy
 
-`<a>` elements can have consequences for users’ security and privacy. See [`Referer` header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) for information.
+`<a>` elements can have consequences for users' security and privacy. See [`Referer` header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) for information.
 
 Using `target="_blank"` without [`rel="noreferrer"`](/en-US/docs/Web/HTML/Link_types/noreferrer) and [`rel="noopener"`](/en-US/docs/Web/HTML/Link_types/noopener) makes the website vulnerable to {{domxref("window.opener")}} API exploitation attacks ([vulnerability description](https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/)), although note that, in newer browser versions setting `target="_blank"` implicitly provides the same protection as setting `rel="noopener"`. See [browser compatibility](#browser_compatibility) for details.
 
@@ -376,7 +376,7 @@ A sadly common mistake is to only link the words “click here” or “here”:
 
 #### Strong link text
 
-Luckily, this is an easy fix, and it’s actually shorter than the inaccessible version!
+Luckily, this is an easy fix, and it's actually shorter than the inaccessible version!
 
 ```html example-good
 <p>
@@ -478,7 +478,7 @@ Skip links are especially useful for people who navigate with the aid of assisti
 
 Interactive elements, like links, should provide an area large enough that it is easy to activate them. This helps a variety of people, including those with motor control issues and those using imprecise inputs such as a touchscreen. A minimum size of 44×44 [CSS pixels](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) is recommended.
 
-Text-only links in prose content are exempt from this requirement, but it’s still a good idea to make sure enough text is hyperlinked to be easily activated.
+Text-only links in prose content are exempt from this requirement, but it's still a good idea to make sure enough text is hyperlinked to be easily activated.
 
 - [Understanding Success Criterion 2.5.5: Target Size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
 - [Target Size and 2.5.5](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)

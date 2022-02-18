@@ -219,7 +219,7 @@ Associates a key with a value, and has the following attributes:
 
 Associates a key with one of two accessor functions (`get` and `set`) to retrieve or store a value.
 
-> **Note:** It’s important to recognize it’s accessor _property_ — not accessor _method_. We can give a JavaScript object class-like accessors by using a function as a value — but that doesn't make the object a class.
+> **Note:** It's important to recognize it's accessor _property_ — not accessor _method_. We can give a JavaScript object class-like accessors by using a function as a value — but that doesn't make the object a class.
 
 An accessor property has the following attributes:
 

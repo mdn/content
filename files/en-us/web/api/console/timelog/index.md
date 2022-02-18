@@ -50,13 +50,13 @@ timer name: 1242ms
 If there is no running timer, `timeLog()` returns the warning:
 
 ```
-Timer “default” doesn’t exist.
+Timer “default” doesn't exist.
 ```
 
 If a label parameter is included, but there is no corresponding timer:
 
 ```
-Timer “timer name” doesn’t exist.
+Timer “timer name” doesn't exist.
 ```
 
 ## Examples

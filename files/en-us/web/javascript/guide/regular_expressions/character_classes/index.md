@@ -272,7 +272,7 @@ console.table(randomData.match(regexpFourDigits));
 ### Looking for a word (from the latin alphabet) starting with A
 
 ```js
-var aliceExcerpt = "I’m sure I’m not Ada,’ she said, ‘for her hair goes in such long ringlets, and mine doesn’t go in ringlets at all.";
+var aliceExcerpt = "I'm sure I'm not Ada,' she said, 'for her hair goes in such long ringlets, and mine doesn't go in ringlets at all.";
 var regexpWordStartingWithA = /\b[aA]\w+/g;
 // \b indicates a boundary (i.e. do not start matching in the middle of a word)
 // [aA] indicates the letter a or A

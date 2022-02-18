@@ -64,7 +64,7 @@ Once you are working in writing modes other than `horizontal-tb` many of the pro
 
 {{EmbedGHLiveSample("css-examples/flow/writing-modes/width.html", '100%', 720)}}
 
-Therefore, we have new properties of {{cssxref("block-size")}} and {{cssxref("inline-size")}}. If we give our block an `inline-size` of 100px, it doesn’t matter whether we are in a horizontal or a vertical writing mode, `inline-size` will always mean the size in the inline direction.
+Therefore, we have new properties of {{cssxref("block-size")}} and {{cssxref("inline-size")}}. If we give our block an `inline-size` of 100px, it doesn't matter whether we are in a horizontal or a vertical writing mode, `inline-size` will always mean the size in the inline direction.
 
 {{EmbedGHLiveSample("css-examples/flow/writing-modes/inline-size.html", '100%', 720)}}
 

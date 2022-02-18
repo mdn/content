@@ -12,7 +12,7 @@ tags:
 ---
 {{apiref("Streams")}}
 
-As a JavaScript developer, programmatically writing data to a stream is very useful! This article explains the [Streams API](/en-US/docs/Web/API/Streams_API)’s writable stream functionality.
+As a JavaScript developer, programmatically writing data to a stream is very useful! This article explains the [Streams API](/en-US/docs/Web/API/Streams_API)'s writable stream functionality.
 
 > **Note:** This article assumes that you understand the use cases of writable streams, and are aware of the high-level concepts. If not, we suggest that you first read the [Streams concepts and usage overview](/en-US/docs/Web/API/Streams_API#Concepts_and_usage) and dedicated [Streams API concepts](/en-US/docs/Web/API/Streams_API/Concepts) article, then come back.
 
@@ -24,15 +24,15 @@ The Streams API is experimental, and support is at an early stage right now. Onl
 
 ## Introducing an example
 
-In our [dom-examples/streams](https://github.com/mdn/dom-examples/tree/master/streams) repo you’ll find a [Simple writer example](https://github.com/mdn/dom-examples/blob/master/streams/simple-writer/index.html) ([see it live also](https://mdn.github.io/dom-examples/streams/simple-writer/)). This takes a given message and writes it into a writable stream, displaying each chunk on the UI as it is written to the stream and also displaying the whole message on the UI when writing has finished.
+In our [dom-examples/streams](https://github.com/mdn/dom-examples/tree/master/streams) repo you'll find a [Simple writer example](https://github.com/mdn/dom-examples/blob/master/streams/simple-writer/index.html) ([see it live also](https://mdn.github.io/dom-examples/streams/simple-writer/)). This takes a given message and writes it into a writable stream, displaying each chunk on the UI as it is written to the stream and also displaying the whole message on the UI when writing has finished.
 
 ## How writable streams work
 
-Let’s look at how the writable stream functionality in our demo works.
+Let's look at how the writable stream functionality in our demo works.
 
 ### Constructing a writable stream
 
-To create a writable stream, we use the {{domxref("WritableStream.WritableStream","WritableStream()")}} constructor; the syntax looks complex at first, but actually isn’t too bad.
+To create a writable stream, we use the {{domxref("WritableStream.WritableStream","WritableStream()")}} constructor; the syntax looks complex at first, but actually isn't too bad.
 
 The syntax skeleton looks like this:
 

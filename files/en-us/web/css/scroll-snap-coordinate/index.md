@@ -37,7 +37,7 @@ If the element has been transformed, the snap coordinates are likewise transform
 - `none`
   - : Specifies that the element does not contribute to a snap point.
 - {{cssxref("&lt;position&gt;")}}
-  - : Specifies the offset of the snap coordinates from the start edge of the element’s border box. For each pairing, the first value gives the x coordinate of the snap coordinate, the second value its y coordinate.
+  - : Specifies the offset of the snap coordinates from the start edge of the element's border box. For each pairing, the first value gives the x coordinate of the snap coordinate, the second value its y coordinate.
 
 ## Formal definition
 

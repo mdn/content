@@ -147,7 +147,7 @@ if (condition) {
 }
 ```
 
-In general it’s good practice to not have an `if...else` with an assignment like "`x = y`" as a condition:
+In general it's good practice to not have an `if...else` with an assignment like "`x = y`" as a condition:
 
 ```js example-bad
 if (x = y) {

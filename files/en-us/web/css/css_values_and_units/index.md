@@ -73,7 +73,7 @@ Such values are used without quotes:
 
 In addition to the pre-defined keywords that are part of the specification for a property, all CSS properties accept the CSS-wide property values {{cssxref("initial")}}, {{cssxref("inherit")}}, and {{cssxref("unset")}}, which explicitly specify defaulting behaviors.
 
-The `initial` keyword represents the value specified as the property’s initial value. The `inherit` keyword represents the computed value of the property on the element’s parent, provided it is inherited.
+The `initial` keyword represents the value specified as the property's initial value. The `inherit` keyword represents the computed value of the property on the element's parent, provided it is inherited.
 
 The `unset` keyword acts as either `inherit` or `initial`, depending on whether the property is inherited or not.
 
@@ -135,8 +135,8 @@ Relative length units specify a length in relation to something else. For exampl
 | `em`   | Font size of the element.                                                                                                              |
 | `ex`   | x-height of the element's font.                                                                                                        |
 | `cap`  | Cap height (the nominal height of capital letters) of the element's font.                                                              |
-| `ch`   | Average character advance of a narrow glyph in the element’s font, as represented by the “0” (ZERO, U+0030) glyph.                     |
-| `ic`   | Average character advance of a full width glyph in the element’s font, as represented by the “水” (CJK water ideograph, U+6C34) glyph. |
+| `ch`   | Average character advance of a narrow glyph in the element's font, as represented by the “0” (ZERO, U+0030) glyph.                     |
+| `ic`   | Average character advance of a full width glyph in the element's font, as represented by the “水” (CJK water ideograph, U+6C34) glyph. |
 | `rem`  | Font size of the root element.                                                                                                         |
 | `lh`   | Line height of the element.                                                                                                            |
 | `rlh`  | Line height of the root element.                                                                                                       |

@@ -219,7 +219,7 @@ This should give you results similar to the following, where the light grey bar 
 
 ## A quick word about Played
 
-It’s worth mentioning the `played` property — this tells us which time ranges have been played within the media. For example:
+It's worth mentioning the `played` property — this tells us which time ranges have been played within the media. For example:
 
 ```js
 var played = audio.played; // returns a TimeRanges object

@@ -28,7 +28,7 @@ In this article we'll set up the server for our phone app. The server file will 
 
     We use the `ExpressPeerServer` object to create the peer server, passing it some options in the process. The peer server will handle the signalling required for WebRTC for us, so we don't have to worry about STUN/TURN servers or other protocols.
 
-4. Finally, you'll need to tell your app to use the `peerServer` by calling `app.use(peerServer)`. Your finished `server.js` should include the other necessary dependencies you’d include in a server file, as well as serving the `index.html` file to the root path.
+4. Finally, you'll need to tell your app to use the `peerServer` by calling `app.use(peerServer)`. Your finished `server.js` should include the other necessary dependencies you'd include in a server file, as well as serving the `index.html` file to the root path.
 
     Update `server.js` so that it looks like this:
 

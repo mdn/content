@@ -19,7 +19,7 @@ The latency associated with a single asset, especially a basic HTML page, may se
 
 On a connection with low latency, requested resources will appear almost immediately. On a connection with high latency, there will be a discernible delay between the time that a request is sent, and the resources are returned. We can determine the amount of latency by measuring the speed with which the data moves from one network location to another.
 
-Latency can be measured one way, for example, the amount of time it takes to send a request for resources, or the length of the entire round-trip from the browser’s request for a resource to the moment when the requested resource arrives at the browser.
+Latency can be measured one way, for example, the amount of time it takes to send a request for resources, or the length of the entire round-trip from the browser's request for a resource to the moment when the requested resource arrives at the browser.
 
 ## Network throttling
 

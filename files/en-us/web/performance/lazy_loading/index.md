@@ -82,7 +82,7 @@ Include this polyfill to provide support for older and currently incompatible br
 [loading-attribute-polyfill](https://github.com/mfranzke/loading-attribute-polyfill)
 
 **Intersection Observer API**
-[Intersection Observers](/en-US/docs/Web/API/IntersectionObserver) allow the user to know when an observed element enters or exits the browser’s viewport.
+[Intersection Observers](/en-US/docs/Web/API/IntersectionObserver) allow the user to know when an observed element enters or exits the browser's viewport.
 
 **Event handlers**
 When browser compatibility is crucial, there are a few options:
