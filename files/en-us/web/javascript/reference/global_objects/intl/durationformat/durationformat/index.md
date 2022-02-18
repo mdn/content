@@ -11,7 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DurationFormat.DurationFormat
 ---
-{{JSRef}}
+{{JSRef}} {{SeeCompatTable}}
 
 The **`Intl.DurationFormat()`** constructor creates
 {{jsxref("Intl/DurationFormat", "Intl.DurationFormat")}} objects that enable
@@ -20,7 +20,7 @@ language-sensitive duration formatting.
 ## Syntax
 
 ```js
-new Intl.DurationFormat()
+new Intl.DurationFormat.()
 new Intl.DurationFormat(locales)
 new Intl.DurationFormat(locales, options)
 ```
@@ -175,6 +175,19 @@ new Intl.DurationFormat(locales, options)
       - : Number of how many fractional digits to display in the output.
 
 ## Examples
+
+Basic Usage
+
+```js
+const duration = {
+    hours: 2,
+    minutes: 20,
+    seconds: 35,
+}
+
+console.log(new Intl.DurationFormat("pt", { style: "long" }).format(duration););
+// → "2 horas, 20 minutos e 35 segundos"
+```
 
 ## Specifications
 

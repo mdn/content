@@ -32,6 +32,8 @@ The **`Intl`** object is the namespace for the ECMAScript Internationalization A
   - : Constructor for objects that enable language-sensitive relative time formatting.
 - {{jsxref("Global_Objects/Intl/Segmenter/Segmenter", "Intl.Segmenter()")}}
   - : Constructor for objects that enable locale-sensitive text segmentation.
+- {{jsxref("Global_Objects/Intl/DurationFormat/DurationFormat", "Intl.DurationFormat()")}}
+  - : Constructor for objects that enable locale-sensitive duration formatting.
 
 ## Static methods
 

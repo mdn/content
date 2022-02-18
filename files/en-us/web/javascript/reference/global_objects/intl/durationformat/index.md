@@ -11,7 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DurationFormat
 ---
-{{JSRef}}
+{{JSRef}} {{SeeCompatTable}}
 
 The **`Intl.DurationFormat`** object enables language-sensitive duration formatting.
 
