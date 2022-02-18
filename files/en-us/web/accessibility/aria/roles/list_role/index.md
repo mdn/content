@@ -14,11 +14,11 @@ tags:
 The ARIA `list` role can be used to identify a list of items. It is normally used in conjunction with the `listitem` role, which is used to identify a list item contained inside the list.
 
 ```html
-<section role="list">
+<div role="list">
   <div role="listitem">List item 1</div>
   <div role="listitem">List item 2</div>
   <div role="listitem">List item 3</div>
-</section>
+</div>
 ```
 
 ## Description
