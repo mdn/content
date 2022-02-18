@@ -26,7 +26,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLTableColElement.chOff")}} {{deprecated_inline}}
   - : Is a {{domxref("DOMString")}} representing the offset for the alignment character.
 - {{domxref("HTMLTableColElement.span")}}
-  - : Is an `unsigned long` that reflects the {{htmlattrxref("span", "col")}} HTML attribute, indicating the number of columns to apply this object's attributes to. Must be a positive integer.
+  - : Is an `unsigned long` that reflects the {{htmlattrxref("span", "col")}} HTML attribute, indicating the number of columns to apply this object's attributes to. Must be a positive integer.
 - {{domxref("HTMLTableColElement.vAlign")}} {{deprecated_inline}}
   - : Is a {{domxref("DOMString")}} that indicates the vertical alignment of the cell data in the column.
 - {{domxref("HTMLTableColElement.width")}} {{deprecated_inline}}

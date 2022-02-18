@@ -107,11 +107,11 @@ A **`MutationRecord`** represents an individual DOM mutation. It is the object t
         </p>
         <div class="note">
           <p>
-            <strong>Note:</strong> For this to work as expected, <code
+            <strong>Note:</strong> For this to work as expected, <code
               >attributeOldValue</code
             >
-            or <code>characterDataOldValue</code> must be set to
-            <code>true</code> in the corresponding parameter of the <code>MutationObserver</code>
+            or <code>characterDataOldValue</code> must be set to
+            <code>true</code> in the corresponding parameter of the <code>MutationObserver</code>
             <a href="/en-US/docs/Web/API/MutationObserver/observe">observe</a>
             method
           </p>

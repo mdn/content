@@ -25,7 +25,7 @@ preferredStyleSheetSet = document.preferredStyleSheetSet
 
 On return, `preferredStyleSheetSet` indicates the author's preferred style
 sheet set. This is determined from the order of style sheet declarations and the
-`Default-Style` HTTP header.
+`Default-Style` HTTP header.
 
 If there isn't a preferred style sheet set defined by the author, the empty string
 (`""`) is returned.

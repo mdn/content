@@ -14,9 +14,9 @@ browser-compat: api.IDBRequest.result
 ---
 {{ APIRef("IndexedDB") }}
 
-The **`result`** read-only property of the
-{{domxref("IDBRequest")}} interface returns the result of the request. If the request
-failed and the result is not available, an `InvalidStateError` exception is
+The **`result`** read-only property of the
+{{domxref("IDBRequest")}} interface returns the result of the request. If the request
+failed and the result is not available, an `InvalidStateError` exception is
 thrown.
 
 {{AvailableInWorkers}}
@@ -35,10 +35,10 @@ any
 
 The following example requests a given record title, `onsuccess` gets the
 associated record from the {{domxref("IDBObjectStore")}} (made available
-as `objectStoreTitleRequest.result`), updates
+as `objectStoreTitleRequest.result`), updates
 one property of the record, and then puts the updated record back into the object
-store. For a full working example, see our [To-do
-Notifications](https://github.com/mdn/to-do-notifications/) app ([view
+store. For a full working example, see our [To-do
+Notifications](https://github.com/mdn/to-do-notifications/) app ([view
 example live](https://mdn.github.io/to-do-notifications/)>.)
 
 ```js
@@ -58,11 +58,11 @@ objectStoreTitleRequest.onsuccess = function() {
   data.notified = "yes";
 
   // Create another request that inserts the item
-  // back into the database
+  // back into the database
   var updateTitleRequest = objectStore.put(data);
 
   // When this new request succeeds, run the displayData()
-  // function again to update the display
+  // function again to update the display
   updateTitleRequest.onsuccess = function() {
     displayData();
   };

@@ -31,7 +31,7 @@ An {{ domxref("AudioDestinationNode") }}.
 ## Example
 
 > **Note:** for a full example implementation, see one of our Web Audio
-> Demos on the [MDN Github repo](https://github.com/mdn/), like [voice-change-o-matic](https://github.com/mdn/voice-change-o-matic).
+> Demos on the [MDN Github repo](https://github.com/mdn/), like [voice-change-o-matic](https://github.com/mdn/voice-change-o-matic).
 
 ```js
 var AudioContext = window.AudioContext || window.webkitAudioContext;

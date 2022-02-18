@@ -16,13 +16,13 @@ browser-compat: api.crypto
 ---
 {{APIRef}}
 
-The global read-only **`crypto`** property returns the {{domxref("Crypto")}} object associated to the global object. This object allows web pages access to certain cryptographic related services.
+The global read-only **`crypto`** property returns the {{domxref("Crypto")}} object associated to the global object. This object allows web pages access to certain cryptographic related services.
 
 Although the property itself is read-only, all of its methods (and the methods of its
 child object, {{domxref("SubtleCrypto")}}) are not read-only, and therefore vulnerable
 to attack by {{glossary("polyfill")}}.
 
-Although `crypto` is available on all windows, the returned `Crypto` object only has one usable feature in insecure contexts: the {{domxref("Crypto.getRandomValues", "getRandomValues()")}} method. In general, you should use this API only in secure contexts.
+Although `crypto` is available on all windows, the returned `Crypto` object only has one usable feature in insecure contexts: the {{domxref("Crypto.getRandomValues", "getRandomValues()")}} method. In general, you should use this API only in secure contexts.
 
 ## Value
 

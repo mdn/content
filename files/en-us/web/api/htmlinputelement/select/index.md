@@ -53,7 +53,7 @@ function selectText() {
 Calling `element.select()` will not necessarily focus the input, so it is
 often used with {{domxref("HTMLElement.focus")}}.
 
-In browsers where it is not supported, it is possible to replace it with a call to [HTMLInputElement.setSelectionRange()](/en-US/docs/Web/API/HTMLInputElement/setSelectionRange) with
+In browsers where it is not supported, it is possible to replace it with a call to [HTMLInputElement.setSelectionRange()](/en-US/docs/Web/API/HTMLInputElement/setSelectionRange) with
 parameters 0 and the input's value length:
 
 ```html

@@ -15,7 +15,7 @@ browser-compat: api.HTMLImageElement.isMap
 ---
 {{APIRef("HTML DOM")}}
 
-The {{domxref("HTMLImageElement")}} property **`isMap`** is a
+The {{domxref("HTMLImageElement")}} property **`isMap`** is a
 Boolean value which indicates that the image is to be used by a server-side image map.
 This may only be used on images located within an {{HTMLElement("a")}} element.
 
@@ -32,8 +32,8 @@ let isMap = htmlImageElement.isMap;
 
 ### Value
 
-A Boolean value which is `true` if the image is being used for a server-side
-image map; otherwise, the value is `false`.
+A Boolean value which is `true` if the image is being used for a server-side
+image map; otherwise, the value is `false`.
 
 ## Usage notes
 
@@ -46,7 +46,7 @@ The browser then fetches that URL from the server and displays or downloads it
 depending on the value of the {{htmlattrxref("download", "a")}} attribute.
 
 Unlike server-side image maps, client-side image maps don't cause the
-{{HTMLElement("img")}} element to adopt interactive content mode.
+{{HTMLElement("img")}} element to adopt interactive content mode.
 
 ## Specifications
 

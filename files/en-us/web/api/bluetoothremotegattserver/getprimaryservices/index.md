@@ -16,7 +16,7 @@ browser-compat: api.BluetoothRemoteGATTServer.getPrimaryServices
 
 The **BluetoothRemoteGATTServer.getPrimaryServices()** method returns a
 promise to a list of primary {{domxref("BluetoothRemoteGATTService")}} objects offered by the
-bluetooth device for a specified `BluetoothServiceUUID`.
+bluetooth device for a specified `BluetoothServiceUUID`.
 
 ## Syntax
 

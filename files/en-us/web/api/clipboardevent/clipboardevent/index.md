@@ -36,15 +36,15 @@ _The `ClipboardEvent()` constructor also inherits arguments from
   - : Is a {{domxref("DOMString")}} representing the name of the type of the
     `ClipboardEvent`. It is case-sensitive and can be: `'copy'`,
     `'cut'`, or `'paste'`.
-- *options* {{optional_inline}}
+- *options* {{optional_inline}}
 
   - : Options are as follows:
 
     - `clipboardData`: A {{domxref("DataTransfer")}} containing the data
       concerned by the clipboard event.
-    - `dataType`{{non-standard_inline}}: A {{domxref("DOMString")}}
+    - `dataType`{{non-standard_inline}}: A {{domxref("DOMString")}}
       containing the MIME-type of the data contained in the `data` argument.
-    - `data`{{non-standard_inline}}: A {{domxref("DOMString")}} containing
+    - `data`{{non-standard_inline}}: A {{domxref("DOMString")}} containing
       the data concerned by the clipboard event.
 
 ## Specifications
@@ -57,6 +57,6 @@ _The `ClipboardEvent()` constructor also inherits arguments from
 
 ## See also
 
-- Copy-related events: {{event("copy")}}, {{event("cut")}}, {{event("paste")}}
+- Copy-related events: {{event("copy")}}, {{event("cut")}}, {{event("paste")}}
 - The {{domxref("ClipboardEvent")}} interface it belongs to.
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)

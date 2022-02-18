@@ -44,10 +44,10 @@ document.
 ### HTML
 
 ```html
- <img src="/files/16797/clock-demo-400px.png"
-      alt="Clock"
-      srcset="/files/16864/clock-demo-200px.png 200w, /files/16797/clock-demo-400px.png 400w"
-      sizes="(max-width: 400px) 50%, 90%">
+ <img src="/files/16797/clock-demo-400px.png"
+      alt="Clock"
+      srcset="/files/16864/clock-demo-200px.png 200w, /files/16797/clock-demo-400px.png 400w"
+      sizes="(max-width: 400px) 50%, 90%">
 ```
 
 ### JavaScript

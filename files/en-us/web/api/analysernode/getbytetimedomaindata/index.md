@@ -32,7 +32,7 @@ analyser.getByteTimeDomainData(dataArray); // fill the Uint8Array with data retu
 
 ### Return value
 
-**`void`** | None
+**`void`** | None
 
 ## Example
 
@@ -52,32 +52,32 @@ analyser.getByteTimeDomainData(dataArray);
 // draw an oscilloscope of the current audio source
 function draw() {
   drawVisual = requestAnimationFrame(draw);
-  analyser.getByteTimeDomainData(dataArray);
+  analyser.getByteTimeDomainData(dataArray);
 
-  canvasCtx.fillStyle = 'rgb(200, 200, 200)';
-  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+  canvasCtx.fillStyle = 'rgb(200, 200, 200)';
+  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
-  canvasCtx.lineWidth = 2;
-  canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+  canvasCtx.lineWidth = 2;
+  canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
 
-  const sliceWidth = WIDTH * 1.0 / bufferLength;
-  let x = 0;
+  const sliceWidth = WIDTH * 1.0 / bufferLength;
+  let x = 0;
 
   canvasCtx.beginPath();
-  for(var i = 0; i < bufferLength; i++) {
-    const v = dataArray[i]/128.0;
-    const y = v * HEIGHT/2;
+  for(var i = 0; i < bufferLength; i++) {
+    const v = dataArray[i]/128.0;
+    const y = v * HEIGHT/2;
 
-    if(i === 0)
-      canvasCtx.moveTo(x, y);
-    else
-      canvasCtx.lineTo(x, y);
+    if(i === 0)
+      canvasCtx.moveTo(x, y);
+    else
+      canvasCtx.lineTo(x, y);
 
-    x += sliceWidth;
-  }
+    x += sliceWidth;
+  }
 
-  canvasCtx.lineTo(WIDTH, HEIGHT/2);
-  canvasCtx.stroke();
+  canvasCtx.lineTo(WIDTH, HEIGHT/2);
+  canvasCtx.stroke();
 };
 
 draw();

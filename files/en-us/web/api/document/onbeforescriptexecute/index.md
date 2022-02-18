@@ -12,8 +12,8 @@ browser-compat: api.Document.onbeforescriptexecute
 ---
 {{ApiRef("DOM")}} {{non-standard_header }}
 
-Fired when the code in a {{HTMLElement("script")}} element declared in an HTML
-document is about to start executing. Does not fire if the element is added dynamically,
+Fired when the code in a {{HTMLElement("script")}} element declared in an HTML
+document is about to start executing. Does not fire if the element is added dynamically,
 eg with appendChild().
 
 ## Syntax

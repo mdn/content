@@ -21,13 +21,13 @@ The aim is to allow users to know what's playing and to control it, without need
 
 ## Media Session concepts and usage
 
-The {{domxref("MediaMetadata")}} interface lets a web site provide rich metadata to the platform UI for media that is playing. This metadata includes the title, artist (creator) name, album (collection), and artwork. The platform can show this metadata in media centers, notifications, device lockscreens, etc.
+The {{domxref("MediaMetadata")}} interface lets a web site provide rich metadata to the platform UI for media that is playing. This metadata includes the title, artist (creator) name, album (collection), and artwork. The platform can show this metadata in media centers, notifications, device lockscreens, etc.
 
 The {{domxref("MediaSession")}} interface lets users control playback of media through user-agent defined interface elements. Interaction with these elements triggers action handlers in the web page, playing the media. Since multiple pages may be simultaneously using this API, the user agent is responsible for calling the correct page's action handlers. The user agent provides default behaviors, when no page-defined behavior is available.
 
 ## Accessing the Media Session API
 
-The primary interface for the Media Session API is the {{domxref("MediaSession")}} interface. Rather than creating your own `MediaSession` instance, you access the API using the {{domxref("navigator.mediaSession")}} property. For example, to set the current state of the media session to `playing`:
+The primary interface for the Media Session API is the {{domxref("MediaSession")}} interface. Rather than creating your own `MediaSession` instance, you access the API using the {{domxref("navigator.mediaSession")}} property. For example, to set the current state of the media session to `playing`:
 
 ```js
 navigator.mediaSession.playbackState = "playing";
@@ -36,14 +36,14 @@ navigator.mediaSession.playbackState = "playing";
 ## Interfaces
 
 - {{domxref("MediaMetadata")}}
-  - : Allows a web page to provide rich media metadata for display in a platform UI.
+  - : Allows a web page to provide rich media metadata for display in a platform UI.
 - {{domxref("MediaSession")}}
   - : Allows a web page to provide custom behaviors for standard media playback interactions.
 
 ## Dictionaries
 
 - {{domxref("MediaImage")}}
-  - : A `MediaImage` object contains information describing an image associated with the media. This might be a CD or DVD cover, a movie poster, a poster frame, or the like.
+  - : A `MediaImage` object contains information describing an image associated with the media. This might be a CD or DVD cover, a movie poster, a poster frame, or the like.
 
 ## Examples
 
@@ -77,7 +77,7 @@ if ('mediaSession' in navigator) {
 }
 ```
 
-Some user agents disable autoplay for media elements on mobile devices and require a user gesture to start media. The following example adds a `pointerup` event to an on-page play button, which is then used to kick off the media session code:
+Some user agents disable autoplay for media elements on mobile devices and require a user gesture to start media. The following example adds a `pointerup` event to an on-page play button, which is then used to kick off the media session code:
 
 ```js
 playButton.addEventListener('pointerup', function(event) {

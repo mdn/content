@@ -31,7 +31,7 @@ _Also Inherits properties from its parent, {{domxref("AudioNode")}}_.
 - {{domxref("AudioWorkletNode.port")}} {{readonlyinline}}
   - : Returns a {{domxref("MessagePort")}} used for bidirectional communication between the node and its associated {{domxref("AudioWorkletProcessor")}}. The other end is available under the {{domxref("AudioWorkletProcessor.port", "port")}} property of the processor.
 - {{domxref("AudioWorkletNode.parameters")}} {{readonlyinline}}
-  - : Returns an {{domxref("AudioParamMap")}} — a collection of {{domxref("AudioParam")}} objects. They are instantiated during the creation of the underlying `AudioWorkletProcessor`. If the `AudioWorkletProcessor` has a static {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} getter, the {{domxref("AudioParamDescriptor")}} array returned from it is used to create `AudioParam` objects on the `AudioWorkletNode`. With this mechanism it is possible to make your own `AudioParam` objects accessible from your `AudioWorkletNode`. You can then use their values in the associated `AudioWorkletProcessor`.
+  - : Returns an {{domxref("AudioParamMap")}} — a collection of {{domxref("AudioParam")}} objects. They are instantiated during the creation of the underlying `AudioWorkletProcessor`. If the `AudioWorkletProcessor` has a static {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} getter, the {{domxref("AudioParamDescriptor")}} array returned from it is used to create `AudioParam` objects on the `AudioWorkletNode`. With this mechanism it is possible to make your own `AudioParam` objects accessible from your `AudioWorkletNode`. You can then use their values in the associated `AudioWorkletProcessor`.
 
 ### Event handlers
 
