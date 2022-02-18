@@ -562,7 +562,7 @@ Together, these also bring object literals and class declarations closer togethe
 var obj = {
     // __proto__
     __proto__: theProtoObj,
-    // Shorthand for ‘handler: handler’
+    // Shorthand for 'handler: handler'
     handler,
     // Methods
     toString() {

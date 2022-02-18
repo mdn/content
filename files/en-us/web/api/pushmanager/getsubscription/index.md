@@ -12,7 +12,7 @@ browser-compat: api.PushManager.getSubscription
 ---
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 
-The **`PushManager.getSubscription()`** method of the {{domxref("PushManager")}} interface retrieves an existing push subscription.
+The **`PushManager.getSubscription()`** method of the {{domxref("PushManager")}} interface retrieves an existing push subscription.
 
 It returns a {{jsxref("Promise")}} that resolves to a {{domxref("PushSubscription")}} object containing details of an existing subscription. If no existing subscription exists, this resolves to a `null` value.
 
@@ -32,7 +32,7 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("PushSubscription")}} objec
 
 ## Example
 
-This code snippet is taken from a [push messaging and notification sample](https://github.com/GoogleChrome/samples/blob/gh-pages/push-messaging-and-notifications). (No live demo is available.)
+This code snippet is taken from a [push messaging and notification sample](https://github.com/GoogleChrome/samples/blob/gh-pages/push-messaging-and-notifications). (No live demo is available.)
 
 ```js
 // We need the service worker registration to check for a subscription
@@ -46,7 +46,7 @@ This code snippet is taken from a [push messaging and notification sample](http
         pushButton.disabled = false;
 
         if (!subscription) {
-          // We aren’t subscribed to push, so set UI
+          // We aren't subscribed to push, so set UI
           // to allow the user to enable push
           return;
         }

@@ -55,7 +55,7 @@ If you want to know whether your website works correctly, the first thing to do 
 
 Let's look at our personal website, `http://demozilla.examplehostingprovider.net/`. It's not showing the image we expected!
 
-![Oops, the ‘unicorn’ image is missing](image-missing.png)
+![Oops, the 'unicorn' image is missing](image-missing.png)
 
 Open Firefox's Network tool (**Tools ➤ Web Developer ➤ Network**) and reload the page:
 
@@ -92,7 +92,7 @@ So what went wrong?
 
 At first glance, the image we asked for seems to be in the right place... but the Network tool reported a "404". It turns out that we made a typo in our HTML code: `unicorn_pics.png` rather than `unicorn_pic.png`. So correct the typo in your code editor by changing the image's `src` attribute:
 
-![Deleting the ‘s’](code-correct.png)
+![Deleting the 's'](code-correct.png)
 
 Save, [push to the server](/en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server), and reload the page in your browser:
 

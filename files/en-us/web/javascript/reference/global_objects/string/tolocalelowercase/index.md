@@ -31,7 +31,7 @@ toLocaleLowerCase([locale1, locale2, ...])
   - : The `locale` parameter indicates the locale to be used to convert to
     lower case according to any locale-specific case mappings. If multiple locales are
     given in an {{jsxref("Array")}}, the [best available
-    locale](https://tc39.github.io/ecma402/#sec-bestavailablelocale) is used. The default locale is the host environment’s current locale.
+    locale](https://tc39.github.io/ecma402/#sec-bestavailablelocale) is used. The default locale is the host environment's current locale.
 
 ### Return value
 

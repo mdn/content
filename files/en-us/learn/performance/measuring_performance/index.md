@@ -71,7 +71,7 @@ We'll talk about both categories in this course. And as well as talking about pe
 
 ### General performance reporting tools
 
-Tools like [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) can measure a website’s performance. You can enter a URL and get a performance report in seconds. The report contains scores about how your website is performing, both for mobile and desktop. This is a good start for getting an idea about what you are already doing well and what could be improved.
+Tools like [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) can measure a website's performance. You can enter a URL and get a performance report in seconds. The report contains scores about how your website is performing, both for mobile and desktop. This is a good start for getting an idea about what you are already doing well and what could be improved.
 
 At the time of writing, MDN's performance report summary looks similar to the following:
 

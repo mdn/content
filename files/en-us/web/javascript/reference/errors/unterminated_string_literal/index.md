@@ -35,7 +35,7 @@ error, check if:
 
 - you have opening and closing quotes (single or double) for your string literal,
 - you have escaped your string literal correctly,
-- your string literal isn't split across multiple lines.
+- your string literal isn't split across multiple lines.
 
 ## Examples
 

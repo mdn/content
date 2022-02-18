@@ -15,7 +15,7 @@ browser-compat: api.BluetoothCharacteristicProperties.read
 ---
 {{securecontext_header}}{{APIRef("Bluetooth API")}}
 
-The **`read`** read-only property of the
+The **`read`** read-only property of the
 {{domxref("BluetoothCharacteristicProperties")}} interface returns a
 `boolean` that is `true` if the reading of the characteristic
 value is permitted.

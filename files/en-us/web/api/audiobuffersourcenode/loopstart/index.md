@@ -54,44 +54,44 @@ set their values to 20 and 25, respectively, the audio will start to loop betwee
 
 ```js
 function getData() {
-  source = audioCtx.createBufferSource();
-  request = new XMLHttpRequest();
+  source = audioCtx.createBufferSource();
+  request = new XMLHttpRequest();
 
-  request.open('GET', 'viper.ogg', true);
-  request.responseType = 'arraybuffer';
+  request.open('GET', 'viper.ogg', true);
+  request.responseType = 'arraybuffer';
 
-  request.onload = function() {
-    var audioData = request.response;
+  request.onload = function() {
+    var audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
-        myBuffer = buffer;
-        songLength = buffer.duration;
-        source.buffer = myBuffer;
-        source.playbackRate.value = playbackControl.value;
-        source.connect(audioCtx.destination);
-        source.loop = true;
+    audioCtx.decodeAudioData(audioData, function(buffer) {
+        myBuffer = buffer;
+        songLength = buffer.duration;
+        source.buffer = myBuffer;
+        source.playbackRate.value = playbackControl.value;
+        source.connect(audioCtx.destination);
+        source.loop = true;
 
-        loopstartControl.setAttribute('max', Math.floor(songLength));
-        loopendControl.setAttribute('max', Math.floor(songLength));
-      },
+        loopstartControl.setAttribute('max', Math.floor(songLength));
+        loopendControl.setAttribute('max', Math.floor(songLength));
+      },
 
-      function(e){"Error with decoding audio data" + e.err});
+      function(e){"Error with decoding audio data" + e.err});
 
-  }
+  }
 
-  request.send();
+  request.send();
 }
 
   ...
 
 loopstartControl.oninput = function() {
-  source.loopStart = loopstartControl.value;
-  loopstartValue.innerHTML = loopstartControl.value;
+  source.loopStart = loopstartControl.value;
+  loopstartValue.innerHTML = loopstartControl.value;
 }
 
 loopendControl.oninput = function() {
-  source.loopEnd = loopendControl.value;
-  loopendValue.innerHTML = loopendControl.value;
+  source.loopEnd = loopendControl.value;
+  loopendValue.innerHTML = loopendControl.value;
 }
 ```
 

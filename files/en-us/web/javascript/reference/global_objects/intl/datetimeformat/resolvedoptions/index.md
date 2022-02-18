@@ -53,7 +53,7 @@ The resulting object has the following properties:
     {{jsxref("undefined")}} (representing the runtime's default time zone) if none was
     provided. Warning: Applications should not rely on {{jsxref("undefined")}} being
     returned, as future versions may return a {{jsxref("String")}} value identifying
-    the runtime’s default time zone instead.
+    the runtime's default time zone instead.
 - `hour12`
   - : The value provided for this property in the `options` argument or
     filled in as a default.

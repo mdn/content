@@ -162,13 +162,13 @@ p.pilcrow + p.pilcrow::before {
 
 ```js
 document.querySelector('button').addEventListener('click', function (event) {
-  document.querySelectorAll('p').forEach(function (paragraph) {
-    paragraph.classList.toggle('pilcrow');
-  });
-  var newButtonText = event.target.dataset.toggleText;
-  var oldText = event.target.innerText;
-  event.target.innerText = newButtonText;
-  event.target.dataset.toggleText = oldText;
+  document.querySelectorAll('p').forEach(function (paragraph) {
+    paragraph.classList.toggle('pilcrow');
+  });
+  var newButtonText = event.target.dataset.toggleText;
+  var oldText = event.target.innerText;
+  event.target.innerText = newButtonText;
+  event.target.dataset.toggleText = oldText;
 });
 ```
 

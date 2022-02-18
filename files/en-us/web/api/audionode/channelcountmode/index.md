@@ -68,7 +68,7 @@ The possible values of `channelCountMode` and their meanings are:
   </tbody>
 </table>
 
-> **Note:** In older versions of the spec, the default for a {{domxref("ChannelSplitterNode")}} was max.
+> **Note:** In older versions of the spec, the default for a {{domxref("ChannelSplitterNode")}} was max.
 
 ## Syntax
 

@@ -32,7 +32,7 @@ The **`Intl.DisplayNames`** object enables the consistent translation of languag
 ## Instance methods
 
 - {{jsxref("Intl/DisplayNames/of", "Intl.DisplayNames.prototype.of()")}}
-  - : This method receives a `code` and returns a string based on the locale and options provided when instantiating `Intl.DisplayNames`.
+  - : This method receives a `code` and returns a string based on the locale and options provided when instantiating `Intl.DisplayNames`.
 - {{jsxref("Intl/DisplayNames/resolvedOptions", "Intl.DisplayNames.prototype.resolvedOptions()")}}
   - : Returns a new object with properties reflecting the locale and formatting options computed during initialization of the object.
 

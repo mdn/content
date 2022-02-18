@@ -17,7 +17,7 @@ browser-compat: javascript.operators.object_initializer
 ---
 {{JsSidebar("Operators")}}
 
-Objects can be initialized using [`new Object()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object), [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create), or using the _literal_ notation (_initializer_ notation). An object initializer is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`).
+Objects can be initialized using [`new Object()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object), [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create), or using the _literal_ notation (_initializer_ notation). An object initializer is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`).
 
 {{EmbedInteractiveExample("pages/js/expressions-objectinitializer.html", "taller")}}
 
@@ -67,7 +67,7 @@ An object initializer is an expression that describes the initialization of an {
 
 The object literal notation is not the same as the **J**ava**S**cript **O**bject **N**otation ([JSON](/en-US/docs/Glossary/JSON)). Although they look similar, there are differences between them:
 
-- JSON permits _only_ property definition using `"property": value` syntax.  The property name must be double-quoted, and the definition cannot be a shorthand.
+- JSON permits _only_ property definition using `"property": value` syntax.  The property name must be double-quoted, and the definition cannot be a shorthand.
 - In JSON the values can only be strings, numbers, arrays, `true`, `false`, `null`, or another (JSON) object.
 - A function value (see "Methods" below) can not be assigned to a value in JSON.
 - Objects like {{jsxref("Date")}} will be a string after {{jsxref("JSON.parse()")}}.
@@ -145,7 +145,7 @@ let a = {x: 1, x: 2}
 console.log(a) // {x: 2}
 ```
 
-In ECMAScript 5 strict mode code, duplicate property names were considered a {{jsxref("SyntaxError")}}.  With the introduction of computed property names making duplication possible at runtime, ECMAScript 2015 has removed this restriction.
+In ECMAScript 5 strict mode code, duplicate property names were considered a {{jsxref("SyntaxError")}}.  With the introduction of computed property names making duplication possible at runtime, ECMAScript 2015 has removed this restriction.
 
 ```js
 function haveES2015DuplicatePropertySemantics() {
@@ -193,7 +193,7 @@ let o = {
 };
 ```
 
-Which is equivalent to this ES5-like notation (but note that ECMAScript 5 has no generators):
+Which is equivalent to this ES5-like notation (but note that ECMAScript 5 has no generators):
 
 ```js
 let o = {
@@ -261,7 +261,7 @@ let mergedObj = { ...obj1, ...obj2 }
 
 ### Prototype mutation
 
-A property definition of the form `__proto__: value` or `"__proto__": value` does not create a property with the name `__proto__`.  Instead, if the provided value is an object or [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null), it changes the `[[Prototype]]` of the created object to that value.  (If the value is not an object or `null`, the object is not changed.)
+A property definition of the form `__proto__: value` or `"__proto__": value` does not create a property with the name `__proto__`.  Instead, if the provided value is an object or [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null), it changes the `[[Prototype]]` of the created object to that value.  (If the value is not an object or `null`, the object is not changed.)
 
 ```js
 let obj1 = {}

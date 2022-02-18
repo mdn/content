@@ -15,7 +15,7 @@ browser-compat: api.USBDevice.isochronousTransferIn
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`isochronousTransferIn()`** method of the
-{{domxref("USBDevice")}} interface returns a {{jsxref("promise")}} that resolves with a
+{{domxref("USBDevice")}} interface returns a {{jsxref("promise")}} that resolves with a
 {{domxref("USBIsochronousInTransferResult")}} when time sensitive information has been
 transmitted received from the USB device.
 
@@ -34,7 +34,7 @@ var promise = USBDevice.isochronousTransferIn(endpointNumber, packetLengths)
 
 ### Return value
 
-A {{jsxref("promise")}} that resolves with a
+A {{jsxref("promise")}} that resolves with a
 {{domxref("USBIsochronousInTransferResult")}}
 
 ## Specifications

@@ -54,7 +54,7 @@ By default (that is, when the attribute is not specified), CORS is not used at a
 
 An invalid keyword and an empty string will be handled as the `anonymous` keyword.
 
-> **Note:** Prior to Firefox 83 the `crossorigin` attribute was not supported for `rel="icon"` there is also [an open issue for Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645).
+> **Note:** Prior to Firefox 83 the `crossorigin` attribute was not supported for `rel="icon"` there is also [an open issue for Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645).
 
 ### Example: crossorigin with the script element
 
@@ -110,7 +110,7 @@ The `use-credentials` value must be used when fetching a [manifest](/en-US/docs/
 
 {{Compat("html.elements.video.crossorigin")}}
 
-### link crossorigin
+### link crossorigin
 
 {{Compat("html.elements.link.crossorigin")}}
 

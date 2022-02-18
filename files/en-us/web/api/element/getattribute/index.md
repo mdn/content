@@ -72,7 +72,7 @@ does not exist on the specified element.
 ### Retrieving nonce values
 
 For security reasons, [CSP](/en-US/docs/Web/HTTP/CSP) nonces from non-script
-sources, such as CSS selectors, and  `.getAttribute("nonce")` calls are
+sources, such as CSS selectors, and  `.getAttribute("nonce")` calls are
 hidden.
 
 ```js example-bad
@@ -84,7 +84,7 @@ Instead of retrieving the nonce from the content attribute, use the
 {{domxref("HTMLElement/nonce", "nonce")}} property:
 
 ```js
-let nonce =  script.nonce;
+let nonce =  script.nonce;
 ```
 
 ## Specifications

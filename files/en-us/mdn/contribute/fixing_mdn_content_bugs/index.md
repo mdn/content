@@ -54,8 +54,8 @@ If you'd prefer to browse your tasks and choose by technology category instead, 
 
 ## How to help
 
-1. First of all, sign up for a [GitHub account](https://github.com/join), if you don’t already have one — you'll need this to communicate on the GitHub issues.
-2. Next, choose one or more topic areas you’d like to help with. Use the list above to get more information to help you make your selection. If you are not sure what a good choice would be, ask for help in the [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix).
+1. First of all, sign up for a [GitHub account](https://github.com/join), if you don't already have one — you'll need this to communicate on the GitHub issues.
+2. Next, choose one or more topic areas you'd like to help with. Use the list above to get more information to help you make your selection. If you are not sure what a good choice would be, ask for help in the [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix).
 
 ### Once you are set up
 

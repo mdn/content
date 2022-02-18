@@ -139,9 +139,9 @@ There is a "Save" button and a "Cancel" button:
 
 ## Modifying our `ToDoItem` component
 
-Before we can add `ToDoItemEditForm` to our app, we need to make a few modifications to our `ToDoItem` component. Specifically, we need to add a variable to track if the item is being edited, and a button to toggle that variable. We’ll also add a `Delete` button since deletion is closely related.
+Before we can add `ToDoItemEditForm` to our app, we need to make a few modifications to our `ToDoItem` component. Specifically, we need to add a variable to track if the item is being edited, and a button to toggle that variable. We'll also add a `Delete` button since deletion is closely related.
 
-Update your `ToDoItem`’s template as shown below.
+Update your `ToDoItem`'s template as shown below.
 
 ```html
 <template>
@@ -163,12 +163,12 @@ Update your `ToDoItem`’s template as shown below.
 </template>
 ```
 
-We’ve added a wrapper \<div> around the whole template for layout purposes.
+We've added a wrapper \<div> around the whole template for layout purposes.
 
 We've also added "Edit" and "Delete" buttons:
 
 - The "Edit" button, when clicked, will toggle displaying the `ToDoItemEditForm` component so we can use it to edit our todo item, via an event handler function called `toggleToItemEditForm()`. This handler will set an `isEditing` flag to true. To do that, we'll need to first define it inside our `data()` property.
-- The "Delete" button, when clicked, will delete the todo item via an event handler function called `deleteToDo()`. In this handler we’ll emit an `item-deleted` event to our parent component so the list can be updated.
+- The "Delete" button, when clicked, will delete the todo item via an event handler function called `deleteToDo()`. In this handler we'll emit an `item-deleted` event to our parent component so the list can be updated.
 
 Let's define our click handlers, and the necessary `isEditing` flag.
 
@@ -272,7 +272,7 @@ Update your `<to-do-item-edit-form></to-do-item-edit-form>` call to look like so
 
 ## Updating and deleting todo items
 
-Now we can toggle between the edit form and the checkbox. However, we haven’t actually handled updating the `ToDoItems` array back in `App.vue`. To fix that, we need to listen for the `item-edited` event, and update the list accordingly. We'll also want to handle the delete event so that we can delete todo items.
+Now we can toggle between the edit form and the checkbox. However, we haven't actually handled updating the `ToDoItems` array back in `App.vue`. To fix that, we need to listen for the `item-edited` event, and update the list accordingly. We'll also want to handle the delete event so that we can delete todo items.
 
 Add the following new methods to your `App.vue`'s component object, below the existing methods inside the `methods` property:
 

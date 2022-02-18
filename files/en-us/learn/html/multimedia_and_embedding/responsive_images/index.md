@@ -250,7 +250,7 @@ This also draws to a close the entire [Multimedia and embedding](/en-US/docs/Lea
 ## See also
 
 - [Jason Grigsby's excellent introduction to responsive images](https://blog.cloudfour.com/responsive-images-101-definitions)
-- [Responsive Images: If you’re just changing resolutions, use srcset](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/) — includes more explanation of how the browser works out which image to use
+- [Responsive Images: If you're just changing resolutions, use srcset](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/) — includes more explanation of how the browser works out which image to use
 - {{htmlelement("img")}}
 - {{htmlelement("picture")}}
 - {{htmlelement("source")}}

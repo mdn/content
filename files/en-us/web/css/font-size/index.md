@@ -11,7 +11,7 @@ browser-compat: css.properties.font-size
 ---
 {{CSSRef}}
 
-The **`font-size`** [CSS](/en-US/docs/Web/CSS) property sets the size of the font. Changing the font size also updates the sizes of the font size-relative {{cssxref("&lt;length&gt;")}} units, such as `em`, `ex`, and so forth.
+The **`font-size`** [CSS](/en-US/docs/Web/CSS) property sets the size of the font. Changing the font size also updates the sizes of the font size-relative {{cssxref("&lt;length&gt;")}} units, such as `em`, `ex`, and so forth.
 
 {{EmbedInteractiveExample("pages/css/font-size.html")}}
 
@@ -86,7 +86,7 @@ Font sizing settings can also be used in combination. For example, if a parent e
 
 ### Ems
 
-Using an `em` value creates a dynamic or computed font size (historically the `em` unit was derived from the width of a capital "M" in a given typeface.). The numeric value acts as a multiplier of the `font-size` property of the element on which it is used. Consider this example:
+Using an `em` value creates a dynamic or computed font size (historically the `em` unit was derived from the width of a capital "M" in a given typeface.). The numeric value acts as a multiplier of the `font-size` property of the element on which it is used. Consider this example:
 
 ```css
 p {
@@ -94,7 +94,7 @@ p {
 }
 ```
 
-In this case, the font size of `<p>` elements will be double the computed `font-size` inherited by `<p>` elements. By extension, a `font-size` of `1em` equals the computed `font-size` of the element on which it is used.
+In this case, the font size of `<p>` elements will be double the computed `font-size` inherited by `<p>` elements. By extension, a `font-size` of `1em` equals the computed `font-size` of the element on which it is used.
 
 If a `font-size` has not been set on any of the `<p>`'s ancestors, then `1em` will equal the default browser `font-size`, which is usually `16px`. So, by default `1em` is equivalent to `16px`, and `2em` is equivalent to `32px`. If you were to set a `font-size` of 20px on the `<body>` element say, then `1em` on the `<p>` elements would instead be equivalent to `20px`, and `2em` would be equivalent to `40px`.
 

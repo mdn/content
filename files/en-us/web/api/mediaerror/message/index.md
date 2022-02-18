@@ -88,7 +88,7 @@ The error handler looks like this:
 
 This gets the {{domxref("MediaError")}} object describing the error from the
 {{domxref("HTMLMediaElement.error", "error")}} property on the
-{{domxref("HTMLAudioElement")}} representing the audio player.  The error's
+{{domxref("HTMLAudioElement")}} representing the audio player.  The error's
 {{domxref("MediaError.code", "code")}} attribute is checked to determine a generic error
 message to display, and, if `message` is not empty, it's appended to provide
 additional details. Then the resulting text is output to the log.
@@ -110,5 +110,5 @@ outside this page here](https://mdn.github.io/dom-examples/media/mediaerror/).
 
 ## See also
 
-- {{HTMLElement("video")}} and {{HTMLElement("audio")}}
+- {{HTMLElement("video")}} and {{HTMLElement("audio")}}
 - The interface defining it, {{domxref("MediaError")}}.

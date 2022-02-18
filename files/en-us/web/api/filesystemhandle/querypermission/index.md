@@ -32,7 +32,7 @@ var PermissionState = FileSystemHandle.queryPermission(FileSystemHandlePermissio
 
 ### Return value
 
-{{domxref('PermissionStatus.state')}} which is one of `'granted'`,
+{{domxref('PermissionStatus.state')}} which is one of `'granted'`,
 `'denied'` or `'prompt'`.
 
 If this returns "prompt" the website will have to call requestPermission() before any

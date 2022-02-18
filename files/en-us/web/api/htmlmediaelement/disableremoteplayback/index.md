@@ -17,7 +17,7 @@ var remotePlaybackDisabled = element.disableRemotePlayback;
 ### Value
 
 A boolean value indicating whether the media element may have a remote playback
-UI.  (false means "not disabled", which means "enabled")
+UI.  (false means "not disabled", which means "enabled")
 
 ## Example
 

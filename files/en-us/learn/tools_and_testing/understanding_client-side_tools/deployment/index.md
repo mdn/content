@@ -112,7 +112,7 @@ For you to create your own instance of this project you will need to host this p
 
 ## Committing changes to GitHub
 
-This section will get you over the line to storing your code in a git repository, but it is a far cry from a git tutorial. There’s many great tutorials and books available, and our [Git and GitHub](/en-US/docs/Learn/Tools_and_testing/GitHub) page is a good place to start.
+This section will get you over the line to storing your code in a git repository, but it is a far cry from a git tutorial. There's many great tutorials and books available, and our [Git and GitHub](/en-US/docs/Learn/Tools_and_testing/GitHub) page is a good place to start.
 
 We initialized our working directory as a git working directory earlier on. A quick way to verify this is to run the following command:
 
@@ -120,11 +120,11 @@ We initialized our working directory as a git working directory earlier on. A qu
 git status
 ```
 
-You should get a status report of what files are being tracked, what files are staged, and so on — all terms that are part of the git grammar. If you get the error `fatal: not a git repository` returned, then the working directory is not a git working directory and you’ll need to initialise git using `git init`.
+You should get a status report of what files are being tracked, what files are staged, and so on — all terms that are part of the git grammar. If you get the error `fatal: not a git repository` returned, then the working directory is not a git working directory and you'll need to initialise git using `git init`.
 
 Now we have three tasks ahead of us:
 
-- Add any changes we’ve made to the stage (a special name for the place that git will commit files from).
+- Add any changes we've made to the stage (a special name for the place that git will commit files from).
 - Commit the changes to the repository.
 - Push the changes to GitHub.
 
@@ -134,12 +134,12 @@ Now we have three tasks ahead of us:
     git add .
     ```
 
-    Note the period at the end, it means “everything in this directory”. The `git add .` command is a bit of a sledgehammer approach — it will add all local changes you’ve worked on in one go. If you want finer control over what you add, then use `git add -p` for an interactive process, or add individual files using `git add path/to/file`.
+    Note the period at the end, it means “everything in this directory”. The `git add .` command is a bit of a sledgehammer approach — it will add all local changes you've worked on in one go. If you want finer control over what you add, then use `git add -p` for an interactive process, or add individual files using `git add path/to/file`.
 
 2. Now all the code is staged, we can commit; run the following command:
 
     ```bash
-    git commit -m ’committing initial code’
+    git commit -m 'committing initial code'
     ```
 
     > **Note:** Although you're free to write whatever you wish in the commit message, there's some useful tips around the web on good commit messages. Keep them short, concise, and descriptive, so they clearly describe what the change does.
@@ -214,7 +214,7 @@ Let's get this done:
 
     ```bash
     git add .
-    git commit -m ‘simple netlify test’
+    git commit -m 'simple netlify test'
     git push github main
     ```
 
@@ -237,15 +237,15 @@ When approaching tests there's a good deal of ways to approach the problem:
 
 Remember also that tests are not limited to JavaScript; tests can be run against the rendered DOM, user interactions, CSS, and even how a page looks.
 
-However, for this project we’re going to create a small test that will check the third-party NASA data feed and ensure it's in the correct format. If not, the test will fail and will prevent the project from going live. To do anything else would be beyond the scope of this module — testing is a huge subject that really requires its own separate module. We are hoping that this section will at least make you aware of the need for testing, and will plant the seed that inspires you to go and learn more.
+However, for this project we're going to create a small test that will check the third-party NASA data feed and ensure it's in the correct format. If not, the test will fail and will prevent the project from going live. To do anything else would be beyond the scope of this module — testing is a huge subject that really requires its own separate module. We are hoping that this section will at least make you aware of the need for testing, and will plant the seed that inspires you to go and learn more.
 
 Although the test for this project does not include a test framework, as with all things in the front-end development world, there are a slew of [framework options](https://www.npmjs.com/search?q=keywords%3Atesting).
 
 The test itself isn't what is important. What is important is how the failure or success is handled. Some deployment platforms will include a specific method for testing as part of their pipeline. Products like GitHub, GitLab, etc., all support running tests against individual commits.
 
-As this project is deploying to Netlify, and Netlify only asks about the build command, we will have to make the tests part of the build. If the test fails, the build fails, and Netlify won’t deploy.
+As this project is deploying to Netlify, and Netlify only asks about the build command, we will have to make the tests part of the build. If the test fails, the build fails, and Netlify won't deploy.
 
-Let’s get started.
+Let's get started.
 
 1. Go to your `package.json` file and open it up.
 2. Find your `scripts` member, and update it so that it contains the following test and build commands:
@@ -296,11 +296,11 @@ Let’s get started.
 
     ```bash
     git add .
-    git commit -m ‘adding test’
+    git commit -m 'adding test'
     git push github main
     ```
 
-    In some cases you might want to test the result of the built code (since this isn't quite the original code we wrote), so the test might need to be run after the build command. You’ll need to consider all these individual aspects whilst you're working on your own projects.
+    In some cases you might want to test the result of the built code (since this isn't quite the original code we wrote), so the test might need to be run after the build command. You'll need to consider all these individual aspects whilst you're working on your own projects.
 
 Now, finally, a minute or so after pushing, Netlify will deploy the project update. But only if it passes the test that was introduced.
 

@@ -68,8 +68,8 @@ let x = {p: 1};
 
 let obj = new Proxy(x, {
   get(t, k, r) {
-    return k + 'bar'
-  }
+    return k + 'bar'
+  }
 })
 Reflect.get(obj, 'foo')  // "foobar"
 
@@ -79,8 +79,8 @@ let y = {foo: 3};
 
 let obj = new Proxy(x, {
   get(t, prop, receiver) {
-    return receiver[prop] + 'bar'
-  }
+    return receiver[prop] + 'bar'
+  }
 })
 Reflect.get(obj, 'foo', y) // "3bar"
 ```

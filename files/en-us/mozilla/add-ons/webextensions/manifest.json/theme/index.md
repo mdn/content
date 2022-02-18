@@ -60,7 +60,7 @@ The following image formats are supported in all theme image properties:
 - PNG
 - APNG
 - SVG (animated SVG is supported from Firefox 59)
-- GIF (animated GIF isn’t supported)
+- GIF (animated GIF isn't supported)
 
 ## Syntax
 
@@ -195,7 +195,7 @@ Images should be 200 pixels high to ensure they always fill the header space ver
         <div class="notecard note">
           <p>
             <strong>Note:</strong> Chrome anchors the image to the top left of
-            the header and if the image doesn’t fill the header area tile the
+            the header and if the image doesn't fill the header area tile the
             image.
           </p>
         </div>
@@ -1539,7 +1539,7 @@ In this screenshot, `"toolbar_vertical_separator"` is the white vertical line in
 In Chrome:
 
 - `colors/toolbar_text` is not used, use `colors/bookmark_text` instead.
-- `images/theme_frame` anchors the image to the top left of the header and if the image doesn’t fill the header area tile the image.
+- `images/theme_frame` anchors the image to the top left of the header and if the image doesn't fill the header area tile the image.
 - all colors must be specified as an array of RGB values, like this:
 
   ```json

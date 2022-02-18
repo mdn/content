@@ -102,12 +102,12 @@ You can also get the form's element by using its `name` attribute as a key of th
 
 ### Issues with Naming Elements
 
-Some names will interfere with JavaScript access to the form’s properties and elements.
+Some names will interfere with JavaScript access to the form's properties and elements.
 
 For example:
 
-- `<input name="id">` will take precedence over `<form id="…">`. This means that `form.id` will not refer to the form’s id, but to the element whose name is "`id`". This will be the case with any other form properties, such as `<input name="action">` or `<input name="post">`.
-- `<input name="elements">` will render the form’s `elements` collection inaccessible. The reference `form.elements` will now refer to the individual element.
+- `<input name="id">` will take precedence over `<form id="…">`. This means that `form.id` will not refer to the form's id, but to the element whose name is "`id`". This will be the case with any other form properties, such as `<input name="action">` or `<input name="post">`.
+- `<input name="elements">` will render the form's `elements` collection inaccessible. The reference `form.elements` will now refer to the individual element.
 
 To avoid such problems with element names:
 

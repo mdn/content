@@ -35,8 +35,8 @@ The boolean value `true` if the given value is an integer. Otherwise `false`.
 
 If the target value is an integer, return `true`, otherwise return
 `false`. If the value is {{jsxref("NaN")}} or {{jsxref("Infinity")}}, return
-`false`. The method will also return `true` for floating point
-numbers that can be represented as integer.
+`false`. The method will also return `true` for floating point
+numbers that can be represented as integer.
 
 ## Examples
 

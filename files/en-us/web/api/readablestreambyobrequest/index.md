@@ -13,7 +13,7 @@ browser-compat: api.ReadableStreamBYOBRequest
 ---
 {{APIRef("Streams")}}{{SeeCompatTable}}
 
-The **`ReadableStreamBYOBRequest`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a pull request into a {{domxref("ReadableByteStreamController")}} view.
+The **`ReadableStreamBYOBRequest`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a pull request into a {{domxref("ReadableByteStreamController")}} view.
 
 A view, as mentioned below, refers to a typed array representing the destination region to which the associated `ReadableByteStreamController` controller can write generated data.
 

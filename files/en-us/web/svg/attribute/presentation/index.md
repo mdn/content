@@ -121,7 +121,7 @@ SVG presentation attributes are CSS properties that can be used as attributes on
   - : It allows to control the rendering of graphical or container elements.
     *Value*: see css {{cssxref('display')}}; *Animatable*: **Yes**
 - {{SVGAttr('dominant-baseline')}}
-  - : It defines the baseline used to align the box’s text and inline-level contents.
+  - : It defines the baseline used to align the box's text and inline-level contents.
     *Value*: `auto`|`text-bottom`|`alphabetic`|`ideographic`|`middle`|`central`| `mathematical`|`hanging`|`text-top`; *Animatable*: **Yes**
 - {{SVGAttr('enable-background')}} {{deprecated_inline}}
   - : It tells the browser how to manage the accumulation of the background image.

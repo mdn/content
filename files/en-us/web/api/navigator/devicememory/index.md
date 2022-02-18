@@ -17,7 +17,7 @@ The **`deviceMemory`** read-only
 property of the {{domxref("Navigator")}} interface returns the approximate amount of
 device memory in gigabytes.
 
-The reported value is imprecise to curtail fingerprinting. It’s approximated by
+The reported value is imprecise to curtail fingerprinting. It's approximated by
 rounding down to the nearest power of 2, then dividing that number by 1024. It is then
 clamped within lower and upper bounds to protect the privacy of owners of very low- or
 high-memory devices.

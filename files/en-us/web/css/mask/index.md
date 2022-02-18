@@ -57,7 +57,7 @@ mask: unset;
 
 /* Multiple masks */
 mask: url(masks.svg#star) left / 16px repeat-y,    /* Element within SVG graphic is used as a mask on the left-hand side with a width of 16px */
-      url(masks.svg#circle) right / 16px repeat-y; /* Element within SVG graphic is used as a mask on the right-hand side with a width of 16px */
+      url(masks.svg#circle) right / 16px repeat-y; /* Element within SVG graphic is used as a mask on the right-hand side with a width of 16px */
 ```
 
 ### Values

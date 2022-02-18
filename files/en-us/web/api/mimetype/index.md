@@ -19,7 +19,7 @@ The **`MimeType`** interface provides contains information about a MIME type ass
 - {{domxref("MimeType.description")}}
   - : Returns a description of the associated plugin or an empty string if there is none.
 - {{domxref("MimeType.suffixes")}}
-  - : A string containing valid file extensions for the data displayed by the plugin, or an empty string if an extension is not valid for the particular module. For example, a browser's content decryption module may appear in the plugin list but support more file extensions than can be anticipated. It might therefore return an empty string.
+  - : A string containing valid file extensions for the data displayed by the plugin, or an empty string if an extension is not valid for the particular module. For example, a browser's content decryption module may appear in the plugin list but support more file extensions than can be anticipated. It might therefore return an empty string.
 - {{domxref("MimeType.enabledPlugin")}}
   - : Returns an instance of {{domxref("Plugin")}} containing information about the plugin itself.
 

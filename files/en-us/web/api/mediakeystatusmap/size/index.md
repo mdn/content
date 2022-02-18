@@ -12,7 +12,7 @@ browser-compat: api.MediaKeyStatusMap.size
 ---
 {{SeeCompatTable}}{{APIRef("EncryptedMediaExtensions API")}}
 
-The **`size`** read-only property of
+The **`size`** read-only property of
 the {{domxref("MediaKeyStatusMap")}} interface returns the number of key/value paIrs
 in the status map.
 

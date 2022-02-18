@@ -23,7 +23,7 @@ touchItem.force;
 ### Return value
 
 A `float` that represents the amount of pressure the user is applying to the
-touch surface. This is a value between `0.0` (no pressure) and
+touch surface. This is a value between `0.0` (no pressure) and
 `1.0` (the maximum amount of pressure the hardware can recognize). A value of
 `0.0` is returned if no value is known (for example the touch device does not
 support this property). In environments where force is known, the absolute pressure

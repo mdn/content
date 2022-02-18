@@ -123,7 +123,7 @@ _This interface also inherits methods from its ancestors {{domxref("HTMLElement"
 - {{domxref("HTMLMediaElement.captureStream()")}} {{experimental_inline}}
   - : Returns {{domxref("MediaStream")}}, captures a stream of the media content.
 - {{domxref("HTMLMediaElement.canPlayType()")}}
-  - : Given a string specifying a MIME media type (potentially with the [`codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter) included), `canPlayType()` returns the string `probably` if the media should be playable, `maybe` if there's not enough information to determine whether the media will play or not, or an empty string if the media cannot be played.
+  - : Given a string specifying a MIME media type (potentially with the [`codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter) included), `canPlayType()` returns the string `probably` if the media should be playable, `maybe` if there's not enough information to determine whether the media will play or not, or an empty string if the media cannot be played.
 - {{domxref("HTMLMediaElement.fastSeek()")}} {{experimental_inline}}
   - : Quickly seeks to the given time with low precision.
 - {{domxref("HTMLMediaElement.load()")}}
@@ -177,7 +177,7 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}_ , defined in the 
 - {{domxref("HTMLMediaElement.pause_event", 'pause')}}
   - : Fired when a request to pause play is handled and the activity has entered its paused state, most commonly occurring when the media's {{domxref("HTMLMediaElement.pause()")}} method is called.
 - {{domxref("HTMLMediaElement.play_event", 'play')}}
-  - : Fired when the `paused` property is changed from `true` to `false`, as a result of the {{domxref("HTMLMediaElement.play()")}} method, or the `autoplay` attribute
+  - : Fired when the `paused` property is changed from `true` to `false`, as a result of the {{domxref("HTMLMediaElement.play()")}} method, or the `autoplay` attribute
 - {{domxref("HTMLMediaElement.playing_event", "playing")}}
   - : Fired when playback is ready to start after having been paused or delayed due to lack of data
 - {{domxref("HTMLMediaElement.progress_event", "progress")}}
@@ -195,7 +195,7 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}_ , defined in the 
 - {{domxref("HTMLMediaElement.suspend_event", 'suspend')}}
   - : Fired when the media data loading has been suspended.
 - {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}}
-  - : Fired when the time indicated by the {{domxref("HTMLMediaElement.currentTime", "currentTime")}} property has been updated.
+  - : Fired when the time indicated by the {{domxref("HTMLMediaElement.currentTime", "currentTime")}} property has been updated.
 - {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}}
   - : Fired when the volume has changed.
 - {{domxref("HTMLMediaElement.waiting_event", 'waiting')}}

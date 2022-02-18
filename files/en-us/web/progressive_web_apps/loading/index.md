@@ -20,7 +20,7 @@ This could be achieved by progressive loading — also known as [Lazy loading](h
 
 ## Bundling versus splitting
 
-Many visitors won't go through every single page of a website, yet the usual approach is to bundle every feature we have into one big file. A `bundle.js` file can be many megabytes, and a single `style.css` bundle can contain everything from basic CSS structure definitions to all the possible styles of every version of the site: mobile, tablet, desktop, print only, etc.
+Many visitors won't go through every single page of a website, yet the usual approach is to bundle every feature we have into one big file. A `bundle.js` file can be many megabytes, and a single `style.css` bundle can contain everything from basic CSS structure definitions to all the possible styles of every version of the site: mobile, tablet, desktop, print only, etc.
 
 It is faster to load all that information as one file rather than many small ones, but if the user doesn't need everything at the very beginning, we could load only what's crucial and then manage other resources when needed.
 
@@ -43,7 +43,7 @@ They will be downloaded and executed _after_ the document itself has been parsed
 
 This will tell the browser to load them only when the condition is met.
 
-In our js13kPWA demo app, the CSS is simple enough to leave it all in a single file with no specific rules as to how to load them. We could go even further and move everything from `style.css` to the `<style>` tag in the `<head>` of `index.html` — this would improve performance even more, but for the readability of the example we will skip that approach too.
+In our js13kPWA demo app, the CSS is simple enough to leave it all in a single file with no specific rules as to how to load them. We could go even further and move everything from `style.css` to the `<style>` tag in the `<head>` of `index.html` — this would improve performance even more, but for the readability of the example we will skip that approach too.
 
 ## Images
 

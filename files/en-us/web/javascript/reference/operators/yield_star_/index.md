@@ -34,8 +34,8 @@ yield* expression
 The `yield*` expression iterates over the operand and `yield`s
 each value returned by it.
 
-The value of `yield*` expression itself is the value returned by that
-iterator when it's closed (i.e., when `done` is `true`).
+The value of `yield*` expression itself is the value returned by that
+iterator when it's closed (i.e., when `done` is `true`).
 
 ## Examples
 

@@ -58,7 +58,7 @@ And there are some built-in {{jsxref("Error")}} types as well. Things are a lot 
 
 ECMAScript has two built-in numeric types: **Number** and **BigInt**.
 
-The Number type is a [double-precision 64-bit binary format IEEE 754 value](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) (numbers between -(2^53 − 1) and 2^53 − 1). And where this article and other MDN articles refer to “integers”, what’s usually meant is a _representation_ of an integer using a Number value. But because such Number values aren’t real integers, you have to be a little careful. For example:
+The Number type is a [double-precision 64-bit binary format IEEE 754 value](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) (numbers between -(2^53 − 1) and 2^53 − 1). And where this article and other MDN articles refer to “integers”, what's usually meant is a _representation_ of an integer using a Number value. But because such Number values aren't real integers, you have to be a little careful. For example:
 
 ```js
 console.log(3 / 2);             // 1.5, not 1
@@ -138,7 +138,7 @@ Number.isNaN([1]) // false
 Number.isNaN([1,2]) // false
 ```
 
-But don’t test for `NaN` using the global {{jsxref("Global_Objects/isNaN", "isNaN()")}} function, [which has unintuitive behavior](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#confusing_special-case_behavior):
+But don't test for `NaN` using the global {{jsxref("Global_Objects/isNaN", "isNaN()")}} function, [which has unintuitive behavior](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#confusing_special-case_behavior):
 
 ```js
 isNaN('hello'); // true
@@ -705,9 +705,9 @@ let avg = function() {
 };
 ```
 
-That makes the anonymous function invocable by calling `avg()` with some arguments — that is, it’s semantically equivalent to declaring the function using the `function avg()` named-function form.
+That makes the anonymous function invocable by calling `avg()` with some arguments — that is, it's semantically equivalent to declaring the function using the `function avg()` named-function form.
 
-But there’s a way that anonymous functions can be useful even without ever being assigned to variables or passed as arguments to other functions: JavaScript provides a mechanism for simultaneously declaring and invoking a function using a single expression. It’s called an [Immediately invoked function expression (IIFE)](/en-US/docs/Glossary/IIFE), and the syntax for using it with an anonymous function looks like this:
+But there's a way that anonymous functions can be useful even without ever being assigned to variables or passed as arguments to other functions: JavaScript provides a mechanism for simultaneously declaring and invoking a function using a single expression. It's called an [Immediately invoked function expression (IIFE)](/en-US/docs/Glossary/IIFE), and the syntax for using it with an anonymous function looks like this:
 
 ```js
 (function() {
@@ -715,7 +715,7 @@ But there’s a way that anonymous functions can be useful even without ever bei
 })();
 ```
 
-Further details on IIFEs are out of scope for this introductory article — but a good example of what they’re particularly useful for is in the [Emulating private methods with closures](/en-US/docs/Web/JavaScript/Closures#emulating_private_methods_with_closures) section of the [Closures](/en-US/docs/Web/JavaScript/Closures) article.
+Further details on IIFEs are out of scope for this introductory article — but a good example of what they're particularly useful for is in the [Emulating private methods with closures](/en-US/docs/Web/JavaScript/Closures#emulating_private_methods_with_closures) section of the [Closures](/en-US/docs/Web/JavaScript/Closures) article.
 
 ### Recursive functions
 

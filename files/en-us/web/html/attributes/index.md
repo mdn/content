@@ -1403,7 +1403,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
         <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
       </td>
       <td>
-        Specify whether an element’s attribute values and the values of its
+        Specify whether an element's attribute values and the values of its
         <code><a href="https://dom.spec.whatwg.org/#text">Text</a></code> node
         children are to be translated when the page is localized, or whether to
         leave them unchanged.

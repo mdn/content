@@ -47,7 +47,7 @@ new Promise(executor)
 
     The `resolutionFunc` `value` parameter can be another promise object, in which case the promise gets dynamically inserted into the [promise chain](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#chained_promises).
 
-    About the `executor`, it’s important to understand the following:
+    About the `executor`, it's important to understand the following:
 
     - The `executor` return value is ignored.
     - If an error is thrown in the `executor`, the promise is rejected.
@@ -58,7 +58,7 @@ new Promise(executor)
     - The code within the `executor` has the opportunity to perform some operation and then reflect the operation's outcome (if the value is not another Promise object) as either "resolved" or "rejected", by terminating with an invocation of either the `resolutionFunc` or the `rejectionFunc`, respectively.
     - In other words, the code within the `executor` communicates via the side effect caused by `resolutionFunc` or `rejectionFunc`. The side effect is that the `Promise` object either becomes "resolved", or "rejected".
 
-    And so, given all the above, here’s a summary of the typical flow:
+    And so, given all the above, here's a summary of the typical flow:
 
     1. The operation within `executor` is asynchronous and provides a callback.
     2. The callback is defined within the `executor` code.

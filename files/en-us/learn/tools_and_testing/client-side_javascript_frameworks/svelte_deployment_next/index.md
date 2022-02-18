@@ -184,7 +184,7 @@ To deploy our app, follow these steps.
     ? Set up and deploy “./mdn-svelte-tutorial”? [Y/n] y
     ? Which scope do you want to deploy to? opensas
     ? Link to existing project? [y/N] n
-    ? What’s your project’s name? mdn-svelte-tutorial
+    ? What's your project's name? mdn-svelte-tutorial
     ? In which directory is your code located? ./
     Auto-detected Project Settings (Svelte):
     - Build Command: `npm run build` or `rollup -c`

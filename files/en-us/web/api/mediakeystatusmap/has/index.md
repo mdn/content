@@ -29,7 +29,7 @@ var boolean = mediaKeyStatusMap(key)
 
 ### Returns
 
-A {{jsxref('Boolean')}}.
+A {{jsxref('Boolean')}}.
 
 ## Specifications
 

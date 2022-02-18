@@ -32,12 +32,12 @@ Worklets are restricted to specific use cases; they cannot be used for arbitrary
     <tr>
       <td>{{domxref("PaintWorklet")}}</td>
       <td>
-        For programmatically generating an image where a CSS property expects a
-        file. Access this interface through
+        For programmatically generating an image where a CSS property expects a
+        file. Access this interface through
         {{DOMxRef("CSS.paintWorklet")}}.
       </td>
       <td>
-        <strong>Chrome:</strong> Main thread, <strong>Gecko:</strong> Paint
+        <strong>Chrome:</strong> Main thread, <strong>Gecko:</strong> Paint
         thread
       </td>
       <td>

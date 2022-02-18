@@ -37,7 +37,7 @@ Revert will not affect rules applied to children of an element you reset (but wi
 
 ### Revert vs unset
 
-Although `revert` and `unset` are similar they differ for some properties for some elements.
+Although `revert` and `unset` are similar they differ for some properties for some elements.
 
 So in the below example, we set custom `font-weight` in a global stylesheet, but then try to unset and revert. Unset will keep the text normal because this is an initial value for font-weight property. Revert will revert to bold because this is a default value for headers in most browsers.
 
@@ -51,7 +51,7 @@ h3 {
 ```html
 <h3 style="font-weight: unset; color: unset;">This will still have font-weight: normal, but color: black</h3>
 <p>Just some text</p>
-<h3 style="font-weight: revert; color: revert;">This should have its original font-weight (bold) and color: black</h3>
+<h3 style="font-weight: revert; color: revert;">This should have its original font-weight (bold) and color: black</h3>
 <p>Just some text</p>
 ```
 
@@ -95,9 +95,9 @@ section.with-revert { color: revert }
   This will also be dark green.
 </section>
 <section class="with-revert">
-  <h3>This will be black</h3>
+  <h3>This will be black</h3>
   <p>Text in paragraph will be red.</p>
-  This will also be black.
+  This will also be black.
 </section>
 ```
 

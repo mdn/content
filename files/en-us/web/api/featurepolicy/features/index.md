@@ -39,7 +39,7 @@ const supportedDirectives = featurePolicy.features()
 
 // Print out each directive into the console
 for (const directive of supportedDirectives){
-  console.log(directive)
+  console.log(directive)
 }
 ```
 

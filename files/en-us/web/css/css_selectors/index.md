@@ -70,7 +70,7 @@ tags:
     **Syntax:** `A + B`  
     **Example:** `h2 + p` will match all {{HTMLElement("p")}} elements that _immediately_ follows {{HTMLElement("h2")}} element.  
 
-- [Column combinator](/en-US/docs/Web/CSS/Column_combinator) {{Experimental_Inline}}
+- [Column combinator](/en-US/docs/Web/CSS/Column_combinator) {{Experimental_Inline}}
   - : The `||` combinator selects nodes which belong to a column.  
     **Syntax:** `A || B`  
     **Example:** `col || td` will match all {{HTMLElement("td")}} elements that belong to the scope of the {{HTMLElement("col")}}.  

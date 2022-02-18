@@ -28,12 +28,12 @@ PaymentRequest.onshippingoptionchange = function(shippingOptionChangeEvent) { /*
 
 ## Examples
 
-The `shippingoptionchange` event is triggered by a user-agent controlled
+The `shippingoptionchange` event is triggered by a user-agent controlled
 interaction. If the option stored by the user agent changes at any time during a payment
 process, the event is triggered. To make sure an updated option is included when sending
 payment information to the server, you should add event listeners for a
 {{domxref('PaymentRequest')}} object after instantiation, but before the call
-to `show()`.
+to `show()`.
 
 ```js
 // Initialization of PaymentRequest arguments are excerpted for clarity.

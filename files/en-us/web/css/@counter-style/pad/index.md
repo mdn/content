@@ -45,11 +45,11 @@ If a marker representation is smaller than the specified pad length, then the ma
 
 ```html
 <ul class="list">
-  <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
-  <li>Four</li>
-  <li>Five</li>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+  <li>Four</li>
+  <li>Five</li>
 </ul>
 ```
 
@@ -57,13 +57,13 @@ If a marker representation is smaller than the specified pad length, then the ma
 
 ```css
 @counter-style pad-example {
-  system: numeric;
-  symbols: "0" "1" "2" "3" "4" "5";
-  pad: 2 "0";
+  system: numeric;
+  symbols: "0" "1" "2" "3" "4" "5";
+  pad: 2 "0";
 }
 
 .list {
-  list-style: pad-example;
+  list-style: pad-example;
 }
 ```
 

@@ -38,7 +38,7 @@ isNaN(value)
 
 Unlike all other possible values in JavaScript, it is not possible to use the equality
 operators (== and ===) to compare a value against {{jsxref("NaN")}} to determine whether
-the value _is_ `NaN` or not, because both `NaN == NaN` and
+the value _is_ `NaN` or not, because both `NaN == NaN` and
 `NaN === NaN` evaluate to `false`. The `isNaN()` function provides a convenient
 equality check against {{jsxref("NaN")}}.
 
@@ -70,19 +70,19 @@ when coerced to a numeric value, an IEEE-754 'Not A Number' value?"
 ECMAScript 2015 contains the {{jsxref("Number.isNaN()")}} function.
 `Number.isNaN(x)` is a reliable way to test whether `x` is
 `NaN` or not. Even with `Number.isNaN`, however, the meaning of
-`NaN` remains the precise numeric meaning and not, "not a number".
+`NaN` remains the precise numeric meaning and not, "not a number".
 Alternatively, in the absence of `Number.isNaN`, the expression
 `(x != x)` is a more reliable way to test whether variable `x` is
 `NaN` or not, as the result is not subject to the false positives that make
 `isNaN` unreliable.
 
-A polyfill for `isNaN` would be (the polyfill leverages the unique
+A polyfill for `isNaN` would be (the polyfill leverages the unique
 never-equal-to-itself characteristic of `NaN`):
 
 ```js
 const isNaN = function(value) {
-    const n = Number(value);
-    return n !== n;
+    const n = Number(value);
+    return n !== n;
 };
 ```
 

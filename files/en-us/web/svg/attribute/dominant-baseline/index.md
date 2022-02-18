@@ -9,7 +9,7 @@ browser-compat: svg.attributes.presentation.dominant-baseline
 ---
 {{SVGRef}}
 
-The **`dominant-baseline`** attribute specifies the dominant baseline, which is the baseline used to align the box’s text and inline-level contents. It also indicates the default alignment baseline of any boxes participating in baseline alignment in the box's alignment context.
+The **`dominant-baseline`** attribute specifies the dominant baseline, which is the baseline used to align the box's text and inline-level contents. It also indicates the default alignment baseline of any boxes participating in baseline alignment in the box's alignment context.
 
 It is used to determine or re-determine a scaled-baseline-table. A scaled-baseline-table is a compound value with three components:
 

@@ -30,11 +30,11 @@ leftWindowPos = window.screenX
 ### Returns
 
 A number equal to the number of CSS pixels from the left edge of the browser viewport
-to the  left edge of the screen.
+to the  left edge of the screen.
 
 ## Examples
 
-In our [screenleft-screentop](https://mdn.github.io/dom-examples/screenleft-screentop/) ([source
+In our [screenleft-screentop](https://mdn.github.io/dom-examples/screenleft-screentop/) ([source
 code](https://github.com/mdn/dom-examples/blob/master/screenleft-screentop/index.html)) example, you'll see a canvas onto which has been drawn a circle. In this
 example we are using {{domxref("Window.screenLeft")}}/{{domxref("Window.screenTop")}}
 plus {{domxref("Window.requestAnimationFrame()")}} to constantly redraw the circle in

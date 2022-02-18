@@ -80,7 +80,7 @@ This has numerous benefits:
 
 - the function can be called like any other from inside your code
 - it does not create a variable in the outer scope ([except for IE 8 and below](https://kangax.github.io/nfe/#example_1_function_expression_identifier_leaks_into_an_enclosing_scope))
-- it has better performance than accessing the arguments object
+- it has better performance than accessing the arguments object
 
 Another feature that was deprecated was `arguments.callee.caller`, or more specifically `Function.caller`. Why is this? Well, at any point in time you can find the deepest caller of any function on the stack, and as I said above looking at the call stack has one single major effect: it makes a large number of optimizations impossible, or much more difficult. For example, if you cannot guarantee that a function `f` will not call an unknown function, it is not possible to inline `f`. Basically it means that any call site that may have been trivially inlinable accumulates a large number of guards:
 
@@ -112,7 +112,7 @@ var result = create()(5); // returns 120 (5 * 4 * 3 * 2 * 1)
 
 ### A use of `arguments.callee` with no good alternative
 
-However, in a case like the following, there are not alternatives to `arguments.callee`, so its deprecation could be a bug (see [bug 725398](https://bugzilla.mozilla.org/show_bug.cgi?id=725398)):
+However, in a case like the following, there are not alternatives to `arguments.callee`, so its deprecation could be a bug (see [bug 725398](https://bugzilla.mozilla.org/show_bug.cgi?id=725398)):
 
 ```js
 function createPerson(sIdentity) {

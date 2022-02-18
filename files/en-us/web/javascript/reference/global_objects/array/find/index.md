@@ -20,7 +20,7 @@ If no values satisfy the testing function, {{jsxref("undefined")}} is returned.
 
 - If you need the **index** of the found element in the array, use {{jsxref("Array.findIndex", "findIndex()")}}.
 - If you need to find the **index of a value**, use {{jsxref("Array.prototype.indexOf()")}}.
-  (It’s similar to {{jsxref("Array.findIndex", "findIndex()")}}, but checks each element for equality with the value instead of using a testing function.)
+  (It's similar to {{jsxref("Array.findIndex", "findIndex()")}}, but checks each element for equality with the value instead of using a testing function.)
 - If you need to find if a value **exists** in an array, use {{jsxref("Array.prototype.includes()")}}.
   Again, it checks each element for equality with the value instead of using a testing function.
 - If you need to find if any element satisfies the provided testing function, use {{jsxref("Array.prototype.some()")}}.

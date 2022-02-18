@@ -159,14 +159,14 @@ console.log(x = f()); // Logs the return value directly.
 
 // An assignment expression can be nested in any place
 // where expressions are generally allowed,
-// such as as array literals’ elements or as function calls’ arguments.
+// such as as array literals' elements or as function calls' arguments.
 console.log([ 0, x = f(), 0 ]);
 console.log(f(0, x = f(), 0));
 ```
 
 The evaluation result matches the expression to the right of the `=` sign in the
 “Meaning” column of the table above. That means that `x = f()` evaluates into
-whatever `f()`’s result is, `x += f()` evaluates into the resulting sum `x + f()`,
+whatever `f()`'s result is, `x += f()` evaluates into the resulting sum `x + f()`,
 `x **= f()` evaluates into the resulting power `x ** y`, and so on.
 
 In the case of logical assignments, `x &&= f()`,
@@ -181,7 +181,7 @@ like array literals, the assignment expressions are **grouped right to left**
 [right-associative]: https://en.wikipedia.org/wiki/Operator_associativity
 
 Note that, for all assignment operators other than `=` itself,
-the resulting values are always based on the operands’ values _before_
+the resulting values are always based on the operands' values _before_
 the operation.
 
 For example, assume that the following functions `f` and `g`
@@ -214,10 +214,10 @@ because the assignment operator `=` is [right-associative][].
 However, it evaluates from left to right:
 
 1. The assignment expression `y = x = f()` starts to evaluate.
-    1. The `y` on this assignment’s left-hand side evaluates
+    1. The `y` on this assignment's left-hand side evaluates
        into a reference to the variable named `y`.
     2. The assignment expression `x = f()` starts to evaluate.
-        1. The `x` on this assignment’s left-hand side evaluates
+        1. The `x` on this assignment's left-hand side evaluates
            into a reference to the variable named `x`.
         2. The function call `f()` prints "F!" to the console and
            then evaluates to the number `2`.
@@ -235,13 +235,13 @@ However, it evaluates from left to right:
 `y = [ f(), x = g() ]` also evaluates from left to right:
 
 1. The assignment expression `y = [ f(), x = g() ]` starts to evaluate.
-    1. The `y` on this assignment’s left-hand evaluates
+    1. The `y` on this assignment's left-hand evaluates
        into a reference to the variable named `y`.
     2. The inner array literal `[ f(), x = g() ]` starts to evaluate.
         1. The function call `f()` prints "F!" to the console and
            then evaluates to the number `2`.
         2. The assignment expression `x = g()` starts to evaluate.
-            1. The `x` on this assignment’s left-hand side evaluates
+            1. The `x` on this assignment's left-hand side evaluates
                into a reference to the variable named `x`.
             2. The function call `g()` prints "G!" to the console and
                then evaluates to the number `3`.
@@ -268,7 +268,7 @@ However, it evaluates from left to right:
 For more information about objects, read [Working with Objects][object].)
 
 1. The assignment expression `x[f()] = g()` starts to evaluate.
-    1. The `x[f()]` property access on this assignment’s left-hand
+    1. The `x[f()]` property access on this assignment's left-hand
        starts to evaluate.
         1. The `x` in this property access evaluates
            into a reference to the variable named `x`.

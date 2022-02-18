@@ -32,18 +32,18 @@ var value = style.getPropertyCSSValue(property);
 
 ### Parameters
 
-- *`property`* is a {{domxref('DOMString')}} representing the
+- *`property`* is a {{domxref('DOMString')}} representing the
   property name to be retrieved.
 
 ### Return value
 
-- `value` is a {{domxref('CSSValue')}} containing the CSS value
+- `value` is a {{domxref('CSSValue')}} containing the CSS value
   for a property. If none exists, returns `null`.
 
 ## Example
 
-The following JavaScript code gets an object containing the computed RGB values of
-the `color` CSS property:
+The following JavaScript code gets an object containing the computed RGB values of
+the `color` CSS property:
 
 ```js
 var style = window.getComputedStyle(elem, null);

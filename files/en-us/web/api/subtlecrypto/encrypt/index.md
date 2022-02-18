@@ -42,7 +42,7 @@ const result = crypto.subtle.encrypt(algorithm, key, data);
 
 - `key` is a {{domxref("CryptoKey")}} containing the key to be
   used for encryption.
-- _`data`_ is a {{domxref("BufferSource")}} containing the data to
+- _`data`_ is a {{domxref("BufferSource")}} containing the data to
   be encrypted (also known as the {{glossary("plaintext")}}).
 
 ### Return value
@@ -52,14 +52,14 @@ const result = crypto.subtle.encrypt(algorithm, key, data);
 
 ### Exceptions
 
-The promise is rejected when the following exceptions are encountered:
+The promise is rejected when the following exceptions are encountered:
 
 - InvalidAccessError
   - : Raised when the requested operation is not valid for the provided key (e.g. invalid
     encryption algorithm, or invalid key for the specified encryption algorithm*)*.
 - OperationError
   - : Raised when the operation failed for an operation-specific reason (e.g. algorithm
-    parameters of invalid sizes, or AES-GCM plaintext longer than 2³⁹−256 bytes).
+    parameters of invalid sizes, or AES-GCM plaintext longer than 2³⁹−256 bytes).
 
 ## Supported algorithms
 
@@ -94,15 +94,15 @@ The RSA-OAEP public-key encryption system is specified in [RFC 3447](https://dat
 
 ### AES-CTR
 
-This represents AES in Counter Mode, as specified in [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final).
+This represents AES in Counter Mode, as specified in [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final).
 
 ### AES-CBC
 
-This represents AES in Cipher Block Chaining Mode, as specified in [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final).
+This represents AES in Cipher Block Chaining Mode, as specified in [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final).
 
 ### AES-GCM
 
-This represents AES in Galois/Counter Mode, as specified in [NIST SP800-38D](https://csrc.nist.gov/publications/detail/sp/800-38d/final).
+This represents AES in Galois/Counter Mode, as specified in [NIST SP800-38D](https://csrc.nist.gov/publications/detail/sp/800-38d/final).
 
 One major difference between this mode and the others is that GCM is an "authenticated"
 mode, which means that it includes checks that the ciphertext has not been modified by
@@ -262,4 +262,4 @@ function encryptMessage(key) {
 - [NIST
   SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final) specifies CBC mode.
 - [NIST
-  SP800-38D](https://csrc.nist.gov/publications/detail/sp/800-38d/final) specifies GCM mode.
+  SP800-38D](https://csrc.nist.gov/publications/detail/sp/800-38d/final) specifies GCM mode.

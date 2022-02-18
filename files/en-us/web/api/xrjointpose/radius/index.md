@@ -20,7 +20,7 @@ browser-compat: api.XRJointPose.radius
 ---
 {{APIRef("WebXR Device API")}}
 
-The read-only **`radius`** property of the {{domxref("XRJointPose")}} interface indicates the radius (distance from skin) for a joint.
+The read-only **`radius`** property of the {{domxref("XRJointPose")}} interface indicates the radius (distance from skin) for a joint.
 
 ## Value
 

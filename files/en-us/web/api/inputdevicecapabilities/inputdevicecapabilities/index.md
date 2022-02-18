@@ -3,8 +3,8 @@ title: InputDeviceCapabilities
 slug: Web/API/InputDeviceCapabilities/InputDeviceCapabilities
 browser-compat: api.InputDeviceCapabilities.InputDeviceCapabilities
 ---
-The `InputDeviceCapabilities()` constructor creates a new
-{{domxref("InputDeviceCapabilities")}} object provides information about the physical
+The `InputDeviceCapabilities()` constructor creates a new
+{{domxref("InputDeviceCapabilities")}} object provides information about the physical
 device responsible for generating a touch event.
 
 ## Syntax
@@ -15,7 +15,7 @@ var inputDeviceCapabilities = new InputDeviceCapabilities([InputDeviceCapabiliti
 
 ### Returns
 
-An instance of the {{domxref("InputDeviceCapabilities")}} interface.
+An instance of the {{domxref("InputDeviceCapabilities")}} interface.
 
 ### Parameters
 
@@ -24,7 +24,7 @@ An instance of the {{domxref("InputDeviceCapabilities")}} interface.
   - : A dictionary object containing a set of device capabilities. It contains the
     following property.
 
-    - `fireTouchEvents`: A boolean value that indicates
+    - `fireTouchEvents`: A boolean value that indicates
       whether the device dispatches touch events.
 
 ## Specifications

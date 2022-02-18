@@ -77,7 +77,7 @@ gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 ### Getting current bindings
 
 To check the current buffer bindings, query the `ARRAY_BUFFER_BINDING`
-and `ELEMENT_ARRAY_BUFFER_BINDING` constants.
+and `ELEMENT_ARRAY_BUFFER_BINDING` constants.
 
 ```js
 gl.getParameter(gl.ARRAY_BUFFER_BINDING);

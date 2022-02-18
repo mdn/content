@@ -10,7 +10,7 @@ tags:
 ---
 {{CSSRef}}
 
-**Filter Effects** is a module of CSS that defines a way of processing an element’s rendering before it is displayed in the document.
+**Filter Effects** is a module of CSS that defines a way of processing an element's rendering before it is displayed in the document.
 
 ## Reference
 

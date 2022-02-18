@@ -21,7 +21,7 @@ tags:
 
 - Border-radiused corners with dashed and dotted styles are now rendered with the specified style instead of a solid style ({{bug(382721)}}).
 - The non-standard {{cssxref(":-moz-full-screen-ancestor")}} pseudo-class selector has been removed ({{bug(1199529)}}).
-- The {{cssxref("box-sizing")}}`: padding-box` has been removed, since it’s no longer a part of the spec and Firefox was the only major browser implementing it ({{bug(1166728)}}).
+- The {{cssxref("box-sizing")}}`: padding-box` has been removed, since it's no longer a part of the spec and Firefox was the only major browser implementing it ({{bug(1166728)}}).
 - The three values `isolate`, `isolate-override`, and `plaintext` of the {{cssxref("unicode-bidi")}} property have been unprefixed ({{bug(1141895)}}).
 - In quirks mode, the bullet of a list item now inherits the size of the list, like in standards mode ({{bug(648331)}}).
 - The {{cssxref(":in-range")}} and {{cssxref(":out-of-range")}} pseudo-classes have changed behavior to not match disabled or read-only inputs ({{bug(1264157)}}).

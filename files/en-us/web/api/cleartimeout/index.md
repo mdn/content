@@ -36,29 +36,29 @@ interchangeably. However, for clarity, you should avoid doing so.
 ## Example
 
 Run the script below in the context of a web page and click on the page once. You'll
-see a message popping up in a second. If you click the page multiple times in
-one second, the alert only appears once.
+see a message popping up in a second. If you click the page multiple times in
+one second, the alert only appears once.
 
 ```js
 const alarm = {
-  remind: function(aMessage) {
-    alert(aMessage);
-    this.timeoutID = undefined;
-  },
+  remind: function(aMessage) {
+    alert(aMessage);
+    this.timeoutID = undefined;
+  },
 
-  setup: function() {
-    if (typeof this.timeoutID === 'number') {
-      this.cancel();
-    }
+  setup: function() {
+    if (typeof this.timeoutID === 'number') {
+      this.cancel();
+    }
 
-    this.timeoutID = setTimeout(function(msg) {
-      this.remind(msg);
-    }.bind(this), 1000, 'Wake up!');
-  },
+    this.timeoutID = setTimeout(function(msg) {
+      this.remind(msg);
+    }.bind(this), 1000, 'Wake up!');
+  },
 
-  cancel: function() {
-    clearTimeout(this.timeoutID);
-  }
+  cancel: function() {
+    clearTimeout(this.timeoutID);
+  }
 };
 window.addEventListener('click', () => alarm.setup() );
 ```

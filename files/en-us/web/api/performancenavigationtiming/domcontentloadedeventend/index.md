@@ -10,7 +10,7 @@ browser-compat: api.PerformanceNavigationTiming.domContentLoadedEventEnd
 ---
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
-The **`domContentLoadedEventEnd`** read-only property returns a
+The **`domContentLoadedEventEnd`** read-only property returns a
 {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the
 time immediately after the current document's [DOMContentLoaded](https://html.spec.whatwg.org/multipage/syntax.html#the-end)
 event completes.

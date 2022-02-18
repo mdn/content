@@ -20,10 +20,10 @@ The contents of the window's viewport are rendered, ignoring viewport clipping a
 scrolling.
 
 This API cannot be used by Web content. It is synchronous, and as such can't capture
-cross-origin (out of process) iframes with Fission.  If you're using it from an
+cross-origin (out of process) iframes with Fission.  If you're using it from an
 extension, you should switch to {{WebExtAPIRef('tabs.captureTab')}} to capture the
 tab's image as a [data: url](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) and then render the captured image onto canvas using
-{{domxref("CanvasRenderingContext2D.drawImage")}}. If you're writing chrome code,
+{{domxref("CanvasRenderingContext2D.drawImage")}}. If you're writing chrome code,
 you probably want [WindowGlobalParent.drawSnapshot](https://searchfox.org/mozilla-central/rev/9b282b34b5/dom/chrome-webidl/WindowGlobalActors.webidl#81-98)
 from the parent process.
 

@@ -102,12 +102,12 @@ animated.onanimationiteration = () => {
 }
 
 @keyframes slidein {
-  from {
-    transform: translateX(100%) scaleX(3);
-  }
-  to {
-    transform: translateX(0) scaleX(1);
-  }
+  from {
+    transform: translateX(100%) scaleX(3);
+  }
+  to {
+    transform: translateX(0) scaleX(1);
+  }
 }
 ```
 

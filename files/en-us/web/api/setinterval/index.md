@@ -22,7 +22,7 @@ offered on the {{domxref("Window")}} and {{domxref("Worker")}} interfaces, repea
 calls a function or executes a code snippet, with a fixed time delay between each
 call.
 
-This method returns an interval ID which uniquely identifies the interval, so you
+This method returns an interval ID which uniquely identifies the interval, so you
 can remove it later by calling {{domxref("clearInterval",
   "clearInterval()")}}.
 
@@ -69,7 +69,7 @@ be used interchangeably. For clarity, however, you should try to always match th
 avoid confusion when maintaining your code.
 
 > **Note:** The `delay` argument is converted to a
-> signed 32-bit integer. This effectively limits `delay` to 2147483647 ms,
+> signed 32-bit integer. This effectively limits `delay` to 2147483647 ms,
 > since it's specified as a signed integer in the IDL.
 
 ## Examples
@@ -159,7 +159,7 @@ See also: [`clearInterval()`](/en-US/docs/Web/API/clearInterval).
 As previously discussed, Internet Explorer versions 9 and below do not support the
 passing of arguments to the callback function in either `setTimeout()` or
 `setInterval()`. The following **IE-specific** code demonstrates
-a method for overcoming this limitation.  To use, add the following code to the top of
+a method for overcoming this limitation.  To use, add the following code to the top of
 your script.
 
 ```js
@@ -222,14 +222,14 @@ often than once per second in inactive tabs.
 
 ## The "this" problem
 
-When you pass a method to `setInterval()` or any other function, it is
-invoked with the wrong [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)
+When you pass a method to `setInterval()` or any other function, it is
+invoked with the wrong [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)
 value. This problem is explained in detail in the [JavaScript
 reference](/en-US/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method).
 
 ### Explanation
 
-Code executed by `setInterval()` runs in a separate execution context than
+Code executed by `setInterval()` runs in a separate execution context than
 the function from which it was called. As a consequence, the [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)
 keyword for the called function is set to the `window` (or
 `global`) object, it is not the same as the `this` value for the
@@ -286,7 +286,7 @@ window.setInterval = function (vCallback, nDelay /*, argumentToPass1, argumentTo
 };
 ```
 
-> **Note:** These two replacements also enable the HTML5 standard passage of
+> **Note:** These two replacements also enable the HTML5 standard passage of
 > arbitrary arguments to the callback functions of timers in IE. So they can be used as
 > _non-standard-compliant_ polyfills also. See the [callback arguments paragraph](#callback_arguments) for a
 > _standard-compliant_ polyfill.
@@ -311,7 +311,7 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 s
 > all calls to a given function. This lets you easily bypass problems where it's unclear
 > what this will be, depending on the context from which your function was called. Also,
 > ES2015 supports [arrow
-> functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical this allowing us to write setInterval( () =>
+> functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical this allowing us to write setInterval( () =>
 > this.myMethod) if we're inside myArray method.
 
 ## Usage notes
@@ -350,7 +350,7 @@ latency, an unresponsive server, and a host of other issues could prevent the re
 from completing in its allotted time. As such, you may find yourself with queued up XHR
 requests that won't necessarily return in order.
 
-In these cases, a recursive `setTimeout()` pattern is preferred:
+In these cases, a recursive `setTimeout()` pattern is preferred:
 
 ```js
 (function loop(){

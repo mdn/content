@@ -12,7 +12,7 @@ browser-compat: api.ByteLengthQueuingStrategy
 ---
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
-The **`ByteLengthQueuingStrategy`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) provides a built-in byte length queuing strategy that can be used when constructing streams.
+The **`ByteLengthQueuingStrategy`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) provides a built-in byte length queuing strategy that can be used when constructing streams.
 
 ## Constructor
 
@@ -26,7 +26,7 @@ None.
 ## Methods
 
 - {{domxref("ByteLengthQueuingStrategy.size()")}}
-  - : Returns the given chunk’s `byteLength` property.
+  - : Returns the given chunk's `byteLength` property.
 
 ## Examples
 

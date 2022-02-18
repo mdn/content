@@ -15,7 +15,7 @@ browser-compat: api.BluetoothRemoteGATTService.device
 {{SeeCompatTable}}
 
 The **`BluetoothGATTService.device`** read-only property
-returns information about a Bluetooth device through an instance of
+returns information about a Bluetooth device through an instance of
 {{domxref("BluetoothDevice")}}.
 
 ## Syntax
@@ -26,7 +26,7 @@ var bluetoothDeviceInstance = BluetoothGATTService.device
 
 ### Returns
 
-An instance of {{domxref("BluetoothDevice")}}.
+An instance of {{domxref("BluetoothDevice")}}.
 
 ## Specifications
 

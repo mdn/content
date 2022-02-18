@@ -13,7 +13,7 @@ browser-compat: api.XRWebGLBinding
 ---
 {{APIRef("WebXR Device API")}} {{secureContext_header}}
 
-The **`XRWebGLBinding`** interface is used to create layers that have a GPU backend.
+The **`XRWebGLBinding`** interface is used to create layers that have a GPU backend.
 
 ## Constructor
 

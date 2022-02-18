@@ -174,7 +174,7 @@ The set of object stores and indexes to which a transaction applies. The scopes 
 
 ## Next steps
 
-With an understanding of IndexedDB’s key characteristics and core terminology under our belts, we can get to more concrete stuff. For a tutorial on how to use the API, see [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB).
+With an understanding of IndexedDB's key characteristics and core terminology under our belts, we can get to more concrete stuff. For a tutorial on how to use the API, see [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB).
 
 ## See also
 

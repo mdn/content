@@ -43,8 +43,8 @@ user's fist, tracking the position of the user's hand.
 As shown in the diagram above, the coordinate system is oriented as follows:
 
 - The x-axis is perpendicular to the palm of the user's hand, with the direction
-  extending outward from the back of the hand being +X if the controller is in the
-  user's right hand or -X if the controller is in the left hand.
+  extending outward from the back of the hand being +X if the controller is in the
+  user's right hand or -X if the controller is in the left hand.
 - The z-axis along the length of the rod, parallel to the user's palm and along the
   length of their grip. -Z is in the direction of the user's thumb, and +Z is in the
   opposite direction.
@@ -73,7 +73,7 @@ for (let source in xrSession.inputSources) {
 For each input source which has a value for `gripSpace`, this loop obtains
 the {{domxref("XRPose")}} representing the position and orientation that are described
 by `gripSpace`. If a valid pose is returned, a method
-`myDrawMeshUsingTransform()` is called to  draw the controller's mesh
+`myDrawMeshUsingTransform()` is called to  draw the controller's mesh
 transformed using the grip pose's transform matrix.
 
 ## Specifications

@@ -30,7 +30,7 @@ new WeakSet(iterable)
 
 ## Examples
 
-### Using the WeakSet object
+### Using the WeakSet object
 
 ```js
 var ws = new WeakSet();

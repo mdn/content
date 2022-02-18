@@ -48,8 +48,8 @@ You can use the `vrdisplaydeactivate` event in an [`addEventListener`](/en-US/do
 
 ```js
 window.addEventListener('vrdisplaydeactivate', function() {
-  info.textContent = 'Display deactivated.';
-  reportDisplays();
+  info.textContent = 'Display deactivated.';
+  reportDisplays();
 });
 ```
 

@@ -791,7 +791,7 @@ when using it.
       <th scope="row"><code>0xE02E</code></th>
       <td><code>"VolumeDown"</code> (⚠️ Not the same on Chrome)</td>
       <td>
-        <code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> prior to
+        <code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> prior to
         Chrome 52)
       </td>
     </tr>
@@ -804,7 +804,7 @@ when using it.
       <th scope="row"><code>0xE030</code></th>
       <td><code>"VolumeUp"</code> (⚠️ Not the same on Chrome)</td>
       <td>
-        <code>"AudioVolumeUp"</code> (was <code>"VolumeUp"</code> prior to Chrome
+        <code>"AudioVolumeUp"</code> (was <code>"VolumeUp"</code> prior to Chrome
         52)
       </td>
     </tr>
@@ -1418,33 +1418,33 @@ In the cells,
     <tr>
       <th scope="row"><code>kVK_VolumeUp (0x48)</code></th>
       <td>
-        <code>"AudioVolumeUp" </code>(was <code>"VolumeUp"</code> prior to Firefox
+        <code>"AudioVolumeUp" </code>(was <code>"VolumeUp"</code> prior to Firefox
         48)
       </td>
       <td>
-        <code>"AudioVolumeUp" </code>(was <code>"VolumeUp"</code> prior to Chrome
+        <code>"AudioVolumeUp" </code>(was <code>"VolumeUp"</code> prior to Chrome
         52)
       </td>
     </tr>
     <tr>
       <th scope="row"><code>kVK_VolumeDown (0x49)</code></th>
       <td>
-        <code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> prior to
+        <code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> prior to
         Firefox 49)
       </td>
       <td>
-        <code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> prior to
+        <code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> prior to
         Chrome 52)
       </td>
     </tr>
     <tr>
       <th scope="row"><code>kVK_Mute (0x4A)</code></th>
       <td>
-        <code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> prior to
+        <code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> prior to
         Firefox 49)
       </td>
       <td>
-        <code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> prior to
+        <code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> prior to
         Chrome 52)
       </td>
     </tr>
@@ -2260,7 +2260,7 @@ In the cells, "(❌ Missing)" means that this code value cannot be detected on t
       <th scope="row"><code>0x0079</code></th>
       <td><code>"AudioVolumeMute"</code></td>
       <td>
-        <code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> prior to
+        <code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> prior to
         Chrome 52)
       </td>
     </tr>
@@ -2268,7 +2268,7 @@ In the cells, "(❌ Missing)" means that this code value cannot be detected on t
       <th scope="row"><code>0x007A</code></th>
       <td><code>"AudioVolumeDown"</code></td>
       <td>
-        <code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> prior to
+        <code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> prior to
         Chrome 52)
       </td>
     </tr>
@@ -2276,7 +2276,7 @@ In the cells, "(❌ Missing)" means that this code value cannot be detected on t
       <th scope="row"><code>0x007B</code></th>
       <td><code>"AudioVolumeUp"</code></td>
       <td>
-        <code>"AudioVolumeUp"</code> (was <code>"VolumeUp"</code> prior to Chrome
+        <code>"AudioVolumeUp"</code> (was <code>"VolumeUp"</code> prior to Chrome
         52)
       </td>
     </tr>

@@ -55,7 +55,7 @@ An Ember application has a default "application" route, which is tied to the `ap
 
 ## Creating the routes
 
-Let's start by creating three new routes: "Index", "Active" and "Completed". To do this you’ll need to enter the following commands into your terminal, inside the root directory of your app:
+Let's start by creating three new routes: "Index", "Active" and "Completed". To do this you'll need to enter the following commands into your terminal, inside the root directory of your app:
 
 ```bash
 ember generate route index

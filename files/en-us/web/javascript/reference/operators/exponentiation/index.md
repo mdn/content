@@ -11,7 +11,7 @@ browser-compat: javascript.operators.exponentiation
 {{jsSidebar("Operators")}}
 
 The exponentiation operator (`**`) returns the result of raising the first
-operand to the power of the second operand. It is equivalent to `Math.pow`,
+operand to the power of the second operand. It is equivalent to `Math.pow`,
 except it also accepts BigInts as operands.
 
 {{EmbedInteractiveExample("pages/js/expressions-exponentiation.html")}}
@@ -25,7 +25,7 @@ x ** y
 ## Description
 
 The exponentiation operator is
-right-associative: `a ** b ** c` is equal to
+right-associative: `a ** b ** c` is equal to
 `a ** (b ** c)`.
 
 In most languages, such as PHP, Python, and others that have an exponentiation operator

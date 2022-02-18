@@ -14,8 +14,8 @@ browser-compat: api.IDBCursor.source
 ---
 {{APIRef("IndexedDB")}}
 
-The **`source`** read-only property of the
-{{domxref("IDBCursor")}} interface returns the {{domxref("IDBObjectStore")}} or
+The **`source`** read-only property of the
+{{domxref("IDBCursor")}} interface returns the {{domxref("IDBObjectStore")}} or
 {{domxref("IDBIndex")}} that the cursor is iterating over. This function never returns
 null or throws an exception, even if the cursor is currently being iterated, has
 iterated past its end, or its transaction is not active.
@@ -46,8 +46,8 @@ IDBObjectStore {autoIncrement: false, transaction: IDBTransaction, indexNames: D
 
 The cursor does not require us to select the data based
 on a key; we can just grab all of it. Also note that in each iteration of the loop,
-you can grab data from the current record under the cursor object using `cursor.value.foo`. For a complete working example, see our [IDBCursor
-example](https://github.com/mdn/indexeddb-examples/blob/master/idbcursor) ([view example live](https://mdn.github.io/indexeddb-examples/idbcursor/).)
+you can grab data from the current record under the cursor object using `cursor.value.foo`. For a complete working example, see our [IDBCursor
+example](https://github.com/mdn/indexeddb-examples/blob/master/idbcursor) ([view example live](https://mdn.github.io/indexeddb-examples/idbcursor/).)
 
 ```js
 function displayData() {

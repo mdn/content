@@ -29,7 +29,7 @@ entries can be obtained using the {{domxref("HTMLInputElement.webkitEntries",
 ## Syntax
 
 ```js
- HTMLInputElement.webkitdirectory = boolValue
+ HTMLInputElement.webkitdirectory = boolValue
 ```
 
 ### Value

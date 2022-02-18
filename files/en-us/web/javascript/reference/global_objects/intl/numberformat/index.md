@@ -107,16 +107,16 @@ console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).form
 ### Using style and unit
 
 ```js
-console.log(new Intl.NumberFormat('pt-PT',  {
-    style: 'unit',
-    unit: 'kilometer-per-hour'
+console.log(new Intl.NumberFormat('pt-PT',  {
+    style: 'unit',
+    unit: 'kilometer-per-hour'
 }).format(50));
 // → 50 km/h
 
 console.log((16).toLocaleString('en-GB', {
-    style: 'unit',
-    unit: 'liter',
-    unitDisplay: 'long'
+    style: 'unit',
+    unit: 'liter',
+    unitDisplay: 'long'
 }));
 // → 16 litres
 ```
