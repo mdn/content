@@ -11,7 +11,7 @@ tags:
 ---
 {{WebAssemblySidebar}}
 
-When you’ve written a new code module in a language like C/C++, you can compile it into WebAssembly using a tool like [Emscripten](/en-US/docs/Mozilla/Projects/Emscripten). Let’s look at how it works.
+When you've written a new code module in a language like C/C++, you can compile it into WebAssembly using a tool like [Emscripten](/en-US/docs/Mozilla/Projects/Emscripten). Let's look at how it works.
 
 ## Emscripten Environment Setup
 
@@ -50,7 +50,7 @@ This is the simplest case we'll look at, whereby you get emscripten to generate 
     emcc hello.c -o hello.html
     ```
 
-The options we’ve passed in with the command are as follows:
+The options we've passed in with the command are as follows:
 
 - `-o hello.html` — Specifies that we want Emscripten to generate an HTML page to run our code in (and a filename to use), as well as the wasm module and the JavaScript "glue" code to compile and instantiate the wasm so it can be used in the web environment.
 
@@ -66,7 +66,7 @@ Now all that remains is for you to load the resulting `hello.html` in a browser 
 
 > **Note:** If you try to open generated HTML file (`hello.html`) directly from your local hard drive (e.g. `file://your_path/hello.html`), you will end up with an error message along the lines of _`both async and sync fetching of the wasm failed`._ You need to run your HTML file through an HTTP server (`http://`) — see [How do you set up a local testing server?](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server) for more information.
 
-If everything has worked as planned, you should see "Hello world" output in the Emscripten console appearing on the web page, and your browser’s JavaScript console. Congratulations, you’ve just compiled C to WebAssembly and run it in your browser!
+If everything has worked as planned, you should see "Hello world" output in the Emscripten console appearing on the web page, and your browser's JavaScript console. Congratulations, you've just compiled C to WebAssembly and run it in your browser!
 ![image](helloworld.png)
 
 ### Using a custom HTML template

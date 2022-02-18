@@ -4,7 +4,7 @@ slug: Tools/Debugger-API/Debugger.Environment
 ---
 <div>{{ToolsSidebar}}</div><p>A <code>Debugger.Environment</code> instance represents a lexical environment, associating names with variables. Each <a href="Debugger.Frame"><code>Debugger.Frame</code></a> instance representing a debuggee frame has an associated environment object describing the variables in scope in that frame; and each <a href="Debugger.Object"><code>Debugger.Object</code></a> instance representing a debuggee function has an environment object representing the environment the function has closed over.</p>
 
-<p>ECMAScript environments form a tree, in which each local environment is parented by its enclosing environment (in ECMAScript terms, its ‘outer’ environment). We say an environment<em>binds</em> an identifier if that environment itself associates the identifier with a variable, independently of its outer environments. We say an identifier is<em>in scope</em> in an environment if the identifier is bound in that environment or any enclosing environment.</p>
+<p>ECMAScript environments form a tree, in which each local environment is parented by its enclosing environment (in ECMAScript terms, its 'outer' environment). We say an environment<em>binds</em> an identifier if that environment itself associates the identifier with a variable, independently of its outer environments. We say an identifier is<em>in scope</em> in an environment if the identifier is bound in that environment or any enclosing environment.</p>
 
 <p>SpiderMonkey creates <code>Debugger.Environment</code> instances as needed as the debugger inspects stack frames and function objects; calling <code>Debugger.Environment</code> as a function or constructor raises a <code>TypeError</code> exception.</p>
 
@@ -12,7 +12,7 @@ slug: Tools/Debugger-API/Debugger.Environment
 
 <p>(If more than one <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instance is debugging the same code, each <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> gets a separate <code>Debugger.Environment</code> instance for a given environment. This allows the code using each <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instance to place whatever properties it likes on its own <a href="Debugger.Object"><code>Debugger.Object</code></a> instances, without worrying about interfering with other debuggers.)</p>
 
-<p>If a <code>Debugger.Environment</code> instance’s referent is not a debuggee environment, then attempting to access its properties (other than <code>inspectable</code>) or call any of its methods throws an instance of <code>Error</code>.</p>
+<p>If a <code>Debugger.Environment</code> instance's referent is not a debuggee environment, then attempting to access its properties (other than <code>inspectable</code>) or call any of its methods throws an instance of <code>Error</code>.</p>
 
 <p><code>Debugger.Environment</code> instances protect their referents from the garbage collector; as long as the <code>Debugger.Environment</code> instance is live, the referent remains live. Garbage collection has no visible effect on <code>Debugger.Environment</code> instances.</p>
 
@@ -32,7 +32,7 @@ slug: Tools/Debugger-API/Debugger.Environment
    <p>“declarative”, indicating that the environment is a declarative environment record. Function calls, calls to <code>eval</code>, <code>let</code> blocks, <code>catch</code> blocks, and the like create declarative environment records.</p>
   </li>
   <li>
-   <p>“object”, indicating that the environment’s bindings are the properties of an object. The global object and DOM elements appear in the chain of environments via object environments. (Note that <code>with</code> statements have their own environment type.)</p>
+   <p>“object”, indicating that the environment's bindings are the properties of an object. The global object and DOM elements appear in the chain of environments via object environments. (Note that <code>with</code> statements have their own environment type.)</p>
   </li>
   <li>
    <p>“with”, indicating that the environment was introduced by a <code>with</code> statement.</p>
@@ -44,7 +44,7 @@ slug: Tools/Debugger-API/Debugger.Environment
  <dt><code>object</code></dt>
  <dd>A <a href="Debugger.Object"><code>Debugger.Object</code></a> instance referring to the object whose properties this environment reflects. If this is a declarative environment record, this accessor throws a <code>TypeError</code> (since declarative environment records have no such object). Both <code>"object"</code> and <code>"with"</code> environments have <code>object</code> properties that provide the object whose properties they reflect as variable bindings.</dd>
  <dt><code>callee</code></dt>
- <dd>If this environment represents the variable environment (the top-level environment within the function, which receives <code>var</code> definitions) for a call to a function<em>f</em>, then this property’s value is a <a href="Debugger.Object"><code>Debugger.Object</code></a> instance referring to<em>f</em>. Otherwise, this property’s value is <code>null</code>.</dd>
+ <dd>If this environment represents the variable environment (the top-level environment within the function, which receives <code>var</code> definitions) for a call to a function<em>f</em>, then this property's value is a <a href="Debugger.Object"><code>Debugger.Object</code></a> instance referring to<em>f</em>. Otherwise, this property's value is <code>null</code>.</dd>
  <dt><code>optimizedOut</code></dt>
  <dd>True if this environment is optimized out. False otherwise. For example, functions whose locals are never aliased may present optimized-out environments. When true, <code>getVariable</code> returns an ordinary JavaScript object whose <code>optimizedOut</code> property is true on all bindings, and <code>setVariable</code> throws a <code>ReferenceError</code>.</dd>
 </dl>
@@ -62,7 +62,7 @@ slug: Tools/Debugger-API/Debugger.Environment
 
  <p>JavaScript engines often omit variables from environments, to save space and reduce execution time. If the given variable should be in scope, but <code>getVariable</code> is unable to produce its value, it returns an ordinary JavaScript object (not a <a href="Debugger.Object"><code>Debugger.Object</code></a> instance) whose <code>optimizedOut</code> property is <code>true</code>.</p>
 
- <p>This is not an <a href="Debugger.Frame#invf" title="Debugger.Frame: Invocation Frames">invocation function</a>; if this call would cause debuggee code to run (say, because the environment is a <code>"with"</code> environment, and<em>name</em> refers to an accessor property of the <code>with</code> statement’s operand), this call throws a <a href="Conventions#the-debugger.debuggeewouldrun-exception" title="Debugger API: DebuggeeWouldRun"><code>Debugger.DebuggeeWouldRun</code></a> exception.</p>
+ <p>This is not an <a href="Debugger.Frame#invf" title="Debugger.Frame: Invocation Frames">invocation function</a>; if this call would cause debuggee code to run (say, because the environment is a <code>"with"</code> environment, and<em>name</em> refers to an accessor property of the <code>with</code> statement's operand), this call throws a <a href="Conventions#the-debugger.debuggeewouldrun-exception" title="Debugger API: DebuggeeWouldRun"><code>Debugger.DebuggeeWouldRun</code></a> exception.</p>
  </dd>
  <dt><code>setVariable(<em>name</em>,<em>value</em>)</code></dt>
  <dd>

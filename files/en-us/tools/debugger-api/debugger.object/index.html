@@ -6,15 +6,15 @@ slug: Tools/Debugger-API/Debugger.Object
 
 <h1 id="Debugger.Object">Debugger.Object</h1>
 
-<p>A <code>Debugger.Object</code> instance represents an object in the debuggee, providing reflection-oriented methods to inspect and modify its referent. The referent’s properties do not appear directly as properties of the <code>Debugger.Object</code> instance; the debugger can access them only through methods like <code>Debugger.Object.prototype.getOwnPropertyDescriptor</code> and <code>Debugger.Object.prototype.defineProperty</code>, ensuring that the debugger will not inadvertently invoke the referent’s getters and setters.</p>
+<p>A <code>Debugger.Object</code> instance represents an object in the debuggee, providing reflection-oriented methods to inspect and modify its referent. The referent's properties do not appear directly as properties of the <code>Debugger.Object</code> instance; the debugger can access them only through methods like <code>Debugger.Object.prototype.getOwnPropertyDescriptor</code> and <code>Debugger.Object.prototype.defineProperty</code>, ensuring that the debugger will not inadvertently invoke the referent's getters and setters.</p>
 
 <p>SpiderMonkey creates exactly one <code>Debugger.Object</code> instance for each debuggee object it presents to a given <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instance: if the debugger encounters the same object through two different routes (perhaps two functions are called on the same object), SpiderMonkey presents the same <code>Debugger.Object</code> instance to the debugger each time. This means that the debugger can use the <code>==</code> operator to recognize when two <code>Debugger.Object</code> instances refer to the same debuggee object, and place its own properties on a <code>Debugger.Object</code> instance to store metadata about particular debuggee objects.</p>
 
-<p>JavaScript code in different compartments can have different views of the same object. For example, in Firefox, code in privileged compartments sees content DOM element objects without redefinitions or extensions made to that object’s properties by content code. (In Firefox terminology, privileged code sees the element through an “xray wrapper”.) To ensure that debugger code sees each object just as the debuggee would, each <code>Debugger.Object</code> instance presents its referent as it would be seen from a particular compartment. This “viewing compartment” is chosen to match the way the debugger came across the referent. As a consequence, a single <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instance may actually have several <code>Debugger.Object</code> instances: one for each compartment from which the referent is viewed.</p>
+<p>JavaScript code in different compartments can have different views of the same object. For example, in Firefox, code in privileged compartments sees content DOM element objects without redefinitions or extensions made to that object's properties by content code. (In Firefox terminology, privileged code sees the element through an “xray wrapper”.) To ensure that debugger code sees each object just as the debuggee would, each <code>Debugger.Object</code> instance presents its referent as it would be seen from a particular compartment. This “viewing compartment” is chosen to match the way the debugger came across the referent. As a consequence, a single <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instance may actually have several <code>Debugger.Object</code> instances: one for each compartment from which the referent is viewed.</p>
 
 <p>If more than one <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instance is debugging the same code, each <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> gets a separate <code>Debugger.Object</code> instance for a given object. This allows the code using each <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instance to place whatever properties it likes on its own <code>Debugger.Object</code> instances, without worrying about interfering with other debuggers.</p>
 
-<p>While most <code>Debugger.Object</code> instances are created by SpiderMonkey in the process of exposing debuggee’s behavior and state to the debugger, the debugger can use <code>Debugger.Object.prototype.makeDebuggeeValue</code> to create <code>Debugger.Object</code> instances for given debuggee objects, or use <code>Debugger.Object.prototype.copy</code> and <code>Debugger.Object.prototype.create</code> to create new objects in debuggee compartments, allocated as if by particular debuggee globals.</p>
+<p>While most <code>Debugger.Object</code> instances are created by SpiderMonkey in the process of exposing debuggee's behavior and state to the debugger, the debugger can use <code>Debugger.Object.prototype.makeDebuggeeValue</code> to create <code>Debugger.Object</code> instances for given debuggee objects, or use <code>Debugger.Object.prototype.copy</code> and <code>Debugger.Object.prototype.create</code> to create new objects in debuggee compartments, allocated as if by particular debuggee globals.</p>
 
 <p><code>Debugger.Object</code> instances protect their referents from the garbage collector; as long as the <code>Debugger.Object</code> instance is live, the referent remains live. This means that garbage collection has no visible effect on <code>Debugger.Object</code> instances.</p>
 
@@ -24,7 +24,7 @@ slug: Tools/Debugger-API/Debugger.Object
 
 <dl>
  <dt><code>proto</code></dt>
- <dd>The referent’s prototype (as a new <code>Debugger.Object</code> instance), or <code>null</code> if it has no prototype. This accessor may throw if the referent is a scripted proxy or some other sort of exotic object (an opaque wrapper, for example).</dd>
+ <dd>The referent's prototype (as a new <code>Debugger.Object</code> instance), or <code>null</code> if it has no prototype. This accessor may throw if the referent is a scripted proxy or some other sort of exotic object (an opaque wrapper, for example).</dd>
  <dt><code>class</code></dt>
  <dd>A string naming the ECMAScript <code>[[Class]]</code> of the referent.</dd>
  <dt><code>callable</code></dt>
@@ -33,11 +33,11 @@ slug: Tools/Debugger-API/Debugger.Object
  <dd>
  <p>The name of the referent, if it is a named function. If the referent is an anonymous function, or not a function at all, this is <code>undefined</code>.</p>
 
- <p>This accessor returns whatever name appeared after the <code>function</code> keyword in the source code, regardless of whether the function is the result of instantiating a function declaration (which binds the function to its name in the enclosing scope) or evaluating a function expression (which binds the function to its name only within the function’s body).</p>
+ <p>This accessor returns whatever name appeared after the <code>function</code> keyword in the source code, regardless of whether the function is the result of instantiating a function declaration (which binds the function to its name in the enclosing scope) or evaluating a function expression (which binds the function to its name only within the function's body).</p>
  </dd>
  <dt><code>displayName</code></dt>
  <dd>
- <p>The referent’s display name, if the referent is a function with a display name. If the referent is not a function, or if it has no display name, this is <code>undefined</code>.</p>
+ <p>The referent's display name, if the referent is a function with a display name. If the referent is not a function, or if it has no display name, this is <code>undefined</code>.</p>
 
  <p>If a function has a given name, its display name is the same as its given name. In this case, the <code>displayName</code> and <code>name</code> properties are equal.</p>
 
@@ -66,16 +66,16 @@ var s = f(function () {});  // display name: s&lt;</code></pre>
 
  <p>If the referent is a function proxy, return an empty array.</p>
 
- <p>If the referent uses destructuring parameters, then the array’s elements reflect the structure of the parameters. For example, if the referent is a function declared in this way:</p>
+ <p>If the referent uses destructuring parameters, then the array's elements reflect the structure of the parameters. For example, if the referent is a function declared in this way:</p>
 
  <pre class="language-js"><code>function f(a, [b, c], {d, e:f}) { ... }</code></pre>
 
- <p>then this <code>Debugger.Object</code> instance’s <code>parameterNames</code> property would have the value:</p>
+ <p>then this <code>Debugger.Object</code> instance's <code>parameterNames</code> property would have the value:</p>
 
  <pre class="language-js"><code>["a", ["b", "c"], {d:"d", e:"f"}]</code></pre>
  </dd>
  <dt><code>script</code></dt>
- <dd>If the referent is a function that is debuggee code, this is that function’s script, as a <a href="Debugger.Script"><code>Debugger.Script</code></a> instance. If the referent is a function proxy or not debuggee code, this is <code>undefined</code>.</dd>
+ <dd>If the referent is a function that is debuggee code, this is that function's script, as a <a href="Debugger.Script"><code>Debugger.Script</code></a> instance. If the referent is a function proxy or not debuggee code, this is <code>undefined</code>.</dd>
  <dt><code>environment</code></dt>
  <dd>If the referent is a function that is debuggee code, a <a href="Debugger.Environment"><code>Debugger.Environment</code></a> instance representing the lexical environment enclosing the function when it was created. If the referent is a function proxy or not debuggee code, this is <code>undefined</code>.</dd>
  <dt><code>errorMessageName</code></dt>
@@ -99,7 +99,7 @@ var s = f(function () {});  // display name: s&lt;</code></pre>
  <dt><code>boundThis</code></dt>
  <dd>If the referent is a bound debuggee function, this is the <code>this</code> value it was bound to. If the referent is either not a bound function, not a debuggee function, or not a function at all, this is <code>undefined</code>.</dd>
  <dt><code>boundArguments</code></dt>
- <dd>If the referent is a bound debuggee function, this is an array (in the Debugger object’s compartment) that contains the debuggee values of the <code>arguments</code> object it was bound to. If the referent is either not a bound function, not a debuggee function, or not a function at all, this is <code>undefined</code>.</dd>
+ <dd>If the referent is a bound debuggee function, this is an array (in the Debugger object's compartment) that contains the debuggee values of the <code>arguments</code> object it was bound to. If the referent is either not a bound function, not a debuggee function, or not a function at all, this is <code>undefined</code>.</dd>
  <dt><code>isProxy</code></dt>
  <dd>If the referent is a (scripted) proxy, either revoked or not, return <code>true</code>. If the referent is not a (scripted) proxy, return <code>false</code>.</dd>
  <dt><code>proxyTarget</code></dt>
@@ -137,9 +137,9 @@ var s = f(function () {});  // display name: s&lt;</code></pre>
  <p>If the referent is not a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>, or the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a> has not been rejected, throw a <code>TypeError</code>.</p>
  </dd>
  <dt><code>promiseAllocationSite</code></dt>
- <dd>If the referent is a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>, this is the <a href="https://firefox-source-docs.mozilla.org/js/SavedFrame/">JavaScript execution stack</a> captured at the time of the promise’s allocation. This can return null if the promise was not created from script. If the referent is not a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>, throw a <code>TypeError</code> exception.</dd>
+ <dd>If the referent is a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>, this is the <a href="https://firefox-source-docs.mozilla.org/js/SavedFrame/">JavaScript execution stack</a> captured at the time of the promise's allocation. This can return null if the promise was not created from script. If the referent is not a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>, throw a <code>TypeError</code> exception.</dd>
  <dt><code>promiseResolutionSite</code></dt>
- <dd>If the referent is a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>, this is the <a href="https://firefox-source-docs.mozilla.org/js/SavedFrame/">JavaScript execution stack</a> captured at the time of the promise’s resolution. This can return null if the promise was not resolved by calling its <code>resolve</code> or <code>reject</code> resolving functions from script. If the referent is not a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>, throw a <code>TypeError</code> exception.</dd>
+ <dd>If the referent is a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>, this is the <a href="https://firefox-source-docs.mozilla.org/js/SavedFrame/">JavaScript execution stack</a> captured at the time of the promise's resolution. This can return null if the promise was not resolved by calling its <code>resolve</code> or <code>reject</code> resolving functions from script. If the referent is not a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>, throw a <code>TypeError</code> exception.</dd>
  <dt><code>promiseID</code></dt>
  <dd>If the referent is a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>, this is a process-unique identifier for the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>. With e10s, the same id can potentially be assigned to multiple <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a> instances, if those instances were created in different processes. If the referent is not a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>, throw a <code>TypeError</code> exception.</dd>
  <dt><code>promiseDependentPromises</code></dt>
@@ -162,11 +162,11 @@ var s = f(function () {});  // display name: s&lt;</code></pre>
  <dt><code>promiseLifetime</code></dt>
  <dd>If the referent is a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>, this is the number of milliseconds elapsed since the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a> was created. If the referent is not a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>, throw a <code>TypeError</code> exception.</dd>
  <dt><code>promiseTimeToResolution</code></dt>
- <dd>If the referent is a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>, this is the number of milliseconds elapsed between when the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a> was created and when it was resolved. If the referent hasn’t been resolved or is not a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>, throw a <code>TypeError</code> exception.</dd>
+ <dd>If the referent is a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>, this is the number of milliseconds elapsed between when the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a> was created and when it was resolved. If the referent hasn't been resolved or is not a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>, throw a <code>TypeError</code> exception.</dd>
  <dt><code>global</code></dt>
- <dd>A <code>Debugger.Object</code> instance referring to the global object in whose scope the referent was allocated. This does not unwrap cross-compartment wrappers: if the referent is a wrapper, the result refers to the wrapper’s global, not the wrapped object’s global. The result refers to the global directly, not via a wrapper.</dd>
+ <dd>A <code>Debugger.Object</code> instance referring to the global object in whose scope the referent was allocated. This does not unwrap cross-compartment wrappers: if the referent is a wrapper, the result refers to the wrapper's global, not the wrapped object's global. The result refers to the global directly, not via a wrapper.</dd>
  <dt><code id="allocationsite">allocationSite</code></dt>
- <dd>If <a href="Debugger.Memory#trackingallocationsites" title="Debugger.Memory: trackingAllocationSites">object allocation site tracking</a> was enabled when this <code>Debugger.Object</code>’s referent was allocated, return the <a href="https://firefox-source-docs.mozilla.org/js/SavedFrame/">JavaScript execution stack</a> captured at the time of the allocation. Otherwise, return <code>null</code>.</dd>
+ <dd>If <a href="Debugger.Memory#trackingallocationsites" title="Debugger.Memory: trackingAllocationSites">object allocation site tracking</a> was enabled when this <code>Debugger.Object</code>'s referent was allocated, return the <a href="https://firefox-source-docs.mozilla.org/js/SavedFrame/">JavaScript execution stack</a> captured at the time of the allocation. Otherwise, return <code>null</code>.</dd>
 </dl>
 
 <h2 id="Function_Properties_of_the_Debugger.Object_prototype">Function Properties of the Debugger.Object prototype</h2>
@@ -181,19 +181,19 @@ var s = f(function () {});  // display name: s&lt;</code></pre>
  <dt><code>getProperty(<em>key</em>, [<em>receiver</em>])</code></dt>
  <dd>Return a completion value with "return" being the value of the referent's property named <em>key</em>, or <code>undefined</code> if it has no such property. <em>key</em> must be a string or symbol; <em>receiver</em> must be a debuggee value. If the property is a getter, it will be evaluated with <em>receiver</em> as the receiver, defaulting to the <code>Debugger.Object</code> if omitted.</dd>
  <dt><code>setProperty(<em>key</em>, <em>value</em>, [<em>receiver</em>])</code></dt>
- <dd>Store <em>value</em> as the value of the referent’s property named <em>key</em>, creating the property if it does not exist. <em>key</em> must be a string or symbol; <em>value</em> and <em>receiver</em> must be debuggee values. If the property is a setter, it will be evaluated with <em>receiver</em> as the receiver, defaulting to the <code>Debugger.Object</code> if omitted.</dd>
+ <dd>Store <em>value</em> as the value of the referent's property named <em>key</em>, creating the property if it does not exist. <em>key</em> must be a string or symbol; <em>value</em> and <em>receiver</em> must be debuggee values. If the property is a setter, it will be evaluated with <em>receiver</em> as the receiver, defaulting to the <code>Debugger.Object</code> if omitted.</dd>
  <dt><code>getOwnPropertyDescriptor(<em>name</em>)</code></dt>
- <dd>Return a property descriptor for the property named<em>name</em> of the referent. If the referent has no such property, return <code>undefined</code>. (This function behaves like the standard <code>Object.getOwnPropertyDescriptor</code> function, except that the object being inspected is implicit; the property descriptor returned is allocated as if by code scoped to the debugger’s global object (and is thus in the debugger’s compartment); and its <code>value</code>, <code>get</code>, and <code>set</code> properties, if present, are debuggee values.)</dd>
+ <dd>Return a property descriptor for the property named<em>name</em> of the referent. If the referent has no such property, return <code>undefined</code>. (This function behaves like the standard <code>Object.getOwnPropertyDescriptor</code> function, except that the object being inspected is implicit; the property descriptor returned is allocated as if by code scoped to the debugger's global object (and is thus in the debugger's compartment); and its <code>value</code>, <code>get</code>, and <code>set</code> properties, if present, are debuggee values.)</dd>
  <dt><code>getOwnPropertyNames()</code></dt>
- <dd>Return an array of strings naming all the referent’s own properties, as if <code>Object.getOwnPropertyNames(<em>referent</em>)</code> had been called in the debuggee, and the result copied in the scope of the debugger’s global object.</dd>
+ <dd>Return an array of strings naming all the referent's own properties, as if <code>Object.getOwnPropertyNames(<em>referent</em>)</code> had been called in the debuggee, and the result copied in the scope of the debugger's global object.</dd>
  <dt><code>getOwnPropertySymbols()</code></dt>
- <dd>Return an array of strings naming all the referent’s own symbols, as if <code>Object.getOwnPropertySymbols(<em>referent</em>)</code> had been called in the debuggee, and the result copied in the scope of the debugger’s global object.</dd>
+ <dd>Return an array of strings naming all the referent's own symbols, as if <code>Object.getOwnPropertySymbols(<em>referent</em>)</code> had been called in the debuggee, and the result copied in the scope of the debugger's global object.</dd>
  <dt><code>defineProperty(<em>name</em>,<em>attributes</em>)</code></dt>
  <dd>Define a property on the referent named<em>name</em>, as described by the property descriptor<em>descriptor</em>. Any <code>value</code>, <code>get</code>, and <code>set</code> properties of<em>attributes</em> must be debuggee values. (This function behaves like <code>Object.defineProperty</code>, except that the target object is implicit, and in a different compartment from the function and descriptor.)</dd>
  <dt><code>defineProperties(<em>properties</em>)</code></dt>
  <dd>Add the properties given by<em>properties</em> to the referent. (This function behaves like <code>Object.defineProperties</code>, except that the target object is implicit, and in a different compartment from the<em>properties</em> argument.)</dd>
  <dt><code>deleteProperty(<em>name</em>)</code></dt>
- <dd>Remove the referent’s property named<em>name</em>. Return true if the property was successfully removed, or if the referent has no such property. Return false if the property is non-configurable.</dd>
+ <dd>Remove the referent's property named<em>name</em>. Return true if the property was successfully removed, or if the referent has no such property. Return false if the property is non-configurable.</dd>
  <dt><code>seal()</code></dt>
  <dd>Prevent properties from being added to or deleted from the referent. Return this <code>Debugger.Object</code> instance. (This function behaves like the standard <code>Object.seal</code> function, except that the object to be sealed is implicit and in a different compartment from the caller.)</dd>
  <dt><code>freeze()</code></dt>
@@ -208,19 +208,19 @@ var s = f(function () {});  // display name: s&lt;</code></pre>
  <dd>Return true if the referent is extensible—that is, if it can have new properties defined on it. (This function behaves like the standard <code>Object.isExtensible</code> function, except that the object inspected is implicit and in a different compartment from the caller.)</dd>
  <dt><code>copy(<em>value</em>)</code></dt>
  <dd>
- <p>Apply the HTML5 “structured cloning” algorithm to create a copy of<em>value</em> in the referent’s global object (and thus in the referent’s compartment), and return a <code>Debugger.Object</code> instance referring to the copy.</p>
+ <p>Apply the HTML5 “structured cloning” algorithm to create a copy of<em>value</em> in the referent's global object (and thus in the referent's compartment), and return a <code>Debugger.Object</code> instance referring to the copy.</p>
 
  <p>Note that this returns primitive values unchanged. This means you can use <code>Debugger.Object.prototype.copy</code> as a generic “debugger value to debuggee value” conversion function—within the limitations of the “structured cloning” algorithm.</p>
  </dd>
  <dt><code>create(<em>prototype</em>, [<em>properties</em>])</code></dt>
- <dd>Create a new object in the referent’s global (and thus in the referent’s compartment), and return a <code>Debugger.Object</code> referring to it. The new object’s prototype is<em>prototype</em>, which must be an <code>Debugger.Object</code> instance. The new object’s properties are as given by<em>properties</em>, as if<em>properties</em> were passed to <code>Debugger.Object.prototype.defineProperties</code>, with the new <code>Debugger.Object</code> instance as the <code>this</code> value.</dd>
+ <dd>Create a new object in the referent's global (and thus in the referent's compartment), and return a <code>Debugger.Object</code> referring to it. The new object's prototype is<em>prototype</em>, which must be an <code>Debugger.Object</code> instance. The new object's properties are as given by<em>properties</em>, as if<em>properties</em> were passed to <code>Debugger.Object.prototype.defineProperties</code>, with the new <code>Debugger.Object</code> instance as the <code>this</code> value.</dd>
  <dt><code>makeDebuggeeValue(<em>value</em>)</code></dt>
  <dd>
- <p>Return the debuggee value that represents<em>value</em> in the debuggee. If<em>value</em> is a primitive, we return it unchanged; if<em>value</em> is an object, we return the <code>Debugger.Object</code> instance representing that object, wrapped appropriately for use in this <code>Debugger.Object</code>’s referent’s compartment.</p>
+ <p>Return the debuggee value that represents<em>value</em> in the debuggee. If<em>value</em> is a primitive, we return it unchanged; if<em>value</em> is an object, we return the <code>Debugger.Object</code> instance representing that object, wrapped appropriately for use in this <code>Debugger.Object</code>'s referent's compartment.</p>
 
  <p>Note that, if<em>value</em> is an object, it need not be one allocated in a debuggee global, nor even a debuggee compartment; it can be any object the debugger wishes to use as a debuggee value.</p>
 
- <p>As described above, each <code>Debugger.Object</code> instance presents its referent as viewed from a particular compartment. Given a <code>Debugger.Object</code> instance<em>d</em> and an object<em>o</em>, the call <code><em>d</em>.makeDebuggeeValue(<em>o</em>)</code> returns a <code>Debugger.Object</code> instance that presents<em>o</em> as it would be seen by code in<em>d</em>’s compartment.</p>
+ <p>As described above, each <code>Debugger.Object</code> instance presents its referent as viewed from a particular compartment. Given a <code>Debugger.Object</code> instance<em>d</em> and an object<em>o</em>, the call <code><em>d</em>.makeDebuggeeValue(<em>o</em>)</code> returns a <code>Debugger.Object</code> instance that presents<em>o</em> as it would be seen by code in<em>d</em>'s compartment.</p>
  </dd>
  <dt><code>decompile([<em>pretty</em>])</code></dt>
  <dd>If the referent is a function that is debuggee code, return the JavaScript source code for a function definition equivalent to the referent function in its effect and result, as a string. If<em>pretty</em> is present and true, produce indented code with line breaks. If the referent is not a function that is debuggee code, return <code>undefined</code>.</dd>
@@ -244,21 +244,21 @@ var s = f(function () {});  // display name: s&lt;</code></pre>
 
  <p>This method allows debugger code to introduce temporary bindings that are visible to the given debuggee code and which refer to debugger-held debuggee values, and do so without mutating any existing debuggee environment.</p>
 
- <p>Note that, like <code>executeInGlobal</code>, any declarations it contains affect the referent global object, even as<em>code</em> is evaluated in an environment extended according to<em>bindings</em>. (In the terms used by the ECMAScript specification, the <code>VariableEnvironment</code> of the execution context for<em>code</em> is the referent, and the<em>bindings</em> appear in a new declarative environment, which is the eval code’s <code>LexicalEnvironment</code>.)</p>
+ <p>Note that, like <code>executeInGlobal</code>, any declarations it contains affect the referent global object, even as<em>code</em> is evaluated in an environment extended according to<em>bindings</em>. (In the terms used by the ECMAScript specification, the <code>VariableEnvironment</code> of the execution context for<em>code</em> is the referent, and the<em>bindings</em> appear in a new declarative environment, which is the eval code's <code>LexicalEnvironment</code>.)</p>
 
  <p>The<em>options</em> argument is as for <a href="Debugger.Frame#eval" title="Debugger.Frame: Eval"><code>Debugger.Frame.prototype.eval</code></a>.</p>
  </dd>
  <dt><code>asEnvironment()</code></dt>
- <dd>If the referent is a global object, return the <a href="Debugger.Environment"><code>Debugger.Environment</code></a> instance representing the referent’s global lexical scope. The global lexical scope’s enclosing scope is the global object. If the referent is not a global object, throw a <code>TypeError</code>.</dd>
+ <dd>If the referent is a global object, return the <a href="Debugger.Environment"><code>Debugger.Environment</code></a> instance representing the referent's global lexical scope. The global lexical scope's enclosing scope is the global object. If the referent is not a global object, throw a <code>TypeError</code>.</dd>
  <dt><code>unwrap()</code></dt>
- <dd>If the referent is a wrapper that this <code>Debugger.Object</code>’s compartment is permitted to unwrap, return a <code>Debugger.Object</code> instance referring to the wrapped object. If we are not permitted to unwrap the referent, return <code>null</code>. If the referent is not a wrapper, return this <code>Debugger.Object</code> instance unchanged.</dd>
+ <dd>If the referent is a wrapper that this <code>Debugger.Object</code>'s compartment is permitted to unwrap, return a <code>Debugger.Object</code> instance referring to the wrapped object. If we are not permitted to unwrap the referent, return <code>null</code>. If the referent is not a wrapper, return this <code>Debugger.Object</code> instance unchanged.</dd>
  <dt><code>unsafeDereference()</code></dt>
  <dd>
  <p>Return the referent of this <code>Debugger.Object</code> instance.</p>
 
  <p>If the referent is an inner object (say, an HTML5 <code>Window</code> object), return the corresponding outer object (say, the HTML5 <code>WindowProxy</code> object). This makes <code>unsafeDereference</code> more useful in producing values appropriate for direct use by debuggee code, without using <a href="Debugger.Frame#invf" title="Debugger.Frame: Invocation Frames">invocation functions</a>.</p>
 
- <p>This method pierces the membrane of <code>Debugger.Object</code> instances meant to protect debugger code from debuggee code, and allows debugger code to access debuggee objects through the standard cross-compartment wrappers, rather than via <code>Debugger.Object</code>’s reflection-oriented interfaces. This method makes it easier to gradually adapt large code bases to this Debugger API: adapted portions of the code can use <code>Debugger.Object</code> instances, but use this method to pass direct object references to code that has not yet been updated.</p>
+ <p>This method pierces the membrane of <code>Debugger.Object</code> instances meant to protect debugger code from debuggee code, and allows debugger code to access debuggee objects through the standard cross-compartment wrappers, rather than via <code>Debugger.Object</code>'s reflection-oriented interfaces. This method makes it easier to gradually adapt large code bases to this Debugger API: adapted portions of the code can use <code>Debugger.Object</code> instances, but use this method to pass direct object references to code that has not yet been updated.</p>
  </dd>
  <dt><code>forceLexicalInitializationByName(<em>binding</em>)</code></dt>
  <dd>If<em>binding</em> is in an uninitialized state initialize it to undefined and return true, otherwise do nothing and return false.</dd>

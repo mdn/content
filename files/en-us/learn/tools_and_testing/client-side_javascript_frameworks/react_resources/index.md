@@ -72,7 +72,7 @@ React DevTools is available in a number of forms:
 - A Chromium Edge browser extension (available soon).
 - A [stand-alone application you can install with NPM or Yarn](https://www.npmjs.com/package/react-devtools).
 
-Try installing one of these, then using it to inspect the app you’ve just built!
+Try installing one of these, then using it to inspect the app you've just built!
 
 You can [read more about React DevTools on the React blog](https://reactjs.org/blog/2019/08/15/new-react-devtools.html).
 
@@ -86,7 +86,7 @@ If you'd like to try this API for yourself, Smashing Magazine has written an [in
 
 ## Class components
 
-Although this tutorial doesn’t mention them, it is possible to build React components using ES6 classes – these are called class components. Until the arrival of hooks, ES6 classes were the only way to bring state into components or manage rendering side effects. They're still the only way to handle certain other, more edge-case features, and they’re very common in legacy React projects. The official React docs are a great place to start learning about them.
+Although this tutorial doesn't mention them, it is possible to build React components using ES6 classes – these are called class components. Until the arrival of hooks, ES6 classes were the only way to bring state into components or manage rendering side effects. They're still the only way to handle certain other, more edge-case features, and they're very common in legacy React projects. The official React docs are a great place to start learning about them.
 
 - [State and Lifecycle in the React Docs](https://reactjs.org/docs/state-and-lifecycle.html)
 - [Intro To React in the React Docs](https://reactjs.org/tutorial/tutorial.html)

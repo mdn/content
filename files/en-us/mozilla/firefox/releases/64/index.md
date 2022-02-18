@@ -106,7 +106,7 @@ _No changes._
 
 ### Security
 
-- The Symantec CA Distrust plan has been implemented (see {{bug(1409257)}}; see also the [Mozilla’s Plan for Symantec Roots](https://groups.google.com/forum/#!topic/mozilla.dev.security.policy/FLHRT79e3XE/discussion) discussion for more details).
+- The Symantec CA Distrust plan has been implemented (see {{bug(1409257)}}; see also the [Mozilla's Plan for Symantec Roots](https://groups.google.com/forum/#!topic/mozilla.dev.security.policy/FLHRT79e3XE/discussion) discussion for more details).
 - {{httpheader("Referrer-Policy")}} can now be used to govern resources fetched via stylesheets ({{bug(1330487)}}) — see {{SectionOnPage("/en-US/docs/Web/HTTP/Headers/Referrer-Policy", "Integration with CSS")}} for more information.
 
 ### Plugins

@@ -50,7 +50,7 @@ Setting key performance indicators (KPI) as objectives can highlight performance
 - **Time on Site**
   - : The average time that your users in aggregate spend on your site. When a site performance slowly, users are more likely to abandon the site prematurely which can lead to low time on site metrics.
 - **Net Promotion Score**
-  - : The net promoter score (NPS) is a metric for assessing customer-loyalty for a company’s brand, product, or service. Poor user performance experiences can equation to poor brand reputation.
+  - : The net promoter score (NPS) is a metric for assessing customer-loyalty for a company's brand, product, or service. Poor user performance experiences can equation to poor brand reputation.
 
 Setting conversion rate, time on site, and/or net promotion scores as KPIs give financial and other business goal value to the web performance efforts, and get help boost buy-in, with metrics to prove the efforts worth.
 

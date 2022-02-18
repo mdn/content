@@ -42,7 +42,7 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 
 ### JavaScript
 
-- The {{jsxref("SharedArrayBuffer")}} and {{jsxref("Atomics")}} objects are now enabled by default. See [A Taste of JavaScript’s New Parallel Primitives](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/) for an introduction to JavaScript Shared Memory and Atomics.
+- The {{jsxref("SharedArrayBuffer")}} and {{jsxref("Atomics")}} objects are now enabled by default. See [A Taste of JavaScript's New Parallel Primitives](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/) for an introduction to JavaScript Shared Memory and Atomics.
 - The rest operator (`...`) is now supported in [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) and the spread operator (`...`) now works in [object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_in_object_literals) (Stage 3 ECMAScript proposal: [Object Rest/Spread Properties](https://github.com/tc39/proposal-object-rest-spread), {{bug(1339395)}}).
 - [Async generator methods](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions#async_generator_methods) are now supported ({{bug(1353693)}}).
 - The {{jsxref("String.prototype.toLocaleLowerCase()")}} and {{jsxref("String.prototype.toLocaleUpperCase()")}} methods now support an optional `locale` parameter to specify a language tag for locale-specific case mappings ({{bug(1318403)}}).

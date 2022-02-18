@@ -42,7 +42,7 @@ Grid systems are a very common feature used in CSS layouts, and before CSS Grid 
 
 ## Layout and grid systems before CSS Grid Layout
 
-It may seem surprising to anyone coming from a design background that CSS didn’t have an inbuilt grid system until very recently, and instead we seemed to be using a variety of sub-optimal methods to create grid-like designs. We now refer to these as "legacy" methods.
+It may seem surprising to anyone coming from a design background that CSS didn't have an inbuilt grid system until very recently, and instead we seemed to be using a variety of sub-optimal methods to create grid-like designs. We now refer to these as "legacy" methods.
 
 For new projects, in most cases CSS Grid Layout will be used in combination with one or more other modern layout methods to form the basis for any layout. You will however encounter "grid systems" using these legacy methods from time to time. It is worth understanding how they work, and why they are different to CSS Grid Layout.
 
@@ -183,7 +183,7 @@ Now use the row container that is wrapped around each row of the grid to clear o
 }
 ```
 
-Applying this clearing means that we don’t need to completely fill each row with elements making the full twelve columns. The rows will remain separated, and not interfere with each other.
+Applying this clearing means that we don't need to completely fill each row with elements making the full twelve columns. The rows will remain separated, and not interfere with each other.
 
 The gutters between the columns are 20 pixels wide. We create these gutters as a margin on the left side of each column — including the first column, to balance out the 20 pixels of padding on the right hand side of the container. So we have 12 gutters in total — 12 x 20 = 240.
 
@@ -414,7 +414,7 @@ Try loading and refreshing to see the difference, or check out our [fluid-grid-o
 
 ### Floated grid limitations
 
-When using a system like this you do need to take care that your total widths add up correctly, and that you don’t include elements in a row that span more columns than the row can contain. Due to the way floats work, if the number of grid columns becomes too wide for the grid, the elements on the end will drop down to the next line, breaking the grid.
+When using a system like this you do need to take care that your total widths add up correctly, and that you don't include elements in a row that span more columns than the row can contain. Due to the way floats work, if the number of grid columns becomes too wide for the grid, the elements on the end will drop down to the next line, breaking the grid.
 
 Also bear in mind that if the content of the elements gets wider than the rows they occupy, it will overflow and look a mess.
 
@@ -422,7 +422,7 @@ The biggest limitation of this system is that it is essentially one dimensional.
 
 ## Flexbox grids?
 
-If you read our previous article about [flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), you might think that flexbox is the ideal solution for creating a grid system. There are many flexbox-based grid systems available and flexbox can solve many of the issues that we’ve already discovered when creating our grid above.
+If you read our previous article about [flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), you might think that flexbox is the ideal solution for creating a grid system. There are many flexbox-based grid systems available and flexbox can solve many of the issues that we've already discovered when creating our grid above.
 
 However, flexbox was never designed as a grid system and poses a new set of challenges when used as one. As a simple example of this, we can take the same example markup we used above and use the following CSS to style the `wrapper`, `row`, and `col` classes:
 
@@ -462,11 +462,11 @@ On the top line we get twelve neat boxes on the grid and they grow and shrink eq
 
 To fix this we still need to include our `span` classes to provide a width that will replace the value used by `flex-basis` for that element.
 
-They also don’t respect the grid used by the items above because they don’t know anything about it.
+They also don't respect the grid used by the items above because they don't know anything about it.
 
-Flexbox is **one-dimensional** by design. It deals with a single dimension, that of a row or a column. We can’t create a strict grid for columns and rows, meaning that if we are to use flexbox for our grid, we still need to calculate percentages as for the floated layout.
+Flexbox is **one-dimensional** by design. It deals with a single dimension, that of a row or a column. We can't create a strict grid for columns and rows, meaning that if we are to use flexbox for our grid, we still need to calculate percentages as for the floated layout.
 
-In your project you might still choose to use a flexbox ‘grid’ due to the additional alignment and space distribution capabilities flexbox provides over floats. You should, however, be aware that you are still using a tool for something other than what it was designed for. So you may feel like it is making you jump through additional hoops to get the end result you want.
+In your project you might still choose to use a flexbox 'grid' due to the additional alignment and space distribution capabilities flexbox provides over floats. You should, however, be aware that you are still using a tool for something other than what it was designed for. So you may feel like it is making you jump through additional hoops to get the end result you want.
 
 ## Third party grid systems
 
@@ -485,7 +485,7 @@ Include the skeleton and normalize CSS in the HTML page, by adding the following
 <link href="skeleton.css" rel="stylesheet">
 ```
 
-Skeleton includes more than a grid system — it also contains CSS for typography and other page elements that you can use as a starting point. We’ll leave these at the defaults for now, however — it’s the grid we are really interested in here.
+Skeleton includes more than a grid system — it also contains CSS for typography and other page elements that you can use as a starting point. We'll leave these at the defaults for now, however — it's the grid we are really interested in here.
 
 > **Note:** [Normalize](https://necolas.github.io/normalize.css/) is a really useful little CSS library written by Nicolas Gallagher, which automatically does some useful basic layout fixes and makes default element styling more consistent across browsers.
 
@@ -569,7 +569,7 @@ If you look in the skeleton.css file you can see how this works. For example, Sk
 .three.columns { width: 22%; }
 ```
 
-All Skeleton (or any other grid framework) is doing is setting up predefined classes that you can use by adding them to your markup. It’s exactly the same as if you did the work of calculating these percentages yourself.
+All Skeleton (or any other grid framework) is doing is setting up predefined classes that you can use by adding them to your markup. It's exactly the same as if you did the work of calculating these percentages yourself.
 
 As you can see, we need to write very little CSS when using Skeleton. It deals with all of the floating for us when we add classes to our markup. It is this ability to hand responsibility for layout over to something else that made using a framework for a grid system a compelling choice! However these days, with CSS Grid Layout, many developers are moving away from these frameworks to use the inbuilt native grid that CSS provides.
 

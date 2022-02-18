@@ -206,7 +206,7 @@ Then the event handler created by the code above can be removed like this:
 controller.abort(); // removes any/all event handlers associated with this controller
 ```
 
-For simple, small programs, cleaning up old, unused event handlers isn’t necessary, but for larger, more complex programs, it can improve efficiency.
+For simple, small programs, cleaning up old, unused event handlers isn't necessary, but for larger, more complex programs, it can improve efficiency.
 Also, the ability to remove event handlers allows you to have the same button performing different actions in different circumstances: all you have to do is add or remove handlers.
 
 ### Adding multiple listeners for a single event
@@ -620,7 +620,7 @@ In the **target** phase:
 
 - The browser checks to see if the {{domxref("Event.target", "target")}} property has an event handler for the `click` event registered on it, and runs it if so.
 - Then, if {{domxref("Event.bubbles", "bubbles")}} is `true`, it propagates the event to the direct parent of the selected element, then the next one, and so on until it reaches the `<html>` element.
-  Otherwise, if {{domxref("Event.bubbles", "bubbles")}} is `false`, it doesn’t propagate the event to any ancestors of the target.
+  Otherwise, if {{domxref("Event.bubbles", "bubbles")}} is `false`, it doesn't propagate the event to any ancestors of the target.
 
 In the **bubbling** phase, the exact opposite of the **capturing** phase occurs:
 
@@ -637,7 +637,7 @@ Along the way:
 > **Note:** All JavaScript events go through the capturing and target phases.
 > Whether an event enters the bubbling phase can be checked by the read-only {{domxref("Event.bubbles", "bubbles")}} property.
 
-> **Note:** Event listeners registered for the `<html>` element aren’t at the top of hierarchy.
+> **Note:** Event listeners registered for the `<html>` element aren't at the top of hierarchy.
 > For example, event listeners registered for the {{domxref("Window", "window")}} and {{domxref("Document", "document")}} objects are higher in the hierarchy.
 
 The following example demonstrates the behavior described above.

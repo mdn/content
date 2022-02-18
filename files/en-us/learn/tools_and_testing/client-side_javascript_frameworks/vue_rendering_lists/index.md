@@ -55,7 +55,7 @@ To be an effective to-do list, we need to be able to render multiple to-do items
 
 ### Adding some data to render
 
-First we need to get an array of to-do items. To do that, we’ll add a `data` property to the `App.vue` component object, containing a `ToDoItems` field whose value is an array of todo items. While we'll eventually add a mechanism to add new todo items, we can start with some mock to do items. Each to-do item will be represented by an object with a `name` and a `done` property.
+First we need to get an array of to-do items. To do that, we'll add a `data` property to the `App.vue` component object, containing a `ToDoItems` field whose value is an array of todo items. While we'll eventually add a mechanism to add new todo items, we can start with some mock to do items. Each to-do item will be represented by an object with a `name` and a `done` property.
 
 Add a few sample to-do items, along the lines of those seen below. This way you have some data available for rendering using `v-for`.
 

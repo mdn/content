@@ -106,7 +106,7 @@ Regardless of what server system you use, the effect you need to achieve is to s
 header('Content-Type: application/pdf')
 ```
 
-Trying to instead set it with just `header('application/pdf')` won’t work.
+Trying to instead set it with just `header('application/pdf')` won't work.
 
 ## Related Links
 

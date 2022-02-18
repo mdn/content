@@ -92,7 +92,7 @@ The methods that can change how elements are laid out in CSS are:
 
 ## The display property
 
-The main methods for achieving page layout in CSS all involve specifying values for the `display` property. This property allows us to change the default way something displays. Everything in normal flow has a default value for `display`; i.e., a default way that elements are set to behave. For example, the fact that paragraphs in English display one below the other is because they are styled with `display: block`. If you create a link around some text inside a paragraph, that link remains inline with the rest of the text, and doesn’t break onto a new line. This is because the {{htmlelement("a")}} element is `display: inline` by default.
+The main methods for achieving page layout in CSS all involve specifying values for the `display` property. This property allows us to change the default way something displays. Everything in normal flow has a default value for `display`; i.e., a default way that elements are set to behave. For example, the fact that paragraphs in English display one below the other is because they are styled with `display: block`. If you create a link around some text inside a paragraph, that link remains inline with the rest of the text, and doesn't break onto a new line. This is because the {{htmlelement("a")}} element is `display: inline` by default.
 
 You can change this default display behavior. For example, the {{htmlelement("li")}} element is `display: block` by default, meaning that list items display one below the other in our English document. If we were to change the display value to `inline` they would display next to each other, as words would do in a sentence. The fact that you can change the value of `display` for any element means that you can pick HTML elements for their semantic meaning without being concerned about how they will look. The way they look is something that you can change.
 
@@ -178,7 +178,7 @@ While flexbox is designed for one-dimensional layout, Grid Layout is designed fo
 
 ### Setting display: grid
 
-Similar to flexbox, we enable Grid Layout with its specific display value — `display: grid`. The below example uses similar markup to the flex example, with a container and some child elements. In addition to using `display: grid`, we also define some row and column _tracks_ for the parent using the {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} properties respectively. We've defined three columns, each of `1fr`, as well as two rows of `100px`. We don’t need to put any rules on the child elements; they're automatically placed into the cells our grid's created.
+Similar to flexbox, we enable Grid Layout with its specific display value — `display: grid`. The below example uses similar markup to the flex example, with a container and some child elements. In addition to using `display: grid`, we also define some row and column _tracks_ for the parent using the {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} properties respectively. We've defined three columns, each of `1fr`, as well as two rows of `100px`. We don't need to put any rules on the child elements; they're automatically placed into the cells our grid's created.
 
 ```css hidden
 * {
@@ -324,7 +324,7 @@ p {
 
 ## Positioning techniques
 
-Positioning allows you to move an element from where it would otherwise be placed in normal flow over to another location. Positioning isn’t a method for creating the main layouts of a page; it's more about managing and fine-tuning the position of specific items on a page.
+Positioning allows you to move an element from where it would otherwise be placed in normal flow over to another location. Positioning isn't a method for creating the main layouts of a page; it's more about managing and fine-tuning the position of specific items on a page.
 
 There are, however, useful techniques for obtaining specific layout patterns that rely on the {{cssxref("position")}} property. Understanding positioning also helps in understanding normal flow, and what it means to move an item out of the normal flow.
 

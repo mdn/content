@@ -12,7 +12,7 @@ tags:
 
 ## 1. Purpose and Objectives
 
-The primary purpose of the PAB is to provide advice, input, and feedback on content strategy, content prioritization, strategic direction, and platform/site features to MDN’s Product Manager and Content Lead. Mozilla will consider input and advice from the PAB; however PAB input and recommendations are non-binding. The primary objectives of the PAB are:
+The primary purpose of the PAB is to provide advice, input, and feedback on content strategy, content prioritization, strategic direction, and platform/site features to MDN's Product Manager and Content Lead. Mozilla will consider input and advice from the PAB; however PAB input and recommendations are non-binding. The primary objectives of the PAB are:
 
 - Provide feedback into content strategy and prioritization of standards documentation
 - Help define product strategy, roadmap, and priorities including:
@@ -21,7 +21,7 @@ The primary purpose of the PAB is to provide advice, input, and feedback on cont
   - Suggest and comment on yearly and quarterly content roadmaps
 
 - Make organizational and individual commitments to contribute to MDN based on the defined strategies, roadmaps and priorities
-- Represent and promote user requirements, ensuring that MDN continues to evolve and meet users’ needs and challenges
+- Represent and promote user requirements, ensuring that MDN continues to evolve and meet users' needs and challenges
 - Suggest and give feedback on new opportunities
 - Provide feedback on recruiting and retaining contributors (both corporate and individual)
 - Share experience and best practices
@@ -44,7 +44,7 @@ g. Mozilla may terminate a Member in the case of violation of the MDN Advisory B
 
 ## 3. PAB Membership Qualifications.
 
-a. PAB Members have in-depth industry knowledge and expertise. Members will be knowledgeable about web standards, with the ability and experience to align MDN’s overall strategic goals and content plans with evolution of web standards, industry direction, and the needs of developers using MDN’s documentation.
+a. PAB Members have in-depth industry knowledge and expertise. Members will be knowledgeable about web standards, with the ability and experience to align MDN's overall strategic goals and content plans with evolution of web standards, industry direction, and the needs of developers using MDN's documentation.
 
 b. Membership in the PAB is limited to organizations and individuals who make significant contributions to MDN and/or the advancement, development, and implementation of web standards.
 
@@ -60,7 +60,7 @@ d. Individual Members of the PAB must have at least one of the following qualifi
 
 ## 4. Member Responsibilities and Commitments.
 
-a. Members are expected to provide feedback and responses in a timely manner, and attend a minimum number of review meetings. Participation is welcome from all over the world. Members’ expectations include:
+a. Members are expected to provide feedback and responses in a timely manner, and attend a minimum number of review meetings. Participation is welcome from all over the world. Members' expectations include:
 
 Provide feedback on scheduling annual and quarterly meetings;
 
@@ -91,7 +91,7 @@ a. Members will be invited to the following meetings:
 - Quarterly content strategy and prioritization review meetings (“Quarterly Reviews); and
 - Ad-hoc product review/check-in meetings, which can be initiated by Mozilla or any Member as needed (“Ad Hoc Meetings”).
 
-b. Annual Product Strategy review meetings will review the previous year’s progress and make recommendations for MDN’s strategy and objectives for the following year.
+b. Annual Product Strategy review meetings will review the previous year's progress and make recommendations for MDN's strategy and objectives for the following year.
 
 c. Annual Product Strategy review meetings can take place in Mozilla headquarters or worldwide office, the offices of a Member, or external locations, as determined by vote of the PAB. Virtual attendance will be accommodated for Members who are unable to attend in person.
 
