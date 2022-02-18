@@ -300,7 +300,7 @@ In the above example, the spread syntax does not work as one might expect: it sp
 ### Only for iterables
 
 Spread syntax (other than in the case of spread properties) can only be applied to [iterable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator)
-objects like {{jsxref("Array"), or with iterating functions such as `map()`, `reduce()`, and `assign()`.
+objects like {{jsxref("Array")}}, or with iterating functions such as `map()`, `reduce()`, and `assign()`.
 
 Many objects are not iterable, including {{JSxRef("Object")}}:
 
