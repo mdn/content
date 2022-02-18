@@ -49,13 +49,13 @@ function updateProgress(percentComplete) {
 
 All content that is available to non-assistive technology users must be made available to assistive technologies. Similarly, no features should be included targeting assistive technology users that aren't also accessible to those not using assistive technologies. The above progressbar needs to be styled to make it look like a progressbar.
 
-It would have been much simpler to use the semantic {{HTMLElement('progress')}} instead:
+It would have been much simpler to use the native {{HTMLElement('progress')}} element instead:
 
 ```HTML
-<progress id="percent-loaded" valuenow="75"
-     min="0" max="100">
-</div>
+<progress id="percent-loaded" value="75" max="100">75 %</progress>
 ```
+
+> **Note:** The `min` attribute is not allowed for the {{HTMLElement('progress')}} element; its minimum value is always `0`.
 
 > **Note:** HTML landmark elements ({{HTMLElement("main")}}, {{HTMLElement("header")}}, {{HTMLElement("nav")}} etc.) have built-in implicit ARIA roles, so there is no need to duplicate them.
 
