@@ -37,7 +37,7 @@ var uninstalling = browser.management.uninstall(
 
 <!---->
 
-- If `id` is the calling add-on's ID, `showConfirmDialog` defaults to `false`.
+- If `id` is the calling add-on's ID, `showConfirmDialog` defaults to `false`.
 - If `id` is a the ID of a different add-on, the `showConfirmDialog` option is ignored and the confirmation dialog is always shown.
 
 ### Return value

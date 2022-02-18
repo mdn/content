@@ -9,7 +9,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 78 that will affect developers. Firefox 78 was released on June 30, 2020.
+This article provides information about the changes in Firefox 78 that will affect developers. Firefox 78 was released on June 30, 2020.
 
 See also [New in Firefox 78: DevTools improvements, new regex engine, and abundant web platform updates](https://hacks.mozilla.org/2020/06/new-in-firefox-78/) on Mozilla hacks.
 
@@ -36,8 +36,8 @@ See also [New in Firefox 78: DevTools improvements, new regex engine, and abunda
 
 ### CSS
 
-- The {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":where", ":where()")}} pseudo-classes are now enabled by default ({{bug(1632646)}}).
-- The {{CSSxRef(":read-only")}} and {{CSSxRef(":read-write")}} pseudo-classes are now supported without prefixes ({{bug(312971)}}).
+- The {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":where", ":where()")}} pseudo-classes are now enabled by default ({{bug(1632646)}}).
+- The {{CSSxRef(":read-only")}} and {{CSSxRef(":read-write")}} pseudo-classes are now supported without prefixes ({{bug(312971)}}).
 
   - In addition, `:read-write` styles are no longer applied to disabled [`<input>`](/en-US/docs/Web/HTML/Element/input) and [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea) elements, which was a violation of [the HTML spec](https://html.spec.whatwg.org/#selector-read-write) ({{bug(888884)}}).
 

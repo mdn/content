@@ -22,13 +22,13 @@ A string that describes the current status of the request. It will be one of the
 - `"finishedtransferringdata"`
   - : The underlying channel has finished transferring data. In this state the extension can still write response data using the filter's {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}} function.
 - `"suspended"`
-  - :  Data transfer is currently suspended. In this state the extension can resume the request by calling the filter's {{WebExtAPIRef("webRequest.StreamFilter.resume()", "resume()")}} function, and can write response data using the filter's {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}} function.
+  - :  Data transfer is currently suspended. In this state the extension can resume the request by calling the filter's {{WebExtAPIRef("webRequest.StreamFilter.resume()", "resume()")}} function, and can write response data using the filter's {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}} function.
 - `"closed"`
   - : The extension has closed the request by calling the filter's {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}} function. The filter will not fire any more events, and the extension may not call any filter functions.
 - `"disconnected"`
-  - :  The extension has disconnected the filter from the request by calling the filter's {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}} function. All further data will be delivered directly, without passing through the filter. The filter will not fire any more events, and the extension may not call any filter functions.
+  - :  The extension has disconnected the filter from the request by calling the filter's {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}} function. All further data will be delivered directly, without passing through the filter. The filter will not fire any more events, and the extension may not call any filter functions.
 - `"failed"`
-  - :  An error has occurred and the filter has been disconnected from the request. The extension can find an error message in {{WebExtAPIRef("webRequest.StreamFilter.error", "error")}}, and may not call any filter functions.
+  - :  An error has occurred and the filter has been disconnected from the request. The extension can find an error message in {{WebExtAPIRef("webRequest.StreamFilter.error", "error")}}, and may not call any filter functions.
 
 ## Browser compatibility
 

@@ -15,7 +15,7 @@ Firefox 26 was released on December 10, 2013. This article lists key changes tha
 - The {{cssxref("text-decoration-line")}} property, still prefixed, now considers `'blink'` as a valid value, though it doesn't blink the content at all ({{bug("812995")}}).
 - The non-standard {{cssxref("-moz-text-blink")}} property has been removed ({{bug("812995")}}).
 - Support for the {{cssxref("image-orientation")}} property, in its CSS Images & Values Level 4 version, that is with the `from-image` keyword and EXIF support, has been added ({{bug(825771)}}).
-- Experimental support for `position: sticky` has been implemented and can be enabled by pref `layout.css.sticky.enabled` ({{bug(886646)}}).
+- Experimental support for `position: sticky` has been implemented and can be enabled by pref `layout.css.sticky.enabled` ({{bug(886646)}}).
 - The {{cssxref("text-align")}} property now applies to the `::-moz-placeholder` pseudo-element ({{bug(915551)}}).
 
 ### HTML
@@ -27,7 +27,7 @@ Firefox 26 was released on December 10, 2013. This article lists key changes tha
 
 ### JavaScript
 
-[EcmaScript 2015](/en-US/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) implementation continues!
+[EcmaScript 2015](/en-US/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) implementation continues!
 
 - The ECMAScript 2015 compliant syntax for [Generators (yield)](http://wiki.ecmascript.org/doku.php?id=harmony:generators) has been implemented ({{bug("666399")}}).
 - Generator/Iterator results are now boxed like `{ value: foo, done: bool }` ({{bug(907744)}}).
@@ -38,8 +38,8 @@ Firefox 26 was released on December 10, 2013. This article lists key changes tha
 
 ### Interfaces/APIs/DOM
 
-- Make the last argument (doctype) to {{domxref("DOMImplementation.createDocument")}} optional ({{bug(909859)}}).
-- Implement the new {{domxref("element.classList")}} specification which permits adding/removing several classes with one call ({{bug(814014)}}).
+- Make the last argument (doctype) to {{domxref("DOMImplementation.createDocument")}} optional ({{bug(909859)}}).
+- Implement the new {{domxref("element.classList")}} specification which permits adding/removing several classes with one call ({{bug(814014)}}).
 - The {{domxref("URL.URL", "URL()")}} constructor has been implemented on the {{domxref("URL")}} interface ({{bug("887364")}}).
 - The properties {{domxref("HTMLAnchorElement/origin", "URLUtils.origin")}}, {{domxref("HTMLAnchorElement/password", "URLUtils.password")}}, and {{domxref("HTMLAnchorElement/username", "URLUtils.username")}} are now available to all interfaces implementing {{domxref("HTMLHyperlinkElementUtils", "URLUtils")}}: {{domxref("URL")}}, {{domxref("Location")}}, {{domxref("HTMLAnchorElement")}}, and {{domxref("HTMLAreaElement")}} ({{bug("887364")}}).
 - The {{domxref("URL")}} interface is now accessible from Web Workers ({{bug("887364")}}).
@@ -56,7 +56,7 @@ Firefox 26 was released on December 10, 2013. This article lists key changes tha
 
 ### MathML
 
-- Inconsistent renderings of {{MathMLElement("mmultiscripts")}},  {{MathMLElement("msub")}}, {{MathMLElement("msup")}} and {{MathMLElement("msubsup")}} have been unified and the error handling of these elements has been improved ({{bug("827713")}}).
+- Inconsistent renderings of {{MathMLElement("mmultiscripts")}},  {{MathMLElement("msub")}}, {{MathMLElement("msup")}} and {{MathMLElement("msubsup")}} have been unified and the error handling of these elements has been improved ({{bug("827713")}}).
 
 ### SVG
 

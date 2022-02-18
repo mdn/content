@@ -19,7 +19,7 @@ Shows the {{WebExtAPIRef("pageAction")}} for a given {{WebExtAPIRef("tabs/Tab", 
 
 `show()` overrides pattern matching, so the page action will be shown in the specified tab even if [`show_matches`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) does not match the URL or [`hide_matches`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) does.
 
-Note that calling `show()` has no effect on a tab with no content loaded.
+Note that calling `show()` has no effect on a tab with no content loaded.
 
 ## Syntax
 

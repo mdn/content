@@ -42,12 +42,12 @@ This method for describing the begin and end values in the IMSC document is esse
 <tt xmlns="http://www.w3.org/ns/ttml"
   xml:lang="en"
   ttp:frameRate="24"
-  ttp:frameRateMultiplier="1000 1001">
-  <body>
-    <div>
-      <p begin="24f" end="48f">Hello, I am Mork from Ork</p>
-    </div>
-  </body>
+  ttp:frameRateMultiplier="1000 1001">
+  <body>
+    <div>
+      <p begin="24f" end="48f">Hello, I am Mork from Ork</p>
+    </div>
+  </body>
 </tt>
 ```
 
@@ -55,30 +55,30 @@ This method requires that the `frameRate` and `frameRateMultiplier` attributes a
 
 Let's explain this in little bit more detail.
 
-The `frameRateMultiplier` stems from the problems associated with non-integer frame rates such as 23.98fps (as opposed to an integer frame rate such as 24fps). 24fps means that every second of video has 24 frames in it, and that second is the same as a realtime second. 23.98fps means that every second of video has 24 frames in it, and that second is slightly longer than a realtime second. The `frameRateMultiplier` defines the duration of each frame when compared to realtime.
+The `frameRateMultiplier` stems from the problems associated with non-integer frame rates such as 23.98fps (as opposed to an integer frame rate such as 24fps). 24fps means that every second of video has 24 frames in it, and that second is the same as a realtime second. 23.98fps means that every second of video has 24 frames in it, and that second is slightly longer than a realtime second. The `frameRateMultiplier` defines the duration of each frame when compared to realtime.
 
-Imagine that you had a stopwatch and timed yourself watching a movie. If that movie was playing back at a speed of 24fps, once your media player says you have watched exactly 1 hour of it, your stopwatch would say 01:00:00.00. Now if that movie was playing back at a speed of 23.98fps, once your media player says you have watched exactly 1 hour of it, your stopwatch would now say 01:00:03.6 (1 hour × (24/23.98)).
+Imagine that you had a stopwatch and timed yourself watching a movie. If that movie was playing back at a speed of 24fps, once your media player says you have watched exactly 1 hour of it, your stopwatch would say 01:00:00.00. Now if that movie was playing back at a speed of 23.98fps, once your media player says you have watched exactly 1 hour of it, your stopwatch would now say 01:00:03.6 (1 hour × (24/23.98)).
 
 Make sense?
 
-To describe a frame rate of 23.976fps, the following `frameRate` and `frameRateMultiplier` values would be used:
+To describe a frame rate of 23.976fps, the following `frameRate` and `frameRateMultiplier` values would be used:
 
 ```xml
 <tt xmlns="http://www.w3.org/ns/ttml"
   xml:lang="en"
   ttp:frameRate="24"
-  ttp:frameRateMultiplier="1000 1001">
+  ttp:frameRateMultiplier="1000 1001">
 ```
 
 This is actually saying that each second of 24 frames should play back at a speed of (24 \* (1000/1001)), or 23.98fps.
 
-Now that a frame rate of 23.98 is declared, you are able to describe time expressions in frames, or f.
+Now that a frame rate of 23.98 is declared, you are able to describe time expressions in frames, or f.
 
 ```xml
 <p begin="24f" end="48f">Hello, I am Mork from Ork</p>
 ```
 
-The advantage of using this method is that the time expression frame number is the same as the frame number of the media asset. A value of 86400f is frame number 86400 in the video file.
+The advantage of using this method is that the time expression frame number is the same as the frame number of the media asset. A value of 86400f is frame number 86400 in the video file.
 
 > **Note:** You can find an additional explanation of these values in [Mapping video time codes to IMSC](/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC).
 

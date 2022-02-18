@@ -24,9 +24,9 @@ The browser may restrict the amount of data that an extension can store in the l
 
 When the extension is uninstalled, its associated local storage is cleared.
 
-Also in Firefox, you can prevent the browser from clearing local storage on uninstall by visiting `about:config` and setting the following two browser preferences to `true`: `"keepUuidOnUninstall"` and `"keepStorageOnUninstall"`. This feature is provided to help developers test their extensions. Extensions themselves are not able to change these preferences.
+Also in Firefox, you can prevent the browser from clearing local storage on uninstall by visiting `about:config` and setting the following two browser preferences to `true`: `"keepUuidOnUninstall"` and `"keepStorageOnUninstall"`. This feature is provided to help developers test their extensions. Extensions themselves are not able to change these preferences.
 
-Although this API is similar to {{domxref("Window.localStorage")}} it is recommended that you don't use `Window.localStorage` in extension code. Firefox will clear data stored by extensions using the localStorage API in various scenarios where users clear their browsing history and data for privacy reasons, while data saved using the `storage.local` API will be correctly persisted in these scenarios.
+Although this API is similar to {{domxref("Window.localStorage")}} it is recommended that you don't use `Window.localStorage` in extension code. Firefox will clear data stored by extensions using the localStorage API in various scenarios where users clear their browsing history and data for privacy reasons, while data saved using the `storage.local` API will be correctly persisted in these scenarios.
 
 ## Methods
 

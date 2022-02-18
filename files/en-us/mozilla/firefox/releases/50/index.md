@@ -15,7 +15,7 @@ tags:
 
 - The default style of {{HTMLElement("bdo")}} now sets {{cssxref("unicode-bidi")}} with the `isolate-override` value ({{bug(1249497)}}).
 - Setting the {{HTMLElement("track")}} element's {{htmlattrxref("src", "track")}} attribute now works correctly ({{bug(1281418)}}).
-- The `referrerpolicy` attribute on {{HTMLElement("area")}}, {{HTMLElement("a")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}} and {{HTMLElement("link")}} elements is now available by default ({{bug(1223838)}}, {{bug(1264165)}}).
+- The `referrerpolicy` attribute on {{HTMLElement("area")}}, {{HTMLElement("a")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}} and {{HTMLElement("link")}} elements is now available by default ({{bug(1223838)}}, {{bug(1264165)}}).
 
 ### CSS
 
@@ -32,7 +32,7 @@ tags:
 
 - The ES2015 {{jsxref("Symbol.hasInstance")}} property has been implemented ({{bug(1054906)}}).
 - The ES2017 {{jsxref("Object.getOwnPropertyDescriptors()")}} method has been implemented ({{bug(1245024)}}).
-- The behavior of \W in {{jsxref("RegExp")}} with unicode and ignoreCase flags is changed to match recent draft spec. Now it doesn't match to K, S, k, s, and KELVIN SIGN (U+212A), and LATIN SMALL LETTER LONG S (U+017F) ({{bug(1281739)}}).
+- The behavior of \W in {{jsxref("RegExp")}} with unicode and ignoreCase flags is changed to match recent draft spec. Now it doesn't match to K, S, k, s, and KELVIN SIGN (U+212A), and LATIN SMALL LETTER LONG S (U+017F) ({{bug(1281739)}}).
 
 ### Developer Tools
 
@@ -68,7 +68,7 @@ tags:
 
 ### DOM
 
-- The `once` option for {{domxref("EventTarget.addEventListener()")}} is now supported ({{bug(1287706)}}).
+- The `once` option for {{domxref("EventTarget.addEventListener()")}} is now supported ({{bug(1287706)}}).
 - The interface {{domxref("NodeList")}} are now iterable and the methods {{domxref("NodeList.forEach()", "forEach()")}}, {{domxref("NodeList.values()", "values()")}}, {{domxref("NodeList.entries()")}} and {{domxref("NodeList.keys()")}} are now available ({{bug(1290636)}}).
 - The interface {{domxref("DOMTokenList")}} are now iterable and the methods {{domxref("DOMTokenList.forEach()", "forEach()")}}, {{domxref("DOMTokenList.values()", "values()")}}, {{domxref("DOMTokenList.entries()")}} and {{domxref("DOMTokenList.keys()")}} are now available ({{bug(1290636)}}).
 - The methods {{domxref("Document.createElement()")}} and {{domxref("Document.createElementNS()")}} now have an optional `options` parameter for creating [custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements) ({{bug(1276579)}}).
@@ -112,7 +112,7 @@ tags:
 ### Web Audio API
 
 - The {{domxref("PannerNode")}} interface now supports the 3D Cartesian space properties for the position ({{domxref("PannerNode.positionX")}}, {{domxref("PannerNode.positionY")}}, and {{domxref("PannerNode.positionZ")}}) and directionality ({{domxref("PannerNode.orientationX")}}, {{domxref("PannerNode.orientationY")}}, {{domxref("PannerNode.orientationZ")}}) of an audio source.
-- The interface {{domxref("IIRFilterNode")}}, which implements a general {{interwiki("wikipedia", "infinite impulse response")}} (IIR) filter, has been implemented.
+- The interface {{domxref("IIRFilterNode")}}, which implements a general {{interwiki("wikipedia", "infinite impulse response")}} (IIR) filter, has been implemented.
 - Throttling in background tabs of timers created by {{domxref("setInterval()")}} and {{domxref("setTimeout()")}} no longer occurs if a [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) {{domxref("AudioContext")}} is actively playing sound. This should help prevent issues with timing-sensitive audio playback (such as music players generating individual notes using timers) in the background ({{bug(1181073)}}).
 
 ### Audio/Video

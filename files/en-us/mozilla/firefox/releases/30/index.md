@@ -21,8 +21,8 @@ tags:
 - The non-standard {{cssxref("overflow-clip-box")}} property has been implemented for use in UA stylesheets only ({{bug(966992)}}).
 - The {{cssxref("line-height")}} property now affects single-line text inputs (`<input type=text|password|email|search|tel|url|unknown>` types) although it cannot shrink them below a line height of `1.0` ({{bug(349259)}}).
 - The {{cssxref("line-height")}} property now also affects `type=button`, with no restrictions ({{bug(697451)}}).
-- Change to keyframes' name does not affect current elements ({{bug(978648)}}).
-- positioned internal table elements not abs pos containing block(relative position for table rows) ({{bug(63895)}}).
+- Change to keyframes' name does not affect current elements ({{bug(978648)}}).
+- positioned internal table elements not abs pos containing block(relative position for table rows) ({{bug(63895)}}).
 
 ### HTML
 
@@ -68,7 +68,7 @@ _No change._
 
 ## Changes for add-on and Mozilla developers
 
-- The interface `nsIDOMWindowUtils` now supports the Boolean attribute `audioMuted` and `audioVolume`, a float in the range `[0.0` ,  `1.0]`, allowing to control the sound produced by a window (that is any tab or iframe). There is no UI for this, but is available to add-ons. ({{bug(923247)}})
+- The interface `nsIDOMWindowUtils` now supports the Boolean attribute `audioMuted` and `audioVolume`, a float in the range `[0.0` ,  `1.0]`, allowing to control the sound produced by a window (that is any tab or iframe). There is no UI for this, but is available to add-ons. ({{bug(923247)}})
 
 ### Older versions
 

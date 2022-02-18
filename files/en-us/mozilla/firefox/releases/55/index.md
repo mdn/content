@@ -70,7 +70,7 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 #### DOM events
 
 - The event types supported by the {{domxref("Document.createEvent()")}} method have been updated as per the latest DOM spec ({{bug(1251198)}}).
-- The {{domxref("MessageEvent.origin")}} property value is now of type {{domxref("USVString")}}, not {{domxref("DOMString")}}, and the {{domxref("MessageEvent.source")}} property now takes a `MessageEventSource` value (which can be a {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) ({{bug(1311324)}}).
+- The {{domxref("MessageEvent.origin")}} property value is now of type {{domxref("USVString")}}, not {{domxref("DOMString")}}, and the {{domxref("MessageEvent.source")}} property now takes a `MessageEventSource` value (which can be a {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) ({{bug(1311324)}}).
 - The pinch-to-zoom gesture has now been mapped to the {{event("wheel")}} event plus the + `Ctrl` key. This mapping was implemented to allow developers to implement simple zooming functionality using the pinch-to-zoom gesture on mobile screens/trackpads (mousewheel + `Ctrl` commonly zooms) ({{bug(1052253)}}).
 
 #### Selection API
@@ -154,7 +154,7 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 
 ### APIs
 
-- The `UIEvent.isChar` property has never been supported by any browser but Firefox, and it has never been fully-implemented except on macOS. For that reason, it was removed in Firefox 55 to align with other browsers.
+- The `UIEvent.isChar` property has never been supported by any browser but Firefox, and it has never been fully-implemented except on macOS. For that reason, it was removed in Firefox 55 to align with other browsers.
 - The proprietary Firefox OS Device Storage API has been removed from the platform ({{bug(1299500)}}).
 - The `aShowDialog` parameter of the non-standard {{domxref("Window.find()")}} method (which could be specified to open up a "Find" dialog in the browser) has been removed ({{bug(1348409)}}).
 - The `HTMLFormElement.requestAutoComplete()` method has been removed (see {{domxref("HTMLFormElement")}}) ({{bug(1270740)}}).
