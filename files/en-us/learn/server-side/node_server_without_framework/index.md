@@ -90,14 +90,6 @@ Async function `prepareFile` returns structure: `{ found: boolean , ext: string,
 
 Еhe extension of the file being requested will be parsed and lower-cased. After that we will search `MIME_TYPES` collection for the right [MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types). If no matches are found, we use the `application/octet-stream` as the default type.
 
-Lastly, we respond to the client with the file information. This function reads the file using our previously prepared `filePath` variable.
-
-```js
-fs.readFile(filePath, function(error, content) {
-    ...
-});
-```
-
 Finally, if there are no errors, we send over the requested file. In any case `file.stream` will contain `Readable` stream which wille be piped into `res` (instance of the `Writable` stream).
 
 ```js
