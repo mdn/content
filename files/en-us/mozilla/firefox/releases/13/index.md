@@ -27,8 +27,8 @@ Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Fire
 
 ### JavaScript
 
-- Support for the ECMAScript 2015 [`for..of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) construct has been added.
-- Experimental support for ECMAScript 2015 [Map](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) and [Set](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) objects has been implemented.
+- Support for the ECMAScript 2015 [`for..of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) construct has been added.
+- Experimental support for ECMAScript 2015 [Map](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) and [Set](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) objects has been implemented.
 
 ### DOM
 

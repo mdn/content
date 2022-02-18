@@ -43,7 +43,7 @@ From patterns you’ll regularly use such as [work with the Tabs API](/en-US/doc
 
 When you are ready to create your extension for Firefox or port your Chrome extension, head over to [Extension Workshop](https://extensionworkshop.com/). It has details on:
 
-- The Firefox workflow, such as [temporarily installing  extensions during development](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/), [debugging](https://extensionworkshop.com/documentation/develop/debugging/), [request the right permissions](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/), and more.
+- The Firefox workflow, such as [temporarily installing  extensions during development](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/), [debugging](https://extensionworkshop.com/documentation/develop/debugging/), [request the right permissions](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/), and more.
 - The [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) developer tool.
 - [Porting a Google Chrome extension](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/), [differences between desktop and Android](https://extensionworkshop.com/documentation/develop/differences-between-desktop-and-android-extensions/), and more.
 - [Publishing and distribution overview](https://extensionworkshop.com/documentation/publish/), [promoting your extension](https://extensionworkshop.com/documentation/publish/promoting-your-extension/), the [extension lifecycle best practices](https://extensionworkshop.com/documentation/manage/), and more.
