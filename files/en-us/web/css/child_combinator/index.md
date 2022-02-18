@@ -15,7 +15,7 @@ The **child combinator** (`>`) is placed between two CSS selectors. It matches o
 ```css
 /* List items that are children of the "my-things" list */
 ul.my-things > li {
-  margin: 2em;
+  margin: 2em;
 }
 ```
 

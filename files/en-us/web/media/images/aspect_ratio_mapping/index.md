@@ -13,7 +13,7 @@ tags:
 ---
 This article explains a change that has occurred in the way sizes are worked out on web documents when width and height attributes are set on them.
 
-This change means that the aspect ratio of the image is calculated by the browser early on and can then be used to correct the size needed to display the image before it has loaded, if CSS has been applied that causes problems with its display size. Read on to find out more.
+This change means that the aspect ratio of the image is calculated by the browser early on and can then be used to correct the size needed to display the image before it has loaded, if CSS has been applied that causes problems with its display size. Read on to find out more.
 
 ## Jank problems when loading images
 
@@ -27,8 +27,8 @@ Let’s move forward a few years to the era of responsive design. To keep images
 
 ```css
 img {
-  max-width: 100%;
-  height: auto;
+  max-width: 100%;
+  height: auto;
 }
 ```
 
@@ -40,13 +40,13 @@ Recognizing the problem, a WICG community group formed to propose an [`intrinsic
 
 Mozilla then [brought the idea up in the WICG community group](https://github.com/WICG/intrinsicsize-attribute/issues/16) and discussed it further until representatives from Chrome were onboard with the idea.
 
-Due to this work, browsers have implemented a mechanism for sizing images before the actual image is loaded.
+Due to this work, browsers have implemented a mechanism for sizing images before the actual image is loaded.
 The {{cssxref("aspect-ratio")}} property that applies to replaced elements, and other related elements that accept `width` and `height` attributes.
 This appears in the browser's internal UA stylesheet, similar to the following:
 
 ```css
 img, input[type="image"], video, embed, iframe, marquee, object, table {
-  aspect-ratio: attr(width) / attr(height);
+  aspect-ratio: attr(width) / attr(height);
 }
 ```
 
@@ -58,8 +58,8 @@ When the `width`/`height` of an `<img>` element — as set using HTML attributes
 
 ```css
 img {
-  max-width: 100%;
-  height: auto;
+  max-width: 100%;
+  height: auto;
 }
 ```
 

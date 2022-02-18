@@ -53,7 +53,7 @@ Each `<grid-line>` value can be specified as:
 - or a `<custom-ident>` value
 - or an `<integer>` value
 - or both `<custom-ident>` and `<integer>`, separated by a space
-- or the keyword `span` together with either a `<custom-ident>` or an `<integer>` or both.
+- or the keyword `span` together with either a `<custom-ident>` or an `<integer>` or both.
 
 ### Values
 

@@ -35,11 +35,11 @@ This example will only work in browsers based on Blink or WebKit.
 
 ```css
 progress {
-  -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 ::-webkit-progress-value {
-  background-color: orange;
+  background-color: orange;
 }
 ```
 

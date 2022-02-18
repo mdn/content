@@ -11,7 +11,7 @@ browser-compat: http.headers.Cookie2
 ---
 {{HTTPSidebar}} {{deprecated_header}}
 
-The obsolete **`Cookie2`** HTTP request header used to advise the server that the user agent understands "new-style" cookies, but nowadays user agents will use the {{HTTPHeader("Cookie")}} header instead, not this one.
+The obsolete **`Cookie2`** HTTP request header used to advise the server that the user agent understands "new-style" cookies, but nowadays user agents will use the {{HTTPHeader("Cookie")}} header instead, not this one.
 
 <table class="properties">
   <tbody>
@@ -36,7 +36,7 @@ Cookie2: $Version="1"
 
 | Specification                        | Title                                                                                        |
 | ------------------------------------ | -------------------------------------------------------------------------------------------- |
-| {{RFC("2965", "Cookie2")}} | Historic specification of HTTP State Management Mechanism, obsoleted by {{RFC("6265")}} |
+| {{RFC("2965", "Cookie2")}} | Historic specification of HTTP State Management Mechanism, obsoleted by {{RFC("6265")}} |
 
 ## Browser compatibility
 

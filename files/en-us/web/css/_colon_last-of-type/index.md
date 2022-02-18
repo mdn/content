@@ -44,7 +44,7 @@ p:last-of-type {
 
 ```css
 p:last-of-type {
-  color: red;
+  color: red;
   font-style: italic;
 }
 ```

@@ -13,7 +13,7 @@ browser-compat: html.elements.i
 
 {{HTMLRef}}
 
-The **`<i>`** [HTML](/en-US/docs/Web/HTML) element represents a range of text that is set off from the normal text for some reason, such as idiomatic text, technical terms, taxonomical designations, among others. Historically, these have been presented using italicized type, which is the original source of the `<i>` naming of this element.
+The **`<i>`** [HTML](/en-US/docs/Web/HTML) element represents a range of text that is set off from the normal text for some reason, such as idiomatic text, technical terms, taxonomical designations, among others. Historically, these have been presented using italicized type, which is the original source of the `<i>` naming of this element.
 
 {{EmbedInteractiveExample("pages/tabbed/i.html", "tabbed-shorter")}}
 
@@ -80,15 +80,15 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## Usage notes
 
-- Use the `<i>` element for text that is set off from the normal prose for readability reasons. This would be a range of text with different semantic meaning than the surrounding text. Among the use cases for the `<i>` element are spans of text representing a different quality or mode of text, such as:
+- Use the `<i>` element for text that is set off from the normal prose for readability reasons. This would be a range of text with different semantic meaning than the surrounding text. Among the use cases for the `<i>` element are spans of text representing a different quality or mode of text, such as:
 
   - Alternative voice or mood
-  - Taxonomic designations (such as the genus and species "_Homo sapiens_")
+  - Taxonomic designations (such as the genus and species "_Homo sapiens_")
   - Idiomatic terms from another language (such as "_et cetera_"); these should include the {{htmlattrxref("lang")}} attribute to identify the language
   - Technical terms
   - Transliterations
   - Thoughts (such as "She wondered, _What is this writer talking about, anyway?_")
-  - Ship or vessel names in Western writing systems (such as "They searched the docks for the *Empress of the Galaxy*, the ship to which they were assigned.")
+  - Ship or vessel names in Western writing systems (such as "They searched the docks for the *Empress of the Galaxy*, the ship to which they were assigned.")
 
 - In earlier versions of the HTML specification, the `<i>` element was merely a presentational element used to display text in italics, much like the `<b>` element was used to display text in bold letters. This is no longer true, as these tags now define semantics rather than typographic appearance. A browser will typically still display the contents of the `<i>` element in italic type, but is, by definition, no longer required to do so. To display text in italic type, authors should use the CSS {{cssxref("font-style")}} property.
 - Be sure the text in question is not actually more appropriately marked up with another element.

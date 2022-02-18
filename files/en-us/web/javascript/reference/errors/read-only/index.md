@@ -9,7 +9,7 @@ tags:
 ---
 {{jsSidebar("Errors")}}
 
-The JavaScript [strict
+The JavaScript [strict
 mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception "is read-only" occurs when a global variable or object
 property that was assigned to is a read-only property.
 

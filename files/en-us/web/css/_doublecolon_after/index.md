@@ -94,7 +94,7 @@ We can style text or images in the {{CSSxRef("content")}} property almost any wa
 
 This example uses `::after`, in conjunction with the [`attr()`](</en-US/docs/Web/CSS/attr()>) CSS expression and a `data-descr` [custom data attribute](/en-US/docs/Web/HTML/Global_attributes/data-*), to create tooltips. No JavaScript is required!
 
-We can also support keyboard users with this technique, by adding a `tabindex` of `0` to make each `span` keyboard focusable, and using a CSS `:focus` selector. This shows how flexible `::before` and `::after` can be, though for the most accessible experience a semantic disclosure widget created in some other way (such as with [details and summary](/en-US/docs/Web/HTML/Element/details) elements) is likely to be more appropriate.
+We can also support keyboard users with this technique, by adding a `tabindex` of `0` to make each `span` keyboard focusable, and using a CSS `:focus` selector. This shows how flexible `::before` and `::after` can be, though for the most accessible experience a semantic disclosure widget created in some other way (such as with [details and summary](/en-US/docs/Web/HTML/Element/details) elements) is likely to be more appropriate.
 
 #### HTML
 

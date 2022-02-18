@@ -50,27 +50,27 @@ scroll-snap-destination: unset;
   <div>
     <p>At coordinate (0, 0)</p>
     <div class="scrollContainer destination0">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
     </div>
   </div>
 
   <div>
     <p>At coordinate (25, 0)</p>
     <div class="scrollContainer destination25">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
     </div>
   </div>
 
   <div>
     <p>At coordinate (50, 0)</p>
     <div class="scrollContainer destination50">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
     </div>
   </div>
 </div>

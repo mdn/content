@@ -23,9 +23,9 @@ For example, even for a document delivered over TLS within an {{HTMLElement("ifr
 
 However, it’s important to note that if a non-secure context causes a new window to be created (with or without specifying [noopener](/en-US/docs/Web/API/Window/open)), then the fact that the opener was insecure has no effect on whether the new window is considered secure. That’s because the determination of whether or not a particular document is in a secure context is based only on considering it within the top-level browsing context with which it is associated — and not whether a non-secure context happened to be used to create it.
 
-Locally-delivered resources such as those with _http\://127.0.0.1_ URLs, *http\://localhost* and  *http\://\*.localhost* URLs (e.g. _http\://dev.whatever.localhost/_), and _file://_ URLs are also considered to have been delivered securely.
+Locally-delivered resources such as those with _http\://127.0.0.1_ URLs, *http\://localhost* and  *http\://\*.localhost* URLs (e.g. _http\://dev.whatever.localhost/_), and _file://_ URLs are also considered to have been delivered securely.
 
-> **Note:** Firefox 84 and later support *http\://localhost* and *http\://\*.localhost* URLs as trustworthy origins (earlier versions did not, because `localhost` was not guaranteed to map to a local/loopback address).
+> **Note:** Firefox 84 and later support *http\://localhost* and *http\://\*.localhost* URLs as trustworthy origins (earlier versions did not, because `localhost` was not guaranteed to map to a local/loopback address).
 
 Resources that are not local, to be considered secure, must meet the following criteria:
 
@@ -34,7 +34,7 @@ Resources that are not local, to be considered secure, must meet the following c
 
 ## Feature detection
 
-Pages can use feature detection to check whether they are in a secure context or not by using the {{domxref("isSecureContext")}} boolean, which is exposed on the global scope.
+Pages can use feature detection to check whether they are in a secure context or not by using the {{domxref("isSecureContext")}} boolean, which is exposed on the global scope.
 
 ```js
 if (window.isSecureContext) {

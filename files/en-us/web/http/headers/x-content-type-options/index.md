@@ -16,7 +16,7 @@ marker used by the server to indicate that the [MIME types](/en-US/docs/Web/HTTP
 sniffing](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#mime_sniffing) by saying that the MIME types are deliberately
 configured.
 
-This header was introduced by Microsoft in IE 8 as a way for webmasters to block
+This header was introduced by Microsoft in IE 8 as a way for webmasters to block
 content sniffing that was happening and could transform non-executable MIME types into
 executable MIME types. Since then, other browsers have introduced it, even if their MIME
 sniffing algorithms were less aggressive.

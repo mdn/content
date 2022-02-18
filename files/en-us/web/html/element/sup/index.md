@@ -123,7 +123,7 @@ The resulting output looks like this:
 
 ### Superior lettering
 
-Superior lettering is not technically the same thing as superscript. However, it is common to use `<sup>` to present superior lettering in HTML. Among the most common uses of superior lettering is the presentation of certain abbreviations in French:
+Superior lettering is not technically the same thing as superscript. However, it is common to use `<sup>` to present superior lettering in HTML. Among the most common uses of superior lettering is the presentation of certain abbreviations in French:
 
 ```html
 <p>Robert a présenté son rapport à M<sup>lle</sup> Bernard.</p>

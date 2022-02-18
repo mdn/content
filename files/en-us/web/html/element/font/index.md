@@ -20,7 +20,7 @@ The **`<font>`** [HTML](/en-US/docs/Web/HTML) element defines the font size, col
 
 ## Attributes
 
-Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 - {{htmlattrdef("color")}}
   - : This attribute sets the text color using either a named color or a color specified in the hexadecimal #RRGGBB format.

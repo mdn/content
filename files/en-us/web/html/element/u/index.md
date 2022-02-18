@@ -213,4 +213,4 @@ cite {
 ## See also
 
 - The {{HTMLElement("span")}}, {{HTMLElement("i")}}, {{HTMLElement("em")}}, {{HTMLElement("b")}}, and {{HTMLElement("cite")}} elements should usually be used instead.
-- The CSS {{cssxref("text-decoration")}} property should be used for non-semantic underlining.
+- The CSS {{cssxref("text-decoration")}} property should be used for non-semantic underlining.

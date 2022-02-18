@@ -8,7 +8,7 @@ tags:
 ---
 {{jsSidebar("JavaScript Guide")}}
 
-It’s common to want to make fields or methods private, but JavaScript has lacked such a feature since its inception. Conventions have arisen — such as prefixing fields and methods that should be treated as private with an underscore, like `_hidden` — but these are merely conventions. The underscored features are still fully public.
+It’s common to want to make fields or methods private, but JavaScript has lacked such a feature since its inception. Conventions have arisen — such as prefixing fields and methods that should be treated as private with an underscore, like `_hidden` — but these are merely conventions. The underscored features are still fully public.
 
 Private class features deliver truly private fields and methods, with that privacy enforced by the language instead of convention. This confers benefits such as avoiding naming collisions between class features and the rest of the code base, and allowing classes to expose a very small interface to the rest of the code.
 

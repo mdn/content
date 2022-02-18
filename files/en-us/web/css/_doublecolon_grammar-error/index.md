@@ -47,9 +47,9 @@ In this example, eventual supporting browsers should highlight any flagged gramm
 #### CSS
 
 ```css
-::grammar-error  {
-  text-decoration: underline red;
-  color: red;
+::grammar-error  {
+  text-decoration: underline red;
+  color: red;
 }
 ```
 

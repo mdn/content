@@ -10,7 +10,7 @@ tags:
 ---
 <p id="Description"></p>
 
-<p class="summary"><span class="seoSummary">This technique demonstrates how to use the <a href="https://www.w3.org/TR/wai-aria-1.0/roles#slider" rel="external">slider</a> role and describes the effect it has on browsers and assistive technology.</span></p>
+<p class="summary"><span class="seoSummary">This technique demonstrates how to use the <a href="https://www.w3.org/TR/wai-aria-1.0/roles#slider" rel="external">slider</a> role and describes the effect it has on browsers and assistive technology.</span></p>
 
 <p>The <code>slider</code> role is used for markup that allows a user to select a value from within a given range. The slider role is assigned to the "thumb," the control that is adjusted to change the value. As the user interacts with the thumb, the application must programmatically adjust the slider's <code>aria-valuenow</code> (and possible <code>aria-valuetext</code>) attribute to reflect the current value. See the {{ anch("Examples") }} section below for more information.</p>
 
@@ -41,9 +41,9 @@ tags:
  </tbody>
 </table>
 
-<h2 id="Possible_effects_on_user_agents_and_assistive_technology">Possible effects on user agents and assistive technology </h2>
+<h2 id="Possible_effects_on_user_agents_and_assistive_technology">Possible effects on user agents and assistive technology </h2>
 
-<div class="note"><strong>Note:</strong> Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and therefore not normative.</div>
+<div class="note"><strong>Note:</strong> Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and therefore not normative.</div>
 
 <h2 id="Examples">Examples</h2>
 
@@ -54,21 +54,21 @@ tags:
 <pre class="brush: html">&lt;label for="fader"&gt;Volume&lt;/label&gt;
 &lt;input type="range"
   id="fader"
-  min="1"
-  max="100"
-  value="50"
-  step="1"
-  aria-valuemin="1"
-  aria-valuemax="100"
-  aria-valuenow="50"
-  oninput="outputUpdate(value)"&gt;
+  min="1"
+  max="100"
+  value="50"
+  step="1"
+  aria-valuemin="1"
+  aria-valuemax="100"
+  aria-valuenow="50"
+  oninput="outputUpdate(value)"&gt;
 &lt;output for="fader" id="volume"&gt;50&lt;/output&gt;
 </pre>
 
-<p>The following code snippet allows you to return the output as it is updated by user input:</p>
+<p>The following code snippet allows you to return the output as it is updated by user input:</p>
 
 <pre class="brush: js">function outputUpdate(vol) {
-  document.querySelector('#volume').value = vol;
+  document.querySelector('#volume').value = vol;
 }
 </pre>
 
@@ -78,12 +78,12 @@ tags:
 
 <pre class="brush: html">&lt;label id="day-label"&gt;Days&lt;/label&gt;
 &lt;div class="day-slider"&gt;
-  &lt;div id="day-handle" class="day-slider-handle" role="slider" aria-labelledby="day-label"
-     aria-valuemin="1"
-     aria-valuemax="7"
-     aria-valuenow="2"
-     aria-valuetext="Monday"&gt;
- &lt;/div&gt;
+  &lt;div id="day-handle" class="day-slider-handle" role="slider" aria-labelledby="day-label"
+     aria-valuemin="1"
+     aria-valuemax="7"
+     aria-valuenow="2"
+     aria-valuetext="Monday"&gt;
+ &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -97,7 +97,7 @@ var updateSlider = function (newValue) {
 };
 </pre>
 
-<h2 id="Notes">Notes </h2>
+<h2 id="Notes">Notes </h2>
 
 <h2 id="ARIA_attributes_used">ARIA attributes used</h2>
 
@@ -109,7 +109,7 @@ var updateSlider = function (newValue) {
  <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute">aria-orientation</a></li>
 </ul>
 
-<h2 id="Related_ARIA_techniques">Related ARIA techniques </h2>
+<h2 id="Related_ARIA_techniques">Related ARIA techniques </h2>
 
 <h2 id="Compatibility">Compatibility</h2>
 

@@ -88,19 +88,19 @@ For most browsers, the default value of `quotes` is `auto` (Firefox 70+), or the
 
 ```html
 <div lang="fr">
-  <q>Ceci est une citation française.</q>
+  <q>Ceci est une citation française.</q>
 <div>
 <hr>
 <div lang="ru">
-  <q>Это русская цитата</q>
+  <q>Это русская цитата</q>
 <div>
 <hr>
 <div lang="de">
-  <q>Dies ist ein deutsches Zitat</q>
+  <q>Dies ist ein deutsches Zitat</q>
 <div>
 <hr>
 <div lang="en">
-  <q>This is an English quote.</q>
+  <q>This is an English quote.</q>
 <div>
 ```
 

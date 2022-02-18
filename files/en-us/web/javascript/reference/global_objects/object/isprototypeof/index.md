@@ -37,7 +37,7 @@ isPrototypeOf(object)
 ### Return value
 
 A {{jsxref("Boolean")}} indicating whether the calling object lies in the prototype
-chain of the specified object.
+chain of the specified object.
 
 ### Errors thrown
 
@@ -55,7 +55,7 @@ exists within another object's prototype chain.
 ### Using isPrototypeOf
 
 This example demonstrates that `Baz.prototype`,
-`Bar.prototype`, `Foo.prototype` and `Object.prototype`
+`Bar.prototype`, `Foo.prototype` and `Object.prototype`
 exist in the prototype chain for object `baz`:
 
 ```js
@@ -90,7 +90,7 @@ For example, to execute some code that’s only safe to run if a `baz` object ha
 
 ```js
 if (Foo.prototype.isPrototypeOf(baz)) {
-  // do something safe
+  // do something safe
 }
 ```
 

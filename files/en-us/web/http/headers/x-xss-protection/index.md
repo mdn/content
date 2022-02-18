@@ -52,7 +52,7 @@ X-XSS-Protection: 1; report=<reporting-uri>
 - 1; mode=block
   - : Enables XSS filtering. Rather than sanitizing the page, the browser will prevent rendering of the page if an attack is detected.
 - 1; report=\<reporting-URI> (Chromium only)
-  - : Enables XSS filtering. If a cross-site scripting attack is detected, the browser will sanitize the page and report the violation. This uses the functionality of the CSP {{CSP("report-uri")}} directive to send a report.
+  - : Enables XSS filtering. If a cross-site scripting attack is detected, the browser will sanitize the page and report the violation. This uses the functionality of the CSP {{CSP("report-uri")}} directive to send a report.
 
 ## Vulnerabilities caused by XSS filtering
 

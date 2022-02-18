@@ -88,7 +88,7 @@ grid-template-columns: unset;
 - [`masonry`](/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout){{Experimental_Inline}}
   - : The masonry value indicates that this axis should be laid out according to the masonry algorithm.
 - [`subgrid`](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
-  - : The `subgrid` value indicates that the grid will adopt the spanned portion of its parent grid in that axis. Rather than being specified explicitly, the sizes of the grid rows/columns will be taken from the parent grid’s definition.
+  - : The `subgrid` value indicates that the grid will adopt the spanned portion of its parent grid in that axis. Rather than being specified explicitly, the sizes of the grid rows/columns will be taken from the parent grid’s definition.
 
 > **Warning:** The `masonry` value is from Level 3 of the Grid specification and currently only has an experimental implementation behind a flag in Firefox.
 >

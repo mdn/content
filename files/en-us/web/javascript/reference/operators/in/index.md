@@ -121,7 +121,7 @@ let empties = new Array(3).fill(undefined)
 
 The `in` operator returns `true` for properties in the prototype
 chain. (If you want to check for only _non-inherited_ properties,
-use {{jsxref("Object.prototype.hasOwnProperty()")}} instead.)
+use {{jsxref("Object.prototype.hasOwnProperty()")}} instead.)
 
 ```js
 'toString' in {}  // returns true

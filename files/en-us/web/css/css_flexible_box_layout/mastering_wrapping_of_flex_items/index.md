@@ -70,7 +70,7 @@ It is this requirement that the gap properties, once implemented, will solve for
 
 The flexbox specification details what should happen if a flex item is collapsed by setting `visibility: collapse` on an item. See the MDN documentation for the {{cssxref("visibility")}} property. The specification describes the behavior as follows:
 
-> “Specifying visibility:collapse on a flex item causes it to become a collapsed flex item, producing an effect similar to visibility:collapse on a table-row or table-column: the collapsed flex item is removed from rendering entirely, but leaves behind a "strut" that keeps the flex line’s cross-size stable. Thus, if a flex container has only one flex line, dynamically collapsing or uncollapsing items may change the flex container’s main size, but is guaranteed to have no effect on its cross size and won’t cause the rest of the page’s layout to "wobble". Flex line wrapping is re-done after collapsing, however, so the cross-size of a flex container with multiple lines might or might not change.” - [Collapsed items](https://www.w3.org/TR/css-flexbox-1/#visibility-collapse)
+> “Specifying visibility:collapse on a flex item causes it to become a collapsed flex item, producing an effect similar to visibility:collapse on a table-row or table-column: the collapsed flex item is removed from rendering entirely, but leaves behind a "strut" that keeps the flex line’s cross-size stable. Thus, if a flex container has only one flex line, dynamically collapsing or uncollapsing items may change the flex container’s main size, but is guaranteed to have no effect on its cross size and won’t cause the rest of the page’s layout to "wobble". Flex line wrapping is re-done after collapsing, however, so the cross-size of a flex container with multiple lines might or might not change.” - [Collapsed items](https://www.w3.org/TR/css-flexbox-1/#visibility-collapse)
 
 This behavior is useful if you want to target flex items using JavaScript to show and hide content for example. The example in the specification demonstrates one such pattern.
 
@@ -90,6 +90,6 @@ I have created this behavior in the next live example. You can see how the stret
 
 If this causes a problem for your layout it may require a rethinking of the structure, for example putting each row into a separate flex container in order that they can’t shift rows.
 
-### The difference between `visibility: hidden` and `display: none`
+### The difference between `visibility: hidden` and `display: none`
 
 When you set an item to `display: none` in order to hide it, the item is removed from the formatting structure of the page. What this means in practice is that counters ignore it, and things like transitions do not run. Using `visibility: hidden` keeps the box in the formatting structure which is useful in that it still behaves as if it were part of the layout even though the user can’t see it.
