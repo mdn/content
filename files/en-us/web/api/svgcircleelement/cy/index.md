@@ -14,7 +14,7 @@ browser-compat: api.SVGCircleElement.cy
 
 The **`cy`** read-only property of the {{domxref("SVGCircleElement")}} interface reflects the {{SVGAttr("cy")}} attribute of a {{SVGElement("circle")}} element and by that defines the y-coordinate of the circle's center.
 
-If unspecified, the effect is as if the value is set to `0`.
+If unspecified, the effect is as if the value is set to `0`.
 
 ## Syntax
 

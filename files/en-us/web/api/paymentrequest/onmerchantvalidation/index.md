@@ -44,13 +44,13 @@ allowed to use this payment handler.
 ## Examples
 
 An example merchant validation handler for the {{domxref("PaymentRequest")}} object
-`request` looks like this:
+`request` looks like this:
 
 ```js
 request.onmerchantvalidation = ev => {
   ev.complete(async () => {
-    const merchantServerUrl = window.location.origin +
-        '/validation?url=' + encodeURIComponent(ev.validationURL);
+    const merchantServerUrl = window.location.origin +
+        '/validation?url=' + encodeURIComponent(ev.validationURL);
     // get validation data, and complete validation;
     return await fetch(merchantServerUrl).then(r => r.text());
   })

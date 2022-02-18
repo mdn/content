@@ -34,7 +34,7 @@ var event = new RTCPeerConnectionIceEvent(type, options);
 
     - `"candidate"` (optional, default is `null`): A
       {{domxref("RTCIceCandidate")}} representing the ICE candidate being concerned by
-      the event.  If `null`, the event indicates the end of candidate
+      the event.  If `null`, the event indicates the end of candidate
       gathering.
     - `"url"` (optional, default is `null`): The URL of the STUN
       or TURN server which was used to gather the candidate. If the candidate was not

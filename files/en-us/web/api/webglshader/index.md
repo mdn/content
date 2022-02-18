@@ -15,7 +15,7 @@ The **WebGLShader** is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) an
 
 ## Description
 
-To create a **WebGLShader** use {{domxref("WebGLRenderingContext.createShader")}}, then hook up the GLSL source code using {{domxref("WebGLRenderingContext.shaderSource()")}}, and finally invoke {{domxref("WebGLRenderingContext.compileShader()")}} to finish and compile the shader. At this point the **WebGLShader** is still not in a usable form and must still be attached to a {{domxref("WebGLProgram")}}.
+To create a **WebGLShader** use {{domxref("WebGLRenderingContext.createShader")}}, then hook up the GLSL source code using {{domxref("WebGLRenderingContext.shaderSource()")}}, and finally invoke {{domxref("WebGLRenderingContext.compileShader()")}} to finish and compile the shader. At this point the **WebGLShader** is still not in a usable form and must still be attached to a {{domxref("WebGLProgram")}}.
 
 ```js
 function createShader (gl, sourceCode, type) {
@@ -32,13 +32,13 @@ function createShader (gl, sourceCode, type) {
 }
 ```
 
-See {{domxref("WebGLProgram")}} for information on attaching the shaders.
+See {{domxref("WebGLProgram")}} for information on attaching the shaders.
 
 ## Examples
 
 ### Creating a vertex shader
 
-Note that there are many other strategies for writing and accessing shader source code strings. These example are for illustration purposes only.
+Note that there are many other strategies for writing and accessing shader source code strings. These example are for illustration purposes only.
 
 ```js
 var vertexShaderSource =

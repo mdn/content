@@ -36,7 +36,7 @@ window.onvrdisplaydeactivate = function() { /* ... */ };
 
 ```js
 window.onvrdisplaydeactivate = function() {
-  info.textContent = 'Display deactivated.';
+  info.textContent = 'Display deactivated.';
 };
 ```
 

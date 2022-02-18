@@ -45,8 +45,8 @@ const result = crypto.subtle.verify(algorithm, key, signature, data);
     `{ "name": "HMAC" }`.
 
 - `key` is a {{domxref("CryptoKey")}} containing the key that will
-  be used to verify the signature. It is the secret key for a symmetric algorithm and
-  the public key for a public-key system.
+  be used to verify the signature. It is the secret key for a symmetric algorithm and
+  the public key for a public-key system.
 - `signature` is a {{jsxref("ArrayBuffer")}} containing the
   {{glossary("signature")}} to verify.
 - _`data`_ is a {{jsxref("ArrayBuffer")}} containing the data whose
@@ -250,7 +250,7 @@ async function verifyMessage(key) {
 - [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) specifies
   RSASSA-PKCS1-v1_5.
 - [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) specifies RSA-PSS.
-- [FIPS-186](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf) specifies
+- [FIPS-186](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf) specifies
   ECDSA.
 - [FIPS
   198-1](https://csrc.nist.gov/csrc/media/publications/fips/198/1/final/documents/fips-198-1_final.pdf) specifies HMAC.

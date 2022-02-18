@@ -18,7 +18,7 @@ browser-compat: api.SourceBuffer.buffered
 
 The **`buffered`** read-only property of the
 {{domxref("SourceBuffer")}} interface returns the time ranges that are currently
-buffered in the `SourceBuffer` as a normalized {{domxref("TimeRanges")}}
+buffered in the `SourceBuffer` as a normalized {{domxref("TimeRanges")}}
 object.
 
 ## Syntax

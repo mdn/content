@@ -43,7 +43,7 @@ The animation model can be thought of as an array of snapshots of what the anima
 
 ## Core Concepts
 
-Web animations consist of Timeline Objects, Animation Objects, and Animation Effect Objects working together. By assembling these disparate objects, we can create animations of our own.
+Web animations consist of Timeline Objects, Animation Objects, and Animation Effect Objects working together. By assembling these disparate objects, we can create animations of our own.
 
 ### Timeline
 
@@ -67,7 +67,7 @@ We can assemble all these pieces together to create a working animation with the
 
 ## Uses
 
-The API allows for the creation of dynamic animations that can be updated on the fly as well as more straightforward, declarative animations like those CSS creates. It can be used in automated tests to ensure that your UI animations are running correctly. It opens up the browser’s rendering engine for building animation development tools like timelines. It is also a performant base on which to build a custom or commercial animation library. (See [Animating like you just don’t care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/).) In some instances, it may negate the need for a fully fledged library entirely in the same way Vanilla JavaScript can be used without jQuery for many purposes.
+The API allows for the creation of dynamic animations that can be updated on the fly as well as more straightforward, declarative animations like those CSS creates. It can be used in automated tests to ensure that your UI animations are running correctly. It opens up the browser’s rendering engine for building animation development tools like timelines. It is also a performant base on which to build a custom or commercial animation library. (See [Animating like you just don’t care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/).) In some instances, it may negate the need for a fully fledged library entirely in the same way Vanilla JavaScript can be used without jQuery for many purposes.
 
 ## Polyfill
 
@@ -77,5 +77,5 @@ The Web Animation API has a [polyfill](https://github.com/web-animations/web-ani
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) — main page
 - [Using the Web Animations API](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API) — guide
-- The [full suite of Alice in Wonderland demos](http://codepen.io/collection/bpEza/) on CodePen for you to play with, fork, and share
-- [web-animations-js](https://github.com/web-animations/web-animations-js) — the Web Animations API polyfill
+- The [full suite of Alice in Wonderland demos](http://codepen.io/collection/bpEza/) on CodePen for you to play with, fork, and share
+- [web-animations-js](https://github.com/web-animations/web-animations-js) — the Web Animations API polyfill

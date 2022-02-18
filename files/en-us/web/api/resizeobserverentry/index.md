@@ -28,7 +28,7 @@ The **`ResizeObserverEntry`** interface represents the object passed to the {{do
 - {{domxref('ResizeObserverEntry.contentRect')}} {{readonlyinline}}
   - : A {{domxref('DOMRectReadOnly')}} object containing the new size of the observed element when the callback is run. Note that this is better supported than the above two properties, but it is left over from an earlier implementation of the Resize Observer API, is still included in the spec for web compat reasons, and may be deprecated in future versions.
 - {{domxref('ResizeObserverEntry.target')}} {{readonlyinline}}
-  - : A reference to the {{domxref('Element')}} or {{domxref("SVGElement")}} being observed.
+  - : A reference to the {{domxref('Element')}} or {{domxref("SVGElement")}} being observed.
 
 > **Note:** The content box is the box in which content can be placed, meaning the border box minus the padding and border width. The border box encompasses the content, padding, and border. See [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model) for further explanation.
 

@@ -31,7 +31,7 @@ worker.postMessage(message, [transfer]);
 
   - : The object to deliver to the worker; this will be in the `data` field in the event delivered to the {{domxref("DedicatedWorkerGlobalScope.onmessage")}} handler. This may be any value or JavaScript object handled by the [structured clone](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) algorithm, which includes cyclical references.
 
-    If the `message` parameter is _not_ provided, a `TypeError` will be thrown. If the data to be passed to the worker is unimportant, `null` or `undefined` can be passed explicitly.
+    If the `message` parameter is _not_ provided, a `TypeError` will be thrown. If the data to be passed to the worker is unimportant, `null` or `undefined` can be passed explicitly.
 
 - _transfer_ {{optional_inline}}
 
@@ -56,8 +56,8 @@ first.onchange = function() {
 }
 
 second.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
+  myWorker.postMessage([first.value,second.value]);
+  console.log('Message posted to worker');
 }
 ```
 
@@ -134,11 +134,11 @@ self.onmessage = function handleMessageFromMain(msg) {
 buf.byteLength in main BEFORE transfer to worker:        8                     main.js:19
 buf.byteLength in main AFTER transfer to worker:         0                     main.js:27
 
-message from main received in worker:                    MessageEvent { ... }  myWorker.js:3
+message from main received in worker:                    MessageEvent { ... }  myWorker.js:3
 buf.byteLength in worker BEFORE transfer back to main:   8                     myWorker.js:7
 buf.byteLength in worker AFTER transfer back to main:    0                     myWorker.js:15
 
-message from worker received in main:                    MessageEvent { ... }  main.js:6
+message from worker received in main:                    MessageEvent { ... }  main.js:6
 buf.byteLength in main AFTER transfer back from worker:  8                     main.js:10
 ```
 

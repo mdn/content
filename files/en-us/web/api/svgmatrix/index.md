@@ -62,11 +62,11 @@ An **`SVGMatrix`** object can be designated as read only, which means that attem
 - {{domxref("SVGMatrix.rotate()")}}
   - : Post-multiplies a rotation transformation on the current matrix and returns the resulting matrix as `SVGMatrix`.
 - {{domxref("SVGMatrix.rotateFromVector()")}}
-  - : Post-multiplies a rotation transformation on the current matrix and returns the resulting matrix as `SVGMatrix`. The rotation angle is determined by taking (+/-) atan(y/x). The direction of the vector (x, y) determines whether the positive or negative angle value is used.
+  - : Post-multiplies a rotation transformation on the current matrix and returns the resulting matrix as `SVGMatrix`. The rotation angle is determined by taking (+/-) atan(y/x). The direction of the vector (x, y) determines whether the positive or negative angle value is used.
 - {{domxref("SVGMatrix.flipX()")}}
-  - : Post-multiplies the transformation \[-1 0 0 1 0 0] and returns the resulting matrix as `SVGMatrix`.
+  - : Post-multiplies the transformation \[-1 0 0 1 0 0] and returns the resulting matrix as `SVGMatrix`.
 - {{domxref("SVGMatrix.flipY()")}}
-  - : Post-multiplies the transformation \[1 0 0 -1 0 0] and returns the resulting matrix as `SVGMatrix`.
+  - : Post-multiplies the transformation \[1 0 0 -1 0 0] and returns the resulting matrix as `SVGMatrix`.
 - {{domxref("SVGMatrix.skewX()")}}
   - : Post-multiplies a skewX transformation on the current matrix and returns the resulting matrix as `SVGMatrix`.
 - {{domxref("SVGMatrix.skewY()")}}

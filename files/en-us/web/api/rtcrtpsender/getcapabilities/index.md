@@ -22,8 +22,8 @@ browser-compat: api.RTCRtpSender.getCapabilities
 
 The _static function_
 **`RTCRtpSender.getCapabilities()`** returns
-an {{domxref("RTCRtpCapabilities")}} object describing the codecs and capabilities
-supported by the {{domxref("RTCRtpSender")}}.
+an {{domxref("RTCRtpCapabilities")}} object describing the codecs and capabilities
+supported by the {{domxref("RTCRtpSender")}}.
 
 You can, similarly, obtain the capabilities of {{domxref("RTCRtpReceiver")}}s by
 calling the static function {{domxref("RTCRtpReceiver.getCapabilities()")}}.

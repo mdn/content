@@ -22,12 +22,12 @@ browser-compat: api.RTCRtpSender
 
 The **`RTCRtpSender`** interface provides the ability to control and obtain details about how a particular {{domxref("MediaStreamTrack")}} is encoded and sent to a remote peer.
 
-With it, you can configure the encoding used for the corresponding track, get information about the device's media capabilities, and so forth. You can also obtain access to an {{domxref("RTCDTMFSender")}} which can be used to send {{Glossary("DTMF")}} codes (to simulate the user pressing buttons on a telephone's dial pad) to the remote peer.
+With it, you can configure the encoding used for the corresponding track, get information about the device's media capabilities, and so forth. You can also obtain access to an {{domxref("RTCDTMFSender")}} which can be used to send {{Glossary("DTMF")}} codes (to simulate the user pressing buttons on a telephone's dial pad) to the remote peer.
 
 ## Properties
 
 - {{domxref("RTCRtpSender.dtmf")}} {{ReadOnlyInline}}
-  - : An {{domxref("RTCDTMFSender")}} which can be used to send {{Glossary("DTMF")}} tones using `telephone-event` payloads on the {{Glossary("RTP")}} session represented by the `RTCRtpSender` object. If `null`, the track and/or the connection doesn't support DTMF. Only audio tracks can support DTMF.
+  - : An {{domxref("RTCDTMFSender")}} which can be used to send {{Glossary("DTMF")}} tones using `telephone-event` payloads on the {{Glossary("RTP")}} session represented by the `RTCRtpSender` object. If `null`, the track and/or the connection doesn't support DTMF. Only audio tracks can support DTMF.
 - {{domxref("RTCRtpSender.track")}} {{ReadOnlyInline}}
   - : The {{domxref("MediaStreamTrack")}} which is being handled by the `RTCRtpSender`. If `track` is `null`, the `RTCRtpSender` doesn't transmit anything.
 - {{domxref("RTCRtpSender.transport")}} {{ReadOnlyInline}}

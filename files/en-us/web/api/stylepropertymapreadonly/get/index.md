@@ -15,7 +15,7 @@ browser-compat: api.StylePropertyMapReadOnly.get
 
 The **`get()`** method of the
 {{domxref("StylePropertyMapReadOnly")}} interface returns a {{domxref("CSSStyleValue")}}
-object for the first value of the specified property.
+object for the first value of the specified property.
 
 ## Syntax
 
@@ -60,7 +60,7 @@ a {
 We use the Element's
 [`computedStyleMap()`](/en-US/docs/Web/API/Element/computedStyleMap)
 to return a _StylePropertyMapReadOnly_ object. We create an array of properties
-of interest and use the StylePropertyMapReadOnly's `get()` method to get only
+of interest and use the StylePropertyMapReadOnly's `get()` method to get only
 those values.
 
 ```js
@@ -79,14 +79,14 @@ const ofInterest = ['font-weight', 'border-left-color', 'color', '--color'];
 // iterate over our properties of interest
 for ( let i = 0; i < ofInterest.length; i++ ) {
 
-  // properties
+  // properties
   const cssProperty = document.createElement('dt');
-  cssProperty.innerText = ofInterest[i];
+  cssProperty.innerText = ofInterest[i];
   stylesList.appendChild(cssProperty);
 
   // values
   const cssValue = document.createElement('dd');
-  // use get() to find the value
+  // use get() to find the value
   cssValue.innerText = styleMap.get(ofInterest[i]);
   stylesList.appendChild(cssValue);
 }

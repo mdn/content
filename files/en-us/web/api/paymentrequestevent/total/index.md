@@ -15,7 +15,7 @@ browser-compat: api.PaymentRequestEvent.total
 
 The **`total`** readonly property of the
 {{domxref("PaymentRequestEvent")}} interface returns a
-{{domxref('PaymentCurrencyAmount')}} object containing the total amount being requested
+{{domxref('PaymentCurrencyAmount')}} object containing the total amount being requested
 for payment.
 
 ## Syntax

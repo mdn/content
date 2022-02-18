@@ -12,9 +12,9 @@ tags:
 ---
 {{DefaultAPISidebar("Permissions API")}}
 
-The **Permissions API** provides a consistent programmatic way to query the status of API permissions attributed to the current context. For example, the Permissions API can be used to determine if permission to access a particular API has been granted or denied.
+The **Permissions API** provides a consistent programmatic way to query the status of API permissions attributed to the current context. For example, the Permissions API can be used to determine if permission to access a particular API has been granted or denied.
 
-> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (although not current versions of Firefox, as [WorkerNavigator.permissions](/en-US/docs/Web/API/WorkerNavigator/permissions) is not implemented).
+> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (although not current versions of Firefox, as [WorkerNavigator.permissions](/en-US/docs/Web/API/WorkerNavigator/permissions) is not implemented).
 
 ## Concepts and usage
 

@@ -32,7 +32,7 @@ None.
 
 ## Example
 
-The following example removes all styles within the elements [style attribute](/en-US/docs/Web/HTML/Global_attributes/style).
+The following example removes all styles within the elements [style attribute](/en-US/docs/Web/HTML/Global_attributes/style).
 
 ```js
 // get the button element
