@@ -41,7 +41,7 @@ var request = ObjectStore.openCursor(query, direction);
 - direction {{optional_inline}}
   - : An [`IDBCursorDirection`](https://w3c.github.io/IndexedDB/#enumdef-idbcursordirection) telling the cursor what direction to travel.
     Valid values are `"next"`, `"nextunique"`, `"prev"`,
-    and `"prevunique"`. The default is `"next"`.
+    and `"prevunique"`. The default is `"next"`.
 
 ### Return value
 

@@ -75,8 +75,8 @@ The above rectangle will be painted half-transparent. For the fill and stroke th
 
 ```html
 <svg width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <rect x="0" y="0" width="200" height="200" fill="blue" />
-  <circle cx="100" cy="100" r="50" stroke="yellow" stroke-width="40" stroke-opacity=".5" fill="red" />
+  <rect x="0" y="0" width="200" height="200" fill="blue" />
+  <circle cx="100" cy="100" r="50" stroke="yellow" stroke-width="40" stroke-opacity=".5" fill="red" />
 </svg>
 ```
 

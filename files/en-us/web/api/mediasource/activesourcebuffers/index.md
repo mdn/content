@@ -18,7 +18,7 @@ browser-compat: api.MediaSource.activeSourceBuffers
 
 The **`activeSourceBuffers`** read-only property of the
 {{domxref("MediaSource")}} interface returns a {{domxref("SourceBufferList")}} object
-containing a subset of the {{domxref("SourceBuffer")}} objects contained within
+containing a subset of the {{domxref("SourceBuffer")}} objects contained within
 {{domxref("MediaSource.sourceBuffers", "sourceBuffers")}} — the list of objects
 providing the selected video track, enabled audio tracks, and shown/hidden text tracks.
 

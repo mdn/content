@@ -24,7 +24,7 @@ the {{domxref("MediaDeviceInfo.deviceId")}} values returned from
 ## Syntax
 
 ```js
-var sinkId = HTMLMediaElement.sinkId
+var sinkId = HTMLMediaElement.sinkId
 ```
 
 ## Specifications

@@ -21,7 +21,7 @@ var oscillator = audioCtx.createOscillator();
 oscillator.detune.setValueAtTime(100, audioCtx.currentTime); // value in cents
 ```
 
-> **Note:** though the `AudioParam` returned is read-only, the value it represents is not.
+> **Note:** though the `AudioParam` returned is read-only, the value it represents is not.
 
 ### Value
 

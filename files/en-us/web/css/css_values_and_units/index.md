@@ -20,7 +20,7 @@ Every CSS declaration includes a property / value pair. Depending on the propert
 
 Text data types are either `<string>`, a quoted series of characters, or an `<ident>`, a "CSS Identifier" which is an unquoted string. A `<string>` must be quoted with either single or double quotes. CSS Identifiers, listed in the specifications as `<ident>` or `<custom-ident>`, must be unquoted.
 
-In the CSS specifications, values that can be defined by the web developer, like keyframe animations, font-family names, or grid areas are listed as a  {{cssxref("&lt;custom-ident&gt;")}}, {{cssxref("&lt;string&gt;")}}, or both.
+In the CSS specifications, values that can be defined by the web developer, like keyframe animations, font-family names, or grid areas are listed as a  {{cssxref("&lt;custom-ident&gt;")}}, {{cssxref("&lt;string&gt;")}}, or both.
 
 When both quoted and unquoted user defined text values are permitted, the specification will list `<custom-ident> | <string>`, meaning quotes are optional, such as is the case with animation names:
 
@@ -49,7 +49,7 @@ In comparison, a data type that is a {{cssxref("&lt;string&gt;")}}, such as a st
 }
 ```
 
-While you can generally create any name you want, including using emojis, the identifier can't be `none`, `unset`, `initial`, or `inherit`, start with a digit or two dashes, and generally you don't want it to be any other pre-defined CSS keyword. See the {{cssxref("&lt;custom-ident&gt;")}} and {{cssxref("&lt;string&gt;")}} reference pages for more details.
+While you can generally create any name you want, including using emojis, the identifier can't be `none`, `unset`, `initial`, or `inherit`, start with a digit or two dashes, and generally you don't want it to be any other pre-defined CSS keyword. See the {{cssxref("&lt;custom-ident&gt;")}} and {{cssxref("&lt;string&gt;")}} reference pages for more details.
 
 ### Pre-defined keyword values
 
@@ -85,7 +85,7 @@ A {{cssxref("url()","url()")}} type uses functional notation, which accepts a `<
 
 ```css
 .box {
-  background-image: url("images/my-background.png");
+  background-image: url("images/my-background.png");
 }
 
 .box {
@@ -93,7 +93,7 @@ A {{cssxref("url()","url()")}} type uses functional notation, which accepts a `<
 }
 ```
 
-The parameter for `url()` can be either quoted or unquoted. If unquoted, it is parsed as a `<url-token>`, which has extra requirements including the escaping of certain characters. See {{cssxref("url()","url()")}}  for more information.
+The parameter for `url()` can be either quoted or unquoted. If unquoted, it is parsed as a `<url-token>`, which has extra requirements including the escaping of certain characters. See {{cssxref("url()","url()")}}  for more information.
 
 ## Numeric data types
 
@@ -240,7 +240,7 @@ The {{cssxref("&lt;image&gt;")}} value specifies all the different types of imag
 
 #### Position
 
-The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object inside a positioning area, for example a background image inside a container. This type is interpreted as a  {{cssxref("background-position")}} and therefore specified in the [CSS Backgrounds and Borders specification](https://www.w3.org/TR/css-backgrounds-3/).
+The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object inside a positioning area, for example a background image inside a container. This type is interpreted as a  {{cssxref("background-position")}} and therefore specified in the [CSS Backgrounds and Borders specification](https://www.w3.org/TR/css-backgrounds-3/).
 
 ### Functional notation
 
@@ -254,7 +254,7 @@ The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object ins
 
 [Functional notation](/en-US/docs/Web/CSS/CSS_Functions) is a type of value that can represent more complex types or invoke special processing by CSS. The syntax starts with the name of the function immediately followed by a left parenthesis `(` followed by the argument(s) to the notation followed by a right parenthesis `)`. Functions can take multiple arguments, which are formatted similarly to a CSS property value.
 
-White space is allowed, but optional inside the parentheses. (But see notes regarding whitespace within pages for `min()`, `max()`, `minmax()`, and `clamp()` functions.)
+White space is allowed, but optional inside the parentheses. (But see notes regarding whitespace within pages for `min()`, `max()`, `minmax()`, and `clamp()` functions.)
 
 Some legacy functional notations such as `rgba()` use commas, but generally commas are only used to separate items in a list. If a comma is used to separate arguments, white space is optional before and after the comma.
 
@@ -285,7 +285,7 @@ Some legacy functional notations such as `rgba()` use commas, but generally comm
       <td>
         Adds
         <code>calc()</code
-        >, <code>ch</code>, <code>rem</code>, <code>vw</code>, <code>vw</code>, <code>vmin</code>,<code> vmax</code>, <code
+        >, <code>ch</code>, <code>rem</code>, <code>vw</code>, <code>vw</code>, <code>vmin</code>,<code> vmax</code>, <code
           >Q</code
         >
       </td>
@@ -295,14 +295,14 @@ Some legacy functional notations such as `rgba()` use commas, but generally comm
       <td>{{Spec2("CSS4 Colors")}}</td>
       <td>
         Adds commaless syntaxes for
-        the <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code>,
-        and <code>hsla()</code> functions. Allows alpha values
-        in <code>rgb()</code> and <code>hsl()</code>,
-        turning <code>rgba()</code> and <code>hsla()</code> into (deprecated)
-        aliases for them.<br />Adds color keyword <code>rebeccapurple</code>.<br />Adds
+        the <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code>,
+        and <code>hsla()</code> functions. Allows alpha values
+        in <code>rgb()</code> and <code>hsl()</code>,
+        turning <code>rgba()</code> and <code>hsla()</code> into (deprecated)
+        aliases for them.<br />Adds color keyword <code>rebeccapurple</code>.<br />Adds
         4- and 8-digit hex color values, where the last digit(s) represents the
-        alpha value.<br />Adds <code>hwb()</code>, <code>device-cmyk()</code>,
-        and <code>color()</code> functions.
+        alpha value.<br />Adds <code>hwb()</code>, <code>device-cmyk()</code>,
+        and <code>color()</code> functions.
       </td>
     </tr>
     <tr>
@@ -310,8 +310,8 @@ Some legacy functional notations such as `rgba()` use commas, but generally comm
       <td>{{Spec2("CSS3 Colors")}}</td>
       <td>
         Deprecates system-colors. Adds SVG colors. Adds
-        the <code>rgba()</code>, <code>hsl()</code>,
-        and <code>hsla()</code> functions.
+        the <code>rgba()</code>, <code>hsl()</code>,
+        and <code>hsla()</code> functions.
       </td>
     </tr>
     <tr>

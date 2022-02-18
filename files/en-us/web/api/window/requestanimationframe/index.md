@@ -27,8 +27,8 @@ specified function to update an animation before the next repaint. The method ta
 callback as an argument to be invoked before the repaint.
 
 > **Note:** Your callback routine must itself call
-> `requestAnimationFrame()` again if you want to animate another frame at the
-> next repaint. `requestAnimationFrame()` is 1 shot.
+> `requestAnimationFrame()` again if you want to animate another frame at the
+> next repaint. `requestAnimationFrame()` is 1 shot.
 
 You should call this method whenever you're ready to update your animation onscreen.
 This will request that your animation function be called before the browser performs the
@@ -43,7 +43,7 @@ which indicates the current time (based on the number of milliseconds since [tim
 multiple callbacks queued by `requestAnimationFrame()` begin to fire in a
 single frame, each receives the same timestamp even though time has passed during the
 computation of every previous callback's workload (in the code example below we only
-animate the frame when the timestamp changes, i.e. on the first callback). This
+animate the frame when the timestamp changes, i.e. on the first callback). This
 timestamp is a decimal number, in milliseconds, but with a minimal precision of 1ms
 (1000 µs).
 
@@ -62,9 +62,9 @@ window.requestAnimationFrame(callback);
 
 - `callback`
   - : The function to call when it's time to update your animation for the next repaint.
-    The callback function is passed one single argument, a
+    The callback function is passed one single argument, a
     {{domxref("DOMHighResTimeStamp")}} similar to the one returned by
-    {{domxref('performance.now()')}}, indicating the point in time when
+    {{domxref('performance.now()')}}, indicating the point in time when
     `requestAnimationFrame()` starts to execute callback functions.
 
 ### Return value

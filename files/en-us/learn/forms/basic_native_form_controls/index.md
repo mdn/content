@@ -62,7 +62,7 @@ All basic text controls share some common behaviors:
 
 ### Single line text fields
 
-A single line text field is created using an {{HTMLElement("input")}} element whose {{htmlattrxref("type","input")}} attribute value is set to `text`, or by omitting the  {{htmlattrxref("type","input")}} attribute altogether (`text` is the default value). The value `text` for this attribute is also the fallback value if the value you specify for the {{htmlattrxref("type","input")}} attribute is unknown by the browser (for example if you specify `type="color"` and the browser doesn't support native color pickers).
+A single line text field is created using an {{HTMLElement("input")}} element whose {{htmlattrxref("type","input")}} attribute value is set to `text`, or by omitting the  {{htmlattrxref("type","input")}} attribute altogether (`text` is the default value). The value `text` for this attribute is also the fallback value if the value you specify for the {{htmlattrxref("type","input")}} attribute is unknown by the browser (for example if you specify `type="color"` and the browser doesn't support native color pickers).
 
 > **Note:** You can find examples of all the single line text field types on GitHub at [single-line-text-fields.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/single-line-text-fields.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html)).
 
@@ -114,7 +114,7 @@ It's worth noting that these widgets do not behave exactly like other form widge
 
 > **Note:** You can find the examples from this section on GitHub as [checkable-items.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/checkable-items.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html)).
 
-For maximum usability/accessibility, you are advised to surround each list of related items in a {{htmlelement("fieldset")}}, with a {{htmlelement("legend")}} providing an overall description of the list.  Each individual pair of {{htmlelement("label")}}/{{htmlelement("input")}} elements should be contained in its own list item (or similar). The associated {{htmlelement('label')}} is generally placed immediately after the radio button or checkbox, with the instructions for the group of radio button or checkboxes generally being the content of the {{htmlelement("legend")}}. See the examples linked above for structural examples.
+For maximum usability/accessibility, you are advised to surround each list of related items in a {{htmlelement("fieldset")}}, with a {{htmlelement("legend")}} providing an overall description of the list.  Each individual pair of {{htmlelement("label")}}/{{htmlelement("input")}} elements should be contained in its own list item (or similar). The associated {{htmlelement('label')}} is generally placed immediately after the radio button or checkbox, with the instructions for the group of radio button or checkboxes generally being the content of the {{htmlelement("legend")}}. See the examples linked above for structural examples.
 
 ### Check box
 
@@ -128,21 +128,21 @@ Related checkbox items should use the same {{htmlattrxref("name","input")}} attr
 
 ```html
 <fieldset>
-  <legend>Choose all the vegetables you like to eat</legend>
-  <ul>
-    <li>
-      <label for="carrots">Carrots</label>
-      <input type="checkbox" id="carrots" name="vegetable" value="carrots" checked>
-    </li>
-    <li>
-      <label for="peas">Peas</label>
-      <input type="checkbox" id="peas" name="vegetable" value="peas">
-    </li>
-    <li>
-      <label for="cabbage">Cabbage</label>
-      <input type="checkbox" id="cabbage" name="vegetable" value="cabbage">
-    </li>
-  </ul>
+  <legend>Choose all the vegetables you like to eat</legend>
+  <ul>
+    <li>
+      <label for="carrots">Carrots</label>
+      <input type="checkbox" id="carrots" name="vegetable" value="carrots" checked>
+    </li>
+    <li>
+      <label for="peas">Peas</label>
+      <input type="checkbox" id="peas" name="vegetable" value="peas">
+    </li>
+    <li>
+      <label for="cabbage">Cabbage</label>
+      <input type="checkbox" id="cabbage" name="vegetable" value="cabbage">
+    </li>
+  </ul>
 </fieldset>
 ```
 
@@ -166,21 +166,21 @@ Several radio buttons can be tied together. If they share the same value for the
 
 ```html
 <fieldset>
-  <legend>What is your favorite meal?</legend>
-  <ul>
-    <li>
-      <label for="soup">Soup</label>
-      <input type="radio" id="soup" name="meal" value="soup" checked>
-    </li>
-    <li>
-      <label for="curry">Curry</label>
-      <input type="radio" id="curry" name="meal" value="curry">
-    </li>
-    <li>
-      <label for="pizza">Pizza</label>
-      <input type="radio" id="pizza" name="meal" value="pizza">
-    </li>
-  </ul>
+  <legend>What is your favorite meal?</legend>
+  <ul>
+    <li>
+      <label for="soup">Soup</label>
+      <input type="radio" id="soup" name="meal" value="soup" checked>
+    </li>
+    <li>
+      <label for="curry">Curry</label>
+      <input type="radio" id="curry" name="meal" value="curry">
+    </li>
+    <li>
+      <label for="pizza">Pizza</label>
+      <input type="radio" id="pizza" name="meal" value="pizza">
+    </li>
+  </ul>
 </fieldset>
 ```
 
@@ -295,8 +295,8 @@ Many of the elements used to define form controls have some of their own specifi
 <table class="no-markdown">
   <thead>
     <tr>
-      <th scope="col">Attribute name</th>
-      <th scope="col">Default value</th>
+      <th scope="col">Attribute name</th>
+      <th scope="col">Default value</th>
       <th scope="col">Description</th>
     </tr>
   </thead>

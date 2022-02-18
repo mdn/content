@@ -12,7 +12,7 @@ tags:
 ---
 {{CSSRef}}{{Non-standard_header}}
 
-The **`::-moz-progress-bar`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents the progress bar inside a {{HTMLElement("progress")}} element. (The bar represents the amount of progress that has been made.)
+The **`::-moz-progress-bar`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents the progress bar inside a {{HTMLElement("progress")}} element. (The bar represents the amount of progress that has been made.)
 
 If you want to select the unfinished part of {{HTMLElement("progress")}} in Mozilla, please select the {{HTMLElement("progress")}} directly.
 

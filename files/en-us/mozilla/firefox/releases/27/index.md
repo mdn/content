@@ -43,13 +43,13 @@ More details in [this post](https://hacks.mozilla.org/2013/11/firefox-developer-
 
 ### JavaScript
 
-[EcmaScript 2015](/en-US/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) implementation continues!
+[EcmaScript 2015](/en-US/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) implementation continues!
 
 - The [spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) is now supported in Function calls ({{bug("762363")}}).
 - The mathematical function {{jsxref("Global_Objects/Math/hypot", "Math.hypot()")}} has been implemented ({{bug("896264")}}).
 - The {{jsxref("Operators/yield*", "yield*")}} expression is now implemented ({{bug(666396)}}).
 - The `MapIterator`, `SetIterator` and `ArrayIterator` objects now match the specification ({{bug("881226")}}).
-- [for..of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops now expect the ES2015 standard [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) moving away from SpiderMonkey old iterator protocol using `StopIteration`.
+- [for..of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops now expect the ES2015 standard [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) moving away from SpiderMonkey old iterator protocol using `StopIteration`.
 - {{jsxref("String.match")}} and {{jsxref("String.replace")}} now reset {{jsxref("RegExp.lastIndex")}} ({{bug(501739)}}).
 
 ### Interfaces/APIs/DOM
@@ -58,7 +58,7 @@ More details in [this post](https://hacks.mozilla.org/2013/11/firefox-developer-
 - Support for the two `setRange()` methods on the {{domxref("HTMLTextAreaElement")}} interface has been added ({{bug(918940)}}).
 - The methods `getAllKeys()` and `openKeyCursor()` have been added to {{domxref("IDBObjectStore")}} ({{bug(920633)}} and {{bug(920800)}}).
 - The {{domxref("HTMLFormControlsCollection")}} interface has been implemented ({{bug(913920)}}).
-- The {{domxref("CanvasRenderingContext2D")}} interface now supports the two methods {{domxref("CanvasRenderingContext2D.getLineDash()", "getLineDash()")}} and {{domxref("CanvasRenderingContext2D.setLineDash()", "setLineDash()")}} and the {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}} property  ({{bug(768067)}}).
+- The {{domxref("CanvasRenderingContext2D")}} interface now supports the two methods {{domxref("CanvasRenderingContext2D.getLineDash()", "getLineDash()")}} and {{domxref("CanvasRenderingContext2D.setLineDash()", "setLineDash()")}} and the {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}} property  ({{bug(768067)}}).
 - The `typeMustMatch` attribute has been implemented on the {{domxref("HTMLObjectElement")}} interface ({{bug(827160)}}).
 - The `copyFromChannel()` and `copyToChannel()` methods have been added to {{domxref("AudioBuffer")}} ({{bug(915524)}}).
 - `Event.isTrusted()` is now unforgeable ({{bug(637248)}}).

@@ -16,7 +16,7 @@ browser-compat: webextensions.api.browsingData.removeHistory
 
 Clears the record of web pages that the user has visited (browsing history).
 
-You can use the `removalOptions` parameter, which is a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, to:
+You can use the `removalOptions` parameter, which is a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, to:
 
 - clear only records of web pages visited after a given time
 - control whether to clear only records of normal web pages or to clear records of hosted apps and extensions as well.

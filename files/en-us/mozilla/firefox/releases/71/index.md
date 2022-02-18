@@ -9,7 +9,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 71 that will affect developers. Firefox 71 was released on December 3, 2019.
+This article provides information about the changes in Firefox 71 that will affect developers. Firefox 71 was released on December 3, 2019.
 
 ## Changes for web developers
 
@@ -43,10 +43,10 @@ This article provides information about the changes in Firefox 71 that will aff
 
 ### CSS
 
-- Added the [subgrid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid) value from CSS Grid Level 2 to {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} ({{bug(1580894)}})
-- Added support for the {{cssxref("column-span")}} property to [Multiple-column Layout](/en-US/docs/Web/CSS/CSS_Columns) ({{bug(1426010)}})
-- Added support for the `path()` value of {{cssxref("clip-path")}} ({{bug(1488530)}})
-- Mapped the `height` and `width` HTML attributes on the {{htmlelement("img")}} element to an internal {{cssxref("aspect-ratio")}} property ({{bug(1585637)}}). [See the guide to this feature on MDN](/en-US/docs/Web/Media/images/aspect_ratio_mapping).
+- Added the [subgrid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid) value from CSS Grid Level 2 to {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} ({{bug(1580894)}})
+- Added support for the {{cssxref("column-span")}} property to [Multiple-column Layout](/en-US/docs/Web/CSS/CSS_Columns) ({{bug(1426010)}})
+- Added support for the `path()` value of {{cssxref("clip-path")}} ({{bug(1488530)}})
+- Mapped the `height` and `width` HTML attributes on the {{htmlelement("img")}} element to an internal {{cssxref("aspect-ratio")}} property ({{bug(1585637)}}). [See the guide to this feature on MDN](/en-US/docs/Web/Media/images/aspect_ratio_mapping).
 
 #### Removals
 
@@ -83,7 +83,7 @@ The API also provides a way to receive notifications when the device's media con
 
 #### Canvas and WebGL
 
-- The {{domxref("OVR_multiview2")}} and {{domxref("OES_fbo_render_mipmap")}} WebGL extensions are now exposed by default ({{bug(1584277)}}, {{bug(1583878)}}).
+- The {{domxref("OVR_multiview2")}} and {{domxref("OES_fbo_render_mipmap")}} WebGL extensions are now exposed by default ({{bug(1584277)}}, {{bug(1583878)}}).
 
 #### Removals
 
@@ -110,7 +110,7 @@ The following non-standard {{domxref("DataTransfer")}} members have been removed
   - 404 returning `SERVER_BAD_CONTENT`
   - 403 returning `SERVER_FORBIDDEN`
   - 402 and Proxy 407 returning `SERVER_UNAUTHORIZED`
-  - Anything else above 400 returning `SERVER_FAILED`  ({{bug(1576333)}})
+  - Anything else above 400 returning `SERVER_FAILED`  ({{bug(1576333)}})
 
 - {{WebExtAPIRef("downloads.download")}} now includes the optional `options` parameter property `allowHttpErrors`. When set to `true`, this `boolean` flag enables a download to continue after encountering an HTTP error. When set to `false`, a download is canceled when an HTTP error is encountered. Default value: `false`. ({{bug(1578955)}})
 

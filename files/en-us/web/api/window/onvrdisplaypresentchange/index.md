@@ -38,11 +38,11 @@ The presenting state of a {{domxref("VRDisplay")}} can be checked using the
 
 ```js
 window.onvrdisplaypresentchange = function() {
-  if(vrDisplay.isPresenting) {
-    info.textContent = 'Display has started presenting.';
-  } else {
-    info.textContent = 'Display has stopped presenting.';
-  }
+  if(vrDisplay.isPresenting) {
+    info.textContent = 'Display has started presenting.';
+  } else {
+    info.textContent = 'Display has stopped presenting.';
+  }
 };
 ```
 

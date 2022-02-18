@@ -48,8 +48,8 @@ You can use the `vrdisplaydisconnect` event in an [`addEventListener`](/en-US/do
 
 ```js
 window.addEventListener('vrdisplaydisconnect', function() {
-  info.textContent = 'Display disconnected.';
-  reportDisplays();
+  info.textContent = 'Display disconnected.';
+  reportDisplays();
 });
 ```
 

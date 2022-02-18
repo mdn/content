@@ -48,7 +48,7 @@ Margins surround the border edge of a box, and provide spacing between boxes.
 - {{CSSxRef("margin-left")}}
 - {{CSSxRef("margin-right")}}
 - {{CSSxRef("margin-top")}}
-- {{CSSxRef("margin-trim")}} {{Experimental_Inline}}
+- {{CSSxRef("margin-trim")}} {{Experimental_Inline}}
 
 #### Properties controlling the paddings of a box
 

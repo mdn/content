@@ -15,7 +15,7 @@ The Boolean **`disabled`** attribute, when present, makes the element not mutabl
 
 If the `disabled` attribute is specified on a form control, the element and its form control descendants do not participate in constraint validation. Often browsers grey out such controls and it won't receive any browsing events, like mouse clicks or focus-related ones.
 
-The `disabled` attribute is supported by {{ HTMLElement("button") }}, {{ HTMLElement("command") }}, {{ HTMLElement("fieldset") }}, {{ HTMLElement("keygen") }}, {{ HTMLElement("optgroup") }}, {{ HTMLElement("option") }}, {{ HTMLElement("select") }}, {{ HTMLElement("textarea") }} and {{ HTMLElement("input")}}.
+The `disabled` attribute is supported by {{ HTMLElement("button") }}, {{ HTMLElement("command") }}, {{ HTMLElement("fieldset") }}, {{ HTMLElement("keygen") }}, {{ HTMLElement("optgroup") }}, {{ HTMLElement("option") }}, {{ HTMLElement("select") }}, {{ HTMLElement("textarea") }} and {{ HTMLElement("input")}}.
 
 This Boolean disabled attribute indicates that the user cannot interact with the control or its descendant controls. If this attribute is not specified, the control inherits its setting from the containing element, for example `fieldset`; if there is no containing element with the `disabled` attribute set, and the control itself does not have the attribute, then the control is enabled. If declared on an {{ HTMLElement("optgroup") }}, the select is still interactive (unless otherwise disabled), but none of the items in the option group are selectable.
 
@@ -47,7 +47,7 @@ If the element is `disabled`, then the element's value can not receive focus and
 
 ## Examples
 
-When form controls are disabled, many browsers will display them in a lighter, greyed-out color by default. Here are examples of a disabled checkbox, radio button, {{ HTMLElement("option") }} and {{ HTMLElement("optgroup") }}, as well as some form controls that are disabled via the disabled attribute set on the ancestor `{{ HTMLElement("fieldset")}}`  element. The {{ HTMLElement("option") }}s are disabled, but the {{ HTMLElement("select") }} itself is not. We could have disable the entire {{ HTMLElement("select") }} by adding the attribute to that element rather than its descendants.
+When form controls are disabled, many browsers will display them in a lighter, greyed-out color by default. Here are examples of a disabled checkbox, radio button, {{ HTMLElement("option") }} and {{ HTMLElement("optgroup") }}, as well as some form controls that are disabled via the disabled attribute set on the ancestor `{{ HTMLElement("fieldset")}}`  element. The {{ HTMLElement("option") }}s are disabled, but the {{ HTMLElement("select") }} itself is not. We could have disable the entire {{ HTMLElement("select") }} by adding the attribute to that element rather than its descendants.
 
 ```html
 <fieldset>
@@ -73,19 +73,19 @@ When form controls are disabled, many browsers will display them in a lighter, g
 <p>
  <label>Select an option:
   <select>
-    <optgroup label="Group 1">
-      <option>Option 1.1</option>
-    </optgroup>
-    <optgroup label="Group 2">
-      <option>Option 2.1</option>
-      <option disabled>Option 2.2</option>
-      <option>Option 2.3</option>
-    </optgroup>
-    <optgroup label="Group 3" disabled>
-      <option>Disabled 3.1</option>
-      <option>Disabled 3.2</option>
-      <option>Disabled 3.3</option>
-    </optgroup>
+    <optgroup label="Group 1">
+      <option>Option 1.1</option>
+    </optgroup>
+    <optgroup label="Group 2">
+      <option>Option 2.1</option>
+      <option disabled>Option 2.2</option>
+      <option>Option 2.3</option>
+    </optgroup>
+    <optgroup label="Group 3" disabled>
+      <option>Disabled 3.1</option>
+      <option>Disabled 3.2</option>
+      <option>Disabled 3.3</option>
+    </optgroup>
   </select>
  </label>
 </p>

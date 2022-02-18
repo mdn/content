@@ -45,7 +45,7 @@ min-content: unset;
 
 ```css
 .item {
-  width: min-content;
+  width: min-content;
   background-color: #8ca0ff;
   padding: 5px;
   margin-bottom: 1em;

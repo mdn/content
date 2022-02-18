@@ -34,8 +34,8 @@ A new {{jsxref("Array")}}.
 
 ## Example
 
-In this example we use the `values()` method to be able to access the values
-within our [`Element.computedStyleMap()`](/en-US/docs/Web/API/Element/computedStyleMap).
+In this example we use the `values()` method to be able to access the values
+within our [`Element.computedStyleMap()`](/en-US/docs/Web/API/Element/computedStyleMap).
 
 ```js
 // get a button element

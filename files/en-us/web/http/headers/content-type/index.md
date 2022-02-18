@@ -41,7 +41,7 @@ In requests, (such as {{HTTPMethod("POST")}} or {{HTTPMethod("PUT")}}), the clie
         yes, with the additional restriction that values can't contain a
         <em>CORS-unsafe request header byte</em>: 0x00-0x1F (except 0x09 (HT)),
         <code>"():&#x3C;>?@[\]{}</code>, and 0x7F (DEL).<br />It also needs to
-        have a MIME type of its parsed value (ignoring parameters) of either
+        have a MIME type of its parsed value (ignoring parameters) of either
         <code>application/x-www-form-urlencoded</code>,
         <code>multipart/form-data</code>, or <code>text/plain</code>.
       </td>

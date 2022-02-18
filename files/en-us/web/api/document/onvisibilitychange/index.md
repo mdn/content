@@ -30,7 +30,7 @@ obj.onvisibilitychange = function;
 
 ```js
 document.onvisibilitychange = function() {
-  console.log("Visibility of page has changed!");
+  console.log("Visibility of page has changed!");
 };
 ```
 

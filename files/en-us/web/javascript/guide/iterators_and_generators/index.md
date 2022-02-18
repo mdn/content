@@ -22,10 +22,10 @@ For details, see also:
 
 In JavaScript an **iterator** is an object which defines a sequence and potentially a return value upon its termination.
 
-Specifically, an iterator is any object which implements the [Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) by having a `next()` method that returns an object with two properties:
+Specifically, an iterator is any object which implements the [Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) by having a `next()` method that returns an object with two properties:
 
 - `value`
-  - : The next value in the iteration sequence.
+  - : The next value in the iteration sequence.
 - `done`
   - : This is `true` if the last value in the sequence has already been consumed. If `value` is present alongside `done`, it is the iterator's return value.
 
@@ -76,13 +76,13 @@ console.log("Iterated over sequence of size: ", result.value); // [5 numbers ret
 
 ## Generator functions
 
-While custom iterators are a useful tool, their creation requires careful programming due to the need to explicitly maintain their internal state. **Generator functions** provide a powerful alternative: they allow you to define an iterative algorithm by writing a single function whose execution is not continuous. Generator functions are written using the {{jsxref("Statements/function*","function*")}} syntax.
+While custom iterators are a useful tool, their creation requires careful programming due to the need to explicitly maintain their internal state. **Generator functions** provide a powerful alternative: they allow you to define an iterative algorithm by writing a single function whose execution is not continuous. Generator functions are written using the {{jsxref("Statements/function*","function*")}} syntax.
 
-When called, generator functions do not initially execute their code. Instead, they return a special type of iterator, called a **Generator**. When a value is consumed by calling the generator's `next` method, the Generator function executes until it encounters the `yield` keyword.
+When called, generator functions do not initially execute their code. Instead, they return a special type of iterator, called a **Generator**. When a value is consumed by calling the generator's `next` method, the Generator function executes until it encounters the `yield` keyword.
 
-The function can be called as many times as desired, and returns a new Generator each time. Each Generator may only be iterated once.
+The function can be called as many times as desired, and returns a new Generator each time. Each Generator may only be iterated once.
 
-We can now adapt the example from above. The behavior of this code is identical, but the implementation is much easier to write and read.
+We can now adapt the example from above. The behavior of this code is identical, but the implementation is much easier to write and read.
 
 ```js
 function* makeRangeIterator(start = 0, end = 100, step = 1) {
@@ -103,7 +103,7 @@ In order to be **iterable**, an object must implement the **@@iterator** method.
 
 It may be possible to iterate over an iterable more than once, or only once. It is up to the programmer to know which is the case.
 
-Iterables which can iterate only once (such as Generators) customarily return `this` from their **@@iterator** method, whereas iterables which can be iterated many times must return a new iterator on each invocation of **@@iterator**.
+Iterables which can iterate only once (such as Generators) customarily return `this` from their **@@iterator** method, whereas iterables which can be iterated many times must return a new iterator on each invocation of **@@iterator**.
 
 ```js
 function* makeIterator() {
@@ -193,24 +193,24 @@ a;
 
 Generators compute their `yield`ed values _on demand_, which allows them to efficiently represent sequences that are expensive to compute (or even infinite sequences, as demonstrated above).
 
-The {{jsxref("Global_Objects/Generator/next","next()")}} method also accepts a value, which can be used to modify the internal state of the generator. A value passed to `next()` will be received by `yield` .
+The {{jsxref("Global_Objects/Generator/next","next()")}} method also accepts a value, which can be used to modify the internal state of the generator. A value passed to `next()` will be received by `yield` .
 
-> **Note:** A value passed to the _first_ invocation of `next()` is always ignored.
+> **Note:** A value passed to the _first_ invocation of `next()` is always ignored.
 
 Here is the fibonacci generator using `next(x)` to restart the sequence:
 
 ```js
 function* fibonacci() {
-  let current = 0;
-  let next = 1;
-  while (true) {
-    let reset = yield current;
-    [current, next] = [next, next + current];
-    if (reset) {
-        current = 0;
-        next = 1;
-    }
-  }
+  let current = 0;
+  let next = 1;
+  while (true) {
+    let reset = yield current;
+    [current, next] = [next, next + current];
+    if (reset) {
+        current = 0;
+        next = 1;
+    }
+  }
 }
 
 const sequence = fibonacci();
@@ -229,7 +229,7 @@ console.log(sequence.next().value);     // 2
 
 You can force a generator to throw an exception by calling its {{jsxref("Global_Objects/Generator/throw","throw()")}} method and passing the exception value it should throw. This exception will be thrown from the current suspended context of the generator, as if the `yield` that is currently suspended were instead a `throw value` statement.
 
-If the exception is not caught from within the generator,  it will propagate up through the call to `throw()`, and subsequent calls to `next()` will result in the `done` property being `true`.
+If the exception is not caught from within the generator,  it will propagate up through the call to `throw()`, and subsequent calls to `next()` will result in the `done` property being `true`.
 
 Generators have a {{jsxref("Global_Objects/Generator/return","return(value)")}} method that returns the given value and finishes the generator itself.
 

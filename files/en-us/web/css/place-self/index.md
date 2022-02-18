@@ -103,10 +103,10 @@ The second, third, and fourth grid items are then given different values of `pla
 
 ```html
 <article class="container">
-  <span>First</span>
-  <span>Second</span>
-  <span>Third</span>
-  <span>Fourth</span>
+  <span>First</span>
+  <span>Second</span>
+  <span>Third</span>
+  <span>Fourth</span>
 </article>
 ```
 

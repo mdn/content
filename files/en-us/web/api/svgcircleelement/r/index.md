@@ -14,7 +14,7 @@ browser-compat: api.SVGCircleElement.r
 
 The **`r`** read-only property of the {{domxref("SVGCircleElement")}} interface reflects the {{SVGAttr("r")}} attribute of a {{SVGElement("circle")}} element and by that defines the radius of the circle.
 
-If unspecified, the effect is as if the value is set to `0`.
+If unspecified, the effect is as if the value is set to `0`.
 
 ## Syntax
 

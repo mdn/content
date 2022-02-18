@@ -14,8 +14,8 @@ browser-compat: api.ServiceWorkerRegistration.waiting
 
 The **`waiting`** property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a service worker whose
-{{domxref("ServiceWorker.state")}} is `installed`. This property is initially
-set to `null`.
+{{domxref("ServiceWorker.state")}} is `installed`. This property is initially
+set to `null`.
 
 > **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 

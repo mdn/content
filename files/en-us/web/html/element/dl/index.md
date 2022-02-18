@@ -220,7 +220,7 @@ To change the indentation of a description term, use the [CSS](/en-US/docs/Web/C
 
 ## Accessibility concerns
 
-Each screen reader announces `<dl>` content differently. As of iOS 14, VoiceOver will announce that `<dl>` content is a list when navigating with the virtual cursor (not via the read-all command). Because of this, make sure each list item's content is written in such a way that it communicates its relationship to the other list items in the list grouping.
+Each screen reader announces `<dl>` content differently. As of iOS 14, VoiceOver will announce that `<dl>` content is a list when navigating with the virtual cursor (not via the read-all command). Because of this, make sure each list item's content is written in such a way that it communicates its relationship to the other list items in the list grouping.
 
 - [CodePen - HTML Buddies: dt & dd](https://codepen.io/aardrian/debug/NzGaKP)
 - [VoiceOver on iOS 14 Supports Description Lists](https://adrianroselli.com/2020/09/voiceover-on-ios-14-supports-description-lists.html)

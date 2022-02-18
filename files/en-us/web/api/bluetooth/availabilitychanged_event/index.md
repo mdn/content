@@ -37,7 +37,7 @@ Bluetooth.addEventListener("availabilitychanged", function(event) {
 });
 ```
 
-Alternatively, you can use the `Bluetooth.onavailabilitychanged` event handler property to establish a handler for the `availabilitychanged` event:
+Alternatively, you can use the `Bluetooth.onavailabilitychanged` event handler property to establish a handler for the `availabilitychanged` event:
 
 ```js
 Bluetooth.onavailabilitychanged = function(event) {

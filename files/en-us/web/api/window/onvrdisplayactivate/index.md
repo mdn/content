@@ -35,8 +35,8 @@ window.onvrdisplayactivate = function() { /* ... */ };
 
 ```js
 window.onvrdisplayactivate = function() {
-  info.textContent = 'Display activated.';
-  reportDisplays();
+  info.textContent = 'Display activated.';
+  reportDisplays();
 };
 ```
 

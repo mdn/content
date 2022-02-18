@@ -106,7 +106,7 @@ const myObject = {
 
 - [How do you declare a variable?](/en-US/docs/Learn/JavaScript/First_steps/Variables#declaring_a_variable)
 - [How do you initialize a variable with a value?](/en-US/docs/Learn/JavaScript/First_steps/Variables#initializing_a_variable)
-- [How do you update a variable's value?](/en-US/docs/Learn/JavaScript/First_steps/Variables#updating_a_variable) (also see [Assignment operators](/en-US/docs/Learn/JavaScript/First_steps/Math#assignment_operators))
+- [How do you update a variable's value?](/en-US/docs/Learn/JavaScript/First_steps/Variables#updating_a_variable) (also see [Assignment operators](/en-US/docs/Learn/JavaScript/First_steps/Math#assignment_operators))
 - [What data types can values have in JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/Variables#variable_types)
 - [What does 'loosely typed' mean?](/en-US/docs/Learn/JavaScript/First_steps/Variables#loose_typing)
 

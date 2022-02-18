@@ -89,13 +89,13 @@ The MDN main content pane is about 700px wide on desktop, so embedded MDN exampl
 
 For height, we'd recommend keeping the rendered example at below 700px in height if at all possible, for maximum onscreen legibility.
 
-You should also think about making your examples responsive to  some degree, so they are also useful on mobile devices.
+You should also think about making your examples responsive to  some degree, so they are also useful on mobile devices.
 
 ### Use of images and other media
 
 Sometimes you'll want to include images or other media in an example. If you do:
 
-- Make sure their license allows you to use them. Try to use media that has a very permissive license such as [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/), or at least one that is compatible with our general content license —  [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA).
+- Make sure their license allows you to use them. Try to use media that has a very permissive license such as [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/), or at least one that is compatible with our general content license —  [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA).
 - For images, run them through <https://tinypng.com> or <https://imageoptim.com>, to reduce the page weight of the examples.
 - For `SVG`, run the code through [SVGOMG](https://jakearchibald.github.io/svgomg/), and ensure that the `SVG` file has an empty line at the end of the file.
 - When displaying icons on a page (e.g. via {{cssxref("background-image")}}), use icons from the [mdn-dinocons](https://github.com/mdn/mdn-dinocons) repository, where appropriate, and try to match their style in other cases.

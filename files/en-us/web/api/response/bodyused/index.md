@@ -25,7 +25,7 @@ we create a new request using the {{domxref("Request.Request","Request()")}} con
 then use it to fetch a JPG. When the fetch is successful, we read a {{domxref("Blob")}} out of the response using `blob()`,
 put it into an object URL using {{domxref("URL.createObjectURL")}}, and then set that URL as the source of an {{htmlelement("img")}} element to display the image.
 
-Notice that we log `response.bodyUsed` to the console once before the `response.blob()` call and once after.
+Notice that we log `response.bodyUsed` to the console once before the `response.blob()` call and once after.
 This returns `false` before and `true` afterwards, as at that point the body has been read.
 
 ### HTML Content
@@ -42,10 +42,10 @@ fetch('https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg').the
     console.log(response.bodyUsed);
     var res = response.blob();
     console.log(response.bodyUsed);
-    return res;
+    return res;
 }).then(function(response) {
-    var objectURL = URL.createObjectURL(response);
-    myImage.src = objectURL;
+    var objectURL = URL.createObjectURL(response);
+    myImage.src = objectURL;
 });
 ```
 

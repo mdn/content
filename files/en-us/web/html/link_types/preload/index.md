@@ -114,9 +114,9 @@ Therefore, specifying preloading for multiple types of the same resource is disc
 
 However, the lack of preloading doesn’t prevent the `video/webm` video from actually being used by those who need it: for users whose browsers don’t have `video/mp4` support but do have `video/webm` support, the code in the example above does still cause the `video/webm` video to be used — but it does so without also causing it to also be preloaded unnecessarily for the majority of other users.
 
-## CORS-enabled fetches
+## CORS-enabled fetches
 
-When preloading resources that are fetched with [CORS](/en-US/docs/Web/HTTP/CORS) enabled (e.g. [`fetch()`](/en-US/docs/Web/API/fetch), [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) or [fonts](/en-US/docs/Web/CSS/@font-face)), special care needs to be taken to setting the {{htmlattrxref("crossorigin","link")}} attribute on your [`<link>`](/en-US/docs/Web/HTML/Element/link) element. The attribute needs to be set to match the resource's CORS and credentials mode, even when the fetch is not cross-origin.
+When preloading resources that are fetched with [CORS](/en-US/docs/Web/HTTP/CORS) enabled (e.g. [`fetch()`](/en-US/docs/Web/API/fetch), [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) or [fonts](/en-US/docs/Web/CSS/@font-face)), special care needs to be taken to setting the {{htmlattrxref("crossorigin","link")}} attribute on your [`<link>`](/en-US/docs/Web/HTML/Element/link) element. The attribute needs to be set to match the resource's CORS and credentials mode, even when the fetch is not cross-origin.
 
 As mentioned above, one interesting case where this applies is font files. Because of various reasons, these have to be fetched using anonymous-mode CORS (see [Font fetching requirements](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)).
 

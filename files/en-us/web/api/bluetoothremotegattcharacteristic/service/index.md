@@ -14,8 +14,8 @@ browser-compat: api.BluetoothRemoteGATTCharacteristic.service
 ---
 {{SeeCompatTable}}
 
-The **`BluetoothRemoteGATTCharacteristic.service`** read-only
-property returns the {{domxref("BluetoothRemoteGATTService")}} this characteristic belongs to.
+The **`BluetoothRemoteGATTCharacteristic.service`** read-only
+property returns the {{domxref("BluetoothRemoteGATTService")}} this characteristic belongs to.
 
 ## Syntax
 

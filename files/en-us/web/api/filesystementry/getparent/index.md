@@ -51,7 +51,7 @@ FileSystemEntry.getParent(successCallback[, errorCallback]);
 
 ## Example
 
-This example renames  the file specified by the variable `fileEntry` to
+This example renames  the file specified by the variable `fileEntry` to
 `"newname.html"`.
 
 ```js

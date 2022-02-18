@@ -8,7 +8,7 @@ tags:
 ---
 {{MDNSidebar}}
 
-The MDN [JavaScript error reference](/en-US/docs/Web/JavaScript/Reference/Errors) is a project aiming to help web developers with errors occurring in the [Developer Console](/en-US/docs/Tools/Web_Console). You can see this feature in action in Firefox — JavaScript errors contain a "Learn more" link that takes you to the JavaScript error reference containing additional advice for fixing issues.
+The MDN [JavaScript error reference](/en-US/docs/Web/JavaScript/Reference/Errors) is a project aiming to help web developers with errors occurring in the [Developer Console](/en-US/docs/Tools/Web_Console). You can see this feature in action in Firefox — JavaScript errors contain a "Learn more" link that takes you to the JavaScript error reference containing additional advice for fixing issues.
 
 In order to help this project, we need to write more error documentation on MDN so that we can add more links to the tools where the messages are thrown.
 

@@ -9,7 +9,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 68 that will affect developers. Firefox 68 was released on July 9, 2019.
+This article provides information about the changes in Firefox 68 that will affect developers. Firefox 68 was released on July 9, 2019.
 
 ## Changes for web developers
 
@@ -44,7 +44,7 @@ This article provides information about the changes in Firefox 68 that will af
 #### Other
 
 - The [Accessibility Inspector](/en-US/docs/Tools/Accessibility_inspector) now includes a new _Check for issues_ feature, which will include a number of audit tools to highlight accessibility problems on your web pages. The first available check is _contrast_, for highlighting color contrast problems.
-- The preference that controls the visibility of internal extensions (system add-ons and hidden extensions) on the [about:debugging](/en-US/docs/Tools/about:debugging) page has been changed from `devtools.aboutdebugging.showSystemAddons` to `devtools.aboutdebugging.showHiddenAddons` ({{bug(1544372)}}).
+- The preference that controls the visibility of internal extensions (system add-ons and hidden extensions) on the [about:debugging](/en-US/docs/Tools/about:debugging) page has been changed from `devtools.aboutdebugging.showSystemAddons` to `devtools.aboutdebugging.showHiddenAddons` ({{bug(1544372)}}).
 - [Responsive design mode](/en-US/docs/Tools/Responsive_Design_Mode) has been redesigned — the _Device Settings_ dialog (device selection menu > _Edit List..._) is now more intuitive and simpler to use ({{bug(1487857)}}).
 
 #### Removals
@@ -56,26 +56,26 @@ This article provides information about the changes in Firefox 68 that will af
 - The {{HTMLElement("track")}} element — represented by {{domxref("HTMLTrackElement")}} — now receives a {{domxref("HTMLTrackElement.cuechange_event", "cuechange")}} event in addition to the {{domxref("TextTrack")}} itself, if the text track is a contained by a media element ({{bug(1548731)}}).
 - {{htmlelement("link")}} elements support the `disabled` attribute again, albeit with different behavior. When `disabled` is set on a `<link>` element along with `rel="stylesheet"`, the referenced stylesheet is not loaded during page load, and will be loaded on demand when the `disabled` attribute is changed to `false` or removed ({{bug(1281135)}}).
 
-####  Removals
+####  Removals
 
 - [`<meta http-equiv="set-cookie">`](/en-US/docs/Web/HTML/Element/meta) is no longer supported ({{bug(1457503)}}).
 
 ### CSS
 
-- [CSS Scroll Snapping](/en-US/docs/Web/CSS/CSS_Scroll_Snap) has been updated to the latest version of the specification ({{bug(1312163)}}) and ({{bug(1544136)}}), this includes:
+- [CSS Scroll Snapping](/en-US/docs/Web/CSS/CSS_Scroll_Snap) has been updated to the latest version of the specification ({{bug(1312163)}}) and ({{bug(1544136)}}), this includes:
 
-  - The `scroll-padding` properties ({{bug(1373832)}})
-  - The `scroll-margin` properties ({{bug(1373833)}})
+  - The `scroll-padding` properties ({{bug(1373832)}})
+  - The `scroll-margin` properties ({{bug(1373833)}})
   - {{CSSxRef("scroll-snap-align")}} ({{bug(1373835)}})
 
 - The {{CSSxRef("-webkit-line-clamp")}} property has been implemented for compatibility with other browsers ({{bug(866102)}}).
-- Support has been added for the {{CSSxRef("::marker")}} pseudo-element ({{bug(205202)}}) and animation for `::marker` pseudos ({{bug(1538618)}})
-- We changed {{CSSxRef("color_value#currentcolor_keyword", "currentColor")}} to be a computed value (except for the {{cssxref("color")}} property)  ({{bug(760345)}}).
-- Support has been fixed for the `ch` length unit so it now matches the spec (fallback for no '0' glyph, vertical metrics) ({{bug(282126)}})
-- The  {{CSSxRef("counter-set")}} property has been implemented. ({{bug(1518201)}}).
-- We now implement list numbering using a built-in "list-item" counter; this fixes list numbering bugs ({{bug(288704)}}).
-- Selector matching and parsing support has been implemented for [`::part()`](/en-US/docs/Web/CSS/::part) ({{bug(1545430)}}) and ({{bug(1545425)}}).
-- [CSS Transforms](/en-US/docs/Web/CSS/CSS_Transforms) are now supported in indirectly rendered things e.g.)  {{SVGElement("mask")}},  {{SVGElement("marker")}},  {{SVGElement("pattern")}},  {{SVGElement("clipPath")}} ({{bug(1323962)}}).
+- Support has been added for the {{CSSxRef("::marker")}} pseudo-element ({{bug(205202)}}) and animation for `::marker` pseudos ({{bug(1538618)}})
+- We changed {{CSSxRef("color_value#currentcolor_keyword", "currentColor")}} to be a computed value (except for the {{cssxref("color")}} property)  ({{bug(760345)}}).
+- Support has been fixed for the `ch` length unit so it now matches the spec (fallback for no '0' glyph, vertical metrics) ({{bug(282126)}})
+- The  {{CSSxRef("counter-set")}} property has been implemented. ({{bug(1518201)}}).
+- We now implement list numbering using a built-in "list-item" counter; this fixes list numbering bugs ({{bug(288704)}}).
+- Selector matching and parsing support has been implemented for [`::part()`](/en-US/docs/Web/CSS/::part) ({{bug(1545430)}}) and ({{bug(1545425)}}).
+- [CSS Transforms](/en-US/docs/Web/CSS/CSS_Transforms) are now supported in indirectly rendered things e.g.)  {{SVGElement("mask")}},  {{SVGElement("marker")}},  {{SVGElement("pattern")}},  {{SVGElement("clipPath")}} ({{bug(1323962)}}).
 - While we're keeping the prefixed versions of the various gradient properties ({{cssxref("linear-gradient()")}}, {{cssxref("radial-gradient()")}}, and {{cssxref("repeating-radial-gradient()")}} available for compatibility reasons, we have revised how they're parsed so that they're handled much more like the non-prefixed versions. This means that certain existing styles won't work correctly.
 
   In particular, the complicated syntax taking both an angle and a position will no longer work, and the `to` keyword in the `<side-or-corner>` parameter is not required for the prefixed gradient properties. You are encouraged to use the standard, non-prefixed gradient properties instead, as they're now widely supported ({{bug(1547939)}}).
@@ -83,7 +83,7 @@ This article provides information about the changes in Firefox 68 that will af
 #### Removals
 
 - {{CSSxRef("scroll-snap-coordinate")}}, {{CSSxRef("scroll-snap-destination")}}, {{CSSxRef("scroll-snap-type-x")}} and {{CSSxRef("scroll-snap-type-y")}} have been removed.
-- The {{CSSxRef("scroll-snap-type")}} property has become a longhand, so the old shorthand syntax like `scroll-snap-type:mandatory` will stop working.
+- The {{CSSxRef("scroll-snap-type")}} property has become a longhand, so the old shorthand syntax like `scroll-snap-type:mandatory` will stop working.
 
 ### SVG
 
@@ -130,7 +130,7 @@ _No changes._
 
 #### Removals
 
-- Removed the non-standard {{DOMxRef("XMLDocument.load()")}} method ({{bug(332175)}}).
+- Removed the non-standard {{DOMxRef("XMLDocument.load()")}} method ({{bug(332175)}}).
 - Removed the non-standard {{DOMxRef("XMLDocument.async")}} property ({{bug(1328138)}}).
 - The {{domxref("RTCIceCredentialType")}} `token` value has been removed ({{bug(1529595)}}).
 
@@ -144,7 +144,7 @@ _No changes._
 
 ### Security
 
-- Due to [CVE-2019-11730: Same-origin policy treats all files in a directory as having the same-origin](https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730), changes have been made so that Firefox now treats files in the same directory as being from different origins. This has a number of side-effects on what will work in documents loaded via file:// URLs (see {{bug("file-fallout")}} for useful background research). For example, workers can no longer be loaded.
+- Due to [CVE-2019-11730: Same-origin policy treats all files in a directory as having the same-origin](https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730), changes have been made so that Firefox now treats files in the same directory as being from different origins. This has a number of side-effects on what will work in documents loaded via file:// URLs (see {{bug("file-fallout")}} for useful background research). For example, workers can no longer be loaded.
 
 ### WebDriver conformance (Marionette)
 

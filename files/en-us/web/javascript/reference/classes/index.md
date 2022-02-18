@@ -134,13 +134,13 @@ See also [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_a
 ```js
 class Polygon {
   constructor(...sides) {
-    this.sides = sides;
+    this.sides = sides;
   }
   // Method
   *getSides() {
     for(const side of this.sides){
       yield side;
-    }
+    }
   }
 }
 
@@ -162,7 +162,7 @@ class Point {
     this.y = y;
   }
 
-  static displayName = "Point";
+  static displayName = "Point";
   static distance(a, b) {
     const dx = a.x - b.x;
     const dy = a.y - b.y;
@@ -207,7 +207,7 @@ let eat = Animal.eat;
 eat(); // undefined
 ```
 
-If we rewrite the above using traditional function-based syntax in non–strict mode, then `this` method calls are automatically bound to the initial `this` value, which by default is the {{Glossary("Global_object", "global object")}}.
+If we rewrite the above using traditional function-based syntax in non–strict mode, then `this` method calls are automatically bound to the initial `this` value, which by default is the {{Glossary("Global_object", "global object")}}.
 In strict mode, autobinding will not happen; the value of `this` remains as passed.
 
 ```js

@@ -15,7 +15,7 @@ browser-compat: api.FileSystemFileHandle.createWritable
 
 The **`createWritable()`** method of the
 {{domxref("FileSystemFileHandle")}} interface creates
-a {{domxref('FileSystemWritableFileStream')}} that can be used to write to a file.
+a {{domxref('FileSystemWritableFileStream')}} that can be used to write to a file.
 The method returns a {{jsxref('Promise')}} which resolves to this created stream.
 
 Any changes made through the stream won’t be reflected in the file represented by the

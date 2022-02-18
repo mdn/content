@@ -32,8 +32,8 @@ var mySyncEvent = new SyncEvent(type, init)
     object. Options are as follows:
 
     - `tag`: A developer-defined unique identifier for
-      this `SyncEvent`.
-    - `lastChance`: A boolean value indicating that the user agent
+      this `SyncEvent`.
+    - `lastChance`: A boolean value indicating that the user agent
       will not make further synchronization attempts after the current attempt.
 
 ## Browser compatibility

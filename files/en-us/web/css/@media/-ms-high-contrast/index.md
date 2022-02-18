@@ -46,7 +46,7 @@ The **`-ms-high-contrast`** media feature is specified as one of the following v
 
 ```css
 @media screen and (-ms-high-contrast: black-on-white) {
-  div { background-image: url('image-bw.png'); }
+  div { background-image: url('image-bw.png'); }
 }
 ```
 
@@ -54,7 +54,7 @@ The **`-ms-high-contrast`** media feature is specified as one of the following v
 
 ```css
 @media screen and (-ms-high-contrast: white-on-black) {
-  div { background-image: url('image-wb.png'); }
+  div { background-image: url('image-wb.png'); }
 }
 ```
 
@@ -93,5 +93,5 @@ The `-ms-high-contrast` media feature was introduced in Windows 8.
 
 ## See also
 
-- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 - [@media](/en-US/docs/Web/CSS/@media)

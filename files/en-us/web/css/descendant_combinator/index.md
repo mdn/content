@@ -25,7 +25,7 @@ The descendant combinator is technically one or more {{Glossary("CSS")}} white s
 
 ```css
 selector1 selector2 {
-  /* property declarations */
+  /* property declarations */
 }
 ```
 

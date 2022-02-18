@@ -28,7 +28,7 @@ A shared cache is a cache that stores responses to be reused by more than one us
 
 ## Targets of caching operations
 
-HTTP caching is optional but usually desirable. HTTP caches are typically limited to caching responses to the request method {{HTTPMethod("GET")}}; they may decline other methods. The primary cache key consists of the request method and target URI (often, only the URI is used because only `GET` requests are caching targets).
+HTTP caching is optional but usually desirable. HTTP caches are typically limited to caching responses to the request method {{HTTPMethod("GET")}}; they may decline other methods. The primary cache key consists of the request method and target URI (often, only the URI is used because only `GET` requests are caching targets).
 
 Common forms of caching entries are:
 
@@ -64,7 +64,7 @@ Cache-Control: no-cache
 
 #### Private and public caches
 
-The "public" directive indicates that the response may be cached by any cache. This can be useful if pages with HTTP authentication or response status codes that aren't normally cacheable should now be cached.
+The "public" directive indicates that the response may be cached by any cache. This can be useful if pages with HTTP authentication or response status codes that aren't normally cacheable should now be cached.
 
 On the other hand, "private" indicates that the response is intended for a single user only and must not be stored by a shared cache. A private browser cache may store the response in this case.
 
@@ -75,7 +75,7 @@ Cache-Control: public
 
 #### Expiration
 
-The most important directive here is `max-age=<seconds>`, which is the maximum amount of time in which a resource will be considered [fresh](#freshness). This directive is relative to the time of the request, and overrides the {{HTTPHeader("Expires")}} header (if set). For the files in the application that will not change, you can normally use aggressive caching. This includes static files such as images, CSS files, and JavaScript files.
+The most important directive here is `max-age=<seconds>`, which is the maximum amount of time in which a resource will be considered [fresh](#freshness). This directive is relative to the time of the request, and overrides the {{HTTPHeader("Expires")}} header (if set). For the files in the application that will not change, you can normally use aggressive caching. This includes static files such as images, CSS files, and JavaScript files.
 
 For more details, see also the [Freshness](#freshness) section.
 
@@ -93,9 +93,9 @@ Cache-Control: must-revalidate
 
 ### The `Pragma` header
 
-{{HTTPHeader("Pragma")}} is an HTTP/1.0 header. `Pragma: no-cache` is like `Cache-Control: no-cache` in that it forces caches to submit requests to the origin server for validation before releasing a cached copy. However, `Pragma` is not specified for HTTP responses and is therefore not a reliable replacement for the general HTTP/1.1 `Cache-Control` header.
+{{HTTPHeader("Pragma")}} is an HTTP/1.0 header. `Pragma: no-cache` is like `Cache-Control: no-cache` in that it forces caches to submit requests to the origin server for validation before releasing a cached copy. However, `Pragma` is not specified for HTTP responses and is therefore not a reliable replacement for the general HTTP/1.1 `Cache-Control` header.
 
-`Pragma` should only be used for backwards compatibility with HTTP/1.0 caches where the `Cache-Control` HTTP/1.1 header is not yet present.
+`Pragma` should only be used for backwards compatibility with HTTP/1.0 caches where the `Cache-Control` HTTP/1.1 header is not yet present.
 
 ## Freshness
 
@@ -126,7 +126,7 @@ For more information, see [Calculating Freshness Lifetime](https://httpwg.org/sp
 
 If an origin server does not explicitly specify freshness (for example, using a {{HTTPHeader("Cache-Control")}} or {{HTTPHeader("Expires")}} header), then a heuristic approach may be used.
 
-If this is the case, look for a {{HTTPHeader("Last-Modified")}} header. If the header is present, then the cache's [freshness lifetime](#freshness_lifetime) is equal to the value of the `Date` header minus the value of the `Last-modified` header divided by 10. The expiration time is computed as follows:
+If this is the case, look for a {{HTTPHeader("Last-Modified")}} header. If the header is present, then the cache's [freshness lifetime](#freshness_lifetime) is equal to the value of the `Date` header minus the value of the `Last-modified` header divided by 10. The expiration time is computed as follows:
 
 ```
 expirationTime = responseTime + freshnessLifetime - currentAge
@@ -168,9 +168,9 @@ When a validation request is made, the server can either ignore the validation r
 
 The {{HTTPHeader("Vary")}} HTTP response header determines how to match future request headers to decide whether a cached response can be used or a [fresh](#freshness) one must be requested from the origin server.
 
-When a cache receives a request that has a `Vary` header field, it must not use a cached response by default unless all header fields specified in the `Vary` header match in both the original (cached) request and the new request.
+When a cache receives a request that has a `Vary` header field, it must not use a cached response by default unless all header fields specified in the `Vary` header match in both the original (cached) request and the new request.
 
-![The Vary header leads cache to use more HTTP headers as key for the cache.](http_vary.png)This feature is commonly used to allow a resource to be cached in uncompressed and (various) compressed forms, and served appropriately to user agents based on the encodings that they support. For example, a server can set `Vary: Accept-Encoding` to ensure that a separate version of a resource is cached for all requests that specify support for a particular set of encodings, for example, `Accept-Encoding: gzip,deflate,sdch`.
+![The Vary header leads cache to use more HTTP headers as key for the cache.](http_vary.png)This feature is commonly used to allow a resource to be cached in uncompressed and (various) compressed forms, and served appropriately to user agents based on the encodings that they support. For example, a server can set `Vary: Accept-Encoding` to ensure that a separate version of a resource is cached for all requests that specify support for a particular set of encodings, for example, `Accept-Encoding: gzip,deflate,sdch`.
 
 ```
 Vary: Accept-Encoding
@@ -178,7 +178,7 @@ Vary: Accept-Encoding
 
 > **Note:** Use `Vary` with care. It can easily reduce the effectiveness of caching! A caching server should use [normalization](#normalization) to reduce duplicated cache entries and unnecessary requests to the origin server. This is particularly true when you use `Vary` with headers and header values that can have many values.
 
-The `Vary` header can also be useful for serving different content to desktop and mobile users, or to allow search engines to discover the mobile version of a page (and perhaps also tell them that no [Cloaking](https://en.wikipedia.org/wiki/Cloaking) is intended). This is usually achieved with the `Vary: User-Agent` header, and works because the {{HTTPHeader("User-Agent")}} header value is different for mobile and desktop clients.
+The `Vary` header can also be useful for serving different content to desktop and mobile users, or to allow search engines to discover the mobile version of a page (and perhaps also tell them that no [Cloaking](https://en.wikipedia.org/wiki/Cloaking) is intended). This is usually achieved with the `Vary: User-Agent` header, and works because the {{HTTPHeader("User-Agent")}} header value is different for mobile and desktop clients.
 
 ```
 Vary: User-Agent
@@ -188,9 +188,9 @@ Vary: User-Agent
 
 As discussed above, caching servers will by default match future requests _only_ to requests with _exactly_ the same headers and header values. That means a request will be made to the origin and a new cache will be created for every slight variant that may be specified by different user-agents.
 
-For example, by default, all of the following results in a separate request to the origin and a separate cache entry: `Accept-Encoding: gzip,deflate,sdch`, `Accept-Encoding: gzip,deflate`, `Accept-Encoding: gzip`. This is true even though the origin server will probably respond with — and store — the same resource for all requests (a gzip)!
+For example, by default, all of the following results in a separate request to the origin and a separate cache entry: `Accept-Encoding: gzip,deflate,sdch`, `Accept-Encoding: gzip,deflate`, `Accept-Encoding: gzip`. This is true even though the origin server will probably respond with — and store — the same resource for all requests (a gzip)!
 
-To avoid unnecessary requests and duplicated cache entries, caching servers should use **normalization** to pre-process the request and cache only files that are needed. For example, in the case of `Accept-Encoding`, you could check for `gzip` and other compression types in the header before doing further processing, and otherwise unset the header. In "pseudo code" this might look like:
+To avoid unnecessary requests and duplicated cache entries, caching servers should use **normalization** to pre-process the request and cache only files that are needed. For example, in the case of `Accept-Encoding`, you could check for `gzip` and other compression types in the header before doing further processing, and otherwise unset the header. In "pseudo code" this might look like:
 
 ```
 // Normalize Accept-Encoding
@@ -198,14 +198,14 @@ if (req.http.Accept-Encoding) {
   if (req.http.Accept-Encoding ~ "gzip") {
     set req.http.Accept-Encoding = "gzip";
   }
-  // elseif other encoding types to check
+  // elseif other encoding types to check
   else {
     unset req.http.Accept-Encoding;
   }
 }
 ```
 
-`User-Agent` has even more variation than `Accept-Encoding`. So if using `Vary: User-Agent` for caching mobile/desktop variants of files you'd similarly check for the presence of `"mobile"` and `"desktop"` in the request `User-Agent` header, and then clear it.
+`User-Agent` has even more variation than `Accept-Encoding`. So if using `Vary: User-Agent` for caching mobile/desktop variants of files you'd similarly check for the presence of `"mobile"` and `"desktop"` in the request `User-Agent` header, and then clear it.
 
 ## See also
 

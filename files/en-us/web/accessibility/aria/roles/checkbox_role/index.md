@@ -25,11 +25,11 @@ The `checkbox` role is for checkable interactive controls. Elements containing `
 
 ## Description
 
-The native HTML checkbox ([`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox))  form control had two states ("checked" or "not checked"), with an [`indeterminate`](/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes) state settable via JavaScript. Similarly, an element with `role="checkbox"`  can expose three states through the `aria-checked` attribute: `true`, `false`, or `mixed`.
+The native HTML checkbox ([`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox))  form control had two states ("checked" or "not checked"), with an [`indeterminate`](/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes) state settable via JavaScript. Similarly, an element with `role="checkbox"`  can expose three states through the `aria-checked` attribute: `true`, `false`, or `mixed`.
 
 Since a checkbox is an interactive control, it must be focusable and keyboard accessible. If the role is applied to a non-focusable element, use the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute to change this. The expected keyboard shortcut for activating a checkbox is the <kbd>Space</kbd> key.
 
-The developer is required to change the value of the `aria-checked` attribute dynamically when the checkbox is activated.
+The developer is required to change the value of the `aria-checked` attribute dynamically when the checkbox is activated.
 
 ### Associated WAI-ARIA Roles, States, and Properties
 
@@ -132,11 +132,11 @@ People implementing checkboxes should do the following:
 - Keep the `aria-checked` attribute up to date following user interactions
 - Provide styles that indicate when the checkbox has focus
 
-> **Note:** Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and may change.
+> **Note:** Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and may change.
 
 ## Best practices
 
-The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. As such, it is recommended to use the native [HTML checkbox](/en-US/docs/Web/HTML/Element/input/checkbox)  using form control instead of recreating a checkbox's functionality with JavaScript and ARIA.
+The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. As such, it is recommended to use the native [HTML checkbox](/en-US/docs/Web/HTML/Element/input/checkbox)  using form control instead of recreating a checkbox's functionality with JavaScript and ARIA.
 
 ## See also
 

@@ -32,7 +32,7 @@ bound to the handler.
 - `target`
   - : The target object.
 - `prop`
-  - : The name or {{jsxref("Symbol")}} of the property to check for existence.
+  - : The name or {{jsxref("Symbol")}} of the property to check for existence.
 
 ### Return value
 

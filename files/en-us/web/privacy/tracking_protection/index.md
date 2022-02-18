@@ -23,7 +23,7 @@ Note that with Firefox for Android, you can access console output using the remo
 
 ![Page information showing possible blocked content.](blocked_content.png)
 
-Click the ⓘ symbol in the address bar to view information about the currently loaded page. The popup that appears will notify you when content has been blocked.  You will also be able to disable tracking protection entirely if you choose by accessing the tracking settings.
+Click the ⓘ symbol in the address bar to view information about the currently loaded page. The popup that appears will notify you when content has been blocked.  You will also be able to disable tracking protection entirely if you choose by accessing the tracking settings.
 
 If tracking cookies were present, you would be able to view the list by clicking on "Blocking Tracking Cookies" in the above image to view the following popup:
 
@@ -61,11 +61,11 @@ For example, you should not use Google Analytics in the following way:
 function trackLink(url,event) {
     event.preventDefault();
     ga('send', 'event', 'outbound', 'click', url, {
-     'transport': 'beacon',
-     'hitCallback': function() {
+     'transport': 'beacon',
+     'hitCallback': function() {
        document.location = url;
      }
-   });
+   });
 }
 </script>
 ```
@@ -82,9 +82,9 @@ function trackLink(url,event) {
     event.preventDefault();
     if (window.ga && ga.loaded) {
          ga('send', 'event', 'outbound', 'click', url, {
-         'transport': 'beacon',
-         'hitCallback': function() { document.location = url; }
-       });
+         'transport': 'beacon',
+         'hitCallback': function() { document.location = url; }
+       });
     } else {
         document.location = url;
     }

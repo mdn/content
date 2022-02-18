@@ -23,7 +23,7 @@ The [same-origin security policy](/en-US/docs/Web/Security/Same-origin_policy) f
 - {{HTTPHeader("Access-Control-Allow-Credentials")}}
   - : Indicates whether or not the response to the request can be exposed when the credentials flag is true.
 - {{HTTPHeader("Access-Control-Allow-Headers")}}
-  - : Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request.
+  - : Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request.
 - {{HTTPHeader("Access-Control-Allow-Methods")}}
   - : Specifies the method or methods allowed when accessing the resource in response to a preflight request.
 - {{HTTPHeader("Access-Control-Expose-Headers")}}

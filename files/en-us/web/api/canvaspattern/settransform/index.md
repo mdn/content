@@ -26,7 +26,7 @@ void pattern.setTransform(matrix);
 ### Parameters
 
 - `matrix`
-  - : An {{domxref("SVGMatrix")}} or {{domxref("DOMMatrix")}} to use as the pattern's
+  - : An {{domxref("SVGMatrix")}} or {{domxref("DOMMatrix")}} to use as the pattern's
     transformation matrix.
 
 ## Examples

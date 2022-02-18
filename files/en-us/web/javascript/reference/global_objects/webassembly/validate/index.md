@@ -50,10 +50,10 @@ live too](https://mdn.github.io/webassembly-examples/js-api-examples/validate.ht
 
 ```js
 fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
+  response.arrayBuffer()
 ).then(function(bytes) {
-  var valid = WebAssembly.validate(bytes);
-  console.log("The given bytes are "
+  var valid = WebAssembly.validate(bytes);
+  console.log("The given bytes are "
     + (valid ? "" : "not ") + "a valid wasm module");
 });
 ```

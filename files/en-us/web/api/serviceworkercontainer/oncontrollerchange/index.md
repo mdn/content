@@ -18,8 +18,8 @@ browser-compat: api.ServiceWorkerContainer.oncontrollerchange
 The **`oncontrollerchange`** property of the
 {{domxref("ServiceWorkerContainer")}} interface is an event handler fired whenever a
 {{Event("controllerchange")}} event occurs — when the document's associated
-{{domxref("ServiceWorkerRegistration")}} acquires a new
-{{domxref("ServiceWorkerRegistration.active","active")}} worker.
+{{domxref("ServiceWorkerRegistration")}} acquires a new
+{{domxref("ServiceWorkerRegistration.active","active")}} worker.
 
 ## Syntax
 

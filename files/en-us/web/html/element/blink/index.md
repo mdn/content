@@ -43,24 +43,24 @@ blink {
 
 /* for Safari 4.0 - 8.0 */
 @-webkit-keyframes condemned_blink_effect {
-  0% {
-    visibility: hidden;
-  }
-  50% {
-    visibility: hidden;
-  }
+  0% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+  }
   100% {
     visibility: visible;
   }
 }
 
 @keyframes condemned_blink_effect {
-  0% {
-    visibility: hidden;
-  }
-  50% {
-    visibility: hidden;
-  }
+  0% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+  }
   100% {
     visibility: visible;
   }

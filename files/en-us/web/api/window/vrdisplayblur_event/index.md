@@ -49,8 +49,8 @@ You can use the `vrdisplayblur` event in an [`addEventListener`](/en-US/docs/Web
 
 ```js
 window.addEventListener('vrdisplayblur', function() {
-  info.textContent = 'Display unfocused.';
-  reportDisplays();
+  info.textContent = 'Display unfocused.';
+  reportDisplays();
 });
 ```
 

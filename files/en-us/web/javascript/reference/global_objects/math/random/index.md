@@ -56,7 +56,7 @@ function getRandom() {
 
 This example returns a random number between the specified values. The returned value
 is no lower than (and may possibly equal) `min`, and is less than (and
-not equal) `max`.
+not equal) `max`.
 
 ```js
 function getRandomArbitrary(min, max) {
@@ -73,8 +73,8 @@ is no lower than `min` (or the next integer greater than `min` if
 
 ```js
 function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
+  min = Math.ceil(min);
+  max = Math.floor(max);
   return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
 }
 ```
@@ -92,8 +92,8 @@ accomplishes that.
 
 ```js
 function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
+  min = Math.ceil(min);
+  max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
 }
 ```

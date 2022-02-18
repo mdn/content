@@ -49,7 +49,7 @@ Defining a component can seem tricky until you have some practice, but the gist 
 - If it represents an obvious "chunk" of your app, it's probably a component
 - If it gets reused often, it's probably a component.
 
-That second bullet is especially valuable: making a component out of common UI elements allows you to change your code in one place and see those changes everywhere that component is used. You don't have to break everything out into components right away, either. Let's take the second bullet point as inspiration and make a component out of the most reused, most important piece of the UI: a todo list item.
+That second bullet is especially valuable: making a component out of common UI elements allows you to change your code in one place and see those changes everywhere that component is used. You don't have to break everything out into components right away, either. Let's take the second bullet point as inspiration and make a component out of the most reused, most important piece of the UI: a todo list item.
 
 ## Make a `<Todo />`
 
@@ -182,7 +182,7 @@ _Now_ your browser should show three unique tasks. Another problem remains thoug
 
 ### Is it `completed`?
 
-In our original static list, only `Eat` was checked. Once again, we want to reuse _most_ of the UI that makes up a `<Todo />`  component, but change one thing. That's a good job for another prop!  Give each `<Todo />` call in `App.js` a new prop of `completed`. The first (`Eat`) should have a value of `true`; the rest should be `false`:
+In our original static list, only `Eat` was checked. Once again, we want to reuse _most_ of the UI that makes up a `<Todo />`  component, but change one thing. That's a good job for another prop!  Give each `<Todo />` call in `App.js` a new prop of `completed`. The first (`Eat`) should have a value of `true`; the rest should be `false`:
 
 ```js
 <Todo name="Eat" completed={true} />
@@ -287,7 +287,7 @@ To fix this, we need to return a `<Todo />` component from our `map()` function 
  const taskList = props.tasks.map(task => <Todo />);
 ```
 
-Look again at your app; now our tasks look more like they used to, but they’re missing the names of the tasks themselves.  Remember that each task we map over has the `id`, `name`, and `checked` properties we want to pass into our `<Todo />` component. If we put that knowledge together, we get code like this:
+Look again at your app; now our tasks look more like they used to, but they’re missing the names of the tasks themselves.  Remember that each task we map over has the `id`, `name`, and `checked` properties we want to pass into our `<Todo />` component. If we put that knowledge together, we get code like this:
 
 ```js
 const taskList = props.tasks.map(task => (
@@ -305,13 +305,13 @@ Because keys should be unique, we're going to re-use the `id` of each task objec
 
 ```js
 const taskList = props.tasks.map(task => (
-    <Todo
-      id={task.id}
-      name={task.name}
-      completed={task.completed}
-      key={task.id}
-    />
-  )
+    <Todo
+      id={task.id}
+      name={task.name}
+      completed={task.completed}
+      key={task.id}
+    />
+  )
 );
 ```
 

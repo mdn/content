@@ -255,7 +255,7 @@ It’s cool to have the ball ready to be thrown around in the play area, but it�
 this.keys = this.game.input.keyboard.createCursorKeys();
 ```
 
-As you can see there’s a special Phaser function called `createCursorKeys()`, which will give us an object with event handlers for the four arrow keys to play with: up, down, left and right.
+As you can see there’s a special Phaser function called `createCursorKeys()`, which will give us an object with event handlers for the four arrow keys to play with: up, down, left and right.
 
 Next we will add the following code to the `update()` function, so it will be fired on every frame. The `this.keys` object will be checked against player input, so the ball can react accordingly with the predefined force:
 

@@ -57,7 +57,7 @@ class TestProcessor extends AudioWorkletProcessor {
     console.log(currentTime)
   }
   // the process method is required - output silence,
-  // which the outputs are already filled with
+  // which the outputs are already filled with
   process (inputs, outputs, parameters) {
     return true
   }

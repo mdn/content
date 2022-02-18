@@ -36,7 +36,7 @@ window.onvrdisplayfocus = function() { /* ... */ };
 
 ```js
 window.onvrdisplayfocus = function() {
-  info.textContent = 'Display focused.';
+  info.textContent = 'Display focused.';
 };
 ```
 

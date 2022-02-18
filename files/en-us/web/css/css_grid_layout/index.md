@@ -152,7 +152,7 @@ The example below shows a three-column track grid with new rows created at a min
 
 ## External resources
 
-- [CSS Grid and IE11](https://tomrothe.de/posts/css_grid_and_ie11.html) ([polyfill](https://github.com/motine/css_grid_annotator))
+- [CSS Grid and IE11](https://tomrothe.de/posts/css_grid_and_ie11.html) ([polyfill](https://github.com/motine/css_grid_annotator))
 - [Examples from Jen Simmons](https://labs.jensimmons.com/)
 - [Grid by Example - a collection of usage examples and video tutorials](https://gridbyexample.com/)
 - [Codrops Grid Reference](https://tympanus.net/codrops/css_reference/grid/)

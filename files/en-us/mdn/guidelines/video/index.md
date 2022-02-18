@@ -22,7 +22,7 @@ There are several arguments against using video content for technical documentat
 - Video is less information-dense than text.
   It takes longer to consume a video explaining something than it does to read the equivalent instructions.
 - Video is big in terms of file size, and therefore more expensive and less performant than text.
-- Video has accessibility problems: it’s more expensive to produce generally than text, but especially to localize, or make usable by screen reader users.
+- Video has accessibility problems: it’s more expensive to produce generally than text, but especially to localize, or make usable by screen reader users.
 - Following on from the last point, video is much harder to edit/update/maintain than text content.
 
 > **Note:** It’s worth keeping these problems in mind, even when you are making videos, so you can try to alleviate some of them.

@@ -33,7 +33,7 @@ There is an error with how a function is called. More arguments need to be provi
 
 ### Required arguments not provided
 
-The {{jsxref("Object.create()")}} method requires at least one argument and the
+The {{jsxref("Object.create()")}} method requires at least one argument and the
 {{jsxref("Object.setPrototypeOf()")}} method requires at least two arguments:
 
 ```js example-bad

@@ -14,8 +14,8 @@ browser-compat: api.IDBCursor.direction
 ---
 {{ APIRef("IndexedDB") }}
 
-The **`direction`** read-only property of the
-{{domxref("IDBCursor")}} interface is a {{domxref("DOMString")}} that returns the
+The **`direction`** read-only property of the
+{{domxref("IDBCursor")}} interface is a {{domxref("DOMString")}} that returns the
 direction of traversal of the cursor (set using
 {{domxref("IDBObjectStore.openCursor")}} for example). See the {{anch("Values")}}
 section below for possible values.
@@ -46,27 +46,27 @@ Possible values are:
       <td><code>next</code></td>
       <td>
         This direction causes the cursor to be opened at the start of
-        the source.
+        the source.
       </td>
     </tr>
     <tr>
       <td><code>nextunique</code></td>
       <td>
         This direction causes the cursor to be opened at the start of
-        the source. For every key with duplicate values, only the first record
+        the source. For every key with duplicate values, only the first record
         is yielded.
       </td>
     </tr>
     <tr>
       <td><code>prev</code></td>
       <td>
-        This direction causes the cursor to be opened at the end of the source.
+        This direction causes the cursor to be opened at the end of the source.
       </td>
     </tr>
     <tr>
       <td><code>prevunique</code></td>
       <td>
-        This direction causes the cursor to be opened at the end of the source.
+        This direction causes the cursor to be opened at the end of the source.
         For every key with duplicate values, only the first record is
         yielded.<br />
       </td>

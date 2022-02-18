@@ -104,9 +104,9 @@ grid-auto-columns: unset;
 
 ```html
 <div id="grid">
-  <div id="item1"></div>
-  <div id="item2"></div>
-  <div id="item3"></div>
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
 </div>
 ```
 

@@ -8,11 +8,11 @@ tags:
   - captions
   - subtitles
 ---
-IMSC offers many options for styling documents, and most of the IMSC styling properties have direct CSS equivalents, making them familiar to web developers.  In this guide you'll learn a bit more about IMSC styling including the difference between inline and referential styling, and efficient styling using inheritance and region styling.
+IMSC offers many options for styling documents, and most of the IMSC styling properties have direct CSS equivalents, making them familiar to web developers.  In this guide you'll learn a bit more about IMSC styling including the difference between inline and referential styling, and efficient styling using inheritance and region styling.
 
 ## Inline styling
 
-The simplest way of styling content elements like `<p>` or `<span>` is by specifying one or more style attributes, such as `tts:color`, on them. For instance, the following
+The simplest way of styling content elements like `<p>` or `<span>` is by specifying one or more style attributes, such as `tts:color`, on them. For instance, the following
 
 ```xml
 <p tts:textAlign="center"
@@ -58,17 +58,17 @@ In referential styling, styles are defined once and reused throughout the docume
      <style xml:id="s1" tts:color="yellow" tts:backgroundColor="black"/>
    </styling>
   </head>
-  <body>
-    <div>
+  <body>
+    <div>
       <p>
         <span style="s1">Hello, I am Mork from Ork.</span>
       </p>
       <p>
         <span style="s1">I come from another planet.</span>
       </p>
-    </div>
+    </div>
   </body>
-  </tt>
+  </tt>
 ```
 
 Each `<style>` element is given an `id` (`"s1"` in this example):
@@ -133,8 +133,8 @@ Region styling plays a special role in IMSC since a style property specified on 
  </head>
  <body>
    <div>
-     <p region="r1">Hello, I am Mork from Ork</p>
-   </div>
+     <p region="r1">Hello, I am Mork from Ork</p>
+   </div>
  </body>
 </tt>
 ```

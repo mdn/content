@@ -49,7 +49,7 @@ element.scroll(options)
 element.scroll(0, 1000);
 ```
 
-Using `options`:
+Using `options`:
 
 ```js
 element.scroll({

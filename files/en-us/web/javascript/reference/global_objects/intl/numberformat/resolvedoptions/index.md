@@ -43,19 +43,19 @@ The resulting object has the following properties:
     the key-value pairs that were requested and are supported for this locale are
     included in `locale`.
 - `numberingSystem`
-  - : The value provided for this properties in the `options` argument, if
-    present, or the value requested using the Unicode extension key "`nu`"
+  - : The value provided for this properties in the `options` argument, if
+    present, or the value requested using the Unicode extension key "`nu`"
     or filled in as a default.
 - `notation`
-  - : The value provided for this property in the `options` argument, if
-    present, or "`standard`" filled in as a default.
+  - : The value provided for this property in the `options` argument, if
+    present, or "`standard`" filled in as a default.
 - `compactDisplay`
-  - : The value provided for this property in the `options` argument, or
+  - : The value provided for this property in the `options` argument, or
     "`short`" filled in as a default.
-    This property is only present if the `notation` is set to "compact".
+    This property is only present if the `notation` is set to "compact".
 - `signDisplay`
-  - : The value provided for this property in the `options` argument, or
-    "`auto`" filled in as a default.
+  - : The value provided for this property in the `options` argument, or
+    "`auto`" filled in as a default.
 - `useGrouping`
   - : The values provided for these properties in the `options` argument or
     filled in as defaults.

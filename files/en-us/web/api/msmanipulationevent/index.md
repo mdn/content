@@ -23,7 +23,7 @@ This proprietary method is specific to Internet Explorer.
 
 ### Methods
 
-{{DOMxRef("MSManipulationEvent.initMSManipulationEvent()")}}: Used to create a manipulation event that can be called from JavaScript.
+{{DOMxRef("MSManipulationEvent.initMSManipulationEvent()")}}: Used to create a manipulation event that can be called from JavaScript.
 
 ### Properties
 
