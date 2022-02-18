@@ -19,7 +19,7 @@ To make use of the Bookmarks API, you need to ask for the `"bookmarks"` permissi
 
 ```json
 "permissions": [
-  "bookmarks"
+  "bookmarks"
 ],
 ```
 
@@ -71,46 +71,46 @@ The [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/bo
 
 ```json
 {
-  "manifest_version": 2,
-  "name": "Bookmark it!",
-  "version": "1.1",
-  "description": "A simple bookmark button",
-  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/bookmark-it",
+  "manifest_version": 2,
+  "name": "Bookmark it!",
+  "version": "1.1",
+  "description": "A simple bookmark button",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/bookmark-it",
 ```
 
 Defines the icons that’ll be used to represent the extension, in places such as the add-on manager.
 
 ```json
-  "icons": {
-    "48": "icons/bookmark-it.png",
-    "96": "icons/bookmark-it@2x.png"
-  },
+  "icons": {
+    "48": "icons/bookmark-it.png",
+    "96": "icons/bookmark-it@2x.png"
+  },
 ```
 
 Requests permissions. `"bookmarks"` is requested to enable use of the Bookmarks API. `"tabs"` is requested so that the active tab’s URL and title can be read and used to create or find the page’s bookmark. The need for the Tabs API to access these details means that you’re unlikely to use the Bookmark API without the Tabs API.
 
 ```json
-  "permissions": [
-    "bookmarks",
-    "tabs"
-  ],
+  "permissions": [
+    "bookmarks",
+    "tabs"
+  ],
 ```
 
 Sets up the basic toolbar button details. Most of the button’s features will be set up in code after the page’s bookmark status is known.
 
 ```json
-  "browser_action": {
-    "default_icon": "icons/star-empty-38.png",
-    "default_title": "Bookmark it!"
-  },
+  "browser_action": {
+    "default_icon": "icons/star-empty-38.png",
+    "default_title": "Bookmark it!"
+  },
 ```
 
 Defines the background script that’ll add and remove the page’s bookmark and set the characteristics of the toolbar button.
 
 ```json
-  "background": {
-    "scripts": ["background.js"]
-  }
+  "background": {
+    "scripts": ["background.js"]
+  }
 
 }
 ```
@@ -120,58 +120,58 @@ Defines the background script that’ll add and remove the page’s bookmark and
 As with any background script, [background.js](https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/background.js) is run as soon as the extension is started. Initially the script calls `updateActiveTab()` that starts by obtaining the `Tabs` object for the current tab, using {{WebExtAPIRef("tabs.query")}}, and passing the object to `updatetab()` with this code:
 
 ```js
-  var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
-  gettingActiveTab.then(updateTab);
+  var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
+  gettingActiveTab.then(updateTab);
 ```
 
 `updatetab()` first passes the active tab’s URL to `isSupportedProtocol()`:
 
 ```js
-  function updateTab(tabs) {
-    if (tabs[0]) {
-      currentTab = tabs[0];
-      if (isSupportedProtocol(currentTab.url)) {
+  function updateTab(tabs) {
+    if (tabs[0]) {
+      currentTab = tabs[0];
+      if (isSupportedProtocol(currentTab.url)) {
 ```
 
 `isSupportedProtocol()` determines if the URL displayed in the active tab is one that can be bookmarked. To extract the protocol from the tab’s URL, the extension takes advantage of the [HTMLAnchorElement](/en-US/docs/Web/API/HTMLAnchorElement) by adding the tab’s URL to an `<a>` element and then getting the protocol using the `protocol` property.
 
 ```js
-  function isSupportedProtocol(urlString) {
-    var supportedProtocols = ["https:", "http:", "file:"];
-    var url = document.createElement('a');
-    url.href = urlString;
-    return supportedProtocols.indexOf(url.protocol) != -1;
-  }
+  function isSupportedProtocol(urlString) {
+    var supportedProtocols = ["https:", "http:", "file:"];
+    var url = document.createElement('a');
+    url.href = urlString;
+    return supportedProtocols.indexOf(url.protocol) != -1;
+  }
 ```
 
 If the protocol is one supported by bookmarks, the extension determines if the tab’s URL is already bookmarked and if it is, calls `updateIcon()`:
 
 ```js
-      var searching = browser.bookmarks.search({url: currentTab.url});
-      searching.then((bookmarks) => {
-        currentBookmark = bookmarks[0];
-        updateIcon();
+      var searching = browser.bookmarks.search({url: currentTab.url});
+      searching.then((bookmarks) => {
+        currentBookmark = bookmarks[0];
+        updateIcon();
 ```
 
 `updateIcon()` sets the toolbar button’s icon and title, depending on whether the URL is bookmarked or not.
 
 ```js
 function updateIcon() {
-  browser.browserAction.setIcon({
-    path: currentBookmark ? {
-      19: "icons/star-filled-19.png",
-      38: "icons/star-filled-38.png"
-    } : {
-      19: "icons/star-empty-19.png",
-      38: "icons/star-empty-38.png"
-    },
-    tabId: currentTab.id
-  });
-  browser.browserAction.setTitle({
-    // Screen readers can see the title
-    title: currentBookmark ? 'Unbookmark it!' : 'Bookmark it!',
-    tabId: currentTab.id
-  });
+  browser.browserAction.setIcon({
+    path: currentBookmark ? {
+      19: "icons/star-filled-19.png",
+      38: "icons/star-filled-38.png"
+    } : {
+      19: "icons/star-empty-19.png",
+      38: "icons/star-empty-38.png"
+    },
+    tabId: currentTab.id
+  });
+  browser.browserAction.setTitle({
+    // Screen readers can see the title
+    title: currentBookmark ? 'Unbookmark it!' : 'Bookmark it!',
+    tabId: currentTab.id
+  });
 }
 ```
 
@@ -185,11 +185,11 @@ browser.browserAction.onClicked.addListener(toggleBookmark);
 
 ```js
 function toggleBookmark() {
-  if (currentBookmark) {
-    browser.bookmarks.remove(currentBookmark.id);
-  } else {
-    browser.bookmarks.create({title: currentTab.title, url: currentTab.url});
-  }
+  if (currentBookmark) {
+    browser.bookmarks.remove(currentBookmark.id);
+  } else {
+    browser.bookmarks.create({title: currentTab.title, url: currentTab.url});
+  }
 }
 ```
 

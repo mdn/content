@@ -64,9 +64,9 @@ Depending on the arguments it is given, this API is sometimes ambiguous. The fol
 
   - the arguments are interpreted as `(message, options)`, and the message is sent internally, if the second argument is any of the following:
 
-    1.  a valid `options` object (meaning, it is an object which contains only the properties of `options` that the browser supports)
-    2.  null
-    3.  undefined
+    1. a valid `options` object (meaning, it is an object which contains only the properties of `options` that the browser supports)
+    2. null
+    3. undefined
 
   - otherwise, the arguments are interpreted as `(extensionId, message)`. The message will be sent to the extension identified by `extensionId`.
 
@@ -121,7 +121,7 @@ function handleMessage(request, sender, sendResponse) {
 browser.runtime.onMessage.addListener(handleMessage);
 ```
 
-> **Note:** Instead of using `sendResponse()`, returning a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) is the recommended approach for Firefox add-ons. 
+> **Note:** Instead of using `sendResponse()`, returning a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) is the recommended approach for Firefox add-ons.
 > Examples using a Promise are available in the [examples section](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#examples) of the {{WebExtAPIRef('runtime.onMessage')}} listener.
 
 {{WebExtExamples}}

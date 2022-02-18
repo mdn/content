@@ -14,7 +14,7 @@ tags:
   - Window
 browser-compat: api.GlobalEventHandlers.onabort
 ---
-{{ApiRef("HTML DOM")}} {{SeeCompatTable}} {{draft}}
+{{ApiRef("HTML DOM")}} {{SeeCompatTable}}
 
 The **`onabort`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for

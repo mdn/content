@@ -170,7 +170,7 @@ Notes:
           <em
             >In MathML 3 this attribute was only valid
             on {{ MathMLElement("mstyle") }},
-            {{ MathMLElement("mtable") }}, and 
+            {{ MathMLElement("mtable") }}, and
             {{ MathMLElement("math") }}.</em
           >
         </p>
@@ -619,7 +619,7 @@ Notes:
       <td><code>xlink:href</code> {{deprecated_inline}}</td>
       <td><em>All</em></td>
       <td>
-        Can be used to set a hyperlink to a specfied URI. However, authors are
+        Can be used to set a hyperlink to a specified URI. However, authors are
         encouraged to use the <code>href</code> attribute instead.
       </td>
     </tr>

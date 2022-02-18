@@ -33,7 +33,7 @@ The preferred value is the expression whose value will be used as long as the re
 
 The maximum value is the largest (most positive) expression value to which the value of the property will be assigned if the preferred value is greater than this upper bound.
 
-The expressions can be math functions (see {{CSSxRef("calc()")}} for more information), literal values, or other expressions, such as {{CSSxRef("attr()")}}, that evaluate to a valid argument type (like {{CSSxRef("&lt;length&gt;")}}), or nested {{CSSxRef("min()")}} and {{CSSxRef("max()")}} functions. As math expressions, so you can use addition, subtraction, multiplication and division without using the `calc()` function itself. You may also use parentheses to establish computation order when needed.
+The expressions can be math functions (see {{CSSxRef("calc()")}} for more information), literal values, or other expressions, that evaluate to a valid argument type (like {{CSSxRef("&lt;length&gt;")}}), or nested {{CSSxRef("min()")}} and {{CSSxRef("max()")}} functions. As math expressions, so you can use addition, subtraction, multiplication and division without using the `calc()` function itself. You may also use parentheses to establish computation order when needed.
 
 You can use different units for each value in your expressions, and different units in any math function making up any of the arguments.
 

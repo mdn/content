@@ -14,7 +14,8 @@ sets up a function that will be called whenever the specified event is delivered
 Common targets are {{domxref("Element")}}, or its children, {{domxref("Document")}}, and {{domxref("Window")}},
 but the target may be any object that supports events (such as {{domxref("XMLHttpRequest")}}).
 
-> **Warning:** The `addEventListener()` method is the _recommended_ way to register an event listener. The benefits are as follows:
+> **Note:** The `addEventListener()` method is the _recommended_ way to register an event listener. The benefits are as follows:
+>
 > - It allows adding more than one handler for an event. This is particularly
 >   useful for libraries, JavaScript modules, or any other kind of
 >   code that needs to work well with other libraries or extensions.
@@ -23,11 +24,9 @@ but the target may be any object that supports events (such as {{domxref("XMLHtt
 
 The method `addEventListener()` works by adding a function, or an object that implements
 {{domxref("EventListener")}}, to the list of event listeners for the specified event type
-on the {{domxref("EventTarget")}} on which it's called. If the function or object, is already in the list of event listeners for this target, they are not added a second time.
+on the {{domxref("EventTarget")}} on which it's called. If the function or object is already in the list of event listeners for this target, the function or object is not added a second time.
 
-They do not need to be removed manually with {{domxref("EventTarget.removeEventListener", "removeEventListener()")}}.
-
-> **Note:** Two identical anonymous functions are considered as different for `addEventListener` and the second one will _also_ be added to the list of event listener for that target.
+> **Note:** If a particular anonymous function is in the list of event listeners registered for a certain target, and then later in the code, an identical anonymous function is given in an `addEventListener` call, the second function will _also_ be added to the list of event listeners for that target.
 >
 > Indeed, anonymous functions are not identical even if defined using
 > the _same_ unchanging source-code called repeatedly, **even if in a loop**.
@@ -35,8 +34,8 @@ They do not need to be removed manually with {{domxref("EventTarget.removeEventL
 > Repeatedly defining the same unnamed function in such cases can be
 > problematic. (See [Memory issues](#memory_issues), below.)
 
-If an event listener is added to an {{domxref("EventTarget")}} from inside another listener,
-that is during the processing of the event,
+If an event listener is added to an {{domxref("EventTarget")}} from inside another listener —
+that is, during the processing of the event —
 that event will not trigger the new listener.
 However, the new listener may be triggered during a later stage of event flow,
 such as during the bubbling phase.
@@ -44,9 +43,9 @@ such as during the bubbling phase.
 ## Syntax
 
 ```js
-target.addEventListener(type, listener);
-target.addEventListener(type, listener, options);
-target.addEventListener(type, listener, useCapture);
+addEventListener(type, listener);
+addEventListener(type, listener, options);
+addEventListener(type, listener, useCapture);
 ```
 
 ### Parameters
@@ -67,20 +66,19 @@ target.addEventListener(type, listener, useCapture);
     - `capture`
       - : A boolean value indicating that events of this type will be dispatched
         to the registered `listener` before being dispatched to any
-        `EventTarget` beneath it in the DOM tree.
+        `EventTarget` beneath it in the DOM tree. If not specified, defaults to `false`.
     - `once`
       - : A boolean value indicating that the `listener`
         should be invoked at most once after being added. If `true`, the
-        `listener` would be automatically removed when invoked.
+        `listener` would be automatically removed when invoked. If not specified, defaults to `false`.
     - `passive`
       - : A boolean value that, if `true`, indicates that the function
         specified by `listener` will never call
         {{domxref("Event.preventDefault", "preventDefault()")}}. If a passive listener
         does call `preventDefault()`, the user agent will do nothing other than
-        generate a console warning.
-        See [Improving scrolling performance with passive listeners](#improving_scrolling_performance_with_passive_listeners) to learn more.
+        generate a console warning. If not specified, defaults to `false` – except that in browsers other than Safari and Internet Explorer, defaults to `true` for the {{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/mousewheel_event", "mousewheel")}}, {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events. See [Improving scrolling performance with passive listeners](#improving_scrolling_performance_with_passive_listeners) to learn more.
     - `signal`
-      - : An {{domxref("AbortSignal")}}. The listener will be removed when the given `AbortSignal` object's {{domxref("AbortController/abort()", "abort()")}} method is called.
+      - : An {{domxref("AbortSignal")}}. The listener will be removed when the given `AbortSignal` object's {{domxref("AbortController/abort()", "abort()")}} method is called. If not specified, no `AbortSignal` is associated with the listener.
 
 - `useCapture` {{optional_inline}}
 
@@ -178,7 +176,7 @@ means that if the browser checks the value of the `passive` property on the
 set to `true`; otherwise, it will remain `false`. We then call
 `addEventListener()` to set up a fake event handler, specifying those
 options, so that the options will be checked if the browser recognizes an object as the
-third parameter. Then, we call `removeEventListener()` to clean up after
+third parameter. Then, we call [`removeEventListener()`](/en-US/docs/Web/API/EventTarget/removeEventListener) to clean up after
 ourselves. (Note that `handleEvent()` is ignored on event listeners that
 aren't called.)
 
@@ -747,7 +745,7 @@ can respond to the change).
 const els = document.getElementsByTagName('*');
 
 // Case 1
-for(let i=0 ; i < els.length; i++){
+for(let i = 0; i < els.length; i++){
   els[i].addEventListener("click", function(e){/*do something*/}, false);
 }
 
@@ -756,7 +754,7 @@ function processEvent(e){
   /* do something */
 }
 
-for(let i=0 ; i < els.length; i++){
+for(let i = 0 ; i < els.length; i++){
   els[i].addEventListener("click", processEvent, false);
 }
 ```
@@ -772,37 +770,38 @@ anonymous functions the loop might create.) In the second case, it's possible to
 because `processEvent` is the function reference.
 
 Actually, regarding memory consumption, the lack of keeping a function reference is not
-the real issue; rather it is the lack of keeping a STATIC function reference. In both
-problem-cases below, a function reference is kept, but since it is redefined on each
-iteration, it is not static. In the third case, the reference to the anonymous function
+the real issue; rather it is the lack of keeping a *static* function reference. In both
+problem-cases below, a function reference is kept, but it is redefined on each
+iteration. In the third case, the reference to the anonymous function
 is being reassigned with each iteration. In the fourth case, the entire function
-definition is unchanging, but it is still being repeatedly defined as if new (unless it
-was \[\[promoted]] by the compiler) and so is not static. Therefore, though appearing to
-be \[\[Multiple identical event listeners]], in both cases each iteration will instead
-create a new listener with its own unique reference to the handler function. However,
-since the function definition itself does not change, the SAME function may still be
-called for every duplicate listener (especially if the code gets optimized.)
-
-Also in both cases, because the function reference was kept but repeatedly redefined
-with each add, the remove-statement from above can still remove a listener, but now only
-the last one added.
+definition is unchanging, but it is still being repeatedly defined as if new. So neither is static. Therefore, though appearing to
+be multiple identical event listeners, in both cases each iteration will instead
+create a new listener with its own unique reference to the handler function.
 
 ```js
-// For illustration only: Note "MISTAKE" of [j] for [i] thus causing desired events to all attach to SAME element
+const els = document.getElementsByTagName('*');
+
+function processEvent(e){
+  /* do something */
+}
+
+// For illustration only: Note the mistake of [j] for [i]. We are registering all event listeners to the first element
 
 // Case 3
-for(let i=0, j=0 ; i<els.length ; i++){
-  /* do lots of stuff with j */
-  els[j].addEventListener("click", processEvent = function(e){/*do something*/}, false);
+for(let i = 0, j = 0 ; i < els.length ; i++){
+  els[j].addEventListener("click", processEvent = function(e){/* do something */}, false);
 }
 
 // Case 4
-for(let i=0, j=0 ; i<els.length ; i++){
-  /* do lots of stuff with j */
-  function processEvent(e){/*do something*/};
+for(let i = 0, j = 0 ; i < els.length ; i++){
+  function processEvent(e){/* do something */};
   els[j].addEventListener("click", processEvent, false);
 }
 ```
+
+Also in both case 3 and case 4, because the function reference was kept but repeatedly redefined
+with each `addEventListener()`, `removeEventListener("click", processEvent, false)` can still remove a listener, but now only
+the last one added.
 
 ### Improving scrolling performance with passive listeners
 
@@ -812,11 +811,11 @@ handling certain touch events (among others) to block the browser's main thread 
 is attempting to handle scrolling, resulting in possibly enormous reduction in
 performance during scroll handling.
 
-To prevent this problem, some browsers (specifically, Chrome and Firefox) have changed
+To prevent this problem, browsers other than Safari and Internet Explorer have changed
 the default value of the `passive` option to `true` for the
-{{event("touchstart")}} and {{event("touchmove")}} events on the document-level nodes
+{{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/mousewheel_event", "mousewheel")}}, {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events on the document-level nodes
 {{domxref("Window")}}, {{domxref("Document")}}, and {{domxref("Document.body")}}. This
-prevents the event listener from being called, so it can't block page rendering while
+prevents the event listener from [canceling the event](/en-US/docs/Web/API/Event/preventDefault), so it can't block page rendering while
 the user is scrolling.
 
 > **Note:** See the compatibility table below if you need to know which
@@ -851,9 +850,8 @@ On older browsers that don't support the `options` parameter to
 `addEventListener()`, attempting to use it prevents the use of the
 `useCapture` argument without proper use of [feature detection](#safely_detecting_option_support).
 
-You don't need to worry about the value of `passive` for the basic
-{{event("scroll")}} event. Since it can't be canceled, event listeners can't block page
-rendering anyway.
+You don't need to worry about the value of `passive` for the basic {{domxref("Element/scroll_event", "scroll")}} event.
+Since it can't be canceled, event listeners can't block page rendering anyway.
 
 ## Specifications
 

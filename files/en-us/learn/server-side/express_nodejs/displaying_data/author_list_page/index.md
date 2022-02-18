@@ -52,13 +52,13 @@ block content
       li There are no authors.
 ```
 
-Run the application and open your browser to <http://localhost:3000/>. Then select the _All authors_ link. If everything is set up correctly, the page should look something like the following screenshot.
+Run the application and open your browser to `http://localhost:3000/`. Then select the _All authors_ link. If everything is set up correctly, the page should look something like the following screenshot.
 
 ![Author List Page - Express Local Library site](locallibary_express_author_list.png)
 
 > **Note:** The appearance of the author _lifespan_ dates is ugly! You can improve this using the [same approach](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment) as we used for the `BookInstance` list (adding the virtual property for the lifespan to the `Author` model).
 >
-> However, as the author may not be dead or may have missing birth/death data, in this case we need to ignore missing dates or references to nonexistent properties. One way to deal with this is to return either a formatted date, or a blank string, depending on whether the property is defined. For example:
+> However, as the author may not be dead or may have missing birth/death data, in this case we need to ignore missing dates or references to nonexistent properties. One way to deal with this is to return either a formatted date, or a blank string, depending on whether the property is defined. For example:
 >
 > `return this.date_of_birth ? DateTime.fromJSDate(this.date_of_birth).toLocaleString(DateTime.DATE_MED) : '';`
 
@@ -70,14 +70,14 @@ In this section you should implement your own genre list page. The page should d
 
 The genre list controller function needs to get a list of all `Genre` instances, and then pass these to the template for rendering.
 
-1.  You will need to edit `genre_list()` in **/controllers/genreController.js**.
-2.  The implementation is almost exactly the same as the `author_list()` controller.
+1. You will need to edit `genre_list()` in **/controllers/genreController.js**.
+2. The implementation is almost exactly the same as the `author_list()` controller.
 
     - Sort the results by name, in ascending order.
 
-3.  The template to be rendered should be named **genre_list.pug**.
-4.  The template to be rendered should be passed the variables `title` ('Genre List') and `genre_list` (the list of genres returned from your `Genre.find()` callback).
-5.  The view should match the screenshot/requirements above (this should have a very similar structure/format to the Author list view, except for the fact that genres do not have dates).
+3. The template to be rendered should be named **genre_list.pug**.
+4. The template to be rendered should be passed the variables `title` ('Genre List') and `genre_list` (the list of genres returned from your `Genre.find()` callback).
+5. The view should match the screenshot/requirements above (this should have a very similar structure/format to the Author list view, except for the fact that genres do not have dates).
 
 ## Next steps
 

@@ -38,12 +38,11 @@ CSS Transition events are supported. Examples include:
 - `transitionend`
 - `transitioncancel`
 
-
 ### Safari 10.1 and above (Desktop)
 
 Do not enable Auto-Play (does not work for gifs)
 
-#### iOS Safari 10.3 and above (Mobile and Tablet) 
+#### iOS Safari 10.3 and above (Mobile and Tablet)
 
 Select the "Reduce motion option" in OS Accessibility settings for Apple (image source: developers.google.com from Thomas Steiner's article "Move Ya! Or maybe, don't, if the user prefers-reduced-motion!"). This will not work on animated gifs; the source of the animation is self-contained within a gif and is not affected by these settings.![Screen shot showing how to reduce motion on a MAC OS](macos-reduce-motion.png)
 
@@ -93,7 +92,6 @@ Most Operating Systems have a way to let the user make an adjustment on the work
 - [Web accessibility for seizures and physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders)
 - [Color vision simulation](/en-US/docs/Tools/Accessibility_inspector/Simulation)
 - Discussion: "[What is the “grayscale” setting for in accessibility options?](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)"
-
 
 ### Contributors
 

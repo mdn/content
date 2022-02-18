@@ -106,7 +106,7 @@ As the server sends data in TCP packets, the user's client confirms delivery by 
 
 ## Parsing
 
-Once the browser receives the first chunk of data, it can begin parsing the information received. {{glossary('speculative parsing', 'Parsing')}} is the step the browser takes to turn the data it receives over the network into the {{glossary('DOM')}} and {{glossary('CSSOM')}}, which is used by the renderer to paint a page to the screen.
+Once the browser receives the first chunk of data, it can begin parsing the information received. {{glossary('parse', 'Parsing')}} is the step the browser takes to turn the data it receives over the network into the {{glossary('DOM')}} and {{glossary('CSSOM')}}, which is used by the renderer to paint a page to the screen.
 
 The DOM is the internal representation of the markup for the browser. The DOM is also exposed, and can be manipulated through various APIs in JavaScript.
 
@@ -167,7 +167,7 @@ Rendering steps include style, layout, paint and, in some cases, compositing. Th
 
 ### Style
 
-The third step in the critical rendering path is combining the DOM and CSSOM into a render tree.The computed style tree, or render tree, construction starts with the root of the DOM tree, traversing each visible node.
+The third step in the critical rendering path is combining the DOM and CSSOM into a render tree. The computed style tree, or render tree, construction starts with the root of the DOM tree, traversing each visible node.
 
 Tags that aren't going to be displayed, like the [`<head>`](/en-US/docs/Web/HTML/Element/head) and its children and any nodes with `display: none`, such as the `script { display: none; }` you will find in user agent stylesheets, are not included in the render tree as they will not appear in the rendered output. Nodes with `visibility: hidden` applied are included in the render tree, as they do take up space. As we have not given any directives to override the user agent default, the `script` node in our code example above will not be included in the render tree.
 
@@ -179,7 +179,7 @@ The fourth step in the critical rendering path is running layout on the render t
 
 Once the render tree is built, layout commences. The render tree identified which nodes are displayed (even if invisible) along with their computed styles, but not the dimensions or location of each node. To determine the exact size and location of each object, the browser starts at the root of the render tree and traverses it.
 
-On the web page, most everything is a box. Different devices and different desktop preferences mean an unlimited number of differing viewport sizes. In this phase, taking the viewport size into consideration, the browser determines what the dimensions of all the different boxes are going to be on the screen. Taking the size of the viewport as its base, layout generally starts with the body, laying out the dimensions of all the body’s descendants, with each element's box model properties, providing placeholder space for replaced elements it doesn’t know the dimensions of, such as our image.
+On the web page, almost everything is a box. Different devices and different desktop preferences mean an unlimited number of differing viewport sizes. In this phase, taking the viewport size into consideration, the browser determines what the dimensions of all the different boxes are going to be on the screen. Taking the size of the viewport as its base, layout generally starts with the body, laying out the dimensions of all the body’s descendants, with each element's box model properties, providing placeholder space for replaced elements it doesn’t know the dimensions of, such as our image.
 
 The first time the size and position of nodes are determined is called _layout_. Subsequent recalculations of node size and locations are called _reflows_.  In our example, suppose the initial layout occurs before the image is returned. Since we didn't declare the size of our image, there will be a reflow once the image size is known.
 

@@ -9,11 +9,11 @@ tags:
 ---
 « [SVG Attribute reference home](/en-US/docs/Web/SVG/Attribute)
 
-The `strikethrough-position` attribute represents the ideal vertical position of the strikethrough. The strikethrough position is expressed in the font's coordinate system.
+The `strikethrough-position` attribute represents the ideal vertical position of the strikethrough. The strikethrough position is expressed in the font's coordinate system.
 
 You can use this attribute with the following SVG elements:
 
-*   {{ SVGElement("font-face") }}
+- {{ SVGElement("font-face") }}
 
 ## Usage context
 

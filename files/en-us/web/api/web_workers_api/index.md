@@ -27,7 +27,7 @@ Workers may in turn spawn new workers, as long as those workers are hosted withi
 
 There are a number of different types of workers:
 
-- Dedicated workers are workers that are utilized by a single script. This context is represented by either a {{DOMxRef("DedicatedWorkerGlobalScope")}} object.
+- Dedicated workers are workers that are utilized by a single script. This context is represented by a {{DOMxRef("DedicatedWorkerGlobalScope")}} object.
 - {{DOMxRef("SharedWorker","Shared workers")}} are workers that can be utilized by multiple scripts running in different windows, IFrames, etc., as long as they are in the same domain as the worker. They are a little more complex than dedicated workers — scripts must communicate via an active port.
 - [Service Workers](/en-US/docs/Web/API/Service_Worker_API) essentially act as proxy servers that sit between web applications, the browser, and the network (when available). They are intended, among other things, to enable the creation of effective offline experiences, intercept network requests and take appropriate action based on whether the network is available, and update assets residing on the server. They will also allow access to push notifications and background sync APIs.
 

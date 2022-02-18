@@ -21,7 +21,7 @@ You tell your extension that it is going to customize the address bar suggestion
   "omnibox": { "keyword" : "cs" }
 ```
 
-In the extension's background JavaScript file, using {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, you can optionally define the first suggestion to be displayed in the address bar drop-down. Use this to provide a hint on how to use the feature:
+In the extension's background JavaScript file, using {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, you can optionally define the first suggestion to be displayed in the address bar drop-down. Use this to provide a hint on how to use the feature:
 
 ```js
 browser.omnibox.setDefaultSuggestion({
@@ -47,7 +47,7 @@ browser.omnibox.onInputChanged.addListener((text, addSuggestions) => {
 
 If the extension set a default suggestion using {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, then this will appear first in the drop-down.
 
-The extension can then listen for the user clicking one of the suggestions, using {{WebExtAPIRef("omnibox.onInputEntered")}}. If the default suggestion is clicked the user's custom term is returned, otherwise the suggestion's string is returned. This also passes information on the user's browser preferences for handling new links. In the code below the user's custom term is used to create a search, otherwise the suggested URL is opened:
+The extension can then listen for the user clicking one of the suggestions, using {{WebExtAPIRef("omnibox.onInputEntered")}}. If the default suggestion is clicked the user's custom term is returned, otherwise the suggestion's string is returned. This also passes information on the user's browser preferences for handling new links. In the code below the user's custom term is used to create a search, otherwise the suggested URL is opened:
 
 ```js
 browser.omnibox.onInputEntered.addListener((text, disposition) => {

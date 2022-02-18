@@ -3,7 +3,6 @@ title: DOMRectReadOnly
 slug: Web/API/DOMRectReadOnly
 tags:
   - API
-  - DOM Reference
   - DOMRectReadOnly
   - Geometry
   - Geometry Interfaces

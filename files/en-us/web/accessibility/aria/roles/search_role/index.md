@@ -19,11 +19,11 @@ The `search` role is used to identify the search functionality; the section of t
 
 ## Description
 
-The `search` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#Landmark_roles) role that can be added to the container element that encompasses all of the elements that combined form the search feature of the document or application, including a descendant [(`<input type="search">`)](/en-US/docs/Web/HTML/Element/input/search). If a document includes more than one search, each should have a unique label, unless they are the same search repeated, then use the same name. While there is a [`input` of type `search`)](/en-US/docs/Web/HTML/Element/input/search), there is no HTML element that defines a search landmark.
+The `search` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#Landmark_roles) role that can be added to the container element that encompasses all of the elements that combined to form the search feature of the document or application, including a descendant [(`<input type="search">`)](/en-US/docs/Web/HTML/Element/input/search). If a document includes more than one search, each should have a unique label, unless they are the same search repeated, then use the same name. While there is a [`input` of type `search`)](/en-US/docs/Web/HTML/Element/input/search), there is no HTML element that defines a search landmark.
 
 ## Examples
 
-When a {{HTMLElement('form')}} is a search form, use the `search` role instead of [`form`](/en-US/docs/Web/Accessibility/ARIA/Roles/form_role) role. 
+When a {{HTMLElement('form')}} is a search form, use the `search` role instead of [`form`](/en-US/docs/Web/Accessibility/ARIA/Roles/form_role) role.
 
 ```HTML
 <form id="search" role="search">
@@ -83,8 +83,7 @@ If a `search` landmark role in a document is repeated in a document, and both la
 
 #### Redundant descriptions
 
-Screen readers will announce the type of role the landmark is. Because of this, you do not need to describe what the landmark is in its label. For example, a declaration of `role="search"` with an `aria-label="Sitewide search"` may be announced redundantly as, "sitewide search search".
-
+Screen readers will announce the type of role the landmark is. Because of this, you do not need to describe what the landmark is in its label. For example, a declaration of `role="search"` with an [`aria-label="Sitewide search"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) may be announced redundantly as, "sitewide search search".
 
 ## Specifications
 
@@ -93,11 +92,10 @@ Screen readers will announce the type of role the landmark is. Because of this, 
 | {{SpecName("ARIA","#search","ARIA search role")}}                                         | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_search","ARIA search role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
-
-
 ## See also
 
 - The {{HTMLElement('form')}} element
+- The {{HTMLElement('input')}} element
 - [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search)
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
 

@@ -42,13 +42,13 @@ To use this API you need to have the "browserSettings" [permission](/en-US/docs/
 - {{WebExtAPIRef("browserSettings.newTabPosition")}}
   - : Controls the position of newly opened tabs relative to already open tabs.
 - {{WebExtAPIRef("browserSettings.openBookmarksInNewTabs")}}
-  - : Determines whether bookmarks are opened in the current tab or a new tab.
+  - : Determines whether bookmarks are opened in the current tab or a new tab.
 - {{WebExtAPIRef("browserSettings.openSearchResultsInNewTabs")}}
   - : Determines whether search results are opened in the current tab or a new tab.
 - {{WebExtAPIRef("browserSettings.openUrlbarResultsInNewTabs")}}
   - : Determines whether address bar autocomplete suggestions are opened in the current tab or a new tab.
 - {{WebExtAPIRef("browserSettings.overrideContentColorScheme")}}
-  - : Controls whether to override the browser theme (light or dark) when setting pages' preferred color scheme. 
+  - : Controls whether to override the browser theme (light or dark) when setting pages' preferred color scheme.
 - {{WebExtAPIRef("browserSettings.overrideDocumentColors")}}
   - : Controls whether the user-chosen colors override the page's colors.
 - {{WebExtAPIRef("browserSettings.useDocumentFonts")}}

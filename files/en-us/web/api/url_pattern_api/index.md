@@ -47,7 +47,7 @@ The syntax for patterns is based on the
 [path-to-regexp](https://github.com/pillarjs/path-to-regexp) JavaScript library.
 This syntax is similar to the one used in
 [Ruby on Rails](https://rubyonrails.org), or JavaScript frameworks like
-[Express](https://expressjs.com/) or [Next.js](https://next.js).
+[Express](https://expressjs.com/) or [Next.js](https://nextjs.org/).
 
 ### Fixed text and capture groups
 
@@ -90,11 +90,11 @@ console.log(pattern.test('https://example.com/books/abc')); // false
 console.log(pattern.test('https://example.com/books/')); // false
 ```
 
-### Unamed and named groups
+### Unnamed and named groups
 
 Groups can either be named or unnamed. Named groups are specified by prefixing
 the group name with a colon (`:`). Regexp groups that are not prefixed by a
-colon and a name are unnamed. Unamed groups are numerically indexed in the match
+colon and a name are unnamed. Unnamed groups are numerically indexed in the match
 result based on their order in the pattern.
 
 ```js
@@ -212,12 +212,12 @@ console.log(pattern.test('https://example.com/books/')); // true
 
 The wildcard token (`*`) is a shorthand for an unnamed capturing group that
 matches all characters zero or more times. You can place this anywhere in the
-pattern. The wilcard is greedy, meaning that it will match the longest possible
+pattern. The wildcard is greedy, meaning that it will match the longest possible
 string.
 
 ```js
 // A wildcard at the end of a pattern
-const pattern = new URLPattern('/books/', 'https://example.com');
+const pattern = new URLPattern('/books/*', 'https://example.com');
 console.log(pattern.test('https://example.com/books/123')); // true
 console.log(pattern.test('https://example.com/books')); // false
 console.log(pattern.test('https://example.com/books/')); // true

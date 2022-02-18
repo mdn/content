@@ -12,8 +12,8 @@ The **`z`** attribute defines the location along the z-axis for a light source i
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("fePointLight")}}
-*   {{SVGElement("feSpotLight")}}
+- {{SVGElement("fePointLight")}}
+- {{SVGElement("feSpotLight")}}
 
 ## Example
 

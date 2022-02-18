@@ -3,7 +3,7 @@ title: Window.onvrdisplaydisconnect
 slug: Web/API/Window/onvrdisplaydisconnect
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -27,7 +27,7 @@ The event object is of type {{domxref("VRDisplayEvent")}}.
 ## Syntax
 
 ```js
-window.onvrdisplaydisconnect = function() { ... };
+window.onvrdisplaydisconnect = function() { /* ... */ };
 ```
 
 ## Examples

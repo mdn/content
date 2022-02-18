@@ -87,7 +87,7 @@ Because the sample server itself is still a work in progress, there are quirks a
 
 ### Port numbers
 
-If your sample needs to use a network port, you will have to take care not to inadvertently use one that's already being used by another sample (or by a system service on the server).  At some point in the future, there will be an entry in the sample manifest for requesting a port number, so that the system will allocate them and keep track of which are used and which are not. But until then, be careful not to step on any toes!
+If your sample needs to use a network port, you will have to take care not to inadvertently use one that's already being used by another sample (or by a system service on the server).  At some point in the future, there will be an entry in the sample manifest for requesting a port number, so that the system will allocate them and keep track of which are used and which are not. But until then, be careful not to step on any toes!
 
 ## Work in progress
 

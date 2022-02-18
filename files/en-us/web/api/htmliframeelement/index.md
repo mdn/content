@@ -12,7 +12,7 @@ browser-compat: api.HTMLIFrameElement
 
 The **`HTMLIFrameElement`** interface provides special properties and methods (beyond those of the {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of inline frame elements.
 
-{{InheritanceDiagram(600,120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -23,8 +23,8 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLIFrameElement.allow")}} {{experimental_inline}}
   - : A list of origins the frame is allowed to display content from. This attribute also accepts the values `self` and `src` which represent the origin in the iframe's src attribute. The default value is `src`.
 - {{domxref("HTMLIFrameElement.allowfullscreen")}} {{experimental_inline}}
-  - : A boolean value indicating whether the inline frame is willing to be placed into full screen mode. See [Using full-screen mode](/en-US/docs/Web/API/Fullscreen_API) for details.
-- {{domxref("HTMLIFrameElement.allowPaymentRequest")}}
+  - : A boolean value indicating whether the inline frame is willing to be placed into full screen mode. See [Using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API) for details.
+- {{domxref("HTMLIFrameElement.allowPaymentRequest")}} {{deprecated_inline}}
   - : A boolean value indicating whether the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) may be invoked inside a cross-origin iframe.
 - {{domxref("HTMLIFrameElement.contentDocument")}} {{readonlyInline}}
   - : Returns a {{domxref("Document")}}, the active document in the inline frame's nested browsing context.

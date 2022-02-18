@@ -115,7 +115,7 @@ console.log(newstr); // ###34567
 
 ## See also
 
-- A polyfill of `RegExp.prototype[@@replace]` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `RegExp.prototype[@@replace]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.replace()")}}
 - {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
 - {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}

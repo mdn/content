@@ -44,8 +44,10 @@ for (var value of myHeaders.values()) {
 
 The result is:
 
-    text/xml
-    Accept-Language
+```
+text/xml
+Accept-Language
+```
 
 ## Browser compatibility
 

@@ -293,7 +293,7 @@ Add `class="btn btn__primary btn__lg"` to your form’s `<button>` element:
 
 ```html
 <button type="submit" class="btn btn__primary btn__lg">
-  Add
+  Add
 </button>
 ```
 

@@ -18,12 +18,15 @@ The **`MediaQueryListEvent()`** constructor creates a new
 ## Syntax
 
 ```js
-var myMqlEvent = new MediaQueryListEvent(init);
+var myMqlEvent = new MediaQueryListEvent(typeArg, init);
 ```
 
 ### Parameters
 
-- `init`
+- `typeArg`
+  - : A string representing the name of the event.
+
+- `init` {{optional_inline}}
 
   - : An init object that defines features of the new object instance. The available
     properties are:
@@ -38,7 +41,7 @@ var myMqlEvent = new MediaQueryListEvent(init);
 var media = '(max-width: 600px)';
 var matches = true;
 
-var myMediaQueryListEvent = new MediaQueryListEvent({media, matches});
+var myMediaQueryListEvent = new MediaQueryListEvent("change", {media, matches});
 ```
 
 ## Specifications

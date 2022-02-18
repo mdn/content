@@ -17,7 +17,7 @@ tags:
   - track
 browser-compat: api.AudioContext.createMediaStreamTrackSource
 ---
-{{draft}}{{ APIRef("Web Audio API") }}
+{{ APIRef("Web Audio API") }}
 
 The **`createMediaStreamTrackSource()`** method of the {{
   domxref("AudioContext") }} interface creates and returns a

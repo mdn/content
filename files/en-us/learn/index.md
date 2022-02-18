@@ -78,25 +78,25 @@ The code examples you'll encounter in the Learning Area are all [available on Gi
 
 If you prefer to copy the repo in a more flexible way that allows for automatic updates, you can follow the more complex instructions:
 
-1.  [Install Git](https://git-scm.com/downloads) on your machine. This is the underlying version control system software that GitHub works on top of.
-2.  Open your computer's [command prompt](https://www.lifewire.com/how-to-open-command-prompt-2618089) (Windows) or terminal ([Linux](https://help.ubuntu.com/community/UsingTheTerminal), [macOS](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)).
-3.  To copy the learning area repo to a folder called learning-area in the current location your command prompt/terminal is pointing to, use the following command:
+1. [Install Git](https://git-scm.com/downloads) on your machine. This is the underlying version control system software that GitHub works on top of.
+2. Open your computer's [command prompt](https://www.lifewire.com/how-to-open-command-prompt-2618089) (Windows) or terminal ([Linux](https://help.ubuntu.com/community/UsingTheTerminal), [macOS](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)).
+3. To copy the learning area repo to a folder called learning-area in the current location your command prompt/terminal is pointing to, use the following command:
 
     ```bash
     git clone https://github.com/mdn/learning-area
     ```
 
-4.  You can now enter the directory and find the files you are after (either using your Finder/File Explorer or the [`cd` command](<https://en.wikipedia.org/wiki/Cd_(command)>)).
+4. You can now enter the directory and find the files you are after (either using your Finder/File Explorer or the [`cd` command](<https://en.wikipedia.org/wiki/Cd_(command)>)).
 
 You can update the `learning-area` repository with any changes made to the master version on GitHub with the following steps:
 
-1.  In your command prompt/terminal, go inside the `learning-area` directory using `cd`. For example, if you were in the parent directory:
+1. In your command prompt/terminal, go inside the `learning-area` directory using `cd`. For example, if you were in the parent directory:
 
     ```bash
     cd learning-area
     ```
 
-2.  Update the repository using the following command:
+2. Update the repository using the following command:
 
     ```bash
     git pull

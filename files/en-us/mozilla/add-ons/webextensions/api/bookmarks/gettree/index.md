@@ -17,7 +17,7 @@ browser-compat: webextensions.api.bookmarks.getTree
 
 **`bookmarks.getTree()`** returns an array containing the root of the bookmarks tree as a {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} object.
 
-You can access the entire tree recursively using its `children` property and the `children` property of its descendants, if they are themselves folders.
+You can access the entire tree recursively using its `children` property and the `children` property of its descendants, if they are themselves folders.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -33,7 +33,7 @@ None.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array containing one object, a [`bookmarks.BookmarkTreeNode`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode "An object of type bookmarks.BookmarkTreeNode represents a node in the bookmark tree, where each node is a bookmark or bookmark folder. Child nodes are ordered by an index within their respective parent folders.") object representing the root node.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array containing one object, a [`bookmarks.BookmarkTreeNode`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode) object representing the root node.
 
 ## Examples
 
@@ -64,7 +64,7 @@ function logTree(bookmarkItems) {
 }
 
 function onRejected(error) {
-  console.log(`An error: ${error}`);
+  console.log(`An error: ${error}`);
 }
 
 var gettingTree = browser.bookmarks.getTree();

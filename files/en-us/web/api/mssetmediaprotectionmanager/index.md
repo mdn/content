@@ -21,7 +21,7 @@ HTMLMediaElement.msSetMediaProtectionManager(mediaProtectionManager);
 
 ### Parameters
 
-The [Windows.Media.Protection](https://docs.microsoft.com/en-us/uwp/api/windows.media.protection)
+The [Windows.Media.Protection](https://docs.microsoft.com/uwp/api/windows.media.protection)
 namespace provides classes to manage Digital Rights Management (DRM) media contents. The
 `MediaProtectionManager` class can be passed as an input to a media playback
 API or the `mediaProtectionManager` property inside the tag's video or audio.

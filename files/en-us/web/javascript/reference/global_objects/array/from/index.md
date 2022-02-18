@@ -22,18 +22,18 @@ iterable object.
 
 ```js
 // Arrow function
-Array.from(arrayLike, (element) => { ... } )
-Array.from(arrayLike, (element, index) => { ... } )
+Array.from(arrayLike, (element) => { /* ... */ } )
+Array.from(arrayLike, (element, index) => { /* ... */ } )
 
 // Mapping function
 Array.from(arrayLike, mapFn)
 Array.from(arrayLike, mapFn, thisArg)
 
 // Inline mapping function
-Array.from(arrayLike, function mapFn(element) { ... })
-Array.from(arrayLike, function mapFn(element, index) { ... })
-Array.from(arrayLike, function mapFn(element) { ... }, thisArg)
-Array.from(arrayLike, function mapFn(element, index) { ... }, thisArg)
+Array.from(arrayLike, function mapFn(element) { /* ... */ })
+Array.from(arrayLike, function mapFn(element, index) { /* ... */ })
+Array.from(arrayLike, function mapFn(element) { /* ... */ }, thisArg)
+Array.from(arrayLike, function mapFn(element, index) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
@@ -335,7 +335,7 @@ if (!Array.from) {
 
 ## See also
 
-- A polyfill of `Array.from` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.from` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array")}}
 - {{jsxref("Array.of()")}}
 - {{jsxref("Array.prototype.map()")}}

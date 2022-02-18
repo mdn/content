@@ -9,7 +9,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-Firefox 20 was released on April, 2nd 2013. This article provides information about the changes in this release that will affect developers.
+Firefox 20 was released on April, 2nd 2013. This article provides information about the changes in this release that will affect developers.
 
 ## Changes for Web developers
 
@@ -21,7 +21,7 @@ Firefox 20 was released on April, 2nd 2013. This article provides information a
 
 ### JavaScript
 
-- Support for the `Weakmap.prototype.clear()` method, recently added to the Harmony (EcmaScript 2015) draft proposal has been added ({{bug("814562")}}).
+- Support for the `WeakMap.prototype.clear()` method, recently added to the Harmony (EcmaScript 2015) draft proposal has been added ({{bug("814562")}}).
 - Support for the [`Math.imul()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/imul) method, a C-style 32-bit multiplication function. Though proposed for Harmony (EcmaScript 2015) it has not yet accepted and still is non-standard ({{bug("808148")}}).
 - Web apps using draggable text with Kinetic 3.x are working, even when using the Cairo canvas backend ({{bug("835064")}}).
 - The [`for each…in`](/en-US/docs/JavaScript/Reference/Statements/for_each...in) statement has been deprecated and should not be used. Consider using the new [`for…of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) statement ({{Bug("804834")}}).
@@ -72,7 +72,7 @@ Firefox 20 was released on April, 2nd 2013. This article provides information a
 
 ## See also
 
-- [Firefox 20 Release Notes](https://www.mozilla.org/en-US/firefox/20.0/releasenotes/)
+- [Firefox 20 Release Notes](https://www.mozilla.org/en-US/firefox/20.0/releasenotes/)
 - [Add-on Compatibility for Firefox 20](https://blog.mozilla.org/addons/2013/03/20/compatibility-for-firefox-20/)
 
 ### Older versions

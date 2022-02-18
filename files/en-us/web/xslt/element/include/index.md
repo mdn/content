@@ -13,7 +13,9 @@ The `<xsl:include>` element merges the contents of one stylesheet with another. 
 
 ### Syntax
 
-    <xsl:include href=URI />
+```xml
+<xsl:include href=URI />
+```
 
 ### Required Attributes
 

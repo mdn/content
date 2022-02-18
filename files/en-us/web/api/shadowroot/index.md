@@ -16,6 +16,8 @@ The **`ShadowRoot`** interface of the Shadow DOM API is the root node of a DOM s
 
 You can retrieve a reference to an element's shadow root using its {{domxref("Element.shadowRoot")}} property, provided it was created using {{domxref("Element.attachShadow()")}} with the `mode` option set to `open`.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 - {{domxref("ShadowRoot.activeElement")}} {{readonlyInline}}
@@ -42,7 +44,7 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
 ### Event handlers
 
 - {{domxref("ShadowRoot.onslotchange")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("slotchange")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}} event is raised.
 
 ## Methods
 

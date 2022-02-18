@@ -35,11 +35,11 @@ let results = browser.storage.<storageType>.get(
 ### Parameters
 
 - `keys`
-  - : A key (`string`) or keys (an array of strings, _or_ an object specifying default values) to identify the item(s) to be retrieved from storage. If you pass an empty string, object or array here, an empty object will be retrieved. If you pass `null`, or an undefined value, the entire storage contents will be retrieved.
+  - : A key (`string`) or keys (an array of strings, _or_ an object specifying default values) to identify the item(s) to be retrieved from storage. If you pass an empty object or array here, an empty object will be retrieved. If you pass `null`, or an undefined value, the entire storage contents will be retrieved.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to a `results` object, containing every object in `keys` that was found in the storage area. If `keys` is an object, keys that are not found in the storage area will have their values given by the `keys` object.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to a `results` object, containing every object in `keys` that was found in the storage area. If `keys` is an object, keys that are not found in the storage area will have their values given by the `keys` object.
 
 If the operation failed, the promise is rejected with an error message.
 

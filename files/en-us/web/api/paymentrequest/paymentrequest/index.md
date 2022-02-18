@@ -77,7 +77,7 @@ var paymentRequest = new PaymentRequest(methodData, details, [options]);
         - `total`
           - : A total amount for the payment request that overrides value in
             details.total. This is typically used when
-            `details.modifiers.additionalItems` adds a discount or a surchase
+            `details.modifiers.additionalItems` adds a discount or a purchase
             to the request.
 
 - `options` {{optional_inline}}

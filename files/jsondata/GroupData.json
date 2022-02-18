@@ -288,9 +288,6 @@
         "ByteString",
         "CDATASection",
         "CharacterData",
-        "CSSPrimitiveValue",
-        "CSSValue",
-        "CSSValueList",
         "Comment",
         "CustomEvent",
         "Document",
@@ -299,29 +296,23 @@
         "DOMError",
         "DOMException",
         "DOMImplementation",
-        "DOMObject",
         "DOMParser",
         "DOMPoint",
-        "DOMPointInit",
         "DOMPointReadOnly",
         "DOMRect",
-        "DOMString",
         "DOMTimeStamp",
         "DOMTokenList",
         "Element",
-        "ElementTraversal",
-        "Entity",
-        "EntityReference",
         "Event",
         "EventTarget",
         "HTMLCollection",
         "MutationObserver",
+        "NamedNodeMap",
         "Node",
         "NodeFilter",
         "NodeIterator",
         "NodeList",
         "ProcessingInstruction",
-        "PromiseResolver",
         "Range",
         "StaticRange",
         "Text",
@@ -329,7 +320,6 @@
         "TextEncoder",
         "TimeRanges",
         "TreeWalker",
-        "USVString",
         "XMLDocument"
       ],
       "methods": [],
@@ -394,7 +384,7 @@
     },
     "Encoding API": {
       "overview": ["Encoding API"],
-      "interfaces": ["TextDecoder", "TextEncoder"],
+      "interfaces": ["TextDecoder", "TextEncoder", "TextDecoderStream", "TextEncoderStream"],
       "methods": [],
       "properties": [],
       "events": []
@@ -588,6 +578,7 @@
       "events": []
     },
     "HTML DOM": {
+      "overview": ["HTML DOM API"],
       "interfaces": [
         "BeforeUnloadEvent",
         "DOMStringMap",
@@ -624,7 +615,6 @@
         "HTMLIFrameElement",
         "HTMLImageElement",
         "HTMLInputElement",
-        "HTMLIsIndexElement",
         "HTMLKeygenElement",
         "HTMLLabelElement",
         "HTMLLegendElement",
@@ -679,15 +669,11 @@
         "Plugin",
         "PluginArray",
         "PopStateEvent",
-        "PortCollection",
         "PromiseRejectionEvent",
         "RadioNodeList",
-        "Transferable",
         "ValidityState",
         "Window",
-        "WindowBase64",
-        "WindowEventHandlers",
-        "WindowTimers"
+        "WindowEventHandlers"
       ],
       "methods": [],
       "properties": [],
@@ -1731,6 +1717,9 @@
     },
     "Web Crypto API": {
       "overview": ["Web Crypto API"],
+      "guides": [
+        "/docs/Web/API/Web_Crypto_API/Non-cryptographic_uses_of_subtle_crypto"
+      ],
       "interfaces": ["Crypto", "CryptoKey", "SubtleCrypto"],
       "methods": [],
       "properties": ["Window.crypto"],
@@ -2184,6 +2173,15 @@
         "XRSession: selectstart",
         "XRSession: visibilitychange"
       ]
+    },
+    "Window Controls Overlay API": {
+      "overview": ["Window Controls Overlay API"],
+      "interfaces": [
+        "WindowControlsOverlay"
+      ],
+      "methods": [],
+      "properties": ["Navigator.windowControlsOverlay"],
+      "events": []
     },
     "XDomain": {
       "interfaces": ["XDomainRequest"],

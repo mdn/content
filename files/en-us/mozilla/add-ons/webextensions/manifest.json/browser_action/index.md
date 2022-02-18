@@ -32,13 +32,13 @@ browser-compat: webextensions.manifest.browser_action
   "default_title": "Whereami?",
   "default_popup": "popup/geo.html",
   "theme_icons": [{
-    "light": "icons/geo-16-light.png",
-    "dark": "icons/geo-16.png",
-    "size": 16
+    "light": "icons/geo-16-light.png",
+    "dark": "icons/geo-16.png",
+    "size": 16
   }, {
-    "light": "icons/geo-32-light.png",
-    "dark": "icons/geo-32.png",
-    "size": 32
+    "light": "icons/geo-32-light.png",
+    "dark": "icons/geo-32.png",
+    "size": 32
   }]
 }</pre
         >
@@ -98,7 +98,7 @@ The `browser_action` key is an object that may have any of the following propert
           <a
             href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles"
             >Browser styles</a
-          > describes the classes you can apply to elements in the popup in
+          > describes the classes you can apply to elements in the popup in
           order to get particular styles.
         </p>
         <p>
@@ -157,7 +157,7 @@ The `browser_action` key is an object that may have any of the following propert
         <p>
           Firefox remembers the <code>default_area</code> setting for an
           extension, even if that extension is uninstalled and subsequently
-          reinstalled. To force the browser to acknowlege a new value for
+          reinstalled. To force the browser to acknowledge a new value for
           <code>default_area</code>, the id of the extension must be changed.
         </p>
         <p>
@@ -332,7 +332,7 @@ Alternatively, you can supply several icons in different sizes, and the browser 
 
 In Firefox:
 
-- The default height and width for icons in the toolbar is 16 \* [`window.devicePixelRatio`](/en-US/docs/Web/API/Window/devicePixelRatio).
+- The default height and width for icons in the toolbar is 16 \* [`window.devicePixelRatio`](/en-US/docs/Web/API/Window/devicePixelRatio).
 - The default height and width for icons in the menu panel is 32 \* [`window.devicePixelRatio`](/en-US/docs/Web/API/Window/devicePixelRatio).
 
 So you can specify icons that match exactly, on both normal and Retina displays, by supplying three icon files, and specifying them like this:

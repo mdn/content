@@ -37,7 +37,7 @@ bind(thisArg, arg1, ... , argN)
     operator. When using `bind` to create a function (supplied as a callback)
     inside a `setTimeout`, any primitive value passed as
     `thisArg` is converted to object. If no arguments are provided
-    to `bind `, or if the `thisArg` is
+    to `bind`, or if the `thisArg` is
     `null` or `undefined`, the
     `this` of the executing scope is treated as the
     `thisArg` for the new function.
@@ -303,7 +303,7 @@ slice(arguments);
 
 ## See also
 
-- A polyfill of `Function.prototype.bind` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-function)
+- [Polyfill of `Function.prototype.bind` in `core-js`](https://github.com/zloirock/core-js#ecmascript-function)
 - {{jsxref("Function.prototype.apply()")}}
 - {{jsxref("Function.prototype.call()")}}
 - {{jsxref("Functions", "Functions", "", 1)}}

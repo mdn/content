@@ -44,8 +44,7 @@ delete object['property']
 ### Return value
 
 `true` for all cases except when the property is an
-{{jsxref("Object.hasOwnProperty", "own")}} {{jsxref("Errors/Cant_delete",
-	"non-configurable")}} property, in which case, `false` is returned in
+{{jsxref("Object.hasOwnProperty", "own")}} {{jsxref("Errors/Cant_delete", "non-configurable")}} property, in which case, `false` is returned in
 non-strict mode.
 
 ### Exceptions
@@ -55,7 +54,7 @@ Throws {{jsxref("TypeError")}} in [strict mode](/en-US/docs/Web/JavaScript/Refer
 ## Description
 
 Unlike what common belief suggests (perhaps due to other programming languages like [delete
-in C++](https://docs.microsoft.com/en-us/cpp/cpp/delete-operator-cpp?view=vs-2019)), the `delete` operator has **nothing** to do
+in C++](https://docs.microsoft.com/cpp/cpp/delete-operator-cpp?view=vs-2019)), the `delete` operator has **nothing** to do
 with directly freeing memory. Memory management is done indirectly via breaking
 references. See the [memory
 management](/en-US/docs/Web/JavaScript/Memory_Management) page for more details.
@@ -145,7 +144,7 @@ In strict mode, this would have raised an exception.
 
 When in strict mode, if `delete` is used on a direct reference to a
 variable, a function argument or a function name, it will throw a
-{{jsxref("SyntaxError")}}. Therefore, to avoid syntax errors in
+{{jsxref("SyntaxError")}}. Therefore, to avoid syntax errors in
 strict mode, you must use the `delete` operator in the form of
 `delete object.property` or `delete object['property']`.
 
@@ -162,8 +161,8 @@ console.log(delete variable2); // false
 
 ```js
 function func(param) {
-  // SyntaxError in strict mode.
-  console.log(delete param); // false
+  // SyntaxError in strict mode.
+  console.log(delete param); // false
 }
 
 // SyntaxError in strict mode.

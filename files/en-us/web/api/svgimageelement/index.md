@@ -16,7 +16,7 @@ browser-compat: api.SVGImageElement
 
 The **`SVGImageElement`** interface corresponds to the {{SVGElement("image")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

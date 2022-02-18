@@ -78,11 +78,11 @@ const audioConfiguration = {
 };
 ```
 
-Had we been testing encoding capabilities, we would have created a {{domxref("MediaEncodingConfiguration")}}, which requires the type of media being tested — either `record` (for recording media, i.e. a {{domxref("MediaRecorder")}} object) or `transmission` (for media transmitted over electronic means like [`RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection "The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed.")) — plus either an audio or video configuration as described above.
+Had we been testing encoding capabilities, we would have created a {{domxref("MediaEncodingConfiguration")}}, which requires the type of media being tested — either `record` (for recording media, i.e. a {{domxref("MediaRecorder")}} object) or `transmission` (for media transmitted over electronic means like [`RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection)) — plus either an audio or video configuration as described above.
 
 ### Querying the browser about decoding abilities
 
-Now that we've created a video decoding configuration we can pass it as a paramater of the {{domxref("MediaCapabilities.decodingInfo", "decodingInfo()")}} method to determine if a video matching this configuration would be decodable and if the playback would be smooth and power efficient.
+Now that we've created a video decoding configuration we can pass it as a parameter of the {{domxref("MediaCapabilities.decodingInfo", "decodingInfo()")}} method to determine if a video matching this configuration would be decodable and if the playback would be smooth and power efficient.
 
 ```js
 var promise = navigator.mediaCapabilities.decodingInfo(videoConfiguration);
@@ -107,7 +107,7 @@ navigator.mediaCapabilities.decodingInfo(videoConfiguration).then(result => {
 
 In our video decoding example, a `TypeError` would be raised if the media configuration passed to the {{domxref("MediaCapabilities.decodingInfo", "decodingInfo()")}} method was invalid. There are a few reasons why an error might occur, including:
 
-- The specified `type` isn't one of the two permtited values: `file` or `media-source`
+- The specified `type` isn't one of the two permitted values: `file` or `media-source`
 - The `contentType` given is
 
 The error can be due to the `type` not being one of the two possible values, the `contentType` not being a valid codec MIME type, or invalid or omitted definitions required in the {{domxref("VideoConfiguration")}}.
@@ -179,7 +179,7 @@ and whether decoding will be smooth and power efficient:</p>
     </select>
   </li>
   </ul>
-  <p><input type="button" value="Test this Video Configuration" id="tryit"></p>
+  <p><input type="button" value="Test this Video Configuration" id="try-it"></p>
 </form>
 
 <ul id="results"></ul>
@@ -191,9 +191,9 @@ and whether decoding will be smooth and power efficient:</p>
 let mc = {
   videoConfiguration : new Object(),
 
-  tryit: function () {
+  tryIt: function () {
    mc.createConfiguration();
-   mc.testit();
+   mc.testIt();
   },
 
   createConfiguration: function () {
@@ -210,7 +210,7 @@ let mc = {
     }
   },
 
-  testit: function () {
+  testIt: function () {
     let content = '';
     navigator.mediaCapabilities.decodingInfo(mc.videoConfiguration).then(result => {
       var li = document.createElement('li'),
@@ -232,7 +232,7 @@ let mc = {
   }
 }
 
-document.getElementById('tryit').addEventListener('click', mc.tryit);
+document.getElementById('try-it').addEventListener('click', mc.tryIt);
 ```
 
 ### Live Result

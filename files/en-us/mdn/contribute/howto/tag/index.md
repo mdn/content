@@ -17,7 +17,7 @@ tags:
 
 Please use tags properly as explained below. If you don't, our automated tools will not correctly generate lists of content, landing pages, and cross-linking of articles.
 
-> **Warning:** Note to translators and localizers: You should *not* translate any tags listed on this page. They are used for specific purposes such as certain site management tasks and automated data processing, and translating them would break these processes.
+> **Warning:** Note to translators and localizers: You should *not* translate any tags listed on this page. They are used for specific purposes such as certain site management tasks and automated data processing, and translating them would break these processes.
 
 ## How MDN uses tags
 
@@ -102,7 +102,7 @@ Within the API reference, each article should identify which part of the API it 
 - `Property`
   - : Every article describing a particular property within an interface needs this tag. See {{DOMxRef("RTCPeerConnection.connectionState")}}, for example.
 - `Method`
-  - : Each article documenting an interface method needs this tag. See {{DOMxRef("RTCPeerConnection.createOffer()")}} for example.
+  - : Each article documenting an interface method needs this tag. See {{DOMxRef("RTCPeerConnection.createOffer()")}} for example.
 
 In addition, the reference pages need to include interface, property, and method names among their tags. Some examples:
 
@@ -162,7 +162,7 @@ The writing community uses tags to label articles as requiring specific types of
 - `NeedsLiveSamples`
   - : The article has one or more examples that need to be updated to use the [live sample system](/en-US/docs/MDN/Structures/Live_samples).
 - `NeedsMarkupWork`
-  - : The article needs improvement to the page markup (usually because the page content consists mostly or entirely of {{HTMLElement("p")}} tags).
+  - : The article needs improvement to the page markup (usually because the page content consists mostly or entirely of {{HTMLElement("p")}} tags).
 - `NeedsSpecTable`
   - : The article needs a table to indicate on which specification document(s) the feature was defined.
 - `NeedsUpdate`

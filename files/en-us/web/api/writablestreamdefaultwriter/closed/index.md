@@ -11,12 +11,12 @@ tags:
   - closed
 browser-compat: api.WritableStreamDefaultWriter.closed
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`closed`** read-only property of the
-{{domxref("WritableStreamDefaultWriter")}} interface returns a promise that fulfills if
-the stream becomes closed or the writer's lock is released, or rejects if the stream
-errors.
+{{domxref("WritableStreamDefaultWriter")}} interface returns a
+{{jsxref("Promise")}} that fulfills if the stream becomes closed, or rejects if
+the stream errors or the writer's lock is released.
 
 ## Syntax
 

@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.String.codePointAt
 {{JSRef}}
 
 The **`codePointAt()`** method returns a non-negative integer
-that is the UTF-16 code point value.
+that is the Unicode code point value at the given position.
 
 {{EmbedInteractiveExample("pages/js/string-codepointat.html","shorter")}}
 
@@ -145,7 +145,7 @@ if (!String.prototype.codePointAt) {
 
 ## See also
 
-- A polyfill of `String.prototype.codePointAt` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.codePointAt` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.fromCodePoint()")}}
 - {{jsxref("String.fromCharCode()")}}
 - {{jsxref("String.prototype.charCodeAt()")}}

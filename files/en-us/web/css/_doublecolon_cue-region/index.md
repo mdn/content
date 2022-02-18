@@ -23,7 +23,7 @@ The **`::cue-region`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/W
 }
 ```
 
-The properties are applied to the entire set of cues as if they were a single unit. The only exception is that `background` and its shorthand properties apply to each cue individually, to avoid creating boxes and obscuring unexpectedly large areas of the media.
+The properties are applied to the entire set of cues as if they were a single unit. The only exception is that `background` and its longhand properties apply to each cue individually, to avoid creating boxes and obscuring unexpectedly large areas of the media.
 
 ## Syntax
 

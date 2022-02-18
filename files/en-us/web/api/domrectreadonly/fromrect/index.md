@@ -3,26 +3,22 @@ title: DOMRectReadOnly.fromRect()
 slug: Web/API/DOMRectReadOnly/fromRect
 tags:
   - API
-  - DOM Reference
-  - DOMRect
   - DOMRectReadOnly
-  - Experimental
   - Geometry
   - Method
   - Reference
-  - fromRect()
 browser-compat: api.DOMRectReadOnly.fromRect
 ---
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("Geometry Interfaces")}}
 
-The **`fromRect()`** property of the
-{{domxref("DOMRectReadOnly")}} interface creates a new `DOMRectReadOnly`
+The **`fromRect()`** static method of the
+{{domxref("DOMRectReadOnly")}} object creates a new `DOMRectReadOnly`
 object with a given location and dimensions.
 
 ## Syntax
 
 ```js
-var domRect = DOMRectReadOnly.fromRect(rectangle)
+DOMRectReadOnly.fromRect(rectangle)
 ```
 
 ### Parameters
@@ -39,7 +35,7 @@ var domRect = DOMRectReadOnly.fromRect(rectangle)
 
 ### Return value
 
-An instance of {{domxref("DOMRect")}}.
+An instance of {{domxref("DOMRectReadOnly")}}.
 
 ## Specifications
 

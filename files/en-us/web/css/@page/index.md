@@ -47,7 +47,7 @@ The `@page` at-rule can be accessed via the CSS object model interface {{domxref
 
 ### @page pseudo-class examples
 
-Please refer to the various [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes "Pseudo-classes") of `@page` for examples.
+Please refer to the various [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) of `@page` for examples.
 
 - {{Cssxref(":blank")}}
 - {{Cssxref(":first")}}

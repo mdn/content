@@ -23,7 +23,7 @@ number of form controls using the {{domxref("HTMLFormElement.length", "length")}
 property.
 
 You can access a particular form control in the returned collection by using either an
-index or the element's `name` or`id` attributes.
+index or the element's `name` or `id` attributes.
 
 Prior to HTML 5, the returned object was an {{domxref("HTMLCollection")}}, on which
 `HTMLFormControlsCollection` is based.

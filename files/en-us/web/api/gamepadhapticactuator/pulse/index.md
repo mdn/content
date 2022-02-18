@@ -19,7 +19,7 @@ The **`pulse()`** method of the {{domxref("GamepadHapticActuator")}} interface m
 ## Syntax
 
 ```js
-gamepadHapticActuatorInstance.pulse(value, duration).then(function(result) { ... });
+gamepadHapticActuatorInstance.pulse(value, duration).then(function(result) { /* ... */ });
 ```
 
 ### Parameters
@@ -37,7 +37,11 @@ A promise that resolves with a value of `true` when the pulse has successfully c
 
 ## Examples
 
-TBC
+```js
+const gamepad = navigator.getGamepads()[0];
+
+gamepad.hapticActuators[0].pulse(1.0, 200);
+````
 
 ## Specifications
 

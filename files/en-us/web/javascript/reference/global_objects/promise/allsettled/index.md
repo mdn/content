@@ -61,6 +61,7 @@ reflects what value each promise was fulfilled (or rejected) with.
 ### Using Promise.allSettled
 
 #### {{JSxRef("Promise.then", "Promise.prototype.then()")}}
+
 ```js
 Promise.allSettled([
   Promise.resolve(33),
@@ -79,6 +80,7 @@ Promise.allSettled([
 ```
 
 #### {{jsxref("Operators/await", "await")}}
+
 ```js
 const values = await Promise.allSettled([
   Promise.resolve(33),
@@ -106,7 +108,7 @@ console.log(values)
 
 ## See also
 
-- A polyfill of `Promise.allSettled` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
+- [Polyfill of `Promise.allSettled` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
 - [Promises](/en-US/docs/Archive/Add-ons/Techniques/Promises)
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
 - [Graceful asynchronous

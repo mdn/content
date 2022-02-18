@@ -11,7 +11,7 @@ tags:
   - desiredSize
 browser-compat: api.ReadableByteStreamController.desiredSize
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`desiredSize`** read-only property of the
 {{domxref("ReadableByteStreamController")}} interface returns the desired size required

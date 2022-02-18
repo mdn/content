@@ -20,7 +20,7 @@ server certificate to be used to encrypt messages to the license server.
 ## Syntax
 
 ```js
-MediaKeys.setServerCertificate(serverCertificate).then(function() { ... });
+MediaKeys.setServerCertificate(serverCertificate).then(function() { /* ... */ });
 ```
 
 ## Specifications

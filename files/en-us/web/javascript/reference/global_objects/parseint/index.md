@@ -85,11 +85,11 @@ A value passed as the radix argument is coerced to a Number (if necessary), then
 value is 0, `NaN` or `Infinity` (undefined is coerced to
 `NaN`), JavaScript assumes the following:
 
-1.  If the input `string` begins with "`0x`" or "`0X`"
+1. If the input `string` begins with "`0x`" or "`0X`"
     (a zero, followed by lowercase or uppercase X), `radix` is
     assumed to be `16` and the rest of the string is parsed as a hexadecimal
     number.
-2.  If the input `string` begins with any other value, the radix is
+2. If the input `string` begins with any other value, the radix is
     `10` (decimal).
 
 Else if the radix value (coerced if necessary) is not in range \[2, 36] (inclusive)

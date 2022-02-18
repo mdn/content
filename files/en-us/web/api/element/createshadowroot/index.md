@@ -11,7 +11,7 @@ tags:
   - shadow dom
 browser-compat: api.Element.createShadowRoot
 ---
-{{APIRef('Shadow DOM')}}{{non-standard_header}}{{deprecated_header}}{{draft}}
+{{APIRef('Shadow DOM')}}{{non-standard_header}}{{deprecated_header}}
 
 Use `Element.createShadowRoot` to create an instance of [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM). When shadow DOM is
 created, it is always attached to an existing element. After the shadow DOM is created,

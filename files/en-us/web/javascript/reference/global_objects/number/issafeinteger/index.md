@@ -52,8 +52,8 @@ Number.isSafeInteger(testValue)
 
 ### Return value
 
-A {{jsxref("Boolean")}} indicating whether or not the given value is a number that is a
-safe integer.
+The boolean value `true` if the given value is a number that is a
+safe integer. Otherwise `false`.
 
 ## Polyfill
 
@@ -88,7 +88,7 @@ Number.isSafeInteger(3.0);                  // true
 
 ## See also
 
-- A polyfill of `Number.isSafeInteger` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [Polyfill of `Number.isSafeInteger` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
 - The {{jsxref("Number")}} object it belongs to.
 - {{jsxref("Number.MIN_SAFE_INTEGER")}}
 - {{jsxref("Number.MAX_SAFE_INTEGER")}}

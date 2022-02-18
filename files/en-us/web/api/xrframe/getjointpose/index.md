@@ -38,7 +38,6 @@ getJointPose(joint, baseSpace)
 An {{domxref("XRJointPose")}} object specifying the position and orientation of the hand joint, relative to
 the {{domxref("XRSpace")}} indicated by `baseSpace`.
 
-
 ## Examples
 
 ### Using `getJointPose()`

@@ -36,8 +36,8 @@ You can use this attribute with any SVG element.
   </tbody>
 </table>
 
-*   `<iri>`
-    *   : This value specifies the base IRI of the element.
+- `<iri>`
+  - : This value specifies the base IRI of the element.
 
 ## Specifications
 
@@ -66,4 +66,4 @@ You can use this attribute with any SVG element.
 
 ## See also
 
-*   [XML Base](https://www.w3.org/TR/xmlbase/) specification
+- [XML Base](https://www.w3.org/TR/xmlbase/) specification

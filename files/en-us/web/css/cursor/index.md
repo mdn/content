@@ -18,7 +18,7 @@ browser-compat: css.properties.cursor
 
 The **`cursor`** [CSS](/en-US/docs/Web/CSS) property sets the mouse cursor, if any, to show when the mouse pointer is over an element.
 
-The curser setting should inform users of the mouse operations that can be performed at the current location, including: text selection, activating help or context menus, copying content, resizing tables, and so on.
+The cursor setting should inform users of the mouse operations that can be performed at the current location, including: text selection, activating help or context menus, copying content, resizing tables, and so on.
 You can specify either the _type_ of cursor using a keyword, or load a specific icon to use (with optional fallback images and mandatory keyword as a final fallback).
 
 {{EmbedInteractiveExample("pages/css/cursor.html")}}
@@ -54,7 +54,6 @@ Each `<url>` should point to an image file.
 The browser will try to load the first image specified, falling back to the next if it can't, and falling back to the keyword value if no images could be loaded (or if none were specified).
 
 Each `<url>` may be optionally followed by a pair of space-separated numbers, which set the `<x>` `<y>` coordinates of the cursor's hotspot relative to the top-left corner of the image.
-
 
 ### Values
 
@@ -357,7 +356,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
 ### Icon size limits
 
 While the specification does not limit the `cursor` image size, {{Glossary("user agent", "user agents")}} commonly restrict them to avoid potential misuse.
-For example, on Firefox and Chromimum cursor images are restricted to 32x32 pixels by default, and cursor changes using larger images will generally just be ignored.
+For example, on Firefox and Chromium cursor images are restricted to 32x32 pixels by default, and cursor changes using larger images will generally just be ignored.
 
 Check the {{anch("Browser compatibility")}} table for any notes on cursor size limits.
 

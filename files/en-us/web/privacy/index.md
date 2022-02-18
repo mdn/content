@@ -15,7 +15,7 @@ tags:
   - permission
   - personal
 ---
-{{draft}}
+
 
 As users use the web for more and more of their daily tasks, more of their private or personally-identifying information they share, ideally only with sites they trust. Cooperation among web content, the web browser, and the web server is needed to achieve as much privacy and information security as possible. In this article, we examine how to create web content that minimizes the risk of users' personal information or imagery being obtained unexpectedly by third parties.
 
@@ -105,7 +105,7 @@ There are several web technologies and features at play to manage privacy and se
     </tr>
     <tr>
       <td>
-        {{HTMLElement("iframe")}}'s {{htmlattrxref("allow")}}
+        {{HTMLElement("iframe")}}'s {{htmlattrxref("allow", "iframe")}}
         attribute
       </td>
       <td>
@@ -164,7 +164,7 @@ There are several web technologies and features at play to manage privacy and se
   </tbody>
 </table>
 
-Not all of these are generally directly used within code; notably, the [Permissions API](/en-US/docs/Web/API/Permissions_API), [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy), and the `allow` attribute on `<iframe>` elements are primary tools directly used by code to help secure a site and its content.
+Not all of these are generally directly used within code; notably, the [Permissions API](/en-US/docs/Web/API/Permissions_API), [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy), and the {{htmlattrxref("allow", "iframe")}} attribute on {{HTMLElement("iframe")}} elements are primary tools directly used by code to help secure a site and its content.
 
 ## Keeping personal data safe
 

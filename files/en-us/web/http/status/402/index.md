@@ -10,9 +10,9 @@ browser-compat: http.status.402
 ---
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The HTTP **`402 Payment Required`** is a nonstandard client error status response code that is reserved for future use.
+The HTTP **`402 Payment Required`** is a nonstandard response status code that is reserved for future use. This status code was created to enable digital cash or (micro) payment systems and would indicate that the requested content is not available until the client makes a payment.
 
-Sometimes, this code indicates that the request cannot be processed until the client makes a payment. Originally, this code was created to enable digital cash or (micro) payment systems and would indicate that the requested content is not available until the client makes a payment. However, no standard use convention exists and different entities use it in different contexts.
+Sometimes, this status code indicates that the request cannot be processed until the client makes a payment. However, no standard use convention exists and different entities use it in different contexts.
 
 ## Status
 

@@ -14,7 +14,7 @@ browser-compat: http.headers.Pragma
 
 The **`Pragma`** HTTP/1.0 general header is an
 implementation-specific header that may have various effects along the request-response
-chain. This header serves for backwards compatibility with the HTTP/1.0 caches that do not have a 
+chain. This header serves for backwards compatibility with the HTTP/1.0 caches that do not have a
 {{HTTPHeader("Cache-Control")}} HTTP/1.1 header.
 
 > **Note:** `Pragma` is not specified for HTTP responses and is

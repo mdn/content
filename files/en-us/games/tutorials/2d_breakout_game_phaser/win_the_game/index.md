@@ -29,20 +29,20 @@ function ballHitBrick(ball, brick) {
     score += 10;
     scoreText.setText('Points: '+score);
 
-    var count_alive = 0;
-    for (i = 0; i < bricks.children.length; i++) {
-      if (bricks.children[i].alive == true) {
-        count_alive++;
-      }
-    }
-    if (count_alive == 0) {
-      alert('You won the game, congratulations!');
-      location.reload();
-    }
+    var count_alive = 0;
+    for (i = 0; i < bricks.children.length; i++) {
+      if (bricks.children[i].alive == true) {
+        count_alive++;
+      }
+    }
+    if (count_alive == 0) {
+      alert('You won the game, congratulations!');
+      location.reload();
+    }
 }
 ```
 
-We loop through the bricks in the group using `bricks.children`, checking for the aliveness of each with each brick's `.alive() `method. If there are no more bricks left alive, then we show a winning message, restarting the game once the alert is dismissed.
+We loop through the bricks in the group using `bricks.children`, checking for the aliveness of each with each brick's `.alive()` method. If there are no more bricks left alive, then we show a winning message, restarting the game once the alert is dismissed.
 
 ## Compare your code
 

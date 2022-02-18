@@ -48,7 +48,7 @@ The MDN [HTTP header reference](/en-US/docs/Web/HTTP/Headers) documents HTTP hea
   - A specification section listing relevant RFC standard documents.
   - A "See also" section listing relevant resources.
 
-## Step 4a –  add tags to the page
+## Step 4a –  add tags to the page
 
 All HTTP header pages should at least have these tags: "HTTP", "Header", "Reference".
 

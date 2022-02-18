@@ -15,6 +15,8 @@ browser-compat: api.PaymentRequestEvent
 
 The **`PaymentRequestEvent`** interface of the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) is the object passed to a payment handler when a {{domxref("PaymentRequest")}} is made.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("PaymentRequestEvent.PaymentRequestEvent","PaymentRequestEvent()")}}{{experimental_inline}}

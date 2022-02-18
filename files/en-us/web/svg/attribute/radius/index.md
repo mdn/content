@@ -18,7 +18,7 @@ A negative or zero value disables the effect of the given filter primitive (i.e.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feMorphology")}}
+- {{SVGElement("feMorphology")}}
 
 ## Usage notes
 

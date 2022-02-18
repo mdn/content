@@ -48,10 +48,10 @@ store's name.
 ## Example
 
 In the following code snippet, we open a read/write transaction on our database and add
-some data to an object store using `add()`. After the object store has been
-created, we log `objectStore.name` to
-the console. For a full working example, see
-our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app
+some data to an object store using `add()`. After the object store has been
+created, we log `objectStore.name` to
+the console. For a full working example, see
+our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app
 (>[view example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
@@ -59,10 +59,10 @@ our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+  note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable.
-  // This is used a lot below
+  // This is used a lot below
   db = DBOpenRequest.result;
 
   // Run the addData() function to add the data to the database
@@ -78,7 +78,7 @@ function addData() {
 
   // report on the success of the transaction completing, when everything is done
   transaction.oncomplete = function(event) {
-    note.innerHTML += '<li>Transaction completed.</li>';
+    note.innerHTML += '<li>Transaction completed.</li>';
   };
 
   transaction.onerror = function(event) {
@@ -92,10 +92,10 @@ function addData() {
   // Make a request to add our newItem object to the object store
   var objectStoreRequest = objectStore.add(newItem[0]);
 
-  objectStoreRequest.onsuccess = function(event) {
-    // report the success of our request
-    note.innerHTML += '<li>Request successful.</li>';
-  };
+  objectStoreRequest.onsuccess = function(event) {
+    // report the success of our request
+    note.innerHTML += '<li>Request successful.</li>';
+  };
 };
 ```
 

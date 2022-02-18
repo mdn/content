@@ -15,27 +15,27 @@ This contextual role can differ from the meaning of the resource when taken outs
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("a")}}
-*   {{SVGElement("altGlyph")}}
-*   {{SVGElement("animate")}}
-*   {{SVGElement("animateColor")}}
-*   {{SVGElement("animateMotion")}}
-*   {{SVGElement("animateTransform")}}
-*   {{SVGElement("cursor")}}
-*   {{SVGElement("feImage")}}
-*   {{SVGElement("filter")}}
-*   {{SVGElement("font-face-uri")}}
-*   {{SVGElement("glyphRef")}}
-*   {{SVGElement("image")}}
-*   {{SVGElement("linearGradient")}}
-*   {{SVGElement("mpath")}}
-*   {{SVGElement("pattern")}}
-*   {{SVGElement("radialGradient")}}
-*   {{SVGElement("script")}}
-*   {{SVGElement("set")}}
-*   {{SVGElement("textPath")}}
-*   {{SVGElement("tref")}}
-*   {{SVGElement("use")}}
+- {{SVGElement("a")}}
+- {{SVGElement("altGlyph")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("animateColor")}}
+- {{SVGElement("animateMotion")}}
+- {{SVGElement("animateTransform")}}
+- {{SVGElement("cursor")}}
+- {{SVGElement("feImage")}}
+- {{SVGElement("filter")}}
+- {{SVGElement("font-face-uri")}}
+- {{SVGElement("glyphRef")}}
+- {{SVGElement("image")}}
+- {{SVGElement("linearGradient")}}
+- {{SVGElement("mpath")}}
+- {{SVGElement("pattern")}}
+- {{SVGElement("radialGradient")}}
+- {{SVGElement("script")}}
+- {{SVGElement("set")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("use")}}
 
 ## Usage notes
 
@@ -60,8 +60,8 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `<iri>`
-    *   : This value specifies an {{Glossary("IRI")}} reference that identifies some resource that describes the intended property.
+- `<iri>`
+  - : This value specifies an {{Glossary("IRI")}} reference that identifies some resource that describes the intended property.
 
 ## Specifications
 
@@ -90,4 +90,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-*   [Definition of the `xlink:arcrole` attribute in the XLink specification](https://www.w3.org/TR/xlink/#link-semantics)
+- [Definition of the `xlink:arcrole` attribute in the XLink specification](https://www.w3.org/TR/xlink/#link-semantics)

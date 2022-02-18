@@ -8,7 +8,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-Firefox 19 was released on February 19, 2013. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
+Firefox 19 was released on February 19, 2013. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
 
@@ -60,7 +60,7 @@ Support for [XForms](/en-US/docs/XForms) has been [**removed**](https://www.phil
 
 ## See also
 
-- [Firefox 19 Beta Release Notes](https://www.mozilla.org/en-US/firefox/19.0beta/releasenotes/)
+- [Firefox 19 Beta Release Notes](https://www.mozilla.org/en-US/firefox/19.0beta/releasenotes/)
 - [Add-on Compatibility for Firefox 19](https://blog.mozilla.org/addons/2013/02/07/compatibility-for-firefox-19/)
 
 ### Older versions

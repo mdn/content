@@ -71,22 +71,22 @@ Highlights:
   - `-webkit-box-sizing`
   - `-webkit-user-select`
   - `-webkit-linear-gradient()` {{bug("1210575")}}
-  - `-webkit-radial-gradient"()` {{bug("1210575")}}
-  - `-webkit-repeating-linear-gradient()` {{bug("1210575")}}
-  - `-webkit-repeating-radial-gradient()` {{bug("1210575")}}
+  - `-webkit-radial-gradient"()` {{bug("1210575")}}
+  - `-webkit-repeating-linear-gradient()` {{bug("1210575")}}
+  - `-webkit-repeating-radial-gradient()` {{bug("1210575")}}
 
 ### JavaScript
 
 #### New APIs
 
-- {{jsxref("Symbol.toPrimitive")}}, {{jsxref("Symbol.prototype.@@toPrimitive", "Symbol.prototype[@@toPrimitive]")}}, and {{jsxref("Date.prototype.@@toPrimitive", "Date.prototype[@@toPrimitive]")}} have been implemented ({{bug(1054756)}}).
+- {{jsxref("Symbol.toPrimitive")}}, {{jsxref("Symbol.prototype.@@toPrimitive", "Symbol.prototype[@@toPrimitive]")}}, and {{jsxref("Date.prototype.@@toPrimitive", "Date.prototype[@@toPrimitive]")}} have been implemented ({{bug(1054756)}}).
 
 #### Changes
 
 - The [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) bindings in the global level have been made compliant with ES2015 semantics. See {{bug(589199)}} and the blog post ["Breaking changes in let and const in Firefox Nightly 44"](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/). In addition, `let` is now available to default Web JavaScript (strict and non-strict) and does not require a version opt-in anymore ({{bug(932517)}}).
-- If [typed arrays'](/en-US/docs/Web/JavaScript/Typed_arrays) (like {{jsxref("Int8Array", "Int8Array")}}) and {{jsxref("ArrayBuffer", "ArrayBuffer")}}) constructors are called as a function without the {{jsxref("Operators/new", "new")}} operator, a {{jsxref("TypeError")}} is now thrown as per the ES2015 specification ({{bug(980945)}}, {{bug(1214936)}}).
-- The {{jsxref("RegExp")}} sticky flag now follows the ES2015 standard for[ anchored sticky regular expressions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky#anchored_sticky_flag) ({{bug(773687)}}).
-- The [JavaScript shell](/en-US/docs/Mozilla/Projects/SpiderMonkey/Introduction_to_the_JavaScript_shell) (SpiderMonkey's REPL) now defaults to the default, Web-compatible JS version (and not JS1.7+ anymore) ({{bug(1192329)}}).
+- If [typed arrays'](/en-US/docs/Web/JavaScript/Typed_arrays) (like {{jsxref("Int8Array", "Int8Array")}}) and {{jsxref("ArrayBuffer", "ArrayBuffer")}}) constructors are called as a function without the {{jsxref("Operators/new", "new")}} operator, a {{jsxref("TypeError")}} is now thrown as per the ES2015 specification ({{bug(980945)}}, {{bug(1214936)}}).
+- The {{jsxref("RegExp")}} sticky flag now follows the ES2015 standard for [anchored sticky regular expressions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky#anchored_sticky_flag) ({{bug(773687)}}).
+- The JavaScript shell (SpiderMonkey's REPL) now defaults to the default, Web-compatible JS version (and not JS1.7+ anymore) ({{bug(1192329)}}).
 
 #### Removals
 
@@ -104,7 +104,7 @@ Highlights:
 - The obsolete property `DocumentType.internalSubset` has been removed ({{bug(801545)}}).
 - For compatibility with existing sites, the properties {{domxref("Window.orientation")}} and {{domxref("Window.onorientationchange")}}, as well as the {{event("orientationchange")}} event have been implemented ({{bug(920734)}}).
 - An {{HTMLElement("iframe")}} with explicit fullscreen request should not exit fullscreen implicitly ({{bug(1187801)}}).
-- The events {{event("mouseover")}}, {{event("mouseout")}}, {{event("mouseenter")}}, {{event("mouseleave")}}, {{event("pointermove")}}, {{event("pointerover")}}, {{event("pointerout")}}, {{event("pointerenter")}} and {{event("pointerleave")}} are now triggered for disabled form elements ({{bug(218093)}}).
+- The events {{event("mouseover")}}, {{event("mouseout")}}, {{event("mouseenter")}}, {{event("mouseleave")}}, {{event("pointermove")}}, {{event("pointerover")}}, {{event("pointerout")}}, {{event("pointerenter")}} and {{event("pointerleave")}} are now triggered for disabled form elements ({{bug(218093)}}).
 - The method {{domxref("Element.webkitMatchesSelector()")}} has been added ({{bug(1216193)}}) to improve interoperability.
 - To match the spec, the method {{domxref("Document.createAttribute()")}} now converts the input to lower case ({{bug(1176313)}}).
 - The non-standard `dialog` feature for {{domxref("Window.open()")}} is no longer available to Web content. It is still available to extensions and other code with chrome privileges ({{bug(1095236)}}.
@@ -128,7 +128,7 @@ Highlights:
 
 #### Service Workers
 
-- The {{domxref("ServiceWorkerMessageEvent")}} and {{domxref("ExtendableMessageEvent")}} interfaces have been implemented ({{bug(1143717)}} and {{bug(1207068)}}).
+- The {{domxref("ServiceWorkerMessageEvent")}} and {{domxref("ExtendableMessageEvent")}} interfaces have been implemented ({{bug(1143717)}} and {{bug(1207068)}}).
 - {{domxref("Headers")}} objects now support a pair iterator, meaning that the methods {{domxref("Headers.entries()")}}, {{domxref("Headers.keys()")}}, and {{domxref("Headers.values()")}} are now available; {{jsxref("Symbol.iterator")}} now also returns the default iterator for them ({{bug(1108181)}}).
 - The {{domxref('XMLHttpRequest')}} API has been disabled on Service Workers ({{bug(931243)}}).
 - The interface {{domxref("FetchEvent")}} now extends {{domxref("ExtendableEvent")}}, giving it access to the {{domxref("ExtendableEvent.waitUntil()")}} method. ({{bug(1214772)}}).
@@ -137,7 +137,7 @@ Highlights:
 - The event handlers {{domxref("ServiceWorkerGlobalScope.onbeforeevicted")}} and {{domxref("ServiceWorkerGlobalScope.onevicted")}} have been removed as they weren't following the spec. They will be reintroduced in the future, but their removal will allow feature detection to work as expected ({{bug(1218142)}}).
 - In the {{domxref("FetchEvent.FetchEvent", "FetchEvent()")}} constructor, if the `isReload` member is not present in the options dictionary, it now defaults to `false` ({{bug(1216401)}}).
 - The {{domxref("Client.frameType")}} property is now implemented on the right interface; it was on {{domxref("WindowClient")}} before ({{bug(1218146)}}).
-- When [AppCache](/en-US/docs/Web/HTML/Using_the_application_cache) is used to provide offline support for a page, a warning message is now displayed in the console advising developers to use [Service workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers) instead ({{bug("1204581")}}.)
+- When AppCache is used to provide offline support for a page, a warning message is now displayed in the console advising developers to use [Service workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers) instead ({{bug("1204581")}}.)
 - Service workers have been enabled by default in Gecko.
 
 #### WebRTC
@@ -165,7 +165,7 @@ Highlights:
 - {{domxref("FormData")}} objects now support a pair iterator, meaning that the methods {{domxref("FormData.entries()")}}, {{domxref("FormData.keys")}}, and {{domxref("FormData.values()")}} are now available; {{jsxref("Symbol.iterator")}} now also returns the default iterator for them ({{bug(1127703)}}).
 - When {{domxref("XMLHttpRequest.send()")}} is used with an HTML document, it now uses `text/html` instead of `application/xml` ({{bug(918771)}}).
 - Speech synthesis (text-to-speech) has been implemented in Firefox Desktop for Mac and Linux, hidden behind the `media.webspeech.synth.enabled` flag in `about:config` ({{bug("1003452")}}, {{bug("1003464")}}.) See [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) for more information.
-- Elements inside a {{HTMLElement("frame")}} or an {{HTMLElement('object')}} can't be set full-screen anymore ({{bug(1212299)}}).
+- Elements inside a {{HTMLElement("frame")}} or an {{HTMLElement('object')}} can't be set fullscreen anymore ({{bug(1212299)}}).
 - Sanitization of WOFF fonts is a bit more stricter, leading to more incorrect fonts being rejected, this sanitization is made a bit less stricter in Firefox 46 ({{bug(1193050)}} and {{bug (1244693)}}).
 
 ### MathML
@@ -182,7 +182,7 @@ _No change._
 
 ## HTTP
 
-- Support for the [Brotli](https://en.wikipedia.org/wiki/Brotli) algorithm has been added and both [`Accept-Encoding`](/en-US/docs/Web/HTTP/Content_negotiation#the_accept-encoding_header) and [`Content-Encoding `](/en-US/docs/Web/HTTP/Headers/Content-Encoding)headers now support the `br` value ({{bug(366559)}} and {{bug(1211916)}}).
+- Support for the [Brotli](https://en.wikipedia.org/wiki/Brotli) algorithm has been added and both [`Accept-Encoding`](/en-US/docs/Web/HTTP/Content_negotiation#the_accept-encoding_header) and [`Content-Encoding`](/en-US/docs/Web/HTTP/Headers/Content-Encoding) headers now support the `br` value ({{bug(366559)}} and {{bug(1211916)}}).
 - Incorrect support of HTTP/2 headers containing line breaks (`'/n'`) have been removed as the spec doesn't allow it, unlike HTTP/1 ({{bug(1197847)}}).
 
 ## Networking

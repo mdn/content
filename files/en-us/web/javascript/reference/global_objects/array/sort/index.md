@@ -29,18 +29,18 @@ implementation.
 sort()
 
 // Arrow function
-sort((firstEl, secondEl) => { ... } )
+sort((firstEl, secondEl) => { /* ... */ } )
 
 // Compare function
 sort(compareFn)
 
 // Inline compare function
-sort(function compareFn(firstEl, secondEl) { ... })
+sort(function compareFn(firstEl, secondEl) { /* ... */ })
 ```
 
 ### Parameters
 
-- `compareFunction` {{optional_inline}}
+- `compareFn` {{optional_inline}}
 
   - : Specifies a function that defines the sort order. If omitted, the array elements are converted to strings, then sorted according to each character's Unicode code point value.
 
@@ -66,7 +66,7 @@ Unicode order. All `undefined` elements are sorted to the end of the array.
 > encoded as two surrogate code units, of the range
 > `\uD800`-`\uDFFF`. The value of each code unit is taken
 > separately into account for the comparison. Thus the character formed by the surrogate
-> pair `\uD655\uDE55` will be sorted before the character
+> pair `\uD855\uDE51` will be sorted before the character
 > `\uFF3A`.
 
 If `compareFunction` is supplied, all non-`undefined` array
@@ -195,8 +195,8 @@ numericStringArray.sort(); // [700, 80, 9]
 numericStringArray.sort(compareNumbers); // [9, 80, 700]
 
 mixedNumericArray.join(); // '80,9,700,40,1,5,200'
-mixedNumericArray.sort(); // [1, 200, 40, 5, 700, 80, 9]
-mixedNumericArray.sort(compareNumbers); // [1, 5, 9, 40, 80, 200, 700]
+mixedNumericArray.sort(); // [1, 200, 40, 5, '700', '80', '9']
+mixedNumericArray.sort(compareNumbers); // [1, 5, '9', 40, '80', 200, '700']
 ```
 
 ### Sorting non-ASCII characters
@@ -305,7 +305,7 @@ Before version 10 (or EcmaScript 2019), sort stability was not guaranteed, meani
 
 ## See also
 
-- A polyfill of `Array.prototype.sort` with modern behavior like stable sort is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.sort` with modern behavior like stable sort in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.reverse()")}}
 - {{jsxref("String.prototype.localeCompare()")}}
 - [About the stability of the algorithm used

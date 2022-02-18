@@ -39,12 +39,12 @@ For live services streaming, the LIVE profile is a requirement. The stream switc
 
 Other reasons to use LIVE profile over Ondemand for VOD content may be:
 
-1.  Your client or server does not support range requests
-2.  Your server cannot cache range requests efficiently
-3.  Your server cannot prefetch range requests efficiently
-4.  The SIDX\* is large and having to load it first slows down startup a little
-5.  You want to use the original files for both DASH and other forms of delivery (such as Microsoft Smooth Streaming) as a transition strategy
-6.  You can use the same media files for both live transmission and VOD at a later stage
+1. Your client or server does not support range requests
+2. Your server cannot cache range requests efficiently
+3. Your server cannot prefetch range requests efficiently
+4. The SIDX\* is large and having to load it first slows down startup a little
+5. You want to use the original files for both DASH and other forms of delivery (such as Microsoft Smooth Streaming) as a transition strategy
+6. You can use the same media files for both live transmission and VOD at a later stage
 
 \*SIDX or SegmentIndexBox is a structure describing a segment by giving its earliest presentation time and other meta-data and can often make up a large portion of the MPD file.
 
@@ -120,17 +120,19 @@ A useful piece of software when dealing with MPEG-DASH is [Dash Encoder](https:/
 
 Once encoded your file structure may look something like this:
 
-    play list ->                /segments/news.mp4.mpd
+```
+play list ->                /segments/news.mp4.mpd
 
-    main segment folder ->      /segments/main/
+main segment folder ->      /segments/main/
 
-    100 Kbps segment folder ->  /segments/main/news100 contains (1.m4s, 2.m4s, 3.m4s ... )
+100 Kbps segment folder ->  /segments/main/news100 contains (1.m4s, 2.m4s, 3.m4s ... )
 
-    200 Kbps segment folder ->  /segments/main/news200 contains (1.m4s, 2.m4s, 3.m4s ... )
+200 Kbps segment folder ->  /segments/main/news200 contains (1.m4s, 2.m4s, 3.m4s ... )
 
-    300 Kbps segment folder ->  /segments/main/news300 contains (1.m4s, 2.m4s, 3.m4s ... )
+300 Kbps segment folder ->  /segments/main/news300 contains (1.m4s, 2.m4s, 3.m4s ... )
 
-    400 Kbps segment folder ->  /segments/main/news400 contains (1.m4s, 2.m4s, 3.m4s ... )
+400 Kbps segment folder ->  /segments/main/news400 contains (1.m4s, 2.m4s, 3.m4s ... )
+```
 
 The playlist or `.mpd` file contains XML that explicitly lists where all the various bitrate files reside.
 
@@ -226,21 +228,23 @@ There are a number of useful tools available for HLS encoding
 
 The HLS Index File (much like MPEG-DASH's `.mpd` file) contains the information on where all the media segments reside, as well as other meta data such as bandwidth application. Apple uses the `.m3u8` format (an extension of its `.m3u` playlist format) for index files — see below for an example:
 
-    #EXT-X-VERSION:3
-    #EXTM3U
-    #EXT-X-TARGETDURATION:10
-    #EXT-X-MEDIA-SEQUENCE:1
+```
+#EXT-X-VERSION:3
+#EXTM3U
+#EXT-X-TARGETDURATION:10
+#EXT-X-MEDIA-SEQUENCE:1
 
-    # Old-style integer duration; avoid for newer clients.
-    #EXTINF:10,
-    http://media.example.com/segment0.ts
+# Old-style integer duration; avoid for newer clients.
+#EXTINF:10,
+http://media.example.com/segment0.ts
 
-    # New-style floating-point duration; use for modern clients.
-    #EXTINF:10.0,
-    http://media.example.com/segment1.ts
-    #EXTINF:9.5,
-    http://media.example.com/segment2.ts
-    #EXT-X-ENDLIST
+# New-style floating-point duration; use for modern clients.
+#EXTINF:10.0,
+http://media.example.com/segment1.ts
+#EXTINF:9.5,
+http://media.example.com/segment2.ts
+#EXT-X-ENDLIST
+```
 
 > **Note:** Comprehensive information on how to encode media for Apple's HLS format can be found on [Apple's Developer Pages](https://developer.apple.com/streaming/).
 
@@ -261,7 +265,7 @@ Further resources on adaptive streaming.
 ### MPEG-DASH overview and references
 
 - [Dynamic Adaptive Streaming over HTTP Dataset](https://www-itec.uni-klu.ac.at/bib/files/p89-lederer.pdf)
-- [MPEG-DASH and streaming reference and resources (MSDN)](<https://msdn.microsoft.com/en-us/library/dn551370(v=vs.85).aspx>)
+- [MPEG-DASH and streaming reference and resources (MSDN)](<https://msdn.microsoft.com/library/dn551370(v=vs.85).aspx>)
 - [DASH Adaptive Streaming for HTML 5 Video](/en-US/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video)
 - [Dynamic Adaptive Streaming over HTTP: From Content Creation to Consumption](https://www.slideshare.net/christian.timmerer/dynamic-adaptive-streaming-over-http-from-content-creation-to-consumption)
 

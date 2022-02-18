@@ -23,19 +23,19 @@ array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Type
 
 ```js
 // Arrow function
-forEach((element) => { ... } )
-forEach((element, index) => { ... } )
-forEach((element, index, array) => { ... } )
+forEach((element) => { /* ... */ } )
+forEach((element, index) => { /* ... */ } )
+forEach((element, index, array) => { /* ... */ } )
 
 // Callback function
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
 
 // Inline callback function
-forEach(function(element) { ... })
-forEach(function(element, index) { ... })
-forEach(function(element, index, array){ ... })
-forEach(function(element, index, array) { ... }, thisArg)
+forEach(function(element) { /* ... */ })
+forEach(function(element, index) { /* ... */ })
+forEach(function(element, index, array){ /* ... */ })
+forEach(function(element, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
@@ -121,7 +121,7 @@ new Uint8Array([0, 1, 2, 3]).forEach(logArrayElements);
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.forEach` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.forEach` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray.prototype.map()")}}
 - {{jsxref("TypedArray.prototype.every()")}}
 - {{jsxref("TypedArray.prototype.some()")}}

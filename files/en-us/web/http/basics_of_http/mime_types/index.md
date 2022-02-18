@@ -32,7 +32,7 @@ A simplest MIME type consists of a _type_ and a _subtype_. A MIME type comprises
 type/subtype
 ```
 
-The **_type_** represents the general category into which the data type falls, such as `video` or `text`. 
+The **_type_** represents the general category into which the data type falls, such as `video` or `text`.
 
 The **_subtype_** identifies the exact kind of data of the specified type the MIME type represents.
 For example, for the MIME type `text`, the subtype might be `plain` (plain text), `html` ({{Glossary("HTML")}} source code), or `calendar` (for iCalendar/`.ics`) files.
@@ -310,7 +310,7 @@ Content-Type: text/html
 Content-Range: bytes 100-200/1270
 
 eta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="vieport" content
+    <meta name="viewport" content
 --3d6b6a416f9b5
 Content-Type: text/html
 Content-Range: bytes 300-400/1270

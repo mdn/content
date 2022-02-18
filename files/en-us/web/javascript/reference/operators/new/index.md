@@ -34,18 +34,18 @@ new constructor[([arguments])]
 
 The **`new`** keyword does the following things:
 
-1.  Creates a blank, plain JavaScript object.
-2.  Adds a property to the new object (`__proto__`) that links to the constructor function's prototype object
+1. Creates a blank, plain JavaScript object.
+2. Adds a property to the new object (`__proto__`) that links to the constructor function's prototype object
 
     > **Note:** Properties/objects added to the construction function prototype are therefore accessible to all instances created from the constructor function (using `new`).
 
-3.  Binds the newly created object instance as the `this` context
+3. Binds the newly created object instance as the `this` context
     (i.e. all references to `this` in the constructor function now refer to the object created in the first step).
-4.  Returns `this` if the function doesn't return an object.
+4. Returns `this` if the function doesn't return an object.
 
 Creating a user-defined object requires two steps:
 
-1.  Define the object type by writing a function that specifies its name and properties.
+1. Define the object type by writing a function that specifies its name and properties.
     For example, a constructor function to create an object `Foo`might look like this:
 
     ```js
@@ -55,7 +55,7 @@ Creating a user-defined object requires two steps:
     }
     ```
 
-2.  Create an instance of the object with `new`.
+2. Create an instance of the object with `new`.
 
     ```js
     var myFoo = new Foo('Bar 1', 2021);
@@ -67,14 +67,14 @@ Creating a user-defined object requires two steps:
 When the code `new Foo(...)` is executed, the following things
 happen:
 
-1.  A new object is created, inheriting from `Foo.prototype`.
-2.  The constructor function `Foo` is called with the specified
+1. A new object is created, inheriting from `Foo.prototype`.
+2. The constructor function `Foo` is called with the specified
     arguments, and with
     [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)
     bound to the newly created object. `new Foo` is equivalent to
     `new Foo()`, i.e. if no argument list is specified,
     `Foo` is called without arguments.
-3.  The object (not null, false, 3.1415 or other primitive types) returned by the
+3. The object (not null, false, 3.1415 or other primitive types) returned by the
     constructor function becomes the result of the whole `new` expression. If
     the constructor function doesn't explicitly return an object, the object created in
     step 1 is used instead (normally constructors don't return a value, but they can

@@ -20,7 +20,7 @@ occur when the user clicks on a displayed {{domxref("Notification")}}.
 ## Syntax
 
 ```js
-Notification.onclick = function(event) { ... };
+Notification.onclick = function(event) { /* ... */ };
 ```
 
 The default behavior is to move the focus to the viewport of the notification's related

@@ -42,7 +42,7 @@ Number.MIN_SAFE_INTEGER // -9007199254740991
 
 ## See also
 
-- A polyfill of `Number.MIN_SAFE_INTEGER` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [Polyfill of `Number.MIN_SAFE_INTEGER` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
 - {{jsxref("Number.MAX_SAFE_INTEGER")}}
 - {{jsxref("Number.isSafeInteger()")}}
 - {{jsxref("BigInt")}}

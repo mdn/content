@@ -38,7 +38,10 @@ If the user's browser doesn't support type `range`, it will fall back and treat 
     </tr>
     <tr>
       <td><strong>Events</strong></td>
-      <td>{{event("change")}} and {{event("input")}}</td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} and
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
     </tr>
     <tr>
       <td><strong>Supported common attributes</strong></td>
@@ -106,7 +109,7 @@ This value must be greater than or equal to the value of the [`min`](/en-US/docs
 
 The lowest value in the range of permitted values. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If a value is specified for `min` that isn't a valid number, the input has no minimum value.
 
-This value must be less than or equal to the value of the [`max`](/en-US/docs/Web/HTML/Attributes/max) attribute. See the [HTML `min `attribute.](/en-US/docs/Web/HTML/Attributes/min)
+This value must be less than or equal to the value of the [`max`](/en-US/docs/Web/HTML/Attributes/max) attribute. See the HTML [`min`](/en-US/docs/Web/HTML/Attributes/min) attribute.
 
 ### step
 

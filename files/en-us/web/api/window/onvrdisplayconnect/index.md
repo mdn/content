@@ -3,7 +3,7 @@ title: Window.onvrdisplayconnect
 slug: Web/API/Window/onvrdisplayconnect
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -28,7 +28,7 @@ The event object is of type {{domxref("VRDisplayEvent")}}.
 ## Syntax
 
 ```js
-window.onvrdisplayconnect = function() { ... };
+window.onvrdisplayconnect = function() { /* ... */ };
 ```
 
 ## Examples

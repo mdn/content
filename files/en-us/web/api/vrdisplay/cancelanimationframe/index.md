@@ -3,7 +3,7 @@ title: VRDisplay.cancelAnimationFrame()
 slug: Web/API/VRDisplay/cancelAnimationFrame
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Method
   - Reference
   - VR
@@ -22,12 +22,12 @@ The **`cancelAnimationFrame()`** method of the {{domxref("VRDisplay")}} interfac
 ## Syntax
 
 ```js
-vrDisplayInstance.cancelAnimationFrame(handle);
+cancelAnimationFrame(handle)
 ```
 
 ### Parameters
 
-- handle
+- `handle`
   - : The handle returned by the {{domxref("VRDisplay.requestAnimationFrame()")}} call that you want to unregister.
 
 ### Return value

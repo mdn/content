@@ -23,20 +23,20 @@ array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Type
 
 ```js
 // Arrow function
-reduceRight((accumulator, currentValue) => { ... } )
-reduceRight((accumulator, currentValue, index) => { ... } )
-reduceRight((accumulator, currentValue, index, array) => { ... } )
-reduceRight((accumulator, currentValue, index, array) => { ... }, initialValue)
+reduceRight((accumulator, currentValue) => { /* ... */ } )
+reduceRight((accumulator, currentValue, index) => { /* ... */ } )
+reduceRight((accumulator, currentValue, index, array) => { /* ... */ } )
+reduceRight((accumulator, currentValue, index, array) => { /* ... */ }, initialValue)
 
 // Callback function
 reduceRight(callbackFn)
 reduceRight(callbackFn, initialValue)
 
 // Inline callback function
-reduceRight(function(accumulator, currentValue) { ... })
-reduceRight(function(accumulator, currentValue, index) { ... })
-reduceRight(function(accumulator, currentValue, index, array){ ... })
-reduceRight(function(accumulator, currentValue, index, array) { ... }, initialValue)
+reduceRight(function(accumulator, currentValue) { /* ... */ })
+reduceRight(function(accumulator, currentValue, index) { /* ... */ })
+reduceRight(function(accumulator, currentValue, index, array){ /* ... */ })
+reduceRight(function(accumulator, currentValue, index, array) { /* ... */ }, initialValue)
 ```
 
 ### Parameters
@@ -116,6 +116,6 @@ var total = new Uint8Array([0, 1, 2, 3]).reduceRight(function(a, b) {
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.reduceRight` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.reduceRight` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray.prototype.reduce()")}}
 - {{jsxref("Array.prototype.reduceRight()")}}

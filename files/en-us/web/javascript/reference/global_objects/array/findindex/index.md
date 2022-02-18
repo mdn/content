@@ -27,19 +27,19 @@ See also the {{jsxref("Array.find", "find()")}} method, which returns the
 
 ```js
 // Arrow function
-findIndex((element) => { ... } )
-findIndex((element, index) => { ... } )
-findIndex((element, index, array) => { ... } )
+findIndex((element) => { /* ... */ } )
+findIndex((element, index) => { /* ... */ } )
+findIndex((element, index, array) => { /* ... */ } )
 
 // Callback function
 findIndex(callbackFn)
 findIndex(callbackFn, thisArg)
 
 // Inline callback function
-findIndex(function(element) { ... })
-findIndex(function(element, index) { ... })
-findIndex(function(element, index, array){ ... })
-findIndex(function(element, index, array) { ... }, thisArg)
+findIndex(function(element) { /* ... */ })
+findIndex(function(element, index) { /* ... */ })
+findIndex(function(element, index, array){ /* ... */ })
+findIndex(function(element, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
@@ -86,9 +86,9 @@ index. If `callbackFn` never returns a truthy value (or the array's
 
 `callbackFn` is invoked with three arguments:
 
-1.  The value of the element
-2.  The index of the element
-3.  The Array object being traversed
+1. The value of the element
+2. The index of the element
+3. The Array object being traversed
 
 If a `thisArg` parameter is passed to `findIndex()`,
 it will be used as the `this` inside each invocation of the
@@ -150,6 +150,6 @@ console.log(fruits[index]); // blueberries
 
 ## See also
 
-- A polyfill of `Array.prototype.findIndex` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.findIndex` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.find()")}}
 - {{jsxref("Array.prototype.indexOf()")}}

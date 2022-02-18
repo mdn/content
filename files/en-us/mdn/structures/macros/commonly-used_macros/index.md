@@ -18,7 +18,7 @@ See [Other macros](/en-US/docs/MDN/Structures/Macros/Other) for information on m
 
 MDN provides a number of link macros for easing the creation of links to reference pages, glossary entries, and other topics.
 
-Link macros are recommended over normal HTML links because they are succint and translation-friendly.
+Link macros are recommended over normal HTML links because they are succinct and translation-friendly.
 For example a glossary or reference link created using a macro does not need to be translated: in other locales it will automatically link to the correct version of the file.
 
 ### Glossary links

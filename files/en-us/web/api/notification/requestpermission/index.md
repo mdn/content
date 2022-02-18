@@ -10,9 +10,7 @@ tags:
   - Reference
 browser-compat: api.Notification.requestPermission
 ---
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
-
-> **Note:** This feature is **not** available in {{domxref("SharedWorker")}}
+{{APIRef("Web Notifications")}}{{securecontext_header}}
 
 > **Note:** Safari still uses the callback syntax to get the permission. Read [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API) for a good example of how to feature detect this and run code as appropriate.
 
@@ -23,12 +21,14 @@ The **`requestPermission()`** method of the {{domxref("Notification")}} interfac
 The latest spec has updated this method to a promise-based syntax that works like this:
 
 ```js
-Notification.requestPermission().then(function(permission) { ... });
+Notification.requestPermission().then(function(permission) { /* ... */ });
 ```
 
 Previously, the syntax was based on a simple callback; this version is now deprecated:
 
-    Notification.requestPermission(callback);
+```js
+Notification.requestPermission(callback);
+```
 
 ### Parameters
 

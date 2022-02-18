@@ -62,7 +62,7 @@ The `Set` [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) m
   - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
 - {{jsxref("Set.prototype.values()")}}
   - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
-- {{jsxref("Set.prototype.keys()")}}
+- {{jsxref("Set.prototype.values", " Set.prototype.keys()")}}
   - : An alias for {{jsxref("Set.prototype.values()")}}.
 - {{jsxref("Set.prototype.entries()")}}
 
@@ -144,7 +144,7 @@ const intersection = new Set([...mySet1].filter(x => mySet2.has(x)))
 const difference = new Set([...mySet1].filter(x => !mySet2.has(x)))
 
 // Iterate set entries with forEach()
-mySet1.forEach(function(value) {
+mySet2.forEach(function(value) {
   console.log(value)
 })
 
@@ -278,7 +278,7 @@ console.assert(set.size == array.length);
 
 ## See also
 
-- A polyfill of `Set` is available in [`core-js`](https://github.com/zloirock/core-js#set)
+- [Polyfill of `Set` in `core-js`](https://github.com/zloirock/core-js#set)
 - {{jsxref("Map")}}
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}

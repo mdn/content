@@ -13,12 +13,11 @@ browser-compat: api.HTMLSlotElement.assignedElements
 ---
 {{APIRef("Shadow DOM API")}}
 
-The **`assignedElements()`** method of the
-{{domxref("HTMLSlotElement")}} interface returns a sequence of the elements assigned to
-this slot (and no other nodes). If the `flatten` option is set to
-`true`, it also returns the assigned elements of any other slots that are
-descendants of this slot. If no assigned nodes are found, it returns the slot's fallback
-content.
+The **`assignedElements()`** method of the {{domxref("HTMLSlotElement")}}
+interface returns a sequence of the elements assigned to this slot (and no
+other nodes).
+
+If the `flatten` option is set to `true`, it returns a sequence of both the elements assigned to this slot, as well as the elements assigned to any other slots that are descendants of this slot. If no assigned elements are found, it returns the slot's fallback content.
 
 ## Syntax
 
@@ -34,7 +33,7 @@ HTMLSlotElement.assignedElements(options)
   - : An object that sets options for the nodes to be returned. The available options are:
 
     - `flatten`
-      - : A {{jsxref('Boolean')}} indicating whether to return the
+      - : A boolean value indicating whether to return the
         assigned elements of any available child `<slot>` elements
         (`true`) or not (`false`). Defaults to `false`.
 

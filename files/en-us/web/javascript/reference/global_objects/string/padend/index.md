@@ -36,7 +36,7 @@ padEnd(targetLength, padString)
     `padString` is too long to stay within
     `targetLength`, it will be truncated: for left-to-right
     languages the left-most part and for right-to-left languages the right-most will be
-    applied. The default value for this parameter is "` `"
+    applied. The default value for this parameter is " "
     (`U+0020`).
 
 ### Return value
@@ -50,7 +50,7 @@ A {{jsxref("String")}} of the specified `targetLength` with the
 ### Using padEnd
 
 ```js
-'abc'.padEnd(10);          // "abc       "
+'abc'.padEnd(10);          // "abc       "
 'abc'.padEnd(10, "foo");   // "abcfoofoof"
 'abc'.padEnd(6, "123456"); // "abc123"
 'abc'.padEnd(1);           // "abc"
@@ -66,7 +66,7 @@ A {{jsxref("String")}} of the specified `targetLength` with the
 
 ## See also
 
-- A polyfill of `String.prototype.padEnd` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.padEnd` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.padStart()")}}
 - [A
   polyfill](https://github.com/behnammodi/polyfill/blob/master/string.polyfill.js)

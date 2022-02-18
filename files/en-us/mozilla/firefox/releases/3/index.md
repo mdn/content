@@ -52,7 +52,7 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 
 <!---->
 
-- [Offline resources in Firefox](/en-US/docs/Web/HTML/Using_the_application_cache)
+- Offline resources in Firefox
   - : Firefox now lets web applications request that resources be cached to allow the application to be used while offline.
 
 <!---->

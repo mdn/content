@@ -66,7 +66,7 @@ new Float64Array([NaN]).includes(NaN); // true;
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.includes` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.includes` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("Array.prototype.includes()")}}
 - {{jsxref("String.prototype.includes()")}}
 - {{jsxref("TypedArray.prototype.indexOf()")}}

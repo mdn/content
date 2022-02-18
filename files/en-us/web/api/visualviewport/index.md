@@ -18,6 +18,8 @@ You can get a window's visual viewport using {{domxref("Window.visualViewport")}
 
 > **Note:** Only the top-level window has a visual viewport that's distinct from the layout viewport. Therefore, it's generally only the `VisualViewport` object of the top-level window that's useful. For an {{htmlelement("iframe")}}, visual viewport metrics like {{domxref("VisualViewport.width")}} always correspond to layout viewport metrics like {{domxref("Element.clientWidth", "document.documentElement.clientWidth")}}.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _`VisualViewport` also inherits properties from its parent, {{domxref("EventTarget")}}._
@@ -43,10 +45,10 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - [`resize`](/en-US/docs/Web/API/VisualViewport/resize_event)
   - : Fired when the visual viewport is resized.
-    Also available via the {{domxref("VisualViewport.onresize")}} property.
+    Also available via the `onresize` property.
 - [`scroll`](/en-US/docs/Web/API/VisualViewport/scroll_event)
   - : Fired when the visual viewport is scrolled.
-    Also available via the {{domxref("VisualViewport.onscroll")}} property.
+    Also available via the `onscroll` property.
 
 ## Examples
 

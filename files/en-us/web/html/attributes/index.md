@@ -20,7 +20,7 @@ Elements in HTML have **attributes**; these are additional values that configure
 
 ## Global event handlers
 
-In addition to the attributes listed in the table below, the [`GlobalEventHandlers`](/en-US/docs/Web/API/GlobalEventHandlers) article lists global event handlers — such as [`onclick`](/en-US/docs/Web/API/GlobalEventHandlers/onclick) — than can also be specified as [content attributes](#content_versus_idl_attributes) on all elements.
+In addition to the attributes listed in the table below, the [`GlobalEventHandlers`](/en-US/docs/Web/API/GlobalEventHandlers) article lists global event handlers — such as [`onclick`](/en-US/docs/Web/API/GlobalEventHandlers/onclick) — that can also be specified as [content attributes](#content_versus_idl_attributes) on all elements.
 
 ## Attribute list
 
@@ -969,7 +969,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/HTML/Element/form#attr-method">method</a>
+        <code><a href="/en-US/docs/Web/HTML/Element/form#attr-method">method</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -1509,10 +1509,12 @@ Some content attributes (e.g. `required`, `readonly`, `disabled`) are called [bo
 
 HTML5 defines restrictions on the allowed values of boolean attributes: If the attribute is present, its value must either be the empty string (equivalently, the attribute may have an unassigned value), or a value that is an ASCII case-insensitive match for the attribute's canonical name, with no leading or trailing whitespace. The following examples are valid ways to mark up a boolean attribute:
 
-    <div itemscope> This is valid HTML but invalid XML. </div>
-    <div itemscope=itemscope> This is also valid HTML but invalid XML. </div>
-    <div itemscope=""> This is valid HTML and also valid XML. </div>
-    <div itemscope="itemscope"> This is also valid HTML and XML, but perhaps a bit verbose. </div>
+```html
+<div itemscope> This is valid HTML but invalid XML. </div>
+<div itemscope=itemscope> This is also valid HTML but invalid XML. </div>
+<div itemscope=""> This is valid HTML and also valid XML. </div>
+<div itemscope="itemscope"> This is also valid HTML and XML, but perhaps a bit verbose. </div>
+```
 
 To be clear, the values "`true`" and "`false`" are not allowed on boolean attributes. To represent a false value, the attribute has to be omitted altogether. This restriction clears up some common misunderstandings: With `checked="false"` for example, the element's `checked` attribute would be interpreted as **true** because the attribute is present.
 

@@ -74,13 +74,13 @@ A user agent might allow the capture of the entire content of an obscured window
 
 ### Options and constraints
 
-The constraints object passed into {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} is a {{domxref("DisplayMediaStreamConstraints")}} object which is used to configuring the resulting stream.
+The constraints object passed into {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} is an object which is used to configuring the resulting stream.
 
 > **Note:** Unlike most uses of constraints in media APIs, here it's solely used to define the stream configuration, and _not_ to filter the available choices.
 
 See [Properties of shared screen tracks](/en-US/docs/Web/API/MediaTrackConstraints#properties_of_shared_screen_tracks) for details about additional constraints for configuring a screen-capture stream that are added to {{domxref("MediaTrackConstraints")}}, {{domxref("MediaTrackSupportedConstraints")}}, and {{domxref("MediaTrackSettings")}}).
 
-None of the constraints are applied in any way until after the content to capture has been selected. The contraints alter what you see in the resulting stream.
+None of the constraints are applied in any way until after the content to capture has been selected. The constraints alter what you see in the resulting stream.
 
 For example, if you specify a {{domxref("MediaTrackConstraints.width", "width")}} constraint for the video, it's applied by scaling the video after the user selects the area to share. It doesn't establish a restriction on the size of the source itself.
 
@@ -94,7 +94,7 @@ While display capture is in effect, the machine which is sharing screen contents
 
 {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} is most commonly used to capture video of a user's screen (or parts thereof). However, {{Glossary("user agent", "user agents")}} may allow the capture of audio along with the video content. The source of this audio might be the selected window, the entire computer's audio system, or the user's microphone (or a combination of all of the above).
 
-Before starting a project that will require sharing of audio, be sure to check the {{SectionOnPage("/en-US/docs/Web/API/MediaDevices/getDisplayMedia", "Browser compatibility", "code")}} to see if the browsers you wish compaibility with have support for audio in captured screen streams.
+Before starting a project that will require sharing of audio, be sure to check the {{SectionOnPage("/en-US/docs/Web/API/MediaDevices/getDisplayMedia", "Browser compatibility", "code")}} to see if the browsers you wish compatibility with have support for audio in captured screen streams.
 
 To request that the screen be shared with included audio, the options passed into `getDisplayMedia()` might look like this:
 
@@ -160,7 +160,7 @@ There isn't all that much code needed in order to make this work, and if you're 
 
 First, some constants are set up to reference the elements on the page to which we'll need access: the {{HTMLElement("video")}} into which the captured screen contents will be streamed, a box into which logged output will be drawn, and the start and stop buttons that will turn on and off capture of screen imagery.
 
-The object `displayMediaOptions` contains the {{domxref("MediaStreamConstraints")}} to pass into `getDisplayMedia()`; here, the {{domxref("MediaTrackConstraints.cursor", "cursor")}} property is set to `always`, indicating that the mouse cursor should always be included in the captured media.
+The object `displayMediaOptions` contains the constraints to pass into `getDisplayMedia()`; here, the {{domxref("MediaTrackConstraints.cursor", "cursor")}} property is set to `always`, indicating that the mouse cursor should always be included in the captured media.
 
 > **Note:** Some properties are not widely implemented and might not be used by the engine. `cursor`, for example, [has limited support](/en-US/docs/Web/API/MediaTrackConstraints/cursor#browser_compatibility).
 
@@ -279,10 +279,10 @@ Click the Start Capture button to begin.</p>
 
 The key parts of the HTML are:
 
-1.  A {{HTMLElement("button")}} labeled "Start Capture" which, when clicked, calls the `startCapture()` function to request access to, and begin capturing, screen contents.
-2.  A second button, "Stop Capture", which upon being clicked calls `stopCapture()` to terminate capture of screen contents.
-3.  A {{HTMLElement("video")}} into which the captured screen contents are streamed.
-4.  A {{HTMLElement("pre")}} block into which logged text is placed by the intercepted {{domxref("console")}} method.
+1. A {{HTMLElement("button")}} labeled "Start Capture" which, when clicked, calls the `startCapture()` function to request access to, and begin capturing, screen contents.
+2. A second button, "Stop Capture", which upon being clicked calls `stopCapture()` to terminate capture of screen contents.
+3. A {{HTMLElement("video")}} into which the captured screen contents are streamed.
+4. A {{HTMLElement("pre")}} block into which logged text is placed by the intercepted {{domxref("console")}} method.
 
 #### CSS
 
@@ -322,7 +322,9 @@ In order to function when [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) 
 
 For example, this line in the HTTP headers will enable Screen Capture API for the document and any embedded {{HTMLElement("iframe")}} elements that are loaded from the same origin:
 
-    Feature-Policy: display-capture 'self'
+```
+Feature-Policy: display-capture 'self'
+```
 
 If you're performing screen capture within an `<iframe>`, you can request permission just for that frame, which is clearly more secure than requesting a more general permission:
 
@@ -330,6 +332,10 @@ If you're performing screen capture within an `<iframe>`, you can request permis
 <iframe src="https://mycode.example.net/etc" allow="display-capture">
 </iframe>
 ```
+
+## Browser compatibility
+
+{{Compat("api.MediaDevices.getDisplayMedia")}}
 
 ## See also
 

@@ -6,13 +6,12 @@ tags:
   - AnimationEvent
   - CSS
   - CSSOM
-  - Experimental
   - Property
   - Reference
   - Web Animations
 browser-compat: api.AnimationEvent.pseudoElement
 ---
-{{SeeCompatTable}}{{ apiref("Web Animations API") }}
+{{APIRef("Web Animations API")}}
 
 ## Summary
 

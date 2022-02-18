@@ -48,6 +48,7 @@ function renderFrame(session, frame) {
    }
 }
 ```
+
 ## Specifications
 
 {{Specifications}}

@@ -86,7 +86,7 @@ Possible values are:
 - `"style"`
   - : The target is a style
 - `"track"`
-  - : The target is an HTML {{HTMLELement("track")}}.
+  - : The target is an HTML {{HTMLElement("track")}}.
 - `"video"`
   - : The target is video data.
 - `"worker"`

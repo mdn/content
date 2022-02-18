@@ -21,7 +21,7 @@ UI, this method returns the first device matching the criteria.
 
 ```js
 Bluetooth.requestDevice([options])
-  .then(function(bluetoothDevice) { ... })
+  .then(function(bluetoothDevice) { /* ... */ })
 ```
 
 ### Return value

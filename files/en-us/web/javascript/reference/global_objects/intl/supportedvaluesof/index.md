@@ -17,8 +17,8 @@ The **`Intl.supportedValuesOf()`** method returns an array containing the suppor
 
 Duplicates are omitted and the array is sorted in ascending alphabetic order (or more precisely, using {{jsxref("Array/sort", "Array.prototype.sort()")}} with an `undefined` compare function)
 
-The method can be used to feature-test whether values are supported in a particular implementation and download a polyfill only if neccesary.
-It can also be used to build UIs that allow users to select their preferred localised values, for example when the UI is created from WebGL or server-side. 
+The method can be used to feature-test whether values are supported in a particular implementation and download a polyfill only if necessary.
+It can also be used to build UIs that allow users to select their preferred localized values, for example when the UI is created from WebGL or server-side.
 
 {{EmbedInteractiveExample("pages/js/intl-supportedvaluesof.html")}}
 
@@ -45,7 +45,6 @@ A sorted array of unique string values indicating the values supported by the im
 - `RangeError`
   - : An unsupported key was passed as a parameter.
 
-
 ## Examples
 
 ### Feature testing
@@ -68,10 +67,11 @@ Intl.supportedValuesOf("calendar").forEach(function(calendar) {
    // "buddhist", "chinese", "coptic", "dangi", ...
 });
 ```
+
 > **Note:** The array returned for calendar values will always include the value "gregory" (gregorian).
 
-
 The other values are all obtained in the same way:
+
 ```js
 Intl.supportedValuesOf("collation").forEach(function(collation) {
    // "big5han", "compat", "dict", "emoji", ...
@@ -96,7 +96,6 @@ Intl.supportedValuesOf("unit").forEach(function(unit) {
 
 ### Invalid key throws RangeError
 
-
 ```js
 try {
   Intl.supportedValuesOf("someInvalidKey");
@@ -109,7 +108,6 @@ try {
 
 [Intl.supportedValuesOf() polyfill in proposal TC39](https://github.com/tc39/proposal-intl-enumeration/tree/master/polyfill)
 
-
 ## Specifications
 
 {{Specifications}}
@@ -121,4 +119,3 @@ try {
 ## See also
 
 - {{jsxref("Global_Objects/Intl", "Intl")}}
-

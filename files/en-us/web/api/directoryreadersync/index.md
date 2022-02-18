@@ -117,8 +117,10 @@ self.onmessage = function(e) {
 
 Returns a lost of entries from a specific directory. Call this method until an empty array is returned.
 
-    EntrySync readEntries (
-    ) raises (FileException);
+```
+EntrySync readEntries (
+) raises (FileException);
+```
 
 ##### Returns
 

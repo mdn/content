@@ -10,11 +10,13 @@ tags:
   - screen
 browser-compat: api.WakeLockSentinel
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
+{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
 
 The **`WakeLockSentinel`** interface of the {{domxref('Screen Wake Lock API')}} provides a handle to the underlying platform wake lock and can be manually released and reacquired. An {{jsxref('Object')}} representing the wake lock is returned via the {{domxref('WakeLock.request()','navigator.wakelock.request()')}} method.
 
 An acquired `WakeLockSentinel` can be released manually via the {{domxref('WakeLockSentinel.release','release()')}} method, or automatically via the platform wake lock. This can happen if the document becomes inactive or looses visibility, if the device is low on power or the user turns on a power save mode. Releasing all `WakeLockSentinel` instances of a given wake lock type will cause the underlying platform wake lock to be released.
+
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -29,9 +31,9 @@ _This interface provides the following properties._
 
     - `'screen'`: A screen wake lock. Prevents devices from dimming or locking the screen.
 
-## Event handlers
+## Events
 
-- {{domxref("WakeLockSentinel.onrelease", "onrelease")}}
+- {{domxref("WakeLockSentinel.release_event", "release")}}
   - : Fired when the {{domxref('WakeLockSentinel.release','release()')}} method is called or the wake lock is released by the user agent.
 
 ## Methods

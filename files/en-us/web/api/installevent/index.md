@@ -19,7 +19,7 @@ The parameter passed into the {{domxref("ServiceWorkerGlobalScope.oninstall", "o
 
 This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
-{{InheritanceDiagram(700, 60, 20)}}
+{{InheritanceDiagram}}
 
 ## Constructor
 

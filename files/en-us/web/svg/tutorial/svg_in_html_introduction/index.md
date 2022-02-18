@@ -63,13 +63,13 @@ The page is mainly regular HTML, CSS and JavaScript. The only interesting part i
 
 This approach has the following points in its favor:
 
-*   We have taken a regular HTML form that could have been part of an existing Web site, and added an attractive, interactive background
-*   The approach is backwards compatible to browsers that do not support SVG;, no background appears in them
-*   It's very simple and performs very well
-*   The picture dynamically sizes itself to the required size in an intelligent way
-*   We can have declarative style rules applying to both HTML and SVG
-*   The same script manipulates both HTML and SVG
-*   The document is entirely standards-based
+- We have taken a regular HTML form that could have been part of an existing Web site, and added an attractive, interactive background
+- The approach is backwards compatible to browsers that do not support SVG;, no background appears in them
+- It's very simple and performs very well
+- The picture dynamically sizes itself to the required size in an intelligent way
+- We can have declarative style rules applying to both HTML and SVG
+- The same script manipulates both HTML and SVG
+- The document is entirely standards-based
 
 > **Note:** To add a linked image with DOM methods to an embedded SVG element, one has to use `setAttributeNS` to set `href`. Like in the following example:
 >
@@ -88,5 +88,5 @@ The `style` attribute pins the SVG element to the background of the form.
 
 ## Related Links
 
-*   Another SVG in HTML example: [A swarm of motes](/en-US/docs/Web/SVG/Namespaces_Crash_Course/Example)
-*   [Working example](http://jwatt.org/svg/demos/xhtml-with-inline-svg.xhtml) that works in both Mozilla and in Internet Explorer with Adobe's SVG Viewer installed. (For inline SVG to work in both Firefox and Internet Explorer it is necessary to serve documents with a different Content-Type to each browser. For this reason, if you're behind a proxy server that caches the page, the example wont work in the second browser you load it in because it will receive the wrong Content-Type.)
+- Another SVG in HTML example: [A swarm of motes](/en-US/docs/Web/SVG/Namespaces_Crash_Course/Example)
+- [Working example](http://jwatt.org/svg/demos/xhtml-with-inline-svg.xhtml) that works in both Mozilla and in Internet Explorer with Adobe's SVG Viewer installed. (For inline SVG to work in both Firefox and Internet Explorer it is necessary to serve documents with a different Content-Type to each browser. For this reason, if you're behind a proxy server that caches the page, the example wont work in the second browser you load it in because it will receive the wrong Content-Type.)

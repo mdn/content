@@ -14,6 +14,8 @@ The **`DragEvent`** interface is a {{domxref("Event","DOM event")}} that represe
 
 This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref("Event")}}.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 - {{domxref('DragEvent.dataTransfer')}} {{readonlyInline}}

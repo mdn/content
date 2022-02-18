@@ -12,7 +12,7 @@ The **`beforeunload`** event is fired when the window, the document and its reso
 
 When a non-empty string is assigned to the `returnValue` Event property, a dialog box appears, asking the users for confirmation to leave the page (see example below). When no value is provided, the event is processed silently. Some implementations only show the dialog box if the frame or any embedded frame receives a user gesture or user interaction. See {{anch("Browser compatibility")}} for more information.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 <table class="properties">
   <tbody>

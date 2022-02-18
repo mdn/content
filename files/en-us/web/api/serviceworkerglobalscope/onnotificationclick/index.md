@@ -22,7 +22,7 @@ Notifications created on the main thread or in workers which aren't service work
 ## Syntax
 
 ```js
-ServiceWorkerGlobalScope.onnotificationclick = function(NotificationEvent) { ... };
+ServiceWorkerGlobalScope.onnotificationclick = function(NotificationEvent) { /* ... */ };
 ```
 
 ## Example

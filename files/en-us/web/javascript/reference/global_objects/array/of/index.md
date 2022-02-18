@@ -36,7 +36,7 @@ Array(1, 2, 3);    // [1, 2, 3]
 ```js
 Array.of(element0)
 Array.of(element0, element1)
-Array.of(element0, element1, ... , elementN)
+Array.of(element0, element1, /* ... ,*/ elementN)
 ```
 
 ### Parameters
@@ -80,7 +80,7 @@ Array.of(undefined); // [undefined]
 
 ## See also
 
-- A polyfill of `Array.of` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.of` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - [A
   polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
 - {{jsxref("Array")}}

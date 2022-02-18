@@ -21,7 +21,7 @@ a {{domxref("ServiceWorkerRegistration")}} or `undefined`.
 ## Syntax
 
 ```js
-serviceWorkerContainer.getRegistration(clientURL).then(function(serviceWorkerRegistration) { ... });
+serviceWorkerContainer.getRegistration(clientURL).then(function(serviceWorkerRegistration) { /* ... */ });
 ```
 
 ### Parameters

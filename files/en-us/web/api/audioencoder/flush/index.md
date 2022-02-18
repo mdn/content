@@ -47,4 +47,3 @@ AudioEncoder.flush();
 ## Browser compatibility
 
 {{Compat}}
-

@@ -60,7 +60,7 @@ scale3d(sx, sy, sz)
       </td>
       <td>
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
@@ -72,13 +72,13 @@ scale3d(sx, sy, sz)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mi>sz</mi></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td>
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
@@ -93,7 +93,7 @@ scale3d(sx, sy, sz)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
@@ -172,6 +172,6 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [`scaleZ()`](/en-US/docs/Web/CSS/transform-function/scaleZ)
-- [`translate3d()`](/en-US/docs/Web/CSS/transform-function/translate3d)
-- [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d)
+- [`scaleZ()`](/en-US/docs/Web/CSS/transform-function/scaleZ())
+- [`translate3d()`](/en-US/docs/Web/CSS/transform-function/translate3d())
+- [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d())

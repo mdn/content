@@ -24,7 +24,7 @@ For example:
 
 is a processing instruction whose `target`is `xml`.
 
-{{InheritanceDiagram(700,70)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

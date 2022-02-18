@@ -112,8 +112,6 @@ Once again we can switch our `flex-direction` to `column` in order to see how th
 
 > **Note:** The value `space-evenly` is not defined in the flexbox specification and is a later addition to the Box Alignment specification. Browser support for this value is not as good as that of the values defined in the flexbox spec.
 
-See the [documentation for `justify-content` on MDN](/en-US/docs/Web/CSS/justify-content) for more details on all of these values and browser support.
-
 ## Aligning content on the main axis
 
 Now that we have seen how alignment works on the cross axis, we can take a look at the main axis. Here we only have one property available to us — `justify-content`. This is because we are only dealing with items as a group on the main axis. With `justify-content` we control what happens with available space, should there be more space than is needed to display the items.
@@ -141,7 +139,7 @@ If the main axis is in the block direction because `flex-direction` is set to `
 
 ### Alignment and Writing Modes
 
-Remember that with all of these alignment methods, the values of `flex-start` and `flex-end` are writing mode-aware. If the value of `justify-content` is `start` and the writing mode is left-to-right as in English, the items will line up starting at the left side of the container.
+Remember that with all of these alignment methods, the values of `flex-start` and `flex-end` are writing mode-aware. If the value of `justify-content` is `flex-start` and the writing mode is left-to-right as in English, the items will line up starting at the left side of the container.
 
 ![Three items lined up on the left](basics5.png)
 

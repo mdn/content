@@ -47,7 +47,6 @@ Forwarded: by=<identifier>;for=<identifier>;host=<host>;proto=<http|https>
 If there are multiple proxy servers between the client and server, they may each specify their own forwarding information.
 This can be done by adding a new `Forwarded` header to the end of the header block, or by appending the information to the end of the last `Forwarded` header in a comma-separated list.
 
-
 ## Directives
 
 - `by` {{optional_inline}}
@@ -66,7 +65,6 @@ This can be done by adding a new `Forwarded` header to the end of the header blo
   - : The {{HTTPHeader("Host")}} request header field as received by the proxy.
 - `proto` {{optional_inline}}
   - : Indicates which protocol was used to make the request (typically "http" or "https").
-
 
 ## Examples
 

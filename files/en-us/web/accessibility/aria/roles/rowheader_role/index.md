@@ -17,7 +17,7 @@ An element with `role="rowheader"` is a [cell](/en-US/docs/Web/Accessibility/ARI
 
 ## Description
 
-`Rowheader` is the header [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) for a row, establishing a relationship between it and the other cells in the same [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role). 
+`Rowheader` is the header [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) for a row, establishing a relationship between it and the other cells in the same [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role).
 
 ```html
 <div role="table" aria-label="Populations" aria-describedby="country_population_desc">
@@ -52,7 +52,7 @@ To create an ARIA row header, add `role="rowheader"` to the element. That row h
 #### Context roles
 
 - [role="row"](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
-  - : The only context in which you will find a row.  It encompasses a cell or group of cells row, of which only one should be of rowheader type. Ssimilar to the native {{HTMLElement('tr')}} HTML element.
+  - : The only context in which you will find a row.  It encompasses a cell or group of cells row, of which only one should be of rowheader type. Similar to the native {{HTMLElement('tr')}} HTML element.
 
 ### Keyboard interactions
 
@@ -142,9 +142,9 @@ none
 - [The HTML `<table>` element](/en-US/docs/Web/HTML/Element/table)
 - [The HTML `<th>` element](/en-US/docs/Web/HTML/Element/th)
 - [HTML table tutorial](/en-US/docs/Learn/HTML/Tables/Basics)
-- [ARIA `cell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) 
+- [ARIA `cell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role)
 - [ARIA `row` role](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
-- [ARIA `gridcell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/gridell_role) 
+- [ARIA `gridcell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/gridell_role)
 
 <section id="Quick_links">
 
@@ -153,4 +153,3 @@ none
     {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>
-

@@ -319,13 +319,13 @@ function handleCallerNegotiationNeeded() {
 
 Since the various methods involved in negotiating the connection return {{jsxref("promise")}}s, we can chain them together like this:
 
-1.  Call {{domxref("RTCPeerConnection.createOffer", "callerPC.createOffer()")}} to get an offer.
-2.  Then take that offer and set the caller's local description to match by calling {{domxref("RTCPeerConnection.setLocalDescription", "callerPC.setLocalDescription()")}}.
-3.  Then "transmit" the offer to the receiver by calling {{domxref("RTCPeerConnection.setRemoteDescription", "receiverPC.setRemoteDescription()")}}. This configures the receiver so that it knows how the caller is configured.
-4.  Then the receiver creates an answer by calling {{domxref("RTCPeerConnection.createAnswer", "receiverPC.createAnswer()")}}.
-5.  Then the receiver sets its local description to match the newly-created answer by calling {{domxref("RTCPeerConnection.setLocalDescription", "receiverPC.setLocalDescription()")}}.
-6.  Then the answer is "transmitted" to the caller by calling {{domxref("RTCPeerConnection.setRemoteDescription", "callerPC.setRemoteDescription()")}}. This lets the caller know what the receiver's configuration is.
-7.  If at any time an error occurs, the `catch()` clause outputs an error message to the log.
+1. Call {{domxref("RTCPeerConnection.createOffer", "callerPC.createOffer()")}} to get an offer.
+2. Then take that offer and set the caller's local description to match by calling {{domxref("RTCPeerConnection.setLocalDescription", "callerPC.setLocalDescription()")}}.
+3. Then "transmit" the offer to the receiver by calling {{domxref("RTCPeerConnection.setRemoteDescription", "receiverPC.setRemoteDescription()")}}. This configures the receiver so that it knows how the caller is configured.
+4. Then the receiver creates an answer by calling {{domxref("RTCPeerConnection.createAnswer", "receiverPC.createAnswer()")}}.
+5. Then the receiver sets its local description to match the newly-created answer by calling {{domxref("RTCPeerConnection.setLocalDescription", "receiverPC.setLocalDescription()")}}.
+6. Then the answer is "transmitted" to the caller by calling {{domxref("RTCPeerConnection.setRemoteDescription", "callerPC.setRemoteDescription()")}}. This lets the caller know what the receiver's configuration is.
+7. If at any time an error occurs, the `catch()` clause outputs an error message to the log.
 
 #### Tracking other state changes
 

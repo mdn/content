@@ -11,7 +11,9 @@ The `contains` function determines whether the first argument string contains th
 
 ### Syntax
 
-    contains(haystack, needle)
+```
+contains(haystack, needle)
+```
 
 ### Arguments
 

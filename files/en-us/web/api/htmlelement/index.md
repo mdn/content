@@ -45,7 +45,9 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}, and implements tho
 - {{DOMxRef("HTMLElement.inert")}}
   - : A boolean value indicating whether the user agent must act as though the given node is absent for the purposes of user interaction events, in-page text searches ("find in page"), and text selection.
 - {{DOMxRef("HTMLElement.innerText")}}
-  - : Represents the "rendered" text content of a node and its descendants. As a getter, it approximates the text the user would get if they highlighted the contents of the element with the cursor and then copied it to the clipboard.
+  - : Represents the rendered text content of a node and its descendants.
+    As a getter, it approximates the text the user would get if they highlighted the contents of the element with the cursor and then copied it to the clipboard.
+    As a setter, it replaces the content inside the selected element, converting any line breaks into {{HTMLElement("br")}} elements.
 - {{DOMxRef("HTMLElement.itemScope")}} {{Experimental_Inline}}
   - : A boolean value representing the item scope.
 - {{DOMxRef("HTMLElement.itemType")}} {{Experimental_Inline}}{{ReadOnlyInline}}
@@ -64,16 +66,20 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}, and implements tho
   - : A boolean value indicating whether an import script can be executed in user agents that support module scripts.
 - {{DOMxRef("HTMLElement.nonce")}}
   - : Returns the cryptographic number used once that is used by Content Security Policy to determine whether a given fetch will be allowed to proceed.
-- {{DOMxRef("HTMLElement.offsetHeight")}} {{Experimental_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("HTMLElement.offsetHeight")}} {{ReadOnlyInline}}
   - : Returns a `double` containing the height of an element, relative to the layout.
-- {{DOMxRef("HTMLElement.offsetLeft")}} {{Experimental_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("HTMLElement.offsetLeft")}} {{ReadOnlyInline}}
   - : Returns a `double`, the distance from this element's left border to its `offsetParent`'s left border.
-- {{DOMxRef("HTMLElement.offsetParent")}} {{Experimental_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("HTMLElement.offsetParent")}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef("Element")}} that is the element from which all offset calculations are currently computed.
-- {{DOMxRef("HTMLElement.offsetTop")}} {{Experimental_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("HTMLElement.offsetTop")}} {{ReadOnlyInline}}
   - : Returns a `double`, the distance from this element's top border to its `offsetParent`'s top border.
-- {{DOMxRef("HTMLElement.offsetWidth")}} {{Experimental_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("HTMLElement.offsetWidth")}} {{ReadOnlyInline}}
   - : Returns a `double` containing the width of an element, relative to the layout.
+- {{DOMxRef("HTMLElement.outerText")}}
+  - : Represents the rendered text content of a node and its descendants.
+    As a getter, it is the same as {{DOMxRef("HTMLElement.innerText")}} (it represents the rendered text content of an element and its descendants).
+    As a setter, it replaces the selected node and its contents with the given value, converting any line breaks into {{HTMLElement("br")}} elements.
 - {{DOMxRef("HTMLElement.properties")}} {{Experimental_Inline}}{{ReadOnlyInline}}
   - : Returns a {{DOMxRef("HTMLPropertiesCollection")}}…
 - {{DOMxRef("HTMLElement.spellcheck")}}

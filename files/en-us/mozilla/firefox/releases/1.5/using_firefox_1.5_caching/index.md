@@ -45,9 +45,9 @@ Note: as of 10-2009 development versions of Safari added support for these new e
 
 Standard behavior for Web pages is:
 
-1.  User navigates to a page.
-2.  As the page loads, inline scripts run.
-3.  Once the page is loaded, the `onload` handler fires.
+1. User navigates to a page.
+2. As the page loads, inline scripts run.
+3. Once the page is loaded, the `onload` handler fires.
 
 Some pages include a fourth step. If a page uses an `unload` or `beforeunload` handler, it fires when the user navigates away from the page. If an `unload` handler is present, the page will not be cached.
 
@@ -96,33 +96,33 @@ In this example:
 <title>Order query Firefox 1.5 Example</title>
 <style type="text/css">
 body, p {
-	font-family: Verdana, sans-serif;
-	font-size: 12px;
-   	}
+  font-family: Verdana, sans-serif;
+  font-size: 12px;
+     }
 </style>
 <script type="text/javascript">
 function onLoad() {
-	loadOnlyFirst();
-	onPageShow();
+  loadOnlyFirst();
+  onPageShow();
 }
 
 function onPageShow() {
 //calculate current time
-	var currentTime= new Date();
-	var year=currentTime.getFullYear();
-	var month=currentTime.getMonth()+1;
-	var day=currentTime.getDate();
-	var hour=currentTime.getHours();
-	var min=currentTime.getMinutes();
-	var sec=currentTime.getSeconds();
-	var mil=currentTime.getMilliseconds();
-	var displayTime = (month + "/" + day + "/" + year + " " +
-		hour + ":" + min + ":" + sec + ":" + mil);
-	document.getElementById("timefield").value=displayTime;
+  var currentTime= new Date();
+  var year=currentTime.getFullYear();
+  var month=currentTime.getMonth()+1;
+  var day=currentTime.getDate();
+  var hour=currentTime.getHours();
+  var min=currentTime.getMinutes();
+  var sec=currentTime.getSeconds();
+  var mil=currentTime.getMilliseconds();
+  var displayTime = (month + "/" + day + "/" + year + " " +
+    hour + ":" + min + ":" + sec + ":" + mil);
+  document.getElementById("timefield").value=displayTime;
 }
 
 function loadOnlyFirst() {
-	document.zipForm.name.focus();
+  document.zipForm.name.focus();
 }
 </script>
 </head>
@@ -149,24 +149,24 @@ In contrast, if the above page did not listen for the `pageshow` event and handl
 ```html
 <script>
 function onLoad() {
-	loadOnlyFirst();
+  loadOnlyFirst();
 
 //calculate current time
-	var currentTime= new Date();
-	var year = currentTime.getFullYear();
-	var month = currentTime.getMonth()+1;
-	var day = currentTime.getDate();
-	var hour=currentTime.getHours();
-	var min=currentTime.getMinutes();
-	var sec=currentTime.getSeconds();
-	var mil=currentTime.getMilliseconds();
-	var displayTime = (month + "/" + day + "/" + year + " " +
-		hour + ":" + min + ":" + sec + ":" + mil);
-	document.getElementById("timefield").value=displayTime;
+  var currentTime= new Date();
+  var year = currentTime.getFullYear();
+  var month = currentTime.getMonth()+1;
+  var day = currentTime.getDate();
+  var hour=currentTime.getHours();
+  var min=currentTime.getMinutes();
+  var sec=currentTime.getSeconds();
+  var mil=currentTime.getMilliseconds();
+  var displayTime = (month + "/" + day + "/" + year + " " +
+    hour + ":" + min + ":" + sec + ":" + mil);
+  document.getElementById("timefield").value=displayTime;
 }
 
 function loadOnlyFirst() {
-	document.zipForm.name.focus();
+  document.zipForm.name.focus();
 }
 </script>
 </head>

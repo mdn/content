@@ -15,6 +15,8 @@ The `Notification` interface of the [Notifications API](/en-US/docs/Web/API/Noti
 
 These notifications' appearance and specific functionality vary across platforms but generally they provide a way to asynchronously provide information to the user.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("Notification.Notification", "Notification()")}}

@@ -61,7 +61,7 @@ myExternalWindow.resizeBy(-100, -100);
 ```
 
 The window you create must respect the Same Origin Policy. If the window you open is
-not in the same orgin as the current window, you will not be able to resize, or access
+not in the same origin as the current window, you will not be able to resize, or access
 any information on, that window/tab.
 
 ## Specifications

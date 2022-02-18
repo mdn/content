@@ -13,9 +13,11 @@ The `<xsl:variable>` element declares a global or local variable in a stylesheet
 
 ### Syntax
 
-    <xsl:variable name=NAME select=EXPRESSION >
-    	TEMPLATE
-    </xsl:variable>
+```xml
+<xsl:variable name=NAME select=EXPRESSION >
+  TEMPLATE
+</xsl:variable>
+```
 
 ### Required Attributes
 

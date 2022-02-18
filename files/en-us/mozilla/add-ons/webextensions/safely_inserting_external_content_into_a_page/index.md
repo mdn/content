@@ -71,8 +71,8 @@ For production use, [DOMPurify](https://github.com/cure53/DOMPurify) comes as a 
 ```json
 "content_scripts": [
   {
-    "matches" : ["<all_urls>"],
-    "js": ["purify.min.js", "myinjectionscript.js"]
+    "matches" : ["<all_urls>"],
+    "js": ["purify.min.js", "myinjectionscript.js"]
   }
 ]
 ```

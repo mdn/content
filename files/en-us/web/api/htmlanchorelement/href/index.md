@@ -12,7 +12,7 @@ browser-compat: api.HTMLAnchorElement.href
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.href`** property is a
-stringifier that returns a {{domxref("USVString")}} containing the whole URL, and allows
+{{Glossary("stringifier")}} that returns a {{domxref("USVString")}} containing the whole URL, and allows
 the href to be updated.
 
 ## Syntax

@@ -111,7 +111,7 @@ let result = someInterface.customMethod?.();
 
 #### Dealing with optional callbacks or event handlers
 
-If you use callbacks or fetch methods from an object with 
+If you use callbacks or fetch methods from an object with
 [a destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring), you may have non-existent values that you cannot call as
 functions unless you have tested their existence. Using `?.`, you can avoid this extra test:
 
@@ -143,7 +143,7 @@ function doSomething(onContent, onError) {
 
 ### Optional chaining with expressions
 
-You can also use the optional chaining operator when accessing properties with an expression using 
+You can also use the optional chaining operator when accessing properties with an expression using
 [the bracket notation of the property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation):
 
 ```js

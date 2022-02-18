@@ -129,19 +129,19 @@ For methods with a callback function, the syntax for arrow functions, functions,
 
 ```js
 // Arrow function
-filter((currentValue) => { ... } )
-filter((currentValue, index) => { ... } )
-filter((currentValue, index, array) => { ... } )
+filter((currentValue) => { /* ... */ } )
+filter((currentValue, index) => { /* ... */ } )
+filter((currentValue, index, array) => { /* ... */ } )
 
 // Callback function
 filter(callbackFn)
 filter(callbackFn, thisArg)
 
 // Inline callback function
-filter(function(currentValue) { ... })
-filter(function(currentValue, index) { ... })
-filter(function(currentValue, index, array){ ... })
-filter(function(currentValue, index, array) { ... }, thisArg)
+filter(function(currentValue) { /* ... */ })
+filter(function(currentValue, index) { /* ... */ })
+filter(function(currentValue, index, array){ /* ... */ })
+filter(function(currentValue, index, array) { /* ... */ }, thisArg)
 ```
 
 ##### Syntax for arbitrary number of parameters
@@ -151,7 +151,7 @@ For methods that accept an arbitrary number of parameters, the syntax block is w
 ```js
 unshift(element0)
 unshift(element0, element1)
-unshift(element0, element1, ... , elementN)
+unshift(element0, element1, /* ... ,*/ elementN)
 ```
 
 #### Parameters section
@@ -185,20 +185,6 @@ Properties contain no syntax section. Instead, add a "Value" section containing 
 #### Exceptions section
 
 If accessing the property can throw an exception, include an "Exceptions" subsection explaining each exception; this should be set up just like the one described for methods and constructors above.
-
-### Event handlers
-
-Event handler properties are still properties, but they have some differences in their syntax sections.
-
-#### Syntax block
-
-Start with a syntax block, like this (see {{DOMxRef("Window.onvrdisplaypresentchange")}}):
-
-```js
-window.onvrdisplaypresentchange = functionRef;
-```
-
-And that's it — event handler properties are always settable, and always contain a function; therefore no more information is needed.
 
 ## JavaScript reference syntax
 

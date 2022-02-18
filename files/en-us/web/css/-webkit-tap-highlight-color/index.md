@@ -27,7 +27,7 @@ browser-compat: css.properties.-webkit-tap-highlight-color
 
 ### Values
 
-A {{Cssxref("color value")}}.
+A {{Cssxref("&lt;color&gt;")}}.
 
 ## Formal definition
 
@@ -39,7 +39,7 @@ A {{Cssxref("color value")}}.
 
 ## Specifications
 
-Not part of any standard*.* Apple has [a description in the Safari Web Content Guide](https://developer.apple.com/library/mac/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW5).
+Not part of any standard. Apple has [a description in the Safari Web Content Guide](https://developer.apple.com/library/mac/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW5).
 
 ## Browser compatibility
 

@@ -12,23 +12,23 @@ tags:
 
 The `type` attribute is a generic attribute and it has different meaning based on the context in which it's used.
 
-*   For the {{SVGElement("animateTransform")}} element, it defines the type of transformation, whose values change over time.
-*   For the {{SVGElement("feColorMatrix")}} element, it indicates the type of matrix operation. The keyword `matrix` indicates that a full 5x4 matrix of values will be provided. The other keywords represent convenience shortcuts to allow commonly used color operations to be performed without specifying a complete matrix.
-*   For the {{SVGElement("feFuncR")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncB")}}, and {{SVGElement("feFuncA")}} elements, it Indicates the type of component transfer function.
-*   For the {{SVGElement("feTurbulence")}} element, it indicates whether the filter primitive should perform a noise or turbulence function.
-*   For the {{SVGElement("style")}} and {{SVGElement("script")}} elements, it defines the content type of the element.
+- For the {{SVGElement("animateTransform")}} element, it defines the type of transformation, whose values change over time.
+- For the {{SVGElement("feColorMatrix")}} element, it indicates the type of matrix operation. The keyword `matrix` indicates that a full 5x4 matrix of values will be provided. The other keywords represent convenience shortcuts to allow commonly used color operations to be performed without specifying a complete matrix.
+- For the {{SVGElement("feFuncR")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncB")}}, and {{SVGElement("feFuncA")}} elements, it Indicates the type of component transfer function.
+- For the {{SVGElement("feTurbulence")}} element, it indicates whether the filter primitive should perform a noise or turbulence function.
+- For the {{SVGElement("style")}} and {{SVGElement("script")}} elements, it defines the content type of the element.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("animateTransform")}}
-*   {{SVGElement("feColorMatrix")}}
-*   {{SVGElement("feFuncA")}}
-*   {{SVGElement("feFuncB")}}
-*   {{SVGElement("feFuncG")}}
-*   {{SVGElement("feFuncR")}}
-*   {{SVGElement("feTurbulence")}}
-*   {{SVGElement("script")}}
-*   {{SVGElement("style")}}
+- {{SVGElement("animateTransform")}}
+- {{SVGElement("feColorMatrix")}}
+- {{SVGElement("feFuncA")}}
+- {{SVGElement("feFuncB")}}
+- {{SVGElement("feFuncG")}}
+- {{SVGElement("feFuncR")}}
+- {{SVGElement("feTurbulence")}}
+- {{SVGElement("script")}}
+- {{SVGElement("style")}}
 
 ## Usage context
 

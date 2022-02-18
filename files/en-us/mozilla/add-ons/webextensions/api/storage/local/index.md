@@ -17,16 +17,16 @@ browser-compat: webextensions.api.storage.local
 
 Represents the `local` storage area. Items in `local` storage are local to the machine the extension was installed on.
 
-The browser may restrict the amount of data that an extension can store in the local storage area:
+The browser may restrict the amount of data that an extension can store in the local storage area. For example:
 
-- Chrome limits the extension to 5MB of data using this API unless it has the [`"unlimitedStorage"` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#unlimited_storage).
-- Firefox enables you to ask for the `"unlimitedStorage"` permission from version 56 onwards. It does not yet restrict the amount of data your extension can store, but will start doing so in a future release. Thus, it's a good idea to ask for the `"unlimitedStorage"` permission now, if you intend to store a large amount of data.
+- In Chrome, an extension is limited to storing 5MB of data using this API unless it has the [`"unlimitedStorage"` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#unlimited_storage).
+- In Firefox, the amount of data an extension can store is subjected to the same [storage limits](/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#storage_limits) as applied to IndexedDB databases. Extensions that intend to store more data than this limit need the ["unlimitedStorage"]((/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#unlimited_storage)) permission. However, extensions with the "unlimitedStorage" permission may get a quota exceeded error when the disk space used by storage exceeds the global limit.
 
 When the extension is uninstalled, its associated local storage is cleared.
 
-Also in Firefox, you can prevent the browser from clearing local storage on uninstall by visiting `about:config` and setting the following two browser preferences to `true`: `"keepUuidOnUninstall"` and `"keepStorageOnUninstall"`. This feature is provided to help developers test their extensions. Extensions themselves are not able to change these preferences.
+Also in Firefox, you can prevent the browser from clearing local storage on uninstall by visiting `about:config` and setting the following two browser preferences to `true`: `"keepUuidOnUninstall"` and `"keepStorageOnUninstall"`. This feature is provided to help developers test their extensions. Extensions themselves are not able to change these preferences.
 
-Although this API is similar to {{domxref("Window.localStorage")}} it is recommended that you don't use `Window.localStorage` in extension code. Firefox will clear data stored by extensions using the localStorage API in various scenarios where users clear their browsing history and data for privacy reasons, while data saved using the `storage.local` API will be correctly persisted in these scenarios.
+Although this API is similar to {{domxref("Window.localStorage")}} it is recommended that you don't use `Window.localStorage` in extension code. Firefox will clear data stored by extensions using the localStorage API in various scenarios where users clear their browsing history and data for privacy reasons, while data saved using the `storage.local` API will be correctly persisted in these scenarios.
 
 ## Methods
 

@@ -13,7 +13,7 @@ The `underline-thickness` attribute represents the ideal thickness of the underl
 
 You can use this attribute with the following SVG elements:
 
-*   {{ SVGElement("font-face") }}
+- {{ SVGElement("font-face") }}
 
 ## Usage context
 

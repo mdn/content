@@ -35,7 +35,6 @@ new EncodedAudioChunk(init);
     - `data`
       - : A {{domxref("BufferSource")}} containing the audio data.
 
-
 ## Examples
 
 In the following example a new `EncodedAudioChunk` is created.
@@ -57,4 +56,3 @@ chunk = EncodedAudioChunk(init);
 ## Browser compatibility
 
 {{Compat}}
-

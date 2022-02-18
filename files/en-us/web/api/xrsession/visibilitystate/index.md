@@ -46,7 +46,7 @@ The possible values of `visibilityState` are:
 - `visible-blurred`
   - : While the virtual scene rendered by the {{domxref("XRSession")}} may currently be visible to the user,
     it is not the user's primary focus at the moment; it's also possible the session is not currently visible at all.
-    In order to optimize resource utilization, the {{Glossary("user agent")}} may be handling the session's 
+    In order to optimize resource utilization, the {{Glossary("user agent")}} may be handling the session's
     {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} callbacks at a throttled rate.
     Input controllers are _not_ being processed for the session.
 

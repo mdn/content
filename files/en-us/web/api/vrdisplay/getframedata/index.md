@@ -3,7 +3,7 @@ title: VRDisplay.getFrameData()
 slug: Web/API/VRDisplay/getFrameData
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Method
   - Reference
   - VR
@@ -24,12 +24,12 @@ This includes the {{domxref("VRPose")}} and view and projection matrices for the
 ## Syntax
 
 ```js
-vrDisplayInstance.getFrameData(frameData);
+getFrameData(frameData)
 ```
 
 ### Parameters
 
-- frameData
+- `frameData`
   - : The {{domxref("VRFrameData")}} object you want to populate.
 
 ### Return value

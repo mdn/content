@@ -4,7 +4,7 @@ slug: Web/API/Window/onvrdisplaydeactivate
 tags:
   - API
   - Event Handler
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -29,7 +29,7 @@ The event object is of type {{domxref("VRDisplayEvent")}}.
 ## Syntax
 
 ```js
-window.onvrdisplaydeactivate = function() { ... };
+window.onvrdisplaydeactivate = function() { /* ... */ };
 ```
 
 ## Examples

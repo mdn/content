@@ -18,9 +18,9 @@ The **`margin-block`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/do
 ```css
 /* <length> values */
 margin-block: 10px 20px;  /* An absolute length */
-margin-block: 1em 2em;   /* relative to the text size */
-margin-block: 5% 2%;    /* relative to the nearest block container's width */
-margin-block: 10px; /* sets both start and end values */
+margin-block: 1em 2em;    /* relative to the text size */
+margin-block: 5% 2%;      /* relative to the nearest block container's width */
+margin-block: 10px;       /* sets both start and end values */
 
 /* Keyword values */
 margin-block: auto;
@@ -38,14 +38,19 @@ This property corresponds to the {{CSSxRef("margin-top")}} and {{CSSxRef("margin
 
 This property is a shorthand for the following CSS properties:
 
-- [`margin-block-end`](/en-US/docs/Web/CSS/margin-block-end)
-- [`margin-block-start`](/en-US/docs/Web/CSS/margin-block-start)
+- {{cssxref("margin-block-start")}}
+- {{cssxref("margin-block-end")}}
 
 ## Syntax
 
+The `margin-block` property may be specified using one or two values.
+
+- When **one** value is specified, it applies the same margin to **both start and end**.
+- When **two** values are specified, the first margin applies to the **start**, the second to the **end**.
+
 ### Values
 
-The `margin-block` property takes the same values as the {{CSSxRef("margin-left")}} property.
+The `margin-block` property takes the same values as the {{CSSxRef("margin", "", "#values")}} property.
 
 ## Formal definition
 

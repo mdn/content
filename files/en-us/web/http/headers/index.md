@@ -63,7 +63,7 @@ Headers can also be grouped according to how {{Glossary("Proxy_server", "proxies
   - : The date/time after which the response is considered stale.
 - {{HTTPHeader("Pragma")}}
   - : Implementation-specific header that may have various effects anywhere along the request-response chain. Used for backwards compatibility with HTTP/1.0 caches where the `Cache-Control` header is not yet present.
-- {{HTTPHeader("Warning")}}
+- {{HTTPHeader("Warning")}} {{deprecated_inline}}
   - : General warning information about possible problems.
 
 ## Client hints
@@ -79,10 +79,33 @@ Servers proactively requests the client hint headers they are interested in from
 
 The different categories of client hints are listed below.
 
+### User agent client hints
+
+The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) are request headers that provide information about the user agent and the platform/architecture on which it is running:
+
+- {{HTTPHeader("Sec-CH-UA")}} {{experimental_inline}}
+  - : User agent's branding and version.
+- {{HTTPHeader("Sec-CH-UA-Arch")}} {{experimental_inline}}
+  - : User agent's underlying platform architecture.
+- {{HTTPHeader("Sec-CH-UA-Bitness")}} {{experimental_inline}}
+  - : User agent's underlying CPU architecture bitness (for example "64" bit).
+- {{HTTPHeader("Sec-CH-UA-Full-Version")}} {{deprecated_inline}}
+  - : User agent's full semantic version string.
+- {{HTTPHeader("Sec-CH-UA-Full-Version-List")}} {{experimental_inline}}<!-- chrome intent to ship Nov 2021 -->
+  - : Full version for each brand in the user agent's brand list.
+- {{HTTPHeader("Sec-CH-UA-Mobile")}} {{experimental_inline}}
+  - : User agent is running on a mobile device or, more generally, prefers a "mobile" user experience.
+- {{HTTPHeader("Sec-CH-UA-Model")}} {{experimental_inline}}
+  - : User agent's device model.
+- {{HTTPHeader("Sec-CH-UA-Platform")}} {{experimental_inline}}
+  - : User agent's underlying operation system/platform.
+- {{HTTPHeader("Sec-CH-UA-Platform-Version")}} {{experimental_inline}}
+  - : User agent's underlying operation system version.
+
 ### Device client hints
 
 - {{HTTPHeader("Content-DPR")}} {{deprecated_inline}}{{experimental_inline}}
-  - : Response header used to confirm the image device to pixel ratio in requests where the {{HTTPHeader("DPR")}} client hint was used to select an image resource.
+  - : _Response header_ used to confirm the image device to pixel ratio in requests where the {{HTTPHeader("DPR")}} client hint was used to select an image resource.
 - {{HTTPHeader("Device-Memory")}} {{deprecated_inline}}{{experimental_inline}}
   - : Approximate amount of available client RAM memory. This is part of the [Device Memory API](/en-US/docs/Web/API/Device_Memory_API).
 - {{HTTPHeader("DPR")}} {{deprecated_inline}}{{experimental_inline}}
@@ -90,7 +113,7 @@ The different categories of client hints are listed below.
 - {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}}{{experimental_inline}}
   - : A number that indicates the layout viewport width in CSS pixels. The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value).
 - {{HTTPHeader("Width")}} {{deprecated_inline}}{{experimental_inline}}
-  - : The `Width` request header field is a number that indicates the desired resource width in physical pixels (i.e. intrinsic size of an image).
+  - : A number that indicates the desired resource width in physical pixels (i.e. intrinsic size of an image).
 
 ### Network client hints
 
@@ -101,7 +124,7 @@ Network client hints allow a server to choose what information is sent based on 
 - {{HTTPHeader("ECT")}}
   - : The {{Glossary("effective connection type")}} ("network profile") that best matches the connection's latency and bandwidth. This is part of the [Network Information API](/en-US/docs/Web/API/Network_Information_API).
 - {{HTTPHeader("RTT")}}
-  - : Application layer round trip time (RTT) in miliseconds, which includes the server processing time. This is part of the [Network Information API](/en-US/docs/Web/API/Network_Information_API).
+  - : Application layer round trip time (RTT) in milliseconds, which includes the server processing time. This is part of the [Network Information API](/en-US/docs/Web/API/Network_Information_API).
 - {{HTTPHeader("Save-Data")}} {{experimental_inline}}
   - : A boolean that indicates the user agent's preference for reduced data usage.
 
@@ -266,7 +289,7 @@ _Learn more about CORS [here](CORS)._
   - : Allows sites to opt in to reporting and/or enforcement of Certificate Transparency requirements, which prevents the use of misissued certificates for that site from going unnoticed. When a site enables the Expect-CT header, they are requesting that Chrome check that any certificate for that site appears in public CT logs.
 - {{HTTPHeader("Feature-Policy")}}
   - : Provides a mechanism to allow and deny the use of browser features in its own frame, and in iframes that it embeds.
-- {{HTTPHeader("Origin-Isolation")}} {{experimental_inline}}
+- {{HTTPHeader("Origin-Isolation")}} {{experimental_inline}}
   - : Provides a mechanism to allow web applications to isolate their origins.
 - {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}})
   - : Force communication using HTTPS instead of HTTP.
@@ -275,7 +298,7 @@ _Learn more about CORS [here](CORS)._
 - {{HTTPHeader("X-Content-Type-Options")}}
   - : Disables MIME sniffing and forces browser to use the type given in {{HTTPHeader("Content-Type")}}.
 - {{HTTPHeader("X-Download-Options")}}
-  - : The [`X-Download-Options`](<https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/jj542450(v=vs.85)?#the-noopen-directive>) HTTP header indicates that the browser (Internet Explorer) should not display the option to "Open" a file that has been downloaded from an application, to prevent phishing attacks as the file otherwise would gain access to execute in the context of the application. (Note: related [MS Edge bug](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/18488178/)).
+  - : The [`X-Download-Options`](<https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/compatibility/jj542450(v=vs.85)?#the-noopen-directive>) HTTP header indicates that the browser (Internet Explorer) should not display the option to "Open" a file that has been downloaded from an application, to prevent phishing attacks as the file otherwise would gain access to execute in the context of the application. (Note: related [MS Edge bug](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/18488178/)).
 - {{HTTPHeader("X-Frame-Options")}} (XFO)
   - : Indicates whether a browser should be allowed to render a page in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}}.
 - {{HTTPHeader("X-Permitted-Cross-Domain-Policies")}}
@@ -357,7 +380,7 @@ _Learn more about CORS [here](CORS)._
 - {{HTTPHeader("Large-Allocation")}}
   - : Tells the browser that the page being loaded is going to want to perform a large allocation.
 - {{HTTPHeader("Link")}}
-  - : The [`Link`](https://datatracker.ietf.org/doc/html/rfc5988#section-5) entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML {{HTMLElement("link")}} element.
+  - : The [`Link`](https://datatracker.ietf.org/doc/html/rfc5988#section-5) entity-header field provides a means for serializing one or more links in HTTP headers. It is semantically equivalent to the HTML {{HTMLElement("link")}} element.
 - {{HTTPHeader("Push-Policy")}} {{experimental_inline}}
   - : A [`Push-Policy`](https://datatracker.ietf.org/doc/html/draft-ruellan-http-accept-push-policy-00#section-3.2) defines the server behavior regarding push when processing a request.
 - {{HTTPHeader("Retry-After")}}

@@ -24,7 +24,7 @@ The **`oncontrollerchange`** property of the
 ## Syntax
 
 ```js
-serviceWorkerContainer.oncontrollerchange = function(controllerchangeevent) { ... }
+serviceWorkerContainer.oncontrollerchange = function(controllerchangeevent) { /* ... */ }
 ```
 
 ## Example

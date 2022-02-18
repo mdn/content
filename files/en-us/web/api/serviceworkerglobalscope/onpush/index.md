@@ -21,8 +21,8 @@ received by a service worker via a push server.
 ## Syntax
 
 ```js
-ServiceWorkerGlobalScope.onpush = function(PushEvent) { ... }
-self.addEventListener('push', function(PushEvent) { ... })
+ServiceWorkerGlobalScope.onpush = function(PushEvent) { /* ... */ }
+self.addEventListener('push', function(PushEvent) { /* ... */ })
 ```
 
 ## Example

@@ -6,6 +6,7 @@ tags:
   - HTML DOM
   - Method
   - Reference
+  - Polyfill
   - atob
 browser-compat: api.atob
 ---
@@ -51,7 +52,7 @@ const decodedData = atob(encodedData); // decode the string
 
 ## Polyfill
 
-You can use a polifill from <https://github.com/MaxArt2501/base64-js/blob/master/base64.js>
+You can use a polyfill from <https://github.com/MaxArt2501/base64-js/blob/master/base64.js>
 for browsers that don't support it.
 
 ## Specifications
@@ -64,5 +65,6 @@ for browsers that don't support it.
 
 ## See also
 
+- [A polyfill of `atob`](https://github.com/zloirock/core-js#base64-utility-methods) is available in [`core-js`](https://github.com/zloirock/core-js)
 - [`data` URIs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
 - {{domxref("btoa","btoa()")}}

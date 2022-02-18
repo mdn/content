@@ -28,11 +28,11 @@ Highlights:
 - Enabled {{cssxref("mix-blend-mode")}} by default ({{Bug(952643)}}).
 - Enabled `position:sticky` by default in release builds (only enabled on Nightly and Aurora before) ({{Bug(916315)}}).
 - Implemented {{cssxref("box-decoration-break")}} and removed the non-standard `-moz-background-inline-policy`({{Bug(613659)}}).
-- Allowed {{cssxref("flex-grow")}} and  {{cssxref("flex-shrink")}} to transition between zero and nonzero values, like 'flex-grow: 0.6'({{Bug(996945)}}).
+- Allowed {{cssxref("flex-grow")}} and  {{cssxref("flex-shrink")}} to transition between zero and nonzero values, like 'flex-grow: 0.6'({{Bug(996945)}}).
 
 ### HTML
 
-- Experimentally implemented, behind a pref, {{HTMLElement("img")}} {{HTMLattrxref("srcset", "img")}} property, To activate it  set `dom.image.srcset.enable` to `true` ({{Bug(870021)}}).
+- Experimentally implemented, behind a pref, {{HTMLElement("img")}} {{HTMLattrxref("srcset", "img")}} property, To activate it  set `dom.image.srcset.enable` to `true` ({{Bug(870021)}}).
 - [**id**](/en-US/docs/Web/HTML/Global_attributes/id) and [**class**](/en-US/docs/Web/HTML/Global_attributes/class) are now true [global attributes](/en-US/docs/Web/HTML/Global_attributes) and also apply to XML elements, in a namespace or not ({{bug(741295)}}).
 
 ### JavaScript
@@ -49,8 +49,8 @@ Highlights:
 - The {{domxref("Navigator.vibrate()")}} method behavior has been adapted to the latest specification: too long vibrations are now truncated ({{bug(1014581)}}).
 - The {{domxref("KeyboardEvent.getModifierState()")}} and {{domxref("MouseEvent.getModifierState()")}} methods have been extended to support the `Accel` virtual modifier ({{Bug(1009388)}}).
 - The {{domxref("KeyboardEvent.code")}} property have been experimentally implemented: it is disabled on release build ({{Bug(865649)}}).
-- Scoped selectors for {{domxref("Document.querySelector()")}} and  {{domxref("Document.querySelectorAll()")}}, for example `querySelector(":scope > li")`have been implemented ({{Bug(528456)}}).
-- The experimental implementation of the  {{domxref("Document.timeline")}} interface, related to the [Web Animation API](https://dev.w3.org/fxtf/web-animations/), has been added ({{bug("998246")}}). It is controlled by `layout.web-animations.api.enabled` preference, enabled only on Nightly and Aurora for the moment.
+- Scoped selectors for {{domxref("Document.querySelector()")}} and  {{domxref("Document.querySelectorAll()")}}, for example `querySelector(":scope > li")`have been implemented ({{Bug(528456)}}).
+- The experimental implementation of the  {{domxref("Document.timeline")}} interface, related to the [Web Animation API](https://dev.w3.org/fxtf/web-animations/), has been added ({{bug("998246")}}). It is controlled by `layout.web-animations.api.enabled` preference, enabled only on Nightly and Aurora for the moment.
 - The [Data Store API](/en-US/docs/Web/API/Data_Store_API) has been made available to [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) ({{bug("949325")}}). It still is only activated for certified applications.
 - The [ServiceWorker](/en-US/docs/Web/API/Service_Worker_API) {{domxref("InstallPhaseEvent")}} and {{domxref("InstallEvent")}} interfaces have been implemented ({{ Bug("967264") }}).
 - The [MSISDN Verification API](/en-US/docs/Web/API/MSISDN_Verification_API), only activated for privileged apps, has been added ({{ Bug("988469") }}).
@@ -58,7 +58,7 @@ Highlights:
 - To match the spec and the evolution of the CSS syntax, minor changes have been done to {{domxref("CSS.escape()")}}. The identifier now can begins with `'--'` and the second dash must not be escaped. Also vendor identifier are no more escaped. ({{bug(1008719)}})
 - To complete our Hit Regions implementation, {{domxref("MouseEvent.region")}} has been implemented ({{bug(979692)}}).
 - The {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}} method is now enabled by default ({{bug(1004579)}}).
-- The {{domxref("Navigator.doNotTrack")}} properties now returns `'1'` or `'0'`, reflecting the HTTP value, instead of  `'yes'` or `'no'` ({{bug(887703)}}).
+- The {{domxref("Navigator.doNotTrack")}} properties now returns `'1'` or `'0'`, reflecting the HTTP value, instead of  `'yes'` or `'no'` ({{bug(887703)}}).
 - [XMLHttpRequest.responseURL](/en-US/docs/Web/API/XMLHttpRequest/responseURL) was implemented ({{bug(998076)}})..
 
 ### MathML
@@ -71,7 +71,7 @@ _No change._
 
 ### WebRTC
 
-- New constraints for [WebRTC](/en-US/docs/Glossary/WebRTC)'s {{domxref("NavigatorUserMedia.getUserMedia", "getUserMedia()")}}, `width`, `height`, and `framerate`,  have been added, to limit stream dimensions and frame rate ({{bug("907352")}}):
+- New constraints for [WebRTC](/en-US/docs/Glossary/WebRTC)'s {{domxref("NavigatorUserMedia.getUserMedia", "getUserMedia()")}}, `width`, `height`, and `framerate`,  have been added, to limit stream dimensions and frame rate ({{bug("907352")}}):
 
   ```json
   {

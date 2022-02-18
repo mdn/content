@@ -10,7 +10,7 @@ tags:
   - content indexing
 browser-compat: api.ContentIndex
 ---
-{{draft}}{{DefaultAPISidebar("Content Index API")}}
+{{DefaultAPISidebar("Content Index API")}}
 
 The **`ContentIndex`** interface of the {{domxref('Content Index API')}} allows developers to register their offline enabled content with the browser.
 
@@ -70,13 +70,13 @@ async function registerContent(data) {
   const registration = await navigator.serviceWorker.ready;
 
   // feature detect Content Index
-	if (!registration.index) {
-		return;
-	}
+  if (!registration.index) {
+    return;
+  }
 
   // register content
   try {
-		await registration.index.add(data);
+    await registration.index.add(data);
   } catch (e) {
     console.log('Failed to register content: ', e.message);
   }

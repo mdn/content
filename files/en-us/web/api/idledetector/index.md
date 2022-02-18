@@ -13,7 +13,9 @@ browser-compat: api.IdleDetector
 The **`IdleDetector`** interface of the {{domxref('idle_detection_api','Idle
 Detection API','','true')}} provides methods and events for detecting user activity on a device or screen.
 
-This interface requires a secure context. 
+This interface requires a secure context.
+
+{{InheritanceDiagram}}
 
 ## Constructor
 
@@ -103,4 +105,3 @@ stopButton.addEventListener('click', () => {
 ## Browser compatibility
 
 {{Compat}}
-

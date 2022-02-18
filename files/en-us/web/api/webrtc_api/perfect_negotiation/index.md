@@ -89,7 +89,7 @@ This isn't appreciably different from older WebRTC connection establishment code
 
 ### Handling incoming tracks
 
-We next need to set up a handler for {{domxref("RTCPeerConnection.track_event", "track")}} events to handle inbound video and audio tracks that have been negotiatied to be received by this peer connection. To do this, we implement the {{domxref("RTCPeerConnection")}}'s {{domxref("RTCPeerConnection.ontrack", "ontrack")}} event handler.
+We next need to set up a handler for {{domxref("RTCPeerConnection.track_event", "track")}} events to handle inbound video and audio tracks that have been negotiated to be received by this peer connection. To do this, we implement the {{domxref("RTCPeerConnection")}}'s {{domxref("RTCPeerConnection.ontrack", "ontrack")}} event handler.
 
 ```js
 pc.ontrack = ({track, streams}) => {
@@ -359,7 +359,7 @@ While the difference in code size is minor, and the complexity isn't reduced muc
 
 In the revised code, if the received message is an SDP `description`, we check to see if it arrived while we're attempting to transmit an offer. If the received message is an `offer` _and_ the local peer is the impolite peer, _and_ a collision is occurring, we ignore the offer because we want to continue to try to use the offer that's already in the process of being sent. That's the impolite peer in action.
 
-In any other case, we'll try instead to handle the incoming message. This begins by setting the remote description to the received `description` by passing it into {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}. This works regardless of whether we're handling an offer or an answer since rollback will be performed automaticaly as needed.
+In any other case, we'll try instead to handle the incoming message. This begins by setting the remote description to the received `description` by passing it into {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}. This works regardless of whether we're handling an offer or an answer since rollback will be performed automatically as needed.
 
 At that point, if the received message is an `offer`, we use `setLocalDescription()` to create and set an appropriate local description, then we send it to the remote peer over the signaling server.
 

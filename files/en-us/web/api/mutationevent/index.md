@@ -16,6 +16,8 @@ browser-compat: api.MutationEvent
 
 The **`MutationEvent`** interface provides event properties that are specific to modifications to the Document Object Model (DOM) hierarchy and nodes.
 
+{{InheritanceDiagram}}
+
 ## Preface
 
 The mutation events have been marked as deprecated in [the DOM Events specification](https://www.w3.org/TR/DOM-Level-3-Events/#events-mutationevents), as the API's design is flawed (see details in the "DOM Mutation Events Replacement: The Story So Far / Existing Points of Consensus" post to [public-webapps](https://lists.w3.org/Archives/Public/public-webapps/2011JulSep/0779.html)).
@@ -59,9 +61,11 @@ The following is a list of all mutation events, as defined in [DOM Level 3 Event
 
 You can register a listener for mutation events using {{DOMxRef("EventTarget.addEventListener()")}} as follows:
 
-    element.addEventListener("DOMNodeInserted", function (event) {
-      // ...
-    }, false);
+```js
+element.addEventListener("DOMNodeInserted", function (event) {
+  // ...
+}, false);
+```
 
 The event object is passed to the listener in a `MutationEvent` (see [its definition in the specification](https://www.w3.org/TR/DOM-Level-3-Events/#events-MutationEvent)) for most events, and {{DOMxRef("MutationNameEvent")}} for `DOMAttributeNameChanged` and `DOMElementNameChanged`.
 

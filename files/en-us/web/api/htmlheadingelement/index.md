@@ -13,7 +13,7 @@ browser-compat: api.HTMLHeadingElement
 
 The **`HTMLHeadingElement`** interface represents the different heading elements, [`<h1>` through `<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements). It inherits methods and properties from the {{domxref("HTMLElement")}} interface.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

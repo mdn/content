@@ -58,7 +58,7 @@ When you load the example page above, the browser displays the following dialog:
 
 To toggle the visibility of these bars, you must either sign your scripts or enable the
 appropriate privileges, as in the example above. Also be aware that dynamically updating
-the visibilty of the various toolbars can change the size of the window rather
+the visibility of the various toolbars can change the size of the window rather
 dramatically, and may affect the layout of your page.
 
 ## Specifications

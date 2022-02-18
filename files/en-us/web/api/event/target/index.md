@@ -34,8 +34,8 @@ ul.appendChild(li1);
 ul.appendChild(li2);
 
 function hide(evt) {
-  // e.target refers to the clicked <li> element
-  // This is different than e.currentTarget, which would refer to the parent <ul> in this context
+  // evt.target refers to the clicked <li> element
+  // This is different than evt.currentTarget, which would refer to the parent <ul> in this context
   evt.target.style.visibility = 'hidden';
 }
 

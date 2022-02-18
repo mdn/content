@@ -42,9 +42,9 @@ scale(sx, sy)
 ### Values
 
 - `sx`
-  - : A {{cssxref("&lt;number&gt;")}} representing the abscissa of the scaling vector.
+  - : A {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} representing the abscissa of the scaling vector.
 - `sy`
-  - : A {{cssxref("&lt;number&gt;")}} representing the ordinate of the scaling vector. If not defined, its default value
+  - : A {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} representing the ordinate of the scaling vector. If not defined, its default value
     is `sx`, resulting in a uniform scaling that preserves the element's aspect ratio.
 
 <table class="standard-table">
@@ -60,20 +60,20 @@ scale(sx, sy)
     <tr>
       <td rowspan="2">
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd></mtr
               ><mtr
                 ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td>
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
@@ -85,13 +85,13 @@ scale(sx, sy)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td rowspan="2">
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
@@ -103,13 +103,13 @@ scale(sx, sy)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td rowspan="2">
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
@@ -124,7 +124,7 @@ scale(sx, sy)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
@@ -142,7 +142,7 @@ migraine. If you need to include such animations on your website, you should pro
 off animations, preferably site-wide.
 
 Also, consider making use of the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} media feature
-— use it to write a [media query](/en-US/docs/Web/CSS/Media_Queries) that will turn off animations if the
+— use it to write a [media query](/en-US/docs/Web/CSS/Media_queries) that will turn off animations if the
 user has reduced animation specified in their system preferences.
 
 Find out more:

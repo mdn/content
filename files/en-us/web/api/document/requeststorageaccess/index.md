@@ -21,17 +21,17 @@ access to first-party storage was granted, and rejects if access was denied.
 
 Storage access is granted based on a series of checks described here:
 
-1.  If the document already has been granted access, resolve.
-2.  If the document has a null origin, reject.
-3.  If the document's frame is the main frame, resolve.
-4.  If the sub frame's origin is equal to the main frame's, resolve.
-5.  If the sub frame is not sandboxed, skip to step 7.
-6.  If the sub frame doesn't have the token
+1. If the browser is not processing a user gesture, reject.
+2. If the document already has been granted access, resolve.
+3. If the document has a null origin, reject.
+4. If the document's frame is the main frame, resolve.
+5. If the sub frame's origin is equal to the main frame's, resolve.
+6. If the sub frame is not sandboxed, skip to step 7.
+7. If the sub frame doesn't have the token
     `allow-storage-access-by-user-activation`, reject.
-7.  If the sub frame's parent frame is not the top frame, reject.
-8.  If the browser is not processing a user gesture, reject.
-9.  Check any additional rules that the browser has. Examples: allow lists, block lists,
-    on-device classification, user settings, anti-clickjacking heuristics, or prompting
+8. If the sub frame's parent frame is not the top frame, reject.
+9. Check any additional rules that the browser has. Examples: allow lists, block lists,
+    on-device classification, user settings, anti-[clickjacking](/en-US/docs/Glossary/Clickjacking) heuristics, or prompting
     the user for explicit permission. Reject if some rule is not fulfilled.
 10. Grant the document access to cookies and other site storage and store that fact for
     the purposes of future calls to {{domxref("Document.hasStorageAccess()")}} and
@@ -39,27 +39,27 @@ Storage access is granted based on a series of checks described here:
 
 Assuming all of the requirements above are satisfied, Firefox will automatically grant
 storage access to the requesting origin on up to a threshold number of first-party
-origins in the current session for the duration of user’s session, up to a maximum of 24
+sites in the current session for the duration of user’s session, up to a maximum of 24
 hours. After the requesting origin has exceeded the maximum allowable number of storage
 access grants, any future call to `requestStorageAccess()` during the same
 browsing session will prompt the user.
 
 The maximum number of concurrent storage access grants an origin can obtain is a
-positive integer currently defined as one percent of the number of top-level origins
+positive integer currently defined as one percent of the number of top-level sites
 visited in the current session or 5, whichever is higher. The threshold is enforced on
-the level of eTLD+1, so for example two storage access grants for
+the level of site, so for example two storage access grants for
 `foo.example.com` and `bar.example.com` will only count as a
 single exception against the limit.
 
 At the time of a `requestStorageAccess()` call, if the requesting origin has
 storage access to...
 
-...fewer origins than the maximum:
+...fewer sites than the maximum and has been interacted with as a first party in the last 30 days:
 
 - The user is not prompted.
 - The origin is given an ephemeral storage access grant for the current top-level
-  origin.
-- The number of origins the requesting origin has storage access to is incremented by
+  site.
+- The number of sites the requesting origin has storage access to is incremented by
   one.
 
   - Note that this number is also incremented when automatic access grants are given
@@ -72,22 +72,22 @@ storage access to...
   - Not persisted to disk (e.g. will not persist if the browser crashes).
   - Reset after 24 hours in the case of a long-running browser session.
 
-...equal or more origins than the maximum:
+...equal or more sites than the maximum or has not been interacted with as a first party in the last 30 days::
 
 - The user is prompted
 - If the user clicks “Allow” or “Allow on any site” the request is resolved.
 - If the user clicks “Don’t Allow”, the storage access request is rejected and the
   requesting origin can re-request once it receives another user interaction.
 - If the user allows storage the requesting origin is given a persistent storage
-  access grant on the current top-level origin.
-- The number of origins the requesting origin has storage access to is incremented by
+  access grant on the current top-level site.
+- The number of sites the requesting origin has storage access to is incremented by
   one.
 - The persistent storage access permission is:
 
   - Persisted to disk and will remain valid in future browser sessions.
   - Reset after 30 days.
 
-When an ephemeral or persistent storage access grant expires, the number of origins the
+When an ephemeral or persistent storage access grant expires, the number of sites the
 requesting origin has storage access to is decremented by one.
 
 > **Note:** If the requesting origin is not [classified
@@ -144,7 +144,7 @@ being processed, whether the promise was fulfilled or rejected:
 ```js
 document.requestStorageAccess().then(
   () => { console.log('access granted') },
-  () => { console.log('access denied') }
+  () => { console.log('access denied') }
 );
 ```
 
@@ -152,7 +152,7 @@ document.requestStorageAccess().then(
 
 The API is currently only at the proposal stage — the standardization process has yet
 to begin. You can currently find specification details of the API at Apple's [Introducing
-Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) blog post, and the [Storage Access API proposal in the
+Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) blog post, and the [Storage Access API proposal in the
 Privacy CG](https://github.com/privacycg/storage-access).
 
 ## Browser compatibility

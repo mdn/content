@@ -51,5 +51,5 @@ specification is no longer being worked on.
 
 ## See also
 
-- A polyfill of `clearImmediate` is available in [`core-js`](https://github.com/zloirock/core-js#setimmediate)
+- [Polyfill of `clearImmediate` in `core-js`](https://github.com/zloirock/core-js#setimmediate)
 - {{DOMxRef("Window.setImmediate()")}}

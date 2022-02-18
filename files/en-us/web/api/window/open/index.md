@@ -88,6 +88,9 @@ function openRequestedPopup() {
 }
 ```
 
+In Firefox on desktop, calling the function above creates a new browser window with a non-editable address bar and without the navigation buttons:
+![CNN's home page shown in a Firefox window with a non-editable address bar and without navigation buttons](popup.png)
+
 ```js
 var windowObjectReference;
 
@@ -143,10 +146,10 @@ Example: `popup=yes`, `popup=1`, and `popup` all have identical results.
 
 Otherwise:
 
-* To not request a popup, omit the _windowFeatures_ parameter.
-* Otherwise:
-   * Specifying any features in the _windowFeatures_ parameter other than `noopener` or `noreferer` has the effect of also requesting a popup.
-   * Otherwise, no popup is requested.
+- To not request a popup, omit the _windowFeatures_ parameter.
+- Otherwise:
+  - Specifying any features in the _windowFeatures_ parameter other than `noopener` or `noreferrer` has the effect of also requesting a popup.
+  - Otherwise, no popup is requested.
 
 ### Position and size features
 

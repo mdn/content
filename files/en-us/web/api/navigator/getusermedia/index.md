@@ -42,7 +42,7 @@ navigator.getUserMedia(constraints, successCallback, errorCallback);
 ### Parameters
 
 - `constraints`
-  - : A {{domxref("MediaStreamConstraints")}} object specifying the types of media to
+  - : An object specifying the types of media to
     request, along with any requirements for each type. For details, see the [constraints](/en-US/docs/Web/API/MediaDevices/getUserMedia#parameters)
     section under the modern {{domxref("MediaDevices.getUserMedia()")}} method, as well
     as the article [Capabilities,
@@ -67,7 +67,7 @@ navigator.getUserMedia(constraints, successCallback, errorCallback);
 
 - `errorCallback`
   - : When the call fails, the function specified in the `errorCallback` is
-    invokedwith a {{domxref("MediaStreamError")}} object as its sole argument; this
+    invoked with a {{domxref("MediaStreamError")}} object as its sole argument; this
     object is modeled on {{domxref("DOMException")}}. See {{anch("Errors")}} below for a
     list of the errors which can occur.
 

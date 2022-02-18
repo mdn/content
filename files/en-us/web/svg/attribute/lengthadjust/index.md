@@ -12,10 +12,10 @@ The lengthAdjust attribute controls how the text is stretched into the length de
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("text")}}
-*   {{SVGElement("textPath")}}
-*   {{SVGElement("tref")}}
-*   {{SVGElement("tspan")}}
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
 
 ## Example
 
@@ -44,7 +44,7 @@ html, body, svg {
 </svg>
 ```
 
-{{EmbedLiveSample("Example", "420", "120")}}
+{{EmbedLiveSample("Example", "420", "150")}}
 
 ## Usage notes
 

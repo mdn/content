@@ -44,7 +44,7 @@ and {{domxref("GlobalEventHandlers.onmousemove", "onmousemove")}} event handlers
 ```html
 <div class="container">
   <div class="view" hidden></div>
-  <img src="https://interactive-examples.mdn.mozilla.net/media/examples/gecko-320-213.jpg">
+  <img src="rhino.jpg">
 </div>
 ```
 
@@ -52,8 +52,8 @@ and {{domxref("GlobalEventHandlers.onmousemove", "onmousemove")}} event handlers
 
 ```css
 .container {
-  width: 320px;
-  height: 213px;
+  width: 300px;
+  height: 227px;
   background: black;
 }
 

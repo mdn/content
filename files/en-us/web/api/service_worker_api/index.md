@@ -36,9 +36,9 @@ A service worker is first registered using the {{DOMxRef("ServiceWorkerContainer
 
 At this point, your service worker will observe the following lifecycle:
 
-1.  Download
-2.  Install
-3.  Activate
+1. Download
+2. Install
+3. Activate
 
 The service worker is immediately downloaded when a user first accesses a service worker–controlled site/page.
 
@@ -131,7 +131,7 @@ In the future, service workers will be able to do a number of other useful thing
 
 ## See also
 
-- [ServiceWorker Cookbook](https://serviceworke.rs)
+- [ServiceWorker Cookbook](https://github.com/mozilla/serviceworker-cookbook)
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)

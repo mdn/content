@@ -19,8 +19,8 @@ browser-compat: path.to.feature.NameOfTheConstructor
 >
 > The frontmatter at the top of the page is used to define "page metadata".
 > The values should be updated appropriately for the constructor.
-> 
-> ```
+>
+> ```md
 > ---
 > title: NameOfTheConstructor()
 > slug: Web/API/NameOfTheParentInterface/NameOfTheParentInterface
@@ -34,28 +34,29 @@ browser-compat: path.to.feature.NameOfTheConstructor
 > browser-compat: path.to.feature.NameOfTheConstructor
 > ---
 > ```
+>
 > - **title**
 >   - : Title heading displayed at top of page.
->       Format as _NameOfTheParentInterface_**()**.
->       For example, the [Request()](/en-US/docs/Web/API/Request/Request) constructor has a _title_ of `Request()`.
+>     Format as _NameOfTheParentInterface_**()**.
+>     For example, the [Request()](/en-US/docs/Web/API/Request/Request) constructor has a _title_ of `Request()`.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
->       This will be formatted like `Web/API/NameOfTheParentInterface/NameOfTheParentInterface`.
->       Note that the name of the constructor function in the slug omits the parenthesis (it ends in `NameOfTheParentInterface` not `NameOfTheParentInterface()`).
+>     This will be formatted like `Web/API/NameOfTheParentInterface/NameOfTheParentInterface`.
+>     Note that the name of the constructor function in the slug omits the parenthesis (it ends in `NameOfTheParentInterface` not `NameOfTheParentInterface()`).
 > - **tags**
 >   - : Always include the following tags: **API**, **Reference**, **Constructor**,  the _name of the API_ (e.g. **WebVR**), the name of the _parent interface_ (e.g. **IDBIndex**).
 >
->       Include the following tags as appropriate:
->       - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete)), **Non-standard** if it isn't on a standards track.
->       - Special requirements: **Secure context** (if it is available in a secure context only)
->       - Any other tags that represent terms people might search for related to the technology.
+>     Include the following tags as appropriate:
+>     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete)), **Non-standard** if it isn't on a standards track.
+>     - Special requirements: **Secure context** (if it is available in a secure context only)
+>     - Any other tags that represent terms people might search for related to the technology.
 >         For example on WebVR interface pages we include **VR** and **Virtual reality**.
 > - **browser-compat**
 >   - : Replace the placeholder value `path.to.feature.NameOfTheConstructor` with the query string for the constructor in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
->       The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros).
+>     The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros).
 >
->       Note that you may first need to create/update an entry for the API constructor in our [Browser compat data repo](https://github.com/mdn/browser-compat-data), and the entry for the API will need to include specification information.
->       See our [guide on how to do this](/en-US/docs/MDN/Structures/Compatibility_tables).
+>     Note that you may first need to create/update an entry for the API constructor in our [Browser compat data repo](https://github.com/mdn/browser-compat-data), and the entry for the API will need to include specification information.
+>     See our [guide on how to do this](/en-US/docs/MDN/Structures/Compatibility_tables).
 >
 > ---
 >
@@ -63,6 +64,7 @@ browser-compat: path.to.feature.NameOfTheConstructor
 >
 > A number of macro calls appear at the top of the content section (immediately below the page frontmatter).
 > You should update or delete them according to the advice below:
+>
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)).
 >   If the technology you are documenting is not experimental, you should remove this.
 >   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.

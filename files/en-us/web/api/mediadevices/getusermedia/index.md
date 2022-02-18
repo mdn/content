@@ -81,11 +81,10 @@ var promise = navigator.mediaDevices.getUserMedia(constraints);
 
 - `constraints`
 
-  - : A {{domxref("MediaStreamConstraints")}} object specifying the types of media to
+  - : An object specifying the types of media to
     request, along with any requirements for each type.
 
-    The `constraints` parameter is a
-    `MediaStreamConstraints` object with two members: `video` and
+    The `constraints` parameter is an object with two members: `video` and
     `audio`, describing the media types requested. Either or both must be
     specified. If the browser cannot find all media tracks with the specified types that
     meet the constraints given, then the returned promise is rejected with
@@ -320,12 +319,16 @@ For example, this line in the HTTP headers will enable use of a camera for the d
 and any embedded {{HTMLElement("iframe")}} elements that are loaded from the same
 origin:
 
-    Feature-Policy: camera 'self'
+```
+Feature-Policy: camera 'self'
+```
 
 This will request access to the microphone for the current origin and the specific
 origin https\://developer.mozilla.org:
 
-    Feature-Policy: microphone 'self' https://developer.mozilla.org
+```
+Feature-Policy: microphone 'self' https://developer.mozilla.org
+```
 
 If you're using `getUserMedia()` within an `<iframe>`, you
 can request permission just for that frame, which is clearly more secure than requesting

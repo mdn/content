@@ -22,7 +22,7 @@ var RAM = navigator.deviceMemory;
 
 ### Client Hints
 
-You may also use the [Client Hints](/en-US/docs/Glossary/Client_hints) HTTP Header with the `Device-Memory` directive to retrieve the same approximate RAM capacity.
+You may also use the [Client Hints](/en-US/docs/Web/HTTP/Client_hints) HTTP Header with the `Device-Memory` directive to retrieve the same approximate RAM capacity.
 
 ## Specifications
 

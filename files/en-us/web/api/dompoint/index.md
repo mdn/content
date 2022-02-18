@@ -21,6 +21,8 @@ A **`DOMPoint`** object represents a 2D or 3D point in a coordinate system; it i
 
 In general, a positive `x` component represents a position to the right of the origin, a positive `y` component is downward from the origin, and a positive `z` component extends outward from the screen (in other words, toward the user).
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("DOMPoint.DOMPoint","DOMPoint()")}}

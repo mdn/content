@@ -16,6 +16,8 @@ The `DeprecationReportBody` interface of the [Reporting API](/en-US/docs/Web/API
 
 A deprecation report is generated when a deprecated feature (for example a deprecated API method) is used on a document being observed by a {{domxref("ReportingObserver")}}. In addition to the support of this API, receiving useful deprecation warnings relies on browser vendors adding these warnings for deprecated features.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 An instance of `DeprecationReportBody` is returned as the value of {{domxref("Report.body")}} when {{domxref("Report.Type")}} is `deprecation`. The interface has no constructor.
@@ -69,7 +71,7 @@ Because of the event handler we set up inside the `ReportingObserver()` construc
 
 ![image of a jolly bearded man with various stats displayed below it about a deprecated feature](reporting_api_example.png)
 
-The report details are displayed via the `displayReports()` fuction, which takes the observer callback's `reports` parameter as its parameter:
+The report details are displayed via the `displayReports()` function, which takes the observer callback's `reports` parameter as its parameter:
 
 ```js
 function displayReports(reports) {

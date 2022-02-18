@@ -29,7 +29,7 @@ let backgroundFetchRegistration = BackgroundFetchManager.get(id);
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} or {{jsxref("undeffined")}}.
+A {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} or {{jsxref("undefined")}}.
 
 ## Examples
 

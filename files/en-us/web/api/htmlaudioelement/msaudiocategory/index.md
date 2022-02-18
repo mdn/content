@@ -13,7 +13,7 @@ The **`msAudioCategory`** property of the HTML [\<audio>](/en-US/docs/Web/HTML/E
 ## Syntax
 
 ```html
-<audio controls="controls" msaudiocategory="BackgroundCapableMedia">  </audio>
+<audio controls="controls" msaudiocategory="BackgroundCapableMedia">  </audio>
 ```
 
 The `msAudioCategory` property offers a variety of values that can enhance the behavior of your audio-aware app.

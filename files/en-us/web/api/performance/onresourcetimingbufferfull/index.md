@@ -5,7 +5,7 @@ tags:
   - API
   - Property
   - Reference
-  - Web Peformance
+  - Web Performance
 browser-compat: api.Performance.onresourcetimingbufferfull
 ---
 {{APIRef("Resource Timing API")}}

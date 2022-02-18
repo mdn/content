@@ -35,7 +35,6 @@ Examples:
   support, making it clear that we only support modern browsers in these guides,
   and setting up tools like Babel.js if you want to support ancient engines.
 
-
 ## Priority assessment
 
 This list checks this project against the [OWD prioritization criteria](https://github.com/openwebdocs/project/blob/main/steering-committee/prioritization-criteria.md).
@@ -66,7 +65,7 @@ Audit existing articles, work out how to update them, get them rewritten.
 - Agree on an overall strategy for the updates. For example, is there a
   particular set of ECMAScript that we want to stick to documenting in this
   resource? How new is too new? Do we gate it on what is supported in at least
-  two rendering engines, or somesuchthing? How do we deal with
+  two rendering engines, or some such thing? How do we deal with
   backwards-compatibility? Show examples of how to support older browsers, or
   just teach everyone how to use Babel.js to begin with?
 - Audit each page. For each one, write a list of what needs to be done to get

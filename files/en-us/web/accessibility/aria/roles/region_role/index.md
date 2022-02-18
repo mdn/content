@@ -20,7 +20,7 @@ The **`region`** role is used to identify document areas the author deems signif
 
 ## Description
 
-The `region` role is an [ARIA landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#landmark_roles) role. 
+The `region` role is an [ARIA landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#landmark_roles) role.
 The `region` role should be reserved for sections of content sufficiently important that users will likely want to navigate to the section easily and to have it listed in a summary of the page. A region role is a more generic term, and should only be used if the section needing to be identified is not accurately described by one of the other landmark roles, such as [`banner`](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role), [`main`](/en-US/docs/Web/Accessibility/ARIA/Roles/main_role), [`contentinfo`](/en-US/docs/Web/Accessibility/ARIA/Roles/contentinfo_role), [`complementary`](/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role), or [`navigation`](/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role).
 
 Every element with a `region` role should include a label that describes the purpose of the content in the region, preferably with an [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) referencing a visible header. If no visible appropriate header is present, [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) should be used.
@@ -33,7 +33,6 @@ Using the {{HTMLElement('section')}} element will automatically communicate a se
 
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or  [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
   - : Use this attribute to label the region. Often, the value of the `aria-labelledby` attribute will be the id of the element used to title the section. If no visible appropriate header is present, `aria-label` should be used.
-
 
 ## Examples
 
@@ -90,8 +89,6 @@ If there is a content area with `tabindex="0"`, add `role="region"` to convey to
 | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ |
 | {{SpecName("ARIA","#region","ARIA Region Role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_region","Region landmark role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
-
-
 
 ## See also
 

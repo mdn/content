@@ -14,7 +14,7 @@ browser-compat: api.SVGCircleElement
 
 The **`SVGCircleElement`** interface is an interface for the {{SVGElement("circle")}} element.
 
-{{InheritanceDiagram(700, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

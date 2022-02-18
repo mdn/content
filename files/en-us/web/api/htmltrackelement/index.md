@@ -14,7 +14,7 @@ browser-compat: api.HTMLTrackElement
 
 The **`HTMLTrackElement`** interface represents an {{Glossary("HTML")}} {{HTMLElement("track")}} element within the {{Glossary("DOM")}}. This element can be used as a child of either {{HTMLElement("audio")}} or {{HTMLElement("video")}} to specify a text track containing information such as closed captions or subtitles.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -54,7 +54,7 @@ _The following events may be fired on a {{HTMLElement("track")}} element, in add
 
 - {{domxref("HTMLTrackElement.cuechange_event", "cuechange")}}
   - : Sent when the underlying {{domxref("TextTrack")}} has changed the currently-presented cues. This event is always sent to the `TextTrack` but is _also_ sent to the `HTMLTrackElement` if one is associated with the track.
-    You may also use the {{domxref("GlobalEventHandlers.oncuechange", "oncuechange")}} event handler to establish a handler for this event.
+    You may also use the `oncuechange` event handler to establish a handler for this event.
 
 ## Usage notes
 

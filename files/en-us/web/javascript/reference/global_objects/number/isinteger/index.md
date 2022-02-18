@@ -29,7 +29,7 @@ Number.isInteger(value)
 
 ### Return value
 
-A {{jsxref("Boolean")}} indicating whether or not the given value is an integer.
+The boolean value `true` if the given value is an integer. Otherwise `false`.
 
 ## Description
 
@@ -74,5 +74,5 @@ Number.isInteger(5.0000000000000001); // true
 
 ## See also
 
-- A polyfill of `Number.isInteger` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [Polyfill of `Number.isInteger` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
 - The {{jsxref("Number")}} object it belongs to.

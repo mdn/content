@@ -15,6 +15,8 @@ browser-compat: api.CSSNumericValue
 
 The **`CSSNumericValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) represents operations that all numeric values can perform.
 
+{{InheritanceDiagram}}
+
 ## Interfaces based on CSSNumericValue
 
 Below is a list of interfaces based on the CSSNumericValue interface.

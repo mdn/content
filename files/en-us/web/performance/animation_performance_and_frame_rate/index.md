@@ -6,7 +6,7 @@ tags:
   - Developer Tools
   - Web Performance
 ---
-{{draft}}
+
 
 Animation on the web can be done via {{domxref('SVGAnimationElement', 'SVG')}}, {{domxref('window.requestAnimationFrame','JavaScript')}}, including {{htmlelement('canvas')}} and {{domxref('WebGL_API', 'WebGL')}}, CSS {{cssxref('animation')}}, {{htmlelement('video')}}, animated gifs and even animated PNGs and other image types. The performance cost of animating a CSS property can vary from one property to another, and animating expensive CSS properties can result in {{glossary('jank')}} as the browser struggles to hit a smooth {{glossary('frame rate')}}.
 
@@ -30,11 +30,11 @@ The process a browser uses to paint changes to a page when an element is animati
 
 ![](css-rendering-waterfall.png)
 
-1.  **Recalculate Style**: when a property for an element changes, the browser must recalculate computed styles.
-2.  **Layout**: next, the browser uses the computed styles to figure out the position and geometry for the elements. This operation is labeled "layout" but is also sometimes called "reflow".
-3.  **Paint**: finally, the browser needs to repaint the elements to the screen. One last step is not shown in this sequence: the page may be split into layers, which are painted independently and then combined in a process called "Composition".
+1. **Recalculate Style**: when a property for an element changes, the browser must recalculate computed styles.
+2. **Layout**: next, the browser uses the computed styles to figure out the position and geometry for the elements. This operation is labeled "layout" but is also sometimes called "reflow".
+3. **Paint**: finally, the browser needs to repaint the elements to the screen. One last step is not shown in this sequence: the page may be split into layers, which are painted independently and then combined in a process called "Composition".
 
-The process a browser uses to paint updated changes to a canvas element is different. In the \<canvas> scenario, the page layout is not changing. Rather, the page is being repainted, repeatedly, based on JavaScript canvas API functions.  When a canvas is animating a drawing, the canvas animation can be described as a waterfall consisting of the following steps:
+The process a browser uses to paint updated changes to a canvas element is different. In the \<canvas> scenario, the page layout is not changing. Rather, the page is being repainted, repeatedly, based on JavaScript canvas API functions. When a canvas is animating a drawing, the canvas animation can be described as a waterfall consisting of the following steps:
 
 These sequenced need to fit into a single frame, since the screen isn't updated until it is complete.
 
@@ -172,7 +172,7 @@ Now switch the radio button in the web page to "Use transform", and make a new r
 
 ![](transform-timeline-overview.png)
 
-Compared with [the version that uses margin](/en-US/docs/Tools/Performance/Scenarios/Animating_CSS_properties#waterfall_overview), we're seeing a lot less green and a lot more pink, which[ could be either layout or style recalculation](/en-US/docs/Tools/Performance/Waterfall#timeline-color-coding).
+Compared with [the version that uses margin](/en-US/docs/Tools/Performance/Scenarios/Animating_CSS_properties#waterfall_overview), we're seeing a lot less green and a lot more pink, which [could be either layout or style recalculation](/en-US/docs/Tools/Performance/Waterfall#timeline-color-coding).
 
 #### Frame rate
 

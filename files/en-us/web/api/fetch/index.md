@@ -19,13 +19,7 @@ resource from the network, returning a promise which is fulfilled once the respo
 available.
 
 The promise resolves to the {{domxref("Response")}} object
-representing the response to your request. The promise _does not_ reject on HTTP
-errors — it only rejects on network errors. You must use `then` handlers to
-check for HTTP errors.
-
-`WindowOrWorkerGlobalScope` is implemented by both {{domxref("Window")}} and
-{{domxref("WorkerGlobalScope")}}, which means that the `fetch()` method is
-available in pretty much any context in which you might want to fetch resources.
+representing the response to your request.
 
 A {{domxref("fetch()")}} promise only rejects when a
 network error is encountered (which is usually when there’s a permissions issue or
@@ -33,6 +27,10 @@ similar). A {{domxref("fetch()")}} promise _does
 not_ reject on HTTP errors (`404`, etc.). Instead, a
 `then()` handler must check the {{domxref("Response.ok")}} and/or
 {{domxref("Response.status")}} properties.
+
+`WindowOrWorkerGlobalScope` is implemented by both {{domxref("Window")}} and
+{{domxref("WorkerGlobalScope")}}, which means that the `fetch()` method is
+available in pretty much any context in which you might want to fetch resources.
 
 The `fetch()` method is controlled by the `connect-src` directive
 of [Content Security Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy)
@@ -53,7 +51,7 @@ const fetchResponsePromise = fetch(resource [, init])
 
   - : This defines the resource that you wish to fetch. This can either be:
 
-    - A string or any other object with a [stringifier](/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#stringifiers) — including a {{domxref("URL")}} object — that provides the URL of the resource you want to fetch.
+    - A string or any other object with a {{Glossary("stringifier")}} — including a {{domxref("URL")}} object — that provides the URL of the resource you want to fetch.
     - A {{domxref("Request")}} object.
 
 - `init` {{optional_inline}}
@@ -148,13 +146,13 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
   </thead>
   <tbody>
     <tr>
-      <td>Invalid header name</td>
+      <td>Invalid header name.</td>
       <td>
         <pre>
 // space in "C ontent-Type"
 const headers = {
-    "C ontent-Type": "text/xml",
-    "Breaking-Bad": "<3"
+  'C ontent-Type': 'text/xml',
+  'Breaking-Bad': '<3',
 };
 fetch('https://example.com/', { headers });
         </pre>
@@ -167,8 +165,8 @@ fetch('https://example.com/', { headers });
       <td>
         <pre>
 const headers = [
-    ["Content-Type", "text/html", "extra"],
-    ["Accept"],
+  ['Content-Type', 'text/html', 'extra'],
+  ['Accept'],
 ];
 fetch('https://example.com/', { headers });
         </pre>
@@ -180,31 +178,29 @@ fetch('https://example.com/', { headers });
       </td>
       <td>
         <pre>
-fetch('blob://example.com/', { mode: 'cors' })
+fetch('blob://example.com/', { mode: 'cors' });
         </pre>
       </td>
     </tr>
-      <td>URL includes credentials</td>
+      <td>URL includes credentials.</td>
       <td>
         <pre>
-fetch('https://user:password@example.com/')
+fetch('https://user:password@example.com/');
         </pre>
       </td>
     <tr>
-      <td>Invalid referrer URL</td>
+      <td>Invalid referrer URL.</td>
       <td>
         <pre>
-fetch('https://example.com/', {
-  referrer: './abc\u0000df'
-})
+fetch('https://example.com/', { referrer: './abc\u0000df' });
         </pre>
       </td>
     </tr>
     <tr>
-      <td>Invalid modes (<code>navigate</code> and <code>websocket</code>)</td>
+      <td>Invalid modes (<code>navigate</code> and <code>websocket</code>).</td>
       <td>
         <pre>
-fetch('https://example.com/', { mode: 'navigate' })
+fetch('https://example.com/', { mode: 'navigate' });
         </pre>
       </td>
     </tr>
@@ -216,45 +212,46 @@ fetch('https://example.com/', { mode: 'navigate' })
         <pre>
 fetch('https://example.com/', {
   cache: 'only-if-cached',
-  mode: 'no-cors'
-})
+  mode: 'no-cors',
+});
         </pre>
       </td>
     </tr>
     <tr>
       <td>
-        If the request method is an invalid name token or one of forbidden headers.
-        CONNECT, TRACE or TRACK
+        If the request method is an invalid name token or one of forbidden headers
+        (<code>'CONNECT'</code>, <code>'TRACE'</code> or <code>'TRACK'</code>).
       </td>
       <td>
         <pre>
-fetch('https://example.com/', { method: 'CONNECT' })
+fetch('https://example.com/', { method: 'CONNECT' });
         </pre>
       </td>
     </tr>
     <tr>
       <td>
-        If the request mode is "no-cors" and the request method is not a CORS-safe-listed method (GET, HEAD, or POST)
+        If the request mode is "no-cors" and the request method is not a CORS-safe-listed method
+        (<code>'GET'</code>, <code>'HEAD'</code>, or <code>'POST'</code>).
       </td>
       <td>
         <pre>
 fetch('https://example.com/', {
   method: 'CONNECT',
-  mode: 'no-cors'
-})
+  mode: 'no-cors',
+});
         </pre>
       </td>
     </tr>
     <tr>
       <td>
-        If the request method is GET or HEAD and the body is non-null or not undefined.
+        If the request method is <code>'GET'</code> or <code>'HEAD'</code> and the body is non-null or not undefined.
       </td>
       <td>
         <pre>
 fetch('https://example.com/', {
   method: 'GET',
-  body: new FormData()
-})
+  body: new FormData(),
+});
         </pre>
       </td>
     </tr>
@@ -278,19 +275,19 @@ handled properly, then create an Object URL of it and display it in an
 ```js
 const myImage = document.querySelector('img');
 
-let myRequest = new Request('flowers.jpg');
+const myRequest = new Request('flowers.jpg');
 
 fetch(myRequest)
-.then(function(response) {
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  }
-  return response.blob();
-})
-.then(function(response) {
-  let objectURL = URL.createObjectURL(response);
-  myImage.src = objectURL;
-});
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${ response.status }`);
+    }
+    
+    return response.blob();
+  })
+  .then((response) => {
+    myImage.src = URL.createObjectURL(response);
+  });
 ```
 
 In the [Fetch
@@ -301,28 +298,29 @@ Request init live](https://mdn.github.io/fetch-examples/fetch-with-init-then-req
 ```js
 const myImage = document.querySelector('img');
 
-let myHeaders = new Headers();
+const myHeaders = new Headers();
 myHeaders.append('Accept', 'image/jpeg');
 
 const myInit = {
   method: 'GET',
   headers: myHeaders,
   mode: 'cors',
-  cache: 'default'
+  cache: 'default',
 };
 
-let myRequest = new Request('flowers.jpg');
+const myRequest = new Request('flowers.jpg');
 
-fetch(myRequest, myInit).then(function(response) {
-  // ...
-});
+fetch(myRequest, myInit)
+  .then((response) => {
+    // ...
+  });
 ```
 
 You could also pass the `init` object in with the
 `Request` constructor to get the same effect:
 
 ```js
-let myRequest = new Request('flowers.jpg', myInit);
+const myRequest = new Request('flowers.jpg', myInit);
 ```
 
 You can also use an object literal as `headers` in
@@ -332,13 +330,13 @@ You can also use an object literal as `headers` in
 const myInit = {
   method: 'GET',
   headers: {
-    'Accept': 'image/jpeg'
+    'Accept': 'image/jpeg',
   },
   mode: 'cors',
-  cache: 'default'
+  cache: 'default',
 };
 
-let myRequest = new Request('flowers.jpg', myInit);
+const myRequest = new Request('flowers.jpg', myInit);
 ```
 
 ## Specifications

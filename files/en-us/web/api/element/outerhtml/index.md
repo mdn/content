@@ -141,6 +141,6 @@ console.log(anc.outerHTML); // output: "<a href='https://developer.mozilla.org?a
 
 ## See also
 
-- Serializing DOM trees into XML or HTML: {{domxref("XMLSerializer")}}
+- Serializing DOM trees into XML strings: {{domxref("XMLSerializer")}}
 - Parsing XML or HTML into DOM trees: {{domxref("DOMParser")}}
 - {{domxref("HTMLElement.outerText")}}

@@ -9,14 +9,14 @@ tags:
   - ServiceWorkerGlobalScope
 browser-compat: api.ServiceWorkerGlobalScope.onperiodicsync
 ---
-{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}
+{{DefaultAPISidebar("Periodic Background Sync")}}
 
 The **`onperiodicsync`** property of the {{domxref("ServiceWorkerGlobalScope")}} interface is an event handler fired at timed intervals, specified when registering a {{domxref('PeriodicSyncManager')}}.
 
 ## Syntax
 
 ```js
-ServiceWorkerGlobalScope.onperiodicsync = function(event) { ... };
+ServiceWorkerGlobalScope.onperiodicsync = function(event) { /* ... */ };
 ```
 
 ## Examples

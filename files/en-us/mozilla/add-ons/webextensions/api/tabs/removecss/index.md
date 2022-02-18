@@ -45,13 +45,13 @@ var removing = browser.tabs.removeCSS(
     - `file`{{optional_inline}}
       - : `string`. Path to a file containing the CSS to remove. This must exactly match a CSS file previously inserted into the page using {{WebExtAPIRef("tabs.insertCSS()")}}.
     - `frameId`{{optional_inline}}
-      - : `integer`. The frame from which to remove the CSS. Defaults to `0` (the top-level frame).
+      - : `integer`. The frame from which to remove the CSS. Defaults to `0` (the top-level frame).
     - `matchAboutBlank`{{optional_inline}}
       - : `boolean`. If `true`, the CSS will be removed from embedded "about:blank" and "about:srcdoc" frames if your extension has access to their parent document. Defaults to `false`.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when all the CSS has been removed. If any error occurs, the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when all the CSS has been removed. If any error occurs, the promise will be rejected with an error message.
 
 ## Examples
 

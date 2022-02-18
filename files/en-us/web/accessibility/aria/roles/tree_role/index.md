@@ -37,9 +37,7 @@ tags:
 | {{SpecName("ARIA","#tree","ARIA: tree role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#TreeView","tree view")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
-
 ## See Also
-
 
 <section id="Quick_links">
 

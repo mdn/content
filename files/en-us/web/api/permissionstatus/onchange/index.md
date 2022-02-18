@@ -19,8 +19,8 @@ The **`onchange`** event handler of the {{domxref("PermissionStatus")}} interfac
 ## Syntax
 
 ```js
-PermissionStatus.onchange = function() { ... }
-PermissionStatus.addEventListener('change', function() { ... })
+PermissionStatus.onchange = function() { /* ... */ }
+PermissionStatus.addEventListener('change', function() { /* ... */ })
 ```
 
 ## Example

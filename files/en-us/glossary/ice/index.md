@@ -12,10 +12,10 @@ tags:
 
 The framework algorithm looks for the lowest-latency path for connecting the two peers, trying these options in order:
 
-1.  Direct UDP connection (In this case—and only this case—a {{glossary("STUN")}} server is used to find the network-facing address of a peer)
-2.  Direct TCP connection, via the HTTP port
-3.  Direct TCP connection, via the HTTPS port
-4.  Indirect connection via a relay/{{glossary("TURN")}} server (if a direct connection fails, e.g., if one peer is behind a firewall that blocks NAT traversal)
+1. Direct UDP connection (In this case—and only this case—a {{glossary("STUN")}} server is used to find the network-facing address of a peer)
+2. Direct TCP connection, via the HTTP port
+3. Direct TCP connection, via the HTTPS port
+4. Indirect connection via a relay/{{glossary("TURN")}} server (if a direct connection fails, e.g., if one peer is behind a firewall that blocks NAT traversal)
 
 ## See also
 

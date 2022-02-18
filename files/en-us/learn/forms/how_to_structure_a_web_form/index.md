@@ -37,7 +37,7 @@ With the basics out of the way, we'll now look in more detail at the elements us
   </tbody>
 </table>
 
-The flexibility of forms makes them one of the most complex structures in [HTML](/en-US/docs/Learn/HTML); you can build any kind of basic form using dedicated form elements and attributes. Using correct structure when building an HTML form will help ensure that the form is both usable and [accessible](/en-US/docs/Learn/Accessibility).
+The flexibility of forms makes them one of the most complex structures in [HTML](/en-US/docs/Learn/HTML); you can build any kind of basic form using dedicated form elements and attributes. Using correct structure when building an HTML form will help ensure that the form is both usable and [accessible](/en-US/docs/Learn/Accessibility).
 
 ## The \<form> element
 
@@ -47,7 +47,7 @@ We already met this in the previous article.
 
 > **Warning:** It's strictly forbidden to nest a form inside another form. Nesting can cause forms to behave in an unpredictable manner, so it is a bad idea.
 
-It's always possible to use a form control outside of a {{HTMLElement("form")}} element. If you do so, by default that control has nothing to do with any form unless you associate it with a form using the [`form`](/en-US/docs/Web/HTML/Attributes/form) attribute. This was introduced to let you explicitly bind a control with a form even if it is not nested inside it.
+It's always possible to use a form control outside of a {{HTMLElement("form")}} element. If you do so, by default that control has nothing to do with any form unless you associate it with a form using its [`form`](/en-US/docs/Web/HTML/Element/input#attr-form) attribute. This was introduced to let you explicitly bind a control with a form even if it is not nested inside it.
 
 Let's move forward and cover the structural elements you'll find nested in a form.
 
@@ -55,27 +55,27 @@ Let's move forward and cover the structural elements you'll find nested in a for
 
 The {{HTMLElement("fieldset")}} element is a convenient way to create groups of widgets that share the same purpose, for styling and semantic purposes. You can label a {{HTMLElement("fieldset")}} by including a {{HTMLElement("legend")}} element just below the opening {{HTMLElement("fieldset")}} tag. The text content of the {{HTMLElement("legend")}} formally describes the purpose of the {{HTMLElement("fieldset")}} it is included inside.
 
-Many assistive technologies will use the {{HTMLElement("legend")}} element as if it is a part of the label of each control inside the corresponding {{HTMLElement("fieldset")}} element. For example, some screen readers such as [Jaws](https://www.freedomscientific.com/products/software/jaws/) and [NVDA](http://www.nvda-project.org/) will speak the legend's content before speaking the label of each control.
+Many assistive technologies will use the {{HTMLElement("legend")}} element as if it is a part of the label of each control inside the corresponding {{HTMLElement("fieldset")}} element. For example, some screen readers such as [Jaws](https://www.freedomscientific.com/products/software/jaws/) and [NVDA](https://www.nvaccess.org/) will speak the legend's content before speaking the label of each control.
 
 Here is a little example:
 
 ```html
 <form>
-  <fieldset>
-    <legend>Fruit juice size</legend>
-    <p>
-      <input type="radio" name="size" id="size_1" value="small">
-      <label for="size_1">Small</label>
-    </p>
-    <p>
-      <input type="radio" name="size" id="size_2" value="medium">
-      <label for="size_2">Medium</label>
-    </p>
-    <p>
-      <input type="radio" name="size" id="size_3" value="large">
-      <label for="size_3">Large</label>
-    </p>
-  </fieldset>
+  <fieldset>
+    <legend>Fruit juice size</legend>
+    <p>
+      <input type="radio" name="size" id="size_1" value="small">
+      <label for="size_1">Small</label>
+    </p>
+    <p>
+      <input type="radio" name="size" id="size_2" value="medium">
+      <label for="size_2">Medium</label>
+    </p>
+    <p>
+      <input type="radio" name="size" id="size_3" value="large">
+      <label for="size_3">Large</label>
+    </p>
+  </fieldset>
 </form>
 ```
 
@@ -83,9 +83,9 @@ Here is a little example:
 
 When reading the above form, a screen reader will speak "Fruit juice size small" for the first widget, "Fruit juice size medium" for the second, and "Fruit juice size large" for the third.
 
-The use case in this example is one of the most important. Each time you have a set of radio buttons, you should nest them inside a {{HTMLElement("fieldset")}} element. There are other use cases, and in general the {{HTMLElement("fieldset")}} element can also be used to section a form. Ideally, long forms should be spread across multiple pages, but if a form is getting long and must be on a single page, putting the different related sections inside different fieldsets improves usability.
+The use case in this example is one of the most important. Each time you have a set of radio buttons, you should nest them inside a {{HTMLElement("fieldset")}} element. There are other use cases, and in general the {{HTMLElement("fieldset")}} element can also be used to section a form. Ideally, long forms should be spread across multiple pages, but if a form is getting long and must be on a single page, putting the different related sections inside different fieldsets improves usability.
 
-Because of its influence over assistive technology, the {{HTMLElement("fieldset")}} element is one of the key elements for building accessible forms; however it is your responsibility not to abuse it. If possible, each time you build a form, try to [listen to how a screen reader](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders) interprets it. If it sounds odd, try to improve the form structure.
+Because of its influence over assistive technology, the {{HTMLElement("fieldset")}} element is one of the key elements for building accessible forms; however it is your responsibility not to abuse it. If possible, each time you build a form, try to [listen to how a screen reader](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders) interprets it. If it sounds odd, try to improve the form structure.
 
 ## The \<label> element
 
@@ -117,14 +117,14 @@ For example, clicking on the "I like cherry" label text in the example below wil
 
 ```html
 <form>
-  <p>
-    <input type="checkbox" id="taste_1" name="taste_cherry" value="cherry">
+  <p>
+    <input type="checkbox" id="taste_1" name="taste_cherry" value="cherry">
     <label for="taste_1">I like cherry</label>
-  </p>
-  <p>
-    <input type="checkbox" id="taste_2" name="taste_banana" value="banana">
-    <label for="taste_2">I like banana</label>
-  </p>
+  </p>
+  <p>
+    <input type="checkbox" id="taste_2" name="taste_banana" value="banana">
+    <label for="taste_2">I like banana</label>
+  </p>
 </form>
 ```
 
@@ -140,20 +140,20 @@ Let's consider this example:
 <p>Required fields are followed by <abbr title="required">*</abbr>.</p>
 
 <!-- So this: -->
-<div>
+<!--div>
   <label for="username">Name:</label>
   <input id="username" type="text" name="username">
   <label for="username"><abbr title="required" aria-label="required">*</abbr></label>
-</div>
+</div-->
 
 <!-- would be better done like this: -->
-<div>
+<!--div>
   <label for="username">
     <span>Name:</span>
     <input id="username" type="text" name="username">
     <abbr title="required" aria-label="required">*</abbr>
   </label>
-</div>
+</div-->
 
 <!-- But this is probably best: -->
 <div>
@@ -164,7 +164,7 @@ Let's consider this example:
 
 {{EmbedLiveSample("Multiple_labels", 120, 120)}}
 
-The paragraph at the top states a rule for required elements. The rule must be included _before_ it is used so that sighted users and users of assistive technologies such as screen readers can learn what it means before they encounter a required element. While this helps inform users what an asterisk means, it can not be relied upon. A screen reader will speak an asterisk as "_star_"  when encountered. When hovered by a sighted mouse user, "_required_" should appear,  which is achieved by use of the `title` attribute. Titles being read aloud depend on the screen reader's settings, so it is more reliable to also include the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) attribute, which is always read by screen readers.
+The paragraph at the top states a rule for required elements. The rule must be included _before_ it is used so that sighted users and users of assistive technologies such as screen readers can learn what it means before they encounter a required element. While this helps inform users what an asterisk means, it can not be relied upon. A screen reader will speak an asterisk as "_star_" when encountered. When hovered by a sighted mouse user, "_required_" should appear, which is achieved by use of the `title` attribute. Titles being read aloud depend on the screen reader's settings, so it is more reliable to also include the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) attribute, which is always read by screen readers.
 
 The above variants increase in effectiveness as you go through them:
 
@@ -184,20 +184,20 @@ As you can see in the examples, it's common practice to wrap a label and its wid
 
 In addition to the {{HTMLElement("fieldset")}} element, it's also common practice to use HTML titles (e.g. {{htmlelement("h1")}}, {{htmlelement("h2")}}) and sectioning (e.g. {{htmlelement("section")}}) to structure complex forms.
 
-Above all, it is up to you to find a comfortable coding style that results in accessible, usable forms. Each separate section of functionality should be contained in a separate {{htmlelement("section")}} element, with {{htmlelement("fieldset")}} elements to contain radio buttons.
+Above all, it is up to you to find a comfortable coding style that results in accessible, usable forms. Each separate section of functionality should be contained in a separate {{htmlelement("section")}} element, with {{htmlelement("fieldset")}} elements to contain radio buttons.
 
 ### Active learning: building a form structure
 
 Let's put these ideas into practice and build a slightly more involved form — a payment form. This form will contain a number of control types that you may not yet understand. Don't worry about this for now; you'll find out how they work in the next article ([Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls)). For now, read the descriptions carefully as you follow the below instructions, and start to form an appreciation of which wrapper elements we are using to structure the form, and why.
 
-1.  To start with, make a local copy of our [blank template file](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) and the [CSS for our payment form](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css) in a new directory on your computer.
-2.  Apply the CSS to the HTML by adding the following line inside the HTML {{htmlelement("head")}}:
+1. To start with, make a local copy of our [blank template file](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) and the [CSS for our payment form](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css) in a new directory on your computer.
+2. Apply the CSS to the HTML by adding the following line inside the HTML {{htmlelement("head")}}:
 
     ```html
     <link href="payment-form.css" rel="stylesheet">
     ```
 
-3.  Next, create your form by adding the outer {{htmlelement("form")}} element:
+3. Next, create your form by adding the outer {{htmlelement("form")}} element:
 
     ```html
     <form>
@@ -205,14 +205,14 @@ Let's put these ideas into practice and build a slightly more involved form — 
     </form>
     ```
 
-4.  Inside the `<form>` tags, add a heading and paragraph to inform users how required fields are marked:
+4. Inside the `<form>` tags, add a heading and paragraph to inform users how required fields are marked:
 
     ```html
     <h1>Payment form</h1>
     <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
     ```
 
-5.  Next we'll add a larger section of code into the form, below our previous entry. Here you'll see that we are wrapping the contact information fields inside a distinct {{htmlelement("section")}} element. Moreover, we have a set of three radio buttons, each of which we are putting inside its own list ({{htmlelement("li")}}) element. We also have two standard text {{htmlelement("input")}}s and their associated {{htmlelement("label")}} elements, each contained inside a {{htmlelement("p")}}, and a password input for entering a password. Add this code to your form:
+5. Next we'll add a larger section of code into the form, below our previous entry. Here you'll see that we are wrapping the contact information fields inside a distinct {{htmlelement("section")}} element. Moreover, we have a set of three radio buttons, each of which we are putting inside its own list ({{htmlelement("li")}}) element. We also have two standard text {{htmlelement("input")}}s and their associated {{htmlelement("label")}} elements, each contained inside a {{htmlelement("p")}}, and a password input for entering a password. Add this code to your form:
 
     ```html
     <section>
@@ -255,58 +255,62 @@ Let's put these ideas into practice and build a slightly more involved form — 
           <input type="email" id="mail" name="usermail">
         </p>
         <p>
-          <label for="pwd">
-            <span>Password: </span>
-            <strong><abbr title="required">*</abbr></strong>
-          </label>
-          <input type="password" id="pwd" name="password">
-        </p>
-    </section>
-    ```
-
-6.  The second `<section>` of our form is the payment information. We have three distinct controls along with their labels, each contained inside a `<p>`. The first is a drop-down menu ({{htmlelement("select")}}) for selecting credit card type. The second is an `<input>` element of type `tel`, for entering a credit card number; while we could have used the `number` type, we don't want the number's spinner UI. The last one is an `<input>` element of type `date`, for entering the expiration date of the card; this one will come up with a date picker widget in supporting browsers, and fall back to a normal text input in non-supporting browsers. These newer input types are reintroduced in [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types).
-
-    Enter the following below the previous section:
-
-    ```html
-    <section>
-        <h2>Payment information</h2>
-        <p>
-          <label for="card">
-            <span>Card type:</span>
-          </label>
-          <select id="card" name="usercard">
-            <option value="visa">Visa</option>
-            <option value="mc">Mastercard</option>
-            <option value="amex">American Express</option>
-          </select>
-        </p>
-        <p>
-          <label for="number">
-            <span>Card number:</span>
+          <label for="pwd">
+            <span>Password: </span>
             <strong><abbr title="required">*</abbr></strong>
           </label>
-          <input type="tel" id="number" name="cardnumber">
-        </p>
-        <p>
-          <label for="date">
-            <span>Expiration date:</span>
-            <strong><abbr title="required">*</abbr></strong>
-            <em>formatted as mm/dd/yyyy</em>
-          </label>
-          <input type="date" id="date" name="expiration">
+          <input type="password" id="pwd" name="password">
         </p>
     </section>
     ```
 
-7.  The last section we'll add is a lot simpler, containing only a {{htmlelement("button")}} of type `submit`, for submitting the form data. Add this to the bottom of your form now:
+6. The second `<section>` of our form is the payment information.
+   We have three distinct controls along with their labels, each contained inside a `<p>`.
+   The first is a drop-down menu ({{htmlelement("select")}}) for selecting credit card type.
+   The second is an `<input>` element of type `tel`, for entering a credit card number; while we could have used the `number` type, we don't want the number's spinner UI.
+   The last one is an `<input>` element of type `text`, for entering the expiration date of the card; this includes a  _placeholder_ attribute indicating the correct format, and a _pattern_ that tests that the entered date has the correct format.
+   These newer input types are reintroduced in [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types).
 
-    ```html
-    <section>
-        <p>
-          <button type="submit">Validate the payment</button>
-        </p>
-    </section>
+   Enter the following below the previous section:
+
+   ```html
+   <section>
+       <h2>Payment information</h2>
+       <p>
+         <label for="card">
+           <span>Card type:</span>
+         </label>
+         <select id="card" name="usercard">
+           <option value="visa">Visa</option>
+           <option value="mc">Mastercard</option>
+           <option value="amex">American Express</option>
+         </select>
+       </p>
+       <p>
+         <label for="number">
+           <span>Card number:</span>
+           <strong><abbr title="required">*</abbr></strong>
+         </label>
+         <input type="tel" id="number" name="cardnumber">
+       </p>
+       <p>
+         <label for="expiration">
+           <span>Expiration date:</span>
+           <strong><abbr title="required">*</abbr></strong>
+         </label>
+         <input type="text" id="expiration" required="true" placeholder="MM/YY" pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$">
+       </p>
+   </section>
+   ```
+
+7. The last section we'll add is a lot simpler, containing only a {{htmlelement("button")}} of type `submit`, for submitting the form data. Add this to the bottom of your form now:
+
+   ```html
+   <section>
+       <p>
+         <button type="submit">Validate the payment</button>
+       </p>
+   </section>
     ```
 
 You can see the finished form in action below (also find it on GitHub — see our payment-form.html [source](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.html) and [running live](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)):

@@ -42,7 +42,7 @@ If you are not sure which one to use, you should default to traditional or GitHu
 Aside from the specific system for presenting the live samples, as summarized above, there are style and content considerations to keep in mind when adding or updating samples on MDN.
 
 - When placing samples on a page, try to ensure that all of the features or options of the API or concept you're writing about are covered. At a minimum, at least the most-common options or properties should be included in examples.
-- Precede each example with an explanation of what  the example does and why it's interesting or useful.
+- Precede each example with an explanation of what the example does and why it's interesting or useful.
 - Follow each piece of code with an explanation of what it does.
 - When possible, break large examples into smaller pieces. For instance, the "live sample" system will automatically concatenate all your code together into one piece before running the example, so you can actually break your JavaScript, HTML, and/or CSS into smaller pieces with descriptive text after each piece if you choose to do so. This is a great way to help explain long or complicated stretches of code more clearly.
 - Go beyond just demonstrating how each piece of the API or technology works. Consider possible real-world use cases you might try to demonstrate.
@@ -75,9 +75,9 @@ You don't have to worry about placement of code blocks on the page — it grabs 
 
 The macro only has three parameters:
 
-1.  The URL of the document to embed — this is relative to the mdn organization, the top level directory of which is at `https://mdn.github.io/`. So this parameter needs to contain the part of the URL after that, e.g. `my-subdirectory/example.html`. You can omit the filename if it is called `index.html`.
-2.  The width of the `<iframe>`, which can be expressed as a percentage or in pixels.
-3.  The height of the `<iframe>`, which can be expressed as a percentage or in pixels.
+1. The URL of the document to embed — this is relative to the mdn organization, the top level directory of which is at `https://mdn.github.io/`. So this parameter needs to contain the part of the URL after that, e.g. `my-subdirectory/example.html`. You can omit the filename if it is called `index.html`.
+2. The width of the `<iframe>`, which can be expressed as a percentage or in pixels.
+3. The height of the `<iframe>`, which can be expressed as a percentage or in pixels.
 
 Let's look at an example. Say we wanted to embed the code at <https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/>. We could use the following call:
 
@@ -89,7 +89,7 @@ This looks like so when rendered:
 
 ### Tips for using GitHub live samples
 
-- You obviously need to get a suitable code sample onto the [mdn GitHub organization](https://github.com/mdn/) first. This needs to be done using Git. If you are not familiar with Git, check out our [How do I use GitHub Pages?](/en-US/docs/Learn/Common_questions/Using_Github_pages) article, and [Preparing to add the data](/en-US/docs/MDN/Structures/Compatibility_tables#preparing_to_add_the_data) for more advanced uses.
+- You obviously need to get a suitable code sample onto the [mdn GitHub organization](https://github.com/mdn/) first. This needs to be done using Git. If you are not familiar with Git, check out our [How do I use GitHub Pages?](/en-US/docs/Learn/Common_questions/Using_Github_pages) article, and [Preparing to add the data](/en-US/docs/MDN/Structures/Compatibility_tables#preparing_to_add_the_data) for more advanced uses.
 - Your code sample needs to be suitable to show what you are trying to demonstrate — it should contain one simple example that does one thing well, should have no offensive content in it, and should follow the MDN [Code sample guidelines](/en-US/docs/MDN/Guidelines/Code_guidelines).
 
 ## Interactive examples
@@ -98,7 +98,7 @@ The newest form of live example available on MDN is interactive live examples. T
 
 The interactive examples are intended to be used at the top of MDN reference pages — we are aiming to provide these to improve their value to beginners and other readers who want to just grab and play with an example quickly before seeing all the details of whatever they are looking up. There are a few important limitations to note about the interactive examples:
 
-- They are specialised for a particular technology — the UI for JavaScript is different from the UI for CSS, and they only illustrate one technology in isolation. They are not appropriate if you want to show, for example, how to combine a particular HTML/CSS/JS structure.
+- They are specialized for a particular technology — the UI for JavaScript is different from the UI for CSS, and they only illustrate one technology in isolation. They are not appropriate if you want to show, for example, how to combine a particular HTML/CSS/JS structure.
 - The interactive live examples are currently only set up to show CSS and JavaScript. For other technologies, you'll just have to wait.
 - The UI is more performance-intensive than other code examples; you shouldn't put more than one on each MDN article you apply them to.
 - They are not intended for large code examples — the UI supports a range of fixed sizes, which only really work for short (say, 10–15 line) examples.
@@ -109,6 +109,6 @@ If you find a page that doesn't have an associated interactive example, you are 
 
 ### Interactive example demo
 
-The [`EmbedInteractiveExample`](https://github.com/mdn/yari/blob/master/kumascript/macros/EmbedInteractiveExample.ejs) macro is used to embed finished examples into MDN pages. For example, the macro call \\{{EmbedInteractiveExample("pages/js/array-push.html")}} displays the following code example:
+The [`EmbedInteractiveExample`](https://github.com/mdn/yari/blob/master/kumascript/macros/EmbedInteractiveExample.ejs) macro is used to embed finished examples into MDN pages. For example, the macro call \\{{EmbedInteractiveExample("pages/js/array-push.html")}} displays the following code example:
 
 {{EmbedInteractiveExample("pages/js/array-push.html")}}Try adjusting the code to see what happens, and playing with the controls.

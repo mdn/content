@@ -38,9 +38,11 @@ uniquely identifies the data channel.
 
 ## Example
 
-    var dataChannel = pc.createDataChannel("SampleChannel");
+```js
+var dataChannel = pc.createDataChannel("SampleChannel");
 
-    console.log("Data channel stream ID: " + dataChannel.stream);
+console.log("Data channel stream ID: " + dataChannel.stream);
+```
 
 ## Specifications
 

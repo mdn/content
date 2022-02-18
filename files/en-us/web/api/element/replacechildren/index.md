@@ -74,7 +74,7 @@ look something like this:
       <option>Falafel sandwiches</option>
       <option>Ice cream</option>
       <option>Jelly</option>
-      <option>Carrot sticks and houmous</option>
+      <option>Carrot sticks and hummus</option>
       <option>Margherita pizza</option>
       <option>Pepperoni pizza</option>
       <option>Vegan veggie pizza</option>

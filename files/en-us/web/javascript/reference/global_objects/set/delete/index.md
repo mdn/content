@@ -26,12 +26,12 @@ delete(value)
 ### Parameters
 
 - `value`
-  - : The value to remove from `mySet`.
+  - : The value to remove from `Set`.
 
 ### Return value
 
 Returns `true` if `value` was already in
-`mySet`; otherwise `false`.
+`Set`; otherwise `false`.
 
 ## Examples
 

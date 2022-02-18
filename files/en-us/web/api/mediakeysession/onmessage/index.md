@@ -12,12 +12,10 @@ content decryption module.
 
 This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
-{{InheritanceDiagram(700, 60, 20)}}
-
 ## Syntax
 
 ```js
-MediaKeySession.onmessage = function(MediaKeyMessageEvent) { ... }
+MediaKeySession.onmessage = function(MediaKeyMessageEvent) { /* ... */ }
 ```
 
 ## Specifications

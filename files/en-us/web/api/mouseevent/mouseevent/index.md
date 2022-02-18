@@ -74,8 +74,8 @@ The **`MouseEvent()`** constructor creates a new
 
     - `"relatedTarget"`, optional {{domxref("EventTarget")}}, defaulting to `null`
       that is the element just left
-      (in case of a {{event("mouseenter")}} or {{event("mouseover")}})
-      or is entering (in case of a {{event("mouseout")}} or {{event("mouseleave")}}).
+      (in case of a {{domxref("Element/mouseenter_event", "mouseenter")}} or {{domxref("Element/mouseover_event", "mouseover")}})
+      or is entering (in case of a {{domxref("Element/mouseout_event", "mouseout")}} or {{domxref("Element/mouseleave_event", "mouseleave")}}).
     - `"region"`, optional {{domxref("DOMString")}}, defaulting to `null`,
       that is the ID of the hit region affected by the event.
       The absence of any affected hit region is represented with the `null` value.
@@ -106,36 +106,36 @@ Explorer 9 and higher with the following code:
     new MouseEvent('test');
     return false; // No need to polyfill
   } catch (e) {
-		// Need to polyfill - fall through
+    // Need to polyfill - fall through
   }
 
     // Polyfills DOM4 MouseEvent
-	var MouseEventPolyfill = function (eventType, params) {
-		params = params || { bubbles: false, cancelable: false };
-		var mouseEvent = document.createEvent('MouseEvent');
-		mouseEvent.initMouseEvent(eventType,
-			params.bubbles,
-			params.cancelable,
-			window,
-			0,
-			params.screenX || 0,
-			params.screenY || 0,
-			params.clientX || 0,
-			params.clientY || 0,
-			params.ctrlKey || false,
-			params.altKey || false,
-			params.shiftKey || false,
-			params.metaKey || false,
-			params.button || 0,
-			params.relatedTarget || null
-		);
+  var MouseEventPolyfill = function (eventType, params) {
+    params = params || { bubbles: false, cancelable: false };
+    var mouseEvent = document.createEvent('MouseEvent');
+    mouseEvent.initMouseEvent(eventType,
+      params.bubbles,
+      params.cancelable,
+      window,
+      0,
+      params.screenX || 0,
+      params.screenY || 0,
+      params.clientX || 0,
+      params.clientY || 0,
+      params.ctrlKey || false,
+      params.altKey || false,
+      params.shiftKey || false,
+      params.metaKey || false,
+      params.button || 0,
+      params.relatedTarget || null
+    );
 
-		return mouseEvent;
-	}
+    return mouseEvent;
+  }
 
-	MouseEventPolyfill.prototype = Event.prototype;
+  MouseEventPolyfill.prototype = Event.prototype;
 
-	window.MouseEvent = MouseEventPolyfill;
+  window.MouseEvent = MouseEventPolyfill;
 })(window);
 ```
 

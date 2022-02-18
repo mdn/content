@@ -65,15 +65,17 @@ When animated, a point's abscissa and ordinate values are interpolated independe
 
 ### Valid positions
 
-    center
-    left
-    center top
+```css example-good
+center
+left
+center top
 
-    right 8.5%
-    bottom 12vmin right -6px
+right 8.5%
+bottom 12vmin right -6px
 
-    10% 20%
-    8rem 14px
+10% 20%
+8rem 14px
+```
 
 ### Invalid positions
 
@@ -96,5 +98,5 @@ bottom top
 - [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units)
 - [CSS Values and Units introduction](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
 - {{cssxref("background-position")}}
-- {{cssxref("radial-gradient()")}}
-- {{cssxref("conic-gradient()", "conic-gradient()")}}
+- {{cssxref("gradient/radial-gradient()", "radial-gradient()")}}
+- {{cssxref("gradient/conic-gradient()", "conic-gradient()")}}

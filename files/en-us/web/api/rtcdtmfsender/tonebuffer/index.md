@@ -51,7 +51,7 @@ are permitted by the DTMF standard.
   - : These characters represent the digit keys on a telephone keypad.
 - The letters A-D
   - : These characters represent the "A" through "D" keys which are part of the DTMF
-    standard but not included on most telephones. These are *not* interpreted as
+    standard but not included on most telephones. These are *not* interpreted as
     digits. Lower-case "a"-"d" automatically gets converted to upper-case.
 - The pound/hash sign ("#") and the asterisk ("\*")
   - : These correspond to the similarly-labeled keys which are typically on the bottom row
@@ -72,7 +72,7 @@ request access to the VM system, then, after a pause, send a "1" to start playba
 voicemail messages, then after a pause, dial "5555" as a PIN number to open the
 messages.
 
-Settting the tone buffer to an empty string (`""`) cancels any pending DTMF
+Setting the tone buffer to an empty string (`""`) cancels any pending DTMF
 codes.
 
 ## Example

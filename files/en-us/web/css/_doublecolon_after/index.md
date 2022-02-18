@@ -136,6 +136,10 @@ span[data-descr]:focus::after {
 
 {{EmbedLiveSample('Tooltips', 450, 120)}}
 
+## Accessibility concerns
+
+Using an `::after` pseudo-element to add content is discouraged, as it is not reliably accessible to screen readers.
+
 ## Specifications
 
 {{Specifications}}

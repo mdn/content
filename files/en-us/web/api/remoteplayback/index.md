@@ -12,6 +12,8 @@ browser-compat: api.RemotePlayback
 
 The **`RemotePlayback`** interface of the {{domxref('Remote Playback API','','',' ')}} allows the page to detect availability of remote playback devices, then connect to and control playing on these devices.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 - {{domxref("RemotePlayback.state")}}{{ReadOnlyInline}}
@@ -41,7 +43,7 @@ The **`RemotePlayback`** interface of the {{domxref('Remote Playback API','','',
 - {{domxref("RemotePlayback.cancelWatchAvailability()")}}
   - : Cancels the request to monitor the availability of remote playback devices.
 - {{domxref("RemotePlayback.prompt()")}}
-  - : Prompts the user to select and give permission to connect to a remote playbabk device.
+  - : Prompts the user to select and give permission to connect to a remote playback device.
 
 ## Examples
 

@@ -12,6 +12,8 @@ browser-compat: api.HIDInputReportEvent
 
 The **`HIDInputReportEvent`** interface of the {{domxref('WebHID API')}} is passed to {{domxref("HIDDevice.oninputreport")}} when an input report is received from any associated HID device.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _This interface also inherits properties from {{domxref("Event")}}._

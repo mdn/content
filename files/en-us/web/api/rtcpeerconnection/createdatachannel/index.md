@@ -120,7 +120,7 @@ included; otherwise, the defaults listed above are established.
 
 This example shows how to create a data channel and set up handlers for the
 {{DOMxRef("RTCDataChannel/open_event", "open")}} and {{DOMxRef("RTCDataChannel/message_event", "message")}} events to send and receive messages on it
-(For brievity, the example assumes onnegotiationneeded is set up).
+(For brevity, the example assumes onnegotiationneeded is set up).
 
 ```js
 // Offerer side

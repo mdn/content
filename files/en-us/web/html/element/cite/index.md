@@ -84,7 +84,7 @@ The **`<cite>`** [HTML](/en-US/docs/Web/HTML) element is used to describe a refe
 
 ## Attributes
 
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes "HTML/Global attributes").
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 ## Usage notes
 

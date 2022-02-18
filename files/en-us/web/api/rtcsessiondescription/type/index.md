@@ -11,6 +11,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCSessionDescription.type
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The property **`RTCSessionDescription.type`** is a read-only
@@ -41,7 +42,7 @@ The allowed values are those of an enum of type `RTCSdpType`:
 ## Example
 
 ```js
-// The remote description has been set previously on pc, a RTCPeerconnection
+// The remote description has been set previously on pc, a RTCPeerConnection
 
 alert(pc.remoteDescription.type);
 ```
@@ -56,4 +57,4 @@ alert(pc.remoteDescription.type);
 
 ## See also
 
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)

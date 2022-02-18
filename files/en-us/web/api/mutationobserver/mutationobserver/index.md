@@ -41,9 +41,9 @@ const observer = new MutationObserver(callback)
 
     The `callback` function takes as input two parameters:
 
-    1.  An array of {{domxref("MutationRecord")}} objects, describing each change that
+    1. An array of {{domxref("MutationRecord")}} objects, describing each change that
         occurred; and
-    2.  the {{domxref("MutationObserver")}} which invoked the
+    2. the {{domxref("MutationObserver")}} which invoked the
         `callback`.
 
     See the {{anch("Example", "example")}} below for more details.

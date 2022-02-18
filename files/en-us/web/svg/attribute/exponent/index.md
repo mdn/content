@@ -12,10 +12,10 @@ The **`exponent`** attribute defines the exponent of the gamma function.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feFuncA")}}
-*   {{SVGElement("feFuncB")}}
-*   {{SVGElement("feFuncG")}}
-*   {{SVGElement("feFuncR")}}
+- {{SVGElement("feFuncA")}}
+- {{SVGElement("feFuncB")}}
+- {{SVGElement("feFuncG")}}
+- {{SVGElement("feFuncR")}}
 
 ## Example
 
@@ -79,8 +79,8 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `<number>`
-    *   : If the {{SVGAttr("type")}} attribute of the component element is set to `gamma`, this value specifies the exponent of the gamma function
+- `<number>`
+  - : If the {{SVGAttr("type")}} attribute of the component element is set to `gamma`, this value specifies the exponent of the gamma function
 
 ## Specifications
 

@@ -50,7 +50,6 @@ The modified array, filled with `value`.
 > To use `Array.prototype.fill()` when declaring an array, make sure to assign slots to the array.
 > [See example](#using_fill_to_populate_an_empty_array).
 
-
 ## Polyfill
 
 ```js
@@ -157,6 +156,6 @@ let tempGirls = Array(5).fill("girl",0);
 
 ## See also
 
-- A polyfill of `Array.prototype.fill` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.fill` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array")}}
 - {{jsxref("TypedArray.prototype.fill()")}}

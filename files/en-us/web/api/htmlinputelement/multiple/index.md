@@ -33,11 +33,6 @@ if (fileInput.multiple == true) {
 }
 ```
 
-## See also
-
-- [FileList](/en-US/docs/Web/API/FileList)
-- [Bug 523771](https://bugzilla.mozilla.org/show_bug.cgi?id=523771) - Support \<input type=file multiple>
-
 ## Specifications
 
 {{Specifications}}
@@ -45,3 +40,8 @@ if (fileInput.multiple == true) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [FileList](/en-US/docs/Web/API/FileList)
+- [Bug 523771](https://bugzilla.mozilla.org/show_bug.cgi?id=523771) - Support \<input type=file multiple>

@@ -117,5 +117,5 @@ if (!String.prototype.repeat) {
 
 ## See also
 
-- A polyfill of `String.prototype.repeat` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.repeat` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.concat()")}}

@@ -3,7 +3,6 @@ title: SpeechRecognition.grammars
 slug: Web/API/SpeechRecognition/grammars
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechRecognition
@@ -13,21 +12,14 @@ tags:
   - speech
 browser-compat: api.SpeechRecognition.grammars
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`grammars`** property of the
 {{domxref("SpeechRecognition")}} interface returns and sets a collection of
 {{domxref("SpeechGrammar")}} objects that represent the grammars that will be understood
 by the current `SpeechRecognition`.
 
-## Syntax
-
-```js
-var myGrammars = mySpeechRecognition.grammars;
-mySpeechRecognition.grammars = mySpeechGrammarList;
-```
-
-### Value
+## Value
 
 A {{domxref("SpeechGrammarList")}} containing the {{domxref("SpeechGrammar")}} objects
 that represent your grammar for your app.

@@ -7,7 +7,7 @@ tags:
   - HTML DOM
   - Property
   - Reference
-  - Wiindow
+  - Window
   - printing
 browser-compat: api.WindowEventHandlers.onbeforeprint
 ---
@@ -28,8 +28,8 @@ CSS at-rule, but it may be necessary to use these events in some cases.
 ## Syntax
 
 ```js
-window.addEventListener("beforeprint", function(event) { ... });
-window.onbeforeprint = function(event) { ... };
+window.addEventListener("beforeprint", function(event) { /* ... */ });
+window.onbeforeprint = function(event) { /* ... */ };
 ```
 
 ## Specifications

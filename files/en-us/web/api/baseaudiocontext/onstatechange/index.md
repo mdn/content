@@ -22,7 +22,7 @@ changes.
 ## Syntax
 
 ```js
-baseAudioContext.onstatechange = function() { ... };
+baseAudioContext.onstatechange = function() { /* ... */ };
 ```
 
 ## Example

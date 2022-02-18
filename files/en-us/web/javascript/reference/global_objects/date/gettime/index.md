@@ -11,15 +11,8 @@ browser-compat: javascript.builtins.Date.getTime
 ---
 {{JSRef}}
 
-The **`getTime()`** method returns the number of milliseconds\*
-since the [Unix Epoch](https://en.wikipedia.org/wiki/Unix_time).
-
-\* JavaScript uses _milliseconds_ as the unit of measurement, whereas Unix Time
-is in _seconds_.
-
-_getTime() always uses UTC for time representation. For example, a client browser in
-one timezone, getTime() will be the same as a client browser in any other
-timezone._
+The **`getTime()`** method returns the number of milliseconds
+since the [ECMAScript epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_ecmascript_epoch_and_timestamps).
 
 You can use this method to help assign a date and time to another {{jsxref("Date")}}
 object. This method is functionally equivalent to the {{jsxref("Date.valueof",

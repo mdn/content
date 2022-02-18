@@ -24,7 +24,7 @@ Returns the `Locale` information associated with the Locale data specified in [U
 
 ## Examples
 
-### Obtaining text info 
+### Obtaining text info
 
 Return the supported text directions for a given `Locale`.
 

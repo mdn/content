@@ -69,7 +69,7 @@ Each [drag event type](/en-US/docs/Web/API/DragEvent#event_types) has an associa
       <td>
         …a dragged item enters a valid drop target. (See
         <a
-          href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets"
+          href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#specifying_drop_targets"
           title="Specifying Drop Targets"
           >Specifying Drop Targets</a
         >.)
@@ -181,7 +181,7 @@ Making an element _draggable_ requires adding the {{htmlattrxref("draggable")}} 
 
 For more information, see:
 
-- [Draggable attribute reference](/en-US/docs/Web/HTML/Global_attributes/draggable "draggable global attribute")
+- [Draggable attribute reference](/en-US/docs/Web/HTML/Global_attributes/draggable)
 - [Drag operations guide](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute)
 
 ### Define the drag's data
@@ -227,9 +227,9 @@ The {{domxref("DataTransfer.dropEffect","dropEffect")}} property is used to cont
 
 Three effects may be defined:
 
-1.  **`copy`** indicates that the dragged data will be copied from its present location to the drop location.
-2.  **`move`** indicates that the dragged data will be moved from its present location to the drop location.
-3.  **`link`** indicates that some form of relationship or connection will be created between the source and drop locations.
+1. **`copy`** indicates that the dragged data will be copied from its present location to the drop location.
+2. **`move`** indicates that the dragged data will be moved from its present location to the drop location.
+3. **`link`** indicates that some form of relationship or connection will be created between the source and drop locations.
 
 During the drag operation, drag effects may be modified to indicate that certain effects are allowed at certain locations.
 
@@ -243,7 +243,7 @@ function dragstart_handler(ev) {
 
 For more details, see:
 
-- [Drag Effects](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drageffects "Drag Effects")
+- [Drag Effects](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drag_effects "Drag Effects")
 
 ### Define a _drop zone_
 

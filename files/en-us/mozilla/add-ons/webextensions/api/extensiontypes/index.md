@@ -27,7 +27,7 @@ Some common types used in other WebExtension APIs.
 - {{WebExtAPIRef("extensionTypes.RunAt")}}
   - : The soonest that the JavaScript or CSS will be injected into the tab.
 - `extensionTypes.CSSOrigin`
-  - : Indicates whether a CSS stylesheet injected by [`tabs.insertCSS`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) should be treated as an "author" or "user" stylesheet.
+  - : Indicates whether a CSS stylesheet injected by [`tabs.insertCSS`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) should be treated as an "author" or "user" stylesheet.
 
 ## Browser compatibility
 

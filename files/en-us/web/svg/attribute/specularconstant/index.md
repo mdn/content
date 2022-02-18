@@ -13,7 +13,7 @@ The **`specularConstant`** attribute controls the ratio of reflection of the spe
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feSpecularLighting")}}
 
 ## Example
 
@@ -97,4 +97,4 @@ html, body, svg {
 
 ## See also
 
-*   [Description of Phong reflection model on Wikipedia](https://en.wikipedia.org/wiki/Phong_reflection_model)
+- [Description of Phong reflection model on Wikipedia](https://en.wikipedia.org/wiki/Phong_reflection_model)

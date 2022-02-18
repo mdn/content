@@ -13,7 +13,7 @@ browser-compat: javascript.operators.logical_or
 
 The logical OR (`||`) operator (logical disjunction) for a set of operands
 is true if and only if one or more of its operands is true. It is typically used with
-{{jsxref("Boolean")}} (logical) values. When it is, it returns a Boolean value. However,
+boolean (logical) values. When it is, it returns a Boolean value. However,
 the `||` operator actually returns the value of one of the specified
 operands, so if this operator is used with non-Boolean values, it will return a
 non-Boolean value.
@@ -48,7 +48,7 @@ values, it can still be considered a boolean operator since its return value can
 be converted to a [boolean primitive](/en-US/docs/Web/JavaScript/Data_structures#boolean_type).
 To explicitly convert its return value (or any expression in general) to the
 corresponding boolean value, use a double {{JSxRef("Operators/Logical_NOT", "NOT
-  operator")}} or the {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}}
+operator", "", 1)}} or the {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}}
 constructor.
 
 ### Short-circuit evaluation
@@ -82,7 +82,7 @@ precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence))
 
 ```js
 true || false && false      // returns true, because && is executed first
-(true || false) && false    // returns false, because operator precedence cannot apply
+(true || false) && false    // returns false, because grouping has the highest precedence
 ```
 
 ## Examples

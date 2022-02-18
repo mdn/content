@@ -63,12 +63,11 @@ These legacy pseudo-classes can be used to provide backwards compatibility.
 
 The difference between the two is that `:is()` counts towards the specificity of the overall selector (it takes the specificity of its most specific argument), whereas [`:where()`](/en-US/docs/Web/CSS/:where) has a specificity value of 0. This is demonstrated by the [example on the `:where()` reference page](/en-US/docs/Web/CSS/:where#examples).
 
-
 ### Forgiving Selector Parsing
 
 The specification defines `:is()` and `:where()` as accepting a [forgiving selector list](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list).
 
-In CSS when using a selector list, if any of the selectors are invalid then the whole list is deemed invalid. When using `:is()` or `:where() `instead of the whole list of selectors being deemed invalid if one fails to parse, the incorrect or unsupported selector will be ignored and the others used.
+In CSS when using a selector list, if any of the selectors are invalid then the whole list is deemed invalid. When using `:is()` or `:where()` instead of the whole list of selectors being deemed invalid if one fails to parse, the incorrect or unsupported selector will be ignored and the others used.
 
 ```css
 :is(:valid, :unsupported) {
@@ -243,6 +242,7 @@ h1 {
 ```
 
 ### :is() does not select pseudo-elements
+
 The `:is()` pseudo-class does not match pseudo-elements. So rather than this:
 
 ```css example-bad
@@ -253,7 +253,7 @@ some-element:is(::before, ::after) {
 
 instead do:
 
-```css
+```css example-good
 some-element::before,
 some-element::after {
   display: block;

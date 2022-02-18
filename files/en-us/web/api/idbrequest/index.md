@@ -13,11 +13,11 @@ browser-compat: api.IDBRequest
 ---
 {{APIRef("IndexedDB")}}
 
-The **`IDBRequest`** interface of the IndexedDB API provides access to results of asynchronous requests to databases and database objects using event handler attributes. Each reading and writing operation on a database is done using a request.
+The **`IDBRequest`** interface of the IndexedDB API provides access to results of asynchronous requests to databases and database objects using event handler attributes. Each reading and writing operation on a database is done using a request.
 
 The request object does not initially contain any information about the result of the operation, but once information becomes available, an event is fired on the request, and the information becomes available through the properties of the `IDBRequest` instance.
 
-All asynchronous operations immediately return an {{domxref("IDBRequest")}} instance. Each request has a `readyState` that is set to the `'pending'` state; this changes to `'done'` when the request is completed or fails. When the state is set to `done`, every request returns a `result` and an `error`, and an event is fired on the request. When the state is still `pending`, any attempt to access the `result` or `error` raises an `InvalidStateError` exception.
+All asynchronous operations immediately return an {{domxref("IDBRequest")}} instance. Each request has a `readyState` that is set to the `'pending'` state; this changes to `'done'` when the request is completed or fails. When the state is set to `done`, every request returns a `result` and an `error`, and an event is fired on the request. When the state is still `pending`, any attempt to access the `result` or `error` raises an `InvalidStateError` exception.
 
 In plain words, all asynchronous methods return a request object. If the request has been completed successfully, the result is made available through the `result` property and an event indicating success is fired at the request ({{domxref("IDBRequest.onsuccess")}}). If an error occurs while performing the operation, the exception is made available through the `result` property and an error event is fired ({{domxref("IDBRequest.onerror")}}).
 
@@ -38,7 +38,7 @@ _Also inherits properties from {{domxref("EventTarget")}}._
 - {{domxref("IDBRequest.source")}} {{readonlyInline}}
   - : The source of the request, such as an {{domxref("IDBIndex")}} or an {{domxref("IDBObjectStore")}}. If no source exists (such as when calling {{domxref("IDBFactory.open")}}), it returns null.
 - {{domxref("IDBRequest.readyState")}} {{readonlyInline}}
-  - : The state of the request. Every request starts in the `pending` state. The state changes to `done` when the request completes successfully or when an error occurs.
+  - : The state of the request. Every request starts in the `pending` state. The state changes to `done` when the request completes successfully or when an error occurs.
 - {{domxref("IDBRequest.transaction")}} {{readonlyInline}}
   - : The transaction for the request. This property can be null for certain requests, for example those returned from {{domxref("IDBFactory.open")}} unless an upgrade is needed. (You're just connecting to a database, so there is no transaction to return).
 
@@ -59,7 +59,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 ## Example
 
-In the following code snippet, we open a database asynchronously and make a request; `onerror` and `onsuccess` functions are included to handle the success and error cases. For a full working example, see our [To-do Notifications](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) app ([view example live](https://chrisdavidmills.github.io/to-do-notifications/).)
+In the following code snippet, we open a database asynchronously and make a request; `onerror` and `onsuccess` functions are included to handle the success and error cases. For a full working example, see our [To-do Notifications](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) app ([view example live](https://chrisdavidmills.github.io/to-do-notifications/).)
 
 ```js
 var db;
@@ -74,7 +74,7 @@ DBOpenRequest.onerror = function(event) {
 };
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+  note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database.
   db = DBOpenRequest.result;

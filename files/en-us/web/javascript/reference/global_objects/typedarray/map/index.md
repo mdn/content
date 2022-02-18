@@ -25,19 +25,19 @@ array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Type
 
 ```js
 // Arrow function
-map((currentValue) => { ... } )
-map((currentValue, index) => { ... } )
-map((currentValue, index, array) => { ... } )
+map((currentValue) => { /* ... */ } )
+map((currentValue, index) => { /* ... */ } )
+map((currentValue, index, array) => { /* ... */ } )
 
 // Callback function
 map(callbackFn)
 map(callbackFn, thisArg)
 
 // Inline callback function
-map(function(currentValue) { ... })
-map(function(currentValue, index) { ... })
-map(function(currentValue, index, array){ ... })
-map(function(currentValue, index, array) { ... }, thisArg)
+map(function(currentValue) { /* ... */ })
+map(function(currentValue, index) { /* ... */ })
+map(function(currentValue, index, array){ /* ... */ })
+map(function(currentValue, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
@@ -130,6 +130,6 @@ const doubles = numbers.map(function(num) {
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.map` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.map` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray.prototype.filter()")}}
 - {{jsxref("Array.prototype.map()")}}

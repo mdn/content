@@ -17,7 +17,7 @@ The opacity value used for the gradient calculation is the product of the value 
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("stop")}}
+- {{SVGElement("stop")}}
 
 ## Usage notes
 
@@ -44,8 +44,8 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `<opacity-value>`
-    *   : This value is either a {{cssxref("number")}} between `0` and `1` or a {{cssxref("percentage")}} value specifying the opacity of the color gradient stop.
+- `<opacity-value>`
+  - : This value is either a {{cssxref("number")}} between `0` and `1` or a {{cssxref("percentage")}} value specifying the opacity of the color gradient stop.
 
 ## Specifications
 
@@ -83,4 +83,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-*   {{SVGAttr("stop-color")}}
+- {{SVGAttr("stop-color")}}

@@ -14,7 +14,7 @@ tags:
 ---
 {{DefaultAPISidebar("WebVR API")}}{{Deprecated_Header}}
 
-> **Note:** WebVR API is replaced by [WebXR API](/en-US/docs/Web/API/WebXR_Device_API). WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.
+> **Note:** WebVR API is replaced by [WebXR API](/en-US/docs/Web/API/WebXR_Device_API). WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.
 
 WebVR provides support for exposing virtual reality devices — for example, head-mounted displays like the Oculus Rift or HTC Vive — to web apps, enabling developers to translate position and movement information from the display into movement around a 3D scene. This has numerous, interesting applications, from virtual product tours and interactive training apps to immersive first-person games.
 
@@ -32,10 +32,10 @@ Any VR devices attached to your computer will be returned by the {{DOMxRef("Navi
 
 A typical (simple) WebVR app would work like so:
 
-1.  {{DOMxRef("Navigator.getVRDisplays()")}} is used to get a reference to your VR display.
-2.  {{DOMxRef("VRDisplay.requestPresent()")}} is used to start presenting to the VR display.
-3.  WebVR's dedicated {{DOMxRef("VRDisplay.requestAnimationFrame()")}} method is used to run the app's rendering loop at the correct refresh rate for the display.
-4.  Inside the rendering loop, you grab the data required to display the current frame ({{DOMxRef("VRDisplay.getFrameData()")}}), draw the displayed scene twice — once for the view in each eye, then submit the rendered view to the display to show to the user ({{DOMxRef("VRDisplay.submitFrame()")}}).
+1. {{DOMxRef("Navigator.getVRDisplays()")}} is used to get a reference to your VR display.
+2. {{DOMxRef("VRDisplay.requestPresent()")}} is used to start presenting to the VR display.
+3. WebVR's dedicated {{DOMxRef("VRDisplay.requestAnimationFrame()")}} method is used to run the app's rendering loop at the correct refresh rate for the display.
+4. Inside the rendering loop, you grab the data required to display the current frame ({{DOMxRef("VRDisplay.getFrameData()")}}), draw the displayed scene twice — once for the view in each eye, then submit the rendered view to the display to show to the user ({{DOMxRef("VRDisplay.submitFrame()")}}).
 
 In addition, WebVR 1.1 adds a number of events on the {{DOMxRef("Window")}} object to allow JavaScript to respond to changes to the status of the display.
 
@@ -45,13 +45,13 @@ In addition, WebVR 1.1 adds a number of events on the {{DOMxRef("Window")}} obje
 
 The WebVR API, which was never ratified as a web standard, has been deprecated in favor of the [WebXR API](/en-US/docs/Web/API/WebXR_Device_API), which is well on track toward finishing the standardization process. As such, you should try to update existing code to use the newer API instead. Generally the transition should be fairly painless.
 
-Additionally, on some devices and/or browsers, WebVR requires that the page be loaded using a secure context, over an HTTPS connection. If the page is not fully secure, the WebVR methods and functions will not be available. You can easily test for this by checking to see if the {{domxref("Navigator")}} method {{domxref("Navigator.getVRDisplays", "getVRDisplays()")}} is `NULL`:
+Additionally, on some devices and/or browsers, WebVR requires that the page be loaded using a secure context, over an HTTPS connection. If the page is not fully secure, the WebVR methods and functions will not be available. You can easily test for this by checking to see if the  {{domxref("Navigator")}} method {{domxref("Navigator.getVRDisplays", "getVRDisplays()")}} is `NULL`:
 
 ```js
 if (!navigator.getVRDisplays) {
-  console.error("WebVR is not available");
+  console.error("WebVR is not available");
 } else {
-  /* Use WebVR */
+  /* Use WebVR */
 }
 ```
 
@@ -121,9 +121,9 @@ You can find a number of examples at these locations:
 
 - [webvr-tests](https://github.com/mdn/webvr-tests) — very simple examples to accompany the MDN WebVR documentation.
 - [Carmel starter kit](https://github.com/facebook/Carmel-Starter-Kit) — nice simple, well-commented examples that go along with Carmel, Facebook's WebVR browser.
-- [WebVR.info samples](https://webvr.info/samples/) — slightly more in-depth examples plus source code
-- [WebVR.rocks Firefox demos](https://webvr.rocks/firefox#demos) — showcase examples
-- [A-Frame homepage](https://aframe.io/) — examples showing A-Frame usage
+- [WebVR.info samples](https://webvr.info/samples/) — slightly more in-depth examples plus source code
+- [WebVR.rocks Firefox demos](https://webvr.rocks/firefox#demos) — showcase examples
+- [A-Frame homepage](https://aframe.io/) — examples showing A-Frame usage
 
 ## Specifications
 
@@ -144,5 +144,5 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 - [webvr.info](https://webvr.info) — Up-to-date information about WebVR, browser setup, and community.
 - [threejs-vr-boilerplate](https://github.com/MozVR/vr-web-examples/tree/master/threejs-vr-boilerplate) — A useful starter template for writing WebVR apps into.
 - [Web VR polyfill](https://github.com/googlevr/webvr-polyfill/) — JavaScript implementation of WebVR.
-- [Supermedium](https://www.supermedium.com) — A pure WebVR browser to easily access the best WebVR content.
+- [Supermedium](https://www.supermedium.com) — A pure WebVR browser to easily access the best WebVR content.
 - [WebVR Directory](https://webvr.directory/) — List of quality WebVR sites.

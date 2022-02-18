@@ -18,6 +18,8 @@ The parameter passed into the {{domxref("ServiceWorkerGlobalScope.onnotification
 
 This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("NotificationEvent.NotificationEvent","NotificationEvent()")}}

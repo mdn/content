@@ -76,7 +76,7 @@ To see local dependencies really shine, all you need to do is try to download an
 
 For a package manager to work, it needs to know where to install packages from, and this comes in the form of a package registry. The registry is a central place that a package is published to and thus can be installed from. npm, as well as being a package manager, is also the name of the most commonly-used package registry for JavaScript packages. The npm registry exists at [npmjs.com](https://www.npmjs.com/).
 
-npm is not the only option. You could manage your own package registry — products like [Microsoft Azure](https://azure.microsoft.com/en-us/) allow you to create proxies to the npm registry (so you can override or lock certain packages), [GitHub also offers a package registry service](https://github.com/features/packages), and there will be likely more options appearing as time goes on.
+npm is not the only option. You could manage your own package registry — products like [Microsoft Azure](https://azure.microsoft.com/) allow you to create proxies to the npm registry (so you can override or lock certain packages), [GitHub also offers a package registry service](https://github.com/features/packages), and there will be likely more options appearing as time goes on.
 
 What is important is that you ensure you've chosen the best registry for you. Many projects will use npm, and we’ll stick to this in our examples throughout the rest of the module.
 
@@ -300,7 +300,7 @@ This makes a lot of sense as we want to reduce file size and thus make our app l
 
 Although the list grows by the month, there are three main offerings for tools that generate bundles from our source code: Webpack, [Rollup](https://rollupjs.org/guide/en/), and Parcel. There will be more available than this, but these are popular ones:
 
-- The RollUp tool offers tree shaking and code splitting as it’s core features.
+- The RollUp tool offers tree shaking and code splitting as its core features.
 - Webpack requires some configuration (though “some” might be understating the complexity of some developers’ Webpack configurations).
 - In the case of Parcel (prior to Parcel version 2), there's a special flag required — `--experimental-scope-hoisting` — which will tree shake while building.
 
@@ -429,7 +429,7 @@ If you followed the tutorial from earlier, you should have a `package.json` file
 
 ```json
 "scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1",
+  "test": "echo \"Error: no test specified\" && exit 1",
 },
 ```
 
@@ -437,7 +437,7 @@ Update it so that it looks like this, and save the file:
 
 ```json
 "scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1",
+  "test": "echo \"Error: no test specified\" && exit 1",
   "dev": "parcel serve index.html"
 },
 ```

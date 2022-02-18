@@ -9,12 +9,12 @@ browser-compat: svg.attributes.style.class
 ---
 « [SVG Attribute reference home](/en-US/docs/Web/SVG/Attribute)
 
-Assigns a class name or set of class names to an element. You may assign the same class name or names to any number of elements, however, multiple class names must be separated by whitespace characters.
+Assigns a class name or set of class names to an element. You may assign the same class name or names to any number of elements, however, multiple class names must be separated by whitespace characters.
 
-An element's class name serves two key roles:
+An element's class name serves two key roles:
 
-*   As a style sheet selector, for when an author assigns style information to a set of elements.
-*   For general use by the browser.
+- As a style sheet selector, for when an author assigns style information to a set of elements.
+- For general use by the browser.
 
 You can use this class to style SVG content using CSS.
 
@@ -53,28 +53,28 @@ You can use this class to style SVG content using CSS.
 
 ```html
 <html>
-    <body>
-        <svg width="120" height="220"
-            viewPort="0 0 120 120" version="1.1"
-            xmlns="http://www.w3.org/2000/svg">
+    <body>
+        <svg width="120" height="220"
+            viewPort="0 0 120 120" version="1.1"
+            xmlns="http://www.w3.org/2000/svg">
 
-            <style type="text/css" >
-                <![CDATA[
-                    rect.rectClass {
-                        stroke: #000066;
-                        fill:   #00cc00;
-                    }
-                    circle.circleClass {
-                        stroke: #006600;
-                        fill:   #cc0000;
-                    }
-                ]]>
-            </style>
+            <style type="text/css" >
+                <![CDATA[
+                    rect.rectClass {
+                        stroke: #000066;
+                        fill:   #00cc00;
+                    }
+                    circle.circleClass {
+                        stroke: #006600;
+                        fill:   #cc0000;
+                    }
+                ]]>
+            </style>
 
-            <rect class="rectClass" x="10" y="10" width="100" height="100"/>
-            <circle  class="circleClass"   cx="40" cy="50" r="26"/>
-        </svg>
-    </body>
+            <rect class="rectClass" x="10" y="10" width="100" height="100"/>
+            <circle class="circleClass" cx="40" cy="50" r="26"/>
+        </svg>
+    </body>
 </html>
 ```
 
@@ -82,57 +82,57 @@ You can use this class to style SVG content using CSS.
 
 The following elements can use the `class` attribute:
 
-*   {{ SVGElement("a") }}
-*   {{ SVGElement("altGlyph") }}
-*   {{ SVGElement("circle") }}
-*   {{ SVGElement("clipPath") }}
-*   {{ SVGElement("defs") }}
-*   {{ SVGElement("desc") }}
-*   {{ SVGElement("ellipse") }}
-*   {{ SVGElement("feBlend") }}
-*   {{ SVGElement("feColorMatrix") }}
-*   {{ SVGElement("feComponentTransfer") }}
-*   {{ SVGElement("feComposite") }}
-*   {{ SVGElement("feConvolveMatrix") }}
-*   {{ SVGElement("feDiffuseLighting") }}
-*   {{ SVGElement("feDisplacementMap") }}
-*   {{ SVGElement("feFlood") }}
-*   {{ SVGElement("feGaussianBlur") }}
-*   {{ SVGElement("feImage") }}
-*   {{ SVGElement("feMerge") }}
-*   {{ SVGElement("feMorphology") }}
-*   {{ SVGElement("feOffset") }}
-*   {{ SVGElement("feSpecularLighting") }}
-*   {{ SVGElement("feTile") }}
-*   {{ SVGElement("feTurbulence") }}
-*   {{ SVGElement("filter") }}
-*   {{ SVGElement("font") }}
-*   {{ SVGElement("foreignObject") }}
-*   {{ SVGElement("g") }}
-*   {{ SVGElement("glyph") }}
-*   {{ SVGElement("glyphRef") }}
-*   {{ SVGElement("image") }}
-*   {{ SVGElement("line") }}
-*   {{ SVGElement("linearGradient") }}
-*   {{ SVGElement("marker") }}
-*   {{ SVGElement("mask") }}
-*   {{ SVGElement("missing-glyph") }}
-*   {{ SVGElement("path") }}
-*   {{ SVGElement("pattern") }}
-*   {{ SVGElement("polygon") }}
-*   {{ SVGElement("polyline") }}
-*   {{ SVGElement("radialGradient") }}
-*   {{ SVGElement("rect") }}
-*   {{ SVGElement("stop") }}
-*   {{ SVGElement("svg") }}
-*   {{ SVGElement("switch") }}
-*   {{ SVGElement("symbol") }}
-*   {{ SVGElement("text") }}
-*   {{ SVGElement("textPath") }}
-*   {{ SVGElement("title") }}
-*   {{ SVGElement("tref") }}
-*   {{ SVGElement("tspan") }}
-*   {{ SVGElement("use") }}
+- {{ SVGElement("a") }}
+- {{ SVGElement("altGlyph") }}
+- {{ SVGElement("circle") }}
+- {{ SVGElement("clipPath") }}
+- {{ SVGElement("defs") }}
+- {{ SVGElement("desc") }}
+- {{ SVGElement("ellipse") }}
+- {{ SVGElement("feBlend") }}
+- {{ SVGElement("feColorMatrix") }}
+- {{ SVGElement("feComponentTransfer") }}
+- {{ SVGElement("feComposite") }}
+- {{ SVGElement("feConvolveMatrix") }}
+- {{ SVGElement("feDiffuseLighting") }}
+- {{ SVGElement("feDisplacementMap") }}
+- {{ SVGElement("feFlood") }}
+- {{ SVGElement("feGaussianBlur") }}
+- {{ SVGElement("feImage") }}
+- {{ SVGElement("feMerge") }}
+- {{ SVGElement("feMorphology") }}
+- {{ SVGElement("feOffset") }}
+- {{ SVGElement("feSpecularLighting") }}
+- {{ SVGElement("feTile") }}
+- {{ SVGElement("feTurbulence") }}
+- {{ SVGElement("filter") }}
+- {{ SVGElement("font") }}
+- {{ SVGElement("foreignObject") }}
+- {{ SVGElement("g") }}
+- {{ SVGElement("glyph") }}
+- {{ SVGElement("glyphRef") }}
+- {{ SVGElement("image") }}
+- {{ SVGElement("line") }}
+- {{ SVGElement("linearGradient") }}
+- {{ SVGElement("marker") }}
+- {{ SVGElement("mask") }}
+- {{ SVGElement("missing-glyph") }}
+- {{ SVGElement("path") }}
+- {{ SVGElement("pattern") }}
+- {{ SVGElement("polygon") }}
+- {{ SVGElement("polyline") }}
+- {{ SVGElement("radialGradient") }}
+- {{ SVGElement("rect") }}
+- {{ SVGElement("stop") }}
+- {{ SVGElement("svg") }}
+- {{ SVGElement("switch") }}
+- {{ SVGElement("symbol") }}
+- {{ SVGElement("text") }}
+- {{ SVGElement("textPath") }}
+- {{ SVGElement("title") }}
+- {{ SVGElement("tref") }}
+- {{ SVGElement("tspan") }}
+- {{ SVGElement("use") }}
 
 ## Browser compatibility
 

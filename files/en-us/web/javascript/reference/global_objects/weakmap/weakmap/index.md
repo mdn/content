@@ -11,13 +11,8 @@ browser-compat: javascript.builtins.WeakMap.WeakMap
 ---
 {{JSRef}}
 
-The **`WeakMap()` constructor** creates `WeakMap`
-objects which are a collections of key/value pairs in which the keys are weakly
-referenced. The keys must be objects and the values can be arbitrary values.
-
-You can learn more about `WeakMap`s in the section [WeakMap
-object](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object) in [Keyed
-collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections).
+The **`WeakMap()` constructor** creates a [`WeakMap`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap)
+object, optionally based on a provided [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) or other iterable object.
 
 ## Syntax
 
@@ -29,9 +24,7 @@ new WeakMap(iterable)
 ### Parameters
 
 - `iterable`
-  - : Iterable is an Array or other iterable object whose elements are key-value pairs
-    (2-element Arrays). Each key-value pair will be added to the new WeakMap. null is
-    treated as undefined.
+  - : An [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) or other iterable object that implements an [@@iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator) method that returns an iterator object that produces a two-element array-like object whose first element is a value that will be used as a `WeakMap` key and whose second element is the value to associate with that key. Each key-value pair will be added to the new `WeakMap`. null is treated as undefined.
 
 ## Examples
 
@@ -77,7 +70,7 @@ wm1.has(o1); // false
 
 ## See also
 
-- A polyfill of `WeakMap` is available in [`core-js`](https://github.com/zloirock/core-js#weakmap)
+- [Polyfill of `WeakMap` in `core-js`](https://github.com/zloirock/core-js#weakmap)
 - [`WeakMap`
   in the JavaScript guide](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object)
 - [Hiding Implementation Details with

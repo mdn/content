@@ -22,14 +22,14 @@ The **`<font-face-uri>`** [SVG](/en-US/docs/Web/SVG) element points to a remote 
 
 ### Global attributes
 
-*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-*   [XLink attributes](/en-US/docs/Web/SVG/Attribute#xlink_attributes)
+- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+- [XLink attributes](/en-US/docs/Web/SVG/Attribute#xlink_attributes)
 
 ### Specific attributes
 
-*   {{SVGAttr("xlink:href")}}
+- {{SVGAttr("xlink:href")}}
 
-## DOM Interface
+## DOM Interface
 
 This element implements the {{domxref("SVGFontFaceUriElement")}} interface.
 
@@ -43,5 +43,5 @@ This element implements the {{domxref("SVGFontFaceUriElement")}} interface.
 
 ## See also
 
-*   {{SVGElement("font-face-src")}}
-*   [SVG tutorial: SVG fonts](/en-US/docs/Web/SVG/Tutorial/SVG_fonts)
+- {{SVGElement("font-face-src")}}
+- [SVG tutorial: SVG fonts](/en-US/docs/Web/SVG/Tutorial/SVG_fonts)

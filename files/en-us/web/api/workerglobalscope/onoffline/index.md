@@ -17,7 +17,7 @@ The **`onoffline`** property of the {{domxref("WorkerGlobalScope")}} interface r
 ## Syntax
 
 ```js
-self.onoffline = function() { ... };
+self.onoffline = function() { /* ... */ };
 ```
 
 ## Example

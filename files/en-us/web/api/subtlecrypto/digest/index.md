@@ -29,21 +29,21 @@ const digest = crypto.subtle.digest(algorithm, data);
 
 ### Parameters
 
-- `algorithm` is a {{domxref("DOMString")}} defining the hash
-  function to use. Supported values are:
+- `algorithm`
+  - : This may be a string or an object with a single property `name` that is a string. The string names the hash function to use. Supported values are:
 
-  - `SHA-1` (but don't use this in cryptographic applications)
-  - `SHA-256`
-  - `SHA-384`
-  - `SHA-512`.
+    - `"SHA-1"` (but don't use this in cryptographic applications)
+    - `"SHA-256"`
+    - `"SHA-384"`
+    - `"SHA-512"`.
 
-- `data` is an {{jsxref("ArrayBuffer")}} or
-  {{domxref("ArrayBufferView")}} containing the data to be digested.
+- `data`
+  - : An {{jsxref("ArrayBuffer")}} or {{domxref("ArrayBufferView")}} containing the data to be digested.
 
 ### Return value
 
-- `digest` is a {{jsxref("Promise")}} that fulfills with an
-  {{jsxref("ArrayBuffer")}} containing the digest.
+- `digest`
+  - : {{jsxref("Promise")}} that fulfills with an {{jsxref("ArrayBuffer")}} containing the digest.
 
 ## Supported algorithms
 
@@ -164,6 +164,7 @@ digestMessage(text)
 
 ## See also
 
+- [Non-cryptographic uses of SubtleCrypto](/en-US/docs/Web/API/Web_Crypto_API/Non-cryptographic_uses_of_subtle_crypto)
 - [Chromium
   secure origins specification](https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features)
 - [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf) specifies the SHA family of digest algorithms.

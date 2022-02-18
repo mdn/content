@@ -71,7 +71,8 @@ A new random notification is created every 30 seconds until it becomes too annoy
 
 Push is more complicated than notifications — we need to subscribe to a server that will then send the data back to the app. The app's Service Worker will receive data from the push server, which can then be shown using the notifications system, or another mechanism if desired.
 
-The technology is still at a very early stage — some working examples use the Google Cloud Messaging platform, but are being rewritten to support [VAPID](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) (Voluntary Application Identification), which offers an extra layer of security for your app. You can examine the [Service Workers Cookbook examples](https://serviceworke.rs/push-payload.html), try to set up a push messaging server using [Firebase](https://firebase.google.com/), or build your own server (using Node.js for example).
+The technology is still at a very early stage — some working examples use the Google Cloud Messaging platform, but are being rewritten to support [VAPID](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) (Voluntary Application Identification), which offers an extra layer of security for your app.
+You can examine the [Service Workers Cookbook examples](https://github.com/mozilla/serviceworker-cookbook/tree/master/push-payload), try to set up a push messaging server using [Firebase](https://firebase.google.com/), or build your own server (using Node.js for example).
 
 As mentioned before, to be able to receive push messages, you have to have a service worker, the basics of which are already explained in the [Making PWAs work offline with Service workers](/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers) article. Inside the service worker, a push service subscription mechanism is created.
 
@@ -93,7 +94,7 @@ The data can be retrieved and then shown as a notification to the user immediate
 
 ### Push example
 
-Push needs the server part to work, so we're not able to include it in the js13kPWA example hosted on GitHub Pages, as it offers hosting of static files only. It is all explained in the [Service Worker Cookbook](https://serviceworke.rs/) — see the [Push Payload Demo](https://serviceworke.rs/push-payload.html).
+Push needs the server part to work, so we're not able to include it in the js13kPWA example hosted on GitHub Pages, as it offers hosting of static files only. It is all explained in the [Service Worker Cookbook](https://github.com/mozilla/serviceworker-cookbook) — see the [Push Payload Demo](https://github.com/mozilla/serviceworker-cookbook/tree/master/push-payload).
 
 This demo consists of three files:
 
@@ -213,7 +214,8 @@ webPush.setVapidDetails(
 );
 ```
 
-Next, a module defines and exports all the routes an app needs to handle: getting the VAPID public key, registering, and then sending notifications. You can see the variables from the `index.js` file being used: `payload`, `delay` and `ttl`.
+Next, a module defines and exports all the routes an app needs to handle: getting the VAPID public key, registering, and then sending notifications.
+You can see the variables from the `index.js` file being used: `payload`, `delay` and `ttl`.
 
 ```js
 module.exports = function(app, route) {
@@ -264,7 +266,8 @@ self.addEventListener('push', function(event) {
 
 All it does is add a listener for the {{event("push")}} event, create the payload variable consisting of the text taken from the data (or create a string to use if data is empty), and then wait until the notification is shown to the user.
 
-Feel free to explore the rest of the examples in the [Service Worker Cookbook](https://serviceworke.rs/) if you want to know how they are handled — the [full source code is available on GitHub](https://github.com/mozilla/serviceworker-cookbook/). There's a big collection of working examples showing general use, but also web push, caching strategies, performance, working offline, and more.
+Feel free to explore the rest of the examples in the [Service Worker Cookbook](https://github.com/mozilla/serviceworker-cookbook) if you want to know how they are handled.
+There's a big collection of working examples showing general use, but also web push, caching strategies, performance, working offline, and more.
 
 {{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}
 

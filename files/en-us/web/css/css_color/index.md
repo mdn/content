@@ -14,14 +14,15 @@ tags:
 ---
 {{CSSRef}}
 
-**CSS Color** is a CSS module that deals with colors, color types, color blending, opacity, and how you can apply these colors and effects to HTML content. Not all CSS properties that take a {{cssxref("&lt;color&gt;")}} as a value are part of this module, but they do depend upon it.
+**CSS Color** is a CSS module that deals with colors, color types, color blending, opacity, and how you can apply these colors and effects to HTML content.
+Not all CSS properties that take a {{cssxref("&lt;color&gt;")}} as a value are part of this module, but they do depend upon it.
 
 ## Reference
 
 ### Properties
 
 - {{cssxref("color")}}
-- {{cssxref("color-adjust")}}
+- {{cssxref("print-color-adjust")}}
 - {{cssxref("opacity")}}
 
 ### Data types
@@ -53,9 +54,9 @@ tags:
 
 {{Compat("css.properties.color")}}
 
-### `color-adjust` property
+### `print-color-adjust` property
 
-{{Compat("css.properties.color-adjust")}}
+{{Compat("css.properties.print-color-adjust")}}
 
 ### `opacity` property
 

@@ -25,19 +25,19 @@ array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Type
 
 ```js
 // Arrow function
-every((element) => { ... } )
-every((element, index) => { ... } )
-every((element, index, array) => { ... } )
+every((element) => { /* ... */ } )
+every((element, index) => { /* ... */ } )
+every((element, index, array) => { /* ... */ } )
 
 // Callback function
 every(callbackFn)
 every(callbackFn, thisArg)
 
 // Inline callback function
-every(function(element) { ... })
-every(function(element, index) { ... })
-every(function(element, index, array){ ... })
-every(function(element, index, array) { ... }, thisArg)
+every(function(element) { /* ... */ })
+every(function(element, index) { /* ... */ })
+every(function(element, index, array){ /* ... */ })
+every(function(element, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
@@ -116,6 +116,6 @@ new Uint8Array([12, 54, 18, 130, 44]).every(elem => elem >= 10); // true
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.every` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.every` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray.prototype.some()")}}
 - {{jsxref("Array.prototype.every()")}}

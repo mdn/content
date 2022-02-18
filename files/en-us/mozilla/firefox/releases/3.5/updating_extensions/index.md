@@ -16,35 +16,41 @@ This section covers the basics of what you need to do whenever you update an ext
 
 Start by editing your extension's `install.rdf` file, updating `maxVersion` to 3.5b4 (if you're testing on Firefox 3.5 beta 4), and increase your extension's `version`.
 
-Then create a new Firefox profile so that your testing doesn't risk your usual profile.  Navigate to the directory containing Firefox, then issue the command:
+Then create a new Firefox profile so that your testing doesn't risk your usual profile.  Navigate to the directory containing Firefox, then issue the command:
 
-    firefox -createProfile testBeta4
+```bash
+firefox -createProfile testBeta4
+```
 
 On the Mac, you need to navigate all the way into the Firefox application bundle:
 
-    cd /Applications/Firefox.app/Contents/MacOS/
-    firefox -createProfile testBeta4
+```bash
+cd /Applications/Firefox.app/Contents/MacOS/
+firefox -createProfile testBeta4
+```
 
 Launch Firefox using the new profile by issuing this command on the command line:
 
-    firefox -P testBeta4
+```bash
+firefox -P testBeta4
+```
 
-Test your extension thoroughly.  We suggest you set the following preferences to `true` in order to be alerted to any JavaScript warnings or exceptions:
+Test your extension thoroughly.  We suggest you set the following preferences to `true` in order to be alerted to any JavaScript warnings or exceptions:
 
 - `javascript.options.strict`
 - `javascript.options.showInConsole`
 
 ### Update your extension
 
-If you run into any problems while testing, update your code to fix the issues.  This article contains useful information about things that may require some work.
+If you run into any problems while testing, update your code to fix the issues.  This article contains useful information about things that may require some work.
 
-Once you've done that, try using your extension again, this time with your regular profile.  This will help to ensure compatibility with any existing saved data.
+Once you've done that, try using your extension again, this time with your regular profile.  This will help to ensure compatibility with any existing saved data.
 
 ### Update your extension on addons.mozilla.org
 
-Finally, it's time to release your updated extension.  If your extension didn't need any code changes you can log into the AMO dashboard and update the compatibility version there.  Otherwise, you'll need to upload a new version to AMO.
+Finally, it's time to release your updated extension.  If your extension didn't need any code changes you can log into the AMO dashboard and update the compatibility version there.  Otherwise, you'll need to upload a new version to AMO.
 
-See [Submitting an add-on to AMO](/en-US/docs/Submitting_an_add-on_to_AMO) for additional information.
+See [Submitting an add-on to AMO](/en-US/docs/Submitting_an_add-on_to_AMO) for additional information.
 
 ## Accessing the Places database
 
@@ -52,11 +58,11 @@ Prior to Firefox 3.5, accessing the Places database directly using the [Storage 
 
 ```js
 var places = Components.classes["@mozilla.org/file/directory_service;1"].
-                        getService(Components.interfaces.nsIProperties).
-                        get("ProfD", Components.interfaces.nsIFile);
+                        getService(Components.interfaces.nsIProperties).
+                        get("ProfD", Components.interfaces.nsIFile);
 places.append("places.sqlite");
 var db = Components.classes["@mozilla.org/storage/service;1"].
-                    getService(Components.interfaces.mozIStorageService).openDatabase(places);
+                    getService(Components.interfaces.mozIStorageService).openDatabase(places);
 ```
 
 This builds a path to the `places.sqlite` database file manually, then opens the file for Storage access.
@@ -65,7 +71,7 @@ Firefox 3.5 adds a dedicated service that offers a convenient way to access the 
 
 ```js
 var db = Components.classes["@mozilla.org/browser/nav-history-service;1"].
-                    getService(Components.interfaces.nsPIPlacesDatabase).DBConnection;
+                    getService(Components.interfaces.nsPIPlacesDatabase).DBConnection;
 ```
 
 ## Search textboxes
@@ -86,21 +92,21 @@ In Firefox 3.5, you should change this to:
 
 ## JSON
 
-The JSON.jsm JavaScript module was dropped in Firefox 3.5 in favor of native JSON object support.  For details, see [Using JSON in Firefox](/en-US/Using_native_JSON) and the article on [JSON](/en-US/docs/Glossary/JSON) for a more general overview of JSON and how to use it in various versions of Firefox.
+The JSON.jsm JavaScript module was dropped in Firefox 3.5 in favor of native JSON object support.  For details, see [Using JSON in Firefox](/en-US/Using_native_JSON) and the article on [JSON](/en-US/docs/Glossary/JSON) for a more general overview of JSON and how to use it in various versions of Firefox.
 
 To ensure compatibility with both Firefox 3 and Firefox 3.5, you can do the following:
 
 ```js
-if (typeof(JSON) == "undefined") {
-  Components.utils.import("resource://gre/modules/JSON.jsm");
-  JSON.parse = JSON.fromString;
-  JSON.stringify = JSON.toString;
+if (typeof(JSON) == "undefined") {
+  Components.utils.import("resource://gre/modules/JSON.jsm");
+  JSON.parse = JSON.fromString;
+  JSON.stringify = JSON.toString;
 }
 ```
 
-This works by importing the JSON.jsm JavaScript module if JSON isn't supported natively, then mapping the methods provided by that module to the ones used by native JSON, so that the same calls work.
+This works by importing the JSON.jsm JavaScript module if JSON isn't supported natively, then mapping the methods provided by that module to the ones used by native JSON, so that the same calls work.
 
-You can also bypass this issue by using the {{ interface("nsIJSON") }} interface directly.
+You can also bypass this issue by using the {{ interface("nsIJSON") }} interface directly.
 
 ## Changes to context menus
 
@@ -108,7 +114,7 @@ In order to support the new audio and video features added in Gecko 1.9.1, the `
 
 ## Changes to chrome registration
 
-Firefox 3.5 closes a security hole that made it possible to use remote chrome.  This will affect any add-on that includes a resource in their `chrome.manifest` file that references a web site, data or resource urls.  See [Security changes in Firefox 3.5](/en-US/Security_changes_in_Firefox_3.5) for details.
+Firefox 3.5 closes a security hole that made it possible to use remote chrome.  This will affect any add-on that includes a resource in their `chrome.manifest` file that references a web site, data or resource urls.  See [Security changes in Firefox 3.5](/en-US/Security_changes_in_Firefox_3.5) for details.
 
 ## Getting a load context from a request
 
@@ -171,13 +177,13 @@ NS_QueryNotificationCallbacks(channel, loadContext);
 
 ## Customizable toolbars
 
-In Firefox 3.5, customizable toolbar behavior has changed such that the `<xul:toolbar/>` binding now removes toolbar items from its associated `<xul:toolbarpalette/>` and  adds them to the toolbar, rather than cloning them and copying them to the toolbar. This means that the palette will now only contain items not present on the toolbar, as opposed to the previous behavior of containing all customizable elements whether or not they were displayed on the toolbar. This might cause trouble for addons that depend on being able to retrieve all customizable toolbar items from the `<xul:toolbarpalette/>`, or which attempt to dynamically insert items into the palette to make them available during toolbar customization. More information is available in {{ Bug(407725) }} and {{ Bug(467045) }}.
+In Firefox 3.5, customizable toolbar behavior has changed such that the `<xul:toolbar/>` binding now removes toolbar items from its associated `<xul:toolbarpalette/>` and  adds them to the toolbar, rather than cloning them and copying them to the toolbar. This means that the palette will now only contain items not present on the toolbar, as opposed to the previous behavior of containing all customizable elements whether or not they were displayed on the toolbar. This might cause trouble for addons that depend on being able to retrieve all customizable toolbar items from the `<xul:toolbarpalette/>`, or which attempt to dynamically insert items into the palette to make them available during toolbar customization. More information is available in {{ Bug(407725) }} and {{ Bug(467045) }}.
 
 ## XPCNativeWrapper
 
-Starting in Firefox 3.5, you can no longer use `data:` bindings in chrome packages that get `XPCNativeWrapper` automation. This resolves a potential security issue.
+Starting in Firefox 3.5, you can no longer use `data:` bindings in chrome packages that get `XPCNativeWrapper` automation. This resolves a potential security issue.
 
-XUL documents now get `XPCNativeWrapper` treatment, so you now need to use the `getAttribute()` method to fetch attribute values instead of reading them directly.
+XUL documents now get `XPCNativeWrapper` treatment, so you now need to use the `getAttribute()` method to fetch attribute values instead of reading them directly.
 
 If your extension is using `xpcnativewrappers=no` (which it shouldn't be doing in the first place, since it's not safe to do so), XBL from that extension will not be applied to documents which are using `XPCNativeWrapper` automation starting in Firefox 3.5.
 
@@ -185,9 +191,9 @@ If your extension is using `xpcnativewrappers=no` (which it shouldn't be doing i
 
 ### Listening to events on all tabs
 
-Firefox 3.5 introduces support for adding and removing progress listeners that listen on all tabs.  See [Listening to events on all tabs](/en-US/Listening_to_events_on_all_tabs) for details.
+Firefox 3.5 introduces support for adding and removing progress listeners that listen on all tabs.  See [Listening to events on all tabs](/en-US/Listening_to_events_on_all_tabs) for details.
 
 ## For Theme developers:
 
 - Check [Theme changes in Firefox 3.1](/en-US/Theme_changes_in_Firefox_3.1).
-- Go to the Mozillazine forum [Theme changes for FF3.1](http://forums.mozillazine.org/viewtopic.php?f=18&t=665138) to get an overview / listing of all changes between 3.0 and 3.1 that impact theme developers. This concerns new CSS features (like nth-child, -moz-box-shadow, etc), changes to existing widgets, overall UI improvements, and new FF3.1 features (audio/video support, private browsing, extended session restore, box/window/text shadows).
+- Go to the Mozillazine forum [Theme changes for FF3.1](http://forums.mozillazine.org/viewtopic.php?f=18&t=665138) to get an overview / listing of all changes between 3.0 and 3.1 that impact theme developers. This concerns new CSS features (like nth-child, -moz-box-shadow, etc), changes to existing widgets, overall UI improvements, and new FF3.1 features (audio/video support, private browsing, extended session restore, box/window/text shadows).

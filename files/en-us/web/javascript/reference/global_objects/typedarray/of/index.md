@@ -23,7 +23,7 @@ array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray
 ```js
 TypedArray.of(element0)
 TypedArray.of(element0, element1)
-TypedArray.of(element0, element1, ... , elementN)
+TypedArray.of(element0, element1, /* ... ,*/ elementN)
 ```
 
 Where `TypedArray` is one of:
@@ -85,6 +85,6 @@ Int16Array.of(undefined);    // Int16Array [ 0 ]
 
 ## See also
 
-- A polyfill of `TypedArray.of` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.of` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray.from()")}}
 - {{jsxref("Array.of()")}}

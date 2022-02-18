@@ -34,7 +34,7 @@ A {{domxref("DOMString")}} with one of the following values:
 
 ## Examples
 
-In this example the `aria-live` attribute on the element with an ID of `planetInfo` is set to "polite". We then update the value to "assertive".
+In this example the [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live) attribute on the element with an ID of `planetInfo` is set to "polite". We then update the value to "assertive".
 
 ```html
 <div role="region" id="planetInfo" aria-live="polite">

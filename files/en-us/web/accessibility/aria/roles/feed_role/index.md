@@ -34,23 +34,22 @@ The feed pattern enables reliable assistive technology reading mode interaction 
 
 In the context of a feed, the web page code is responsible for:
 
-  - Appropriate visual scrolling of the content based on which article contains DOM focus.
-  - Loading or removing feed articles based on which article contains DOM focus.
+- Appropriate visual scrolling of the content based on which article contains DOM focus.
+- Loading or removing feed articles based on which article contains DOM focus.
 
-  
 ### Keyboard interactions
 
 Supporting the following, or a similar, interface is recommended when focus is inside the feed:
 
-  - <kbd>Page Down</kbd>: Move focus to next article.
-  - <kbd>Page Up</kbd>: Move focus to previous article.
-  - <kbd>Control + End</kbd>: Move focus to the first focusable element after the feed.
-  - <kbd>Control + Home</kbd>: Move focus to the first focusable element before the feed.
-  
-  If a feed is nested within a feed, such as a comments feed within a feed of blog posts, the convention is to tab into the nested feed with the <kbd>Tab</kbd> key and to provide another key, such as  <kbd>Alt + Page Down</kbd>, to navigate from an 'outer' article to the first item in that article's nested feed. Navigate between the nested feed and main feed with <kbd>Control + End</kbd> , moving focus from the inner feed to the next article in the outer feed.
-  
-  ### <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles, states, and properties
-  
+- <kbd>Page Down</kbd>: Move focus to next article.
+- <kbd>Page Up</kbd>: Move focus to previous article.
+- <kbd>Control + End</kbd>: Move focus to the first focusable element after the feed.
+- <kbd>Control + Home</kbd>: Move focus to the first focusable element before the feed.
+
+If a feed is nested within a feed, such as a comments feed within a feed of blog posts, the convention is to tab into the nested feed with the <kbd>Tab</kbd> key and to provide another key, such as  <kbd>Alt + Page Down</kbd>, to navigate from an 'outer' article to the first item in that article's nested feed. Navigate between the nested feed and main feed with <kbd>Control + End</kbd> , moving focus from the inner feed to the next article in the outer feed.
+
+### <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles, states, and properties
+
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
   - : If the feed has no visible title, the `feed` element has a label specified with `aria-label`. If it does, see `aria-labelledby`.
 
@@ -75,14 +74,11 @@ None, except as required by any attributes. For example, setting [`aria-busy`](/
 
 To ensure good user experience, avoid inserting or removing articles in the middle of a `feed`, load new articles before the user has reached the end of the feed, and provide keyboard commands for moving focus among articles so that keyboard users can navigate through your feed. See {{anch('Keyboard interactions')}}.
 
-
 ## Specifications
 
 | Specification                                    | Status                   |
 | ------------------------------------------------ | ------------------------ |
 | {{SpecName("ARIA","#feed","feed")}} | {{Spec2('ARIA')}} |
-
-
 
 ## See also
 

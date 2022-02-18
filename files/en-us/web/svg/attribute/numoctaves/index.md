@@ -16,7 +16,7 @@ The higher the number of octaves, the more natural the noise looks. Though more 
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feTurbulence")}}
+- {{SVGElement("feTurbulence")}}
 
 ## Example
 
@@ -61,8 +61,8 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `<integer>`
-    *   : Defines the number of octaves. Negative values are forbidden.
+- `<integer>`
+  - : Defines the number of octaves. Negative values are forbidden.
 
 ## Example
 
@@ -117,5 +117,5 @@ html, body, svg {
 
 ## See also
 
-*   [Understanding Perlin Noise](https://flafla2.github.io/2014/08/09/perlinnoise.html)
-*   {{SVGAttr("baseFrequency")}}
+- [Understanding Perlin Noise](https://flafla2.github.io/2014/08/09/perlinnoise.html)
+- {{SVGAttr("baseFrequency")}}

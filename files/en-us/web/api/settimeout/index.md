@@ -102,7 +102,7 @@ Code executed by `setTimeout()` is called from an execution context separate
 from the function from which `setTimeout` was called. The usual rules for
 setting the `this` keyword for the called function apply, and if you have not
 set `this` in the call or with `bind`, it will default to
-the `window` (or `global`) object. It will not be the same as the
+the `window` (or `global`) object. It will not be the same as the
 `this` value for the function that called `setTimeout`.
 
 See the following example:
@@ -128,7 +128,7 @@ setTimeout(myArray.myMethod, 1.5*1000, '1'); // prints "undefined" after 1.5 sec
 ```
 
 The `myArray.myMethod` function is passed to `setTimeout`, then
-when it's called, its `this` is not set so it defaults to the
+when it's called, its `this` is not set, so it defaults to the
 `window` object.
 
 There's also no option to pass a `thisArg` to
@@ -274,7 +274,7 @@ The specifics of this are browser-dependent:
 
 #### Throttling of tracking scripts
 
-Firefox enforces additional throttling for scripts that it recognises as tracking scripts.
+Firefox enforces additional throttling for scripts that it recognizes as tracking scripts.
 When running in the foreground, the throttling minimum delay is still 4ms. In background tabs, however,
 the throttling minimum delay is 10,000 ms, or 10 seconds, which comes into effect 30 seconds after a
 document has first loaded.
@@ -298,8 +298,10 @@ console.log('After setTimeout');
 
 Will write to the console:
 
-    After setTimeout
-    foo has been called
+```
+After setTimeout
+foo has been called
+```
 
 This is because even though `setTimeout` was called with a delay of zero,
 it's placed on a queue and scheduled to run at the next opportunity; not immediately.
@@ -309,7 +311,7 @@ the resulting execution order may not be as expected.
 #### Deferral of timeouts during pageload
 
 Firefox will defer firing `setTimeout()` timers
-while the current tab is loading. Firing is deferred until the main thread is deemed
+while the current tab is loading. Firing is deferred until the main thread is deemed
 idle (similar to [window.requestIdleCallback()](/en-US/docs/Web/API/Window/requestIdleCallback)),
 or until the load event is fired.
 
@@ -387,7 +389,7 @@ example](/en-US/docs/Web/API/clearTimeout#example).
 
 ## See also
 
-- A polyfill of `setTimeout` which allows passing arguments to the callback is available in [`core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
+- [Polyfill of `setTimeout` which allows passing arguments to the callback in `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
 - {{domxref("clearTimeout")}}
 - {{domxref("setInterval()")}}
 - {{domxref("window.requestAnimationFrame")}}

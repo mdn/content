@@ -27,7 +27,7 @@ history.forward()
 
 ## Examples
 
-The following examples create a button that moves forward one step in the session
+The following examples create a button that moves forward one step in the session
 history.
 
 ### HTML

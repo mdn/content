@@ -25,6 +25,8 @@ The WebXR Device API interface **`XRViewerPose`** represents the pose (the posit
 
 This view can represent anything from the point-of-view of a user's XR headset to the viewpoint represented by a player's movement of an avatar using mouse and keyboard, presented on the screen, to a virtual camera capturing the scene for a spectator.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _In addition to the properties inherited from {{domxref("XRPose")}}, `XRViewerPose` includes the following:_
@@ -73,7 +75,7 @@ if (pose) {
 ```
 
 Passing each `view` to {{domxref("XRWebGLLayer.getViewport", "getViewport()")}} returns the WebGL viewport to apply in order to cause the rendered
-output to be positioned correctly in the framebuffer for renderijng to the corresponding eye on the output device.
+output to be positioned correctly in the framebuffer for rendering to the corresponding eye on the output device.
 
 This code is derived from {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion", "Drawing a
   frame")}}. You can see more context and see much more on that page.

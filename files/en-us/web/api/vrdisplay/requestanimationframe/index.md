@@ -3,7 +3,7 @@ title: VRDisplay.requestAnimationFrame()
 slug: Web/API/VRDisplay/requestAnimationFrame
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Method
   - Reference
   - VR
@@ -25,12 +25,12 @@ The **`requestAnimationFrame()`** method of the {{domxref("VRDisplay")}} interfa
 ## Syntax
 
 ```js
-var handle = vrDisplayInstance.requestAnimationFrame(callback);
+requestAnimationFrame(callback)
 ```
 
 ### Parameters
 
-- callback
+- `callback`
   - : A callback function that will be called every time a new frame of the `VRDisplay` presentation is rendered.
 
 ### Return value

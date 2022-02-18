@@ -13,7 +13,7 @@ The **`mode`** attribute defines the blending mode on the {{SVGElement("feBlend"
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feBlend")}}
+- {{SVGElement("feBlend")}}
 
 ## Example
 

@@ -16,6 +16,8 @@ browser-compat: api.WindowClient
 
 The `WindowClient` interface of the [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API) represents the scope of a service worker client that is a document in a browsing context, controlled by an active worker. The service worker client independently selects and uses a service worker for its own loading and sub-resources.
 
+{{InheritanceDiagram}}
+
 ## Methods
 
 _`WindowClient` inherits methods from its parent interface, {{domxref("Client")}}._

@@ -12,10 +12,10 @@ tags:
 
 Firefox 4 introduced support for animating [SVG](/en-US/docs/Web/SVG) using [Synchronized Multimedia Integration Language](https://www.w3.org/TR/REC-smil) (SMIL). SMIL allows you to:
 
-*   animate the numeric attributes of an element (x, y, ...)
-*   animate transform attributes (translation or rotation)
-*   animate color attributes
-*   follow a motion path
+- animate the numeric attributes of an element (x, y, ...)
+- animate transform attributes (translation or rotation)
+- animate color attributes
+- follow a motion path
 
 This is done adding an SVG element like {{ SVGElement("animate") }} inside the SVG element to animate. Below are examples for the four different ways.
 
@@ -23,14 +23,14 @@ This is done adding an SVG element like {{ SVGElement("animate") }} inside the S
 
 The following example animates the **cx** attribute of a circle. To do so, we add an {{ SVGElement("animate") }} element inside the {{ SVGElement("circle") }} element. The important attributes for {{ SVGElement("animate") }} are:
 
-*   **attributeName**
-    *   : The name of the attribute to animate.
-*   from
-    *   : The initial value of the attribute.
-*   to
-    *   : The final value.
-*   dur
-    *   : The duration of the animation (for example, write '5s' for 5 seconds).
+- **attributeName**
+  - : The name of the attribute to animate.
+- from
+  - : The initial value of the attribute.
+- to
+  - : The final value.
+- dur
+  - : The duration of the animation (for example, write '5s' for 5 seconds).
 
 If you want to animate more attributes inside the same element, just add more {{ SVGElement("animate") }} elements.
 
@@ -65,7 +65,7 @@ The {{ SVGElement("animateTransform") }} element let you animate **transform** a
        from="0 60 60"
        to="360 100 60"
        repeatCount="indefinite"
-			/>
+    />
   </rect>
 </svg>
 ```
@@ -76,7 +76,7 @@ The {{ SVGElement("animateTransform") }} element let you animate **transform** a
 
 The {{ SVGElement("animateMotion") }} element lets you animate an element position and rotation according to a path. The path is defined the same way as in {{ SVGElement("path") }}. You can set the attribute to define whether the object rotates following the tangent of the path.
 
-### Example 1: Linear motion
+### Example 1: Linear motion
 
 In this example, a blue circle bounces between the left and right edges of a black box, over and over again, indefinitely. The animation here is handled by the {{ SVGElement("animateMotion") }} element. In this case, we're establishing a path consisting of a **MoveTo** command to establish the starting point for the animation, then the **Horizontal-line** command to move the circle 300 pixels to the right, followed by the **Z command**, which closes the path, establishing a loop back to the beginning. By setting the value of the **repeatCount** attribute to `indefinite`, we indicate that the animation should loop forever, as long as the SVG image exists.
 
@@ -116,6 +116,6 @@ Same example as before with a curved path and following the direction of the pat
 
 ## See also
 
-*   [SVG](/en-US/docs/Web/SVG)
-*   [SVG Animation Specification](https://www.w3.org/TR/SVG/animate.html)
-*   [SMIL Specification](https://www.w3.org/TR/REC-smil)
+- [SVG](/en-US/docs/Web/SVG)
+- [SVG Animation Specification](https://www.w3.org/TR/SVG/animate.html)
+- [SMIL Specification](https://www.w3.org/TR/REC-smil)

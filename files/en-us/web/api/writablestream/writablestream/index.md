@@ -10,7 +10,7 @@ tags:
   - WritableStream
 browser-compat: api.WritableStream.WritableStream
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`WritableStream()`** constructor creates
 a new {{domxref("WritableStream")}} object instance.

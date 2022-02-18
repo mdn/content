@@ -9,7 +9,7 @@ browser-compat: api.EventTarget.removeEventListener
 {{APIRef("DOM")}}
 
 The **`removeEventListener()`** method of the {{domxref("EventTarget")}} interface
-removes from the target an event listener previously registered with {{domxref("EventTarget.addEventListener()")}}.
+removes an event listener previously registered with {{domxref("EventTarget.addEventListener()")}} from the target.
 The event listener to be removed is identified using a combination of the event type,
 the event listener function itself, and various optional options that may affect the matching process;
 see {{anch("Matching event listeners for removal")}}.
@@ -18,22 +18,18 @@ Calling `removeEventListener()` with arguments that do not identify any
 currently registered {{domxref("EventListener")}} on the `EventTarget` has no
 effect.
 
-If an {{domxref("EventListener")}} is removed from an {{domxref("EventTarget")}} while
-it is processing an event, it will not be triggered by the current actions. An
-{{domxref("EventListener")}} will not be invoked for the event it was registered for
-after being removed. However, it can be reattached.
+If an {{domxref("EventListener")}} is removed from an {{domxref("EventTarget")}} while another listener of the target is processing an event, it will not be triggered by the event. However, it can be reattached.
 
-> **Warning:** If a listener is registered twice, one with the _capture_ flag set and one without, you must remove each one separately.
-  > Removal of a capturing listener does not affect a non-capturing version of the same listener, and vice versa.
+> **Warning:** If a listener is registered twice, one with the _capture_ flag set and one without, you must remove each one separately. Removal of a capturing listener does not affect a non-capturing version of the same listener, and vice versa.
 
 Event listeners can also be removed by passing an {{domxref("AbortSignal")}} to an {{domxref("EventTarget/addEventListener()", "addEventListener()")}} and then later calling {{domxref("AbortController/abort()", "abort()")}} on the controller owning the signal.
 
 ## Syntax
 
 ```js
-target.removeEventListener(type, listener);
-target.removeEventListener(type, listener, options);
-target.removeEventListener(type, listener, useCapture);
+removeEventListener(type, listener);
+removeEventListener(type, listener, options);
+removeEventListener(type, listener, useCapture);
 ```
 
 ### Parameters
@@ -44,21 +40,15 @@ target.removeEventListener(type, listener, useCapture);
   - : The {{domxref("EventListener")}} function of the event handler to remove from the
     event target.
 - `options` {{optional_inline}}
-
   - : An options object that specifies characteristics about the event listener.
 
     The available options are:
 
-    - `capture`: A boolean value which indicates that
-      events of this type will be dispatched to the registered
-      `listener` before being dispatched to any
-      {{domxref("EventTarget")}} beneath it in the DOM tree.
+    - `capture`:  A boolean value that specifies whether the {{domxref("EventListener")}} to be removed is registered as a capturing listener or not. If this parameter is absent, a default value of `false` is assumed.
 
 - `useCapture` {{optional_inline}}
-
   - : A boolean value that specifies whether the {{domxref("EventListener")}} to be removed is registered as a
-    capturing listener or not. If this parameter is absent, a default value of
-    `false` is assumed.
+    capturing listener or not. If this parameter is absent, a default value of `false` is assumed.
 
 ### Return value
 
@@ -137,25 +127,25 @@ const mouseOverTarget = document.getElementById('mouse-over-target')
 
 let toggle = false;
 function makeBackgroundYellow() {
-    if (toggle) {
-        body.style.backgroundColor = 'white';
-    } else {
-        body.style.backgroundColor = 'yellow';
-    }
+  if (toggle) {
+    body.style.backgroundColor = 'white';
+  } else {
+    body.style.backgroundColor = 'yellow';
+  }
 
-    toggle = !toggle;
+  toggle = !toggle;
 }
 
 clickTarget.addEventListener('click',
-    makeBackgroundYellow,
-    false
+  makeBackgroundYellow,
+  false
 );
 
 mouseOverTarget.addEventListener('mouseover', function () {
-    clickTarget.removeEventListener('click',
-        makeBackgroundYellow,
-        false
-    );
+  clickTarget.removeEventListener('click',
+    makeBackgroundYellow,
+    false
+  );
 });
 ```
 
