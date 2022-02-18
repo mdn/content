@@ -58,7 +58,7 @@ The {{jsxref("WebAssembly.instantiate()")}} function has two overload forms — 
 }
 ```
 
-> **Note:** Usually we only care about the instance, but it’s useful to have the module in case we want to cache it, share it with another worker or window via [`postMessage()`](/en-US/docs/Web/API/MessagePort/postMessage), or create more instances.
+> **Note:** Usually we only care about the instance, but it's useful to have the module in case we want to cache it, share it with another worker or window via [`postMessage()`](/en-US/docs/Web/API/MessagePort/postMessage), or create more instances.
 
 > **Note:** The second overload form takes a {{jsxref("WebAssembly.Module")}} object as an argument, and returns a promise directly containing the instance object as the result. See the [Second overload example](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#second_overload_example).
 

@@ -4,7 +4,7 @@ slug: Tools/Debugger-API/Debugger.Script
 ---
 <div>{{ToolsSidebar}}</div><h1 id="Debugger.Script">Debugger.Script</h1>
 
-<p>A <code>Debugger.Script</code> instance may refer to a sequence of bytecode in the debuggee or to a block of WebAssembly code. For the former, it is the <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> API’s presentation of a JSAPI <code>JSScript</code> object. The two cases are distinguished by their <code>format</code> property being <code>"js"</code> or <code>"wasm"</code>.</p>
+<p>A <code>Debugger.Script</code> instance may refer to a sequence of bytecode in the debuggee or to a block of WebAssembly code. For the former, it is the <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> API's presentation of a JSAPI <code>JSScript</code> object. The two cases are distinguished by their <code>format</code> property being <code>"js"</code> or <code>"wasm"</code>.</p>
 
 <h2 id="Debugger.Script_for_JSScripts">Debugger.Script for JSScripts</h2>
 
@@ -30,7 +30,7 @@ slug: Tools/Debugger-API/Debugger.Script
  </li>
 </ul>
 
-<p>The <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> interface constructs <code>Debugger.Script</code> objects as scripts of debuggee code are uncovered by the debugger: via the <code>onNewScript</code> handler method; via <a href="Debugger.Frame"><code>Debugger.Frame</code></a>’s <code>script</code> properties; via the <code>functionScript</code> method of <a href="Debugger.Object"><code>Debugger.Object</code></a> instances; and so on. For a given <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instance, SpiderMonkey constructs exactly one <code>Debugger.Script</code> instance for each underlying script object; debugger code can add its own properties to a script object and expect to find them later, use <code>==</code> to decide whether two expressions refer to the same script, and so on.</p>
+<p>The <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> interface constructs <code>Debugger.Script</code> objects as scripts of debuggee code are uncovered by the debugger: via the <code>onNewScript</code> handler method; via <a href="Debugger.Frame"><code>Debugger.Frame</code></a>'s <code>script</code> properties; via the <code>functionScript</code> method of <a href="Debugger.Object"><code>Debugger.Object</code></a> instances; and so on. For a given <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instance, SpiderMonkey constructs exactly one <code>Debugger.Script</code> instance for each underlying script object; debugger code can add its own properties to a script object and expect to find them later, use <code>==</code> to decide whether two expressions refer to the same script, and so on.</p>
 
 <p>(If more than one <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instance is debugging the same code, each <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> gets a separate <code>Debugger.Script</code> instance for a given script. This allows the code using each <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instance to place whatever properties it likes on its <code>Debugger.Script</code> instances, without worrying about interfering with other debuggers.)</p>
 
@@ -65,11 +65,11 @@ slug: Tools/Debugger-API/Debugger.Script
  <dd>True if this instance refers to a <code>JSScript</code> for an async function, defined with an <code>async function</code> expression or statement. False otherwise.</dd>
  <dt><code>displayName</code></dt>
  <dd>
- <p><strong>If the instance refers to a <code>JSScript</code></strong>, this is the script’s display name, if it has one. If the script has no display name — for example, if it is a top-level <code>eval</code> script — this is <code>undefined</code>.</p>
+ <p><strong>If the instance refers to a <code>JSScript</code></strong>, this is the script's display name, if it has one. If the script has no display name — for example, if it is a top-level <code>eval</code> script — this is <code>undefined</code>.</p>
 
- <p>If the script’s function has a given name, its display name is the same as its function’s given name.</p>
+ <p>If the script's function has a given name, its display name is the same as its function's given name.</p>
 
- <p>If the script’s function has no name, SpiderMonkey attempts to infer an appropriate name for it given its context. For example:</p>
+ <p>If the script's function has no name, SpiderMonkey attempts to infer an appropriate name for it given its context. For example:</p>
 
  <pre class="language-js"><code>function f() {}          // display name: f (the given name)
 var g = function () {};  // display name: g
@@ -90,14 +90,14 @@ var s = f(function () {});  // display name: s&lt;</code></pre>
  </dd>
  <dt><code>url</code></dt>
  <dd>
- <p><strong>If the instance refers to a <code>JSScript</code></strong>, the filename or URL from which this script’s code was loaded. For scripts created by <code>eval</code> or the <code>Function</code> constructor, this may be a synthesized filename, starting with a valid URL and followed by information tracking how the code was introduced into the system; the entire string is not a valid URL. For <code>Function.prototype</code>’s script, this is <code>null</code>. If this <code>Debugger.Script</code>’s <code>source</code> property is non-<code>null</code>, then this is equal to <code>source.url</code>.</p>
+ <p><strong>If the instance refers to a <code>JSScript</code></strong>, the filename or URL from which this script's code was loaded. For scripts created by <code>eval</code> or the <code>Function</code> constructor, this may be a synthesized filename, starting with a valid URL and followed by information tracking how the code was introduced into the system; the entire string is not a valid URL. For <code>Function.prototype</code>'s script, this is <code>null</code>. If this <code>Debugger.Script</code>'s <code>source</code> property is non-<code>null</code>, then this is equal to <code>source.url</code>.</p>
 
  <p><strong>If the instance refers to WebAssembly code</strong>, throw a <code>TypeError</code>.</p>
  </dd>
  <dt><code>startLine</code></dt>
- <dd><strong>If the instance refers to a <code>JSScript</code></strong>, the number of the line at which this script’s code starts, within the file or document named by <code>url</code>.</dd>
+ <dd><strong>If the instance refers to a <code>JSScript</code></strong>, the number of the line at which this script's code starts, within the file or document named by <code>url</code>.</dd>
  <dt><code>lineCount</code></dt>
- <dd><strong>If the instance refers to a <code>JSScript</code></strong>, the number of lines this script’s code occupies, within the file or document named by <code>url</code>.</dd>
+ <dd><strong>If the instance refers to a <code>JSScript</code></strong>, the number of lines this script's code occupies, within the file or document named by <code>url</code>.</dd>
  <dt><code>source</code></dt>
  <dd>
  <p><strong>If the instance refers to a <code>JSScript</code></strong>, the <a href="Debugger.Source"><code>Debugger.Source</code></a> instance representing the source code from which this script was produced. This is <code>null</code> if the source code was not retained.</p>
@@ -106,13 +106,13 @@ var s = f(function () {});  // display name: s&lt;</code></pre>
  </dd>
  <dt><code>sourceStart</code></dt>
  <dd>
- <p><strong>If the instance refers to a <code>JSScript</code></strong>, the character within the <a href="Debugger.Source"><code>Debugger.Source</code></a> instance given by <code>source</code> at which this script’s code starts; zero-based. If this is a function’s script, this is the index of the start of the <code>function</code> token in the source code.</p>
+ <p><strong>If the instance refers to a <code>JSScript</code></strong>, the character within the <a href="Debugger.Source"><code>Debugger.Source</code></a> instance given by <code>source</code> at which this script's code starts; zero-based. If this is a function's script, this is the index of the start of the <code>function</code> token in the source code.</p>
 
  <p><strong>If the instance refers to WebAssembly code</strong>, throw a <code>TypeError</code>.</p>
  </dd>
  <dt><code>sourceLength</code></dt>
  <dd>
- <p><strong>If the instance refers to a <code>JSScript</code></strong>, the length, in characters, of this script’s code within the <a href="Debugger.Source"><code>Debugger.Source</code></a> instance given by <code>source</code>.</p>
+ <p><strong>If the instance refers to a <code>JSScript</code></strong>, the length, in characters, of this script's code within the <a href="Debugger.Source"><code>Debugger.Source</code></a> instance given by <code>source</code>.</p>
 
  <p><strong>If the instance refers to WebAssembly code</strong>, throw a <code>TypeError</code>.</p>
  </dd>
@@ -154,7 +154,7 @@ for (i=1; i &lt; 10; i++)
 
  <ul>
   <li>
-   <p>the first line’s code starts at offset 0 in the script;</p>
+   <p>the first line's code starts at offset 0 in the script;</p>
   </li>
   <li>
    <p>the <code>for</code> statement head has two entry points at offsets 5 and 20 (for the initialization, which is performed only once, and the loop test, which is performed at the start of each iteration);</p>
@@ -254,15 +254,15 @@ for (i=1; i &lt; 10; i++)
  <dd>
  <p><strong>If the instance refers to a <code>JSScript</code></strong>, set a breakpoint at the bytecode instruction at<em>offset</em> in this script, reporting hits to the <code>hit</code> method of<em>handler</em>. If<em>offset</em> is not a valid offset in this script, throw an error.</p>
 
- <p>When execution reaches the given instruction, SpiderMonkey calls the <code>hit</code> method of<em>handler</em>, passing a <a href="Debugger.Frame"><code>Debugger.Frame</code></a> instance representing the currently executing stack frame. The <code>hit</code> method’s return value should be a <a href="Conventions#resumption-values" title="Debugger API: General Conventions: Resumption Values">resumption value</a>, determining how execution should continue.</p>
+ <p>When execution reaches the given instruction, SpiderMonkey calls the <code>hit</code> method of<em>handler</em>, passing a <a href="Debugger.Frame"><code>Debugger.Frame</code></a> instance representing the currently executing stack frame. The <code>hit</code> method's return value should be a <a href="Conventions#resumption-values" title="Debugger API: General Conventions: Resumption Values">resumption value</a>, determining how execution should continue.</p>
 
  <p>Any number of breakpoints may be set at a single location; when control reaches that point, SpiderMonkey calls their handlers in an unspecified order.</p>
 
  <p>Any number of breakpoints may use the same<em>handler</em> object.</p>
 
- <p>Breakpoint handler method calls are cross-compartment, intra-thread calls: the call takes place in the same thread that hit the breakpoint, and in the compartment containing the handler function (typically the debugger’s compartment).</p>
+ <p>Breakpoint handler method calls are cross-compartment, intra-thread calls: the call takes place in the same thread that hit the breakpoint, and in the compartment containing the handler function (typically the debugger's compartment).</p>
 
- <p>The new breakpoint belongs to the <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instance to which this script belongs. Disabling the <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instance disables this breakpoint; and removing a global from the <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instance’s set of debuggees clears all the breakpoints belonging to that <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instance in that global’s scripts.</p>
+ <p>The new breakpoint belongs to the <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instance to which this script belongs. Disabling the <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instance disables this breakpoint; and removing a global from the <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instance's set of debuggees clears all the breakpoints belonging to that <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instance in that global's scripts.</p>
  </dd>
  <dt><code>getBreakpoints([<em>offset</em>])</code></dt>
  <dd>

@@ -139,7 +139,7 @@ Here, costs depend on multiple factors, such as:
 
 - Is this a simple website with a few pages of text? Or a more complex, thousand-pages-long website?
 - Will you want to update it regularly? Or will it be a static website?
-- Must the website connect to your company’s IT structure to gather content (say, internal data)?
+- Must the website connect to your company's IT structure to gather content (say, internal data)?
 - Do you want some shiny new feature that is the rage of the moment? At the time of writing, clients are seeking single pages with complex parallax
 - Will you need the agency to think up user stories or solve complex {{Glossary("UX")}} problems? For example, creating a strategy to engage users, or A/B testing to choose a solution among several ideas
 
