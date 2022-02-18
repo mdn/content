@@ -124,7 +124,7 @@ For more information, see [Calculating Freshness Lifetime](https://httpwg.org/sp
 
 ### Heuristic freshness checking
 
-If an origin server does not explicitly specify freshness (for example,using a {{HTTPHeader("Cache-Control")}} or {{HTTPHeader("Expires")}} header), then a heuristic approach may be used.
+If an origin server does not explicitly specify freshness (for example, using a {{HTTPHeader("Cache-Control")}} or {{HTTPHeader("Expires")}} header), then a heuristic approach may be used.
 
 If this is the case, look for a {{HTTPHeader("Last-Modified")}} header. If the header is present, then the cache's [freshness lifetime](#freshness_lifetime) is equal to the value of the `Date` header minus the value of the `Last-modified` header divided by 10. The expiration time is computed as follows:
 
