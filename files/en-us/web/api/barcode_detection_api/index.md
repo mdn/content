@@ -9,7 +9,7 @@ tags:
   - barcode detection
   - shape detection
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Barcode Detection API")}} {{AvailableInWorkers}}
+{{securecontext_header}}{{DefaultAPISidebar("Barcode Detection API")}} {{AvailableInWorkers}}
 
 The Barcode Detection API detects linear and two-dimensional barcodes in images.
 
@@ -229,7 +229,7 @@ You can check for formats supported by the user agent via the {{domxref('Barcode
 
 ### Creating A Detector
 
-This example tests for browser compatibility and creates a new barcode detector object, with specified supported formats.
+This example tests for browser compatibility and creates a new barcode detector object, with specified supported formats.
 
 ```js
 // check compatibility

@@ -10,7 +10,7 @@ browser-compat: api.PerformanceNavigationTiming.domComplete
 ---
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
-The **`domComplete`** read-only property returns a
+The **`domComplete`** read-only property returns a
 {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the
 time immediately before the user agent sets the current document readiness of the
 current document to _[complete](https://html.spec.whatwg.org/multipage/syntax.html#the-end)_.

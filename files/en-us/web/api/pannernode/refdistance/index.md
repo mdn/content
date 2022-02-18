@@ -12,7 +12,7 @@ browser-compat: api.PannerNode.refDistance
 ---
 {{ APIRef("Web Audio API") }}
 
-The `refDistance` property of the {{ domxref("PannerNode") }} interface is a double value representing the reference distance for reducing volume as the audio source moves further from the listener – i.e. the distance at which the volume reduction starts taking effect. This value is used by all distance models.
+The `refDistance` property of the {{ domxref("PannerNode") }} interface is a double value representing the reference distance for reducing volume as the audio source moves further from the listener – i.e. the distance at which the volume reduction starts taking effect. This value is used by all distance models.
 
 The `refDistance` property's default value is `1`.
 

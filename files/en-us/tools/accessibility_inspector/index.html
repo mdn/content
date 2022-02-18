@@ -28,7 +28,7 @@ tags:
 
 <p>When you first open any of the other Developer Tools, the accessibility features are turned off (unless you've already got them turned on in another browser tab, or got the Firefox accessibility engine started already, e.g., you might be a screenreader user or tester).</p>
 
-<p>The accessibility inspector is automatically enabled when you do one of the following (before Firefox 79,  it had to be explicitly enabled):</p>
+<p>The accessibility inspector is automatically enabled when you do one of the following (before Firefox 79,  it had to be explicitly enabled):</p>
 
 <ul>
  <li>Choose <strong>Accessibility</strong> in the <strong>Tools &gt; Web Developer</strong> menu.</li>
@@ -40,7 +40,7 @@ tags:
 <p>Once activated, the accessibility engine remains running until you close the Developer Tools toolbox.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The accessibility engine runs in the background when the accessibility features are turned on. When enabled it may affect the metrics from other panels such as <a href="/en-US/docs/Tools/Memory">Memory</a> and <a href="/en-US/docs/Tools/Performance">Performance</a>, and have some impact on overall browser performance.</p>
+<p><strong>Note</strong>: The accessibility engine runs in the background when the accessibility features are turned on. When enabled it may affect the metrics from other panels such as <a href="/en-US/docs/Tools/Memory">Memory</a> and <a href="/en-US/docs/Tools/Performance">Performance</a>, and have some impact on overall browser performance.</p>
 </div>
 
 <p>If you don't wish to allow the accessibility features to be automatically enabled, you can use the <a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">Configuration Editor</a> (also known as <code>about:config</code>) to define the preference <code>devtools.accessibility.auto-init.enabled</code>, and set it to <code>False</code>.</p>
@@ -105,20 +105,20 @@ tags:
 
 <h3 id="Show_web_page_tabbing_order">Show web page tabbing order</h3>
 
-<p>People who are unable to navigate a page with the mouse or a trackpad can use the <kbd>tab</kbd> key to toggle through focusable items on the page (i.e. buttons, links, form controls). The order that items are focussed is one of the most important aspects of web accessibility, as it allows keyboard users to properly navigate a web page — if the tab order is incorrect, the page may be confusing!</p>
+<p>People who are unable to navigate a page with the mouse or a trackpad can use the <kbd>tab</kbd> key to toggle through focusable items on the page (i.e. buttons, links, form controls). The order that items are focussed is one of the most important aspects of web accessibility, as it allows keyboard users to properly navigate a web page — if the tab order is incorrect, the page may be confusing!</p>
 
-<p>Firefox 84 and later can enable a visual overlay showing the tabbing order. This provides a high-level overview of how the page will be navigated using the <kbd>tab</kbd> key, which may highlight problems more effectively than tabbing through the elements. The overlay is toggled on/off using the <strong>Show Tabbing Order</strong> checkbox.</p>
+<p>Firefox 84 and later can enable a visual overlay showing the tabbing order. This provides a high-level overview of how the page will be navigated using the <kbd>tab</kbd> key, which may highlight problems more effectively than tabbing through the elements. The overlay is toggled on/off using the <strong>Show Tabbing Order</strong> checkbox.</p>
 
 <p><img alt="Accessibility inspector and page with checkbox Show tab order selected." src="accessibility-inspector-show_tab_order.png" style="border-style: solid; border-width: 1px;"></p>
 
-<p>All focusable items have a numbered marker and the currently focussed item is highlighted in a different color. In some cases the marker may be hidden by other elements, as is true for items 1 and 2 in the page below.<br>
+<p>All focusable items have a numbered marker and the currently focussed item is highlighted in a different color. In some cases the marker may be hidden by other elements, as is true for items 1 and 2 in the page below.<br>
  <img alt="A page where some of the markers for selection items are hidden" src="accessibility-inspector-hidden_items.png"><br>
  These become visible in the overlay when the item is the current item.</p>
 
 <p><img alt="Shows a hidden selection item in the tabbing order overlay when it is selected." src="accessibility-inspector-hidden_item_revealed.png"></p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The overlay reflects the tab order at the time that the checkbox is selected (i.e. it is not dynamic). If a user does anything that adds items to the tab order (e.g. opens a visual element that contains more links), these new items will not be reflected in the overlay until the Accessibility Inspector is re-launched.</p>
+<p><strong>Note</strong>: The overlay reflects the tab order at the time that the checkbox is selected (i.e. it is not dynamic). If a user does anything that adds items to the tab order (e.g. opens a visual element that contains more links), these new items will not be reflected in the overlay until the Accessibility Inspector is re-launched.</p>
 </div>
 
 <h3 id="Check_for_accessibility_issues">Check for accessibility issues</h3>
@@ -192,7 +192,7 @@ tags:
 
 <h3 id="Accessibility_picker">Accessibility picker</h3>
 
-<p>Like the element picker button on the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Select_an_element#with_the_node_picker">Page Inspector</a>, the <em>Accessibility</em> tab's element picker button allows you to hover and select UI items on the current page to highlight objects in the accessibility tree.</p>
+<p>Like the element picker button on the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Select_an_element#with_the_node_picker">Page Inspector</a>, the <em>Accessibility</em> tab's element picker button allows you to hover and select UI items on the current page to highlight objects in the accessibility tree.</p>
 
 <p>The accessibility tab element picker looks slightly different from the Page Inspector HTML pane picker, as shown below:</p>
 
@@ -200,7 +200,7 @@ tags:
 
 <p><img alt="highlighted accessibility inspector button, with a tooltip saying Pick accessible object from the page" src="accessibility-inspector-picker.png" style="border-style: solid; border-width: 1px;"></p>
 
-<p>When you "perform a pick", you see the accessibility object highlighted in the accessibility tree, and the picker is then deactivated. Note, however, that if you hold the <kbd>Shift</kbd> key down when "performing a pick", you can "preview" the accessibility object in the tree (and its properties in the right-hand pane), but then continue picking as many times as you like (the picker does not get cancelled) until you release the <kbd>Shift</kbd> key.</p>
+<p>When you "perform a pick", you see the accessibility object highlighted in the accessibility tree, and the picker is then deactivated. Note, however, that if you hold the <kbd>Shift</kbd> key down when "performing a pick", you can "preview" the accessibility object in the tree (and its properties in the right-hand pane), but then continue picking as many times as you like (the picker does not get cancelled) until you release the <kbd>Shift</kbd> key.</p>
 
 <p>When the picker is activated, you can also deactivate it by pressing the picker button a second time, or pressing the <kbd>Esc</kbd> key.</p>
 

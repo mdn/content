@@ -28,7 +28,7 @@ A {{domxref("DOMString")}} which can be used to identify the animation, or `null
 
 ## Examples
 
-In the [Follow the White Rabbit example](https://codepen.io/rachelnabors/pen/eJyWzm?editors=0010), you can assign the `rabbitDownAnimation` an `id` like so:
+In the [Follow the White Rabbit example](https://codepen.io/rachelnabors/pen/eJyWzm?editors=0010), you can assign the `rabbitDownAnimation` an `id` like so:
 
 ```js
 rabbitDownAnimation.effect.id = "rabbitGo";

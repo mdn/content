@@ -14,7 +14,7 @@ browser-compat: api.SubtleCrypto.importKey
 
 The **`importKey()`** method of the {{domxref("SubtleCrypto")}}
 interface imports a key: that is, it takes as input a key in an external, portable
-format and gives you a {{domxref("CryptoKey")}} object that you can use in the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API).
+format and gives you a {{domxref("CryptoKey")}} object that you can use in the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API).
 
 The function accepts several import formats: see [Supported
 formats](#supported_formats) for details.
@@ -48,11 +48,11 @@ const result = crypto.subtle.importKey(
 - _`algorithm`_ is a dictionary object defining the type of key to
   import and providing extra algorithm-specific parameters.
 
-  - For [RSASSA-PKCS1-v1_5](/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss), or [RSA-OAEP](/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep): Pass an
+  - For [RSASSA-PKCS1-v1_5](/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss), or [RSA-OAEP](/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep): Pass an
     [`RsaHashedImportParams`](/en-US/docs/Web/API/RsaHashedImportParams)
     object.
   - For [ECDSA](/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa) or [ECDH](/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh): Pass
-    an [`EcKeyImportParams`](/en-US/docs/Web/API/EcKeyImportParams)
+    an [`EcKeyImportParams`](/en-US/docs/Web/API/EcKeyImportParams)
     object.
   - For [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac): Pass an
     [`HmacImportParams`](/en-US/docs/Web/API/HmacImportParams)
@@ -61,7 +61,7 @@ const result = crypto.subtle.importKey(
     string identifying the algorithm or an object of the form
     `{ "name": ALGORITHM }`, where `ALGORITHM` is the name of
     the algorithm.
-  - For [PBKDF2](/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2) :
+  - For [PBKDF2](/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2) :
     Pass the string `PBKDF2`.
   - For [HKDF](/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf): Pass the
     string `HKDF`.

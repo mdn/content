@@ -16,7 +16,7 @@ You can find more about many of the things discussed this page on [Extension Wor
 
 You don't need any special development or build environment tools to create browser extensions: It's entirely possible to create great browser extensions with no more than a text editor. However, you may have been developing for the web and have a set of tools and an environment you want to reuse. If you do, you need to be aware of a couple of things.
 
-If you use minification or obfuscation tools to deliver your final code, you’ll need to provide your source code to [the AMO review process](#the_review_process). Also, the tools you use—those for minification,  obfuscation, and build processes—will need to be open source (or offer unlimited free use) and be available to run on the reviewer’s computer (Windows, Mac, or Linux). Unfortunately, our reviewers can't work with commercial or web-based tools.
+If you use minification or obfuscation tools to deliver your final code, you’ll need to provide your source code to [the AMO review process](#the_review_process). Also, the tools you use—those for minification,  obfuscation, and build processes—will need to be open source (or offer unlimited free use) and be available to run on the reviewer’s computer (Windows, Mac, or Linux). Unfortunately, our reviewers can't work with commercial or web-based tools.
 
 [Learn more about development tools on Extension Workshop](https://extensionworkshop.com/documentation/develop/browser-extension-development-tools/)
 

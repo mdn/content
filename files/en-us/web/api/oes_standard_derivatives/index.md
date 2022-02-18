@@ -18,7 +18,7 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 
 ## Constants
 
-This extension exposes one new constant, which can be used in the {{domxref("WebGLRenderingContext.hint()", "hint()")}} and {{domxref("WebGLRenderingContext.getParameter()", "getParameter()")}} methods.
+This extension exposes one new constant, which can be used in the {{domxref("WebGLRenderingContext.hint()", "hint()")}} and {{domxref("WebGLRenderingContext.getParameter()", "getParameter()")}} methods.
 
 - `ext.FRAGMENT_SHADER_DERIVATIVE_HINT_OES`
   - : A {{domxref("WebGL_API.Types")}} indicating the accuracy of the derivative calculation for the GLSL built-in functions: `dFdx`, `dFdy`, and `fwidth`.

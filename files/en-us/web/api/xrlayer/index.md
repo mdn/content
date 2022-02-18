@@ -13,7 +13,7 @@ browser-compat: api.XRLayer
 ---
 {{APIRef("WebXR Device API")}} {{secureContext_header}}
 
-The **`XRLayer`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) is the base class for WebXR layer types. It inherits methods from {{domxref("EventTarget")}}.
+The **`XRLayer`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) is the base class for WebXR layer types. It inherits methods from {{domxref("EventTarget")}}.
 
 {{InheritanceDiagram}}
 

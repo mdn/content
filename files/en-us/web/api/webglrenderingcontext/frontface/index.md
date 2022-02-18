@@ -24,7 +24,7 @@ void gl.frontFace(mode);
 
 - mode
 
-  - : A [GLenum](/en-US/docs/Web/API/WebGL_API/Types) type winding orientation.
+  - : A [GLenum](/en-US/docs/Web/API/WebGL_API/Types) type winding orientation.
     The default value is `gl.CCW`. Possible values:
 
     - `gl.CW`: Clock-wise winding.

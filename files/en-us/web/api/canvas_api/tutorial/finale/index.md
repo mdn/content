@@ -30,7 +30,7 @@ These APIs might be useful when working further with canvas and graphics:
 - [SVG](/en-US/docs/Web/SVG)
   - : Scalable Vector Graphics let you describe images as sets of vectors (lines) and shapes in order to allow them to scale smoothly regardless of the size at which they're drawn.
 - [Web Audio](/en-US/docs/Web/API/Web_Audio_API)
-  - : The Web Audio API provides a powerful and versatile system for controlling audio on the Web, allowing developers to choose audio sources, add effects to audio, create audio visualizations, apply spatial effects (such as panning)  and much more.
+  - : The Web Audio API provides a powerful and versatile system for controlling audio on the Web, allowing developers to choose audio sources, add effects to audio, create audio visualizations, apply spatial effects (such as panning)  and much more.
 
 ## Questions
 

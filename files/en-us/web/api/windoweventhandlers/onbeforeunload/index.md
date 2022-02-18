@@ -60,7 +60,7 @@ Guarantee the browser unload by removing the _returnValue_ property of the event
 
 ```js
 window.addEventListener('beforeunload', function (e) {
-  // the absence of a returnValue property on the event will guarantee the browser unload happens
+  // the absence of a returnValue property on the event will guarantee the browser unload happens
   delete e['returnValue'];
 });
 ```
@@ -111,6 +111,6 @@ for confirmation at all. In such cases, the document will always be unloaded
 automatically. Firefox has a switch named `dom.disable_beforeunload` in
 _about:config_ to enable this behavior. As of Chrome 60, the confirmation [will be skipped](https://www.chromestatus.com/feature/5082396709879808) if
 the user has not performed a gesture in the frame or page since it was loaded. Pressing
-F5 in the page seems to count as user interaction, whereas mouse-clicking the refresh
+F5 in the page seems to count as user interaction, whereas mouse-clicking the refresh
 arrow or pressing F5 with Chrome DevTools focused does not count as user interaction (as
 of Chrome 81).

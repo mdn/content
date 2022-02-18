@@ -25,7 +25,7 @@ var mySource = extendableMessageEvent.source;
 
 ### Value
 
-A {{domxref("Client")}}, {{domxref("ServiceWorker")}} or {{domxref("MessagePort")}}
+A {{domxref("Client")}}, {{domxref("ServiceWorker")}} or {{domxref("MessagePort")}}
 object.
 
 ## Examples

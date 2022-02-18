@@ -26,12 +26,12 @@ This article provides information about the changes in Firefox 59 that will affe
 
 ### CSS
 
-- The {{cssxref("overscroll-behavior")}} property and its associated longhand properties — {{cssxref("overscroll-behavior-x")}} and {{cssxref("overscroll-behavior-y")}} — have been implemented ({{bug(951793)}}), and it has been enabled by default on all releases ({{bug(1428879)}}).
+- The {{cssxref("overscroll-behavior")}} property and its associated longhand properties — {{cssxref("overscroll-behavior-x")}} and {{cssxref("overscroll-behavior-y")}} — have been implemented ({{bug(951793)}}), and it has been enabled by default on all releases ({{bug(1428879)}}).
 - The behavior of "unusual elements" (elements that aren’t rendered purely by CSS box concepts such as replaced elements) when given a {{cssxref("display")}} value of `contents` has been updated as per spec ({{bug(1427292)}}). See [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) for exactly what the specified behaviors are.
 - {{cssxref("position")}} `sticky` is now supported on appropriate [HTML table](/en-US/docs/Learn/HTML/Tables) parts (e.g. {{htmlelement("th")}} elements) ({{bug(975644)}}).
 - {{cssxref("calc()")}} is now supported in {{cssxref("&lt;color&gt;")}} values — `rgb()`, `rgba()`, `hsl()`, and `hsla()` ({{bug(984021)}}).
 - {{cssxref("calc()")}} in [media query](/en-US/docs/Web/CSS/Media_Queries) values is now supported {{bug(1396057)}}.
-- The {{cssxref("@document")}} at-rule has been limited to use only in user and UA sheets ({{bug(1035091)}}).
+- The {{cssxref("@document")}} at-rule has been limited to use only in user and UA sheets ({{bug(1035091)}}).
 - Implement the {{cssxref("font-optical-sizing")}} property ({{bug(1435692)}}).
 
 ### SVG
@@ -61,7 +61,7 @@ _No changes._
 
 - The service worker [Clients API](/en-US/docs/Web/API/Clients) can now find and communicate with windows in a separate browser process ({{bug(1293277)}}) .
 - Nested about:blank and about:srcdoc iframes will now inherit their parent's controlling service worker. Fixed in ({{bug(1293277)}}) and ({{bug(1426979)}}).
-- When a service worker provides a {{domxref("Response")}} to {{domxref("FetchEvent.respondWith()")}}, the {{domxref("Response.url")}} value will now be propagated to the intercepted network request as the final resolved URL.  In the past the {{domxref("Request.url","FetchEvent.request.url")}} was used for this instead.  This means, for example, if a service worker intercepts a stylesheet or worker script, then the provided `Response.url` will be used to resolve any relative {{cssxref("@import")}} or {{domxref("WorkerGlobalScope.importScripts()","importScripts()")}} subresource loads ({{bug(1222008)}}).
+- When a service worker provides a {{domxref("Response")}} to {{domxref("FetchEvent.respondWith()")}}, the {{domxref("Response.url")}} value will now be propagated to the intercepted network request as the final resolved URL.  In the past the {{domxref("Request.url","FetchEvent.request.url")}} was used for this instead.  This means, for example, if a service worker intercepts a stylesheet or worker script, then the provided `Response.url` will be used to resolve any relative {{cssxref("@import")}} or {{domxref("WorkerGlobalScope.importScripts()","importScripts()")}} subresource loads ({{bug(1222008)}}).
 - `FetchEvent.respondWith()` will now trigger a network error if the {{domxref("Request.mode","FetchEvent.request.mode")}} is `"same-origin"` and the provided {{domxref("Response.type")}} is `"cors"`. ({{bug(1222008)}})
 
 #### Media and WebRTC
@@ -109,7 +109,7 @@ _No changes._
 
 ### HTML
 
-The non-standard `version` parameter of the {{htmlelement("script")}} element's {{htmlattrxref("type","script")}} attribute (e.g.  `type="application/javascript;version=1.8"`) has been removed ({{bug(1428745)}}).
+The non-standard `version` parameter of the {{htmlelement("script")}} element's {{htmlattrxref("type","script")}} attribute (e.g.  `type="application/javascript;version=1.8"`) has been removed ({{bug(1428745)}}).
 
 ### CSS
 

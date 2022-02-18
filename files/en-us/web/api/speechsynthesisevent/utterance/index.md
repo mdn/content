@@ -26,7 +26,7 @@ A {{domxref("SpeechSynthesisUtterance")}} object.
 utterThis.onpause = function(event) {
   var char = event.utterance.text.charAt(event.charIndex);
   console.log('Speech paused at character ' + event.charIndex + ' of "' +
-  event.utterance.text + '", which is "' + char + '".');
+  event.utterance.text + '", which is "' + char + '".');
 }
 ```
 

@@ -21,7 +21,7 @@ tags:
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
 
 Welcome to the MDN beginner's JavaScript course!
-In this article we will look at JavaScript from a high level, answering questions such as "What is it?" and "What can you do with it?", and making sure you are comfortable with JavaScript's purpose.
+In this article we will look at JavaScript from a high level, answering questions such as "What is it?" and "What can you do with it?", and making sure you are comfortable with JavaScript's purpose.
 
 <table>
   <tbody>
@@ -100,7 +100,7 @@ JavaScript can do a lot more than that — let's explore what in more detail.
 
 ## So what can it really do?
 
-The core client-side JavaScript language consists of some common programming features that allow you to do things like:
+The core client-side JavaScript language consists of some common programming features that allow you to do things like:
 
 - Store useful values inside variables. In the above example for instance, we ask for a new name to be entered then store that name in a variable called `name`.
 - Operations on pieces of text (known as "strings" in programming). In the above example we take the string "Player 1: " and join it to the `name` variable to create the complete text label, e.g. ''Player 1: Chris".
@@ -175,7 +175,7 @@ function updateName() {
 }
 ```
 
-Here we are selecting a text paragraph (line 1), then attaching an event listener to it (line 3) so that when the paragraph is clicked, the `updateName()` code block (lines 5–8) is run. The `updateName()` code block (these types of reusable code blocks are called "functions") asks the user for a new name, and then inserts that name into the paragraph to update the display.
+Here we are selecting a text paragraph (line 1), then attaching an event listener to it (line 3) so that when the paragraph is clicked, the `updateName()` code block (lines 5–8) is run. The `updateName()` code block (these types of reusable code blocks are called "functions") asks the user for a new name, and then inserts that name into the paragraph to update the display.
 
 If you swapped the order of the first two lines of code, it would no longer work — instead, you'd get an error returned in the [browser developer console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) — `TypeError: para is undefined`.
 This means that the `para` object does not exist yet, so we can't add an event listener to it.
@@ -193,9 +193,9 @@ Compiled languages on the other hand are transformed (compiled) into another for
 For example, C/C++ are compiled into machine code that is then run by the computer.
 The program is executed from a binary format, which was generated from the original program source code.
 
-JavaScript is a lightweight interpreted programming language.
+JavaScript is a lightweight interpreted programming language.
 The web browser receives the JavaScript code in its original text form and runs the script from that.
-From a technical standpoint, most modern JavaScript interpreters actually use a technique called **just-in-time compiling** to improve performance; the JavaScript source code gets compiled into a faster, binary format while the script is being used, so that it can be run as quickly as possible.
+From a technical standpoint, most modern JavaScript interpreters actually use a technique called **just-in-time compiling** to improve performance; the JavaScript source code gets compiled into a faster, binary format while the script is being used, so that it can be run as quickly as possible.
 However, JavaScript is still considered an interpreted language, since the compilation is handled at run time, rather than ahead of time.
 
 There are advantages to both types of language, but we won't discuss them right now.
@@ -204,10 +204,10 @@ There are advantages to both types of language, but we won't discuss them right 
 
 You might also hear the terms **server-side** and **client-side** code, especially in the context of web development.
 Client-side code is code that is run on the user's computer — when a web page is viewed, the page's client-side code is downloaded, then run and displayed by the browser.
-In this module we are explicitly talking about **client-side JavaScript**.
+In this module we are explicitly talking about **client-side JavaScript**.
 
 Server-side code on the other hand is run on the server, then its results are downloaded and displayed in the browser.
-Examples of popular server-side web languages include PHP, Python, Ruby, ASP.NET and... JavaScript!
+Examples of popular server-side web languages include PHP, Python, Ruby, ASP.NET and... JavaScript!
 JavaScript can also be used as a server-side language, for example in the popular Node.js environment — you can find out more about server-side JavaScript in our [Dynamic Websites – Server-side programming](/en-US/docs/Learn/Server-side) topic.
 
 ### Dynamic versus static code
@@ -237,7 +237,7 @@ Whereas CSS uses {{htmlelement("link")}} elements to apply external stylesheets 
    </script>
    ```
 
-4. Now we'll add some JavaScript inside our {{htmlelement("script")}} element to make the page do something more interesting — add the following code just below the "// JavaScript goes here" line:
+4. Now we'll add some JavaScript inside our {{htmlelement("script")}} element to make the page do something more interesting — add the following code just below the "// JavaScript goes here" line:
 
    ```js
    document.addEventListener('DOMContentLoaded', () => {
@@ -268,7 +268,7 @@ Whereas CSS uses {{htmlelement("link")}} elements to apply external stylesheets 
 
 This works great, but what if we wanted to put our JavaScript in an external file? Let's explore this now.
 
-1. First, create a new file in the same directory as your sample HTML file. Call it `script.js` — make sure it has that .js filename extension, as that's how it is recognized as JavaScript.
+1. First, create a new file in the same directory as your sample HTML file. Call it `script.js` — make sure it has that .js filename extension, as that's how it is recognized as JavaScript.
 2. Replace your current {{htmlelement("script")}} element with the following:
 
    ```html
@@ -293,7 +293,7 @@ This works great, but what if we wanted to put our JavaScript in an external fil
 
 4. Save and refresh your browser, and you should see the same thing!
    It works just the same, but now we've got our JavaScript in an external file.
-   This is generally a good thing in terms of organizing your code and making it reusable across multiple HTML files.
+   This is generally a good thing in terms of organizing your code and making it reusable across multiple HTML files.
    Plus, the HTML is easier to read without huge chunks of script dumped in it.
 
 > **Note:** You can see this version on GitHub as [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) and [script.js](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/script.js) ([see it live too](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)).
@@ -374,7 +374,7 @@ In this case both the script and the HTML will load simultaneously and the code 
 
 > **Note:** In the external case, we did not need to use the `DOMContentLoaded` event because the `defer` attribute solved the problem for us. We didn't use the `defer` solution for the internal JavaScript example because `defer` only works for external scripts.
 
-An old-fashioned solution to this problem used to be to put your script element right at the bottom of the body (e.g. just before the `</body>` tag), so that it would load after all the HTML has been parsed.
+An old-fashioned solution to this problem used to be to put your script element right at the bottom of the body (e.g. just before the `</body>` tag), so that it would load after all the HTML has been parsed.
 The problem with this solution is that loading/parsing of the script is completely blocked until the HTML DOM has been loaded.
 On larger sites with lots of JavaScript, this can cause a major performance issue, slowing down your site.
 
@@ -432,8 +432,8 @@ To summarize:
 - scripts with an `async` attribute will execute as soon as the download is complete.
   This blocks the page and does not guarantee any specific execution order.
 - scripts with a `defer` attribute will load in the order they are in and will only execute once everything has finished loading.
-- If your scripts should be run immediately and they don't have any dependencies, then use `async`.
-- If your scripts need to wait for parsing and depend on other scripts and/or the DOM being in place, load them using `defer` and put their corresponding `<script>` elements in the order you want the browser to execute them.
+- If your scripts should be run immediately and they don't have any dependencies, then use `async`.
+- If your scripts need to wait for parsing and depend on other scripts and/or the DOM being in place, load them using `defer` and put their corresponding `<script>` elements in the order you want the browser to execute them.
 
 ## Comments
 

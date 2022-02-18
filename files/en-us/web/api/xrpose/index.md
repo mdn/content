@@ -34,7 +34,7 @@ To obtain the `XRPose` for the `XRSpace` used as the local coordinate system of 
 thePose = xrFrame.getPose(localSpace, baseSpace);
 ```
 
-The pose for a viewer (or camera) is represented by the {{domxref("XRViewerPose")}} subclass of `XRPose`. This is obtained using {{domxref("XRFrame.getViewerPose()")}}  instead of `getPose()`, specifying a reference space which has been adjusted to position and orient the node to provide the desired viewing position and angle:
+The pose for a viewer (or camera) is represented by the {{domxref("XRViewerPose")}} subclass of `XRPose`. This is obtained using {{domxref("XRFrame.getViewerPose()")}}  instead of `getPose()`, specifying a reference space which has been adjusted to position and orient the node to provide the desired viewing position and angle:
 
 ```js
 viewerPose = xrFrame.getViewerPose(adjReferenceSpace);
@@ -48,7 +48,7 @@ See the article [Movement, orientation, and motion](/en-US/docs/Web/API/WebXR_De
 
 - {{DOMxRef("XRPose.angularVelocity")}} {{readonlyInline}}
   - : A {{DOMxRef("DOMPointReadOnly")}} describing the angular velocity in radians per second relative to the base {{DOMxRef("XRSpace")}}.
-- {{DOMxRef("XRPose.emulatedPosition")}} {{readonlyInline}}
+- {{DOMxRef("XRPose.emulatedPosition")}} {{readonlyInline}}
   - : A Boolean value which is `false` if the position and orientation given by {{DOMxRef("XRPose.transform", "transform")}} is obtained directly from a full six degree of freedom (6DoF) XR device (that is, a device which tracks not only the pitch, yaw, and roll of the head but also the forward, backward, and side-to-side motion of the viewer). If any component of the `transform` is computed or created artificially (such as by using mouse or keyboard controls to move through space), this value is instead `true`, indicating that the `transform` is in part emulated in software.
 - {{DOMxRef("XRPose.linearVelocity")}} {{readonlyInline}}
   - : A {{DOMxRef("DOMPointReadOnly")}} describing the linear velocity in meters per second relative to the base {{DOMxRef("XRSpace")}}.

@@ -17,7 +17,7 @@ browser-compat: webextensions.api.tabs.update
 
 Navigate the tab to a new URL, or modify other properties of the tab.
 
-To use this function, pass the ID of the tab to update, and an `updateProperties` object containing the properties you want to update. Properties that are not specified in `updateProperties` are not modified.
+To use this function, pass the ID of the tab to update, and an `updateProperties` object containing the properties you want to update. Properties that are not specified in `updateProperties` are not modified.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -39,7 +39,7 @@ var updating = browser.tabs.update(
   - : `object`. The set of properties to update for this tab. To learn more about these properties, see the {{WebExtAPIRef("tabs.Tab")}} documentation.
 
     - `active`{{optional_inline}}
-      - : `boolean`. Whether the tab should become active. Does not affect whether the window is focused (see {{WebExtAPIRef('windows.update')}}). If `true`, non-active highlighted tabs will stop being highlighted. If `false`, does nothing.
+      - : `boolean`. Whether the tab should become active. Does not affect whether the window is focused (see {{WebExtAPIRef('windows.update')}}). If `true`, non-active highlighted tabs will stop being highlighted. If `false`, does nothing.
     - `autoDiscardable`{{optional_inline}}
       - : `boolean`. Whether the tab should be discarded automatically by the browser when resources are low.
     - `highlighted`{{optional_inline}}
@@ -82,7 +82,7 @@ var updating = browser.tabs.update(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the updated tab. The {{WebExtAPIRef('tabs.Tab')}} object doesn't contain `url`, `title` and `favIconUrl` unless matching [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or the `"tabs"` permission has been requested. If the tab could not be found or some other error occurs, the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the updated tab. The {{WebExtAPIRef('tabs.Tab')}} object doesn't contain `url`, `title` and `favIconUrl` unless matching [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or the `"tabs"` permission has been requested. If the tab could not be found or some other error occurs, the promise will be rejected with an error message.
 
 ## Examples
 

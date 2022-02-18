@@ -30,7 +30,7 @@ An `unsigned short`. Possible values are:
 | `NETWORK_EMPTY`     | 0     | There is no data yet. Also, `readyState` is `HAVE_NOTHING`.                           |
 | `NETWORK_IDLE`      | 1     | HTMLMediaElement is active and has selected a resource, but is not using the network. |
 | `NETWORK_LOADING`   | 2     | The browser is downloading HTMLMediaElement data.                                     |
-| `NETWORK_NO_SOURCE` | 3     | No HTMLMediaElement src found.                                                        |
+| `NETWORK_NO_SOURCE` | 3     | No HTMLMediaElement src found.                                                        |
 
 ## Examples
 

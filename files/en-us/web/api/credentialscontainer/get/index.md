@@ -29,7 +29,7 @@ each credential type allowed by the **`options`** argument. For
 example: if options.password exists, then the
 {{domxref("PasswordCredential")}}.\[\[CollectFromCredentialStore]] is called.
 
-> **Note:** This method is restricted to top-level contexts. Calls to it within an
+> **Note:** This method is restricted to top-level contexts. Calls to it within an
 > `<iframe>` element will resolve without effect.
 
 ## Syntax

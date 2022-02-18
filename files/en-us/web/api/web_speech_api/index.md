@@ -13,7 +13,7 @@ tags:
 {{DefaultAPISidebar("Web Speech API")}}
 
 The **Web Speech API** enables you to incorporate voice data into web apps.
-The Web Speech API has two parts: `SpeechSynthesis` (Text-to-Speech), and `SpeechRecognition` (Asynchronous Speech Recognition.)
+The Web Speech API has two parts: `SpeechSynthesis` (Text-to-Speech), and `SpeechRecognition` (Asynchronous Speech Recognition.)
 
 ## Web Speech Concepts and Usage
 

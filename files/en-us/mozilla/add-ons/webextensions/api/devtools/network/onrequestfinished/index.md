@@ -61,7 +61,7 @@ function handleRequestFinished(request) {
   console.log("Server IP: ", request.serverIPAddress);
   request.getContent().then(([content, mimeType]) => {
     console.log("Content: ", content);
-    console.log("MIME type: ", mimeType);
+    console.log("MIME type: ", mimeType);
   });
 }
 

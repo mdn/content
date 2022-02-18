@@ -33,7 +33,7 @@ live](https://mdn.github.io/webaudio-examples/audiocontext-states/).) The `onsta
 
 ```js
 audioCtx.onstatechange = function() {
-  console.log(audioCtx.state);
+  console.log(audioCtx.state);
 }
 ```
 

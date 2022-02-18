@@ -34,7 +34,7 @@ For the {{event("drop")}} and {{event("dragend")}} events, `dropEffect` will
 be set to the action that was desired, which will be the value `dropEffect`
 had after the last {{event("dragenter")}} or {{event("dragover")}} event. In a
 {{event("dragend")}} event, for instance, if the desired dropEffect is "move", then the
-data being dragged should be removed from the source.
+data being dragged should be removed from the source.
 
 ## Syntax
 

@@ -62,7 +62,7 @@ _No change._
 
 ### Network
 
-- Removed the non-standard feature `XMLHttpRequest.onuploadprogress` which was deprecated in Firefox 14.
+- Removed the non-standard feature `XMLHttpRequest.onuploadprogress` which was deprecated in Firefox 14.
 
 _No change._
 

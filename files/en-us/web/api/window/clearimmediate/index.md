@@ -30,12 +30,12 @@ where immediateID is a ID returned by {{DOMxRef("window.setImmediate")}}.
 
 ```js
 let immediateID = setImmediate(() => {
-  // Run some code
+  // Run some code
 }
 
 document.getElementById("button")
   .addEventListener(() => {
-  clearImmediate(immediateID);
+  clearImmediate(immediateID);
 });
 ```
 

@@ -7,7 +7,7 @@ tags:
   - XML
   - XPath
 ---
-**XPath** is a query language that can access sections and content in an {{glossary("XML")}} document.
+**XPath** is a query language that can access sections and content in an {{glossary("XML")}} document.
 
 ## See also
 

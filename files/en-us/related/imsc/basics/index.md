@@ -27,7 +27,7 @@ If you are not already familiar with XML or HTML, read up on them first and then
 
 IMSC is always specified as a complete XML document. As a file it should have the extension "_ttml_".
 
-> **Note:** IMSC does not have native support in browsers at this current moment, but the [imscJS](https://github.com/sandflow/imscJS) polyfill can be used to bridge this gap. All the examples below are rendered by using imscJS. It creates dynamically HTML and CSS from an IMSC  XML document.
+> **Note:** IMSC does not have native support in browsers at this current moment, but the [imscJS](https://github.com/sandflow/imscJS) polyfill can be used to bridge this gap. All the examples below are rendered by using imscJS. It creates dynamically HTML and CSS from an IMSC  XML document.
 
 Let’s look at a minimal IMSC document and how it is rendered:
 
@@ -89,7 +89,7 @@ Try setting some other colors for the text and background colors:
 
 > **Note:** Don’t worry for now about namespaces. We will explain the meaning of `xmlns:tts` and `tts:backgroundColor` in a separate guide.
 
-As explained in the [IMSC Styling](/en-US/docs/Related/IMSC/Styling) guide, it is possible to define a collection of styling properties that can be used any number of times. The style `s1` below is applied three times:
+As explained in the [IMSC Styling](/en-US/docs/Related/IMSC/Styling) guide, it is possible to define a collection of styling properties that can be used any number of times. The style `s1` below is applied three times:
 
 ```xml
 <tt xmlns="http://www.w3.org/ns/ttml"
@@ -121,23 +121,23 @@ See below for a minimal document that uses regions for positioning.
 <tt xmlns="http://www.w3.org/ns/ttml"
  xmlns:tts="http://www.w3.org/ns/ttml#styling"
  xml:lang="en">
-  <head>
-    <layout>
-      <region tts:origin="10% 80%"
-              tts:extent="80% 20%"
-              xml:id="bottom"/>
-      <region tts:origin="10% 10%"
-              tts:extent="80% 20%"
-              xml:id="top"/>
-    </layout>
+  <head>
+    <layout>
+      <region tts:origin="10% 80%"
+              tts:extent="80% 20%"
+              xml:id="bottom"/>
+      <region tts:origin="10% 10%"
+              tts:extent="80% 20%"
+              xml:id="top"/>
+    </layout>
 </head>
 <body>
-    <div>
-      <p region="bottom"
-          tts:backgroundColor="black">
-          Hello, I am Mork from Ork.
-      </p>
-    </div>
+    <div>
+      <p region="bottom"
+          tts:backgroundColor="black">
+          Hello, I am Mork from Ork.
+      </p>
+    </div>
   </body>
 </tt>
 ```

@@ -43,7 +43,7 @@ browser.runtime.getManifest().version;
 
 The block below shows the basic syntax for some common manifest keys.
 
-> **Note:** This is not intended to be used as a copy-paste-ready example. Selecting the keys you'll need depends on the extension you are developing.
+> **Note:** This is not intended to be used as a copy-paste-ready example. Selecting the keys you'll need depends on the extension you are developing.
 
 For complete example extensions, see [Example extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples).
 
@@ -71,11 +71,11 @@ For complete example extensions, see [Example extensions](/en-US/docs/Mozilla/Ad
 
   "commands": {
     "toggle-feature": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+Y",
-        "linux": "Ctrl+Shift+U"
-      },
-      "description": "Send a 'toggle-feature' event"
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "linux": "Ctrl+Shift+U"
+      },
+      "description": "Send a 'toggle-feature' event"
     }
   },
 

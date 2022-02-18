@@ -35,7 +35,7 @@ window.onvrdisplayconnect = function() { /* ... */ };
 
 ```js
 window.onvrdisplayconnect = function() {
-  info.textContent = 'Display connected.';
+  info.textContent = 'Display connected.';
 };
 ```
 

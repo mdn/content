@@ -150,7 +150,7 @@ To define the default value of an {{HTMLElement("input")}} element you have to u
 <input type="text" value="by default this element is filled with this text">
 ```
 
-On the other hand,  if you want to define a default value for a {{HTMLElement("textarea")}}, you put it between the opening and closing tags of the {{HTMLElement("textarea")}} element, like this:
+On the other hand,  if you want to define a default value for a {{HTMLElement("textarea")}}, you put it between the opening and closing tags of the {{HTMLElement("textarea")}} element, like this:
 
 ```html
 <textarea>
@@ -161,7 +161,7 @@ by default this element is filled with this text
 ### The `<button>` element
 
 The markup for our form is almost complete; we just need to add a button to allow the user to send, or "submit", their data once they have filled out the form.
-This is done by using the {{HTMLelement("button")}} element; add the following just above the closing `</ul>` tag:
+This is done by using the {{HTMLelement("button")}} element; add the following just above the closing `</ul>` tag:
 
 ```html
 <li class="button">
@@ -171,9 +171,9 @@ This is done by using the {{HTMLelement("button")}} element; add the following j
 
 The {{htmlelement("button")}} element also accepts a `type` attribute — this accepts one of three values: `submit`, `reset`, or `button`.
 
-- A click on a `submit` button (the default value) sends the form's data to the web page defined by the `action` attribute of the {{HTMLelement("form")}} element.
-- A click on a `reset` button resets all the form widgets to their default value immediately. From a UX point of view, this is considered bad practice, so you should avoid using this type of button unless you really have a good reason to include one.
-- A click on a `button` button does... nothing! That sounds silly, but it's amazingly useful for building custom buttons — you can define their chosen functionality with JavaScript.
+- A click on a `submit` button (the default value) sends the form's data to the web page defined by the `action` attribute of the {{HTMLelement("form")}} element.
+- A click on a `reset` button resets all the form widgets to their default value immediately. From a UX point of view, this is considered bad practice, so you should avoid using this type of button unless you really have a good reason to include one.
+- A click on a `button` button does... nothing! That sounds silly, but it's amazingly useful for building custom buttons — you can define their chosen functionality with JavaScript.
 
 > **Note:** You can also use the {{HTMLElement("input")}} element with the corresponding `type` to produce a button, for example `<input type="submit">`. The main advantage of the {{HTMLelement("button")}} element is that the {{HTMLelement("input")}} element only allows plain text in its label whereas the {{HTMLelement("button")}} element allows full HTML content, allowing more complex, creative button content.
 
@@ -208,7 +208,7 @@ form {
 
 ul {
   list-style: none;
-  padding: 0;
+  padding: 0;
   margin: 0;
 }
 
@@ -270,7 +270,7 @@ Save and reload, and you'll see that your form should look much less ugly.
 ## Sending form data to your web server
 
 The last part, and perhaps the trickiest, is to handle form data on the server side.
-The {{HTMLelement("form")}} element defines where and how to send the data thanks to the [`action`](/en-US/docs/Web/HTML/Attributes/action) and [`method`](/en-US/docs/Web/HTML/Attributes/method) attributes.
+The {{HTMLelement("form")}} element defines where and how to send the data thanks to the [`action`](/en-US/docs/Web/HTML/Attributes/action) and [`method`](/en-US/docs/Web/HTML/Attributes/method) attributes.
 
 We provide a [`name`](/en-US/docs/Web/HTML/Attributes/name) to each form control.
 The names are important on both the client- and server-side; they tell the browser which name to give each piece of data and, on the server side, they let the server handle each piece of data by name.
@@ -312,7 +312,7 @@ Congratulations, you've built your first web form. It looks like this live:
 
 {{ EmbedLiveSample('A_simple_form', '100%', '240', '', 'Learn/Forms/Your_first_form/Example') }}
 
-That's only the beginning, however — now it's time to take a deeper look. Forms have way more power than what we saw here and the other articles in this module will help you to master the rest.
+That's only the beginning, however — now it's time to take a deeper look. Forms have way more power than what we saw here and the other articles in this module will help you to master the rest.
 
 {{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
 

@@ -50,7 +50,7 @@ Events have three functions:
 
 ```js
 browser.omnibox.onInputStarted.addListener(() => {
-  console.log("User has started interacting with me.")
+  console.log("User has started interacting with me.")
 });
 ```
 

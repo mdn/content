@@ -46,7 +46,7 @@ Events have three functions:
 
       - : {{WebExtAPIRef('history.HistoryItem')}}. An object representing the item in the browser's history.
 
-        At the time that this event is sent, the browser doesn't yet know the title of the page. If the browser has visited this page before and has remembered its old title, then the `HistoryItem.title` object will contain the old title of the page. If the browser doesn't have a record of the page's old title, then `HistoryItem.title` will be empty. To get the titles of pages as soon as they are known, listen for {{WebExtAPIRef("history.onTitleChanged")}}.
+        At the time that this event is sent, the browser doesn't yet know the title of the page. If the browser has visited this page before and has remembered its old title, then the `HistoryItem.title` object will contain the old title of the page. If the browser doesn't have a record of the page's old title, then `HistoryItem.title` will be empty. To get the titles of pages as soon as they are known, listen for {{WebExtAPIRef("history.onTitleChanged")}}.
 
 ## Browser compatibility
 

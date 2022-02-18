@@ -24,7 +24,7 @@ It can be one of the following:
 - `opaque`: Response for “no-cors” request to cross-origin resource.
   [Severely restricted](https://fetch.spec.whatwg.org/#concept-filtered-response-opaque).
 - `opaqueredirect`: The fetch request was made with `redirect: "manual"`.
-  The Response's status is 0, headers are empty, body is null and trailer is empty.
+  The Response's status is 0, headers are empty, body is null and trailer is empty.
 
 > **Note:** An "error" Response never really gets exposed to script: such a response to a {{domxref("fetch()")}} would reject the promise.
 
@@ -34,7 +34,7 @@ A `ResponseType` string indicating the type of the response.
 
 ## Example
 
-In our [Fetch Response example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response) (see [Fetch Response live](https://mdn.github.io/fetch-examples/fetch-response/)) we create a new {{domxref("Request")}} object using the {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path.
+In our [Fetch Response example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response) (see [Fetch Response live](https://mdn.github.io/fetch-examples/fetch-response/)) we create a new {{domxref("Request")}} object using the {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path.
 We then fetch this request using {{domxref("fetch()")}}, extract a blob from the response using {{domxref("Response.blob")}}, create an object URL out of it using {{domxref("URL.createObjectURL")}}, and display this in an {{htmlelement("img")}}.
 
 Note that at the top of the `fetch()` block we log the response `type` to the console.

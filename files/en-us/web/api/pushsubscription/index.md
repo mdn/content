@@ -23,7 +23,7 @@ An instance of this interface can be serialized.
 - {{domxref("PushSubscription.endpoint")}} {{readonlyinline}}
   - : A {{domxref("USVString")}} containing the endpoint associated with the push subscription.
 - {{domxref("PushSubscription.expirationTime")}} {{readonlyinline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} of the subscription expiration time associated with the push subscription, if there is one, or null otherwise.
+  - : A {{domxref("DOMHighResTimeStamp")}} of the subscription expiration time associated with the push subscription, if there is one, or null otherwise.
 - {{domxref("PushSubscription.options")}} {{readonlyinline}}
   - : An object containing the options used to create the subscription.
 - {{domxref("PushSubscription.subscriptionId")}} {{deprecated_inline}} {{readonlyinline}}

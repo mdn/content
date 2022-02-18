@@ -174,7 +174,7 @@ useEffect(() => {
 }, [isEditing]);
 ```
 
-This kind of mostly works. Head back to your browser and you’ll see that your focus moves between Edit `<input>` and "Edit" button as you start and end an edit. However, you may have noticed a new problem — the "Edit" button in the final `<Todo />` component is focussed immediately on page load, before we even interact with the app!
+This kind of mostly works. Head back to your browser and you’ll see that your focus moves between Edit `<input>` and "Edit" button as you start and end an edit. However, you may have noticed a new problem — the "Edit" button in the final `<Todo />` component is focussed immediately on page load, before we even interact with the app!
 
 Our `useEffect()` hook is behaving exactly as we designed it: it runs as soon as the component renders, sees that `isEditing` is `false`, and focuses the "Edit" button. Because there are three instances of `<Todo />`, we see focus on the last "Edit" button.
 

@@ -45,4 +45,4 @@ keyframeEffect.iterationComposite = 'replace';
 ## See also
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
-- Property of both {{domxref("KeyframeEffect")}} objects.
+- Property of both {{domxref("KeyframeEffect")}} objects.

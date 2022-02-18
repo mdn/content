@@ -12,7 +12,7 @@ browser-compat: api.URLSearchParams.toString
 {{ApiRef("URL API")}}
 
 The **`toString()`** method of the
-{{domxref("URLSearchParams")}} interface returns a query string suitable for use in a
+{{domxref("URLSearchParams")}} interface returns a query string suitable for use in a
 URL.
 
 > **Note:** This method returns the query string without the question

@@ -48,8 +48,8 @@ presentation whenever the mouse button is clicked within it.
 document.onclick = function (event) {
   if (document.fullscreenElement) {
     document.exitFullscreen()
-      .then(() => console.log("Document Exited from Full screen mode"))
-      .catch((err) => console.error(err))
+      .then(() => console.log("Document Exited from Full screen mode"))
+      .catch((err) => console.error(err))
   } else {
     document.documentElement.requestFullscreen();
   }

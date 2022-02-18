@@ -12,7 +12,7 @@ browser-compat: api.HTMLMediaElement.controlsList
 ---
 {{SeeCompatTable}}{{APIRef("HTML DOM")}}
 
-The **`controlsList`** property of the
+The **`controlsList`** property of the
 {{domxref("HTMLMediaElement")}} interface returns a DOMTokenList that helps the user
 agent select what controls to show on the media element whenever the user agent shows
 its own set of controls. The DOMTokenList takes one or more of three possible values:
@@ -38,5 +38,5 @@ A {{domxref("DOMTokenList")}}.
 
 ## See also
 
-- [Chrome HTMLMediaElement
+- [Chrome HTMLMediaElement
   controlsList Sample](https://googlechrome.github.io/samples/media/controlslist.html)

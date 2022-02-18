@@ -18,7 +18,7 @@ The `ReadableStreamBYOBReader` interface of the [Streams API](/en-US/docs/Web/AP
 ## Constructor
 
 - {{domxref("ReadableStreamBYOBReader.ReadableStreamBYOBReader", "ReadableStreamBYOBReader()")}}
-  - : Creates and returns a `ReadableStreamBYOBReader` object instance.
+  - : Creates and returns a `ReadableStreamBYOBReader` object instance.
 
 ## Properties
 
@@ -28,7 +28,7 @@ The `ReadableStreamBYOBReader` interface of the [Streams API](/en-US/docs/Web/AP
 ## Methods
 
 - {{domxref("ReadableStreamBYOBReader.cancel()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer. The supplied `reason` argument will be given to the underlying source, which may or may not use it.
+  - : Returns a {{jsxref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer. The supplied `reason` argument will be given to the underlying source, which may or may not use it.
 - {{domxref("ReadableStreamBYOBReader.read()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with an object indicating the state of the stream: either the next chunk in the stream or an indication that the stream is closed.
 - {{domxref("ReadableStreamBYOBReader.releaseLock()")}}

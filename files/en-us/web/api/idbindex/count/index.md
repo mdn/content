@@ -15,7 +15,7 @@ browser-compat: api.IDBIndex.count
 {{ APIRef("IndexedDB") }}
 
 The **`count()`** method of the {{domxref("IDBIndex")}}
-interface returns an {{domxref("IDBRequest")}} object, and in a separate thread,
+interface returns an {{domxref("IDBRequest")}} object, and in a separate thread,
 returns the number of records within a key range.
 
 {{AvailableInWorkers}}
@@ -23,13 +23,13 @@ returns the number of records within a key range.
 ## Syntax
 
 ```js
-var request = myIndex.count();
+var request = myIndex.count();
 var request = myIndex.count(key);
 ```
 
 ### Parameters
 
-- key {{optional_inline}}
+- key {{optional_inline}}
   - : The key or key range that identifies the record to be counted.
 
 ### Return value
@@ -44,16 +44,16 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `TransactionInactiveError` {{domxref("DOMException")}}
   - : Thrown if this {{domxref("IDBIndex")}}'s transaction is inactive.
 - `DataError` {{domxref("DOMException")}}
-  - : Thrown if the key or key range provided contains an invalid key.
+  - : Thrown if the key or key range provided contains an invalid key.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("IDBIndex")}} has been deleted or removed.
 
 ## Example
 
 In the following example we open a transaction and an object store, then get the
-index `lName` from a simple contacts database. We then open a basic cursor on
-the index using {{domxref("IDBIndex.openCursor")}} — this works the same as opening a
-cursor directly on an `ObjectStore` using
+index `lName` from a simple contacts database. We then open a basic cursor on
+the index using {{domxref("IDBIndex.openCursor")}} — this works the same as opening a
+cursor directly on an `ObjectStore` using
 {{domxref("IDBObjectStore.openCursor")}} except that the returned records are sorted
 based on the index, not the primary key.
 
@@ -62,8 +62,8 @@ and the result of that request is logged to the console when its success callbac
 returns.
 
 Finally, we iterate through each record, and insert the data into an HTML table. For a
-complete working example, see our [IndexedDB-examples
-demo repo](https://github.com/mdn/indexeddb-examples/tree/master/idbindex) ([View the
+complete working example, see our [IndexedDB-examples
+demo repo](https://github.com/mdn/indexeddb-examples/tree/master/idbindex) ([View the
 example live](https://mdn.github.io/indexeddb-examples/idbindex).)
 
 ```js

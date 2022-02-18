@@ -108,7 +108,7 @@ according to the [FIPS
 
 The digest algorithm to use is specified in the
 [`HmacKeyGenParams`](/en-US/docs/Web/API/HmacKeyGenParams) object
-that you pass into  {{domxref("SubtleCrypto.generateKey()", "generateKey()")}}, or the
+that you pass into  {{domxref("SubtleCrypto.generateKey()", "generateKey()")}}, or the
 [`HmacImportParams`](/en-US/docs/Web/API/HmacImportParams) object
 that you pass into {{domxref("SubtleCrypto.importKey()", "importKey()")}}.
 
@@ -241,7 +241,7 @@ let signature = await window.crypto.subtle.sign(
 - [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) specifies
   RSASSA-PKCS1-v1_5.
 - [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) specifies RSA-PSS.
-- [FIPS-186](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf) specifies
+- [FIPS-186](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf) specifies
   ECDSA.
 - [FIPS
   198-1](https://csrc.nist.gov/csrc/media/publications/fips/198/1/final/documents/fips-198-1_final.pdf) specifies HMAC.

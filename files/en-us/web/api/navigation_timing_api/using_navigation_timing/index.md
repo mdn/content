@@ -20,10 +20,10 @@ Using the API is as simple as obtaining the {{domxref("Performance")}} object us
 
 ```js
 window.addEventListener("load", function() {
-  let now = new Date().getTime();
-  let loadingTime = now - performance.timing.navigationStart;
+  let now = new Date().getTime();
+  let loadingTime = now - performance.timing.navigationStart;
 
-  document.querySelector(".output").innerText =
+  document.querySelector(".output").innerText =
         loadingTime + " ms";
 }, false);
 ```

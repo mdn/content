@@ -16,7 +16,7 @@ browser-compat: api.XRSession.domOverlayState
 ---
 {{APIRef("WebXR Device API")}}
 
-The *read-only* **`domOverlayState`** property of an `immersive-ar`
+The *read-only* **`domOverlayState`** property of an `immersive-ar`
 {{DOMxRef("XRSession")}} provides information about the DOM overlay, if the feature is enabled.
 
 ## Value

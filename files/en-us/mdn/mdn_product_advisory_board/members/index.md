@@ -40,7 +40,7 @@ Current members of the MDN Product Advisory Board are:
   - : Robert Nyman is the Global Lead for Developer Feedback & Communities, Web Platform at Google. In his role, he works to make the web the best platform for developers. Prior to Google, Robert was a technical evangelist at Mozilla, focused on the Open Web and the company’s various products and initiatives. He lives in Stockholm, and has a passion for traveling and meeting people. He claims the title of “Most Well-Traveled Speaker” on Lanyrd, having presented in 42 countries.
 - **Kyle Pflug**
   Senior Program Manager, Microsoft Edge Developer Experiences
-  - : Kyle Pflug is a Program Manager at Microsoft, leading developer relations and community outreach for Microsoft Edge. Over the past five years, he has worked to champion web developer and partner perspectives within Microsoft. He is passionate about making the web more inclusive and accessible to developers across platforms and devices.
+  - : Kyle Pflug is a Program Manager at Microsoft, leading developer relations and community outreach for Microsoft Edge. Over the past five years, he has worked to champion web developer and partner perspectives within Microsoft. He is passionate about making the web more inclusive and accessible to developers across platforms and devices.
 - **Ali Spivak**
   Sr. Director, Developer Relations at Okta & former MDN Product Advisory Board Chair
   - : Ali is the Sr. Director, Developer Relations at Okta, responsible for developer strategy. Before that, she was at Mozilla for 9 years, with responsibility for MDN and Developer Relations.

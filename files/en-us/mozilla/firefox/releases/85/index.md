@@ -9,7 +9,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 85 that will affect developers. Firefox 85 was released on January 26, 2021.
+This article provides information about the changes in Firefox 85 that will affect developers. Firefox 85 was released on January 26, 2021.
 
 > **Note:** See also [January brings us Firefox 85](https://hacks.mozilla.org/2021/01/january-brings-us-firefox-85/) on Mozilla Hacks.
 
@@ -21,16 +21,16 @@ This article provides information about the changes in Firefox 85 that will aff
 
 ### HTML
 
-- [`<link rel="preload">`](/en-US/docs/Web/HTML/Link_types/preload) is now enabled. ({{bug(1626997)}}).
+- [`<link rel="preload">`](/en-US/docs/Web/HTML/Link_types/preload) is now enabled. ({{bug(1626997)}}).
 
 #### Removals
 
-- The {{HTMLElement("menuitem")}} HTML element is no longer available — it has been hidden behind the `dom.menuitem.enabled flag`. ({{bug(1680596)}}).
+- The {{HTMLElement("menuitem")}} HTML element is no longer available — it has been hidden behind the `dom.menuitem.enabled flag`. ({{bug(1680596)}}).
 
 ### CSS
 
-- The {{cssxref(":focus-visible")}} pseudo-class is now enabled. ({{bug(1445482)}}).
-- The `pinch-zoom` value for the {{cssxref("touch-action")}} property is now enabled. ({{bug(1329241)}}).
+- The {{cssxref(":focus-visible")}} pseudo-class is now enabled. ({{bug(1445482)}}).
+- The `pinch-zoom` value for the {{cssxref("touch-action")}} property is now enabled. ({{bug(1329241)}}).
 
 ### JavaScript
 

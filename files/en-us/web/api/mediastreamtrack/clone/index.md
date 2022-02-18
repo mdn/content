@@ -14,14 +14,14 @@ browser-compat: api.MediaStreamTrack.clone
 {{APIRef("Media Capture and Streams")}}
 
 The **`clone()`** method of the {{domxref("MediaStreamTrack")}}
-interface creates a duplicate of the `MediaStreamTrack`. This new
+interface creates a duplicate of the `MediaStreamTrack`. This new
 `MediaStreamTrack` object is identical except for its unique
 {{domxref("MediaStreamTrack.id", "id")}}.
 
 ## Syntax
 
 ```js
-const newTrack = track.clone()
+const newTrack = track.clone()
 ```
 
 ### Return value

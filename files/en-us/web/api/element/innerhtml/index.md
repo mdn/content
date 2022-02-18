@@ -175,7 +175,7 @@ function log(msg) {
 
   var time = new Date();
   var timeStr = time.toLocaleTimeString();
-  logElem.innerHTML += timeStr + ": " + msg + "<br/>";
+  logElem.innerHTML += timeStr + ": " + msg + "<br/>";
 }
 
 log("Logging mouse events inside this container...");

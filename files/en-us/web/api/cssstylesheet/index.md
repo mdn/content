@@ -128,7 +128,7 @@ A (possibly incomplete) list of ways a stylesheet can be associated with a docum
     </tr>
     <tr>
       <td>
-        CSS {{cssxref("@import")}} rule in other style sheets applied to
+        CSS {{cssxref("@import")}} rule in other style sheets applied to
         the document
       </td>
       <td>Yes</td>

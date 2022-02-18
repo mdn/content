@@ -42,7 +42,7 @@ Utilities related to your extension. Get URLs to resources packages with your ex
 - {{WebExtAPIRef("extension.isAllowedIncognitoAccess()")}}
   - : Retrieves the state of the extension's access to Incognito-mode (as determined by the user-controlled '_Allowed in Incognito_' checkbox).
 - {{WebExtAPIRef("extension.isAllowedFileSchemeAccess()")}}
-  - : Retrieves the state of the extension's access to the `file://` scheme (as determined by the user-controlled '_Allow access to File URLs_' checkbox).
+  - : Retrieves the state of the extension's access to the `file://` scheme (as determined by the user-controlled '_Allow access to File URLs_' checkbox).
 - {{WebExtAPIRef("extension.sendRequest()")}} {{deprecated_inline}}
   - : Sends a single request to other listeners within the extension.
 - {{WebExtAPIRef("extension.setUpdateUrlData()")}}

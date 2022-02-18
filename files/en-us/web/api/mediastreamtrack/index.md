@@ -16,7 +16,7 @@ browser-compat: api.MediaStreamTrack
 ---
 {{APIRef("Media Capture and Streams")}}
 
-The **`MediaStreamTrack`** interface represents a single media track within a stream; typically, these are audio or video tracks, but other track types may exist as well.
+The **`MediaStreamTrack`** interface represents a single media track within a stream; typically, these are audio or video tracks, but other track types may exist as well.
 
 {{InheritanceDiagram}}
 
@@ -63,9 +63,9 @@ In addition to the properties listed below, `MediaStreamTrack` has constrainable
 - {{domxref("MediaStreamTrack.getCapabilities()")}}
   - : Returns the a list of constrainable properties available for the `MediaStreamTrack`.
 - {{domxref("MediaStreamTrack.getConstraints()")}}
-  - : Returns a {{domxref('MediaTrackConstraints')}} object containing the currently set constraints for the track; the returned value matches the constraints last set using {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}}.
+  - : Returns a {{domxref('MediaTrackConstraints')}} object containing the currently set constraints for the track; the returned value matches the constraints last set using {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}}.
 - {{domxref("MediaStreamTrack.getSettings()")}}
-  - : Returns a {{domxref("MediaTrackSettings")}} object containing the current values of each of the `MediaStreamTrack`'s constrainable properties.
+  - : Returns a {{domxref("MediaTrackSettings")}} object containing the current values of each of the `MediaStreamTrack`'s constrainable properties.
 - {{domxref("MediaStreamTrack.stop()")}}
   - : Stops playing the source associated to the track, both the source and the track are deassociated. The track state is set to `ended`.
 

@@ -193,7 +193,7 @@ function drawImageActualSize() {
   property).
 - `drawImage()` will always use the source element's _intrinsic size in
   CSS pixels_ when drawing, cropping, and/or scaling.
-- In some older browser versions, `drawImage()` will ignore all EXIF
+- In some older browser versions, `drawImage()` will ignore all EXIF
   metadata in images, including the Orientation. This behavior is especially troublesome
   on iOS devices. You should detect the Orientation yourself and use
   `rotate()` to make it right.

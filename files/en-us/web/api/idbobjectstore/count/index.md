@@ -49,7 +49,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `TransactionInactiveError` {{domxref("DOMException")}}
   - : Thrown if this {{domxref("IDBObjectStore")}}'s transaction is inactive.
 - `DataError` {{domxref("DOMException")}}
-  - : Thrown if the specified key or key range is invalid.
+  - : Thrown if the specified key or key range is invalid.
 
 ## Example
 
@@ -63,7 +63,7 @@ var objectStore = transaction.objectStore('fThings');
 
 var countRequest = objectStore.count();
 countRequest.onsuccess = function() {
-  console.log(countRequest.result);
+  console.log(countRequest.result);
 }
 ```
 

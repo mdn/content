@@ -13,7 +13,7 @@ Traditionally, a web page has to send a request to the server to receive new dat
 
 {{AvailableInWorkers}}
 
-> **Note:** Firefox does not currently support the use of server-sent events in service workers (it does support them in dedicated and shared workers). See {{bug(1681218)}}.
+> **Note:** Firefox does not currently support the use of server-sent events in service workers (it does support them in dedicated and shared workers). See {{bug(1681218)}}.
 
 ## Concepts and usage
 

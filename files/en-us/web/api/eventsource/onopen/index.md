@@ -27,7 +27,7 @@ eventSource.onopen = function
 
 ```js
 evtSource.onopen = function() {
-  console.log("Connection to server opened.");
+  console.log("Connection to server opened.");
 };
 ```
 

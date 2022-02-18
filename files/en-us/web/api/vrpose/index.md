@@ -18,7 +18,7 @@ The **`VRPose`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) rep
 
 > **Note:** This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-This interface is accessible through the {{domxref("VRDisplay.getPose()")}} and {{domxref("VRDisplay.getFrameData()")}} methods. {{domxref("VRDisplay.getPose()")}} is deprecated.
+This interface is accessible through the {{domxref("VRDisplay.getPose()")}} and {{domxref("VRDisplay.getFrameData()")}} methods. {{domxref("VRDisplay.getPose()")}} is deprecated.
 
 ## Properties
 

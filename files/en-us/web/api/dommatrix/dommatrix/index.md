@@ -34,7 +34,7 @@ var domMatrix = new DOMMatrix([init])
 
 ## Example
 
-This example creates a DOMMatrix to use as an argument for calling
+This example creates a DOMMatrix to use as an argument for calling
 {{domxref("Point.matrixTransform()")}}.
 
 ```js
@@ -45,12 +45,12 @@ var translateX = 12;
 var translateY = 8;
 var angle = Math.PI / 2;
 var matrix = new DOMMatrix([
-  Math.sin(angle) * scaleX,
-  Math.cos(angle) * scaleX,
-  -Math.sin(angle) * scaleY,
-  Math.cos(angle) * scaleY,
-  translateX,
-  translateY
+  Math.sin(angle) * scaleX,
+  Math.cos(angle) * scaleX,
+  -Math.sin(angle) * scaleY,
+  Math.cos(angle) * scaleY,
+  translateX,
+  translateY
 ]);
 var transformedPoint = point.matrixTransform(matrix);
 ```

@@ -11,10 +11,10 @@ browser-compat: api.IDBObjectStore.delete
 {{APIRef("IndexedDB")}}
 
 The **`delete()`** method of the
-{{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object,
+{{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object,
 and, in a separate thread, deletes the specified record or records.
 
-Either a key or an {{domxref("IDBKeyRange")}} can be passed, allowing one or multiple
+Either a key or an {{domxref("IDBKeyRange")}} can be passed, allowing one or multiple
 records to be deleted from a store. To delete all records in a store, use
 {{domxref("IDBObjectStore.clear")}}.
 
@@ -35,13 +35,13 @@ var request = objectStore.delete(KeyRange);
 ### Parameters
 
 - Key
-  - : The key of the record to be deleted, or an {{domxref("IDBKeyRange")}} to delete all
+  - : The key of the record to be deleted, or an {{domxref("IDBKeyRange")}} to delete all
     records with keys in range.
 
 ### Return value
 
-An {{domxref("IDBRequest")}} object on which subsequent events related to this
-operation are fired. The `request.result` attribute is set to undefined.
+An {{domxref("IDBRequest")}} object on which subsequent events related to this
+operation are fired. The `request.result` attribute is set to undefined.
 
 ### Exceptions
 
@@ -54,10 +54,10 @@ This method may raise a {{domxref("DOMException")}} of the following types:
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the object store has been deleted.
 - `DataError` {{domxref("DOMException")}}
-  - : Thrown if the <var>key</var> is not a <a
+  - : Thrown if the <var>key</var> is not a <a
           href="https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#dfn-valid-key"
           >valid key</a
-        > or a <a
+        > or a <a
           href="https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#dfn-key-range"
           >key range</a
         >.
