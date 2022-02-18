@@ -53,7 +53,7 @@ My mark-up is a container with elements inside for a header, footer, main conten
     </ul>
   </nav>
   <article class="content">
-    <h1>Main article area</h1>
+    <h1>Main article area</h1>
     <p>In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.</p>
   </article>
   <aside class="side">Sidebar</aside>
@@ -85,7 +85,7 @@ As we are using {{cssxref("grid-template-areas")}} to create the layout. Outside
 }
 ```
 
-This will not create any layout, however our items now have names we can use to do so. Staying outside of any media queries I am now going to set up the layout for the mobile width. Here I am keeping everything in source order, trying to avoid any disconnect between the source and display as described in the guide _[Grid layout and accessibility](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)_. I have not defined any column or row tracks but this layout dictates a single column, and rows will be created as needed for each of the items in the implicit grid.
+This will not create any layout, however our items now have names we can use to do so. Staying outside of any media queries I am now going to set up the layout for the mobile width. Here I am keeping everything in source order, trying to avoid any disconnect between the source and display as described in the guide _[Grid layout and accessibility](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)_. I have not defined any column or row tracks but this layout dictates a single column, and rows will be created as needed for each of the items in the implicit grid.
 
 ```css
 .wrapper {

@@ -18,7 +18,7 @@ A sticky footer pattern is one where the footer of your page "sticks" to the bot
 
 ## Requirements
 
-The Sticky footer pattern needs to meet the following requirements:
+The Sticky footer pattern needs to meet the following requirements:
 
 - Footer sticks to the bottom of the viewport when content is short.
 - If the content of the page extends past the viewport bottom, the footer then sits below the content as normal.
@@ -35,7 +35,7 @@ The Sticky footer pattern needs to meet the following requirements:
 
 ## Choices made
 
-In the above example we achieve the sticky footer using CSS Grid Layout. The `.wrapper` has a minimum height of `100%` which means it is as tall as the container it is in. We then create a single column grid layout with three rows, one row for each part of our layout.
+In the above example we achieve the sticky footer using CSS Grid Layout. The `.wrapper` has a minimum height of `100%` which means it is as tall as the container it is in. We then create a single column grid layout with three rows, one row for each part of our layout.
 
 Grid auto-placement will place our items in source order and so the header goes into the first auto sized track, the main content into the `1fr` track and the footer into the final auto sized track. The `1fr` track will take up all available space and so grows to fill the gap.
 

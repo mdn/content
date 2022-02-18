@@ -36,7 +36,7 @@ A string representing the specified {{jsxref("BigInt")}} object.
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : If `toString()` is given a radix less than 2 or greater than 36, a
+  - : If `toString()` is given a radix less than 2 or greater than 36, a
     {{jsxref("RangeError")}} is thrown.
 
 ## Description
@@ -67,7 +67,7 @@ complement of the `bigIntObj`.
 17n.toString();      // '17'
 66n.toString(2);     // '1000010'
 254n.toString(16);   // 'fe'
--10n.toString(2);    // -1010'
+-10n.toString(2);    // -1010'
 -0xffn.toString(2);  // '-11111111'
 ```
 

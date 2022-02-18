@@ -80,7 +80,7 @@ These types are used to specify distance and other quantities.
 
 ## Combinations of types
 
-Some CSS properties can take a dimension or a percentage value. In this case the percentage value will be resolved to a quantity that matches the allowable dimension. Properties which can accept a percentage in addition to a dimension will use one of the types listed below.
+Some CSS properties can take a dimension or a percentage value. In this case the percentage value will be resolved to a quantity that matches the allowable dimension. Properties which can accept a percentage in addition to a dimension will use one of the types listed below.
 
 - `<length-percentage>`
   - : A type that can accept a length or a percentage as a value. See more information on the {{cssxref("&lt;length-percentage&gt;")}} page.
@@ -98,7 +98,7 @@ Some CSS properties can take a dimension or a percentage value. In this case th
 - `<color>`
   - : Specified as a keyword or a numerical color value. See more information on the {{cssxref("&lt;color&gt;")}} page.
 - `<alpha-value>`
-  - : Specifies the transparency of a color. May be a `<number>`, in which case 0 is fully transparent and 1 is fully opaque, or a `<percentage>`, in which case 0% is fully transparent and 100% fully opaque.
+  - : Specifies the transparency of a color. May be a `<number>`, in which case 0 is fully transparent and 1 is fully opaque, or a `<percentage>`, in which case 0% is fully transparent and 100% fully opaque.
 
 ## Images
 

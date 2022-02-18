@@ -20,7 +20,7 @@ The `<flex>` data type is specified as a {{cssxref("&lt;number&gt;")}} followed 
 
 ## Examples
 
-### Examples of correct values for the fr data type
+### Examples of correct values for the fr data type
 
 ```css
 1fr    /* Using an integer value */
@@ -32,7 +32,7 @@ The `<flex>` data type is specified as a {{cssxref("&lt;number&gt;")}} followed 
 ```css
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 2.5fr 1.5fr;
+  grid-template-columns: 1fr 1fr 2.5fr 1.5fr;
 }
 ```
 

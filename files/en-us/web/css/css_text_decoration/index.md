@@ -38,23 +38,23 @@ _None._
 
 ```css
 .under {
-  text-decoration: underline red;
+  text-decoration: underline red;
 }
 
 .over {
-  text-decoration: wavy overline lime;
+  text-decoration: wavy overline lime;
 }
 
 .line {
-  text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 .plain {
-  text-decoration: none;
+  text-decoration: none;
 }
 
 .underover {
-  text-decoration: dashed underline overline;
+  text-decoration: dashed underline overline;
 }
 
 .thick {

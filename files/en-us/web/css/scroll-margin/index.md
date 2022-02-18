@@ -121,7 +121,7 @@ The child elements are styled as follows:
 }
 ```
 
-The most relevant part here is `scroll-snap-align: start`, which specifies that the left-hand edges (the "starts" along the x axis, in our case) are the designated snap points.
+The most relevant part here is `scroll-snap-align: start`, which specifies that the left-hand edges (the "starts" along the x axis, in our case) are the designated snap points.
 
 Last of all we specify the scroll margin-values, a different one for the second and third child elements:
 

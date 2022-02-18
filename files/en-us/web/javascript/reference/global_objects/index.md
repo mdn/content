@@ -60,7 +60,7 @@ These are the fundamental, basic objects upon which all other objects are based.
 
 ### Error objects
 
-Error objects are a special type of fundamental object. They include the basic {{JSxRef("Error")}} type, as well as several specialized error types.
+Error objects are a special type of fundamental object. They include the basic {{JSxRef("Error")}} type, as well as several specialized error types.
 
 - {{JSxRef("Error")}}
 - {{JSxRef("AggregateError")}}
@@ -107,7 +107,7 @@ These objects represent collections of data which are ordered by an index value.
 
 ### Keyed collections
 
-These objects represent collections which use keys. The iterable collections ({{JSxRef("Map")}} and {{JSxRef("Set")}}) contain elements which are easily iterated in the order of insertion.
+These objects represent collections which use keys. The iterable collections ({{JSxRef("Map")}} and {{JSxRef("Set")}}) contain elements which are easily iterated in the order of insertion.
 
 - {{JSxRef("Map")}}
 - {{JSxRef("Set")}}

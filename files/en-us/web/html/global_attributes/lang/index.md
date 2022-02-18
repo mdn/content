@@ -47,7 +47,7 @@ WCAG Success Criterion 3.1.2 requires that pages with **parts** in different lan
 
 The purpose of these requirements is primarily to allow assistive technologies such as screen readers to invoke the correct pronunciation.
 
-For example, the language menu on this site (MDN) includes a **`lang`** attribute for each entry:
+For example, the language menu on this site (MDN) includes a **`lang`** attribute for each entry:
 
 ```html
 <div class="dropdown-container language-menu">

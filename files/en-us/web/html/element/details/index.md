@@ -73,7 +73,7 @@ Fully standards-compliant implementations automatically apply the CSS `{{cssxref
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
-      <td>No <code>role</code> permitted</td>
+      <td>No <code>role</code> permitted</td>
     </tr>
     <tr>
       <th scope="row">DOM interface</th>

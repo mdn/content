@@ -83,7 +83,7 @@ Now we can use it by just adding it to our HTML document:
 <my-paragraph></my-paragraph>
 ```
 
-> **Note:** Templates are well-supported in browsers; the Shadow DOM API is supported by default in Firefox (version 63 onwards), Chrome, Opera, Safari, and Edge (starting with version 79).
+> **Note:** Templates are well-supported in browsers; the Shadow DOM API is supported by default in Firefox (version 63 onwards), Chrome, Opera, Safari, and Edge (starting with version 79).
 
 ## Adding flexibility with slots
 
@@ -99,7 +99,7 @@ So, if we want to add a slot into our trivial example, we could update our templ
 <p><slot name="my-text">My default text</slot></p>
 ```
 
-If the slot's content isn't defined when the element is included in the markup, or if the browser doesn't support slots, `<my-paragraph>`  just contains the fallback content "My default text".
+If the slot's content isn't defined when the element is included in the markup, or if the browser doesn't support slots, `<my-paragraph>`  just contains the fallback content "My default text".
 
 To define the slot's content, we include an HTML structure inside the `<my-paragraph>` element with a {{htmlattrxref("slot")}} attribute whose value is equal to the name of the slot we want it to fill. As before, this can be anything you like, for example:
 
@@ -122,7 +122,7 @@ or
 
 > **Note:** Nodes that can be inserted into slots are known as _Slottable_ nodes; when a node has been inserted in a slot, it is said to be _slotted_.
 
-> **Note:** An unnamed {{HTMLElement("slot")}} will be filled with all of the custom element's top-level child nodes that do not have the {{htmlattrxref("slot")}} attribute. This includes text nodes.
+> **Note:** An unnamed {{HTMLElement("slot")}} will be filled with all of the custom element's top-level child nodes that do not have the {{htmlattrxref("slot")}} attribute. This includes text nodes.
 
 And that's it for our trivial example.
 If you want to play with it some more, you can [find it on GitHub](https://github.com/mdn/web-components-examples/tree/master/simple-template) (see it [running live](https://mdn.github.io/web-components-examples/simple-template/) also).
@@ -136,55 +136,55 @@ The following set of code snippets show how to use {{HTMLElement("slot")}} toget
 - create a **`<element-details>`** element with [named slots](/en-US/docs/Web/HTML/Element/slot#named-slot) in its [shadow root](/en-US/docs/Web/API/ShadowRoot)
 - design the **`<element-details>`** element in such a way that, when used in documents, it is rendered from composing the element’s content together with content from its [shadow root](/en-US/docs/Web/API/ShadowRoot)—that is, pieces of the element’s content are used to fill in [named slots](/en-US/docs/Web/HTML/Element/slot#named-slot) in its [shadow root](/en-US/docs/Web/API/ShadowRoot)
 
-Note that it is technically possible to use {{HTMLElement("slot")}} element without a {{HTMLElement("template")}} element, e.g., within say a regular {{HTMLElement("div")}} element, and still take advantage of the place-holder features of {{HTMLElement("slot")}} for Shadow DOM content, and doing so may indeed avoid the small trouble of needing to first access the template element's `content` property (and clone it).
-However, it is generally more practical to add slots within a {{HTMLElement("template")}} element, since you are unlikely to need to define a pattern based on an already-rendered element.
+Note that it is technically possible to use {{HTMLElement("slot")}} element without a {{HTMLElement("template")}} element, e.g., within say a regular {{HTMLElement("div")}} element, and still take advantage of the place-holder features of {{HTMLElement("slot")}} for Shadow DOM content, and doing so may indeed avoid the small trouble of needing to first access the template element's `content` property (and clone it).
+However, it is generally more practical to add slots within a {{HTMLElement("template")}} element, since you are unlikely to need to define a pattern based on an already-rendered element.
 
-In addition, even if it is not already rendered, the purpose of the container as a template should be more semantically clear when using the {{HTMLElement("template")}}. In addition, {{HTMLElement("template")}} can have items directly added to it, like {{HTMLElement("td")}}, which would disappear when added to a {{HTMLElement("div")}}.
+In addition, even if it is not already rendered, the purpose of the container as a template should be more semantically clear when using the {{HTMLElement("template")}}. In addition, {{HTMLElement("template")}} can have items directly added to it, like {{HTMLElement("td")}}, which would disappear when added to a {{HTMLElement("div")}}.
 
 > **Note:** You can find this complete example at [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) (see it [running live](https://mdn.github.io/web-components-examples/element-details/) also).
 
 ### Creating a template with some slots
 
-First of all, we use the {{HTMLElement("slot")}} element within a {{HTMLElement("template")}} element to create a new "element-details-template" [document fragment](/en-US/docs/Web/API/DocumentFragment) containing some [named slots](/en-US/docs/Web/HTML/Element/slot#named-slot):
+First of all, we use the {{HTMLElement("slot")}} element within a {{HTMLElement("template")}} element to create a new "element-details-template" [document fragment](/en-US/docs/Web/API/DocumentFragment) containing some [named slots](/en-US/docs/Web/HTML/Element/slot#named-slot):
 
 ```html
 <template id="element-details-template">
-  <style>
-  details {font-family: "Open Sans Light",Helvetica,Arial}
-  .name {font-weight: bold; color: #217ac0; font-size: 120%}
-  h4 { margin: 10px 0 -8px 0; }
-  h4 span { background: #217ac0; padding: 2px 6px 2px 6px }
-  h4 span { border: 1px solid #cee9f9; border-radius: 4px }
-  h4 span { color: white }
-  .attributes { margin-left: 22px; font-size: 90% }
-  .attributes p { margin-left: 16px; font-style: italic }
-  </style>
-  <details>
-    <summary>
-      <span>
+  <style>
+  details {font-family: "Open Sans Light",Helvetica,Arial}
+  .name {font-weight: bold; color: #217ac0; font-size: 120%}
+  h4 { margin: 10px 0 -8px 0; }
+  h4 span { background: #217ac0; padding: 2px 6px 2px 6px }
+  h4 span { border: 1px solid #cee9f9; border-radius: 4px }
+  h4 span { color: white }
+  .attributes { margin-left: 22px; font-size: 90% }
+  .attributes p { margin-left: 16px; font-style: italic }
+  </style>
+  <details>
+    <summary>
+      <span>
         <code class="name">&lt;<slot name="element-name">NEED NAME</slot>&gt;</code>
-        <i class="desc"><slot name="description">NEED DESCRIPTION</slot></i>
-      </span>
-    </summary>
-    <div class="attributes">
-      <h4><span>Attributes</span></h4>
-      <slot name="attributes"><p>None</p></slot>
-    </div>
-  </details>
-  <hr>
+        <i class="desc"><slot name="description">NEED DESCRIPTION</slot></i>
+      </span>
+    </summary>
+    <div class="attributes">
+      <h4><span>Attributes</span></h4>
+      <slot name="attributes"><p>None</p></slot>
+    </div>
+  </details>
+  <hr>
 </template>
 ```
 
 That {{HTMLElement("template")}} element has several features:
 
-- The {{HTMLElement("template")}} has a {{HTMLElement("style")}} element with a set of CSS styles that are scoped just to the document fragment the  {{HTMLElement("template")}} creates.
-- The {{HTMLElement("template")}} uses {{HTMLElement("slot")}} and its {{htmlattrxref("name", "slot")}} attribute to make three [named slots](/en-US/docs/Web/HTML/Element/slot#named-slot):
+- The {{HTMLElement("template")}} has a {{HTMLElement("style")}} element with a set of CSS styles that are scoped just to the document fragment the  {{HTMLElement("template")}} creates.
+- The {{HTMLElement("template")}} uses {{HTMLElement("slot")}} and its {{htmlattrxref("name", "slot")}} attribute to make three [named slots](/en-US/docs/Web/HTML/Element/slot#named-slot):
 
   - `<slot name="element-name">`
   - `<slot name="description">`
   - `<slot name="attributes">`
 
-- The {{HTMLElement("template")}} wraps the [named slots](/en-US/docs/Web/HTML/Element/slot#named-slot) in a {{HTMLElement("details")}} element.
+- The {{HTMLElement("template")}} wraps the [named slots](/en-US/docs/Web/HTML/Element/slot#named-slot) in a {{HTMLElement("details")}} element.
 
 ### Creating a new \<element-details> element from the \<template>
 
@@ -194,21 +194,21 @@ This uses exactly the same pattern as we saw in our earlier trivial example.
 ```js
 customElements.define('element-details',
   class extends HTMLElement {
-    constructor() {
-      super();
-      const template = document
+    constructor() {
+      super();
+      const template = document
         .getElementById('element-details-template')
         .content;
-      const shadowRoot = this.attachShadow({mode: 'open'});
-      shadowRoot.appendChild(template.cloneNode(true));
-    }
+      const shadowRoot = this.attachShadow({mode: 'open'});
+      shadowRoot.appendChild(template.cloneNode(true));
+    }
   }
 );
 ```
 
 ### Using the \<element-details> custom element with named slots
 
-Now let’s take that **`<element-details>`** element and actually use it in our document:
+Now let’s take that **`<element-details>`** element and actually use it in our document:
 
 ```html
 <element-details>
@@ -234,19 +234,19 @@ Now let’s take that **`<element-details>`** element and actually use it in ou
 
 About that snippet, notice these points:
 
-- The snippet has two instances of **`<element-details>`** elements which both use the {{htmlattrxref("slot")}} attribute to reference the [named slots](/en-US/docs/Web/HTML/Element/slot#named-slot) `"element-name"` and `"description"` we put in the `<element-details>` [shadow root](/en-US/docs/Web/API/ShadowRoot) .
+- The snippet has two instances of **`<element-details>`** elements which both use the {{htmlattrxref("slot")}} attribute to reference the [named slots](/en-US/docs/Web/HTML/Element/slot#named-slot) `"element-name"` and `"description"` we put in the `<element-details>` [shadow root](/en-US/docs/Web/API/ShadowRoot) .
 - Only the first of those two **`<element-details>`** elements references the `"attributes"` [named slot](/en-US/docs/Web/HTML/Element/slot#named-slot). The second `<element-details>` element lacks any reference to the `"attributes"` [named slot](/en-US/docs/Web/HTML/Element/slot#named-slot).
 - The first `<element-details>` element references the `"attributes"` [named slot](/en-US/docs/Web/HTML/Element/slot#named-slot) using a {{HTMLElement("dl")}} element with {{HTMLElement("dt")}} and {{HTMLElement("dd")}} children.
 
 ### Adding a final bit of style
 
-As a finishing touch, we'll add a tiny bit more CSS for the {{HTMLElement("dl")}}, {{HTMLElement("dt")}}, and {{HTMLElement("dd")}} elements in our doc:
+As a finishing touch, we'll add a tiny bit more CSS for the {{HTMLElement("dl")}}, {{HTMLElement("dt")}}, and {{HTMLElement("dd")}} elements in our doc:
 
 ```css
-  dl { margin-left: 6px; }
-  dt { font-weight: bold; color: #217ac0; font-size: 110% }
-  dt { font-family: Consolas, "Liberation Mono", Courier }
-  dd { margin-left: 16px }
+  dl { margin-left: 6px; }
+  dt { font-weight: bold; color: #217ac0; font-size: 110% }
+  dt { font-family: Consolas, "Liberation Mono", Courier }
+  dd { margin-left: 16px }
 ```
 
 ```css hidden

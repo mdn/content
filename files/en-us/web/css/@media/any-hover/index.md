@@ -11,16 +11,16 @@ browser-compat: css.at-rules.media.any-hover
 ---
 {{CSSRef}}
 
-The **`any-hover`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test whether _any_ available input mechanism can hover over elements.
+The **`any-hover`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test whether _any_ available input mechanism can hover over elements.
 
 ## Syntax
 
-The `any-hover` feature is specified as a keyword value chosen from the list below.
+The `any-hover` feature is specified as a keyword value chosen from the list below.
 
 - `none`
   - : None of the available input mechanism(s) can hover conveniently, or there is no pointing input mechanism.
 - `hover`
-  - : One or more available input mechanisms can conveniently hover over elements.
+  - : One or more available input mechanisms can conveniently hover over elements.
 
 ## Examples
 

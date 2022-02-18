@@ -40,7 +40,7 @@ setHours(hoursValue, minutesValue, secondsValue, msValue)
     you specify the `secondsValue` parameter, you must also specify
     the `minutesValue`.
 - `msValue`
-  - : Optional. Ideally, a number between 0 and 999, representing the milliseconds. If a
+  - : Optional. Ideally, a number between 0 and 999, representing the milliseconds. If a
     value greater than 999 is provided, the datetime will be incremented by the extra
     milliseconds. If you specify the `msValue` parameter, you must
     also specify the `minutesValue` and `secondsValue`.

@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.Date.setUTCHours
 {{JSRef}}
 
 The **`setUTCHours()`** method sets the hour for a specified
-date according to universal time, and returns the number of milliseconds since  January
+date according to universal time, and returns the number of milliseconds since  January
 1, 1970 00:00:00 UTC until the time represented by the updated {{jsxref("Date")}}
 instance.
 

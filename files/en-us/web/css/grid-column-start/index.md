@@ -62,7 +62,7 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 
 - `<integer> && <custom-ident>?`
 
-  - : Contributes the nth grid line to the grid item’s placement. If a negative integer is given, it counts in reverse, starting from the end edge of the explicit grid.
+  - : Contributes the nth grid line to the grid item’s placement. If a negative integer is given, it counts in reverse, starting from the end edge of the explicit grid.
 
     If a name is given as a `<custom-ident>`, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines are assumed to have that name for the purpose of finding this position.
 
@@ -74,7 +74,7 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 
     If a name is given as a `<custom-ident>`, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines on the side of the explicit grid corresponding to the search direction are assumed to have that name for the purpose of counting this span.
 
-    If the \<integer> is omitted, it defaults to `1`. Negative integers and `0` are invalid.
+    If the \<integer> is omitted, it defaults to `1`. Negative integers and `0` are invalid.
 
     The `<custom-ident>` cannot take the `span` value.
 

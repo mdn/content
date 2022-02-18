@@ -63,7 +63,7 @@ I have also set the {{cssxref("flex-wrap")}} property to `wrap`, so that if the 
 
 {{ EmbedLiveSample('One-dimensional_versus_two-dimensional_layout', '500', '230') }}
 
-In the image, you can see that two items have wrapped onto a new line. These items are sharing the available space and not lining up underneath the items above. This is because when you wrap flex items, each new row (or column when working by column) is an independent flex line in the flex container. Space distribution happens across the flex line.
+In the image, you can see that two items have wrapped onto a new line. These items are sharing the available space and not lining up underneath the items above. This is because when you wrap flex items, each new row (or column when working by column) is an independent flex line in the flex container. Space distribution happens across the flex line.
 
 A common question then is how to make those items line up. This is where you want a two-dimensional layout method: You want to control the alignment by row and column, and this is where grid comes in.
 
@@ -127,7 +127,7 @@ The feature of flexbox that was most exciting to many of us was that it gave us 
 
 The alignment properties from the flexbox specification have been added to a new specification called [Box Alignment Level 3](https://drafts.csswg.org/css-align/). This means that they can be used in other specifications, including Grid Layout. In the future, they may well apply to other layout methods as well.
 
-In a later guide in this series, I’ll be taking a proper look at Box Alignment and how it works in Grid Layout. For now, here is a comparison between simple examples of flexbox and grid.
+In a later guide in this series, I’ll be taking a proper look at Box Alignment and how it works in Grid Layout. For now, here is a comparison between simple examples of flexbox and grid.
 
 In the first example, which uses flexbox, I have a container with three items inside. The wrapper {{cssxref("min-height")}} is set, so it defines the height of the flex container. I have set {{cssxref("align-items")}} on the flex container to `flex-end` so the items will line up at the end of the flex container. I have also set the {{cssxref("align-self")}} property on `box1` so it will override the default and stretch to the height of the container and on `box2` so it aligns to the start of the flex container.
 

@@ -53,7 +53,7 @@ keyword to be treated as an expression instead of a declaration.
 ```js
 void function iife() {
 
-  console.log("Executed!");
+  console.log("Executed!");
 
 }();
 
@@ -95,8 +95,8 @@ changing APIs do not cause arrow functions' behaviors to change.
 button.onclick = () => void doSomething();
 ```
 
-This ensures the return value of `doSomething` changing from
-`undefined` to `true` will not change the behavior of this code.
+This ensures the return value of `doSomething` changing from
+`undefined` to `true` will not change the behavior of this code.
 
 ## Specifications
 

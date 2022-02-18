@@ -183,16 +183,16 @@ withoutDefaults.call({value: '=^_^='});
 ### Scope Effects
 
 If default parameters are defined for one or more parameter, then a [second
-scope](https://tc39.es/ecma262/#sec-functiondeclarationinstantiation) (Environment Record) is created, specifically for the identifiers within the
+scope](https://tc39.es/ecma262/#sec-functiondeclarationinstantiation) (Environment Record) is created, specifically for the identifiers within the
 parameter list. This scope is a parent of the scope created for the function body.
 
 This means that functions and variables declared in the function body cannot be
-referred to from default value parameter initializers; attempting to do so throws a
+referred to from default value parameter initializers; attempting to do so throws a
 run-time {{jsxref("ReferenceError")}}.
 
-It also means that variables declared inside the function body using
-`var` will mask parameters of the same name, instead of the usual behavior
-of duplicate `var` declarations having no effect.
+It also means that variables declared inside the function body using
+`var` will mask parameters of the same name, instead of the usual behavior
+of duplicate `var` declarations having no effect.
 
 The following function will throw a `ReferenceError` when invoked, because
 the default parameter value does not have access to the child scope of the function
@@ -211,7 +211,7 @@ function f(a = go()) { // Throws a `ReferenceError` when `f` is invoked.
 ```js example-bad
 function f(a, b = () => console.log(a)) {
   var a = 1
-  b() // Prints `undefined`, because default parameter values exist in their own scope
+  b() // Prints `undefined`, because default parameter values exist in their own scope
 }
 ```
 

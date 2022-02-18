@@ -13,7 +13,7 @@ tags:
 ---
 {{CSSRef}}
 
-This article explains the concept of the viewport — what it is, its impact in terms of CSS, SVG, and mobile devices — and differentiates between the visual viewport and the layout viewport.
+This article explains the concept of the viewport — what it is, its impact in terms of CSS, SVG, and mobile devices — and differentiates between the visual viewport and the layout viewport.
 
 ## What is a viewport?
 
@@ -104,7 +104,7 @@ If you use viewport length units in your CSS within the iframe document, `1vh` w
 
 ```css
 iframe {
-    width: 50vw;
+    width: 50vw;
 }
 ```
 
@@ -114,9 +114,9 @@ A width-based media query within the iframe document is relative to the iframe's
 
 ```css
 @media screen and (min-width: 500px) {
-    p {
-        color: red;
-    }
+    p {
+        color: red;
+    }
 }
 ```
 

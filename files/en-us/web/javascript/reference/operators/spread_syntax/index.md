@@ -24,7 +24,7 @@ expected.
 Spread syntax can be used when all elements from an object or array need to be included
 in a list of some kind.
 
-In the above example, the defined function takes `x`, `y`, and
+In the above example, the defined function takes `x`, `y`, and
 `z` as arguments and returns the sum of these values. An array value is also
 defined.
 
@@ -326,5 +326,5 @@ See {{jsxref("Function.prototype.apply", "apply()")}} for more details.
 
 ## See also
 
-- {{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}} (also ‘`...`’)
-- {{jsxref("Function.prototype.apply()")}} (also ‘`...`’)
+- {{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}} (also ‘`...`’)
+- {{jsxref("Function.prototype.apply()")}} (also ‘`...`’)

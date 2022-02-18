@@ -28,7 +28,7 @@ SyntaxError: Unexpected number (Chrome)
 ## What went wrong?
 
 The names of variables, called [identifiers](/en-US/docs/Glossary/Identifier), conform to certain rules,
-which your code must adhere to!
+which your code must adhere to!
 
 A JavaScript identifier must start with a letter, underscore (\_), or dollar sign ($).
 They can't start with a digit! Only subsequent characters can be digits (0-9).

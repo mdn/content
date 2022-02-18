@@ -106,28 +106,28 @@ Addressing each item individually we can place all four items spanning row and c
 
 ```css
 .box1 {
-   grid-column-start: 1;
-   grid-column-end: 2;
-   grid-row-start: 1;
-   grid-row-end: 4;
+   grid-column-start: 1;
+   grid-column-end: 2;
+   grid-row-start: 1;
+   grid-row-end: 4;
 }
 .box2 {
-   grid-column-start: 3;
-   grid-column-end: 4;
-   grid-row-start: 1;
-   grid-row-end: 3;
+   grid-column-start: 3;
+   grid-column-end: 4;
+   grid-row-start: 1;
+   grid-row-end: 3;
 }
 .box3 {
-   grid-column-start: 2;
-   grid-column-end: 3;
-   grid-row-start: 1;
-   grid-row-end: 2;
+   grid-column-start: 2;
+   grid-column-end: 3;
+   grid-row-start: 1;
+   grid-row-end: 2;
 }
 .box4 {
-   grid-column-start: 2;
-   grid-column-end: 4;
-   grid-row-start: 3;
-   grid-row-end: 4;
+   grid-column-start: 2;
+   grid-column-end: 4;
+   grid-row-start: 3;
+   grid-row-end: 4;
 }
 ```
 
@@ -135,7 +135,7 @@ Addressing each item individually we can place all four items spanning row and c
 
 ## The `grid-column` and `grid-row` shorthands
 
-We have quite a lot of code here to position each item. It should come as no surprise to know there is a {{glossary("shorthand properties", "shorthand")}}. The {{cssxref("grid-column-start")}} and {{cssxref("grid-column-end")}} properties can be combined into {{cssxref("grid-column")}}, {{cssxref("grid-row-start")}} and {{cssxref("grid-row-end")}} into {{cssxref("grid-row")}}.
+We have quite a lot of code here to position each item. It should come as no surprise to know there is a {{glossary("shorthand properties", "shorthand")}}. The {{cssxref("grid-column-start")}} and {{cssxref("grid-column-end")}} properties can be combined into {{cssxref("grid-column")}}, {{cssxref("grid-row-start")}} and {{cssxref("grid-row-end")}} into {{cssxref("grid-row")}}.
 
 ```css hidden
 * {box-sizing: border-box;}
@@ -451,7 +451,7 @@ Being able to address the start and end lines of the grid is useful as you can t
 
 The CSS Grid Specification includes the ability to add gutters between column and row tracks with the {{cssxref("column-gap")}} and {{cssxref("row-gap")}} properties. These specify a gap that acts much like the {{cssxref("column-gap")}} property in multi-column layout.
 
-> **Note:** When grid first shipped in browsers the {{cssxref("column-gap")}}, {{cssxref("row-gap")}} and {{cssxref("gap")}} properties were prefixed with the `grid-` prefix as `grid-column-gap`, `grid-row-gap` and `grid-gap` respectively.
+> **Note:** When grid first shipped in browsers the {{cssxref("column-gap")}}, {{cssxref("row-gap")}} and {{cssxref("gap")}} properties were prefixed with the `grid-` prefix as `grid-column-gap`, `grid-row-gap` and `grid-gap` respectively.
 >
 > Browsers are updating their rendering engines to remove this prefix, however the prefixed versions will be maintained as aliases, making them safe to use.
 
@@ -528,7 +528,7 @@ The two properties can also be expressed as a shorthand, {{cssxref("gap")}}. If 
 }
 ```
 
-In terms of line-based positioning of items, the gap acts as if the line has gained extra width. Anything starting at that line starts after the gap and you cannot address the gap or place anything into it. If you want gutters that act more like regular tracks you can of course define a track for the purpose instead.
+In terms of line-based positioning of items, the gap acts as if the line has gained extra width. Anything starting at that line starts after the gap and you cannot address the gap or place anything into it. If you want gutters that act more like regular tracks you can of course define a track for the purpose instead.
 
 ## Using the `span` keyword
 
@@ -605,6 +605,6 @@ In the second example, we specify the end row line we want the item to finish at
 }
 ```
 
-To become familiar with line based positioning in grid try to build a few common layouts by placing items onto grids with varying numbers of columns. Remember that if you do not place all of the items, any leftover items will be placed according to auto-placement rules. This may result in the layout you want, but if something is appearing somewhere unexpected, check that you have set a position for it.
+To become familiar with line based positioning in grid try to build a few common layouts by placing items onto grids with varying numbers of columns. Remember that if you do not place all of the items, any leftover items will be placed according to auto-placement rules. This may result in the layout you want, but if something is appearing somewhere unexpected, check that you have set a position for it.
 
 Also, remember that items on the grid can overlap each other when you place them explicitly like this. That can create some nice effects, however you can also end up with things overlapping incorrectly if you specify the wrong start or end line. The [Firefox Grid Highlighter](/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) can be very useful as you learn, especially if your grid is quite complicated.

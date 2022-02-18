@@ -130,7 +130,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     - `content-type`
 
-      Declares the [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) and character encoding of the document. If specified, the `content` attribute must have the value "`text/html; charset=utf-8`". This is equivalent to a `<meta>` element with the {{htmlattrxref("charset", "meta")}} attribute specified, and carries the same restriction on placement within the document. **Note:** Can only be used in documents served with a `text/html` — not in documents served with an XML MIME type.
+      Declares the [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) and character encoding of the document. If specified, the `content` attribute must have the value "`text/html; charset=utf-8`". This is equivalent to a `<meta>` element with the {{htmlattrxref("charset", "meta")}} attribute specified, and carries the same restriction on placement within the document. **Note:** Can only be used in documents served with a `text/html` — not in documents served with an XML MIME type.
 
     - `default-style`
 

@@ -39,9 +39,9 @@ localeCompare(compareString, locales, options)
 - `locales` and `options`
 
   - : These arguments customize the behavior of the function and let applications specify
-    the language whose formatting conventions should be used. In implementations which
+    the language whose formatting conventions should be used. In implementations which
     ignore the `locales` and
-    `options` arguments, the locale used and the form of the
+    `options` arguments, the locale used and the form of the
     string returned are entirely implementation-dependent.
 
     See the [`Intl.Collator()`
@@ -95,7 +95,7 @@ function provided by its {{jsxref("Collator.prototype.compare", "compare")}} pro
 
 ### Sort an array
 
-`localeCompare()` enables case-insensitive sorting for an array.
+`localeCompare()` enables case-insensitive sorting for an array.
 
 ```js
 let items = ['réservé', 'Premier', 'Cliché', 'communiqué', 'café', 'Adieu'];
