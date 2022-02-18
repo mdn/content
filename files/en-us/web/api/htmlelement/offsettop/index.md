@@ -25,7 +25,7 @@ topPos = element.offsetTop;
 ### Parameters
 
 - `topPos` is the number of pixels from the top of the *closest
-  relatively positioned* parent element.
+  relatively positioned* parent element.
 
 ## Example
 

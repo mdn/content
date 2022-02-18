@@ -62,7 +62,7 @@ if (navigator.onLine) {
 }
 ```
 
-If the browser doesn't support `navigator.onLine` the above example will
+If the browser doesn't support `navigator.onLine` the above example will
 always come out as `false`/`undefined`.
 
 ### Listening for changes in network status

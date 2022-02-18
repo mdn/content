@@ -27,7 +27,7 @@ navigator.mediaDevices.enumerateDevices()
 
 A {{ jsxref("Promise") }} that receives an array of {{domxref("MediaDeviceInfo")}} objects when the promise is fulfilled.
 Each object in the array describes one of the available media input and output devices (only device-types for which permission has been granted are "available").
-The order is significant - the default capture devices will be listed first.
+The order is significant - the default capture devices will be listed first.
 
 If enumeration fails, the promise is rejected.
 

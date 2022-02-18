@@ -23,7 +23,7 @@ DOMRect.fromRect(rectangle)
 
 ### Parameters
 
-- `rectangle` {{optional_inline}}
+- `rectangle` {{optional_inline}}
 
   - : An object specifying the location and dimensions of a rectangle. All properties
     default to `0`. The properties are:

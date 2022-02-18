@@ -21,7 +21,7 @@ _Inherits methods from its ancestor {{domxref("CSSRule")}}._
 - {{domxref("CSSNamespaceRule.namespaceURI")}}
   - : Returns a {{ domxref("DOMString") }} containing the text of the URI of the given namespace.
 - {{domxref("CSSNamespaceRule.prefix")}}
-  - : Returns a {{ domxref("DOMString") }} with the name of the prefix associated to this namespace. If there is no such prefix, returns an empty string.
+  - : Returns a {{ domxref("DOMString") }} with the name of the prefix associated to this namespace. If there is no such prefix, returns an empty string.
 
 ## Methods
 

@@ -16,8 +16,8 @@ The **`Element.attachShadow()`** method attaches a shadow DOM tree to the specif
 
 ## Elements you can attach a shadow to
 
-Note that you can't attach a shadow root to every type of element.
-There are some that can't have a shadow DOM for security reasons (for example {{htmlelement("a")}}).
+Note that you can't attach a shadow root to every type of element.
+There are some that can't have a shadow DOM for security reasons (for example {{htmlelement("a")}}).
 
 The following is a list of elements you **can** attach a shadow root to:
 
@@ -52,7 +52,7 @@ attachShadow(init)
 
 - `init`
 
-  - : A object that contain the following fields:
+  - : A object that contain the following fields:
 
     - `mode`
 

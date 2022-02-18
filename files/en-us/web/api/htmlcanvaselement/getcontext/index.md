@@ -17,7 +17,7 @@ context on the canvas, or {{jsxref("null")}} if the context identifier is not
 supported, or the canvas has already been set to a different context mode.
 
 Later calls to this method on the same canvas element, with the same
-`contextType` argument, will always return the same drawing context instance
+`contextType` argument, will always return the same drawing context instance
 as was returned the first time the method was invoked. It is not possible to get a
 different drawing context object on a given canvas element.
 
@@ -139,7 +139,7 @@ A rendering context which is either a
 - {{domxref("ImageBitmapRenderingContext")}} for `"bitmaprenderer"`.
 
 If the `contextType` doesn't match a possible drawing context, or differs
-from the first `contextType` requested, `null` is returned.
+from the first `contextType` requested, `null` is returned.
 
 ## Examples
 

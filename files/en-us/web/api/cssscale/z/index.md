@@ -12,7 +12,7 @@ tags:
   - Property
 browser-compat: api.CSSScale.z
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`z`** property of the
 {{domxref("CSSScale")}} interface representing the z-component of the translating

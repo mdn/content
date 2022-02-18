@@ -20,7 +20,7 @@ The **`AudioConfiguration`** dictionary of the [Media Capabilities API](/en-US/d
 
 The `AudioConfiguration` dictionary is made up of four audio properties, including:
 
-- **contentType**: A valid audio MIME type, For information on possible values and what they mean, see the [web audio codec guide](/en-US/docs/Web/Media/Formats/Audio_codecs).
+- **contentType**: A valid audio MIME type, For information on possible values and what they mean, see the [web audio codec guide](/en-US/docs/Web/Media/Formats/Audio_codecs).
 - **channels**: the number of channels used by the audio track.
 - **bitrate**: The number of bits used to encode one second of the audio file.
 - **samplerate**: The number of audio samples making up one second of the audio file.

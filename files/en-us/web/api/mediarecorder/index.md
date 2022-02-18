@@ -34,7 +34,7 @@ The **`MediaRecorder`** interface of the [MediaStream Recording API](/en-US/docs
 - {{domxref("MediaRecorder.stream")}} {{readonlyInline}}
   - : Returns the stream that was passed into the constructor when the `MediaRecorder` was created.
 - {{domxref("MediaRecorder.ignoreMutedMedia")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Indicates whether the `MediaRecorder` instance will record input when the input {{domxref("MediaStreamTrack")}} is muted. If this attribute is `false`, `MediaRecorder` will record silence for audio and black frames for video. The default is `false`.
+  - : Indicates whether the `MediaRecorder` instance will record input when the input {{domxref("MediaStreamTrack")}} is muted. If this attribute is `false`, `MediaRecorder` will record silence for audio and black frames for video. The default is `false`.
 - {{domxref("MediaRecorder.videoBitsPerSecond")}} {{readonlyInline}} {{experimental_inline}}
   - : Returns the video encoding bit rate in use. This may differ from the bit rate specified in the constructor (if it was provided).
 - {{domxref("MediaRecorder.audioBitsPerSecond")}} {{readonlyInline}} {{experimental_inline}}

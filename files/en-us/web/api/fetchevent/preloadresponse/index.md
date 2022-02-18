@@ -16,7 +16,7 @@ browser-compat: api.FetchEvent.preloadResponse
 ---
 {{APIRef("Service Workers API")}}
 
-The **`preloadResponse`** read-only property of the
+The **`preloadResponse`** read-only property of the
 {{domxref("FetchEvent")}} interface returns a {{jsxref("Promise")}} that resolves to the
 navigation preload {{domxref("Response")}} if navigation preload was triggered or
 undefined otherwise.
@@ -44,18 +44,18 @@ a response from the network.
 
 ```js
 addEventListener('fetch', event => {
-  event.respondWith(async function() {
-    // Respond from the cache if we can
-    const cachedResponse = await caches.match(event.request);
-    if (cachedResponse) return cachedResponse;
+  event.respondWith(async function() {
+    // Respond from the cache if we can
+    const cachedResponse = await caches.match(event.request);
+    if (cachedResponse) return cachedResponse;
 
-    // Else, use the preloaded response, if it's there
-    const response = await event.preloadResponse;
-    if (response) return response;
+    // Else, use the preloaded response, if it's there
+    const response = await event.preloadResponse;
+    if (response) return response;
 
-    // Else try the network.
-    return fetch(event.request);
-  }());
+    // Else try the network.
+    return fetch(event.request);
+  }());
 });
 ```
 

@@ -45,7 +45,7 @@ object is found and deleted, and `false` otherwise.
 
 In this code snippet we wait for an activate event, and then run a
 {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} block that clears up any old,
-unused caches before a new service worker is activated. Here we have an array of cache
+unused caches before a new service worker is activated. Here we have an array of cache
 names we want to keep (`cachesToKeep`). We return the keys of the caches in
 the {{domxref("CacheStorage")}} object using {{domxref("CacheStorage.keys")}}, then
 check each key to see if it is in the array. If not, we delete it using
@@ -57,13 +57,13 @@ this.addEventListener('activate', function(event) {
 
   event.waitUntil(
     caches.keys().then(function(keyList) {
-      return Promise.all(keyList.map(function(key) {
-        if (cachesToKeep.indexOf(key) === -1) {
-          return caches.delete(key);
-        }
-      }));
-    })
-  );
+      return Promise.all(keyList.map(function(key) {
+        if (cachesToKeep.indexOf(key) === -1) {
+          return caches.delete(key);
+        }
+      }));
+    })
+  );
 });
 ```
 
