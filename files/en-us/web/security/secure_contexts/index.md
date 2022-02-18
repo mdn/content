@@ -21,7 +21,7 @@ A context is considered secure when it meets certain minimum standards of authen
 
 For example, even for a document delivered over TLS within an {{HTMLElement("iframe")}}, its context is **not** considered secure if it has an ancestor that was not also delivered over TLS.
 
-However, it’s important to note that if a non-secure context causes a new window to be created (with or without specifying [noopener](/en-US/docs/Web/API/Window/open)), then the fact that the opener was insecure has no effect on whether the new window is considered secure. That’s because the determination of whether or not a particular document is in a secure context is based only on considering it within the top-level browsing context with which it is associated — and not whether a non-secure context happened to be used to create it.
+However, it's important to note that if a non-secure context causes a new window to be created (with or without specifying [noopener](/en-US/docs/Web/API/Window/open)), then the fact that the opener was insecure has no effect on whether the new window is considered secure. That's because the determination of whether or not a particular document is in a secure context is based only on considering it within the top-level browsing context with which it is associated — and not whether a non-secure context happened to be used to create it.
 
 Locally-delivered resources such as those with _http\://127.0.0.1_ URLs, *http\://localhost* and  *http\://\*.localhost* URLs (e.g. _http\://dev.whatever.localhost/_), and _file://_ URLs are also considered to have been delivered securely.
 
@@ -49,7 +49,7 @@ if (window.isSecureContext) {
 
 | Specification                            | Status                               | Comment        |
 | ---------------------------------------- | ------------------------------------ | -------------- |
-| {{SpecName('Secure Contexts')}} | {{Spec2('Secure Contexts')}} | Editor’s Draft |
+| {{SpecName('Secure Contexts')}} | {{Spec2('Secure Contexts')}} | Editor's Draft |
 
 ## See also
 

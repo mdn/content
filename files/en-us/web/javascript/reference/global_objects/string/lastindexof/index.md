@@ -47,7 +47,7 @@ The index of the last occurrence of `searchString` found, or `-1` if not found.
 
 ## Description
 
-Strings are zero-indexed: The index of a string’s first character is `0`, and the index of a string’s last character is the length of the string minus 1.
+Strings are zero-indexed: The index of a string's first character is `0`, and the index of a string's last character is the length of the string minus 1.
 
 ```js
 'canal'.lastIndexOf('a');     // returns 3

@@ -37,7 +37,7 @@ MediaRecorder.resume()
 ### Errors
 
 An `InvalidState` error is raised if the `resume()` method is
-called while the `MediaRecorder` object’s {{domxref("MediaRecorder.state")}}
+called while the `MediaRecorder` object's {{domxref("MediaRecorder.state")}}
 is "inactive" — the recording cannot be resumed if it is not already paused; if
 {{domxref("MediaRecorder.state")}} is already "recording", `resume()` has no
 effect.

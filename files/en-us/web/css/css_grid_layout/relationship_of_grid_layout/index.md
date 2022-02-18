@@ -127,7 +127,7 @@ The feature of flexbox that was most exciting to many of us was that it gave us 
 
 The alignment properties from the flexbox specification have been added to a new specification called [Box Alignment Level 3](https://drafts.csswg.org/css-align/). This means that they can be used in other specifications, including Grid Layout. In the future, they may well apply to other layout methods as well.
 
-In a later guide in this series, I’ll be taking a proper look at Box Alignment and how it works in Grid Layout. For now, here is a comparison between simple examples of flexbox and grid.
+In a later guide in this series, I'll be taking a proper look at Box Alignment and how it works in Grid Layout. For now, here is a comparison between simple examples of flexbox and grid.
 
 In the first example, which uses flexbox, I have a container with three items inside. The wrapper {{cssxref("min-height")}} is set, so it defines the height of the flex container. I have set {{cssxref("align-items")}} on the flex container to `flex-end` so the items will line up at the end of the flex container. I have also set the {{cssxref("align-self")}} property on `box1` so it will override the default and stretch to the height of the container and on `box2` so it aligns to the start of the flex container.
 
@@ -271,7 +271,7 @@ In this next example, I have used the `auto-fill` keyword in place of an integer
 
 ### A flexible number of tracks
 
-This isn’t quite the same as flexbox. In the flexbox example, the items are larger than the 200 pixel basis before wrapping. We can achieve the same in grid by combining `auto-fit` and the {{cssxref("minmax()", "minmax()")}} function. In this next example, I create auto filled tracks with `minmax`. I want my tracks to be a minimum of 200 pixels, so I set the maximum to be `1fr`. Once the browser has worked out how many times 200 pixels will fit into the container–also taking account of grid gaps–it will treat the `1fr` maximum as an instruction to share out the remaining space between the items.
+This isn't quite the same as flexbox. In the flexbox example, the items are larger than the 200 pixel basis before wrapping. We can achieve the same in grid by combining `auto-fit` and the {{cssxref("minmax()", "minmax()")}} function. In this next example, I create auto filled tracks with `minmax`. I want my tracks to be a minimum of 200 pixels, so I set the maximum to be `1fr`. Once the browser has worked out how many times 200 pixels will fit into the container–also taking account of grid gaps–it will treat the `1fr` maximum as an instruction to share out the remaining space between the items.
 
 ```css hidden
 * {box-sizing: border-box;}
@@ -370,7 +370,7 @@ In the below example I have a wrapper containing four child items. Item three is
 
 {{ EmbedLiveSample('A_grid_container_as_containing_block', '500', '330') }}
 
-You can see that the item is taking the area from grid column line 2 to 4, and starting after line 1. Then it is offset in that area using the top and left properties. However, it has been taken out of flow as is usual for absolutely positioned items and so the auto-placement rules now place items into the same space. The item also doesn’t cause the additional row to be created to span to row line 3.
+You can see that the item is taking the area from grid column line 2 to 4, and starting after line 1. Then it is offset in that area using the top and left properties. However, it has been taken out of flow as is usual for absolutely positioned items and so the auto-placement rules now place items into the same space. The item also doesn't cause the additional row to be created to span to row line 3.
 
 If we remove `position:` `absolute` from the rules for `.box3` you can see how it would display without the positioning.
 
@@ -456,7 +456,7 @@ If you set an item to `display:` `contents` the box it would normally create dis
 
 ### Grid layout with nested child elements
 
-In the following markup, I have a grid and the first item on the grid is set to span all three column tracks. It contains three nested items. As these items are not direct children, they don’t become part of the grid layout and so display using regular block layout.
+In the following markup, I have a grid and the first item on the grid is set to span all three column tracks. It contains three nested items. As these items are not direct children, they don't become part of the grid layout and so display using regular block layout.
 
 ```css hidden
 * {box-sizing: border-box;}
@@ -569,7 +569,7 @@ If I now add `display:` `contents` to the rules for `box1`, the box for that ite
 
 This can be a way to get items nested into the grid to act as if they are part of the grid, and is a way around some of the issues that would be solved by subgrids once they are implemented. You can also use `display:` `contents` in a similar way with flexbox to enable nested items to become flex items.
 
-As you can see from this guide, CSS Grid Layout is just one part of your toolkit. Don’t be afraid to mix it with other methods of doing layout to get the different effects you need.
+As you can see from this guide, CSS Grid Layout is just one part of your toolkit. Don't be afraid to mix it with other methods of doing layout to get the different effects you need.
 
 ## See also
 

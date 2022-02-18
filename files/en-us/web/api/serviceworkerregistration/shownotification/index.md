@@ -65,8 +65,8 @@ serviceWorkerRegistration.showNotification(title, [options]);
       {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
     - `renotify`: A boolean that indicates whether to suppress vibrations
       and audible alerts when reusing a `tag` value.
-      If *options*’s `renotify` is true
-      and *options*’s `tag` is the empty string a TypeError will be
+      If *options*'s `renotify` is true
+      and *options*'s `tag` is the empty string a TypeError will be
       thrown. The default is `false`.
     - `requireInteraction`: Indicates that on devices with sufficiently
       large screens, a notification should remain active until the user clicks or
@@ -74,15 +74,15 @@ serviceWorkerRegistration.showNotification(title, [options]);
       auto-minimize notifications after approximately twenty seconds. The default value
       is `false`.
     - `silent`: When set indicates that no sounds or vibrations should be
-      made. If *options*’s `silent` is true
-      and *options*’s `vibrate` is present a TypeError exception
+      made. If *options*'s `silent` is true
+      and *options*'s `vibrate` is present a TypeError exception
       will be thrown. The default value is `false`.
     - `tag`: An ID for a given notification that allows you to find,
       replace, or remove the notification using a script if necessary.
     - `timestamp`: A {{domxref("DOMTimeStamp")}} representing the time when
       the notification was created. It can be used to indicate the time at which a
       notification is actual. For example, this could be in the past when a notification
-      is used for a message that couldn’t immediately be delivered because the device
+      is used for a message that couldn't immediately be delivered because the device
       was offline, or in the future for a meeting that is about to start.
     - `vibrate`: A vibration pattern to run with the display of the
       notification. A vibration pattern can be an array with as few as one member. The

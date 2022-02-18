@@ -20,7 +20,7 @@ through matching results. Used for iterating through the keys of an object store
 a cursor.
 
 To determine if the add operation has completed successfully, listen for the
-results’s `success` event.
+results's `success` event.
 
 ## Syntax
 

@@ -68,7 +68,7 @@ You can read more about margin collapsing in our article [Mastering Margin Colla
 
 ## Elements participating in an inline formatting context
 
-Inline elements display one after the other in the direction that sentences run in that particular writing mode. While we don’t tend to think of inline elements as having a box, as with everything in CSS they do. These inline boxes are arranged one after the other. If there is not enough space in the containing block for all of the boxes a box can break onto a new line. The lines created are known as line boxes.
+Inline elements display one after the other in the direction that sentences run in that particular writing mode. While we don't tend to think of inline elements as having a box, as with everything in CSS they do. These inline boxes are arranged one after the other. If there is not enough space in the containing block for all of the boxes a box can break onto a new line. The lines created are known as line boxes.
 
 In the following example, we have three inline boxes created by a paragraph with a {{HTMLElement("strong")}} element inside it.
 

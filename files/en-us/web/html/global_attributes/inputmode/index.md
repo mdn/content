@@ -25,7 +25,7 @@ This allows a browser to display an appropriate virtual keyboard.
 
 It is used primarily on {{HTMLElement("input")}} elements, but is usable on any element in {{HTMLAttrxRef("contenteditable")}} mode.
 
-It’s important to understand that the `inputmode` attribute doesn’t cause any validity requirements to be enforced on input. To require that input conforms to a particular data type, choose an appropriate [`<input> element type`](/en-US/docs/Web/HTML/Element/input#input_types). For specific guidance on choosing {{HTMLElement("input")}} types, see the [Values](#values) section.
+It's important to understand that the `inputmode` attribute doesn't cause any validity requirements to be enforced on input. To require that input conforms to a particular data type, choose an appropriate [`<input> element type`](/en-US/docs/Web/HTML/Element/input#input_types). For specific guidance on choosing {{HTMLElement("input")}} types, see the [Values](#values) section.
 
 ## Values
 

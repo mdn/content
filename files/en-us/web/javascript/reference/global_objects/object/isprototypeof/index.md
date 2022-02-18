@@ -86,7 +86,7 @@ console.log(Object.prototype.isPrototypeOf(baz)); // true
 
 The `isPrototypeOf()` method — along with the {{jsxref("Operators/instanceof", "instanceof")}} operator — comes in particularly handy if you have code that can only function when dealing with objects descended from a specific prototype chain; e.g., to guarantee that certain methods or properties will be present on that object.
 
-For example, to execute some code that’s only safe to run if a `baz` object has `Foo.prototype` in its prototype chain, you can do this:
+For example, to execute some code that's only safe to run if a `baz` object has `Foo.prototype` in its prototype chain, you can do this:
 
 ```js
 if (Foo.prototype.isPrototypeOf(baz)) {

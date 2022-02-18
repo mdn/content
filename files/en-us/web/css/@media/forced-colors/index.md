@@ -20,7 +20,7 @@ The `forced-colors` media feature indicates whether or not the browser is curren
 ### Values
 
 - `none`
-  - : Forced colors mode is not active; the page’s colors are not being forced into a limited palette.
+  - : Forced colors mode is not active; the page's colors are not being forced into a limited palette.
 - `active`
   - : Indicates that forced colors mode is active. The browser provides the color palette to authors through the [CSS system color](/en-US/docs/Web/CSS/color_value#system_colors) keywords and, if appropriate, triggers the appropriate value of [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) so that authors can adapt the page. The browser selects the value for `prefers-color-scheme` based on the lightness of the `Canvas` system color (see the [color adjust spec](https://www.w3.org/TR/css-color-adjust-1/#forced) for more details).
 

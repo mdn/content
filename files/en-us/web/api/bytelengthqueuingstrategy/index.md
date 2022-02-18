@@ -26,7 +26,7 @@ None.
 ## Methods
 
 - {{domxref("ByteLengthQueuingStrategy.size()")}}
-  - : Returns the given chunk’s `byteLength` property.
+  - : Returns the given chunk's `byteLength` property.
 
 ## Examples
 

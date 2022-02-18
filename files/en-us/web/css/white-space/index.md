@@ -61,7 +61,7 @@ The `white-space` property is specified as a single keyword chosen from the list
 
     - Any sequence of preserved white space always takes up space, including at the end of the line.
     - A line breaking opportunity exists after every preserved white space character, including between white space characters.
-    - Such preserved spaces take up space and do not hang, and thus affect the box’s intrinsic sizes (min-content size and max-content size).
+    - Such preserved spaces take up space and do not hang, and thus affect the box's intrinsic sizes (min-content size and max-content size).
 
 The following table summarizes the behavior of the various `white-space` values:
 

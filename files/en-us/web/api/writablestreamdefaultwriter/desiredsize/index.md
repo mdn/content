@@ -34,7 +34,7 @@ closed.
 ### Exceptions
 
 - TypeError
-  - : The writer’s lock is released.
+  - : The writer's lock is released.
 
 ## Examples
 

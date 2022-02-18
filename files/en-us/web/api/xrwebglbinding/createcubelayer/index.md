@@ -61,7 +61,7 @@ createCubeLayer(init)
       The default value is `mono`.
     - `mipLevels`: Optional. A number specifying the desired number of mip levels. The default value is `1`.
     - `orientation`: Optional. A {{domxref("DOMPointReadOnly")}} specifying the orientation relative to the `space` property.
-    - `space`: **Required**. An {{domxref("XRSpace")}} object defining the layer's spatial relationship with the user’s physical environment.
+    - `space`: **Required**. An {{domxref("XRSpace")}} object defining the layer's spatial relationship with the user's physical environment.
     - `viewPixelHeight`: **Required**. A number specifying the pixel height of the layer view.
     - `viewPixelWidth`: **Required**. A number specifying the pixel width of the layer view.
 

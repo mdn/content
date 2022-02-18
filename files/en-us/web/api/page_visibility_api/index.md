@@ -54,7 +54,7 @@ Separately from the Page Visibility API, user agents typically have a number of 
 
 Some processes are exempt from this throttling behavior. In these cases, you can use the Page Visibility API to reduce the tabs' performance impact while they're hidden.
 
-- Tabs which are playing audio are considered foreground and aren’t throttled.
+- Tabs which are playing audio are considered foreground and aren't throttled.
 - Tabs running code that's using real-time network connections ([WebSockets](/en-US/docs/Web/API/WebSockets_API) and [WebRTC](/en-US/docs/Web/API/WebRTC_API)) go unthrottled in order to avoid closing these connections timing out and getting unexpectedly closed.
 - [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) processes are also left unthrottled in order to avoid timeouts.
 

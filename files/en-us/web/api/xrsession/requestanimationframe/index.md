@@ -134,7 +134,7 @@ function startXRSession() {
     xrSession = session
     xrSession.addEventListener('end', onXRSessionEnded)
     // Do necessary session setup here.
-    // Begin the session’s animation loop.
+    // Begin the session's animation loop.
     xrSession.requestAnimationFrame(onXRAnimationFrame)
   })
 }

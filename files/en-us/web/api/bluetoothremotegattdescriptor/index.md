@@ -14,7 +14,7 @@ browser-compat: api.BluetoothRemoteGATTDescriptor
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The `BluetoothRemoteGATTDescriptor` interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) provides a GATT Descriptor,
-which provides further information about a characteristic’s value.
+which provides further information about a characteristic's value.
 
 > **Note:** This page describes the W3C Community Group Web Bluetooth API. For the Firefox OS
 > Bluetooth API, see [`BluetoothGattDescriptor`

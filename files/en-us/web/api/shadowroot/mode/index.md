@@ -16,7 +16,7 @@ The **`mode`** read-only property of the {{domxref("ShadowRoot")}}
 specifies its mode — either `open` or `closed`. This defines
 whether or not the shadow root's internal features are accessible from JavaScript.
 
-When the `mode` of a shadow root is "`closed`", the shadow root’s
+When the `mode` of a shadow root is "`closed`", the shadow root's
 implementation internals are inaccessible and unchangeable from JavaScript—in the same
 way the implementation internals of, for example, the {{HTMLElement("video")}} element
 are inaccessible and unchangeable from JavaScript.

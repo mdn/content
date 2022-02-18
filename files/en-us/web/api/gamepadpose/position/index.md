@@ -19,7 +19,7 @@ The **`position`** read-only property of the {{domxref("GamepadPose")}} interfac
 
 The coordinate system is as follows:
 
-- Positive X is to the user’s right.
+- Positive X is to the user's right.
 - Positive Y is up.
 - Positive Z is behind the user.
 

@@ -35,7 +35,7 @@ content-visibility: unset;
 ### Values
 
 - `visible`
-  - : No effect. The element’s contents are laid out and rendered as normal.
+  - : No effect. The element's contents are laid out and rendered as normal.
 - `hidden`
   - : The element skips its contents. The skipped contents must not be accessible to user-agent features, such as find-in-page, tab-order navigation, etc., nor be selectable or focusable. This is similar to giving the contents `display: none`.
 - `auto`

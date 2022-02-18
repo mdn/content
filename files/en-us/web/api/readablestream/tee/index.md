@@ -20,7 +20,7 @@ new {{domxref("ReadableStream")}} instances.
 This is useful for allowing two readers to read a stream simultaneously, perhaps at
 different speeds. You might do this for example in a ServiceWorker if you want to fetch
 a response from the server and stream it to the browser, but also stream it to the
-ServiceWorker cache. Since a response body cannot be consumed more than once, you’d need
+ServiceWorker cache. Since a response body cannot be consumed more than once, you'd need
 two copies to do this.
 
 To cancel the stream you then need to cancel both resulting branches. Teeing a stream

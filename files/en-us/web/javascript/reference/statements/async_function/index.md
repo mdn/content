@@ -29,7 +29,7 @@ async function name([param[, param[, ...param]]]) {
 ### Parameters
 
 - `name`
-  - : The function’s name.
+  - : The function's name.
 - `param`
   - : The name of an argument to be passed to the function.
 - `statements`

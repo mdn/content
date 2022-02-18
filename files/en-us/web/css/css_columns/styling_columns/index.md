@@ -13,7 +13,7 @@ As column boxes created inside multicol containers are anonymous boxes, there is
 
 ## Can I Style the Column Boxes?
 
-Sadly, not at present. The anonymous boxes that make up your columns can’t be targeted in any way, meaning it isn’t possible to change a box's background color or have one column larger than the others. Perhaps in future versions of the specification it might be. For now, however, we are able to change the spacing and add lines between columns.
+Sadly, not at present. The anonymous boxes that make up your columns can't be targeted in any way, meaning it isn't possible to change a box's background color or have one column larger than the others. Perhaps in future versions of the specification it might be. For now, however, we are able to change the spacing and add lines between columns.
 
 ## The `column-gap` property
 

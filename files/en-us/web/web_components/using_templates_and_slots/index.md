@@ -134,7 +134,7 @@ To finish off the article, let's look at something a little less trivial.
 The following set of code snippets show how to use {{HTMLElement("slot")}} together with {{HTMLElement("template")}} and some JavaScript to:
 
 - create a **`<element-details>`** element with [named slots](/en-US/docs/Web/HTML/Element/slot#named-slot) in its [shadow root](/en-US/docs/Web/API/ShadowRoot)
-- design the **`<element-details>`** element in such a way that, when used in documents, it is rendered from composing the element’s content together with content from its [shadow root](/en-US/docs/Web/API/ShadowRoot)—that is, pieces of the element’s content are used to fill in [named slots](/en-US/docs/Web/HTML/Element/slot#named-slot) in its [shadow root](/en-US/docs/Web/API/ShadowRoot)
+- design the **`<element-details>`** element in such a way that, when used in documents, it is rendered from composing the element's content together with content from its [shadow root](/en-US/docs/Web/API/ShadowRoot)—that is, pieces of the element's content are used to fill in [named slots](/en-US/docs/Web/HTML/Element/slot#named-slot) in its [shadow root](/en-US/docs/Web/API/ShadowRoot)
 
 Note that it is technically possible to use {{HTMLElement("slot")}} element without a {{HTMLElement("template")}} element, e.g., within say a regular {{HTMLElement("div")}} element, and still take advantage of the place-holder features of {{HTMLElement("slot")}} for Shadow DOM content, and doing so may indeed avoid the small trouble of needing to first access the template element's `content` property (and clone it).
 However, it is generally more practical to add slots within a {{HTMLElement("template")}} element, since you are unlikely to need to define a pattern based on an already-rendered element.
@@ -188,7 +188,7 @@ That {{HTMLElement("template")}} element has several features:
 
 ### Creating a new \<element-details> element from the \<template>
 
-Next, let’s create a new custom element named **`<element-details>`** and use {{DOMXref("Element.attachShadow")}} to attach to it, as its [shadow root](/en-US/docs/Web/API/ShadowRoot), that document fragment we created with our {{HTMLElement("template")}} element above.
+Next, let's create a new custom element named **`<element-details>`** and use {{DOMXref("Element.attachShadow")}} to attach to it, as its [shadow root](/en-US/docs/Web/API/ShadowRoot), that document fragment we created with our {{HTMLElement("template")}} element above.
 This uses exactly the same pattern as we saw in our earlier trivial example.
 
 ```js
@@ -208,7 +208,7 @@ customElements.define('element-details',
 
 ### Using the \<element-details> custom element with named slots
 
-Now let’s take that **`<element-details>`** element and actually use it in our document:
+Now let's take that **`<element-details>`** element and actually use it in our document:
 
 ```html
 <element-details>
@@ -255,7 +255,7 @@ body { margin-top: 47px }
 
 ### Result
 
-Finally let’s put all the snippets together and see what the rendered result looks like.
+Finally let's put all the snippets together and see what the rendered result looks like.
 
 {{ EmbedLiveSample('A_more_involved_example', '300','400','element-details.png','') }}
 
@@ -265,4 +265,4 @@ Notice the following points about this rendered result:
 - Within the rendered {{HTMLElement("details")}} output, the content in the **`<element-details>`** elements fills the [named slots](/en-US/docs/Web/HTML/Element/slot#named-slot) from the [shadow root](/en-US/docs/Web/API/ShadowRoot). In other words, the DOM tree from the **`<element-details>`** elements get _composed_ together with the content of the [shadow root](/en-US/docs/Web/API/ShadowRoot).
 - For both **`<element-details>`** elements, an **Attributes** heading gets automatically added from the [shadow root](/en-US/docs/Web/API/ShadowRoot) before the position of the `"attributes"` [named slot](/en-US/docs/Web/HTML/Element/slot#named-slot).
 - Because the first **`<element-details>`** has a {{HTMLElement("dl")}} element which explicitly references the `"attributes"` [named slot](/en-US/docs/Web/HTML/Element/slot#named-slot) from its [shadow root](/en-US/docs/Web/API/ShadowRoot), the contents of that {{HTMLElement("dl")}} replace the `"attributes"` [named slot](/en-US/docs/Web/HTML/Element/slot#named-slot) from the [shadow root](/en-US/docs/Web/API/ShadowRoot).
-- Because the second **`<element-details>`** doesn’t explicitly reference the `"attributes"` [named slot](/en-US/docs/Web/HTML/Element/slot#named-slot) from its [shadow root](/en-US/docs/Web/API/ShadowRoot), its content for that [named slot](/en-US/docs/Web/HTML/Element/slot#named-slot) gets filled with the default content for it from the [shadow root](/en-US/docs/Web/API/ShadowRoot).
+- Because the second **`<element-details>`** doesn't explicitly reference the `"attributes"` [named slot](/en-US/docs/Web/HTML/Element/slot#named-slot) from its [shadow root](/en-US/docs/Web/API/ShadowRoot), its content for that [named slot](/en-US/docs/Web/HTML/Element/slot#named-slot) gets filled with the default content for it from the [shadow root](/en-US/docs/Web/API/ShadowRoot).

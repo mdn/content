@@ -46,7 +46,7 @@ This code snippet is taken from a [push messaging and notification sample](https
         pushButton.disabled = false;
 
         if (!subscription) {
-          // We aren’t subscribed to push, so set UI
+          // We aren't subscribed to push, so set UI
           // to allow the user to enable push
           return;
         }

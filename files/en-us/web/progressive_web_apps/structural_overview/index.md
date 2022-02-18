@@ -29,7 +29,7 @@ PWAs can be built using any approach you like, but some will work better than th
 
 ## The app shell concept
 
-The **app shell** concept is concerned with loading a minimal user interface and content as soon as possible, caching it so it's available offline for subsequent visits before then loading the remainder of the app's contents. That way, the next time someone visits the app from the device, the UI loads from the cache immediately and any new content is requested from the server (if it isn’t available in the cache already).
+The **app shell** concept is concerned with loading a minimal user interface and content as soon as possible, caching it so it's available offline for subsequent visits before then loading the remainder of the app's contents. That way, the next time someone visits the app from the device, the UI loads from the cache immediately and any new content is requested from the server (if it isn't available in the cache already).
 
 This structure is fast, and also feels fast as the user sees "something" instantly, instead of a loading spinner or a blank page. It also allows the website to be accessible offline if the network connection is not available.
 

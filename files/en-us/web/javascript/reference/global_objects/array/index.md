@@ -16,7 +16,7 @@ The **`Array`** object, as with arrays in other programming languages, enables [
 
 ## Description
 
-In JavaScript, arrays aren’t [primitives](/en-US/docs/Glossary/Primitive) but are instead `Array` objects with the following core characteristics:
+In JavaScript, arrays aren't [primitives](/en-US/docs/Glossary/Primitive) but are instead `Array` objects with the following core characteristics:
 
 - **JavaScript arrays are resizable** and **can contain a mix of different [data types](/en-US/docs/Web/JavaScript/Data_structures)**. (When those characteristics are undesirable, use [typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) instead.)
 
@@ -131,7 +131,7 @@ In JavaScript, arrays aren’t [primitives](/en-US/docs/Glossary/Primitive) but 
 
 This section provides some examples of common array operations in JavaScript.
 
-> **Note:** If you’re not yet familiar with array basics, consider first reading [JavaScript First Steps: Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays), which [explains what arrays are](/en-US/docs/Learn/JavaScript/First_steps/Arrays#what_is_an_array), and includes other examples of common array operations.
+> **Note:** If you're not yet familiar with array basics, consider first reading [JavaScript First Steps: Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays), which [explains what arrays are](/en-US/docs/Learn/JavaScript/First_steps/Arrays#what_is_an_array), and includes other examples of common array operations.
 
 ### Create an array
 
@@ -172,17 +172,17 @@ This example shows how to access items in the `fruits` array by specifying the i
 ```js
 const fruits = ['Apple', 'Banana'];
 
-// The index of an array’s first element is always 0.
+// The index of an array's first element is always 0.
 fruits[0]; // Apple
 
-// The index of an array’s second element is always 1.
+// The index of an array's second element is always 1.
 fruits[1]; // Banana
 
-// The index of an array’s last element is always one
+// The index of an array's last element is always one
 // less than the length of the array.
 fruits[fruits.length - 1]; // Banana
 
-// Using a index number larger than the array’s length
+// Using a index number larger than the array's length
 // returns 'undefined'.
 fruits[99]; // undefined
 ```
@@ -199,7 +199,7 @@ console.log(fruits.indexOf('Banana'));
 
 ### Check if an array contains a certain item
 
-This example shows two ways to check if the `fruits` array contains "`Banana`" and "`Cherry`": first with the [`includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method, and then with the [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) method to test for an index value that’s not `-1`.
+This example shows two ways to check if the `fruits` array contains "`Banana`" and "`Cherry`": first with the [`includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method, and then with the [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) method to test for an index value that's not `-1`.
 
 ```js
 const fruits = ['Apple', 'Banana'];
@@ -207,7 +207,7 @@ const fruits = ['Apple', 'Banana'];
 fruits.includes('Banana'); // true
 fruits.includes('Cherry'); // false
 
-// If indexOf() doesn’t return -1, the array contains the given item.
+// If indexOf() doesn't return -1, the array contains the given item.
 fruits.indexOf('Banana') !== -1; // true
 fruits.indexOf('Cherry') !== -1; // false
 ```
@@ -374,7 +374,7 @@ But `for...of` is just one of many ways to iterate over any array; for more ways
 
 ### Call a function on each element in an array
 
-This example uses the [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) method to call a function on each element in the `fruits` array; the function causes each item to be logged to the console, along with the item’s index number.
+This example uses the [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) method to call a function on each element in the `fruits` array; the function causes each item to be logged to the console, along with the item's index number.
 
 ```js
 const fruits = ['Apple', 'Mango', 'Cherry'];
@@ -426,7 +426,7 @@ const fruitsCopy = fruits.slice();
 // ["Strawberry", "Mango"]
 ```
 
-All built-in array-copy operations ([spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from), [`Array.prototype.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), and [`Array.prototype.concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)) create [shallow copies](/en-US/docs/Glossary/Shallow_copy). If you instead want a [deep copy](/en-US/docs/Glossary/Deep_copy) of an array, you can use {{jsxref("JSON.stringify()")}} to convert the array to a JSON string, and then {{jsxref("JSON.parse()")}} to convert the string back into a new array that’s completely independent from the original array.
+All built-in array-copy operations ([spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from), [`Array.prototype.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), and [`Array.prototype.concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)) create [shallow copies](/en-US/docs/Glossary/Shallow_copy). If you instead want a [deep copy](/en-US/docs/Glossary/Deep_copy) of an array, you can use {{jsxref("JSON.stringify()")}} to convert the array to a JSON string, and then {{jsxref("JSON.parse()")}} to convert the string back into a new array that's completely independent from the original array.
 
 ```js
 const fruitsDeepCopy = JSON.parse(JSON.stringify(fruits));
@@ -434,7 +434,7 @@ const fruitsDeepCopy = JSON.parse(JSON.stringify(fruits));
 
 You can also create deep copies using the [`structuredClone()`](/en-US/docs/Web/API/structuredClone) method, which has the advantage of allowing {{Glossary("transferable objects")}} in the source to be _transferred_ to the new copy, rather than just cloned.
 
-Finally, it’s important to understand that assigning an existing array to a new variable doesn’t create a copy of either the array or its elements. Instead the new variable is just a reference, or alias, to the original array; that is, the original array’s name and the new variable name are just two names for the exact same object (and so will always evaluate as [strictly equivalent](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#strict_equality_using_)). Therefore, if you make any changes at all either to the value of the original array or to the value of the new variable, the other will change, too:
+Finally, it's important to understand that assigning an existing array to a new variable doesn't create a copy of either the array or its elements. Instead the new variable is just a reference, or alias, to the original array; that is, the original array's name and the new variable name are just two names for the exact same object (and so will always evaluate as [strictly equivalent](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#strict_equality_using_)). Therefore, if you make any changes at all either to the value of the original array or to the value of the new variable, the other will change, too:
 
 ```js
 const fruits = ['Strawberry', 'Mango'];

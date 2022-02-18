@@ -17,7 +17,7 @@ In moving to CSS we often spoke about CSS for layout enabling a separation of co
 
 ## Re-ordering content in CSS Grid Layout
 
-We’ve already seen in these guides that grid gives us power to re-order the content of our page in various ways. We can use the {{cssxref("order")}} property, which will change how items auto-place. We can use `grid-auto-flow: dense` which will take items visually out of DOM order. We can also position items using line-based placement of grid template areas, without considering their location in the source.
+We've already seen in these guides that grid gives us power to re-order the content of our page in various ways. We can use the {{cssxref("order")}} property, which will change how items auto-place. We can use `grid-auto-flow: dense` which will take items visually out of DOM order. We can also position items using line-based placement of grid template areas, without considering their location in the source.
 
 The [specification](https://drafts.csswg.org/css-grid/#order-accessibility) includes a section that covers Reordering and Accessibility. In the introduction to that section are details of what the specification expects browsers to do when the content is visually reordered using Grid Layout.
 
@@ -107,4 +107,4 @@ There is not a lot of existing material regarding accessibility and CSS Grid Lay
 
 The concept of visual display following document source order is detailed in the _WCAG Techniques for Success Criteria – [Technique C27](https://www.w3.org/TR/WCAG20-TECHS/C27.html)_.
 
-As a way to start thinking about these issues, as you use CSS Grid Layout I would suggest reading _[Flexbox & the Keyboard Navigation Disconnect](http://tink.uk/flexbox-the-keyboard-navigation-disconnect/)_ from Léonie Watson. Also [the video of Léonie’s presentation from ffconf](https://www.youtube.com/watch?v=spxT2CmHoPk) is helpful to understand more about how screen readers work with the visual representation of things in CSS. Adrian Roselli has also posted regarding [tab order in various browsers](http://adrianroselli.com/2015/10/html-source-order-vs-css-display-order.html) – although this was prior to grid support being fully implemented in Firefox.
+As a way to start thinking about these issues, as you use CSS Grid Layout I would suggest reading _[Flexbox & the Keyboard Navigation Disconnect](http://tink.uk/flexbox-the-keyboard-navigation-disconnect/)_ from Léonie Watson. Also [the video of Léonie's presentation from ffconf](https://www.youtube.com/watch?v=spxT2CmHoPk) is helpful to understand more about how screen readers work with the visual representation of things in CSS. Adrian Roselli has also posted regarding [tab order in various browsers](http://adrianroselli.com/2015/10/html-source-order-vs-css-display-order.html) – although this was prior to grid support being fully implemented in Firefox.

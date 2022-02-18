@@ -190,7 +190,7 @@ Cache-Control: public, max-age=604800
 
 Note that, `s-maxage` or `must-revalidate` also unlock that restriction.
 
-If a request doesn’t have an `Authorization` header, or you are already using `s-maxage` or `must-revalidate` in the response, then you don't need to use `public`.
+If a request doesn't have an `Authorization` header, or you are already using `s-maxage` or `must-revalidate` in the response, then you don't need to use `public`.
 
 #### `must-understand`
 
@@ -212,7 +212,7 @@ Some intermediaries transform content for various reasons. For example, some con
 
 `no-transform` indicates that any intermediary (regardless of whether it implements a cache) shouldn't transform the response contents.
 
-Note: [Google’s Web Light](https://support.google.com/webmasters/answer/6211428) is one kind of such an intermediary. It converts images to minimize data for a cache store or slow connection, and supports `no-transform` as an opt-out option.
+Note: [Google's Web Light](https://support.google.com/webmasters/answer/6211428) is one kind of such an intermediary. It converts images to minimize data for a cache store or slow connection, and supports `no-transform` as an opt-out option.
 
 #### `immutable`
 
@@ -222,7 +222,7 @@ The `immutable` response directive indicates that the response will not be updat
 Cache-Control: public, max-age=604800, immutable
 ```
 
-A modern best practice for static resources is to include version/hashes in their URLs, while never modifying the resources — but instead, when necessary, _updating_ the resources with newer versions that have new version-numbers/hashes, so that their URLs are different. That’s called the **cache-busting** pattern.
+A modern best practice for static resources is to include version/hashes in their URLs, while never modifying the resources — but instead, when necessary, _updating_ the resources with newer versions that have new version-numbers/hashes, so that their URLs are different. That's called the **cache-busting** pattern.
 
 ```
 <script src=https://example.com/react.0.0.0.js></script>
@@ -301,11 +301,11 @@ Cache-Control: max-age=0
 
 `max-age=0` is a workaround for `no-cache`, because many old (HTTP/1.0) cache implementations don't support `no-cache`. Recently browsers are still using `max-age=0` in "reloading" — for backward compatibility — and alternatively using `no-cache` to cause a "force reloading".
 
-If the `max-age` value isn’t non-negative (for example, `-1`) or isn’t an integer (for example, `3599.99`), then the caching behavior is undefined. However, the [Calculating Freshness Lifetime](https://httpwg.org/specs/rfc7234.html#calculating.freshness.lifetime) section of the HTTP specification states:
+If the `max-age` value isn't non-negative (for example, `-1`) or isn't an integer (for example, `3599.99`), then the caching behavior is undefined. However, the [Calculating Freshness Lifetime](https://httpwg.org/specs/rfc7234.html#calculating.freshness.lifetime) section of the HTTP specification states:
 
 > Caches are encouraged to consider responses that have invalid freshness information to be stale.
 
-In other words, for any `max-age` value that isn’t an integer or isn’t non-negative, the caching behavior that’s encouraged is to treat the value as if it were `0`.
+In other words, for any `max-age` value that isn't an integer or isn't non-negative, the caching behavior that's encouraged is to treat the value as if it were `0`.
 
 ### `max-stale`
 
@@ -341,13 +341,13 @@ Same meaning that `no-transform` has for a response, but for a request instead.
 
 ### `only-if-cached`
 
-The client indicates that cache should obtain an already-cached response. If a cache has stored a response, it’s reused.
+The client indicates that cache should obtain an already-cached response. If a cache has stored a response, it's reused.
 
 ## Use Cases
 
 ### Preventing storing
 
-If you don’t want a response stored in caches, use the `no-store` directive.
+If you don't want a response stored in caches, use the `no-store` directive.
 
 ```
 Cache-Control: no-store
@@ -411,7 +411,7 @@ Note: If `index.html` is controlled under Basic Authentication or Digest Authent
 
 ### Up-to-date contents always
 
-For content that’s generated dynamically, or that’s static but updated often, you want a user to always receive the most up-to-date version.
+For content that's generated dynamically, or that's static but updated often, you want a user to always receive the most up-to-date version.
 
 If you don't add a `Cache-Control` header because the response is not intended to be cached, that could cause an unexpected result. Cache storage is allowed to cache it heuristically — so if you have any requirements on caching, you should always indicate them explicitly, in the `Cache-Control` header.
 
@@ -421,7 +421,7 @@ Adding `no-cache` to the response causes revalidation to the server, so you can 
 Cache-Control: no-cache
 ```
 
-Most HTTP/1.0 caches don't support `no-cache` directives, so historically `max-age=0` was used as a workaround. But only `max-age=0` could cause a [stale response](/en-US/docs/Web/HTTP/Caching#freshness) to be reused when caches disconnected from the origin server. `must-revalidate` addresses that. That’s why the example below is equivalent to `no-cache`.
+Most HTTP/1.0 caches don't support `no-cache` directives, so historically `max-age=0` was used as a workaround. But only `max-age=0` could cause a [stale response](/en-US/docs/Web/HTTP/Caching#freshness) to be reused when caches disconnected from the origin server. `must-revalidate` addresses that. That's why the example below is equivalent to `no-cache`.
 
 ```
 Cache-Control: max-age=0, must-revalidate

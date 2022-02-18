@@ -40,7 +40,7 @@ mutationObserver.observe(target, options)
     tree to watch for changes, or to be the root of a subtree of nodes to be watched.
 - `options`
 
-  - : An object providing options that describe which DOM mutations should be reported to `mutationObserver`’s `callback`.
+  - : An object providing options that describe which DOM mutations should be reported to `mutationObserver`'s `callback`.
     At a minimum, one of `childList`, `attributes`, and/or `characterData` must be `true` when you call {{domxref("MutationObserver.observe", "observe()")}}.
     Otherwise, a `TypeError` exception will be thrown.
 

@@ -23,9 +23,9 @@ The Web Bluetooth API provides the ability to connect and interact with Bluetoot
 - {{DOMxRef("BluetoothDevice")}}
   - : Represents a Bluetooth device inside a particular script execution environment.
 - {{DOMxRef("BluetoothRemoteGATTCharacteristic")}}
-  - : Represents a GATT Characteristic, which is a basic data element that provides further information about a peripheral’s service.
+  - : Represents a GATT Characteristic, which is a basic data element that provides further information about a peripheral's service.
 - {{DOMxRef("BluetoothRemoteGATTDescriptor")}}
-  - : Represents a GATT Descriptor, which provides further information about a characteristic’s value.
+  - : Represents a GATT Descriptor, which provides further information about a characteristic's value.
 - {{DOMxRef("BluetoothRemoteGATTServer")}}
   - : Represents a GATT Server on a remote device.
 - {{DOMxRef("BluetoothRemoteGATTService")}}

@@ -257,7 +257,7 @@ Features disabled by the pref include:
 - Automatic storage access grants:
   [document.requestStorageAccess](/en-US/docs/Web/API/Document/requestStorageAccess)
   will always prompt the user.
-- [SmartBlock’s "unblock on opt-in"
+- [SmartBlock's "unblock on opt-in"
   feature](https://blog.mozilla.org/security/2021/07/13/smartblock-v2/), which
   will allow certain trackers when users interact with them.
 - Any temporary [anti-tracking
