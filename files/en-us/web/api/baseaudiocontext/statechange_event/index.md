@@ -14,7 +14,7 @@ browser-compat: api.BaseAudioContext.statechange_event
 ---
 {{APIRef("Web Audio API")}}
 
-A `statechange` event is fired at a {{DOMxRef("BaseAudioContext")}} object when its {{domxref("BaseAudioContext.state", "state")}} member has changed.
+A `statechange` event is fired at a {{DOMxRef("BaseAudioContext")}} object when its {{domxref("BaseAudioContext.state", "state")}} member changes.
 
 ## Syntax
 

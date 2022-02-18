@@ -38,7 +38,7 @@ A `BaseAudioContext` can be a target of events, therefore it implements the {{do
 ### Events
 
 - {{domxref("BaseAudioContext.statechange_event", "statechange")}}
-  - : Fired when the `AudioContext`'s state changes, due to the calling of one of the state change methods ({{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, or {{domxref("AudioContext.close")}}).
+  - : Fired when the `AudioContext`'s state changes due to the calling of one of the state change methods ({{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, or {{domxref("AudioContext.close")}}).
 
 ## Methods
 
