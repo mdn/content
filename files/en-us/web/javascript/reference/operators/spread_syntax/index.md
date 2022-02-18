@@ -309,7 +309,7 @@ let obj = {'key1': 'value1'};
 let array = [...obj]; // TypeError: obj is not iterable
 ```
 
-To use spread syntax with these objects you will need to provide an iterator function.
+To use spread syntax with these objects, you will need to provide an iterator function.
 
 ### Spread with many values
 
