@@ -16,7 +16,7 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 
-[Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) is a one-dimensional layout method for arranging items in rows or columns. Items _flex_ (expand) to fill additional space or shrink to fit into smaller spaces. This article explains all the fundamentals.
+[Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) is a one-dimensional layout method for arranging items in rows or columns. Items _flex_ (expand) to fill additional space or shrink to fit into smaller spaces. This article explains all the fundamentals.
 
 <table>
   <tbody>
@@ -53,7 +53,7 @@ As you'll see in subsequent sections, flexbox makes a lot of layout tasks much e
 
 ## Introducing a simple example
 
-In this article, you'll work through a series of exercises to help you understand how flexbox works. To get started, you should make a local copy of the first starter file — [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) from our github repo. Load it in a modern browser (like Firefox or Chrome) and have a look at the code in your code editor. You can also [see it live here](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html).
+In this article, you'll work through a series of exercises to help you understand how flexbox works. To get started, you should make a local copy of the first starter file — [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) from our github repo. Load it in a modern browser (like Firefox or Chrome) and have a look at the code in your code editor. You can also [see it live here](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html).
 
 ![Image showing the starting point of Flexbox tutorial](bih741v.png)
 
@@ -92,7 +92,7 @@ Bear this terminology in mind as you go through subsequent sections. You can alw
 
 ## Columns or rows?
 
-Flexbox provides a property called {{cssxref("flex-direction")}} that specifies which direction the main axis runs (which direction the flexbox children are laid out in). By default this is set to `row`, which causes them to be laid out in a row in the direction your browser's default language works in (left to right, in the case of an English browser).
+Flexbox provides a property called {{cssxref("flex-direction")}} that specifies which direction the main axis runs (which direction the flexbox children are laid out in). By default this is set to `row`, which causes them to be laid out in a row in the direction your browser's default language works in (left to right, in the case of an English browser).
 
 Try adding the following declaration to your {{htmlelement("section")}} rule:
 
@@ -349,7 +349,7 @@ We discuss strategies for overcoming cross-browser support issues in our [Cross 
 
 ## Test your skills!
 
-We've covered a lot in this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on: see [Test your skills: Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox_skills).
+We've covered a lot in this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on: see [Test your skills: Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox_skills).
 
 ## Summary
 
