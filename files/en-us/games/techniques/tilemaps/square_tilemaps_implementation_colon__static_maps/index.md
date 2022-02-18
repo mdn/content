@@ -16,7 +16,7 @@ tags:
 
 This article covers how to implement static square tilemaps using the [Canvas API](/en-US/docs/Web/API/Canvas_API).
 
-> **Note:** When writing this article, we assumed previous reader knowledge of canvas basics such as how get a 2D canvas context, load images, etc., which is all explained in the [Canvas API tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial), as well as the basic information included in our [Tilemaps](/en-US/docs/Games/Techniques/Tilemaps) introduction article.
+> **Note:** When writing this article, we assumed previous reader knowledge of canvas basics such as how get a 2D canvas context, load images, etc., which is all explained in the [Canvas API tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial), as well as the basic information included in our [Tilemaps](/en-US/docs/Games/Techniques/Tilemaps) introduction article.
 
 ## The tile atlas
 
@@ -85,22 +85,22 @@ We can render the map by iterating over its columns and rows. This snippets assu
 
 ```js
 for (var c = 0; c < map.cols; c++) {
-  for (var r = 0; r < map.rows; r++) {
-    var tile = map.getTile(c, r);
-    if (tile !== 0) { // 0 => empty tile
-      context.drawImage(
-        tileAtlas, // image
-        (tile - 1) * map.tsize, // source x
-        0, // source y
-        map.tsize, // source width
-        map.tsize, // source height
-        c * map.tsize, // target x
-        r * map.tsize, // target y
-        map.tsize, // target width
-        map.tsize // target height
-      );
-    }
-  }
+  for (var r = 0; r < map.rows; r++) {
+    var tile = map.getTile(c, r);
+    if (tile !== 0) { // 0 => empty tile
+      context.drawImage(
+        tileAtlas, // image
+        (tile - 1) * map.tsize, // source x
+        0, // source y
+        map.tsize, // source width
+        map.tsize, // source height
+        c * map.tsize, // target x
+        r * map.tsize, // target y
+        map.tsize, // target width
+        map.tsize // target height
+      );
+    }
+  }
 }
 ```
 
