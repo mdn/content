@@ -22,10 +22,10 @@ browser-compat: api.XRPermissionStatus.granted
 ---
 {{APIRef("WebXR Device API")}}
 
-The WebXR Device API's {{domxref("XRPermissionStatus")}}
-interface's **`granted`** property is an array of strings, each
+The WebXR Device API's {{domxref("XRPermissionStatus")}}
+interface's **`granted`** property is an array of strings, each
 identifying one of the WebXR features for which permission has been granted as of the
-time at which the Permission API's {{domxref("Permissions.query",
+time at which the Permission API's {{domxref("Permissions.query",
   "navigator.permissions.query()")}} method was called.
 
 ## Value

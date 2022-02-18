@@ -24,7 +24,7 @@ Service workers should finally fix these issues. Service worker syntax is more c
 
 ## Setting up to play with service workers
 
-These days, service workers are enabled by default in all modern browsers. To run code using service workers, you’ll need to serve your code via HTTPS — Service workers are restricted to running across HTTPS for security reasons. GitHub is therefore a good place to host experiments, as it supports HTTPS. In order to facilitate local development, `localhost` is considered a secure origin by browsers as well.
+These days, service workers are enabled by default in all modern browsers. To run code using service workers, you’ll need to serve your code via HTTPS — Service workers are restricted to running across HTTPS for security reasons. GitHub is therefore a good place to host experiments, as it supports HTTPS. In order to facilitate local development, `localhost` is considered a secure origin by browsers as well.
 
 ## Basic architecture
 
@@ -48,7 +48,7 @@ The below graphic shows a summary of the available service worker events:
 
 [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) are a great mechanism for running async operations, with success dependant on one another. This is central to the way service workers work.
 
-Promises can do a variety of things, but all you need to know for now is that if something returns a promise, you can attach `.then()` to the end and include callbacks inside it for success cases, or you can insert `.catch()` on the end if you want to include a failure callback.
+Promises can do a variety of things, but all you need to know for now is that if something returns a promise, you can attach `.then()` to the end and include callbacks inside it for success cases, or you can insert `.catch()` on the end if you want to include a failure callback.
 
 Let’s compare a traditional synchronous callback structure to its asynchronous promise equivalent.
 
@@ -145,18 +145,18 @@ You can see the [source code on GitHub](https://github.com/mdn/sw-test/), and [v
 
 ## Enter service workers
 
-> **Note:** We're using the [es6](http://es6-features.org/) **arrow functions** syntax in the Service Worker Implementation.
+> **Note:** We're using the [es6](http://es6-features.org/) **arrow functions** syntax in the Service Worker Implementation.
 
 Now let’s get on to service workers!
 
 ### Registering your worker
 
-The first block of code in our app’s JavaScript file — `app.js` — is as follows. This is our entry point into using service workers.
+The first block of code in our app’s JavaScript file — `app.js` — is as follows. This is our entry point into using service workers.
 
 ```js
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./sw-test/sw.js', {scope: './sw-test/'})
-  .then((reg) => {
+  .then((reg) => {
     // registration worked
     console.log('Registration succeeded. Scope is ' + reg.scope);
   }).catch((error) => {
@@ -169,10 +169,10 @@ if ('serviceWorker' in navigator) {
 1. The outer block performs a feature detection test to make sure service workers are supported before trying to register one.
 2. Next, we use the {{domxref("ServiceWorkerContainer.register()") }} function to register the service worker for this site, which is just a JavaScript file residing inside our app (note this is the file's URL relative to the origin, not the JS file that references it.)
 3. The `scope` parameter is optional, and can be used to specify the subset of your content that you want the service worker to control. In this case, we have specified '`/sw-test/'`, which means all content under the app's origin. If you leave it out, it will default to this value anyway, but we specified it here for illustration purposes.
-4. The `.then()` promise function is used to chain a success case onto our promise structure.  When the promise resolves successfully, the code inside it executes.
+4. The `.then()` promise function is used to chain a success case onto our promise structure.  When the promise resolves successfully, the code inside it executes.
 5. Finally, we chain a `.catch()` function onto the end that will run if the promise is rejected.
 
-This registers a service worker, which runs in a worker context, and therefore has no DOM access. You then run code in the service worker outside of your normal pages to control their loading.
+This registers a service worker, which runs in a worker context, and therefore has no DOM access. You then run code in the service worker outside of your normal pages to control their loading.
 
 A single service worker can control many pages. Each time a page within your scope is loaded, the service worker is installed against that page and operates on it. Bear in mind therefore that you need to be careful with global variables in the service worker script: each page doesn’t get its own unique worker.
 
@@ -194,7 +194,7 @@ Also note:
 
 - The service worker will only catch requests from clients under the service worker's scope.
 - The max scope for a service worker is the location of the worker.
-- If your service worker is active on a client being served with the `Service-Worker-Allowed` header, you can specify a list of max scopes for that worker.
+- If your service worker is active on a client being served with the `Service-Worker-Allowed` header, you can specify a list of max scopes for that worker.
 - In Firefox, Service Worker APIs are hidden and cannot be used when the user is in [private browsing mode](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history).
 
 ### Install and activate: populating your cache
@@ -207,22 +207,22 @@ Let’s start this section by looking at a code sample — this is the [first bl
 
 ```js
 self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open('v1').then((cache) => {
-      return cache.addAll([
-        './sw-test/',
-        './sw-test/index.html',
-        './sw-test/style.css',
-        './sw-test/app.js',
-        './sw-test/image-list.js',
-        './sw-test/star-wars-logo.jpg',
-        './sw-test/gallery/',
-        './sw-test/gallery/bountyHunters.jpg',
-        './sw-test/gallery/myLittleVader.jpg',
-        './sw-test/gallery/snowTroopers.jpg'
-      ]);
-    })
-  );
+  event.waitUntil(
+    caches.open('v1').then((cache) => {
+      return cache.addAll([
+        './sw-test/',
+        './sw-test/index.html',
+        './sw-test/style.css',
+        './sw-test/app.js',
+        './sw-test/image-list.js',
+        './sw-test/star-wars-logo.jpg',
+        './sw-test/gallery/',
+        './sw-test/gallery/bountyHunters.jpg',
+        './sw-test/gallery/myLittleVader.jpg',
+        './sw-test/gallery/snowTroopers.jpg'
+      ]);
+    })
+  );
 });
 ```
 
@@ -263,7 +263,7 @@ self.addEventListener('fetch', (event) => {
 });
 ```
 
-`caches.match(event.request)` allows us to match each resource requested from the network with the equivalent resource available in the cache, if there is a matching one available. The matching is done via URL and various headers, just like with normal HTTP requests.
+`caches.match(event.request)` allows us to match each resource requested from the network with the equivalent resource available in the cache, if there is a matching one available. The matching is done via URL and various headers, just like with normal HTTP requests.
 
 Let’s look at a few other options we have when defining our magic (see our [Fetch API documentation](/en-US/docs/Web/API/Fetch_API) for more information about {{domxref("Request")}} and {{domxref("Response")}} objects.)
 
@@ -306,7 +306,7 @@ Let’s look at a few other options we have when defining our magic (see our [Fe
 
 So `caches.match(event.request)` is great when there is a match in the service worker cache, but what about cases when there isn’t a match? If we didn’t provide any kind of failure handling, our promise would resolve with `undefined` and we wouldn't get anything returned.
 
-Fortunately, service workers’ promise-based structure makes it trivial to provide further options towards success. We could do this:
+Fortunately, service workers’ promise-based structure makes it trivial to provide further options towards success. We could do this:
 
 ```js
 self.addEventListener('fetch', (event) => {
@@ -339,7 +339,7 @@ self.addEventListener('fetch', (event) => {
 
 Here we return the default network request with `return fetch(event.request)`, which returns a promise. When this promise is resolved, we respond by running a function that grabs our cache using `caches.open('v1')`; this also returns a promise. When that promise resolves, `cache.put()` is used to add the resource to the cache. The resource is grabbed from `event.request`, and the response is then cloned with `response.clone()` and added to the cache. The clone is put in the cache, and the original response is returned to the browser to be given to the page that called it.
 
-Cloning the response is necessary because request and response streams can only be read once.  In order to return the response to the browser and put it in the cache we have to clone it. So the original gets returned to the browser and the clone gets sent to the cache.  They are each read once.
+Cloning the response is necessary because request and response streams can only be read once.  In order to return the response to the browser and put it in the cache we have to clone it. So the original gets returned to the browser and the clone gets sent to the cache.  They are each read once.
 
 The only trouble we have now is that if the request doesn’t match anything in the cache, and the network is not available, our request will still fail. Let’s provide a default fallback so that whatever happens, the user will at least get something:
 
@@ -396,7 +396,7 @@ When no pages are using the current version, the new worker activates and become
 
 ### Deleting old caches
 
-You also get an `activate` event. This is generally used to do stuff that would have broken the previous version while it was still running, for example getting rid of old caches. This is also useful for removing data that is no longer needed to avoid filling up too much disk space — each browser has a hard limit on the amount of cache storage that a given service worker can use. The browser does its best to manage disk space, but it may delete the Cache storage for an origin.  The browser will generally delete all of the data for an origin or none of the data for an origin.
+You also get an `activate` event. This is generally used to do stuff that would have broken the previous version while it was still running, for example getting rid of old caches. This is also useful for removing data that is no longer needed to avoid filling up too much disk space — each browser has a hard limit on the amount of cache storage that a given service worker can use. The browser does its best to manage disk space, but it may delete the Cache storage for an origin.  The browser will generally delete all of the data for an origin or none of the data for an origin.
 
 Promises passed into `waitUntil()` will block other events until completion, so you can rest assured that your clean-up operation will have completed by the time you get your first `fetch` event on the new service worker.
 

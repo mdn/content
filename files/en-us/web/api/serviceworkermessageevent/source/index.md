@@ -18,7 +18,7 @@ browser-compat: api.ServiceWorkerMessageEvent.source
 > Service worker messages will now use the {{domxref("MessageEvent")}} interface, for
 > consistency with other web messaging features.
 
-The **`source`** read-only property of the
+The **`source`** read-only property of the
 {{domxref("ServiceWorkerMessageEvent")}} returns a reference to the
 {{domxref("ServiceWorker")}} object of the associated service worker that sent the
 message.
@@ -31,7 +31,7 @@ var mySource = ServiceWorkerMessageEventInstance.source;
 
 ### Value
 
-A {{domxref("ServiceWorker")}} or {{domxref("MessagePort")}} object.
+A {{domxref("ServiceWorker")}} or {{domxref("MessagePort")}} object.
 
 ## Examples
 

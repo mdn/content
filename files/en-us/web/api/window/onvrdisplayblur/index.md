@@ -43,7 +43,7 @@ window.onvrdisplayblur = function() { /* ... */ };
 
 ```js
 window.onvrdisplayblur = function() {
-  info.textContent = 'Display unfocused.';
+  info.textContent = 'Display unfocused.';
 };
 ```
 

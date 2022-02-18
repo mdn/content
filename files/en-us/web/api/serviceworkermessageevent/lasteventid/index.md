@@ -18,8 +18,8 @@ browser-compat: api.ServiceWorkerMessageEvent.lastEventId
 > Service worker messages will now use the {{domxref("MessageEvent")}} interface, for
 > consistency with other web messaging features.
 
-The **`lastEventID`** read-only property of the
-{{domxref("ServiceWorkerMessageEvent")}} interface represents, in [server-sent
+The **`lastEventID`** read-only property of the
+{{domxref("ServiceWorkerMessageEvent")}} interface represents, in [server-sent
 events](/en-US/docs/Web/API/en-US/docs/Server-sent_events/Using_server-sent_events), the last event ID of the event source.
 
 ## Syntax

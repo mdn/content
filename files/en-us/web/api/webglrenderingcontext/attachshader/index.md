@@ -22,7 +22,7 @@ void gl.attachShader(program, shader);
 - `program`
   - : A {{domxref("WebGLProgram")}}.
 - `shader`
-  - : A fragment or vertex {{domxref("WebGLShader")}}.
+  - : A fragment or vertex {{domxref("WebGLShader")}}.
 
 ## Examples
 

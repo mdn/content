@@ -15,9 +15,9 @@ browser-compat: api.PeriodicSyncEvent.tag
 
 The **`tag`** read-only property of the
 {{domxref("PeriodicSyncEvent")}} interface returns the developer-defined identifier for
-the {{domxref('PeriodicSyncEvent')}}. This is specified when calling the
+the {{domxref('PeriodicSyncEvent')}}. This is specified when calling the
 {{domxref('PeriodicSyncManager.register()')}} method of the
-{{domxref('PeriodicSyncManager')}} interface. Multiple tags can be used by the web app
+{{domxref('PeriodicSyncManager')}} interface. Multiple tags can be used by the web app
 to run different periodic tasks at different frequencies.
 
 ## Syntax

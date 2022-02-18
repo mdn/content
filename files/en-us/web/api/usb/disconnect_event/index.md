@@ -46,7 +46,7 @@ navigator.usb.addEventListener('disconnect', event => {
 });
 ```
 
-Alternatively, you can use the `USB.ondiscconnect` event handler property to establish a handler for the `disconnect` event:
+Alternatively, you can use the `USB.ondiscconnect` event handler property to establish a handler for the `disconnect` event:
 
 ```js
 navigator.usb.ondisconnect = event => {

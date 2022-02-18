@@ -11,7 +11,7 @@ browser-compat: api.PannerNode.orientationZ
 {{ APIRef("Web Audio API") }}
 
 The **`orientationZ`** property of the {{ domxref("PannerNode") }} interface
-indicates the Z (depth) component of the direction the audio source is facing, in 3D Cartesian coordinate space.
+indicates the Z (depth) component of the direction the audio source is facing, in 3D Cartesian coordinate space.
 
 The complete vector is defined by the position of the audio source, given as
 ({{domxref("PannerNode.positionX", "positionX")}}, {{domxref("PannerNode.positionY",

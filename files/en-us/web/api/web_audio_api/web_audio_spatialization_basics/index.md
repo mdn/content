@@ -18,7 +18,7 @@ Think sounds flying over you, creeping up behind you, moving across in front of 
 That sort of thing.
 
 It's really useful for WebXR and gaming.
-In 3D spaces, it's the only way to achieve realistic audio. Libraries like [three.js](https://threejs.org/) and [A-frame](https://aframe.io/) harness its potential when dealing with sound.
+In 3D spaces, it's the only way to achieve realistic audio. Libraries like [three.js](https://threejs.org/) and [A-frame](https://aframe.io/) harness its potential when dealing with sound.
 It's worth noting that you don't _have_ to move sound within a full 3D space either — you could stick with just a 2D plane, so if you were planning a 2D game, this would still be the node you were looking for.
 
 > **Note:** There's also a {{domxref("StereoPannerNode")}} designed to deal with the common use case of creating simple left and right stereo panning effects.
@@ -61,7 +61,7 @@ listener.positionY.value = posY;
 listener.positionZ.value = posZ-5;
 ```
 
-We could move the listener left or right using `positionX`, up or down using `positionY`, or in or out of the room using `positionZ`. Here we are setting the listener to be in the middle of the viewport and slightly in front of our boombox. We can also set the direction the listener is facing. The default values for these work well:
+We could move the listener left or right using `positionX`, up or down using `positionY`, or in or out of the room using `positionZ`. Here we are setting the listener to be in the middle of the viewport and slightly in front of our boombox. We can also set the direction the listener is facing. The default values for these work well:
 
 ```js
 listener.forwardX.value = 0;
@@ -436,19 +436,19 @@ moveControls.forEach(function(el) {
     let moving;
     el.addEventListener('mousedown', function() {
 
-        let direction = this.dataset.control;
-        if (moving && moving.frameId) {
-            window.cancelAnimationFrame(moving.frameId);
-        }
-        moving = moveBoombox(direction);
+        let direction = this.dataset.control;
+        if (moving && moving.frameId) {
+            window.cancelAnimationFrame(moving.frameId);
+        }
+        moving = moveBoombox(direction);
 
-    }, false);
+    }, false);
 
-    window.addEventListener('mouseup', function() {
-        if (moving && moving.frameId) {
-            window.cancelAnimationFrame(moving.frameId);
-        }
-    }, false)
+    window.addEventListener('mouseup', function() {
+        if (moving && moving.frameId) {
+            window.cancelAnimationFrame(moving.frameId);
+        }
+    }, false)
 
 })
 ```
@@ -458,7 +458,7 @@ moveControls.forEach(function(el) {
 Our HTML contains the audio element we want to be affected by the panner node.
 
 ```html
-<audio src="myCoolTrack.mp3"></audio>
+<audio src="myCoolTrack.mp3"></audio>
 ```
 
 We need to grab the source from that element and pipe it into the Web Audio API using the {{domxref('AudioContext.createMediaElementSource')}}.

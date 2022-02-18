@@ -15,7 +15,7 @@ browser-compat: api.PaintWorkletGlobalScope
 ---
 {{APIRef("CSS Painting API")}} {{SeeCompatTable}}
 
-The **`PaintWorklet`** interface of the {{domxref('CSS Painting API','','',' ')}} programmatically generates an image where a CSS property expects a file. Access this interface through {{DOMxRef("CSS.paintWorklet")}}.
+The **`PaintWorklet`** interface of the {{domxref('CSS Painting API','','',' ')}} programmatically generates an image where a CSS property expects a file. Access this interface through {{DOMxRef("CSS.paintWorklet")}}.
 
 ## Privacy concerns
 
@@ -52,20 +52,20 @@ The following shows an example worklet module. This should be in a separate js f
 
 ```js
 class CheckerboardPainter {
-  paint(ctx, geom, properties) {
-    // Use `ctx` as if it was a normal canvas
-    const colors = ['red', 'green', 'blue'];
-    const size = 32;
-    for(let y = 0; y < geom.height/size; y++) {
-      for(let x = 0; x < geom.width/size; x++) {
-        const color = colors[(x + y) % colors.length];
-        ctx.beginPath();
-        ctx.fillStyle = color;
-        ctx.rect(x * size, y * size, size, size);
-        ctx.fill();
-      }
-    }
-  }
+  paint(ctx, geom, properties) {
+    // Use `ctx` as if it was a normal canvas
+    const colors = ['red', 'green', 'blue'];
+    const size = 32;
+    for(let y = 0; y < geom.height/size; y++) {
+      for(let x = 0; x < geom.width/size; x++) {
+        const color = colors[(x + y) % colors.length];
+        ctx.beginPath();
+        ctx.fillStyle = color;
+        ctx.rect(x * size, y * size, size, size);
+        ctx.fill();
+      }
+    }
+  }
 }
 
 // Register our class under a specific name
@@ -91,7 +91,7 @@ This example shows how to use a `PaintWorklet` in a stylesheet, including the si
 ```html
 <style>
   textarea {
-    background-image: url(checkerboard);
+    background-image: url(checkerboard);
     background-image: paint(checkerboard);
   }
 </style>

@@ -14,8 +14,8 @@ browser-compat: api.PaymentRequest.PaymentRequest
 ---
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
-The **`PaymentRequest()`** constructor
-creates a new {{domxref("PaymentRequest")}} object which will be used to handle the
+The **`PaymentRequest()`** constructor
+creates a new {{domxref("PaymentRequest")}} object which will be used to handle the
 process of generating, validating, and submitting a payment request.
 
 ## Syntax
@@ -28,7 +28,7 @@ var paymentRequest = new PaymentRequest(methodData, details, [options]);
 
 - `methodData`
 
-  - : Contains an array of identifiers for the payment methods the merchant web site
+  - : Contains an array of identifiers for the payment methods the merchant web site
     accepts and any associated payment method specific data. Each item in the array
     contains the following fields:
 
@@ -90,10 +90,10 @@ var paymentRequest = new PaymentRequest(methodData, details, [options]);
         submit it with the payment request. The default is `false`.
     - `requestPayerEmail`
       - : A Boolean indicating whether the user agent should collect the payer's email
-        address and submit it with the payment request. The default is `false`.
+        address and submit it with the payment request. The default is `false`.
     - `requestPayerPhone`
       - : A Boolean indicating whether the user agent should collect the payer's phone
-        number and submit it with the payment request. The default is `false`.
+        number and submit it with the payment request. The default is `false`.
     - `requestShipping`
       - : A Boolean indicating whether the user agent should collect the payer's shipping
         address and submit it with the payment request. If you set this type to true, you
@@ -102,7 +102,7 @@ var paymentRequest = new PaymentRequest(methodData, details, [options]);
     - `shippingType`
       - : Lets you specify how the user interface refers to shipping when the word
         'shipping' isn't appropriate for your use case. For example, in English speaking
-        countries you would say "pizza delivery" not "pizza shipping". Valid values are
+        countries you would say "pizza delivery" not "pizza shipping". Valid values are
         `"shipping"`, `"delivery"`, and `"pickup"`.
         Quotation marks must be included. The default value is `"shipping"`.
 
@@ -114,7 +114,7 @@ input parameters.
 ## Examples
 
 The following example shows minimal functionality and focuses instead on showing the
-complete context of instantiating a `PaymentRequest` object.
+complete context of instantiating a `PaymentRequest` object.
 
 ```js
 var supportedInstruments = [{

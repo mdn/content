@@ -23,7 +23,7 @@ An `SVGNumberList` object can be designated as read only, which means that attem
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Also implement</th>
+      <th scope="row">Also implement</th>
       <td><var>None</var></td>
     </tr>
     <tr>
@@ -83,7 +83,7 @@ An `SVGNumberList` object can be designated as read only, which means that attem
       </td>
     </tr>
     <tr>
-      <th scope="row">Normative document</th>
+      <th scope="row">Normative document</th>
       <td>
         <a href="https://www.w3.org/TR/SVG/types.html#InterfaceSVGNumberList"
           >SVG 1.1 (2nd Edition)</a
@@ -171,7 +171,7 @@ An `SVGNumberList` object can be designated as read only, which means that attem
           Returns the specified item from the list. The returned item is the
           item itself and not a copy. Any changes made to the item are
           immediately reflected in the list. The first item is
-          number <code>0</code>.
+          number <code>0</code>.
         </p>
         <p><strong>Exceptions:</strong></p>
         <ul>
@@ -251,7 +251,7 @@ An `SVGNumberList` object can be designated as read only, which means that attem
             a {{ domxref("DOMException") }} with code
             <code>INDEX_SIZE_ERR</code> is raised if
             <code><var>index</var></code
-            > is greater than or equal to <code>numberOfItems</code>.
+            > is greater than or equal to <code>numberOfItems</code>.
           </li>
         </ul>
       </td>
@@ -277,7 +277,7 @@ An `SVGNumberList` object can be designated as read only, which means that attem
             a {{ domxref("DOMException") }} with code
             <code>INDEX_SIZE_ERR</code> is raised if
             <code><var>index</var></code
-            > is greater than or equal to <code>numberOfItems</code>.
+            > is greater than or equal to <code>numberOfItems</code>.
           </li>
         </ul>
       </td>

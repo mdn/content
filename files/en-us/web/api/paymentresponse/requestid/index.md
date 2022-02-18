@@ -16,7 +16,7 @@ browser-compat: api.PaymentResponse.requestId
 
 The **`requestId`** read-only property of the
 {{domxref("PaymentResponse")}} interface returns the free-form identifier supplied by
-the `PaymentResponse()` constructor by details.id.
+the `PaymentResponse()` constructor by details.id.
 
 ## Syntax
 
