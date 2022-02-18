@@ -75,9 +75,9 @@ Cache-Control: public
 
 #### Expiration
 
-The most important directive here is `max-age=<seconds>`, which is the maximum amount of time in which a resource will be considered fresh. (See the "Freshness" section in this document to see what "fresh" means here.) This directive is relative to the time of the request, and overrides the {{HTTPHeader("Expires")}} header (if set). For the files in the application that will not change, you can normally use aggressive caching. This includes static files such as images, CSS files, and JavaScript files.
+The most important directive here is `max-age=<seconds>`, which is the maximum amount of time in which a resource will be considered [fresh](#freshness). This directive is relative to the time of the request, and overrides the {{HTTPHeader("Expires")}} header (if set). For the files in the application that will not change, you can normally use aggressive caching. This includes static files such as images, CSS files, and JavaScript files.
 
-For more details, see also the [Freshness](#freshness) section below.
+For more details, see also the [Freshness](#freshness) section.
 
 ```
 Cache-Control: max-age=31536000
@@ -85,7 +85,7 @@ Cache-Control: max-age=31536000
 
 #### Validation
 
-When using the "`must-revalidate`" directive, the cache must verify the status of stale resources before using them. Expired resources should not be used. For more details, see the [Validation](#cache_validation) section below. See the "Freshness" section below to see what we mean by "stale resources".
+When using the "`must-revalidate`" directive, the cache must verify the status of [stale resources](#freshness) before using them. Expired resources should not be used. For more details, see the [Cache validation](#cache_validation) section.
 
 ```
 Cache-Control: must-revalidate
@@ -99,25 +99,42 @@ Cache-Control: must-revalidate
 
 ## Freshness
 
-Once a resource is stored in a cache, it could theoretically be served by the cache forever. Caches have finite storage space so items are periodically removed from storage. This process is called _cache eviction_. Also, some resources may change on the server so the cache should be updated when this happens. As HTTP is a client-server protocol, servers can't contact caches and clients when a resource changes; they have to communicate an expiration time for the resource. Before this expiration time, the resource is _fresh_; after the expiration time, the resource is *stale*. Eviction algorithms often privilege fresh resources over stale resources. Note that a stale resource is not evicted or ignored; when the cache receives a request for a stale resource, it forwards this request with a {{HTTPHeader("If-None-Match")}} to check if it is in fact still fresh. If so, the server returns a {{HTTPStatus("304")}} (Not Modified) header without sending the body of the requested resource, saving some bandwidth.
+Once a resource is stored in a cache, it could theoretically be served by the cache forever. Caches have finite storage space so items are periodically removed from storage. This process is called _cache eviction_.
+
+Also, some resources may change on the server so the cache should be updated when this happens. As HTTP is a client-server protocol, servers can't contact caches and clients when a resource changes; they have to communicate an expiration time for the resource. Before this expiration time, the resource is _fresh_; after the expiration time, the resource becomes a _stale resource_.
+
+Eviction algorithms often privilege fresh resources over stale resources.
+
+Note that a stale resource is not evicted or ignored; when the cache receives a request for a stale resource, it forwards this request with an {{HTTPHeader("If-None-Match")}} header to check if it is in fact still fresh. If so, the server returns a {{HTTPStatus("304")}} (Not Modified) header without sending the body of the requested resource, saving some bandwidth.
 
 Here is an example of this process with a shared cache proxy:
 
 ![Show how a proxy cache acts when a doc is not cache, in the cache and fresh, in the cache and stale.](http_staleness.png)
 
-The freshness lifetime is calculated based on several headers. If a "`Cache-Control: max-age=N`" header is specified, the freshness lifetime is equal to N. If this header is not present, which is very often the case, the cache checks whether an {{HTTPHeader("Expires")}} header is present. If an `Expires` header exists, its value minus the value of the {{HTTPHeader("Date")}} header determines the freshness lifetime.
+### Freshness lifetime
+
+A response's _freshness lifetime_ is the length of time between its generation by the origin server and its expiration time. The freshness lifetime for a response is calculated based on several headers:
+
+1. If the cache is shared and a {{HTTPHeader("Cache-Control")}} header with a [`s-maxage=N`](/en-US/docs/Web/HTTP/Headers/Cache-Control#s-maxage) directive is present, the freshness lifetime is _N_.
+2. If a {{HTTPHeader("Cache-Control")}} header with a [`max-age=N`](/en-US/docs/Web/HTTP/Headers/Cache-Control#maxage) directive is present, the freshness lifetime is _N_.
+3. If an {{HTTPHeader("Expires")}} header is present, the freshness lifetime is its value minus the {{HTTPHeader("Date")}} header value.
+4. Otherwise, no explicit expiration time is present in the response. A [heuristic freshness checking](#heuristic_freshness_checking) approach might be applicable
+
+For more information, see [Calculating Freshness Lifetime](https://httpwg.org/specs/rfc7234.html#calculating.freshness.lifetime) in the HTTP specification.
 
 ### Heuristic freshness checking
 
-If an origin server does not explicitly specify freshness (for example, using {{HTTPHeader("Cache-Control")}} or {{HTTPHeader("Expires")}} header) then a heuristic approach may be used.
+If an origin server does not explicitly specify freshness (for example, using a {{HTTPHeader("Cache-Control")}} or {{HTTPHeader("Expires")}} header), then a heuristic approach may be used.
 
-If this is the case, look for a {{HTTPHeader("Last-Modified")}} header. If the header is present, then the cache's freshness lifetime is equal to the value of the `Date` header minus the value of the `Last-modified` header divided by 10. The expiration time is computed as follows:
+If this is the case, look for a {{HTTPHeader("Last-Modified")}} header. If the header is present, then the cache's [freshness lifetime](#freshness_lifetime) is equal to the value of the `Date` header minus the value of the `Last-modified` header divided by 10. The expiration time is computed as follows:
 
 ```
 expirationTime = responseTime + freshnessLifetime - currentAge
 ```
 
-where `responseTime` is the time at which the response was received according to the browser. For more information see [RFC 7234: Hypertext Transfer Protocol (HTTP/1.1): 4.2.2.  Calculating Heuristic Freshness](https://datatracker.ietf.org/doc/html/rfc7234#section-4.2.2).
+where `responseTime` is the time at which the response was received according to the browser, and `freshnessLifetime` is the [freshness lifetime](#freshness_lifetime).
+
+For more information, see [Calculating Heuristic Freshness](https://httpwg.org/specs/rfc7234.html#heuristic.freshness) in the HTTP specification.
 
 ### Revved resources
 
@@ -149,14 +166,11 @@ When a validation request is made, the server can either ignore the validation r
 
 ## Varying responses
 
-The {{HTTPHeader("Vary")}} HTTP response header determines how to match future request headers to decide whether a cached response can be used or a fresh one must be requested from the origin server.
+The {{HTTPHeader("Vary")}} HTTP response header determines how to match future request headers to decide whether a cached response can be used or a [fresh](#freshness) one must be requested from the origin server.
 
 When a cache receives a request that has a `Vary` header field, it must not use a cached response by default unless all header fields specified in the `Vary` header match in both the original (cached) request and the new request.
 
-![The Vary header leads cache to use more HTTP headers as key for the cache.](http_vary.png)
-
-This feature is commonly used to allow a resource to be cached in uncompressed and (various) compressed forms, and served appropriately to user agents based on the encodings that they support.
-For example, a server can set `Vary: Accept-Encoding` to ensure that a separate version of a resource is cached for all requests that specify support for a particular set of encodings, for example, `Accept-Encoding: gzip,deflate,sdch`.
+![The Vary header leads cache to use more HTTP headers as key for the cache.](http_vary.png)This feature is commonly used to allow a resource to be cached in uncompressed and (various) compressed forms, and served appropriately to user agents based on the encodings that they support. For example, a server can set `Vary: Accept-Encoding` to ensure that a separate version of a resource is cached for all requests that specify support for a particular set of encodings, for example, `Accept-Encoding: gzip,deflate,sdch`.
 
 ```
 Vary: Accept-Encoding
