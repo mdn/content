@@ -94,7 +94,7 @@ Code formatters are somewhat related to linters, except that rather than point o
 
 #### Bundlers/packagers
 
-These are tools that get your code ready for production, for example by “tree-shaking” to make sure only the parts of your code libraries that you are actually using are put into your final production code, or "minifying" to remove all the whitespace in your production code, making it as small as possible before it is uploaded to a server.
+These are tools that get your code ready for production, for example by "tree-shaking" to make sure only the parts of your code libraries that you are actually using are put into your final production code, or "minifying" to remove all the whitespace in your production code, making it as small as possible before it is uploaded to a server.
 
 [Parcel](https://parceljs.org/) is a particularly clever tool that fits into this category — it can do the above tasks, but also helps to package assets like HTML, CSS, and image files into convenient bundles that you can then go on to deploy, and also adds dependencies for you automatically whenever you try to use them. It can even handle some code transformation duties for you.
 

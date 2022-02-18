@@ -157,7 +157,7 @@ the following situations:
 > expect to change, because if the getter is lazy then it will not recalculate the
 > value.
 >
-> Note that getters are not “lazy” or “memoized” by nature; you must implement this
+> Note that getters are not "lazy" or "memoized" by nature; you must implement this
 > technique if you desire this behavior.
 
 In the following example, the object has a getter as its own property. On getting the

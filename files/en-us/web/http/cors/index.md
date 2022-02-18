@@ -499,8 +499,8 @@ Examples of this usage can be [found above](#preflighted_requests).
 - [Will it CORS?](https://httptoolkit.tech/will-it-cors) - an interactive CORS explainer & generator
 - [How to run Chrome browser without CORS](https://alfilatov.com/posts/run-chrome-without-cors/)
 - [Using CORS with All (Modern) Browsers](https://www.telerik.com/blogs/using-cors-with-all-modern-browsers)
-- [Stack Overflow answer with “how to” info for dealing with common problems](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
+- [Stack Overflow answer with "how to" info for dealing with common problems](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
 
   - How to avoid the CORS preflight
-  - How to use a CORS proxy to get around _“No Access-Control-Allow-Origin header”_
-  - How to fix _“Access-Control-Allow-Origin header must not be the wildcard”_
+  - How to use a CORS proxy to get around _"No Access-Control-Allow-Origin header"_
+  - How to fix _"Access-Control-Allow-Origin header must not be the wildcard"_

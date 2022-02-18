@@ -24,7 +24,7 @@ Users who do not or cannot use pointing devices can <kbd>Tab</kbd> through links
 </ul>
 ```
 
-In this example (which is used purely as a demonstration—do not do this), tabbing would jump from “Here” to “Anywhere” to “There”.
+In this example (which is used purely as a demonstration—do not do this), tabbing would jump from "Here" to "Anywhere" to "There".
 
 ## Link Titles
 

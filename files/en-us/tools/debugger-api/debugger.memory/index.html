@@ -63,7 +63,7 @@ slug: Tools/Debugger-API/Debugger.Memory
  </dd>
  <dt><code id="alloc-sampling-probability">allocationSamplingProbability</code></dt>
  <dd>
- <p>A number between 0 and 1 that indicates the probability with which each new allocation should be entered into the allocations log. 0 is equivalent to “never”, 1 is “always”, and .05 would be “one out of twenty”.</p>
+ <p>A number between 0 and 1 that indicates the probability with which each new allocation should be entered into the allocations log. 0 is equivalent to "never", 1 is "always", and .05 would be "one out of twenty".</p>
 
  <p>The default is 1, or logging every allocation.</p>
 
@@ -111,39 +111,39 @@ slug: Tools/Debugger-API/Debugger.Memory
   <p>A very short string describing the reason why the collection was triggered. Known values include the following:</p>
 
   <ul>
-   <li>“API”</li>
-   <li>“EAGER_ALLOC_TRIGGER”</li>
-   <li>“DESTROY_RUNTIME”</li>
-   <li>“LAST_DITCH”</li>
-   <li>“TOO_MUCH_MALLOC”</li>
-   <li>“ALLOC_TRIGGER”</li>
-   <li>“DEBUG_GC”</li>
-   <li>“COMPARTMENT_REVIVED”</li>
-   <li>“RESET”</li>
-   <li>“OUT_OF_NURSERY”</li>
-   <li>“EVICT_NURSERY”</li>
-   <li>“FULL_STORE_BUFFER”</li>
-   <li>“SHARED_MEMORY_LIMIT”</li>
-   <li>“PERIODIC_FULL_GC”</li>
-   <li>“INCREMENTAL_TOO_SLOW”</li>
-   <li>“DOM_WINDOW_UTILS”</li>
-   <li>“COMPONENT_UTILS”</li>
-   <li>“MEM_PRESSURE”</li>
-   <li>“CC_WAITING”</li>
-   <li>“CC_FORCED”</li>
-   <li>“LOAD_END”</li>
-   <li>“PAGE_HIDE”</li>
-   <li>“NSJSCONTEXT_DESTROY”</li>
-   <li>“SET_NEW_DOCUMENT”</li>
-   <li>“SET_DOC_SHELL”</li>
-   <li>“DOM_UTILS”</li>
-   <li>“DOM_IPC”</li>
-   <li>“DOM_WORKER”</li>
-   <li>“INTER_SLICE_GC”</li>
-   <li>“REFRESH_FRAME”</li>
-   <li>“FULL_GC_TIMER”</li>
-   <li>“SHUTDOWN_CC”</li>
-   <li>“USER_INACTIVE”</li>
+   <li>"API"</li>
+   <li>"EAGER_ALLOC_TRIGGER"</li>
+   <li>"DESTROY_RUNTIME"</li>
+   <li>"LAST_DITCH"</li>
+   <li>"TOO_MUCH_MALLOC"</li>
+   <li>"ALLOC_TRIGGER"</li>
+   <li>"DEBUG_GC"</li>
+   <li>"COMPARTMENT_REVIVED"</li>
+   <li>"RESET"</li>
+   <li>"OUT_OF_NURSERY"</li>
+   <li>"EVICT_NURSERY"</li>
+   <li>"FULL_STORE_BUFFER"</li>
+   <li>"SHARED_MEMORY_LIMIT"</li>
+   <li>"PERIODIC_FULL_GC"</li>
+   <li>"INCREMENTAL_TOO_SLOW"</li>
+   <li>"DOM_WINDOW_UTILS"</li>
+   <li>"COMPONENT_UTILS"</li>
+   <li>"MEM_PRESSURE"</li>
+   <li>"CC_WAITING"</li>
+   <li>"CC_FORCED"</li>
+   <li>"LOAD_END"</li>
+   <li>"PAGE_HIDE"</li>
+   <li>"NSJSCONTEXT_DESTROY"</li>
+   <li>"SET_NEW_DOCUMENT"</li>
+   <li>"SET_DOC_SHELL"</li>
+   <li>"DOM_UTILS"</li>
+   <li>"DOM_IPC"</li>
+   <li>"DOM_WORKER"</li>
+   <li>"INTER_SLICE_GC"</li>
+   <li>"REFRESH_FRAME"</li>
+   <li>"FULL_GC_TIMER"</li>
+   <li>"SHUTDOWN_CC"</li>
+   <li>"USER_INACTIVE"</li>
   </ul>
   </dd>
   <dt><code>nonincrementalReason</code></dt>
@@ -151,14 +151,14 @@ slug: Tools/Debugger-API/Debugger.Memory
   <p>If SpiderMonkey's collector determined it could not incrementally collect garbage, and had to do a full GC all at once, this is a short string describing the reason it determined the full GC was necessary. Otherwise, <code>null</code> is returned. Known values include the following:</p>
 
   <ul>
-   <li>“GC mode”</li>
-   <li>“malloc bytes trigger”</li>
-   <li>“allocation trigger”</li>
-   <li>“requested”</li>
+   <li>"GC mode"</li>
+   <li>"malloc bytes trigger"</li>
+   <li>"allocation trigger"</li>
+   <li>"requested"</li>
   </ul>
   </dd>
   <dt><code>gcCycleNumber</code></dt>
-  <dd>The GC cycle's “number”. Does not correspond to the number of GC cycles that have run, but is guaranteed to be monotonically increasing.</dd>
+  <dd>The GC cycle's "number". Does not correspond to the number of GC cycles that have run, but is guaranteed to be monotonically increasing.</dd>
  </dl>
  </dd>
 </dl>
@@ -173,7 +173,7 @@ slug: Tools/Debugger-API/Debugger.Memory
 
 <h3 id="Objects">Objects</h3>
 
-<p>SpiderMonkey objects usually use less memory than the naïve “table of properties with attributes” model would suggest. For example, it is typical for many objects to have identical sets of properties, with only the properties' values varying from one object to the next. To take advantage of this regularity, SpiderMonkey objects with identical sets of properties may share their property metadata; only property values are stored directly in the object.</p>
+<p>SpiderMonkey objects usually use less memory than the naïve "table of properties with attributes" model would suggest. For example, it is typical for many objects to have identical sets of properties, with only the properties' values varying from one object to the next. To take advantage of this regularity, SpiderMonkey objects with identical sets of properties may share their property metadata; only property values are stored directly in the object.</p>
 
 <p>Array objects may also be optimized, if the set of live indices is dense.</p>
 

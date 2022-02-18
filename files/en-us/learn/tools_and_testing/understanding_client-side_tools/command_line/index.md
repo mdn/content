@@ -55,7 +55,7 @@ The terminal originates from around the 1950s-60s and its original form really d
 
 Since then, the terminal has remained a constant feature of all operating systems — from desktop machines, to servers tucked away in the cloud, to microcomputers like the Raspberry PI Zero, and even to mobile phones. It provides direct access to the computer's underlying file system and low-level features, and is therefore incredibly useful for performing complex tasks rapidly, if you know what you are doing.
 
-It is also useful for automation — for example to write a command to update the titles of hundreds of files instantly, say from “ch01-xxxx.png” to “ch02-xxxx.png”. If you updated the file names using your finder or explorer GUI app, it would take you a long time.
+It is also useful for automation — for example to write a command to update the titles of hundreds of files instantly, say from "ch01-xxxx.png" to "ch02-xxxx.png". If you updated the file names using your finder or explorer GUI app, it would take you a long time.
 
 Anyway, the terminal is not going away anytime soon.
 
@@ -89,11 +89,11 @@ The terminal is available on macOS at Applications/Utilities/Terminal.
 
 As with some other programming tools, using the terminal (or command line) on Windows has traditionally not been as simple or easy as on other operating systems. But things are getting better.
 
-Windows has traditionally had its own terminal-like program called cmd (“the command prompt”) for a long time, but this definitely doesn't have parity with Unix commands, and is equivalent to the old-style Windows DOS prompt.
+Windows has traditionally had its own terminal-like program called cmd ("the command prompt") for a long time, but this definitely doesn't have parity with Unix commands, and is equivalent to the old-style Windows DOS prompt.
 
 Better programs exist for providing a terminal experience on Windows, such as Powershell ([see here to find installers](https://github.com/PowerShell/PowerShell)), and Gitbash (which comes as part of the [git for Windows](https://gitforwindows.org/) toolset)
 
-However, the best option for Windows in the modern day is the Windows Subsystem for Linux (WSL) — a compatibility layer for running Linux operating systems directly from inside Windows 10, allowing you to run a “true terminal” directly on Windows, without needing a virtual machine.
+However, the best option for Windows in the modern day is the Windows Subsystem for Linux (WSL) — a compatibility layer for running Linux operating systems directly from inside Windows 10, allowing you to run a "true terminal" directly on Windows, without needing a virtual machine.
 
 This can be installed directly from the Windows store for free. You can find all the documentation you need in the [Windows Subsystem for Linux Documentation](https://docs.microsoft.com/windows/wsl).
 
@@ -199,7 +199,7 @@ ls -l
 
 In the case of `ls`, the `-l` (_dash ell_) option gives you a listing with one file or directory on each line, and a lot more information shown. Directories can be identified by looking for a letter "d" on the very left-hand side of the lines. Those are the ones we can `cd` into.
 
-Below is a screenshot with a “vanilla” macOS terminal at the top, and a customized terminal with some extra icons and colors to keep it looking lively — both showing the results of running `ls -l`:
+Below is a screenshot with a "vanilla" macOS terminal at the top, and a customized terminal with some extra icons and colors to keep it looking lively — both showing the results of running `ls -l`:
 
 ![A vanilla mac terminal and a more colorful custom mac terminal, showing a file listing - the result of running the ls -l command](mac-terminals-ls.png)
 
@@ -492,7 +492,7 @@ Our personal preference is the second one — while using say VS Code, Prettier 
 
 If you want to play with a few more tools, here's a brief list that are fun to try out:
 
-- [`bat`](https://github.com/sharkdp/bat) — A “nicer” `cat` (`cat` is used to print the contents of files).
+- [`bat`](https://github.com/sharkdp/bat) — A "nicer" `cat` (`cat` is used to print the contents of files).
 - [`prettyping`](https://denilson.sa.nom.br/prettyping/) — `ping` on the command line, but visualized (`ping` is a useful tool to check if a server is responding).
 - [`htop`](https://hisham.hm/htop/) — A process viewer, useful for when something is making your CPU fan behave like a jet engine and you want to identify the offending program.
 - [`tldr`](https://tldr.sh/#installation) — mentioned earlier in this chapter, but available as a command line tool.

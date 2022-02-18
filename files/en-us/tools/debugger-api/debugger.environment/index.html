@@ -29,18 +29,18 @@ slug: Tools/Debugger-API/Debugger.Environment
 
  <ul>
   <li>
-   <p>“declarative”, indicating that the environment is a declarative environment record. Function calls, calls to <code>eval</code>, <code>let</code> blocks, <code>catch</code> blocks, and the like create declarative environment records.</p>
+   <p>"declarative", indicating that the environment is a declarative environment record. Function calls, calls to <code>eval</code>, <code>let</code> blocks, <code>catch</code> blocks, and the like create declarative environment records.</p>
   </li>
   <li>
-   <p>“object”, indicating that the environment's bindings are the properties of an object. The global object and DOM elements appear in the chain of environments via object environments. (Note that <code>with</code> statements have their own environment type.)</p>
+   <p>"object", indicating that the environment's bindings are the properties of an object. The global object and DOM elements appear in the chain of environments via object environments. (Note that <code>with</code> statements have their own environment type.)</p>
   </li>
   <li>
-   <p>“with”, indicating that the environment was introduced by a <code>with</code> statement.</p>
+   <p>"with", indicating that the environment was introduced by a <code>with</code> statement.</p>
   </li>
  </ul>
  </dd>
  <dt><code>parent</code></dt>
- <dd>The environment that encloses this one (the “outer” environment, in ECMAScript terminology), or <code>null</code> if this is the outermost environment.</dd>
+ <dd>The environment that encloses this one (the "outer" environment, in ECMAScript terminology), or <code>null</code> if this is the outermost environment.</dd>
  <dt><code>object</code></dt>
  <dd>A <a href="Debugger.Object"><code>Debugger.Object</code></a> instance referring to the object whose properties this environment reflects. If this is a declarative environment record, this accessor throws a <code>TypeError</code> (since declarative environment records have no such object). Both <code>"object"</code> and <code>"with"</code> environments have <code>object</code> properties that provide the object whose properties they reflect as variable bindings.</dd>
  <dt><code>callee</code></dt>

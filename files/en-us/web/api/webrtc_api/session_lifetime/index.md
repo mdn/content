@@ -21,7 +21,7 @@ The Internet is big. Really big. It's so big that years ago, smart people saw ho
 
 The problem for users is that each individual computer on the Internet no longer necessarily has a unique IP address, and, in fact, each device's IP address may change not only if they move from one network to another, but if their network's address is changed by {{Glossary("NAT")}} and/or {{interwiki("wikipedia", "DHCP")}}. For developers trying to do peer-to-peer networking, this introduces a conundrum: without a unique identifier for every user device, it's not possible to instantly and automatically know how to connect to a specific device on the Internet. Even though you know who you want to talk to, you don't necessarily know how to reach them or even what their address is.
 
-This is like trying to mail a package to your friend Michelle by labeling it “Michelle” and dropping it in a mailbox when you don't know her address. You need to look up her address and include it on the package, or she'll wind up wondering why you forgot her birthday again.
+This is like trying to mail a package to your friend Michelle by labeling it "Michelle" and dropping it in a mailbox when you don't know her address. You need to look up her address and include it on the package, or she'll wind up wondering why you forgot her birthday again.
 
 This is where signaling comes in.
 

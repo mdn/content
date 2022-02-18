@@ -58,7 +58,7 @@ And there are some built-in {{jsxref("Error")}} types as well. Things are a lot 
 
 ECMAScript has two built-in numeric types: **Number** and **BigInt**.
 
-The Number type is a [double-precision 64-bit binary format IEEE 754 value](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) (numbers between -(2^53 − 1) and 2^53 − 1). And where this article and other MDN articles refer to “integers”, what's usually meant is a _representation_ of an integer using a Number value. But because such Number values aren't real integers, you have to be a little careful. For example:
+The Number type is a [double-precision 64-bit binary format IEEE 754 value](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) (numbers between -(2^53 − 1) and 2^53 − 1). And where this article and other MDN articles refer to "integers", what's usually meant is a _representation_ of an integer using a Number value. But because such Number values aren't real integers, you have to be a little careful. For example:
 
 ```js
 console.log(3 / 2);             // 1.5, not 1

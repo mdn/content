@@ -38,7 +38,7 @@ We've talked about incorporating server-side techniques into a responsive design
 
 ![webowonder_mobile_and_desktop-300x225.jpg](webowonder_mobile_and_desktop-300x225.jpg)For Mozilla's Web O' Wonder demo site, we tried out a basic version of the hybrid approach, with positive results. We used some elements of responsive web design to give the site a mobile layout, along with user-agent detection to provide mobile-friendly videos and to re-order the demos if the user is on a phone. Feel free to check out the source code [on github](https://github.com/mozilla/webowonder/).
 
-We could also be doing more development involving this approach very soon! In fact, one potential path for the main Mozilla site is roughly outlined in the “The Good” section above:
+We could also be doing more development involving this approach very soon! In fact, one potential path for the main Mozilla site is roughly outlined in the "The Good" section above:
 
 - Using user-agent detection, route visitors to a landing page for the Firefox version for their device.
 - Every page on the site should look great at a wide variety of resolutions, being built with responsive design in mind.

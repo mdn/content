@@ -50,7 +50,7 @@ Here, the contents of `data.className` or `data.color` could contain HTML that c
 
 ### jQuery
 
-When using jQuery, functions such as `attr()` and `text()` escape content as it's added to a DOM. So, the “favorite color” example from above, implemented in jQuery, would look like this:
+When using jQuery, functions such as `attr()` and `text()` escape content as it's added to a DOM. So, the "favorite color" example from above, implemented in jQuery, would look like this:
 
 ```js example-good
 var node = $("</div>");

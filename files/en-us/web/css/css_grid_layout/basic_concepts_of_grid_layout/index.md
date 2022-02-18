@@ -25,7 +25,7 @@ You can place items into a precise location on the grid using line numbers, name
 
 ### Creation of additional tracks to hold content
 
-You can define an explicit grid with grid layout. The Grid Layout specification is flexible enough to add additional rows and columns when needed. Features such as adding “as many columns that will fit into a container” are included.
+You can define an explicit grid with grid layout. The Grid Layout specification is flexible enough to add additional rows and columns when needed. Features such as adding "as many columns that will fit into a container" are included.
 
 ### Alignment control
 

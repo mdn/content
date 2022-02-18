@@ -75,8 +75,8 @@ storage access to...
 ...equal or more sites than the maximum or has not been interacted with as a first party in the last 30 days::
 
 - The user is prompted
-- If the user clicks “Allow” or “Allow on any site” the request is resolved.
-- If the user clicks “Don't Allow”, the storage access request is rejected and the
+- If the user clicks "Allow" or "Allow on any site" the request is resolved.
+- If the user clicks "Don't Allow", the storage access request is rejected and the
   requesting origin can re-request once it receives another user interaction.
 - If the user allows storage the requesting origin is given a persistent storage
   access grant on the current top-level site.

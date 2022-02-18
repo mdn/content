@@ -253,7 +253,7 @@ ReactDOM.render(<App tasks={DATA} />, document.getElementById("root"));
 
 This array is now available to the App component as `props.tasks`. You can `console.log()` it to check, if you'd like.
 
-> **Note:** `ALL_CAPS` constant names have no special meaning in JavaScript; they're a convention that tells other developers "this data will never change after being defined here”.
+> **Note:** `ALL_CAPS` constant names have no special meaning in JavaScript; they're a convention that tells other developers "this data will never change after being defined here".
 
 ## Rendering with iteration
 

@@ -43,7 +43,7 @@ registerProtocolHandler(scheme, url, title)
 - `title` {{deprecated_inline}}
 
   - : A human-readable title string for the handler.
-    **This will be displayed to the user**, such as prompting “Allow this site to handle \[scheme] links?” or listing registered handlers in the browser's settings.
+    **This will be displayed to the user**, such as prompting "Allow this site to handle \[scheme] links?" or listing registered handlers in the browser's settings.
 
     > **Note:** The title has been removed from the spec due to spoofing concerns.
     > The `title` should still be set because some browsers **still require it** (see the [compatibility table below](#browser_compatibility)).
@@ -120,7 +120,7 @@ This script must be run from the same origin as the handler URL (so any page at 
 
 The user will be notified that your code asked to register the protocol handler, so that they can decide whether or not to allow it. See the screenshot below for an example on `google.co.uk`:
 
-![A browser notification reads “Add Burger handler (www.google.co.uk) as an application for burger links?”, and offers an “Add Application” button and a close to ignore the handler request.](protocolregister.png)
+![A browser notification reads "Add Burger handler (www.google.co.uk) as an application for burger links?", and offers an "Add Application" button and a close to ignore the handler request.](protocolregister.png)
 
 ## Specifications
 

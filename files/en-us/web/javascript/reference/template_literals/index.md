@@ -275,8 +275,8 @@ are common. The ECMAScript proposal [Template Literal
 Revision](https://tc39.github.io/proposal-template-literal-revision/) (integrated in the ECMAScript 2018 standard) removed the
 syntax restriction of ECMAScript escape sequences from tagged templates.
 
-However, illegal escape sequences must still be represented in the “cooked”
-representation. They will show up as {{jsxref("undefined")}} element in the “cooked”
+However, illegal escape sequences must still be represented in the "cooked"
+representation. They will show up as {{jsxref("undefined")}} element in the "cooked"
 array:
 
 ```js

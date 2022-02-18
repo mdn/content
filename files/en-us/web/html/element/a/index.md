@@ -366,7 +366,7 @@ Using `target="_blank"` without [`rel="noreferrer"`](/en-US/docs/Web/HTML/Link_t
 
 #### Inaccessible, weak link text
 
-A sadly common mistake is to only link the words “click here” or “here”:
+A sadly common mistake is to only link the words "click here" or "here":
 
 ```html example-bad
 <p>
@@ -384,7 +384,7 @@ Luckily, this is an easy fix, and it's actually shorter than the inaccessible ve
 </p>
 ```
 
-Assistive software has shortcuts to list all links on a page. However, strong link text benefits all users — the “list all links” shortcut emulates how sighted users quickly scan pages.
+Assistive software has shortcuts to list all links on a page. However, strong link text benefits all users — the "list all links" shortcut emulates how sighted users quickly scan pages.
 
 ### onclick events
 

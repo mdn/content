@@ -134,7 +134,7 @@ Now we have three tasks ahead of us:
     git add .
     ```
 
-    Note the period at the end, it means “everything in this directory”. The `git add .` command is a bit of a sledgehammer approach — it will add all local changes you've worked on in one go. If you want finer control over what you add, then use `git add -p` for an interactive process, or add individual files using `git add path/to/file`.
+    Note the period at the end, it means "everything in this directory". The `git add .` command is a bit of a sledgehammer approach — it will add all local changes you've worked on in one go. If you want finer control over what you add, then use `git add -p` for an interactive process, or add individual files using `git add path/to/file`.
 
 2. Now all the code is staged, we can commit; run the following command:
 

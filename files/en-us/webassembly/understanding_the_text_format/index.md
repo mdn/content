@@ -30,7 +30,7 @@ First, let's see what an S-expression looks like. Each node in the tree goes ins
 (module (memory 1) (func))
 ```
 
-represents a tree with the root node “module” and two child nodes, a "memory" node with the attribute "1" and a "func" node. We'll see shortly what these nodes actually mean.
+represents a tree with the root node "module" and two child nodes, a "memory" node with the attribute "1" and a "func" node. We'll see shortly what these nodes actually mean.
 
 ### The simplest module
 
@@ -330,7 +330,7 @@ For simplicity, let's create it in JavaScript then import it into WebAssembly. O
 
 The `1` indicates that the imported memory must have at least 1 page of memory (WebAssembly defines a page to be 64KB.)
 
-So let's see a complete module that prints the string “Hi”. In a normal compiled C program, you'd call a function to allocate some memory for the string, but since we're just writing our own assembly here and we own the entire linear memory, we can just write the string contents into global memory using a `data` section. Data sections allow a string of bytes to be written at a given offset at instantiation time and are similar to the `.data` sections in native executable formats.
+So let's see a complete module that prints the string "Hi". In a normal compiled C program, you'd call a function to allocate some memory for the string, but since we're just writing our own assembly here and we own the entire linear memory, we can just write the string contents into global memory using a `data` section. Data sections allow a string of bytes to be written at a given offset at instantiation time and are similar to the `.data` sections in native executable formats.
 
 Our final wasm module looks like this:
 

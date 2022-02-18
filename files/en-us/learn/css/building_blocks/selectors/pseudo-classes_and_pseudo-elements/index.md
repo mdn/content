@@ -390,16 +390,16 @@ There are a large number of pseudo-classes and pseudo-elements, and it is useful
       <td>{{ Cssxref(":playing") }}</td>
       <td>
         Matches an element representing an audio, video, or similar resource
-        that is capable of being “played” or “paused”, when that element is
-        “playing”.
+        that is capable of being "played" or "paused", when that element is
+        "playing".
       </td>
     </tr>
     <tr>
       <td>{{ Cssxref(":paused") }}</td>
       <td>
         Matches an element representing an audio, video, or similar resource
-        that is capable of being “played” or “paused”, when that element is
-        “paused”.
+        that is capable of being "played" or "paused", when that element is
+        "paused".
       </td>
     </tr>
     <tr>

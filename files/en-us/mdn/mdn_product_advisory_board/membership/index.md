@@ -30,7 +30,7 @@ The primary purpose of the PAB is to provide advice, input, and feedback on cont
 
 a. The PAB shall consist of 10 to 12 Members (as defined in the MDN Product Advisory Board Agreement and including those individuals representing a Member organization), to be selected by Mozilla.
 
-b. There are two types of membership: organizational and individual. Organizations who meet the membership criteria and are accepted as member organizations may nominate up to 2 individuals to serve as their representatives (“Member Representatives” as defined in the MDN Product Advisory Board Agreement) on the PAB.
+b. There are two types of membership: organizational and individual. Organizations who meet the membership criteria and are accepted as member organizations may nominate up to 2 individuals to serve as their representatives ("Member Representatives" as defined in the MDN Product Advisory Board Agreement) on the PAB.
 
 c. Organizations/individuals who wish to become PAB members must submit a MDN Product Advisory Board Interest Form. Membership will be subject to review and approval by Mozilla, and notification will be sent to the applicant within 30 days of application.
 
@@ -88,8 +88,8 @@ It is anticipated that PAB membership will have the following benefits:
 a. Members will be invited to the following meetings:
 
 - Annual Product Strategy review meetings to take place between October and December of each calendar year;
-- Quarterly content strategy and prioritization review meetings (“Quarterly Reviews); and
-- Ad-hoc product review/check-in meetings, which can be initiated by Mozilla or any Member as needed (“Ad Hoc Meetings”).
+- Quarterly content strategy and prioritization review meetings ("Quarterly Reviews); and
+- Ad-hoc product review/check-in meetings, which can be initiated by Mozilla or any Member as needed ("Ad Hoc Meetings").
 
 b. Annual Product Strategy review meetings will review the previous year's progress and make recommendations for MDN's strategy and objectives for the following year.
 

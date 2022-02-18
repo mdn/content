@@ -78,7 +78,7 @@ p {
 }
 ```
 
-In this example the style for the {{HTMLElement("p")}} element specifies that the animation should take 3 seconds to execute from start to finish, using the {{cssxref("animation-duration")}} property, and that the name of the {{ cssxref("@keyframes")}} at-rule defining the keyframes for the animation sequence is named “slidein”.
+In this example the style for the {{HTMLElement("p")}} element specifies that the animation should take 3 seconds to execute from start to finish, using the {{cssxref("animation-duration")}} property, and that the name of the {{ cssxref("@keyframes")}} at-rule defining the keyframes for the animation sequence is named "slidein".
 
 If we wanted any custom styling on the {{HTMLElement("p")}} element to appear in browsers that don't support CSS animations, we would include it here as well; however, in this case we don't want any custom styling other than the animation effect.
 
@@ -279,7 +279,7 @@ We'll modify the sliding text example to output some information about each anim
 
 #### Adding the CSS
 
-We start with creating the CSS for the animation. This animation will last for 3 seconds, be called “slidein”, repeat 3 times, and alternate direction each time. In the {{cssxref("@keyframes")}}, the width and margin-left are manipulated to make the element slide across the screen.
+We start with creating the CSS for the animation. This animation will last for 3 seconds, be called "slidein", repeat 3 times, and alternate direction each time. In the {{cssxref("@keyframes")}}, the width and margin-left are manipulated to make the element slide across the screen.
 
 ```css
 .slidein {
@@ -315,7 +315,7 @@ element.addEventListener("animationiteration", listener, false);
 element.className = "slidein";
 ```
 
-This is pretty standard code; you can get details on how it works in the documentation for {{domxref("eventTarget.addEventListener()")}}. The last thing this code does is set the `class` on the element we'll be animating to “slidein”; we do this to start the animation.
+This is pretty standard code; you can get details on how it works in the documentation for {{domxref("eventTarget.addEventListener()")}}. The last thing this code does is set the `class` on the element we'll be animating to "slidein"; we do this to start the animation.
 
 Why? Because the `animationstart` event fires as soon as the animation starts, and in our case, that happens before our code runs. So we'll start the animation ourselves by setting the class of the element to the style that gets animated after the fact.
 

@@ -153,7 +153,7 @@ We can also set the sRGB values directly by an 8bit integer number, which means 
 
 Shown after that, we can use a hex value. Hex value means "hexadecimal," where the 0-255 integer is represented by two digits that each range from 0-15. As there are no Arabic numerals above 9, we use the letters a-f to represent 10-15. We add the '#' symbol to indicate the value is hex. Thus, #ff = 255.
 
-In some of the previous examples, you'll notice that some have a fourth value which is called “alpha”, the A in RGBA. The alpha channel is not a color channel, but defines transparency in terms of the opacity value of the color. A higher value means the color is more opaque therefore less transparent. In the examples above, the alpha value is set to half or 50% opaque.
+In some of the previous examples, you'll notice that some have a fourth value which is called "alpha", the A in RGBA. The alpha channel is not a color channel, but defines transparency in terms of the opacity value of the color. A higher value means the color is more opaque therefore less transparent. In the examples above, the alpha value is set to half or 50% opaque.
 
 ### sRGB: the accessible colorspace
 
@@ -245,15 +245,15 @@ The world standard in terms of colorimetry (measuring color) is the **CIE**, and
 
 #### Colorfulness
 
-Colorfulness is the “Attribute of a visual perception according to which the perceived color of an area appears to be more or less chromatic.” (CIE 17-233). For a color of a given chromaticity this attribute usually increases as the luminance is raised, except when the brightness is very high.
+Colorfulness is the "Attribute of a visual perception according to which the perceived color of an area appears to be more or less chromatic." (CIE 17-233). For a color of a given chromaticity this attribute usually increases as the luminance is raised, except when the brightness is very high.
 
 #### Saturation
 
-Saturation is the “Colorfulness of an area judged in proportion to its brightness.” (CIE 17-1136). For normal day viewing conditions a given chromaticity exhibits approximately constant saturation for all luminance levels, except when the brightness is very high.
+Saturation is the "Colorfulness of an area judged in proportion to its brightness." (CIE 17-1136). For normal day viewing conditions a given chromaticity exhibits approximately constant saturation for all luminance levels, except when the brightness is very high.
 
 #### Chroma
 
-Chroma is the “Colorfulness of an area judged as a proportion of the brightness of a similarly illuminated area that appears white or highly transmitting.” (CIE 17-139). A color exhibits approximately constant chroma for all levels of illuminance in normal day viewing conditions (except when the brightness is very high). If the luminance is increased, the chroma usually increases in the same circumstances.
+Chroma is the "Colorfulness of an area judged as a proportion of the brightness of a similarly illuminated area that appears white or highly transmitting." (CIE 17-139). A color exhibits approximately constant chroma for all levels of illuminance in normal day viewing conditions (except when the brightness is very high). If the luminance is increased, the chroma usually increases in the same circumstances.
 
 Here is an example of high chroma vs no chroma. On the right, each of the three sRGB primaries are at maximum. On the left, there is no chroma, also known as "achromatic."
 

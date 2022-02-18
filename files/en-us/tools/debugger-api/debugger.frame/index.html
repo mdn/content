@@ -32,11 +32,11 @@ slug: Tools/Debugger-API/Debugger.Frame
 	</li>
 </ul>
 
-<p>The “immediate caller” rule means that, when debuggee code calls a non-debuggee function, it looks like a call to a primitive: you see a frame for the non-debuggee function that was accessible to the debuggee, but any further calls that function makes are treated as internal details, and omitted from the stack trace. If the non-debuggee function eventually calls back into debuggee code, then those frames are visible.</p>
+<p>The "immediate caller" rule means that, when debuggee code calls a non-debuggee function, it looks like a call to a primitive: you see a frame for the non-debuggee function that was accessible to the debuggee, but any further calls that function makes are treated as internal details, and omitted from the stack trace. If the non-debuggee function eventually calls back into debuggee code, then those frames are visible.</p>
 
-<p>(Note that the debuggee is not considered an “immediate caller” of handler methods it triggers. Even though the debuggee and debugger share the same JavaScript stack, frames pushed for SpiderMonkey's calls to handler methods to report events in the debuggee are never considered visible frames.)</p>
+<p>(Note that the debuggee is not considered an "immediate caller" of handler methods it triggers. Even though the debuggee and debugger share the same JavaScript stack, frames pushed for SpiderMonkey's calls to handler methods to report events in the debuggee are never considered visible frames.)</p>
 
-<h2 id="Invocation_functions_and_“debugger”_frames"><span id="invf">Invocation</span> functions and “debugger” frames</h2>
+<h2 id="Invocation_functions_and_"debugger"_frames"><span id="invf">Invocation</span> functions and "debugger" frames</h2>
 
 <p>An<em>invocation function</em> is any function in this interface that allows the debugger to invoke code in the debuggee: <code>Debugger.Object.prototype.call</code>, <code>Debugger.Frame.prototype.eval</code>, and so on.</p>
 
@@ -145,7 +145,7 @@ slug: Tools/Debugger-API/Debugger.Frame
 	<dd>
 	<p>This property must be either <code>undefined</code> or a function. If it is a function, SpiderMonkey calls it when execution in this frame makes a small amount of progress, passing no arguments and providing this <code>Debugger.Frame</code> instance as the <code>this</code>value. The function should return a <a href="Conventions#resumption-values" title="Debugger API: General Conventions: Resumption Values">resumption value</a> specifying how the debuggee's execution should proceed.</p>
 
-	<p>What constitutes “a small amount of progress” varies depending on the implementation, but it is fine-grained enough to implement useful “step” and “next” behavior.</p>
+	<p>What constitutes "a small amount of progress" varies depending on the implementation, but it is fine-grained enough to implement useful "step" and "next" behavior.</p>
 
 	<p>If multiple <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instances each have <code>Debugger.Frame</code> instances for a given stack frame with <code>onStep</code> handlers set, their handlers are run in an unspecified order. If any <code>onStep</code> handler forces the frame to return early (by returning a resumption value other than <code>undefined</code>), any remaining debuggers' <code>onStep</code> handlers do not run.</p>
 

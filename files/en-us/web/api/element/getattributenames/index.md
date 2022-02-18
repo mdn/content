@@ -41,7 +41,7 @@ It's important to understand that:
 1. An attribute can be present in the DOM with a namespace but lacking a namespace prefix.
 2. For an attribute in the DOM that has a namespace but lacks a namespace prefix, `getAttributeNames()` will return just the attribute name, with no indication that the attribute is in a namespace.
 
-The example below includes such a “namespaced but without a namespace prefix” case.
+The example below includes such a "namespaced but without a namespace prefix" case.
 
 ```js
 const element = document.createElement('a')

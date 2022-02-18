@@ -101,9 +101,9 @@ In JavaScript, arrays aren't [primitives](/en-US/docs/Glossary/Primitive) but ar
 - {{jsxref("Array.prototype.push()")}}
   - : Adds one or more elements to the end of an array, and returns the new `length` of the array.
 - {{jsxref("Array.prototype.reduce()")}}
-  - : Executes a user-supplied “reducer” callback function on each element of the array (from left to right), to reduce it to a single value.
+  - : Executes a user-supplied "reducer" callback function on each element of the array (from left to right), to reduce it to a single value.
 - {{jsxref("Array.prototype.reduceRight()")}}
-  - : Executes a user-supplied “reducer” callback function on each element of the array (from right to left), to reduce it to a single value.
+  - : Executes a user-supplied "reducer" callback function on each element of the array (from right to left), to reduce it to a single value.
 - {{jsxref("Array.prototype.reverse()")}}
   - : Reverses the order of the elements of an array _in place_. (First becomes the last, last becomes first.)
 - {{jsxref("Array.prototype.shift()")}}
@@ -670,8 +670,8 @@ The properties and elements returned from this match are as follows:
 
 - From the JavaScript Guide:
 
-  - [“Indexing object properties”](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#indexing_object_properties)
-  - [“Indexed collections: `Array` object”](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#array_object)
+  - ["Indexing object properties"](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#indexing_object_properties)
+  - ["Indexed collections: `Array` object"](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#array_object)
 
 - [Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
 - [RangeError: invalid array length](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)

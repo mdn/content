@@ -166,8 +166,8 @@ Java.
   values includes the resolution of percentages for `width` or
   `height`, as those will be replaced by their pixel equivalent only for
   _used values_.
-- Returned values are sometimes deliberately inaccurate. To avoid the “CSS History
-  Leak” security issue, browsers may lie about the computed styles for a visited link,
+- Returned values are sometimes deliberately inaccurate. To avoid the "CSS History
+  Leak" security issue, browsers may lie about the computed styles for a visited link,
   returning values as if the user never visited the linked URL. See [Plugging
   the CSS History Leak](https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/) and [Privacy-related
   changes coming to CSS :visited](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) for examples of how this is implemented.

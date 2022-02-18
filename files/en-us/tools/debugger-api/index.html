@@ -49,7 +49,7 @@ tags:
   <p>A <a href="Debugger-API/Debugger.Object" title="Debugger.Object"><code>Debugger.Object</code></a> represents a debuggee object, offering a reflection-oriented API that protects the debugger from accidentally invoking getters, setters, proxy traps, and so on.</p>
  </li>
  <li>
-  <p>A <a href="Debugger-API/Debugger.Script" title="Debugger.Script"><code>Debugger.Script</code></a> represents a block of JavaScript code—either a function body or a top-level script. Given a <code>Debugger.Script</code>, one can set breakpoints, translate between source positions and bytecode offsets (a deviation from the “source level” design principle), and find other static characteristics of the code.</p>
+  <p>A <a href="Debugger-API/Debugger.Script" title="Debugger.Script"><code>Debugger.Script</code></a> represents a block of JavaScript code—either a function body or a top-level script. Given a <code>Debugger.Script</code>, one can set breakpoints, translate between source positions and bytecode offsets (a deviation from the "source level" design principle), and find other static characteristics of the code.</p>
  </li>
  <li>
   <p>A <a href="Debugger-API/Debugger.Frame" title="Debugger.Frame"><code>Debugger.Frame</code></a> represents a running stack frame. You can use these to walk the stack and find each frame's script and environment. You can also set <code>onStep</code> and <code>onPop</code> handlers on frames.</p>

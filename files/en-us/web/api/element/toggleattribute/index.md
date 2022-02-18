@@ -29,7 +29,7 @@ toggleAttribute(name, force);
     `toggleAttribute()` is called on an HTML element in an HTML document.
 - `force` {{optional_inline}}
   - : A boolean value which has the following effects:
-    - if not specified at all, the `toggleAttribute` method “toggles” the attribute named `name` — removing it if it is present, or else adding it if it is not present
+    - if not specified at all, the `toggleAttribute` method "toggles" the attribute named `name` — removing it if it is present, or else adding it if it is not present
     - if true, the `toggleAttribute` method adds an attribute named `name`
     - if false, the `toggleAttribute` method removes the attribute named `name`
 

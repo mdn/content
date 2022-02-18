@@ -143,7 +143,7 @@ What happens is the following:
 
 - At second 0 there is no subtitle.
 - At second 1 the text "Hello" must appear.
-- At second 2 the text “Hello” must still stay “on screen” but the text "world!" needs to be added. So, from second 2 to 3 we have a subtitle representing the text "Hello world!".
+- At second 2 the text "Hello" must still stay "on screen" but the text "world!" needs to be added. So, from second 2 to 3 we have a subtitle representing the text "Hello world!".
 
 To map this into HTML we need at least two cues: one that represents the text "Hello" from second 1-2 and the other representing the text "Hello world!" from second 2-3.
 
@@ -153,7 +153,7 @@ Luckily in IMSC and imscJS this scenario is quite easy to cover, because IMSC ha
 
 Let's have a closer look what that means.
 
-In our HTML/CSS implementation we can think of IMSC subtitles as a rendering layer that is put on top of the video. At each point in time on the media timeline the rendering layer has one specific state. For these “states” IMSC has a conceptual model, the "intermediate synchronous document format", which represents what is eventually rendered in that layer. Each time the rendering needs to change, a new representation is created. What is created is called an **Intermediate Synchronous Document** or **ISD**. This ISD has no dependency on the ISD's that come before or after. It is completely stateless and has all information needed to render the subtitle.
+In our HTML/CSS implementation we can think of IMSC subtitles as a rendering layer that is put on top of the video. At each point in time on the media timeline the rendering layer has one specific state. For these "states" IMSC has a conceptual model, the "intermediate synchronous document format", which represents what is eventually rendered in that layer. Each time the rendering needs to change, a new representation is created. What is created is called an **Intermediate Synchronous Document** or **ISD**. This ISD has no dependency on the ISD's that come before or after. It is completely stateless and has all information needed to render the subtitle.
 
 So how can we get the times when the ISD changes?
 

@@ -292,7 +292,7 @@ However, as with all tools that "help" developers there's often a trade off. In 
 
 When you use development tooling it's worth questioning whether they're doing the right thing for you. In this case, the bundle is nearly 200K because it has in fact included the entire `date-fns` library, not just the function we're using.
 
-If we had avoided any development tools and pointed a `<script src=””>` element to a hosted version of `date-fns`, roughly the same thing would have happened — all of the library would be downloaded when our example page is loaded in a browser.
+If we had avoided any development tools and pointed a `<script src="">` element to a hosted version of `date-fns`, roughly the same thing would have happened — all of the library would be downloaded when our example page is loaded in a browser.
 
 However, this is where development tooling has a chance to shine. Whilst the tooling is on our machine, we can ask the software to inspect our use of the code and only include the functions that we're actually using in production — a process known as "Tree Shaking".
 
@@ -301,7 +301,7 @@ This makes a lot of sense as we want to reduce file size and thus make our app l
 Although the list grows by the month, there are three main offerings for tools that generate bundles from our source code: Webpack, [Rollup](https://rollupjs.org/guide/en/), and Parcel. There will be more available than this, but these are popular ones:
 
 - The RollUp tool offers tree shaking and code splitting as its core features.
-- Webpack requires some configuration (though “some” might be understating the complexity of some developers' Webpack configurations).
+- Webpack requires some configuration (though "some" might be understating the complexity of some developers' Webpack configurations).
 - In the case of Parcel (prior to Parcel version 2), there's a special flag required — `--experimental-scope-hoisting` — which will tree shake while building.
 
 Let's stick with Parcel for now, given that we've already got it installed. Try running the following command:
@@ -417,13 +417,13 @@ npm run dev
 # or yarn run dev
 ```
 
-This would run a custom script for starting our project in “development mode”. In fact, we regularly include this in all projects as the local development setup tends to run slightly differently to how it would run in production.
+This would run a custom script for starting our project in "development mode". In fact, we regularly include this in all projects as the local development setup tends to run slightly differently to how it would run in production.
 
-If you tried running this in your Parcel test project from earlier it would (likely) claim the “dev script is missing”. This is because npm, yarn (and the like) are looking for a property called dev in the `scripts` property of your `package.json` file.
+If you tried running this in your Parcel test project from earlier it would (likely) claim the "dev script is missing". This is because npm, yarn (and the like) are looking for a property called dev in the `scripts` property of your `package.json` file.
 
 Parcel can run a development server using the command `parcel serve filename.html`, and we'd like to use that often during our development.
 
-So let's create a custom shorthand command — “dev” — in our `package.json`.
+So let's create a custom shorthand command — "dev" — in our `package.json`.
 
 If you followed the tutorial from earlier, you should have a `package.json` file inside your parcel-experiment directory. Open it up, and its `scripts` member should look like this:
 

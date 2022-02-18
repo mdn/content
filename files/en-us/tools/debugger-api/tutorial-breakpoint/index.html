@@ -10,7 +10,7 @@ slug: Tools/Debugger-API/Tutorial-Breakpoint
 
 <ol style="list-style-type: decimal;">
  <li>
-  <p>Since the <code>Debugger</code> API is only available to privileged JavaScript code, you'll need to use the Browser Content Toolbox to try it out. To do this, open the Firefox developer tools, click on the options gear at the upper right of the toolbox, and make sure that both “Enable browser chrome and add-on debugging toolboxes” and “Enable remote debugging” are checked. These are located at the bottom right of the options panel; you may need to scroll to see them. Once they're checked, you can close the developer tools.</p>
+  <p>Since the <code>Debugger</code> API is only available to privileged JavaScript code, you'll need to use the Browser Content Toolbox to try it out. To do this, open the Firefox developer tools, click on the options gear at the upper right of the toolbox, and make sure that both "Enable browser chrome and add-on debugging toolboxes" and "Enable remote debugging" are checked. These are located at the bottom right of the options panel; you may need to scroll to see them. Once they're checked, you can close the developer tools.</p>
  </li>
  <li>
   <p>Save the following text to an HTML file:</p>
@@ -24,10 +24,10 @@ function report(what) {
 &lt;/script&gt;</code></pre>
  </li>
  <li>
-  <p>Visit the HTML file in your browser, and open the Browser Content Toolbox by opening the Firefox menu, choosing “Web Developer”, and then “Browser Content Toolbox”. If that item doesn't appear in the “Web Developer” menu, make sure you checked both boxes to enable the Browser Content Toolbox as explained in Step 1.</p>
+  <p>Visit the HTML file in your browser, and open the Browser Content Toolbox by opening the Firefox menu, choosing "Web Developer", and then "Browser Content Toolbox". If that item doesn't appear in the "Web Developer" menu, make sure you checked both boxes to enable the Browser Content Toolbox as explained in Step 1.</p>
  </li>
  <li>
-  <p>Our example code is long enough that the best way to run it is to use the Scratchpad panel, which is not enabled by default. To enable it, click on the options gear at the upper right of the Browser Content Toolbox, and make sure the “Scratchpad” box in the “Default Developer Tools” section the left is checked. The Scratchpad panel should appear at the top of the Toolbox alongside the Console, Debugger, and Memory panels.</p>
+  <p>Our example code is long enough that the best way to run it is to use the Scratchpad panel, which is not enabled by default. To enable it, click on the options gear at the upper right of the Browser Content Toolbox, and make sure the "Scratchpad" box in the "Default Developer Tools" section the left is checked. The Scratchpad panel should appear at the top of the Toolbox alongside the Console, Debugger, and Memory panels.</p>
  </li>
  <li>
   <p>Click on the Scratchpad panel and enter the following code:</p>
@@ -61,18 +61,18 @@ reportDO.script.setBreakpoint(0, {
 console.log('Finished setting breakpoint!');</code></pre>
  </li>
  <li>
-  <p>In the Scratchpad, ensure that no text is selected, and press the “Run” button.</p>
+  <p>In the Scratchpad, ensure that no text is selected, and press the "Run" button.</p>
 
-  <p>Now, click on the text that says “Click me!” in the web page. This runs the <code>div</code> element's <code>onclick</code> handler. When control reaches the start of the <code>report</code> function, <code>Debugger</code> calls the breakpoint handler's <code>hit</code> method, passing a <code>Debugger.Frame</code> instance. The <code>hit</code> method logs the breakpoint hit to the browser content toolbox's console. Then it evaluates the expression <code>what</code> in the given stack frame, and logs its result. The toolbox's console now looks like this:</p>
+  <p>Now, click on the text that says "Click me!" in the web page. This runs the <code>div</code> element's <code>onclick</code> handler. When control reaches the start of the <code>report</code> function, <code>Debugger</code> calls the breakpoint handler's <code>hit</code> method, passing a <code>Debugger.Frame</code> instance. The <code>hit</code> method logs the breakpoint hit to the browser content toolbox's console. Then it evaluates the expression <code>what</code> in the given stack frame, and logs its result. The toolbox's console now looks like this:</p>
 
   <p><img alt="The breakpoint handler's console output" src="console.png"></p>
 
-  <p>You can also click on the text that says “Or me!”, to see <code>report</code> called from a different handler.</p>
+  <p>You can also click on the text that says "Or me!", to see <code>report</code> called from a different handler.</p>
 
   <p>If <code>Debugger</code> is unable to find the <code>report</code> function, or the console output does not appear, evaluate the expression <code>tabs[0].content.document.location</code> in the console to make sure that <code>tabs[0]</code> indeed refers to the HTML file you visited. If you have more than one tab visiting a <code>file:</code> URL, they all share a single content process, so you may need to use a different element of the array as the debuggee.</p>
  </li>
  <li>
-  <p>Press “Run” in the Scratchpad again. Now, clicking on “Click me!” causes the breakpoint hit to be logged twice—one for each <code>Debugger</code> instance.</p>
+  <p>Press "Run" in the Scratchpad again. Now, clicking on "Click me!" causes the breakpoint hit to be logged twice—one for each <code>Debugger</code> instance.</p>
 
   <p>Multiple <code>Debugger</code> instances can observe the same debuggee. Re-running the code in the Scratchpad creates a fresh <code>Debugger</code> instance, adds the same web page as its debuggee, and then sets a new breakpoint. When you click on the <code>div</code> element, both <code>Debugger</code>s' breakpoints are hit, and both handlers run.</p>
 

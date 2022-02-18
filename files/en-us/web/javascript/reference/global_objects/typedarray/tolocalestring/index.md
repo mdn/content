@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.TypedArray.toLocaleString
 
 The **`toLocaleString()`** method returns a string representing
 the elements of the typed array. The elements are converted to strings and are separated
-by a locale-specific string (such as a comma “,”). This method has the same algorithm as
+by a locale-specific string (such as a comma ","). This method has the same algorithm as
 {{jsxref("Array.prototype.toLocaleString()")}} and, as the typed array elements are
 numbers, the same algorithm as {{jsxref("Number.prototype.toLocaleString()")}} applies
 for each element. _TypedArray_ is one of the [typed

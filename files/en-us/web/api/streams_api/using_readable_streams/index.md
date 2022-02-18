@@ -336,4 +336,4 @@ fetch('png-logo.png')
 
 ## Summary
 
-That explains the basics of “default” readable streams. We'll explain bytestreams in a separate future article, once they are available in browsers.
+That explains the basics of "default" readable streams. We'll explain bytestreams in a separate future article, once they are available in browsers.

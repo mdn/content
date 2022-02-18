@@ -354,9 +354,9 @@ Try replacing your bottom block of rules with the following, then reload it in t
 
 > **Note:** If you can't get this to work, it might be because your browser does not support the `calc()` function, although it is fairly well supported across browsers — as far back as IE9.
 
-### Semantic versus “unsemantic” grid systems
+### Semantic versus "unsemantic" grid systems
 
-Adding classes to your markup to define layout means that your content and markup becomes tied to your visual presentation. You will sometimes hear this use of CSS classes described as being “unsemantic” — describing how the content looks — rather than a semantic use of classes that describes the content. This is the case with our `span2`, `span3`, etc., classes.
+Adding classes to your markup to define layout means that your content and markup becomes tied to your visual presentation. You will sometimes hear this use of CSS classes described as being "unsemantic" — describing how the content looks — rather than a semantic use of classes that describes the content. This is the case with our `span2`, `span3`, etc., classes.
 
 These are not the only approach. You could instead decide on your grid and then add the sizing information to the rules for existing semantic classes. For example, if you had a {{htmlelement("div")}} with a class of `content` on it that you wanted to span 8 columns, you could copy across the width from the `span8` class, giving you a rule like so:
 
@@ -563,7 +563,7 @@ Try saving your HTML file and loading it in your browser to see the effect.
 
 > **Note:** If you are having trouble getting this example to work, try comparing it to our [html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton-finished.html) file (see it [running live](https://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html) also).
 
-If you look in the skeleton.css file you can see how this works. For example, Skeleton has the following defined to style elements with “three columns” classes added to them.
+If you look in the skeleton.css file you can see how this works. For example, Skeleton has the following defined to style elements with "three columns" classes added to them.
 
 ```css
 .three.columns { width: 22%; }

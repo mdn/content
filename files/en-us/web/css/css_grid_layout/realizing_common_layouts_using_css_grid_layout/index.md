@@ -340,11 +340,11 @@ Once again the [Grid Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_
 
 ![Showing the layout with grid tracks highlighted by the grid inspector.](11-grid-inspector-12col-layout.png)
 
-Something to note as we create this layout is that we haven't needed to explicitly position every element on the grid at each breakpoint. We have been able to inherit the placement set up for earlier breakpoints – an advantage of working “mobile first”. We are also able to take advantage of grid auto-placement. By keeping elements in a logical order, auto-placement does quite a lot of work for us in placing items onto the grid. In the final example in this guide we will create a layout that entirely relies on auto-placement.
+Something to note as we create this layout is that we haven't needed to explicitly position every element on the grid at each breakpoint. We have been able to inherit the placement set up for earlier breakpoints – an advantage of working "mobile first". We are also able to take advantage of grid auto-placement. By keeping elements in a logical order, auto-placement does quite a lot of work for us in placing items onto the grid. In the final example in this guide we will create a layout that entirely relies on auto-placement.
 
 ## A product listing with auto-placement
 
-Many layouts are essentially sets of “cards” – product listings, image galleries, and so on. A grid can make it very easy to create these listings in a way that is responsive without needing to add [media queries](/en-US/docs/Web/CSS/Media_Queries) to make it so. In this next example I'm combining CSS Grid and Flexbox Layouts to make a simple product listing layout.
+Many layouts are essentially sets of "cards" – product listings, image galleries, and so on. A grid can make it very easy to create these listings in a way that is responsive without needing to add [media queries](/en-US/docs/Web/CSS/Media_Queries) to make it so. In this next example I'm combining CSS Grid and Flexbox Layouts to make a simple product listing layout.
 
 The markup for my listing is an unordered list of items. Each item contains a heading, some text of varying height, and a call to action link.
 

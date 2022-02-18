@@ -131,10 +131,10 @@ This demonstrates text capitalization.
 
 ```html
 <p>Initial String
-  <strong>(this) “is” [a] –short– -test- «for» *the* _css_ ¿capitalize? ?¡transform!</strong>
+  <strong>(this) "is" [a] –short– -test- «for» *the* _css_ ¿capitalize? ?¡transform!</strong>
 </p>
 <p>text-transform: capitalize
-  <strong><span>(this) “is” [a] –short– -test- «for» *the* _css_ ¿capitalize? ?¡transform!</span></strong>
+  <strong><span>(this) "is" [a] –short– -test- «for» *the* _css_ ¿capitalize? ?¡transform!</span></strong>
 </p>
 ```
 

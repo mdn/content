@@ -46,7 +46,7 @@ This request gives you use of all Tabs API feature on all website your user visi
 - the user must interact with the extension through its browser or page action, context menu, or shortcut key.
 - it only grants permission within the active tab.
 
-The benefit of this approach is the user won't get a permissions warning saying your extension can “Access your data for all websites”. This is because `<all_urls>` permission gives an extension the ability to execute scripts in any tab, any time it likes, whereas [`"activeTab"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) is limited to allowing the extension to perform a user requested action in the current tab.
+The benefit of this approach is the user won't get a permissions warning saying your extension can "Access your data for all websites". This is because `<all_urls>` permission gives an extension the ability to execute scripts in any tab, any time it likes, whereas [`"activeTab"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) is limited to allowing the extension to perform a user requested action in the current tab.
 
 ## Discovering more about tabs and their properties
 
@@ -58,7 +58,7 @@ Where you want information about the current tab only, you can get a {{WebExtAPI
 
 ### How to example
 
-To see how {{WebExtAPIRef("tabs.query()")}} and {{WebExtAPIRef("tabs.Tab")}} are used, let's walk through how the [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) example adds the list of “switch to tabs” to its toolbar button popup.
+To see how {{WebExtAPIRef("tabs.query()")}} and {{WebExtAPIRef("tabs.Tab")}} are used, let's walk through how the [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) example adds the list of "switch to tabs" to its toolbar button popup.
 
 ![The tabs toolbar menu showing the switch to tap area](switch_to_tab.png)
 
@@ -211,7 +211,7 @@ Finally, the document fragment is written to the `tabs-list` `div`:
 
 #### Working with the active tab
 
-Another related example feature is the “Alert active tab” info option that dumps all the {{WebExtAPIRef("tabs.Tab")}} object properties for the active tab into an alert:
+Another related example feature is the "Alert active tab" info option that dumps all the {{WebExtAPIRef("tabs.Tab")}} object properties for the active tab into an alert:
 
 ```js
 else if (e.target.id === "tabs-alertinfo") {
@@ -267,7 +267,7 @@ The following functions are available:
 
 ### How to example
 
-The [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) example exercises all of these features except for updating a tab's URL The way in which these APIs are used is similar, so we'll look at one of the more involved implementations, that of the “Move active tab to the beginning of the window list” option.
+The [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) example exercises all of these features except for updating a tab's URL The way in which these APIs are used is similar, so we'll look at one of the more involved implementations, that of the "Move active tab to the beginning of the window list" option.
 
 But first, here is a demonstration of the feature in action:
 
@@ -277,7 +277,7 @@ But first, here is a demonstration of the feature in action:
   - : None of the functions require a permission to operate, so there are no features in the [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/manifest.json) file that need to be highlighted.
 - tabs.html
 
-  - : [`tabs.html`](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.html) defines the “menu” displayed in the popup, which includes the “Move active tab to the beginning of the window list” option, with a series of `<a>` tags grouped by a visual separator. Each menu item is given an `id`, which is used in `tabs.js` to determine which menu item is being requested.
+  - : [`tabs.html`](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.html) defines the "menu" displayed in the popup, which includes the "Move active tab to the beginning of the window list" option, with a series of `<a>` tags grouped by a visual separator. Each menu item is given an `id`, which is used in `tabs.js` to determine which menu item is being requested.
 
     ```html
         <a href="#" id="tabs-move-beginning">Move active tab to the beginning of the window</a><br>
@@ -293,7 +293,7 @@ But first, here is a demonstration of the feature in action:
 
 - tabs.js
 
-  - : To implement the “menu” defined in `tabs.html`, [`tabs.js`](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js) includes a listener for clicks in `tabs.html`:
+  - : To implement the "menu" defined in `tabs.html`, [`tabs.js`](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js) includes a listener for clicks in `tabs.html`:
 
     ```js
     document.addEventListener("click", function(e) {
@@ -312,7 +312,7 @@ But first, here is a demonstration of the feature in action:
 
     A series of `if` statements then look to match the `id` of the item clicked.
 
-    This code snippet is for the “Move active tab to the beginning of the window list” option:
+    This code snippet is for the "Move active tab to the beginning of the window list" option:
 
     ```js
     if (e.target.id === "tabs-move-beginning") {
@@ -486,11 +486,11 @@ Let's walk through how it's set up.
     The other main features in the manifest.json file are the definition of:
 
     - **a background script**, which starts running as soon as the extension is loaded.
-    - **a “page action”**, which defines an icon to be added to the browser's address bar.
+    - **a "page action"**, which defines an icon to be added to the browser's address bar.
 
 - background.js
 
-  - : On startup, [`background.js`](https://github.com/mdn/webextensions-examples/blob/master/apply-css/background.js) sets some constants to define the CSS to be applied, titles for the “page action”, and a list of protocols the extension will work in:
+  - : On startup, [`background.js`](https://github.com/mdn/webextensions-examples/blob/master/apply-css/background.js) sets some constants to define the CSS to be applied, titles for the "page action", and a list of protocols the extension will work in:
 
     ```js
     const CSS = "body { border: 20px solid red; }";
@@ -523,7 +523,7 @@ Let's walk through how it's set up.
     }
     ```
 
-    Then, if the example can act on the tab, `initializePageAction()` sets the tab's `pageAction` (navigation bar) icon and title to use the “off” versions before making the `pageAction` visible:
+    Then, if the example can act on the tab, `initializePageAction()` sets the tab's `pageAction` (navigation bar) icon and title to use the "off" versions before making the `pageAction` visible:
 
     ```js
     function initializePageAction(tab) {
@@ -544,14 +544,14 @@ Let's walk through how it's set up.
 
     `toggleCSS()` gets the title of the `pageAction` and then takes the action described:
 
-    - **For "Apply CSS”:**
+    - **For "Apply CSS":**
 
-      - toggles the `pageAction` icon and title to the “remove” versions.
+      - toggles the `pageAction` icon and title to the "remove" versions.
       - applies the CSS using {{WebExtAPIRef("tabs.insertCSS()")}}.
 
-    - **For “Remove CSS”:**
+    - **For "Remove CSS":**
 
-      - toggles the `pageAction` icon and title to the “apply” versions.
+      - toggles the `pageAction` icon and title to the "apply" versions.
       - removes the CSS using {{WebExtAPIRef("tabs.removeCSS()")}}.
 
     ```js

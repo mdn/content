@@ -181,7 +181,7 @@ To deploy our app, follow these steps.
     ```bash
     > npx vercel
     Vercel CLI 19.1.2
-    ? Set up and deploy “./mdn-svelte-tutorial”? [Y/n] y
+    ? Set up and deploy "./mdn-svelte-tutorial"? [Y/n] y
     ? Which scope do you want to deploy to? opensas
     ? Link to existing project? [y/N] n
     ? What's your project's name? mdn-svelte-tutorial

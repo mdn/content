@@ -15,13 +15,13 @@ browser-compat: api.Response.type
 The **`type`** read-only property of the {{domxref("Response")}} interface contains the type of the response.
 It can be one of the following:
 
-- `basic`: Normal, same origin response, with all headers exposed except “Set-Cookie” and “Set-Cookie2″.
+- `basic`: Normal, same origin response, with all headers exposed except "Set-Cookie" and "Set-Cookie2″.
 - `cors`: Response was received from a valid cross-origin request. [Certain headers and the body](https://fetch.spec.whatwg.org/#concept-filtered-response-cors) may be accessed.
 - `error`: Network error.
   No useful information describing the error is available.
   The Response's status is 0, headers are empty and immutable.
   This is the type for a Response obtained from `Response.error()`.
-- `opaque`: Response for “no-cors” request to cross-origin resource.
+- `opaque`: Response for "no-cors" request to cross-origin resource.
   [Severely restricted](https://fetch.spec.whatwg.org/#concept-filtered-response-opaque).
 - `opaqueredirect`: The fetch request was made with `redirect: "manual"`.
   The Response's status is 0, headers are empty, body is null and trailer is empty.

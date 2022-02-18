@@ -146,7 +146,7 @@ There needs to be space available in the dimension you wish to align the items i
 
 ## Overflow alignment
 
-The `safe` and `unsafe` keywords help define behavior when an alignment subject is larger than the alignment container. The `safe` keyword will align to `start` in the case of a specified alignment causing an overflow, the aim being to avoid “data loss” where part of the item is outside of the boundaries of the alignment container and can't be scrolled to.
+The `safe` and `unsafe` keywords help define behavior when an alignment subject is larger than the alignment container. The `safe` keyword will align to `start` in the case of a specified alignment causing an overflow, the aim being to avoid "data loss" where part of the item is outside of the boundaries of the alignment container and can't be scrolled to.
 
 If you specify `unsafe` then the alignment will be honoured even if it would cause such data loss.
 

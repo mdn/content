@@ -41,7 +41,7 @@ Font-relative lengths define the `<length>` value in terms of the size of a part
 
   - : Represents the width, or more precisely the {{Glossary("advance measure")}}, of the glyph "0" (zero, the Unicode character U+0030) in the element's {{Cssxref("font")}}.
 
-    In the cases where it is impossible or impractical to determine the measure of the “0” glyph, it must be assumed to be 0.5em wide by 1em tall.
+    In the cases where it is impossible or impractical to determine the measure of the "0" glyph, it must be assumed to be 0.5em wide by 1em tall.
 
 - `em`
   - : Represents the calculated {{Cssxref("font-size")}} of the element. If used on the {{Cssxref("font-size")}} property itself, it represents the _inherited_ font-size of the element.

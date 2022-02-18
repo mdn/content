@@ -169,7 +169,7 @@ Object.prototype.valueOf = function() {
 }
 ```
 
-Since JavaScript doesn't exactly have sub-class objects, prototype is a useful workaround to make a “base class” object of certain functions that act as objects. For example:
+Since JavaScript doesn't exactly have sub-class objects, prototype is a useful workaround to make a "base class" object of certain functions that act as objects. For example:
 
 ```js
 var Person = function(name) {

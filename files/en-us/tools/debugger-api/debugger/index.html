@@ -20,7 +20,7 @@ slug: Tools/Debugger-API/Debugger
  <dd>
  <p>A boolean value indicating whether this <code>Debugger</code> instance's handlers, breakpoints, and the like are currently enabled. It is an accessor property with a getter and setter: assigning to it enables or disables this <code>Debugger</code> instance; reading it produces true if the instance is enabled, or false otherwise. This property is initially <code>true</code> in a freshly created <code>Debugger</code> instance.</p>
 
- <p>This property gives debugger code a single point of control for disentangling itself from the debuggee, regardless of what sort of events or handlers or “points” we add to the interface.</p>
+ <p>This property gives debugger code a single point of control for disentangling itself from the debuggee, regardless of what sort of events or handlers or "points" we add to the interface.</p>
  </dd>
  <dt><code>allowUnobservedAsmJS</code></dt>
  <dd>
@@ -73,13 +73,13 @@ slug: Tools/Debugger-API/Debugger
  <dd>
  <p>A new Promise object, referenced by the <a href="Debugger.Object"><code>Debugger.Object</code></a> instance <em>promise</em>, has been allocated in the scope of the debuggees. The Promise's allocation stack can be obtained using the <em>promiseAllocationStack</em> accessor property of the <a href="Debugger.Object"><code>Debugger.Object</code></a> instance <em>promise</em>.</p>
 
- <p>This handler method should return a <a href="Conventions#resumption-values" title="Debugger API: General Conventions: Resumption Values">resumption value</a> specifying how the debuggee's execution should proceed. However, note that a <code>{ return:<em>value</em> }</code> resumption value is treated like <code>undefined</code> (“continue normally”);<em>value</em> is ignored.</p>
+ <p>This handler method should return a <a href="Conventions#resumption-values" title="Debugger API: General Conventions: Resumption Values">resumption value</a> specifying how the debuggee's execution should proceed. However, note that a <code>{ return:<em>value</em> }</code> resumption value is treated like <code>undefined</code> ("continue normally");<em>value</em> is ignored.</p>
  </dd>
  <dt><code>onPromiseSettled(<em>promise</em>)</code></dt>
  <dd>
  <p>A Promise object, referenced by the <a href="Debugger.Object"><code>Debugger.Object</code></a> instance <em>promise</em> that was allocated within a debuggee scope, has settled (either fulfilled or rejected). The Promise's state, fulfillment or rejection value, and the allocation and resolution stacks can be obtained using the Promise-related accessor properties of the <a href="Debugger.Object"><code>Debugger.Object</code></a> instance <em>promise</em>.</p>
 
- <p>This handler method should return a <a href="Conventions#resumption-values" title="Debugger API: General Conventions: Resumption Values">resumption value</a> specifying how the debuggee's execution should proceed. However, note that a <code>{ return:<em>value</em> }</code> resumption value is treated like <code>undefined</code> (“continue normally”);<em>value</em> is ignored.</p>
+ <p>This handler method should return a <a href="Conventions#resumption-values" title="Debugger API: General Conventions: Resumption Values">resumption value</a> specifying how the debuggee's execution should proceed. However, note that a <code>{ return:<em>value</em> }</code> resumption value is treated like <code>undefined</code> ("continue normally");<em>value</em> is ignored.</p>
  </dd>
  <dt><code>onDebuggerStatement(<em>frame</em>)</code></dt>
  <dd>Debuggee code has executed a<em>debugger</em> statement in<em>frame</em>. This method should return a <a href="Conventions#resumption-values" title="Debugger API: General Conventions: Resumption Values">resumption value</a> specifying how the debuggee's execution should proceed.</dd>
@@ -130,9 +130,9 @@ slug: Tools/Debugger-API/Debugger
  <dd>
  <p>A new global object,<em>global</em>, has been created.</p>
 
- <p>This handler method should return a <a href="Conventions#resumption-values" title="Debugger API: General Conventions: Resumption Values">resumption value</a> specifying how the debuggee's execution should proceed. However, note that a <code>{ return:<em>value</em> }</code> resumption value is treated like <code>undefined</code> (“continue normally”);<em>value</em> is ignored. (Allowing the handler to substitute its own value for the new global object doesn't seem useful.)</p>
+ <p>This handler method should return a <a href="Conventions#resumption-values" title="Debugger API: General Conventions: Resumption Values">resumption value</a> specifying how the debuggee's execution should proceed. However, note that a <code>{ return:<em>value</em> }</code> resumption value is treated like <code>undefined</code> ("continue normally");<em>value</em> is ignored. (Allowing the handler to substitute its own value for the new global object doesn't seem useful.)</p>
 
- <p>This handler method is only available to debuggers running in privileged code (“chrome”, in Firefox). Most functions provided by this <code>Debugger</code> API observe activity in only those globals that are reachable by the API's user, thus imposing capability-based restrictions on a <code>Debugger</code>'s reach. However, the <code>onNewGlobalObject</code> method allows the API user to monitor all global object creation that occurs anywhere within the JavaScript system (the “JSRuntime”, in SpiderMonkey terms), thereby escaping the capability-based limits. For this reason, <code>onNewGlobalObject</code> is only available to privileged code.</p>
+ <p>This handler method is only available to debuggers running in privileged code ("chrome", in Firefox). Most functions provided by this <code>Debugger</code> API observe activity in only those globals that are reachable by the API's user, thus imposing capability-based restrictions on a <code>Debugger</code>'s reach. However, the <code>onNewGlobalObject</code> method allows the API user to monitor all global object creation that occurs anywhere within the JavaScript system (the "JSRuntime", in SpiderMonkey terms), thereby escaping the capability-based limits. For this reason, <code>onNewGlobalObject</code> is only available to privileged code.</p>
  </dd>
 </dl>
 
@@ -152,7 +152,7 @@ slug: Tools/Debugger-API/Debugger
    <p>A global object.</p>
   </li>
   <li>
-   <p>An HTML5 <code>WindowProxy</code> object (an “outer window”, in Firefox terminology), which is treated as if the <code>Window</code> object of the browsing context's active document (the “inner window”) were passed.</p>
+   <p>An HTML5 <code>WindowProxy</code> object (an "outer window", in Firefox terminology), which is treated as if the <code>Window</code> object of the browsing context's active document (the "inner window") were passed.</p>
   </li>
   <li>
    <p>A cross-compartment wrapper of an object; we apply the prior rules to the wrapped object.</p>
@@ -179,7 +179,7 @@ slug: Tools/Debugger-API/Debugger
 
  <p>If this debugger is <a href="Debugger.Memory#trackingallocationsites" title="Debugger.Memory: trackingAllocationSites">tracking allocation sites</a> and cannot track allocation sites for some global, this method throws an <code>Error</code>. Otherwise this method returns <code>undefined</code>.</p>
 
- <p>This method is only available to debuggers running in privileged code (“chrome”, in Firefox). Most functions provided by this <code>Debugger</code> API observe activity in only those globals that are reachable by the API's user, thus imposing capability-based restrictions on a <code>Debugger</code>'s reach. However, the <code>addAllGlobalsAsDebuggees</code> method allows the API user to monitor all global object creation that occurs anywhere within the JavaScript system (the “JSRuntime”, in SpiderMonkey terms), thereby escaping the capability-based limits. For this reason, <code>addAllGlobalsAsDebuggees</code> is only available to privileged code.</p>
+ <p>This method is only available to debuggers running in privileged code ("chrome", in Firefox). Most functions provided by this <code>Debugger</code> API observe activity in only those globals that are reachable by the API's user, thus imposing capability-based restrictions on a <code>Debugger</code>'s reach. However, the <code>addAllGlobalsAsDebuggees</code> method allows the API user to monitor all global object creation that occurs anywhere within the JavaScript system (the "JSRuntime", in SpiderMonkey terms), thereby escaping the capability-based limits. For this reason, <code>addAllGlobalsAsDebuggees</code> is only available to privileged code.</p>
  </dd>
  <dt><code>removeDebuggee(<em>global</em>)</code></dt>
  <dd>
@@ -270,7 +270,7 @@ slug: Tools/Debugger-API/Debugger
 
  <p>The results of this call can be affected in non-deterministic ways by the details of the JavaScript implementation. The array may include <a href="Debugger.Object"><code>Debugger.Object</code></a> instances referring to global objects that are not actually reachable by the debuggee or any other code in the system. (Naturally, once the function has returned, the array's <a href="Debugger.Object"><code>Debugger.Object</code></a> instances strongly reference the globals they refer to.)</p>
 
- <p>This handler method is only available to debuggers running in privileged code (“chrome”, in Firefox). Most functions provided by this <code>Debugger</code> API observe activity in only those globals that are reachable by the API's user, thus imposing capability-based restrictions on a <code>Debugger</code>'s reach. However, <code>findAllGlobals</code> allows the API user to find all global objects anywhere within the JavaScript system (the “JSRuntime”, in SpiderMonkey terms), thereby escaping the capability-based limits. For this reason, <code>findAllGlobals</code> is only available to privileged code.</p>
+ <p>This handler method is only available to debuggers running in privileged code ("chrome", in Firefox). Most functions provided by this <code>Debugger</code> API observe activity in only those globals that are reachable by the API's user, thus imposing capability-based restrictions on a <code>Debugger</code>'s reach. However, <code>findAllGlobals</code> allows the API user to find all global objects anywhere within the JavaScript system (the "JSRuntime", in SpiderMonkey terms), thereby escaping the capability-based limits. For this reason, <code>findAllGlobals</code> is only available to privileged code.</p>
  </dd>
  <dt><code>makeGlobalObjectReference(<em>global</em>)</code></dt>
  <dd>Return the <a href="Debugger.Object"><code>Debugger.Object</code></a> whose referent is the global object designated by<em>global</em>, without adding the designated global as a debuggee. If<em>global</em> does not designate a global object, throw a <code>TypeError</code>. Determine which global is designated by<em>global</em> using the same rules as <a href="Debugger#addDebuggee" title="The Debugger object: addDebuggee"><code>Debugger.prototype.addDebuggee</code></a>.</dd>
