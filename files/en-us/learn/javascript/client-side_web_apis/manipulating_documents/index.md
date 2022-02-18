@@ -80,15 +80,15 @@ The DOM on the other hand looks like this:
 
 > **Note:** This DOM tree diagram was created using Ian Hickson's [Live DOM viewer](https://software.hixie.ch/utilities/js/live-dom-viewer/).
 
-You can see here that each element and bit of text in the document has its own entry in the tree — each one is called a **node**. You will also encounter various terms used to describe the type of node, and their position in the tree in relation to one another:
+Each entry in the tree is called a **node**. You can see in the diagram above that some nodes represent elements (identified as `HTML`, `HEAD`, `META` and so on) and others represent text (identified as `#text`). There are [other types of nodes as well](/en-US/docs/Web/API/Node/nodeType), but these are the main ones you'll encounter.
 
-- **Element node**: An element, as it exists in the DOM.
+Nodes are also referred to by their position in the tree relative to other nodes:
+
 - **Root node**: The top node in the tree, which in the case of HTML is always the `HTML` node (other markup vocabularies like SVG and custom XML will have different root elements).
 - **Child node**: A node _directly_ inside another node. For example, `IMG` is a child of `SECTION` in the above example.
 - **Descendant node**: A node _anywhere_ inside another node. For example, `IMG` is a child of `SECTION` in the above example, and it is also a descendant. `IMG` is not a child of `BODY`, as it is two levels below it in the tree, but it is a descendant of `BODY`.
 - **Parent node**: A node which has another node inside it. For example, `BODY` is the parent node of `SECTION` in the above example.
 - **Sibling nodes**: Nodes that sit on the same level in the DOM tree. For example, `IMG` and `P` are siblings in the above example.
-- **Text node**: A node containing a text string.
 
 It is useful to familiarize yourself with this terminology before working with the DOM, as a number of the code terms you'll come across make use of them. You may have also come across them if you have studied CSS (e.g. descendant selector, child selector).
 
@@ -116,7 +116,7 @@ To start learning about DOM manipulation, let's begin with a practical example.
     link.href = 'https://developer.mozilla.org';
     ```
 
-Note that, as with many things in JavaScript, there are many ways to select an element and store a reference to it in a variable. {{domxref("Document.querySelector()")}} is the recommended modern approach, which is convenient because it allows you to select elements using CSS selectors. The above `querySelector()` call will match the first {{htmlelement("a")}} element that appears in the document. If you wanted to match and do things to multiple elements, you could use {{domxref("Document.querySelectorAll()")}}, which matches every element in the document that matches the selector, and stores references to them in an [array](/en-US/docs/Learn/JavaScript/First_steps/Arrays)-like object called a {{domxref("NodeList")}}.
+Note that, as with many things in JavaScript, there are many ways to select an element and store a reference to it in a variable. {{domxref("Document.querySelector()")}} is the recommended modern approach. It is convenient because it allows you to select elements using CSS selectors. The above `querySelector()` call will match the first {{htmlelement("a")}} element that appears in the document. If you wanted to match and do things to multiple elements, you could use {{domxref("Document.querySelectorAll()")}}, which matches every element in the document that matches the selector, and stores references to them in an [array](/en-US/docs/Learn/JavaScript/First_steps/Arrays)-like object called a {{domxref("NodeList")}}.
 
 There are older methods available for grabbing element references, such as:
 
@@ -273,20 +273,20 @@ To start with, make a local copy of our [window-resize-example.html](https://git
 2. Next, we'll dynamically alter the width and height of the div to equal that of the viewport. Add the following two lines below your first ones:
 
     ```js
-    div.style.width = winWidth + 'px';
-    div.style.height = winHeight + 'px';
+    div.style.width = `${winWidth}px`;
+    div.style.height = `${winHeight}px`;
     ```
 
 3. Save and try refreshing your browser — you should now see the div become as big as your viewport, whatever size of screen your are using. If you now try resizing your window to make it bigger, you'll see that the div stays the same size — we are only setting it once.
-4. How about we use an event so that the div resizes as we resize the window? The {{domxref("Window")}} object has an event available on it called resize, which is fired every time the window is resized — let's access that via the {{domxref("GlobalEventHandlers/onresize", "Window.onresize")}} event handler and rerun our sizing code each time it changes. Add the following to the bottom of your code:
+4. How about we use an event so that the div resizes as we resize the window? The {{domxref("Window")}} object has an event available on it called resize, which is fired every time the window is resized — let's add an event listener and rerun our sizing code each time the size changes. Add the following to the bottom of your code:
 
     ```js
-    window.onresize = function() {
+    window.addEventListener('resize', () => {
       winWidth = window.innerWidth;
       winHeight = window.innerHeight;
-      div.style.width = winWidth + 'px';
-      div.style.height = winHeight + 'px';
-    }
+      div.style.width = `${winHeight}px`;
+      div.style.height = `${winHeight}px`;
+    });
     ```
 
 > **Note:** If you get stuck, have a look at our [finished window resize example](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/window-resize-example-finished.html) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/window-resize-example-finished.html)).
