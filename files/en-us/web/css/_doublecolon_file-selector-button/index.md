@@ -12,7 +12,7 @@ browser-compat: css.selectors.file-selector-button
 ---
 {{CSSRef}}
 
-The **`::file-selector-button`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the button of an {{HTMLElement("input") }} of  [`type="file"`](/en-US/docs/Web/HTML/Element/input/file).
+The **`::file-selector-button`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the button of an {{HTMLElement("input") }} of  [`type="file"`](/en-US/docs/Web/HTML/Element/input/file).
 
 > **Note:** Older versions of WebKit/Blink compatible browsers like Chrome, Opera and Safari (indicated by the `-webkit` prefix) supported a non-standard pseudo-element `::-webkit-file-upload-button`.
 >

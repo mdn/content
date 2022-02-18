@@ -39,7 +39,7 @@ set(typedarray, offset)
     **copy** the source range of the buffer to the destination range.
 - `offset` {{optional_inline}}
   - : The offset into the target array at which to begin writing values from the source
-    array. If this value is omitted, 0 is assumed (that is, the source array will
+    array. If this value is omitted, 0 is assumed (that is, the source array will
     overwrite values in the target array starting at index 0).
 
 ### Exceptions

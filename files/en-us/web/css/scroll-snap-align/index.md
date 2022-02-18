@@ -38,7 +38,7 @@ scroll-snap-align: unset;
 - `end`
   - : The end alignment of this box's scroll snap area, within the scroll container's snapport is a snap position in this axis.
 - `center`
-  - : The center alignment of this box's scroll snap area, within the scroll container's snapport is a snap position in this axis.
+  - : The center alignment of this box's scroll snap area, within the scroll container's snapport is a snap position in this axis.
 
 Safari currently has the two value syntax in the wrong order, the first value being inline the second block. See [bug #191865](https://bugs.webkit.org/show_bug.cgi?id=191865).
 

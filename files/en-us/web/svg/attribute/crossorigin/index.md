@@ -75,7 +75,7 @@ It follows the same processing rules as the HTML attribute {{htmlattrxref("cross
 
 ## Browser compatibility
 
-### \<link crossorigin>
+### \<link crossorigin>
 
 {{Compat}}
 

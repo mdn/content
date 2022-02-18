@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.String.split
 
 The **`split()`** method divides a
 {{jsxref("String")}} into an ordered list of substrings, puts these substrings into an
-array, and returns the array.  The division is done by searching for a pattern; where
+array, and returns the array.  The division is done by searching for a pattern; where
 the pattern is provided as the first parameter in the method's call.
 
 {{EmbedInteractiveExample("pages/js/string-split.html", "taller")}}
@@ -31,12 +31,12 @@ split(separator, limit)
 
 - `separator` {{optional_inline}}
 
-  - : The pattern describing where each split should occur.
-     The `separator` can be a simple string or it can be a
+  - : The pattern describing where each split should occur.
+     The `separator` can be a simple string or it can be a
     {{jsxref("Global_Objects/RegExp", "regular expression", "", 1)}}.
 
-    - The simplest case is when `separator` is just a single
-      character; this is used to split a delimited string.  For example, a string
+    - The simplest case is when `separator` is just a single
+      character; this is used to split a delimited string.  For example, a string
       containing tab separated values (TSV) could be parsed by passing a tab character
       as the separator, like this: `myString.split("\t")`.
     - If `separator` contains multiple characters, that entire
@@ -45,7 +45,7 @@ split(separator, limit)
       `str`, the returned array contains one element consisting of
       the entire string.
     - If `separator` appears at the beginning (or end) of the
-      string, it still has the effect of splitting.  The result is an empty (i.e. zero
+      string, it still has the effect of splitting.  The result is an empty (i.e. zero
       length) string, which appears at the first (or last) position of the returned
       array.
     - If `separator` is an empty string (`""`),
@@ -60,7 +60,7 @@ split(separator, limit)
     > pairs](https://unicode.org/faq/utf_bom.html#utf16-2). See [“How do you get a
     > string to a character array in JavaScript?” on StackOverflow](https://stackoverflow.com/a/34717402).
 
-- `limit` {{optional_inline}}
+- `limit` {{optional_inline}}
 
   - : A non-negative integer specifying a limit on the number of substrings to be
     included in the array. If provided, splits the string at each occurrence of the
@@ -229,7 +229,7 @@ This script displays the following:
 > ```
 >
 > It doesn't work if the string contains grapheme clusters, even when using a
-> unicode-aware split. (Use, for example, [esrever](https://github.com/mathiasbynens/esrever) instead.)
+> unicode-aware split. (Use, for example, [esrever](https://github.com/mathiasbynens/esrever) instead.)
 >
 > ```js example-bad
 > const str = 'mañana mañana'

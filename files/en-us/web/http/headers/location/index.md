@@ -12,7 +12,7 @@ browser-compat: http.headers.Location
 
 The **`Location`** response header indicates the URL to
 redirect a page to. It only provides a meaning when served with a
-`3xx` (redirection) or `201` (created) status response.
+`3xx` (redirection) or `201` (created) status response.
 
 In cases of redirection, the HTTP method used to make the new request to fetch the page
 pointed to by `Location` depends on the original method and the kind of

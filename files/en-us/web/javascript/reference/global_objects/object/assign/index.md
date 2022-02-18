@@ -223,7 +223,7 @@ function completeAssign(target, ...sources) {
       return descriptors;
     }, {});
 
-    // By default, Object.assign copies enumerable Symbols, too
+    // By default, Object.assign copies enumerable Symbols, too
     Object.getOwnPropertySymbols(source).forEach(sym => {
       let descriptor = Object.getOwnPropertyDescriptor(source, sym);
       if (descriptor.enumerable) {

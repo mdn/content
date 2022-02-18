@@ -129,12 +129,12 @@ You can use {{cssxref("minmax()","minmax()")}} in your value for {{cssxref("grid
      <div>Two</div>
      <div>Three</div>
      <div>Four
-     <br>This cell
-     <br>Has extra
-     <br>content.
-     <br>Max is auto
-     <br>so the row expands.
-     </div>
+     <br>This cell
+     <br>Has extra
+     <br>content.
+     <br>Max is auto
+     <br>so the row expands.
+     </div>
      <div>Five</div>
 </div>
 ```

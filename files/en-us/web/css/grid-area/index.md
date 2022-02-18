@@ -23,7 +23,7 @@ When `grid-row-end` is omitted, if `grid-row-start` is a `<custom-ident>`, `grid
 
 When `grid-column-start` is omitted, if `grid-row-start` is a `<custom-ident>`, all four longhands are set to that value. Otherwise, it is set to `auto`.
 
-The grid-area property can also be set to a {{cssxref("&lt;custom-ident&gt;")}} which acts as a name for the area, which can then be placed using {{cssxref("grid-template-areas")}}.
+The grid-area property can also be set to a {{cssxref("&lt;custom-ident&gt;")}} which acts as a name for the area, which can then be placed using {{cssxref("grid-template-areas")}}.
 
 ## Constituent properties
 
@@ -152,4 +152,4 @@ grid-area: unset;
 
 - Related CSS properties: {{cssxref("grid-row")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-template-areas")}}
 - Grid Layout Guide: _[Grid template areas](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
-- Video tutorial: *[Grid Template Areas](http://gridbyexample.com/video/grid-template-areas/)*
+- Video tutorial: *[Grid Template Areas](http://gridbyexample.com/video/grid-template-areas/)*

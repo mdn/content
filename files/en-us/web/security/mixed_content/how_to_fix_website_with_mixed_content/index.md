@@ -15,13 +15,13 @@ If your website delivers HTTPS pages, all [active mixed content](/en-US/docs/Sec
 
 Note that since mixed content blocking already happens in Chrome and Internet Explorer, it is very likely that if your website works in both of these browsers, it will work equally well in Firefox with mixed content blocking.
 
-In any case, the best way to know if something is broken in Firefox is to download the [latest Firefox Edition](https://www.mozilla.org/en-US/firefox/developer/), open different pages on your website with the [web console](/en-US/docs/Tools/Web_Console) open (enable the "Security" messages) and see if anything related to mixed content is reported. Or use a free online crawler like [SSL-check](http://www.jitbit.com/sslcheck/) or [Missing Padlock](https://www.missingpadlock.com), a desktop crawler like [HTTPSChecker](https://httpschecker.net/how-it-works), or a CLI tool like [mcdetect](https://github.com/agis/mcdetect) to check your website recursively and find links to insecure content. If nothing is said about mixed content, your website is in good shape: Keep making excellent websites!
+In any case, the best way to know if something is broken in Firefox is to download the [latest Firefox Edition](https://www.mozilla.org/en-US/firefox/developer/), open different pages on your website with the [web console](/en-US/docs/Tools/Web_Console) open (enable the "Security" messages) and see if anything related to mixed content is reported. Or use a free online crawler like [SSL-check](http://www.jitbit.com/sslcheck/) or [Missing Padlock](https://www.missingpadlock.com), a desktop crawler like [HTTPSChecker](https://httpschecker.net/how-it-works), or a CLI tool like [mcdetect](https://github.com/agis/mcdetect) to check your website recursively and find links to insecure content. If nothing is said about mixed content, your website is in good shape: Keep making excellent websites!
 
 ## How to fix your website
 
 The best strategy to avoid mixed content blocking is to serve all the content as HTTPS instead of HTTP.
 
-**For your own domain,** serve all content as HTTPS and fix your links.  Often, the HTTPS version of the content already exists and this just requires adding an "s" to links - http\:// to https\://.
+**For your own domain,** serve all content as HTTPS and fix your links.  Often, the HTTPS version of the content already exists and this just requires adding an "s" to links - http\:// to https\://.
 
 However, in some cases, the path may just be incorrect to the media in question. There are online as well as offline tools (depending on your operating system) such as [linkchecker](https://linkchecker.github.io/linkchecker/) to help resolve this.
 

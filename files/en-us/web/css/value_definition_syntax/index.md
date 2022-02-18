@@ -21,9 +21,9 @@ The definition syntax describes which values are allowed and the interactions be
 
 A keyword with a predefined meaning appears literally, without quotation marks. For example: `auto`, `smaller` or `ease-in`.
 
-#### The specific case of `inherit`, `initial` and `unset`
+#### The specific case of `inherit`, `initial` and `unset`
 
-All CSS properties accept the keywords `inherit`, `initial` and `unset`, that are defined throughout CSS. They are not shown in the value definition, and are implicitly defined.
+All CSS properties accept the keywords `inherit`, `initial` and `unset`, that are defined throughout CSS. They are not shown in the value definition, and are implicitly defined.
 
 ### Literals
 

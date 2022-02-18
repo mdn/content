@@ -184,7 +184,7 @@ Here, we have an `tel` input with the placeholder `123-4567-8901`. Note how the 
 
 ```html
 <input id="telNo" name="telNo" type="tel"
-       placeholder="123-4567-8901">
+       placeholder="123-4567-8901">
 ```
 
 {{ EmbedLiveSample('Placeholders', 600, 40) }}
@@ -199,7 +199,7 @@ The physical size of the input box can be controlled using the {{htmlattrxref("s
 
 ```html
 <input id="telNo" name="telNo" type="tel"
-       size="20">
+       size="20">
 ```
 
 {{ EmbedLiveSample('Physical_input_element_size', 600, 40) }}
@@ -212,7 +212,7 @@ The example below creates a 20-character wide telephone number entry box, requir
 
 ```html
 <input id="telNo" name="telNo" type="tel"
-       size="20" minlength="9" maxlength="14">
+       size="20" minlength="9" maxlength="14">
 ```
 
 {{EmbedLiveSample("Element_value_length", 600, 40) }}
@@ -227,7 +227,7 @@ As always, you can provide a default value for an `tel` input box by setting its
 
 ```html
 <input id="telNo" name="telNo" type="tel"
-       value="333-4444-4444">
+       value="333-4444-4444">
 ```
 
 {{EmbedLiveSample("Providing_a_single_default_using_the_value_attribute", 600, 40)}}
@@ -241,10 +241,10 @@ Taking it a step further, you can provide a list of default phone number values 
 <input id="telNo" name="telNo" type="tel" list="defaultTels">
 
 <datalist id="defaultTels">
-  <option value="111-1111-1111">
-  <option value="122-2222-2222">
-  <option value="333-3333-3333">
-  <option value="344-4444-4444">
+  <option value="111-1111-1111">
+  <option value="122-2222-2222">
+  <option value="333-3333-3333">
+  <option value="344-4444-4444">
 </datalist>
 ```
 
@@ -260,7 +260,7 @@ Here's a screenshot of what that might look like:
 
 As we've touched on before, it's quite difficult to provide a one-size-fits-all client-side validation solution for phone numbers. So what can we do? Let's consider some options.
 
-> **Warning:** HTML form validation is _not_ a substitute for server-side scripts that ensure the entered data is in the proper format before it is allowed into the database.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.
+> **Warning:** HTML form validation is _not_ a substitute for server-side scripts that ensure the entered data is in the proper format before it is allowed into the database.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.
 
 ### Making telephone numbers required
 

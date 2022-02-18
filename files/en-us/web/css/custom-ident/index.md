@@ -28,7 +28,7 @@ Note that `id1`, `Id1`, `iD1` and `ID1` are all different identifiers as they ar
 
 ### Forbidden values
 
-A `<custom-ident>` must not be placed between single or double quotes as this would be identical to a {{CSSxRef("&lt;string&gt;")}}. Moreover, the first character must not be a decimal digit, nor a hyphen (`-`) followed by a decimal digit or another hyphen.
+A `<custom-ident>` must not be placed between single or double quotes as this would be identical to a {{CSSxRef("&lt;string&gt;")}}. Moreover, the first character must not be a decimal digit, nor a hyphen (`-`) followed by a decimal digit or another hyphen.
 
 To prevent ambiguity, each property that uses `<custom-ident>` forbids the use of specific values:
 

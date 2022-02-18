@@ -104,7 +104,7 @@ If the DOM you have is an HTML document, you can serialize using `serializeToStr
 const docInnerHtml = document.documentElement.innerHTML;
 ```
 
-As a result, `docInnerHtml` is a {{domxref("DOMString")}} containing the HTML of the contents of the document; that is, the {{HTMLElement("body")}} element's contents.
+As a result, `docInnerHtml` is a {{domxref("DOMString")}} containing the HTML of the contents of the document; that is, the {{HTMLElement("body")}} element's contents.
 
 You can get HTML corresponding to the `<body>` _and_ its descendants with this code:
 

@@ -70,7 +70,7 @@ There are also some additional shorthands, made possible because we can target b
 
 ## Margin examples
 
-The mapped margin properties of {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}}, {{cssxref("margin-block-start")}}, and {{cssxref("margin-inline-end")}} can be used instead of their physical counterparts.
+The mapped margin properties of {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}}, {{cssxref("margin-block-start")}}, and {{cssxref("margin-inline-end")}} can be used instead of their physical counterparts.
 
 In the example below I have created two boxes and added different sized margins to each edge. I have added an extra container with a border to make the margin more obvious to see.
 
@@ -82,7 +82,7 @@ You can also try changing the `writing-mode` from `horizontal-tb` to `vertical-r
 
 ### Margin shorthands
 
-As we can now target both sides of a box — either both inline sides or both block sides — there are new shorthands available, {{cssxref("margin-inline")}} and {{cssxref("margin-block")}}, which accept two values. The first value will apply to the start of that dimension, the second to the end. If you only use one value it is applied to both.
+As we can now target both sides of a box — either both inline sides or both block sides — there are new shorthands available, {{cssxref("margin-inline")}} and {{cssxref("margin-block")}}, which accept two values. The first value will apply to the start of that dimension, the second to the end. If you only use one value it is applied to both.
 
 In a horizontal writing mode this CSS would apply a 5px margin to the top of the box and a 10px margin to the bottom.
 
@@ -94,7 +94,7 @@ In a horizontal writing mode this CSS would apply a 5px margin to the top of the
 
 ## Padding examples
 
-The mapped padding properties of {{cssxref("padding-inline-start")}}, {{cssxref("padding-inline-end")}}, {{cssxref("padding-block-start")}}, and {{cssxref("padding-inline-end")}} can be used instead of their physical counterparts.
+The mapped padding properties of {{cssxref("padding-inline-start")}}, {{cssxref("padding-inline-end")}}, {{cssxref("padding-block-start")}}, and {{cssxref("padding-inline-end")}} can be used instead of their physical counterparts.
 
 In the example below I have two boxes, one of which is using physical padding properties and the other logical padding properties. With a `writing-mode` of `horizontal-tb`, both boxes should appear the same.
 
@@ -106,7 +106,7 @@ You can also try changing the `writing-mode` from `horizontal-tb` to `vertical-r
 
 ### Padding shorthands
 
-As with margin, there are two-value shorthands for padding — {{cssxref("padding-inline")}} and {{cssxref("padding-block")}} — which allow you to set the padding of the two inline, and two block dimensions, respectively.
+As with margin, there are two-value shorthands for padding — {{cssxref("padding-inline")}} and {{cssxref("padding-block")}} — which allow you to set the padding of the two inline, and two block dimensions, respectively.
 
 In a horizontal `writing-mode` this CSS would apply `5px` of padding to the top of the box and 10px of padding to the bottom:
 

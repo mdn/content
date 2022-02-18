@@ -10,7 +10,7 @@ browser-compat: css.properties.grid-auto-rows
 ---
 {{CSSRef}}
 
-The **`grid-auto-rows`** CSS property specifies the size of an implicitly-created grid row {{glossary("grid tracks", "track")}} or pattern of tracks.
+The **`grid-auto-rows`** CSS property specifies the size of an implicitly-created grid row {{glossary("grid tracks", "track")}} or pattern of tracks.
 
 {{EmbedInteractiveExample("pages/css/grid-auto-rows.html")}}
 
@@ -99,9 +99,9 @@ grid-auto-rows: unset;
 
 ```html
 <div id="grid">
-  <div id="item1"></div>
-  <div id="item2"></div>
-  <div id="item3"></div>
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
 </div>
 ```
 

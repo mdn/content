@@ -43,14 +43,14 @@ If module is not a {{jsxref("WebAssembly.Module")}} object instance, a
 
 The following example (see imports.html [source
 code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/imports.html); [see it
-live also](https://mdn.github.io/webassembly-examples/js-api-examples/imports.html)) compiles the loaded simple.wasm module.  This module is then queried
+live also](https://mdn.github.io/webassembly-examples/js-api-examples/imports.html)) compiles the loaded simple.wasm module.  This module is then queried
 for its imports.
 
 ```js
 WebAssembly.compileStreaming(fetch('simple.wasm'))
 .then(function(mod) {
-  var imports = WebAssembly.Module.imports(mod);
-  console.log(imports[0]);
+  var imports = WebAssembly.Module.imports(mod);
+  console.log(imports[0]);
 });
 ```
 

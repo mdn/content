@@ -14,7 +14,7 @@ browser-compat: javascript.statements.for_await_of
 ---
 {{jsSidebar("Statements")}}
 
-The **`for await...of` statement** creates a loop iterating over async iterable objects as well as on sync iterables, including: built-in {{jsxref("String")}}, {{jsxref("Array")}}, `Array`-like objects (e.g., {{jsxref("Functions/arguments", "arguments")}} or {{DOMxRef("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, and user-defined async/sync iterables. It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object. This statement can only be used inside an {{jsxref("Statements/async_function", "async function", "", 1)}}.
+The **`for await...of` statement** creates a loop iterating over async iterable objects as well as on sync iterables, including: built-in {{jsxref("String")}}, {{jsxref("Array")}}, `Array`-like objects (e.g., {{jsxref("Functions/arguments", "arguments")}} or {{DOMxRef("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, and user-defined async/sync iterables. It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object. This statement can only be used inside an {{jsxref("Statements/async_function", "async function", "", 1)}}.
 
 > **Note:** `for await...of` doesn't work with async iterators that are not async
 > iterables.
@@ -221,7 +221,7 @@ try {
 // called finally
 ```
 
-To make  `finally` blocks of a sync generator to be always called use
+To make  `finally` blocks of a sync generator to be always called use
 appropriate form of the loop, `for await...of` for the async generator and
 `for...of` for the sync one and await yielded promises explicitly inside the
 loop.

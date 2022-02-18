@@ -87,7 +87,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 - {{htmlattrdef("height")}}
   - : The displayed height of the resource, in [CSS pixels](https://drafts.csswg.org/css-values/#px). This must be an absolute value; percentages are _not_ allowed.
 - {{htmlattrdef("src")}}
-  - : The URL of the resource being embedded.
+  - : The URL of the resource being embedded.
 - {{htmlattrdef("type")}}
   - : The {{glossary("MIME type")}} to use to select the plug-in to instantiate.
 - {{htmlattrdef("width")}}

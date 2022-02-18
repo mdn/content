@@ -17,12 +17,12 @@ The **`:defined`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS
 ```css
 /* Selects any defined element */
 :defined {
-  font-style: italic;
+  font-style: italic;
 }
 
 /* Selects any instance of a specific custom element */
 simple-custom:defined {
-  display: block;
+  display: block;
 }
 ```
 

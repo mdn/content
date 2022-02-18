@@ -93,7 +93,7 @@ In addition to the common attributes shared by all {{HTMLElement("input")}} elem
 
     Essentially, then, the `indeterminate` attribute adds a third possible state to the checkbox: "I don't know." In this state, the browser may draw the checkbox in grey or with a different mark inside the checkbox. For instance, browsers on macOS may draw the checkbox with a hyphen "-" inside to indicate an unexpected state.
 
-    > **Note:** No browser currently supports `indeterminate` as an attribute. It must be set via JavaScript. See {{anch("Indeterminate state checkboxes")}} for details.
+    > **Note:** No browser currently supports `indeterminate` as an attribute. It must be set via JavaScript. See {{anch("Indeterminate state checkboxes")}} for details.
 
 - {{htmlattrdef("value")}}
 

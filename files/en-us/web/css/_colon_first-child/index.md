@@ -105,7 +105,7 @@ ul li:first-child {
 
 ## See also
 
-- {{CSSxRef(":-moz-first-node")}} {{Non-standard_Inline}}
+- {{CSSxRef(":-moz-first-node")}} {{Non-standard_Inline}}
 - {{CSSxRef(":first-of-type")}}
 - {{CSSxRef(":last-child")}}
 - {{CSSxRef(":nth-child", ":nth-child()")}}

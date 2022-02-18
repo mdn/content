@@ -13,7 +13,7 @@ Programming languages all have built-in data structures, but these often differ 
 
 ## Dynamic typing
 
-JavaScript is a *loosely typed* and *dynamic* language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:
+JavaScript is a *loosely typed* and *dynamic* language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:
 
 ```js
 let foo = 42;    // foo is now a number
@@ -42,7 +42,7 @@ All types except objects define immutable values (that is, values which can't be
 
 ### Boolean type
 
-Boolean represents a logical entity and can have two values: `true` and `false`. See [Boolean](/en-US/docs/Glossary/Boolean) and {{jsxref("Boolean")}} for more details.
+Boolean represents a logical entity and can have two values: `true` and `false`. See [Boolean](/en-US/docs/Glossary/Boolean) and {{jsxref("Boolean")}} for more details.
 
 ### Null type
 
@@ -56,7 +56,7 @@ A variable that has not been assigned a value has the value `undefined`. See {{j
 
 ECMAScript has two built-in numeric types: **Number** and **BigInt** (see below).
 
-The Number type is a [double-precision 64-bit binary format IEEE 754 value](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) (numbers between -(2^53 − 1) and 2^53 − 1). In addition to representing floating-point numbers, the number type has three symbolic values: `+Infinity`, `-Infinity`, and {{jsxref("NaN")}} ("**N**ot a **N**umber").
+The Number type is a [double-precision 64-bit binary format IEEE 754 value](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) (numbers between -(2^53 − 1) and 2^53 − 1). In addition to representing floating-point numbers, the number type has three symbolic values: `+Infinity`, `-Infinity`, and {{jsxref("NaN")}} ("**N**ot a **N**umber").
 
 To check for the largest available value or smallest available value within {{jsxref("Infinity", "±Infinity")}}, you can use the constants {{jsxref("Number.MAX_VALUE")}} or {{jsxref("Number.MIN_VALUE")}}.
 
@@ -64,9 +64,9 @@ To check for the largest available value or smallest available value within {{js
 >
 > Beyond this range, integers in JavaScript are not safe anymore and will be a double-precision floating point approximation of the value.
 
-The number type has only one integer with two representations: `0` is represented as both `-0` and `+0`. (`0` is an alias for `+0`.)
+The number type has only one integer with two representations: `0` is represented as both `-0` and `+0`. (`0` is an alias for `+0`.)
 
-In practice, this has almost no impact. For example, `+0 === -0` is `true`. However, you are able to notice this when you divide by zero:
+In practice, this has almost no impact. For example, `+0 === -0` is `true`. However, you are able to notice this when you divide by zero:
 
 ```js
 > 42 / +0
@@ -79,7 +79,7 @@ Although a number often represents only its value, JavaScript provides {{jsxref(
 
 > **Note:** Although bitwise operators _can_ be used to represent several Boolean values within a single number using [bit masking](https://en.wikipedia.org/wiki/Mask_%28computing%29), this is usually considered a bad practice. JavaScript offers other means to represent a set of Booleans (like an array of Booleans, or an object with Boolean values assigned to named properties). Bit masking also tends to make the code more difficult to read, understand, and maintain.
 
-It may be necessary to use such techniques in very constrained environments, like when trying to cope with the limitations of local storage, or in extreme cases (such as when each bit over the network counts). This technique should only be considered when it is the last measure that can be taken to optimize size.
+It may be necessary to use such techniques in very constrained environments, like when trying to cope with the limitations of local storage, or in extreme cases (such as when each bit over the network counts). This technique should only be considered when it is the last measure that can be taken to optimize size.
 
 ### BigInt type
 
@@ -143,7 +143,7 @@ In JavaScript, objects can be seen as a collection of properties. With the [obje
 
 There are two types of object properties: The [_data_ property](#data_property) and the [_accessor_ property](#accessor_property).
 
-> **Note:** Each property has corresponding *attributes*. Attributes are used internally by the JavaScript engine, so you cannot directly access them. That's why attributes are listed in double square brackets, rather than single.
+> **Note:** Each property has corresponding *attributes*. Attributes are used internally by the JavaScript engine, so you cannot directly access them. That's why attributes are listed in double square brackets, rather than single.
 >
 > See {{jsxref("Object.defineProperty()")}} to learn more.
 
@@ -242,11 +242,11 @@ When representing dates, the best choice is to use the built-in [`Date` utility]
 
 ### Indexed collections: Arrays and typed Arrays
 
-[Arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) are regular objects for which there is a particular relationship between integer-keyed properties and the `length` property.
+[Arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) are regular objects for which there is a particular relationship between integer-keyed properties and the `length` property.
 
 Additionally, arrays inherit from `Array.prototype`, which provides to them a handful of convenient methods to manipulate arrays. For example, [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) (searching a value in the array) or [`push()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) (adding an element to the array), and so on. This makes Arrays a perfect candidate to represent lists or sets.
 
-[Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays) are new to JavaScript with ECMAScript 2015, and present an array-like view of an underlying binary data buffer. The following table helps determine the equivalent C data types:
+[Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays) are new to JavaScript with ECMAScript 2015, and present an array-like view of an underlying binary data buffer. The following table helps determine the equivalent C data types:
 
 | Type                                     | Value Range                   | Size in bytes | Description                                                                  | Web IDL type          | Equivalent C type               |
 | ---------------------------------------- | ----------------------------- | ------------- | ---------------------------------------------------------------------------- | --------------------- | ------------------------------- |
@@ -257,18 +257,18 @@ Additionally, arrays inherit from `Array.prototype`, which provides to them a ha
 | {{jsxref("Uint16Array")}}         | `0` to `65535`                | 2             | 16-bit unsigned integer                                                      | `unsigned short`      | `uint16_t`                      |
 | {{jsxref("Int32Array")}}         | `-2147483648` to `2147483647` | 4             | 32-bit two's complement signed integer                                       | `long`                | `int32_t`                       |
 | {{jsxref("Uint32Array")}}         | `0` to `4294967295`           | 4             | 32-bit unsigned integer                                                      | `unsigned long`       | `uint32_t`                      |
-| {{jsxref("Float32Array")}}     | `1.2E-38` to `3.4E38`         | 4             | 32-bit IEEE floating point number (7 significant digits e.g., `1.1234567`)   | `unrestricted float`  | `float`                         |
-| {{jsxref("Float64Array")}}     | `5E-324` to `1.8E308`         | 8             | 64-bit IEEE floating point number (16 significant digits e.g., `1.123...15`) | `unrestricted double` | `double`                        |
-| {{jsxref("BigInt64Array")}}     | `-2^63` to `2^63 - 1`         | 8             | 64-bit two's complement signed integer                                       | `bigint`              | `int64_t (signed long long)`    |
-| {{jsxref("BigUint64Array")}}     | `0` to `2^64 - 1`             | 8             | 64-bit unsigned integer                                                      | `bigint`              | `uint64_t (unsigned long long)` |
+| {{jsxref("Float32Array")}}     | `1.2E-38` to `3.4E38`         | 4             | 32-bit IEEE floating point number (7 significant digits e.g., `1.1234567`)   | `unrestricted float`  | `float`                         |
+| {{jsxref("Float64Array")}}     | `5E-324` to `1.8E308`         | 8             | 64-bit IEEE floating point number (16 significant digits e.g., `1.123...15`) | `unrestricted double` | `double`                        |
+| {{jsxref("BigInt64Array")}}     | `-2^63` to `2^63 - 1`         | 8             | 64-bit two's complement signed integer                                       | `bigint`              | `int64_t (signed long long)`    |
+| {{jsxref("BigUint64Array")}}     | `0` to `2^64 - 1`             | 8             | 64-bit unsigned integer                                                      | `bigint`              | `uint64_t (unsigned long long)` |
 
 ### Keyed collections: Maps, Sets, WeakMaps, WeakSets
 
-These data structures, introduced in ECMAScript Edition 6, take object references as keys. {{jsxref("Set")}} and {{jsxref("WeakSet")}} represent a set of objects, while {{jsxref("Map")}} and {{jsxref("WeakMap")}} associate a value to an object.
+These data structures, introduced in ECMAScript Edition 6, take object references as keys. {{jsxref("Set")}} and {{jsxref("WeakSet")}} represent a set of objects, while {{jsxref("Map")}} and {{jsxref("WeakMap")}} associate a value to an object.
 
 The difference between `Map`s and `WeakMap`s is that in the former, object keys can be enumerated over. This allows garbage collection optimizations in the latter case.
 
-One could implement `Map`s and `Set`s in pure ECMAScript 5. However, since objects cannot be compared (in the sense of `<` "less than", for instance), look-up performance would necessarily be linear. Native implementations of them (including `WeakMap`s) can have look-up performance that is approximately logarithmic to constant time.
+One could implement `Map`s and `Set`s in pure ECMAScript 5. However, since objects cannot be compared (in the sense of `<` "less than", for instance), look-up performance would necessarily be linear. Native implementations of them (including `WeakMap`s) can have look-up performance that is approximately logarithmic to constant time.
 
 Usually, to bind data to a DOM node, one could set properties directly on the object, or use `data-*` attributes. This has the downside that the data is available to any script running in the same context. `Map`s and `WeakMap`s make it easy to _privately_ bind data to an object.
 

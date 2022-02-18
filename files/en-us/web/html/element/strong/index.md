@@ -96,7 +96,7 @@ Another accepted use for `<strong>` is to denote the labels of paragraphs which 
 
 ### \<b> vs. \<strong>
 
-It is often confusing to new developers why there are so many ways to express the same thing on a rendered website. {{HTMLElement("b")}} and `<strong>` are perhaps one of the most common sources of confusion, causing developers to ask "Should I use `<b>` or `<strong>`? Don't they both do the same thing?"
+It is often confusing to new developers why there are so many ways to express the same thing on a rendered website. {{HTMLElement("b")}} and `<strong>` are perhaps one of the most common sources of confusion, causing developers to ask "Should I use `<b>` or `<strong>`? Don't they both do the same thing?"
 
 Not exactly. The `<strong>` element is for content that is of greater importance, while the `<b>` element is used to draw attention to text without indicating that it's more important.
 

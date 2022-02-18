@@ -30,7 +30,7 @@ super.functionOnParent([arguments]);
 ## Description
 
 When used in a constructor, the `super` keyword appears alone and must be
-used before the `this` keyword is used. The `super` keyword can
+used before the `this` keyword is used. The `super` keyword can
 also be used to call functions on a parent object.
 
 ## Examples

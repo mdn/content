@@ -65,22 +65,22 @@ animation-play-state: unset;
 
 ```css
 .box {
-  background-color: rebeccapurple;
-  border-radius: 10px;
+  background-color: rebeccapurple;
+  border-radius: 10px;
   width: 100px;
-  height: 100px;
-  animation-name: rotate;
-  animation-duration: 0.7s;
-  animation-play-state: paused;
+  height: 100px;
+  animation-name: rotate;
+  animation-duration: 0.7s;
+  animation-play-state: paused;
 }
 
 @keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 ```
 

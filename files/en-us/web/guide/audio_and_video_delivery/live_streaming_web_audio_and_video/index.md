@@ -69,7 +69,7 @@ For example:
 
 [Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) is a W3C working draft that plans to extend {{ domxref("HTMLMediaElement") }} to allow JavaScript to generate media streams for playback. Allowing JavaScript to generate streams facilitates a variety of use cases like adaptive streaming and time shifting live streams.
 
-For example,  [you could implement MPEG-DASH using JavaScript while offloading the decoding to MSE](https://web.archive.org/web/20170504035455/https://msopentech.com/blog/2014/01/03/streaming_video_player/).
+For example,  [you could implement MPEG-DASH using JavaScript while offloading the decoding to MSE](https://web.archive.org/web/20170504035455/https://msopentech.com/blog/2014/01/03/streaming_video_player/).
 
 > **Note:** Time Shifting is the process of consuming a live stream sometime after it happened.
 
