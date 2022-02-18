@@ -456,55 +456,59 @@ Let's look at a real example to demonstrate scoping.
 
 > **Note:** The [ReferenceError: "x" is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined) error is one of the most common you'll encounter. If you get this error and you are sure that you have defined the variable in question, check what scope it is in.
 
-### Functions inside functions
+### Structuring code into multiple functions
 
-Keep in mind that you can call a function from anywhere, even inside another function. This is often used as a way to keep code tidy — if you have a big complex function, it is easier to understand if you break it down into several sub-functions:
+If you have a large, complex block of code, the code can become easier to understand and maintain if you break it down into multiple functions — as in the following example, which has code from `mainFunction` broken it down into two other functions, `function1` and `function2`. There’s a fatal problem in this example, but it otherwise illustrates the general idea of structuring code into multiple functions.
 
-```js
-function myBigFunction() {
-  const myValue;
-
-  subFunction1();
-  subFunction2();
-  subFunction3();
+```js example-bad
+function mainFunction(input) {
+  input = function1(); // replace 'input' with the output from function1
+  let output = function2();
+  console.log(output);
+  return output;
 }
 
-function subFunction1() {
-  console.log(myValue);
+function function1() {
+  let output;
+  console.log(input);
+  /* do something with input and put the result into output */
+  return output;
 }
 
-function subFunction2() {
-  console.log(myValue);
+function function2() {
+  let output;
+  console.log(input);
+  /* do something with input and put the result into output */
+  return output;
+}
+```
+
+Be careful to make sure the variables used inside the code are properly [in scope](#function_scope_and_conflicts). The fatal problem with the example above is that, although an `input` variable is defined in the same [scope](#function_scope_and_conflicts) as all the function calls, the code in that example never actually passes any input to `function1` or `function2`. To have code that works as expected, you'd need to include parameters in all the function definitions, and pass values to all the functions using those parameters, like this:
+
+```js example-good
+function mainFunction(input) {
+  input = function1(input); // replace 'input' with the output from function1
+  let output = function2(input);
+  console.log(output);
+  return output;
 }
 
-function subFunction3() {
-  console.log(myValue);
+function function1(input) {
+  let output;
+  console.log(input);
+  /* do something with input and put the result into output */
+  return output;
+}
+
+function function2(input) {
+  let output;
+  console.log(input);
+  /* do something with input and put the result into output */
+  return output;
 }
 ```
 
-Just make sure that the values being used inside the function are properly in scope. The example above would throw an error `ReferenceError: myValue is not defined`, because although the `myValue` variable is defined in the same scope as the function calls, it is not defined inside the function definitions — the actual code that is run when the functions are called. To make this work, you'd have to pass the value into the function as a parameter, like this:
-
-```js
-function myBigFunction() {
-  const myValue = 1;
-
-  subFunction1(myValue);
-  subFunction2(myValue);
-  subFunction3(myValue);
-}
-
-function subFunction1(value) {
-  console.log(value);
-}
-
-function subFunction2(value) {
-  console.log(value);
-}
-
-function subFunction3(value) {
-  console.log(value);
-}
-```
+Incidentally, notice how each function can use variables with the same names — `input` and `output` — but that are actually separate variables [scoped](#function_scope_and_conflicts) to each function.
 
 ## Test your skills!
 
