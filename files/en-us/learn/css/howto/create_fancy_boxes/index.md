@@ -238,13 +238,13 @@ blockquote::after {
 }
 
 blockquote::before {
-  content: '"';
+  content: '“';
   top    : 0.3rem;
   left   : 0.9rem;
 }
 
 blockquote::after {
-  content: '"';
+  content: '”';
   bottom : 0.3rem;
   right  : 0.8rem;
 }

@@ -513,7 +513,7 @@ There are a couple of reasons for this.
 2. If curly quotes or apostrophes make their way into code snippets—even inline ones—readers may copy and paste them, expecting them to function (which they will not).
 
 - **Correct**: Please don't use "curly quotes."
-- **Incorrect**: Please don't use "curly quotes."
+- **Incorrect**: Please don't use “curly quotes.”
 
 ### Spelling
 
