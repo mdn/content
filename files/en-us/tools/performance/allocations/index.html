@@ -52,7 +52,7 @@ slug: Tools/Performance/Allocations
 
 <p><img alt="" src="allocations-view-2.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
-<p>Here, 8904 samples were taken in <code>signalLater()</code>. But <code>signalLater()</code> was called from two places: <code>removeInner()</code> and <code>setSelectionInner()</code>. Both these functions have 0 in Self Count, meaning that no allocations were seen directly in these functions. However, <code>removeInner()</code> has 8901 in Total Count, while <code>setSelectionInner()</code> has just 3 in Total Count. This is telling us that, of the 8904 allocations seen in <code>signalLater()</code>, all but three came through the <code>removeInner()</code> branch.</p>
+<p>Here, 8904 samples were taken in <code>signalLater()</code>. But <code>signalLater()</code> was called from two places: <code>removeInner()</code> and <code>setSelectionInner()</code>. Both these functions have 0 in Self Count, meaning that no allocations were seen directly in these functions. However, <code>removeInner()</code> has 8901 in Total Count, while <code>setSelectionInner()</code> has just 3 in Total Count. This is telling us that, of the 8904 allocations seen in <code>signalLater()</code>, all but three came through the <code>removeInner()</code> branch.</p>
 
 <h2 id="Allocations_and_garbage_collection">Allocations and garbage collection</h2>
 
@@ -62,7 +62,7 @@ slug: Tools/Performance/Allocations
 
 <p>To reduce the impact on responsiveness, <a href="https://firefox-source-docs.mozilla.org/js/">SpiderMonkey</a> (the JavaScript engine in Firefox) can perform GC in small increments, letting the program run in between. Sometimes, though, it needs to perform a full non-incremental collection, and the program has to wait for it to finish.</p>
 
-<p>GC events are shown as red markers in the <a href="/en-US/docs/Tools/Performance/Waterfall">Waterfall</a> view, and are a big red flag for responsiveness,  sometimes running for hundreds of milliseconds:</p>
+<p>GC events are shown as red markers in the <a href="/en-US/docs/Tools/Performance/Waterfall">Waterfall</a> view, and are a big red flag for responsiveness,  sometimes running for hundreds of milliseconds:</p>
 
 <p><img alt="" src="allocations-view-long-gc.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
