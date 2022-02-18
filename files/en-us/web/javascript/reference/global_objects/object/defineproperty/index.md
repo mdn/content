@@ -199,7 +199,7 @@ Object.defineProperty(o, 'conflict', {
 When the property already exists, `Object.defineProperty()` attempts to
 modify the property according to the values in the descriptor and the object's current
 configuration. If the old descriptor had its `configurable` attribute set to
-`false` the property is said to be “non-configurable”. It is not possible to
+`false` the property is said to be "non-configurable". It is not possible to
 change any attribute of a non-configurable accessor property. For data properties which are configurable, it is
 possible to modify the value if the property is writable, and it is possible to change the
 `writable` attribute from `true` to `false`. It is not
@@ -213,7 +213,7 @@ unless the current and new values are the same.
 #### Writable attribute
 
 When the `writable` property attribute is set to `false`, the
-property is said to be “non-writable”. It cannot be reassigned.
+property is said to be "non-writable". It cannot be reassigned.
 
 ```js
 var o = {}; // Creates a new object

@@ -16,7 +16,7 @@ The **`Document.characterSet`**
 read-only property returns the [character encoding](/en-US/docs/Glossary/character_encoding) of the
 document that it's currently rendered with.
 
-> **Note:** A “character set” and a “character encoding” are related, but different. Despite the
+> **Note:** A "character set" and a "character encoding" are related, but different. Despite the
 > name of this property, it returns the _encoding_.
 
 Users can override the developer-specified encoding inside the [Content-Type](/en-US/docs/Web/HTTP/Headers/Content-Type) header or inline

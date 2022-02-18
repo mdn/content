@@ -56,7 +56,7 @@ The system colors that are forced for the above properties depend on the context
 > **Note:** user agents choose system colors based on native element semantics, _not_ on added ARIA roles.
 > As an example, adding `role="button"` to a `div` will **not** cause an element's color to be forced to `ButtonText`
 
-In addition to these adjustments, browsers will help ensure text legibility by drawing “backplates” behind text. This is particularly important for preserving contrast when text is placed on top of images.
+In addition to these adjustments, browsers will help ensure text legibility by drawing "backplates" behind text. This is particularly important for preserving contrast when text is placed on top of images.
 
 There are two cases where the user agent does not force the values for the above properties — when a {{cssxref("forced-color-adjust")}} value of `none` is applied to an element, or when a system color is specified by the author.
 

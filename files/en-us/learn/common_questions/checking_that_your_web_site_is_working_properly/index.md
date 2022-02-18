@@ -111,7 +111,7 @@ The most frequent errors that we find are these:
 
 #### Typos in the address
 
-We wanted to type `http://demozilla.examplehostingprovider.net/` but typed too fast and forgot an “l”:
+We wanted to type `http://demozilla.examplehostingprovider.net/` but typed too fast and forgot an "l":
 
 ![Address unreachable](cannot-find-server.png)
 
@@ -160,7 +160,7 @@ PING mozilla.org (63.245.215.20): 56 data bytes
 round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms
 ```
 
-Just keep in mind a handy keyboard shortcut: **Ctrl+C**. Ctrl+C sends an “interrupt” signal to the runtime and tells it to stop. If you don't stop the runtime, `ping` will ping the server indefinitely.
+Just keep in mind a handy keyboard shortcut: **Ctrl+C**. Ctrl+C sends an "interrupt" signal to the runtime and tells it to stop. If you don't stop the runtime, `ping` will ping the server indefinitely.
 
 ### A simple checklist
 

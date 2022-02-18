@@ -209,7 +209,7 @@ _Learn more about CORS [here](CORS)._
 ## Downloads
 
 - {{HTTPHeader("Content-Disposition")}}
-  - : Indicates if the resource transmitted should be displayed inline (default behavior without the header), or if it should be handled like a download and the browser should present a “Save As” dialog.
+  - : Indicates if the resource transmitted should be displayed inline (default behavior without the header), or if it should be handled like a download and the browser should present a "Save As" dialog.
 
 ## Message body information
 

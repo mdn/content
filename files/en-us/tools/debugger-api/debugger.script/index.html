@@ -52,7 +52,7 @@ slug: Tools/Debugger-API/Debugger.Script
 
 <h2 id="Convention">Convention</h2>
 
-<p>For descriptions of properties and methods below, if the behavior of the property or method differs between the instance referring to a <code>JSScript</code> or to a block of WebAssembly code, the text will be split into two sections, headed by “<strong>if the instance refers to a <code>JSScript</code></strong>” and “<strong>if the instance refers to WebAssembly code</strong>”, respectively. If the behavior does not differ, no such emphasized headings will appear.</p>
+<p>For descriptions of properties and methods below, if the behavior of the property or method differs between the instance referring to a <code>JSScript</code> or to a block of WebAssembly code, the text will be split into two sections, headed by "<strong>if the instance refers to a <code>JSScript</code></strong>" and "<strong>if the instance refers to WebAssembly code</strong>", respectively. If the behavior does not differ, no such emphasized headings will appear.</p>
 
 <h2 id="Accessor_Properties_of_the_Debugger.Script_Prototype_Object">Accessor Properties of the Debugger.Script Prototype Object</h2>
 
@@ -118,7 +118,7 @@ var s = f(function () {});  // display name: s&lt;</code></pre>
  </dd>
  <dt><code>global</code></dt>
  <dd>
- <p><strong>If the instance refers to a <code>JSScript</code></strong>, a <a href="Debugger.Object"><code>Debugger.Object</code></a> instance referring to the global object in whose scope this script runs. The result refers to the global directly, not via a wrapper or a <code>WindowProxy</code> (“outer window”, in Firefox).</p>
+ <p><strong>If the instance refers to a <code>JSScript</code></strong>, a <a href="Debugger.Object"><code>Debugger.Object</code></a> instance referring to the global object in whose scope this script runs. The result refers to the global directly, not via a wrapper or a <code>WindowProxy</code> ("outer window", in Firefox).</p>
 
  <p><strong>If the instance refers to WebAssembly code</strong>, throw a <code>TypeError</code>.</p>
  </dd>

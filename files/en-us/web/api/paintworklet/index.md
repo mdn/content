@@ -22,7 +22,7 @@ The **`PaintWorklet`** interface of the {{domxref('CSS Painting API','','',' ')}
 To avoid leaking visited links, this feature is currently disabled in Chrome-based browsers for {{HTMLElement("a")}} elements with an {{HTMLAttrXref("href", "a")}} attribute, and for children of such elements. For details, see the following:
 
 - The CSS Painting API [Privacy Considerations section](https://drafts.css-houdini.org/css-paint-api/#privacy-considerations)
-- The CSS Painting API spec issue [“CSS Paint API leaks browsing history”](https://github.com/w3c/css-houdini-drafts/issues/791)
+- The CSS Painting API spec issue ["CSS Paint API leaks browsing history"](https://github.com/w3c/css-houdini-drafts/issues/791)
 
 ## Properties
 

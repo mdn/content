@@ -15,7 +15,7 @@ This is especially important for intranets and other non-public websites; if we 
 
 ## JavaScript
 
-### Prefix all global variable access in `onfoo` attributes with “`window`.”
+### Prefix all global variable access in `onfoo` attributes with "`window`."
 
 When an event handler content attribute (`onclick`, `onmouseover`, and so forth) is used on HTML element, all name lookup in the attribute first happens on the element itself, then on the element's form if the element is a form control, then on the document, and then on the window (where the global variables you have defined are). For example, if you have this markup:
 

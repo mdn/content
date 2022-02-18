@@ -73,7 +73,7 @@ browser.userScripts.onBeforeScript.addListener(function (script) {
   // (this method has to be called synchronously from the
   // listener, otherwise the user script may have executed).
   script.defineGlobals({
-    aGlobalPropertyAccessibleFromUserScriptCode: “prop value”,
+    aGlobalPropertyAccessibleFromUserScriptCode: "prop value",
 
     myCustomAPIMethod(param1, param2) {
       // Custom methods exported from the API script can use

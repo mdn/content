@@ -369,7 +369,7 @@ Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
 Cache-Control: no-store
 ```
 
-### Caching static assets with “cache busting”
+### Caching static assets with "cache busting"
 
 When you build static assets with versioning/hashing mechanisms, adding a version/hash to the filename or query string is a good way to manage caching.
 
@@ -398,7 +398,7 @@ You can add a long `max-age` value, and `immutable`, because the content will ne
 Cache-Control: max-age=31536000, immutable
 ```
 
-When you update the library or edit the picture, new content should have a new URL, and caches aren't reused. That is called the “cache busting” pattern.
+When you update the library or edit the picture, new content should have a new URL, and caches aren't reused. That is called the "cache busting" pattern.
 
 Use a `no-cache` to make sure that the HTML response itself is not cached. `no-cache` could cause revalidation, and the client will correctly receive a new version of the HTML response and static assets.
 

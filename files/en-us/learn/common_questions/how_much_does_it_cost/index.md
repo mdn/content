@@ -103,9 +103,9 @@ Make sure that you have sufficient {{Glossary("Bandwidth", "bandwidth")}}:
 
 ### Understanding bandwidth
 
-Hosting providers charge you according to how much {{Glossary("Bandwidth", "bandwidth")}} your website consumes. This depends on how many people, and Web crawling robots, access your content during a given time, and how much server space your content takes up. This is why people usually store their videos on dedicated services such as YouTube, Dailymotion, and Vimeo. For example, your provider may have a plan that includes up to several thousand visitors per day, for “reasonable” bandwidth usage. Be careful, however as this is defined differently from one hosting provider to another. As a rule of thumb, recognize that reliable, paid, personal hosting can cost around ten to fifteen dollars per month.
+Hosting providers charge you according to how much {{Glossary("Bandwidth", "bandwidth")}} your website consumes. This depends on how many people, and Web crawling robots, access your content during a given time, and how much server space your content takes up. This is why people usually store their videos on dedicated services such as YouTube, Dailymotion, and Vimeo. For example, your provider may have a plan that includes up to several thousand visitors per day, for "reasonable" bandwidth usage. Be careful, however as this is defined differently from one hosting provider to another. As a rule of thumb, recognize that reliable, paid, personal hosting can cost around ten to fifteen dollars per month.
 
-> **Note:** There is no such thing as “unlimited” bandwidth. If you consume a huge amount of bandwidth, expect to pay a huge amount of money.
+> **Note:** There is no such thing as "unlimited" bandwidth. If you consume a huge amount of bandwidth, expect to pay a huge amount of money.
 
 ### Domain names
 
@@ -114,7 +114,7 @@ Your domain name has to be purchased through a domain name provider (a registrar
 - Local obligations: some country top-level domain names are more costly, as different countries set different prices.
 - Services associated with the domain name: some registrars provide spam protection by hiding your postal address and email address behind their own addresses: the postal address can be provided in care of the registrar, and your email address can be obscured via your registrar's alias.
 
-### Do-it-yourself hosting vs. “packaged” hosting
+### Do-it-yourself hosting vs. "packaged" hosting
 
 When you want to publish a website, you could do everything by yourself: set up a database (if needed), Content Management System, or {{Glossary("CMS")}} (like [Wordpress](https://wordpress.org/), [Dotclear](https://dotclear.org/), [spip](https://www.spip.net/en_rubrique25.html), etc.), upload pre-made or your own templates.
 

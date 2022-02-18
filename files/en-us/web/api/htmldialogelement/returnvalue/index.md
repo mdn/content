@@ -82,7 +82,7 @@ dialog.
         }
       }
 
-      // “Update details” button opens the <dialog> modally
+      // "Update details" button opens the <dialog> modally
       updateButton.addEventListener('click', function() {
         dialog.showModal();
         openCheck(dialog);

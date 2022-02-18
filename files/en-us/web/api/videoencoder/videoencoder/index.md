@@ -29,7 +29,7 @@ new VideoEncoder(init);
             - `codec`
               - : A {{domxref("DOMString","string")}} containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#video-codec-registry).
             - `description` {{Optional_Inline}}
-              - : A {{domxref("BufferSource")}} containing a sequence of codec-specific bytes, commonly known as “extradata”.
+              - : A {{domxref("BufferSource")}} containing a sequence of codec-specific bytes, commonly known as "extradata".
             - `codedWidth` {{Optional_Inline}}
               - : An integer representing the width of the {{domxref("VideoFrame")}} in pixels, potentially including non-visible padding, and prior to considering potential ratio adjustments.
             - `codedHeight` {{Optional_Inline}}

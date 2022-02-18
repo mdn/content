@@ -33,7 +33,7 @@ The properties we will look at in this guide are as follows.
 - {{cssxref("justify-content")}} — controls alignment of all items on the main axis.
 - {{cssxref("align-items")}} — controls alignment of all items on the cross axis.
 - {{cssxref("align-self")}} — controls alignment of an individual flex item on the cross axis.
-- {{cssxref("align-content")}} — described in the spec as for “packing flex lines”; controls space between flex lines on the cross axis.
+- {{cssxref("align-content")}} — described in the spec as for "packing flex lines"; controls space between flex lines on the cross axis.
 - {{cssxref("gap")}}, {{cssxref("column-gap")}}, and {{cssxref("row-gap")}} — used to create gaps or gutters between flex items.
 
 We will also discover how auto margins can be used for alignment in flexbox.
