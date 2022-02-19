@@ -4,15 +4,9 @@ slug: Web/API/Blob/slice
 tags:
   - API
   - Blob
-  - File
   - File API
   - Method
   - Reference
-  - Section
-  - Subset
-  - data
-  - slice
-  - split
 browser-compat: api.Blob.slice
 ---
 {{APIRef("File API")}}
@@ -24,7 +18,10 @@ the blob on which it's called.
 ## Syntax
 
 ```js
-var newBlob = blob.slice(start, end, contentType);
+slice();
+slice(start);
+slice(start, end);
+slice(start, end, contentType);
 ```
 
 ### Parameters

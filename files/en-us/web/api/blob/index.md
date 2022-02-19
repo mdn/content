@@ -6,9 +6,7 @@ tags:
   - Blob
   - File API
   - Interface
-  - Raw
   - Reference
-  - data
 browser-compat: api.Blob
 ---
 {{APIRef("File API")}}
