@@ -16,36 +16,37 @@ The `tablist` role identifies the element that serves as the container for the s
 
 ## Description
 
-You may interacting with a tabbed interface as you read this! Browser tabs allows a user have multiple web pages open in a single window. Clicking on a tab in the tablist at the top of the browser window enables the user to display the associated content in the main content area, the tabpanel, one site at a time. This is called a tab design pattern.
+You may be interacting with a tabbed interface as you read this! Browser tabs allow a user have multiple web pages open in a single window. Clicking on a tab in the tablist at the top of the browser window enables the user to display the associated content in the main content area, the tabpanel, one site at a time. This is called a "tab design pattern".
 
-When replicating this tab design pattern, the [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role), `tablist` and [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) roles are used. 
+When implementing a tab design pattern, the [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role), `tablist` and [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) roles are used. 
 
 Tabs are a set of layered sections of content, known as tab panels, that display one panel of content at a time. Each tab panel has an associated `tab` element, that, when activated, displays the panel. The list of tab elements is arranged along one edge of the currently displayed panel, most commonly the top edge, nested in a `tablist` element.
 
-A `tab` is an element in the tab list that serves as a label for one of the tab panels and can be activated to display that panel. The `tablist` is the containing element for the set of tab elements contained. The `tabpanel` is an element that contains the content associated with a tab.
+Another example of using `tab`, `tablist` and `tabpanel` is a slide picker. In a slide picker, the controls can be marked up as more than one `tab` in a `tablist` with each slide represented by a `tabpanel` element.
+
+Each `tab` in a `tablist` serves as a label for one `tabpanel` and can be activated to display that panel. The `tablist` is the containing element for the set of tab elements contained. 
 
 When a tabbed interface is initialized, one tab panel is displayed and its associated tab is styled to indicate that it is active. When the user activates one of the other tab elements, the previously displayed tab panel is hidden, the tab panel associated with the activated tab becomes visible, and the tab is considered "active".
 
 For a single-selectable tablist, the non-active tabpanel elements should be hidden from the user until the user selects the tab associated with that tabpanel. 
 
-For a multi-selectable tablist, include [`aria-multiselectable="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) on the tablist element. The tab for each visible tabpanel has the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute set to `true`, and the tabs associated with hidden tabpanel elements have their `aria-expanded` attributes set to `false`.
+When creating a multi-selectable tablist, include [`aria-multiselectable="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) on the `tablist element`. 
+
+The `tab` elements not the `tablist`, have the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute. Set to `aria-expanded="true"` for the tabs associated with each visible tabpanel. The tabs associated with hidden tabpanel elements have their `aria-expanded` attributes set to `false`.
 
 If the tab list has a visible label, set [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) to the `id` of the labelling element. If now, use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) to provide a label.
 
-To be keyboard accessible, authors SHOULD manage focus of descendants for all instances of this role, as described in Managing Focus.
+To be keyboard accessible, focus must be managed for the descendants of this role.
 
 Elements with the `tablist` role have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) value of `horizontal`.
 
 
-
-Tabs are a set of layered sections of content, known as tab panels, that display one panel of content at a time. Each tab panel has an associated tab element, that when activated, displays the panel. The list of tab elements is arranged along one edge of the currently displayed panel, most commonly the top edge.
-
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) role
-  - : Required Owned Elements
+  - : Required Owned Elements. Every tablist must have one or more `tab` children.
 - [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable)
-  - : 
+  - : When set to `true`, indicates the user may select more than one `tab` from the `tablist` descendants.
 - [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation)
   - :  If the tablist element is vertically oriented, set `aria-orientation="vertical". The default is `horizontal`.
 
@@ -105,6 +106,9 @@ When focus is on a tab in a tablist with either horizontal or vertical orientati
 | {{SpecName("ARIA","#tablist","ARIA: tablist role")}}                                             | {{Spec2('ARIA')}}                         |
 
 ## See Also
+
+- [`tab` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
+- [`tabpanel` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role)
 
 <section id="Quick_links">
 
