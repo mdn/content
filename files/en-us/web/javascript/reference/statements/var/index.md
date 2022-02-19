@@ -38,7 +38,8 @@ var { bar } = foo; // where foo = { bar:10, baz:12 };
 ## Description
 
 `var` declarations, wherever they occur, are processed before any code is
-executed. This is called {{Glossary("Hoisting", "hoisting")}}.
+executed. This is called {{Glossary("Hoisting", "hoisting")}} and is
+discussed further below.
 
 The scope of a variable declared with `var` is its current _execution
 context and closures thereof_, which is either the enclosing function and
@@ -65,7 +66,7 @@ foo();
 ```
 
 Variables declared using `var` are created before any code is executed in a
-process known as {{Glossary("Hoisting", "hoisting")}}. Their initial value is `undefined`.
+process known as hoisting. Their initial value is `undefined`.
 
 ```js
 'use strict';
@@ -143,6 +144,49 @@ global object.
 Note that the implication of the above, is that, contrary to popular misinformation,
 JavaScript does not have implicit or undeclared variables, it merely has a syntax that
 looks like it does.
+
+### var hoisting
+
+Because `var` declarations are processed before any
+code is executed, declaring a variable anywhere in the code is equivalent to declaring
+it at the top. This also means that a variable can appear to be used before it's
+declared. This behavior is called "_hoisting_", as it appears that the variable
+declaration is moved to the top of the function or global code.
+
+```js
+bla = 2;
+var bla;
+
+// ...is implicitly understood as:
+
+var bla;
+bla = 2;
+```
+
+For that reason, it is recommended to always declare variables at the top of their
+scope (the top of global code and the top of function code) so it's clear which
+variables are function scoped (local) and which are resolved on the scope chain.
+
+It's important to point out that only variable declarations are hoisted,
+not their initialization. The value will be indeed assigned when the assignment
+statement is reached. Until then the variable remains `undefined` (but declared):
+
+```js
+function do_something() {
+  console.log(bar); // undefined
+  var bar = 111;
+  console.log(bar); // 111
+}
+
+// ...is implicitly understood as:
+
+function do_something() {
+  var bar;
+  console.log(bar); // undefined
+  bar = 111;
+  console.log(bar); // 111
+}
+```
 
 ## Examples
 
