@@ -167,8 +167,8 @@ For that reason, it is recommended to always declare variables at the top of the
 scope (the top of global code and the top of function code) so it's clear which
 variables are function scoped (local) and which are resolved on the scope chain.
 
-It's important to point out that only variable declarations are hoisted,
-not their initialization. The value will be indeed assigned when the assignment
+It's important to point out that only a variable's declaration is hoisted,
+not its initialization. The initialization happens only when the assignment
 statement is reached. Until then the variable remains `undefined` (but declared):
 
 ```js
