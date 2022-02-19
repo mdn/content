@@ -30,7 +30,7 @@ IndexedDB is a transactional database system, like an SQL-based RDBMS. However, 
 
 ### Synchronous and asynchronous
 
-Operations performed using IndexedDB are done asynchronously, so as not to block applications. IndexedDB originally included both synchronous and asynchronous APIs. The synchronous API was intended for use only with [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) but was removed from the spec because it was unclear whether it was needed. However, the synchronous API may be  reintroduced if there is enough demand from web developers.
+Operations performed using IndexedDB are done asynchronously, so as not to block applications.
 
 ### Storage limits and eviction criteria
 
@@ -81,20 +81,6 @@ An early version of the specification also defined the following, now removed, i
 
 - {{domxref("IDBDatabaseException")}}   {{deprecated_inline}}
   - : Represents exception conditions that can be encountered while performing database operations.
-- {{domxref("IDBTransactionSync")}} {{deprecated_inline}}
-  - : Sync version of {{domxref("IDBTransaction")}}.
-- {{domxref("IDBObjectStoreSync")}} {{deprecated_inline}}
-  - : Sync version of {{domxref("IDBObjectStore")}}.
-- {{domxref("IDBIndexSync")}} {{deprecated_inline}}
-  - : Sync version of {{domxref("IDBIndex")}}.
-- {{domxref("IDBFactorySync")}} {{deprecated_inline}}
-  - : Sync version of {{domxref("IDBFactory")}}.
-- {{domxref("IDBEnvironmentSync")}} {{deprecated_inline}}
-  - : Sync version of {{domxref("IDBEnvironment")}}.
-- {{domxref("IDBDatabaseSync")}} {{deprecated_inline}}
-  - : Sync version of {{domxref("IDBDatabase")}}.
-- {{domxref("IDBCursorSync")}} {{deprecated_inline}}
-  - : Sync version of {{domxref("IDBCursor")}}.
 
 ## Examples
 

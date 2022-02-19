@@ -54438,18 +54438,6 @@
       "teoli"
     ]
   },
-  "Web/API/IDBCursorSync": {
-    "modified": "2019-03-24T00:11:24.809Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz",
-      "teoli",
-      "pdm",
-      "amaneight",
-      "grendel",
-      "jswisher"
-    ]
-  },
   "Web/API/IDBCursorWithValue": {
     "modified": "2020-10-15T21:21:13.383Z",
     "contributors": [
@@ -54628,28 +54616,6 @@
       "jswisher"
     ]
   },
-  "Web/API/IDBDatabaseSync": {
-    "modified": "2019-03-24T00:10:32.316Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz",
-      "teoli",
-      "pdm",
-      "amaneight",
-      "jswisher"
-    ]
-  },
-  "Web/API/IDBEnvironmentSync": {
-    "modified": "2019-03-24T00:10:38.611Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz",
-      "teoli",
-      "pdm",
-      "khushboo_Dwivedi",
-      "jswisher"
-    ]
-  },
   "Web/API/IDBFactory": {
     "modified": "2020-10-15T21:08:44.592Z",
     "contributors": [
@@ -54728,17 +54694,6 @@
       "coobie",
       "chrahunt",
       "teoli"
-    ]
-  },
-  "Web/API/IDBFactorySync": {
-    "modified": "2019-03-24T00:10:37.564Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz",
-      "teoli",
-      "pdm",
-      "khushboo_Dwivedi",
-      "jswisher"
     ]
   },
   "Web/API/IDBIndex": {
@@ -54934,16 +54889,6 @@
       "arronei",
       "libbymc",
       "chrisdavidmills"
-    ]
-  },
-  "Web/API/IDBIndexSync": {
-    "modified": "2019-03-24T00:10:28.971Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz",
-      "teoli",
-      "pdm",
-      "jswisher"
     ]
   },
   "Web/API/IDBKeyRange": {
@@ -55408,18 +55353,6 @@
       "libbymc"
     ]
   },
-  "Web/API/IDBObjectStoreSync": {
-    "modified": "2019-03-24T00:10:51.145Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz",
-      "pdm",
-      "teoli",
-      "grendel",
-      "jswisher",
-      "Sheppy"
-    ]
-  },
   "Web/API/IDBOpenDBRequest": {
     "modified": "2020-10-15T21:10:02.233Z",
     "contributors": [
@@ -55755,16 +55688,6 @@
       "libbymc",
       "inexorabletash",
       "jwhitlock"
-    ]
-  },
-  "Web/API/IDBTransactionSync": {
-    "modified": "2019-03-24T00:10:38.119Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz",
-      "teoli",
-      "nehasharma",
-      "jswisher"
     ]
   },
   "Web/API/IDBVersionChangeEvent": {
