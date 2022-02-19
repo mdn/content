@@ -61,7 +61,7 @@ let o = {
 
 ## Description
 
-An object initializer is an expression that describes the initialization of an {{jsxref("Object")}}. Objects consist of _properties_, which are used to describe an object. The values of object properties can either contain [primitive](/en-US/docs/Glossary/primitive) data types or other objects.
+An object initializer is an expression that describes the initialization of an {{jsxref("Object")}}. Objects consist of _properties_, which are used to describe an object. The values of object properties can either contain [primitive](/en-US/docs/Glossary/Primitive) data types or other objects.
 
 ### Object literal notation vs JSON
 
@@ -242,7 +242,7 @@ console.log(config) // {size: 12, mobileSize: 4}
 
 ### Spread properties
 
-The [Rest/Spread Properties for ECMAScript](https://github.com/tc39/proposal-object-rest-spread) proposal (stage 4) adds [spread](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator) properties to object literals. It copies own enumerable properties from a provided object onto a new object.
+The [Rest/Spread Properties for ECMAScript](https://github.com/tc39/proposal-object-rest-spread) proposal (stage 4) adds [spread](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) properties to object literals. It copies own enumerable properties from a provided object onto a new object.
 
 Shallow-cloning (excluding `prototype`) or merging objects is now possible using a shorter syntax than {{jsxref("Object.assign()")}}.
 
