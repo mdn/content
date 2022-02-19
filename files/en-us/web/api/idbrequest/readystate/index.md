@@ -71,7 +71,7 @@ objectStoreTitleRequest.onsuccess = function() {
   var updateTitleRequest = objectStore.put(data);
 
   // Log the source of this request
-  console.log("The readyState of this request is " + updateTitlerequest.readyState);
+  console.log("The readyState of this request is " + updateTitleRequest.readyState);
 
   // When this new request succeeds, run the displayData()
   // function again to update the display

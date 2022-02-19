@@ -43,7 +43,7 @@ var paymentRequestEvent = new PaymentRequestEvent(type, options)
       object.
     - `paymentRequestOrigin`: The origin where the
       {{domxref("PaymentRequest")}} object was initialized.
-    - `topLeveOrigin`: The top-level origin where the
+    - `topLevelOrigin`: The top-level origin where the
       {{domxref("PaymentRequest")}} object was initialized.
     - `total`: The total amount being requested for payment.
 
