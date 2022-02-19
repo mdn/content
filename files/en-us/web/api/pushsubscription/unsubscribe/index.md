@@ -42,7 +42,7 @@ navigator.serviceWorker.ready.then(function(reg) {
     subscription.unsubscribe().then(function(successful) {
       // You've successfully unsubscribed
     }).catch(function(e) {
-      // Unsubscription failed
+      // Unsubscribing failed
     })
   })
 });
