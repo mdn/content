@@ -55,8 +55,7 @@ Elements with the `tablist` role have an implicit [`aria-orientation`](/en-US/do
 For the tab list:
 
 - <kbd>Tab</kbd>
-  - : When focus moves into the tab list, places focus on the active `tab` element.
-  - : When the tab list contains the focus, moves focus to the next element in the page tab sequence outside the tablist, which is the tabpanel unless the first element containing meaningful content inside the tabpanel is focusable.
+  - : When focus moves into the tab list, places focus on the active `tab` element. <br/><br/>When the tab list contains the focus, moves focus to the next element in the page tab sequence outside the tablist, which is the tabpanel unless the first element containing meaningful content inside the tabpanel is focusable.
 
 When focus is on a tab element in a horizontal tab list:
 
@@ -87,7 +86,7 @@ When focus is on a tab in a tablist with either horizontal or vertical orientati
 - <kbd>Delete</kbd> (Optional)
   - : If deletion is allowed, deletes (closes) the current tab element and its associated tab panel, sets focus on the tab following the tab that was closed, and optionally activates the newly focused tab. If there is not a tab that followed the tab that was deleted, e.g., the deleted tab was the right-most tab in a left-to-right horizontal tab list, sets focus on and optionally activates the tab that preceded the deleted tab. If the application allows all tabs to be deleted, and the user deletes the last remaining tab in the tab list, the application moves focus to another element that provides a logical work flow. As an alternative to Delete, or in addition to supporting Delete, the delete function is available in a context menu.
 
-<!-->
+<!--
 ### Required JavaScript features
 
 ## Examples
