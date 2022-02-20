@@ -40,7 +40,6 @@ To be keyboard accessible, focus must be managed for the descendants of this rol
 
 Elements with the `tablist` role have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) value of `horizontal`.
 
-
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) role
@@ -64,7 +63,6 @@ When focus is on a tab element in a horizontal tab list:
 - <kbd>Right Arrow</kbd>
   - : Moves focus to the next tab. If focus is on the last tab element, moves focus to the first tab. Optionally, activates the newly focused tab
 
-
 When focus is on a tab element in a vertical tab list:
 
 - <kbd>Up Arrow</kbd>
@@ -75,6 +73,7 @@ When focus is on a tab element in a vertical tab list:
 If the tab list is horizontal, it does not listen for <kbd>Down Arrow</kbd> or <kbd>Up Arrow</kbd> so those keys can provide their normal browser scrolling functions even when focus is inside the tab list.
 
 When focus is on a tab in a tablist with either horizontal or vertical orientation:
+
 - <kbd>Space</kbd> or <kbd>Enter</kbd>
   - : Activates the tab if it was not activated automatically on focus.
 - <kbd>Home</kbd> (Optional)
