@@ -326,7 +326,8 @@ This demo has exactly the same functionality as in the previous two sections, ex
 ### Using addEventListener instead
 
 Instead of including JavaScript in your HTML, use a pure JavaScript construct.
-In this case the `querySelectorAll()` function allows you to select all the buttons using one instruction.
+The `querySelectorAll()` function allows you to select all the buttons on a page.
+You can then loop through the buttons, assigning a handler for each using  `addEventListener()`.
 The code we used above to serve this purpose looks like this:
 
 ```js
