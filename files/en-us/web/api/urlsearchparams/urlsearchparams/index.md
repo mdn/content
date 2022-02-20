@@ -77,8 +77,8 @@ const add_params = {
 }
 
 const new_params = new URLSearchParams([
-    ...Array.from(url.searchParams.entries()), // [["d","hello"],["e","world"]]
-    ...Object.entries(add_params), // [["a","a"],["b","2"],["c","false"]]
+    ...Array.from(url.searchParams.entries()), // [["a","hello"],["b","world"]]
+    ...Object.entries(add_params), // [["c","a"],["d","2"],["e","false"]]
 ]).toString();
 console.log(new_params);
 // a=hello&b=world&c=a&d=2&e=false
