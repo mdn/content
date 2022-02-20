@@ -57,7 +57,7 @@ value2
 var searchParams = new URLSearchParams("key1=value1&key2=value2");
 
 // Display the values
-Array.from(searchParams.values());
+console.log(Array.from(searchParams.values()));
 ```
 
 The result is:
