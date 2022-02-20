@@ -54,4 +54,4 @@ Registry](https://www.khronos.org/registry/webgl/extensions/). They are also lis
 ## See also
 
 - {{domxref("WebGLRenderingContext.getExtension()")}}
-- [webglreport.com](http://webglreport.com)
+- [webglreport.com](https://webglreport.com)

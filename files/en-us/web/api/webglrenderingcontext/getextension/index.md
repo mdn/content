@@ -61,4 +61,4 @@ listed [here](/en-US/docs/Web/API/WebGL_API#extensions).
 ## See also
 
 - {{domxref("WebGLRenderingContext.getSupportedExtensions()")}}
-- [webglreport.com](http://webglreport.com)
+- [webglreport.com](https://webglreport.com)
