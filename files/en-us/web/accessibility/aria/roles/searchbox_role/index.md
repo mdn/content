@@ -14,12 +14,14 @@ The `searchbox` role indicates an element is a type of `textbox` intended for sp
 
 ## Description
 
-The `searchbox` can be used instead of `textbox`, when the textbox is within an element with role `search`.  The HTML equivalent is an HTML {{HTMLElement('input')}} of type `search`,  [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search); which should be used if possible
+The `searchbox` can be used instead of [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role) when the text box is within an element with role [`search`](/en-US/docs/Web/Accessibility/ARIA/Roles/search_role).  The HTML equivalent is an HTML {{HTMLElement('input')}} of type `search`,  [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search); which should be used if possible.
 
-The `searchbox` role is for an input field for search and should not be used with `combobox`. 
+The `searchbox` role should not be used with [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role). 
 
-The `searchbox` must have an accessible name. If the searchbox role is applied to an HTML {{HTMLElement('input')}} element, an HTML {{HTMLElement('label')}} can be used. 
-Otherwise, use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present, otherwise use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) if a visible label is not present..
+The `searchbox` must have an accessible name. If the `searchbox` role is applied to an HTML {{HTMLElement('input')}} element, an associated {{HTMLElement('label')}} shoul be used. 
+Otherwise, use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present, or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) if a visible label is not present.
+
+The screen reader will announce "search box", "search edit", or "search field" plus the accessible name. This can be redundant if "search" is included in the label. 
 
 ## Examples
 
@@ -27,7 +29,7 @@ Otherwise, use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes
 <div tabindex="0" aria-label="search" role="searchbox" contenteditable></div>
 ```
 
-While the above is valid, it is simpler, less verbose, and less redundant to the screen reader user to write:
+While the above is valid, it is simpler, more concise, and less redundant to the screen reader user to write:
 
 ```html
 <input type="search">
@@ -47,7 +49,7 @@ The following is a search form with a searchbox and button, ARIA live region, an
 <div id="search-results"></div>
 ```
 
-Including `role="searchbox"` when the form is a `search` and the label indicates the element is a search can result in assistive technology announcing "search search this site searchbox", which is a bit redundant. The inclusion of `role="searchbox"` is not necessary.
+Including `role="searchbox"` when the form is a `search` and the label indicates the element is a search can result in assistive technology announcing "search search this site search box", which is redundant. The inclusion of `role="searchbox"` is not necessary.
 
 ## Specifications
 
