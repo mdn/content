@@ -120,12 +120,9 @@ _An {{domxref("XRSessionEvent")}}. Inherits from {{domxref("Event")}}._
 
 ## Event properties
 
-If the event is not just a generic {{domxref("Event")}}, list the additional properties the event has.
+If the event is not just a generic {{domxref("Event")}}, include this section and embed the `Properties` section from the event's page.
 
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref("XRSessionEvent.session", "session")}} {{ReadOnlyInline}}
-  - : The {{domxref("XRSession")}} to which the event refers.
+{{page("Web/API/XRSessionEvent", "Properties")}}
 
 ## Description
 
