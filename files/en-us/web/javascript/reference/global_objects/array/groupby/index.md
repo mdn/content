@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.Array.groupBy
 The **`groupBy()`** method groups the elements of the calling array according to the values returned by a provided testing function.
 The returned object has separate properties for each group, containing arrays with the elements in the group.
 
-{{EmbedInteractiveExample("pages/js/array-groupby.html")}}
+<!-- {{EmbedInteractiveExample("pages/js/array-groupby.html")}} -->
 
 Note that the returned object references the _same_ elements as the original array (not {{glossary("deep copy","deep copies")}}). 
 Changing the internal structure of these elements will be reflected in both the original array and the returned object.
