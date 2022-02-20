@@ -1147,7 +1147,6 @@
 /en-US/docs/Cryptographic_hash_function	/en-US/docs/Glossary/Cryptographic_hash_function
 /en-US/docs/CustomElements	/en-US/docs/Web/Web_Components/Using_custom_elements
 /en-US/docs/DASH_Adaptive_Streaming_for_HTML_5_Video	/en-US/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
-/en-US/docs/DHTML	/en-US/docs/Glossary/DHTML
 /en-US/docs/DOM	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/DOM/About_the_Document_Object_Model	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/DOM/AbstractView	/en-US/docs/Web/API/Document/defaultView
