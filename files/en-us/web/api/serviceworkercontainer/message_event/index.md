@@ -12,39 +12,34 @@ browser-compat: api.ServiceWorkerContainer.message_event
 
 The **`message`** event is used in a page controlled by a service worker to receive messages from the service worker.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("MessageEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/ServiceWorkerContainer/onmessage"
-            >onmessage</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancellable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('message', event => { });
+
+onmessage = event => { };
+```
+
+## Event type
+
+An {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("MessageEvent")}}
+
+## Event properties
+
+{{page("/en-us/docs/Web/API/MessageEvent", "Properties")}}
 
 ## Examples
 
 In this example the service worker get the client's ID from a [`fetch`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/onfetch) event and then sends it a message using [`Client.postMessage`](/en-US/docs/Web/API/Client/postMessage):
 
 ```js
-// in the service worker
+// service-worker.js
 async function messageClient(clientId) {
     const client = await clients.get(clientId);
     client.postMessage('Hi client!');
@@ -61,10 +56,19 @@ addEventListener('fetch', (event) => {
 The client can receive the message by listening to the `message` event:
 
 ```js
-// in the page being controlled
+// main.js
 navigator.serviceWorker.addEventListener('message', (message) => {
     console.log(message);
 });
+```
+
+Alternatively, he client can receive the message with the `onmessage` event handler:
+
+```js
+// main.js
+navigator.serviceWorker.onmessage = (message) => {
+    console.log(message);
+};
 ```
 
 ## Specifications

@@ -43,8 +43,6 @@ _No specific event handler; inherits event handlers from its parent, {{domxref("
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("hashchange")}} event is raised.
 - {{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("languagechange")}} event is raised.
-- {{domxref("WindowEventHandlers.onmessage")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("message")}} event is raised.
 - {{domxref("WindowEventHandlers.onoffline")}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("offline")}} event is raised.
 - {{domxref("WindowEventHandlers.ononline")}}

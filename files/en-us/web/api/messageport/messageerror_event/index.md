@@ -9,32 +9,27 @@ browser-compat: api.MessagePort.messageerror_event
 
 The `messageerror` event is fired on a {{domxref('MessagePort')}} object when it receives a message that can't be deserialized.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("MessageEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/MessagePort/onmessageerror"
-            >onmessageerror</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancellable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('messageerror', event => { });
+
+onmessageerror = event => { };
+```
+
+## Event type
+
+An {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("MessageEvent")}}
+
+## Event properties
+
+{{page("/en-us/docs/Web/API/MessageEvent", "Properties")}}
 
 ## Examples
 
@@ -74,7 +69,7 @@ window.addEventListener('message', (event) => {
 });
 ```
 
-Note that the listener must call [`MessagePort.start()`](/en-US/docs/Web/API/MessagePort/start) before any messages will be delivered to this port. This is only needed when using the [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) method: if the receiver uses [`onmessage`](/en-US/docs/Web/API/MessagePort/onmessage) instead, `start()` is called implicitly:
+Note that the listener must call [`MessagePort.start()`](/en-US/docs/Web/API/MessagePort/start) before any messages will be delivered to this port. This is only needed when using the [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) method: if the receiver uses `onmessage` instead, `start()` is called implicitly:
 
 ```js
 window.addEventListener('message', (event) => {

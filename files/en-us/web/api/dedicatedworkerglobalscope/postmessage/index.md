@@ -32,7 +32,7 @@ postMessage(aMessage, transferList)
 ### Parameters
 
 - `aMessage`
-  - : The object to deliver to the main thread; this will be in the data field in the event delivered to the {{domxref("Worker.onmessage")}} handler.
+  - : The object to deliver to the main thread; this will be in the data field in the event delivered to the {{domxref("Worker.message_event")}}.
     This may be any value or JavaScript object handled by the [structured clone](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) algorithm, which includes cyclical references.
 - `transferList` {{optional_inline}}
 

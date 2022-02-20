@@ -2,46 +2,45 @@
 title: 'Worker: messageerror event'
 slug: Web/API/Worker/messageerror_event
 tags:
+  - API
+  - Worker
   - Event
+  - Reference
+  - messageerror
 browser-compat: api.Worker.messageerror_event
 ---
 {{APIRef}}
 
 The `messageerror` event is fired on a {{domxref('Worker')}} object when it receives a message that can't be deserialized.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("MessageEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/Worker/onmessageerror"
-            >onmessageerror</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancellable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('messageerror', event => { });
+
+onmessageerror = event => { };
+```
+
+## Event type
+
+An {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("MessageEvent")}}
+
+## Event properties
+
+{{page("/en-us/docs/Web/API/MessageEvent", "Properties")}}
 
 ## Examples
 
 Create a worker, and listen for `message` and `messageerror` events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener):
 
 ```js
-// inside main.js
+// main.js
 
 const worker = new Worker("static/scripts/worker.js");
 
@@ -54,10 +53,10 @@ worker.addEventListener("messageerror", (event) => {
 });
 ```
 
-The same, but using the [`onmessageerror`](/en-US/docs/Web/API/WindowEventHandlers/onmessageerror) event handler property:
+The same, but using the `onmessageerror` event handler property:
 
 ```js
-// inside main.js
+// main.js
 
 const worker = new Worker("static/scripts/worker.js");
 
@@ -81,4 +80,4 @@ worker.onmessageerror = (event) => {
 ## See also
 
 - [`Worker.postMessage()`](/en-US/docs/Web/API/Worker/postMessage)
-- Related events: [`message`](/docs/Web/API/Worker/message_event).
+- Related events: [`message`](/docs/Web/API/Worker/message_event)

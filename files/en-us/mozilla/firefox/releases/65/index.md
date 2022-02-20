@@ -111,7 +111,7 @@ _No changes._
 - The {{domxref("Response.redirect()")}} method now correctly throws a `TypeError` if a non-valid URL is specified as the first parameter ({{bug(1503276)}}).
 - The {{domxref("ServiceWorkerContainer.register()")}} and {{domxref("WorkerGlobalScope.importScripts()")}} (when used by a service worker) methods will now accept any files with a valid [JavaScript MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript) ({{bug(1354577)}}).
 - The {{domxref("FetchEvent.replacesClientId")}} and {{domxref("FetchEvent.resultingClientId")}} properties are now supported ({{bug(1264177)}}).
-- The {{domxref("ServiceWorkerGlobalScope.onmessageerror")}} and {{domxref("ServiceWorkerContainer.onmessageerror")}} handler properties have been implemented ({{bug(1399446)}}).
+- The {{domxref("ServiceWorkerGlobalScope.messageerror_event")}} and {{domxref("ServiceWorkerContainer.messageerror_event")}} handler properties have been implemented ({{bug(1399446)}}).
 - The {{httpheader("Origin")}} header is no longer set on Fetch requests with a method of {{HTTPMethod("HEAD")}} or {{HTTPMethod("GET")}} ({{bug(1508661)}}).
 
 #### Media, Web Audio, and WebRTC

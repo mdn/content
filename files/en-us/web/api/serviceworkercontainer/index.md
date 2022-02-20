@@ -37,7 +37,6 @@ Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register", "S
   - : Fired whenever an error occurs in the associated service workers.
 - [`message`](/en-US/docs/Web/API/ServiceWorkerContainer/message_event)
   - : Occurs when incoming messages are received by the {{domxref("ServiceWorkerContainer")}} object (e.g. via a {{domxref("MessagePort.postMessage()")}} call.)
-    Also available via the {{domxref("ServiceWorkerContainer.onmessage")}} property.
 
 ## Methods
 
