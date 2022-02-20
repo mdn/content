@@ -16,7 +16,7 @@ browser-compat: webextensions.api.browsingData.removeFormData
 
 Clears data that the browser has saved for autofilling forms.
 
-You can use the `removalOptions` parameter, which is a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, to:
+You can use the `removalOptions` parameter, which is a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, to:
 
 - clear only form data entered after a given time
 - control whether to clear only form data entered in normal web pages or to clear data entered in hosted apps and extensions as well.

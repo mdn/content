@@ -15,9 +15,9 @@ browser-compat: javascript.grammar.trailing_commas
 
 **Trailing commas** (sometimes called "final commas") can be useful when
 adding new elements, parameters, or properties to JavaScript code. If you want to add a
-new property, you can add a new line without modifying the previously last line if that
+new property, you can add a new line without modifying the previously last line if that
 line already uses a trailing comma. This makes version-control diffs cleaner and editing
-code might be less troublesome.
+code might be less troublesome.
 
 JavaScript has allowed trailing commas in array literals since the beginning, and later
 added them to object literals, and more recently, to

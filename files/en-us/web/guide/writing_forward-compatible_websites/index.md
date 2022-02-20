@@ -15,7 +15,7 @@ This is especially important for intranets and other non-public websites; if we 
 
 ## JavaScript
 
-### Prefix all global variable access in `onfoo` attributes with “`window`.”
+### Prefix all global variable access in `onfoo` attributes with "`window`."
 
 When an event handler content attribute (`onclick`, `onmouseover`, and so forth) is used on HTML element, all name lookup in the attribute first happens on the element itself, then on the element's form if the element is a form control, then on the document, and then on the window (where the global variables you have defined are). For example, if you have this markup:
 
@@ -50,7 +50,7 @@ Suggest to the developers of your favorite libraries that they follow these guid
 
 ### Sniff for specific features
 
-If you plan to use some feature, use object-detection to sniff for that exact feature, if possible.  As a simple example, don't assume that any browser in which `"filter" in body.style` tests true must be Microsoft Internet Explorer and therefore e.g. will have a `window.event` object available in event handlers. Don't assume that browsers with support for a given DOM feature must also have some other, especially nonstandard, DOM feature. Or, conversely, that they _don't_ have support for some other feature (e.g., don't assume that a browser that supports `onload` on script elements will never support `onreadystatechange` on them). As browsers converge behavior, they both add features and remove them. They also fix bugs.  All three of these have happened in the past and will happen again.
+If you plan to use some feature, use object-detection to sniff for that exact feature, if possible.  As a simple example, don't assume that any browser in which `"filter" in body.style` tests true must be Microsoft Internet Explorer and therefore e.g. will have a `window.event` object available in event handlers. Don't assume that browsers with support for a given DOM feature must also have some other, especially nonstandard, DOM feature. Or, conversely, that they _don't_ have support for some other feature (e.g., don't assume that a browser that supports `onload` on script elements will never support `onreadystatechange` on them). As browsers converge behavior, they both add features and remove them. They also fix bugs.  All three of these have happened in the past and will happen again.
 
 So don't sniff for one feature or object and then assume that, because it exists or doesn't exist, some other feature or object must also exist or not exist.
 
@@ -96,7 +96,7 @@ Make sure to test what happens in a browser that doesn't implement the feature y
 
 ### Don't use vendor-prefixed features except to target old buggy versions
 
-Vendor-prefixed features can change behavior in future releases.  Once a browser has shipped a feature unprefixed, however, you can use the prefixed version to target old releases by making sure to always use the unprefixed version of the feature when available.  A good example, for a browser vendor using the `-vnd` CSS prefix that has shipped an unprefixed implementation of the `make-it-pretty` property, with a behavior for the value `"sometimes"` that differs from the prefixed version:
+Vendor-prefixed features can change behavior in future releases.  Once a browser has shipped a feature unprefixed, however, you can use the prefixed version to target old releases by making sure to always use the unprefixed version of the feature when available.  A good example, for a browser vendor using the `-vnd` CSS prefix that has shipped an unprefixed implementation of the `make-it-pretty` property, with a behavior for the value `"sometimes"` that differs from the prefixed version:
 
 ```html
 <style>
@@ -111,7 +111,7 @@ The order of the declarations in the rule above is important: the unprefixed one
 
 ### Don't use unprefixed versions of CSS properties or APIs until at least one browser supports them
 
-Until there's decently widespread support of the unprefixed version of something, its behavior can still change in unexpected ways.  Most especially, don't use the unprefixed version if no browser actually supports it. You can't assume that the syntax of the final version will be the same as the syntax of any of the prefixed versions.
+Until there's decently widespread support of the unprefixed version of something, its behavior can still change in unexpected ways.  Most especially, don't use the unprefixed version if no browser actually supports it. You can't assume that the syntax of the final version will be the same as the syntax of any of the prefixed versions.
 
 ## Code hygiene
 
@@ -129,4 +129,4 @@ due to the missing `>` on the `input` tag.
 
 ### Don't leave experiments that didn't work in your code
 
-If you try using a CSS property to do something you want, but it has no effect, remove it.  It might start doing something you don't expect in the future
+If you try using a CSS property to do something you want, but it has no effect, remove it.  It might start doing something you don't expect in the future

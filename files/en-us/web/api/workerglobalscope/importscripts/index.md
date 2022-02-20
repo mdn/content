@@ -23,7 +23,7 @@ self.importScripts('foo.js', 'bar.js', ...);
 
 ### Parameters
 
-A comma-separated list of {{domxref("DOMString")}} objects representing the scripts to be imported. These paths are relative to _html document base URL_.
+A comma-separated list of {{domxref("DOMString")}} objects representing the scripts to be imported. These paths are relative to _html document base URL_.
 
 ### Return value
 

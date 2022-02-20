@@ -54,7 +54,7 @@ example live](https://mdn.github.io/to-do-notifications/).)
 // Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
+DBOpenRequest.onsuccess = event => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable.
@@ -73,11 +73,11 @@ function addData() {
   var transaction = db.transaction(["toDoList"], "readwrite");
 
   // report on the success of opening the transaction
-  transaction.oncomplete = function(event) {
+  transaction.oncomplete = event => {
     note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
   };
 
-  transaction.onerror = function(event) {
+  transaction.onerror = event => {
     note.innerHTML += '<li>Transaction not opened due to error: ' + transaction.error + '</li>';
   };
 
@@ -87,7 +87,7 @@ function addData() {
   // add our newItem object to the object store
   var objectStoreRequest = objectStore.add(newItem[0]);
 
-  objectStoreRequest.onsuccess = function(event) {
+  objectStoreRequest.onsuccess = event => {
     // report the success of the request (this does not mean the item
     // has been stored successfully in the DB - for that you need transaction.onsuccess)
     note.innerHTML += '<li>Request successful.</li>';
@@ -111,5 +111,4 @@ function addData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

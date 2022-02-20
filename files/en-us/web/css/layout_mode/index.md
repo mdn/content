@@ -15,7 +15,7 @@ A [CSS](/en-US/docs/Web/CSS) **layout mode**, sometimes called _layout_, is an a
 - [_Table layout_](/en-US/docs/Web/CSS/CSS_Table), designed for laying out tables.
 - _Float layout_, designed to cause an item to position itself left or right with the rest of the content in normal flow wrapping around it.
 - [_Positioned layout_](/en-US/docs/Web/CSS/CSS_Positioning), designed for positioning elements without much interaction with other elements.
-- [_Multi-column layout_](/en-US/docs/Web/CSS/CSS_Columns), designed for laying content out in columns as in a newspaper.
+- [_Multi-column layout_](/en-US/docs/Web/CSS/CSS_Columns), designed for laying content out in columns as in a newspaper.
 - [_Flexible box layout_](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout), designed for laying out complex pages that can be resized smoothly.
 - [_Grid layout_](/en-US/docs/Web/CSS/CSS_Grid_Layout), designed for laying out elements relative to a fixed grid.
 

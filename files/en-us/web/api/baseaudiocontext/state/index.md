@@ -27,9 +27,9 @@ baseAudioContext.state;
 
 A {{domxref("DOMString")}}. Possible values are:
 
-- `suspended`: The audio context has been suspended (with the
+- `suspended`: The audio context has been suspended (with the
   {{domxref("AudioContext.suspend()")}} method.)
-- `running`: The audio context is running normally.
+- `running`: The audio context is running normally.
 - `closed`: The audio context has been closed (with the
   {{domxref("AudioContext.close()")}} method.)
 
@@ -43,7 +43,7 @@ current state to the console every time it changes.
 
 ```js
 audioCtx.onstatechange = function() {
-  console.log(audioCtx.state);
+  console.log(audioCtx.state);
 }
 ```
 

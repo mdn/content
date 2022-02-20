@@ -17,7 +17,7 @@ browser-compat: api.IDBRequest.onsuccess
 The **`onsuccess`** event handler of the
 {{domxref("IDBRequest")}} interface handles the
 [`success`](/en-US/docs/Web/API/IDBRequest/success_event) event,
-fired when the result of a request is successfully returned.
+fired when the result of a request is successfully returned.
 
 The event handler takes one parameter, a success [Event](/en-US/docs/Web/API/IDBRequest/success_event) with type="success".
 
@@ -31,12 +31,12 @@ request.onsuccess = function(event) { /* ... */ };
 
 ## Example
 
-The following example requests a given record title, `onsuccess` gets the
+The following example requests a given record title, `onsuccess` gets the
 associated record from the {{domxref("IDBObjectStore")}} (made available
-as `objectStoreTitleRequest.result`), updates
+as `objectStoreTitleRequest.result`), updates
 one property of the record, and then puts the updated record back into the object
-store. For a full working example, see our [To-do
-Notifications](https://github.com/mdn/to-do-notifications/) app ([view
+store. For a full working example, see our [To-do
+Notifications](https://github.com/mdn/to-do-notifications/) app ([view
 example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
@@ -56,7 +56,7 @@ objectStoreTitleRequest.onsuccess = function() {
   data.notified = "yes";
 
   // Create another request that inserts the item back
-  // into the database
+  // into the database
   var updateTitleRequest = objectStore.put(data);
 
   // When this new request succeeds, run the displayData()

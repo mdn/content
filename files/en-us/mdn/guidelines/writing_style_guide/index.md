@@ -385,7 +385,7 @@ Keyboard keys should use sentence-style capitalization, not all-caps capitalizat
 For example, "<kbd>Enter</kbd>" not "<kbd>ENTER</kbd>".
 The only exception is that you can use "<kbd>ESC</kbd>" to abbreviate the "<kbd>Escape</kbd>" key.
 
-Certain words should always be capitalized (such as trademarks which include capital letters), or words derived from the name of a person (unless it's being used within code, and code’s syntax requires lower-casing).
+Certain words should always be capitalized (such as trademarks which include capital letters), or words derived from the name of a person (unless it's being used within code, and code's syntax requires lower-casing).
 Some examples:
 
 - Boolean (named for English mathematician and logician {{interwiki("wikipedia", "George Boole")}})
@@ -513,7 +513,7 @@ There are a couple of reasons for this.
 2. If curly quotes or apostrophes make their way into code snippets—even inline ones—readers may copy and paste them, expecting them to function (which they will not).
 
 - **Correct**: Please don't use "curly quotes."
-- **Incorrect**: Please don’t use “curly quotes.”
+- **Incorrect**: Please don't use “curly quotes.”
 
 ### Spelling
 

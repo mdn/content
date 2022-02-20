@@ -97,7 +97,7 @@ el.addEventListener('transitionstart', function() {
 });
 
 el.addEventListener('transitionend', function() {
-  message.textContent = 'transitionend fired';
+  message.textContent = 'transitionend fired';
 });
 ```
 

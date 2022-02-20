@@ -41,9 +41,9 @@ Along with [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role), [`log
 
 ## Examples
 
-Some prominent web timers include clocks, stop watches and countdowns, such as ticketing websites, e-commerce sites, and event countdowns (see <https://countingdownto.com/>).
+Some prominent web timers include clocks, stop watches and countdowns, such as ticketing websites, e-commerce sites, and event countdowns (see <https://countingdownto.com/>).
 
-As an illustration of [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic), consider a site with a simple clock, showing hours and minutes. The clock is updated each minute, with the new remaining time overwriting the current content.
+As an illustration of [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic), consider a site with a simple clock, showing hours and minutes. The clock is updated each minute, with the new remaining time overwriting the current content.
 
 ```html
 <div id="clock" role="timer" aria-live="off">20</div>
@@ -54,18 +54,18 @@ As an illustration of [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attrib
 ```js
 /* basic JavaScript to update a timer */
 function startTimer(timerName) {
-  // get the number of seconds
-   let timer = document.getElementById(timerName),
-       seconds = parseInt(timer.innerText);
-  // remove a second
-  // updated the content of timer
-   timer.innerText = --seconds
-  // if timer != 0, setTimeout
-  if (seconds) {
-    setTimeout( function() {
-      startTimer(timerName);
-    }, 1000);
-  }
+  // get the number of seconds
+   let timer = document.getElementById(timerName),
+       seconds = parseInt(timer.innerText);
+  // remove a second
+  // updated the content of timer
+   timer.innerText = --seconds
+  // if timer != 0, setTimeout
+  if (seconds) {
+    setTimeout( function() {
+      startTimer(timerName);
+    }, 1000);
+  }
 }
 ```
 
@@ -75,7 +75,7 @@ The first time the function executes, the entirety of the string that is added w
 
 One way around this would be to first clear the contents of the live region, and then inject the new content. However, this can sometimes be unreliable, as it's dependent on the exact timing of these two updates.
 
-[`aria-atomic="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) ensures that each time the live region is updated, the entirety of the content is announced in full (e.g. "Time: 17:34").
+[`aria-atomic="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) ensures that each time the live region is updated, the entirety of the content is announced in full (e.g. "Time: 17:34").
 
 ```html
 <div id="clock" role="timer" aria-live="polite" aria-atomic="true"></div>

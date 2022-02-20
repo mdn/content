@@ -24,7 +24,7 @@ _This interface inherits all the methods of its parent interface, {{domxref("IDB
 
 _This interface inherits all the properties of its parent interface, {{domxref("IDBKeyRange")}}._
 
-Bear in mind however that `IDBLocaleAwareKeyRange` has its own implementation of {{domxref("IDBKeyRange.bound")}}. This is because when you use `bound()`, it checks if lower bound < upper bound, and throws an exception if that’s not the case. With locale-aware indexes, the meaning of < depends on the locale, so for example in Lithuanian Y is sorted between I and K. The only difference between `IDBKeyRange` and `IDBLocaleAwareKeyRange` is that the latter doesn’t do the aforementioned check.
+Bear in mind however that `IDBLocaleAwareKeyRange` has its own implementation of {{domxref("IDBKeyRange.bound")}}. This is because when you use `bound()`, it checks if lower bound < upper bound, and throws an exception if that's not the case. With locale-aware indexes, the meaning of < depends on the locale, so for example in Lithuanian Y is sorted between I and K. The only difference between `IDBKeyRange` and `IDBLocaleAwareKeyRange` is that the latter doesn't do the aforementioned check.
 
 Developers should always use `IDBLocaleAwareKeyRange` when dealing with locale-aware indexes.
 

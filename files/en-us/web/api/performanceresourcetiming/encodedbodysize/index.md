@@ -10,7 +10,7 @@ browser-compat: api.PerformanceResourceTiming.encodedBodySize
 ---
 {{APIRef("Resource Timing API")}}
 
-The **`encodedBodySize`** read-only property represents the
+The **`encodedBodySize`** read-only property represents the
 size (in octets) received from the fetch (HTTP or cache), of the _payload body_,
 before removing any applied content-codings.
 

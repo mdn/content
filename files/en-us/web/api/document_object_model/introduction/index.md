@@ -257,8 +257,8 @@ The following is a brief list of common APIs in web and XML page scripting using
 The following simple example illustrates using the DOM {{domxref("Document")}} API — specifically, it illustrates using the {{domxref("Document.body", "body")}} property of the {{domxref("Document")}} API to change:
 
 - the document's text color
-- the document’s background color
-- the documents’s link color (that is, the color of any hypertext links anywhere in the document)
+- the document's background color
+- the documents's link color (that is, the color of any hypertext links anywhere in the document)
 
 ```html
 <html>

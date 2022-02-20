@@ -53,8 +53,8 @@ function quarter() {
 
 {{Compat}}
 
-Note: It's not possible to resize a window or tab that wasn’t created by
-**`window.open()`**. It's also not possible to resize when the
+Note: It's not possible to resize a window or tab that wasn't created by
+**`window.open()`**. It's also not possible to resize when the
 window has multiple tabs.
 
 ## See also

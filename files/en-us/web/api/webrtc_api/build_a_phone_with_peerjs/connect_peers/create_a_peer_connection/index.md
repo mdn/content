@@ -29,7 +29,7 @@ Next, you want to ensure your users have a way of connecting with their peers. I
         }
     ```
 
-3. When a connection is created, let's use the PeerJS framework's `on(‘connection')` to set the remote peer’s ID and open the connection. The function for this listener accepts a `connection` object which is an instance of the `DataConnection` object (which is a wrapper around WebRTC’s [`RTCDataChannel`](/en-US/docs/Web/API/RTCDataChannel)); within this function you'll want to assign it to a variable. Again you’ll want to create the variable outside of the function so that you can assign it later. Add the following below your previous code:
+3. When a connection is created, let's use the PeerJS framework's `on('connection')` to set the remote peer's ID and open the connection. The function for this listener accepts a `connection` object which is an instance of the `DataConnection` object (which is a wrapper around WebRTC's [`RTCDataChannel`](/en-US/docs/Web/API/RTCDataChannel)); within this function you'll want to assign it to a variable. Again you'll want to create the variable outside of the function so that you can assign it later. Add the following below your previous code:
 
     ```js
     peer.on('connection', function(connection){

@@ -10,7 +10,7 @@ browser-compat: svg.elements.a
 ---
 {{SVGRef}}
 
-The **\<a>** SVG element creates a hyperlink to other web pages, files, locations in the same page, email addresses, or any other URL. It is very similar to HTML’s {{htmlelement("a")}} element.
+The **\<a>** SVG element creates a hyperlink to other web pages, files, locations in the same page, email addresses, or any other URL. It is very similar to HTML's {{htmlelement("a")}} element.
 
 SVG's `<a>` element is a container, which means you can create a link around text (like in HTML) but also around any shape.
 
@@ -42,7 +42,7 @@ html,body,svg { height:100% }
    it's considered best practice to add some */
 
 @namespace svg url(http://www.w3.org/2000/svg);
-/* Necessary to select only SVG <a> elements, and not also HTML’s.
+/* Necessary to select only SVG <a> elements, and not also HTML's.
    See warning below */
 
 svg|a:link, svg|a:visited {

@@ -10,9 +10,9 @@ browser-compat: http.headers.csp.Content-Security-Policy.require-trusted-types-f
 ---
 {{HTTPSidebar}}
 
-The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`require-trusted-types-for`** {{experimental_inline}} directive instructs user agents to control the data passed to DOM XSS sink functions, like {{DOMxRef("Element.innerHTML")}} setter.
+The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`require-trusted-types-for`** {{experimental_inline}} directive instructs user agents to control the data passed to DOM XSS sink functions, like {{DOMxRef("Element.innerHTML")}} setter.
 
-When used, those functions only accept non-spoofable, typed values created by Trusted Type policies, and reject strings. Together with **[`trusted-types`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types)** directive, which guards creation of Trusted Type policies, this allows authors to define rules guarding writing values to the DOM and thus reducing the DOM XSS attack surface to small, isolated parts of the web application codebase, facilitating their monitoring and code review.
+When used, those functions only accept non-spoofable, typed values created by Trusted Type policies, and reject strings. Together with **[`trusted-types`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types)** directive, which guards creation of Trusted Type policies, this allows authors to define rules guarding writing values to the DOM and thus reducing the DOM XSS attack surface to small, isolated parts of the web application codebase, facilitating their monitoring and code review.
 
 ## Syntax
 

@@ -35,10 +35,10 @@ var deviceOrientationEvent = new DeviceOrientationEvent(type[, options])
     - `beta`: A number representing the motion of the device around the x
       axis, express in degrees with values ranging from -180 to 180. This represents a
       front to back motion of the device.
-    - `gamma`: A number representing the motion of the device around the y
+    - `gamma`: A number representing the motion of the device around the y
       axis, express in degrees with values ranging from -90 to 90. This represents a
       left to right motion of the device.
-    - `absolute`: A boolean that indicates whether or not the device is
+    - `absolute`: A boolean that indicates whether or not the device is
       providing orientation data absolutely.
 
 ## Specifications

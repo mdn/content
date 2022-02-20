@@ -16,7 +16,7 @@ As of HTTP/1.1, the connection is no longer closed after completing the third ph
 
 ## Establishing a connection
 
-In client-server protocols, it is the client which establishes the connection. Opening a connection in HTTP means initiating a connection in the underlying transport layer, usually this is TCP.
+In client-server protocols, it is the client which establishes the connection. Opening a connection in HTTP means initiating a connection in the underlying transport layer, usually this is TCP.
 
 With TCP the default port, for an HTTP server on a computer, is port 80. Other ports can also be used, like 8000 or 8080. The URL of a page to fetch contains both the domain name, and the port number, though the latter can be omitted if it is 80. See [Identifying resources on the Web](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web) for more details.
 
@@ -28,10 +28,10 @@ Once the connection is established, the user-agent can send the request (a user-
 
 1. The first line contains a request method followed by its parameters:
 
-    - the path of the document, as an absolute URL without the protocol or domain name
+    - the path of the document, as an absolute URL without the protocol or domain name
     - the HTTP protocol version
 
-2. Subsequent lines represent an HTTP header, giving the server information about what type of data is appropriate (for example, what language, what MIME types), or other data altering its behavior (for example, not sending an answer if it is already cached). These HTTP headers form a block which ends with an empty line.
+2. Subsequent lines represent an HTTP header, giving the server information about what type of data is appropriate (for example, what language, what MIME types), or other data altering its behavior (for example, not sending an answer if it is already cached). These HTTP headers form a block which ends with an empty line.
 3. The final block is an optional data block, which may contain further data mainly used by the POST method.
 
 ### Example requests
@@ -44,7 +44,7 @@ Host: developer.mozilla.org
 Accept-Language: fr
 ```
 
-Observe that final empty line, this separates the data block from the header block. As there is no `Content-Length` provided in an HTTP header, this data block is presented empty, marking the end of the headers, allowing the server to process the request the moment it receives this empty line.
+Observe that final empty line, this separates the data block from the header block. As there is no `Content-Length` provided in an HTTP header, this data block is presented empty, marking the end of the headers, allowing the server to process the request the moment it receives this empty line.
 
 For example, sending the result of a form:
 
@@ -68,8 +68,8 @@ HTTP defines a set of [request methods](/en-US/docs/Web/HTTP/Methods) indicating
 
 After the connected agent has sent its request, the web server processes it, and ultimately returns a response. Similar to a client request, a server response is formed of text directives, separated by CRLF, though divided into three blocks:
 
-1. The first line, the _status line_, consists of an acknowledgment of the HTTP version used, followed by a response status code (and its brief meaning in human-readable text).
-2. Subsequent lines represent specific HTTP headers, giving the client information about the data sent (for example, type, data size, compression algorithm used, hints about caching). Similarly to the block of HTTP headers for a client request, these HTTP headers form a block ending with an empty line.
+1. The first line, the _status line_, consists of an acknowledgment of the HTTP version used, followed by a response status code (and its brief meaning in human-readable text).
+2. Subsequent lines represent specific HTTP headers, giving the client information about the data sent (for example, type, data size, compression algorithm used, hints about caching). Similarly to the block of HTTP headers for a client request, these HTTP headers form a block ending with an empty line.
 3. The final block is a data block, which contains the optional data.
 
 ### Example responses

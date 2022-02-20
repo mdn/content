@@ -21,9 +21,9 @@ None.
 ## Methods
 
 - {{domxref("SyncManager.register")}}
-  - : Create a new sync registration and return a {{jsxref("Promise")}}.
+  - : Create a new sync registration and return a {{jsxref("Promise")}}.
 - {{domxref("SyncManager.getTags")}}
-  - : Return a list of developer-defined identifiers for SyncManager registration.
+  - : Return a list of developer-defined identifiers for SyncManager registration.
 
 ## Specifications
 

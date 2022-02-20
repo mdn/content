@@ -55,7 +55,7 @@ However, this is not the case for negative numbers. For example,
 
 ## Examples
 
-### Using unsigned right shift
+### Using unsigned right shift
 
 ```js
  9 >>> 2; // 2

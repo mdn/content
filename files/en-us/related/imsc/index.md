@@ -14,7 +14,7 @@ IMSC is standardized by the W3C, and used around the world by content producers 
 
 IMSC supports a wide range of world languages and scripts, and rich styling. In addition to text-based subtitles, IMSC also supports PNG subtitles.
 
-Each IMSC document is self-contained and combines content, timing, layout and styling information.  The content of the document is structured using tags similar to those used in HTML such as `<body>`, `<div>`, `<p>`, `<span>`, and `<br>`. Timing and styling are expressed using attributes such as `begin`, `end`, `color`, `tts:backgroundColor`, `tts:fontSize`, `tts:fontFamily` — these are mostly familiar concepts to anyone familiar with CSS.
+Each IMSC document is self-contained and combines content, timing, layout and styling information.  The content of the document is structured using tags similar to those used in HTML such as `<body>`, `<div>`, `<p>`, `<span>`, and `<br>`. Timing and styling are expressed using attributes such as `begin`, `end`, `color`, `tts:backgroundColor`, `tts:fontSize`, `tts:fontFamily` — these are mostly familiar concepts to anyone familiar with CSS.
 
 ### Differences between IMSC, HTML, and CSS
 
@@ -37,57 +37,57 @@ WebVTT is supported natively to some extent by browsers, while IMSC is not.
 
 There is however an IMSC polyfill, called imscJS, which is used to render all the examples in this documentation. From a developer's perspective, imscJS allows a consistent experience across browsers.
 
-IMSC also supports styles, like `tts:linePadding` and `tts:fillLineGap`, and features, such as support for HDR and stereoscopic 3D, that are useful for subtitle and captions, but not available in WebVTT.
+IMSC also supports styles, like `tts:linePadding` and `tts:fillLineGap`, and features, such as support for HDR and stereoscopic 3D, that are useful for subtitle and captions, but not available in WebVTT.
 
-Below is an example that uses `tts:fillLineGap`:
+Below is an example that uses `tts:fillLineGap`:
 
 ```xml
 <tt xmlns="http://www.w3.org/ns/ttml"
-    xmlns:tts="http://www.w3.org/ns/ttml#styling"
-    xmlns:itts="http://www.w3.org/ns/ttml/profile/imsc1#styling"
-    xml:lang="en">
-    <head>
-      <styling>
-       <style xml:id="defaultStyle"
-              tts:fontSize="125%"
-              tts:lineHeight="120%"/>
-       <style xml:id="spanStyle"
-              tts:backgroundColor="black"
-              tts:color="white"/>
-       <style xml:id="fillGap"
-             itts:fillLineGap="true"/>
-      </styling>
-     <layout>
-     <region xml:id="top"
-             tts:origin="5% 5%"
-             tts:extent="90% 40%"
-             tts:textAlign="center"
-             tts:displayAlign="before"/>
-     <region xml:id="bottom"
-            tts:origin="5% 55%"
-            tts:extent="90% 40%"
-            tts:textAlign="center"
-            tts:displayAlign="after"/>
-    </layout>
-  </head>
- <body style="defaultStyle">
-  <div>
-    <p region="top">
-      <span style="spanStyle">Without itts:fillLineGap<br/>
+    xmlns:tts="http://www.w3.org/ns/ttml#styling"
+    xmlns:itts="http://www.w3.org/ns/ttml/profile/imsc1#styling"
+    xml:lang="en">
+    <head>
+      <styling>
+       <style xml:id="defaultStyle"
+              tts:fontSize="125%"
+              tts:lineHeight="120%"/>
+       <style xml:id="spanStyle"
+              tts:backgroundColor="black"
+              tts:color="white"/>
+       <style xml:id="fillGap"
+             itts:fillLineGap="true"/>
+      </styling>
+     <layout>
+     <region xml:id="top"
+             tts:origin="5% 5%"
+             tts:extent="90% 40%"
+             tts:textAlign="center"
+             tts:displayAlign="before"/>
+     <region xml:id="bottom"
+            tts:origin="5% 55%"
+            tts:extent="90% 40%"
+            tts:textAlign="center"
+            tts:displayAlign="after"/>
+    </layout>
+  </head>
+ <body style="defaultStyle">
+  <div>
+    <p region="top">
+      <span style="spanStyle">Without itts:fillLineGap<br/>
       Gaps between lines appear.</span>
-    </p>
-    <p region="bottom" style="fillGap">
-      <span style="spanStyle">With itts:fillLineGap<br/>
+    </p>
+    <p region="bottom" style="fillGap">
+      <span style="spanStyle">With itts:fillLineGap<br/>
       Gaps between lines are "filled".<br/></span>
-    </p>
-    </div>
- </body>
+    </p>
+    </div>
+ </body>
 </tt>
 ```
 
 {{EmbedGHLiveSample("imsc/fillLineGap/fillLineGap.html", '100%', '256px')}}
 
-... and an example that uses `ebutts:linePadding`:
+... and an example that uses `ebutts:linePadding`:
 
 {{EmbedGHLiveSample("imsc/linePadding/linePadding.html", '100%', '256px')}}
 
@@ -102,7 +102,7 @@ In contrast to IMSC, which uses markup, WebVTT uses a combination of CSS and pla
 - [Using the imscJS polyfill](/en-US/docs/Related/IMSC/Using_the_imscJS_polyfill)
   - : You currently need a polyfill to render IMSC on the web. imscJS is a good choice as it is actively maintained and has almost complete coverage of the IMSC features. This article hows you how to make use of imscJS and how to integrate it on your own website.
 - [Styling IMSC documents](/en-US/docs/Related/IMSC/Styling)
-  - : IMSC offers many options for styling documents, and most of the IMSC styling properties have direct CSS equivalents, making them familiar to web developers.  In this guide you'll learn a bit more about IMSC styling including the difference between inline and referential styling, and efficient styling using inheritance and region styling.
+  - : IMSC offers many options for styling documents, and most of the IMSC styling properties have direct CSS equivalents, making them familiar to web developers.  In this guide you'll learn a bit more about IMSC styling including the difference between inline and referential styling, and efficient styling using inheritance and region styling.
 - [Subtitle placement in IMSC](/en-US/docs/Related/IMSC/Subtitle_placement)
   - : IMSC allows the author to precisely control the position of subtitles, such that the text is positioned next to the speaker or to avoid obscuring an important content in your video. Learn how to define a subtitle region and how to define its width and height.
 - [Namespaces in IMSC](/en-US/docs/Related/IMSC/Namespaces)

@@ -226,9 +226,9 @@ with storage in a third-party context. In the following examples,
 
 | Reason                                                                                                  | Console Message                                                                                                                                       |
 | ------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Storage of a third-party frame is partitioned                                                           | Partitioned cookie or storage access was provided to “b.example” because it is loaded in the third-party context and storage partitioning is enabled. |
-| Storage access is granted through a **heuristic**                                                       | Storage access automatically granted for First-Party isolation “b.example” on “a.example”.                                                            |
-| Storage access is granted via the [StorageAccessAPI](/en-US/docs/Web/API/Document/requestStorageAccess) | Storage access granted for origin “b.example” on “a.example”.                                                                                         |
+| Storage of a third-party frame is partitioned                                                           | Partitioned cookie or storage access was provided to "b.example" because it is loaded in the third-party context and storage partitioning is enabled. |
+| Storage access is granted through a **heuristic**                                                       | Storage access automatically granted for First-Party isolation "b.example" on "a.example".                                                            |
+| Storage access is granted via the [StorageAccessAPI](/en-US/docs/Web/API/Document/requestStorageAccess) | Storage access granted for origin "b.example" on "a.example".                                                                                         |
 
 #### Clear Third-Party Storage-Access
 
@@ -257,7 +257,7 @@ Features disabled by the pref include:
 - Automatic storage access grants:
   [document.requestStorageAccess](/en-US/docs/Web/API/Document/requestStorageAccess)
   will always prompt the user.
-- [SmartBlock’s "unblock on opt-in"
+- [SmartBlock's "unblock on opt-in"
   feature](https://blog.mozilla.org/security/2021/07/13/smartblock-v2/), which
   will allow certain trackers when users interact with them.
 - Any temporary [anti-tracking

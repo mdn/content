@@ -28,7 +28,7 @@ target.onload = functionRef;
 
 ### Value
 
-`functionRef` is the handler function to be called when the window’s
+`functionRef` is the handler function to be called when the window's
 `load` event fires.
 
 ## Examples

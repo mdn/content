@@ -343,9 +343,9 @@ fallbackLabel.style.display = 'none';
 var test = document.createElement('input');
 
 try {
-  test.type = 'week';
+  test.type = 'week';
 } catch (e) {
-  console.log(e.description);
+  console.log(e.description);
 }
 
 // if it does, run the code inside the if() {} block

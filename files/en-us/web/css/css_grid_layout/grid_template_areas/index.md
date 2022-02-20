@@ -87,9 +87,9 @@ Having defined these names I then create my layout. This time, instead of placin
 ```html
 <div class="wrapper">
     <div class="header">Header</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="content">Content</div>
-    <div class="footer">Footer</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Content</div>
+    <div class="footer">Footer</div>
 </div>
 ```
 
@@ -151,9 +151,9 @@ We have completely filled our grid with areas in this example, leaving no white 
 ```html
 <div class="wrapper">
     <div class="header">Header</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="content">Content</div>
-    <div class="footer">Footer</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Content</div>
+    <div class="footer">Footer</div>
 </div>
 ```
 
@@ -217,9 +217,9 @@ The area that you create by chaining the area names must be rectangular, at this
 ```html hidden
 <div class="wrapper">
     <div class="header">Header</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="content">Content</div>
-    <div class="footer">Footer</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Content</div>
+    <div class="footer">Footer</div>
 </div>
 ```
 
@@ -305,9 +305,9 @@ We can then redefine that layout inside media queries to go to our two columns l
 ```html hidden
 <div class="wrapper">
     <div class="header">Header</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="content">Content</div>
-    <div class="footer">Footer</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Content</div>
+    <div class="footer">Footer</div>
 </div>
 ```
 
@@ -319,11 +319,11 @@ Many of the grid examples you will find online make the assumption that you will
 
 ### Media object example
 
-As a very simple example we can create a “media object”. This is a component with space for an image or other media on one side and content on the other. The image might be displayed on the right or left of the box.
+As a very simple example we can create a "media object". This is a component with space for an image or other media on one side and content on the other. The image might be displayed on the right or left of the box.
 
 ![Images showing an example media object design](4_media_objects.png)
 
-Our grid is a two-column track grid, with the column for the image sized at `1fr` and the text `3fr`. If you wanted a fixed width image area, then you could set the image column as a pixel width, and assign the text area `1fr`. A single column track of `1fr` would then take up the rest of the space.
+Our grid is a two-column track grid, with the column for the image sized at `1fr` and the text `3fr`. If you wanted a fixed width image area, then you could set the image column as a pixel width, and assign the text area `1fr`. A single column track of `1fr` would then take up the rest of the space.
 
 We give the image area a grid area name of `img` and the text area `content`, then we can lay those out using the `grid-template-areas` property.
 
@@ -359,8 +359,8 @@ We give the image area a grid area name of `img` and the text area `content`, th
 <div class="media">
     <div class="image"></div>
     <div class="text">This is a media object example.
-      We can use grid-template-areas to switch around the image and text part of the media object.
-    </div>
+      We can use grid-template-areas to switch around the image and text part of the media object.
+    </div>
 </div>
 ```
 
@@ -368,7 +368,7 @@ We give the image area a grid area name of `img` and the text area `content`, th
 
 ### Displaying the image on the other side of the box
 
-We might want to be able to display our box with the image the other way around. To do this, we redefine the grid to put the `1fr` track last, and flip the values in {{cssxref("grid-template-areas")}}.
+We might want to be able to display our box with the image the other way around. To do this, we redefine the grid to put the `1fr` track last, and flip the values in {{cssxref("grid-template-areas")}}.
 
 ```css
 * {box-sizing: border-box;}
@@ -405,10 +405,10 @@ We might want to be able to display our box with the image the other way around.
 
 ```html
 <div class="media flipped">
-    <div class="image"></div>
-    <div class="text">This is a media object example.
-      We can use grid-template-areas to switch around the image and text part of the media object.
-    </div>
+    <div class="image"></div>
+    <div class="text">This is a media object example.
+      We can use grid-template-areas to switch around the image and text part of the media object.
+    </div>
 </div>
 ```
 
@@ -434,7 +434,7 @@ The {{cssxref("grid-template")}} property sets the following properties:
 
 The property is referred to as the Explicit Grid Shorthand because it is setting those things that you control when you define an explicit grid, and not those which impact any implicit row or column tracks that might be created.
 
-The following code creates a layout using {{cssxref("grid-template")}} that is the same as the layout created earlier in this guide.
+The following code creates a layout using {{cssxref("grid-template")}} that is the same as the layout created earlier in this guide.
 
 ```css
 .wrapper {

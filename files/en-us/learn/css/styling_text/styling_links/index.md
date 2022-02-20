@@ -96,7 +96,7 @@ You'll notice a few things as you explore the default styles:
 
   <kbd>tab</kbd>
 
-  , or enable the [Full Keyboard Access: All controls](https://support.apple.com/guide/mac-help/use-your-keyboard-like-a-mouse-mchlp1399/) option by pressing
+  , or enable the [Full Keyboard Access: All controls](https://support.apple.com/guide/mac-help/use-your-keyboard-like-a-mouse-mchlp1399/) option by pressing
 
   <kbd>Ctrl</kbd>
 
@@ -264,7 +264,7 @@ a:active {
   <h2>Output</h2>
   <div class="output" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
   <div class="controls">
-    <input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;">
+    <input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;">
     <input id="solution" type="button" value="Show solution" style="margin: 10px 0 0 10px;">
   </div>
 </div>
@@ -289,9 +289,9 @@ function drawOutput() {
 }
 
 reset.addEventListener("click", function() {
-  htmlInput.value = htmlCode;
-  cssInput.value = cssCode;
-  drawOutput();
+  htmlInput.value = htmlCode;
+  cssInput.value = cssCode;
+  drawOutput();
 });
 
 solution.addEventListener("click", function() {
@@ -363,13 +363,13 @@ a[href*="#"] {
 
 {{ EmbedLiveSample('Including_icons_on_links', '100%', 150) }}
 
-So what's going on here? We'll skip over most of the CSS, as it's just the same information you've looked at before. The last rule, however, is interesting: we're inserting a custom background image on external links in a similar manner to how we handled [custom bullets on list items](/en-US/docs/Learn/CSS/Styling_text/Styling_lists#using_a_custom_bullet_image) in the last article. This time, however, we're using the {{cssxref("background")}} shorthand instead of the individual properties. We set the path to the image we want to insert, specify `no-repeat` so we only get one copy inserted, and then specify the position as 100% of the way to the right of the text content, and 0 pixels from the top.
+So what's going on here? We'll skip over most of the CSS, as it's just the same information you've looked at before. The last rule, however, is interesting: we're inserting a custom background image on external links in a similar manner to how we handled [custom bullets on list items](/en-US/docs/Learn/CSS/Styling_text/Styling_lists#using_a_custom_bullet_image) in the last article. This time, however, we're using the {{cssxref("background")}} shorthand instead of the individual properties. We set the path to the image we want to insert, specify `no-repeat` so we only get one copy inserted, and then specify the position as 100% of the way to the right of the text content, and 0 pixels from the top.
 
 We also use {{cssxref("background-size")}} to specify the size we want the background image to be shown at. It's useful to have a larger icon and then resize it like this as needed for responsive web design purposes. This does, however, only work with IE 9 and later. So if you need to support older browsers, you'll just have to resize the image and insert it as is.
 
 Finally, we set some {{cssxref("padding-right")}} on the links to make space for the background image to appear in, so we aren't overlapping it with the text.
 
-A final word: how did we select just external links? Well, if you are writing your [HTML links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) properly, you should only be using absolute URLs for external links — it is more efficient to use relative links to link to other parts of your own site (as with the first link). The text "http" should therefore only appear in external links (like the second and third ones), and we can select this with an [attribute selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors#attribute_selectors): `a[href*="http"]` selects {{htmlelement("a")}} elements, but only if they have an {{htmlattrxref("href","a")}} attribute with a value that contains "http" somewhere inside it.
+A final word: how did we select just external links? Well, if you are writing your [HTML links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) properly, you should only be using absolute URLs for external links — it is more efficient to use relative links to link to other parts of your own site (as with the first link). The text "http" should therefore only appear in external links (like the second and third ones), and we can select this with an [attribute selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors#attribute_selectors): `a[href*="http"]` selects {{htmlelement("a")}} elements, but only if they have an {{htmlattrxref("href","a")}} attribute with a value that contains "http" somewhere inside it.
 
 So that's it. Try revisiting the active learning section above and trying this new technique out!
 
@@ -409,18 +409,18 @@ li {
 }
 
 a {
-  outline: none;
+  outline: none;
   text-decoration: none;
-  display: inline-block;
-  width: 19.5%;
-  margin-right: 0.625%;
-  text-align: center;
-  line-height: 3;
-  color: black;
+  display: inline-block;
+  width: 19.5%;
+  margin-right: 0.625%;
+  text-align: center;
+  line-height: 3;
+  color: black;
 }
 
 li:last-child a {
-  margin-right: 0;
+  margin-right: 0;
 }
 
 a:link, a:visited, a:focus {

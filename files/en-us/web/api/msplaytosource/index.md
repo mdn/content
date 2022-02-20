@@ -40,7 +40,7 @@ media element.
 <video id="videoplayer" src="http://www.contoso.com/clip.mp4" controls autoplay />
 <script type="text/javascript">
 
-  // Step 1: Obtain PlayToManager object for app’s current view.
+  // Step 1: Obtain PlayToManager object for app's current view.
     var ptm = Windows.Media.PlayTo.PlayToManager.getForCurrentView();
 
   // Step 2: Register for the sourcerequested event (user swipes Devices charm).

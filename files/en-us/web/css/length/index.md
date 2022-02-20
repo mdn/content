@@ -33,15 +33,15 @@ Relative lengths represent a measurement in terms of some other distance. Depend
 
 Font-relative lengths define the `<length>` value in terms of the size of a particular character or font attribute in the font currently in effect in an element or its parent.
 
-> **Note:** These units, especially `em` and `rem`, are often used to create scalable layouts, which maintain the [vertical rhythm of the page](https://24ways.org/2006/compose-to-a-vertical-rhythm)  even when the user changes the font size.
+> **Note:** These units, especially `em` and `rem`, are often used to create scalable layouts, which maintain the [vertical rhythm of the page](https://24ways.org/2006/compose-to-a-vertical-rhythm)  even when the user changes the font size.
 
 - `cap` {{experimental_inline}}
-  - : Represents the "cap height" (nominal height of capital letters) of the element’s {{Cssxref("font")}}.
+  - : Represents the "cap height" (nominal height of capital letters) of the element's {{Cssxref("font")}}.
 - `ch`
 
   - : Represents the width, or more precisely the {{Glossary("advance measure")}}, of the glyph "0" (zero, the Unicode character U+0030) in the element's {{Cssxref("font")}}.
 
-    In the cases where it is impossible or impractical to determine the measure of the “0” glyph, it must be assumed to be 0.5em wide by 1em tall.
+    In the cases where it is impossible or impractical to determine the measure of the "0" glyph, it must be assumed to be 0.5em wide by 1em tall.
 
 - `em`
   - : Represents the calculated {{Cssxref("font-size")}} of the element. If used on the {{Cssxref("font-size")}} property itself, it represents the _inherited_ font-size of the element.
@@ -65,9 +65,9 @@ Viewport-percentage lengths define the `<length>` value relative to the size of 
 - `vw`
   - : Equal to 1% of the width of the viewport's initial [containing block](/en-US/docs/Web/CSS/Containing_block).
 - `vi` {{experimental_inline}}
-  - : Equal to 1% of the size of the initial [containing block](/en-US/docs/Web/CSS/Containing_block), in the direction of the root element’s [inline axis](/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline).
+  - : Equal to 1% of the size of the initial [containing block](/en-US/docs/Web/CSS/Containing_block), in the direction of the root element's [inline axis](/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline).
 - `vb` {{experimental_inline}}
-  - : Equal to 1% of the size of the initial [containing block](/en-US/docs/Web/CSS/Containing_block), in the direction of the root element’s [block axis](/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline).
+  - : Equal to 1% of the size of the initial [containing block](/en-US/docs/Web/CSS/Containing_block), in the direction of the root element's [block axis](/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline).
 - `vmin`
   - : Equal to the smaller of `vw` and `vh`.
 - `vmax`

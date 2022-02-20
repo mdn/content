@@ -61,8 +61,8 @@ displayed after a user agrees to an unusual request.
 ```js
 document.getElementById("okButton")
         .addEventListener("click", function() {
-  document.getElementById("welcome").hidden = true;
-  document.getElementById("awesome").hidden = false;
+  document.getElementById("welcome").hidden = true;
+  document.getElementById("awesome").hidden = false;
 }, false);
 ```
 

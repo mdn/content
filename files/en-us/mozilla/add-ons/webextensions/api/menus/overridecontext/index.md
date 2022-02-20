@@ -14,7 +14,7 @@ tags:
 
 Hide all default Firefox menu items in favor of providing a custom context menu UI.
 
-The overrideContext method will cause the matching menu items from this extension to be shown instead of the default menu. This method should be called from a {{Event("contextmenu")}} DOM event handler, and only applies to the menu that opens after this event.
+The overrideContext method will cause the matching menu items from this extension to be shown instead of the default menu. This method should be called from a {{Event("contextmenu")}} DOM event handler, and only applies to the menu that opens after this event.
 
 This interface requires the `menus.overrideContext` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 

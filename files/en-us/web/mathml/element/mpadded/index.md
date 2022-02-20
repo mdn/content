@@ -45,11 +45,11 @@ Prior to Gecko 7.0 {{ geckoRelease("7.0") }} the MathML2 pseudo-unit `lspace` wa
 ```html
 <math>
 
-  <mpadded height="+150px" width="100px" lspace="2height">
-    <mi> x </mi>
-    <mo> + </mo>
-    <mi> y </mi>
-  </mpadded>
+  <mpadded height="+150px" width="100px" lspace="2height">
+    <mi> x </mi>
+    <mo> + </mo>
+    <mi> y </mi>
+  </mpadded>
 
 </math>
 ```

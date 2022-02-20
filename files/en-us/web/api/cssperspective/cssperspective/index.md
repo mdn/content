@@ -12,7 +12,7 @@ tags:
   - Houdini
 browser-compat: api.CSSPerspective.CSSPerspective
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSPerspective()`** constructor creates
 a new {{domxref("CSSPerspective")}} object representing the [perspective()](</en-US/docs/Web/CSS/transform-function/perspective()>) value of

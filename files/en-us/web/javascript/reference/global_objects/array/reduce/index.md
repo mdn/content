@@ -15,7 +15,7 @@ browser-compat: javascript.builtins.Array.reduce
 ---
 {{JSRef}}
 
-The **`reduce()`** method executes a user-supplied “reducer” callback function on each element of the array, in order, passing in the return value from the calculation on the preceding element.
+The **`reduce()`** method executes a user-supplied "reducer" callback function on each element of the array, in order, passing in the return value from the calculation on the preceding element.
 The final result of running the reducer across all elements of the array is a single value.
 
 The first time that the callback is run there is no "return value of the previous calculation".
@@ -51,7 +51,7 @@ reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ },
 ### Parameters
 
 - `callbackFn`
-  - : A “reducer” function that takes four arguments:
+  - : A "reducer" function that takes four arguments:
     - `previousValue`: the value resulting from the previous call to `callbackFn`.
       On first call, `initialValue` if specified, otherwise the value of `array[0]`.
     - `currentValue`: the value of the current element.
@@ -67,7 +67,7 @@ reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ },
 
 ### Return value
 
-The value that results from running the “reducer” callback function to completion over the entire array.
+The value that results from running the "reducer" callback function to completion over the entire array.
 
 ### Exceptions
 

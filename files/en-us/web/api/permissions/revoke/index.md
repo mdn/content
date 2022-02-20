@@ -72,9 +72,9 @@ be revoked.
 
 ```js
 function revokePermission() {
-  navigator.permissions.revoke({name:'geolocation'}).then(function(result) {
-    report(result.state);
-  });
+  navigator.permissions.revoke({name:'geolocation'}).then(function(result) {
+    report(result.state);
+  });
 }
 ```
 

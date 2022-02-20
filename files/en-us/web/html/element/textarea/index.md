@@ -120,7 +120,7 @@ In most browsers, `<textarea>`s are resizable — you'll notice the drag handle 
 
 ```html
 textarea {
-  resize: none;
+  resize: none;
 }
 ```
 

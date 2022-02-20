@@ -85,7 +85,7 @@ Not at all. While `ember-data` solves _the most common problems_ that any app de
 data will run in to, it is possible to roll your own front-end data client. A common
 alternative is to any fully-featured front-end data client is [The Fetch API](/en-US/docs/Web/API/Fetch_API/Using_Fetch).
 
-Using the design patterns provided by the framework, a `Route` using `fetch()` would look something  like this:
+Using the design patterns provided by the framework, a `Route` using `fetch()` would look something  like this:
 
 ```js
 import Route from '@ember/routing/route';

@@ -27,7 +27,7 @@ Microsoft applications such as Edge and Internet Explorer support a number of sp
 - {{CSSxRef("-ms-content-zoom-snap")}}
 - {{CSSxRef("-ms-content-zoom-snap-points")}}
 - {{CSSxRef("-ms-content-zoom-snap-type")}}
-- {{CSSxRef("-ms-filter")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-filter")}} {{deprecated_inline}}
 - {{CSSxRef("-ms-flow-from")}}
 - {{CSSxRef("-ms-flow-into")}}
 - {{CSSxRef("-ms-high-contrast-adjust")}}
@@ -36,14 +36,14 @@ Microsoft applications such as Edge and Internet Explorer support a number of sp
 - {{CSSxRef("-ms-hyphenate-limit-zone")}}
 - {{CSSxRef("-ms-ime-align")}}
 - {{CSSxRef("-ms-overflow-style")}}
-- {{CSSxRef("-ms-scrollbar-3dlight-color")}} {{deprecated_inline}}
-- {{CSSxRef("-ms-scrollbar-arrow-color")}} {{deprecated_inline}}
-- {{CSSxRef("-ms-scrollbar-base-color")}} {{deprecated_inline}}
-- {{CSSxRef("-ms-scrollbar-darkshadow-color")}} {{deprecated_inline}}
-- {{CSSxRef("-ms-scrollbar-face-color")}} {{deprecated_inline}}
-- {{CSSxRef("-ms-scrollbar-highlight-color")}} {{deprecated_inline}}
-- {{CSSxRef("-ms-scrollbar-shadow-color")}} {{deprecated_inline}}
-- {{CSSxRef("-ms-scrollbar-track-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-3dlight-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-arrow-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-base-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-darkshadow-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-face-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-highlight-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-shadow-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-track-color")}} {{deprecated_inline}}
 - {{CSSxRef("-ms-scroll-chaining")}}
 - {{CSSxRef("-ms-scroll-limit")}}
 - {{CSSxRef("-ms-scroll-limit-x-max")}}

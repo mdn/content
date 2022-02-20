@@ -53,13 +53,13 @@ Each storage type represents a separate repository. Here's the actual mapping to
 - `<profile>/storage/temporary` — temporary data storage repository
 - `<profile>/storage/default` — default data storage repository
 
-> **Note:** After introducing [Storage API](/en-US/docs/Web/API/Storage_API), the "permanent" folder can be considered obsolete; the "permanent" folder only stores IndexedDB persistent-type databases. It doesn't matter if box mode is "best-effort" or "persistent" — data is stored under \<profile>/storage/default.
+> **Note:** After introducing [Storage API](/en-US/docs/Web/API/Storage_API), the "permanent" folder can be considered obsolete; the "permanent" folder only stores IndexedDB persistent-type databases. It doesn't matter if box mode is "best-effort" or "persistent" — data is stored under \<profile>/storage/default.
 
 > **Note:** In Firefox, you can find your profile folder by entering `about:support` in the URL bar, and pressing the _Show in..._ button (e.g., _Show in Finder_ on Mac OS X) next to the _Profile Folder_ title.
 
 > **Note:** If you are looking around in your Profile at the data stored, you might see a fourth folder: `persistent`. Basically, the `persistent` folder was renamed to `permanent` a while ago to keep upgrades/migration simpler.
 
-> **Note:** Users shouldn’t add their own directories or files under `<profile>/storage`. This will cause storage initialization to fail; for example, {{domxref("IDBFactory.open()", "open()")}} will fire an error event.
+> **Note:** Users shouldn't add their own directories or files under `<profile>/storage`. This will cause storage initialization to fail; for example, {{domxref("IDBFactory.open()", "open()")}} will fire an error event.
 
 ## Storage limits
 

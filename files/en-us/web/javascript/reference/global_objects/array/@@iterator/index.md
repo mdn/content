@@ -56,9 +56,9 @@ const letterResult = document.getElementById('letterResult');
 // and let-scoped variables in for loops
 // const and var could also be used
 for (let letter of eArr) {
-  const li = document.createElement('LI');
-  li.textContent = letter;
-  letterResult.appendChild(li);
+  const li = document.createElement('LI');
+  li.textContent = letter;
+  letterResult.appendChild(li);
 }
 ```
 

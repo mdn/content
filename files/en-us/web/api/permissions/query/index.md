@@ -11,7 +11,7 @@ browser-compat: api.Permissions.query
 ---
 {{APIRef("Permissions API")}}{{SeeCompatTable}}
 
-The **`Permissions.query()`** method of the {{domxref("Permissions")}} interface returns the state of a user permission on the global scope.
+The **`Permissions.query()`** method of the {{domxref("Permissions")}} interface returns the state of a user permission on the global scope.
 
 ## Syntax
 
@@ -64,9 +64,9 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("PermissionStatus")}} objec
 ```js
 navigator.permissions.query({name:'geolocation'}).then(function(result) {
  if (result.state == 'granted') {
-   showLocalNewsWithGeolocation();
+   showLocalNewsWithGeolocation();
  } else if (result.state == 'prompt') {
-   showButtonToEnableLocalNews();
+   showButtonToEnableLocalNews();
  }
  // Don't do anything if the permission was denied.
 });

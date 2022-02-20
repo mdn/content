@@ -14,7 +14,7 @@ tags:
 ---
 {{HTTPSidebar}}
 
-HTTP allows a browser, or another {{Glossary("user agent")}}, to communicate with different _resources_ on the Internet: to do this the browser needs both the _identity_ and the _location_ of the resources. These two bits of information are described by a {{glossary("URI")}}.
+HTTP allows a browser, or another {{Glossary("user agent")}}, to communicate with different _resources_ on the Internet: to do this the browser needs both the _identity_ and the _location_ of the resources. These two bits of information are described by a {{glossary("URI")}}.
 
 - [Identifying resources on the Web](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
   - : URIs and how to access resources on the Web.

@@ -2076,30 +2076,6 @@
       "teoli"
     ]
   },
-  "Glossary/DHTML": {
-    "modified": "2019-04-25T05:59:35.601Z",
-    "contributors": [
-      "Sodan",
-      "klez",
-      "Andrew_Pfeiffer",
-      "hbloomer",
-      "Jeremie",
-      "Afnank123",
-      "anirudh_venkatesh",
-      "Biraj",
-      "antonradev",
-      "teoli",
-      "ethertank",
-      "Mgjbot",
-      "Blakeross",
-      "Chbok",
-      "Sebuls",
-      "Ptak82",
-      "Dria",
-      "RuiMaciel",
-      "Nickolay"
-    ]
-  },
   "Glossary/DMZ": {
     "modified": "2019-03-23T22:19:20.185Z",
     "contributors": [
@@ -28743,6 +28719,36 @@
       "Sheppy"
     ]
   },
+  "Web/API/BatteryManager/chargingchange_event": {
+    "modified": "2020-10-15T21:23:38.402Z",
+    "contributors": [
+      "fscholz",
+      "chrisdavidmills",
+      "Hugues-Antoine",
+      "Fernando_Bernal_Marin",
+      "Sebastianz",
+      "franciov",
+      "teoli",
+      "mounirlamouri",
+      "Sheppy",
+      "Jeremie"
+    ]
+  },
+  "Web/API/BatteryManager/chargingtimechange_event": {
+    "modified": "2020-10-15T21:23:37.770Z",
+    "contributors": [
+      "fscholz",
+      "chrisdavidmills",
+      "Hugues-Antoine",
+      "Fernando_Bernal_Marin",
+      "Sebastianz",
+      "franciov",
+      "teoli",
+      "mounirlamouri",
+      "Sheppy",
+      "Jeremie"
+    ]
+  },
   "Web/API/BatteryManager/dischargingTime": {
     "modified": "2020-10-15T21:22:02.807Z",
     "contributors": [
@@ -28755,6 +28761,22 @@
       "franciov",
       "Jeremie",
       "Sheppy"
+    ]
+  },
+  "Web/API/BatteryManager/dischargingtimechange_event": {
+    "modified": "2020-10-15T21:23:39.078Z",
+    "contributors": [
+      "fscholz",
+      "chrisdavidmills",
+      "tatellos",
+      "Hugues-Antoine",
+      "Fernando_Bernal_Marin",
+      "Sebastianz",
+      "franciov",
+      "teoli",
+      "mounirlamouri",
+      "Sheppy",
+      "Jeremie"
     ]
   },
   "Web/API/BatteryManager/level": {
@@ -28772,53 +28794,7 @@
       "Sheppy"
     ]
   },
-  "Web/API/BatteryManager/onchargingchange": {
-    "modified": "2020-10-15T21:23:38.402Z",
-    "contributors": [
-      "fscholz",
-      "chrisdavidmills",
-      "Hugues-Antoine",
-      "Fernando_Bernal_Marin",
-      "Sebastianz",
-      "franciov",
-      "teoli",
-      "mounirlamouri",
-      "Sheppy",
-      "Jeremie"
-    ]
-  },
-  "Web/API/BatteryManager/onchargingtimechange": {
-    "modified": "2020-10-15T21:23:37.770Z",
-    "contributors": [
-      "fscholz",
-      "chrisdavidmills",
-      "Hugues-Antoine",
-      "Fernando_Bernal_Marin",
-      "Sebastianz",
-      "franciov",
-      "teoli",
-      "mounirlamouri",
-      "Sheppy",
-      "Jeremie"
-    ]
-  },
-  "Web/API/BatteryManager/ondischargingtimechange": {
-    "modified": "2020-10-15T21:23:39.078Z",
-    "contributors": [
-      "fscholz",
-      "chrisdavidmills",
-      "tatellos",
-      "Hugues-Antoine",
-      "Fernando_Bernal_Marin",
-      "Sebastianz",
-      "franciov",
-      "teoli",
-      "mounirlamouri",
-      "Sheppy",
-      "Jeremie"
-    ]
-  },
-  "Web/API/BatteryManager/onlevelchange": {
+  "Web/API/BatteryManager/levelchange_event": {
     "modified": "2020-10-15T21:23:39.415Z",
     "contributors": [
       "mfluehr",
@@ -29229,12 +29205,6 @@
   },
   "Web/API/Bluetooth/getDevices": {
     "modified": "2020-10-15T22:29:10.156Z",
-    "contributors": [
-      "bershanskiy"
-    ]
-  },
-  "Web/API/Bluetooth/onavailabilitychanged": {
-    "modified": "2020-10-15T22:28:48.266Z",
     "contributors": [
       "bershanskiy"
     ]
@@ -54444,18 +54414,6 @@
       "teoli"
     ]
   },
-  "Web/API/IDBCursorSync": {
-    "modified": "2019-03-24T00:11:24.809Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz",
-      "teoli",
-      "pdm",
-      "amaneight",
-      "grendel",
-      "jswisher"
-    ]
-  },
   "Web/API/IDBCursorWithValue": {
     "modified": "2020-10-15T21:21:13.383Z",
     "contributors": [
@@ -54512,12 +54470,6 @@
       "jswisher"
     ]
   },
-  "Web/API/IDBDatabase/abort_event": {
-    "modified": "2020-10-15T22:14:46.670Z",
-    "contributors": [
-      "wbamberg"
-    ]
-  },
   "Web/API/IDBDatabase/close": {
     "modified": "2020-10-15T21:25:17.495Z",
     "contributors": [
@@ -54564,12 +54516,6 @@
       "chrahunt"
     ]
   },
-  "Web/API/IDBDatabase/error_event": {
-    "modified": "2020-10-15T22:14:45.297Z",
-    "contributors": [
-      "wbamberg"
-    ]
-  },
   "Web/API/IDBDatabase/name": {
     "modified": "2020-10-15T21:25:18.764Z",
     "contributors": [
@@ -54589,55 +54535,6 @@
       "jpmedley",
       "arronei",
       "libbymc",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/IDBDatabase/onabort": {
-    "modified": "2020-10-15T21:25:18.520Z",
-    "contributors": [
-      "sideshowbarker",
-      "wbamberg",
-      "CITguy",
-      "chrisdavidmills",
-      "fscholz",
-      "jpmedley",
-      "arronei",
-      "libbymc"
-    ]
-  },
-  "Web/API/IDBDatabase/onclose": {
-    "modified": "2020-10-15T21:49:13.932Z",
-    "contributors": [
-      "wbamberg",
-      "CITguy",
-      "fscholz",
-      "jpmedley",
-      "teoli",
-      "Sheppy"
-    ]
-  },
-  "Web/API/IDBDatabase/onerror": {
-    "modified": "2020-10-15T21:25:18.627Z",
-    "contributors": [
-      "sideshowbarker",
-      "wbamberg",
-      "CITguy",
-      "chrisdavidmills",
-      "fscholz",
-      "jpmedley",
-      "arronei",
-      "gnacu",
-      "libbymc"
-    ]
-  },
-  "Web/API/IDBDatabase/onversionchange": {
-    "modified": "2020-10-15T21:25:17.582Z",
-    "contributors": [
-      "sideshowbarker",
-      "wbamberg",
-      "CITguy",
-      "fscholz",
-      "jpmedley",
       "chrisdavidmills"
     ]
   },
@@ -54692,28 +54589,6 @@
       "mnoorenberghe",
       "grendel",
       "kathyw",
-      "jswisher"
-    ]
-  },
-  "Web/API/IDBDatabaseSync": {
-    "modified": "2019-03-24T00:10:32.316Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz",
-      "teoli",
-      "pdm",
-      "amaneight",
-      "jswisher"
-    ]
-  },
-  "Web/API/IDBEnvironmentSync": {
-    "modified": "2019-03-24T00:10:38.611Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz",
-      "teoli",
-      "pdm",
-      "khushboo_Dwivedi",
       "jswisher"
     ]
   },
@@ -54795,17 +54670,6 @@
       "coobie",
       "chrahunt",
       "teoli"
-    ]
-  },
-  "Web/API/IDBFactorySync": {
-    "modified": "2019-03-24T00:10:37.564Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz",
-      "teoli",
-      "pdm",
-      "khushboo_Dwivedi",
-      "jswisher"
     ]
   },
   "Web/API/IDBIndex": {
@@ -55001,16 +54865,6 @@
       "arronei",
       "libbymc",
       "chrisdavidmills"
-    ]
-  },
-  "Web/API/IDBIndexSync": {
-    "modified": "2019-03-24T00:10:28.971Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz",
-      "teoli",
-      "pdm",
-      "jswisher"
     ]
   },
   "Web/API/IDBKeyRange": {
@@ -55475,18 +55329,6 @@
       "libbymc"
     ]
   },
-  "Web/API/IDBObjectStoreSync": {
-    "modified": "2019-03-24T00:10:51.145Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz",
-      "pdm",
-      "teoli",
-      "grendel",
-      "jswisher",
-      "Sheppy"
-    ]
-  },
   "Web/API/IDBOpenDBRequest": {
     "modified": "2020-10-15T21:10:02.233Z",
     "contributors": [
@@ -55822,53 +55664,6 @@
       "libbymc",
       "inexorabletash",
       "jwhitlock"
-    ]
-  },
-  "Web/API/IDBTransaction/onabort": {
-    "modified": "2020-10-15T21:25:27.345Z",
-    "contributors": [
-      "sideshowbarker",
-      "wbamberg",
-      "CITguy",
-      "fscholz",
-      "chrisdavidmills",
-      "jpmedley",
-      "libbymc"
-    ]
-  },
-  "Web/API/IDBTransaction/oncomplete": {
-    "modified": "2020-10-15T21:25:27.356Z",
-    "contributors": [
-      "jorendorff-moz",
-      "sideshowbarker",
-      "wbamberg",
-      "CITguy",
-      "chrisdavidmills",
-      "fscholz",
-      "jpmedley",
-      "libbymc"
-    ]
-  },
-  "Web/API/IDBTransaction/onerror": {
-    "modified": "2020-10-15T21:25:27.339Z",
-    "contributors": [
-      "sideshowbarker",
-      "wbamberg",
-      "chrisdavidmills",
-      "fscholz",
-      "ylxdzsw",
-      "jpmedley",
-      "libbymc"
-    ]
-  },
-  "Web/API/IDBTransactionSync": {
-    "modified": "2019-03-24T00:10:38.119Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz",
-      "teoli",
-      "nehasharma",
-      "jswisher"
     ]
   },
   "Web/API/IDBVersionChangeEvent": {

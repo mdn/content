@@ -9,7 +9,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 65 that will affect developers. Firefox 65 was released on January 29, 2019.
+This article provides information about the changes in Firefox 65 that will affect developers. Firefox 65 was released on January 29, 2019.
 
 ## Changes for web developers
 
@@ -22,7 +22,7 @@ This article provides information about the changes in Firefox 65 that will af
 - The Headers tab of the [Network Monitor](/en-US/docs/Tools/Network_Monitor) now displays the Referrer Policy for the selected request ({{bug(1496742)}}).
 - When displaying stack traces (e.g. in console logs or the JavaScript debugger), calls to framework methods are identified and collapsed by default, making it easier to home in on your code.
 - In the same fashion as native terminals, you can now use reverse search to find entries in your JavaScript console history (`F9` on Windows/Linux or `Ctrl` + `R` on macOS, then type a search term, followed by `Ctrl` + `R`/`Ctrl` + `S` to toggle through results).
-- The JavaScript console's `$0` shortcut (references the currently inspected element on the page) now has autocomplete available, so for example you could type `$0.te` to get autocomplete suggestions for properties like `$0.textContent`.
+- The JavaScript console's `$0` shortcut (references the currently inspected element on the page) now has autocomplete available, so for example you could type `$0.te` to get autocomplete suggestions for properties like `$0.textContent`.
 - The edits you make in the Rules view of the Inspector are now listed in the Changes panel ({{bug(1503920)}}).
 
 ### HTML
@@ -61,7 +61,7 @@ This article provides information about the changes in Firefox 65 that will af
 
     The `<div>` with `none` set on it is now non-selectable. Previously this value would have been overridden by the `all` value set on the parent element.
 
-  - non-`contenteditable` elements nested inside `contenteditable` elements  are now selectable.
+  - non-`contenteditable` elements nested inside `contenteditable` elements  are now selectable.
   - `user-select` now behaves consistently inside and outside shadow DOM.
   - The proprietary `-moz-text` value has been removed.
 
@@ -69,8 +69,8 @@ This article provides information about the changes in Firefox 65 that will af
 
 #### Removals
 
-- The `layout.css.shape-outside.enabled` pref has been removed; {{cssxref("shape-outside")}}, {{cssxref("shape-margin")}}, and {{cssxref("shape-image-threshold")}} can no longer be disabled in `about:config` ({{bug(1504387)}}).
-- Several Firefox-only values of the {{cssxref("user-select")}} property have been removed — `-moz-all`, `-moz-text`, `tri-state`, `element`, `elements`, and `toggle`. See {{bug(1492958)}} and {{bug(1506547)}}.
+- The `layout.css.shape-outside.enabled` pref has been removed; {{cssxref("shape-outside")}}, {{cssxref("shape-margin")}}, and {{cssxref("shape-image-threshold")}} can no longer be disabled in `about:config` ({{bug(1504387)}}).
+- Several Firefox-only values of the {{cssxref("user-select")}} property have been removed — `-moz-all`, `-moz-text`, `tri-state`, `element`, `elements`, and `toggle`. See {{bug(1492958)}} and {{bug(1506547)}}.
 - As mentioned above, the `frames()` timing function has been removed ({{bug(1496619)}}).
 
 ### SVG
@@ -121,7 +121,7 @@ _No changes._
 
 #### Canvas and WebGL
 
-- The  {{domxref("WebGL API", "WebGL", "", "1")}} {{domxref("EXT_texture_compression_bptc")}} and {{domxref("EXT_texture_compression_rgtc")}} texture compression extensions have been exposed to WebGL1 and WebGL2 contexts ({{bug(1507263)}}).
+- The  {{domxref("WebGL API", "WebGL", "", "1")}} {{domxref("EXT_texture_compression_bptc")}} and {{domxref("EXT_texture_compression_rgtc")}} texture compression extensions have been exposed to WebGL1 and WebGL2 contexts ({{bug(1507263)}}).
 
 #### Removals
 
@@ -172,12 +172,12 @@ _No changes._
 
 #### Tabs
 
-- The {{WebExtAPIRef("tabs", "tabs API", "", "1")}} has been enhanced to support tab successors — a tab can have a successor assigned to it, which is the ID of the tab that will be active once it is closed ({{bug(1500479)}}, also see [this blog post](https://qiita.com/piroor/items/ea7e727735631c45a366) for more information). In particular:
+- The {{WebExtAPIRef("tabs", "tabs API", "", "1")}} has been enhanced to support tab successors — a tab can have a successor assigned to it, which is the ID of the tab that will be active once it is closed ({{bug(1500479)}}, also see [this blog post](https://qiita.com/piroor/items/ea7e727735631c45a366) for more information). In particular:
 
   - The {{WebExtAPIRef("tabs.Tab")}} type now has a `successorId` property, which can be used to store/retrieve the ID of the tab's successor.
   - The {{WebExtAPIRef("tabs.onActivated")}} event listener's callback has a new parameter available, `previousTabId`, which contains the ID of the previous activated tab, if it is still open.
-  - The {{WebExtAPIRef("tabs.update()")}} function's `updateProperties` object has a new optional property available on it, `successorTabId`, so can be used to update it.
-  - `successorTabId` is also returned by functions like {{WebExtAPIRef("tabs.get()")}}  and {{WebExtAPIRef("tabs.query()")}}.
+  - The {{WebExtAPIRef("tabs.update()")}} function's `updateProperties` object has a new optional property available on it, `successorTabId`, so can be used to update it.
+  - `successorTabId` is also returned by functions like {{WebExtAPIRef("tabs.get()")}}  and {{WebExtAPIRef("tabs.query()")}}.
   - The new function `tabs.moveInSuccession()` allows manipulation of tab successors in bulk.
 
 ### Manifest changes

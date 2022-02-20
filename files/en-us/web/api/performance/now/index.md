@@ -58,14 +58,14 @@ up to microsecond precision.
 Also unlike `Date.now()`, the values returned by
 `performance.now()` always increase at a constant rate, independent of the
 system clock (which might be adjusted manually or skewed by software like NTP).
-Otherwise, `performance.timing.navigationStart + performance.now()` will be
+Otherwise, `performance.timing.navigationStart + performance.now()` will be
 approximately equal to `Date.now()`.
 
 ## Reduced time precision
 
 To offer protection against timing attacks and fingerprinting, the precision of
 `performance.now()` might get rounded depending on browser settings.
-In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by
+In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by
 default and defaults to 1ms.
 
 ```js

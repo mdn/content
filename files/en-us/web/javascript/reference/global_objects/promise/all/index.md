@@ -36,8 +36,8 @@ Promise.all(iterable);
 - An **already resolved** {{jsxref("Promise")}} if the
   _iterable_ passed is empty.
 - An **asynchronously resolved** {{jsxref("Promise")}} if the
-  _iterable_ passed contains no promises. Note, Google Chrome 58 returns
-  an **already resolved** promise in this case.
+  _iterable_ passed contains no promises. Note, Google Chrome 58 returns
+  an **already resolved** promise in this case.
 - A **pending** {{jsxref("Promise")}} in all other cases. This returned
   promise is then resolved/rejected **asynchronously** (as soon as the
   stack is empty) when all the promises in the given _iterable_ have resolved,
@@ -236,8 +236,8 @@ Promise.all([
   p1.catch(error => { return error }),
   p2.catch(error => { return error }),
 ]).then(values => {
-  console.log(values[0]) // "p1_delayed_resolution"
-  console.error(values[1]) // "Error: p2_immediate_rejection"
+  console.log(values[0]) // "p1_delayed_resolution"
+  console.error(values[1]) // "Error: p2_immediate_rejection"
 })
 ```
 

@@ -66,7 +66,7 @@ user-select: unset;
 - `text`
   - : The text can be selected by the user.
 - `all`
-  - : The content of the element shall be selected atomically: If a selection would contain part of the element, then the selection must contain the entire element including all its descendants.  If a double-click or context-click occurred in sub-elements, the highest ancestor with this value will be selected.
+  - : The content of the element shall be selected atomically: If a selection would contain part of the element, then the selection must contain the entire element including all its descendants.  If a double-click or context-click occurred in sub-elements, the highest ancestor with this value will be selected.
 - `contain`
   - : Enables selection to start within the element; however, the selection will be contained by the bounds of that element.
 - `element`{{non-standard_inline}} (IE-specific alias)
@@ -103,10 +103,10 @@ user-select: unset;
 }
 
 .all {
-  -moz-user-select: all;
-  -webkit-user-select: all;
-  -ms-user-select: all;
-  user-select: all;
+  -moz-user-select: all;
+  -webkit-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
 }
 ```
 

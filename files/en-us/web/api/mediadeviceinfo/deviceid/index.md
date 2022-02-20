@@ -12,7 +12,7 @@ browser-compat: api.MediaDeviceInfo.deviceId
 ---
 {{SeeCompatTable}}{{APIRef("Media Capture")}}
 
-The **`deviceId`** readonly property
+The **`deviceId`** readonly property
 of the {{domxref("MediaDeviceInfo")}} interface returns a {{domxref("DOMString")}}
 that is an identifier for the represented device and is persisted across
 sessions.

@@ -29,7 +29,7 @@ From the devtools page, call a script that will add the devtools panel:
 
 ```html
 <body>
-  <script src="devtools.js"></script>
+  <script src="devtools.js"></script>
 </body>
 ```
 

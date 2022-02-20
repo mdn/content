@@ -14,7 +14,7 @@ The HTTP **`200 OK`** success status response code indicates that the request ha
 The meaning of a success depends on the HTTP request method:
 
 - {{HTTPMethod("GET")}}: The resource has been fetched and is transmitted in the message body.
-- {{HTTPMethod("HEAD")}}: The representation headers are included in the response without any message body
+- {{HTTPMethod("HEAD")}}: The representation headers are included in the response without any message body
 - {{HTTPMethod("POST")}}: The resource describing the result of the action is transmitted in the message body
 - {{HTTPMethod("TRACE")}}: The message body contains the request message as received by the server.
 

@@ -116,10 +116,10 @@ var request = window.indexedDB.open("toDoList", 4);
 // or when a new version number is submitted by calling
 // window.indexedDB.open().
 // This handler is only supported in recent browsers.
-request.onupgradeneeded = function(event) {
+request.onupgradeneeded = event => {
   var db = event.target.result;
 
-  db.onerror = function(event) {
+  db.onerror = event => {
     note.innerHTML += "<li>Error loading database.</li>";
   };
 
@@ -157,5 +157,4 @@ request.onupgradeneeded = function(event) {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

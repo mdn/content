@@ -27,15 +27,15 @@ If you are not already familiar with XML or HTML, read up on them first and then
 
 IMSC is always specified as a complete XML document. As a file it should have the extension "_ttml_".
 
-> **Note:** IMSC does not have native support in browsers at this current moment, but the [imscJS](https://github.com/sandflow/imscJS) polyfill can be used to bridge this gap. All the examples below are rendered by using imscJS. It creates dynamically HTML and CSS from an IMSC  XML document.
+> **Note:** IMSC does not have native support in browsers at this current moment, but the [imscJS](https://github.com/sandflow/imscJS) polyfill can be used to bridge this gap. All the examples below are rendered by using imscJS. It creates dynamically HTML and CSS from an IMSC  XML document.
 
-Let’s look at a minimal IMSC document and how it is rendered:
+Let's look at a minimal IMSC document and how it is rendered:
 
 {{EmbedGHLiveSample("imsc/minimal_ttml/minimal.html", '100%', 560)}}
 
 The most important features are as follows:
 
-- `<tt></tt>` — You always start an IMSC document with the root element `<tt>`. You should also specify the default namespace of the document by using the `xmlns` attribute. Don’t worry for now about namespaces. We will come to that in a separate guide.
+- `<tt></tt>` — You always start an IMSC document with the root element `<tt>`. You should also specify the default namespace of the document by using the `xmlns` attribute. Don't worry for now about namespaces. We will come to that in a separate guide.
 - `xml:lang` — You must specify the language of your content with the `xml:lang` attribute. Note that the `lang` attribute must have the prefix `xml:`, unlike HTML. In IMSC `<tt lang="en">` is not correct — you always have to write `<tt xml:lang="en">`.
 - `<body></body>` — As in HTML, the `<body>` element contains all content that you want to show. For IMSC this is typically subtitle content that you want to show at certain time intervals during the playback of a video.
 - `<div></div>` — The `<div>` element is used as a container for subtitle content; you always need to have at least one of these. The `<p>` elements that contain the actual subtitle content always have a `<div>` element as their parent.
@@ -87,9 +87,9 @@ Try setting some other colors for the text and background colors:
 - You can use other color schemes like `rgb(0,255,255)`.
 - Finally, try semi-transparent variations, like `rgba(0,0,0, 80)`.
 
-> **Note:** Don’t worry for now about namespaces. We will explain the meaning of `xmlns:tts` and `tts:backgroundColor` in a separate guide.
+> **Note:** Don't worry for now about namespaces. We will explain the meaning of `xmlns:tts` and `tts:backgroundColor` in a separate guide.
 
-As explained in the [IMSC Styling](/en-US/docs/Related/IMSC/Styling) guide, it is possible to define a collection of styling properties that can be used any number of times. The style `s1` below is applied three times:
+As explained in the [IMSC Styling](/en-US/docs/Related/IMSC/Styling) guide, it is possible to define a collection of styling properties that can be used any number of times. The style `s1` below is applied three times:
 
 ```xml
 <tt xmlns="http://www.w3.org/ns/ttml"
@@ -121,30 +121,30 @@ See below for a minimal document that uses regions for positioning.
 <tt xmlns="http://www.w3.org/ns/ttml"
  xmlns:tts="http://www.w3.org/ns/ttml#styling"
  xml:lang="en">
-  <head>
-    <layout>
-      <region tts:origin="10% 80%"
-              tts:extent="80% 20%"
-              xml:id="bottom"/>
-      <region tts:origin="10% 10%"
-              tts:extent="80% 20%"
-              xml:id="top"/>
-    </layout>
+  <head>
+    <layout>
+      <region tts:origin="10% 80%"
+              tts:extent="80% 20%"
+              xml:id="bottom"/>
+      <region tts:origin="10% 10%"
+              tts:extent="80% 20%"
+              xml:id="top"/>
+    </layout>
 </head>
 <body>
-    <div>
-      <p region="bottom"
-          tts:backgroundColor="black">
-          Hello, I am Mork from Ork.
-      </p>
-    </div>
+    <div>
+      <p region="bottom"
+          tts:backgroundColor="black">
+          Hello, I am Mork from Ork.
+      </p>
+    </div>
   </body>
 </tt>
 ```
 
 This includes the following new features:
 
-- `<head></head>` — As in HTML, the `<head>` element acts as a container for all the stuff you want to include in an IMSC document that isn’t subtitle content, most commonly metadata about the content or document. You'll use it mostly to store positioning and styling information.
+- `<head></head>` — As in HTML, the `<head>` element acts as a container for all the stuff you want to include in an IMSC document that isn't subtitle content, most commonly metadata about the content or document. You'll use it mostly to store positioning and styling information.
 - `<layout></layout>` — This element acts as a wrapper for positioning information. It has `<region>` elements as its children.
 - `<region></region>` — this element can be used to define `region`s, rectangular areas you can place on top of your video. They have a defined position, width, and height, plus an `id` to uniquely identify them. You can think of it as being similar to a `<div>` element in HTML that is given an absolute position, width, and height via CSS. If subtitle content is "linked" to a region (by specifying the region's `id` in its `region` attribute), it will be shown inside the area generated by that region.
 - `xml:id` - the `xml:id` attribute. The value of the `xml:id` attribute is a string that can be used to link subtitle content to a `region.`

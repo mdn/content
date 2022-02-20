@@ -20,7 +20,7 @@ The **`source`** property of the {{domxref("VRLayerInit")}} interface (dictionar
 
 ## Value
 
-An {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}} object.
+An {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}} object.
 
 ## Examples
 

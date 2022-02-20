@@ -71,7 +71,7 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0
 
 ## Chrome UA string
 
-The Chrome (or Chromium/Blink-based engines) user agent string is similar to Firefox’s. For compatibility, it adds strings like `KHTML, like Gecko` and `Safari`.
+The Chrome (or Chromium/Blink-based engines) user agent string is similar to Firefox's. For compatibility, it adds strings like `KHTML, like Gecko` and `Safari`.
 
 ### Examples
 

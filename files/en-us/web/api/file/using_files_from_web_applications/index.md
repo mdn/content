@@ -177,7 +177,7 @@ input.visually-hidden:focus-within + label {
 }
 ```
 
-There is no need to add JavaScript code to call `fileElem.click()`. Also in this case you can style the label element as you wish. You need to provide a visual cue for the focus status of the hidden input field on its label, be it an outline as shown above, or background-color or box-shadow. (As of time of writing, Firefox doesn’t show this visual cue for `<input type="file">` elements.)
+There is no need to add JavaScript code to call `fileElem.click()`. Also in this case you can style the label element as you wish. You need to provide a visual cue for the focus status of the hidden input field on its label, be it an outline as shown above, or background-color or box-shadow. (As of time of writing, Firefox doesn't show this visual cue for `<input type="file">` elements.)
 
 ## Selecting files using drag and drop
 

@@ -35,7 +35,7 @@ None.
 
 A {{jsxref("Promise")}}, which is resolved once the {{Glossary("user agent")}} has
 finished exiting picture-in-picture mode. If an error occurs while attempting to exit
-full-screen mode, the `catch()` handler for the promise is called.
+fullscreen mode, the `catch()` handler for the promise is called.
 
 ## Examples
 
@@ -46,8 +46,8 @@ mouse button is clicked within it.
 document.onclick = function (event) {
   if (document.pictureInPictureElement) {
     document.exitPictureInPicture()
-      .then(() => console.log("Document Exited from Picture-in-Picture mode"))
-      .catch((err) => console.error(err))
+      .then(() => console.log("Document Exited from Picture-in-Picture mode"))
+      .catch((err) => console.error(err))
   } else {
     video.requestPictureInPicture();
   }

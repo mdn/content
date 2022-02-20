@@ -17,7 +17,7 @@ browser-compat: api.MouseEvent.pageX
 ---
 {{APIRef("CSSOM View")}}
 
-The **`pageX`** read-only property of the {{domxref("MouseEvent")}} interface returns the X (horizontal) coordinate (in pixels) at which the mouse was clicked, relative to the left edge of the entire document.
+The **`pageX`** read-only property of the {{domxref("MouseEvent")}} interface returns the X (horizontal) coordinate (in pixels) at which the mouse was clicked, relative to the left edge of the entire document.
 This includes any portion of the document not currently visible.
 
 Being based on the edge of the document as it is, this property takes into account any horizontal scrolling of the page.

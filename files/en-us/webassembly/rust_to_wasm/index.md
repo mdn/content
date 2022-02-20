@@ -204,9 +204,9 @@ If you check out the generated WebAssembly code size, it may be a few hundred ki
 
 ## Using the package on the web
 
-Now that we've got a compiled wasm module. let’s run it in the browser.
+Now that we've got a compiled wasm module. let's run it in the browser.
 
-Let’s start by creating a file named `index.html` in the root of the project, and give it the following contents:
+Let's start by creating a file named `index.html` in the root of the project, and give it the following contents:
 
 ```html
 <!DOCTYPE html>
@@ -239,7 +239,7 @@ Load `index.html` from the web server (if you used the python3 example: `http://
 
 If you want to use the WebAssembly module with npm, we'll need to make a few changes.
 
-Let’s start by recompiling out Rust with the target bundler option:
+Let's start by recompiling out Rust with the target bundler option:
 
 ```bash
 $ wasm-pack build --target bundler

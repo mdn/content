@@ -35,7 +35,7 @@ The `sign()` function takes only one expression as its argument.
 
 ### Background image position
 
-For example, in {{cssxref("background-position")}} positive percentages resolve to a negative length, and vice versa, if the background image is larger than the background area. Thus `sign(10%)` might return `1` or `-1`, depending on how the percentage is resolved! (Or even `0`, if it’s resolved against a zero length.)
+For example, in {{cssxref("background-position")}} positive percentages resolve to a negative length, and vice versa, if the background image is larger than the background area. Thus `sign(10%)` might return `1` or `-1`, depending on how the percentage is resolved! (Or even `0`, if it's resolved against a zero length.)
 
 ```css
 div {

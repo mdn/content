@@ -11,7 +11,7 @@ browser-compat: api.Document.compatMode
 ---
 {{ ApiRef("DOM") }}
 
-The **`Document.compatMode`** read-only property indicates
+The **`Document.compatMode`** read-only property indicates
 whether the document is rendered in [Quirks mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) or
 Standards mode.
 

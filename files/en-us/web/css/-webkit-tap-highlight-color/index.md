@@ -16,7 +16,7 @@ browser-compat: css.properties.-webkit-tap-highlight-color
 
 {{ Non-standard_header() }}
 
-**`-webkit-tap-highlight-color`** is a non-standard CSS property that sets the color of the highlight that appears over a link while it's being tapped. The highlighting indicates to the user that their tap is being successfully recognized, and indicates which element they're tapping on.
+**`-webkit-tap-highlight-color`** is a non-standard CSS property that sets the color of the highlight that appears over a link while it's being tapped. The highlighting indicates to the user that their tap is being successfully recognized, and indicates which element they're tapping on.
 
 ```css
 -webkit-tap-highlight-color: red;

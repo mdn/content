@@ -34,7 +34,7 @@ calling `setCodecParameters()` _before_ calling either
 {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}}.
 
 A guide to codecs supported by WebRTC—and each codec's positive and negative
-characteristics—can be found in [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs).
+characteristics—can be found in [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs).
 
 ## Syntax
 
@@ -85,7 +85,7 @@ To determine which codecs are supported by the transceiver, call the sender's
 {{domxref("RTCRtpCapabilities.codecs", "codecs")}} list from the results of each.
 
 The following code snippet demonstrates how to get both the list of codecs supported by
-the transceiver's {{domxref("RTCRtpSender")}} and {{domxref("RTCRtpReceiver")}}.
+the transceiver's {{domxref("RTCRtpSender")}} and {{domxref("RTCRtpReceiver")}}.
 
 ```js
 var availSendCodecs = transceiver.sender.getCapabilities("video").codecs;

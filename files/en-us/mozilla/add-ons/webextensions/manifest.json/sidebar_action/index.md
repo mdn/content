@@ -34,7 +34,7 @@ browser-compat: webextensions.manifest.sidebar_action
       </td>
     </tr>
     <tr>
-      <th scope="row"> </th>
+      <th scope="row"> </th>
       <td></td>
     </tr>
   </tbody>
@@ -216,9 +216,9 @@ The `sidebar_action` key is an object that may have any of the properties listed
 
 ```json
 "sidebar_action": {
-  "default_icon": "sidebar.svg",
-  "default_title": "My sidebar!",
-  "default_panel": "sidebar.html",
+  "default_icon": "sidebar.svg",
+  "default_title": "My sidebar!",
+  "default_panel": "sidebar.html",
   "browser_style": true
 }
 ```

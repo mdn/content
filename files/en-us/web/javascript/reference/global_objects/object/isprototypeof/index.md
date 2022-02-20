@@ -37,7 +37,7 @@ isPrototypeOf(object)
 ### Return value
 
 A {{jsxref("Boolean")}} indicating whether the calling object lies in the prototype
-chain of the specified object.
+chain of the specified object.
 
 ### Errors thrown
 
@@ -55,7 +55,7 @@ exists within another object's prototype chain.
 ### Using isPrototypeOf
 
 This example demonstrates that `Baz.prototype`,
-`Bar.prototype`, `Foo.prototype` and `Object.prototype`
+`Bar.prototype`, `Foo.prototype` and `Object.prototype`
 exist in the prototype chain for object `baz`:
 
 ```js
@@ -86,11 +86,11 @@ console.log(Object.prototype.isPrototypeOf(baz)); // true
 
 The `isPrototypeOf()` method — along with the {{jsxref("Operators/instanceof", "instanceof")}} operator — comes in particularly handy if you have code that can only function when dealing with objects descended from a specific prototype chain; e.g., to guarantee that certain methods or properties will be present on that object.
 
-For example, to execute some code that’s only safe to run if a `baz` object has `Foo.prototype` in its prototype chain, you can do this:
+For example, to execute some code that's only safe to run if a `baz` object has `Foo.prototype` in its prototype chain, you can do this:
 
 ```js
 if (Foo.prototype.isPrototypeOf(baz)) {
-  // do something safe
+  // do something safe
 }
 ```
 

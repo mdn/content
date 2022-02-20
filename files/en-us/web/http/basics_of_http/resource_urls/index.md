@@ -73,7 +73,7 @@ In order to fix this problem, Mozilla changed the behavior of loading resource: 
 {{bug(863246)}}, which landed in [Firefox 57 (Quantum)](/en-US/docs/Mozilla/Firefox/Releases/57).
 
 In the past, web content was able to access whatever `resource:` URIs were
-desired — not only Firefox's internal resources, but also extensions’ assets. Now this
+desired — not only Firefox's internal resources, but also extensions' assets. Now this
 behavior is prohibited by default.
 
 It is however still necessary for Firefox to load resources in web content under

@@ -41,7 +41,7 @@ _Inherits properties from its parent, {{domxref("XRCompositionLayer")}}._
 - {{domxref("XRCylinderLayer.radius")}}
   - : A number indicating the radius of the cylinder.
 - {{domxref("XRCylinderLayer.space")}}
-  - : An {{domxref("XRSpace")}} representing the layer's spatial relationship with the user’s physical environment.
+  - : An {{domxref("XRSpace")}} representing the layer's spatial relationship with the user's physical environment.
 - {{domxref("XRCylinderLayer.transform")}}
   - : An {{domxref("XRRigidTransform")}} representing the offset and orientation relative to `space`.
 

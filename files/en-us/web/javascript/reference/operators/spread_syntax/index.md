@@ -24,7 +24,7 @@ expected.
 Spread syntax can be used when all elements from an object or array need to be included
 in a list of some kind.
 
-In the above example, the defined function takes `x`, `y`, and
+In the above example, the defined function takes `x`, `y`, and
 `z` as arguments and returns the sum of these values. An array value is also
 defined.
 
@@ -295,29 +295,26 @@ let mergedObj2 = merge ({}, obj1, obj2);
 // Object { 0: {}, 1: { foo: 'bar', x: 42 }, 2: { foo: 'baz', y: 13 } }
 ```
 
-In the above example, the spread syntax does not work as one might expect: it spreads
-an _array_ of arguments into the object literal, due to the rest parameter.
+In the above example, the spread syntax does not work as one might expect: it spreads an _array_ of arguments into the object literal, due to the rest parameter.
 
 ### Only for iterables
 
-Objects themselves are not iterable, but they become iterable when used in an Array, or
-with iterating functions such as `map()`, `reduce()`, and
-`assign()`. When merging 2 objects together with the spread operator, it is
-assumed another iterating function is used when the merging occurs.
+Spread syntax (other than in the case of spread properties) can only be applied to [iterable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator)
+objects like {{jsxref("Array")}}, or with iterating functions such as `map()`, `reduce()`, and `assign()`.
 
-Spread syntax (other than in the case of spread properties) can be applied only to [iterable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator)
-objects:
+Many objects are not iterable, including {{JSxRef("Object")}}:
 
 ```js
 let obj = {'key1': 'value1'};
 let array = [...obj]; // TypeError: obj is not iterable
 ```
 
+To use spread syntax with these objects, you will need to provide an iterator function.
+
 ### Spread with many values
 
-When using spread syntax for function calls, be aware of the possibility of exceeding
-the JavaScript engine's argument length limit. See {{jsxref("Function.prototype.apply",
-   "apply()")}} for more details.
+When using spread syntax for function calls, be aware of the possibility of exceeding the JavaScript engine's argument length limit.
+See {{jsxref("Function.prototype.apply", "apply()")}} for more details.
 
 ## Specifications
 
@@ -329,6 +326,5 @@ the JavaScript engine's argument length limit. See {{jsxref("Function.prototype.
 
 ## See also
 
-- {{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}} (also
-  ‘`...`’)
-- {{jsxref("Function.prototype.apply()")}} (also ‘`...`’)
+- {{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}} (also '`...`')
+- {{jsxref("Function.prototype.apply()")}} (also '`...`')

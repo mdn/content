@@ -41,7 +41,7 @@ of the string; otherwise, **`false`**.
 
 ## Description
 
-This method lets you determine whether or not a string begins with another string. This
+This method lets you determine whether or not a string begins with another string. This
 method is case-sensitive.
 
 ## Examples
@@ -65,17 +65,17 @@ available in all JavaScript implementations yet. However, you can polyfill
 
 ```js
 if (!String.prototype.startsWith) {
-    Object.defineProperty(String.prototype, 'startsWith', {
-        value: function(search, rawPos) {
-            var pos = rawPos > 0 ? rawPos|0 : 0;
-            return this.substring(pos, pos + search.length) === search;
-        }
-    });
+    Object.defineProperty(String.prototype, 'startsWith', {
+        value: function(search, rawPos) {
+            var pos = rawPos > 0 ? rawPos|0 : 0;
+            return this.substring(pos, pos + search.length) === search;
+        }
+    });
 }
 ```
 
-A more robust (fully ES2015 specification compliant), but less performant and
-compact, Polyfill is available [on GitHub by
+A more robust (fully ES2015 specification compliant), but less performant and
+compact, Polyfill is available [on GitHub by
 Mathias Bynens](https://github.com/mathiasbynens/String.prototype.startsWith).
 
 ## Specifications

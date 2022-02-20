@@ -5,7 +5,7 @@ browser-compat: css.selectors.local-link
 ---
 {{ CSSRef }}
 
-The **`:local-link`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents a link to the same document. Therefore an element that is the source anchor of a hyperlink whose target’s absolute URL matches the element's own document URL.
+The **`:local-link`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents a link to the same document. Therefore an element that is the source anchor of a hyperlink whose target's absolute URL matches the element's own document URL.
 
 ```css
 /* Selects any <a> that links to the current document */

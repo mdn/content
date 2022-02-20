@@ -21,7 +21,7 @@ takes up to two arguments: callback functions for the success and failure cases 
 > `then` will be missing the handler(s), but will not generate any errors. If
 > the `Promise` that `then` is called on adopts a state
 > (`fulfillment` or `rejection`) for which `then` has
-> no handler, the returned promise adopts the final state of the original
+> no handler, the returned promise adopts the final state of the original
 > `Promise` on which `then` was called.
 
 ## Syntax

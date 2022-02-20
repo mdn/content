@@ -101,8 +101,8 @@ Object.is(NaN, Number.NaN)        // true
 
 ```js
 if (!Object.is) {
-  Object.defineProperty(Object, "is", {
-    value: function (x, y) {
+  Object.defineProperty(Object, "is", {
+    value: function (x, y) {
       // SameValue algorithm
       if (x === y) {
         // return true if x and y are not 0, OR
@@ -116,7 +116,7 @@ if (!Object.is) {
         // This checks for case 3.
         return x !== x && y !== y;
       }
-    }
+    }
   });
 }
 ```

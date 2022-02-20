@@ -19,13 +19,13 @@ browser-compat: javascript.builtins.Object.proto
 
 The `__proto__` property of {{JSxRef("Object.prototype")}} is an accessor property (a getter function and a setter function) that exposes the internal `[[Prototype]]` (either an object or {{JSxRef("Global_Objects/null", "null")}}) of the object through which it is accessed.
 
-The use of `__proto__` is controversial and discouraged. It was never originally included in the ECMAScript language spec, but modern browsers implemented it anyway. Only recently was the `__proto__` property standardized by the ECMAScript 2015 specification for compatibility with web browsers, so it will be supported into the future. It is deprecated in favor of {{JSxRef("Object.getPrototypeOf")}}/{{JSxRef("Reflect.getPrototypeOf")}} and {{JSxRef("Object.setPrototypeOf")}}/{{JSxRef("Reflect.setPrototypeOf")}} (though still, setting the `[[Prototype]]` of an object is a slow operation that should be avoided if performance is a concern).
+The use of `__proto__` is controversial and discouraged. It was never originally included in the ECMAScript language spec, but modern browsers implemented it anyway. Only recently was the `__proto__` property standardized by the ECMAScript 2015 specification for compatibility with web browsers, so it will be supported into the future. It is deprecated in favor of {{JSxRef("Object.getPrototypeOf")}}/{{JSxRef("Reflect.getPrototypeOf")}} and {{JSxRef("Object.setPrototypeOf")}}/{{JSxRef("Reflect.setPrototypeOf")}} (though still, setting the `[[Prototype]]` of an object is a slow operation that should be avoided if performance is a concern).
 
 The `__proto__` property can also be used in an object literal definition to set the object `[[Prototype]]` on creation, as an alternative to {{JSxRef("Object.create()")}}. See: [object initializer / literal syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
 ## Description
 
-The `__proto__` getter function exposes the value of the internal `[[Prototype]]` of an object. For objects created using an object literal, this value is {{JSxRef("Object.prototype")}}. For objects created using array literals, this value is {{JSxRef("Array.prototype")}}. For functions, this value is {{JSxRef("Function.prototype")}}. For objects created using `new fun`, where `fun` is one of the built-in constructor functions provided by JavaScript ({{JSxRef("Array")}}, {{JSxRef("Boolean")}}, {{JSxRef("Date")}}, {{JSxRef("Number")}}, {{JSxRef("Object")}}, {{JSxRef("String")}}, and so on — including new constructors added as JavaScript evolves), this value is always `fun.prototype`. For objects created using `new fun`, where `fun` is a function defined in a script, this value is the value of `fun.prototype`. (That is, if the constructor didn't return an other object explicitly, or the `fun.prototype` has been reassigned since the instance was created.)
+The `__proto__` getter function exposes the value of the internal `[[Prototype]]` of an object. For objects created using an object literal, this value is {{JSxRef("Object.prototype")}}. For objects created using array literals, this value is {{JSxRef("Array.prototype")}}. For functions, this value is {{JSxRef("Function.prototype")}}. For objects created using `new fun`, where `fun` is one of the built-in constructor functions provided by JavaScript ({{JSxRef("Array")}}, {{JSxRef("Boolean")}}, {{JSxRef("Date")}}, {{JSxRef("Number")}}, {{JSxRef("Object")}}, {{JSxRef("String")}}, and so on — including new constructors added as JavaScript evolves), this value is always `fun.prototype`. For objects created using `new fun`, where `fun` is a function defined in a script, this value is the value of `fun.prototype`. (That is, if the constructor didn't return an other object explicitly, or the `fun.prototype` has been reassigned since the instance was created.)
 
 The `__proto__` setter allows the `[[Prototype]]` of an object to be mutated. The object must be extensible according to {{JSxRef("Object.isExtensible()")}}: if it is not, a {{JSxRef("Global_Objects/TypeError", "TypeError")}} is thrown. The value provided must be an object or {{JSxRef("Global_Objects/null", "null")}}. Providing any other value will do nothing.
 
@@ -52,9 +52,9 @@ console.log(shape.__proto__ === Circle);  // false
 
 const ShapeA = function () {};
 const ShapeB = {
-    a() {
-        console.log('aaa');
-    }
+    a() {
+        console.log('aaa');
+    }
 };
 console.log(ShapeA.prototype.__proto__ = ShapeB);
 

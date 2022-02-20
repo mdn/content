@@ -38,7 +38,7 @@ var creating = browser.tabs.create(
     - `cookieStoreId` {{optional_inline}}
       - : `string`. Use this to create a tab whose cookie store ID is `cookieStoreId`. This option is only available if the extension has the `"cookies"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
     - `discarded` {{optional_inline}}
-      - : `boolean`. Whether the tab is created and made visible in the tab bar without any content loaded into memory, a state known as discarded. The tab’s content is loaded when the tab is activated.
+      - : `boolean`. Whether the tab is created and made visible in the tab bar without any content loaded into memory, a state known as discarded. The tab's content is loaded when the tab is activated.
     - `index` {{optional_inline}}
       - : `integer`. The position the tab should take in the window. The provided value will be clamped to between zero and the number of tabs in the window.
     - `openerTabId` {{optional_inline}}

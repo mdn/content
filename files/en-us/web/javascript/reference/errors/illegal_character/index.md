@@ -29,7 +29,7 @@ SyntaxError: Invalid or unexpected token (Chrome)
 There is an invalid or unexpected token that doesn't belong at this position in the
 code. Use an editor that supports syntax highlighting and carefully check your code
 against mismatches like a minus sign (` - `) versus a dash (` – `)
-or simple quotes (` " `) vs non-standard quotation marks (` “ `).
+or simple quotes (` " `) vs non-standard quotation marks (` " `).
 
 ## Examples
 
@@ -40,8 +40,8 @@ Famous examples of this are quotes, the minus or semicolon ([greek
 questionmark (U+37e)](https://en.wikipedia.org/wiki/Question_mark#Greek_question_mark) looks same).
 
 ```js example-bad
-“This looks like a string”;  // SyntaxError: illegal character
-                             // “ and ” are not " but look like this
+"This looks like a string";  // SyntaxError: illegal character
+                             // " and " are not " but look like this
 
 42 – 13;                     // SyntaxError: illegal character
                              // – is not - but looks like this

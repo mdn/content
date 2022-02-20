@@ -16,7 +16,7 @@ browser-compat: api.StylePropertyMapReadOnly.keys
 
 The **`StylePropertyMapReadOnly.keys()`** method returns a new
 _array iterator_ containing the keys for each item
-in `StylePropertyMapReadOnly`
+in `StylePropertyMapReadOnly`
 
 ## Syntax
 

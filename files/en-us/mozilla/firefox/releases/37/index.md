@@ -38,7 +38,7 @@ Highlights:
 - The {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}} and {{jsxref("WeakSet")}} constructors now ignore null iterable ({{bug(1092538)}}).
 - The {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}} and {{jsxref("WeakSet")}} constructors now supports monkey-patched `prototype.set` or `prototype.add` ({{bug(804279)}}).
 - The Non-standard {{jsxref("String.quote","String.prototype.quote()")}} method has been removed ({{bug(1103181)}}).
-- The {{jsxref("RegExp.prototype.flags")}} property has been implemented ({{bug(1108467)}}).
+- The {{jsxref("RegExp.prototype.flags")}} property has been implemented ({{bug(1108467)}}).
 - Several {{jsxref("Array")}} methods have been implemented for [typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) as well:
 
   - The {{jsxref("TypedArray.every", "every()")}} and {{jsxref("TypedArray.some", "some()")}} methods ({{bug(1116390)}}).
@@ -48,10 +48,10 @@ Highlights:
   - The {{jsxref("TypedArray.join", "join()")}} method ({{bug(1115817)}}).
   - The {{jsxref("TypedArray.reduce", "reduce()")}} and {{jsxref("TypedArray.reduceRight", "reduceRight()")}} methods ({{bug(1117350)}}).
   - The {{jsxref("TypedArray.reverse", "reverse()")}} method ({{bug(1111516)}}).
-  - The {{jsxref("TypedArray.keys", "keys()")}}, {{jsxref("TypedArray.values", "values()")}}, and {{jsxref("TypedArray.entries", "entries()")}} methods ({{bug(1119217)}}).
+  - The {{jsxref("TypedArray.keys", "keys()")}}, {{jsxref("TypedArray.values", "values()")}}, and {{jsxref("TypedArray.entries", "entries()")}} methods ({{bug(1119217)}}).
 
-- ES2015 Proxy {{jsxref("Global_Objects/Proxy/handler/enumerate", "enumerate")}} trap is implemented ({{bug(783829)}}).
-- The `configurable` attribute of the {{jsxref("Function.length")}} property is now `true` per the ES2015 specification ({{bug(911142)}}).
+- ES2015 Proxy {{jsxref("Global_Objects/Proxy/handler/enumerate", "enumerate")}} trap is implemented ({{bug(783829)}}).
+- The `configurable` attribute of the {{jsxref("Function.length")}} property is now `true` per the ES2015 specification ({{bug(911142)}}).
 - The development of [ParallelJS (PJS)](http://wiki.ecmascript.org/doku.php?id=strawman:data_parallelism) has been discontinued due to the limited future prospects, little attention and code complexity. The experimental implementation that had been enabled only on the Nightly channel, including the `Array.prototype.mapPar`, `filterPar` and `reducePar` methods, has been completely removed.
 
 ### Interfaces/APIs/DOM

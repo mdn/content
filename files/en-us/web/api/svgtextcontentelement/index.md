@@ -46,10 +46,10 @@ The **`SVGTextContentElement`** interface is implemented by elements that suppor
 
 _This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}}._
 
-- {{domxref("SVGTextContentElement.textLength")}} {{ReadOnlyInline}}
+- {{domxref("SVGTextContentElement.textLength")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} reflecting the {{SVGAttr("textLength")}} attribute of the given element.
-- {{domxref("SVGTextContentElement.lengthAdjust")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedEnumeration")}} reflecting the {{SVGAttr("lengthAdjust")}} attribute of the given element. The numeric type values represent one of the constant values above.
+- {{domxref("SVGTextContentElement.lengthAdjust")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedEnumeration")}} reflecting the {{SVGAttr("lengthAdjust")}} attribute of the given element. The numeric type values represent one of the constant values above.
 
 ## Methods
 
