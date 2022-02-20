@@ -59,6 +59,35 @@ var params3 = new URLSearchParams([["foo", "1"], ["bar", "2"]]);
 var params4 = new URLSearchParams({"foo": "1", "bar": "2"});
 ```
 
+This example shows how to build a new URL with an object of search parameters from an existing URL that has search parameters
+
+```js
+const url = new URL('https://example.com/?d=hello&e=world');
+
+console.log(url.href);
+// https://example.com/?d=hello&e=world
+
+console.log(url.origin);
+// https://example.com
+
+const add_params = {
+    a: 'a',
+    b: new String(2),
+    c: false.toString(),
+}
+
+const new_params = new URLSearchParams([
+    ...Object.entries(add_params), // [["a","a"],["b","2"],["c","false"]]
+    ...Array.from(url.searchParams.entries()), // [["d","hello"],["e","world"]]
+]).toString();
+// a=a&b=2&c=false&d=hello&e=world
+
+const new_url = new URL(`${url.origin}/?${new_params}`);
+
+console.log(new_url.href);
+// https://example.com/?a=a&b=2&c=false&d=hello&e=world
+```
+
 ## Specifications
 
 {{Specifications}}
