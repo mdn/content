@@ -185,7 +185,7 @@ Once that's done _All The Things_, we're now ready for some "modern client-side 
 }
 ```
 
-This is part of the npm magic — if in future you move your codebase to another location, on another machine, you can recreate the same set up by running the command `npm install`, and npm will look at the dependencies and install them for you.
+This is part of the npm magic — if in the future you move your codebase to another location, on another machine, you can recreate the same set up by running the command `npm install`, and npm will look at the dependencies and install them for you.
 
 One disadvantage is that Parcel is only available inside our `parcel-experiment` app; you won't be able to run it in a different directory. But the advantages outweigh the disadvantages.
 

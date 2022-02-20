@@ -164,7 +164,7 @@ You'll probably need a combination of the following things:
 
 When you've chosen a tool to use, the first port of call should be the tool project homepage. This could be a full blown website or it might be a single readme document in a code repository. The [date-fns docs](https://date-fns.org/docs/Getting-Started) for example are pretty good, complete, and easy to follow. Some documentation however can be rather technical and academic and not a good fit for your learning needs.
 
-Instead, you might want to find some dedicated tutorials on getting started with particular types of tools. Great starting places is to search web sites like [CSS Tricks](https://css-tricks.com/), [Dev](https://dev.to/), [freeCodeCamp](https://www.freecodecamp.org/), and [Smashing Magazine](https://www.smashingmagazine.com/), as they're tailored to the web development industry.
+Instead, you might want to find some dedicated tutorials on getting started with particular types of tools. A great starting place is to search web sites like [CSS Tricks](https://css-tricks.com/), [Dev](https://dev.to/), [freeCodeCamp](https://www.freecodecamp.org/), and [Smashing Magazine](https://www.smashingmagazine.com/), as they're tailored to the web development industry.
 
 Again, you'll probably go through several different tools as you search for the right ones for you, trying them out to see if they make sense, are well-supported, and do what you want them to do. This is fine — it is all good for learning, and the road will get smoother as you get more experience.
 
