@@ -98,7 +98,7 @@ The following live example's CSS can be edited to allow you to play with font wi
 
 The Italic (`ital`) axis works differently in that it is either on or off; there is no in-between. Italic designs often include dramatically different letterforms from their upright counterparts, so in the transition from upright to italic, several glyph (or character) substitutions usually occur. Italic and oblique are often used somewhat interchangeably, but in truth are quite different. Oblique is defined in this context with the term `slant` (see the below section), and a typeface would typically have one or the other, but not both.
 
-In CSS, both italic and oblique are applied to text using the {{cssxref("font-style")}} property. Also note the introduction of `font-synthesis: none;`—which will prevent browsers from accidentally applying the variation axis and a synthesized italic. This can be used to prevent faux-bolding as well.
+In CSS, both italic and oblique are applied to text using the {{cssxref("font-style")}} property. Also note the introduction of `font-synthesis: none;` — which will prevent browsers from accidentally applying the variation axis and a synthesized italic. This can be used to prevent faux-bolding as well.
 
 ```css
 font-style: italic;
@@ -114,7 +114,7 @@ The following live example's CSS can be edited to allow you to play with font it
 
 ### Slant
 
-Slant (represented by the `slnt` tag), or as it's often referred to, 'oblique' — is different from true italics in that it changes the angle of the letterforms but doesn't perform any kind of character substitution. It is also variable, in that it is expressed as a numeric range. This allows the font to be varied anywhere along that axis. The allowed range is generally 0 (upright) to 20 degrees — any number value along that range can be supplied, so the font can be slanted just a tiny bit. However, any value from -90–90 degrees is valid.
+Slant (represented by the `slnt` tag), or as it's often referred to, 'oblique' — is different from true italics in that it changes the angle of the letterforms but doesn't perform any kind of character substitution. It is also variable, in that it is expressed as a numeric range. This allows the font to be varied anywhere along that axis. The allowed range is generally 0 (upright) to 20 degrees — any number value along that range can be supplied, so the font can be slanted just a tiny bit. However, any value from -90 to 90 degrees is valid.
 
 > **Note:** The `deg` keyword is not used when utilizing `font-variation-settings`.
 
