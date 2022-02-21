@@ -44,7 +44,7 @@ Expect-CT: report-uri="<uri>",
            max-age=<age>
 ```
 
-##  Directives
+## Directives
 
 - `max-age`
 

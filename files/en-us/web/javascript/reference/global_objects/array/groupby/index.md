@@ -16,7 +16,7 @@ The returned object has separate properties for each group, containing arrays wi
 
 <!-- {{EmbedInteractiveExample("pages/js/array-groupby.html")}} -->
 
-Note that the returned object references the _same_ elements as the original array (not {{glossary("deep copy","deep copies")}}). 
+Note that the returned object references the _same_ elements as the original array (not {{glossary("deep copy","deep copies")}}).
 Changing the internal structure of these elements will be reflected in both the original array and the returned object.
 
 This method can be used when group names can be represented by strings.
@@ -63,7 +63,7 @@ groupBy(function(element, index, array) { /* ... */ }, thisArg)
 
 ### Return value
 
-An [`Object`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) with properties for all groups, each assigned to an array containing the elements of the associated group. 
+An [`Object`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) with properties for all groups, each assigned to an array containing the elements of the associated group.
 The value is an object that does not inherit from `Object.prototype`.
 
 ### Exceptions
@@ -138,6 +138,7 @@ This is a very succinct way to access the relevant values of elements within a f
 
 We can also create groups inferred from values in one or more properties of the elements.
 Below is a very similar example that uses a callback function and the `quantity` field to define that an element is in the `ok` or `reorder` groups.
+
 ```js
 function myCallback( { quantity } ) {
   return quantity > 5 ? 'ok' : 'reorder';
@@ -160,8 +161,7 @@ result = inventory.groupBy( myCallback );
 */
 ```
 
-The callback syntax provides access to the array and current index, so it is possible to implement grouping strategies based on th values of other elements in the array. 
-
+The callback syntax provides access to the array and current index, so it is possible to implement grouping strategies based on th values of other elements in the array.
 
 ## Specifications
 
