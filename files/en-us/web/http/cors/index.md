@@ -103,7 +103,7 @@ xhr.send();
 
 This operation performs a simple exchange between the client and the server, using CORS headers to handle the privileges:
 
-![](simple-req-updated.png)
+![](simple-req.png)
 
 Let's look at what the browser will send to the server in this case, and let's see how the server responds:
 
