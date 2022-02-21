@@ -21,7 +21,7 @@ right.
 ## Syntax
 
 ```js
-var stereoPannerNode = new StereoPannerNode(context, options)
+new StereoPannerNode(context, options)
 ```
 
 ### Parameters
