@@ -54520,20 +54520,6 @@
       "louisremi"
     ]
   },
-  "Web/API/IDBDatabaseException": {
-    "modified": "2020-10-15T21:10:02.682Z",
-    "contributors": [
-      "fscholz",
-      "jpmedley",
-      "kscarfone",
-      "pdm",
-      "teoli",
-      "mnoorenberghe",
-      "grendel",
-      "kathyw",
-      "jswisher"
-    ]
-  },
   "Web/API/IDBFactory": {
     "modified": "2020-10-15T21:08:44.592Z",
     "contributors": [

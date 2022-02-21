@@ -4022,11 +4022,9 @@
 /en-US/docs/IndexedDB	/en-US/docs/Web/API/IndexedDB_API
 /en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology
 /en-US/docs/IndexedDB/Cursor	/en-US/docs/Web/API/IDBCursor
-/en-US/docs/IndexedDB/DatabaseException	/en-US/docs/Web/API/IDBDatabaseException
 /en-US/docs/IndexedDB/IDBCursor	/en-US/docs/Web/API/IDBCursor
 /en-US/docs/IndexedDB/IDBCursorWithValue	/en-US/docs/Web/API/IDBCursorWithValue
 /en-US/docs/IndexedDB/IDBDatabase	/en-US/docs/Web/API/IDBDatabase
-/en-US/docs/IndexedDB/IDBDatabaseException	/en-US/docs/Web/API/IDBDatabaseException
 /en-US/docs/IndexedDB/IDBFactory	/en-US/docs/Web/API/IDBFactory
 /en-US/docs/IndexedDB/IDBIndex	/en-US/docs/Web/API/IDBIndex
 /en-US/docs/IndexedDB/IDBKeyRange	/en-US/docs/Web/API/IDBKeyRange
@@ -7547,7 +7545,6 @@
 /en-US/docs/Web/API/DataTransferItemList/DataTransferItem	/en-US/docs/Web/API/DataTransferItemList
 /en-US/docs/Web/API/DataTransferItemList/DataTransferItemList	/en-US/docs/Web/API/DataTransferItemList
 /en-US/docs/Web/API/DataView	/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView
-/en-US/docs/Web/API/DatabaseException	/en-US/docs/Web/API/IDBDatabaseException
 /en-US/docs/Web/API/DedicatedWorkerGlobalScope.onmessage	/en-US/docs/Web/API/DedicatedWorkerGlobalScope/onmessage
 /en-US/docs/Web/API/DedicatedWorkerGlobalScope.postMessage	/en-US/docs/Web/API/DedicatedWorkerGlobalScope/postMessage
 /en-US/docs/Web/API/DelayNode.delayTime	/en-US/docs/Web/API/DelayNode/delayTime
@@ -8223,7 +8220,6 @@
 /en-US/docs/Web/API/Index	/en-US/docs/Web/API
 /en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology
 /en-US/docs/Web/API/IndexedDB_API/Cursor	/en-US/docs/Web/API/IDBCursor
-/en-US/docs/Web/API/IndexedDB_API/DatabaseException	/en-US/docs/Web/API/IDBDatabaseException
 /en-US/docs/Web/API/IndexedDB_API/Index	/en-US/docs/Web/API/IDBIndex
 /en-US/docs/Web/API/IndexedDB_API/IndexedDB_primer	/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /en-US/docs/Web/API/IndexedDB_API/KeyRange	/en-US/docs/Web/API/IDBKeyRange
