@@ -39,7 +39,7 @@ None.
 
 A {{domxref("FileSystemEntry")}}-based object describing the dropped item. This will be
 either {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}}.
-If the item isn't a file, `null` is returned.
+The method aborts and returns `null` if the dropped item isn't a file, or if the {{domxref("DataTransferItem")}} object is not in read or read/write mode.
 
 ## Example
 
