@@ -7202,7 +7202,7 @@
 /en-US/docs/Web/API/AudioContext/decodeAudioData	/en-US/docs/Web/API/BaseAudioContext/decodeAudioData
 /en-US/docs/Web/API/AudioContext/destination	/en-US/docs/Web/API/BaseAudioContext/destination
 /en-US/docs/Web/API/AudioContext/listener	/en-US/docs/Web/API/BaseAudioContext/listener
-/en-US/docs/Web/API/AudioContext/onstatechange	/en-US/docs/Web/API/BaseAudioContext/onstatechange
+/en-US/docs/Web/API/AudioContext/onstatechange	/en-US/docs//Web/API/BaseAudioContext/statechange_event
 /en-US/docs/Web/API/AudioContext/sampleRate	/en-US/docs/Web/API/BaseAudioContext/sampleRate
 /en-US/docs/Web/API/AudioContext/state	/en-US/docs/Web/API/BaseAudioContext/state
 /en-US/docs/Web/API/AudioContext/suspend_event	/en-US/docs/Web/API/HTMLMediaElement/suspend_event
@@ -7242,6 +7242,7 @@
 /en-US/docs/Web/API/AudioWorkletNodeOptions	/en-US/docs/Web/API/AudioWorkletNode/AudioWorkletNode
 /en-US/docs/Web/API/BackgroundFetchRegistration/onprogress	/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event
 /en-US/docs/Web/API/Barcode_Detector_API	/en-US/docs/Web/API/Barcode_Detection_API
+/en-US/docs/Web/API/BaseAudioContext/onstatechange	/en-US/docs//Web/API/BaseAudioContext/statechange_event
 /en-US/docs/Web/API/BaseAudioContext/resume	/en-US/docs/Web/API/AudioContext/resume
 /en-US/docs/Web/API/BatteryManager.charging	/en-US/docs/Web/API/BatteryManager/charging
 /en-US/docs/Web/API/BatteryManager.chargingTime	/en-US/docs/Web/API/BatteryManager/chargingTime
