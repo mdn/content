@@ -56,7 +56,7 @@ This article provides information about the changes in Firefox 68 that will affe
 - The {{HTMLElement("track")}} element — represented by {{domxref("HTMLTrackElement")}} — now receives a {{domxref("HTMLTrackElement.cuechange_event", "cuechange")}} event in addition to the {{domxref("TextTrack")}} itself, if the text track is a contained by a media element ({{bug(1548731)}}).
 - {{htmlelement("link")}} elements support the `disabled` attribute again, albeit with different behavior. When `disabled` is set on a `<link>` element along with `rel="stylesheet"`, the referenced stylesheet is not loaded during page load, and will be loaded on demand when the `disabled` attribute is changed to `false` or removed ({{bug(1281135)}}).
 
-####  Removals
+#### Removals
 
 - [`<meta http-equiv="set-cookie">`](/en-US/docs/Web/HTML/Element/meta) is no longer supported ({{bug(1457503)}}).
 
