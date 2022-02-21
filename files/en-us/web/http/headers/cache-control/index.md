@@ -242,7 +242,8 @@ The `stale-while-revalidate` response directive indicates that the cache could r
 Cache-Control: max-age=604800, stale-while-revalidate=86400
 ```
 
-In the example above, the response is [fresh](/en-US/docs/Web/HTTP/Caching#freshness) for 7 days (604800s). After 7 days, it becomes [stale](/en-US/docs/Web/HTTP/Caching#freshness) but the cache is allowed to reuse it for any requests that are made in the following day (86400s), provided that they revalidate the response in the background.
+In the example above, the response is [fresh](/en-US/docs/Web/HTTP/Caching#freshness) for 7 days (604800s).
+After 7 days it becomes [stale](/en-US/docs/Web/HTTP/Caching#freshness), but the cache is allowed to reuse it for any requests that are made in the following day (86400s), provided that they revalidate the response in the background.
 
 Revalidation will make the cache be [fresh](/en-US/docs/Web/HTTP/Caching#freshness) again, so it appears to clients that it was always [fresh](/en-US/docs/Web/HTTP/Caching#freshness) during that period — effectively hiding the latency penalty of revalidation from them.
 
