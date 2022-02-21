@@ -38059,43 +38059,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/Document/onafterscriptexecute": {
-    "modified": "2020-10-15T21:07:56.641Z",
-    "contributors": [
-      "mfuji09",
-      "mfluehr",
-      "wbamberg",
-      "fscholz",
-      "valtlai",
-      "teoli",
-      "MHasan",
-      "kscarfone",
-      "vishu_gawli",
-      "Sheppy",
-      "ethertank",
-      "ziyunfei",
-      "Midnightaz",
-      "Johnjbarton"
-    ]
-  },
-  "Web/API/Document/onbeforescriptexecute": {
-    "modified": "2020-10-15T21:07:58.847Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz",
-      "valtlai",
-      "teoli",
-      "jsx",
-      "kscarfone",
-      "vishu_gawli",
-      "nairakhil13",
-      "Sheppy",
-      "ethertank",
-      "ziyunfei",
-      "Midnightaz",
-      "Johnjbarton"
-    ]
-  },
   "Web/API/Document/onoffline": {
     "modified": "2019-03-23T23:14:56.082Z",
     "contributors": [

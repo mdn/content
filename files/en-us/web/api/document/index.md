@@ -126,10 +126,6 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
 
 _The `Document` interface is extended with additional event handlers defined in [GlobalEventHandlers](/en-US/docs/Web/API/GlobalEventHandlers#event_handlers)._
 
-- {{DOMxRef("Document.onafterscriptexecute")}} {{Non-standard_Inline}}
-  - : Represents the event handling code for the {{domxref("Document/afterscriptexecute_event", "afterscriptexecute")}} event.
-- {{DOMxRef("Document.onbeforescriptexecute")}} {{Non-standard_Inline}}
-  - : Represents the event handling code for the {{domxref("Document/beforescriptexecute_event", "beforescriptexecute")}} event.
 - {{DOMxRef("Document.onreadystatechange")}}
   - : Represents the event handling code for the {{domxref("Document/readystatechange_event", "readystatechange")}} event.
 - {{DOMxRef("GlobalEventHandlers.onselectionchange")}} {{Experimental_Inline}}
@@ -319,6 +315,10 @@ The `Document` interface for HTML documents inherit from the {{DOMxRef("HTMLDocu
 
 Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
 
+- {{DOMxRef("Document.afterscriptexecute_event", "afterscriptexecute")}} {{Non-standard_Inline}}
+  - : Fired when a static {{HTMLElement("script")}} element finishes executing its script
+- {{DOMxRef("Document.beforescriptexecute_event", "beforescriptexecute")}} {{Non-standard_Inline}}
+  - : Fired when a static {{HTMLElement("script")}} is about to start executing.
 - {{DOMxRef("Document/scroll_event", "scroll")}}
   - : Fired when the document view or an element has been scrolled.
     Also available via the {{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}} property.

@@ -1918,8 +1918,8 @@
 /en-US/docs/DOM/element.offsetLeft	/en-US/docs/Web/API/HTMLElement/offsetLeft
 /en-US/docs/DOM/element.offsetParent	/en-US/docs/Web/API/HTMLElement/offsetParent
 /en-US/docs/DOM/element.offsetWidth	/en-US/docs/Web/API/HTMLElement/offsetWidth
-/en-US/docs/DOM/element.onafterscriptexecute	/en-US/docs/Web/API/Document/onafterscriptexecute
-/en-US/docs/DOM/element.onbeforescriptexecute	/en-US/docs/Web/API/Document/onbeforescriptexecute
+/en-US/docs/DOM/element.onafterscriptexecute	/en-US/docs/Web/API/Document/afterscriptexecute_event
+/en-US/docs/DOM/element.onbeforescriptexecute	/en-US/docs/Web/API/Document/beforescriptexecute_event
 /en-US/docs/DOM/element.onblur	/en-US/docs/Web/API/GlobalEventHandlers/onblur
 /en-US/docs/DOM/element.onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
 /en-US/docs/DOM/element.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
@@ -3157,8 +3157,8 @@
 /en-US/docs/Document_Object_Model_(DOM)/element.offsetLeft	/en-US/docs/Web/API/HTMLElement/offsetLeft
 /en-US/docs/Document_Object_Model_(DOM)/element.offsetParent	/en-US/docs/Web/API/HTMLElement/offsetParent
 /en-US/docs/Document_Object_Model_(DOM)/element.offsetWidth	/en-US/docs/Web/API/HTMLElement/offsetWidth
-/en-US/docs/Document_Object_Model_(DOM)/element.onafterscriptexecute	/en-US/docs/Web/API/Document/onafterscriptexecute
-/en-US/docs/Document_Object_Model_(DOM)/element.onbeforescriptexecute	/en-US/docs/Web/API/Document/onbeforescriptexecute
+/en-US/docs/Document_Object_Model_(DOM)/element.onafterscriptexecute	/en-US/docs/Web/API/Document/afterscriptexecute_event
+/en-US/docs/Document_Object_Model_(DOM)/element.onbeforescriptexecute	/en-US/docs/Web/API/Document/beforescriptexecute_event
 /en-US/docs/Document_Object_Model_(DOM)/element.onblur	/en-US/docs/Web/API/GlobalEventHandlers/onblur
 /en-US/docs/Document_Object_Model_(DOM)/element.onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
 /en-US/docs/Document_Object_Model_(DOM)/element.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
@@ -7607,6 +7607,8 @@
 /en-US/docs/Web/API/Document/mozFullScreenEnabled	/en-US/docs/Web/API/Document/fullscreenEnabled
 /en-US/docs/Web/API/Document/namespaceURI	/en-US/docs/Web/API/Element/namespaceURI
 /en-US/docs/Web/API/Document/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
+/en-US/docs/Web/API/Document/onafterscriptexecute	/en-US/docs/Web/API/Document/afterscriptexecute_event
+/en-US/docs/Web/API/Document/onbeforescriptexecute	/en-US/docs/Web/API/Document/beforescriptexecute_event
 /en-US/docs/Web/API/Document/onblur	/en-US/docs/Web/API/GlobalEventHandlers/onblur
 /en-US/docs/Web/API/Document/onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
 /en-US/docs/Web/API/Document/onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
@@ -9707,8 +9709,8 @@
 /en-US/docs/Web/API/element.offsetLeft	/en-US/docs/Web/API/HTMLElement/offsetLeft
 /en-US/docs/Web/API/element.offsetParent	/en-US/docs/Web/API/HTMLElement/offsetParent
 /en-US/docs/Web/API/element.offsetWidth	/en-US/docs/Web/API/HTMLElement/offsetWidth
-/en-US/docs/Web/API/element.onafterscriptexecute	/en-US/docs/Web/API/Document/onafterscriptexecute
-/en-US/docs/Web/API/element.onbeforescriptexecute	/en-US/docs/Web/API/Document/onbeforescriptexecute
+/en-US/docs/Web/API/element.onafterscriptexecute	/en-US/docs/Web/API/Document/afterscriptexecute_event
+/en-US/docs/Web/API/element.onbeforescriptexecute	/en-US/docs/Web/API/Document/beforescriptexecute_event
 /en-US/docs/Web/API/element.onblur	/en-US/docs/Web/API/GlobalEventHandlers/onblur
 /en-US/docs/Web/API/element.onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
 /en-US/docs/Web/API/element.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
