@@ -39,6 +39,7 @@ None.
 
 A {{domxref("FileSystemEntry")}}-based object describing the dropped item. This will be
 either {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}}.
+If the item isn't a file, `null` is returned.
 
 ## Example
 
