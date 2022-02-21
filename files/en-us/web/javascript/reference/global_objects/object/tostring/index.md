@@ -59,7 +59,7 @@ By default `toString()` takes no parameters. However, objects that inherit from 
 
 ## Examples
 
-### Overriding the default `toString` method
+### Overriding the default toString method
 
 You can create a function to be called in place of the default `toString()`
 method. The `toString()` function you create must return a primitive. If it
