@@ -8,9 +8,10 @@ tags:
   - Method
   - Prototype
   - Reference
+  - Experimental
 browser-compat: javascript.builtins.Array.groupByToMap
 ---
-{{JSRef}}
+{{JSRef}} {{SeeCompatTable}}
 
 The **`groupByToMap()`** method groups the elements of the calling array using the _objects_ returned by a provided testing function.
 The final returned {{jsxref("Map")}} uses the unique objects from the test function as keys, which can be used to get the array of elements in each group.
@@ -75,22 +76,22 @@ A {{jsxref("Map")}} object with keys for each group, each assigned to an array c
 
 ## Description
 
-The `groupBytoMap()` method executes the `callbackFn` function once for each index of the array, returning an object indicating the group of the associated element.
-The objects returned by the callback are used as keys for a {{jsxref("Map")}} (later returned by `groupBytoMap()`), where the associated value is an array containing all the elements for which the callback returned the same object.
+The `groupByToMap()` method executes the `callbackFn` function once for each index of the array, returning an object indicating the group of the associated element.
+The objects returned by the callback are used as keys for a {{jsxref("Map")}} (later returned by `groupByToMap()`), where the associated value is an array containing all the elements for which the callback returned the same object.
 
 `callbackFn` is invoked for _every_ index of the array, not just those with assigned values.
 This means it may be less efficient for sparse arrays, compared to methods that only visit assigned values.
 
-If a `thisArg` parameter is provided to `groupBytoMap()`, it will be used as the `this` value inside each invocation of the `callbackFn`.
+If a `thisArg` parameter is provided to `groupByToMap()`, it will be used as the `this` value inside each invocation of the `callbackFn`.
 If it is not provided, then {{jsxref("undefined")}} is used.
 
-The `groupBytoMap()` method does not mutate the array on which it is called, but the function provided to `callbackFn` can.
-Note however that the elements processed by `groupBytoMap()` are set _before_ the first invocation of `callbackFn`.
+The `groupByToMap()` method does not mutate the array on which it is called, but the function provided to `callbackFn` can.
+Note however that the elements processed by `groupByToMap()` are set _before_ the first invocation of `callbackFn`.
 Therefore:
 
-- `callbackFn` will not visit any elements added to the array after the call to `groupBytoMap()` begins.
+- `callbackFn` will not visit any elements added to the array after the call to `groupByToMap()` begins.
 - Elements that are assigned to indexes already visited, or to indexes outside the range, will not be visited by `callbackFn`.
-- If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time `groupBytoMap()` visits that element's index.
+- If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time `groupByToMap()` visits that element's index.
 - Elements that are {{jsxref("Operators/delete", "deleted")}} are still visited.
 
 > **Warning:** Concurrent modifications of the kind described above frequently lead to hard-to-understand code and are generally to be avoided (except in special cases).

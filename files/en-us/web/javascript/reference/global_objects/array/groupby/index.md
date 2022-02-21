@@ -7,9 +7,10 @@ tags:
   - Method
   - Prototype
   - Reference
+  - Experimental
 browser-compat: javascript.builtins.Array.groupBy
 ---
-{{JSRef}}
+{{JSRef}} {{SeeCompatTable}}
 
 The **`groupBy()`** method groups the elements of the calling array according to the values returned by a provided testing function.
 The returned object has separate properties for each group, containing arrays with the elements in the group.
