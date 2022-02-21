@@ -101,11 +101,11 @@ Each food has a `type`, which might need to be stored differently, and a `quanti
 
 ```js
 const inventory = [
-  {name: 'apples', type: 'vegetables', quantity: 5},
-  {name: 'bananas',  type: 'fruit', quantity: 0},
-  {name: 'goat', type: 'meat', quantity: 23},
-  {name: 'cherries', type: 'fruit', quantity: 5},
-  {name: 'fish', type: 'meat', quantity: 22}
+  { name: 'asparagus', type: 'vegetables', quantity: 5 },
+  { name: 'bananas',  type: 'fruit', quantity: 0 },
+  { name: 'goat', type: 'meat', quantity: 23 },
+  { name: 'cherries', type: 'fruit', quantity: 5 },
+  { name: 'fish', type: 'meat', quantity: 22 }
 ];
 ```
 
@@ -117,7 +117,8 @@ let result = inventory.groupBy( ({ type }) => type );
 /* Result is:
 { 
   vegetables: [ 
-    { name: "apples", type: "vegetables", quantity: 5 } 
+    { name: "  { name: 'asparagus', type: 'vegetables', quantity: 5 },
+", type: "vegetables", quantity: 5 } 
   ],
   fruit: [
     { name: "bananas", type: "fruit", quantity: 0 },
@@ -149,7 +150,7 @@ result = inventory.groupBy( myCallback );
 /* Result is:
 { 
   reorder: [
-    { name: "apples", type: "vegetables", quantity: 5 },
+    { name: "asparagus", type: "vegetables", quantity: 5 },
     { name: "bananas", type: "fruit", quantity: 0 },
     { name: "cherries", type: "fruit", quantity: 5 }
   ], 
@@ -161,7 +162,7 @@ result = inventory.groupBy( myCallback );
 */
 ```
 
-The callback syntax provides access to the array and current index, so it is possible to implement grouping strategies based on th values of other elements in the array.
+The callback syntax provides access to the array and current index, so it is possible to implement grouping strategies based on the values of other elements in the array.
 
 ## Specifications
 

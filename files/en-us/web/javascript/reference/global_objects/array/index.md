@@ -79,8 +79,9 @@ In JavaScript, arrays aren't [primitives](/en-US/docs/Glossary/Primitive) but ar
 - {{jsxref("Array.prototype.forEach()")}}
   - : Calls a function for each element in the calling array.
 - {{jsxref("Array.prototype.groupBy()")}}
-  - : Groups the elements of an array according to the results of a test function.
-    The resulting groups are accessed using object properties.
+  - : Groups the elements of an array into an object according to the strings returned by a test function.
+- {{jsxref("Array.prototype.groupByToMap()")}}
+  - : Groups the elements of an array into a {{jsxref("Map")}} according to objects returned by a test function.
 - {{jsxref("Array.prototype.includes()")}}
   - : Determines whether the calling array contains a value, returning `true` or `false` as appropriate.
 - {{jsxref("Array.prototype.indexOf()")}}
