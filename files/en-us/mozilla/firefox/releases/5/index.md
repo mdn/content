@@ -18,7 +18,7 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 - In order to comply with the HTML5 specification, support for the UTF-7 and UTF-32 [character sets](/en-US/docs/Character_Sets_Supported_by_Gecko) has been removed.
 - When in quirks mode, empty {{ HTMLElement("map") }}s are no longer skipped over in favor of non-empty ones when matching. See the [Gecko notes](/en-US/docs/Web/HTML/Element/map#gecko_notes) on the {{ HTMLElement("map") }} element for details.
 - Firefox mobile on Android now supports WOFF fonts for {{ cssxref("@font-face") }}.
-- WebGL [no longer loads textures from domains other than the originating domain](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#cross-domain_textures), as a security measure. [HTTP access control](/en-US/docs/Web/HTTP_access_control) support should be coming sometime in the future to make this possible more securely.
+- WebGL [no longer loads textures from domains other than the originating domain](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#cross-domain_textures), as a security measure. [HTTP access control](/en-US/docs/Web/HTTP_access_control) support should be coming sometime in the future to make this possible more securely.
 
 #### Canvas improvements
 
@@ -49,7 +49,7 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 - [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) now [supports the `loadend` event](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#detecting_any_load_end_condition) for progress listeners. This is sent after any transfer is finished (that is, after the `abort`, `error`, or `load` event). You can use this to handle any tasks that need to be performed regardless of success or failure of a transfer.
 - The {{ domxref("Blob") }} and, by extension, the {{ domxref("File") }} objects' `slice()` method has been removed and replaced with a new, proposed syntax that makes it more consistent with [`Array.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) and [`String.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice) methods in JavaScript. This method is named [`mozSlice()`](</en-US/docs/Web/API/Blob#mozslice()>) for now.
 - The value of {{ domxref("window.navigator.language") }} is now determined by looking at the value of the `Accept-Language` [HTTP header](/en-US/docs/Web/HTTP/Headers).
-- The {{ domxref("Element.prefix") }} property is now read only, as required by the DOM specification.
+- The {{ domxref("Element.prefix") }} property is now read only, as required by the DOM specification.
 - The {{ domxref("HTMLVideoElement") }} now supports experimental properties to get information about video paint statistics like frame rates.
 
 ### JavaScript

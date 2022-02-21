@@ -45,7 +45,7 @@ void gl.blendEquation(mode);
       - `gl.MIN`: Minimum of source and destination,
       - `gl.MAX`: Maximum of source and destination.
 
-    **default value**: `gl.FUNC_ADD`
+    **default value**: `gl.FUNC_ADD`
 
 ### Exception
 

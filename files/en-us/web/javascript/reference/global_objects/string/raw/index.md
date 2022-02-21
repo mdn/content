@@ -93,7 +93,7 @@ String.raw({
 // in the template literal.
 // The rest of the arguments are the substitutions.
 
-// The first argument’s 'raw' value can be any iterable, even a string!
+// The first argument's 'raw' value can be any iterable, even a string!
 // For example, 'test' is treated as ['t', 'e', 's', 't'].
 // The following is equivalent to
 // `t${0}e${1}s${2}t`:

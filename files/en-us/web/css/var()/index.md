@@ -20,11 +20,11 @@ The **`var()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Fu
 
 {{EmbedInteractiveExample("pages/css/var.html")}}
 
-The `var()` function cannot be used in property names, selectors or anything else besides property values. (Doing so usually produces invalid syntax, or else a value whose meaning has no connection to the variable.)
+The `var()` function cannot be used in property names, selectors or anything else besides property values. (Doing so usually produces invalid syntax, or else a value whose meaning has no connection to the variable.)
 
 ## Syntax
 
-The first argument to the function is the name of the custom property to be substituted. An optional second argument to the function serves as a fallback value. If the custom property referenced by the first argument is invalid, the function uses the second value.
+The first argument to the function is the name of the custom property to be substituted. An optional second argument to the function serves as a fallback value. If the custom property referenced by the first argument is invalid, the function uses the second value.
 
 {{csssyntax}}
 
@@ -33,7 +33,7 @@ The first argument to the function is the name of the custom property to be subs
 ### Values
 
 - `<custom-property-name>`
-  - : A custom property’s name represented by an identifier that starts with two dashes. Custom properties are solely for use by authors and users; CSS will never give them a meaning beyond what is presented here.
+  - : A custom property's name represented by an identifier that starts with two dashes. Custom properties are solely for use by authors and users; CSS will never give them a meaning beyond what is presented here.
 - `<declaration-value>`
   - : The custom property's fallback value, which is used in case the custom property is invalid in the used context. This value may contain any character except some characters with special meaning like newlines, unmatched closing brackets, i.e. `)`, `]`, or `}`, top-level semicolons, or exclamation marks.
 
@@ -55,16 +55,16 @@ body {
 
 ```css
 /* Fallback */
-/* In the component’s style: */
+/* In the component's style: */
 .component .header {
-  color: var(--header-color, blue); /* header-color isn’t set, and so remains blue, the fallback value */
+  color: var(--header-color, blue); /* header-color isn't set, and so remains blue, the fallback value */
 }
 
 .component .text {
   color: var(--text-color, black);
 }
 
-/* In the larger application’s style: */
+/* In the larger application's style: */
 .component {
   --text-color: #080;
 }

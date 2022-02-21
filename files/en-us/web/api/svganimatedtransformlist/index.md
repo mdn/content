@@ -19,7 +19,7 @@ The `SVGAnimatedTransformList` interface is used for attributes which take a lis
 <table class="no-markdown">
   <tbody>
     <tr>
-      <th scope="row">Also implement</th>
+      <th scope="row">Also implement</th>
       <td><em>None</em></td>
     </tr>
     <tr>
@@ -42,7 +42,7 @@ The `SVGAnimatedTransformList` interface is used for attributes which take a lis
       </td>
     </tr>
     <tr>
-      <th scope="row">Normative document</th>
+      <th scope="row">Normative document</th>
       <td>
         <a
           href="https://www.w3.org/TR/SVG/coords.html#InterfaceSVGAnimatedTransformList"

@@ -138,7 +138,7 @@ for (var i=0; i < allOrangeJuiceByClass.length; i++) {
 var allOrangeJuiceQuery = document.querySelectorAll('.orange.juice');
 result += "\n\ndocument.querySelectorAll('.orange.juice')";
 for (var i=0; i < allOrangeJuiceQuery.length; i++) {
-    result += "\n  " + allOrangeJuiceQuery[i].textContent;
+    result += "\n  " + allOrangeJuiceQuery[i].textContent;
 }
 
 document.getElementById("resultArea").value = result;

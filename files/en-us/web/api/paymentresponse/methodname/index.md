@@ -16,7 +16,7 @@ browser-compat: api.PaymentResponse.methodName
 ---
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
-The **`methodName`** read-only
+The **`methodName`** read-only
 property of the {{domxref("PaymentResponse")}} interface returns a string uniquely
 identifying the payment handler selected by the user.
 
@@ -41,7 +41,7 @@ payment processor to handle payments. See
 ## Example
 
 The following example extracts the method name from the {{domxref('PaymentResponse')}}
-object to the promise returned from {{domxref('PaymentRequest.show()')}}. In a
+object to the promise returned from {{domxref('PaymentRequest.show()')}}. In a
 real-world implementation this data would then be sent to a payment server.
 
 ```js

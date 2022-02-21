@@ -77,7 +77,7 @@ person.introduceSelf()
 
 You have now got some data and functionality inside your object, and are now able to access them with some nice simple syntax!
 
-So what is going on here? Well, an object is made up of multiple members, each of which has a name (e.g. `name` and `age` above), and a value (e.g. `['Bob', 'Smith']` and `32`). Each name/value pair must be separated by a comma, and the name and value in each case are separated by a colon. The syntax always follows this pattern:
+So what is going on here? Well, an object is made up of multiple members, each of which has a name (e.g. `name` and `age` above), and a value (e.g. `['Bob', 'Smith']` and `32`). Each name/value pair must be separated by a comma, and the name and value in each case are separated by a colon. The syntax always follows this pattern:
 
 ```js
 const objectName = {
@@ -236,7 +236,7 @@ Now try saving and refreshing, and entering the following into your text input:
 person.height
 ```
 
-Adding a property to an object using the method above isn't possible with dot notation, which can only accept a literal member name, not a variable value pointing to a name.
+Adding a property to an object using the method above isn't possible with dot notation, which can only accept a literal member name, not a variable value pointing to a name.
 
 ## What is "this"?
 

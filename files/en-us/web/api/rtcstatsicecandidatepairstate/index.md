@@ -23,7 +23,7 @@ The **`RTCStatsIceCandidatePairState`** enumerated type represents the set of st
 
 This represents the state of this candidate pair within the {{Glossary("ICE")}} check list for the {{domxref("RTCPeerConnection")}}.
 
-See {{SectionOnPage("/en-US/docs/Web/API/RTCIceCandidatePairStats/state", "ICE check lists", "code")}} for further information about how ICE check lsits work.
+See {{SectionOnPage("/en-US/docs/Web/API/RTCIceCandidatePairStats/state", "ICE check lists", "code")}} for further information about how ICE check lists work.
 
 ## Values
 

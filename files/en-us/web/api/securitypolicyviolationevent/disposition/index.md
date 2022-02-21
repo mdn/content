@@ -27,7 +27,7 @@ let disposition = violationEventInstance.disposition;
 
 ### Value
 
-A value defined in the [SecurityPolicyViolationEventDisposition
+A value defined in the [SecurityPolicyViolationEventDisposition
 enum](https://w3c.github.io/webappsec-csp/#enumdef-securitypolicyviolationeventdisposition) representing the URI of the blocked resource. Possible values are
 `"enforce"` or `"report"`
 

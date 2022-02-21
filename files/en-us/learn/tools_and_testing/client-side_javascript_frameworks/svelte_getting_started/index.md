@@ -338,7 +338,7 @@ Note the use of `:` in `on:click`. That's Svelte's syntax for listening to DOM e
 
 ## Inspecting main.js: the entry point of our app
 
-Let’s open `src/main.js`, which is where the `App` component is being imported and used. This file is the entry point for our app, and it initially looks like this:
+Let's open `src/main.js`, which is where the `App` component is being imported and used. This file is the entry point for our app, and it initially looks like this:
 
 ```js
 import App from './App.svelte';
@@ -490,7 +490,7 @@ To code along with us using the REPL, start at
 
 ## Summary
 
-This brings us to the end of our initial look at Svelte, including how to install it locally, create a starter app, and how the basics work. In the next article we'll start building our first proper application, a todo list. Before we do that, however, let's recap some of the things we’ve learned.
+This brings us to the end of our initial look at Svelte, including how to install it locally, create a starter app, and how the basics work. In the next article we'll start building our first proper application, a todo list. Before we do that, however, let's recap some of the things we've learned.
 
 In Svelte:
 

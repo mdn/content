@@ -42,7 +42,7 @@ array of `[key, value]` for each iteration.
 {{jsxref("Object")}} is similar to `Map`—both let you set keys to
 values, retrieve those values, delete keys, and detect whether something is
 stored at a key. For this reason (and because there were no built-in
-alternatives), `Object` has been used as `Map` historically.
+alternatives), `Object` has been used as `Map` historically.
 
 However, there are important differences that make `Map` preferable in some
 cases:
@@ -150,7 +150,7 @@ cases:
       </td>
       <td>
         <p>
-          <code>Object</code> does not implement an <a
+          <code>Object</code> does not implement an <a
             href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol"
             >iteration protocol</a
           >, and so objects are not directly iterable using the JavaScript
@@ -164,10 +164,10 @@ cases:
           <ul>
             <li>
               An object can implement the iteration protocol, or you can get an
-              iterable for an object using <a
+              iterable for an object using <a
                 href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"
                 ><code>Object.keys</code></a
-              > or <a
+              > or <a
                 href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries"
                 ><code>Object.entries</code></a
               >.

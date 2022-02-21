@@ -27,7 +27,7 @@ var CSSMathProduct = new CSSMathProduct(args)
 ### Parameters
 
 - args
-  - : A list of values for the {{domxref('CSSMathProduct')}} object to be either a double
+  - : A list of values for the {{domxref('CSSMathProduct')}} object to be either a double
     integer or a {{domxref('CSSNumericValue')}}.
 
 ## Specifications

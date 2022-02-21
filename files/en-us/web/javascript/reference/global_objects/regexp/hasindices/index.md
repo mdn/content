@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.RegExp.hasIndices
 ---
 {{JSRef}}
 
-The **`hasIndices`** property indicates whether or not the "`d`" flag is used with the regular expression. `hasIndices` is a read-only property of an individual regular expression instance.
+The **`hasIndices`** property indicates whether or not the "`d`" flag is used with the regular expression. `hasIndices` is a read-only property of an individual regular expression instance.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-hasindices.html")}}
 
@@ -21,13 +21,13 @@ The **`hasIndices`** property indicates whether or not the "`d`" flag is used 
 
 ## Description
 
-The value of `hasIndices` is a {{JSxRef("Boolean")}} and `true` if the "`d`" flag was used; otherwise, `false`. The "`d`" flag indicates that the result of a regular expression match should contain the start and end indices of the substrings of each capture group.
+The value of `hasIndices` is a {{JSxRef("Boolean")}} and `true` if the "`d`" flag was used; otherwise, `false`. The "`d`" flag indicates that the result of a regular expression match should contain the start and end indices of the substrings of each capture group.
 
 You cannot change this property directly.
 
 ## Examples
 
-### Using `hasIndices`
+### Using `hasIndices`
 
 ```js
 const str1 = 'foo bar foo';

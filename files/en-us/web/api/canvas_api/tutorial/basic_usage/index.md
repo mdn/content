@@ -44,7 +44,7 @@ For example, we could provide a text description of the canvas content or provid
 </canvas>
 ```
 
-Telling the user to use a different browser that supports canvas does not help users who can't read the canvas at all, for example. Providing a useful fallback text or sub DOM helps to make the canvas more accessible.
+Telling the user to use a different browser that supports canvas does not help users who can't read the canvas at all, for example. Providing a useful fallback text or sub DOM helps to make the canvas more accessible.
 
 ### Required `</canvas>` tag
 

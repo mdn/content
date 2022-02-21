@@ -28,7 +28,7 @@ hyphenate-character: auto;
   - : The {{cssxref("&lt;string&gt;")}} to use at the end of the line before a hyphenation break.
     The user agent may truncate this value if too many characters are used.
 - `auto`
-  - : The user-agent selects an appropriate string based on the content language’s typographic conventions.
+  - : The user-agent selects an appropriate string based on the content language's typographic conventions.
     This is the default property value, and only needs to be explicitly set in order to override a different inherited value.
 
 ## Formal definition

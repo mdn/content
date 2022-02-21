@@ -53,17 +53,17 @@ This captures these keys regardless of which modifiers are used with the key pre
 
 ### Writing system keys
 
-The codes passed {{domxref('Keyboard.lock')}} and the various methods of the {{domxref('KeyboardLayoutMap')}} interface are called “writing system keys”.
+The codes passed {{domxref('Keyboard.lock')}} and the various methods of the {{domxref('KeyboardLayoutMap')}} interface are called "writing system keys".
 
-“Writing system keys” are defined in the [Writing System Keys](https://w3c.github.io/uievents-code/#key-alphanumeric-writing-system) section of the [UI Events KeyboardEvent code Values](https://w3c.github.io/uievents-code/) spec as the physical keys that change meaning based on the current locale and keyboard layout. These keys are shown below. Blue keys are present on all standard keyboards while green keys are only available on some keyboards.
+"Writing system keys" are defined in the [Writing System Keys](https://w3c.github.io/uievents-code/#key-alphanumeric-writing-system) section of the [UI Events KeyboardEvent code Values](https://w3c.github.io/uievents-code/) spec as the physical keys that change meaning based on the current locale and keyboard layout. These keys are shown below. Blue keys are present on all standard keyboards while green keys are only available on some keyboards.
 
 ![Writing system keys as defined by the UI Events KeyboardEvent code Values spec.](writing-system-keys.png)
 
 ## Interfaces
 
-- {{domxref('Keyboard')}} {{experimental_inline}}
+- {{domxref('Keyboard')}} {{experimental_inline}}
   - : Provides functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.
-- {{domxref('KeyboardLayoutMap')}} {{experimental_inline}}
+- {{domxref('KeyboardLayoutMap')}} {{experimental_inline}}
   - : A map-like object with functions for retrieving the string associated with specific physical keys.
 - {{domxref('navigator.keyboard')}} {{readonlyinline}} {{experimental_inline}}
   - : Returns a {{domxref('Keyboard')}} object which provides access to functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.

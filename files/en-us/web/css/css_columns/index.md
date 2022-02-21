@@ -11,7 +11,7 @@ tags:
 ---
 {{CSSRef("CSS3 Multicol")}}
 
-**CSS Multi-column Layout** is a module of CSS that adds support for multi-column layouts. Support is included for establishing the number of columns in a layout, as well as how content should flow from column to column, gap sizes between columns, and column dividing lines (known as column rules) along with their appearance.
+**CSS Multi-column Layout** is a module of CSS that adds support for multi-column layouts. Support is included for establishing the number of columns in a layout, as well as how content should flow from column to column, gap sizes between columns, and column dividing lines (known as column rules) along with their appearance.
 
 ## Basic example
 

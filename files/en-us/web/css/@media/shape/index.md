@@ -73,5 +73,5 @@ This HTML will apply a special stylesheet for devices that have round screens.
 
 ## See also
 
-- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 - [@media](/en-US/docs/Web/CSS/@media)

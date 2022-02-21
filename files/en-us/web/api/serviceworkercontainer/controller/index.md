@@ -40,8 +40,8 @@ if ('serviceWorker' in navigator) {
   if (navigator.serviceWorker.controller) {
     console.log(`This page is currently controlled by: ${navigator.serviceWorker.controller}`);
   } else {
-    console.log('This page is not currently controlled by a service worker.');
-  }
+    console.log('This page is not currently controlled by a service worker.');
+  }
 } else {
   console.log('Service workers are not supported.');
 }

@@ -48,8 +48,8 @@ You can use the `vrdisplayfocus` event in an [`addEventListener`](/en-US/docs/We
 
 ```js
 window.addEventListener('vrdisplayfocus', function() {
-  info.textContent = 'Display focused.';
-  reportDisplays();
+  info.textContent = 'Display focused.';
+  reportDisplays();
 });
 ```
 

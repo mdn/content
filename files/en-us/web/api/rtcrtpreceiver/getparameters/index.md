@@ -44,7 +44,7 @@ of the receiver.
 ## Examples
 
 This example obtains the canonical name (CNAME) being used for {{Glossary("RTCP")}} on
-an  {{domxref("RTCRtpReceiver")}}.
+an  {{domxref("RTCRtpReceiver")}}.
 
 ```js
 function getRtcpCNAME(receiver) {

@@ -40,11 +40,11 @@ Highlights:
   - Direction-independent equivalents of {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}} and {{cssxref("border-left")}} and their longhands for width, style and color: {{cssxref("border-block-start")}}, {{cssxref("border-block-start-width")}}, {{cssxref("border-block-start-style")}}, {{cssxref("border-block-start-color")}}, {{cssxref("border-block-end")}}, {{cssxref("border-block-end-width")}}, {{cssxref("border-block-end-style")}}, {{cssxref("border-block-end-color")}}, {{cssxref("border-inline-start")}}, {{cssxref("border-inline-start-width")}}, {{cssxref("border-inline-start-style")}}, {{cssxref("border-inline-start-color")}}, {{cssxref("border-inline-end")}}, {{cssxref("border-inline-end-width")}}, {{cssxref("border-inline-end-style")}} and {{cssxref("border-inline-end-color")}}.
   - Direction-independent equivalents of {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} and {{cssxref("left")}}: `offset-block-start`, `offset-block-end`, `offset-inline-start` and `offset-inline-end`.
 
-- Support the {{cssxref("transform-origin")}} property in SVG and implement the {{cssxref("transform-box")}} property  ({{bug(923193)}}).
+- Support the {{cssxref("transform-origin")}} property in SVG and implement the {{cssxref("transform-box")}} property  ({{bug(923193)}}).
 
 ### HTML
 
-- {{HTMLElement("a")}} without an `href` attribute is no longer classified as interactive content. Clicking it inside {{HTMLElement("label")}} will activate labelled content ({{bug(1167816)}}).
+- {{HTMLElement("a")}} without an `href` attribute is no longer classified as interactive content. Clicking it inside {{HTMLElement("label")}} will activate labelled content ({{bug(1167816)}}).
 - SVG icons are now supported for site icons, that is favicons and shortcut icons ({{bug(366324)}}).
 - The {{htmlattrxref('crossorigin', 'link')}} attribute is now supported for [\<link rel='preconnect'>](/en-US/docs/Web/HTML/Element/link) ({{bug(1174152)}}).
 - The picture element does not react to resize/viewport changes ({{bug(1135812)}}).
@@ -59,7 +59,7 @@ Highlights:
 - {{jsxref("Functions/Default_parameters", "Destructured parameters with default value assignment", "#Destructured_parameter_with_default_value_assignment", 1)}} are now supported ({{bug(1018628)}}).
 - Per ES2015, curly braces are required for [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions). Syntax without them will fail from now on ({{bug(1150855)}}).
 - [Method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) (except for generator methods) are not constructable anymore ({{bug(1059908)}} and {{bug(1166950)}}).
-- As part of ES2015 specification compliance, parenthesized [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) patterns, like `([a, b]) = [1, 2]` or `({a, b}) = { a: 1, b: 2 }`, are now considered invalid and will throw a {{jsxref("SyntaxError")}}. See [Jeff Walden's blog post](http://whereswalden.com/2015/06/20/new-changes-to-make-spidermonkeys-and-firefoxs-parsing-of-destructuring-patterns-more-spec-compliant/) for more details.
+- As part of ES2015 specification compliance, parenthesized [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) patterns, like `([a, b]) = [1, 2]` or `({a, b}) = { a: 1, b: 2 }`, are now considered invalid and will throw a {{jsxref("SyntaxError")}}. See [Jeff Walden's blog post](http://whereswalden.com/2015/06/20/new-changes-to-make-spidermonkeys-and-firefoxs-parsing-of-destructuring-patterns-more-spec-compliant/) for more details.
 - The [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) syntax has been added ({{bug(1141865)}}).
 
 ### Interfaces/APIs/DOM
@@ -110,7 +110,7 @@ Highlights:
 #### Miscellaneous
 
 - On OS X and Windows, {{domxref("NavigatorOnLine.onLine", "Navigator.onLine")}} now changes regarding network connectivity (it always returned `true`, , unless "Work offline" mode was selected) before ({{bug(654579)}}).
-- {{domxref("MessagePort")}} and {{domxref("MessageChannel")}} now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API), and are enabled by default in all contexts ({{bug(952139)}}) and ({{bug(911972)}}).
+- {{domxref("MessagePort")}} and {{domxref("MessageChannel")}} now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API), and are enabled by default in all contexts ({{bug(952139)}}) and ({{bug(911972)}}).
 - The User Timing API is now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API) ({{bug(1155761)}}).
 - The [Notifications API](/en-US/docs/Web/API/Notifications_API) is now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API) ({{bug(916893)}}).
 - {{domxref("DOMRequest")}} and {{domxref("DOMCursor")}} are now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API) ({{bug(1167650)}}).
@@ -123,7 +123,7 @@ Highlights:
 
 #### New default and fallback font handling
 
-Mathematical formulas require special fonts. So far, these fonts were hard-coded in the `mathml.css` user agent stylesheet (which sets the font-family on {{MathMLElement("math")}} tag) and in the preference option `font.mathfont-family` (which sets the fallback fonts to use for stretchy and large operators). Firefox 41 introduces, an internal `x-math` language that is automatically set on the `<math>` tag as well as corresponding preference options (e.g. `font.name.serif.x-math`). The user agent stylesheet now sets font-family to serif on the `<math>` tag and the preference option `font.mathfont-family` is replaced with `font.name.serif.x-math`.  All platforms now essentially use the same list of fallback fonts, with "Latin Modern Math" as first one. The default/fallback fonts can be configured from the standard per-language font preference menu. For more details, see {{bug(947654)}} and {{bug(1160456)}}.
+Mathematical formulas require special fonts. So far, these fonts were hard-coded in the `mathml.css` user agent stylesheet (which sets the font-family on {{MathMLElement("math")}} tag) and in the preference option `font.mathfont-family` (which sets the fallback fonts to use for stretchy and large operators). Firefox 41 introduces, an internal `x-math` language that is automatically set on the `<math>` tag as well as corresponding preference options (e.g. `font.name.serif.x-math`). The user agent stylesheet now sets font-family to serif on the `<math>` tag and the preference option `font.mathfont-family` is replaced with `font.name.serif.x-math`.  All platforms now essentially use the same list of fallback fonts, with "Latin Modern Math" as first one. The default/fallback fonts can be configured from the standard per-language font preference menu. For more details, see {{bug(947654)}} and {{bug(1160456)}}.
 
 ### SVG
 

@@ -223,7 +223,7 @@ The difference between the two versions of the above code is a subtle one.
 - The example using `setInterval()` does things somewhat differently. The interval you chose _includes_ the time taken to execute the code you want to run in. Let's say that the code takes `40` milliseconds to run — the interval then ends up being only `60` milliseconds.
 - When using `setTimeout()` recursively, each iteration can calculate a different delay before running the next iteration. In other words, the value of the second parameter can specify a different time in milliseconds to wait before running the code again.
 
-When your code has the potential to take longer to run than the time interval you’ve assigned, it’s better to use recursive `setTimeout()` — this will keep the time interval constant between executions regardless of how long the code takes to execute, and you won't get errors.
+When your code has the potential to take longer to run than the time interval you've assigned, it's better to use recursive `setTimeout()` — this will keep the time interval constant between executions regardless of how long the code takes to execute, and you won't get errors.
 
 ### Immediate timeouts
 

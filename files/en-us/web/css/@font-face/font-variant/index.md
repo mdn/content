@@ -5,7 +5,7 @@ browser-compat: css.at-rules.font-face.font-variant
 ---
 {{CSSRef}}
 
-The **`font-variant`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) allows you to set all the font variants for the fonts specified in the {{cssxref("@font-face")}} rule.
+The **`font-variant`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) allows you to set all the font variants for the fonts specified in the {{cssxref("@font-face")}} rule.
 
 ## Constituent properties
 
@@ -42,7 +42,7 @@ font-variant: unset;
 - `small-caps`, `all-small-caps`, `petite-caps`, `all-petite-caps`, `unicase`, `titling-caps`
   - : Specifies the keywords and functions related to the {{cssxref("font-variant-caps")}} longhand property.
 - `<numeric-figure-values>`, `<numeric-spacing-values>`, `<numeric-fraction-values>`, `ordinal`, `slashed-zero`
-  - : Specifies the keywords related to the {{cssxref("font-variant-numeric")}} longhand property. The possible values are:  `lining-nums`, `oldstyle-nums`, `proportional-nums`, `tabular-nums`, `diagonal-fractions`, `stacked-fractions`, `ordinal`, and `slashed-zero`.
+  - : Specifies the keywords related to the {{cssxref("font-variant-numeric")}} longhand property. The possible values are:  `lining-nums`, `oldstyle-nums`, `proportional-nums`, `tabular-nums`, `diagonal-fractions`, `stacked-fractions`, `ordinal`, and `slashed-zero`.
 - `<east-asian-variant-values>`, `<east-asian-width-values>`, `ruby`
   - : Specifies the keywords related to the {{cssxref("font-variant-east-asian")}} longhand property. The possible values are: `jis78`, `jis83`, `jis90`, `jis04`, `simplified`, `traditional`, `full-width`, `proportional-width`, `ruby`.
 

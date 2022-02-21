@@ -13,7 +13,7 @@ APIs that use match patterns usually accept a list of match patterns, and will p
 
 ## Match pattern structure
 
-> **Note:** Some browsers don’t support certain schemes.
+> **Note:** Some browsers don't support certain schemes.
 > Check the [Browser compatibility table](#browser_compatibility) for details.
 
 All match patterns are specified as strings. Apart from the special [`<all_urls>`](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns#%3call_urls%3e) pattern, match patterns consist of three parts: _scheme_, _host_, and _path_. The scheme and host are separated by `://`.

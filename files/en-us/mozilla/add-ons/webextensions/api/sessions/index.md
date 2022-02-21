@@ -15,7 +15,7 @@ browser-compat: webextensions.api.sessions
 
 Use the sessions API to list, and restore, tabs and windows that have been closed while the browser has been running.
 
-The {{WebExtAPIRef("sessions.getRecentlyClosed()")}} function returns an array of {{WebExtAPIRef("tabs.Tab")}} and {{WebExtAPIRef("windows.Window")}} objects, representing tabs and windows that have been closed since the browser was running, up to the maximum defined in {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}}.
+The {{WebExtAPIRef("sessions.getRecentlyClosed()")}} function returns an array of {{WebExtAPIRef("tabs.Tab")}} and {{WebExtAPIRef("windows.Window")}} objects, representing tabs and windows that have been closed since the browser was running, up to the maximum defined in {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}}.
 
 You can then restore a window or tab using the {{WebExtAPIRef("sessions.restore()")}} function. Restoring doesn't just reopen the tab: it also restores the tab's navigation history so the back/forward buttons will work.
 

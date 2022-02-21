@@ -42,10 +42,10 @@ Bluetooth is supported:
 
 ```js
 navigator.bluetooth.getAvailability().then(available => {
-  if (available)
-      console.log("This device supports Bluetooth!");
-  else
-      console.log("Doh! Bluetooth is not supported");
+  if (available)
+      console.log("This device supports Bluetooth!");
+  else
+      console.log("Doh! Bluetooth is not supported");
 });
 ```
 

@@ -16,7 +16,7 @@ Alright, so you've got the microphone permissions set up. The next step is to ma
     });
     ```
 
-    Here you’re replacing the text in the HTML element with the ID `caststatus`.
+    Here you're replacing the text in the HTML element with the ID `caststatus`.
 
 2. Try reloading the app in your browser. Instead of `connecting...`, you should see `Your device ID is: <peer ID>`.
 

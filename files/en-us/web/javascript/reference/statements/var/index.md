@@ -38,7 +38,8 @@ var { bar } = foo; // where foo = { bar:10, baz:12 };
 ## Description
 
 `var` declarations, wherever they occur, are processed before any code is
-executed. This is called _hoisting_, and is discussed further below.
+executed. This is called {{Glossary("Hoisting", "hoisting")}} and is
+discussed further below.
 
 The scope of a variable declared with `var` is its current _execution
 context and closures thereof_, which is either the enclosing function and
@@ -146,7 +147,7 @@ looks like it does.
 
 ### var hoisting
 
-Because variable declarations (and declarations in general) are processed before any
+Because `var` declarations are processed before any
 code is executed, declaring a variable anywhere in the code is equivalent to declaring
 it at the top. This also means that a variable can appear to be used before it's
 declared. This behavior is called "_hoisting_", as it appears that the variable
@@ -166,9 +167,9 @@ For that reason, it is recommended to always declare variables at the top of the
 scope (the top of global code and the top of function code) so it's clear which
 variables are function scoped (local) and which are resolved on the scope chain.
 
-It's important to point out that the hoisting will affect the variable declaration, but
-not its value's initialization. The value will be indeed assigned when the assignment
-statement is reached:
+It's important to point out that only a variable's declaration is hoisted,
+not its initialization. The initialization happens only when the assignment
+statement is reached. Until then the variable remains `undefined` (but declared):
 
 ```js
 function do_something() {

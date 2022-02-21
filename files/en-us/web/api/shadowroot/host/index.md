@@ -12,9 +12,9 @@ browser-compat: api.ShadowRoot.host
 ---
 {{APIRef("Shadow DOM")}}
 
-The **`host`** read-only property of
+The **`host`** read-only property of
 the {{domxref("ShadowRoot")}} returns a reference to the DOM element the
-`ShadowRoot` is attached to.
+`ShadowRoot` is attached to.
 
 ## Syntax
 
@@ -24,7 +24,7 @@ const someElement = shadowRoot.host
 
 ### Value
 
-A  DOM {{domxref('Element')}}.
+A  DOM {{domxref('Element')}}.
 
 ## Examples
 

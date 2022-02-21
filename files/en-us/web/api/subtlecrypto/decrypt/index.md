@@ -42,7 +42,7 @@ const result = crypto.subtle.decrypt(algorithm, key, data);
 - `key` is a {{domxref("CryptoKey")}} containing the key to be
   used for decryption. If using RSA-OAEP, this is the `privateKey` property
   of the {{domxref("CryptoKeyPair")}} object.
-- *`data`* is a {{domxref("BufferSource")}} containing the data to
+- *`data`* is a {{domxref("BufferSource")}} containing the data to
   be decrypted (also known as {{glossary("ciphertext")}}).
 
 ### Return value
@@ -59,7 +59,7 @@ The promise is rejected when the following exceptions are encountered:
     encryption algorithm, or invalid key for the specified encryption algorithm*)*.
 - OperationError
   - : Raised when the operation failed for an operation-specific reason (e.g. algorithm
-    parameters of invalid sizes, or there was an error decrypting the ciphertext).
+    parameters of invalid sizes, or there was an error decrypting the ciphertext).
 
 ## Supported algorithms
 
@@ -78,12 +78,12 @@ This code decrypts `ciphertext` using RSA-OAEP. [See the complete code on GitHub
 
 ```js
 function decryptMessage(privateKey, ciphertext) {
-  return window.crypto.subtle.decrypt(
-    {
-      name: "RSA-OAEP"
-    },
-    privateKey,
-    ciphertext
+  return window.crypto.subtle.decrypt(
+    {
+      name: "RSA-OAEP"
+    },
+    privateKey,
+    ciphertext
   );
 }
 ```
@@ -95,14 +95,14 @@ This code decrypts `ciphertext` using AES in CTR mode. Note that
 
 ```js
 function decryptMessage(key, ciphertext) {
-  return window.crypto.subtle.decrypt(
-    {
-      name: "AES-CTR",
-      counter,
-      length: 64
-    },
-    key,
-    ciphertext
+  return window.crypto.subtle.decrypt(
+    {
+      name: "AES-CTR",
+      counter,
+      length: 64
+    },
+    key,
+    ciphertext
   );
 }
 ```
@@ -114,13 +114,13 @@ This code decrypts `ciphertext` using AES in CBC mode. Note that
 
 ```js
 function decryptMessage(key, ciphertext) {
-  return window.crypto.subtle.decrypt(
-    {
-      name: "AES-CBC",
-      iv: iv
-    },
-    key,
-    ciphertext
+  return window.crypto.subtle.decrypt(
+    {
+      name: "AES-CBC",
+      iv: iv
+    },
+    key,
+    ciphertext
   );
 }
 ```
@@ -132,13 +132,13 @@ This code decrypts `ciphertext` using AES in GCM mode. Note that
 
 ```js
 function decryptMessage(key, ciphertext) {
-  return window.crypto.subtle.decrypt(
-    {
-      name: "AES-GCM",
-      iv: iv
-    },
-    key,
-    ciphertext
+  return window.crypto.subtle.decrypt(
+    {
+      name: "AES-GCM",
+      iv: iv
+    },
+    key,
+    ciphertext
   );
 }
 ```
@@ -160,6 +160,6 @@ function decryptMessage(key, ciphertext) {
 - [NIST
   SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final) specifies CBC mode.
 - [NIST
-  SP800-38D](https://csrc.nist.gov/publications/detail/sp/800-38d/final) specifies GCM mode.
+  SP800-38D](https://csrc.nist.gov/publications/detail/sp/800-38d/final) specifies GCM mode.
 - [FIPS
   198-1](https://csrc.nist.gov/csrc/media/publications/fips/198/1/final/documents/fips-198-1_final.pdf) specifies HMAC.

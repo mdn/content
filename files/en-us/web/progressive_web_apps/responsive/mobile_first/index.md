@@ -31,7 +31,7 @@ We have already mentioned the fact that mobiles generally have less memory, proc
 
 ### Control mechanisms
 
-Control mechanisms are another large constraint on mobile devices. Anyone who has ever tried to enter data into a form on a mobile device, or even just navigated around a complex site, knows this well. Therefore we should try to simplify things on mobile, keeping each view cut down to a single, simple purpose where possible, and reducing the amount of typing users are expected to do. The latter will please desktop users as well as mobile users!
+Control mechanisms are another large constraint on mobile devices. Anyone who has ever tried to enter data into a form on a mobile device, or even just navigated around a complex site, knows this well. Therefore we should try to simplify things on mobile, keeping each view cut down to a single, simple purpose where possible, and reducing the amount of typing users are expected to do. The latter will please desktop users as well as mobile users!
 
 ### Usage context
 
@@ -41,7 +41,7 @@ On top of everything else, you must consider the kinds of situations mobile devi
 
 When developing mobile app layouts, you often run into problems with navigation menus. The concept is the same regardless of the target device — you want to provide a mechanism for users to search for things and get to different views/pages of the application — but because mobile screens are so much smaller, a reasonable desktop navigation can spoil the experience by filling up most of the initial view of the app, covering up the content.
 
-There several ways to solve the problem of navigation getting in the way on mobile, a few of which I'll discuss here. The main objective is to put the content first and to hide away the navigation until the user really needs it.
+There several ways to solve the problem of navigation getting in the way on mobile, a few of which I'll discuss here. The main objective is to put the content first and to hide away the navigation until the user really needs it.
 
 First of all, you can consider a different navigation mechanism on mobile. So, if you were planning to have a vertical navigation menu on desktop, you might replace this on mobile with a select menu containing the options, or even a single button that when pressed brings the navigation options up in an overlay.
 
@@ -169,57 +169,57 @@ The above layout is fine for narrower layouts, but it doesn't work very well whe
 
 ```css
 @media (min-width: 480px) {
-  #bottom, #top {
-    display: none;
-  }
+  #bottom, #top {
+    display: none;
+  }
 
-  article, nav {
-    display: block;
-  }
+  article, nav {
+    display: block;
+  }
 
-  nav ul {
-    text-align: center;
-  }
+  nav ul {
+    text-align: center;
+  }
 
-  nav li {
-    display: inline;
-  }
+  nav li {
+    display: inline;
+  }
 
-  nav li a {
-    border-right: 1px solid #AD66D5;
-    border-bottom: none;
-    display: inline-block;
-    padding: 0 5px;
-    font-size: 1.6em;
-  }
+  nav li a {
+    border-right: 1px solid #AD66D5;
+    border-bottom: none;
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 1.6em;
+  }
 
-  nav li:last-child a {
-    border-right: none;
-  }
+  nav li:last-child a {
+    border-right: none;
+  }
 
 }
 
 @media (min-width: 600px) {
-  html {
-    background: #eee;
-    height: 100%;
-  }
+  html {
+    background: #eee;
+    height: 100%;
+  }
 
-  body {
-    width: 600px;
-    height: inherit;
-    margin: 0 auto;
-    background: url(../img/firefox-os.png) bottom left no-repeat, linear-gradient(to bottom, #fff, #eee);
-  }
+  body {
+    width: 600px;
+    height: inherit;
+    margin: 0 auto;
+    background: url(../img/firefox-os.png) bottom left no-repeat, linear-gradient(to bottom, #fff, #eee);
+  }
 
-  .main > p {
-    background: rgba(255,255,255,0.3);
-  }
+  .main > p {
+    background: rgba(255,255,255,0.3);
+  }
 
-  nav li a {
-    padding: 0 10px;
-    font-size: 2em;
-  }
+  nav li a {
+    padding: 0 10px;
+    font-size: 2em;
+  }
 }
 ```
 

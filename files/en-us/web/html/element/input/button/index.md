@@ -20,7 +20,7 @@ browser-compat: html.elements.input.input-button
 
 {{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}
 
-> **Note:** While `<input>` elements of type `button` are still perfectly valid HTML, the newer {{HTMLElement("button")}} element is now the favored way to create buttons. Given that a {{HTMLElement("button")}}’s label text is inserted between the opening and closing tags, you can include HTML in the label, even images.
+> **Note:** While `<input>` elements of type `button` are still perfectly valid HTML, the newer {{HTMLElement("button")}} element is now the favored way to create buttons. Given that a {{HTMLElement("button")}}'s label text is inserted between the opening and closing tags, you can include HTML in the label, even images.
 
 <table class="properties">
   <tbody>

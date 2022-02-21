@@ -46,7 +46,7 @@ To use this API you need to have the "downloads" [API permission](/en-US/docs/Mo
 - {{WebExtAPIRef("downloads.download()")}}
   - : Downloads a file, given its URL and other optional preferences.
 - {{WebExtAPIRef("downloads.search()")}}
-  - : Queries the {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} available in the browser's downloads manager, and returns those that match the specified search criteria.
+  - : Queries the {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} available in the browser's downloads manager, and returns those that match the specified search criteria.
 - {{WebExtAPIRef("downloads.pause()")}}
   - : Pauses a download.
 - {{WebExtAPIRef("downloads.resume()")}}

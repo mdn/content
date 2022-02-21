@@ -14,12 +14,12 @@ browser-compat: api.PaymentRequest.id
 ---
 {{SeeCompatTable}}{{APIRef("Payment Request API")}}
 
-The **`id`** read-only attribute of the
+The **`id`** read-only attribute of the
 {{domxref("PaymentRequest")}} interface returns a unique identifier for a particular
 {{domxref("PaymentRequest")}} instance.
 
-When constructing an instance of the {{domxref("PaymentRequest")}}, you are able to
-supply an custom id. If none is provided, the browser automatically sets the id value to a UUID.
+When constructing an instance of the {{domxref("PaymentRequest")}}, you are able to
+supply an custom id. If none is provided, the browser automatically sets the id value to a UUID.
 
 ## Example
 

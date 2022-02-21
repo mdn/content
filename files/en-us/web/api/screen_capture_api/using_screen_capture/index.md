@@ -333,6 +333,10 @@ If you're performing screen capture within an `<iframe>`, you can request permis
 </iframe>
 ```
 
+## Browser compatibility
+
+{{Compat("api.MediaDevices.getDisplayMedia")}}
+
 ## See also
 
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)

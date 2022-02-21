@@ -42,7 +42,7 @@ _No changes._
 ### CSS
 
 - `:-moz-selection` has been unprefixed to {{cssxref("::selection")}} ({{bug(509958)}}).
-- `x` is now supported as a unit for the {{cssxref("&lt;resolution&gt;")}} type ({{bug(1460655)}}).
+- `x` is now supported as a unit for the {{cssxref("&lt;resolution&gt;")}} type ({{bug(1460655)}}).
 - {{cssxref("shape-margin")}}, {{cssxref("shape-outside")}}, and {{cssxref("shape-image-threshold")}} are now enabled by default ({{bug(1457297)}}).
 
 #### Removals
@@ -147,7 +147,7 @@ _No changes._
 
 - Added the {{WebExtAPIRef("webRequest.getSecurityInfo()")}} API to examine details of TLS connections ({{bug(1322748)}}).
 - Added the {{WebExtAPIRef("browserSettings.newTabPosition")}} to customize where new tabs open ({{bug(1344749)}}).
-- `windowTypes` has been deprecated in {{WebExtAPIRef("windows.get()")}}, {{WebExtAPIRef("windows.getCurrent()")}}, and {{WebExtAPIRef("windows.getLastFocused()")}} ({{bug(1419132)}}).
+- `windowTypes` has been deprecated in {{WebExtAPIRef("windows.get()")}}, {{WebExtAPIRef("windows.getCurrent()")}}, and {{WebExtAPIRef("windows.getLastFocused()")}} ({{bug(1419132)}}).
 - It's now possible to modify a browser action on a per-window basis ({{bug(1419893)}}).
 
 ### Manifest changes

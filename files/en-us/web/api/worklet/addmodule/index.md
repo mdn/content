@@ -50,13 +50,13 @@ added. The promise doesn't return any value.
 
 ### Exceptions
 
-If `addModule()` fails, it rejects the promise, delivering one of the
+If `addModule()` fails, it rejects the promise, delivering one of the
 following errors to the rejection handler.
 
 - `AbortError`
   - : The specified script is invalid or could not be loaded.
 - `SyntaxError`
-  - : The specified `moduleURL` is invalid.
+  - : The specified `moduleURL` is invalid.
 
 ## Examples
 

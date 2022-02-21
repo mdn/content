@@ -53,7 +53,7 @@ _In addition to the properties listed below, properties from the parent interfac
 - {{domxref("XRInputSourceEvent.frame", "frame")}} {{ReadOnlyInline}}
   - : An {{domxref("XRFrame")}} object providing the needed information about the event frame during which the event occurred. This frame may have been rendered in the past rather than being a current frame. Because this is an _event_ frame, not an _animation_ frame, you cannot call {{domxref("XRFrame.getViewerPose", "XRFrame.getViewerPose()")}} on it; instead, use {{domxref("XRFrame.getPose", "getPose()")}}.
 - {{domxref("XRInputSourceEvent.inputSource", "inputSource")}} {{ReadOnlyInline}}
-  - : An {{domxref("XRInputSource")}} object indicating which input source generated the input event.
+  - : An {{domxref("XRInputSource")}} object indicating which input source generated the input event.
 
 ## Description
 
@@ -63,11 +63,11 @@ Triggered when users are squeezing the controller, making a hand gesture that mi
 
 ### Use cases
 
-The {{domxref("XRSession.squeezestart_event", "squeezestart")}} event indicates that the user has begun a squeeze action.
+The {{domxref("XRSession.squeezestart_event", "squeezestart")}} event indicates that the user has begun a squeeze action.
 
-If the primary squeeze action ends successfully, the session is sent a `squeeze` event.
+If the primary squeeze action ends successfully, the session is sent a `squeeze` event.
 
-A {{domxref("XRSession.squeezeend_event", "squeezeend")}} event is sent to indicate that the squeeze action is no longer underway. This is sent whether the squeeze action succeeded or not.
+A {{domxref("XRSession.squeezeend_event", "squeezeend")}} event is sent to indicate that the squeeze action is no longer underway. This is sent whether the squeeze action succeeded or not.
 
 ## Examples
 

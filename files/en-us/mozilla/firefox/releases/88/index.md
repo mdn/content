@@ -9,7 +9,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 88 that will affect developers. Firefox 88 was released on April 19, 2021.
+This article provides information about the changes in Firefox 88 that will affect developers. Firefox 88 was released on April 19, 2021.
 
 > **Note:** See also [Never too late for Firefox 88](https://hacks.mozilla.org/2021/04/never-too-late-for-firefox-88/) on Mozilla Hacks.
 

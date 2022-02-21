@@ -14,8 +14,8 @@ browser-compat: api.IDBKeyRange.lower
 ---
 {{ APIRef("IndexedDB") }}
 
-The **`lower`** read-only property of the
-{{domxref("IDBKeyRange")}} interface returns the lower bound of the key range.
+The **`lower`** read-only property of the
+{{domxref("IDBKeyRange")}} interface returns the lower bound of the key range.
 
 {{AvailableInWorkers}}
 
@@ -33,18 +33,18 @@ type.)
 ## Example
 
 The following example illustrates how you'd use a key range. Here we
-declare `keyRangeValue = IDBKeyRange.upperBound("F", "W", true, true);` — a
+declare `keyRangeValue = IDBKeyRange.upperBound("F", "W", true, true);` — a
 range that includes everything between "F" and "W" but not including them — since both
 the upper and lower bounds have been declared as open (`true`). We open a
 transaction (using {{domxref("IDBTransaction")}}) and an object store, and open a Cursor
-with {{domxref("IDBObjectStore.openCursor")}}, declaring `keyRangeValue` as
+with {{domxref("IDBObjectStore.openCursor")}}, declaring `keyRangeValue` as
 its optional key range value.
 
 After declaring the key range, we log its `lower` property value to the
 console, which should appear as "F".
 
 > **Note:** For a more complete example allowing you to experiment with
-> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange) repo
+> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange) repo
 > ([view the example live
 > too](https://mdn.github.io/indexeddb-examples/idbkeyrange/).)
 

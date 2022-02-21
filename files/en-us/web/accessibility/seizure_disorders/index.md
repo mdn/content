@@ -45,7 +45,7 @@ That same article continues that many factors must combine to trigger the photos
 
 You don't even need an image or video to cause harm. A {{HTMLElement('div')}} element set to change color and luminosity at high frequency, easily done via JavaScript, can cause real harm. And, flickering can occur everywhere. For example, "spinners" commonly used to display while pages load can easily "flicker" while spinning.
 
-Additional concerns exist for individuals with motor-skill problems. For example, the page for Trace Research & Development Center’s [Photosensitive Epilepsy Analysis Tool](https://trace.umd.edu/peat) notes that _"Photosensitive seizures can be provoked by certain types of flashing in web or computer content, including mouse-overs that cause large areas of the screen to rapidly flash on and off repeatedly"_.
+Additional concerns exist for individuals with motor-skill problems. For example, the page for Trace Research & Development Center's [Photosensitive Epilepsy Analysis Tool](https://trace.umd.edu/peat) notes that _"Photosensitive seizures can be provoked by certain types of flashing in web or computer content, including mouse-overs that cause large areas of the screen to rapidly flash on and off repeatedly"_.
 
 ### Other physical reactions
 
@@ -505,7 +505,7 @@ The more often the screen is refreshed, the more stable it appears to the human 
 A very old article, Tech Republic's ["Epilepsy and CRT/LCD screen flicker"](https://www.techrepublic.com/forums/discussions/epilepsy-and-crt-lcd-screen-flicker/), had an interesting response concerning the refresh rates in Hz:
 
 - _"This effect is noticeable, and documented, up to 70 Hz."_
-- _"These studies would seem to indicate that you should stay away from refresh rates under 70 Hz, and use a rate not divisible by 10."_
+- _"These studies would seem to indicate that you should stay away from refresh rates under 70 Hz, and use a rate not divisible by 10."_
 
 Eric Bailey, of CSS-Tricks, found an innovative use the update feature which, used in combination with animation-duration or transition-duration, to conclude at a rate that is imperceptible to the human eye. In other words, Eric's techniques address the refresh-rate problem. The CSS below is from the CSS-Tricks article, [" Revisiting prefers-reduced-motion, the reduced motion media query"](https://css-tricks.com/revisiting-prefers-reduced-motion-the-reduced-motion-media-query/).
 
@@ -535,7 +535,7 @@ EnvironmentMQ (Planned in Media Queries Level 5)
 - `light-level`
   - : [`light-level`](https://drafts.csswg.org/mediaqueries-5/#light-level) has three valid values: dim, normal, and washed. Interestingly, the specification refrains from actually defining the three levels in terms of a measurement of lux, because devices with a light sensor usually adjust the brightness of the screen automatically. The specifications also note the difference in technology, such as e-ink, which remains readable in bright daylight, versus liquid crystals, which do not.
 - `environment-blending`
-  - : From W3C's Draft document, Media Queries Level 5: _"The [`environment-blending`](https://drafts.csswg.org/mediaqueries-5/#descdef-media-environment-blending) media feature is used to query the characteristics of the user’s display so the author can adjust the style of the document. An author might choose to adjust the visuals and/or layout of the page depending on the display technology to increase the appeal or improve legibility."_
+  - : From W3C's Draft document, Media Queries Level 5: _"The [`environment-blending`](https://drafts.csswg.org/mediaqueries-5/#descdef-media-environment-blending) media feature is used to query the characteristics of the user's display so the author can adjust the style of the document. An author might choose to adjust the visuals and/or layout of the page depending on the display technology to increase the appeal or improve legibility."_
 
 ##### User Preference Media Features (Planned in Media Queries Level 5)
 

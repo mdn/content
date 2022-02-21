@@ -64,7 +64,7 @@ The effect of `right` depends on how the element is positioned (i.e., the value 
 
 - When `position` is set to `absolute` or `fixed`, the `right` property specifies the distance between the element's right edge and the right edge of its containing block.
 - When `position` is set to `relative`, the `right` property specifies the distance the element's right edge is moved to the left from its normal position.
-- When `position` is set to `sticky`, the `right` property is used to compute the sticky-constraint rectangle.
+- When `position` is set to `sticky`, the `right` property is used to compute the sticky-constraint rectangle.
 - When `position` is set to `static`, the `right` property has _no effect_.
 
 When both {{cssxref("left")}} and `right` are defined, if not prevented from doing so by other properties, the element will stretch to satisfy both. If the element cannot stretch to satisfy both -- for example, if a `width` is declared -- the position of the element is _over-constrained_. When this is the case, the `left` value has precedence when the container is left-to-right; the `right` value has precedence when the container is right-to-left.
@@ -131,26 +131,26 @@ When both `left` and `right` are declared, the element will stretch to meet both
 
 ```css
 div {
-  outline: 1px solid #CCCCCC;
+  outline: 1px solid #CCCCCC;
 }
 #parent {
-  width: 200px;
-  height: 200px;
-  background-color: #FFC7E4;
-  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: #FFC7E4;
+  position: relative;
 }
 /* declare both a left and a right */
 #width,
 #noWidth {
-  background-color: #C2FFD7;
-  position: absolute;
-  left: 0;
-  right: 0;
+  background-color: #C2FFD7;
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 /* declare a width */
 #width {
-  width: 100px;
-  top: 60px;
+  width: 100px;
+  top: 60px;
 }
 ```
 
@@ -169,5 +169,5 @@ div {
 ## See also
 
 - {{cssxref("inset")}}, the shorthand for all related properties: {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}}
-- The mapped logical properties: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}} and the shorthands {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}
+- The mapped logical properties: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}} and the shorthands {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}
 - {{cssxref("position")}}

@@ -18,13 +18,13 @@ Normal Flow is defined in the [CSS 2.1 specification](https://www.w3.org/TR/CSS2
 
 The behavior of elements which have a block or inline formatting context is also defined in this specification. For elements with a block formatting context, the spec says:
 
-> “In a block formatting context, boxes are laid out one after the other, vertically, beginning at the top of a containing block. The vertical distance between two sibling boxes is determined by the 'margin' properties. Vertical margins between adjacent block-level boxes in a block formatting context collapse.
+> "In a block formatting context, boxes are laid out one after the other, vertically, beginning at the top of a containing block. The vertical distance between two sibling boxes is determined by the 'margin' properties. Vertical margins between adjacent block-level boxes in a block formatting context collapse.
 >
-> In a block formatting context, each box's left outer edge touches the left edge of the containing block (for right-to-left formatting, right edges touch).” - 9.4.1
+> In a block formatting context, each box's left outer edge touches the left edge of the containing block (for right-to-left formatting, right edges touch)." - 9.4.1
 
 For elements with an inline formatting context:
 
-> “In an inline formatting context, boxes are laid out horizontally, one after the other, beginning at the top of a containing block. Horizontal margins, borders, and padding are respected between these boxes. The boxes may be aligned vertically in different ways: their bottoms or tops may be aligned, or the baselines of text within them may be aligned. The rectangular area that contains the boxes that form a line is called a line box.” - 9.4.2
+> "In an inline formatting context, boxes are laid out horizontally, one after the other, beginning at the top of a containing block. Horizontal margins, borders, and padding are respected between these boxes. The boxes may be aligned vertically in different ways: their bottoms or tops may be aligned, or the baselines of text within them may be aligned. The rectangular area that contains the boxes that form a line is called a line box." - 9.4.2
 
 Note that the CSS 2.1 specification describes documents as being in a horizontal, top to bottom writing mode. For example, by describing vertical distance between block boxes. The behavior on block and inline elements is the same when working in a vertical writing mode, and we will explore this in a future guide on Flow Layout and Writing Modes.
 
@@ -68,7 +68,7 @@ You can read more about margin collapsing in our article [Mastering Margin Colla
 
 ## Elements participating in an inline formatting context
 
-Inline elements display one after the other in the direction that sentences run in that particular writing mode. While we don’t tend to think of inline elements as having a box, as with everything in CSS they do. These inline boxes are arranged one after the other. If there is not enough space in the containing block for all of the boxes a box can break onto a new line. The lines created are known as line boxes.
+Inline elements display one after the other in the direction that sentences run in that particular writing mode. While we don't tend to think of inline elements as having a box, as with everything in CSS they do. These inline boxes are arranged one after the other. If there is not enough space in the containing block for all of the boxes a box can break onto a new line. The lines created are known as line boxes.
 
 In the following example, we have three inline boxes created by a paragraph with a {{HTMLElement("strong")}} element inside it.
 

@@ -22,13 +22,13 @@ tags:
 
 <p><img alt="The list of event listener breakpoints in the right hand column" src="event-listener-breakpoints.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
-<p>To break when event listeners are hit, check the boxes next the events you are interested in. All of the standard events supported in your version of Firefox are listed, arranged by which API or API area they're part of.</p>
+<p>To break when event listeners are hit, check the boxes next the events you are interested in. All of the standard events supported in your version of Firefox are listed, arranged by which API or API area they're part of.</p>
 
 <p>Now when a <code><a href="/en-US/docs/Web/API/Document/keydown_event">keydown</a></code>, <code><a href="/en-US/docs/Web/API/Document/keyup_event">keyup</a></code>, <code><a href="/en-US/docs/Web/API/Document/keypress_event">keypress</a></code>, or <code><a href="/en-US/docs/Web/API/HTMLElement/input_event">input</a></code> event occurs, execution will pause as soon as it enters the listener code.</p>
 
 <p><img alt="execution is paused on an event breakpoint and the source panel shows what line it is paused on" src="paused-on-breakpoint.png" style="border-style: solid; border-width: 1px;"></p>
 
-<p>When execution pauses, the <a href="/en-US/docs/Tools/Debugger/UI_Tour#source_pane">source pane</a> displays the highlighted line of the JavaScript code that is next to be executed, along with the surrounding code for context. In addition, you get a box overlaid on the viewport saying "Paused on event breakpoint", with buttons to step over that line of code or resume execution.</p>
+<p>When execution pauses, the <a href="/en-US/docs/Tools/Debugger/UI_Tour#source_pane">source pane</a> displays the highlighted line of the JavaScript code that is next to be executed, along with the surrounding code for context. In addition, you get a box overlaid on the viewport saying "Paused on event breakpoint", with buttons to step over that line of code or resume execution.</p>
 
 <p>You <em>could</em> add regular breakpoints at the entry point of the listener to achieve the same effect. If however you have multiple elements, all of which have event listeners attached that you want to break on, this becomes an enormous time saver.</p>
 
@@ -36,7 +36,7 @@ tags:
 
 <h2 id="Logging_on_events">Logging on events</h2>
 
-<p>In Firefox 71 onwards, the “Log” checkbox is available in the <em>Event Listener Breakpoints</em> list. Selecting this and then choosing some events to break on will mean that when you step through code, information about events fired will be logged to the console instead of the DevTools breaking on each one.</p>
+<p>In Firefox 71 onwards, the "Log" checkbox is available in the <em>Event Listener Breakpoints</em> list. Selecting this and then choosing some events to break on will mean that when you step through code, information about events fired will be logged to the console instead of the DevTools breaking on each one.</p>
 
 <p>So if we choose to log keyboard events, for example, the code no longer pauses as each event is fired:</p>
 
@@ -46,7 +46,7 @@ tags:
 
 <p><img alt="events logged in console" src="log-events-2.png" style="border-style: solid; border-width: 1px;"></p>
 
-<p>There's an issue here — the console is showing that the <a href="/en-US/docs/Web/API/Document/keypress_event"><code>keypress</code> event</a> is being fired somewhere inside jQuery. Instead, it’d be far more useful if we showed where in our own app code is calling the jQuery that fired the event. This can be done by finding <code>jquery.js</code> in the Sources panel, and choosing the <strong>Ignore source option</strong> from its context menu.</p>
+<p>There's an issue here — the console is showing that the <a href="/en-US/docs/Web/API/Document/keypress_event"><code>keypress</code> event</a> is being fired somewhere inside jQuery. Instead, it'd be far more useful if we showed where in our own app code is calling the jQuery that fired the event. This can be done by finding <code>jquery.js</code> in the Sources panel, and choosing the <strong>Ignore source option</strong> from its context menu.</p>
 
 <p><img alt="blackbox jquery source" src="log-events-3.png" style="border-style: solid; border-width: 1px; display: block; margin: 0 auto;"></p>
 

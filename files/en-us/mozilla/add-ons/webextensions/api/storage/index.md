@@ -27,7 +27,7 @@ To use this API you need to include the `"storage"` [permission](/en-US/docs/Moz
 
 Each extension has its own storage area, which can be split into different types of storage.
 
-Although this API is similar to {{domxref("Window.localStorage")}} it is recommended that you don't use `Window.localStorage` in the extension code to store extension-related data. Firefox will clear data stored by extensions using the localStorage API in various scenarios where users clear their browsing history and data for privacy reasons, while data saved using the [`storage.local`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) API will be correctly persisted in these scenarios.
+Although this API is similar to {{domxref("Window.localStorage")}} it is recommended that you don't use `Window.localStorage` in the extension code to store extension-related data. Firefox will clear data stored by extensions using the localStorage API in various scenarios where users clear their browsing history and data for privacy reasons, while data saved using the [`storage.local`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) API will be correctly persisted in these scenarios.
 
 You can examine the stored data under the Extension Storage item in the [Storage Inspector](/en-US/docs/Tools/Storage_Inspector) tab of the [developer toolbox](https://extensionworkshop.com/documentation/develop/debugging/), accessible from `about:debugging`.
 

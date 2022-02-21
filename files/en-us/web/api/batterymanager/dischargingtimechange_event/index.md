@@ -4,12 +4,9 @@ slug: Web/API/BatteryManager/dischargingtimechange_event
 tags:
   - API
   - Event
-  - Deprecated
   - Reference
 browser-compat: api.BatteryManager.dischargingtimechange_event
 ---
-{{deprecated_header}}
-
 {{APIRef("Battery API")}}
 
 The **`dischargingtimechange`** event of the [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) is fired when the battery {{domxref("BatteryManager.dischargingTime","dischargingTime")}} is updated.

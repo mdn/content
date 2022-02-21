@@ -72,13 +72,13 @@ Access-Control-Allow-Headers: Accept
 
 ### Example preflight request
 
-Let's look at an example of a {{glossary("preflight request")}} involving `Access-Control-Allow-Headers`.
+Let's look at an example of a {{glossary("preflight request")}} involving `Access-Control-Allow-Headers`.
 
 #### Request
 
-First, the request. The preflight request is an {{HTTPMethod("OPTIONS")}} request that includes some combination of the three preflight request headers: {{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Access-Control-Request-Headers")}}, and {{HTTPHeader("Origin")}}.
+First, the request. The preflight request is an {{HTTPMethod("OPTIONS")}} request that includes some combination of the three preflight request headers: {{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Access-Control-Request-Headers")}}, and {{HTTPHeader("Origin")}}.
 
-The preflight request below tells the server that we want to send a CORS `GET` request with the headers listed in {{HTTPHeader("Access-Control-Request-Headers")}} ({{HTTPHeader("Content-Type")}} and `x-requested-with`).
+The preflight request below tells the server that we want to send a CORS `GET` request with the headers listed in {{HTTPHeader("Access-Control-Request-Headers")}} ({{HTTPHeader("Content-Type")}} and `x-requested-with`).
 
 ```
 OPTIONS /resource/foo

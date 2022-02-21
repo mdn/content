@@ -41,7 +41,7 @@ var ContactInfo = ContactsManager.select(properties, options);
 
   - : Options are as follows:
 
-    - `multiple`: A Boolean that allows multiple contacts to be selected.
+    - `multiple`: A Boolean that allows multiple contacts to be selected.
       The default is `false`.
 
 ### Return value

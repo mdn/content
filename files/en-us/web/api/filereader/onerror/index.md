@@ -11,7 +11,7 @@ function onChange(event) {
   var file = event.target.files[0];
   var reader = new FileReader();
   reader.onerror = function(event) {
-    alert("Failed to read file!\n\n" + reader.error);
+    alert("Failed to read file!\n\n" + reader.error);
   };
 
   reader.readAsText(file);

@@ -18,7 +18,7 @@ browser-compat: api.ServiceWorkerMessageEvent.ports
 > Service worker messages will now use the {{domxref("MessageEvent")}} interface, for
 > consistency with other web messaging features.
 
-The `source` read-only property of the
+The `source` read-only property of the
 {{domxref("ServiceWorkerMessageEvent")}} interface returns an array of
 {{domxref("MessagePort")}} objects connected with the message channel the message is
 being sent through.

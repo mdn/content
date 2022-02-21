@@ -29,7 +29,7 @@ An `HTMLCollection` in the HTML DOM is live; it is automatically updated when th
 
   - : Returns the specific node at the given zero-based `index` into the list. Returns `null` if the `index` is out of range.
 
-    An alternative to accessing `collection[i]` (which instead returns  `undefined` when `i` is out-of-bounds). This is mostly useful for non-JavaScript DOM implementations.
+    An alternative to accessing `collection[i]` (which instead returns  `undefined` when `i` is out-of-bounds). This is mostly useful for non-JavaScript DOM implementations.
 
 - {{domxref("HTMLCollection.namedItem()")}}
 
@@ -39,7 +39,7 @@ An `HTMLCollection` in the HTML DOM is live; it is automatically updated when th
 
 ## Usage in JavaScript
 
-`HTMLCollection` also exposes its members directly as properties by both name and index. HTML IDs may contain `:` and `.` as valid characters, which would necessitate using bracket notation for property access. Currently `HTMLCollections` does not recognize purely numeric IDs, which would cause conflict with the array-style access, though HTML5 does permit these.
+`HTMLCollection` also exposes its members directly as properties by both name and index. HTML IDs may contain `:` and `.` as valid characters, which would necessitate using bracket notation for property access. Currently `HTMLCollections` does not recognize purely numeric IDs, which would cause conflict with the array-style access, though HTML5 does permit these.
 
 For example, assuming there is one `<form>` element in the document and its `id` is `myForm`:
 

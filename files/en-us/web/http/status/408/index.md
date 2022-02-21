@@ -11,7 +11,7 @@ tags:
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP)
-**`408 Request Timeout`** response status code means that the
+**`408 Request Timeout`** response status code means that the
 server would like to shut down this unused connection. It is sent on an idle connection
 by some servers, _even without any previous request by the client_.
 

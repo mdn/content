@@ -35,8 +35,8 @@ In our first JavaScript module, we first answer some fundamental questions such 
 
 Before starting this module, you don't need any previous JavaScript knowledge, but you should have some familiarity with HTML and CSS. You are advised to work through the following modules before starting on JavaScript:
 
-- [Getting started with the Web](/en-US/docs/Learn/Getting_started_with_the_web) (which includes a really [basic JavaScript introduction](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)).
-- [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML).
+- [Getting started with the Web](/en-US/docs/Learn/Getting_started_with_the_web) (which includes a really [basic JavaScript introduction](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)).
+- [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML).
 - [Introduction to CSS](/en-US/docs/Learn/CSS/First_steps).
 
 > **Note:** If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).

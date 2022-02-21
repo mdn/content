@@ -41,13 +41,13 @@ The **WebSocket API** is an advanced technology that makes it possible to open a
 - [AsyncAPI](https://www.asyncapi.com/): A specification for describing event-driven architectures like WebSocket. You can use it to describe WebSocket-based APIs just as you would describe REST APIs with the OpenAPI specification. Learn [why you should consider using AsyncAPI with WebSocket](https://www.asyncapi.com/blog/websocket-part1) and [how to do so](https://www.asyncapi.com/blog/websocket-part2).
 - [HumbleNet](https://hacks.mozilla.org/2017/06/introducing-humblenet-a-cross-platform-networking-library-that-works-in-the-browser/): A cross-platform networking library that works in the browser. It consists of a C wrapper around WebSockets and WebRTC that abstracts away cross-browser differences, facilitating the creation of multi-user networking functionality for games and other apps.
 - [µWebSockets](https://github.com/uWebSockets/uWebSockets): Highly scalable WebSocket server and client implementation for [C++11](https://isocpp.org/) and [Node.js](https://nodejs.org).
-- [ClusterWS](https://github.com/ClusterWS/ClusterWS):  Lightweight, fast and powerful framework for building scalable WebSocket applications in [Node.js](https://nodejs.org).
+- [ClusterWS](https://github.com/ClusterWS/ClusterWS):  Lightweight, fast and powerful framework for building scalable WebSocket applications in [Node.js](https://nodejs.org).
 - [CWS](https://github.com/ClusterWS/cWS): Fast C++ WebSocket implementation for Node.js (uWebSockets v0.14 fork)
-- [Socket.IO](https://socket.io): A long polling/WebSocket based third party transfer protocol for [Node.js](https://nodejs.org).
-- [SocketCluster](https://socketcluster.io/): A pub/sub WebSocket framework for [Node.js](https://nodejs.org) with a focus on scalability.
+- [Socket.IO](https://socket.io): A long polling/WebSocket based third party transfer protocol for [Node.js](https://nodejs.org).
+- [SocketCluster](https://socketcluster.io/): A pub/sub WebSocket framework for [Node.js](https://nodejs.org) with a focus on scalability.
 - [WebSocket-Node](https://github.com/Worlize/WebSocket-Node): A WebSocket server API implementation for [Node.js](https://nodejs.org).
-- [Total.js](https://www.totaljs.com): Web application framework for [Node.js](https://www.nodejs.org) (Example: [WebSocket chat](https://github.com/totaljs/examples/tree/master/websocket))
-- [Faye](https://www.npmjs.com/package/faye-websocket): A {{DOMxRef("WebSocket")}} (two-ways connections) and [EventSource](/en-US/docs/Web/API/EventSource) (one-way connections) for [Node.js](https://nodejs.org) Server and Client.
+- [Total.js](https://www.totaljs.com): Web application framework for [Node.js](https://www.nodejs.org) (Example: [WebSocket chat](https://github.com/totaljs/examples/tree/master/websocket))
+- [Faye](https://www.npmjs.com/package/faye-websocket): A {{DOMxRef("WebSocket")}} (two-ways connections) and [EventSource](/en-US/docs/Web/API/EventSource) (one-way connections) for [Node.js](https://nodejs.org) Server and Client.
 - [SignalR](https://signalr.net/): SignalR will use WebSockets under the covers when it's available, and gracefully fallback to other techniques and technologies when it isn't, while your application code stays the same.
 - [Caddy](https://caddyserver.com/): A web server capable of proxying arbitrary commands (stdin/stdout) as a websocket.
 - [ws](https://github.com/websockets/ws): a popular WebSocket client & server library for [Node.js](https://nodejs.org/).

@@ -17,7 +17,7 @@ This cookbook pattern demonstrates the navigation pattern used to display pagina
 
 ## Requirements
 
-The pagination pattern typically displays items in a row. To ensure that the pagination is understandable by people using a screenreader, we mark the items up as a list inside a {{htmlelement("nav")}} element, and then use CSS to display the layout visually as a row.
+The pagination pattern typically displays items in a row. To ensure that the pagination is understandable by people using a screenreader, we mark the items up as a list inside a {{htmlelement("nav")}} element, and then use CSS to display the layout visually as a row.
 
 Typically, the pagination component will be centered horizontally underneath the content.
 
@@ -41,11 +41,11 @@ Once the {{cssxref("column-gap")}} property has implementation in browsers this 
 
 ```css
 .pagination {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  column-gap: 2px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  column-gap: 2px;
 }
 ```
 
@@ -73,7 +73,7 @@ _Include the compat data for key properties you used, as in the example below wh
 
 ## See also
 
-- {{Cssxref("justify-content")}}, {{Cssxref("column-gap")}}
+- {{Cssxref("justify-content")}}, {{Cssxref("column-gap")}}
 - [Know your ARIA: 'Hidden' vs 'None'](https://www.scottohara.me/blog/2018/05/05/hidden-vs-none.html)
 - [Invisible content just for screen reader users](https://webaim.org/techniques/css/invisiblecontent/#techniques)
 - [Writing CSS With Accessibility in mind](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939)

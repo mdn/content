@@ -37,7 +37,7 @@ var myMode = request.mode;
       `HEAD`, `GET` or `POST`, and the headers from
       being anything other than [simple headers](https://fetch.spec.whatwg.org/#simple-header). If any
       ServiceWorkers intercept these requests, they may not add or override any headers
-      except for those that are [simple headers](https://fetch.spec.whatwg.org/#simple-header). In
+      except for those that are [simple headers](https://fetch.spec.whatwg.org/#simple-header). In
       addition, JavaScript may not access any properties of the resulting
       {{domxref("Response")}}. This ensures that ServiceWorkers do not affect the
       semantics of the Web and prevents security and privacy issues arising from leaking

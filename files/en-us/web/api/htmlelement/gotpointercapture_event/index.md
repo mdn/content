@@ -39,7 +39,7 @@ The **`gotpointercapture`** event is fired when an element captures a pointer us
 
 ## Examples
 
-This example gets a `<p>` element and listens for the `gotpointercapture` event. It then calls `setPointerCapture()` on the element on a `pointerdown` event, which will trigger `gotpointercapture`.
+This example gets a `<p>` element and listens for the `gotpointercapture` event. It then calls `setPointerCapture()` on the element on a `pointerdown` event, which will trigger `gotpointercapture`.
 
 ```js
 const para = document.querySelector('p');

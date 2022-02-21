@@ -4,11 +4,10 @@ slug: Web/API/BatteryManager/charging
 tags:
   - API
   - Property
-  - Deprecated
   - Reference
 browser-compat: api.BatteryManager.charging
 ---
-{{deprecated_header}}{{APIRef("Battery API")}}
+{{APIRef("Battery API")}}
 
 The **`BatteryManager.charging`** property is a Boolean value indicating whether or not the device's battery is currently being charged. When its value changes, the [`chargingchange`](/en-US/docs/Web/API/BatteryManager/chargingchange_event) event is fired.
 

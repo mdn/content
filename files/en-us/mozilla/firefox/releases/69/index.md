@@ -9,7 +9,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 69 that will affect developers. Firefox 69 was released on September 3, 2019.
+This article provides information about the changes in Firefox 69 that will affect developers. Firefox 69 was released on September 3, 2019.
 
 ## Changes for web developers
 
@@ -18,7 +18,7 @@ This article provides information about the changes in Firefox 69 that will af
 #### Debugger
 
 - [Event Listener Breakpoints](/en-US/docs/Tools/Debugger/Set_event_listener_breakpoints) let you diagnose which code a page executes in response to browser events. You can pick specific types, such as `click` or `keydown`, or whole categories of events, like all mouse input events. ({{bug(1526082)}}).
-- Scripts shown in the debugger's  [source list pane](/en-US/docs/Tools/Debugger/UI_Tour#source_list_pane) can now be saved via the _Download file_ context menu option ({{bug(888161)}}).
+- Scripts shown in the debugger's  [source list pane](/en-US/docs/Tools/Debugger/UI_Tour#source_list_pane) can now be saved via the _Download file_ context menu option ({{bug(888161)}}).
 - In the debugger's source list pane, loaded extensions are listed with their name, rather than just their {{Glossary("UUID")}} ({{bug(1486416)}}), making it much easier to find the extension code you want to debug.
 - The debugger now loads significantly faster via lazy-loading scripts ({{bug(1527488)}}).
 
@@ -51,18 +51,18 @@ This article provides information about the changes in Firefox 69 that will af
 
 - In order to align more closely to the specification, the text track associated with a {{HTMLElement("track")}} element no longer loads the WebVTT file containing the text cues if the element is created in its default `disabled` {{domxref("TextTrack.mode", "mode")}}. To access or manipulate the cues when the `mode` is `disabled`, change the `mode` to either `started` or `hidden`; this will trigger loading of the WebVTT data ({{bug(1550633)}}).
 
-####  Removals
+#### Removals
 
 - The HTML {{HTMLElement("keygen")}} element has been removed from Firefox. It was deprecated some time ago, and its purpose has generally been supplanted by other technologies ({{bug(1315460)}}).
 
 ### CSS
 
-- We implemented the `break-spaces` value of the {{cssxref("white-space")}} property ({{bug(1351432)}}).
+- We implemented the `break-spaces` value of the {{cssxref("white-space")}} property ({{bug(1351432)}}).
 - The SVG geometry attributes (such as {{SVGAttr("width")}} and {{SVGAttr("height")}}) can now also be defined as CSS properties ({{bug(1383650)}}).
 - The {{cssxref("::cue")}} selector — used to style the captions ("cues") displayed by [WebVTT](/en-US/docs/Web/API/WebVTT_API) — now enforces the limitations on which CSS properties may be used within cues, as per the specification ({{bug(1321488)}}).
 - We've restricted the properties that may apply to {{cssxref("::marker")}} as per the specification ({{bug(1552578)}})
-- The {{cssxref("overflow-block")}} and {{cssxref("overflow-inline")}} properties have been implemented ({{bug(1470695)}}).
-- We added the ability to test for support of a selector when using CSS Feature Queries ({{cssxref("@supports")}}), with the `selector()` method ({{bug(1513643)}}).
+- The {{cssxref("overflow-block")}} and {{cssxref("overflow-inline")}} properties have been implemented ({{bug(1470695)}}).
+- We added the ability to test for support of a selector when using CSS Feature Queries ({{cssxref("@supports")}}), with the `selector()` method ({{bug(1513643)}}).
 - The {{cssxref("user-select")}} property — which specifies whether or not the user is able to select text in the affected element — has been unprefixed ({{bug(1492739)}}).
 - We implemented local-specific casing behavior for Lithuanian ({{bug(1322992)}}), [as seen in this example](/en-US/docs/Web/CSS/text-transform#lowercase_lithuanian).
 - We've implemented the {{cssxref("line-break")}} property of CSS Text ({{bug(1011369)}} and {{bug(1531715)}}).
@@ -70,7 +70,7 @@ This article provides information about the changes in Firefox 69 that will af
 
 ### SVG
 
-- We've added support for gzip-compressed SVG-in-OpenType ({{bug(1359240)}}).
+- We've added support for gzip-compressed SVG-in-OpenType ({{bug(1359240)}}).
 - The {{domxref("SVGGeometryElement.isPointInFill()")}} and {{domxref("SVGGeometryElement.isPointInStroke()")}} methods have been implemented ({{bug(1325319)}}).
 
 ### JavaScript
@@ -98,7 +98,7 @@ This article provides information about the changes in Firefox 69 that will af
 - We now support the six-parameter version of the {{domxref("DOMMatrix.scale()")}} method ({{bug(1397945)}}).
 - The arguments for {{domxref("DOMMatrix.translate()")}}, {{domxref("DOMMatrix.skewX()")}}, and {{domxref("DOMMatrix.skewY()")}} are now all optional, as per spec ({{bug(1397949)}}).
 - The {{domxref("NavigatorID/userAgent", "navigator.userAgent")}}, {{domxref("NavigatorID/platform", "navigator.platform")}}, and {{domxref("navigator.oscpu")}} properties no longer reveal whether a user is running 32-bit Firefox on a 64-bit OS ({{bug(1559747)}}). They now say `Linux x86_64` instead of `Linux i686 on x86_64`, and `Win64` instead of `WOW64`.
-- The remaining methods of {{domxref("HTMLDocument")}} have been moved to {{domxref("Document")}}. This should have no appreciable impact on your work in most cases. In particular, the {{domxref("document.close", "close()")}}, {{domxref("document.open", "open()")}}, and {{domxref("document.write", "write()")}} methods have been moved. So have the various editor related methods, including {{domxref("document.execCommand", "execCommand()")}} as well as various properties ({{bug(1549560)}}).
+- The remaining methods of {{domxref("HTMLDocument")}} have been moved to {{domxref("Document")}}. This should have no appreciable impact on your work in most cases. In particular, the {{domxref("document.close", "close()")}}, {{domxref("document.open", "open()")}}, and {{domxref("document.write", "write()")}} methods have been moved. So have the various editor related methods, including {{domxref("document.execCommand", "execCommand()")}} as well as various properties ({{bug(1549560)}}).
 - We have implemented {{domxref("AbstractRange")}} and {{domxref("StaticRange")}} ({{bug(1444847)}}).
 
 #### Media, Web Audio, and WebRTC

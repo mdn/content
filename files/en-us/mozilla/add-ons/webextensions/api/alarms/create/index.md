@@ -47,7 +47,7 @@ browser.alarms.create(
     - `when`{{optional_inline}}
       - : `double`. The time the alarm will fire first, given as [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time). To get the number of milliseconds between the epoch and the current time, use [`Date.now()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now). If you specify `when`, don't specify `delayInMinutes`.
     - `delayInMinutes`{{optional_inline}}
-      - : `double`. The time the alarm will fire first, given as minutes from the time the alarm is set. If you specify `delayInMinutes`, don't specify `when`.
+      - : `double`. The time the alarm will fire first, given as minutes from the time the alarm is set. If you specify `delayInMinutes`, don't specify `when`.
     - `periodInMinutes`{{optional_inline}}
       - : `double`. If this is specified, the alarm will fire again every `periodInMinutes` after its initial firing. If you specify this value you may omit both `when` and `delayInMinutes`, and the alarm will then fire initially after `periodInMinutes`. If `periodInMinutes` is not specified, the alarm will only fire once.
 

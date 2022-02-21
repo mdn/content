@@ -15,7 +15,7 @@ browser-compat: api.IDBKeyRange.upperBound
 {{ APIRef("IndexedDB") }}
 
 The **`upperBound()`** method of the
-{{domxref("IDBKeyRange")}} interface creates a new upper-bound key range. By default,
+{{domxref("IDBKeyRange")}} interface creates a new upper-bound key range. By default,
 it includes the upper endpoint value and is closed.
 
 {{AvailableInWorkers}}
@@ -28,9 +28,9 @@ var myIDBKeyRange = IDBKeyRange.upperBound(upper[, open=false])
 
 ### Parameters
 
-- *bound* specifies the upper bound of the new key range.
+- *bound* specifies the upper bound of the new key range.
 - _open_ indicates whether the upper bound excludes the endpoint value. The
-  default is false. {{optional_inline}}
+  default is false. {{optional_inline}}
 
 ### Return value
 
@@ -46,18 +46,18 @@ This method may raise a {{domxref("DOMException")}} of the following type:
 
 ## Example
 
-The following example illustrates how you'd use an upper bound key range. Here we
-declare `keyRangeValue = IDBKeyRange.upperBound("F");` — a range that
+The following example illustrates how you'd use an upper bound key range. Here we
+declare `keyRangeValue = IDBKeyRange.upperBound("F");` — a range that
 includes the value "F" and everything before it. We open a transaction (using
 {{domxref("IDBTransaction")}}) and an object store, and open a Cursor with
-{{domxref("IDBObjectStore.openCursor")}}, declaring `keyRangeValue` as its
+{{domxref("IDBObjectStore.openCursor")}}, declaring `keyRangeValue` as its
 optional key range value.
 
-If we used `IDBKeyRange.upperBound("F", true);`, then the range excludes
-"F"; and instead only includes the values before it.
+If we used `IDBKeyRange.upperBound("F", true);`, then the range excludes
+"F"; and instead only includes the values before it.
 
 > **Note:** For a more complete example allowing you to experiment with
-> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange) repo
+> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange) repo
 > ([view the example live
 > too](https://mdn.github.io/indexeddb-examples/idbkeyrange/).)
 

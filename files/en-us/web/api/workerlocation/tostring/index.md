@@ -11,7 +11,7 @@ browser-compat: api.WorkerLocation.toString
 ---
 {{ApiRef("WorkerLocation")}}
 
-The **`toString()`** {{Glossary("stringifier")}} method of a {{domxref("WorkerLocation")}} object returns a {{domxref("USVString")}} containing the serialized {{domxref("URL")}} for the worker’s location. It is a synonym for {{domxref("WorkerLocation.href")}}.
+The **`toString()`** {{Glossary("stringifier")}} method of a {{domxref("WorkerLocation")}} object returns a {{domxref("USVString")}} containing the serialized {{domxref("URL")}} for the worker's location. It is a synonym for {{domxref("WorkerLocation.href")}}.
 
 ## Syntax
 

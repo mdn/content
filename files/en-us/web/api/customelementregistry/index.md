@@ -13,12 +13,12 @@ browser-compat: api.CustomElementRegistry
 ---
 {{DefaultAPISidebar("Web Components")}}
 
-The **`CustomElementRegistry`** interface provides methods for registering custom elements and querying registered elements. To get an instance of it, use the {{domxref("window.customElements")}} property.
+The **`CustomElementRegistry`** interface provides methods for registering custom elements and querying registered elements. To get an instance of it, use the {{domxref("window.customElements")}} property.
 
 ## Methods
 
 - {{domxref("CustomElementRegistry.define()")}}
-  - : Defines a new [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements).
+  - : Defines a new [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements).
 - {{domxref("CustomElementRegistry.get()")}}
   - : Returns the constructor for the named custom element, or {{jsxref("undefined")}} if the custom element is not defined.
 - {{domxref("CustomElementRegistry.upgrade()")}}

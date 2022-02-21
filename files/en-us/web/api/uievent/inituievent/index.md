@@ -23,7 +23,7 @@ dispatched, it doesn't do anything anymore.
 > **Warning:** Do not use this method anymore as it is deprecated.
 >
 > Instead use specific event constructors, like {{domxref("UIEvent.UIEvent",
-    "UIEvent()")}}. The page on [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events) gives more information about the way to use these.
+    "UIEvent()")}}. The page on [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events) gives more information about the way to use these.
 
 ## Syntax
 
@@ -45,7 +45,7 @@ event.initUIEvent(type, canBubble, cancelable, view, detail)
 - _`view`_
   - : Is the {{domxref("WindowProxy")}} associated with the event.
 - _`detail`_
-  - : Is an `unsigned long`  specifying some detail information about the
+  - : Is an `unsigned long`  specifying some detail information about the
     event, depending on the type of event. For mouse events, it indicates how many times
     the mouse has been clicked on a given screen location.
 

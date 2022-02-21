@@ -34,15 +34,15 @@ connection.addEventListener('change', updateConnectionStatus);
 
 ### Preload large resources
 
-The connection object is useful for deciding whether to preload resources that take large amounts of bandwidth or memory. This example would be called soon after page load to check for a connection type where preloading a video may not be desirable. If a cellular connection is found, then the `preloadVideo` flag is set to `false`. For simplicity and clarity, this example only tests for one connection type. A real-world use case would likely use a switch statement or some other method to check all of the possible values of {{domxref("NetworkInformation.type")}}. Regardless of the `type` value you can get an estimate of connection speed through the {{domxref("NetworkInformation.effectiveType")}} property.
+The connection object is useful for deciding whether to preload resources that take large amounts of bandwidth or memory. This example would be called soon after page load to check for a connection type where preloading a video may not be desirable. If a cellular connection is found, then the `preloadVideo` flag is set to `false`. For simplicity and clarity, this example only tests for one connection type. A real-world use case would likely use a switch statement or some other method to check all of the possible values of {{domxref("NetworkInformation.type")}}. Regardless of the `type` value you can get an estimate of connection speed through the {{domxref("NetworkInformation.effectiveType")}} property.
 
 ```js
 let preloadVideo = true;
 var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 if (connection) {
   if (connection.effectiveType === 'slow-2g') {
-    preloadVideo = false;
-  }
+    preloadVideo = false;
+  }
 }
 ```
 

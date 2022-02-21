@@ -19,7 +19,7 @@ Examples of MIME types:
 - `text/markdown` for Markdown files.
 - `application/octet-stream` for binary files where user action is expected.
 
-Server default configurations vary wildly and set different _default_ MIME-type values for files with no defined content type.
+Server default configurations vary wildly and set different _default_ MIME-type values for files with no defined content type.
 
 Versions of the Apache Web Server **before 2.2.7** were configured to report a MIME type of `text/plain` or `application/octet-stream` for unknown content types. Modern versions of Apache report `none` for files with unknown content types.
 
@@ -31,7 +31,7 @@ As new content types are invented or added to web servers, web administrators ma
 
 If a web server or application reports an incorrect MIME type for content (including a "default type" for unknown content), a web browser has no way of knowing the author's intentions. This may cause unexpected behavior.
 
-Some web browsers, such as Internet Explorer, try to _guess_ the correct MIME type. This allows misconfigured web servers and applications to continue working for those browsers (but not other browsers that correctly implement the standard). Apart from violating the HTTP spec, this is a bad idea for a couple of other significant reasons:
+Some web browsers, such as Internet Explorer, try to _guess_ the correct MIME type. This allows misconfigured web servers and applications to continue working for those browsers (but not other browsers that correctly implement the standard). Apart from violating the HTTP spec, this is a bad idea for a couple of other significant reasons:
 
 - Loss of control
 
@@ -96,7 +96,7 @@ There are several ways to determine the correct MIME type value to be used to se
 
 The goal is to configure your server to send the correct {{HTTPHeader("Content-Type")}} header for each document.
 
-- If you're using the Apache web server, check the **_Media Types and Character Encodings_** section of [Apache Configuration: .htaccess](/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess) for examples of different document types and their corresponding MIME types.
+- If you're using the Apache web server, check the **_Media Types and Character Encodings_** section of [Apache Configuration: .htaccess](/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess) for examples of different document types and their corresponding MIME types.
 - If you're using Nginx, note that Nginx does not have a `.htaccess` equivalent tool, so all changes will go into the main configuration file.
 - If you're using a server-side script or framework to generate content, the way to indicate the content type will depend on the tool you're using. Check the framework or library's documentation.
 
@@ -106,7 +106,7 @@ Regardless of what server system you use, the effect you need to achieve is to s
 header('Content-Type: application/pdf')
 ```
 
-Trying to instead set it with just `header('application/pdf')` won’t work.
+Trying to instead set it with just `header('application/pdf')` won't work.
 
 ## Related Links
 

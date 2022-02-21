@@ -19,7 +19,7 @@ The
 **`keys()`** method of the
 {{domxref("CacheStorage")}} interface returns a {{jsxref("Promise")}} that will
 resolve with an array containing strings corresponding to all of the named
-{{domxref("Cache")}} objects tracked by the {{domxref("CacheStorage")}} object in the
+{{domxref("Cache")}} objects tracked by the {{domxref("CacheStorage")}} object in the
 order they were created. Use this method to iterate over a list of all
 {{domxref("Cache")}} objects.
 
@@ -40,13 +40,13 @@ None.
 
 ### Return value
 
-a {{jsxref("Promise")}} that resolves with an array of the {{domxref("Cache")}} names
+a {{jsxref("Promise")}} that resolves with an array of the {{domxref("Cache")}} names
 inside the {{domxref("CacheStorage")}} object.
 
 ## Examples
 
 In this code snippet we wait for an {{domxref("ServiceWorkerGlobalScope.onactivate",
-  "activate")}} event, and then run a
+  "activate")}} event, and then run a
 {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} block that clears up any old,
 unused caches before a new service worker is activated. Here we have an allowlist
 containing the names of the caches we want to keep (`cacheAllowlist`). We

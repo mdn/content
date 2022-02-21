@@ -19,7 +19,7 @@ The `SVGAnimatedPreserveAspectRatio` interface is used for attributes of type {{
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Also implement</th>
+      <th scope="row">Also implement</th>
       <td><em>None</em></td>
     </tr>
     <tr>
@@ -36,7 +36,7 @@ The `SVGAnimatedPreserveAspectRatio` interface is used for attributes of type {{
       </td>
     </tr>
     <tr>
-      <th scope="row">Normative document</th>
+      <th scope="row">Normative document</th>
       <td>
         <a
           href="https://www.w3.org/TR/SVG11/coords.html#InterfaceSVGAnimatedPreserveAspectRatio"

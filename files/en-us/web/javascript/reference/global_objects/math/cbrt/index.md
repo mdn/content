@@ -82,10 +82,10 @@ For all <math><semantics><mrow><mi>x</mi>
 ```js
 if (!Math.cbrt) {
   Math.cbrt = (function(pow) {
-    return function cbrt(x){
-      // ensure negative numbers remain negative:
+    return function cbrt(x){
+      // ensure negative numbers remain negative:
       return x < 0 ? -pow(-x, 1/3) : pow(x, 1/3);
-    };
+    };
   })(Math.pow); // localize Math.pow to increase efficiency
 }
 ```

@@ -64,7 +64,7 @@ The **`<aside>`** [HTML](/en-US/docs/Web/HTML) element represents a portion of a
       </td>
     </tr>
     <tr>
-      <th scope="row">Implicit ARIA role</th>
+      <th scope="row">Implicit ARIA role</th>
       <td>
         <code
           ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role"
@@ -76,7 +76,7 @@ The **`<aside>`** [HTML](/en-US/docs/Web/HTML) element represents a portion of a
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("feed")}}, {{ARIARole("none")}},
+        {{ARIARole("feed")}}, {{ARIARole("none")}},
         {{ARIARole("note")}}, {{ARIARole("presentation")}},
         {{ARIARole("region")}}, {{ARIARole("search")}}
       </td>

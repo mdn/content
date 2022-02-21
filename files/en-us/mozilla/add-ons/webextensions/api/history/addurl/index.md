@@ -40,7 +40,7 @@ var addingUrl = browser.history.addUrl(
     - `transition`{{optional_inline}}
       - : {{WebExtAPIRef("history.TransitionType")}}. Describes how the browser navigated to the page on this occasion. If this is not supplied, a transition type of "link" will be recorded.
     - `visitTime`{{optional_inline}}
-      - : `number` or `string` or `object`. A value indicating a date and time.  This can be represented as: a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, an [ISO 8601 date string](https://www.iso.org/iso/home/standards/iso8601.htm), or the number of milliseconds since the epoch. Sets the visit time to this value. If this is not supplied, the current time will be recorded.
+      - : `number` or `string` or `object`. A value indicating a date and time.  This can be represented as: a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, an [ISO 8601 date string](https://www.iso.org/iso/home/standards/iso8601.htm), or the number of milliseconds since the epoch. Sets the visit time to this value. If this is not supplied, the current time will be recorded.
 
 ### Return value
 

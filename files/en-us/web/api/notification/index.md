@@ -50,7 +50,7 @@ These properties are available only on instances of the `Notification` object.
 - {{domxref("Notification.body")}} {{readonlyinline}}
   - : The body string of the notification as specified in the constructor's `options` parameter.
 - {{domxref("Notification.data")}} {{readonlyinline}}
-  - : Returns a structured clone of the notification’s data.
+  - : Returns a structured clone of the notification's data.
 - {{domxref("Notification.dir")}} {{readonlyinline}}
   - : The text direction of the notification as specified in the constructor's `options` parameter.
 - {{domxref("Notification.lang")}} {{readonlyinline}}

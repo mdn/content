@@ -52,9 +52,9 @@ scroll-snap-points-x: unset;
 
 ```html
 <div id="container">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
 </div>
 ```
 
@@ -62,12 +62,12 @@ scroll-snap-points-x: unset;
 
 ```css
 #container {
-  width: 200px;
-  overflow: auto;
-  white-space: nowrap;
-  scroll-snap-points-x: repeat(100%);
-  scroll-snap-type: mandatory;
-  font-size: 0;
+  width: 200px;
+  overflow: auto;
+  white-space: nowrap;
+  scroll-snap-points-x: repeat(100%);
+  scroll-snap-type: mandatory;
+  font-size: 0;
 }
 
 #container > div {

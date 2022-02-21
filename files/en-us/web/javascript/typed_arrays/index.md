@@ -7,7 +7,7 @@ tags:
 ---
 {{JsSidebar("Advanced")}}
 
-**JavaScript typed arrays** are array-like objects that provide a mechanism for reading and writing raw binary data in memory buffers.
+**JavaScript typed arrays** are array-like objects that provide a mechanism for reading and writing raw binary data in memory buffers.
 
 {{jsxref("Array")}} objects grow and shrink dynamically and can have any JavaScript value. JavaScript engines perform optimizations so that these arrays are fast. However, as web applications become more and more powerful, adding features such as audio and video manipulation, access to raw data using WebSockets, and so forth, it has become clear that there are times when it would be helpful for JavaScript code to be able to quickly and easily manipulate raw binary data. This is where typed arrays come in. Each entry in a JavaScript typed array is a raw binary value in one of a number of supported formats, from 8-bit integers to 64-bit floating-point numbers.
 
@@ -36,10 +36,10 @@ Typed array views have self-descriptive names and provide views for all the usua
 | {{jsxref("Uint16Array")}}         | `0` to `65535`                                                  | 2             | 16-bit unsigned integer                                                      | `unsigned short`      | `uint16_t`                      |
 | {{jsxref("Int32Array")}}         | `-2147483648` to `2147483647`                                   | 4             | 32-bit two's complement signed integer                                       | `long`                | `int32_t`                       |
 | {{jsxref("Uint32Array")}}         | `0` to `4294967295`                                             | 4             | 32-bit unsigned integer                                                      | `unsigned long`       | `uint32_t`                      |
-| {{jsxref("Float32Array")}}     | `-3.4E38` to `3.4E38` and `1.2E-38` is the min positive number  | 4             | 32-bit IEEE floating point number (7 significant digits e.g., `1.123456`)    | `unrestricted float`  | `float`                         |
-| {{jsxref("Float64Array")}}     | `-1.8E308` to `1.8E308` and `5E-324` is the min positive number | 8             | 64-bit IEEE floating point number (16 significant digits e.g., `1.123...15`) | `unrestricted double` | `double`                        |
-| {{jsxref("BigInt64Array")}}     | `-2^63` to `2^63 - 1`                                           | 8             | 64-bit two's complement signed integer                                       | `bigint`              | `int64_t (signed long long)`    |
-| {{jsxref("BigUint64Array")}}     | `0` to `2^64 - 1`                                               | 8             | 64-bit unsigned integer                                                      | `bigint`              | `uint64_t (unsigned long long)` |
+| {{jsxref("Float32Array")}}     | `-3.4E38` to `3.4E38` and `1.2E-38` is the min positive number  | 4             | 32-bit IEEE floating point number (7 significant digits e.g., `1.123456`)    | `unrestricted float`  | `float`                         |
+| {{jsxref("Float64Array")}}     | `-1.8E308` to `1.8E308` and `5E-324` is the min positive number | 8             | 64-bit IEEE floating point number (16 significant digits e.g., `1.123...15`) | `unrestricted double` | `double`                        |
+| {{jsxref("BigInt64Array")}}     | `-2^63` to `2^63 - 1`                                           | 8             | 64-bit two's complement signed integer                                       | `bigint`              | `int64_t (signed long long)`    |
+| {{jsxref("BigUint64Array")}}     | `0` to `2^64 - 1`                                               | 8             | 64-bit unsigned integer                                                      | `bigint`              | `uint64_t (unsigned long long)` |
 
 ### DataView
 
@@ -54,7 +54,7 @@ These are some examples of APIs that make use of typed arrays; there are others,
 - [`XMLHttpRequest.prototype.send()`](</en-US/docs/Web/API/XMLHttpRequest#send()>)
   - : `XMLHttpRequest` instances' `send()` method now supports typed arrays and {{jsxref("ArrayBuffer")}} objects as argument.
 - [`ImageData.data`](/en-US/docs/Web/API/ImageData)
-  - : Is a {{jsxref("Uint8ClampedArray")}} representing a one-dimensional array containing the data in the RGBA order, with integer values between `0` and `255` inclusive.
+  - : Is a {{jsxref("Uint8ClampedArray")}} representing a one-dimensional array containing the data in the RGBA order, with integer values between `0` and `255` inclusive.
 
 ## Examples
 
@@ -63,7 +63,7 @@ These are some examples of APIs that make use of typed arrays; there are others,
 First of all, we will need to create a buffer, here with a fixed length of 16-bytes:
 
 ```js
-let buffer = new ArrayBuffer(16);
+const buffer = new ArrayBuffer(16);
 ```
 
 At this point, we have a chunk of memory whose bytes are all pre-initialized to 0. There's not a lot we can do with it, though. We can confirm that it is indeed 16 bytes long, and that's about it:
@@ -79,7 +79,7 @@ if (buffer.byteLength === 16) {
 Before we can really work with this buffer, we need to create a view. Let's create a view that treats the data in the buffer as an array of 32-bit signed integers:
 
 ```js
-let int32View = new Int32Array(buffer);
+const int32View = new Int32Array(buffer);
 ```
 
 Now we can access the fields in the array just like a normal array:
@@ -97,7 +97,7 @@ This fills out the 4 entries in the array (4 entries at 4 bytes each makes 16 to
 Things start to get really interesting when you consider that you can create multiple views onto the same data. For example, given the code above, we can continue like this:
 
 ```js
-let int16View = new Int16Array(buffer);
+const int16View = new Int16Array(buffer);
 
 for (let i = 0; i < int16View.length; i++) {
   console.log('Entry ' + i + ': ' + int16View[i]);
@@ -134,13 +134,13 @@ struct someStruct {
 You can access a buffer containing data in this format like this:
 
 ```js
-let buffer = new ArrayBuffer(24);
+const buffer = new ArrayBuffer(24);
 
 // ... read the data into the buffer ...
 
-let idView = new Uint32Array(buffer, 0, 1);
-let usernameView = new Uint8Array(buffer, 4, 16);
-let amountDueView = new Float32Array(buffer, 20, 1);
+const idView = new Uint32Array(buffer, 0, 1);
+const usernameView = new Uint8Array(buffer, 4, 16);
+const amountDueView = new Float32Array(buffer, 20, 1);
 ```
 
 Then you can access, for example, the amount due with `amountDueView[0]`.

@@ -102,7 +102,7 @@ In the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API), an `IDBDatabaseExcept
       <td><code>9</code></td>
       <td>
         A mutation operation was attempted in a
-        <code>READ_ONLY</code> transaction.
+        <code>READ_ONLY</code> transaction.
       </td>
     </tr>
     <tr>

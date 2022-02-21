@@ -31,7 +31,7 @@ sensorErrorEvent = new SensorErrorEvent(type, {error: domException});
   - : Will always be `'SensorErrorEvent'`.
 - _options_ {{optional_inline}}
 
-  - : Currently only one option is supported:
+  - : Currently only one option is supported:
 
     - `error`: An instance of {{jsxref('DOMException')}}.
 

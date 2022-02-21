@@ -88,8 +88,8 @@ superclass.prototype = {
 };
 function subclass() {}
 subclass.prototype = Object.create(
-  superclass.prototype,
-  {
+  superclass.prototype,
+  {
     // Define the subclass constructor, methods, and properties here
   }
 );

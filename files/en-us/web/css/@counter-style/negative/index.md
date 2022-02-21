@@ -49,10 +49,10 @@ If the counter value is negative, the symbol provided as value for the descripto
 ```html
 <ol class="list" start="-3">
   <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
-  <li>Four</li>
-  <li>Five</li>
+  <li>Two</li>
+  <li>Three</li>
+  <li>Four</li>
+  <li>Five</li>
 </ol>
 ```
 

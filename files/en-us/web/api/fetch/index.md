@@ -22,7 +22,7 @@ The promise resolves to the {{domxref("Response")}} object
 representing the response to your request.
 
 A {{domxref("fetch()")}} promise only rejects when a
-network error is encountered (which is usually when there’s a permissions issue or
+network error is encountered (which is usually when there's a permissions issue or
 similar). A {{domxref("fetch()")}} promise _does
 not_ reject on HTTP errors (`404`, etc.). Instead, a
 `then()` handler must check the {{domxref("Response.ok")}} and/or
@@ -93,7 +93,7 @@ const fetchResponsePromise = fetch(resource [, init])
             > **Note:** Credentials may be included in simple and "final" cross-origin requests, but should not be included in [CORS preflight requests](/en-US/docs/Web/HTTP/CORS#preflight_requests_and_credentials).
 
     - `cache`
-      - : A string indicating how the request will interact with the browser’s [HTTP cache](/en-US/docs/Web/HTTP/Caching). The possible values, `default`, `no-store`, `reload`, `no-cache`, `force-cache`, and `only-if-cached`, are documented in the article for the {{domxref("Request/cache", "cache")}} property of the {{domxref("Request")}} object.
+      - : A string indicating how the request will interact with the browser's [HTTP cache](/en-US/docs/Web/HTTP/Caching). The possible values, `default`, `no-store`, `reload`, `no-cache`, `force-cache`, and `only-if-cached`, are documented in the article for the {{domxref("Request/cache", "cache")}} property of the {{domxref("Request")}} object.
     - `redirect`
 
       - : How to handle a `redirect` response:

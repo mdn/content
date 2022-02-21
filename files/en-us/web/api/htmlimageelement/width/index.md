@@ -55,10 +55,10 @@ drawn at 400px.
 ```html
 <p>Image width: <span class="size">?</span>px (resize to update)</p>
 <img src="/files/16864/clock-demo-200px.png"
-      alt="Clock"
-      srcset="/files/16864/clock-demo-200px.png 200w,
-          /files/16797/clock-demo-400px.png 400w"
-      sizes="(max-width: 400px) 200px, 400px">
+      alt="Clock"
+      srcset="/files/16864/clock-demo-200px.png 200w,
+          /files/16797/clock-demo-400px.png 400w"
+      sizes="(max-width: 400px) 200px, 400px">
 ```
 
 ### JavaScript

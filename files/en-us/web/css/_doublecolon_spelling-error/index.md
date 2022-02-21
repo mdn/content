@@ -48,8 +48,8 @@ In this example, eventual supporting browsers should highlight any flagged spell
 #### CSS
 
 ```css
-::spelling-error  {
-  text-decoration: wavy red;
+::spelling-error  {
+  text-decoration: wavy red;
 }
 ```
 

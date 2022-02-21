@@ -60,7 +60,7 @@ animation-direction: unset;
 
 ## Examples
 
-### The animation is  playing reversed
+### The animation is  playing reversed
 
 #### HTML
 
@@ -72,22 +72,22 @@ animation-direction: unset;
 
 ```css
 .box {
-  background-color: rebeccapurple;
-  border-radius: 10px;
+  background-color: rebeccapurple;
+  border-radius: 10px;
   width: 100px;
-  height: 100px;
-  animation-name: rotate;
-  animation-duration: 0.7s;
-  animation-direction: reverse;
+  height: 100px;
+  animation-name: rotate;
+  animation-duration: 0.7s;
+  animation-direction: reverse;
 }
 
 @keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 ```
 

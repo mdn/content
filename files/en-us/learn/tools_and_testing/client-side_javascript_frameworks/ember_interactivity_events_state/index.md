@@ -56,7 +56,7 @@ At this point we'll start adding some interactivity to our app, providing the ab
 
 Now we've got a refactored componentized version of our todo app, lets walk through how we can add the interactivity we need to make the app functional.
 
-When beginning to think about interactivity, it's good to declare what each component's goals and responsibilities are. In the below sections we’ll do this for each component, and then walk you through how the functionality can be implemented.
+When beginning to think about interactivity, it's good to declare what each component's goals and responsibilities are. In the below sections we'll do this for each component, and then walk you through how the functionality can be implemented.
 
 ## Creating todos
 
@@ -213,7 +213,7 @@ And just like before, the `add()` function that will be called from the template
 
 Now that we've defined a way to add todos, we can interact with this service from the `header.js` input component to actually start adding them.
 
-First of all, the service needs to be injected into the template via the `@inject` decorator, which we’ll rename to `@service` for semantic clarity. To do this, add the following `import` line to `header.js`, beneath the two existing `import` lines:
+First of all, the service needs to be injected into the template via the `@inject` decorator, which we'll rename to `@service` for semantic clarity. To do this, add the following `import` line to `header.js`, beneath the two existing `import` lines:
 
 ```js
 import { inject as service } from '@ember/service';
@@ -275,7 +275,7 @@ Now we can access the data using `this.todos.all`, which is much more intuitive.
 <Todo />
 ```
 
-With a dynamic `#each` block (which is basically syntactic sugar over the top of JavaScript's [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)) that creates a `<Todo />` component for each todo available in the list of todos returned by the service’s `all()` getter:
+With a dynamic `#each` block (which is basically syntactic sugar over the top of JavaScript's [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)) that creates a `<Todo />` component for each todo available in the list of todos returned by the service's `all()` getter:
 
 ```js
 \{{#each this.todos.all as |todo|}}

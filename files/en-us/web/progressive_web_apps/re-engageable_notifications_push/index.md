@@ -21,7 +21,7 @@ They work outside of the browser window, just like service workers, so updates c
 
 ## Notifications
 
-Let's start with notifications — they can work without push, but are very useful when combined with them. Let’s look at them in isolation to begin with.
+Let's start with notifications — they can work without push, but are very useful when combined with them. Let's look at them in isolation to begin with.
 
 ### Request permission
 
@@ -38,7 +38,7 @@ button.addEventListener('click', () => {
 })
 ```
 
-This shows a popup using the operating system’s own notifications service:
+This shows a popup using the operating system's own notifications service:
 
 ![Notification of js13kPWA.](js13kpwa-notification.png)
 
@@ -139,7 +139,7 @@ const vapidPublicKey = await response.text();
 const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);
 ```
 
-The app fetches the server's public key and converts the response to text; then it needs to be converted to a Uint8Array (to support Chrome). To learn more about VAPID keys you can read the [Sending VAPID identified WebPush Notifications via Mozilla’s Push Service](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) blog post.
+The app fetches the server's public key and converts the response to text; then it needs to be converted to a Uint8Array (to support Chrome). To learn more about VAPID keys you can read the [Sending VAPID identified WebPush Notifications via Mozilla's Push Service](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) blog post.
 
 The app can now use the {{domxref("PushManager")}} to subscribe the new user. There are two options passed to the {{domxref("PushManager.subscribe()")}} method — the first is `userVisibleOnly: true`, which means all the notifications sent to the user will be visible to them, and the second one is the `applicationServerKey`, which contains our successfully acquired and converted VAPID key.
 

@@ -174,13 +174,13 @@ Each item inside the lists is put inside an {{htmlelement("li")}} (list item) el
 For example, if we wanted to turn the part of the following paragraph fragment into a list
 
 ```html
-<p>At Mozilla, we’re a global community of technologists, thinkers, and builders working together ... </p>
+<p>At Mozilla, we're a global community of technologists, thinkers, and builders working together ... </p>
 ```
 
 We could modify the markup to this
 
 ```html
-<p>At Mozilla, we’re a global community of</p>
+<p>At Mozilla, we're a global community of</p>
 
 <ul>
   <li>technologists</li>

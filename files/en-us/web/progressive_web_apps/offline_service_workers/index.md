@@ -11,11 +11,11 @@ tags:
 ---
 {{PreviousMenuNext("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps")}}
 
-Now that we’ve seen what the structure of js13kPWA looks like and have seen the basic shell up and running, let's look at how the offline capabilities using Service Worker are implemented. In this article, we look at how it is used in our [js13kPWA example](https://mdn.github.io/pwa-examples/js13kpwa/) ([see the source code also](https://github.com/mdn/pwa-examples/tree/master/js13kpwa)). We examine how to add offline functionality.
+Now that we've seen what the structure of js13kPWA looks like and have seen the basic shell up and running, let's look at how the offline capabilities using Service Worker are implemented. In this article, we look at how it is used in our [js13kPWA example](https://mdn.github.io/pwa-examples/js13kpwa/) ([see the source code also](https://github.com/mdn/pwa-examples/tree/master/js13kpwa)). We examine how to add offline functionality.
 
 ## Service workers explained
 
-Service Workers are a virtual proxy between the browser and the network. They finally fix issues that front-end developers have struggled with for years — most notably how to properly cache the assets of a website and make them available when the user’s device is offline.
+Service Workers are a virtual proxy between the browser and the network. They finally fix issues that front-end developers have struggled with for years — most notably how to properly cache the assets of a website and make them available when the user's device is offline.
 
 They run on a separate thread from the main JavaScript code of our page, and don't have any access to the DOM structure. This introduces a different approach from traditional web programming — the API is non-blocking, and can send and receive communication between different contexts. You are able to give a Service Worker something to work on, and receive the result whenever it is ready using a [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)-based approach.
 
@@ -27,7 +27,7 @@ Because they are so powerful, Service Workers can only be executed in secure con
 
 ## Offline First
 
-The "offline first" — or "cache first" — pattern is the most popular strategy for serving content to the user. If a resource is cached and available offline, return it first before trying to download it from the server. If it isn’t in the cache already, download it and cache it for future usage.
+The "offline first" — or "cache first" — pattern is the most popular strategy for serving content to the user. If a resource is cached and available offline, return it first before trying to download it from the server. If it isn't in the cache already, download it and cache it for future usage.
 
 ## "Progressive" in PWA
 

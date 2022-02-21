@@ -15,7 +15,7 @@ browser-compat: api.ServiceWorkerRegistration.active
 The **`active`** property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a service worker whose
 {{domxref("ServiceWorker.state")}} is `activating` or `activated`.
-This property is initially set to `null`.
+This property is initially set to `null`.
 
 An active worker controls a {{domxref("Client")}} if the client's URL
 falls within the scope of the registration (the `scope` option set when

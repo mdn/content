@@ -44,7 +44,7 @@ var myRequest = new Request(input[, init]);
     request. The possible options are:
 
     - `method`: The request method, e.g., `GET`,
-      `POST`. The default is `GET`.
+      `POST`. The default is `GET`.
     - `headers`: Any headers you want to add to your request, contained
       within a {{domxref("Headers")}} object or an object literal with
       {{jsxref("String")}} values.

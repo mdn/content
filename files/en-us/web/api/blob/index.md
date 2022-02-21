@@ -6,9 +6,7 @@ tags:
   - Blob
   - File API
   - Interface
-  - Raw
   - Reference
-  - data
 browser-compat: api.Blob
 ---
 {{APIRef("File API")}}
@@ -19,7 +17,7 @@ Blobs can represent data that isn't necessarily in a JavaScript-native format. T
 
 ## Using blobs
 
-To construct a `Blob` from other non-blob objects and data, use the {{DOMxRef("Blob.Blob", "Blob()")}} constructor. To create a blob that contains a subset of another blob's data, use the {{DOMxRef("Blob.slice()", "slice()")}} method. To obtain a `Blob` object for a file on the user's file system, see the {{DOMxRef("File")}} documentation.
+To construct a `Blob` from other non-blob objects and data, use the {{DOMxRef("Blob.Blob", "Blob()")}} constructor. To create a blob that contains a subset of another blob's data, use the {{DOMxRef("Blob.slice()", "slice()")}} method. To obtain a `Blob` object for a file on the user's file system, see the {{DOMxRef("File")}} documentation.
 
 The APIs accepting `Blob` objects are also listed in the {{DOMxRef("File")}} documentation.
 
@@ -28,14 +26,14 @@ The APIs accepting `Blob` objects are also listed in the {{DOMxRef("File")}} doc
 - {{DOMxRef("Blob.Blob", "Blob()")}}
   - : Returns a newly created `Blob` object which contains a concatenation of all of the data in the array passed into the constructor.
 
-## Instance properties
+## Instance properties
 
 - {{DOMxRef("Blob.prototype.size")}} {{readonlyinline}}
   - : The size, in bytes, of the data contained in the `Blob` object.
 - {{DOMxRef("Blob.prototype.type")}} {{readonlyinline}}
-  - : A string indicating the MIME type of the data contained in the `Blob`. If the type is unknown, this string is empty.
+  - : A string indicating the MIME type of the data contained in the `Blob`. If the type is unknown, this string is empty.
 
-## Instance methods
+## Instance methods
 
 - {{DOMxRef("Blob.prototype.arrayBuffer()")}}
   - : Returns a promise that resolves with an {{jsxref("ArrayBuffer")}} containing the entire contents of the `Blob` as binary data.
