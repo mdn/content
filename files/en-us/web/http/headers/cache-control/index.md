@@ -151,7 +151,7 @@ HTTP allows caches to reuse [stale responses](/en-US/docs/Web/HTTP/Caching#fresh
 
 #### `proxy-revalidate`
 
-The `proxy-revalidate` response directive is the equivalent of `must-revalidate` but specifically for shared caches only.
+The `proxy-revalidate` response directive is the equivalent of `must-revalidate`, but specifically for shared caches only.
 
 #### `no-store`
 
