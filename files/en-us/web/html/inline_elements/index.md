@@ -92,7 +92,7 @@ You can change the *visual presentation* of an element using the CSS {{cssxref("
 In brief, here are the basic conceptual differences between inline and block-level elements:
 
 - Content model
-  - : Generally, inline elements may contain only data and other inline elements. You can't put block elements inside inline elements.
+  - : Generally, inline elements may contain only data and other inline elements. An exception is the inline `a` element that may contain block level elements such as `div`.
 - Formatting
   - : By default, inline elements do not force a new line to begin in the document flow. Block elements, on the other hand, typically cause a line break to occur (although, as usual, this can be changed using CSS).
 
