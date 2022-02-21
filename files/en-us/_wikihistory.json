@@ -28112,13 +28112,6 @@
       "1valdis"
     ]
   },
-  "Web/API/AudioWorkletNode/onprocessorerror": {
-    "modified": "2020-10-15T22:20:33.024Z",
-    "contributors": [
-      "chrisdavidmills",
-      "1valdis"
-    ]
-  },
   "Web/API/AudioWorkletNode/parameters": {
     "modified": "2020-10-15T22:20:31.959Z",
     "contributors": [
@@ -28134,6 +28127,13 @@
       "padenotmoz",
       "1valdis",
       "chrisdavidmills"
+    ]
+  },
+  "Web/API/AudioWorkletNode/processorerror_event": {
+    "modified": "2020-10-15T22:20:33.024Z",
+    "contributors": [
+      "chrisdavidmills",
+      "1valdis"
     ]
   },
   "Web/API/AudioWorkletProcessor": {

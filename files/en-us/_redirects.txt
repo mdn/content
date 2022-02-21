@@ -7239,6 +7239,7 @@
 /en-US/docs/Web/API/AudioTrackList/onchange	/en-US/docs/Web/API/AudioTrackList/change_event
 /en-US/docs/Web/API/AudioTrackList/onremovetrack	/en-US/docs/Web/API/AudioTrackList/removetrack_event
 /en-US/docs/Web/API/AudioWorkletNode/AudioWorkletNode.parameters	/en-US/docs/Web/API/AudioWorkletNode/parameters
+/en-US/docs/Web/API/AudioWorkletNode/onprocessorerror	/en-US/docs/Web/API/AudioWorkletNode/processorerror_event
 /en-US/docs/Web/API/AudioWorkletNodeOptions	/en-US/docs/Web/API/AudioWorkletNode/AudioWorkletNode
 /en-US/docs/Web/API/BackgroundFetchRegistration/onprogress	/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event
 /en-US/docs/Web/API/Barcode_Detector_API	/en-US/docs/Web/API/Barcode_Detection_API
