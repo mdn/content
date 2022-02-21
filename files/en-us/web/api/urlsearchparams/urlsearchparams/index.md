@@ -83,10 +83,19 @@ const new_params = new URLSearchParams([
 console.log(new_params);
 // a=hello&b=world&c=a&d=2&e=false
 
-const new_url = new URL(`${url.origin}/?${new_params}`);
+const new_url = new URL(`${url.origin}${url.pathname}/?${new_params}`);
 
 console.log(new_url.href);
 // https://example.com/?a=hello&b=world&c=a&d=2&e=false
+
+// or here it is as a function
+const addSearchParams = (url, params = {}) =>
+  new URL(
+    `${url.origin}${url.pathname}?${new URLSearchParams([
+      ...Array.from(url.searchParams.entries()),
+      ...Object.entries(params),
+    ]).toString()}`
+  );
 ```
 
 ## Specifications
