@@ -7,7 +7,6 @@ tags:
   - AudioWorkletNode
   - AudioWorkletProcessor
   - Event
-  - Property
   - Reference
   - Web Audio API
   - onprocessorerror
