@@ -2,7 +2,18 @@
 title: 'AudioTrackList: addtrack event'
 slug: Web/API/AudioTrackList/addtrack_event
 tags:
+  - API
   - Event
+  - Reference
+  - addtrack
+  - Adding Audio Tracks
+  - Adding Tracks
+  - Audio
+  - AudioTrackList
+  - HTML DOM
+  - Media
+  - addtrack
+  - track
 browser-compat: api.AudioTrackList.addtrack_event
 ---
 
@@ -10,32 +21,41 @@ browser-compat: api.AudioTrackList.addtrack_event
 
 The `addtrack` event is fired when a track is added to an [`AudioTrackList`](/en-US/docs/Web/API/AudioTrackList).
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("TrackEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/AudioTrackList/onaddtrack"
-            >onaddtrack</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('addtrack', event => { })
+
+onaddtrack = event => { }
+```
+
+## Event type
+
+An {{domxref("TrackEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("TrackEvent")}}
+
+## Event properties
+
+{{page("/en-us/docs/Web/API/TrackEvent", "Properties")}}
+
+## Description
+
+### Trigger
+
+The {{event("addtrack")}} event is called whenever a new track is added to the media
+element whose audio tracks are represented by the `AudioTrackList` object.
+This happens when tracks are added to the element when the media is first attached to
+the element; one `addtrack` event will occur for each audio track in the
+media resource.
+
+This event is not cancelable and does not bubble.
+
+### Use cases
+
+You can use this event to react to a new audio track becoming available. You may want to update your UI elements to allow for user selection of the new audio track, for example.
 
 ## Examples
 

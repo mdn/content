@@ -28054,27 +28054,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/AudioTrackList/onaddtrack": {
-    "modified": "2020-10-15T22:07:20.667Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy"
-    ]
-  },
-  "Web/API/AudioTrackList/onchange": {
-    "modified": "2020-10-15T22:07:21.232Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy"
-    ]
-  },
-  "Web/API/AudioTrackList/onremovetrack": {
-    "modified": "2020-10-15T22:07:25.247Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy"
-    ]
-  },
   "Web/API/AudioTrackList/removetrack_event": {
     "modified": "2020-10-15T22:16:55.584Z",
     "contributors": [
