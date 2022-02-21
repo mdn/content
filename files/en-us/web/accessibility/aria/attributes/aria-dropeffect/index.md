@@ -9,6 +9,7 @@ tags:
   - aria-dropeffect
   - drag and drop
   - deprecated
+spec-urls: https://w3c.github.io/aria/#aria-dropeffect
 ---
 
 The global `aria-dropeffect` attribute indicates what functions may be performed when a dragged object is released on the drop target. {{deprecated_inline}}
@@ -54,9 +55,7 @@ Used in **ALL** roles.
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-dropeffect","ARIA: aria-dropeffect Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

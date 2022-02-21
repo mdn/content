@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-valuenow
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-valuenow
 ---
 
 The `aria-valuenow` attribute defines the current value for a `range` widget.
@@ -123,9 +124,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-valuenow","ARIA: aria-valuenow Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

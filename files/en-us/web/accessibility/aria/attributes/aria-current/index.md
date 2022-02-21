@@ -7,6 +7,7 @@ tags:
   - ARIA attribute
   - ARIA property
   - aria-current
+spec-urls: https://w3c.github.io/aria/#aria-current
 ---
 
 A non-null `aria-current` state on an element indicates that this element represents the current item within a container or set of related elements.
@@ -93,9 +94,7 @@ Usable in all roles; except in for elements with the role of [`gridcell`](/en-US
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-current","ARIA: aria-current Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

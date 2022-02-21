@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-haspopup
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-haspopup
 ---
 
 The `aria-haspopup` attribute indicates the availability and type of interactive popup element that can be triggered by the element on which the attribute is set.
@@ -79,9 +80,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------ |
-| {{SpecName("ARIA","#aria-haspopup","ARIA: aria-haspopup Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

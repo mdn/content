@@ -8,6 +8,9 @@ tags:
   - ARIA Tabpanel
   - ARIA widget
   - Reference
+spec-urls:
+  - https://w3c.github.io/aria/#tabpanel
+  - https://w3c.github.io/aria-practices/#tabpanel
 ---
 
 The ARIA `tabpanel` is a container for the resources of layered content associated with a `tab`.
@@ -67,10 +70,7 @@ See the [`tabpanel`, `tab`, and `tablist` example](/en-US/docs/Web/Accessibility
 
 ## Specifications
 
-| Specification                                                                        | Status                                           |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------ |
-| {{SpecName("ARIA","#tabpanel","tabpanel")}}                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#tabpanel","tabpanel")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 

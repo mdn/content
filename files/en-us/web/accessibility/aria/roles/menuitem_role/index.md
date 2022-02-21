@@ -8,6 +8,9 @@ tags:
   - Reference
   - ARIA roles
   - menuitem
+spec-urls:
+  - https://w3c.github.io/aria/#menuitem
+  - https://w3c.github.io/aria-practices/#menu
 ---
 
 The `menuitem` role indicates the element is an option in a set of choices contained by a `menu` or `menubar`.
@@ -115,10 +118,7 @@ When items in a `menubar` are arranged vertically and items in menu containers a
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#menuitem","ARIA: menuitem role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#menu","menuitem role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 

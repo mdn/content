@@ -7,6 +7,9 @@ tags:
   - ARIA attribute
   - ARIA property
   - aria-keyshortcuts
+spec-urls:
+  - https://w3c.github.io/aria/#aria-keyshortcuts
+  - https://w3c.github.io/aria-practices/#kbd_shortcuts
 ---
 
 The global `aria-keyshortcuts` attribute indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
@@ -125,10 +128,7 @@ Used in **ALL** roles.
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-keyshortcuts","ARIA: aria-keyshortcuts Attribute")}}  | {{Spec2('ARIA')}} |
-| {{SpecName("ARIA Authoring Practices 1.2","#kbd_shortcuts","keyboard shortcuts")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## See Also
 

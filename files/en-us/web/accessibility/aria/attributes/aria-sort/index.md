@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-sort
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-sort
 ---
 
 The `aria-sort` attribute indicates if items in a table or grid are sorted in ascending or descending order.
@@ -86,9 +87,7 @@ Used in roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-sort","ARIA: aria-sort Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

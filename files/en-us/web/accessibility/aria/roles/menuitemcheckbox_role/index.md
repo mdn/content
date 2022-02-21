@@ -8,6 +8,9 @@ tags:
   - Reference
   - ARIA roles
   - menuitemcheckbox
+spec-urls:
+  - https://w3c.github.io/aria/#menuitemcheckbox
+  - https://w3c.github.io/aria-practices/#menu
 ---
 A `menuitemcheckbox` is a `menuitem` with a checkable state whose possible values are `true`, `false`, or `mixed`.
 
@@ -131,10 +134,7 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#menuitemcheckbox","ARIA: menuitemcheckbox role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#menu","Menu or Menu bar")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 
