@@ -10,7 +10,8 @@ tags:
 ---
 {{LearnSidebar}}
 
-This article provides a simple static file server built with pure [Node.js](https://nodejs.org/en/) without the use of a framework. Current state of Node.js is such that almost everything we need can be easily solved by powerful internal APIs and a few lines of code.
+This article provides a simple static file server built with pure [Node.js](https://nodejs.org/en/) without the use of a framework. 
+The current state of Node.js is such that almost everything we needed is provided by the inbuilt APIs and just a few lines of code.
 
 ## Example
 
@@ -68,7 +69,7 @@ console.log(`Server running at http://127.0.0.1:${PORT}/`);
 
 ### Breakdown
 
-Following lines loads internal modules Node.js modules, roughly similar to imports.
+The following lines load internal Node.js modules.
 
 ```js
 const fs = require('fs');
@@ -76,7 +77,7 @@ const http = require('http');
 const path = require('path');
 ```
 
-Afterward is the function for creating the server. `https.createServer` returns a `Server` object, which we can start up by listening on `PORT`.
+Next we have a function for creating the server. `https.createServer` returns a `Server` object, which we can start up by listening on `PORT`.
 
 ```js
 http.createServer((req, res) => {
@@ -86,11 +87,14 @@ http.createServer((req, res) => {
 console.log(`Server running at http://127.0.0.1:${PORT}/`);
 ```
 
-Async function `prepareFile` returns structure: `{ found: boolean , ext: string, stream: ReadableStream }` If file can be served (server process have an access and no path-traversal vulnerability found), we will return `200` as a `statusCode`, othervise `404`. Note that otehr status codes can be found in `http.STATUS_CODES`. With `404` status we will return content of `'/404.html'` file.
+The asynchronous function `prepareFile` returns the structure: `{ found: boolean , ext: string, stream: ReadableStream }`.
+If the file can be served (the server process has access and no path-traversal vulnerability is found), we will return the HTTP status of `200` as a `statusCode` indicating success (otherwise we return `HTTP 404`). 
+Note that other status codes can be found in `http.STATUS_CODES`.
+With `404` status we will return content of `'/404.html'` file.
 
-Еhe extension of the file being requested will be parsed and lower-cased. After that we will search `MIME_TYPES` collection for the right [MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types). If no matches are found, we use the `application/octet-stream` as the default type.
+The extension of the file being requested will be parsed and lower-cased. After that we will search `MIME_TYPES` collection for the right [MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types). If no matches are found, we use the `application/octet-stream` as the default type.
 
-Finally, if there are no errors, we send over the requested file. In any case `file.stream` will contain `Readable` stream which wille be piped into `res` (instance of the `Writable` stream).
+Finally, if there are no errors, we send the requested file. The `file.stream` will contain a `Readable` stream that will be piped into `res` (an instance of the `Writable` stream).
 
 ```js
 res.writeHead(statusCode, { 'Content-Type': mimeType });
