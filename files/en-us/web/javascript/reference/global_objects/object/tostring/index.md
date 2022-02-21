@@ -66,7 +66,7 @@ method. The `toString()` function you create must return a primitive. If it
 returns an object and the method is called implicitly (i.e. during type
 conversion or coercion), then its result will be ignored and the value of a
 related method, `{{jsxref("Object/valueOf", "valueOf()")}}`, will be used
-instead, or a `TypeError` will be thrown, if none of these methods return a
+instead, or a `TypeError` will be thrown if none of these methods return a
 primitive.
 
 The following code defines the `Dog` object type and creates
