@@ -9,6 +9,7 @@ tags:
   - XUL
   - drag and drop
   - events
+spec-urls: https://html.spec.whatwg.org/multipage/#dnd
 ---
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
@@ -333,9 +334,7 @@ As can be seen in the [DataTransferItem interface's Browser Compatibility table]
 
 ## Specifications
 
-| **Specification**                                | **Status**                       | **Comment** |
-| ------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#dnd")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## See also
 

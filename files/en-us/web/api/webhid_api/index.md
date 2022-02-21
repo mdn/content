@@ -6,6 +6,7 @@ tags:
   - Advanced
   - WebHID
   - WebHID API
+spec-urls: https://wicg.github.io/webhid/
 ---
 {{DefaultAPISidebar("WebHID API")}}{{SeeCompatTable}}
 
@@ -82,9 +83,7 @@ navigator.hid.addEventListener('disconnect', (event) => {
 
 ## Specifications
 
-| Specification                | Status                   | Comment             |
-| ---------------------------- | ------------------------ | ------------------- |
-| {{SpecName('WebHID')}} | {{Spec2('WebHID')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

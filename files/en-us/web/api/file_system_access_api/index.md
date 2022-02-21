@@ -11,6 +11,7 @@ tags:
   - Landing
   - Overview
   - working with files
+spec-urls: https://wicg.github.io/file-system-access/
 ---
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
@@ -169,9 +170,7 @@ writableStream.write({ type: "truncate", size: size })
 
 ## Specifications
 
-| Specification                                        | Status                                           | Comment             |
-| ---------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName('File System Access API')}} | {{Spec2('File System Access API')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
