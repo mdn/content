@@ -146,7 +146,7 @@ The following elements are inline by default (although block and inline elements
 - {{ HTMLElement("strong") }}
 - {{ HTMLElement("sub") }}
 - {{ HTMLElement("sup") }}
-- {{ HTMLElement("svg") }}
+- {{ SVGElement("svg") }}
 - {{ HTMLElement("template") }}
 - {{ HTMLElement("textarea") }}
 - {{ HTMLElement("time") }}
