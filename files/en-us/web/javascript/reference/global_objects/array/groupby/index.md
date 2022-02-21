@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.Array.groupBy
 ---
 {{JSRef}} {{SeeCompatTable}}
 
-The **`groupBy()`** method groups the elements of the calling array according to the values returned by a provided testing function.
+The **`groupBy()`** method groups the elements of the calling array according to the string values returned by a provided testing function.
 The returned object has separate properties for each group, containing arrays with the elements in the group.
 
 <!-- {{EmbedInteractiveExample("pages/js/array-groupby.html")}} -->
@@ -21,7 +21,7 @@ Note that the returned object references the _same_ elements as the original arr
 Changing the internal structure of these elements will be reflected in both the original array and the returned object.
 
 This method can be used when group names can be represented by strings.
-If you need to group elements using a key that is some arbitrary object, use {{jsxref("Array.prototype.groupByToMap()")}} instead.
+If you need to group elements using a key that is some arbitrary value, use {{jsxref("Array.prototype.groupByToMap()")}} instead.
 
 ## Syntax
 

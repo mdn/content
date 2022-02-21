@@ -13,13 +13,13 @@ browser-compat: javascript.builtins.Array.groupByToMap
 ---
 {{JSRef}} {{SeeCompatTable}}
 
-The **`groupByToMap()`** method groups the elements of the calling array using the _objects_ returned by a provided testing function.
-The final returned {{jsxref("Map")}} uses the unique objects from the test function as keys, which can be used to get the array of elements in each group.
+The **`groupByToMap()`** method groups the elements of the calling array using the values returned by a provided testing function.
+The final returned {{jsxref("Map")}} uses the unique values from the test function as keys, which can be used to get the array of elements in each group.
 
 <!-- {{EmbedInteractiveExample("pages/js/array-groupbytomap.html")}} -->
 
 The elements in the {{jsxref("Map")}} and the original array are the same (not {{glossary("deep copy","deep copies")}}).
-Changing the internal structure of the elements will be reflected in both the original array and the returned object.
+Changing the internal structure of the elements will be reflected in both the original array and the returned {{jsxref("Map")}}.
 
 An object that needs to access the groups must keep a reference to the original key; the properties of a key can be modified, but you can't use another object that just happens to have the same name and properties.
 
@@ -53,13 +53,13 @@ groupByToMap(function(element, index, array) { /* ... */ }, thisArg)
   - : Function to execute on each element in the array, taking 3 arguments:
 
     - `element`
-      - : The value of the current element in the array.
+      - : The current element in the array.
     - `index` {{optional_inline}}
       - : The index (position) of the current element in the array.
     - `array` {{optional_inline}}
       - : The array that `groupBy()` was called on.
 
-    The object returned from the callback indicates the group of the current element.
+    The value ({{Glossary("object")}} or {{Glossary("primitive")}}) returned from the callback indicates the group of the current element.
 
 - `thisArg` {{optional_inline}}
   - : Object to use as {{jsxref("Operators/this", "this")}} inside `callbackFn`.
@@ -76,8 +76,9 @@ A {{jsxref("Map")}} object with keys for each group, each assigned to an array c
 
 ## Description
 
-The `groupByToMap()` method executes the `callbackFn` function once for each index of the array, returning an object indicating the group of the associated element.
-The objects returned by the callback are used as keys for a {{jsxref("Map")}} (later returned by `groupByToMap()`), where the associated value is an array containing all the elements for which the callback returned the same object.
+The `groupByToMap()` method executes the `callbackFn` function once for each index of the array, returning a value indicating the group of the associated element.
+The values returned by the callback are used as keys for the {{jsxref("Map")}} returned by `groupByToMap()`.
+Each key has an associated array containing all the elements for which the callback returned the same value.
 
 `callbackFn` is invoked for _every_ index of the array, not just those with assigned values.
 This means it may be less efficient for sparse arrays, compared to methods that only visit assigned values.
@@ -111,7 +112,7 @@ const inventory = [
 ];
 ```
 
-The code below uses `groupByToMap()` with an arrow function that returns the object key named `reorder` or `sufficient`, depending on whether the element has `quantity < 6`.
+The code below uses `groupByToMap()` with an arrow function that returns the object keys named `reorder` or `sufficient`, depending on whether the element has `quantity < 6`.
 The returned `result` object is a `Map` so we need to call `get()` with the key to obtain the array.
 
 ```js
@@ -127,7 +128,7 @@ This unpacks the `quantity` property of an object passed as a parameter, and ass
 This is a very succinct way to access the relevant values of elements within a function.
 
 
-The object key can be modified and still used.
+An object key can be modified and still used.
 However you can't recreate the key and still use it.
 For this reason it is important that anything that needs to use the map keeps a reference to its keys.
 
