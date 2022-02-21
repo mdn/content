@@ -43,19 +43,20 @@ There are some types of user interface components that, when represented in a pl
 For example, consider the following ```` element, which contains a heading.
 
 ```html
-<div role="button"><h3>Title of my button</h3></li>
+<div role="button"><h3>Title of my button</h3></div>
 ```
 
 Because descendants of `button` are presentational, the following code is equivalent:
 
 ```html
-<div role="button"><h3 role="presentation">Title of my button</h3></li>
+<div role="button"><h3 role="presentation">Title of my button</h3></div>
 ````
 
-From the assitive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree).:
+From the assitive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
 
 ```html
-<li role="button">Title of my button</li>
+<div role="button">Title of my button</div>
+```
 
 ### Associated ARIA roles, states, and properties
 

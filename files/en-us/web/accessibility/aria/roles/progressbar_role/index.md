@@ -34,13 +34,13 @@ There are some types of user interface components that, when represented in a pl
 For example, consider the following ```` element, which contains a heading.
 
 ```html
-<div role="progressbar"><h3>Title of my progressbar</h3></li>
+<div role="progressbar"><h3>Title of my progressbar</h3></div>
 ```
 
 Because descendants of `progressbar` are presentational, the following code is equivalent:
 
 ```html
-<div role="progressbar"><h3 role="presentation">Title of my progressbar</h3></li>
+<div role="progressbar"><h3 role="presentation">Title of my progressbar</h3></div>
 ````
 
 From the assitive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
