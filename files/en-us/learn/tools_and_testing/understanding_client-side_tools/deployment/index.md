@@ -154,16 +154,18 @@ Now we have three tasks ahead of us:
 
     ![github screenshot showing remote URLs you can use to deploy code to a GitHub repo](github-quick-setup.png)
 
-5. This remote location needs to be added to our local git repository before we can push it up there, otherwise it won't be able to find it. You'll need to run a command with the following structure (use the provided HTTPS option for now — especially if you are new to GitHub — not the SSH option):
+5. This remote location needs to be added to our local git repository before we can push it up there, otherwise it won't be able to find it. You'll need to run commands with the following structure (use the provided HTTPS option for now — especially if you are new to GitHub — not the SSH option):
 
     ```bash
-    git remote add github https://github.com/yourname/repo-name.git
+    git remote add origin https://github.com/yourname/repo-name.git
+    git branch -M main
     ```
 
-    So if your remote URL was `https://github.com/remy/super-website.git`, as in the screenshot above, your command would be
+    So if your remote URL was `https://github.com/remy/super-website.git`, as in the screenshot above, your command set would be
 
     ```bash
-    git remote add github https://github.com/remy/super-website.git
+    git remote add origin https://github.com/remy/super-website.git
+    git branch -M main
     ```
 
     Change the URL to your own repository, and run it now.
@@ -171,7 +173,7 @@ Now we have three tasks ahead of us:
 6. Now we're ready to push our code to GitHub; run the following command now:
 
     ```bash
-    git push github main
+    git push -u origin main
     ```
 
     At this point you'll be prompted to enter a username and password before Git will allow the push to be sent. This is because we used the HTTPS option rather than the SSH option, as seen in the screenshot earlier. For this you need your Github username and then — if you do not have two-factor authentication (2FA) turned on — your GitHub password. We would always encourage you to use 2FA if possible, but bear in mind that if you do, you'll also need to use a "personal access token". Github help pages has an [excellent and simple walkthrough covering how to get one](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line).
