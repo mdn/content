@@ -52,6 +52,20 @@ value1
 value2
 ```
 
+```js
+// Create a test URLSearchParams object
+var searchParams = new URLSearchParams("key1=value1&key2=value2");
+
+// Display the values
+console.log(Array.from(searchParams.values()));
+```
+
+The result is:
+
+```
+['value1', 'value2']
+```
+
 ## Specifications
 
 {{Specifications}}
