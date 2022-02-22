@@ -7,6 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-content/
 ---
 {{CSSRef}}
 
@@ -23,10 +24,7 @@ See the [how to guide for generated content](/en-US/docs/Learn/CSS/Howto/Generat
 
 ## Specifications
 
-| Specification                        | Status                           | Comment            |
-| ------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("CSS3 Content")}} | {{Spec2("CSS3 Content")}} |                    |
-| {{SpecName('CSS2.1')}}         | {{Spec2('CSS2.1')}}         | Initial definition |
+{{Specifications}}
 
 ## See also
 

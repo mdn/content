@@ -7,6 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-device-adapt/
 ---
 {{CSSRef}}
 
@@ -20,9 +21,7 @@ tags:
 
 ## Specifications
 
-| Specification                        | Status                           | Comment            |
-| ------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("CSS3 Device")}} | {{Spec2("CSS3 Device")}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

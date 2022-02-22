@@ -7,6 +7,7 @@ tags:
   - CSS Grid
   - Guide
   - subgrid
+spec-urls: https://drafts.csswg.org/css-grid/
 ---
 {{CSSRef}}
 
@@ -92,9 +93,7 @@ As the subgrid value acts in much the same way as a regular nested grid, it is e
 
 ## Specifications
 
-| Specification                        | Status                           | Comment                                                                                                      |
-| ------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName("CSS Grid 2")}} | {{Spec2("CSS Grid 2")}} | Initial definition of [subgrids](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#subgrid). |
+{{Specifications}}
 
 ## Browser compatibility
 

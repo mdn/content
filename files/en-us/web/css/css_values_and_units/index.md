@@ -6,6 +6,10 @@ tags:
   - Guide
   - Reference
   - values and units
+spec-urls: >-
+  https://drafts.csswg.org/css-values/,
+  https://drafts.csswg.org/css-color/,
+  https://drafts.csswg.org/css-images/
 ---
 {{CSSRef}}
 
@@ -260,87 +264,7 @@ Some legacy functional notations such as `rgba()` use commas, but generally comm
 
 ## Specifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("CSS4 Values")}}</td>
-      <td>{{Spec2("CSS4 Values")}}</td>
-      <td>
-        Adds the <code>vi</code>, <code>vb</code>, <code>ic</code>,
-        <code>cap</code>, <code>lh</code> and <code>rlh</code> units.<br />Adds
-        the <code>min()</code>, <code>max()</code> and
-        <code>clamp()</code> functional notation<br />Adds <code>toggle()</code>
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS3 Values")}}</td>
-      <td>{{Spec2("CSS3 Values")}}</td>
-      <td>
-        Adds
-        <code>calc()</code
-        >, <code>ch</code>, <code>rem</code>, <code>vw</code>, <code>vw</code>, <code>vmin</code>,<code> vmax</code>, <code
-          >Q</code
-        >
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS4 Colors")}}</td>
-      <td>{{Spec2("CSS4 Colors")}}</td>
-      <td>
-        Adds commaless syntaxes for
-        the <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code>,
-        and <code>hsla()</code> functions. Allows alpha values
-        in <code>rgb()</code> and <code>hsl()</code>,
-        turning <code>rgba()</code> and <code>hsla()</code> into (deprecated)
-        aliases for them.<br />Adds color keyword <code>rebeccapurple</code>.<br />Adds
-        4- and 8-digit hex color values, where the last digit(s) represents the
-        alpha value.<br />Adds <code>hwb()</code>, <code>device-cmyk()</code>,
-        and <code>color()</code> functions.
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS3 Colors")}}</td>
-      <td>{{Spec2("CSS3 Colors")}}</td>
-      <td>
-        Deprecates system-colors. Adds SVG colors. Adds
-        the <code>rgba()</code>, <code>hsl()</code>,
-        and <code>hsla()</code> functions.
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS4 Images")}}</td>
-      <td>{{Spec2("CSS4 Images")}}</td>
-      <td>
-        <p>
-          Adds <code>element()</code>, <code>image()</code>,
-          <code>image-set()</code>, <code>conic-gradient()</code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS3 Images")}}</td>
-      <td>{{Spec2("CSS3 Images")}}</td>
-      <td>Initial definition of image.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS2.1")}}</td>
-      <td>{{Spec2("CSS2.1")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS1")}}</td>
-      <td>{{Spec2("CSS1")}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## See also
 

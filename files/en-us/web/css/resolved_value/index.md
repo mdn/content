@@ -5,6 +5,7 @@ tags:
   - CSS
   - Guide
   - Reference
+spec-urls: https://drafts.csswg.org/cssom/#resolved-values
 ---
 {{CSSRef}}
 
@@ -14,9 +15,7 @@ For most properties, it is the [computed value](/en-US/docs/Web/CSS/computed_val
 
 ## Specifications
 
-| Specification                                                                    | Status                   | Comment             |
-| -------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName("CSSOM", "#resolved-values", "resolved value")}} | {{Spec2("CSSOM")}} | Initial definition. |
+{{Specifications}}
 
 ## See also
 

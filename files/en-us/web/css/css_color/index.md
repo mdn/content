@@ -11,6 +11,7 @@ tags:
   - Styles
   - Styling HTML
   - colors
+spec-urls: https://drafts.csswg.org/css-color/
 ---
 {{CSSRef}}
 
@@ -41,12 +42,7 @@ Not all CSS properties that take a {{cssxref("&lt;color&gt;")}} as a value are p
 
 ## Specifications
 
-| Specification                                    | Status                           | Comment            |
-| ------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSS4 Colors')}}             | {{Spec2('CSS4 Colors')}} |                    |
-| {{SpecName('CSS3 Colors')}}             | {{Spec2('CSS3 Colors')}} |                    |
-| {{SpecName('CSS2.1', 'colors.html')}} | {{Spec2('CSS2.1')}}         |                    |
-| {{SpecName('CSS1')}}                     | {{Spec2('CSS1')}}         | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

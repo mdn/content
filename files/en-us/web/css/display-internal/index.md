@@ -8,6 +8,7 @@ tags:
   - Data Type
   - Reference
   - display-internal
+spec-urls: https://drafts.csswg.org/css-display/#typedef-display-internal
 ---
 {{CSSRef}}
 
@@ -86,9 +87,7 @@ label, input {
 
 ## Specifications
 
-| Specification                                                                                            | Status                           |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('CSS3 Display', '#typedef-display-internal', 'display-internal')}} | {{Spec2('CSS3 Display')}} |
+{{Specifications}}
 
 ## Browser compatibility
 

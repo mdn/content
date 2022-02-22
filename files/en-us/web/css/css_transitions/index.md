@@ -7,6 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-transitions/
 ---
 {{CSSRef}}
 
@@ -29,9 +30,7 @@ tags:
 
 ## Specifications
 
-| Specification                                | Status                                   | Comment             |
-| -------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('CSS3 Transitions')}} | {{Spec2('CSS3 Transitions')}} | Initial definition. |
+{{Specifications}}
 
 ## See also
 

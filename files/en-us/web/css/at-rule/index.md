@@ -5,6 +5,9 @@ tags:
   - CSS
   - Guide
   - Reference
+spec-urls: >-
+  https://drafts.csswg.org/css-conditional-3/,
+  https://compat.spec.whatwg.org/#css-at-rules
 ---
 {{CSSRef}}
 
@@ -81,10 +84,7 @@ Since each conditional group may also contain nested statements, there may be an
 
 ## Specifications
 
-| Specification                                                            | Status                                   | Comment                            |
-| ------------------------------------------------------------------------ | ---------------------------------------- | ---------------------------------- |
-| {{SpecName('CSS3 Conditional')}}                             | {{Spec2('CSS3 Conditional')}} | Initial definition                 |
-| {{SpecName('Compat', '#css-at-rules', 'CSS At-rules')}} | {{Spec2('Compat')}}                 | Standardizes `@-webkit-keyframes`. |
+{{Specifications}}
 
 ## See also
 

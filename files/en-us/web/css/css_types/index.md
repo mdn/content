@@ -12,6 +12,7 @@ tags:
   - Types
   - data types
   - list
+spec-urls: https://drafts.csswg.org/css-values/
 ---
 {{CSSRef}}
 
@@ -126,10 +127,7 @@ The {{cssxref("&lt;position&gt;")}} data type is interpreted as defined for the 
 
 ## Specifications
 
-| Specification                            | Status                               | Comment             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{ SpecName('CSS4 Values') }} | {{ Spec2('CSS4 Values') }} |                     |
-| {{ SpecName('CSS3 Values') }} | {{ Spec2('CSS3 Values') }} | Initial definition. |
+{{Specifications}}
 
 ## See also
 

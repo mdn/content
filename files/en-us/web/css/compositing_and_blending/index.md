@@ -7,6 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://drafts.fxtf.org/compositing-1/
 ---
 {{CSSRef}}
 
@@ -26,9 +27,7 @@ tags:
 
 ## Specifications
 
-| Specification                        | Status                           | Comment            |
-| ------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("Compositing")}} | {{Spec2("Compositing")}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

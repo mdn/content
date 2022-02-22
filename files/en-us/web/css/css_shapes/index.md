@@ -10,6 +10,7 @@ tags:
   - Reference
   - Shape
   - wrapping
+spec-urls: https://drafts.csswg.org/css-shapes/
 ---
 {{CSSRef}}
 
@@ -53,6 +54,4 @@ The example below shows an image that has been floated left, and the `shape-outs
 
 ## Specifications
 
-| Specification                        | Status                           | Comment            |
-| ------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("CSS Shapes")}} | {{Spec2("CSS Shapes")}} | Initial definition |
+{{Specifications}}
