@@ -15,7 +15,7 @@ browser-compat: api.IDBIndex.openCursor
 {{ APIRef("IndexedDB") }}
 
 The **`openCursor()`** method of the {{domxref("IDBIndex")}}
-interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread,
+interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread,
 creates a [cursor](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#cursor) over the specified key
 range.
 
@@ -41,7 +41,7 @@ var request = myIndex.openCursor(range, direction);
     passed, this will default to a key range that selects all the records in this object
     store.
 - direction {{optional_inline}}
-  - : The cursor's [direction](/en-US/docs/Web/API/IDBCursor#constants). See [IDBCursor Constants](/en-US/docs/Web/API/IDBCursor#constants) for possible
+  - : The cursor's [direction](/en-US/docs/Web/API/IDBCursor#constants). See [IDBCursor Constants](/en-US/docs/Web/API/IDBCursor#constants) for possible
     values.
 
 ### Return value
@@ -58,21 +58,21 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `TypeError` {{domxref("DOMException")}}
   - : Thrown if the value for the direction parameter is invalid.
 - `DataError` {{domxref("DOMException")}}
-  - : Thrown if the key or key range provided contains an invalid key.
+  - : Thrown if the key or key range provided contains an invalid key.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("IDBIndex")}} has been deleted or removed.
 
 ## Example
 
 In the following example we open a transaction and an object store, then get the
-index `lName` from a simple contacts database. We then open a basic cursor on
+index `lName` from a simple contacts database. We then open a basic cursor on
 the index using `openCursor()` — this works the same as opening a cursor
-directly on an `ObjectStore` using {{domxref("IDBObjectStore.openCursor")}}
+directly on an `ObjectStore` using {{domxref("IDBObjectStore.openCursor")}}
 except that the returned records are sorted based on the index, not the primary key.
 
 Finally, we iterate through each record, and insert the data into an HTML table. For a
-complete working example, see our [IndexedDB-examples
-demo repo](https://github.com/mdn/indexeddb-examples/tree/master/idbindex) ([View the
+complete working example, see our [IndexedDB-examples
+demo repo](https://github.com/mdn/indexeddb-examples/tree/master/idbindex) ([View the
 example live](https://mdn.github.io/indexeddb-examples/idbindex).)
 
 ```js

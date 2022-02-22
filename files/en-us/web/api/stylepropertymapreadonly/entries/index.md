@@ -37,7 +37,7 @@ property `[key, value]` pairs.
 
 ## Example
 
-Here shows an example of using `StylePropertyMapReadOnly.entries()` method
+Here shows an example of using `StylePropertyMapReadOnly.entries()` method
 on an elements computed styles.
 
 ```js

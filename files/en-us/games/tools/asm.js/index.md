@@ -22,4 +22,4 @@ Additionally, if an engine chooses to specially recognize asm.js code, there eve
 
 ## asm.js language summary
 
-asm.js is an intermediate programming language.  asm.js has a very predictable performance rate because it is limited to an extremely restricted subset of JavaScript that provides only strictly-typed integers, floats, arithmetic, function calls, and heap accesses.  The performance characteristics are closer to native code than that of standard JavaScript.  Using a subset of JavaScript asm.js is already supported by major web browsers.   Since asm.js runs in a browser it depends heavily on the browser and the hardware.
+asm.js is an intermediate programming language.  asm.js has a very predictable performance rate because it is limited to an extremely restricted subset of JavaScript that provides only strictly-typed integers, floats, arithmetic, function calls, and heap accesses.  The performance characteristics are closer to native code than that of standard JavaScript.  Using a subset of JavaScript asm.js is already supported by major web browsers.   Since asm.js runs in a browser it depends heavily on the browser and the hardware.

@@ -23,7 +23,7 @@ document.styleSheets
 
 The returned list is ordered as follows:
 
-- StyleSheets retrieved from {{htmlelement("link")}} headers are placed first, sorted in header order.
+- StyleSheets retrieved from {{htmlelement("link")}} headers are placed first, sorted in header order.
 - StyleSheets retrieved from the DOM are placed after, sorted in [tree order](https://dom.spec.whatwg.org/#concept-tree-order).
 
 ## Examples

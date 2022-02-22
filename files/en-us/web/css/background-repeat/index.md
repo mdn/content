@@ -156,14 +156,14 @@ background-repeat: unset;
     <div class="four"></div>
   </li>
   <li>space
-    <div class="five"></div>
-  </li>
+    <div class="five"></div>
+  </li>
   <li>round
-    <div class="six"></div>
-  </li>
+    <div class="six"></div>
+  </li>
   <li>repeat-x, repeat-y (multiple images)
-    <div class="seven"></div>
-  </li>
+    <div class="seven"></div>
+  </li>
 </ol>
 ```
 

@@ -13,8 +13,8 @@ browser-compat: api.PaymentRequest.abort
 ---
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef("Payment Request API")}}
 
-The `PaymentRequest.abort()` method of the {{domxref('PaymentRequest')}}
-interface causes the user agent to end the payment request and to remove any user
+The `PaymentRequest.abort()` method of the {{domxref('PaymentRequest')}}
+interface causes the user agent to end the payment request and to remove any user
 interface that might be shown.
 
 ## Syntax
@@ -40,14 +40,14 @@ been abandoned or neglected.
 var request = new PaymentRequest(supportedInstruments, details, options);
 
 var paymentTimeout = window.setTimeout(() => {
-  window.clearTimeout(paymentTimeout);
-  request.abort().then(() => {
-    print('Payment timed out after 20 minutes.');
-  }).catch(() => {
-    print('Unable to abort, because the user is currently in the process ' +
-          'of paying.');
-  });
-}, 20 * 60 * 1000);  /* 20 minutes */
+  window.clearTimeout(paymentTimeout);
+  request.abort().then(() => {
+    print('Payment timed out after 20 minutes.');
+  }).catch(() => {
+    print('Unable to abort, because the user is currently in the process ' +
+          'of paying.');
+  });
+}, 20 * 60 * 1000);  /* 20 minutes */
 ```
 
 ## Specifications

@@ -48,7 +48,7 @@ In the example below, we have a circular purple item which is a {{htmlelement("d
 
 ### border-box
 
-The `border-box` value is the shape defined by the outside border edge. This shape follows all of the normal border radius shaping rules for the outside of the border. You still have a border, even if you have not used the CSS {{cssxref("border")}} property. In this case it will be the same as `padding-box`, the shape defined by the outside padding edge.
+The `border-box` value is the shape defined by the outside border edge. This shape follows all of the normal border radius shaping rules for the outside of the border. You still have a border, even if you have not used the CSS {{cssxref("border")}} property. In this case it will be the same as `padding-box`, the shape defined by the outside padding edge.
 
 In the example below you can see how the text now follows the line created by the border. Change the border size and the content follows it.
 
@@ -56,13 +56,13 @@ In the example below you can see how the text now follows the line created by th
 
 ### padding-box
 
-The `padding-box` value defines the shape enclosed by the outside padding edge. This shape follows all of the normal border radius shaping rules for the inside of the border. If you have no padding then `padding-box` is the same as `content-box`.
+The `padding-box` value defines the shape enclosed by the outside padding edge. This shape follows all of the normal border radius shaping rules for the inside of the border. If you have no padding then `padding-box` is the same as `content-box`.
 
 {{EmbedGHLiveSample("css-examples/shapes/box/padding-box.html", '100%', 800)}}
 
 ### content-box
 
-The `content-box` value defines the shape enclosed by the outside content edge. Each corner radius of this box is the larger of 0 or border-radius − border-width − padding. This Means that it is impossible to have a negative value here.
+The `content-box` value defines the shape enclosed by the outside content edge. Each corner radius of this box is the larger of 0 or border-radius − border-width − padding. This Means that it is impossible to have a negative value here.
 
 {{EmbedGHLiveSample("css-examples/shapes/box/content-box.html", '100%', 800)}}
 

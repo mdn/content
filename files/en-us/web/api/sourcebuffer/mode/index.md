@@ -17,8 +17,8 @@ browser-compat: api.SourceBuffer.mode
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 The **`mode`** property of the {{domxref("SourceBuffer")}}
-interface controls whether media segments can be appended to the
-`SourceBuffer` in any order, or in a strict sequence.
+interface controls whether media segments can be appended to the
+`SourceBuffer` in any order, or in a strict sequence.
 
 The two available values are:
 

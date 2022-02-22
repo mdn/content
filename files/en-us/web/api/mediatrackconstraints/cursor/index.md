@@ -53,7 +53,7 @@ the call to {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}. Se
 You can check the setting selected by the user agent after the display media has been
 created by {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} by calling
 {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} on the display media's
-video {{domxref("MediaStreamTrack")}}, then checking the value of  the returned
+video {{domxref("MediaStreamTrack")}}, then checking the value of  the returned
 {{domxref("MediaTrackSettings")}} object's {{domxref("MediaTrackSettings.cursor",
   "cursor")}} object.
 

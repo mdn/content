@@ -27,8 +27,8 @@ The **`conic-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web
 conic-gradient(from 45deg, blue, red);
 
 /* A bluish purple box: the gradient goes from blue to red,
-   but as only the bottom right quadrant is visible, as the
-   center of the conic gradient is in at the top left corner */
+   but only the bottom right quadrant is visible, as the
+   center of the conic gradient is at the top left corner */
 conic-gradient(from 90deg at 0 0, blue, red);
 
 /* Colorwheel */
@@ -60,7 +60,7 @@ background: conic-gradient(
 
 ## Description
 
-As with any gradient, a conic gradient has [no intrinsic dimensions](/en-US/docs/Web/CSS/image#description); i.e., it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element it applies to, or size of the `<image>` is set to something other than the element size.
+As with any gradient, a conic gradient has [no intrinsic dimensions](/en-US/docs/Web/CSS/image#description); i.e., it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element it applies to, or the size of the `<image>` if it is set to something other than the element size.
 
 To create a conic gradient that repeats so as to fill a 360 degree rotation, use the {{CSSxRef("gradient/repeating-conic-gradient()", "repeating-conic-gradient()")}} function instead.
 

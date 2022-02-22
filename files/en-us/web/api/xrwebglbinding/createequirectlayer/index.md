@@ -65,7 +65,7 @@ createEquirectLayer(init)
     - `lowerVerticalAngle`: Optional. A number indicating the lower vertical angle in radians of the sphere. Default value: `-1.570795` (-π/2).
     - `mipLevels`: Optional. A number specifying desired number of mip levels. The default value is `1`.
     - `radius`: Optional. A number indicating the radius of the sphere. Default value: `0` (infinite sphere).
-    - `space`: **Required**. An {{domxref("XRSpace")}} object defining the layer's spatial relationship with the user’s physical environment.
+    - `space`: **Required**. An {{domxref("XRSpace")}} object defining the layer's spatial relationship with the user's physical environment.
     - `textureType`: Optional. A string defining the type of texture the layer will have. Possible values:
       - `texture`: The textures of {{domxref("XRWebGLSubImage")}} will be of type `gl.TEXTURE_2D`.
       - `texture-array`: the textures of {{domxref("XRWebGLSubImage")}} will be of type `gl.TEXTURE_2D_ARRAY` (WebGL 2 contexts only).

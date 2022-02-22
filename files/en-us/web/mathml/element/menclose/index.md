@@ -53,11 +53,11 @@ The MathML `<menclose>` element renders its content inside an enclosing notation
 ```html
 <math>
 
-  <menclose notation="circle box">
-    <mi> x </mi>
-    <mo> + </mo>
-    <mi> y </mi>
-  </menclose>
+  <menclose notation="circle box">
+    <mi> x </mi>
+    <mo> + </mo>
+    <mi> y </mi>
+  </menclose>
 
 </math>
 ```

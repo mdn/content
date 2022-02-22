@@ -27,7 +27,7 @@ new XRRay(transform)
 - `origin` {{optional_inline}}
   - : A point object defining the 3-dimensional point in space that the ray originates from, in meters. All dimensions are optional, however, if provided, the origin's `w` property must be 1.0. The object is initialized to `{ x: 0.0, y: 0.0, z: 0.0, w: 1.0 }` by default.
 - `direction` {{optional_inline}}
-  - : A vector object defining the ray’s 3-dimensional directional vector. All dimensions are optional, however, if provided, the direction's `w` property must be 0.0. The object is initialized to: `{ x: 0.0, y: 0.0, z: -1.0, w: 0.0 }` by default.
+  - : A vector object defining the ray's 3-dimensional directional vector. All dimensions are optional, however, if provided, the direction's `w` property must be 0.0. The object is initialized to: `{ x: 0.0, y: 0.0, z: -1.0, w: 0.0 }` by default.
 - `transform` {{optional_inline}}
   - : An {{domxref("XRRigidTransform")}} object representing the position and orientation of the ray.
 

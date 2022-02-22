@@ -54,4 +54,4 @@ As mentioned before, we invite you to contribute the changes yourself, but this 
 
 ### Site issues
 
-If you encounter problems with the MDN web site, or have ideas for new features for the site,  you can [submit a ticket to the MDN development team](https://github.com/mdn/yari/issues).
+If you encounter problems with the MDN web site, or have ideas for new features for the site,  you can [submit a ticket to the MDN development team](https://github.com/mdn/yari/issues).

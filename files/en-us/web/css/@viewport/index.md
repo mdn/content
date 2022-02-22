@@ -19,9 +19,9 @@ browser-compat: css.at-rules.viewport
 
 The **`@viewport`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) lets you configure the {{glossary("viewport")}} through which the document is viewed. It's primarily used for mobile devices, but is also used by desktop browsers that support features like "snap to edge" (such as Microsoft Edge).
 
-Lengths specified as percentages are calculated relative to the **initial viewport**, which is the viewport before any user agent or authored styles have had an opportunity to adjust the viewport. This is typically based on the size of the window on desktop browsers that aren't in full-screen mode.
+Lengths specified as percentages are calculated relative to the **initial viewport**, which is the viewport before any user agent or authored styles have had an opportunity to adjust the viewport. This is typically based on the size of the window on desktop browsers that aren't in fullscreen mode.
 
-On mobile devices (or desktop devices that are in full-screen mode), the initial viewport is usually the portion of a device's screen that is available for application use. This may be either the full screen or the full screen area minus areas controlled by the operating system (such as a taskbar) or the application-available screen area (either the full screen or the screen minus any areas owned by the operating system or other applications).
+On mobile devices (or desktop devices that are in fullscreen mode), the initial viewport is usually the portion of a device's screen that is available for application use. This may be either the full screen or the full screen area minus areas controlled by the operating system (such as a taskbar) or the application-available screen area (either the full screen or the screen minus any areas owned by the operating system or other applications).
 
 ```css
 @viewport {
@@ -29,7 +29,7 @@ On mobile devices (or desktop devices that are in full-screen mode), the initial
 }
 ```
 
-> **Note:** The use of `<meta name="viewport">` tag overrides `@viewport`
+> **Note:** The use of `<meta name="viewport">` tag overrides `@viewport`
 
 ## Syntax
 

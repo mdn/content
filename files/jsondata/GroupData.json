@@ -550,7 +550,7 @@
       "events": []
     },
     "Geometry Interfaces": {
-      "interfaces": ["CSSMatrix", "DOMMatrix", "DOMMatrixReadOnly", "Point"],
+      "interfaces": ["CSSMatrix", "DOMMatrix", "DOMMatrixReadOnly", "DOMRect", "DOMRectReadOnly", "Point"],
       "methods": [],
       "properties": [],
       "events": []
@@ -786,24 +786,16 @@
       ],
       "interfaces": [
         "IDBCursor",
-        "IDBCursorSync",
         "IDBCursorWithValue",
         "IDBDatabase",
-        "IDBDatabaseException",
-        "IDBDatabaseSync",
         "IDBEnvironment",
-        "IDBEnvironmentSync",
         "IDBFactory",
-        "IDBFactorySync",
         "IDBIndex",
-        "IDBIndexSync",
         "IDBKeyRange",
         "IDBObjectStore",
-        "IDBObjectStoreSync",
         "IDBOpenDBRequest",
         "IDBRequest",
         "IDBTransaction",
-        "IDBTransactionSync",
         "IDBVersionChangeEvent",
         "IDBVersionChangeRequest"
       ],

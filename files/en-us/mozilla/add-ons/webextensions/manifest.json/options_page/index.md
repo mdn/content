@@ -40,7 +40,7 @@ Use the `options_page` key to define an [options page](/en-US/docs/Mozilla/Add-o
 
 The options page contains settings for the extension. The user can access it from the browser's add-ons manager, and you can open it from within your extension using {{WebExtAPIRef("runtime.openOptionsPage()")}}.
 
-Unlike options pages specified using the newer `options_ui` key, options pages specified using the deprecated `options_page` key don't receive browser styles and always open in a normal browser tab.
+Unlike options pages specified using the newer `options_ui` key, options pages specified using the deprecated `options_page` key don't receive browser styles and always open in a normal browser tab.
 
 ## Example
 

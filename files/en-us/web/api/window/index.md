@@ -337,10 +337,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : An event handler property for any device orientation changes.
 - {{domxref("Window.ondeviceproximity")}} {{deprecated_inline}}
   - : An event handler property for device proximity event (see {{domxref("DeviceProximityEvent")}})
-- {{domxref("Window.ongamepadconnected")}}
-  - : Represents an event handler that will run when a gamepad is connected (when the {{event('gamepadconnected')}} event fires).
-- {{domxref("Window.ongamepaddisconnected")}}
-  - : Represents an event handler that will run when a gamepad is disconnected (when the {{event('gamepaddisconnected')}} event fires).
 - {{domxref("WindowEventHandlers.onrejectionhandled")}}
   - : An event handler for handled {{jsxref("Promise")}} rejection events.
 - {{domxref("Window.onuserproximity")}} {{deprecated_inline}}
@@ -516,10 +512,8 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - {{domxref("Window/gamepadconnected_event", "gamepadconnected")}}
   - : Fired when the browser detects that a gamepad has been connected or the first time a button/axis of the gamepad is used.
-    Also available via the {{domxref("Window/ongamepadconnected", "ongamepadconnected")}} property.
 - {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}}
   - : Fired when the browser detects that a gamepad has been disconnected.
-    Also available via the {{domxref("Window/ongamepaddisconnected", "ongamepaddisconnected")}} property
 
 ### History events
 

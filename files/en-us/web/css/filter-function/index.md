@@ -50,27 +50,27 @@ This example provides a simple graphic, along with a select menu to allow you to
 ```html
 <div></div>
 <ul>
-  <li>
-    <label for="filter-select">Choose a filter function:</label>
-    <select id="filter-select">
-      <option selected>blur</option>
-      <option>brightness</option>
-      <option>contrast</option>
-      <option>drop-shadow</option>
-      <option>grayscale</option>
-      <option>hue-rotate</option>
-      <option>invert</option>
-      <option>opacity</option>
-      <option>saturate</option>
-      <option>sepia</option>
-    </select>
-  </li>
-  <li>
-    <input type="range"><output></output>
-  </li>
-  <li>
-    <p>Current value: <code></code></p>
-  </li>
+  <li>
+    <label for="filter-select">Choose a filter function:</label>
+    <select id="filter-select">
+      <option selected>blur</option>
+      <option>brightness</option>
+      <option>contrast</option>
+      <option>drop-shadow</option>
+      <option>grayscale</option>
+      <option>hue-rotate</option>
+      <option>invert</option>
+      <option>opacity</option>
+      <option>saturate</option>
+      <option>sepia</option>
+    </select>
+  </li>
+  <li>
+    <input type="range"><output></output>
+  </li>
+  <li>
+    <p>Current value: <code></code></p>
+  </li>
 </ul>
 ```
 

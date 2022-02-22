@@ -29,7 +29,7 @@ A `form` [landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#Landmark_roles) ide
 
 > **Note:** Using the {{HTMLElement('form')}} element will automatically communicate a section of content as a `form` landmark, if it is provided an accessible name. Developers should always prefer using the correct semantic HTML element over using ARIA.
 
-Use the HTML {{HTMLElement('form')}} element if possible. The `<form>` element defines a `form` landmark when it has an accessible name (e.g. [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby), [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or {{htmlattrxref('title')}}). Make sure to have a unique label on each form in a document to help users understand the purpose of the form. This label should be visible to all users, not just assistive technology users. Use the `search` landmark instead of the `form` landmark when the form is used for search functionality.
+Use the HTML {{HTMLElement('form')}} element if possible. The `<form>` element defines a `form` landmark when it has an accessible name (e.g. [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby), [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or {{htmlattrxref('title')}}). Make sure to have a unique label on each form in a document to help users understand the purpose of the form. This label should be visible to all users, not just assistive technology users. Use the `search` landmark instead of the `form` landmark when the form is used for search functionality.
 
 Use the `role="form"` to identify a region of the page; do not use it to identify every form field. Even if you are using the form landmark instead of `<form>`, you are encouraged to use native HTML form controls like {{HTMLElement('button')}}, {{HTMLElement('input')}}, {{HTMLElement('select')}}, and {{HTMLElement('textarea')}}.
 
@@ -57,7 +57,7 @@ No role specific keyboard interactions
   <input id="email" name="email" autocomplete="email" autocapitalize="off" autocorrect="off" spellcheck="false" type="text">
 
   <label for="comment">Comment</label>
-  <textarea id="comment" name="comment"></textarea>
+  <textarea id="comment" name="comment"></textarea>
 
   <input value="Comment" type="submit">
 </div>
@@ -89,7 +89,7 @@ If a form is used to search, you should use the more specialized [`role="search"
 
 Each {{HTMLElement('form')}} element and form `role` that needs to be exposed as a landmark must be given an accessible name. This name will allow an assistive technology user to be able to quickly understand the purpose of the form landmark.
 
-Use an `aria-labelledby`, `aria-label` or `title`  on the same element that was given the `role="form"` to provide it an accessible name.
+Use an `aria-labelledby`, `aria-label` or `title`  on the same element that was given the `role="form"` to provide it an accessible name.
 
 #### Using `role="form"`
 

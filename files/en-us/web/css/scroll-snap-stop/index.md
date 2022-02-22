@@ -30,7 +30,7 @@ scroll-snap-type: unset;
 ### Values
 
 - `normal`
-  - : When the visual {{Glossary("viewport")}} of this element's scroll container is scrolled, it may "pass over" possible snap positions.
+  - : When the visual {{Glossary("viewport")}} of this element's scroll container is scrolled, it may "pass over" possible snap positions.
 - `always`
   - : The scroll container must not "pass over" a possible snap position; and must snap to the first of this elements' snap positions.
 

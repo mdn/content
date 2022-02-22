@@ -12,16 +12,16 @@ browser-compat: api.IDBIndex.getAll
 ---
 {{ APIRef("IndexedDB") }}
 
-The **`getAll()`** method of the {{domxref("IDBIndex")}}
+The **`getAll()`** method of the {{domxref("IDBIndex")}}
 interface retrieves all objects that are inside the index.
 
 There is a performance cost associated with looking at the `value` property
 of a cursor, because the object is created lazily. To use a feature
-like `getAll()`, the browser has to create all the objects at once. If you
+like `getAll()`, the browser has to create all the objects at once. If you
 are just interested in looking at each of the keys, for instance, it is more efficient
 to use a [cursor](/en-US/docs/Web/API/IDBCursor). If you are trying to get an
 array of all the objects in an object store, though, you should
-use `getAll()`.
+use `getAll()`.
 
 ## Syntax
 
@@ -33,7 +33,7 @@ var getAllKeysRequest = IDBIndex.getAll(query, count);
 
 ### Parameters
 
-- *query* {{optional_inline}}
+- *query* {{optional_inline}}
   - : A key or an {{domxref("IDBKeyRange")}} identifying the records to retrieve. If this
     value is null or missing, the browser will use an unbound key range.
 - _count_ {{optional_inline}}

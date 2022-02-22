@@ -55,7 +55,7 @@ An Ember application has a default "application" route, which is tied to the `ap
 
 ## Creating the routes
 
-Let's start by creating three new routes: "Index", "Active" and "Completed". To do this you’ll need to enter the following commands into your terminal, inside the root directory of your app:
+Let's start by creating three new routes: "Index", "Active" and "Completed". To do this you'll need to enter the following commands into your terminal, inside the root directory of your app:
 
 ```bash
 ember generate route index
@@ -82,7 +82,7 @@ Router.map(function() {
 
 The highlighted lines were added when the 2nd and 3rd commands above were run.
 
-`router.js` behaves as a "sitemap" for developers to be able to quickly see how the entire app is structured.  It also tells Ember how to interact with your route, such as when loading arbitrary data, handling errors while loading that data, or interpreting dynamic segments of the URL. Since our data is static, we won't get to any of those fancy features, but we'll still make sure that the route provides the minimally required data to view a page.
+`router.js` behaves as a "sitemap" for developers to be able to quickly see how the entire app is structured.  It also tells Ember how to interact with your route, such as when loading arbitrary data, handling errors while loading that data, or interpreting dynamic segments of the URL. Since our data is static, we won't get to any of those fancy features, but we'll still make sure that the route provides the minimally required data to view a page.
 
 Creating the "Index" route did not add a route definition line to `router.js`, because like with URL navigation and JavaScript module loading, "Index" is a special word that indicates the default route to render, load, etc.
 

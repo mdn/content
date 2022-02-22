@@ -2,7 +2,19 @@
 title: 'AudioTrackList: removetrack event'
 slug: Web/API/AudioTrackList/removetrack_event
 tags:
+  - API
+  - Audio
+  - AudioTrackList
   - Event
+  - HTML DOM
+  - Media
+  - Property
+  - Reference
+  - Removing Audio Tracks
+  - Removing Tracks
+  - remove
+  - removetrack
+  - track
 browser-compat: api.AudioTrackList.removetrack_event
 ---
 
@@ -10,32 +22,38 @@ browser-compat: api.AudioTrackList.removetrack_event
 
 The `removetrack` event is fired when a track is removed from an [`AudioTrackList`](/en-US/docs/Web/API/AudioTrackList).
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("TrackEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/AudioTrackList/onremovetrack"
-            >onremovetrack</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('removetrack', event => { })
+
+onremovetrack = event => { }
+```
+
+## Event type
+
+An {{domxref("TrackEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("TrackEvent")}}
+
+## Event properties
+
+{{page("/en-us/docs/Web/API/TrackEvent", "Properties")}}
+
+## Description
+
+### Trigger
+
+The {{event("removetrack")}} event is called whenever a track is removed from the media
+element whose audio tracks are represented by the `AudioTrackList` object.
+
+This event is not cancelable and does not bubble.
+
+### Use cases
+
+You can use this event to react to a new audio track becoming unavailable. You may want to update your UI elements to disallow for user selection of the removed audio track, for example.
 
 ## Examples
 

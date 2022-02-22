@@ -20,9 +20,9 @@ tags:
 ---
 <h2 id="Problem_2"><span class="mw-headline" id="Problem">Problem</span></h2>
 
-<p>You have a form where you ask your user a question, but the answer is mentioned in the question itself. A classic example we all know from our browser settings is the setting “Delete history after x days”. “Delete history after” is to the left of the textbox, x is the number, for example 21, and the word “days” follows the textbox, forming a sentence that is easy to understand.</p>
+<p>You have a form where you ask your user a question, but the answer is mentioned in the question itself. A classic example we all know from our browser settings is the setting "Delete history after x days". "Delete history after" is to the left of the textbox, x is the number, for example 21, and the word "days" follows the textbox, forming a sentence that is easy to understand.</p>
 
-<p>If you’re using a screen reader, have you noticed that, when you go to this setting in Firefox, it tells you “Delete history after 21 days”?, followed by the announcement that you’re in a textbox, and that it contains the number 21. Isn’t that cool? You do not need to navigate around to find out the unit. “Days” could easily be “months” or “years”, and in many ordinary dialogs, there is no way to find this out other than navigating around with screen reviewing commands.</p>
+<p>If you're using a screen reader, have you noticed that, when you go to this setting in Firefox, it tells you "Delete history after 21 days"?, followed by the announcement that you're in a textbox, and that it contains the number 21. Isn't that cool? You do not need to navigate around to find out the unit. "Days" could easily be "months" or "years", and in many ordinary dialogs, there is no way to find this out other than navigating around with screen reviewing commands.</p>
 
 <p><span class="seoSummary">The solution is in an ARIA attribute called <strong>aria-labelledby</strong>. Its parameter is a string that consists of the IDs of the HTML elements you want to concatenate into a single accessible name.</span></p>
 

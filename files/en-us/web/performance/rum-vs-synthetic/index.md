@@ -20,7 +20,7 @@ Synthetic monitoring can be an important component of regression testing and pro
 
 ## Real User Monitoring
 
-**Real User Monitoring** or RUM measures the performance of a page from real users' machines. Generally, a third party script injects a script on each page to measure and report back on page load data for every request made. This technique monitors an application’s actual user interactions. In real user monitoring, the browsers of real users report back performance metrics experienced. RUM helps identify how an application is being used, including the geographic distribution of  users and the impact of that distribution on the end user experience.
+**Real User Monitoring** or RUM measures the performance of a page from real users' machines. Generally, a third party script injects a script on each page to measure and report back on page load data for every request made. This technique monitors an application's actual user interactions. In real user monitoring, the browsers of real users report back performance metrics experienced. RUM helps identify how an application is being used, including the geographic distribution of  users and the impact of that distribution on the end user experience.
 
 Unlike Synthetic monitoring, RUM captures the performance of actual users regardless of device, browser, network or geographic location. As users interact with an application, all performance timings are captured, regardless of what actions are taken or pages viewed. RUM monitors actual use cases, not the synthetic, assumed use cases predefined by an engineer, PM, or marketing team. This is particularly important for large sites or complex apps, where the functionality or content is constantly changing, and where the population accessing the application may differ greatly in life experiences from those creating it.
 
@@ -28,9 +28,9 @@ By leveraging RUM, a business can better understand its users and identify the a
 
 ## RUM v Synthetic
 
-Synthetic is well suited for catching regressions during development life cycles, especially with {{glossary('network throttling')}}. It is fairly easy, inexpensive, and great for spot-checking performance during development as an effective way to measure the effect of code changes, but it doesn’t reflect what real users are experiencing and provides only a narrow view of performance.
+Synthetic is well suited for catching regressions during development life cycles, especially with {{glossary('network throttling')}}. It is fairly easy, inexpensive, and great for spot-checking performance during development as an effective way to measure the effect of code changes, but it doesn't reflect what real users are experiencing and provides only a narrow view of performance.
 
-RUM, on the other hand, provides real metrics from real users using the site or application.  While this is more expensive and likely less convenient, it provides vital user experience data.
+RUM, on the other hand, provides real metrics from real users using the site or application.  While this is more expensive and likely less convenient, it provides vital user experience data.
 
 ## Performance APIs
 

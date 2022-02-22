@@ -44,21 +44,21 @@ A Boolean value which is `true` if the WebGL rendering layer's frame buffer
 is configured to support antialiasing. Otherwise, this property is `false`.
 
 When the [WebXR
-compositor](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#The_WebXR_compositor) is enabled, this value corresponds to the value of the
-`antialias` property on the object returned by the WebGL context's
+compositor](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#The_WebXR_compositor) is enabled, this value corresponds to the value of the
+`antialias` property on the object returned by the WebGL context's
 {{domxref("WebGLRenderingContext.getContextAttributes", "getContentAttributes()")}}
 method.
 
 ## Usage notes
 
 Since this is a read-only property, you can set the antialiasing mode only when
-initially creating the `XRWebGLLayer`, by specifying the `antialias`
+initially creating the `XRWebGLLayer`, by specifying the `antialias`
 property in the {{domxref("XRWebGLLayer.XRWebGLLayer", "XRWebGLLayer()")}}
-constructor's `layerInit` configuration object.
+constructor's `layerInit` configuration object.
 
 ## Examples
 
-This snippet checks the value of `antialias` to see if it should perform
+This snippet checks the value of `antialias` to see if it should perform
 additional work to attempt to compensate for the lack of antialiasing on the WebGL
 layer.
 
@@ -69,7 +69,7 @@ gl.bindFrameBuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
 /* .. */
 
 if (!glLayer.antialias) {
-  /* compensate for lack of antialiasing */
+  /* compensate for lack of antialiasing */
 }
 ```
 

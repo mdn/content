@@ -32,11 +32,11 @@ A {{domxref("Permissions")}} object.
 
 ```js
 navigator.permissions.query({name:'notifications'}).then(function(result) {
-  if (result.state === 'granted') {
-    showNotification();
-  } else if (result.state === 'prompt') {
-    requestNotificationPermission()
-  }
+  if (result.state === 'granted') {
+    showNotification();
+  } else if (result.state === 'prompt') {
+    requestNotificationPermission()
+  }
 });
 ```
 

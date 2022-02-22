@@ -17,8 +17,8 @@ browser-compat: api.BluetoothRemoteGATTDescriptor.readValue
 
 The
 **`BluetoothRemoteGATTDescriptor.readValue()`**
-method returns a {{jsxref("Promise")}} that resolves to
-an {{jsxref("ArrayBuffer")}} holding a duplicate  of the `value` property if
+method returns a {{jsxref("Promise")}} that resolves to
+an {{jsxref("ArrayBuffer")}} holding a duplicate  of the `value` property if
 it is available and supported. Otherwise it throws an error.
 
 ## Syntax
@@ -29,7 +29,7 @@ BluetoothRemoteGATTDescriptor.readValue().then(function(value[]) { /* ... */ })
 
 ### Returns
 
-A {{jsxref("Promise")}} that resolves to an {{jsxref("ArrayBuffer")}}.
+A {{jsxref("Promise")}} that resolves to an {{jsxref("ArrayBuffer")}}.
 
 ## Specifications
 

@@ -139,8 +139,8 @@ The simplest use of `<input type="datetime-local">` involves a basic `<input>` a
 
 ```html
 <form>
-    <label for="party">Enter a date and time for your party booking:</label>
-    <input id="party" type="datetime-local" name="partydate">
+    <label for="party">Enter a date and time for your party booking:</label>
+    <input id="party" type="datetime-local" name="partydate">
 </form>
 ```
 
@@ -151,10 +151,10 @@ The simplest use of `<input type="datetime-local">` involves a basic `<input>` a
 You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to restrict the dates/times that can be chosen by the user. In the following example we are setting a minimum datetime of `2017-06-01T08:30` and a maximum datetime of `2017-06-30T16:30`:
 
 ```html
-  <form>
-    <label for="party">Enter a date and time for your party booking:</label>
-    <input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30">
-  </form>
+  <form>
+    <label for="party">Enter a date and time for your party booking:</label>
+    <input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30">
+  </form>
 ```
 
 {{ EmbedLiveSample('Setting_maximum_and_minimum_dates_and_times', 600, 40) }}
@@ -204,14 +204,14 @@ Let's look at an example; here we've set minimum and maximum date/time values, a
 
 ```html
 <form>
-    <div>
-        <label for="party">Choose your preferred party date and time (required, June 1st 8.30am to June 30th 4.30pm):</label>
-        <input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30" required>
-        <span class="validity"></span>
-    </div>
-    <div>
-        <input type="submit" value="Book party!">
-    </div>
+    <div>
+        <label for="party">Choose your preferred party date and time (required, June 1st 8.30am to June 30th 4.30pm):</label>
+        <input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30" required>
+        <span class="validity"></span>
+    </div>
+    <div>
+        <input type="submit" value="Book party!">
+    </div>
 </form>
 ```
 
@@ -244,7 +244,7 @@ input:valid+span:after {
 }
 ```
 
-> **Warning:** HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).
+> **Warning:** HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).
 
 ## Handling browser support
 
@@ -265,17 +265,17 @@ One way around this is to put a {{htmlattrxref("pattern", "input")}} attribute o
 
 ```html
 <form>
-  <div>
-    <label for="party">Choose your preferred party date and time (required, June 1st 8.30am to June 30th 4.30pm):</label>
-    <input id="party" type="datetime-local" name="partydate"
-           min="2017-06-01T08:30" max="2017-06-30T16:30"
-           pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}" required>
-    <span class="validity"></span>
-  </div>
-  <div>
-    <input type="submit" value="Book party!">
-  </div>
-  <input type="hidden" id="timezone" name="timezone" value="-08:00">
+  <div>
+    <label for="party">Choose your preferred party date and time (required, June 1st 8.30am to June 30th 4.30pm):</label>
+    <input id="party" type="datetime-local" name="partydate"
+           min="2017-06-01T08:30" max="2017-06-30T16:30"
+           pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}" required>
+    <span class="validity"></span>
+  </div>
+  <div>
+    <input type="submit" value="Book party!">
+  </div>
+  <input type="hidden" id="timezone" name="timezone" value="-08:00">
 </form>
 ```
 
@@ -337,7 +337,7 @@ It's that simple. Just prepare your code for any number of digits. Do not only p
 ```js
 function setValue(element, date) {
     var isoString = date.toISOString()
-    element.value = isoString.substring(0, (isoString.indexOf("T")|0) + 6|0);
+    element.value = isoString.substring(0, (isoString.indexOf("T")|0) + 6|0);
 }
 ```
 
@@ -353,55 +353,55 @@ The HTML looks like so:
 
 ```html
 <form>
-  <div class="nativeDateTimePicker">
-    <label for="party">Choose a date and time for your party:</label>
-    <input type="datetime-local" id="party" name="bday">
-    <span class="validity"></span>
-  </div>
-  <p class="fallbackLabel">Choose a date and time for your party:</p>
-  <div class="fallbackDateTimePicker">
-    <div>
-      <span>
-        <label for="day">Day:</label>
-        <select id="day" name="day">
-        </select>
-      </span>
-      <span>
-        <label for="month">Month:</label>
-        <select id="month" name="month">
-          <option selected>January</option>
-          <option>February</option>
-          <option>March</option>
-          <option>April</option>
-          <option>May</option>
-          <option>June</option>
-          <option>July</option>
-          <option>August</option>
-          <option>September</option>
-          <option>October</option>
-          <option>November</option>
-          <option>December</option>
-        </select>
-      </span>
-      <span>
-        <label for="year">Year:</label>
-        <select id="year" name="year">
-        </select>
-      </span>
-    </div>
-    <div>
-      <span>
-        <label for="hour">Hour:</label>
-        <select id="hour" name="hour">
-        </select>
-      </span>
-      <span>
-        <label for="minute">Minute:</label>
-        <select id="minute" name="minute">
-        </select>
-      </span>
-    </div>
-  </div>
+  <div class="nativeDateTimePicker">
+    <label for="party">Choose a date and time for your party:</label>
+    <input type="datetime-local" id="party" name="bday">
+    <span class="validity"></span>
+  </div>
+  <p class="fallbackLabel">Choose a date and time for your party:</p>
+  <div class="fallbackDateTimePicker">
+    <div>
+      <span>
+        <label for="day">Day:</label>
+        <select id="day" name="day">
+        </select>
+      </span>
+      <span>
+        <label for="month">Month:</label>
+        <select id="month" name="month">
+          <option selected>January</option>
+          <option>February</option>
+          <option>March</option>
+          <option>April</option>
+          <option>May</option>
+          <option>June</option>
+          <option>July</option>
+          <option>August</option>
+          <option>September</option>
+          <option>October</option>
+          <option>November</option>
+          <option>December</option>
+        </select>
+      </span>
+      <span>
+        <label for="year">Year:</label>
+        <select id="year" name="year">
+        </select>
+      </span>
+    </div>
+    <div>
+      <span>
+        <label for="hour">Hour:</label>
+        <select id="hour" name="hour">
+        </select>
+      </span>
+      <span>
+        <label for="minute">Minute:</label>
+        <select id="minute" name="minute">
+        </select>
+      </span>
+    </div>
+  </div>
 </form>
 ```
 
@@ -456,9 +456,9 @@ fallbackLabel.style.display = 'none';
 var test = document.createElement('input');
 
 try {
-  test.type = 'datetime-local';
+  test.type = 'datetime-local';
 } catch (e) {
-  console.log(e.description);
+  console.log(e.description);
 }
 
 // if it does, run the code inside the if() {} block

@@ -102,7 +102,7 @@ window.CSS.registerProperty({
 
 {{EmbedLiveSample("Using_registered_custom_properties", 320, 320)}}
 
-While not functionally accurate, a good way to think about the difference between the unregistered property in the above example and the registered property is the difference between a {{cssxref('custom-ident')}} and a number when trying to animate {{cssxref('height')}}. You cannot transition or animate from `auto` to a number because the browser doesn't know what the value of `auto` is until it's calculated. With an unregisterd property, the browser likewise doesn't know what the value _may be_ until it's calculated, and because of that, it can't set up a transition from one value to another. When registered, though, you've told the browser what type of value it should expect, and because it knows that, it can then set up the transitions properly.
+While not functionally accurate, a good way to think about the difference between the unregistered property in the above example and the registered property is the difference between a {{cssxref('custom-ident')}} and a number when trying to animate {{cssxref('height')}}. You cannot transition or animate from `auto` to a number because the browser doesn't know what the value of `auto` is until it's calculated. With an unregistered property, the browser likewise doesn't know what the value _may be_ until it's calculated, and because of that, it can't set up a transition from one value to another. When registered, though, you've told the browser what type of value it should expect, and because it knows that, it can then set up the transitions properly.
 
 ## Gotchas
 

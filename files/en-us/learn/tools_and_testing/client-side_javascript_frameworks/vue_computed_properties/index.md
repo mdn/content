@@ -48,7 +48,7 @@ In this article we'll add a counter that displays the number of completed todo i
 
 ## Using computed properties
 
-The aim here is to add a summary count of our to-do list. This can be useful for users, while also serving to label the list for assistive technology. If we have 2 of 5 items completed in our to-do list, our summary could read "2 items completed out of 5".  While it might be tempting to do something like this:
+The aim here is to add a summary count of our to-do list. This can be useful for users, while also serving to label the list for assistive technology. If we have 2 of 5 items completed in our to-do list, our summary could read "2 items completed out of 5".  While it might be tempting to do something like this:
 
 ```js
 <h2>\{{ToDoItems.filter(item =&gt; item.done).length}} out of \{{ToDoItems.length}} items completed</h2>
@@ -56,7 +56,7 @@ The aim here is to add a summary count of our to-do list. This can be useful for
 
 It would be recalculated on every render. For a small app like this, that probably doesn't matter too much. For bigger apps, or when the expression is more complicated, that could cause a serious performance problem.
 
-A better solution is to use Vue’s **[computed properties](https://vuejs.org/v2/guide/computed.html)**. Computed Properties work similarly to methods, but only re-run when one of their dependencies changes. In our case, this would only re-run when the `ToDoItems` array changes.
+A better solution is to use Vue's **[computed properties](https://vuejs.org/v2/guide/computed.html)**. Computed Properties work similarly to methods, but only re-run when one of their dependencies changes. In our case, this would only re-run when the `ToDoItems` array changes.
 
 To create a computed property, we need to add a `computed` property to our component object, much like the `methods` property we've used previously.
 

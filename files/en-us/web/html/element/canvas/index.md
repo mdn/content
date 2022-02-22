@@ -131,7 +131,7 @@ This code snippet adds a canvas element to your HTML document. A fallback text i
 
 ```html
 <canvas width="300" height="300">
-  An alternative text describing what your canvas displays.
+  An alternative text describing what your canvas displays.
 </canvas>
 ```
 

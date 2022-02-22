@@ -5,22 +5,58 @@ tags:
   - API
   - HTML DOM
   - HTMLElement
-  - Non-standard
   - Property
   - Reference
 browser-compat: api.HTMLElement.outerText
 ---
-{{APIRef("DOM")}} {{ Non-standard_header() }}
+{{APIRef("DOM")}}
 
-**`HTMLElement.outerText`** is a non-standard property. As a getter, it returns the same value as {{domxref("HTMLElement.innerText")}}. As a setter, it removes the current node and replaces it with the given text.
+The **`outerText`** property of the {{domxref("HTMLElement")}} interface returns the same value as {{domxref("HTMLElement.innerText")}}.
+When used as a setter it replaces the whole current node with the given text (this differs from `innerText`, which replaces the content _inside_ the current node).
+
+See {{domxref("HTMLElement.innerText")}} for more information and examples showing how both properties are used as getters.
+
+## Value
+
+A {{domxref("DOMString")}} representing the rendered text content of an element and its descendants.
+
+If the element itself is not [being rendered](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered) (for example, is detached from the document or is hidden from view), the returned value is the same as the {{domxref("Node.textContent")}} property.
+
+When used as a setter it replaces the current node with the given text, converting any line breaks into {{HTMLElement("br")}} elements.
 
 ## Example
 
-[See this StackOverflow answer.](http://stackoverflow.com/a/18481435)
+This example highlights the fundamental difference between `outerText` and `innerText` when used as setters (they are the same when used by getters).
+
+> **Note:** The example is a modified version of [What is the difference between innerText and outerText?](https://stackoverflow.com/questions/18481382/what-is-the-difference-between-innertext-and-outertext/18481435#18481435) (Stack overflow) by [codingintrigue](https://stackoverflow.com/users/571194/codingintrigue), is licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+
+Consider a page that contains the following HTML:
+
+```html
+<div>
+  <p>Original content</p>
+</div>
+```
+
+`outerText` replaces the whole selected element, so the JavaScript `p.outerText = "Whole element replaced"` replaces the whole selected `p` element:
+
+```html
+<div>
+   Whole element replaced
+</div>
+```
+
+By contrast, `p.innerText = "Content inside element replaced"` replaces the content _inside_ the selected `p` element:
+
+```html
+<div>
+  <p>Content inside element replaced</p>
+</div>
+```
 
 ## Specifications
 
-Not part of any specification. Standards discussion: [whatwg/html#668](https://github.com/whatwg/html/issues/668).
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -45,8 +45,8 @@ Whenever a new value is assigned to the location object, a document will be load
 using the URL as if `location.assign()` had been called with the modified
 URL.
 
-Note that [navigation-related
-sandbox flags](https://html.spec.whatwg.org/multipage/browsers.html#allowed-to-navigate) may result in an exception being thrown and the navigation failing.
+Note that [navigation-related
+sandbox flags](https://html.spec.whatwg.org/multipage/browsers.html#allowed-to-navigate) may result in an exception being thrown and the navigation failing.
 
 ```js
 location.assign("http://www.mozilla.org"); // or

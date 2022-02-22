@@ -86,7 +86,7 @@ None.
 - A `gl.INVALID_VALUE` error is thrown if
 
   - `level` is not 0.
-  - if `numViews` is less than one or  more than
+  - if `numViews` is less than one or  more than
     `MAX_VIEWS_OVR`.
 
 - A `gl.INVALID_OPERATION` error is thrown if `texture` isn't 0

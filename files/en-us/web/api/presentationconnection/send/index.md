@@ -15,7 +15,7 @@ browser-compat: api.PresentationConnection.send
 ---
 {{APIRef("Presentation")}}
 
-The **`send()`** method of the
+The **`send()`** method of the
 {{domxref("PresentationConnection")}} interface tells a controlling browsing context to
 send binary or text data to a presenting browsing context.
 

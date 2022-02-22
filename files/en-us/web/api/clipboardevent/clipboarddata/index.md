@@ -25,7 +25,7 @@ The **`ClipboardEvent.clipboardData`** property holds a
 - to obtain the data to be pasted from the {{event("paste")}} event handler, typically
   with a {{domxref("DataTransfer.getData", "getData(format)")}} call.
 
-See the {{event("cut")}}, {{event("copy")}}, and {{event("paste")}} events
+See the {{event("cut")}}, {{event("copy")}}, and {{event("paste")}} events
 documentation for more information.
 
 ## Syntax
@@ -44,6 +44,6 @@ data = ClipboardEvent.clipboardData
 
 ## See also
 
-- Copy-related events: {{event("copy")}}, {{event("cut")}}, {{event("paste")}}
+- Copy-related events: {{event("copy")}}, {{event("cut")}}, {{event("paste")}}
 - The {{domxref("ClipboardEvent")}} interface it belongs to.
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)

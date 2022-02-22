@@ -12,7 +12,7 @@ tags:
 ---
 {{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
 
-In the last article, we read about how the example application, [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/), works offline thanks to its [service worker](/en-US/docs/Web/API/Service_Worker_API), but we can go even further and allow users to install the web app on mobile and desktop browsers that support doing so. The installed web app can then be launched by users just as if it were any native app. This article explains how to achieve this using the web app's manifest.
+In the last article, we read about how the example application, [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/), works offline thanks to its [service worker](/en-US/docs/Web/API/Service_Worker_API), but we can go even further and allow users to install the web app on mobile and desktop browsers that support doing so. The installed web app can then be launched by users just as if it were any native app. This article explains how to achieve this using the web app's manifest.
 
 These technologies allow the app to be launched directly from the device's home screen, rather than the user having to open the browser and then navigate to the site by using a bookmark or typing the URL. Your web app can sit next to native applications as first class citizens. This makes the web app easier to access; additionally, you can specify that the app be launched in fullscreen or standalone mode, thus removing the default browser user interface that would otherwise be present, creating an even more seamless and native-like feel.
 
@@ -23,15 +23,15 @@ To make the web site installable, it needs the following things in place:
 - A web manifest, with the [correct fields filled in](/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen#manifest)
 - The web site to be served from a secure (HTTPS) domain
 - An icon to represent the app on the device
-- A [service worker](/en-US/docs/Web/API/Service_Worker_API) registered, to allow the app to work offline (this is required only by Chrome for Android currently)
+- A [service worker](/en-US/docs/Web/API/Service_Worker_API) registered, to allow the app to work offline (this is required only by Chrome for Android currently)
 
-> **Note:** Currently, only the Chromium-based browsers such as Chrome, Edge, and Samsung Internet require the service worker. If developing your app using Firefox, be aware that you will need a service worker to be compatible with Chromium-based browsers.
+> **Note:** Currently, only the Chromium-based browsers such as Chrome, Edge, and Samsung Internet require the service worker. If developing your app using Firefox, be aware that you will need a service worker to be compatible with Chromium-based browsers.
 
 ### The manifest file
 
 The key element is a web manifest file, which lists all the information about the website in a JSON format.
 
-It usually resides in the root folder of a web app. It contains useful information, such as the app’s title, paths to different-sized icons that can be used to represent the app on an OS (such as an icon on the home screen, an entry in the Start menu, or an icon on the desktop), and a background color to use in loading or splash screens. This information is needed for the browser to present the web app properly during the installation process, as well as within the device's app-launching interface, such as the home screen of a mobile device.
+It usually resides in the root folder of a web app. It contains useful information, such as the app's title, paths to different-sized icons that can be used to represent the app on an OS (such as an icon on the home screen, an entry in the Start menu, or an icon on the desktop), and a background color to use in loading or splash screens. This information is needed for the browser to present the web app properly during the installation process, as well as within the device's app-launching interface, such as the home screen of a mobile device.
 
 The `js13kpwa.webmanifest` file of the [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) web app is included in the {{HTMLElement("head")}} block of the `index.html` file using the following line of code:
 
@@ -45,26 +45,26 @@ The content of the file looks like this:
 
 ```json
 {
-  "name": "js13kGames Progressive Web App",
-  "short_name": "js13kPWA",
-  "description": "Progressive Web App that lists games submitted to the A-Frame category in the js13kGames 2017 competition.",
-  "icons": [
-    {
-      "src": "icons/icon-32.png",
-      "sizes": "32x32",
-      "type": "image/png"
-    },
-    // ...
-    {
-      "src": "icons/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ],
-  "start_url": "/pwa-examples/js13kpwa/index.html",
-  "display": "fullscreen",
-  "theme_color": "#B12A34",
-  "background_color": "#B12A34"
+  "name": "js13kGames Progressive Web App",
+  "short_name": "js13kPWA",
+  "description": "Progressive Web App that lists games submitted to the A-Frame category in the js13kGames 2017 competition.",
+  "icons": [
+    {
+      "src": "icons/icon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    // ...
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/pwa-examples/js13kpwa/index.html",
+  "display": "fullscreen",
+  "theme_color": "#B12A34",
+  "background_color": "#B12A34"
 }
 ```
 
@@ -77,15 +77,15 @@ Most of the fields are self-explanatory, but to be certain we're on the same pag
 - `start_url`: The index document to launch when starting the app.
 - `display`: How the app is displayed; can be `fullscreen`, `standalone`, `minimal-ui`, or `browser`.
 - `theme_color`: A primary color for the UI, used by operating system.
-- `background_color`: A color used as the app's default background, used during install and on the splash screen.
+- `background_color`: A color used as the app's default background, used during install and on the splash screen.
 
-A minimal web manifest must have at least a `name` and an `icons` field with at least one icon defined; that icon must have at least the `src`, `sizes`, and `type` sub-fields as well. Beyond that, everything is optional, though the `description`, `short_name`, and `start_url` fields are recommended. There are even more fields you can use than listed above — be sure to check the [Web App Manifest reference](/en-US/docs/Web/Manifest) for details.
+A minimal web manifest must have at least a `name` and an `icons` field with at least one icon defined; that icon must have at least the `src`, `sizes`, and `type` sub-fields as well. Beyond that, everything is optional, though the `description`, `short_name`, and `start_url` fields are recommended. There are even more fields you can use than listed above — be sure to check the [Web App Manifest reference](/en-US/docs/Web/Manifest) for details.
 
 ## Add to home screen
 
 "Add to home screen" (or a2hs for short) is a feature implemented by mobile browsers that takes the information found in an app's web manifest and uses them to represent the app on the device's home screen with an icon and name. This only works if the app meets all the necessary requirements, as described above.
 
-When the user visits the PWA with a supporting mobile browser, it should display a notification (such as a banner or dialog box) indicating that it's possible to install the app as a PWA.
+When the user visits the PWA with a supporting mobile browser, it should display a notification (such as a banner or dialog box) indicating that it's possible to install the app as a PWA.
 
 ![Add to Home screen popup of js13kPWA.](js13kpwa-icon.png)
 
@@ -115,7 +115,7 @@ The icon and the theme and background colors are used to create this screen.
 
 In this article, we learned about how we can make PWAs installable with a properly-configured web manifest, and how the user can then install the PWA with the "add to home screen" feature of their browser.
 
-For more information on a2hs, be sure to read our [Add to Home screen guide](/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen). Browser support is currently limited to Firefox for Android 58+, Mobile Chrome and Android Webview 31+, and Opera for Android 32+, but this should improve in the near future.
+For more information on a2hs, be sure to read our [Add to Home screen guide](/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen). Browser support is currently limited to Firefox for Android 58+, Mobile Chrome and Android Webview 31+, and Opera for Android 32+, but this should improve in the near future.
 
 Now let's move to the last piece of the PWA puzzle: using push notifications to share announcements with the user, and to help the user re-engage with your app.
 

@@ -29,8 +29,8 @@ Only certain CSS properties can be used in a rule with `::marker` as a selector:
 - All [font properties](/en-US/docs/Web/CSS/CSS_Fonts)
 - The {{CSSxRef("white-space")}} property
 - {{CSSxRef("color")}}
-- {{CSSxRef("text-combine-upright")}}, {{CSSxRef("unicode-bidi")}} and {{CSSxRef("direction")}} properties
-- The {{CSSxRef("content")}} property
+- {{CSSxRef("text-combine-upright")}}, {{CSSxRef("unicode-bidi")}} and {{CSSxRef("direction")}} properties
+- The {{CSSxRef("content")}} property
 - All [animation](/en-US/docs/Web/CSS/CSS_Animations#css_properties) and [transition](/en-US/docs/Web/CSS/CSS_Transitions#properties) properties
 
 > **Note:** The specification states that additional CSS properties may be supported in future.

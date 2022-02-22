@@ -231,7 +231,7 @@ console.log(sortArguments(5, 3, 7, 1))  // 1, 3, 5, 7
 
 ## See also
 
-- [Spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) (also ‘`...`’)
+- [Spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) (also '`...`')
 - [Destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 - [`arguments` object](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
 - {{jsxref("Array")}}

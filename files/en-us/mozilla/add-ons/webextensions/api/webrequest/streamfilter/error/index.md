@@ -21,7 +21,7 @@ A string that will contain an error message after the {{WebExtAPIRef("webRequest
 
 ## Examples
 
-This example adds an {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} listener which logs the value of `error`.
+This example adds an {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} listener which logs the value of `error`.
 
 ```js
 function listener(details) {

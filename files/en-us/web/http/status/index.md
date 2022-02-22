@@ -42,7 +42,7 @@ The below status codes are defined by [section 10 of RFC 2616](https://datatrack
   - : The request succeeded. The result meaning of "success" depends on the HTTP method:
 
     - `GET`: The resource has been fetched and transmitted in the message body.
-    - `HEAD`: The representation headers are included in the response without any message body.
+    - `HEAD`: The representation headers are included in the response without any message body.
     - `PUT` or `POST`: The resource describing the result of the action is transmitted in the message body.
     - `TRACE`: The message body contains the request message as received by the server.
 
@@ -99,7 +99,7 @@ The below status codes are defined by [section 10 of RFC 2616](https://datatrack
 ## Client error responses
 
 - {{HTTPStatus(400, "400 Bad Request")}}
-  - : The server could not understand the request due to invalid syntax.
+  - : The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing).
 - {{HTTPStatus(401, "401 Unauthorized")}}
   - : Although the HTTP standard specifies "unauthorized", semantically this response means "unauthenticated".
     That is, the client must authenticate itself to get the requested response.

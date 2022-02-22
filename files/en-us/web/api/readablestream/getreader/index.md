@@ -13,8 +13,8 @@ browser-compat: api.ReadableStream.getReader
 {{APIRef("Streams")}}
 
 The **`getReader()`** method of the
-{{domxref("ReadableStream")}} interface creates a reader and locks the stream to it.
-While the stream is locked, no other reader can be acquired until this one is released.
+{{domxref("ReadableStream")}} interface creates a reader and locks the stream to it.
+While the stream is locked, no other reader can be acquired until this one is released.
 
 ## Syntax
 
@@ -27,7 +27,7 @@ var reader = readableStream.getReader({mode});
 - {mode} {{optional_inline}}
 
   - : An object containing a property `mode`, specifying the type of reader to
-    create.  Values can be:
+    create.  Values can be:
 
     - `"byob"`, which results in a {{domxref("ReadableStreamBYOBReader")}}
       being created that can read readable byte streams (i.e. can handle "bring your own

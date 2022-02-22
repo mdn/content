@@ -42,7 +42,7 @@ inherited through the prototype chain. If the object does not have the specified
 property, this method returns `false`.
 
 > **Note:** Bear in mind that enumerable properties are looped over by
-> {{jsxref("Statements/for...in", "for...in")}} loops, with the exception of
+> {{jsxref("Statements/for...in", "for...in")}} loops, with the exception of
 > {{jsxref("Global_Objects/Symbol", "Symbol")}}s.
 
 ## Examples

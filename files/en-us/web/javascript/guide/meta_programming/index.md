@@ -136,23 +136,23 @@ The following table summarizes the available traps available to `Proxy` objects.
             <code>undefined</code>.
           </li>
           <li>
-            A property cannot be reported as non-existent if it exists as a
+            A property cannot be reported as non-existent if it exists as a
             non-configurable own property of <code><var>target</var></code
             >.
           </li>
           <li>
-            A property cannot be reported as non-existent if it exists as an own
+            A property cannot be reported as non-existent if it exists as an own
             property of <code><var>target</var></code> and
             <code><var>target</var></code> is not extensible.
           </li>
           <li>
-            A property cannot be reported as existent if it does not exists as
+            A property cannot be reported as existent if it does not exists as
             an own property of <code><var>target</var></code> and
             <code><var>target</var></code> is not extensible.
           </li>
           <li>
-            A property cannot be reported as non-configurable if it does not
-            exist as an own property of <code><var>target</var></code> or if it
+            A property cannot be reported as non-configurable if it does not
+            exist as an own property of <code><var>target</var></code> or if it
             exists as a configurable own property of
             <code><var>target</var></code
             >.
@@ -176,17 +176,17 @@ The following table summarizes the available traps available to `Proxy` objects.
       <td>
         <ul>
           <li>
-            A property cannot be added if <code><var>target</var></code
-            > is not extensible.
+            A property cannot be added if <code><var>target</var></code
+            > is not extensible.
           </li>
           <li>
             A property cannot be added as (or modified to be)
-            non-configurable if it does not exist as a non-configurable own
+            non-configurable if it does not exist as a non-configurable own
             property of <code><var>target</var></code
             >.
           </li>
           <li>
-            A property may not be non-configurable if a corresponding
+            A property may not be non-configurable if a corresponding
             configurable property of <code><var>target</var></code> exists.
           </li>
           <li>
@@ -198,7 +198,7 @@ The following table summarizes the available traps available to `Proxy` objects.
             will not throw an exception.
           </li>
           <li>
-            In strict mode, a <code>false</code> value returned from the
+            In strict mode, a <code>false</code> value returned from the
             <code>defineProperty</code> handler will throw a
             {{jsxref("TypeError")}} exception.
           </li>
@@ -228,7 +228,7 @@ The following table summarizes the available traps available to `Proxy` objects.
             >.
           </li>
           <li>
-            A property cannot be reported as non-existent if it exists as an own
+            A property cannot be reported as non-existent if it exists as an own
             property of <code><var>target</var></code> and
             <code><var>target</var></code> is not extensible.
           </li>
@@ -365,14 +365,14 @@ The following table summarizes the available traps available to `Proxy` objects.
           </li>
           <li>
             The result List must contain the keys of all non-configurable own
-            properties of <code><var>target</var></code
+            properties of <code><var>target</var></code
             >.
           </li>
           <li>
             If the <code><var>target</var></code> object is not extensible, then
             the result List must contain all the keys of the own properties of
             <code><var>target</var></code
-            > and no other values.
+            > and no other values.
           </li>
         </ul>
       </td>
@@ -408,7 +408,7 @@ The following table summarizes the available traps available to `Proxy` objects.
 
 The {{jsxref("Proxy.revocable()")}} method is used to create a revocable `Proxy` object. This means that the proxy can be revoked via the function `revoke` and switches the proxy off.
 
-Afterwards, any operation on the proxy leads to a {{jsxref("TypeError")}}.
+Afterwards, any operation on the proxy leads to a {{jsxref("TypeError")}}.
 
 ```js
 let revocable = Proxy.revocable({}, {
@@ -431,7 +431,7 @@ typeof proxy            // "object", typeof doesn't trigger any trap
 
 {{jsxref("Reflect")}} is a built-in object that provides methods for interceptable JavaScript operations. The methods are the same as those of the {{jsxref("Global_Objects/Proxy/Proxy","proxy handlers","","true")}}.
 
-`Reflect` is not a function object.
+`Reflect` is not a function object.
 
 `Reflect` helps with forwarding default operations from the handler to the `target`.
 

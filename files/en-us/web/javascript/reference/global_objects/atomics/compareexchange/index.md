@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Atomics.compareExchange
 The static
 **`Atomics.compareExchange()`**
 method exchanges a given replacement value at a given position in the array, if a given
-expected value equals the old value.  It returns the old value at that position whether
+expected value equals the old value.  It returns the old value at that position whether
 it was equal to the expected value or not. This atomic operation guarantees that no
 other write happens until the modified value is written back.
 

@@ -23,7 +23,7 @@ The `article` role indicates a section of a page that could easily stand on its 
 <div role="article"> ... </div>
 ```
 
-This example shows two articles side by side on one page that could be structured similarly and are related.
+This example shows two articles side by side on one page that could be structured similarly and are related.
 
 > **Note:** Instead of a `<div>` with an `article` role, use the {{HTMLElement('article')}} element. **Always use native element if available**
 
@@ -41,7 +41,7 @@ Don't use `role="article"`. Instead use the `<article>` element.
 
 ## Description
 
-The `article` [document structure role](/en-US/docs/Web/Accessibility/ARIA/Roles#Document_structure_roles) denotes a section of a document, page, or site that, if it were standing on its own, could be viewed as a complete document, page or site. The aim of a set of article sections is to indicate their relationship to one another.
+The `article` [document structure role](/en-US/docs/Web/Accessibility/ARIA/Roles#Document_structure_roles) denotes a section of a document, page, or site that, if it were standing on its own, could be viewed as a complete document, page or site. The aim of a set of article sections is to indicate their relationship to one another.
 
 Articles are not considered a navigational landmark, but many assistive technologies that support landmarks also support a means to navigate among articles. They may also support indication of nesting relationships within articles.
 

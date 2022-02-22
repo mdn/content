@@ -18,12 +18,12 @@ browser-compat: api.XRFrame.session
 ---
 {{APIRef("WebXR Device API")}}
 
-An `XRFrame` object's *read-only* **`session`** property returns the {{domxref("XRSession")}} object that generated the frame.
+An `XRFrame` object's *read-only* **`session`** property returns the {{domxref("XRSession")}} object that generated the frame.
 
 ## Value
 
 A {{domxref("XRSession")}} object representing the WebXR session for which
-this `XRFrame` describes the object positions and orientations.
+this `XRFrame` describes the object positions and orientations.
 
 ## Specifications
 

@@ -13,7 +13,7 @@ tags:
 browser-compat: api.Document.forms
 ---
 The **`forms`** read-only property of
-the {{domxref("Document")}} interface returns an {{domxref("HTMLCollection")}} listing
+the {{domxref("Document")}} interface returns an {{domxref("HTMLCollection")}} listing
 all the {{HTMLElement("form")}} elements contained in the document.
 
 > **Note:** Similarly, you can access a list of a form's component user
@@ -83,14 +83,14 @@ var selectFormElement = document.forms[index].elements[index];
 
 <form name="login">
   <input name="email" type="email">
-  <input name="password" type="password">
-  <button type="submit">Log in</button>
+  <input name="password" type="password">
+  <button type="submit">Log in</button>
 </form>
 
 <script>
   var loginForm = document.forms.login; // Or document.forms['login']
-  loginForm.elements.email.placeholder = 'test@example.com';
-  loginForm.elements.password.placeholder = 'password';
+  loginForm.elements.email.placeholder = 'test@example.com';
+  loginForm.elements.password.placeholder = 'password';
 </script>
 </body>
 </html>

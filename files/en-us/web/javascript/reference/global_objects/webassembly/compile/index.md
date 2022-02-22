@@ -53,11 +53,11 @@ The following example compiles the loaded simple.wasm byte code using the
 var worker = new Worker("wasm_worker.js");
 
 fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
+  response.arrayBuffer()
 ).then(bytes =>
-  WebAssembly.compile(bytes)
+  WebAssembly.compile(bytes)
 ).then(mod =>
-  worker.postMessage(mod)
+  worker.postMessage(mod)
 );
 ```
 

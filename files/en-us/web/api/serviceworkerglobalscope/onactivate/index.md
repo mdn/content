@@ -14,7 +14,7 @@ browser-compat: api.ServiceWorkerGlobalScope.onactivate
 ---
 {{APIRef("Service Workers API")}}
 
-The **onactivate** property of the {{domxref("ServiceWorkerGlobalScope")}} interface is an event handler fired whenever an `activate` event occurs (when the service worker activates). This happens after installation, when the page to be controlled by the service worker refreshes.
+The **onactivate** property of the {{domxref("ServiceWorkerGlobalScope")}} interface is an event handler fired whenever an `activate` event occurs (when the service worker activates). This happens after installation, when the page to be controlled by the service worker refreshes.
 
 ## Syntax
 

@@ -10,7 +10,7 @@ tags:
 ---
 {{CSSRef}} {{deprecated_header}}
 
-**CSS Scroll Snap Points** is a module of CSS that introduces scroll snap positions. These determine the specific positions that a container’s scrollport may end at after a scrolling operation has completed.
+**CSS Scroll Snap Points** is a module of CSS that introduces scroll snap positions. These determine the specific positions that a container's scrollport may end at after a scrolling operation has completed.
 
 > **Note:** [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap) is the modern specification that defines this functionality.
 

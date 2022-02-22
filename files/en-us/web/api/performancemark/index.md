@@ -11,7 +11,7 @@ browser-compat: api.PerformanceMark
 ---
 {{APIRef("User Timing API")}}
 
-**`PerformanceMark`** is an _abstract_ interface for {{domxref("PerformanceEntry")}} objects with an {{domxref("PerformanceEntry.entryType","entryType")}} of "`mark`". Entries of this type are created by calling {{domxref("Performance.mark","performance.mark()")}} to add a _named_ {{domxref("DOMHighResTimeStamp")}} (the _mark_) to the browser's _performance timeline_.
+**`PerformanceMark`** is an _abstract_ interface for {{domxref("PerformanceEntry")}} objects with an {{domxref("PerformanceEntry.entryType","entryType")}} of "`mark`". Entries of this type are created by calling {{domxref("Performance.mark","performance.mark()")}} to add a _named_ {{domxref("DOMHighResTimeStamp")}} (the _mark_) to the browser's _performance timeline_.
 
 {{InheritanceDiagram}}
 
@@ -28,7 +28,7 @@ This interface has no properties but it extends the following {{domxref("Perform
 - {{domxref("PerformanceEntry.startTime")}}
   - : Returns the {{domxref("DOMHighResTimeStamp")}} when {{domxref("Performance.mark()","performance.mark()")}} was called.
 - {{domxref("PerformanceEntry.duration")}}
-  - : Returns "`0`". (A mark has no _duration_.)
+  - : Returns "`0`". (A mark has no _duration_.)
 
 ## Methods
 

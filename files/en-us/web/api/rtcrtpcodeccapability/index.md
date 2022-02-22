@@ -23,7 +23,7 @@ The [WebRTC API's](/en-US/docs/Web/API/WebRTC_API) **`RTCRtpCodecCapability`** d
 ## Properties
 
 - {{domxref("RTCRtpCodecCapability.channels", "channels")}} {{optional_inline}}
-  - : An unsigned integer value indicating the maximum number of channels supported by the codec; for example, a codec that supports only mono sound would have a value of 1; stereo codecs would have a 2, etc.
+  - : An unsigned integer value indicating the maximum number of channels supported by the codec; for example, a codec that supports only mono sound would have a value of 1; stereo codecs would have a 2, etc.
 - {{domxref("RTCRtpCodecCapability.clockRate", "clockRate")}}
   - : An unsigned long integer specifying the codec's clock rate in Hertz (Hz). The IANA maintains a [list of codecs and their parameters](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1), including their clock rates.
 - {{domxref("RTCRtpCodecCapability.mimeType", "mimeType")}}

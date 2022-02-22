@@ -9,7 +9,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 66 that will affect developers. Firefox 66 was released on March 19, 2019.
+This article provides information about the changes in Firefox 66 that will affect developers. Firefox 66 was released on March 19, 2019.
 
 ## Changes for web developers
 
@@ -25,7 +25,7 @@ This article provides information about the changes in Firefox 66 that will af
 
 #### Removals
 
-- The `x-moz-errormessage` attribute has been removed from the {{HTMLElement("input")}} element ({{bug(1513890)}}). You should use  {{domxref("Constraint_validation", "Constraint validation features", "", "1")}} to implement custom validation messages instead.
+- The `x-moz-errormessage` attribute has been removed from the {{HTMLElement("input")}} element ({{bug(1513890)}}). You should use  {{domxref("Constraint_validation", "Constraint validation features", "", "1")}} to implement custom validation messages instead.
 
 ### CSS
 
@@ -36,11 +36,11 @@ This article provides information about the changes in Firefox 66 that will af
   - {{cssxref("padding-block")}} and {{cssxref("padding-inline")}} ({{bug(1519847)}}).
   - {{cssxref("margin-block")}} and {{cssxref("margin-inline")}} ({{bug(1519944)}}).
   - {{cssxref("inset")}}, {{cssxref("inset-block")}}, and {{cssxref("inset-inline")}} ({{bug(1520229)}}).
-  - {{cssxref("border-block-color")}}, {{cssxref("border-block-style")}}, {{cssxref("border-block-width")}}, {{cssxref("border-inline-color")}}, {{cssxref("border-inline-style")}}, and {{cssxref("border-inline-width")}} ({{bug(1520236)}}).
+  - {{cssxref("border-block-color")}}, {{cssxref("border-block-style")}}, {{cssxref("border-block-width")}}, {{cssxref("border-inline-color")}}, {{cssxref("border-inline-style")}}, and {{cssxref("border-inline-width")}} ({{bug(1520236)}}).
   - {{cssxref("border-block")}} and {{cssxref("border-inline")}} ({{bug(1520396)}}).
   - {{cssxref("border-start-start-radius")}}, {{cssxref("border-start-end-radius")}}, {{cssxref("border-end-start-radius")}}, and {{cssxref("border-end-end-radius")}} ({{bug(1520684)}}).
 
-- We implemented the {{cssxref("@media/overflow-inline", "overflow-inline")}} and {{cssxref("@media/overflow-block", "overflow-block")}} media queries ({{Bug(1422235)}}).
+- We implemented the {{cssxref("@media/overflow-inline", "overflow-inline")}} and {{cssxref("@media/overflow-block", "overflow-block")}} media queries ({{Bug(1422235)}}).
 - {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} are now animatable, as per the rules set out in their specs ({{bug(1348519)}}).
 - We now support {{cssxref("calc()")}} with percentages for table cells and column widths ({{bug(957915)}}).
 - The `min-content` and `max-content` keywords are now available unprefixed ({{bug(1322780)}}). These can be set on:
@@ -65,7 +65,7 @@ _No additions._
 
 #### Removals
 
-- We removed support for the [`xml:base`](/en-US/docs/Web/XML/xml:base) attribute ({{Bug(903372)}}).
+- We removed support for the [`xml:base`](/en-US/docs/Web/XML/xml:base) attribute ({{Bug(903372)}}).
 
 ### JavaScript
 

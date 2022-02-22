@@ -77,7 +77,7 @@ established by calling {{domxref("EventTarget.addEventListener", "addEventListen
 on the {{HTMLElement("button")}} element. When the user clicks the button, we'll fetch
 and display the location information.
 
-Upon receiving a {{event("click")}} event, we call
+Upon receiving a {{domxref("Element/click_event", "click")}} event, we call
 {{domxref("Geolocation.getCurrentPosition", "getCurrentPosition()")}} to request the
 device's current position. This is an asynchronous request, so we provide a callback
 which receives as in put a {{domxref("GeolocationPosition")}} object describing the

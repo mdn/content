@@ -14,8 +14,8 @@ browser-compat: api.BluetoothRemoteGATTCharacteristic.stopNotifications
 ---
 {{SeeCompatTable}}
 
-The **`BluetoothRemoteGATTCharacteristic.stopNotifications()`** method
-returns a {{jsxref("Promise")}} to the BluetoothRemoteGATTCharacteristic instance when
+The **`BluetoothRemoteGATTCharacteristic.stopNotifications()`** method
+returns a {{jsxref("Promise")}} to the BluetoothRemoteGATTCharacteristic instance when
 there is no longer an active notification on it.
 
 ## Syntax

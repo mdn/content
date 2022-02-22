@@ -102,7 +102,7 @@ This example illustrates the effect of `::first-letter` on special punctuation a
 <p>#The beginning of a special punctuation mark.</p>
 <p>「特殊的汉字标点符号开头。</p>
 <p>《特殊的汉字标点符号开头。</p>
-<p>“特殊的汉字标点符号开头。</p>
+<p>"特殊的汉字标点符号开头。</p>
 ```
 
 #### CSS

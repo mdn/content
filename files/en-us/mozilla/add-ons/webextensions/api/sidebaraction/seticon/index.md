@@ -28,9 +28,9 @@ Your extension should specify an icon for the sidebar in the [sidebar_action](/e
 
 If you don't specify an icon in the sidebar_action key, you get the browser's default icon. This is called the _"default icon"_.
 
-If you set a new icon using `setIcon()`, and include the `tabId` option, then the icon is set only for the given tab. This icon is called the _"tab-specific icon"_.
+If you set a new icon using `setIcon()`, and include the `tabId` option, then the icon is set only for the given tab. This icon is called the _"tab-specific icon"_.
 
-If you set a new icon using `setIcon()`, and include the `windowId` option, then the icon is set only for the given window. This icon is called the _"window-specific icon"_, and will appear in all tabs of that window that do not have a tab-specific icon set.
+If you set a new icon using `setIcon()`, and include the `windowId` option, then the icon is set only for the given window. This icon is called the _"window-specific icon"_, and will appear in all tabs of that window that do not have a tab-specific icon set.
 
 If you set a new icon using `setIcon()`, and omit both the `tabId` and `windowId` options, then this sets the _"global icon"_. The global icon will then appear in all tabs that do not have a tab-specific icon set and whose window does not have a window-specific icon.
 

@@ -18,7 +18,7 @@ browser-compat: api.ServiceWorkerMessageEvent.origin
 > Service worker messages will now use the {{domxref("MessageEvent")}} interface, for
 > consistency with other web messaging features.
 
-The `origin` read-only property of the
+The `origin` read-only property of the
 {{domxref("ServiceWorkerMessageEvent")}} interface returns the origin of the service
 worker's environment settings object.
 

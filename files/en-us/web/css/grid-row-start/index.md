@@ -11,7 +11,7 @@ browser-compat: css.properties.grid-row-start
 ---
 {{CSSRef}}
 
-The **`grid-row-start`** CSS property specifies a grid item’s start position within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start edge of its {{glossary("grid areas", "grid area")}}.
+The **`grid-row-start`** CSS property specifies a grid item's start position within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start edge of its {{glossary("grid areas", "grid area")}}.
 
 {{EmbedInteractiveExample("pages/css/grid-row-start.html")}}
 
@@ -46,15 +46,15 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 - or a `<custom-ident>` value
 - or an `<integer>` value
 - or both `<custom-ident>` and `<integer>`, separated by a space
-- or the keyword `span` together with either a `<custom-ident>` or an `<integer>` or both.
+- or the keyword `span` together with either a `<custom-ident>` or an `<integer>` or both.
 
 ### Values
 
 - `auto`
-  - : Is a keyword indicating that the property contributes nothing to the grid item’s placement, indicating auto-placement, an automatic span, or a default span of `1`.
+  - : Is a keyword indicating that the property contributes nothing to the grid item's placement, indicating auto-placement, an automatic span, or a default span of `1`.
 - `<custom-ident>`
 
-  - : If there is a named line with the name '\<custom-ident>-start', it contributes the first such line to the grid item’s placement.
+  - : If there is a named line with the name '\<custom-ident>-start', it contributes the first such line to the grid item's placement.
 
     > **Note:** Named grid areas automatically generate implicit named lines of this form, so specifying `grid-row-start: foo;` will choose the start edge of that named grid area (unless another line named `foo-start` was explicitly specified before it).
 
@@ -62,7 +62,7 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 
 - `<integer> && <custom-ident>?`
 
-  - : Contributes the nth grid line to the grid item’s placement. If a negative integer is given, it instead counts in reverse, starting from the end edge of the explicit grid.
+  - : Contributes the nth grid line to the grid item's placement. If a negative integer is given, it instead counts in reverse, starting from the end edge of the explicit grid.
 
     If a name is given as a \<custom-ident>, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines are assumed to have that name for the purpose of finding this position.
 
@@ -70,7 +70,7 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 
 - `span && [ <integer> || <custom-ident> ]`
 
-  - : Contributes a grid span to the grid item’s placement; such that the row start edge of the grid item’s grid area is n lines from the end edge.
+  - : Contributes a grid span to the grid item's placement; such that the row start edge of the grid item's grid area is n lines from the end edge.
 
     If a name is given as a \<custom-ident>, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines on the side of the explicit grid, corresponding to the search direction, are assumed to have that name for the purpose of counting this span.
 

@@ -35,10 +35,10 @@ A `BaseAudioContext` can be a target of events, therefore it implements the {{do
 - {{domxref("BaseAudioContext.state")}} {{readonlyInline}}
   - : Returns the current state of the `AudioContext`.
 
-### Event handlers
+### Events
 
-- {{domxref("BaseAudioContext.onstatechange")}}
-  - : An event handler that runs when an event of type {{event("statechange")}} has fired. This occurs when the `AudioContext`'s state changes, due to the calling of one of the state change methods ({{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, or {{domxref("AudioContext.close")}}).
+- {{domxref("BaseAudioContext.statechange_event", "statechange")}}
+  - : Fired when the `AudioContext`'s state changes due to the calling of one of the state change methods ({{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, or {{domxref("AudioContext.close")}}).
 
 ## Methods
 

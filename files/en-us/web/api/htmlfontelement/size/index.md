@@ -39,7 +39,7 @@ The format of the string must follow one of the following HTML microsyntaxes:
       <td>Relative size string</td>
       <td>
         <em
-          >+x or -x, where  x is the number relative to the value of the
+          >+x or -x, where  x is the number relative to the value of the
           {{htmlattrxref("size", "basefont")}} attribute of the
           {{HTMLElement("basefont")}} element</em
         ><br /><em>(the result should be in the same range of 1-7)</em>

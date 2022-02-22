@@ -12,14 +12,14 @@ browser-compat: api.MediaRecorder.stream
 ---
 {{APIRef("MediaStream Recording")}}
 
-The **`MediaRecorder.stream`** read-only property returns the
+The **`MediaRecorder.stream`** read-only property returns the
 stream that was passed into the `MediaRecorder()` constructor when the
 `MediaRecorder` was created.
 
 ## Syntax
 
 ```js
-var stream = MediaRecorder.stream
+var stream = MediaRecorder.stream
 ```
 
 ### Values

@@ -10,13 +10,13 @@ tags:
   - document structure role
 ---
 
-The `presentation` role and its synonym `none` remove an elements implicit native semantics, such as headings, lists, etc., from the accessibility tree.
+The `presentation` role and its synonym `none` remove an element's implicit ARIA semantics from being exposed to the accessibility tree.
 
-The content is still available to assistive technologies; just the semantics of the container and required associated nested descendants are no longer mapped to the accessibility API.
+The content of the element will still be available to assistive technologies; it is only the semantics of the container — and in some instance, required associated descendants — which will no longer expose their mappings to the accessibility API.
 
 ## Description
 
-While ARIA is primarily used to express semantics, there are some situations where hiding an element’s semantics from assistive technologies is helpful. This is done with the `presentation` role or its synonym role `none`, which declare that an element is being used only for presentation and therefore does not have any accessibility semantics.
+While ARIA is primarily used to express semantics, there are some situations where hiding an element's semantics from assistive technologies is helpful. This is done with the `presentation` role or its synonym role `none`, which declare that an element is being used only for presentation and therefore does not have any accessibility semantics.
 
 Writing `<h2 role="presentation">Democracy Dies in Darkness</h2>` removes the heading semantics of the {{HTMLElement('h2')}} element, making it the equivalent of `<div>Democracy Dies in Darkness</div>`. The heading role semantics are removed, but the content itself is still available.
 
@@ -51,7 +51,7 @@ None. If a global ARIA state and property is set, `presentation` or `none` will 
 ## Examples
 
 ```html
-<img src="spacer.gif" role="none" alt="">
+<hr role="none">
 ```
 
 ## Specifications

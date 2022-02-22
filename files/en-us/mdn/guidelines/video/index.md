@@ -16,16 +16,16 @@ This article discusses when including videos in MDN articles is appropriate, and
 There are several arguments against using video content for technical documentation, particularly reference material and advanced level guides:
 
 - Video is linear.
-  People don’t tend to read online documentation in a linear fashion, starting at the start and reading through to the end.
+  People don't tend to read online documentation in a linear fashion, starting at the start and reading through to the end.
   [They scan](https://www.sensible.com/chapter.html).
   Video is really hard to scan — it forces the user to consume the content start-to-finish.
 - Video is less information-dense than text.
   It takes longer to consume a video explaining something than it does to read the equivalent instructions.
 - Video is big in terms of file size, and therefore more expensive and less performant than text.
-- Video has accessibility problems: it’s more expensive to produce generally than text, but especially to localize, or make usable by screen reader users.
+- Video has accessibility problems: it's more expensive to produce generally than text, but especially to localize, or make usable by screen reader users.
 - Following on from the last point, video is much harder to edit/update/maintain than text content.
 
-> **Note:** It’s worth keeping these problems in mind, even when you are making videos, so you can try to alleviate some of them.
+> **Note:** It's worth keeping these problems in mind, even when you are making videos, so you can try to alleviate some of them.
 
 There are many popular video sites that provide a lot of video tutorials.
 MDN isn't a video-driven site, but video does have a place on MDN in certain contexts.
@@ -41,11 +41,11 @@ We most commonly use videos when explaining features of the [Firefox DevTools](/
 Videos for MDN should be:
 
 - **Short**: Try to keep videos under 30 seconds, ideally under 20 seconds.
-  This is short enough not to make big demands on peoples’ attention spans.
+  This is short enough not to make big demands on peoples' attention spans.
 - **Simple**: Try to make the workflow simple, 2-4 distinct pieces.
   This makes them easier to follow.
 - **Silent**: Audio makes videos much more engaging, but they are much more time-consuming to make.
-  Also, having to explain what you’re doing makes the videos much longer, and adds to the costs (both financial and in terms of time) of localization.
+  Also, having to explain what you're doing makes the videos much longer, and adds to the costs (both financial and in terms of time) of localization.
 
 To explain something more complex, you can use a blend of short videos and screenshots, interspersed with text.
 The text can help reinforce the points made in the video, and the user can rely on the text or the video as they choose.
@@ -121,17 +121,17 @@ Plan carefully what you are actually going to record, and practice the steps a f
   - Pause for a beat
   - Click the icon
 
-- Plan zoom levels for the parts of the UI that you’re going to show.
+- Plan zoom levels for the parts of the UI that you're going to show.
   Not everyone will be able to view your video in high definition.
-  You will be able to zoom particular parts in post-production, but it’s a good idea to zoom the app beforehand as well.
+  You will be able to zoom particular parts in post-production, but it's a good idea to zoom the app beforehand as well.
 
-> **Note:** Don’t zoom so far that the UIs you are showing start to look unfamiliar or ugly.
+> **Note:** Don't zoom so far that the UIs you are showing start to look unfamiliar or ugly.
 
 ### Recording
 
 When recording the workflow you want to show, go through the flow smoothly and steadily.
 Pause for a second or two when you are at key moments — for example, about to click on a button.
-Make sure the mouse pointer doesn’t obscure any icons or text that are important to what you are trying to demonstrate.
+Make sure the mouse pointer doesn't obscure any icons or text that are important to what you are trying to demonstrate.
 
 Remember to pause for a second or two at the end, to show the result of the flow.
 
@@ -139,17 +139,17 @@ Remember to pause for a second or two at the end, to show the result of the flow
 
 ### Post-production
 
-You’ll be able to highlight key moments in post-production.
-A highlight can consist of a couple of things, which you’ll often combine:
+You'll be able to highlight key moments in post-production.
+A highlight can consist of a couple of things, which you'll often combine:
 
 - Zoom in on parts of the screen.
 - Fade the background.
 
 Highlight key moments of the workflow, especially where the detail is hard to see: clicking on a particular icon or entering a particular URL, for example.
 Aim for the highlight to last for 1-2 seconds.
-It’s a good idea to add a short transition (200-300 milliseconds) at the starts and ends of the highlights.
+It's a good idea to add a short transition (200-300 milliseconds) at the starts and ends of the highlights.
 
-Use some restraint here: don’t make the video a constant procession of zooming in and out, or viewers will get seasick.
+Use some restraint here: don't make the video a constant procession of zooming in and out, or viewers will get seasick.
 
 Crop the video to the desired aspect ratio, if required.
 
@@ -158,7 +158,7 @@ Crop the video to the desired aspect ratio, if required.
 Videos currently have to be uploaded to YouTube to be displayed on MDN, for example the [mozhacks](https://www.youtube.com/user/mozhacks/videos) channel.
 Ask a member of MDN staff to upload the video if you don't have somewhere appropriate to put it.
 
-> **Note:** Mark the video as "unlisted" if it doesn’t make sense out of the context of the page (if it’s a short video, then it probably doesn't).
+> **Note:** Mark the video as "unlisted" if it doesn't make sense out of the context of the page (if it's a short video, then it probably doesn't).
 
 ### Embedding
 

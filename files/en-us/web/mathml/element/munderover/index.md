@@ -45,7 +45,7 @@ Rendering in your browser: <math><munderover><mo>∫ </mo><mn>0 </mn><mi>∞</mi
 ```html
 <math displaystyle="true">
 
-  <munderover >
+  <munderover >
     <mo> &#x222B; <!--INTEGRAL--> </mo>
     <mn> 0 </mn>
     <mi> &#x221E; <!--INFINITY--> </mi>

@@ -34,7 +34,7 @@ window.onvrdisplaydisconnect = function() { /* ... */ };
 
 ```js
 window.onvrdisplaydisconnect = function() {
-  info.textContent = 'Display disconnected.';
+  info.textContent = 'Display disconnected.';
 };
 ```
 

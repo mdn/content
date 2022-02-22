@@ -37,7 +37,7 @@ transform: translate(30%, 50%);
 
 - Single `<length-percentage>` values
   - : This value is a {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} representing the abscissa
-    (horizontal, x-coordinate) of the translating vector. The ordinate (vertical, y-coordinate) of the translating
+    (horizontal, x-coordinate) of the translating vector. The ordinate (vertical, y-coordinate) of the translating
     vector will be set to `0`. For example, `translate(2px)` is equivalent to
     `translate(2px, 0)`. A percentage value refers to the width of the reference box defined by the
     {{cssxref("transform-box")}} property.

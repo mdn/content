@@ -28,7 +28,7 @@ Because each value in the `Set` has to be unique, the value equality will be che
 
 ### Performance
 
-The `Set` [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) method checks if a value is in a `Set` object, using an approach that is, on average, quicker than testing most of the elements that have previously been added to the `Set` object. In particular, it is, on average, faster than the [`Array.prototype.includes`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method when an `Array` object has a `length` equal to a `Set` object’s `size`.
+The `Set` [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) method checks if a value is in a `Set` object, using an approach that is, on average, quicker than testing most of the elements that have previously been added to the `Set` object. In particular, it is, on average, faster than the [`Array.prototype.includes`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method when an `Array` object has a `length` equal to a `Set` object's `size`.
 
 ## Constructor
 
@@ -259,9 +259,9 @@ new Set("firefox")  // Set(6) { "f", "i", "r", "e", "o", "x" }
 
 ```js
 const array = Array
-  .from(document.querySelectorAll('[id]'))
-  .map(function(e) {
-      return e.id
+  .from(document.querySelectorAll('[id]'))
+  .map(function(e) {
+      return e.id
   });
 
 const set = new Set(array);

@@ -10,7 +10,7 @@ tags:
 ---
 {{MathMLRef}}
 
-**Mathematical Markup Language (MathML)** is a dialect of [XML](/en-US/docs/Web/XML) for describing mathematical notation and capturing both its structure and content.
+**Mathematical Markup Language (MathML)** is a dialect of [XML](/en-US/docs/Web/XML) for describing mathematical notation and capturing both its structure and content.
 
 Here you'll find links to documentation, examples, and tools to help you work with this powerful technology. For a quick overview, see the [slides for the innovation fairs at Mozilla Summit 2013](https://fred-wang.github.io/MozSummitMathML/index.html).
 

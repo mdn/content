@@ -19,7 +19,7 @@ The **`ClipboardItem`** interface of the {{domxref('Clipboard API')}} represents
 
 The benefit of having the **`ClipboardItem`** interface to represent data, is that it enables developers to cope with the varying scope of file types and data easily.
 
-Access to the contents of the clipboard is gated behind the [Permissions API](/en-US/docs/Web/API/Permissions_API): The `clipboard-write` permission is granted automatically to pages when they are in the active tab. The `clipboard-read` permission must be requested, which you can do by trying to read data from the clipboard.
+Access to the contents of the clipboard is gated behind the [Permissions API](/en-US/docs/Web/API/Permissions_API): The `clipboard-write` permission is granted automatically to pages when they are in the active tab. The `clipboard-read` permission must be requested, which you can do by trying to read data from the clipboard.
 
 > **Note:** To work with text see the {{domxref("Clipboard.readText()")}} and {{domxref("Clipboard.writeText()")}} methods of the {{domxref("Clipboard")}} interface.
 
@@ -44,7 +44,7 @@ _This interface provides the following properties._
 _This interface defines the following methods._
 
 - {{domxref("ClipboardItem.getType", "getType()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}} of the requested {{Glossary("MIME type")}}, or an error if the MIME type is not found.
+  - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}} of the requested {{Glossary("MIME type")}}, or an error if the MIME type is not found.
 
 ## Examples
 

@@ -22,7 +22,7 @@ browser-compat: html.manifest.display
   </tbody>
 </table>
 
-The `display` member is a string that determines the developers’ preferred display mode for the website. The display mode changes how much of browser UI is shown to the user and can range from `browser` (when the full browser window is shown) to `fullscreen` (when the app is full-screened).
+The `display` member is a string that determines the developers' preferred display mode for the website. The display mode changes how much of browser UI is shown to the user and can range from `browser` (when the full browser window is shown) to `fullscreen` (when the app is fullscreened).
 
 > **Note:** The browser follows a pre-defined fallback chain if it does not support a given mode: `fullscreen` → `standalone` → `minimal-ui` → `browser`, with `browser` being the default value if the `display` member is not specified.
 

@@ -43,12 +43,19 @@ An integer corresponding to the scrollHeight pixel value of the element.
 
 ### Determine if an element has been totally scrolled
 
-The following equivalence returns `true` if an element is at the end of its
-scroll, `false` if it isn't.
+`scrollTop` is a non-rounded number, while `scrollHeight` and `clientHeight` are rounded — so the only way to determine if the scroll area is scrolled to the bottom is by seeing if the scroll amount is close enough to some threshold (in this example `1`):
+
+```js
+Math.abs(element.scrollHeight - element.clientHeight - element.scrollTop) < 1
+```
+
+The following will _not_ work all the time because `scrollTop` can contain decimals:
 
 ```js
 element.scrollHeight - Math.abs(element.scrollTop) === element.clientHeight
 ```
+
+### Determine if an element is scrollable
 
 When the container does not scroll, but has overflowing children, these checks
 determine if the container can scroll:

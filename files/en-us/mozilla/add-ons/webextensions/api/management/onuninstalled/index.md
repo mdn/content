@@ -55,7 +55,7 @@ Log the names of add-ons when they are uninstalled:
 
 ```js
 browser.management.onUninstalled.addListener((info) => {
-  console.log(info.name + " was uninstalled");
+  console.log(info.name + " was uninstalled");
 });
 ```
 

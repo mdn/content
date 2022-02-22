@@ -8,7 +8,7 @@ tags:
 ---
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "invalid regular expression flag" occurs when the flags in a regular expression contain any flag that is not one of: `g`, `i`, `m`, `s`, `u`, `y` or `d`.
+The JavaScript exception "invalid regular expression flag" occurs when the flags in a regular expression contain any flag that is not one of: `g`, `i`, `m`, `s`, `u`, `y` or `d`.
 
 It may also be raised if the expression contains more than one instance of a valid flag.
 
@@ -35,7 +35,7 @@ The valid (allowed) flags are listed in [Regular expressions > Advanced searchin
 | `g`  | Global search. See {{jsxref("RegExp.global", "global")}}                                                                                |
 | `i`  | Case-insensitive search. See {{jsxref("RegExp.sticky", "ignoreCase")}}.                                                                 |
 | `m`  | Multi-line search. See {{jsxref("RegExp.multiline", "multiline")}}.                                                                     |
-| `s`  | Allow `.` to match newlines (added in ECMAScript 2018). See {{jsxref("RegExp.dotAll", "dotAll")}}.                                      |
+| `s`  | Allow `.` to match newlines (added in ECMAScript 2018). See {{jsxref("RegExp.dotAll", "dotAll")}}.                                      |
 | `u`  | Unicode; treat pattern as a sequence of Unicode code points. See {{jsxref("RegExp.unicode", "unicode")}}.                               |
 | `y`  | Perform a "sticky" search that matches starting at the current position in the target string. See {{jsxref("RegExp.sticky", "sticky")}} |
 | `d`  | Indices. Generate indices for substring matches. See {{jsxref("RegExp.hasIndices", "hasIndices")}}                                      |

@@ -11,11 +11,11 @@ browser-compat: css.at-rules.media.monochrome
 ---
 {{CSSRef}}
 
-The **`monochrome`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the number of bits per pixel in the monochrome frame buffer of the output device.
+The **`monochrome`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the number of bits per pixel in the monochrome frame buffer of the output device.
 
 ## Syntax
 
-The `monochrome` feature is specified as an {{cssxref("&lt;integer&gt;")}} representing the number of bits per pixel in the monochrome frame buffer. If the device is not a monochrome device, the value is zero. It is a range feature, meaning that you can also use the prefixed **`min-monochrome`** and **`max-monochrome`** variants to query minimum and maximum values, respectively.
+The `monochrome` feature is specified as an {{cssxref("&lt;integer&gt;")}} representing the number of bits per pixel in the monochrome frame buffer. If the device is not a monochrome device, the value is zero. It is a range feature, meaning that you can also use the prefixed **`min-monochrome`** and **`max-monochrome`** variants to query minimum and maximum values, respectively.
 
 ## Examples
 
@@ -35,17 +35,17 @@ p {
 
 /* Any monochrome device */
 @media (monochrome) {
-  p.mono {
+  p.mono {
     display: block;
-    color: #333;
-  }
+    color: #333;
+  }
 }
 
 /* Any non-monochrome device */
 @media (monochrome: 0) {
   p.no-mono {
     display: block;
-    color: #ee3636;
+    color: #ee3636;
   }
 }
 ```

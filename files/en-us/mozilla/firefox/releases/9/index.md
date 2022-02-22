@@ -35,8 +35,8 @@ _No change._
 
 ### DOM
 
-- [Using full-screen mode](/en-US/docs/Web/API/Fullscreen_API)
-  - : The new full-screen API provides a way to present content using the entire screen, with no browser interface. This is great for video and games. This API is currently experimental and prefixed.
+- [Using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API)
+  - : The new fullscreen API provides a way to present content using the entire screen, with no browser interface. This is great for video and games. This API is currently experimental and prefixed.
 
 <!---->
 
