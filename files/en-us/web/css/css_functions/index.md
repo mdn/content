@@ -10,6 +10,10 @@ tags:
   - Reference
   - Types
   - data types
+spec-urls: >-
+  https://drafts.csswg.org/css-values/,
+  https://drafts.csswg.org/css-color/,
+  https://drafts.csswg.org/css-images/
 ---
 {{CSSRef}}
 
@@ -270,13 +274,7 @@ The following functions are used to define a CSS grid.
 
 ## Specifications
 
-| Specification                        | Status                           | Comment                                                                                                                                                                                                                                                               |
-| ------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS4 Values")}} | {{Spec2("CSS4 Values")}} | Adds `toggle()`, `attr()`, `calc()`, `min()`, `max()`, `clamp()`, `round()`, `mod()`, `rem()`, `mod()`, `sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, `atan2()`, `pow()`, `sqrt()`, `hypot()`, `log()`, `exp()`, `abs()` and `sign()` functional notation. |
-| {{SpecName("CSS3 Values")}} | {{Spec2("CSS3 Values")}} | Adds `calc()` functional notation.                                                                                                                                                                                                                                    |
-| {{SpecName("CSS4 Colors")}} | {{Spec2("CSS4 Colors")}} | Adds commaless syntaxes for the `rgb()`, `rgba()`, `hsl()`, and `hsla()` functional notation. Allows alpha values in `rgb()` and `hsl()`, turning `rgba()` and `hsla()` into (deprecated) aliases for them. Adds `hwb()`, `device-cmyk()`, and `color()` functions.   |
-| {{SpecName("CSS3 Colors")}} | {{Spec2("CSS3 Colors")}} | Adds `rgba()`, `hsl()`, `hsla()` functional notation.                                                                                                                                                                                                                 |
-| {{SpecName("CSS4 Images")}} | {{Spec2("CSS4 Images")}} | Adds `element()`, `image()`, `image-set()` and `conic-gradient()` functional notation.                                                                                                                                                                                |
+{{Specifications}}
 
 ## See also
 

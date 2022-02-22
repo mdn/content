@@ -11,6 +11,7 @@ tags:
   - Style
   - Style sheet
   - Stylesheets
+spec-urls: https://drafts.csswg.org/css-cascade/
 ---
 {{CSSRef}}
 
@@ -145,12 +146,7 @@ Note that the declaration defined in the user CSS, though having a greater speci
 
 ## Specifications
 
-| Specification                                                            | Status                           | Comment                                                                                               |
-| ------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS4 Cascade")}}                                     | {{Spec2("CSS4 Cascade")}} | Added the {{CSSxRef("revert")}} keyword, which allows rolling a property back a cascade level. |
-| {{SpecName("CSS3 Cascade")}}                                     | {{Spec2("CSS3 Cascade")}} | Removed the override cascade origin, as it was never used in a W3C standard.                          |
-| {{SpecName("CSS2.1", "cascade.html", "the cascade")}} | {{Spec2("CSS2.1")}}         |                                                                                                       |
-| {{SpecName("CSS1", "#the-cascade", "the cascade")}}     | {{Spec2("CSS1")}}         | Initial definition.                                                                                   |
+{{Specifications}}
 
 ## See also
 

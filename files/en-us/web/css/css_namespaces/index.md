@@ -8,6 +8,7 @@ tags:
   - Overview
   - Reference
   - Web
+spec-urls: https://drafts.csswg.org/css-namespaces/
 ---
 {{CSSRef}}
 
@@ -21,9 +22,7 @@ tags:
 
 ## Specifications
 
-| Specification                            | Status                               | Comment            |
-| ---------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName("CSS3 Namespaces")}} | {{Spec2("CSS3 Namespaces")}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

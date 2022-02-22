@@ -8,6 +8,7 @@ tags:
   - Layout
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-multicol/
 ---
 {{CSSRef("CSS3 Multicol")}}
 
@@ -61,9 +62,7 @@ Multiple-column Layout is closely related to [Paged Media](/en-US/docs/Web/CSS/C
 
 ## Specifications
 
-| Specification                            | Status                               | Comment            |
-| ---------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('CSS3 Multicol')}} | {{Spec2('CSS3 Multicol')}} | Initial definition |
+{{Specifications}}
 
 ## See also
 

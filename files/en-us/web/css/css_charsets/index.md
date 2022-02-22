@@ -7,6 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://www.w3.org/TR/CSS22/syndata.html#x57
 ---
 {{CSSRef}}
 
@@ -20,9 +21,7 @@ tags:
 
 ## Specifications
 
-| Specification                                                            | Status                   | Comment            |
-| ------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('CSS2.1', 'syndata.html#x57', '@charset')}} | {{Spec2('CSS2.1')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

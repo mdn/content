@@ -5,6 +5,7 @@ tags:
   - CSS
   - Guide
   - Reference
+spec-urls: https://www.w3.org/TR/CSS22/cascade.html#actual-value
 ---
 {{CSSRef}}
 
@@ -21,9 +22,7 @@ The {{glossary("user agent")}} performs four steps to calculate a property's act
 
 ## Specifications
 
-| Specification                                                                            | Status                   | Comment             |
-| ---------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('CSS2.1', 'cascade.html#actual-value', 'actual value')}} | {{Spec2('CSS2.1')}} | Initial definition. |
+{{Specifications}}
 
 ## See also
 

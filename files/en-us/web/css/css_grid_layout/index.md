@@ -9,6 +9,7 @@ tags:
   - Layout
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-grid/
 ---
 {{CSSRef}}
 
@@ -162,8 +163,4 @@ The example below shows a three-column track grid with new rows created at a min
 
 ## Specifications
 
-| Specification                        | Status                           | Comment                                                                                      |
-| ------------------------------------ | -------------------------------- | -------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS Grid 3")}} | {{Spec2("CSS Grid 3")}} | Adds [masonry](/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout).                          |
-| {{SpecName("CSS Grid 2")}} | {{Spec2("CSS Grid 2")}} | Added [subgrids](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#subgrid). |
-| {{SpecName("CSS3 Grid")}}     | {{Spec2("CSS3 Grid")}}     | Initial definition.                                                                          |
+{{Specifications}}

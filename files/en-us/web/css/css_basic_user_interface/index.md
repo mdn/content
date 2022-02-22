@@ -7,6 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-ui/
 ---
 {{CSSRef}}
 
@@ -35,8 +36,4 @@ tags:
 
 ## Specifications
 
-| Specification                                | Status                               | Comment             |
-| -------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("CSS4 Basic UI")}}     | {{Spec2("CSS4 Basic UI")}} |                     |
-| {{SpecName("CSS3 Basic UI")}}     | {{Spec2("CSS3 Basic UI")}} |                     |
-| {{SpecName("CSS2.1", "ui.html")}} | {{Spec2("CSS2.1")}}             | Initial definition. |
+{{Specifications}}

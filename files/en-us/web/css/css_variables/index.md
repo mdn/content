@@ -7,6 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-variables/
 ---
 {{CSSRef}}
 
@@ -18,6 +19,4 @@ tags:
 
 ## Specifications
 
-| Specification                            | Status                               | Comment            |
-| ---------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName("CSS3 Variables")}} | {{Spec2("CSS3 Variables")}} | Initial definition |
+{{Specifications}}

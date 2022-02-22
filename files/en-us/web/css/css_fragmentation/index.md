@@ -9,6 +9,7 @@ tags:
   - NeedsContent
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-break/
 ---
 {{CSSRef}}
 
@@ -27,6 +28,4 @@ Fragmentation occurs when an inline box wraps onto multiple lines. It also occur
 
 ## Specifications
 
-| Specification                                | Status                                   | Comment             |
-| -------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('CSS3 Fragmentation')}} | {{Spec2('CSS3 Fragmentation')}} | Initial definition. |
+{{Specifications}}

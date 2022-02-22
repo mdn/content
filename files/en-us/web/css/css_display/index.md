@@ -7,6 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-display/#the-display-properties
 ---
 {{CSSRef}}
 
@@ -66,11 +67,7 @@ tags:
 
 ## Specifications
 
-| Specification                                                                            | Status                           | Comment                                                                      |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------- |
-| {{SpecName("CSS3 Display", "#the-display-properties", "display")}} | {{Spec2("CSS3 Display")}} | Added `run-in`, `flow`, `flow-root`, `contents` and multi-keyword values.    |
-| {{SpecName("CSS2.1", "visuren.html#display-prop", "display")}}     | {{Spec2("CSS2.1")}}         | Added the table model values and `inline-block`.                             |
-| {{SpecName("CSS1", "#display", "display")}}                                 | {{Spec2("CSS1")}}         | Initial definition. Basic values: `none`, `block`, `inline` and `list-item`. |
+{{Specifications}}
 
 In addition to the CSS Display Specification Level 3, further specifications define the behavior of various values of display.
 
