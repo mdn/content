@@ -109,9 +109,7 @@ lots of text...<p><a name="bottom">bottom</a>?arg=val
 
 ## Specifications
 
-| Specification        | Title                 |
-| -------------------- | --------------------- |
-| {{RFC("2397")}} | The "data" URL scheme |
+{{Specifications}}
 
 ## Browser compatibility
 

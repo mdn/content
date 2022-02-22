@@ -51,9 +51,7 @@ Link: <https://one.example.com>; rel="preconnect", <https://two.example.com>; re
 
 ## Specifications
 
-| Specification                                            | Title       |
-| -------------------------------------------------------- | ----------- |
-| {{RFC(8288, "Link Serialization in HTTP Headers", "3")}} | Web Linking |
+{{Specifications}}
 
 ## Browser compatibility
 

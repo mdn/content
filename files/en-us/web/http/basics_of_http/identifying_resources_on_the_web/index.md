@@ -15,6 +15,7 @@ tags:
   - port
   - query
   - resources
+spec-urls: https://httpwg.org/specs/rfc7230.html#section-2.7
 ---
 {{HTTPSidebar}}
 
@@ -119,9 +120,7 @@ mailto:help@supercyberhelpdesk.info
 
 ## Specifications
 
-| Specification                                                            | Title                                                              |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------ |
-| {{RFC("7230", "Uniform Resource Identifiers", "2.7")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
+{{Specifications}}
 
 ## See also
 
