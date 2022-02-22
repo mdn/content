@@ -8,7 +8,7 @@ tags:
   - Pseudo-element
   - Reference
   - Selectors
-spec-urls: https://www.w3.org/TR/CSS1/
+spec-urls: https://www.w3.org/TR/CSS22/selector.html#pseudo-element-selectors
 ---
 {{CSSRef}}
 

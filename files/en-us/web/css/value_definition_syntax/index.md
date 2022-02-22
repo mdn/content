@@ -6,7 +6,7 @@ tags:
   - Guide
   - Reference
   - Syntax
-spec-urls: https://drafts.csswg.org/css-values/#value-defs,
+spec-urls: https://drafts.csswg.org/css-values/#value-defs
 ---
 {{CSSRef}}
 

@@ -6,7 +6,7 @@ tags:
   - CSS Box Model
   - Guide
   - Reference
-spec-urls: https://www.w3.org/TR/CSS2/box.html#collapsing-margins
+spec-urls: https://www.w3.org/TR/CSS22/box.html#collapsing-margins
 ---
 {{CSSRef}}
 

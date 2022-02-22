@@ -5,7 +5,7 @@ tags:
   - CSS
   - Guide
   - Reference
-spec-urls: https://www.w3.org/TR/CSS2/cascade.html#actual-value
+spec-urls: https://www.w3.org/TR/CSS22/cascade.html#actual-value
 ---
 {{CSSRef}}
 

@@ -6,7 +6,7 @@ tags:
   - CSS Box Model
   - Guide
   - Layout
-spec-urls: https://drafts.csswg.org/css-box/#intro,
+spec-urls: https://drafts.csswg.org/css-box/#intro
 ---
 {{CSSRef}}
 

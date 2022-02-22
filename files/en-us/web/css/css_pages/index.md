@@ -9,7 +9,7 @@ tags:
   - Reference
 spec-urls: >-
   https://drafts.csswg.org/css-page/,
-  https://drafts.csswg.org/css-break
+  https://drafts.csswg.org/css-break/
 ---
 {{CSSRef}}
 

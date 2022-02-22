@@ -11,9 +11,7 @@ tags:
   - Example
   - Reference
   - color
-spec-urls: >-
-  https://drafts.csswg.org/css-color/#type-def-alpha-value,
-  https://drafts.csswg.org/css-color-3/#alphavaluedt
+spec-urls: https://drafts.csswg.org/css-color/#type-def-alpha-value
 ---
 {{CSSRef}}
 

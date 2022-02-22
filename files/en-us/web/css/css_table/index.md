@@ -7,7 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
-spec-urls: https://www.w3.org/TR/CSS2/tables.html
+spec-urls: https://www.w3.org/TR/CSS22/tables.html
 ---
 {{CSSRef}}
 
