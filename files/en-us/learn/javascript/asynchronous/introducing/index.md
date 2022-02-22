@@ -30,7 +30,9 @@ In this article we'll explain what asynchronous programming is, why we need it, 
 
 Asynchronous programming is a technology that enables your program to start a potentially long-running task, and then rather than having to wait until that task has finished, to be able to continue to be responsive to other events while the task runs. Once the task is completed, your program is presented with the result.
 
-Depending on the particular programs you write, you may not often have to implement your own asynchronous functions. But to do many interesting things, you'll have to *use* asynchronous functions correctly. That's because many functions provided by browsers can potentially take a long time, and are therefore asynchronous. For example:
+Many functions provided by browsers can potentially take a long time, and are therefore asynchronous.
+Depending on the particular programs you write, you may not have to _implement_ your own asynchronous functions very often. But you'll certainly have to learn how to _use_ them correctly if you want to work with many of the more interesting features.
+That's because For example:
 
 - making HTTP requests with {{domxref("fetch", "fetch()")}}
 - accessing the user's camera or microphone with {{domxref("MediaDevices/getUserMedia", "getUserMedia()")}}
