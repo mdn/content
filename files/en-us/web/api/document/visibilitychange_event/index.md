@@ -15,28 +15,21 @@ browser-compat: api.Document.visibilitychange_event
 
 The `visibilitychange` event is fired at the document when the contents of its tab have become visible or have been hidden.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("Document.onvisibilitychange", "onvisibilitychange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+The event is not cancelable.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('visibilitychange', event => { });
+
+onvisibilitychange = event => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Usage notes
 
@@ -68,11 +61,11 @@ This example treats the transition to `hidden` as the end of the user's session,
 API:
 
 ```js
-document.addEventListener('visibilitychange', function logData() {
+document.onvisibilitychange = function() {
   if (document.visibilityState === 'hidden') {
     navigator.sendBeacon('/log', analyticsData);
   }
-});
+};
 ```
 
 ## Specifications

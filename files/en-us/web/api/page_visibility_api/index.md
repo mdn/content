@@ -137,9 +137,6 @@ The Page Visibility API adds the following properties to the {{domxref("Document
 
         > **Note:** Not all browsers support the `unloaded` value.
 
-- {{domxref("Document.onvisibilitychange")}}
-  - : An {{domxref("EventListener")}} providing the code to be called when the {{event("visibilitychange")}} event is fired.
-
 ```js
 // startSimulation and pauseSimulation defined elsewhere
 function handleVisibilityChange() {
