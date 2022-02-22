@@ -136,6 +136,8 @@ _Doesn't inherit any method._
   - : Allows web sites to register themselves as a possible handler for a given protocol.
 - {{domxref("Navigator.requestMediaKeySystemAccess()")}}
   - : Returns a {{jsxref("Promise")}} for a MediaKeySystemAccess object.
+- {{domxref("Navigator.requestMIDIAccess()")}}
+  - : Returns a {{jsxref('Promise')}} representing a request for access to MIDI devices on the user's system.
 - {{domxref("Navigator.sendBeacon()")}}
   - : Used to asynchronously transfer a small amount of data using {{Glossary("HTTP")}} from the User Agent to a web server.
 - {{domxref("Navigator.setAppBadge()")}}
