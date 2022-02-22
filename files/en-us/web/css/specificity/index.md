@@ -74,7 +74,7 @@ When an `important` rule is used on a style declaration, this declaration overri
 
 ##### A) Overriding inline styles
 
-Your global CSS file that sets visual aspects of your site globally may be overwritten by inline styles defined directly on individual elements. Both inline styles and !important are considered very bad practice, but sometimes you need the latter to override the former.
+Your global CSS file that sets visual aspects of your site globally may be overwritten by inline styles defined directly on individual elements. Both inline styles and !important are considered bad practice, but sometimes you need the latter to override the former.
 
 In this case, you could set certain styles in your global CSS file as !important, thus overriding inline styles set directly on elements.
 
