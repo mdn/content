@@ -48,7 +48,6 @@ p ~ span {
 <div> How are you? </div>
 <p> Whatever it may be, keep smiling. </p>
 <h1> Dream big </h1>
-<h2> that's all. </h2>
 <span>And yet again this is a red span!</span>
 ```
 
