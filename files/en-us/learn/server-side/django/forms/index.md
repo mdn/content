@@ -22,18 +22,14 @@ In this tutorial, we'll show you how to work with HTML Forms in Django, and, in 
       <th scope="row">Prerequisites:</th>
       <td>
         Complete all previous tutorial topics, including
-        <a href="/en-US/docs/Learn/Server-side/Django/Authentication"
-          >Django Tutorial Part 8: User authentication and permissions</a
-        >.
+        <a href="/en-US/docs/Learn/Server-side/Django/Authentication">Django Tutorial Part 8: User authentication and permissions</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To understand how to write forms to get information from users and
-        update the database. To understand how the generic class-based editing
-        views can vastly simplify creating forms for working with a single
-        model.
+        To understand how to write forms to get information from users and update the database.
+        To understand how the generic class-based editingviews can vastly simplify creating forms for working with a single model.
       </td>
     </tr>
   </tbody>
@@ -167,7 +163,7 @@ import datetime
 from django import forms
 
 from django.core.exceptions import ValidationError
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 class RenewBookForm(forms.Form):
     renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
@@ -190,7 +186,8 @@ class RenewBookForm(forms.Form):
 There are two important things to note. The first is that we get our data using `self.cleaned_data['renewal_date']` and that we return this data whether or not we change it at the end of the function.
 This step gets us the data "cleaned" and sanitized of potentially unsafe input using the default validators, and converted into the correct standard type for the data (in this case a Python `datetime.datetime` object).
 
-The second point is that if a value falls outside our range we raise a `ValidationError`, specifying the error text that we want to display in the form if an invalid value is entered. The example above also wraps this text in one of [Django's translation functions](https://docs.djangoproject.com/en/3.1/topics/i18n/translation/), `ugettext_lazy()` (imported as `_()`), which is good practice if you want to translate your site later.
+The second point is that if a value falls outside our range we raise a `ValidationError`, specifying the error text that we want to display in the form if an invalid value is entered.
+The example above also wraps this text in one of Django's [translation functions](https://docs.djangoproject.com/en/3.1/topics/i18n/translation/), `gettext_lazy()` (imported as `_()`), which is good practice if you want to translate your site later.
 
 > **Note:** There are numerous other methods and examples for validating forms in [Form and field validation](https://docs.djangoproject.com/en/3.1/ref/forms/validation/) (Django docs). For example, in cases where you have multiple fields that depend on each other, you can override the [Form.clean()](https://docs.djangoproject.com/en/3.1/ref/forms/api/#django.forms.Form.clean) function and again raise a `ValidationError`.
 
