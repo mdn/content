@@ -36,7 +36,7 @@ Since a switch is an interactive control, it must be focusable and keyboard acce
 
 There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `switch`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `switch` element as it is a role that does not support semantic children.
 
-For example, consider the following ```` element, which contains a heading.
+For example, consider the following `switch` element, which contains a heading.
 
 ```html
 <div role="switch"><h3>Title of my switch</h3></div>

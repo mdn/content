@@ -74,7 +74,7 @@ It is not a requirement that the thumbs in multi-thumb sliders be dependent on t
 
 There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `slider`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `slider` element as it is a role that does not support semantic children.
 
-For example, consider the following ```` element, which contains a heading.
+For example, consider the following `slider` element, which contains a heading.
 
 ```html
 <div role="slider"><h3>Temperature in Celcius</h3></div>

@@ -76,7 +76,7 @@ If any of the radio roles in a group has `aria-required="true"` set, it is as if
 
 There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `radio`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `radio` element as it is a role that does not support semantic children.
 
-For example, consider the following ```` element, which contains a heading.
+For example, consider the following `radio` element, which contains a heading.
 
 ```html
 <div role="radio"><h6>name of my radio</h6></li>

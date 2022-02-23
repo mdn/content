@@ -26,7 +26,7 @@ When elements with the `tab` role are selected or active they should have their 
 
 There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `tab`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `tab` element as it is a role that does not support semantic children.
 
-For example, consider the following ```` element, which contains a heading.
+For example, consider the following `tab` element, which contains a heading.
 
 ```html
 <div role="tab"><h3>Title of my tab</h3></div>

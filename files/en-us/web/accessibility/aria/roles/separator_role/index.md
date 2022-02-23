@@ -67,7 +67,7 @@ An accessible name, with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attri
 
 There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `separator`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `separator` element as it is a role that does not support semantic children.
 
-For example, consider the following ```` element, which contains a heading.
+For example, consider the following `separator` element, which contains a heading.
 
 ```html
 <div role="separator"><h3>Title of my separator</h3></div>
