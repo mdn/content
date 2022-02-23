@@ -21,7 +21,7 @@ This article provides information about the changes in Firefox 98 that will affe
 
 ### CSS
 
-- The {{cssxref("hyphenate-character")}} property can be used to set a string that is used instead of a hyphen character (`-`) at the end of a hyphenation line break. (See {{bug(1751024)}} for more details.)
+- The {{cssxref("hyphenate-character")}} property can be used to set a string that is used instead of a hyphen character (`-`) at the end of a hyphenation line break ({{bug(1751024)}}).
 
 #### Removals
 
