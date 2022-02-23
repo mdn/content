@@ -68,7 +68,7 @@ No notable changes.
 
 ## Changes for add-on developers
 
-- Added {{WebExtAPIRef("runtime.getFrameId")}} that gets the `frameId` of any window global or frame element from a content script ({{bug(1733104)}}).
+- Added {{WebExtAPIRef("runtime.getFrameId")}} that gets the frame ID of any window global or frame element from a content script ({{bug(1733104)}}).
 
 ## Older versions
 

@@ -54,7 +54,7 @@ It also provides messaging APIs enabling you to:
 - {{WebExtAPIRef("runtime.openOptionsPage()")}}
   - : Opens your extension's [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages).
 - {{WebExtAPIRef("runtime.getFrameId()")}}
-  - : Gets the `frameId` of any window global or frame element.
+  - : Gets the frame ID of any window global or frame element.
 - {{WebExtAPIRef("runtime.getManifest()")}}
   - : Gets the complete [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file, serialized as an object.
 - {{WebExtAPIRef("runtime.getURL()")}}
