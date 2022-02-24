@@ -6,10 +6,10 @@ tags:
   - Guide
   - Reference
   - values and units
-spec-urls: >-
-  https://drafts.csswg.org/css-values/,
-  https://drafts.csswg.org/css-color/,
-  https://drafts.csswg.org/css-images/
+spec-urls:
+  - https://drafts.csswg.org/css-values/
+  - https://drafts.csswg.org/css-color/
+  - https://drafts.csswg.org/css-images/
 ---
 {{CSSRef}}
 

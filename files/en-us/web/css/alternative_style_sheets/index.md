@@ -6,12 +6,12 @@ tags:
   - Guide
   - HTML
   - Reference
-spec-urls: >-
-  https://html.spec.whatwg.org/multipage/#rel-alternate,
-  https://html.spec.whatwg.org/multipage/#the-link-is-an-alternative-stylesheet,
-  https://html.spec.whatwg.org/multipage/#attr-style-title,
-  https://html.spec.whatwg.org/multipage/#attr-meta-http-equiv-default-style,
-  https://drafts.csswg.org/cssom/#css-style-sheet-collections
+spec-urls:
+  - https://html.spec.whatwg.org/multipage/#rel-alternate
+  - https://html.spec.whatwg.org/multipage/#the-link-is-an-alternative-stylesheet
+  - https://html.spec.whatwg.org/multipage/#attr-style-title
+  - https://html.spec.whatwg.org/multipage/#attr-meta-http-equiv-default-style
+  - https://drafts.csswg.org/cssom/#css-style-sheet-collections
 ---
 {{CSSRef}}
 

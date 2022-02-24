@@ -8,10 +8,10 @@ tags:
   - Pseudo-class
   - Reference
   - Selectors
-spec-urls: >-
-  https://html.spec.whatwg.org/multipage/#pseudo-classes,
-  https://drafts.csswg.org/selectors/,
-  https://drafts.csswg.org/css-ui/
+spec-urls:
+  - https://html.spec.whatwg.org/multipage/#pseudo-classes
+  - https://drafts.csswg.org/selectors/
+  - https://drafts.csswg.org/css-ui/
 ---
 {{CSSRef}}
 

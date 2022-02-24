@@ -6,9 +6,9 @@ tags:
   - CSS Text
   - Guide
   - Overview
-spec-urls: >-
-  https://drafts.csswg.org/css-logical/,
-  https://drafts.csswg.org/css-text/
+spec-urls:
+  - https://drafts.csswg.org/css-logical/
+  - https://drafts.csswg.org/css-text/
 ---
 {{CSSRef}}
 
