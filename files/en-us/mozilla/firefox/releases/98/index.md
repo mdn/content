@@ -63,6 +63,8 @@ This article provides information about the changes in Firefox 98 that will affe
 
 ## Changes for add-on developers
 
+- `cookieStoreId` added to {{WebExtAPIRef("userScripts.register")}}. This enables extensions to register container-specific user scripts ({{bug(1738567)}}).
+
 #### Removals
 
 ### Other
