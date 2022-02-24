@@ -35,11 +35,11 @@ Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
 ## Examples
 
+The following example passes a URL search string to the `URLSearchParams` constructor, then uses the iterator returned by `values()` to print the values to the console.
+
 ```js
-// Create a test URLSearchParams object
 var searchParams = new URLSearchParams("key1=value1&key2=value2");
 
-// Display the values
 for(var value of searchParams.values()) {
   console.log(value);
 }
@@ -52,11 +52,11 @@ value1
 value2
 ```
 
+This example does much the same as above, but first casts the iterator into an array.
+
 ```js
-// Create a test URLSearchParams object
 var searchParams = new URLSearchParams("key1=value1&key2=value2");
 
-// Display the values
 console.log(Array.from(searchParams.values()));
 ```
 
