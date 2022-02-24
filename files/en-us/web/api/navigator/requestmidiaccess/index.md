@@ -48,7 +48,7 @@ A {{jsxref('Promise')}} that resolves with a [`MIDIAccess`](/en-US/docs/Web/API/
 - `NotSupportedError`
   - : If the feature or options are not supported by the system.
 - `SecurityError`
-  - : If the user or system denies the application from creating a [MIDIAccess](/en-US/docs/Web/API/MIDIAccess) object with the requested options, or if the document is not allowed to use the feature. (For example in the case of an iframe without the correct [feature policy](/en-US/docs/Web/HTTP/Feature_Policy)).
+  - : If the user or system denies the application from creating a [MIDIAccess](/en-US/docs/Web/API/MIDIAccess) object with the requested options, or if the document is not allowed to use the feature (For example in the case of an iframe without the correct [feature policy](/en-US/docs/Web/HTTP/Feature_Policy)).
 
 ## Examples
 
