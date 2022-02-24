@@ -87,7 +87,7 @@ const objectName = {
 };
 ```
 
-The value of an object member can be pretty much anything — in our person object we've got a number, an array, and two functions. The first four items are data items, and are referred to as the object's **properties**. The last two items are functions that allow the object to do something with that data, and are referred to as the object's **methods**.
+The value of an object member can be pretty much anything — in our person object we've got a number, an array, and two functions. The first two items are data items, and are referred to as the object's **properties**. The last two items are functions that allow the object to do something with that data, and are referred to as the object's **methods**.
 
 When the object's members are functions there's a simpler syntax. Instead of `bio: function()` we can write `bio()`. Like this:
 
