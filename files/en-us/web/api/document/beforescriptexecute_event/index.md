@@ -48,5 +48,5 @@ document.onbeforescriptexecute = starting;
 
 ## See also
 
-- {{domxref("Document.aftercriptexecute_event")}}
+- {{domxref("Document.afterscriptexecute_event")}}
 - {{domxref("Document.currentScript")}}
