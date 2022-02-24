@@ -35,7 +35,7 @@ Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
 ## Examples
 
-The following example passes a URL search string to the `URLSearchParams` constructor, then uses the iterator returned by `values()` to print them to the console.
+The following example passes a URL search string to the `URLSearchParams` constructor, then uses the iterator returned by `values()` to print the values to the console.
 
 ```js
 var searchParams = new URLSearchParams("key1=value1&key2=value2");
