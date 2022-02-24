@@ -11,11 +11,13 @@
     "start": "yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true BUILD_OUT_ROOT=build yari-server",
     "filecheck": "env-cmd --silent cross-env CONTENT_ROOT=files yari-filecheck --cwd=.",
     "content": "env-cmd --silent cross-env CONTENT_ROOT=files yari-tool",
-    "build": "env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build yari-build"
+    "build": "env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build yari-build",
+    "lint:md": "markdownlint \"*.md\" \"rfcs/**/*.md\""
   },
   "dependencies": {
     "@mdn/yari": "1.14.31",
     "cross-env": "7.0.3",
-    "env-cmd": "10.1.0"
+    "env-cmd": "10.1.0",
+    "markdownlint-cli": "0.31.1"
   }
 }
