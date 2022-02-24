@@ -574,7 +574,7 @@ input:focus:invalid {
 }
 ```
 
-Now lets look at the JavaScript that implements the custom error validation.
+Now let's look at the JavaScript that implements the custom error validation.
 
 ```js
 // There are many ways to pick a DOM node; here we get the form itself and the email
