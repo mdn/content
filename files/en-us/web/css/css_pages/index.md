@@ -7,9 +7,9 @@ tags:
   - Guide
   - Overview
   - Reference
-spec-urls: >-
-  https://drafts.csswg.org/css-page/,
-  https://drafts.csswg.org/css-break/
+spec-urls:
+  - https://drafts.csswg.org/css-page/
+  - https://drafts.csswg.org/css-break/
 ---
 {{CSSRef}}
 

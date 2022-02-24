@@ -7,10 +7,10 @@ tags:
   - Guide
   - Overview
   - Reference
-spec-urls: >-
-  https://drafts.csswg.org/css-images/,
-  https://compat.spec.whatwg.org/#css-%3Cimage%3E-type,
-  https://drafts.csswg.org/css-values/#urls
+spec-urls:
+  - https://drafts.csswg.org/css-images/
+  - https://compat.spec.whatwg.org/#css-%3Cimage%3E-type
+  - https://drafts.csswg.org/css-values/#urls
 ---
 {{CSSRef}}
 

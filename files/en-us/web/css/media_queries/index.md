@@ -8,9 +8,9 @@ tags:
   - Overview
   - Reference
   - Responsive Design
-spec-urls: >-
-  https://drafts.csswg.org/mediaqueries/,
-  https://drafts.csswg.org/css-conditional/
+spec-urls:
+  - https://drafts.csswg.org/mediaqueries/
+  - https://drafts.csswg.org/css-conditional/
 ---
 {{CSSRef}}
 
