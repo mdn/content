@@ -298,7 +298,7 @@ Promise.all([a, b, c]).then(values => {
 });
 ```
 
-If they all fulfil, the chained `.then()` block's callback function will be passed an array containing all those results as a parameter. If any of the promises passed to `Promise.all()` reject, the whole block will reject.
+If they are all fulfilled, the results of those promises will be wrapped in an array and then it will be passed on to the `.then()` block's callback function as a parameter. If any of the promises passed to `Promise.all()` was rejected, the whole block will be rejected.
 
 This can be very useful. Imagine that we're fetching information to dynamically populate a UI feature on our page with content. In many cases, it makes sense to receive all the data and only then show the complete content, rather than displaying partial information.
 
