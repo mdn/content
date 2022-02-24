@@ -5,6 +5,8 @@ on:
     branches:
       - main
     paths:
+      - .markdownlint.json
+      - yarn.lock
       - '*.md'
       - .github/workflows/markdown-lint.yml
 
@@ -22,6 +24,10 @@ jobs:
           node-version: "16"
           cache: yarn
 
+      - name: Install all yarn packages
+        run: |
+          yarn --frozen-lockfile
+
       - name: Lint markdown files
         run: |
-          npx markdownlint-cli '*.md' -i LICENSE.md -i CODE_OF_CONDUCT.md
+          yarn lint:md
