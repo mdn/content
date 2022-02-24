@@ -97,7 +97,7 @@ console.log(o.m()); // 3
 const p = Object.create(o);
 // p is an object that inherits from o
 
-p.a = 4; // creates a property 'a' on p
+p.a = 4; // assign the value 4 to the property 'a' on p
 console.log(p.m()); // 5
 // when p.m is called, 'this' refers to p.
 // So when p inherits the function m of o,
