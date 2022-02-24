@@ -22,22 +22,7 @@ You can use this attribute with any SVG element.
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('SVG2', "struct.html#DataAttributes", "data-*")}}
-      </td>
-      <td>{{Spec2('SVG2')}}</td>
-      <td>Custom data attributes are new in SVG 2.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -197,29 +197,7 @@ The fourth image shows how to do the transformation in browsers that don't suppo
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <td><strong>Specification</strong></td>
-      <td><strong>Status</strong></td>
-      <td><strong>Comment</strong></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("CSS3 Transforms", "#transform-origin-property", "transform-origin")}}
-      </td>
-      <td>{{Spec2("CSS3 Transforms")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "styling.html#PresentationAttributes", "transform-origin")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
