@@ -11,7 +11,7 @@ browser-compat: api.Performance.onresourcetimingbufferfull
 {{APIRef("Resource Timing API")}}
 
 The **`onresourcetimingbufferfull`** property is an event
-handler that will be called when the {{event("resourcetimingbufferfull")}} event is
+handler that will be called when the {{domxref("Performance/resourcetimingbufferfull_event", "resourcetimingbufferfull")}} event is
 fired. This event is fired when the browser's resource timing performance buffer is
 full.
 
@@ -27,7 +27,7 @@ callback = performance.onresourcetimingbufferfull = buffer_full_cb;
 
 - callback
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) that is invoked when the
-    {{event("resourcetimingbufferfull")}} event is fired.
+    {{domxref("Performance/resourcetimingbufferfull_event", "resourcetimingbufferfull")}} event is fired.
 
 ## Examples
 
@@ -56,6 +56,6 @@ function init() {
 
 ## See also
 
-- {{event("resourcetimingbufferfull")}} event
+- {{domxref("Performance/resourcetimingbufferfull_event", "resourcetimingbufferfull")}} event
 - {{domxref("Performance.clearResourceTimings","Performance.clearResourceTimings()")}}
 - {{domxref("Performance.setResourceTimingBufferSize","Performance.setResourceTimingBufferSize()")}}
