@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/min
 tags:
   - SVG
   - SVG Attribute
-browser-compat: svg.elements.animate.min
+spec-urls: https://svgwg.org/specs/animations/#MinAttribute
 ---
 {{SVGRef}}
 
@@ -70,7 +70,3 @@ html, body, svg {
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}

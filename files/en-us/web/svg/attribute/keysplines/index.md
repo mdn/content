@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/keySplines
 tags:
   - SVG
   - SVG Attribute
-browser-compat: svg.elements.animate.keySplines
+spec-urls: https://svgwg.org/specs/animations/#KeySplinesAttribute
 ---
 {{SVGRef}}
 
@@ -79,10 +79,6 @@ The attribute value is a semicolon-separated list of control point descriptions.
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

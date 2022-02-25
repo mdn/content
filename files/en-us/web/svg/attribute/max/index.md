@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/max
 tags:
   - SVG
   - SVG Attribute
-browser-compat: svg.elements.animate.max
+spec-urls: https://svgwg.org/specs/animations/#MaxAttribute
 ---
 {{SVGRef}}
 
@@ -70,10 +70,6 @@ html, body, svg {
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

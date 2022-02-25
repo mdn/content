@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/keyTimes
 tags:
   - SVG
   - SVG Attribute
-browser-compat: svg.elements.animate.keyTimes
+spec-urls: https://svgwg.org/specs/animations/#KeyTimesAttribute
 ---
 {{SVGRef}}
 
@@ -82,7 +82,3 @@ If the duration of the animation is indefinite, any `keyTimes` specification wil
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}

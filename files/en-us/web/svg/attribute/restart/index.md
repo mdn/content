@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/restart
 tags:
   - SVG
   - SVG Attribute
-browser-compat: svg.elements.animate.restart
+spec-urls: https://svgwg.org/specs/animations/#RestartAttribute
 ---
 {{SVGRef}}
 
@@ -87,7 +87,3 @@ document.getElementById("restart").addEventListener("click", evt => {
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}

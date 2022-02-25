@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/repeatDur
 tags:
   - SVG
   - SVG Attribute
-browser-compat: svg.elements.animate.repeatDur
+spec-urls: https://svgwg.org/specs/animations/#RepeatDurAttribute
 ---
 {{SVGRef}}
 
@@ -75,7 +75,3 @@ html, body, svg {
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}

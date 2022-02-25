@@ -6,7 +6,7 @@ tags:
   - NeedsExample
   - SVG
   - SVG Attribute
-browser-compat: svg.elements.textPath.method
+spec-urls: https://svgwg.org/svg2-draft/text.html#TextPathElementMethodAttribute
 ---
 {{SVGRef}}{{SeeCompatTable}}
 
@@ -45,7 +45,3 @@ For {{SVGElement("textPath")}}, `method` indicates the method by which text shou
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
