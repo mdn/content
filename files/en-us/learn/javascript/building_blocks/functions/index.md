@@ -239,7 +239,7 @@ textBox.addEventListener('keydown', function(event) {
 
 ### Arrow functions
 
-If you pass an anonymous function like this, there's an alternative form you can use, called a **arrow function**. Instead of `function(event)`, you write `(event) =>`:
+If you pass an anonymous function like this, there's an alternative form you can use, called an **arrow function**. Instead of `function(event)`, you write `(event) =>`:
 
 ```js
 textBox.addEventListener('keydown', (event) => {
