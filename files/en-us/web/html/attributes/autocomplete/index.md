@@ -17,6 +17,7 @@ tags:
   - form
   - passwords
   - textarea
+browser-compat: html.global_attributes.autocomplete
 ---
 
 {{HTMLSidebar}}
@@ -233,13 +234,11 @@ An address in Japan is typically **written in one line**, in an order from the l
 
 ## Specifications
 
-| Specification                                                        |
-| -------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "#attr-fe-autocomplete", "autocomplete")}} |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("html.global_attributes.autocomplete")}}
+{{Compat}}
 
 ## See also
 

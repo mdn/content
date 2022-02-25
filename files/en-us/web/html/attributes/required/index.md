@@ -7,6 +7,7 @@ tags:
   - Constraint validation
   - Forms
   - required
+spec-urls: https://html.spec.whatwg.org/multipage/forms.html#attr-input-required
 ---
 
 {{HTMLSidebar}}
@@ -65,38 +66,7 @@ Provide an indication to users informing them the form control is required. Ensu
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'forms.html#attr-input-required', 'required attribute')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML5 W3C', 'forms.html#attr-input-required', 'required attribute')}}
-      </td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML5.1', 'sec-forms.html#the-required-attribute', 'required attribute')}}
-      </td>
-      <td>{{Spec2('HTML5.1')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

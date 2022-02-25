@@ -6,6 +6,7 @@ tags:
   - Responsiveness
   - Mobile
   - viewport
+spec-urls: https://drafts.csswg.org/css-device-adapt/#viewport-meta
 ---
 
 This article describes how to use the "viewport" `<meta>` tag to control the viewport's size and shape.
@@ -82,23 +83,6 @@ If you want to know what mobile and tablet devices have which viewport widths, t
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('CSS3 Device', '#viewport-meta', '&lt;meta name="viewport"&gt;')}}
-      </td>
-      <td>{{Spec2('CSS3 Device')}}</td>
-      <td>Non-normatively describes the Viewport META element</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/HTML")}}
