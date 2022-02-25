@@ -33,7 +33,7 @@ navigator.requestMIDIAccess(MIDIOptions);
     - `sysex`
       - : A {{jsxref('Boolean')}} value that, if set to `true`, allows the ability to send and receive system exclusive (sysex) messages. The default value is `false`.
     - `software`
-      - : A {{jsxref('Boolean')}} value which, if set to `true`, allows the system to utilize any installed software synthesizers. Default is `false`.
+      - : A {{jsxref('Boolean')}} value that, if set to `true`, allows the system to utilize any installed software synthesizers. The default value is `false`.
 
 ### Return value
 
