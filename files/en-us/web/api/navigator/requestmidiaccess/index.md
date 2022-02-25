@@ -31,7 +31,7 @@ navigator.requestMIDIAccess(MIDIOptions);
 - `MIDIOptions` {{optional_inline}}
   - : An {{jsxref('Object')}} representing options to pass into the method. These options are:
     - `sysex`
-      - : A {{jsxref('Boolean')}} value which, if set to `true`, allows the ability to send and receive system exclusive (sysex) messages. Default is `false`.
+      - : A {{jsxref('Boolean')}} value that, if set to `true`, allows the ability to send and receive system exclusive (sysex) messages. The default value is `false`.
     - `software`
       - : A {{jsxref('Boolean')}} value which, if set to `true`, allows the system to utilize any installed software synthesizers. Default is `false`.
 
