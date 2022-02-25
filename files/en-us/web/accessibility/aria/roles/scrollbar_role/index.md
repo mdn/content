@@ -137,6 +137,21 @@ From the assitive technology user's perspective, the heading does not exist sinc
 
 ### Keyboard interactions
 
+- <kbd>Up Arrow</kbd>
+  - : 
+- <kbd>Down Arrow</kbd>
+  - :  
+- <kbd>Left Arrow</kbd>
+  - :  
+- <kbd>Right Arrow</kbd>
+  - : for a horizontal scroll bar)  should move the scroll bar thumb proportionally. 
+- <kbd>Page Up</kbd>
+  - : 
+- <kbd>Page Down</kbd>
+  - : 
+- <kbd>Space</kbd>
+  - :  keys must move the content and the scroll thumb the height (or width) of the viewport for each key press until the bottom or top of the content is in view. 
+
 ### Required JavaScript features
 
 ## Examples
@@ -154,6 +169,16 @@ From the assitive technology user's perspective, the heading does not exist sinc
 | {{SpecName("ARIA","#scrollbar","ARIA: scrollbar role")}}                                             | {{Spec2('ARIA')}}                         |
 
 ## See Also
+
+- [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range),
+- HTML {{HTMLElement('progress')}} element
+- HTML {{HTMLElement('meter')}} element
+- Other range widgets include:
+  - [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role)
+  - [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
+  - [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) (if focusable)
+  - [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role)
+  - [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
 
 <section id="Quick_links">
 
