@@ -166,7 +166,7 @@ Promise.race([p5, p6])
 
 ### Comparison with Promise.any
 
-`Promise.race` takes the first settled {{jsxref("Promise")}}.
+`Promise.race` takes the first that resolves or rejects {{jsxref("Promise")}}.
 
 ```js
 const promise1 = new Promise((resolve, reject) => {
@@ -186,7 +186,7 @@ Promise.race([promise1, promise2]).then((value) => {
 // expected output: "failed with reason: two"
 ```
 
-{{jsxref("Promise.any")}} takes the first fulfilled {{jsxref("Promise")}}.
+{{jsxref("Promise.any")}} takes the first resolved {{jsxref("Promise")}}.
 
 ```js
 const promise1 = new Promise((resolve, reject) => {
