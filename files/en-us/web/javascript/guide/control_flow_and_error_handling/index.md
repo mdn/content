@@ -178,12 +178,12 @@ conditional statement.
 > For example:
 >
 > ```js
-> var b = new Boolean(false);
+> const b = new Boolean(false);
 > if (b)         // this condition evaluates to true
 > if (b == true) // this condition evaluates to false
 > ```
 
-#### **Example**
+#### Example
 
 In the following example, the function `checkData` returns `true`
 if the number of characters in a `Text` object is three. Otherwise, it
@@ -213,15 +213,14 @@ A `switch` statement looks like this:
 ```js
 switch (expression) {
   case label_1:
-    statements_1
-    [break;]
+    statements_1;
+    break;
   case label_2:
-    statements_2
-    [break;]
+    statements_2;
+    break;
     …
   default:
-    statements_def
-    [break;]
+    statements_default;
 }
 ```
 
@@ -248,9 +247,9 @@ executed, and then continues execution at the statement following `switch`.
 If `break` is omitted, the program continues execution inside the
 `switch` statement (and will evaluate the next `case`, and so on).
 
-##### **Example**
+##### Example
 
-In the following example, if `fruittype` evaluates to
+In the following example, if `fruitType` evaluates to
 `'Bananas'`, the program matches the value with case `'Bananas'`
 and executes the associated statement. When `break` is encountered, the
 program exits the `switch` and continues execution from the statement
@@ -258,7 +257,7 @@ following `switch`. If `break` were omitted, the statement for
 `case 'Cherries'` would also be executed.
 
 ```js
-switch (fruittype) {
+switch (fruitType) {
   case 'Oranges':
     console.log('Oranges are $0.59 a pound.');
     break;
@@ -278,7 +277,7 @@ switch (fruittype) {
     console.log('Mangoes and papayas are $2.79 a pound.');
     break;
   default:
-   console.log(`Sorry, we are out of ${fruittype}.`);
+    console.log(`Sorry, we are out of ${fruitType}.`);
 }
 console.log("Is there anything else you'd like?");
 ```
@@ -322,26 +321,6 @@ throw true;       // Boolean type
 throw {toString: function() { return "I'm an object!"; } };
 ```
 
-> **Note:** You can specify an object when you throw an exception. You can
-> then reference the object's properties in the `catch` block.
-
-```js
-// Create an object type UserException
-function UserException(message) {
-  this.message = message;
-  this.name = 'UserException';
-}
-
-// Make the exception convert to a pretty string when used as a string
-// (e.g., by the error console)
-UserException.prototype.toString = function() {
-  return `${this.name}: "${this.message}"`;
-}
-
-// Create an instance of the object type and throw it
-throw new UserException('Value too high');
-```
-
 ### `try...catch` statement
 
 The `try...catch` statement marks a block of statements to try, and
@@ -365,7 +344,7 @@ The following example uses a `try...catch` statement. The example calls a
 function that retrieves a month name from an array based on the value passed to the
 function. If the value does not correspond to a month number
 (`1`–`12`), an exception is thrown with the value
-`"InvalidMonthNo"` and the statements in the `catch` block set the
+`'InvalidMonthNo'` and the statements in the `catch` block set the
 `monthName` variable to `'unknown'`.
 
 ```js
