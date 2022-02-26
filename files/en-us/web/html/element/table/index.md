@@ -354,22 +354,25 @@ The following example adds an event handler to every `<th>` element of every `<t
 ##### JavaScript
 
 ```js
-for (let table of document.querySelectorAll('table')) {
-  for (let th of table.tHead.rows[0].cells) {
-    th.onclick = function(){
-      const tBody = table.tBodies[0];
-      const rows = tBody.rows;
-      for (let tr of rows) {
-        Array.prototype.slice.call(rows)
-          .sort(function(tr1, tr2){
-            const cellIndex = th.cellIndex;
-            return tr1.cells[cellIndex].textContent.localeCompare(tr2.cells[cellIndex].textContent);
-          })
-          .forEach(function(tr){
-            this.appendChild(this.removeChild(tr));
-          }, tBody);
-      }
-    }
+const allTables = document.querySelectorAll('table');
+
+for (let table of allTables) {
+  const tBody = table.tBodies[0];
+  const rows = Array.from(tBody.rows);
+  const headerCells = table.tHead.rows[0].cells;
+
+  for (let th of headerCells) {
+    const cellIndex = th.cellIndex;
+
+    th.addEventListener('click', () => {
+      rows.sort((tr1, tr2) => {
+        const tr1Text = tr1.cells[cellIndex].textContent;
+        const tr2Text = tr2.cells[cellIndex].textContent;
+        return tr1Text.localeCompare(tr2Text);
+      });
+
+      tBody.append(...rows);
+    });
   }
 }
 ```
