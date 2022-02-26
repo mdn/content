@@ -234,21 +234,19 @@ This example combines all buffers into a single buffer:
 ```js
 function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
-  let decoder = new TextDecoder("utf-8");
+  let decoder = new TextDecoder(); // defaults to utf-8
   let encoder = new TextEncoder();
 
-  let data = [];
+  let data = [], combinedLength = 0;
   filter.ondata = event => {
-    data.push(new Uint8Array(event.data));
+    let buffer = new Uint8Array(event.data);
+    data.push(buffer);
+    combinedLength += buffer.length;
   };
 
-  filter.onstop = event => {
-    let combinedLength = 0;
-    for (let buffer of data) {
-      combinedLength += buffer.length;
-    }
-    let combinedArray = new Uint8Array(combinedLength);
+  filter.onstop = () => {
     let writeOffset = 0;
+    let combinedArray = new Uint8Array(combinedLength);
     for (let buffer of data) {
       combinedArray.set(buffer, writeOffset);
       writeOffset += buffer.length;
