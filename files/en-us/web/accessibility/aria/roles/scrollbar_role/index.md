@@ -46,7 +46,7 @@ Like a native scroll bar, users interact with `scrollbar` elements directly or i
 
 When using a mouse, the user must be able to activate the `scrollbar` by clicking the scroll arrows at either end of the scroll bar, if present, clicking an empty portion of the scroll track, as well as clicking and dragging the scroll thumb. 
 
-Keyboard scrolling must also be supported. When focus is within the viewport controlled by a `scrollbar`, the <kbd>Up Arrow</kbd> and <kbd>Down Arrow</kbd> (or <kbd>Left Arrow</kbd> and <kbd>Right Arrow</kbd> for a horizontal scroll bar)  should move the scroll bar thumb proportionally. Additionally, the <kbd>Page Up</kbd>, <kbd>Page Down</kbd>, and <kbd>Space</kbd> keys must move the content and the scroll thumb the height (or width) of the viewport for each key press until the bottom or top of the content is in view. 
+Keyboard scrolling must also be supported. When focus is within the viewport controlled by a `scrollbar`, the <kbd>Up Arrow</kbd> and <kbd>Down Arrow</kbd> (or <kbd>Left Arrow</kbd> and <kbd>Right Arrow</kbd> for a horizontal scroll bar)  should move the scroll bar thumb proportionally. Additionally, the <kbd>Page Up</kbd>, <kbd>Page Down</kbd>, <kbd>Space</kbd>, and <kbd>Shift + Space</kbd> keys must move the content and the scroll thumb the height (or width) of the viewport for each key press until the bottom or top (or left or right) of the content is in view. 
 
 JavaScript must be used to translate the `scrollbar` action into scrolling commands, providing the user with feedback by:
 
@@ -83,18 +83,19 @@ From the assitive technology user's perspective, the heading does not exist sinc
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls) (Required)
+  - : Identifies the viewport, via the `id`, whose contents controlled by the scrollbar.
 - [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) (Required)
   - : Set to a decimal value between `0`, or `aria-valuemin` if present, and `aria-valuemax` indicating the current value of the scrollbar.
 - [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext)
-  - : Assistive technologies often present the value of `aria-valuenow` as a percentage. If this would not be accurate use this property to make the progress bar value understandable.
+  - : Assistive technologies often present the value of `aria-valuenow` as a percentage. If this would not be helpful, use this property to make the scrollbar value more understandable to users.
 - [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin)
   - : Set to a decimal value representing the minimum value, and less than `aria-valuemax`. If not present, the default value is `0`.
 - [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
   - : Set to a decimal value representing the maximum value, and greater than `aria-valuemin`. If not present, the default value is `100`.
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
-  - : The {{HTMLattrxref('id')}} of an element containing text serving as a label. An accessible name is required.
+  - : When not using a native form control and therefore not able to associate the scrollbar with a {{HTMLElement('label')}}, if visible text is available that can provide the required accessible name, set to the {{HTMLattrxref('id')}} of an element containing text serving as a label. Otherwise, use `aria-label`.
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) 
-  - : If no {{htmlelement('label')}} can be used, and no visible text is present that can be referenced by `aria-labelledby`, provides the string value that labels the `scrollbar` element providing an accessible name.
+  - : If no {{htmlelement('label')}} can be used, and no visible text is present that can be referenced by `aria-labelledby`, provides the string value that labels the `scrollbar` element providing the required accessible name.
 - [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation)
   - : By default, the orientation is `vertical`. The property can be included and set to `horizontal`, `undefined` (the default for all roles unless otherwise specified), or `vertical`.
 
@@ -108,11 +109,9 @@ From the assitive technology user's perspective, the heading does not exist sinc
   - : With horizontal scrolling, the content in the viewport moves left the width of one character with the thumb moving left across the scroll bar slider proportionally, until the left edge of the content abuts the left end of the viewport and the thumb is aligned on the left end of the scrollbar. 
 - <kbd>Right Arrow</kbd>
   - : With horizontal scrolling, the content in the viewport moves right the width of one character with the thumb moving right across the scroll bar slider proportionally, until the right edge of the content abuts the right end of the viewport and the thumb is aligned on the right end of the scrollbar.  
-- <kbd>Page Up</kbd>
-- <kbd>Shift + Space</kbd>
+- <kbd>Page Up</kbd>  and <kbd>Shift + Space</kbd>
   - : The content in the viewport moves up the height of one viewport with the thumb moving up the scroll bar slider proportionally, until the top of the content and scrollbar are reached.
-- <kbd>Page Down</kbd>
-- <kbd>Space</kbd>
+- <kbd>Page Down</kbd> and  <kbd>Space</kbd>
   - : The content in the viewport moves down the height of one viewport with the thumb moving down the scroll bar slider proportionally, until the bottom of the content and scrollbar are reached.the bottom or top of the content is in view. 
 
 ## Examples
