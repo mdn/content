@@ -456,56 +456,6 @@ Let's look at a real example to demonstrate scoping.
 
 > **Note:** The [ReferenceError: "x" is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined) error is one of the most common you'll encounter. If you get this error and you are sure that you have defined the variable in question, check what scope it is in.
 
-### Functions inside functions
-
-Keep in mind that you can call a function from anywhere, even inside another function. This is often used as a way to keep code tidy — if you have a big complex function, it is easier to understand if you break it down into several sub-functions:
-
-```js
-function myBigFunction() {
-  const myValue;
-
-  subFunction1();
-  subFunction2();
-  subFunction3();
-}
-
-function subFunction1() {
-  console.log(myValue);
-}
-
-function subFunction2() {
-  console.log(myValue);
-}
-
-function subFunction3() {
-  console.log(myValue);
-}
-```
-
-Just make sure that the values being used inside the function are properly in scope. The example above would throw an error `ReferenceError: myValue is not defined`, because although the `myValue` variable is defined in the same scope as the function calls, it is not defined inside the function definitions — the actual code that is run when the functions are called. To make this work, you'd have to pass the value into the function as a parameter, like this:
-
-```js
-function myBigFunction() {
-  const myValue = 1;
-
-  subFunction1(myValue);
-  subFunction2(myValue);
-  subFunction3(myValue);
-}
-
-function subFunction1(value) {
-  console.log(value);
-}
-
-function subFunction2(value) {
-  console.log(value);
-}
-
-function subFunction3(value) {
-  console.log(value);
-}
-```
-
 ## Test your skills!
 
 You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Functions](/en-US/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions). These tests require skills that are covered in the next two articles, so you might want to read those first before trying it.
