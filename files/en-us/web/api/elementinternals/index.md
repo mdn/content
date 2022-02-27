@@ -162,9 +162,9 @@ console.log(element.internals_.form);
 
 {{Compat}}
 
-## Polyfills
+## Polyfill
 
-- [ElementInternals polyfill](https://www.npmjs.com/package/element-internals-polyfill)
+[ElementInternals polyfill](https://www.npmjs.com/package/element-internals-polyfill)
 
 ## See also
 
