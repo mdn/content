@@ -38,13 +38,13 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
 - {{DOMxRef("Element.className")}}
   - : Is a {{DOMxRef("DOMString")}} representing the class of the element.
 - {{DOMxRef("Element.clientHeight")}} {{readOnlyInline}}
-  - : Returns a {{jsxref("Number")}} representing the inner height of the element.
+  - : Returns a number representing the inner height of the element.
 - {{DOMxRef("Element.clientLeft")}} {{readOnlyInline}}
-  - : Returns a {{jsxref("Number")}} representing the width of the left border of the element.
+  - : Returns a number representing the width of the left border of the element.
 - {{DOMxRef("Element.clientTop")}} {{readOnlyInline}}
-  - : Returns a {{jsxref("Number")}} representing the width of the top border of the element.
+  - : Returns a number representing the width of the top border of the element.
 - {{DOMxRef("Element.clientWidth")}} {{readOnlyInline}}
-  - : Returns a {{jsxref("Number")}} representing the inner width of the element.
+  - : Returns a number representing the inner width of the element.
 - {{domxref("Element.firstElementChild")}} {{readonlyInline}}
   - : Returns the first child element of this element.
 - {{DOMxRef("Element.id")}}
@@ -72,17 +72,17 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
 - {{DOMxRef("Element.previousElementSibling")}} {{readOnlyInline}}
   - : Is a {{DOMxRef("Element")}}, the element immediately preceding the given one in the tree, or `null` if there is no sibling element.
 - {{DOMxRef("Element.scrollHeight")}} {{readOnlyInline}}
-  - : Returns a {{jsxref("Number")}} representing the scroll view height of an element.
+  - : Returns a number representing the scroll view height of an element.
 - {{DOMxRef("Element.scrollLeft")}}
-  - : Is a {{jsxref("Number")}} representing the left scroll offset of the element.
+  - : Is a number representing the left scroll offset of the element.
 - {{DOMxRef("Element.scrollLeftMax")}} {{Non-standard_Inline}} {{readOnlyInline}}
-  - : Returns a {{jsxref("Number")}} representing the maximum left scroll offset possible for the element.
+  - : Returns a number representing the maximum left scroll offset possible for the element.
 - {{DOMxRef("Element.scrollTop")}}
-  - : A {{jsxref("Number")}} representing number of pixels the top of the document is scrolled vertically.
+  - : A number representing number of pixels the top of the document is scrolled vertically.
 - {{DOMxRef("Element.scrollTopMax")}} {{Non-standard_Inline}} {{readOnlyInline}}
-  - : Returns a {{jsxref("Number")}} representing the maximum top scroll offset possible for the element.
+  - : Returns a number representing the maximum top scroll offset possible for the element.
 - {{DOMxRef("Element.scrollWidth")}} {{readOnlyInline}}
-  - : Returns a {{jsxref("Number")}} representing the scroll view width of the element.
+  - : Returns a number representing the scroll view width of the element.
 - {{DOMxRef("Element.shadowRoot")}}{{readOnlyInline}}
   - : Returns the open shadow root that is hosted by the element, or null if no open shadow root is present.
 - {{DOMxRef("Element.openOrClosedShadowRoot")}} {{Non-standard_Inline}}{{readOnlyInline}}
@@ -92,7 +92,7 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
 - {{DOMxRef("Element.slot")}} {{Experimental_Inline}}
   - : Returns the name of the shadow DOM slot the element is inserted in.
 - {{DOMxRef("Element.tagName")}} {{readOnlyInline}}
-  - : Returns a {{jsxref("String")}} with the name of the tag for the given element.
+  - : Returns a string with the name of the tag for the given element.
 
 ### Properties included from ARIA
 
@@ -171,11 +171,11 @@ _The `Element` interface includes the following properties, defined on the `ARIA
 - {{domxref("Element.ariaSort")}}
   - : Is a {{domxref("DOMString")}} reflecting the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort) attribute, which indicates if items in a table or grid are sorted in ascending or descending order.
 - {{domxref("Element.ariaValueMax")}}
-  - : Is a {{domxref("DOMString")}} reflecting the [`aria-valueMax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valueMax) attribute, which defines the maximum allowed value for a range widget.
+  - : Is a {{domxref("DOMString")}} reflecting the [`aria-valueMax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) attribute, which defines the maximum allowed value for a range widget.
 - {{domxref("Element.ariaValueMin")}}
-  - : Is a {{domxref("DOMString")}} reflecting the [`aria-valueMin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valueMin) attribute, which defines the minimum allowed value for a range widget.
+  - : Is a {{domxref("DOMString")}} reflecting the [`aria-valueMin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) attribute, which defines the minimum allowed value for a range widget.
 - {{domxref("Element.ariaValueNow")}}
-  - : Is a {{domxref("DOMString")}} reflecting the [`aria-valueNow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valueNow) attribute, which defines the current value for a range widget.
+  - : Is a {{domxref("DOMString")}} reflecting the [`aria-valueNow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) attribute, which defines the current value for a range widget.
 - {{domxref("Element.ariaValueText")}}
   - : Is a {{domxref("DOMString")}} reflecting the [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) attribute, which defines the human readable text alternative of aria-valuenow for a range widget.
 
