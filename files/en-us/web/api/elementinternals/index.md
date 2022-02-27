@@ -162,11 +162,9 @@ console.log(element.internals_.form);
 
 {{Compat}}
 
-## Polyfill
-
-[ElementInternals polyfill](https://www.npmjs.com/package/element-internals-polyfill)
-
 ## See also
 
 - [More capable form controls](https://web.dev/more-capable-form-controls/)
 - [Creating custom form controls with ElementInternals](https://css-tricks.com/creating-custom-form-controls-with-elementinternals/)
+- [ElementInternals polyfill](https://www.npmjs.com/package/element-internals-polyfill)
+
