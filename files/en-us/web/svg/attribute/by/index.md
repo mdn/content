@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/by
 tags:
   - SVG
   - SVG Attribute
-browser-compat: svg.elements.animate.by
+browser-compat: svg.elements.animateTransform.by
 ---
 {{SVGRef}}
 

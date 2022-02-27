@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/vector-effect
 tags:
   - SVG
   - SVG Attribute
-browser-compat: svg.attributes.vector-effect
+browser-compat: svg.attributes.presentation.vector-effect
 ---
 {{SVGRef}}
 

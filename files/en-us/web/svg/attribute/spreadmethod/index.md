@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/spreadMethod
 tags:
   - SVG
   - SVG Attribute
-browser-compat: svg.attributes.presentation.spreadMethod
+browser-compat: svg.elements.linearGradient.spreadMethod
 ---
 {{SVGRef}}
 
