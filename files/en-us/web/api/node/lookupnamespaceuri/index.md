@@ -26,7 +26,7 @@ lookupNamespaceURI(prefix);
 
 ### Return value
 
-A {{jsxref("String")}} containing the namespace URI corresponding to the prefix.
+A string containing the namespace URI corresponding to the prefix.
 If the prefix is not found, it returns `null`.
 If the requested `prefix` is `null`, it returns the default namespace URI.
 
