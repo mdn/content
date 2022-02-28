@@ -94,6 +94,8 @@ This means it may be less efficient for sparse arrays, compared to methods that 
 If a `thisArg` parameter is provided to `groupByToMap()`, it will be used as the `this` value inside each invocation of the `callbackFn`.
 If it is not provided, then {{jsxref("undefined")}} is used.
 
+### Mutating the array in the callback
+
 The `groupByToMap()` method does not mutate the array on which it is called, but the function provided to `callbackFn` can.
 Note however that the elements processed by `groupByToMap()` are set _before_ the first invocation of `callbackFn`.
 Therefore:
