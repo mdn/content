@@ -172,3 +172,4 @@ p {
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
 - {{cssxref("text-shadow")}}
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Border Radius Generator](https://www.cssgenerator.me/css-border-radius-generator.html)
