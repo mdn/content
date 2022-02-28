@@ -12086,7 +12086,6 @@
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat/resolvedOptions	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat/supportedLocalesOf	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf
-/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/keys	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/values
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
