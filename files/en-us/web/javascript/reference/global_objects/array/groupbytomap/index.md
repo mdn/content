@@ -100,7 +100,7 @@ Therefore:
 ## Examples
 
 First we define an array containing objects representing an inventory of different foodstuffs.
-Each food has a `type`, which might need to be stored differently, and a `quantity` that can be used to determine when we need to reorder each item.
+Each food has a `type` and a `quantity`.
 
 ```js
 const inventory = [
@@ -112,14 +112,14 @@ const inventory = [
 ];
 ```
 
-The code below uses `groupByToMap()` with an arrow function that returns the object keys named `reorder` or `sufficient`, depending on whether the element has `quantity < 6`.
+The code below uses `groupByToMap()` with an arrow function that returns the object keys named `restock` or `sufficient`, depending on whether the element has `quantity < 6`.
 The returned `result` object is a `Map` so we need to call `get()` with the key to obtain the array.
 
 ```js
-let reorder  = { reorder: true };
-const sufficient = { reorder: false };
-const result = inventory.groupByToMap( ({ quantity }) => quantity < 6 ? reorder : sufficient );
-console.log(result.get(reorder));
+let restock  = { restock: true };
+const sufficient = { restock: false };
+const result = inventory.groupByToMap( ({ quantity }) => quantity < 6 ? restock : sufficient );
+console.log(result.get(restock));
 // expected output: Array [Object { name: "bananas", type: "fruit", quantity: 5 }]
 ```
 
@@ -127,20 +127,19 @@ Note that the function argument `{ quantity }` is a basic example of [object des
 This unpacks the `quantity` property of an object passed as a parameter, and assigns it to a variable named `quantity` in the body of the function.
 This is a very succinct way to access the relevant values of elements within a function.
 
-
 An object key can be modified and still used.
 However you can't recreate the key and still use it.
 For this reason it is important that anything that needs to use the map keeps a reference to its keys.
 
 ```js
 // A modified key can still be used in a Map
-reorder['fast']  = true ;
-console.log(result.get(reorder));
+restock['fast']  = true ;
+console.log(result.get(restock));
 // expected output: Array [Object { name: "bananas", type: "fruit", quantity: 5 }]
 
 // But you can't use a different key, even if it has the same structure!
-const reorder2  = { reorder: true };
-console.log(result.get(reorder2));
+const restock2  = { restock: true };
+console.log(result.get(restock2));
 // expected output: undefined
 ```
 

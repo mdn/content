@@ -98,7 +98,7 @@ Therefore:
 ## Examples
 
 First we define an array containing objects representing an inventory of different foodstuffs.
-Each food has a `type`, which might need to be stored differently, and a `quantity` that can be used to determine when we need to reorder each item.
+Each food has a `type` and a `quantity`.
 
 ```js
 const inventory = [
@@ -139,18 +139,18 @@ This unpacks the `type` property of an object passed as a parameter, and assigns
 This is a very succinct way to access the relevant values of elements within a function.
 
 We can also create groups inferred from values in one or more properties of the elements.
-Below is a very similar example that uses a callback function and the `quantity` field to define that an element is in the `ok` or `reorder` groups.
+Below is a very similar example that puts the items into `ok` or `restock` groups based on the value of the `quantity` field.
 
 ```js
 function myCallback( { quantity } ) {
-  return quantity > 5 ? 'ok' : 'reorder';
+  return quantity > 5 ? 'ok' : 'restock';
 }
 
 result = inventory.groupBy( myCallback );
 
 /* Result is:
 { 
-  reorder: [
+  restock: [
     { name: "asparagus", type: "vegetables", quantity: 5 },
     { name: "bananas", type: "fruit", quantity: 0 },
     { name: "cherries", type: "fruit", quantity: 5 }
