@@ -559,7 +559,47 @@ This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/do
 
 ## JavaScript
 
-No experimental features
+### Array grouping methods
+
+The {{jsxref("Array.prototype.groupBy()")}} and {{jsxref("Array.prototype.groupByToMap()")}} methods are used to group the elements of an array using a string or value, respectively, returned by a test function.
+The `groupBy` method should be used when strings can be used to represent element groups, while `groupByToMap()` should be used in cases where it makes sense to use a value as the key.
+(See {{bug(1739648)}} for more details.)
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version removed</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>98</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>98</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>98</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>98</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">None</td>
+    </tr>
+  </tbody>
+</table>
 
 ## APIs
 
