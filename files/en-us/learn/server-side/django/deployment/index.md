@@ -441,7 +441,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 #### Requirements
 
-The Python requirements of your web application must be stored in a file **requirements.txt** in the root of your repository. Heroku will then install these automatically when it rebuilds your environment. You can create this file using _pip_ on the command line (run the following in the repo root):
+The Python requirements of your web application must be stored in a file **requirements.txt** in the root of your repository.
+Heroku will then install these automatically when it rebuilds your environment. You can create this file using _pip_ on the command line (run the following in the repo root):
 
 ```bash
 pip3 freeze > requirements.txt
@@ -452,27 +453,30 @@ Please delete any other dependencies not listed below, unless you've explicitly 
 
 ```plain
 dj-database-url==0.5.0
-Django==3.1.2
-gunicorn==20.0.4
-psycopg2-binary==2.8.6
-whitenoise==5.2.0
+Django==4.0.2
+gunicorn==20.1.0
+psycopg2-binary==2.9.3
+wheel==0.37.1
+whitenoise==6.0.0
 ```
 
-> **Note:** Make sure that a **psycopg2** line like the one above is present! Even if you didn't install this locally then you should still add it to **requirements.txt**.
+> **Note:** Make sure that a **psycopg2** line like the one above is present!
+> Even if you didn't install this locally then you should still add it to **requirements.txt**.
 
 #### Runtime
 
 The **runtime.txt** file, if defined, tells Heroku which programming language to use. Create the file in the root of the repo and add the following text:
 
 ```plain
-python-3.8.6
+python-3.10.2
 ```
 
 > **Note:** Heroku only supports a small number of [Python runtimes](https://devcenter.heroku.com/articles/python-support#supported-python-runtimes) (at time of writing, this includes the one above). Heroku will use a supported runtime irrespective of the value specified in this file.
 
 #### Re-test and save changes to GitHub
 
-Before we proceed, lets test the site again locally and make sure it wasn't broken by any of our changes above. Run the development web server as usual and then check the site still works as you expect on your browser.
+Before we proceed, lets test the site again locally and make sure it wasn't broken by any of our changes above.
+Run the development web server as usual and then check the site still works as you expect on your browser.
 
 ```bash
 python3 manage.py runserver

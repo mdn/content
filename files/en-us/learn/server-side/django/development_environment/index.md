@@ -58,13 +58,15 @@ Each of these options requires a slightly different configuration and setup. The
 
 #### What operating systems are supported?
 
-Django web applications can be run on almost any machine that can run the Python 3 programming language: Windows, macOS, Linux/Unix, Solaris, to name just a few. Almost any computer should have the necessary performance to run Django during development.
+Django web applications can be run on almost any machine that can run the Python 3 programming language: Windows, macOS, Linux/Unix, Solaris, to name just a few.
+Almost any computer should have the necessary performance to run Django during development.
 
 In this article, we'll provide instructions for Windows, macOS, and Linux/Unix.
 
 #### What version of Python should be used?
 
-You can use any Python version supported by your target Django release. For Django 3.1.2 the allowed versions are Python 3.6 to 3.8 (see [FAQ:Installation](https://docs.djangoproject.com/en/3.1/faq/install/#what-python-version-can-i-use-with-django)).
+You can use any Python version supported by your target Django release.
+For Django 4.0.2 the allowed versions are Python 3.8 to 3.10 (see [FAQ:Installation](https://docs.djangoproject.com/en/4.0/faq/install/#what-python-version-can-i-use-with-django)).
 
 The Django project _recommends_ (and "officially supports") using the newest available supported Python release.
 
@@ -123,6 +125,10 @@ You can install _pip3_ in the bash terminal using:
 sudo apt install python3-pip
 ```
 
+> **Note** Python 3.8 is the oldest version [supported by Django 4.0](https://docs.djangoproject.com/en/4.0/faq/install/#what-python-version-can-i-use-with-django).
+> While Django recommend you update to the latest version, you _need_ to for this tutorial.
+> If you want to, then there are instructions on the Internet.
+
 ### macOS
 
 macOS "El Capitan" and other more recent versions do not include Python 3. You can confirm this by running the following commands in the zsh or bash terminal:
@@ -137,8 +143,8 @@ You can easily install Python 3 (along with the _pip3_ tool) from [python.org](h
 1. Download the required installer:
 
     1. Go to <https://www.python.org/downloads/macos/>
-    2. Download the most recent [supported version](https://docs.djangoproject.com/en/3.1/faq/install/#what-python-version-can-i-use-with-django) that works with Django 3.1.2.
-       (at time of writing this is Python 3.8.12).
+    2. Download the most recent [supported version](https://docs.djangoproject.com/en/4.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 4.0.2.
+       (at time of writing this is Python 3.10.2).
 
 2. Locate the file using _Finder_, and double-click the package file. Following the installation prompts.
 
@@ -146,7 +152,7 @@ You can now confirm successful installation by checking for the _Python 3_ versi
 
 ```bash
 python3 -V
- Python 3.8.12
+ Python 3.10.2
 ```
 
 You can similarly check that _pip3_ is installed by listing the available packages:
@@ -162,8 +168,8 @@ Windows doesn't include Python by default, but you can easily install it (along 
 1. Download the required installer:
 
     1. Go to <https://www.python.org/downloads/windows/>
-    2. Download the most recent [supported version](https://docs.djangoproject.com/en/3.1/faq/install/#what-python-version-can-i-use-with-django) that works with Django 3.1.2.
-       (at time of writing this is Python 3.8.12).
+    2. Download the most recent [supported version](https://docs.djangoproject.com/en/4.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 4.0.2.
+       (at time of writing this is Python 3.10.2).
 2. Install Python by double-clicking on the downloaded file and following the installation prompts
 3. Be sure to check the box labeled "Add Python to PATH"
 
@@ -171,7 +177,7 @@ You can then verify that Python 3 was installed by entering the following text i
 
 ```bash
 py -3 -V
- Python 3.8.12
+ Python 3.10.2
 ```
 
 The Windows installer incorporates _pip3_ (the Python package manager) by default.
