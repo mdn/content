@@ -74,7 +74,7 @@ Here, `{ x++; }` is the block statement.
 >
 > This outputs `2` because the `var x` statement within the block
 > is in the same scope as the `var x` statement before the block. (In C or
-> Java, the equivalent code would have outputted `1`.)
+> Java, the equivalent code would have output `1`.)
 >
 > **Since ECMAScript2015**, the `let` and
 > `const` variable declarations are block-scoped. See the
