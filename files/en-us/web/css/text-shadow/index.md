@@ -125,3 +125,4 @@ This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first
 - {{cssxref("box-shadow")}}
 - The {{cssxref("&lt;color&gt;")}} data type (for specifying the shadow color)
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Text Shadow Generator](https://www.cssgenerator.me/css-text-shadow-generator.html)
