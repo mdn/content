@@ -18,14 +18,8 @@ The final returned {{jsxref("Map")}} uses the unique values from the test functi
 
 <!-- {{EmbedInteractiveExample("pages/js/array-groupbytomap.html")}} -->
 
-The elements in the {{jsxref("Map")}} and the original array are the same (not {{glossary("deep copy","deep copies")}}).
-Changing the internal structure of the elements will be reflected in both the original array and the returned {{jsxref("Map")}}.
-
-An object that needs to access the groups must keep a reference to the original key; the properties of a key can be modified, but you can't use another object that just happens to have the same name and properties.
-
-This method is useful when mapping related information to a specific object that might change over time.
-If the mapping object is invariant then you could instead use {{jsxref("Array.prototype.groupBy()")}} to group the elements, representing the object with a string.
-
+The method is primarily useful when grouping elements that are associated with an object, and in particular when that object might change over time.
+If the object is invariant, you might instead represent it using a string, and group elements with {{jsxref("Array.prototype.groupBy()")}}.
 
 ## Syntax
 
@@ -81,6 +75,16 @@ The callback function returns a value indicating the group of the associated ele
 The values returned by `callbackFn` are used as keys for the {{jsxref("Map")}} returned by `groupByToMap()`.
 Each key has an associated array containing all the elements for which the callback returned the same value.
 
+The elements in the returned {{jsxref("Map")}} and the original array are the same (not {{glossary("deep copy","deep copies")}}).
+Changing the internal structure of the elements will be reflected in both the original array and the returned {{jsxref("Map")}}.
+
+This method is useful when you need to group information that is related to a particular object that might potentially change over time.
+This is because even if the object is modified, it will continue to work as a key to the returned `Map`.
+If you instead create a string representation for the object and use that as a grouping key in {{jsxref("Array.prototype.groupBy()")}}, you must maintain the mapping between the original object and its representation as the object changes.
+
+> **Note:** An object that needs to access the groups must keep a reference to the _original_ key (although you may modify its properties).
+> You can't use another object that just happens to have the same name and properties.
+
 `callbackFn` is called with the value of the current element, the current index, and the array itself.
 While groups often depend only on the current element, it is possible to implement grouping strategies based on the values of other elements in the array.
 
@@ -131,17 +135,17 @@ Note that the function argument `{ quantity }` is a basic example of [object des
 This unpacks the `quantity` property of an object passed as a parameter, and assigns it to a variable named `quantity` in the body of the function.
 This is a very succinct way to access the relevant values of elements within a function.
 
-An object key can be modified and still used.
+The key to a `Map` can be modified and still used.
 However you can't recreate the key and still use it.
 For this reason it is important that anything that needs to use the map keeps a reference to its keys.
 
 ```js
-// A modified key can still be used in a Map
+// The key can be modified and still used
 restock['fast']  = true ;
 console.log(result.get(restock));
 // expected output: Array [Object { name: "bananas", type: "fruit", quantity: 5 }]
 
-// But you can't use a different key, even if it has the same structure!
+// A new key can't be used, even if it has the same structure!
 const restock2  = { restock: true };
 console.log(result.get(restock2));
 // expected output: undefined

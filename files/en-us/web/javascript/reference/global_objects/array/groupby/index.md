@@ -17,10 +17,7 @@ The returned object has separate properties for each group, containing arrays wi
 
 <!-- {{EmbedInteractiveExample("pages/js/array-groupby.html")}} -->
 
-Note that the returned object references the _same_ elements as the original array (not {{glossary("deep copy","deep copies")}}).
-Changing the internal structure of these elements will be reflected in both the original array and the returned object.
-
-This method can be used when group names can be represented by strings.
+This method should be used when group names can be represented by strings.
 If you need to group elements using a key that is some arbitrary value, use {{jsxref("Array.prototype.groupByToMap()")}} instead.
 
 ## Syntax
@@ -77,6 +74,9 @@ The value is an object that does not inherit from `Object.prototype`.
 The `groupBy()` method executes the `callbackFn` function once for each index of the array, returning a string (or value that can be coerced to a string) indicating the group of the element.
 A new property and array is created in the result object for each unique group name that is returned by the callback.
 Each element is added to the array in the property that corresponds to its group.
+
+Note that the returned object references the _same_ elements as the original array (not {{glossary("deep copy","deep copies")}}).
+Changing the internal structure of these elements will be reflected in both the original array and the returned object.
 
 `callbackFn` is called with the value of the current element, the current index, and the array itself.
 While groups often depend only on the current element, it is possible to implement grouping strategies based on the values of other elements in the array.
