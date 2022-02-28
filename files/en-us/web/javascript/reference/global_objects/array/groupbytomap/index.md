@@ -51,7 +51,7 @@ groupByToMap(function(element, index, array) { /* ... */ }, thisArg)
     - `index`
       - : The index (position) of the current element in the array.
     - `array`
-      - : The array that `groupBy()` was called on.
+      - : The array that `groupByToMap()` was called on.
 
     The value ({{Glossary("object")}} or {{Glossary("primitive")}}) returned from the callback indicates the group of the current element.
 
@@ -82,7 +82,7 @@ This method is useful when you need to group information that is related to a pa
 This is because even if the object is modified, it will continue to work as a key to the returned `Map`.
 If you instead create a string representation for the object and use that as a grouping key in {{jsxref("Array.prototype.groupBy()")}}, you must maintain the mapping between the original object and its representation as the object changes.
 
-> **Note:** An object that needs to access the groups must keep a reference to the _original_ key (although you may modify its properties).
+> **Note:** To access the groups in the returned `Map`, you must use the same object that was originally used as a key in the `Map` (although you may modify its properties).
 > You can't use another object that just happens to have the same name and properties.
 
 `callbackFn` is called with the value of the current element, the current index, and the array itself.
