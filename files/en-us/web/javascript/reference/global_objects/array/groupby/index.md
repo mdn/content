@@ -50,9 +50,9 @@ groupBy(function(element, index, array) { /* ... */ }, thisArg)
 
     - `element`
       - : The value of the current element in the array.
-    - `index` {{optional_inline}}
+    - `index`
       - : The index (position) of the current element in the array.
-    - `array` {{optional_inline}}
+    - `array`
       - : The array that `groupBy()` was called on.
 
     The object returned from the callback indicates the group of the current element.
