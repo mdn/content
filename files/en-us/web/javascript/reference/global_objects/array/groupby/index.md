@@ -78,6 +78,9 @@ The `groupBy()` method executes the `callbackFn` function once for each index of
 A new property and array is created in the result object for each unique group name that is returned by the callback.
 Each element is added to the array in the property that corresponds to its group.
 
+`callbackFn` is called with the value of the current element, the current index, and the array itself.
+While groups often depend only on the current element, it is possible to implement grouping strategies based on the values of other elements in the array.
+
 `callbackFn` is invoked for _every_ index of the array, not just those with assigned values.
 This means it may be less efficient for sparse arrays, compared to methods that only visit assigned values.
 
@@ -163,7 +166,6 @@ result = inventory.groupBy( myCallback );
 */
 ```
 
-The callback syntax provides access to the array and current index, so it is possible to implement grouping strategies based on the values of other elements in the array.
 
 ## Specifications
 

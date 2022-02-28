@@ -76,9 +76,13 @@ A {{jsxref("Map")}} object with keys for each group, each assigned to an array c
 
 ## Description
 
-The `groupByToMap()` method executes the callback function once for each index of the array. The callback function returns a value indicating the group of the associated element.
-The values returned by the callback are used as keys for the {{jsxref("Map")}} returned by `groupByToMap()`.
+The `groupByToMap()` method executes `callbackFn` once for each index of the array.
+The callback function returns a value indicating the group of the associated element.
+The values returned by `callbackFn` are used as keys for the {{jsxref("Map")}} returned by `groupByToMap()`.
 Each key has an associated array containing all the elements for which the callback returned the same value.
+
+`callbackFn` is called with the value of the current element, the current index, and the array itself.
+While groups often depend only on the current element, it is possible to implement grouping strategies based on the values of other elements in the array.
 
 `callbackFn` is invoked for _every_ index of the array, not just those with assigned values.
 This means it may be less efficient for sparse arrays, compared to methods that only visit assigned values.
@@ -142,8 +146,6 @@ const restock2  = { restock: true };
 console.log(result.get(restock2));
 // expected output: undefined
 ```
-
-The callback syntax provides access to the array and current index, so it is possible to implement grouping strategies based on the values of other elements in the array.
 
 ## Specifications
 
