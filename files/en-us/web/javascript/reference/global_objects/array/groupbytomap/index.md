@@ -76,7 +76,7 @@ A {{jsxref("Map")}} object with keys for each group, each assigned to an array c
 
 ## Description
 
-The `groupByToMap()` method executes the `callbackFn` function once for each index of the array, returning a value indicating the group of the associated element.
+The `groupByToMap()` method executes the callback function once for each index of the array. The callback function returns a value indicating the group of the associated element.
 The values returned by the callback are used as keys for the {{jsxref("Map")}} returned by `groupByToMap()`.
 Each key has an associated array containing all the elements for which the callback returned the same value.
 
@@ -93,7 +93,7 @@ Therefore:
 - `callbackFn` will not visit any elements added to the array after the call to `groupByToMap()` begins.
 - Elements that are assigned to indexes already visited, or to indexes outside the range, will not be visited by `callbackFn`.
 - If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time `groupByToMap()` visits that element's index.
-- Elements that are {{jsxref("Operators/delete", "deleted")}} are still visited.
+- Elements that are [deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete#deleting_array_elements) are still visited.
 
 > **Warning:** Concurrent modifications of the kind described above frequently lead to hard-to-understand code and are generally to be avoided (except in special cases).
 
