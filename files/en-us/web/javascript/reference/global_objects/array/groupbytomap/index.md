@@ -76,7 +76,7 @@ A {{jsxref("Map")}} object with keys for each group, each assigned to an array c
 
 ## Description
 
-The `groupByToMap()` method executes the `callbackFn` function once for each index of the array, returning a value indicating the group of the associated element.
+The `groupByToMap()` method executes the callback function once for each index of the array. The callback function returns a value indicating the group of the associated element.
 The values returned by the callback are used as keys for the {{jsxref("Map")}} returned by `groupByToMap()`.
 Each key has an associated array containing all the elements for which the callback returned the same value.
 
