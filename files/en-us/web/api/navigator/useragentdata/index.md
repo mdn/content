@@ -17,7 +17,7 @@ which can be used to access the {{domxref("User-Agent Client Hints API")}}.
 ## Syntax
 
 ```js
-let userAgentData = navigator.userAgentData
+let userAgentData = navigator.userAgentData = navigator.userAgentData
 ```
 
 ### Value
