@@ -126,7 +126,7 @@ The code below uses `groupByToMap()` with an arrow function that returns the obj
 The returned `result` object is a `Map` so we need to call `get()` with the key to obtain the array.
 
 ```js
-let restock  = { restock: true };
+const restock  = { restock: true };
 const sufficient = { restock: false };
 const result = inventory.groupByToMap( ({ quantity }) => quantity < 6 ? restock : sufficient );
 console.log(result.get(restock));
