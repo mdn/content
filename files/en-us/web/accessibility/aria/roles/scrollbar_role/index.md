@@ -24,7 +24,7 @@ Take this document as an example: if the viewport is the full browser window and
 
 Scroll bars may also appear on viewports that are sub-sections of the full browser window. Continuing with this content as our example, if this content is embedded in an {{HTMLElement('iframe')}} or {{HTMLElement('object')}}, the native vertical scroll bar will be the height of the frame. A scroll bar generally is the length of the viewport, but isn't required to be.
 
-If you aren't currently seeing a scroll bar, it may be because your browser only displays the scroll bar when scrolling or only when an element's content is too big to fit in its block formatting context. Depending on the browser, scroll bars can be made to be visible even when the content fits in the viewport when no scrolling is necessary or even possible. 
+If you aren't currently seeing a scroll bar, it may be because your browser only displays the scroll bar when scrolling or only when an element's content is too big to fit in its block formatting context. Depending on the browser and operating system, scroll bars can be made to be visible even when the content fits in the viewport when no scrolling is necessary or even possible. 
 
 ### ARIA `scrollbar`
 
