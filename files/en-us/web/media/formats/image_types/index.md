@@ -1566,8 +1566,8 @@ If you do choose a lossy format, such as JPEG or lossy WebP, carefully weigh the
       <th scope="col">Fallback</th>
     </tr>
     <tr>
-      <td>[SVG](#svg_scalable_vector_graphics)</td>
-      <td>[PNG](#png_portable_network_graphics)</td>
+      <td><a href="#svg_scalable_vector_graphics">SVG</a></td>
+      <td><a href="#png_portable_network_graphics">PNG</a></td>
     </tr>
   </thead>
 </table>
