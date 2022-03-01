@@ -49,7 +49,7 @@ We have frozen all localized content (meaning that we won't accept any edits to 
 ### Spanish (es)
 
 - Discussions: [Matrix (#mdn-l10n-es channel)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org)
-- Current maintainers: [@JuanVqz](https://github.com/JuanVqz), [@dacalderonp](https://github.com/dacalderonp), [@sergiogval](https://github.com/sergiogval), [@lasr21](https://github.com/lasr21), [@tuxxy](https://github.com/tuxxy)
+- Current maintainers: [@JuanVqz](https://github.com/JuanVqz), [@dacalderonp](https://github.com/dacalderonp), [@lasr21](https://github.com/lasr21), [@tuxxy](https://github.com/tuxxy)
 
 > **Note:** If you want to discuss unfreezing a currently frozen locale, the [guidelines on what is required can be found here](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#activating-a-locale).
 

@@ -72,6 +72,28 @@ As `radio` is an interactive control; it must be focusable and keyboard accessib
 
 If any of the radio roles in a group has `aria-required="true"` set, it is as if all of the radios in the group had the attribute making the selection of one of the radios in the radiogroup being required to be valid;  though not necessarily the one that has the [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required) attribute set.
 
+### All descendants are presentational
+
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `radio`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `radio` element as it is a role that does not support semantic children.
+
+For example, consider the following `radio` element, which contains a heading.
+
+```html
+<div role="radio"><h6>name of my radio</h6></li>
+```
+
+Because descendants of `radio` are presentational, the following code is equivalent:
+
+```html
+<div role="radio"><h6 role="presentation">name of my radio</h6></li>
+````
+
+From the assitive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
+
+```html
+<div role="radio">name of my radio</div>
+```
+
 ## Associated WAI-ARIA Roles, States, and Properties
 
 - ['radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role) role

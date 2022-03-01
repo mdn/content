@@ -31,6 +31,28 @@ Since a checkbox is an interactive control, it must be focusable and keyboard ac
 
 The developer is required to change the value of the `aria-checked` attribute dynamically when the checkbox is activated.
 
+### All descendants are presentational
+
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `checkbox`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `checkbox` element as it is a role that does not support semantic children.
+
+For example, consider the following `checkbox` element, which contains a heading.
+
+```html
+<div role="checkbox"><h6>Name of my checkbox</h6></li>
+```
+
+Because descendants of `checkbox` are presentational, the following code is equivalent:
+
+```html
+<div role="checkbox"><h6 role="presentation">Name of my checkbox</h6></li>
+````
+
+From the assitive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
+
+```html
+<div role="checkbox">Name of my checkbox</div>
+```
+
 ### Associated WAI-ARIA Roles, States, and Properties
 
 - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)

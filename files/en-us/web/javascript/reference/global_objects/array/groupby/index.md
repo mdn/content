@@ -7,20 +7,18 @@ tags:
   - Method
   - Prototype
   - Reference
+  - Experimental
 browser-compat: javascript.builtins.Array.groupBy
 ---
-{{JSRef}}
+{{JSRef}} {{SeeCompatTable}}
 
-The **`groupBy()`** method groups the elements of the calling array according to the values returned by a provided testing function.
+The **`groupBy()`** method groups the elements of the calling array according to the string values returned by a provided testing function.
 The returned object has separate properties for each group, containing arrays with the elements in the group.
 
 <!-- {{EmbedInteractiveExample("pages/js/array-groupby.html")}} -->
 
-Note that the returned object references the _same_ elements as the original array (not {{glossary("deep copy","deep copies")}}).
-Changing the internal structure of these elements will be reflected in both the original array and the returned object.
-
-This method can be used when group names can be represented by strings.
-If you need to group elements using a key that is some arbitrary object, use {{jsxref("Array.prototype.groupByToMap()")}} instead.
+This method should be used when group names can be represented by strings.
+If you need to group elements using a key that is some arbitrary value, use {{jsxref("Array.prototype.groupByToMap()")}} instead.
 
 ## Syntax
 
@@ -49,9 +47,9 @@ groupBy(function(element, index, array) { /* ... */ }, thisArg)
 
     - `element`
       - : The value of the current element in the array.
-    - `index` {{optional_inline}}
+    - `index`
       - : The index (position) of the current element in the array.
-    - `array` {{optional_inline}}
+    - `array`
       - : The array that `groupBy()` was called on.
 
     The object returned from the callback indicates the group of the current element.
@@ -77,11 +75,19 @@ The `groupBy()` method executes the `callbackFn` function once for each index of
 A new property and array is created in the result object for each unique group name that is returned by the callback.
 Each element is added to the array in the property that corresponds to its group.
 
+Note that the returned object references the _same_ elements as the original array (not {{glossary("deep copy","deep copies")}}).
+Changing the internal structure of these elements will be reflected in both the original array and the returned object.
+
+`callbackFn` is called with the value of the current element, the current index, and the array itself.
+While groups often depend only on the current element, it is possible to implement grouping strategies based on the values of other elements in the array.
+
 `callbackFn` is invoked for _every_ index of the array, not just those with assigned values.
 This means it may be less efficient for sparse arrays, compared to methods that only visit assigned values.
 
 If a `thisArg` parameter is provided to `groupBy()`, it will be used as the `this` value inside each invocation of the `callbackFn`.
 If it is not provided, then {{jsxref("undefined")}} is used.
+
+### Mutating the array in the callback
 
 The `groupBy()` method does not mutate the array on which it is called, but the function provided to `callbackFn` can.
 Note however that the elements processed by `groupBy()` are set _before_ the first invocation of `callbackFn`.
@@ -97,15 +103,15 @@ Therefore:
 ## Examples
 
 First we define an array containing objects representing an inventory of different foodstuffs.
-Each food has a `type`, which might need to be stored differently, and a `quantity` that can be used to determine when we need to reorder each item.
+Each food has a `type` and a `quantity`.
 
 ```js
 const inventory = [
-  {name: 'apples', type: 'vegetables', quantity: 5},
-  {name: 'bananas',  type: 'fruit', quantity: 0},
-  {name: 'goat', type: 'meat', quantity: 23},
-  {name: 'cherries', type: 'fruit', quantity: 5},
-  {name: 'fish', type: 'meat', quantity: 22}
+  { name: 'asparagus', type: 'vegetables', quantity: 5 },
+  { name: 'bananas',  type: 'fruit', quantity: 0 },
+  { name: 'goat', type: 'meat', quantity: 23 },
+  { name: 'cherries', type: 'fruit', quantity: 5 },
+  { name: 'fish', type: 'meat', quantity: 22 }
 ];
 ```
 
@@ -117,7 +123,8 @@ let result = inventory.groupBy( ({ type }) => type );
 /* Result is:
 { 
   vegetables: [ 
-    { name: "apples", type: "vegetables", quantity: 5 } 
+    { name: "  { name: 'asparagus', type: 'vegetables', quantity: 5 },
+", type: "vegetables", quantity: 5 } 
   ],
   fruit: [
     { name: "bananas", type: "fruit", quantity: 0 },
@@ -137,19 +144,19 @@ This unpacks the `type` property of an object passed as a parameter, and assigns
 This is a very succinct way to access the relevant values of elements within a function.
 
 We can also create groups inferred from values in one or more properties of the elements.
-Below is a very similar example that uses a callback function and the `quantity` field to define that an element is in the `ok` or `reorder` groups.
+Below is a very similar example that puts the items into `ok` or `restock` groups based on the value of the `quantity` field.
 
 ```js
 function myCallback( { quantity } ) {
-  return quantity > 5 ? 'ok' : 'reorder';
+  return quantity > 5 ? 'ok' : 'restock';
 }
 
 result = inventory.groupBy( myCallback );
 
 /* Result is:
 { 
-  reorder: [
-    { name: "apples", type: "vegetables", quantity: 5 },
+  restock: [
+    { name: "asparagus", type: "vegetables", quantity: 5 },
     { name: "bananas", type: "fruit", quantity: 0 },
     { name: "cherries", type: "fruit", quantity: 5 }
   ], 
@@ -161,7 +168,6 @@ result = inventory.groupBy( myCallback );
 */
 ```
 
-The callback syntax provides access to the array and current index, so it is possible to implement grouping strategies based on th values of other elements in the array.
 
 ## Specifications
 

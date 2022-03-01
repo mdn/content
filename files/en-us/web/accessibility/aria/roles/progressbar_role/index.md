@@ -27,6 +27,28 @@ Authors **may** set aria-valuemin and aria-valuemax to indicate the minimum and 
 
 If the `progressbar` role is applied to an HTML {{HTMLElement('progress')}} element, the accessible name can come from the associated {{HTMLElement('label')}}. Otherwise use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present or  [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) if a visible label is not present.
 
+### All descendants are presentational
+
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `progressbar`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `progressbar` element as it is a role that does not support semantic children.
+
+For example, consider the following `progressbar` element, which contains a heading.
+
+```html
+<div role="progressbar"><h3>Title of my progressbar</h3></div>
+```
+
+Because descendants of `progressbar` are presentational, the following code is equivalent:
+
+```html
+<div role="progressbar"><h3 role="presentation">Title of my progressbar</h3></div>
+````
+
+From the assitive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
+
+```html
+<div role="progressbar">Title of my progressbar</div>
+```
+
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow)
