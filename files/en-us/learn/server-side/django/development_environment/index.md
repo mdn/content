@@ -25,7 +25,7 @@ Now that you know what Django is for, we'll show you how to set up and test a Dj
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To have a development environment for Django (3.*) running on your computer.
+        To have a development environment for Django (4.*) running on your computer.
       </td>
     </tr>
   </tbody>
