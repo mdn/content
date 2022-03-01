@@ -123,8 +123,7 @@ let result = inventory.groupBy( ({ type }) => type );
 /* Result is:
 { 
   vegetables: [ 
-    { name: "  { name: 'asparagus', type: 'vegetables', quantity: 5 },
-", type: "vegetables", quantity: 5 } 
+    { name: "  { name: 'asparagus', type: 'vegetables', quantity: 5 }
   ],
   fruit: [
     { name: "bananas", type: "fruit", quantity: 0 },
