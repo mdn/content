@@ -196,7 +196,7 @@ For example, an RGB color depth of 8 indicates that each of the red, green, and 
 
 ### APNG (Animated Portable Network Graphics)
 
-APNG is a file format first introduced by Mozilla which extends the [PNG](#png_portable_network_graphics) standard to add support for animated images.
+APNG is a file format first introduced by Mozilla which extends the [PNG](#png-portable-network-graphics) standard to add support for animated images.
 Conceptually similar to the animated GIF format which has been in use for decades, APNG is more capable in that it supports a variety of {{interwiki("wikipedia", "color depth", "color depths")}}, whereas animated GIF supports only 8-bit {{interwiki("wikipedia", "indexed color")}}.
 
 APNG is ideal for basic animations that do not need to synchronize to other activities or to a sound track, such as progress indicators, activity {{interwiki("wikipedia", "throbber", "throbbers")}}, and other animated sequences.
@@ -323,7 +323,7 @@ This often has little impact on real-world user experience because AVIF files ar
 For larger file size the impact can become significant, and you should consider using a format that supports progressive rendering.
 
 AVIF is supported on desktop in Chrome, Opera and Firefox (Firefox supports still images but not animations).
-As support is not yet comprehensive (and has little historical depth) you should provide a fallback in [WebP](#webp_image), [JPEG](#jpeg_joint_photographic_experts_group_image) or [PNG](#png_portable_network_graphics) format using [the `<picture>` element](/en-US/docs/Web/HTML/Element/picture) (or some other approach).
+As support is not yet comprehensive (and has little historical depth) you should provide a fallback in [WebP](#webp-image), [JPEG](#jpeg-joint-photographic-experts-group-image) or [PNG](#png-portable-network-graphics) format using [the `<picture>` element](/en-US/docs/Web/HTML/Element/picture) (or some other approach).
 
 <table class="standard-table">
   <tbody>
