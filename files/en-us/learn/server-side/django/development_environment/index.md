@@ -126,8 +126,8 @@ sudo apt install python3-pip
 ```
 
 > **Note:** Python 3.8 is the oldest version [supported by Django 4.0](https://docs.djangoproject.com/en/4.0/faq/install/#what-python-version-can-i-use-with-django).
-> While Django recommend you update to the latest version, you _need_ to for this tutorial.
-> If you want to, then there are instructions on the Internet.
+> While Django recommend you update to the latest version, you don't _need_ to use the latest version for this tutorial.
+> If you want to update Python, then there are instructions on the Internet.
 
 ### macOS
 
@@ -388,7 +388,7 @@ System check identified no issues (0 silenced).
 
 You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
 Run 'python manage.py migrate' to apply them.
-October 27, 2020 - 03:00:01
+March 01, 2022 - 01:19:16
 Django version 4.0.2, using settings 'mytestsite.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
@@ -399,7 +399,7 @@ Quit the server with CONTROL-C.
 
 Once the server is running you can view the site by navigating to the following URL on your local web browser: `http://127.0.0.1:8000/`. You should see a site that looks like this:
 
-![The home page of the skeleton Django app.](django_skeleton_app_homepage_-_django_3.1.png)
+![The home page of the skeleton Django app](django_skeleton_app_homepage.png)
 
 ## Summary
 
@@ -410,7 +410,7 @@ In the testing section you also briefly saw how we can create a new Django websi
 ## See also
 
 - [Quick Install Guide](https://docs.djangoproject.com/en/4.0/intro/install/) (Django docs)
-- [How to install Django — Complete guide](https://docs.djangoproject.com/en/4.0/topics/install/) (Django docs) - includes information on how to remove Django
+- [How to install Django — Complete guide](https://docs.djangoproject.com/en/4.0/topics/install/) (Django docs) — also covers how to remove Django
 - [How to install Django on Windows](https://docs.djangoproject.com/en/4.0/howto/windows/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
