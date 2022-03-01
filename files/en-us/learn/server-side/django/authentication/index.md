@@ -93,7 +93,7 @@ You already created your first user when we looked at the [Django admin site](/e
 > user.save()
 > ```
 >
-> It is highly recommended to set up a custom user model when starting an actual project. You'll be able to easily customize it in the future if the need arises. For more information, see [Using a custom user model when starting](https://docs.djangoproject.com/en/3.1/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project) (Django docs).
+> It is highly recommended to set up a custom user model when starting an actual project. You'll be able to easily customize it in the future if the need arises. For more information, see [Using a custom user model when starting](https://docs.djangoproject.com/en/4.0/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project) (Django docs).
 
 Below we'll first create a group and then a user. Even though we don't have any permissions to add for our library members yet, if we need to later, it will be much easier to add them once to the group than individually to each member.
 
@@ -402,7 +402,7 @@ You'll be able to test the password reset functionality from the link in the log
 > EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 > ```
 >
-> For more information, see [Sending email](https://docs.djangoproject.com/en/3.1/topics/email/) (Django docs).
+> For more information, see [Sending email](https://docs.djangoproject.com/en/4.0/topics/email/) (Django docs).
 
 ## Testing against authenticated users
 
@@ -467,7 +467,7 @@ class MyView(LoginRequiredMixin, View):
     redirect_field_name = 'redirect_to'
 ```
 
-For additional detail, check out the [Django docs here](https://docs.djangoproject.com/en/3.1/topics/auth/default/#limiting-access-to-logged-in-users).
+For additional detail, check out the [Django docs here](https://docs.djangoproject.com/en/4.0/topics/auth/default/#limiting-access-to-logged-in-users).
 
 ## Example — listing the current user's books
 
@@ -735,9 +735,9 @@ In our next article, we'll look at how you can use Django forms to collect user 
 
 ## See also
 
-- [User authentication in Django](https://docs.djangoproject.com/en/3.1/topics/auth/) (Django docs)
-- [Using the (default) Django authentication system](https://docs.djangoproject.com/en/3.1/topics/auth/default/) (Django docs)
-- [Introduction to class-based views > Decorating class-based views](https://docs.djangoproject.com/en/3.1/topics/class-based-views/intro/#decorating-class-based-views) (Django docs)
+- [User authentication in Django](https://docs.djangoproject.com/en/4.0/topics/auth/) (Django docs)
+- [Using the (default) Django authentication system](https://docs.djangoproject.com/en/4.0/topics/auth/default/) (Django docs)
+- [Introduction to class-based views > Decorating class-based views](https://docs.djangoproject.com/en/4.0/topics/class-based-views/intro/#decorating-class-based-views) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
 

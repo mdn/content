@@ -142,7 +142,7 @@ You can set the environment variable to False by issuing the following command:
 export DJANGO_DEBUG=False
 ```
 
-A full checklist of settings you might want to change is provided in [Deployment checklist](https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/) (Django docs). You can also list a number of these using the terminal command below:
+A full checklist of settings you might want to change is provided in [Deployment checklist](https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/) (Django docs). You can also list a number of these using the terminal command below:
 
 ```python
 python3 manage.py check --deploy
@@ -385,7 +385,7 @@ Open **/locallibrary/settings.py** and copy the following configuration into the
 
 ```python
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.1/howto/static-files/
+# https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 # The absolute path to the directory where collectstatic will collect static files for deployment.
 STATIC_ROOT = BASE_DIR / 'staticfiles'
@@ -441,8 +441,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 #### Requirements
 
-The Python requirements of your web application must be stored in a file **requirements.txt** in the root of your repository.
-Heroku will then install these automatically when it rebuilds your environment. You can create this file using _pip_ on the command line (run the following in the repo root):
+The Python requirements of your web application must be stored in a file **requirements.txt** in the root of your repository. Heroku will then install these automatically when it rebuilds your environment. You can create this file using _pip_ on the command line (run the following in the repo root):
 
 ```bash
 pip3 freeze > requirements.txt
@@ -453,30 +452,27 @@ Please delete any other dependencies not listed below, unless you've explicitly 
 
 ```plain
 dj-database-url==0.5.0
-Django==4.0.2
-gunicorn==20.1.0
-psycopg2-binary==2.9.3
-wheel==0.37.1
-whitenoise==6.0.0
+Django==3.1.2
+gunicorn==20.0.4
+psycopg2-binary==2.8.6
+whitenoise==5.2.0
 ```
 
-> **Note:** Make sure that a **psycopg2** line like the one above is present!
-> Even if you didn't install this locally then you should still add it to **requirements.txt**.
+> **Note:** Make sure that a **psycopg2** line like the one above is present! Even if you didn't install this locally then you should still add it to **requirements.txt**.
 
 #### Runtime
 
 The **runtime.txt** file, if defined, tells Heroku which programming language to use. Create the file in the root of the repo and add the following text:
 
 ```plain
-python-3.10.2
+python-3.8.6
 ```
 
 > **Note:** Heroku only supports a small number of [Python runtimes](https://devcenter.heroku.com/articles/python-support#supported-python-runtimes) (at time of writing, this includes the one above). Heroku will use a supported runtime irrespective of the value specified in this file.
 
 #### Re-test and save changes to GitHub
 
-Before we proceed, lets test the site again locally and make sure it wasn't broken by any of our changes above.
-Run the development web server as usual and then check the site still works as you expect on your browser.
+Before we proceed, lets test the site again locally and make sure it wasn't broken by any of our changes above. Run the development web server as usual and then check the site still works as you expect on your browser.
 
 ```bash
 python3 manage.py runserver
@@ -602,7 +598,7 @@ Setting DJANGO_DEBUG and restarting locallibrary... done, v8
 DJANGO_DEBUG: False
 ```
 
-If you visit the site now you'll get a "Bad request" error, because the [ALLOWED_HOSTS](https://docs.djangoproject.com/en/3.1/ref/settings/#allowed-hosts) setting is _required_ if you have `DEBUG=False` (as a security measure). Open **/locallibrary/settings.py** and change the `ALLOWED_HOSTS` setting to include your base app url (e.g. 'locallibrary1234.herokuapp.com') and the URL you normally use on your local development server.
+If you visit the site now you'll get a "Bad request" error, because the [ALLOWED_HOSTS](https://docs.djangoproject.com/en/4.0/ref/settings/#allowed-hosts) setting is _required_ if you have `DEBUG=False` (as a security measure). Open **/locallibrary/settings.py** and change the `ALLOWED_HOSTS` setting to include your base app url (e.g. 'locallibrary1234.herokuapp.com') and the URL you normally use on your local development server.
 
 ```python
 ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127.0.0.1']
@@ -639,7 +635,7 @@ heroku config:set DEBUG_COLLECTSTATIC=1
 heroku ps
 ```
 
-If you need more information than these can provide you will need to start looking into [Django Logging](https://docs.djangoproject.com/en/3.1/topics/logging/).
+If you need more information than these can provide you will need to start looking into [Django Logging](https://docs.djangoproject.com/en/4.0/topics/logging/).
 
 ## Summary
 
@@ -649,13 +645,13 @@ The next step is to read our last few articles, and then complete the assessment
 
 ## See also
 
-- [Deploying Django](https://docs.djangoproject.com/en/3.1/howto/deployment/) (Django docs)
+- [Deploying Django](https://docs.djangoproject.com/en/4.0/howto/deployment/) (Django docs)
 
-  - [Deployment checklist](https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/) (Django docs)
-  - [Deploying static files](https://docs.djangoproject.com/en/3.1/howto/static-files/deployment/) (Django docs)
-  - [How to deploy with WSGI](https://docs.djangoproject.com/en/3.1/howto/deployment/wsgi/) (Django docs)
-  - [How to use Django with Apache and mod_wsgi](https://docs.djangoproject.com/en/3.1/howto/deployment/wsgi/modwsgi/) (Django docs)
-  - [How to use Django with Gunicorn](https://docs.djangoproject.com/en/3.1/howto/deployment/wsgi/gunicorn/) (Django docs)
+  - [Deployment checklist](https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/) (Django docs)
+  - [Deploying static files](https://docs.djangoproject.com/en/4.0/howto/static-files/deployment/) (Django docs)
+  - [How to deploy with WSGI](https://docs.djangoproject.com/en/4.0/howto/deployment/wsgi/) (Django docs)
+  - [How to use Django with Apache and mod_wsgi](https://docs.djangoproject.com/en/4.0/howto/deployment/wsgi/modwsgi/) (Django docs)
+  - [How to use Django with Gunicorn](https://docs.djangoproject.com/en/4.0/howto/deployment/wsgi/gunicorn/) (Django docs)
 
 - Heroku
 
