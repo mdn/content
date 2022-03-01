@@ -18,7 +18,7 @@ The open Web presents incredible opportunities for developers. To take full adva
 - [Accessibility](/en-US/docs/Web/Accessibility)
   - : Enabling as many people as possible to use Web sites, even when those people's abilities are limited in some way.
 - [Web Performance](/en-US/docs/Web/Performance)
-  - : Making content as available and interactive as possible, as soon as possible
+  - : Making content as available and interactive as possible, as soon as possible.
 
 ## Web technology references
 
