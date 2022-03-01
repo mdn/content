@@ -50,7 +50,7 @@ The following is a search form with a searchbox and button, ARIA live region, an
 <div id="search-results"></div>
 ```
 
-Including `role="searchbox"` when the form is a `search` and the label indicates the element is a search can result in assistive technology announcing "search search this site search box", which is redundant. The inclusion of `role="searchbox"` is not necessary:
+Including `role="searchbox"` when the form is a `search` and the label indicates the element is a search may result in assistive technology announcing something along the lines of "search search this site search box", which is redundant. The inclusion of `role="searchbox"` is not necessary:
 
 ```html
 <input type="search" aria-description="search results will appear below" id="srch" value="">
