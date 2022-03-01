@@ -21,19 +21,13 @@ We're now ready to add the code that displays our first complete page — a home
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Read the <a href="/en-US/docs/Learn/Server-side/Django/Introduction"
-          >Django Introduction</a
-        >. Complete previous tutorial topics (including <a
-          href="/en-US/docs/Learn/Server-side/Django/Admin_site"
-          >Django Tutorial Part 4: Django admin site</a
-        >).
+        Read the <a href="/en-US/docs/Learn/Server-side/Django/Introduction">Django Introduction</a>. Complete previous tutorial topics (including <a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django Tutorial Part 4: Django admin site</a>).
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        Learn to create simple url maps and views (where no data is encoded in
-        the URL), get data from models, and create templates.
+        Learn to create simple url maps and views (where no data is encoded in the URL), get data from models, and create templates.
       </td>
     </tr>
   </tbody>
@@ -191,7 +185,7 @@ We'll be creating the template for LocalLibrary shortly.
 The sample below includes common HTML with sections for a title, a sidebar, and main contents marked with the named `block` and `endblock` template tags.
 You can leave the blocks empty, or include default content to use when rendering pages derived from the template.
 
-> **Note:** Template _tags_ are functions that you can use in a template to loop through lists, perform conditional operations based on the value of a variable, and so on. In addition to template tags, the template syntax allows you to reference variables that are passed into the template from the view, and use *template filters to* format variables (for example, to convert a string to lower case).
+> **Note:** Template _tags_ are functions that you can use in a template to loop through lists, perform conditional operations based on the value of a variable, and so on. In addition to template tags, the template syntax allows you to reference variables that are passed into the template from the view, and use _template filters_ to format variables (for example, to convert a string to lower case).
 
 ```html
 <!DOCTYPE html>
@@ -234,7 +228,7 @@ Create a new file **base_generic.html** in **/locallibrary/catalog/templates/** 
   {% block title %}<title>Local Library</title>{% endblock %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <!-- Add additional CSS in static file -->
   {% load static %}
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
