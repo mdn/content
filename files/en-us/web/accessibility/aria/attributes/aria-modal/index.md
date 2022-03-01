@@ -65,7 +65,7 @@ This partial example includes an `alertdialog` nested in a full-screen, non-scro
 
 The [`role="alertdialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)	identifies the element that serves as the alert dialog container. The [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) provides the alert dialog an accessible name by referring to the element that provides the alert dialog title. The [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attribute gives the alert dialog an accessible description by referring to the alert dialog content that describes the primary message or purpose of the alert dialog.
 
-The `aria-modal="true"`	informs the assistive technology user that the content underneath the dialog is not interactive so long as the alertdialog has focus.
+The `aria-modal="true"`	informs the assistive technology user that the content underneath the dialog is not interactive so long as the element with a declaration of `role="alertdialog"` has focus.
 
 The `aria-modal` attribute exposes the existence of the modal to assistive technologies so the disabling of the content behind the modal can be communicated to AT users. Like all ARIA attributes, `aria-modal` itself has no effect on the page's functionality; focus management and disabling, interactivity on background elements, and the ability to remove focus from the alertdialog must all be managed with JavaScript.
 
