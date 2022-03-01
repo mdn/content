@@ -1,25 +1,26 @@
 ---
-title: FontFaceSet.onloadingerror
-slug: Web/API/FontFaceSet/onloadingerror
+title: 'FontFaceSet: loadingerror event'
+slug: Web/API/FontFaceSet/loadingerror_event
 tags:
   - API
   - Property
   - Reference
   - onloadingerror
   - FontFaceSet
-browser-compat: api.FontFaceSet.onloadingerror
+browser-compat: api.FontFaceSet.loadingerror_event
 ---
 {{APIRef("CSS Font Loading API")}}
-
-The **`onloadingerror`** EventHandler of the {{domxref("FontFaceSet")}} interface processes `loadingerror` events.
 
 The `loadingerror` event fires when fonts have finished loading, but some or all fonts have failed to load.
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js
-FontFaceSet.onloadingerror = function;
-FontFaceSet.addEventListener('loadingerror', function);
+addEventListener('loadingerror', event => { });
+
+onloadingerror = event => { };
 ```
 
 ## Example
@@ -43,3 +44,4 @@ document.fonts.onloadingerror = () => {
 ## Browser compatibility
 
 {{Compat}}
+

@@ -1,25 +1,26 @@
 ---
-title: FontFaceSet.onloadingdone
-slug: Web/API/FontFaceSet/onloadingdone
+title: 'FontFaceSet: loadingdone event'
+slug: Web/API/FontFaceSet/loadingdone_event
 tags:
   - API
   - Property
   - Reference
   - onloadingdone
   - FontFaceSet
-browser-compat: api.FontFaceSet.onloadingdone
+browser-compat: api.FontFaceSet.loadingdone_event
 ---
 {{APIRef("CSS Font Loading API")}}
 
-The **`onloadingdone`** EventHandler of the {{domxref("FontFaceSet")}} interface processes `loadingdone` events.
-
-The `loadingdone` event fires when the document has loaded all fonts.
+The `loadingdone` event fires when the document has loaded all events.
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js
-FontFaceSet.onloadingdone = function;
-FontFaceSet.addEventListener('loadingdone', function);
+addEventListener('loadingdone', event => { });
+
+onloadingdone = event => { };
 ```
 
 ## Example
