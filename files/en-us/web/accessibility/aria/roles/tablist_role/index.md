@@ -22,8 +22,6 @@ When implementing a tab design pattern, the [`tab`](/en-US/docs/Web/Accessibilit
 
 Tabs are a set of layered sections of content, known as tab panels, that display one panel of content at a time. Each tab panel has an associated `tab` element, that, when activated, displays the panel. The list of tab elements is arranged along one edge of the currently displayed panel, most commonly the top edge, nested in a `tablist` element.
 
-Another example of using `tab`, `tablist` and `tabpanel` is a slide picker. In a slide picker, the controls can be marked up as more than one `tab` in a `tablist` with each slide represented by a `tabpanel` element.
-
 Each `tab` in a `tablist` serves as a label for one `tabpanel` and can be activated to display that panel. The `tablist` is the containing element for the set of tab elements contained. 
 
 When a tabbed interface is initialized, one tab panel is displayed and its associated tab is styled to indicate that it is active. When the user activates one of the other tab elements, the previously displayed tab panel is hidden, the tab panel associated with the activated tab becomes visible, and the tab is considered "active".
