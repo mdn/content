@@ -28,7 +28,9 @@ When a modal element is displayed, focus should be placed in the modal. Focus ne
 
 Ensure the modal is controllable using only its descendant elements. If a modal dialog has a close button, the button should be a descendant contained with the modal container in the DOM. 
 
-When a modal element is displayed, authors **should** mark all other contents as inert (such as "inert subtrees" in HTML). There is an [`inert`](/en-US/docs/Web/API/HTMLElement/inert) attribute that, when supported, will be a boolean attribute that indicates, by its presence, that the element and all its shadow-including descendants is to be made inert. Until `inert` is fully supported, all other content should be [made inert using JavaScript](https://whistlr.info/2021/inert/).
+When a modal element is displayed, authors **should** mark all other contents as inert (such as "inert subtrees" in HTML). Disabled content is not inert content. Inert content cannot be interacted with using both normal and specialized browsing modes such as caret browsing, which allow an assistive technology user to explore a page in detail. This includes disabled content, whose content may provide meaning.
+
+There is an [`inert`](/en-US/docs/Web/API/HTMLElement/inert) attribute that, when supported, will be a boolean attribute that indicates, by its presence, that the element and all its shadow-including descendants is to be made inert. Until `inert` is fully supported, all other content should be [made inert using JavaScript](https://whistlr.info/2021/inert/). 
 
 When supported, inluding `aria-modal="true"` on a [`dialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) or [`alertdialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role), removes the requirement of putting [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) on background content as the `aria-modal` informs assistive technologies that content outside a dialog is inert. Note that there are still compatibility issues for the `dialog` element, so using it in production is not recommended.
 
