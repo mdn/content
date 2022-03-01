@@ -23,6 +23,28 @@ Authors can also explicitly provide an accessible name by specifying [`aria-labe
 
 It is highly recommended to use a {{HTMLElement('select')}} element or an  {{HTMLElement('input')}} element with the `checkbox` or `radio` type instead, when possible. These native HTML elements provide keyboard interactivity to manage focus for all the descendants for you automatically.
 
+### All descendants are presentational
+
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `option`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `option` element as it is a role that does not support semantic children.
+
+For example, consider the following `option` element, which contains a heading.
+
+```html
+<div role="option"><h3>Title of my option</h3></div>
+```
+
+Because descendants of `option` are presentational, the following code is equivalent:
+
+```html
+<div role="option"><h3 role="presentation">Title of my option</h3></div>
+````
+
+From the assitive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
+
+```html
+<div role="option">Title of my option</div>
+```
+
 ### Associated ARIA roles, states, and properties
 
 #### Associated Roles
