@@ -30,7 +30,7 @@ All events—_except_ `onErrorOccurred`—can take three arguments to `addListen
 
 The listener function is passed a `details` object containing information about the request. This includes a request ID, which is provided to enable an add-on to correlate events associated with a single request. It is unique within a browser session and the add-on's context. It stays the same throughout a request, even across redirections and authentication exchanges.
 
-To use the `webRequest` API for a given host, an extension must have the `"webRequest"` [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) and the [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for that host. To use the `"blocking"` feature, the extension must also have the `"webRequestBlocking"` API permission. To ensure blocking web requests are always processed, web extensions using blocking features are started early during Firefox startup. 
+To use the `webRequest` API for a given host, an extension must have the `"webRequest"` [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) and the [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for that host. To use the `"blocking"` feature, the extension must also have the `"webRequestBlocking"` API permission.  
 
 To intercept resources loaded by a page (such as images, scripts, or stylesheets), the extension must have the host permission for the resource as well as for the main page requesting the resource. For example, if a page at `https://developer.mozilla.org` loads an image from `https://mdn.mozillademos.org`, then an extension must have both host permissions if it is to intercept the image request.
 
@@ -64,6 +64,10 @@ On some of these events, you can modify the request. Specifically, you can:
 To do this, you need to pass an option with the value `"blocking"` in the `extraInfoSpec` argument to the event's `addListener()`. This makes the listener synchronous.
 
 In the listener, you can then return a {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}} object, which indicates the modification you need to make: for example, the modified request header you want to send.
+
+## Requests at browser startup
+
+When a listener is registered with the `"blocking"` option and is registered during the extension startup, if a request is made during the browser startup that matches the listener the extension starts early. This enables the extension to observe the request at browser startup. If you don't take the steps, requests made at startup could be missed.
 
 ## Accessing security information
 
