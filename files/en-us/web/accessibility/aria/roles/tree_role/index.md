@@ -20,7 +20,7 @@ A `tree` widget is a hierarchical list with parent and child nodes that can expa
 
 An example of a `tree` is a file system selection user interface: a tree view displaying folders and files. Folder items can be expanded to reveal the contents of the folder -- which may be files, folders, or both -- and collapsed, hiding its contents. 
 
-ARIA tree views are navigated primarily with arrow keys on the keyboard instead of the <kbd>tab</kbd> key which is not common for browser content, though normal and expected keyboard in native applications. For this reason, before creating a tree view, consider alternative options to address the functionality you need. 
+ARIA tree views are navigated primarily with arrow keys on the keyboard instead of the <kbd>Tab</kbd>. This form of navigation is not common for most browser content, though normal and expected for native applications. For this reason, before creating a tree view, consider alternative options to address the functionality you need. 
 
 > **Warning:** Tree views use naviation more similar to native applications than to web applications. For this reason, consider alternative options to address the functionality you need before creating a tree view. 
 
