@@ -50,9 +50,9 @@ Keyboard scrolling must also be supported. When focus is within the viewport con
 
 JavaScript must be used to translate the `scrollbar` action into scrolling commands, providing the user with feedback by:
 
-  1. visually updating the `scrollbar` element, 
-  2. scrolling the viewport's content, and 
-  3. updating the [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) property value.
+  1. Visually updating the `scrollbar` element, 
+  2. Scrolling the viewport's content, and 
+  3. Updating the [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) property value.
 
 The default orientation of the `scrollbar` role is vertical. Including [`aria-orientation="vertical"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation), in this case, is optional. The orientation represents the orientation of the scrollbar and the scrolling effect on the viewing area controlled by the scrollbar. If the scrolling is left to right or right to left and not top to bottom, include `aria-orientation="horizontal"` on the element with the `scrollbar` role.
 
