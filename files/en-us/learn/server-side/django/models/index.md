@@ -21,17 +21,14 @@ This article shows how to define models for the LocalLibrary website. It explain
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website"
-          >Django Tutorial Part 2: Creating a skeleton website</a
-        >.
+        <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">Django Tutorial Part 2: Creating a skeleton website</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
         <p>
-          To be able to design and create your own models, choosing fields
-          appropriately.
+          To be able to design and create your own models, choosing fields appropriately.
         </p>
       </td>
     </tr>
@@ -111,9 +108,11 @@ my_field_name = models.CharField(max_length=20, help_text='Enter field documenta
 Our above example has a single field called `my_field_name`, of type `models.CharField` — which means that this field will contain strings of alphanumeric characters. The field types are assigned using specific classes, which determine the type of record that is used to store the data in the database, along with validation criteria to be used when values are received from an HTML form (i.e. what constitutes a valid value). The field types can also take arguments that further specify how the field is stored or can be used. In this case we are giving our field two arguments:
 
 - `max_length=20` — States that the maximum length of a value in this field is 20 characters.
-- `help_text='Enter field documentation'` — provides a text label to display to help users know what value to provide when this value is to be entered by a user via an HTML form.
+- `help_text='Enter field documentation'` — helpful text that may be displayed in a form to help users understand how the field is used.
 
-The field name is used to refer to it in queries and templates. Fields also have a label specified as an argument (`verbose_name`), the default value of which is `None`, meaning replacing any underscores in the field name with a space (for example `my_field_name` would have a default label of _my field name_). Note that when the label is used as a form label through Django frame, the first letter of the label is capitalized (for example `my_field_name` would be _My field name_).
+The field name is used to refer to it in queries and templates.
+Fields also have a label, which is specified using the `verbose_name` argument (with a default value of `None`).
+If `verbose_name` is not set, the label is created from the field name by replacing any underscores with a space, and capitalizing the first letter (for example, the field `my_field_name` would have a default label of _My field name_ when used in forms).
 
 The order that fields are declared will affect their default order if a model is rendered in a form (e.g. in the Admin site), though this may be overridden.
 
@@ -127,7 +126,19 @@ The following common arguments can be used when declaring many/most of the diffe
 - [null](https://docs.djangoproject.com/en/4.0/ref/models/fields/#null): If `True`, Django will store blank values as `NULL` in the database for fields where this is appropriate (a `CharField` will instead store an empty string). The default is `False`.
 - [blank](https://docs.djangoproject.com/en/4.0/ref/models/fields/#blank): If `True`, the field is allowed to be blank in your forms. The default is `False`, which means that Django's form validation will force you to enter a value. This is often used with `null=True` , because if you're going to allow blank values, you also want the database to be able to represent them appropriately.
 - [choices](https://docs.djangoproject.com/en/4.0/ref/models/fields/#choices): A group of choices for this field. If this is provided, the default corresponding form widget will be a select box with these choices instead of the standard text field.
-- [primary_key](https://docs.djangoproject.com/en/4.0/ref/models/fields/#primary-key): If `True`, sets the current field as the primary key for the model (A primary key is a special database column designated to uniquely identify all the different table records). If no field is specified as the primary key then Django will automatically add a field for this purpose.
+- [primary_key](https://docs.djangoproject.com/en/4.0/ref/models/fields/#primary-key):
+  If `True`, sets the current field as the primary key for the model (A primary key is a special database column designated to uniquely identify all the different table records).
+  If no field is specified as the primary key then Django will automatically add a field for this purpose.
+  The type of auto-created primary key fields can be specified for each app in [`AppConfig.default_auto_field`](https://docs.djangoproject.com/en/4.0/ref/applications/#django.apps.AppConfig.default_auto_field) or globally in the [`DEFAULT_AUTO_FIELD`](https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-DEFAULT_AUTO_FIELD) setting.
+
+  > **Note:** Apps created using **manage.py** set the type of the primary key to a [BigAutoField](https://docs.djangoproject.com/en/4.0/ref/models/fields/#bigautofield).
+  > You can see this in the local library **catalog/apps.py** file:
+  > ```py
+  > class CatalogConfig(AppConfig):
+  >   default_auto_field = 'django.db.models.BigAutoField'
+  > ```
+
+
 
 There are many other options — you can view the [full list of field options here](https://docs.djangoproject.com/en/4.0/ref/models/fields/#field-options).
 
@@ -269,7 +280,7 @@ There is a lot more you can do with queries, including backwards searches from r
 
 ## Defining the LocalLibrary Models
 
-In this section we will start defining the models for the library. Open _models.py (in /locallibrary/catalog/)_. The boilerplate at the top of the page imports the _models_ module, which contains the model base class `models.Model` that our models will inherit from.
+In this section we will start defining the models for the library. Open `models.py` (in /locallibrary/catalog/). The boilerplate at the top of the page imports the _models_ module, which contains the model base class `models.Model` that our models will inherit from.
 
 ```python
 from django.db import models
@@ -279,7 +290,8 @@ from django.db import models
 
 ### Genre model
 
-Copy the `Genre` model code shown below and paste it into the bottom of your `models.py` file. This model is used to store information about the book category — for example whether it is fiction or non-fiction, romance or military history, etc. As mentioned above, we've created the Genre as a model rather than as free text or a selection list so that the possible values can be managed through the database rather than being hard coded.
+Copy the `Genre` model code shown below and paste it into the bottom of your `models.py` file. This model is used to store information about the book category — for example whether it is fiction or non-fiction, romance or military history, etc.
+As mentioned above, we've created the genre as a model rather than as free text or a selection list so that the possible values can be managed through the database rather than being hard coded.
 
 ```python
 class Genre(models.Model):
@@ -291,7 +303,7 @@ class Genre(models.Model):
         return self.name
 ```
 
-The model has a single `CharField` field (`name`), which is used to describe the genre (this is limited to 200 characters and has some `help_text`. At the end of the model we declare a `__str__()` method, which returns the name of the genre defined by a particular record. No verbose name has been defined, so the field will be called `Name` in forms.
+The model has a single `CharField` field (`name`), which is used to describe the genre (this is limited to 200 characters and has some `help_text`). At the end of the model we declare a `__str__()` method, which returns the name of the genre defined by a particular record. No verbose name has been defined, so the field will be called `Name` in forms.
 
 ### Book model
 
