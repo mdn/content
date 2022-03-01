@@ -42,7 +42,7 @@ A `scrollbar` represents the current value and range of possible values via the 
 
 > **Note:** Assistive technologies generally render the value of `aria-valuenow` as a percent of a range between the value of `aria-valuemin` and `aria-valuemax`, unless [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) is set. It is recommended to set the values for `aria-valuemin`, `aria-valuema`x, and `aria-valuenow` in a manner that is appropriate for this calculation.
 
-Like a native scroll bar, users interact with `scrollbar` elements directly or indirectly using a mouse, touchpad, or keyboard.  `Scrollbar` role implementations must replicate the user interactions of native scroll bars. 
+Like a native scroll bar, users interact with `scrollbar` elements directly or indirectly using mouse, touchpad, keyboard, and voice input. `scrollbar` role implementations must also accommodate all these interaction methods.
 
 When using a mouse, the user must be able to activate the `scrollbar` by clicking the scroll arrows at either end of the scroll bar, if present, clicking an empty portion of the scroll track, as well as clicking and dragging the scroll thumb. 
 
