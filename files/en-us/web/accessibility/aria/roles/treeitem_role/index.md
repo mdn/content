@@ -16,7 +16,8 @@ tags:
 ## Description
 
 ### Associated WAI-ARIA roles, states, and properties
-
+- [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
+  - : Set on the the root `tree` and on `treeitem` nodes that are parents of other `treeitem` nodes, to indicate whether the tree view is expanded (`true`) or collapsed (`false`).
 ### Keyboard interactions
 
 ### Required JavaScript features
