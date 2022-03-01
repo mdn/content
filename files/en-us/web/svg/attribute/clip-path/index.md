@@ -97,10 +97,6 @@ html,body,svg { height:100% }
 
 > **Note:** For more details on the clip-path syntax, see the CSS property {{cssxref('clip-path')}} reference page.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Specifications
 
 <table class="no-markdown">
@@ -132,6 +128,10 @@ html,body,svg { height:100% }
     </tr>
   </tbody>
 </table>
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

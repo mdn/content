@@ -108,10 +108,6 @@ window.addEventListener('mouseup', (e) => {
 
 *For a detailed explanation of each possible value, have a look at the CSS {{cssxref('pointer-events')}} documentation.*
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Specifications
 
 <table class="no-markdown">
@@ -139,3 +135,7 @@ window.addEventListener('mouseup', (e) => {
     </tr>
   </tbody>
 </table>
+
+## Browser compatibility
+
+{{Compat}}
