@@ -78,7 +78,7 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
 - {{DOMxRef("Element.scrollLeftMax")}} {{Non-standard_Inline}} {{readOnlyInline}}
   - : Returns a number representing the maximum left scroll offset possible for the element.
 - {{DOMxRef("Element.scrollTop")}}
-  - : A number representing number of pixels the top of the document is scrolled vertically.
+  - : A number representing number of pixels the top of the element is scrolled vertically.
 - {{DOMxRef("Element.scrollTopMax")}} {{Non-standard_Inline}} {{readOnlyInline}}
   - : Returns a number representing the maximum top scroll offset possible for the element.
 - {{DOMxRef("Element.scrollWidth")}} {{readOnlyInline}}
