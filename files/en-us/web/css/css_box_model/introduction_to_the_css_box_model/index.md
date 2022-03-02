@@ -6,6 +6,7 @@ tags:
   - CSS Box Model
   - Guide
   - Layout
+spec-urls: https://drafts.csswg.org/css-box/#intro
 ---
 {{CSSRef}}
 
@@ -49,11 +50,7 @@ Finally, note that for non-replaced inline elements, the amount of space taken u
 
 ## Specifications
 
-| Specification                                                    | Status                       | Comment                                                     |
-| ---------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------------- |
-| {{SpecName('CSS3 Box', '#intro')}}                     | {{Spec2('CSS3 Box')}} |                                                             |
-| {{ SpecName("CSS2.1","box.html#box-dimensions")}} | {{ Spec2('CSS2.1') }} | Though more precisely worded, there is no practical change. |
-| {{ SpecName("CSS1","#formatting-model")}}         | {{ Spec2('CSS1') }}     | Initial definition.                                         |
+{{Specifications}}
 
 ## See also
 

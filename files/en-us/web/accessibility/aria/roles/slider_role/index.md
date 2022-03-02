@@ -70,6 +70,28 @@ In many two-thumb sliders, the thumbs are not allowed to pass one another, such 
 
 It is not a requirement that the thumbs in multi-thumb sliders be dependent on the other thumb values, but intuitive user experience is a requirement, so it is recommended to avoid this anti-pattern.
 
+### All descendants are presentational
+
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `slider`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `slider` element as it is a role that does not support semantic children.
+
+For example, consider the following `slider` element, which contains a heading.
+
+```html
+<div role="slider"><h3>Temperature in Celcius</h3></div>
+```
+
+Because descendants of `slider` are presentational, the following code is equivalent:
+
+```html
+<div role="slider"><h3 role="presentation">Temperature in Celcius</h3></div>
+````
+
+From the assitive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
+
+```html
+<div role="slider">Temperature in Celcius</div>
+```
+
 ## Associated roles, states, and properties
 
 - [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) (required)

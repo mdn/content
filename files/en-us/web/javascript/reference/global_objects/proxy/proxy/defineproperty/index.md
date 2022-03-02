@@ -51,6 +51,8 @@ The **`handler.defineProperty()`** method is a trap for
 
 This trap can intercept these operations:
 
+- {{jsxref("Object.prototype.__defineGetter__()")}}
+- {{jsxref("Object.prototype.__defineSetter__()")}}
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Reflect.defineProperty()")}}
 

@@ -36,6 +36,28 @@ A toggle button is a two-state button that can be either off (not pressed) or on
 
 A menu button is a button that controls a menu and has an [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) property attribute set to either `menu` or `true`.
 
+### All descendants are presentational
+
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `button`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `button` element as it is a role that does not support semantic children.
+
+For example, consider the following `button` element, which contains a heading.
+
+```html
+<div role="button"><h3>Title of my button</h3></div>
+```
+
+Because descendants of `button` are presentational, the following code is equivalent:
+
+```html
+<div role="button"><h3 role="presentation">Title of my button</h3></div>
+````
+
+From the assitive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
+
+```html
+<div role="button">Title of my button</div>
+```
+
 ### Associated ARIA roles, states, and properties
 
 - [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)

@@ -7,6 +7,7 @@ tags:
   - Constraint validation
   - Forms
   - required
+spec-urls: https://html.spec.whatwg.org/multipage/forms.html#attr-input-readonly
 ---
 
 {{HTMLSidebar}}
@@ -74,38 +75,7 @@ If the element is read-only, then the element's value can not be updated by the 
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'forms.html#attr-input-readonly', 'readonly attribute')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML5 W3C', 'forms.html#attr-input-readonly', 'readonly attribute')}}
-      </td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML5.1', 'sec-forms.html#the-readonly-attribute', 'readonly attribute')}}
-      </td>
-      <td>{{Spec2('HTML5.1')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

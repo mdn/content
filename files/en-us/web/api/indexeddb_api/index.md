@@ -75,13 +75,6 @@ This specification fires events with the following custom interface:
 - {{domxref("IDBVersionChangeEvent")}}
   - : The `IDBVersionChangeEvent` interface indicates that the version of the database has changed, as the result of an {{domxref("IDBOpenDBRequest.upgradeneeded_event", "IDBOpenDBRequest.onupgradeneeded")}} event handler function.
 
-### Obsolete interfaces
-
-An early version of the specification also defined the following, now removed, interfaces. They are still documented in case you need to update previously written  code:
-
-- {{domxref("IDBDatabaseException")}}   {{deprecated_inline}}
-  - : Represents exception conditions that can be encountered while performing database operations.
-
 ## Examples
 
 - [eLibri:](https://marco-c.github.io/eLibri/) A powerful library and eBook reader application, written by Marco Castelluccio, winner of the IndexedDB Mozilla DevDerby.

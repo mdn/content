@@ -6,6 +6,7 @@ tags:
   - CSS Box Model
   - Guide
   - Reference
+spec-urls: https://www.w3.org/TR/CSS22/box.html#collapsing-margins
 ---
 {{CSSRef}}
 
@@ -63,9 +64,7 @@ p {
 
 ## Specifications
 
-| Specification                                                                                        | Status                   | Comment             |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName("CSS2.1", "box.html#collapsing-margins", "margin collapsing")}} | {{Spec2("CSS2.1")}} | Initial definition. |
+{{Specifications}}
 
 ## See also
 

@@ -14,26 +14,27 @@ browser-compat: api.FileReader.loadstart_event
 
 The `loadstart` event is fired when a file read operation has begun.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("ProgressEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("FileReader.onloadstart")}}</td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('loadstart', event => { });
+
+onloadstart = event => { };
+```
+
+## Event type
+
+An {{domxref("ProgressEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("ProgressEvent")}}
+
+## Event properties
+
+{{page("/en-US/docs/Web/API/ProgressEvent", "Properties")}}
 
 ## Examples
 

@@ -26,7 +26,7 @@ analyser.getFloatTimeDomainData(dataArray); // fill the Float32Array with data r
 
 - `array`
   - : The {{jsxref("Float32Array")}} that the time domain data will be copied to.
-    If the array has fewer elements than the {{domxref("AnalyserNode.frequencyBinCount")}}, excess elements are dropped. If it has more elements than needed, excess elements are ignored.
+    If the array has fewer elements than the {{domxref("AnalyserNode.fftSize")}}, excess elements are dropped. If it has more elements than needed, excess elements are ignored.
 
 ### Return value
 

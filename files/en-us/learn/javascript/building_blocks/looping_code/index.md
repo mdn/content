@@ -590,7 +590,7 @@ Specifically, we want you to:
 
 - Remember to include an iterator! However, in this example we are counting down after each iteration, not up, so you **don't** want `i++` — how do you iterate downwards?
 
-> **Note:** If you start typing the loop (for example (while(i>=0)), the browser might stuck because you have not yet entered the end condition. So be careful with this. You can start writing your code in a comment to deal with this issue and remove the comment after you finish.
+> **Note:** If you start typing the loop (for example (while(i>=0)), the browser might get stuck because you have not yet entered the end condition. So be careful with this. You can start writing your code in a comment to deal with this issue and remove the comment after you finish.
 
 If you make a mistake, you can always reset the example with the "Reset" button.
 If you get really stuck, press "Show solution" to see a solution.

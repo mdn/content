@@ -9,6 +9,7 @@ tags:
   - Layout
   - Reference
   - Web
+spec-urls: https://drafts.csswg.org/css-grid/#valdef-grid-template-columns-fit-content
 ---
 {{CSSRef}}
 
@@ -90,10 +91,7 @@ fit-content(40%)
 
 ## Specifications
 
-| Specification                                                                                                            | Status                           | Comment                                                                                                                                                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS3 Sizing", "#valdef-width-fit-content-length-percentage", "fit-content()")}} | {{Spec2("CSS3 Sizing")}} | Defines the function as laid out box size for {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} and {{cssxref("max-height")}}. |
-| {{SpecName("CSS Grid", "#valdef-grid-template-columns-fit-content", "fit-content()")}}     | {{Spec2("CSS Grid")}}     | Defines the function when used as a track size.                                                                                                                                                                                                      |
+{{Specifications}}
 
 ## Browser compatibility
 

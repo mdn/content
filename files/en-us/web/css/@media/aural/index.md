@@ -8,6 +8,7 @@ tags:
   - aural
   - media feature
   - speech
+spec-urls: https://www.w3.org/TR/CSS22/aural.html
 ---
 {{CSSRef}} {{deprecated_header}}
 
@@ -39,9 +40,7 @@ Updating existing CSS to use the `speech` media type should be as simple as repl
 
 ## Specifications
 
-| Specification                                    | Status     | Comment             |
-| ------------------------------------------------ | ---------- | ------------------- |
-| {{SpecName('CSS2.2', '', 'aural')}} | Deprecated | Initial definition. |
+{{Specifications}}
 
 ## See also
 

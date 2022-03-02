@@ -17,9 +17,13 @@ This article provides information about the changes in Firefox 98 that will affe
 
 ### HTML
 
+- The HTML {{HTMLElement("dialog")}} element and its associated DOM APIs provide support for HTML-based modal dialog boxes. This element is now available by default ({{bug(1733536)}}).
+
 #### Removals
 
 ### CSS
+
+- The {{cssxref("hyphenate-character")}} property can be used to set a string that is used instead of a hyphen character (`-`) at the end of a hyphenation line break ({{bug(1751024)}}).
 
 #### Removals
 
@@ -62,6 +66,7 @@ This article provides information about the changes in Firefox 98 that will affe
 ## Changes for add-on developers
 
 - Web extensions using {{WebExtAPIRef("webRequest")}} were started early during Firefox startup. This has changed to only trigger early start-up for extensions using {{WebExtAPIRef("webRequest")}} blocking calls. Non-blocking calls no longer cause the early startup of an extension. ({{bug(1749871)}}) 
+- `cookieStoreId` added to {{WebExtAPIRef("userScripts.register")}}. This enables extensions to register container-specific user scripts ({{bug(1738567)}}).
 
 #### Removals
 

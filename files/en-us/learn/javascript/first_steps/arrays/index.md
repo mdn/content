@@ -114,7 +114,7 @@ This is fine if you know the index of an item, but what if you don't? You can fi
 ```js
 const birds = ['Parrot', 'Falcon', 'Owl'];
 console.log(birds.indexOf('Owl'));   //  2
-console.log(birds.indexOf('Rabbit')) // -1
+console.log(birds.indexOf('Rabbit')); // -1
 ```
 
 ## Adding items
