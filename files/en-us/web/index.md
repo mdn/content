@@ -15,6 +15,10 @@ The open Web presents incredible opportunities for developers. To take full adva
   - : A list of tutorials to take you step-by-step through learning APIs, technologies, or broad topic areas.
 - [Progressive web apps (PWAs)](/en-US/docs/Web/Progressive_web_apps)
   - : Progressive Web Apps are web apps that use emerging web browser APIs and features along with traditional progressive enhancement strategy to bring a native app-like user experience to cross-platform web applications.
+- [Accessibility](/en-US/docs/Web/Accessibility)
+  - : Enabling as many people as possible to use Web sites, even when those people's abilities are limited in some way.
+- [Web Performance](/en-US/docs/Web/Performance)
+  - : Making content as available and interactive as possible, as soon as possible.
 
 ## Web technology references
 
