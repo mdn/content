@@ -44743,33 +44743,6 @@
       "wbamberg"
     ]
   },
-  "Web/API/FileReader/onabort": {
-    "modified": "2020-12-09T19:56:06.234Z",
-    "contributors": [
-      "bershanskiy",
-      "NotWoods"
-    ]
-  },
-  "Web/API/FileReader/onerror": {
-    "modified": "2020-12-09T19:57:36.155Z",
-    "contributors": [
-      "bershanskiy",
-      "1j01",
-      "pungggi"
-    ]
-  },
-  "Web/API/FileReader/onload": {
-    "modified": "2020-10-15T21:41:07.311Z",
-    "contributors": [
-      "nujabes403",
-      "nongomacoders",
-      "fscholz",
-      "prateekrbhutani",
-      "teoli",
-      "mrenty",
-      "nihey"
-    ]
-  },
   "Web/API/FileReader/progress_event": {
     "modified": "2020-10-15T22:15:39.291Z",
     "contributors": [

@@ -7856,6 +7856,9 @@
 /en-US/docs/Web/API/FileReader.readAsText	/en-US/docs/Web/API/FileReader/readAsText
 /en-US/docs/Web/API/FileReader.readyState	/en-US/docs/Web/API/FileReader/readyState
 /en-US/docs/Web/API/FileReader.result	/en-US/docs/Web/API/FileReader/result
+/en-US/docs/Web/API/FileReader/onabort	/en-US/docs/Web/API/FileReader/abort_event
+/en-US/docs/Web/API/FileReader/onerror	/en-US/docs/Web/API/FileReader/error_event
+/en-US/docs/Web/API/FileReader/onload	/en-US/docs/Web/API/FileReader/load_event
 /en-US/docs/Web/API/FileRequest.lockedFile	/en-US/docs/Web/API/FileRequest/lockedFile
 /en-US/docs/Web/API/FileRequest.onprogress	/en-US/docs/Web/API/FileRequest/onprogress
 /en-US/docs/Web/API/FileSystemFileEntry/FileSystemFileEntry.createWriter	/en-US/docs/Web/API/FileSystemFileEntry/createWriter
