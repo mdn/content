@@ -81,7 +81,7 @@ To create an interactive widget that has a tabular structure, use the grid patte
 
     - `aria-expanded="true`: Row is currently expanded.
     - `aria-expanded="false"`: Row is currently collapsed.
-    - `aria-expended="undefined"` or the attribute is missing: The row is neither expandable nor collapsible.
+    - `aria-expanded="undefined"` or the attribute is missing: The row is neither expandable nor collapsible.
 
     If the element with the `aria-expanded` attribute controls the expansion of another grouping container that is not 'owned by' the element, the author **should** reference the container by using the `aria-controls` attribute.
 
