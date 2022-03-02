@@ -7,6 +7,7 @@ tags:
   - Guide
   - Paint
   - Performance
+spec-urls: https://drafts.csswg.org/css-contain/#contain-property
 ---
 {{CSSRef}}
 The aim of the CSS Containment specification is to improve performance of web pages by allowing developers to isolate a subtree of the page from the rest of the page. If the browser knows that a part of the page is independent, rendering can be optimized and performance improved. The specification defines a single CSS property {{cssxref("contain")}}. This document describes the basic aims of the specification.
@@ -129,9 +130,7 @@ contain: strict style;
 
 ## Specifications
 
-| Specification                                                                            | Status                                   | Comment               |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------- |
-| {{SpecName('CSS Containment 2', '#contain-property', 'contain')}} | {{Spec2('CSS Containment 2')}} | Added `style` keyword |
+{{Specifications}}
 
 ## Browser compatibility
 

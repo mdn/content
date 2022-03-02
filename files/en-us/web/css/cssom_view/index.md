@@ -9,6 +9,7 @@ tags:
   - Layout
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/cssom-view/
 ---
 {{CSSRef}}
 
@@ -27,9 +28,7 @@ tags:
 
 ## Specifications
 
-| Specification                        | Status                           | Comment             |
-| ------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('CSSOM View')}} | {{Spec2('CSSOM View')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -7,6 +7,7 @@ tags:
   - Input
   - Reference
   - Select
+spec-urls: https://html.spec.whatwg.org/multipage/input.html#attr-input-size
 ---
 
 {{HTMLSidebar}}
@@ -44,10 +45,7 @@ By adding `size` on some input types, the width of the input can be controlled. 
 
 ## Specifications
 
-| Specification                                                               | Status                   |
-| --------------------------------------------------------------------------- | ------------------------ |
-| {{SpecName('HTML WHATWG', 'input.html#attr-input-size', 'size attribute')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5.1', 'input.html#attr-size-accept', 'size attribute')}}    | {{Spec2('HTML5.1')}}     |
+{{Specifications}}
 
 ## Browser compatibility
 

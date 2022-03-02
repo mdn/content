@@ -9,6 +9,7 @@ tags:
   - Motion Path
   - Overview
   - Reference
+spec-urls: https://drafts.fxtf.org/motion/
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
@@ -56,9 +57,7 @@ The idea is that when you want to animate an element moving along a path, you pr
 
 ## Specifications
 
-| Specification                                    | Status                                       | Comment             |
-| ------------------------------------------------ | -------------------------------------------- | ------------------- |
-| {{SpecName('Motion Path Level 1')}} | {{Spec2('Motion Path Level 1')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

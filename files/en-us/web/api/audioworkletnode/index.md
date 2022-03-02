@@ -33,9 +33,9 @@ _Also Inherits properties from its parent, {{domxref("AudioNode")}}_.
 - {{domxref("AudioWorkletNode.parameters")}} {{readonlyinline}}
   - : Returns an {{domxref("AudioParamMap")}} — a collection of {{domxref("AudioParam")}} objects. They are instantiated during the creation of the underlying `AudioWorkletProcessor`. If the `AudioWorkletProcessor` has a static {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} getter, the {{domxref("AudioParamDescriptor")}} array returned from it is used to create `AudioParam` objects on the `AudioWorkletNode`. With this mechanism it is possible to make your own `AudioParam` objects accessible from your `AudioWorkletNode`. You can then use their values in the associated `AudioWorkletProcessor`.
 
-### Event handlers
+### Events
 
-- {{domxref("AudioWorkletNode.onprocessorerror")}}
+- {{domxref("AudioWorkletNode.processorerror_event", "processorerror")}}
   - : Fired when an error is thrown in associated {{domxref("AudioWorkletProcessor")}}. Once fired, the processor and consequently the node will output silence throughout its lifetime.
 
 ## Methods

@@ -34,19 +34,19 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@4.1.8":
-  version "4.1.8"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.8.tgz#26b38739ac734b70246da33b4fb0209ccd03b674"
-  integrity sha512-iY8qGU+yJvscccvWLyWPKfF9BSLmSFth5HBNjSNtIfoyUrQV3lTZml+zyKWRymMYCgvos6LiSqMj1RDEj3TehA==
+"@mdn/browser-compat-data@4.1.9":
+  version "4.1.9"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.9.tgz#6cdea996eaeddcc03f514ffca86b14e2c2fbcf46"
+  integrity sha512-MGIACLLfhkuJ4rV5JPIOFNLJN+JWgYmV83NMBfx8EvRma+kcEAFivVgHHuEPJtdCba5zRpMx/cIGrXfVyGN56g==
 
-"@mdn/yari@0.6.57":
-  version "0.6.57"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.6.57.tgz#e676026766c8f1b16f212a3f471a083f6ead173b"
-  integrity sha512-hHdhDh0XAuLNIsLGTwcs+zvds/3AeaRzZdBNwYcOphRb6ULjOIVUfIWBzYKoiHaxdosXQLcPpcSeexyDyaH7OQ==
+"@mdn/yari@0.6.67":
+  version "0.6.67"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.6.67.tgz#e84d719176fc28effcca69eef5ddc0d37bca2414"
+  integrity sha512-amGzJ3foZ2UYMyM4hV/ZsgIrOKm7Q6zMGVIygU0QPnQvUufxxObidE6ZkzZBlOc+UfZ1Dn5slYjn/1Mb7QJZyQ==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
-    "@mdn/browser-compat-data" "4.1.8"
+    "@mdn/browser-compat-data" "4.1.9"
     accept-language-parser "1.5.0"
     browser-specs "^2.24.0"
     chalk "4.1.2"
@@ -87,7 +87,7 @@
     md5-file "5.0.0"
     mdast-util-from-markdown "^0.8.5"
     mdast-util-phrasing "^2.0.0"
-    mdn-data "2.0.26"
+    mdn-data "2.0.27"
     node-gettext "^3.0.0"
     open "^8.4.0"
     open-editor "3.0.0"
@@ -3046,10 +3046,10 @@ mdn-data@2.0.14:
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.14.tgz#7113fc4281917d63ce29b43446f701e68c25ba50"
   integrity sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==
 
-mdn-data@2.0.26:
-  version "2.0.26"
-  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.26.tgz#683654b390ea9c31a94aa95078347afd3e015649"
-  integrity sha512-agAtU1PRFd+fbo4Rog2A5DLnxmWvJ5+ZgbTekPj0Fil7mJFalWkg7VRyJW2FpGNc5u7VfiPoQ85u3gzp2p9iFQ==
+mdn-data@2.0.27:
+  version "2.0.27"
+  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.27.tgz#1710baa7b0db8176d3b3d565ccb7915fc69525ab"
+  integrity sha512-kwqO0I0jtWr25KcfLm9pia8vLZ8qoAKhWZuZMbneJq3jjBD3gl5nZs8l8Tu3ZBlBAHVQtDur9rdDGyvtfVraHQ==
 
 mdurl@^1.0.0:
   version "1.0.1"

@@ -138,6 +138,7 @@ In this section we took a look at image optimization. You now have a general und
 - [What is web performance?](/en-US/docs/Learn/Performance/What_is_web_performance)
 - [How do users perceive performance?](/en-US/docs/Learn/Performance/Perceived_performance)
 - [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
+- [Multimedia: images](/en-US/docs/Learn/Performance/Multimedia)
 - [Multimedia: video](/en-US/docs/Learn/Performance/video)
 - [JavaScript performance best practices](/en-US/docs/Learn/Performance/javascript_performance).
 - [HTML performance features](/en-US/docs/Learn/Performance/HTML)

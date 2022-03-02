@@ -51,7 +51,7 @@ This article provides information about the changes in Firefox 69 that will affe
 
 - In order to align more closely to the specification, the text track associated with a {{HTMLElement("track")}} element no longer loads the WebVTT file containing the text cues if the element is created in its default `disabled` {{domxref("TextTrack.mode", "mode")}}. To access or manipulate the cues when the `mode` is `disabled`, change the `mode` to either `started` or `hidden`; this will trigger loading of the WebVTT data ({{bug(1550633)}}).
 
-####  Removals
+#### Removals
 
 - The HTML {{HTMLElement("keygen")}} element has been removed from Firefox. It was deprecated some time ago, and its purpose has generally been supplanted by other technologies ({{bug(1315460)}}).
 

@@ -17,7 +17,7 @@ lower precedence.
 ## Precedence And Associativity
 
 Consider an expression describable by the representation below. Note that both
-OP<sub>1</sub> and OP<sub>2</sub> are fill-in-the-blanks for OPerators.
+`OP1` and `OP2` are fill-in-the-blanks for OPerators.
 
 ```js
 a OP1 b OP2 c

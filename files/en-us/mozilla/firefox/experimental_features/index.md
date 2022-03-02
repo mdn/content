@@ -22,47 +22,6 @@ Experimental features can be enabled or disabled using the [Firefox Configuratio
 
 ## HTML
 
-### Element: \<dialog>
-
-The HTML {{HTMLElement("dialog")}} element and its associated DOM APIs provide support for HTML-based modal dialog boxes.
-The current implementation is a little inelegant but is basically functional. (See {{bug(840640)}} for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>53</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>53</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>53</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>53</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.dialog_element.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ### inert attribute
 
 The {{domxref("HTMLElement")}} property {{DOMxRef("HTMLElement.inert")}} is a {{jsxref("Boolean")}}, when present, may make the browser "ignore" the element from assistive technologies, page search and text selection. For more details on the status of this feature see {{bug(1655722)}}.
@@ -508,48 +467,6 @@ The {{cssxref("math-style")}} property indicates whether MathML equations should
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>layout.css.math-style.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-### Property: hyphenate-character
-
-The {{cssxref("hyphenate-character")}} property can be used to set a string that is used instead of a hyphen character (`-`) at the end of a hyphenation line break.
-It can also be used to specify that the character is selected to be appropriate for the language conventions of the affected content.
-(See {{bug(1746187)}} for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>97</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>97</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>97</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>97</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.hyphenate-character.enabled</code></td>
     </tr>
   </tbody>
 </table>

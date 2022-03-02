@@ -9,6 +9,7 @@ tags:
   - Layout
   - Reference
   - Web
+spec-urls: https://drafts.csswg.org/css-lists/#auto-numbering
 ---
 {{CSSRef}}
 
@@ -305,10 +306,7 @@ li::before {
 
 ## Specifications
 
-| Specification                                                                        | Status                           | Comment            |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("CSS3 Lists", "#auto-numbering", "CSS Counters")}}     | {{Spec2("CSS3 Lists")}} | No change          |
-| {{SpecName("CSS2.1", "generate.html#counters", "CSS Counters")}} | {{Spec2("CSS2.1")}}         | Initial definition |
+{{Specifications}}
 
 ## See also
 

@@ -550,7 +550,7 @@
       "events": []
     },
     "Geometry Interfaces": {
-      "interfaces": ["CSSMatrix", "DOMMatrix", "DOMMatrixReadOnly", "Point"],
+      "interfaces": ["CSSMatrix", "DOMMatrix", "DOMMatrixReadOnly", "DOMRect", "DOMRectReadOnly", "Point"],
       "methods": [],
       "properties": [],
       "events": []
@@ -788,7 +788,6 @@
         "IDBCursor",
         "IDBCursorWithValue",
         "IDBDatabase",
-        "IDBDatabaseException",
         "IDBEnvironment",
         "IDBFactory",
         "IDBIndex",

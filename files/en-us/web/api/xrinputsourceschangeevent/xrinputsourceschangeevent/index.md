@@ -55,7 +55,8 @@ the input parameters provided.
 
 ## Event types
 
-{{page("/en-US/docs/Web/API/XRInputSourcesChangeEvent", "Event types")}}
+- {{domxref("XRSession.inputsourceschange_event", "inputsourceschange")}}
+  - : Delivered to the {{domxref("XRSession")}} when the set of input devices available to it changes.
 
 ## Example
 

@@ -17,7 +17,7 @@ browser-compat: css.types.global_keywords.initial
 
 The **`initial`** CSS keyword applies the [initial (or default) value](/en-US/docs/Web/CSS/initial_value) of a property to an element. It can be applied to any CSS property. This includes the CSS shorthand {{cssxref("all")}}, with which `initial` can be used to restore all CSS properties to their initial state.
 
-On [inherited properties](/en-US/docs/Web/CSS/inheritance#Inherited_properties), the initial value may be unexpected. You should consider using the {{cssxref("inherit")}}, {{cssxref("unset")}}, or {{cssxref("revert")}} keywords instead.
+On [inherited properties](/en-US/docs/Web/CSS/inheritance#inherited_properties), the initial value may be unexpected. You should consider using the {{cssxref("inherit")}}, {{cssxref("unset")}}, or {{cssxref("revert")}} keywords instead.
 
 ## Examples
 

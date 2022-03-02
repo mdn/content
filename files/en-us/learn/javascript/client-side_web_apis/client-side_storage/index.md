@@ -508,7 +508,7 @@ As stated above, when a note's delete button is pressed, the note is deleted. Th
 // Define the deleteItem() function
 function deleteItem(e) {
   // retrieve the name of the task we want to delete. We need
-  // to convert it to a number before trying it use it with IDB; IDB key
+  // to convert it to a number before trying to use it with IDB; IDB key
   // values are type-sensitive.
   let noteId = Number(e.target.parentNode.getAttribute('data-note-id'));
 

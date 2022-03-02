@@ -382,7 +382,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#nonidentity"
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality"
           >Strict not equal</a
         >
         (<code>!==</code>)

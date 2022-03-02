@@ -41,6 +41,8 @@ await registeredUserScript.unregister();
       - : A `JSON` object containing arbitrary metadata properties associated with the registered user scripts. However, while arbitrary, the object must be serializable, so it is compatible with [the structured clone algorithm.](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) This metadata is used to pass details from the script to the [`API script`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts)[](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts). For example, providing details of a subset of the APIs that need to be injected by the [`API script`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts). The API  does not use this metadata,
     - `allFrames` {{Optional_Inline}}
       - : Same as `all_frames` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
+    - `cookieStoreId` {{optional_inline}}
+      - : An array of cookie store ID strings or a string containing a cookie store ID. Registers the user script in the tabs that belong to the cookie store IDs. This enables scripts to be registered for all default or non-contextual identity tabs, private browsing tabs (if extensions are enabled in private browsing), the tabs of a [contextual identity](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities), or a combination of these.
     - `excludeGlobs` {{Optional_Inline}}
       - : Same as `exclude_globs` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
     - `excludeMatches` {{Optional_Inline}}

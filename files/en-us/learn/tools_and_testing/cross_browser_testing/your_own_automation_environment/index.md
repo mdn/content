@@ -424,7 +424,7 @@ In addition, we should mention test results/reporting — we've been reporting r
     npm install --save-dev mocha
     ```
 
-3. you can now run the test (and any others you put inside your `test` directory) using the following command:
+3. You can now run the test (and any others you put inside your `test` directory) using the following command:
 
     ```bash
     npx mocha --no-timeouts

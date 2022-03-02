@@ -7,6 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-position/
 ---
 {{CSSRef}}
 
@@ -32,7 +33,4 @@ tags:
 
 ## Specifications
 
-| Specification                                        | Status                                   | Comment |
-| ---------------------------------------------------- | ---------------------------------------- | ------- |
-| {{ SpecName('CSS3 Positioning') }}         | {{ Spec2('CSS3 Positioning') }} |         |
-| {{ SpecName('CSS2.1', 'visuren.html') }} | {{ Spec2('CSS2.1') }}             |         |
+{{Specifications}}

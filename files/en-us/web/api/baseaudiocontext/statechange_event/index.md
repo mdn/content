@@ -1,6 +1,6 @@
 ---
-title: BaseAudioContext.onstatechange
-slug: Web/API/BaseAudioContext/onstatechange
+title: 'BaseAudioContext: statechange event'
+slug: Web/API/BaseAudioContext/statechange_event
 tags:
   - API
   - Audio
@@ -9,23 +9,28 @@ tags:
   - Event Handler
   - Reference
   - Web Audio API
-  - onstatechange
-browser-compat: api.BaseAudioContext.onstatechange
+  - statechange
+browser-compat: api.BaseAudioContext.statechange_event
 ---
-{{ APIRef("Web Audio API") }}
+{{APIRef("Web Audio API")}}
 
-The `onstatechange` property of the {{ domxref("BaseAudioContext") }}
-interface defines an event handler function to be called when the
-{{Event("statechange")}} event fires: this occurs when the audio context's state
-changes.
+A `statechange` event is fired at a {{DOMxRef("BaseAudioContext")}} object when its {{domxref("BaseAudioContext.state", "state")}} member changes.
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js
-baseAudioContext.onstatechange = function() { /* ... */ };
+addEventListener('statechange', event => { })
+
+onstatechange = event => { }
 ```
 
-## Example
+## Event type
+
+A generic {{domxref("Event")}}.
+
+## Examples
 
 The following snippet is taken from our [AudioContext states demo](https://github.com/mdn/webaudio-examples) ([see it running
 live](https://mdn.github.io/webaudio-examples/audiocontext-states/).) The `onstatechange` handler is used to log the current

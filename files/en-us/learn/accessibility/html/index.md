@@ -280,7 +280,7 @@ One key aspect of the accessibility of UI controls is that by default, browsers 
 
 > **Note:** From Firefox 84 you can also enable an overlay that shows the page tabbing order. For more information see: [Accessibility Inspector > Show web page tabbing order](/en-US/docs/Tools/Accessibility_inspector#show_web_page_tabbing_order).
 
-You can then press Enter/Return to follow a focused link or press a button (we've included some JavaScript to make the buttons alert a message), or start typing to enter text in a text input. Other form elements have different controls, for example, the {{htmlelement("select")}} element can have its options displayed and cycled between using the up and down arrow keys.
+You can then press Enter/Return to follow a focused link or press a button (we've included some JavaScript to make the buttons alert a message), or start typing to enter text in a text input. Other form elements have different controls; for example, the {{htmlelement("select")}} element can have its options displayed and cycled between using the up and down arrow keys.
 
 > **Note:** Different browsers may have different keyboard control options available. See [Using native keyboard accessibility](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#using_native_keyboard_accessibility) for more details.
 
@@ -547,7 +547,7 @@ Links ( the [`<a>`](/en-US/docs/Web/HTML/Element/a) element with an `href` attri
 
 By default, links are visually different from other text in both color and [text-decoration](/en-US/docs/Web/CSS/text-decoration), with links being blue and underlined by default, purple and underlined if visited, and with a [focus-ring](/en-US/docs/Web/CSS/:focus) when they receive keyboard focus.
 
-Color should not be used as the sole method of distinguishing links from non-linking content. Link text color, like all text, has to be significantly different from the background color ([a 4.5:1 contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)). In addition, links should visually be significantly different from non-linking text. With a minimum contrast requirement of 3:1 between link text and surrounding text and between default, visited, and focus/active states and a 4:5 contrast between all those state colors and the background color.
+Color should not be used as the sole method of distinguishing links from non-linking content. Link text color, like all text, has to be significantly different from the background color ([a 4.5:1 contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)). In addition, links should visually be significantly different from non-linking text, with a minimum contrast requirement of 3:1 between link text and surrounding text and between default, visited, and focus/active states and a 4:5 contrast between all those state colors and the background color.
 
 ### `onclick` events
 

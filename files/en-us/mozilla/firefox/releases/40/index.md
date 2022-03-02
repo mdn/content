@@ -101,7 +101,7 @@ Improvement in our experimental Web Animations implementation, mostly to match l
 
 New extensions to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API):
 
-- The {{domxref("BaseAudioContext/state", "AudioContext.state")}} and {{domxref("BaseAudioContext/onstatechange", "AudioContext.onstatechange")}} properties as well as the methods {{domxref("AudioContext.suspend()")}}, {{domxref("AudioContext.resume()")}}, and {{domxref("AudioContext.close()")}} have been added ({{bug(1094764)}}).
+- The {{domxref("BaseAudioContext/state", "AudioContext.state")}} and {{domxref("BaseAudioContext.statechange_event", "AudioContext.onstatechange")}} properties as well as the methods {{domxref("AudioContext.suspend()")}}, {{domxref("AudioContext.resume()")}}, and {{domxref("AudioContext.close()")}} have been added ({{bug(1094764)}}).
 - {{domxref("AudioBufferSourceNode")}} now implements the {{domxref("AudioBufferSourceNode.detune")}} [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) attribute ({{bug(1153783)}}).
 
 #### Web Workers
