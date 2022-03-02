@@ -15,9 +15,9 @@ browser-compat: api.Navigator.requestMIDIAccess
 {{DefaultAPISidebar("Web MIDI API")}}
 
 The **`requestMIDIAccess()`** method of the {{domxref('Navigator')}} interface
-returns a {{jsxref('Promise')}} representing a request for access to MIDI devices on a user's system. This method is part of the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API).
+returns a {{jsxref('Promise')}} representing a request for access to MIDI devices on a user's system. This method is part of the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API), which provides a means for accessing, enumerating, and manipulating MIDI devices.
 
-This method prompts the user for access to MIDI devices available to their system. If the user grants permission, then the {{jsxref('Promise')}} resolves and a [`MIDIAccess`](/en-US/docs/Web/API/MIDIAccess) object is returned. This method provides a means for accessing, enumerating, and manipulating MIDI devices.
+This method prompts the user for access to MIDI devices available to their system. If the user grants permission, then the {{jsxref('Promise')}} resolves and a [`MIDIAccess`](/en-US/docs/Web/API/MIDIAccess) object is returned.
 
 ## Syntax
 
