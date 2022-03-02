@@ -46,7 +46,7 @@ var intervalID = setInterval(code, [delay]);
 - `delay`{{optional_inline}}
   - : The time, in milliseconds (thousandths of a second), the timer should delay in
     between executions of the specified function or code. See {{anch("Delay restrictions")}}
-    below for details on the permitted range of `delay` values.
+    below for details on the permitted range of `delay` values. Defaults to 0 if not specified.
 - `arg1, ..., argN` {{optional_inline}}
   - : Additional arguments which are passed through to the function specified by
     _func_ once the timer expires.
