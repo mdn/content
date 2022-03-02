@@ -170,6 +170,45 @@ There are two interaction models for multi-select trees: While you can require t
 
 ## Examples
 
+```html
+<div>
+<ul>
+  <li>Web
+    <ul>
+      <li>Languages
+        <ul>
+          <li>HTML
+            <ul>
+              <li>document structure</li>
+              <li>head elements</li>
+              <li>semantic elements</li>
+              <li>attributes</li>
+              <li>web forms</li>
+            </ul>
+          </li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </li>
+      <li>Accessibility
+        <ul>
+          <li>AOM</li>
+          <li>WCAG</li>
+          <li>ARIA</li>
+        </ul>
+      </li>
+      <li>Web Performance
+        <ul>
+          <li>Load time</li>
+        </ul>
+      </li>
+      <li>APIs</li>
+    </ul>
+  </li>
+</ul>
+</div>
+```
+
 - Web
   - Languages
     - HTML
