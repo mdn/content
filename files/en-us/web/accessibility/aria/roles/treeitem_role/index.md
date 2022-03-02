@@ -34,6 +34,10 @@ Trees can be "single-select", allowing users to choose just one `treeitem` for a
 
 In single-select trees, only one treeitem can have [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) or (or [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)) set to `true`. When a single-select tree receives focus, if no `treeitem` is selected before the tree receives focus, focus is set on the first `treeitem`. If a `treeitem` is selected before the tree receives focus, focus is set on the single `treeitem` that has `aria-selected="true"` set. 
 
+All nodes that are selectable but not selected have either `aria-selected` or `aria-checked` set to `false`.  If the tree contains nodes that are not selectable, do not include either `aria-selected` or `aria-checked`, as the presence of either attribute indicates to assistive technologies the node is selectable.
+
+No more than one node can be selected at a time unless the `tree` node has [`aria-multiselectable="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) set. 
+
 When a multi-select tree receives focus, if none of the tree items are selected before the tree receives focus, focus is set on the first `treeitem`. If one or more tree items are selected before the tree receives focus, focus is set on the first selected `treeitem`.
 
 In multi-select trees, all selected tree items have either `aria-selected="true"` (or `aria-checked="true"`) set. All tree item nodes that are selectable but not currently selected should have `aria-selected="false"` (or `aria-checked="false"`) set. 
@@ -53,9 +57,136 @@ If the complete set of available treeitems is not present in the DOM due to dyna
   
 ### Keyboard interactions
 
+For a vertically oriented `tree`, which is the default orientation:
+
+<table>
+<tr>
+<td><kbd>Right arrow</kbd></td>
+<td>
+<ul>
+<li>When focus is on a closed node, opens the node; focus does not move.
+<li>When focus is on a open node, moves focus to the first child node.
+<li>When focus is on an end node (a tree item with no children), does nothing.
+</td>
+</tr>
+<tr>
+<td><kbd>Left arrow</kbd></td>
+<td>
+<ul>
+<li>When focus is on an open node, closes the node.
+<li>When focus is on a child node that is also either an end node or a closed node, moves focus to its parent node.
+<li>When focus is on a closed `tree`, does nothing.
+</td>
+</tr>
+<tr>
+<td><kbd>Down Arrow</kbd></td>
+<td> Moves focus to the next node that is focusable without opening or closing a node.
+</td>
+</tr>
+<tr>
+<td><kbd>Up Arrow</kbd></td>
+<td> Moves focus to the previous node that is focusable without opening or closing a node.
+</td>
+</tr>
+<tr>
+<td><kbd>Home</kbd></td>
+<td> Moves focus to the first node in the tree without opening or closing a node.
+</td>
+</tr>
+<tr>
+<td><kbd>End</kbd></td>
+<td> Moves focus to the last node in the tree that is focusable without opening the node.
+</td>
+</tr>
+<tr>
+<td><kbd>Enter</kbd></td>
+<td>Performs the default action of the currently focused node. For parent nodes, it opens or closes the node. In single-select trees, if the node has no children, selects the current node if not already selected (which is the default action).
+</td>
+</tr>
+<tr>
+<td>Type a character*</td>
+<td>
+<ul>
+<li>Focus moves to the next node with a name that starts with the typed character. 
+<li>If multiple characters are typed in rapid succession, focus moves to the next node with a name that starts with the string of characters typed.
+</td>
+</tr>
+<tr>
+<td>
+<kbd>*</kbd> (Optional)</td>
+<td> Expands all siblings that are at the same level as the current node.
+</td>
+</tr>
+</table>
+
+\* Type-ahead is recommended for all trees, especially for trees with more than 7 root nodes
+
+### Multi-select keyboard interactions
+
+There are two interaction models for multi-select trees: While you can require that users press a modifier key, such as <kbd>Shift</kbd> or <kbd>Control</kbd> while navigating the list in order to avoid losing selection states, the model that does not require the user to hold a modifier key is recommended. 
+
+#### Recommended multi user select model:
+
+<table>
+<tr>
+<td><kbd>Space</kbd></td>
+<td> Toggles the selection state of the focused node.
+</td>
+</tr>
+<tr>
+<td><kbd>Shift + Down Arrow</kbd> (Optional)</td>
+<td> Moves focus to and toggles the selection state of the next node.
+</td>
+</tr>
+<tr>
+<td><kbd>Shift + Up Arrow</kbd> (Optional)</td>
+<td> Moves focus to and toggles the selection state of the previous node.
+</td>
+</tr>
+<tr>
+<td><kbd>Shift + Space</kbd> (Optional)</td>
+<td> Selects contiguous nodes from the most recently selected node to the current node.
+</td>
+</tr>
+<tr>
+<td><kbd>Control + Shift + Home</kbd> (Optional)</td>
+<td> Selects the node with focus and all nodes up to the first node. Optionally, moves focus to the first node.
+</td>
+</tr>
+<tr>
+<td><kbd>Control + Shift + End</kbd> (Optional)</td>
+<td> Selects the node with focus and all nodes down to the last node. Optionally, moves focus to the last node.
+</td>
+</tr>
+<tr>
+<td><kbd>Control + A</kbd> (Optional)</td>
+<td> Selects all nodes in the tree. Optionally, if all nodes are selected, it can also unselect all nodes.</td>
+</tr>
+</table>
+
+
+
 ### Required JavaScript features
 
 ## Examples
+
+- Web
+  - Languages
+    - HTML
+      - document structure
+      - head elements
+      - semantic elements
+      - attributes
+      - web forms
+    - CSS
+    - JavaScript
+  - Accessibility
+    - AOM
+    - WCAG
+    - ARIA
+  - Web Performance
+    - Load time
+  - APIs
 
 
 ## Specifications
