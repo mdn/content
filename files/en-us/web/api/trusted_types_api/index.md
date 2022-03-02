@@ -80,10 +80,7 @@ Read more about this example, and discover other ways to sanitize input in the a
 
 See the compatibility data for each of the Trusted Types API interfaces.
 
-## Polyfill
-
-A [polyfill is available](https://github.com/w3c/webappsec-trusted-types#polyfill). The polyfill is also available as an npm package [trusted-types](https://www.npmjs.com/package/trusted-types).
-
 ## See also
 
 - [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/)
+- [Trusted Types polyfill](https://github.com/w3c/webappsec-trusted-types#polyfill) (also available as an [npm package](https://www.npmjs.com/package/trusted-types))

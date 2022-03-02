@@ -172,15 +172,10 @@ favDialog.addEventListener('close', function onClose() {
 
 {{Compat}}
 
-## Polyfill
-
-Include this polyfill to provide support for browsers without `<dialog>` element.
-
-[dialog-polyfill](https://github.com/GoogleChrome/dialog-polyfill)
-
 ## See also
 
 - The {{domxref("HTMLDialogElement/close_event", "close")}} event
 - The {{domxref("HTMLDialogElement/cancel_event", "cancel")}} event
 - [HTML forms guide](/en-US/docs/Learn/Forms).
 - The {{cssxref("::backdrop")}} pseudo-element
+- [dialog-polyfill](https://github.com/GoogleChrome/dialog-polyfill)

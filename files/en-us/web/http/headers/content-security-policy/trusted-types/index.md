@@ -42,10 +42,6 @@ if (typeof trustedTypes !== 'undefined') {
 }
 ```
 
-## Polyfill
-
-A [polyfill for Trusted Types](https://github.com/w3c/webappsec-trusted-types#polyfill) is available on Github.
-
 ## Specifications
 
 {{Specifications}}
@@ -60,3 +56,4 @@ A [polyfill for Trusted Types](https://github.com/w3c/webappsec-trusted-types#po
 - [Cross-Site Scripting (XSS)](/en-US/docs/Glossary/Cross-site_scripting)
 - [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types)
 - Trusted Types with [DOMPurify](https://github.com/cure53/DOMPurify#what-about-dompurify-and-trusted-types) XSS sanitizer
+- [Trusted Types polyfill](https://github.com/w3c/webappsec-trusted-types#polyfill)
