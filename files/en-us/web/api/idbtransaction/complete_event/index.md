@@ -59,7 +59,7 @@ DBOpenRequest.onsuccess = event => {
 
   // add a listener for `complete`
   transaction.addEventListener('complete', event => {
-    console.log('Transaction was competed');
+    console.log('Transaction was completed');
   });
 
   const objectStore = transaction.objectStore('toDoList');
@@ -100,7 +100,7 @@ DBOpenRequest.onsuccess = event => {
 
   // add a listener for `complete`
   transaction.oncomplete = event => {
-    console.log('Transaction was competed');
+    console.log('Transaction was completed');
   };
 
   const objectStore = transaction.objectStore('toDoList');
