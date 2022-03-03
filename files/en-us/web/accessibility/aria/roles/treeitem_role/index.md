@@ -164,69 +164,64 @@ There are two interaction models for multi-select trees: While you can require t
 </tr>
 </table>
 
-
-
-### Required JavaScript features
-
 ## Examples
+
+The following is how one might mark up a directory listing of web development courses as a tree view:
 
 ```html
 <div>
-<ul>
-  <li>Web
-    <ul>
-      <li>Languages
-        <ul>
-          <li>HTML
-            <ul>
-              <li>document structure</li>
-              <li>head elements</li>
-              <li>semantic elements</li>
-              <li>attributes</li>
-              <li>web forms</li>
+<h3 id="treeLabel">
+  Developer Learning Path
+</h3>
+<ul role="tree" aria-labelledby="treeLabel">
+  <li role="treeitem" aria-expanded="true">
+    <span>Web</span>
+    <ul role="group">
+      <li role="treeitem" aria-expanded="false">
+        <span>Languages</span>
+        <ul role="group">
+          <li role="treeitem" aria-expanded="false">
+            <span>HTML</span>
+            <ul role="group">
+              <li role="treeitem">Document structure</li>
+              <li role="treeitem">Head elements</li>
+              <li role="treeitem">Semantic elements</li>
+              <li role="treeitem">Attributes</li>
+              <li role="treeitem">Web forms</li>
             </ul>
           </li>
-          <li>CSS</li>
-          <li>JavaScript</li>
+          <li role="treeitem">CSS</li>
+          <li role="treeitem">JavaScript</li>
         </ul>
       </li>
-      <li>Accessibility
-        <ul>
-          <li>AOM</li>
-          <li>WCAG</li>
-          <li>ARIA</li>
+      <li role="treeitem" aria-expanded="false">
+        <span>Accessibility</span>
+        <ul role="group">
+          <li role="treeitem" aria-label="accessibility object model">AOM</li>
+          <li role="treeitem">WCAG</li>
+          <li role="treeitem">ARIA</li>
         </ul>
       </li>
-      <li>Web Performance
-        <ul>
-          <li>Load time</li>
+      <li role="treeitem" aria-expanded="false">
+        <span>Web Performance</span>
+        <ul role="group">
+          <li role="treeitem">Load time</li>
         </ul>
       </li>
-      <li>APIs</li>
+      <li role="treeitem">APIs</li>
     </ul>
   </li>
 </ul>
 </div>
 ```
 
-- Web
-  - Languages
-    - HTML
-      - document structure
-      - head elements
-      - semantic elements
-      - attributes
-      - web forms
-    - CSS
-    - JavaScript
-  - Accessibility
-    - AOM
-    - WCAG
-    - ARIA
-  - Web Performance
-    - Load time
-  - APIs
+The above provides the semantics for a tree view, but does not provide any of the interactivity. That must be added in with JavaScript. 
 
+If the tree items aren't by default focusable, JavaScript can be used [`tabIndex="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) to all the treeitems except the one that should receive focus when the user tabs into the tree which should be set to `tabIndex="0"`.  
+
+All the keyboard functionality in Keyboard interactions and all pointer events need to be programmed, including focus management, going up and down the tree, exapanding and collapsing parent nodes, and selection management.  
+
+If the tree has more than 7 tree items, including type ahead functionality is recommended.
 
 ## Specifications
 
