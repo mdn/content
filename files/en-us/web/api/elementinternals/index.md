@@ -153,7 +153,7 @@ window.customElements.define('custom-checkbox', CustomCheckbox);
 let element = document.createElement('custom-checkbox');
 let form = document.createElement('form');
 
-// Append elment to form to associate it
+// Append element to form to associate it
 form.appendChild(element);
 
 console.log(element.internals_.form);
