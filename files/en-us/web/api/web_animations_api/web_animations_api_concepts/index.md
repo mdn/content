@@ -69,10 +69,6 @@ We can assemble all these pieces together to create a working animation with the
 
 The API allows for the creation of dynamic animations that can be updated on the fly as well as more straightforward, declarative animations like those CSS creates. It can be used in automated tests to ensure that your UI animations are running correctly. It opens up the browser's rendering engine for building animation development tools like timelines. It is also a performant base on which to build a custom or commercial animation library. (See [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/).) In some instances, it may negate the need for a fully fledged library entirely in the same way Vanilla JavaScript can be used without jQuery for many purposes.
 
-## Polyfill
-
-The Web Animation API has a [polyfill](https://github.com/web-animations/web-animations-js) that you can use today.
-
 ## See also
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) — main page

@@ -436,10 +436,6 @@ if (window.fetch) {
 }
 ```
 
-## Polyfill
-
-To use Fetch in unsupported browsers, there is a [Fetch Polyfill](https://github.com/github/fetch) available that recreates the functionality for non-supporting browsers.
-
 ## Specifications
 
 | Specification                | Status                   | Comment            |
