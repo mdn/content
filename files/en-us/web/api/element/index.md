@@ -87,7 +87,7 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
   - : Returns a number representing the scroll view width of the element.
 - {{DOMxRef("Element.shadowRoot")}}{{readOnlyInline}}
   - : Returns the open shadow root that is hosted by the element, or null if no open shadow root is present.
-- {{DOMxRef("Element.slot")}} {{Experimental_Inline}}
+- {{DOMxRef("Element.slot")}}
   - : Returns the name of the shadow DOM slot the element is inserted in.
 - {{DOMxRef("Element.tagName")}} {{readOnlyInline}}
   - : Returns a string with the name of the tag for the given element.
