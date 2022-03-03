@@ -219,7 +219,7 @@ console.log(doubled);  // [ 10, 4, 14, 12 ]
 
 We give a function to the `map()`, and `map()` calls the function once for each item in the array, passing in the item. It then adds the return value from each function call to a new array, and finally returns the new array.
 
-Sometimes you'll want to create a new array containing only the items in the original array that match some test. You can do this using {{jsxref("Array.prototype.filter()","filter()")}}. The code below takes an array of strings and filters out all strings that are less than 8 characters long:
+Sometimes you'll want to create a new array containing only the items in the original array that match some test. You can do that using {{jsxref("Array.prototype.filter()","filter()")}}. The code below takes an array of strings and returns an array containing just the strings that are greater than 8 characters long:
 
 ```js
 function isLong(city) {
