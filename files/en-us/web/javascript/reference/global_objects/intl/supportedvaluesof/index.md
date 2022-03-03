@@ -60,7 +60,7 @@ if (typeof Intl.supportedValuesOf !== 'undefined') {
 ### Get all values for key
 
 To get the supported values for calendar you call the method with the key `"calendar"`.
-YOu can then iterate through the returned array as shown below:
+You can then iterate through the returned array as shown below:
 
 ```js
 Intl.supportedValuesOf("calendar").forEach(function(calendar) {
