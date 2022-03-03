@@ -67,7 +67,7 @@ In the listener, you can then return a {{WebExtAPIRef("webRequest.BlockingRespon
 
 ## Requests at browser startup
 
-When a listener is registered with the `"blocking"` option and is registered during the extension startup, if a request is made during the browser startup that matches the listener the extension starts early. This enables the extension to observe the request at browser startup. If you don't take the steps, requests made at startup could be missed.
+When a listener is registered with the `"blocking"` option and is registered during the extension startup, if a request is made during the browser startup that matches the listener the extension starts early. This enables the extension to observe the request at browser startup. If you don't take these steps, requests made at startup could be missed.
 
 ## Accessing security information
 
