@@ -253,8 +253,8 @@ console.log(i1.getAttribute('aria-selected'));
 
 console.log(i2.getAttribute('aria-selected'));
 //  'true'
-Note: even if selected: !null, then giving oldval.setAttribute is not a function
 ```
+Note: even if selected: !null, then giving oldval.setAttribute is not a function
 
 ### Value correction and an extra property
 
