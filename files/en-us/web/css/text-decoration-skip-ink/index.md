@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Property
   - CSS Text Decoration
-  - Experimental
   - Layout
   - Reference
   - Web

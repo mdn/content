@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Background
   - CSS Property
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.background-position-x
