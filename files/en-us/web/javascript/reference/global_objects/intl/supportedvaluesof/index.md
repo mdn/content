@@ -104,10 +104,6 @@ try {
 }
 ```
 
-## Polyfill
-
-[Intl.supportedValuesOf() polyfill in proposal TC39](https://github.com/tc39/proposal-intl-enumeration/tree/master/polyfill)
-
 ## Specifications
 
 {{Specifications}}
@@ -119,3 +115,4 @@ try {
 ## See also
 
 - {{jsxref("Global_Objects/Intl", "Intl")}}
+- [A polyfill of `Intl.supportedValuesOf` in proposal TC39](https://github.com/tc39/proposal-intl-enumeration/tree/master/polyfill)

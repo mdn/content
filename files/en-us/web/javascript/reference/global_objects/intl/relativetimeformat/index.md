@@ -79,10 +79,6 @@ rtf.formatToParts(100, "day");
 // >  { type: "literal", value: " days" }]
 ```
 
-## Polyfill
-
-[formatjs Intl.RelativeTimeFormat polyfill](https://formatjs.io/docs/polyfills/intl-relativetimeformat)
-
 ## Specifications
 
 {{Specifications}}
@@ -95,3 +91,4 @@ rtf.formatToParts(100, "day");
 
 - {{jsxref("Intl")}}
 - [The Intl.RelativeTimeFormat API](https://developers.google.com/web/updates/2018/10/intl-relativetimeformat)
+- [A polyfill of `Intl.RelativeTimeFormat` in FormatJS](https://formatjs.io/docs/polyfills/intl-relativetimeformat)
