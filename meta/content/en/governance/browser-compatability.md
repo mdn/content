@@ -12,7 +12,7 @@ Browser compatibility tables on MDN Web Docs are generated from [mdn/browser-com
 
 MDN Web Docs content is managed separately from browser compatibility data. BCD has its own [governance](https://github.com/mdn/browser-compat-data/blob/main/GOVERNANCE.md), [contribution process](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md), and [content guidelines](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines.md).
 
-MDN uses browser compatibility to generate browser compatibility tables (plus some other site content). MDN uses the data as provided, including:
+MDN uses browser compatibility data to generate browser compatibility tables (plus some other site content). MDN uses the data as provided, including:
 
 - Feature descriptions
 - Support status and reported version numbers
@@ -58,7 +58,7 @@ To recommend adding a browser to MDN, follow these steps:
 
 1. Wait for the team to consider your recommendation.
 
-Whether your your recommendation is selected, deferred, or rejected, we'll follow up in the GitHub discussion with next steps.
+Whether your recommendation is selected, deferred, or rejected, we'll follow up in the GitHub discussion with next steps.
 
 ## Browser selection questionnaire
 
