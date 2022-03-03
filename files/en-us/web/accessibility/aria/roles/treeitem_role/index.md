@@ -32,7 +32,7 @@ Any element with a `treeitem` role must be nested in, or owned by, an element wi
 
 Trees can be "single-select", allowing users to choose just one `treeitem` for an action, or "multi-select", where users are able to select more than one `treeitem` nodes for an action. In both cases, to be keyboard accessible, focus must be managed for all tree descendants.
 
-In single-select trees, only one treeitem can have [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) or (or [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)) set to `true`. When a single-select tree receives focus, if no `treeitem` is selected before the tree receives focus, focus is set on the first `treeitem`. If a `treeitem` is selected before the tree receives focus, focus is set on the single `treeitem` that has `aria-selected="true"` set. 
+In single-select trees, only one treeitem can have [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) (or [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)) set to `true`. When a single-select tree receives focus, if no `treeitem` is selected before the tree receives focus, focus is set on the first `treeitem`. If a `treeitem` is selected before the tree receives focus, focus is set on the single `treeitem` that has `aria-selected="true"` set. 
 
 All nodes that are selectable but not selected have either `aria-selected` or `aria-checked` set to `false`.  If the tree contains nodes that are not selectable, do not include either `aria-selected` or `aria-checked`, as the presence of either attribute indicates to assistive technologies the node is selectable.
 
@@ -54,8 +54,17 @@ A `treeitem` is required to have an accessible name. Generally, that name comes 
 
 ### Associated WAI-ARIA roles, states, and properties
 
+- [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role) role
+  - : The root node for the hierarchical list of parent and child `treeitem` nodes that can expand and collapse
+- [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role
+  - : Identifies a set of `treeitem` child nodes. 
+  
 - [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
-  - : Set on the the root `tree` and on `treeitem` nodes that are parents of other `treeitem` nodes, to indicate whether the tree view is expanded (`true`) or collapsed (`false`).
+  - : Set on the the root `tree` and on `group` nodes that are parents of `treeitem` nodes, to indicate whether the tree view is expanded (`true`) or collapsed (`false`).
+- [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
+  - Set to `true` or `false`, indicates a `treeitem` is selectable, and whether or not it is currently selected. 
+- [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
+  - Set to `true` or `false`, indicates the `treeitem` can be checked, and whether or not it is currently checked. 
   
 ### Keyboard interactions
 
