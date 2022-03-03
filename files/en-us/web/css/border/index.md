@@ -4,7 +4,6 @@ slug: Web/CSS/border
 tags:
   - CSS
   - CSS Borders
-  - CSS Property
   - CSS Shorthand property
   - Layout
   - Reference
