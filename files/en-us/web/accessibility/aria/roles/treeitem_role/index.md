@@ -50,6 +50,8 @@ In multi-select trees, the selected state should be independent of the focus. Fo
 
 If the complete set of available treeitems is not present in the DOM due to dynamic loading as the user moves focus in or scrolls the tree, each `treeitem` should have [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level), [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize), and [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) specified.
 
+A `treeitem` is required to have an accessible name. Generally, that name comes from the `treeitem`'s contents. The accessible name can also be set via [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby).
+
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
