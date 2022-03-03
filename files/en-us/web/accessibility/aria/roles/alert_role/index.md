@@ -24,7 +24,7 @@ The alert role should only be used for information that requires the user's imme
 - The user's login session is about to expire
 - The connection to the server was lost so local changes will not be saved
 
-The `alert` role should only be used for static text content, not interactive elements such as links or buttons. The element with the `alert` role does not have to be able to receive focus, as screen readers (speech or braille) will automatically announce the updated content regardless of where keyboard focus when the role is added.
+The `alert` role should only be used for text content, not interactive elements such as links or buttons. The element with the `alert` role does not have to be able to receive focus, as screen readers (speech or braille) will automatically announce the updated content regardless of where keyboard focus when the role is added.
 
 The `alert` role is added to the node containing an alert message, **not** the element causing the alert to be triggered. Alerts are [assertive live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Setting `role="alert"` is equivalent to setting [`aria-live="assertive"`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-live) and [`aria-atomic="true"`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-atomic). As they don't receive focus, focus does not need to be managed and no user interaction should be required.
 
