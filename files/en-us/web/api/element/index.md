@@ -66,7 +66,7 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
 - {{DOMxRef("Element.outerHTML")}}
   - : Is a {{DOMxRef("DOMString")}} representing the markup of the element including its content. When used as a setter, replaces the element with nodes parsed from the given string.
 - {{DOMxRef("Element.openOrClosedShadowRoot")}} {{Non-standard_Inline}}{{readOnlyInline}}
-  - : Returns the shadow root that is hosted by the element, regardless if its open or closed. **Available only to [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).**
+  - : Returns the shadow root that is hosted by the element, regardless if its open or closed. **Only available to [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).**
 - {{DOMxRef("Element.part")}}
   - : Represents the part identifier(s) of the element (i.e. set using the `part` attribute), returned as a {{domxref("DOMTokenList")}}.
 - {{DOMxRef("Element.prefix")}} {{readOnlyInline}}
