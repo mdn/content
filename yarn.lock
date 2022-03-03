@@ -62,23 +62,23 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@4.1.9":
-  version "4.1.9"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.9.tgz#6cdea996eaeddcc03f514ffca86b14e2c2fbcf46"
-  integrity sha512-MGIACLLfhkuJ4rV5JPIOFNLJN+JWgYmV83NMBfx8EvRma+kcEAFivVgHHuEPJtdCba5zRpMx/cIGrXfVyGN56g==
+"@mdn/browser-compat-data@4.1.10":
+  version "4.1.10"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.10.tgz#7488205d83b2e8c54a4e6b659f496d09c48152cb"
+  integrity sha512-z3UzXqOjrgUnKENwdhFZmU7oeEWTOjUmWGQtXTOEbTR1FdwSBF6RCU6RPkv10ryP00y5ybCUm++4t5B8Wc3tPg==
 
-"@mdn/yari@0.6.80":
-  version "0.6.80"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.6.80.tgz#b1887b3ab03b91be6d92676f345a46924ecfaa40"
-  integrity sha512-ArEaf1F+kjz5xGWq5UR1wIJ2ylARC1Cxxulnff1GedU01dZpLeu09BLAKht19E4aX9IjpsQVJbiUjSIbpluDwA==
+"@mdn/yari@0.6.84":
+  version "0.6.84"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.6.84.tgz#0fec0cef3ec1d65bad641f4567293a12afac118e"
+  integrity sha512-9VW9Z/+cW6oDeJijZOU499vOc/++VdC3bE/txZhcQFbX3yGAa8ig+7PQfK4kdmI8EaxuDFz3eeONRJlM7m86DQ==
   dependencies:
     "@babel/helper-builder-react-jsx" "^7.16.7"
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
-    "@mdn/browser-compat-data" "4.1.9"
+    "@mdn/browser-compat-data" "4.1.10"
     "@use-it/interval" "^1.0.0"
     accept-language-parser "1.5.0"
-    browser-specs "^2.24.0"
+    browser-specs "^3.0.0"
     chalk "4.1.2"
     cheerio "1.0.0-rc.10"
     cli-progress "^3.10.0"
@@ -90,7 +90,7 @@
     dotenv "14.3.0"
     ejs "3.1.6"
     express "4.17.3"
-    fast-xml-parser "3.21.1"
+    fast-xml-parser "4.0.4"
     fdir "5.2.0"
     file-type "16.5.3"
     front-matter "^4.0.2"
@@ -113,7 +113,6 @@
     is-svg "4.2.2"
     js-yaml "4.1.0"
     klaw-sync "^6.0.0"
-    lodash.throttle "^4.1.1"
     loglevel "^1.8.0"
     lru-cache "^6.0.0"
     md5-file "5.0.0"
@@ -594,10 +593,10 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^2.24.0:
-  version "2.27.0"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-2.27.0.tgz#f2cb5a72a27bb9ebb964e4b31c58a7fbb5e3793e"
-  integrity sha512-k/0/NAr9mONusiTMqtprQVOHrz2Wpih/Uf9tBIvJFEB9f5dcIoBmti/y21vk9T6gMRXk4SkGsYEoFFZlaCwfcA==
+browser-specs@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.0.0.tgz#b950d72129fbfdcb7e991f63298850acde496230"
+  integrity sha512-NcekE/m/jqSq3XnO5/u+VuV2Z6WAOXtwL4WCG9Iu1mMmo4Con30CvDRzjm33MS5xtgEdqjpGIyB7nJWqZezRWA==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
@@ -1687,12 +1686,12 @@ fast-safe-stringify@^2.0.4:
   resolved "https://registry.yarnpkg.com/fast-safe-stringify/-/fast-safe-stringify-2.0.7.tgz#124aa885899261f68aedb42a7c080de9da608743"
   integrity sha512-Utm6CdzT+6xsDk2m8S6uL8VHxNwI6Jub+e9NYTcAms28T84pTa25GJQV9j0CY0N1rM8hK4x6grpF2BQf+2qwVA==
 
-fast-xml-parser@3.21.1:
-  version "3.21.1"
-  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-3.21.1.tgz#152a1d51d445380f7046b304672dd55d15c9e736"
-  integrity sha512-FTFVjYoBOZTJekiUsawGsSYV9QL0A+zDYCRj7y34IO6Jg+2IMYEtQa+bbictpdpV8dHxXywqU7C0gRDEOFtBFg==
+fast-xml-parser@4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-4.0.4.tgz#a7a74546d4d1213d0a8e31a8b3aa54570affab6d"
+  integrity sha512-3drDiRcLD22vJ95YH9yhPQaHA8JAWwfJDZhXIFxKYp32EuhACgnOdS5cQIGVtaCH2VvygmYFDk79QEaeskGlaA==
   dependencies:
-    strnum "^1.0.4"
+    strnum "^1.0.5"
 
 fastq@^1.6.0:
   version "1.8.0"
@@ -2857,11 +2856,6 @@ lodash.isundefined@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/lodash.isundefined/-/lodash.isundefined-3.0.1.tgz#23ef3d9535565203a66cefd5b830f848911afb48"
   integrity sha1-I+89lTVWUgOmbO/VuDD4SJEa+0g=
-
-lodash.throttle@^4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
-  integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
 
 lodash.uniq@^4.5.0:
   version "4.5.0"
@@ -4472,10 +4466,10 @@ strip-outer@^1.0.0:
   dependencies:
     escape-string-regexp "^1.0.2"
 
-strnum@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/strnum/-/strnum-1.0.4.tgz#e97e36a7d6ba9f93d0d6b496b2ed0678d422832b"
-  integrity sha512-lMzNMfDpaQOLt4B2mEbfzYS0+T7dvCXeojnlGf6f1AygvWDMcWyXYaLbyICfjVu29sErR8fnRagQfBW/N/hGgw==
+strnum@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/strnum/-/strnum-1.0.5.tgz#5c4e829fe15ad4ff0d20c3db5ac97b73c9b072db"
+  integrity sha512-J8bbNyKKXl5qYcR36TIO8W3mVGVHrmmxsd5PAItGkmyzwJvybiw2IVq5nqd0i4LSNSkB/sx9VHllbfFdr9k1JA==
 
 strtok3@^6.2.4:
   version "6.2.4"
