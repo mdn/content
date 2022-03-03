@@ -6,7 +6,6 @@ tags:
   - CSS Logical Property
   - CSS Property
   - Experimental
-  - Non-standard
   - Reference
   - recipe:css-shorthand-property
 browser-compat: css.properties.border-block
