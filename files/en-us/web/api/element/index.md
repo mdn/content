@@ -65,6 +65,8 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
   - : Is an {{DOMxRef("Element")}}, the element immediately following the given one in the tree, or `null` if there's no sibling node.
 - {{DOMxRef("Element.outerHTML")}}
   - : Is a {{DOMxRef("DOMString")}} representing the markup of the element including its content. When used as a setter, replaces the element with nodes parsed from the given string.
+- {{DOMxRef("Element.openOrClosedShadowRoot")}} {{Non-standard_Inline}}{{readOnlyInline}}
+  - : Returns the shadow root that is hosted by the element, regardless if its open or closed. **Only available to [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).**
 - {{DOMxRef("Element.part")}}
   - : Represents the part identifier(s) of the element (i.e. set using the `part` attribute), returned as a {{domxref("DOMTokenList")}}.
 - {{DOMxRef("Element.prefix")}} {{readOnlyInline}}
@@ -85,11 +87,7 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
   - : Returns a number representing the scroll view width of the element.
 - {{DOMxRef("Element.shadowRoot")}}{{readOnlyInline}}
   - : Returns the open shadow root that is hosted by the element, or null if no open shadow root is present.
-- {{DOMxRef("Element.openOrClosedShadowRoot")}} {{Non-standard_Inline}}{{readOnlyInline}}
-  - : Returns the shadow root that is hosted by the element, regardless if its open or closed. **Available only to [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).**
-- {{DOMxRef("Element.setHTML")}}
-  - : Parses and [sanitizes](/en-US/docs/Web/API/HTML_Sanitizer_API) a string of HTML and inserts into the DOM as a subtree of the element.
-- {{DOMxRef("Element.slot")}} {{Experimental_Inline}}
+- {{DOMxRef("Element.slot")}}
   - : Returns the name of the shadow DOM slot the element is inserted in.
 - {{DOMxRef("Element.tagName")}} {{readOnlyInline}}
   - : Returns a string with the name of the tag for the given element.
@@ -275,6 +273,8 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Scrolls an element by the given amount.
 - {{DOMxRef("Element.scrollIntoView()")}} {{Experimental_Inline}}
   - : Scrolls the page until the element gets into the view.
+- {{DOMxRef("Element.scrollIntoViewIfNeeded()")}} {{Non-standard_Inline}}
+  - : Scrolls the current element into the visible area of the browser window if it's not already within the visible area of the browser window. **Use the standard {{DOMxRef("Element.scrollIntoView()")}} instead.**
 - {{domxref("Element.scrollTo()")}}
   - : Scrolls to a particular set of coordinates inside a given element.
 - {{DOMxRef("Element.setAttribute()")}}
@@ -287,6 +287,8 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Sets the value of the attribute with the specified name and namespace, from the current node.
 - {{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}}{{Deprecated_Inline}}
   - : Sets up mouse event capture, redirecting all mouse events to this element.
+- {{DOMxRef("Element.setHTML()")}} {{Experimental_Inline}}
+  - : Parses and [sanitizes](/en-US/docs/Web/API/HTML_Sanitizer_API) a string of HTML and inserts into the DOM as a subtree of the element.
 - {{DOMxRef("Element.setPointerCapture()")}}
   - : Designates a specific element as the capture target of future [pointer events](/en-US/docs/Web/API/Pointer_events).
 - {{DOMxRef("Element.toggleAttribute()")}}
