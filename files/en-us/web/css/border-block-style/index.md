@@ -5,8 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
-  - Non-standard
   - Reference
   - recipe:css-property
 browser-compat: css.properties.border-block-style
