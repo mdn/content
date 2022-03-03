@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Property
   - CSS Transforms
-  - Experimental
   - NeedsExample
   - Reference
   - recipe:css-property

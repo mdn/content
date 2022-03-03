@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Property
   - CSS Text
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.text-align-last
