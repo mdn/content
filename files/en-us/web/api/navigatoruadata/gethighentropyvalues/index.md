@@ -31,7 +31,8 @@ NavigatorUAData.getHighEntropyValues(hints);
     - `"bitness"`
     - `"model"`
     - `"platformVersion"`
-    - `"uaFullVersion"`
+    - `"uaFullVersion"` {{deprecated_inline}}
+    - `"fullVersionList"`
 
 ### Return value
 
@@ -45,8 +46,10 @@ An object containing some or all of the following values, based on the hints req
   - : A {{domxref("DOMString","string")}} containing the device model. For example, `"Pixel 2XL"`.
 - `platformVersion`
   - : A {{domxref("DOMString","string")}} containing the platform version. For example, `"10.0"`.
-- `uaFullVersion`
+- `uaFullVersion` {{deprecated_inline}}
   - : A {{domxref("DOMString","string")}} containing the full browser version. For example, `"91.0.4472.124"`.
+- `fullVersionList`
+  - : An array of brand information containing the browser name and full version. For example, `"Chromium";v="91.0.4472.124","Google Chrome";v="91.0.4472.124"`.
 
 ### Exceptions
 
@@ -62,7 +65,7 @@ navigator.userAgentData.getHighEntropyValues(
   ["architecture",
   "model",
   "platformVersion",
-  "uaFullVersion"])
+  "fullVersionList"])
   .then(ua => { console.log(ua) });
 ```
 
