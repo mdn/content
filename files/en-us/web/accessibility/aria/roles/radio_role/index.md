@@ -88,7 +88,7 @@ Because descendants of `radio` are presentational, the following code is equival
 <div role="radio"><h6 role="presentation">name of my radio</h6></li>
 ````
 
-From the assitive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
+From the assistive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
 
 ```html
 <div role="radio">name of my radio</div>

@@ -48,7 +48,7 @@ Because descendants of `switch` are presentational, the following code is equiva
 <div role="switch"><h3 role="presentation">Title of my switch</h3></div>
 ````
 
-From the assitive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
+From the assistive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
 
 ```html
 <div role="switch">Title of my switch</div>

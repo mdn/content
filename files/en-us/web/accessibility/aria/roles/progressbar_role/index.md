@@ -43,7 +43,7 @@ Because descendants of `progressbar` are presentational, the following code is e
 <div role="progressbar"><h3 role="presentation">Title of my progressbar</h3></div>
 ````
 
-From the assitive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
+From the assistive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
 
 ```html
 <div role="progressbar">Title of my progressbar</div>

@@ -47,7 +47,7 @@ Because descendants of `checkbox` are presentational, the following code is equi
 <div role="checkbox"><h6 role="presentation">Name of my checkbox</h6></li>
 ````
 
-From the assitive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
+From the assistive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
 
 ```html
 <div role="checkbox">Name of my checkbox</div>

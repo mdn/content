@@ -29,7 +29,7 @@ In this tutorial, we'll show you how to work with HTML Forms in Django, and, in 
       <th scope="row">Objective:</th>
       <td>
         To understand how to write forms to get information from users and update the database.
-        To understand how the generic class-based editingviews can vastly simplify creating forms for working with a single model.
+        To understand how the generic class-based editing views can vastly simplify creating forms for working with a single model.
       </td>
     </tr>
   </tbody>
