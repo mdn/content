@@ -52,3 +52,14 @@ The open Web presents incredible opportunities for developers. To take full adva
   - : Web App Manifests let you enable users to install Web apps to their device home screens, with aspects such as portrait/landscape screen orientation and display mode (e.g., full screen) pre-set.
 - [Progressive Web Apps (PWAs)](/en-US/docs/Web/Progressive_web_apps)
   - : Progressive Web Apps provide a user experience similar to native mobile apps.
+
+## Developer tools documentation
+
+- [Firefox Developer Tools](/en-US/docs/Tools)
+  - : Documentation for the set of web-developer tools built into Firefox.
+- [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
+  - : Documentation for the set of web-developer tools built into Chrome.
+- [Safari Web Inspector](https://webkit.org/web-inspector/)
+  - : Documentation for the set of web-developer tools built into Safari.
+- [Edge DevTools](https://webkit.org/web-inspector/)
+  - : Documentation for the set of web-developer tools built into Edge.
