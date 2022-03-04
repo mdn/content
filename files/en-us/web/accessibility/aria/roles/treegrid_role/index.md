@@ -16,9 +16,13 @@ The `treegrid` role identifies an element as being grid whose rows can be expand
 
 ## Description
 
-A `treegrid` is a combination of the [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role) and [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) roles. Like a `grid`, the `treegrid` is widget that contains one or more rows of cells, with each row or cell being able to receive focused via keyboard input. Like a `tree`, parent nodes in a `grid` are expandable and collapisble. Use  `treegrid` rather than `grid` when your UI calls for rows to be expandable and collapsible in the same manner as can be done with any parent node in a `tree`. If your grid requires supporting [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset), [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize), [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded), or [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level) set on a [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role), you will want to use `treegrid`. 
+A `treegrid` is a combination of the [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role) and [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) roles. 
 
-A `treegrid` is a hierarchical data grid, or table, consisting of tabular information that is editable or interactive. Similar to `grid`, it is made up of rows, columns, and gridcells. In a treegrid, any row in the hierarchy may have child rows. These parent rows can be expanded and collapsed to show and hide the children. 
+Like a `grid`, the `treegrid` is made up of rows, columns, and gridcells. A `treegrid` widget contains one or more [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) elements or [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role) elements containing one or more rows. Each row or cells in a row should be keyboard focusable. 
+
+Like a `tree`, parent nodes in a `treegrid` are expandable and collapisble. Use  `treegrid` rather than `grid` when your UI calls for rows supporting [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) indicating the row is expandable and collapsible and if your grid requires supporting [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset), [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize), or [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level). 
+
+A `treegrid` is a hierarchical data grid, or table, consisting of tabular information that is editable or interactive.  In a treegrid, any row in the hierarchy may have child rows. These parent rows can be expanded and collapsed to show and hide the children. 
 
 While column header cells that do not provide functions, such as sort or filter, do not need to be focusable, all other rows and cells in a treegrid are focusable. Every row and cell contains a focusable element or is itself focusable, regardless of whether individual cell content is editable or interactive.  
 
@@ -31,9 +35,7 @@ Multi-select treegrids enable users to select more than one row or cell for an a
 
 
 
-Treegrid is a Grid whose Rows can be expanded and collapsed in the same manner as for a Tree.
 
-The Treegrid role must include child elements with role="rowgroup" or role="row".
 
 In cases where the nesting structure of Treegrid and its child roles may be convoluted, aria-owns must be used on the role="treegrid" element to reference all of the IDs of the first child role; which would be role="rowgroup" if present, or role="row" otherwise.
 
