@@ -15,7 +15,7 @@ This article provides information about the changes in Firefox 98 that affect de
 
 ### HTML
 
-- The HTML {{HTMLElement("dialog")}} element is now available by default. This and its associated [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) provide support for HTML-based modal dialog boxes. ({{bug(1733536)}}).
+- The HTML {{HTMLElement("dialog")}} element is now available by default. This element and its associated [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) provide support for HTML-based modal dialog boxes ({{bug(1733536)}}).
 
 ### CSS
 
