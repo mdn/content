@@ -12,12 +12,13 @@ tags:
 browser-compat: api.Navigator.requestMIDIAccess
 ---
 
-{{DefaultAPISidebar("Web MIDI API")}}
+{{DefaultAPISidebar("Web MIDI API")}}{{SecureContext_Header}}
 
-The **`requestMIDIAccess()`** method of the {{domxref('Navigator')}} interface
-returns a {{jsxref('Promise')}} representing a request for access to MIDI devices on a user's system. This method is part of the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API), which provides a means for accessing, enumerating, and manipulating MIDI devices.
+The **`requestMIDIAccess()`** method of the {{domxref('Navigator')}} interface returns a {{jsxref('Promise')}} representing a request for access to MIDI devices on a user's system.
+This method is part of the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API), which provides a means for accessing, enumerating, and manipulating MIDI devices.
 
-This method prompts the user for access to MIDI devices available to their system. If the user grants permission, then the {{jsxref('Promise')}} resolves and a [`MIDIAccess`](/en-US/docs/Web/API/MIDIAccess) object is returned.
+This method may prompt the user for access to MIDI devices available to their system, or it may use a previously established preference to grant or deny access.
+If permission is granted then the {{jsxref('Promise')}} resolves and a [`MIDIAccess`](/en-US/docs/Web/API/MIDIAccess) object is returned.
 
 ## Syntax
 
@@ -48,7 +49,7 @@ A {{jsxref('Promise')}} that resolves with a [`MIDIAccess`](/en-US/docs/Web/API/
 - `NotSupportedError`
   - : If the feature or options are not supported by the system.
 - `SecurityError`
-  - : If the user or system denies the application from creating a [MIDIAccess](/en-US/docs/Web/API/MIDIAccess) object with the requested options, or if the document is not allowed to use the feature (for example, an iframe without the correct [feature policy](/en-US/docs/Web/HTTP/Feature_Policy)).
+  - : If the user or system denies the application from creating a [MIDIAccess](/en-US/docs/Web/API/MIDIAccess) object with the requested options, or if the document is not allowed to use the feature (for example, an iframe without the correct [Permission Policy](/en-US/docs/Web/HTTP/Feature_Policy), or when the user has previously denied a permissions access to the feature).
 
 ## Examples
 
