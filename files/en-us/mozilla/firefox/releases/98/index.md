@@ -23,7 +23,7 @@ This article provides information about the changes in Firefox 98 that affect de
 
 ### JavaScript
 
-No notable changes.
+No notable changes
 
 ### APIs
 
