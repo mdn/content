@@ -28,7 +28,7 @@ None.
 
 ### Return value
 
-A {{domxref('FileSystemFileHandle')}} or {{domxref('FileSystemDirectoryHandle')}}.
+A {{jsxref("Promise")}} that resolves to a {{domxref('FileSystemFileHandle')}} or {{domxref('FileSystemDirectoryHandle')}}.
 
 ### Exceptions
 
