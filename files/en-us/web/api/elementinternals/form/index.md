@@ -23,7 +23,7 @@ The following example shows a custom checkbox component inside a form with an ID
 Printing `form.length` to the console, gives us the value of {{domxref("HTMLFormElement.length")}}.
 
 ```html
-<form id="myForm"><custom-checkbox id="join-checkbox"></custom-checkbox>
+<form id="myForm"><custom-checkbox id="custom-checkbox"></custom-checkbox>
   <custom-label for="custom-checkbox">Join newsletter</custom-label></form>
 ```
 
