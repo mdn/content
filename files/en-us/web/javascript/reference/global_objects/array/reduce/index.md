@@ -95,14 +95,12 @@ naming can help mitigate readability drawbacks.
 ### Behavior during array mutations
 
 `reduce` does not mutate the array it is used on, however it is possible for code inside the callback to mutate
-the array.
+the array. Here is what happens if a mutation occurs:
 
-If elements are appended to the array after `reduce()` begins to iterate over the array, the callback
+- If elements are appended to the array after `reduce()` begins to iterate over the array, the callback
 function does not iterate over the appended elements.
-
-If existing elements of the array are changed, their values as passed to the callback function will be the values at the time `reduce()` iterates over the elements.
-
-Elements that are deleted after the call to `reduce()` begins and before being iterated over are not visited.
+- If existing elements of the array are changed, their values as passed to the callback function will be the values at the time `reduce()` iterates over the elements.
+- Elements that are deleted after the call to `reduce()` begins and before being iterated over are not visited.
 
 ### Edge cases
 
