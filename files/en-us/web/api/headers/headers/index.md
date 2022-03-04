@@ -25,7 +25,7 @@ var myHeaders = new Headers(init);
 - `init` {{optional_inline}}
   - : An object containing any [HTTP headers](/en-US/docs/Web/HTTP/Headers)
     that you want to pre-populate your `Headers` object with. This can be a
-    simple object literal with {{jsxref("String")}} values, a two-dimensional array of {{jsxref("String")}} values; or an existing
+    simple object literal with {{jsxref("String")}} values, an array of name-value pairs, where each pair is a 2-element string array; or an existing
     `Headers` object. In the last case, the new `Headers` object
     copies its data from the existing `Headers` object.
 
@@ -70,7 +70,7 @@ var headers = [
   ['Set-Cookie', 'greeting=hello'],
   ['Set-Cookie', 'name=world']
 ];
-var myHeaders = new Headers(httpHeaders);
+var myHeaders = new Headers(headers);
 ```
 
 
