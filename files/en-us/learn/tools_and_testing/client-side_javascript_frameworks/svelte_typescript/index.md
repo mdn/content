@@ -377,7 +377,7 @@ $: completedTodos = todos.filter((t: TodoType) => t.completed).length;
 Most of the time, TypeScript will be able to correctly infer the reactive variable type, but sometimes you might get an "implicitly has an 'any' type" error when working with reactive assignments. In those cases you can declare the typed variable in a different statement, like this:
 
 ```js
-let completeTodos: number;
+let completedTodos: number;
 $: completedTodos = todos.filter((t: TodoType) => t.completed).length;
 ```
 
