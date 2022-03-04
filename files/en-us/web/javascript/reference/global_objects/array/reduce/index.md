@@ -97,8 +97,8 @@ naming can help mitigate readability drawbacks.
 `reduce` does not mutate the array it is used on, however it is possible for code inside the callback to mutate
 the array.
 
-If elements are appended to the array after `reduce` begins to iterate over the array, the appended
-elememts are not visited by *callbackfn*.
+If elements are appended to the array after `reduce()` begins to iterate over the array, the callback
+function does not iterate over the appended elements.
 
 If existing elements of the array are changed, their values as passed to the callback function will be the values at the time `reduce()` iterates over the elements.
 
