@@ -57,7 +57,6 @@ new Intl.PluralRules('ar-EG').select(18);
 
 ### Using locales
 
-
 ## Specifications
 
 {{Specifications}}
