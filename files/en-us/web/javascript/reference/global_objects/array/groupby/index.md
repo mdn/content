@@ -167,7 +167,6 @@ result = inventory.groupBy( myCallback );
 */
 ```
 
-
 ## Specifications
 
 {{Specifications}}

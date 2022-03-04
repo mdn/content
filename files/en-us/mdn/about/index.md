@@ -65,4 +65,3 @@ The rights in the trademarks, logos, and service marks of the Mozilla Foundation
 ### Linking to MDN
 
 We regularly get users asking us questions about how to link to MDN, or even if doing so is allowed. The short answer is: **yes, you can link to MDN!** Not only is the hypertext link the essence of the Web, it is both a way to point your users to valuable resources and a show of trust toward the work our community does.
-
