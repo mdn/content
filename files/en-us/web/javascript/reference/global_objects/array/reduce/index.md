@@ -77,22 +77,20 @@ The value that results from running the “reducer” callback function to compl
 
 ## Description
 
-`reduce` takes two arguments, a callback function and an optional initial value.
-`reduce` calls the callback, as a function, once for each element in the array whenever
-an initial value is provided, in ascending order. If no initial value is provided,
-`reduce` calls the callback once for each element in the array after the first element.
+The `reduce()` method takes two arguments: a callback function and an optional initial value.
+If an initial value is provided, `reduce()` calls the "reducer" callback function on each element in the array, in order. If no initial value is provided, `reduce()` calls the callback function on each element in the array after the first element.
 
 `reduce` returns whatever is returned from the callback on the final iteration.
 
 ### When to not use reduce()
 
-Recursive functions like `reduce` can be powerful, but sometimes difficult to understand,
+Recursive functions like `reduce()` can be powerful but sometimes difficult to understand,
 especially for less experienced JavaScript developers.
 If code becomes clearer when using other array methods,
 developers must weigh the readability tradeoff against the other benefits
-of using reduce.
-In cases where reduce is the best choice, documentation and semantic variable
-naming can help mitigate readability drawnbacks.
+of using `reduce()`.
+In cases where `reduce()` is the best choice, documentation and semantic variable
+naming can help mitigate readability drawbacks.
 
 ### Behavior during array mutations
 
@@ -102,9 +100,9 @@ the array.
 If elements are appended to the array after `reduce` begins to iterate over the array, the appended
 elememts are not visited by *callbackfn*.
 
-If existing elements of the array are changed, their value as passed to *callbackfn* will be the value at the time `reduce` visits them.
+If existing elements of the array are changed, their values as passed to the callback function will be the values at the time `reduce()` iterates over the elements.
 
-Elements that are deleted after the call to `reduce` begins and before being visited are not visited.
+Elements that are deleted after the call to `reduce()` begins and before being iterated over are not visited.
 
 ### Edge cases
 
