@@ -38,9 +38,8 @@ This attribute returns `null` before `start()` is called.
 
 ## Events
 
-- {{domxref("IdleDetector.onchange")}}
-  - : Called when the value of `userState` or `screenState` has changed. This method
-receives an `Event` object.
+- {{domxref("IdleDetector.change_event", "change")}}
+  - : Called when the value of `userState` or `screenState` has changed.
 
 ## Methods
 
