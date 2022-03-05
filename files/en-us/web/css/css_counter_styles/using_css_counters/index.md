@@ -864,7 +864,6 @@ See also [Implicit list-item counter](#implicit_list-item_counter) for more deta
 
 - {{cssxref("counter-reset")}}
 - {{cssxref("counter-increment")}}
-- {{cssxref("counter()")}}
-- {{cssxref("counters()")}}
-- {{cssxref("@counter-style")}}
 - {{cssxref("counter-set")}}
+- {{cssxref("counter()")}} and {{cssxref("counters()")}} functions
+- {{cssxref("@counter-style")}}

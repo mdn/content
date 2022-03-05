@@ -114,7 +114,8 @@ li::after {
 
 - [Using CSS Counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)
 - {{cssxref("counter-reset")}}
-- {{cssxref("counter-set")}}
 - {{cssxref("counter-increment")}}
+- {{cssxref("counter-set")}}
+- {{cssxref("content")}}
+- {{cssxref("counters()")}} function
 - {{cssxref("@counter-style")}}
-- CSS [`counters()`](/en-US/docs/Web/CSS/counters()) function

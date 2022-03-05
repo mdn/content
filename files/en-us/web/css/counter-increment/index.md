@@ -12,6 +12,8 @@ browser-compat: css.properties.counter-increment
 ---
 {{CSSRef}}
 
+> **Note:** The detailed behavior of CSS counters is described in [Using CSS Counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters).
+
 The **`counter-increment`** [CSS](/en-US/docs/Web/CSS) property increases or decreases the value of a [CSS counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) by a given value.
 
 {{EmbedInteractiveExample("pages/css/counter-increment.html")}}
@@ -87,5 +89,5 @@ h1 {
 - [Using CSS Counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)
 - {{cssxref("counter-reset")}}
 - {{cssxref("counter-set")}}
+- {{cssxref("counter()")}} and {{cssxref("counters()")}} functions
 - {{cssxref("@counter-style")}}
-- The {{cssxref("counter()")}} and {{cssxref("counters()")}} functions

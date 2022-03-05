@@ -11,6 +11,8 @@ browser-compat: css.properties.counter-reset
 ---
 {{CSSRef}}
 
+> **Note:** The detailed behavior of CSS counters is described in [Using CSS Counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters).
+
 The **`counter-reset`** [CSS](/en-US/docs/Web/CSS) property resets a [CSS counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) to a given value.
 This property will create a new counter or reversed counter with the given name on the specified element.
 
@@ -122,6 +124,5 @@ h1 {
 - [Using CSS Counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-set")}}
-- {{cssxref("@counter-style")}}
 - {{cssxref("counter()")}} and {{cssxref("counters()")}} functions
-- {{cssxref("content")}} property
+- {{cssxref("@counter-style")}}
