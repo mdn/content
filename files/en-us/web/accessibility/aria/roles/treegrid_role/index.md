@@ -16,32 +16,27 @@ The `treegrid` role identifies an element as being grid whose rows can be expand
 
 ## Description
 
-A `treegrid` is a combination of the [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role) and [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) roles. 
+A `treegrid` is a hierarchical data grid, or table, consisting of tabular information that is editable or interactive.  A `treegrid` is a combination of the [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role) and [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) roles.
 
-Like a `grid`, the `treegrid` is made up of rows, columns, and gridcells. A `treegrid` widget contains one or more [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) elements or [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role) elements containing one or more rows. Each row or cells in a row should be keyboard focusable. 
+Like a `grid`, the `treegrid` is made up of rows, columns, and gridcells. The `treegrid` widget contains one or more [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) elements, or one or more [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role) elements containing one or more rows. Each row, in turn, contains one or more [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role) elements. 
 
-Like a `tree`, parent nodes in a `treegrid` are expandable and collapisble. Use  `treegrid` rather than `grid` when your UI calls for rows supporting [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) indicating the row is expandable and collapsible and if your grid requires supporting [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset), [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize), or [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level). 
+Like a `tree`, parent nodes in a `treegrid` are expandable and collapisble. Any row in the hierarchy may have child rows. These parent rows can be expanded and collapsed to show and hide the children. 
 
-A `treegrid` is a hierarchical data grid, or table, consisting of tabular information that is editable or interactive.  In a treegrid, any row in the hierarchy may have child rows. These parent rows can be expanded and collapsed to show and hide the children. 
+Use  `treegrid` rather than `grid` when your grid UI calls for rows supporting [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) indicating the row is expandable and collapsible and if your grid requires supporting [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset), [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize), or [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level). 
 
-While column header cells that do not provide functions, such as sort or filter, do not need to be focusable, all other rows and cells in a treegrid are focusable. Every row and cell contains a focusable element or is itself focusable, regardless of whether individual cell content is editable or interactive.  
+While column header cells that do not provide functions, such as sort or filter, do not need to be focusable, each `row` or `gridcell` in a row should be keyboard focusable. Every row and cell should either contain a focusable element or be focusable itself, regardless of whether individual cell content is editable or interactive.  
 
-When using a keyboard to navigate a treegrid, a visual keyboard indicator informs the user which row or cell is focused. 
+If the `treegrid` allows the user to choose just one item for an action, then it is known as a "single-select" treegrid, and the item with focus also has a selected state set with [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected). 
 
-If the treegrid allows the user to choose just one item for an action, then it is known as a "single-select" treegrid, and the item with focus also has a selected state set with [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected). 
+"Multi-select" treegrids enable users to select more than one row or cell for an action. In the multi-select treegrid, the selected state is independent of the focus. In multi-select, it is important that the visual design distinguish between items that are selected and the item that has focus. 
 
-Multi-select treegrids enable users to select more than one row or cell for an action. In the multi-select treegrid, the selected state is independent of the focus. In multi-select, it is important that the visual design distinguish between items that are selected and the item that has focus. For more details, see this description of differences between focus and selection.
+In cases where a child `row` or `rowgroup` is not nested within the `treegrid` in the DOM, the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) attribute, referencing all of the IDs of the non-descendant children must be set on the `treegrid` element.
 
-
-
-
-
-
-In cases where the nesting structure of Treegrid and its child roles may be convoluted, aria-owns must be used on the role="treegrid" element to reference all of the IDs of the first child role; which would be role="rowgroup" if present, or role="row" otherwise.
+The element with the role of `treegrid` must have an accessible name. If an appropriate label is visible in the content, provide the name via [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby). If no visible label is present, use  [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) instead. Not both.
 
 Since a construct that includes role="treegrid" is automatically considered to be editable, the aria-readonly attribute may be set to declare the Treegrid as readonly, which will propagate down to all structural child roles of Treegrid, such as role="columnheader", role="rowheader", and role="gridcell".
 
-If focusable, an element that includes role="treegrid" must have an explicit label in accordance with the Text Alternative Computation. (Both aria-labelledby and aria-label should not be used at the same time)
+
 
 If the Treegrid container receives focus, the focusable element must be the same that includes the role="treegrid" attribute, and aria-activedescendant managed focus must be used to reference the ID of the selected role="row", role="columnheader", role="rowheader", or role="gridcell" elements without moving focus.
 
