@@ -6254,9 +6254,9 @@
 /en-US/docs/Netscape_Gecko_User_Agent_Strings	/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox
 /en-US/docs/Node_server_without_framework	/en-US/docs/Learn/Server-side/Node_server_without_framework
 /en-US/docs/Notable_bugs_fixed_in_Firefox_3	/en-US/docs/Mozilla/Firefox/Releases/3/Notable_bugs_fixed
-/en-US/docs/Online/Offline_Events	/en-US/docs/Web/API/Navigator/Online_and_offline_events
-/en-US/docs/Online_Offline_Events	/en-US/docs/Web/API/Navigator/Online_and_offline_events
-/en-US/docs/Online_and_offline_events	/en-US/docs/Web/API/Navigator/Online_and_offline_events
+/en-US/docs/Online/Offline_Events	/en-US/docs/Web/API/Navigator/onLine
+/en-US/docs/Online_Offline_Events	/en-US/docs/Web/API/Navigator/onLine
+/en-US/docs/Online_and_offline_events	/en-US/docs/Web/API/Navigator/onLine
 /en-US/docs/OpenWebApps	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/OpenWebDemos	/en-US/docs/Web/Demos
 /en-US/docs/Optimizing_Your_Pages_for_Speculative_Parsing	/en-US/docs/Glossary/speculative_parsing
@@ -8515,6 +8515,7 @@
 /en-US/docs/Web/API/Navigator.vendor	/en-US/docs/Web/API/Navigator/vendor
 /en-US/docs/Web/API/Navigator.vendorSub	/en-US/docs/Web/API/Navigator/vendorSub
 /en-US/docs/Web/API/Navigator.vibrate	/en-US/docs/Web/API/Navigator/vibrate
+/en-US/docs/Web/API/Navigator/Online_and_offline_events	/en-US/docs/Web/API/Navigator/onLine
 /en-US/docs/Web/API/Navigator/getVRDevices	/en-US/docs/Web/API/Navigator/getVRDisplays
 /en-US/docs/Web/API/Navigator/mediaDevices.getUserMedia	/en-US/docs/Web/API/MediaDevices/getUserMedia
 /en-US/docs/Web/API/Navigator/mediaDevices/enumerateDevices	/en-US/docs/Web/API/MediaDevices/enumerateDevices
@@ -8547,7 +8548,7 @@
 /en-US/docs/Web/API/NavigatorLanguage/languages	/en-US/docs/Web/API/Navigator/languages
 /en-US/docs/Web/API/NavigatorOnLine	/en-US/docs/Web/API/Navigator
 /en-US/docs/Web/API/NavigatorOnLine.onLine	/en-US/docs/Web/API/Navigator/onLine
-/en-US/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/en-US/docs/Web/API/Navigator/Online_and_offline_events
+/en-US/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/en-US/docs/Web/API/Navigator/onLine
 /en-US/docs/Web/API/NavigatorOnLine/onLine	/en-US/docs/Web/API/Navigator/onLine
 /en-US/docs/Web/API/NavigatorPlugins	/en-US/docs/Web/API/Navigator
 /en-US/docs/Web/API/NavigatorPlugins.javaEnabled	/en-US/docs/Web/API/Navigator/javaEnabled
