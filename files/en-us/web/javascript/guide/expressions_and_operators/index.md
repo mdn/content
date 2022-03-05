@@ -614,7 +614,7 @@ Conceptually, the bitwise logical operators work as follows:
 
   ```
   Before: 1110 0110 1111 1010 0000 0000 0000 0110 0000 0000 0001
-  After:               1010 0000 0000 0000 0110 0000 0000 0001
+  After:                 1010 0000 0000 0000 0110 0000 0000 0001
   ```
 
 - Each bit in the first operand is paired with the corresponding bit in the second operand: first bit to first bit, second bit to second bit, and so on.
