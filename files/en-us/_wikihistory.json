@@ -57999,7 +57999,7 @@
       "jpmedley"
     ]
   },
-  "Web/API/MediaKeySession/onmessage": {
+  "Web/API/MediaKeySession/message_event": {
     "modified": "2020-10-15T21:51:05.016Z",
     "contributors": [
       "sideshowbarker",

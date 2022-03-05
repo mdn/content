@@ -13,8 +13,6 @@ browser-compat: api.MediaKeySession.keystatuseschange_event
 
 The **`keystatuseschange`** event of the {{domxref("MediaKeySession")}} API fires when there has been a change in the keys or their statuses within a session.
 
-This interface inherits from the {{domxref("ExtendableEvent")}} interface.
-
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
