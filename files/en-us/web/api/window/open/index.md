@@ -14,7 +14,7 @@ browser-compat: api.Window.open
 ---
 {{APIRef}}
 
-The **`open()`** method of the {{domxref('Window')}} interface loads a specified resource into a new or existing tab, window, or {{HTMLElement("iframe")}} (i.e., a new or existing browsing context) under a specified name.
+The **`open()`** method of the {{domxref('Window')}} interface loads a specified resource into a new or existing browsing context (that is, tab, window, or {{HTMLElement("iframe")}}) under a specified name.
 
 ## Syntax
 
@@ -31,7 +31,7 @@ open(url, windowName, windowFeatures);
   - : A string indicating the URL or path of the resource to be loaded. If an empty string (`""`) is specified as `url`, a blank page is opened into the targeted browsing context. Note that remote URLs are deferred until after the current script block finishes executing.
 
 - `windowName` {{optional_inline}}
-  - : A string, without whitespace, specifying the name of the browsing context the resource is being loaded into — not the window's {{HTMLElement("title", "", "#attr-target")}}. If the name doesn't indicate an existing context, a new context is created and given the specified name. The special `target` keywords, `_self`, `_blank`, `_parent`, and `_top`, can also be used.
+  - : A string, without whitespace, specifying the {{domxref("window/name", "name")}} of the browsing context the resource is being loaded into. If the name doesn't identify an existing context, a new context is created and given the specified name. The special [`target` keywords](/en-US/docs/Web/HTML/Element/a#attr-target), `_self`, `_blank`, `_parent`, and `_top`, can also be used.
 
     This name can be used as the `target` attribute of
     {{HTMLElement("a", "", "#attr-target")}} or {{HTMLElement("form", "",
