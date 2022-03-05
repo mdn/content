@@ -17,7 +17,7 @@ The **`WebSocket()`** constructor returns a new
 ## Syntax
 
 ```js
-var aWebSocket = new WebSocket(url [, protocols]);
+var aWebSocket = new WebSocket(url, [protocols]);
 ```
 
 ### Parameters
