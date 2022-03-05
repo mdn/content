@@ -32,10 +32,13 @@ The **`MediaKeySession`** interface of the [EncryptedMediaExtensions API](/en-US
 
 ### Event handlers
 
-- {{domxref("MediaKeySession.onkeystatuseschange")}}
-  - : Sets the event handler called when there has been a change in the keys in a session or their statuses.
 - {{domxref("MediaKeySession.onmessage")}}
   - : Sets the event handler called when the content decryption module has generated a message for the session.
+
+### Events
+
+- {{domxref("MediaKeySession.keystatuseschange_event", "keystatuseschange")}}
+  - : Fires when there has been a change in the keys in a session or their statuses.
 
 ## Methods
 
