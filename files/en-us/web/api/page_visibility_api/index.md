@@ -137,6 +137,13 @@ The Page Visibility API adds the following properties to the {{domxref("Document
 
         > **Note:** Not all browsers support the `unloaded` value.
 
+## Events added to the Document interface
+
+The Page Visibility API adds the following events to the {{domxref("Document")}} interface:
+
+- {{domxref("Document.visibilitychange_event", "visibilitychange")}}
+  - : Fired when the content of a tab has become visible or has been hidden.
+
 ```js
 // startSimulation and pauseSimulation defined elsewhere
 function handleVisibilityChange() {
