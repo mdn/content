@@ -33,7 +33,6 @@ _Inherits properties from its parent interface, {{domxref("EventTarget")}}._
 
 - {{domxref("MediaDevices/devicechange_event", "devicechange")}}
   - : Fired when a media input or output device is attached to or removed from the user's computer.
-    Also available via the {{domxref("MediaDevices/ondevicechange", "ondevicechange")}} property.
 
 ## Methods
 
