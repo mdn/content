@@ -218,10 +218,6 @@ Firefox for iOS uses the default Mobile Safari UA string, with an additional **F
 
 Regarding the deviation on iPad form factor, see this [issue](https://github.com/mozilla-mobile/firefox-ios/issues/6620).
 
-## Firefox Web Runtime
-
-The Web Runtime uses the same user agent string as desktop Firefox.
-
 ## Other Gecko-based browsers
 
 These are some sample UA strings from other Gecko-based browsers on various platforms. Note that many of these have not yet been released on Gecko 2.0!
