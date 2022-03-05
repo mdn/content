@@ -256,6 +256,7 @@ console.log(Derived.publicStaticMethod2());
 // TypeError: Cannot read private member #privateStaticMethod
 // from an object whose class did not declare it
 ```
+Note: Private class only work in ES6 class type. It doesn't work with Constructor function and Object.create class types yet.
 
 ## Specifications
 
