@@ -1,6 +1,6 @@
 ---
-title: PermissionStatus.onchange
-slug: Web/API/PermissionStatus/onchange
+title: 'PermissionStatus: change event'
+slug: Web/API/PermissionStatus/change_event
 tags:
   - API
   - Event Handler
@@ -10,18 +10,25 @@ tags:
   - Property
   - Reference
   - onchange
-browser-compat: api.PermissionStatus.onchange
+browser-compat: api.PermissionStatus.change_event
 ---
 {{APIRef("Permissions API")}}{{SeeCompatTable}}
 
-The **`onchange`** event handler of the {{domxref("PermissionStatus")}} interface is called whenever the {{domxref("PermissionStatus.state")}} property changes.
+The **`change`** event of the {{domxref("PermissionStatus")}} interface fires whenever the {{domxref("PermissionStatus.state")}} property changes.
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js
-PermissionStatus.onchange = function() { /* ... */ }
-PermissionStatus.addEventListener('change', function() { /* ... */ })
+addEventListener('change', event => { });
+
+onchange = event => { };
 ```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Example
 
