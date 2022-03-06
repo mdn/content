@@ -101,7 +101,7 @@ This will not create any layout, however our items now have names we can use to 
 }
 ```
 
-After setting up a mobile layout we will get this single column at all screen sizes, we can now add a [media query](/en-US/docs/Web/CSS/Media_Queries) and redefine our layout for the circumstance of having enough screen real estate to show two columns.
+With our mobile layout in place, we can now proceed to add a [media query](/en-US/docs/Web/CSS/Media_Queries) to adapt this layout for bigger screens with enough real estate to display two columns.
 
 ```css
 @media (min-width: 500px) {
