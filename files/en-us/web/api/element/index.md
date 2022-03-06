@@ -368,8 +368,8 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - `{{domxref("Element/keydown_event", "keydown")}}`
   - : Fired when a key is pressed.
     Also available via the {{domxref("GlobalEventHandlers/onkeydown", "onkeydown")}} property.
-- `{{domxref("Element/keypress_event", "keypress")}}`
-  - : Fired when a key that produces a character value is pressed down. {{deprecated_inline}}
+- `{{domxref("Element/keypress_event", "keypress")}}`  {{deprecated_inline}}
+  - : Fired when a key that produces a character value is pressed down.
     Also available via the {{domxref("GlobalEventHandlers/onkeypress", "onkeypress")}} property.
 - `{{domxref("Element/keyup_event", "keyup")}}`
   - : Fired when a key is released.
