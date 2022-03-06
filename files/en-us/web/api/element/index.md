@@ -308,18 +308,19 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{domxref("Element/scroll_event", "scroll")}}
   - : Fired when the document view or an element has been scrolled.
     Also available via the {{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}} property.
+- {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
+  - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
+    Also available via the global {{DOMxRef("GlobalEventHandlers.onsecuritypolicyviolation", "onsecuritypolicyviolation")}} property, which available on elements and the {{domxref("Document")}} and {{domxref("Window")}} objects.
+
 - {{domxref("Element/select_event", "select")}}
   - : Fired when some text has been selected.
     Also available via the {{DOMxRef("GlobalEventHandlers.onselect", "onselect")}} property.
-- {{domxref("Element/show_event", "show")}}
-  - : Fired when a {{domxref("Element/contextmenu_event", "contextmenu")}} event was fired on/bubbled to an element that has a [`contextmenu`](/en-US/docs/Web/HTML/Global_attributes/contextmenu) attribute. {{deprecated_inline}}
+- {{domxref("Element/show_event", "show")}} {{deprecated_inline}}
+  - : Fired when a {{domxref("Element/contextmenu_event", "contextmenu")}} event was fired on/bubbled to an element that has a [`contextmenu`](/en-US/docs/Web/HTML/Global_attributes/contextmenu) attribute. 
     Also available via the {{DOMxRef("GlobalEventHandlers.onshow", "onshow")}} property.
 - {{domxref("Element/wheel_event","wheel")}}
   - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).
     Also available via the {{DOMxRef("GlobalEventHandlers.onwheel", "onwheel")}} property.
-- {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
-  - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
-    Also available via the global {{DOMxRef("GlobalEventHandlers.onsecuritypolicyviolation", "onsecuritypolicyviolation")}} property, which available on elements and the {{domxref("Document")}} and {{domxref("Window")}} objects.
 
 ### Clipboard events
 
