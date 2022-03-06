@@ -26,7 +26,7 @@ _This interface provides the following properties._
   - : Returns a boolean indicating whether the `WakeLockSentinel` has been released.
 - {{domxref("WakeLockSentinel.type", "type")}} {{ReadOnlyInline}}
 
-  - : Returns a {{jsxref("String")}} representation of the currently acquired `WakeLockSentinel` type.
+  - : Returns a string representation of the currently acquired `WakeLockSentinel` type.
     Return values are:
 
     - `'screen'`: A screen wake lock. Prevents devices from dimming or locking the screen.
