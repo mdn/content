@@ -38,7 +38,7 @@ _The `PictureInPictureWindow` interface doesn't inherit any methods._
 _The `PictureInPictureWindow` interface doesn't inherit any events._
 
 - {{domxref("PictureInPictureWindow.resize_event", "PictureInPictureWindow.resize")}}
-  - : Sent to a {{DOMxRef("PictureInPictureWindow")}} when the floating video window is resized. The associated event handler is {{domxref("PictureInPictureWindow.onresize")}}.
+  - : Sent to a {{DOMxRef("PictureInPictureWindow")}} when the floating video window is resized.
 
 ## Examples
 

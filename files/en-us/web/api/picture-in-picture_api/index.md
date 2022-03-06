@@ -67,7 +67,7 @@ _The Picture-in-Picture API defines three events, which can be used to detect wh
 - {{domxref("HTMLVideoElement.leavepictureinpicture_event", "leavepictureinpicture")}}
   - : Sent to a {{DOMxRef("HTMLVideoElement")}} when it leaves picture-in-picture mode. The associated event handler is {{DOMxRef("HTMLVideoElement.onleavepictureinpicture")}}
 - {{domxref("PictureInPictureWindow.resize_event", "resize")}}
-  - : Sent to a {{DOMxRef("PictureInPictureWindow")}} when it changes size. The associated event handler is {{DOMxRef("PictureInPictureWindow.onresize")}}
+  - : Sent to a {{DOMxRef("PictureInPictureWindow")}} when it changes size.
 
 ## Controlling styling
 
