@@ -43,7 +43,7 @@ _This interface provides the following properties._
 
 ## Examples
 
-In this example we create an asynchronous function which requests a `WakeLockSentinel`. Once acquired we listen for the `onrelease` event which can be used to give appropriate UI feedback. The sentinel can be acquired or released via appropriate interactions.
+In this example we create an asynchronous function which requests a `WakeLockSentinel`. Once acquired we listen for the `release` event which can be used to give appropriate UI feedback. The sentinel can be acquired or released via appropriate interactions.
 
 ```js
 // create a reference for the wake lock
