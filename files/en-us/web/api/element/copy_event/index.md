@@ -78,7 +78,7 @@ source.addEventListener('copy', (event) => {
 
 #### Result
 
-{{ EmbedLiveSample('Live_example', '100%', '100px') }}
+{{ EmbedLiveSample('Live_example', '100%', '120px') }}
 
 ## Specifications
 
