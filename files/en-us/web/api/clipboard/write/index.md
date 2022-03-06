@@ -26,8 +26,7 @@ The `"clipboard-write"` permission of the [Permissions API](/en-US/docs/Web/API/
 automatically to pages when they are in the active tab.
 
 > **Note:** Browser support for the asynchronous clipboard APIs is still
-> in the process of being implemented. Be sure to check the {{anch("Browser
-    compatibility", "compatibility table")}} as well as
+> in the process of being implemented. Be sure to check the {{anch("Browser compatibility", "compatibility table")}} as well as
 > {{SectionOnPage("/en-US/docs/Web/API/Clipboard", "Clipboard availability")}} for more
 > information.
 
