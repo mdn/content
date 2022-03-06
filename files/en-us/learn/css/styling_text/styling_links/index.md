@@ -315,8 +315,8 @@ Let's look at some HTML and CSS that will give us the effect we want. First, som
 
 ```html
 <p>For more information on the weather, visit our <a href="#">weather page</a>,
-look at <a href="#">weather on Wikipedia</a>, or check
-out <a href="#">weather on Extreme Science</a>.</p>
+look at <a href="https://en.wikipedia.org/">weather on Wikipedia</a>, or check
+out <a href="https://www.nationalgeographic.org/topics/resource-library-weather/">weather on National Geographic</a>.</p>
 ```
 
 Next, the CSS:
@@ -354,7 +354,7 @@ a:active {
   color: red;
 }
 
-a[href*="#"] {
+a[href^="http"] {
   background: url('external-link-52.png') no-repeat 100% 0;
   background-size: 16px 16px;
   padding-right: 19px;
