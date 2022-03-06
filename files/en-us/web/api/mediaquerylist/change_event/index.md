@@ -1,6 +1,6 @@
 ---
-title: MediaQueryList.onchange
-slug: Web/API/MediaQueryList/onchange
+title: 'MediaQueryList: change event'
+slug: Web/API/MediaQueryList/change_event
 tags:
   - API
   - CSSOM View
@@ -9,23 +9,31 @@ tags:
   - Property
   - Reference
   - onchange
-browser-compat: api.MediaQueryList.onchange
+browser-compat: api.MediaQueryList.change_event
 ---
 {{APIRef("CSSOM")}}
 
-The **`onchange`** property of the
-{{DOMxRef("MediaQueryList")}} interface is an event handler property representing a
-function that is invoked when the {{domxref("MediaQueryList/change_event", "change")}}
-event fires — that is, when the status of media query support changes. The event object is a
-{{DOMxRef("MediaQueryListEvent")}} instance, which is recognized as a
-`MediaListQuery` instance in older browsers, for backwards compatibility
-purposes.
+The **`change`** event of the {{DOMxRef("MediaQueryList")}} interface fires when the status of media query support changes.
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js
-MediaQueryList.onchange = function() { /* ... */ };
+addEventListener('change', event => { });
+
+onchange = event => { };
 ```
+
+## Event type
+
+An {{domxref("MediaQueryListEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("MediaQueryListEvent")}}
+
+## Event properties
+
+{{page("/en-US/docs/Web/API/MediaQueryListEvent", "Properties")}}
 
 ## Example
 
