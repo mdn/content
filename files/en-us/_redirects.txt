@@ -7678,6 +7678,7 @@
 /en-US/docs/Web/API/Document/onselect	/en-US/docs/Web/API/GlobalEventHandlers/onselect
 /en-US/docs/Web/API/Document/onselectionchange	/en-US/docs/Web/API/GlobalEventHandlers/onselectionchange
 /en-US/docs/Web/API/Document/onsubmit	/en-US/docs/Web/API/GlobalEventHandlers/onsubmit
+/en-US/docs/Web/API/Document/onvisibilitychange	/en-US/docs/Web/API/Document/visibilitychange_event
 /en-US/docs/Web/API/Document/resourcetimingbufferfull_event	/en-US/docs/Web/API/Performance/resourcetimingbufferfull_event
 /en-US/docs/Web/API/Document/timeline/currentTime	/en-US/docs/Web/API/AnimationTimeline/currentTime
 /en-US/docs/Web/API/DocumentFragment.DocumentFragment	/en-US/docs/Web/API/DocumentFragment/DocumentFragment

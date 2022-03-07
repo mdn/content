@@ -38080,15 +38080,6 @@
       "arivu86"
     ]
   },
-  "Web/API/Document/onvisibilitychange": {
-    "modified": "2020-10-15T21:55:48.855Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "jpmedley",
-      "chrisdavidmills"
-    ]
-  },
   "Web/API/Document/open": {
     "modified": "2020-10-15T21:11:18.087Z",
     "contributors": [
