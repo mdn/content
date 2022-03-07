@@ -11,7 +11,7 @@ browser-compat: javascript.statements.try_catch
 {{jsSidebar("Statements")}}
 
 The **`try...catch`** statement marks a block of statements to
-try and block of statements to catch an exception if throw.
+The **`try...catch`** statement marks a `try` block and a `catch` block. If the code in the `try` block throws an exception then the code in the `catch` block will be executed.
 
 {{EmbedInteractiveExample("pages/js/statement-trycatch.html")}}
 
