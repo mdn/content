@@ -88802,6 +88802,18 @@
       "kscarfone"
     ]
   },
+  "Web/API/Worker/error_event": {
+    "modified": "2020-10-15T21:24:57.038Z",
+    "contributors": [
+      "sideshowbarker",
+      "fscholz",
+      "chrisdavidmills",
+      "nmve",
+      "erikadoyle",
+      "teoli",
+      "tregagnon"
+    ]
+  },
   "Web/API/Worker/message_event": {
     "modified": "2020-10-15T22:17:08.440Z",
     "contributors": [
@@ -88812,18 +88824,6 @@
     "modified": "2020-10-15T22:17:02.572Z",
     "contributors": [
       "wbamberg"
-    ]
-  },
-  "Web/API/Worker/onerror": {
-    "modified": "2020-10-15T21:24:57.038Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "chrisdavidmills",
-      "nmve",
-      "erikadoyle",
-      "teoli",
-      "tregagnon"
     ]
   },
   "Web/API/Worker/onmessage": {
