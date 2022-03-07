@@ -8,7 +8,7 @@ tags:
   - Touch-tone
   - WebRTC
   - WebRTC API
-  - events
+  - Event
   - tonechange
 browser-compat: api.RTCDTMFSender.tonechange_event
 ---
@@ -38,7 +38,10 @@ An {{domxref("RTCDTMFToneChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-{{page("/en-US/docs/Web/API/RTCDTMFToneChangeEvent", "Properties")}}
+_In addition to the properties of {{domxref("Event")}}, this interface offers the following:_
+
+- {{domxref("RTCDTMFToneChangeEvent.tone")}} {{readOnlyInline}}
+  - : A {{domxref("DOMString")}} specifying the tone which has begun playing, or an empty string (`""`) if the previous tone has finished playing.
 
 ## Examples
 
