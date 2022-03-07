@@ -67448,14 +67448,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/PresentationAvailability/onchange": {
-    "modified": "2020-10-15T21:47:48.905Z",
-    "contributors": [
-      "lucian95",
-      "david_ross",
-      "MashKao"
-    ]
-  },
   "Web/API/PresentationAvailability/value": {
     "modified": "2020-10-15T21:47:48.921Z",
     "contributors": [
