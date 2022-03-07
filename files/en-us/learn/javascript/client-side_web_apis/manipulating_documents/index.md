@@ -250,50 +250,13 @@ Which method you choose is up to you; both have their advantages and disadvantag
 
 At this point, we haven't really done anything useful! There is no point using JavaScript to create static content — you might as well just write it into your HTML and not use JavaScript. It is more complex than HTML, and creating your content with JavaScript also has other issues attached to it (such as not being readable by search engines).
 
-In the next couple of sections we will look at a couple of more practical uses of DOM APIs.
+In the next section we will look at a more practical use of DOM APIs.
 
 > **Note:** You can find our [finished version of the dom-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dom-example-manipulated.html) demo on GitHub ([see it live also](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example-manipulated.html)).
 
-## Active learning: Getting useful information from the Window object
-
-So far we've only really looked at using {{domxref("Node")}} and {{domxref("Document")}} features to manipulate documents, but there is no reason why you can't get data from other sources and use it in your UI. You just have to make sure your data is in the right format; JavaScript makes it easier than many other languages, being weakly typed — for example numbers will convert to strings automatically when you want to print them to the screen.
-
-In this example we will solve a common problem — making sure your application is as big as the window it is viewed in, whatever size it is. This is often useful in situations like games, where you want to use as much of the screen area as possible to play the game in.
-
-To start with, make a local copy of our [window-resize-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/window-resize-example.html) and [bgtile.png](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/bgtile.png) demo files. Open it and have a look — you'll see that we've got a {{htmlelement("div")}} element covering a small part of the screen, which has got a background tile applied to it. We'll use that to represent our app UI area.
-
-1. First of all, let's grab a reference to the div, and then grab the width and height of the viewport (the inner window, where your document is displayed) and store them in variables — these two values are handily contained in the {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}} properties. Add the following lines inside the existing {{htmlelement("script")}} element:
-
-    ```js
-    const div = document.querySelector('div');
-    let winWidth = window.innerWidth;
-    let winHeight = window.innerHeight;
-    ```
-
-2. Next, we'll dynamically alter the width and height of the div to equal that of the viewport. Add the following two lines below your first ones:
-
-    ```js
-    div.style.width = `${winWidth}px`;
-    div.style.height = `${winHeight}px`;
-    ```
-
-3. Save and try refreshing your browser — you should now see the div become as big as your viewport, whatever size of screen your are using. If you now try resizing your window to make it bigger, you'll see that the div stays the same size — we are only setting it once.
-4. How about we use an event so that the div resizes as we resize the window? The {{domxref("Window")}} object has an event available on it called resize, which is fired every time the window is resized — let's add an event listener and rerun our sizing code each time the size changes. Add the following to the bottom of your code:
-
-    ```js
-    window.addEventListener('resize', () => {
-      winWidth = window.innerWidth;
-      winHeight = window.innerHeight;
-      div.style.width = `${winHeight}px`;
-      div.style.height = `${winHeight}px`;
-    });
-    ```
-
-> **Note:** If you get stuck, have a look at our [finished window resize example](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/window-resize-example-finished.html) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/window-resize-example-finished.html)).
-
 ## Active learning: A dynamic shopping list
 
-To round off the article, we'd like to set you a little challenge — we want to make a simple shopping list example that allows you to dynamically add items to the list using a form input and button. When you add an item to the input and press the button:
+In this challenge we want to make a simple shopping list example that allows you to dynamically add items to the list using a form input and button. When you add an item to the input and press the button:
 
 - The item should appear in the list.
 - Each item should be given a button that can be pressed to delete that item off the list.
