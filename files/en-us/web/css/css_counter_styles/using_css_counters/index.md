@@ -426,7 +426,7 @@ Such HTML and CSS will be displayed as follows.
     2-2. (2-2)
 ```
 
-In this way, counters may nest counters with the same name. When a new counter is instantiated on an element, the new counter is created nested within the existing counter if it inherits the same name from its parent. The reason you see `1-2`. followed by `2`. instead of `1-3`. in the above display is that the counters are scoped on a nested basis. {{cssxref("counter-reset")}} can create nested counters, so the above code will produce the expected nested counting results.
+In this way, counters may nest counters with the same name. When a new counter is instantiated on an element, the new counter is created nested within the existing counter if it inherits the same name from its parent. The reason you see `1-2.` followed by `2.` instead of `1-3.` in the above display is that the counters are scoped on a nested basis. {{cssxref("counter-reset")}} can create nested counters, so the above code will produce the expected nested counting results.
 
 In the above example, if `ol { counter-reset: num; }` were written as `ol { counter-set: num; }`, it would display as follows.
 
