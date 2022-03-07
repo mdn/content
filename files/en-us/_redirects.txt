@@ -8779,6 +8779,7 @@
 /en-US/docs/Web/API/PositionOptions/maximumAge	/en-US/docs/Web/API/Geolocation/getCurrentPosition
 /en-US/docs/Web/API/PositionOptions/timeout	/en-US/docs/Web/API/Geolocation/getCurrentPosition
 /en-US/docs/Web/API/PositionSensorVRDevice/getState()	/en-US/docs/Web/API/PositionSensorVRDevice/getState
+/en-US/docs/Web/API/PresentationAvailability/onchange	/en-US/docs/Web/API/PresentationAvailability
 /en-US/docs/Web/API/PresentationConnectionClosedEvent	/en-US/docs/Web/API/PresentationConnectionCloseEvent
 /en-US/docs/Web/API/ProgressEvent.ProgressEvent	/en-US/docs/Web/API/ProgressEvent/ProgressEvent
 /en-US/docs/Web/API/ProgressEvent.initProgressEvent	/en-US/docs/Web/API/ProgressEvent/initProgressEvent
