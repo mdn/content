@@ -65818,16 +65818,6 @@
       "kscarfone"
     ]
   },
-  "Web/API/Performance/onresourcetimingbufferfull": {
-    "modified": "2020-10-15T21:41:14.201Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz",
-      "jpmedley",
-      "rolfedh",
-      "AFBarstow"
-    ]
-  },
   "Web/API/Performance/resourcetimingbufferfull_event": {
     "modified": "2020-10-15T21:41:10.224Z",
     "contributors": [
