@@ -27,20 +27,20 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('payerdetailchange', event => { });
+addEventListener('payerdetailchange', async event => { });
 
-onpayerdetailchange = event => { };
+onpayerdetailchange = async event => { };
 ```
 
 ## Event type
 
-An {{domxref("PaymentRequestUpdateEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("PaymentRequestUpdateEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PaymentRequestUpdateEvent")}}
 
 ## Event properties
 
-{{page("/en-US/docs/Web/API/PaymentRequestUpdateEvent", "Properties")}}
+Although this event type is {{domxref("PaymentRequestUpdateEvent")}}, it doesn't implement any property that is not already on {{domxref("Event")}}. 
 
 ## Examples
 
