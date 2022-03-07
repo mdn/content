@@ -20,32 +20,27 @@ browser-compat: api.PaymentResponse.payerdetailchange_event
 
 The event handler for `payerdetailchange` should check each value in the form that has changed and ensure that the values are valid. If any are invalid, appropriate error messages should be configured and the {{domxref("PaymentResponse.retry", "retry()")}} method should be called on the {{domxref("PaymentResponse")}} to ask the user to update the invalid entries.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{DOMxRef("PaymentRequestUpdateEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/PaymentResponse/onpayerdetailchange"
-            >onpayerdetailchange</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('payerdetailchange', event => { });
+
+onpayerdetailchange = event => { };
+```
+
+## Event type
+
+An {{domxref("PaymentRequestUpdateEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("PaymentRequestUpdateEvent")}}
+
+## Event properties
+
+{{page("/en-US/docs/Web/API/PaymentRequestUpdateEvent", "Properties")}}
 
 ## Examples
 
