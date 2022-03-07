@@ -121,4 +121,4 @@ Not part of any standard.
 - {{cssxref("font-variant-east-asian")}}
 - {{cssxref("font-variant-ligatures")}}
 - {{cssxref("font-variant-numeric")}}
-- {{cssxref("@font-feature-values"}}
+- {{cssxref("@font-feature-values")}}
