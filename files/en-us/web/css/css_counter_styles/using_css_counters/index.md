@@ -23,7 +23,7 @@ Counters can be used by using {{cssxref("counter-reset")}}, {{cssxref("counter-i
 
 This article explains the basic usage of counters and the implementation status in each browsers.
 
-## Usage basic counters
+## Basic counter usage
 
 To use a counter, you must first initialize it with the {{cssxref("counter-reset")}} property.
 
