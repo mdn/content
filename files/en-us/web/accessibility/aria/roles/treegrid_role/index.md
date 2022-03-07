@@ -16,79 +16,44 @@ The `treegrid` role identifies an element as being grid whose rows can be expand
 
 ## Description
 
-A `treegrid` is a hierarchical data grid, or table, consisting of tabular information that is editable or interactive.  A `treegrid` is a combination of the [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role) and [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) roles.
-
-Like a `grid`, the `treegrid` is made up of rows, columns, and gridcells. The `treegrid` widget contains one or more [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) elements, or one or more [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role) elements containing one or more rows. Each row, in turn, contains one or more cells. 
-
-Each cell is either a DOM descendant of or owned by a row element and is either a [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role), [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role), or [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role) element. The `gridcell` role is used for `treegrid` cells that do not contain column or row header information.
-
-Like a `tree`, parent nodes in a `treegrid` are expandable and collapisble. Any row in the hierarchy may have child rows. These parent rows can be expanded and collapsed to show and hide the children. 
+A `treegrid` is a hierarchical data grid, or table, consisting of tabular information that is editable or interactive.  A `treegrid` is a combination of the [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role) and [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) roles.  Like a `grid`, the `treegrid` is made up of rows, columns, and gridcells. Like a `tree`, parent nodes in a `treegrid` are expandable and collapisble.
 
 
-A `row` that can be expanded or collapsed to show or hide a set of child rows is a **parent row**. Each parent row has the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) state set on either the row element or on a cell contained in the row. The `aria-expanded` state is set to `false` when the child rows are not displayed and set to `true` when the child rows are displayed. 
+The `treegrid` widget contains one or more [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) elements, optionally with [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role) elements grouping the rows. Each row, in turn, contains one or more cells. Each cell is either a DOM descendant of or owned by a row element and is either a [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role), [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role), or [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role) element, with the `gridcell` role being used for all cells that do not contain column or row header information.
 
-Rows that do not control display of child rows should not have the `aria-expanded` attribute because the presence of the attribute indicates to assistive technologies that the element with the attribute is a parent.
+A `row` that can be expanded or collapsed to show or hide a set of child rows is a **parent row**. Each parent row has the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) state set on either the row element or on a cell contained in the row. 
 
-Use  `treegrid` rather than `grid` when your grid UI calls for rows supporting `aria-expanded` and if your grid requires supporting [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset), [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize), or [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level). 
+The `aria-expanded` state is set to `true` when the child rows are displayed and set to `false` when the child rows are not hidden. Elements that do not control display of child rows should not have the `aria-expanded` attribute because the presence of the attribute indicates to assistive technologies that the element with the attribute is a parent. 
 
-While column header cells that do not provide functions, such as sort or filter, do not need to be focusable, each `row` or `gridcell` in a row should be keyboard focusable. Every row and cell should either contain a focusable element or be focusable itself, regardless of whether individual cell content is editable or interactive.  
+When your grid UI calls for rows supporting `aria-expanded` or if your grid requires supporting [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset), [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize), or [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level), use `treegrid` and not `grid`. 
 
-If the `treegrid` allows the user to choose just one item for an action, then it is known as a "single-select" treegrid, and the item with focus also has a selected state set with [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected). 
+Each `row` or `gridcell` in a row should be keyboard focusable, and keyboard focus for all these tree grid descendants must be managed.  The exception to this rule is column header cells which aren't required to be focusable if they do not provide functionality such as sort or filter. Every row and cell should either contain a focusable element or be focusable itself, regardless of whether individual cell content is editable or interactive. 
 
-If the treegrid supports selection of more than one row or cell, it is a **multi-select** treegrid. Include [`aria-multiselectable="true"`] on the element with the `treegrid` role.  
+If the `treegrid` allows the user to choose just one item for an action, then it is known as a "single-select" treegrid. In single-select treegrids, the item with focus also has a selected state set with [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected). 
 
-Multi-select treegrids enable users to select more than one row or cell for an action.  All selected rows or cells have [`aria-selected`]() set to true. All rows and cells that are selectable but not currently selected have `aria-selected` set to `false`. Don't include the `aria-selected` attribute on rows and cells that are not individually selectable as the presence of the attribute indicates to assistive technologies that the row or cell is selectable. 
+If the treegrid supports selection of more than one row or cell, it is a **multi-select** treegrid. In the multi-select treegrid, the selected state is independent of the focus. The visual design and assitive technologies must distinguish between items that are selected and the item that has focus.  
 
-In the multi-select treegrid, the selected state is independent of the focus. It is also important that the visual design distinguish between items that are selected and the item that has focus. 
+For multi-select treegrids, include [`aria-multiselectable="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) on the element with the `treegrid` role.  All selected rows or cells have [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) set to true. All rows and cells that are selectable but not currently selected have `aria-selected` set to `false`. Don't include the `aria-selected` attribute on rows and cells that are not individually selectable as the presence of the attribute indicates to assistive technologies that the row or cell is selectable. 
 
-In cases where a child `row` or `rowgroup` is not nested within the `treegrid` in the DOM, the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) attribute, referencing all of the IDs of the non-descendant children must be set on the `treegrid` element. If rows or cells are included in a treegrid via `aria-owns`, they will be presented to assistive technologies after the DOM descendants of the `treegrid` element unless the grid's DOM descendants are also included in the `aria-owns` attribute.
+In cases where a child `row` or `rowgroup` is not nested within the `treegrid` in the DOM, the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) attribute, referencing all of the IDs of the non-descendant children must be set on the `treegrid` element. If rows or cells are included in a treegrid via `aria-owns`, they will be presented to assistive technologies after the DOM descendants of the `treegrid` element unless the grid's actual DOM descendants are also included in the `aria-owns` attribute.
 
-The element with the role of `treegrid` must have an accessible name. If an appropriate label is visible in the content, provide the name via [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby). In other words, if there is an element in the user interface that serves as a label for the treegrid, include `aria-labelledby` as an attribute on the element with the role of `treegrid`, and set the value of the attribute to the `id` of the labelling element or elements. If no visible label is present, use  [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) instead. Not both.
+If some rows or columns are not in the DOM and are dynamically loaded when scrolling, [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount), [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount), [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) and [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) come into play. The `aria-colcount` and `aria-rowcount` properties get set on the `treegrid`. The values being the total number of columns and rows of the fully loaded grid, respectively. The indexes for each row and column get set on individual cells, not on the `treegrid` element.
 
-If the content includes a caption or description for the `treegrid`, include `aria-describedby` on the `treegrid` element with the attribute value being the `id` of the element containing the description.
+The element with the role of `treegrid` must have an accessible name. If an appropriate label is visible in the content, provide the name via [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby). In other words, if there is an element in the user interface that serves as a label for the treegrid, include `aria-labelledby` as an attribute on the element with the role of `treegrid`, and set the value of the attribute to the `id` of the labelling element or elements. If no visible label is present, use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) instead. Not both.
+
+If the content includes a caption or description for the `treegrid`, include [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) on the `treegrid` element with the attribute value being the `id` of the element containing the description.
 
 If the `treegrid` container itself receives focus, the value of its [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) property should reference the {{HTMLattrxref('id')}} of the selected `row`, `columnheader`, `rowheader` or `gridcell`, unless roving tabindex is used to manage focus between those roles, in which case `aria-activedescendant` should not be used.
 
-If the `treegrid` is disabled, make that disabled state visually apparent, programmatically enforced, and include the [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) attribute on the `treegrid` itself to inform assistive technologies of hte disabled state.
+If the `treegrid` is disabled, make that disabled state visually apparent, programmatically enforced, and include the [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) attribute on the `treegrid` itself to inform assistive technologies of its disabled state.
 
 If the treegrid provides sort functions, the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort) attribute is included on relevant header cell elements, not on the grid itself. 
 
-If the `treegrid` has an attached [`menu`](../menu_role/) that opens when Right clicked, include [`aria-haspopup="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) on the the `treegrid` element. This informs assistive technologies that the `treegrid` has an associated popup. Mechanisms for both keyboard and pointer devices to open and set focus in the menu must be added with JavaScript.
+If the `treegrid` has an attached [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role/) that opens when Right clicked, include [`aria-haspopup="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) on the the `treegrid` element. This informs assistive technologies that the `treegrid` has an associated popup. The ability for both keyboard and pointer device users to open and set focus in the menu must be added with JavaScript.
 
+By default, treegrids are assumed to be editable. If a tree grid is not editable, use the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) attribute to inform assistive technologies the `treegrid` is readonly. The attribute value, when set on the element with the `treegrid` role, propagates down to all  `columnheader`, `rowheader`, and `gridcell` elements. That global value can be overriden for individual `gridcell` elements by including `aria-readonly` on individual tree grid element descendants.
 
-
-
-
-
-
-
-
-
-
-
-
-
-If there are conditions where some rows or columns are hidden or not present in the DOM, e.g., data is dynamically loaded when scrolling or the grid provides functions for hiding rows or columns, the following properties are applied as described in the section on grid and table properties.
-aria-colcount or aria-rowcount is set to the total number of columns or rows, respectively.
-aria-colindex or aria-rowindex is set to the position of a cell within a row or column, respectively.
-
-If the treegrid includes cells that span multiple rows or multiple columns, and if the treegrid role is NOT applied to an HTML table element, then aria-rowspan or aria-colspan is applied as described in grid and table properties.
-NOTE
-A treegrid built from an HTML table that includes cells that span multiple rows or columns must use HTML rowspan and colspan and must not use aria-rowspan or aria-colspan.
-
-
-
-If a tree grid is not editable, use the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) attribute to inform assistive technologies the `treegrid` is readonly. The attribute value, when set on the element with the `treegrid` role,propagates down to all structural child roles, including all  `columnheader`, `rowheader`, and `gridcell` elements.
-
-If [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) is set on the `treegrid`, that value is set all of the [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role) elements. That global value can be overriden for individual `gridcell` elements by including `aria-readonly` on individual tree grid element descendants.
-
-When the `aria-readonly` attribute is applied to a focusable `gridcell`, it indicates whether the content contained in the `gridcell` is editable. Like all ARIA attributes, adding `aria-readonly` informs assistive technologies that the content is or is not editable, but it does nothing to enable or disable interactivity. That must be done with HTML's global {{HTMLattrxref('contenteditable')}} attribute or with JavaScript.
-
-If the treegrid provides content editing functionality and contains cells that may have edit capabilities disabled in certain conditions, aria-readonly is set to true on cells where editing is disabled. If edit functions are disabled for all cells, instead of setting aria-readonly to true on every cell, aria-readonly may be set to true on the treegrid element. Treegrids that do not provide cell content editing functions do not include the aria-readonly attribute on any of their elements.
-
-In a treegrid that provides content editing functions, if the content of a focusable gridcell element is not editable, authors MAY set aria-readonly to true on the gridcell element. However, if a treegrid presents a collection of elements that do not support aria-readonly, such as a collection of link elements, it is not necessary for the author to specify a value for aria-readonly.
-
-To be keyboard accessible, authors SHOULD manage focus of descendants for all instances of this role, as described in Managing Focus.
+Like all ARIA attributes, adding `aria-readonly` only informs assistive technologies that the content is or is not editable, but it does nothing to enable or disable interactivity. That must be done with HTML's global {{HTMLattrxref('contenteditable')}} attribute or with JavaScript.
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -104,13 +69,16 @@ To be keyboard accessible, authors SHOULD manage focus of descendants for all in
   - : 
 - [`aria-expanded](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
   - : For expandable items, the value is `true` or `false`. Also indicates that the item is expandable, so should not be present if the item cannot be expanded. 
-- [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-
-- [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-
-- [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-
-- [`aria-invalid`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-
-- [`aria-grabbed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-
-- [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-
-- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-
+- [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
+  - : 
+- [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort)
+  - : 
+- [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
+  - : 
+- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+  - : 
+- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
+  - : 
 
 
 
