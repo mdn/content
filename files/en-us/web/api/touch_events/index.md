@@ -9,6 +9,7 @@ tags:
   - Mobile
   - Overview
   - touch
+browser-compat: api.Touch
 ---
 {{DefaultAPISidebar("Touch Events")}}
 
@@ -256,9 +257,11 @@ function log(msg) {
 }
 ```
 
-If your browser supports it, you can {{LiveSampleLink('Example', 'see it live')}}.
+#### Result
 
-[jsFiddle example](https://jsfiddle.net/Darbicus/z3Xdx/10/)
+{{EmbedLiveSample('Demo')}}
+
+You can also {{LiveSampleLink('Demo', 'view the results of the demo code in a separate page')}} (or try it out on [jsFiddle here](https://jsfiddle.net/Darbicus/z3Xdx/10/)).
 
 ## Additional tips
 
@@ -306,9 +309,8 @@ One technique for preventing things like `pinchZoom` on a page is to call `preve
 
 ## Specifications
 
-| Specification                                       |
-| --------------------------------------------------- |
-| [Touch Events](https://w3c.github.io/touch-events/) |
+{{Specifications}}
+
 
 ## Browser compatibility
 
@@ -320,7 +322,7 @@ The reason for this is that some websites use the availability of parts of the t
 
 To support both touch and mouse across all types of devices, use [pointer events](/en-US/docs/Web/API/Pointer_events) instead.
 
-{{Compat("api.Touch")}}
+{{Compat}}
 
 ### Firefox, touch events, and multiprocess (e10s)
 
