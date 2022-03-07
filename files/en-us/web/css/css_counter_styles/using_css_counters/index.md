@@ -489,7 +489,7 @@ h2::before { content: counter(num1) "-" counter(num2) ". "; }
 h3::before { content: counter(num1) "-" counter(num2) "-" counter(num3) ". "; }
 ```
 
-Previously, writing {{cssxref("counter-set")}} as {{cssxref("counter-reset")}} would produce the expected result. However, this behavior was changed for the convenience of implementing the remedy for invalid HTML described below. Starting with Firefox 68, writing `counter-reset` for the above `counter-set` will display the following.
+Previously, writing {{cssxref("counter-set")}} as {{cssxref("counter-reset")}} would produce the expected result. However, this behavior was changed for the convenience of implementing the remedy for invalid HTML described below. Starting with Firefox 82, writing `counter-reset` for the above `counter-set` will display the following.
 
 #### Result
 
