@@ -62,25 +62,19 @@ Like all ARIA attributes, adding `aria-readonly` only informs assistive technolo
 - [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role) role
   - : A group of [rows](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) within a tabular structure. 
 - [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role) role
-  - : 
+  - : Intended to mimic the functionality of the HTML {{HTMLElement('td')}} element, is is found in `grid` and `treegrid` roles and must be the direct child of a `row`.
 - [columnheader](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) role
-  - : 
+  - : A cell in a row containing header information for a column, similar to the native {{HTMLElement('th')}} element with column scope
 - [rowheader](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role) role
-  - : 
+  - : A cell containing header information for a `row` within a tabular structure.
 - [`aria-expanded](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
   - : For expandable items, the value is `true` or `false`. Also indicates that the item is expandable, so should not be present if the item cannot be expanded. 
-- [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
-  - : 
-- [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort)
-  - : 
 - [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
-  - : 
+  - : Identifies a contextual relationship between a parent and its child elements when the DOM hierarchy cannot be used to represent the relationship
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
-  - : 
+  - : Use this attribute to label the `treegrid`. The `aria-labelledby` attribute is generally the id of the element used to title the treegrid.
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
-  - : 
-
-
+  - : A human-readable string value which identifies the `treegrid`. If there's a visible label, then `aria-labelledby` should be used instead.
 
 ### Keyboard interactions
 
