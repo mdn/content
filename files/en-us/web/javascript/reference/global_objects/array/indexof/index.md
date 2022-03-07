@@ -57,7 +57,7 @@ equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) (the s
 The following example uses `indexOf()` to locate values in an array.
 
 ```js
-var array = [2, 9, 9];
+cosnt array = [2, 9, 9];
 array.indexOf(2);     // 0
 array.indexOf(7);     // -1
 array.indexOf(9, 2);  // 2
@@ -68,10 +68,10 @@ array.indexOf(2, -3); // 0
 ### Finding all the occurrences of an element
 
 ```js
-var indices = [];
-var array = ['a', 'b', 'a', 'c', 'a', 'd'];
-var element = 'a';
-var idx = array.indexOf(element);
+const indices = [];
+const array = ['a', 'b', 'a', 'c', 'a', 'd'];
+const element = 'a';
+let idx = array.indexOf(element);
 while (idx != -1) {
   indices.push(idx);
   idx = array.indexOf(element, idx + 1);
@@ -87,12 +87,12 @@ function updateVegetablesCollection (veggies, veggie) {
     if (veggies.indexOf(veggie) === -1) {
         veggies.push(veggie);
         console.log('New veggies collection is : ' + veggies);
-    } else if (veggies.indexOf(veggie) > -1) {
+    } else {
         console.log(veggie + ' already exists in the veggies collection.');
     }
 }
 
-var veggies = ['potato', 'tomato', 'chillies', 'green-pepper'];
+const veggies = ['potato', 'tomato', 'chillies', 'green-pepper'];
 
 updateVegetablesCollection(veggies, 'spinach');
 // New veggies collection is : potato,tomato,chillies,green-pepper,spinach
