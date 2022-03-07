@@ -203,7 +203,7 @@ Next we look to see if the {{domxref("RTCPeerConnection.getSenders()")}} method 
 
 If `getSenders()` isn't available, we instead call {{domxref("RTCPeerConnection.createDTMFSender()")}} to get the `RTCDTMFSender` object. Although this method is obsolete, this example supports it as a fallback to let older browsers (and those not yet updated to support the current WebRTC DTMF API) run the example.
 
-Finally, we set the DTMF sender's {{domxref("RTCDTMFSender.ontonechange", "ontonechange")}} event handler so we get notified each time a DTMF tone finishes playing.
+Finally, we set the DTMF sender's {{domxref("RTCDTMFSender.tonechange_event", "ontonechange")}} event handler so we get notified each time a DTMF tone finishes playing.
 
 You can find the log function at the bottom of the documentation.
 
