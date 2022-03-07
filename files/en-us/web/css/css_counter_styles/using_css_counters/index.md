@@ -554,7 +554,7 @@ Invalid HTML exists for a variety of reasons and cannot be ignored (and, by goll
 4. (4)
 ```
 
-As described in [Implicit list-item counters](#implicit_list-item_counter) below, if the {{cssxref("content")}} property for li::marker is rewritten using {{cssxref("counter()")}} instead of {{cssxref("counters()")}}, the marker of a nested li element, even in invalid HTML, will look like this It will be displayed as a nested counter.
+As described in [Implicit list-item counters](#implicit_list-item_counter) below, if the {{cssxref("content")}} property for `li::marker` is rewritten using {{cssxref("counter()")}} instead of {{cssxref("counters()")}}, the marker of a nested li element, even in invalid HTML, will look like this It will be displayed as a nested counter.
 
 #### Result
 
