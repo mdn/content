@@ -177,25 +177,32 @@ div[data-lang="zh-TW"] {
 
 ### HTML ordered lists
 
-The HTML specification requires the {{htmlattrxref("type", "input")}} attribute to be matched case-insensitively due to it primarily being used in the {{HTMLElement("input")}} element, and trying to use attribute selectors with the {{htmlattrxref("type", "ol")}} attribute of an {{HTMLElement("ol", "ordered list")}} doesn't work without the [case-sensitive](#case-sensitive) modifier.
+Using attribute selectors on {{HTMLElement("ol", "Ordered lists")}} is the same as for other elements: the case sensitivity of the selection depends on the document language.
+Case-sensitive and case-insensitive matching can be forced using the `s` and `i` modifiers, respectively.
+Note that if the modifiers are not supported by the user agent, then the selector will not match.
 
 #### CSS
 
 ```css
-/* List types require the case sensitive flag due to a quirk in how HTML treats the type attribute. */
+/* Case-sensitivity depends on document language */
 ol[type="a"] {
   list-style-type: lower-alpha;
   background: red;
 }
 
-ol[type="a" s] {
+ol[type="b" s] {
   list-style-type: lower-alpha;
   background: lime;
 }
 
-ol[type="A" s] {
+ol[type="B" s] {
   list-style-type: upper-alpha;
-  background: lime;
+  background: grey;
+}
+
+ol[type="c" i] {
+  list-style-type: upper-alpha;
+  background: green;
 }
 ```
 
@@ -203,7 +210,16 @@ ol[type="A" s] {
 
 ```html
 <ol type="A">
-  <li>Example list</li>
+  <li>Red background if case-insensitive matching for current document language.</li>
+</ol>
+<ol type="b">
+  <li>Lime background if s flag supported (case-sensitive match)</li>
+</ol>
+<ol type="B">
+  <li>Grey background if s flag supported (case-sensitive match)</li>
+</ol>
+<ol type="C">
+  <li>Green background if i flag supported (case-insensitive match)</li>
 </ol>
 ```
 
