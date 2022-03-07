@@ -9440,6 +9440,7 @@
 /en-US/docs/Web/API/Window/mozRequestAnimationFrame	/en-US/docs/Web/API/window/requestAnimationFrame
 /en-US/docs/Web/API/Window/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
 /en-US/docs/Web/API/Window/onafterprint	/en-US/docs/Web/API/WindowEventHandlers/onafterprint
+/en-US/docs/Web/API/Window/onappinstalled	/en-US/docs/Web/API/Window/appinstalled_event
 /en-US/docs/Web/API/Window/onbeforeprint	/en-US/docs/Web/API/WindowEventHandlers/onbeforeprint
 /en-US/docs/Web/API/Window/onbeforeunload	/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload
 /en-US/docs/Web/API/Window/onblur	/en-US/docs/Web/API/GlobalEventHandlers/onblur
@@ -9453,7 +9454,7 @@
 /en-US/docs/Web/API/Window/ongamepaddisconnected	/en-US/docs/Web/API/Window/gamepaddisconnected_event
 /en-US/docs/Web/API/Window/onhashchange	/en-US/docs/Web/API/WindowEventHandlers/onhashchange
 /en-US/docs/Web/API/Window/oninput	/en-US/docs/Web/API/GlobalEventHandlers/onkeydown
-/en-US/docs/Web/API/Window/oninstall	/en-US/docs/Web/API/Window/onappinstalled
+/en-US/docs/Web/API/Window/oninstall	/en-US/docs/Web/API/Window/appinstalled_event
 /en-US/docs/Web/API/Window/onkeydown	/en-US/docs/Web/API/GlobalEventHandlers/onkeydown
 /en-US/docs/Web/API/Window/onkeypress	/en-US/docs/Web/API/GlobalEventHandlers/onkeypress
 /en-US/docs/Web/API/Window/onkeyup	/en-US/docs/Web/API/GlobalEventHandlers/onkeyup

@@ -86668,18 +86668,6 @@
       "louisremi"
     ]
   },
-  "Web/API/Window/onappinstalled": {
-    "modified": "2020-10-15T21:47:08.944Z",
-    "contributors": [
-      "Oaphi",
-      "sideshowbarker",
-      "wbamberg",
-      "chrisdavidmills",
-      "marcoscaceres",
-      "fscholz",
-      "teoli"
-    ]
-  },
   "Web/API/Window/onbeforeinstallprompt": {
     "modified": "2020-10-15T21:36:30.007Z",
     "contributors": [
