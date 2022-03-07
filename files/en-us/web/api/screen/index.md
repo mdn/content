@@ -43,10 +43,10 @@ Note that browsers determine which screen to report as current by detecting whic
 - {{DOMxRef("Screen.mozBrightness")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Controls the brightness of a device's screen. A double between 0 and 1.0 is expected.
 
-### Events handler
+### Events
 
-- {{DOMxRef("Screen.onorientationchange")}} {{Deprecated_Inline}}
-  - : A handler for the {{Event("orientationchange")}} event.
+- {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} {{Deprecated_Inline}}
+  - : Fires when the screen orientation changes.
 
 ## Methods
 
