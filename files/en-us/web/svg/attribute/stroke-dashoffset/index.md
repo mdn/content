@@ -110,10 +110,6 @@ html,body,svg { height:100% }
 
 The offset is usually expressed in user units resolved against the {{SVGAttr('pathLength')}} but if a [\<percentage>](/en-US/docs/Web/SVG/Content_type#percentage) is used, the value is resolved as a percentage of the current viewport.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Specifications
 
 <table class="no-markdown">
@@ -141,3 +137,7 @@ The offset is usually expressed in user units resolved against the {{SVGAttr('pa
     </tr>
   </tbody>
 </table>
+
+## Browser compatibility
+
+{{Compat}}

@@ -51,6 +51,6 @@ console.log(stylesheet.media);
 
 {{Compat}}
 
-## Polyfill
+## See also
 
 - [construct-style-sheets-polyfill](https://www.npmjs.com/package/construct-style-sheets-polyfill)

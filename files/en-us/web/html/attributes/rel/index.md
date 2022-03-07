@@ -8,6 +8,10 @@ tags:
   - Link
   - form
   - rel
+spec-urls:
+  - https://html.spec.whatwg.org/multipage/links.html#linkTypes
+  - https://w3c.github.io/preload/#x2.link-type-preload
+  - https://www.w3.org/TR/resource-hints/#dfn-preconnect
 ---
 
 {{HTMLSidebar}}
@@ -30,6 +34,7 @@ The following table lists some of the most important existing keywords. Every ke
 | `{{anch("attr-icon", "icon")}}`                                  | An icon representing the current document.                                                                                                                                                                                                            | External Resource         | Not allowed                                          | Not allowed               |
 | `{{anch("attr-license", "license")}}`                            | Indicates that the main content of the current document is covered by the copyright license described by the referenced document.                                                                                                                     | Link                      | Link                                                 | Link                      |
 | [`manifest`](/en-US/docs/Web/HTML/Link_types/manifest)           | Web app manifest                                                                                                                                                                                                                                      | Link                      | Not allowed                                          | Not allowed               |
+| [`me`](/en-US/docs/Web/HTML/Link_types/me)           | Indicates that the current document represents the person who owns the linked content                                                                                                                                                                                                                                      | Link                      | Not allowed                                          | Not allowed               |
 | [`modulepreload`](/en-US/docs/Web/HTML/Link_types/modulepreload) | Tells to browser to preemptively fetch the script and store it in the document's module map for later evaluation. Optionally, the module's dependencies can be fetched as well.                                                                       | External Resource         | Not allowed                                          | Not allowed               |
 | `{{anch("attr-next", "next")}}`                                  | Indicates that the current document is a part of a series and that the next document in the series is the referenced document.                                                                                                                        | Link                      | Link                                                 | Link                      |
 | `{{anch("attr-nofollow", "nofollow")}}`                          | Indicates that the current document's original author or publisher does not endorse the referenced document.                                                                                                                                          | Not allowed               | Annotation                                           | Annotation                |
@@ -182,96 +187,23 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 - {{htmlattrdef("apple-touch-icon")}}
   - : Specifies the icon for a web application on an iOS device.
 
-## Browser compatibility
-
-{{Compat("html.elements.attributes.rel")}}
-
 ## Specifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'links.html#linkTypes', 'rel attribute')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>
-        Added <code>opener</code>. Made <code>noopener</code> default for
-        <code>target="_blank"</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML5 W3C', 'links.html#linkTypes', 'rel attribute')}}
-      </td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td>
-        Added <code>tag</code>, <code>search</code>, <code>prefetch</code>,
-        <code>noreferrer</code>, <code>nofollow</code>, <code>icon</code>, and
-        <code>author</code>.<br />Renamed <code>copyright</code> to
-        <code>license</code>.<br />Removed <code>start</code>,
-        <code>chapter</code>, <code>section</code>, <code>subsection</code>, and
-        <code>appendix</code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("Preload", "#x2.link-type-preload", "preload")}}
-      </td>
-      <td>{{Spec2("Preload")}}</td>
-      <td>Added <code>preload</code>.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("Resource Hints", "#dfn-preconnect", "preconnect")}}
-      </td>
-      <td>{{Spec2("Resource Hints")}}</td>
-      <td>
-        Added <code>dns-prefetch</code>, <code>preconnect</code>, and
-        <code>prerender</code> values.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("HTML4.01", "types.html#type-links", "link types")}}
-      </td>
-      <td>{{Spec2("HTML4.01")}}</td>
-      <td>
-        Added <code>alternate</code>, <code>stylesheet</code>,
-        <code>start</code>, <code>chapter</code>, <code>section</code>,
-        <code>subsection</code>, <code>appendix</code>, and
-        <code>bookmark</code>.<br />Renamed <code>previous</code> to
-        <code>prev</code>.<br />Removed <code>top</code>, and
-        <code>search</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName("HTML3.2", "#link", "&lt;link&gt;")}}</td>
-      <td><p>{{Spec2("HTML3.2")}} (Obsolete)</p></td>
-      <td>
-        Added <code>top</code>, <code>contents</code>, <code>index</code>,
-        <code>glossary</code>, <code>copyright</code>, <code>next</code>,
-        <code>previous</code>, <code>help</code>, and <code>search</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>{{RFC(1866, "HTML 2.0")}}</td>
-      <td>{{Spec2("HTML2.0")}} (Obsolete)</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
+### `rel` attribute for the `link` element
+
 {{Compat("html.elements.link.rel")}}
+
+### `rel` attribute for the `a` element
+
+{{Compat("html.elements.a.rel")}}
+
+### `rel` attribute for the `area` element
+
+{{Compat("html.elements.area.rel")}}
 
 ## Accessibility concerns
 

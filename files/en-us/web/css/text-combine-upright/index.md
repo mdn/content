@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Property
   - CSS Writing Modes
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.text-combine-upright

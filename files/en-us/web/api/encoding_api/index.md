@@ -22,10 +22,6 @@ The API provides four interfaces: {{domxref("TextDecoder")}}, {{domxref("TextEnc
 - {{DOMxRef("TextDecoderStream")}}
 - {{DOMxRef("TextEncoderStream")}}
 
-## Polyfill
-
-- A [shim](https://code.google.com/p/stringencoding/) allowing to use this interface in browsers that don't support it.
-
 ## Specifications
 
 | Specification                    | Status                       | Comment             |
@@ -41,3 +37,7 @@ The API provides four interfaces: {{domxref("TextDecoder")}}, {{domxref("TextEnc
 ### `TextEncoder`
 
 {{Compat("api.TextEncoder")}}
+
+## See also
+
+- A [shim](https://code.google.com/p/stringencoding/) allowing to use this interface in browsers that don't support it

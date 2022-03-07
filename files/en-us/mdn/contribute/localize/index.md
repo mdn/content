@@ -29,7 +29,7 @@ We have frozen all localized content (meaning that we won't accept any edits to 
 ### French (fr)
 
 - Discussions : [Matrix (#l10n-fr channel)](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
-- Current contributors: [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb), [JNa0](https://github.com/JNa0), [nicolas-goudry](https://github.com/nicolas-goudry), [LEMIBANDDEXARI](https://github.com/LEMIBANDDEXARI)
+- Current contributors: [cw118](https://github.com/cw118), [Jb Audras](https://github.com/audrasjb), [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb)
 
 ### Japanese (ja)
 
@@ -49,7 +49,7 @@ We have frozen all localized content (meaning that we won't accept any edits to 
 ### Spanish (es)
 
 - Discussions: [Matrix (#mdn-l10n-es channel)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org)
-- Current maintainers: [@JuanVqz](https://github.com/JuanVqz), [@dacalderonp](https://github.com/dacalderonp), [@sergiogval](https://github.com/sergiogval), [@lasr21](https://github.com/lasr21), [@tuxxy](https://github.com/tuxxy)
+- Current maintainers: [@JuanVqz](https://github.com/JuanVqz), [@dacalderonp](https://github.com/dacalderonp), [@lasr21](https://github.com/lasr21), [@tuxxy](https://github.com/tuxxy)
 
 > **Note:** If you want to discuss unfreezing a currently frozen locale, the [guidelines on what is required can be found here](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#activating-a-locale).
 

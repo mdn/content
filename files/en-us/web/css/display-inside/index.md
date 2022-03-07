@@ -8,6 +8,7 @@ tags:
   - Data Type
   - Reference
   - display-inside
+spec-urls: https://drafts.csswg.org/css-display/#typedef-display-inside
 ---
 {{CSSRef}}
 
@@ -76,9 +77,7 @@ In this example the parent box has been given `display: flow-root` and so establ
 
 ## Specifications
 
-| Specification                                                                                    | Status                           |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- |
-| {{SpecName('CSS3 Display', '#typedef-display-inside', 'display-inside')}} | {{Spec2('CSS3 Display')}} |
+{{Specifications}}
 
 ## Browser compatibility
 

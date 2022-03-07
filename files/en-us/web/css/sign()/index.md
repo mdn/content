@@ -11,6 +11,7 @@ tags:
   - Web
   - sign
 browser-compat: css.types.sign
+spec-urls: https://drafts.csswg.org/css-values/#sign-funcs
 ---
 {{CSSRef}}
 
@@ -56,9 +57,7 @@ div {
 
 ## Specifications
 
-| Specification                                                        | Status                           | Comment            |
-| -------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("CSS4 Values", "#sign-funcs", "sign()")}} | {{Spec2("CSS4 Values")}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Motion Path
   - CSS Property
-  - Experimental
   - Reference
   - offset-rotate
   - recipe:css-property

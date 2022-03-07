@@ -179,7 +179,7 @@ function set_resource_timing_buffer_size(n) {
 }
 ```
 
-The {{domxref("Performance")}} interface has a {{domxref("Performance.onresourcetimingbufferfull","onresourcetimingbufferfull")}} event handler that gets called (with an {{domxref("Event")}} of type {{domxref("Event.type")}} of "{{event("resourcetimingbufferfull")}}") when the browser's resource performance entry buffer is full. The following code example sets a {{domxref("Performance.onresourcetimingbufferfull","onresourcetimingbufferfull")}} event callback in the `init()` function.
+The {{domxref("Performance.resourcetimingbufferfull_event","resourcetimingbufferfull")}} event is fired at the {{domxref("Performance")}} object when the browser's resource performance entry buffer is full. The following code example sets a {{domxref("Performance.resourcetimingbufferfull_event","onresourcetimingbufferfull")}} event handler in the `init()` function.
 
 ```js
 function buffer_full(event) {

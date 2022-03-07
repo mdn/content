@@ -197,7 +197,7 @@ Similar to flexbox, we enable Grid Layout with its specific display value — `d
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100px 100px;
-    grid-gap: 10px;
+    gap: 10px;
 }
 ```
 
@@ -235,7 +235,7 @@ Once you have a grid, you can explicitly place your items on it, rather than rel
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100px 100px;
-    grid-gap: 10px;
+    gap: 10px;
 }
 
 .box1 {

@@ -8,6 +8,7 @@ tags:
   - HTML
   - Input
   - Reference
+spec-urls: https://html.spec.whatwg.org/multipage/input.html#attr-input-accept
 ---
 
 {{HTMLSidebar}}
@@ -144,10 +145,7 @@ div {
 
 ## Specifications
 
-| Specification                                                                   | Status                   |
-| ------------------------------------------------------------------------------- | ------------------------ |
-| {{SpecName('HTML WHATWG', 'input.html#attr-input-accept', 'accept attribute')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5.1', 'sec-forms.html#attr-input-accept', 'accept attribute')}} | {{Spec2('HTML5.1')}}     |
+{{Specifications}}
 
 ## Browser compatibility
 

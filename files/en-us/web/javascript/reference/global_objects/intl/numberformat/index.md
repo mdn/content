@@ -121,10 +121,6 @@ console.log((16).toLocaleString('en-GB', {
 // → 16 litres
 ```
 
-## Polyfill
-
-[formatjs Intl.NumberFormat polyfill](https://formatjs.io/docs/polyfills/intl-numberformat)
-
 ## Specifications
 
 {{Specifications}}
@@ -136,3 +132,4 @@ console.log((16).toLocaleString('en-GB', {
 ## See also
 
 - {{jsxref("Intl")}}
+- [A polyfill of `Intl.NumberFormat` in FormatJS](https://formatjs.io/docs/polyfills/intl-numberformat)

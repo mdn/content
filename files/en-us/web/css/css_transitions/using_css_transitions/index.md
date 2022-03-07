@@ -7,6 +7,7 @@ tags:
   - CSS Transitions
   - CSS3 Transitions
   - Guide
+spec-urls: https://drafts.csswg.org/css-transitions/
 ---
 {{CSSRef}}
 
@@ -254,9 +255,7 @@ el.addEventListener("transitionstart", signalStart, true);
 
 ## Specifications
 
-| Specification                                        | Status                                   | Comment            |
-| ---------------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Transitions', '', '')}} | {{Spec2('CSS3 Transitions')}} | Initial definition |
+{{Specifications}}
 
 ## See also
 

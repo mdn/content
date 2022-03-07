@@ -13,7 +13,7 @@ The **HTML Sanitizer API** allow developers to take untrusted strings of HTML an
 
 ## Concepts and usage
 
-Web applications often need to work with untrusted HTML on the client side, for example, as part of a client-side templating solution or for rendering user generated content, or when including data in a frame from other another site.
+Web applications often need to work with untrusted HTML on the client side, for example, as part of a client-side templating solution or for rendering user generated content, or when including data in a frame from another site.
 The Sanitizer API allows for rendering of this potentially untrusted HTML in a safe manner.
 
 To access the API you would use the {{domxref('Sanitizer.Sanitizer()','Sanitizer()')}} constructor to create and configure a {{domxref('Sanitizer')}} instance.

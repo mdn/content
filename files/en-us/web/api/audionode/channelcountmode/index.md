@@ -37,7 +37,6 @@ The possible values of `channelCountMode` and their meanings are:
       <td>
         {{domxref("GainNode")}}, {{domxref("DelayNode")}},
         {{domxref("ScriptProcessorNode")}},
-        {{domxref("ChannelMergerNode")}},
         {{domxref("BiquadFilterNode")}},
         {{domxref("WaveShaperNode")}}
       </td>
@@ -62,7 +61,8 @@ The possible values of `channelCountMode` and their meanings are:
       <td>
         {{domxref("AudioDestinationNode")}},
         {{domxref("AnalyserNode")}},
-        {{domxref("ChannelSplitterNode")}}
+        {{domxref("ChannelSplitterNode")}},
+        {{domxref("ChannelMergerNode")}}
       </td>
     </tr>
   </tbody>

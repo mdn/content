@@ -8,6 +8,7 @@ tags:
   - Data Type
   - Reference
   - display-legacy
+spec-urls: https://drafts.csswg.org/css-display/#typedef-display-legacy
 ---
 {{CSSRef}}
 
@@ -78,9 +79,7 @@ In the new syntax the inline flex container would be created using two values, i
 
 ## Specifications
 
-| Specification                                                                                    | Status                           |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- |
-| {{SpecName('CSS3 Display', '#typedef-display-legacy', 'display-legacy')}} | {{Spec2('CSS3 Display')}} |
+{{Specifications}}
 
 ## Browser compatibility
 

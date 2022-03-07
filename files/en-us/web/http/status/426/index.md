@@ -44,4 +44,4 @@ This service requires use of the HTTP/2.0 protocol
 ## See also
 
 - {{HTTPHeader("Upgrade")}}
-- {{HTTPStatus("101")}} `Switching Protocol`
+- {{HTTPStatus("101")}} `Switching Protocols`

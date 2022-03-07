@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Reference
   - recipe:css-shorthand-property
 browser-compat: css.properties.inset-block

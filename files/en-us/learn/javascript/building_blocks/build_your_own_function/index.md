@@ -106,7 +106,7 @@ The next section uses a DOM API function called {{domxref("document.createElemen
 
 We then use yet another DOM API function called {{domxref("Element.setAttribute()")}} to set a `class` attribute on our panel with a value of `msgBox`. This is to make it easier to style the element — if you look at the CSS on the page, you'll see that we are using a `.msgBox` class selector to style the message box and its contents.
 
-Finally, we call a DOM function called {{domxref("Node.appendChild()")}} on the `html` constant we stored earlier, which nests one element inside the other as a child of it. We specify the panel `<div>` as the child we want to append inside the `<html>` element. We need to do this as the element we created won't just appear on the page on its own — we need to specify where to put it.
+Finally, we call a DOM function called {{domxref("Node.appendChild()")}} on the `body` constant we stored earlier, which nests one element inside the other as a child of it. We specify the panel `<div>` as the child we want to append inside the `<body>` element. We need to do this as the element we created won't just appear on the page on its own — we need to specify where to put it.
 
 ```js
 const panel = document.createElement('div');
@@ -114,7 +114,7 @@ panel.setAttribute('class', 'msgBox');
 body.appendChild(panel);
 ```
 
-The next two sections make use of the same `createElement()` and `appendChild()` functions we've already seen to create two new elements — a {{htmlelement("p")}} and a {{htmlelement("button")}} — and insert them in the page as children of the panel `<div>`. We use their {{domxref("Node.textContent")}} property — which represents the text content of an element — to insert a message inside the paragraph, and an 'x' inside the button. This button will be what needs to be clicked/activated when the user wants to close the message box.
+The next two sections make use of the same `createElement()` and `appendChild()` functions we've already seen to create two new elements — a {{htmlelement("p")}} and a {{htmlelement("button")}} — and insert them in the page as children of the panel `<div>`. We use their {{domxref("Node.textContent")}} property — which represents the text content of an element — to insert a message inside the paragraph, and an "x" inside the button. This button will be what needs to be clicked/activated when the user wants to close the message box.
 
 ```js
 const msg = document.createElement('p');
@@ -183,7 +183,7 @@ You've now got your function definition written into your `<script>` element jus
 You might be wondering why we haven't included the parentheses after the function name. This is because we don't want to call the function immediately — only after the button has been clicked. If you try changing the line to
 
 ```js
-btn.onclick = displayMessage();
+btn.addEventListener('click', displayMessage());
 ```
 
 and saving and reloading, you'll see that the message box appears without the button being clicked! The parentheses in this context are sometimes called the "function invocation operator". You only use them when you want to run the function immediately in the current scope. In the same respect, the code inside the anonymous function is not run immediately, as it is inside the function scope.

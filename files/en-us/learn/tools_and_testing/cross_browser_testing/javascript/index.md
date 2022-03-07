@@ -246,9 +246,9 @@ For example:
 - [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) are a great new feature for performing asynchronous operations and making sure those operations are complete before code that relies on their results is used for something else.
   As an example, the [Fetch API](/en-US/docs/Web/API/fetch) (a modern equivalent to [XMLHTTPRequest](/en-US/docs/Web/API/XMLHttpRequest)) uses promises to fetch resources across the network and make sure that the response has been returned before they are used (for example, displaying an image inside an {{htmlelement("img")}} element).
   They are not supported in IE at all but are supported across all modern browsers.
-- Arrow functions provide a shorter, more convenient syntax for writing [anonymous functions](/en-US/docs/Learn/JavaScript/Building_blocks/Functions#anonymous_functions), which also has other advantages (see [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)).
+- [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter, more convenient syntax for writing [anonymous functions](/en-US/docs/Learn/JavaScript/Building_blocks/Functions#anonymous_functions).
   For a quick example, see [arrow-function.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html) (see the [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/arrow-function.html) also).
-  Arrow functions are supported across all modern browsers, except for IE and Safari.
+  Arrow functions are supported across all modern browsers, except for IE.
 - Declaring [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) at the top of your JavaScript code causes it to be parsed with a stricter set of rules, meaning that more warnings and errors will be thrown, and some things will be disallowed that would otherwise be acceptable.
   It is arguably a good idea to use strict mode, as it makes for better, more efficient code, however it has limited/patchy support across browsers (see [Strict mode in browsers](/en-US/docs/Web/JavaScript/Reference/Strict_mode#strict_mode_in_browsers)).
 - [Typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) allow JavaScript code to access and manipulate raw binary data, which is necessary as browser APIs for example start to manipulate streams of raw video and audio data.
@@ -339,7 +339,7 @@ Let's work through an exercise — in this example we will use a Fetch polyfill 
     });
     ```
 
-6. Now if you load it in a browser that doesn't support Fetch (Safari and IE are obvious candidates), you should still see the flower image appear — cool!
+6. Now if you load it in a browser that doesn't support [Fetch](/en-US/docs/Web/API/fetch) (IE is an obvious candidate), you should still see the flower image appear — cool!
     ![](fetch-image.jpg)
 
 > **Note:** You can find our finished version at [fetch-polyfill-finished.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) (see also the [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)).

@@ -25,7 +25,7 @@ Note that using `clamp()` for font sizes, as in these examples, allows you to se
 
 ## Syntax
 
-The `clamp()` function takes three comma separated expressions as its parameter, in the order of minimum value, preferred value, maximum value.
+The `clamp()` function takes three comma separated expressions as its parameters, in the order of minimum value, preferred value, and maximum value.
 
 The minimum value is the smallest (most negative) value. This is the lower bound in the range of allowed values. If the preferred value is less than this value, the minimum value will be used.
 
@@ -33,9 +33,9 @@ The preferred value is the expression whose value will be used as long as the re
 
 The maximum value is the largest (most positive) expression value to which the value of the property will be assigned if the preferred value is greater than this upper bound.
 
-The expressions can be math functions (see {{CSSxRef("calc()")}} for more information), literal values, or other expressions, that evaluate to a valid argument type (like {{CSSxRef("&lt;length&gt;")}}), or nested {{CSSxRef("min()")}} and {{CSSxRef("max()")}} functions. As math expressions, so you can use addition, subtraction, multiplication and division without using the `calc()` function itself. You may also use parentheses to establish computation order when needed.
+The expressions can be math functions (see {{CSSxRef("calc()")}} for more information), literal values, other expressions that evaluate to a valid argument type (like {{CSSxRef("&lt;length&gt;")}}), or nested {{CSSxRef("min()")}} and {{CSSxRef("max()")}} functions. For math expressions, you can use addition, subtraction, multiplication, and division without using the `calc()` function itself. You may also use parentheses to establish computation order when needed.
 
-You can use different units for each value in your expressions, and different units in any math function making up any of the arguments.
+You can use different units for each value in your expressions and different units in any math function making up any of the arguments.
 
 ### Notes
 

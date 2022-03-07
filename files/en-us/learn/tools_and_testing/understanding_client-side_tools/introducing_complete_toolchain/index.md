@@ -115,7 +115,7 @@ Your toolchain will depend on your own needs, but for this example of a (possibl
 
 We'll use npm to install our tools, which you first met in Chapter 2. You should have Node.js and npm installed already, but if not, [refer back to that section](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups).
 
-> **Note:** Though it's not clear from the install process, installing npm also installs a complimentary tool called npx. We will use npx later on this chapter to help run tools that are installed as local dependencies to the project.
+> **Note:** Though it's not clear from the install process, installing npm also installs a complementary tool called npx. We will use npx later on this chapter to help run tools that are installed as local dependencies to the project.
 
 npm will be used to install subsequent parts of our toolchain. First of all, however, we'll install git to help with revision control.
 

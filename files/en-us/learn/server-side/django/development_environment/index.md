@@ -19,15 +19,13 @@ Now that you know what Django is for, we'll show you how to set up and test a Dj
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic knowledge of using a terminal/command line and how to install
-        software packages on your development computer's operating system.
+        Basic knowledge of using a terminal/command line and how to install software packages on your development computer's operating system.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To have a development environment for Django (3.*) running on your
-        computer.
+        To have a development environment for Django (3.*) running on your computer.
       </td>
     </tr>
   </tbody>
@@ -70,8 +68,6 @@ You can use any Python version supported by your target Django release. For Djan
 
 The Django project _recommends_ (and "officially supports") using the newest available supported Python release.
 
-> **Note:** Python 2.7 cannot be used with the current releases of Django (The Django 1.11.x series is the last to support Python 2.7).
-
 #### Where can we download Django?
 
 There are three places to download Django:
@@ -112,14 +108,16 @@ This section briefly explains how you can check what versions of Python are pres
 
 ### Ubuntu 20.04
 
-Ubuntu Linux 20.04 LTS includes Python 3.8.5 by default. You can confirm this by running the following command in the bash terminal:
+Ubuntu Linux 20.04 LTS includes Python 3.8.10 by default.
+You can confirm this by running the following command in the bash terminal:
 
 ```bash
 python3 -V
- Python 3.8.5
+ Python 3.8.10
 ```
 
-However, the Python Package Index tool (_pip3_) you'll need to install packages for Python 3 (including Django) is **not** available by default. You can install _pip3_ in the bash terminal using:
+However, the Python Package Index tool (_pip3_) you'll need to install packages for Python 3 (including Django) is **not** available by default.
+You can install _pip3_ in the bash terminal using:
 
 ```bash
 sudo apt install python3-pip
@@ -138,10 +136,9 @@ You can easily install Python 3 (along with the _pip3_ tool) from [python.org](h
 
 1. Download the required installer:
 
-    1. Go to <https://www.python.org/downloads/>
-    2. Select the **Download Python 3.8.6** button (the exact version number may differ).
-
-        > **Note:** The version offered may be different. Ensure that the version you download is supported by Django (if needed, links for getting older versions can be found on the same page).
+    1. Go to <https://www.python.org/downloads/macos/>
+    2. Download the most recent [supported version](https://docs.djangoproject.com/en/3.1/faq/install/#what-python-version-can-i-use-with-django) that works with Django 3.1.2.
+       (at time of writing this is Python 3.8.12).
 
 2. Locate the file using _Finder_, and double-click the package file. Following the installation prompts.
 
@@ -149,7 +146,7 @@ You can now confirm successful installation by checking for the _Python 3_ versi
 
 ```bash
 python3 -V
- Python 3.9.0
+ Python 3.8.12
 ```
 
 You can similarly check that _pip3_ is installed by listing the available packages:
@@ -164,11 +161,9 @@ Windows doesn't include Python by default, but you can easily install it (along 
 
 1. Download the required installer:
 
-    1. Go to <https://www.python.org/downloads/>
-    2. Select the **Download Python 3.8.6** button (the exact version number may differ).
-
-        > **Note:** The version offered may be different. Ensure that the version you download [is supported by Django](https://docs.djangoproject.com/en/3.1/faq/install/#what-python-version-can-i-use-with-django) (if needed, links for getting older versions can be found on the same page).
-
+    1. Go to <https://www.python.org/downloads/windows/>
+    2. Download the most recent [supported version](https://docs.djangoproject.com/en/3.1/faq/install/#what-python-version-can-i-use-with-django) that works with Django 3.1.2.
+       (at time of writing this is Python 3.8.12).
 2. Install Python by double-clicking on the downloaded file and following the installation prompts
 3. Be sure to check the box labeled "Add Python to PATH"
 
@@ -176,16 +171,19 @@ You can then verify that Python 3 was installed by entering the following text i
 
 ```bash
 py -3 -V
- Python 3.8.6
+ Python 3.8.12
 ```
 
-The Windows installer incorporates _pip3_ (the Python package manager) by default. You can list installed packages as shown:
+The Windows installer incorporates _pip3_ (the Python package manager) by default.
+You can list installed packages as shown:
 
 ```bash
 pip3 list
 ```
 
-> **Note:** The installer should set up everything you need for the above command to work. If however you get a message that Python cannot be found, you may have forgotten to add it to your system path. You can do this by running the installer again, selecting "Modify", and checking the box labeled "Add Python to environment variables" on the second page.
+> **Note:** The installer should set up everything you need for the above command to work.
+> If however you get a message that Python cannot be found, you may have forgotten to add it to your system path.
+> You can do this by running the installer again, selecting "Modify", and checking the box labeled "Add Python to environment variables" on the second page.
 
 ## Using Django inside a Python virtual environment
 
