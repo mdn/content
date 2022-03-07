@@ -14,30 +14,17 @@ The audioprocess event of the {{domxref("ScriptProcessorNode")}} interface is fi
 
 > **Note:** This feature was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Default action</th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("AudioProcessingEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("ScriptProcessorNode.onaudioprocess")}}</td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Event type
+
+An {{domxref("AudioProcessingEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("AudioProcessingEvent")}}
+
+## Event properties
+
+{{page("/en-US/docs/Web/API/AudioProcessingEvent", "Properties")}}
 
 ## Examples
 
@@ -66,7 +53,7 @@ scriptNode.addEventListener('audioprocess', function(audioProcessingEvent) {
 })
 ```
 
-You could also set up the event handler using the {{domxref("ScriptProcessorNode.onaudioprocess")}} property:
+You could also set up the event handler using the `onaudioprocess` property:
 
 ```js
 scriptNode.onaudioprocess = function(audioProcessingEvent) {
@@ -86,5 +73,4 @@ It was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{d
 
 ## See also
 
-- {{domxref("ScriptProcessorNode.onaudioprocess")}}
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
