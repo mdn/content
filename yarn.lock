@@ -67,10 +67,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.10.tgz#7488205d83b2e8c54a4e6b659f496d09c48152cb"
   integrity sha512-z3UzXqOjrgUnKENwdhFZmU7oeEWTOjUmWGQtXTOEbTR1FdwSBF6RCU6RPkv10ryP00y5ybCUm++4t5B8Wc3tPg==
 
-"@mdn/yari@0.7.1":
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.7.1.tgz#c804d5e09f6b3182887f4883cf9564e28de4b0e3"
-  integrity sha512-XvK8Y8GvvRDF76i1VuAj9oT0yvts1sh3kOZpyXNelYAwbHfjDUEH1Fy96sAQ1sKu7NGoUXu+z2DNYFyl2/aBXA==
+"@mdn/yari@0.7.6":
+  version "0.7.6"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.7.6.tgz#77cbd3179ac18082c74d0a9a58a8207a3897c653"
+  integrity sha512-v+qGLplWOM67HospbXLfOMHVG5/gM8AUIT8yo3QY2lwlytdSJvb2hegJKPVwZvc9bkmjJKzAE0Tf7/A+YXEeZA==
   dependencies:
     "@babel/helper-builder-react-jsx" "^7.16.7"
     "@caporal/core" "2.0.2"
@@ -118,6 +118,7 @@
     md5-file "5.0.0"
     mdast-util-from-markdown "^0.8.5"
     mdast-util-phrasing "^2.0.0"
+    mdast-util-to-hast "^10.2.0"
     mdn-data "2.0.27"
     node-gettext "^3.0.0"
     open "^8.4.0"
