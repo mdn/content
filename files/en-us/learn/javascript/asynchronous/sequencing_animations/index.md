@@ -27,7 +27,7 @@ In this assessment you'll update a page to play a series of animations in a sequ
 
 ## Starting point
 
-Make a local copy of the files at <https://mdn.github.io/learning-area/javascript/asynchronous/sequencing-animations/start>. It contains four files:
+Make a local copy of the files at <https://github.com/mdn/learning-area/tree/main/javascript/asynchronous/sequencing-animations/start>. It contains four files:
 
 * alice.svg
 * index.html
