@@ -118,8 +118,7 @@ We'll start our function by constructing a relative URL pointing to the text fil
 However, web servers tend to be case sensitive, and the file name doesn't have a space in it. To convert "Verse 1" to "verse1.txt" we need to convert the V to lower case, remove the space, and add .txt on the end. This can be done with {{jsxref("String.replace", "replace()")}}, {{jsxref("String.toLowerCase", "toLowerCase()")}}, and [string concatenation](/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenating_strings). Add the following lines inside your `updateDisplay()` function:
 
 ```js
-verse = verse.replace(' ', '');
-verse = verse.toLowerCase();
+verse = verse.replace(' ', '').toLowerCase();
 const url = `${verse}.txt`;
 ```
 
