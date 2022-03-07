@@ -8709,6 +8709,7 @@
 /en-US/docs/Web/API/Performance.now	/en-US/docs/Web/API/Performance/now
 /en-US/docs/Web/API/Performance.now()	/en-US/docs/Web/API/Performance/now
 /en-US/docs/Web/API/Performance.timing	/en-US/docs/Web/API/Performance/timing
+/en-US/docs/Web/API/Performance/onresourcetimingbufferfull	/en-US/docs/Web/API/Performance/resourcetimingbufferfull_event
 /en-US/docs/Web/API/PerformanceEntry/connectEnd	/en-US/docs/Web/API/PerformanceResourceTiming/connectEnd
 /en-US/docs/Web/API/PerformanceEntry/connectStart	/en-US/docs/Web/API/PerformanceResourceTiming/connectStart
 /en-US/docs/Web/API/PerformanceEntry/decodedBodySize	/en-US/docs/Web/API/PerformanceResourceTiming/decodedBodySize
