@@ -79,7 +79,7 @@ async function returnPathDirectories(directoryHandle) {
 }
 ```
 
-The following example scan recursively through a directory to return {{domxref('FileSystemFileHandle')}} objects for each file in that directory:
+The following example scans recursively through a directory to return {{domxref('FileSystemFileHandle')}} objects for each file in that directory:
 
 ```js
 async function* getFilesRecursively (entry) {
