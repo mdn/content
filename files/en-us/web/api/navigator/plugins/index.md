@@ -14,23 +14,23 @@ browser-compat: api.Navigator.plugins
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 Returns a {{DOMxRef("PluginArray")}} object, listing the {{DOMxRef("Plugin")}} objects describing the plugins installed in the application.
-Named properties of returned object are not enumerable (except in very old versions).
+Named properties of returned object are not enumerable (except in very old browser versions).
 
 Recent versions of the specification hard-code the returned list.
 If inline viewing of PDF files is supported the property lists five standard plugins
 If inline PDF viewing is not supported then an empty list is returned.
 
-> **Note:** Use {{domxref("Navigator.pdfViewerEnabled")}} to determine if inline viewing of PDF files is supported (do not infer from this property).
+> **Note:** Use {{domxref("Navigator.pdfViewerEnabled")}} to determine if inline viewing of PDF files is supported. Do not infer it from this property.
 >
 > The "five standard plugins" are those that developers have most commonly used to feature detect inline PDF viewing.
 > Returning these ensures that legacy code can more reliably determine whether inline viewing is supported. 
-> However this approach is not recommended for new code as we hope to eventually remove this property.
+> However this approach is not recommended for new code because this property may eventually be removed.
 
 Legacy browser versions also list plugins for Adobe Flash and PDF viewer extensions.
 
 ## Value
 
-`plugins` is {{DOMxRef("PluginArray")}} object used to access {{DOMxRef("Plugin")}} objects either by name or as a list of items.
+`plugins` is a {{DOMxRef("PluginArray")}} object used to access {{DOMxRef("Plugin")}} objects either by name or as a list of items.
 
 The returned value is not a JavaScript array, but has the `length` property and supports accessing individual items using bracket notation (`plugins[2]`), as well as via `item(index)` and `namedItem("name")` methods.
 

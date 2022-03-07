@@ -11,17 +11,17 @@ browser-compat: api.Navigator.mimeTypes
 ---
 {{ ApiRef("HTML DOM") }}{{deprecated_header}}
 
-Returns a {{domxref("MimeTypeArray")}} object, which contains a list of {{domxref("MimeType")}} objects representing the MIME types recognized/supported by the browser.
+Returns a {{domxref("MimeTypeArray")}} object, which contains a list of {{domxref("MimeType")}} objects representing the MIME types recognized and supported by the browser.
 The array can be queried for information about the enabled plugin that is used to handle a file of the specified type.
-Named properties of returned object are not enumerable (except in very old versions).
+Named properties of the returned object are not enumerable (except in very old browser versions).
 
 Recent versions of the specification hard-code the returned set of MIME types.
 If PDF files can be displayed inline then `application/pdf` and `text/pdf` are listed.
 Otherwise an empty list is returned.
 
-> **Note:** Use {{domxref("Navigator.pdfViewerEnabled")}} to determine if inline viewing of PDF files is supported (do not infer from this property).
+> **Note:** Use {{domxref("Navigator.pdfViewerEnabled")}} to determine if inline viewing of PDF files is supported. Do not infer it from this property.
 
-Legacy browser versions are not hard coded, and might return other MIME types.
+Legacy browser versions do not hard-code the list returned by the property, and might return other MIME types.
 
 
 ## Value
@@ -46,7 +46,7 @@ if ('application/pdf' in navigator.mimeTypes) {
 }
 ```
 
-Note that while the above code tests for `application/pdf` you could equally well check `text/pdf` (either both or neither MIME type will be true).
+Note that while the above code tests for `application/pdf` you could equally well check `text/pdf`. (Either both or neither MIME type will be true.)
 In addition, on current browsers you don't actually need to get the plugin description and suffixes, because this information is also hard-coded.
 
 ## Specifications
