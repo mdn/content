@@ -19,7 +19,7 @@ There are two types of counters: normal counters that count up, and reversed cou
 
 The CSS specification says, counters are essentially variables managed by CSS, not only for CSS counters, but also for ordered list numbers. Counters can be increased or decreased by any values according to CSS rules, and can be used to define multiple named counters, or to manipulate the list-item counters that is standard generated as ordered lists.
 
-Counters can be used by using {{cssxref("counter-reset")}}, {{cssxref("counter-increment")}} and {{cssxref("counter-set")}} properties, and {{cssxref("counter()")}} and {{cssxref("counters()")}} functions as a value of {{cssxref("content")}} property. For reversed counters, the `reversed()` function can also be used as a value of `counter-reset` property.
+Counters can be used by applying {{cssxref("counter-reset")}}, {{cssxref("counter-increment")}} and {{cssxref("counter-set")}} properties, and {{cssxref("counter()")}} and {{cssxref("counters()")}} functions as a value of {{cssxref("content")}} property. For reversed counters, the `reversed()` function can also be used as a value of `counter-reset` property.
 
 This article explains the basic usage of counters and the implementation status in each browsers.
 
