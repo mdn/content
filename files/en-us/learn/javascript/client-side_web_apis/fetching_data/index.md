@@ -105,7 +105,7 @@ verseChoose.addEventListener('change', () => {
 });
 ```
 
-Let's define our `updateDisplay()` function. First of all, put the following beneath your previous code block — this is the empty shell of the function. Note: Steps 4 - 9 will all be performed _within_ this function.
+Let's define our `updateDisplay()` function. First of all, put the following beneath your previous code block — this is the empty shell of the function.
 
 ```js
 function updateDisplay(verse) {
