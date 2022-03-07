@@ -10356,44 +10356,6 @@
       "AllenChong"
     ]
   },
-  "Learn/JavaScript/Asynchronous/Async_await": {
-    "modified": "2020-12-09T11:03:17.062Z",
-    "contributors": [
-      "chrisdavidmills",
-      "prosovskyf",
-      "hexagonrecursion",
-      "SUM1",
-      "ReedyBear",
-      "tim_cannon",
-      "Flimm",
-      "kruschk",
-      "enejko",
-      "Sheppy",
-      "tashpool",
-      "wcarlson-va"
-    ]
-  },
-  "Learn/JavaScript/Asynchronous/Choosing_the_right_approach": {
-    "modified": "2020-10-15T22:17:14.520Z",
-    "contributors": [
-      "JohnnyMu-Cn",
-      "vgiffin",
-      "chrisdavidmills",
-      "kruschk",
-      "tywmick",
-      "enejko",
-      "Sheppy"
-    ]
-  },
-  "Learn/JavaScript/Asynchronous/Concepts": {
-    "modified": "2020-07-16T22:33:27.691Z",
-    "contributors": [
-      "CodeDotJS",
-      "chrisdavidmills",
-      "Sheppy",
-      "Hallo89"
-    ]
-  },
   "Learn/JavaScript/Asynchronous/Introducing": {
     "modified": "2020-11-05T06:58:50.627Z",
     "contributors": [
@@ -10426,22 +10388,6 @@
       "sukhbatth",
       "BIT-zhaoyang",
       "Sheppy"
-    ]
-  },
-  "Learn/JavaScript/Asynchronous/Timeouts_and_intervals": {
-    "modified": "2020-08-05T00:09:23.001Z",
-    "contributors": [
-      "Rafael_Green",
-      "chrisdavidmills",
-      "A.Faturechi",
-      "nkalvi",
-      "mariusmucenicu",
-      "Zearin_Galaurum",
-      "ZhenWang-Jen",
-      "jeffro94",
-      "tashpool",
-      "Sheppy",
-      "k-lusine"
     ]
   },
   "Learn/JavaScript/Building_blocks": {

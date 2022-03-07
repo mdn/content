@@ -5305,8 +5305,12 @@
 /en-US/docs/Learn/How_to_create_an_HTML_document	/en-US/docs/Learn/Getting_started_with_the_web
 /en-US/docs/Learn/How_web_pages_work	/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines
 /en-US/docs/Learn/Infrastructure	/en-US/docs/Learn/Common_questions
-/en-US/docs/Learn/JavaScript/Asynchronous/Async_loops_and_intervals	/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals
-/en-US/docs/Learn/JavaScript/Asynchronous/Loops_and_intervals	/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals
+/en-US/docs/Learn/JavaScript/Asynchronous/Async_await	/en-US/docs/Learn/JavaScript/Asynchronous/Promises
+/en-US/docs/Learn/JavaScript/Asynchronous/Async_loops_and_intervals	/en-US/docs/Learn/JavaScript/Asynchronous
+/en-US/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach	/en-US/docs/Learn/JavaScript/Asynchronous
+/en-US/docs/Learn/JavaScript/Asynchronous/Concepts	/en-US/docs/Learn/JavaScript/Asynchronous/Introducing
+/en-US/docs/Learn/JavaScript/Asynchronous/Loops_and_intervals	/en-US/docs/Learn/JavaScript/Asynchronous
+/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals	/en-US/docs/Learn/JavaScript/Asynchronous
 /en-US/docs/Learn/JavaScript/Asynchronous_JavaScript	/en-US/docs/Learn/JavaScript/Asynchronous
 /en-US/docs/Learn/JavaScript/Building_blocks/Functions/Build_your_own_function	/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function
 /en-US/docs/Learn/JavaScript/Building_blocks/Functions/Return_values	/en-US/docs/Learn/JavaScript/Building_blocks/Return_values
