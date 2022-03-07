@@ -473,7 +473,9 @@ Suppose we want to display the following for this HTML.
 2-2-1. (2-2-1)
 ```
 
-To make this happen, CSS must be written in combination with {{cssxref("counter-set")}} as follows.
+To make this happen, CSS must be written in combination with {{cssxref("counter-set")}} as follows. The reason is that {{cssxref("counter-reset")}} creates a new scope in Firefox 82 and later, when the specification was changed as described below, so it is not possible to reset the counter in the current scope again. To reset the counter for the current scope, you have to use `counter-set`.
+
+However, there is another issue to consider. In fact, Safari and Safari on iOS have delayed `counter-set` support. If you want to match the behavior across all browsers, you need to use `counter-set` first, and apply `counter-reset` to only Safari. The following code does not take Safari into account.
 
 #### CSS
 
