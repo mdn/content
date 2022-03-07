@@ -57,7 +57,7 @@ equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) (the s
 The following example uses `indexOf()` to locate values in an array.
 
 ```js
-cosnt array = [2, 9, 9];
+const array = [2, 9, 9];
 array.indexOf(2);     // 0
 array.indexOf(7);     // -1
 array.indexOf(9, 2);  // 2
