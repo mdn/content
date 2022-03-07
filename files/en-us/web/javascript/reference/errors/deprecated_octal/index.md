@@ -9,7 +9,7 @@ tags:
 ---
 {{jsSidebar("Errors")}}
 
-The JavaScript [strict
+The JavaScript [strict
 mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception "0-prefixed octal literals and octal escape sequences are
 deprecated; for octal literals use the "0o" prefix instead" occurs when deprecated octal
 literals and octal escape sequences are used.

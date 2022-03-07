@@ -40,8 +40,8 @@ Implement focus management so the keyboard tab sequence includes one stop for th
 - <kbd>Tab</kbd> and <kbd>Shift + Tab</kbd>
   - : Move focus into and out of the toolbar. When focus moves into a toolbar:
 
-    * If focus is moving into the toolbar for the first time, focus is set on the first control that is not disabled.
-    * If the toolbar has previously contained focus, focus is optionally set on the control that last had focus. Otherwise, it is set on the first control that is not disabled.
+    - If focus is moving into the toolbar for the first time, focus is set on the first control that is not disabled.
+    - If the toolbar has previously contained focus, focus is optionally set on the control that last had focus. Otherwise, it is set on the first control that is not disabled.
 
 - <kbd>Home</kbd> (Optional)
   - : Moves focus to first element.
@@ -101,7 +101,7 @@ If any of the otherwise interactive elements within the toolbar are disabled, co
 ## See Also
 
 - [The CSS `:focus` pseudoclass](/en-US/docs/Web/CSS/:focus)
-- [The CSS `:focus-within` pseudclass](/en-US/docs/Web/CSS/:focus-within)
+- [The CSS `:focus-within` pseudoclass](/en-US/docs/Web/CSS/:focus-within)
 
 <section id="Quick_links">
 

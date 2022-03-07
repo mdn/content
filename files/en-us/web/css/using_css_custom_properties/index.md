@@ -243,7 +243,7 @@ p { color: blue; }
 p { color: var(--text-color); }
 ```
 
-As expected, the browser substitutes the value of `--text-color` in place of `var(--text-color)`, but `16px` is not a valid property value for {{cssxref("color")}}. After substitution, the property doesn’t make any sense. The browser handles this situation in two steps:
+As expected, the browser substitutes the value of `--text-color` in place of `var(--text-color)`, but `16px` is not a valid property value for {{cssxref("color")}}. After substitution, the property doesn't make any sense. The browser handles this situation in two steps:
 
 1. Check if the property color is inheritable. Yes, but `<p>` doesn't have any parent with color property. So move on to the next step.
 2. Set the value to its **default initial value**, i.e., black.

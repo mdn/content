@@ -23,7 +23,7 @@ property writes the specified text string to the system clipboard. Text may be r
 using either {{domxref("Clipboard.read", "read()")}} or {{domxref("Clipboard.readText",
   "readText()")}}.
 
-The `"clipboard-write"` permission of the [Permissions API](/en-US/docs/Web/API/Permissions_API), is granted
+The `"clipboard-write"` permission of the [Permissions API](/en-US/docs/Web/API/Permissions_API), is granted
 automatically to pages when they are in the active tab.
 
 ## Syntax

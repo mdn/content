@@ -82,13 +82,13 @@ arr.reduceRight(function(accumulator, currentValue, index, array) {
 });
 ```
 
-The first time the function is called, the `accumulator` and
+The first time the function is called, the `accumulator` and
 `currentValue` can be one of two values. If an
 `initialValue` was provided in the call to
-`reduceRight`, then `accumulator` will be equal to
+`reduceRight`, then `accumulator` will be equal to
 `initialValue` and `currentValue` will be
 equal to the last value in the array. If no `initialValue` was
-provided, then `accumulator` will be equal to the last value in
+provided, then `accumulator` will be equal to the last value in
 the array and `currentValue` will be equal to the second-to-last
 value.
 
@@ -357,5 +357,5 @@ console.log(compose(inc, double)(2)); // 5
 
 ## See also
 
-- A polyfill of `Array.prototype.reduceRight` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.reduceRight` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.reduce()")}}

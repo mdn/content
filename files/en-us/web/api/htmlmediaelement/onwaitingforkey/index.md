@@ -7,7 +7,7 @@ browser-compat: api.HTMLMediaElement.onwaitingforkey
 
 The **`onwaitingforkey`** property of
 the {{domxref("HTMLMediaElement")}} is an event handler, fired when a
-{{Event("waitingforkey")}} event  occurs, when playback is blocked while waiting
+{{Event("waitingforkey")}} event  occurs, when playback is blocked while waiting
 for an encryption key.
 
 This interface inherits from the {{domxref("ExtendableEvent")}} interface.

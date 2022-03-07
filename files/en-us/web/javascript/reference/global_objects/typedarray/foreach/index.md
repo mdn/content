@@ -74,7 +74,7 @@ However, it is executed for elements that are present and have the value
 
 If a `thisArg` parameter is provided to `forEach()`,
 it will be passed to `callbackFn` when invoked, for use as its
-`this` value.  Otherwise, the value {{jsxref("undefined")}} will be passed
+`this` value.  Otherwise, the value {{jsxref("undefined")}} will be passed
 for use as its `this` value. The `this` value ultimately
 observable by `callbackFn` is determined according to [the usual rules for
 determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
@@ -121,7 +121,7 @@ new Uint8Array([0, 1, 2, 3]).forEach(logArrayElements);
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.forEach` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.forEach` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray.prototype.map()")}}
 - {{jsxref("TypedArray.prototype.every()")}}
 - {{jsxref("TypedArray.prototype.some()")}}

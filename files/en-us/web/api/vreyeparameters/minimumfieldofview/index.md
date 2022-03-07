@@ -3,7 +3,7 @@ title: VREyeParameters.minimumFieldOfView
 slug: Web/API/VREyeParameters/minimumFieldOfView
 tags:
   - API
-  - Experimental
+
   - Deprecated
   - Property
   - Reference
@@ -20,13 +20,7 @@ The **`minimumFieldOfView`** read-only property of the {{domxref("VREyeParameter
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Syntax
-
-```js
-var minFOV = myEyeParameters.minimumFieldOfView;
-```
-
-### Value
+## Value
 
 A {{domxref("VRFieldOfView")}} object.
 

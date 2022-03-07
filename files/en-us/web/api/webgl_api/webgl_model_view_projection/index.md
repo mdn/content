@@ -588,7 +588,7 @@ MDN.perspectiveMatrix = function(fieldOfViewInRadians, aspectRatio, near, far) {
 
 The four parameters into this function are:
 
-- `fieldOfviewInRadians`
+- `fieldOfViewInRadians`
   - : An angle, given in radians, indicating how much of the scene is visible to the viewer at once. The larger the number is, the more is visible by the camera. The geometry at the edges becomes more and more distorted, equivalent to a wide angle lens. When the field of view is larger, the objects typically get smaller. When the field of view is smaller, then the camera can see less and less in the scene. The objects are distorted much less by perspective and objects seem much closer to the camera
 - `aspectRatio`
   - : The scene's aspect ratio, which is equivalent to its width divided by its height. In these examples, that's the window's width divided by the window height. The introduction of this parameter finally solves the problem wherein the model gets warped as the canvas is resized and reshaped.

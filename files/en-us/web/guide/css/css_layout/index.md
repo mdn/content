@@ -49,7 +49,7 @@ Multi-column layout, often referred to as multicol, takes content in normal flow
 
 ## Flexbox
 
-CSS Flexible Box Layout, commonly known as flexbox, is a layout model optimized for user interface design, and the layout of items in one dimension. In the flex layout model, the children of a flex container can be laid out in any direction, and can “flex” their sizes, either growing to fill unused space or shrinking to avoid overflowing the parent.
+CSS Flexible Box Layout, commonly known as flexbox, is a layout model optimized for user interface design, and the layout of items in one dimension. In the flex layout model, the children of a flex container can be laid out in any direction, and can "flex" their sizes, either growing to fill unused space or shrinking to avoid overflowing the parent.
 
 - [Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
   - : An overview of the features of Flexbox.

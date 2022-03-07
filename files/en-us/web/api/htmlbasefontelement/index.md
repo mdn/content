@@ -34,7 +34,7 @@ _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}
 
 ## Specifications
 
-This feature was present in the HTML specification up through HTML 3.2, but was deprecated in HTML 4, and then removed — and so is not in the current HTML specification. No modern browsers support it and this feature is no longer on track to become a standard.
+This feature was present in the HTML specification up through HTML 3.2, but was deprecated in HTML 4, and then removed — and so is not in the current HTML specification. No modern browsers support it and this feature is no longer on track to become a standard.
 
 ## Browser compatibility
 

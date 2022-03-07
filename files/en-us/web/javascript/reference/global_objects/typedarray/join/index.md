@@ -77,6 +77,6 @@ If you need to support truly obsolete JavaScript engines that don't support
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.join` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.join` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("Array.prototype.join()")}}

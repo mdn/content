@@ -90,7 +90,7 @@ Bear in mind that some built-in browser functions are not part of the core JavaS
 
 ## Functions versus methods
 
-Programmers call **functions** that are part of objects **methods**. You don't need to learn about the inner workings of structured JavaScript objects yet — you can wait until our later module that will teach you all about the inner workings of objects, and how to create your own. For now, we just wanted to clear up any possible confusion of method versus function — you are likely to meet both terms as you look at the available related resources across the Web.
+**Functions** that are part of objects are called **methods**. You don't need to learn about the inner workings of structured JavaScript objects yet — you can wait until our later module that will teach you all about the inner workings of objects, and how to create your own. For now, we just wanted to clear up any possible confusion of method versus function — you are likely to meet both terms as you look at the available related resources across the Web.
 
 The built-in code we've made use of so far come in both forms: **functions** and **methods.** You can check the full list of the built-in functions, as well as the built-in objects and their corresponding methods [here](/en-US/docs/Web/JavaScript/Reference/Global_Objects).
 
@@ -216,8 +216,8 @@ This is called an **anonymous function**, because it has no name. You'll often s
 
 For example, let's say you want to run some code when the user types into a text box. To do this you can call the {{domxref("EventTarget/addEventListener", "addEventListener()")}} function of the text box. This function expects you to pass it (at least) two parameters:
 
-* the name of the event to listen for, which in this case is {{domxref("Document/keydown_event", "\"keydown\"")}}
-* a function to run when the event happens.
+- the name of the event to listen for, which in this case is {{domxref("Document/keydown_event", "\"keydown\"")}}
+- a function to run when the event happens.
 
 When the user presses a key, the browser will call the function you provided, and will pass it a parameter containing information about this event, including the particular key that the user pressed:
 
@@ -239,7 +239,7 @@ textBox.addEventListener('keydown', function(event) {
 
 ### Arrow functions
 
-If you pass an anonymous function like this, there's an alternative form you can use, called a **arrow function**. Instead of `function(event)`, you write `(event) =>`:
+If you pass an anonymous function like this, there's an alternative form you can use, called an **arrow function**. Instead of `function(event)`, you write `(event) =>`:
 
 ```js
 textBox.addEventListener('keydown', (event) => {
@@ -348,7 +348,7 @@ function greeting() {
 }
 ```
 
-Both functions you want to call are called `greeting()`, but you can only ever access the `first.js` file's `greeting()` function (the second one is ignored). In addition, an error results when attempting (in the `second.js` file) to assign a new value to the `name` variable — because it was already declared with `const`, and so can’t be reassigned.
+Both functions you want to call are called `greeting()`, but you can only ever access the `first.js` file's `greeting()` function (the second one is ignored). In addition, an error results when attempting (in the `second.js` file) to assign a new value to the `name` variable — because it was already declared with `const`, and so can't be reassigned.
 
 > **Note:** You can see this example [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) (see also the [source code](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions)).
 
@@ -455,56 +455,6 @@ Let's look at a real example to demonstrate scoping.
 > **Note:** The same scoping rules do not apply to loop (e.g. `for() { ... }`) and conditional blocks (e.g. `if() { ... }`) — they look very similar, but they are not the same thing! Take care not to get these confused.
 
 > **Note:** The [ReferenceError: "x" is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined) error is one of the most common you'll encounter. If you get this error and you are sure that you have defined the variable in question, check what scope it is in.
-
-### Functions inside functions
-
-Keep in mind that you can call a function from anywhere, even inside another function. This is often used as a way to keep code tidy — if you have a big complex function, it is easier to understand if you break it down into several sub-functions:
-
-```js
-function myBigFunction() {
-  const myValue;
-
-  subFunction1();
-  subFunction2();
-  subFunction3();
-}
-
-function subFunction1() {
-  console.log(myValue);
-}
-
-function subFunction2() {
-  console.log(myValue);
-}
-
-function subFunction3() {
-  console.log(myValue);
-}
-```
-
-Just make sure that the values being used inside the function are properly in scope. The example above would throw an error `ReferenceError: myValue is not defined`, because although the `myValue` variable is defined in the same scope as the function calls, it is not defined inside the function definitions — the actual code that is run when the functions are called. To make this work, you'd have to pass the value into the function as a parameter, like this:
-
-```js
-function myBigFunction() {
-  const myValue = 1;
-
-  subFunction1(myValue);
-  subFunction2(myValue);
-  subFunction3(myValue);
-}
-
-function subFunction1(value) {
-  console.log(value);
-}
-
-function subFunction2(value) {
-  console.log(value);
-}
-
-function subFunction3(value) {
-  console.log(value);
-}
-```
 
 ## Test your skills!
 

@@ -17,7 +17,7 @@ Ensure that the application follows the [OWASP Secure Coding Principles](https:/
 3. Principle of Least privilege
 4. Principle of Defense in depth
 5. Fail securely
-6. Don’t trust services
+6. Don't trust services
 7. Keep security simple
 8. Fix security issues correctly
 
@@ -82,8 +82,8 @@ If so ensure they are safe and that no better alternatives are available.
 
 1. Does the application access any remote systems?
 
-- Ensure that TLS is used unless there’s a *very* good reason not to.
-- Ensure that no user information is transmitted without the user’s consent.
+- Ensure that TLS is used unless there's a *very* good reason not to.
+- Ensure that no user information is transmitted without the user's consent.
 
 ## Information Storage
 

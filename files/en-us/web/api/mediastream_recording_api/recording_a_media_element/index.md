@@ -171,9 +171,9 @@ function startRecording(stream, lengthInMS) {
     recorder.onerror = event => reject(event.name);
   });
 
-  let recorded = wait(lengthInMS).then(
+  let recorded = wait(lengthInMS).then(
     () => recorder.state == "recording" && recorder.stop()
-  );
+  );
 
   return Promise.all([
     stopped,

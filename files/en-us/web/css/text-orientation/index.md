@@ -89,4 +89,4 @@ p {
 - The other vertical-script related CSS properties: {{cssxref("writing-mode")}}, {{cssxref("text-combine-upright")}}, and {{cssxref("unicode-bidi")}}.
 - [CSS Logical properties](/docs/Web/CSS/CSS_Logical_Properties)
 - [Styling vertical text (Chinese, Japanese, Korean and Mongolian)](https://www.w3.org/International/articles/vertical-text/)
-- Extensive browsers support test results: <https://w3c.github.io/i18n-tests/results/horizontal-in-vertical.html#text_orientation>
+- Extensive browsers support test results: <https://w3c.github.io/i18n-tests/results/horizontal-in-vertical.html#text_orientation>

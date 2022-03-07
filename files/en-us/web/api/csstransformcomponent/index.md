@@ -18,8 +18,8 @@ The **`CSSTransformComponent`** interface of the {{domxref('CSS_Object_Model#css
 
 ## Properties
 
-- {{domxref("CSSTransformComponent.is2D")}} {{ReadOnlyInline}}
-  - : Returns a boolean indicting whether the transform is 2D or 3D.
+- {{domxref("CSSTransformComponent.is2D")}} {{ReadOnlyInline}}
+  - : Returns a boolean indicting whether the transform is 2D or 3D.
 
 ## Methods
 

@@ -116,7 +116,7 @@ var dv = new Uint32Array([1, 2, 3]);
 
 ## See also
 
-- A polyfill of `Uint32Array` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `Uint32Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

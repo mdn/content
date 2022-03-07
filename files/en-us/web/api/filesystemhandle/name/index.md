@@ -29,7 +29,7 @@ var String = FileSystemHandle.name;
 ## Examples
 
 The following function allows the user to choose a file from the file picker and
-retrieve the `name` property.
+retrieve the `name` property.
 
 ```js
 // store a reference to our file handle

@@ -183,16 +183,16 @@ withoutDefaults.call({value: '=^_^='});
 ### Scope Effects
 
 If default parameters are defined for one or more parameter, then a [second
-scope](https://tc39.es/ecma262/#sec-functiondeclarationinstantiation) (Environment Record) is created, specifically for the identifiers within the
+scope](https://tc39.es/ecma262/#sec-functiondeclarationinstantiation) (Environment Record) is created, specifically for the identifiers within the
 parameter list. This scope is a parent of the scope created for the function body.
 
 This means that functions and variables declared in the function body cannot be
-referred to from default value parameter initializers; attempting to do so throws a
+referred to from default value parameter initializers; attempting to do so throws a
 run-time {{jsxref("ReferenceError")}}.
 
-It also means that variables declared inside the function body using
-`var` will mask parameters of the same name, instead of the usual behavior
-of duplicate `var` declarations having no effect.
+It also means that variables declared inside the function body using
+`var` will mask parameters of the same name, instead of the usual behavior
+of duplicate `var` declarations having no effect.
 
 The following function will throw a `ReferenceError` when invoked, because
 the default parameter value does not have access to the child scope of the function
@@ -211,7 +211,7 @@ function f(a = go()) { // Throws a `ReferenceError` when `f` is invoked.
 ```js example-bad
 function f(a, b = () => console.log(a)) {
   var a = 1
-  b() // Prints `undefined`, because default parameter values exist in their own scope
+  b() // Prints `undefined`, because default parameter values exist in their own scope
 }
 ```
 
@@ -233,14 +233,29 @@ f(2)  // [2, undefined]
 
 You can use default value assignment with the
 {{jsxref("Operators/Destructuring_assignment", "destructuring assignment", "", 1)}}
-notation:
+notation.
+
+A common way of doing that is to assign an empty object/array to the destructured object/array; for example: `[x = 1, y = 2] = []` .
+By doing it that way, you make it possible to pass an empty array/object to the function and still have those values prefilled:
 
 ```js
-function f([x, y] = [1, 2], {z: z} = {z: 3}) {
-  return x + y + z
+function preFilledArray([x = 1, y = 2] = []) {
+  return x + y;
 }
 
-f()  // 6
+preFilledArray();       // 3
+preFilledArray([]);     // 3
+preFilledArray([2]);    // 4
+preFilledArray([2, 3]); // 5
+
+// Works the same for objects:
+function preFilledObject({z = 3} = {}) {
+  return z;
+}
+
+preFilledObject();          // 3
+preFilledObject({});        // 3
+preFilledObject({ z: 2 });  // 2
 ```
 
 ## Specifications

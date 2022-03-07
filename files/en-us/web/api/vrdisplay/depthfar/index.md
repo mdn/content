@@ -3,7 +3,7 @@ title: VRDisplay.depthFar
 slug: Web/API/VRDisplay/depthFar
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -21,17 +21,10 @@ The **`depthFar`** property of the {{domxref("VRDisplay")}} interface gets and s
 
 Generally you should leave the value as is, but you might want to reduce it if you are trying to improve performance on slower computers.
 
-## Syntax
+## Value
 
-```js
-var mydepthFar = vrDisplayInstance.depthFar;
-
-vrDisplayInstance.depthFar = 7500.0;
-```
-
-### Value
-
-A double, representing the z-depth in meters; its initial value is `10000.0`.
+A double, representing the z-depth in meters.
+It initial value is `10000.0`.
 
 ## Examples
 
@@ -39,7 +32,7 @@ A double, representing the z-depth in meters; its initial value is `10000.0`.
 var vrDisplay;
 
 navigator.getVRDisplays().then(function(displays) {
-  vrDisplay = displays[0];
+  vrDisplay = displays[0];
   vrDisplay.depthNear = 1.0;
   vrDisplay.depthFar = 7500.0;
 });

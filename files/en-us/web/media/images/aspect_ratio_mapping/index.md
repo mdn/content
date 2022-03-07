@@ -13,7 +13,7 @@ tags:
 ---
 This article explains a change that has occurred in the way sizes are worked out on web documents when width and height attributes are set on them.
 
-This change means that the aspect ratio of the image is calculated by the browser early on and can then be used to correct the size needed to display the image before it has loaded, if CSS has been applied that causes problems with its display size. Read on to find out more.
+This change means that the aspect ratio of the image is calculated by the browser early on and can then be used to correct the size needed to display the image before it has loaded, if CSS has been applied that causes problems with its display size. Read on to find out more.
 
 ## Jank problems when loading images
 
@@ -23,12 +23,12 @@ In the olden days of web development, it was always seen as a good practice to a
 
 Without the `width` and `height` attributes, no placeholder space would be created, and when the image finally loaded you would get a noticeable jank in the page layout. This wasn't an attractive thing for your users to see, and could also result in performance issues due to the repainting required after each image loads, hence adding the attributes being a good idea.
 
-Let’s move forward a few years to the era of responsive design. To keep images from breaking out of their containers when the container becomes narrower than the image, developers started using CSS like the following:
+Let's move forward a few years to the era of responsive design. To keep images from breaking out of their containers when the container becomes narrower than the image, developers started using CSS like the following:
 
 ```css
 img {
-  max-width: 100%;
-  height: auto;
+  max-width: 100%;
+  height: auto;
 }
 ```
 
@@ -40,13 +40,13 @@ Recognizing the problem, a WICG community group formed to propose an [`intrinsic
 
 Mozilla then [brought the idea up in the WICG community group](https://github.com/WICG/intrinsicsize-attribute/issues/16) and discussed it further until representatives from Chrome were onboard with the idea.
 
-Due to this work, browsers have implemented a mechanism for sizing images before the actual image is loaded.
+Due to this work, browsers have implemented a mechanism for sizing images before the actual image is loaded.
 The {{cssxref("aspect-ratio")}} property that applies to replaced elements, and other related elements that accept `width` and `height` attributes.
 This appears in the browser's internal UA stylesheet, similar to the following:
 
 ```css
 img, input[type="image"], video, embed, iframe, marquee, object, table {
-  aspect-ratio: attr(width) / attr(height);
+  aspect-ratio: attr(width) / attr(height);
 }
 ```
 
@@ -58,8 +58,8 @@ When the `width`/`height` of an `<img>` element — as set using HTML attributes
 
 ```css
 img {
-  max-width: 100%;
-  height: auto;
+  max-width: 100%;
+  height: auto;
 }
 ```
 
@@ -69,7 +69,7 @@ The aspect ratio is then used to calculate the height and therefore the correct 
 
 The new mechanism currently only works on `<img>` elements before the image is loaded.
 
-Originally we were going to have the new mechanism apply the calculated sizing to `<img>` elements before and after the image has loaded. However, this caused a problem — a number of web sites actually use the `width` and `height` attributes incorrectly, setting an aspect ratio of something other than the image’s intrinsic aspect ratio.
+Originally we were going to have the new mechanism apply the calculated sizing to `<img>` elements before and after the image has loaded. However, this caused a problem — a number of web sites actually use the `width` and `height` attributes incorrectly, setting an aspect ratio of something other than the image's intrinsic aspect ratio.
 
 Once such an image loads, if the internal aspect ratio is still applied it will result in the `<img>` not displaying the image correctly. Therefore, once the image is loaded, we start using the intrinsic aspect ratio of the loaded image rather than the aspect ratio from the attributes, so it displays at the correct aspect ratio.
 

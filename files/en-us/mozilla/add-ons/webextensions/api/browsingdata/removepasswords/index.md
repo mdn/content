@@ -16,7 +16,7 @@ browser-compat: webextensions.api.browsingData.removePasswords
 
 Clears saved passwords.
 
-You can use the `removalOptions` parameter, which is a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, to:
+You can use the `removalOptions` parameter, which is a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, to:
 
 - clear only passwords that were saved after a given time
 - control whether to clear passwords that were saved on normal web pages or to clear passwords that were saved on hosted apps and extensions as well.

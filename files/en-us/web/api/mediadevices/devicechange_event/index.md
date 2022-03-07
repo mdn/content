@@ -15,7 +15,7 @@ browser-compat: api.MediaDevices.devicechange_event
 ---
 {{APIRef}}
 
-A `devicechange` event is sent to a {{domxref("MediaDevices")}} instance whenever a media device such as a camera, microphone, or speaker is connected to or removed from the system. It's a generic {{domxref("Event")}} with no added properties.
+A `devicechange` event is sent to a {{domxref("MediaDevices")}} instance whenever a media device such as a camera, microphone, or speaker is connected to or removed from the system. It's a generic {{domxref("Event")}} with no added properties.
 
 <table class="properties">
   <tbody>
@@ -58,7 +58,7 @@ Or use the `ondevicechange` event handler property:
 
 ```js
 navigator.mediaDevices.ondevicechange = function(event) {
-  updateDeviceList();
+  updateDeviceList();
 }
 ```
 

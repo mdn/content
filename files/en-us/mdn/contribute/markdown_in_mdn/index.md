@@ -460,7 +460,7 @@ Writers will be able to use the HTML {{HTMLElement("sup")}} and {{HTMLElement("s
 
   , prefer words like "first".
 
-- For footnotes, don’t mark up the footnote references with, e.g., `<sup>[1]</sup>`; it’s unnecessary.
+- For footnotes, don't mark up the footnote references with, e.g., `<sup>[1]</sup>`; it's unnecessary.
 
 ### Discussion reference
 

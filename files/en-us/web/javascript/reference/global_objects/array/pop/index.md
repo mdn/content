@@ -80,7 +80,7 @@ console.log(popped); // 'sturgeon'
 
 `push` and `pop` are intentionally generic, and we can use that to our advantage — as the following example shows.
 
-Note that in this example, we don't create an array to store a collection of objects. Instead, we store the collection on the object itself and use `call` on `Array.prototype.push` and `Array.prototype.pop` to trick those methods into thinking we’re dealing with an array.
+Note that in this example, we don't create an array to store a collection of objects. Instead, we store the collection on the object itself and use `call` on `Array.prototype.push` and `Array.prototype.pop` to trick those methods into thinking we're dealing with an array.
 
 ```js
 const collection = {

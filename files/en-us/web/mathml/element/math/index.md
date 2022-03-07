@@ -47,10 +47,10 @@ In addition to the following attributes, the `<math>` element accepts any attrib
 ```html
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>MathML in HTML5</title>
-  </head>
-  <body>
+  <head>
+    <title>MathML in HTML5</title>
+  </head>
+  <body>
 
   <math>
     <mrow>
@@ -73,7 +73,7 @@ In addition to the following attributes, the `<math>` element accepts any attrib
     </mrow>
   </math>
 
-  </body>
+  </body>
 </html>
 ```
 

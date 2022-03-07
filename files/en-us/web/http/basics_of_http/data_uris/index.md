@@ -23,9 +23,9 @@ Data URLs are composed of four parts: a prefix (`data:`), a [MIME type](/en-US/d
 data:[<mediatype>][;base64],<data>
 ```
 
-The `mediatype` is a [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) string, such as `'image/jpeg'` for a JPEG image file. If omitted, defaults to `text/plain;charset=US-ASCII`
+The `mediatype` is a [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) string, such as `'image/jpeg'` for a JPEG image file. If omitted, defaults to `text/plain;charset=US-ASCII`
 
-If the data contains [characters defined in RFC 3986 as reserved characters](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2), or contains space characters, newline characters, or other non-printing characters, those characters must be [percent-encoded](/en-US/docs/Glossary/percent-encoding) (_aka_ “URL-encoded”).
+If the data contains [characters defined in RFC 3986 as reserved characters](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2), or contains space characters, newline characters, or other non-printing characters, those characters must be [percent-encoded](/en-US/docs/Glossary/percent-encoding) (_aka_ "URL-encoded").
 
 If the data is textual, you can embed the text (using the appropriate entities or escapes based on the enclosing document's type). Otherwise, you can specify `base64` to embed base64-encoded binary data. You can find more info on MIME types [here](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) and [here](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types).
 
@@ -66,7 +66,7 @@ base64 a.txt>b.txt
 
 ### Encoding on Microsoft Windows
 
-On Windows, [Convert.ToBase64String](https://docs.microsoft.com/en-us/dotnet/api/system.convert.tobase64string?view=net-5.0) from PowerShell can be used to perform the Base64 encoding:
+On Windows, [Convert.ToBase64String](https://docs.microsoft.com/dotnet/api/system.convert.tobase64string?view=net-5.0) from PowerShell can be used to perform the Base64 encoding:
 
 ```bash
 [convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes("hello"))
@@ -105,7 +105,7 @@ lots of text...<p><a name="bottom">bottom</a>?arg=val
 - No support for query strings, etc.
   - : The data portion of a data URL is opaque, so an attempt to use a query string (page-specific parameters, with the syntax `<url>?parameter-data`) with a data URL will just include the query string in the data the URL represents.
 - Security issues
-  - : A number of security issues (for example, phishing) have been associated with data URLs, and navigating to them in the browser's top level. To mitigate such issues, top-level navigation to `data://` URLs has been blocked in Firefox 59+ (release version, Nightly/Beta from 58), and we hope to see other browsers follow suit soon. [See Blocking Top-Level Navigations to data URLs for Firefox 58](https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-58/) for more details.
+  - : A number of security issues (for example, phishing) have been associated with data URLs, and navigating to them in the browser's top level. To mitigate such issues, top-level navigation to `data://` URLs is blocked in all modern browsers. See [this blog post from the Mozilla Security Team](https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-58/) for more details.
 
 ## Specifications
 

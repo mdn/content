@@ -33,7 +33,7 @@ A {{domxref("MediaStreamAudioDestinationNode")}}.
 
 In the following simple example, we create a {{domxref("MediaStreamAudioDestinationNode")}}, an {{ domxref("OscillatorNode") }} and a {{ domxref("MediaRecorder") }} (the example will therefore only work in Firefox and Chrome at this time.) The `MediaRecorder` is set up to record information from the `MediaStreamDestinationNode`.
 
-When the button is clicked, the oscillator starts, and the `MediaRecorder` is started. When the button is stopped, the oscillator and `MediaRecorder` both stop. Stopping the `MediaRecorder` causes the `dataavailable` event to fire, and the event data is pushed into the `chunks` array. After that, the `stop` event fires, a new `blob` is made of type opus — which contains the data in the `chunks` array, and a new window (tab) is then opened that points to a URL created from the blob.
+When the button is clicked, the oscillator starts, and the `MediaRecorder` is started. When the button is stopped, the oscillator and `MediaRecorder` both stop. Stopping the `MediaRecorder` causes the `dataavailable` event to fire, and the event data is pushed into the `chunks` array. After that, the `stop` event fires, a new `blob` is made of type opus — which contains the data in the `chunks` array, and a new window (tab) is then opened that points to a URL created from the blob.
 
 From here, you can play and save the opus file.
 

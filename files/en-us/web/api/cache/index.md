@@ -16,13 +16,13 @@ browser-compat: api.Cache
 ---
 {{APIRef("Service Workers API")}}
 
-The **`Cache`** interface provides a persistent storage mechanism for `{{domxref("Request")}}` / `{{domxref("Response")}}` object pairs that are cached in long lived memory. How long a Cache lives is browser dependent, but a single origin's scripts can typically rely on the presence of a previously populated Cache. Note that the `Cache` interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even though it is defined in the service worker spec.
+The **`Cache`** interface provides a persistent storage mechanism for `{{domxref("Request")}}` / `{{domxref("Response")}}` object pairs that are cached in long lived memory. How long a `Cache` object lives is browser dependent, but a single origin's scripts can typically rely on the presence of a previously populated `Cache` object. Note that the `Cache` interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even though it is defined in the service worker spec.
 
-An origin can have multiple, named `Cache` objects. You are responsible for implementing how your script (e.g. in a {{domxref("ServiceWorker")}}) handles `Cache` updates. Items in a `Cache` do not get updated unless explicitly requested; they don’t expire unless deleted. Use {{domxref("CacheStorage.open", "CacheStorage.open()")}} to open a specific named `Cache` object and then call any of the `Cache` methods to maintain the `Cache`.
+An origin can have multiple, named `Cache` objects. You are responsible for implementing how your script (e.g. in a {{domxref("ServiceWorker")}}) handles `Cache` updates. Items in a `Cache` do not get updated unless explicitly requested; they don't expire unless deleted. Use {{domxref("CacheStorage.open", "CacheStorage.open()")}} to open a specific named `Cache` object and then call any of the `Cache` methods to maintain the `Cache`.
 
-You are also responsible for periodically purging cache entries. Each browser has a hard limit on the amount of cache storage that a given origin can use. Cache quota usage estimates are available via the {{domxref("StorageManager.estimate()")}} method. The browser does its best to manage disk space, but it may delete the Cache storage for an origin. The browser will generally delete all of the data for an origin or none of the data for an origin. Make sure to version caches by name and use the caches only from the version of the script that they can safely operate on. See [Deleting old caches](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers#deleting_old_caches) for more information.
+You are also responsible for periodically purging cache entries. Each browser has a hard limit on the amount of cache storage that a given origin can use. `Cache` quota usage estimates are available via the {{domxref("StorageManager.estimate()")}} method. The browser does its best to manage disk space, but it may delete the `Cache` storage for an origin. The browser will generally delete all of the data for an origin or none of the data for an origin. Make sure to version caches by name and use the caches only from the version of the script that they can safely operate on. See [Deleting old caches](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers#deleting_old_caches) for more information.
 
-> **Note:** The key matching algorithm depends on the [VARY header](https://www.fastly.com/blog/best-practices-for-using-the-vary-header) in the value. So matching a new key requires looking at both key and value for entries in the Cache.
+> **Note:** The key matching algorithm depends on the [VARY header](https://www.fastly.com/blog/best-practices-for-using-the-vary-header) in the value. So matching a new key requires looking at both key and value for entries in the `Cache` object.
 
 > **Note:** The caching API doesn't honor HTTP caching headers.
 
@@ -149,9 +149,9 @@ self.addEventListener('fetch', function(event) {
 });
 ```
 
-### Storing cookies in Caches
+### Cookies and Cache objects
 
-The [Fetch API](/en-US/docs/Web/API/Fetch_API) requires {{httpheader("Set-Cookie")}} headers to be stripped before returning a {{domxref("Response")}} object from {{domxref("fetch()")}}. So a `Response` stored in a Cache won't contain headers.
+The [Fetch API](/en-US/docs/Web/API/Fetch_API) requires {{httpheader("Set-Cookie")}} headers to be stripped before returning a {{domxref("Response")}} object from {{domxref("fetch()")}}. So a `Response` stored in a `Cache` won't contain `Set-Cookie` headers, and therefore won’t cause any cookies to be stored.
 
 ## Specifications
 

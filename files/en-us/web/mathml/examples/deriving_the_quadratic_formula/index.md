@@ -12,7 +12,7 @@ tags:
 ---
 This page outlines the derivation of the Quadratic Formula.
 
-We take a quadratic equation in its general form, and solve for x:
+We take a quadratic equation in its general form, and solve for x:
 
 <math><mtable columnalign="left"><mtr><mtd><mrow><mrow><mrow><mrow><mi>a</mi>
 <mo>⁢</mo>

@@ -146,7 +146,7 @@ Heading elements allow you to specify that certain parts of your content are hea
 <h4>My sub-subheading</h4>
 ```
 
-> **Note:** Anything in HTML between `<!--` and `-->` is a **HTML comment**. The browser ignores comments as it renders the code. In other words, they are not visible on the page - just in the code. HTML comments are a way for you to write helpful notes about your code or logic.
+> **Note:** Anything in HTML between `<!--` and `-->` is an **HTML comment**. The browser ignores comments as it renders the code. In other words, they are not visible on the page - just in the code. HTML comments are a way for you to write helpful notes about your code or logic.
 
 Now try adding a suitable title to your HTML page just above your {{htmlelement("img")}} element.
 
@@ -174,13 +174,13 @@ Each item inside the lists is put inside an {{htmlelement("li")}} (list item) el
 For example, if we wanted to turn the part of the following paragraph fragment into a list
 
 ```html
-<p>At Mozilla, we’re a global community of technologists, thinkers, and builders working together ... </p>
+<p>At Mozilla, we're a global community of technologists, thinkers, and builders working together ... </p>
 ```
 
 We could modify the markup to this
 
 ```html
-<p>At Mozilla, we’re a global community of</p>
+<p>At Mozilla, we're a global community of</p>
 
 <ul>
   <li>technologists</li>

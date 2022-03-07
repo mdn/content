@@ -40,7 +40,7 @@ mutationObserver.observe(target, options)
     tree to watch for changes, or to be the root of a subtree of nodes to be watched.
 - `options`
 
-  - : An object providing options that describe which DOM mutations should be reported to `mutationObserver`’s `callback`.
+  - : An object providing options that describe which DOM mutations should be reported to `mutationObserver`'s `callback`.
     At a minimum, one of `childList`, `attributes`, and/or `characterData` must be `true` when you call {{domxref("MutationObserver.observe", "observe()")}}.
     Otherwise, a `TypeError` exception will be thrown.
 
@@ -81,7 +81,7 @@ mutationObserver.observe(target, options)
 
     - The `options` are configured such that nothing will actually be monitored.
       (For example, if `childList`, `attributes`, and `characterData` are all `false`.)
-    - The value of `options.attributes` is `false` (indicating that attribute changes are not to be monitored), but `attributeOldValue` is `true` and/or
+    - The value of `options.attributes` is `false` (indicating that attribute changes are not to be monitored), but `attributeOldValue` is `true` and/or
       `attributeFilter` is present.
     - The `characterDataOldValue` option is `true` but `characterData` is `false` (indicating that character changes are not to be monitored).
 
@@ -108,14 +108,14 @@ In other words, until you've been notified that nodes are being split off from y
 This prevents you from missing changes that occur after the connection is severed
 and before you have a chance to specifically begin monitoring the moved node or subtree for changes.
 
-Theoretically, this means that if you keep track of the {{domxref("MutationRecord")}} objects describing the changes that occur, you should be able to "undo" the changes,
+Theoretically, this means that if you keep track of the {{domxref("MutationRecord")}} objects describing the changes that occur, you should be able to "undo" the changes,
 rewinding the DOM back to its initial state.
 
 ## Examples
 
 ### Basic usage
 
-In this example, we demonstrate how to call the method **`observe()`** on an instance of {{domxref("MutationObserver")}}, once it has been set up, passing it a target element
+In this example, we demonstrate how to call the method **`observe()`** on an instance of {{domxref("MutationObserver")}}, once it has been set up, passing it a target element
 and an `options` object.
 
 ```js

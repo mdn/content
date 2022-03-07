@@ -47,7 +47,7 @@ function greeting() {
 window.greeting(); // It is the same as the normal invoking: greeting();
 ```
 
-The example above explains how Global Functions are stored as _properties_ in the `window` object. We created a Global Function called `greeting`, then invoked it using the `window` object.
+The example above explains how Global Functions are stored as _properties_ in the `window` object. We created a Global Function called `greeting`, then invoked it using the `window` object.
 
 #### Explanation:
 

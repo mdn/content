@@ -148,20 +148,20 @@ Path commands are instructions that define a path to be drawn. Each command is c
 
 SVG defines 6 types of path commands, for a total of 20 commands:
 
-* MoveTo: `M`, `m`
-* LineTo: `L`, `l`, `H`, `h`, `V`, `v`
-* Cubic Bézier Curve: `C`, `c`, `S`, `s`
-* Quadratic Bézier Curve: `Q`, `q`, `T`, `t`
-* Elliptical Arc Curve: `A`, `a`
-* ClosePath: `Z`, `z`
+- MoveTo: `M`, `m`
+- LineTo: `L`, `l`, `H`, `h`, `V`, `v`
+- Cubic Bézier Curve: `C`, `c`, `S`, `s`
+- Quadratic Bézier Curve: `Q`, `q`, `T`, `t`
+- Elliptical Arc Curve: `A`, `a`
+- ClosePath: `Z`, `z`
 
 > **Note:** Commands are *case-sensitive*. An upper-case command specifies absolute coordinates, while a lower-case command specifies coordinates relative to the current position.
 
 It is always possible to specify a negative value as an argument to a command:
 
-* negative angles will be anti-clockwise;
-* *absolute* negative *x* and *y* values are interpreted as negative coordinates;
-* *relative* negative *x* values move to the left, and relative negative *y* values move upwards.
+- negative angles will be anti-clockwise;
+- *absolute* negative *x* and *y* values are interpreted as negative coordinates;
+- *relative* negative *x* values move to the left, and relative negative *y* values move upwards.
 
 ### MoveTo path commands
 
@@ -433,16 +433,16 @@ html,body,svg { height:100% }
 
 *Cubic [Bézier curves](/en-US/docs/Glossary/Bézier_curve)* are smooth curve definitions using four points:
 
-* starting point (current point)
-    * : (*P<sub>o</sub>* = {*x<sub>o</sub>*, *y<sub>o</sub>*})
-* end point
-    * : (*P<sub>n</sub>* = {*x<sub>n</sub>*, *y<sub>n</sub>*})
-* start control point
-    * : (*P<sub>cs</sub>* = {*x<sub>cs</sub>*, *y<sub>cs</sub>*})
-        (controls curvature near the start of the curve)
-* end control point
-    * : (*P<sub>ce</sub>* = {*x<sub>ce</sub>*, *y<sub>ce</sub>*})
-        (controls curvature near the end of the curve)
+- starting point (current point)
+  - : (*P<sub>o</sub>* = {*x<sub>o</sub>*, *y<sub>o</sub>*})
+- end point
+  - : (*P<sub>n</sub>* = {*x<sub>n</sub>*, *y<sub>n</sub>*})
+- start control point
+  - : (*P<sub>cs</sub>* = {*x<sub>cs</sub>*, *y<sub>cs</sub>*})
+    (controls curvature near the start of the curve)
+- end control point
+  - : (*P<sub>ce</sub>* = {*x<sub>ce</sub>*, *y<sub>ce</sub>*})
+    (controls curvature near the end of the curve)
 
 After drawing, the *end point* (*P<sub>n</sub>*) becomes the *current point* for the next command (*P<sub>o</sub>′*).
 
@@ -646,13 +646,13 @@ html,body,svg { height:100% }
 
 *Quadratic [Bézier curves](/en-US/docs/Glossary/Bézier_curve)* are smooth curve definitions using three points:
 
-* starting point (current point)
-    * : *P<sub>o</sub>* = {*x<sub>o</sub>*, *y<sub>o</sub>*}
-* end point
-    * : *P<sub>n</sub>* = {*x<sub>n</sub>*, *y<sub>n</sub>*}
-* control point
-    * : *P<sub>c</sub>* = {*x<sub>c</sub>*, *y<sub>c</sub>*}
-        (controls curvature)
+- starting point (current point)
+  - : *P<sub>o</sub>* = {*x<sub>o</sub>*, *y<sub>o</sub>*}
+- end point
+  - : *P<sub>n</sub>* = {*x<sub>n</sub>*, *y<sub>n</sub>*}
+- control point
+  - : *P<sub>c</sub>* = {*x<sub>c</sub>*, *y<sub>c</sub>*}
+    (controls curvature)
 
 After drawing, the *end point* (*P<sub>n</sub>*) becomes the *current point* for the next command (*P<sub>o</sub>′*).
 

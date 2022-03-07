@@ -164,7 +164,7 @@ a.flatMap( (n) =>
 
 ## See also
 
-- A polyfill of `Array.prototype.flatMap` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.flatMap` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.flat()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.reduce()")}}

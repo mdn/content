@@ -17,7 +17,7 @@ The **`onmessage`** property of the {{domxref("Worker")}} interface represents a
 
 Note that deserializing the message sent by {{domxref("DedicatedWorkerGlobalScope.postMessage", "postMessage()")}} blocks the thread receiving it.
 
-> **Note:** The message payload is available in the {{event("message")}} event's `data` property.
+> **Note:** The message payload is available in the {{event("message")}} event's `data` property.
 
 ## Syntax
 
@@ -38,8 +38,8 @@ first.onchange = function() {
 }
 
 myWorker.onmessage = function(e) {
-  result.textContent = e.data;
-  console.log('Message received from worker');
+  result.textContent = e.data;
+  console.log('Message received from worker');
 }
 ```
 

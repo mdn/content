@@ -48,4 +48,4 @@ identical.
   change the method used when it is not a {{HTTPMethod("GET")}}.
 - {{HTTPStatus("303", "303 See Other")}}, a temporary redirect that changes the method
   used to {{HTTPMethod("GET")}}.
-- {{HTTPStatus("301", "301 Moved Permanently")}}, a permanent redirect
+- {{HTTPStatus("301", "301 Moved Permanently")}}, a permanent redirect

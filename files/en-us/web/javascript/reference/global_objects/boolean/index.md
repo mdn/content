@@ -57,14 +57,14 @@ Do not use a `Boolean` object in place of a `Boolean` primitive.
 
 > **Note:** When the non-standard property [`document.all`](/en-US/docs/Web/API/Document#properties) is used as an argument for this constructor, the result is a `Boolean` object with the value `false`. This property is legacy and non-standard and should not be used.
 
-When using `==` to loosely compare an object to a boolean primitive, it’s important to have a clear understanding of what’s actually being compared. Consider the following example:
+When using `==` to loosely compare an object to a boolean primitive, it's important to have a clear understanding of what's actually being compared. Consider the following example:
 
 ```js
 if ([]) { console.log("[] is truthy")}         // logs "[] is truthy"
 if ([] == false) { console.log("[] == false")} // logs "[] == false"
 ```
 
-The reason for `[] == false` even though `[]` is truthy is: the comparison `[] == false` compares the *value* of `[]` to `false`. And to get the *value* of `[]`, the JavaScript engine first calls `[].toString()`. That results in `""`, and *that* is what’s actually compared to `false`. In other words, `[] == false` is equivalent to `"" == false`. And `""` is falsy — and so that’s what explains the behavior in the example.
+The reason for `[] == false` even though `[]` is truthy is: the comparison `[] == false` compares the *value* of `[]` to `false`. And to get the *value* of `[]`, the JavaScript engine first calls `[].toString()`. That results in `""`, and *that* is what's actually compared to `false`. In other words, `[] == false` is equivalent to `"" == false`. And `""` is falsy — and so that's what explains the behavior in the example.
 
 ## Constructor
 

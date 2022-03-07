@@ -185,6 +185,6 @@ if (!Math.clz32) Math.clz32 = (function(log, LN2){
 
 ## See also
 
-- A polyfill of `Math.clz32` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [Polyfill of `Math.clz32` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math")}}
 - {{jsxref("Math.imul")}}

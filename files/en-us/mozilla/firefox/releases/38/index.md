@@ -53,7 +53,7 @@ Highlights:
 
 - {{jsxref("Generator/return", "Generator.prototype.return()")}} is implemented ({{bug(1115868)}}).
 - {{jsxref("Functions/set", "Setter")}} with a {{jsxref("Functions/rest_parameters", "rest parameter", "", 1)}} is now a {{jsxref("SyntaxError")}} ({{bug(1089632)}}).
-- The {{jsxref("Function/name", "name")}} property of functions is configurable now ({{bug(1084019)}}).
+- The {{jsxref("Function/name", "name")}} property of functions is configurable now ({{bug(1084019)}}).
 - Several {{jsxref("Array")}} methods have been implemented for [typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) as well:
 
   - The {{jsxref("TypedArray.of", "of()")}} and {{jsxref("TypedArray.from", "from()")}} methods ({{bug(896608)}}).
@@ -70,13 +70,13 @@ Highlights:
 - When defining a [generator method](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions), "`set`" and "`get`" are no longer invalid names ({{bug(1073809)}}).
 - {{jsxref("RegExp.prototype.source")}} now returns "(?:)" instead of an empty string for empty regular expressions ({{bug(1130798)}}).
 - {{jsxref("RegExp.prototype.source")}} and {{jsxref("RegExp.prototype.toString()")}} now escape regular expression patterns properly (e.g. line terminators, "\n") ({{bug(1130860)}}).
-- The {{jsxref("Regexp")}} {{jsxref("Regexp.global", "global")}}, {{jsxref("Regexp.ignoreCase", "ignoreCase")}}, {{jsxref("Regexp.multiline", "multiline")}}, and {{jsxref("Regexp.sticky", "sticky")}} properties are now prototype accessor properties rather than own data properties of `RegExp` instances ({{bug(1120169)}}).
+- The {{jsxref("Regexp")}} {{jsxref("Regexp.global", "global")}}, {{jsxref("Regexp.ignoreCase", "ignoreCase")}}, {{jsxref("Regexp.multiline", "multiline")}}, and {{jsxref("Regexp.sticky", "sticky")}} properties are now prototype accessor properties rather than own data properties of `RegExp` instances ({{bug(1120169)}}).
 - The {{jsxref("RegExp.prototype.source")}} property is now prototype accessor property rather than own data property of `RegExp` instances ({{bug(1120169)}}). Available only in non-Release version, due to {{bug(1150297)}}.
 - {{jsxref("Function.prototype.toString()")}} now throws for {{jsxref("Proxy")}} objects ({{bug(1100936)}}).
 
 ### Interfaces/APIs/DOM
 
-- The Fetch API {{domxref("fetch()")}} method has been implemented ({{bug(1039846)}}).
+- The Fetch API {{domxref("fetch()")}} method has been implemented ({{bug(1039846)}}).
 - {{domxref("BroadcastChannel")}} API has been implemented and is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) ({{bug(966439)}} and {{bug(1121420)}}).
 - The Console API is now available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 - {{domxref("CanvasRenderingContext2D.clearHitRegions()")}} has been implemented ({{bug(1119527)}}).
@@ -110,7 +110,7 @@ _No change._
 
 - In Firefox, the {{htmlattrxref("autocomplete", "input")}}`=false` attribute is now ignored when dealing with a login form ({{bug(1025703)}}). This is intended to encourage the use of more secure passwords by allowing password manager tools to work more reliably.
 - RC4 is now disabled when using TLS, except for a few specifically whitelisted Web sites. This whitelist is an interim measure until those sites are fixed ({{bug(1124039)}}). This fallback is controlled by the `security.tls.unrestricted_rc4_fallback` preference, `true` by default for the moment ({{bug(1138882)}}).
-- Web sites needing to fall back to an insecure version of TLS in order to work are now in a hardcoded whitelist which will shrink over time ({{bug(1114816)}}). The whitelist can be disabled by setting {{pref("security.tls.insecure_fallback_hosts.use_static_list")}}  to `false`.
+- Web sites needing to fall back to an insecure version of TLS in order to work are now in a hardcoded whitelist which will shrink over time ({{bug(1114816)}}). The whitelist can be disabled by setting {{pref("security.tls.insecure_fallback_hosts.use_static_list")}}  to `false`.
 
 ## Changes for add-on and Mozilla developers
 

@@ -87,7 +87,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - Duplicate `__proto__` properties are now allowed in [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) ({{bug(1204024)}}).
 - {{jsxref("Array.prototype.toLocaleString()")}} has been re-implemented to support the Intl API parameters "`locales`" and "`options`" ({{bug(1130636)}}).
 - {{jsxref("TypedArray")}} constructors now accept [iterables](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) to create new typed arrays ({{bug(1232266)}}).
-- {{jsxref("TypedArray.from()")}}, {{jsxref("TypedArray.of()")}}, {{jsxref("TypedArray.prototype.filter()")}}, {{jsxref("TypedArray.prototype.map()")}}, {{jsxref("TypedArray.prototype.slice()")}}, {{jsxref("TypedArray.prototype.subarray()")}} now require that their `this` values are valid Typed Array constructors ({{bug(1122396)}}).
+- {{jsxref("TypedArray.from()")}}, {{jsxref("TypedArray.of()")}}, {{jsxref("TypedArray.prototype.filter()")}}, {{jsxref("TypedArray.prototype.map()")}}, {{jsxref("TypedArray.prototype.slice()")}}, {{jsxref("TypedArray.prototype.subarray()")}} now require that their `this` values are valid Typed Array constructors ({{bug(1122396)}}).
 - The non-standard {{jsxref("ArrayBuffer.slice()")}} method (not {{jsxref("ArrayBuffer.prototype.slice()")}}) is deprecated and now presents a warning when used ({{bug(1316913)}}).
 - [Unicode code point escapes](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#unicode_code_point_escapes) can now also be used as identifiers (e.g. "`let \u{61} = 123`", see {{bug(1314037)}}).
 - To conform with ES2015, `\u2e2f` and `ⸯ` now throw when used as identifier, for details see {{bug(917436)}} and {{bug(1197230)}}.
@@ -106,13 +106,13 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - The {{domxref("isSecureContext")}} property has been implemented (see {{bug(1269052)}}).
 - The [Web App Manifest](/en-US/docs/Web/Manifest) install event has been renamed appinstalled (see {{domxref("Window.onappinstalled")}}, {{event("appinstalled")}}) to avoid confusion with the service worker install event (see {{domxref("ServiceWorkerGlobalScope.oninstall")}}). See {{bug(1309099)}} for more details about this update.
 - The {{domxref("DataTransfer.types")}} property of the [Drag and drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) now returns a frozen array of {{domxref("DOMString")}}s rather than a {{domxref("DOMStringList")}} (see {{bug(1298243)}}).
-- The {{Event("loadstart")}} and {{Event("loadend")}} events are now fired on {{htmlelement("img")}} elements (see {{bug(1264769)}}, and also see {{domxref("GlobalEventHandlers.onloadstart")}} and {{domxref("GlobalEventHandlers.onloadend")}}).
+- The {{Event("loadstart")}} and {{Event("loadend")}} events are now fired on {{htmlelement("img")}} elements (see {{bug(1264769)}}, and also see {{domxref("GlobalEventHandlers.onloadstart")}} and {{domxref("GlobalEventHandlers.onloadend")}}).
 - The {{domxref("Notification.requireInteraction")}} of the [Notifications API](/en-US/docs/Web/API/Notifications_API) has been implemented (see {{bug(862395)}}.)
 - The {{domxref("Window.open()")}} method now has a `noopener` [window feature](/en-US/docs/Web/API/Window/open#window_functionality_features) available (see {{bug(1267339)}}), which mirrors the functionality of the `rel="noopener"` [Link type](/en-US/docs/Web/HTML/Link_types).
 - The {{domxref("CustomElementRegistry.get()")}} method of the [Web Components API](/en-US/docs/Web/Web_Components) has been implemented (see {{bug(1275838)}}).
 - [Pointer Event](/en-US/docs/Web/API/Pointer_events) {{domxref("PointerEvent.width","width")}} and {{domxref("PointerEvent.height","height")}} properties now default to a value of 1 (see {{bug(1304315)}}).
 - The [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) has been updated to include changes in the [latest spec](https://wicg.github.io/entries-api/) (see {{bug(1284987)}} for the exact details).
-- The {{domxref("Event.cancelBubble", "cancelBubble")}} property, which was defined on {{domxref("UIEvent")}}, is now defined on the {{domxref("Event")}} interface instead. See {{bug(1298970)}} for more details.
+- The {{domxref("Event.cancelBubble", "cancelBubble")}} property, which was defined on {{domxref("UIEvent")}}, is now defined on the {{domxref("Event")}} interface instead. See {{bug(1298970)}} for more details.
 
 #### Changes and removals
 

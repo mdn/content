@@ -10,7 +10,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 57 (a.k.a. Firefox Quantum) that will affect developers. Firefox 57 was released on November 14, 2017.
+This article provides information about the changes in Firefox 57 (a.k.a. Firefox Quantum) that will affect developers. Firefox 57 was released on November 14, 2017.
 
 ## Firefox 57 === Firefox Quantum
 
@@ -34,17 +34,17 @@ _No changes._
 
 - The `minimal-ui` and `standalone` values of the [`display-mode`](/en-US/docs/Web/CSS/@media/display-mode) media query are now supported ({{bug(1369815)}}). See also the [Web app manifest `display` field](/en-US/docs/Web/Manifest#display).
 - The `grid-row-gap` and `grid-column-gap` properties are no longer reset by the {{CSSxRef("grid")}} shorthand ({{bug(1387410)}}).
-- The `layout.css.clip-path-shapes.enabled` preference has been removed ({{bug(1399767)}}).  This preference allowed disabling the {{CSSxRef("&lt;basic-shape&gt;")}} support in {{CSSxRef("clip-path")}}.  This support was shipped in Firefox 54 and can no longer be disabled.
+- The `layout.css.clip-path-shapes.enabled` preference has been removed ({{bug(1399767)}}).  This preference allowed disabling the {{CSSxRef("&lt;basic-shape&gt;")}} support in {{CSSxRef("clip-path")}}.  This support was shipped in Firefox 54 and can no longer be disabled.
 
 #### Quantum CSS notes
 
 Following bugs have been fixed in Quantum:
 
-- Radial gradient values like `radial-gradient(circle gold,red)` will work in the old Gecko style system, even though they shouldn't because of the missing comma between `circle` and `gold` ({{bug(1383323)}}).
+- Radial gradient values like `radial-gradient(circle gold,red)` will work in the old Gecko style system, even though they shouldn't because of the missing comma between `circle` and `gold` ({{bug(1383323)}}).
 - When you animate an offscreen element onscreen but specify a delay, Gecko does not repaint on some platforms, e.g. Windows ({{bug(1383239)}}).
 - In Gecko, {{htmlelement("details")}} elements can't be made open by default using the `open` attribute if they have an {{CSSxRef("animation")}} active on them ({{bug(1382124)}}).
-- In Gecko, {{CSSxRef("transition", "transitions")}} will not work when transitioning from a {{CSSxRef("text-shadow")}} with a color specified to a `text-shadow` without a color specified  ({{bug(726550)}}).
-- In Gecko, cancelling a filling animation (e.g. with `animation-fill-mode: forwards` set) can trigger a transition set on the same element, although only once (see {{bug(1192592)}} and [these test cases](https://bug1192592.bmoattachments.org/attachment.cgi?id=8843824) for more information). In general declarative animations should not trigger transitions.
+- In Gecko, {{CSSxRef("transition", "transitions")}} will not work when transitioning from a {{CSSxRef("text-shadow")}} with a color specified to a `text-shadow` without a color specified  ({{bug(726550)}}).
+- In Gecko, cancelling a filling animation (e.g. with `animation-fill-mode: forwards` set) can trigger a transition set on the same element, although only once (see {{bug(1192592)}} and [these test cases](https://bug1192592.bmoattachments.org/attachment.cgi?id=8843824) for more information). In general declarative animations should not trigger transitions.
 - Animations using em units are not affected by changes to the {{CSSxRef("font-size")}} on the animated element's parent in Gecko, whereas they should be ({{bug(1254424)}}).
 - Gecko also deals with `font-size` inheritance differently from Quantum CSS, meaning that for some language settings inherited font sizes end up being smaller than expected (see {{bug(1391341)}}).
 - Gecko reuses the same mechanism used when parsing a url-token when parsing the `domain()` or `url-prefix()` URL matching functions for a {{CSSxRef("@document", "@-moz-document")}} rule. Quantum CSS does not use the same mechanism and it does not consider tokens invalid when they contain brackets or quotes ({{bug(1362333)}}).
@@ -53,8 +53,8 @@ Following bugs have been fixed in Quantum:
 - In Gecko, {{CSSxRef("calc()")}} expressions are rejected — causing the value to be invalid — when used as the radius component of a {{CSSxRef("radial-gradient()")}} function ({{bug(1376019)}}).
 - In Gecko, `calc(1*2*3)` is not parsed successfully; Quantum CSS fixes this ({{bug(1379467)}}).
 - In Quantum CSS, [`calc()` is supported everywhere that the spec explains it should be](https://drafts.csswg.org/css-values-3/#calc-notation) ({{bug(1350857)}}). In Gecko it is not.
-- Gecko has a bug whereby the {{CSSxRef("::before")}} and {{CSSxRef("::after")}} pseudo-elements are still generated even if the {{CSSxRef("content")}} property value is set to `normal` or `none`. As per spec, they shouldn't be ({{bug(1387931)}}).
-- Another Gecko bug means that the {{CSSxRef("background-position")}} property can't be transitioned between two values containing different numbers of {{CSSxRef("&lt;position&gt;")}} values, for example `background-position: 10px 10px;` and `background-position: 20px 20px, 30px 30px;` (see {{bug(1390446)}}).
+- Gecko has a bug whereby the {{CSSxRef("::before")}} and {{CSSxRef("::after")}} pseudo-elements are still generated even if the {{CSSxRef("content")}} property value is set to `normal` or `none`. As per spec, they shouldn't be ({{bug(1387931)}}).
+- Another Gecko bug means that the {{CSSxRef("background-position")}} property can't be transitioned between two values containing different numbers of {{CSSxRef("&lt;position&gt;")}} values, for example `background-position: 10px 10px;` and `background-position: 20px 20px, 30px 30px;` (see {{bug(1390446)}}).
 
 ### SVG
 

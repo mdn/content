@@ -33,7 +33,7 @@ _A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this 
 
 ## Methods
 
-_A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this event also implements these properties. There is no specific {{domxref("RTCDataChannelEvent")}} method._
+_A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this event also implements these properties. There is no specific {{domxref("RTCDataChannelEvent")}} method._
 
 ## Examples
 

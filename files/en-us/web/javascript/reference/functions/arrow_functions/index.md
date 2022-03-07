@@ -12,7 +12,7 @@ browser-compat: javascript.functions.arrow_functions
 ---
 {{jsSidebar("Functions")}}
 
-An **arrow function expression** is a compact alternative to a traditional
+An **arrow function expression** is a compact alternative to a traditional
 [function
 expression](/en-US/docs/Web/JavaScript/Reference/Operators/function), but is limited and can't be used in all situations.
 
@@ -21,13 +21,13 @@ expression](/en-US/docs/Web/JavaScript/Reference/Operators/function), but is lim
 - Does not have its own bindings to
   [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) or [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super),
   and should not be used as [`methods`](/en-US/docs/Glossary/Method).
-- Does not have [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) keyword.
+- Does not have [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) keyword.
 - Not suitable for
   [`call`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call),
   [`apply`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
   and [`bind`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
   methods, which generally rely on establishing a [scope](/en-US/docs/Glossary/Scope).
-- Can not be used as [constructors](/en-US/docs/Glossary/Constructor).
+- Can not be used as [constructors](/en-US/docs/Glossary/Constructor).
 - Can not use [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield), within its body.
 
 {{EmbedInteractiveExample("pages/js/functions-arrow.html")}}
@@ -205,7 +205,7 @@ obj.b(); // prints undefined, Window {...} (or the global object)
 obj.c(); // prints 10, Object {...}
 ```
 
-Arrow functions do not have their own `this`. Another example involving
+Arrow functions do not have their own `this`. Another example involving
 {{jsxref("Object.defineProperty()")}}:
 
 ```js
@@ -408,7 +408,7 @@ generators.
 Arrow functions can have either a "concise body" or the usual "block body".
 
 In a concise body, only an expression is specified, which becomes the implicit return
-value. In a block body, you must use an explicit `return` statement.
+value. In a block body, you must use an explicit `return` statement.
 
 ```js
 var func = x => x * x;
@@ -456,20 +456,20 @@ can also put line breaks between arguments.
 
 ```js
 var func = (a, b, c) =>
-  1;
+  1;
 
 var func = (a, b, c) => (
-  1
+  1
 );
 
 var func = (a, b, c) => {
-  return 1
+  return 1
 };
 
 var func = (
   a,
   b,
-  c
+  c
 ) => 1;
 
 // no SyntaxError thrown

@@ -2078,5 +2078,5 @@ The documentation for your codec choices will probably offer information you'll 
 - {{RFC(4381)}}: MIME Type Registrations for 3GPP2 Multimedia Files
 - {{RFC(4337)}}: MIME Type Registrations for MPEG-4
 - [Video codecs in Opera](https://dev.opera.com/articles/view/introduction-html5-video/#codecs)
-- [Video](https://msdn.microsoft.com/en-us/library/ff975073%28v=VS.85%29.aspx) and [audio](https://msdn.microsoft.com/en-us/library/ff975061%28v=vs.85%29.aspx) codecs in Internet Explorer
+- [Video](https://msdn.microsoft.com/library/ff975073%28v=VS.85%29.aspx) and [audio](https://msdn.microsoft.com/library/ff975061%28v=vs.85%29.aspx) codecs in Internet Explorer
 - [Video and audio codecs in Chrome](https://www.chromium.org/audio-video)

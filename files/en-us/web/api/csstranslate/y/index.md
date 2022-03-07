@@ -12,7 +12,7 @@ tags:
   - Property
 browser-compat: api.CSSTranslate.y
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`y`** property of the
 {{domxref("CSSTranslate")}} interface gets and sets the ordinate or y-axis of the

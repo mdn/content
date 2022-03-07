@@ -62,8 +62,6 @@ For a full example, see our [Basic dedicated worker example](https://github.com/
 
 {{Compat}}
 
-> **Note:** A browser can be marked as providing full support for `Worker()` even though it does not support worker scripts written as modules. As of Mar 1, 2019, only [Chrome 80+](https://web.dev/module-workers/) supports this feature, while [Firefox has an open feature request](https://bugzilla.mozilla.org/show_bug.cgi?id=1247687). No other browsers are known to have support for production usage of worker scripts written as modules. Without that support, worker scripts written as modules and modules used by worker scripts have to be transpiled or otherwise converted to non-module code in order to run.
-
 ## See also
 
 The {{domxref("Worker")}} interface it belongs to.

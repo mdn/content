@@ -44,7 +44,7 @@ A `function*` expression is very similar to and has almost the same syntax
 as a {{jsxref('Statements/function*', 'function* statement', "", 1)}}. The main
 difference between a `function*` expression and a `function*`
 statement is the _function name_, which can be omitted in `function*`
-expressions to create *anonymous* generator functions. See also the chapter
+expressions to create *anonymous* generator functions. See also the chapter
 about {{jsxref("Functions", "functions")}} for more information.
 
 ## Examples

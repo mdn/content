@@ -50,8 +50,8 @@ As a presentation attribute, it also can be used as a property directly inside a
 
 The following elements can use the `cursor` attribute
 
-* [Container elements](/en-US/docs/Web/SVG/Element#container_elements)
-* [Graphics elements](/en-US/docs/Web/SVG/Element#graphics_elements)
+- [Container elements](/en-US/docs/Web/SVG/Element#container_elements)
+- [Graphics elements](/en-US/docs/Web/SVG/Element#graphics_elements)
 
 ## Browser compatibility
 
@@ -59,4 +59,4 @@ The following elements can use the `cursor` attribute
 
 ## See also
 
-* {{ cssxref("cursor","CSS cursor") }}
+- {{ cssxref("cursor","CSS cursor") }}

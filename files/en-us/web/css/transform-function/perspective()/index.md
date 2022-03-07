@@ -108,23 +108,23 @@ perspective(d)
 ```html
 <p>Without perspective:</p>
 <div class="no-perspective-box">
-  <div class="face front">A</div>
-  <div class="face top">B</div>
-  <div class="face left">C</div>
+  <div class="face front">A</div>
+  <div class="face top">B</div>
+  <div class="face left">C</div>
 </div>
 
 <p>With perspective (9cm):</p>
 <div class="perspective-box-far">
-  <div class="face front">A</div>
-  <div class="face top">B</div>
-  <div class="face left">C</div>
+  <div class="face front">A</div>
+  <div class="face top">B</div>
+  <div class="face left">C</div>
 </div>
 
 <p>With perspective (4cm):</p>
 <div class="perspective-box-closer">
-  <div class="face front">A</div>
-  <div class="face top">B</div>
-  <div class="face left">C</div>
+  <div class="face front">A</div>
+  <div class="face top">B</div>
+  <div class="face left">C</div>
 </div>
 ```
 
@@ -132,45 +132,45 @@ perspective(d)
 
 ```css
 .face {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  line-height: 100px;
-  font-size: 100px;
-  text-align: center;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 100px;
+  text-align: center;
 }
 
 p + div {
-  width: 100px;
-  height: 100px;
-  transform-style: preserve-3d;
-  margin-left: 100px;
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  margin-left: 100px;
 }
 .no-perspective-box {
-  transform: rotateX(-15deg) rotateY(30deg);
+  transform: rotateX(-15deg) rotateY(30deg);
 }
 
 .perspective-box-far {
-  transform: perspective(9cm) rotateX(-15deg) rotateY(30deg);
+  transform: perspective(9cm) rotateX(-15deg) rotateY(30deg);
 }
 
 .perspective-box-closer {
-  transform: perspective(4cm) rotateX(-15deg) rotateY(30deg);
+  transform: perspective(4cm) rotateX(-15deg) rotateY(30deg);
 }
 
 .top {
-  background-color: skyblue;
-  transform: rotateX(90deg) translate3d(0, 0, 50px);
+  background-color: skyblue;
+  transform: rotateX(90deg) translate3d(0, 0, 50px);
 }
 
 .left {
-  background-color: pink;
-  transform: rotateY(-90deg) translate3d(0, 0, 50px);
+  background-color: pink;
+  transform: rotateY(-90deg) translate3d(0, 0, 50px);
 }
 
 .front {
-  background-color: limegreen;
-  transform: translate3d(0, 0, 50px);
+  background-color: limegreen;
+  transform: translate3d(0, 0, 50px);
 }
 ```
 

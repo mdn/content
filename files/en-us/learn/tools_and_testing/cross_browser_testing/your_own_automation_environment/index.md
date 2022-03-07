@@ -80,7 +80,7 @@ Next, you need to download the relevant drivers to allow WebDriver to control th
 
 To set your `PATH` variable on a macOS system and on most Linux systems:
 
-1. If you’re not already using the `bash` shell (for example, on macOS systems, the default is the `zsh` shell, not `bash`), switch to the `bash` shell:
+1. If you're not already using the `bash` shell (for example, on macOS systems, the default is the `zsh` shell, not `bash`), switch to the `bash` shell:
 
     ```bash
     exec bash
@@ -424,7 +424,7 @@ In addition, we should mention test results/reporting — we've been reporting r
     npm install --save-dev mocha
     ```
 
-3. you can now run the test (and any others you put inside your `test` directory) using the following command:
+3. You can now run the test (and any others you put inside your `test` directory) using the following command:
 
     ```bash
     npx mocha --no-timeouts

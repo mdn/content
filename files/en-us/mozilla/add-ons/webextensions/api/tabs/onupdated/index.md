@@ -15,7 +15,7 @@ browser-compat: webextensions.api.tabs.onUpdated
 ---
 Fired when a tab is updated.
 
-When the user navigates to a new URL in a tab, this will typically generate several  `onUpdated` events as various properties of the {{WebExtAPIRef("tabs.Tab")}} object are updated. This includes the `url`, but also potentially the `title` and `favIconUrl` properties. The `status` property will cycle through `"loading"` and `"complete"`.
+When the user navigates to a new URL in a tab, this will typically generate several  `onUpdated` events as various properties of the {{WebExtAPIRef("tabs.Tab")}} object are updated. This includes the `url`, but also potentially the `title` and `favIconUrl` properties. The `status` property will cycle through `"loading"` and `"complete"`.
 
 This event will also be fired for changes to a tab's properties that don't involve navigation, like pinning and unpinning (which updates the `pinned` property) and muting or unmuting (which updates the `audible` and `mutedInfo` properties).
 
@@ -100,7 +100,7 @@ Lists the changes to the state of the tab that was updated. To learn more about 
 - `hidden`{{optional_inline}}
   - : `boolean`. True if the tab is {{WebExtAPIRef("tabs.hide()", "hidden")}}.
 - `isArticle`{{optional_inline}}
-  - : `boolean`. True if the tab is an article and is therefore eligible for display in  {{WebExtAPIRef("tabs.toggleReaderMode()", "Reader Mode")}}.
+  - : `boolean`. True if the tab is an article and is therefore eligible for display in  {{WebExtAPIRef("tabs.toggleReaderMode()", "Reader Mode")}}.
 - `mutedInfo`{{optional_inline}}
   - : {{WebExtAPIRef('tabs.MutedInfo')}}. The tab's new muted state and the reason for the change.
 - `pinned`{{optional_inline}}
@@ -154,9 +154,9 @@ const filter = {
 }
 
 function handleUpdated(tabId, changeInfo, tabInfo) {
-  console.log(`Updated tab: ${tabId}`);
-  console.log("Changed attributes: ", changeInfo);
-  console.log("New tab Info: ", tabInfo);
+  console.log(`Updated tab: ${tabId}`);
+  console.log("Changed attributes: ", changeInfo);
+  console.log("New tab Info: ", tabInfo);
 }
 
 browser.tabs.onUpdated.addListener(handleUpdated, filter);
@@ -170,9 +170,9 @@ const filter = {
 }
 
 function handleUpdated(tabId, changeInfo, tabInfo) {
-  console.log(`Updated tab: ${tabId}`);
-  console.log("Changed attributes: ", changeInfo);
-  console.log("New tab Info: ", tabInfo);
+  console.log(`Updated tab: ${tabId}`);
+  console.log("Changed attributes: ", changeInfo);
+  console.log("New tab Info: ", tabInfo);
 }
 
 browser.tabs.onUpdated.addListener(handleUpdated, filter);
@@ -193,9 +193,9 @@ const filter = {
 }
 
 function handleUpdated(tabId, changeInfo, tabInfo) {
-  console.log(`Updated tab: ${tabId}`);
-  console.log("Changed attributes: ", changeInfo);
-  console.log("New tab Info: ", tabInfo);
+  console.log(`Updated tab: ${tabId}`);
+  console.log("Changed attributes: ", changeInfo);
+  console.log("New tab Info: ", tabInfo);
 }
 
 browser.tabs.onUpdated.addListener(
@@ -220,9 +220,9 @@ const filter = {
 }
 
 function handleUpdated(tabId, changeInfo, tabInfo) {
-  console.log(`Updated tab: ${tabId}`);
-  console.log("Changed attributes: ", changeInfo);
-  console.log("New tab Info: ", tabInfo);
+  console.log(`Updated tab: ${tabId}`);
+  console.log("Changed attributes: ", changeInfo);
+  console.log("New tab Info: ", tabInfo);
 }
 
 browser.tabs.onUpdated.addListener(

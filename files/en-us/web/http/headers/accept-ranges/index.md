@@ -42,7 +42,7 @@ Accept-Ranges: none
 
 - `<range-unit>`
   - : Defines the range unit that the server supports. Though `bytes` is the only
-    range unit formally defined by {{RFC("7233")}}, additional range units may be
+    range unit formally defined by {{RFC("7233")}}, additional range units may be
     registered in the[
     HTTP Range Unit Registry](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#range-units).
 - `none`

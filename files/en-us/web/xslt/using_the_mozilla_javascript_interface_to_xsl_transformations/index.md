@@ -105,7 +105,7 @@ var processor = Components.classes["@mozilla.org/document-transformer;1?type=xsl
 
 ### See also
 
-- [The XSLT JavaScript Interface in Gecko](/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko)
+- [The XSLT JavaScript Interface in Gecko](/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko)
 - [document.load()](/en-US/docs/Web/API/XMLDocument/load) regarding the loading of XML documents (as used above)
 
 ### Original Document Information

@@ -21,7 +21,7 @@ The **`@document`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-
 
 ## Syntax
 
-An `@document` rule can specify one or more matching functions. If any of the functions apply to a given URL, the rule will take effect on that URL. The functions available are:
+An `@document` rule can specify one or more matching functions. If any of the functions apply to a given URL, the rule will take effect on that URL. The functions available are:
 
 - `url()`, which matches an exact URL.
 - `url-prefix()`, which matches if the document URL starts with the value provided.
@@ -35,7 +35,7 @@ Escaped values provided to the `regexp()` function must additionally be escaped 
 
 `@document` is currently only supported in Firefox; if you wanted to replicate using such functionality in your own non-Firefox browser, you could try using [this polyfill](https://github.com/An-Error94/Handy-Scripts/tree/master/%40document-polyfill) by @An-Error94, which uses a combination of a user script, [data-\* attributes](/en-US/docs/Web/HTML/Global_attributes/data-*), and [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors).
 
-> **Note:** There is a -moz-prefixed version of this property — `@-moz-document`. This has been limited to use only in user and UA sheets in Firefox 59 in Nightly and Beta — an experiment designed to mitigate potential CSS injection attacks (See {{bug(1035091)}}).
+> **Note:** There is a -moz-prefixed version of this property — `@-moz-document`. This has been limited to use only in user and UA sheets in Firefox 59 in Nightly and Beta — an experiment designed to mitigate potential CSS injection attacks (See {{bug(1035091)}}).
 
 ## Formal syntax
 

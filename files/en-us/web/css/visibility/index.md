@@ -52,7 +52,7 @@ The `visibility` property is specified as one of the keyword values listed below
 
 ## Accessibility concerns
 
-Using a `visibility` value of `hidden` on an element will remove it from the [accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs). This will cause the element and all its descendant elements to no longer be announced by screen reading technology.
+Using a `visibility` value of `hidden` on an element will remove it from the [accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs). This will cause the element and all its descendant elements to no longer be announced by screen reading technology.
 
 ## Interpolation
 

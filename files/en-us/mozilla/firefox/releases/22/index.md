@@ -39,7 +39,7 @@ tags:
 - The properties `HTMLMediaElement.crossorigin` and `HTMLInputElement.inputmode` has been removed to match the spec in {{domxref("HTMLMediaElement.crossOrigin")}} and `HTMLInputElement.inputMode`, respectively ({{bug("847370")}} and {{bug("850346")}}).
 - WebRTC: the Media Stream API and Peer Connection API are now supported by default.
 - Web Components: the {{domxref("Document.register")}} method has been implemented ({{bug("783129")}}).
-- The {{domxref("ProgressEvent.initProgressEvent()")}} constructor method has been removed. Uses the standard constructor, {{domxref("ProgressEvent.ProgressEvent", "ProgressEvent()")}} to construc and initialize {{domxref("ProgressEvent")}} ({{bug("843489")}}).
+- The {{domxref("ProgressEvent.initProgressEvent()")}} constructor method has been removed. Uses the standard constructor, {{domxref("ProgressEvent.ProgressEvent", "ProgressEvent()")}} to construct and initialize {{domxref("ProgressEvent")}} ({{bug("843489")}}).
 - Manipulated data associated with a {{event("cut")}}, {{event("copy")}}, or {{event("paste")}} event can now be accessed via the {{domxref("ClipboardEvent.clipboardData")}} property ({{bug("407983")}}).
 - The {{domxref("HTMLTimeElement")}} interface has been implemented ({{bug("629801")}}).
 - When a {{domxref("Worker")}} constructor is passed an invalid URL, it now throws {{domxref("DOMException")}} of type `SECURITY_ERR` ({{bug("587251")}}).

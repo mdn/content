@@ -77,7 +77,7 @@ person.introduceSelf()
 
 You have now got some data and functionality inside your object, and are now able to access them with some nice simple syntax!
 
-So what is going on here? Well, an object is made up of multiple members, each of which has a name (e.g. `name` and `age` above), and a value (e.g. `['Bob', 'Smith']` and `32`). Each name/value pair must be separated by a comma, and the name and value in each case are separated by a colon. The syntax always follows this pattern:
+So what is going on here? Well, an object is made up of multiple members, each of which has a name (e.g. `name` and `age` above), and a value (e.g. `['Bob', 'Smith']` and `32`). Each name/value pair must be separated by a comma, and the name and value in each case are separated by a colon. The syntax always follows this pattern:
 
 ```js
 const objectName = {
@@ -87,7 +87,7 @@ const objectName = {
 };
 ```
 
-The value of an object member can be pretty much anything — in our person object we've got a number, an array, and two functions. The first four items are data items, and are referred to as the object's **properties**. The last two items are functions that allow the object to do something with that data, and are referred to as the object's **methods**.
+The value of an object member can be pretty much anything — in our person object we've got a number, an array, and two functions. The first two items are data items, and are referred to as the object's **properties**. The last two items are functions that allow the object to do something with that data, and are referred to as the object's **methods**.
 
 When the object's members are functions there's a simpler syntax. Instead of `bio: function()` we can write `bio()`. Like this:
 
@@ -236,7 +236,7 @@ Now try saving and refreshing, and entering the following into your text input:
 person.height
 ```
 
-Adding a property to an object using the method above isn't possible with dot notation, which can only accept a literal member name, not a variable value pointing to a name.
+Adding a property to an object using the method above isn't possible with dot notation, which can only accept a literal member name, not a variable value pointing to a name.
 
 ## What is "this"?
 
@@ -293,8 +293,8 @@ function createPerson(name) {
 
 This function creates and returns a new object each time we call it. The object will have two members:
 
-* a property `name`
-* a method `introduceSelf()`.
+- a property `name`
+- a method `introduceSelf()`.
 
 Note that `createPerson()` takes a parameter `name` to set the value of the `name` property, but the value of the `introduceSelf()` method will be the same for all objects created using this function. This is a very common pattern for creating objects. You can see here how being able to use `this` in the definition of `introduceSelf()` enables us to use the same code for every object we create.
 
@@ -312,10 +312,10 @@ frankie.introduceSelf();
 
 This works fine but is a bit long-winded: we have to create an empty object, initialize it, and return it. A better way is to use a **constructor**. A constructor is just a function called using the {{jsxref("operators/new", "new")}} keyword. When you call a constructor, it will:
 
-* create a new object
-* bind `this` to the new object, so you can refer to `this` in your constructor code
-* run the code in the constructor
-* return the new object.
+- create a new object
+- bind `this` to the new object, so you can refer to `this` in your constructor code
+- run the code in the constructor
+- return the new object.
 
 Constructors, by convention, start with a capital letter and are named for the type of object they create. So we could rewrite our example like this:
 

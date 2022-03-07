@@ -98,5 +98,5 @@ For a description of the values see the {{cssxref("filter","CSS filter")}} prope
 
 ## See also
 
-* {{SVGElement("filter")}}
-* {{cssxref("filter","CSS filter")}}
+- {{SVGElement("filter")}}
+- {{cssxref("filter","CSS filter")}}

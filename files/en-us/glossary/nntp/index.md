@@ -10,4 +10,4 @@ tags:
 ## See also
 
 - {{Interwiki("wikipedia", "Network_News_Transfer_Protocol", "NNTP")}} at Wikipedia
-- From the IETF: [RFC 3977 about NNTP](https://datatracker.ietf.org/doc/html/rfc3977) (2006)
+- From the IETF: [RFC 3977 about NNTP](https://datatracker.ietf.org/doc/html/rfc3977) (2006)

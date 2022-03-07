@@ -42,7 +42,7 @@ range.setStart(startNode, startOffset);
 
 This example uses the `Range.setStart()` and {{domxref("Range.setEnd()")}}
 methods to add part of an address to a range. The selected range is then highlighted
-using  {{domxref("Range.surroundContents()")}}.
+using  {{domxref("Range.surroundContents()")}}.
 
 The address contains nine nodes: five text nodes, and four {{htmlElement("br")}}
 elements.

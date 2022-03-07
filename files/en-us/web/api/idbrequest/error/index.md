@@ -14,8 +14,8 @@ browser-compat: api.IDBRequest.error
 ---
 {{ APIRef("IndexedDB") }}
 
-The **`error`** read-only property of the
-{{domxref("IDBRequest")}} interface returns the error in the event of an unsuccessful
+The **`error`** read-only property of the
+{{domxref("IDBRequest")}} interface returns the error in the event of an unsuccessful
 request.
 
 {{AvailableInWorkers}}
@@ -30,7 +30,7 @@ var myError = request.error;
 
 A {{domxref("DOMError")}} containing the relevant error. In Chrome 48+/Firefox 58+ this
 property returns a {{domxref("DOMException")}} because `DOMError` has been
-removed from the DOM standard. The following error codes are returned under certain
+removed from the DOM standard. The following error codes are returned under certain
 conditions:
 
 <table class="no-markdown">
@@ -52,7 +52,7 @@ conditions:
       <td><code>ConstraintError</code></td>
       <td>
         If you insert data that doesn't conform to a constraint. It's
-        an exception type for creating stores and indexes. You get this error,
+        an exception type for creating stores and indexes. You get this error,
         for example, if you try to add a new key that already exists in the
         record.
       </td>
@@ -88,8 +88,8 @@ conditions:
 In addition to the error codes sent to the {{ domxref("IDBRequest") }} object,
 asynchronous operations can also raise exceptions. The list describes problems that
 could occur when the request is being executed, but you might also encounter other
-problems when the request is being made. For example, if the request failed and the
-result is not available, the `InvalidStateError` exception
+problems when the request is being made. For example, if the request failed and the
+result is not available, the `InvalidStateError` exception
 is thrown.
 
 ## Example
@@ -99,8 +99,8 @@ associated record from the {{domxref("IDBObjectStore")}} (made available as
 `objectStoreTitleRequest.result`, updates one property of the record, and then puts the
 updated record back into the object store. Also included at the bottom is an
 `onerror` function that reports what the error was if the request fails.
-For a full working example, see our [To-do
-Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)
+For a full working example, see our [To-do
+Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
 var title = "Walk dog";
@@ -119,11 +119,11 @@ objectStoreTitleRequest.onsuccess = function() {
   data.notified = "yes";
 
   // Create another request that inserts the item
-  // back into the database
+  // back into the database
   var updateTitleRequest = objectStore.put(data);
 
   // When this new request succeeds, run the displayData()
-  // function again to update the display
+  // function again to update the display
   updateTitleRequest.onsuccess = function() {
     displayData();
   };

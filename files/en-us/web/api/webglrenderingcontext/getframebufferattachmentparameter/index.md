@@ -97,7 +97,7 @@ any gl.getFramebufferAttachmentParameter(target, attachment, pname);
 
       - `ext.FRAMEBUFFER_ATTACHMENT_TEXTURE_NUM_VIEWS_OVR`: the number of
         views of the framebuffer object attachment.
-      - `ext.FRAMEBUFFER_ATTACHMENT_TEXTURE_BASE_VIEW_INDEX_OVR`:  the
+      - `ext.FRAMEBUFFER_ATTACHMENT_TEXTURE_BASE_VIEW_INDEX_OVR`:  the
         base view index of the framebuffer object attachment.
 
 ### Return value

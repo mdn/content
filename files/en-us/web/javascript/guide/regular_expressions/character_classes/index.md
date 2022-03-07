@@ -34,7 +34,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
           <li>
             Matches any single character <em>except</em> line terminators:
             <code>\n</code>, <code>\r</code>, <code>\u2028</code> or
-            <code>\u2029</code>. For example, <code>/.y/</code> matches "my" and
+            <code>\u2029</code>. For example, <code>/.y/</code> matches "my" and
             "ay", but not "yes", in "yes make my day".
           </li>
           <li>
@@ -49,7 +49,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
           including newlines.
         </p>
         <p>
-          ES2018 added the <code>s</code> "dotAll" flag, which allows the dot to
+          ES2018 added the <code>s</code> "dotAll" flag, which allows the dot to
           also match line terminators.
         </p>
       </td>
@@ -167,7 +167,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
             >caret notation</a
           >, where "X" is a letter from A–Z (corresponding to codepoints
           <code>U+0001</code><em>–</em><code>U+001A</code>). For example,
-          <code>/\cM\cJ/</code> matches "\r\n".
+          <code>/\cM\cJ/</code> matches "\r\n".
         </p>
       </td>
     </tr>
@@ -195,7 +195,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
       </td>
       <td>
         (Only when the <code>u</code> flag is set.) Matches the character with
-        the Unicode value <code>U+<em>hhhh</em></code> or <code
+        the Unicode value <code>U+<em>hhhh</em></code> or <code
           >U+<em>hhhhh</em></code
         >
         (hexadecimal digits).
@@ -245,7 +245,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
         <div class="notecard note">
           <p>
             <strong>Note:</strong> To match this character literally, escape it
-            with itself. In other words to search for <code>\</code> use
+            with itself. In other words to search for <code>\</code> use
             <code>/\\/</code>.
           </p>
         </div>
@@ -272,7 +272,7 @@ console.table(randomData.match(regexpFourDigits));
 ### Looking for a word (from the latin alphabet) starting with A
 
 ```js
-var aliceExcerpt = "I’m sure I’m not Ada,’ she said, ‘for her hair goes in such long ringlets, and mine doesn’t go in ringlets at all.";
+var aliceExcerpt = "I'm sure I'm not Ada,' she said, 'for her hair goes in such long ringlets, and mine doesn't go in ringlets at all.";
 var regexpWordStartingWithA = /\b[aA]\w+/g;
 // \b indicates a boundary (i.e. do not start matching in the middle of a word)
 // [aA] indicates the letter a or A

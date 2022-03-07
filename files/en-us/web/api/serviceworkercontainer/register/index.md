@@ -78,43 +78,43 @@ how service workers scope applies to a page.
 
 The following example uses the default value of `scope` (by omitting it).
 The service worker code in this case, if
-included in `example.com/index.html`, will
-control `example.com/index.html`, as well as pages underneath it, like
+included in `example.com/index.html`, will
+control `example.com/index.html`, as well as pages underneath it, like
 `example.com/product/description.html`.
 
 ```js
 if ('serviceWorker' in navigator) {
-  // Register a service worker hosted at the root of the
-  // site using the default scope.
-  navigator.serviceWorker.register('/sw.js').then(function(registration) {
-    console.log('Service worker registration succeeded:', registration);
-  }, /*catch*/ function(error) {
-    console.log('Service worker registration failed:', error);
-  });
+  // Register a service worker hosted at the root of the
+  // site using the default scope.
+  navigator.serviceWorker.register('/sw.js').then(function(registration) {
+    console.log('Service worker registration succeeded:', registration);
+  }, /*catch*/ function(error) {
+    console.log('Service worker registration failed:', error);
+  });
 } else {
-  console.log('Service workers are not supported.');
+  console.log('Service workers are not supported.');
 }
 ```
 
-The following code, if included in `example.com/index.html`, at the root of
+The following code, if included in `example.com/index.html`, at the root of
 a site, would apply to exactly the same pages as the example above. Remember the scope,
 when included, uses the page's location as its base.
 
 Alternatively, if this code were included in a page at
 `example.com/product/description.html`, with the Javascript file residing
-at `example.com/product/sw.js`, then the service worker would only apply to
+at `example.com/product/sw.js`, then the service worker would only apply to
 resources under `example.com/product`.
 
 ```js
 if ('serviceWorker' in navigator) {
-  // declaring scope manually
-  navigator.serviceWorker.register('/sw.js', {scope: './'}).then(function(registration) {
-    console.log('Service worker registration succeeded:', registration);
-  }, /*catch*/ function(error) {
-    console.log('Service worker registration failed:', error);
-  });
+  // declaring scope manually
+  navigator.serviceWorker.register('/sw.js', {scope: './'}).then(function(registration) {
+    console.log('Service worker registration succeeded:', registration);
+  }, /*catch*/ function(error) {
+    console.log('Service worker registration failed:', error);
+  });
 } else {
-  console.log('Service workers are not supported.');
+  console.log('Service workers are not supported.');
 }
 ```
 
@@ -122,24 +122,24 @@ There is frequent confusion surrounding the meaning and use of _scope_. Since a
 service worker can't have a scope broader than its own location, only use the
 `scope` option when you need a scope that is narrower than the default.
 
-The following code, if included in `example.com/index.html`, at the root of
-a site, would only apply to resources under `example.com/product`.
+The following code, if included in `example.com/index.html`, at the root of
+a site, would only apply to resources under `example.com/product`.
 
 ```js
 if ('serviceWorker' in navigator) {
-  // declaring scope manually
-  navigator.serviceWorker.register('/sw.js', {scope: '/product/'}).then(function(registration) {
-    console.log('Service worker registration succeeded:', registration);
-  }, /*catch*/ function(error) {
-    console.log('Service worker registration failed:', error);
-  });
+  // declaring scope manually
+  navigator.serviceWorker.register('/sw.js', {scope: '/product/'}).then(function(registration) {
+    console.log('Service worker registration succeeded:', registration);
+  }, /*catch*/ function(error) {
+    console.log('Service worker registration failed:', error);
+  });
 } else {
-  console.log('Service workers are not supported.');
+  console.log('Service workers are not supported.');
 }
 ```
 
-However, Servers can remove this restriction by setting a [Service-Worker-Allowed](https://w3c.github.io/ServiceWorker/#service-worker-allowed) header on the service
-worker script, and then you can specify a max scope for that service worker above the
+However, Servers can remove this restriction by setting a [Service-Worker-Allowed](https://w3c.github.io/ServiceWorker/#service-worker-allowed) header on the service
+worker script, and then you can specify a max scope for that service worker above the
 service worker's location.
 
 ## Specifications

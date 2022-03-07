@@ -20,7 +20,7 @@ browser-compat: api.RTCIceCandidateStats.protocol
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidateStats")}} dictionary's
-**`protocol`**  property specifies the protocol the specified
+**`protocol`**  property specifies the protocol the specified
 candidate would use for communication with the remote peer.
 
 ## Syntax

@@ -41,7 +41,7 @@ regex.lastIndex; // 0 (reset after match failure)
 
 ### Anchored sticky flag
 
-For several versions, Firefox's SpiderMonkey engine had [a bug](https://bugzilla.mozilla.org/show_bug.cgi?id=773687) with regard to the `^` assertion and the sticky flag which allowed expressions starting with the `^` assertion and using the sticky flag to match when they shouldn't. The bug was introduced some time after Firefox 3.6 (which had the sticky flag but not the bug) and fixed in 2015. Perhaps because of the bug, the ES2015 specification [specifically calls out](http://www.ecma-international.org/ecma-262/7.0/index.html#sec-assertion) the fact that:
+For several versions, Firefox's SpiderMonkey engine had [a bug](https://bugzilla.mozilla.org/show_bug.cgi?id=773687) with regard to the `^` assertion and the sticky flag which allowed expressions starting with the `^` assertion and using the sticky flag to match when they shouldn't. The bug was introduced some time after Firefox 3.6 (which had the sticky flag but not the bug) and fixed in 2015. Perhaps because of the bug, the ES2015 specification [specifically calls out](http://www.ecma-international.org/ecma-262/7.0/index.html#sec-assertion) the fact that:
 
 > When the `y` flag is used with a pattern, ^ always matches only at the beginning of the input, or (if `multiline` is `true`) at the beginning of a line.
 
@@ -69,7 +69,7 @@ regex2.test('.\nfoo'); // true - index 2 is the beginning of a line
 
 ## See also
 
-- A polyfill of `sticky` `RegExp` flag is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `sticky` `RegExp` flag in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("RegExp.lastIndex")}}
 - {{JSxRef("RegExp.prototype.dotAll")}}
 - {{JSxRef("RegExp.prototype.global")}}

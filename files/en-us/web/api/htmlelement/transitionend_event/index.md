@@ -38,7 +38,7 @@ The **`transitionend`** event is fired when a [CSS transition](/en-US/docs/Web/C
   </tbody>
 </table>
 
-The `transitionend` event is fired in both directions - as it finishes transitioning to the transitioned state, and when it fully reverts to the default or non-transitioned state. If there is no transition delay or duration, if both are 0s or neither is declared, there is no transition, and none of the transition events are fired.  If the `transitioncancel` event is fired, the `transitionend` event will not fire.
+The `transitionend` event is fired in both directions - as it finishes transitioning to the transitioned state, and when it fully reverts to the default or non-transitioned state. If there is no transition delay or duration, if both are 0s or neither is declared, there is no transition, and none of the transition events are fired.  If the `transitioncancel` event is fired, the `transitionend` event will not fire.
 
 ## Examples
 
@@ -106,7 +106,7 @@ el.addEventListener('transitioncancel', function() {
 });
 
 el.addEventListener('transitionend', function() {
-  message.textContent = 'transitionend fired';
+  message.textContent = 'transitionend fired';
 });
 ```
 

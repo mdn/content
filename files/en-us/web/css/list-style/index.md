@@ -98,7 +98,7 @@ nav ol, nav ul {
 }
 ```
 
-These CSS workarounds should be used only when the HTML solution is not available, and only after testing to ensure that they don’t result in unexpected behaviors that may negatively impact users’ experiences.
+These CSS workarounds should be used only when the HTML solution is not available, and only after testing to ensure that they don't result in unexpected behaviors that may negatively impact users' experiences.
 
 - ['Fixing' Lists](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html)
 - [VoiceOver and list-style-type: none – Unfettered Thoughts](https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/)

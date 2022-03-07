@@ -39,10 +39,10 @@ Rendering in your browser: <math><msup><mi>X</mi> <mn>2</mn></msup></math>
 ```html
 <math>
 
-  <msup>
-    <mi>X</mi>
-    <mn>2</mn>
-  </msup>
+  <msup>
+    <mi>X</mi>
+    <mn>2</mn>
+  </msup>
 
 </math>
 ```

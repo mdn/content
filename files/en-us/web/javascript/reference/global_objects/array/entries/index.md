@@ -68,7 +68,7 @@ for (let e of iterator) {
 
 ## See also
 
-- A polyfill of `Array.prototype.entries` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.entries` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.keys()")}}
 - {{jsxref("Array.prototype.values()")}}
 - {{jsxref("Array.prototype.forEach()")}}

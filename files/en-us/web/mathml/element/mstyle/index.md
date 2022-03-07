@@ -56,14 +56,14 @@ Using `displaystyle` and `mathcolor` to effect style changes in the layout of th
         <mi>n</mi>
       </munderover>
 
-      <mstyle displaystyle="true">
+      <mstyle displaystyle="true">
         <mfrac>
           <mn>1</mn>
           <mi>n</mi>
         </mfrac>
       </mstyle>
 
-    </mrow>
+    </mrow>
   </mstyle>
 
 </math>

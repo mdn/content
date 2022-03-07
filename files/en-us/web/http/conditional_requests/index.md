@@ -26,7 +26,7 @@ All conditional headers try to check if the resource stored on the server matche
 - the date of last modification of the document, the _last-modified_ date.
 - an opaque string, uniquely identifying each version, called the _entity tag_, or the _etag_.
 
-Comparing versions of the same resource is a bit tricky: depending on the context, there are two kinds of _equality checks_:
+Comparing versions of the same resource is a bit tricky: depending on the context, there are two kinds of _equality checks_:
 
 - _Strong validation_ is used when byte to byte identity is expected, for example when resuming a download.
 - _Weak validation_ is used when the user-agent only needs to determine if the two resources have the same content. This is even if they are minor differences; like different ads, or a footer with a different date.
@@ -41,7 +41,7 @@ It is quite difficult to have a unique identifier for strong validation with {{H
 
 ### Weak validation
 
-Weak validation differs from strong validation, as it considers two versions of the document as identical if the content is equivalent. For example, a page that would differ from another only by a different date in its footer, or different advertising, would be considered _identical_ to the other with weak validation. These same two versions are considered _different_ when using strong validation. Building a system of etags that creates weak validation may be complex, as it involves knowing the importance of the different elements of a page, but is very useful towards optimizing cache performance.
+Weak validation differs from strong validation, as it considers two versions of the document as identical if the content is equivalent. For example, a page that would differ from another only by a different date in its footer, or different advertising, would be considered _identical_ to the other with weak validation. These same two versions are considered _different_ when using strong validation. Building a system of etags that creates weak validation may be complex, as it involves knowing the importance of the different elements of a page, but is very useful towards optimizing cache performance.
 
 ## Conditional headers
 
@@ -68,7 +68,7 @@ The most common use case for conditional requests is updating a cache. With an e
 
 Together with the resource, the validators are sent in the headers. In this example, both {{HTTPHeader("Last-Modified")}} and {{HTTPHeader("ETag")}} are sent, but it could equally have been only one of them. These validators are cached with the resource (like all headers) and will be used to craft conditional requests, once the cache becomes stale.
 
-As long as the cache is not stale, no requests are issued at all. But once it has become stale, this is mostly controlled by the {{HTTPHeader("Cache-Control")}} header, the client doesn't use the cached value directly but issues a _conditional request_. The value of the validator is used as a parameter of the {{HTTPHeader("If-Modified-Since")}} and {{HTTPHeader("If-Match")}} headers.
+As long as the cache is not stale, no requests are issued at all. But once it has become stale, this is mostly controlled by the {{HTTPHeader("Cache-Control")}} header, the client doesn't use the cached value directly but issues a _conditional request_. The value of the validator is used as a parameter of the {{HTTPHeader("If-Modified-Since")}} and {{HTTPHeader("If-Match")}} headers.
 
 If the resource has not changed, the server sends back a {{HTTPStatus("304")}} `Not Modified` response. This makes the cache fresh again, and the client uses the cached resource. Although there is a response/request round-trip that consumes some resources, this is more efficient than to transmit the whole resource over the wire again.
 
@@ -90,9 +90,9 @@ A server supporting partial downloads broadcasts this by sending the {{HTTPHeade
 
 ![The client resumes the requests by indicating the range he needs and preconditions checking the validators of the partially obtained request.](httpresume2.png)
 
-The principle is simple, but there is one potential problem: if the downloaded resource has been modified between both downloads, the obtained ranges will correspond to two different versions of the resource, and the final document will be corrupted.
+The principle is simple, but there is one potential problem: if the downloaded resource has been modified between both downloads, the obtained ranges will correspond to two different versions of the resource, and the final document will be corrupted.
 
-To prevent this, conditional requests are used. For ranges, there are two ways of doing this. The more flexible one makes use of {{HTTPHeader("If-Unmodified-Since")}} and {{HTTPHeader("If-Match")}} and the server returns an error if the precondition fails; the client then restarts the download from the beginning:
+To prevent this, conditional requests are used. For ranges, there are two ways of doing this. The more flexible one makes use of {{HTTPHeader("If-Unmodified-Since")}} and {{HTTPHeader("If-Match")}} and the server returns an error if the precondition fails; the client then restarts the download from the beginning:
 
 ![When the partially downloaded resource has been modified, the preconditions will fail and the resource will have to be downloaded again completely.](httpresume3.png)
 
@@ -114,7 +114,7 @@ Unfortunately, things get a little inaccurate as soon as we take into account co
 
 ![When several clients update the same resource in parallel, we are facing a race condition: the slowest win, and the others don't even know they lost. Problematic!](httplock2.png)
 
-There is no way to deal with this problem without annoying one of the two clients. However, lost updates and race conditions are to be avoided. We want predictable results, and expect that the clients are notified when their changes are rejected.
+There is no way to deal with this problem without annoying one of the two clients. However, lost updates and race conditions are to be avoided. We want predictable results, and expect that the clients are notified when their changes are rejected.
 
 Conditional requests allow implementing the _optimistic locking algorithm_ (used by most wikis or source control systems). The concept is to allow all clients to get copies of the resource, then let them modify it locally, controlling concurrency by successfully allowing the first client to submit an update. All subsequent updates, based on the now obsolete version of the resource, are rejected:
 

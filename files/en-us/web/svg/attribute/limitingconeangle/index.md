@@ -13,7 +13,7 @@ The **`limitingConeAngle`** attribute represents the angle in degrees between th
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement("feSpotLight")}}
+- {{SVGElement("feSpotLight")}}
 
 ## Example
 

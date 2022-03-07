@@ -68,13 +68,13 @@ are fired.
 var DBDeleteRequest = window.indexedDB.deleteDatabase("toDoList");
 
 DBDeleteRequest.onerror = function(event) {
-  console.log("Error deleting database.");
+  console.log("Error deleting database.");
 };
 
 DBDeleteRequest.onsuccess = function(event) {
-  console.log("Database deleted successfully");
+  console.log("Database deleted successfully");
 
-  console.log(event.result); // should be undefined
+  console.log(event.result); // should be undefined
 };
 ```
 

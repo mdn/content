@@ -9,7 +9,7 @@ tags:
 {{Non-standard_header()}}
 
 **`msPlayToSource`** is a read-only property which gets the
-source associated with the media element for use by the [`PlayToManager`](https://docs.microsoft.com/en-us/uwp/api/windows.media.playto.playtomanager).
+source associated with the media element for use by the [`PlayToManager`](https://docs.microsoft.com/uwp/api/windows.media.playto.playtomanager).
 
 This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
@@ -22,7 +22,7 @@ ptr = object.msPlayToSource;
 ## Value
 
 _PlayTo_ is a means through which an app can connect local playback/display for
-audio, video, and img elements to a remote device. For more information, see the [Windows.Media.PlayTo](https://docs.microsoft.com/en-us/uwp/api/windows.media.playto)
+audio, video, and img elements to a remote device. For more information, see the [Windows.Media.PlayTo](https://docs.microsoft.com/uwp/api/windows.media.playto)
 APIs.
 
 **`msPlayToSource`** is used in the
@@ -40,7 +40,7 @@ media element.
 <video id="videoplayer" src="http://www.contoso.com/clip.mp4" controls autoplay />
 <script type="text/javascript">
 
-  // Step 1: Obtain PlayToManager object for app’s current view.
+  // Step 1: Obtain PlayToManager object for app's current view.
     var ptm = Windows.Media.PlayTo.PlayToManager.getForCurrentView();
 
   // Step 2: Register for the sourcerequested event (user swipes Devices charm).

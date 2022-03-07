@@ -74,7 +74,7 @@ if (false) {
 // 'foo' name is hoisted. typeof foo is function
 ```
 
-The results are exactly the same for a condition that evaluates to true
+The results are exactly the same for a condition that evaluates to true
 
 ```js
 var hoisted = "foo" in this;

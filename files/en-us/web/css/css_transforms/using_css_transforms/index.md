@@ -79,72 +79,72 @@ The HTML below creates four copies of the same box, with the perspective set at 
 
 ```html
 <table>
-  <tbody>
-    <tr>
-      <th><code>perspective: 250px;</code>
-      </th>
-      <th><code>perspective: 350px;</code>
-      </th>
-    </tr>
-    <tr>
-      <td>
-        <div class="container">
-          <div class="cube pers250">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
-          </div>
-        </div>
-      </td>
-      <td>
-        <div class="container">
-          <div class="cube pers350">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
-          </div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <th><code>perspective: 500px;</code>
-      </th>
-      <th><code>perspective: 650px;</code>
-      </th>
-    </tr>
-    <tr>
-      <td>
-        <div class="container">
-          <div class="cube pers500">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
-          </div>
-        </div>
-      </td>
-      <td>
-        <div class="container">
-          <div class="cube pers650">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
-          </div>
-        </div>
-      </td>
-    </tr>
-  </tbody>
+  <tbody>
+    <tr>
+      <th><code>perspective: 250px;</code>
+      </th>
+      <th><code>perspective: 350px;</code>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <div class="container">
+          <div class="cube pers250">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="container">
+          <div class="cube pers350">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><code>perspective: 500px;</code>
+      </th>
+      <th><code>perspective: 650px;</code>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <div class="container">
+          <div class="cube pers500">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="container">
+          <div class="cube pers650">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
 </table>
 ```
 

@@ -22,17 +22,17 @@ The `Plugin` interface provides information about a browser plugin.
   - : A human readable description of the plugin.
 - {{domxref("Plugin.filename")}} {{readonlyinline}}
   - : The filename of the plugin file.
-- {{domxref("Plugin.name")}} {{readonlyinline}}
+- {{domxref("Plugin.name")}} {{readonlyinline}}
   - : The name of the plugin.
-- {{domxref("Plugin.version")}} {{readonlyinline}}
+- {{domxref("Plugin.version")}} {{readonlyinline}}
   - : The plugin's version number string.
 
 ## Methods
 
 - {{domxref("Plugin.item")}}
-  - : Returns the MIME type of a supported content type, given the index number into a list of supported types.
+  - : Returns the MIME type of a supported content type, given the index number into a list of supported types.
 - {{domxref("Plugin.namedItem")}}
-  - : Returns the MIME type of a supported item.
+  - : Returns the MIME type of a supported item.
 
 ## Specifications
 

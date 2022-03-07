@@ -35,8 +35,8 @@ The accessible name of a tooltip can come from the contents, or from an [`aria-l
 
 ### Associated WAI-ARIA roles, states, and properties
 
-* The element that serves as the tooltip container has `role="tooltip"` set.
-* The element that triggers the tooltip references the tooltip element with [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby).
+- The element that serves as the tooltip container has `role="tooltip"` set.
+- The element that triggers the tooltip references the tooltip element with [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby).
 
 ### Keyboard interactions
 

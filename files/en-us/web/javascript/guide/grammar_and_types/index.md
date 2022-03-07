@@ -562,7 +562,7 @@ Together, these also bring object literals and class declarations closer togethe
 var obj = {
     // __proto__
     __proto__: theProtoObj,
-    // Shorthand for ‘handler: handler’
+    // Shorthand for 'handler: handler'
     handler,
     // Methods
     toString() {
@@ -623,7 +623,7 @@ var name = 'Bob', time = 'today';
 `Hello ${name}, how are you ${time}?`
 ```
 
-[Tagged templates](/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_template) are a compact syntax for specifying a template literal along with a call to a “tag” function for parsing it; the name of the template tag function precedes the template literal — as in the following example, where the template tag function is named "`myTag`":
+[Tagged templates](/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_template) are a compact syntax for specifying a template literal along with a call to a "tag" function for parsing it; the name of the template tag function precedes the template literal — as in the following example, where the template tag function is named "`myTag`":
 
 ```js
 let myTag = (str, name, age) => `${str[0]}${name}${str[1]}${age}${str[2]}`;

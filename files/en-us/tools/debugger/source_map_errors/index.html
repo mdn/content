@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{ToolsSidebar}}</div>
 
-<p class="summary">Source maps are JSON files providing a way to associate transformed sources, as seen by the browser, with their original sources, as written by the developer. You can sometimes encounter problems working with source maps.  This page explains the most common problems and how to fix them.</p>
+<p class="summary">Source maps are JSON files providing a way to associate transformed sources, as seen by the browser, with their original sources, as written by the developer. You can sometimes encounter problems working with source maps.  This page explains the most common problems and how to fix them.</p>
 
 <div class="note">
 <p><strong>Note</strong>: If you're new to source maps, you can learn more about them in <a href="/en-US/docs/Tools/Debugger/How_to/Use_a_source_map">How to use a source map</a>.</p>
@@ -23,7 +23,7 @@ tags:
 
 <p><img alt="Error from invalid JSON" src="invalid-json.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
-<p>Here, the resource URL tells us that <code>bundle.js</code> mentions a source map, and the source map URL tells us where to find the source map data (in this case, relative to the resource).  The error tells us that the source map is not JSON data — so we're serving the wrong file.</p>
+<p>Here, the resource URL tells us that <code>bundle.js</code> mentions a source map, and the source map URL tells us where to find the source map data (in this case, relative to the resource).  The error tells us that the source map is not JSON data — so we're serving the wrong file.</p>
 
 <p>There are a few common ways that source maps can go wrong; they are detailed in the following sections.</p>
 
@@ -48,7 +48,7 @@ tags:
 
 <h2 id="Original_source_missing">Original source missing</h2>
 
-<p>An original source may be missing.  You may encounter this when trying to open one of the original sources in the debugger. The message looks a little different in this case:</p>
+<p>An original source may be missing.  You may encounter this when trying to open one of the original sources in the debugger. The message looks a little different in this case:</p>
 
 <p><img alt="Debugger source tab showing the error" src="screenshot_from_2017-09-15_14-32-02.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 

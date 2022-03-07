@@ -209,12 +209,12 @@ standards as a "willful violation" of the original ECMA JavaScript standard.
 
 ### Real-world usage
 
-`typeof` is very useful, but it's not as versatile as might be required. For
-example, `typeof([])` , is `'object'`, as well as
-`typeof(new Date())`, `typeof(/abc/)`, etc.
+`typeof` is very useful, but it's not as versatile as might be required. For
+example, `typeof([])` , is `'object'`, as well as
+`typeof(new Date())`, `typeof(/abc/)`, etc.
 
-For greater specificity in checking types, a `typeof` wrapper for usage in
-production-level code would be as follows (provided `obj` exists):
+For greater specificity in checking types, a `typeof` wrapper for usage in
+production-level code would be as follows (provided `obj` exists):
 
 ```js
   function type(obj, showFullClass) {
@@ -237,8 +237,8 @@ production-level code would be as follows (provided `obj` exists):
   }
 ```
 
-For checking non-existent variables that would otherwise throw
-a {{JSxRef("ReferenceError")}}, use `typeof nonExistentVar === 'undefined'`.
+For checking non-existent variables that would otherwise throw
+a {{JSxRef("ReferenceError")}}, use `typeof nonExistentVar === 'undefined'`.
 
 ## Specifications
 

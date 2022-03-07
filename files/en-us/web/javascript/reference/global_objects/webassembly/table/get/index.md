@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.WebAssembly.Table.get
 {{JSRef}}
 
 The **`get()`** prototype method of
-the {{jsxref("WebAssembly.Table()")}} object retrieves a function reference stored at a
+the {{jsxref("WebAssembly.Table()")}} object retrieves a function reference stored at a
 given index.
 
 ## Syntax
@@ -36,7 +36,7 @@ JavaScript wrapper for an underlying wasm function.
 ### Exceptions
 
 If _index_ is greater than or equal
-to {{jsxref("WebAssembly/Table/length","Table.prototype.length")}}, a
+to {{jsxref("WebAssembly/Table/length","Table.prototype.length")}}, a
 {{jsxref("RangeError")}} is thrown.
 
 ## Examples
@@ -52,9 +52,9 @@ references stored in the exported table.
 ```js
 WebAssembly.instantiateStreaming(fetch('table.wasm'))
 .then(function(obj) {
-  var tbl = obj.instance.exports.tbl;
-  console.log(tbl.get(0)());  // 13
-  console.log(tbl.get(1)());  // 42
+  var tbl = obj.instance.exports.tbl;
+  console.log(tbl.get(0)());  // 13
+  console.log(tbl.get(1)());  // 42
 });
 ```
 

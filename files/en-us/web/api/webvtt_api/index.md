@@ -226,7 +226,7 @@ WEBVTT
 
 1
 00:00.000 --> 00:02.000
-That’s an, an, that’s an L!
+That's an, an, that's an L!
 
 crédit de transcription
 00:04.000 --> 00:05.000
@@ -739,7 +739,7 @@ The methods used in WebVTT are those which are used to alter the cue or region a
 
 ## Tutorial on how to write a WebVTT file
 
-There are few steps that can be followed to write a simple webVTT file. Before start, it must be noted that you can make use of a notepad and then save the file as ‘.vtt’ file. Steps are given below:
+There are few steps that can be followed to write a simple webVTT file. Before start, it must be noted that you can make use of a notepad and then save the file as '.vtt' file. Steps are given below:
 
 1. Open a notepad.
 2. The first line of WebVTT is standardized similar to the way some other languages require you to put headers as the file starts to indicate the file type. On the very first line you have to write:
@@ -767,7 +767,7 @@ It is one of the good features supported by WebVTT is the localization and use o
 WEBVTT
 
 04:02.500 --> 04:05.000
-J’ai commencé le basket à l'âge de 13, 14 ans
+J'ai commencé le basket à l'âge de 13, 14 ans
 
 04:05.001 --> 04:07.800
 Sur les <i.foreignphrase><lang en>playground</lang></i>, ici à Montpellier

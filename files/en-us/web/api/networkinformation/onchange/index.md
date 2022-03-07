@@ -11,7 +11,7 @@ tags:
   - Reference
 browser-compat: api.NetworkInformation.onchange
 ---
-{{apiref("Network Information API")}}{{SeeCompatTable}}
+{{apiref("Network Information API")}}{{SeeCompatTable}}
 
 The **`NetworkInformation.onchange`** event handler contains
 the code that is fired when connection information changes, and the {{event("change")}}

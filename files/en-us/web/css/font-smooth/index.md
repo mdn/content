@@ -33,7 +33,7 @@ font-smooth: unset;
 
 > **Note:** WebKit implements a similar property, but with different values: **`-webkit-font-smoothing`**. It only works on Mac OS X/macOS.
 >
-> - `auto` - Let the browser decide (Uses subpixel anti-aliasing when available; this is the default)
+> - `auto` - Let the browser decide (Uses subpixel anti-aliasing when available; this is the default)
 > - `none` - Turn font smoothing off; display text with jagged sharp edges.
 > - `antialiased` - Smooth the font on the level of the pixel, as opposed to the subpixel. Switching from subpixel rendering to antialiasing for light text on dark backgrounds makes it look lighter.
 > - `subpixel-antialiased` - On most non-retina displays, this will give the sharpest text.

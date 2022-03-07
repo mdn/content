@@ -71,7 +71,7 @@ CSS to size the canvas and render a crisp image:
 ```css
 canvas {
   width: 512px;
-  height: 512px;
+  height: 512px;
   image-rendering: -moz-crisp-edges;
   image-rendering: -webkit-crisp-edges;
   image-rendering: pixelated;

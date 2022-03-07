@@ -18,7 +18,7 @@ browser-compat: api.StaticRange.startContainer
 ---
 {{APIRef("DOM")}}
 
-The read-only **`startContainer`**
+The read-only **`startContainer`**
 property of the {{domxref("StaticRange")}} interface returns the start
 {{domxref("Node")}} for the range.
 

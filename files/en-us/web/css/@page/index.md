@@ -29,7 +29,7 @@ The **`@page`** CSS at-rule is used to modify some CSS properties when printing 
 ### Descriptors
 
 - [`size`](/en-US/docs/Web/CSS/@page/size)
-  - : Specifies the target size and orientation of the page box’s containing block. In the general case, where one page box is rendered onto one page sheet, it also indicates the size of the destination page sheet.
+  - : Specifies the target size and orientation of the page box's containing block. In the general case, where one page box is rendered onto one page sheet, it also indicates the size of the destination page sheet.
 
 ## Description
 

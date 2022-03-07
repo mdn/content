@@ -13,7 +13,7 @@ The `rotate` attribute specifies how the animated element rotates as it travels 
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement("animateMotion")}}
+- {{SVGElement("animateMotion")}}
 
 ## Usage notes
 

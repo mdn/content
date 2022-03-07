@@ -3781,7 +3781,7 @@ The values below are derived in part form a number of consumer electronics techn
     <tr>
       <td><code>"ZoomToggle"</code> [2]</td>
       <td>
-        Toggles between full-screen and scaled content display, or otherwise
+        Toggles between fullscreen and scaled content display, or otherwise
         change the magnification level.
       </td>
       <td><code>VK_ZOOM</code> (0xFB)</td>

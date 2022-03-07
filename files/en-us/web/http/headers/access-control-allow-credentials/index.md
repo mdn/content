@@ -34,7 +34,7 @@ The `Access-Control-Allow-Credentials` header works in conjunction with the
 constructor of the Fetch API. For a CORS request with credentials, for browsers
 to expose the response to the frontend JavaScript code, both the server (using the
 `Access-Control-Allow-Credentials` header) and the client (by setting the
-credentials mode for the XHR, Fetch, or Ajax request) must indicate that they’re opting
+credentials mode for the XHR, Fetch, or Ajax request) must indicate that they're opting
 into including credentials.
 
 <table class="properties">

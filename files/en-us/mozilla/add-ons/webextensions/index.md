@@ -15,7 +15,7 @@ The technology for extensions in Firefox is, to a large extent, compatible with 
 ## Key resources
 
 - Guides
-  - : Whether you’re just beginning or looking for more advanced advice, learn about how extensions work and use the WebExtensions API from our extensive range of [tutorials and guides](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions).
+  - : Whether you're just beginning or looking for more advanced advice, learn about how extensions work and use the WebExtensions API from our extensive range of [tutorials and guides](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions).
 - References
   - : Get comprehensive details about the methods, properties, types, and events of the [WebExtensions APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) and full details about the [manifest keys](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
 - Firefox workflow
@@ -37,13 +37,13 @@ Discover all the [user interface](/en-US/docs/Mozilla/Add-ons/WebExtensions/user
 
 ## How to
 
-From patterns you’ll regularly use such as [work with the Tabs API](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API) and [adding a button to the toolbar](/en-US/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar) to more advanced topics such as [intercepting HTTP requests](/en-US/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests) and [working with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities), you’ll find a range of tutorials to get you started.
+From patterns you'll regularly use such as [work with the Tabs API](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API) and [adding a button to the toolbar](/en-US/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar) to more advanced topics such as [intercepting HTTP requests](/en-US/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests) and [working with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities), you'll find a range of tutorials to get you started.
 
 ## Firefox workflow
 
 When you are ready to create your extension for Firefox or port your Chrome extension, head over to [Extension Workshop](https://extensionworkshop.com/). It has details on:
 
-- The Firefox workflow, such as [temporarily installing  extensions during development](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/), [debugging](https://extensionworkshop.com/documentation/develop/debugging/), [request the right permissions](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/), and more.
+- The Firefox workflow, such as [temporarily installing  extensions during development](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/), [debugging](https://extensionworkshop.com/documentation/develop/debugging/), [request the right permissions](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/), and more.
 - The [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) developer tool.
 - [Porting a Google Chrome extension](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/), [differences between desktop and Android](https://extensionworkshop.com/documentation/develop/differences-between-desktop-and-android-extensions/), and more.
 - [Publishing and distribution overview](https://extensionworkshop.com/documentation/publish/), [promoting your extension](https://extensionworkshop.com/documentation/publish/promoting-your-extension/), the [extension lifecycle best practices](https://extensionworkshop.com/documentation/manage/), and more.
@@ -56,4 +56,4 @@ Get comprehensive details about the methods, properties, types, and events for a
 
 ### Manifest keys
 
-Get full details about the [manifest keys](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json), including all their properties and settings. There’s also detailed information on the [compatibility](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json) of each key with the major browsers.
+Get full details about the [manifest keys](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json), including all their properties and settings. There's also detailed information on the [compatibility](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json) of each key with the major browsers.

@@ -115,7 +115,7 @@ unlock_btn.addEventListener('click', () => {
   screen.orientation.unlock();
 } );
 
-// Full screen button: Set the example to full-screen.
+// Full screen button: Set the example to fullscreen.
 const fullscreen_btn = document.querySelector('#fullscreen_button');
 fullscreen_btn.addEventListener('click', () => { 
   log.textContent+='Fullscreen pressed \n';

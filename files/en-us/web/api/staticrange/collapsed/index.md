@@ -28,8 +28,8 @@ var isCollapsed = staticRange.collapsed
 
 ### Value
 
-A boolean value which is `true` if the range
-is **collapsed**. A collapsed range is one in which the start and end
+A boolean value which is `true` if the range
+is **collapsed**. A collapsed range is one in which the start and end
 positions are the same, resulting in a zero-character-long range..
 
 ## Specifications

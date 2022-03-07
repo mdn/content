@@ -13,7 +13,7 @@ The `strikethrough-thickness` attribute represents the ideal thickness of the st
 
 You can use this attribute with the following SVG elements:
 
-* {{ SVGElement("font-face") }}
+- {{ SVGElement("font-face") }}
 
 ## Usage context
 

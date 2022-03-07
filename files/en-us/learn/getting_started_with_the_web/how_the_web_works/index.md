@@ -40,7 +40,7 @@ In addition to the client and the server, we also need to say hello to:
 
 - **Your internet connection**: Allows you to send and receive data on the web. It's basically like the street between your house and the shop.
 - **TCP/IP**: Transmission Control Protocol and Internet Protocol are communication protocols that define how data should travel across the internet. This is like the transport mechanisms that let you place an order, go to the shop, and buy your goods. In our example, this is like a car or a bike (or however else you might get around).
-- **DNS**: Domain Name Servers are like an address book for websites. When you type a web address in your browser, the browser looks at the DNS to find the website's IP address before it can retrieve the website. The browser needs to find out which server the website lives on, so it can send HTTP messages to the right place (see below). This is like looking up the address of the shop so you can access it.
+- **DNS**: Domain Name System is like an address book for websites. When you type a web address in your browser, the browser looks at the DNS to find the website's IP address before it can retrieve the website. The browser needs to find out which server the website lives on, so it can send HTTP messages to the right place (see below). This is like looking up the address of the shop so you can access it.
 - **HTTP**: Hypertext Transfer Protocol is an application {{Glossary("Protocol" , "protocol")}} that defines a language for clients and servers to speak to each other. This is like the language you use to order your goods.
 - **Component files**: A website is made up of many different files, which are like the different parts of the goods you buy from the shop. These files come in two main types:
 
@@ -58,7 +58,7 @@ When you type a web address into your browser (for our analogy that's like walki
 
 ## Order in which component files are parsed
 
-When browsers send requests to servers for HTML files, those HTML files often contain {{htmlelement("link")}} elements referencing external [CSS](/en-US/docs/Learn/CSS) stylesheets and {{htmlelement("script")}} elements referencing external [JavaScript](/en-US/docs/Learn/JavaScript) scripts. It’s important to know the order in which those files are [parsed by the browser](/en-US/docs/Web/Performance/How_browsers_work#parsing) as the browser loads the page:
+When browsers send requests to servers for HTML files, those HTML files often contain {{htmlelement("link")}} elements referencing external [CSS](/en-US/docs/Learn/CSS) stylesheets and {{htmlelement("script")}} elements referencing external [JavaScript](/en-US/docs/Learn/JavaScript) scripts. It's important to know the order in which those files are [parsed by the browser](/en-US/docs/Web/Performance/How_browsers_work#parsing) as the browser loads the page:
 
 - The browser parses the HTML file first, and that leads to the browser recognizing any `<link>`-element references to external CSS stylesheets and any `<script>`-element references to scripts.
 - As the browser parses the HTML, it sends requests back to the server for any CSS files it has found from `<link>` elements, and any JavaScript files it has found from `<script>` elements, and from those, then parses the CSS and JavaScript.
@@ -81,7 +81,7 @@ Earlier we used the term "packets" to describe the format in which the data is s
 
 - [How the Internet works](/en-US/docs/Learn/Common_questions/How_does_the_Internet_work)
 - [HTTP — an Application-Level Protocol](https://dev.opera.com/articles/http-basic-introduction/)
-- [HTTP: Let’s GET It On!](https://dev.opera.com/articles/http-lets-get-it-on/)
+- [HTTP: Let's GET It On!](https://dev.opera.com/articles/http-lets-get-it-on/)
 - [HTTP: Response Codes](https://dev.opera.com/articles/http-response-codes/)
 
 ## Credit

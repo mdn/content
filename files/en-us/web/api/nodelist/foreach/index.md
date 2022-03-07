@@ -36,7 +36,7 @@ someNodeList.forEach(callback[, thisArg]);
       - : The index of the `currentValue` being processed in
         `someNodeList`.
     - `listObj` {{Optional_inline}}
-      - : The `someNodeList` that `forEach()` is being
+      - : The `someNodeList` that `forEach()` is being
         applied to.
 
 - `thisArg` {{Optional_inline}}
@@ -115,6 +115,6 @@ The above behavior is how many browsers actually implement
 
 ## See also
 
-- A polyfill of `NodeList.prototype.forEach` is available in [`core-js`](https://github.com/zloirock/core-js#iterable-dom-collections)
+- [Polyfill of `NodeList.prototype.forEach` in `core-js`](https://github.com/zloirock/core-js#iterable-dom-collections)
 - {{domxref("Node")}}
 - {{domxref("NodeList")}}

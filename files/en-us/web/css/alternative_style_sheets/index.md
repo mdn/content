@@ -6,6 +6,12 @@ tags:
   - Guide
   - HTML
   - Reference
+spec-urls:
+  - https://html.spec.whatwg.org/multipage/#rel-alternate
+  - https://html.spec.whatwg.org/multipage/#the-link-is-an-alternative-stylesheet
+  - https://html.spec.whatwg.org/multipage/#attr-style-title
+  - https://html.spec.whatwg.org/multipage/#attr-meta-http-equiv-default-style
+  - https://drafts.csswg.org/cssom/#css-style-sheet-collections
 ---
 {{CSSRef}}
 
@@ -49,14 +55,7 @@ Use `rel="stylesheet"` to link to the default style, and `rel="alternate stylesh
 
 ## Specifications
 
-| Specification                                                                                                                            | Status                           | Comment                                                                                                                                                                                                                                                                                                                         |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#rel-alternate', 'link type "alternate"')}}                                             | {{Spec2('HTML WHATWG')}} |                                                                                                                                                                                                                                                                                                                                 |
-| {{SpecName('HTML WHATWG', '#the-link-is-an-alternative-stylesheet', 'alternative stylesheet')}}         | {{Spec2('HTML WHATWG')}} |                                                                                                                                                                                                                                                                                                                                 |
-| {{SpecName('HTML WHATWG', '#attr-style-title', 'the "title" attribute for the style element')}}         | {{Spec2('HTML WHATWG')}} |                                                                                                                                                                                                                                                                                                                                 |
-| {{SpecName('HTML WHATWG', '#attr-meta-http-equiv-default-style', 'meta http-equiv="default-style")')}} | {{Spec2('HTML WHATWG')}} |                                                                                                                                                                                                                                                                                                                                 |
-| {{SpecName('CSSOM', '#css-style-sheet-collections', 'CSS Style Sheet Collections')}}                         | {{Spec2('CSSOM')}}         | The CSS OM specification defines the concepts of the **style sheet set name**, its **disabled flag**, and the **preferred CSS style sheet set name**. It defines how these are determined, and lets the HTML specification define the HTML-specific behaviors by requiring it to define when to **_create a CSS style sheet_**. |
-| {{SpecName("HTML4.01", "present/styles.html#h-14.3", "Alternative style sheets")}}                             | {{Spec2("HTML4.01")}}     | Earlier, the HTML specification itself defined the concept of preferred and alternate stylesheets.                                                                                                                                                                                                                              |
+{{Specifications}}
 
 ## Browser compatibility
 

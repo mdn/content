@@ -21,7 +21,7 @@ The **`DedicatedWorkerGlobalScope`** object (the {{domxref("Worker")}} global sc
 _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}._
 
 - {{domxref("DedicatedWorkerGlobalScope.name")}} {{readOnlyinline}}
-  - : The name that the {{domxref("Worker")}} was (optionally) given when it was created using the {{domxref("Worker.Worker", "Worker()")}} constructor. This is mainly useful for debugging purposes.
+  - : The name that the {{domxref("Worker")}} was (optionally) given when it was created using the {{domxref("Worker.Worker", "Worker()")}} constructor. This is mainly useful for debugging purposes.
 
 ### Properties inherited from WorkerGlobalScope
 

@@ -10,9 +10,9 @@ tags:
 ---
 Cognitive accessibility covers accessibility considerations for people with cognition and learning disabilities. This document introduces cognitive accessibility and improving accessibility of the web for people with cognitive and learning differences.
 
-Cognitive impairment refers to a broad range of disabilities, from people with intellectual disabilities who may have the most-limited capabilities, to age-related issues with thinking and remembering. The range includes people with mental illnesses, such as depression and schizophrenia. It also includes people with learning disabilities, such as dyslexia and attention deficit hyperactivity disorder (ADHD).
+Cognitive impairment refers to a broad range of disabilities, from people with intellectual disabilities who may have the most-limited capabilities, to age-related issues with thinking and remembering. The range includes people with mental illnesses, such as depression and schizophrenia. It also includes people with learning disabilities, such as dyslexia and attention deficit hyperactivity disorder (ADHD).
 
-Though there is a lot of diversity within clinical definitions of cognitive impairments, people with them experience a common set of functional problems. These problems include difficulty with understanding content, remembering how to complete tasks, and confusion caused by inconsistent or non-traditional web page layouts. In this document, we focus on steps developers should take to improve the cognitive accessibility of their web sites and applications.
+Though there is a lot of diversity within clinical definitions of cognitive impairments, people with them experience a common set of functional problems. These problems include difficulty with understanding content, remembering how to complete tasks, and confusion caused by inconsistent or non-traditional web page layouts. In this document, we focus on steps developers should take to improve the cognitive accessibility of their web sites and applications.
 
 ## Overview
 
@@ -87,7 +87,7 @@ Additional timing criteria to consider are:
 
 - People who have cognitive or language limitations may need more time to read and to understand. For improved usability remove any time limit. Timed content should also be avoided, with exceptions for non-interactive synchronized media and real-time events.
 - People with attention deficit disorders should be able to focus on content without distractions. The user should be able to postpone or suppress interruptions, except situations involving altering a person to an emergency. This provides access to people with cognitive disabilities by enabling them to focus on the main purpose of the content. Enable the user to postpone content updates by providing a way to request content updates rather than updating automatically. Also, enable a way to make nonessential alerts optional.
-- Ensure that people can continue an activity without loss of data after re-authenticating an expired session, for example, saving the state of a questionnaire. Make sure to save data in such a way that it can be modified after a user re-authenticates. Before re-authenticating, encode the data as hidden or encrypted.
+- Ensure that people can continue an activity without loss of data after re-authenticating an expired session, for example, saving the state of a questionnaire. Make sure to save data in such a way that it can be modified after a user re-authenticates. Before re-authenticating, encode the data as hidden or encrypted.
 - Providing warnings about inactivity that could result in data loss. When a timeout is used, tell people exactly how much time will cause the session to time out and result in lost data. The exception to this is preserving data for more than 20 hours when no actions are taken.
 
 ## Navigation
@@ -154,7 +154,7 @@ Proper use of `lang` allows some screen readers to announce the text properly wh
 
 ### Define unusual words and word usage
 
-Some disabilities make it difficult to understand nonliteral word usage, such as idioms, colloquialisms, and specialized jargon. Non-native language speakers may also struggle with these terms. If a word or phrase has a unique meaning, in the document provide a definition inline or linked, within a glossary, or to an online dictionary. If a word or phrase is used to mean more than one thing, define each use.
+Some disabilities make it difficult to understand nonliteral word usage, such as idioms, colloquialisms, and specialized jargon. Non-native language speakers may also struggle with these terms. If a word or phrase has a unique meaning, in the document provide a definition inline or linked, within a glossary, or to an online dictionary. If a word or phrase is used to mean more than one thing, define each use.
 
 ### Define abbreviations
 
@@ -265,11 +265,11 @@ Context-sensitive help should be made available. If a form requires text input, 
 
 The above are good design practices. They will benefit everyone.
 
-- Many people with cognitive impairments also have physical disabilities. Websites must conform with the W3C’s [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/).
-- The W3C’s [Cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/) produces web accessibility guidelines for people with cognitive impairments.
+- Many people with cognitive impairments also have physical disabilities. Websites must conform with the W3C's [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/).
+- The W3C's [Cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/) produces web accessibility guidelines for people with cognitive impairments.
 - WebAIM has a [Cognitive page](https://webaim.org/articles/cognitive/) of relevant information and resources.
 - The United States Centers for Disease Control estimate that, as of 2018, 1 in 4 U.S. citizens have a disability and, of them, [cognitive impairment is the most common for young people](https://www.cdc.gov/media/releases/2018/p0816-disability.html).
-- In the U.S., “intellectual disabilities” used to be called “mental retardation.” In the U.K., “intellectual disabilities” is commonly called “learning disabilities” or “learning difficulties”.
+- In the U.S., "intellectual disabilities" used to be called "mental retardation." In the U.K., "intellectual disabilities" is commonly called "learning disabilities" or "learning difficulties".
 
 ## See also
 

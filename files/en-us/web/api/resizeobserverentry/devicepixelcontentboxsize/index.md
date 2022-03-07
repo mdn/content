@@ -17,9 +17,9 @@ the {{domxref("ResizeObserverEntry")}} interface returns an array containing the
 
 ## Value
 
-An array containing objects with the new size of the observed element in device pixels. The
-array is necessary to support elements that have multiple fragments, which occur in
-multi-column scenarios. Each object in the array contains two properties:
+An array containing objects with the new size of the observed element in device pixels. The
+array is necessary to support elements that have multiple fragments, which occur in
+multi-column scenarios. Each object in the array contains two properties:
 
 - `blockSize`
   - : The size of the content-box, in device pixels, of the block dimension of the observed element. For boxes

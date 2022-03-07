@@ -91,7 +91,7 @@ a[href*="insensitive" i] {
 /* Links with "cAsE" anywhere in the URL,
 with matching capitalization */
 a[href*="cAsE" s] {
-  color: pink;
+  color: pink;
 }
 
 /* Links that end in ".org" */
@@ -101,7 +101,7 @@ a[href$=".org"] {
 
 /* Links that start with "https" and end in ".org" */
 a[href^="https"][href$=".org"] {
-  color: green;
+  color: green;
 }
 ```
 
@@ -203,7 +203,7 @@ ol[type="A" s] {
 
 ```html
 <ol type="A">
-  <li>Example list</li>
+  <li>Example list</li>
 </ol>
 ```
 

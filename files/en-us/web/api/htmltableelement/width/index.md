@@ -33,11 +33,11 @@ percentage value.
 mytable.width = "75%";
 ```
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Specifications
 
 - W3C DOM 2 HTML Specification [_HTMLTableElement_
   .width](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-77447361)
+
+## Browser compatibility
+
+{{Compat}}

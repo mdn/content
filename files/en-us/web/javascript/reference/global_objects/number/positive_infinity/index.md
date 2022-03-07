@@ -29,7 +29,7 @@ This value behaves slightly differently than mathematical infinity:
 - `POSITIVE_INFINITY`, divided by any negative value except {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}, is {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}.
 - `POSITIVE_INFINITY`, divided by any positive value except `POSITIVE_INFINITY`, is `POSITIVE_INFINITY`.
 - `POSITIVE_INFINITY`, divided by either {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}} or `POSITIVE_INFINITY`, is {{jsxref("NaN")}}.
-- `Number.POSITIVE_INFINITY > x` is true for any number _x_ that isn’t `POSITIVE_INFINITY`.
+- `Number.POSITIVE_INFINITY > x` is true for any number _x_ that isn't `POSITIVE_INFINITY`.
 
 You might use the `Number.POSITIVE_INFINITY` property to indicate an error condition that returns a finite number in case of success. Note, however, that {{jsxref("isFinite")}} would be more appropriate in such a case.
 

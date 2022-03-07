@@ -24,7 +24,7 @@ browser-compat: api.XRInputSourceArray.forEach
 {{APIRef("WebXR Device API")}}
 
 The {{domxref("XRInputSourceArray")}}
-method **`forEach()`** executes the specified callback once for
+method **`forEach()`** executes the specified callback once for
 each input source in the array, starting at index 0 and progressing until the end of the
 list.
 
@@ -39,17 +39,17 @@ xrInputSourceArray.forEach(callback, thisArg);
 - `callback`
 
   - : A function to execute once for each entry in the
-    array `xrInputSourceArray`. The callback accepts up to three parameters:
+    array `xrInputSourceArray`. The callback accepts up to three parameters:
 
     - `currentValue`
       - : A {{domxref("XRInputSource")}} object which is the value of the item from within
-        the `xrInputSourceArray` which is currently being processed.
-    - `currentIndex` {{optional_inline}}
+        the `xrInputSourceArray` which is currently being processed.
+    - `currentIndex` {{optional_inline}}
       - : An integer value providing the index into the array at which the element given
-        by `currentValue` is located. If you don't need to know the index
+        by `currentValue` is located. If you don't need to know the index
         number, you can omit this.
     - `sourceList` {{optional_inline}}
-      - : The {{domxref("XRInputSourceArray")}} object which is being processed. If you
+      - : The {{domxref("XRInputSourceArray")}} object which is being processed. If you
         don't need this information, you may omit this.
 
 - `thisArg` {{optional_inline}}
@@ -57,7 +57,7 @@ xrInputSourceArray.forEach(callback, thisArg);
     [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)
     while executing the callback. Note that if you use [arrow function
     notation](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (`=>`) to provide the callback, you can
-    omit `thisArg`, since all arrow functions lexically bind `this`.
+    omit `thisArg`, since all arrow functions lexically bind `this`.
 
 ### Return value
 
@@ -72,26 +72,26 @@ type of input device it supports using.
 let inputSources = xrSession.inputSources;
 
 inputSources.forEach((input) => {
-  if (input.gamepad) {
-    checkGamepad(input.gamepad);
-  } else {
+  if (input.gamepad) {
+    checkGamepad(input.gamepad);
+  } else {
     if (input.targetRayMode === "tracked-pointer" &&
-        input.handedness === player.handedness) {
-      /* Handle main hand controller */
-      handleMainHandInput(input);
-    } else {
-      /* Handle other inputs */
-    }
-  }
+        input.handedness === player.handedness) {
+      /* Handle main hand controller */
+      handleMainHandInput(input);
+    } else {
+      /* Handle other inputs */
+    }
+  }
 });
 ```
 
-For each input in the llist, the callback dispatches gamepad inputs to
-a `checkGamepad()` with the input's {{domxref("Gamepad")}} object, taken from
-its {{domxref("XRInputSource.gamepad", "gamepad")}} property, as an input
+For each input in the list, the callback dispatches gamepad inputs to
+a `checkGamepad()` with the input's {{domxref("Gamepad")}} object, taken from
+its {{domxref("XRInputSource.gamepad", "gamepad")}} property, as an input
 
-For other devices, we look for `tracked-pointer` devices in the player's
-main hand, dispatching those to a `handleMainHandInput()` method.
+For other devices, we look for `tracked-pointer` devices in the player's
+main hand, dispatching those to a `handleMainHandInput()` method.
 
 ## Specifications
 
@@ -105,5 +105,5 @@ main hand, dispatching those to a `handleMainHandInput()` method.
 
 - [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/Inputs)
 - The
-  [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) method `forEach()`
+  [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) method `forEach()`
 - {{domxref("XRInputSource")}}

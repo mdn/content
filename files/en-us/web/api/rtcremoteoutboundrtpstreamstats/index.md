@@ -22,11 +22,11 @@ browser-compat: api.RTCRemoteOutboundRtpStreamStats
 ---
 {{DefaultAPISidebar("WebRTC")}}
 
-The WebRTC statistics model's **`RTCRemoteOutboundRtpStreamStats`** dictionary extends the underlying {{domxref("RTCSentRtpStreamStats")}} dictionary with properties measuring metrics specific to outgoing {{Glossary("RTP")}} streams.
+The WebRTC statistics model's **`RTCRemoteOutboundRtpStreamStats`** dictionary extends the underlying {{domxref("RTCSentRtpStreamStats")}} dictionary with properties measuring metrics specific to outgoing {{Glossary("RTP")}} streams.
 
 ## Properties
 
-_In addition to the properties defined by {{domxref("RTCSentRtpStreamStats")}} and its underlying {{domxref("RTCRtpStreamstats")}} and {{domxref("RTCStats")}} dictionaries, `RTCRemoteOutboundRtpStreamStats` defines the following properties._
+_In addition to the properties defined by {{domxref("RTCSentRtpStreamStats")}} and its underlying {{domxref("RTCRtpStreamstats")}} and {{domxref("RTCStats")}} dictionaries, `RTCRemoteOutboundRtpStreamStats` defines the following properties._
 
 - {{domxref("RTCRemoteOutboundRtpStreamStats.localId", "localId")}}
   - : A {{domxref("DOMString")}} which is used to find the local {{domxref("RTCInboundRtpStreamStats")}} object which shares the same Synchronization Source (SSRC).
@@ -35,7 +35,7 @@ _In addition to the properties defined by {{domxref("RTCSentRtpStreamStats")}} 
 
 ## Usage notes
 
-The `RTCRemoteOutboundRtpStreamStats` object's {{domxref("RTCRemoteOutboundRtpStreamStats.remoteTimestamp", "remoteTimestamp")}} property provides statistics based on the received data's NTP timestamp taken from an {{Glossary("RTCP")}} Sender Report (SR) block. Be aware that the remote clock may not be synchronized with the local clock (either in current time or speed at which time elapses).
+The `RTCRemoteOutboundRtpStreamStats` object's {{domxref("RTCRemoteOutboundRtpStreamStats.remoteTimestamp", "remoteTimestamp")}} property provides statistics based on the received data's NTP timestamp taken from an {{Glossary("RTCP")}} Sender Report (SR) block. Be aware that the remote clock may not be synchronized with the local clock (either in current time or speed at which time elapses).
 
 ## Specifications
 

@@ -31,7 +31,7 @@ It may be necessary to move an element around, even though you can position it w
 
 ```html
 <svg width="40" height="50" style="background-color:#bff;">
-    <rect x="0" y="0" width="10" height="10" transform="translate(30,40)" />
+    <rect x="0" y="0" width="10" height="10" transform="translate(30,40)" />
 </svg>
 ```
 
@@ -73,7 +73,7 @@ To make a rhombus out of our rectangle, the `skewX()` and `skewY()` transformati
 
 ## Scaling
 
-`scale()` changes the size of an element. It takes two numbers, the first being the *x* scale factor and the second being the *y* scale factor. The factors are taken as the ratio of the transformed dimension to the original. For example, *0.5 shrinks by 50%. If the second number is omitted, it is assumed to be equal to the first.*
+`scale()` changes the size of an element. It takes two numbers, the first being the *x* scale factor and the second being the *y* scale factor. The factors are taken as the ratio of the transformed dimension to the original. For example, *0.5 shrinks by 50%. If the second number is omitted, it is assumed to be equal to the first.*
 
 ## Complex transformations with `matrix()`
 
@@ -89,7 +89,7 @@ When using transformations you establish a new coordinate system inside the elem
 
 ```html
 <svg width="100" height="100">
-    <g transform="scale(2)">
+    <g transform="scale(2)">
         <rect width="50" height="50" />
     </g>
 </svg>

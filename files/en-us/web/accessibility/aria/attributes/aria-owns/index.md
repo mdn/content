@@ -51,8 +51,8 @@ Make sure your owned elements have only one owner. Do not specify the `id` of an
 
 ## Values
 
- - `id` list
-   - : Space separated list of one or more ID values referencing the elements being owned by the current element
+- `id` list
+  - : Space separated list of one or more ID values referencing the elements being owned by the current element
 
 ## Associated roles
 

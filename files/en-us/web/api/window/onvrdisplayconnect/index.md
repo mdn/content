@@ -3,7 +3,7 @@ title: Window.onvrdisplayconnect
 slug: Web/API/Window/onvrdisplayconnect
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -35,7 +35,7 @@ window.onvrdisplayconnect = function() { /* ... */ };
 
 ```js
 window.onvrdisplayconnect = function() {
-  info.textContent = 'Display connected.';
+  info.textContent = 'Display connected.';
 };
 ```
 

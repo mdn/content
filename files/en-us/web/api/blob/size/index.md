@@ -4,13 +4,9 @@ slug: Web/API/Blob/size
 tags:
   - API
   - Blob
-  - Bytes
   - File API
-  - Files
   - Property
   - Reference
-  - length
-  - size
 browser-compat: api.Blob.size
 ---
 {{APIRef("File API")}}
@@ -18,13 +14,7 @@ browser-compat: api.Blob.size
 The {{domxref("Blob")}} interface's **`size`** property returns
 the size of the {{domxref("Blob")}} or {{domxref("File")}} in bytes.
 
-## Syntax
-
-```js
-var sizeInBytes = blob.size
-```
-
-### Value
+## Value
 
 The number of bytes of data contained within the `Blob` (or
 `Blob`-based object, such as a {{domxref("File")}}).

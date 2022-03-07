@@ -305,7 +305,7 @@ Before version 10 (or EcmaScript 2019), sort stability was not guaranteed, meani
 
 ## See also
 
-- A polyfill of `Array.prototype.sort` with modern behavior like stable sort is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.sort` with modern behavior like stable sort in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.reverse()")}}
 - {{jsxref("String.prototype.localeCompare()")}}
 - [About the stability of the algorithm used

@@ -69,12 +69,12 @@ See related [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/
 
 Used in roles:
 
- - [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_role)
+- [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_role)
 
 Inherits into roles:
 
- - [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_role)
- - [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_role)
+- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_role)
+- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_role)
 
 ## Specifications
 

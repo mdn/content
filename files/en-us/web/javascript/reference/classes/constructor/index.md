@@ -10,7 +10,7 @@ browser-compat: javascript.classes.constructor
 ---
 {{jsSidebar("Classes")}}
 
-The `constructor` method is a special method of a {{jsxref("Statements/class", "class")}} for creating and initializing an object instance of that class.
+The `constructor` method is a special method of a {{jsxref("Statements/class", "class")}} for creating and initializing an object instance of that class.
 
 {{EmbedInteractiveExample("pages/js/classes-constructor.html")}}
 
@@ -119,7 +119,7 @@ try {
 ```
 
 There can be only one special method with the name "`constructor`" in a class.
-Having more than one occurrence of a `constructor` method in a class will throw a {{jsxref("SyntaxError")}} error.
+Having more than one occurrence of a `constructor` method in a class will throw a {{jsxref("SyntaxError")}} error.
 
 ## Examples
 
@@ -144,7 +144,7 @@ class Square extends Polygon {
 
   set area(value) {
     this.height = value**0.5;
-    this.width = value**0.5;
+    this.width = value**0.5;
   }
 }
 ```

@@ -303,7 +303,7 @@ The next rendering step involves:
 - Running the `drawGeometry()` function, which renders the actual scene — because of what we specified in the previous two steps, we will render it for the left eye only.
 
 ```js
-  // WebVR: Render the left eye’s view to the left half of the canvas
+  // WebVR: Render the left eye's view to the left half of the canvas
   gl.viewport(0, 0, canvas.width * 0.5, canvas.height);
   gl.uniformMatrix4fv(projectionMatrixLocation, false, frameData.leftProjectionMatrix);
   gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.leftViewMatrix);
@@ -313,7 +313,7 @@ The next rendering step involves:
 We now do exactly the same thing, but for the right eye:
 
 ```js
-  // WebVR: Render the right eye’s view to the right half of the canvas
+  // WebVR: Render the right eye's view to the right half of the canvas
   gl.viewport(canvas.width * 0.5, 0, canvas.width * 0.5, canvas.height);
   gl.uniformMatrix4fv(projectionMatrixLocation, false, frameData.rightProjectionMatrix);
   gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.rightViewMatrix);

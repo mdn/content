@@ -48,7 +48,7 @@ number.
 - A _second_ decimal point also stops parsing (characters up to that point
   will still be parsed).
 - Leading and trailing spaces in the argument are ignored.
-- If the argument’s first character can’t be converted to a number (it’s not any of
+- If the argument's first character can't be converted to a number (it's not any of
   the above characters), `parseFloat` returns {{jsxref("NaN")}}.
 - `parseFloat` can also parse and return {{jsxref("Infinity")}}.
 - `parseFloat` converts {{jsxref("BigInt")}} syntax to {{jsxref("Number", "Numbers")}}, losing precision. This happens because the trailing `n`

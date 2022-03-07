@@ -31,7 +31,7 @@ A string representing the given date.
 {{jsxref("Date")}} instances inherit their `toString()` method from
 {{jsxref("Date.prototype")}}, not {{jsxref("Object.prototype")}}.
 `Date.prototype.toString()` returns a string representation of the Date in
-the format specified in ECMA-262 which can be summarised as:
+the format specified in ECMA-262 which can be summarized as:
 
 - Week day: 3 letter English week day name, e.g. "Sat"
 - space

@@ -32,7 +32,7 @@ Wrapping works as you might expect when combined with `flex-direction`. If `flex
 
 {{EmbedGHLiveSample("css-examples/flexbox/wrapping/row-reverse-wrap.html", '100%', 750)}}
 
-Note that the reversing is only happening in the inline, row direction. We start on the right then go onto the second line and again start from the right. We aren’t reversing in both directions, starting from the bottom coming up the container!
+Note that the reversing is only happening in the inline, row direction. We start on the right then go onto the second line and again start from the right. We aren't reversing in both directions, starting from the bottom coming up the container!
 
 ## Single-dimensional layout explained
 
@@ -40,11 +40,11 @@ As we have seen from the above examples if our items are allowed to grow and shr
 
 There is no method in flexbox to tell items in one row to line up with items in the row above — each flex line acts like a new flex container. It deals with space distribution across the main axis. If there is only one item, and that item is allowed to grow, it will fill the axis just as if you had a single item flex container.
 
-If you want layout in two dimensions then you probably want Grid Layout. We can compare our wrapped row example above with the CSS Grid version of that layout to see the difference. The following live sample uses CSS Grid Layout to create a layout that has as many columns of at least 160 pixels as will fit, distributing the extra space between all columns. However, in this case the items stay in their grid and don’t stretch out when there are fewer of them on the final row.
+If you want layout in two dimensions then you probably want Grid Layout. We can compare our wrapped row example above with the CSS Grid version of that layout to see the difference. The following live sample uses CSS Grid Layout to create a layout that has as many columns of at least 160 pixels as will fit, distributing the extra space between all columns. However, in this case the items stay in their grid and don't stretch out when there are fewer of them on the final row.
 
 {{EmbedGHLiveSample("css-examples/flexbox/wrapping/grid-example.html", '100%', 700)}}
 
-This is the difference between one and two-dimensional layout. In a one dimensional method like flexbox, we only control the row or column. In two dimensional layout like grid we control both at the same time. If you want the space distribution row by row, use flexbox. If you don’t, use Grid.
+This is the difference between one and two-dimensional layout. In a one dimensional method like flexbox, we only control the row or column. In two dimensional layout like grid we control both at the same time. If you want the space distribution row by row, use flexbox. If you don't, use Grid.
 
 ## How do flexbox-based grid systems work?
 
@@ -70,7 +70,7 @@ It is this requirement that the gap properties, once implemented, will solve for
 
 The flexbox specification details what should happen if a flex item is collapsed by setting `visibility: collapse` on an item. See the MDN documentation for the {{cssxref("visibility")}} property. The specification describes the behavior as follows:
 
-> “Specifying visibility:collapse on a flex item causes it to become a collapsed flex item, producing an effect similar to visibility:collapse on a table-row or table-column: the collapsed flex item is removed from rendering entirely, but leaves behind a "strut" that keeps the flex line’s cross-size stable. Thus, if a flex container has only one flex line, dynamically collapsing or uncollapsing items may change the flex container’s main size, but is guaranteed to have no effect on its cross size and won’t cause the rest of the page’s layout to "wobble". Flex line wrapping is re-done after collapsing, however, so the cross-size of a flex container with multiple lines might or might not change.” - [Collapsed items](https://www.w3.org/TR/css-flexbox-1/#visibility-collapse)
+> "Specifying visibility:collapse on a flex item causes it to become a collapsed flex item, producing an effect similar to visibility:collapse on a table-row or table-column: the collapsed flex item is removed from rendering entirely, but leaves behind a "strut" that keeps the flex line's cross-size stable. Thus, if a flex container has only one flex line, dynamically collapsing or uncollapsing items may change the flex container's main size, but is guaranteed to have no effect on its cross size and won't cause the rest of the page's layout to "wobble". Flex line wrapping is re-done after collapsing, however, so the cross-size of a flex container with multiple lines might or might not change." - [Collapsed items](https://www.w3.org/TR/css-flexbox-1/#visibility-collapse)
 
 This behavior is useful if you want to target flex items using JavaScript to show and hide content for example. The example in the specification demonstrates one such pattern.
 
@@ -88,8 +88,8 @@ I have created this behavior in the next live example. You can see how the stret
 
 {{EmbedGHLiveSample("css-examples/flexbox/wrapping/wrapped-visibility-collapse.html", '100%', 750)}}
 
-If this causes a problem for your layout it may require a rethinking of the structure, for example putting each row into a separate flex container in order that they can’t shift rows.
+If this causes a problem for your layout it may require a rethinking of the structure, for example putting each row into a separate flex container in order that they can't shift rows.
 
-### The difference between `visibility: hidden` and `display: none`
+### The difference between `visibility: hidden` and `display: none`
 
-When you set an item to `display: none` in order to hide it, the item is removed from the formatting structure of the page. What this means in practice is that counters ignore it, and things like transitions do not run. Using `visibility: hidden` keeps the box in the formatting structure which is useful in that it still behaves as if it were part of the layout even though the user can’t see it.
+When you set an item to `display: none` in order to hide it, the item is removed from the formatting structure of the page. What this means in practice is that counters ignore it, and things like transitions do not run. Using `visibility: hidden` keeps the box in the formatting structure which is useful in that it still behaves as if it were part of the layout even though the user can't see it.

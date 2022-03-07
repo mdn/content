@@ -39,12 +39,12 @@ _This interface also inherits properties from {{domxref("EventTarget")}}._
 - {{domxref("TextTrackCue.pauseOnExit")}}
   - : A `boolean` for whether the video will pause when this cue stops being displayed.
 
-## Event handlers
+## Events
 
-- {{domxref("TextTrackCue.onenter")}}
-  - : The event handler fired when a cue becomes active.
-- {{domxref("TextTrackCue.onexit")}}
-  - : The event handler fired when the cue has stopped being active.
+- {{domxref("TextTrackCue.enter_event", "enter")}}
+  - : Fired when a cue becomes active.
+- {{domxref("TextTrackCue.exit_event", "exit")}}
+  - : Fired when the cue has stopped being active.
 
 ## Specifications
 

@@ -25,7 +25,7 @@ The bitwise NOT operator (`~`) inverts the bits of its operand. Like other bitwi
 
 The operand is converted to a 32-bit signed integer and expressed as a series of bits (zeroes
 and ones). Numbers with more than 32 bits get their most significant bits discarded. For
-example, the following integer, with more than 32 bits, will be converted to a 32-bit signed
+example, the following integer, with more than 32 bits, will be converted to a 32-bit signed
 integer:
 
 ```js
@@ -43,7 +43,7 @@ The truth table for the `NOT` operation is:
 | 1   | 0     |
 
 ```js
- 9 (base 10) = 00000000000000000000000000001001 (base 2)
+ 9 (base 10) = 00000000000000000000000000001001 (base 2)
                --------------------------------
 ~9 (base 10) = 11111111111111111111111111110110 (base 2) = -10 (base 10)
 ```

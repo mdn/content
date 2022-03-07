@@ -16,14 +16,14 @@ Exported WebAssembly functions are how WebAssembly functions are represented in 
 
 ## Exported... what?
 
-Exported WebAssembly functions are basically just JavaScript wrappers that represent WebAssembly functions in JavaScript. When you call them, you get some activity in the background to convert the arguments into types that wasm can work with (for example converting JavaScript numbers to Int32), the arguments are passed to the function inside your wasm module, the function is invoked, and the result is converted and passed back to JavaScript.
+Exported WebAssembly functions are basically just JavaScript wrappers that represent WebAssembly functions in JavaScript. When you call them, you get some activity in the background to convert the arguments into types that wasm can work with (for example converting JavaScript numbers to Int32), the arguments are passed to the function inside your wasm module, the function is invoked, and the result is converted and passed back to JavaScript.
 
 You can retrieve exported WebAssembly functions in two ways:
 
 - By calling [`Table.prototype.get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) on an existing table.
 - By accessing a function exported from a wasm module instance via [`Instance.exports`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports).
 
-Either way, you get the same kind of wrapper for the underlying function.  From a JavaScript point of view, it's as if every wasm function _is_ a JavaScript function too — but they are encapsulated by the exported wasm function object instance and there are only limited ways to access them.
+Either way, you get the same kind of wrapper for the underlying function.  From a JavaScript point of view, it's as if every wasm function _is_ a JavaScript function too — but they are encapsulated by the exported wasm function object instance and there are only limited ways to access them.
 
 ## An example
 

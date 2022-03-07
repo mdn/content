@@ -62,7 +62,7 @@ Let's go on to look at some specific examples.
 
 ## Creating a waveform/oscilloscope
 
-To create the oscilloscope visualisation (hat tip to [Soledad Penadés](https://soledadpenades.com/) for the original code in [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167)), we first follow the standard pattern described in the previous section to set up the buffer:
+To create the oscilloscope visualisation (hat tip to [Soledad Penadés](https://soledadpenades.com/) for the original code in [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167)), we first follow the standard pattern described in the previous section to set up the buffer:
 
 ```js
 analyser.fftSize = 2048;
@@ -116,7 +116,7 @@ var sliceWidth = WIDTH * 1.0 / bufferLength;
 var x = 0;
 ```
 
-Now we run through a loop, defining the position of a small segment of the wave for each point in the buffer at a certain height based on the data point value form the array, then moving the line across to the place where the next wave segment should be drawn:
+Now we run through a loop, defining the position of a small segment of the wave for each point in the buffer at a certain height based on the data point value from the array, then moving the line across to the place where the next wave segment should be drawn:
 
 ```js
       for(var i = 0; i < bufferLength; i++) {

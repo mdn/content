@@ -29,7 +29,7 @@ window.onappinstalled = function(event) { /* ... */ };
 
 ```js
 window.onappinstalled = function(ev) {
-  console.log('The application was installed.');
+  console.log('The application was installed.');
 };
 ```
 

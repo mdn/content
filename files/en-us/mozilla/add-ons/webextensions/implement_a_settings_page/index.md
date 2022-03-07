@@ -24,7 +24,7 @@ Implementing a settings page is a three-step process:
 
 First, we'll write an extension that adds a blue border to every page the user visits.
 
-Create a new directory called `settings`, then create a file called `manifest.json` inside it with the following contents:
+Create a new directory called `settings`, then create a file called `manifest.json` inside it with the following contents:
 
 ```json
 {
@@ -45,7 +45,7 @@ Create a new directory called `settings`, then create a file called `manifest.js
 
 This extension instructs the browser to load a content script called "borderify.js" into all web pages the user visits.
 
-Next, create a file called `borderify.js` inside the `settings` directory, and give it these contents:
+Next, create a file called `borderify.js` inside the `settings` directory, and give it these contents:
 
 ```js
 document.body.style.border = "10px solid blue";
@@ -59,7 +59,7 @@ Now [install](https://extensionworkshop.com/documentation/develop/temporary-inst
 
 Now let's create a settings page to allow the user to set the color of the border.
 
-First, update `manifest.json` so it has these contents:
+First, update `manifest.json` so it has these contents:
 
 ```json
 {
@@ -99,7 +99,7 @@ We've added three new manifest keys:
 - [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings)
   - : You have to include an extension id in order to save and retrieve settings from synchronized storage.
 
-Next, because we've promised to provide `options.html`, let's create it. Create a file with that name inside the `settings` directory, and give it the following contents:
+Next, because we've promised to provide `options.html`, let's create it. Create a file with that name inside the `settings` directory, and give it the following contents:
 
 ```html
 <!DOCTYPE html>
@@ -162,7 +162,7 @@ This does two things:
 
 You could store the settings values in local storage instead if you feel that local storage is preferable for your extension.
 
-> **Note:** The implementation of `storage.sync` in Firefox relies on the Add-on ID. If you use `storage.sync`, you must set an ID for your extension using the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in `manifest.json`, as shown in the example manifest above. See {{bug(1323228)}} for related information.
+> **Note:** The implementation of `storage.sync` in Firefox relies on the Add-on ID. If you use `storage.sync`, you must set an ID for your extension using the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in `manifest.json`, as shown in the example manifest above. See {{bug(1323228)}} for related information.
 
 Finally, update `borderify.js` to read the border color from storage:
 
@@ -202,7 +202,7 @@ Now:
 
 ## Learn more
 
-- [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) key of `manifest.json` reference documentation
+- [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) key of `manifest.json` reference documentation
 - [`storage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage) API reference documentation
 - open the settings page directly from your extension using the [`runtime.openOptionsPage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) API
 - Settings page example:

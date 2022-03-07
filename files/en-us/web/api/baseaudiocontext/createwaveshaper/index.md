@@ -38,8 +38,8 @@ node. For applied examples/information, check out our [Voice-change-O-matic](htt
 app.js](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js) for relevant code).
 
 > **Note:** Sigmoid functions are commonly used for distortion curves
-> because of their natural properties. Their S-shape, for instance, helps create a
-> smoother sounding result. We found the below distortion curve code on [Stack
+> because of their natural properties. Their S-shape, for instance, helps create a
+> smoother sounding result. We found the below distortion curve code on [Stack
 > Overflow](http://stackoverflow.com/questions/22312841/waveshaper-node-in-webaudio-how-to-emulate-distortion).
 
 ```js
@@ -49,17 +49,17 @@ var distortion = audioCtx.createWaveShaper();
   ...
 
 function makeDistortionCurve(amount) {
-  var k = typeof amount === 'number' ? amount : 50,
-    n_samples = 44100,
-    curve = new Float32Array(n_samples),
-    deg = Math.PI / 180,
-    i = 0,
-    x;
-  for ( ; i < n_samples; ++i ) {
-    x = i * 2 / n_samples - 1;
-    curve[i] = ( 3 + k ) * x * 20 * deg / ( Math.PI + k * Math.abs(x) );
-  }
-  return curve;
+  var k = typeof amount === 'number' ? amount : 50,
+    n_samples = 44100,
+    curve = new Float32Array(n_samples),
+    deg = Math.PI / 180,
+    i = 0,
+    x;
+  for ( ; i < n_samples; ++i ) {
+    x = i * 2 / n_samples - 1;
+    curve[i] = ( 3 + k ) * x * 20 * deg / ( Math.PI + k * Math.abs(x) );
+  }
+  return curve;
 };
 
   ...

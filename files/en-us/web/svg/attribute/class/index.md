@@ -13,8 +13,8 @@ Assigns a class name or set of class names to an element. You may assign the sam
 
 An element's class name serves two key roles:
 
-* As a style sheet selector, for when an author assigns style information to a set of elements.
-* For general use by the browser.
+- As a style sheet selector, for when an author assigns style information to a set of elements.
+- For general use by the browser.
 
 You can use this class to style SVG content using CSS.
 
@@ -82,57 +82,57 @@ You can use this class to style SVG content using CSS.
 
 The following elements can use the `class` attribute:
 
-* {{ SVGElement("a") }}
-* {{ SVGElement("altGlyph") }}
-* {{ SVGElement("circle") }}
-* {{ SVGElement("clipPath") }}
-* {{ SVGElement("defs") }}
-* {{ SVGElement("desc") }}
-* {{ SVGElement("ellipse") }}
-* {{ SVGElement("feBlend") }}
-* {{ SVGElement("feColorMatrix") }}
-* {{ SVGElement("feComponentTransfer") }}
-* {{ SVGElement("feComposite") }}
-* {{ SVGElement("feConvolveMatrix") }}
-* {{ SVGElement("feDiffuseLighting") }}
-* {{ SVGElement("feDisplacementMap") }}
-* {{ SVGElement("feFlood") }}
-* {{ SVGElement("feGaussianBlur") }}
-* {{ SVGElement("feImage") }}
-* {{ SVGElement("feMerge") }}
-* {{ SVGElement("feMorphology") }}
-* {{ SVGElement("feOffset") }}
-* {{ SVGElement("feSpecularLighting") }}
-* {{ SVGElement("feTile") }}
-* {{ SVGElement("feTurbulence") }}
-* {{ SVGElement("filter") }}
-* {{ SVGElement("font") }}
-* {{ SVGElement("foreignObject") }}
-* {{ SVGElement("g") }}
-* {{ SVGElement("glyph") }}
-* {{ SVGElement("glyphRef") }}
-* {{ SVGElement("image") }}
-* {{ SVGElement("line") }}
-* {{ SVGElement("linearGradient") }}
-* {{ SVGElement("marker") }}
-* {{ SVGElement("mask") }}
-* {{ SVGElement("missing-glyph") }}
-* {{ SVGElement("path") }}
-* {{ SVGElement("pattern") }}
-* {{ SVGElement("polygon") }}
-* {{ SVGElement("polyline") }}
-* {{ SVGElement("radialGradient") }}
-* {{ SVGElement("rect") }}
-* {{ SVGElement("stop") }}
-* {{ SVGElement("svg") }}
-* {{ SVGElement("switch") }}
-* {{ SVGElement("symbol") }}
-* {{ SVGElement("text") }}
-* {{ SVGElement("textPath") }}
-* {{ SVGElement("title") }}
-* {{ SVGElement("tref") }}
-* {{ SVGElement("tspan") }}
-* {{ SVGElement("use") }}
+- {{ SVGElement("a") }}
+- {{ SVGElement("altGlyph") }}
+- {{ SVGElement("circle") }}
+- {{ SVGElement("clipPath") }}
+- {{ SVGElement("defs") }}
+- {{ SVGElement("desc") }}
+- {{ SVGElement("ellipse") }}
+- {{ SVGElement("feBlend") }}
+- {{ SVGElement("feColorMatrix") }}
+- {{ SVGElement("feComponentTransfer") }}
+- {{ SVGElement("feComposite") }}
+- {{ SVGElement("feConvolveMatrix") }}
+- {{ SVGElement("feDiffuseLighting") }}
+- {{ SVGElement("feDisplacementMap") }}
+- {{ SVGElement("feFlood") }}
+- {{ SVGElement("feGaussianBlur") }}
+- {{ SVGElement("feImage") }}
+- {{ SVGElement("feMerge") }}
+- {{ SVGElement("feMorphology") }}
+- {{ SVGElement("feOffset") }}
+- {{ SVGElement("feSpecularLighting") }}
+- {{ SVGElement("feTile") }}
+- {{ SVGElement("feTurbulence") }}
+- {{ SVGElement("filter") }}
+- {{ SVGElement("font") }}
+- {{ SVGElement("foreignObject") }}
+- {{ SVGElement("g") }}
+- {{ SVGElement("glyph") }}
+- {{ SVGElement("glyphRef") }}
+- {{ SVGElement("image") }}
+- {{ SVGElement("line") }}
+- {{ SVGElement("linearGradient") }}
+- {{ SVGElement("marker") }}
+- {{ SVGElement("mask") }}
+- {{ SVGElement("missing-glyph") }}
+- {{ SVGElement("path") }}
+- {{ SVGElement("pattern") }}
+- {{ SVGElement("polygon") }}
+- {{ SVGElement("polyline") }}
+- {{ SVGElement("radialGradient") }}
+- {{ SVGElement("rect") }}
+- {{ SVGElement("stop") }}
+- {{ SVGElement("svg") }}
+- {{ SVGElement("switch") }}
+- {{ SVGElement("symbol") }}
+- {{ SVGElement("text") }}
+- {{ SVGElement("textPath") }}
+- {{ SVGElement("title") }}
+- {{ SVGElement("tref") }}
+- {{ SVGElement("tspan") }}
+- {{ SVGElement("use") }}
 
 ## Browser compatibility
 

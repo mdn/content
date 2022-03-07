@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Motion Path
   - CSS Property
-  - Experimental
   - Motion Path
   - Reference
   - motion-offset

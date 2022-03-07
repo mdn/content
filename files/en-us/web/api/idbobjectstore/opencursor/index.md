@@ -19,7 +19,7 @@ The **`openCursor()`** method of the
 and, in a separate thread, returns a new {{domxref("IDBCursorWithValue")}} object.
 Used for iterating through an object store with a cursor.
 
-To determine if the add operation has completed successfully, listen for the results’s
+To determine if the add operation has completed successfully, listen for the results's
 `success` event.
 
 {{AvailableInWorkers}}
@@ -41,7 +41,7 @@ var request = ObjectStore.openCursor(query, direction);
 - direction {{optional_inline}}
   - : An [`IDBCursorDirection`](https://w3c.github.io/IndexedDB/#enumdef-idbcursordirection) telling the cursor what direction to travel.
     Valid values are `"next"`, `"nextunique"`, `"prev"`,
-    and `"prevunique"`. The default is `"next"`.
+    and `"prevunique"`. The default is `"next"`.
 
 ### Return value
 

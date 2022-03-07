@@ -18,9 +18,9 @@ border box size of the observed element when the callback is run.
 
 ## Value
 
-An array containing objects with the new border box size of the observed element. The
-array is necessary to support elements that have multiple fragments, which occur in
-multi-column scenarios. Each object in the array contains two properties:
+An array containing objects with the new border box size of the observed element. The
+array is necessary to support elements that have multiple fragments, which occur in
+multi-column scenarios. Each object in the array contains two properties:
 
 - `blockSize`
   - : The length of the observed element's border box in the block dimension. For boxes

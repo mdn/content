@@ -27,10 +27,13 @@ The **`SharedWorker`** interface represents a specific kind of worker that can b
 
 _Inherits properties from its parent, {{domxref("EventTarget")}}._
 
-- {{domxref("SharedWorker.onerror")}}
-  - : Is an {{domxref("EventListener")}} that is called whenever an {{domxref("ErrorEvent")}} of type `error` event occurs.
 - {{domxref("SharedWorker.port")}} {{readonlyInline}}
   - : Returns a {{domxref("MessagePort")}} object used to communicate with and control the shared worker.
+
+## Events
+
+- {{domxref("SharedWorker.error_event", "error")}}
+  - : Fires when an error occurs in the shared worker.
 
 ## Methods
 

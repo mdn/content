@@ -54,5 +54,5 @@ try {
 
 ## See also
 
-- A polyfill of `AggregateError` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
+- [Polyfill of `AggregateError` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
 - {{jsxref("Promise.any")}}

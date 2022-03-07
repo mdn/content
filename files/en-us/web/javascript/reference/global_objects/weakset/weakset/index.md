@@ -30,7 +30,7 @@ new WeakSet(iterable)
 
 ## Examples
 
-### Using the WeakSet object
+### Using the WeakSet object
 
 ```js
 var ws = new WeakSet();
@@ -61,5 +61,5 @@ Note that `foo !== bar`. While they are similar objects, _they are not
 
 ## See also
 
-- A polyfill of `WeakSet` is available in [`core-js`](https://github.com/zloirock/core-js#weakset)
+- [Polyfill of `WeakSet` in `core-js`](https://github.com/zloirock/core-js#weakset)
 - {{jsxref("WeakSet")}}

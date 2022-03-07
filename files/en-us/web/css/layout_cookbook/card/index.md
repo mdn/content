@@ -74,5 +74,5 @@ The various layout methods have different browser support. See the charts below 
 
 ## See also
 
-- {{Cssxref("grid-template-columns")}}, {{Cssxref("grid-template-rows")}}, {{Cssxref("gap")}}
+- {{Cssxref("grid-template-columns")}}, {{Cssxref("grid-template-rows")}}, {{Cssxref("gap")}}
 - [Inclusive Components: Card](https://inclusive-components.design/cards/)

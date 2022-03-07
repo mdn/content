@@ -27,25 +27,25 @@ This property is a shorthand for the following CSS properties:
 
 ```css
 /* Keyword values */
-place-items: auto center;
+place-items: center;
 place-items: normal start;
 
 /* Positional alignment */
 place-items: center normal;
-place-items: start auto;
+place-items: start legacy;
 place-items: end normal;
-place-items: self-start auto;
+place-items: self-start legacy;
 place-items: self-end normal;
-place-items: flex-start auto;
+place-items: flex-start legacy;
 place-items: flex-end normal;
-place-items: left auto;
+place-items: left legacy;
 place-items: right normal;
 
 /* Baseline alignment */
 place-items: baseline normal;
-place-items: first baseline auto;
+place-items: first baseline legacy;
 place-items: last baseline normal;
-place-items: stretch auto;
+place-items: stretch legacy;
 
 /* Global values */
 place-items: inherit;
@@ -56,43 +56,10 @@ place-items: unset;
 
 ### Values
 
-- `auto`
-  - : The value used is the value of the `justify-items` property of the parents box, unless the box has no parent, or is absolutely positioned, in these cases, `auto` represents `normal`.
-- `normal`
+One of the following forms:
 
-  - : The effect of this keyword is dependent of the layout mode we are in:
-
-    - In block-level layouts, the keyword is a synonym of `start`.
-    - In absolutely-positioned layouts, the keyword behaved like `start` on _replaced_ absolutely-positioned boxes, and as `stretch` on _all other_ absolutely-positioned boxes.
-    - In table cell layouts, this keyword has no meaning as this property is _ignored_.
-    - In flexbox layouts, this keyword has no meaning as this property is _ignored._
-    - In grid layouts, this keyword leads to a behavior similar to the one of `stretch`, except for boxes with an aspect ratio or an intrinsic sizes where it behaves like `start`.
-
-- `start`
-  - : The item is packed flush to each other toward the start edge of the alignment container in the appropriate axis.
-- `end`
-  - : The item is packed flush to each other toward the end edge of the alignment container in the appropriate axis.
-- `flex-start`
-  - : The item is packed flush to each other toward the edge of the alignment container depending on the flex container's main-start or cross-start side.
-    This only applies to flex layout items. For items that are not children of a flex container, this value is treated like `start`.
-- `flex-end`
-  - : The item is packed flush to each other toward the edge of the alignment container depending on the flex container's main-end or cross-end side.
-    This only applies to flex layout items. For items that are not children of a flex container, this value is treated like `end`.
-- `self-start`
-  - : The item is packed flush to the edge of the alignment container of the start side of the item, in the appropriate axis.
-- `self-end`
-  - : The item is packed flush to the edge of the alignment container of the end side of the item, in the appropriate axis.
-- `center`
-  - : The items are packed flush to each other toward the center of the alignment container.
-- `left`
-  - : The items are packed flush to each other toward the left edge of the alignment container. If the property’s axis is not parallel with the inline axis, this value behaves like `start`.
-- `right`
-  - : The items are packed flush to each other toward the right edge of the alignment container in the appropriate axis. If the property’s axis is not parallel with the inline axis, this value behaves like `start`.
-- `baseline`, `first baseline`, `last baseline`
-  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
-    The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
-- `stretch`
-  - : If the combined size of the items is less than the size of the alignment container, any `auto`-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container.
+- A single {{cssxref("align-items")}} value, which is used to set alignment in both block and inline directions.
+- An {{cssxref("align-items")}} value, which sets alignment in the block direction, followed by a {{cssxref("justify-items")}} value, which sets alignment in the inline direction.
 
 ## Formal definition
 

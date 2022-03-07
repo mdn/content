@@ -11,7 +11,7 @@ browser-compat: api.Screen.width
 {{APIRef("CSSOM")}}
 
 The **`Screen.width`** read-only property returns the width of
-the screen in pixels.
+the screen in CSS pixels.
 
 ## Syntax
 

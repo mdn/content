@@ -49,7 +49,7 @@ None.
 
 Very similar to {{domxref("WebGLRenderingContext.vertexAttribPointer()")}}. The main
 difference is that while values specified by `vertexAttribPointer` are
-always  interpreted as floating-point values in the shader (even if they were originally
+always  interpreted as floating-point values in the shader (even if they were originally
 specified as integers in the buffer), this method allows specifying values which are
 interpreted as integers in the shader.
 

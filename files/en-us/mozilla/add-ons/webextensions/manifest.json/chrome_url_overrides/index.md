@@ -23,9 +23,9 @@ browser-compat: webextensions.manifest.chrome_url_overrides
       <th scope="row">Example</th>
       <td>
         <pre class="brush: json">
-  "chrome_url_overrides" : {
-    "newtab": "my-new-tab.html"
-  }</pre
+  "chrome_url_overrides" : {
+    "newtab": "my-new-tab.html"
+  }</pre
         >
       </td>
     </tr>
@@ -51,7 +51,7 @@ The `chrome_url_overrides` key is an object that may have the following properti
       <td><code>bookmarks</code></td>
       <td><code>String</code></td>
       <td>
-        <p>Provide a replacement for the page that shows the bookmarks. </p>
+        <p>Provide a replacement for the page that shows the bookmarks. </p>
       </td>
     </tr>
     <tr>

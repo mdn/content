@@ -24,7 +24,7 @@ The color applies to decorations, such as underlines, overlines, strikethroughs,
 
 {{EmbedInteractiveExample("pages/css/text-decoration-color.html")}}
 
-CSS does not provide a direct mechanism for specifying a unique color for each line type. This effect can nevertheless be achieved by nesting elements, applying a different line type to each element (with the {{cssxref("text-decoration-line")}} property), and specifying the line color (with `text-decoration-color`) on a per-element basis.
+CSS does not provide a direct mechanism for specifying a unique color for each line type. This effect can nevertheless be achieved by nesting elements, applying a different line type to each element (with the {{cssxref("text-decoration-line")}} property), and specifying the line color (with `text-decoration-color`) on a per-element basis.
 
 ## Syntax
 

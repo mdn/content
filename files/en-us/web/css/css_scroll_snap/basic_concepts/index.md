@@ -15,7 +15,7 @@ The [CSS Scroll Snap specification](https://drafts.csswg.org/css-scroll-snap-1/)
 
 The key properties of the Scroll Snap specification are {{CSSxRef("scroll-snap-type")}} and {{CSSxRef("scroll-snap-align")}}. The `scroll-snap-type` property is used on the [scroll container](/en-US/docs/Glossary/Scroll_container) to state the type and direction of scrolling.
 
-The `scroll-snap-align` property must be used on child elements in order to set the position that scrolling will snap to. The below example demonstrates scroll snapping along the `y` axis, with `scroll-snap-align` used on the section element to dictate the point the scrolling should stop.
+The `scroll-snap-align` property must be used on child elements in order to set the position that scrolling will snap to. The below example demonstrates scroll snapping along the `y` axis, with `scroll-snap-align` used on the section element to dictate the point the scrolling should stop.
 
 {{EmbedGHLiveSample("css-examples/scroll-snap/mandatory-y.html", '100%', 700)}}
 
@@ -23,17 +23,17 @@ The `scroll-snap-align` property must be used on child elements in order to set 
 
 The {{CSSxRef("scroll-snap-type")}} property needs to know the direction in which scroll snapping happens. This could be `x` or `y`, or the logical mappings `block` or `inline`. You can also use the keyword `both` to have scroll snapping work along both axes.
 
-You can also pass in the keywords `mandatory`, or `proximity`. The `mandatory` keyword tells the browser whether the content _has_ to snap to a certain point, no matter where the scroll is. The `proximity` keyword means that it may snap to the point, but does not have to.
+You can also pass in the keywords `mandatory`, or `proximity`. The `mandatory` keyword tells the browser whether the content _has_ to snap to a certain point, no matter where the scroll is. The `proximity` keyword means that it may snap to the point, but does not have to.
 
 Using `mandatory` gives a very consistent experience — you know that the browser will always snap to each defined point. This means you can be confident that something you expect to be at the top of the screen will be when scrolling finishes. However, it can cause problems if the content is larger than you expect — users may find themselves in the frustrating position of never being able to scroll and view a certain point in the content. Therefore, use of mandatory should be carefully considered and only used in situations where you know how much content is on the screen at any one time.
 
-The `proximity` value will only snap to a position when it is close by, the exact distance being left to the browser to decide. In the example below you can change the value between `mandatory` and `proximity` to see the effect this has on the scroll experience.
+The `proximity` value will only snap to a position when it is close by, the exact distance being left to the browser to decide. In the example below you can change the value between `mandatory` and `proximity` to see the effect this has on the scroll experience.
 
 {{EmbedGHLiveSample("css-examples/scroll-snap/mandatory-proximity.html", '100%', 700)}}
 
 ## Using scroll-snap-align
 
-The {{CSSxRef("scroll-snap-align")}} property can take a value of `start`, `end`, or `center` — indicating the point the content should snap to in the scroll container. In the below example you can change the value of `scroll-snap-align` to see how this changes the scroll behavior.
+The {{CSSxRef("scroll-snap-align")}} property can take a value of `start`, `end`, or `center` — indicating the point the content should snap to in the scroll container. In the below example you can change the value of `scroll-snap-align` to see how this changes the scroll behavior.
 
 {{EmbedGHLiveSample("css-examples/scroll-snap/align.html", '100%', 700)}}
 
@@ -45,7 +45,7 @@ In the below example I have set `scroll-padding` to 40 pixels. When we snap to t
 
 {{EmbedGHLiveSample("css-examples/scroll-snap/scroll-padding.html", '100%', 700)}}
 
-This is potentially useful if you have a fixed element, for example a navigation bar, which could end up overlapping scrolled content. By using `scroll-padding` you can reserve a space for it as in the example below where my `<h1>` remains on screen as the content scrolls beneath it. Without padding, the heading would overlap some of the content when snapping happens.
+This is potentially useful if you have a fixed element, for example a navigation bar, which could end up overlapping scrolled content. By using `scroll-padding` you can reserve a space for it as in the example below where the `<h1>` remains on screen as the content scrolls beneath it. Without padding, the heading would overlap some of the content when snapping happens.
 
 {{EmbedGHLiveSample("css-examples/scroll-snap/scroll-padding-sticky.html", '100%', 700)}}
 
@@ -65,4 +65,4 @@ It could be helpful in ensuring users see each section of the scroller and don't
 
 ## Browser compatibility
 
-The individual property pages detail the browser compatibility situation for Scroll Snap. Note that prior to Firefox 68, Firefox implemented an old version of the specification. [Read the next guide](/en-US/docs/Web/CSS/CSS_Scroll_Snap/compat) for an overview of how to write cross-browser compatible code that supports both the old and new specification.
+The individual property pages detail the browser compatibility situation for Scroll Snap. Note that prior to Firefox 68, Firefox implemented an old version of the specification. [Read the next guide](/en-US/docs/Web/CSS/CSS_Scroll_Snap/compat) for an overview of how to write cross-browser compatible code that supports both the old and new specification.

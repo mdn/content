@@ -20,8 +20,8 @@ Changes to the `Object` prototype object are seen by **all** objects through pro
 The `Object` constructor creates an object wrapper for the given value.
 
 - If the value is {{jsxref("null")}} or {{jsxref("undefined")}}, it will create and return an empty object.
-- Otherwise, it will return an object of a Type that corresponds to the given value.
 - If the value is an object already, it will return the value.
+- Otherwise, it will return an object of a Type that corresponds to the given value.
 
 When called in a non-constructor context, `Object` behaves identically to `new Object()`.
 
@@ -169,7 +169,7 @@ Object.prototype.valueOf = function() {
 }
 ```
 
-Since JavaScript doesn't exactly have sub-class objects, prototype is a useful workaround to make a “base class” object of certain functions that act as objects. For example:
+Since JavaScript doesn't exactly have sub-class objects, prototype is a useful workaround to make a "base class" object of certain functions that act as objects. For example:
 
 ```js
 var Person = function(name) {

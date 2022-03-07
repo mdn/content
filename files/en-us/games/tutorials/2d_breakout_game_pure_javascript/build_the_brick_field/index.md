@@ -19,7 +19,7 @@ After modifying the gameplay mechanics, we are now able to lose — this is grea
 
 ## Setting up the brick variables
 
-The overall aim of this lesson is to render a few lines of code for the  bricks, using a nested loop that works through a two-dimensional array. First however we need to set up some variables to define information about the bricks such as their width and height, rows and columns, etc. Add the following lines to your code below the variables which you have previously declared in your program.
+The overall aim of this lesson is to render a few lines of code for the  bricks, using a nested loop that works through a two-dimensional array. First however we need to set up some variables to define information about the bricks such as their width and height, rows and columns, etc. Add the following lines to your code below the variables which you have previously declared in your program.
 
 ```js
 var brickRowCount = 3;
@@ -67,14 +67,14 @@ function drawBricks() {
 }
 ```
 
-Again, we're looping through the rows and columns to set the `x` and `y` position of each brick, and we're also painting a brick on the Canvas — size `brickWidth` x `brickHeight` — with each loop iteration. The problem is that we're painting them all in one place, at coordinates `(0,0)`. What we need to do is include some calculations that will work out the `x` and `y` position of each brick for each loop iteration:
+Again, we're looping through the rows and columns to set the `x` and `y` position of each brick, and we're also painting a brick on the Canvas — size `brickWidth` x `brickHeight` — with each loop iteration. The problem is that we're painting them all in one place, at coordinates `(0,0)`. What we need to do is include some calculations that will work out the `x` and `y` position of each brick for each loop iteration:
 
 ```js
 var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
 var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
 ```
 
-Each `brickX` position is worked out as `brickWidth` + `brickPadding`, multiplied by the column number, `c`, plus the `brickOffsetLeft`; the logic for the brickY is identical except that it uses the values for row number, `r`, `brickHeight`, and `brickOffsetTop`. Now every single brick can be placed in its correct place row and column, with padding between each brick, drawn at an offset from the left and top canvas edges.
+Each `brickX` position is worked out as `brickWidth` + `brickPadding`, multiplied by the column number, `c`, plus the `brickOffsetLeft`; the logic for the brickY is identical except that it uses the values for row number, `r`, `brickHeight`, and `brickOffsetTop`. Now every single brick can be placed in its correct place row and column, with padding between each brick, drawn at an offset from the left and top canvas edges.
 
 The final version of the `drawBricks()` function, after assigning the `brickX` and `brickY` values as the coordinates instead of `(0,0)` each time, will look like this — add this into your code below the `drawPaddle()` function:
 
@@ -106,7 +106,7 @@ drawBricks();
 
 ## Compare your code
 
-At this point, the game has got a little more interesting again  :
+At this point, the game has got a little more interesting again  :
 
 {{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/Lu3vtejz/","","395")}}
 

@@ -18,7 +18,7 @@ The **`PresentationReceiver`** interface of the [Presentation API](/en-US/docs/W
 ## Properties
 
 - {{domxref('PresentationReceiver.connectionList')}} {{readonlyinline}}
-  - : Returns a {{jsxref('Promise')}} that resolves with a {{domxref('PresentationConnectionList')}} object containing a list of *incoming presentation connections.*
+  - : Returns a {{jsxref('Promise')}} that resolves with a {{domxref('PresentationConnectionList')}} object containing a list of *incoming presentation connections.*
 
 ## Specifications
 

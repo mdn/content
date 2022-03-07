@@ -14,7 +14,9 @@ The `Proxy` object enables you to create a proxy for another object, which can i
 
 ## Description
 
-A `Proxy` is created with two parameters:
+The `Proxy` object allows you to create an object that can be used in place of the original object, but which may redefine fundamental `Object` operations like getting, setting, and defining properties. Proxy objects are commonly used to log property accesses, validate, format, or sanitize inputs, and so on.
+
+You create a `Proxy` with two parameters:
 
 - `target`: the original object which you want to proxy
 - `handler`: an object that defines which operations will be intercepted and how to redefine intercepted operations.
@@ -48,7 +50,7 @@ const target = {
 };
 
 const handler2 = {
-  get: function(target, prop, receiver) {
+  get(target, prop, receiver) {
     return "world";
   }
 };
@@ -74,7 +76,7 @@ const target = {
 };
 
 const handler3 = {
-  get: function (target, prop, receiver) {
+  get(target, prop, receiver) {
     if (prop === "message2") {
       return "world";
     }
@@ -106,7 +108,7 @@ In this simple example, the number `37` gets returned as the default value when 
 
 ```js
 const handler = {
-  get: function(obj, prop) {
+  get(obj, prop) {
     return prop in obj ?
       obj[prop] :
       37;
@@ -148,7 +150,7 @@ With a `Proxy`, you can easily validate the passed value for an object. This exa
 
 ```js
 let validator = {
-  set: function(obj, prop, value) {
+  set(obj, prop, value) {
     if (prop === 'age') {
       if (!Number.isInteger(value)) {
         throw new TypeError('The age is not an integer');
@@ -221,7 +223,7 @@ let view = new Proxy({
   selected: null
 },
 {
-  set: function(obj, prop, newval) {
+  set(obj, prop, newval) {
     let oldval = obj[prop];
 
     if (prop === 'selected') {
@@ -263,7 +265,7 @@ let products = new Proxy({
   browsers: ['Internet Explorer', 'Netscape']
 },
 {
-  get: function(obj, prop) {
+  get(obj, prop) {
     // An extra property
     if (prop === 'latestBrowser') {
       return obj.browsers[obj.browsers.length - 1];
@@ -272,7 +274,7 @@ let products = new Proxy({
     // The default behavior to return the value
     return obj[prop];
   },
-  set: function(obj, prop, value) {
+  set(obj, prop, value) {
     // An extra property
     if (prop === 'latestBrowser') {
       obj.browsers.push(value);
@@ -321,7 +323,7 @@ let products = new Proxy([
   { name: 'Thunderbird', type: 'mailer' }
 ],
 {
-  get: function(obj, prop) {
+  get(obj, prop) {
     // The default behavior to return the value; prop is usually an integer
     if (prop in obj) {
       return obj[prop];
@@ -383,7 +385,7 @@ Now in order to create a complete sample `traps` list, for didactic purposes, we
 */
 
 var docCookies = new Proxy(docCookies, {
-  get: function (oTarget, sKey) {
+  get (oTarget, sKey) {
     return oTarget[sKey] || oTarget.getItem(sKey) || undefined;
   },
   set: function (oTarget, sKey, vValue) {

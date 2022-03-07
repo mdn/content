@@ -121,7 +121,7 @@ The MathML `<ms>` element represents a _string literal_ meant to be interpreted 
 ```html
 <math>
 
-  <ms lquote="„" rquote="“"> abc </ms>
+  <ms lquote="„" rquote="""> abc </ms>
 
 </math>
 ```

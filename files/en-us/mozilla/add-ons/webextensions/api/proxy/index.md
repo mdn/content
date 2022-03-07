@@ -39,7 +39,7 @@ To use this API you need to have the "proxy" [permission](/en-US/docs/Mozilla/Ad
 - {{WebExtAPIRef("proxy.register()")}} {{Deprecated_Inline}}
   - : Registers the given proxy script.
 - {{WebExtAPIRef("proxy.unregister()")}} {{Deprecated_Inline}}
-  - : Unregisters the proxy script.
+  - : Unregisters the proxy script.
 
 ## Events
 

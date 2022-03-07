@@ -27,7 +27,7 @@ normalize(form)
 
 ### Parameters
 
-- `form` {{optional_inline}}
+- `form` {{optional_inline}}
 
   - : One of `"NFC"`, `"NFD"`, `"NFKC"`, or
     `"NFKD"`, specifying the Unicode Normalization Form. If omitted or
@@ -118,7 +118,7 @@ console.log(string2.length);      // 2
 #### Composed and decomposed forms
 
 Note that the length of the normalized form under `"NFD"` is
-`2`. That's because `"NFD"` gives you the
+`2`. That's because `"NFD"` gives you the
 **decomposed** version of the canonical form, in which single code points
 are split into multiple combining ones. The decomposed canonical form for
 `"ñ"` is `"\u006E\u0303"`.

@@ -12,7 +12,7 @@ browser-compat: webextensions.api.menus.createProperties
 ---
 {{AddonSidebar()}}
 
-An `object` passed to the  {{WebExtAPIRef("menus.create()", "menus.create()")}} or  {{WebExtAPIRef("menus.update()", "menus.update()")}} methods to describe the properties of the new or updated menu item.
+An `object` passed to the  {{WebExtAPIRef("menus.create()", "menus.create()")}} or  {{WebExtAPIRef("menus.update()", "menus.update()")}} methods to describe the properties of the new or updated menu item.
 
 - `checked` {{optional_inline}}
   - : `boolean`. The initial state of a checkbox or radio item: `true` for selected and `false` for unselected. Only one radio item can be selected at a time in a given group of radio items.
@@ -65,7 +65,7 @@ An `object` passed to the  {{WebExtAPIRef("menus.create()", "menus.create()")}}
 - `parentId` {{optional_inline}}
   - : `integer` or `string`. The ID of a parent menu item; this makes the item a child of a previously added item. Note: If you have created more than one menu item, then the items will be placed in a submenu. The submenu's parent will be labeled with the name of the extension.
 - `targetUrlPatterns` {{optional_inline}}
-  - : `array` of `string`. Similar to `documentUrlPatterns`, but lets you filter based on the `href` of anchor tags and the `src` attribute of img/audio/video tags. This parameter supports any URL scheme, even those that are usually not allowed in a match pattern.
+  - : `array` of `string`. Similar to `documentUrlPatterns`, but lets you filter based on the `href` of anchor tags and the `src` attribute of img/audio/video tags. This parameter supports any URL scheme, even those that are usually not allowed in a match pattern.
 - `title` {{optional_inline}}
 
   - : `string`. The text to be displayed in the item. Mandatory unless `type` is "separator".
@@ -83,7 +83,7 @@ An `object` passed to the  {{WebExtAPIRef("menus.create()", "menus.create()")}}
 - `type` {{optional_inline}}
   - : `{{WebExtAPIRef('menus.ItemType')}}`. The type of menu item: "normal", "checkbox", "radio", "separator". Defaults to "normal".
 - `viewTypes` {{optional_inline}}
-  - : `{{WebExtAPIRef('extension.ViewType')}}`. List of view types where the menu item will be shown. Defaults to any view, including those without a `viewType`.
+  - : `{{WebExtAPIRef('extension.ViewType')}}`. List of view types where the menu item will be shown. Defaults to any view, including those without a `viewType`.
 - `visible` {{optional_inline}}
   - : `boolean`. Whether the item is shown in the menu. Defaults to `true`.
 

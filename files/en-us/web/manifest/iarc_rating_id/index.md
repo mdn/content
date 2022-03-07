@@ -24,7 +24,7 @@ browser-compat: html.manifest.iarc_rating_id
 
 The _`iarc_rating_id`_ member is a string that represents the [International Age Rating Coalition (IARC)](https://www.globalratings.com/) certification code of the web application. It is intended to be used to determine which ages the web application is appropriate for.
 
-> **Note:** The same code can be shared across multiple participating storefronts, as long as the distributed product remains the same (i.e., doesn’t serve totally different code paths on different storefronts).
+> **Note:** The same code can be shared across multiple participating storefronts, as long as the distributed product remains the same (i.e., doesn't serve totally different code paths on different storefronts).
 
 ## Examples
 

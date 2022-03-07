@@ -118,7 +118,7 @@ The following are the reference pages covering the WAI-ARIA states and propertie
 
 ## See also
 
-* [Using ARIA: roles, states, and properties](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques)
+- [Using ARIA: roles, states, and properties](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques)
 
 <section id="Quick_links">
 

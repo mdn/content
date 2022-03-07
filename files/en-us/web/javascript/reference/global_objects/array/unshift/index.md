@@ -48,7 +48,7 @@ numerical properties—may not behave in any meaningful manner.
 Please note that, if multiple elements are passed as parameters, they're inserted in
 chunk at the beginning of the object, in the exact same order they were passed as
 parameters. Hence, calling `unshift` with `n`
-arguments **once**, or calling it `n` times with
+arguments **once**, or calling it `n` times with
 **1** argument (with a loop, for example), don't yield the same results.
 
 See example:

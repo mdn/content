@@ -7,14 +7,14 @@ tags:
   - HTTP
   - Performance
 ---
-**Client Hints** are a set of [HTTP request header](/en-US/docs/Web/HTTP/Headers) fields that a server can proactively request from a client to get information about the device, network, user, and user-agent-specific preferences.
+**Client Hints** are a set of [HTTP request header](/en-US/docs/Web/HTTP/Headers) fields that a server can proactively request from a client to get information about the device, network, user, and user-agent-specific preferences.
 The server can determine which resources to send, based on the information that the client chooses to provide.
 
 The set of "hint" headers are listed in the topic [HTTP Headers](/en-US/docs/Web/HTTP/Headers#client_hints) and [summarized below](#hint_types).
 
 ## Overview
 
-A server must announce that it supports client hints, using the {{HTTPHeader("Accept-CH")}} header to specify the hints that it is interested in receiving.
+A server must announce that it supports client hints, using the {{HTTPHeader("Accept-CH")}} header to specify the hints that it is interested in receiving.
 When a client that supports client hints receives the `Accept-CH` header it can choose to append some or all of the listed client hint headers in its subsequent requests.
 
 For example, following `Accept-CH` in a response below, the client could append {{HTTPHeader("Width")}}, {{HTTPHeader("Downlink")}} and {{HTTPHeader("Sec-CH-UA")}} headers to all subsequent requests.
@@ -43,7 +43,7 @@ This ensures that a different resource is cached for every different value of th
 Vary: Accept, Width, ECT
 ```
 
-You may prefer to omit specifying {{HTTPHeader("Vary")}} or use some other strategy for client hint headers where the value changes a lot, as this effectively makes the resource uncachable. (A new cache entry is created for every unique value.)
+You may prefer to omit specifying {{HTTPHeader("Vary")}} or use some other strategy for client hint headers where the value changes a lot, as this effectively makes the resource uncacheable. (A new cache entry is created for every unique value.)
 This applies in particular to network client hints like {{HTTPHeader("Downlink")}} and {{HTTPHeader("RTT")}}.
 For more information see [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses).
 

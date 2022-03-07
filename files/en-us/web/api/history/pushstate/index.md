@@ -24,8 +24,8 @@ session history stack.
 ## Syntax
 
 ```js
-history.pushState(state, title)
-history.pushState(state, title, url)
+history.pushState(state, unused)
+history.pushState(state, unused, url)
 ```
 
 ### Parameters
@@ -47,12 +47,9 @@ history.pushState(state, title, url)
     space than this, you're encouraged to use {{domxref("Window.sessionStorage",
     "sessionStorage")}} and/or {{domxref("Window.localStorage", "localStorage")}}.
 
-- `title`
-  - : [Most browsers currently ignore
-    this parameter](https://github.com/whatwg/html/issues/2174), although they may use it in the future. Passing the empty string
-    here should be safe against future changes to the method. Alternatively, you could
-    pass a short title for the state to which you're moving. If you don't need the title to be
-    changed you could use {{domxref("Document.title", "document.title")}}.
+- `unused`
+  - : This parameter exists for historical reasons, and cannot be omitted; passing the empty string is safe against future changes to the method.
+
 - `url` {{optional_inline}}
   - : The new history entry's URL is given by this parameter. Note that the browser won't
     attempt to load this URL after a call to `pushState()`, but it might
@@ -83,17 +80,15 @@ fired, even if the new URL differs from the old URL only in its hash.
 
 ## Examples
 
-This creates a new browser history entry setting the _state_, _title_,
-and _url_.
+This creates a new browser history entry setting the _state_ and _url_.
 
 ### JavaScript
 
 ```js
 const state = { 'page_id': 1, 'user_id': 5 }
-const title = ''
 const url = 'hello-world.html'
 
-history.pushState(state, title, url)
+history.pushState(state, '', url)
 ```
 
 ### Change a query parameter

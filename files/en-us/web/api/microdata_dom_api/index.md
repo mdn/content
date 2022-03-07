@@ -2,7 +2,7 @@
 title: Microdata DOM API
 slug: Web/API/Microdata_DOM_API
 ---
-> **Warning:** Microdata were implemented in some browsers for a long time. Nowadays, they have been abandoned and removed from all browsers and are therefore **deprecated**. You can't use them anymore and this document is kept as information only.
+> **Warning:** Microdata were implemented in some browsers for a long time. Nowadays, they have been abandoned and removed from all browsers and are therefore **deprecated**. You can't use them anymore and this document is kept as information only.
 
 Microdata becomes even more useful when scripts can use it to expose information to the user, for example offering it in a form that can be used by other applications. The `document.getItems(typeNames)` method provides access to the top-level microdata items. It returns a NodeList containing the items with the specified types, or all types if no argument is specified. Each item is represented in the DOM by the element on which the relevant itemscope attribute is found. These elements have their element.itemScope IDL attribute set to true. The type(s) of items can be obtained using the element.itemType IDL attribute on the element with the itemscope attribute.
 

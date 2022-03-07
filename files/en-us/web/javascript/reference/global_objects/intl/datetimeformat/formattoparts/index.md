@@ -86,11 +86,6 @@ Possible types are the following:
   - : The string used for the yearName in relevant contexts, for example
     "`geng-zi`"
 
-## Polyfill
-
-A polyfill for this feature is available in the [proposal
-repository](https://github.com/zbraniecki/proposal-intl-formatToParts).
-
 ## Examples
 
 `DateTimeFormat` outputs localized, opaque strings that cannot be
@@ -265,3 +260,4 @@ df.formatToParts(date)
 - {{jsxref("Date.prototype.toLocaleString()")}}
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
 - {{jsxref("Date.prototype.toLocaleTimeString()")}}
+- [A polyfill of `Intl.DateTimeFormat.prototype.formatToParts` in the proposal repository](https://github.com/zbraniecki/proposal-intl-formatToParts)

@@ -107,7 +107,7 @@ There is another way to associate a form control with a label — nest the form 
 
 Even in such cases however, it is considered best practice to set the `for` attribute to ensure all assistive technologies understand the relationship between label and widget.
 
-If there is no label, or if the form control is neither implicitly or explicitly associated with a label, and a screenreader will read out something like "Edit text blank", which isn't very helpful at all.
+If there is no label, or if the form control is neither implicitly or explicitly associated with a label, a screenreader will read out something like "Edit text blank", which isn't very helpful at all.
 
 ### Labels are clickable, too!
 

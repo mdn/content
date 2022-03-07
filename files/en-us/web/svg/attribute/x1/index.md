@@ -16,8 +16,8 @@ The **`x1`** attribute is used to specify the first x-coordinate for drawing an 
 
 You can use this attribute with the following SVG elements:
 
-* {{ SVGElement("line") }}
-* {{ SVGElement("linearGradient") }}
+- {{ SVGElement("line") }}
+- {{ SVGElement("linearGradient") }}
 
 ## Example
 

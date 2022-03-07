@@ -17,7 +17,7 @@ browser-compat: webextensions.api.tabs.executeScript
 
 Injects JavaScript code into a page.
 
-You can inject code into pages whose URL can be expressed using a [match pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). To do so, its scheme must be one of: `http`, `https`, or `file`.
+You can inject code into pages whose URL can be expressed using a [match pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). To do so, its scheme must be one of: `http`, `https`, or `file`.
 
 You must have the permission for the page's URL—either explicitly, as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)—or, via the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
 
@@ -76,22 +76,22 @@ let executing = browser.tabs.executeScript(
 
       - : `string`. Code to inject, as a text string.
 
-        > **Warning:** Don’t use this property to interpolate untrusted data into JavaScript, as this could lead to a security issue.
+        > **Warning:** Don't use this property to interpolate untrusted data into JavaScript, as this could lead to a security issue.
 
     - `file` {{optional_inline}}
 
       - : `string`. Path to a file containing the code to inject.
 
-        - In Firefox, relative URLs not starting at the extension root are resolved relative to the current page URL.
+        - In Firefox, relative URLs not starting at the extension root are resolved relative to the current page URL.
         - In Chrome, these URLs are resolved relative to the extension's base URL.
 
-        To work cross-browser, you can specify the path as a relative URL, starting at the extension's root, like this: `"/path/to/script.js"`.
+        To work cross-browser, you can specify the path as a relative URL, starting at the extension's root, like this: `"/path/to/script.js"`.
 
     - `frameId` {{optional_inline}}
 
       - : `integer`. The frame where the code should be injected.
 
-        Defaults to `0` (the top-level frame).
+        Defaults to `0` (the top-level frame).
 
     - `matchAboutBlank` {{optional_inline}}
 
@@ -107,7 +107,7 @@ let executing = browser.tabs.executeScript(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will resolve to an array of objects. The array's values represent the result of the script in every injected frame.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will resolve to an array of objects. The array's values represent the result of the script in every injected frame.
 
 The result of the script is the last evaluated statement, which is similar to what would be output (the results, not any `console.log()` output) if you executed the script in the [Web Console](/en-US/docs/Tools/Web_Console). For example, consider a script like this:
 
@@ -144,7 +144,7 @@ const executing = browser.tabs.executeScript({
 executing.then(onExecuted, onError);
 ```
 
-This example executes a script from a file (packaged with the extension) called `"content-script.js"`. The script is executed in the currently active tab. The script is executed in subframes as well as the main document:
+This example executes a script from a file (packaged with the extension) called `"content-script.js"`. The script is executed in the currently active tab. The script is executed in subframes as well as the main document:
 
 ```js
 function onExecuted(result) {
@@ -162,7 +162,7 @@ const executing = browser.tabs.executeScript({
 executing.then(onExecuted, onError);
 ```
 
-This example executes a script from a file (packaged with the extension) called `"content-script.js"`. The script is executed in the tab with an ID of `2`:
+This example executes a script from a file (packaged with the extension) called `"content-script.js"`. The script is executed in the tab with an ID of `2`:
 
 ```js
 function onExecuted(result) {

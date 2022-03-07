@@ -9,7 +9,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 96 that will affect developers. Firefox 96 was released on January 11, 2022.
+This article provides information about the changes in Firefox 96 that affect developers. Firefox 96 was released on January 11, 2022.
 
 ## Changes for web developers
 

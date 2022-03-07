@@ -21,7 +21,7 @@ browser-compat: api.RTCRtpCapabilities
 
 The **`RTCRtpCapabilities`** dictionary is a data type used to describe the capabilities of an {{domxref("RTCRtpSender")}} or {{domxref("RTCRtpReceiver")}} in response to a call to the {{domxref("RTCRtpSender.getCapabilities()")}} or {{domxref("RTCRtpReceiver.getCapabilities()")}} static functions, both of which return an array of `RTCRtpCapabilities` objects.
 
-An `RTCRtpCapabilities` object contains an array of objects conforming to {{domxref("RTCRtpCodecCapability")}} (each describing the capabilities of one codec) and an array of the supported {{Glossary("RTP")}} [header extensions](https://datatracker.ietf.org/doc/html/rfc3550#section-5.3.1) for that codec.
+An `RTCRtpCapabilities` object contains an array of objects conforming to {{domxref("RTCRtpCodecCapability")}} (each describing the capabilities of one codec) and an array of the supported {{Glossary("RTP")}} [header extensions](https://datatracker.ietf.org/doc/html/rfc3550#section-5.3.1) for that codec.
 
 ## Properties
 

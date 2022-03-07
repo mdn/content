@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Masking
   - CSS Property
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.mask-origin

@@ -14,7 +14,7 @@ browser-compat: api.XPathNSResolver
 ---
 {{APIRef("DOM XPath")}}
 
-The `XPathNSResolver` interface permits prefix strings in an {{Glossary("XPath")}} expression to be properly bound to namespace URI strings.
+The `XPathNSResolver` interface permits prefix strings in an {{Glossary("XPath")}} expression to be properly bound to namespace URI strings.
 
 The {{domxref("XPathEvaluator")}} interface can construct an implementation of `XPathNSResolver` from a node, or the interface may be implemented by any application.
 

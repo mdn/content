@@ -20,13 +20,13 @@ The **`HTMLCanvasElement`** interface provides properties and methods for manipu
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLCanvasElement.height")}}
-  - : The {{htmlattrxref("height", "canvas")}} HTML attribute of the {{HTMLElement("canvas")}} element is a positive `integer` reflecting the number of logical pixels (or RGBA values) going down one column of the canvas. When the attribute is not specified, or if it is set to an invalid value, like a negative, the default value of `150` is used. If no \[separate] CSS height is assigned to the {{HTMLElement("canvas")}}, then this value will also be used as the height of the canvas in the length-unit CSS Pixel.
+  - : The {{htmlattrxref("height", "canvas")}} HTML attribute of the {{HTMLElement("canvas")}} element is a positive `integer` reflecting the number of logical pixels (or RGBA values) going down one column of the canvas. When the attribute is not specified, or if it is set to an invalid value, like a negative, the default value of `150` is used. If no \[separate] CSS height is assigned to the {{HTMLElement("canvas")}}, then this value will also be used as the height of the canvas in the length-unit CSS Pixel.
 - {{domxref("HTMLCanvasElement.width")}}
-  - : The {{htmlattrxref("width", "canvas")}} HTML attribute of the {{HTMLElement("canvas")}} element is a positive `integer` reflecting the number of logical pixels (or RGBA values) going across one row of the canvas. When the attribute is not specified, or if it is set to an invalid value, like a negative, the default value of `300` is used. If no \[separate] CSS width is assigned to the {{HTMLElement("canvas")}}, then this value will also be used as the width of the canvas in the length-unit CSS Pixel.
+  - : The {{htmlattrxref("width", "canvas")}} HTML attribute of the {{HTMLElement("canvas")}} element is a positive `integer` reflecting the number of logical pixels (or RGBA values) going across one row of the canvas. When the attribute is not specified, or if it is set to an invalid value, like a negative, the default value of `300` is used. If no \[separate] CSS width is assigned to the {{HTMLElement("canvas")}}, then this value will also be used as the width of the canvas in the length-unit CSS Pixel.
 - {{domxref("HTMLCanvasElement.mozOpaque")}} {{non-standard_inline}} {{deprecated_inline}}
   - : Is a boolean value reflecting the {{htmlattrxref("moz-opaque", "canvas")}} HTML attribute of the {{HTMLElement("canvas")}} element. It lets the canvas know whether or not translucency will be a factor. If the canvas knows there's no translucency, painting performance can be optimized. This is only supported in Mozilla-based browsers; use the standardized {{domxref("HTMLCanvasElement.getContext()", "canvas.getContext('2d', { alpha: false })")}} instead.
 - {{domxref("HTMLCanvasElement.mozPrintCallback")}}{{non-standard_inline}}
-  - : Is a `function` that is Initially null. Web content can set this to a JavaScript function that will be called when the canvas is to be redrawn while the page is being printed. When called, the callback is passed a "printState" object that implements the [MozCanvasPrintState](https://searchfox.org/mozilla-central/search?q=interface%20MozCanvasPrintState&path=HTMLCanvasElement.webidl) interface. The callback can get the context to draw to from the printState object and must then call done() on it when finished. The purpose of `mozPrintCallback` is to obtain a higher resolution rendering of the canvas at the resolution of the printer being used. [See this blog post.](https://blog.mozilla.org/labs/2012/09/a-new-way-to-control-printing-output/)
+  - : Is a `function` that is Initially null. Web content can set this to a JavaScript function that will be called when the canvas is to be redrawn while the page is being printed. When called, the callback is passed a "printState" object that implements the [MozCanvasPrintState](https://searchfox.org/mozilla-central/search?q=interface%20MozCanvasPrintState&path=HTMLCanvasElement.webidl) interface. The callback can get the context to draw to from the printState object and must then call done() on it when finished. The purpose of `mozPrintCallback` is to obtain a higher resolution rendering of the canvas at the resolution of the printer being used. [See this blog post.](https://blog.mozilla.org/labs/2012/09/a-new-way-to-control-printing-output/)
 
 ## Methods
 
@@ -53,9 +53,9 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener).
 
 - [`webglcontextcreationerror`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event)
-  - : Fired if the user agent is unable to create a `WebGLRenderingContext` or `WebGL2RenderingContext` context.
+  - : Fired if the user agent is unable to create a `WebGLRenderingContext` or `WebGL2RenderingContext` context.
 - [`webglcontextlost`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event)
-  - : Fired if the user agent detects that the drawing buffer associated with a `WebGLRenderingContext` or `WebGL2RenderingContext` object has been lost.
+  - : Fired if the user agent detects that the drawing buffer associated with a `WebGLRenderingContext` or `WebGL2RenderingContext` object has been lost.
 - [`webglcontextrestored`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event)
   - : Fired if the user agent restores the drawing buffer for a `WebGLRenderingContext` or `WebGL2RenderingContext` object.
 

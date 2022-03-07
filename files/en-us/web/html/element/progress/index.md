@@ -114,7 +114,7 @@ In most cases you should provide an accessible label when using `<progress>`. Wh
   <!-- OR -->
   
   <label for="progress-bar">Uploading Document</label>
-  <progress id="progress-bar" value="70" max="100">
+  <progress id="progress-bar" value="70" max="100">70 %</progress>
 ```
 
 ### Describing a particular region

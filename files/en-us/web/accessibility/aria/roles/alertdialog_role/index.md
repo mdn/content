@@ -31,8 +31,8 @@ The `alertdialog` role is not to be used as a replacement for other dialogs, inc
 
 Adding `role="alertdialog"` alone is not sufficient to make an alert dialog accessible. The following also need to be done:
 
-  - The alert dialog must be properly labeled
-  - Keyboard focus must be managed correctly
+- The alert dialog must be properly labeled
+- Keyboard focus must be managed correctly
 
 The `alertdialog` must have an accessible name, defined with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label). The alert dialog text must have an accessible description using [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby).
 
@@ -89,11 +89,11 @@ The code snippet above shows how to mark up an alert dialog that only provides a
 
 ## See Also
 
-  * [The `dialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
-  * [The `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
-  * [`aria-modal` attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal)
-  * [`Window.alert()`](/en-US/docs/Web/API/Window/alert)
-  * [`Window.prompt()`](/en-US/docs/Web/API/Window/prompt)
+- [The `dialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
+- [The `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
+- [`aria-modal` attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal)
+- [`Window.alert()`](/en-US/docs/Web/API/Window/alert)
+- [`Window.prompt()`](/en-US/docs/Web/API/Window/prompt)
 
 <section id="Quick_links">
 

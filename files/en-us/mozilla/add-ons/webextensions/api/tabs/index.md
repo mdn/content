@@ -49,7 +49,7 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
 - {{WebExtAPIRef("tabs.ZoomSettingsScope")}}
   - : Defines whether zoom changes will persist for the page's origin, or only take effect in this tab.
 - {{WebExtAPIRef("tabs.ZoomSettings")}}
-  - : Defines zoom settings {{WebExtAPIRef("tabs.ZoomSettingsMode", "mode")}}, {{WebExtAPIRef("tabs.ZoomSettingsScope", "scope")}}, and default zoom factor.
+  - : Defines zoom settings {{WebExtAPIRef("tabs.ZoomSettingsMode", "mode")}}, {{WebExtAPIRef("tabs.ZoomSettingsScope", "scope")}}, and default zoom factor.
 
 ## Properties
 

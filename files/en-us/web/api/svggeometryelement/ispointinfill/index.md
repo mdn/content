@@ -41,7 +41,7 @@ A boolean indicating whether the given point is within the fill or not.
 ```html
 <svg viewBox="0 0 100 100" width="150" height="150"
     xmlns="http://www.w3.org/2000/svg">
-  <circle id="circle" cx="50" cy="50" r="45"
+  <circle id="circle" cx="50" cy="50" r="45"
       fill="white" stroke="black" stroke-width="10"/>
 
   <circle cx="10" cy="10" r="5" fill="seagreen"/>

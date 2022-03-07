@@ -6,6 +6,7 @@ tags:
   - Attributes
   - Constraint validation
   - HTML
+spec-urls: https://html.spec.whatwg.org/multipage/input.html#attr-input-multiple
 ---
 
 {{HTMLSidebar}}
@@ -20,7 +21,7 @@ When `multiple` is set on the {{HTMLElement("input/email", "email")}} input type
 <input type="email" multiple name="emails" id="emails">
 ```
 
-If and only if the `multiple` attribute is specified, the value can be a list of properly-formed comma-separated e-mail addresses. Any trailing and leading whitespace is removed from each address in the list.
+If and only if the `multiple` attribute is specified, the value can be a list of properly-formed comma-separated e-mail addresses. Any trailing and leading whitespace is removed from each address in the list.
 
 When `multiple` is set on the {{HTMLElement("input/file", "file")}} input type, the user can select one or more files. The user can choose multiple files from the file picker in any way that their chosen platform allows (e.g. by holding down <kbd>Shift</kbd> or <kbd>Control</kbd>, and then clicking).
 
@@ -75,7 +76,7 @@ Setting `size="1"` on a multiple select can make it appear as a single select in
 input:invalid {border: red solid 3px;}
 ```
 
-If and only if the `multiple` attribute is specified, the value can be a list of properly-formed comma-separated e-mail addresses. Any trailing and leading whitespace is removed from each address in the list. If the [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute is present, at least one email address is required.
+If and only if the `multiple` attribute is specified, the value can be a list of properly-formed comma-separated e-mail addresses. Any trailing and leading whitespace is removed from each address in the list. If the [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute is present, at least one email address is required.
 
 Some browsers support the appearance of the [`list`](/en-US/docs/Web/HTML/Attributes/list) of options from the associated {{htmlelement('datalist')}} for subsequent email addresses when `multiple` is present. Others do not.
 
@@ -107,7 +108,7 @@ When `multiple` is set on the {{HTMLElement("input/file", "file")}} input type, 
 
 Note the difference in appearance between the example with `multiple` set and the other `file` input without.
 
-When the form is submitted,had we used [`method="get"`](/en-US/docs/Web/HTML/Element/form) each selected file's name would have been added to URL parameters as`?uploads=img1.jpg&uploads=img2.svg`. However, since we are submitting [multipart](/en-US/docs/Web/API/XMLHttpRequest/multipart) form data, we much use post. See the {{htmlelement('form')}} element  and [sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data#the_method_attribute) for more information.
+When the form is submitted,had we used [`method="get"`](/en-US/docs/Web/HTML/Element/form) each selected file's name would have been added to URL parameters as`?uploads=img1.jpg&uploads=img2.svg`. However, since we are submitting [multipart](/en-US/docs/Web/API/XMLHttpRequest/multipart) form data, we much use post. See the {{htmlelement('form')}} element  and [sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data#the_method_attribute) for more information.
 
 ### select
 
@@ -168,31 +169,7 @@ There are a few ways to select multiple options in a `<select>` element with a `
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'input.html#attr-input-multiple', 'multiple attribute')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML5 W3C', 'input.html#attr-input-multiple', 'multiple attribute')}}
-      </td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## See also
 

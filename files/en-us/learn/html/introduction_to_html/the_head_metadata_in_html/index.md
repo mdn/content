@@ -1,5 +1,5 @@
 ---
-title: What’s in the head? Metadata in HTML
+title: What's in the head? Metadata in HTML
 slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 tags:
   - Beginner
@@ -14,7 +14,7 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
 
-The {{glossary("Head", "head")}} of an HTML document is the part that is not displayed in the web browser when the page is loaded. It contains information such as the page {{htmlelement("title")}}, links to {{glossary("CSS")}} (if you choose to style your HTML content with CSS), links to custom favicons, and other metadata (data about the HTML, such as the author, and important keywords that describe the document.) In this article we'll cover all of the above and more, in order to give you a good basis for working with markup.
+The {{glossary("Head", "head")}} of an HTML document is the part that is not displayed in the web browser when the page is loaded. It contains information such as the page {{htmlelement("title")}}, links to {{glossary("CSS")}} (if you choose to style your HTML content with CSS), links to custom favicons, and other metadata (data about the HTML, such as the author, and important keywords that describe the document). Web browsers use information contained in the {{glossary("Head", "head")}} to render the HTML document correctly. In this article we'll cover all of the above and more, in order to give you a good basis for working with markup.
 
 <table>
   <tbody>
@@ -54,7 +54,7 @@ Let's revisit the simple [HTML document we covered in the previous article](/en-
 </html>
 ```
 
-The HTML head is the contents of the {{htmlelement("head")}} element — unlike the contents of the {{htmlelement("body")}} element (which are displayed on the page when loaded in a browser), the head's content is not displayed on the page. Instead, the head's job is to contain {{glossary("Metadata", "metadata")}} about the document. In the above example, the head is quite small:
+The HTML head is the contents of the {{htmlelement("head")}} element. Unlike the contents of the {{htmlelement("body")}} element (which are displayed on the page when loaded in a browser), the head's content is not displayed on the page. Instead, the head's job is to contain {{glossary("Metadata", "metadata")}} about the document. In the above example, the head is quite small:
 
 ```html
 <head>
@@ -63,7 +63,7 @@ The HTML head is the contents of the {{htmlelement("head")}} element — unlike 
 </head>
 ```
 
-In larger pages however, the head can get quite full. Try going to some of your favorite websites and use the [developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) to check out their head contents. Our aim here is not to show you how to use everything that can possibly be put in the head, but rather to teach you how to use the major elements that you'll want to include in the head, and give you some familiarity. Let's get started.
+In larger pages however, the head can get quite large. Try going to some of your favorite websites and use the [developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) to check out their head contents. Our aim here is not to show you how to use everything that can possibly be put in the head, but rather to teach you how to use the major elements that you'll want to include in the head, and give you some familiarity. Let's get started.
 
 ## Adding a title
 
@@ -236,7 +236,7 @@ Just about all websites you'll use in the modern day will employ {{glossary("CSS
   <link rel="stylesheet" href="my-css-file.css">
   ```
 
-- The {{htmlelement("script")}} element should also go into the head, and should include a `src` attribute containing the path to the JavaScript you want to load, and `defer`, which basically instructs the browser to load the JavaScript after the page has finished parsing the HTML. This is useful as it makes sure that the HTML is all loaded before the JavaScript runs, so that you don't get errors resulting from JavaScript trying to access an HTML element that doesn't exist on the page yet. There are actually a number of ways to handle loading JavaScript on your page, but this is the most foolproof one to use for modern browsers (for others, read [Script loading strategies](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#script_loading_strategies)).
+- The {{htmlelement("script")}} element should also go into the head, and should include a `src` attribute containing the path to the JavaScript you want to load, and `defer`, which basically instructs the browser to load the JavaScript after the page has finished parsing the HTML. This is useful as it makes sure that the HTML is all loaded before the JavaScript runs, so that you don't get errors resulting from JavaScript trying to access an HTML element that doesn't exist on the page yet. There are actually a number of ways to handle loading JavaScript on your page, but this is the most reliable one to use for modern browsers (for others, read [Script loading strategies](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#script_loading_strategies)).
 
   ```html
   <script src="my-js-file.js" defer></script>
@@ -286,7 +286,7 @@ That marks the end of our quickfire tour of the HTML head — there's a lot more
 ## In this module
 
 - [Getting started with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [What’s in the head? Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [What's in the head? Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
 - [HTML text fundamentals](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
 - [Creating hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
 - [Advanced text formatting](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)

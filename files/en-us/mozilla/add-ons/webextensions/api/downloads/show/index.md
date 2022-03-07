@@ -46,7 +46,7 @@ This example shows the most recently downloaded item:
 
 ```js
 function onShowing(success) {
-  console.log(`Showing download item: ${success}`);
+  console.log(`Showing download item: ${success}`);
 }
 
 function onError(error) {

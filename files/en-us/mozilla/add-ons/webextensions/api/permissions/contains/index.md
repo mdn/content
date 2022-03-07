@@ -56,8 +56,8 @@ browser.permissions.contains(testPermissions1).then((result) => {
 });
 
 var testPermissions2 = {
-  origins: ["*://mozilla.org/"],
-  permissions: ["tabs", "alarms"]
+  origins: ["*://mozilla.org/"],
+  permissions: ["tabs", "alarms"]
 };
 
 browser.permissions.contains(testPermissions2).then((result) => {
@@ -65,8 +65,8 @@ browser.permissions.contains(testPermissions2).then((result) => {
 });
 
 var testPermissions3 = {
-  origins: ["https://developer.mozilla.org/"],
-  permissions: ["tabs", "webRequest"]
+  origins: ["https://developer.mozilla.org/"],
+  permissions: ["tabs", "webRequest"]
 };
 
 browser.permissions.contains(testPermissions3).then((result) => {
@@ -74,7 +74,7 @@ browser.permissions.contains(testPermissions3).then((result) => {
 });                      // matches: "*://*.mozilla.org/*"
 
 var testPermissions4 = {
-  origins: ["https://example.org/"]
+  origins: ["https://example.org/"]
 };
 
 browser.permissions.contains(testPermissions4).then((result) => {

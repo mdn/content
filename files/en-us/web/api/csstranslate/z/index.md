@@ -12,7 +12,7 @@ tags:
   - Property
 browser-compat: api.CSSTranslate.z
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`z`** property of the
 {{domxref("CSSTranslate")}} interface representing the z-component of the translating

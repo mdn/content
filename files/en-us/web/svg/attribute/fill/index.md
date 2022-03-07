@@ -12,17 +12,17 @@ The **`fill`** attribute has two different meanings. For shapes and text it's a 
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement('altGlyph')}}
-* {{SVGElement('circle')}}
-* {{SVGElement('ellipse')}}
-* {{SVGElement('path')}}
-* {{SVGElement('polygon')}}
-* {{SVGElement('polyline')}}
-* {{SVGElement('rect')}}
-* {{SVGElement('text')}}
-* {{SVGElement('textPath')}}
-* {{SVGElement('tref')}}
-* {{SVGElement('tspan')}}
+- {{SVGElement('altGlyph')}}
+- {{SVGElement('circle')}}
+- {{SVGElement('ellipse')}}
+- {{SVGElement('path')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('text')}}
+- {{SVGElement('textPath')}}
+- {{SVGElement('tref')}}
+- {{SVGElement('tspan')}}
 
 For animation, these elements are using this attribute: {{SVGElement('animate')}}, {{SVGElement('animateColor')}}, {{SVGElement('animateMotion')}}, {{SVGElement('animateTransform')}}, and {{SVGElement('set')}}.
 

@@ -49,7 +49,7 @@ tags:
           >,
           <a href="https://ecma-international.org/ecma-262/10.0/index.html"
             >HTML</a
-          >, <a href="https://tc39.github.io/ecma262/">Working draft</a>,
+          >, <a href="https://tc39.github.io/ecma262/">Working draft</a>,
           <a href="https://github.com/tc39/ecma262">repository</a>
         </p>
       </td>
@@ -66,7 +66,7 @@ tags:
           >,
           <a href="http://ecma-international.org/ecma-262/9.0/index.html#Title"
             >HTML</a
-          >, <br /><a href="https://tc39.github.io/ecma262/">Working draft</a>,
+          >, <br /><a href="https://tc39.github.io/ecma262/">Working draft</a>,
           <a href="https://github.com/tc39/ecma262">repository</a>
         </p>
       </td>
@@ -107,7 +107,7 @@ tags:
           >PDF</a
         >
       </td>
-      <td>August 1998</td>
+      <td>August 1998</td>
       <td>
         ECMAScript Language Specification. This is the second revision of the
         ECMAScript standard; also ISO standard 16262.
@@ -121,9 +121,9 @@ tags:
           >PDF</a
         >
       </td>
-      <td>December 1999</td>
+      <td>December 1999</td>
       <td>
-        ECMAScript Language Specification. This is the third revision of the
+        ECMAScript Language Specification. This is the third revision of the
         ECMAScript standard; corresponds to JavaScript 1.5.<br />See also the
         <a href="https://www.mozilla.org/js/language/E262-3-errata.html"
           >errata</a
@@ -138,9 +138,9 @@ tags:
           >PDF</a
         >
       </td>
-      <td>December 2009</td>
+      <td>December 2009</td>
       <td>
-        ECMAScript Language Specification. This is the fifth revision of the
+        ECMAScript Language Specification. This is the fifth revision of the
         ECMAScript standard.<br />See also the
         <a
           href="https://wiki.ecmascript.org/doku.php?id=es3.1:es3.1_proposal_working_draft"

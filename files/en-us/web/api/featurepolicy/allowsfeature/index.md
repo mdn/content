@@ -7,7 +7,7 @@ browser-compat: api.FeaturePolicy.allowsFeature
 
 The **`allowsFeature()`** method of
 the {{DOMxRef("FeaturePolicy")}} interface enables introspection of individual
-directives of the Feature Policy it is run on. It returns a {{JSxRef("Boolean")}}
+directives of the Feature Policy it is run on. It returns a {{JSxRef("Boolean")}}
 that is `true` if and only if the specified feature is allowed in the
 specified context (or the default context if no context is specified).
 
@@ -29,9 +29,9 @@ const allowed = FeaturePolicy.allowsFeature(<feature>, <origin>)
 
 A specific feature name must be specified.
 
-#### `Origin name` {{Optional_inline}}
+#### `Origin name` {{Optional_inline}}
 
-An origin URL to check the feature on. If it is omitted the default origin is used.
+An origin URL to check the feature on. If it is omitted the default origin is used.
 
 ### Return value
 
@@ -52,9 +52,9 @@ const featurePolicy = document.featurePolicy
 const allowed = featurePolicy.allowsFeature("camera")
 
 if (allowed){
-  console.log("FP allows camera.")
+  console.log("FP allows camera.")
 } else {
-  console.log("FP does not allows camera.")
+  console.log("FP does not allows camera.")
 }
 ```
 

@@ -14,7 +14,7 @@ browser-compat: api.URL.port
 
 The **`port`** property of the {{domxref("URL")}} interface is
 a {{domxref("USVString")}} containing the port number of the URL. If the URL does not
-contain an explicit port number, it will be set to `''`.
+contain an explicit port number, it will be set to `''`.
 
 {{AvailableInWorkers}}
 

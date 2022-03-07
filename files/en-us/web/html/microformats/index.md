@@ -395,7 +395,7 @@ This attribute states that the linked document should not be given any weight by
 
 ## Browser compatibility
 
-Supported in all browsers’s support for the class attribute and its DOM API.
+Supported in all browsers's support for the class attribute and its DOM API.
 
 ## See also
 

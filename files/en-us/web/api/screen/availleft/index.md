@@ -33,7 +33,7 @@ window.moveTo(setX, setY);
 In most cases, this property returns 0.
 
 If you work with two screens this property, evaluated on the right screen, returns the
-width of the left one in pixels (thereby indicating the X coordinate of the left edge of
+width of the left one in pixels (thereby indicating the X coordinate of the left edge of
 the screen on the right).
 
 On Windows, this property depends on which screen is set as your primary, returning the

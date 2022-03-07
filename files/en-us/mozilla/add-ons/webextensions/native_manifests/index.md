@@ -72,7 +72,7 @@ The native messaging manifest contains a single JSON object with the following p
         </p>
         <p>
           On MacOS and Linux, it must also match the native messaging manifest's
-          filename (excluding the <code>.json</code> extension).
+          filename (excluding the <code>.json</code> extension).
         </p>
         <p>
           On Windows, it must match the name of the registry key you create,
@@ -145,7 +145,7 @@ The native messaging manifest contains a single JSON object with the following p
   </tbody>
 </table>
 
-For example, here's a manifest for the `ping_pong` native application:
+For example, here's a manifest for the `ping_pong` native application:
 
 ```json
 {
@@ -157,7 +157,7 @@ For example, here's a manifest for the `ping_pong` native application:
 }
 ```
 
-This allows the extension whose ID is `ping_pong@example.org` to connect, by passing the name `ping_pong` into the relevant {{WebExtAPIRef("runtime")}} API function. The application itself is at `/path/to/native-messaging/app/ping_pong.py`.
+This allows the extension whose ID is `ping_pong@example.org` to connect, by passing the name `ping_pong` into the relevant {{WebExtAPIRef("runtime")}} API function. The application itself is at `/path/to/native-messaging/app/ping_pong.py`.
 
 ## Managed storage manifests
 
@@ -229,7 +229,7 @@ For example:
 }
 ```
 
-Given this JSON manifest, the `favourite-color-examples@mozilla.org` extension could access the data using code like this:
+Given this JSON manifest, the `favourite-color-examples@mozilla.org` extension could access the data using code like this:
 
 ```js
 let storageItem = browser.storage.managed.get('color');
@@ -336,15 +336,15 @@ For example:
 
 ```json
 {
-  "name": "my_module",
-  "description": "My test module",
-  "type": "pkcs11",
-  "path": "/path/to/libpkcs11testmodule.dylib",
-  "allowed_extensions": ["my-extension@mozilla.org"]
+  "name": "my_module",
+  "description": "My test module",
+  "type": "pkcs11",
+  "path": "/path/to/libpkcs11testmodule.dylib",
+  "allowed_extensions": ["my-extension@mozilla.org"]
 }
 ```
 
-Given this JSON manifest, saved as `my_module.json`, the `my-extension@mozilla.org` extension could install the security module at `/path/to/libpkcs11testmodule.dylib` using code like this:
+Given this JSON manifest, saved as `my_module.json`, the `my-extension@mozilla.org` extension could install the security module at `/path/to/libpkcs11testmodule.dylib` using code like this:
 
 ```js
 browser.pkcs11.installModule("my_module");
@@ -376,7 +376,7 @@ The key should have a single default value, which is the path to the manifest.
 
 > **Warning:** As of Firefox 64, the 32-bit registry view ([Wow6432Node)](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system) will be checked first for these keys, followed by the "native" registry view. Use whichever is appropriate for your application.
 >
-> **For Firefox 63 and older:** This key should _not_ be created under [Wow6432Node](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system), even if the app is 32-bit. Previous versions of the browser will always look for the key under the "native" view of the registry, not the 32-bit emulation. To ensure that the key is created in the "native" view, you can pass the `KEY_WOW64_64KEY` or `KEY_WOW64_32KEY` flags into `RegCreateKeyEx`. See [Accessing an Alternate Registry View](https://msdn.microsoft.com/en-us/library/windows/desktop/aa384129(v=vs.85).aspx).
+> **For Firefox 63 and older:** This key should _not_ be created under [Wow6432Node](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system), even if the app is 32-bit. Previous versions of the browser will always look for the key under the "native" view of the registry, not the 32-bit emulation. To ensure that the key is created in the "native" view, you can pass the `KEY_WOW64_64KEY` or `KEY_WOW64_32KEY` flags into `RegCreateKeyEx`. See [Accessing an Alternate Registry View](https://msdn.microsoft.com/library/windows/desktop/aa384129(v=vs.85).aspx).
 
 For per-user visibility, create a registry key with the following name:
 

@@ -14,22 +14,22 @@ The following guidelines cover how to write HTML for MDN code examples.
 
 ## In this article
 
-- [Doctype and metadata](/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#doctype_and_metadata)
+- [Doctype and metadata](#doctype_and_metadata)
 
-  - [Doctype](/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#doctype)
-  - [Document language](/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#document_language)
-  - [Document characterset](/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#document_characterset)
-  - [Viewport meta tag](/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#viewport_meta_tag)
+  - [Doctype](#doctype)
+  - [Document language](#document_language)
+  - [Document characterset](#document_characterset)
+  - [Viewport meta tag](#viewport_meta_tag)
 
-- [General markup coding style](/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#general_markup_coding_style)
+- [General markup coding style](#general_markup_coding_style)
 
-  - [Use lower case](/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#use_lowercase)
-  - [Trailing slashes](/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#trailing_slashes)
-  - [Quoting attributes](/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#quoting_attributes)
-  - [Use double quotes](/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#use_double_quotes)
-  - [Boolean attributes](/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#boolean_attributes)
-  - [Class and ID names](/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#class_and_id_names)
-  - [Entity references](/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#entity_references)
+  - [Use lower case](#use_lowercase)
+  - [Trailing slashes](#trailing_slashes)
+  - [Quoting attributes](#quoting_attributes)
+  - [Use double quotes](#use_double_quotes)
+  - [Boolean attributes](#boolean_attributes)
+  - [Class and ID names](#class_and_id_names)
+  - [Entity references](#entity_references)
 
 ## Doctype and metadata
 
@@ -71,7 +71,7 @@ Finally, you should always add the viewport meta tag into your HTML {{HTMLElemen
 <meta name="viewport" content="width=device-width">
 ```
 
-See [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) for further details.
+See [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Web/HTML/Viewport_meta_tag) for further details.
 
 ## General markup coding style
 
@@ -117,7 +117,7 @@ You should put all attribute values in double quotes. It is tempting to omit quo
 <img src="images/logo.jpg" alt="A circular globe icon" class="no-border">
 ```
 
-than this:
+…than this:
 
 ```html example-bad
 <img src=images/logo.jpg alt=A circular globe icon class=no-border>
@@ -169,7 +169,7 @@ Bad:
 
 ### Entity references
 
-Don’t use entity references unnecessarily — use the literal character wherever possible (you'll still need to escape characters like angle brackets and quote marks).
+Don't use entity references unnecessarily — use the literal character wherever possible (you'll still need to escape characters like angle brackets and quote marks).
 
 As an example you could just write
 

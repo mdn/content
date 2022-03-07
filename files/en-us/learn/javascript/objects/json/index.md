@@ -216,10 +216,10 @@ To obtain the JSON, we use an API called [Fetch](/en-US/docs/Web/API/Fetch_API).
 
 In our function, the first four lines use the Fetch API to fetch the JSON from the server:
 
-* we declare the `requestURL` variable to store the GitHub URL
-* we use the URL to initialize a new {{domxref("Request")}} object.
-* we make the network request using the {{domxref("fetch", "fetch()")}} function, and this returns a {{domxref("Response")}} object
-* we retrieve the response as JSON using the {{domxref("Response/json", "json()")}} function of the `Response` object.
+- we declare the `requestURL` variable to store the GitHub URL
+- we use the URL to initialize a new {{domxref("Request")}} object.
+- we make the network request using the {{domxref("fetch", "fetch()")}} function, and this returns a {{domxref("Response")}} object
+- we retrieve the response as JSON using the {{domxref("Response/json", "json()")}} function of the `Response` object.
 
 > **Note:** The `fetch()` API is **asynchronous**. We'll learn a lot about asynchronous functions in [the next module](/en-US/docs/Learn/JavaScript/Asynchronous), but for now we'll just say that we need to add the keyword {{jsxref("Statements/async_function", "async")}} before the name of the function that uses the fetch API, and  add the keyword {{jsxref("Operators/await", "await")}} before the calls to any asynchronous functions.
 
@@ -319,8 +319,8 @@ But sometimes we aren't so lucky — sometimes we receive a raw JSON string, and
 
 You can see the first one in action in our [heroes-finished-json-parse.html](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) example (see the [source code](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished-json-parse.html)) — this does exactly the same thing as the example we built up earlier, except that:
 
-* we retrieve the response as text rather than JSON, by calling the {{domxref("Response/text", "text()")}} method of the response
-* we then use `parse()` to convert the text to a JavaScript object.
+- we retrieve the response as text rather than JSON, by calling the {{domxref("Response/text", "text()")}} method of the response
+- we then use `parse()` to convert the text to a JavaScript object.
 
 The key snippet of code is here:
 

@@ -14,7 +14,7 @@ browser-compat: api.IDBVersionChangeEvent.oldVersion
 ---
 {{ APIRef("IndexedDB") }}
 
-The **`oldVersion`** read-only property of the
+The **`oldVersion`** read-only property of the
 {{domxref("IDBVersionChangeEvent")}} interface returns the old version number of the
 database.
 

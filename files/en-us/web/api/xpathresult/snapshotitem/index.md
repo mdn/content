@@ -57,7 +57,7 @@ var node = null;
 var tagNames = [];
 for(var i = 0; i < result.snapshotLength; i++) {
   var node = result.snapshotItem(i);
-  tagNames.push(node.localName);
+  tagNames.push(node.localName);
 }
 document.querySelector("output").textContent = tagNames.join(", ");
 ```

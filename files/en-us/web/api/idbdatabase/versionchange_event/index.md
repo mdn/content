@@ -10,30 +10,21 @@ browser-compat: api.IDBDatabase.versionchange_event
 ---
 {{APIRef("IndexedDB")}}
 
-The `versionchange` event is fired when a database structure change ([`IDBOpenDBRequest.onupgradeneeded`](/en-US/docs/Web/API/IDBOpenDBRequest/onupgradeneeded) event or [`IDBFactory.deleteDatabase`](/en-US/docs/Web/API/IDBFactory/deleteDatabase)) was requested.
+The `versionchange` event is fired when a database structure change ([`upgradeneeded`](/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event) event send on an [`IDBOpenDBRequest`](/en-US/docs/Web/API/IDBOpenDBRequest) or [`IDBFactory.deleteDatabase`](/en-US/docs/Web/API/IDBFactory/deleteDatabase)) was requested elsewhere (most probably in
+another window/tab on the same computer).
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{DOMxRef("IDBDatabase.onversionchange", "onversionchange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('versionchange', event => { });
+onversionchange = event => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -89,7 +80,6 @@ dBOpenRequest.onsuccess = event => {
   db.onversionchange = event => {
     console.log('The version of this database has changed');
   };
-
 };
 ```
 
@@ -100,4 +90,3 @@ dBOpenRequest.onsuccess = event => {
 ## See also
 
 - [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- {{DOMxRef("IDBDatabase.onversionchange", "onversionchange")}} event handler property

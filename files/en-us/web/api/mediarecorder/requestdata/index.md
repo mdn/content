@@ -43,7 +43,7 @@ MediaRecorder.requestData()
 ### Errors
 
 An `InvalidState` error is raised if the `requestData()` method
-is called while the `MediaRecorder` object’s
+is called while the `MediaRecorder` object's
 {{domxref("MediaRecorder.state")}} is not "recording" — the media cannot be captured if
 recording is not occurring.
 

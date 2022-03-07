@@ -16,7 +16,7 @@ browser-compat: api.DedicatedWorkerGlobalScope.name
 The **`name`** read-only property of the
 {{domxref("DedicatedWorkerGlobalScope")}} interface returns the name that the
 {{domxref("Worker")}} was (optionally) given when it was created. This is the name that
-the {{domxref("Worker.Worker", "Worker()")}} constructor can pass to get a reference to
+the {{domxref("Worker.Worker", "Worker()")}} constructor can pass to get a reference to
 the {{domxref("DedicatedWorkerGlobalScope")}}.
 
 ## Syntax

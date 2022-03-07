@@ -18,11 +18,11 @@ If the attribute value has a unit identifier, such as `.25em` or `1%`, then the 
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement("altGlyph")}}
-* {{SVGElement("text")}}
-* {{SVGElement("textPath")}}
-* {{SVGElement("tref")}}
-* {{SVGElement("tspan")}}
+- {{SVGElement("altGlyph")}}
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
 
 ## Example
 
@@ -96,4 +96,4 @@ For a description of the values, please refer to the [CSS `letter-spacing`](/en-
 
 ## See also
 
-* {{cssxref("letter-spacing", "CSS letter-spacing")}}
+- {{cssxref("letter-spacing", "CSS letter-spacing")}}

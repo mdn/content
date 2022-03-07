@@ -40,7 +40,7 @@ From: <email>
 ## Directives
 
 - \<email>
-  - : A machine-usable email address.
+  - : A machine-usable email address.
 
 ## Examples
 

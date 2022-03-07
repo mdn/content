@@ -12,7 +12,7 @@ tags:
 
 {{HTMLSidebar("Elements")}}
 
-This page lists all the {{Glossary("HTML")}} {{Glossary("Element","elements")}}, which are created using {{Glossary("Tag", "tags")}}.
+This page lists all the {{Glossary("HTML")}} {{Glossary("Element","elements")}}, which are created using {{Glossary("Tag", "tags")}}.
 
 They are grouped by function to help you find what you have in mind easily. An alphabetical list of all elements is provided in the sidebar on every element's page as well as this one.
 
@@ -135,6 +135,6 @@ Web Components is an HTML-related technology which makes it possible to, essenti
 
 ## Obsolete and deprecated elements
 
-> **Warning:** These are old HTML elements which are deprecated and should not be used. **You should never use them in new projects, and should replace them in old projects as soon as you can.** They are listed here for completeness only.
+> **Warning:** These are old HTML elements which are deprecated and should not be used. **You should never use them in new projects, and should replace them in old projects as soon as you can.** They are listed here for completeness only.
 
 {{HTMLRefTable({"include":["Deprecated","Obsolete"]})}}

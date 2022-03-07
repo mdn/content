@@ -22,7 +22,7 @@ A `DOMQuad` is a collection of four `DOMPoint`s defining the corners of an arbit
 ## Properties
 
 - p1,p2,p3,p4 {{readonlyinline}}
-  - : are {{domxref("DOMPoint")}} objects for each of the `DOMQuad` object's four corners.
+  - : are {{domxref("DOMPoint")}} objects for each of the `DOMQuad` object's four corners.
 
 ## Methods
 
@@ -31,7 +31,7 @@ A `DOMQuad` is a collection of four `DOMPoint`s defining the corners of an arbit
 - {{domxref("DOMQuad.fromQuad()")}}
   - : Returns a new `DOMQuad` object based on the passed set of coordinates.
 - {{domxref("DOMQuad.getBounds()")}}
-  - : Returns a {{domxref("DOMRect")}} object with the coordinates and dimensions of the `DOMQuad` object.
+  - : Returns a {{domxref("DOMRect")}} object with the coordinates and dimensions of the `DOMQuad` object.
 - {{domxref("DOMQuad.toJSON()")}}
   - : Returns a JSON representation of the `DOMQuad` object.
 

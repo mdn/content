@@ -15,7 +15,7 @@ This article provides information on steps you need to take in order to update y
 
 If your add-on is distributed on [addons.mozilla.org](http://addons.mozilla.org) (AMO), it's been checked by an automated compatibility verification tool. Add-ons that don't use APIs that changed in Firefox 8, and have no binary components (which [need to be recompiled for every major Firefox release](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces)), have automatically been updated on AMO to indicate that they work in Firefox 8.
 
-So you should start by visiting AMO and looking to see if your add-on needs any work done at all.
+So you should start by visiting AMO and looking to see if your add-on needs any work done at all.
 
 > **Note:** You should still test your add-on on Firefox 8, even if it's been automatically upgraded. There are edge cases that may not be automatically detected.
 

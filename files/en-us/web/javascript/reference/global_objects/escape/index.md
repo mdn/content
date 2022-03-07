@@ -82,7 +82,7 @@ escape('@*_+-./');    // "@*_+-./"
 
 ## See also
 
-- A polyfill of `escape` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `escape` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("encodeURI")}}
 - {{jsxref("encodeURIComponent")}}
 - {{jsxref("unescape")}}

@@ -42,12 +42,12 @@ Note that the devtools page does not get access to any other WebExtension APIs, 
 ```html
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-  </head>
-  <body>
-    <script src="devtools.js"></script>
-  </body>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script src="devtools.js"></script>
+  </body>
 </html>
 ```
 
@@ -86,11 +86,11 @@ This is somewhat like using {{WebExtAPIRef("tabs.executeScript()")}} to inject a
 
 > **Note:** A clean view of the DOM is a security feature, intended to help prevent hostile pages from tricking extensions by redefining the behavior of native DOM functions. This means you need to be very careful using eval(), and should use a normal content script if you can.
 
-Scripts loaded using `devtools.inspectedWindow.eval()` also don't see any JavaScript variables defined by content scripts.
+Scripts loaded using `devtools.inspectedWindow.eval()` also don't see any JavaScript variables defined by content scripts.
 
 ### Working with content scripts
 
-A devtools document doesn't have direct access to {{WebExtAPIRef("tabs.executeScript()")}}, so if you need to inject a content script, the devtools document must send a message to the background script asking it to inject the script. The [`devtools.inspectedWindow.tabId`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId) provides the ID of the target tab: the devtools document can pass this to the background script, and the background script can in turn pass it into {{WebExtAPIRef("tabs.executeScript()")}}:
+A devtools document doesn't have direct access to {{WebExtAPIRef("tabs.executeScript()")}}, so if you need to inject a content script, the devtools document must send a message to the background script asking it to inject the script. The [`devtools.inspectedWindow.tabId`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId) provides the ID of the target tab: the devtools document can pass this to the background script, and the background script can in turn pass it into {{WebExtAPIRef("tabs.executeScript()")}}:
 
 ```js
 // devtools-panel.js

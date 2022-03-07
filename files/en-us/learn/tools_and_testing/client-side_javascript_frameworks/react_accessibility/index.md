@@ -58,7 +58,7 @@ But where did our focus indicator go?
 
 When we switch between templates in our `<Todo />` component, we completely remove the elements that were there before to replace them with something else. That means the element that we were focused on vanishes, and nothing is in focus at all. This could confuse a wide variety of users — particularly users who rely on the keyboard, or users who use a screen reader.
 
-To improve the experience for keyboard and screen-reader users, we should manage the browser’s focus ourselves.
+To improve the experience for keyboard and screen-reader users, we should manage the browser's focus ourselves.
 
 ## Focusing between templates
 
@@ -66,7 +66,7 @@ When a user toggles a `<Todo/>` template from viewing to editing, we should focu
 
 ### Targeting our elements
 
-In order to focus on an element in our DOM, we need to tell React which element we want to focus on and how to find it. React’s [`useRef`](https://reactjs.org/docs/hooks-reference.html#useref) hook creates an object with a single property: `current`. This property can be a reference to anything we want and look that reference up later. It’s particularly useful for referring to DOM elements.
+In order to focus on an element in our DOM, we need to tell React which element we want to focus on and how to find it. React's [`useRef`](https://reactjs.org/docs/hooks-reference.html#useref) hook creates an object with a single property: `current`. This property can be a reference to anything we want and look that reference up later. It's particularly useful for referring to DOM elements.
 
 Change the `import` statement at the top of `Todo.js` so that it includes `useRef`:
 
@@ -174,7 +174,7 @@ useEffect(() => {
 }, [isEditing]);
 ```
 
-This kind of mostly works. Head back to your browser and you’ll see that your focus moves between Edit `<input>` and "Edit" button as you start and end an edit. However, you may have noticed a new problem — the "Edit" button in the final `<Todo />` component is focussed immediately on page load, before we even interact with the app!
+This kind of mostly works. Head back to your browser and you'll see that your focus moves between Edit `<input>` and "Edit" button as you start and end an edit. However, you may have noticed a new problem — the "Edit" button in the final `<Todo />` component is focussed immediately on page load, before we even interact with the app!
 
 Our `useEffect()` hook is behaving exactly as we designed it: it runs as soon as the component renders, sees that `isEditing` is `false`, and focuses the "Edit" button. Because there are three instances of `<Todo />`, we see focus on the last "Edit" button.
 
@@ -193,7 +193,7 @@ if (wasEditingBefore && isNotEditingNow) {
 }
 ```
 
-The React team had discussed [ways to get a component’s previous state](https://reactjs.org/docs/hooks-faq.html#how-to-get-the-previous-props-or-state), and has provided an example custom hook we can use for the job.
+The React team had discussed [ways to get a component's previous state](https://reactjs.org/docs/hooks-faq.html#how-to-get-the-previous-props-or-state), and has provided an example custom hook we can use for the job.
 
 Paste the following code near the top of `Todo.js`, above your `Todo()` function.
 
@@ -310,7 +310,7 @@ Now, when you delete a task in your browser, you will see our dashed focus outli
 
 ## Finished!
 
-You've just finished building a React app from the ground up! Congratulations! The skills you’ve learned here will be a great foundation to build on as you continue working with React.
+You've just finished building a React app from the ground up! Congratulations! The skills you've learned here will be a great foundation to build on as you continue working with React.
 
 Most of the time, you can be an effective contributor to a React project even if all you do is think carefully about components and their state and props. Remember to always write the best HTML you can.
 

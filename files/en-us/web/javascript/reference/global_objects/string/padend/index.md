@@ -66,7 +66,7 @@ A {{jsxref("String")}} of the specified `targetLength` with the
 
 ## See also
 
-- A polyfill of `String.prototype.padEnd` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.padEnd` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.padStart()")}}
 - [A
   polyfill](https://github.com/behnammodi/polyfill/blob/master/string.polyfill.js)

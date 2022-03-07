@@ -12,17 +12,17 @@ browser-compat: javascript.builtins.Symbol.asyncIterator
 ---
 {{JSRef}}
 
-The **`Symbol.asyncIterator`** well-known symbol specifies the default AsyncIterator for an object. If this property is set on an object, it is an async iterable and can be used in a [`for await...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) loop.
+The **`Symbol.asyncIterator`** well-known symbol specifies the default AsyncIterator for an object. If this property is set on an object, it is an async iterable and can be used in a [`for await...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) loop.
 
 ## Description
 
-The `Symbol.asyncIterator` symbol is a builtin symbol that is used to access an object's `@@asyncIterator` method. In order for an object to be async iterable, it must have a `Symbol.asyncIterator` key.
+The `Symbol.asyncIterator` symbol is a builtin symbol that is used to access an object's `@@asyncIterator` method. In order for an object to be async iterable, it must have a `Symbol.asyncIterator` key.
 
 {{js_property_attributes(0,0,0)}}
 
 ## Examples
 
-### User-defined Async Iterables
+### User-defined Async Iterables
 
 You can define your own async iterable by setting the `[Symbol.asyncIterator]` property on an object.
 
@@ -38,10 +38,10 @@ const myAsyncIterable = {
 (async () => {
     for await (const x of myAsyncIterable) {
         console.log(x);
-        // expected output:
-        //    "hello"
-        //    "async"
-        //    "iteration!"
+        // expected output:
+        //    "hello"
+        //    "async"
+        //    "iteration!"
     }
 })();
 ```

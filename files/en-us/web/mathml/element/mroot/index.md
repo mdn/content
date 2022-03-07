@@ -37,7 +37,7 @@ Rendering in your browser: <math><mroot><mi>x</mi> <mn>3</mn></mroot></math>
  <mroot>
     <mi>x</mi>
     <mn>3</mn>
- </mroot>
+ </mroot>
 
 </math>
 ```

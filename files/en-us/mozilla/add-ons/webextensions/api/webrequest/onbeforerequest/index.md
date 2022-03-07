@@ -24,7 +24,7 @@ To cancel or redirect the request, first include `"blocking"` in the `extraInfoS
 
 If an extension wants to redirect a public (e.g. HTTPS) URL to an [extension page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages), the extension's manifest.json file must contain a [web_accessible_resources](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) key that lists the URL for the extension page.
 
-When multiple blocking handlers modify a request, only one set of modifications take effect. Redirects and cancellations have the same precedence. So if you canceled a request, you might see another request with the same  `requestId` again if another blocking handler redirected the request.
+When multiple blocking handlers modify a request, only one set of modifications take effect. Redirects and cancellations have the same precedence. So if you canceled a request, you might see another request with the same  `requestId` again if another blocking handler redirected the request.
 
 From Firefox 52 onwards, instead of returning `BlockingResponse`, the listener can return a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which is resolved with a `BlockingResponse`. This enables the listener to process the request asynchronously.
 
@@ -62,7 +62,7 @@ Events have three functions:
     - `details`
       - : [`object`](#details). Details about the request. See [`details`](#details) below.
 
-    Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If `"blocking"` is specified in the `extraInfoSpec` parameter, the event listener should return a `BlockingResponse` object, and can set either its `cancel` or its `redirectUrl` properties. From Firefox 52 onwards, instead of returning `BlockingResponse`, the listener can return a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which is resolved with a `BlockingResponse`. This enables the listener to process the request asynchronously.
+    Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If `"blocking"` is specified in the `extraInfoSpec` parameter, the event listener should return a `BlockingResponse` object, and can set either its `cancel` or its `redirectUrl` properties. From Firefox 52 onwards, instead of returning `BlockingResponse`, the listener can return a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which is resolved with a `BlockingResponse`. This enables the listener to process the request asynchronously.
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that will be sent to this listener.
@@ -86,7 +86,7 @@ Events have three functions:
   - : `array`. Contains information for each document in the frame hierarchy up to the top-level document. The first element in the array contains information about the immediate parent of the document being requested, and the last element contains information about the top-level document. If the load is actually for the top-level document, then this array is empty.
 
     - `url`
-      - : `string`. The URL that the document was loaded from.
+      - : `string`. The URL that the document was loaded from.
     - `frameId`
       - : `integer`. The `frameId` of the document. `details.frameAncestors[0].frameId` is the same as `details.parentFrameId`.
 
@@ -170,7 +170,7 @@ Events have three functions:
 
     - `fingerprinting` and `fingerprinting_content`: indicates the request is involved in fingerprinting. `fingerprinting_content` indicates the request is loaded from an origin that has been found to fingerprint but is not considered to participate in tracking, such as a payment provider.
     - `cryptomining` and `cryptomining_content`: similar to the fingerprinting category but for cryptomining resources.
-    - `tracking`, `tracking_ad`, `tracking_analytics`, `tracking_social`,  and `tracking_content`: indicates the request is involved in tracking. `tracking` is any generic tracking request, the `ad`, `analytics`, `social`, and `content` suffixes identify the type of tracker.
+    - `tracking`, `tracking_ad`, `tracking_analytics`, `tracking_social`,  and `tracking_content`: indicates the request is involved in tracking. `tracking` is any generic tracking request, the `ad`, `analytics`, `social`, and `content` suffixes identify the type of tracker.
     - `any_basic_tracking`: a meta flag that combines any tracking and fingerprinting flags, excluding `tracking_content` and `fingerprinting_content`.
     - `any_strict_tracking`: a meta flag that combines any tracking and fingerprinting flags, including `tracking_content` and `fingerprinting_content`.
     - `any_social_tracking`: a meta flag that combines any social tracking flags.
@@ -181,7 +181,7 @@ Events have three functions:
 
 ### DNS resolution ordering when BlockingResponse is used
 
-Regarding DNS resolution when BlockingResponse is used with OnBeforeRequest: In HTTP Channel, onBeforeRequest with blocking response does happen prior to DNS resolution and also prior to speculative connect. For other channels, speculative connect may cause DNS requests to happen before onBeforeRequest. This ordering is not something an extension developer ought to rely on as it may vary across browsers, and from one browser version to another, let alone one request channel to another. Refer [BugZilla issue clarification provided by Mozilla developers on DNS resolution ordering](https://bugzilla.mozilla.org/show_bug.cgi?id=1466099)
+Regarding DNS resolution when BlockingResponse is used with OnBeforeRequest: In HTTP Channel, onBeforeRequest with blocking response does happen prior to DNS resolution and also prior to speculative connect. For other channels, speculative connect may cause DNS requests to happen before onBeforeRequest. This ordering is not something an extension developer ought to rely on as it may vary across browsers, and from one browser version to another, let alone one request channel to another. Refer [BugZilla issue clarification provided by Mozilla developers on DNS resolution ordering](https://bugzilla.mozilla.org/show_bug.cgi?id=1466099)
 
 ## Examples
 

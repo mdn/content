@@ -36,16 +36,16 @@ inside a worker (which would basically be the equivalent of `self.console.log(se
 
 ```js
 WorkerLocation {hash: "", search: "", pathname: "/worker.js", port: "8000", hostname: "localhost"…}
-  hash: ""
-  host: "localhost:8000"
-  hostname: "localhost"
-  href: "http://localhost:8000/worker.js"
-  origin: "http://localhost:8000"
-  pathname: "/worker.js"
-  port: "8000"
-  protocol: "http:"
-  search: ""
-  __proto__: WorkerLocation
+  hash: ""
+  host: "localhost:8000"
+  hostname: "localhost"
+  href: "http://localhost:8000/worker.js"
+  origin: "http://localhost:8000"
+  pathname: "/worker.js"
+  port: "8000"
+  protocol: "http:"
+  search: ""
+  __proto__: WorkerLocation
 ```
 
 You could use this location object to return more information about the document's location, as you might do with a normal {{domxref("Location")}} object.

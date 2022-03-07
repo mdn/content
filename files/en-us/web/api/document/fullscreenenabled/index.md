@@ -4,7 +4,7 @@ slug: Web/API/Document/fullscreenEnabled
 tags:
   - API
   - Document
-  - Full-screen
+  - Fullscreen
   - Fullscreen API
   - Property
   - Read-only
@@ -17,10 +17,10 @@ browser-compat: api.Document.fullscreenEnabled
 {{APIRef("Fullscreen API")}}
 
 The read-only **`fullscreenEnabled`**
-property on the {{domxref("Document")}} interface indicates whether or not full-screen
+property on the {{domxref("Document")}} interface indicates whether or not fullscreen
 mode is available.
 
-Full-screen mode is available only for a page that has no
+fullscreen mode is available only for a page that has no
 windowed plug-ins in any of its documents, and if all {{HTMLElement("iframe")}} elements
 which contain the document have their {{HTMLAttrXRef("allowfullscreen", "iframe")}}
 attribute set.
@@ -37,13 +37,13 @@ var isFullscreenAvailable = document.fullscreenEnabled;
 ### Value
 
 A boolean value which is `true` if the document and the
-elements within can be placed into full-screen mode by calling
-{{domxref("Element.requestFullscreen()")}}. If full-screen mode isn't available, this
+elements within can be placed into fullscreen mode by calling
+{{domxref("Element.requestFullscreen()")}}. If fullscreen mode isn't available, this
 value is `false`.
 
 ## Example
 
-In this example, before attempting to request full-screen mode for a
+In this example, before attempting to request fullscreen mode for a
 {{htmlElement("video")}} element, the value of `fullscreenEnabled` is
 checked, in order to avoid making the attempt when not available.
 

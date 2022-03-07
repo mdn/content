@@ -11,31 +11,31 @@ The **`height`** attribute defines the vertical length of an element in the user
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement('feBlend')}}
-* {{SVGElement('feColorMatrix')}}
-* {{SVGElement('feComponentTransfer')}}
-* {{SVGElement('feComposite')}}
-* {{SVGElement('feConvolveMatrix')}}
-* {{SVGElement('feDiffuseLighting')}}
-* {{SVGElement('feDisplacementMap')}}
-* {{SVGElement('feDropShadow')}}
-* {{SVGElement('feFlood')}}
-* {{SVGElement('feGaussianBlur')}}
-* {{SVGElement('feImage')}}
-* {{SVGElement('feMerge')}}
-* {{SVGElement('feMorphology')}}
-* {{SVGElement('feOffset')}}
-* {{SVGElement('feSpecularLighting')}}
-* {{SVGElement('feTile')}}
-* {{SVGElement('feTurbulence')}}
-* {{SVGElement('filter')}}
-* {{SVGElement('foreignObject')}}
-* {{SVGElement('image')}}
-* {{SVGElement('mask')}}
-* {{SVGElement('pattern')}}
-* {{SVGElement('rect')}}
-* {{SVGElement('svg')}}
-* {{SVGElement('use')}}
+- {{SVGElement('feBlend')}}
+- {{SVGElement('feColorMatrix')}}
+- {{SVGElement('feComponentTransfer')}}
+- {{SVGElement('feComposite')}}
+- {{SVGElement('feConvolveMatrix')}}
+- {{SVGElement('feDiffuseLighting')}}
+- {{SVGElement('feDisplacementMap')}}
+- {{SVGElement('feDropShadow')}}
+- {{SVGElement('feFlood')}}
+- {{SVGElement('feGaussianBlur')}}
+- {{SVGElement('feImage')}}
+- {{SVGElement('feMerge')}}
+- {{SVGElement('feMorphology')}}
+- {{SVGElement('feOffset')}}
+- {{SVGElement('feSpecularLighting')}}
+- {{SVGElement('feTile')}}
+- {{SVGElement('feTurbulence')}}
+- {{SVGElement('filter')}}
+- {{SVGElement('foreignObject')}}
+- {{SVGElement('image')}}
+- {{SVGElement('mask')}}
+- {{SVGElement('pattern')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('svg')}}
+- {{SVGElement('use')}}
 
 ## Example
 

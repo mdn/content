@@ -38,10 +38,10 @@ notation_.
 
 ### Dot notation
 
-In the `object.property` syntax, the `property` must
+In the `object.property` syntax, the `property` must
 be a valid JavaScript [identifier](/en-US/docs/Glossary/Identifier). (In the
 ECMAScript standard, the names of properties are technically "IdentifierNames", not
-"Identifiers", so reserved words can be used but are not recommended). For example,
+"Identifiers", so reserved words can be used but are not recommended). For example,
 `object.$1` is valid, while `object.1` is
 not.
 
@@ -61,7 +61,7 @@ object.1 = 'bar';        // SyntaxError
 console.log(object.1);   // SyntaxError
 ```
 
-Here, the method named `createElement` is retrieved from
+Here, the method named `createElement` is retrieved from
 `document` and is called.
 
 ```js
@@ -69,7 +69,7 @@ document.createElement('pre')
 ```
 
 If you use a method for a numeric literal, and the numeric literal has no exponent and
-no decimal point, you should leave [white-space(s)](/en-US/docs/Glossary/Whitespace) before the dot preceding the
+no decimal point, you should leave [white-space(s)](/en-US/docs/Glossary/Whitespace) before the dot preceding the
 method call, so that the dot is not interpreted as a decimal point.
 
 ```js
@@ -89,8 +89,8 @@ method call, so that the dot is not interpreted as a decimal point.
 ### Bracket notation
 
 In the `object[property_name]` syntax,
-the `property_name` is just a string or [Symbol](/en-US/docs/Glossary/Symbol). So, it can be any string, including
-`'1foo'`, `'!bar!'`, or even `' '` (a space).
+the `property_name` is just a string or [Symbol](/en-US/docs/Glossary/Symbol). So, it can be any string, including
+`'1foo'`, `'!bar!'`, or even `' '` (a space).
 
 ```js
 const variable = object[property_name]
@@ -112,7 +112,7 @@ document ['createElement']('pre')
 ### Property names
 
 Property names are string or [Symbol](/en-US/docs/Glossary/Symbol). Any
-other value, including a number, is coerced to a string. This outputs
+other value, including a number, is coerced to a string. This outputs
 `'value'`, since `1` is coerced into `'1'`.
 
 ```js
@@ -130,14 +130,11 @@ object[foo] = 'value'
 console.log(object[bar])
 ```
 
-In the [SpiderMonkey](/en-US/docs/Mozilla/Projects/SpiderMonkey) JavaScript
-engine, this string would be "`[object Object]`".
-
 ### Method binding
 
 A method is not bound to the object that it is a method of. Specifically,
 `this` is not fixed in a method. Put another way, `this` does not
-necessarily refer to the object containing a method. Instead, `this` is
+necessarily refer to the object containing a method. Instead, `this` is
 "passed" by the function call. See [method
 binding](/en-US/docs/Web/JavaScript/Reference/Operators/this#method_binding).
 

@@ -20,7 +20,7 @@ The application defined timestamp can also be retrieved by one of the
 {{domxref("Performance.getEntriesByName","getEntriesByName()")}} or
 {{domxref("Performance.getEntriesByType","getEntriesByType()")}}).
 
-The `mark()'s` stores its data internally as
+The `mark()'s` stores its data internally as
 {{domxref("PerformanceEntry")}}.
 
 {{AvailableInWorkers}}
@@ -35,7 +35,7 @@ performance.mark(measureName, markOptions)
 ### Arguments
 
 - name
-  - : A {{domxref("DOMString")}} representing the name of the mark. If the
+  - : A {{domxref("DOMString")}} representing the name of the mark. If the
     `name` given to this method already exists in the
     {{domxref("PerformanceTiming")}} interface, {{jsxref("SyntaxError")}} is
     thrown.
@@ -43,10 +43,10 @@ performance.mark(measureName, markOptions)
 - `markOptions` {{optional_inline}}
   - : An object for specifying a timestamp and additional metadata for the mark.
 
-      - `detail`
-        - : Arbitrary metadata to include in the mark.
-      - `startTime`
-        - : {{domxref("DOMHighResTimeStamp")}} to use as the mark time.
+    - `detail`
+      - : Arbitrary metadata to include in the mark.
+    - `startTime`
+      - : {{domxref("DOMHighResTimeStamp")}} to use as the mark time.
 
 ### Return value
 

@@ -82,7 +82,7 @@ Let's implement something that demonstrates this, although we'll keep it simple 
     <script src="html5shiv.min.js"></script>
     ```
 
-3. Have a look at your example CSS files — you'll see that `basic-styling.css` handles all the styling that we want to give to every browser, whereas the other two CSS files contain the CSS we want to selectively apply to browser depending on their support levels. You can look at the different effects these two files have by manually changing the CSS file referred to by the second {{htmlelement("link")}} element, but let's instead implement some JavaScript to automatically swap them as needed.
+3. Have a look at your example CSS files — you'll see that `basic-styling.css` handles all the styling that we want to give to every browser, whereas the other two CSS files contain the CSS we want to selectively apply to browsers depending on their support levels. You can look at the different effects these two files have by manually changing the CSS file referred to by the second {{htmlelement("link")}} element, but let's instead implement some JavaScript to automatically swap them as needed.
 4. First, remove the contents of the second `<link>` element's `href` attribute. We will fill this in dynamically later on.
 5. Next, add a `<script></script>` element at the bottom of your body (just before the closing `</body>` tag).
 6. Give it the following contents:

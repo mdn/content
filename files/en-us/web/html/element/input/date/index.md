@@ -288,40 +288,40 @@ The HTML looks like so:
 ```html
 <form>
   <div class="nativeDatePicker">
-    <label for="bday">Enter your birthday:</label>
-    <input type="date" id="bday" name="bday">
-    <span class="validity"></span>
-  </div>
-  <p class="fallbackLabel">Enter your birthday:</p>
-  <div class="fallbackDatePicker">
-    <span>
-      <label for="day">Day:</label>
-      <select id="day" name="day">
-      </select>
-    </span>
-    <span>
-      <label for="month">Month:</label>
-      <select id="month" name="month">
-        <option selected>January</option>
-        <option>February</option>
-        <option>March</option>
-        <option>April</option>
-        <option>May</option>
-        <option>June</option>
-        <option>July</option>
-        <option>August</option>
-        <option>September</option>
-        <option>October</option>
-        <option>November</option>
-        <option>December</option>
-      </select>
-    </span>
-    <span>
-      <label for="year">Year:</label>
-      <select id="year" name="year">
-      </select>
-    </span>
-  </div>
+    <label for="bday">Enter your birthday:</label>
+    <input type="date" id="bday" name="bday">
+    <span class="validity"></span>
+  </div>
+  <p class="fallbackLabel">Enter your birthday:</p>
+  <div class="fallbackDatePicker">
+    <span>
+      <label for="day">Day:</label>
+      <select id="day" name="day">
+      </select>
+    </span>
+    <span>
+      <label for="month">Month:</label>
+      <select id="month" name="month">
+        <option selected>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option>
+        <option>August</option>
+        <option>September</option>
+        <option>October</option>
+        <option>November</option>
+        <option>December</option>
+      </select>
+    </span>
+    <span>
+      <label for="year">Year:</label>
+      <select id="year" name="year">
+      </select>
+    </span>
+  </div>
 </form>
 ```
 
@@ -482,6 +482,6 @@ daySelect.onchange = function() {
 ## See also
 
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
-- [Date and Time picker tutorial](/en-US/docs/Learn/Forms/HTML5_input_types#date_and_time_pickers)
+- [Date and Time picker tutorial](/en-US/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
 - [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
 - [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

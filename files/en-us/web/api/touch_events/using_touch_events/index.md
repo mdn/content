@@ -114,11 +114,11 @@ Some new features regarding a touch point's [touch area](/en-US/docs/Web/API/Tou
 
 ## What about Pointer Events?
 
-The introduction of new input mechanisms results in increased application complexity to handle various input events, such as key events, mouse events, pen/stylus events, and touch events. To help address this problem, the [Pointer Events standard](https://www.w3.org/TR/pointerevents/) _defines events and related interfaces for handling hardware agnostic pointer input from devices including a mouse, pen, touchscreen, etc._. That is, the abstract _pointer_ creates a unified input model that can represent a contact point for a finger, pen/stylus or mouse. See the [Pointer Events MDN article](/en-US/docs/Web/API/Pointer_events).
+The introduction of new input mechanisms results in increased application complexity to handle various input events, such as key events, mouse events, pen/stylus events, and touch events. To help address this problem, the [Pointer Events standard](https://www.w3.org/TR/pointerevents/) _defines events and related interfaces for handling hardware agnostic pointer input from devices including a mouse, pen, touchscreen, etc._. That is, the abstract _pointer_ creates a unified input model that can represent a contact point for a finger, pen/stylus or mouse. See the [Pointer Events MDN article](/en-US/docs/Web/API/Pointer_events).
 
-The pointer event model can simplify an application's input processing since a pointer represents input from any input device. Additionally, the pointer event types are very similar to mouse event types (for example, `pointerdown` `pointerup`) thus code to handle pointer events closely matches mouse handling code.
+The pointer event model can simplify an application's input processing since a pointer represents input from any input device. Additionally, the pointer event types are very similar to mouse event types (for example, `pointerdown` `pointerup`) thus code to handle pointer events closely matches mouse handling code.
 
-The implementation status of pointer events in browsers is [relatively high](https://caniuse.com/#search=pointer) with Chrome, Firefox, IE11 and Edge having complete implementations.
+The implementation status of pointer events in browsers is [relatively high](https://caniuse.com/#search=pointer) with Chrome, Firefox, IE11 and Edge having complete implementations.
 
 ## Examples and demos
 

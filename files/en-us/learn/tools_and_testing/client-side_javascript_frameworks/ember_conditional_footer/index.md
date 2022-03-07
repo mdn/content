@@ -74,7 +74,7 @@ To get the footer working, we need to implement the following three areas of fun
     }
     ```
 
-3. Now we need to go back to our `todo-data.js` file and add some functionality that will allow us to return the number of incomplete todos (useful for showing how many are left), and clear the completed todos out of the list (which is what the “Clear completed” functionality needs).
+3. Now we need to go back to our `todo-data.js` file and add some functionality that will allow us to return the number of incomplete todos (useful for showing how many are left), and clear the completed todos out of the list (which is what the "Clear completed" functionality needs).
 
     In `todo-data.js`, add the following getter underneath the existing `all()` getter to define what the incomplete todos actually are:
 
@@ -259,7 +259,7 @@ Finally, we will edit the `todo.hbs` template such that the checkbox's value is 
 
     > **Note:** The above snippet uses a new Ember-specific keyword — `fn`. `fn` allows for [partial application](https://en.wikipedia.org/wiki/Partial_application), which is similar to [`bind`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind), but it never changes the invocation context; this is equivalent to using `bind` with a `null` first argument.
 
-Try restarting the dev server and going to `localhost:4200` again, and you'll now see that we have a fully-operational “todos left” counter and Clear button:
+Try restarting the dev server and going to `localhost:4200` again, and you'll now see that we have a fully-operational "todos left" counter and Clear button:
 
 ![todos being marked as complete, and cleared](todos-being-marked-completed-and-cleared.gif)
 

@@ -48,7 +48,7 @@ This code adds a listener to the `transitioncancel` event:
 
 ```js
 window.addEventListener('transitioncancel', () => {
-  console.log('Transition canceled');
+  console.log('Transition canceled');
 });
 ```
 

@@ -34,7 +34,7 @@ Firefox 10 shipped on January 31, 2012. This article provides information about 
 
 #### DOM4
 
-- The attribute {{ domxref("document.xmlVersion") }} (which was only gettable and not settable) has been removed as it has been deprecated in the DOM4 specification. The article for {{ domxref("document.xmlVersion") }} now suggests a way to detect whether the document is HTML or XML without using that property.
+- The attribute {{ domxref("document.xmlVersion") }} (which was only gettable and not settable) has been removed as it has been deprecated in the DOM4 specification. The article for {{ domxref("document.xmlVersion") }} now suggests a way to detect whether the document is HTML or XML without using that property.
 - The attribute {{ domxref("document.xmlStandalone") }} has been removed as it has been deprecated in the DOM4 specification.
 - The attribute {{ domxref("document.xmlEncoding") }} has been removed as it has been deprecated in the DOM4 specification.
 - The attribute {{ domxref("text.isElementContentWhiteSpace") }} has been removed as it has been deprecated in the DOM4 specification.
@@ -67,7 +67,7 @@ Firefox 10 shipped on January 31, 2012. This article provides information about 
 #### Web Workers
 
 - The attribute `XMLHttpRequest.responseType` and `XMLHttpRequest.response` are now available from inside [Workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#section_2).
-- The [`Worker()`](</en-US/docs/Web/API/Worker#worker()>) constructor now accepts [data URIs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).
+- The [`Worker()`](</en-US/docs/Web/API/Worker#worker()>) constructor now accepts [data URIs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).
 
 #### IndexedDB
 
@@ -79,7 +79,7 @@ Great progress has been made to update IndexedDB to the latest draft specificati
 - When [`IDBTransaction.abort()`](/en-US/docs/Web/API/IDBTransaction#abort%28%29) is called, all pending [`IDBRequest`](/en-US/docs/Web/API/IDBRequest) have their `errorCode` set to `ABORT_ERROR`.
 - The methods [`IDBObjectStore.delete()`](</en-US/docs/Web/API/IDBObjectStore#delete()>) and [`IDBCursor.delete()`](</en-US/docs/Web/API/IDBCursor#delete()>) now set the `result` attribute of the returned [`IDBRequest`](/en-US/docs/Web/API/IDBRequest) to `undefined`.
 - The method [`IDBDatabase.setVersion()`](</en-US/docs/Web/API/IDBDatabase#setversion()>) has been removed as it was removed from the latest spec. The version of the database is given through the [`IDBFactory.open()`](/en-US/docs/Web/API/IDBFactory#open) method which has been updated and the `onupgradeneeded` callback allows the schema of the database to be upgraded. The version itself has been changed from a `DOMString` to an `unsigned long long`. The [`IDBVersionChangeRequest`](/en-US/docs/IndexedDB/IDBVersionChangeRequest) interface has been removed and replaced by the new [`IDBOpenDBRequest`](/en-US/docs/Web/API/IDBOpenDBRequest) interface.
-- When opening a database with {{domxref("IDBFactory.open()")}}, if the `version` parameter is not provided and the database does not exist, then it will be created with a version of `1`.
+- When opening a database with {{domxref("IDBFactory.open()")}}, if the `version` parameter is not provided and the database does not exist, then it will be created with a version of `1`.
 - The method [`IDBFactory.deleteDatabase()`](/en-US/docs/Web/API/IDBFactory#deletedatabase%28%29) method has been added.
 - Methods that search via an {{domxref("IDBKeyRange")}} (such as {{domxref("IDBObjectStore.openCursor")}} and {{domxref("IDBIndex.getKey")}}) can accept either a single key or key range.
 
@@ -111,7 +111,7 @@ Great progress has been made to update IndexedDB to the latest draft specificati
 
 ### Developer tools
 
-- The {{ domxref("console") }} object has two new methods,  {{ domxref("console.time()") }} and {{ domxref("console.timeEnd()") }}, which can be used to set timers on a page.
+- The {{ domxref("console") }} object has two new methods,  {{ domxref("console.time()") }} and {{ domxref("console.timeEnd()") }}, which can be used to set timers on a page.
 - The new [Page Inspector](/en-US/docs/Tools/Page_Inspector) has been added, providing an excellent way to examine and manipulate the HTML and CSS behind your content.
 
 ## Changes for Mozilla and add-on developers

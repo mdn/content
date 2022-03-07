@@ -14,11 +14,11 @@ The value of the attribute will change between the {{SVGAttr("from")}} attribute
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement("animate")}}
-* {{SVGElement("animateColor")}}
-* {{SVGElement("animateMotion")}}
-* {{SVGElement("animateTransform")}}
-* {{SVGElement("set")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("animateColor")}}
+- {{SVGElement("animateMotion")}}
+- {{SVGElement("animateTransform")}}
+- {{SVGElement("set")}}
 
 ## Example
 

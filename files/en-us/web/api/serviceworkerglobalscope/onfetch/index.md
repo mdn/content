@@ -29,7 +29,7 @@ serviceWorkerGlobalScope.onfetch = function(fetchEvent) { /* ... */ };
 This code snippet is from the [service
 worker prefetch sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js) (see [prefetch
 example live](https://googlechrome.github.io/samples/service-worker/prefetch/).) The {{domxref("ServiceWorkerGlobalScope.onfetch")}} event handler
-listens for the `fetch` event. When fired, the code returns a promise that
+listens for the `fetch` event. When fired, the code returns a promise that
 resolves to the first matching request in the {{domxref("Cache")}} object. If no match
 is found, the code fetches a response from the network.
 

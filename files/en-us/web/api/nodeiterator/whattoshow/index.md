@@ -58,32 +58,32 @@ The values that can be combined to form the bitmask are:
         <code>NodeFilter.SHOW_CDATA_SECTION</code> {{deprecated_inline}}
       </td>
       <td><code>8</code></td>
-      <td>Shows {{ domxref("CDATASection") }} nodes.</td>
+      <td>Shows {{ domxref("CDATASection") }} nodes.</td>
     </tr>
     <tr>
       <td><code>NodeFilter.SHOW_COMMENT</code></td>
       <td><code>128</code></td>
-      <td>Shows {{ domxref("Comment") }} nodes.</td>
+      <td>Shows {{ domxref("Comment") }} nodes.</td>
     </tr>
     <tr>
       <td><code>NodeFilter.SHOW_DOCUMENT</code></td>
       <td><code>256</code></td>
-      <td>Shows {{ domxref("Document") }} nodes.</td>
+      <td>Shows {{ domxref("Document") }} nodes.</td>
     </tr>
     <tr>
       <td><code>NodeFilter.SHOW_DOCUMENT_FRAGMENT</code></td>
       <td><code>1024</code></td>
-      <td>Shows {{ domxref("DocumentFragment") }} nodes.</td>
+      <td>Shows {{ domxref("DocumentFragment") }} nodes.</td>
     </tr>
     <tr>
       <td><code>NodeFilter.SHOW_DOCUMENT_TYPE</code></td>
       <td><code>512</code></td>
-      <td>Shows {{ domxref("DocumentType") }} nodes.</td>
+      <td>Shows {{ domxref("DocumentType") }} nodes.</td>
     </tr>
     <tr>
       <td><code>NodeFilter.SHOW_ELEMENT</code></td>
       <td><code>1</code></td>
-      <td>Shows {{ domxref("Element") }} nodes.</td>
+      <td>Shows {{ domxref("Element") }} nodes.</td>
     </tr>
     <tr>
       <td><code>NodeFilter.SHOW_ENTITY</code> {{deprecated_inline}}</td>
@@ -108,12 +108,12 @@ The values that can be combined to form the bitmask are:
     <tr>
       <td><code>NodeFilter.SHOW_PROCESSING_INSTRUCTION</code></td>
       <td><code>64</code></td>
-      <td>Shows {{ domxref("ProcessingInstruction") }} nodes.</td>
+      <td>Shows {{ domxref("ProcessingInstruction") }} nodes.</td>
     </tr>
     <tr>
       <td><code>NodeFilter.SHOW_TEXT</code></td>
       <td><code>4</code></td>
-      <td>Shows {{ domxref("Text") }} nodes.</td>
+      <td>Shows {{ domxref("Text") }} nodes.</td>
     </tr>
   </tbody>
 </table>
@@ -128,7 +128,7 @@ var nodeIterator = document.createNodeIterator(
     false
 );
 if ((nodeIterator.whatToShow & NodeFilter.SHOW_ALL) ||
-    (nodeIterator.whatToShow & NodeFilter.SHOW_COMMENT)) {
+    (nodeIterator.whatToShow & NodeFilter.SHOW_COMMENT)) {
     // nodeIterator will show comments
 }
 ```

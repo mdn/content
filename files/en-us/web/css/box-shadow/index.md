@@ -78,7 +78,7 @@ To specify multiple shadows, provide a comma-separated list of shadows.
 
   - : This is a third {{cssxref("&lt;length&gt;")}} value. The larger this value, the bigger the blur, so the shadow becomes bigger and lighter. Negative values are not allowed. If not specified, it will be `0` (the shadow's edge is sharp). The specification does not include an exact algorithm for how the blur radius should be calculated, however, it does elaborate as follows:
 
-    > …for a long, straight shadow edge, this should create a color transition the length of the blur distance that is perpendicular to and centered on the shadow’s edge, and that ranges from the full shadow color at the radius endpoint inside the shadow to fully transparent at the endpoint outside it.
+    > …for a long, straight shadow edge, this should create a color transition the length of the blur distance that is perpendicular to and centered on the shadow's edge, and that ranges from the full shadow color at the radius endpoint inside the shadow to fully transparent at the endpoint outside it.
 
 - `<spread-radius>`
   - : This is a fourth {{cssxref("&lt;length&gt;")}} value. Positive values will cause the shadow to expand and grow bigger, negative values will cause the shadow to shrink. If not specified, it will be `0` (the shadow will be the same size as the element).
@@ -119,11 +119,11 @@ But still, like air, I'll rise.</q>
 
 ```css
 blockquote {
-  padding: 20px;
-  box-shadow:
+  padding: 20px;
+  box-shadow:
        inset 0 -3em 3em rgba(0,0,0,0.1),
-             0 0  0 2px rgb(255,255,255),
-             0.3em 0.3em 1em rgba(0,0,0,0.3);
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
 }
 ```
 

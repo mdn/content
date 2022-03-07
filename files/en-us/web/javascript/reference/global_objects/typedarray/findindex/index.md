@@ -164,6 +164,6 @@ TypedArray.prototype.findIndex = Array.prototype.findIndex = Array.prototype.fin
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.findIndex` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.findIndex` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray.prototype.find()")}}
 - {{jsxref("TypedArray.prototype.indexOf()")}}

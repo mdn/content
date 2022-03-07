@@ -3,7 +3,6 @@ title: VREyeParameters
 slug: Web/API/VREyeParameters
 tags:
   - API
-  - Experimental
   - Deprecated
   - Landing
   - Reference
@@ -25,9 +24,9 @@ This interface is accessible through the {{domxref("VRDisplay.getEyeParameters()
 
 ## Properties
 
-- {{domxref("VREyeParameters.offset")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VREyeParameters.offset")}} {{deprecated_inline}} {{readonlyInline}}
   - : *Represents the o*ffset from the center point between the user's eyes to the center of the eye, measured in meters.
-- {{domxref("VREyeParameters.fieldOfView")}}  {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VREyeParameters.fieldOfView")}}  {{deprecated_inline}} {{readonlyInline}}
   - : *Describes t*he current field of view for the eye, which can vary as the user adjusts their interpupillary distance (IPD).
 - {{domxref("VREyeParameters.renderWidth")}} {{deprecated_inline}} {{readonlyInline}}
   - : Describes the recommended render target width of each eye viewport, in pixels.

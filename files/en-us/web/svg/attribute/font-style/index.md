@@ -21,11 +21,11 @@ The **`font-style`** attribute specifies whether the text is to be rendered usin
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement("altGlyph")}}
-* {{SVGElement("text")}}
-* {{SVGElement("textPath")}}
-* {{SVGElement("tref")}}
-* {{SVGElement("tspan")}}
+- {{SVGElement("altGlyph")}}
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
 
 ## Example
 
@@ -106,4 +106,4 @@ For a description of the values, please refer to the [CSS font-style](/en-US/doc
 
 ## See also
 
-* {{cssxref("font-style", "CSS font-style")}}
+- {{cssxref("font-style", "CSS font-style")}}

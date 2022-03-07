@@ -29,7 +29,7 @@ var svgElement = ResizeObserverEntry.target;
 
 ### Value
 
-An {{domxref('Element')}} or {{domxref('SVGElement')}} representing the element being
+An {{domxref('Element')}} or {{domxref('SVGElement')}} representing the element being
 observed.
 
 ## Examples
@@ -46,7 +46,7 @@ size.
 To grab a reference to the observed element so we can update its
 {{cssxref("border-radius")}} value after each change, we make use of the
 `target` property of each entry —
- `entry.target.style.borderRadius`.
+ `entry.target.style.borderRadius`.
 
 ```js
 const resizeObserver = new ResizeObserver(entries => {

@@ -22,47 +22,6 @@ Experimental features can be enabled or disabled using the [Firefox Configuratio
 
 ## HTML
 
-### Element: \<dialog>
-
-The HTML {{HTMLElement("dialog")}} element and its associated DOM APIs provide support for HTML-based modal dialog boxes.
-The current implementation is a little inelegant but is basically functional. (See {{bug(840640)}} for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>53</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>53</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>53</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>53</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.dialog_element.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ### inert attribute
 
 The {{domxref("HTMLElement")}} property {{DOMxRef("HTMLElement.inert")}} is a {{jsxref("Boolean")}}, when present, may make the browser "ignore" the element from assistive technologies, page search and text selection. For more details on the status of this feature see {{bug(1655722)}}.
@@ -512,51 +471,11 @@ The {{cssxref("math-style")}} property indicates whether MathML equations should
   </tbody>
 </table>
 
-### @layer rule and layer() function
+### Scroll-linked animations
 
-The [`@layer`](en-US/docs/Web/CSS/@layer) rule declares a cascade layer, which allows declaration of styles and can be imported via the [`@import`](/en-US/docs/Web/CSS/@import) rule using the `layer()` function. (See {{bug(1699217)}} for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>94</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>94</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>94</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>94</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.cascade-layers.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-### Property: hyphenate-character
-
-The {{cssxref("hyphenate-character")}} property can be used to set a string that is used instead of a hyphen character (`-`) at the end of a hyphenation line break.
-It can also be used to specify that the character is selected to be appropriate for the language conventions of the affected content.
-(See {{bug(1746187)}} for more details.)
+The {{cssxref('@scroll-timeline')}} at-rule and {{cssxref('animation-timeline')}} property allow you to define animations that are linked to container scroll progress (rather than time).
+Once specified, a scroll timeline is associated with a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) by using the `animation-timeline` property.
+For more information see {{bug(1676791)}} and {{bug(1676782)}}
 
 <table>
   <thead>
@@ -570,7 +489,7 @@ It can also be used to specify that the character is selected to be appropriate 
     <tr>
       <th>Nightly</th>
       <td>97</td>
-      <td>Yes</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -589,7 +508,7 @@ It can also be used to specify that the character is selected to be appropriate 
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>layout.css.hyphenate-character.enabled</code></td>
+      <td colspan="2"><code>layout.css.scroll-linked-animations.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -640,7 +559,47 @@ This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/do
 
 ## JavaScript
 
-No experimental features
+### Array grouping methods
+
+The {{jsxref("Array.prototype.groupBy()")}} and {{jsxref("Array.prototype.groupByToMap()")}} methods are used to group the elements of an array using a string or value, respectively, returned by a test function.
+The `groupBy` method should be used when strings can be used to represent element groups, while `groupByToMap()` should be used in cases where it makes sense to use a value as the key.
+(See {{bug(1739648)}} for more details.)
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version removed</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>98</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>98</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>98</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>98</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">None</td>
+    </tr>
+  </tbody>
+</table>
 
 ## APIs
 
@@ -983,6 +942,49 @@ With this feature enabled, Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) 
   </tbody>
 </table>
 
+### WebVR API
+
+#### WebVR API (Disabled)
+
+The deprecated [WebVR API](/en-US/docs/Web/API/WebVR_API) is on the path for removal.
+It is disabled by default on all builds {{bug(1750902)}}.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version removed</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>98</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>98</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>98</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>98</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.vr.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### HTML DOM API
 
 #### HTMLMediaElement method: setSinkId()
@@ -1147,7 +1149,7 @@ The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxr
 
 #### HTML Sanitizer API
 
-The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document’s DOM. Default elements within each configuration property (those to be sanitized) are still under consideration. Due to this the config parameter has not been implemented (see {{domxref('Sanitizer.sanitizer()', 'the constructor')}}) for more information. See {{bug('1673309')}} for more details.
+The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM. Default elements within each configuration property (those to be sanitized) are still under consideration. Due to this the config parameter has not been implemented (see {{domxref('Sanitizer.sanitizer()', 'the constructor')}}) for more information. See {{bug('1673309')}} for more details.
 
 <table>
   <thead>

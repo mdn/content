@@ -18,7 +18,7 @@ browser-compat: api.Navigator.sendBeacon
 The **`navigator.sendBeacon()`**
 method {{glossary("Asynchronous", "asynchronously")}} sends an [HTTP POST](/en-US/docs/Web/HTTP/Methods/POST) request containing a small amount of data to a web server.
 
-It’s intended to be used for
+It's intended to be used for
 sending analytics data to a web server, and avoids some of the problems with
 legacy techniques for sending analytics, such as the use of
 {{domxref("XMLHttpRequest","XMLHttpRequest")}}.

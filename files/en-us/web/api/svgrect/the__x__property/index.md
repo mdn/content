@@ -30,17 +30,17 @@ The [x](https://svgwg.org/svg2-draft/geometry.html#XProperty) property describes
     <tr>
       <td>Applies to</td>
       <td>
-        {{ SVGElement("mask") }} , ‘<a
+        {{ SVGElement("mask") }} , '<a
           href="https://svgwg.org/svg2-draft/struct.html#SVGElement"
           >svg</a
-        >’, ‘<a href="https://svgwg.org/svg2-draft/shapes.html#RectElement"
+        >', '<a href="https://svgwg.org/svg2-draft/shapes.html#RectElement"
           >rect</a
-        >’, ‘<a href="https://svgwg.org/svg2-draft/embedded.html#ImageElement"
+        >', '<a href="https://svgwg.org/svg2-draft/embedded.html#ImageElement"
           >image</a
-        >’, ‘<a
+        >', '<a
           href="https://svgwg.org/svg2-draft/embedded.html#ForeignObjectElement"
           >foreignObject</a
-        >’
+        >'
       </td>
     </tr>
     <tr>

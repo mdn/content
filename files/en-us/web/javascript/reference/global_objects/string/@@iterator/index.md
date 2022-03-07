@@ -69,6 +69,6 @@ for (var v of str) {
 
 ## See also
 
-- A polyfill of `String.prototype[@@iterator]` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype[@@iterator]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - [Iteration
   protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

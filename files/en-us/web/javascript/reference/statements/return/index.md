@@ -78,7 +78,7 @@ To avoid this problem (to prevent ASI), you could use parentheses:
 
 ```js
 return (
-  a + b
+  a + b
 );
 ```
 

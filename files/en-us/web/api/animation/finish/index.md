@@ -13,7 +13,7 @@ tags:
   - web animations api
 browser-compat: api.Animation.finish
 ---
-{{APIRef("Web Animations")}}{{SeeCompatTable}}
+{{APIRef("Web Animations")}}
 
 The **`finish()`** method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("Animation")}} Interface sets the current playback time to the end of the animation corresponding to the current playback direction.
 
@@ -36,7 +36,7 @@ None.
 ### Exceptions
 
 - `InvalidState`
-  - : The player's playback rate is 0 or the animation's playback rate is greater than 0 and the end time of the animation is infinity.
+  - : The player's playback rate is 0 or the animation's playback rate is greater than 0 and the end time of the animation is infinity.
 
 ## Examples
 

@@ -56,8 +56,6 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("close")}} event is raised.
 - {{domxref("GlobalEventHandlers.oncontextmenu")}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("contextmenu")}} event is raised.
-- {{domxref("GlobalEventHandlers.oncuechange")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("cuechange")}} event is raised.
 - {{domxref("GlobalEventHandlers.ondblclick")}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("dblclick")}} event is raised.
 - {{domxref("GlobalEventHandlers.ondrag")}}

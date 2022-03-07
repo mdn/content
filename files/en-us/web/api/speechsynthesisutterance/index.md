@@ -46,25 +46,25 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - [`boundary`](/en-US/docs/Web/API/SpeechSynthesisUtterance/boundary_event)
   - : Fired when the spoken utterance reaches a word or sentence boundary.
-    Also available via the [`onboundary`](/en-US/docs/Web/API/SpeechSynthesisUtterance/onboundary) property.
+    Also available via the `onboundary` property.
 - [`end`](/en-US/docs/Web/API/SpeechSynthesisUtterance/end_event)
   - : Fired when the utterance has finished being spoken.
-    Also available via the [`onend`](/en-US/docs/Web/API/SpeechSynthesisUtterance/onend) property.
+    Also available via the `onend` property.
 - [`error`](/en-US/docs/Web/API/SpeechSynthesisUtterance/error_event)
   - : Fired when an error occurs that prevents the utterance from being successfully spoken.
-    Also available via the [`onerror`](/en-US/docs/Web/API/SpeechSynthesisUtterance/onerror) property
+    Also available via the `onerror` property
 - [`mark`](/en-US/docs/Web/API/SpeechSynthesisUtterance/mark_event)
   - : Fired when the spoken utterance reaches a named SSML "mark" tag.
-    Also available via the [`onmark`](/en-US/docs/Web/API/SpeechSynthesisUtterance/onmark) property.
+    Also available via the `onmark` property.
 - [`pause`](/en-US/docs/Web/API/SpeechSynthesisUtterance/pause_event)
   - : Fired when the utterance is paused part way through.
-    Also available via the [`onpause`](/en-US/docs/Web/API/SpeechSynthesisUtterance/onpause) property.
+    Also available via the `onpause` property.
 - [`resume`](/en-US/docs/Web/API/SpeechSynthesisUtterance/resume_event)
   - : Fired when a paused utterance is resumed.
-    Also available via the [`onresume`](/en-US/docs/Web/API/SpeechSynthesisUtterance/onresume) property.
+    Also available via the `onresume` property.
 - [`start`](/en-US/docs/Web/API/SpeechSynthesisUtterance/start_event)
   - : Fired when the utterance has begun to be spoken.
-    Also available via the [`onstart`](/en-US/docs/Web/API/SpeechSynthesisUtterance/onstart) property.
+    Also available via the `onstart` property.
 
 ## Examples
 

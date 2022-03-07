@@ -153,11 +153,11 @@ the following situations:
 - If it's used, it will be accessed several times, and there is no need to
   re-calculate that value will never be changed or shouldn't be re-calculated.
 
-> **Note:** This means that you shouldn’t write a lazy getter for a property whose value you
+> **Note:** This means that you shouldn't write a lazy getter for a property whose value you
 > expect to change, because if the getter is lazy then it will not recalculate the
 > value.
 >
-> Note that getters are not “lazy” or “memoized” by nature; you must implement this
+> Note that getters are not "lazy" or "memoized" by nature; you must implement this
 > technique if you desire this behavior.
 
 In the following example, the object has a getter as its own property. On getting the

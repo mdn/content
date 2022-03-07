@@ -31,7 +31,7 @@ evtSource.onerror = function() {
 };
 ```
 
-> **Note:** You can find a full example on GitHub — see [Simple SSE
+> **Note:** You can find a full example on GitHub — see [Simple SSE
 > demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
 ## Specifications

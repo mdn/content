@@ -18,7 +18,7 @@ Since a platform's _system clock_ is subject to various _skews_ (such as NTP adj
 
 The {{domxref("DOMHighResTimeStamp")}} type, as its name implies, represents a high resolution point in time. This type is a `double` and is used by the performance interfaces. The value could be a discrete point in time or the difference in time between two discrete points in time.
 
-The unit of `DOMHighResTimeStamp` is milliseconds and should be accurate to 5 µs (microseconds). However, If the browser is unable to provide a time value accurate to 5 microseconds (because, for example, due to hardware or software constraints), the browser can represent the value as a time in milliseconds accurate to a millisecond.
+The unit of `DOMHighResTimeStamp` is milliseconds and should be accurate to 5 µs (microseconds). However, If the browser is unable to provide a time value accurate to 5 microseconds (because, for example, due to hardware or software constraints), the browser can represent the value as a time in milliseconds accurate to a millisecond.
 
 ## Methods
 
@@ -63,7 +63,7 @@ The `{{domxref("Performance.navigation","navigation")}}` property returns a {{do
 
 As shown in the {{domxref("Performance")}} interface's [Browser Compatibility](/en-US/docs/Web/API/Performance#browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers.
 
-To test your browser's support for the {{domxref("Performance")}} interface, run the [`perf-api-support`](https://mdn.github.io/web-performance/perf-api-support.html) application.
+To test your browser's support for the {{domxref("Performance")}} interface, run the [`perf-api-support`](https://mdn.github.io/dom-examples/performance-apis/perf-api-support.html) application.
 
 ## See also
 

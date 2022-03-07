@@ -66,7 +66,6 @@ var intOuterFramesetHeight = top.innerHeight;
 // will return the height of the viewport of the outermost frameset
 ```
 
-
 To change the size of a window, see {{domxref("window.resizeBy()")}} and
 {{domxref("window.resizeTo()")}}.
 
@@ -83,6 +82,7 @@ The following figure shows the difference between `outerHeight` and
 ## Demo
 
 ### HTML
+
 ```html
 <p>Resize the browser window to fire the <code>resize</code> event.</p>
 <p>Window height: <span id="height"></span></p>
@@ -90,6 +90,7 @@ The following figure shows the difference between `outerHeight` and
 ```
 
 ### JavaScript
+
 ```js
 const heightOutput = document.querySelector("#height");
 const widthOutput = document.querySelector("#width");

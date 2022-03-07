@@ -15,7 +15,7 @@ browser-compat: api.PaymentAddress.dependentLocality
 
 The read-only **`dependentLocality`**
 property of the {{domxref('PaymentAddress')}} interface is a string containing a
-sublocality designation within a city, such as a  neighborhood, borough, district, or,
+sublocality designation within a city, such as a  neighborhood, borough, district, or,
 in the United Kingdom, a dependent locality. Also known as a _post
 town_.
 

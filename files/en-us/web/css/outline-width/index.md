@@ -46,9 +46,9 @@ The `outline-width` property is specified as any one of the values listed below.
 - `thin`
   - : Depends on the user agent. Typically equivalent to `1px` in desktop browsers (including Firefox).
 - `medium`
-  - : Depends on the user agent. Typically equivalent to `3px` in desktop browsers (including Firefox).
+  - : Depends on the user agent. Typically equivalent to `3px` in desktop browsers (including Firefox).
 - `thick`
-  - : Depends on the user agent. Typically equivalent to `5px` in desktop browsers (including Firefox).
+  - : Depends on the user agent. Typically equivalent to `5px` in desktop browsers (including Firefox).
 
 ## Formal definition
 

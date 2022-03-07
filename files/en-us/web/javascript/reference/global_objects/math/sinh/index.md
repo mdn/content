@@ -88,7 +88,7 @@ Math.sinh(1); // 1.1752011936438014
 
 ## See also
 
-- A polyfill of `Math.sinh` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [Polyfill of `Math.sinh` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.asinh()")}}
 - {{jsxref("Math.atanh()")}}

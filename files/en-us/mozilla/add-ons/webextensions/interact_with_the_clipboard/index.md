@@ -106,7 +106,7 @@ browser.alarms.onAlarm.addListener(copy);
 
 Depending on the browser, this may not work. On Firefox, it will not work, and you'll see a message like this in your console:
 
-`document.execCommand(‘cut’/‘copy’) was denied because it was not called from inside a short running user-generated event handler.`
+`document.execCommand('cut'/'copy') was denied because it was not called from inside a short running user-generated event handler.`
 
 To enable this use case, you need to ask for the `"clipboardWrite"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). So: `"clipboardWrite"` enables you to write to the clipboard outside a short-lived event handler for a user action.
 

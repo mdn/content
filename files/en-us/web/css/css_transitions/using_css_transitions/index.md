@@ -7,10 +7,11 @@ tags:
   - CSS Transitions
   - CSS3 Transitions
   - Guide
+spec-urls: https://drafts.csswg.org/css-transitions/
 ---
 {{CSSRef}}
 
-**CSS transitions** provide a way to control animation speed when changing CSS properties. Instead of having property changes take effect immediately, you can cause the changes in a property to take place over a period of time. For example, if you change the color of an element from white to black, usually the change is instantaneous. With CSS transitions enabled, changes occur at time intervals that follow an acceleration curve, all of which can be customized.
+**CSS transitions** provide a way to control animation speed when changing CSS properties. Instead of having property changes take effect immediately, you can cause the changes in a property to take place over a period of time. For example, if you change the color of an element from white to black, usually the change is instantaneous. With CSS transitions enabled, changes occur at time intervals that follow an acceleration curve, all of which can be customized.
 
 Animations that involve transitioning between two states are often called _implicit transitions_ as the states in between the start and final states are implicitly defined by the browser.
 
@@ -24,7 +25,7 @@ The Web author can define which property has to be animated and in which way. Th
 
 > **Note:** The set of properties that can be animated is changing as the specification develops.
 
-> **Note:** The `auto` value is often a very complex case. The specification recommends not animating from and to `auto`. Some user agents, like those based on Gecko, implement this requirement and others, like those based on WebKit, are less strict. Using animations with `auto` may lead to unpredictable results, depending on the browser and its version, and should be avoided.
+> **Note:** The `auto` value is often a very complex case. The specification recommends not animating from and to `auto`. Some user agents, like those based on Gecko, implement this requirement and others, like those based on WebKit, are less strict. Using animations with `auto` may lead to unpredictable results, depending on the browser and its version, and should be avoided.
 
 ## Defining transitions
 
@@ -33,7 +34,7 @@ CSS Transitions are controlled using the shorthand {{cssxref("transition")}} pro
 You can control the individual components of the transition with the following sub-properties:
 
 - {{cssxref("transition-property")}}
-  - : Specifies the name or names of the CSS properties to which transitions should be applied. Only properties listed here are animated during transitions; changes to all other properties occur instantaneously as usual.
+  - : Specifies the name or names of the CSS properties to which transitions should be applied. Only properties listed here are animated during transitions; changes to all other properties occur instantaneously as usual.
 - {{cssxref("transition-duration")}}
   - : Specifies the duration over which transitions should occur. You can specify a single duration that applies to all properties during the transition, or multiple values to allow each property to transition over a different period of time.
 - {{cssxref("transition-timing-function")}}
@@ -72,8 +73,8 @@ This example performs a four-second font size transition with a two-second delay
 
 ```html hidden
 <body>
-    <p>The box below combines transitions for: width, height, background-color, transform. Hover over the box to see these properties animated.</p>
-    <div class="box">Sample</div>
+    <p>The box below combines transitions for: width, height, background-color, transform. Hover over the box to see these properties animated.</p>
+    <div class="box">Sample</div>
 </body>
 ```
 
@@ -115,8 +116,8 @@ This is treated as if it were:
 
 ```css
 div {
-  transition-property: opacity, left, top, height;
-  transition-duration: 3s, 5s, 3s, 5s;
+  transition-property: opacity, left, top, height;
+  transition-duration: 3s, 5s, 3s, 5s;
 }
 ```
 
@@ -207,7 +208,7 @@ Using JavaScript you can make the effect of moving the ball to a certain positio
 var f = document.getElementById('foo');
 document.addEventListener('click', function(ev){
     f.style.transform = 'translateY('+(ev.clientY-25)+'px)';
-    f.style.transform += 'translateX('+(ev.clientX-25)+'px)';
+    f.style.transform += 'translateX('+(ev.clientX-25)+'px)';
 },false);
 ```
 
@@ -254,9 +255,7 @@ el.addEventListener("transitionstart", signalStart, true);
 
 ## Specifications
 
-| Specification                                        | Status                                   | Comment            |
-| ---------------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Transitions', '', '')}} | {{Spec2('CSS3 Transitions')}} | Initial definition |
+{{Specifications}}
 
 ## See also
 

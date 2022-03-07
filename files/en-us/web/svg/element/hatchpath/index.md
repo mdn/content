@@ -21,15 +21,15 @@ The **`<hatchpath>`** [SVG](/en-US/docs/Web/SVG) element defines a hatch path us
 
 ### Global attributes
 
-* [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-* [Global event attributes](/en-US/docs/Web/SVG/Attribute#global_event_attributes)
-* [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-* [Style attributes](/en-US/docs/Web/SVG/Attribute#style_attributes)
+- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+- [Global event attributes](/en-US/docs/Web/SVG/Attribute#global_event_attributes)
+- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
+- [Style attributes](/en-US/docs/Web/SVG/Attribute#style_attributes)
 
 ### Specific attributes
 
-* {{SVGAttr("d")}}
-* {{SVGAttr("offset")}}
+- {{SVGAttr("d")}}
+- {{SVGAttr("offset")}}
 
 ## DOM Interface
 
@@ -63,4 +63,4 @@ This element implements the {{domxref("SVGHatchpathElement")}} interface.
 
 ## See also
 
-* {{SVGElement("hatch")}}
+- {{SVGElement("hatch")}}

@@ -28,7 +28,7 @@ This object is available from the {{domxref("DragEvent.dataTransfer","dataTransf
 ### Standard properties
 
 - {{domxref("DataTransfer.dropEffect")}}
-  - : Gets the type of drag-and-drop operation currently selected or sets the operation to a new type. The value must be `none`, `copy`, `link` or `move`.
+  - : Gets the type of drag-and-drop operation currently selected or sets the operation to a new type. The value must be `none`, `copy`, `link` or `move`.
 - {{domxref("DataTransfer.effectAllowed")}}
   - : Provides all of the types of operations that are possible. Must be one of `none`, `copy`, `copyLink`, `copyMove`, `link`, `linkMove`, `move`, `all` or `uninitialized`.
 - {{domxref("DataTransfer.files")}}

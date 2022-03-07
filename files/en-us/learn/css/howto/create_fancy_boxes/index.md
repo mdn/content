@@ -11,7 +11,7 @@ CSS boxes are the building blocks of any web page styled with CSS. Making them n
 
 Before we start getting into the practical side of it, make sure you are familiar with [the CSS box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model). It's also a good idea, but not a prerequisite, to be familiar with some [CSS layout basics](/en-US/docs/Learn/CSS/CSS_layout/Introduction).
 
-On the technical side, Creating fancy boxes are all about mastering CSS border and background properties and how to apply them to a given box. But beyond the technics its also all about unleashing your creativity. It will not be done in one day, and some web developers spend their whole life having fun with it.
+On the technical side, Creating fancy boxes are all about mastering CSS border and background properties and how to apply them to a given box. But beyond the technics its also all about unleashing your creativity. It will not be done in one day, and some web developers spend their whole life having fun with it.
 
 We are about to see many examples, but we will always work on the most simple piece of HTML possible, a simple element:
 
@@ -26,11 +26,11 @@ Ok, that's a very small bit of HTML, what can we tweak on that element? All of t
 - Its pseudo-element: {{cssxref("::before")}} and {{cssxref("::after")}}
 - and some aside properties like: {{cssxref("box-shadow")}}, {{cssxref("transform")}}, {{cssxref("outline")}}, etc.
 
-So we have a very large playground. Let the fun begin.
+So we have a very large playground. Let the fun begin.
 
 ## Box model tweak
 
-The box model alone allows us to do some basic stuff, like adding simple borders, making squares, etc.. It starts to get interesting when you push the properties to the limit by having negative `padding` and/or- `margin` by having `border-radius` larger than the actual size of the box.
+The box model alone allows us to do some basic stuff, like adding simple borders, making squares, etc.. It starts to get interesting when you push the properties to the limit by having negative `padding` and/or- `margin` by having `border-radius` larger than the actual size of the box.
 
 ### Making circles
 
@@ -38,7 +38,7 @@ The box model alone allows us to do some basic stuff, like adding simple borders
 <div class="fancy">Hi! I want to be fancy.</div>
 ```
 
-This is something that is both very simple and very fun. The {{cssxref("border-radius")}} property is made to create a rounded corner applied to boxes, but what happens if the radius size is equal or larger than the actual width of the box?
+This is something that is both very simple and very fun. The {{cssxref("border-radius")}} property is made to create a rounded corner applied to boxes, but what happens if the radius size is equal or larger than the actual width of the box?
 
 ```css
 .fancy {
@@ -73,7 +73,7 @@ Yes, we get a circle:
 
 ## Backgrounds
 
-When we talk about a fancy box, the core properties to handle that are [background-\* properties](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders). When you start fiddling with backgrounds it's like your CSS box is turned into a blank canvas you'll fill.
+When we talk about a fancy box, the core properties to handle that are [background-\* properties](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders). When you start fiddling with backgrounds it's like your CSS box is turned into a blank canvas you'll fill.
 
 Before we jump to some practical examples, let's step back a bit as there are two things you should know about backgrounds.
 
@@ -103,17 +103,17 @@ Okay, let's have fun with backgrounds:
      considered to be images and can be
      manipulated as such */
   background-image: linear-gradient(175deg, rgba(0,0,0,0) 95%, #8da389 95%),
-                    linear-gradient( 85deg, rgba(0,0,0,0) 95%, #8da389 95%),
-                    linear-gradient(175deg, rgba(0,0,0,0) 90%, #b4b07f 90%),
-                    linear-gradient( 85deg, rgba(0,0,0,0) 92%, #b4b07f 92%),
-                    linear-gradient(175deg, rgba(0,0,0,0) 85%, #c5a68e 85%),
-                    linear-gradient( 85deg, rgba(0,0,0,0) 89%, #c5a68e 89%),
-                    linear-gradient(175deg, rgba(0,0,0,0) 80%, #ba9499 80%),
-                    linear-gradient( 85deg, rgba(0,0,0,0) 86%, #ba9499 86%),
-                    linear-gradient(175deg, rgba(0,0,0,0) 75%, #9f8fa4 75%),
-                    linear-gradient( 85deg, rgba(0,0,0,0) 83%, #9f8fa4 83%),
-                    linear-gradient(175deg, rgba(0,0,0,0) 70%, #74a6ae 70%),
-                    linear-gradient( 85deg, rgba(0,0,0,0) 80%, #74a6ae 80%);
+                    linear-gradient( 85deg, rgba(0,0,0,0) 95%, #8da389 95%),
+                    linear-gradient(175deg, rgba(0,0,0,0) 90%, #b4b07f 90%),
+                    linear-gradient( 85deg, rgba(0,0,0,0) 92%, #b4b07f 92%),
+                    linear-gradient(175deg, rgba(0,0,0,0) 85%, #c5a68e 85%),
+                    linear-gradient( 85deg, rgba(0,0,0,0) 89%, #c5a68e 89%),
+                    linear-gradient(175deg, rgba(0,0,0,0) 80%, #ba9499 80%),
+                    linear-gradient( 85deg, rgba(0,0,0,0) 86%, #ba9499 86%),
+                    linear-gradient(175deg, rgba(0,0,0,0) 75%, #9f8fa4 75%),
+                    linear-gradient( 85deg, rgba(0,0,0,0) 83%, #9f8fa4 83%),
+                    linear-gradient(175deg, rgba(0,0,0,0) 70%, #74a6ae 70%),
+                    linear-gradient( 85deg, rgba(0,0,0,0) 80%, #74a6ae 80%);
 }
 ```
 
@@ -280,7 +280,7 @@ So it's possible to create a wonderful effect when we mix all of this together. 
 <div class="fancy">Hi! I want to be fancy.</div>
 ```
 
-Let's create some partial drop shadow effect.  The {{cssxref("box-shadow")}} property allow us to create inner light and a flat drop shadow effect, but with some little extra work it becomes possible to create a more natural geometry by using pseudo-element and the {{cssxref("transform")}} property.
+Let's create some partial drop shadow effect.  The {{cssxref("box-shadow")}} property allow us to create inner light and a flat drop shadow effect, but with some little extra work it becomes possible to create a more natural geometry by using pseudo-element and the {{cssxref("transform")}} property.
 
 ```css
 .fancy {

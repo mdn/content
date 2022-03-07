@@ -37,7 +37,7 @@ var register = PeriodicSyncManager.register(tag, BackgroundSyncOptions);
 
 ### Return value
 
-Returns a {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}
+Returns a {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}
 
 ### Exceptions
 

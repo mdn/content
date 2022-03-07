@@ -82,10 +82,10 @@ For all <math><semantics><mrow><mi>x</mi>
 ```js
 if (!Math.cbrt) {
   Math.cbrt = (function(pow) {
-    return function cbrt(x){
-      // ensure negative numbers remain negative:
+    return function cbrt(x){
+      // ensure negative numbers remain negative:
       return x < 0 ? -pow(-x, 1/3) : pow(x, 1/3);
-    };
+    };
   })(Math.pow); // localize Math.pow to increase efficiency
 }
 ```
@@ -116,6 +116,6 @@ Math.cbrt(2);  // 1.2599210498948732
 
 ## See also
 
-- A polyfill of `Math.cbrt` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [Polyfill of `Math.cbrt` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math.pow()")}}
 - {{jsxref("Math.sqrt()")}}

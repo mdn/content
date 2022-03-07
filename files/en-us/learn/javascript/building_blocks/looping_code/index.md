@@ -323,8 +323,8 @@ Then inside the loop we're using `i` to access each item in the array in turn.
 This works just fine, and in early versions of JavaScript, `for...of` didn't exist, so this was the standard way to iterate through an array.
 However, it offers more chances to introduce bugs into your code. For example:
 
-* you might start `i` at `1`, forgetting that the first array index is zero, not 1.
-* you might stop at `i <= cats.length`, forgetting that the last array index is at `length - 1`.
+- you might start `i` at `1`, forgetting that the first array index is zero, not 1.
+- you might stop at `i <= cats.length`, forgetting that the last array index is at `length - 1`.
 
 For reasons like this, it's usually best to use `for...of` if you can.
 
@@ -590,7 +590,7 @@ Specifically, we want you to:
 
 - Remember to include an iterator! However, in this example we are counting down after each iteration, not up, so you **don't** want `i++` — how do you iterate downwards?
 
-> **Note:** If you start typing the loop (for example (while(i>=0)), the browser might stuck because you have not yet entered the end condition. So be careful with this. You can start writing your code in a comment to deal with this issue and remove the comment after you finish.
+> **Note:** If you start typing the loop (for example (while(i>=0)), the browser might get stuck because you have not yet entered the end condition. So be careful with this. You can start writing your code in a comment to deal with this issue and remove the comment after you finish.
 
 If you make a mistake, you can always reset the example with the "Reset" button.
 If you get really stuck, press "Show solution" to see a solution.

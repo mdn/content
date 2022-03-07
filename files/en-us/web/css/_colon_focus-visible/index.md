@@ -14,9 +14,9 @@ browser-compat: css.selectors.focus-visible
 ---
 {{CSSRef}}
 
-The **`:focus-visible`** pseudo-class applies while an element matches the {{CSSxRef(":focus")}} pseudo-class and the UA ({{glossary("User Agent")}}) determines via heuristics that the focus should be made evident on the element. (Many browsers show a “focus ring” by default in this case.)
+The **`:focus-visible`** pseudo-class applies while an element matches the {{CSSxRef(":focus")}} pseudo-class and the UA ({{glossary("User Agent")}}) determines via heuristics that the focus should be made evident on the element. (Many browsers show a "focus ring" by default in this case.)
 
-This selector is useful to provide a different focus indicator based on the user’s input modality (mouse vs. keyboard).
+This selector is useful to provide a different focus indicator based on the user's input modality (mouse vs. keyboard).
 
 ## Syntax
 
@@ -91,10 +91,6 @@ custom-button:focus-visible {
 
 {{EmbedLiveSample("Selectively_showing_the_focus_indicator", "100%", 60)}}
 
-## Polyfill
-
-You can polyfill `:focus-visible` using [focus-visible.js](https://github.com/WICG/focus-visible).
-
 ## Accessibility concerns
 
 ### Low vision
@@ -119,3 +115,4 @@ It may not be obvious as to why the focus indicator is appearing and disappearin
 
 - {{CSSxRef(":focus")}}
 - {{CSSxRef(":focus-within")}}
+- [A polyfill for `:focus-visible`](https://github.com/WICG/focus-visible)

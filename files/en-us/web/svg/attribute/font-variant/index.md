@@ -14,11 +14,11 @@ The **`font-variant`** attribute indicates whether the text is to be rendered us
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement("altGlyph")}}
-* {{SVGElement("text")}}
-* {{SVGElement("textPath")}}
-* {{SVGElement("tref")}}
-* {{SVGElement("tspan")}}
+- {{SVGElement("altGlyph")}}
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
 
 ## Example
 
@@ -123,4 +123,4 @@ For a description of the values, please refer to the [CSS `font-variant`](/en-US
 
 ## See also
 
-* {{cssxref("font-variant", "CSS font-variant")}}
+- {{cssxref("font-variant", "CSS font-variant")}}

@@ -18,7 +18,7 @@ Removes the specified browsing data.
 
 The browsing data to be removed is specified in the `dataTypes` option, which is a {{WebExtAPIRef("browsingData.DataTypeSet")}} object.
 
-You can use the `removalOptions` option, which is a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, to control how far back in time to remove data and whether to remove data only from normal web pages or to remove data from hosted apps and extensions as well.
+You can use the `removalOptions` option, which is a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, to control how far back in time to remove data and whether to remove data only from normal web pages or to remove data from hosted apps and extensions as well.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 

@@ -22,7 +22,7 @@ This article offers a list of important bug fixes offered by Firefox 3 that are 
 - The `DOMNodeInserted` and `DOMNodeRemoved` events now properly apply to the correct nodes ({{ Bug(367164) }}).
 - `\d`, one of special characters in regular expressions, has been fixed to match only Basic Latin alphabet digits (equivalent to `{{ mediawiki.external('0-9') }}`). ({{ Bug(378738) }})
 - The image-sniffing-services category allows for image decoders implemented as extensions to correctly decode images sent with incorrect mime-types. ({{ Bug(391667) }})
-- Right-clicks on form controls no longer brings up a context menu by default ({{ Bug(404536) }}.  See [Offering a context menu for form controls](/en-US/docs/Offering%20a%20context%20menu%20for%20form%20controls) to learn how to enable this on a case-by-case basis.
+- Right-clicks on form controls no longer brings up a context menu by default ({{ Bug(404536) }}.  See [Offering a context menu for form controls](/en-US/docs/Offering%20a%20context%20menu%20for%20form%20controls) to learn how to enable this on a case-by-case basis.
 
 ### See also
 

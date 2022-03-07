@@ -68,8 +68,8 @@ let x = {p: 1};
 
 let obj = new Proxy(x, {
   get(t, k, r) {
-    return k + 'bar'
-  }
+    return k + 'bar'
+  }
 })
 Reflect.get(obj, 'foo')  // "foobar"
 
@@ -79,8 +79,8 @@ let y = {foo: 3};
 
 let obj = new Proxy(x, {
   get(t, prop, receiver) {
-    return receiver[prop] + 'bar'
-  }
+    return receiver[prop] + 'bar'
+  }
 })
 Reflect.get(obj, 'foo', y) // "3bar"
 ```
@@ -95,7 +95,7 @@ Reflect.get(obj, 'foo', y) // "3bar"
 
 ## See also
 
-- A polyfill of `Reflect.get` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [Polyfill of `Reflect.get` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
 - [Property
   accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)

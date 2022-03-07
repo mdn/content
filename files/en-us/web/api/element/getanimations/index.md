@@ -20,10 +20,10 @@ browser-compat: api.Element.getAnimations
 ---
 {{ SeeCompatTable() }}{{APIRef("Web Animations")}}
 
-The `getAnimations()` method of the {{domxref("Element")}} interface
-(specified on the `Animatable` mixin) returns an array of all
+The `getAnimations()` method of the {{domxref("Element")}} interface
+(specified on the `Animatable` mixin) returns an array of all
 {{domxref("Animation")}} objects affecting this element or which are scheduled to do so
-in future. It can optionally return {{domxref("Animation")}} objects for descendant
+in future. It can optionally return {{domxref("Animation")}} objects for descendant
 elements too.
 
 > **Note:** This array includes [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations), [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions), and [Web Animations](/en-US/docs/Web/API/Web_Animations_API).

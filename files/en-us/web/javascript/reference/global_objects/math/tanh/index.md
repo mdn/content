@@ -78,8 +78,8 @@ This can be emulated with the help of the {{jsxref("Math.exp()")}} function:
 
 ```js
 Math.tanh = Math.tanh || function(x){
-    var a = Math.exp(+x), b = Math.exp(-x);
-    return a == Infinity ? 1 : b == Infinity ? -1 : (a - b) / (a + b);
+    var a = Math.exp(+x), b = Math.exp(-x);
+    return a == Infinity ? 1 : b == Infinity ? -1 : (a - b) / (a + b);
 }
 ```
 
@@ -103,7 +103,7 @@ Math.tanh(1);        // 0.7615941559557649
 
 ## See also
 
-- A polyfill of `Math.tanh` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [Polyfill of `Math.tanh` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.asinh()")}}
 - {{jsxref("Math.atanh()")}}

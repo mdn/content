@@ -19,7 +19,7 @@ browser-compat: api.PaymentRequestUpdateEvent.updateWith
 ---
 {{APIRef("Payment Request API")}}{{securecontext_header}}
 
-The **`updateWith()`** method of the
+The **`updateWith()`** method of the
 {{domxref("PaymentRequestUpdateEvent")}} interface updates the details of an existing
 {{domxref("PaymentRequest")}}.
 

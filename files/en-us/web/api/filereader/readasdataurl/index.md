@@ -21,7 +21,7 @@ file's data as a base64 encoded string.
 > **Note:** The blob's {{domxref("FileReader.result","result")}} cannot be
 > directly decoded as Base64 without first removing the Data-URL declaration preceding
 > the Base64-encoded data. To retrieve only the Base64 encoded string, first
-> remove `data:*/*;base64,` from the result.
+> remove `data:*/*;base64,` from the result.
 
 ## Syntax
 
@@ -47,18 +47,18 @@ instanceOfFileReader.readAsDataURL(blob);
 
 ```js
 function previewFile() {
-  const preview = document.querySelector('img');
-  const file = document.querySelector('input[type=file]').files[0];
-  const reader = new FileReader();
+  const preview = document.querySelector('img');
+  const file = document.querySelector('input[type=file]').files[0];
+  const reader = new FileReader();
 
-  reader.addEventListener("load", function () {
-    // convert image file to base64 string
-    preview.src = reader.result;
-  }, false);
+  reader.addEventListener("load", function () {
+    // convert image file to base64 string
+    preview.src = reader.result;
+  }, false);
 
-  if (file) {
-    reader.readAsDataURL(file);
-  }
+  if (file) {
+    reader.readAsDataURL(file);
+  }
 }
 ```
 

@@ -13,7 +13,7 @@ browser-compat: api.USB.requestDevice
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-The **`requestDevice()`** method of the {{domxref("USB")}}
+The **`requestDevice()`** method of the {{domxref("USB")}}
 interface returns a {{jsxref("Promise")}} that resolves with an instance of
 {{domxref("USBDevice")}} if the specified device is found. Calling this function
 triggers the user agent's pairing flow.
@@ -57,15 +57,15 @@ be listed.
 
 ```js
 const filters = [
-        {vendorId: 0x1209, productId: 0xa800},
-        {vendorId: 0x1209, productId: 0xa850}
-      ];
+        {vendorId: 0x1209, productId: 0xa800},
+        {vendorId: 0x1209, productId: 0xa850}
+      ];
 navigator.usb.requestDevice({filters: filters})
 .then(usbDevice => {
-  console.log("Product name: " + usbDevice.productName);
+  console.log("Product name: " + usbDevice.productName);
 })
 .catch(e => {
-  console.log("There is no device. " + e);
+  console.log("There is no device. " + e);
 });
 ```
 

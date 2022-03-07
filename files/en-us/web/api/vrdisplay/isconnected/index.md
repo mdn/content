@@ -4,7 +4,6 @@ slug: Web/API/VRDisplay/isConnected
 tags:
   - API
   - Deprecated
-  - Experimental
   - Property
   - Reference
   - VR
@@ -20,13 +19,7 @@ The **`isConnected`** read-only property of the {{domxref("VRDisplay")}} interfa
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Syntax
-
-```js
-var isItConnected = vrDisplayInstance.isConnected;
-```
-
-### Value
+## Value
 
 A boolean value; `true` means the display is connected; `false` means it isn't.
 
@@ -34,23 +27,23 @@ A boolean value; `true` means the display is connected; `false` means it isn't.
 
 ```js
 navigator.getVRDisplays().then(function(displays) {
-  // If a display is available, use it to present the scene
-  if(displays.length > 0) {
-    vrDisplay = displays[0];
+  // If a display is available, use it to present the scene
+  if(displays.length > 0) {
+    vrDisplay = displays[0];
 
-    // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-    btn.addEventListener('click', function() {
-      // Only request presentation if the display is still connected.
-      if(vrDisplay.isConnected) {
-        vrDisplay.requestPresent([{ source: canvas }]).then(function() {
-          // start rendering the app, etc.
-        });
-      } else {
-        console.log('Connection to display lost');
-      }
-    });
-  }
-}); 
+    // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
+    btn.addEventListener('click', function() {
+      // Only request presentation if the display is still connected.
+      if(vrDisplay.isConnected) {
+        vrDisplay.requestPresent([{ source: canvas }]).then(function() {
+          // start rendering the app, etc.
+        });
+      } else {
+        console.log('Connection to display lost');
+      }
+    });
+  }
+}); 
 ```
 
 ## Specifications

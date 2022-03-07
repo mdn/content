@@ -280,7 +280,7 @@ One key aspect of the accessibility of UI controls is that by default, browsers 
 
 > **Note:** From Firefox 84 you can also enable an overlay that shows the page tabbing order. For more information see: [Accessibility Inspector > Show web page tabbing order](/en-US/docs/Tools/Accessibility_inspector#show_web_page_tabbing_order).
 
-You can then press Enter/Return to follow a focused link or press a button (we've included some JavaScript to make the buttons alert a message), or start typing to enter text in a text input. Other form elements have different controls, for example, the {{htmlelement("select")}} element can have its options displayed and cycled between using the up and down arrow keys.
+You can then press Enter/Return to follow a focused link or press a button (we've included some JavaScript to make the buttons alert a message), or start typing to enter text in a text input. Other form elements have different controls; for example, the {{htmlelement("select")}} element can have its options displayed and cycled between using the up and down arrow keys.
 
 > **Note:** Different browsers may have different keyboard control options available. See [Using native keyboard accessibility](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#using_native_keyboard_accessibility) for more details.
 
@@ -351,17 +351,17 @@ Basically, the {{htmlattrxref("tabindex")}} attribute is primarily intended to a
 - `tabindex="0"` — as indicated above, this value allows elements that are not normally tabbable to become tabbable. This is the most useful value of `tabindex`.
 - `tabindex="-1"` — this allows not normally tabbable elements to receive focus programmatically, e.g., via JavaScript, or as the target of links.
 
-Whilst the above addition allows us to tab to the buttons, it does not allow us to activate them via the Enter/Return key. To do that, we had to add the following bit of JavaScript trickery:
+While the above addition allows us to tab to the buttons, it does not allow us to activate them via the <kbd>Enter</kbd>/<kbd>Return</kbd> key. To do that, we had to add the following bit of JavaScript trickery:
 
 ```js
 document.onkeydown = function(e) {
-  if(e.keyCode === 13) { // The Enter/Return key
+  if(e.key === "Enter") { // The Enter/Return key
     document.activeElement.click();
   }
 };
 ```
 
-Here we add a listener to the `document` object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's [`keyCode`](/en-US/docs/Web/API/KeyboardEvent/keyCode) property; if it is the keycode that matches Return/Enter, we run the function stored in the button's `onclick` handler using `document.activeElement.click()`. [`activeElement`](/en-US/docs/Web/API/Document/activeElement) which gives us the element that is currently focused on the page.
+Here we add a listener to the `document` object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's [`key`](/en-US/docs/Web/API/KeyboardEvent/key) property; if the key pressed is <kbd>Enter</kbd>/<kbd>Return</kbd>, we run the function stored in the button's `onclick` handler using `document.activeElement.click()`. [`activeElement`](/en-US/docs/Web/API/Document/activeElement) which gives us the element that is currently focused on the page.
 
 This is a lot of extra hassle to build the functionality back in. And there's bound to be other problems with it. **Better to just use the right element for the right job in the first place.**
 
@@ -535,7 +535,7 @@ Unfortunately, most screen readers don't seem to associate figure captions with 
 
 There may be times where an image is included in a page's design, but its primary purpose is for visual decoration. You'll notice in the code example above that the image's `alt` attribute is empty — this is to make screen readers recognize the image, but not attempt to describe the image (instead they'd just say "image", or similar).
 
-The reason to use an empty `alt` instead of not including it is because many screen readers announce the whole image URL if no `alt` is provided. In the above example, the image is acting as a visual decoration to the heading it's associated with. In cases like this, and in cases where an image is only decoration and has no content value, you should include an empty `alt` in your `img` elements. Another alternative is to use the aria [`role`](/en-US/docs/Web/accessibility/ARIA/roles) attribute [`role="presentation"`](/en-US/docs/Web/accessibility/ARIA/roles/presentation_role) as this also stops screen readers from reading out alternative text.
+The reason to use an empty `alt` instead of not including it is because many screen readers announce the whole image URL if no `alt` is provided. In the above example, the image is acting as a visual decoration to the heading it's associated with. In cases like this, and in cases where an image is only decoration and has no content value, you should include an empty `alt` in your `img` elements. Another alternative is to use the aria [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles) attribute [`role="presentation"`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) as this also stops screen readers from reading out alternative text.
 
 > **Note:** If possible you should use CSS to display images that are only decorative.
 
@@ -547,7 +547,7 @@ Links ( the [`<a>`](/en-US/docs/Web/HTML/Element/a) element with an `href` attri
 
 By default, links are visually different from other text in both color and [text-decoration](/en-US/docs/Web/CSS/text-decoration), with links being blue and underlined by default, purple and underlined if visited, and with a [focus-ring](/en-US/docs/Web/CSS/:focus) when they receive keyboard focus.
 
-Color should not be used as the sole method of distinguishing links from non-linking content. Link text color, like all text, has to be significantly different from the background color ([a 4.5:1 contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)). In addition, links should visually be significantly different from non-linking text. With a minimum contrast requirement of 3:1 between link text and surrounding text and between default, visited, and focus/active states and a 4:5 contrast between all those state colors and the background color.
+Color should not be used as the sole method of distinguishing links from non-linking content. Link text color, like all text, has to be significantly different from the background color ([a 4.5:1 contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)). In addition, links should visually be significantly different from non-linking text, with a minimum contrast requirement of 3:1 between link text and surrounding text and between default, visited, and focus/active states and a 4:5 contrast between all those state colors and the background color.
 
 ### `onclick` events
 

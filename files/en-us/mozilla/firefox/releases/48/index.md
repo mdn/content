@@ -16,7 +16,7 @@ tags:
 ### Developer Tools
 
 - The position of elements can now be changed within the content ({{bug(1139187)}}).
-- Implemented {{domxref("console.clear()")}} to clear the console output ({{bug(659625)}}).
+- Implemented {{domxref("console.clear()")}} to clear the console output ({{bug(659625)}}).
 - Added [HTTP log inspection to the Web Console](/en-US/docs/Tools/Web_Console/Console_messages#viewing_network_request_details) ({{bug(1211525)}}).
 - Added a [Firebug theme](/en-US/docs/Tools/Tools_Toolbox#choose_devtools_theme) ({{bug(1244054)}}).
 - Added the [DOM Inspector](/en-US/docs/Tools/DOM_Property_Viewer) ({{bug(1201475)}}).
@@ -38,7 +38,7 @@ tags:
 - The {{cssxref("calc()")}} has been improved to be closer to the specification:
 
   - {{cssxref("calc()")}} is now supported on the {{cssxref("line-height")}} property ({{bug(594933)}}).
-  - Added support for nested CSS {{cssxref("calc()")}} ({{bug(968761)}}).
+  - Added support for nested CSS {{cssxref("calc()")}} ({{bug(968761)}}).
 
 - Our experimental implementation of CSS grids has been updated:
 
@@ -55,7 +55,7 @@ tags:
 
   - {{cssxref("-webkit-text-fill-color")}} ({{bug(1247777)}}).
   - {{cssxref("-webkit-text-stroke")}}, {{cssxref("-webkit-text-stroke-color")}}, {{cssxref("-webkit-text-stroke-width")}} ({{bug(1248708)}}).
-  - `-webkit-background-clip`  (as background-clip) text value ({{bug(759568)}}).
+  - `-webkit-background-clip`  (as background-clip) text value ({{bug(759568)}}).
   - `-webkit-box-direction`, `-webkit-box-orient` ({{bug(1262049)}}.
   - The value `-webkit-inline-box` is now an alias of `inline-flex` on the {{cssxref("display")}} property. ({{bug(1257661)}}).
   - `-webkit-flex-direction`, `-webkit-flex-wrap`, `-webkit-flex-flow`, `-webkit-order`, `-webkit-flex`, `-webkit-flex-grow`, `-webkit-flex-shrink`, `-webkit-flex-basis`, `-webkit-justify-content`, `-webkit-align-items`, `-webkit-align-self` and `-webkit-align-content` were added as aliases for the unprefixed properties and the values `-webkit-flex` and `-webkit-inline-flex` for the {{cssxref("display")}} property as aliases for the unprefixed values ({{bug(1274096)}}).
@@ -63,18 +63,18 @@ tags:
 
 - The `text` value of {{cssxref("background-clip")}} is now available in all type of Firefox (and not only non-release builds) ({{bug(1263516)}}).
 - The `absolute` value of {{cssxref("position")}} properties on the top layer element ({{bug(1236828)}}).
-- Added an internal-only syntax for {{domxref("@supports")}} to detect pref ({{bug(1259889)}}).
+- Added an internal-only syntax for {{domxref("@supports")}} to detect pref ({{bug(1259889)}}).
 
 ### JavaScript
 
 #### New APIs
 
 - The {{jsxref("String.prototype.padStart()")}} and {{jsxref("String.prototype.padEnd()")}} methods have been implemented ({{bug(1260509)}}).
-- The ES2015 {{jsxref("Symbol.unscopables")}} and {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} properties have been implemented ({{bug(1054759)}} and {{bug(1258163)}}).
+- The ES2015 {{jsxref("Symbol.unscopables")}} and {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} properties have been implemented ({{bug(1054759)}} and {{bug(1258163)}}).
 - The ES2015 {{jsxref("Symbol.isConcatSpreadable")}} symbol has been implemented ({{bug(1041586)}}).
 - The ES2015 {{jsxref("Array.@@species", "Array[@@species]")}} getter has been implemented ({{bug(1165052)}}).
 - The ES2015 {{jsxref("ArrayBuffer.@@species", "ArrayBuffer[@@species]")}} getter and {{jsxref("TypedArray.@@species", "%TypedArray%[@@species]")}} getter have been implemented ({{bug(1165053)}}).
-- The {{jsxref("Intl.getCanonicalLocales()")}} method of the ECMAScript Internationalization API draft has been implemented ({{bug(1263040)}}).
+- The {{jsxref("Intl.getCanonicalLocales()")}} method of the ECMAScript Internationalization API draft has been implemented ({{bug(1263040)}}).
 
 #### Deprecations and removals
 

@@ -118,9 +118,9 @@ modern isolation features:
   {{httpheader("Origin-Isolation")}} HTTP header
 
 Finally, setting `document.domain` does not change the origin used for
-origin-checks by some Web APIs, preventing sub-domain access via this mechanism.
-Affected APIs include (but are not limited to):
-{{domxref("Window.localStorage")}}, {{domxref("IndexedDB_API")}}, {{domxref("BroadcastChannel")}}, {{domxref("SharedWorker")}} .
+origin-checks by some Web APIs, preventing sub-domain access via this mechanism.
+Affected APIs include (but are not limited to):
+{{domxref("Window.localStorage")}}, {{domxref("IndexedDB_API")}}, {{domxref("BroadcastChannel")}}, {{domxref("SharedWorker")}} .
 
 ## Examples
 

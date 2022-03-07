@@ -11,7 +11,7 @@ tags:
 
 The `mark` role denotes content which is marked or highlighted for reference or notation purposes, due to the content's relevance in the enclosing context.
 
-## Description 
+## Description
 
 The `mark` role semantically denotes HTML elements containing text that is marked/highlighted for reference purposes. This is semantically equivalent to the HTML {{HTMLElement('mark')}} element. If possible, you should use this element instead.
 

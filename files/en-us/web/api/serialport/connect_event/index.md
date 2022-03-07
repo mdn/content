@@ -10,7 +10,7 @@ browser-compat: api.SerialPort.connect_event
 ---
 {{securecontext_header}}{{APIRef("Serial API")}}
 
-The **`connect`** event of the {{domxref("SerialPort")}} interface is fired when a port has connected to the device. This event is only fired for ports associated with removable devices such as those connected via USB. 
+The **`connect`** event of the {{domxref("SerialPort")}} interface is fired when a port has connected to the device. This event is only fired for ports associated with removable devices such as those connected via USB.
 
 This event bubbles to the instance of {{domxref("Serial")}} that returned this interface.
 
@@ -26,7 +26,7 @@ onconnect = event => { };
 
 ## Event type
 
-A generic {{domxref("Event")}}. 
+A generic {{domxref("Event")}}.
 
 ## Bubbling
 
@@ -68,6 +68,6 @@ navigator.serial.addEventListener('connect', event => {
 
 {{Compat}}
 
-## See also 
+## See also
 
 - {{domxref("SerialPort.disconnect_event", "disconnect")}} event

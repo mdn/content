@@ -3,7 +3,7 @@ title: VRDisplay.getFrameData()
 slug: Web/API/VRDisplay/getFrameData
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Method
   - Reference
   - VR
@@ -24,12 +24,12 @@ This includes the {{domxref("VRPose")}} and view and projection matrices for the
 ## Syntax
 
 ```js
-vrDisplayInstance.getFrameData(frameData);
+getFrameData(frameData)
 ```
 
 ### Parameters
 
-- frameData
+- `frameData`
   - : The {{domxref("VRFrameData")}} object you want to populate.
 
 ### Return value
@@ -77,13 +77,13 @@ function drawVRScene() {
   var projectionMatrixLocation = gl.getUniformLocation(shaderProgram, "projMatrix");
   var viewMatrixLocation = gl.getUniformLocation(shaderProgram, "viewMatrix");
 
-  // WebVR: Render the left eye’s view to the left half of the canvas
+  // WebVR: Render the left eye's view to the left half of the canvas
   gl.viewport(0, 0, canvas.width * 0.5, canvas.height);
   gl.uniformMatrix4fv(projectionMatrixLocation, false, frameData.leftProjectionMatrix);
   gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.leftViewMatrix);
   drawGeometry();
 
-  // WebVR: Render the right eye’s view to the right half of the canvas
+  // WebVR: Render the right eye's view to the right half of the canvas
   gl.viewport(canvas.width * 0.5, 0, canvas.width * 0.5, canvas.height);
   gl.uniformMatrix4fv(projectionMatrixLocation, false, frameData.rightProjectionMatrix);
   gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.rightViewMatrix);

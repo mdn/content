@@ -21,7 +21,7 @@ Microsoft browsers (Internet Explorer, and in a few cases, Microsoft Edge) suppo
 - {{DOMxRef("MSManipulationEvent")}}
 - {{Event("MSManipulationStateChanged")}}
 - {{DOMxRef("Touch.MsManipulationViewsEnabled")}}
-- {{Event("MSPointerHover")}} {{Deprecated_Inline}}
+- {{Event("MSPointerHover")}} {{Deprecated_Inline}}
 
 ## Media APIs
 
@@ -72,7 +72,7 @@ Microsoft browsers (Internet Explorer, and in a few cases, Microsoft Edge) suppo
 - {{DOMxRef("msIsStaticHTML")}}
 - {{DOMxRef("Navigator.msLaunchUri()")}}
 - {{DOMxRef("msLaunchUriCallback")}}
-- `Element.msMatchesSelector()` {{Deprecated_Inline}}
+- `Element.msMatchesSelector()` {{Deprecated_Inline}}
 - {{DOMxRef("msProtocols")}}
 - {{DOMxRef("msPutPropertyEnabled")}}
 - {{DOMxRef("msWriteProfilerMark")}}

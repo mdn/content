@@ -28,7 +28,7 @@ getUTCMonth()
 A `number`. If the `Date` object represents a valid date, an integer number, between 0 and 11,
 corresponding to the month of the given date according to universal time. 0 for January,
 1 for February, 2 for March, and so on. Otherwise, [`NaN`](/en-us/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN)
-if the `Date` object doesn’t represent a valid date.
+if the `Date` object doesn't represent a valid date.
 
 ## Examples
 

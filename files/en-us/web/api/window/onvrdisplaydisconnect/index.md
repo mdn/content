@@ -3,7 +3,7 @@ title: Window.onvrdisplaydisconnect
 slug: Web/API/Window/onvrdisplaydisconnect
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -34,7 +34,7 @@ window.onvrdisplaydisconnect = function() { /* ... */ };
 
 ```js
 window.onvrdisplaydisconnect = function() {
-  info.textContent = 'Display disconnected.';
+  info.textContent = 'Display disconnected.';
 };
 ```
 

@@ -36,20 +36,20 @@ Highlights:
   - The implied minimum size of grid Items, that is the special {{cssxref("min-width")}} and {{cssxref("min-height")}} `auto` behavior has been implemented ({{bug(1176775)}}).
   - {{cssxref("align-self")}} and {{cssxref("justify-self")}} are now supported on grid layouts ({{bug(1151213)}}).
   - {{cssxref("align-content")}} and {{cssxref("justify-content")}} are now supported on grid layouts ({{bug(1151214)}}).
-  - Resolved value of grid-template-columns,grid-template-rows in px units ({{bug(978212)}}).
+  - Resolved value of grid-template-columns,grid-template-rows in px units ({{bug(978212)}}).
   - The related feature {{cssxref("display")}}: contents has been supported since [Firefox 37](/en-US/docs/Mozilla/Firefox/Releases/37)
 
-- Implement full support for CSS Box Alignment for CSS Grid, support the missing values: `start,` `end,` `self-start,` `self-end,` `left,` `right,last-baseline,space-evenly`({{bug(1176782)}}).  CSS Box Alignment currently applies only to CSS Flexbox and CSS Grid.
+- Implement full support for CSS Box Alignment for CSS Grid, support the missing values: `start,` `end,` `self-start,` `self-end,` `left,` `right,last-baseline,space-evenly`({{bug(1176782)}}).  CSS Box Alignment currently applies only to CSS Flexbox and CSS Grid.
 - \[css-grid]\[css-flexbox] Implement grid/flex layout for \<fieldset> ({{bug(1230207)}}).
 - The `inline-start` and `inline-end` values have been added to {{cssxref("float")}} and {{cssxref("clear")}} ({{bug(1122918)}}). They are enabled by default on Nightly and Aurora (Dev edition), as well as on Firefox OS; to activate it on a release or beta version, you need to flip the `layout.css.float-logical-values.enabled` to `true`.
-- The {{cssxref("text-emphasis")}}, {{cssxref("text-emphasis-style")}}, {{cssxref("text-emphasis-color")}}, and {{cssxref("text-emphasis-position")}} have been implemented; they are disabled by default (set `layout.css.text-emphasis.enabled`  to true to activate them ({{bug(1040668)}}).
+- The {{cssxref("text-emphasis")}}, {{cssxref("text-emphasis-style")}}, {{cssxref("text-emphasis-color")}}, and {{cssxref("text-emphasis-position")}} have been implemented; they are disabled by default (set `layout.css.text-emphasis.enabled`  to true to activate them ({{bug(1040668)}}).
 - Several `-webkit` prefixed properties and values have been added for web compatibility, behind the preference `layout.css.prefixes.webkit`, defaulting to `false`:
 
   - Added `-webkit-backface-visibility`, `-webkit-perspective` and `-webkit-perspective-origin` for web compatibility, behind the preference `layout.css.prefixes.webkit`, defaulting to `false` ({{bug(1179444)}}).
 
 ### JavaScript
 
-- ES2015 [Classes](/en-US/docs/Web/JavaScript/Reference/Classes) are now enabled by default ({{bug(1197932)}}).
+- ES2015 [Classes](/en-US/docs/Web/JavaScript/Reference/Classes) are now enabled by default ({{bug(1197932)}}).
 - {{jsxref("Operators/Expression_closures", "Expression closures", "", 1)}} are deprecated and will now present a warning in the console ({{bug(995610)}}).
 - {{jsxref("String.prototype.replace")}} does not restore {{jsxref("Global_Objects/RegExp/n", "RegExp static properties", "", 1)}} after executing function parameter anymore ({{bug(1226936)}}).
 - {{jsxref("Math.random()")}} has been updated to the better XorShift128+ algorithm ({{bug(322529)}}).
@@ -59,7 +59,7 @@ Highlights:
 #### DOM & HTML DOM
 
 - For compatibility, the non-standard property [`Node.innerText`](/en-US/docs/Web/API/HTMLElement/innerText) has been implemented ({{bug(264412)}}).
-- The {{domxref("HTMLImageElement.srcset")}} attribute now reacts to resize/viewport changes ({{bug(1166138)}}).
+- The {{domxref("HTMLImageElement.srcset")}} attribute now reacts to resize/viewport changes ({{bug(1166138)}}).
 - {{domxref("Element.getAttributeNames()")}} has been implemented ({{bug(1228634)}}).
 
 #### WebGL
@@ -93,7 +93,7 @@ _No change._
 
 - [Web Speech Synthesis API](/en-US/docs/Web/API/Web_Speech_API) has been implemented on Firefox Desktop ({{bug(1003439)}}).
 - The {{domxref("WindowEventHandlers/onstorage", "Window.onstorage")}} event handler property has been added.
-- The interface {{domxref("ComputedTiming")}} have been added to our experimental implementation of [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) ({{bug(1108055)}}).
+- The interface {{domxref("ComputedTiming")}} have been added to our experimental implementation of [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) ({{bug(1108055)}}).
 - The {{domxref("GlobalEventHandlers/onselectionchange", "Document.onselectionchange")}} event handler property has been added ({{bug(1231193)}}).
 - After removing a video track from a media stream by calling {{domxref("MediaStream.removeTrack()")}} you can nowadd another video track later using {{domxref("MediaStream.addTrack()")}} and have it played ({{bug(1223696)}}).
 
@@ -108,7 +108,7 @@ _No change._
 
 ### Audio/Video
 
-- Fixed: Regression (since Firefox 41) whereby audio playback was stuttering due to duration time rounding errors ({{bug(1222866)}}.)
+- Fixed: Regression (since Firefox 41) whereby audio playback was stuttering due to duration time rounding errors ({{bug(1222866)}}.)
 
 ## HTTP
 
@@ -144,7 +144,7 @@ Starting in Firefox 45, search plugins located in the user's profile's `searchpl
 
 ### Other
 
-- WebIDL constructors could be called without the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator in chrome context.  Now such code will raise a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) as in Web content since Firefox 30. For example, `var req = XMLHttpRequest();` needs to be `var req = new XMLHttpRequest();`.
+- WebIDL constructors could be called without the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator in chrome context.  Now such code will raise a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) as in Web content since Firefox 30. For example, `var req = XMLHttpRequest();` needs to be `var req = new XMLHttpRequest();`.
 
 ## Older versions
 

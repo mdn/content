@@ -108,7 +108,7 @@ console.log(values)
 
 ## See also
 
-- A polyfill of `Promise.allSettled` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
+- [Polyfill of `Promise.allSettled` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
 - [Promises](/en-US/docs/Archive/Add-ons/Techniques/Promises)
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
 - [Graceful asynchronous

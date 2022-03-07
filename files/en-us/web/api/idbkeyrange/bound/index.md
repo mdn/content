@@ -15,7 +15,7 @@ browser-compat: api.IDBKeyRange.bound
 {{ APIRef("IndexedDB") }}
 
 The **`bound()`** method of the {{domxref("IDBKeyRange")}}
-interface creates a new key range with the specified upper and lower bounds. The
+interface creates a new key range with the specified upper and lower bounds. The
 bounds can be open (that is, the bounds exclude the endpoint values) or closed (that
 is, the bounds include the endpoint values). By default, the bounds are closed.
 
@@ -35,10 +35,10 @@ var myIDBKeyRange = IDBKeyRange.bound(lower, upper, lowerOpen, upperOpen);
   - : specifies the lower bound of the new key range.
 - upper
   - : specifies the upper bound of the new key range.
-- lowerOpen {{optional_inline}}
+- lowerOpen {{optional_inline}}
   - : indicates whether the lower bound excludes the endpoint value. The default is
     false.
-- upperOpen {{optional_inline}}
+- upperOpen {{optional_inline}}
   - : Indicates whether the upper bound excludes the endpoint value. The default is
     false.
 
@@ -78,13 +78,13 @@ the following type:
 ## Example
 
 The following example illustrates how you'd use a bound key range. Here we declare
-a `keyRangeValue = IDBKeyRange.bound("A", "F");` — a range between values of
+a `keyRangeValue = IDBKeyRange.bound("A", "F");` — a range between values of
 "A" and "F". We open a transaction (using {{domxref("IDBTransaction")}}) and an object
 store, and open a Cursor with {{domxref("IDBObjectStore.openCursor")}},
-declaring `keyRangeValue` as its optional key range value. This means that
+declaring `keyRangeValue` as its optional key range value. This means that
 the cursor will only retrieve records with keys inside that range. This range includes
-the values "A" and "F", as we haven't declared that they should be open  bounds. If we
-used `IDBKeyRange.bound("A", "F", true, true);`, then the range would not
+the values "A" and "F", as we haven't declared that they should be open  bounds. If we
+used `IDBKeyRange.bound("A", "F", true, true);`, then the range would not
 include `"A"` and `"F"`, only the values between them.
 
 > **Note:** For a more complete example allowing you to experiment with

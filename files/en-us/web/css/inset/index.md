@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Property
   - Reference
   - recipe:css-property
@@ -13,7 +12,7 @@ browser-compat: css.properties.inset
 ---
 {{CSSRef}}
 
-The **`inset`** [CSS](/en-US/docs/Web/CSS) property is a shorthand that corresponds to the {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and/or {{cssxref("left")}} properties. It has the same multi-value syntax of the {{cssxref("margin")}} shorthand.
+The **`inset`** [CSS](/en-US/docs/Web/CSS) property is a shorthand that corresponds to the {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and/or {{cssxref("left")}} properties. It has the same multi-value syntax of the {{cssxref("margin")}} shorthand.
 
 While part of the _CSS Logical Properties_ specification, it does not define _logical_ offsets. It defines _physical_ offsets, regardless of the element's writing mode, directionality, and text orientation.
 
@@ -41,7 +40,7 @@ inset: unset;
 
 ### Values
 
-The `inset` property takes the same values as the {{cssxref("left")}} property.
+The `inset` property takes the same values as the {{cssxref("left")}} property.
 
 ## Formal definition
 
@@ -95,6 +94,6 @@ div {
 
 ## See also
 
-- The longhand box offset properties: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}}.
-- The mapped logical shorthands: {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}
-- The {{cssxref("margin")}} shorthand multi-value syntax.
+- The longhand box offset properties: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}}.
+- The mapped logical shorthands: {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}
+- The {{cssxref("margin")}} shorthand multi-value syntax.

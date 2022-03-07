@@ -89,12 +89,12 @@ a `matrix3d()` transform to it.
 
 ```html
 <section id="example-element" tabindex="0">
-  <div class="face front">1</div>
-  <div class="face back">2</div>
-  <div class="face right">3</div>
-  <div class="face left">4</div>
-  <div class="face top">5</div>
-  <div class="face bottom">6</div>
+  <div class="face front">1</div>
+  <div class="face back">2</div>
+  <div class="face right">3</div>
+  <div class="face left">4</div>
+  <div class="face top">5</div>
+  <div class="face bottom">6</div>
 </section>
 ```
 
@@ -179,65 +179,65 @@ necessitatibus aut quia porro dolorem nesciunt enim, at consequuntur aliquam ess
 
 ```css
 html {
-  width: 100%;
+  width: 100%;
 }
 body {
-  height: 100vh;
-  /* Centering content */
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-content: center;
+  height: 100vh;
+  /* Centering content */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
 
 }
 .foo {
-  width: 50%;
-  padding: 1em;
-  color: white;
-  background: #ff8c66;
-  border: 2px dashed black;
-  text-align: center;
-  font-family: system-ui, sans-serif;
-  font-size: 14px;
-   /* Setting up animation for better demonstration */
-  animation: MotionScale 2s alternate linear infinite;
+  width: 50%;
+  padding: 1em;
+  color: white;
+  background: #ff8c66;
+  border: 2px dashed black;
+  text-align: center;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+   /* Setting up animation for better demonstration */
+  animation: MotionScale 2s alternate linear infinite;
 }
 
 @keyframes MotionScale {
-  from {
-    /*
-      Identity matrix is used as basis here.
-      The matrix below describes the
-      following transformations:
-        Translates every X point by -50px
-        Translates every Y point by -100px
-        Translates every Z point by 0
-        Scales down by 10%
-    */
-    transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      -50,-100,0,1.1
-    );
+  from {
+    /*
+      Identity matrix is used as basis here.
+      The matrix below describes the
+      following transformations:
+        Translates every X point by -50px
+        Translates every Y point by -100px
+        Translates every Z point by 0
+        Scales down by 10%
+    */
+    transform: matrix3d(
+      1,0,0,0,
+      0,1,0,0,
+      0,0,1,0,
+      -50,-100,0,1.1
+    );
 
-  }
-  50% {
-    transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      0,0,0,0.9
-    );
-  }
-  to {
-     transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      50,100,0,1.1
-    )
-  }
+  }
+  50% {
+    transform: matrix3d(
+      1,0,0,0,
+      0,1,0,0,
+      0,0,1,0,
+      0,0,0,0.9
+    );
+  }
+  to {
+     transform: matrix3d(
+      1,0,0,0,
+      0,1,0,0,
+      0,0,1,0,
+      50,100,0,1.1
+    )
+  }
 }
 ```
 

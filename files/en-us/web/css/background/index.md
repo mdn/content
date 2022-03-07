@@ -62,7 +62,7 @@ The syntax of each layer is as follows:
   - `<bg-size>`
   - `<repeat-style>`
 
-- The `<bg-size>` value may only be included immediately after `<position>`, separated with the '/' character, like this: "`center/80%`".
+- The `<bg-size>` value may only be included immediately after `<position>`, separated with the '/' character, like this: "`center/80%`".
 - The `<box>` value may be included zero, one, or two times. If included once, it sets both {{cssxref("background-origin")}} and {{cssxref("background-clip")}}. If it is included twice, the first occurrence sets {{cssxref("background-origin")}}, and the second sets {{cssxref("background-clip")}}.
 - The `<background-color>` value may only be included in the last layer specified.
 

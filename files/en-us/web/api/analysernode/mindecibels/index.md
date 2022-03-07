@@ -25,7 +25,7 @@ analyserNode.minDecibels = newValue;
 
 A double, representing the minimum [decibel](https://en.wikipedia.org/wiki/Decibel) value for scaling the FFT analysis data, where `0` dB is the loudest possible sound, `-10` dB is a 10th of that, etc. The default value is `-100` dB.
 
-When getting data from `getByteFrequencyData()`, any frequencies with an amplitude of `minDecibels` or lower will be returned as `0`.
+When getting data from `getByteFrequencyData()`, any frequencies with an amplitude of `minDecibels` or lower will be returned as `0`.
 
 > **Note:** If a value greater than `AnalyserNode.maxDecibels` is set, an `INDEX_SIZE_ERR` exception is thrown.
 
@@ -49,25 +49,25 @@ var dataArray = new Uint8Array(bufferLength);
 canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
 
 function draw() {
-  drawVisual = requestAnimationFrame(draw);
+  drawVisual = requestAnimationFrame(draw);
 
-  analyser.getByteFrequencyData(dataArray);
+  analyser.getByteFrequencyData(dataArray);
 
-  canvasCtx.fillStyle = 'rgb(0, 0, 0)';
-  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+  canvasCtx.fillStyle = 'rgb(0, 0, 0)';
+  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
-  var barWidth = (WIDTH / bufferLength) * 2.5;
-  var barHeight;
-  var x = 0;
+  var barWidth = (WIDTH / bufferLength) * 2.5;
+  var barHeight;
+  var x = 0;
 
-  for(var i = 0; i < bufferLength; i++) {
-    barHeight = dataArray[i];
+  for(var i = 0; i < bufferLength; i++) {
+    barHeight = dataArray[i];
 
-    canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
-    canvasCtx.fillRect(x,HEIGHT-barHeight/2,barWidth,barHeight/2);
+    canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
+    canvasCtx.fillRect(x,HEIGHT-barHeight/2,barWidth,barHeight/2);
 
-    x += barWidth + 1;
-  }
+    x += barWidth + 1;
+  }
 };
 
 draw();

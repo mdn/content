@@ -90,7 +90,7 @@ bigN * -1n
 // ↪ -18014398509481984n
 ```
 
-The `/` operator also works as expected with whole numbers — but operations with a fractional result will be truncated when used with a BigInt value — they won’t return any fractional digits.
+The `/` operator also works as expected with whole numbers — but operations with a fractional result will be truncated when used with a BigInt value — they won't return any fractional digits.
 
 ```js
 const expected = 4n / 2n
@@ -223,7 +223,7 @@ Boolean(12n)
 Because coercing between Number values and BigInt values can lead to loss of precision, the following are recommended:
 
 - Only use a BigInt value when values greater than 2^53 are reasonably expected.
-- Don’t coerce between BigInt values and Number values.
+- Don't coerce between BigInt values and Number values.
 
 ### Cryptography
 

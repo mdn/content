@@ -11,7 +11,7 @@ tags:
   - web animations api
 browser-compat: api.Animation.pause
 ---
-{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
+{{ APIRef("Web Animations") }}
 
 The **`pause()`** method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("Animation")}} interface suspends playback of the animation.
 
@@ -32,22 +32,22 @@ None.
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the animation's {{domxref("Animation.currentTime", "currentTime")}} is `unresolved` (perhaps it hasn't started playing yet), and the end time of the animation is positive infinity.
+  - : Thrown if the animation's {{domxref("Animation.currentTime", "currentTime")}} is `unresolved` (perhaps it hasn't started playing yet), and the end time of the animation is positive infinity.
 
 ## Example
 
-`Animation.pause()` is used many times in the Alice in Web Animations API Land [Growing/Shrinking Alice Game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010), largely because animations created with the {{domxref("Element.animate()")}} method immediately start playing and must be paused manually if you want to avoid that:
+`Animation.pause()` is used many times in the Alice in Web Animations API Land [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010), largely because animations created with the {{domxref("Element.animate()")}} method immediately start playing and must be paused manually if you want to avoid that:
 
 ```js
 // animation of the cupcake slowly getting eaten up
 var nommingCake = document.getElementById('eat-me_sprite').animate(
 [
-  { transform: 'translateY(0)' },
-  { transform: 'translateY(-80%)' }
+  { transform: 'translateY(0)' },
+  { transform: 'translateY(-80%)' }
 ], {
-  fill: 'forwards',
-  easing: 'steps(4, end)',
-  duration: aliceChange.effect.timing.duration / 2
+  fill: 'forwards',
+  easing: 'steps(4, end)',
+  duration: aliceChange.effect.timing.duration / 2
 });
 
 // doesn't actually need to be eaten until a click event, so pause it initially:
@@ -59,9 +59,9 @@ Additionally, when resetting :
 ```js
 // An all-purpose function to pause the animations on Alice, the cupcake, and the bottle that reads "drink me."
 var stopPlayingAlice = function() {
-  aliceChange.pause();
-  nommingCake.pause();
-  drinking.pause();
+  aliceChange.pause();
+  nommingCake.pause();
+  drinking.pause();
 };
 
 // When the user releases the cupcake or the bottle, pause the animations.

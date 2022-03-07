@@ -21,7 +21,7 @@ What this selector matches is defined in [HTML Standard §4.16.3 Pseudo-classes]
 
 - A default option element is the first one with the `selected` attribute, or the first enabled option in DOM order. `multiple` {{htmlelement("select")}}s can have more than one `selected` option, so all will match `:default`.
 - `<input type="checkbox">` and `<input type="radio">` match if they have the `checked` attribute.
-- {{htmlelement("button")}} matches if it is a {{htmlelement("form")}}’s [default submission button](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#implicit-submission): the first `<button>` in DOM order that belongs to the form. This also applies to {{htmlelement("input")}} types that submit forms, like `image` or `submit`.
+- {{htmlelement("button")}} matches if it is a {{htmlelement("form")}}'s [default submission button](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#implicit-submission): the first `<button>` in DOM order that belongs to the form. This also applies to {{htmlelement("input")}} types that submit forms, like `image` or `submit`.
 
 ## Syntax
 

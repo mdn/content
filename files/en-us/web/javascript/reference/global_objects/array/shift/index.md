@@ -67,13 +67,13 @@ console.log('Removed this element:', shifted);
 ### Using shift() method in while loop
 
 The shift() method is often used in condition inside while loop. In the following
-example every iteration will remove the next element from an array, until it is empty:
+example every iteration will remove the next element from an array, until it is empty:
 
 ```js
 var names = ["Andrew", "Edward", "Paul", "Chris" ,"John"];
 
 while( typeof (i = names.shift()) !== 'undefined' ) {
-    console.log(i);
+    console.log(i);
 }
 // Andrew, Edward, Paul, Chris, John
 ```

@@ -13,8 +13,8 @@ browser-compat: api.IDBObjectStore.getKey
 {{ APIRef("IndexedDB") }}
 
 The **`getKey()`** method of the
-{{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object,
-and, in a separate thread, returns the key selected by the specified query. This is
+{{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object,
+and, in a separate thread, returns the key selected by the specified query. This is
 for retrieving specific records from an object store.
 
 If a key is successfully found, then a structured clone of it is created and set as the
@@ -35,7 +35,7 @@ var request = objectStore.getKey(key);
 
 ### Return Value
 
-An {{domxref("IDBRequest")}} object on which subsequent events related to this
+An {{domxref("IDBRequest")}} object on which subsequent events related to this
 operation are fired.
 
 ### Exceptions
@@ -47,7 +47,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `TransactionInactiveError` {{domxref("DOMException")}}
   - : Thrown if this {{domxref("IDBObjectStore")}}'s transaction is inactive.
 - `DataError` {{domxref("DOMException")}}
-  - : Thrown if the key or key range provided contains an invalid key.
+  - : Thrown if the key or key range provided contains an invalid key.
 
 ## Example
 

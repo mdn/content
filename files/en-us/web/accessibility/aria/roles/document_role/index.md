@@ -9,7 +9,7 @@ tags:
   - Reference
 ---
 
-The `document` role is for focusable content within complex composite [widgets](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role) or [applications](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role) for which assistive technologies can switch reading context back to a reading modelement.
+The `document` role is for focusable content within complex composite [widgets](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role) or [applications](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role) for which assistive technologies can switch reading context back to a reading mode.
 
 ## Description
 
@@ -22,17 +22,17 @@ The `document` role is for the top container containing content that assistive t
   <p>Some informational text goes here.</p>
  </div>
  ...
- <button>Close</button>
+ <button>Close</button>
 </div>
 ```
 
 This example shows a [dialog](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role), a complex composite widget role, with some controls and a section with some informational text that the assistive technology user can go into reading mode when tabbed to.
 
-By default, web pages are treated as documents; assistive technologies (AT) enter browse or read mode when entering a new web page. This mode can be altered through various roles, including the widget and application roles. The `document` role brings the AT back into browse or read mode.
+By default, web pages are treated as documents; assistive technologies (AT) enter browse or read mode when entering a new web page. This mode can be altered through various roles, including the widget and application roles. The `document` role brings the AT back into browse or read mode.
 
 Generally placed within an application role or other interactive widget role, the `document` role is used to indicate a section of a complex composite widget that an assistive technology user should read using its browse or virtual reading mode, if available.
 
-Because ATs with reading mode default to that mode for all elements except for those with a widget or application role set, document role is only useful for focusable elements within a widget or application that should be read as static rich text. Adding `role="document"` and `tabindex="0"` to the element containing the text within a widget enables the screen reader user to press the Tab key to place focus on the document element and read the text with the screen reader's reading cursor.
+Because ATs with reading mode default to that mode for all elements except for those with a widget or application role set, document role is only useful for focusable elements within a widget or application that should be read as static rich text. Adding `role="document"` and `tabindex="0"` to the element containing the text within a widget enables the screen reader user to press the Tab key to place focus on the document element and read the text with the screen reader's reading cursor.
 
 Assistive technologies should switch context back to document mode, possibly intercepting from controls rewired for the parent's dynamic context, re-enabling the standard input events, such as Up or Down arrow keyboard events, to control the reading cursor.
 

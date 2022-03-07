@@ -12,18 +12,18 @@ The **`stroke-width`** attribute is a presentation attribute defining the width 
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement('altGlyph')}}
-* {{SVGElement('circle')}}
-* {{SVGElement('ellipse')}}
-* {{SVGElement('line')}}
-* {{SVGElement('path')}}
-* {{SVGElement('polygon')}}
-* {{SVGElement('polyline')}}
-* {{SVGElement('rect')}}
-* {{SVGElement('text')}}
-* {{SVGElement('textPath')}}
-* {{SVGElement('tref')}}
-* {{SVGElement('tspan')}}
+- {{SVGElement('altGlyph')}}
+- {{SVGElement('circle')}}
+- {{SVGElement('ellipse')}}
+- {{SVGElement('line')}}
+- {{SVGElement('path')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('text')}}
+- {{SVGElement('textPath')}}
+- {{SVGElement('tref')}}
+- {{SVGElement('tspan')}}
 
 ## Example
 
@@ -80,10 +80,6 @@ html,body,svg { height:100% }
 
 > **Note:** A percentage value is always computed as a percentage of the normalized {{SVGAttr('viewBox')}} diagonal length.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Specifications
 
 <table class="no-markdown">
@@ -111,3 +107,7 @@ html,body,svg { height:100% }
     </tr>
   </tbody>
 </table>
+
+## Browser compatibility
+
+{{Compat}}

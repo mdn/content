@@ -15,7 +15,7 @@ The **`flood-opacity`** attribute indicates the opacity value to use across the 
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement("feFlood")}} and {{SVGElement("feDropShadow")}}
+- {{SVGElement("feFlood")}} and {{SVGElement("feDropShadow")}}
 
 ## Example
 
@@ -60,9 +60,9 @@ html, body, svg {
   </tbody>
 </table>
 
-* `<alpha-value>`
-    * : A number or percentage indicating the opacity value to use across the current filter primitive subregion.
-        A number of `0` or a percentage of `0%` represents a fully transparent color, `1` or `100%` represents a fully opaque color.
+- `<alpha-value>`
+  - : A number or percentage indicating the opacity value to use across the current filter primitive subregion.
+    A number of `0` or a percentage of `0%` represents a fully transparent color, `1` or `100%` represents a fully opaque color.
 
 ## Specifications
 
@@ -100,4 +100,4 @@ html, body, svg {
 
 ## See also
 
-* {{SVGAttr("flood-color")}}
+- {{SVGAttr("flood-color")}}

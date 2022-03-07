@@ -15,7 +15,7 @@ tags:
 
 This article covers how to implement scrolling square tilemaps using the [Canvas API](/en-US/docs/Web/API/Canvas_API).
 
-> **Note:** When writing this article, we assumed previous reader knowledge of canvas basics such as how get a 2D canvas context, load images, etc., which is all explained in the [Canvas API tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial), as well as the basic information included in our [Tilemaps](/en-US/docs/Games/Techniques/Tilemaps) introduction article. This article also builds upon [implementing static square tilemaps](/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation%3A_Static_maps) — you should read that too if you've not done so already.
+> **Note:** When writing this article, we assumed previous reader knowledge of canvas basics such as how get a 2D canvas context, load images, etc., which is all explained in the [Canvas API tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial), as well as the basic information included in our [Tilemaps](/en-US/docs/Games/Techniques/Tilemaps) introduction article. This article also builds upon [implementing static square tilemaps](/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation%3A_Static_maps) — you should read that too if you've not done so already.
 
 ## The camera
 
@@ -46,7 +46,7 @@ To handle these issues, we need to slightly modify the rendering algorithm. Let'
     var endRow = startRow + (this.camera.height / map.tsize);
 ```
 
-Once we have the first tile, we need to calculate how much its rendering (and therefore the rendering of the other tiles) is offset by. Since the camera  is pointing at `(5, 10)`, we know that the first tile should be shifted by `(-5,-10)` pixels. In our demo the shifting amount is stored in the `offsetX` and `offsetY` variables.
+Once we have the first tile, we need to calculate how much its rendering (and therefore the rendering of the other tiles) is offset by. Since the camera  is pointing at `(5, 10)`, we know that the first tile should be shifted by `(-5,-10)` pixels. In our demo the shifting amount is stored in the `offsetX` and `offsetY` variables.
 
 ```js
     var offsetX = -this.camera.x + startCol * map.tsize;

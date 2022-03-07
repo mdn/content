@@ -12,7 +12,7 @@ browser-compat: http.headers.Feature-Policy.unsized-media
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}{{Non-standard_header}}
 
-The HTTP {{HTTPHeader('Feature-Policy')}} header `unsized-media` directive controls whether the current document is allowed to change the size of media elements after the initial layout is complete.
+The HTTP {{HTTPHeader('Feature-Policy')}} header `unsized-media` directive controls whether the current document is allowed to change the size of media elements after the initial layout is complete.
 
 This restriction solves "layout instability" problem caused by providing default dimensions for images whose size is not specified in advance so that image doesn't change size after loading.
 

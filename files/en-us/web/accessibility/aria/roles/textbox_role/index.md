@@ -101,8 +101,8 @@ All features associated with any and all properties and states must be maintaine
 
 When the `textbox` role is added to an element, or such an element becomes visible, the user agent should do the following:
 
-   - Expose the element as having a textbox role in the operating system's accessibility API.
-   - Fire an accessible textbox event using the operating system's accessibility API if it supports it.
+- Expose the element as having a textbox role in the operating system's accessibility API.
+- Fire an accessible textbox event using the operating system's accessibility API if it supports it.
 
 Assistive technology products should listen for such an event and notify the user accordingly:
 

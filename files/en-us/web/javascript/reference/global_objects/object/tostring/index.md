@@ -62,7 +62,12 @@ By default `toString()` takes no parameters. However, objects that inherit from 
 ### Overriding the default toString method
 
 You can create a function to be called in place of the default `toString()`
-method. The `toString()` function you create must return a primitive, otherwise it will be ignored.
+method. The `toString()` function you create must return a primitive. If it
+returns an object and the method is called implicitly (i.e. during type
+conversion or coercion), then its result will be ignored and the value of a
+related method, `{{jsxref("Object/valueOf", "valueOf()")}}`, will be used
+instead, or a `TypeError` will be thrown if none of these methods return a
+primitive.
 
 The following code defines the `Dog` object type and creates
 `theDog`, an object of type `Dog`:
@@ -159,7 +164,7 @@ Object.prototype.toString.call(new Date()); // [object prototype polluted]
 
 ## See also
 
-- A polyfill of `Object.prototype.toString` with `Symbol.toStringTag` support is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Polyfill of `Object.prototype.toString` with `Symbol.toStringTag` support in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.prototype.toSource()")}}
 - {{jsxref("Object.prototype.valueOf()")}}
 - {{jsxref("Number.prototype.toString()")}}

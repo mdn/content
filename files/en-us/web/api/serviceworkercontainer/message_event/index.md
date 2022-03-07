@@ -63,7 +63,7 @@ The client can receive the message by listening to the `message` event:
 ```js
 // in the page being controlled
 navigator.serviceWorker.addEventListener('message', (message) => {
-    console.log(message);
+    console.log(message);
 });
 ```
 

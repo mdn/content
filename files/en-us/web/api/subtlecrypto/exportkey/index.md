@@ -13,7 +13,7 @@ browser-compat: api.SubtleCrypto.exportKey
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`exportKey()`** method of the {{domxref("SubtleCrypto")}}
-interface exports a key: that is, it takes as input a {{domxref("CryptoKey")}} object
+interface exports a key: that is, it takes as input a {{domxref("CryptoKey")}} object
 and gives you the key in an external, portable format.
 
 To export a key, the key must have {{domxref("CryptoKey.extractable")}} set to
@@ -110,7 +110,7 @@ window.crypto.subtle.generateKey(
   const exportButton = document.querySelector(".raw");
   exportButton.addEventListener("click", () => {
     exportCryptoKey(key);
-  });
+  });
 });
 ```
 

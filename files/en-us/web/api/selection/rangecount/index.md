@@ -26,7 +26,7 @@ than one range.
 
 Gecko browsers allow multiple selections across table cells. Firefox allows to select
 multiple ranges in the document by using Ctrl+click (unless the click occurs within an
-element that has the `display: table-cell` CSS property assigned).
+element that has the `display: table-cell` CSS property assigned).
 
 ## Syntax
 

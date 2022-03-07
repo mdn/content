@@ -20,7 +20,7 @@ Common events using this interface include {{domxref("Element/click_event", "cli
 `MouseEvent` derives from {{domxref("UIEvent")}}, which in turn derives from {{domxref("Event")}}.
 Though the {{domxref("MouseEvent.initMouseEvent()")}} method is kept for backward compatibility, creating of a `MouseEvent` object should be done using the {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}} constructor.
 
-Several more specific events are based on `MouseEvent`, including {{domxref("WheelEvent")}} and {{domxref("DragEvent")}}.
+Several more specific events are based on `MouseEvent`, including {{domxref("WheelEvent")}}, {{domxref("DragEvent")}}, and {{domxref("PointerEvent")}}.
 
 {{InheritanceDiagram}}
 

@@ -389,7 +389,7 @@ example](/en-US/docs/Web/API/clearTimeout#example).
 
 ## See also
 
-- A polyfill of `setTimeout` which allows passing arguments to the callback is available in [`core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
+- [Polyfill of `setTimeout` which allows passing arguments to the callback in `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
 - {{domxref("clearTimeout")}}
 - {{domxref("setInterval()")}}
 - {{domxref("window.requestAnimationFrame")}}

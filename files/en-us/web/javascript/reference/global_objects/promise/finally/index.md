@@ -18,7 +18,7 @@ When the promise is finally either fulfilled or rejected, the specified callback
 function is executed. This provides a way for code to be run whether the promise was
 fulfilled successfully, or instead rejected.
 
-This helps to avoid duplicating code in both the promise's {{jsxref("Promise.then",
+This helps to avoid duplicating code in both the promise's {{jsxref("Promise.then",
   "then()")}} and {{jsxref("Promise.catch", "catch()")}} handlers.
 
 {{EmbedInteractiveExample("pages/js/promise-finally.html", "taller")}}
@@ -63,7 +63,7 @@ The `finally()` method is very similar to calling
     `Promise.resolve(2).finally(() => {})` will be resolved with
     `2`.
   - Similarly, unlike `Promise.reject(3).then(() => {}, () => {})`
-    (which will be fulfilled with `undefined`),
+    (which will be fulfilled with `undefined`),
     `Promise.reject(3).finally(() => {})` will be rejected with
     `3`.
 
@@ -100,7 +100,7 @@ fetch(myRequest).then(function(response) {
 
 ## See also
 
-- A polyfill of `Promise.prototype.finally` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
+- [Polyfill of `Promise.prototype.finally` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.prototype.then()")}}
 - {{jsxref("Promise.prototype.catch()")}}

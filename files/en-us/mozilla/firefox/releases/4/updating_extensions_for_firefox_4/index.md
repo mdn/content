@@ -35,14 +35,14 @@ If your add-on is discoverable only through the menu bar, you'll want to overlay
 
 ### Tabs
 
-A number of changes were made to the {{XULElem("tabbrowser")}} element to help support app tabs and Panoramas, as well as to make the tab bar into a standard toolbar. Other changes that may break existing extensions include:
+A number of changes were made to the {{XULElem("tabbrowser")}} element to help support app tabs and Panoramas, as well as to make the tab bar into a standard toolbar. Other changes that may break existing extensions include:
 
 - The `TabClose`, `TabSelect`, and `TabOpen` events no longer bubble up to the {{XULElem("tabbrowser")}} element (`gBrowser`). Event listeners for those events should be added to `gBrowser.tabContainer` rather than to `gBrowser` directly.
 - The tab context menu is no longer an anonymous child of the {{XULElem("tabbrowser")}}. It can therefore be overlaid directly with [XUL overlays](/en-US/docs/XUL_Overlays). It can also be accessed more directly in JavaScript via `gBrowser.tabContextMenu`. See [this blog post](https://www.gavinsharp.com/blog/2010/03/31/accessingmodifying-the-firefox-tab-context-menu-from-extensions/) for more details.
 
-## XPCOM changes
+## XPCOM changes
 
-Several changes have been made that affect add-ons and applications that include XPCOM components. See [XPCOM changes in Gecko 2](/en-US/docs/XPCOM/XPCOM_changes_in_Gecko_2.0) for details.
+Several changes have been made that affect add-ons and applications that include XPCOM components. See [XPCOM changes in Gecko 2](/en-US/docs/XPCOM/XPCOM_changes_in_Gecko_2.0) for details.
 
 ## The Add-on Manager
 
@@ -50,7 +50,7 @@ The overhauled Add-on Manager is implemented as a tab instead of in a separate w
 
 In addition, the back-end of the Add-on Manager was redesigned. The {{interface("nsIExtensionManager")}} interface is gone, as is the old RDF-based storage it used. Add-on metadata is now stored in an SQLite database, and the Add-on Manager is now a [JavaScript code module](/en-US/docs/JavaScript_code_modules) called [AddonManager](/en-US/docs/Addons/Add-on_Manager/AddonManager).
 
-A key difference with the new API is that requesting add-on metadata is now asynchronous instead of synchronous; this applies to add-ons using FUEL as well, so all add-ons that request metadata about add-ons will need to be updated.
+A key difference with the new API is that requesting add-on metadata is now asynchronous instead of synchronous; this applies to add-ons using FUEL as well, so all add-ons that request metadata about add-ons will need to be updated.
 
 ## Threading
 
@@ -58,11 +58,11 @@ You can no longer pass JavaScript objects between threads. This renders the Thre
 
 ## Network redirects
 
-The API for handling network redirects has been changed to be asynchronous; any add-ons registering in the "net-channel-event-sinks" category will need to be updated to use [the new API](</en-US/docs/XPCOM_Interface_Reference/nsIChannelEventSink#asyncOnChannelRedirect()>).
+The API for handling network redirects has been changed to be asynchronous; any add-ons registering in the "net-channel-event-sinks" category will need to be updated to use [the new API](</en-US/docs/XPCOM_Interface_Reference/nsIChannelEventSink#asyncOnChannelRedirect()>).
 
 ## XPI unpacking
 
-Firefox 4 [no longer extracts XPIs](https://bugzilla.mozilla.org/show_bug.cgi?id=533038) when installing extensions. It just places the XPI file in the user profile, and then reads the chrome files and others directly out of the XPI. A jar inside the XPI still works, but is no longer necessary, so that can make your development or build easier. This was done mainly for performance reasons on slow OSes, and allows better cache invalidation, which also helps developers. However, not all kinds of files can be read from within the XPI yet, so if your extension uses one of those, you need to specify [`<em:unpack>`](/en-US/Install_Manifests#unpack) in your install.rdf to cause Firefox to still extract your XPI and use single files, otherwise your extension will fail when trying to access these files.
+Firefox 4 [no longer extracts XPIs](https://bugzilla.mozilla.org/show_bug.cgi?id=533038) when installing extensions. It just places the XPI file in the user profile, and then reads the chrome files and others directly out of the XPI. A jar inside the XPI still works, but is no longer necessary, so that can make your development or build easier. This was done mainly for performance reasons on slow OSes, and allows better cache invalidation, which also helps developers. However, not all kinds of files can be read from within the XPI yet, so if your extension uses one of those, you need to specify [`<em:unpack>`](/en-US/Install_Manifests#unpack) in your install.rdf to cause Firefox to still extract your XPI and use single files, otherwise your extension will fail when trying to access these files.
 
 If your extension only contains these types of files then you do not need to make any changes:
 
@@ -74,13 +74,13 @@ If your extension only contains these types of files then you do not need to mak
 
 If your extension contains any of the following then you will need to include `<em:unpack>` in the install.rdf:
 
-- Binary XPCOM components
+- Binary XPCOM components
 - Shared libraries loaded with ctypes
 - `searchplugins/` (which are supposed to be loaded automatically by Firefox)
 - `dictionaries/`
 - Window icons (might get [fixed](https://bugzilla.mozilla.org/show_bug.cgi?id=595462))
 
-If your extension code accesses other files that you have packaged in the XPI then you will either need to include `<em:unpack>` in the install.rdf or you may be able to support packed installation by making some changes to your code. Any code that used getInstallLocation() and nsIFile will either need em:unpack or needs to be changed. You can use the method [`Addon.getResourceURI()`](/en-US/docs/Addons/Add-on_Manager/Addon#getResourceURI%28%29), it will return an {{interface("nsIURI")}} pointing to the requested file. If the extension is unpacked then it will be a `file://` URI. If the extension is packed then it will be a `jar://` URI. You can open streams to these URIs by opening a channel using the {{interface("nsIIOService")}} which will allow you to load the files contents without any unpacking.
+If your extension code accesses other files that you have packaged in the XPI then you will either need to include `<em:unpack>` in the install.rdf or you may be able to support packed installation by making some changes to your code. Any code that used getInstallLocation() and nsIFile will either need em:unpack or needs to be changed. You can use the method [`Addon.getResourceURI()`](/en-US/docs/Addons/Add-on_Manager/Addon#getResourceURI%28%29), it will return an {{interface("nsIURI")}} pointing to the requested file. If the extension is unpacked then it will be a `file://` URI. If the extension is packed then it will be a `jar://` URI. You can open streams to these URIs by opening a channel using the {{interface("nsIIOService")}} which will allow you to load the files contents without any unpacking.
 
 ## Child HWNDs have been removed
 
@@ -90,9 +90,9 @@ Unfortunately, a few extensions have been getting access to these `HWND`s and ma
 
 If you maintain an extension that uses native components that rely on `HWND`s that no longer exist, you'll need to update your extension. There are two ways to do this.
 
-The first, and better, solution is to stop accessing `HWND`s and instead use Web features or XUL to implement your extension. There are a lot of new features in Firefox 4 that make possible a lot of things that used to require native code, so you may no longer need to do this.
+The first, and better, solution is to stop accessing `HWND`s and instead use Web features or XUL to implement your extension. There are a lot of new features in Firefox 4 that make possible a lot of things that used to require native code, so you may no longer need to do this.
 
-If you find that this doesn't work, and you still need to directly access `HWND`s, you may find that your only solution is to write an [NPAPI](/en-US/docs/NPAPI) plugin that does the work. This may be a lot of work, but it should work. Of course, this may not help you if the specific `HWND`s you were using no longer exist.
+If you find that this doesn't work, and you still need to directly access `HWND`s, you may find that your only solution is to write an [NPAPI](/en-US/docs/NPAPI) plugin that does the work. This may be a lot of work, but it should work. Of course, this may not help you if the specific `HWND`s you were using no longer exist.
 
 ## Development and testing tips
 

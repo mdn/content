@@ -63,7 +63,7 @@ var notification = new Notification(title, options);
       The default value is `false`.
     - `actions`: An array of actions to display in the notification. Each element in the array is an object with the following members:
 
-      - `action`: A {{domxref("DOMString")}} identifying a user action to be displayed on the notification.
+      - `action`: A {{domxref("DOMString")}} identifying a user action to be displayed on the notification.
       - `title`: A {{domxref("DOMString")}} containing action text to be shown to the user.
       - `icon`: A {{domxref("USVString")}} containing the URL of an icon to display with the action.
 

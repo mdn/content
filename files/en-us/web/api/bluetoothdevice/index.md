@@ -32,7 +32,7 @@ environment.
 
 - {{DOMxRef("BluetoothDevice.watchAdvertisements()")}} {{Experimental_Inline}}
   - : A {{jsxref("Promise")}} that resolves to `undefined` or is rejected with
-    an error if advertisements can’t be shown for any reason.
+    an error if advertisements can't be shown for any reason.
 - {{DOMxRef("BluetoothDevice.unwatchAdvertisements()")}} {{Experimental_Inline}}
   - : Stops watching for advertisements.
 

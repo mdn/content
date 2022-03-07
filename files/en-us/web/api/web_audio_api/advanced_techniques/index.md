@@ -12,7 +12,7 @@ tags:
 ---
 {{DefaultAPISidebar("Web Audio API")}}
 
-In this tutorial, we're going to cover sound creation and modification, as well as timing and scheduling. We're going to introduce sample loading, envelopes, filters, wavetables, and frequency modulation. If you're familiar with these terms and you're looking for an introduction to their application within with the Web Audio API, you've come to the right place.
+In this tutorial, we're going to cover sound creation and modification, as well as timing and scheduling. We're going to introduce sample loading, envelopes, filters, wavetables, and frequency modulation. If you're familiar with these terms and you're looking for an introduction to their application within with the Web Audio API, you've come to the right place.
 
 ## Demo
 
@@ -28,7 +28,7 @@ The interface consists of master controls, which allow us to play/stop the seque
 
 There are four different sounds, or voices, which can be played. Each voice has four buttons, which represent four beats in one bar of music. When they are enabled the note will sound. When the instrument plays, it will move across this set of beats and loop the bar.
 
-Each voice also has local controls, which allow you to manipulate the effects or parameters particular to each technique we are using to create those voices. The techniques we are using are:
+Each voice also has local controls, which allow you to manipulate the effects or parameters particular to each technique we are using to create those voices. The techniques we are using are:
 
 <table class="no-markdown">
   <thead>
@@ -149,11 +149,11 @@ releaseControl.addEventListener('input', function() {
 
 ### The final playSweep() function
 
-Now we can expand our `playSweep()` function. We need to add a {{domxref("GainNode")}} and connect that through our audio graph to actually apply amplitude variations to our sound. The gain node has one property: `gain`, which is of type {{domxref("AudioParam")}}.
+Now we can expand our `playSweep()` function. We need to add a {{domxref("GainNode")}} and connect that through our audio graph to actually apply amplitude variations to our sound. The gain node has one property: `gain`, which is of type {{domxref("AudioParam")}}.
 
 This is really useful — now we can start to harness the power of the audio param methods on the gain value. We can set a value at a certain time, or we can change it _over_ time with methods such as {{domxref("AudioParam.linearRampToValueAtTime")}}.
 
-For our attack and release, we'll use the `linearRampToValueAtTime` method as mentioned above. It takes two parameters — the value you want to set the parameter you are changing to (in this case the gain) and when you want to do this. In our case *when* is controlled by our inputs. So in the example below the gain is being increased to 1, at a linear rate, over the time the attack range input has been set to. Similarly, for our release, the gain is being set to 0, at a linear rate, over the time the release input has been set to.
+For our attack and release, we'll use the `linearRampToValueAtTime` method as mentioned above. It takes two parameters — the value you want to set the parameter you are changing to (in this case the gain) and when you want to do this. In our case *when* is controlled by our inputs. So in the example below the gain is being increased to 1, at a linear rate, over the time the attack range input has been set to. Similarly, for our release, the gain is being set to 0, at a linear rate, over the time the release input has been set to.
 
 ```js
 let sweepLength = 2;
@@ -167,7 +167,7 @@ function playSweep(time) {
     sweepEnv.gain.setValueAtTime(0, time);
     // set our attack
     sweepEnv.gain.linearRampToValueAtTime(1, time + attackTime);
-    // set our release
+    // set our release
     sweepEnv.gain.linearRampToValueAtTime(0, time + sweepLength - releaseTime);
 
     osc.connect(sweepEnv).connect(audioCtx.destination);

@@ -213,7 +213,7 @@ window.addEventListener("load", function(ev) {
 }, false);
 ```
 
-See {{domxref("EventTarget.addEventListener", "addEventListener()")}}  for information about event handlers and how they work.
+See {{domxref("EventTarget.addEventListener", "addEventListener()")}}  for information about event handlers and how they work.
 
 #### HTML
 

@@ -26,7 +26,7 @@ To use this API, an extension must request the "theme" [permission](/en-US/docs/
 - {{WebExtAPIRef("theme.getCurrent()")}}
   - : Gets the current browser theme.
 - {{WebExtAPIRef("theme.update()")}}
-  - : Updates the browser’s theme.
+  - : Updates the browser's theme.
 - {{WebExtAPIRef("theme.reset()")}}
   - : Removes any theme updates made in a call to {{WebExtAPIRef("theme.update()")}}.
 

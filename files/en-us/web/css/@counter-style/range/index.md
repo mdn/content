@@ -40,7 +40,7 @@ range: infinite 6, 10 infinite;
     - For cyclic, numeric, and fixed systems, the range is negative infinity to positive infinity.
     - For alphabetic and symbolic systems, the range is 1 to positive infinity.
     - For additive systems, the range is 0 to positive infinity.
-    - For extends systems, the range is whatever auto would produce for the extended system; if extending a complex predefined style (§7 Complex Predefined Counter Styles), the range is the style’s defined range.
+    - For extends systems, the range is whatever auto would produce for the extended system; if extending a complex predefined style (§7 Complex Predefined Counter Styles), the range is the style's defined range.
 
 - `[ [ | infinite ]{2} ]#`
   - : Defines a comma-separated list of ranges. For each individual range, the first value is the lower bound and the second value is the upper bound. A range is inclusive, that means it always contains both, the lower and upper bound numbers. If infinite is used as the first value in a range, it represents negative infinity; if it is used as the second value, it represents positive infinity. The range of the counter style is the union of all the ranges defined in the list.

@@ -150,6 +150,6 @@ console.log(fruits[index]); // blueberries
 
 ## See also
 
-- A polyfill of `Array.prototype.findIndex` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.findIndex` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.find()")}}
 - {{jsxref("Array.prototype.indexOf()")}}

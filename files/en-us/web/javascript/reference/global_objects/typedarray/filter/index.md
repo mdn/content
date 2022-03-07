@@ -122,7 +122,7 @@ new Uint8Array([12, 5, 8, 130, 44]).filter(elem => elem >= 10);
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.filter` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.filter` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray.prototype.every()")}}
 - {{jsxref("TypedArray.prototype.some()")}}
 - {{jsxref("Array.prototype.filter()")}}

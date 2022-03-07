@@ -15,7 +15,7 @@ browser-compat: webextensions.api.downloads.search
 ---
 {{AddonSidebar()}}
 
-The **`search()`** function of the {{WebExtAPIRef("downloads")}} API queries the {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} available in the browser's downloads manager, and returns those that match the specified search criteria.
+The **`search()`** function of the {{WebExtAPIRef("downloads")}} API queries the {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} available in the browser's downloads manager, and returns those that match the specified search criteria.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -53,7 +53,7 @@ function logDownloads(downloads) {
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.log(`Error: ${error}`);
 }
 
 var searching = browser.downloads.search({
@@ -76,7 +76,7 @@ function logDownloads(downloads) {
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.log(`Error: ${error}`);
 }
 
 var id = 13;
@@ -98,7 +98,7 @@ function logDownloads(downloads) {
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.log(`Error: ${error}`);
 }
 
 var searching = browser.downloads.search({});

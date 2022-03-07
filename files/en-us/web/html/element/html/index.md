@@ -54,7 +54,7 @@ The **`<html>`** [HTML](/en-US/docs/Web/HTML) element represents the root (top-l
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
-      <td>No <code>role</code> permitted</td>
+      <td>No <code>role</code> permitted</td>
     </tr>
     <tr>
       <th scope="row">DOM interface</th>
@@ -68,7 +68,7 @@ The **`<html>`** [HTML](/en-US/docs/Web/HTML) element represents the root (top-l
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 - {{htmlattrdef("manifest")}} {{deprecated_inline}}
-  - : Specifies the {{glossary("URI")}} of a resource manifest indicating resources that should be cached locally. See [Using the application cache](/en-US/docs/Web/HTML/Using_the_application_cache) for details.
+  - : Specifies the {{glossary("URI")}} of a resource manifest indicating resources that should be cached locally.
 - {{htmlattrdef("version")}} {{deprecated_inline}}
   - : Specifies the version of the HTML {{glossary("Doctype", "Document Type Definition")}} that governs the current document. This attribute is not needed, because it is redundant with the version information in the document type declaration.
 - {{htmlattrdef("xmlns")}}

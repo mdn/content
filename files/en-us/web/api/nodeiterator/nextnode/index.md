@@ -12,7 +12,7 @@ browser-compat: api.NodeIterator.nextNode
 
 The **`NodeIterator.nextNode()`** method returns the next node
 in the set represented by the {{domxref("NodeIterator")}} and advances the position of
-the iterator within the set.  The first call to `nextNode()` returns the
+the iterator within the set.  The first call to `nextNode()` returns the
 first node in the set.
 
 This method returns `null` when there are no nodes left in the set.

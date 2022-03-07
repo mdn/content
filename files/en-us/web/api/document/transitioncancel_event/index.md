@@ -49,7 +49,7 @@ This code adds a listener to the `transitioncancel` event:
 
 ```js
 document.addEventListener('transitioncancel', () => {
-  console.log('Transition canceled');
+  console.log('Transition canceled');
 });
 ```
 

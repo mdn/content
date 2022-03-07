@@ -16,7 +16,7 @@ browser-compat: webextensions.api.browsingData.removePluginData
 
 Clears data stored by browser plugins.
 
-You can use the `removalOptions` parameter, which is a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, to:
+You can use the `removalOptions` parameter, which is a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, to:
 
 - clear only plugin data stored after a given time
 - control whether to clear only data stored by plugins running in normal web pages or to clear data stored by plugins running in hosted apps and extensions as well.

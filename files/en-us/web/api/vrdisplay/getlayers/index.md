@@ -3,7 +3,7 @@ title: VRDisplay.getLayers()
 slug: Web/API/VRDisplay/getLayers
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Deprecated
   - Method
   - Reference
@@ -23,7 +23,7 @@ The **`getLayers()`** method of the {{domxref("VRDisplay")}} interface returns t
 ## Syntax
 
 ```js
-var myLayers = vrDisplayInstance.getLayers();
+getLayers()
 ```
 
 ### Parameters

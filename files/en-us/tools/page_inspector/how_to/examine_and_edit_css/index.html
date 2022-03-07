@@ -36,22 +36,22 @@ tags:
 
 <h3 id="Browser_compat_warnings">Browser compat warnings</h3>
 
-<p>CSS properties have varied level of support across different browsers. From Firefox 81, compatibility tooltips may be displayed next to any CSS properties that have known compatibility issues, as shown below.</p>
+<p>CSS properties have varied level of support across different browsers. From Firefox 81, compatibility tooltips may be displayed next to any CSS properties that have known compatibility issues, as shown below.</p>
 
 <div class="notecard note">
   <h4>Note</h4>
-  <p>This feature is enabled from Firefox 81 by setting the preference <code>devtools.inspector.ruleview.inline-compatibility-warning.enabled</code> to <code>true</code> (open <code>about:config</code> in the URL bar to view/set Firefox preferences).</p>
+  <p>This feature is enabled from Firefox 81 by setting the preference <code>devtools.inspector.ruleview.inline-compatibility-warning.enabled</code> to <code>true</code> (open <code>about:config</code> in the URL bar to view/set Firefox preferences).</p>
 </div>
 
 <p><img alt="Tooltip displayed next to CSS element. Hover to find out browsers with compatibility issues." src="firefox_compatibility_tootips.jpg"></p>
 
-<p>The tooltips, which are populated from the MDN <a href="https://github.com/mdn/browser-compat-data">browser compatibility project</a>, identify the <em>reason</em> for the incompatibility (not supported, deprecated, experimental etc.), display icons for incompatible browsers, and provide a link to the associated property page for more information.</p>
+<p>The tooltips, which are populated from the MDN <a href="https://github.com/mdn/browser-compat-data">browser compatibility project</a>, identify the <em>reason</em> for the incompatibility (not supported, deprecated, experimental etc.), display icons for incompatible browsers, and provide a link to the associated property page for more information.</p>
 
 <h3 id="CSS_Compatibility">CSS Compatibility</h3>
 
-<p>In addition to compatibility tooltips, the <em>CSS Compatibility View</em> shows any CSS compatibility issues for both the selected element and for the current page (as a whole).<img alt="Screenshot of the Compatibility view" src="compat_view.png"></p>
+<p>In addition to compatibility tooltips, the <em>CSS Compatibility View</em> shows any CSS compatibility issues for both the selected element and for the current page (as a whole).<img alt="Screenshot of the Compatibility view" src="compat_view.png"></p>
 
-<p>For more information see:  <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#compatibility_view">Page Inspector &gt; CSS Compatibility View</a>.</p>
+<p>For more information see:  <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#compatibility_view">Page Inspector &gt; CSS Compatibility View</a>.</p>
 
 <h3 id="Rule_display">Rule display</h3>
 
@@ -80,7 +80,7 @@ tags:
 
 <p>The <code>element {}</code> rule at the top of the rules list isn't actually a CSS rule. It represents the CSS properties assigned to the element via its {{htmlattrxref("style")}} attribute.</p>
 
-<p>This also gets the target icon: <img alt="" src="target-icon.png">, giving you a convenient way to highlight the currently selected element in the page.</p>
+<p>This also gets the target icon: <img alt="" src="target-icon.png">, giving you a convenient way to highlight the currently selected element in the page.</p>
 
 <p>{{EmbedYouTube("bQzOAFvEDco")}}</p>
 
@@ -155,7 +155,7 @@ tags:
 
 <p><img alt="" src="show_pseudo_classes.png" style="border: 1px solid black; display: block; margin: 0 auto;"></p>
 
-<p>Click the button to see checkboxes that you can use to enable the {{cssxref(":hover")}}, {{cssxref(":active")}} and {{cssxref(":focus")}}, {{cssxref(":focus-within")}}, {{cssxref(":focus-visible")}}, {{cssxref(":visited")}}, and {{cssxref(":target")}} pseudo-classes for the selected element:</p>
+<p>Click the button to see checkboxes that you can use to enable the {{cssxref(":hover")}}, {{cssxref(":active")}} and {{cssxref(":focus")}}, {{cssxref(":focus-within")}}, {{cssxref(":focus-visible")}}, {{cssxref(":visited")}}, and {{cssxref(":target")}} pseudo-classes for the selected element:</p>
 
 <p><img alt="" src="show_pseudo_classes_hover.png" style="border: 1px solid black; display: block; margin: 0px auto;">This feature can also be accessed from the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#element_popup_menu">popup menu in the HTML view</a>.</p>
 
@@ -234,7 +234,7 @@ tags:
 
 <div class="notecard note">
   <h4>Note</h4>
-  <p>If <code>privacy.resistFingerprinting</code> has been set <strong>true</strong>, the <code><a href="/en-US/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a></code> preference is forced to <code>light</code>. You must set <code>privacy.resistFingerprinting</code> to <strong>false</strong> in order to use this feature.</p>
+  <p>If <code>privacy.resistFingerprinting</code> has been set <strong>true</strong>, the <code><a href="/en-US/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a></code> preference is forced to <code>light</code>. You must set <code>privacy.resistFingerprinting</code> to <strong>false</strong> in order to use this feature.</p>
 </div>
 
 <div class="notecard note">
@@ -244,11 +244,11 @@ tags:
 
 <h2 id="Examine_computed_CSS">Examine computed CSS</h2>
 
-<p>To see the complete computed CSS for the selected element, select the <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#computed_view">Computed panel</a> in the righthand pane. This panel shows the calculated value that each CSS property has for the selected element. (This calculated value is exactly the same as what <a href="/en-US/docs/Web/API/Window/getComputedStyle">getComputedStyle </a>would return.)</p>
+<p>To see the complete computed CSS for the selected element, select the <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#computed_view">Computed panel</a> in the righthand pane. This panel shows the calculated value that each CSS property has for the selected element. (This calculated value is exactly the same as what <a href="/en-US/docs/Web/API/Window/getComputedStyle">getComputedStyle </a>would return.)</p>
 
 <p><img alt="" src="computed_css.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
-<p>You can <kbd>Tab</kbd> through the styles to select them, and you can find more information about each property — pressing <kbd>F1</kbd> on a selected property will open up its MDN reference page.</p>
+<p>You can <kbd>Tab</kbd> through the styles to select them, and you can find more information about each property — pressing <kbd>F1</kbd> on a selected property will open up its MDN reference page.</p>
 
 <p>Clicking the arrow next to the property name (or pressing <kbd>Enter</kbd> or <kbd>Space</kbd> while it is selected) shows the rule that set this value, along with a link to the source filename and line number:</p>
 
@@ -267,7 +267,7 @@ tags:
 
 <p>If you click on a declaration or a selector in the Rules view you can edit it and see the results immediately. You can also <kbd>Tab</kbd> through the different existing properties and values, and start editing them by pressing <kbd>Enter</kbd> or <kbd>Space</kbd>. To add a new declaration to a rule, click on the last line of the rule (the line occupied by the closing brace).</p>
 
-<p>As you start typing a property name, you'll see a list of autocomplete suggestions. Press <kbd>Tab</kbd> to accept the current suggestion or <kbd>Up</kbd> and <kbd>Down</kbd> to move through the list. The default choice is the most common property that starts with the letters you've typed. For example, here the user has typed "c" and the default choice is "color":</p>
+<p>As you start typing a property name, you'll see a list of autocomplete suggestions. Press <kbd>Tab</kbd> to accept the current suggestion or <kbd>Up</kbd> and <kbd>Down</kbd> to move through the list. The default choice is the most common property that starts with the letters you've typed. For example, here the user has typed "c" and the default choice is "color":</p>
 
 <p><img alt="" src="edit_rule_autocomplete.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 

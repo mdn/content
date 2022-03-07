@@ -13,7 +13,7 @@ browser-compat: api.structuredClone
 ---
 {{APIRef("HTML DOM")}}
 
-The global **`structuredClone()`** method creates a deep clone of a given value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+The global **`structuredClone()`** method creates a [deep clone](/en-US/docs/Glossary/Deep_copy) of a given value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 
 The method also allows {{Glossary("transferable objects")}} in the original value to be _transferred_ rather than cloned to the new object.
 Transferred objects are detached from the original object and attached to the new object; they are no longer accessible in the original object.
@@ -29,13 +29,13 @@ structuredClone(value, { transfer })
 
 - `value`
   - : The object to be cloned.
-    This can be any [structured-clonable type](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+    This can be any [structured-clonable type](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 - `transfer` {{optional_inline}}
   - : An array of {{Glossary("transferable objects")}} in `value` that will be moved rather than cloned to the returned object.
 
 ### Return value
 
-The returned value is a deep copy of the original `value`.
+The returned value is a [deep copy](/en-US/docs/Glossary/Deep_copy) of the original `value`.
 
 ### Exceptions
 
@@ -44,7 +44,7 @@ The returned value is a deep copy of the original `value`.
 
 ## Description
 
-This function can be used to deep copy JavaScript values.
+This function can be used to [deep copy](/en-US/docs/Glossary/Deep_copy) JavaScript values.
 It also supports circular references, as shown below:
 
 ```js

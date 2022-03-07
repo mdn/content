@@ -15,13 +15,13 @@ tags:
 
 This article describes some ways in which you can use CSS to add content when a document is displayed. You modify your stylesheet to add text content or images.
 
-One of the important advantages of CSS is that it helps you to separate a document's style from its content. However, there are situations where it makes sense to specify certain content as part of the stylesheet, not as part of the document. You can specify text or image content within a stylesheet when that content is closely linked to the document's structure.
+One of the important advantages of CSS is that it helps you to separate a document's style from its content. However, there are situations where it makes sense to specify certain content as part of the stylesheet, not as part of the document. You can specify text or image content within a stylesheet when that content is closely linked to the document's structure.
 
 > **Note:** Content specified in a stylesheet does not become part of the DOM.
 
 Specifying content in a stylesheet can cause complications. For example, you might have different language versions of your document that share a stylesheet. If you specify content in your stylesheet that requires translation, you have to put those parts of your stylesheet in different files and arrange for them to be linked with the appropriate language versions of your document.
 
-This issue does not arise if the content you specify consists of symbols or images that apply in all languages and cultures.
+This issue does not arise if the content you specify consists of symbols or images that apply in all languages and cultures.
 
 ## Examples
 
@@ -49,9 +49,9 @@ A text where I need to <span class="ref">something</span>
 
 {{ EmbedLiveSample('Text_content', 600, 30) }}
 
-The character set of a stylesheet is UTF-8 by default, but it can also be specified in the link, in the stylesheet itself, or in other ways. For details, see [4.4 CSS style sheet representation](https://www.w3.org/TR/CSS21/syndata.html#q23) in the CSS Specification.
+The character set of a stylesheet is UTF-8 by default, but it can also be specified in the link, in the stylesheet itself, or in other ways. For details, see [4.4 CSS style sheet representation](https://www.w3.org/TR/CSS21/syndata.html#q23) in the CSS Specification.
 
-Individual characters can also be specified by an escape mechanism that uses backslash as the escape character. For example, "\265B" is the chess symbol for a black queen ♛. For details, see [Referring to characters not represented in a character encoding](https://www.w3.org/TR/CSS21/syndata.html#q24) and [Characters and case](https://www.w3.org/TR/CSS21/syndata.html#q6) in the CSS Specification.
+Individual characters can also be specified by an escape mechanism that uses backslash as the escape character. For example, "\265B" is the chess symbol for a black queen ♛. For details, see [Referring to characters not represented in a character encoding](https://www.w3.org/TR/CSS21/syndata.html#q24) and [Characters and case](https://www.w3.org/TR/CSS21/syndata.html#q6) in the CSS Specification.
 
 ### Image content
 
@@ -69,7 +69,7 @@ This rule adds a space and an icon after every link that has the class `glossary
 
 ```css
 a.glossary::after {
-   content: " " url("glossary-icon.gif");
+   content: " " url("glossary-icon.gif");
 }
 ```
 

@@ -11,7 +11,7 @@ In JavaScript, objects can be seen as a collection of properties. With the [obje
 
 There are two types of object properties: The [_data_ property](/en-US/docs/Web/JavaScript/Data_structures#data_property) and the [_accessor_ property](/en-US/docs/Web/JavaScript/Data_structures#accessor_property).
 
-> **Note:** It’s important to recognize it’s accessor _property_ — not accessor _method_. We can give a JavaScript object class-_like_ accessors by using a function as a value — but that doesn't make the object a class.
+> **Note:** It's important to recognize it's accessor _property_ — not accessor _method_. We can give a JavaScript object class-_like_ accessors by using a function as a value — but that doesn't make the object a class.
 
 ## See also
 

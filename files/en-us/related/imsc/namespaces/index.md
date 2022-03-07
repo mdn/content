@@ -44,7 +44,7 @@ But this is not very efficient. Imagine a document with hundreds of subtitles. T
 
 ### Default namespaces
 
-Fortunately, you don't need to do the above — instead you can just use a default namespace. If you set the attribute `xmlns` on the  document's root element to the value `http://www.w3.org/ns/ttml`, all elements nested inside the root will inherit this namespace — they will all have that namespace too.
+Fortunately, you don't need to do the above — instead you can just use a default namespace. If you set the attribute `xmlns` on the  document's root element to the value `http://www.w3.org/ns/ttml`, all elements nested inside the root will inherit this namespace — they will all have that namespace too.
 
 ```xml
 <tt xmlns="http://www.w3.org/ns/ttml" xml:lang="en">
@@ -75,7 +75,7 @@ Because nearly all XML elements you need in an IMSC document are in the namespac
 </tt>
 ```
 
-The element `<documentPublisher>` comes from the [EBU Part M metadata](https://tech.ebu.ch/publications/tech3390) vocabulary. The elements in this vocabulary have the namespace `urn:ebu:tt:metadata`. By setting the `xmlns` attribute on the element `<documentPublisher>` to `urn:ebu:tt:metadata`, the namespace `http://www.w3.org/ns/ttml` gets overwritten. Now the `<documentPublisher>` element and all its descendants have the namespace `urn:ebu:tt:metadata`.
+The element `<documentPublisher>` comes from the [EBU Part M metadata](https://tech.ebu.ch/publications/tech3390) vocabulary. The elements in this vocabulary have the namespace `urn:ebu:tt:metadata`. By setting the `xmlns` attribute on the element `<documentPublisher>` to `urn:ebu:tt:metadata`, the namespace `http://www.w3.org/ns/ttml` gets overwritten. Now the `<documentPublisher>` element and all its descendants have the namespace `urn:ebu:tt:metadata`.
 
 A better way to overwrite a default namespace is by using prefixes.
 

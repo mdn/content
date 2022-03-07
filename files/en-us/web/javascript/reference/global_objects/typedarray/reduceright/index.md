@@ -116,6 +116,6 @@ var total = new Uint8Array([0, 1, 2, 3]).reduceRight(function(a, b) {
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.reduceRight` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.reduceRight` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray.prototype.reduce()")}}
 - {{jsxref("Array.prototype.reduceRight()")}}

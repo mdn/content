@@ -38,11 +38,11 @@ The `devicemotion` event is fired at a regular interval and indicates the amount
 ```js
 function handleMotionEvent(event) {
 
-    var x = event.accelerationIncludingGravity.x;
-    var y = event.accelerationIncludingGravity.y;
-    var z = event.accelerationIncludingGravity.z;
+    var x = event.accelerationIncludingGravity.x;
+    var y = event.accelerationIncludingGravity.y;
+    var z = event.accelerationIncludingGravity.z;
 
-    // Do something awesome.
+    // Do something awesome.
 }
 
 window.addEventListener("devicemotion", handleMotionEvent, true);

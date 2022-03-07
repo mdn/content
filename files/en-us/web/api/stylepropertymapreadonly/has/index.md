@@ -31,7 +31,7 @@ var boolean = StylePropertyMapReadOnly.has(property)
 
 ### Return value
 
-A {{jsxref("boolean")}}.
+A boolean value.
 
 ## Example
 

@@ -19,7 +19,7 @@ This article describes how the various WebRTC-related protocols interact with on
 
 ## Signaling
 
-Unfortunately, WebRTC can’t create connections without some sort of server in the middle. We call this the **signal channel** or **signaling service**. It’s any sort of channel of communication to exchange information before setting up a connection, whether by email, post card or a carrier pigeon... it’s up to you.
+Unfortunately, WebRTC can't create connections without some sort of server in the middle. We call this the **signal channel** or **signaling service**. It's any sort of channel of communication to exchange information before setting up a connection, whether by email, post card or a carrier pigeon... it's up to you.
 
 The information we need to exchange is the Offer and Answer which just contains the {{Glossary("SDP")}} mentioned below.
 

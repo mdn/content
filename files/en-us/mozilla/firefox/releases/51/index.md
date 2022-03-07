@@ -72,7 +72,7 @@ tags:
   - Supports for the new {{domxref("IDBObjectStore.getKey()")}} method has been added ({{bug(1271506)}}).
   - Supports for {{domxref("IDBCursor.continuePrimaryKey()")}} method has been added ({{bug(1271505)}}).
   - Binary keys are now supported ({{bug(1271500)}}).
-  - See also ["What’s new in IndexedDB 2.0?" – Mozilla hacks](https://hacks.mozilla.org/2016/10/whats-new-in-indexeddb-2-0/)
+  - See also ["What's new in IndexedDB 2.0?" – Mozilla hacks](https://hacks.mozilla.org/2016/10/whats-new-in-indexeddb-2-0/)
 
 ### Canvas
 

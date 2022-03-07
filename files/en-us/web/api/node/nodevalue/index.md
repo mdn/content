@@ -17,7 +17,7 @@ For the document itself, `nodeValue` returns `null`.
 For text, comment, and CDATA nodes, `nodeValue` returns the content of the node.
 For attribute nodes, the value of the attribute is returned.
 
-The following table shows the return values for different elements:
+The following table shows the return values for different types of nodes.
 
 | Node                                 | Value of nodeValue                  |
 | ------------------------------------ | ----------------------------------- |

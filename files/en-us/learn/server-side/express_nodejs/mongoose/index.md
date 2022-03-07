@@ -80,7 +80,7 @@ As a general rule, you should consider both the features provided and the "commu
 
 ### Using Mongoose and MongoDb for the LocalLibrary
 
-For the _Local Library_ example (and the rest of this topic) we're going to use the [Mongoose ODM](https://www.npmjs.com/package/mongoose) to access our library data. Mongoose acts as a front end to [MongoDB](https://www.mongodb.com/what-is-mongodb), an open source [NoSQL](https://en.wikipedia.org/wiki/NoSQL) database that uses a document-oriented data model. A “collection” of “documents” in a MongoDB database [is analogous to](https://docs.mongodb.com/manual/core/databases-and-collections/#collections) a “table” of “rows” in a relational database.
+For the _Local Library_ example (and the rest of this topic) we're going to use the [Mongoose ODM](https://www.npmjs.com/package/mongoose) to access our library data. Mongoose acts as a front end to [MongoDB](https://www.mongodb.com/what-is-mongodb), an open source [NoSQL](https://en.wikipedia.org/wiki/NoSQL) database that uses a document-oriented data model. A "collection" of "documents" in a MongoDB database [is analogous to](https://docs.mongodb.com/manual/core/databases-and-collections/#collections) a "table" of "rows" in a relational database.
 
 This ODM and database combination is extremely popular in the Node community, partially because the document storage and query system looks very much like JSON, and is hence familiar to JavaScript developers.
 
@@ -220,7 +220,7 @@ var schema = new Schema(
 })
 ```
 
-Most of the [SchemaTypes](https://mongoosejs.com/docs/schematypes.html) (the descriptors after “type:” or after field names) are self-explanatory. The exceptions are:
+Most of the [SchemaTypes](https://mongoosejs.com/docs/schematypes.html) (the descriptors after "type:" or after field names) are self-explanatory. The exceptions are:
 
 - `ObjectId`: Represents specific instances of a model in the database. For example, a book might use this to represent its author object. This will actually contain the unique ID (`_id`) for the specified object. We can use the `populate()` method to pull in the associated information when needed.
 - [`Mixed`](https://mongoosejs.com/docs/schematypes.html#mixed): An arbitrary schema type.

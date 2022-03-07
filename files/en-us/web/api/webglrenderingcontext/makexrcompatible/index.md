@@ -164,9 +164,9 @@ async function handleStartButtonClick(event) {
 
 function startGame() {
   currentScene = "scene1";
-  loadSceneResources(currentScene);
+  loadSceneResources(currentScene);
 
-  /* and so on */
+  /* and so on */
 }
 ```
 
@@ -183,7 +183,7 @@ session and set the `usingXR` flag to `true`.
 If the other button was clicked, we ensure that `xrSession` is
 `NULL` and clear `usingXR` to `false`.
 
-Then the `startGame()` function is called to trigger the beginning of
+Then the `startGame()` function is called to trigger the beginning of
 gameplay.
 
 Handlers are provided for both

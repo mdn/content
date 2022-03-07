@@ -13,7 +13,7 @@ tags:
 {{DefaultAPISidebar("Web Speech API")}}
 
 The **Web Speech API** enables you to incorporate voice data into web apps.
-The Web Speech API has two parts: `SpeechSynthesis` (Text-to-Speech), and `SpeechRecognition` (Asynchronous Speech Recognition.)
+The Web Speech API has two parts: `SpeechSynthesis` (Text-to-Speech), and `SpeechRecognition` (Asynchronous Speech Recognition.)
 
 ## Web Speech Concepts and Usage
 
@@ -23,7 +23,7 @@ There are two components to this API:
 - Speech recognition is accessed via the {{domxref("SpeechRecognition")}} interface, which provides the ability to recognize voice context from an audio input (normally via the device's default speech recognition service) and respond appropriately.
   Generally you'll use the interface's constructor to create a new {{domxref("SpeechRecognition")}} object, which has a number of event handlers available for detecting when speech is input through the device's microphone. The {{domxref("SpeechGrammar")}} interface represents a container for a particular set of grammar that your app should recognize.
   Grammar is defined using [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (**JSGF**.)
-- Speech synthesis is accessed via the {{domxref("SpeechSynthesis")}} interface, a text-to-speech component that allows programs to read out their text content (normally via the device's default speech synthesiser.) Different voice types are represented by {{domxref("SpeechSynthesisVoice")}} objects, and different parts of text that you want to be spoken are represented by {{domxref("SpeechSynthesisUtterance")}} objects.
+- Speech synthesis is accessed via the {{domxref("SpeechSynthesis")}} interface, a text-to-speech component that allows programs to read out their text content (normally via the device's default speech synthesizer.) Different voice types are represented by {{domxref("SpeechSynthesisVoice")}} objects, and different parts of text that you want to be spoken are represented by {{domxref("SpeechSynthesisUtterance")}} objects.
   You can get these spoken by passing them to the {{domxref("SpeechSynthesis.speak()")}} method.
 
 For more details on using these features, see [Using the Web Speech API](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API).
@@ -64,7 +64,7 @@ For more details on using these features, see [Using the Web Speech API](/en-US/
   - : Represents a voice that the system supports.
     Every `SpeechSynthesisVoice` has its own relative speech service including information about language, name and URI.
 - {{domxref("Window.speechSynthesis")}}
-  - : Specced out as part of a `[NoInterfaceObject]` interface called `SpeechSynthesisGetter`, and Implemented by the `Window` object, the `speechSynthesis` property provides access to the {{domxref("SpeechSynthesis")}} controller, and therefore the entry point to speech synthesis functionality.
+  - : Specified out as part of a `[NoInterfaceObject]` interface called `SpeechSynthesisGetter`, and Implemented by the `Window` object, the `speechSynthesis` property provides access to the {{domxref("SpeechSynthesis")}} controller, and therefore the entry point to speech synthesis functionality.
 
 ## Examples
 

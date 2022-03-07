@@ -14,18 +14,18 @@ The **`stroke-dashoffset`** attribute is a presentation attribute defining an of
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement('altGlyph')}}
-* {{SVGElement('circle')}}
-* {{SVGElement('ellipse')}}
-* {{SVGElement('path')}}
-* {{SVGElement('line')}}
-* {{SVGElement('polygon')}}
-* {{SVGElement('polyline')}}
-* {{SVGElement('rect')}}
-* {{SVGElement('text')}}
-* {{SVGElement('textPath')}}
-* {{SVGElement('tref')}}
-* {{SVGElement('tspan')}}
+- {{SVGElement('altGlyph')}}
+- {{SVGElement('circle')}}
+- {{SVGElement('ellipse')}}
+- {{SVGElement('path')}}
+- {{SVGElement('line')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('text')}}
+- {{SVGElement('textPath')}}
+- {{SVGElement('tref')}}
+- {{SVGElement('tspan')}}
 
 ## Example
 
@@ -110,10 +110,6 @@ html,body,svg { height:100% }
 
 The offset is usually expressed in user units resolved against the {{SVGAttr('pathLength')}} but if a [\<percentage>](/en-US/docs/Web/SVG/Content_type#percentage) is used, the value is resolved as a percentage of the current viewport.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Specifications
 
 <table class="no-markdown">
@@ -141,3 +137,7 @@ The offset is usually expressed in user units resolved against the {{SVGAttr('pa
     </tr>
   </tbody>
 </table>
+
+## Browser compatibility
+
+{{Compat}}

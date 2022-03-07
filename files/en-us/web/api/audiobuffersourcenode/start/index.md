@@ -31,7 +31,7 @@ AudioBufferSourceNode.start([when][, offset][, duration]);
   - : The time, in seconds, at which the sound should begin to play, in the same time
     coordinate system used by the {{domxref("AudioContext")}}. If `when` is
     less than ({{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}, or if it's 0, the sound begins to
-    play at once. **The default value is 0.**
+    play at once. **The default value is 0.**
 - `offset` {{optional_inline}}
   - : An offset, specified as the number of seconds in the same time coordinate system as
     the `AudioContext`, to the time within the audio buffer that playback

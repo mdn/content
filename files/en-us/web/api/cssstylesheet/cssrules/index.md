@@ -47,7 +47,7 @@ for (let i=0; i < ruleList.length; i++) {
 }
 ```
 
-Rules can also be accessed using {{jsxref("for...of")}}:
+Rules can also be accessed using {{jsxref("Statements/for...of", "for...of")}}:
 
 ```js
 let ruleList = document.styleSheets[0].cssRules;

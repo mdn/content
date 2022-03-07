@@ -68,13 +68,13 @@ Most standard Western fonts include italic and bold variants, and some fonts inc
 
 ```css
 em {
-  font-weight: bold;
+  font-weight: bold;
 }
 .syn {
-  font-synthesis: style weight small-caps;
+  font-synthesis: style weight small-caps;
 }
 .no-syn {
-  font-synthesis: none;
+  font-synthesis: none;
 }
 ```
 

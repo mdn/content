@@ -19,7 +19,7 @@ browser-compat: api.HTMLFormControlsCollection
 
 The **`HTMLFormControlsCollection`** interface represents a _collection_ of HTML _form control elements_.
 
-It represents the lists returned by the {{domxref("HTMLFormElement")}} interface's {{domxref("HTMLFormElement.elements", "elements")}} property and the {{domxref("HTMLFieldSetElement")}} interface's {{domxref("HTMLFieldSetElement.elements", "elements")}} property.
+It represents the lists returned by the {{domxref("HTMLFormElement")}} interface's {{domxref("HTMLFormElement.elements", "elements")}} property and the {{domxref("HTMLFieldSetElement")}} interface's {{domxref("HTMLFieldSetElement.elements", "elements")}} property.
 
 This interface replaces one method from {{domxref("HTMLCollection")}}, on which it is based.
 
@@ -34,7 +34,7 @@ _This interface inherits the properties of its parent, {{domxref("HTMLCollection
 _This interface inherits the methods of its parent, {{domxref("HTMLCollection")}}._
 
 - {{domxref("HTMLFormControlsCollection.namedItem()")}}
-  - : Returns the {{domxref("RadioNodeList")}} or the {{domxref("Element")}} in the collection whose `name` or `id` matches the specified name, or `null` if no nodes match. Note that this version of `namedItem()` hide the one inherited from {{domxref("HTMLCollection")}}. Like that one, in JavaScript, using the array bracket syntax with a {{jsxref("String")}}, like `collection["value"]` is equivalent to `collection.namedItem("value")`.
+  - : Returns the {{domxref("RadioNodeList")}} or the {{domxref("Element")}} in the collection whose `name` or `id` matches the specified name, or `null` if no nodes match. Note that this version of `namedItem()` hide the one inherited from {{domxref("HTMLCollection")}}. Like that one, in JavaScript, using the array bracket syntax with a {{jsxref("String")}}, like `collection["value"]` is equivalent to `collection.namedItem("value")`.
 
 ## Specifications
 

@@ -100,7 +100,7 @@ The links in this section lead to detailed guides explaining how to do a particu
           >active forums</a
         >
         where people go to ask for general help, or request that their
-        assessments be marked. We’d love some help with answering posts and
+        assessments be marked. We'd love some help with answering posts and
         growing our learning community.
       </td>
       <td>

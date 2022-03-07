@@ -28,11 +28,6 @@ _Also inherits properties from its parent interface, {{domxref("BaseAudioContext
 - {{domxref('OfflineAudioContext.length')}} {{readonlyinline}}
   - : An integer representing the size of the buffer in sample-frames.
 
-### Event handlers
-
-- {{domxref("OfflineAudioContext.oncomplete")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) called when processing is terminated, that is when the {{event("complete")}} event (of type {{domxref("OfflineAudioCompletionEvent")}}) is raised, after the event-based version of {{domxref("OfflineAudioContext.startRendering()")}} is used.
-
 ## Methods
 
 _Also inherits methods from its parent interface, {{domxref("BaseAudioContext")}}._
@@ -47,7 +42,7 @@ _Also inherits methods from its parent interface, {{domxref("BaseAudioContext")}
 - {{domxref("OfflineAudioContext.resume()")}}
   - : Resumes the progression of time in an audio context that has previously been suspended.
 
-> **Note:** The `resume()` method is still available — it is now defined on the {{domxref("BaseAudioContext")}} interface (see {{domxref("AudioContext.resume")}}) and thus can be accessed by both the {{domxref("AudioContext")}} and {{domxref("OfflineAudioContext")}} interfaces.
+> **Note:** The `resume()` method is still available — it is now defined on the {{domxref("BaseAudioContext")}} interface (see {{domxref("AudioContext.resume")}}) and thus can be accessed by both the {{domxref("AudioContext")}} and {{domxref("OfflineAudioContext")}} interfaces.
 
 ## Events
 
@@ -55,7 +50,6 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - [`complete`](/en-US/docs/Web/API/OfflineAudioContext/complete_event)
   - : Fired when the rendering of an offline audio context is complete.
-    Also available using the [`oncomplete`](/en-US/docs/Web/API/OfflineAudioContext/oncomplete) event handler property.
 
 ## Examples
 

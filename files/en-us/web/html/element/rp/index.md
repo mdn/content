@@ -100,6 +100,22 @@ The result looks like this in your browser:
 
 See the article about the {{HTMLElement("ruby")}} element for further examples.
 
+### Without ruby support
+
+If your browser does not support ruby annotations, the result looks like this instead:
+
+```html hidden
+漢 (Kan) 字 (ji)
+```
+
+```css hidden
+body {
+  font-size: 22px;
+}
+```
+
+{{EmbedLiveSample("Without_ruby_support", 600, 60)}}
+
 ## Specifications
 
 {{Specifications}}

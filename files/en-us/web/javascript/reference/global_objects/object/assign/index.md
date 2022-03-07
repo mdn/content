@@ -29,7 +29,7 @@ Object.assign(target, ...sources)
 ### Parameters
 
 - `target`
-  - : The target object — what to apply the sources’ properties to, which is returned
+  - : The target object — what to apply the sources' properties to, which is returned
     after it is modified.
 - `sources`
   - : The source object(s) — objects containing the properties you want to apply.
@@ -77,7 +77,7 @@ console.log(copy); // { a: 1 }
 
 ### Warning for Deep Clone
 
-For deep cloning, we need to use alternatives, because `Object.assign()`
+For [deep cloning](/en-us/docs/Glossary/Deep_copy), we need to use alternatives, because `Object.assign()`
 copies property values.
 
 If the source value is a reference to an object, it only copies the reference value.
@@ -223,7 +223,7 @@ function completeAssign(target, ...sources) {
       return descriptors;
     }, {});
 
-    // By default, Object.assign copies enumerable Symbols, too
+    // By default, Object.assign copies enumerable Symbols, too
     Object.getOwnPropertySymbols(source).forEach(sym => {
       let descriptor = Object.getOwnPropertyDescriptor(source, sym);
       if (descriptor.enumerable) {
@@ -250,7 +250,7 @@ console.log(copy);
 
 ## See also
 
-- A polyfill of `Object.assign` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Polyfill of `Object.assign` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.defineProperties()")}}
 - [Enumerability
   and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)

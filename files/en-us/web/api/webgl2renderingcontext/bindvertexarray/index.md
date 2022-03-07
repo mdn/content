@@ -13,7 +13,7 @@ browser-compat: api.WebGL2RenderingContext.bindVertexArray
 
 The **`WebGL2RenderingContext.bindVertexArray()`** method of
 the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) binds a
-passed {{domxref("WebGLVertexArrayObject")}} object to the buffer.
+passed {{domxref("WebGLVertexArrayObject")}} object to the buffer.
 
 ## Syntax
 

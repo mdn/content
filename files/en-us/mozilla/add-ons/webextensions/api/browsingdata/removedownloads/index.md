@@ -16,7 +16,7 @@ browser-compat: webextensions.api.browsingData.removeDownloads
 
 Clears the browser's download history. Note that this does not delete the downloaded objects themselves, only records of downloads in the browser's history.
 
-You can use the `removalOptions` parameter, which is a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, to:
+You can use the `removalOptions` parameter, which is a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, to:
 
 - clear records of items downloaded after a given time
 - control whether to clear only records of items downloaded from normal web pages or to clear records from hosted apps and extensions as well.

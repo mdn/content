@@ -26,7 +26,7 @@ var domHighResTimeStamp = RTCRtpContributingSource.timestamp
 
 ### Value
 
-A {{domxref("DOMHighResTimeStamp")}} which indicates the time at which the most recent
+A {{domxref("DOMHighResTimeStamp")}} which indicates the time at which the most recent
 RTP packet from the corresponding source was played out.
 
 ## Specifications

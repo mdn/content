@@ -40,7 +40,7 @@ var AudioParam = AudioParam.exponentialRampToValueAtTime(value, endTime)
 
 ### Returns
 
-A reference to this `AudioParam` object. In some browsers older
+A reference to this `AudioParam` object. In some browsers older
 implementations of this interface return {{jsxref('undefined')}}.
 
 ## Examples
@@ -81,11 +81,11 @@ gainNode.connect(audioCtx.destination);
 
 // set buttons to do something onclick
 expRampPlus.onclick = function() {
-  gainNode.gain.exponentialRampToValueAtTime(1.0, audioCtx.currentTime + 2);
+  gainNode.gain.exponentialRampToValueAtTime(1.0, audioCtx.currentTime + 2);
 }
 
 expRampMinus.onclick = function() {
-  gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 2);
+  gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 2);
 }
 ```
 

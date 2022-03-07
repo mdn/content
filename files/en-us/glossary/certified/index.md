@@ -9,7 +9,7 @@ tags:
   - Security
   - Trustworthy
 ---
-**Certified** means that an application, content or data transmission has successfully undergone evaluation by professionals with expertise in the relevant field, thereby indicating completeness, security and trustworthiness.
+**Certified** means that an application, content or data transmission has successfully undergone evaluation by professionals with expertise in the relevant field, thereby indicating completeness, security and trustworthiness.
 
 For details on certification in {{glossary("Cryptography")}}, please refer to {{glossary("Digital Certificate")}}.
 

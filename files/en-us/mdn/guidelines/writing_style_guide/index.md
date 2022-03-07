@@ -276,7 +276,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 Use the {{HTMLElement("code")}} tags to mark up function names, variable names, and method names.
 For example: "the `frenchText()` function".
 
-**Method names should be followed by a pair of parentheses.** For example, `doSomethingUseful()`.
+**Method names should be followed by a pair of parentheses.** For example, `doSomethingUseful()`.
 The parentheses help differentiate methods from other code terms.
 
 #### Syntax highlighting
@@ -383,9 +383,9 @@ Use standard English capitalization rules in body text, and capitalize "World Wi
 
 Keyboard keys should use sentence-style capitalization, not all-caps capitalization.
 For example, "<kbd>Enter</kbd>" not "<kbd>ENTER</kbd>".
-The only exception is that you can use "<kbd>ESC</kbd>" to abbreviate the "<kbd>Escape</kbd>" key.
+The only exception is that you can use "<kbd>ESC</kbd>" to abbreviate the "<kbd>Escape</kbd>" key.
 
-Certain words should always be capitalized (such as trademarks which include capital letters), or words derived from the name of a person (unless it's being used within code, and code’s syntax requires lower-casing).
+Certain words should always be capitalized (such as trademarks which include capital letters), or words derived from the name of a person (unless it's being used within code, and code's syntax requires lower-casing).
 Some examples:
 
 - Boolean (named for English mathematician and logician {{interwiki("wikipedia", "George Boole")}})
@@ -513,7 +513,7 @@ There are a couple of reasons for this.
 2. If curly quotes or apostrophes make their way into code snippets—even inline ones—readers may copy and paste them, expecting them to function (which they will not).
 
 - **Correct**: Please don't use "curly quotes."
-- **Incorrect**: Please don’t use “curly quotes.”
+- **Incorrect**: Please don't use “curly quotes.”
 
 ### Spelling
 
@@ -560,7 +560,7 @@ Try to be consistent, though.
 
 ### Preferred style guides
 
-If you have questions about usage and style not covered here, we recommend referring to the [Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/)—or, failing that, the [Chicago Manual of Style](https://www.amazon.com/Chicago-Manual-Style-16th/dp/0226104206).
+If you have questions about usage and style not covered here, we recommend referring to the [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/)—or, failing that, the [Chicago Manual of Style](https://www.amazon.com/Chicago-Manual-Style-16th/dp/0226104206).
 An [unofficial crib sheet for the Chicago Manual of Style](https://faculty.cascadia.edu/cma/HIST148/cmscrib.pdf) is available online.
 
 ### Preferred dictionary

@@ -11,7 +11,7 @@ browser-compat: javascript.operators.await
 ---
 {{jsSidebar("Operators")}}
 
-The `await` operator is used to wait for a {{jsxref("Promise")}}. It can only be used inside an {{jsxref("Statements/async_function", "async function")}} within regular JavaScript code; however it can be used on its own with [JavaScript modules.](/en-US/docs/Web/JavaScript/Guide/Modules)
+The `await` operator is used to wait for a {{jsxref("Promise")}}. It can only be used inside an {{jsxref("Statements/async_function", "async function")}} within regular JavaScript code; however it can be used on its own with [JavaScript modules.](/en-US/docs/Web/JavaScript/Guide/Modules)
 
 ## Syntax
 
@@ -27,21 +27,21 @@ The `await` operator is used to wait for a {{jsxref("Promise")}}. It can only be
 
 ## Description
 
-The `await` expression causes `async` function execution to pause
-until a `Promise` is settled (that is, fulfilled or rejected), and to resume
+The `await` expression causes `async` function execution to pause
+until a `Promise` is settled (that is, fulfilled or rejected), and to resume
 execution of the `async` function after fulfillment. When resumed, the value
-of the `await` expression is that of the fulfilled `Promise`.
+of the `await` expression is that of the fulfilled `Promise`.
 
 If the `Promise` is rejected, the `await` expression throws the
 rejected value.
 
 If the value of the _expression_ following the `await` operator is
-not a `Promise`, it's converted to a [resolved
+not a `Promise`, it's converted to a [resolved
 Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve).
 
 An `await` splits execution flow, allowing the caller of the async function
 to resume execution. After the `await` defers the continuation of the async
-function, execution of subsequent statements ensues. If this `await` is the
+function, execution of subsequent statements ensues. If this `await` is the
 last expression executed by its function, execution continues by returning to the
 function's caller a pending `Promise` for completion of the
 `await`'s function and resuming execution of that caller.
@@ -77,11 +77,11 @@ the same.
 
 ```js
 async function f2() {
-  const thenable = {
-    then: function(resolve, _reject) {
-      resolve('resolved!')
+  const thenable = {
+    then: function(resolve, _reject) {
+      resolve('resolved!')
     }
-  };
+  };
   console.log(await thenable); // resolved!
 }
 

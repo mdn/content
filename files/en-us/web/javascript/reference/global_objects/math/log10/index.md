@@ -103,7 +103,7 @@ Math.log10 = Math.log10 || function(x) {
 
 ## See also
 
-- A polyfill of `Math.log10` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [Polyfill of `Math.log10` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math.exp()")}}
 - {{jsxref("Math.log()")}}
 - {{jsxref("Math.log1p()")}}

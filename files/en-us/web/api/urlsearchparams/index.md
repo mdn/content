@@ -158,6 +158,6 @@ noEquals.toString() // 'foo=&bar=baz'
 
 ## See also
 
-- A polyfill of `URLSearchParams` is available in [`core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
+- [Polyfill of `URLSearchParams` in `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
 - The {{domxref("URL")}} interface.
 - [Google Developers: Easy URL manipulation with URLSearchParams](https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en)

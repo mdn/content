@@ -88,6 +88,6 @@ Object.preventExtensions(1)
 
 ## See also
 
-- A polyfill of `Reflect.preventExtensions` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [Polyfill of `Reflect.preventExtensions` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
 - {{jsxref("Object.isExtensible()")}}

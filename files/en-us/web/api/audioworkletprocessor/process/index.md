@@ -142,7 +142,7 @@ The 3 most common types of audio node are:
 
 As the `process()` method is implemented by the user, it can throw anything.
 If an uncaught error is thrown, the node will emit an
-{{domxref("AudioWorkletNode.onprocessorerror", "onprocessorerror")}} event and will
+{{domxref("AudioWorkletNode.processorerror_event", "processorerror")}} event and will
 output silence for the rest of its lifetime.
 
 ## Examples

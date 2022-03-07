@@ -39,7 +39,7 @@ flex-basis: max-content;
 flex-basis: min-content;
 flex-basis: fit-content;
 
-/* Automatically size based on the flex item’s content */
+/* Automatically size based on the flex item's content */
 flex-basis: content;
 
 /* Global values */
@@ -57,7 +57,7 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
   - : An absolute {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}} of the parent flex container's main size property, or the keyword `auto`. Negative values are invalid. Defaults to `auto`.
 - `content`
 
-  - : Indicates automatic sizing, based on the flex item’s content.
+  - : Indicates automatic sizing, based on the flex item's content.
 
     > **Note:** This value was not present in the initial release of Flexible Box Layout, and thus some older implementations will not support it. The equivalent effect can be had by using `auto` together with a main size ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) or [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) of `auto`.
     >

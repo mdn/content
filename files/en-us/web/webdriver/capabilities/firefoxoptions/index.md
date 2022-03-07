@@ -143,7 +143,7 @@ channel, or the package name of the application embedding GeckoView, e.g. `org.m
 ##### `androidActivity` (string, optional)
 
 The fully qualified class name of the activity to be launched, e.g. `.GeckoViewActivity`. If not
-specified, the package’s default activity will be used.
+specified, the package's default activity will be used.
 
 ##### `androidDeviceSerial` (string, optional)
 
@@ -285,7 +285,7 @@ This runs the GeckoView example application as installed on the first Android em
 
 ## See also
 
-- [geckodriver’s
+- [geckodriver's
   documentation on supported Firefox capabilities](https://firefox-source-docs.mozilla.org/testing/geckodriver/geckodriver/Capabilities.html#capabilities-example)
 - [Chrome-specific WebDriver capabilities](https://chromedriver.chromium.org/capabilities)
   (`goog:chromeOptions)`

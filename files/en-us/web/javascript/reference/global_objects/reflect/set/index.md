@@ -87,7 +87,7 @@ Reflect.getOwnPropertyDescriptor(obj, 'undefined')
 
 ## See also
 
-- A polyfill of `Reflect.set` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [Polyfill of `Reflect.set` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
 - [Property
   accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)

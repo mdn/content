@@ -14,30 +14,30 @@ The **`opacity`** attribute specifies the transparency of an object or of a grou
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement("a")}}
-* {{SVGElement("audio")}}
-* {{SVGElement("canvas")}}
-* {{SVGElement("circle")}}
-* {{SVGElement("ellipse")}}
-* {{SVGElement("foreignObject")}}
-* {{SVGElement("g")}}
-* {{SVGElement("iframe")}}
-* {{SVGElement("image")}}
-* {{SVGElement("line")}}
-* {{SVGElement("marker")}}
-* {{SVGElement("path")}}
-* {{SVGElement("polygon")}}
-* {{SVGElement("polyline")}}
-* {{SVGElement("rect")}}
-* {{SVGElement("svg")}}
-* {{SVGElement("switch")}}
-* {{SVGElement("symbol")}}
-* {{SVGElement("text")}}
-* {{SVGElement("textPath")}}
-* {{SVGElement("tspan")}}
-* {{SVGElement("use")}}
-* {{SVGElement("unknown")}}
-* {{SVGElement("video")}}
+- {{SVGElement("a")}}
+- {{SVGElement("audio")}}
+- {{SVGElement("canvas")}}
+- {{SVGElement("circle")}}
+- {{SVGElement("ellipse")}}
+- {{SVGElement("foreignObject")}}
+- {{SVGElement("g")}}
+- {{SVGElement("iframe")}}
+- {{SVGElement("image")}}
+- {{SVGElement("line")}}
+- {{SVGElement("marker")}}
+- {{SVGElement("path")}}
+- {{SVGElement("polygon")}}
+- {{SVGElement("polyline")}}
+- {{SVGElement("rect")}}
+- {{SVGElement("svg")}}
+- {{SVGElement("switch")}}
+- {{SVGElement("symbol")}}
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tspan")}}
+- {{SVGElement("use")}}
+- {{SVGElement("unknown")}}
+- {{SVGElement("video")}}
 
 ## Example
 
@@ -82,8 +82,8 @@ html, body, svg {
   </tbody>
 </table>
 
-* `<alpha-value>`
-    * : The uniform opacity setting to be applied across an entire object, as a {{cssxref("number")}}. Any values outside the range 0.0 (fully transparent) to 1.0 (fully opaque) will be clamped to this range.
+- `<alpha-value>`
+  - : The uniform opacity setting to be applied across an entire object, as a {{cssxref("number")}}. Any values outside the range 0.0 (fully transparent) to 1.0 (fully opaque) will be clamped to this range.
 
 ## Specifications
 
@@ -136,4 +136,4 @@ html, body, svg {
 
 ## See also
 
-* {{cssxref("opacity", "CSS opacity")}}
+- {{cssxref("opacity", "CSS opacity")}}

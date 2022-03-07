@@ -128,7 +128,7 @@ There is a difference between recursive `setTimeout()` and `setInterval()`:
 - Recursive `setTimeout()` guarantees at least the specified amount of time (100ms in this example) will elapse between the executions; the code will run and then wait 100 milliseconds before it runs again. The interval will be the same regardless of how long the code takes to run.
 - With `setInterval()`, the interval we choose _includes_ the time taken to execute the code we want to run in. Let's say that the code takes 40 milliseconds to run — the interval then ends up being only 60 milliseconds.
 
-When your code has the potential to take longer to run than the time interval you’ve assigned, it’s better to use recursive `setTimeout()` — this will keep the time interval constant between executions regardless of how long the code takes to execute, and you won't get errors.
+When your code has the potential to take longer to run than the time interval you've assigned, it's better to use recursive `setTimeout()` — this will keep the time interval constant between executions regardless of how long the code takes to execute, and you won't get errors.
 
 ### Browser compatibility
 
@@ -436,7 +436,7 @@ myFetch()
 ### Pitfalls
 
 - You can't use the `await` operator inside a non-`async` function, or in the top level context of your code. This can sometimes result in an extra function wrapper needing to be created, which can be slightly frustrating in some circumstances, but it is worth it most of the time.
-- Browser support for async/await is not as good as that for promises. If you want to use async/await but are concerned about older browser support, you could consider using the [BabelJS](https://babeljs.io/) library — this allows you to write your applications using the latest JavaScript and let Babel figure out what changes, if any, are needed for your user’s browsers.
+- Browser support for async/await is not as good as that for promises. If you want to use async/await but are concerned about older browser support, you could consider using the [BabelJS](https://babeljs.io/) library — this allows you to write your applications using the latest JavaScript and let Babel figure out what changes, if any, are needed for your user's browsers.
 
 ### Browser compatibility
 

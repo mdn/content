@@ -60,7 +60,7 @@ See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "How
 You can check the setting selected by the user agent after the display media has been
 created by {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} by calling
 {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} on the display media's
-video {{domxref("MediaStreamTrack")}}, then checking the value of  the returned
+video {{domxref("MediaStreamTrack")}}, then checking the value of  the returned
 {{domxref("MediaTrackSettings")}} object's
 {{domxref("MediaTrackSettings.logicalSurface", "logicalSurface")}} object.
 
@@ -71,7 +71,7 @@ one:
 let isLogicalSurface = displayStream.getVideoTracks()[0].getSettings().logicalSurface;
 ```
 
-Following this code, `isLogicalSurface`  is `true` if the display
+Following this code, `isLogicalSurface`  is `true` if the display
 surface contained in the stream is a logical surface; that is, one which may not be
 entirely onscreen, or may even be entirely offscreen.
 

@@ -46,32 +46,32 @@ This section lists some types of HTTP requests which are considered active conte
 - {{domxref("fetch()")}} requests
 - All cases in CSS where a {{cssxref("url()")}} value is used ({{cssxref("@font-face")}}, {{cssxref("cursor")}}, {{cssxref("background-image")}}, and so forth).
 - {{HTMLElement("object")}} (`data` attribute)
-- {{domxref("Navigator.sendBeacon")}} (`url` attribute)
+- {{domxref("Navigator.sendBeacon")}} (`url` attribute)
 
 Other resource types like web fonts and workers may be considered active mixed content, as they are in Chrome.
 
 ## Loading mixed-content resources
 
-Most browsers prevent *mixed active content* from loading, and some also block *mixed display content*.
+Most browsers prevent *mixed active content* from loading, and some also block *mixed display content*.
 
 ### Loading locally delivered mixed-resources
 
-Browsers _may_ allow locally-delivered mixed resources to be loaded. This includes `file:` URLs and content accessed from loopback addresses (e.g. `http://127.0.0.1/`).
+Browsers _may_ allow locally-delivered mixed resources to be loaded. This includes `file:` URLs and content accessed from loopback addresses (e.g. `http://127.0.0.1/`).
 
-- Firefox 55 and later allow loading of mixed content on the loopback address `http://127.0.0.1/` (see {{bug(903966)}}),
-- Firefox 84 and later allow loading of mixed content on `http://localhost/` and `http://*.localhost/` URLs, as these are now mapped to loopback addresses (see {{bug(1220810)}}).
+- Firefox 55 and later allow loading of mixed content on the loopback address `http://127.0.0.1/` (see {{bug(903966)}}),
+- Firefox 84 and later allow loading of mixed content on `http://localhost/` and `http://*.localhost/` URLs, as these are now mapped to loopback addresses (see {{bug(1220810)}}).
 - Chrome also allows mixed content on `http://127.0.0.1/` and `http://localhost/`.
 - Safari does not allow any mixed content.
 
 ### Upgrading mixed-display resources
 
-Browsers may support automatic upgrade of requests for display/media content from HTTP to HTTPS on secure pages (this prevents mixed-content conditions in which some content is loaded securely while other content is insecure).
+Browsers may support automatic upgrade of requests for display/media content from HTTP to HTTPS on secure pages (this prevents mixed-content conditions in which some content is loaded securely while other content is insecure).
 
-Firefox supports this functionality as an experimental feature. It can be enabled using the preference `security.mixed_content.upgrade_display_content`).
+Firefox supports this functionality as an experimental feature. It can be enabled using the preference `security.mixed_content.upgrade_display_content`).
 
 - If the upgrade fails (because the media's host doesn't support HTTPS), the media is not loaded.
 - Console warnings indicate when content has been successfully upgraded.
-- For more information see [Experimental features in Firefox > Upgrading mixed display content](/en-US/docs/Mozilla/Firefox/Experimental_features#upgrading_mixed_display_content).
+- For more information see [Experimental features in Firefox > Upgrading mixed display content](/en-US/docs/Mozilla/Firefox/Experimental_features#upgrading_mixed_display_content).
 
 ## Warnings in Firefox Web Console
 
@@ -87,7 +87,7 @@ Starting in Firefox 23, mixed active content is blocked by default (and mixed di
 
 To fix this type of error, all requests to HTTP content should be removed and replaced with content served over HTTPS. Some common examples of mixed content include JavaScript files, stylesheets, images, videos, and other media.
 
-> **Note:** The console will display a message indicating if mixed-display content is being successfully [upgraded from HTTP to HTTPS](#upgrading_mixed-display_resources)  (instead of a warning about "Loading mixed (insecure) display content").
+> **Note:** The console will display a message indicating if mixed-display content is being successfully [upgraded from HTTP to HTTPS](#upgrading_mixed-display_resources)  (instead of a warning about "Loading mixed (insecure) display content").
 
 ## See also
 

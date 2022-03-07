@@ -7,6 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-fonts/
 ---
 {{CSSRef}}
 
@@ -82,13 +83,8 @@ You can find a number of variable fonts examples at [v-fonts.com](https://v-font
 - [OpenType font features guide](/en-US/docs/Web/CSS/CSS_Fonts/OpenType_fonts_guide)
   - : Font features or variants refer to different glyphs or character styles contained within an OpenType font. These include things like ligatures (special glyphs that combine characters like 'fi' or 'ffl'), kerning (adjustments to the spacing between specific letterform pairings), fractions, numeral styles, and a number of others. These are all referred to as OpenType Features, and are made available to use on the web via specific properties and a low-level control property — {{cssxref("font-feature-settings")}}. This article provides you with all you need to know about using OpenType font features in CSS.
 - [Variable fonts guide](/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
-  - : **Variable fonts** are an evolution of the OpenType font specification that enables many different variations of a typeface to be incorporated into a single file, rather than having a separate font file for every width, weight, or style. This article will give you all you need to know to get you started using variable fonts.
+  - : **Variable fonts** are an evolution of the OpenType font specification that enables many different variations of a typeface to be incorporated into a single file, rather than having a separate font file for every width, weight, or style. This article will give you all you need to know to get you started using variable fonts.
 
 ## Specifications
 
-| Specification                                                            | Status                           | Comment                                                                                         |
-| ------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Fonts')}}                                     | {{Spec2('CSS4 Fonts')}} | Adds `font-variation-settings` (and related higher-level properties) and `font-optical-sizing`. |
-| {{SpecName('CSS3 Fonts')}}                                     | {{Spec2('CSS3 Fonts')}} | Adds `font-feature-settings` (and related higher-level properties)                              |
-| {{SpecName('CSS2.1', 'fonts.html#font-shorthand', '')}} | {{Spec2('CSS2.1')}}         |                                                                                                 |
-| {{SpecName('CSS1', '#font', '')}}                             | {{Spec2('CSS1')}}         | Initial definition                                                                              |
+{{Specifications}}

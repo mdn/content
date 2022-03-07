@@ -65,7 +65,7 @@ The `line-height` property is specified as any one of the following:
 
 ## Accessibility concerns
 
-Use a minimum value of `1.5` for `line-height` for main paragraph content. This will help people experiencing low vision conditions, as well as people with cognitive concerns such as Dyslexia. If the page is zoomed to increase the text size, using a unitless value ensures that the line height will scale proportionately.
+Use a minimum value of `1.5` for `line-height` for main paragraph content. This will help people experiencing low vision conditions, as well as people with cognitive concerns such as Dyslexia. If the page is zoomed to increase the text size, using a unitless value ensures that the line height will scale proportionately.
 
 [W3C Understanding WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
 

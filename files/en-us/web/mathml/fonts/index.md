@@ -108,7 +108,7 @@ Currently, very few fonts have appropriate glyphs for the Arabic Mathematical Al
 
 ### Installation without Administrator Privilege
 
-If you need to install fonts on a system without adminstrator privilege, the easiest option is to use math font the [MathML-fonts add-on](https://addons.mozilla.org/firefox/addon/mathml-fonts/). Note that using the add-on is not optimal since it forces your Gecko browser to load a CSS stylesheet on each page you visit as well as Web math fonts on all pages with MathML content. A better alternative on UNIX systems is to install the OTF files for [Latin Modern Math](http://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip) and [STIX](https://github.com/stipub/stixfonts) into some local font folder and (if necessary) to run `fc-cache` on it. On OS X and Linux, the standard paths are `~/Library/Fonts/` and `~/.fonts`.
+If you need to install fonts on a system without administrator privilege, the easiest option is to use math font the [MathML-fonts add-on](https://addons.mozilla.org/firefox/addon/mathml-fonts/). Note that using the add-on is not optimal since it forces your Gecko browser to load a CSS stylesheet on each page you visit as well as Web math fonts on all pages with MathML content. A better alternative on UNIX systems is to install the OTF files for [Latin Modern Math](http://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip) and [STIX](https://github.com/stipub/stixfonts) into some local font folder and (if necessary) to run `fc-cache` on it. On OS X and Linux, the standard paths are `~/Library/Fonts/` and `~/.fonts`.
 
 ### Fonts with a MATH table
 

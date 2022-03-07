@@ -62,7 +62,7 @@ The `nth-last-child` pseudo-class is specified with a single argument, which rep
 - `:nth-last-child(-n+3)`
   - : Represents the last three elements among a group of siblings.
 - `p:nth-last-child(n)` or `p:nth-last-child(n+1)`
-  - : Represents every `<p>` element among a group of siblings. This is the same as a simple `p` selector. (Since `n` starts at zero, while the last element begins at one, `n` and `n+1` will both select the same elements.)
+  - : Represents every `<p>` element among a group of siblings. This is the same as a simple `p` selector. (Since `n` starts at zero, while the last element begins at one, `n` and `n+1` will both select the same elements.)
 - `p:nth-last-child(1)` or `p:nth-last-child(0n+1)`
   - : Represents every `<p>` that is the first element among a group of siblings, counting from the end. This is the same as the {{cssxref(":last-child")}} selector.
 
@@ -106,12 +106,12 @@ tr:nth-last-child(-n+3) {
 
 /* Selects every element starting from the second to last item */
 tr:nth-last-child(n+2) {
-  color: blue;
+  color: blue;
 }
 
 /* Select only the last second element */
 tr:nth-last-child(2) {
-  font-weight: 600;
+  font-weight: 600;
 }
 ```
 

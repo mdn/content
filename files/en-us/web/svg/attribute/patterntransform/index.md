@@ -12,7 +12,7 @@ The **`patternTransform`** attribute defines a list of [transform definitions](/
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement('pattern')}}
+- {{SVGElement('pattern')}}
 
 ## Example
 

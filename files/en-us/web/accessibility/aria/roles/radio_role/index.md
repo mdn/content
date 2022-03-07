@@ -72,6 +72,28 @@ As `radio` is an interactive control; it must be focusable and keyboard accessib
 
 If any of the radio roles in a group has `aria-required="true"` set, it is as if all of the radios in the group had the attribute making the selection of one of the radios in the radiogroup being required to be valid;  though not necessarily the one that has the [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required) attribute set.
 
+### All descendants are presentational
+
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `radio`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `radio` element as it is a role that does not support semantic children.
+
+For example, consider the following `radio` element, which contains a heading.
+
+```html
+<div role="radio"><h6>name of my radio</h6></li>
+```
+
+Because descendants of `radio` are presentational, the following code is equivalent:
+
+```html
+<div role="radio"><h6 role="presentation">name of my radio</h6></li>
+````
+
+From the assistive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
+
+```html
+<div role="radio">name of my radio</div>
+```
+
 ## Associated WAI-ARIA Roles, States, and Properties
 
 - ['radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role) role
@@ -91,17 +113,17 @@ If any of the radio roles in a group has `aria-required="true"` set, it is as if
 
 ## Keyboard interactions
 
-  - <kbd>Tab</kbd> + <kbd>Shift</kbd>
-    - : Move focus into and out of the radio group. When focus moves into a radio group. If a radio button is checked, focus is set on the checked button. If none of the radio buttons are checked, focus is set on the first radio button in the group.
+- <kbd>Tab</kbd> + <kbd>Shift</kbd>
+  - : Move focus into and out of the radio group. When focus moves into a radio group. If a radio button is checked, focus is set on the checked button. If none of the radio buttons are checked, focus is set on the first radio button in the group.
 
-| - <kbd>Space</kbd>
-    - : Checks the radio if not already checked. Unchecks all the others in the radiogroup. |
+- <kbd>Space</kbd>
+  - : Checks the radio if not already checked. Unchecks all the others in the radiogroup. |
 
-  - <kbd>Right Arrow</kbd> and <kbd>Down Arrow</kbd>
-    - : Move focus to the next radio button in the group, unchecking the previously focused button, and checking the newly focused button. If focus is on the last button, focus moves to the first button.
+- <kbd>Right Arrow</kbd> and <kbd>Down Arrow</kbd>
+  - : Move focus to the next radio button in the group, unchecking the previously focused button, and checking the newly focused button. If focus is on the last button, focus moves to the first button.
 
-  - <kbd>Left Arrow</kbd> and <kbd>Up Arrow</kbd>
-    - : Move focus to the previous radio button in the group, unchecking the previously focused button, and checking the newly focused button. If focus is on the first button, focus moves to the last button.
+- <kbd>Left Arrow</kbd> and <kbd>Up Arrow</kbd>
+  - : Move focus to the previous radio button in the group, unchecking the previously focused button, and checking the newly focused button. If focus is on the first button, focus moves to the last button.
 
 ### Radios in a toolbar
 
@@ -127,11 +149,11 @@ The following example creates an otherwise non-semantic radio element using CSS 
   <p id="legend">Should you be using the <code>radio</code> role or <code>&lt;input type="radio"><code>?</p>
   <ul>
     <li>
-      <span role="radio" aria-checked="ARIA" tabindex="0" aria-labelledby="ariaLabel" data-value="True"></span>
+      <span role="radio" aria-checked="true" tabindex="0" aria-labelledby="ariaLabel" data-value="True"></span>
       <label id="ariaLabel">ARIA role</label>
     </li>
     <li>
-      <span role="radio" aria-checked="HTML" tabindex="0" aria-labelledby="htmllabel" data-value="False"></span>
+      <span role="radio" aria-checked="false" tabindex="0" aria-labelledby="htmllabel" data-value="False"></span>
       <label id="htmllabel">HTML <code>&lt;input type="radio"><code></label>
     </li>
   </ul>

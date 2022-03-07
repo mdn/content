@@ -100,13 +100,13 @@ returns {{jsxref("undefined")}} if there is no prime number).
 
 ```js
 function isPrime(element, index, array) {
-  var start = 2;
-  while (start <= Math.sqrt(element)) {
-    if (element % start++ < 1) {
-      return false;
-    }
-  }
-  return element > 1;
+  var start = 2;
+  while (start <= Math.sqrt(element)) {
+    if (element % start++ < 1) {
+      return false;
+    }
+  }
+  return element > 1;
 }
 
 var uint8 = new Uint8Array([4, 5, 8, 12]);
@@ -123,6 +123,6 @@ console.log(uint8.find(isPrime)); // 5
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.find` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.find` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray.prototype.findIndex()")}}
 - {{jsxref("TypedArray.prototype.every()")}}

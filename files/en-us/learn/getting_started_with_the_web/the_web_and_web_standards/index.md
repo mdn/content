@@ -124,7 +124,7 @@ Once you've learned the "raw" technologies that can be used to build web pages (
 - The [developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) inside modern browsers that can be used to debug your code.
 - [Testing tools](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) that can be used to run tests to show whether your code is behaving as you intended it to.
 - Libraries and frameworks built on top of JavaScript that allow you to build certain types of web site much more quickly and effectively.
-- So-called "Linters", which take a set of rules, look at your code, and highlight places where you haven't followed the rules properly.
+- So-called "Linters", which take a set of rules, look at your code, and highlight places where you haven't followed the rules properly.
 - Minifiers, which remove all the whitespace from your code files to make it so that they are smaller and therefore download from the server more quickly.
 
 ### Server-side languages and frameworks

@@ -48,7 +48,7 @@ The most basic supports condition is a simple declaration (a property name follo
 
 The second basic supports condition is a supports function, the syntax for these is supported by all browsers, but the functions themselves are still being standardized.
 
-#### `selector()` {{Experimental_Inline}}
+#### `selector()` {{Experimental_Inline}}
 
 Tests if the browser supports the tested selector syntax. The following example returns true if the browser supports the [child combinator](/en-US/docs/Web/CSS/Child_combinator):
 
@@ -146,9 +146,9 @@ Multiple disjunctions can be juxtaposed without the need of more parentheses. Th
 
 ```css
 @supports (--foo: green) {
-  body {
-    color: var(--varName);
-  }
+  body {
+    color: var(--varName);
+  }
 }
 ```
 
@@ -176,9 +176,9 @@ The CSS Conditional Rules Level 4 specification adds the ability to test for sup
      it will be partially applied in browsers which don't support
      the `of` argument of :nth-child(…) */
   :is(
-      :nth-child(1n of ul, ol) a,
+      :nth-child(1n of ul, ol) a,
       details > summary
-  ) {
+  ) {
     … /* CSS applied when the :is(…) selector and
          the `of` argument of :nth-child(…) are both supported */
   }

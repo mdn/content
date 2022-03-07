@@ -12,7 +12,7 @@ browser-compat: css.properties.scrollbar-width
 ---
 {{CSSRef}}
 
-The **`scrollbar-width`** property allows the author to set the maximum thickness of an element’s scrollbars when they are shown.
+The **`scrollbar-width`** property allows the author to set the maximum thickness of an element's scrollbars when they are shown.
 
 {{EmbedInteractiveExample("pages/css/scrollbar-width.html")}}
 

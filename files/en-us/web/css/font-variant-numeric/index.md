@@ -51,7 +51,7 @@ This property can take one of two forms:
   - : This keyword forces the use of a 0 with a slash; this is useful when a clear distinction between O and 0 is needed. It corresponds to the OpenType values `zero`.
 - _\<numeric-figure-values_>
 
-  - : These values control the figures used for numbers. Two values are possible:
+  - : These values control the figures used for numbers. Two values are possible:
 
     - `lining-nums` activating the set of figures where numbers are all lying on the baseline. It corresponds to the OpenType values `lnum`.
     - `oldstyle-nums` activating the set of figures where some numbers, like 3, 4, 7, 9 have descenders. It corresponds to the OpenType values `onum`.

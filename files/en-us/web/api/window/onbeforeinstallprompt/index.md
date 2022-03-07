@@ -14,7 +14,7 @@ browser-compat: api.Window.onbeforeinstallprompt
 {{APIRef}}
 
 The **`Window.onbeforeinstallprompt`** property is an event
-handler for processing a {{event("beforeinstallprompt")}}, which is dispatched on
+handler for processing a {{event("beforeinstallprompt")}}, which is dispatched on
 devices when a user is about to be prompted to "install" a web application. [Its associated event](../BeforeInstallPromptEvent) may be saved for later and
 used to prompt the user at a more suitable time.
 

@@ -23,12 +23,12 @@ var rule = styles.parentRule;
 
 ### Value
 
-The CSS rule that contains this declaration block or `null` if this
-{{domxref('CSSStyleDeclaration')}} is not attached to a {{domxref('CSSRule')}}.
+The CSS rule that contains this declaration block or `null` if this
+{{domxref('CSSStyleDeclaration')}} is not attached to a {{domxref('CSSRule')}}.
 
 ## Example
 
-The following JavaScript code gets the parent CSS style rule from a
+The following JavaScript code gets the parent CSS style rule from a
 {{domxref('CSSStyleDeclaration')}}:
 
 ```js

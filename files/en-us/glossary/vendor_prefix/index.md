@@ -5,7 +5,7 @@ tags:
   - CodingScripting
   - Glossary
 ---
-Browser vendors sometimes add prefixes to experimental or nonstandard CSS properties and JavaScript APIs, so developers can experiment with new ideas while—in theory—preventing their experiments from being relied upon and then breaking web developers' code during the standardization process. Developers should wait to include the unprefixed property until browser behavior is standardized.
+Browser vendors sometimes add prefixes to experimental or nonstandard CSS properties and JavaScript APIs, so developers can experiment with new ideas while—in theory—preventing their experiments from being relied upon and then breaking web developers' code during the standardization process. Developers should wait to include the unprefixed property until browser behavior is standardized.
 
 > **Note:** Browser vendors are working to stop using vendor prefixes for experimental features. Web developers have been using them on production Web sites, despite their experimental nature. This has made it more difficult for browser vendors to ensure compatibility and to work on new features; it's also been harmful to smaller browsers who wind up forced to add other browsers' prefixes in order to load popular web sites.
 >
@@ -17,7 +17,7 @@ The major browsers use the following prefixes:
 
 - `-webkit-` (Chrome, Safari, newer versions of Opera, almost all iOS browsers including Firefox for iOS; basically, any WebKit based browser)
 - `-moz-` (Firefox)
-- `-o-` (old pre-WebKit versions of Opera)
+- `-o-` (old pre-WebKit versions of Opera)
 - `-ms-` (Internet Explorer and Microsoft Edge)
 
 Sample usage:

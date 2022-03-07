@@ -14,14 +14,14 @@ The **`fill-rule`** attribute is a presentation attribute defining the algorithm
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement('altGlyph')}}
-* {{SVGElement('path')}}
-* {{SVGElement('polygon')}}
-* {{SVGElement('polyline')}}
-* {{SVGElement('text')}}
-* {{SVGElement('textPath')}}
-* {{SVGElement('tref')}}
-* {{SVGElement('tspan')}}
+- {{SVGElement('altGlyph')}}
+- {{SVGElement('path')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('text')}}
+- {{SVGElement('textPath')}}
+- {{SVGElement('tref')}}
+- {{SVGElement('tspan')}}
 
 ## Example
 
@@ -145,10 +145,6 @@ html,body,svg { height:100% }
 
 {{EmbedLiveSample('evenodd', '100%', 200)}}
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Specifications
 
 <table class="no-markdown">
@@ -176,3 +172,7 @@ html,body,svg { height:100% }
     </tr>
   </tbody>
 </table>
+
+## Browser compatibility
+
+{{Compat}}

@@ -35,9 +35,9 @@ The `@property` rule represents a custom property registration directly in a sty
 - {{cssxref("@property/initial-value","initial-value")}}
   - : Sets the initial value for the property.
 
-A valid `@property` rule represents a custom property registration, with the property name being the serialization of the in the rule’s prelude.
+A valid `@property` rule represents a custom property registration, with the property name being the serialization of the in the rule's prelude.
 
-`@property` rules require a {{cssxref("@property/syntax","syntax")}} and {{cssxref("@property/inherits","inherits")}} descriptor; if either are missing, the entire rule is invalid and must be ignored. The {{cssxref("@property/initial-value","initial-value")}} descriptor is optional only if the syntax is the <a href="https://drafts.css-houdini.org/css-properties-values-api/#universal-syntax-definition">universal syntax definition</a>, otherwise the descriptor is required; if it’s missing, the entire rule is invalid and must be ignored.
+`@property` rules require a {{cssxref("@property/syntax","syntax")}} and {{cssxref("@property/inherits","inherits")}} descriptor; if either are missing, the entire rule is invalid and must be ignored. The {{cssxref("@property/initial-value","initial-value")}} descriptor is optional only if the syntax is the <a href="https://drafts.css-houdini.org/css-properties-values-api/#universal-syntax-definition">universal syntax definition</a>, otherwise the descriptor is required; if it's missing, the entire rule is invalid and must be ignored.
 
 Unknown descriptors are invalid and ignored, but do not invalidate the `@property` rule.
 

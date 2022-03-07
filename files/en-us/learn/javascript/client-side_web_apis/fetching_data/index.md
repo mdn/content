@@ -140,7 +140,7 @@ This series of files will act as our fake database; in a real application, we'd 
     request.responseType = 'text';
     ```
 
-8. Fetching a resource from the network is an {{glossary("asynchronous")}} operation, meaning that you have to wait for that operation to complete (e.g., the resource is returned from the network) before you can do anything with that response, otherwise, an error will be thrown. XHR allows you to handle this using its {{domxref("XMLHttpRequest.onload", "onload")}} event handler — this is run when the {{event("load")}} event fires (when the response has returned). When this has occurred, the response data will be available in the `response` property of the XHR request object.
+8. Fetching a resource from the network is an {{glossary("asynchronous")}} operation, meaning that you have to wait for that operation to complete (e.g., the resource is returned from the network) before you can do anything with that response, otherwise, an error will be thrown. XHR allows you to handle this using its {{domxref("XMLHttpRequest.load_event", "load")}} event (when the response has returned). When this has occurred, the response data will be available in the `response` property of the XHR request object.
 
     Add the following below your last addition. You'll see that inside the `onload` event handler we are setting the [`textContent`](/en-US/docs/Web/API/Node/textContent) of the `poemDisplay` (the {{htmlelement("pre")}} element) to the value of the {{domxref("XMLHttpRequest.response", "request.response")}} property.
 

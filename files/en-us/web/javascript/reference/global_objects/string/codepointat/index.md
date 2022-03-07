@@ -110,7 +110,7 @@ if (!String.prototype.codePointAt) {
       // Get the first code unit
       var first = string.charCodeAt(index);
       var second;
-      if ( // check if it’s the start of a surrogate pair
+      if ( // check if it's the start of a surrogate pair
         first >= 0xD800 && first <= 0xDBFF && // high surrogate
         size > index + 1 // there is a next code unit
       ) {
@@ -145,7 +145,7 @@ if (!String.prototype.codePointAt) {
 
 ## See also
 
-- A polyfill of `String.prototype.codePointAt` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.codePointAt` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.fromCodePoint()")}}
 - {{jsxref("String.fromCharCode()")}}
 - {{jsxref("String.prototype.charCodeAt()")}}

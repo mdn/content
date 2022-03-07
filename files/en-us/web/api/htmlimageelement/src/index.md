@@ -49,7 +49,7 @@ image options for different display pixel densities, the URL specified by the
 
 Additionally, if you use `src` along with _both_
 {{domxref("HTMLImageElement.sizes", "sizes")}} (or the
-corresponding {{htmlattrxref("sizes", "img")}} content attribute) _and_
+corresponding {{htmlattrxref("sizes", "img")}} content attribute) _and_
 `srcset` in order to choose an image based on the viewport size, the
 `src` attribute is only used as a fallback for browsers that don't support
 `sizes` and `srcset`; otherwise, it's not used at all.
