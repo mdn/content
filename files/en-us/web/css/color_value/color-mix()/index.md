@@ -25,7 +25,7 @@ color-mix(in srgb, #34c9eb 20%, white);
 
 - Functional notation: `color-mix( in <colorspace> , [ <color> && <percentage>? ]#{2})`
 
-  - : `<colorspace>` is one of `srgb`, `hsl`, `hwb`, `xyz`, `lab`, `lch`. If no colorspace is specified the default is `lch`.
+  - : `<colorspace>` is one of `srgb`, `srgb-linear`, `lab`, `oklab`, `xyz`, `xyz-d50`, `xyz-d65`, `hsl`, `hwb`, `lch`, `oklch`. There is no default.
 
     `<color>` is any valid {{cssxref("color_value","color")}}.
 
