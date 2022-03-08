@@ -309,12 +309,16 @@ So `caches.match(event.request)` is great when there is a match in the service w
 Fortunately, service workers' promise-based structure makes it trivial to provide further options towards success. We could do this:
 
 ```js
+const cacheFirst = async (request) => {
+  const responseFromCache = await caches.match(request);
+  if (responseFromCache) {
+    return responseFromCache;
+  }
+  return fetch(request);
+};
+
 self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request).then((response) => {
-      return response || fetch(event.request);
-    })
-  );
+  event.respondWith(cacheFirst(event.request));
 });
 ```
 
@@ -323,42 +327,56 @@ If the resources aren't in the cache, they are requested from the network.
 If we were being really clever, we would not only request the resource from the network; we would also save it into the cache so that later requests for that resource could be retrieved offline too! This would mean that if extra images were added to the Star Wars gallery, our app could automatically grab them and cache them. The following would do the trick:
 
 ```js
+const putInCache = async response => {
+  const cache = await caches.open("v1");
+  await cache.put(request, response);
+}
+
+const cacheFirst = async (request) => {
+  const responseFromCache = await caches.match(request);
+  if (responseFromCache) {
+    return responseFromCache;
+  }
+  const responseFromNetwork = await fetch(request);
+  putInCache(responseFromNetwork.clone())
+  return responseFromNetwork;
+};
+
 self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request).then((resp) => {
-      return resp || fetch(event.request).then((response) => {
-        return caches.open('v1').then((cache) => {
-          cache.put(event.request, response.clone());
-          return response;
-        });
-      });
-    })
-  );
+  event.respondWith(cacheFirst(event.request));
 });
 ```
 
-Here we return the default network request with `return fetch(event.request)`, which returns a promise. When this promise is resolved, we respond by running a function that grabs our cache using `caches.open('v1')`; this also returns a promise. When that promise resolves, `cache.put()` is used to add the resource to the cache. The resource is grabbed from `event.request`, and the response is then cloned with `response.clone()` and added to the cache. The clone is put in the cache, and the original response is returned to the browser to be given to the page that called it.
+Here we return the default network request with `return fetch(request)`, which returns a promise. When this promise is resolved, we respond by running a function that grabs our cache using `caches.open('v1')`; this also returns a promise. When that promise resolves, `cache.put()` is used to add the resource to the cache. The resource is grabbed from `request`, and the response is then cloned with `responseFromNetwork.clone()` and added to the cache. The clone is put in the cache, and the original response is returned to the browser to be given to the page that called it.
 
 Cloning the response is necessary because request and response streams can only be read once.  In order to return the response to the browser and put it in the cache we have to clone it. So the original gets returned to the browser and the clone gets sent to the cache.  They are each read once.
 
 The only trouble we have now is that if the request doesn't match anything in the cache, and the network is not available, our request will still fail. Let's provide a default fallback so that whatever happens, the user will at least get something:
 
 ```js
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request).then((resp) => {
-      return resp || fetch(event.request).then((response) => {
-        let responseClone = response.clone();
-        caches.open('v1').then((cache) => {
-          cache.put(event.request, responseClone);
-        });
 
-        return response;
-      }).catch(() => {
-        return caches.match('./sw-test/gallery/myLittleVader.jpg');
-      })
-    })
-  );
+const putInCache = async response => {
+  const cache = await caches.open("v1");
+  await cache.put(request, response);
+}
+
+const cacheFirst = async (request) => {
+  const responseFromCache = await caches.match(request);
+  if (responseFromCache) {
+    return responseFromCache;
+  }
+  let responseFromNetwork
+  try {
+    responseFromNetwork = await fetch(request);
+  } catch (error) {
+    return caches.match('./sw-test/gallery/myLittleVader.jpg');
+  }
+  putInCache(responseFromNetwork.clone())
+  return responseFromNetwork;
+};
+
+self.addEventListener('fetch', (event) => {
+  event.respondWith(cacheFirst(event.request));
 });
 ```
 
@@ -371,22 +389,22 @@ If your service worker has previously been installed, but then a new version of 
 You'll want to update your `install` event listener in the new service worker to something like this (notice the new version number):
 
 ```js
+const addResourcesToCache = async ()=>{
+  const cache = await caches.open('v2')
+  await cache.addAll([
+    './sw-test/',
+    './sw-test/index.html',
+    './sw-test/style.css',
+    './sw-test/app.js',
+    './sw-test/image-list.js',
+
+    …
+
+    // include other new resources for the new version...
+  ]);
+}
 self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open('v2').then((cache) => {
-      return cache.addAll([
-        './sw-test/',
-        './sw-test/index.html',
-        './sw-test/style.css',
-        './sw-test/app.js',
-        './sw-test/image-list.js',
-
-        …
-
-        // include other new resources for the new version...
-      ]);
-    })
-  );
+  event.waitUntil(addResourcesToCache());
 });
 ```
 
@@ -401,18 +419,19 @@ You also get an `activate` event. This is generally used to do stuff that would 
 Promises passed into `waitUntil()` will block other events until completion, so you can rest assured that your clean-up operation will have completed by the time you get your first `fetch` event on the new service worker.
 
 ```js
-self.addEventListener('activate', (event) => {
-  var cacheKeeplist = ['v2'];
+const deleteCache = async key => {
+  await caches.delete(key)
+}
 
-  event.waitUntil(
-    caches.keys().then((keyList) => {
-      return Promise.all(keyList.map((key) => {
-        if (cacheKeeplist.indexOf(key) === -1) {
-          return caches.delete(key);
-        }
-      }));
-    })
-  );
+const deleteOldCaches = async () => {
+   const cacheKeepList = ['v2'];
+   const keyList = await caches.keys()
+   const cachesToDelete = keyList.filter(key => !cacheKeepList.includes(key))
+   await Promise.all(cachesToDelete.map(deleteCache));
+}
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(deleteOldCaches());
 });
 ```
 
