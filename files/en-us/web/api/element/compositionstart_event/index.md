@@ -52,7 +52,7 @@ inputElement.addEventListener('compositionstart', (event) => {
 
 ```html
 <div class="control">
-  <label for="name">On macOS, click in the textbox below,<br> then type <kbd>option</kbd> + <kbd>`</kbd>, then <kbd>a</kbd>:</label>
+  <label for="name">First select textbox, then to open IME:<ul><li>on macOS type <kbd>option</kbd> + <kbd>`</kbd></li><li>on Windows type <kbd>windows</kbd> + <kbd>.</kbd></li></ul></label>
   <input type="text" id="example" name="example">
 </div>
 

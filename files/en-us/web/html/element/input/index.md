@@ -1348,7 +1348,6 @@ If you wanted to instead display custom error messages, you could use JavaScript
 
 ```js
 const nameInput = document.querySelector('input');
-const form = document.querySelector('form');
 
 nameInput.addEventListener('input', () => {
   nameInput.setCustomValidity('');

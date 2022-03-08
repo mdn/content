@@ -5305,8 +5305,12 @@
 /en-US/docs/Learn/How_to_create_an_HTML_document	/en-US/docs/Learn/Getting_started_with_the_web
 /en-US/docs/Learn/How_web_pages_work	/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines
 /en-US/docs/Learn/Infrastructure	/en-US/docs/Learn/Common_questions
-/en-US/docs/Learn/JavaScript/Asynchronous/Async_loops_and_intervals	/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals
-/en-US/docs/Learn/JavaScript/Asynchronous/Loops_and_intervals	/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals
+/en-US/docs/Learn/JavaScript/Asynchronous/Async_await	/en-US/docs/Learn/JavaScript/Asynchronous/Promises
+/en-US/docs/Learn/JavaScript/Asynchronous/Async_loops_and_intervals	/en-US/docs/Learn/JavaScript/Asynchronous
+/en-US/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach	/en-US/docs/Learn/JavaScript/Asynchronous
+/en-US/docs/Learn/JavaScript/Asynchronous/Concepts	/en-US/docs/Learn/JavaScript/Asynchronous/Introducing
+/en-US/docs/Learn/JavaScript/Asynchronous/Loops_and_intervals	/en-US/docs/Learn/JavaScript/Asynchronous
+/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals	/en-US/docs/Learn/JavaScript/Asynchronous
 /en-US/docs/Learn/JavaScript/Asynchronous_JavaScript	/en-US/docs/Learn/JavaScript/Asynchronous
 /en-US/docs/Learn/JavaScript/Building_blocks/Functions/Build_your_own_function	/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function
 /en-US/docs/Learn/JavaScript/Building_blocks/Functions/Return_values	/en-US/docs/Learn/JavaScript/Building_blocks/Return_values
@@ -7678,6 +7682,7 @@
 /en-US/docs/Web/API/Document/onselect	/en-US/docs/Web/API/GlobalEventHandlers/onselect
 /en-US/docs/Web/API/Document/onselectionchange	/en-US/docs/Web/API/GlobalEventHandlers/onselectionchange
 /en-US/docs/Web/API/Document/onsubmit	/en-US/docs/Web/API/GlobalEventHandlers/onsubmit
+/en-US/docs/Web/API/Document/onvisibilitychange	/en-US/docs/Web/API/Document/visibilitychange_event
 /en-US/docs/Web/API/Document/resourcetimingbufferfull_event	/en-US/docs/Web/API/Performance/resourcetimingbufferfull_event
 /en-US/docs/Web/API/Document/timeline/currentTime	/en-US/docs/Web/API/AnimationTimeline/currentTime
 /en-US/docs/Web/API/DocumentFragment.DocumentFragment	/en-US/docs/Web/API/DocumentFragment/DocumentFragment
@@ -8357,6 +8362,8 @@
 /en-US/docs/Web/API/MediaCapabilitiesInfo	/en-US/docs/Web/API/MediaCapabilities/encodingInfo
 /en-US/docs/Web/API/MediaCapabilities_API	/en-US/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API
 /en-US/docs/Web/API/MediaDevices/mediaDevices.getUserMedia	/en-US/docs/Web/API/MediaDevices/getUserMedia
+/en-US/docs/Web/API/MediaKeySession/onkeystatuseschange	/en-US/docs/Web/API/MediaKeySession/keystatuseschange_event
+/en-US/docs/Web/API/MediaKeySession/onmessage	/en-US/docs/Web/API/MediaKeySession/message_event
 /en-US/docs/Web/API/MediaKeySystemConfiguration	/en-US/docs/Web/API/MediaKeySystemAccess/getConfiguration
 /en-US/docs/Web/API/MediaKeySystemConfiguration/audioCapabilities	/en-US/docs/Web/API/MediaKeySystemAccess/getConfiguration
 /en-US/docs/Web/API/MediaKeySystemConfiguration/distinctiveIdentifier	/en-US/docs/Web/API/MediaKeySystemAccess/getConfiguration
@@ -8640,10 +8647,11 @@
 /en-US/docs/Web/API/NotificationEvent/NotificationEvent()	/en-US/docs/Web/API/NotificationEvent/NotificationEvent
 /en-US/docs/Web/API/Notifications_API/Using_the_Web_Notifications_API	/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API
 /en-US/docs/Web/API/ObjectStore	/en-US/docs/Web/API/IDBObjectStore
-/en-US/docs/Web/API/OfflineAudioContext.oncomplete	/en-US/docs/Web/API/OfflineAudioContext/oncomplete
+/en-US/docs/Web/API/OfflineAudioContext.oncomplete	/en-US/docs/Web/API/OfflineAudioContext/complete_event
 /en-US/docs/Web/API/OfflineAudioContext.startRendering	/en-US/docs/Web/API/OfflineAudioContext/startRendering
 /en-US/docs/Web/API/OfflineAudioContext.startRendering_(promise)	/en-US/docs/Web/API/OfflineAudioContext/startRendering
 /en-US/docs/Web/API/OfflineAudioContext/complete	/en-US/docs/Web/API/OfflineAudioContext/complete_event
+/en-US/docs/Web/API/OfflineAudioContext/oncomplete	/en-US/docs/Web/API/OfflineAudioContext/complete_event
 /en-US/docs/Web/API/OfflineAudioContext/startRendering(promise)	/en-US/docs/Web/API/OfflineAudioContext/startRendering
 /en-US/docs/Web/API/OffscreenCanvas/OffscreenCanvas.convertToBlob()	/en-US/docs/Web/API/OffscreenCanvas/convertToBlob
 /en-US/docs/Web/API/OffscreenCanvas/toBlob	/en-US/docs/Web/API/OffscreenCanvas/convertToBlob
@@ -8709,6 +8717,7 @@
 /en-US/docs/Web/API/Performance.now	/en-US/docs/Web/API/Performance/now
 /en-US/docs/Web/API/Performance.now()	/en-US/docs/Web/API/Performance/now
 /en-US/docs/Web/API/Performance.timing	/en-US/docs/Web/API/Performance/timing
+/en-US/docs/Web/API/Performance/onresourcetimingbufferfull	/en-US/docs/Web/API/Performance/resourcetimingbufferfull_event
 /en-US/docs/Web/API/PerformanceEntry/connectEnd	/en-US/docs/Web/API/PerformanceResourceTiming/connectEnd
 /en-US/docs/Web/API/PerformanceEntry/connectStart	/en-US/docs/Web/API/PerformanceResourceTiming/connectStart
 /en-US/docs/Web/API/PerformanceEntry/decodedBodySize	/en-US/docs/Web/API/PerformanceResourceTiming/decodedBodySize
@@ -8779,6 +8788,7 @@
 /en-US/docs/Web/API/PositionOptions/maximumAge	/en-US/docs/Web/API/Geolocation/getCurrentPosition
 /en-US/docs/Web/API/PositionOptions/timeout	/en-US/docs/Web/API/Geolocation/getCurrentPosition
 /en-US/docs/Web/API/PositionSensorVRDevice/getState()	/en-US/docs/Web/API/PositionSensorVRDevice/getState
+/en-US/docs/Web/API/PresentationAvailability/onchange	/en-US/docs/Web/API/PresentationAvailability
 /en-US/docs/Web/API/PresentationConnectionClosedEvent	/en-US/docs/Web/API/PresentationConnectionCloseEvent
 /en-US/docs/Web/API/ProgressEvent.ProgressEvent	/en-US/docs/Web/API/ProgressEvent/ProgressEvent
 /en-US/docs/Web/API/ProgressEvent.initProgressEvent	/en-US/docs/Web/API/ProgressEvent/initProgressEvent
@@ -9054,6 +9064,7 @@
 /en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers:_The_Basics	/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers
 /en-US/docs/Web/API/SharedWorker.SharedWorker	/en-US/docs/Web/API/SharedWorker/SharedWorker
 /en-US/docs/Web/API/SharedWorker.port	/en-US/docs/Web/API/SharedWorker/port
+/en-US/docs/Web/API/SharedWorker/onerror	/en-US/docs/Web/API/SharedWorker/error_event
 /en-US/docs/Web/API/SharedWorkerGlobalScope.applicationCache	/en-US/docs/Web/API/SharedWorkerGlobalScope/applicationCache
 /en-US/docs/Web/API/SharedWorkerGlobalScope.name	/en-US/docs/Web/API/SharedWorkerGlobalScope/name
 /en-US/docs/Web/API/SharedWorkerGlobalScope.onconnect	/en-US/docs/Web/API/SharedWorkerGlobalScope/onconnect
@@ -9429,6 +9440,7 @@
 /en-US/docs/Web/API/Window/mozRequestAnimationFrame	/en-US/docs/Web/API/window/requestAnimationFrame
 /en-US/docs/Web/API/Window/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
 /en-US/docs/Web/API/Window/onafterprint	/en-US/docs/Web/API/WindowEventHandlers/onafterprint
+/en-US/docs/Web/API/Window/onappinstalled	/en-US/docs/Web/API/Window/appinstalled_event
 /en-US/docs/Web/API/Window/onbeforeprint	/en-US/docs/Web/API/WindowEventHandlers/onbeforeprint
 /en-US/docs/Web/API/Window/onbeforeunload	/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload
 /en-US/docs/Web/API/Window/onblur	/en-US/docs/Web/API/GlobalEventHandlers/onblur
@@ -9442,7 +9454,7 @@
 /en-US/docs/Web/API/Window/ongamepaddisconnected	/en-US/docs/Web/API/Window/gamepaddisconnected_event
 /en-US/docs/Web/API/Window/onhashchange	/en-US/docs/Web/API/WindowEventHandlers/onhashchange
 /en-US/docs/Web/API/Window/oninput	/en-US/docs/Web/API/GlobalEventHandlers/onkeydown
-/en-US/docs/Web/API/Window/oninstall	/en-US/docs/Web/API/Window/onappinstalled
+/en-US/docs/Web/API/Window/oninstall	/en-US/docs/Web/API/Window/appinstalled_event
 /en-US/docs/Web/API/Window/onkeydown	/en-US/docs/Web/API/GlobalEventHandlers/onkeydown
 /en-US/docs/Web/API/Window/onkeypress	/en-US/docs/Web/API/GlobalEventHandlers/onkeypress
 /en-US/docs/Web/API/Window/onkeyup	/en-US/docs/Web/API/GlobalEventHandlers/onkeyup

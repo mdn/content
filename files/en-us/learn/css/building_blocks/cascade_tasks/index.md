@@ -7,7 +7,7 @@ tags:
 ---
 {{LearnSidebar}}
 
-The aim of this task is to help you check your understanding of some of the values and units that we looked at in the lesson on [The Cascade and Inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
+The aim of this task is to help you check your understanding of the universal property values for controlling inheritance that we looked at in the lesson on [The Cascade and Inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
 
 > **Note:** You can try out solutions in the interactive editors below, however, it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >
