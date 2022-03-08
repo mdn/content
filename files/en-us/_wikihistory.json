@@ -73855,22 +73855,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/Screen/onorientationchange": {
-    "modified": "2020-10-15T21:23:43.577Z",
-    "contributors": [
-      "mfuji09",
-      "bershanskiy",
-      "ExE-Boss",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "Sheppy",
-      "kscarfone",
-      "namolmes",
-      "Jeremie",
-      "justinpotts"
-    ]
-  },
   "Web/API/Screen/orientation": {
     "modified": "2020-10-15T21:23:42.968Z",
     "contributors": [
@@ -73893,6 +73877,22 @@
       "jmpp",
       "justinpotts",
       "Jeremie"
+    ]
+  },
+  "Web/API/Screen/orientationchange_event": {
+    "modified": "2020-10-15T21:23:43.577Z",
+    "contributors": [
+      "mfuji09",
+      "bershanskiy",
+      "ExE-Boss",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "Sheppy",
+      "kscarfone",
+      "namolmes",
+      "Jeremie",
+      "justinpotts"
     ]
   },
   "Web/API/Screen/pixelDepth": {

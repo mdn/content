@@ -8981,12 +8981,13 @@
 /en-US/docs/Web/API/Screen.lockOrientation	/en-US/docs/Web/API/Screen/lockOrientation
 /en-US/docs/Web/API/Screen.mozBrightness	/en-US/docs/Web/API/Screen/mozBrightness
 /en-US/docs/Web/API/Screen.mozEnabled	/en-US/docs/Web/API/Screen/mozEnabled
-/en-US/docs/Web/API/Screen.onorientationchange	/en-US/docs/Web/API/Screen/onorientationchange
+/en-US/docs/Web/API/Screen.onorientationchange	/en-US/docs/Web/API/Screen/orientationchange_event
 /en-US/docs/Web/API/Screen.orientation	/en-US/docs/Web/API/Screen/orientation
 /en-US/docs/Web/API/Screen.pixelDepth	/en-US/docs/Web/API/Screen/pixelDepth
 /en-US/docs/Web/API/Screen.top	/en-US/docs/Web/API/Screen/top
 /en-US/docs/Web/API/Screen.unlockOrientation	/en-US/docs/Web/API/Screen/unlockOrientation
 /en-US/docs/Web/API/Screen.width	/en-US/docs/Web/API/Screen/width
+/en-US/docs/Web/API/Screen/onorientationchange	/en-US/docs/Web/API/Screen/orientationchange_event
 /en-US/docs/Web/API/ScriptProcessorNode.bufferSize	/en-US/docs/Web/API/ScriptProcessorNode/bufferSize
 /en-US/docs/Web/API/ScriptProcessorNode.onaudioprocess	/en-US/docs/Web/API/ScriptProcessorNode/onaudioprocess
 /en-US/docs/Web/API/ScriptProcessorNode/audioprocess	/en-US/docs/Web/API/ScriptProcessorNode/audioprocess_event
@@ -10114,7 +10115,7 @@
 /en-US/docs/Web/API/window.screen.lockOrientation	/en-US/docs/Web/API/Screen/lockOrientation
 /en-US/docs/Web/API/window.screen.mozBrightness	/en-US/docs/Web/API/Screen/mozBrightness
 /en-US/docs/Web/API/window.screen.mozEnabled	/en-US/docs/Web/API/Screen/mozEnabled
-/en-US/docs/Web/API/window.screen.onorientationchange	/en-US/docs/Web/API/Screen/onorientationchange
+/en-US/docs/Web/API/window.screen.onorientationchange	/en-US/docs/Web/API/Screen/orientationchange_event
 /en-US/docs/Web/API/window.screen.orientation	/en-US/docs/Web/API/Screen/orientation
 /en-US/docs/Web/API/window.screen.pixelDepth	/en-US/docs/Web/API/Screen/pixelDepth
 /en-US/docs/Web/API/window.screen.top	/en-US/docs/Web/API/Screen/top
