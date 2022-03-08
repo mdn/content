@@ -54,7 +54,7 @@ the array four times: using the default separator, then a comma and a space, the
 and an empty string.
 
 ```js
-var a = ['Wind', 'Water', 'Fire'];
+const a = ['Wind', 'Water', 'Fire'];
 a.join();      // 'Wind,Water,Fire'
 a.join(', ');  // 'Wind, Water, Fire'
 a.join(' + '); // 'Wind + Water + Fire'
@@ -69,7 +69,7 @@ by calling {{jsxref("Function.prototype.call")}} on `Array.prototype.join`.
 
 ```js
 function f(a, b, c) {
-  var s = Array.prototype.join.call(arguments);
+  const s = Array.prototype.join.call(arguments);
   console.log(s); // '1,a,true'
 }
 f(1, 'a', true);

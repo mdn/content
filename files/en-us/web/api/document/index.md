@@ -128,8 +128,6 @@ _The `Document` interface is extended with additional event handlers defined in 
 
 - {{DOMxRef("GlobalEventHandlers.onselectionchange")}} {{Experimental_Inline}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Document/selectionchange_event", "selectionchange")}} event is raised.
-- {{DOMxRef("Document.onvisibilitychange")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Document/visibilitychange_event", "visibilitychange")}} event is raised.
 
 ### Deprecated properties
 
@@ -322,7 +320,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
     Also available via the {{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}} property.
 - {{DOMxRef("Document/visibilitychange_event", "visibilitychange")}}
   - : Fired when the content of a tab has become visible or has been hidden.
-    Also available via the {{DOMxRef("Document.onvisibilitychange", "onvisibilitychange")}} property.
 - {{DOMxRef("Document/wheel_event","wheel")}}
   - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).
     Also available via the {{DOMxRef("GlobalEventHandlers.onwheel", "onwheel")}} property.

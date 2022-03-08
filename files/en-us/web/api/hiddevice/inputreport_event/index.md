@@ -1,26 +1,37 @@
 ---
-title: HIDDevice.oninputreport
-slug: Web/API/HIDDevice/oninputreport
+title: 'HIDDevice: inputreport event'
+slug: Web/API/HIDDevice/inputreport_event
 tags:
   - API
   - Property
   - Reference
   - oninputreport
   - HIDDevice
-browser-compat: api.HIDDevice.oninputreport
+browser-compat: api.HIDDevice.inputreport_event
 ---
 {{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
 
-The **`oninputreport`** event handler of the {{domxref("HIDDevice")}} interface processes inputreport events.
-
-The event fires when a new report is received from the HID device.
+The **`inputreport`** event of the {{domxref("HIDDevice")}} interface fires when a new report is received from the HID device.
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js
-HIDDevice.oninputreport = function;
-HIDDevice.addEventListener('inputreport', function);
+addEventListener('inputreport', event => { });
+
+oninputreport = event => { };
 ```
+
+## Event type
+
+An {{domxref("HIDInputReportEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("HIDInputReportEvent")}}
+
+## Event properties
+
+{{page("/en-US/docs/Web/API/HIDInputReportEvent", "Properties")}}
 
 ## Example
 

@@ -1,6 +1,6 @@
 ---
-title: SharedWorker.onerror
-slug: Web/API/SharedWorker/onerror
+title: 'SharedWorker: error event'
+slug: Web/API/SharedWorker/error_event
 tags:
   - API
   - SharedWorker
@@ -10,17 +10,25 @@ tags:
   - Web Workers
   - Workers
   - onerror
-browser-compat: api.SharedWorker.onerror
+browser-compat: api.SharedWorker.error_event
 ---
 {{APIRef("Web Workers API")}}
 
-The **`onerror`** property of the {{domxref("SharedWorker")}} interface represents an [event handler](/en-US/docs/Web/Events/Event_handlers), that is a function to be called when the {{event("error")}} event occurs.
+The **`error`** event of the {{domxref("SharedWorker")}} interface fires when an error occurs in the worker.
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js
-mySharedWorker.onerror = function(event) { /* ... */ };
+addEventListener('error', event => { });
+
+onerror = event => { };
 ```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Example
 

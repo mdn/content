@@ -15,28 +15,27 @@ browser-compat: api.PictureInPictureWindow.resize_event
 
 The **`resize`** event fires when the floating video window has been resized.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("PictureInPictureWindow")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("PictureInPictureWindow.onresize", "onresize")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('resize', event => { });
+
+onresize = event => { };
+```
+
+## Event type
+
+An {{domxref("PictureInPictureWindow")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("PictureInPictureWindow")}}
+
+## Event properties
+
+{{page("/en-US/docs/Web/API/PictureInPictureWindow", "Properties")}}
 
 ## Examples
 
@@ -62,15 +61,9 @@ function resize(evt) {
 video.requestPictureInPicture()
   .then(pictureInPictureWindow => {
     pictureInPictureWindow.onresize = resize;
+    // or
+    pictureInPictureWindow.addEventListener('resize', resize);
   });
-```
-
-### addEventListener equivalent
-
-You could set up the event handler using the [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
-
-```js
-pictureInPictureWindow.addEventListener('resize', resize);
 ```
 
 ## Specifications
@@ -80,7 +73,3 @@ pictureInPictureWindow.addEventListener('resize', resize);
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("PictureInPictureWindow.onresize")}}
