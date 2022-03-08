@@ -64,21 +64,7 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
 
 ### Formal syntax
 
-```css
-repeating-radial-gradient(
-       [[ circle  || <length> ]                     [at <position>]? , |
-        [ ellipse || [<length> | <percentage> ]{2}] [at <position>]? , |
-        [[ circle | ellipse ] || <extent-keyword> ] [at <position>]? , |
-                                                     at <position>   ,    <color-stop-list> )
-        \---------------------------------------------------------------/\-----------------/
-                  Contour, size and position of the ending shape          List of color stops
-
-where <extent-keyword> = closest-corner | closest-side | farthest-corner | farthest-side
-   and <color-stop-list> = [ <linear-color-stop> [, <color-hint>? ]? ]#, <linear-color-stop>
-   and <linear-color-stop> = <color> [ <color-stop-length> ]?
-   and <color-stop-length> = [ <percentage> | <length> ]{1,2}
-   and <color-hint> = [ <percentage> | <length> ]
-```
+{{csssyntax}}
 
 ## Examples
 
