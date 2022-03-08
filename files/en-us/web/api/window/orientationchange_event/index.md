@@ -7,37 +7,30 @@ tags:
   - Reference
   - Sensors
   - Window
-  - onorientationchange
+  - orientationchange
 browser-compat: api.Window.orientationchange_event
 ---
 {{APIRef}} {{Deprecated_Header}}
 
 The `orientationchange` event is fired when the orientation of the device has changed.
 
+This event is not cancelable and does not bubble.
+
 This event is deprecated. Listen for the {{domxref("ScreenOrientation/onchange", "ScreenOrientation.onchange")}} event instead.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler</th>
-      <td>
-        {{domxref("Window/onorientationchange", "onorientationchange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('orientationchange', event => { });
+
+onorientationchange = event => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Example
 
@@ -49,7 +42,7 @@ window.addEventListener("orientationchange", function(event) {
 });
 ```
 
-Or use the {{domxref("Window/onorientationchange", "onorientationchange")}} event handler property:
+Or use the `onorientationchange` event handler property:
 
 ```js
 window.onorientationchange = function(event) {
