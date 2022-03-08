@@ -210,7 +210,7 @@ ol[type="c" i] {
 
 ```html
 <ol type="A">
-  <li>Red background if case-insensitive matching for current document language.</li>
+  <li>Red background if case-insensitive matching (default for the type selector).</li>
 </ol>
 <ol type="b">
   <li>Lime background if s flag supported (case-sensitive match)</li>
