@@ -74,8 +74,8 @@ to another array as they are found.
 const indices = [];
 const array = ['a', 'b', 'a', 'c', 'a', 'd'];
 const element = 'a';
-const idx = array.lastIndexOf(element);
-while (idx != -1) {
+let idx = array.lastIndexOf(element);
+while (idx !== -1) {
   indices.push(idx);
   idx = (idx > 0 ? array.lastIndexOf(element, idx - 1) : -1);
 }
@@ -84,7 +84,7 @@ console.log(indices);
 // [4, 2, 0]
 ```
 
-Note that we have to handle the case `idx == 0` separately here because the
+Note that we have to handle the case `idx === 0` separately here because the
 element will always be found regardless of the `fromIndex` parameter if it is
 the first element of the array. This is different from the
 {{jsxref("Array.prototype.indexOf", "indexOf")}} method.
