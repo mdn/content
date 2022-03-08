@@ -177,7 +177,7 @@ div[data-lang="zh-TW"] {
 
 ### HTML ordered lists
 
-Using attribute selectors on {{HTMLElement("ol", "Ordered lists")}} is the same as for other elements: the case sensitivity of the selection depends on the document language.
+The HTML specification requires the {{htmlattrxref("type", "input")}} attribute to be matched case-insensitively due to it primarily being used in the {{HTMLElement("input")}} element.
 Case-sensitive and case-insensitive matching can be forced using the `s` and `i` modifiers, respectively.
 Note that if the modifiers are not supported by the user agent, then the selector will not match.
 
