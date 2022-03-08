@@ -169,7 +169,7 @@ First, a promise can be in one of three states:
 
 - **pending**: the promise has been created, and the asynchronous function it's associated with has not succeeded or failed yet. This is the state your promise is in when it's returned from a call to `fetch()`, and the request is still being made.
 - **fulfilled**: the asynchronous function has succeeded. When a promise is fulfilled, its `then()` handler is called.
-- **rejected**: the asynchronous function has succeeded. When a promise is rejected, its `catch()` handler is called.
+- **rejected**: the asynchronous function has failed. When a promise is rejected, its `catch()` handler is called.
 
  Note that what "succeeded" or "failed" means here is up to the API in question: for example, `fetch()` considers a request successful if the server returned an error like [404 Not Found](/en-US/docs/Web/HTTP/Status/404), but not if a network error prevented the request being sent.
 
