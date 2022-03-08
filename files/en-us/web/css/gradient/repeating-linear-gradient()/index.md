@@ -66,17 +66,7 @@ repeating-linear-gradient(to right, red 0%, green 10%, red 20%);
 
 ### Formal syntax
 
-```css
-repeating-linear-gradient(  [ <angle> | to <side-or-corner> ,]? <color-stop-list> )
-                            \---------------------------------/ \---------------/
-                              Definition of the gradient line   List of color stops
-
-where <side-or-corner> = [left | right] || [top | bottom]
-  and <color-stop-list> = [ <linear-color-stop> [, <color-hint>? ]? ]#, <linear-color-stop>
-  and <linear-color-stop> = <color> [ <color-stop-length> ]?
-  and <color-stop-length> = [ <percentage> | <length> ]{1,2}
-  and <color-hint> = [ <percentage> | <length> ]
-```
+{{csssyntax}}
 
 ## Examples
 
