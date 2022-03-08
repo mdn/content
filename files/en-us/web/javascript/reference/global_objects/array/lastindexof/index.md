@@ -55,7 +55,7 @@ equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) (the s
 The following example uses `lastIndexOf` to locate values in an array.
 
 ```js
-var numbers = [2, 5, 9, 2];
+const numbers = [2, 5, 9, 2];
 numbers.lastIndexOf(2);     // 3
 numbers.lastIndexOf(7);     // -1
 numbers.lastIndexOf(2, 3);  // 3
@@ -71,10 +71,10 @@ element in a given array, using {{jsxref("Array.prototype.push", "push")}} to ad
 to another array as they are found.
 
 ```js
-var indices = [];
-var array = ['a', 'b', 'a', 'c', 'a', 'd'];
-var element = 'a';
-var idx = array.lastIndexOf(element);
+const indices = [];
+const array = ['a', 'b', 'a', 'c', 'a', 'd'];
+const element = 'a';
+const idx = array.lastIndexOf(element);
 while (idx != -1) {
   indices.push(idx);
   idx = (idx > 0 ? array.lastIndexOf(element, idx - 1) : -1);

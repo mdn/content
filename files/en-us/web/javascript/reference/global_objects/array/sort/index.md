@@ -112,7 +112,7 @@ The `sort` method can be conveniently used with
 {{jsxref("Operators/function", "function expressions", "", 1)}}:
 
 ```js
-var numbers = [4, 2, 5, 1, 3];
+const numbers = [4, 2, 5, 1, 3];
 numbers.sort(function(a, b) {
   return a - b;
 });
@@ -125,7 +125,7 @@ ES2015 provides {{jsxref("Functions/Arrow_functions", "arrow function expression
   1)}} with even shorter syntax.
 
 ```js
-let numbers = [4, 2, 5, 1, 3];
+const numbers = [4, 2, 5, 1, 3];
 numbers.sort((a, b) => a - b);
 console.log(numbers);
 
@@ -135,7 +135,7 @@ console.log(numbers);
 Arrays of objects can be sorted by comparing the value of one of their properties.
 
 ```js
-var items = [
+const items = [
   { name: 'Edward', value: 21 },
   { name: 'Sharpe', value: 37 },
   { name: 'And', value: 45 },
@@ -151,8 +151,8 @@ items.sort(function (a, b) {
 
 // sort by name
 items.sort(function(a, b) {
-  var nameA = a.name.toUpperCase(); // ignore upper and lowercase
-  var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+  const nameA = a.name.toUpperCase(); // ignore upper and lowercase
+  const nameB = b.name.toUpperCase(); // ignore upper and lowercase
   if (nameA < nameB) {
     return -1;
   }
@@ -207,7 +207,7 @@ For sorting strings with non-ASCII characters, i.e. strings with accented charac
 appear in the right order.
 
 ```js
-var items = ['réservé', 'premier', 'communiqué', 'café', 'adieu', 'éclair'];
+const items = ['réservé', 'premier', 'communiqué', 'café', 'adieu', 'éclair'];
 items.sort(function (a, b) {
   return a.localeCompare(b);
 });

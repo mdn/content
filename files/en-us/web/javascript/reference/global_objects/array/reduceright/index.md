@@ -251,7 +251,7 @@ The value returned by `reduceRight` this time would be, of course,
 ### Sum up all values within an array
 
 ```js
-var sum = [0, 1, 2, 3].reduceRight(function(a, b) {
+const sum = [0, 1, 2, 3].reduceRight(function(a, b) {
   return a + b;
 });
 // sum is 6
@@ -260,7 +260,7 @@ var sum = [0, 1, 2, 3].reduceRight(function(a, b) {
 ### Flatten an array of arrays
 
 ```js
-var flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
+const flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
     return a.concat(b);
 }, []);
 // flattened is [4, 5, 2, 3, 0, 1]
@@ -314,9 +314,9 @@ const computation2 = (input, callback) => {
 ### Difference between `reduce` and `reduceRight`
 
 ```js
-var a = ['1', '2', '3', '4', '5'];
-var left  = a.reduce(function(prev, cur)      { return prev + cur; });
-var right = a.reduceRight(function(prev, cur) { return prev + cur; });
+const a = ['1', '2', '3', '4', '5'];
+const left  = a.reduce(function(prev, cur)      { return prev + cur; });
+const right = a.reduceRight(function(prev, cur) { return prev + cur; });
 
 console.log(left);  // "12345"
 console.log(right); // "54321"
