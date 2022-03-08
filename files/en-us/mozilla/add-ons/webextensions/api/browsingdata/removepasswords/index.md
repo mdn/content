@@ -40,10 +40,6 @@ var removing = browser.browsingData.removePasswords(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the removal has finished. If any error occurs, the promise will be rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Remove passwords saved in the last week:
@@ -80,6 +76,10 @@ function onError(error) {
 
 browser.browsingData.removePasswords({}).then(onRemoved, onError);
 ```
+
+## Browser compatibility
+
+{{Compat}}
 
 {{WebExtExamples}}
 
