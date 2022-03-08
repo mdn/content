@@ -74100,14 +74100,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/ScriptProcessorNode/onaudioprocess": {
-    "modified": "2020-10-15T21:29:53.833Z",
-    "contributors": [
-      "fscholz",
-      "abbycar",
-      "chrisdavidmills"
-    ]
-  },
   "Web/API/SecurityPolicyViolationEvent": {
     "modified": "2020-10-15T21:52:02.043Z",
     "contributors": [
