@@ -68,7 +68,7 @@ _No changes._
 
 #### Removals
 
-- We've completely removed the [Window `appinstalled` event](/en-US/docs/Web/API/Window/appinstalled_event) (and the associated [`Window.onappinstalled`](/en-US/docs/Web/API/Window/onappinstalled) handler property) — these were never shipped, and have now been removed from the [Web Manifest spec](https://w3c.github.io/manifest/) ({{bug(1625384)}}).
+- We've completely removed the [Window `appinstalled` event](/en-US/docs/Web/API/Window/appinstalled_event) (and the associated `Window.onappinstalled` handler property) — these were never shipped, and have now been removed from the [Web Manifest spec](https://w3c.github.io/manifest/) ({{bug(1625384)}}).
 
 ### HTTP
 

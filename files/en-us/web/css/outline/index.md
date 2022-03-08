@@ -53,7 +53,7 @@ The `outline` property may be specified using one, two, or three of the values l
 ### Values
 
 - `<'outline-color'>`
-  - : Sets the color of the outline. Defaults to `invert` for browsers supporting it, `currentcolor` for the other. See {{cssxref("outline-color")}}.
+  - : Sets the color of the outline. Defaults to `invert` for browsers supporting it, `currentcolor` for the others. See {{cssxref("outline-color")}}.
 - `<'outline-style'>`
   - : Sets the style of the outline. Defaults to `none` if absent. See {{cssxref("outline-style")}}.
 - `<'outline-width'>`

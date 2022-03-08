@@ -36,8 +36,8 @@ A new {{jsxref("Array")}} iterator object.
 ### Iteration using for...of loop
 
 ```js
-var arr = ['a', 'b', 'c', 'd', 'e'];
-var iterator = arr.values();
+const arr = ['a', 'b', 'c', 'd', 'e'];
+const iterator = arr.values();
 
 for (let letter of iterator) {
   console.log(letter);
@@ -54,8 +54,8 @@ Array.prototype.values === Array.prototype[Symbol.iterator]      //true
 ### Iteration using .next()
 
 ```js
-var arr = ['a', 'b', 'c', 'd', 'e'];
-var iterator = arr.values();
+const arr = ['a', 'b', 'c', 'd', 'e'];
+const iterator = arr.values();
 iterator.next();               // Object { value: "a", done: false }
 iterator.next().value;         // "b"
 iterator.next()["value"];      // "c"
@@ -70,8 +70,8 @@ iterator.next().value;         // undefined
 example:
 
 ```js
-var arr = ['a', 'b', 'c', 'd', 'e'];
- var iterator = arr.values();
+const arr = ['a', 'b', 'c', 'd', 'e'];
+ const iterator = arr.values();
  for (let letter of iterator) {
  console.log(letter);
 } //"a" "b" "c" "d" "e"
@@ -89,8 +89,8 @@ object; instead it stores the address of the array used in its creation and so d
 on the values stored in that array.
 
 ```js
-var arr = ['a', 'b', 'c', 'd', 'e'];
-var iterator = arr.values();
+const arr = ['a', 'b', 'c', 'd', 'e'];
+const iterator = arr.values();
 console.log(iterator);        // Array Iterator {  }
 iterator.next().value;        // "a"
 arr[1]='n';
