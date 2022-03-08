@@ -41,8 +41,7 @@ No notable changes
   
 ### WebDriver conformance (Marionette)
 
-- Fixed bug where `waitForInitialNavigationCompleted` doesn't recognize uninitialized documents ({{bug(1747359)}}).
-- Fixed bug so `waitForInitialNavigationCompleted` shouldn't print full URLs in trace log ({{bug(1750993)}}).
+- Improved initial page load checks for newly opened tabs ({{bug(1747359)}}).
 
 ## Changes for add-on developers
 
