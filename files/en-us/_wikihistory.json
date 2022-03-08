@@ -43451,29 +43451,6 @@
       "louisremi"
     ]
   },
-  "Web/API/EventSource/onerror": {
-    "modified": "2020-10-15T21:52:36.910Z",
-    "contributors": [
-      "fscholz",
-      "Char-Ten",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/EventSource/onmessage": {
-    "modified": "2020-10-15T21:52:36.858Z",
-    "contributors": [
-      "fscholz",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/EventSource/onopen": {
-    "modified": "2020-10-15T21:52:36.853Z",
-    "contributors": [
-      "fscholz",
-      "Sheppy",
-      "chrisdavidmills"
-    ]
-  },
   "Web/API/EventSource/open_event": {
     "modified": "2020-10-15T21:20:32.186Z",
     "contributors": [
