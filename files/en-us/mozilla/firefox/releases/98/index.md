@@ -38,7 +38,11 @@ No notable changes
 
 - The deprecated [WebVR API](/en-US/docs/Web/API/WebVR_API) is now disabled by default on all builds (previously it was enabled on Windows, macOS, and all nightly/dev builds).
   It can be re-enabled in `about:config` by setting `dom.vr.enabled` to `true` ({{bug(1750902)}}).
+  
+### WebDriver conformance (Marionette)
 
+- Fixed bug where `waitForInitialNavigationCompleted` doesn't recognize uninitialized documents ({{bug(1747359)}}).
+- Fixed bug so `waitForInitialNavigationCompleted` shouldn't print full URLs in trace log ({{bug(1750993)}}).
 
 ## Changes for add-on developers
 
