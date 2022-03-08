@@ -8712,6 +8712,7 @@
 /en-US/docs/Web/API/PaymentRequest/PaymentRequest.onmerchantvalidation	/en-US/docs/Web/API/PaymentRequest/onmerchantvalidation
 /en-US/docs/Web/API/PaymentRequest/shippingaddresschange	/en-US/docs/Web/API/PaymentRequest/shippingaddresschange_event
 /en-US/docs/Web/API/PaymentRequestEvent/topLevelOrigin	/en-US/docs/Web/API/PaymentRequestEvent/topOrigin
+/en-US/docs/Web/API/PaymentResponse/onpayerdetailchange	/en-US/docs/Web/API/PaymentResponse/payerdetailchange_event
 /en-US/docs/Web/API/PaymentResponse/payerdetail_event	/en-US/docs/Web/API/PaymentResponse/payerdetailchange_event
 /en-US/docs/Web/API/Performance.navigation	/en-US/docs/Web/API/Performance/navigation
 /en-US/docs/Web/API/Performance.now	/en-US/docs/Web/API/Performance/now

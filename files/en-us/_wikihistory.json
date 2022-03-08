@@ -65411,14 +65411,6 @@
       "dgashmdn"
     ]
   },
-  "Web/API/PaymentResponse/onpayerdetailchange": {
-    "modified": "2020-10-15T22:06:18.501Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Sheppy",
-      "marcoscaceres"
-    ]
-  },
   "Web/API/PaymentResponse/payerEmail": {
     "modified": "2020-10-15T21:48:29.059Z",
     "contributors": [
