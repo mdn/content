@@ -24,13 +24,15 @@ When you are working on a website locally on your computer, you should keep all 
 
 ## An aside on casing and spacing
 
-You'll notice that throughout this article, we ask you to name folders and files completely in lowercase with no spaces. This is because:
+Throughout this article, you'll notice that we ask you to name folders and files entirely in lowercase with no spaces because:
 
 1. Many computers, particularly web servers, are case-sensitive. So, for example, if you put an image on your website at `test-site/MyImage.jpg` and then in a different file, you try to invoke the image as `test-site/myimage.jpg`, it may not work.
-2. Some browsers and programming languages do not handle spaces consistently. For example, if you use spaces in your filename, some may treat the filename as two filenames or replace the areas in your filenames with "%20" (the character code for spaces in URLs), resulting in breaking all your links. Although this matters in URLs, it is something every system understands but using delimiters like hyphens or underscores instead of spaces is still safer.
-3. The choice between using hyphens or underscores to separate words in a file name (`my-file.html` vs. `my_file.html`) is a matter of preference, as both have benefits and drawbacks. While we treat hyphens as a word-separator, underscores are easier to read and represent the space character. But whichever you choose, you should use the same character throughout your file names to have consistency.
+2. Some browsers and programming languages do not handle spaces consistently. For example, if you use spaces in your filename, some may treat the filename as two filenames or replace the areas in your filenames with "%20" (the character code for spaces in URLs), resulting in breaking all your links. Although this matters almost only in URLs, and it is something that every system understands, using delimiters like hyphens or underscores instead of spaces is still safer.
+3. The choice between using hyphens or underscores to separate words in a file name (`my-file.html` vs. `my_file.html`) is a matter of preference, as both have benefits and drawbacks. While we treat hyphens as a word-separator, underscores are easier to read and represent the space character. The Google search engine treats a hyphen as a word separator but does not regard an underscore that way.
 
-The short answer is that you should use a hyphen for your file names. The Google search engine treats a hyphen as a word separator but does not regard an underscore that way. For these reasons, it is best to get into the habit of writing your folder and file names lowercase with no spaces and with words separated by hyphens, at least until you know what you're doing. That way you'll bump into fewer problems later down the road.
+The question of how to name files is distinct from the question of how to name URLs. The name you give a file on disk is not necessarily (or even usually) the same as the name used in its URL. URL structure is generally determined in the configuration of your web server. You should consider more strict practices when designing URL structure, particularly how search engines index your pages. For example, these are Google's guidelines: https://developers.google.com/search/docs/advanced/guidelines/url-structure
+
+What's most important here is to remain consistent.
 
 ## What structure should your website have?
 
