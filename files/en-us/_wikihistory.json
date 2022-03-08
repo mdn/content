@@ -66947,13 +66947,6 @@
       "germain"
     ]
   },
-  "Web/API/PictureInPictureWindow/onresize": {
-    "modified": "2020-10-25T10:59:20.359Z",
-    "contributors": [
-      "chrisdavidmills",
-      "germain"
-    ]
-  },
   "Web/API/PictureInPictureWindow/resize_event": {
     "modified": "2020-10-25T10:43:53.510Z",
     "contributors": [

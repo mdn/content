@@ -8771,6 +8771,7 @@
 /en-US/docs/Web/API/PhotoCapabilities/imageWidth	/en-US/docs/Web/API/ImageCapture/getPhotoCapabilities
 /en-US/docs/Web/API/PhotoCapabilities/redEyeReduction	/en-US/docs/Web/API/ImageCapture/getPhotoCapabilities
 /en-US/docs/Web/API/PictureInPictureWindow/PictureInPictureWindow:_resize_event	/en-US/docs/Web/API/PictureInPictureWindow/resize_event
+/en-US/docs/Web/API/PictureInPictureWindow/onresize	/en-US/docs/Web/API/PictureInPictureWindow/resize_event
 /en-US/docs/Web/API/Point	/en-US/docs/Web/API/WebKitPoint
 /en-US/docs/Web/API/Position	/en-US/docs/Web/API/GeolocationPosition
 /en-US/docs/Web/API/Position.coords	/en-US/docs/Web/API/GeolocationPosition/coords
