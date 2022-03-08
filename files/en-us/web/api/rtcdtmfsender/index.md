@@ -39,7 +39,6 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
 
 - {{domxref("RTCDTMFSender.tonechange_event", "tonechange")}}
   - : The `tonechange` event is sent to the `RTCDTMFSender` instance's event handler to indicate that a tone has either started or stopped playing.
-    Also available using the {{domxref("RTCDTMFSender.ontonechange", "ontonechange")}} event handler property.
 
 ## Example
 

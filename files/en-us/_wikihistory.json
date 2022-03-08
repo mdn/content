@@ -68129,14 +68129,6 @@
       "dminor"
     ]
   },
-  "Web/API/RTCDTMFSender/ontonechange": {
-    "modified": "2020-10-15T21:51:50.881Z",
-    "contributors": [
-      "fscholz",
-      "dminor",
-      "Sheppy"
-    ]
-  },
   "Web/API/RTCDTMFSender/toneBuffer": {
     "modified": "2020-10-15T21:51:54.997Z",
     "contributors": [

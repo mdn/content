@@ -33,7 +33,7 @@ A given {{domxref("RTCPeerConnection")}} can have multiple media tracks sent or 
 
 Once the track is selected, you can obtain from its `RTCRtpSender` the {{domxref("RTCDTMFSender")}} object you'll use for sending DTMF. From there, you can call {{domxref("RTCDTMFSender.insertDTMF()")}} to enqueue DTMF signals to be sent on the track to the other peer. The `RTCRtpSender` will then send the tones to the other peer as packets alongside the track's audio data.
 
-Each time a tone is sent, the `RTCPeerConnection` receives a {{event("tonechange")}} event with a {{domxref("RTCDTMFToneChangeEvent.tone", "tone")}} property specifying which tone finished playing, which is an opportunity to update interface elements, for example. When the tone buffer is empty, indicating that all the tones have been sent, a `tonechange` event with its `tone` property set to "" (an empty string) is delivered to the connection object.
+Each time a tone is sent, the `RTCPeerConnection` receives a [`tonechange`](/en-US/docs/Web/API/RTCDTMFSender/tonechange_event) event with a {{domxref("RTCDTMFToneChangeEvent.tone", "tone")}} property specifying which tone finished playing, which is an opportunity to update interface elements, for example. When the tone buffer is empty, indicating that all the tones have been sent, a `tonechange` event with its `tone` property set to "" (an empty string) is delivered to the connection object.
 
 If you'd like to know more about how this works, read {{RFC(3550, "RTP: A Transport Protocol for Real-Time Applications")}} and {{RFC(4733, "RTP Payload for DTMF Digits, Telephony Tones, and Telephony Signals")}}. The details of how DTMF payloads are handled on RTP are beyond the scope of this article. Instead, we'll focus on how to use DTMF within the context of an {{domxref("RTCPeerConnection")}} by studying how an example works.
 
@@ -203,13 +203,13 @@ Next we look to see if the {{domxref("RTCPeerConnection.getSenders()")}} method 
 
 If `getSenders()` isn't available, we instead call {{domxref("RTCPeerConnection.createDTMFSender()")}} to get the `RTCDTMFSender` object. Although this method is obsolete, this example supports it as a fallback to let older browsers (and those not yet updated to support the current WebRTC DTMF API) run the example.
 
-Finally, we set the DTMF sender's {{domxref("RTCDTMFSender.ontonechange", "ontonechange")}} event handler so we get notified each time a DTMF tone finishes playing.
+Finally, we set the DTMF sender's {{domxref("RTCDTMFSender.tonechange_event", "ontonechange")}} event handler so we get notified each time a DTMF tone finishes playing.
 
 You can find the log function at the bottom of the documentation.
 
 #### When a tone finishes playing
 
-Each time a DTMF tone finishes playing, a {{event("tonechange")}} event is delivered to `callerPC`. The event listener for these is implemented as the `handleToneChangeEvent()` function.
+Each time a DTMF tone finishes playing, a [`tonechange`](/en-US/docs/Web/API/RTCDTMFSender/tonechange_event) event is delivered to `callerPC`. The event listener for these is implemented as the `handleToneChangeEvent()` function.
 
 ```js
 function handleToneChangeEvent(event) {
@@ -236,7 +236,7 @@ function handleToneChangeEvent(event) {
 }
 ```
 
-The {{event("tonechange")}} event is used both to indicate when an individual tone has played and when all tones have finished playing. The event's {{domxref("RTCDTMFToneChangeEvent.tone", "tone")}} property is a string indicating which tone just finished playing. If all tones have finished playing, `tone` is an empty string; when that's the case, {{domxref("RTCDTMFSender.toneBuffer")}} is empty.
+The [`tonechange`](/en-US/docs/Web/API/RTCDTMFSender/tonechange_event) event is used both to indicate when an individual tone has played and when all tones have finished playing. The event's {{domxref("RTCDTMFToneChangeEvent.tone", "tone")}} property is a string indicating which tone just finished playing. If all tones have finished playing, `tone` is an empty string; when that's the case, {{domxref("RTCDTMFSender.toneBuffer")}} is empty.
 
 In this example, we log to the screen which tone just finished playing. In a more advanced application, you might update the user interface, for example, to indicate which note is currently playing.
 
