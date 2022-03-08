@@ -11,20 +11,11 @@ tags:
   - Workers
 browser-compat: api.ServiceWorkerRegistration.navigationPreload
 ---
-{{APIRef("Service Workers API")}}
+{{ServiceWorkerSidebar}}
 
-The **`navigationPreload`** read-only property of the
-{{domxref("ServiceWorkerRegistration")}} interface returns the
-{{domxref("NavigationPreloadManager")}} associated with the current service worker
-registration.
+The **`navigationPreload`** read-only property of the {{domxref("ServiceWorkerRegistration")}} interface returns the {{domxref("NavigationPreloadManager")}} associated with the current service worker registration.
 
-## Syntax
-
-```js
-var navigationPreloadManager = serviceWorkerRegistration.navigationPreload;
-```
-
-### Value
+## Value
 
 An instance of {{domxref("NavigationPreloadManager")}}.
 

@@ -11,16 +11,16 @@ tags:
   - Service Workers
 browser-compat: api.NavigationPreloadManager
 ---
-{{APIRef("Service Workers API")}}
+{{ServiceWorkerSidebar}}{{SeeCompatTable}}
 
 The **`NavigationPreloadManager`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) provides methods for managing the preloading of resources with a service worker.
 
 ## Methods
 
 - {{domxref("NavigationPreloadManager.enable()")}}
-  - : Enables navigation preloading and returns a {{jsxref("Promise")}} that resolves.
+  - : Enables navigation preloading, returning a {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}.
 - {{domxref("NavigationPreloadManager.disable()")}}
-  - : Disables navigation preloading and returns a {{jsxref("Promise")}} that resolves.
+  - : Disables navigation preloading, returning a {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}.
 - {{domxref("NavigationPreloadManager.setHeaderValue()")}}
   - : Sets the value of the `Service-Worker-Navigation-Preload` header and returns an empty {{jsxref("Promise")}}.
 - {{domxref("NavigationPreloadManager.getState()")}}
@@ -28,7 +28,9 @@ The **`NavigationPreloadManager`** interface of the [Service Worker API](/en-US/
 
 ## Examples
 
-#### Feature Detecting and Enabling Navigation Preloading
+#### Feature detection and enabling navigation preloading
+
+{{domxref("ServiceWorkerRegistration.navigationPreload")}} gets the `NavigationPreloadManager` for the service worker, or `undefined` if the feature is not supported.
 
 ```js
 addEventListener('activate', event => {
@@ -41,9 +43,9 @@ addEventListener('activate', event => {
 });
 ```
 
-#### Using a Preloaded Response
+#### Using a preloaded response
 
-The following example shows the implementation of a fetch event that uses a preloaded response.
+The following example shows the implementation of a fetch event that uses a preloaded response ({{domxref("FetchEvent.preloadResponse")}}).
 
 ```js
 addEventListener('fetch', event => {
@@ -69,3 +71,7 @@ addEventListener('fetch', event => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Speed up Service Worker with Navigation Preloads](https://developers.google.com/web/updates/2017/02/navigation-preload) (developers.google.com)
