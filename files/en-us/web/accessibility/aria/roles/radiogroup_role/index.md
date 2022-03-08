@@ -123,6 +123,8 @@ This could have been written using semantic HTML, which requires no CSS or JavaS
 </fieldset>
 ```
 
+In this {{HTMLElement('fieldset')}} example, while `role=radiogroup` is not necessary, to have this grouping explicitly announced as `radiogroup`, include the ARIA role.
+
 ## Specifications
 
 | Specification                                                                                                                    | Status                                           |
