@@ -37,10 +37,6 @@ This article provides information about the changes in Firefox 99 that will affe
 
 ### APIs
 
-- {{domxref("navigator.pdfViewerEnabled")}} is now enabled, and is the recommend way to determine whether a browser supports inline display of PDF files when navigating to them.
-  Sites that use the deprecated properties {{domxref("navigator.plugins")}} and {{domxref("navigator.mimeTypes")}} to infer PDF viewer support should now use the new property, even though these now return hard-coded mock values that match the signal provided by `pdfViewerEnabled` ({{bug(1720353)}}).
-
-
 #### DOM
 
 #### Media, WebRTC, and Web Audio
@@ -52,6 +48,8 @@ This article provides information about the changes in Firefox 99 that will affe
 #### Removals
 
 ### WebDriver conformance (Marionette)
+- Fixed an issue where if a shift key character is included as part of the key sequence, the subsequent characters are not converted properly ({{bug(1757636)}})
+- Marionette events use EventUtil.js directly ({{bug(1686666)}})
 
 #### Removals
 
