@@ -81,10 +81,10 @@ When checking for `Array` instance, `Array.isArray` is preferred
 over `instanceof` because it works through `iframes`.
 
 ```js
-var iframe = document.createElement('iframe');
+const iframe = document.createElement('iframe');
 document.body.appendChild(iframe);
 xArray = window.frames[window.frames.length-1].Array;
-var arr = new xArray(1,2,3); // [1,2,3]
+const arr = new xArray(1,2,3); // [1,2,3]
 
 // Correctly checking for Array
 Array.isArray(arr);  // true
