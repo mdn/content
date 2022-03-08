@@ -325,8 +325,6 @@ These are properties of the window object that can be set to establish event han
 
 _This interface inherits event handlers from the {{domxref("EventTarget")}} interface and implements event handlers from {{domxref("WindowEventHandlers")}}._
 
-- {{domxref("Window.onbeforeinstallprompt")}} {{non-standard_inline}}
-  - : An event handler property dispatched before a user is prompted to save a web site to a home screen on mobile.
 - {{domxref("Window.ondevicemotion")}}
   - : Called if accelerometer detects a change (For mobile devices)
 - {{domxref("Window.ondeviceorientation")}}
@@ -548,7 +546,6 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
   - : Fired when the browser has successfully installed a page as an application.
 - {{domxref("Window/beforeinstallprompt_event", "beforeinstallprompt")}}
   - : Fired when a user is about to be prompted to install a web application.
-    Also available via the {{domxref("Window/onbeforeinstallprompt", "onbeforeinstallprompt")}} property.
 
 ### Messaging events
 

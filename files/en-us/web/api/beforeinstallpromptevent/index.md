@@ -10,7 +10,7 @@ tags:
   - Reference
 browser-compat: api.BeforeInstallPromptEvent
 ---
-The **`BeforeInstallPromptEvent`** is fired at the {{domxref("Window.onbeforeinstallprompt")}} handler before a user is prompted to "install" a web site to a home screen on mobile.
+The **`BeforeInstallPromptEvent`** is fired at the {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} handler before a user is prompted to "install" a web site to a home screen on mobile.
 
 This interface inherits from the {{domxref("Event")}} interface.
 
