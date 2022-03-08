@@ -51,35 +51,28 @@ Another very common task in modern websites and applications is retrieving indiv
 
 ## What is the problem here?
 
-Originally page loading on the web was simple — you'd send a request for a website to a server, and as long as nothing went wrong, the assets that made the web page would be downloaded and displayed on your computer.
+A web page consists of an HTML page and (usually) various other files, such as stylesheets, scripts, and images. The basic model of page loading on the Web is that your browser makes one or more HTTP requests to the server for the files needed to display the page, and the server responds with the requested files. If you visit another page, the browser requests the new files, and the server responds with them.
 
-![A basic representation of a web site architecture](web-site-architechture@2x.png)
+![Traditional page loading](traditional-loading.svg)
 
-The trouble with this model is that whenever you want to update any part of the page, for example, to display a new set of products or load a new page, you've got to load the entire page again. This is extremely wasteful and results in a poor user experience, especially as pages get larger and more complex.
+This model works perfectly well for many sites. But consider a website that's very data-driven. For example, a library website like the [Vancouver Public Library](https://vpl.ca). Among other things you could think of a site like this as a user interface to a database. It might let you search for a particular genre of book, or might show you recommendations for books you might like, based on books you've previously borrowed. When you do this, it needs to update the page with the new set of books to display. But note that most of the page content — including items like the page header, sidebar, and footer — stays the same.
 
-### Enter Ajax
+The trouble with the traditional model here is that we'd have to fetch and load the entire page, even when we only need to update one part of it. This is inefficient and can result in a poor user experience.
 
-This led to the creation of technologies that allow web pages to request small chunks of data (such as [HTML](/en-US/docs/Web/HTML), {{glossary("XML")}}, [JSON](/en-US/docs/Learn/JavaScript/Objects/JSON), or plain text) and display them only when needed, helping to solve the problem described above.
+So instead of the traditional model, many websites use JavaScript APIs to request data from the server and update the page content without a page load. So when the user searches for a new product, the browser only requests the data which is needed to update the page — the set of new books to display, for instance.
 
-This is achieved by using the [Fetch API](/en-US/docs/Web/API/Fetch_API). This allows web pages to directly handle making [HTTP](/en-US/docs/Web/HTTP) requests for specific resources available on a server and formatting the resulting data as needed before it is displayed.
+![Using fetch to update pages](fetch-update.svg)
+
+The main API here is the [Fetch API](/en-US/docs/Web/API/Fetch_API). This enables JavaScript running in a page to make an [HTTP](/en-US/docs/Web/HTTP) request to a server to retrieve specific resources. When the server provides them, the JavaScript can use the data to update the page, typically by using [DOM manipulation APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents). The data requested is often [JSON](/en-US/docs/Learn/JavaScript/Objects/JSON). which is a good format for transferring structured data, but can also be HTML or just text.
+
+This is a common pattern for data-driven sites such as Amazon, YouTube, eBay, and so on. With this model:
+
+- Page updates are a lot quicker and you don't have to wait for the page to refresh, meaning that the site feels faster and more responsive.
+- Less data is downloaded on each update, meaning less wasted bandwidth. This may not be such a big issue on a desktop on a broadband connection, but it's a major issue on mobile devices and in countries that don't have ubiquitous fast Internet service.
 
 > **Note:** In the early days, this general technique was known as [Asynchronous](/en-US/docs/Glossary/Asynchronous) JavaScript and XML ([Ajax](/en-US/docs/Glossary/AJAX)), because it tended to request XML data. This is normally not the case these days (you'd be more likely to request JSON), but the result is still the same, and the term "Ajax" is still often used to describe the technique.
 
-![A simple modern architecture for web sites](moderne-web-site-architechture@2x.png)
-
-The Ajax model involves using a web API as a proxy to more intelligently request data rather than just having the browser reload the entire page. Let's think about the significance of this:
-
-1. Go to one of your favorite information-rich sites, like Amazon, YouTube, CNN, etc., and load it.
-2. Now search for something, like a new product. The main content will change, but most of the surrounding information, like the header, footer, navigation menu, etc., will stay the same.
-
-This is a really good thing because:
-
-- Page updates are a lot quicker and you don't have to wait for the page to refresh, meaning that the site feels faster and more responsive.
-- Less data is downloaded on each update, meaning less wasted bandwidth. This may not be such a big issue on a desktop on a broadband connection, but it's a major issue on mobile devices and in developing countries that don't have ubiquitous fast Internet service.
-
 To speed things up even further, some sites also store assets and data on the user's computer when they are first requested, meaning that on subsequent visits they use the local versions instead of downloading fresh copies every time the page is first loaded. The content is only reloaded from the server when it has been updated.
-
-![A basic web app data flow architecture](web-app-architecture@2x.png)
 
 ## The Fetch API
 
