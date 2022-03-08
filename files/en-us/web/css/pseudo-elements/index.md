@@ -8,6 +8,7 @@ tags:
   - Pseudo-element
   - Reference
   - Selectors
+spec-urls: https://www.w3.org/TR/CSS22/selector.html#pseudo-element-selectors
 ---
 {{CSSRef}}
 
@@ -84,9 +85,7 @@ T
 
 ## Specifications
 
-| Specification                | Status                   | Comment                                     |
-| ---------------------------- | ------------------------ | ------------------------------------------- |
-| {{SpecName("CSS1")}} | {{Spec2("CSS1")}} | Defined pseudo-classes and pseudo-elements. |
+{{Specifications}}
 
 ## Browser compatibility
 

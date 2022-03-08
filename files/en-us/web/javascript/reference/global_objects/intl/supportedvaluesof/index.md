@@ -60,7 +60,7 @@ if (typeof Intl.supportedValuesOf !== 'undefined') {
 ### Get all values for key
 
 To get the supported values for calendar you call the method with the key `"calendar"`.
-YOu can then iterate through the returned array as shown below:
+You can then iterate through the returned array as shown below:
 
 ```js
 Intl.supportedValuesOf("calendar").forEach(function(calendar) {
@@ -104,10 +104,6 @@ try {
 }
 ```
 
-## Polyfill
-
-[Intl.supportedValuesOf() polyfill in proposal TC39](https://github.com/tc39/proposal-intl-enumeration/tree/master/polyfill)
-
 ## Specifications
 
 {{Specifications}}
@@ -119,3 +115,4 @@ try {
 ## See also
 
 - {{jsxref("Global_Objects/Intl", "Intl")}}
+- [A polyfill of `Intl.supportedValuesOf` in proposal TC39](https://github.com/tc39/proposal-intl-enumeration/tree/master/polyfill)

@@ -63,7 +63,7 @@ The `{{domxref("Performance.navigation","navigation")}}` property returns a {{do
 
 As shown in the {{domxref("Performance")}} interface's [Browser Compatibility](/en-US/docs/Web/API/Performance#browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers.
 
-To test your browser's support for the {{domxref("Performance")}} interface, run the [`perf-api-support`](https://mdn.github.io/web-performance/perf-api-support.html) application.
+To test your browser's support for the {{domxref("Performance")}} interface, run the [`perf-api-support`](https://mdn.github.io/dom-examples/performance-apis/perf-api-support.html) application.
 
 ## See also
 

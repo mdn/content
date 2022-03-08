@@ -11,6 +11,7 @@ tags:
   - Layout
   - Reference
   - easing-function
+spec-urls: https://drafts.csswg.org/css-easing/#typedef-easing-function
 ---
 {{CSSRef}}
 
@@ -316,9 +317,7 @@ steps(0, jump-none)
 
 ## Specifications
 
-| Specification                                                                                                    | Status                           | Comment             |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('CSS Easing 1', '#typedef-easing-function', '&lt;easing-function&gt;')}} | {{Spec2('CSS Easing 1')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

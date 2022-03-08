@@ -8,6 +8,7 @@ tags:
   - Data Type
   - Reference
   - display-box
+spec-urls: https://drafts.csswg.org/css-display/#typedef-display-box
 ---
 {{CSSRef}}
 
@@ -91,9 +92,7 @@ In this example the outer {{htmlelement("div")}} has a 2-pixel red border and a 
 
 ## Specifications
 
-| Specification                                                                            | Status                           |
-| ---------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('CSS3 Display', '#typedef-display-box', 'display-box')}} | {{Spec2('CSS3 Display')}} |
+{{Specifications}}
 
 ## Browser compatibility
 

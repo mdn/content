@@ -7,6 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://drafts.fxtf.org/filter-effects/#FilterProperty
 ---
 {{CSSRef}}
 
@@ -25,9 +26,7 @@ tags:
 
 ## Specifications
 
-| Specification                                                                | Status                               | Comment             |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{ SpecName('Filters 1.0', '#FilterProperty', 'filter') }} | {{ Spec2('Filters 1.0') }} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -9,6 +9,9 @@ tags:
   - NeedsContent
   - Reference
   - Security
+spec-urls:
+  - https://html.spec.whatwg.org/multipage/infrastructure.html#cors-settings-attributes
+  - https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-crossorigin
 ---
 
 {{HTMLSidebar}}
@@ -74,31 +77,7 @@ The `use-credentials` value must be used when fetching a [manifest](/en-US/docs/
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'infrastructure.html#cors-settings-attributes', 'CORS settings attributes')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'embedded-content.html#attr-img-crossorigin', 'crossorigin')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -8,7 +8,7 @@ tags:
   - Reference
   - Web MIDI API
 ---
-{{DefaultAPISidebar("Web MIDI API")}}
+{{DefaultAPISidebar("Web MIDI API")}}{{SecureContext_Header}}
 
 The Web MIDI API connects to and interacts with with Musical Instrument Digital Interface (MIDI) Devices.
 
@@ -37,7 +37,8 @@ The interfaces deal with the practical aspects of sending and receiving MIDI mes
 
 ### Gaining access to the MIDI port
 
-In the following example the {{domxref("MIDIAccess")}} interface is used to gain access to a MIDI device.
+The {{domxref("navigator.requestMIDIAccess()")}} method returns a promise that resolves to a {{domxref("MIDIAccess")}}, which can then be used to access a MIDI device.
+The method must be called in a secure context.
 
 ```js
 var midi = null;  // global MIDIAccess object

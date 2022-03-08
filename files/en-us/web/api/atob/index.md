@@ -50,11 +50,6 @@ const encodedData = btoa('Hello, world'); // encode a string
 const decodedData = atob(encodedData); // decode the string
 ```
 
-## Polyfill
-
-You can use a polyfill from <https://github.com/MaxArt2501/base64-js/blob/master/base64.js>
-for browsers that don't support it.
-
 ## Specifications
 
 {{Specifications}}

@@ -91,10 +91,6 @@ custom-button:focus-visible {
 
 {{EmbedLiveSample("Selectively_showing_the_focus_indicator", "100%", 60)}}
 
-## Polyfill
-
-You can polyfill `:focus-visible` using [focus-visible.js](https://github.com/WICG/focus-visible).
-
 ## Accessibility concerns
 
 ### Low vision
@@ -119,3 +115,4 @@ It may not be obvious as to why the focus indicator is appearing and disappearin
 
 - {{CSSxRef(":focus")}}
 - {{CSSxRef(":focus-within")}}
+- [A polyfill for `:focus-visible`](https://github.com/WICG/focus-visible)

@@ -162,10 +162,6 @@ console.log(usedOptions.timeZone);
 // → "America/New_York" (the users default timezone)
 ```
 
-## Polyfill
-
-[formatjs Intl.DateTimeFormat polyfill](https://formatjs.io/docs/polyfills/intl-datetimeformat)
-
 ## Specifications
 
 {{Specifications}}
@@ -177,3 +173,4 @@ console.log(usedOptions.timeZone);
 ## See also
 
 - {{jsxref("Intl")}}
+- [A polyfill of `Intl.DateTimeFormat` in FormatJS](https://formatjs.io/docs/polyfills/intl-datetimeformat)

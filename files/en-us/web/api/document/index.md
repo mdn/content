@@ -126,16 +126,8 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
 
 _The `Document` interface is extended with additional event handlers defined in [GlobalEventHandlers](/en-US/docs/Web/API/GlobalEventHandlers#event_handlers)._
 
-- {{DOMxRef("Document.onafterscriptexecute")}} {{Non-standard_Inline}}
-  - : Represents the event handling code for the {{domxref("Document/afterscriptexecute_event", "afterscriptexecute")}} event.
-- {{DOMxRef("Document.onbeforescriptexecute")}} {{Non-standard_Inline}}
-  - : Represents the event handling code for the {{domxref("Document/beforescriptexecute_event", "beforescriptexecute")}} event.
-- {{DOMxRef("Document.onreadystatechange")}}
-  - : Represents the event handling code for the {{domxref("Document/readystatechange_event", "readystatechange")}} event.
 - {{DOMxRef("GlobalEventHandlers.onselectionchange")}} {{Experimental_Inline}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Document/selectionchange_event", "selectionchange")}} event is raised.
-- {{DOMxRef("Document.onvisibilitychange")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Document/visibilitychange_event", "visibilitychange")}} event is raised.
 
 ### Deprecated properties
 
@@ -319,12 +311,15 @@ The `Document` interface for HTML documents inherit from the {{DOMxRef("HTMLDocu
 
 Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
 
+- {{DOMxRef("Document.afterscriptexecute_event", "afterscriptexecute")}} {{Non-standard_Inline}}
+  - : Fired when a static {{HTMLElement("script")}} element finishes executing its script
+- {{DOMxRef("Document.beforescriptexecute_event", "beforescriptexecute")}} {{Non-standard_Inline}}
+  - : Fired when a static {{HTMLElement("script")}} is about to start executing.
 - {{DOMxRef("Document/scroll_event", "scroll")}}
   - : Fired when the document view or an element has been scrolled.
     Also available via the {{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}} property.
 - {{DOMxRef("Document/visibilitychange_event", "visibilitychange")}}
   - : Fired when the content of a tab has become visible or has been hidden.
-    Also available via the {{DOMxRef("Document.onvisibilitychange", "onvisibilitychange")}} property.
 - {{DOMxRef("Document/wheel_event","wheel")}}
   - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).
     Also available via the {{DOMxRef("GlobalEventHandlers.onwheel", "onwheel")}} property.
@@ -402,7 +397,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when the document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
 - {{DOMxRef("Document/readystatechange_event", "readystatechange")}}
   - : Fired when the {{DOMxRef("Document/readyState", "readyState")}} attribute of a document has changed.
-    Also available via the `onreadystatechange` property.
 
 ### Pointer events
 

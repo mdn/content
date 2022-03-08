@@ -7,7 +7,6 @@ tags:
   - CSS Logical Property
   - CSS Property
   - Element size
-  - Experimental
   - Reference
   - Text Direction
   - Writing Mode

@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Motion Path
   - CSS Property
-  - Experimental
   - Reference
   - recipe:css-shorthand-property
 browser-compat: css.properties.offset

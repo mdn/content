@@ -165,7 +165,7 @@ let birthday = new Date(1995, 11, 17, 3, 24, 0)
 let birthday = new Date(628021800000)            // passing epoch timestamp
 ```
 
-###  To get Date, Month and Year or Time
+### To get Date, Month and Year or Time
 
 ```js
 const date = new Date();

@@ -8,6 +8,7 @@ tags:
   - Data Type
   - Reference
   - display-outside
+spec-urls: https://drafts.csswg.org/css-display/#typedef-display-outside
 ---
 {{CSSRef}}
 
@@ -50,9 +51,7 @@ span {
 
 ## Specifications
 
-| Specification                                                                                        | Status                           |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('CSS3 Display', '#typedef-display-outside', 'display-outside')}} | {{Spec2('CSS3 Display')}} |
+{{Specifications}}
 
 ## Browser compatibility
 

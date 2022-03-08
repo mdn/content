@@ -326,8 +326,9 @@ This demo has exactly the same functionality as in the previous two sections, ex
 ### Using addEventListener instead
 
 Instead of including JavaScript in your HTML, use a pure JavaScript construct.
-In this case the `addEventListener()` function allows you to select all the buttons using one instruction.
-The code we used above to serve this purpose looks like this:
+The `querySelectorAll()` function allows you to select all the buttons on a page.
+You can then loop through the buttons, assigning a handler for each using `addEventListener()`.
+The code for this is shown below:
 
 ```js
 const buttons = document.querySelectorAll('button');
@@ -372,7 +373,8 @@ In the external example, we use a more modern JavaScript feature to solve the pr
 
 In this case both the script and the HTML will load simultaneously and the code will work.
 
-> **Note:** In the external case, we did not need to use the `DOMContentLoaded` event because the `defer` attribute solved the problem for us. We didn't use the `defer` solution for the internal JavaScript example because `defer` only works for external scripts.
+> **Note:** In the external case, we did not need to use the `DOMContentLoaded` event because the `defer` attribute solved the problem for us.
+> We didn't use the `defer` solution for the internal JavaScript example because `defer` only works for external scripts.
 
 An old-fashioned solution to this problem used to be to put your script element right at the bottom of the body (e.g. just before the `</body>` tag), so that it would load after all the HTML has been parsed.
 The problem with this solution is that loading/parsing of the script is completely blocked until the HTML DOM has been loaded.

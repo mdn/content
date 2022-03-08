@@ -57,7 +57,7 @@ The truth table for the OR operation is:
 ```
 
 Bitwise ORing any number `x` with `0` yields
-`x`.
+`x` converted to a 32-bit integer.
 
 ## Examples
 

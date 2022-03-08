@@ -64,7 +64,7 @@ the values, in the order they were added to the Headers object:
 ```js
 myHeaders.append('Accept-Encoding', 'deflate');
 myHeaders.append('Accept-Encoding', 'gzip');
-myHeaders.get('Accept-Encoding'); // Returns "deflate,gzip"
+myHeaders.get('Accept-Encoding'); // Returns "deflate, gzip"
 myHeaders.get('Accept-Encoding').split(',').map(v => v.trimStart()); // Returns [ "deflate", "gzip" ]
 ```
 

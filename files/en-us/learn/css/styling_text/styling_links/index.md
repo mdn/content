@@ -315,8 +315,8 @@ Let's look at some HTML and CSS that will give us the effect we want. First, som
 
 ```html
 <p>For more information on the weather, visit our <a href="#">weather page</a>,
-look at <a href="#">weather on Wikipedia</a>, or check
-out <a href="#">weather on Extreme Science</a>.</p>
+look at <a href="https://en.wikipedia.org/">weather on Wikipedia</a>, or check
+out <a href="https://www.nationalgeographic.org/topics/resource-library-weather/">weather on National Geographic</a>.</p>
 ```
 
 Next, the CSS:
@@ -354,7 +354,7 @@ a:active {
   color: red;
 }
 
-a[href*="#"] {
+a[href^="http"] {
   background: url('external-link-52.png') no-repeat 100% 0;
   background-size: 16px 16px;
   padding-right: 19px;
@@ -369,7 +369,7 @@ We also use {{cssxref("background-size")}} to specify the size we want the backg
 
 Finally, we set some {{cssxref("padding-right")}} on the links to make space for the background image to appear in, so we aren't overlapping it with the text.
 
-A final word: how did we select just external links? Well, if you are writing your [HTML links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) properly, you should only be using absolute URLs for external links — it is more efficient to use relative links to link to other parts of your own site (as with the first link). The text "http" should therefore only appear in external links (like the second and third ones), and we can select this with an [attribute selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors#attribute_selectors): `a[href*="http"]` selects {{htmlelement("a")}} elements, but only if they have an {{htmlattrxref("href","a")}} attribute with a value that contains "http" somewhere inside it.
+A final word: how did we select just external links? Well, if you are writing your [HTML links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) properly, you should only be using absolute URLs for external links — it is more efficient to use relative links to link to other parts of your own site (as with the first link). The text "http" should therefore only appear in external links (like the second and third ones), and we can select this with an [attribute selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors#attribute_selectors): `a[href^="http"]` selects {{htmlelement("a")}} elements, but only if they have an {{htmlattrxref("href","a")}} attribute with a value that begins with "http".
 
 So that's it. Try revisiting the active learning section above and trying this new technique out!
 
