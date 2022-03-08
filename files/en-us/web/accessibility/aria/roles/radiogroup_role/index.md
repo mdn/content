@@ -64,8 +64,6 @@ Use the  `[aria-checked="true"]` [attribute selector](/en-US/docs/Web/CSS/Attrib
 
 Use CSS {{CSSXRef(':hover')}} and {{CSSXRef(':focus')}} pseudo-classes for styling visual keyboard focus and hover. The focus and hover effect should encompass both the radio button and label to make it easier to perceive which option is being chosen and to indicate that clicking either the label or button will activate the radio button. 
 
-Make sure to also change the {{CSSXRef('cursor')}} to a pointer when hovering over the radio button to help people identify the labels and radios as interactive elements.
-
 ## Examples
 
 The basic set up for a `radiogroup` using non-semantic ARIA roles instead of semantic HTML is as follows:
