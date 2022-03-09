@@ -201,7 +201,7 @@ Now you should see that your white outline has become much thicker! That's it fo
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles/index.html", '100%', 250)}}
 
-> **Note:** The finished code is available on GitHub as [2_canvas_rectangles](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles/).
+> **Note:** The finished code is available on GitHub as [2_canvas_rectangles](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles/).
 
 ### Drawing paths
 
