@@ -24,15 +24,8 @@ When you are working on a website locally on your computer, you should keep all 
 
 ## An aside on casing and spacing
 
-Throughout this article, you'll notice that we ask you to name folders and files entirely in lowercase with no spaces because:
-
-1. Many computers, particularly web servers, are case-sensitive. So, for example, if you put an image on your website at `test-site/MyImage.jpg` and then in a different file, you try to invoke the image as `test-site/myimage.jpg`, it may not work.
-2. Some browsers and programming languages do not handle spaces consistently. For example, if you use spaces in your filename, some may treat the filename as two filenames or replace the areas in your filenames with "%20" (the character code for spaces in URLs), resulting in breaking all your links. Although this matters almost only in URLs, and it is something that every system understands, using delimiters like hyphens or underscores instead of spaces is still safer.
-3. The choice between using hyphens or underscores to separate words in a file name (`my-file.html` vs. `my_file.html`) is a matter of preference, as both have benefits and drawbacks. While we treat hyphens as a word-separator, underscores are easier to read and represent the space character. The Google search engine treats a hyphen as a word separator but does not regard an underscore that way.
-
-The question of how to name files is distinct from the question of how to name URLs. The name you give a file on disk is not necessarily (or even usually) the same as the name used in its URL. URL structure is generally determined in the configuration of your web server. You should consider more strict practices when designing URL structure, particularly how search engines index your pages. For example, these are Google's guidelines: https://developers.google.com/search/docs/advanced/guidelines/url-structure
-
-What's most important here is to remain consistent.
+Throughout this article, you'll notice that we ask you to name folders and files entirely in lowercase and use hyphens instead of spaces to separate words. Although there are many conventions for naming files and URLs, we've found this to be the most common convention in the industry because some systems are case-sensitive, and some have problems with spaces.
+This is only a recommendation, and you can use any casing that you like if you know what you're doing. What's most important here is to remain consistent.
 
 ## What structure should your website have?
 
