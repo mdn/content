@@ -345,7 +345,7 @@ Here we draw two lines of text, one outline and the other stroke. The final exam
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/4_canvas_text/index.html", '100%', 180)}}
 
-> **Note:** The finished code is available on GitHub as [4_canvas_text](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/4_canvas_text/).
+> **Note:** The finished code is available on GitHub as [4_canvas_text](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/4_canvas_text/).
 
 Have a play and see what you can come up with! You can find more information on the options available for canvas text at [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
