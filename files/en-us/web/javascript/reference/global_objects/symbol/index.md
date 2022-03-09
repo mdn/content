@@ -104,8 +104,6 @@ The method {{jsxref("Object.getOwnPropertySymbols()")}} returns an array of Symb
 
 ## Instance methods
 
-- {{jsxref("Symbol.prototype.toSource()")}}
-  - : Returns a string containing the source of the Symbol. Overrides the {{jsxref("Object.prototype.toSource()")}} method.
 - {{jsxref("Symbol.prototype.toString()")}}
   - : Returns a string containing the description of the Symbol. Overrides the {{jsxref("Object.prototype.toString()")}} method.
 - {{jsxref("Symbol.prototype.valueOf()")}}
