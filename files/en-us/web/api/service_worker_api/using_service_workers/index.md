@@ -422,22 +422,25 @@ If your service worker has previously been installed, but then a new version of 
 You'll want to update your `install` event listener in the new service worker to something like this (notice the new version number):
 
 ```js
-const addResourcesToCache = async ()=>{
+const addResourcesToCache = async (resources)=>{
   const cache = await caches.open('v2')
-  await cache.addAll([
-    './sw-test/',
-    './sw-test/index.html',
-    './sw-test/style.css',
-    './sw-test/app.js',
-    './sw-test/image-list.js',
-
-    …
-
-    // include other new resources for the new version...
-  ]);
+  await cache.addAll(resources);
 }
+
 self.addEventListener('install', (event) => {
-  event.waitUntil(addResourcesToCache());
+  event.waitUntil(addResourcesToCache(
+    [
+      './sw-test/',
+      './sw-test/index.html',
+      './sw-test/style.css',
+      './sw-test/app.js',
+      './sw-test/image-list.js',
+
+      …
+
+      // include other new resources for the new version...
+    ]
+  ));
 });
 ```
 
