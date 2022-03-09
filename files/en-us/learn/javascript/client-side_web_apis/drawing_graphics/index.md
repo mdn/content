@@ -353,7 +353,7 @@ Have a play and see what you can come up with! You can find more information on 
 
 It is possible to render external images onto your canvas. These can be simple images, frames from videos, or the content of other canvases. For the moment we'll just look at the case of using some simple images on our canvas.
 
-1. As before, make another fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/1_canvas_template/)) in which to draw the new example.
+1. As before, make another fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template/)) in which to draw the new example.
 
     Images are drawn onto canvas using the {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} method. The simplest version takes three parameters — a reference to the image you want to render, and the X and Y coordinates of the image's top left corner.
 
