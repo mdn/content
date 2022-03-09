@@ -470,7 +470,7 @@ At this point, we'd like to encourage you to play with the example and make it y
 - Play with the `length` and `moveOffset` values.
 - Introduce some random numbers using that `rand()` function we included above but didn't use.
 
-> **Note:** The finished code is available on GitHub as [6_canvas_for_loop](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop/).
+> **Note:** The finished code is available on GitHub as [6_canvas_for_loop](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop/).
 
 ### Animations
 
