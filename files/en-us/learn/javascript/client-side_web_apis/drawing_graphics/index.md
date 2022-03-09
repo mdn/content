@@ -402,7 +402,7 @@ Playing with loops in canvas is rather fun — you can run canvas commands insid
 
 Let's build a simple example.
 
-1. Make another fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/1_canvas_template)) and open it in your code editor.
+1. Make another fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)) and open it in your code editor.
 2. Add the following line to the bottom of your JavaScript. This contains a new method, {{domxref("CanvasRenderingContext2D.translate", "translate()")}}, which moves the origin point of the canvas:
 
     ```js
