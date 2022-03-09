@@ -98,6 +98,8 @@ function compare(a, b) {
 }
 ```
 
+> **Note:** Applications should not rely on order of arguments or calls, as those are implementation dependent.
+
 To compare numbers instead of strings, the compare function can subtract `b`
 from `a`. The following function will sort the array in ascending order (if
 it doesn't contain `Infinity` and `NaN`):
