@@ -619,7 +619,7 @@ That's it! The final example should look like so:
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation/index.html", '100%', 260)}}
 
-> **Note:** The finished code is available on GitHub as [7_canvas_walking_animation](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation).
+> **Note:** The finished code is available on GitHub as [7_canvas_walking_animation](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation).
 
 ### A simple drawing application
 
