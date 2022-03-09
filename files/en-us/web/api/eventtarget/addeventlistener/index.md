@@ -475,6 +475,7 @@ Click the outer, middle, inner containers respectively to see how the options wo
 Before using a particular value in the `options` object, it's a
 good idea to ensure that the user's browser supports it, since these are an addition
 that not all browsers have supported historically. See {{anch("Safely detecting option support")}} for details.
+
 ## Other notes
 
 ### The value of "this" within the handler
