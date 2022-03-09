@@ -233,7 +233,6 @@ First, you'll need to make a connection between the API and your app. In the cas
       e.preventDefault();
 
       // Assemble the full URL
-      //url = baseURL + '?api-key=' + key + '&page=' + pageNumber + '&q=' + searchTerm.value + '&fq=document_type:("article")';
       let url = `${baseURL}?api-key=${key}&page=${pageNumber}&q=${searchTerm.value}&fq=document_type:("article")`;
 
       if (startDate.value !== '') {
