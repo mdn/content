@@ -189,7 +189,7 @@ Let's build up the example, so you can understand how it works.
     submitBtn.addEventListener('click', () => {
       // store the entered name in web storage
       localStorage.setItem('name', nameInput.value);
-      // run nameDisplayCheck() to sort out displaying the personalised greetings and updating the form display
+      // run nameDisplayCheck() to sort out displaying the personalized greetings and updating the form display
       nameDisplayCheck();
     });
     ```
@@ -300,7 +300,7 @@ Now let's look at what we have to do in the first place, to actually set up a da
 
     // success handler signifies that the database opened successfully
     openRequest.addEventListener('success', () => {
-      console.log('Database opened succesfully');
+      console.log('Database opened successfully');
 
       // Store the opened database object in the db variable. This is used a lot below
       db = openRequest.result;
