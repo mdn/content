@@ -38,6 +38,11 @@ The `hover` feature is specified as a keyword value chosen from the list below.
     background: yellow;
   }
 }
+@media not all and (hover) {
+  a {
+    background-color: deeppink;
+  }
+}
 ```
 
 ### Result
