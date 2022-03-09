@@ -67,10 +67,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.10.tgz#7488205d83b2e8c54a4e6b659f496d09c48152cb"
   integrity sha512-z3UzXqOjrgUnKENwdhFZmU7oeEWTOjUmWGQtXTOEbTR1FdwSBF6RCU6RPkv10ryP00y5ybCUm++4t5B8Wc3tPg==
 
-"@mdn/yari@0.7.13":
-  version "0.7.13"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.7.13.tgz#0a768f3933b7a0deff9d8f6c1dfcaaad77d0187f"
-  integrity sha512-z/unUS1i3gEbXJholSbOKIkdh39BMNLPG5bhhrncMF244ahCX+WNpVcbHNhjScEk1olKzgpGCz1hMiexWUKVNw==
+"@mdn/yari@0.7.22":
+  version "0.7.22"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.7.22.tgz#db9b0e84b74dd1ddd09a9670ab35108434324309"
+  integrity sha512-22pDk7XBYWUOZfiSImdD8Io+Qf6PLKyxd/eABbV+hFl/LHvMhCQvDLauI/KLfGjpSCb78RCiPMttEpJHyUiXTg==
   dependencies:
     "@babel/helper-builder-react-jsx" "^7.16.7"
     "@caporal/core" "2.0.2"
@@ -109,7 +109,7 @@
     imagemin-mozjpeg "9.0.0"
     imagemin-pngquant "9.0.2"
     imagemin-svgo "9.0.0"
-    inquirer "^8.2.0"
+    inquirer "^8.2.1"
     is-svg "4.2.2"
     js-yaml "4.1.0"
     klaw-sync "^6.0.0"
@@ -2501,10 +2501,10 @@ inquirer@^6.0.0:
     strip-ansi "^5.1.0"
     through "^2.3.6"
 
-inquirer@^8.2.0:
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-8.2.0.tgz#f44f008dd344bbfc4b30031f45d984e034a3ac3a"
-  integrity sha512-0crLweprevJ02tTuA6ThpoAERAGyVILC4sS74uib58Xf/zSr1/ZWtmm7D5CI+bSQEaA04f0K7idaHpQbSWgiVQ==
+inquirer@^8.2.1:
+  version "8.2.1"
+  resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-8.2.1.tgz#e00022e3e8930a92662f760f020686530a84671d"
+  integrity sha512-pxhBaw9cyTFMjwKtkjePWDhvwzvrNGAw7En4hottzlPvz80GZaMZthdDU35aA6/f5FRZf3uhE057q8w1DE3V2g==
   dependencies:
     ansi-escapes "^4.2.1"
     chalk "^4.1.1"
@@ -2516,7 +2516,7 @@ inquirer@^8.2.0:
     mute-stream "0.0.8"
     ora "^5.4.1"
     run-async "^2.4.0"
-    rxjs "^7.2.0"
+    rxjs "^7.5.5"
     string-width "^4.1.0"
     strip-ansi "^6.0.0"
     through "^2.3.6"
@@ -4109,12 +4109,12 @@ rxjs@^6.4.0:
   dependencies:
     tslib "^1.9.0"
 
-rxjs@^7.2.0:
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.2.0.tgz#5cd12409639e9514a71c9f5f9192b2c4ae94de31"
-  integrity sha512-aX8w9OpKrQmiPKfT1bqETtUr9JygIz6GZ+gql8v7CijClsP0laoFUdKzxFAoWuRdSlOdU2+crss+cMf+cqMTnw==
+rxjs@^7.5.5:
+  version "7.5.5"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.5.5.tgz#2ebad89af0f560f460ad5cc4213219e1f7dd4e9f"
+  integrity sha512-sy+H0pQofO95VDmFLzyaw9xNJU4KTRSwQIGM6+iG3SypAtCiLDzpeG8sJrNCWn2Up9km+KhkvTdbkrdy+yzZdw==
   dependencies:
-    tslib "~2.1.0"
+    tslib "^2.1.0"
 
 safe-buffer@*, safe-buffer@5.2.1, safe-buffer@^5.0.1, safe-buffer@^5.1.1, safe-buffer@~5.2.0:
   version "5.2.1"
@@ -4680,15 +4680,10 @@ tslib@^1.9.0:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.0.tgz#d624983f3e2c5e0b55307c3dd6c86acd737622c6"
   integrity sha512-+Zw5lu0D9tvBMjGP8LpvMb0u2WW2QV3y+D8mO6J+cNzCYIN4sVy43Bf9vl92nqFahutN0I8zHa7cc4vihIshnw==
 
-tslib@^2.2.0:
+tslib@^2.1.0, tslib@^2.2.0:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
   integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
-
-tslib@~2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.1.0.tgz#da60860f1c2ecaa5703ab7d39bc05b6bf988b97a"
-  integrity sha512-hcVC3wYEziELGGmEEXue7D75zbwIIVUMWAVbHItGPx0ziyXxrOMQx4rQEVEV45Ut/1IotuEvwqPopzIOkDMf0A==
 
 tunnel-agent@^0.6.0:
   version "0.6.0"
