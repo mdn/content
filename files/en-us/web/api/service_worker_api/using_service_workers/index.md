@@ -341,7 +341,7 @@ If the resources aren't in the cache, they are requested from the network.
 If we were being really clever, we would not only request the resource from the network; we would also save it into the cache so that later requests for that resource could be retrieved offline too! This would mean that if extra images were added to the Star Wars gallery, our app could automatically grab them and cache them. The following would do the trick:
 
 ```js
-const putInCache = async response => {
+const putInCache = async (request, response) => {
   const cache = await caches.open("v1");
   await cache.put(request, response);
 }
