@@ -171,13 +171,6 @@ Have a play with the other options shown in the documentation and see what you c
 
 > **Note:** If you have trouble getting the example to work, check your code against our [finished version](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/mapquest/finished/script.js) (also [see it running live here](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/mapquest/finished/)).
 
-## What about Google Maps?
-
-Google Maps is arguably the most popular maps API, so why didn't we use it for our maps example? We did [create an example](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/google-maps/finished-maps-example.html) to show how to use it, but in the end we went with Mapquest for a couple of reasons:
-
-- It is much easier to get started with. For Google APIs in general, you need to create a Google account and log into the [Google Cloud Platform Console](https://console.cloud.google.com) to create API keys, etc., and the process is fairly complex. For the [Google Maps API](https://cloud.google.com/maps-platform/) in particular, you need to provide a credit card for billing purposes (although basic usage is free), which we didn't think was acceptable for a basic tutorial.
-- We wanted to show that there are other alternatives available.
-
 ## A RESTful API — NYTimes
 
 Now let's look at another API example — the [New York Times API](https://developer.nytimes.com). This API allows you to retrieve New York Times news story information and display it on your site. This type of API is known as a **RESTful API** — instead of getting data using the features of a JavaScript library like we did with Mapquest, we get data by making HTTP requests to specific URLs, with data like search terms and other properties encoded in the URL (often as URL parameters). This is a common pattern you'll encounter with APIs.
