@@ -132,6 +132,24 @@ console.log(numbers);
 // [1, 2, 3, 4, 5]
 ```
 
+The `sort` method implementation is not fixed. It will be wrong to assume that the `compareFunction` will be called `n` number of times ( where n is the length of array) and will compare the arguments in a specified sequence.
+
+```js
+const numbers = [25, 8, 7, 41]
+
+numbers.sort(function(a,b){
+    console.log(`compare: ${a} ${b}`)
+    return a - b
+})
+
+// compare: 8 25
+// compare: 7 8
+// compare: 41 7
+// compare: 41 8
+// compare: 41 25
+// [7, 8, 25, 41]
+```
+
 Arrays of objects can be sorted by comparing the value of one of their properties.
 
 ```js
