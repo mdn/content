@@ -422,7 +422,7 @@ If your service worker has previously been installed, but then a new version of 
 You'll want to update your `install` event listener in the new service worker to something like this (notice the new version number):
 
 ```js
-const addResourcesToCache = async (resources)=>{
+const addResourcesToCache = async (resources) => {
   const cache = await caches.open('v2')
   await cache.addAll(resources);
 }
