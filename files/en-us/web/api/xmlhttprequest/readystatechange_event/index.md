@@ -21,9 +21,9 @@ The `readystatechange` event is fired whenever the {{domxref("XMLHttpRequest.rea
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('readyState', event => { })
+addEventListener('readystatechange', event => { })
 
-onreadyState = event => { }
+onreadystatechange = event => { }
 ```
 
 ## Event type
