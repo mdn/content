@@ -152,7 +152,7 @@ Drawing shapes tends to be done using the rectangle shape primitive, or by traci
 
 Let's start with some simple rectangles.
 
-1. First of all, take a copy of your newly coded canvas template (or make a local copy of the [1_canvas_template](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/1_canvas_template) directory if you didn't follow the above steps).
+1. First of all, take a copy of your newly coded canvas template (or make a local copy of the [1_canvas_template](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template) directory if you didn't follow the above steps).
 2. Next, add the following lines to the bottom of your JavaScript:
 
     ```js
