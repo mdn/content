@@ -148,7 +148,7 @@ numbers.sort(function(a,b){
 // compare; 25 41
 // [7, 8, 25, 41]
 ```
-The above result is one of the possible result. You will get the above output on Mozilla, while Chrome and Edge will give different result. However, the final sorted array will be same on every browser.
+The above result is one of the possible results. You will get the above output on Firefox, while Chrome and Edge will give different results. However, the final sorted array will be the same on every browser.
 
 Arrays of objects can be sorted by comparing the value of one of their properties.
 
