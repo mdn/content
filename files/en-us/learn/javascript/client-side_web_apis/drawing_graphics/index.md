@@ -311,7 +311,7 @@ That's it for now; your final example should look like this:
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/3_canvas_paths/index.html", '100%', 200)}}
 
-> **Note:** The finished code is available on GitHub as [3_canvas_paths](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/3_canvas_paths/).
+> **Note:** The finished code is available on GitHub as [3_canvas_paths](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/3_canvas_paths/).
 
 > **Note:** To find out more about advanced path drawing features such as Bézier curves, check out our [Drawing shapes with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) tutorial.
 
