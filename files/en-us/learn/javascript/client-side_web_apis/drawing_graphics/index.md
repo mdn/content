@@ -87,7 +87,7 @@ Of course, the above message is really unhelpful! In a real example you'd want t
 
 Let's start by creating our own canvas that we draw future experiments on to.
 
-1. First make a local copy of the [0_canvas_start](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/0_canvas_start) directory. It contains three files:
+1. First make a local copy of the [0_canvas_start](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template) directory. It contains three files:
     - "index.html"
     - "script.js"
     - "style.css"
