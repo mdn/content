@@ -3,7 +3,7 @@ title: 'IdleDetector: change event'
 slug: Web/API/IdleDetector/change_event
 tags:
   - API
-  - Property
+  - Event
   - Reference
   - onchange
   - IdleDetector
