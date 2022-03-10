@@ -9447,6 +9447,7 @@
 /en-US/docs/Web/API/Window/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
 /en-US/docs/Web/API/Window/onafterprint	/en-US/docs/Web/API/WindowEventHandlers/onafterprint
 /en-US/docs/Web/API/Window/onappinstalled	/en-US/docs/Web/API/Window/appinstalled_event
+/en-US/docs/Web/API/Window/onbeforeinstallprompt	/en-US/docs/Web/API/Window/beforeinstallprompt_event
 /en-US/docs/Web/API/Window/onbeforeprint	/en-US/docs/Web/API/WindowEventHandlers/onbeforeprint
 /en-US/docs/Web/API/Window/onbeforeunload	/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload
 /en-US/docs/Web/API/Window/onblur	/en-US/docs/Web/API/GlobalEventHandlers/onblur

@@ -85278,6 +85278,20 @@
       "JesseW"
     ]
   },
+  "Web/API/Window/beforeinstallprompt_event": {
+    "modified": "2020-10-15T21:36:30.007Z",
+    "contributors": [
+      "jpmedley",
+      "Sheppy",
+      "sideshowbarker",
+      "rvuong",
+      "connorshea",
+      "wbamberg",
+      "samthor",
+      "chrisdavidmills",
+      "teoli"
+    ]
+  },
   "Web/API/Window/beforeprint_event": {
     "modified": "2020-10-15T21:20:45.870Z",
     "contributors": [
@@ -86635,20 +86649,6 @@
       "Sheppy",
       "ethertank",
       "louisremi"
-    ]
-  },
-  "Web/API/Window/onbeforeinstallprompt": {
-    "modified": "2020-10-15T21:36:30.007Z",
-    "contributors": [
-      "jpmedley",
-      "Sheppy",
-      "sideshowbarker",
-      "rvuong",
-      "connorshea",
-      "wbamberg",
-      "samthor",
-      "chrisdavidmills",
-      "teoli"
     ]
   },
   "Web/API/Window/ondevicemotion": {
