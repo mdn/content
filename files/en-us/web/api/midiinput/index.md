@@ -21,14 +21,14 @@ The **`MIDIInput`** interface of the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI
 
 _This interface doesn't implement any specific properties, but inherits properties from {{domxref("MIDIPort")}}._
 
+## Methods
+
+_This interface doesn't implement any specific methods, but inherits methods from {{domxref("MIDIPort")}}._
+
 ### Events
 
 - {{domxref("MIDIInput.midimessage_event", "midimessage"}}
   - : Fired when the current port receives a MIDI message.
-
-## Methods
-
-_This interface doesn't implement any specific methods, but inherits methods from {{domxref("MIDIPort")}}._
 
 ## Examples
 

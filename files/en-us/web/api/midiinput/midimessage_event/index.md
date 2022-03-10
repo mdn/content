@@ -31,7 +31,10 @@ An {{domxref("MIDIMessageEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-{{page("/en-US/docs/Web/API/MIDIMessageEvent", "Properties")}}
+_This interface also inherits properties from {{domxref("Event")}}._
+
+- {{domxref("MIDIMessageEvent.data")}}
+  - : A {{jsxref("Uint8Array")}} containing the data bytes of a single MIDI message. See the [MIDI specification](https://www.midi.org/specifications-old/item/table-1-summary-of-midi-message) for more information on its form.
 
 ## Examples
 
