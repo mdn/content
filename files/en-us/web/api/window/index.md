@@ -80,7 +80,7 @@ Note that properties which are objects (e.g.,. for overriding the prototype of b
 - {{domxref("Window.innerWidth")}} {{readOnlyInline}}
   - : Gets the width of the content area of the browser window including, if rendered, the vertical scrollbar.
 - {{domxref("isSecureContext")}} {{experimental_inline}} {{readOnlyInline}}
-  - : Indicates whether a context is capable of using features that require secure contexts.
+  - : Returns a boolean indicating whether the current context is secure (`true`) or not (`false`).
 - {{domxref("Window.length")}} {{readOnlyInline}}
   - : Returns the number of frames in the window. See also {{domxref("window.frames")}}.
 - {{domxref("Window.location")}}
@@ -162,8 +162,6 @@ Note that properties which are objects (e.g.,. for overriding the prototype of b
   - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
 - {{domxref("indexedDB")}} {{readonlyInline}}
   - : Provides a mechanism for applications to asynchronously access capabilities of indexed databases; returns an {{domxref("IDBFactory")}} object.
-- {{domxref("isSecureContext")}} {{readOnlyinline}}
-  - : Returns a boolean indicating whether the current context is secure (`true`) or not (`false`).
 - {{domxref("origin")}} {{readOnlyinline}}
   - : Returns the global object's origin, serialized as a string. (This does not yet appear to be implemented in any browser.)
 
