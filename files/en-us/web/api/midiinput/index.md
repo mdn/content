@@ -23,7 +23,7 @@ _This interface doesn't implement any specific properties, but inherits properti
 
 ### Events
 
-- {{domxref("MIDIInput.midimessage_event")}}
+- {{domxref("MIDIInput.midimessage_event", "midimessage"}}
   - : When the current port receives a MIDI message it triggers a `midimessage` event.
 
 ## Methods
