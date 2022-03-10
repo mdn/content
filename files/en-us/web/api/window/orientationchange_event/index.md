@@ -45,7 +45,7 @@ window.addEventListener("orientationchange", function(event) {
 Or use the `onorientationchange` event handler property:
 
 ```js
-window.onorientationchange = function(event) {
+window.onorientationchange = event => {
   console.log("the orientation of the device is now " + event.target.screen.orientation.angle);
 };
 ```
