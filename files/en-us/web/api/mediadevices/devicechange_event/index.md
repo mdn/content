@@ -40,7 +40,7 @@ called once when {{domxref("MediaDevices.getUserMedia()")}} successfully obtains
 stream, and then is called any time the device list changes. It displays in the browser
 window two lists: one of audio devices and one of video devices, with both the device's
 label (name) and whether it's an input or an output device. Because the example provides
-a handler for the {{event("devicechange")}} event, the list is refreshed any time a
+a handler for the `devicechange` event, the list is refreshed any time a
 media device is attached to or removed from the device running the sample.
 
 ```html hidden
@@ -157,7 +157,7 @@ function updateDeviceList() {
     audioList.innerHTML = "";
     videoList.innerHTML = "";
 
-    devices.forEach(function(device) {
+    devices.forEach(device => {
       let elem = document.createElement("li");
       let [kind, type, direction] = device.kind.match(/(\w+)(input|output)/i);
 
@@ -210,7 +210,7 @@ handler, to initially fill out the list when the stream is opened. The second is
 event handler for {{event("devicechange")}}:
 
 ```js
-navigator.mediaDevices.ondevicechange = function(event) {
+navigator.mediaDevices.ondevicechange = event => {
   updateDeviceList();
 }
 ```
