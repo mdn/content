@@ -8,19 +8,28 @@ tags:
   - ARIA Tabpanel
   - ARIA widget
   - Reference
-  - NeedsContent
 ---
-{{draft}}
 
-The ARIA tabpanel role indicates
-
-```html
-TBD
-```
+The ARIA `tabpanel` is a container for the resources of layered content associated with a `tab`.
 
 ## Description
 
-An element with the `tabpanel` role
+A `tabpanel` is part of the a tab intereface. 
+
+Tabs are a common user experience pattern in which a group of visual tabs, usually above or to the side of a content area enable quick switching between multiple layered views. Each tab is defined as such with the [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) role. The group of tabs is a [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role). And every pane of content that is made visible by selecting a tab has a container with the `tabpanel` role. 
+
+Tabpanels are displayed one panel of content at a time. Selecting a different tab changes the currently visible tab; changing the content by making visible a new panel while making the newly selected tab more prominent than the other tabs.
+
+The `tabpanel` role indicates the element is a container for the resources associated with a `tab` role, where each `tab` is contained in a `tablist`. Each element that contains the content panel for a tab has role `tabpanel`.
+
+
+Each tab in a tab list serves as the label for one of the tab panels and can be activated to display that panel. The `tabpanel`, in turn, is the element that contains the content associated with a tab.
+
+When a tabbed interface is initialized, one tab panel is displayed and its associated tab is styled to indicate that it is active. When the user activates one of the other tab elements, the previously displayed tab panel is hidden, the tab panel associated with the activated tab becomes visible, and the tab is considered "active".
+
+Carousel can be created using this tab pattern: slide picker controls can be marked up as `tabs` in a `tablist` with the slide represented by a `tabpanel` element.
+
+Associate each `tabpanel` with its associated `tab` either by including the {{HTMLAttrXRef('id')}} of the `tabpanel` as the value of the `tab`'s [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls) attribute, or by including the id of the tab as the value of the tabpanel's [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute, or both.
 
 ### Associated Roles and Attributes
 
@@ -33,23 +42,11 @@ An element with the `tabpanel` role
 | <kbd>←</kbd>      |        |
 | <kbd>Delete</kbd> |        |
 
-### Required JavaScript features
 
-> **Note:** Include note about semantic alternatives to using this role or attribute. The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Then post full details in best practices section below.
 
-## Examples
+## Example
 
-Fill in a simple example that nicely shows a typical usage of the property, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information).
-
-```html
-<div role="tablist">
-<div role="tab" aria-selected="true" aria-controls="tabpanel-id"
-id="tab-id" tabindex="0">Tab label</div>
-```
-
-### Added benefits
-
-Any additional benefits this feature has for non-typical screen reader users, like Google or mobile speech recognition.
+See the [`tabpanel`, `tab`, and `tablist` example](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role#Example) in the [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) role definition.
 
 ## Specifications
 
@@ -58,9 +55,6 @@ Any additional benefits this feature has for non-typical screen reader users, li
 | {{SpecName("ARIA","#tabpanel","tabpanel")}}                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#tabpanel","tabpanel")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
-## Precedence order
-
-What are the related properties, and in what order will this attribute or property be read, which property will take precedence over this one, and which property will be overwritten.
 
 <section id="Quick_links">
 
