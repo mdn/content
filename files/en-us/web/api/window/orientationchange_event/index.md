@@ -37,7 +37,7 @@ A generic {{domxref("Event")}}.
 You can use the `orientationchange` event in an {{domxref("EventTarget/addEventListener", "addEventListener")}} method:
 
 ```js
-window.addEventListener("orientationchange", (event) => {
+window.addEventListener("orientationchange", event => {
   console.log("the orientation of the device is now " + event.target.screen.orientation.angle);
 });
 ```
