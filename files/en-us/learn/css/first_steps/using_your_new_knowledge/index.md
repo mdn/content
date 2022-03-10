@@ -1,6 +1,6 @@
 ---
 title: Styling a biography page
-slug: Learn/CSS/First_steps/Styling_a_biography_page
+slug: learn/css/first_steps/styling_a_biography_page
 tags:
   - Assessment
   - Beginner
