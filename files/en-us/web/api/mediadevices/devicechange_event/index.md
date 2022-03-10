@@ -10,7 +10,7 @@ tags:
   - MediaDevices
   - Reference
   - Video
-  - events
+  - Event
 browser-compat: api.MediaDevices.devicechange_event
 ---
 {{APIRef}}
