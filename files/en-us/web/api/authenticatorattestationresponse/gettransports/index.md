@@ -40,8 +40,7 @@ None.
 ### Return value
 
 An {{jsxref("Array")}} containing the different transports supported by the
-authenticator or nothing if this information is not available.of the processing of the
-different extensions by the client. The elements of this array are supposed to be in
+authenticator or nothing if this information is not available. The elements of this array are supposed to be in
 lexicographical order. Their values may be :
 
 - `"usb"`: the authenticator can be contacted via a removable USB link
