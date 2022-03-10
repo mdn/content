@@ -447,7 +447,6 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
     Also available via the {{domxref("WindowEventHandlers/onlanguagechange", "onlanguagechange")}} property.
 - {{domxref("Window/orientationchange_event", "orientationchange")}} {{deprecated_inline}}
   - : Fired when the orientation of the device has changed.
-    Also available via the {{domxref("Window/onorientationchange", "onorientationchange")}} property.
 - {{domxref("Window/devicemotion_event", "devicemotion")}}
   - : Fired at a regular interval, indicating the amount of physical force of acceleration the device is receiving and the rate of rotation, if available.
 - {{domxref("Window/deviceorientation_event", "deviceorientation")}}
