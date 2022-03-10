@@ -7941,16 +7941,6 @@
       "ExE-Boss"
     ]
   },
-  "Learn/CSS/First_steps/Using_your_new_knowledge": {
-    "modified": "2020-11-20T01:07:05.733Z",
-    "contributors": [
-      "schalkneethling",
-      "hakantr",
-      "salutis",
-      "chrisdavidmills",
-      "rachelandrew"
-    ]
-  },
   "Learn/CSS/First_steps/What_is_CSS": {
     "modified": "2020-11-20T01:04:49.095Z",
     "contributors": [
@@ -155929,6 +155919,16 @@
       "tomasdev",
       "jpmedley",
       "chrisdavidmills"
+    ]
+  },
+  "learn/css/first_steps/styling_a_biography_page": {
+    "modified": "2020-11-20T01:07:05.733Z",
+    "contributors": [
+      "schalkneethling",
+      "hakantr",
+      "salutis",
+      "chrisdavidmills",
+      "rachelandrew"
     ]
   },
   "web/css/_colon_user-valid": {
