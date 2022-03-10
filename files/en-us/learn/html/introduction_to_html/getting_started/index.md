@@ -257,7 +257,7 @@ This would output the following:
 
 > **Note:** Empty elements are sometimes called _void elements_.
 
-> **Note:** In the previous versions of HTML, we used to add `/` at the end of empty elements, for example: `<img src="images/cat.jpg" alt="cat" />`, but we don't have to do this in HTML5.
+> **Note:** In HTML, there is no requirement to add a `/` at the end of an empty element's tag, for example: `<img src="images/cat.jpg" alt="cat" />`. However, it is also a valid syntax and you may do this when you want your HTML to be valid XML.
 
 ## Attributes
 
