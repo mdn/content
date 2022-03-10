@@ -194,7 +194,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestAnimationFrame")}}.
 - {{domxref("Window.cancelIdleCallback()")}} {{experimental_inline}}
   - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestIdleCallback")}}.
-- {{domxref("Window.clearImmediate()")}}
+- {{domxref("Window.clearImmediate()")}} {{Non-standard_inline}}
   - : Cancels the repeated execution set using `setImmediate`.
 - {{domxref("Window.close()")}}
   - : Closes the current window.
@@ -244,7 +244,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Scrolls the current document by the specified number of pages.
 - {{domxref("Window.scrollTo()")}}
   - : Scrolls to a particular set of coordinates in the document.
-- {{domxref("Window.setImmediate()")}}
+- {{domxref("Window.setImmediate()")}} {{Non-standard_inline}}
   - : Executes a function after the browser has finished other heavy tasks
 - {{domxref("Window.setResizable()")}} {{Non-standard_inline}}
   - : Toggles a user's ability to resize a window.
