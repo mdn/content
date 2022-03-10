@@ -87,8 +87,11 @@ Of course, the above message is really unhelpful! In a real example you'd want t
 
 Let's start by creating our own canvas that we draw future experiments on to.
 
-1. First make a local copy of our [0_canvas_start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/0_canvas_start.html) file, and open it in your text editor.
-2. Add the following code into it, just below the opening {{htmlelement("body")}} tag:
+1. First make a local copy of the [0_canvas_start](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/0_canvas_start) directory. It contains three files:
+    - "index.html"
+    - "script.js"
+    - "style.css"
+2. Open "index.html", and add the following code into it, just below the opening {{htmlelement("body")}} tag:
 
     ```html
     <canvas class="myCanvas">
@@ -98,7 +101,7 @@ Let's start by creating our own canvas that we draw future experiments on to.
 
     We have added a `class` to the `<canvas>` element so it will be easier to select if we have multiple canvases on the page, but we have removed the `width` and `height` attributes for now (you could add them back in if you wanted, but we will set them using JavaScript in a below section). Canvases with no explicit width and height default to 300 pixels wide by 150 pixels high.
 
-3. Now add the following lines of JavaScript inside the {{htmlelement("script")}} element:
+3. Now open "script.js" and add the following lines of JavaScript:
 
     ```js
     const canvas = document.querySelector('.myCanvas');
@@ -110,26 +113,13 @@ Let's start by creating our own canvas that we draw future experiments on to.
 
     You'll also see that we are chaining assignments together with multiple equals signs — this is allowed in JavaScript, and it is a good technique if you want to make multiple variables all equal to the same value. We wanted to make the canvas width and height easily accessible in the width/height variables, as they are useful values to have available for later (for example, if you want to draw something exactly halfway across the width of the canvas).
 
-4. If you save and load your example in a browser now, you'll see nothing, which is fine, but you'll also see scrollbars — this is a problem for us, which happens because the {{htmlelement("body")}} element has a {{cssxref("margin")}} that, added to our full-window-size canvas, results in a document that's wider than the window. To get rid of the scrollbars, we need to remove the {{cssxref("margin")}} and also set {{cssxref("overflow")}} to `hidden`. Add the following into the {{htmlelement("head")}} of your document:
-
-    ```html
-    <style>
-      body {
-        margin: 0;
-        overflow: hidden;
-      }
-    </style>
-    ```
-
-    The scrollbars should now be gone.
-
 > **Note:** You should generally set the size of the image using HTML attributes or DOM properties, as explained above. You could use CSS, but the trouble then is that the sizing is done after the canvas has rendered, and just like any other image (the rendered canvas is just an image), the image could become pixelated/distorted.
 
 ### Getting the canvas context and final setup
 
 We need to do one final thing before we can consider our canvas template finished. To draw onto the canvas we need to get a special reference to the drawing area called a context. This is done using the {{domxref("HTMLCanvasElement.getContext()")}} method, which for basic usage takes a single string as a parameter representing the type of context you want to retrieve.
 
-In this case we want a 2d canvas, so add the following JavaScript line below the others inside the `<script>` element:
+In this case we want a 2d canvas, so add the following JavaScript line below the others in "script.js":
 
 ```js
 const ctx = canvas.getContext('2d');
@@ -162,7 +152,7 @@ Drawing shapes tends to be done using the rectangle shape primitive, or by traci
 
 Let's start with some simple rectangles.
 
-1. First of all, take a copy of your newly coded canvas template (or make a local copy of [1_canvas_template.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/1_canvas_template.html) if you didn't follow the above steps).
+1. First of all, take a copy of your newly coded canvas template (or make a local copy of the [1_canvas_template](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template) directory if you didn't follow the above steps).
 2. Next, add the following lines to the bottom of your JavaScript:
 
     ```js
@@ -209,15 +199,15 @@ So far we've looked at drawing filled rectangles, but you can also draw rectangl
 
 Now you should see that your white outline has become much thicker! That's it for now. At this point your example should look like this:
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles.html", '100%', 250)}}
+{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles/index.html", '100%', 250)}}
 
-> **Note:** The finished code is available on GitHub as [2_canvas_rectangles.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles.html).
+> **Note:** The finished code is available on GitHub as [2_canvas_rectangles](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles/).
 
 ### Drawing paths
 
 If you want to draw anything more complex than a rectangle, you need to draw a path. Basically, this involves writing code to specify exactly what path the pen should move along on your canvas to trace the shape you want to draw. Canvas includes functions for drawing straight lines, circles, Bézier curves, and more.
 
-Let's start the section off by making a fresh copy of our canvas template ([1_canvas_template.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/1_canvas_template.html)), in which to draw the new example.
+Let's start the section off by making a fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)), in which to draw the new example.
 
 We'll be using some common methods and properties across all of the below sections:
 
@@ -261,8 +251,8 @@ Let's draw an equilateral triangle on the canvas.
 
     ```js
     ctx.lineTo(150, 50);
-    let triHeight = 50 * Math.tan(degToRad(60));
-    ctx.lineTo(100, 50+triHeight);
+    const triHeight = 50 * Math.tan(degToRad(60));
+    ctx.lineTo(100, 50 + triHeight);
     ctx.lineTo(50, 50);
     ctx.fill();
     ```
@@ -319,15 +309,15 @@ Now let's look at how to draw a circle in canvas. This is accomplished using the
 
 That's it for now; your final example should look like this:
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/3_canvas_paths.html", '100%', 200)}}
+{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/3_canvas_paths/index.html", '100%', 200)}}
 
-> **Note:** The finished code is available on GitHub as [3_canvas_paths.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/3_canvas_paths.html).
+> **Note:** The finished code is available on GitHub as [3_canvas_paths](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/3_canvas_paths/).
 
 > **Note:** To find out more about advanced path drawing features such as Bézier curves, check out our [Drawing shapes with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) tutorial.
 
 ### Text
 
-Canvas also has features for drawing text. Let's explore these briefly. Start by making another fresh copy of our canvas template ([1_canvas_template.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/1_canvas_template.html)) in which to draw the new example.
+Canvas also has features for drawing text. Let's explore these briefly. Start by making another fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template/)) in which to draw the new example.
 
 Text is drawn using two methods:
 
@@ -353,9 +343,9 @@ ctx.fillText('Canvas text', 50, 150);
 
 Here we draw two lines of text, one outline and the other stroke. The final example should look like so:
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/4_canvas_text.html", '100%', 180)}}
+{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/4_canvas_text/index.html", '100%', 180)}}
 
-> **Note:** The finished code is available on GitHub as [4_canvas_text.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/4_canvas_text.html).
+> **Note:** The finished code is available on GitHub as [4_canvas_text](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/4_canvas_text/).
 
 Have a play and see what you can come up with! You can find more information on the options available for canvas text at [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
@@ -363,25 +353,23 @@ Have a play and see what you can come up with! You can find more information on 
 
 It is possible to render external images onto your canvas. These can be simple images, frames from videos, or the content of other canvases. For the moment we'll just look at the case of using some simple images on our canvas.
 
-1. As before, make another fresh copy of our canvas template ([1_canvas_template.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/1_canvas_template.html)) in which to draw the new example. In this case you'll also need to save a copy of our sample image — [firefox.png](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/firefox.png) — in the same directory.
+1. As before, make another fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template/)) in which to draw the new example.
 
     Images are drawn onto canvas using the {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} method. The simplest version takes three parameters — a reference to the image you want to render, and the X and Y coordinates of the image's top left corner.
 
 2. Let's start by getting an image source to embed in our canvas. Add the following lines to the bottom of your JavaScript:
 
     ```js
-    let image = new Image();
+    const image = new Image();
     image.src = 'firefox.png';
     ```
 
     Here we create a new {{domxref("HTMLImageElement")}} object using the {{domxref("HTMLImageElement.Image()", "Image()")}} constructor. The returned object is the same type as that which is returned when you grab a reference to an existing {{htmlelement("img")}} element). We then set its {{htmlattrxref("src", "img")}} attribute to equal our Firefox logo image. At this point, the browser starts loading the image.
 
-3. We could now try to embed the image using `drawImage()`, but we need to make sure the image file has been loaded first, otherwise the code will fail. We can achieve this using the `onload` event handler, which will only be invoked when the image has finished loading. Add the following block below the previous one:
+3. We could now try to embed the image using `drawImage()`, but we need to make sure the image file has been loaded first, otherwise the code will fail. We can achieve this using the `load` event, which will only be fired when the image has finished loading. Add the following block below the previous one:
 
     ```js
-    image.onload = function() {
-      ctx.drawImage(image, 50, 50);
-    }
+    image.addEventListener('load', () => ctx.drawImage(image, 20, 20, 185, 175, 50, 50, 185, 175));
     ```
 
     If you load your example in the browser now, you should see the image embedded in the canvas.
@@ -400,9 +388,9 @@ It is possible to render external images onto your canvas. These can be simple i
 
 The final example should look like so:
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/5_canvas_images.html", '100%', 260)}}
+{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/5_canvas_images/index.html", '100%', 260)}}
 
-> **Note:** The finished code is available on GitHub as [5_canvas_images.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/5_canvas_images.html).
+> **Note:** The finished code is available on GitHub as [5_canvas_images](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/5_canvas_images/).
 
 ## Loops and animations
 
@@ -414,7 +402,7 @@ Playing with loops in canvas is rather fun — you can run canvas commands insid
 
 Let's build a simple example.
 
-1. Make another fresh copy of our canvas template ([1_canvas_template.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/1_canvas_template.html)) and open it in your code editor.
+1. Make another fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)) and open it in your code editor.
 2. Add the following line to the bottom of your JavaScript. This contains a new method, {{domxref("CanvasRenderingContext2D.translate", "translate()")}}, which moves the origin point of the canvas:
 
     ```js
@@ -437,7 +425,7 @@ Let's build a simple example.
     let length = 250;
     let moveOffset = 20;
 
-    for(var i = 0; i < length; i++) {
+    for (let i = 0; i < length; i++) {
 
     }
     ```
@@ -447,13 +435,13 @@ Let's build a simple example.
 4. The idea here is that we'll draw something on the canvas inside the `for` loop, and iterate on it each time so we can create something interesting. Add the following code inside your `for` loop:
 
     ```js
-    ctx.fillStyle = 'rgba(' + (255-length) + ', 0, ' + (255-length) + ', 0.9)';
+    ctx.fillStyle = `rgba(${255-length},0,${255-length},0.9)`;
     ctx.beginPath();
-    ctx.moveTo(moveOffset, moveOffset);
-    ctx.lineTo(moveOffset+length, moveOffset);
-    let triHeight = length/2 * Math.tan(degToRad(60));
-    ctx.lineTo(moveOffset+(length/2), moveOffset+triHeight);
-    ctx.lineTo(moveOffset, moveOffset);
+    ctx.moveTo(moveOffset,moveOffset);
+    ctx.lineTo(moveOffset+length,moveOffset);
+    const triHeight = length/2 * Math.tan(degToRad(60));
+    ctx.lineTo(moveOffset+(length/2),moveOffset+triHeight);
+    ctx.lineTo(moveOffset,moveOffset);
     ctx.fill();
 
     length--;
@@ -474,7 +462,7 @@ Let's build a simple example.
 
 That's it! The final example should look like so:
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop.html", '100%', 550)}}
+{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop/index.html", '100%', 550)}}
 
 At this point, we'd like to encourage you to play with the example and make it your own! For example:
 
@@ -482,7 +470,7 @@ At this point, we'd like to encourage you to play with the example and make it y
 - Play with the `length` and `moveOffset` values.
 - Introduce some random numbers using that `rand()` function we included above but didn't use.
 
-> **Note:** The finished code is available on GitHub as [6_canvas_for_loop.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop.html).
+> **Note:** The finished code is available on GitHub as [6_canvas_for_loop](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop/).
 
 ### Animations
 
@@ -498,16 +486,16 @@ To see how it works, let's quickly look again at our Bouncing Balls example ([se
 
 ```js
 function loop() {
-  ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
-  ctx.fillRect(0, 0, width, height);
+   ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
+   ctx.fillRect(0, 0,  width, height);
 
-  for(let i = 0; i < balls.length; i++) {
-    balls[i].draw();
-    balls[i].update();
-    balls[i].collisionDetect();
-  }
+   for (const ball of balls) {
+     ball.draw();
+     ball.update();
+     ball.collisionDetect();
+   }
 
-  requestAnimationFrame(loop);
+   requestAnimationFrame(loop);
 }
 
 loop();
@@ -533,7 +521,7 @@ In general, the process of doing a canvas animation involves the following steps
 
 Now let's create our own simple animation — we'll get a character from a certain rather awesome retro computer game to walk across the screen.
 
-1. Make another fresh copy of our canvas template ([1_canvas_template.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/1_canvas_template.html)) and open it in your code editor. Make a copy of [walk-right.png](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/loops_animation/walk-right.png) in the same directory.
+1. Make another fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)) and open it in your code editor.
 2. At the bottom of the JavaScript, add the following line to once again make the coordinate origin sit in the middle of the canvas:
 
     ```js
@@ -543,7 +531,7 @@ Now let's create our own simple animation — we'll get a character from a certa
 3. Now let's create a new {{domxref("HTMLImageElement")}} object, set its {{htmlattrxref("src", "img")}} to the image we want to load, and add an `onload` event handler that will cause the `draw()` function to fire when the image is loaded:
 
     ```js
-    let image = new Image();
+    const image = new Image();
     image.src = 'walk-right.png';
     image.onload = draw;
     ```
@@ -609,7 +597,7 @@ Now let's create our own simple animation — we'll get a character from a certa
 
     ```js
       if(posX > width/2) {
-        newStartPos = -((width/2) + 102);
+        let newStartPos = -((width/2) + 102);
         posX = Math.ceil(newStartPos);
         console.log(posX);
       } else {
@@ -629,17 +617,17 @@ Now let's create our own simple animation — we'll get a character from a certa
 
 That's it! The final example should look like so:
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation.html", '100%', 260)}}
+{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation/index.html", '100%', 260)}}
 
-> **Note:** The finished code is available on GitHub as [7_canvas_walking_animation.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation.html).
+> **Note:** The finished code is available on GitHub as [7_canvas_walking_animation](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation).
 
 ### A simple drawing application
 
 As a final animation example, we'd like to show you a very simple drawing application, to illustrate how the animation loop can be combined with user input (like mouse movement, in this case). We won't get you to walk through and build this one; we'll just explore the most interesting parts of the code.
 
-The example can be found on GitHub as [8_canvas_drawing_app.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/loops_animation/8_canvas_drawing_app.html), and you can play with it live below:
+The example can be found on GitHub as [8_canvas_drawing_app](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/loops_animation/8_canvas_drawing_app), and you can play with it live below:
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/8_canvas_drawing_app.html", '100%', 600)}}
+{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/8_canvas_drawing_app/index.html", '100%', 600)}}
 
 Let's look at the most interesting parts. First of all, we keep track of the mouse's X and Y coordinates and whether it is being clicked or not with three variables: `curX`, `curY`, and `pressed`. When the mouse moves, we fire a function set as the `onmousemove` event handler, which captures the current X and Y values. We also use `onmousedown` and `onmouseup` event handlers to change the value of `pressed` to `true` when the mouse button is pressed, and back to `false` again when it is released.
 
@@ -648,27 +636,24 @@ let curX;
 let curY;
 let pressed = false;
 
-document.onmousemove = function(e) {
+// update mouse pointer coordinates
+document.addEventListener('mousemove', e => {
   curX = (window.Event) ? e.pageX : e.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
   curY = (window.Event) ? e.pageY : e.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
-}
+});
 
-canvas.onmousedown = function() {
-  pressed = true;
-};
+canvas.addEventListener('mousedown', () => pressed = true);
 
-canvas.onmouseup = function() {
-  pressed = false;
-}
+canvas.addEventListener('mouseup', () => pressed = false);
 ```
 
 When the "Clear canvas" button is pressed, we run a simple function that clears the whole canvas back to black, the same way we've seen before:
 
 ```js
-clearBtn.onclick = function() {
-  ctx.fillStyle = 'rgb(0, 0, 0)';
-  ctx.fillRect(0, 0, width, height);
-}
+clearBtn.addEventListener('click', () => {
+  ctx.fillStyle = 'rgb(0,0,0)';
+  ctx.fillRect(0,0,width,height);
+});
 ```
 
 The drawing loop is pretty simple this time around — if pressed is `true`, we draw a circle with a fill style equal to the value in the color picker, and a radius equal to the value set in the range input. We have to draw the circle 85 pixels above where we measured it from, because the vertical measurement is taken from the top of the viewport, but we are drawing the circle relative to the top of the canvas, which starts below the 85 pixel-high toolbar. If we drew it with just `curY` as the y coordinate, it would appear 85 pixels lower than the mouse position.
@@ -706,10 +691,10 @@ Yes, using one of these means learning another new API (a third party one, in th
 
 Let's look at a simple example of how to create something with a WebGL library. We'll choose [Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js), as it is one of the most popular ones. In this tutorial we'll create the 3D spinning cube we saw earlier.
 
-1. To start with, make a local copy of [index.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/threejs-cube/index.html) in a new folder, then save a copy of [metal003.png](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/threejs-cube/metal003.png) in the same folder. This is the image we'll use as a surface texture for the cube later on.
-2. Next, create a new file called `main.js`, again in the same folder as before.
-3. If you open `index.html` in your code editor, you'll see that it has two {{htmlelement("script")}} elements — the first one attaching `three.min.js` to the page, and the second one attaching our `main.js` file to the page. You need to [download the three.min.js library](https://raw.githubusercontent.com/mrdoob/three.js/dev/build/three.min.js) and save it in the same directory as before.
-4. Now we've got `three.js` attached to our page, we can start to write JavaScript that makes use of it into `main.js`. Let's start by creating a new scene — add the following into your main.js file:
+1. To start with, make a local copy of [threejs-cube/index.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/threejs-cube/index.html) in a new folder, then save a copy of [metal003.png](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/threejs-cube/metal003.png) in the same folder. This is the image we'll use as a surface texture for the cube later on.
+2. Next, create a new file called `script.js`, again in the same folder as before.
+3. Next, you need to [download the three.min.js library](https://raw.githubusercontent.com/mrdoob/three.js/dev/build/three.min.js) and save it in the same directory as before.
+4. Now we've got `three.js` attached to our page, we can start to write JavaScript that makes use of it into `script.js`. Let's start by creating a new scene — add the following into your main.js file:
 
     ```js
     const scene = new THREE.Scene();
@@ -748,19 +733,19 @@ Let's look at a simple example of how to create something with a WebGL library. 
     ```js
     let cube;
 
-    let loader = new THREE.TextureLoader();
+    const loader = new THREE.TextureLoader();
 
-    loader.load( 'metal003.png', function (texture) {
-      texture.wrapS = THREE.RepeatWrapping;
-      texture.wrapT = THREE.RepeatWrapping;
-      texture.repeat.set(2, 2);
+    loader.load('metal003.png', texture => {
+    	texture.wrapS = THREE.RepeatWrapping;
+    	texture.wrapT = THREE.RepeatWrapping;
+    	texture.repeat.set(2, 2);
 
-      let geometry = new THREE.BoxGeometry(2.4, 2.4, 2.4);
-      let material = new THREE.MeshLambertMaterial( { map: texture, shading: THREE.FlatShading } );
-      cube = new THREE.Mesh(geometry, material);
-      scene.add(cube);
+    	const geometry = new THREE.BoxGeometry(2.4,2.4,2.4);
+    	const material = new THREE.MeshLambertMaterial( { map: texture, shading: THREE.FlatShading } );
+    	cube = new THREE.Mesh(geometry, material);
+    	scene.add(cube);
 
-      draw();
+    	draw();
     });
     ```
 
@@ -774,10 +759,10 @@ Let's look at a simple example of how to create something with a WebGL library. 
 8. Before we get to defining `draw()`, we'll add a couple of lights to the scene, to liven things up a bit; add the following blocks next:
 
     ```js
-    let light = new THREE.AmbientLight('rgb(255, 255, 255)'); // soft white light
+    const light = new THREE.AmbientLight('rgb(255,255,255)'); // soft white light
     scene.add(light);
 
-    let spotLight = new THREE.SpotLight('rgb(255, 255, 255)');
+    const spotLight = new THREE.SpotLight('rgb(255,255,255)');
     spotLight.position.set( 100, 1000, 1000 );
     spotLight.castShadow = true;
     scene.add(spotLight);
@@ -833,6 +818,6 @@ Here we have covered only the real basics of canvas — there is so much more to
 - [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
 - [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
 - [Third party APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
+- **Drawing graphics**
 - [Video and audio APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
 - [Client-side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)
