@@ -257,6 +257,8 @@ This would output the following:
 
 > **Note:** Empty elements are sometimes called _void elements_.
 
+> **Note:** In the previous versions of HTML, we used to add `/` at the end of empty elements, for example: `<img src="images/cat.jpg" alt="cat" />`, but we don't have to do this in HTML5.
+
 ## Attributes
 
 Elements can also have attributes. Attributes look like this:
