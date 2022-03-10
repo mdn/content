@@ -57711,16 +57711,6 @@
       "yati"
     ]
   },
-  "Web/API/MediaDevices/ondevicechange": {
-    "modified": "2020-10-15T21:50:04.884Z",
-    "contributors": [
-      "Sheppy",
-      "fscholz",
-      "dsanders11",
-      "jpmedley",
-      "stanislavys"
-    ]
-  },
   "Web/API/MediaElementAudioSourceNode": {
     "modified": "2020-10-15T21:27:52.804Z",
     "contributors": [
