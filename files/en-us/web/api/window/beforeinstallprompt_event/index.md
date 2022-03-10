@@ -3,9 +3,8 @@ title: 'Window: beforeinstallprompt event'
 slug: Web/API/Window/beforeinstallprompt_event
 tags:
   - API
-  - Event Handler
+  - Event
   - Manifest
-  - Property
   - Reference
   - Window
   - beforeinstallprompt
@@ -13,7 +12,7 @@ browser-compat: api.Window.beforeinstallprompt_event
 ---
 {{APIRef}}
 
-The **`beforeinstallprompt`** event fires on devices when a user is about to be prompted to "install" a web application. [Its associated event](../BeforeInstallPromptEvent) may be saved for later and used to prompt the user at a more suitable time.
+The **`beforeinstallprompt`** event fires on devices when a user is about to be prompted to "install" a web application. It may be saved for later and used to prompt the user at a more suitable time.
 
 ## Syntax
 
