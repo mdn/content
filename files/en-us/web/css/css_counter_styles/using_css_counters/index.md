@@ -13,7 +13,7 @@ spec-urls: https://drafts.csswg.org/css-lists/#auto-numbering
 ---
 {{CSSRef}}
 
-**CSS counters** let you to set a counter for an element and display that counter. For example, it can be used to automatically assign heading numbers in a web page, to renumber an ordered list, or to display the index number of an element that matches a particular selector.
+**CSS counters** let you set a counter for an element and display that counter. For example, it can be used to automatically assign heading numbers in a web page, to renumber an ordered list, or to display the index number of an element that matches a particular selector.
 
 There are two types of counters: normal counters that count up, and reversed counters that count down.
 
