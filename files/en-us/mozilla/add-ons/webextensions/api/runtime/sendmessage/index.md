@@ -30,7 +30,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var sending = browser.runtime.sendMessage(
+let sending = browser.runtime.sendMessage(
   extensionId,             // optional string
   message,                 // any
   options                  // optional object
@@ -98,7 +98,7 @@ function handleError(error) {
 }
 
 function notifyBackgroundPage(e) {
-  var sending = browser.runtime.sendMessage({
+  let sending = browser.runtime.sendMessage({
     greeting: "Greeting from the content script"
   });
   sending.then(handleResponse, handleError);

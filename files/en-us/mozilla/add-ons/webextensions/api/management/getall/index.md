@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingAll = browser.management.getAll()
+let gettingAll = browser.management.getAll()
 ```
 
 ### Parameters
@@ -52,7 +52,7 @@ function gotAll(infoArray) {
   }
 }
 
-var gettingAll = browser.management.getAll();
+let gettingAll = browser.management.getAll();
 gettingAll.then(gotAll);
 ```
 

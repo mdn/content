@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var getContains = browser.permissions.contains(
+let getContains = browser.permissions.contains(
   permissions                // Permissions object
 )
 ```
@@ -46,7 +46,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 // Extension permissions are:
 // "webRequest", "tabs", "*://*.mozilla.org/*"
 
-var testPermissions1 = {
+let testPermissions1 = {
   origins: ["*://mozilla.org/"],
   permissions: ["tabs"]
 };
@@ -55,7 +55,7 @@ browser.permissions.contains(testPermissions1).then((result) => {
   console.log(result);    // true
 });
 
-var testPermissions2 = {
+let testPermissions2 = {
   origins: ["*://mozilla.org/"],
   permissions: ["tabs", "alarms"]
 };
@@ -64,7 +64,7 @@ browser.permissions.contains(testPermissions2).then((result) => {
   console.log(result);   // false, "alarms" doesn't match
 });
 
-var testPermissions3 = {
+let testPermissions3 = {
   origins: ["https://developer.mozilla.org/"],
   permissions: ["tabs", "webRequest"]
 };
@@ -73,7 +73,7 @@ browser.permissions.contains(testPermissions3).then((result) => {
   console.log(result);   // true: "https://developer.mozilla.org/"
 });                      // matches: "*://*.mozilla.org/*"
 
-var testPermissions4 = {
+let testPermissions4 = {
   origins: ["https://example.org/"]
 };
 

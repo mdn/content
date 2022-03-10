@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var createBookmark = browser.bookmarks.create(
+let createBookmark = browser.bookmarks.create(
   bookmark                  // CreateDetails object
 )
 ```
@@ -47,7 +47,7 @@ function onCreated(node) {
   console.log(node);
 }
 
-var createBookmark = browser.bookmarks.create({
+let createBookmark = browser.bookmarks.create({
   title: "bookmarks.create() on MDN",
   url: "https://developer.mozilla.org/Add-ons/WebExtensions/API/bookmarks/create"
 });

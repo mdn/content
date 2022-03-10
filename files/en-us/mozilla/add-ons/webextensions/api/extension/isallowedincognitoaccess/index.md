@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var isAllowed = browser.extension.isAllowedIncognitoAccess()
+let isAllowed = browser.extension.isAllowedIncognitoAccess()
 ```
 
 ### Parameters
@@ -40,7 +40,7 @@ function logIsAllowed(answer) {
   console.log(`Is allowed: ${answer}`);
 }
 
-var isAllowed = browser.extension.isAllowedIncognitoAccess();
+let isAllowed = browser.extension.isAllowedIncognitoAccess();
 isAllowed.then(logIsAllowed);
 ```
 

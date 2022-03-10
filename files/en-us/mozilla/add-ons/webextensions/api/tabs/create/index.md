@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var creating = browser.tabs.create(
+let creating = browser.tabs.create(
   createProperties   // object
 )
 ```
@@ -95,7 +95,7 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener(function() {
-  var creating = browser.tabs.create({
+  let creating = browser.tabs.create({
     url:"https://example.org"
   });
   creating.then(onCreated, onError);

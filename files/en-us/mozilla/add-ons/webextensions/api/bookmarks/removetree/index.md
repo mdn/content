@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var removingTree = browser.bookmarks.removeTree(
+let removingTree = browser.bookmarks.removeTree(
   id                // string
 )
 ```
@@ -55,12 +55,12 @@ function onRejected(error) {
 
 function removeMDN(searchResults) {
   if (searchResults.length) {
-    var removing = browser.bookmarks.removeTree(searchResults[0].id);
+    let removing = browser.bookmarks.removeTree(searchResults[0].id);
     removing.then(onRemoved, onRejected);
   }
 }
 
-var searchingBookmarks = browser.bookmarks.search({ title: "MDN" });
+let searchingBookmarks = browser.bookmarks.search({ title: "MDN" });
 searchingBookmarks.then(removeMDN, onRejected);
 ```
 

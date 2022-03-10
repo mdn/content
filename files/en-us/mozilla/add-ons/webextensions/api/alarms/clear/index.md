@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var clearAlarm = browser.alarms.clear(
+let clearAlarm = browser.alarms.clear(
   name                       // string
 )
 ```
@@ -43,7 +43,7 @@ function onCleared(wasCleared) {
   console.log(wasCleared);  // true/false
 }
 
-var clearAlarm = browser.alarms.clear("my-periodic-alarm");
+let clearAlarm = browser.alarms.clear("my-periodic-alarm");
 clearAlarm.then(onCleared);
 ```
 

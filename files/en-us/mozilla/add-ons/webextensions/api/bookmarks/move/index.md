@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var movingBookmark = browser.bookmarks.move(
+let movingBookmark = browser.bookmarks.move(
   id,                    // string
   destination           // object
 )
@@ -62,9 +62,9 @@ function onRejected(error) {
   console.log(`An error: ${error}`);
 }
 
-var bookmarkId = "abcdefghilkl";
+let bookmarkId = "abcdefghilkl";
 
-var movingBookmark = browser.bookmarks.move(bookmarkId, {index: 0});
+let movingBookmark = browser.bookmarks.move(bookmarkId, {index: 0});
 movingBookmark.then(onMoved, onRejected);
 ```
 

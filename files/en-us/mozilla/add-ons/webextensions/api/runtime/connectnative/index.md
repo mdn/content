@@ -20,7 +20,7 @@ For more information, see [Native messaging](/en-US/docs/Mozilla/Add-ons/WebExte
 ## Syntax
 
 ```js
-var port = browser.runtime.connectNative(
+let port = browser.runtime.connectNative(
   application // string
 )
 ```
@@ -46,7 +46,7 @@ This example connects to the native application "ping_pong" and starts listening
 /*
 On startup, connect to the "ping_pong" app.
 */
-var port = browser.runtime.connectNative("ping_pong");
+let port = browser.runtime.connectNative("ping_pong");
 
 /*
 Listen for messages from the app.

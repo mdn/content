@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var addingUrl = browser.history.addUrl(
+let addingUrl = browser.history.addUrl(
   details         // object
 )
 ```
@@ -63,7 +63,7 @@ function onGot(results) {
 }
 
 function onAdded() {
-  var searching = browser.history.search({
+  let searching = browser.history.search({
     text: "https://example.org/",
     startTime: 0,
     maxResults: 1
@@ -71,7 +71,7 @@ function onAdded() {
   searching.then(onGot);
 }
 
-var addingUrl = browser.history.addUrl({url: "https://example.org/"});
+let addingUrl = browser.history.addUrl({url: "https://example.org/"});
 addingUrl.then(onAdded);
 ```
 
@@ -92,14 +92,14 @@ function onGot(visits) {
 }
 
 function onAdded() {
-  var gettingVisits = browser.history.getVisits({
+  let gettingVisits = browser.history.getVisits({
     url: "https://example.org/"
   });
 
   gettingVisits.then(onGot);
 }
 
-var addingUrl = browser.history.addUrl({
+let addingUrl = browser.history.addUrl({
   url: "https://example.org/",
   visitTime: oneDayAgo(),
   transition: "typed"

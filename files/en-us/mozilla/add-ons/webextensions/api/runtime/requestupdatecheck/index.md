@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var requestingCheck = browser.runtime.requestUpdateCheck()
+let requestingCheck = browser.runtime.requestUpdateCheck()
 ```
 
 ### Parameters
@@ -62,7 +62,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var requestingCheck = browser.runtime.requestUpdateCheck(onRequested);
+let requestingCheck = browser.runtime.requestUpdateCheck(onRequested);
 requestingCheck.then(onRequested, onError);
 ```
 

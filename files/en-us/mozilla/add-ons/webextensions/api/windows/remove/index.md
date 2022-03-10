@@ -23,7 +23,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var removing = browser.windows.remove(
+let removing = browser.windows.remove(
   windowId        // integer
 )
 ```
@@ -56,7 +56,7 @@ function onError(error) {
 
 browser.browserAction.onClicked.addListener((tab) => {
 
-  var removing = browser.windows.remove(tab.windowId);
+  let removing = browser.windows.remove(tab.windowId);
   removing.then(onRemoved, onError);
 
 });

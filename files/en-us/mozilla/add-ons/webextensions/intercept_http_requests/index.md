@@ -112,8 +112,8 @@ The changes here are to:
 Next, replace **background.js** with this:
 
 ```js
-var pattern = "https://developer.mozilla.org/*";
-var targetUrl = "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/frog.jpg";
+let pattern = "https://developer.mozilla.org/*";
+let targetUrl = "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/frog.jpg";
 
 function redirect(requestDetails) {
   console.log("Redirecting: " + requestDetails.url);
@@ -175,9 +175,9 @@ Update your **manifest.json** to include `http://useragentstring.com/`
 Replace "background.js" with code like this:
 
 ```js
-var targetPage = "http://useragentstring.com/*";
+let targetPage = "http://useragentstring.com/*";
 
-var ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
+let ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 
 function rewriteUserAgentHeader(e) {
   e.requestHeaders.forEach(function(header){

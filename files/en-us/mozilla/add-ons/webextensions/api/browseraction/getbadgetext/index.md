@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingText = browser.browserAction.getBadgeText(
+let gettingText = browser.browserAction.getBadgeText(
   details               // object
 )
 ```
@@ -60,7 +60,7 @@ function gotBadgeText(text) {
   console.log(text);
 }
 
-var gettingBadgeText = browser.browserAction.getBadgeText({});
+let gettingBadgeText = browser.browserAction.getBadgeText({});
 gettingBadgeText.then(gotBadgeText);
 ```
 

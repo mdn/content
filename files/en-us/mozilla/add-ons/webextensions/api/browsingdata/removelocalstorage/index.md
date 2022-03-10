@@ -26,7 +26,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var removing = browser.browsingData.removeLocalStorage(
+let removing = browser.browsingData.removeLocalStorage(
   removalOptions            // RemovalOptions object
 )
 ```

@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingTitle = browser.browserAction.getTitle(
+let gettingTitle = browser.browserAction.getTitle(
   details               // object
 )
 ```
@@ -67,7 +67,7 @@ function toggleTitle(title) {
 }
 
 browser.browserAction.onClicked.addListener(() => {
-  var gettingTitle = browser.browserAction.getTitle({});
+  let gettingTitle = browser.browserAction.getTitle({});
   gettingTitle.then(toggleTitle);
 });
 ```

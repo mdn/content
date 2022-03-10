@@ -28,7 +28,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var creating = browser.notifications.create(
+let creating = browser.notifications.create(
   id,                   // optional string
   options               // NotificationOptions
 )
@@ -50,7 +50,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 This example displays a notification periodically, using {{WebExtAPIRef("alarms", "alarm")}}. Clicking the browser action dismisses the notification. You need the "alarms" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) to create alarms (as well as the "notifications" permission to create notifications).
 
 ```js
-var cakeNotification = "cake-notification"
+let cakeNotification = "cake-notification"
 
 /*
 
@@ -61,7 +61,7 @@ Note that in Chrome, alarms cannot be set for less
 than a minute.
 
 */
-var CAKE_INTERVAL = 0.1;
+let CAKE_INTERVAL = 0.1;
 
 browser.alarms.create("", {periodInMinutes: CAKE_INTERVAL});
 
@@ -75,7 +75,7 @@ browser.alarms.onAlarm.addListener(function(alarm) {
 });
 
 browser.browserAction.onClicked.addListener(()=> {
-  var clearing = browser.notifications.clear(cakeNotification);
+  let clearing = browser.notifications.clear(cakeNotification);
   clearing.then(() => {
     console.log("cleared");
   });

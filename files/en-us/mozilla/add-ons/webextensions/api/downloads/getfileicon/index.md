@@ -26,7 +26,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingIcon = browser.downloads.getFileIcon(
+let gettingIcon = browser.downloads.getFileIcon(
   downloadId,           // integer
   options               // optional object
 )
@@ -67,12 +67,12 @@ function onError(error) {
 function getIcon(downloadItems) {
     if (downloadItems.length > 0) {
       latestDownloadId = downloadItems[0].id;
-      var gettingIcon = browser.downloads.getFileIcon(latestDownloadId);
+      let gettingIcon = browser.downloads.getFileIcon(latestDownloadId);
       gettingIcon.then(gotIcon, onError);
     }
   }
 
-var searching = browser.downloads.search({
+let searching = browser.downloads.search({
   limit: 1,
   orderBy: ["-startTime"]
 });

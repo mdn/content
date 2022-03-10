@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingSubTree = browser.bookmarks.getSubTree(
+let gettingSubTree = browser.bookmarks.getSubTree(
   id                     // string
 )
 ```
@@ -57,7 +57,7 @@ function logItems(bookmarkItem, indent) {
     indent++;
   }
   if (bookmarkItem.children) {
-    for (var child of bookmarkItem.children) {
+    for (let child of bookmarkItem.children) {
       logItems(child, indent);
     }
   }
@@ -71,9 +71,9 @@ function onRejected(error) {
   console.log(`An error: ${error}`);
 }
 
-var subTreeID = "root_____";
+let subTreeID = "root_____";
 
-var gettingSubTree = browser.bookmarks.getSubTree(subTreeID);
+let gettingSubTree = browser.bookmarks.getSubTree(subTreeID);
 gettingSubTree.then(logSubTree, onRejected);
 ```
 

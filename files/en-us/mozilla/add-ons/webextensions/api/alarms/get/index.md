@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var getAlarm = browser.alarms.get(
+let getAlarm = browser.alarms.get(
   name                   // optional string
 )
 ```
@@ -45,7 +45,7 @@ function gotAlarm(alarm) {
   }
 }
 
-var getAlarm = browser.alarms.get("my-periodic-alarm");
+let getAlarm = browser.alarms.get("my-periodic-alarm");
 getAlarm.then(gotAlarm);
 ```
 

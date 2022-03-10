@@ -114,7 +114,7 @@ This content script:
 ```js
 // content-script.js
 
-var myPort = browser.runtime.connect({name:"port-from-cs"});
+let myPort = browser.runtime.connect({name:"port-from-cs"});
 myPort.postMessage({greeting: "hello from content script"});
 
 myPort.onMessage.addListener(function(m) {
@@ -141,7 +141,7 @@ The corresponding background script:
 ```js
 // background-script.js
 
-var portFromCS;
+let portFromCS;
 
 function connected(p) {
   portFromCS = p;
@@ -166,7 +166,7 @@ If you have multiple content scripts communicating at the same time, you might w
 ```js
 // background-script.js
 
-var ports = []
+let ports = []
 
 function connected(p) {
   ports[p.sender.tab.id]    = p
@@ -190,7 +190,7 @@ This example connects to the native application "ping_pong" and starts listening
 /*
 On startup, connect to the "ping_pong" app.
 */
-var port = browser.runtime.connectNative("ping_pong");
+let port = browser.runtime.connectNative("ping_pong");
 
 /*
 Listen for messages from the app.

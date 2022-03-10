@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var querying = browser.idle.queryState(
+let querying = browser.idle.queryState(
   detectionIntervalInSeconds // integer
 )
 ```
@@ -53,7 +53,7 @@ function onGot(newState) {
   }
 }
 
-var querying = browser.idle.queryState(15);
+let querying = browser.idle.queryState(15);
 querying.then(onGot);
 ```
 

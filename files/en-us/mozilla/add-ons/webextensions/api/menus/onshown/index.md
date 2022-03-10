@@ -29,11 +29,11 @@ The handler is passed some information about the menu and its contents, and some
 If the `onShown` handler calls any asynchronous APIs, then it's possible that the menu has been closed again before the handler resumes execution. Because of this, if a handler calls any asynchronous APIs, it should check that the menu is still being displayed before it updates the menu. For example:
 
 ```js
-var lastMenuInstanceId = 0;
-var nextMenuInstanceId = 1;
+let lastMenuInstanceId = 0;
+let nextMenuInstanceId = 1;
 
 browser.menus.onShown.addListener(async function(info, tab) {
-  var menuInstanceId = nextMenuInstanceId++;
+  let menuInstanceId = nextMenuInstanceId++;
   lastMenuInstanceId = menuInstanceId;
 
   // Call an async function
@@ -65,7 +65,7 @@ However, if you call these APIs asynchronously, then you do have to perform the 
 
 ```js
 browser.menus.onShown.addListener(async function(info, tab) {
-  var menuInstanceId = nextMenuInstanceId++;
+  let menuInstanceId = nextMenuInstanceId++;
   lastMenuInstanceId = menuInstanceId;
 
   await browser.menus.update(menuId, ...);

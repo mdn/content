@@ -45,7 +45,7 @@ function logStores(cookieStores) {
   }
 }
 
-var getting = browser.cookies.getAllCookieStores();
+let getting = browser.cookies.getAllCookieStores();
 getting.then(logStores);
 ```
 
@@ -53,7 +53,7 @@ The following code snippet gets all cookie stores and then logs the total number
 
 ```js
 browser.cookies.getAllCookieStores().then((stores) => {
-  var incognitoStores = stores.map(store => store.incognito);
+  let incognitoStores = stores.map(store => store.incognito);
   console.log(`Of ${stores.length} cookie stores, ${incognitoStores.length} are incognito.`);
 });
 ```
