@@ -6,7 +6,7 @@ tags:
   - CSSOM View
   - Event Handler
   - MediaQueryList
-  - Property
+  - Event
   - Reference
   - onchange
 browser-compat: api.MediaQueryList.change_event
