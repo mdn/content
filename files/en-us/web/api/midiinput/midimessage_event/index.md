@@ -39,7 +39,7 @@ In the following example `midimessage` events are listened for on all input port
 
 ```js
 inputs.forEach(input => {
-  input.onmidimessage = (message) => {
+  input.onmidimessage = message => {
     console.log(message.data);
   }
 })
