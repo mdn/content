@@ -1,26 +1,31 @@
 ---
-title: IdleDetector.onchange
-slug: Web/API/IdleDetector/onchange
+title: 'IdleDetector: change event'
+slug: Web/API/IdleDetector/change_event
 tags:
   - API
-  - Property
+  - Event
   - Reference
   - onchange
   - IdleDetector
-browser-compat: api.IdleDetector.onchange
+browser-compat: api.IdleDetector.change_event
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Idle Detection API")}}
 
-The **`onchange`** EventHandler of the {{domxref("IdleDetector")}} interface is
-called when the value of `userState` or `screenState` has changed. This method
-receives an {{domxref("Event")}} object.
+The **`change`** event of the {{domxref("IdleDetector")}} interface fires when the value of `userState` or `screenState` has changed.
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js
-IdleDetector.onchange = function;
-IdleDetector.addEventListener('change', function);
+addEventListener('change', event => { });
+
+onchange = event => { };
 ```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Example
 

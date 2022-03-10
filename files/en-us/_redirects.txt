@@ -8272,6 +8272,7 @@
 /en-US/docs/Web/API/IDBVersionChangeEvent.oldVersion	/en-US/docs/Web/API/IDBVersionChangeEvent/oldVersion
 /en-US/docs/Web/API/IDBVersionChangeEvent.version	/en-US/docs/Web/API/IDBVersionChangeEvent/version
 /en-US/docs/Web/API/IIRFilterNode/getFrequencyResponse()	/en-US/docs/Web/API/IIRFilterNode/getFrequencyResponse
+/en-US/docs/Web/API/IdleDetector/onchange	/en-US/docs/Web/API/IdleDetector/change_event
 /en-US/docs/Web/API/Image	/en-US/docs/Web/API/HTMLImageElement/Image
 /en-US/docs/Web/API/ImageBitmapFactories/createImageBitmap	/en-US/docs/Web/API/createImageBitmap
 /en-US/docs/Web/API/ImageBitmapRenderingContext/transferImageBitmap	/en-US/docs/Web/API/ImageBitmapRenderingContext/transferFromImageBitmap
