@@ -25,7 +25,7 @@ A {{jsxref("Uint8Array")}}.
 
 ## Examples
 
-In the following example {{domxref("MIDIInput.midimessage_event","midimessage events")}} are listened for on all input ports. When a message is received the value of `data` is printed to the console.
+In the following example {{domxref("MIDIInput.midimessage_event", "midimessage")}} events are listened for on all input ports. When a message is received the value of `data` is printed to the console.
 
 ```js
 inputs.forEach((input) => {
