@@ -15,7 +15,7 @@ spec-urls: https://drafts.csswg.org/css-lists/#auto-numbering
 
 **CSS counters** let you set a counter for an element and display that counter. For example, it can be used to automatically assign heading numbers in a web page, to renumber an ordered list, or to display the index number of an element that matches a particular selector.
 
-There are two types of counters: normal counters that count up, and reversed counters that count down.
+There are two types of counters: incrementing counters, meaning they count up, and reversed, or decremental, counters that count down.
 
 The CSS specification says, counters are essentially variables managed by CSS, not only for CSS counters, but also for ordered list numbers. Counters can be increased or decreased by any values according to CSS rules, and can be used to define multiple named counters, or to manipulate the list-item counters that is standard generated as ordered lists.
 
