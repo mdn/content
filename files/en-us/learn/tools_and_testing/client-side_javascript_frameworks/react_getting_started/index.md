@@ -204,7 +204,6 @@ In React, a **component** is a reusable module that renders a part of our app. T
 Let's open `src/App.js`, since our browser is prompting us to edit it. This file contains our first component, `App`, and a few other lines of code:
 
 ```js
-import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -238,7 +237,6 @@ The `App.js` file consists of three main parts: some [`import`](/en-US/docs/Web/
 The `import` statements at the top of the file allow `App.js` to use code that has been defined elsewhere. Let's look at these statements more closely.
 
 ```js
-import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 ```
@@ -312,7 +310,6 @@ At the very bottom of the `App.js` file, the statement `export default App` make
 Let's open `src/index.js`, because that's where the `App` component is being used. This file is the entry point for our app, and it initially looks like this:
 
 ```js
-import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -347,7 +344,6 @@ All of this tells React that we want to render our React application with the `A
 Your final `index.js` file should look like this:
 
 ```js
-import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
