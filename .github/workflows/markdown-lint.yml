@@ -6,7 +6,6 @@ on:
       - main
     paths:
       - '*.md'
-      - 'rfcs/**/*.md'
       - .github/workflows/markdown-lint.yml
 
 
