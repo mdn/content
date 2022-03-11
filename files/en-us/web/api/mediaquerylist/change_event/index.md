@@ -33,7 +33,12 @@ An {{domxref("MediaQueryListEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-{{page("/en-US/docs/Web/API/MediaQueryListEvent", "Properties")}}
+_The `MediaQueryListEvent` interface inherits properties from its parent interface, {{DOMxRef("Event")}}._
+
+- {{DOMxRef("MediaQueryListEvent.matches")}}{{ReadOnlyInline}}
+  - : A boolean value that is `true` if the {{DOMxRef("document")}} currently matches the media query list, or `false` if not.
+- {{DOMxRef("MediaQueryListEvent.media")}}{{ReadOnlyInline}}
+  - : A {{DOMxRef("DOMString")}} representing a serialized media query.
 
 ## Example
 
