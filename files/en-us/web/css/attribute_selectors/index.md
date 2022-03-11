@@ -177,8 +177,7 @@ div[data-lang="zh-TW"] {
 
 ### HTML ordered lists
 
-The HTML specification requires the {{htmlattrxref("type", "input")}} attribute to be matched case-insensitively due to it primarily being used in the {{HTMLElement("input")}} element.
-Case-sensitive and case-insensitive matching can be forced using the `s` and `i` modifiers, respectively.
+The HTML specification requires the {{htmlattrxref("type", "input")}} attribute to be matched case-insensitively because it is primarily used in the {{HTMLElement("input")}} element.
 Note that if the modifiers are not supported by the user agent, then the selector will not match.
 
 #### CSS
@@ -210,16 +209,16 @@ ol[type="c" i] {
 
 ```html
 <ol type="A">
-  <li>Red background if case-insensitive matching (default for the type selector).</li>
+  <li>Red background for case-insensitive matching (default for the type selector)</li>
 </ol>
 <ol type="b">
-  <li>Lime background if s flag supported (case-sensitive match)</li>
+  <li>Lime background if `s` modifier is supported (case-sensitive match)</li>
 </ol>
 <ol type="B">
-  <li>Grey background if s flag supported (case-sensitive match)</li>
+  <li>Grey background if `s` modifier is supported (case-sensitive match)</li>
 </ol>
 <ol type="C">
-  <li>Green background if i flag supported (case-insensitive match)</li>
+  <li>Green background if `i` modifier is supported (case-insensitive match)</li>
 </ol>
 ```
 
