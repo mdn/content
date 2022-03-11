@@ -28,7 +28,7 @@ targetElement.ondragover = dragoverHandler;
 
 This example demonstrates using the
 {{domxref("GlobalEventHandlers.ondragover","ondragover")}} global event handler to set an
-element's {{event("dragover")}} event handler.
+element's `dragover` event handler.
 
 ### HTML
 
