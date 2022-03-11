@@ -125,7 +125,7 @@ The MDN [Web Performance Learning Area](/en-US/docs/Learn/Performance) contains 
 
 ## Documents yet to be written
 
-- [JavaScript performance best practices](/en-US/docs/Learn/Performance/JavaScript)
+- [JavaScript performance](/en-US/docs/Learn/Performance/javascript_performance)
   - : JavaScript, when used properly, can allow for interactive and immersive web experiences ... or it can significantly harm download time, render time, in app performance, battery life, and user experience. This article outlines some JavaScript best practices that can ensure even complex content's performance is the highest possible.
 - [Mobile performance](/en-US/docs/Learn/Performance/Mobile)
   - : With web access on mobile devices being so popular, and all mobile platforms having fully-fledged web browsers, but possibly limited bandwidth, CPU, and battery life, it is important to consider the performance of your web content on these platforms. This article also looks at mobile-specific performance considerations.
