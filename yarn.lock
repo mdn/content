@@ -62,20 +62,20 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@4.1.10":
-  version "4.1.10"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.10.tgz#7488205d83b2e8c54a4e6b659f496d09c48152cb"
-  integrity sha512-z3UzXqOjrgUnKENwdhFZmU7oeEWTOjUmWGQtXTOEbTR1FdwSBF6RCU6RPkv10ryP00y5ybCUm++4t5B8Wc3tPg==
+"@mdn/browser-compat-data@4.1.11":
+  version "4.1.11"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.11.tgz#bba69cb97e224d70b8755492b2e2d0103a60fa94"
+  integrity sha512-sYJ5CWXVAJX3608rV3WowUGxPm3p7HCgoGh/eBseCQ2c5ALBz6oRTK2OWPFz679aBUik6IY1IlA89uxbb5/FjA==
 
-"@mdn/yari@0.7.33":
-  version "0.7.33"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.7.33.tgz#8db12b11a90d2b99b86d24a3d1357f67c0aa9da9"
-  integrity sha512-ysNqy5f6VJoq334tf6m3uhMYNnJ4+6Lbs3pm6lBW9MHR/fEcgz3ucdoVWqflwP7ZIztHv+NKpa8CmQi5MsH77Q==
+"@mdn/yari@0.7.35":
+  version "0.7.35"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.7.35.tgz#6837fffe1aa89279e44bb9b86de12257c3f5122f"
+  integrity sha512-eOiCBESUnkfOJjtRpR166yPVSaK6V+wzPIMYnY2gtvipCnmMVkKVAmpvccEzYyuTmZBTdg9zVA7uwoUg09ZFwQ==
   dependencies:
     "@babel/helper-builder-react-jsx" "^7.16.7"
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
-    "@mdn/browser-compat-data" "4.1.10"
+    "@mdn/browser-compat-data" "4.1.11"
     "@use-it/interval" "^1.0.0"
     accept-language-parser "1.5.0"
     browser-specs "^3.1.0"
@@ -114,7 +114,7 @@
     js-yaml "4.1.0"
     klaw-sync "^6.0.0"
     loglevel "^1.8.0"
-    lru-cache "^7.4.2"
+    lru-cache "^7.4.4"
     md5-file "5.0.0"
     mdast-util-from-markdown "^0.8.5"
     mdast-util-phrasing "^2.0.0"
@@ -2967,10 +2967,10 @@ lru-cache@^4.0.1:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
-lru-cache@^7.4.2:
-  version "7.4.2"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.4.2.tgz#92f7b5afe82759f51b216a96fae3bc1828df9712"
-  integrity sha512-Xs3+hFPDSKQmL05Gs6NhvAADol1u9TmLoNoE03ZjszX6a5iYIO3rPUM4jIjoBUJeTaWEBMozjjmV70gvdRfIdw==
+lru-cache@^7.4.4:
+  version "7.4.4"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.4.4.tgz#a3dabc394ec07e2285af52fd24d0d74b3ac71c29"
+  integrity sha512-2XbUJmlpIbmc9JvNNmtLzHlF31srxoDxuiQiwBHic7RZyHyltbTdzoO6maRqpdEhOOG5GD80EXvzAU0wR15ccg==
 
 make-dir@^1.0.0, make-dir@^1.2.0:
   version "1.3.0"
