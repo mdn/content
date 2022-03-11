@@ -1,0 +1,61 @@
+---
+title: NavigationPreloadManager.setHeaderValue()
+slug: Web/API/NavigationPreloadManager/setHeaderValue
+tags:
+  - API
+  - Method
+  - Reference
+  - NavigationPreloadManager
+  - Service Workers
+browser-compat: api.NavigationPreloadManager.setHeaderValue
+---
+{{ServiceWorkerSidebar}}{{SeeCompatTable}}
+
+The **`setHeaderValue()`** method of the {{domxref("NavigationPreloadManager")}} interface sets the value of the {{HTTPHeader("Service-Worker-Navigation-Preload")}} header that will be sent with requests resulting from a {{domxref("fetch()")}} operation made during service worker navigation preloading.
+It returns an empty {{jsxref("Promise")}} that resolves with `undefined`.
+
+The presence of the {{HTTPHeader("Service-Worker-Navigation-Preload")}} header in preloading requests allows servers to configure the returned resource differently for preloading vs normal fetch requests.
+The default directive is set to `true`: this method allows the possibility of configuring multiple different responses to preload requests.
+
+## Syntax
+
+```js
+setHeaderValue(value)
+```
+
+### Parameters
+
+- `value`
+- : An arbitrary string value, which has some meaning about the requied resource to the target server.
+
+### Return Value
+
+A {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}.
+
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : There is no active worker associated with the registration to which this {{domxref("NavigationPreloadManager")}} belongs.
+
+## Examples
+
+The code below demonstrates how the value might be set.
+
+```js
+navigator.serviceWorker.ready
+  .then((registration) => {
+    return registration.navigationPreload.setHeaderValue(newValue);
+  })
+  .then(() => {
+    console.log("Done!");
+  });
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+

@@ -15,6 +15,8 @@ browser-compat: api.NavigationPreloadManager
 
 The **`NavigationPreloadManager`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) provides methods for managing the preloading of resources with a service worker.
 
+If supported, an object of this type is returned by {{domxref("ServiceWorkerRegistration.navigationPreload")}}.
+
 ## Methods
 
 - {{domxref("NavigationPreloadManager.enable()")}}
@@ -24,7 +26,7 @@ The **`NavigationPreloadManager`** interface of the [Service Worker API](/en-US/
 - {{domxref("NavigationPreloadManager.setHeaderValue()")}}
   - : Sets the value of the `Service-Worker-Navigation-Preload` header and returns an empty {{jsxref("Promise")}}.
 - {{domxref("NavigationPreloadManager.getState()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves to an object with properties indicating whether preload is enabled and the contents of the `Service-Worker-Navigation-Preload`.
+  - : Returns a {{jsxref("Promise")}} that resolves to an object with properties that indicate whether preloading is enabled, and the value sent with the {{HTTPHeader("Service-Worker-Navigation-Preload")}} HTTP header in requests triggered by a preloading {{domxref("fetch()")}}.
 
 ## Examples
 
