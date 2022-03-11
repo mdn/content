@@ -44,5 +44,10 @@ This module contains the following articles, which will take you through all the
   - : Now that you have an idea about what CSS is and the basics of using it, it is time to look a little deeper into the structure of the language itself. We have already met many of the concepts discussed here; you can return to this one to recap if you find any later concepts confusing.
 - [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
   - : We have learned the basics of CSS, what it is for and how to write simple stylesheets. In this lesson we will take a look at how a browser takes CSS and HTML and turns that into a webpage.
-- [Using your new knowledge](/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
-  - : With the things you have learned in the last few lessons you should find that you can format simple text documents using CSS, to add your own style to them. This article gives you a chance to do that.
+
+## Assessments
+
+The following assessment will test your understanding of the CSS basics covered in the guides above.
+
+- [Styling a biography page](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page)
+  - : With the things you have learned in the last few articles you should find that you can format simple text documents using CSS, to add your own style to them. This assessment gives you a chance to do that.
