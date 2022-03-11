@@ -7811,6 +7811,9 @@
 /en-US/docs/Web/API/Event/msConvertURL	/en-US/docs/Web/API/Event
 /en-US/docs/Web/API/Event/scoped	/en-US/docs/Web/API/Event/composed
 /en-US/docs/Web/API/EventHandler	/en-US/docs/Web/Events/Event_handlers
+/en-US/docs/Web/API/EventSource/onerror	/en-US/docs/Web/API/EventSource/error_event
+/en-US/docs/Web/API/EventSource/onmessage	/en-US/docs/Web/API/EventSource/message_event
+/en-US/docs/Web/API/EventSource/onopen	/en-US/docs/Web/API/EventSource/open_event
 /en-US/docs/Web/API/EventTarget.addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener
 /en-US/docs/Web/API/EventTarget.dispatchEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
 /en-US/docs/Web/API/EventTarget.removeEventListener	/en-US/docs/Web/API/EventTarget/removeEventListener
