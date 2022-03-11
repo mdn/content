@@ -84,7 +84,7 @@ You can declare a variable in two ways:
 
 You can declare variables to unpack values from [Object Literals](#object_literals) using the [Destructuring Assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax. For example, `let { bar } = foo`. This will create a variable named `bar` and assign to it the value corresponding to the key of the same name from our object `foo`.
 
-You can also assign a value to a variable For example, `x = 42`. This form creates an **[undeclared global](/en-US/docs/Web/JavaScript/Reference/Statements/var#description)** variable. It also generates a strict JavaScript warning. Undeclared global variables can often lead to unexpected behavior. Thus, it is discouraged to use undeclared global variables.
+You can also assign a value to a variable. For example, `x = 42`. This form creates an **[undeclared global](/en-US/docs/Web/JavaScript/Reference/Statements/var#description)** variable. It also generates a strict JavaScript warning. Undeclared global variables can often lead to unexpected behavior. Thus, it is discouraged to use undeclared global variables.
 
 ### Evaluating variables
 
