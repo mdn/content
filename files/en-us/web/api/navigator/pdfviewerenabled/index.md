@@ -1,6 +1,6 @@
 ---
 title: Navigator.pdfViewerEnabled
-slug: Web/API/navigator/pdfViewerEnabled
+slug: Web/API/Navigator/pdfViewerEnabled
 tags:
   - pdfViewerEnabled
   - API
