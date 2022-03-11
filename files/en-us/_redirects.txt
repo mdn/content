@@ -3528,6 +3528,7 @@
 /en-US/docs/Gamepad_API	/en-US/docs/Web/API/Gamepad_API
 /en-US/docs/Games-redirect-1	/en-US/docs/Games
 /en-US/docs/Games/Anatomy_of_a_vIdeo_game	/en-US/docs/Games/Anatomy
+/en-US/docs/Games/Index	/en-US/docs/Games
 /en-US/docs/Games/Introduction/Introduction_3D	/en-US/docs/Games/Techniques/3D_on_the_web
 /en-US/docs/Games/Introduction_to_HTML5_Game_Development_(summary)	/en-US/docs/Games/Introduction_to_HTML5_Game_Development
 /en-US/docs/Games/Introduction_to_HTML5_Game_Gevelopment_(summary)	/en-US/docs/Games/Introduction_to_HTML5_Game_Development
@@ -3607,6 +3608,7 @@
 /en-US/docs/Glossary/Hash_function	/en-US/docs/Glossary/Cryptographic_hash_function
 /en-US/docs/Glossary/Header	/en-US/docs/Glossary/HTTP_header
 /en-US/docs/Glossary/IMAP4	/en-US/docs/Glossary/IMAP
+/en-US/docs/Glossary/Index	/en-US/docs/Glossary
 /en-US/docs/Glossary/Instance_method	/en-US/docs/Glossary/Method
 /en-US/docs/Glossary/Instance_property	/en-US/docs/Glossary/property/JavaScript
 /en-US/docs/Glossary/Internationalization	/en-US/docs/Glossary/I18N
@@ -5304,6 +5306,7 @@
 /en-US/docs/Learn/How_the_Internet_works	/en-US/docs/Learn/Common_questions/How_does_the_Internet_work
 /en-US/docs/Learn/How_to_create_an_HTML_document	/en-US/docs/Learn/Getting_started_with_the_web
 /en-US/docs/Learn/How_web_pages_work	/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines
+/en-US/docs/Learn/Index	/en-US/docs/Learn
 /en-US/docs/Learn/Infrastructure	/en-US/docs/Learn/Common_questions
 /en-US/docs/Learn/JavaScript/Asynchronous/Async_await	/en-US/docs/Learn/JavaScript/Asynchronous/Promises
 /en-US/docs/Learn/JavaScript/Asynchronous/Async_loops_and_intervals	/en-US/docs/Learn/JavaScript/Asynchronous
@@ -5647,6 +5650,7 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Debugging_(Firefox_50_onwards)	https://extensionworkshop.com/documentation/develop/debugging/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Downloading_accessing_and_saving_files_in_browser_extensions	/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_files
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Extension_API_differences	/en-US/docs/Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations
+/en-US/docs/Mozilla/Add-ons/WebExtensions/Index	/en-US/docs/Mozilla/Add-ons/WebExtensions
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Making_money_from_browser_extensions	https://extensionworkshop.com/documentation/publish/make-money-from-browser-extensions/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Notifications	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Options_pages	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
@@ -6771,6 +6775,7 @@
 /en-US/docs/Tools/Debugging_Firefox_JS_Code	/en-US/docs/Tools/Browser_Toolbox
 /en-US/docs/Tools/DevTools_Window	/en-US/docs/Tools/Tools_Toolbox
 /en-US/docs/Tools/Firefox_Developer_Tools_Zone	/en-US/docs/Tools
+/en-US/docs/Tools/Index	/en-US/docs/Tools
 /en-US/docs/Tools/Inspector	/en-US/docs/Tools/Page_Inspector
 /en-US/docs/Tools/Memory/Comparing_heap_snapshots	/en-US/docs/Tools/Memory/Basic_operations
 /en-US/docs/Tools/Memory/Open_the_Memory_tool	/en-US/docs/Tools/Memory/Basic_operations
@@ -10205,6 +10210,7 @@
 /en-US/docs/Web/Accessibility/ARIA/widgets/overview	/en-US/docs/Web/Accessibility/ARIA/widgets
 /en-US/docs/Web/Accessibility/Accessible_forms/alerts	/en-US/docs/Web/Accessibility/ARIA/forms/alerts
 /en-US/docs/Web/Accessibility/Implementing_an_MSAA_Server	/en-US/docs/Web/Accessibility/Implementing_MSAA_server
+/en-US/docs/Web/Accessibility/Index	/en-US/docs/Web/Accessibility
 /en-US/docs/Web/Accessibility/Seizure_disorders/Accessibility_and_Spacial_Patterns	/en-US/docs/Web/Accessibility/Accessibility_and_Spacial_Patterns
 /en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable/Text_labels_and_names	/en-US/docs/Web/Accessibility/Understanding_WCAG/Text_labels_and_names
 /en-US/docs/Web/Accessibility/Web_Development	/en-US/docs/Web/Accessibility
@@ -11233,6 +11239,7 @@
 /en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video	/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 /en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/Guide/HTML/Using_data_attributes	/en-US/docs/Learn/HTML/Howto/Use_data_attributes
+/en-US/docs/Web/Guide/Index	/en-US/docs/Web/Guide
 /en-US/docs/Web/Guide/Needs_categorization/Functions_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/Guide/Performance/Using_web_workers	/en-US/docs/Web/API/Web_Workers_API/Using_web_workers
 /en-US/docs/Web/Guide/Prefixes	/en-US/docs/Glossary/Vendor_Prefix
@@ -11291,6 +11298,7 @@
 /en-US/docs/Web/HTML/Elements/textarea	/en-US/docs/Web/HTML/Element/textarea
 /en-US/docs/Web/HTML/Focus_management_in_HTML	/en-US/docs/Web/API/Document/hasFocus
 /en-US/docs/Web/HTML/Forms_in_HTML	/en-US/docs/Learn/Forms
+/en-US/docs/Web/HTML/Index	/en-US/docs/Web/HTML
 /en-US/docs/Web/HTML/Inline_elemente	/en-US/docs/Web/HTML/Inline_elements
 /en-US/docs/Web/HTML/Inline_elmements	/en-US/docs/Web/HTML/Inline_elements
 /en-US/docs/Web/HTML/Introduction	/en-US/docs/Learn/HTML/Introduction_to_HTML
@@ -11321,6 +11329,7 @@
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/xr	/en-US/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking
 /en-US/docs/Web/HTTP/Headers/Ranges	/en-US/docs/Web/HTTP/Headers/Range
 /en-US/docs/Web/HTTP/History_of_HTTP_versions	/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
+/en-US/docs/Web/HTTP/Index	/en-US/docs/Web/HTTP
 /en-US/docs/Web/HTTP/Pipelining_FAQ	/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x
 /en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file	/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 /en-US/docs/Web/HTTP/Response_codes	/en-US/docs/Web/HTTP/Status
@@ -11648,6 +11657,7 @@
 /en-US/docs/Web/JavaScript/Typed_arrays/Uint32Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array
 /en-US/docs/Web/JavaScript/Typed_arrays/Uint8Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
 /en-US/docs/Web/MathML/Element/menclosed	/en-US/docs/Web/MathML/Element/menclose
+/en-US/docs/Web/MathML/Index	/en-US/docs/Web/MathML
 /en-US/docs/Web/Media/Formats/Guide_to_codecs_for_audio_on_the_web	/en-US/docs/Web/Media/Formats/Audio_codecs
 /en-US/docs/Web/Media_Queries	/en-US/docs/Web/CSS/Media_Queries
 /en-US/docs/Web/Performance/Populating_the_page:_how_browsers_work	/en-US/docs/Web/Performance/How_browsers_work
@@ -11808,6 +11818,7 @@
 /en-US/docs/Web/Reference/Functions_and classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/Reference/Functions_and_classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/SVG/Attribute/dataset	/en-US/docs/Web/API/HTMLElement/dataset
+/en-US/docs/Web/SVG/Index	/en-US/docs/Web/SVG
 /en-US/docs/Web/SVG/Tutorial/Fill_Stroke_and_Gradients	/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes
 /en-US/docs/Web/SVG/circle	/en-US/docs/Web/SVG/Element/circle
 /en-US/docs/Web/SVG/ellipse	/en-US/docs/Web/SVG/Element/ellipse
@@ -11870,10 +11881,13 @@
 /en-US/docs/Web/Web_Components/Custom_Elements/Custom_Elements_with_Classes	/en-US/docs/Web/Web_Components/Using_custom_elements
 /en-US/docs/Web/Web_Components/HTML_Imports	/en-US/docs/Web/Web_Components
 /en-US/docs/Web/Web_Components/Shadow_DOM	/en-US/docs/Web/Web_Components/Using_shadow_DOM
+/en-US/docs/Web/XML/Index	/en-US/docs/Web/XML
 /en-US/docs/Web/XML/xml:base	/en-US/docs/Web/API/Node/baseURI
+/en-US/docs/Web/XPath/Index	/en-US/docs/Web/XPath
 /en-US/docs/Web/XSLT/EXSLT	/en-US/docs/Web/EXSLT
 /en-US/docs/Web/XSLT/Elements	/en-US/docs/Web/XSLT/Element
 /en-US/docs/Web/XSLT/Elements/element	/en-US/docs/Web/XSLT/Element/element
+/en-US/docs/Web/XSLT/Index	/en-US/docs/Web/XSLT
 /en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/Mozilla_XSLT_XPath_Reference	/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT
 /en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/Mozilla_XSLT_XPath_Reference/Axes	/en-US/docs/Web/XPath/Axes
 /en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/Mozilla_XSLT_XPath_Reference/Axes/ancestor	/en-US/docs/Web/XPath/Axes/ancestor
@@ -11965,6 +11979,7 @@
 /en-US/docs/WebAssembly/Exported_function_exotic_objects	/en-US/docs/WebAssembly/Exported_functions
 /en-US/docs/WebAssembly/Exported_wasm_functions	/en-US/docs/WebAssembly/Exported_functions
 /en-US/docs/WebAssembly/Fetching_WebAssembly_bytecode	/en-US/docs/WebAssembly/Loading_and_running
+/en-US/docs/WebAssembly/Index	/en-US/docs/WebAssembly
 /en-US/docs/WebAssembly/WebAssembly_JavaScript_API	/en-US/docs/WebAssembly
 /en-US/docs/WebAudio_playbackRate_explained	/en-US/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained
 /en-US/docs/WebDAV	/en-US/docs/Glossary/WebDAV
@@ -12039,7 +12054,7 @@
 /en-US/docs/XMLHttpRequest/Using_XMLHttpRequest	/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
 /en-US/docs/XMLSerializer	/en-US/docs/Web/API/XMLSerializer
 /en-US/docs/XML_Introduction	/en-US/docs/Web/XML/XML_introduction
-/en-US/docs/XML_introduction/Index	/en-US/docs/Web/XML/Index
+/en-US/docs/XML_introduction/Index	/en-US/docs/Web/XML
 /en-US/docs/XML_introduction/xml:base	/en-US/docs/Web/API/Node/baseURI
 /en-US/docs/XPCOM_Interface_Reference/nsIDOMStorageEvent	/en-US/docs/Web/API/StorageEvent
 /en-US/docs/XPath	/en-US/docs/Web/XPath
