@@ -29,13 +29,13 @@ implementation.
 sort()
 
 // Arrow function
-sort((firstEl, secondEl) => { /* ... */ } )
+sort((a, b) => { /* ... */ } )
 
 // Compare function
 sort(compareFn)
 
 // Inline compare function
-sort(function compareFn(firstEl, secondEl) { /* ... */ })
+sort(function compareFn(a, b) { /* ... */ })
 ```
 
 ### Parameters
@@ -44,9 +44,9 @@ sort(function compareFn(firstEl, secondEl) { /* ... */ })
 
   - : Specifies a function that defines the sort order. If omitted, the array elements are converted to strings, then sorted according to each character's Unicode code point value.
 
-    - `firstEl`
+    - `a`
       - : The first element for comparison.
-    - `secondEl`
+    - `b`
       - : The second element for comparison.
 
 ### Return value
@@ -97,6 +97,8 @@ function compare(a, b) {
   return 0;
 }
 ```
+
+> **Note:** Applications should not rely on order of arguments or calls, as those are implementation dependent.
 
 To compare numbers instead of strings, the compare function can subtract `b`
 from `a`. The following function will sort the array in ascending order (if
