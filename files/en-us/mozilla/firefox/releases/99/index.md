@@ -45,6 +45,9 @@ This article provides information about the changes in Firefox 99 that will affe
 
 #### Media, WebRTC, and Web Audio
 
+- The [`RTCPeerConnection.setConfiguration()`](/en-US/docs/Web/API/RTCPeerConnection/setConfiguration) method is now supported.
+  Among other things, this allows sites to adjust the configuration to changing network conditions ({{bug(1253706)}}).
+
 #### Removals
 
 ### WebAssembly
