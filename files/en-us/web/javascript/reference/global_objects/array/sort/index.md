@@ -263,7 +263,7 @@ const students = [
   { name: "Alex",   grade: 15 },
   { name: "Devlin", grade: 15 },
   { name: "Eagle",  grade: 13 },
-  { name: "Sam",    grade: 14 },
+  { name: "Sam",    grade: 14 }
 ];
 ```
 
@@ -280,7 +280,7 @@ The `students` variable will then have the following value:
   { name: "Eagle",  grade: 13 },
   { name: "Sam",    grade: 14 },
   { name: "Alex",   grade: 15 }, // original maintained for similar grade (stable sorting)
-  { name: "Devlin", grade: 15 }, // original maintained for similar grade (stable sorting)
+  { name: "Devlin", grade: 15 }  // original maintained for similar grade (stable sorting)
 ];
 ```
 
@@ -293,7 +293,7 @@ Before version 10 (or EcmaScript 2019), sort stability was not guaranteed, meani
   { name: "Eagle",  grade: 13 },
   { name: "Sam",    grade: 14 },
   { name: "Devlin", grade: 15 }, // original order not maintained
-  { name: "Alex",   grade: 15 }, // original order not maintained
+  { name: "Alex",   grade: 15 }  // original order not maintained
 ];
 ```
 
