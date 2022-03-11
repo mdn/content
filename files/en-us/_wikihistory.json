@@ -58199,6 +58199,16 @@
       "chrisdavidmills"
     ]
   },
+  "Web/API/MediaQueryList/change_event": {
+    "modified": "2020-10-15T21:54:09.424Z",
+    "contributors": [
+      "mfuji09",
+      "chrisdavidmills",
+      "seven-deuce",
+      "ExE-Boss",
+      "fscholz"
+    ]
+  },
   "Web/API/MediaQueryList/matches": {
     "modified": "2020-10-15T21:54:08.347Z",
     "contributors": [
@@ -58218,16 +58228,6 @@
       "ExE-Boss",
       "fscholz",
       "chrisdavidmills"
-    ]
-  },
-  "Web/API/MediaQueryList/onchange": {
-    "modified": "2020-10-15T21:54:09.424Z",
-    "contributors": [
-      "mfuji09",
-      "chrisdavidmills",
-      "seven-deuce",
-      "ExE-Boss",
-      "fscholz"
     ]
   },
   "Web/API/MediaQueryList/removeListener": {

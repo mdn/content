@@ -8383,6 +8383,7 @@
 /en-US/docs/Web/API/MediaPositionState/playbackRate	/en-US/docs/Web/API/MediaSession/setPositionState
 /en-US/docs/Web/API/MediaPositionState/position	/en-US/docs/Web/API/MediaSession/setPositionState
 /en-US/docs/Web/API/MediaQueryList/addListener()	/en-US/docs/Web/API/MediaQueryList/addListener
+/en-US/docs/Web/API/MediaQueryList/onchange	/en-US/docs/Web/API/MediaQueryList/change_event
 /en-US/docs/Web/API/MediaQueryListListener	/en-US/docs/Web/API/MediaQueryList
 /en-US/docs/Web/API/MediaRecorder.ondataavailable	/en-US/docs/Web/API/MediaRecorder/ondataavailable
 /en-US/docs/Web/API/MediaRecorder.onerror	/en-US/docs/Web/API/MediaRecorder/onerror
