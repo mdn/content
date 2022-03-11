@@ -80,7 +80,7 @@ The value that results from running the “reducer” callback function to compl
 The `reduce()` method takes two arguments: a callback function and an optional initial value.
 If an initial value is provided, `reduce()` calls the "reducer" callback function on each element in the array, in order. If no initial value is provided, `reduce()` calls the callback function on each element in the array after the first element.
 
-`reduce` returns whatever is returned from the callback on the final iteration.
+`reduce()` returns the value that is returned from the callback function on the final iteration of the array.
 
 ### When to not use reduce()
 
@@ -94,13 +94,11 @@ naming can help mitigate readability drawbacks.
 
 ### Behavior during array mutations
 
-`reduce` does not mutate the array it is used on, however it is possible for code inside the callback to mutate
-the array. Here is what happens if a mutation occurs:
+The `reduce()` method itself does not mutate the array it is used on. However, it is possible for code inside the callback function to mutate the array. These are the possible scenarios of array mutations and how `reduce()` behaves in these scenarios:
 
-- If elements are appended to the array after `reduce()` begins to iterate over the array, the callback
-function does not iterate over the appended elements.
+- If elements are appended to the array _after_ `reduce()` begins to iterate over the array, the callback function does not iterate over the appended elements.
 - If existing elements of the array are changed, their values as passed to the callback function will be the values at the time `reduce()` iterates over the elements.
-- Elements that are deleted after the call to `reduce()` begins and before being iterated over are not visited.
+- Array elements that are deleted _after_ the call to `reduce()` begins _and_ before being iterated over are not visited by `reduce()`.
 
 ### Edge cases
 
