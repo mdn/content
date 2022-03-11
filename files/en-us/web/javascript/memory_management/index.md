@@ -193,7 +193,9 @@ Node.js offers additional options and tools for configuring and debugging memory
 
 The max amount of available heap memory can be increased with a flag:
 
-`node --max-old-space-size=6000 index.js`
+```bash
+node --max-old-space-size=6000 index.js
+```
 
 We can also expose the garbage collector for debugging memory issues using a flag and the [Chrome Debugger](https://nodejs.org/en/docs/guides/debugging-getting-started/):
 
