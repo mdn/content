@@ -65,8 +65,7 @@ It can take the following values:
   - : An attempt was made to change the value of `responseType` on
     an`XMLHttpRequest` which is in synchronous mode but not in a
     {{domxref("Worker")}}. For additional details, see [Synchronous XHR
-    restrictions](#synchronous_xhr
-____restrictions) below.
+    restrictions](#synchronous_xhr_____restrictions) below.
 
 ## Usage notes
 

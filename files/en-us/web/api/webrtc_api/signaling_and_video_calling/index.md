@@ -459,7 +459,7 @@ That session description is then passed into {{domxref("RTCPeerConnection.setRem
 
 Once the answer has been created using {{domxref("RTCPeerConnection.createAnswer", "myPeerConnection.createAnswer()")}}, the description of the local end of the connection is set to the answer's SDP by calling {{domxref("RTCPeerConnection.setLocalDescription", "myPeerConnection.setLocalDescription()")}}, then the answer is transmitted through the signaling server to the caller to let them know what the answer is.
 
-Any errors are caught and passed to `handleGetUserMediaError()`, described in [Handling getUserMedia() errors](#handling_getusermedia()_errors).
+Any errors are caught and passed to `handleGetUserMediaError()`, described in [Handling getUserMedia() errors](#handling_getusermedia___errors).
 
 > **Note:** As is the case with the caller, once the `setLocalDescription()` fulfillment handler has run, the browser begins firing {{event("icecandidate")}} events that the callee must handle, one for each candidate that needs to be transmitted to the remote peer.
 

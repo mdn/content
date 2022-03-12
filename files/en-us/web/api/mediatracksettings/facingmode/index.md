@@ -44,7 +44,7 @@ var facingMode = MediaTrackSettings.facingMode;
 ### Value
 
 A {{domxref("DOMString")}} whose value is one of the strings in
-`[VideoFacingModeEnum](#videofacingmodeenum)`.
+[`VideoFacingModeEnum`](#videofacingmodeenum).
 
 ### VideoFacingModeEnum
 

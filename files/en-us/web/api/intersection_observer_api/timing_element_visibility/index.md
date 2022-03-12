@@ -575,7 +575,7 @@ function replaceAd(adBox) {
 
 `replaceAd()` begins by calling `updateAdTimer()` on the existing ad, to ensure that its timer is up-to-date. This ensures that when we read its `totalViewTime`, we see the exact final value for how long the ad was visible to the user. We then report that data; in this case, by logging it to console, but in the real world, you'd submit the information to an ad service's API or save it into a database.
 
-Then we load a new ad by calling `[loadRandomAd()](#creating_an_ad)`, specifying the ad to be replaced as an input parameter. As we saw previously, `loadRandomAd()` will replace an existing ad with content and data corresponding to a new ad, if you specify an existing ad's element as an input parameter.
+Then we load a new ad by calling [`loadRandomAd()`](#creating_an_ad), specifying the ad to be replaced as an input parameter. As we saw previously, `loadRandomAd()` will replace an existing ad with content and data corresponding to a new ad, if you specify an existing ad's element as an input parameter.
 
 The new ad's element object is returned to the caller in case it's needed.
 
