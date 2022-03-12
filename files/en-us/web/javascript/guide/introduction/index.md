@@ -81,7 +81,7 @@ The JavaScript documentation describes aspects of the language that are appropri
 
 Getting started with JavaScript is easy: all you need is a modern Web browser. This guide includes some JavaScript features which are only currently available in the latest versions of Firefox, so using the most recent version of Firefox is recommended.
 
-The _Web Console_ tool built into Firefox is useful for experimenting with JavaScript; you can use it into two modes: single-line input mode, and multi-line input mode.
+The _Web Console_ tool built into Firefox is useful for experimenting with JavaScript; you can use it in two modes: single-line input mode, and multi-line input mode.
 
 ### Single-line input in the Web Console
 

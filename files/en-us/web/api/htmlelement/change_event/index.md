@@ -121,7 +121,7 @@ function updateValue(e) {
 
 #### Result
 
-{{ EmbedLiveSample('Text_input_element', '100%', '75px') }}
+{{ EmbedLiveSample('Text_input_element', '100%', '90px') }}
 
 ## Specifications
 
