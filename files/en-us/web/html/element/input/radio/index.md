@@ -38,7 +38,7 @@ They are called radio buttons because they look and operate in a similar manner 
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>[Value](#value)</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
         A {{domxref("DOMString")}} representing the value of the radio
         button.

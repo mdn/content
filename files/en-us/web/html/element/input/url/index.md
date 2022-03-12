@@ -31,7 +31,7 @@ On browsers that don't support inputs of type `url`, a `url` input falls back to
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>[Value](#value)</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>A {{domxref("DOMString")}} representing a URL, or empty</td>
     </tr>
     <tr>

@@ -37,7 +37,7 @@ The Edge `week` control is somewhat more elaborate, opening up week and year pic
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>[Value](#value)</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
         A {{domxref("DOMString")}} representing a week and year, or
         empty

@@ -27,7 +27,7 @@ browser-compat: html.elements.input.input-reset
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>[Value](#value)</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>A {{domxref("DOMString")}} used as the button's label</td>
     </tr>
     <tr>

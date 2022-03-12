@@ -24,7 +24,7 @@ browser-compat: html.elements.input.input-checkbox
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>[Value](#value)</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
         A {{domxref("DOMString")}} representing the value of the
         checkbox.
@@ -41,9 +41,9 @@ browser-compat: html.elements.input.input-checkbox
     <tr>
       <td><strong>IDL attributes</strong></td>
       <td>
-        <code>[checked](#attr-checked)</code>,
-        <code>[indeterminate](#attr-indeterminate)</code> and
-        <code>[value](#attr-value)</code>
+        <code><a href="#attr-checked">checked</a></code>,
+        <code><a href="#attr-indeterminate">indeterminate</a></code> and
+        <code><a href="#attr-value">value</a></code>
       </td>
     </tr>
     <tr>

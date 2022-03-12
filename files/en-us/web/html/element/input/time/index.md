@@ -53,7 +53,7 @@ The Edge `time` control is somewhat more elaborate, opening up an hour and minut
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>[Value](#value)</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>A {{domxref("DOMString")}} representing a time, or empty.</td>
     </tr>
     <tr>

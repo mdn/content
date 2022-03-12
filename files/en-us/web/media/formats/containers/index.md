@@ -50,12 +50,12 @@ To learn more about a specific container format, find it in this list and click 
   </thead>
   <tbody>
     <tr>
-      <th scope="row">[3GP](#3gp)</th>
+      <th scope="row"><a href="#3gp">3GP</a></th>
       <td>Third Generation Partnership</td>
       <td>Firefox for Android</td>
     </tr>
     <tr>
-      <th scope="row">[ADTS](#adts)</th>
+      <th scope="row"><a href="#adts">ADTS</a></th>
       <td>Audio Data Transport Stream</td>
       <td>
         <p>Firefox</p>
@@ -64,22 +64,22 @@ To learn more about a specific container format, find it in this list and click 
       </td>
     </tr>
     <tr>
-      <th scope="row">[FLAC](#flac)</th>
+      <th scope="row"><a href="#flac">FLAC</a></th>
       <td>Free Lossless Audio Codec</td>
       <td>Chrome 56, Edge 16, Firefox 51, Safari 11</td>
     </tr>
     <tr>
-      <th scope="row">[MPEG / MPEG-2](#mpegmpeg-2)</th>
+      <th scope="row"><a href="#mpegmpeg-2">MPEG / MPEG-2</a></th>
       <td>Moving Picture Experts Group (1 and 2)</td>
       <td>—</td>
     </tr>
     <tr>
-      <th scope="row">[MPEG-4 (MP4)](#mpeg-4_mp4)</th>
+      <th scope="row"><a href="#mpeg-4_mp4">MPEG-4 (MP4)</a></th>
       <td>Moving Picture Experts Group 4</td>
       <td>Chrome 3, Edge 12, Firefox, Internet Explorer 9, Opera 24, Safari 3.1</td>
     </tr>
     <tr>
-      <th scope="row">[Ogg](#ogg)</th>
+      <th scope="row"><a href="#ogg">Ogg</a></th>
       <td>Ogg</td>
       <td>
         <p>Chrome 3, Firefox 3.5, Edge 17 (desktop only), Internet Explorer 9, Opera 10.50</p>
@@ -87,12 +87,12 @@ To learn more about a specific container format, find it in this list and click 
       </td>
     </tr>
     <tr>
-      <th scope="row">[QuickTime (MOV)](#quicktime)</th>
+      <th scope="row"><a href="#quicktime">QuickTime (MOV)</a></th>
       <td>Apple QuickTime movie</td>
       <td>Only older versions of Safari, plus other browsers that supported Apple's QuickTime plugin</td>
     </tr>
     <tr>
-      <th scope="row">[WebM](#webm)</th>
+      <th scope="row"><a href="#webm">WebM</a></th>
       <td>Web Media</td>
       <td>
         <p>Chrome 6, Edge 17 (desktop only), Firefox 4, Opera 10.6, Safari 14.1 (macOS), Safari 15 (iOS).</p>

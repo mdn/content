@@ -24,7 +24,7 @@ browser-compat: html.elements.input.input-file
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>[Value](#value)</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
         A {{domxref("DOMString")}} representing the path to the selected
         file.

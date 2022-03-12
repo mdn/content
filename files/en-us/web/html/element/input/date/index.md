@@ -28,7 +28,7 @@ The input UI generally varies from browser to browser; see [Browser compatibilit
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>[Value](#value)</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
         A {{domxref("DOMString")}} representing a date in YYYY-MM-DD
         format, or empty

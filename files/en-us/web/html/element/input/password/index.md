@@ -36,7 +36,7 @@ Both approaches help a user check that they entered the intended password, which
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>[Value](#value)</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
         A {{domxref("DOMString")}} representing a password, or empty
       </td>

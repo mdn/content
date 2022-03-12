@@ -27,7 +27,7 @@ On browsers that don't support inputs of type `number`, a `number` input falls b
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>[Value](#value)</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>A {{jsxref("Number")}} representing a number, or empty</td>
     </tr>
     <tr>

@@ -24,7 +24,7 @@ On browsers that don't support inputs of type `email`, a `email` input falls bac
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>[Value](#value)</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
         A {{domxref("DOMString")}} representing an e-mail address, or
         empty

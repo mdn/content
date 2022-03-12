@@ -28,7 +28,7 @@ If the user's browser doesn't support type `range`, it will fall back and treat 
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>[Value](#value)</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
         A {{domxref("DOMString")}} containing the string representation
         of the selected numeric value; use

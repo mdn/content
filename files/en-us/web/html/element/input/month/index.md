@@ -40,7 +40,7 @@ The Microsoft Edge `month` control looks like this:
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>[Value](#value)</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
         A {{domxref("DOMString")}} representing a month and year, or
         empty.
