@@ -464,7 +464,7 @@ Setting MONGODB_URI and restarting limitless-tor-18923... done, v13
 MONGODB_URI: mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true
 ```
 
-> **Note:** On some operating systems you may need to set the set the URL between single quotation marks (e.g. `heroku config:set MONGODB_URI='mongodb+srv://...'`).
+> **Note:** On some operating systems you may need to set the URL between single quotation marks (e.g. `heroku config:set MONGODB_URI='mongodb+srv://...'`).
 
 You can inspect your configuration variables at any time using the `heroku config` command — try this now:
 
