@@ -4,7 +4,6 @@ slug: Web/API/Selection/isCollapsed
 tags:
   - API
   - DOM
-  - Experimental
   - HTML Editing
   - Property
   - Read-only
@@ -12,7 +11,7 @@ tags:
   - Selection
 browser-compat: api.Selection.isCollapsed
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ ApiRef("DOM") }}
 
 The **`Selection.isCollapsed`** read-only property returns a
 boolean value which indicates whether or not there is currently any text

@@ -3,14 +3,13 @@ title: Selection.collapse()
 slug: Web/API/Selection/collapse
 tags:
   - API
-  - Experimental
   - HTML Editing
   - Method
   - Reference
   - Selection
 browser-compat: api.Selection.collapse
 ---
-{{ApiRef("DOM")}}{{SeeCompatTable}}
+{{ApiRef("DOM")}}
 
 The **`Selection.collapse()`** method collapses the current
 selection to a single point. The document is not modified. If the content is focused and
