@@ -1226,7 +1226,7 @@ Some keys are common across multiple languages, while others exist only on keybo
       </td>
       <td></td>
       <td></td>
-      <td>See [Dead keycodes for Linux](#dead_keycodes_for_linux) below</td>
+      <td>See <a href="#dead_keycodes_for_linux">Dead keycodes for Linux</a> below</td>
       <td></td>
     </tr>
     <tr>
