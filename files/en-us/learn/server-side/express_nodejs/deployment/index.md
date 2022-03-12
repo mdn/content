@@ -253,7 +253,7 @@ Heroku is integrated with **git,** the source code version control system. The H
 
 > **Note:** If you're accustomed to following good software development practices you may already be using git or some other SCM system. If you already have a git repository, skip this step.
 
-There are a lot of ways of to work with git. One easy workflow is to first set up an account on [GitHub](https://github.com/), create a new repository there and then clone it to your local machine:
+There are a lot of ways to work with git. One easy workflow is to first set up an account on [GitHub](https://github.com/), create a new repository there and then clone it to your local machine:
 
 1. Visit <https://github.com/> and create an account.
 2. Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
