@@ -12,7 +12,7 @@ browser-compat: css.selectors.invalid
 ---
 {{CSSRef}}
 
-The **`:invalid`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}} or other {{HTMLElement("form")}} element whose contents fail to [validate](/en-US/docs/Web/Guide/HTML/Constraint_validation).
+The **`:invalid`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("form")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}} or other {{HTMLElement("form")}} element whose contents fail to [validate](/en-US/docs/Web/Guide/HTML/Constraint_validation).
 
 ```css
 /* Selects any invalid <input> */
@@ -29,7 +29,7 @@ This pseudo-class is useful for highlighting field errors for the user.
 
 ## Examples
 
-### A form that colors elements green when they validate and red when they don't.
+### Coloring elements to show validation
 
 #### HTML
 
@@ -89,7 +89,70 @@ input:required:invalid {
 
 #### Result
 
-{{EmbedLiveSample('Examples', 600, 120)}}
+{{EmbedLiveSample('Coloring elements to show validation', 600, 200)}}
+
+### Showing sections in stages
+
+In this example we use `:invalid` along with `~`, the [general sibling combinator](/en-US/docs/Web/CSS/General_sibling_combinator), to make a form appear in stages, so the form initially shows the first item to complete, and when the user completes each item the form displays the next one. When the whole form is complete the user can submit it.
+
+#### HTML
+
+```html
+<form>
+
+  <fieldset>
+    <label for="form-name">Name</label><br>
+    <input type="text" name="name" id="form-name" required>
+  </fieldset>
+
+  <fieldset>
+    <label for="form-email">Email Address</label><br>
+    <input type="email" name="email" id="form-email" required>
+  </fieldset>
+
+  <fieldset>
+    <label for="form-message">Message</label><br>
+    <textarea name="message" id="form-message" required></textarea>
+  </fieldset>
+
+  <button type="submit" name="send">Submit</button>
+
+</form>
+```
+
+#### CSS
+
+```css
+/* Hide the fieldset after an invalid fieldset */
+fieldset:invalid~fieldset {
+  display: none;
+}
+
+/* Dim and disable the button while the form is invalid */
+form:invalid button {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+input, textarea {
+  box-sizing: border-box;
+  width: 100%;
+  font-family:monospace;
+  padding: 0.25em 0.5em;
+}
+
+button {
+  width: 100%;
+  border: thin solid darkgrey;
+  font-size: 1.25em;
+  background-color: darkgrey;
+  color: white;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Showing sections in stages', 600, 300)}}
 
 ## Accessibility concerns
 
