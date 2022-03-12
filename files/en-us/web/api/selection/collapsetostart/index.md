@@ -3,14 +3,13 @@ title: Selection.collapseToStart()
 slug: Web/API/Selection/collapseToStart
 tags:
   - API
-  - Experimental
   - HTML Editing
   - Method
   - Reference
   - Selection
 browser-compat: api.Selection.collapseToStart
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ ApiRef("DOM") }}
 
 The **`Selection.collapseToStart()`** method collapses the
 selection to the start of the first range in the selection. If the content of the

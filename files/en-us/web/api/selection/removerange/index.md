@@ -3,14 +3,13 @@ title: Selection.removeRange()
 slug: Web/API/Selection/removeRange
 tags:
   - API
-  - Experimental
   - HTML Editing
   - Method
   - Reference
   - Selection
 browser-compat: api.Selection.removeRange
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ ApiRef("DOM") }}
 
 The **`Selection.removeRange()`** method removes a range from a
 selection.

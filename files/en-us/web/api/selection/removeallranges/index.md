@@ -3,14 +3,13 @@ title: Selection.removeAllRanges()
 slug: Web/API/Selection/removeAllRanges
 tags:
   - API
-  - Experimental
   - HTML Editing
   - Method
   - Reference
   - Selection
 browser-compat: api.Selection.removeAllRanges
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ ApiRef("DOM") }}
 
 The **`Selection.removeAllRanges()`** method removes all ranges
 from the selection, leaving the {{domxref("Selection.anchorNode", "anchorNode")}} and
