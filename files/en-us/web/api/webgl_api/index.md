@@ -20,7 +20,7 @@ tags:
 
 Support for WebGL is present in [Firefox](/en-US/docs/Mozilla/Firefox) 4+, [Google Chrome](https://www.google.com/chrome/) 9+, [Opera](https://www.opera.com/) 12+, [Safari](https://www.apple.com/safari/) 5.1+, [Internet Explorer](https://windows.microsoft.com/en-us/internet-explorer/browser-ie) 11+, and [Microsoft Edge](https://www.microsoft.com/en-us/edge) build 10240+; however, the user's device must also have hardware that supports these features.
 
-The {{anch("WebGL 2")}} API introduces support for much of the OpenGL ES 3.0 feature set; it's provided through the {{domxref("WebGL2RenderingContext")}} interface.
+The [WebGL 2](#webgl_2) API introduces support for much of the OpenGL ES 3.0 feature set; it's provided through the {{domxref("WebGL2RenderingContext")}} interface.
 
 The {{HTMLElement("canvas")}} element is also used by the [Canvas API](/en-US/docs/Web/API/Canvas_API) to do 2D graphics on web pages.
 

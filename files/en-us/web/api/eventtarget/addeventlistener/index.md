@@ -57,7 +57,7 @@ addEventListener(type, listener, useCapture);
     {{domxref("Event")}} interface) when an event of the specified type occurs. This must
     be an object implementing the {{domxref("EventListener")}} interface, or a JavaScript
     [function](/en-US/docs/Web/JavaScript/Guide/Functions). See
-    {{anch("The event listener callback")}} for details on the callback itself.
+    [The event listener callback](#the_event_listener_callback) for details on the callback itself.
 - `options` {{optional_inline}}
 
   - : An object that specifies characteristics about the event listener. The available
@@ -474,7 +474,7 @@ Click the outer, middle, inner containers respectively to see how the options wo
 
 Before using a particular value in the `options` object, it's a
 good idea to ensure that the user's browser supports it, since these are an addition
-that not all browsers have supported historically. See {{anch("Safely detecting option support")}} for details.
+that not all browsers have supported historically. See [Safely detecting option support](#safely_detecting_option_support) for details.
 
 ## Other notes
 

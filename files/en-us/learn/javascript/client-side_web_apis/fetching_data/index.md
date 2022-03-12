@@ -206,7 +206,7 @@ However, a complete website would handle this error more gracefully by displayin
 You can test the failure case yourself:
 
 1. Make a local copy of the example files.
-2. Run the code through a web server (as described above, in {{anch("Serving your example from a server")}}).
+2. Run the code through a web server (as described above, in [Serving your example from a server](#serving_your_example_from_a_server)).
 3. Modify the path to the file being fetched, to something like 'produc.json' (make sure it is misspelled).
 4. Now load the index file in your browser (via `localhost:8000`) and look in your browser developer console. You'll see a message similar to "Fetch problem: HTTP error: 404".
 

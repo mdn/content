@@ -46,7 +46,7 @@ const observer = new MutationObserver(callback)
     2. the {{domxref("MutationObserver")}} which invoked the
         `callback`.
 
-    See the {{anch("Example", "example")}} below for more details.
+    See the [example](#example) below for more details.
 
 ### Return value
 

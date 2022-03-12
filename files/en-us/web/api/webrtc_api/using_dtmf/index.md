@@ -98,17 +98,17 @@ These are, in order:
 - `dialString`
   - : The DTMF string the caller will send when the "Dial" button is clicked.
 - `callerPC` and `receiverPC`
-  - : The {{domxref("RTCPeerConnection")}} objects representing the caller and the receiver, respectively. These will be initialized when the call starts up, in our `connectAndDial()` function, as shown in {{anch("Starting the connection process")}} below.
+  - : The {{domxref("RTCPeerConnection")}} objects representing the caller and the receiver, respectively. These will be initialized when the call starts up, in our `connectAndDial()` function, as shown in [Starting the connection process](#starting_the_connection_process) below.
 - `dtmfSender`
-  - : The {{domxref("RTCDTMFSender")}} object for the connection. This will be obtained while setting up the connection, in the `gotStream()` function shown in {{anch("Adding the audio to the connection")}}.
+  - : The {{domxref("RTCDTMFSender")}} object for the connection. This will be obtained while setting up the connection, in the `gotStream()` function shown in [Adding the audio to the connection](#adding_the_audio_to_the_connection).
 - `hasAddTrack`
-  - : Because some browsers have not yet implemented {{domxref("RTCPeerConnection.addTrack()")}}, therefore requiring the use of the obsolete {{domxref("RTCPeerConnection.addStream", "addStream()")}} method, we use this Boolean to determine whether or not the user agent supports `addTrack()`; if it doesn't, we'll fall back to `addStream()`. This gets figured out in `connectAndDial()`, as shown in {{anch("Starting the connection process")}}.
+  - : Because some browsers have not yet implemented {{domxref("RTCPeerConnection.addTrack()")}}, therefore requiring the use of the obsolete {{domxref("RTCPeerConnection.addStream", "addStream()")}} method, we use this Boolean to determine whether or not the user agent supports `addTrack()`; if it doesn't, we'll fall back to `addStream()`. This gets figured out in `connectAndDial()`, as shown in [Starting the connection process](#starting_the_connection_process).
 - `mediaConstraints`
   - : An object conforming to the {{domxref("MediaConstraints")}} dictionary specifying the constraints to use when starting the connection. We want an audio-only connection, so `video` is `false`, while `audio` is `true`.
 - `offerOptions`
   - : An object object providing options to specify when calling {{domxref("RTCPeerConnection.createOffer()")}}. In this case, we state that we want to receive audio but not video.
 - `dialButton` and `logElement`
-  - : These variables will be used to store references to the dial button and the {{HTMLElement("div")}} into which logging information will be written. They'll get set up when the page is first loaded. See {{anch("Initialization")}} below.
+  - : These variables will be used to store references to the dial button and the {{HTMLElement("div")}} into which logging information will be written. They'll get set up when the page is first loaded. See [Initialization](#initialization) below.
 
 #### Initialization
 
@@ -281,7 +281,7 @@ function handleCallerIceConnectionStateChange() {
 }
 ```
 
-The `iceconnectionstatechange` event doesn't actually include within it the new state, so we get the connection process's current state from `callerPC`'s {{domxref("RTCPeerConnection.iceConnectionState")}} property. After logging the new state, we look to see if the state is `"connected"`. If so, we log the fact that we're about to send the DTMF, then we call {{domxref("RTCDTMFSender.insertDTMF", "dtmf.insertDTMF()")}} to send the DTMF on the same track as the audio data method on the `RTCDTMFSender` object we {{anch("Adding the audio to the connection", "previously stored")}} in `dtmfSender`.
+The `iceconnectionstatechange` event doesn't actually include within it the new state, so we get the connection process's current state from `callerPC`'s {{domxref("RTCPeerConnection.iceConnectionState")}} property. After logging the new state, we look to see if the state is `"connected"`. If so, we log the fact that we're about to send the DTMF, then we call {{domxref("RTCDTMFSender.insertDTMF", "dtmf.insertDTMF()")}} to send the DTMF on the same track as the audio data method on the `RTCDTMFSender` object we [previously stored](#adding_the_audio_to_the_connection) in `dtmfSender`.
 
 Our call to `insertDTMF()` specifies not only the DTMF to send (`dialString`), but also the length of each tone in milliseconds (400 ms) and the amount of time between tones (50 ms).
 
@@ -345,7 +345,7 @@ function handleCallerGatheringStateChangeEvent() {
 
 When the receiver's `RTCPeerConnection` ICE layer comes up with a new candidate to propose, it issues an {{event("icecandidate")}} event to `receiverPC`. The `icecandidate` event handler's job is to transmit the candidate to the caller. In our example, we are directly controlling both the caller and the receiver, so we can just directly add the candidate to the caller by calling its {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} method. That's handled by `handleReceiverIceEvent()`.
 
-This code is analogous to the `icecandidate` event handler for the caller, seen in {{anch("Adding candidates to the caller")}} above.
+This code is analogous to the `icecandidate` event handler for the caller, seen in [Adding candidates to the caller](#adding_candidates_to_the_caller) above.
 
 ```js
 function handleReceiverIceEvent(event) {
@@ -366,7 +366,7 @@ If `event.candidate` is `null`, that indicates that there are no more candidates
 
 #### Adding media to the receiver
 
-When the receiver begins to receive media, an event is delivered to the receiver's {{domxref("RTCPeerConnection")}}, `receiverPC`. As explained in {{anch("Starting the connection process")}}, the current WebRTC specification uses the {{event("track")}} event for this, but some browsers haven't been updated to support this yet, so we also need to handle the {{event("addstream")}} event. The `handleReceiverTrackEvent()` and `handleReceiverAddStreamEvent()` methods, shown below, handle these.
+When the receiver begins to receive media, an event is delivered to the receiver's {{domxref("RTCPeerConnection")}}, `receiverPC`. As explained in [Starting the connection process](#starting_the_connection_process), the current WebRTC specification uses the {{event("track")}} event for this, but some browsers haven't been updated to support this yet, so we also need to handle the {{event("addstream")}} event. The `handleReceiverTrackEvent()` and `handleReceiverAddStreamEvent()` methods, shown below, handle these.
 
 ```js
 function handleReceiverTrackEvent(event) {

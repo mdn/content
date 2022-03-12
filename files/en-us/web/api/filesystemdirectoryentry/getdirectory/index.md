@@ -34,7 +34,7 @@ FileSystemDirectoryEntry.getDirectory([path][, options][, successCallback][, err
   - : An object which allows you
     to specify whether or not to create the entry if it's missing and if it's an error if
     the file already exists. These options are currently not useful in Web contexts.
-    See the {{anch("options parameter")}} section for more details.
+    See the [options parameter](#options_parameter) section for more details.
 - `successCallback` {{optional_inline}}
   - : A method to be called once the {{domxref("FileSystemDirectoryEntry")}} has been
     created. The method receives a single parameter: the

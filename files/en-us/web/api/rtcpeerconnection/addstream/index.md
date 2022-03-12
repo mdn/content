@@ -59,7 +59,7 @@ navigator.mediaDevices.getUserMedia(
 
 ## Migrating to addTrack()
 
-{{anch("Browser compatibility", "Compatibility allowing")}}, you should update your
+[Compatibility allowing](#browser_compatibility), you should update your
 code to instead use the {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} method:
 
 ```js

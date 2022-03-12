@@ -253,7 +253,7 @@ You should never set `user-scalable=no` if at all possible — many people rely 
 
 Because the screen is so much narrower on mobile devices, it is very common to use media queries and other technologies to make the navigation menu shrink down to a tiny icon at the top of the display — which can be pressed to reveal the menu only if it's needed — when the site is viewed on mobile. This is commonly represented by a "three horizontal lines" icon, and the design pattern is consequently known as a "hamburger menu".
 
-When implementing such a menu, you need to make sure that the control to reveal it is accessible by appropriate control mechanisms (normally touch for mobile), as discussed in {{anch("Control mechanisms")}} above, and that the rest of the page is moved out of the way or hidden in some way while the menu is being accessed, to avoid confusion with navigating it.
+When implementing such a menu, you need to make sure that the control to reveal it is accessible by appropriate control mechanisms (normally touch for mobile), as discussed in [Control mechanisms](#control_mechanisms) above, and that the rest of the page is moved out of the way or hidden in some way while the menu is being accessed, to avoid confusion with navigating it.
 
 Click here for a [good hamburger menu example](https://fritz-weisshart.de/meg_men/).
 

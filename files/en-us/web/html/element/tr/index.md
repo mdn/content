@@ -22,11 +22,11 @@ The **`<tr>`** [HTML](/en-US/docs/Web/HTML) element defines a row of cells in a 
 
 To provide additional control over how cells fit into (or span across) columns, both `<th>` and `<td>` support the {{htmlattrxref("colspan", "td")}} attribute, which lets you specify how many columns wide the cell should be, with the default being 1. Similarly, you can use the {{htmlattrxref("rowspan", "td")}} attribute on cells to indicate they should span more than one table row.
 
-This can take a little practice to get right when building your tables. We have some {{anch("Examples", "examples")}} below, but for more examples and an in-depth tutorial, see the [HTML tables](/en-US/docs/Learn/HTML/Tables) series in our [Learn web development](/en-US/docs/Learn) area, where you'll learn how to use the table elements and their attributes to get just the right layout and formatting for your tabular data.
+This can take a little practice to get right when building your tables. We have some [examples](#examples) below, but for more examples and an in-depth tutorial, see the [HTML tables](/en-US/docs/Learn/HTML/Tables) series in our [Learn web development](/en-US/docs/Learn) area, where you'll learn how to use the table elements and their attributes to get just the right layout and formatting for your tabular data.
 
 ## Attributes
 
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes). There are also several {{anch("deprecated attributes")}}, which you should avoid but may need to know when reading older code.
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes). There are also several [deprecated attributes](#deprecated_attributes), which you should avoid but may need to know when reading older code.
 
 ### Deprecated attributes
 

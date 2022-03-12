@@ -50,7 +50,7 @@ completePromise = paymentRequest.complete(result);
 
     > **Note:** In older versions of the specification, an empty string,
     > `""`, was used instead of `unknown` to indicate a completion
-    > without a known result state. See the {{anch("Browser compatibility")}} section
+    > without a known result state. See the [Browser compatibility](#browser_compatibility) section
     > below for details.
 
 ### Return value

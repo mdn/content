@@ -26,7 +26,7 @@ An `RTCRtpCapabilities` object contains an array of objects conforming to {{domx
 ## Properties
 
 - `codecs`
-  - : An array of {{domxref("RTCRtpCodecCapability")}} objects, each describing one of the codecs supported by the {{domxref("RTCRtpSender")}} or {{domxref("RTCRtpReceiver")}}. There are some special entries in this array, described below in the section {{anch("The codecs array")}}.
+  - : An array of {{domxref("RTCRtpCodecCapability")}} objects, each describing one of the codecs supported by the {{domxref("RTCRtpSender")}} or {{domxref("RTCRtpReceiver")}}. There are some special entries in this array, described below in the section [The codecs array](#the_codecs_array).
 - `headerExtensions`
   - : An array of objects conforming to the {{domxref("RTCRtpHeaderExtensionCapability")}} dictionary. Each object contains a single {{domxref("DOMString")}}, `uri`, specifying the URI of the header extension, as described in {{RFC(5285)}}.
 

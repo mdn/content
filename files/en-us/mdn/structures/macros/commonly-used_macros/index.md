@@ -33,8 +33,8 @@ This macro accepts one required parameter and one optional parameter:
 
 [`anch`](https://github.com/mdn/yari/tree/master/kumascript/macros/anch.ejs) - creates link to in-page section:
 
-- `\{{anch("Linking to pages in references")}}`;
-- Demo: {{anch("Linking to pages in references")}}
+- `\[Linking to pages in references](#linking_to_pages_in_references)`;
+- Demo: [Linking to pages in references](#linking_to_pages_in_references)
 
 ### Linking to pages in references
 
