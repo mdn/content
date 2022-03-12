@@ -112,7 +112,7 @@ a:focus {
 
 #### Result
 
-{{EmbedLiveSample("Using_outline_to_set_a_focus_style", "100%", 60)}}
+{{EmbedLiveSample("Using_outline_to_set_a_focus_style", "100%", 85)}}
 
 ## Specifications
 
