@@ -152,7 +152,7 @@ button {
 
 #### Result
 
-{{EmbedLiveSample('A form that shows sections in stages', 600, 300)}}
+{{EmbedLiveSample('Showing sections in stages', 600, 300)}}
 
 ## Accessibility concerns
 
