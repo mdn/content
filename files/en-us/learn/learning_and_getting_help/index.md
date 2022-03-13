@@ -10,7 +10,7 @@ tags:
 ---
 {{learnsidebar}}
 
-It is great that you are putting some time into learning a new set of skills, but there are good practices to employ that will make your learning more effective. There also are times when you'll get stuck and feel frustrated — even professional web developers feel like this regularly — and it pays to know about the most effective ways to try and get help so you can progress in your work. This article provides some hints and tips in both of these areas that will help you get more out of learning web development, as well as further reading so you can find out more information about each sub-topic should you wish..
+It is great that you are putting some time into learning a new set of skills, but there are good practices to employ that will make your learning more effective. There also are times when you'll get stuck and feel frustrated — even professional web developers feel like this regularly — and it pays to know about the most effective ways to try and get help so you can progress in your work. This article provides some hints and tips in both of these areas that will help you get more out of learning web development, as well as further reading so you can find out more information about each sub-topic should you wish.
 
 ## Effective learning
 
@@ -63,7 +63,7 @@ You might be the kind of person that prefers minimal instructions and would pref
 
 Many MDN Web docs reference pages provide interactive examples too, where you can alter the code and see how the live result changes. And there is also nothing wrong with creating your own code examples on your computer, or in an online code editor like [JSBin](https://jsbin.com/?html,css,js,output), [Codepen](https://codepen.io/), or [Glitch](https://glitch.com/). In fact, you'll be called to do so as part of this course when you are learning!
 
-> **Note:** Online code editors are also really useful for sharing code you've written, for example, if you are collaborating on learning with someone else who isn't in the same location, or are sending it someone to ask for help with it. You can share the web address of the example with them so they can see it.
+> **Note:** Online code editors are also really useful for sharing code you've written, for example, if you are collaborating on learning with someone else who isn't in the same location, or are sending it to someone to ask for help with it. You can share the web address of the example with them so they can see it.
 
 > **Note:** You might favor one learning method over the others, but realistically a hybrid approach is probably what you will end up with. And you'll probably come up with other methods than the three we covered above.
 
