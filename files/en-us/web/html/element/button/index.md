@@ -13,7 +13,7 @@ browser-compat: html.elements.button
 
 {{HTMLRef}}
 
-The **`<button>`** [HTML](/en-US/docs/Web/HTML) element represents a clickable button, used to submit [forms](/en-US/docs/Learn/Forms) or anywhere in a document for accessible, standard button functionality.
+The **`<button>`** [HTML](/en-US/docs/Web/HTML) is an interactive element that performs a programmable action, such as submitting a [form](/en-US/docs/Learn/Forms) or opening a dialog, when activated by a user, whether by mouse click keyboard key, finger touch, voice command, or other assistive technology.
 
 By default, HTML buttons are presented in a style resembling the platform the {{Glossary("user agent")}} runs on, but you can change buttons' appearance with [CSS](/en-US/docs/Web/CSS).
 
