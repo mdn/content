@@ -353,7 +353,7 @@ input[type="text"], input[type="datetime-local"], input[type="color"], select {
 }
 ```
 
-on other controls like range types, progress bars, and meters they just add an ugly box around the control area, so it doesn't make sense.
+On other controls like range types, progress bars, and meters they just add an ugly box around the control area, so it doesn't make sense.
 
 Let's talk about some specifics of each of these types of control, highlighting difficulties along the way.
 
