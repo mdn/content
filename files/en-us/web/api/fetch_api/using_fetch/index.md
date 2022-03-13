@@ -12,6 +12,7 @@ tags:
   - Response
   - fetch POST & string body
   - request
+browser-compat: api.fetch
 ---
 {{DefaultAPISidebar("Fetch API")}}
 
@@ -277,7 +278,9 @@ fetch(myRequest)
 const anotherRequest = new Request(myRequest, myInit);
 ```
 
-This is pretty useful, as request and response bodies are one use only. Making a copy like this allows you to make use of the request/response again while varying the `init` options if desired. The copy must be made before the body is read, and reading the body in the copy will also mark it as read in the original request.
+This is pretty useful, as request and response bodies can only be used once.
+Making a copy like this allows you to effectively use the request/response again while varying the `init` options if desired.
+The copy must be made before the body is read.
 
 > **Note:** There is also a {{domxref("Request.clone","clone()")}} method that creates a copy. Both methods of creating a copy will fail if the body of the original request or response has already been read, but reading the body of a cloned response or request will not cause it to be marked as read in the original.
 
@@ -397,7 +400,7 @@ Both requests and responses may contain body data. A body is an instance of any 
 
 - {{jsxref("ArrayBuffer")}}
 - {{domxref("ArrayBufferView")}} (Uint8Array and friends)
-- {{domxref("Blob")}}/File
+- {{domxref("Blob")}}/{{domxref("File")}}
 - string
 - {{domxref("URLSearchParams")}}
 - {{domxref("FormData")}}
@@ -438,13 +441,11 @@ if (window.fetch) {
 
 ## Specifications
 
-| Specification                | Status                   | Comment            |
-| ---------------------------- | ------------------------ | ------------------ |
-| {{SpecName('Fetch')}} | {{Spec2('Fetch')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.fetch")}}
+{{Compat}}
 
 ## See also
 
