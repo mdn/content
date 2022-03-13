@@ -8452,6 +8452,7 @@
 /en-US/docs/Web/API/MessagePort.onmessage	/en-US/docs/Web/API/MessagePort/onmessage
 /en-US/docs/Web/API/MessagePort.postMessage	/en-US/docs/Web/API/MessagePort/postMessage
 /en-US/docs/Web/API/MessagePort.start	/en-US/docs/Web/API/MessagePort/start
+/en-US/docs/Web/API/Microdata_DOM_API	/en-US/docs/Web/HTML/Microdata
 /en-US/docs/Web/API/Microsoft_API_extensions	/en-US/docs/Web/API/Microsoft_Extensions
 /en-US/docs/Web/API/MouseEvent.MouseEvent	/en-US/docs/Web/API/MouseEvent/MouseEvent
 /en-US/docs/Web/API/MouseEvent.altKey	/en-US/docs/Web/API/MouseEvent/altKey
