@@ -40,7 +40,7 @@ The {{domxref("Response")}} object, in turn, does not directly contain the actua
 
 Fetch requests are controlled by the `connect-src` directive of [Content Security Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) rather than the directive of the resources it's retrieving.
 
-### Supplying request options
+## Supplying request options
 
 The `fetch()` method can optionally accept a second parameter, an `init` object that allows you to control a number of different settings:
 
@@ -79,7 +79,7 @@ Note that `mode: "no-cors"` only allows a limited set of headers in the request:
 - `Content-Language`
 - `Content-Type` with a value of `application/x-www-form-urlencoded`, `multipart/form-data`, or `text/plain`
 
-### Sending a request with credentials included
+## Sending a request with credentials included
 
 To cause browsers to send a request with credentials included on both same-origin and cross-origin calls, add `credentials: 'include'` to the `init` object you pass to the `fetch()` method.
 
@@ -111,7 +111,7 @@ fetch('https://example.com', {
 })
 ```
 
-### Uploading JSON data
+## Uploading JSON data
 
 Use {{domxref("fetch()")}} to POST JSON-encoded data.
 
@@ -134,7 +134,7 @@ fetch('https://example.com/profile', {
 });
 ```
 
-### Uploading a file
+## Uploading a file
 
 Files can be uploaded using an HTML `<input type="file" />` input element, {{domxref("FormData.FormData","FormData()")}} and {{domxref("fetch()")}}.
 
@@ -158,7 +158,7 @@ fetch('https://example.com/profile/avatar', {
 });
 ```
 
-### Uploading multiple files
+## Uploading multiple files
 
 Files can be uploaded using an HTML `<input type="file" multiple />` input element, {{domxref("FormData.FormData","FormData()")}} and {{domxref("fetch()")}}.
 
@@ -184,7 +184,7 @@ fetch('https://example.com/posts', {
 });
 ```
 
-### Processing a text file line by line
+## Processing a text file line by line
 
 The chunks that are read from a response are not broken neatly at line boundaries and are Uint8Arrays, not strings. If you want to fetch a text file and process it line by line, it is up to you to handle these complications. The following example shows one way to do this by creating a line iterator (for simplicity, it assumes the text is UTF-8, and doesn't handle fetch errors).
 
@@ -230,7 +230,7 @@ async function run() {
 run();
 ```
 
-### Checking that the fetch was successful
+## Checking that the fetch was successful
 
 A {{domxref("fetch()")}} promise will reject with a {{jsxref("TypeError")}} when a network error is encountered or CORS is misconfigured on the server-side, although this usually means permission issues or similar — a 404 does not constitute a network error, for example. An accurate check for a successful `fetch()` would include checking that the promise resolved, then checking that the {{domxref("Response.ok")}} property has a value of true. The code would look something like this:
 
@@ -250,7 +250,7 @@ fetch('flowers.jpg')
   });
 ```
 
-### Supplying your own request object
+## Supplying your own request object
 
 Instead of passing a path to the resource you want to request into the `fetch()` call, you can create a request object using the {{domxref("Request.Request","Request()")}} constructor, and pass that in as a `fetch()` method argument:
 
