@@ -29,7 +29,7 @@ height** of the video, expressed in CSS pixels. In simple terms, this is the
 height of the media in its natural size.
 
 See [About intrinsic width and
-  height](#about_intrinsic_width_and__height) for more details.
+  height](#about_intrinsic_width_and_height) for more details.
 
 ## Syntax
 
