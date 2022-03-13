@@ -33,14 +33,15 @@ The `hover` feature is specified as a keyword value chosen from the list below.
 ### CSS
 
 ```css
-@media (hover: hover) {
-  a:hover {
-    background: yellow;
-  }
+a:hover { /* default hover effect */
+  color: black;
+  background: yellow;
 }
-@media not all and (hover) {
-  a {
-    background-color: deeppink;
+
+@media (hover: hover) { /* when supported */
+  a:hover {
+    color: white;
+    background: black;
   }
 }
 ```
