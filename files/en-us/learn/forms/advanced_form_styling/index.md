@@ -52,7 +52,7 @@ To recap what we said in the previous article, we have:
 
 Let's first talk about the [`appearance`](/en-US/docs/Web/CSS/appearance) property, which is pretty useful for making all of the above more stylable.
 
-## appearance: controlling OS-level styling
+## Appearance: controlling OS-level styling
 
 In the previous article we said that historically, styling of web form controls was largely taken from the underlying operating system, which is part of the problem with customizing the look of these controls.
 
