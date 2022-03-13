@@ -59,7 +59,7 @@ navigator.mediaSession.setActionHandler(type, callback)
     - `action`
       - : A {{domxref("DOMString")}} representing the action type. This property allows a single callback to handle multiple action types.
     - `fastSeek` {{optional_inline}}
-      - : An [`seekto`](#seekto) action may *optionally* include this property, which is a Boolean value indicating whether or not to perform a "fast" seek.
+      - : A [`seekto`](#seekto) action may *optionally* include this property, which is a Boolean value indicating whether or not to perform a "fast" seek.
         A "fast" seek is a seek being performed in a rapid sequence, such as when fast-forwarding or reversing through the media, rapidly skipping through it.
         This property can be used to indicate that you should use the shortest possible method to seek the media.
         `fastSeek` is not included on the final action in the seek sequence in this situation.
