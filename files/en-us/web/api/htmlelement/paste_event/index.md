@@ -1,38 +1,38 @@
 ---
-title: HTMLElement.onpaste
-slug: Web/API/HTMLElement/onpaste
+title: 'HTMLElement: paste event'
+slug: Web/API/HTMLElement/paste_event
 tags:
   - API
-  - Event Handler
-  - Experimental
+  - Clipboard API
   - HTMLElement
-  - NeedsSpecTable
-  - Property
+  - Event
   - Reference
-browser-compat: api.HTMLElement.onpaste
+  - Web
+  - paste
+browser-compat: api.HTMLElement.paste_event
 ---
 {{ APIRef("HTML DOM") }} {{SeeCompatTable}}
 
-The **`HTMLElement.onpaste`** property of the
-{{domxref("HTMLElement")}} interface is an [event handler](/en-US/docs/Web/Events/Event_handlers) that processes
-{{event("paste")}} events.
-
-The `paste` event fires when the user attempts to paste text.
+The **`paste`** event fires when the user initiates a paste action through the browser's user interface.
 
 Note that there is currently no DOM-only way to obtain the text being pasted; you'll
 have to use an {{ Interface("nsIClipboard") }} to get that information.
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js
-target.onpaste = functionRef;
+addEventListener('paste', event => { });
+
+onpaste = event => { };
 ```
 
-### Value
+## Event type
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("ClipboardEvent")}} object as its
-sole argument.
+A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("ClipboardEvent")}}
 
 ## Example
 
@@ -84,8 +84,6 @@ controls this feature. It defaults to `true` but can be disabled.
 
 ## See also
 
-- Clipboard API event {{event("paste")}}
-- Related event handlers
-
-  - {{domxref("HTMLElement.oncopy")}}
-  - {{domxref("HTMLElement.oncut")}}
+- Related events
+  - {{domxref("HTMLElement.copy_event")}}
+  - {{domxref("HTMLElement.cut_event")}}

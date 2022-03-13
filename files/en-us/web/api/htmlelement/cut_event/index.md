@@ -1,29 +1,35 @@
 ---
-title: HTMLElement.oncut
-slug: Web/API/HTMLElement/oncut
+title: 'HTMLElement: cut event'
+slug: Web/API/HTMLElement/cut_event
 tags:
   - API
-  - Event Handler
-  - Experimental
+  - Clipboard API
   - HTMLElement
-  - NeedsSpecTable
-  - Property
+  - Event
   - Reference
-browser-compat: api.HTMLElement.oncut
+  - Web
+  - cut
+browser-compat: api.HTMLElement.cut_event
 ---
 {{ APIRef("HTML DOM") }} {{SeeCompatTable}}
 
-The **`HTMLElement.oncut`** property of the
-{{domxref("HTMLElement")}} interface is an [event handler](/en-US/docs/Web/Events/Event_handlers) that processes
-{{event("cut")}} events.
-
-The `cut` event fires when the user attempts to cut text.
+The **`cut`** event fires when the user initiates a cut action through the browser's user interface.
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js
-target.oncut = functionRef;
+addEventListener('cut', event => { });
+
+oncut = event => { };
 ```
+
+## Event type
+
+A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("ClipboardEvent")}}
 
 ### Value
 
@@ -83,8 +89,6 @@ controls this feature. It defaults to `true` but can be disabled.
 
 ## See also
 
-- Clipboard API event {{event("cut")}}
-- Related event handlers
-
-  - {{domxref("HTMLElement.oncopy")}}
-  - {{domxref("HTMLElement.onpaste")}}
+- Related events
+  - {{domxref("HTMLElement.copy_event")}}
+  - {{domxref("HTMLElement.paste_event")}}

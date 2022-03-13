@@ -1,35 +1,35 @@
 ---
-title: HTMLElement.oncopy
-slug: Web/API/HTMLElement/oncopy
+title: 'HTMLElement: copy event'
+slug: Web/API/HTMLElement/copy_event
 tags:
   - API
-  - Event Handler
-  - Experimental
+  - Clipboard API
   - HTMLElement
-  - NeedsSpecTable
-  - Property
+  - Event
   - Reference
-browser-compat: api.HTMLElement.oncopy
+  - Web
+  - copy
+browser-compat: api.HTMLElement.copy_event
 ---
 {{ APIRef("HTML DOM") }}{{SeeCompatTable}}
 
-The **`oncopy`** property of the {{domxref("HTMLElement")}}
-interface is an [event handler](/en-US/docs/Web/Events/Event_handlers) that processes
-{{domxref("Element/copy_event", "copy")}} events.
-
-The `copy` event fires when the user attempts to copy text.
+The **`copy`** event fires when the user initiates a copy action through the browser's user interface.
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js
-target.oncopy = functionRef;
+addEventListener('copy', event => { });
+
+oncopy = event => { };
 ```
 
-### Value
+## Event type
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("ClipboardEvent")}} object as its
-sole argument.
+A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("ClipboardEvent")}}
 
 ## Example
 
@@ -84,8 +84,6 @@ controls this feature. It defaults to `true` but can be disabled.
 
 ## See also
 
-- Clipboard API event {{domxref("Element/copy_event", "copy")}}
-- Related event handlers
-
-  - {{domxref("HTMLElement.oncut")}}
-  - {{domxref("HTMLElement.onpaste")}}
+- Related events
+  - {{domxref("HTMLElement.cut_event")}}
+  - {{domxref("HTMLElement.paste_event")}}
