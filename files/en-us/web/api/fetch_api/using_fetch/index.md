@@ -278,7 +278,9 @@ fetch(myRequest)
 const anotherRequest = new Request(myRequest, myInit);
 ```
 
-This is pretty useful, as request and response bodies are one use only. Making a copy like this allows you to make use of the request/response again while varying the `init` options if desired. The copy must be made before the body is read.
+This is pretty useful, as request and response bodies can only be used once.
+Making a copy like this allows you to effectively use the request/response again while varying the `init` options if desired.
+The copy must be made before the body is read.
 
 > **Note:** There is also a {{domxref("Request.clone","clone()")}} method that creates a copy. Both methods of creating a copy will fail if the body of the original request or response has already been read, but reading the body of a cloned response or request will not cause it to be marked as read in the original.
 
