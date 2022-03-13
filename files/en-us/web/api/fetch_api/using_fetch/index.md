@@ -12,6 +12,7 @@ tags:
   - Response
   - fetch POST & string body
   - request
+browser-compat: api.fetch
 ---
 {{DefaultAPISidebar("Fetch API")}}
 
@@ -438,13 +439,11 @@ if (window.fetch) {
 
 ## Specifications
 
-| Specification         | Status             | Comment            |
-| --------------------- | ------------------ | ------------------ |
-| {{SpecName('Fetch')}} | {{Spec2('Fetch')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.fetch")}}
+{{Compat}}
 
 ## See also
 
