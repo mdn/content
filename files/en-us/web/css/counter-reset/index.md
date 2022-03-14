@@ -124,5 +124,6 @@ h1 {
 - [Using CSS Counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-set")}}
+- {{cssxref("content")}}
 - {{cssxref("counter()")}} and {{cssxref("counters()")}} functions
 - {{cssxref("@counter-style")}}

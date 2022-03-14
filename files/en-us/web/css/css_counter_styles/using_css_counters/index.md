@@ -827,5 +827,6 @@ Firefox 68 and later, which do not apply implicit `counter-reset: list-item`, ar
 - {{cssxref("counter-reset")}}
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-set")}}
+- {{cssxref("content")}}
 - {{cssxref("counter()")}} and {{cssxref("counters()")}} functions
 - {{cssxref("@counter-style")}}
