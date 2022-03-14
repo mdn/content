@@ -5347,6 +5347,7 @@
 /en-US/docs/Learn/Performance/Understanding_latency	/en-US/docs/Web/Performance/Understanding_latency
 /en-US/docs/Learn/Performance/Web_performance_overview	/en-US/docs/Learn/Performance/What_is_web_performance
 /en-US/docs/Learn/Performance/dns-prefetch	/en-US/docs/Web/Performance/dns-prefetch
+/en-US/docs/Learn/Performance/javascript_performance	/en-US/docs/Learn/Performance/JavaScript
 /en-US/docs/Learn/Python	/en-US/docs/Learn/Server-side/Django
 /en-US/docs/Learn/Python/First_steps	/en-US/docs/Learn/Server-side/Django
 /en-US/docs/Learn/Server-side/Django/Django_Tutorial_(5__):_Index_page_using_a_function	/en-US/docs/Learn/Server-side/Django/Home_page

@@ -11341,6 +11341,13 @@
       "ElliotHawkins"
     ]
   },
+  "Learn/Performance/JavaScript": {
+    "modified": "2020-08-13T09:15:49.386Z",
+    "contributors": [
+      "bsphair",
+      "estelle"
+    ]
+  },
   "Learn/Performance/Measuring_performance": {
     "modified": "2020-08-09T18:29:59.520Z",
     "contributors": [
@@ -11401,13 +11408,6 @@
       "webfelipemaia",
       "estelle",
       "anthoniaocc"
-    ]
-  },
-  "Learn/Performance/javascript_performance": {
-    "modified": "2020-08-13T09:15:49.386Z",
-    "contributors": [
-      "bsphair",
-      "estelle"
     ]
   },
   "Learn/Performance/video": {
