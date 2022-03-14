@@ -9,32 +9,30 @@ browser-compat: api.MediaStream.removetrack_event
 
 The `removetrack` event is fired when a new [`MediaStreamTrack`](/en-US/docs/Web/API/MediaStreamTrack) object has been removed from a [`MediaStream`](/en-US/docs/Web/API/MediaStream).
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("MediaStreamTrackEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/MediaStream/onremovetrack"
-            >onremovetrack</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('addtrack', event => { });
+
+onaddtrack = event => { };
+```
+
+## Event type
+
+An {{domxref("MediaStreamTrackEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("MediaStreamTrackEvent")}}
+
+## Event properties
+
+_Also inherits properties from its parent interface, {{domxref("Event")}}._
+
+- `track` {{ReadOnlyInline}}
+  - : A {{domxref("MediaStreamTrack")}} object representing the track which was added to the stream.
 
 ## Examples
 
