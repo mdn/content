@@ -16,10 +16,7 @@ browser-compat: api.NavigationPreloadManager.enable
 The **`enable()`** method of the {{domxref("NavigationPreloadManager")}} interface is used to enable preloading of resources managed by the service worker.
 It returns a promise that resolves with `undefined`.
 
-The method should be called in the service worker's `activate` event handler (before the `fetch` event handler can be called).
-
-If this method succeeds, resources will be automatically be fetched as soon as user navigation results in a GET request for a resource in the `scope` of the registered service worker (see {{domxref("ServiceWorkerContainer.register()")}}).
-This can happen in parallel with the service worker being started, ensuring that much of the file may already have been retrieved when the service worked is ready to start processing `fetch()` requests.
+The method should be called in the service worker's `activate` event handler, which ensures it is called before any `fetch` event handler can fire.
 
 ## Syntax
 

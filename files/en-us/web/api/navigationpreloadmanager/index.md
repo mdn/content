@@ -28,6 +28,23 @@ If supported, an object of this type is returned by {{domxref("ServiceWorkerRegi
 - {{domxref("NavigationPreloadManager.getState()")}}
   - : Returns a {{jsxref("Promise")}} that resolves to an object with properties that indicate whether preloading is enabled, and the value sent with the {{HTTPHeader("Service-Worker-Navigation-Preload")}} HTTP header in requests triggered by a preloading {{domxref("fetch()")}}.
 
+
+## Description
+
+Service workers handle {{domxref("fetch()")}} events on behalf of a site, for pages within a given scope.
+When a user navigates to a page that uses a service worker, the browser boots up the worker (if it isn't already running), then sends it a fetch event and waits for the result.
+On receiving an event, the worker returns the resource from a cache if it is present, or otherwise fetches the resource from the remote server (storing a copy for returning in future requests).
+
+A service worker cannot process events from the browser until it has booted.
+This is unavoidable, but it isn't usually a problem because much of the time service workers are already started (they remain active for some time after processing other requests).
+Even if a service worker does have to boot, much of the time it may be returning values from a cache, which is very fast.
+However if a worker has to boot before it can start fetching a remote resource then the delay can be significant.
+
+The {{domxref("NavigationPreloadManager")}} provides a mechanism to allow fetching of the resources to run in parallel with service worker boot, so that by the time the worker is able to handle the fetch request from the browser, the resource may either have fully or partially downloaded.
+This makes the case where the worker has to start up "no worse" than when the worker is already started, and in some cases better.
+
+In addition, the preload manager sends the {{HTTPHeader("Service-Worker-Navigation-Preload")}} HTTP header with preload requests, allowing responses to be customized for preload requests.
+
 ## Examples
 
 #### Feature detection and enabling navigation preloading
@@ -49,6 +66,10 @@ addEventListener('activate', event => {
 
 The following example shows the implementation of a fetch event that uses a preloaded response ({{domxref("FetchEvent.preloadResponse")}}).
 
+We first check for a cached response, and use it if one exists.
+If there is a {{jsxref("Promise")}} for the pre-loaded response we wait for that to resolve (download to complete).
+If there is no cached resource and not pre-loaded resource fetch in process, we start a a new fetch.
+
 ```js
 addEventListener('fetch', event => {
   event.respondWith(async function() {
@@ -65,6 +86,14 @@ addEventListener('fetch', event => {
   }());
 });
 ```
+
+### Custom responses
+
+TBD
+
+### Getting the state
+
+TBD
 
 ## Specifications
 

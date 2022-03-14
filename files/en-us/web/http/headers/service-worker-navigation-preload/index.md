@@ -38,16 +38,26 @@ Service-Worker-Navigation-Preload: <value>
 ## Directives
 
 - `<value>`
-  - : Any arbitrary value understood by the client and server.
-    May be set in the client using {{domxref("NavigationPreloadManager.setHeaderValue()")}}.
-    Defaults to `true`.
+  - : An arbitrary value that indicates what data should be send in the response to the preload request. 
+    This defaults to `true`. 
+    It maybe set to any other string value in the service worker, using {{domxref("NavigationPreloadManager.setHeaderValue()")}}.
+    
 
 ## Examples
 
+The header below is sent by default.
+
 ```http
 Service-Worker-Navigation-Preload: true
+```
+
+The service worker can set a different header value using {{domxref("NavigationPreloadManager.setHeaderValue()")}}.
+For example, in order to request that a fragment of the requested resource be returned in JSON format, the value could be set with the string `json_fragment1`.
+
+```http
 Service-Worker-Navigation-Preload: json_fragment1
 ```
+
 
 ## Specifications
 
