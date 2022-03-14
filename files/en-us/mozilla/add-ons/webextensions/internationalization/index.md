@@ -268,7 +268,7 @@ Suppose the `default_locale` is set to `fr`, and the browser's current locale is
 
 ## Predefined messages
 
-The i18n module provides us with some predefined messages, which we can call in the same way as we saw earlier in [Calling message strings from manifests and extension CSS](#calling_message_strings_from_manifests_and_extension_css). For example:
+The i18n module provides us with some predefined messages, which we can call in the same way as we saw earlier in [Retrieving localized strings in manifests](#retrieving_localized_strings_in_manifests) and [Locale-dependent CSS](#locale-dependent_css). For example:
 
 ```
 __MSG_extensionName__
@@ -282,7 +282,7 @@ __MSG_@@ui_locale__
 
 The following table shows the different available predefined messages:
 
-<table class="standard-table">
+<table>
   <thead>
     <tr>
       <th scope="col">Message name</th>
