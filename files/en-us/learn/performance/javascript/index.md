@@ -1,6 +1,6 @@
 ---
 title: JavaScript performance
-slug: Learn/Performance/javascript_performance
+slug: Learn/Performance/JavaScript
 tags:
   - Images
   - Media
