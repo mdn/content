@@ -53,6 +53,11 @@ See the [`tabpanel`, `tab`, and `tablist` example](/en-US/docs/Web/Accessibility
 | {{SpecName("ARIA Authoring Practices 1.2","#tabpanel","tabpanel")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 
+## See Also
+
+- [ARIA `tab` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
+- [ARIA `tablist` role](/en-US/docs/Web/Accessibility/ARIA/Roles/)
+
 <section id="Quick_links">
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
