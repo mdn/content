@@ -55,12 +55,12 @@ As is the case with any MIME type parameter, `codecs` must be changed to `codecs
 
 The containers below support extended codec options in their `codecs` parameters:
 
-- {{anch("iso_base_media_file_format_mp4_quicktime_and_3gp", "3GP")}}
-- {{anch("AV1")}}
-- {{anch("iso_base_media_file_format_mp4_quicktime_and_3gp", "ISO BMFF")}}
-- {{anch("iso_base_media_file_format_mp4_quicktime_and_3gp", "MPEG-4")}}
-- {{anch("iso_base_media_file_format_mp4_quicktime_and_3gp", "QuickTime")}}
-- {{anch("WebM")}}
+- [3GP](#iso_base_media_file_format_mp4_quicktime_and_3gp)
+- [AV1](#av1)
+- [ISO BMFF](#iso_base_media_file_format_mp4_quicktime_and_3gp)
+- [MPEG-4](#iso_base_media_file_format_mp4_quicktime_and_3gp)
+- [QuickTime](#iso_base_media_file_format_mp4_quicktime_and_3gp)
+- [WebM](#webm)
 
 Several of the links above go to the same section; that's because those media types are all based on ISO Base Media File Format (ISO BMFF), so they share the same syntax.
 
@@ -304,12 +304,12 @@ Thus, the syntaxes for each of the supported codecs look like this:
 - `cccc[.pp]*` (Generic ISO BMFF)
   - : Where `cccc` is the four-character ID for the codec and `pp` is where zero or more two-character encoded property values go.
 - `mp4a.oo[.A]` (MPEG-4 audio)
-  - : Where `oo` is the Object Type Indication value describing the contents of the media more precisely and `A` is the one-digit _audio_ OTI. The possible values for the OTI can be found on the MP4 Registration Authority web site's [Object Types page](https://mp4ra.org/#/object_types). For example, Opus audio in an MP4 file is `mp4a.ad`. For further details, see {{anch("MPEG-4 audio")}}.
+  - : Where `oo` is the Object Type Indication value describing the contents of the media more precisely and `A` is the one-digit _audio_ OTI. The possible values for the OTI can be found on the MP4 Registration Authority web site's [Object Types page](https://mp4ra.org/#/object_types). For example, Opus audio in an MP4 file is `mp4a.ad`. For further details, see [MPEG-4 audio](#mpeg-4_audio).
 - `mp4v.oo[.V]` (MPEG-4 video)
   - : Here, `oo` is again the OTI describing the contents more precisely, while `V` is the one-digit _video_ OTI.
 - `avc1.oo[.PPCCLL]` (AVC video)
 
-  - : `oo` is the OTI describing the contents, while `PPCCLL` is six hexadecimal digits specifying the profile number (`PP`), constraint set flags (`CC`), and level (`LL`). See {{anch("AVC profiles")}} for the possible values of `PP`.
+  - : `oo` is the OTI describing the contents, while `PPCCLL` is six hexadecimal digits specifying the profile number (`PP`), constraint set flags (`CC`), and level (`LL`). See [AVC profiles](#avc_profiles) for the possible values of `PP`.
 
     The constraint set flags byte is comprised of one-bit Boolean flags, with the most significant bit being referred to as flag 0 (or `constraint_set0_flag`, in some resources), and each successive bit being numbered one higher. Currently, only flags 0 through 2 are used; the other five bits _must_ be zero. The meanings of the flags vary depending on the profile being used.
 

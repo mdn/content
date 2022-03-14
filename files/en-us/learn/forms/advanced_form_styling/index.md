@@ -353,7 +353,7 @@ input[type="text"], input[type="datetime-local"], input[type="color"], select {
 }
 ```
 
-on other controls like range types, progress bars, and meters they just add an ugly box around the control area, so it doesn't make sense.
+On other controls like range types, progress bars, and meters they just add an ugly box around the control area, so it doesn't make sense.
 
 Let's talk about some specifics of each of these types of control, highlighting difficulties along the way.
 
@@ -414,7 +414,7 @@ Of course, this might also not fit in with the design you are going for, but it'
 
 The date/time input types ([`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local), [`time`](/en-US/docs/Web/HTML/Element/input/time), [`week`](/en-US/docs/Web/HTML/Element/input/week), [`month`](/en-US/docs/Web/HTML/Element/input/month)) all have the same major associated issue. The actual containing box is as easy to style as any text input, and what we've got in this demo looks fine.
 
-However, the internal parts of the control (e.g. the popup calendar that you use pick a date, the spinner that you can use to increment/decrement values) are not stylable at all, and you can't get rid of them using `appearance: none;`. If you really need full control over the styling, you'll have to either use some kind of library to generate a custom control, or build your own.
+However, the internal parts of the control (e.g. the popup calendar that you use to pick a date, the spinner that you can use to increment/decrement values) are not stylable at all, and you can't get rid of them using `appearance: none;`. If you really need full control over the styling, you'll have to either use some kind of library to generate a custom control, or build your own.
 
 > **Note:** It is worth mentioning [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number) here too — this also has a spinner that you can use to increment/decrement values, so potentially suffers from the same problem. However, in the case of the `number` type the data being collected is simpler, and it is easy to just use a `text` input type instead if desired (or `tel` if you want mobile browsers to show the numeric keypad).
 

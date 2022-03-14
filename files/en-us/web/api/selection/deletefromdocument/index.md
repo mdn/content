@@ -3,7 +3,6 @@ title: Selection.deleteFromDocument()
 slug: Web/API/Selection/deleteFromDocument
 tags:
   - API
-  - Experimental
   - HTML Editing
   - Method
   - Reference
@@ -11,7 +10,7 @@ tags:
   - deleteFromDocument
 browser-compat: api.Selection.deleteFromDocument
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ ApiRef("DOM") }}
 
 The **`deleteFromDocument()`** method of the
 {{domxref("Selection")}} interface deletes the selected text from the document's DOM.

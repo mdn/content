@@ -83,7 +83,7 @@ Per the HTML specification, the default style for `<summary>` elements includes 
 
 You can also change the style to `display: block` to remove the disclosure triangle.
 
-See the {{anch("Browser compatibility")}} section for details, as not all browsers support full functionality of this element yet.
+See the [Browser compatibility](#browser_compatibility) section for details, as not all browsers support full functionality of this element yet.
 
 ## Examples
 

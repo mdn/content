@@ -3,7 +3,6 @@ title: Selection.focusNode
 slug: Web/API/Selection/focusNode
 tags:
   - API
-  - Experimental
   - HTML Editing
   - Property
   - Read-only
@@ -11,7 +10,7 @@ tags:
   - Selection
 browser-compat: api.Selection.focusNode
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ ApiRef("DOM") }}
 
 The **`Selection.focusNode`** read-only property returns the
 {{domxref("Node")}} in which the selection ends.

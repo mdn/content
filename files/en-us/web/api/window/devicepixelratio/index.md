@@ -32,7 +32,7 @@ resulting in a sharper image.
 You can use {{domxref("Window.matchMedia", "window.matchMedia()")}} to check if the
 value of `devicePixelRatio` changes (which can happen, for example, if the
 user drags the window to a display with a different pixel density). See
-{{anch("Monitoring screen resolution or zoom level changes", "the example below")}}.
+[the example below](#monitoring_screen_resolution_or_zoom_level_changes).
 
 ## Syntax
 

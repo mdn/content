@@ -13,7 +13,7 @@ This aim of this skill test is to assess whether you've understood our [Looping 
 
 > **Note:** You can try out solutions for the tasks below by downloading the code, putting it in an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/), then working on the tasks. We didn't provide live editable versions of these tasks because of the risk of creating infinite loops and crashing the assessment page!
 >
-> If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
+> If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
 
 ## DOM manipulation: considered useful
 

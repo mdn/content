@@ -96,7 +96,7 @@ Let's now look at the structure of one of these files ([\_locales/en/messages.js
 }
 ```
 
-This file is standard JSON — each one of its members is an object with a name, which contains a `message` and a `description`. All of these items are strings; `$URL$` is a placeholder, which is replaced with a substring at the time the `notificationContent` member is called by the extension. You'll learn how to do this in the {{anch("Retrieving message strings from JavaScript")}} section.
+This file is standard JSON — each one of its members is an object with a name, which contains a `message` and a `description`. All of these items are strings; `$URL$` is a placeholder, which is replaced with a substring at the time the `notificationContent` member is called by the extension. You'll learn how to do this in the [Retrieving message strings from JavaScript](#retrieving_message_strings_from_javascript) section.
 
 > **Note:** You can find much more information about the contents of `messages.json` files in our [Locale-Specific Message reference](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference).
 
@@ -137,7 +137,7 @@ Another field you should specify in your manifest.json is [default_locale](/en-U
 "default_locale": "en"
 ```
 
-This specifies a default locale to use if the extension doesn't include a localized string for the browser's current locale. Any message strings that are not available in the browser locale are taken from the default locale instead. There are some more details to be aware of in terms of how the browser selects strings — see {{anch("Localized string selection")}}.
+This specifies a default locale to use if the extension doesn't include a localized string for the browser's current locale. Any message strings that are not available in the browser locale are taken from the default locale instead. There are some more details to be aware of in terms of how the browser selects strings — see [Localized string selection](#localized_string_selection).
 
 ## Locale-dependent CSS
 
@@ -149,7 +149,7 @@ header {
 }
 ```
 
-This is useful, although you might be better off handling such a situation using {{anch("Predefined messages")}}.
+This is useful, although you might be better off handling such a situation using [Predefined messages](#predefined_messages).
 
 ## Retrieving message strings from JavaScript
 
@@ -268,7 +268,7 @@ Suppose the `default_locale` is set to `fr`, and the browser's current locale is
 
 ## Predefined messages
 
-The i18n module provides us with some predefined messages, which we can call in the same way as we saw earlier in {{anch("Calling message strings from manifests and extension CSS")}}. For example:
+The i18n module provides us with some predefined messages, which we can call in the same way as we saw earlier in [Calling message strings from manifests and extension CSS](#calling_message_strings_from_manifests_and_extension_css). For example:
 
 ```
 __MSG_extensionName__

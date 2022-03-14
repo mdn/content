@@ -23,17 +23,17 @@ Please use tags properly as explained below. If you don't, our automated tools w
 
 Tags get used on MDN several ways:
 
-- {{anch("Document category", "Document categorization")}}
+- [Document categorization](#document_category)
   - : What type of document is it? Is it a reference? A tutorial? A landing page? Our visitors can use these tags to filter searches, so they're really important!
-- {{anch("Topic", "Topic identification")}}
+- [Topic identification](#topic)
   - : What is the article about? Is it about an API? The DOM? Graphics? Again, these tags are important because they can filter searches.
-- {{anch("API identification")}}
+- [API identification](#api_identification)
   - : Reference pages about an API need to identify the specific component of the API being documented (that is, what interface it's a part of, and what property or method the page covers, if applicable).
-- {{anch("Technology status")}}
+- [Technology status](#technology_status)
   - : What's the status of the technology? Is it non-standard? Obsolete or deprecated? Experimental?
-- {{anch("Skill level")}}
+- [Skill level](#skill_level)
   - : For tutorials and guides, how advanced is the material covered by the article?
-- {{anch("Document metadata")}}
+- [Document metadata](#document_metadata)
   - : The writing community uses tags to keep track of which pages need what kind of work.
 
 ## Tag type guide
@@ -188,13 +188,13 @@ So to each page you assign tags from several tag types, for example
 There are several kinds of tag problems you can help fix:
 
 - No tags
-  - : Generally articles should have at _least_ a "{{anch("Document category", "category")}}" tag and a "{{anch("Topic", "topic")}}" tag. Usually other tags are appropriate as well, but if you can help us ensure that the minimum tags are present, you'll be a documentation hero!
+  - : Generally articles should have at _least_ a "[category](#document_category)" tag and a "[topic](#topic)" tag. Usually other tags are appropriate as well, but if you can help us ensure that the minimum tags are present, you'll be a documentation hero!
 - Tags that don't follow our tagging standards
   - : Please fix any documents whose tags don't follow the standards on this page.
     Note that you may occasionally see some localized tags (such as `Référence`) showing up on some English pages. This was due to a [bug in Kuma](https://bugzilla.mozilla.org/show_bug.cgi?id=776048), which caused the tags to reappear even if they were deleted. That bug has [since been fixed](https://bugzilla.mozilla.org/show_bug.cgi?id=776048#c37), so any remaining localized tags can be cleaned up if they're spotted.
 - Incorrect tags
   - : If you're looking at an article about HTML and it's tagged "JavaScript", that's probably wrong! Likewise, if an article discusses Mozilla internals but has a "Web" tag, that's probably wrong too. Remove these tags and add the right tags if they aren't already there. Please also correct misspelled tags (e.g., "Javascript" will still match, since tags are case-insensitive, but let's not be sloppy!).
 - Missing tags
-  - : If an article has some but not all of the tags it needs, feel free to add more. For example, if a page in JavaScript reference is (correctly) tagged "JavaScript" but nothing else, you're invited to tag the page "Reference" or {{anch("Document category", "another category tag")}} as well!
+  - : If an article has some but not all of the tags it needs, feel free to add more. For example, if a page in JavaScript reference is (correctly) tagged "JavaScript" but nothing else, you're invited to tag the page "Reference" or [another category tag](#document_category) as well!
 - Tag spam
   - : This insidious beast is the most revolting tag problem of all: some Web vermin has deposited its droppings in the page tags (like "Free warez!" or "Hey I was browsing your site and wanted to ask you if you could help me solve this problem I'm having with Flash crashing all the time"). We've got to delete these right away! They're ugly, they're hard to manage if they're allowed to linger too long, and they're terrible for {{Glossary("SEO")}}.

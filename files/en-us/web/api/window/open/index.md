@@ -52,7 +52,7 @@ var window = window.open(url, windowName, [windowFeatures]);
   - : A {{domxref("DOMString")}} containing a comma-separated list of window features
     given with their corresponding values in the form _name=value_ — or for boolean features, just _name_. These
     features include options such as the window's default size and position, whether or
-    not to open a minimal popup window, and so forth. See {{anch("Window features")}}
+    not to open a minimal popup window, and so forth. See [Window features](#window_features)
     below for documentation of each of the features that can be specified.
 
 ### Return value

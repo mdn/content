@@ -104,7 +104,7 @@ text {
 </table>
 
 - `<list-of-features>`
-  - : This is a list of feature strings, separated using white space. Determines whether all of the named *features* are supported by the browser. See {{anch("Feature strings")}} below for a list of allowed values.
+  - : This is a list of feature strings, separated using white space. Determines whether all of the named *features* are supported by the browser. See [Feature strings](#feature_strings) below for a list of allowed values.
 
 ## Feature strings
 

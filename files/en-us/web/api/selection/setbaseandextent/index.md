@@ -3,14 +3,13 @@ title: Selection.setBaseAndExtent()
 slug: Web/API/Selection/setBaseAndExtent
 tags:
   - API
-  - Experimental
   - Method
   - Reference
   - Selection
   - setBaseAndExtent
 browser-compat: api.Selection.setBaseAndExtent
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ ApiRef("DOM") }}
 
 The **`setBaseAndExtent()`** method of the
 {{domxref("Selection")}} interface sets the selection to be a range including all or

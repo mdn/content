@@ -134,7 +134,7 @@ the module's global code, but doesn't actually import any values.
 import '/modules/my-module.js';
 ```
 
-This works with {{anch("Dynamic Imports", "dynamic imports")}} as well:
+This works with [dynamic imports](#dynamic_imports) as well:
 
 ```js
 (async () => {
@@ -177,7 +177,7 @@ import myDefault, {foo, bar} from '/modules/my-module.js';
 // specific, named imports
 ```
 
-When importing a default export with {{anch("Dynamic Imports", "dynamic imports")}}, it
+When importing a default export with [dynamic imports](#dynamic_imports), it
 works a bit differently. You need to destructure and rename the "default" key from the
 returned object.
 

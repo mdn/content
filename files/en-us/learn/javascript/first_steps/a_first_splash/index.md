@@ -220,7 +220,7 @@ let name2 = 'Bingo';
 name2 = name2 + ' says hello!';
 ```
 
-When we are running true/false tests (for example inside conditionals — see {{anch("Conditionals", "below")}}) we use [comparison operators](/en-US/docs/Web/JavaScript/Reference/Operators). For example:
+When we are running true/false tests (for example inside conditionals — see [below](#conditionals)) we use [comparison operators](/en-US/docs/Web/JavaScript/Reference/Operators). For example:
 
 <table class="standard-table">
   <thead>

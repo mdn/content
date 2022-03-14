@@ -221,7 +221,7 @@ display: unset;
 
 ## Description
 
-The individual pages for the different types of value that `display` can have set on it feature multiple examples of those values in action — see the {{anch("Syntax")}} section. In addition, see the following material, which covers the various values of display in depth.
+The individual pages for the different types of value that `display` can have set on it feature multiple examples of those values in action — see the [Syntax](#syntax) section. In addition, see the following material, which covers the various values of display in depth.
 
 - [Adapting to the new two-value syntax of display](/en-US/docs/Web/CSS/display/two-value_syntax_of_display)
 

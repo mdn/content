@@ -17,7 +17,7 @@ tags:
 
 In this guide, we'll examine how to add a data channel to a peer connection, which can then be used to securely exchange arbitrary data; that is, any kind of data we wish, in any format we choose.
 
-> **Note:** Since all WebRTC components are required to use encryption, any data transmitted on an `RTCDataChannel` is automatically secured using Datagram Transport Layer Security (**DTLS**). See {{anch("Security")}} below for more information.
+> **Note:** Since all WebRTC components are required to use encryption, any data transmitted on an `RTCDataChannel` is automatically secured using Datagram Transport Layer Security (**DTLS**). See [Security](#security) below for more information.
 
 ## Creating a data channel
 

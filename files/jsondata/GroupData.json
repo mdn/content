@@ -1212,6 +1212,7 @@
       "events": []
     },
     "Selection API": {
+      "overview": ["Selection API"],
       "interfaces": ["Selection"],
       "properties": [
         "Document.onselectionchange",

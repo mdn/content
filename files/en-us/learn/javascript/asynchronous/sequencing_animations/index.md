@@ -93,7 +93,7 @@ We'd like you to try a few different ways to implement this, to reinforce differ
 
 3. Finally, implement it using [`async` and `await`](/en-US/docs/Learn/JavaScript/Asynchronous/Promises#async_and_await).
 
-Remember that `element.animate()` does _not_ return a `Promise`: it returns an `Animation` object which a `finished` property that is a `Promise`.
+Remember that `element.animate()` does _not_ return a `Promise`: it returns an `Animation` object with a `finished` property that is a `Promise`.
 
 ## Assessment or further help
 

@@ -26,7 +26,7 @@ You can see this [demo running live](https://mdn.github.io/web-dictaphone/), or 
 
 ## CSS goodies
 
-The HTML is pretty simple in this app, so we won't go through it here; there are a couple of slightly more interesting bits of CSS worth mentioning, however, so we'll discuss them below. If you are not interested in CSS and want to get straight to the JavaScript, skip to the {{anch("Basic app setup")}} section.
+The HTML is pretty simple in this app, so we won't go through it here; there are a couple of slightly more interesting bits of CSS worth mentioning, however, so we'll discuss them below. If you are not interested in CSS and want to get straight to the JavaScript, skip to the [Basic app setup](#basic_app_setup) section.
 
 ### Keeping the interface constrained to the viewport, regardless of device height, with calc()
 
