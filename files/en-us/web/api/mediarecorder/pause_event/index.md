@@ -1,6 +1,6 @@
 ---
-title: MediaRecorder.onpause
-slug: Web/API/MediaRecorder/onpause
+title: 'MediaRecorder: pause event'
+slug: Web/API/MediaRecorder/pause_event
 tags:
   - API
   - Audio
@@ -10,24 +10,27 @@ tags:
   - Property
   - Reference
   - Video
-  - onpause
-browser-compat: api.MediaRecorder.onpause
+  - pause
+browser-compat: api.MediaRecorder.pause_event
 ---
 {{APIRef("Media Recorder API")}}
-
-The **`MediaRecorder.onpause`** event handler (part of the [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API)) handles the
-`pause` event, allowing you to run code in response to the media recording
-being paused.
 
 The `pause` event is thrown as a result of the
 {{domxref("MediaRecorder.pause()")}} method being invoked.
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js
-MediaRecorder.onpause = function(event) { /* ... */ }
-MediaRecorder.addEventListener('pause', function(event) { /* ... */ })
+addEventListener('pause', event => { });
+
+onpause = event => { };
 ```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Example
 

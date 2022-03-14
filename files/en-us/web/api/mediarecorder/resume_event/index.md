@@ -1,6 +1,6 @@
 ---
-title: MediaRecorder.onresume
-slug: Web/API/MediaRecorder/onresume
+title: 'MediaRecorder: resume event'
+slug: Web/API/MediaRecorder/resume_event
 tags:
   - API
   - Audio
@@ -10,24 +10,27 @@ tags:
   - Property
   - Reference
   - Video
-  - onresume
-browser-compat: api.MediaRecorder.onresume
+  - resume
+browser-compat: api.MediaRecorder.resume_event
 ---
 {{APIRef("Media Recorder API")}}
-
-The **`MediaRecorder.onresume`** event handler (part of the [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API)) handles the
-`resume` event, allowing you to run code in response to the media recording
-being resumed after pausing.
 
 The `resume` event is thrown as a result of the
 {{domxref("MediaRecorder.resume()")}} method being invoked.
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js
-MediaRecorder.onresume = function(event) { /* ... */ }
-MediaRecorder.addEventListener('resume', function(event) { /* ... */ })
+addEventListener('resume', event => { });
+
+onresume = event => { };
 ```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Example
 

@@ -1,6 +1,6 @@
 ---
-title: MediaRecorder.onstart
-slug: Web/API/MediaRecorder/onstart
+title: 'MediaRecorder: start event'
+slug: Web/API/MediaRecorder/start_event
 tags:
   - API
   - Audio
@@ -10,14 +10,10 @@ tags:
   - Property
   - Reference
   - Video
-  - onstart
-browser-compat: api.MediaRecorder.onstart
+  - start
+browser-compat: api.MediaRecorder.start_event
 ---
 {{APIRef("Media Recorder API")}}
-
-The **`MediaRecorder.onstart`** event handler (part of the [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API)) handles the
-`start` event, allowing you to run code in response to media recording being
-started by a `MediaRecorder`.
 
 The `start` event is thrown as a result of the
 {{domxref("MediaRecorder.start()")}} method being invoked. At this point, the data
@@ -25,10 +21,17 @@ starts being gathered into a {{domxref("Blob")}}.
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js
-MediaRecorder.onstart = function(event) { /* ... */ }
-MediaRecorder.addEventListener('start', function(event) { /* ... */ })
+addEventListener('start', event => { });
+
+onstart = event => { };
 ```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Example
 

@@ -1,6 +1,6 @@
 ---
-title: MediaRecorder.onstop
-slug: Web/API/MediaRecorder/onstop
+title: 'MediaRecorder: stop event'
+slug: Web/API/MediaRecorder/stop_event
 tags:
   - API
   - Audio
@@ -10,14 +10,10 @@ tags:
   - Property
   - Reference
   - Video
-  - onstop
-browser-compat: api.MediaRecorder.onstop
+  - stop
+browser-compat: api.MediaRecorder.stop_event
 ---
 {{APIRef("Media Recorder API")}}
-
-The **`MediaRecorder.onstop`** event handler (part of the [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API)) handles the
-`stop` event, allowing you to run code in response to media recording via a
-`MediaRecorder` being stopped.
 
 The `stop` event is thrown either as a result of the
 {{domxref("MediaRecorder.stop()")}} method being invoked, or when the media stream being
@@ -27,10 +23,17 @@ point available for you to use in your application.
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js
-MediaRecorder.onstop = function(event) { /* ... */ }
-MediaRecorder.addEventListener('stop', function(event) { /* ... */ })
+addEventListener('stop', event => { });
+
+onstop = event => { };
 ```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Example
 
