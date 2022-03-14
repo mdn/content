@@ -38,7 +38,7 @@ An {{domxref("PictureInPictureWindow")}}. Inherits from {{domxref("Event")}}.
 _In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
 - {{domxref("PictureInPictureEvent.pictureInPictureWindow")}}
-  - : Returns the {{domxref("PictireInPictureWindow")}} that is resized.
+  - : Returns the {{domxref("PictureInPictureWindow")}} that is resized.
 
 ## Examples
 
