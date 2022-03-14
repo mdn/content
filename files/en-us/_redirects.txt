@@ -8391,7 +8391,7 @@
 /en-US/docs/Web/API/MediaQueryList/onchange	/en-US/docs/Web/API/MediaQueryList/change_event
 /en-US/docs/Web/API/MediaQueryListListener	/en-US/docs/Web/API/MediaQueryList
 /en-US/docs/Web/API/MediaRecorder.ondataavailable	/en-US/docs/Web/API/MediaRecorder/dataavailable_event
-/en-US/docs/Web/API/MediaRecorder.onerror	/en-US/docs/Web/API/MediaRecorder/on_error
+/en-US/docs/Web/API/MediaRecorder.onerror	/en-US/docs/Web/API/MediaRecorder/error_event
 /en-US/docs/Web/API/MediaRecorder.onpause	/en-US/docs/Web/API/MediaRecorder/pause_event
 /en-US/docs/Web/API/MediaRecorder.onresume	/en-US/docs/Web/API/MediaRecorder/resume_event
 /en-US/docs/Web/API/MediaRecorder.onstart	/en-US/docs/Web/API/MediaRecorder/start_event
