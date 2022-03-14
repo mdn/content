@@ -709,12 +709,10 @@ The following table lists the special characters that you can use in JavaScript 
         <code>\x<em>XX</em></code>
       </td>
       <td>
-        <p>
-          The character with the Latin-1 encoding specified by the two
-          hexadecimal digits <em>XX</em> between <code>00</code> and
-          <code>FF</code>.<br />For example, <code>\xA9</code> is the
-          hexadecimal sequence for the copyright symbol.
-        </p>
+        The character with the Latin-1 encoding specified by the two
+        hexadecimal digits <em>XX</em> between <code>00</code> and
+        <code>FF</code>.<br />For example, <code>\xA9</code> is the
+        hexadecimal sequence for the copyright symbol.
       </td>
     </tr>
     <tr>
