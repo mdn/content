@@ -49,7 +49,7 @@ const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/
 console.log(fetchPromise);
 
 fetchPromise.then( response => {
-  console.log(`Received response: ${response.status} ${response.statusText}`);
+  console.log(`Received response: ${response.status}`);
 });
 
 console.log("Started request...");
@@ -66,10 +66,10 @@ The complete output should be something like:
 ```
 Promise { <state>: "pending" }
 Started request...
-Received response: 200 OK
+Received response: 200
 ```
 
-Note that `Started request...` is logged before we receive the response. Unlike a synchronous function, `fetch()` returns while the request is still going on, enabling our program to stay responsive.
+Note that `Started request...` is logged before we receive the response. Unlike a synchronous function, `fetch()` returns while the request is still going on, enabling our program to stay responsive. The response shows the `200` (OK) [status code](/en-US/docs/Web/HTTP/Status), meaning that our request succeeded.
 
 This probably seems a lot like the example in the last article, where we added event handlers to the {{domxref("XMLHttpRequest")}} object. Instead of that, we're passing a handler into the `then()` method of the returned promise.
 
@@ -200,7 +200,7 @@ const fetchPromise3 = fetch('https://mdn.github.io/learning-area/javascript/oojs
 Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
   .then( responses => {
     for (const response of responses) {
-      console.log(`${response.url}: ${response.statusText}`);
+      console.log(`${response.url}: ${response.status}`);
     }
   })
   .catch( error => {
@@ -210,12 +210,12 @@ Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
 
 Here we're making three `fetch()` requests to three different URLs. If they all succeed, we will log the response status of each one. If any of them fail, we're logging the failure.
 
-With the URLs we've provided, all the requests should be fulfilled, although for the second, the server will return 404 "Not Found". So the output should be:
+With the URLs we've provided, all the requests should be fulfilled, although for the second, the server will return `404` (Not Found) instead of `200` (OK) because the requested file does not exist. So the output should be:
 
 ```
-https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json: OK
-https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found: Not Found
-https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json: OK
+https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json: 200
+https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found: 404
+https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json: 200
 ```
 
 If we try the same code with a badly formed URL, like this:
@@ -228,7 +228,7 @@ const fetchPromise3 = fetch('bad-scheme://mdn.github.io/learning-area/javascript
 Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
   .then( responses => {
     for (const response of responses) {
-      console.log(`${response.url}: ${response.statusText}`);
+      console.log(`${response.url}: ${response.status}`);
     }
   })
   .catch( error => {
@@ -251,7 +251,7 @@ const fetchPromise3 = fetch('https://mdn.github.io/learning-area/javascript/oojs
 
 Promise.any([fetchPromise1, fetchPromise2, fetchPromise3])
   .then( response => {
-    console.log(`${response.url}: ${response.statusText}`);
+    console.log(`${response.url}: ${response.status}`);
   })
   .catch( error => {
     console.error(`Failed to fetch: ${error}`)
