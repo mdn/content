@@ -8159,6 +8159,8 @@
 /en-US/docs/Web/API/HTMLTimeElement.dateTime	/en-US/docs/Web/API/HTMLTimeElement/dateTime
 /en-US/docs/Web/API/HTMLVideoElement.getVideoPlaybackQuality	/en-US/docs/Web/API/HTMLVideoElement/getVideoPlaybackQuality
 /en-US/docs/Web/API/HTMLVideoElement/msInsertAudioEffect	/en-US/docs/Web/API/HTMLMediaElement/msInsertAudioEffect
+/en-US/docs/Web/API/HTMLVideoElement/onenterpictureinpicture	/en-US/docs/Web/API/HTMLVideoElement/enterpictureinpicture_event
+/en-US/docs/Web/API/HTMLVideoElement/onleavepictureinpicture	/en-US/docs/Web/API/HTMLVideoElement/leavepictureinpicture_event
 /en-US/docs/Web/API/HTMLVideoElement/requestPictureInPicture()	/en-US/docs/Web/API/HTMLVideoElement/requestPictureInPicture
 /en-US/docs/Web/API/HTML_DOM	/en-US/docs/Web/API/HTML_DOM_API
 /en-US/docs/Web/API/HTML_Santizer_API	/en-US/docs/Web/API/HTML_Sanitizer_API

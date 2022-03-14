@@ -53415,20 +53415,6 @@
       "erikadoyle"
     ]
   },
-  "Web/API/HTMLVideoElement/onenterpictureinpicture": {
-    "modified": "2020-10-25T11:17:38.285Z",
-    "contributors": [
-      "chrisdavidmills",
-      "germain"
-    ]
-  },
-  "Web/API/HTMLVideoElement/onleavepictureinpicture": {
-    "modified": "2020-10-25T11:19:52.559Z",
-    "contributors": [
-      "chrisdavidmills",
-      "germain"
-    ]
-  },
   "Web/API/HTMLVideoElement/requestPictureInPicture": {
     "modified": "2020-10-25T11:13:29.865Z",
     "contributors": [

@@ -63,9 +63,9 @@ The Picture-in-Picture API adds methods to the {{DOMxRef("HTMLVideoElement")}} a
 _The Picture-in-Picture API defines three events, which can be used to detect when picture-in-picture mode is toggled and when the floating video window is resized._
 
 - {{domxref("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}}
-  - : Sent to a {{DOMxRef("HTMLVideoElement")}} when it enters picture-in-picture mode. The associated event handler is {{DOMxRef("HTMLVideoElement.onenterpictureinpicture")}}
+  - : Sent to a {{DOMxRef("HTMLVideoElement")}} when it enters picture-in-picture mode.
 - {{domxref("HTMLVideoElement.leavepictureinpicture_event", "leavepictureinpicture")}}
-  - : Sent to a {{DOMxRef("HTMLVideoElement")}} when it leaves picture-in-picture mode. The associated event handler is {{DOMxRef("HTMLVideoElement.onleavepictureinpicture")}}
+  - : Sent to a {{DOMxRef("HTMLVideoElement")}} when it leaves picture-in-picture mode.
 - {{domxref("PictureInPictureWindow.resize_event", "resize")}}
   - : Sent to a {{DOMxRef("PictureInPictureWindow")}} when it changes size.
 
