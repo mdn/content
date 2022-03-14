@@ -58809,22 +58809,6 @@
       "teoli"
     ]
   },
-  "Web/API/MediaStream/onaddtrack": {
-    "modified": "2020-10-15T21:49:04.295Z",
-    "contributors": [
-      "fscholz",
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaStream/onremovetrack": {
-    "modified": "2020-12-12T16:09:04.649Z",
-    "contributors": [
-      "bershanskiy",
-      "sideshowbarker",
-      "fscholz",
-      "Sheppy"
-    ]
-  },
   "Web/API/MediaStream/removetrack_event": {
     "modified": "2020-10-15T22:16:56.353Z",
     "contributors": [
