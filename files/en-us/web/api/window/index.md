@@ -200,7 +200,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Displays a dialog with a message that the user needs to respond to.
 - {{domxref("Window.dump()")}} {{Non-standard_inline}}
   - : Writes a message to the console.
-- {{domxref("Window.find()")}}
+- {{domxref("Window.find()")}} {{experimental_inline}} {{Non-standard_inline}}
   - : Searches for a given string in a window.
 - {{domxref("Window.focus()")}}
   - : Sets focus on the current window.
