@@ -25,7 +25,7 @@ browser-compat: html.elements.input.input-submit
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>A {{domxref("DOMString")}} used as the button's label</td>
     </tr>
     <tr>

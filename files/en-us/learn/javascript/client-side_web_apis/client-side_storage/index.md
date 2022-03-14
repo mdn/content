@@ -78,7 +78,7 @@ You'll learn more about these APIs below.
 
 The {{domxref("Cache")}} API is designed for storing HTTP responses to specific requests, and is very useful for doing things like storing website assets offline so the site can subsequently be used without a network connection. Cache is usually used in combination with the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API), although it doesn't have to be.
 
-Use of Cache and Service Workers is an advanced topic, and we won't be covering it in great detail in this article, although we will show an example in the {{anch("Offline asset storage")}} section below.
+Use of Cache and Service Workers is an advanced topic, and we won't be covering it in great detail in this article, although we will show an example in the [Offline asset storage](#offline_asset_storage) section below.
 
 ## Storing simple data — web storage
 

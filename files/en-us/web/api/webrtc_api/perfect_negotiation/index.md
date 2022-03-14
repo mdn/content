@@ -233,7 +233,7 @@ Because the {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} method
 
 #### Perfect negotiation with the updated API
 
-As shown in the section {{anch("Implementing perfect negotiation")}}, we can eliminate this problem by introducing a variable (here called `makingOffer`) which we use to indicate that we are in the process of sending an offer, and making use of the updated `setLocalDescription()` method:
+As shown in the section [Implementing perfect negotiation](#implementing_perfect_negotiation), we can eliminate this problem by introducing a variable (here called `makingOffer`) which we use to indicate that we are in the process of sending an offer, and making use of the updated `setLocalDescription()` method:
 
 ```js example-good
 let makingOffer = false;

@@ -45,7 +45,7 @@ Because each of these is defined using a reference space as its foundation, the 
 
 ## Describing a position relative to a space
 
-There are two scenarios in which you may need to describe a position and/or orientation relative to a space.  The first is {{anch("Offsetting or moving reference spaces", "described above")}}: applying a reference space to an offset (or vice-versa, since the result is the same) to determine the transform matrix that represents the resulting location in the space's coordinate system.
+There are two scenarios in which you may need to describe a position and/or orientation relative to a space.  The first is [described above](#offsetting_or_moving_reference_spaces): applying a reference space to an offset (or vice-versa, since the result is the same) to determine the transform matrix that represents the resulting location in the space's coordinate system.
 
 ### Poses
 

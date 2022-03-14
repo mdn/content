@@ -163,7 +163,7 @@ To capture a still photo each time the user clicks the `startbutton`, we need to
     }, false);
 ```
 
-This method is simple enough: it just calls our `takepicture()` function, defined below in the section {{anch("Capturing a frame from the stream")}}, then calls {{domxref("Event.preventDefault()")}} on the received event to prevent the click from being handled more than once.
+This method is simple enough: it just calls our `takepicture()` function, defined below in the section [Capturing a frame from the stream](#capturing_a_frame_from_the_stream), then calls {{domxref("Event.preventDefault()")}} on the received event to prevent the click from being handled more than once.
 
 #### Wrapping up the startup() method
 
@@ -174,7 +174,7 @@ There are only two more lines of code in the `startup()` method:
   }
 ```
 
-This is where we call the `clearphoto()` method we'll describe below in the section {{anch("Clearing the photo box")}}.
+This is where we call the `clearphoto()` method we'll describe below in the section [Clearing the photo box](#clearing_the_photo_box).
 
 ### Clearing the photo box
 

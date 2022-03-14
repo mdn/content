@@ -34,7 +34,7 @@ tags:
  <dt id="registerTool(toolDefinition)"><code>registerTool(toolDefinition)</code></dt>
  <dd>Registers a new tool and adds a tab to each existing toolbox.</dd>
  <dd><strong>Parameters:</strong><br>
- <em><code>toolDefinition {ToolDefinition}</code></em> - An object that contains information about the tool. See {{anch("ToolDefinition")}} for details.</dd>
+ <em><code>toolDefinition {ToolDefinition}</code></em> - An object that contains information about the tool. See <a href="#tooldefinition">ToolDefinition</a> for details.</dd>
  <dt id="unregisterTool(tool)"><code>unregisterTool(tool)</code></dt>
  <dd>Unregisters the given tool and removes it from all toolboxes.</dd>
  <dd><strong>Parameters:</strong><br>
@@ -53,18 +53,18 @@ tags:
  <dd><strong>Parameters:</strong><br>
  <em><code>target {Target}</code></em> - The target the toolbox will debug.<br>
  <em><code>toolId {String}</code></em> - The tool that should be activated. If unspecified the previously active tool is shown.<br>
- <em><code>hostType {String}</code></em> - The position the toolbox will be placed. One of <code>bottom</code>, <code>side</code>, <code>window</code>, <code>custom</code>. See {{anch("HostType")}} for details.<br>
- <em><code>hostOptions {Object}</code></em> - An options object passed to the selected host. See {{anch("HostType")}} for details.</dd>
+ <em><code>hostType {String}</code></em> - The position the toolbox will be placed. One of <code>bottom</code>, <code>side</code>, <code>window</code>, <code>custom</code>. See <a href="#hosttype">HostType</a> for details.<br>
+ <em><code>hostOptions {Object}</code></em> - An options object passed to the selected host. See <a href="#hosttype">HostType</a> for details.</dd>
  <dd><strong>Return value:</strong><br>
- A {{jsxref("Promise")}} that is fulfilled with the {{anch("Toolbox")}} instance once it has been initialized and the selected tool is loaded.</dd>
+ A {{jsxref("Promise")}} that is fulfilled with the <a href="#toolbox">Toolbox</a> instance once it has been initialized and the selected tool is loaded.</dd>
  <dt id="getToolbox(target)"><code>getToolbox(target)</code></dt>
- <dd>Fetch the {{anch("Toolbox")}} object for the given target.<br>
+ <dd>Fetch the <a href="#toolbox">Toolbox</a> object for the given target.<br>
  <br>
  <strong>Parameters:</strong><br>
  <em><code>target {Target}</code></em> - The target the toolbox is debugging.<br>
  <br>
  <strong>Return value:</strong><br>
- {{anch("Toolbox")}} object or undefined if there's no toolbox for the given target..</dd>
+ <a href="#toolbox">Toolbox</a> object or undefined if there's no toolbox for the given target..</dd>
  <dt id="closeToolbox(target)"><code>closeToolbox(target)</code></dt>
  <dd>Closes the toolbox for given target.</dd>
  <dd><strong>Parameters:</strong><br>
@@ -73,20 +73,20 @@ tags:
  <strong>Return value:</strong><br>
  A {{jsxref("Promise")}} that is fulfilled once the toolbox has been destroyed.</dd>
  <dt id="getDefaultTools()"><code>getDefaultTools()</code></dt>
- <dd>Returns an {{jsxref("Array")}} of {{anch("ToolDefinition")}} objects for the built-in tools.</dd>
+ <dd>Returns an {{jsxref("Array")}} of <a href="#tooldefinition">ToolDefinition</a> objects for the built-in tools.</dd>
  <dt id="getAdditionalTools()"><code>getAdditionalTools()</code></dt>
- <dd>Returns an {{jsxref("Array")}} of {{anch("ToolDefinition")}} objects for tools added by addons.</dd>
+ <dd>Returns an {{jsxref("Array")}} of <a href="#tooldefinition">ToolDefinition</a> objects for tools added by addons.</dd>
  <dt id="getToolDefinition(toolId)"><code>getToolDefinition(toolId)</code></dt>
- <dd>Fetch the {{anch("ToolDefinition")}} object for a tool if it exists and is enabled.<br>
+ <dd>Fetch the <a href="#tooldefinition">ToolDefinition</a> object for a tool if it exists and is enabled.<br>
  <br>
  <strong>Parameters:</strong><br>
  <code><em>toolId {String}</em></code> - The ID of the tool.</dd>
  <dd><strong>Return value:</strong><br>
- A {{anch("ToolDefinition")}} if a tool with the given ID exists and is enabled, null otherwise.</dd>
+ A <a href="#tooldefinition">ToolDefinition</a> if a tool with the given ID exists and is enabled, null otherwise.</dd>
  <dt id="getToolDefinitionMap()"><code>getToolDefinitionMap()</code></dt>
- <dd>Returns a toolId → {{anch("ToolDefinition")}} map for tools that are enabled.</dd>
+ <dd>Returns a toolId → <a href="#tooldefinition">ToolDefinition</a> map for tools that are enabled.</dd>
  <dt id="getToolDefinitionArray()"><code>getToolDefinitionArray()</code></dt>
- <dd>Returns an {{jsxref("Array")}} of {{anch("ToolDefinition")}} objects for enabled tools sorted by the order they appear in the toolbox.</dd>
+ <dd>Returns an {{jsxref("Array")}} of <a href="#tooldefinition">ToolDefinition</a> objects for enabled tools sorted by the order they appear in the toolbox.</dd>
  <dt id="getThemeDefinition(themeId)"><code>getThemeDefinition(themeId)</code></dt>
  <dd>Fetch the <code>ThemeDefinition</code> object for the theme with the given id.<br>
  <br>
@@ -102,19 +102,19 @@ tags:
 
 <h4 id="Events">Events</h4>
 
-<p>Following events are emitted by the <code>gDevTools</code> object via the {{anch("EventEmitter")}} interface.</p>
+<p>Following events are emitted by the <code>gDevTools</code> object via the <a href="#eventemitter">EventEmitter</a> interface.</p>
 
 <dl>
  <dt id="tool-registered(toolId)"><code>tool-registered</code><code>(toolId)</code></dt>
  <dd>A new tool has been registered.</dd>
  <dt id="tool-unregistered(tool)"><code>tool-unregistered(tool)</code></dt>
- <dd>A tool has been unregistered. The parameter is a {{anch("ToolDefinition")}} object.</dd>
+ <dd>A tool has been unregistered. The parameter is a <a href="#tooldefinition">ToolDefinition</a> object.</dd>
  <dt id="theme-registered(themeId)"><code>theme-registered(themeId)</code></dt>
  <dd>A new theme has been registered.</dd>
  <dt id="theme-unregistered(theme)"><code>theme-unregistered(theme)</code></dt>
  <dd>A theme has been unregistered. The parameter is a <code>ThemeDefinition</code> object.</dd>
  <dt id="toolbox-ready(toolbox)"><code>toolbox-ready(toolbox)</code></dt>
- <dd>A new toolbox has been created and is ready to use. The parameter is a {{anch("Toolbox")}} object instance.</dd>
+ <dd>A new toolbox has been created and is ready to use. The parameter is a <a href="#toolbox">Toolbox</a> object instance.</dd>
  <dt id="toolbox-destroy(target)"><code>toolbox-destroy(target)</code></dt>
  <dd>The toolbox for the specified target is about to be destroyed.</dd>
  <dt id="toolbox-destroyed(target)"><code>toolbox-destroyed(target)</code></dt>
@@ -131,7 +131,7 @@ tags:
 
 <h3 id="Toolbox">Toolbox</h3>
 
-<p>A Toolbox is a frame for the {{anch("ToolPanel", "ToolPanels")}} that is debugging a specific target.</p>
+<p>A Toolbox is a frame for the <a href="#toolpanel">ToolPanels</a> that is debugging a specific target.</p>
 
 <h4 id="Properties">Properties</h4>
 
@@ -163,18 +163,18 @@ tags:
 
 <dl>
  <dt id="getCurrentPanel()"><code>getCurrentPanel()</code></dt>
- <dd>Get the currently active {{anch("ToolPanel")}}.<br>
+ <dd>Get the currently active <a href="#toolpanel">ToolPanel</a>.<br>
  <br>
  <strong>Return value:</strong><br>
- The {{anch("ToolPanel")}} object that was returned from {{anch("build(window_toolbox)", "ToolPanel.build()")}}.</dd>
+ The <a href="#toolpanel">ToolPanel</a> object that was returned from <a href="#build_window_toolbox_">ToolPanel.build()</a>.</dd>
  <dt id="getPanel(toolId)"><code>getPanel(toolId)</code></dt>
- <dd>Get the {{anch("ToolPanel")}} for given tool.<br>
+ <dd>Get the <a href="#toolpanel">ToolPanel</a> for given tool.<br>
  <br>
  <strong>Parameters:</strong><br>
  <code><em>toolId {String} - </em></code>The tool identifier.<br>
  <br>
  <strong>Return value:</strong><br>
- The {{anch("ToolPanel")}} object if the tool with the given <code>toolId</code> is active, otherwise <code>undefined</code>.</dd>
+ The <a href="#toolpanel">ToolPanel</a> object if the tool with the given <code>toolId</code> is active, otherwise <code>undefined</code>.</dd>
  <dt id="getPanelWhenReady(toolId)"><code>getPanelWhenReady(toolId)</code></dt>
  <dd>Similar to <code>getPanel()</code> but waits for the tool to load first. If the tool is not already loaded or currently loading the returned {{jsxref("Promise")}} won't be fulfilled until something triggers the tool to load.<br>
  <br>
@@ -182,9 +182,9 @@ tags:
  <code><em>toolId {String} - </em></code>The tool identifier.<br>
  <br>
  <strong>Return value:</strong><br>
- A {{jsxref("Promise")}} that is fulfilled with the {{anch("ToolPanel")}} object once the tool has finished loading.</dd>
+ A {{jsxref("Promise")}} that is fulfilled with the <a href="#toolpanel">ToolPanel</a> object once the tool has finished loading.</dd>
  <dt id="getToolPanels()"><code>getToolPanels()</code></dt>
- <dd>Returns a <code>toolId → {{anch("ToolPanel")}}</code> {{jsxref("Map")}} for currently loaded tools.</dd>
+ <dd>Returns a <code>toolId → <a href="#toolpanel">ToolPanel</a></code> {{jsxref("Map")}} for currently loaded tools.</dd>
  <dt id="getNotificationBox()"><code>getNotificationBox()</code></dt>
  <dd>Returns a {{ XULElem("notificationbox") }} element for the Toolbox that can be used to display notifications to the user.</dd>
  <dt id="loadTool(toolId)"><code>loadTool(toolId)</code></dt>
@@ -194,7 +194,7 @@ tags:
  <code><em>toolId {String} - </em></code>The tool identifier.<br>
  <br>
  <strong>Return value:</strong><br>
- A {{jsxref("Promise")}} that is fulfilled with the {{anch("ToolPanel")}} object of the loaded panel once the tool has loaded.<br>
+ A {{jsxref("Promise")}} that is fulfilled with the <a href="#toolpanel">ToolPanel</a> object of the loaded panel once the tool has loaded.<br>
   </dd>
  <dt id="selectTool(toolId)"><code>selectTool(toolId)</code></dt>
  <dd>Selects the tool with the given <code>toolId</code>.<br>
@@ -203,17 +203,17 @@ tags:
  <code><em>toolId {String} - </em></code>The tool identifier.<br>
  <br>
  <strong>Return value:</strong><br>
- A {{jsxref("Promise")}} that is fulfilled with the {{anch("ToolPanel")}} object of the selected panel once the tool has loaded and activated.</dd>
+ A {{jsxref("Promise")}} that is fulfilled with the <a href="#toolpanel">ToolPanel</a> object of the selected panel once the tool has loaded and activated.</dd>
  <dt id="selectNextTool()"><code>selectNextTool()</code></dt>
  <dd>Selects the next tool in the <code>Toolbox</code>.<br>
  <br>
  <strong>Return value:</strong><br>
- A {{jsxref("Promise")}} that is fulfilled with the {{anch("ToolPanel")}} object of the selected panel.</dd>
+ A {{jsxref("Promise")}} that is fulfilled with the <a href="#toolpanel">ToolPanel</a> object of the selected panel.</dd>
  <dt id="selectPreviousTool()"><code>selectPreviousTool()</code></dt>
  <dd>Selects the previous tool in the <code>Toolbox</code>.<br>
  <br>
  <strong>Return value:</strong><br>
- A {{jsxref("Promise")}} that is fulfilled with the {{anch("ToolPanel")}} object of the selected panel.</dd>
+ A {{jsxref("Promise")}} that is fulfilled with the <a href="#toolpanel">ToolPanel</a> object of the selected panel.</dd>
  <dt id="highlightTool(toolId)"><code>highlightTool(toolId)</code></dt>
  <dd>Highlights the tab for the given tool.<br>
  <br>
@@ -270,7 +270,7 @@ tags:
 
 <h4 id="Events_2">Events</h4>
 
-<p>The Toolbox object emits following events via the {{anch("EventEmitter")}} interface.</p>
+<p>The Toolbox object emits following events via the <a href="#eventemitter">EventEmitter</a> interface.</p>
 
 <dl>
  <dt id="host-changed"><code>host-changed</code></dt>
@@ -282,13 +282,13 @@ tags:
  <dt id="toolId-init(frame)"><code>{toolId}-init(frame)</code></dt>
  <dd>A tool is about to be loaded. The frame is the {{HTMLElement("iframe")}} element that has been created for the tool.</dd>
  <dt id="toolId-build(panel)"><code>{toolId}-build(panel)</code></dt>
- <dd>The frame for a tool has loaded and the {{anch("build(window_toolbox)", "ToolPanel.build()")}} method has been called but the asynchronous initialization has not started. The parameter is a {{anch("ToolPanel")}} object.</dd>
+ <dd>The frame for a tool has loaded and the <a href="#build_window_toolbox_">ToolPanel.build()</a> method has been called but the asynchronous initialization has not started. The parameter is a <a href="#toolpanel">ToolPanel</a> object.</dd>
  <dt id="toolId-ready(panel)"><code>{toolId}-ready(panel)</code></dt>
- <dd>The asynchronous initialization for a tool has completed and it is ready to be used. The parameter is a {{anch("ToolPanel")}} object.</dd>
+ <dd>The asynchronous initialization for a tool has completed and it is ready to be used. The parameter is a <a href="#toolpanel">ToolPanel</a> object.</dd>
  <dt id="toolId-selected(panel)"><code>{toolId}-selected(panel)</code></dt>
- <dd>A tool has been selected. The parameter is a {{anch("ToolPanel")}} object.</dd>
+ <dd>A tool has been selected. The parameter is a <a href="#toolpanel">ToolPanel</a> object.</dd>
  <dt id="toolId-destroy(panel)"><code>{toolId}-destroy(panel)</code></dt>
- <dd>A tool is about to be destroyed. The parameter is a {{anch("ToolPanel")}} object.</dd>
+ <dd>A tool is about to be destroyed. The parameter is a <a href="#toolpanel">ToolPanel</a> object.</dd>
  <dt id="destroy"><code>destroy</code></dt>
  <dd>The <code>Toolbox</code> is about to be destroyed.</dd>
  <dt id="destroyed"><code>destroyed</code></dt>
@@ -311,19 +311,19 @@ tags:
  <strong>Return value:</strong><br>
  A boolean indicating if the tool supports the given target.</dd>
  <dt id="build(window_toolbox)"><code>build(window, toolbox)</code></dt>
- <dd>A method that builds the {{anch("ToolPanel")}} for this tool.<br>
+ <dd>A method that builds the <a href="#toolpanel">ToolPanel</a> for this tool.<br>
  <br>
  <strong>Parameters:</strong><br>
  <em><code>window {Window} - </code></em>The {{domxref("Window")}} object for frame the tool is being built into.<br>
- <em><code>toolbox {Toolbox} - </code></em>The {{anch("Toolbox")}} the tool is being built for.<br>
+ <em><code>toolbox {Toolbox} - </code></em>The <a href="#toolbox">Toolbox</a> the tool is being built for.<br>
  <br>
  <strong>Return value:</strong><br>
- A {{anch("ToolPanel")}} for the tool.</dd>
+ A <a href="#toolpanel">ToolPanel</a> for the tool.</dd>
  <dt id="onKey(panel_toolbox)"><code>onKey(panel, toolbox)</code></dt>
  <dd><strong>Optional.</strong> A method that is called when the keyboard shortcut for the tool is activated while the tool is the active tool.<br>
  <br>
  <strong>Parameters:</strong><br>
- <code><em>panel {ToolPanel} - </em></code>The {{anch("ToolPanel")}} for the tool.<br>
+ <code><em>panel {ToolPanel} - </em></code>The <a href="#toolpanel">ToolPanel</a> for the tool.<br>
  <em><code>toolbox {Toolbox} - </code></em>The toolbox for the shortcut was triggered for.<br>
  <br>
  <strong>Return value:</strong><br>
@@ -404,7 +404,7 @@ gDevTools.registerTool(def);
 
 <dl>
  <dt id="open()"><code>open()</code></dt>
- <dd><strong>Optional</strong>. A method that can be used to perform asynchronous initialization. If the method returns a {{jsxref("Promise")}}, many operations (e.g. {{anch("showToolbox(target_toolId_hostType_hostOptions)", "gDevTools.showToolbox()")}} or <code>toolbox.selectTool()</code>) and events (e.g. {{anch("toolbox-ready(toolbox)", "toolbox-ready")}}) are delayed until the promise has been fulfilled.<br>
+ <dd><strong>Optional</strong>. A method that can be used to perform asynchronous initialization. If the method returns a {{jsxref("Promise")}}, many operations (e.g. <a href="#showtoolbox_target_toolid_hosttype_hostoptions_">gDevTools.showToolbox()</a> or <code>toolbox.selectTool()</code>) and events (e.g. <a href="#toolbox-ready_toolbox_">toolbox-ready</a>) are delayed until the promise has been fulfilled.<br>
  <br>
  <strong>Return value:</strong><br>
  The method should return a {{jsxref("Promise")}} that is resolved with the <code>ToolPanel</code> object once it's ready to be used.</dd>
@@ -490,7 +490,7 @@ MyPanel.prototype = {
 
 <h4 id="Examples">Examples</h4>
 
-<p>Here's a few examples using the {{anch("gDevTools")}} object.</p>
+<p>Here's a few examples using the <a href="#gdevtools">gDevTools</a> object.</p>
 
 <pre class="brush: js">let onInit = (eventName, toolbox, netmonitor) =&gt; console.log(&quot;Netmonitor initialized!&quot;);
 

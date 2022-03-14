@@ -37,7 +37,7 @@ Here we are fetching a JSON file across the network and printing it to the conso
 
 The {{domxref("Response")}} object, in turn, does not directly contain the actual JSON response body but is instead a representation of the entire HTTP response. So, to extract the JSON body content from the {{domxref("Response")}} object, we use the {{domxref("Response.json()", "json()")}} method, which returns a second promise that resolves with the result of parsing the response body text as JSON.
 
-> **Note:** See the {{anch("Body")}} section for similar methods to extract other types of body content.
+> **Note:** See the [Body](#body) section for similar methods to extract other types of body content.
 
 Fetch requests are controlled by the `connect-src` directive of [Content Security Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) rather than the directive of the resources it's retrieving.
 

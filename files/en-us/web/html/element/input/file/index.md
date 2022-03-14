@@ -24,7 +24,7 @@ browser-compat: html.elements.input.input-file
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
         A {{domxref("DOMString")}} representing the path to the selected
         file.
@@ -92,7 +92,7 @@ In addition to the common attributes shared by all {{HTMLElement("input")}} elem
 
 ### accept
 
-The [`accept`](/en-US/docs/Web/HTML/Attributes/accept) attribute value is a string that defines the file types the file input should accept. This string is a comma-separated list of **{{anch("Unique file type specifiers", "unique file type specifiers")}}**. Because a given file type may be identified in more than one manner, it's useful to provide a thorough set of type specifiers when you need files of a given format.
+The [`accept`](/en-US/docs/Web/HTML/Attributes/accept) attribute value is a string that defines the file types the file input should accept. This string is a comma-separated list of **[unique file type specifiers](#unique_file_type_specifiers)**. Because a given file type may be identified in more than one manner, it's useful to provide a thorough set of type specifiers when you need files of a given format.
 
 For instance, there are a number of ways Microsoft Word files can be identified, so a site that accepts Word files might use an `<input>` like this:
 

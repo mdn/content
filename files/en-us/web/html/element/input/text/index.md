@@ -24,7 +24,7 @@ browser-compat: html.elements.input.input-text
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
         A {{domxref("DOMString")}} representing the text contained in
         the text field.
@@ -75,7 +75,7 @@ The {{htmlattrxref("value", "input")}} attribute is a {{domxref("DOMString")}} t
 let theText = myTextInput.value;
 ```
 
-If no validation constraints are in place for the input (see {{anch("Validation")}} for more details), the value may be an empty string ("").
+If no validation constraints are in place for the input (see [Validation](#validation) for more details), the value may be an empty string ("").
 
 ## Additional attributes
 
@@ -105,7 +105,7 @@ If the specified pattern is not specified or is invalid, no regular expression i
 
 > **Note:** Use the {{htmlattrxref("title", "input")}} attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.
 
-See {{anch("Specifying a pattern")}} for further details and an example.
+See [Specifying a pattern](#specifying_a_pattern) for further details and an example.
 
 ### placeholder
 
@@ -125,7 +125,7 @@ A Boolean attribute which, if present, means this field cannot be edited by the 
 
 The `size` attribute is a numeric value indicating how many characters wide the input field should be. The value must be a number greater than zero, and the default value is 20. Since character widths vary, this may or may not be exact and should not be relied upon to be so; the resulting input may be narrower or wider than the specified number of characters, depending on the characters and the font ({{cssxref("font")}} settings in use).
 
-This does _not_ set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the `{{anch("maxlength")}}` attribute.
+This does _not_ set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the [`maxlength`](#maxlength) attribute.
 
 ### spellcheck
 
@@ -138,7 +138,7 @@ This does _not_ set a limit on how many characters the user can enter into the f
 - "" (empty string) or no value
   - : Follow the element's default behavior for spell checking. This may be based upon a parent's `spellcheck` setting or other factors.
 
-An input field can have spell checking enabled if it doesn't have the {{anch("readonly")}} attribute set and is not disabled.
+An input field can have spell checking enabled if it doesn't have the [readonly](#readonly) attribute set and is not disabled.
 
 The value returned by reading `spellcheck` may not reflect the actual state of spell checking within a control, if the {{Glossary("user agent", "user agent's")}} preferences override the setting.
 

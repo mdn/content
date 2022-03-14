@@ -31,7 +31,7 @@ The `frameRate` constraint can be used to establish acceptable upper and
 lower bounds on the video frame rate for a new video track, or to specify an exact frame
 rate that must be provided for the request to succeed. Checking the value of this
 property lets you determine if the user agent allows constraining the video track
-configuration by frame rate. See the {{anch("Example", "example")}} to see how this can
+configuration by frame rate. See the [example](#example) to see how this can
 be used.
 
 ## Syntax

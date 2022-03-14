@@ -48,7 +48,7 @@ There are some key principles a web app should try to observe to be identified a
 - [Responsively designed](#responsiveness), so it's usable on any device with a screen and a browser—mobile phones, tablets, laptops, TVs, refrigerators, etc.
 - [Secure](#secure), so the connections between the user, the app, and your server are secured against any third parties trying to get access to sensitive data.
 
-Offering these features and making use of all the {{anch("Advantages of web applications", "advantages")}} offered by web applications can create a compelling, highly flexible offering for your users and customers.
+Offering these features and making use of all the [advantages](#advantages_of_web_applications) offered by web applications can create a compelling, highly flexible offering for your users and customers.
 
 ### Is it worth doing all that?
 

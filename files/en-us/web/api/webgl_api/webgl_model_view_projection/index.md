@@ -431,7 +431,7 @@ gl_Position = vec4(transformedPosition.xyz, w);
 
 ![Filling the W component and creating some projection.](part4.png)
 
-See that small dark blue triangle? That's an additional face added to our object because the rotation of our shape has caused that corner to extend outside clip space, thus causing the corner to be clipped away. See {{anch("Perspective projection matrix")}} below for an introduction to how to use more complex matrices to help control and prevent clipping.
+See that small dark blue triangle? That's an additional face added to our object because the rotation of our shape has caused that corner to extend outside clip space, thus causing the corner to be clipped away. See [Perspective projection matrix](#perspective_projection_matrix) below for an introduction to how to use more complex matrices to help control and prevent clipping.
 
 ### Exercise
 
@@ -521,7 +521,7 @@ CubeDemo.prototype.computeSimpleProjectionMatrix = function(scaleFactor) {
 };
 ```
 
-Although the result is identical, the important step here is in the vertex shader. Rather than modifying the vertex directly, it gets multiplied by an additional **{{anch("Projection matrix", "projection matrix")}}**, which (as the name suggests) projects 3D points onto a 2D drawing surface:
+Although the result is identical, the important step here is in the vertex shader. Rather than modifying the vertex directly, it gets multiplied by an additional **[projection matrix](#projection_matrix)**, which (as the name suggests) projects 3D points onto a 2D drawing surface:
 
 ```glsl
 // Make sure to read the transformations in reverse order
