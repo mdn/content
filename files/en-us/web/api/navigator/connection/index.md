@@ -13,21 +13,11 @@ browser-compat: api.Navigator.connection
 ---
 {{APIRef("Network Information API")}}{{SeeCompatTable}}
 
-The **`Navigator.connection`**
-read-only property returns a {{domxref("NetworkInformation")}} object containing
-information about the system's connection, such as the current bandwidth of the user's
-device or whether the connection is metered.
+The **`Navigator.connection`** read-only property returns a {{domxref("NetworkInformation")}} object containing information about the system's connection, such as the current bandwidth of the user's device or whether the connection is metered.
 
-This could be used to select high
-definition content or low definition content based on the user's connection.
+This could be used to select high definition content or low definition content based on the user's connection.
 
-## Syntax
-
-```js
-var networkInformation = navigator.connection
-```
-
-### Value
+## Value
 
 A {{domxref("NetworkInformation")}} object.
 
@@ -41,5 +31,4 @@ A {{domxref("NetworkInformation")}} object.
 
 ## See also
 
-- [Online and
-  offline events](/en-US/docs/Web/API/Navigator/Online_and_offline_events)
+- [Online and offline events](/en-US/docs/Web/API/Navigator/Online_and_offline_events)
