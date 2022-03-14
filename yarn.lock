@@ -67,10 +67,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.11.tgz#bba69cb97e224d70b8755492b2e2d0103a60fa94"
   integrity sha512-sYJ5CWXVAJX3608rV3WowUGxPm3p7HCgoGh/eBseCQ2c5ALBz6oRTK2OWPFz679aBUik6IY1IlA89uxbb5/FjA==
 
-"@mdn/yari@0.7.35":
-  version "0.7.35"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.7.35.tgz#6837fffe1aa89279e44bb9b86de12257c3f5122f"
-  integrity sha512-eOiCBESUnkfOJjtRpR166yPVSaK6V+wzPIMYnY2gtvipCnmMVkKVAmpvccEzYyuTmZBTdg9zVA7uwoUg09ZFwQ==
+"@mdn/yari@0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.8.0.tgz#9d15e764c18ce6ee58f795056e8702ca0bbd4f8b"
+  integrity sha512-wjmumb/IyiS0U5Kqqf0jkAz5w0JKlNAiv7/y9pz2P8qOyX7Ah1ndZQgHvrwKTZhuTLhACKobAYTGRSWV9071BA==
   dependencies:
     "@babel/helper-builder-react-jsx" "^7.16.7"
     "@caporal/core" "2.0.2"
@@ -101,7 +101,7 @@
     hast-util-to-html "^7.1.3"
     hast-util-to-text "^2.0.1"
     html-react-parser "^1.4.8"
-    http-proxy-middleware "2.0.1"
+    http-proxy-middleware "2.0.4"
     image-size "1.0.1"
     image-type "4.1.0"
     imagemin "7.0.1"
@@ -114,7 +114,7 @@
     js-yaml "4.1.0"
     klaw-sync "^6.0.0"
     loglevel "^1.8.0"
-    lru-cache "^7.4.4"
+    lru-cache "^7.5.0"
     md5-file "5.0.0"
     mdast-util-from-markdown "^0.8.5"
     mdast-util-phrasing "^2.0.0"
@@ -225,10 +225,10 @@
   resolved "https://registry.yarnpkg.com/@types/http-cache-semantics/-/http-cache-semantics-4.0.0.tgz#9140779736aa2655635ee756e2467d787cfe8a2a"
   integrity sha512-c3Xy026kOF7QOTn00hbIllV1dLR9hG9NkSrLQgCVs8NF6sBU+VGWjD3wLPhmh1TYAc7ugCFsvHYMN4VcBN1U1A==
 
-"@types/http-proxy@^1.17.5":
-  version "1.17.5"
-  resolved "https://registry.yarnpkg.com/@types/http-proxy/-/http-proxy-1.17.5.tgz#c203c5e6e9dc6820d27a40eb1e511c70a220423d"
-  integrity sha512-GNkDE7bTv6Sf8JbV2GksknKOsk7OznNYHSdrtvPJXO0qJ9odZig6IZKUi5RFGi6d1bf6dgIAe4uXi3DBc7069Q==
+"@types/http-proxy@^1.17.8":
+  version "1.17.8"
+  resolved "https://registry.yarnpkg.com/@types/http-proxy/-/http-proxy-1.17.8.tgz#968c66903e7e42b483608030ee85800f22d03f55"
+  integrity sha512-5kPLG5BKpWYkw/LVOGWpiq3nEVqxiN32rTgI53Sk12/xHFQ2rG3ehI9IO+O3W2QoKeyB92dJkoka8SUm6BX1pA==
   dependencies:
     "@types/node" "*"
 
@@ -2317,12 +2317,12 @@ http-errors@1.8.1:
     statuses ">= 1.5.0 < 2"
     toidentifier "1.0.1"
 
-http-proxy-middleware@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-2.0.1.tgz#7ef3417a479fb7666a571e09966c66a39bd2c15f"
-  integrity sha512-cfaXRVoZxSed/BmkA7SwBVNI9Kj7HFltaE5rqYOub5kWzWZ+gofV2koVN1j2rMW7pEfSSlCHGJ31xmuyFyfLOg==
+http-proxy-middleware@2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-2.0.4.tgz#03af0f4676d172ae775cb5c33f592f40e1a4e07a"
+  integrity sha512-m/4FxX17SUvz4lJ5WPXOHDUuCwIqXLfLHs1s0uZ3oYjhoXlx9csYxaOa0ElDEJ+h8Q4iJ1s+lTMbiCa4EXIJqg==
   dependencies:
-    "@types/http-proxy" "^1.17.5"
+    "@types/http-proxy" "^1.17.8"
     http-proxy "^1.18.1"
     is-glob "^4.0.1"
     is-plain-obj "^3.0.0"
@@ -2967,10 +2967,10 @@ lru-cache@^4.0.1:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
-lru-cache@^7.4.4:
-  version "7.4.4"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.4.4.tgz#a3dabc394ec07e2285af52fd24d0d74b3ac71c29"
-  integrity sha512-2XbUJmlpIbmc9JvNNmtLzHlF31srxoDxuiQiwBHic7RZyHyltbTdzoO6maRqpdEhOOG5GD80EXvzAU0wR15ccg==
+lru-cache@^7.5.0:
+  version "7.5.0"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.5.0.tgz#5e14318d64e6f180a5cf3b9b955b2e89376c0efe"
+  integrity sha512-8neUvdgNtubJ+VNNqrqOLjUoIlN+NRPFtv1Vne2rQ4uPCxhp0W4TlqntzTLnVVezGXcSSdXTrKCTYooEQA7X6g==
 
 make-dir@^1.0.0, make-dir@^1.2.0:
   version "1.3.0"
