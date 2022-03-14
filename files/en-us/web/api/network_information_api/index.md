@@ -21,7 +21,7 @@ The interface consists of a single {{domxref("NetworkInformation")}} object, an 
 ## Interfaces
 
 - {{domxref("NetworkInformation")}}
-  - : Provides information about the connection a device is using to communicate with the network and provides a means for scripts to be notified if the connection type changes. The `NetworkInformation` interfaces cannot be instantiated. It is instead accessed through the {{domxref("Navigator")}} interface.
+  - : Provides information about the connection a device is using to communicate with the network and provides a means for scripts to be notified if the connection type changes. The `NetworkInformation` interface cannot be instantiated. It is instead accessed through the {{domxref("Navigator")}} interface.
 
 ## Examples
 
