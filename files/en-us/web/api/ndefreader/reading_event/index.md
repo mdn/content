@@ -10,7 +10,7 @@ browser-compat: api.NDEFReader.reading_event
 ---
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
-The `reading` event of the {{DOMxRef("NDEFReader")}} interface is called whenever a new reading is available from compatible NFC devices, e.g. NFC tags supporting NDEF, when these devices are within the reader's magnetic induction field.
+The `reading` event of the {{DOMxRef("NDEFReader")}} interface is fired whenever a new reading is available from compatible NFC devices (e.g. NFC tags supporting NDEF) when these devices are within the reader's magnetic induction field.
 
 ## Syntax
 
