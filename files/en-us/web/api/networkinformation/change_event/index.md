@@ -1,27 +1,34 @@
 ---
-title: NetworkInformation.onchange
-slug: Web/API/NetworkInformation/onchange
+title: 'NetworkInformation: change event'
+slug: Web/API/NetworkInformation/change_event
 tags:
   - API
   - Event Handler
   - Experimental
   - Network Information API
   - NetworkInformation
-  - Property
+  - Event
   - Reference
-browser-compat: api.NetworkInformation.onchange
+browser-compat: api.NetworkInformation.change_event
 ---
 {{apiref("Network Information API")}}{{SeeCompatTable}}
 
-The **`NetworkInformation.onchange`** event handler contains
-the code that is fired when connection information changes, and the {{event("change")}}
+The **`change`** event fires when connection information changes, and the {{event("change")}}
 is received by the {{domxref("NetworkInformation")}} object.
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js
-netInfo.onchange = function() { /* ... */ }
+addEventListener('change', event => { });
+
+onchange = event => { };
 ```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
