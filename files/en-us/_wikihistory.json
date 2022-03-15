@@ -58277,15 +58277,6 @@
       "wbamberg"
     ]
   },
-  "Web/API/MediaRecorder/ignoreMutedMedia": {
-    "modified": "2020-10-15T21:51:06.103Z",
-    "contributors": [
-      "sideshowbarker",
-      "lucian95",
-      "david_ross",
-      "jpmedley"
-    ]
-  },
   "Web/API/MediaRecorder/isTypeSupported": {
     "modified": "2020-10-15T21:41:15.239Z",
     "contributors": [
