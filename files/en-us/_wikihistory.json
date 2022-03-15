@@ -68845,12 +68845,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/RTCIceRole": {
-    "modified": "2020-10-15T22:06:42.134Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/RTCIceServer": {
     "modified": "2020-10-15T21:45:30.558Z",
     "contributors": [
@@ -69005,12 +68999,6 @@
       "teoli",
       "Jeremie",
       "louisremi"
-    ]
-  },
-  "Web/API/RTCIceTransportState": {
-    "modified": "2020-10-15T22:06:42.698Z",
-    "contributors": [
-      "Sheppy"
     ]
   },
   "Web/API/RTCIdentityAssertion": {
