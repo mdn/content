@@ -8,7 +8,7 @@ tags:
   - Media Recorder API
   - MediaRecorder
   - MediaStream Recording API
-  - Property
+  - Event
   - Reference
   - Video
   - dataavailable

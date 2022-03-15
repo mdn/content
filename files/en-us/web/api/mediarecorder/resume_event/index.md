@@ -7,7 +7,7 @@ tags:
   - Media Capture
   - Media Recorder API
   - MediaRecorder
-  - Property
+  - Event
   - Reference
   - Video
   - resume
@@ -15,8 +15,8 @@ browser-compat: api.MediaRecorder.resume_event
 ---
 {{APIRef("Media Recorder API")}}
 
-The `resume` event is thrown as a result of the
-{{domxref("MediaRecorder.resume()")}} method being invoked.
+The `resume` event is thrown when
+{{domxref("MediaRecorder.resume()")}} is called.
 
 ## Syntax
 

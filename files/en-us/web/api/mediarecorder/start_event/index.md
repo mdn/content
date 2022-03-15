@@ -7,7 +7,7 @@ tags:
   - Media Capture
   - Media Recorder API
   - MediaRecorder
-  - Property
+  - Event
   - Reference
   - Video
   - start
@@ -15,8 +15,8 @@ browser-compat: api.MediaRecorder.start_event
 ---
 {{APIRef("Media Recorder API")}}
 
-The `start` event is thrown as a result of the
-{{domxref("MediaRecorder.start()")}} method being invoked. At this point, the data
+The `start` event is fired when
+{{domxref("MediaRecorder.start()")}} is called. At this point, the data
 starts being gathered into a {{domxref("Blob")}}.
 
 ## Syntax

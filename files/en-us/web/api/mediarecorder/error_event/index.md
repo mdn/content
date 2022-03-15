@@ -32,7 +32,7 @@ An {{domxref("MediaRecorderErrorEvent")}}. Inherits from {{domxref("Event")}}.
 _Inherits properties from its parent interface, {{domxref("Event")}}_.
 
 - {{domxref("MediaRecorderErrorEvent.error", "error")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMException")}} containing information about the error that occurred. Read only.
+  - : A {{domxref("DOMException")}} containing information about the error that occurred.
 
 ### Value
 
@@ -42,7 +42,7 @@ possible when using the MediaStream Recording API; to determine which occurred, 
 the value of {{domxref("DOMException.name", "MediaRecorderErrorEvent.error.name")}}.
 
 - `InvalidStateError`
-  - : An attempt was made to stop or pause or an inactive recorder, start or resume an
+  - : An attempt was made to stop or pause an inactive recorder, start or resume an
     active recorder, or otherwise manipulate the `MediaRecorder` while in the
     wrong state. This exception can also occur when a request is made on a source that has
     been deleted or removed.

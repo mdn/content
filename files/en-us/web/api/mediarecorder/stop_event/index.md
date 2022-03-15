@@ -7,7 +7,7 @@ tags:
   - Media Capture
   - Media Recorder API
   - MediaRecorder
-  - Property
+  - Event
   - Reference
   - Video
   - stop
@@ -15,8 +15,8 @@ browser-compat: api.MediaRecorder.stop_event
 ---
 {{APIRef("Media Recorder API")}}
 
-The `stop` event is thrown either as a result of the
-{{domxref("MediaRecorder.stop()")}} method being invoked, or when the media stream being
+The `stop` event is fired when
+{{domxref("MediaRecorder.stop()")}} is called, or when the media stream being
 captured ends. In each case, the `stop` event is preceded by a
 `dataavailable` event, making the {{domxref("Blob")}} captured up to that
 point available for you to use in your application.

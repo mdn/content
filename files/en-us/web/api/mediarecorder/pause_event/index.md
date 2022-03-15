@@ -7,7 +7,7 @@ tags:
   - Media Capture
   - Media Recorder API
   - MediaRecorder
-  - Property
+  - Event
   - Reference
   - Video
   - pause
