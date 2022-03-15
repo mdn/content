@@ -74,6 +74,6 @@ call to `history.back()`.
 
 - {{domxref("window.history")}}
 - [Manipulating
-  the browser history](/en-US/docs/Web/Guide/DOM/Manipulating_the_browser_history)
+  the browser history](/en-US/docs/Web/API/History_API)
 - [Ajax
-  navigation example](/en-US/docs/Web/Guide/DOM/Manipulating_the_browser_history/Example)
+  navigation example](/en-US/docs/Web/API/History_API/Example)
