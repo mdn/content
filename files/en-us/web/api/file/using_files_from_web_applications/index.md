@@ -285,7 +285,7 @@ The HTML that presents the interface looks like this:
 </div>
 ```
 
-This establishes our file {{HTMLElement("input")}} element as well as a link that invokes the file picker (since we keep the file input hidden to prevent that less-than-attractive user interface from being displayed). This is explained in the section {{anch("Using hidden file input elements using the click() method")}}, as is the method that invokes the file picker.
+This establishes our file {{HTMLElement("input")}} element as well as a link that invokes the file picker (since we keep the file input hidden to prevent that less-than-attractive user interface from being displayed). This is explained in the section [Using hidden file input elements using the click() method](#using_hidden_file_input_elements_using_the_click_method), as is the method that invokes the file picker.
 
 The `handleFiles()` method follows:
 

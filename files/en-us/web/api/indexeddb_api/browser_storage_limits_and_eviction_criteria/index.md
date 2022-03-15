@@ -38,7 +38,7 @@ Even in the same browser, using the same storage method, there are different cla
 Storage comes in two types:
 
 - Persistent: This is data that is intended to be kept around for a long time. This will only be evicted if the user chooses to (for example, in Firefox you can choose to delete all stored data or only stored data from selected origins by going to _Preferences_ and using the options under _Privacy & Security > Cookies & Site Data_).
-- Temporary: This is data that doesn't need to persist for a very long time. This will be evicted under a least-recently-used ({{anch("LRU policy")}}) when {{anch("Storage limits")}} are reached.
+- Temporary: This is data that doesn't need to persist for a very long time. This will be evicted under a least-recently-used ([LRU policy](#lru_policy)) when [Storage limits](#storage_limits) are reached.
 
 In Firefox, when persistent storage is used, the user is given a UI popup to alert them that this data will persist, and asks if they are happy with that. Temporary data storage does not elicit any user prompts.
 

@@ -25,7 +25,7 @@ The process of negotiating a connection between two peers involves exchanging `R
 _The `RTCSessionDescription` interface doesn't inherit any properties._
 
 - {{domxref("RTCSessionDescription.type")}} {{ReadOnlyInline}}
-  - : An enum of type `{{anch("RTCSdpType")}}` describing the session description's type.
+  - : An enum of type [`RTCSdpType`](#rtcsdptype) describing the session description's type.
 - {{domxref("RTCSessionDescription.sdp")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMString")}} containing the {{Glossary("SDP")}} describing the session.
 

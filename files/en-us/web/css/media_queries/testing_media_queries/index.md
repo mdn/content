@@ -79,10 +79,10 @@ This event object also includes the {{domxref("MediaQueryListEvent.media","media
 
 ## Ending query notifications
 
-To stop receiving notifications about changes to the value of your media query, call `removeEventListener()` on the `MediaQueryList`, passing it the name of the previously-defined callback function:
+To stop receiving notifications about changes to the value of your media query, call {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} on the `MediaQueryList`, passing it the name of the previously-defined callback function:
 
 ```js
-mediaQueryList.removeEventListener(handleOrientationChange);
+mediaQueryList.removeEventListener('change', handleOrientationChange);
 ```
 
 ## Browser compatibility

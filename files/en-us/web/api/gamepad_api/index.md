@@ -62,7 +62,7 @@ See also the [extensions to the Gamepad interface](/en-US/docs/Web/API/Gamepad#e
       <td>{{SpecName("GamepadExtensions")}}</td>
       <td>{{Spec2("GamepadExtensions")}}</td>
       <td>
-        Defines the {{anch("Experimental Gamepad extensions")}}.
+        Defines the <a href="#experimental_gamepad_extensions">Experimental Gamepad extensions</a>.
       </td>
     </tr>
     <tr>

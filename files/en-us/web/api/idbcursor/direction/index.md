@@ -17,7 +17,7 @@ browser-compat: api.IDBCursor.direction
 The **`direction`** read-only property of the
 {{domxref("IDBCursor")}} interface is a {{domxref("DOMString")}} that returns the
 direction of traversal of the cursor (set using
-{{domxref("IDBObjectStore.openCursor")}} for example). See the {{anch("Values")}}
+{{domxref("IDBObjectStore.openCursor")}} for example). See the [Values](#values)
 section below for possible values.
 
 {{AvailableInWorkers}}

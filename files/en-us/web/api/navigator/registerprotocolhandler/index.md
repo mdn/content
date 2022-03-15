@@ -73,7 +73,7 @@ A **custom scheme** may be registered as long as:
 - The custom scheme's name includes at least 1 letter after the `web+` prefix
 - The custom scheme has only lowercase ASCII letters in its name.
 
-For example, `web+burger`, as shown in the {{anch("Example")}} below.
+For example, `web+burger`, as shown in the [Example](#example) below.
 
 Otherwise, the scheme must be one of the following:
 

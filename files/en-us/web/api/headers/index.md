@@ -15,7 +15,7 @@ browser-compat: api.Headers
 
 The **`Headers`** interface of the [Fetch API](/en-US/docs/Web/API/Fetch_API) allows you to perform various actions on [HTTP request and response headers](/en-US/docs/Web/HTTP/Headers). These actions include retrieving, setting, adding to, and removing headers from the list of the request's headers.
 
-A `Headers` object has an associated header list, which is initially empty and consists of zero or more name and value pairs.  You can add to this using methods like {{domxref("Headers.append","append()")}} (see {{anch("Examples")}}.) In all methods of this interface, header names are matched by case-insensitive byte sequence.
+A `Headers` object has an associated header list, which is initially empty and consists of zero or more name and value pairs.  You can add to this using methods like {{domxref("Headers.append","append()")}} (see [Examples](#examples).) In all methods of this interface, header names are matched by case-insensitive byte sequence.
 
 For security reasons, some headers can only be controlled by the user agent. These headers include the {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}  and {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.
 

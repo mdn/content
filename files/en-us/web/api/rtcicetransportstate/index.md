@@ -37,7 +37,7 @@ The **`RTCIceTransportState`** enumerated type defines the string values which m
 - `"completed"`
   - : The transport has finished gathering local candidates and has received a notification from the remote peer that no more candidates will be sent. In addition, all candidate pairs have been considered and a pair has been selected for use. If consent checks fail on all successful candidate pairs, the transport state will change to `"failed"`.
 - `"disconnected"`
-  - : The ICE agent has determined that connectivity has been lost for this {{domxref("RTCIceTransport")}}. This is not a failure state (that's `"failed"`). A value of `"disconnected"` means that a transient issue has occurred that has broken the connection, but that should resolve itself automatically without your code having to take any action. See {{anch("The disconnected state")}} for additional details.
+  - : The ICE agent has determined that connectivity has been lost for this {{domxref("RTCIceTransport")}}. This is not a failure state (that's `"failed"`). A value of `"disconnected"` means that a transient issue has occurred that has broken the connection, but that should resolve itself automatically without your code having to take any action. See [The disconnected state](#the_disconnected_state) for additional details.
 - `"failed"`
   - : The `RTCIceTransport` has finished the gathering process, has received the "no more candidates" notification from the remote peer, and has finished checking pairs of candidates, without successfully finding a pair that is both valid and for which consent can be obtained. _This is a terminal state, indicating that the connection cannot be achieved or maintained._
 - `"closed"`

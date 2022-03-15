@@ -38,7 +38,7 @@ var revokePromise = navigator.permissions.revoke(descriptor);
       Valid values are `'geolocation'`, `'midi'`,
       `'notifications'`, and `'push'`.
     - `userVisibleOnly`: (Push only, not supported in Firefox — see the
-      {{anch("Browser compatibility")}} section below) Indicates whether you want to
+      [Browser compatibility](#browser_compatibility) section below) Indicates whether you want to
       show a notification for every message or be able to send silent push
       notifications. The default is `false`.
     - `sysex`: (MIDI only) Indicates whether you need and/or receive system

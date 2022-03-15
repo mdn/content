@@ -238,7 +238,7 @@ Transcrit par Célestes™
 ::cue(#crédit\ de\ transcription) { color: red; }
 ```
 
-Positioning of text tracks is also supported, by including positioning information after the timings in a cue, as seen below (see {{anch("Cue settings")}} for more information):
+Positioning of text tracks is also supported, by including positioning information after the timings in a cue, as seen below (see [Cue settings](#cue_settings) for more information):
 
 ```plain
 WEBVTT

@@ -12,7 +12,8 @@ browser-compat: api.NetworkInformation
 ---
 {{APIRef("Network Information API")}}{{SeeCompatTable}}
 
-The **`NetworkInformation`** interface provides information about the connection a device is using to communicate with the network and provides a means for scripts to be notified if the connection type changes. The `NetworkInformation` interfaces cannot be instantiated. It is instead accessed through the `connection` property of the {{domxref("Navigator")}} interface.
+The **`NetworkInformation`** interface of the [Network Information API](/en-US/docs/Web/API/Network_Information_API) provides information about the connection a device is using to communicate with the network and provides a means for scripts to be notified if the connection type changes.
+The `NetworkInformation` interface cannot be instantiated. It is instead accessed through the `connection` property of the {{domxref("Navigator")}} interface.
 
 {{AvailableInWorkers}}
 
@@ -64,6 +65,4 @@ _This interface also inherits methods of its parent, {{domxref("EventTarget")}}.
 
 ## See also
 
-- [Network Information API](/en-US/docs/Web/API/Network_Information_API)
 - [Online and offline events](/en-US/docs/Online_and_offline_events)
-- The {{domxref("Navigator")}} interface that implements it.

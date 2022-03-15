@@ -7,12 +7,21 @@ tags:
   - Network Information API
   - Reference
   - WebAPI
+browser-compat: api.NetworkInformation
 ---
 {{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}}
 
-The Network Information API provides information about the system's connection in terms of general connection type (e.g., 'wifi', 'cellular', etc.). This can be used to select high definition content or low definition content based on the user's connection. The entire API consists of the addition of the {{domxref("NetworkInformation")}} interface and a single property to the {{domxref("Navigator")}} interface: {{domxref("Navigator.connection")}}.
+The Network Information API provides information about the system's connection in terms of general connection type (e.g., 'wifi', 'cellular', etc.).
+This can be used to select high definition content or low definition content based on the user's connection.
+
+The interface consists of a single {{domxref("NetworkInformation")}} object, an instance of which is returned by the {{domxref("Navigator.connection")}} property.
 
 {{AvailableInWorkers}}
+
+## Interfaces
+
+- {{domxref("NetworkInformation")}}
+  - : Provides information about the connection a device is using to communicate with the network and provides a means for scripts to be notified if the connection type changes. The `NetworkInformation` interface cannot be instantiated. It is instead accessed through the {{domxref("Navigator")}} interface.
 
 ## Examples
 
@@ -46,22 +55,18 @@ if (connection) {
 }
 ```
 
-## Interfaces
-
-- {{domxref("NetworkInformation")}}
-  - : Provides information about the connection a device is using to communicate with the network and provides a means for scripts to be notified if the connection type changes. The `NetworkInformation` interfaces cannot be instantiated. It is instead accessed through the {{domxref("Navigator")}} interface.
-
 ## Specifications
 
-| Specification                                              |
-| ---------------------------------------------------------- |
-| [Network Information API](https://wicg.github.io/netinfo/) |
+{{Specifications}}
+
+{{Specifications("api.Navigator.connection")}}
+
 
 ## Browser compatibility
 
 ### NetworkInformation
 
-{{Compat("api.NetworkInformation")}}
+{{Compat}}
 
 ### Navigator.connection
 
@@ -69,6 +74,4 @@ if (connection) {
 
 ## See also
 
-- {{spec("https://w3c.github.io/netinfo/", "Network Information API Specification", "ED")}}
 - [Online and offline events](/en-US/docs/Web/API/Navigator/Online_and_offline_events)
-- {{domxref("Navigator.connection", "window.navigator.connection")}}
