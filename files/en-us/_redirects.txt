@@ -8811,6 +8811,7 @@
 /en-US/docs/Web/API/PositionSensorVRDevice/getState()	/en-US/docs/Web/API/PositionSensorVRDevice/getState
 /en-US/docs/Web/API/PresentationAvailability/onchange	/en-US/docs/Web/API/PresentationAvailability
 /en-US/docs/Web/API/PresentationConnectionClosedEvent	/en-US/docs/Web/API/PresentationConnectionCloseEvent
+/en-US/docs/Web/API/PresentationRequest/onconnectionavailable	/en-US/docs/Web/API/PresentationRequest
 /en-US/docs/Web/API/ProgressEvent.ProgressEvent	/en-US/docs/Web/API/ProgressEvent/ProgressEvent
 /en-US/docs/Web/API/ProgressEvent.initProgressEvent	/en-US/docs/Web/API/ProgressEvent/initProgressEvent
 /en-US/docs/Web/API/ProgressEvent.lengthComputable	/en-US/docs/Web/API/ProgressEvent/lengthComputable

@@ -67403,15 +67403,6 @@
       "MashKao"
     ]
   },
-  "Web/API/PresentationRequest/onconnectionavailable": {
-    "modified": "2020-12-10T14:51:47.608Z",
-    "contributors": [
-      "bershanskiy",
-      "lucian95",
-      "david_ross",
-      "MashKao"
-    ]
-  },
   "Web/API/PresentationRequest/reconnect": {
     "modified": "2020-10-15T21:47:40.954Z",
     "contributors": [
