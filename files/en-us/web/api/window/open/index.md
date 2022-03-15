@@ -28,7 +28,7 @@ open(url, target, windowFeatures);
 ### Parameters
 
 - `url` {{optional_inline}}
-  - : A string indicating the URL or path of the resource to be loaded. If an empty string (`""`) is specified as `url`, a blank page is opened into the targeted browsing context. Note that remote URLs are deferred until after the current script block finishes executing.
+  - : A string indicating the URL or path of the resource to be loaded. If an empty string (`""`) is specified or this parameter is omitted, a blank page is opened into the targeted browsing context.
 
 - `target` {{optional_inline}}
   - : A string, without whitespace, specifying the {{domxref("window/name", "name")}} of the browsing context the resource is being loaded into. If the name doesn't identify an existing context, a new context is created and given the specified name. The special [`target` keywords](/en-US/docs/Web/HTML/Element/a#attr-target), `_self`, `_blank`, `_parent`, and `_top`, can also be used.
