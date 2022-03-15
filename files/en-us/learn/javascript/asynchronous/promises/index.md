@@ -56,6 +56,7 @@ console.log("Started request...");
 ```
 
 Here we are:
+
 1. calling the `fetch()` API, and assigning the return value to the `fetchPromise` variable
 2. immediately after, logging the `fetchPromise` variable. This should output something like: `Promise { <state>: "pending" }`, telling us that we have a `Promise` object, and it has a `state` whose value is `"pending"`.  The `"pending"` state means that the fetch operation is still going on.
 3. passing a handler function into the Promise's **`then()`** method. When (and if) the fetch operation succeeds, the promise will call our handler, passing in a {{domxref("Response")}} object, which contains the server's response.
@@ -73,7 +74,7 @@ Note that `Started request...` is logged before we receive the response. Unlike 
 
 This probably seems a lot like the example in the last article, where we added event handlers to the {{domxref("XMLHttpRequest")}} object. Instead of that, we're passing a handler into the `then()` method of the returned promise.
 
-##  Chaining promises
+## Chaining promises
 
 With the `fetch()` API, once you get a `Response` object, you need to call another function to get the response data. In this case we want to get the response data as JSON, so we would call the {{domxref("Response/json", "json()")}} method of the `Response` object. It turns out that `json()` is also asynchronous. So this is a case where we have to call two successive asynchronous functions.
 
@@ -187,8 +188,8 @@ Sometimes you need all the promises to be fulfilled, but they don't depend on ea
 
 The promise returned by `Promise.all()` is:
 
-* fulfilled when and if *all* the promises in the array are fulfilled. In this case the `then()` handler is called with an array of all the responses, in the same order that the promises were passed into `all()`
-* rejected when and if *any* of the promises in the array are rejected. In this case the `catch()` handler is called with the error thrown by the promise that rejected.
+- fulfilled when and if *all* the promises in the array are fulfilled. In this case the `then()` handler is called with an array of all the responses, in the same order that the promises were passed into `all()`
+- rejected when and if *any* of the promises in the array are rejected. In this case the `catch()` handler is called with the error thrown by the promise that rejected.
 
 For example:
 
