@@ -28,11 +28,11 @@ _The `RTCIceTransport` interface inherits properties from its parent, {{domxref(
 - {{domxref("RTCIceTransport.component", "component")}} {{ReadOnlyInline}}
   - : The ICE component being used by the transport. The value is one of the strings from the {{domxref("RTCIceTransport")}} enumerated type: `{{Glossary("RTP", '"RTP"')}}` or `"RTSP"`.
 - {{domxref("RTCIceTransport.gatheringState", "gatheringState")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMString")}} indicating which current gathering state of the ICE agent: `"new"`, `"gathering"`, or `"complete"`.
+  - : A string indicating which current gathering state of the ICE agent: `"new"`, `"gathering"`, or `"complete"`.
 - {{domxref("RTCIceTransport.role", "role")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMString")}} whose value is one of the members of the {{domxref("RTCIceRole")}} enumerated type: `"controlling"` or `"controlled"`; this indicates whether the ICE agent is the one that makes the final decision as to the candidate pair to use or not.
+  - : Returns a string whose value is either `"controlling"` or `"controlled"`; this indicates whether the ICE agent is the one that makes the final decision as to the candidate pair to use or not.
 - {{domxref("RTCIceTransport.state", "state")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMString")}} indicating what the current state of the ICE agent is. The value of `state` can be used to determine whether the ICE agent has made an initial connection using a viable candidate pair (`"connected"`), made its final selection of candidate pairs (`"completed"`), or in an error state (`"failed"`), among other states. See the {{domxref("RTCIceTransportState")}} enumerated type for a complete list of states.
+  - : A string indicating what the current state of the ICE agent is. The value of `state` can be used to determine whether the ICE agent has made an initial connection using a viable candidate pair (`"connected"`), made its final selection of candidate pairs (`"completed"`), or in an error state (`"failed"`), among other states.
 
 ## Methods
 

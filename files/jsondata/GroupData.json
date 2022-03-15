@@ -1961,8 +1961,6 @@
         "RTCDegradationPreference",
         "RTCDtlsTransportState",
         "RTCIceGathererState",
-        "RTCIceTransportState",
-        "RTCIceRole",
         "RTCIceComponent",
         "RTCSctpTransportState",
         "RTCDataChannelState",
