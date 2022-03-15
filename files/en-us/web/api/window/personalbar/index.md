@@ -19,19 +19,13 @@ window.
 ## Syntax
 
 ```js
-objRef =window.personalbar
+objRef = window.personalbar
 ```
 
 ## Example
 
-{{todo('https://bugzilla.mozilla.org/show_bug.cgi?id=790023')}}
-
-{{deprecated_inline}} The following complete HTML example shows the way that the
-visible property of the various "bar" objects is used, and also the change to the
-privileges necessary to write to the visible property of any of the bars on an existing
-window. Due to [deprecation of
-enablePrivilege](/en-US/docs/Bypassing_Security_Restrictions_and_Signing_Code) this functionality can not be used in web pages. EnablePrivilege
-is disabled in Firefox 15 and will be removed in Firefox 17.
+The following complete HTML example shows the way that the
+visible property of the various "bar" objects is used.
 
 ```html
 <!DOCTYPE html>
@@ -41,8 +35,7 @@ is disabled in Firefox 15 and will be removed in Firefox 17.
 
 <script>
 // changing bar states on the existing window
-netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserWrite");
-window.personalbar.visible = !window.personalbar.visible;
+var isVisible = window.personalbar.visible
 </script>
 
 </head>
@@ -51,15 +44,6 @@ window.personalbar.visible = !window.personalbar.visible;
 </body>
 </html>
 ```
-
-## Notes
-
-When you load the example page above, the browser displays the following dialog: ![](modify_any_open_window_dialog.png)
-
-To toggle the visibility of these bars, you must either sign your scripts or enable the
-appropriate privileges, as in the example above. Also be aware that dynamically updating
-the visibility of the various toolbars can change the size of the window rather
-dramatically, and may affect the layout of your page.
 
 ## Specifications
 
