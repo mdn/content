@@ -56,7 +56,7 @@ iceTransport.addEventListener("selectedcandidatepairchange", ev => {
 }, false)
 ```
 
-This can also be done by setting the {{domxref("RTCIceTransport.onselectedcandidatepairchange", "onselectedcandidatepairchange")}} event handler property directly.
+This can also be done by setting the `onselectedcandidatepairchange` event handler property directly.
 
 ```js
 let iceTransport = pc.getSenders[0].transport.iceTransport;
@@ -82,7 +82,6 @@ iceTransport.onselectedcandidatepairchange = ev => {
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - [WebRTC connectivity](/en-US/docs/Web/API/WebRTC_API/Connectivity)
-- {{domxref("RTCIceTransport.onselectedcandidatepairchange")}}
 
 ### Related RTCIceTransport events
 

@@ -50,7 +50,7 @@ iceTransport.addEventListener("statechange", ev => {
 }, false);
 ```
 
-The same code, using the {{domxref("RTCIceTransport.onstatechange", "onstatechange")}} event handler property, looks like this:
+The same code, using the `onstatechange` event handler property, looks like this:
 
 ```js
 let iceTransport = pc.getSenders()[0].transport.iceTransport;
@@ -74,7 +74,6 @@ iceTransport.onstatechange = ev => {
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - [WebRTC connectivity](/en-US/docs/Web/API/WebRTC_API/Connectivity)
-- {{domxref("RTCIceTransport.onstatechange")}} event handler
 
 ### Related RTCIceTransport events
 

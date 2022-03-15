@@ -57,7 +57,7 @@ pc.getSenders().forEach(sender => {
 }, false);
 ```
 
-Likewise, you can use the {{domxref("RTCIceTransport.ongatheringstatechange", "ongatheringstatechange")}} event handler property:
+Likewise, you can use the `ongatheringstatechange` event handler property:
 
 ```js
 pc.getSenders().forEach(sender => {
@@ -84,7 +84,6 @@ pc.getSenders().forEach(sender => {
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - [WebRTC connectivity](/en-US/docs/Web/API/WebRTC_API/Connectivity)
-- {{domxref("RTCIceTransport.ongatheringstatechange")}}
 
 ### Related RTCIceTransport events
 
