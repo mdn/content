@@ -18,14 +18,14 @@ The **`NDEFReader`** interface of the [Web NFC API](/en-US/docs/Web/API/Web_NFC_
 - {{DOMxRef("NDEFReader.NDEFReader", "NDEFReader()")}} {{Experimental_Inline}}
   - : Returns a new `NDEFReader` object.
 
-## Properties
+## Events
 
 _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
-- {{DOMxRef("NDEFReader.onreading")}} {{Experimental_Inline}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when the `reading` event is raised.
-- {{DOMxRef("NDEFReader.onreadingerror")}} {{Experimental_Inline}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when when the `readingerror` event is raised. This occurs when a tag is in proximity of a reading device, but cannot be read.
+- {{DOMxRef("NDEFReader.reading_event", "reading")}} {{Experimental_Inline}}
+  - : Fires when a new reading is available from compatible NFC devices.
+- {{DOMxRef("NDEFReader.readingerror_event", "readingerror")}} {{Experimental_Inline}}
+  - : Fires when a tag is in proximity of a reading device, but cannot be read.
 
 ## Methods
 
