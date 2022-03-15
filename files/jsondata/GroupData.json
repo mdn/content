@@ -1951,7 +1951,6 @@
         "RTCIceGatheringState",
         "RTCPeerConnectionState",
         "RTCIceConnectionState",
-        "RTCSdpType",
         "RTCIceProtocol",
         "RTCIceTcpCandidateType",
         "RTCIceCandidateType",
