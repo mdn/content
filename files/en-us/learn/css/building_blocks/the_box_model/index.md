@@ -175,7 +175,7 @@ html {
 
 ## Playing with box models
 
-In the below example, you can see two boxes. Both have a class of `.box`, which gives them the same `width`, `height`, `margin`, `border`, and `padding`. The only difference is that the second box has been set to use the alternative box model.
+In the example below, you can see two boxes. Both have a class of `.box`, which gives them the same `width`, `height`, `margin`, `border`, and `padding`. The only difference is that the second box has been set to use the alternative box model.
 
 **Can you change the size of the second box (by adding CSS to the `.alternate` class) to make it match the first box in width and height?**
 
