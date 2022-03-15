@@ -21,8 +21,8 @@ The **`open()`** method of the {{domxref('Window')}} interface loads a specified
 ```js
 open();
 open(url);
-open(url, windowName);
-open(url, windowName, windowFeatures);
+open(url, target);
+open(url, target, windowFeatures);
 ```
 
 ### Parameters
@@ -30,7 +30,7 @@ open(url, windowName, windowFeatures);
 - `url` {{optional_inline}}
   - : A string indicating the URL or path of the resource to be loaded. If an empty string (`""`) is specified as `url`, a blank page is opened into the targeted browsing context. Note that remote URLs are deferred until after the current script block finishes executing.
 
-- `windowName` {{optional_inline}}
+- `target` {{optional_inline}}
   - : A string, without whitespace, specifying the {{domxref("window/name", "name")}} of the browsing context the resource is being loaded into. If the name doesn't identify an existing context, a new context is created and given the specified name. The special [`target` keywords](/en-US/docs/Web/HTML/Element/a#attr-target), `_self`, `_blank`, `_parent`, and `_top`, can also be used.
 
     This name can be used as the `target` attribute of
@@ -38,11 +38,48 @@ open(url, windowName, windowFeatures);
     "#attr-target")}} elements.
 
 - `windowFeatures` {{optional_inline}}
-  - : A string containing a comma-separated list of window features in the form _name=value_ — or for boolean features, just _name_. These features include options such as the window's default size and position, whether or not to open a minimal popup window, and so forth. See {{anch("Window features")}} below for descriptions of each feature.
+  - : A string containing a comma-separated list of window features in the form _name=value_ — or for boolean features, just _name_. These features include options such as the window's default size and position, whether or not to open a minimal popup window, and so forth. The following options are supported:
+
+    - `popup`
+      - : If this feature is enabled, it requests that a minimal popup window be used. The UI features included in the popup window will be automatically decided by the browser, generally including an address bar only.
+      
+        If `popup` is not enabled, and there are no window features declared, the new browsing context will be a tab.
+
+        > **Note:** Specifying any features in the _windowFeatures_ parameter, other than `noopener` or `noreferer`, also has the effect of requesting a popup.
+
+        To enable the feature, specify `popup` either with no value at all, or else set it to `yes` or `1`.
+
+        Example: `popup=yes`, `popup=1`, and `popup` all have identical results.
+
+    - `width` or `innerWidth`
+      - : Specifies the width of the content area, including scrollbars. The minimum required value is 100.
+
+    - `height` or `innerHeight`
+      - : Specifies the height of the content area, including scrollbars. The minimum required value is 100.
+
+    - `left` or `screenX`
+      - : Specifies the distance in pixels from the left side of the work area as defined by the user's operating system where the new window will be generated.
+
+    - `top` or `screenY`
+      - : Specifies the distance in pixels from the top side of the work area as defined by the user's operating system where the new window will be generated.
+
+    - `noopener`
+      - : If this feature is set, the new window will not have access to the originating window via {{domxref("Window.opener")}} and returns `null`.
+
+        When `noopener` is used, non-empty target names, other than `_top`, `_self`, and `_parent`, are treated like `_blank` in terms of deciding whether to open a new browsing context.
+
+    - `noreferrer`
+      - : If this feature is set, the browser will omit the {{HTTPHeader("Referer")}} header, as well as set `noonpener` to true. See [`rel="noreferrer"`](/en-US/docs/Web/HTML/Link_types#noreferrer) for more information.
+
 
 ### Return value
 
 A [WindowProxy](/en-US/docs/Glossary/WindowProxy) object. The returned reference can be used to access properties and methods of the new window as long as it complies with [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) security requirements.
+
+## Description
+The {{domxref("Window")}} interface's open() method takes a URL as a parameter, and loads the resource it identifies into a new or existing tab or window. The target parameter determines which window or tab to load the resource into, and the windowFeatures parameter can be used to control the size and position of a new window, and to open the new window as a popup with minimal UI features.
+
+Note that remote URLs won't load immediately. When window.open() returns, the window always contains about:blank. The actual fetching of the URL is deferred and starts after the current script block finishes executing. The window creation and the loading of the referenced resource are done asynchronously.
 
 ## Examples
 
@@ -77,53 +114,6 @@ function openRequestedPopup() {
   windowObjectReference = window.open("http://www.mozilla.org/", "mozillaTab");
 }
 ```
-
-## Window features
-
-`windowFeatures` is an optional comma-separated list of window features such as size and position.
-
-### Popup feature
-
-- `popup`
-  - : If this feature is enabled, it requests that a minimal popup window be used. The UI features included in the popup window will be automatically decided by the browser, generally including an address bar only.
-  
-    If `popup` is not enabled, and there are no window features declared, the new browsing context will be a tab.
-
-> **Note:** Specifying any features in the _windowFeatures_ parameter, other than `noopener` or `noreferer`, also has the effect of requesting a popup.
-
-To enable the feature, specify `popup` either with no value at all, or else set it to `yes` or `1`.
-
-Example: `popup=yes`, `popup=1`, and `popup` all have identical results.
-
-### Position and size features
-
-### Size
-
-- `width` or `innerWidth`
-  - : Specifies the width of the content area, including scrollbars. The minimum required value is 100.
-
-- `height` or `innerHeight`
-  - : Specifies the height of the content area, including scrollbars. The minimum required value is 100.
-
-### Position
-
-- `left` or `screenX`
-  - : Specifies the distance in pixels from the left side of the work area as defined by the user's operating system where the new window will be generated.
-
-- `top` or `screenY`
-  - : Specifies the distance in pixels from the top side of the work area as defined by the user's operating system where the new window will be generated.
-
-> **Note:** If a popup is requested and no position features are specified, then the left and top coordinates of the new window will be offset 22 pixels from the original window. If the original window is maximized, the window will also be maximized.
-
-### Window functionality
-
-- `noopener`
-  - : If this feature is set, the new window will not have access to the originating window via {{domxref("Window.opener")}} and returns `null`.
-
-    When `noopener` is used, non-empty target names, other than `_top`, `_self`, and `_parent`, are treated like `_blank` in terms of deciding whether to open a new browsing context.
-
-- `noreferrer`
-  - : If this feature is set, the browser will omit the {{HTTPHeader("Referer")}} header, as well as set `noonpener` to true. See [`rel="noreferrer"`](/en-US/docs/Web/HTML/Link_types#noreferrer) for more information.
 
 ## Best practices
 
@@ -540,8 +530,3 @@ security levels: a security setting can disable such error correction mechanism.
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Obsolete features](/en-US/docs/Web/API/Window/open/Obsolete_features)
-- [Privileged features](/en-US/docs/Web/API/Window/open/Privileged_features)
