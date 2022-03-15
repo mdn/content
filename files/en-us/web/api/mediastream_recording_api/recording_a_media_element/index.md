@@ -188,13 +188,13 @@ function startRecording(stream, lengthInMS) {
 - Line 2
   - : Creates the `MediaRecorder` that will handle recording the input `stream`.
 - Line 3
-  - : Creates an empty array, `data`, which will be used to hold the {{domxref("Blob")}}s of media data provided to our {{domxref("MediaRecorder.ondataavailable", "ondataavailable")}} event handler.
+  - : Creates an empty array, `data`, which will be used to hold the {{domxref("Blob")}}s of media data provided to our {{domxref("MediaRecorder.dataavailable_event", "ondataavailable")}} event handler.
 - Line 5
   - : Sets up the handler for the {{event("dataavailable")}} event. The received event's `data` property is a {{domxref("Blob")}} that contains the media data. The event handler pushes the `Blob` onto the `data` array.
 - Lines 6-7
   - : Starts the recording process by calling {{domxref("MediaRecorder.start", "recorder.start()")}}, and outputs a message to the log with the updated state of the recorder and the number of seconds it will be recording.
 - Lines 9-12
-  - : Creates a new {{jsxref("Promise")}}, named `stopped`, which is resolved when the `MediaRecorder`'s {{domxref("MediaRecorder.onstop", "onstop")}} event handler is called, and is rejected if its {{domxref("MediaRecorder.onerror", "onerror")}} event handler is called. The rejection handler receives as input the name of the error that occurred.
+  - : Creates a new {{jsxref("Promise")}}, named `stopped`, which is resolved when the `MediaRecorder`'s {{domxref("MediaRecorder.stop_event", "onstop")}} event handler is called, and is rejected if its {{domxref("MediaRecorder.error_event", "onerror")}} event handler is called. The rejection handler receives as input the name of the error that occurred.
 - Lines 14-16
   - : Creates a new `Promise`, named `recorded`, which is resolved when the specified number of milliseconds have elapsed. Upon resolution, it stops the `MediaRecorder` if it's recording.
 - Lines 18-22

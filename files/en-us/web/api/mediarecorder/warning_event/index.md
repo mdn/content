@@ -1,6 +1,6 @@
 ---
 title: MediaRecorder.onwarning
-slug: Web/API/MediaRecorder/onwarning
+slug: Web/API/MediaRecorder/warning_event
 tags:
   - API
   - Audio
@@ -15,17 +15,21 @@ browser-compat: api.MediaRecorder.onwarning
 ---
 {{Deprecated_header}}{{APIRef("Media Recorder API")}}
 
-The **`MediaRecorder.onwarning`** event handler (part of the [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API)) handles the
-recording `warning` event, allowing you to run code in response to non-fatal
-errors being thrown during media recording via a `MediaRecorder` (errors that don't
-halt recording).
+The `warning` event fires on non-fatal errors during media recording via a `MediaRecorder`. Non-fatal errors are one's that don't halt recording.
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js
-mediaRecorder.onwarning = function(event) { /* ... */ }
-mediaRecorder.addEventListener('warning', function(event) { /* ... */ })
+addEventListener('warning', event => { });
+
+onwarning = event => { };
 ```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Example
 
@@ -38,11 +42,6 @@ mediaRecorder.addEventListener('warning', function(event) { /* ... */ })
 
 ...
 ```
-
-## Properties
-
-- `message`
-  - : Contains information about the error that occurred.
 
 ## Browser compatibility
 

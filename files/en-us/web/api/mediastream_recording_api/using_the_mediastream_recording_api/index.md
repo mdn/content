@@ -176,7 +176,7 @@ record.onclick = function() {
 
 When the `MediaRecorder` is recording, the {{domxref("MediaRecorder.state")}} property will return a value of "recording".
 
-As recording progresses, we need to collect the audio data. We register an event handler to do this using {{domxref("mediaRecorder.ondataavailable")}}:
+As recording progresses, we need to collect the audio data. We register an event handler to do this using {{domxref("mediaRecorder.dataavailable_event", "ondataavailable")}}:
 
 ```js
 let chunks = [];
@@ -204,7 +204,7 @@ Note that the recording may also stop naturally if the media stream ends (e.g. i
 
 ## Grabbing and using the blob
 
-When recording has stopped, the `state` property returns a value of "inactive", and a stop event is fired. We register an event handler for this using {{domxref("mediaRecorder.onstop")}}, and finalize our blob there from all the chunks we have received:
+When recording has stopped, the `state` property returns a value of "inactive", and a stop event is fired. We register an event handler for this using {{domxref("mediaRecorder.stop_event", "onstop")}}, and finalize our blob there from all the chunks we have received:
 
 ```js
 mediaRecorder.onstop = function(e) {

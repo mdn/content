@@ -1,33 +1,36 @@
 ---
-title: MediaRecorder.onresume
-slug: Web/API/MediaRecorder/onresume
+title: 'MediaRecorder: pause event'
+slug: Web/API/MediaRecorder/pause_event
 tags:
   - API
   - Audio
   - Media Capture
   - Media Recorder API
   - MediaRecorder
-  - Property
+  - Event
   - Reference
   - Video
-  - onresume
-browser-compat: api.MediaRecorder.onresume
+  - pause
+browser-compat: api.MediaRecorder.pause_event
 ---
 {{APIRef("Media Recorder API")}}
 
-The **`MediaRecorder.onresume`** event handler (part of the [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API)) handles the
-`resume` event, allowing you to run code in response to the media recording
-being resumed after pausing.
-
-The `resume` event is thrown as a result of the
-{{domxref("MediaRecorder.resume()")}} method being invoked.
+The `pause` event is thrown as a result of the
+{{domxref("MediaRecorder.pause()")}} method being invoked.
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js
-MediaRecorder.onresume = function(event) { /* ... */ }
-MediaRecorder.addEventListener('resume', function(event) { /* ... */ })
+addEventListener('pause', event => { });
+
+onpause = event => { };
 ```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Example
 
@@ -35,10 +38,10 @@ MediaRecorder.addEventListener('resume', function(event) { /* ... */ })
 ...
 
   pause.onclick = function() {
-    if(MediaRecorder.state === "recording") {
+    if(mediaRecorder.state === "recording") {
       mediaRecorder.pause();
       // recording paused
-    } else if(MediaRecorder.state === "paused") {
+    } else if(mediaRecorder.state === "paused") {
       mediaRecorder.resume();
       // resume recording
     }

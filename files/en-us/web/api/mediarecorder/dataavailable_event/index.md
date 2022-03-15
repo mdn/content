@@ -1,6 +1,6 @@
 ---
-title: MediaRecorder.ondataavailable
-slug: Web/API/MediaRecorder/ondataavailable
+title: 'MediaRecorder: dataavailable event'
+slug: Web/API/MediaRecorder/dataavailable_event
 tags:
   - API
   - Audio
@@ -8,18 +8,13 @@ tags:
   - Media Recorder API
   - MediaRecorder
   - MediaStream Recording API
-  - Property
+  - Event
   - Reference
   - Video
-  - ondataavailable
-browser-compat: api.MediaRecorder.ondataavailable
+  - dataavailable
+browser-compat: api.MediaRecorder.dataavailable_event
 ---
 {{APIRef("MediaStream Recording")}}
-
-The **`MediaRecorder.ondataavailable`** event handler (part of
-the [MediaStream Recording
-API](/en-US/docs/Web/API/MediaStream_Recording_API)) handles the {{event("dataavailable")}} event, letting you run code in
-response to {{domxref("Blob")}} data being made available for use.
 
 The `dataavailable` event is fired when the MediaRecorder delivers media
 data to your application for its use. The data is provided in a {{domxref("Blob")}}
@@ -51,9 +46,17 @@ object that contains the data. This occurs in four situations:
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js
-mediaRecorder.ondataavailable = functionRef;
+addEventListener('dataavailable', event => { });
+
+ondataavailable = event => { };
 ```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Example
 

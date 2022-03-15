@@ -58264,6 +58264,20 @@
       "jpmedley"
     ]
   },
+  "Web/API/MediaRecorder/dataavailable_event": {
+    "modified": "2020-10-15T21:27:42.755Z",
+    "contributors": [
+      "sideshowbarker",
+      "lucian95",
+      "Jib",
+      "Sheppy",
+      "jpmedley",
+      "Sebastianz",
+      "chrisdavidmills",
+      "teoli",
+      "kscarfone"
+    ]
+  },
   "Web/API/MediaRecorder/error_event": {
     "modified": "2020-10-15T22:16:57.805Z",
     "contributors": [
@@ -58302,103 +58316,25 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/MediaRecorder/ondataavailable": {
-    "modified": "2020-10-15T21:27:42.755Z",
-    "contributors": [
-      "sideshowbarker",
-      "lucian95",
-      "Jib",
-      "Sheppy",
-      "jpmedley",
-      "Sebastianz",
-      "chrisdavidmills",
-      "teoli",
-      "kscarfone"
-    ]
-  },
-  "Web/API/MediaRecorder/onerror": {
-    "modified": "2020-11-19T12:03:37.906Z",
-    "contributors": [
-      "Rumyra",
-      "sideshowbarker",
-      "lucian95",
-      "Sheppy",
-      "jpmedley",
-      "Sebastianz",
-      "chrisdavidmills",
-      "teoli",
-      "kscarfone"
-    ]
-  },
-  "Web/API/MediaRecorder/onpause": {
-    "modified": "2020-10-15T21:27:47.587Z",
-    "contributors": [
-      "sideshowbarker",
-      "lucian95",
-      "dtipson",
-      "jpmedley",
-      "Sebastianz",
-      "chrisdavidmills",
-      "teoli",
-      "kscarfone"
-    ]
-  },
-  "Web/API/MediaRecorder/onresume": {
-    "modified": "2020-10-15T21:27:43.669Z",
-    "contributors": [
-      "sideshowbarker",
-      "lucian95",
-      "jpmedley",
-      "Sebastianz",
-      "chrisdavidmills",
-      "teoli",
-      "kscarfone"
-    ]
-  },
-  "Web/API/MediaRecorder/onstart": {
-    "modified": "2020-10-15T21:27:43.847Z",
-    "contributors": [
-      "sideshowbarker",
-      "lucian95",
-      "jpmedley",
-      "Sebastianz",
-      "chrisdavidmills",
-      "teoli",
-      "kscarfone"
-    ]
-  },
-  "Web/API/MediaRecorder/onstop": {
-    "modified": "2020-10-15T21:27:43.725Z",
-    "contributors": [
-      "sideshowbarker",
-      "lucian95",
-      "jpmedley",
-      "Sebastianz",
-      "chrisdavidmills",
-      "teoli",
-      "kscarfone"
-    ]
-  },
-  "Web/API/MediaRecorder/onwarning": {
-    "modified": "2020-10-15T21:27:43.833Z",
-    "contributors": [
-      "Sheppy",
-      "sideshowbarker",
-      "lucian95",
-      "miguelao",
-      "jpmedley",
-      "Sebastianz",
-      "chrisdavidmills",
-      "teoli",
-      "kscarfone"
-    ]
-  },
   "Web/API/MediaRecorder/pause": {
     "modified": "2020-10-15T21:27:42.723Z",
     "contributors": [
       "sideshowbarker",
       "lucian95",
       "Sheppy",
+      "jpmedley",
+      "Sebastianz",
+      "chrisdavidmills",
+      "teoli",
+      "kscarfone"
+    ]
+  },
+  "Web/API/MediaRecorder/pause_event": {
+    "modified": "2020-10-15T21:27:47.587Z",
+    "contributors": [
+      "sideshowbarker",
+      "lucian95",
+      "dtipson",
       "jpmedley",
       "Sebastianz",
       "chrisdavidmills",
@@ -58432,6 +58368,18 @@
       "kscarfone"
     ]
   },
+  "Web/API/MediaRecorder/resume_event": {
+    "modified": "2020-10-15T21:27:43.669Z",
+    "contributors": [
+      "sideshowbarker",
+      "lucian95",
+      "jpmedley",
+      "Sebastianz",
+      "chrisdavidmills",
+      "teoli",
+      "kscarfone"
+    ]
+  },
   "Web/API/MediaRecorder/start": {
     "modified": "2020-10-15T21:27:42.837Z",
     "contributors": [
@@ -58444,6 +58392,18 @@
       "chrisdavidmills",
       "teoli",
       "tenorioming@yahoo.com",
+      "kscarfone"
+    ]
+  },
+  "Web/API/MediaRecorder/start_event": {
+    "modified": "2020-10-15T21:27:43.847Z",
+    "contributors": [
+      "sideshowbarker",
+      "lucian95",
+      "jpmedley",
+      "Sebastianz",
+      "chrisdavidmills",
+      "teoli",
       "kscarfone"
     ]
   },
@@ -58473,6 +58433,18 @@
       "kscarfone"
     ]
   },
+  "Web/API/MediaRecorder/stop_event": {
+    "modified": "2020-10-15T21:27:43.725Z",
+    "contributors": [
+      "sideshowbarker",
+      "lucian95",
+      "jpmedley",
+      "Sebastianz",
+      "chrisdavidmills",
+      "teoli",
+      "kscarfone"
+    ]
+  },
   "Web/API/MediaRecorder/stream": {
     "modified": "2020-10-15T21:27:46.273Z",
     "contributors": [
@@ -58491,6 +58463,20 @@
       "fscholz",
       "david_ross",
       "jpmedley"
+    ]
+  },
+  "Web/API/MediaRecorder/warning_event": {
+    "modified": "2020-10-15T21:27:43.833Z",
+    "contributors": [
+      "Sheppy",
+      "sideshowbarker",
+      "lucian95",
+      "miguelao",
+      "jpmedley",
+      "Sebastianz",
+      "chrisdavidmills",
+      "teoli",
+      "kscarfone"
     ]
   },
   "Web/API/MediaRecorderErrorEvent": {
