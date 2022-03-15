@@ -68921,24 +68921,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/RTCIceTransport/ongatheringstatechange": {
-    "modified": "2020-10-15T22:06:43.241Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/RTCIceTransport/onselectedcandidatepairchange": {
-    "modified": "2020-10-15T22:06:41.348Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/RTCIceTransport/onstatechange": {
-    "modified": "2020-10-15T22:06:43.474Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/RTCIceTransport/role": {
     "modified": "2020-10-15T22:06:39.222Z",
     "contributors": [
