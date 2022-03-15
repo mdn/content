@@ -153,31 +153,30 @@ The first block of code in our app's JavaScript file — `app.js` — is as foll
 
 ```js
 const registerServiceWorker = async () => {
-  const registration = await navigator.serviceWorker.register(
-    "/sw-test/sw.js",
-    {
-      scope: "/sw-test/",
+  if ('serviceWorker' in navigator) {
+    try {
+      const registration = await navigator.serviceWorker.register(
+        '/sw-test/sw.js',
+        {
+          scope: '/sw-test/',
+        }
+      );
+      if (registration.installing) {
+        console.log('Service worker installing');
+      } else if (registration.waiting) {
+        console.log('Service worker installed');
+      } else if (registration.active) {
+        console.log('Service worker active');
+      }
+    } catch (error) {
+      console.error(`Registration failed with ${error}`);
     }
-  );
-  if (registration.installing) {
-    console.log("Service worker installing");
-  } else if (registration.waiting) {
-    console.log("Service worker installed");
-  } else if (registration.active) {
-    console.log("Service worker active");
   }
 };
 
-window.onload = async () => {
-  if ("serviceWorker" in navigator) {
-    try {
-      await registerServiceWorker();
-    } catch (error) {
-      console.log("Registration failed with " + error);
-      return;
-    }
-  }
-};
+// ...
+
+registerServiceWorker();
 ```
 
 1. The if-block performs a feature detection test to make sure service workers are supported before trying to register one.
@@ -215,7 +214,7 @@ After your service worker is registered, the browser will attempt to install the
 
 The install event is fired when an install is successfully completed. The install event is generally used to populate your browser's offline caching capabilities with the assets you need to run your app offline. To do this, we use Service Worker's storage API — {{domxref("cache")}} — a global object on the service worker that allows us to store assets delivered by responses, and keyed by their requests. This API works in a similar way to the browser's standard cache, but it is specific to your domain. It persists until you tell it not to — again, you have full control.
 
-Let's start this section by looking at a code sample — this is the first one of two important [parts you'll find in our service worker](https://github.com/mdn/sw-test/blob/gh-pages/sw.js#L1-L18):
+Let's start this section by looking at a code sample — this is the first one of two important [parts you'll find in our service worker](https://github.com/mdn/sw-test/blob/gh-pages/sw.js#L1-54):
 
 ```js
 const addResourcesToCache = async (resources) => {
@@ -375,32 +374,34 @@ const putInCache = async (request, response) => {
   await cache.put(request, response);
 };
 
-const cacheFirst = async ({ request, fallbackUrl }) => {
+const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
+  // First try to get the resource from the cache
   const responseFromCache = await caches.match(request);
   if (responseFromCache) {
     return responseFromCache;
   }
-  let responseFromNetwork;
+
+  // Next try to get the resource from the network
   try {
-    responseFromNetwork = await fetch(request);
+    const responseFromNetwork = await fetch(request);
+    // response may be used only once
+    // we need to save clone to put one copy in cache
+    // and serve second one
+    putInCache(request, responseFromNetwork.clone());
+    return responseFromNetwork;
   } catch (error) {
     const fallbackResponse = await caches.match(fallbackUrl);
     if (fallbackResponse) {
       return fallbackResponse;
     }
-    // when the even fallback response is not available,
+    // when even the fallback response is not available,
     // there is nothing we can do, but we must always
     // return a Response object
-    return new Response("Network error happened", {
+    return new Response('Network error happened', {
       status: 408,
-      headers: { "Content-Type": "text/plain" },
+      headers: { 'Content-Type': 'text/plain' },
     });
   }
-  // response may be used only once
-  // we need to save clone to put one copy in cache
-  // and serve second one
-  putInCache(request, responseFromNetwork.clone());
-  return responseFromNetwork;
 };
 
 self.addEventListener("fetch", (event) => {
@@ -414,6 +415,118 @@ self.addEventListener("fetch", (event) => {
 ```
 
 We have opted for this fallback image because the only updates that are likely to fail are new images, as everything else is depended on for installation in the `install` event listener we saw earlier.
+
+## Service Worker Navigation Preload
+
+If enabled, this feature starts downloading resources as soon as the fetch request is made, and in parallel with service worker bootup. This ensures that download starts immediately, rather than having to wait until the service worker has booted. That delay happens relatively rarely, but is unavoidable when it does happen, and significant.
+
+First the feature needs be enabled with `registration.navigationPreload.enable()`:
+
+```js
+const enableNavigationPreload = async () => {
+  if (self.registration.navigationPreload) {
+    // Enable navigation preloads!
+    await self.registration.navigationPreload.enable();
+  }
+};
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(enableNavigationPreload());
+});
+```
+
+Then we need to make use of `event.preloadResponse`, which is passed as `preloadResponsePromise` to the `cacheFirst` function. Instead of first doing a cache check and then fetching from the network if that doesn't succeed, there is a middle step. So the new process is:
+
+1. Check cache
+2. Wait on `preloadResponsePromise`
+3. If neither of these are defined then we go to the network.
+
+```js
+const addResourcesToCache = async (resources) => {
+  const cache = await caches.open('v1');
+  await cache.addAll(resources);
+};
+
+const putInCache = async (request, response) => {
+  const cache = await caches.open('v1');
+  await cache.put(request, response);
+};
+
+const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
+  // First try to get the resource from the cache
+  const responseFromCache = await caches.match(request);
+  if (responseFromCache) {
+    return responseFromCache;
+  }
+
+  // Next try to use the preloaded response, if it's there
+  const preloadResponse = await preloadResponsePromise;
+  if (preloadResponse) {
+    console.info('using preload response', preloadResponse);
+    putInCache(request, preloadResponse.clone());
+    return preloadResponse;
+  }
+
+  // Next try to get the resource from the network
+  try {
+    const responseFromNetwork = await fetch(request);
+    // response may be used only once
+    // we need to save clone to put one copy in cache
+    // and serve second one
+    putInCache(request, responseFromNetwork.clone());
+    return responseFromNetwork;
+  } catch (error) {
+    const fallbackResponse = await caches.match(fallbackUrl);
+    if (fallbackResponse) {
+      return fallbackResponse;
+    }
+    // when even the fallback response is not available,
+    // there is nothing we can do, but we must always
+    // return a Response object
+    return new Response('Network error happened', {
+      status: 408,
+      headers: { 'Content-Type': 'text/plain' },
+    });
+  }
+};
+
+const enableNavigationPreload = async () => {
+  if (self.registration.navigationPreload) {
+    // Enable navigation preloads!
+    await self.registration.navigationPreload.enable();
+  }
+};
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(enableNavigationPreload());
+});
+
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    addResourcesToCache([
+      '/sw-test/',
+      '/sw-test/index.html',
+      '/sw-test/style.css',
+      '/sw-test/app.js',
+      '/sw-test/image-list.js',
+      '/sw-test/star-wars-logo.jpg',
+      '/sw-test/gallery/bountyHunters.jpg',
+      '/sw-test/gallery/myLittleVader.jpg',
+      '/sw-test/gallery/snowTroopers.jpg',
+    ])
+  );
+});
+
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    cacheFirst({
+      request: event.request,
+      preloadResponsePromise: event.preloadResponse,
+      fallbackUrl: '/sw-test/gallery/myLittleVader.jpg',
+    })
+  );
+});
+```
 
 ## Updating your service worker
 
