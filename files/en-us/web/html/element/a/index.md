@@ -47,7 +47,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     > - If the `Content-Disposition` header has different information from the `download` attribute, resulting behavior may differ:
     >
     >   - If the header specifies a `filename`, it takes priority over a filename specified in the `download` attribute.
-    >   - If the header specifies a disposition of `inline`, Chrome, and Firefox prioritize the attribute and treat it as a download. Old Firefox versions (before 82) prioritize the header and will display the content inline.
+    >   - If the header specifies a disposition of `inline`, Chrome and Firefox prioritize the attribute and treat it as a download. Old Firefox versions (before 82) prioritize the header and will display the content inline.
 
 - {{HTMLAttrDef("href")}}
 
