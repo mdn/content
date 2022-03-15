@@ -14,7 +14,7 @@ browser-compat: api.Notification.click_event
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The **`click`** event of the {{domxref("Notification")}}
-interface fires when the user clicks on a displayed {{domxref("Notification")}}.
+interface fires when the user clicks on displayed {{domxref("Notification")}}.
 
 The default behavior is to move the focus to the viewport of the notification's related
 [browsing
