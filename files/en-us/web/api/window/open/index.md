@@ -660,14 +660,6 @@ ways to open links and more power to the tool they are using (a browser).
 - Unrequested popup windows
   - : Script-initiated windows opening automatically without the user's consent.
 
-## Specifications
-
-{{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
-
 ## Notes
 
 ### Popup condition
@@ -734,6 +726,14 @@ releases.**
 [MSIE 6 SP2
 has a similar error correction mechanism](https://msdn2.microsoft.com/en-us/library/ms997645.aspx#xpsp_topic5) but it is not activated by default in all
 security levels: a security setting can disable such error correction mechanism.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## Tutorials
 
