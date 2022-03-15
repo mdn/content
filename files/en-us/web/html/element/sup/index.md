@@ -92,19 +92,19 @@ Appropriate use cases for `<sup>` include (but aren't necessarily limited to):
 
   <sup>3</sup>
 
-  ." It may be worth considering the use of [MathML](/en-US/docs/Web/MathML) for these, especially in more complex cases. See {{anch("Exponents")}} under {{anch("Examples")}} below.
+  ." It may be worth considering the use of [MathML](/en-US/docs/Web/MathML) for these, especially in more complex cases. See [Exponents](#exponents) under [Examples](#examples) below.
 
 - Displaying {{interwiki("wikipedia", "superior letter", "superior lettering")}}, which is used in some languages when rendering certain abbreviations. For example, in French, the word "mademoiselle" can be abbreviated "M
 
   <sup>lle</sup>
 
-  "); this is an acceptable use case. See {{anch("Superior lettering")}} for examples.
+  "); this is an acceptable use case. See [Superior lettering](#superior_lettering) for examples.
 
 - Representing ordinal numbers, such as "4
 
   <sup>th</sup>
 
-  " instead of "fourth." See {{anch("Ordinal numbers")}} for examples.
+  " instead of "fourth." See [Ordinal numbers](#ordinal_numbers) for examples.
 
 ## Examples
 
@@ -123,7 +123,7 @@ The resulting output looks like this:
 
 ### Superior lettering
 
-Superior lettering is not technically the same thing as superscript. However, it is common to use `<sup>` to present superior lettering in HTML. Among the most common uses of superior lettering is the presentation of certain abbreviations in French:
+Superior lettering is not technically the same thing as superscript. However, it is common to use `<sup>` to present superior lettering in HTML. Among the most common uses of superior lettering is the presentation of certain abbreviations in French:
 
 ```html
 <p>Robert a présenté son rapport à M<sup>lle</sup> Bernard.</p>

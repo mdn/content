@@ -3,7 +3,6 @@ title: Selection.focusOffset
 slug: Web/API/Selection/focusOffset
 tags:
   - API
-  - Experimental
   - HTML Editing
   - Property
   - Read-only
@@ -11,7 +10,7 @@ tags:
   - Selection
 browser-compat: api.Selection.focusOffset
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ ApiRef("DOM") }}
 
 The **`Selection.focusOffset`** read-only property returns the
 number of characters that the selection's focus is offset within the

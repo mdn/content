@@ -21,12 +21,12 @@ browser-compat: api.RTCRtpCapabilities
 
 The **`RTCRtpCapabilities`** dictionary is a data type used to describe the capabilities of an {{domxref("RTCRtpSender")}} or {{domxref("RTCRtpReceiver")}} in response to a call to the {{domxref("RTCRtpSender.getCapabilities()")}} or {{domxref("RTCRtpReceiver.getCapabilities()")}} static functions, both of which return an array of `RTCRtpCapabilities` objects.
 
-An `RTCRtpCapabilities` object contains an array of objects conforming to {{domxref("RTCRtpCodecCapability")}} (each describing the capabilities of one codec) and an array of the supported {{Glossary("RTP")}} [header extensions](https://datatracker.ietf.org/doc/html/rfc3550#section-5.3.1) for that codec.
+An `RTCRtpCapabilities` object contains an array of objects conforming to {{domxref("RTCRtpCodecCapability")}} (each describing the capabilities of one codec) and an array of the supported {{Glossary("RTP")}} [header extensions](https://datatracker.ietf.org/doc/html/rfc3550#section-5.3.1) for that codec.
 
 ## Properties
 
 - `codecs`
-  - : An array of {{domxref("RTCRtpCodecCapability")}} objects, each describing one of the codecs supported by the {{domxref("RTCRtpSender")}} or {{domxref("RTCRtpReceiver")}}. There are some special entries in this array, described below in the section {{anch("The codecs array")}}.
+  - : An array of {{domxref("RTCRtpCodecCapability")}} objects, each describing one of the codecs supported by the {{domxref("RTCRtpSender")}} or {{domxref("RTCRtpReceiver")}}. There are some special entries in this array, described below in the section [The codecs array](#the_codecs_array).
 - `headerExtensions`
   - : An array of objects conforming to the {{domxref("RTCRtpHeaderExtensionCapability")}} dictionary. Each object contains a single {{domxref("DOMString")}}, `uri`, specifying the URI of the header extension, as described in {{RFC(5285)}}.
 

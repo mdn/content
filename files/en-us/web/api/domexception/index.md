@@ -36,7 +36,7 @@ Each exception has a **name**, which is a short "PascalCase"-style string identi
 
 Common error names are listed here. Some APIs define their own sets of names, so this is not necessarily a complete list.
 
-Note that the following deprecated historical errors don’t have an error name but instead have only a legacy constant code value and a legacy constant name:
+Note that the following deprecated historical errors don't have an error name but instead have only a legacy constant code value and a legacy constant name:
 
 - Legacy code value: `2`, legacy constant name: `DOMSTRING_SIZE_ERR`
 - Legacy code value: `6`, legacy constant name: `NO_DATA_ALLOWED_ERR`

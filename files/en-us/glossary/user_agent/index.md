@@ -20,7 +20,7 @@ Spam bots, download managers, and some browsers often send a fake UA string to a
 
 The user agent string can be accessed with {{Glossary("JavaScript")}} on the client side using the {{domxref("Navigator/userAgent", "NavigatorID.userAgent")}} property.
 
-A typical user agent string looks like this: `"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"`.
+A typical user agent string looks like this: `"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"`.
 
 ## See also
 

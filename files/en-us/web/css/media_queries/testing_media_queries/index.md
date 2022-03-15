@@ -15,7 +15,7 @@ tags:
 ---
 {{CSSRef}}
 
-The {{Glossary("DOM")}} provides features that can test the results of a [media query](/en-US/docs/Web/CSS/Media_Queries) programmatically, via the {{domxref("MediaQueryList")}} interface and its methods and properties. Once you've created a `MediaQueryList` object, you can check the result of the query or receive notifications when the result changes.
+The {{Glossary("DOM")}} provides features that can test the results of a [media query](/en-US/docs/Web/CSS/Media_Queries) programmatically, via the {{domxref("MediaQueryList")}} interface and its methods and properties. Once you've created a `MediaQueryList` object, you can check the result of the query or receive notifications when the result changes.
 
 ## Creating a media query list
 
@@ -79,10 +79,10 @@ This event object also includes the {{domxref("MediaQueryListEvent.media","media
 
 ## Ending query notifications
 
-To stop receiving notifications about changes to the value of your media query, call `removeEventListener()` on the `MediaQueryList`, passing it the name of the previously-defined callback function:
+To stop receiving notifications about changes to the value of your media query, call {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} on the `MediaQueryList`, passing it the name of the previously-defined callback function:
 
 ```js
-mediaQueryList.removeEventListener(handleOrientationChange);
+mediaQueryList.removeEventListener('change', handleOrientationChange);
 ```
 
 ## Browser compatibility

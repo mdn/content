@@ -16,7 +16,7 @@ browser-compat: api.IDBObjectStore.put
 
 The **`put()`** method of the {{domxref("IDBObjectStore")}} interface updates a given record in a database, or inserts a new record if the given item does not already exist.
 
-It returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [structured clone](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) of the value and stores the cloned value in the object store. This is for adding new records, or updating existing records in an object store when the transaction's mode is `readwrite`. If the record is successfully stored, then a success event is fired on the returned request object with the `result` set to the key for the stored record, and the `transaction` set to the transaction in which this object store is opened.
+It returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [structured clone](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) of the value and stores the cloned value in the object store. This is for adding new records, or updating existing records in an object store when the transaction's mode is `readwrite`. If the record is successfully stored, then a success event is fired on the returned request object with the `result` set to the key for the stored record, and the `transaction` set to the transaction in which this object store is opened.
 
 The put method is an _update or insert_ method.
 See the {{domxref("IDBObjectStore.add")}} method for an _insert only_ method.
@@ -38,7 +38,7 @@ let request = objectStore.put(item, key);
 ### Parameters
 
 - item
-  - : The item you wish to update (or insert).
+  - : The item you wish to update (or insert).
 - key {{optional_inline}}
   - : The primary key of the record you want to update (e.g. from
     {{domxref("IDBCursor.primaryKey")}}). This is only needed for object stores that have
@@ -48,7 +48,7 @@ let request = objectStore.put(item, key);
 
 ### Return value
 
-An {{domxref("IDBRequest")}} object on which subsequent events related to this
+An {{domxref("IDBRequest")}} object on which subsequent events related to this
 operation are fired.
 
 ### Exceptions
@@ -56,7 +56,7 @@ operation are fired.
 This method may raise a {{domxref("DOMException")}} of one of the following types:
 
 - `ReadOnlyError` {{domxref("DOMException")}}
-  - : Thrown if the transaction associated with this operation is in read-only <a href="/en-US/docs/Web/API/IDBTransaction#mode_constants">mode</a>.
+  - : Thrown if the transaction associated with this operation is in read-only <a href="/en-US/docs/Web/API/IDBTransaction#mode_constants">mode</a>.
 - `TransactionInactiveError` {{domxref("DOMException")}}
   - : Thrown if this {{domxref("IDBObjectStore")}}'s transaction is inactive.
 - `DataError` {{domxref("DOMException")}}
@@ -82,12 +82,12 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 ## Example
 
 The following example requests a given record title; when that request is successful
-the `onsuccess` function gets the associated record from the
+the `onsuccess` function gets the associated record from the
 {{domxref("IDBObjectStore")}} (made available
-as `objectStoreTitleRequest.result`), updates
+as `objectStoreTitleRequest.result`), updates
 one property of the record, and then puts the updated record back into the object
 store in another request with `put()`. For a full working example, see
-our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app
+our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app
 ([view example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js

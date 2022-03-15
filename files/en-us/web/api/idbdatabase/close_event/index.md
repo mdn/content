@@ -1,6 +1,9 @@
 ---
 title: 'IDBDatabase: close event'
 slug: Web/API/IDBDatabase/close_event
+tags:
+  - Event
+  - Reference
 browser-compat: api.IDBDatabase.close_event
 ---
 {{ APIRef("IndexedDB") }}
@@ -9,30 +12,18 @@ The `close` event is fired on `IDBDatabase` when the database connection is unex
 
 Note that it is not fired if the database connection is closed normally using [`IDBDatabase.close()`](/en-US/docs/Web/API/IDBDatabase/close).
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/IDBDatabase/onclose">onerror</a></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('close', event => { });
+onclose = event => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -42,7 +33,7 @@ This example opens a database and listens for the `close` event:
 // Open the database
 const dBOpenRequest = window.indexedDB.open('toDoList', 4);
 
-dBOpenRequest.onupgradeneeded = (event) => {
+dBOpenRequest.onupgradeneeded = event => {
   const db = event.target.result;
 
   // Create an objectStore for this database
@@ -56,7 +47,7 @@ dBOpenRequest.onupgradeneeded = (event) => {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-dBOpenRequest.onsuccess = (event) => {
+dBOpenRequest.onsuccess = event => {
 
   const db = dBOpenRequest.result;
   db.addEventListener('close', () => {
@@ -72,7 +63,7 @@ The same example, using the `onclose` property instead of `addEventListener()`:
 // Open the database
 const dBOpenRequest = window.indexedDB.open('toDoList', 4);
 
-dBOpenRequest.onupgradeneeded = (event) => {
+dBOpenRequest.onupgradeneeded = event => {
   const db = event.target.result;
 
   // Create an objectStore for this database
@@ -86,7 +77,7 @@ dBOpenRequest.onupgradeneeded = (event) => {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-dBOpenRequest.onsuccess = (event) => {
+dBOpenRequest.onsuccess = event => {
 
   const db = dBOpenRequest.result;
   db.onclose = () => {
@@ -103,4 +94,3 @@ dBOpenRequest.onsuccess = (event) => {
 ## See also
 
 - [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- [`onclose`](/en-US/docs/Web/API/IDBDatabase/onclose) event handler property

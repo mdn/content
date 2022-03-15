@@ -11,6 +11,7 @@ tags:
   - Style
   - Style sheet
   - Stylesheets
+spec-urls: https://drafts.csswg.org/css-cascade/
 ---
 {{CSSRef}}
 
@@ -26,7 +27,7 @@ Finally, note that {{cssxref("@import")}} and {{cssxref("@charset")}} obey speci
 
 ## Origin of CSS declarations
 
-The CSS cascade algorithm's job is to select CSS declarations in order to determine the correct values for CSS properties. CSS declarations originate from different origins: the **{{anch("User-agent stylesheets")}}**, the **{{anch("Author stylesheets")}}**, and the **{{anch("User stylesheets")}}**.
+The CSS cascade algorithm's job is to select CSS declarations in order to determine the correct values for CSS properties. CSS declarations originate from different origins: the **[User-agent stylesheets](#user-agent_stylesheets)**, the **[Author stylesheets](#author_stylesheets)**, and the **[User stylesheets](#user_stylesheets)**.
 
 Though style sheets come from these different origins, they overlap in scope; to make this work, the cascade algorithm defines how they interact.
 
@@ -145,12 +146,7 @@ Note that the declaration defined in the user CSS, though having a greater speci
 
 ## Specifications
 
-| Specification                                                            | Status                           | Comment                                                                                               |
-| ------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS4 Cascade")}}                                     | {{Spec2("CSS4 Cascade")}} | Added the {{CSSxRef("revert")}} keyword, which allows rolling a property back a cascade level. |
-| {{SpecName("CSS3 Cascade")}}                                     | {{Spec2("CSS3 Cascade")}} | Removed the override cascade origin, as it was never used in a W3C standard.                          |
-| {{SpecName("CSS2.1", "cascade.html", "the cascade")}} | {{Spec2("CSS2.1")}}         |                                                                                                       |
-| {{SpecName("CSS1", "#the-cascade", "the cascade")}}     | {{Spec2("CSS1")}}         | Initial definition.                                                                                   |
+{{Specifications}}
 
 ## See also
 

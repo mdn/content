@@ -10,7 +10,7 @@ browser-compat: api.PerformanceNavigationTiming.domInteractive
 ---
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
-The **`domInteractive`** read-only property returns a
+The **`domInteractive`** read-only property returns a
 {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the
 time immediately before the user agent sets the current document readiness of the
 current document to [interactive](https://html.spec.whatwg.org/multipage/syntax.html#the-end).
@@ -23,7 +23,7 @@ perfEntry.domInteractive;
 
 ### Return Value
 
-A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to
+A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to
 the time immediately before the user agent sets the current document readiness of the
 current document to [interactive](https://html.spec.whatwg.org/multipage/syntax.html#the-end).
 

@@ -11,9 +11,9 @@ tags:
   - web animations api
 browser-compat: api.Animation.currentTime
 ---
-{{APIRef("Web Animations")}}{{SeeCompatTable}}
+{{APIRef("Web Animations")}}
 
-The **`Animation.currentTime`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns and sets the current time value of the animation in milliseconds, whether running or paused.
+The **`Animation.currentTime`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns and sets the current time value of the animation in milliseconds, whether running or paused.
 
 If the animation lacks a {{domxref("AnimationTimeline", "timeline")}}, is inactive, or hasn't been played yet, `currentTime`'s return value is `null`.
 
@@ -30,7 +30,7 @@ A number representing the current time in milliseconds, or `null` to deactivate 
 
 ## Examples
 
-In the [Drink Me/Eat Me game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010), Alice's height is animated so it can go from small to large or large to small. At the start of the game, her height is set between the two extremes by setting her animation's `currentTime` to half her `KeyframeEffect`'s duration:
+In the [Drink Me/Eat Me game](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010), Alice's height is animated so it can go from small to large or large to small. At the start of the game, her height is set between the two extremes by setting her animation's `currentTime` to half her `KeyframeEffect`'s duration:
 
 ```js
 aliceChange.currentTime = aliceChange.effect.timing.duration / 2;
@@ -47,7 +47,7 @@ animation.currentTime =
 ## Reduced time precision
 
 To offer protection against timing attacks and fingerprinting, the precision of `animation.currentTime` might get rounded depending on browser settings.
-In Firefox, the `privacy.reduceTimerPrecision`  preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
+In Firefox, the `privacy.reduceTimerPrecision`  preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
 
 ```js
 // reduced time precision (2ms) in Firefox 60

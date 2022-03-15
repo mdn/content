@@ -23,8 +23,8 @@ The `DeviceMotionEvent` provides web developers with information about the speed
 
 ## Constructor
 
-- {{DOMxRef("DeviceMotionEvent.DeviceMotionEvent()")}} {{Non-standard_Inline}}
-  - : Creates a new `DeviceMotionEvent`.
+- {{DOMxRef("DeviceMotionEvent.DeviceMotionEvent()")}} {{Non-standard_Inline}}
+  - : Creates a new `DeviceMotionEvent`.
 
 ## Properties
 
@@ -41,7 +41,7 @@ The `DeviceMotionEvent` provides web developers with information about the speed
 
 ```js
 window.addEventListener('devicemotion', function(event) {
-  console.log(event.acceleration.x + ' m/s2');
+  console.log(event.acceleration.x + ' m/s2');
 });
 ```
 

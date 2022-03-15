@@ -26,7 +26,7 @@ Broadly, one window may obtain a reference to another (_e.g.,_ via
 `targetWindow = window.opener`), and then dispatch a
 {{domxref("MessageEvent")}} on it with `targetWindow.postMessage()`. The
 receiving window is then free to [handle this event](/en-US/docs/Web/Events/Event_handlers) as needed. The arguments passed to `window.postMessage()`
-(_i.e.,_ the “message”) are [exposed to the receiving window through the event object](#the_dispatched_event).
+(_i.e.,_ the "message") are [exposed to the receiving window through the event object](#the_dispatched_event).
 
 ## Syntax
 

@@ -36,7 +36,7 @@ someNodeList.forEach(callback[, thisArg]);
       - : The index of the `currentValue` being processed in
         `someNodeList`.
     - `listObj` {{Optional_inline}}
-      - : The `someNodeList` that `forEach()` is being
+      - : The `someNodeList` that `forEach()` is being
         applied to.
 
 - `thisArg` {{Optional_inline}}

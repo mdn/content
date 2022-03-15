@@ -48,8 +48,8 @@ You can use the `vrdisplayactivate` event in an [`addEventListener`](/en-US/docs
 
 ```js
 window.addEventListener('vrdisplayactivate', function() {
-  info.textContent = 'Display activated.';
-  reportDisplays();
+  info.textContent = 'Display activated.';
+  reportDisplays();
 });
 ```
 

@@ -12,8 +12,8 @@ The **`spreadMethod`** attribute determines how a shape is filled beyond the def
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement("linearGradient")}}
-* {{SVGElement("radialGradient")}}
+- {{SVGElement("linearGradient")}}
+- {{SVGElement("radialGradient")}}
 
 ## Context notes
 
@@ -34,12 +34,12 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-* `pad`
-    * : This value indicates that the final color of the gradient fills the shape beyond the gradient's edges.
-* `reflect`
-    * : This value indicates that the gradient repeats in reverse beyond its edges.
-* `repeat`
-    * : This value specifies that the gradient repeats in the original order beyond its edges.
+- `pad`
+  - : This value indicates that the final color of the gradient fills the shape beyond the gradient's edges.
+- `reflect`
+  - : This value indicates that the gradient repeats in reverse beyond its edges.
+- `repeat`
+  - : This value specifies that the gradient repeats in the original order beyond its edges.
 
 ### Defining a gradient's edges
 

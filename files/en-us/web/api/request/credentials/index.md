@@ -31,7 +31,7 @@ A `RequestCredentials` dictionary value indicating whether the user agent should
 - `same-origin`: Send user credentials (cookies, basic http auth, etc..) if the URL is on the same origin as the calling script. **This is the default value.**
 - `include`: Always send user credentials (cookies, basic http auth, etc..), even for cross-origin calls.
 
-This is similar to XHR’s [`withCredentials`](/en-US/docs/Web/API/XMLHttpRequest/withCredentials) flag, but with three available values instead of two.
+This is similar to XHR's [`withCredentials`](/en-US/docs/Web/API/XMLHttpRequest/withCredentials) flag, but with three available values instead of two.
 
 ## Example
 

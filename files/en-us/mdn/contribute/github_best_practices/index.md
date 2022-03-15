@@ -24,7 +24,7 @@ This page contains best practices for working with GitHub to contribute to MDN, 
 
       2. If it was less than one week ago, then have some patience, and give them a chance to work on it.
 
-2. If the issue has been marked as complete but needing a review, and you want to review it, @mention them in the comments and say you’ll review it.
+2. If the issue has been marked as complete but needing a review, and you want to review it, @mention them in the comments and say you'll review it.
 
 ## When you've been assigned to an issue
 
@@ -34,6 +34,6 @@ This page contains best practices for working with GitHub to contribute to MDN, 
     - If the issue is not well-described, and/or you are not sure what is needed, feel free to @mention the poster and ask for more information.
     - If you are not still sure who to ask, ask for help in the [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix).
 
-2. Once you think you’ve fixed an issue, ask for a review in the comments.
+2. Once you think you've fixed an issue, ask for a review in the comments.
 3. Once an issue has been successfully reviewed and comments answered, you can mark it as closed.
 4. If you no longer have time to work on an issue, let us know in a comment so we can assign it someone else.

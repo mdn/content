@@ -11,7 +11,7 @@ tags:
 ---
 {{APIRef}}
 
-The **`Window.console`** property returns a reference to the {{domxref("console")}} object, which provides methods for logging information to the browser's console. These methods are intended for debugging purposes only and should not be relied on for presenting information to end users.
+The **`Window.console`** property returns a reference to the {{domxref("console")}} object, which provides methods for logging information to the browser's console. These methods are intended for debugging purposes only and should not be relied on for presenting information to end users.
 
 ## Examples
 

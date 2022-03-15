@@ -39,10 +39,10 @@ See also the [extensions to the Gamepad interface](/en-US/docs/Web/API/Gamepad#e
 
 #### Window events
 
-- {{domxref("Window.ongamepadconnected")}}
-  - : Represents an event handler that will run when a gamepad is connected (when the {{event('gamepadconnected')}} event fires).
-- {{domxref("Window.ongamepaddisconnected")}}
-  - : Represents an event handler that will run when a gamepad is disconnected (when the {{event('gamepaddisconnected')}} event fires).
+- {{domxref("Window.gamepadconnected_event", "gamepadconnected")}}
+  - : An event that will fire when a gamepad is connected.
+- {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}}
+  - : An event that will fire when a gamepad is disconnected.
 
 ## Tutorials and guides
 
@@ -62,7 +62,7 @@ See also the [extensions to the Gamepad interface](/en-US/docs/Web/API/Gamepad#e
       <td>{{SpecName("GamepadExtensions")}}</td>
       <td>{{Spec2("GamepadExtensions")}}</td>
       <td>
-        Defines the {{anch("Experimental Gamepad extensions")}}.
+        Defines the <a href="#experimental_gamepad_extensions">Experimental Gamepad extensions</a>.
       </td>
     </tr>
     <tr>

@@ -18,7 +18,7 @@ Gaming is one of the most popular computer activities. New technologies are cons
 
 ## Develop web games
 
-Welcome to the MDN game development center! In this area of the site, we provide resources for web developers wanting to develop games. You will find many useful tutorials and technique articles in the main menu on the left, so feel free to explore.
+Welcome to the MDN game development center! In this area of the site, we provide resources for web developers wanting to develop games. You will find many useful tutorials and technique articles in the main menu on the left, so feel free to explore.
 
 We've also included a reference section so you can easily find information about all the most common APIs used in game development.
 
@@ -41,15 +41,15 @@ For a list of web game examples, see our [examples page](/en-US/docs/Games/Examp
 ## See also
 
 - [Build New Games](http://buildnewgames.com/)
-  - : A collaborative site featuring a large number of open web game development tutorials. Has not been very active recently, but still holds some nice resources.
+  - : A collaborative site featuring a large number of open web game development tutorials. Has not been very active recently, but still holds some nice resources.
 - [Creative JS](http://creativejs.com/)
-  - : A collection of impressive JavaScript techniques and experiments, not specific to games, but helpful nonetheless. Has not been very active recently, but still holds some nice resources.
+  - : A collection of impressive JavaScript techniques and experiments, not specific to games, but helpful nonetheless. Has not been very active recently, but still holds some nice resources.
 - [Game Programming Patterns](https://gameprogrammingpatterns.com/)
   - : An online book, written by Bob Nystrom, which discusses programming patterns in the context of game development with the aim of helping game developers produce more effective and efficient code.
 - [Gamedev.js Weekly](https://gamedevjsweekly.com/)
   - : Weekly newsletter about HTML5 game development, sent every Friday. Contains the latest articles, tutorials, tools, and resources.
 - [HTML5 Game Devs Forum](https://www.html5gamedevs.com/)
-  - : Forums for developers, framework creators, and publishers. Ask questions, get feedback and help others.
+  - : Forums for developers, framework creators, and publishers. Ask questions, get feedback and help others.
 
 <!---->
 

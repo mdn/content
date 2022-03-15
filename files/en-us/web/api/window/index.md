@@ -65,20 +65,6 @@ Note that properties which are objects (e.g.,. for overriding the prototype of b
   - : Returns the ratio between physical pixels and device independent pixels in the current display.
 - {{domxref("Window.document")}} {{ReadOnlyInline}}
   - : Returns a reference to the document that the window contains.
-- {{domxref("Window.DOMMatrix")}} {{readOnlyInline}} {{experimental_inline}}
-  - : Returns a reference to a {{domxref("DOMMatrix")}} object, which represents 4x4 matrices, suitable for 2D and 3D operations.
-- {{domxref("Window.DOMMatrixReadOnly")}} {{readOnlyInline}} {{experimental_inline}}
-  - : Returns a reference to a {{domxref("DOMMatrixReadOnly")}} object, which represents 4x4 matrices, suitable for 2D and 3D operations.
-- {{domxref("Window.DOMPoint")}} {{readOnlyInline}} {{experimental_inline}}
-  - : Returns a reference to a {{domxref("DOMPoint")}} object, which represents a 2D or 3D point in a coordinate system.
-- {{domxref("Window.DOMPointReadOnly")}} {{readOnlyInline}} {{experimental_inline}}
-  - : Returns a reference to a {{domxref("DOMPointReadOnly")}} object, which represents a 2D or 3D point in a coordinate system.
-- {{domxref("Window.DOMQuad")}} {{readOnlyInline}} {{experimental_inline}}
-  - : Returns a reference to a {{domxref("DOMQuad")}} object, which provides represents a quadrilateral object, that is one having four corners and four sides.
-- {{domxref("Window.DOMRect")}} {{readOnlyInline}} {{experimental_inline}}
-  - : Returns a reference to a {{domxref("DOMRect")}} object, which represents a rectangle.
-- {{domxref("Window.DOMRectReadOnly")}} {{readOnlyInline}} {{experimental_inline}}
-  - : Returns a reference to a {{domxref("DOMRectReadOnly")}} object, which represents a rectangle.
 - {{domxref("Window.event")}} {{deprecated_inline}} {{readOnlyInline}}
   - : Returns the **current event**, which is the event currently being handled by the JavaScript code's context, or `undefined` if no event is currently being handled. The {{domxref("Event")}} object passed directly to event handlers should be used instead whenever possible.
 - {{domxref("Window.frameElement")}} {{readOnlyInline}}
@@ -94,7 +80,7 @@ Note that properties which are objects (e.g.,. for overriding the prototype of b
 - {{domxref("Window.innerWidth")}} {{readOnlyInline}}
   - : Gets the width of the content area of the browser window including, if rendered, the vertical scrollbar.
 - {{domxref("isSecureContext")}} {{experimental_inline}} {{readOnlyInline}}
-  - : Indicates whether a context is capable of using features that require secure contexts.
+  - : Returns a boolean indicating whether the current context is secure (`true`) or not (`false`).
 - {{domxref("Window.length")}} {{readOnlyInline}}
   - : Returns the number of frames in the window. See also {{domxref("window.frames")}}.
 - {{domxref("Window.location")}}
@@ -176,8 +162,6 @@ Note that properties which are objects (e.g.,. for overriding the prototype of b
   - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
 - {{domxref("indexedDB")}} {{readonlyInline}}
   - : Provides a mechanism for applications to asynchronously access capabilities of indexed databases; returns an {{domxref("IDBFactory")}} object.
-- {{domxref("isSecureContext")}} {{readOnlyinline}}
-  - : Returns a boolean indicating whether the current context is secure (`true`) or not (`false`).
 - {{domxref("origin")}} {{readOnlyinline}}
   - : Returns the global object's origin, serialized as a string. (This does not yet appear to be implemented in any browser.)
 
@@ -208,7 +192,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestAnimationFrame")}}.
 - {{domxref("Window.cancelIdleCallback()")}} {{experimental_inline}}
   - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestIdleCallback")}}.
-- {{domxref("Window.clearImmediate()")}}
+- {{domxref("Window.clearImmediate()")}} {{Non-standard_inline}}
   - : Cancels the repeated execution set using `setImmediate`.
 - {{domxref("Window.close()")}}
   - : Closes the current window.
@@ -216,7 +200,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Displays a dialog with a message that the user needs to respond to.
 - {{domxref("Window.dump()")}} {{Non-standard_inline}}
   - : Writes a message to the console.
-- {{domxref("Window.find()")}}
+- {{domxref("Window.find()")}} {{experimental_inline}} {{Non-standard_inline}}
   - : Searches for a given string in a window.
 - {{domxref("Window.focus()")}}
   - : Sets focus on the current window.
@@ -258,7 +242,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Scrolls the current document by the specified number of pages.
 - {{domxref("Window.scrollTo()")}}
   - : Scrolls to a particular set of coordinates in the document.
-- {{domxref("Window.setImmediate()")}}
+- {{domxref("Window.setImmediate()")}} {{Non-standard_inline}}
   - : Executes a function after the browser has finished other heavy tasks
 - {{domxref("Window.setResizable()")}} {{Non-standard_inline}}
   - : Toggles a user's ability to resize a window.
@@ -293,7 +277,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Accepts a variety of different image sources, and returns a {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at _(sx, sy)_ with width sw, and height sh.
 - {{domxref("fetch()")}}
   - : Starts the process of fetching a resource from the network.
-- {{domxref("EventTarget.removeEventListener")}}
+- {{domxref("EventTarget.removeEventListener()")}}
   - : Removes an event listener from the window.
 - {{domxref("setInterval()")}}
   - : Schedules a function to execute every time a given number of milliseconds elapses.
@@ -325,10 +309,6 @@ These are properties of the window object that can be set to establish event han
 
 _This interface inherits event handlers from the {{domxref("EventTarget")}} interface and implements event handlers from {{domxref("WindowEventHandlers")}}._
 
-- {{domxref("Window.onappinstalled")}}
-  - : Called when the page is installed as a webapp. See {{domxref("Window/appinstalled_event", "appinstalled")}} event.
-- {{domxref("Window.onbeforeinstallprompt")}} {{non-standard_inline}}
-  - : An event handler property dispatched before a user is prompted to save a web site to a home screen on mobile.
 - {{domxref("Window.ondevicemotion")}}
   - : Called if accelerometer detects a change (For mobile devices)
 - {{domxref("Window.ondeviceorientation")}}
@@ -337,10 +317,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : An event handler property for any device orientation changes.
 - {{domxref("Window.ondeviceproximity")}} {{deprecated_inline}}
   - : An event handler property for device proximity event (see {{domxref("DeviceProximityEvent")}})
-- {{domxref("Window.ongamepadconnected")}}
-  - : Represents an event handler that will run when a gamepad is connected (when the {{event('gamepadconnected')}} event fires).
-- {{domxref("Window.ongamepaddisconnected")}}
-  - : Represents an event handler that will run when a gamepad is disconnected (when the {{event('gamepaddisconnected')}} event fires).
 - {{domxref("WindowEventHandlers.onrejectionhandled")}}
   - : An event handler for handled {{jsxref("Promise")}} rejection events.
 - {{domxref("Window.onuserproximity")}} {{deprecated_inline}}
@@ -455,7 +431,6 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
     Also available via the {{domxref("WindowEventHandlers/onlanguagechange", "onlanguagechange")}} property.
 - {{domxref("Window/orientationchange_event", "orientationchange")}} {{deprecated_inline}}
   - : Fired when the orientation of the device has changed.
-    Also available via the {{domxref("Window/onorientationchange", "onorientationchange")}} property.
 - {{domxref("Window/devicemotion_event", "devicemotion")}}
   - : Fired at a regular interval, indicating the amount of physical force of acceleration the device is receiving and the rate of rotation, if available.
 - {{domxref("Window/deviceorientation_event", "deviceorientation")}}
@@ -516,10 +491,8 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - {{domxref("Window/gamepadconnected_event", "gamepadconnected")}}
   - : Fired when the browser detects that a gamepad has been connected or the first time a button/axis of the gamepad is used.
-    Also available via the {{domxref("Window/ongamepadconnected", "ongamepadconnected")}} property.
 - {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}}
   - : Fired when the browser detects that a gamepad has been disconnected.
-    Also available via the {{domxref("Window/ongamepaddisconnected", "ongamepaddisconnected")}} property
 
 ### History events
 
@@ -554,10 +527,8 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - {{domxref("Window/appinstalled_event", "appinstalled")}}
   - : Fired when the browser has successfully installed a page as an application.
-    Also available via the {{domxref("Window/onappinstalled", "onappinstalled")}} property.
 - {{domxref("Window/beforeinstallprompt_event", "beforeinstallprompt")}}
   - : Fired when a user is about to be prompted to install a web application.
-    Also available via the {{domxref("Window/onbeforeinstallprompt", "onbeforeinstallprompt")}} property.
 
 ### Messaging events
 

@@ -13,7 +13,7 @@ Traditionally, a web page has to send a request to the server to receive new dat
 
 {{AvailableInWorkers}}
 
-> **Note:** Firefox does not currently support the use of server-sent events in service workers (it does support them in dedicated and shared workers). See {{bug(1681218)}}.
+> **Note:** Firefox does not currently support the use of server-sent events in service workers (it does support them in dedicated and shared workers). See {{bug(1681218)}}.
 
 ## Concepts and usage
 
@@ -40,9 +40,9 @@ To learn how to use server-sent events, see our article [Using server-sent event
 
 - [Mercure: a real-time communication protocol (publish-subscribe) built on top of SSE](https://mercure.rocks)
 - [EventSource polyfill for Node.js](https://github.com/EventSource/eventsource)
-- Remy Sharp’s [EventSource polyfill](https://github.com/remy/polyfills/blob/master/EventSource.js)
-- Yaffle’s [EventSource polyfill](https://github.com/Yaffle/EventSource)
-- Rick Waldron’s [jquery plugin](https://github.com/rwldrn/jquery.eventsource)
+- Remy Sharp's [EventSource polyfill](https://github.com/remy/polyfills/blob/master/EventSource.js)
+- Yaffle's [EventSource polyfill](https://github.com/Yaffle/EventSource)
+- Rick Waldron's [jquery plugin](https://github.com/rwldrn/jquery.eventsource)
 - intercooler.js [declarative SSE support](https://intercoolerjs.org/docs.html#sse)
 
 ### Related Topics

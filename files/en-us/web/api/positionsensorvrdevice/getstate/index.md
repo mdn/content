@@ -15,7 +15,7 @@ browser-compat: api.PositionSensorVRDevice.getState
 ---
 {{deprecated_header}}{{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-The **`getState()`** method of the {{domxref("PositionSensorVRDevice")}} interface returns the current state of the position sensor for the current frame (e.g. within the current {{domxref("window.requestAnimationFrame")}} callback) or for the previous frame, contained with a {{domxref("VRPose")}} object. This is the method you'd normally want to use, vs. {{domxref("PositionSensorVRDevice.getImmediateState")}}.
+The **`getState()`** method of the {{domxref("PositionSensorVRDevice")}} interface returns the current state of the position sensor for the current frame (e.g. within the current {{domxref("window.requestAnimationFrame")}} callback) or for the previous frame, contained with a {{domxref("VRPose")}} object. This is the method you'd normally want to use, vs. {{domxref("PositionSensorVRDevice.getImmediateState")}}.
 
 ## Syntax
 

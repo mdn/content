@@ -96,9 +96,18 @@ the {{domxref("SubtleCrypto.sign()", "sign()")}} and {{domxref("SubtleCrypto.ver
 ### ECDSA
 
 ECDSA (Elliptic Curve Digital Signature Algorithm) is a variant of the Digital
-Signature Algorithm, specified in [FIPS-186](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf), that
-uses Elliptic Curve Cryptography ([RFC
-6090](https://datatracker.ietf.org/doc/html/rfc6090)).
+Signature Algorithm, specified in [FIPS-186](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf),
+that uses Elliptic Curve Cryptography ([RFC 6090](https://datatracker.ietf.org/doc/html/rfc6090)).
+
+Signatures are encoded as the `s1` and `s2` values specified in RFC 6090 (known respectively as `r`
+and `s` in [RFC 4754](https://datatracker.ietf.org/doc/html/rfc4754#section-3)), each in big-endian
+byte arrays, with their length the bit size of the curve rounded up to a whole number of bytes.
+These values are concatenated together in this order.
+
+This encoding was also proposed by the [IEEE 1363-2000](https://standards.ieee.org/ieee/1363/2049/)
+standard, and is sometimes referred to as the IEEE P1363 format. It differs from the
+[X.509](https://www.itu.int/rec/T-REC-X.509) signature structure, which is the default format
+produced by some tools and libraries such as [OpenSSL](https://www.openssl.org).
 
 ### HMAC
 
@@ -108,7 +117,7 @@ according to the [FIPS
 
 The digest algorithm to use is specified in the
 [`HmacKeyGenParams`](/en-US/docs/Web/API/HmacKeyGenParams) object
-that you pass into  {{domxref("SubtleCrypto.generateKey()", "generateKey()")}}, or the
+that you pass into  {{domxref("SubtleCrypto.generateKey()", "generateKey()")}}, or the
 [`HmacImportParams`](/en-US/docs/Web/API/HmacImportParams) object
 that you pass into {{domxref("SubtleCrypto.importKey()", "importKey()")}}.
 
@@ -241,7 +250,7 @@ let signature = await window.crypto.subtle.sign(
 - [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) specifies
   RSASSA-PKCS1-v1_5.
 - [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) specifies RSA-PSS.
-- [FIPS-186](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf) specifies
+- [FIPS-186](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf) specifies
   ECDSA.
 - [FIPS
   198-1](https://csrc.nist.gov/csrc/media/publications/fips/198/1/final/documents/fips-198-1_final.pdf) specifies HMAC.

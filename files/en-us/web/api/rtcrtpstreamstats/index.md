@@ -21,9 +21,9 @@ The {{domxref("RTCRtpStreamStats")}} dictionary is returned by the {{domxref("RT
 
 While the dictionary has a base set of properties that are present in each of these cases, there are also additional properties added depending on which interface the method is called on.
 
-`RTCRtpStreamStats` is the base class for all RTP-related statistics reports. It's based on {{anch("RTCStats")}} and adds the following additional fields.
+`RTCRtpStreamStats` is the base class for all RTP-related statistics reports. It's based on [RTCStats](#rtcstats) and adds the following additional fields.
 
-> **Note:** This interface was called `RTCRTPStreamStats` until a specification update in the spring of 2017. Check the {{anch("Browser compatibility")}} table to know if and when the name change was implemented in specific browsers.
+> **Note:** This interface was called `RTCRTPStreamStats` until a specification update in the spring of 2017. Check the [Browser compatibility](#browser_compatibility) table to know if and when the name change was implemented in specific browsers.
 
 ## Properties
 

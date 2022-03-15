@@ -16,7 +16,7 @@ browser-compat: api.Lock.name
 
 The **`name`** read-only property of
 the {{domxref("Lock")}} interface returns the _name_ passed to
-{{domxref('LockManager.request')}} selected when the lock was requested.
+{{domxref('LockManager.request')}} selected when the lock was requested.
 
 The name of a lock is passed by script when the lock is requested. The name is selected
 by the developer to represent an abstract resource for which use is being coordinated
@@ -37,7 +37,7 @@ A {{domxref("DOMString")}}.
 ## Example
 
 The following examples show how the name property passed in the call
-to {{domxref('LockManager.request()')}}. `LockManager` is the object returned
+to {{domxref('LockManager.request()')}}. `LockManager` is the object returned
 by {{domxref('navigator.locks')}}.
 
 ```js

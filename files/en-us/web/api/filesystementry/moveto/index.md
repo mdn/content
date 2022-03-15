@@ -77,13 +77,13 @@ directory when it exceeds a megabyte in size.
 
 ```js
 workingDirectory.getFile("tmp/log.txt", {}, function(fileEntry) {
-  fileEntry.getMetadata(function(metadata) {
-    if (metadata.size > 1048576) {
-      workingDirectory.getDirectory("log", {}, function(dirEntry) {
-        fileEntry.moveTo(dirEntry);
-      }, handleError);
-    }
-  });
+  fileEntry.getMetadata(function(metadata) {
+    if (metadata.size > 1048576) {
+      workingDirectory.getDirectory("log", {}, function(dirEntry) {
+        fileEntry.moveTo(dirEntry);
+      }, handleError);
+    }
+  });
 }, handleError);
 ```
 

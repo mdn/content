@@ -29,9 +29,23 @@ This interface is accessible through the {{domxref("Gamepad.hapticActuators")}} 
 - {{domxref("GamepadHapticActuator.pulse()")}} {{readonlyInline}}
   - : Makes the hardware pulse at a certain intensity for a specified duration.
 
+- {{domxref("GamepadHapticActuator.playEffect()")}} {{readonlyInline}}
+  - : Makes the hardware play a specific vibration pattern.
+
 ## Examples
 
-TBD.
+```js
+const gamepad = navigator.getGamepads()[0];
+
+gamepad.hapticActuators[0].pulse(1.0, 200);
+
+gamepad.vibrationActuator.playEffect('dual-rumble', {
+  startDelay: 0,
+  duration: 200,
+  weakMagnitude: 1.0,
+  strongMagnitude: 1.0,
+});
+```
 
 ## Specifications
 

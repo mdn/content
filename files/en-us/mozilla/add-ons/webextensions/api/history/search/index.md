@@ -56,7 +56,7 @@ var searching = browser.history.search(
     - `startTime` {{optional_inline}}
       - : `number` or `string` or `object`. A value indicating a date and time. This can be represented as: a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, an [ISO 8601 date string](https://www.iso.org/iso/home/standards/iso8601.htm), or the number of milliseconds since the epoch. If it is supplied, this option excludes results whose `lastVisitTime` is earlier than this time. If it is omitted, the search is limited to the last 24 hours.
     - `endTime` {{optional_inline}}
-      - : `number` or `string` or `object`. A value indicating a date and time.  This can be represented as: a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, an [ISO 8601 date string](https://www.iso.org/iso/home/standards/iso8601.htm), or the number of milliseconds since the epoch. If it is supplied, this option limits results to those visited before this date. If it is omitted, then all entries are considered from the start time onwards.
+      - : `number` or `string` or `object`. A value indicating a date and time.  This can be represented as: a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, an [ISO 8601 date string](https://www.iso.org/iso/home/standards/iso8601.htm), or the number of milliseconds since the epoch. If it is supplied, this option limits results to those visited before this date. If it is omitted, then all entries are considered from the start time onwards.
     - `maxResults` {{optional_inline}}
       - : `number`. The maximum number of results to retrieve. Defaults to 100, with a minimum value of 1. The function will throw an error if you pass it a `maxResults` value less than 1.
 

@@ -13,7 +13,7 @@ browser-compat: api.Response.url
 {{APIRef("Fetch")}}
 
 The **`url`** read-only property of the {{domxref("Response")}} interface contains the URL of the response.
-The value of the `url` property will be the final URL obtained after any redirects.
+The value of the `url` property will be the final URL obtained after any redirects.
 
 ## Value
 

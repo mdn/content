@@ -64,32 +64,32 @@ console.log(str);        // 'foo  '
 //https://github.com/FabioVergani/js-Polyfill_String-trimStart
 
 (function(w){
-    var String=w.String, Proto=String.prototype;
+    var String=w.String, Proto=String.prototype;
 
-    (function(o,p){
-        if(p in o?o[p]?false:true:true){
-            var r=/^\s+/;
-            o[p]=o.trimLeft||function(){
-                return this.replace(r,'')
-            }
-        }
-    })(Proto,'trimStart');
+    (function(o,p){
+        if(p in o?o[p]?false:true:true){
+            var r=/^\s+/;
+            o[p]=o.trimLeft||function(){
+                return this.replace(r,'')
+            }
+        }
+    })(Proto,'trimStart');
 
 })(window);
 
 /*
 ES6:
 (w=>{
-    const String=w.String, Proto=String.prototype;
+    const String=w.String, Proto=String.prototype;
 
-    ((o,p)=>{
-        if(p in o?o[p]?false:true:true){
-            const r=/^\s+/;
-            o[p]=o.trimLeft||function(){
-                return this.replace(r,'')
-            }
-        }
-    })(Proto,'trimStart');
+    ((o,p)=>{
+        if(p in o?o[p]?false:true:true){
+            const r=/^\s+/;
+            o[p]=o.trimLeft||function(){
+                return this.replace(r,'')
+            }
+        }
+    })(Proto,'trimStart');
 
 })(window);
 */

@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Fragmentation
   - CSS Property
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.box-decoration-break

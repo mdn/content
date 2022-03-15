@@ -75,7 +75,7 @@ Servers proactively requests the client hint headers they are interested in from
 - {{HTTPHeader("Accept-CH")}} {{experimental_inline}}
   - : Servers can advertise support for Client Hints using the `Accept-CH` header field or an equivalent HTML `<meta>` element with [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#attr-http-equiv) attribute.
 - {{HTTPHeader("Accept-CH-Lifetime")}} {{experimental_inline}} {{deprecated_inline}}
-  - : Servers can ask the client to remember the set of Client Hints that the server supports for a specified period of time, to enable delivery of Client Hints on subsequent requests to the server’s origin.
+  - : Servers can ask the client to remember the set of Client Hints that the server supports for a specified period of time, to enable delivery of Client Hints on subsequent requests to the server's origin.
 
 The different categories of client hints are listed below.
 
@@ -209,7 +209,7 @@ _Learn more about CORS [here](CORS)._
 ## Downloads
 
 - {{HTTPHeader("Content-Disposition")}}
-  - : Indicates if the resource transmitted should be displayed inline (default behavior without the header), or if it should be handled like a download and the browser should present a “Save As” dialog.
+  - : Indicates if the resource transmitted should be displayed inline (default behavior without the header), or if it should be handled like a download and the browser should present a "Save As" dialog.
 
 ## Message body information
 
@@ -294,11 +294,11 @@ _Learn more about CORS [here](CORS)._
 - {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}})
   - : Force communication using HTTPS instead of HTTP.
 - {{HTTPHeader("Upgrade-Insecure-Requests")}}
-  - : Sends a signal to the server expressing the client’s preference for an encrypted and authenticated response, and that it can successfully handle the {{CSP("upgrade-insecure-requests")}} directive.
+  - : Sends a signal to the server expressing the client's preference for an encrypted and authenticated response, and that it can successfully handle the {{CSP("upgrade-insecure-requests")}} directive.
 - {{HTTPHeader("X-Content-Type-Options")}}
   - : Disables MIME sniffing and forces browser to use the type given in {{HTTPHeader("Content-Type")}}.
 - {{HTTPHeader("X-Download-Options")}}
-  - : The [`X-Download-Options`](<https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/jj542450(v=vs.85)?#the-noopen-directive>) HTTP header indicates that the browser (Internet Explorer) should not display the option to "Open" a file that has been downloaded from an application, to prevent phishing attacks as the file otherwise would gain access to execute in the context of the application. (Note: related [MS Edge bug](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/18488178/)).
+  - : The [`X-Download-Options`](<https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/compatibility/jj542450(v=vs.85)?#the-noopen-directive>) HTTP header indicates that the browser (Internet Explorer) should not display the option to "Open" a file that has been downloaded from an application, to prevent phishing attacks as the file otherwise would gain access to execute in the context of the application. (Note: related [MS Edge bug](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/18488178/)).
 - {{HTTPHeader("X-Frame-Options")}} (XFO)
   - : Indicates whether a browser should be allowed to render a page in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}}.
 - {{HTTPHeader("X-Permitted-Cross-Domain-Policies")}}

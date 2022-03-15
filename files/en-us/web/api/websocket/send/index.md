@@ -48,12 +48,10 @@ WebSocket.send("Hello server!");
         the buffer, increasing the value of `bufferedAmount` by the requisite
         number of bytes.
 
-### Exceptions thrown
+### Exceptions
 
-- `INVALID_STATE_ERR`
+- `InvalidStateError`
   - : Thrown if {{domxref("WebSocket/readyState", "WebSocket.readyState")}} is `CONNECTING`.
-- `SYNTAX_ERR`
-  - : The data is a string that has unpaired surrogates.
 
 ## Specifications
 

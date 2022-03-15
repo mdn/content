@@ -46,10 +46,10 @@ object, which updates automatically when the element's styles are changed.
 
     > **Note:** Valid pseudo-element selector refers to syntactic
     > validity, e.g. `::unsupported` is considered valid, even though the
-    > pseudo-element itself is not supported.  Additionally, the latest W3 standard [explicitly
+    > pseudo-element itself is not supported.  Additionally, the latest W3 standard [explicitly
     > supports](https://www.w3.org/TR/cssom-1/#dom-window-getcomputedstyle) only `::before` and `::after`, while the CSS
     > WG draft [does not
-    > restrict this value](https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle).  Browser compatibility may vary.
+    > restrict this value](https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle).  Browser compatibility may vary.
 
 ## Examples
 
@@ -154,7 +154,7 @@ Java.
   `getPropertyValue(propName)` API or by indexing directly into the object
   such as `obj['z-index']` or `obj.zIndex`.
 - The values returned by `getComputedStyle` are {{CSSxRef("resolved_value",
-    "resolved values", "", 1)}}. These are usually the same as CSS 2.1’s
+    "resolved values", "", 1)}}. These are usually the same as CSS 2.1's
   {{CSSxRef("computed_value","computed values", "", 1)}}, but for some older properties
   like `width`, `height`, or `padding`, they are
   instead the same as {{CSSxRef("used_value","used values", "", 1)}}. Originally, CSS
@@ -166,8 +166,8 @@ Java.
   values includes the resolution of percentages for `width` or
   `height`, as those will be replaced by their pixel equivalent only for
   _used values_.
-- Returned values are sometimes deliberately inaccurate. To avoid the “CSS History
-  Leak” security issue, browsers may lie about the computed styles for a visited link,
+- Returned values are sometimes deliberately inaccurate. To avoid the "CSS History
+  Leak" security issue, browsers may lie about the computed styles for a visited link,
   returning values as if the user never visited the linked URL. See [Plugging
   the CSS History Leak](https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/) and [Privacy-related
   changes coming to CSS :visited](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) for examples of how this is implemented.

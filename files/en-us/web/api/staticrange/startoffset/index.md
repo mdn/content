@@ -15,7 +15,7 @@ browser-compat: api.StaticRange.startOffset
 ---
 {{APIRef("DOM")}}
 
-The read-only **`startOffset`**
+The read-only **`startOffset`**
 property of the {{domxref("StaticRange")}} interface returns the offset into the start
 node of the range's start position.
 

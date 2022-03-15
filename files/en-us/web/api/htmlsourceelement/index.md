@@ -21,12 +21,12 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLSourceElement.media")}}
   - : Is a {{domxref("DOMString")}} reflecting the {{ htmlattrxref("media", "source") }} HTML attribute, containing the intended type of the media resource.
 - {{domxref("HTMLSourceElement.sizes")}} {{experimental_inline}}
-  - : Is a {{domxref("DOMString")}} representing image sizes between breakpoints
+  - : Is a {{domxref("DOMString")}} representing image sizes between breakpoints
 - {{domxref("HTMLSourceElement.src")}}
 
   - : Is a {{domxref("DOMString")}} reflecting the {{ htmlattrxref("src", "source") }} HTML attribute, containing the URL for the media resource. The {{domxref("HTMLSourceElement.src")}} property has a meaning only when the associated {{HTMLElement("source")}} element is nested in a media element that is a {{htmlelement("video")}} or an {{htmlelement("audio")}} element. It has no meaning and is ignored when it is nested in a {{HTMLElement("picture")}} element.
 
-    > **Note:** If the `src` property is updated (along with any siblings), the parent {{domxref("HTMLMediaElement")}}'s `load` method should be called when done, since `<source>` elements are not re-scanned automatically.
+    > **Note:** If the `src` property is updated (along with any siblings), the parent {{domxref("HTMLMediaElement")}}'s `load` method should be called when done, since `<source>` elements are not re-scanned automatically.
 
 - {{domxref("HTMLSourceElement.srcset")}} {{experimental_inline}}
   - : Is a {{domxref("DOMString")}} reflecting the {{ htmlattrxref("srcset", "source") }} HTML attribute, containing a list of candidate images, separated by a comma (`',', U+002C COMMA`). A candidate image is a URL followed by a `'w'` with the width of the images, or an `'x'` followed by the pixel density.

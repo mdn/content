@@ -57,8 +57,7 @@ audio track.
 
 > **Note:** Browser support for audio tracks varies, both in terms of
 > whether or not they're supported at all by the media recorder and in terms of the
-> audio sources supported. Check the {{anch("Browser
-    compatibility", "compatibility table")}} for details for each browser.
+> audio sources supported. Check the [compatibility table](#browser_compatibility) for details for each browser.
 
 ### Exceptions
 
@@ -128,7 +127,7 @@ async function startCapture(displayMediaOptions) {
 }
 ```
 
-This uses {{jsxref("await")}} to asynchronously wait for `getDisplayMedia()`
+This uses {{jsxref("Operators/await", "await")}} to asynchronously wait for `getDisplayMedia()`
 to resolve with a {{domxref("MediaStream")}} which contains the display contents as
 requested by the specified options. The stream is then returned to the caller for use,
 perhaps for adding to a WebRTC call using {{domxref("RTCPeerConnection.addTrack()")}} to

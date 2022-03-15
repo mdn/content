@@ -8,14 +8,15 @@ tags:
   - Overview
   - Reference
   - flexbox
+spec-urls: https://drafts.csswg.org/css-flexbox/
 ---
 {{CSSRef}}
 
-**CSS Flexible Box Layout** is a module of [CSS](/en-US/docs/Web/CSS) that defines a CSS box model optimized for user interface design, and the layout of items in one dimension. In the flex layout model, the children of a flex container can be laid out in any direction, and can “flex” their sizes, either growing to fill unused space or shrinking to avoid overflowing the parent. Both horizontal and vertical alignment of the children can be easily manipulated.
+**CSS Flexible Box Layout** is a module of [CSS](/en-US/docs/Web/CSS) that defines a CSS box model optimized for user interface design, and the layout of items in one dimension. In the flex layout model, the children of a flex container can be laid out in any direction, and can "flex" their sizes, either growing to fill unused space or shrinking to avoid overflowing the parent. Both horizontal and vertical alignment of the children can be easily manipulated.
 
 ## Basic Example
 
-In the following example a container has been set to `display: flex`, which means that the three child items become flex items. The value of `justify-content` has been set to `space-between` in order to space the items out evenly on the main axis. An equal amount of space is placed between each item with the left and right items being flush with the edges of the flex container. You can also see that the items are stretching on the cross axis, due to the default value of `align-items` being `stretch`. The items stretch to the height of the flex container, making them each appear as tall as the tallest item.
+In the following example a container has been set to `display: flex`, which means that the three child items become flex items. The value of `justify-content` has been set to `space-between` in order to space the items out evenly on the main axis. An equal amount of space is placed between each item with the left and right items being flush with the edges of the flex container. You can also see that the items are stretching on the cross axis, due to the default value of `align-items` being `stretch`. The items stretch to the height of the flex container, making them each appear as tall as the tallest item.
 
 {{EmbedGHLiveSample("css-examples/flexbox/basics/simple-example.html", '100%', 600)}}
 
@@ -34,7 +35,7 @@ In the following example a container has been set to `display: flex`, which mean
 
 ### Alignment Properties
 
-The properties `align-content`, `align-self`, `align-items` and `justify-content` initially appeared in the Flexbox specification, but are now defined in Box Alignment. The Flexbox spec now refers to the Box Alignment specification for up to date definitions. Also additional alignment properties are now defined in Box Alignment.
+The properties `align-content`, `align-self`, `align-items` and `justify-content` initially appeared in the Flexbox specification, but are now defined in Box Alignment. The Flexbox spec now refers to the Box Alignment specification for up to date definitions. Also additional alignment properties are now defined in Box Alignment.
 
 - {{cssxref("justify-content")}}
 - {{cssxref("align-content")}}
@@ -76,9 +77,7 @@ The properties `align-content`, `align-self`, `align-items` and `justify-content
 
 ## Specifications
 
-| Specification                            | Status                               | Comment             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{ SpecName('CSS3 Flexbox') }} | {{ Spec2('CSS3 Flexbox') }} | Initial definition. |
+{{Specifications}}
 
 ## See also
 

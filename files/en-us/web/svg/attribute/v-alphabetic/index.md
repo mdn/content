@@ -13,7 +13,7 @@ The **`v-alphabetic`** attribute defines indicates the alignment coordinate for 
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement("font-face")}}
+- {{SVGElement("font-face")}}
 
 ## Usage notes
 
@@ -61,4 +61,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-* {{SVGAttr("alphabetic")}}
+- {{SVGAttr("alphabetic")}}

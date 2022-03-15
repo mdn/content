@@ -15,7 +15,7 @@ browser-compat: api.KeyboardLayoutMap.has
 ---
 {{APIRef("Keyboard API")}}{{SeeCompatTable}}
 
-The **`has()`** method of the
+The **`has()`** method of the
 {{domxref('KeyboardLayoutMap')}} interface returns a boolean indicating whether the
 object has an element with the specified key.
 

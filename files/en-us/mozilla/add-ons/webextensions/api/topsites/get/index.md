@@ -23,11 +23,11 @@ To determine which pages appear in the list, and the order in which they appear,
 
 The browser may then apply further filtering to this list before presenting it to the user. For example, in Firefox the "New Tab" page only lists one page per domain, and the user is able to block pages from appearing in the list.
 
-The `topSites.get()` API enables an extension to get access to this list. Called without any options, it will provide the filtered list of pages -  that is, the one that appears in the "New Tab" page. However, by providing various options it's possible for an extension to get the unfiltered list of pages.
+The `topSites.get()` API enables an extension to get access to this list. Called without any options, it will provide the filtered list of pages -  that is, the one that appears in the "New Tab" page. However, by providing various options it's possible for an extension to get the unfiltered list of pages.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-To use the topSites API you must have the "topSites" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions).
+To use the topSites API you must have the "topSites" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions).
 
 ## Syntax
 

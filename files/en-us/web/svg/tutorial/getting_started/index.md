@@ -52,7 +52,7 @@ The rendering process involves the following:
   - The SVG file can be referenced with an `object` element:
 
     ```html
-    <object data="image.svg" type="image/svg+xml" />
+    <object data="image.svg" type="image/svg+xml"></object>
     ```
 
   - Likewise an `iframe` element can be used:

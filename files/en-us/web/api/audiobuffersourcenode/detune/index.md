@@ -14,7 +14,7 @@ browser-compat: api.AudioBufferSourceNode.detune
 {{APIRef("Web Audio API")}}
 
 The **`detune`** property of the
-{{domxref("AudioBufferSourceNode")}} interface is a [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}}
+{{domxref("AudioBufferSourceNode")}} interface is a [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}}
 representing detuning of oscillation in [cents](https://en.wikipedia.org/wiki/Cent_%28music%29).
 
 For example, values of +100 and -100 detune the source up or down by one semitone,
@@ -27,7 +27,7 @@ var source = audioCtx.createBufferSource();
 source.detune.value = 100; // value in cents
 ```
 
-> **Note:** Though the `AudioParam` returned is read-only, the
+> **Note:** Though the `AudioParam` returned is read-only, the
 > value it represents is not.
 
 ### Value

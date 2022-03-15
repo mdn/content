@@ -70,7 +70,7 @@ console](/en-US/docs/Tools/Web_Console).
     contiguous memory.
 - A `Large-Allocation` header was ignored due to the load being triggered
   by a non-GET request.
-  - : When a {{HTTPMethod("POST")}} request is used to load a document, that load cannot
+  - : When a {{HTTPMethod("POST")}} request is used to load a document, that load cannot
     currently be redirected into a new process. This error is displayed when loading a
     document with a `Large-Allocation` header with a non-GET HTTP method. This
     could be caused due to the document being loaded by a form submission, for example.

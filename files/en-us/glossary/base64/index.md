@@ -64,11 +64,15 @@ Another possible solution without utilizing the now deprecated 'unescape' and 'e
 
 ```js
 function b64EncodeUnicode(str) {
-    return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, function(match, p1) {
-        return String.fromCharCode('0x' + p1);
-    }));
-}
- b64EncodeUnicode('✓ à la mode'); // "4pyTIMOgIGxhIG1vZGU="
+    return btoa(encodeURIComponent(str));
+};
+
+function UnicodeDecodeB64(str) {
+    return decodeURIComponent(atob(str));
+};
+
+b64EncodeUnicode("✓ à la mode"); // "JUUyJTlDJTkzJTIwJUMzJUEwJTIwbGElMjBtb2Rl"
+UnicodeDecodeB64("JUUyJTlDJTkzJTIwJUMzJUEwJTIwbGElMjBtb2Rl"); // "✓ à la mode"
 ```
 
 ### Solution #2 – rewriting `atob()` and `btoa()` using `TypedArray`s and UTF-8

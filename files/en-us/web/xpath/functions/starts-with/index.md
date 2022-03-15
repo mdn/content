@@ -24,7 +24,7 @@ starts-with(haystack, needle)
 
 ### Returns
 
-`true` if *`haystack`* starts with *`needle`*. Otherwise, `false`.
+`true` if *`haystack`* starts with *`needle`*. Otherwise, `false`.
 
 ### Defined
 

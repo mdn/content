@@ -15,7 +15,7 @@ The **`nextHopProtocol`** read-only
 property is a {{domxref("DOMString","string")}} representing the _network
 protocol_ used to fetch the resource, as identified by the [ALPN Protocol ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301).
 
-When a proxy is used, if a tunnel connection is established, this property returns the
+When a proxy is used, if a tunnel connection is established, this property returns the
 ALPN Protocol ID of the tunneled protocol. Otherwise, this property returns the ALPN
 Protocol ID of the first hop to the proxy.
 

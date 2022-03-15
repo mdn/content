@@ -3,7 +3,7 @@ title: VRDisplayEvent.reason
 slug: Web/API/VRDisplayEvent/reason
 tags:
   - API
-  - Experimental
+
   - Deprecated
   - Property
   - Reference
@@ -20,13 +20,7 @@ The **`reason`** read-only property of the {{domxref("VRDisplayEvent")}} interfa
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Syntax
-
-```js
-var myReason = vrDisplayEventInstance.reason;
-```
-
-### Value
+## Value
 
 A string representing the reason why the event was fired. The available reasons are defined in the [`VRDisplayEventReason`](https://w3c.github.io/webvr/spec/1.1/#interface-vrdisplayeventreason) enum, and are as follows:
 
@@ -39,7 +33,7 @@ A string representing the reason why the event was fired. The available reasons 
 
 ```js
 window.addEventListener('vrdisplaypresentchange', function(e) {
-    console.log('Display ' + e.display.displayId + ' presentation has changed. Reason given: ' + e.reason + '.');
+    console.log('Display ' + e.display.displayId + ' presentation has changed. Reason given: ' + e.reason + '.');
   })
 ```
 

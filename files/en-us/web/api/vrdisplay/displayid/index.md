@@ -3,7 +3,7 @@ title: VRDisplay.displayId
 slug: Web/API/VRDisplay/displayId
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -19,13 +19,7 @@ The **`displayId`** read-only property of the {{domxref("VRDisplay")}} interface
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Syntax
-
-```js
-var myDisplayID = vrDisplayInstance.displayId;
-```
-
-### Value
+## Value
 
 A number representing the ID of the specific `VRDisplay`.
 

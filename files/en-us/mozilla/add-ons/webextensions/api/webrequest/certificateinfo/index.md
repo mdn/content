@@ -16,7 +16,7 @@ browser-compat: webextensions.api.webRequest.CertificateInfo
 
 An object describing a single [X.509 certificate](https://datatracker.ietf.org/doc/html/rfc5280).
 
-The {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} object returned from the {{WebExtAPIRef("webRequest.getSecurityInfo()")}} API includes a `certificates` property which is an array of these objects.
+The {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} object returned from the {{WebExtAPIRef("webRequest.getSecurityInfo()")}} API includes a `certificates` property which is an array of these objects.
 
 ## Type
 

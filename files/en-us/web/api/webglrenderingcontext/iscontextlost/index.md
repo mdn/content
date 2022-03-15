@@ -43,7 +43,7 @@ re-establish the context before resuming rendering. Examples include:
   the user or system decides to switch GPUs. In this case, all contexts are lost, then
   restored after switching GPUs.
 - Another page running in the user's browser performs an operation using the GPU that
-  takes too long, causing hte browser to decide to reset the GPU in order to break the
+  takes too long, causing the browser to decide to reset the GPU in order to break the
   stall. This would cause every WebGL context to be lost throughout the entire browser.
 - The user updates their graphics driver on an operating system that allows graphics
   drivers to be updated without restarting the system.

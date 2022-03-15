@@ -13,7 +13,7 @@ browser-compat: api.Request.integrity
 ---
 {{APIRef("Fetch")}}
 
-The **`integrity`** read-only property of the {{domxref("Request")}} interface contains the [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity) value of the request.
+The **`integrity`** read-only property of the {{domxref("Request")}} interface contains the [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity) value of the request.
 
 ## Syntax
 
@@ -23,7 +23,7 @@ var myIntegrity = request.integrity;
 
 ### Value
 
-The [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity) value of the request (e.g., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
+The [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity) value of the request (e.g., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
 
 If an integrity has not been specified, the property returns `''`.
 

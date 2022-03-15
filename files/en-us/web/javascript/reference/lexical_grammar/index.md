@@ -112,7 +112,7 @@ In this case, the `console.log()` call is never issued, since it's inside a comm
 
 A specialized third comment syntax, the **hashbang comment**, is in the process of being standardized in ECMAScript (see the [Hashbang Grammar proposal](https://github.com/tc39/proposal-hashbang)).
 
-A hashbang comment behaves exactly like a single line-only (`//`) comment. Instead, it begins with `#!` and **is only valid at the absolute start of a script or module**. Note also that no whitespace of any kind is permitted before the `#!`. The comment consists of all the characters after `#!` up to the end of the first line; only one such comment is permitted.
+A hashbang comment behaves exactly like a single line-only (`//`) comment. Instead, it begins with `#!` and **is only valid at the absolute start of a script or module**. Note also that no whitespace of any kind is permitted before the `#!`. The comment consists of all the characters after `#!` up to the end of the first line; only one such comment is permitted.
 
 The hashbang comment specifies the path to a specific JavaScript interpreter that you want to use to execute the script. An example is as follows:
 
@@ -271,19 +271,19 @@ The [Number](/en-US/docs/Web/JavaScript/Data_structures#number_type) and [BigInt
 0777 // parsed as octal, 511 in decimal
 ```
 
-Note that decimal literals can start with a zero (`0`) followed by another decimal digit, but If all digits after the leading `0` are smaller than 8, the number is interpreted as an octal number. This won't throw in JavaScript, see [bug 957513](https://bugzilla.mozilla.org/show_bug.cgi?id=957513). See also the page about {{jsxref("parseInt", "parseInt()")}}
+Note that decimal literals can start with a zero (`0`) followed by another decimal digit, but If all digits after the leading `0` are smaller than 8, the number is interpreted as an octal number. This won't throw in JavaScript, see [bug 957513](https://bugzilla.mozilla.org/show_bug.cgi?id=957513). See also the page about {{jsxref("parseInt", "parseInt()")}}
 
 ##### Exponential
 
-The decimal exponential literal is specified by the following format: `beN`; where `b` is a base number (integer or floating), followed by `e` char (which serves as separator or _exponent indicator_) and `N`, which is *exponent* or *power* number – a signed integer (as per 2019 ECMA-262 specs):
+The decimal exponential literal is specified by the following format: `beN`; where `b` is a base number (integer or floating), followed by `e` char (which serves as separator or _exponent indicator_) and `N`, which is *exponent* or *power* number – a signed integer (as per 2019 ECMA-262 specs):
 
 ```js
-0e-5   // => 0
-0e+5   // => 0
-5e1    // => 50
+0e-5   // => 0
+0e+5   // => 0
+5e1    // => 50
 175e-2 // => 1.75
-1e3    // => 1000
-1e-3   // => 0.001
+1e3    // => 1000
+1e-3   // => 0.001
 ```
 
 #### Binary
@@ -324,9 +324,9 @@ Hexadecimal number syntax uses a leading zero followed by a lowercase or upperca
 The [BigInt](/en-US/docs/Web/JavaScript/Data_structures#bigint_type) type is a numeric primitive in JavaScript that can represent integers with arbitrary precision. BigInt literals are created by appending `n` to the end of an integer.
 
 ```js
-123456789123456789n     // 123456789123456789
-0o777777777777n         // 68719476735
-0x123456789ABCDEFn      // 81985529216486895
+123456789123456789n     // 123456789123456789
+0o777777777777n         // 68719476735
+0x123456789ABCDEFn      // 81985529216486895
 0b11101001010101010101n // 955733
 ```
 

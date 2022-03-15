@@ -31,7 +31,7 @@ A {{domxref('CSSNumericValue')}}.
 
 ## Example
 
-The following example positions a container `<div>` 5 pixels from the
+The following example positions a container `<div>` 5 pixels from the
 top and 10 pixels from the left of the page.
 
 ```js

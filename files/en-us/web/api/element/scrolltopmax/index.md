@@ -14,7 +14,7 @@ browser-compat: api.Element.scrollTopMax
 {{APIRef("DOM")}}{{Non-standard_header}}
 
 The **`Element.scrollTopMax`** read-only property returns a
-{{jsxref("Number")}} representing the maximum top scroll offset possible for the
+number representing the maximum top scroll offset possible for the
 element.
 
 ## Syntax

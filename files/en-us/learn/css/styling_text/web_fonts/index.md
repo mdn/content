@@ -85,7 +85,7 @@ Here are some important things to bear in mind about web fonts:
 1. Fonts generally aren't free to use. You have to pay for them and/or follow other license conditions, such as crediting the font creator in your code (or on your site). You shouldn't steal fonts and use them without giving proper credit.
 2. All major browsers support WOFF/WOFF2 (Web Open Font Format versions 1 and 2). Even older browsers such as IE9 (released in 2011) support the WOFF format.
 3. WOFF2 supports the entirety of the TrueType and OpenType specifications, including variable fonts, chromatic fonts, and font collections.
-4. The order in which you list font files is important. If you provide the browser with a list of multiple font files to download, the browser will choose the first font file it’s able to use. That's why the format you list first should be the preferred format — that is, WOFF2 — with the older formats listed after that. Browsers that don't understand one format will then fall back to the next format in the list.
+4. The order in which you list font files is important. If you provide the browser with a list of multiple font files to download, the browser will choose the first font file it's able to use. That's why the format you list first should be the preferred format — that is, WOFF2 — with the older formats listed after that. Browsers that don't understand one format will then fall back to the next format in the list.
 5. If you need to work with legacy browsers, you should provide EOT (Embedded Open Type), TTF (TrueType Font), and SVG web fonts for download. This article explains how to use the Fontsquirrel Webfont Generator to generate the required files.
 
 > **Note:** Web fonts as a technology have been supported in Internet Explorer since version 4!
@@ -106,7 +106,7 @@ For this example, we'll use two web fonts: one for the headings and one for the 
 
 - A free font distributor: This is a site that makes free fonts available for download (there may still be some license conditions, such as crediting the font creator). Examples include [Font Squirrel](https://www.fontsquirrel.com/), [dafont](https://www.dafont.com/), and [Everything Fonts](https://everythingfonts.com/).
 - A paid font distributor: This is a site that makes fonts available for a charge, such as [fonts.com](https://www.fonts.com/) or [myfonts.com](https://www.myfonts.com/). You can also buy fonts directly from font foundries, for example [Linotype](https://www.linotype.com/), [Monotype](https://www.monotype.com), or [Exljbris](https://www.exljbris.com/).
-- An online font service: This is a site that stores and serves the fonts for you, making the whole process easier. See the {{anch("Using an online font service")}} section for more details.
+- An online font service: This is a site that stores and serves the fonts for you, making the whole process easier. See the [Using an online font service](#using_an_online_font_service) section for more details.
 
 Let's find some fonts! Go to [Font Squirrel](https://www.fontsquirrel.com/) and choose two fonts: a nice interesting font for the headings (maybe a nice display or slab serif font), and a slightly less flashy and more readable font for the paragraphs. When you've found a font, press the download button and save the file inside the same directory as the HTML and CSS files you saved earlier. It doesn't matter whether they are TTF (True Type Fonts) or OTF (Open Type Fonts).
 

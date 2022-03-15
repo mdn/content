@@ -50,7 +50,7 @@ the stream. The different possibilities are as follows:
 This example shows the basic API usage, but doesn't try to deal with complications like
 stream chunks not ending on line boundaries for example.
 
-In this example `stream` is a previously-created custom
+In this example `stream` is a previously-created custom
 `ReadableStream`. It is read using a
 {{domxref("ReadableStreamDefaultReader")}} created using `getReader()`. (see
 our [Simple

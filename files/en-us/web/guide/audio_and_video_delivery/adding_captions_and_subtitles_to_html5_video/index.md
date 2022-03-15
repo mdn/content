@@ -195,7 +195,7 @@ var createMenuItem = function(id, lang, label) {
 }
 ```
 
-This function builds the required {{ htmlelement("li") }} and {{ htmlelement("button") }} elements, and returns them so they can be added to the subtitles menu list. It also sets up the required event listeners on the button to toggle the relevant subtitle set on or off. This is done by setting the required subtlte's `mode` attribute to `showing`, and setting the others to `hidden`.
+This function builds the required {{ htmlelement("li") }} and {{ htmlelement("button") }} elements, and returns them so they can be added to the subtitles menu list. It also sets up the required event listeners on the button to toggle the relevant subtitle set on or off. This is done by setting the required subtitle's `mode` attribute to `showing`, and setting the others to `hidden`.
 
 Once the menu is built, it is then inserted into the DOM at the bottom of the videoContainer.
 

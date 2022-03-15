@@ -12,7 +12,7 @@ browser-compat: css.properties.flex-grow
 ---
 {{CSSRef}}
 
-The **`flex-grow`** [CSS](/en-US/docs/Web/CSS) property sets the flex grow factor of a flex item's [main size](https://www.w3.org/TR/css-flexbox/#main-size).
+The **`flex-grow`** [CSS](/en-US/docs/Web/CSS) property sets the flex grow factor of a flex item's [main size](https://www.w3.org/TR/css-flexbox/#main-size).
 
 {{EmbedInteractiveExample("pages/css/flex-grow.html")}}
 
@@ -43,7 +43,7 @@ This property specifies how much of the remaining space in the flex container sh
 
 The [main size](https://www.w3.org/TR/css-flexbox/#main-size) is either width or height of the item which is dependent on the {{cssxref("flex-direction")}} value.
 
-The remaining space is the size of the flex container minus the size of all flex items' sizes together. If all sibling items have the same flex grow factor, then all items will receive the same share of remaining space, otherwise it is distributed according to the ratio defined by the different flex grow factors.
+The remaining space is the size of the flex container minus the size of all flex items' sizes together. If all sibling items have the same flex grow factor, then all items will receive the same share of remaining space, otherwise it is distributed according to the ratio defined by the different flex grow factors.
 
 `flex-grow` is used alongside the other flex properties {{cssxref("flex-shrink")}} and {{cssxref("flex-basis")}}, and normally defined using the {{cssxref("flex")}} shorthand to ensure all values are set.
 

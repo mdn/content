@@ -22,10 +22,10 @@ By using `textLength`, you can ensure that your SVG text displays at the same wi
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement("text")}}
-* {{SVGElement("textPath")}}
-* {{SVGElement("tref")}}
-* {{SVGElement("tspan")}}
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
 
 ## Example
 
@@ -66,10 +66,10 @@ html, body, svg {
   </tbody>
 </table>
 
-* `<length-percentage>`
-    * : This value specifies the width of the space the text will be adjusted to occupy as absolute length or percentage.
-* `<number>`
-    * : A numeric value outlines a length referring to the units of the current coordinate system.
+- `<length-percentage>`
+  - : This value specifies the width of the space the text will be adjusted to occupy as absolute length or percentage.
+- `<number>`
+  - : A numeric value outlines a length referring to the units of the current coordinate system.
 
 ## Interactive example
 
@@ -183,6 +183,6 @@ Here's what the example looks like. Try dragging the slider around to get a feel
 
 ## See also
 
-* SVG Tutorial: [Texts](/en-US/docs/Web/SVG/Tutorial/Texts)
-* {{domxref("SVGAnimatedLength")}} and {{domxref("SVGLength")}}
-* {{SVGElement("text")}}
+- SVG Tutorial: [Texts](/en-US/docs/Web/SVG/Tutorial/Texts)
+- {{domxref("SVGAnimatedLength")}} and {{domxref("SVGLength")}}
+- {{SVGElement("text")}}

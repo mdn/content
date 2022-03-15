@@ -15,26 +15,27 @@ browser-compat: api.FileReader.progress_event
 
 The `progress` event is fired periodically as the `FileReader` reads data.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("ProgressEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("FileReader.onprogress")}}</td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('progress', event => { });
+
+onprogress = event => { };
+```
+
+## Event type
+
+An {{domxref("ProgressEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("ProgressEvent")}}
+
+## Event properties
+
+{{page("/en-US/docs/Web/API/ProgressEvent", "Properties")}}
 
 ## Examples
 

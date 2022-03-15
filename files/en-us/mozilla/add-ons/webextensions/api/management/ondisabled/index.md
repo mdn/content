@@ -55,7 +55,7 @@ Log the names of add-ons when they are disabled:
 
 ```js
 browser.management.onDisabled.addListener((info) => {
-  console.log(info.name + " was disabled");
+  console.log(info.name + " was disabled");
 });
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: appearance (-moz-appearance, -webkit-appearance)
+title: appearance
 slug: Web/CSS/appearance
 tags:
   - '-moz-appearance'
@@ -14,11 +14,11 @@ browser-compat: css.properties.appearance
 ---
 {{CSSRef}}
 
-The **`appearance`** CSS property is used to display an element using platform-native styling, based on the operating system's theme. The **`-moz-appearance`** and **`-webkit-appearance`** properties are non-standard versions of this property, used (respectively) by Gecko (Firefox) and by WebKit-based (e.g., Safari) and Blink-based (e.g., Chrome, Opera) browsers to achieve the same thing. Note that Firefox and Edge also support **`-webkit-appearance`**, for compatibility reasons.
+The **`appearance`** CSS property is used to control native appearance of UI controls, that are based on operating system's theme.
 
 {{EmbedInteractiveExample("pages/css/appearance.html")}}
 
-The **`-moz-appearance`** property was used in [XUL](/en-US/docs/Mozilla/Tech/XUL/Tutorial) stylesheets to design custom widgets with platform-appropriate styling. It was also used in the [XBL](/en-US/docs/XBL) implementations of the widgets that ship with the Mozilla platform. Starting with Gecko/Firefox 80, these uses were changed to **`-moz-default-appearance`**, which should never be used outside of internal stylesheets.
+Before standardization this property allowed simple elements to be shown as widgets, such as buttons or check boxes. It was considered a misfeature and authors are encouraged to use only standard keywords now.
 
 > **Note:** If you wish to use this property on websites, you should test it very carefully. Although it is supported in most modern browsers, its implementation varies. In older browsers, even the keyword `none` does not have the same effect on all form elements across different browsers, and some do not support it at all. The differences are smaller in the newest browsers.
 
@@ -74,11 +74,11 @@ appearance: unset;
     <tr>
       <td><code>none</code></td>
       <td>Firefox Chrome Safari Edge</td>
-      <td>No special styling is applied. This is the default.</td>
+      <td>Hides certain features of widgets, such as arrow displayed in select element, indicating that list can be expanded.</td>
     </tr>
     <tr>
       <td><code>auto</code></td>
-      <td>Firefox Chrome</td>
+      <td>Firefox Chrome Edge</td>
       <td>
         The user agent selects the appropriate special styling based on the
         element. Acts as <code>none</code> on elements with no special styling.
@@ -87,10 +87,7 @@ appearance: unset;
     <tr>
       <td><code>menulist-button</code></td>
       <td>Firefox Chrome Safari Edge</td>
-      <td>
-        The element is styled as a button that would indicate a menulist can be
-        opened.
-      </td>
+      <td></td>
     </tr>
     <tr>
       <td><code>textfield</code></td>
@@ -105,13 +102,13 @@ appearance: unset;
     <tr>
       <td><code>button</code></td>
       <td>Firefox Chrome Safari Edge</td>
-      <td>The element is drawn like a button.</td>
+      <td>The element used to be drawn like a button.</td>
     </tr>
     <tr>
       <td><code>checkbox</code></td>
       <td>Firefox Chrome Safari Edge</td>
       <td>
-        The element is drawn like a checkbox, including only the actual
+        The element used to be drawn like a checkbox, including only the actual
         "checkbox" portion.
       </td>
     </tr>
@@ -144,7 +141,7 @@ appearance: unset;
       <td><code>radio</code></td>
       <td>Firefox Chrome Safari Edge</td>
       <td>
-        The element is drawn like a radio button, including only the actual
+        The element used to be drawn like a radio button, including only the actual
         "radio button" portion.
       </td>
     </tr>
@@ -173,7 +170,7 @@ appearance: unset;
 
 #### Non-standard keywords
 
-The following values are implemented only for one or both of the prefixed properties, but not on the standard **`appearance`** property.
+The following values may be operational on historical browser versions using **`-moz-appearance`** or **`-webkit-appearance`** prefix, but not on the standard **`appearance`** property.
 
 | Value                                  | Browser                    | Description                                                                                                                                                                        |
 | -------------------------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -219,7 +216,7 @@ The following values are implemented only for one or both of the prefixed proper
 | `media-time-remaining-display`         | Chrome Safari              |                                                                                                                                                                                    |
 | `menulist-text`                        | Firefox Chrome Safari Edge |                                                                                                                                                                                    |
 | `menulist-textfield`                   | Firefox Chrome Safari Edge | The element is styled as the text field for a menulist. (Not implemented for the Windows platform)                                                                                 |
-| `meterbar`                             | Firefox                    | Use `meter` instead.                                                                                                                                                               |
+| `meterbar`                             | Firefox                    | Use `meter` instead.                                                                                                                                                               |
 | `number-input`                         | Firefox                    |                                                                                                                                                                                    |
 | `progress-bar-value`                   | Chrome Safari              |                                                                                                                                                                                    |
 | `progressbar`                          | Firefox                    | The element is styled like a progress bar. Use `progress-bar` instead                                                                                                              |
@@ -276,38 +273,28 @@ The following values are implemented only for one or both of the prefixed proper
 #### HTML
 
 ```html
-<p><input type="checkbox" id="check"><label for="check">Agree to something</label></p>
+<select class="none">
+  <option>appearance: none</option>
+</select>
+<select class="auto">
+  <option>appearance: auto</option>
+</select>
 ```
 
 #### CSS
 
 ```css
-input {
+.none {
   appearance: none;
-  display: inline-block;
-  vertical-align: middle;
 }
-
-input[type="checkbox"] {
-  border: 2px solid #555;
-  width: 20px;
-  height: 20px;
-  padding: 4px;
-}
-input[type="checkbox"]:checked {
-  background: #555;
-  background-clip: content-box;
-}
-label {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 0 -2px 8px;
+.auto {
+  appearance: auto;
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("Apply_custom_styling", 1050, 100)}}
+{{EmbedLiveSample("Apply_custom_styling", 1050, 70)}}
 
 ## Specifications
 

@@ -61,7 +61,7 @@ var getting = browser.cookies.getAll(
     - `secure`{{optional_inline}}
       - : A `boolean` — filters cookies by their `secure` property, allowing you to filter secure cookies vs. non-secure cookies..
     - `session`{{optional_inline}}
-      - : A `boolean`— filters the cookies by their `session` property, allowing you to filter session cookies vs. persistent cookies.
+      - : A `boolean`— filters the cookies by their `session` property, allowing you to filter session cookies vs. persistent cookies.
     - `storeId`{{optional_inline}}
       - : A `string` representing the cookie store to retrieve cookies from. If omitted, the current execution context's cookie store will be used.
     - `url`{{optional_inline}}
@@ -69,7 +69,7 @@ var getting = browser.cookies.getAll(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of  `{{WebExtAPIRef('cookies.Cookie')}}` objects that match the properties given in the `details` parameter. Only unexpired cookies are returned. The cookies returned will be sorted by path length, longest to shortest. If multiple cookies have the same path length, those with the earliest creation time will be first.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of  `{{WebExtAPIRef('cookies.Cookie')}}` objects that match the properties given in the `details` parameter. Only unexpired cookies are returned. The cookies returned will be sorted by path length, longest to shortest. If multiple cookies have the same path length, those with the earliest creation time will be first.
 
 ## Browser compatibility
 

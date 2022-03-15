@@ -3,7 +3,6 @@ title: VRLayerInit.leftBounds
 slug: Web/API/VRLayerInit/leftBounds
 tags:
   - API
-  - Experimental
   - Deprecated
   - Property
   - Reference
@@ -19,16 +18,9 @@ The **`leftBounds`** property of the {{domxref("VRLayerInit")}} interface (dicti
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Syntax
+## Value
 
-```js
-var myVRLayerInit = { };
-myVRLayerInit.leftBounds = [0.0, 0.0, 0.5, 1.0];
-```
-
-### Value
-
-An array of four floating point values, which can take values from 0.0–1.0:
+An array of four floating point values, which can take values from 0.0–1.0.
 
 - The left offset of the bounds.
 - The top offset of the bounds.

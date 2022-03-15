@@ -24,7 +24,7 @@ without having to compare the keys one by one.
 Calling this method more than once before new cursor data has been loaded - for
 example, calling `continuePrimaryKey()` twice from the same onsuccess handler
 \- results in an `InvalidStateError` being thrown on the second call because
-the cursor’s got value flag has been unset.
+the cursor's got value flag has been unset.
 
 This method is only valid for cursors coming from an index. Using it for cursors coming
 from an object store will throw an error.
@@ -62,7 +62,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 
 ## Example
 
-here’s how you can resume an iteration of all articles tagged with
+here's how you can resume an iteration of all articles tagged with
 `"javascript"` since your last visit:
 
 ```js

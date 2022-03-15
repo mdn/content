@@ -265,7 +265,7 @@ Further resources on adaptive streaming.
 ### MPEG-DASH overview and references
 
 - [Dynamic Adaptive Streaming over HTTP Dataset](https://www-itec.uni-klu.ac.at/bib/files/p89-lederer.pdf)
-- [MPEG-DASH and streaming reference and resources (MSDN)](<https://msdn.microsoft.com/en-us/library/dn551370(v=vs.85).aspx>)
+- [MPEG-DASH and streaming reference and resources (MSDN)](<https://msdn.microsoft.com/library/dn551370(v=vs.85).aspx>)
 - [DASH Adaptive Streaming for HTML 5 Video](/en-US/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video)
 - [Dynamic Adaptive Streaming over HTTP: From Content Creation to Consumption](https://www.slideshare.net/christian.timmerer/dynamic-adaptive-streaming-over-http-from-content-creation-to-consumption)
 

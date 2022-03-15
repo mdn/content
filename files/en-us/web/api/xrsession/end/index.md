@@ -18,8 +18,8 @@ browser-compat: api.XRSession.end
 ---
 {{APIRef("WebXR Device API")}}
 
-The **`end()`** method shuts down the
-{{domxref("XRSession")}} on which it's called, returning a promise which resolves once
+The **`end()`** method shuts down the
+{{domxref("XRSession")}} on which it's called, returning a promise which resolves once
 the session has fully shut down.
 
 ## Syntax

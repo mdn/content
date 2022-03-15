@@ -22,8 +22,8 @@ tags:
 - Accessibility improvements!
 
   - The toolbox does a better job of ensuring that keyboard focus is more visible ({{bug(1242851)}}).
-  - Accessibility labels have been added to unlabeled controls ({{bug(1242715)}}).
-  - Added proper tree view semantics and keyboard navigation to the Inspector's markup view ({{bug(1242694)}}).
+  - Accessibility labels have been added to unlabeled controls ({{bug(1242715)}}).
+  - Added proper tree view semantics and keyboard navigation to the Inspector's markup view ({{bug(1242694)}}).
 
 - The [Network Monitor](/en-US/docs/Tools/Network_Monitor) now shows a Cause column, which provides an indication of what caused each particular network request ({{bug(1134073)}}).
 - In the _about:debugging_ Add-ons page, the Reload button is only enabled for temporary add-ons. It will be disabled for all other add-ons ({{bug(1273184)}}).
@@ -56,7 +56,7 @@ tags:
 - Our experimental [CSS Grids](/en-US/docs/Web/CSS/CSS_Grid_Layout) implementation has been improved:
 
   - Implemented {{cssxref("&lt;percentage&gt;")}} for the `grid-gap`, `grid-row-gap`, and `grid-column-gap` properties ({{bug(1266268)}}).
-  - Implemented grid layout support for {{cssxref("align")}}, {{cssxref("justify-self")}}`:baseline` and `last-baseline` (aka "baseline self-alignment") ({{bug(1221525)}}).
+  - Implemented grid layout support for {{cssxref("align")}}, {{cssxref("justify-self")}}`:baseline` and `last-baseline` (aka "baseline self-alignment") ({{bug(1221525)}}).
   - Implemented grid item baseline content alignment ({{bug(1256429)}}).
 
 - Our experimental [CSS Masks](/en-US/docs/Web/CSS/CSS_Masking) implementation has been improved:
@@ -141,7 +141,7 @@ tags:
 
 - {{domxref("XMLHttpRequest.getResponseHeader()")}} and {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} return empty headers in case the preference `network.http.keep_empty_response_headers_as_empty_string` is set to `true` ({{bug(669259)}}).
 - The Firefox OS-only [Data Store API](/en-US/docs/Archive/Firefox_OS/API/Data_Store_API) has been removed ({{bug(1261009)}}).
-- The [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) event handlers {{domxref("Document.onfullscreenchange")}} and {{domxref("Document.onfullscreenerror")}} have been removed from {{domxref("Element")}} as they were never fired there; the prefixed versions of these event handlers have been kept there for compatibility purposes, however ({{bug(1270386)}}). Note that this is not yet activated by default, but is behind the `full-screen-api.unprefix.enabled` preference ({{bug(1268749)}}).
+- The [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) event handlers `Document.onfullscreenchange` and `Document.onfullscreenerror` have been removed from {{domxref("Element")}} as they were never fired there; the prefixed versions of these event handlers have been kept there for compatibility purposes, however ({{bug(1270386)}}). Note that this is not yet activated by default, but is behind the `full-screen-api.unprefix.enabled` preference ({{bug(1268749)}}).
 - The obsolete `Document.mozFullScreen` property has been unprefixed to {{domxref("Document.fullscreen")}} {{bug(1269157)}}. Note that this is not yet activated by default by behind the `full-screen-api.unprefix.enabled` preference ({{bug(1268749)}}).
 - The read-only properties {{domxref("Document/fullscreenElement", "Document.fullscreenElement")}} and {{domxref("Document.fullscreenEnabled")}} no longer throw an exception if an attempt is made to change their values; instead, the new value is silently ignored and the setter function is a no-op ({{bug(1269798)}}).
 - Any kind of data can now be retrieved from the clipboard using {{domxref("DataTransfer.getData()")}}: previously, only data of certain MIME types were supported {{bug(860857)}}.
@@ -149,7 +149,7 @@ tags:
 - To match the spec, the {{domxref("VTTCue.positionAlign")}} property now returns a `PositionAlign` enum instead of an `Align` enum ({{bug(1276129)}}).
 - The speech synthesis part of [Web Speech API](/en-US/docs/Web/API/Web_Speech_API#speech_synthesis) is now activated by default ({{bug(1268633)}}).
 - The [Performance Timeline API](/en-US/docs/Web/API/Performance_Timeline) is now available by default in Nightly (though not in Aurora, Beta or Release).
-- The {{event("install")}} event, and the {{domxref("Window/onappinstalled", "Window.oninstall")}} event handler, are now supported for [Web Manifests](/en-US/docs/Web/Manifest) ({{bug(1265279)}}).
+- The {{event("install")}} event, and the {{domxref("Window.appinstalled_event", "Window.oninstall")}} event handler, are now supported for [Web Manifests](/en-US/docs/Web/Manifest) ({{bug(1265279)}}).
 - When using the {{domxref("BaseAudioContext/createPeriodicWave", "AudioContext.createPeriodicWave()")}} method of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), you can now specify whether the resulting periodic wave should be normalized by including a dictionary object as the third parameter, which includes a single parameter — `{disableNormalization: true}` ({{bug(1265405)}}).
 - In the WebVTT API, {{domxref("VTTCue.positionAlign")}} now correctly returns a `PositionAlignSetting` enum as per spec; previously it returned an `AlignSetting` enum ({{bug(1276129)}}).
 - The Speech Synthesis part of the Web Speech API is now enabled by default across all desktop browsers ({{bug(1268633)}}).
@@ -282,7 +282,7 @@ In order to improve compatibility with existing content, Firefox now accepts som
 
 ### Interfaces
 
-- In {{domxref("EventTarget.addEventListener()")}}, the value `mozSystemGroup`,  active only in code running in XBL or in Firefox's chrome, is a {{jsxref("Boolean")}} which indicates if the listener is added to the system group. ({{bug(1274520)}})
+- In {{domxref("EventTarget.addEventListener()")}}, the value `mozSystemGroup`,  active only in code running in XBL or in Firefox's chrome, is a {{jsxref("Boolean")}} which indicates if the listener is added to the system group. ({{bug(1274520)}})
 
 ### Other
 

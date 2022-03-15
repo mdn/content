@@ -1,6 +1,6 @@
 ---
 title: 'aria-activedescendant'
-slug: web/Accessibility/ARIA/Attributes/aria-activedescendant
+slug: Web/Accessibility/ARIA/Attributes/aria-activedescendant
 tags: 
   - Accessibility
   - ARIA

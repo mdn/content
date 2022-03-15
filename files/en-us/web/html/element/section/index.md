@@ -103,7 +103,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## Usage notes
 
-As mentioned above, `<section>` is a generic sectioning element, and should only be used if there isn't a more specific element to represent it. As an example, a navigation menu should be wrapped in a {{htmlelement("nav")}} element, but a list of search results or a map display and its controls don't have specific elements, and could be put inside a `<section>`.
+As mentioned above, `<section>` is a generic sectioning element, and should only be used if there isn't a more specific element to represent it. As an example, a navigation menu should be wrapped in a {{htmlelement("nav")}} element, but a list of search results or a map display and its controls don't have specific elements, and could be put inside a `<section>`.
 
 Also consider these cases:
 

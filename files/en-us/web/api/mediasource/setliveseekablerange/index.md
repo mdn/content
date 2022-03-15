@@ -36,10 +36,10 @@ mediaSource.setLiveSeekableRange(start, end)
     greater than this value.
 - end
   - : The end of the seekable range to set in seconds measured from the beginning of the
-    source. If the duration of the media source is positive infinity, then the
+    source. If the duration of the media source is positive infinity, then the
     {{domxref("TimeRanges")}} object returned by the
     {{domxref("HTMLMediaElement.seekable")}} property will have an end timestamp no
-    less than this value.
+    less than this value.
 
 ### Return value
 

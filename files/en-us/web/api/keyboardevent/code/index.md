@@ -69,7 +69,7 @@ To ensure that keystrokes go to the sample, click in the output box below before
 
 ### Handle keyboard events in a game
 
-This example establishes an event listener for {{event("keydown")}} events that handle keyboard input for a game that uses the typical "WASD" keyboard layout for steering forward, left, backward, and right. This will use the same four keys physically regardless of what the actual corresponding characters are, such as if the user is using an AZERTY keyboard.
+This example establishes an event listener for {{event("keydown")}} events that handle keyboard input for a game that uses the typical "WASD" keyboard layout for steering forward, left, backward, and right. This will use the same four keys physically regardless of what the actual corresponding characters are, such as if the user is using an AZERTY keyboard.
 
 #### HTML
 

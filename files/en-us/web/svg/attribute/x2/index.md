@@ -11,8 +11,8 @@ The **`x2`** attribute is used to specify the second x-coordinate for drawing an
 
 You can use this attribute with the following SVG elements:
 
-* {{ SVGElement("line") }}
-* {{ SVGElement("linearGradient") }}
+- {{ SVGElement("line") }}
+- {{ SVGElement("linearGradient") }}
 
 ## Example
 

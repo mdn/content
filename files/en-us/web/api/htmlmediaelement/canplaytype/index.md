@@ -74,6 +74,6 @@ console.log(obj.canPlayType('video/mp4')); // "maybe"
 - The interface defining it, {{domxref("HTMLMediaElement")}}.
 - {{domxref("MediaCapabilities")}} in the Media Capabilities API
 - [Handling media support
-  issues in web content](/en-US/docs/Web/Media/Formats/Support_issues)
+  issues in web content](/en-US/docs/Web/Media/Formats/Support_issues)
 - [Guide to media types and formats on the
   web](/en-US/docs/Web/Media/Formats)

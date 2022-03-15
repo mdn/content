@@ -145,10 +145,6 @@ html,body,svg { height:100% }
 
 {{EmbedLiveSample('evenodd', '100%', 200)}}
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Specifications
 
 <table class="no-markdown">
@@ -176,3 +172,7 @@ html,body,svg { height:100% }
     </tr>
   </tbody>
 </table>
+
+## Browser compatibility
+
+{{Compat}}

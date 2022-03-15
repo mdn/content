@@ -14,7 +14,7 @@ tags:
 ---
 {{DefaultAPISidebar("CSSOM View")}}
 
-There are several properties you can look at in order to determine the width and height of elements, and it can be tricky to determine which is the right one for your needs. This article is designed to help you make that decision. Note that all these properties are read-only. If you want to set the width and height of an element, use {{CSSxRef("width")}} and {{CSSxRef("height")}} or the overriding {{CSSxRef("min-width")}} and {{CSSxRef("max-width")}}, and {{CSSxRef("min-height")}} and {{CSSxRef("max-height")}} properties.
+There are several properties you can look at in order to determine the width and height of elements, and it can be tricky to determine which is the right one for your needs. This article is designed to help you make that decision. Note that all these properties are read-only. If you want to set the width and height of an element, use {{CSSxRef("width")}} and {{CSSxRef("height")}} or the overriding {{CSSxRef("min-width")}} and {{CSSxRef("max-width")}}, and {{CSSxRef("min-height")}} and {{CSSxRef("max-height")}} properties.
 
 ## How much room does it use up?
 
@@ -37,4 +37,4 @@ For example, if a 600x400 pixel element is being displayed inside a 300x300 pixe
 ## See also
 
 - <https://www.w3.org/TR/cssom-view-1/>
-- [MSDN: Measuring Element Dimension and Location](<https://docs.microsoft.com/en-us/previous-versions/hh781509(v=vs.85)>)
+- [MSDN: Measuring Element Dimension and Location](<https://docs.microsoft.com/previous-versions/hh781509(v=vs.85)>)

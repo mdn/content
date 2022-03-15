@@ -96,7 +96,7 @@ Other popular editors have similar linting packages available. For example, see:
 
 The developer tools built into most browsers also feature useful tools for hunting down errors, mainly for CSS.
 
-> **Note:** HTML errors don't tend to show up so easily in dev tools, as the browser will try to correct badly-formed markup automatically; the W3C validator is the best way to find HTML errors — see {{anch("Validation")}} above.
+> **Note:** HTML errors don't tend to show up so easily in dev tools, as the browser will try to correct badly-formed markup automatically; the W3C validator is the best way to find HTML errors — see [Validation](#validation) above.
 
 As an example, in Firefox the CSS inspector will show CSS declarations that aren't applied crossed out, with a warning triangle. Hovering the warning triangle will provide a descriptive error message:
 
@@ -112,7 +112,7 @@ Now let's move on to look at some of the most common cross browser HTML and CSS 
 
 This is a common problem, especially when you need to support old browsers (such as old IE versions) or you are using features that are implemented using CSS prefixes. In general, most core HTML and CSS functionality (such as basic HTML elements, CSS basic colors and text styling) works across most browsers you'll want to support; more problems are uncovered when you start wanting to use newer features such as [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), or [HTML5 video/audio](/en-US/docs/Web/Guide/Audio_and_video_delivery), or even more nascent, [CSS Grids](/en-US/docs/Learn/CSS/CSS_layout/Grids#native_css_grids_with_grid_layout) or [-webkit-background-clip: text](/en-US/docs/Learn/CSS/Building_blocks/Advanced_styling_effects#-webkit-background-clip_text).
 
-Once you've identified a list of potential problem technologies you will be using, it is a good idea to research what browsers they are supported in, and what related techniques are useful. See {{anch("Finding help")}} below.
+Once you've identified a list of potential problem technologies you will be using, it is a good idea to research what browsers they are supported in, and what related techniques are useful. See [Finding help](#finding_help) below.
 
 #### HTML fallback behavior
 
@@ -120,7 +120,7 @@ Some problems can be solved by just taking advantage of the natural way in which
 
 Unrecognized HTML elements are treated by the browser as anonymous inline elements (effectively inline elements with no semantic value, similar to {{htmlelement("span")}} elements). You can still refer to them by their names, and style them with CSS, for example — you just need to make sure they are behaving as you want them to, for example setting `display: block;` on all of the new semantic elements (such as {{htmlelement("article")}}, {{htmlelement("aside")}}, etc.), but only in old versions of IE that don't recognize them (so, IE 8 and lower). This way new browsers can just use the code as normal, but older IE versions will be able to style these elements too.
 
-> **Note:** See {{anch("IE conditional comments")}} for the best way to do this.
+> **Note:** See [IE conditional comments](#ie_conditional_comments) for the best way to do this.
 
 More complex elements like HTML [`<video>`](/en-US/docs/Web/HTML/Element/video), [`<audio>`](/en-US/docs/Web/HTML/Element/audio), and [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas) (and other features besides) have natural mechanisms for fallbacks to be added, which work on the same principle as described above. You can add fallback content in between the opening and closing tags, and non-supporting browsers will effectively ignore the outer element and run the nested content.
 

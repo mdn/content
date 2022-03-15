@@ -146,7 +146,7 @@ You can use the `filesystem:` scheme on Google Chrome to see all the files and f
 Look up metadata about this entry. \[ todo: specify what kind of metadata ]
 
 ```
-Metadata getMetada ()
+Metadata getMetadata()
   raises (FileException);
 ```
 

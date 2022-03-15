@@ -44,6 +44,8 @@ This trap can intercept these operations:
 
 - {{jsxref("Object.preventExtensions()")}}
 - {{jsxref("Reflect.preventExtensions()")}}
+- {{jsxref("Object.seal()")}}
+- {{jsxref("Object.freeze()")}}
 
 ### Invariants
 

@@ -14,8 +14,8 @@ browser-compat: api.BluetoothRemoteGATTCharacteristic.startNotifications
 ---
 {{SeeCompatTable}}
 
-The **`BluetoothRemoteGATTCharacteristic.startNotifications()`** method
-returns a {{jsxref("Promise")}} to the BluetoothRemoteGATTCharacteristic instance when
+The **`BluetoothRemoteGATTCharacteristic.startNotifications()`** method
+returns a {{jsxref("Promise")}} to the BluetoothRemoteGATTCharacteristic instance when
 there is an active notification on it.
 
 ## Syntax
@@ -26,7 +26,7 @@ BluetoothRemoteGATTCharacteristic.startNotifications().then(function(BluetoothRe
 
 ### Returns
 
-A {{jsxref("Promise")}} to the BluetoothRemoteGATTCharacteristic instance.
+A {{jsxref("Promise")}} to the BluetoothRemoteGATTCharacteristic instance.
 
 ## Specifications
 

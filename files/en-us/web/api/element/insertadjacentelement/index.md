@@ -94,7 +94,7 @@ afterBtn.addEventListener('click', function() {
 
 Have a look at our [insertAdjacentElement.html](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentElement.html)
 demo on GitHub (see the [source
-code](https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentElement.html) too.) Here, we have a sequence of {{htmlelement("div")}} elements inside a
+code](https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentElement.html) too.) Here, we have a sequence of {{htmlelement("div")}} elements inside a
 container. When one is clicked, it becomes selected and you can then press the
 _Insert before_ and _Insert after_ buttons to insert new divs before or
 after the selected element using `insertAdjacentElement()`.

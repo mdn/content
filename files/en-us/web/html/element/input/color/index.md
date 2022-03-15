@@ -28,7 +28,7 @@ The element's presentation may vary substantially from one browser and/or platfo
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
         A 7-character {{domxref("DOMString")}} specifying a
         {{cssxref("&lt;color&gt;")}} in lower-case hexadecimal notation

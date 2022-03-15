@@ -193,7 +193,7 @@ So to represent our app, we want to create 4 components:
 - Individual Todo
 - Footer
 
-To create a component, we use the `ember generate component` command, followed by the name of the component. Let’s create the header component first. To do so:
+To create a component, we use the `ember generate component` command, followed by the name of the component. Let's create the header component first. To do so:
 
 1. Stop the server running by going to the terminal and pressing <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 2. Enter the following command into your terminal:
@@ -213,13 +213,13 @@ To create a component, we use the `ember generate component` command, followed b
       create tests/integration/components/header-test.js
     ```
 
-`header.hbs` is the template file where we’ll include the HTML structure for just that component. Later on we'll add the required dynamic functionality such as data bindings, responding to user interaction, etc.
+`header.hbs` is the template file where we'll include the HTML structure for just that component. Later on we'll add the required dynamic functionality such as data bindings, responding to user interaction, etc.
 
 > **Note:** The `header.js` file (shown as skipped) is for connection to a backing Glimmer Component Class, which we don't need for now, as they are for adding interactivity and state manipulation. By default, `generate component` generates template-only components, because in large applications, template-only components end up being the majority of the components.
 
 `header-test.js` is for writing automated tests to ensure that our app continues to work over time as we upgrade, add features, refactor, etc. Testing is outside the scope of this tutorial, although generally testing should be implemented as you develop, rather than after, otherwise it tends to be forgotten about. If you're curious about testing, or why you would want to have automated tests, check out the [official Ember tutorial on testing](https://guides.emberjs.com/release/tutorial/part-1/automated-testing/).
 
-Before we start adding any component code, let’s create the scaffolding for the other components. Enter the following lines into your terminal, one by one:
+Before we start adding any component code, let's create the scaffolding for the other components. Enter the following lines into your terminal, one by one:
 
 ```bash
 ember generate component todo-list
@@ -227,7 +227,7 @@ ember generate component todo
 ember generate component footer
 ```
 
-You’ll now see the following inside your `todomvc/app/components` directory:
+You'll now see the following inside your `todomvc/app/components` directory:
 
 ![the app components directory, showing the component template files we've created](todos-components-directory.png)
 

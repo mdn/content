@@ -42,7 +42,7 @@ This property may take one of two forms:
 - `row`
   - : Items are placed by filling each row in turn, adding new rows as necessary. If neither `row` nor `column` is provided, `row` is assumed.
 - `column`
-  - : Items are placed by filling each column in turn, adding new columns as necessary.
+  - : Items are placed by filling each column in turn, adding new columns as necessary.
 - `dense`
 
   - : "dense" packing algorithm attempts to fill in holes earlier in the grid, if smaller items come up later. This may cause items to appear out-of-order, when doing so would fill in holes left by larger items.
@@ -65,15 +65,15 @@ This property may take one of two forms:
 
 ```html
 <div id="grid">
-  <div id="item1"></div>
-  <div id="item2"></div>
-  <div id="item3"></div>
-  <div id="item4"></div>
-  <div id="item5"></div>
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
+  <div id="item4"></div>
+  <div id="item5"></div>
 </div>
 <select id="direction">
-  <option value="column">column</option>
-  <option value="row">row</option>
+  <option value="column">column</option>
+  <option value="row">row</option>
 </select>
 <input id="dense" type="checkbox">
 <label for="dense">dense</label>

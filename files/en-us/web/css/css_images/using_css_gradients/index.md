@@ -410,7 +410,7 @@ div {
 
 ### Sizing radial gradients
 
-Unlike linear gradients, you can specify the size of radial gradients. Possible values include `closest-corner`, `closest-side`, `farthest-corner`, and `farthest-side`, with `farthest-corner` being the default. Circles can also be sized with a length, and ellipses a length or percentage.
+Unlike linear gradients, you can specify the size of radial gradients. Possible values include `closest-corner`, `closest-side`, `farthest-corner`, and `farthest-side`, with `farthest-corner` being the default. Circles can also be sized with a length, and ellipses a length or percentage.
 
 #### Example: closest-side for ellipses
 
@@ -486,7 +486,7 @@ div {
 
 #### Example: length or percentage for ellipses
 
-For ellipses only, you can size the ellipse using a length or percentage. The first value represents the horizontal radius, the second the vertical radius, where you use a percentage this corresponds to the size of the box in that dimension. In the below example I have used a percentage for the horizontal radius.
+For ellipses only, you can size the ellipse using a length or percentage. The first value represents the horizontal radius, the second the vertical radius, where you use a percentage this corresponds to the size of the box in that dimension. In the below example I have used a percentage for the horizontal radius.
 
 ```html hidden
 <div class="radial-ellipse-size"></div>
@@ -501,8 +501,8 @@ div {
 
 ```css
 .radial-ellipse-size {
-   background: radial-gradient(ellipse 50% 50px,
-      red, yellow 10%, #1e90ff 50%, beige);
+   background: radial-gradient(ellipse 50% 50px,
+      red, yellow 10%, #1e90ff 50%, beige);
 }
 ```
 
@@ -526,7 +526,7 @@ div {
 ```css
 .radial-circle-size {
   background: radial-gradient(circle 50px,
-      red, yellow 10%, #1e90ff 50%, beige);
+      red, yellow 10%, #1e90ff 50%, beige);
 }
 ```
 
@@ -644,7 +644,7 @@ div {
 
 ## Using repeating gradients
 
-The {{cssxref("gradient/linear-gradient()", "linear-gradient()")}}, {{cssxref("gradient/radial-gradient()", "radial-gradient()")}}, and {{cssxref("gradient/conic-gradient()", "conic-gradient()")}} functions don't support automatically repeated color stops. However, the {{cssxref("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}}, and {{cssxref("gradient/repeating-conic-gradient()", "repeating-conic-gradient()")}} functions are available to offer this functionality.
+The {{cssxref("gradient/linear-gradient()", "linear-gradient()")}}, {{cssxref("gradient/radial-gradient()", "radial-gradient()")}}, and {{cssxref("gradient/conic-gradient()", "conic-gradient()")}} functions don't support automatically repeated color stops. However, the {{cssxref("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}}, and {{cssxref("gradient/repeating-conic-gradient()", "repeating-conic-gradient()")}} functions are available to offer this functionality.
 
 The size of the gradient line or arc that repeats is the length between the first color stop value and the last color stop length value. If the first color stop just has a color and no color stop length, the value defaults to 0. If the last color stop has just a color and no color stop length, the value defaults to 100%. If neither is declared, the gradient line is 100% meaning the linear and conic gradients will not repeat and the radial gradient will only repeat if the radius of the gradient is smaller than the length between the center of the gradient and the farthest corner. If the first color stop is declared, and the value is greater than 0, the gradient will repeat, as the size of the line or arc is the difference between the first color stop and last color stop is less than 100% or 360 degrees.
 
@@ -819,7 +819,7 @@ div {
 
 ## See also
 
-- Gradient functions: {{cssxref("gradient/linear-gradient()", "linear-gradient()")}}, {{cssxref("gradient/radial-gradient()", "radial-gradient()")}}, {{cssxref("gradient/conic-gradient()", "conic-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient()", "repeating-conic-gradient()")}}
+- Gradient functions: {{cssxref("gradient/linear-gradient()", "linear-gradient()")}}, {{cssxref("gradient/radial-gradient()", "radial-gradient()")}}, {{cssxref("gradient/conic-gradient()", "conic-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient()", "repeating-conic-gradient()")}}
 - Gradient-related CSS data types: {{cssxref("&lt;gradient&gt;")}}, {{cssxref("&lt;image&gt;")}}
 - Gradient-related CSS properties: {{cssxref("background")}}, {{cssxref("background-image")}}
 - [CSS Gradients Patterns Gallery, by Lea Verou](https://projects.verou.me/css3patterns/)

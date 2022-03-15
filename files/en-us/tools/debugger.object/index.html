@@ -53,14 +53,14 @@ slug: Tools/Debugger.Object
 var g = function () {};  // display name: g
 o.p = function () {};    // display name: o.p
 var q = {
-  r: function () {}      // display name: q.r
+  r: function () {}      // display name: q.r
 };</code></pre>
 
- <p>Note that the display name may not be a proper JavaScript identifier, or even a proper expression: we attempt to find helpful names even when the function is not immediately assigned as the value of some variable or property. Thus, we use <code><em>a</em>/<em>b</em></code> to refer to the <em>b</em> defined within <em>a</em>, and <code><em>a</em>&lt;</code> to refer to a function that occurs somewhere within an expression that is assigned to <em>a</em>. For example:</p>
+ <p>Note that the display name may not be a proper JavaScript identifier, or even a proper expression: we attempt to find helpful names even when the function is not immediately assigned as the value of some variable or property. Thus, we use <code><em>a</em>/<em>b</em></code> to refer to the <em>b</em> defined within <em>a</em>, and <code><em>a</em>&lt;</code> to refer to a function that occurs somewhere within an expression that is assigned to <em>a</em>. For example:</p>
 
  <pre><code>function h() {
-  var i = function() {};    // display name: h/i
-  f(function () {});        // display name: h/&lt;
+  var i = function() {};    // display name: h/i
+  f(function () {});        // display name: h/&lt;
 }
 
 var s = f(function () {});  // display name: s&lt;</code></pre>

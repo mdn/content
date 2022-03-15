@@ -26,7 +26,7 @@ Sensor interfaces are only proxies for the underlying device sensors. Consequent
 
 Therefore, feature detection for sensor APIs must include both detection of the APIs themselves and [defensive programming strategies (see below)](#defensive_programming).
 
-The examples below show three methods for detecting sensor APIs. Additionally you can put object instantiation inside a {{jsxref('statements/try...catch', 'try...catch')}} block. Notice that detection through the {{domxref('Navigator')}} interface is not one of the available options.
+The examples below show three methods for detecting sensor APIs. Additionally you can put object instantiation inside a {{jsxref('statements/try...catch', 'try...catch')}} block. Notice that detection through the {{domxref('Navigator')}} interface is not one of the available options.
 
 ```js
 if (typeof Gyroscope === "function") {

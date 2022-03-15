@@ -19,7 +19,7 @@ browser-compat: javascript.functions.arguments
 
 > **Note:** If you're writing ES6 compatible code, then [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) should be preferred.
 
-> **Note:** “Array-like” means that `arguments` has a {{jsxref("Functions/arguments/length", "length")}} property and properties indexed from zero, but it doesn't have {{JSxRef("Array")}}'s built-in methods like {{jsxref("Array.forEach", "forEach()")}} or {{jsxref("Array.map", "map()")}}. See [§Description](#description) for details.
+> **Note:** "Array-like" means that `arguments` has a {{jsxref("Functions/arguments/length", "length")}} property and properties indexed from zero, but it doesn't have {{JSxRef("Array")}}'s built-in methods like {{jsxref("Array.forEach", "forEach()")}} or {{jsxref("Array.map", "map()")}}. See [§Description](#description) for details.
 
 The `arguments` object is a local variable available within all non-[arrow](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) functions. You can refer to a function's arguments inside that function by using its `arguments` object. It has entries for each argument the function was called with, with the first entry's index at `0`.
 

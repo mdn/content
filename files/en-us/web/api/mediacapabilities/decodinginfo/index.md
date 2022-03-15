@@ -32,8 +32,8 @@ mediaCapabilities.decodingInfo(MediaDecodingConfiguration)
 
 A {{jsxref('Promise')}} fulfilling with an object containing three Boolean attributes:
 
-- `supported`: Given the properties defined in the {{domxref("MediaConfiguration")}}, can the specified piece of media content be encoded (if {{domxref("MediaEncodingConfiguration")}} is set) or decode (if {{domxref("MediaDecodingConfiguration")}} is set) at all? If yes, `supported` is _true_. Otherwise, it is _false_.
-- `smooth`: Given the properties defined in the {{domxref("MediaConfiguration")}}, will the playback of the specified piece of media be high quality? Will it be smooth?  If `supported` is `true`, and playback will be smooth, `smooth` is _true_, Otherwise, is it _false._
+- `supported`: Given the properties defined in the {{domxref("MediaConfiguration")}}, can the specified piece of media content be encoded (if {{domxref("MediaEncodingConfiguration")}} is set) or decode (if {{domxref("MediaDecodingConfiguration")}} is set) at all? If yes, `supported` is _true_. Otherwise, it is _false_.
+- `smooth`: Given the properties defined in the {{domxref("MediaConfiguration")}}, will the playback of the specified piece of media be high quality? Will it be smooth?  If `supported` is `true`, and playback will be smooth, `smooth` is _true_, Otherwise, is it _false._
 - `powerEfficient`: Given the properties defined in the {{domxref("MediaConfiguration")}}, will the playback of the specified piece of media be power efficient? If `supported` is `true`, and playback will be power efficient, `powerEfficient` is _true_, Otherwise, is it _false._
 
 Browsers will report a supported media configuration as `smooth` and `powerEfficient` until stats on this device have been recorded. All supported audio codecs are reported to be power efficient.

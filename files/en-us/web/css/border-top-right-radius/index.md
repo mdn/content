@@ -158,4 +158,4 @@ div {
 ## See also
 
 - {{cssxref("border-radius")}} shorthand property
-- {{cssxref("border-bottom-right-radius")}}, {{cssxref("border-bottom-left-radius")}}, and {{cssxref("border-top-left-radius")}}
+- {{cssxref("border-bottom-right-radius")}}, {{cssxref("border-bottom-left-radius")}}, and {{cssxref("border-top-left-radius")}}

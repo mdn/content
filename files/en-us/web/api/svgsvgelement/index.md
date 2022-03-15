@@ -121,21 +121,21 @@ _This interface also inherits methods from its parent, {{domxref("SVGGraphicsEle
 - {{domxref("SVGSVGElement.deselectAll()")}}
   - : Unselects any selected objects, including any selections of text strings and type-in bars.
 - {{domxref("SVGSVGElement.createSVGNumber()")}}
-  - : Creates an {{domxref("SVGNumber")}} object outside of any document trees. The object is initialized to `0`.
+  - : Creates an {{domxref("SVGNumber")}} object outside of any document trees. The object is initialized to `0`.
 - {{domxref("SVGSVGElement.createSVGLength()")}}
-  - : Creates an {{domxref("SVGLength")}} object outside of any document trees. The object is initialized to `0` user units.
+  - : Creates an {{domxref("SVGLength")}} object outside of any document trees. The object is initialized to `0` user units.
 - {{domxref("SVGSVGElement.createSVGAngle()")}}
-  - : Creates an {{domxref("SVGAngle")}} object outside of any document trees. The object is initialized to a value of `0` degrees (unitless).
+  - : Creates an {{domxref("SVGAngle")}} object outside of any document trees. The object is initialized to a value of `0` degrees (unitless).
 - {{domxref("SVGSVGElement.createSVGPoint()")}}
-  - : Creates an {{domxref("SVGPoint")}} object outside of any document trees. The object is initialized to the point `(0,0)` in the user coordinate system.
+  - : Creates an {{domxref("SVGPoint")}} object outside of any document trees. The object is initialized to the point `(0,0)` in the user coordinate system.
 - {{domxref("SVGSVGElement.createSVGMatrix()")}}
-  - : Creates an {{domxref("SVGMatrix")}} object outside of any document trees. The object is initialized to the identity matrix.
+  - : Creates an {{domxref("SVGMatrix")}} object outside of any document trees. The object is initialized to the identity matrix.
 - {{domxref("SVGSVGElement.createSVGRect()")}}
-  - : Creates an {{domxref("SVGRect")}} object outside of any document trees. The object is initialized such that all values are set to `0` user units.
+  - : Creates an {{domxref("SVGRect")}} object outside of any document trees. The object is initialized such that all values are set to `0` user units.
 - {{domxref("SVGSVGElement.createSVGTransform()")}}
-  - : Creates an {{domxref("SVGTransform")}} object outside of any document trees. The object is initialized to an identity matrix transform (`SVG_TRANSFORM_MATRIX`).
+  - : Creates an {{domxref("SVGTransform")}} object outside of any document trees. The object is initialized to an identity matrix transform (`SVG_TRANSFORM_MATRIX`).
 - {{domxref("SVGSVGElement.createSVGTransformFromMatrix()")}}
-  - : Creates an {{domxref("SVGTransform")}} object outside of any document trees. The object is initialized to the given matrix transform (i.e., `SVG_TRANSFORM_MATRIX`). The values from the parameter matrix are copied, the matrix parameter is not adopted as `SVGTransform::matrix`.
+  - : Creates an {{domxref("SVGTransform")}} object outside of any document trees. The object is initialized to the given matrix transform (i.e., `SVG_TRANSFORM_MATRIX`). The values from the parameter matrix are copied, the matrix parameter is not adopted as `SVGTransform::matrix`.
 - {{domxref("SVGSVGElement.getElementById()")}}
   - : Searches this SVG document fragment (i.e., the search is restricted to a subset of the document tree) for an Element whose `id` is given by `elementId`. If an Element is found, that Element is returned. If no such element exists, returns `null`. Behavior is not defined if more than one element has this id.
 

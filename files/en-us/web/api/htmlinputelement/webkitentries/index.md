@@ -64,7 +64,7 @@ document.getElementById("files").addEventListener("change", function(event) {
 });
 ```
 
-Each time a {{event("change")}} event occurs, this code iterates over the selected
+Each time a {{domxref("HTMLElement/change_event", "change")}} event occurs, this code iterates over the selected
 files, obtaining their {{domxref("FileSystemEntry")}}-based objects and acting on them.
 
 ## Specifications

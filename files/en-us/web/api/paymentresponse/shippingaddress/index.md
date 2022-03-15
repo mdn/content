@@ -15,8 +15,8 @@ browser-compat: api.PaymentResponse.shippingAddress
 ---
 {{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
-The **`shippingAddress`** read-only property of
-the `PaymentRequest` interface returns a {{domxref('PaymentAddress')}} object
+The **`shippingAddress`** read-only property of
+the `PaymentRequest` interface returns a {{domxref('PaymentAddress')}} object
 containing the shipping address provided by the user.
 
 ## Syntax
@@ -32,15 +32,15 @@ address provided by the user.
 
 ## Example
 
-Generally, the user agent will fill the `shippingAddress` property for you.
+Generally, the user agent will fill the `shippingAddress` property for you.
 You can trigger this by
-setting `PaymentOptions.requestShipping` to `true` when calling
-the {{domxref('PaymentRequest.paymentRequest','PaymentRequest')}} constructor.
+setting `PaymentOptions.requestShipping` to `true` when calling
+the {{domxref('PaymentRequest.paymentRequest','PaymentRequest')}} constructor.
 
 In the example below, the cost of shipping varies by geography. When the
 {{domxref('PaymentRequest.onshippingaddresschange')}} is
-called, `updateDetails()` is called to update the details of
-the `PaymentRequest`, using `shippingAddress` to set the correct
+called, `updateDetails()` is called to update the details of
+the `PaymentRequest`, using `shippingAddress` to set the correct
 shipping cost.
 
 ```js

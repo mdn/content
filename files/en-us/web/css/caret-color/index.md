@@ -23,7 +23,7 @@ The **`caret-color`** CSS property sets the color of the **insertion caret**, th
 
 {{EmbedInteractiveExample("pages/css/caret-color.html")}}
 
-Note that the insertion caret is only one type of caret. For example, many browsers have a “navigation caret,” which acts similarly to an insertion caret but can be moved around in non-editable text. On the other hand, the mouse cursor image shown when hovering over text where the {{cssxref("cursor")}} property is `auto`, or when hovering over an element where the `cursor` property is `text` or `vertical-text`, though it sometimes looks like a caret, is not a caret (it’s a cursor).
+Note that the insertion caret is only one type of caret. For example, many browsers have a "navigation caret," which acts similarly to an insertion caret but can be moved around in non-editable text. On the other hand, the mouse cursor image shown when hovering over text where the {{cssxref("cursor")}} property is `auto`, or when hovering over an element where the `cursor` property is `text` or `vertical-text`, though it sometimes looks like a caret, is not a caret (it's a cursor).
 
 ## Syntax
 

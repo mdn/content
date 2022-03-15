@@ -39,7 +39,7 @@ let results = browser.storage.<storageType>.get(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to a `results` object, containing every object in `keys` that was found in the storage area. If `keys` is an object, keys that are not found in the storage area will have their values given by the `keys` object.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to a `results` object, containing every object in `keys` that was found in the storage area. If `keys` is an object, keys that are not found in the storage area will have their values given by the `keys` object.
 
 If the operation failed, the promise is rejected with an error message.
 

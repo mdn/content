@@ -28,9 +28,9 @@ Number.parseFloat(string)
 
 ### Return value
 
-A floating point number parsed from the given `string`.
+A floating point number parsed from the given `string`.
 
-Or {{jsxref("NaN")}} when the first non-whitespace character cannot be converted to a number.
+Or {{jsxref("NaN")}} when the first non-whitespace character cannot be converted to a number.
 
 ## Examples
 

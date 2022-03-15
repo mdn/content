@@ -30,7 +30,7 @@ var myError = mediaError.code;
 ### Value
 
 A numeric value indicating the general type of error which occurred. The possible
-values are described below, in {{anch("Media error code constants")}}.
+values are described below, in [Media error code constants](#media_error_code_constants).
 
 #### Media error code constants
 

@@ -16,7 +16,7 @@ browser-compat: webextensions.api.browsingData.removeLocalStorage
 
 Clears any [local storage](/en-US/docs/Web/API/Window/localStorage) created by websites.
 
-You can use the `removalOptions` parameter, which is a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, to:
+You can use the `removalOptions` parameter, which is a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, to:
 
 - clear only local storage objects created after a given time
 - control whether to clear only local storage objects created by normal web pages or to clear objects created by hosted apps and extensions as well.
@@ -40,10 +40,6 @@ var removing = browser.browsingData.removeLocalStorage(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the removal has finished. If any error occurs, the promise will be rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Remove all local storage:
@@ -60,6 +56,10 @@ function onError(error) {
 browser.browsingData.removeLocalStorage({}).
 then(onRemoved, onError);
 ```
+
+## Browser compatibility
+
+{{Compat}}
 
 {{WebExtExamples}}
 

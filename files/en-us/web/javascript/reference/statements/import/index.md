@@ -18,16 +18,16 @@ The static **`import`** statement is
 used to import read only live bindings which are [exported](/en-US/docs/Web/JavaScript/Reference/Statements/export) by
 another module.
 
-Imported modules are in {{JSxRef("Strict_mode","strict mode")}}
+Imported modules are in {{JSxRef("Strict_mode","strict mode")}}
 whether you declare them as such or not. The `import` statement cannot be
 used in embedded scripts unless such script has a `type="module"`. Bindings
-imported are called live bindings because they are updated by the module that exported
+imported are called live bindings because they are updated by the module that exported
 the binding.
 
 There is also a function-like dynamic **`import()`**, which
 does not require scripts of `type="module"`.
 
-Backward compatibility can be ensured using attribute `nomodule` on the
+Backward compatibility can be ensured using attribute `nomodule` on the
 {{HTMLElement("script")}} tag.
 
 ## Syntax
@@ -50,8 +50,8 @@ var promise = import("module-name");
 - `module-name`
   - : The module to import from. This is often a relative or absolute url to the
     `.js` file containing the module. Certain bundlers may permit or require
-    the use of the extension; check your environment. Only single quoted and double
-    quoted Strings are allowed.
+    the use of the extension; check your environment. Only single quoted and double
+    quoted Strings are allowed.
 - `name`
   - : Name of the module object that will be used as a kind of namespace when referring to
     the imports.
@@ -134,14 +134,14 @@ the module's global code, but doesn't actually import any values.
 import '/modules/my-module.js';
 ```
 
-This works with {{anch("Dynamic Imports", "dynamic imports")}} as well:
+This works with [dynamic imports](#dynamic_imports) as well:
 
 ```js
 (async () => {
   if (somethingIsTrue) {
-    // import module for side effects
-    await import('/modules/my-module.js');
-  }
+    // import module for side effects
+    await import('/modules/my-module.js');
+  }
 })();
 ```
 
@@ -177,14 +177,14 @@ import myDefault, {foo, bar} from '/modules/my-module.js';
 // specific, named imports
 ```
 
-When importing a default export with {{anch("Dynamic Imports", "dynamic imports")}}, it
+When importing a default export with [dynamic imports](#dynamic_imports), it
 works a bit differently. You need to destructure and rename the "default" key from the
 returned object.
 
 ```js
 (async () => {
   if (somethingIsTrue) {
-    const { default: myDefault, foo, bar } = await import('/modules/my-module.js');
+    const { default: myDefault, foo, bar } = await import('/modules/my-module.js');
   }
 })();
 ```
@@ -193,7 +193,7 @@ returned object.
 
 The standard import syntax is static and will always result in all code in the imported
 module being evaluated at load time. In situations where you wish to load a module
-conditionally or on demand, you can use a dynamic import instead. The following are some
+conditionally or on demand, you can use a dynamic import instead. The following are some
 reasons why you might need to use dynamic import:
 
 - When importing statically significantly slows the loading of your code and there is
@@ -208,17 +208,17 @@ reasons why you might need to use dynamic import:
   effects unless some condition is true. (It is recommended not to have any side effects
   in a module, but you sometimes cannot control this in your module dependencies.)
 
-Use dynamic import only when necessary. The static form is preferable for loading
+Use dynamic import only when necessary. The static form is preferable for loading
 initial dependencies, and can benefit more readily from static analysis tools and [tree shaking](/en-US/docs/Glossary/Tree_shaking).
 
-To dynamically import a module, the `import` keyword may be called as a
+To dynamically import a module, the `import` keyword may be called as a
 function. When used this way, it returns a promise.
 
 ```js
 import('/modules/my-module.js')
-  .then((module) => {
-    // Do something with the module.
-  });
+  .then((module) => {
+    // Do something with the module.
+  });
 ```
 
 This form also supports the `await` keyword.
@@ -231,7 +231,7 @@ let module = await import('/modules/my-module.js');
 
 ### Standard Import
 
-The code below shows how to import from a secondary module to assist in processing an
+The code below shows how to import from a secondary module to assist in processing an
 AJAX JSON request.
 
 #### The module: file.js

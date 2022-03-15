@@ -15,7 +15,7 @@ These criteria signify enough interest, stability, and intent to implement by th
 
 ## Non-web standards technologies
 
-Non-web standards technologies are technologies that do not follow our criteria summarised above. We would not normally consider them for documentation on MDN. However, there are many technologies that are not web standards, but are useful and interesting to web developers — think about developer tools, libraries, and frameworks as some of the more obvious examples.
+Non-web standards technologies are technologies that do not follow our criteria summarized above. We would not normally consider them for documentation on MDN. However, there are many technologies that are not web standards, but are useful and interesting to web developers — think about developer tools, libraries, and frameworks as some of the more obvious examples.
 
 Our mission statement is _"to provide developers with the information they need to easily build projects on the open Web"_. This suggests that we should consider documenting technologies that are useful to web developers, even if they are not open web standards, on the standards track, etc. Hence the creation of the Web-related technologies section as a place to house such documentation.
 

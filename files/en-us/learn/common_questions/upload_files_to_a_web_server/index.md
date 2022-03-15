@@ -84,7 +84,7 @@ Let's first look at `http://demozilla.examplehostingprovider.net/` — as you ca
 
 ![Our demozilla personal website, seen in a browser: it's empty](demozilla-empty.png)
 
-> **Note:** Depending on your hosting provider, most of the time you'll see a page saying something like “This website is hosted by \[Hosting Service].” when you first go to your web address.
+> **Note:** Depending on your hosting provider, most of the time you'll see a page saying something like "This website is hosted by \[Hosting Service]." when you first go to your web address.
 
 To connect your SFTP client to the distant server, follow these steps:
 

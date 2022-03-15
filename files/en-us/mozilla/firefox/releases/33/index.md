@@ -57,7 +57,7 @@ For details please [see the hacks post](https://hacks.mozilla.org/2014/07/event-
 - The {{jsxref("Map.prototype.set()")}}, {{jsxref("WeakMap.prototype.set()")}} and {{jsxref("Set.prototype.add()")}} methods are now chainable, return their equivalent objects and no longer `undefined` ({{bug(1031632)}}).
 - A [default parameter](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) is evaluated before function declarations inside the function body, so those functions cannot be referred from default parameter ({{bug(1022962)}}).
 - Shorthand properties are now allowed in object literals: if not explicitly defined, property keys are initialized by variables of the same name. E.g. `function f(x, y) { return {x, y}; }` is equivalent to `function f(x, y) { return {x: x, y: y}; }` ({{bug(875002)}}).
-- The parsing of [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) and [`yield*`](/en-US/docs/Web/JavaScript/Reference/Operators/yield*) has been updated to conform with the latest ES2015 specification ({{bug(981599)}}).
+- The parsing of [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) and [`yield*`](/en-US/docs/Web/JavaScript/Reference/Operators/yield*) has been updated to conform with the latest ES2015 specification ({{bug(981599)}}).
 - The non-standard `hasOwn` trap has been removed ({{bug(980565)}}).
 
 ### Interfaces/APIs/DOM
@@ -73,7 +73,7 @@ For details please [see the hacks post](https://hacks.mozilla.org/2014/07/event-
 - The formerly called `loaded` event, sent on a {{domxref("HTMLTrackElement")}} has been renamed {{event("load")}} to match the specification ({{bug(1035505)}}).
 - The IndexedDB interface `FileHandle` has been renamed in {{domxref("IDBMutableFile")}} ({{bug(1006485)}}).
 - The IndexedDB interface {{domxref("LockedFile")}} has been renamed in {{domxref("IDBFileHandle")}} ({{bug(1006485)}}).
-- The {{domxref("ServiceWorker")}} interface has been implemented, behind the `dom.serviceWorkers.enabled` flag ({{bug(903441)}}).
+- The {{domxref("ServiceWorker")}} interface has been implemented, behind the `dom.serviceWorkers.enabled` flag ({{bug(903441)}}).
 - The {{domxref("NetworkInformation.type")}} now also support the `"unknown"` value ({{bug(1023029)}}).
 
 ### MathML

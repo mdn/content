@@ -14,7 +14,7 @@ browser-compat: api.MediaStreamTrack.muted
 {{APIRef("Media Capture and Streams")}}
 
 The **`muted`** read-only property of the
-{{domxref("MediaStreamTrack")}} interface returns a {{jsxref('Boolean')}} value
+{{domxref("MediaStreamTrack")}} interface returns a {{jsxref('Boolean')}} value
 indicating whether or not the track is currently unable to provide media output.
 
 > **Note:** To implement a way for users to mute and unmute a track, use the
@@ -31,7 +31,7 @@ const mutedFlag = track.muted
 
 ### Value
 
-A {{jsxref('Boolean')}} which is `true` if the track is currently muted, or
+A {{jsxref('Boolean')}} which is `true` if the track is currently muted, or
 `false` if the track is currently unmuted.
 
 > **Note:** When possible, avoid polling `muted` to monitor the track's muting status.

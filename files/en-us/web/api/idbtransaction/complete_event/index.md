@@ -10,30 +10,20 @@ browser-compat: api.IDBTransaction.complete_event
 ---
 {{APIRef("IndexedDB")}}
 
-The `complete` handler is executed when a transaction successfully completed.
+The **`complete`** event of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) is fired when the transaction successfully completed.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{DOMxRef("IDBTransaction.oncomplete", "oncomplete")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('complete', event => { });
+oncomplete = event => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -69,7 +59,7 @@ DBOpenRequest.onsuccess = event => {
 
   // add a listener for `complete`
   transaction.addEventListener('complete', event => {
-    console.log('Transaction was competed');
+    console.log('Transaction was completed');
   });
 
   const objectStore = transaction.objectStore('toDoList');
@@ -78,7 +68,7 @@ DBOpenRequest.onsuccess = event => {
 };
 ```
 
-Using the {{DOMxRef("IDBTransaction.oncomplete", "oncomplete")}} property:
+Using the `oncomplete` property:
 
 ```js
 // Open the database
@@ -110,7 +100,7 @@ DBOpenRequest.onsuccess = event => {
 
   // add a listener for `complete`
   transaction.oncomplete = event => {
-    console.log('Transaction was competed');
+    console.log('Transaction was completed');
   };
 
   const objectStore = transaction.objectStore('toDoList');
@@ -126,4 +116,3 @@ DBOpenRequest.onsuccess = event => {
 ## See also
 
 - [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- {{DOMxRef("IDBTransaction.oncomplete", "oncomplete")}} event handler property

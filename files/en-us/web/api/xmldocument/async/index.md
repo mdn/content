@@ -15,7 +15,7 @@ browser-compat: api.XMLDocument.async
 ---
 {{APIRef("DOM")}}{{Non-standard_header}}{{Deprecated_header}}
 
-`document.async` can be set to indicate whether a {{DOMxRef("XMLDocument.load()")}} call should be an asynchronous or synchronous request. `true` is the default value, indicating that documents should be loaded asynchronously.
+`document.async` can be set to indicate whether a {{DOMxRef("XMLDocument.load()")}} call should be an asynchronous or synchronous request. `true` is the default value, indicating that documents should be loaded asynchronously.
 
 (It has been possible to load documents synchronously since 1.4 alpha.)
 

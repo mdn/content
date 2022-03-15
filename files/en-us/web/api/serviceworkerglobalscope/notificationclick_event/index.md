@@ -5,7 +5,7 @@ tags:
   - Event
   - Notifications
   - Service Worker
-  - ServiceWorkerGloablScope
+  - ServiceWorkerGlobalScope
   - events
   - notificationclick
 browser-compat: api.ServiceWorkerGlobalScope.notificationclick_event

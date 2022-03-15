@@ -32,7 +32,7 @@ Out of flow items create a new Block Formatting Context (BFC) and therefore ever
 
 ### Floated Items
 
-In this example I have a `div`, and then two paragraphs. I’ve added a background color to the paragraphs, and then floated the `div` left. The `div` is now out of flow.
+In this example I have a `div`, and then two paragraphs. I've added a background color to the paragraphs, and then floated the `div` left. The `div` is now out of flow.
 
 As a float it is first laid out according to where it would be in normal flow, then taken out of flow and moved to the left as far as possible.
 

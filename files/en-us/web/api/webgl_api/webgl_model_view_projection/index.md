@@ -431,7 +431,7 @@ gl_Position = vec4(transformedPosition.xyz, w);
 
 ![Filling the W component and creating some projection.](part4.png)
 
-See that small dark blue triangle? That's an additional face added to our object because the rotation of our shape has caused that corner to extend outside clip space, thus causing the corner to be clipped away. See {{anch("Perspective projection matrix")}} below for an introduction to how to use more complex matrices to help control and prevent clipping.
+See that small dark blue triangle? That's an additional face added to our object because the rotation of our shape has caused that corner to extend outside clip space, thus causing the corner to be clipped away. See [Perspective projection matrix](#perspective_projection_matrix) below for an introduction to how to use more complex matrices to help control and prevent clipping.
 
 ### Exercise
 
@@ -521,7 +521,7 @@ CubeDemo.prototype.computeSimpleProjectionMatrix = function(scaleFactor) {
 };
 ```
 
-Although the result is identical, the important step here is in the vertex shader. Rather than modifying the vertex directly, it gets multiplied by an additional **{{anch("Projection matrix", "projection matrix")}}**, which (as the name suggests) projects 3D points onto a 2D drawing surface:
+Although the result is identical, the important step here is in the vertex shader. Rather than modifying the vertex directly, it gets multiplied by an additional **[projection matrix](#projection_matrix)**, which (as the name suggests) projects 3D points onto a 2D drawing surface:
 
 ```glsl
 // Make sure to read the transformations in reverse order
@@ -588,7 +588,7 @@ MDN.perspectiveMatrix = function(fieldOfViewInRadians, aspectRatio, near, far) {
 
 The four parameters into this function are:
 
-- `fieldOfviewInRadians`
+- `fieldOfViewInRadians`
   - : An angle, given in radians, indicating how much of the scene is visible to the viewer at once. The larger the number is, the more is visible by the camera. The geometry at the edges becomes more and more distorted, equivalent to a wide angle lens. When the field of view is larger, the objects typically get smaller. When the field of view is smaller, then the camera can see less and less in the scene. The objects are distorted much less by perspective and objects seem much closer to the camera
 - `aspectRatio`
   - : The scene's aspect ratio, which is equivalent to its width divided by its height. In these examples, that's the window's width divided by the window height. The introduction of this parameter finally solves the problem wherein the model gets warped as the canvas is resized and reshaped.

@@ -15,7 +15,7 @@ There are three main benefits to using WOFF:
 2. Many font vendors that are unwilling to license their TrueType or OpenType format fonts for use on the web will license WOFF format fonts. This improves availability of fonts to site designers.
 3. Both proprietary and free software browser vendors like the WOFF format, so it has the potential of becoming a truly universal, interoperable font format for the web, unlike other current font formats.
 
-There are two versions of WOFF; WOFF and WOFF2, they mostly differ in regard to the compression algorithm used. In {{cssxref("@font-face")}} they are identified by the `'woff'` and `'woff2'` format descriptor respectively.
+There are two versions of WOFF: WOFF and WOFF2. They mostly differ in regard to the compression algorithm used. In {{cssxref("@font-face")}} they are identified by the `'woff'` and `'woff2'` format descriptor respectively.
 
 ## Using WOFF
 

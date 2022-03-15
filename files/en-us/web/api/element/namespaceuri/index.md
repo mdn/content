@@ -23,7 +23,7 @@ namespace = element.namespaceURI
 
 ## Example
 
-In this snippet, an element is being examined for its {{domxref("localName")}} and its
+In this snippet, an element is being examined for its {{domxref("Element.localName", "localName")}} and its
 `namespaceURI`. If the `namespaceURI` returns the XUL namespace
 and the `localName` returns "browser", then the node is understood to be a
 XUL `<browser/>`.

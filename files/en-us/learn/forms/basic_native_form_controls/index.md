@@ -56,15 +56,15 @@ All basic text controls share some common behaviors:
 - They can be marked as {{htmlattrxref("readonly","input")}} (the user cannot modify the input value but it is still sent with the rest of the form data) or {{htmlattrxref("disabled","input")}} (the input value can't be modified and is never sent with the rest of the form data).
 - They can have a {{htmlattrxref("placeholder","input")}}; this is text that appears inside the text input box that should be used to briefly describe the purpose of the box.
 - They can be constrained in [`size`](/en-US/docs/Web/HTML/Attributes/size) (the physical size of the box) and [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength) (the maximum number of characters that can be entered into the box).
-- They can benefit from [spell checking](/en-US/docs/Web/HTML/Element/input#attr-spellcheck) (using the [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck) attribute), if the browser supports it.
+- They can benefit from spell checking (using the [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck) attribute), if the browser supports it.
 
-> **Note:** The {{htmlelement("input")}} element is unique amongst HTML elements because it can take many different forms depending on its [`type`](/en-US/docs/Web/HTML/Attributes/type) attribute value. It is used for creating most types of form widgets including single line text fields, time and date controls, controls without text input like checkboxes, radio buttons, and color pickers, and buttons.
+> **Note:** The {{htmlelement("input")}} element is unique amongst HTML elements because it can take many different forms depending on its [`type`](/en-US/docs/Web/HTML/Element/input#attr-type) attribute value. It is used for creating most types of form widgets including single line text fields, time and date controls, controls without text input like checkboxes, radio buttons, and color pickers, and buttons.
 
 ### Single line text fields
 
-A single line text field is created using an {{HTMLElement("input")}} element whose {{htmlattrxref("type","input")}} attribute value is set to `text`, or by omitting the  {{htmlattrxref("type","input")}} attribute altogether (`text` is the default value). The value `text` for this attribute is also the fallback value if the value you specify for the {{htmlattrxref("type","input")}} attribute is unknown by the browser (for example if you specify `type="color"` and the browser doesn't support native color pickers).
+A single line text field is created using an {{HTMLElement("input")}} element whose {{htmlattrxref("type","input")}} attribute value is set to `text`, or by omitting the  {{htmlattrxref("type","input")}} attribute altogether (`text` is the default value). The value `text` for this attribute is also the fallback value if the value you specify for the {{htmlattrxref("type","input")}} attribute is unknown by the browser (for example if you specify `type="color"` and the browser doesn't support native color pickers).
 
-> **Note:** You can find examples of all the single line text field types on GitHub at [single-line-text-fields.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/single-line-text-fields.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html)).
+> **Note:** You can find examples of all the single line text field types on GitHub at [single-line-text-fields.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/single-line-text-fields.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html)).
 
 Here is a basic single line text field example:
 
@@ -104,45 +104,45 @@ Another original text control is the `hidden` input type. This is used to create
 
 If you create such an element, it's required to set its `name` and `value` attributes. The value can be dynamically set via JavaScript. The `hidden` input type should not have an associated label.
 
-Other text input types, like {{HTMLElement("input/search", "search")}}, {{HTMLElement("input/url", "url")}}, and {{HTMLElement("input/tel", "tel")}}, were added with HTML5. Those will be covered in the next tutorial, HTML5 input types.
+Other text input types, like {{HTMLElement("input/search", "search")}}, {{HTMLElement("input/url", "url")}}, and {{HTMLElement("input/tel", "tel")}}, were added with HTML5. Those will be covered in the next tutorial, [HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types).
 
 ## Checkable items: checkboxes and radio buttons
 
 Checkable items are controls whose state you can change by clicking on them or their associated labels. There are two kinds of checkable item: the check box and the radio button. Both use the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#attr-checked) attribute to indicate whether the widget is checked by default or not.
 
-It's worth noting that these widgets do not behave exactly like other form widgets. For most form widgets, once the form is submitted all widgets that have a [`name`](/en-US/docs/Web/HTML/Attributes/name) attribute are sent, even if no value has been filled out. In the case of checkable items, their values are sent only if they are checked. If they are not checked, nothing is sent, not even their name. If they are checked but have no value, the name is sent with a value of _on._
+It's worth noting that these widgets do not behave exactly like other form widgets. For most form widgets, once the form is submitted all widgets that have a [`name`](/en-US/docs/Web/HTML/Element/input#attr-name) attribute are sent, even if no value has been filled out. In the case of checkable items, their values are sent only if they are checked. If they are not checked, nothing is sent, not even their name. If they are checked but have no value, the name is sent with a value of _on._
 
-> **Note:** You can find the examples from this section on GitHub as [checkable-items.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/checkable-items.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html)).
+> **Note:** You can find the examples from this section on GitHub as [checkable-items.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/checkable-items.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html)).
 
-For maximum usability/accessibility, you are advised to surround each list of related items in a {{htmlelement("fieldset")}}, with a {{htmlelement("legend")}} providing an overall description of the list.  Each individual pair of {{htmlelement("label")}}/{{htmlelement("input")}} elements should be contained in its own list item (or similar). The associated {{htmlelement('label')}} is generally placed immediately after the radio button or checkbox, with the instructions for the group of radio button or checkboxes generally being the content of the {{htmlelement("legend")}}. See the examples linked above for structural examples.
+For maximum usability/accessibility, you are advised to surround each list of related items in a {{htmlelement("fieldset")}}, with a {{htmlelement("legend")}} providing an overall description of the list.  Each individual pair of {{htmlelement("label")}}/{{htmlelement("input")}} elements should be contained in its own list item (or similar). The associated {{htmlelement('label')}} is generally placed immediately after the radio button or checkbox, with the instructions for the group of radio button or checkboxes generally being the content of the {{htmlelement("legend")}}. See the examples linked above for structural examples.
 
 ### Check box
 
-A check box is created using the {{HTMLElement("input")}} element with a [`type`](/en-US/docs/Web/HTML/Attributes/type) attribute set to the value {{HTMLElement("input/checkbox", "checkbox")}}.
+A check box is created using the {{HTMLElement("input")}} element with a [`type`](/en-US/docs/Web/HTML/Element/input#attr-type) attribute set to the value {{HTMLElement("input/checkbox", "checkbox")}}.
 
 ```html
 <input type="checkbox" id="questionOne" name="subscribe" value="yes" checked>
 ```
 
-Related checkbox items should use the same {{htmlattrxref("name","input")}} attribute. Including the [`checked`](/en-US/docs/Web/HTML/Attributes/checked) attribute makes the checkbox checked automatically when the page loads. Clicking the checkbox or its associated label toggles the checkbox on and off.
+Related checkbox items should use the same {{htmlattrxref("name","input")}} attribute. Including the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#attr-checked) attribute makes the checkbox checked automatically when the page loads. Clicking the checkbox or its associated label toggles the checkbox on and off.
 
 ```html
 <fieldset>
-  <legend>Choose all the vegetables you like to eat</legend>
-  <ul>
-    <li>
-      <label for="carrots">Carrots</label>
-      <input type="checkbox" id="carrots" name="vegetable" value="carrots" checked>
-    </li>
-    <li>
-      <label for="peas">Peas</label>
-      <input type="checkbox" id="peas" name="vegetable" value="peas">
-    </li>
-    <li>
-      <label for="cabbage">Cabbage</label>
-      <input type="checkbox" id="cabbage" name="vegetable" value="cabbage">
-    </li>
-  </ul>
+  <legend>Choose all the vegetables you like to eat</legend>
+  <ul>
+    <li>
+      <label for="carrots">Carrots</label>
+      <input type="checkbox" id="carrots" name="vegetable" value="carrots" checked>
+    </li>
+    <li>
+      <label for="peas">Peas</label>
+      <input type="checkbox" id="peas" name="vegetable" value="peas">
+    </li>
+    <li>
+      <label for="cabbage">Cabbage</label>
+      <input type="checkbox" id="cabbage" name="vegetable" value="cabbage">
+    </li>
+  </ul>
 </fieldset>
 ```
 
@@ -150,9 +150,9 @@ The following screenshots show default, focused and disabled checkboxes in Firef
 
 ![Default, focused and disabled Checkboxes in Firefox 71 and Safari 13 on Mac and Chrome 79 and Edge 18 on Windows 10](checkboxes.png)
 
-> **Note:** Any checkboxes and radio buttons with the [`checked`](/en-US/docs/Web/HTML/Attributes/checked) attribute on load match the {{cssxref(':default')}} pseudo class, even if they are no longer checked. Any that are currently checked match the {{cssxref(':checked')}} pseudo class.
+> **Note:** Any checkboxes and radio buttons with the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#attr-checked) attribute on load match the {{cssxref(':default')}} pseudo class, even if they are no longer checked. Any that are currently checked match the {{cssxref(':checked')}} pseudo class.
 
-Due to the on-off nature of checkboxes, the checkbox is considered a toggle button, with many developers and designers expanding on the default checkbox styling to create buttons that look like toggle switches. You can [see an example in action here](https://mdn.github.io/learning-area/html/forms/toggle-switch-example/) (also see the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/toggle-switch-example/index.html)).
+Due to the on-off nature of checkboxes, the checkbox is considered a toggle button, with many developers and designers expanding on the default checkbox styling to create buttons that look like toggle switches. You can [see an example in action here](https://mdn.github.io/learning-area/html/forms/toggle-switch-example/) (also see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/toggle-switch-example/index.html)).
 
 ### Radio button
 
@@ -166,21 +166,21 @@ Several radio buttons can be tied together. If they share the same value for the
 
 ```html
 <fieldset>
-  <legend>What is your favorite meal?</legend>
-  <ul>
-    <li>
-      <label for="soup">Soup</label>
-      <input type="radio" id="soup" name="meal" value="soup" checked>
-    </li>
-    <li>
-      <label for="curry">Curry</label>
-      <input type="radio" id="curry" name="meal" value="curry">
-    </li>
-    <li>
-      <label for="pizza">Pizza</label>
-      <input type="radio" id="pizza" name="meal" value="pizza">
-    </li>
-  </ul>
+  <legend>What is your favorite meal?</legend>
+  <ul>
+    <li>
+      <label for="soup">Soup</label>
+      <input type="radio" id="soup" name="meal" value="soup" checked>
+    </li>
+    <li>
+      <label for="curry">Curry</label>
+      <input type="radio" id="curry" name="meal" value="curry">
+    </li>
+    <li>
+      <label for="pizza">Pizza</label>
+      <input type="radio" id="pizza" name="meal" value="pizza">
+    </li>
+  </ul>
 </fieldset>
 ```
 
@@ -203,7 +203,7 @@ Then we also have the {{htmlelement("button")}} element itself. This can take a 
 
 > **Note:** The `image` input type also renders as a button. We'll cover that later too.
 
-> **Note:** You can find the examples from this section on GitHub as [button-examples.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/button-examples.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/button-examples.html)).
+> **Note:** You can find the examples from this section on GitHub as [button-examples.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/button-examples.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/button-examples.html)).
 
 Below you can find examples of each button `<input>` type, along with the equivalent `<button>` type.
 
@@ -295,8 +295,8 @@ Many of the elements used to define form controls have some of their own specifi
 <table class="no-markdown">
   <thead>
     <tr>
-      <th scope="col">Attribute name</th>
-      <th scope="col">Default value</th>
+      <th scope="col">Attribute name</th>
+      <th scope="col">Default value</th>
       <th scope="col">Description</th>
     </tr>
   </thead>
@@ -334,7 +334,7 @@ Many of the elements used to define form controls have some of their own specifi
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/form">form</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/form">form</a></code>
       </td>
       <td></td>
       <td>
@@ -348,14 +348,14 @@ Many of the elements used to define form controls have some of their own specifi
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/name">name</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/input#attr-name">name</a></code>
       </td>
       <td></td>
       <td>The name of the element; this is submitted with the form data.</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/value">value</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/input#attr-value">value</a></code>
       </td>
       <td></td>
       <td>The element's initial value.</td>

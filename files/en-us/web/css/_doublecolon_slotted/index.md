@@ -20,12 +20,12 @@ This only works when used inside CSS placed within a [shadow DOM](/en-US/docs/We
 ```css
 /* Selects any element placed inside a slot */
 ::slotted(*) {
-  font-weight: bold;
+  font-weight: bold;
 }
 
 /* Selects any <span> placed inside a slot */
 ::slotted(span) {
-  font-weight: bold;
+  font-weight: bold;
 }
 ```
 

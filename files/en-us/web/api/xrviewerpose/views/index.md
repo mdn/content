@@ -26,12 +26,12 @@ returns an array which contains every {{domxref("XRView")}} which must be render
 order to fully represent the scene from the viewpoint defined by the viewer pose. For
 monoscopic devices, this array contains a single view.
 
-> **Warning:** There is no guarantee that the number of views will
+> **Warning:** There is no guarantee that the number of views will
 > remain constant over the lifetime of an {{domxref("XRSession")}}. For each frame, you
 > should always use the current length of this array rather than caching the value.
 
-Stereo views require two views to render properly, with the left eye's view having its
-{{domxref("XRView.eye", "eye")}} set to the string `left` and the right eye's
+Stereo views require two views to render properly, with the left eye's view having its
+{{domxref("XRView.eye", "eye")}} set to the string `left` and the right eye's
 view a value of `right`.
 
 ## Value

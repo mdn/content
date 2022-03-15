@@ -20,7 +20,7 @@ The **`HTMLHeadingElement`** interface represents the different heading elements
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLHeadingElement.align")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}} representing an enumerated attribute indicating alignment of the heading with respect to the surrounding context. The possible values are `"left"`, `"right"`, `"justify"`, and `"center"`.
+  - : Is a {{domxref("DOMString")}} representing an enumerated attribute indicating alignment of the heading with respect to the surrounding context. The possible values are `"left"`, `"right"`, `"justify"`, and `"center"`.
 
 ## Methods
 

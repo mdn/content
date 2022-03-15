@@ -311,7 +311,7 @@ You can also use RGBA colors — these work in exactly the same way as RGB color
 
 > **Note:** Setting an alpha channel on a color has one key difference to using the {{cssxref("opacity")}} property we looked at earlier. When you use opacity you make the element and everything inside it opaque, whereas using RGBA colors only makes the color you are specifying opaque.
 
-In the example below I have added a background image to the containing block of our colored boxes. I have then set the boxes to have different opacity values — notice how the background shows through more when the alpha channel value is smaller.
+In the example below, we have added a background image to the containing block of our colored boxes. We have then set the boxes to have different opacity values — notice how the background shows through more when the alpha channel value is smaller.
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/color-rgba.html", '100%', 770)}}
 

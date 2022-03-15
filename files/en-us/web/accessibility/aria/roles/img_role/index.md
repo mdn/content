@@ -24,7 +24,7 @@ The ARIA `img` role can be used to identify multiple elements inside page conten
 
 Any set of content that should be consumed as a single image (which could include images, video, audio, code snippets, emojis, or other content) can be identified using `role="img"`.
 
-You shouldn't count on the alt text of individual images for conveying context to assistive technologies; most screenreaders will consider the element with `role="img"` set on it to be like a black box, and not access the individual elements inside it.  Therefore, provide a comprehensive overall descriptive alt text for image, either in the surrounding text, or by using an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute, with optional alt attributes for search engines or sighted users to be written to the page should an image fail:
+You shouldn't count on the alt text of individual images for conveying context to assistive technologies; most screenreaders will consider the element with `role="img"` set on it to be like a black box, and not access the individual elements inside it.  Therefore, provide a comprehensive overall descriptive alt text for image, either in the surrounding text, or by using an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute, with optional alt attributes for search engines or sighted users to be written to the page should an image fail:
 
 ```html
 <div role="img" aria-label="Description of the overall image">
@@ -67,9 +67,9 @@ For example, if you use emojis in your text, the meaning might be obvious to a s
 
 ```html
 <div role="img" aria-label="That cat is so cute">
-  <p>
-    &#x1F408; &#x1F602;
-  </p>
+  <p>
+    &#x1F408; &#x1F602;
+  </p>
 </div>
 ```
 
@@ -88,6 +88,28 @@ Another example where this might be suitable is when using ASCII emoji combinati
 ```
 
 If `aria-labelledby` were used, the screen reader would read it. In this case, only the contents of the `aria-label` are announced to screen reader users, hiding the gibberish of the characters without the need for descendant ARIA to hide things, but also hiding potential content that may be part of the image.
+
+### All descendants are presentational
+
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in an `img`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `img` element as it is a role that does not support semantic children.
+
+For example, consider the following `img` element, which contains a heading.
+
+```html
+<div role="img"><h3>Title of my image</h3></div>
+```
+
+Because descendants of `img` are presentational, the following code is equivalent:
+
+```html
+<div role="img"><h3 role="presentation">Title of my image</h3></div>
+```
+
+From the assistive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree).:
+
+```html
+<div role="img">Title of my image</div>
+```
 
 ### Associated WAI-ARIA Roles, States, and Properties
 

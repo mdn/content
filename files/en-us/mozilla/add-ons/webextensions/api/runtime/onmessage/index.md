@@ -33,7 +33,7 @@ To send a message that is received by the `onMessage()` listener, use {{WebExtAP
 Along with the message itself, the listener is passed:
 
 - a `sender` object giving details about the message sender.
-- a `sendResponse()` function that can be used to send a response back to the sender.
+- a `sendResponse()` function that can be used to send a response back to the sender.
 
 You can send a synchronous response to the message by calling the `sendResponse()` function inside your listener. [See an example](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_a_synchronous_response).
 
@@ -59,7 +59,7 @@ Events have three functions:
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
 - `hasListener(listener)`
-  - : Checks whether at least one listener is registered for this event. Returns `true` if it is listening, `false` otherwise.
+  - : Checks whether at least one listener is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
 ## addListener syntax
 
@@ -93,7 +93,7 @@ Events have three functions:
     > ```js example-bad
     > // don't do this
     > browser.runtime.onMessage.addListener(
-    >   async (data, sender) => {
+    >   async (data, sender) => {
     >     if (data.type === 'handle_me') { return 'done'; }
     >   }
     > );
@@ -103,10 +103,10 @@ Events have three functions:
     >
     > ```js example-good
     > browser.runtime.onMessage.addListener(
-    >   (data, sender) => {
+    >   (data, sender) => {
     >     if (data.type === 'handle_me') {
-    >       return Promise.resolve('done');
-    >     }
+    >       return Promise.resolve('done');
+    >     }
     >     return false;
     >   }
     > );

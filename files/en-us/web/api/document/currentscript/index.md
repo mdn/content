@@ -49,5 +49,5 @@ if (document.currentScript.async) {
 
 - [import.meta](/en-US/docs/Web/JavaScript/Reference/Statements/import.meta)
 - {{HTMLElement("script")}}
-- {{DOMxRef("document.onafterscriptexecute")}}
-- {{DOMxRef("document.onbeforescriptexecute")}}
+- {{DOMxRef("document.afterscriptexecute_event")}}
+- {{DOMxRef("document.beforescriptexecute_event")}}

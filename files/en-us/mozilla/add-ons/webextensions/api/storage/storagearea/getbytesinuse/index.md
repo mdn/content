@@ -32,16 +32,16 @@ var gettingSpace = browser.storage.<storageType>.getBytesInUse(
 )
 ```
 
-`<storageType>` can only be {{WebExtAPIRef("storage.sync")}}, not {{WebExtAPIRef("storage.local")}} because of [this bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1385832).
+`<storageType>` can only be {{WebExtAPIRef("storage.sync")}}, not {{WebExtAPIRef("storage.local")}} because of [this bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1385832).
 
 ### Parameters
 
 - `keys`
-  - : A key (string) or keys (an array of strings) to identify the item(s) whose storage space you want to retrieve. If an array is passed in, 0 will be returned. If you pass `null` or `undefined` here, the function will return the space used by the entire storage area.
+  - : A key (string) or keys (an array of strings) to identify the item(s) whose storage space you want to retrieve. If an array is passed in, 0 will be returned. If you pass `null` or `undefined` here, the function will return the space used by the entire storage area.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an integer, `bytesUsed`, representing the storage space used by the objects that were specified in `keys`. If the operation failed, the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an integer, `bytesUsed`, representing the storage space used by the objects that were specified in `keys`. If the operation failed, the promise will be rejected with an error message.
 
 ## Browser compatibility
 

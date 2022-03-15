@@ -44,7 +44,7 @@ browser-compat: path.to.feature.NameOfTheProperty
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
 >     This will be formatted like `Web/API/NameOfTheParentInterface/NameOfTheProperty`.
 > - **tags**
->   - : Always include the following tags: **API**, **Reference**, **Property**,  the _name of the API_ (e.g. **WebVR**), the name of the _parent interface_ (e.g. **IDBIndex**), the name of the property (e.g. **capabilities**).
+>   - : Always include the following tags: **API**, **Reference**, **Property**,  the _name of the API_ (e.g. **WebVR**), the name of the _parent interface_ (e.g. **IDBIndex**), the name of the property (e.g. **capabilities**).
 >
 >     Include the following tags as appropriate:
 >     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete)), **Non-standard** if it isn't on a standards track.

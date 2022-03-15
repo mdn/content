@@ -9,7 +9,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 83 that will affect developers. Firefox 83 was released on November 17, 2020.
+This article provides information about the changes in Firefox 83 that will affect developers. Firefox 83 was released on November 17, 2020.
 
 > **Note:** See also [Firefox 83 is upon us](https://hacks.mozilla.org/2020/11/firefox-83-is-upon-us/) on Mozilla hacks
 
@@ -18,21 +18,21 @@ This article provides information about the changes in Firefox 83 that will aff
 ### Developer Tools
 
 - When using the `:screenshot` [helper command](/en-US/docs/Tools/Web_Console/Helpers) in the [Web Console](/en-US/docs/Tools/Web_Console), the `--dpr` parameter is no longer ignored when taking a fullscreen screenshot using `--fullpage` ({{bug(1645284)}}).
-- Developers can use the `scroll` badge in the [Page Inspector](/en-US/docs/Tools/Page_Inspector) to [Debug scrollable overflow](/en-US/docs/Tools/Page_Inspector/How_to/Debug_Scrollable_Overflow). Selecting the badge highlights elements that are _causing_ overflow and marks them with the `overflow` badge ({{bug(1669129)}}).
+- Developers can use the `scroll` badge in the [Page Inspector](/en-US/docs/Tools/Page_Inspector) to [Debug scrollable overflow](/en-US/docs/Tools/Page_Inspector/How_to/Debug_Scrollable_Overflow). Selecting the badge highlights elements that are _causing_ overflow and marks them with the `overflow` badge ({{bug(1669129)}}).
 
 ### HTML/XML
 
-- The `crossorigin` attribute is now supported for `<link rel=icon>` ({{bug(1661075)}}).
+- The `crossorigin` attribute is now supported for `<link rel=icon>` ({{bug(1661075)}}).
 - The `displaystyle` [attribute](/en-US/docs/Web/MathML/Attribute) is now implemented for all MathML elements ({{bug(1666075)}}).
 
 ### CSS
 
-- The vendor prefixed `:-moz-any()` is now aliased to the standard {{CSSxRef(":is", ":is()")}} CSS pseudo-class function ({{bug(1666086)}}).
-- We've added support for [CSS Conic Gradients](</en-US/docs/Web/CSS/conic-gradient()>) ({{bug(1632351)}}) and ({{bug(1175958)}}).
+- The vendor prefixed `:-moz-any()` is now aliased to the standard {{CSSxRef(":is", ":is()")}} CSS pseudo-class function ({{bug(1666086)}}).
+- We've added support for [CSS Conic Gradients](</en-US/docs/Web/CSS/conic-gradient()>) ({{bug(1632351)}}) and ({{bug(1175958)}}).
 
 ### JavaScript
 
-- [`Intl[@@toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/@@toStringTag) has been added, returning a default value of `Intl` (recent addition to the ECMA spec). ({{bug(1670053)}})
+- [`Intl[@@toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/@@toStringTag) has been added, returning a default value of `Intl` (recent addition to the ECMA spec). ({{bug(1670053)}})
 
 ### HTTP
 

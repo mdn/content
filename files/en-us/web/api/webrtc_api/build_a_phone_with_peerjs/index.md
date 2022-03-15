@@ -8,7 +8,7 @@ slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs
 
 One of WebRTC's main issues is that it is pretty complicated to use and develop with — handling the signalling service and knowing when to call the right endpoint can get confusing. But there is some good news; [PeerJS](https://peerjs.com/) is a WebRTC framework that abstracts away all of the ice and signalling logic so that you can focus on the functionality of your application. There are two parts to PeerJS, the client-side framework and the server.
 
-In this series of articles we will create a simple phone application using PeerJS. We’ll be using both the server and the client-side framework, but most of our work will be involved with handling the client-side code.
+In this series of articles we will create a simple phone application using PeerJS. We'll be using both the server and the client-side framework, but most of our work will be involved with handling the client-side code.
 
 ### Prerequisites
 

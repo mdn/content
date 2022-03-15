@@ -87,7 +87,7 @@ Some of the things to consider when choosing a host:
 - Additional benefits. Some providers will offer free domain names and support for SSL certificates that you would otherwise have to pay for.
 - Whether the "free" tier you're relying on expires over time, and whether the cost of migrating to a more expensive tier means you would have been better off using some other service in the first place!
 
-The good news when you're starting out is that there are quite a few sites that provide computing environments for "free", albeit with some conditions. For example, [Heroku](https://www.heroku.com/) provides a free but resource-limited _PaaS_ environment "forever", while [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Google Cloud](https://cloud.google.com/free/docs/gcp-free-tier), and [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/) provide free credit when you first join.
+The good news when you're starting out is that there are quite a few sites that provide computing environments for "free", albeit with some conditions. For example, [Heroku](https://www.heroku.com/) provides a free but resource-limited _PaaS_ environment "forever", while [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Google Cloud](https://cloud.google.com/free/docs/gcp-free-tier), and [Microsoft Azure](https://azure.microsoft.com/pricing/details/app-service/) provide free credit when you first join.
 
 Many providers also have a "basic" tier that provides more useful levels of computing power and fewer limitations. [Digital Ocean](https://www.digitalocean.com/) is an example of a popular hosting provider that offers a relatively inexpensive basic computing tier (in the $5 per month lower range at time of writing).
 
@@ -253,7 +253,7 @@ Heroku is integrated with **git,** the source code version control system. The H
 
 > **Note:** If you're accustomed to following good software development practices you may already be using git or some other SCM system. If you already have a git repository, skip this step.
 
-There are a lot of ways of to work with git. One easy workflow is to first set up an account on [GitHub](https://github.com/), create a new repository there and then clone it to your local machine:
+There are a lot of ways to work with git. One easy workflow is to first set up an account on [GitHub](https://github.com/), create a new repository there and then clone it to your local machine:
 
 1. Visit <https://github.com/> and create an account.
 2. Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
@@ -464,7 +464,7 @@ Setting MONGODB_URI and restarting limitless-tor-18923... done, v13
 MONGODB_URI: mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true
 ```
 
-> **Note:** On some operating systems you may need to set the set the URL between single quotation marks (e.g. `heroku config:set MONGODB_URI='mongodb+srv://...'`).
+> **Note:** On some operating systems you may need to set the URL between single quotation marks (e.g. `heroku config:set MONGODB_URI='mongodb+srv://...'`).
 
 You can inspect your configuration variables at any time using the `heroku config` command — try this now:
 

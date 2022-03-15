@@ -34,7 +34,7 @@ _This interface inherits the properties of {{domxref("HTMLElement")}}, and of {{
 - {{domxref("HTMLSelectElement.name")}}
   - : A {{domxref("DOMString")}} reflecting the {{htmlattrxref("name", "select")}} HTML attribute, containing the name of this control used by servers and DOM search functions.
 - {{domxref("HTMLSelectElement.options")}}{{ReadOnlyInline}}
-  - : An {{domxref("HTMLOptionsCollection")}} representing the set of {{HTMLElement("option")}} ({{domxref("HTMLOptionElement")}}) elements contained by this element.
+  - : An {{domxref("HTMLOptionsCollection")}} representing the set of {{HTMLElement("option")}} ({{domxref("HTMLOptionElement")}}) elements contained by this element.
 - {{domxref("HTMLSelectElement.required")}}
   - : A boolean value reflecting the {{htmlattrxref("required", "select")}} HTML attribute, which indicates whether the user is required to select a value before submitting the form.
 - {{domxref("HTMLSelectElement.selectedIndex")}}
@@ -50,7 +50,7 @@ _This interface inherits the properties of {{domxref("HTMLElement")}}, and of {{
 - {{domxref("HTMLSelectElement.validity")}}{{ReadOnlyInline}}
   - : A {{domxref("ValidityState")}} reflecting the validity state that this control is in.
 - {{domxref("HTMLSelectElement.value")}}
-  - : A {{domxref("DOMString")}} reflecting the value of the form control. Returns the `value` property of the first selected option element if there is one, otherwise the empty string.
+  - : A {{domxref("DOMString")}} reflecting the value of the form control. Returns the `value` property of the first selected option element if there is one, otherwise the empty string.
 - {{domxref("HTMLSelectElement.willValidate")}}{{ReadOnlyInline}}
   - : A boolean value that indicates whether the button is a candidate for constraint validation. It is `false` if any conditions bar it from constraint validation.
 

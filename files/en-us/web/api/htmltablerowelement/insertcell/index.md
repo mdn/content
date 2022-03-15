@@ -105,4 +105,4 @@ addRow('my-table');
 ## See also
 
 - {{domxref("HTMLTableElement.insertRow()")}}
-- The HTML element representing cells: {{domxref("HTMLTableCellElement")}}
+- The HTML element representing cells: {{domxref("HTMLTableCellElement")}}

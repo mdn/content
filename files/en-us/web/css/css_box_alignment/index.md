@@ -73,7 +73,7 @@ The **alignment subject** is the thing that is being aligned. For `justify-self`
 
 ### The alignment container
 
-The **alignment container** is the box the subject is being aligned inside. This will typically be the alignment subject’s containing block. An alignment container may contain one or many alignment subjects.
+The **alignment container** is the box the subject is being aligned inside. This will typically be the alignment subject's containing block. An alignment container may contain one or many alignment subjects.
 
 The below image shows an alignment container with two alignment subjects inside.
 
@@ -146,7 +146,7 @@ There needs to be space available in the dimension you wish to align the items i
 
 ## Overflow alignment
 
-The `safe` and `unsafe` keywords help define behavior when an alignment subject is larger than the alignment container. The `safe` keyword will align to `start` in the case of a specified alignment causing an overflow, the aim being to avoid “data loss” where part of the item is outside of the boundaries of the alignment container and can’t be scrolled to.
+The `safe` and `unsafe` keywords help define behavior when an alignment subject is larger than the alignment container. The `safe` keyword will align to `start` in the case of a specified alignment causing an overflow, the aim being to avoid "data loss" where part of the item is outside of the boundaries of the alignment container and can't be scrolled to.
 
 If you specify `unsafe` then the alignment will be honoured even if it would cause such data loss.
 

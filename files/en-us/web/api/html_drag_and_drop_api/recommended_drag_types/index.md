@@ -21,13 +21,13 @@ event.dataTransfer.setData("text/plain", "This is text to drag");
 
 Dragging text in textboxes and selections on web pages is done automatically by the browser, so you do not need to handle it yourself.
 
-It is recommended to always add data of the `text/plain` type as a fallback for applications or drop targets that do not support other types, unless there is no logical text alternative. Always add this `text/plain` type last, as it is the least specific and shouldn’t be preferred.
+It is recommended to always add data of the `text/plain` type as a fallback for applications or drop targets that do not support other types, unless there is no logical text alternative. Always add this `text/plain` type last, as it is the least specific and shouldn't be preferred.
 
 Note: In older code, you may find `text/unicode` or the `Text` types. These are equivalent to `text/plain`, and will store and retrieve plain text data.
 
 ## Dragging Links
 
-Dragged hyperlinks should include data of two types: `text/uri-list`, and `text/plain`. _Both_ types should use the link’s URL for their data. For example:
+Dragged hyperlinks should include data of two types: `text/uri-list`, and `text/plain`. _Both_ types should use the link's URL for their data. For example:
 
 ```js
 var dt = event.dataTransfer;

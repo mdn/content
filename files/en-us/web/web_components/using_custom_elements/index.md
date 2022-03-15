@@ -49,7 +49,7 @@ class WordCount extends HTMLParagraphElement {
 
 This is just a simple example, but there is more you can do here. It is possible to define specific lifecycle callbacks inside the class, which run at specific points in the element's lifecycle. For example, `connectedCallback` is invoked each time the custom element is appended into a document-connected element, while `attributeChangedCallback` is invoked when one of the custom element's attributes is added, removed, or changed.
 
-You'll learn more about these in the {{anch("Using the lifecycle callbacks")}} section below.
+You'll learn more about these in the [Using the lifecycle callbacks](#using_the_lifecycle_callbacks) section below.
 
 There are two types of custom elements:
 
@@ -127,11 +127,11 @@ It is now available to use on our page. Over in our HTML, we use it like so:
 
 > **Note:** You can see the [full JavaScript source](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js) code here.
 
-### Internal vs. external styles
+### Internal vs. external styles
 
 In the above example we apply style to the Shadow DOM using a {{htmlelement("style")}} element, but it is perfectly possible to do it by referencing an external stylesheet from a {{htmlelement("link")}} element instead.
 
-For example, take a look at this code from our [popup-info-box-external-stylesheet](https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/) example (see the [source code](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-external-stylesheet/main.js)):
+For example, take a look at this code from our [popup-info-box-external-stylesheet](https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/) example (see the [source code](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-external-stylesheet/main.js)):
 
 ```js
 // Apply external styles to the shadow dom
@@ -143,9 +143,9 @@ linkElem.setAttribute('href', 'style.css');
 shadow.appendChild(linkElem);
 ```
 
-Note that {{htmlelement("link")}} elements do not block paint of the shadow root, so there may be a flash of unstyled content (FOUC) while the stylesheet loads.
+Note that {{htmlelement("link")}} elements do not block paint of the shadow root, so there may be a flash of unstyled content (FOUC) while the stylesheet loads.
 
-Many modern browsers implement an optimization for {{htmlelement("style")}} tags either cloned from a common node or that have identical text, to allow them to share a single backing stylesheet. With this optimization the performance of external and internal styles should be similar.
+Many modern browsers implement an optimization for {{htmlelement("style")}} tags either cloned from a common node or that have identical text, to allow them to share a single backing stylesheet. With this optimization the performance of external and internal styles should be similar.
 
 ### Customized built-in elements
 
@@ -192,7 +192,7 @@ You use a `<ul>` element as normal, but specify the name of the custom element i
 
 You can define several different callbacks inside a custom element's class definition, which fire at different points in the element's lifecycle:
 
-- `connectedCallback`: Invoked each time the custom element is appended into a document-connected element. This will happen each time the node is moved, and may happen before the element's contents have been fully parsed.
+- `connectedCallback`: Invoked each time the custom element is appended into a document-connected element. This will happen each time the node is moved, and may happen before the element's contents have been fully parsed.
 
   > **Note:** `connectedCallback` may be called once your element is no longer connected, use {{domxref("Node.isConnected")}} to make sure.
 
@@ -221,14 +221,14 @@ The key function in this example is `updateStyle()` — this takes an element, g
 
 ```js
 function updateStyle(elem) {
-  const shadow = elem.shadowRoot;
-  shadow.querySelector('style').textContent = `
-    div {
-      width: ${elem.getAttribute('l')}px;
-      height: ${elem.getAttribute('l')}px;
-      background-color: ${elem.getAttribute('c')};
-    }
-  `;
+  const shadow = elem.shadowRoot;
+  shadow.querySelector('style').textContent = `
+    div {
+      width: ${elem.getAttribute('l')}px;
+      height: ${elem.getAttribute('l')}px;
+      background-color: ${elem.getAttribute('c')};
+    }
+  `;
 }
 ```
 
@@ -262,7 +262,7 @@ attributeChangedCallback(name, oldValue, newValue) {
 }
 ```
 
-Note that to get the `attributeChangedCallback()` callback to fire when an attribute changes, you have to observe the attributes. This is done by specifying a `static get observedAttributes()` method inside custom element class - this should `return`  an array containing the names of the attributes you want to observe:
+Note that to get the `attributeChangedCallback()` callback to fire when an attribute changes, you have to observe the attributes. This is done by specifying a `static get observedAttributes()` method inside custom element class - this should `return`  an array containing the names of the attributes you want to observe:
 
 ```js
 static get observedAttributes() { return ['c', 'l']; }
@@ -272,9 +272,9 @@ This is placed right at the top of the constructor, in our example.
 
 > **Note:** Find the [full JavaScript source](https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js) here.
 
-## Transpilers vs. classes
+## Transpilers vs. classes
 
-Please note that ES2015 classes cannot reliably be transpiled in Babel 6 or TypeScript targeting legacy browsers. You can either use Babel 7 or the [babel-plugin-transform-builtin-classes](https://www.npmjs.com/package/babel-plugin-transform-builtin-classes) for Babel 6, and target ES2015 in TypeScript instead of legacy.
+Please note that ES2015 classes cannot reliably be transpiled in Babel 6 or TypeScript targeting legacy browsers. You can either use Babel 7 or the [babel-plugin-transform-builtin-classes](https://www.npmjs.com/package/babel-plugin-transform-builtin-classes) for Babel 6, and target ES2015 in TypeScript instead of legacy.
 
 ## Libraries
 

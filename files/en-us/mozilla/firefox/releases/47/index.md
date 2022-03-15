@@ -37,30 +37,30 @@ _No change._
 ### CSS
 
 - Support for the {{cssxref("::backdrop")}} pseudo-element has been added ({{bug(1064843)}}).
-- The case-insensitive modifier `i` (like in `[foo=bar i]`) for [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) has been implemented ({{bug(888190)}}).
+- The case-insensitive modifier `i` (like in `[foo=bar i]`) for [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) has been implemented ({{bug(888190)}}).
 - An experimental implementation of CSS Mask Image properties landed. For the moment, this will only be available on Nightly versions of Firefox.y: shorthand version of {{cssxref("mask")}}, as well as {{cssxref("mask-repeat")}}, {{cssxref("mask-position")}}, {{cssxref("mask-size")}} are now available ({{bug(686281)}}).
-- The {{cssxref("clip-path")}} property now experimentally supports `polygon()`, `ellipse()`, and `circle()` on HTML elements (does not support [inset()](https://bugzilla.mozilla.org/show_bug.cgi?id=1246762) and [path()](https://bugzilla.mozilla.org/show_bug.cgi?id=1246764)), behind the pref `layout.css.clip-path-shapes.enabled` that defaults to `false` ({{bug(1075457)}}). Interpolation (and therefore animation) of these values is not yet supported.
+- The {{cssxref("clip-path")}} property now experimentally supports `polygon()`, `ellipse()`, and `circle()` on HTML elements (does not support [inset()](https://bugzilla.mozilla.org/show_bug.cgi?id=1246762) and [path()](https://bugzilla.mozilla.org/show_bug.cgi?id=1246764)), behind the pref `layout.css.clip-path-shapes.enabled` that defaults to `false` ({{bug(1075457)}}). Interpolation (and therefore animation) of these values is not yet supported.
 - Our still experimental grid implementation has been updated:
 
-  - {{cssxref("align-content")}}: `normal` behaves now as `stretch` for grid containers ({{bug(1237754)}}).
+  - {{cssxref("align-content")}}: `normal` behaves now as `stretch` for grid containers ({{bug(1237754)}}).
   - The order of column/row values for {{cssxref('grid')}}, {{cssxref('grid-template')}}, and `grid-gap` properties has been swapped ({{bug(1251999)}}).
 
 - The {{cssxref("@media/display-mode", "display-mode")}} media feature is now supported ({{bug("1104916")}}).
-- The value `true` of {{cssxref("text-align")}} and {{cssxref("text-align-last")}} has been renamed to `unsafe` ({{bug("1250342")}}).
+- The value `true` of {{cssxref("text-align")}} and {{cssxref("text-align-last")}} has been renamed to `unsafe` ({{bug("1250342")}}).
 
 ### JavaScript
 
-- The new ES2017 {{jsxref("Object.values()")}} and {{jsxref("Object.entries()")}} methods have been implemented ({{bug(1232639)}}).
+- The new ES2017 {{jsxref("Object.values()")}} and {{jsxref("Object.entries()")}} methods have been implemented ({{bug(1232639)}}).
 - The deprecated [old Proxy API](/en-US/docs/Archive/Web/Old_Proxy_API) (`Proxy.create` and `Proxy.createFunction`) now presents a deprecation warning in the console and will be removed in a future version. Use the standard {{jsxref("Proxy")}} object instead ({{bug(892903)}}).
 - Support for the deprecated non-standard `flags` argument of `String.prototype.`{{jsxref("String.prototype.match", "match")}}/{{jsxref("String.prototype.search", "search")}}/{{jsxref("String.prototype.replace", "replace")}} has been dropped in non-release builds ({{bug(1245801)}}).
-- As per the new ES2016 specification, the {{jsxref("Proxy")}} [enumerate](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/enumerate) trap for [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) statements has been removed ({{bug(1246318)}}).
+- As per the new ES2016 specification, the {{jsxref("Proxy")}} [enumerate](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/enumerate) trap for [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) statements has been removed ({{bug(1246318)}}).
 - The {{jsxref("Array.prototype.indexOf()")}} and {{jsxref("Array.prototype.lastIndexOf()")}} methods (and their {{jsxref("TypedArray")}} equivalents) have been updated to never return `-0` as per the ECMAScript specification ({{bug(1242043)}}).
 
 ### Interfaces/APIs/DOM
 
 #### DOM & HTML DOM
 
-- The property {{domxref("Document.scrollingElement")}} has been implemented behind the pref `dom.document.scrollingElement.enabled` that defaults to `false` ({{bug(1153322)}}).
+- The property {{domxref("Document.scrollingElement")}} has been implemented behind the pref `dom.document.scrollingElement.enabled` that defaults to `false` ({{bug(1153322)}}).
 
 #### WebGL
 

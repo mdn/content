@@ -1,6 +1,6 @@
 ---
 title: 'aria-brailleroledescription'
-slug: web/Accessibility/ARIA/Attributes/aria-brailleroledescription
+slug: Web/Accessibility/ARIA/Attributes/aria-brailleroledescription
 tags:
   - Accessibility
   - ARIA

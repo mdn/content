@@ -20,7 +20,7 @@ This API offers similar capabilities to {{WebExtAPIRef("contentScripts")}} but w
 
 - execution is in an isolated sandbox: each user script is run in an isolated sandbox within the web content processes, preventing accidental or deliberate interference among scripts.
 - access to the `window` and `document` global values related to the webpage the user script is attached to.
-- no access to WebExtension APIs or associated permissions granted to the extension: the API script, which inherits the extension’s permissions, can provide packaged WebExtension APIs to registered user scripts. An API script is declared in the extension's manifest file using the "user_scripts" manifest key.
+- no access to WebExtension APIs or associated permissions granted to the extension: the API script, which inherits the extension's permissions, can provide packaged WebExtension APIs to registered user scripts. An API script is declared in the extension's manifest file using the "user_scripts" manifest key.
 
 > **Warning:** This API requires the presence of the [`user_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts) key in the manifest.json, even if no API script is specified. For example. `user_scripts: {}`.
 
@@ -31,7 +31,7 @@ To use the API, call `{{WebExtAPIRef("userScripts.register","register()")}}` pas
 ## Types
 
 - {{WebExtAPIRef("userScripts.RegisteredUserScript")}}
-  - : The `object` returned by the {{WebExtAPIRef("userScripts.register","register()")}} method. It represents the registered user scripts and is used to deregister the user scripts.
+  - : The `object` returned by the {{WebExtAPIRef("userScripts.register","register()")}} method. It represents the registered user scripts and is used to deregister the user scripts.
 
 ## Methods
 
@@ -41,7 +41,7 @@ To use the API, call `{{WebExtAPIRef("userScripts.register","register()")}}` pas
 ## Events
 
 - {{WebExtAPIRef("userScripts.onBeforeScript")}}
-  - : An event available to the API script, registered in[`"user_scripts"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts), that execute before a user script executes. Use it to trigger the export of the additional APIs provided by the API script, so they are available to the user script.
+  - : An event available to the API script, registered in[`"user_scripts"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts), that execute before a user script executes. Use it to trigger the export of the additional APIs provided by the API script, so they are available to the user script.
 
 ## Browser compatibility
 

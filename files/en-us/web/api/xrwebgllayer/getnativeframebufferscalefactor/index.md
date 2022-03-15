@@ -36,7 +36,7 @@ device's frame buffer.
 This information can be used when creating a new `XRWebGLLayer` to configure
 the `framebufferScaleFactor` in the `layerInit` configuration object
 specified when calling the `XRWebGLLayer()` constructor. See the
-{{anch("Usage notes")}} and {{anch("Examples")}} for details.
+[Usage notes](#usage_notes) and [Examples](#examples) for details.
 
 If the scaling factor is 1.0, then the frame buffer pixels and the native display
 pixels are the same size. If the scaling factor is greater than zero, then the frame
@@ -73,7 +73,7 @@ recommended resolution as identified by the `XRSession` by this value will
 result in the actual native resolution of the XR hardware.
 
 The recommended WebGL frame buffer resolution is the best possible estimate of the
-resolution necessary to contain all of fthe {{domxref("XRView")}}s needed by the device
+resolution necessary to contain all of the {{domxref("XRView")}}s needed by the device
 while at the same time providing typical applications an acceptable balance of image
 quality and performance.
 
@@ -89,7 +89,7 @@ choose to halve the resolution. In this case, the value returned by
 `XRWebGLLayer.getNativeFramebufferScaleFactor()` will be 2.0. This method of
 dividing the frame buffer between views is shown in the following diagram.
 
-![Diagram showing frame buffer as scalled to half resolution](twoviewsoneframe-scaledby2.svg)
+![Diagram showing frame buffer as scaled to half resolution](twoviewsoneframe-scaledby2.svg)
 
 Now the width and height of the frame buffer are 50% what they were before, resulting
 in a total frame buffer size of 1280 by 720 pixels, with each eye's half of the buffer

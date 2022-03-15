@@ -21,7 +21,7 @@ The HTTP **`Public-Key-Pins`** response header used to
 associate a specific cryptographic public {{Glossary("key")}} with a certain web server
 to decrease the risk of {{Glossary("MITM")}} attacks with forged certificates. However,
 it has been removed from modern browsers and is no longer supported. Use [Certificate
-Transparency](/en-US/docs/Web/Security/Certificate_Transparency) and {{HTTPHeader("Expect-CT")}} header instead.
+Transparency](/en-US/docs/Web/Security/Certificate_Transparency) and {{HTTPHeader("Expect-CT")}} header instead.
 
 For more information, see the [HTTP
 Public Key Pinning](/en-US/docs/Web/HTTP/Public_Key_Pinning) article.

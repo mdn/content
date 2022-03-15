@@ -3,7 +3,7 @@ title: VRDisplayCapabilities.canPresent
 slug: Web/API/VRDisplayCapabilities/canPresent
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -21,13 +21,7 @@ The **`canPresent`** read-only property of the {{domxref("VRDisplayCapabilities"
 
 This is useful for identifying "magic window" devices that are capable of 6DoF tracking but for which {{domxref("VRDisplay.requestPresent()")}} is not meaningful. If `canPresent` is `false`, calls to {{domxref("VRDisplay.requestPresent()")}} will fail, and {{domxref("VRDisplay.getEyeParameters()")}} will return `null`.
 
-## Syntax
-
-```js
-var canIPresent = vrDisplayCapabilitiesInstance.canPresent;
-```
-
-### Value
+## Value
 
 A boolean value.
 

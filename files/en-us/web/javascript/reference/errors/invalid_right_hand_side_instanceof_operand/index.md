@@ -10,7 +10,7 @@ tags:
 ---
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "invalid 'instanceof' operand" occurs when the right hand side
+The JavaScript exception "invalid 'instanceof' operand" occurs when the right hand side
 operands of the [`instanceof`
 operator](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) isn't used with a constructor object, i.e. an object which has a
 `prototype` property and is callable.

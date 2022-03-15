@@ -89,7 +89,7 @@ p.goldie {
 
 {{EmbedLiveSample('Default_width', '500px', '64px')}}
 
-### Pixels and ems
+### Example using pixels and ems
 
 ```css
 .px_length {
@@ -112,9 +112,9 @@ p.goldie {
 <div class="em_length">Width measured in em</div>
 ```
 
-{{EmbedLiveSample('Pixels_and_ems', '500px', '64px')}}
+{{EmbedLiveSample('Example using pixels and ems', '500px', '64px')}}
 
-### Percentage
+### Example with percentage
 
 ```css
 .percent {
@@ -128,9 +128,9 @@ p.goldie {
 <div class="percent">Width in percentage</div>
 ```
 
-{{EmbedLiveSample('Percentage', '500px', '64px')}}
+{{EmbedLiveSample('Example using percentage', '500px', '64px')}}
 
-### max-content
+### Example using "max-content"
 
 ```css
 p.maxgreen {
@@ -146,9 +146,9 @@ p.maxgreen {
 <p class="maxgreen">The Mozilla community produces a lot of great software.</p>
 ```
 
-{{EmbedLiveSample('max-content', '500px', '64px')}}
+{{EmbedLiveSample('Example using "max-content"', '500px', '64px')}}
 
-### min-content
+### Example using "min-content"
 
 ```css
 p.minblue {
@@ -163,7 +163,7 @@ p.minblue {
 <p class="minblue">The Mozilla community produces a lot of great software.</p>
 ```
 
-{{EmbedLiveSample('min-content', '500px', '155px')}}
+{{EmbedLiveSample('Example using "min-content"', '500px', '155px')}}
 
 ## Specifications
 

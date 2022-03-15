@@ -25,7 +25,7 @@ browser-compat: api.PresentationConnectionList
 ### Event Handlers
 
 - {{domxref('PresentationConnectionList.onconnectionavailable')}}
-  - : Fired whenever a new [presentation connection](https://www.w3.org/TR/presentation-api/#dfn-presentation-connection) becomes available.
+  - : Fired whenever a new [presentation connection](https://www.w3.org/TR/presentation-api/#dfn-presentation-connection) becomes available.
 
 ## Specifications
 

@@ -28,13 +28,13 @@ array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Type
 sort()
 
 // Arrow function
-sort((firstEl, secondEl) => { /* ... */ } )
+sort((a, b) => { /* ... */ } )
 
 // Compare function
 sort(compareFn)
 
 // Inline compare function
-sort(function compareFn(firstEl, secondEl) { /* ... */ })
+sort(function compareFn(a, b) { /* ... */ })
 ```
 
 ### Parameters

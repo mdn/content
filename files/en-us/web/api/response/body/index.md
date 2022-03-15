@@ -16,7 +16,9 @@ The **`body`** read-only property of the {{domxref("Response")}} interface is a 
 
 ## Value
 
-A {{domxref("ReadableStream")}}.
+A {{domxref("ReadableStream")}}, or else [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null) for any `Response` object [constructed](/en-US/docs/Web/API/Response/Response) with a null [`body`](/en-US/docs/Web/API/Response/Response#body) property, or for any actual [HTTP response](/en-US/docs/Web/HTTP/Messages#http_responses) that has no [body](/en-US/docs/Web/HTTP/Messages#body_2).
+
+> **Note:** Current browsers don't actually conform to the spec requirement to set the `body` property to `null` for responses with no body (for example, responses to [`HEAD`](/en-US/docs/Web/HTTP/Methods/HEAD) requests, or [`204 No Content`](/en-US/docs/Web/HTTP/Status/204) responses).
 
 ## Example
 

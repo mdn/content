@@ -63,7 +63,7 @@ This works well on a wide screen device, such as a laptop or desktop (you can [s
 - The header image has been set so that its center always stays in the center of the header, no matter what width the heading is set at. If the site is being viewed on a narrower screen, the important detail in the center of the image (the people) can still be seen, and the excess is lost off either side. It is 200px high.
 - The content images have been set so that if the body element becomes smaller than the image, the images start to shrink so that they always stay inside the body, rather than overflowing it.
 
-However, issues arise when you start to view the site on a narrow screen device. The header below looks OK, but it's starting to take up a lot of the screen height for a mobile device. And at this size, it is difficult to see the people within the first content image.
+However, issues arise when you start to view the site on a narrow screen device. The header below looks OK, but it's starting to take up a lot of the screen height for a mobile device. And at this size, it is difficult to see faces of the two people within the first content image.
 
 ![Our example site as viewed on a narrow screen; the first image has shrunk to the point where it is hard to make out the detail on it.](non-responsive-narrow.png)
 
@@ -115,7 +115,7 @@ The `srcset` and `sizes` attributes look complicated, but they're not too hard t
 
 1. An **image filename** (`elva-fairy-480w.jpg`)
 2. A space
-3. The image's **intrinsic width in pixels** (`480w`) — note that this uses the `w` unit, not `px` as you might expect. An image's [intrinsic size](/en-US/docs/Glossary/intrinsic_size) is its real size, which can be found by inspecting the image file on your computer (for example, on a Mac you can select the image in Finder and press
+3. The image's **intrinsic width in pixels** (`480w`) — note that this uses the `w` unit, not `px` as you might expect. An image's [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size) is its real size, which can be found by inspecting the image file on your computer (for example, on a Mac you can select the image in Finder and press
 
     <kbd>Cmd</kbd>
 
@@ -131,7 +131,7 @@ The `srcset` and `sizes` attributes look complicated, but they're not too hard t
 2. A space
 3. The **width of the slot** the image will fill when the media condition is true (`480px`)
 
-> **Note:** For the slot width, you may provide an absolute length (`px`, `em`) or a length relative to the viewport (`vw`), but not percentages. You may have noticed that the last slot width has no media condition (this is the default that is chosen when none of the media conditions are true). The browser ignores everything after the first matching condition, so be careful how you order the media conditions.
+> **Note:** For the slot width, rather than providing an absolute width (for example, `480px`), you can alternatively provide a width relative to the viewport (for example, `50vw`) — but not a percentage. You may have noticed that the last slot width has no media condition (this is the default that is chosen when none of the media conditions are true). The browser ignores everything after the first matching condition, so be careful how you order the media conditions.
 
 So, with these attributes in place, the browser will:
 
@@ -208,7 +208,7 @@ When the browser starts to load a page, it starts to download (preload) any imag
 
 ### Use modern image formats boldly
 
-New image formats like [WebP](/en-US/docs/Web/Media/Formats/Image_types#WebP_image) and [AVIF](/en-US/docs/Web/Media/Formats/Image_types#AVIF_image) can maintain a low file size and high quality at the same time. These formats now have relatively broad browser support but little "historical depth".
+New image formats like [WebP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) and [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) can maintain a low file size and high quality at the same time. These formats now have relatively broad browser support but little "historical depth".
 
 `<picture>` lets us continue catering to older browsers. You can supply MIME types inside `type` attributes so the browser can immediately reject unsupported file types:
 
@@ -250,7 +250,7 @@ This also draws to a close the entire [Multimedia and embedding](/en-US/docs/Lea
 ## See also
 
 - [Jason Grigsby's excellent introduction to responsive images](https://blog.cloudfour.com/responsive-images-101-definitions)
-- [Responsive Images: If you’re just changing resolutions, use srcset](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/) — includes more explanation of how the browser works out which image to use
+- [Responsive Images: If you're just changing resolutions, use srcset](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/) — includes more explanation of how the browser works out which image to use
 - {{htmlelement("img")}}
 - {{htmlelement("picture")}}
 - {{htmlelement("source")}}

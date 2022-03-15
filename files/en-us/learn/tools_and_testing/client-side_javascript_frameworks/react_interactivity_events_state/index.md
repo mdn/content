@@ -80,7 +80,7 @@ Let's apply this to our app, starting in the `Form.js` component.
 
 ### Handling form submission
 
-At the top of the `Form()` component function, create a function named `handleSubmit()`. This function should [prevent the default behavior of the `submit` event](/en-US/docs/Learn/JavaScript/Building_blocks/Events#preventing_default_behavior). After that, it should trigger an `alert()`, which can say whatever you’d like. It should end up looking something like this:
+At the top of the `Form()` component function, create a function named `handleSubmit()`. This function should [prevent the default behavior of the `submit` event](/en-US/docs/Learn/JavaScript/Building_blocks/Events#preventing_default_behavior). After that, it should trigger an `alert()`, which can say whatever you'd like. It should end up looking something like this:
 
 ```js
 function handleSubmit(e) {
@@ -99,7 +99,7 @@ Now if you head back to your browser and click on the "Add" button, your browser
 
 ## Callback props
 
-In React applications, interactivity is rarely confined to just one component: events that happen in one component will affect other parts of the app. When we start giving ourselves the power to make new tasks, things that happen in the `<Form />` component will affect the list rendered in `<App />`.
+In React applications, interactivity is rarely confined to just one component: events that happen in one component will affect other parts of the app. When we start giving ourselves the power to make new tasks, things that happen in the `<Form />` component will affect the list rendered in `<App />`.
 
 We want our `handleSubmit()` function to ultimately help us create a new task, so we need a way to pass information from `<Form />` to `<App />`. We can't pass data from child to parent in the same way as we pass data from parent to child using standard props. Instead, we can write a function in `<App />` that will expect some data from our form as an input, then pass that function to `<Form />` as a prop. This function-as-a-prop is called a callback prop. Once we have our callback prop, we can call it inside `<Form />` to send the right data to `<App />`.
 
@@ -113,7 +113,7 @@ function addTask(name) {
 }
 ```
 
-Next, we'll pass `addTask()` into `<Form />` as a prop. The prop can have whatever name you want, but pick a name you’ll understand later. Something like `addTask` works, because it matches the name of the function as well as what the function will do. Your `<Form />` component call should be updated as follows:
+Next, we'll pass `addTask()` into `<Form />` as a prop. The prop can have whatever name you want, but pick a name you'll understand later. Something like `addTask` works, because it matches the name of the function as well as what the function will do. Your `<Form />` component call should be updated as follows:
 
 ```js
 <Form addTask={addTask} />
@@ -136,7 +136,7 @@ Clicking on the "Add" button in your browser will prove that the `addTask()` cal
 
 So far, we've used props to pass data through our components and this has served us just fine. Now that we're dealing with user input and data updates, however, we need something more.
 
-For one thing, props come from the parent of a component. Our `<Form />` will not be inheriting a new name for our task; our `<input />`  element lives directly inside of `<Form />`, so `<Form/>` will be directly responsible for creating that new name. We can't ask `<Form />` to spontaneously create its own props, but we _can_ ask it to track some of its own data for us. Data such as this, which a component itself owns, is called **state**. State is another powerful tool for React because components not only _own_ state, but can _update_ it later. It's not possible to update the props a component receives; only to read them.
+For one thing, props come from the parent of a component. Our `<Form />` will not be inheriting a new name for our task; our `<input />`  element lives directly inside of `<Form />`, so `<Form/>` will be directly responsible for creating that new name. We can't ask `<Form />` to spontaneously create its own props, but we _can_ ask it to track some of its own data for us. Data such as this, which a component itself owns, is called **state**. State is another powerful tool for React because components not only _own_ state, but can _update_ it later. It's not possible to update the props a component receives; only to read them.
 
 React provides a variety of special functions that allow us to provide new capabilities to components, like state. These functions are called **hooks**, and the `useState` hook, as its name implies, is precisely the one we need in order to give our component some state.
 
@@ -166,7 +166,7 @@ What's going on in this line of code?
 
 ### Reading state
 
-You can see the `name` state in action right away. Add a `value` attribute to the form’s input, and set its value to `name`. Your browser will render "Use hooks!" inside the input.
+You can see the `name` state in action right away. Add a `value` attribute to the form's input, and set its value to `name`. Your browser will render "Use hooks!" inside the input.
 
 ```js
 <input
@@ -187,7 +187,7 @@ const [name, setName] = useState('');
 
 ### Reading user input
 
-Before we can change the value of `name`, we need to capture a user's input as they type. For this, we can listen to the `onChange` event. Let’s write a `handleChange()` function, and listen for it on the `<input />` tag.
+Before we can change the value of `name`, we need to capture a user's input as they type. For this, we can listen to the `onChange` event. Let's write a `handleChange()` function, and listen for it on the `<input />` tag.
 
 ```js
 // near the top of the `Form` component
@@ -207,11 +207,11 @@ function handleChange(e) {
 />
 ```
 
-Currently, your input’s value will not change as you type, but your browser will log the word "Typing!" to the JavaScript console, so we know our event listener is attached to the input. In order to change the input’s value, we have to use our `handleChange()` function to update our `name` state.
+Currently, your input's value will not change as you type, but your browser will log the word "Typing!" to the JavaScript console, so we know our event listener is attached to the input. In order to change the input's value, we have to use our `handleChange()` function to update our `name` state.
 
-To read the contents of the input field as they change, you can access the input’s `value` property. We can do this inside `handleChange()` by reading `e.target.value`. `e.target` represents the element that fired the `change` event — that’s our input. So, `value` is the text inside it.
+To read the contents of the input field as they change, you can access the input's `value` property. We can do this inside `handleChange()` by reading `e.target.value`. `e.target` represents the element that fired the `change` event — that's our input. So, `value` is the text inside it.
 
-You can `console.log()` this value to see it in your browser’s console.
+You can `console.log()` this value to see it in your browser's console.
 
 ```js
 function handleChange(e) {
@@ -221,7 +221,7 @@ function handleChange(e) {
 
 ### Updating state
 
-Logging isn’t enough — we want to actually store the updated state of the name as the input value changes! Change the `console.log()` to `setName()`, as shown below:
+Logging isn't enough — we want to actually store the updated state of the name as the input value changes! Change the `console.log()` to `setName()`, as shown below:
 
 ```js
 function handleChange(e) {
@@ -320,7 +320,7 @@ const taskList = tasks.map(task => (
 
 ### Adding a task
 
-We’ve now got a `setTasks` hook that we can use in our `addTask()` function to update our list of tasks. There’s one problem however: we can’t just pass the `name` argument of `addTask()` into `setTasks`, because `tasks` is an array of objects and `name` is a string. If we tried to do this, the array would be replaced with the string.
+We've now got a `setTasks` hook that we can use in our `addTask()` function to update our list of tasks. There's one problem however: we can't just pass the `name` argument of `addTask()` into `setTasks`, because `tasks` is an array of objects and `name` is a string. If we tried to do this, the array would be replaced with the string.
 
 First of all, we need to put `name` into an object that has the same structure as our existing tasks. Inside of the `addTask()` function, we will make a `newTask` object to add to the array.
 
@@ -339,9 +339,9 @@ Now you can use the browser to add a task to our data! Type anything into the fo
 
 **However, we have another problem**: our `addTask()` function is giving each task the same `id`. This is bad for accessibility, and makes it impossible for React to tell future tasks apart with the `key` prop. In fact, React will give you a warning in your DevTools console — "Warning: Encountered two children with the same key..."
 
-We need to fix this. Making unique identifiers is a hard problem – one for which the JavaScript community has written some helpful libraries. We’ll use [nanoid](https://github.com/ai/nanoid) because it's tiny, and it works.
+We need to fix this. Making unique identifiers is a hard problem – one for which the JavaScript community has written some helpful libraries. We'll use [nanoid](https://github.com/ai/nanoid) because it's tiny, and it works.
 
-Make sure you’re in the root directory of your application and run the following terminal command:
+Make sure you're in the root directory of your application and run the following terminal command:
 
 ```bash
 npm install nanoid
@@ -373,7 +373,7 @@ Add this inside your `App()` definition, before the return statement:
 const headingText = `${taskList.length} tasks remaining`;
 ```
 
-Hrm. This is almost right, except that if our list ever contains a single task, the heading will still use the word “tasks”. We can make this a variable, too. Update the code you just added as follows:
+Hrm. This is almost right, except that if our list ever contains a single task, the heading will still use the word "tasks". We can make this a variable, too. Update the code you just added as follows:
 
 ```js
 const tasksNoun = taskList.length !== 1 ? 'tasks' : 'task';
@@ -439,7 +439,7 @@ The checkbox unchecks in the browser, but our console tells us that Eat is still
 
 ### Synchronizing the browser with our data
 
-Let’s revisit our `toggleTaskCompleted()` function in `App.js`. We want it to change the `completed` property of only the task that was toggled, and leave all the others alone. To do this, we'll `map()` over the task list and just change the one we completed.
+Let's revisit our `toggleTaskCompleted()` function in `App.js`. We want it to change the `completed` property of only the task that was toggled, and leave all the others alone. To do this, we'll `map()` over the task list and just change the one we completed.
 
 Update your `toggleTaskCompleted()` function to the following:
 
@@ -458,7 +458,7 @@ function toggleTaskCompleted(id) {
 }
 ```
 
-Here, we define an `updatedTasks` constant that maps over the original `tasks` array.  If the task’s `id` property matches the `id` provided to the function, we use [object spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)  to create a new object, and toggle the `checked` property of that object before returning it. If it doesn’t match, we return the original object.
+Here, we define an `updatedTasks` constant that maps over the original `tasks` array.  If the task's `id` property matches the `id` provided to the function, we use [object spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)  to create a new object, and toggle the `checked` property of that object before returning it. If it doesn't match, we return the original object.
 
 Then we call `setTasks()` with this new array in order to update our state.
 
@@ -509,7 +509,7 @@ Now when you click on any of the "Delete" buttons in the app, your browser conso
 
 ## Deleting tasks from state and UI
 
-Now that we know `deleteTask()` is invoked correctly, we can call our `setTasks()` hook in `deleteTask()` to actually delete that task from the app’s state as well as visually in the app UI. Since `setTasks()` expects an array as an argument, we should provide it with a new array that copies the existing tasks, _excluding_ the task whose ID matches the one passed into `deleteTask()`.
+Now that we know `deleteTask()` is invoked correctly, we can call our `setTasks()` hook in `deleteTask()` to actually delete that task from the app's state as well as visually in the app UI. Since `setTasks()` expects an array as an argument, we should provide it with a new array that copies the existing tasks, _excluding_ the task whose ID matches the one passed into `deleteTask()`.
 
 This is a perfect opportunity to use [`Array.prototype.filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter). We can test each task, and exclude a task from the new array if its `id` prop matches the `id` parameter passed into `deleteTask()`.
 

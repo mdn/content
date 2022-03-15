@@ -31,8 +31,8 @@ A {{domxref("DOMString")}} representing the ID.
 
 ```js
 myWorker.onmessage = function(e) {
-  result.textContent = e.data;
-  console.log('Message received from worker');
+  result.textContent = e.data;
+  console.log('Message received from worker');
   console.log(e.lastEventId);
 };
 ```

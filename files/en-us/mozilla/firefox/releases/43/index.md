@@ -50,7 +50,7 @@ Highlights:
 
 #### Other changes
 
-- [Generators](/en-US/docs/Web/JavaScript/Reference/Statements/function*) and [generator methods](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) are no longer constructable as per ES2016 ({{bug(1191486)}}).
+- [Generators](/en-US/docs/Web/JavaScript/Reference/Statements/function*) and [generator methods](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) are no longer constructable as per ES2016 ({{bug(1191486)}}).
 
 ### Interfaces/APIs/DOM
 
@@ -64,7 +64,7 @@ _No change._
 
 #### Service Workers
 
-- As per the specification, if {{domxref("ExtendableEvent.waitUntil()")}} is called outside of the {{domxref("ExtendableEvent")}} handler, Firefox will now throw an `InvalidStateError`; in addition, multiple calls to {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} will now stack up, and the resulting promises will be added to the list of [extend lifetime promises](https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#dfn-extend-lifetime-promises) ({{bug(1180274)}}).
+- As per the specification, if {{domxref("ExtendableEvent.waitUntil()")}} is called outside of the {{domxref("ExtendableEvent")}} handler, Firefox will now throw an `InvalidStateError`; in addition, multiple calls to {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} will now stack up, and the resulting promises will be added to the list of [extend lifetime promises](https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#dfn-extend-lifetime-promises) ({{bug(1180274)}}).
 - {{domxref("PushMessageData")}} methods have been implemented ({{bug(1149195)}}).
 
 #### WebRTC
@@ -75,7 +75,7 @@ _No change._
 #### Miscellaneous
 
 - The [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) now uses the new promise syntax for {{domxref("Navigator.getBattery()")}}, as specified in the recent evolution of the specification ({{bug(1050749)}}).
-- The `User-Agent` header is no longer in the list of {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} so it can now be set in a [Fetch](/en-US/docs/Web/API/Fetch_API) {{domxref("Headers")}} object, via XHR {{domxref("XMLHttpRequest.setRequestHeader()")}},… ({{bug(1188932)}}).
+- The `User-Agent` header is no longer in the list of {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} so it can now be set in a [Fetch](/en-US/docs/Web/API/Fetch_API) {{domxref("Headers")}} object, via XHR {{domxref("XMLHttpRequest.setRequestHeader()")}},… ({{bug(1188932)}}).
 - The {{domxref("MediaRecorder.MediaRecorder()")}} constructor can now accept an options dictionary as a parameter, which allows you to set custom bitrates for the audio/video to be recorded ({{bug("1161276")}}).
 - The {{domxref("PerformanceObserver")}} interface, belonging to the [Performance Timeline API](/en-US/docs/Web/API/Performance_Timeline_API) has been implemented ({{bug(1165796)}}).
 - The Frame Timing API has been added: the {{domxref("PerformanceRenderTiming")}} and {{domxref("PerformanceCompositeTiming")}} interfaces are now available ({{bug(1191178)}}).

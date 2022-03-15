@@ -51,13 +51,13 @@ Each source of WebXR input data is represented by an {{domxref("XRInputSource")}
 The fundamental capabilities of an input source are:
 
 - Targeting
-  - : Monitoring directional controls (either a motion-sensing pointer or a joystick or trackpad, for example) to aim in a direction, possibly at a target, though targeting is left to you to implement yourself. See {{anch("Facing and targeting")}} for further information.
+  - : Monitoring directional controls (either a motion-sensing pointer or a joystick or trackpad, for example) to aim in a direction, possibly at a target, though targeting is left to you to implement yourself. See [Facing and targeting](#facing_and_targeting) for further information.
 - Selecting
-  - : Using the main "select" button or other input on the controller to choose the targeted direction (or the object at which it points), or to otherwise engage an action. For details on the primary action, see {{anch("Primary action")}}.
+  - : Using the main "select" button or other input on the controller to choose the targeted direction (or the object at which it points), or to otherwise engage an action. For details on the primary action, see [Primary action](#primary_action).
 - Squeezing
-  - : Squeezing the controller or a mechanism on the controller to engage a secondary action. The section {{anch("Primary squeeze action")}} describes this in more detail.
+  - : Squeezing the controller or a mechanism on the controller to engage a secondary action. The section [Primary squeeze action](#primary_squeeze_action) describes this in more detail.
 
-Any additional capabilities a WebXR controller may have are accessed through the input source's {{domxref("XRInputSource.gamepad", "gamepad")}} object. This object provides access to all of the buttons, axes, trackpads, and so forth that may be a part of the controller. See {{anch("Advanced controllers using the gamepad object")}} to learn how to use these controllers.
+Any additional capabilities a WebXR controller may have are accessed through the input source's {{domxref("XRInputSource.gamepad", "gamepad")}} object. This object provides access to all of the buttons, axes, trackpads, and so forth that may be a part of the controller. See [Advanced controllers using the gamepad object](#advanced_controllers_using_the_gamepad_object) to learn how to use these controllers.
 
 ### Properties of input sources
 
@@ -133,7 +133,7 @@ Each input source can have zero or more **input profile name** strings, found in
 
 Some devices may create **transient input sources** to be used in tandem with an action which doesn't really come from that device, but is being presented as if it is. For example, if an XR device provides a mode in which the mouse is used to simulate events on the device, a new {{domxref("XRInputSource")}} object might be created to represent the simulated input source for the duration of handling the action.
 
-This is necessary because of the separation that's maintained between standard input devices and XR input sources. An artificial source is used to represent the external source for the duration of each {{anch("Transient actions", "transient action")}}.
+This is necessary because of the separation that's maintained between standard input devices and XR input sources. An artificial source is used to represent the external source for the duration of each [transient action](#transient_actions).
 
 ## Managing input sources
 
@@ -189,7 +189,7 @@ Each input source has a {{domxref("XRInputSource.profiles", "profiles")}} proper
 
 In order to do anything meaningful involving scanning of profiles beyond basic identification of features, you may need to import the JSON profile database from the [WebXR Input Profiles Registry](https://github.com/immersive-web/webxr-input-profiles/tree/master/packages/registry).
 
-See {{anch("Input profiles")}} for more specific details on working with input profiles.
+See [Input profiles](#input_profiles) for more specific details on working with input profiles.
 
 ### Choosing the primary controller
 
@@ -236,7 +236,7 @@ The effect is that we set the primary input source the first time a `select` eve
 
 The most complex way to determine a primary input source is highly flexible but can require a great deal of work to implement. In this scenario, you iterate over the list of input sources and their profiles to gather information about each input source, then present a user interface describing each input, allowing the user to assign uses to each of them. Doing this well could be a big job, but it might be useful for complex apps that may involve several user inputs.
 
-Much of the information you need in order to implement this can be found in the section on {{anch("Input profiles")}}, below. Details are beyond the scope of this article, however.
+Much of the information you need in order to implement this can be found in the section on [Input profiles](#input_profiles), below. Details are beyond the scope of this article, however.
 
 ## Input profiles
 
@@ -283,7 +283,7 @@ For example, entry 0 in `profiles` for an Oculus Touch controller is `oculus-tou
 
 ## Actions
 
-In WebXR, an **action** is a special type of event that's triggered by the user activating a special button on the controller. Any additional buttons (as well as things like axis controllers—joysticks, for example—and the like) are managed solely through the {{domxref("XRInputSource")}} property {{domxref("XRInputSource.gamepad", "gamepad")}}. See {{anch("Advanced controllers using the gamepad object")}} below for further details on supporting these extra controls and buttons.
+In WebXR, an **action** is a special type of event that's triggered by the user activating a special button on the controller. Any additional buttons (as well as things like axis controllers—joysticks, for example—and the like) are managed solely through the {{domxref("XRInputSource")}} property {{domxref("XRInputSource.gamepad", "gamepad")}}. See [Advanced controllers using the gamepad object](#advanced_controllers_using_the_gamepad_object) below for further details on supporting these extra controls and buttons.
 
 The **primary action** is the action that is triggered when the user engages the main control element that serves a special purpose. There are currently two types of primary action:
 
@@ -325,7 +325,7 @@ Some actions may send these events very quickly, one after the other. The time t
 
 For example, if the hardware that causes the primary action to occur is a button, you would receive `selectstart` when the user presses the button, then `select` and `selectend` when the user releases it.
 
-There are a number of examples showing how to handle `select` events throughout the documentation, such as in the section on {{anch("Targeting and the targeting ray")}} elsewhere in this article.
+There are a number of examples showing how to handle `select` events throughout the documentation, such as in the section on [Targeting and the targeting ray](#targeting_and_the_targeting_ray) elsewhere in this article.
 
 ### Primary squeeze action
 
@@ -496,7 +496,7 @@ See [Targeting and hit detection](/en-US/docs/Web/API/WebXR_Device_API/Targeting
 
 ### Presenting hand-held objects
 
-An input source's {{domxref("XRInputSource.gripSpace", "gripSpace")}} property identifies an {{domxref("XRSpace")}} describing the origin and orientation to use when rendering an object so that it appears to be held in the same hand as its input source. This space is intended to be used when drawing a model of the handheld WebXR input controller represented by the object {{domxref("XRInputSource")}}, but can just as well be used to draw any object, such as a ball, a tool, or a weapon. We covered the {{anch("Grip space", "grip space")}} above, but let's see how it can be used to draw objects representative of the hand or in the hand.
+An input source's {{domxref("XRInputSource.gripSpace", "gripSpace")}} property identifies an {{domxref("XRSpace")}} describing the origin and orientation to use when rendering an object so that it appears to be held in the same hand as its input source. This space is intended to be used when drawing a model of the handheld WebXR input controller represented by the object {{domxref("XRInputSource")}}, but can just as well be used to draw any object, such as a ball, a tool, or a weapon. We covered the [grip space](#grip_space) above, but let's see how it can be used to draw objects representative of the hand or in the hand.
 
 Since the origin of the grip space is located at the center of the hand's grip, you can use it as a starting point for rendering your object. Apply any needed offset transform to shift the origin to the start point for rendering your object as you apply any rotation needed to orient your model correctly to align with the grip space's orientation.
 

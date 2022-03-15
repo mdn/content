@@ -9,7 +9,7 @@ tags:
 ---
 XML (Extensible Markup Language) is a markup language similar to {{Glossary("HTML")}}, but without predefined tags to use. Instead, you define your own tags designed specifically for your needs. This is a powerful way to store data in a format that can be stored, searched, and shared. Most importantly, since the fundamental format of XML is standardized, if you share or transmit XML across systems or platforms, either locally or over the internet, the recipient can still parse the data due to the standardized XML syntax.
 
-There are many languages based on XML, including [XHTML](/en-US/docs/Glossary/XHTML), [MathML](/en-US/docs/Web/MathML), [SVG](/en-US/docs/Web/SVG), [XUL](/en-US/docs/Mozilla/Tech/XUL), [XBL](/en-US/docs/Mozilla/Tech/XBL), [RSS](/en-US/docs/Web/RSS), and [RDF](/en-US/docs/Web/RDF). You can also define your own.
+There are many languages based on XML, including [XHTML](/en-US/docs/Glossary/XHTML), [MathML](/en-US/docs/Web/MathML), [SVG](/en-US/docs/Web/SVG), [XUL](/en-US/docs/Mozilla/Tech/XUL), [XBL](/en-US/docs/Mozilla/Tech/XBL), [RSS](/en-US/docs/Web/RSS), and [RDF](/en-US/docs/Web/RDF). You can also define your own.
 
 ## Structure of an XML document
 
@@ -28,7 +28,7 @@ XML - declaration is not a tag. It is used for the transmission of the meta-data
 - version:
   - : Used version XML in this document.
 - encoding :
-  - : Used encoding in this document.
+  - : Used encoding in this document.
 
 ### Comments
 
@@ -44,7 +44,7 @@ For an XML document to be correct, the following conditions must be fulfilled:
 
 - Document must be well-formed.
 - Document must conform to all XML syntax rules.
-- Document must conform to semantic rules, which are usually set in an XML schema or a DTD (**[Document Type Definition](/en-US/docs/Glossary/Doctype))**.
+- Document must conform to semantic rules, which are usually set in an XML schema or a DTD (**[Document Type Definition](/en-US/docs/Glossary/Doctype))**.
 
 ### Example
 
@@ -84,7 +84,7 @@ Like HTML, XML offers methods (called entities) for referring to some special re
 | &quot; | "         | One double-quotation mark                 |
 | &apos; | '         | One apostrophe (or single-quotation mark) |
 
-Even though there are only 5 declared entities, more can be added using the document's [Document Type Definition](/en-US/docs/Glossary/Doctype). For example, to create a new `&warning;` entity, you can do this:
+Even though there are only 5 declared entities, more can be added using the document's [Document Type Definition](/en-US/docs/Glossary/Doctype). For example, to create a new `&warning;` entity, you can do this:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

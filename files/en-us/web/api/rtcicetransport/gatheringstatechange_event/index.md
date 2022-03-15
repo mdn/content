@@ -13,7 +13,7 @@ tags:
   - WebRTC
   - WebRTC API
   - events
-  - gatheringSstate
+  - gatheringState
   - gatheringstatechange
 browser-compat: api.RTCIceTransport.gatheringstatechange_event
 ---

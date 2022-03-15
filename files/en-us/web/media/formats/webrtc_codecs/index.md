@@ -50,12 +50,12 @@ Below are the video codecs which are _required_ in any fully WebRTC-compliant br
   </thead>
   <tbody>
     <tr>
-      <th scope="row">{{anch("VP8")}}</th>
+      <th scope="row"><a href="#vp8">VP8</a></th>
       <td>—</td>
       <td>Chrome, Edge, Firefox, Safari (12.1+)</td>
     </tr>
     <tr>
-      <th scope="row">{{anch("AVC", "AVC / H.264")}}</th>
+      <th scope="row"><a href="#avc">AVC / H.264</a></th>
       <td>Constrained Baseline (CB)</td>
       <td>
         <p>Chrome (52+), Edge, Firefox, Safari</p>

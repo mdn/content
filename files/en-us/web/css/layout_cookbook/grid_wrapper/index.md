@@ -51,7 +51,7 @@ When using this recipe at page level it can be useful to set a `max-width` along
 }
 ```
 
-To “break out” a full-width item to the edge of the viewport you can then use this trick (courtesy of [Una Kravets](https://una.im/)):
+To "break out" a full-width item to the edge of the viewport you can then use this trick (courtesy of [Una Kravets](https://una.im/)):
 
 ```css
 .item {

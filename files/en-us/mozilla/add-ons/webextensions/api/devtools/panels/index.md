@@ -29,7 +29,7 @@ Like all the `devtools` APIs, this API is only available to code running in the 
 - [`devtools.panels.ExtensionPanel`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel)
   - : Represents a devtools panel created by the extension.
 - [`devtools.panels.ExtensionSidebarPane`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane)
-  - : Represents a pane that an extension has added to the HTML/CSS inspector in the browser's devtools.
+  - : Represents a pane that an extension has added to the HTML/CSS inspector in the browser's devtools.
 
 ## Properties
 

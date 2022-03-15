@@ -14,29 +14,29 @@ The **`pointer-events`** attribute is a presentation attribute that allows defin
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement('a')}}
-* {{SVGElement('circle')}}
-* {{SVGElement('clipPath')}}
-* {{SVGElement('defs')}}
-* {{SVGElement('ellipse')}}
-* {{SVGElement('foreignObject')}}
-* {{SVGElement('g')}}
-* {{SVGElement('image')}}
-* {{SVGElement('line')}}
-* {{SVGElement('marker')}}
-* {{SVGElement('mask')}}
-* {{SVGElement('path')}}
-* {{SVGElement('pattern')}}
-* {{SVGElement('polygon')}}
-* {{SVGElement('polyline')}}
-* {{SVGElement('rect')}}
-* {{SVGElement('svg')}}
-* {{SVGElement('switch')}}
-* {{SVGElement('symbol')}}
-* {{SVGElement('text')}}
-* {{SVGElement('textPath')}}
-* {{SVGElement('tspan')}}
-* {{SVGElement('use')}}
+- {{SVGElement('a')}}
+- {{SVGElement('circle')}}
+- {{SVGElement('clipPath')}}
+- {{SVGElement('defs')}}
+- {{SVGElement('ellipse')}}
+- {{SVGElement('foreignObject')}}
+- {{SVGElement('g')}}
+- {{SVGElement('image')}}
+- {{SVGElement('line')}}
+- {{SVGElement('marker')}}
+- {{SVGElement('mask')}}
+- {{SVGElement('path')}}
+- {{SVGElement('pattern')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('svg')}}
+- {{SVGElement('switch')}}
+- {{SVGElement('symbol')}}
+- {{SVGElement('text')}}
+- {{SVGElement('textPath')}}
+- {{SVGElement('tspan')}}
+- {{SVGElement('use')}}
 
 ## Example
 
@@ -108,10 +108,6 @@ window.addEventListener('mouseup', (e) => {
 
 *For a detailed explanation of each possible value, have a look at the CSS {{cssxref('pointer-events')}} documentation.*
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Specifications
 
 <table class="no-markdown">
@@ -139,3 +135,7 @@ window.addEventListener('mouseup', (e) => {
     </tr>
   </tbody>
 </table>
+
+## Browser compatibility
+
+{{Compat}}

@@ -8,6 +8,7 @@ tags:
   - HTML
   - min
   - Reference
+spec-urls: https://html.spec.whatwg.org/multipage/input.html#the-min-and-max-attributes
 ---
 
 {{HTMLSidebar}}
@@ -142,31 +143,7 @@ Provide instructions to help users understand how to complete the form and use i
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'input.html#the-min-and-max-attributes', 'min attribute')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML5 W3C', 'input.html#the-min-and-max-attributes', 'min attribute')}}
-      </td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

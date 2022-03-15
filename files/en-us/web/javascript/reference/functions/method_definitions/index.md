@@ -22,8 +22,8 @@ name.
 
 ```js
 const obj = {
-  get property() {},
-  set property(value) {},
+  get property() {},
+  set property(value) {},
   property( parameters… ) {},
   *generator( parameters… ) {},
   async property( parameters… ) {},
@@ -31,7 +31,7 @@ const obj = {
 
   //  with computed keys
   get [property]() {},
-  set [property](value) {},
+  set [property](value) {},
   [property]( parameters… ) {},
   *[generator]( parameters… ) {},
   async [property]( parameters… ) {},
@@ -79,7 +79,7 @@ When doing so:
 
 - The asterisk (`*`) in the shorthand syntax must be _before_ the
   generator property name. (That is, `* g(){}` will work,
-  but `g *(){}` will not.)
+  but `g *(){}` will not.)
 - Non-generator method definitions cannot contain the `yield` keyword.
   This means that [legacy
   generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function) won't work either, and will throw a
@@ -93,7 +93,7 @@ const obj2 = {
     let index = 0
     while (true) {
       yield index++
-    }
+    }
   }
 };
 
@@ -103,7 +103,7 @@ const obj2 = {
     let index = 0
     while (true) {
       yield index++
-    }
+    }
   }
 };
 
@@ -203,7 +203,7 @@ console.log(bar.foo2())  // 2
 
 // A global function
 function foo() {
-  return 1
+  return 1
 }
 
 let name = 'foo'

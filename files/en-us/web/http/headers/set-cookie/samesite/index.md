@@ -38,13 +38,13 @@ Cookies will only be sent in a first-party context and not be sent along with re
 
 ### `None`
 
-Cookies will be sent in all contexts, i.e. in responses to both first-party and cross-origin requests. If `SameSite=None` is set, the cookie [`Secure`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#secure) attribute must also be set (or the cookie will be blocked).
+Cookies will be sent in all contexts, i.e. in responses to both first-party and cross-origin requests. If `SameSite=None` is set, the cookie [`Secure`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#secure) attribute must also be set (or the cookie will be blocked).
 
 ## Fixing common warnings
 
 ### `SameSite=None` requires `Secure`
 
-Warnings like the ones below might appear in your console:
+Warnings like the ones below might appear in your console:
 
 ```
 Cookie "myCookie" rejected because it has the "SameSite=None" attribute but is missing the "secure" attribute.
@@ -86,7 +86,7 @@ The warning appears because the `SameSite` policy for a cookie was not explicitl
 Set-Cookie: flavor=choco
 ```
 
-You should explicitly communicate the intended `SameSite` policy for your cookie (rather than relying on browsers to apply `SameSite=Lax` automatically). This will also improve the experience across browsers as not all of them default to `Lax` yet.
+You should explicitly communicate the intended `SameSite` policy for your cookie (rather than relying on browsers to apply `SameSite=Lax` automatically). This will also improve the experience across browsers as not all of them default to `Lax` yet.
 
 ```example-good
 Set-Cookie: flavor=choco; SameSite=Lax

@@ -15,7 +15,7 @@ browser-compat: api.IDBRequest.onerror
 {{ APIRef("IndexedDB") }}
 
 The **`onerror`** event handler of the
-{{domxref("IDBRequest")}} interface handles the `error` event, fired when a
+{{domxref("IDBRequest")}} interface handles the `error` event, fired when a
 request returns an error.
 
 The event handler takes one parameter, an error [Event](/en-US/docs/Web/API/Element/error_event) with type="error".
@@ -30,13 +30,13 @@ request.onerror = function(event) { /* ... */ };
 
 ## Example
 
-The following example requests a given record title, `onsuccess` gets the
+The following example requests a given record title, `onsuccess` gets the
 associated record from the {{domxref("IDBObjectStore")}} (made available as
 `objectStoreTitleRequest.result`), updates one property of the record, and then puts the
 updated record back into the object store. Also included at the bottom is
-an `onerror` function that reports what the error was if the request fails.
-For a full working example, see our [To-do
-Notifications](https://github.com/mdn/to-do-notifications/) app ([view
+an `onerror` function that reports what the error was if the request fails.
+For a full working example, see our [To-do
+Notifications](https://github.com/mdn/to-do-notifications/) app ([view
 example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
@@ -56,11 +56,11 @@ objectStoreTitleRequest.onsuccess = function() {
   data.notified = "yes";
 
   // Create another request that inserts the item back
-  // into the database
+  // into the database
   var updateTitleRequest = objectStore.put(data);
 
   // When this new request succeeds, run the displayData()
-  // function again to update the display
+  // function again to update the display
   updateTitleRequest.onsuccess = function() {
     displayData();
   };
@@ -69,7 +69,7 @@ objectStoreTitleRequest.onsuccess = function() {
 objectStoreTitleRequest.onerror = function() {
   // If an error occurs with the request, log what it is
   console.log("There has been an error with retrieving your data: " + objectStoreTitleRequest.error);
-  // TODO what about event parameter into onerror()? What will be inside of this event?
+  // TODO what about event parameter into onerror()? What will be inside of this event?
 };
 ```
 

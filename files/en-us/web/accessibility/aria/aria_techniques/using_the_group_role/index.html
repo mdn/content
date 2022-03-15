@@ -20,12 +20,12 @@ tags:
 
 <p class="p1">If an author believes a section is significant enough to warrant inclusion in the page's table of contents, they should assign the section a role of <a href="https://www.w3.org/TR/wai-aria-1.1/#region">region</a> or a <a href="https://www.w3.org/TR/wai-aria-1.1/#landmark">standard landmark role</a>.</p>
 
-<h3 id="Possible_effects_on_user_agents_and_assistive_technology">Possible effects on user agents and assistive technology </h3>
+<h3 id="Possible_effects_on_user_agents_and_assistive_technology">Possible effects on user agents and assistive technology </h3>
 
 <p class="p1">When the group role is added to an element, or such an element becomes visible, the user agent should do the following:</p>
 
 <ul class="ul1">
- <li class="li2">Expose the element as having a group role in the operating system's accessibility API. </li>
+ <li class="li2">Expose the element as having a group role in the operating system's accessibility API. </li>
  <li class="li2">Fire an accessible group event using the operating system's accessibility API if it supports it.</li>
 </ul>
 
@@ -36,56 +36,56 @@ tags:
  <li class="li2">Screen magnifiers may enlarge the group.</li>
 </ul>
 
-<div class="note"><strong>Note:</strong> Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and therefore not normative.</div>
+<div class="note"><strong>Note:</strong> Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and therefore not normative.</div>
 
 <h3 id="Examples">Examples</h3>
 
-<h4 id="Example_1_Using_the_group_role_with_a_HTML_tree_view">Example 1: Using the group role with a HTML tree view</h4>
+<h4 id="Example_1_Using_the_group_role_with_a_HTML_tree_view">Example 1: Using the group role with a HTML tree view</h4>
 
-<p class="p1">The snippet below shows how the group role is added directly into the html source code. </p>
+<p class="p1">The snippet below shows how the group role is added directly into the html source code. </p>
 
 <pre class="brush: html">&lt;div id="tree1" role="tree" tabindex="-1"&gt;
-  &lt;div id="animals" class="groupHeader" role="presentation" aria-owns="animalGroup" aria-expanded="true"&gt;
-    &lt;img role="presentation" tabindex="-1" src="images/treeExpanded.gif" /&gt;
-    &lt;span role="treeitem" tabindex="0"&gt;Animals&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;div id="animalGroup" role="group"&gt;
-    &lt;div id="birds" role="treeitem"&gt;
-      &lt;span tabindex="-1"&gt;Birds&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div id="cats" class="groupHeader" role="presentation" aria-owns="catGroup" aria-expanded="false"&gt;
-      &lt;img role="presentation" tabindex="-1" src="images/treeContracted.gif" /&gt;
-      &lt;span role="treeitem" tabindex="0"&gt;Cats&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div id="catGroup" role="group"&gt;
-      &lt;div id="siamese" role="treeitem"&gt;
-        &lt;span tabindex="-1"&gt;Siamese&lt;/span&gt;
-      &lt;/div&gt;
-      &lt;div id="tabby" role="treeitem"&gt;
-        &lt;span tabindex="-1"&gt;Tabby&lt;/span&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div id="animals" class="groupHeader" role="presentation" aria-owns="animalGroup" aria-expanded="true"&gt;
+    &lt;img role="presentation" tabindex="-1" src="images/treeExpanded.gif" /&gt;
+    &lt;span role="treeitem" tabindex="0"&gt;Animals&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div id="animalGroup" role="group"&gt;
+    &lt;div id="birds" role="treeitem"&gt;
+      &lt;span tabindex="-1"&gt;Birds&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div id="cats" class="groupHeader" role="presentation" aria-owns="catGroup" aria-expanded="false"&gt;
+      &lt;img role="presentation" tabindex="-1" src="images/treeContracted.gif" /&gt;
+      &lt;span role="treeitem" tabindex="0"&gt;Cats&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div id="catGroup" role="group"&gt;
+      &lt;div id="siamese" role="treeitem"&gt;
+        &lt;span tabindex="-1"&gt;Siamese&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div id="tabby" role="treeitem"&gt;
+        &lt;span tabindex="-1"&gt;Tabby&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</pre>
 
 <h4 class="p1" id="Example_2_Using_the_group_role_with_a_HTML_drop-down_menu">Example 2: Using the group role with a HTML drop-down menu</h4>
 
-<p class="p2">The snippet below shows how the group role is added directly into the html source code. </p>
+<p class="p2">The snippet below shows how the group role is added directly into the html source code. </p>
 
 <pre class="brush: html">&lt;div role="menu"&gt;
-  &lt;ul role="group"&gt;
-    &lt;li role="menuitem"&gt;Inbox&lt;/li&gt;
-    &lt;li role="menuitem"&gt;Archive&lt;/li&gt;
-    &lt;li role="menuitem"&gt;Trash&lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;ul role="group"&gt;
-    &lt;li role="menuitem"&gt;Custom Folder 1&lt;/li&gt;
-    &lt;li role="menuitem"&gt;Custom Folder 2&lt;/li&gt;
-    &lt;li role="menuitem"&gt;Custom Folder 3&lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;ul role="group"&gt;
-    &lt;li role="menuitem"&gt;New Folder&lt;/li&gt;
-  &lt;/ul&gt;
+  &lt;ul role="group"&gt;
+    &lt;li role="menuitem"&gt;Inbox&lt;/li&gt;
+    &lt;li role="menuitem"&gt;Archive&lt;/li&gt;
+    &lt;li role="menuitem"&gt;Trash&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul role="group"&gt;
+    &lt;li role="menuitem"&gt;Custom Folder 1&lt;/li&gt;
+    &lt;li role="menuitem"&gt;Custom Folder 2&lt;/li&gt;
+    &lt;li role="menuitem"&gt;Custom Folder 3&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul role="group"&gt;
+    &lt;li role="menuitem"&gt;New Folder&lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/div&gt;</pre>
 
 <h4 id="Working_examples">Working examples:</h4>
@@ -99,7 +99,7 @@ tags:
  </li>
 </ul>
 
-<h3 id="Notes">Notes </h3>
+<h3 id="Notes">Notes </h3>
 
 <ul>
  <li class="p1">Group members that are outside of the DOM subtree of the group need to have explicit relationships assigned to them in order to participate in the group.</li>
@@ -111,7 +111,7 @@ tags:
  <li class="li2"><a href="https://www.w3.org/TR/wai-aria-1.1/#group">group</a></li>
 </ul>
 
-<h3 class="p1" id="Related_ARIA_techniques">Related ARIA techniques </h3>
+<h3 class="p1" id="Related_ARIA_techniques">Related ARIA techniques </h3>
 
 <ul class="ul1">
  <li class="li2"><a href="https://www.w3.org/TR/wai-aria-1.1/#region">region</a> role</li>
@@ -124,5 +124,5 @@ tags:
 <h3 class="p1" id="Additional_resources">Additional resources</h3>
 
 <ul class="ul1">
- <li class="li2"><a href="https://www.w3.org/TR/wai-aria-practices/#naming_role_guidance">ARIA Authoring Practices – Accessible Name Guidance by Role – group</a></li>
+ <li class="li2"><a href="https://www.w3.org/TR/wai-aria-practices/#naming_role_guidance">ARIA Authoring Practices – Accessible Name Guidance by Role – group</a></li>
 </ul>

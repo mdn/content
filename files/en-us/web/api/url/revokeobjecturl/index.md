@@ -16,7 +16,7 @@ method releases an existing object URL which was previously created by calling
 {{domxref("URL.createObjectURL()") }}.
 
 Call this method when you've finished
-using an object URL to let the browser know not to keep the reference to the file any
+using an object URL to let the browser know not to keep the reference to the file any
 longer.
 
 {{AvailableInWorkers}}

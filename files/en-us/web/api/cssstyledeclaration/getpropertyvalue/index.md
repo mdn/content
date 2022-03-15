@@ -21,12 +21,12 @@ var value = style.getPropertyValue(property);
 
 ### Parameters
 
-- *`property`* is a {{domxref('DOMString')}} representing the
-  property name (hyphen case) to be checked.
+- *`property`* is a {{domxref('DOMString')}} representing the
+  property name (hyphen case) to be checked.
 
 ### Return value
 
-- `value` is a {{domxref('DOMString')}} containing the value of
+- `value` is a {{domxref('DOMString')}} containing the value of
   the property. If not set, returns the empty string.
 
 ## Example

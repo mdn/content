@@ -18,7 +18,7 @@ See [Other macros](/en-US/docs/MDN/Structures/Macros/Other) for information on m
 
 MDN provides a number of link macros for easing the creation of links to reference pages, glossary entries, and other topics.
 
-Link macros are recommended over normal HTML links because they are succint and translation-friendly.
+Link macros are recommended over normal HTML links because they are succinct and translation-friendly.
 For example a glossary or reference link created using a macro does not need to be translated: in other locales it will automatically link to the correct version of the file.
 
 ### Glossary links
@@ -28,13 +28,6 @@ This macro accepts one required parameter and one optional parameter:
 
 1. The term's name (such as "HTML"): `\{{Glossary("HTML")}}` yields {{Glossary("HTML")}}
 2. Optional: The text to display in the article instead of the term name: `\{{Glossary("CSS", "Cascading Style Sheets")}}` yields {{Glossary("CSS", "Cascading Style Sheets")}}
-
-### Links to in-page sections
-
-[`anch`](https://github.com/mdn/yari/tree/master/kumascript/macros/anch.ejs) - creates link to in-page section:
-
-- `\{{anch("Linking to pages in references")}}`;
-- Demo: {{anch("Linking to pages in references")}}
 
 ### Linking to pages in references
 

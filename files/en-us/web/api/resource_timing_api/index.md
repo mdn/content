@@ -17,7 +17,7 @@ The **`Resource Timing`** interfaces enable retrieving and analyzing detailed ne
 
 The interface's properties create a _resource loading timeline_ with {{domxref("DOMHighResTimeStamp","high-resolution timestamps", "", 1)}} for network events such as redirect start and end times, DNS lookup start and end times, request start, response start and end times, etc. The interface also includes other properties that provide data about the size of the fetched resource as well as the _type_ of resource that initiated the fetch.
 
-This document provides an overview of the `Resource Timing` interfaces. For more details about the interfaces including examples see each interface's reference page, [Using the Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API), and the references in the {{anch("See also")}} section. For a graphical representation of the resource timing processing model see the [resource timing phases](https://w3c.github.io/resource-timing/#process) figure.
+This document provides an overview of the `Resource Timing` interfaces. For more details about the interfaces including examples see each interface's reference page, [Using the Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API), and the references in the [See also](#see_also) section. For a graphical representation of the resource timing processing model see the [resource timing phases](https://w3c.github.io/resource-timing/#process) figure.
 
 {{AvailableInWorkers}}
 
@@ -25,7 +25,7 @@ The `PerformanceResourceTiming` interface extends the {{domxref("PerformanceEntr
 
 ## High-resolution timestamps
 
-Several of the `Resource Timing` properties return _high-resolution timestamps_. These timestamps have a `{{domxref("DOMHighResTimeStamp")}}` type and as its name implies, they represent a high-resolution point in time. This type is a `double` and its value is a discrete point in time or the difference in time between two discrete points in time.
+Several of the `Resource Timing` properties return _high-resolution timestamps_. These timestamps have a `{{domxref("DOMHighResTimeStamp")}}` type and as its name implies, they represent a high-resolution point in time. This type is a `double` and its value is a discrete point in time or the difference in time between two discrete points in time.
 
 The unit of `DOMHighResTimeStamp` is milliseconds and should be accurate to 5 µs (microseconds). However, If the browser is unable to provide a time value accurate to 5 µs (because, for example, due to hardware or software constraints), the browser can represent a the value as a time in milliseconds accurate to a millisecond.
 

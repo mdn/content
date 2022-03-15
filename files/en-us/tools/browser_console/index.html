@@ -19,7 +19,7 @@ tags:
 <p>Similarly, you can execute JavaScript expressions using the Browser Console. But while the Web Console executes code in the page window scope, the Browser Console executes them in the scope of the browser's chrome window. This means you can interact with all the browser's tabs using the <a href="/en-US/docs/Code_snippets/Tabbed_browser"><code>gBrowser</code></a> global, and even with the XUL used to specify the browser's user interface.</p>
 
 <div class="blockIndicator geckoVersionNote">
-<p>NB: The Browser Console command line (to execute JavaScript expressions) is disabled by default. To enable it set the <code>devtools.chrome.enabled</code> preference to <code>true</code> in about:config, or set the "Enable browser {{Glossary("chrome")}} and add-on debugging toolboxes" (Firefox 40 and later)  option in the <a href="/en-US/docs/Tools/Settings">developer tool settings</a>.</p>
+<p>NB: The Browser Console command line (to execute JavaScript expressions) is disabled by default. To enable it set the <code>devtools.chrome.enabled</code> preference to <code>true</code> in about:config, or set the "Enable browser {{Glossary("chrome")}} and add-on debugging toolboxes" (Firefox 40 and later)  option in the <a href="/en-US/docs/Tools/Settings">developer tool settings</a>.</p>
 </div>
 
 <h2 id="Opening_the_Browser_Console">Opening the Browser Console</h2>
@@ -118,15 +118,15 @@ clearBtn.addEventListener('mouseover', function() {
 <p>For <a href="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/index.html">Add-on SDK</a> add-ons, the console API is available automatically. Here's an example add-on that just logs an error when the user clicks a widget:</p>
 
 <pre class="brush: js">widget = require("sdk/widget").Widget({
-  id: "an-error-happened",
-  label: "Error!",
-  width: 40,
-  content: "Error!",
-  onClick: logError
+  id: "an-error-happened",
+  label: "Error!",
+  width: 40,
+  content: "Error!",
+  onClick: logError
 });
 
 function logError() {
-  console.error("something went wrong!");
+  console.error("something went wrong!");
 }</pre>
 
 <p>If you <a href="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/tutorials/installation.html">build this as an XPI file</a>, then open the Browser Console, then open the XPI file in Firefox and install it, you'll see a widget labeled "Error!" in the Add-on bar:</p>
@@ -157,7 +157,7 @@ function logError() {
 
 <pre class="brush: js">var newTabBrowser = gBrowser.getBrowserForTab(gBrowser.selectedTab);
 newTabBrowser.addEventListener("load", function() {
-  newTabBrowser.contentDocument.body.innerHTML = "&lt;h1&gt;this page has been eaten&lt;/h1&gt;";
+  newTabBrowser.contentDocument.body.innerHTML = "&lt;h1&gt;this page has been eaten&lt;/h1&gt;";
 }, true);
 newTabBrowser.contentDocument.location.href = "https://mozilla.org/";</pre>
 
@@ -176,7 +176,7 @@ var makeTheTea = gBrowser.ownerDocument.defaultView.document.createElementNS("ht
 makeTheTea.setAttribute("label", "A nice cup of tea?");
 parent.appendChild(makeTheTea);</pre>
 
-<p><img alt="" src="browser-console-modify-ui-windows.png" style="display: block; margin-left: auto; margin-right: auto;">On macOS, this similar code will add a new item to the <strong>Tools</strong> menu:</p>
+<p><img alt="" src="browser-console-modify-ui-windows.png" style="display: block; margin-left: auto; margin-right: auto;">On macOS, this similar code will add a new item to the <strong>Tools</strong> menu:</p>
 
 <pre class="brush: js">var parent = window.document.getElementById("menu_ToolsPopup");
 var makeTheTea = gBrowser.ownerDocument.defaultView.document.createElementNS("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul", "menuitem");

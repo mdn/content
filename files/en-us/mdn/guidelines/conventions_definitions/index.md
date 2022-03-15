@@ -144,7 +144,7 @@ Here are some guidelines to help you decide what to do.
   - Search the informative text of the overview page for that interface, element, etc. for any references to the removed item.
     Add warning boxes in appropriate places with text along the lines of "\[whatever] has been removed from the specification and will be removed from browsers soon.
     See \[link to page] for a new way to do this."
-  - Similarly, look for any discussion of the item in the guides and tutorials about the relevant API or technology. Add similar warnings.
+  - Similarly, look for any discussion of the item in the guides and tutorials about the relevant API or technology. Add similar warnings.
   - Search MDN for references to the removed item, in case there are discussions elsewhere.
     Add similar warning boxes there as well.
   - At some point in the future, a decision may be made to actually remove the item from the documentation; we don't normally do this but if the item was especially unutilized or uninteresting, we may decide to do so.
@@ -158,7 +158,7 @@ Here are some guidelines to help you decide what to do.
     Add warning boxes in appropriate places with text along the lines of "\[whatever] has been removed from the specification and is deprecated.
     It may be removed from browsers in the future, so you should not use it.
     See \[link to page] for a new way to do this."
-  - Similarly, look for any discussion of the item in the guides and tutorials about the relevant API or technology. Add similar warnings.
+  - Similarly, look for any discussion of the item in the guides and tutorials about the relevant API or technology. Add similar warnings.
   - Search MDN for references to the removed item, in case there are discussions elsewhere.
     Add similar warning boxes there as well.
   - It's unlikely that these items will be removed from the documentation anytime soon, if ever.
@@ -176,7 +176,7 @@ You have three options:
 
 - If you want to copy an entire page:
 
-  1. While viewing the page you want to copy, on the **Advanced** (gear) menu, choose  **[Clone this page](/en-US/docs/MDN/Contribute/Howto/Create_and_edit_pages#clone_of_an_existing_page)**.
+  1. While viewing the page you want to copy, on the **Advanced** (gear) menu, choose  **[Clone this page](/en-US/docs/MDN/Contribute/Howto/Create_and_edit_pages#clone_of_an_existing_page)**.
      This opens the editor UI for a new page, with the contents of the cloned page already populated.
   2. Enter a new **Title** and **Slug** for the cloned page.
   3. Edit the contents of the page as needed, and save as usual.

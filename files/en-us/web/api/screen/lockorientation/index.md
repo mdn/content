@@ -19,7 +19,7 @@ interface locks the screen into a specified orientation.
 > **Warning:** This feature is deprecated and should be avoided. Use the {{DOMxRef("ScreenOrientation.lock()")}} method instead.
 
 > **Note:** This method only works for installed Web apps or for Web pages
-> in [full-screen mode](/en-US/docs/Web/API/Fullscreen_API).
+> in [fullscreen mode](/en-US/docs/Web/API/Fullscreen_API).
 
 ## Syntax
 
@@ -124,5 +124,5 @@ Use {{domxref("ScreenOrientation.lock()")}} instead.
 
 - {{DOMxRef("Screen.orientation")}}
 - {{DOMxRef("Screen.unlockOrientation()")}}
-- {{DOMxRef("Screen.onorientationchange")}}
+- {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} event
 - [Managing screen orientation](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)

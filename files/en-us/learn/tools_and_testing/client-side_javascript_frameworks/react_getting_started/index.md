@@ -14,7 +14,7 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-In this article we will say hello to React. We'll discover a little bit of detail about its background and use cases, set up a basic React toolchain on our local computer, and create and play with a simple starter app — learning a bit about how React works in the process.
+In this article we will say hello to React. We'll discover a little bit of detail about its background and use cases, set up a basic React toolchain on our local computer, and create and play with a simple starter app — learning a bit about how React works in the process.
 
 <table>
   <tbody>
@@ -53,7 +53,7 @@ In this article we will say hello to React. We'll discover a little bit of detai
 
 As its official tagline states, [React](https://reactjs.org/) is a library for building user interfaces. React is not a framework – it's not even exclusive to the web. It's used with other libraries to render to certain environments. For instance, [React Native](https://reactnative.dev/) can be used to build mobile applications.
 
-To build for the web, developers use React in tandem with [ReactDOM](https://reactjs.org/docs/react-dom.html). React and ReactDOM are often discussed in the same spaces as — and utilized to solve the same problems as — other true web development frameworks. When we refer to React as a "framework", we’re working with that colloquial understanding.
+To build for the web, developers use React in tandem with [ReactDOM](https://reactjs.org/docs/react-dom.html). React and ReactDOM are often discussed in the same spaces as — and utilized to solve the same problems as — other true web development frameworks. When we refer to React as a "framework", we're working with that colloquial understanding.
 
 React's primary goal is to minimize the bugs that occur when developers are building UIs. It does this through the use of components — self-contained, logical pieces of code that describe a portion of the user interface. These components can be composed together to create a full UI, and React abstracts away much of the rendering work, leaving you to concentrate on the UI design.
 
@@ -65,7 +65,7 @@ While React _can_ be used for [small pieces of an interface](https://reactjs.org
 
 In addition, many of the developer-experience benefits of a React app, such as writing interfaces with JSX, require a compilation process. Adding a compiler like Babel to a website makes the code on it run slowly, so developers often set up such tooling with a build step. React arguably has a heavy tooling requirement, but it can be learned.
 
-This article is going to focus on the use case of using React to render the entire user interface of an application, using tooling provided by Facebook’s own [create-react-app](https://create-react-app.dev/) tool.
+This article is going to focus on the use case of using React to render the entire user interface of an application, using tooling provided by Facebook's own [create-react-app](https://create-react-app.dev/) tool.
 
 ## How does React use JavaScript?
 
@@ -87,7 +87,7 @@ const header = (
 );
 ```
 
-> **Note:** The parentheses in the previous snippet aren't unique to JSX, and don’t have any effect on your application. They're a signal to you (and your computer) that the multiple lines of code inside are part of the same expression. You could just as well write the header expression like this:
+> **Note:** The parentheses in the previous snippet aren't unique to JSX, and don't have any effect on your application. They're a signal to you (and your computer) that the multiple lines of code inside are part of the same expression. You could just as well write the header expression like this:
 >
 > ```js
 > const header = <header>
@@ -123,7 +123,7 @@ In order to use create-react-app, you need to have [Node.js](https://nodejs.org/
 
 You may also use the Yarn package manager as an alternative, but we'll assume you are using npm in this set of tutorials. See [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) for more information on npm and yarn.
 
-If you're using Windows, you will need to install some software to give you parity with Unix/macOS terminal in order to use the terminal commands mentioned in this tutorial. **Gitbash** (which comes as part of the [git for Windows toolset](https://gitforwindows.org/)) or **[Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about)** (**WSL**) are both suitable. See [Command line crash course](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line) for more information on these, and on terminal commands in general.
+If you're using Windows, you will need to install some software to give you parity with Unix/macOS terminal in order to use the terminal commands mentioned in this tutorial. **Gitbash** (which comes as part of the [git for Windows toolset](https://gitforwindows.org/)) or **[Windows Subsystem for Linux](https://docs.microsoft.com/windows/wsl/about)** (**WSL**) are both suitable. See [Command line crash course](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line) for more information on these, and on terminal commands in general.
 
 Also bear in mind that React and ReactDOM produce apps that only work on a fairly modern set of browsers — IE9+ by way of some polyfills. It is recommended that you use a modern browser like Firefox, Microsoft Edge, Safari, or Chrome when working through these tutorials.
 
@@ -193,7 +193,7 @@ The **`src`** directory is where we'll spend most of our time, as it's where the
 
 The **`public`** directory contains files that will be read by your browser while you're developing the app; the most important of these is `index.html`. React injects your code into this file so that your browser can run it. There's some other markup that helps create-react-app function, so take care not to edit it unless you know what you're doing. You very much should change the text inside the [`<title>`](/en-US/docs/Web/HTML/Element/title) element in this file to reflect the title of your application. Accurate page titles are important for accessibility!
 
-The `public` directory will also be published when you build and deploy a production version of your app. We won’t cover deployment in this tutorial, but you should be able to use a similar solution to that described in our [Deploying our app](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment) tutorial.
+The `public` directory will also be published when you build and deploy a production version of your app. We won't cover deployment in this tutorial, but you should be able to use a similar solution to that described in our [Deploying our app](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment) tutorial.
 
 The `package.json` file contains information about our project that Node.js/npm uses to keep it organized. This file is not unique to React applications; create-react-app merely populates it. You don't need to understand this file at all to complete this tutorial, however, if you'd like to learn more about it, you can read [What is the file \`package.json\`? on NodeJS.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/); we also talk about it in our [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) tutorial.
 
@@ -245,7 +245,7 @@ import './App.css';
 
 The first statement imports the React library itself. Because React turns the JSX we write into `React.createElement()`, all React components must import the `React` module. If you skip this step, your application will produce an error.
 
-The second statement imports a logo from `'./logo.svg'`. Note the use of `./` at the beginning of the path, and the `.svg` extension at the end — these tell us that the file is local and that it is not a JavaScript file. Indeed, the `logo.svg` file lives in our source directory.
+The second statement imports a logo from `'./logo.svg'`. Note the use of `./` at the beginning of the path, and the `.svg` extension at the end — these tell us that the file is local and that it is not a JavaScript file. Indeed, the `logo.svg` file lives in our source directory.
 
 We don't write a path or extension when importing the `React` module — this is not a local file; instead, it is listed as a dependency in our `package.json` file. Be careful of this distinction as you work through this lesson!
 
@@ -282,7 +282,7 @@ function App() {
 
 The `App` function returns a JSX expression. This expression defines what your browser ultimately renders to the DOM.
 
-Some elements in the expression have attributes, which are written just like in HTML, following a pattern of `attribute="value"`. On line 3, the opening [`<div>`](/en-US/docs/Web/HTML/Element/div) tag has a `className` attribute. This is the same as the [`class`](/en-US/docs/Web/HTML/Global_attributes/class) attribute in HTML, but because JSX is JavaScript, we can't use the word `class` — it's reserved, meaning JavaScript already uses it for a specific purpose and it would cause problems here in our code. A few other HTML attributes are written differently in JSX than they are in HTML too, for the same kind of reason. We'll cover them as we encounter them.
+Some elements in the expression have attributes, which are written just like in HTML, following a pattern of `attribute="value"`. On line 3, the opening [`<div>`](/en-US/docs/Web/HTML/Element/div) tag has a `className` attribute. This is the same as the [`class`](/en-US/docs/Web/HTML/Global_attributes/class) attribute in HTML, but because JSX is JavaScript, we can't use the word `class` — it's reserved, meaning JavaScript already uses it for a specific purpose and it would cause problems here in our code. A few other HTML attributes are written differently in JSX than they are in HTML too, for the same kind of reason. We'll cover them as we encounter them.
 
 Take a moment to change the [`<p>`](/en-US/docs/Web/HTML/Element/p) tag on line 6 so that it reads "Hello, world!", then save your file. You'll notice that this change is immediately rendered in the development server running at `http://localhost:3000` in your browser. Now delete the [`<a>`](/en-US/docs/Web/HTML/Element/a) tag and save; the "Learn React" link will be gone.
 
@@ -309,7 +309,7 @@ At the very bottom of the `App.js` file, the statement `export default App` make
 
 ## Interrogating the index
 
-Let’s open `src/index.js`, because that's where the `App` component is being used. This file is the entry point for our app, and it initially looks like this:
+Let's open `src/index.js`, because that's where the `App` component is being used. This file is the entry point for our app, and it initially looks like this:
 
 ```js
 import React from 'react';
@@ -333,7 +333,7 @@ serviceWorker.unregister();
 
 As with `App.js`, the file starts by importing all the JS modules and other assets it needs to run. `src/index.css` holds global styles that are applied to our whole app. We can also see our `App` component imported here; it is made available for import thanks to the `export` statement at the bottom of `App.js`.
 
-Line 7 calls React’s `ReactDOM.render()` function with two arguments:
+Line 7 calls React's `ReactDOM.render()` function with two arguments:
 
 - The component we want to render, `<App />` in this case.
 - The DOM element inside which we want the component to be rendered, in this case the element with an ID of `root`. If you look inside `public/index.html`, you'll see that this is a `<div>` element just inside the `<body>`.
@@ -342,7 +342,7 @@ All of this tells React that we want to render our React application with the `A
 
 > **Note:** In JSX, React components and HTML elements must have closing slashes. Writing just `<App>` or just `<img>` will cause an error.
 
-[Service workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers) are interesting pieces of code that help application performance and allow features of your web applications to work offline, but they’re not in scope for this article. You can delete line 5, as well as most of the code below it.
+[Service workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers) are interesting pieces of code that help application performance and allow features of your web applications to work offline, but they're not in scope for this article. You can delete line 5, as well as most of the code below it.
 
 Your final `index.js` file should look like this:
 
@@ -361,7 +361,7 @@ Next, we'll use a few of our JavaScript skills to get a bit more comfortable edi
 
 ### Variables in JSX
 
-Back in `App.js`, let’s focus on line 9:
+Back in `App.js`, let's focus on line 9:
 
 ```js
 <img src={logo} className="App-logo" alt="logo" />
@@ -407,13 +407,13 @@ function App() {
 
 When you save, your browser should display "Hello, React!" instead of "Hello, world!"
 
-Variables are convenient, but the one we've just set doesn’t make great use of React's features. That's where props come in.
+Variables are convenient, but the one we've just set doesn't make great use of React's features. That's where props come in.
 
 ### Component props
 
-A **prop** is any data passed into a React component. React props are comparable to HTML attributes. Where HTML elements have attributes, React components have props. Props are written inside component calls, and use the same syntax as HTML attributes — `prop="value"`.  In React, dataflow is unidirectional: props can only be passed from Parent components down to Child components; and props are read-only.
+A **prop** is any data passed into a React component. React props are comparable to HTML attributes. Where HTML elements have attributes, React components have props. Props are written inside component calls, and use the same syntax as HTML attributes — `prop="value"`. In React, dataflow is unidirectional: props can only be passed from Parent components down to Child components; and props are read-only.
 
-Let’s open `index.js` and give our `<App/>` call its first prop.
+Let's open `index.js` and give our `<App/>` call its first prop.
 
 Add a prop of `subject` to the `<App/>` component call, with a value of `Clarice`. When you are done, your code should look something like this:
 
@@ -466,7 +466,7 @@ When you save, the app should now greet you with "Hello, Clarice!". If you retur
 
 ## Summary
 
-This brings us to the end of our initial look at React, including how to install it locally, creating a starter app, and how the basics work. In the next article, we'll start building our first proper application — a todo list. Before we do that, however, let's recap some of the things we’ve learned.
+This brings us to the end of our initial look at React, including how to install it locally, creating a starter app, and how the basics work. In the next article, we'll start building our first proper application — a todo list. Before we do that, however, let's recap some of the things we've learned.
 
 In React:
 

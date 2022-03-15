@@ -29,7 +29,7 @@ Despite the fact that inputs of type `tel` are functionally identical to standar
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
         A {{domxref("DOMString")}} representing a telephone number, or
         empty
@@ -106,7 +106,7 @@ If the specified pattern is not specified or is invalid, no regular expression i
 
 > **Note:** Use the {{htmlattrxref("title", "input")}} attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.
 
-See {{anch("Pattern validation")}} below for details and an example.
+See [Pattern validation](#pattern_validation) below for details and an example.
 
 ### placeholder
 
@@ -126,7 +126,7 @@ A Boolean attribute which, if present, means this field cannot be edited by the 
 
 The `size` attribute is a numeric value indicating how many characters wide the input field should be. The value must be a number greater than zero, and the default value is 20. Since character widths vary, this may or may not be exact and should not be relied upon to be so; the resulting input may be narrower or wider than the specified number of characters, depending on the characters and the font ({{cssxref("font")}} settings in use).
 
-This does _not_ set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the `{{anch("maxlength")}}` attribute.
+This does _not_ set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the [`maxlength`](#maxlength) attribute.
 
 ## Non-standard attributes
 
@@ -153,7 +153,7 @@ Permitted values are: `go`, `done`, `next`, `search`, and `send`. The browser de
 
 Telephone numbers are a very commonly collected type of data on the web. When creating any kind of registration or e-commerce site, for example, you will likely need to ask the user for a telephone number, whether for business purposes or for emergency contact purposes. Given how commonly-entered phone numbers are, it's unfortunate that a "one size fits all" solution for validating phone numbers is not practical.
 
-Fortunately, you can consider the requirements of your own site and implement an appropriate level of validation yourself. See {{anch("Validation")}}, below, for details.
+Fortunately, you can consider the requirements of your own site and implement an appropriate level of validation yourself. See [Validation](#validation), below, for details.
 
 ### Custom keyboards
 
@@ -184,7 +184,7 @@ Here, we have an `tel` input with the placeholder `123-4567-8901`. Note how the 
 
 ```html
 <input id="telNo" name="telNo" type="tel"
-       placeholder="123-4567-8901">
+       placeholder="123-4567-8901">
 ```
 
 {{ EmbedLiveSample('Placeholders', 600, 40) }}
@@ -199,7 +199,7 @@ The physical size of the input box can be controlled using the {{htmlattrxref("s
 
 ```html
 <input id="telNo" name="telNo" type="tel"
-       size="20">
+       size="20">
 ```
 
 {{ EmbedLiveSample('Physical_input_element_size', 600, 40) }}
@@ -212,12 +212,12 @@ The example below creates a 20-character wide telephone number entry box, requir
 
 ```html
 <input id="telNo" name="telNo" type="tel"
-       size="20" minlength="9" maxlength="14">
+       size="20" minlength="9" maxlength="14">
 ```
 
 {{EmbedLiveSample("Element_value_length", 600, 40) }}
 
-> **Note:** The above attributes do affect {{anch("Validation")}} — the above example's inputs will count as invalid if the length of the value is less than 9 characters, or more than 14. Most browser won't even let you enter a value over the max length.
+> **Note:** The above attributes do affect [Validation](#validation) — the above example's inputs will count as invalid if the length of the value is less than 9 characters, or more than 14. Most browser won't even let you enter a value over the max length.
 
 ### Providing default options
 
@@ -227,7 +227,7 @@ As always, you can provide a default value for an `tel` input box by setting its
 
 ```html
 <input id="telNo" name="telNo" type="tel"
-       value="333-4444-4444">
+       value="333-4444-4444">
 ```
 
 {{EmbedLiveSample("Providing_a_single_default_using_the_value_attribute", 600, 40)}}
@@ -241,16 +241,16 @@ Taking it a step further, you can provide a list of default phone number values 
 <input id="telNo" name="telNo" type="tel" list="defaultTels">
 
 <datalist id="defaultTels">
-  <option value="111-1111-1111">
-  <option value="122-2222-2222">
-  <option value="333-3333-3333">
-  <option value="344-4444-4444">
+  <option value="111-1111-1111">
+  <option value="122-2222-2222">
+  <option value="333-3333-3333">
+  <option value="344-4444-4444">
 </datalist>
 ```
 
 {{EmbedLiveSample("Offering_suggested_values", 600, 40)}}
 
-With the {{HTMLElement("datalist")}} element and its {{HTMLElement("option")}}s in place, the browser will offer the specified values as potential values for the email address; this is typically presented as a popup or drop-down menu containing the suggestions. While the specific user experience may vary from one browser to another, typically clicking in the edit box presents a drop-down of the suggested email addresses. Then, as the user types, the list is adjusted to show only filtered matching values. Each typed character narrows down the list until the user makes a selection or types a custom value.
+With the {{HTMLElement("datalist")}} element and its {{HTMLElement("option")}}s in place, the browser will offer the specified values as potential values for the phone number; this is typically presented as a popup or drop-down menu containing the suggestions. While the specific user experience may vary from one browser to another, typically clicking in the edit box presents a drop-down of the suggested phone numbers. Then, as the user types, the list is adjusted to show only filtered matching values. Each typed character narrows down the list until the user makes a selection or types a custom value.
 
 Here's a screenshot of what that might look like:
 
@@ -260,7 +260,7 @@ Here's a screenshot of what that might look like:
 
 As we've touched on before, it's quite difficult to provide a one-size-fits-all client-side validation solution for phone numbers. So what can we do? Let's consider some options.
 
-> **Warning:** HTML form validation is _not_ a substitute for server-side scripts that ensure the entered data is in the proper format before it is allowed into the database.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.
+> **Warning:** HTML form validation is _not_ a substitute for server-side scripts that ensure the entered data is in the proper format before it is allowed into the database.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.
 
 ### Making telephone numbers required
 

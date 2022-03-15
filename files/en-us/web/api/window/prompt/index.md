@@ -25,10 +25,10 @@ result = window.prompt(message, default);
 
 ### Parameters
 
-- `message` {{optional_inline}}
+- `message` {{optional_inline}}
   - : A string of text to display to the user. Can be omitted if there is nothing to show
     in the prompt window.
-- `default` {{optional_inline}}
+- `default` {{optional_inline}}
   - : A string containing the default value displayed in the text input field. Note that
     in Internet Explorer 7 and 8, if you do not provide this parameter, the string
     `"undefined"` is the default value.
@@ -57,7 +57,7 @@ When the user clicks the OK button, text entered in the input field is returned.
 user clicks OK without entering any text, an empty string is returned. If the user
 clicks the Cancel button, this function returns `null`.
 
-The above prompt appears as follows (in Chrome on OS X):
+The above prompt appears as follows (in Chrome on OS X):
 
 [![prompt() dialog in Chrome on OS X](prompt.png)](prompt.png)
 
@@ -66,11 +66,6 @@ The above prompt appears as follows (in Chrome on OS X):
 A prompt dialog contains a single-line textbox, a Cancel button, and an OK button, and
 returns the (possibly empty) text the user entered into that textbox.
 
-Dialog boxes are modal windows; they
-prevent the user from accessing the rest of the program's interface until the dialog box
-is closed. For this reason, you should not overuse any function that creates a dialog
-box (or modal window).
-
 Please note that result is a string. That means you should sometimes cast the value
 given by the user. For example, if their answer should be a Number, you should cast the
 value to Number.
@@ -78,6 +73,13 @@ value to Number.
 ```js
 const aNumber = Number(window.prompt("Type a number", ""));
 ```
+
+Dialog boxes are modal windows; they
+prevent the user from accessing the rest of the program's interface until the dialog box
+is closed. For this reason, you should not overuse any function that creates a dialog
+box (or modal window).
+
+Alternatively {{HTMLElement("dialog")}} element can be used to take user inputs.
 
 ## Specifications
 
@@ -89,5 +91,6 @@ const aNumber = Number(window.prompt("Type a number", ""));
 
 ## See also
 
+- {{HTMLElement("dialog")}} element
 - {{domxref("window.alert", "alert")}}
 - {{domxref("window.confirm", "confirm")}}

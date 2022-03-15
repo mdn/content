@@ -35,9 +35,9 @@ A {{domxref("USVString")}}.
 
 ```js
 self.addEventListener('push', function(event) {
-  var textObj = event.data.text();
+  var textObj = event.data.text();
 
-  // do something with your text
+  // do something with your text
 });
 ```
 

@@ -27,12 +27,12 @@ var list = document.createTouchList([touch1 [, touch2 [, ...]]]);
 - `touches`
   - : Zero or more {{DOMxRef("Touch")}} objects. **Note:** Firefox also
     accepts an [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of
-    {{DOMxRef("Touch")}} objects.
+    {{DOMxRef("Touch")}} objects.
 
 ### Return value
 
 - `list`
-  - : A {{DOMxRef("TouchList")}} object containing the {{DOMxRef("Touch")}} objects
+  - : A {{DOMxRef("TouchList")}} object containing the {{DOMxRef("Touch")}} objects
     specified by the `touches` parameter.
 
 ## Example

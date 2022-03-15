@@ -14,7 +14,7 @@ Firefox:
 
 ```
 CookiePartitionedForeign=Partitioned cookie
-or storage access was provided to “<URL>” because it is loaded in the
+or storage access was provided to "<URL>" because it is loaded in the
 third-party context and storage partitioning is enabled.
 ```
 

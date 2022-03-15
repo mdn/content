@@ -15,7 +15,7 @@ browser-compat: api.Client
 ---
 {{APIRef("Service Workers API")}}
 
-The `Client` interface represents an executable context such as a {{domxref("Worker")}}, or a {{domxref("SharedWorker")}}. {{domxref("Window")}} clients are represented by the more-specific {{domxref("WindowClient")}}. You can get `Client`/`WindowClient` objects from methods such as {{domxref("Clients.matchAll","Clients.matchAll()")}} and {{domxref("Clients.get","Clients.get()")}}.
+The `Client` interface represents an executable context such as a {{domxref("Worker")}}, or a {{domxref("SharedWorker")}}. {{domxref("Window")}} clients are represented by the more-specific {{domxref("WindowClient")}}. You can get `Client`/`WindowClient` objects from methods such as {{domxref("Clients.matchAll","Clients.matchAll()")}} and {{domxref("Clients.get","Clients.get()")}}.
 
 ## Methods
 
@@ -25,7 +25,7 @@ The `Client` interface represents an executable context such as a {{domxref("Wo
 ## Properties
 
 - {{domxref("Client.id")}} {{readonlyInline}}
-  - : The universally unique identifier of the client as a string.
+  - : The universally unique identifier of the client as a string.
 - {{domxref("Client.type")}} {{readonlyInline}}
   - : The client's type as a string. It can be "`window"`, "`worker"`, or "`sharedworker"`.
 - {{domxref("Client.url")}} {{readonlyInline}}

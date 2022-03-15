@@ -15,14 +15,14 @@ browser-compat: api.Clients
 ---
 {{APIRef("Service Workers API")}}
 
-The `Clients` interface provides access to {{domxref("Client")}} objects. Access it via `{{domxref("ServiceWorkerGlobalScope", "self")}}.clients` within a [service worker](/en-US/docs/Web/API/Service_Worker_API).
+The `Clients` interface provides access to {{domxref("Client")}} objects. Access it via `{{domxref("ServiceWorkerGlobalScope", "self")}}.clients` within a [service worker](/en-US/docs/Web/API/Service_Worker_API).
 
 ## Methods
 
 - {{domxref("Clients.get()")}}
-  - : Returns a {{jsxref("Promise")}} for a {{domxref("Client")}} matching a given {{domxref("Client.id", "id")}}.
+  - : Returns a {{jsxref("Promise")}} for a {{domxref("Client")}} matching a given {{domxref("Client.id", "id")}}.
 - {{domxref("Clients.matchAll()")}}
-  - : Returns a {{jsxref("Promise")}} for an array of {{domxref("Client")}} objects. An options argument allows you to control the types of clients returned.
+  - : Returns a {{jsxref("Promise")}} for an array of {{domxref("Client")}} objects. An options argument allows you to control the types of clients returned.
 - {{domxref("Clients.openWindow()")}}
   - : Opens a new browser window for a given url and returns a {{jsxref("Promise")}} for the new {{domxref("WindowClient")}}.
 - {{domxref("Clients.claim()")}}
@@ -34,34 +34,34 @@ The following example shows an existing chat window or creates a new one when th
 
 ```js
 addEventListener('notificationclick', event => {
-  event.waitUntil(async function() {
-    const allClients = await clients.matchAll({
-      includeUncontrolled: true
-    });
+  event.waitUntil(async function() {
+    const allClients = await clients.matchAll({
+      includeUncontrolled: true
+    });
 
-    let chatClient;
+    let chatClient;
 
-    // Let's see if we already have a chat window open:
-    for (const client of allClients) {
-      const url = new URL(client.url);
+    // Let's see if we already have a chat window open:
+    for (const client of allClients) {
+      const url = new URL(client.url);
 
-      if (url.pathname == '/chat/') {
-        // Excellent, let's use it!
-        client.focus();
-        chatClient = client;
-        break;
-      }
-    }
+      if (url.pathname == '/chat/') {
+        // Excellent, let's use it!
+        client.focus();
+        chatClient = client;
+        break;
+      }
+    }
 
-    // If we didn't find an existing chat window,
+    // If we didn't find an existing chat window,
     // open a new one:
-    if (!chatClient) {
-      chatClient = await clients.openWindow('/chat/');
-    }
+    if (!chatClient) {
+      chatClient = await clients.openWindow('/chat/');
+    }
 
-    // Message the client:
-    chatClient.postMessage("New chat messages!");
-  }());
+    // Message the client:
+    chatClient.postMessage("New chat messages!");
+  }());
 });
 ```
 

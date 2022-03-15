@@ -67,20 +67,20 @@ that illegal language tags are rejected with a {{jsxref("Global_Objects/RangeErr
 
 ```js
 function toLocaleStringSupportsLocales() {
-  var number = 0;
-  try {
-    number.toLocaleString('i');
-  } catch (e) {
-    return e.name === 'RangeError';
+  var number = 0;
+  try {
+    number.toLocaleString('i');
+  } catch (e) {
+    return e.name === 'RangeError';
   }
   return false;
 }
 ```
 
 Prior to ES5.1, implementations were not required to throw a range error exception if
-`toLocaleString` is called with arguments.
+`toLocaleString` is called with arguments.
 
-A check that works in all hosts, including those supporting ECMA-262 prior to ed 5.1,
+A check that works in all hosts, including those supporting ECMA-262 prior to ed 5.1,
 is to test for the features specified in ECMA-402 that are required to support regional
 options for `Number.prototype.toLocaleString` directly:
 
@@ -136,7 +136,7 @@ var number = 123456.789;
 
 // request a currency format
 console.log(number.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
-// → 123.456,79 €
+// → 123.456,79 €
 
 // the Japanese yen doesn't use a minor unit
 console.log(number.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' }))

@@ -31,7 +31,7 @@ _This interface doesn't define any properties of its own, but it does inherit th
 - {{domxref("VRDisplay.hardwareUnitId")}} {{readonlyInline}}
   - : Returns the distinct hardware ID for the overall hardware unit that this `VRDevice` is a part of. All devices that are part of the same physical piece of hardware will have the same `hardwareUnitId`.
 - {{domxref("VRDisplay.displayId")}} {{readonlyInline}}
-  - : Returns the ID for this specific `VRDevice`. The ID shouldn’t change across browser restarts, allowing configuration data to be saved based on it.
+  - : Returns the ID for this specific `VRDevice`. The ID shouldn't change across browser restarts, allowing configuration data to be saved based on it.
 - {{domxref("VRDisplay.displayName")}} {{readonlyInline}}
   - : A human-readable name to identify the `VRDevice`.
 

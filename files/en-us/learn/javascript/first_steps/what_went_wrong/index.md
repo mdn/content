@@ -192,13 +192,13 @@ There are other common errors you'll come across in your code. This section high
 This error generally means that you have missed a semicolon at the end of one of your lines of code, but it can sometimes be more cryptic. For example, if we change this line inside the `checkGuess()` function:
 
 ```js
-let userGuess = Number(guessField.value);
+const userGuess = Number(guessField.value);
 ```
 
 to
 
 ```js
-let userGuess === Number(guessField.value);
+const userGuess === Number(guessField.value);
 ```
 
 It throws this error because it thinks you are trying to do something different. You should make sure that you don't mix up the assignment operator (`=`) — which sets a variable to be equal to a value — with the strict equality operator (`===`), which tests whether one value is equal to another, and returns a `true`/`false` result.

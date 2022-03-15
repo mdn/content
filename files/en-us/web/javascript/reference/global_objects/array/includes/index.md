@@ -45,7 +45,7 @@ includes(searchElement, fromIndex)
     positive values of `fromIndex`, or at
     `arr.length + fromIndex` for negative values of
     `fromIndex` (using the {{interwiki("wikipedia", "absolute
-    value")}} of `fromIndex` as the number of elements from the end
+    value")}} of `fromIndex` as the number of elements from the end
     of the array at which to start the search).
 
     Defaults to `0`.

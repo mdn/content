@@ -148,7 +148,7 @@ Let's go through this line by line and decipher what it means.
 6. Finally, the local connection's remote description is set to refer to the remote peer by calling localConnection's {{domxref("RTCPeerConnection.setRemoteDescription()")}}.
 7. The `catch()` calls a routine that handles any errors that occur.
 
-> **Note:** Once again, this process is not a real-world implementation; in normal usage, there's two chunks of code running on two machines, interacting and negotiating the connection. A side channel, commonly called a “signalling server,” is usually used to exchange the description (which is in **application/sdp** form) between the two peers.
+> **Note:** Once again, this process is not a real-world implementation; in normal usage, there's two chunks of code running on two machines, interacting and negotiating the connection. A side channel, commonly called a "signalling server," is usually used to exchange the description (which is in **application/sdp** form) between the two peers.
 
 #### Handling successful peer connection
 

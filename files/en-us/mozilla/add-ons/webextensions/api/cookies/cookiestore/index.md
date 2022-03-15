@@ -36,7 +36,7 @@ Values of this type are objects, which can contain the following properties:
 
 ## Examples
 
-In the following snippet, the {{WebExtAPIRef("cookies.getAllCookieStores()")}} method is used to retrieve all the cookie stores currently available in the browser, and print out each cookie store ID, and the tabs that currently share each cookie store.
+In the following snippet, the {{WebExtAPIRef("cookies.getAllCookieStores()")}} method is used to retrieve all the cookie stores currently available in the browser, and print out each cookie store ID, and the tabs that currently share each cookie store.
 
 ```js
 function logStores(cookieStores) {

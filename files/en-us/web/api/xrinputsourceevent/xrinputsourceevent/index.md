@@ -39,7 +39,7 @@ new XRInputSourceEvent(type, eventInitDict)
 
 - `type`
   - : A {{domxref("DOMString")}} indicating which of the input source events the new
-    object will represent. Permitted values are listed under {{anch("Event types")}}
+    object will represent. Permitted values are listed under [Event types](#event_types)
     below.
 - `eventInitDict`
 

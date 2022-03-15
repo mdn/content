@@ -48,7 +48,7 @@ This includes the possibility of `length` being nonexistent, in which case
 
 Although {{jsxref("Global_Objects/String", "strings", "", 1)}} are native, Array-like
 objects, they are not suitable in applications of this method, as strings are immutable.
- Similarly for the native, Array-like object {{jsxref("Functions/arguments",
+ Similarly for the native, Array-like object {{jsxref("Functions/arguments",
   "arguments", "", 1)}}.
 
 ## Examples

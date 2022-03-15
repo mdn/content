@@ -12,26 +12,37 @@ browser-compat: api.XMLHttpRequestEventTarget
 ---
 {{APIRef("XMLHttpRequest")}}
 
-`XMLHttpRequestEventTarget` is the interface that describes the event handlers you can implement in an object that will handle events for an {{ domxref("XMLHttpRequest") }}.
+`XMLHttpRequestEventTarget` is the interface that describes the event handlers shared on {{domxref("XMLHttpRequest")}} and {{domxref("XMLHttpRequestUpload")}}.
 
-{{InheritanceDiagram}}
+You don't use `XMLHttpRequestEventTarget` directly; instead you interact with the sub classes.
 
-## Properties
+## Inheritance for `XMLHttpRequest`
 
-- {{ domxref("XMLHttpRequestEventTarget.onabort") }}
-  - : Contains the function to call when a request is aborted and the {{event('abort')}} event is received by this object.
-- {{ domxref("XMLHttpRequestEventTarget.onerror") }}
-  - : Contains the function to call when a request encounters an error and the {{event('error')}} event is received by this object.
-- {{ domxref("XMLHttpRequestEventTarget.onload") }}
-  - : Contains the function to call when an HTTP request returns after successfully fetching content and the {{event('load')}} event is received by this object.
-- {{ domxref("XMLHttpRequestEventTarget.onloadstart") }}
-  - : Contains the function that gets called when the HTTP request first begins loading data and the {{event('loadstart')}} event is received by this object.
-- {{ domxref("XMLHttpRequestEventTarget.onprogress") }}
-  - : Contains the function that is called periodically with information about the progress of the request and the {{event('progress')}} event is received by this object.
-- {{ domxref("XMLHttpRequestEventTarget.ontimeout") }}
-  - : Contains the function that is called if the event times out and the {{event("timeout")}} event is received by this object; this only happens if a timeout has been previously established by setting the value of the `XMLHttpRequest` object's `timeout` attribute.
-- {{ domxref("XMLHttpRequestEventTarget.onloadend") }}
-  - : Contains the function that is called when the load is completed, even if the request failed, and the {{event('loadend')}} event is received by this object.
+{{InheritanceDiagram("XMLHttpRequest")}}
+
+The following events are made available to {{domxref("XMLHttpRequest")}}:
+
+- {{domxref("XMLHttpRequest/abort_event", "abort")}}
+- {{domxref("XMLHttpRequest/error_event", "error")}}
+- {{domxref("XMLHttpRequest/load_event", "load")}}
+- {{domxref("XMLHttpRequest/loadend_event", "loadend")}}
+- {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}
+- {{domxref("XMLHttpRequest/progress_event", "progress")}}
+- {{domxref("XMLHttpRequest/timeout_event", "timeout")}}
+
+## Inheritance for `XMLHttpRequestUpload`
+
+{{InheritanceDiagram("XMLHttpRequestUpload")}}
+
+The following events are made available to {{domxref("XMLHttpRequestUpload")}}:
+
+- {{domxref("XMLHttpRequestUpload/abort_event", "abort")}}
+- {{domxref("XMLHttpRequestUpload/error_event", "error")}}
+- {{domxref("XMLHttpRequestUpload/load_event", "load")}}
+- {{domxref("XMLHttpRequestUpload/loadend_event", "loadend")}}
+- {{domxref("XMLHttpRequestUpload/loadstart_event", "loadstart")}}
+- {{domxref("XMLHttpRequestUpload/progress_event", "progress")}}
+- {{domxref("XMLHttpRequestUpload/timeout_event", "timeout")}}
 
 ## Specifications
 
@@ -43,5 +54,5 @@ browser-compat: api.XMLHttpRequestEventTarget
 
 ## See also
 
-- {{ domxref("XMLHttpRequest") }}
-- [Using XMLHttpRequest](/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- {{domxref("XMLHttpRequest")}}
+- {{domxref("XMLHttpRequestUpload")}}

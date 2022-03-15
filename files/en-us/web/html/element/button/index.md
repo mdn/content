@@ -13,9 +13,9 @@ browser-compat: html.elements.button
 
 {{HTMLRef}}
 
-The **`<button>`** [HTML](/en-US/docs/Web/HTML) element represents a clickable button, used to submit [forms](/en-US/docs/Learn/Forms) or anywhere in a document for accessible, standard button functionality.
+The **`<button>`** [HTML](/en-US/docs/Web/HTML) element is an interactive element activated by a user with a mouse, keyboard, finger, voice command, or other assistive technology. Once activated, it then performs a programmable action, such as submitting a [form](/en-US/docs/Learn/Forms) or opening a dialog.
 
-By default, HTML buttons are presented in a style resembling the platform the {{Glossary("user agent")}} runs on, but you can change buttons’ appearance with [CSS](/en-US/docs/Web/CSS).
+By default, HTML buttons are presented in a style resembling the platform the {{Glossary("user agent")}} runs on, but you can change buttons' appearance with [CSS](/en-US/docs/Web/CSS).
 
 {{EmbedInteractiveExample("pages/tabbed/button.html", "tabbed-shorter")}}
 
@@ -136,7 +136,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     - `application/x-www-form-urlencoded`: The default if the attribute is not used.
     - `multipart/form-data`: Use to submit {{HTMLElement("input")}} elements with their {{htmlattrxref("type","input")}} attributes set to `file`.
-    - `text/plain`: Specified as a debugging aid; shouldn’t be used for real form submission.
+    - `text/plain`: Specified as a debugging aid; shouldn't be used for real form submission.
 
     If this attribute is specified, it overrides the {{htmlattrxref("enctype","form")}} attribute of the button's form owner.
 
@@ -144,7 +144,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : If the button is a submit button (it's inside/associated with a `<form>` and doesn't have `type="button"`), this attribute specifies the [HTTP method](/en-US/docs/Web/HTTP/Methods) used to submit the form. Possible values:
 
-    - `post`: The data from the form are included in the body of the HTTP request when sent to the server. Use when the form contains information that shouldn’t be public, like login credentials.
+    - `post`: The data from the form are included in the body of the HTTP request when sent to the server. Use when the form contains information that shouldn't be public, like login credentials.
     - `get`: The form data are appended to the form's `action` URL, with a `?` as a separator, and the resulting URL is sent to the server. Use this method when the form [has no side effects](/en-US/docs/Glossary/Idempotent), like search forms.
 
     If specified, this attribute overrides the {{htmlattrxref("method","form")}} attribute of the button's form owner.
@@ -160,12 +160,12 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
   - : If the button is a submit button, this attribute is an author-defined name or standardized, underscore-prefixed keyword indicating where to display the response from submitting the form. This is the `name` of, or keyword for, a _browsing context_ (a tab, window, or {{HTMLElement("iframe")}}). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the button's form owner. The following keywords have special meanings:
 
     - `_self`: Load the response into the same browsing context as the current one. This is the default if the attribute is not specified.
-    - `_blank`: Load the response into a new unnamed browsing context — usually a new tab or window, depending on the user’s browser settings.
+    - `_blank`: Load the response into a new unnamed browsing context — usually a new tab or window, depending on the user's browser settings.
     - `_parent`: Load the response into the parent browsing context of the current one. If there is no parent, this option behaves the same way as `_self`.
     - `_top`: Load the response into the top-level browsing context (that is, the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as `_self`.
 
 - {{htmlattrdef("name")}}
-  - : The name of the button, submitted as a pair with the button’s `value` as part of the form data, when that button is used to submit the form.
+  - : The name of the button, submitted as a pair with the button's `value` as part of the form data, when that button is used to submit the form.
 - {{htmlattrdef("type")}}
 
   - : The default behavior of the button. Possible values are:
@@ -175,7 +175,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - `button`: The button has no default behavior, and does nothing when pressed by default. It can have client-side scripts listen to the element's events, which are triggered when the events occur.
 
 - {{htmlattrdef("value")}}
-  - : Defines the value associated with the button’s `name` when it’s submitted with the form data. This value is passed to the server in params when the form is submitted using this button.
+  - : Defines the value associated with the button's `name` when it's submitted with the form data. This value is passed to the server in params when the form is submitted using this button.
 
 ## Notes
 

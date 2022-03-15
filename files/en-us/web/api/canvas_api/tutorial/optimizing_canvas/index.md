@@ -39,7 +39,7 @@ ctx.drawImage(myImage, 0.3, 0.5);
 
 This forces the browser to do extra calculations to create the anti-aliasing effect. To avoid this, make sure to round all co-ordinates used in calls to {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} using {{jsxref("Math.floor()")}}, for example.
 
-### Don’t scale images in `drawImage`
+### Don't scale images in `drawImage`
 
 Cache various sizes of your images on an offscreen canvas when loading as opposed to constantly scaling them in {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}}.
 
@@ -92,7 +92,7 @@ stage.style.transform = 'scale(' + scaleToFit + ')';
 
 ### Turn off transparency
 
-If your application uses canvas and doesn’t need a transparent backdrop, set the `alpha` option to `false` when creating a drawing context with {{domxref("HTMLCanvasElement.getContext()")}}. This information can be used internally by the browser to optimize rendering.
+If your application uses canvas and doesn't need a transparent backdrop, set the `alpha` option to `false` when creating a drawing context with {{domxref("HTMLCanvasElement.getContext()")}}. This information can be used internally by the browser to optimize rendering.
 
 ```js
 var ctx = canvas.getContext('2d', { alpha: false });

@@ -8,11 +8,11 @@ tags:
   - captions
   - subtitles
 ---
-IMSC offers many options for styling documents, and most of the IMSC styling properties have direct CSS equivalents, making them familiar to web developers.  In this guide you'll learn a bit more about IMSC styling including the difference between inline and referential styling, and efficient styling using inheritance and region styling.
+IMSC offers many options for styling documents, and most of the IMSC styling properties have direct CSS equivalents, making them familiar to web developers.  In this guide you'll learn a bit more about IMSC styling including the difference between inline and referential styling, and efficient styling using inheritance and region styling.
 
 ## Inline styling
 
-The simplest way of styling content elements like `<p>` or `<span>` is by specifying one or more style attributes, such as `tts:color`, on them. For instance, the following
+The simplest way of styling content elements like `<p>` or `<span>` is by specifying one or more style attributes, such as `tts:color`, on them. For instance, the following
 
 ```xml
 <p tts:textAlign="center"
@@ -58,17 +58,17 @@ In referential styling, styles are defined once and reused throughout the docume
      <style xml:id="s1" tts:color="yellow" tts:backgroundColor="black"/>
    </styling>
   </head>
-  <body>
-    <div>
+  <body>
+    <div>
       <p>
         <span style="s1">Hello, I am Mork from Ork.</span>
       </p>
       <p>
         <span style="s1">I come from another planet.</span>
       </p>
-    </div>
+    </div>
   </body>
-  </tt>
+  </tt>
 ```
 
 Each `<style>` element is given an `id` (`"s1"` in this example):
@@ -133,8 +133,8 @@ Region styling plays a special role in IMSC since a style property specified on 
  </head>
  <body>
    <div>
-     <p region="r1">Hello, I am Mork from Ork</p>
-   </div>
+     <p region="r1">Hello, I am Mork from Ork</p>
+   </div>
  </body>
 </tt>
 ```
@@ -157,7 +157,7 @@ Referential styling can be applied to style elements themselves:
 Multiple styles can be also applied simultaneously on an element. For example, in the snippet below the style properties of both styles `s1` and `s2` are applied to the same `<p>` element.
 
 ```xml
-<p style=”s1 s2”>Hello, I am Mork from Ork</p>
+<p style="s1 s2">Hello, I am Mork from Ork</p>
 ```
 
 <section id="Quick_links"><ol><li><a href="/en-US/docs/Related/IMSC/"><strong>IMSC</strong></a></li><li class="toggle"><details open><summary>IMSC guides</summary><ol><li><a href="/en-US/docs/Related/IMSC/Basics">IMSC basics</a></li><li><a href="/en-US/docs/Related/IMSC/Using_the_imscJS_polyfill">Using the imscJS polyfill</a></li><li><a href="/en-US/docs/Related/IMSC/Styling">Styling IMSC documents</a></li><li><a href="/en-US/docs/Related/IMSC/Subtitle_placement">Subtitle placement in IMSC</a></li><li><a href="/en-US/docs/Related/IMSC/Namespaces">Namespaces in IMSC</a></li><li><a href="/en-US/docs/Related/IMSC/Timing_in_IMSC">Timing in IMSC</a></li><li><a href="/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC">Mapping video time codes to IMSC</a></li><li><a href="/en-US/docs/Related/IMSC/IMSC_and_other_standards">IMSC and other standards</a></li></ol></details></li></ol></section>

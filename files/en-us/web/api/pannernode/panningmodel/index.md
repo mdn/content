@@ -16,7 +16,7 @@ The `panningModel` property of the {{ domxref("PannerNode") }} interface is an e
 
 The possible values are:
 
-- `equalpower`: Represents the equal-power panning algorithm, generally regarded as simple and efficient. `equalpower` is the default value.
+- `equalpower`: Represents the equal-power panning algorithm, generally regarded as simple and efficient. `equalpower` is the default value.
 - `HRTF`: Renders a stereo output of higher quality than `equalpower` — it uses a convolution with measured impulse responses from human subjects.
 
 ## Syntax

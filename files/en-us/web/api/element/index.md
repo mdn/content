@@ -38,13 +38,13 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
 - {{DOMxRef("Element.className")}}
   - : Is a {{DOMxRef("DOMString")}} representing the class of the element.
 - {{DOMxRef("Element.clientHeight")}} {{readOnlyInline}}
-  - : Returns a {{jsxref("Number")}} representing the inner height of the element.
+  - : Returns a number representing the inner height of the element.
 - {{DOMxRef("Element.clientLeft")}} {{readOnlyInline}}
-  - : Returns a {{jsxref("Number")}} representing the width of the left border of the element.
+  - : Returns a number representing the width of the left border of the element.
 - {{DOMxRef("Element.clientTop")}} {{readOnlyInline}}
-  - : Returns a {{jsxref("Number")}} representing the width of the top border of the element.
+  - : Returns a number representing the width of the top border of the element.
 - {{DOMxRef("Element.clientWidth")}} {{readOnlyInline}}
-  - : Returns a {{jsxref("Number")}} representing the inner width of the element.
+  - : Returns a number representing the inner width of the element.
 - {{domxref("Element.firstElementChild")}} {{readonlyInline}}
   - : Returns the first child element of this element.
 - {{DOMxRef("Element.id")}}
@@ -65,6 +65,8 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
   - : Is an {{DOMxRef("Element")}}, the element immediately following the given one in the tree, or `null` if there's no sibling node.
 - {{DOMxRef("Element.outerHTML")}}
   - : Is a {{DOMxRef("DOMString")}} representing the markup of the element including its content. When used as a setter, replaces the element with nodes parsed from the given string.
+- {{DOMxRef("Element.openOrClosedShadowRoot")}} {{Non-standard_Inline}}{{readOnlyInline}}
+  - : Returns the shadow root that is hosted by the element, regardless if its open or closed. **Only available to [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).**
 - {{DOMxRef("Element.part")}}
   - : Represents the part identifier(s) of the element (i.e. set using the `part` attribute), returned as a {{domxref("DOMTokenList")}}.
 - {{DOMxRef("Element.prefix")}} {{readOnlyInline}}
@@ -72,27 +74,23 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
 - {{DOMxRef("Element.previousElementSibling")}} {{readOnlyInline}}
   - : Is a {{DOMxRef("Element")}}, the element immediately preceding the given one in the tree, or `null` if there is no sibling element.
 - {{DOMxRef("Element.scrollHeight")}} {{readOnlyInline}}
-  - : Returns a {{jsxref("Number")}} representing the scroll view height of an element.
+  - : Returns a number representing the scroll view height of an element.
 - {{DOMxRef("Element.scrollLeft")}}
-  - : Is a {{jsxref("Number")}} representing the left scroll offset of the element.
+  - : Is a number representing the left scroll offset of the element.
 - {{DOMxRef("Element.scrollLeftMax")}} {{Non-standard_Inline}} {{readOnlyInline}}
-  - : Returns a {{jsxref("Number")}} representing the maximum left scroll offset possible for the element.
+  - : Returns a number representing the maximum left scroll offset possible for the element.
 - {{DOMxRef("Element.scrollTop")}}
-  - : A {{jsxref("Number")}} representing number of pixels the top of the document is scrolled vertically.
+  - : A number representing number of pixels the top of the element is scrolled vertically.
 - {{DOMxRef("Element.scrollTopMax")}} {{Non-standard_Inline}} {{readOnlyInline}}
-  - : Returns a {{jsxref("Number")}} representing the maximum top scroll offset possible for the element.
+  - : Returns a number representing the maximum top scroll offset possible for the element.
 - {{DOMxRef("Element.scrollWidth")}} {{readOnlyInline}}
-  - : Returns a {{jsxref("Number")}} representing the scroll view width of the element.
+  - : Returns a number representing the scroll view width of the element.
 - {{DOMxRef("Element.shadowRoot")}}{{readOnlyInline}}
   - : Returns the open shadow root that is hosted by the element, or null if no open shadow root is present.
-- {{DOMxRef("Element.openOrClosedShadowRoot")}} {{Non-standard_Inline}}{{readOnlyInline}}
-  - : Returns the shadow root that is hosted by the element, regardless if its open or closed. **Available only to [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).**
-- {{DOMxRef("Element.setHTML")}}
-  - : Parses and [sanitizes](/en-US/docs/Web/API/HTML_Sanitizer_API) a string of HTML and inserts into the DOM as a subtree of the element.
-- {{DOMxRef("Element.slot")}} {{Experimental_Inline}}
+- {{DOMxRef("Element.slot")}}
   - : Returns the name of the shadow DOM slot the element is inserted in.
 - {{DOMxRef("Element.tagName")}} {{readOnlyInline}}
-  - : Returns a {{jsxref("String")}} with the name of the tag for the given element.
+  - : Returns a string with the name of the tag for the given element.
 
 ### Properties included from ARIA
 
@@ -171,20 +169,13 @@ _The `Element` interface includes the following properties, defined on the `ARIA
 - {{domxref("Element.ariaSort")}}
   - : Is a {{domxref("DOMString")}} reflecting the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort) attribute, which indicates if items in a table or grid are sorted in ascending or descending order.
 - {{domxref("Element.ariaValueMax")}}
-  - : Is a {{domxref("DOMString")}} reflecting the [`aria-valueMax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valueMax) attribute, which defines the maximum allowed value for a range widget.
+  - : Is a {{domxref("DOMString")}} reflecting the [`aria-valueMax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) attribute, which defines the maximum allowed value for a range widget.
 - {{domxref("Element.ariaValueMin")}}
-  - : Is a {{domxref("DOMString")}} reflecting the [`aria-valueMin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valueMin) attribute, which defines the minimum allowed value for a range widget.
+  - : Is a {{domxref("DOMString")}} reflecting the [`aria-valueMin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) attribute, which defines the minimum allowed value for a range widget.
 - {{domxref("Element.ariaValueNow")}}
-  - : Is a {{domxref("DOMString")}} reflecting the [`aria-valueNow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valueNow) attribute, which defines the current value for a range widget.
+  - : Is a {{domxref("DOMString")}} reflecting the [`aria-valueNow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) attribute, which defines the current value for a range widget.
 - {{domxref("Element.ariaValueText")}}
   - : Is a {{domxref("DOMString")}} reflecting the [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) attribute, which defines the human readable text alternative of aria-valuenow for a range widget.
-
-### Event handlers
-
-- {{domxref("Element.onfullscreenchange")}}
-  - : An event handler for the {{event("fullscreenchange")}} event, which is sent when the element enters or exits full-screen mode. This can be used to watch both for successful expected transitions, but also to watch for unexpected changes, such as when your app is running in the background.
-- {{domxref("Element.onfullscreenerror")}}
-  - : An event handler for the {{event("fullscreenerror")}} event, which is sent when an error occurs while attempting to change into full-screen mode.
 
 ## Methods
 
@@ -273,7 +264,7 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
 - {{DOMxRef("Element.replaceWith()")}}
   - : Replaces the element in the children list of its parent with a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects.
 - {{DOMxRef("Element.requestFullscreen()")}} {{Experimental_Inline}}
-  - : Asynchronously asks the browser to make the element full-screen.
+  - : Asynchronously asks the browser to make the element fullscreen.
 - {{DOMxRef("Element.requestPointerLock()")}} {{Experimental_Inline}}
   - : Allows to asynchronously ask for the pointer to be locked on the given element.
 - {{domxref("Element.scroll()")}}
@@ -282,6 +273,8 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Scrolls an element by the given amount.
 - {{DOMxRef("Element.scrollIntoView()")}} {{Experimental_Inline}}
   - : Scrolls the page until the element gets into the view.
+- {{DOMxRef("Element.scrollIntoViewIfNeeded()")}} {{Non-standard_Inline}}
+  - : Scrolls the current element into the visible area of the browser window if it's not already within the visible area of the browser window. **Use the standard {{DOMxRef("Element.scrollIntoView()")}} instead.**
 - {{domxref("Element.scrollTo()")}}
   - : Scrolls to a particular set of coordinates inside a given element.
 - {{DOMxRef("Element.setAttribute()")}}
@@ -294,6 +287,8 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Sets the value of the attribute with the specified name and namespace, from the current node.
 - {{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}}{{Deprecated_Inline}}
   - : Sets up mouse event capture, redirecting all mouse events to this element.
+- {{DOMxRef("Element.setHTML()")}} {{Experimental_Inline}}
+  - : Parses and [sanitizes](/en-US/docs/Web/API/HTML_Sanitizer_API) a string of HTML and inserts into the DOM as a subtree of the element.
 - {{DOMxRef("Element.setPointerCapture()")}}
   - : Designates a specific element as the capture target of future [pointer events](/en-US/docs/Web/API/Pointer_events).
 - {{DOMxRef("Element.toggleAttribute()")}}
@@ -313,18 +308,19 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{domxref("Element/scroll_event", "scroll")}}
   - : Fired when the document view or an element has been scrolled.
     Also available via the {{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}} property.
+- {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
+  - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
+    Also available via the global {{DOMxRef("GlobalEventHandlers.onsecuritypolicyviolation", "onsecuritypolicyviolation")}} property, which available on elements and the {{domxref("Document")}} and {{domxref("Window")}} objects.
+
 - {{domxref("Element/select_event", "select")}}
   - : Fired when some text has been selected.
     Also available via the {{DOMxRef("GlobalEventHandlers.onselect", "onselect")}} property.
-- {{domxref("Element/show_event", "show")}}
-  - : Fired when a {{domxref("Element/contextmenu_event", "contextmenu")}} event was fired on/bubbled to an element that has a [`contextmenu`](/en-US/docs/Web/HTML/Global_attributes/contextmenu) attribute. {{deprecated_inline}}
+- {{domxref("Element/show_event", "show")}} {{deprecated_inline}}
+  - : Fired when a {{domxref("Element/contextmenu_event", "contextmenu")}} event was fired on/bubbled to an element that has a [`contextmenu`](/en-US/docs/Web/HTML/Global_attributes/contextmenu) attribute.
     Also available via the {{DOMxRef("GlobalEventHandlers.onshow", "onshow")}} property.
 - {{domxref("Element/wheel_event","wheel")}}
   - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).
     Also available via the {{DOMxRef("GlobalEventHandlers.onwheel", "onwheel")}} property.
-- {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
-  - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
-    Also available via the global {{DOMxRef("GlobalEventHandlers.onsecuritypolicyviolation", "onsecuritypolicyviolation")}} property, which available on elements and the {{domxref("Document")}} and {{domxref("Window")}} objects.
 
 ### Clipboard events
 
@@ -363,19 +359,17 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 ### Fullscreen events
 
 - {{domxref("Element/fullscreenchange_event", "fullscreenchange")}}
-  - : Sent to an {{domxref("Element")}} when it transitions into or out of [full-screen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
-    Also available via the {{domxref("Element.onfullscreenchange", "onfullscreenchange")}} property.
+  - : Sent to an {{domxref("Element")}} when it transitions into or out of [fullscreen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
 - {{domxref("Element/fullscreenerror_event", "fullscreenerror")}}
-  - : Sent to an `Element` if an error occurs while attempting to switch it into or out of [full-screen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
-    Also available via the {{domxref("Element.onfullscreenerror", "onfullscreenerror")}} property.
+  - : Sent to an `Element` if an error occurs while attempting to switch it into or out of [fullscreen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
 
 ### Keyboard events
 
 - `{{domxref("Element/keydown_event", "keydown")}}`
   - : Fired when a key is pressed.
     Also available via the {{domxref("GlobalEventHandlers/onkeydown", "onkeydown")}} property.
-- `{{domxref("Element/keypress_event", "keypress")}}`
-  - : Fired when a key that produces a character value is pressed down. {{deprecated_inline}}
+- `{{domxref("Element/keypress_event", "keypress")}}`  {{deprecated_inline}}
+  - : Fired when a key that produces a character value is pressed down.
     Also available via the {{domxref("GlobalEventHandlers/onkeypress", "onkeypress")}} property.
 - `{{domxref("Element/keyup_event", "keyup")}}`
   - : Fired when a key is released.

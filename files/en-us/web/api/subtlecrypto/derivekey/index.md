@@ -27,25 +27,25 @@ different characteristics and are appropriate in quite different situations. See
 
 ```js
 const result = crypto.subtle.deriveKey(
-    algorithm,
-    baseKey,
-    derivedKeyAlgorithm,
-    extractable,
+    algorithm,
+    baseKey,
+    derivedKeyAlgorithm,
+    extractable,
     keyUsages
 );
 ```
 
 ### Parameters
 
-- `algorithm` is an object defining the [derivation algorithm](#supported_algorithms) to use.
+- `algorithm` is an object defining the [derivation algorithm](#supported_algorithms) to use.
 
   - To use [ECDH](#ecdh), pass an
     [`EcdhKeyDeriveParams`](/en-US/docs/Web/API/EcdhKeyDeriveParams)
     object.
   - To use [HKDF](#hkdf), pass
-    an [`HkdfParams`](/en-US/docs/Web/API/HkdfParams) object.
+    an [`HkdfParams`](/en-US/docs/Web/API/HkdfParams) object.
   - To use [PBKDF2](#pbkdf2), pass
-    a [`Pbkdf2Params`](/en-US/docs/Web/API/Pbkdf2Params) object.
+    a [`Pbkdf2Params`](/en-US/docs/Web/API/Pbkdf2Params) object.
 
 - _`baseKey`_ is a {{domxref("CryptoKey")}} representing the input
   to the derivation algorithm. If `algorithm` is ECDH, then this will be the
@@ -53,7 +53,7 @@ const result = crypto.subtle.deriveKey(
   function: for example, for PBKDF2 it might be a password, imported as a
   `CryptoKey` using
   [`SubtleCrypto.importKey()`](/en-US/docs/Web/API/SubtleCrypto/importKey).
-- `derivedKeyAlgorithm` is an object defining the algorithm the
+- `derivedKeyAlgorithm` is an object defining the algorithm the
   derived key will be used for.
 
   - For [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac): pass an
@@ -64,9 +64,9 @@ const result = crypto.subtle.deriveKey(
     object.
 
 - `extractable` is a boolean value indicating whether it
-  will be possible to export  the key using {{domxref("SubtleCrypto.exportKey()")}} or
+  will be possible to export  the key using {{domxref("SubtleCrypto.exportKey()")}} or
   {{domxref("SubtleCrypto.wrapKey()")}}.
-- `keyUsages`  is an {{jsxref("Array")}} indicating what can be
+- `keyUsages`  is an {{jsxref("Array")}} indicating what can be
   done with the derived key. Note that the key usages must be allowed by the algorithm
   set in `derivedKeyAlgorithm`. Possible values of the array are:
 

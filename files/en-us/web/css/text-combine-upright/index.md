@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Property
   - CSS Writing Modes
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.text-combine-upright
@@ -53,7 +52,7 @@ text-combine-upright: unset;
 
 ## Examples
 
-### Digits
+### Example using "digits"
 
 The digits value requires less markup than the all value when digits are being combined, but it is currently not very widely supported by browsers.
 
@@ -75,9 +74,9 @@ The digits value requires less markup than the all value when digits are being c
 
 #### Results
 
-{{EmbedLiveSample("Digits", 100, 350, "tate-chu-yoko.png")}}
+{{EmbedLiveSample('Example using "digits"', 100, 350, "tate-chu-yoko.png")}}
 
-### All
+### Example using "all"
 
 The all value requires markup around every piece of horizontal text, but it is currently supported by more browsers than the digits value.
 
@@ -98,7 +97,7 @@ html { writing-mode: vertical-rl; font: 24px serif }
 
 #### Results
 
-{{EmbedLiveSample("All", 250, 300, "text-combine-upright-all.png")}}
+{{EmbedLiveSample('Example using "all"', 250, 300, "text-combine-upright-all.png")}}
 
 ## Specifications
 

@@ -42,7 +42,7 @@ A {{domxref("PeriodicSyncEvent")}} object configured using the given inputs.
 
 ## Examples
 
-This example constructs a new {{domxref('PeriodicSyncEvent')}} with the relevant
+This example constructs a new {{domxref('PeriodicSyncEvent')}} with the relevant
 associated tag.
 
 ```js

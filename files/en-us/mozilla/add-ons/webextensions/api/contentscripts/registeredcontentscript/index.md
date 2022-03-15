@@ -12,7 +12,7 @@ browser-compat: webextensions.api.contentScripts.RegisteredContentScript
 ---
 {{AddonSidebar()}}
 
-A `RegisteredContentScript` is returned by a call to {{WebExtAPIRef("contentScripts.register()")}} and represents the content scripts registered in that call.
+A `RegisteredContentScript` is returned by a call to {{WebExtAPIRef("contentScripts.register()")}} and represents the content scripts registered in that call.
 
 It defines a single function {{WebExtAPIRef("contentScripts.RegisteredContentScript.unregister", "unregister()")}}, which can be used to unregister the content scripts.
 

@@ -4,7 +4,7 @@ slug: Web/API/Window/onvrdisplaydeactivate
 tags:
   - API
   - Event Handler
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -36,7 +36,7 @@ window.onvrdisplaydeactivate = function() { /* ... */ };
 
 ```js
 window.onvrdisplaydeactivate = function() {
-  info.textContent = 'Display deactivated.';
+  info.textContent = 'Display deactivated.';
 };
 ```
 

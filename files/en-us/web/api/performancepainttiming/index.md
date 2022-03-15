@@ -21,7 +21,7 @@ An application can register a {{domxref("PerformanceObserver")}} for "`paint`" {
 
 ## Properties
 
-This interface has no properties but it extends the following {{domxref("PerformanceEntry")}} properties (for "`paint`" {{domxref ("PerformanceEntry.entryType","performance entry types")}}) by qualifying and constraining the properties as follows:
+This interface has no properties but it extends the following {{domxref("PerformanceEntry")}} properties (for "`paint`" {{domxref ("PerformanceEntry.entryType","performance entry types")}}) by qualifying and constraining the properties as follows:
 
 - {{domxref("PerformanceEntry.entryType")}}
   - : Returns "`paint`".
@@ -40,15 +40,15 @@ This interface has no methods.
 
 ```js
 function showPaintTimings() {
-  if (window.performance) {
-    let performance = window.performance;
-    let performanceEntries = performance.getEntriesByType('paint');
-    performanceEntries.forEach( (performanceEntry, i, entries) => {
-      console.log("The time to " + performanceEntry.name + " was " + performanceEntry.startTime + " milliseconds.");
-    });
-  } else {
-    console.log('Performance timing isn\'t supported.');
-  }
+  if (window.performance) {
+    let performance = window.performance;
+    let performanceEntries = performance.getEntriesByType('paint');
+    performanceEntries.forEach( (performanceEntry, i, entries) => {
+      console.log("The time to " + performanceEntry.name + " was " + performanceEntry.startTime + " milliseconds.");
+    });
+  } else {
+    console.log('Performance timing isn\'t supported.');
+  }
 }
 ```
 

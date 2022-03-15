@@ -51,18 +51,18 @@ var dbName = "sampleDB";
 var dbVersion = 2;
 var request = indexedDB.open(dbName, dbVersion);
 
-request.onupgradeneeded = function(e) {
-  var db = request.result;
-  if (e.oldVersion < 1) {
-    db.createObjectStore("store1");
-  }
+request.onupgradeneeded = event => {
+  var db = request.result;
+  if (event.oldVersion < 1) {
+    db.createObjectStore("store1");
+  }
 
-  if (e.oldVersion < 2) {
-    db.deleteObjectStore("store1");
-    db.createObjectStore("store2");
-  }
+  if (event.oldVersion < 2) {
+    db.deleteObjectStore("store1");
+    db.createObjectStore("store2");
+  }
 
-  // etc. for version < 3, 4...
+  // etc. for version < 3, 4...
 };
 ```
 
@@ -82,5 +82,4 @@ request.onupgradeneeded = function(e) {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

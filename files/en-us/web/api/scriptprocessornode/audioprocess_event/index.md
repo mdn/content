@@ -10,34 +10,35 @@ browser-compat: api.ScriptProcessorNode.audioprocess_event
 ---
 {{APIRef("Web Audio API")}}{{deprecated_header}}
 
-The audioprocess event of the {{domxref("ScriptProcessorNode")}} interface is fired when an input buffer of a script processor is ready to be processed.
+The `audioprocess` event of the {{domxref("ScriptProcessorNode")}} interface is fired when an input buffer of a script processor is ready to be processed.
 
 > **Note:** This feature was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Default action</th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("AudioProcessingEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("ScriptProcessorNode.onaudioprocess")}}</td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Event type
+
+An {{domxref("AudioProcessingEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("AudioProcessingEvent")}}
+
+## Event properties
+
+_Also implements the properties inherited from its parent, {{domxref("Event")}}._
+
+- `playbackTime` {{ReadOnlyInline}}</td>
+- : A double representing the time when the audio will be played,
+   as defined by the time of {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}.
+- `inputBuffer` {{ReadOnlyInline}}
+  - : An {{domxref("AudioBuffer")}} that is the buffer containing the input audio data to be processed.
+    The number of channels is defined as a parameter `numberOfInputChannels`,
+    of the factory method {{domxref("BaseAudioContext/createScriptProcessor", "AudioContext.createScriptProcessor()")}}.
+    Note that the returned <code>AudioBuffer</code> is only valid in the scope of the event handler.
+- `outputBuffer` {{ReadOnlyInline}}
+  - : An {{domxref("AudioBuffer")}} that is the buffer where the output audio data should be written.
+    The number of channels is defined as a parameter, <code>numberOfOutputChannels</code>,
+    of the factory method {{domxref("BaseAudioContext/createScriptProcessor", "AudioContext.createScriptProcessor()")}}.
+    Note that the returned <code>AudioBuffer</code> is only valid in the scope of the event handler.
 
 ## Examples
 
@@ -66,10 +67,10 @@ scriptNode.addEventListener('audioprocess', function(audioProcessingEvent) {
 })
 ```
 
-You could also set up the event handler using the {{domxref("ScriptProcessorNode.onaudioprocess")}} property:
+You could also set up the event handler using the `onaudioprocess` property:
 
 ```js
-scriptNode.onaudioprocess = function(audioProcessingEvent) {
+scriptNode.onaudioprocess = audioProcessingEvent => {
   ...
 }
 ```
@@ -86,5 +87,4 @@ It was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{d
 
 ## See also
 
-- {{domxref("ScriptProcessorNode.onaudioprocess")}}
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)

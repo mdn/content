@@ -63,12 +63,12 @@ The arctangent (in radians) of the given number.
 
 ## Description
 
-The `Math.atan()` method returns a numeric value between <math>
+The `Math.atan()` method returns a numeric value between <math>
 <semantics><mrow><mo>-</mo>
 <mfrac><mi>π</mi>
 <mn>2</mn>
 </mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation>
-</semantics></math> and <math>
+</semantics></math> and <math>
 <semantics><mfrac><mi>π</mi>
 <mn>2</mn>
 </mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation>

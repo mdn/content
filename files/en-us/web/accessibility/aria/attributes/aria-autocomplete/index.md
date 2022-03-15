@@ -1,6 +1,6 @@
 ---
 title: 'aria-autocomplete'
-slug: web/Accessibility/ARIA/Attributes/aria-autocomplete
+slug: Web/Accessibility/ARIA/Attributes/aria-autocomplete
 tags: 
   - Accessibility
   - ARIA

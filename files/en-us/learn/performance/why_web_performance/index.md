@@ -51,9 +51,9 @@ As an example, consider the loading experience of CNN.com, which at the time of 
 - Imagine loading that same site using tethered mobile data on a 9 year-old iPad while commuting home on public transportation. The same site will be slow to load, possibly verging on unusable depending on cell coverage. You might give up before it finishes loading.
 - Imagine loading that same site on a $35 Huawei device in a rural India with limited coverage or no coverage. The site will be very slow to load—if it loads at all—with blocking scripts possibly timing out, and adverse CPU impact causing browser crashes if it does load.
 
-A 22.6 MB site could take up to 83 seconds to load on a 3G network, with [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) (meaning the site's base HTML structure) at 31.86 seconds.
+A 22.6 MB site could take up to 83 seconds to load on a 3G network, with [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) (meaning the site's base HTML structure) at 31.86 seconds.
 
-And it isn't just the time taken to download that is a major problem. A lot of countries still have internet connections that bill per megabyte. Our example 22.6 MB CNN.com experience would cost about 11% of the average Indian's daily wage to download. From a mobile device in Northwest Africa, it might cost two days of an average salary.  And if this site were loaded on a US carrier's international roaming plan? The costs would make anyone cry. (See [how much your site costs to download](https://whatdoesmysitecost.com/).)
+And it isn't just the time taken to download that is a major problem. A lot of countries still have internet connections that bill per megabyte. Our example 22.6 MB CNN.com experience would cost about 11% of the average Indian's daily wage to download. From a mobile device in Northwest Africa, it might cost two days of an average salary.  And if this site were loaded on a US carrier's international roaming plan? The costs would make anyone cry. (See [how much your site costs to download](https://whatdoesmysitecost.com/).)
 
 ### Improve conversion rates
 
@@ -90,7 +90,7 @@ Web performance is important for accessibility and also for other website metric
 - [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
 - [Multimedia: images](/en-US/docs/Learn/Performance/Multimedia)
 - [Multimedia: video](/en-US/docs/Learn/Performance/video)
-- [JavaScript performance best practices](/en-US/docs/Learn/Performance/JavaScript).
+- [JavaScript performance](/en-US/docs/Learn/Performance/JavaScript)
 - [HTML performance features](/en-US/docs/Learn/Performance/HTML)
 - [CSS performance features](/en-US/docs/Learn/Performance/CSS)
 - [Fonts and performance](/en-US/docs/Learn/Performance/Fonts)

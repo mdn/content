@@ -9,7 +9,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 72 that will affect developers. Firefox 72 was released on January 7, 2020.
+This article provides information about the changes in Firefox 72 that will affect developers. Firefox 72 was released on January 7, 2020.
 
 ## Changes for web developers
 
@@ -42,7 +42,7 @@ _No changes._
 
 ### CSS
 
-- CSS Shadow Parts are now enabled. This includes the [`part` attribute](/en-US/docs/Web/HTML/Global_attributes/part) and [`::part` pseudo-element](/en-US/docs/Web/CSS/::part), which allow shadow hosts to selectively expose chosen elements from their shadow tree to the outside page for styling purposes ({{bug(1559074)}}).
+- CSS Shadow Parts are now enabled. This includes the [`part` attribute](/en-US/docs/Web/HTML/Global_attributes/part) and [`::part` pseudo-element](/en-US/docs/Web/CSS/::part), which allow shadow hosts to selectively expose chosen elements from their shadow tree to the outside page for styling purposes ({{bug(1559074)}}).
 - [CSS Motion Path](/en-US/docs/Web/CSS/CSS_Motion_Path) has been shipped ({{bug(1582554)}}, also see the [Intent to Ship](https://groups.google.com/forum/#!topic/mozilla.dev.platform/nOOIRsuxvuc)). This includes:
 
   - {{cssxref("offset")}}
@@ -51,7 +51,7 @@ _No changes._
   - {{cssxref("offset-distance")}}
   - {{cssxref("offset-rotate")}}
 
-- The individual transform properties — {{cssxref("scale")}}, {{cssxref("rotate")}}, and {{cssxref("translate")}} — are now enabled by default ({{bug(1424900)}}).
+- The individual transform properties — {{cssxref("scale")}}, {{cssxref("rotate")}}, and {{cssxref("translate")}} — are now enabled by default ({{bug(1424900)}}).
 
 #### Removals
 

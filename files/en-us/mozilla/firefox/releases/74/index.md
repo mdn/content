@@ -9,7 +9,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 74 that will affect developers. Firefox 74 was released on March 10, 2020.
+This article provides information about the changes in Firefox 74 that will affect developers. Firefox 74 was released on March 10, 2020.
 
 ## Changes for web developers
 
@@ -29,7 +29,7 @@ _No changes._
 
 - [`text-underline-position`](/en-US/docs/Web/CSS/text-underline-position) is now enabled by default ([bug 1606997](https://bugzilla.mozilla.org/show_bug.cgi?id=1606997)).
 - The [`text-underline-offset`](/en-US/docs/Web/CSS/text-underline-offset) and [`text-decoration-thickness`](/en-US/docs/Web/CSS/text-decoration-thickness) properties now accept percentage values ([bug 1607534](https://bugzilla.mozilla.org/show_bug.cgi?id=1607534)).
-- The `auto` value of the {{cssxref("outline-style")}} property has been enabled by default ({{bug(1031664)}}).
+- The `auto` value of the {{cssxref("outline-style")}} property has been enabled by default ({{bug(1031664)}}).
 
 #### Removals
 
@@ -83,7 +83,7 @@ _No changes._
 
 ### Security
 
-- Starting in Firefox 74, when a site delegates permission to access a resource to embedded content in an {{HTMLElement("iframe")}} using the {{htmlattrxref("allow", "iframe")}} attribute, and the embedded page requests permission to use that resource, the parent page prompts the user for permission to use the resource and share it with the embedded domain, rather than both the outer and inner pages prompting the user for permission. If the outer page doesn't have the permission requested by the `allow` attribute, the `<iframe>` is immediately denied access without prompting the user {{bug(1483631)}}.
+- Starting in Firefox 74, when a site delegates permission to access a resource to embedded content in an {{HTMLElement("iframe")}} using the {{htmlattrxref("allow", "iframe")}} attribute, and the embedded page requests permission to use that resource, the parent page prompts the user for permission to use the resource and share it with the embedded domain, rather than both the outer and inner pages prompting the user for permission. If the outer page doesn't have the permission requested by the `allow` attribute, the `<iframe>` is immediately denied access without prompting the user {{bug(1483631)}}.
 
 ### WebDriver conformance (Marionette)
 

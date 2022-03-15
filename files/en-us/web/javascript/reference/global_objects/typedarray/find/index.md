@@ -100,13 +100,13 @@ returns {{jsxref("undefined")}} if there is no prime number).
 
 ```js
 function isPrime(element, index, array) {
-  var start = 2;
-  while (start <= Math.sqrt(element)) {
-    if (element % start++ < 1) {
-      return false;
-    }
-  }
-  return element > 1;
+  var start = 2;
+  while (start <= Math.sqrt(element)) {
+    if (element % start++ < 1) {
+      return false;
+    }
+  }
+  return element > 1;
 }
 
 var uint8 = new Uint8Array([4, 5, 8, 12]);

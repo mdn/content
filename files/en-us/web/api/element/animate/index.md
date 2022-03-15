@@ -30,11 +30,11 @@ animate(keyframes, options)
 
 - `keyframes`
   - : Either an array of keyframe objects, **or** a keyframe object whose
-    properties are arrays of values to iterate over. See [Keyframe Formats](/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats) for more details.
+    properties are arrays of values to iterate over. See [Keyframe Formats](/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats) for more details.
 - `options`
 
   - : Either an **integer representing the animation's duration** (in
-    milliseconds), **or** an Object containing one or more timing properties described in the [`KeyframeEffect()` options parameter](/en-US/docs/Web/API/KeyframeEffect) and/or the following options:
+    milliseconds), **or** an Object containing one or more timing properties described in the [`KeyframeEffect()` options parameter](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#parameters) and/or the following options:
 
     - `id {{optional_inline}}`
       - : A property unique to `animate()`: a [`DOMString`](/en-US/docs/Web/API/DOMString)
@@ -50,17 +50,17 @@ In the demo [Down the
 Rabbit Hole (with the Web Animation API)](https://codepen.io/rachelnabors/pen/rxpmJL/?editors=0010), we use the convenient
 `animate()` method to immediately create and play an animation on the
 `#tunnel` element to make it flow upwards, infinitely. Notice the array of
-objects passed as keyframes and also the timing options block.
+objects passed as keyframes and also the timing options block.
 
 ```js
 document.getElementById("tunnel").animate([
-  // keyframes
-  { transform: 'translateY(0px)' },
-  { transform: 'translateY(-300px)' }
+  // keyframes
+  { transform: 'translateY(0px)' },
+  { transform: 'translateY(-300px)' }
 ], {
-  // timing options
-  duration: 1000,
-  iterations: Infinity
+  // timing options
+  duration: 1000,
+  iterations: Infinity
 });
 ```
 

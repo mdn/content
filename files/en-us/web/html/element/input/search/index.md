@@ -21,7 +21,7 @@ browser-compat: html.elements.input.input-search
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
         A {{domxref("DOMString")}} representing the value contained in
         the search field.
@@ -70,7 +70,7 @@ The {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString
 searchTerms = mySearch.value;
 ```
 
-If no validation constraints are in place for the input (see {{anch("Validation")}} for more details), the value can be any text string or an empty string (`""`).
+If no validation constraints are in place for the input (see [Validation](#validation) for more details), the value can be any text string or an empty string (`""`).
 
 ## Additional attributes
 
@@ -100,7 +100,7 @@ If the specified pattern is not specified or is invalid, no regular expression i
 
 > **Note:** Use the {{htmlattrxref("title", "input")}} attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.
 
-See the section {{anch("Specifying a pattern")}} for details and an example.
+See the section [Specifying a pattern](#specifying_a_pattern) for details and an example.
 
 ### placeholder
 
@@ -120,7 +120,7 @@ A Boolean attribute which, if present, means this field cannot be edited by the 
 
 The `size` attribute is a numeric value indicating how many characters wide the input field should be. The value must be a number greater than zero, and the default value is 20. Since character widths vary, this may or may not be exact and should not be relied upon to be so; the resulting input may be narrower or wider than the specified number of characters, depending on the characters and the font ({{cssxref("font")}} settings in use).
 
-This does _not_ set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the `{{anch("maxlength")}}` attribute.
+This does _not_ set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the [`maxlength`](#maxlength) attribute.
 
 ### spellcheck
 
@@ -133,7 +133,7 @@ This does _not_ set a limit on how many characters the user can enter into the f
 - "" (empty string) or no value
   - : Follow the element's default behavior for spell checking. This may be based upon a parent's `spellcheck` setting or other factors.
 
-An input field can have spell checking enabled if it doesn't have the {{anch("readonly")}} attribute set and is not disabled.
+An input field can have spell checking enabled if it doesn't have the [readonly](#readonly) attribute set and is not disabled.
 
 The value returned by reading `spellcheck` may not reflect the actual state of spell checking within a control, if the {{Glossary("user agent", "user agent's")}} preferences override the setting.
 
@@ -152,9 +152,9 @@ A Safari extension, the `autocorrect` attribute is a string which indicates whet
 
 ### incremental
 
-The Boolean attribute `incremental` is a WebKit and Blink extension (so supported by Safari, Opera, Chrome, etc.) which, if present, tells the {{Glossary("user agent")}} to process the input as a live search. As the user edits the value of the field, the user agent sends {{event("search")}} events to the {{domxref("HTMLInputElement")}} object representing the search box. This allows your code to update the search results in real time as the user edits the search.
+The Boolean attribute `incremental` is a WebKit and Blink extension (so supported by Safari, Opera, Chrome, etc.) which, if present, tells the {{Glossary("user agent")}} to process the input as a live search. As the user edits the value of the field, the user agent sends {{domxref("HTMLInputElement/search_event", "search")}} events to the {{domxref("HTMLInputElement")}} object representing the search box. This allows your code to update the search results in real time as the user edits the search.
 
-If `incremental` is not specified, the {{event("search")}} event is only sent when the user explicitly initiates a search (such as by pressing the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field).
+If `incremental` is not specified, the {{domxref("HTMLInputElement/search_event", "search")}} event is only sent when the user explicitly initiates a search (such as by pressing the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field).
 
 The `search` event is rate-limited so that it is not sent more frequently than an implementation-defined interval.
 

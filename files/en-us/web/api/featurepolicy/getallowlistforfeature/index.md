@@ -51,7 +51,7 @@ const featurePolicy = document.featurePolicy
 const allowlist = featurePolicy.getAllowlistForFeature("camera")
 
 for (const origin of allowlist) {
-  console.log(origin)
+  console.log(origin)
 }
 ```
 

@@ -7,6 +7,7 @@ tags:
   - Overview
   - Reference
   - Selectors
+spec-urls: https://drafts.csswg.org/selectors/
 ---
 {{CSSRef("Selectors")}}
 
@@ -70,7 +71,7 @@ tags:
     **Syntax:** `A + B`  
     **Example:** `h2 + p` will match all {{HTMLElement("p")}} elements that _immediately_ follows {{HTMLElement("h2")}} element.  
 
-- [Column combinator](/en-US/docs/Web/CSS/Column_combinator) {{Experimental_Inline}}
+- [Column combinator](/en-US/docs/Web/CSS/Column_combinator) {{Experimental_Inline}}
   - : The `||` combinator selects nodes which belong to a column.  
     **Syntax:** `A || B`  
     **Example:** `col || td` will match all {{HTMLElement("td")}} elements that belong to the scope of the {{HTMLElement("col")}}.  
@@ -87,12 +88,7 @@ tags:
 
 ## Specifications
 
-| Specification                                        | Status                               | Comment                                                                                                                                                                                                                                             |
-| ---------------------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS4 Selectors")}}             | {{Spec2("CSS4 Selectors")}} | Added the `\|\|` column combinator, grid structural selectors, logical combinators, location, time-dimensional, resource state, linguistic and UI pseudo-classes, modifier for ASCII case-sensitive and case-insensitive attribute value selection. |
-| {{SpecName("CSS3 Selectors")}}             | {{Spec2("CSS3 Selectors")}} | Added the `~` general sibling combinator and tree-structural pseudo-classes. Made pseudo-elements use a `::` double-colon prefix. Additional attribute selectors                                                                                    |
-| {{SpecName("CSS2.1", "selector.html")}} | {{Spec2("CSS2.1")}}             | Added the `>` child and `+` adjacent sibling combinators. Added the **universal** and **attribute** selectors.                                                                                                                                      |
-| {{SpecName("CSS1")}}                         | {{Spec2("CSS1")}}             | Initial definition.                                                                                                                                                                                                                                 |
+{{Specifications}}
 
 See the [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes#Specifications) and [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements#Specifications) specification tables for details on those.
 

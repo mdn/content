@@ -10,9 +10,9 @@ browser-compat: javascript.builtins.null
 ---
 {{jsSidebar("Objects")}}
 
-The value `null` represents the intentional absence of any object value. It
+The value `null` represents the intentional absence of any object value. It
 is one of JavaScript's [primitive values](/en-US/docs/Glossary/Primitive) and
-is treated as [falsy](/en-US/docs/Glossary/Falsy) for boolean operations.
+is treated as [falsy](/en-US/docs/Glossary/Falsy) for boolean operations.
 
 {{EmbedInteractiveExample("pages/js/globalprops-null.html")}}
 
@@ -24,10 +24,10 @@ null
 
 ## Description
 
-The value `null` is written with a literal: `null`.
-`null` is not an identifier for a property of the global object, like
+The value `null` is written with a literal: `null`.
+`null` is not an identifier for a property of the global object, like
 {{jsxref("Global_Objects/undefined","undefined")}} can be. Instead,
-`null` expresses a lack of identification, indicating that a variable points
+`null` expresses a lack of identification, indicating that a variable points
 to no object. In APIs, `null` is often retrieved in a place where an object
 can be expected but no object is relevant.
 

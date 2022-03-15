@@ -61,7 +61,7 @@ Number.isFinite(null);      // false, would've been true with
 
 ```js
 if (Number.isFinite === undefined) Number.isFinite = function(value) {
-    return typeof value === 'number' && isFinite(value);
+    return typeof value === 'number' && isFinite(value);
 }
 ```
 

@@ -28,4 +28,4 @@ A value of `flex` causes the element to become a block level flex container, and
 - CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
 - CSS Flexbox Guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
 - CSS Flexbox Guide: _[Mastering wrapping of flex items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_
-- Firefox Developer Tools > How to: *[CSS Flexbox Inspector: Examine Flexbox layouts](/en-US/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts)*
+- Firefox Developer Tools > How to: *[CSS Flexbox Inspector: Examine Flexbox layouts](/en-US/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts)*

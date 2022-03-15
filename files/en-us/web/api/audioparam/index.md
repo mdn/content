@@ -30,13 +30,13 @@ An _a-rate_ `AudioParam` takes the current audio parameter value for each [sampl
 
 ### k-rate
 
-A _k-rate_ `AudioParam` uses the same initial audio parameter value for the whole block processed; that is, 128 sample frames. In other words, the same value applies to every frame in the audio as it's processed by the node.
+A _k-rate_ `AudioParam` uses the same initial audio parameter value for the whole block processed; that is, 128 sample frames. In other words, the same value applies to every frame in the audio as it's processed by the node.
 
 ## Properties
 
 - {{domxref("AudioParam.defaultValue")}} {{readonlyInline}}
-  - : Represents the initial value of the attribute as defined by the specific {{domxref("AudioNode")}} creating the `AudioParam`.
-- {{domxref("AudioParam.maxValue")}} {{readonlyInline}}
+  - : Represents the initial value of the attribute as defined by the specific {{domxref("AudioNode")}} creating the `AudioParam`.
+- {{domxref("AudioParam.maxValue")}} {{readonlyInline}}
   - : Represents the maximum possible value for the parameter's nominal (effective) range.
 - {{domxref("AudioParam.minValue")}} {{readonlyinline}}
   - : Represents the minimum possible value for the parameter's nominal (effective) range.
@@ -58,7 +58,7 @@ A _k-rate_ `AudioParam` uses the same initial audio parameter value for the whol
 - {{domxref("AudioParam.cancelScheduledValues()")}}
   - : Cancels all scheduled future changes to the `AudioParam`.
 - {{domxref("AudioParam.cancelAndHoldAtTime()")}}
-  - : Cancels all scheduled future changes to the `AudioParam` but holds its value at a given time until further changes are made using other methods.
+  - : Cancels all scheduled future changes to the `AudioParam` but holds its value at a given time until further changes are made using other methods.
 
 ## Examples
 

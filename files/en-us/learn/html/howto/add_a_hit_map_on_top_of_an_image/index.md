@@ -42,7 +42,7 @@ Here we go over how to set up an image map, and some downsides to consider first
 
 When you nest an image inside {{htmlelement('a')}}, the entire image links to one webpage. An image map, on the other hand, contains several active regions (called "hotspots") that each link to a different resource.
 
-Formerly, image maps were a popular navigation device, but it’s important to thoroughly consider their performance and accessibility ramifications.
+Formerly, image maps were a popular navigation device, but it's important to thoroughly consider their performance and accessibility ramifications.
 
 [Text links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) (perhaps styled with CSS) are preferable to image maps for several reasons: text links are lightweight, maintainable, often more SEO-friendly, and support accessibility needs (e.g., screen readers, text-only browsers, translation services).
 
@@ -54,7 +54,7 @@ Not just any image is acceptable.
 
 - The image must make it clear what happens when people follow image links. `alt` text is mandatory, of course, but many people never see it.
 - The image must clearly indicate where hotspots begin and end.
-- Hotspots must be large enough to tap comfortably, at any viewport size. How large is large enough? [72 × 72 CSS pixels is a good minimum,](https://uxmovement.com/mobile/finger-friendly-design-ideal-mobile-touch-target-sizes/) with additional generous gaps between touch targets. The map of the world at [50languages.com](https://www.goethe-verlag.com/book2/) (as of time of writing) illustrates the problem perfectly. It’s much easier to tap Russia or North America than Albania or Estonia.
+- Hotspots must be large enough to tap comfortably, at any viewport size. How large is large enough? [72 × 72 CSS pixels is a good minimum,](https://uxmovement.com/mobile/finger-friendly-design-ideal-mobile-touch-target-sizes/) with additional generous gaps between touch targets. The map of the world at [50languages.com](https://www.goethe-verlag.com/book2/) (as of time of writing) illustrates the problem perfectly. It's much easier to tap Russia or North America than Albania or Estonia.
 
 You insert your image [much the same way as always](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#how_do_we_put_an_image_on_a_webpage) (with an {{htmlelement("img")}} element and {{htmlattrxref("alt",'img')}} text). If the image is only present as a navigation device, you may write `alt=""`, provided you furnish appropriate {{htmlattrxref("alt",'area')}} text in the {{htmlelement('area')}} elements later on.
 
@@ -85,7 +85,7 @@ Inside the `<map>` element, we need {{htmlelement('area')}} elements. An `<area>
 
   {{htmlattrxref('coords','area')}}
 
-  - : `shape` takes one of four values: `circle`, `rect`, `poly`, and `default`. (A `default` `<area>` occupies the entire image, minus any other hotspots you’ve defined.) The shape you choose determines the coordinate information you’ll need to provide in `coords`.
+  - : `shape` takes one of four values: `circle`, `rect`, `poly`, and `default`. (A `default` `<area>` occupies the entire image, minus any other hotspots you've defined.) The shape you choose determines the coordinate information you'll need to provide in `coords`.
 
     - For a circle, provide the center's x and y coordinates, followed by the length of the radius.
     - For a rectangle, provide the x/y coordinates of the upper-left and bottom-right corners.
@@ -96,7 +96,7 @@ Inside the `<map>` element, we need {{htmlelement('area')}} elements. An `<area>
     In case of overlap, source order carries the day.
 
 - {{htmlattrxref('href','area')}}
-  - : The URL of the resource you’re linking to. You may leave this attribute blank if you _don’t_ want the current area to link anywhere (say, if you’re making a hollow circle.)
+  - : The URL of the resource you're linking to. You may leave this attribute blank if you _don't_ want the current area to link anywhere (say, if you're making a hollow circle.)
 - {{htmlattrxref('alt','area')}}
 
   - : A mandatory attribute, telling people where the link goes or what it does. `alt` text only displays when the image is unavailable. Please refer to our [guidelines for writing accessible link text.](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#writing_accessible_link_text)
@@ -116,9 +116,9 @@ Inside the `<map>` element, we need {{htmlelement('area')}} elements. An `<area>
 
 ### Step 3: Make sure it works for everybody
 
-You aren’t done until you test image maps rigorously on many browsers and devices. Try following links with your keyboard alone. Try turning images off.
+You aren't done until you test image maps rigorously on many browsers and devices. Try following links with your keyboard alone. Try turning images off.
 
-If your image map is wider than about 240px, you’ll need to make further adjustments to make your website responsive. It's not enough to resize the image for small screens, because the coordinates stay the same and no longer match the image.
+If your image map is wider than about 240px, you'll need to make further adjustments to make your website responsive. It's not enough to resize the image for small screens, because the coordinates stay the same and no longer match the image.
 
 If you must use image maps, you may want to look into [Matt Stow's jQuery plugin.](https://github.com/stowball/jQuery-rwdImageMaps) Alternatively, Dudley Storey demonstrates a way to [use SVG for an image map effect,](https://thenewcode.com/696/Using-SVG-as-an-Alternative-To-Imagemaps) along with a subsequent [combined SVG-raster hack](https://thenewcode.com/760/Create-A-Responsive-Imagemap-With-SVG) for bitmap images.
 

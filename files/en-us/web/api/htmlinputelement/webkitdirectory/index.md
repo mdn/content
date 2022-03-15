@@ -29,7 +29,7 @@ entries can be obtained using the {{domxref("HTMLInputElement.webkitEntries",
 ## Syntax
 
 ```js
- HTMLInputElement.webkitdirectory = boolValue
+ HTMLInputElement.webkitdirectory = boolValue
 ```
 
 ### Value
@@ -84,7 +84,7 @@ possible to know the hierarchy even though the {{domxref("FileList")}} is flat.
 ## Example
 
 In this example, a directory picker is presented which lets the user choose one or more
-directories. When the {{event("change")}} event occurs, a list of all files contained
+directories. When the {{domxref("HTMLElement/change_event", "change")}} event occurs, a list of all files contained
 within the selected directory hierarchies is generated and displayed.
 
 ### HTML content

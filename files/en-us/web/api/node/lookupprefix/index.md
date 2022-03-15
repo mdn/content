@@ -9,7 +9,7 @@ browser-compat: api.Node.lookupPrefix
 {{APIRef("DOM")}}
 
 The **`lookupPrefix()`** method of the {{domxref("Node")}} interface
-returns a {{jsxref("String")}} containing the prefix for a given namespace URI, if present,
+returns a string containing the prefix for a given namespace URI, if present,
 and `null` if not.
 When multiple prefixes are possible, the first prefix is returned.
 
@@ -27,7 +27,7 @@ lookupPrefix(namespace);
 
 ### Return value
 
-A {{jsxref("String")}} containing the corresponding prefix, or `null` if none has been found.
+A string containing the corresponding prefix, or `null` if none has been found.
 If `namespace` is null, or the the empty string, `lookupPrefix()` returns `null`.
 
 If the node is a {{domxref("DocumentType")}} or a {{domxref("DocumentFragment")}},

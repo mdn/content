@@ -12,7 +12,7 @@ browser-compat: api.RTCCertificate
 ---
 {{APIRef("WebRTC")}}
 
-The interface of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) provides an object represents a certificate that an {{domxref("RTCPeerConnection")}} uses to authenticate.
+The interface of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) provides an object represents a certificate that an {{domxref("RTCPeerConnection")}} uses to authenticate.
 
 ## Properties
 

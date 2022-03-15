@@ -87,7 +87,7 @@ For all <math><semantics><mrow><mi>x</mi>
 <mo>≥</mo>
 <mn>1</mn>
 </mrow><annotation encoding="TeX">x \geq 1</annotation>
-</semantics></math>, we have <math>
+</semantics></math>, we have <math>
 <semantics><mrow><mo lspace="0em" rspace="thinmathspace">arcosh</mo>
 <mo stretchy="false">(</mo>
 <mi>x</mi>

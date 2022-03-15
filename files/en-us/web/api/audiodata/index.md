@@ -39,9 +39,9 @@ In planar format, the number of planes is equal to {{domxref("AudioData.numberOf
   - : Returns the sample format of the audio.
 - {{domxref("AudioData.sampleRate")}}{{ReadOnlyInline}}
   - : Returns the sample rate of the audio in Hz.
-- {{domxref("AudioData.numberofFrames")}}{{ReadOnlyInline}}
+- {{domxref("AudioData.numberOfFrames")}}{{ReadOnlyInline}}
   - : Returns the number of frames.
-- {{domxref("AudioData.numberofChannels")}}{{ReadOnlyInline}}
+- {{domxref("AudioData.numberOfChannels")}}{{ReadOnlyInline}}
   - : Returns the number of audio channels.
 - {{domxref("AudioData.duration")}}{{ReadOnlyInline}}
   - : Returns the duration of the audio in microseconds.

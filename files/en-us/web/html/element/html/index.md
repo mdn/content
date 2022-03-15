@@ -54,7 +54,7 @@ The **`<html>`** [HTML](/en-US/docs/Web/HTML) element represents the root (top-l
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
-      <td>No <code>role</code> permitted</td>
+      <td>No <code>role</code> permitted</td>
     </tr>
     <tr>
       <th scope="row">DOM interface</th>

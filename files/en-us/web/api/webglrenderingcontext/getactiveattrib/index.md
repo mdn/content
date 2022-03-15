@@ -14,7 +14,7 @@ browser-compat: api.WebGLRenderingContext.getActiveAttrib
 The **`WebGLRenderingContext.getActiveAttrib()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) returns a
 {{domxref("WebGLActiveInfo")}} object containing size, type, and name of a vertex
-attribute. It is generally used when querying unknown attributes either for debugging or
+attribute. It is generally used when querying unknown attributes either for debugging or
 generic library creation.
 
 ## Syntax
@@ -42,8 +42,8 @@ A {{domxref("WebGLActiveInfo")}} object.
 ```js
 const numAttribs = gl.getProgramParameter(program, gl.ACTIVE_ATTRIBUTES);
 for (let i = 0; i < numAttribs; ++i) {
-  const info = gl.getActiveAttrib(program, i);
-  console.log('name:', info.name, 'type:', info.type, 'size:', info.size);
+  const info = gl.getActiveAttrib(program, i);
+  console.log('name:', info.name, 'type:', info.type, 'size:', info.size);
 }
 ```
 

@@ -8,7 +8,7 @@ tags:
 ---
 {{DefaultAPISidebar("Touch Events")}}
 
-The touch event interfaces support application-specific single and multi-touch interactions. However, the interfaces can be a bit tricky for programmers to use because touch events are very different from other DOM input events, such as {{domxref("MouseEvent","mouse events")}}. The application described in this guide shows how to use touch events for simple single and multi-touch interactions, the basics needed to build application-specific gestures.
+The touch event interfaces support application-specific single and multi-touch interactions. However, the interfaces can be a bit tricky for programmers to use because touch events are very different from other DOM input events, such as {{domxref("MouseEvent","mouse events")}}. The application described in this guide shows how to use touch events for simple single and multi-touch interactions, the basics needed to build application-specific gestures.
 
 A _live_ version of this application is available on [Github](https://mdn.github.io/dom-examples/touchevents/Multi-touch_interaction.html). The [source code is available on Github](https://github.com/mdn/dom-examples/tree/master/touchevents) and pull requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
 
@@ -117,7 +117,7 @@ function handle_pinch_zoom(ev) {
 
 ### Touch start handler
 
-The {{event("touchstart")}} event handler caches touch points to support 2-touch gestures. It also calls {{domxref("Event.preventDefault","preventDefault()")}} to keep the browser from applying further event handling (for example, mouse event emulation).
+The {{event("touchstart")}} event handler caches touch points to support 2-touch gestures. It also calls {{domxref("Event.preventDefault","preventDefault()")}} to keep the browser from applying further event handling (for example, mouse event emulation).
 
 ```js
 function start_handler(ev) {

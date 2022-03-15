@@ -12,7 +12,7 @@ tags:
 
 <p>In this article we will look at debugging <a href="/en-US/docs/Web/API/Service_Worker_API">service workers</a> using the Firefox DevTools <a href="/en-US/docs/Tools/Application">Application Panel</a>.</p>
 
-<p>When you open the Application panel’s <em>Service Workers</em> view on a page that doesn't have a service worker registered, you'll get the following output shown:</p>
+<p>When you open the Application panel's <em>Service Workers</em> view on a page that doesn't have a service worker registered, you'll get the following output shown:</p>
 
 <p><img alt="the application panel with a message stating that you need to register a service worker to inspect it here" src="no-service-worker.jpg" style="border-style: solid; border-width: 1px;"></p>
 
@@ -42,7 +42,7 @@ tags:
  <li>The URL that the service worker is registered on.</li>
  <li>That last time the service worker was updated (if the service has not been updated, this is when it was first installed).</li>
  <li>The path to the service worker source file.</li>
- <li>The server worker’s status, which can be one of the following:
+ <li>The server worker's status, which can be one of the following:
   <ul>
    <li><em>Stopped</em>: The service worker is installed, but not currently running. When the service worker is stopped, a <em>Start</em> button is provided to start it running, allowing you to trigger the service worker lifecycle.</li>
    <li><em>Running</em>: The service worker is running.</li>
@@ -74,7 +74,7 @@ tags:
 
 <p>If you are using your service worker to store your site assets in Cache Storage (using the <a href="/en-US/docs/Web/API/Cache">Cache API</a>), which is essential for creating offline apps, it can be annoying to test the cache. When you fill up the cache with assets, but then want to alter the behavior slightly, you previously had to manually write code to empty the cache, and then fill it again.</p>
 
-<p>The <a href="/en-US/docs/Tools/Storage_Inspector">Firefox DevTools’ Storage tab</a> has a Cache Storage section that lists all the different Caches you have stored under each different origin.</p>
+<p>The <a href="/en-US/docs/Tools/Storage_Inspector">Firefox DevTools' Storage tab</a> has a Cache Storage section that lists all the different Caches you have stored under each different origin.</p>
 
 <p><img alt="the firefox storage inspector showing cache storage items" src="sw-storage.jpg" style="border-style: solid; border-width: 1px;"></p>
 

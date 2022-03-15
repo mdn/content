@@ -9,7 +9,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 75 that will affect developers. Firefox 75 was released on April 7, 2020.
+This article provides information about the changes in Firefox 75 that will affect developers. Firefox 75 was released on April 7, 2020.
 
 **See also the accompanying hacks post — [Firefox 75: Ambitions for April](https://hacks.mozilla.org/2020/04/firefox-75-ambitions-for-april/).**
 
@@ -18,12 +18,12 @@ This article provides information about the changes in Firefox 75 that will aff
 ### Developer tools
 
 - It is now possible to resize the rectangle of the [Measuring Tool](/en-US/docs/Tools/Measure_a_portion_of_the_page) ({{bug(1152321)}}).
-- In the [inspector](/en-US/docs/Tools/Page_Inspector), you can now use [XPath](/en-US/docs/Web/XPath) expressions to locate elements, in addition to locating elements using CSS selectors as before ({{bug(963933)}}).
+- In the [inspector](/en-US/docs/Tools/Page_Inspector), you can now use [XPath](/en-US/docs/Web/XPath) expressions to locate elements, in addition to locating elements using CSS selectors as before ({{bug(963933)}}).
 - You can now filter [WebSocket](/en-US/docs/Web/API/WebSockets_API) messages using [regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions), in addition to plain text search, by writing the regular expression in slashes ({{bug(1593837)}}).
 
 ### HTML
 
-- The {{htmlattrxref("loading", "img")}} attribute of the {{HTMLElement("img")}} element has now been implemented. This string value can be used to specify that the image should be [lazily loaded](/en-US/docs/Web/Performance/Lazy_loading), by setting its value to `lazy` ({{bug(1542784)}}).
+- The {{htmlattrxref("loading", "img")}} attribute of the {{HTMLElement("img")}} element has now been implemented. This string value can be used to specify that the image should be [lazily loaded](/en-US/docs/Web/Performance/Lazy_loading), by setting its value to `lazy` ({{bug(1542784)}}).
 - The value of the [`<style>`](/en-US/docs/Web/HTML/Element/style) element's `type` attribute is now restricted to `text/css` only, as per the spec ({{bug(1614329)}}).
 
 ### CSS
@@ -53,8 +53,8 @@ The new roles and objects related to [ARIA annotations](/en-US/docs/Web/Accessib
 #### DOM
 
 - The {{domxref("HTMLFormElement")}} interface has a new method, {{domxref("HTMLFormElement.requestSubmit", "requestSubmit()")}}. Unlike the old (and still available) {{domxref("HTMLFormElement.submit", "submit()")}} method, `requestSubmit()` acts as if a specified submit button has been clicked, rather than just sending the form data to the recipient. Thus the {{domxref("HTMLFormElement.submit_event", "submit")}} event is delivered and the form is checked for validity prior to the data being submitted ({{bug(1613360)}}).
-- The {{domxref("HTMLFormElement.submit_event", "submit")}} event is now represented by an object of type {{domxref("SubmitEvent")}} rather than a simple {{domxref("Event")}}. `SubmitEvent` includes a new {{domxref("SubmitEvent.submitter", "submitter")}} property, which is the {{domxref("Element")}} that was invoked to trigger the form submission. With this event, you can have a single handler for submit events that can discern which of multiple submit buttons or links was used to submit the form ({{bug(1588715)}}).
-- Calling the {{domxref("HTMLElement.click", "click()")}} method on a detached element (one not part of a DOM tree) now functions normally, leading to a `click` event being sent to it ({{bug(1610821)}}).
+- The {{domxref("HTMLFormElement.submit_event", "submit")}} event is now represented by an object of type {{domxref("SubmitEvent")}} rather than a simple {{domxref("Event")}}. `SubmitEvent` includes a new {{domxref("SubmitEvent.submitter", "submitter")}} property, which is the {{domxref("Element")}} that was invoked to trigger the form submission. With this event, you can have a single handler for submit events that can discern which of multiple submit buttons or links was used to submit the form ({{bug(1588715)}}).
+- Calling the {{domxref("HTMLElement.click", "click()")}} method on a detached element (one not part of a DOM tree) now functions normally, leading to a `click` event being sent to it ({{bug(1610821)}}).
 
 #### Web animations API
 
@@ -80,7 +80,7 @@ _No changes._
 
 ### Security
 
-- [CSP](/en-US/docs/Web/HTTP/CSP) nonces from non-script sources, such as CSS selectors, and  `.getAttribute("nonce")` calls, are now hidden. Instead, check the [`.nonce`](/en-US/docs/Web/API/HTMLElement/nonce) property to access nonces from scripts ({{bug(1374612)}}).
+- [CSP](/en-US/docs/Web/HTTP/CSP) nonces from non-script sources, such as CSS selectors, and  `.getAttribute("nonce")` calls, are now hidden. Instead, check the [`.nonce`](/en-US/docs/Web/API/HTMLElement/nonce) property to access nonces from scripts ({{bug(1374612)}}).
 
 ### Plugins
 
@@ -109,7 +109,7 @@ _No changes._
   - {{WebExtAPIRef("browserSettings.zoomSiteSpecific")}} to control whether zooming is on a per-site or per-tab basis
   - {{WebExtAPIRef("browserSettings.zoomFullPage")}} to control whether zoom is applied to the entire page or to text only.
 
-- The name of the file used when saving a PDF with {{WebExtAPIRef("tabs.saveAsPDF")}} can be specified using `toFileName` in the type `tabs.PageSettings`.({{bug(1483590)}})
+- The name of the file used when saving a PDF with {{WebExtAPIRef("tabs.saveAsPDF")}} can be specified using `toFileName` in the type `tabs.PageSettings`.({{bug(1483590)}})
 
 ### Manifest changes
 

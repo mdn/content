@@ -17,7 +17,7 @@ browser-compat: webextensions.api.runtime.onInstalled
 
 Fired when the extension is first installed, when the extension is updated to a new version, and when the browser is updated to a new version.
 
-Note that `runtime.onInstalled` is not the same as {{WebExtAPIRef("management.onInstalled")}}. The `runtime.onInstalled` event is fired only for your extension. The `browser.management.onInstalled` event is fired for any extensions.
+Note that `runtime.onInstalled` is not the same as {{WebExtAPIRef("management.onInstalled")}}. The `runtime.onInstalled` event is fired only for your extension. The `browser.management.onInstalled` event is fired for any extensions.
 
 ## Syntax
 

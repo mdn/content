@@ -25,7 +25,7 @@ tags:
 ---
 {{LearnSidebar}}
 
-We've looked at a lot of text so far in this course, but the web would be really boring only using text. Let's start looking at how to make the web come alive with more interesting content! This module explores how to use HTML to include multimedia in your web pages, including the different ways that images can be included, and how to embed video, audio, and even entire webpages.
+We've looked at a lot of text so far in this course, but the web would be really boring only using text. Let's start looking at how to make the web come alive with more interesting content! This module explores how to use HTML to include multimedia in your web pages, including the different ways that images can be included, and how to embed video, audio, and even entire webpages.
 
 > **Callout:**
 >
@@ -51,7 +51,7 @@ This module contains the following articles, which will take you through all the
 - [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
   - : Next, we'll look at how to use the HTML5 {{htmlelement("video")}} and {{htmlelement("audio")}} elements to embed video and audio on our pages, including basics, providing access to different file formats to different browsers, adding captions and subtitles, and how to add fallbacks for older browsers.
 - [From \<object> to \<iframe> — other embedding technologies](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-  - : At this point we'd like to take somewhat of a sideways step, looking at a couple of elements that allow you to embed a wide variety of content types into your webpages: the {{htmlelement("iframe")}}, {{htmlelement("embed")}} and {{htmlelement("object")}} elements. `<iframe>`s are for embedding other web pages, and the other two allow you to embed PDFs, SVG, and even Flash — a technology on its way out, but which you may still see semi-regularly.
+  - : At this point we'd like to take somewhat of a sideways step, looking at a couple of elements that allow you to embed a wide variety of content types into your webpages: the {{htmlelement("iframe")}}, {{htmlelement("embed")}} and {{htmlelement("object")}} elements. `<iframe>`s are for embedding other web pages, and the other two allow you to embed PDFs, SVG, and even Flash — a technology on its way out, but which you may still see semi-regularly.
 - [Adding vector graphics to the web](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
   - : Vector graphics can be very useful in certain situations. Unlike regular formats like PNG/JPG, they don't distort/pixelate when zoomed in — they can remain smooth when scaled. This article introduces you to what vector graphics are and how to include the popular {{glossary("SVG")}} format in web pages.
 - [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
@@ -59,7 +59,7 @@ This module contains the following articles, which will take you through all the
 
 ## Assessments
 
-The following assessment will test your understanding of the material covered in the guides above.
+The following assessment will test your understanding of the material covered in the guides above.
 
 - [Mozilla splash page](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)
   - : In this assessment, we'll test your knowledge of some of the techniques discussed in this module's articles, getting you to add some images and video to a funky splash page all about Mozilla!

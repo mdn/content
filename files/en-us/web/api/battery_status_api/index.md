@@ -9,11 +9,10 @@ tags:
   - Battery Status API
   - Guide
   - Mobile
-  - Deprecated
   - Overview
 browser-compat: api.BatteryManager
 ---
-{{DefaultAPISidebar("Battery API")}}{{deprecated_header}}
+{{DefaultAPISidebar("Battery API")}}
 
 The **Battery Status API**, more often referred to as the **Battery API**, provides information about the system's battery charge level and lets you be notified by events that are sent when the battery level or charging status change. This can be used to adjust your app's resource usage to reduce battery drain when the battery is low, or to save changes before the battery runs out in order to prevent data loss.
 
@@ -28,10 +27,10 @@ The **Battery Status API**, more often referred to as the **Battery API**, provi
 
 ## Example
 
-In this example, we watch for changes both to the charging status (whether or not we're plugged in and charging) and for changes to the battery level and timing. This is done by listening for the {{event("chargingchange")}}, {{event("levelchange")}}, {{event("chargingtimechange")}}, {{event("dischargingtimechange")}} events.
+In this example, we watch for changes both to the charging status (whether or not we're plugged in and charging) and for changes to the battery level and timing. This is done by listening for the {{domxref("BatteryManager.chargingchange_event", "chargingchange")}}, {{domxref("BatteryManager.levelchange_event", "levelchange")}}, {{domxref("BatteryManager.chargingtimechange_event", "chargingtimechange")}}, {{domxref("BatteryManager.dischargingtimechange_event", "dischargingtimechange")}} events.
 
 ```js
-navigator.getBattery().then(function(battery) {
+navigator.getBattery().then(battery => {
   function updateAllBatteryInfo(){
     updateChargeInfo();
     updateLevelInfo();
@@ -40,7 +39,7 @@ navigator.getBattery().then(function(battery) {
   }
   updateAllBatteryInfo();
 
-  battery.addEventListener('chargingchange', function(){
+  battery.addEventListener('chargingchange', () => {
     updateChargeInfo();
   });
   function updateChargeInfo(){
@@ -48,7 +47,7 @@ navigator.getBattery().then(function(battery) {
                 + (battery.charging ? "Yes" : "No"));
   }
 
-  battery.addEventListener('levelchange', function(){
+  battery.addEventListener('levelchange', () => {
     updateLevelInfo();
   });
   function updateLevelInfo(){
@@ -56,7 +55,7 @@ navigator.getBattery().then(function(battery) {
                 + battery.level * 100 + "%");
   }
 
-  battery.addEventListener('chargingtimechange', function(){
+  battery.addEventListener('chargingtimechange', () => {
     updateChargingInfo();
   });
   function updateChargingInfo(){
@@ -64,7 +63,7 @@ navigator.getBattery().then(function(battery) {
                  + battery.chargingTime + " seconds");
   }
 
-  battery.addEventListener('dischargingtimechange', function(){
+  battery.addEventListener('dischargingtimechange', () => {
     updateDischargingInfo();
   });
   function updateDischargingInfo(){
@@ -87,4 +86,4 @@ See also [the example in the specification](https://www.w3.org/TR/battery-status
 
 ## See also
 
-- [Hacks blog post - Using the Battery API](http://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)
+- [Hacks blog post - Using the Battery API](https://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)

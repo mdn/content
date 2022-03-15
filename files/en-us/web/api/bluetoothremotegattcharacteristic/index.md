@@ -13,7 +13,7 @@ browser-compat: api.BluetoothRemoteGATTCharacteristic
 ---
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
-The `BluetoothRemoteGattCharacteristic` interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) represents a GATT Characteristic, which is a basic data element that provides further information about a peripheral’s service.
+The `BluetoothRemoteGattCharacteristic` interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) represents a GATT Characteristic, which is a basic data element that provides further information about a peripheral's service.
 
 {{InheritanceDiagram}}
 

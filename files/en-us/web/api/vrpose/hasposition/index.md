@@ -3,7 +3,6 @@ title: VRPose.hasPosition
 slug: Web/API/VRPose/hasPosition
 tags:
   - API
-  - Experimental
   - Deprecated
   - Property
   - Reference
@@ -14,19 +13,13 @@ tags:
   - hasPosition
 browser-compat: api.VRPose.hasPosition
 ---
-{{deprecated_header}}{{APIRef("WebVR API")}}{{SeeCompatTable}}
+{{deprecated_header}}{{APIRef("WebVR API")}}
 
 The **`hasPosition`** read-only property of the {{domxref("VRPose")}} interface returns a boolean indicating whether the {{domxref("VRPose.position")}} property is valid (i.e. if the hardware is currently registering a valid position). If it is `false`, the `position` property will return `null`.
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Syntax
-
-```js
-var myHasPosition = VRPositionState.hasPosition;
-```
-
-### Value
+## Value
 
 A boolean value.
 

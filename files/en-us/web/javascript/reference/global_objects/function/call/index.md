@@ -27,11 +27,11 @@ call(thisArg, arg1, ... , argN)
 
 ### Parameters
 
-- `thisArg` {{optional_inline}}
+- `thisArg` {{optional_inline}}
 
   - : The value to use as `this` when calling `func`.
 
-    > **Note:** In certain cases, `thisArg` may
+    > **Note:** In certain cases, `thisArg` may
     > not be the actual value seen by the method.
     >
     > If the method is a function in {{jsxref("Strict_mode", "non-strict mode", "",
@@ -39,7 +39,7 @@ call(thisArg, arg1, ... , argN)
     > {{jsxref("Global_Objects/undefined", "undefined")}} will be replaced with the
     > global object, and primitive values will be converted to objects.
 
-- `arg1, arg2, ...argN` {{optional_inline}}
+- `arg1, arg2, ...argN` {{optional_inline}}
   - : Arguments for the function.
 
 ### Return value
@@ -70,7 +70,7 @@ You can use `call` to chain constructors for an object (similar to Java).
 In the following example, the constructor for the `Product` object is
 defined with two parameters: `name` and `price`.
 
-Two other functions, `Food` and `Toy`, invoke
+Two other functions, `Food` and `Toy`, invoke
 `Product`, passing `this`, `name`, and
 `price`. `Product` initializes the properties `name`
 and `price`, both specialized functions define the `category`.
@@ -157,7 +157,7 @@ function display() {
 display.call();  // sData value is Wisen
 ```
 
-> **Note:** In strict mode, the value of `this` will be
+> **Note:** In strict mode, the value of `this` will be
 > `undefined`. See below.
 
 ```js

@@ -48,8 +48,8 @@ You can use the `vrdisplayconnect` event in an [`addEventListener`](/en-US/docs/
 
 ```js
 window.addEventListener('vrdisplayconnect', function() {
-  info.textContent = 'Display connected.';
-  reportDisplays();
+  info.textContent = 'Display connected.';
+  reportDisplays();
 });
 ```
 

@@ -16,13 +16,6 @@ The `CookieStore` is accessed via attributes in the global scope in a {{domxref(
 
 {{InheritanceDiagram}}
 
-## Properties
-
-### Event handlers
-
-- {{domxref("CookieStore.onChange")}}
-  - : The `onchange` EventHandler is called whenever a cookie is changed.
-
 ## Methods
 
 - {{domxref("CookieStore.delete()")}}
@@ -33,6 +26,11 @@ The `CookieStore` is accessed via attributes in the global scope in a {{domxref(
   - : The `getAll()` method gets all matching cookies, it returns a {{jsxref("Promise")}} that resolves with a list of cookies.
 - {{domxref("CookieStore.set()")}}
   - : The `set()` method sets a cookie with the given name and value or options object, it returns a {{jsxref("Promise")}} that resolves when the cookie is set.
+
+## Events
+
+- {{domxref("CookieStore.change_event")}}
+  - : The `change` event fires when a change is made to any cookie.
 
 ## Examples
 

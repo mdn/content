@@ -163,25 +163,25 @@ In this second example, we do something similar to the one above, but instead of
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById('canvas').getContext('2d');
 
-  // Draw background
-  ctx.fillStyle = 'rgb(255, 221, 0)';
-  ctx.fillRect(0, 0, 150, 37.5);
-  ctx.fillStyle = 'rgb(102, 204, 0)';
-  ctx.fillRect(0, 37.5, 150, 37.5);
-  ctx.fillStyle = 'rgb(0, 153, 255)';
-  ctx.fillRect(0, 75, 150, 37.5);
-  ctx.fillStyle = 'rgb(255, 51, 0)';
-  ctx.fillRect(0, 112.5, 150, 37.5);
+  // Draw background
+  ctx.fillStyle = 'rgb(255, 221, 0)';
+  ctx.fillRect(0, 0, 150, 37.5);
+  ctx.fillStyle = 'rgb(102, 204, 0)';
+  ctx.fillRect(0, 37.5, 150, 37.5);
+  ctx.fillStyle = 'rgb(0, 153, 255)';
+  ctx.fillRect(0, 75, 150, 37.5);
+  ctx.fillStyle = 'rgb(255, 51, 0)';
+  ctx.fillRect(0, 112.5, 150, 37.5);
 
-  // Draw semi transparent rectangles
-  for (var i = 0; i < 10; i++) {
-    ctx.fillStyle = 'rgba(255, 255, 255, ' + (i + 1) / 10 + ')';
-    for (var j = 0; j < 4; j++) {
-      ctx.fillRect(5 + i * 14, 5 + j * 37.5, 14, 27.5);
-    }
-  }
+  // Draw semi transparent rectangles
+  for (var i = 0; i < 10; i++) {
+    ctx.fillStyle = 'rgba(255, 255, 255, ' + (i + 1) / 10 + ')';
+    for (var j = 0; j < 4; j++) {
+      ctx.fillRect(5 + i * 14, 5 + j * 37.5, 14, 27.5);
+    }
+  }
 }
 ```
 
@@ -322,7 +322,7 @@ The `lineJoin` property determines how two connecting segments (of lines, arcs o
 There are three possible values for this property: `round`, `bevel` and `miter`. By default this property is set to `miter`. Note that the `lineJoin` setting has no effect if the two connected segments have the same direction, because no joining area will be added in this case:
 
 - `round`
-  - : Rounds off the corners of a shape by filling an additional sector of disc centered at the common endpoint of connected segments. The radius for these rounded corners is equal to half the line width.
+  - : Rounds off the corners of a shape by filling an additional sector of disc centered at the common endpoint of connected segments. The radius for these rounded corners is equal to half the line width.
 - `bevel`
   - : Fills an additional triangular area between the common endpoint of connected segments, and the separate outside rectangular corners of each segment.
 - `miter`
@@ -448,19 +448,19 @@ var ctx = document.getElementById('canvas').getContext('2d');
 var offset = 0;
 
 function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.setLineDash([4, 2]);
-  ctx.lineDashOffset = -offset;
-  ctx.strokeRect(10, 10, 100, 100);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.setLineDash([4, 2]);
+  ctx.lineDashOffset = -offset;
+  ctx.strokeRect(10, 10, 100, 100);
 }
 
 function march() {
-  offset++;
-  if (offset > 16) {
-    offset = 0;
-  }
-  draw();
-  setTimeout(march, 20);
+  offset++;
+  if (offset > 16) {
+    offset = 0;
+  }
+  draw();
+  setTimeout(march, 20);
 }
 
 march();
@@ -773,8 +773,8 @@ In this example we are using the `evenodd` rule.
 function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   ctx.beginPath();
-  ctx.arc(50, 50, 30, 0, Math.PI * 2, true);
-  ctx.arc(50, 50, 15, 0, Math.PI * 2, true);
+  ctx.arc(50, 50, 30, 0, Math.PI * 2, true);
+  ctx.arc(50, 50, 15, 0, Math.PI * 2, true);
   ctx.fill('evenodd');
 }
 ```

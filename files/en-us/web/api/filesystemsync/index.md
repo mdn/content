@@ -28,7 +28,7 @@ The `FileSystemSync` object is your gateway to the entire API and you will use i
 
 | Attribute | Type                      | Description                                                                               |
 | --------- | ------------------------- | ----------------------------------------------------------------------------------------- |
-| `name`    | `readonly DOMString`      | Name of the file system. The name must be unique across the list of exposed file systems. |
+| `name`    | `readonly DOMString`      | Name of the file system. The name must be unique across the list of exposed file systems. |
 | `root`    | `readonly DirectoryEntry` | The root directory of the file system.                                                    |
 
 ## Browser compatibility
@@ -41,4 +41,4 @@ Specification:{{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", 
 
 Reference: [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 
-Introduction: [Basic Concepts About the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+Introduction: [Basic Concepts About the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

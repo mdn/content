@@ -17,7 +17,7 @@ The **`top`** [CSS](/en-US/docs/Web/CSS) property participates in specifying the
 
 The effect of `top` depends on how the element is positioned (i.e., the value of the {{cssxref("position")}} property):
 
-- When `position` is set to `absolute` or `fixed`, the `top` property specifies the distance between the element's outer margin of top edge and the inner border of the top edge of its containing block.
+- When `position` is set to `absolute` or `fixed`, the `top` property specifies the distance between the element's outer margin of top edge and the inner border of the top edge of its containing block.
 - When `position` is set to `relative`, the `top` property specifies the distance the element's top edge is moved below its normal position.
 - When `position` is set to `sticky`, the `top` property is used to compute the sticky-constraint rectangle.
 - When `position` is set to `static`, the `top` property has _no effect_.

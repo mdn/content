@@ -6,6 +6,7 @@ tags:
   - CSS Box Model
   - Guide
   - Reference
+spec-urls: https://www.w3.org/TR/CSS22/box.html#collapsing-margins
 ---
 {{CSSRef}}
 
@@ -16,14 +17,14 @@ Margin collapsing occurs in three basic cases:
 - Adjacent siblings
   - : The margins of adjacent siblings are collapsed (except when the latter sibling needs to be [cleared](/en-US/docs/Web/CSS/clear) past floats).
 - No content separating parent and descendants
-  - : If there is no border, padding, inline part, [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) created, or _[clearance](/en-US/docs/Web/CSS/clear)_ to separate the {{cssxref("margin-top")}} of a block from the {{cssxref("margin-top")}} of one or more of its descendant blocks; or no border, padding, inline content, {{cssxref("height")}}, or {{cssxref("min-height")}} to separate the {{cssxref("margin-bottom")}} of a block from the {{cssxref("margin-bottom")}} of one or more of its descendant blocks, then those margins collapse. The collapsed margin ends up outside the parent.
+  - : If there is no border, padding, inline part, [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) created, or _[clearance](/en-US/docs/Web/CSS/clear)_ to separate the {{cssxref("margin-top")}} of a block from the {{cssxref("margin-top")}} of one or more of its descendant blocks; or no border, padding, inline content, {{cssxref("height")}}, or {{cssxref("min-height")}} to separate the {{cssxref("margin-bottom")}} of a block from the {{cssxref("margin-bottom")}} of one or more of its descendant blocks, then those margins collapse. The collapsed margin ends up outside the parent.
 - Empty blocks
   - : If there is no border, padding, inline content, {{cssxref("height")}}, or {{cssxref("min-height")}} to separate a block's {{cssxref("margin-top")}} from its {{cssxref("margin-bottom")}}, then its top and bottom margins collapse.
 
 Some things to note:
 
 - More complex margin collapsing (of more than two margins) occurs when the above cases are combined.
-- These rules apply even to margins that are zero, so the margin of a descendant ends up outside its parent (according to the rules above) whether or not the parent's margin is zero.
+- These rules apply even to margins that are zero, so the margin of a descendant ends up outside its parent (according to the rules above) whether or not the parent's margin is zero.
 - When negative margins are involved, the size of the collapsed margin is the sum of the largest positive margin and the smallest (most negative) negative margin.
 - When all margins are negative, the size of the collapsed margin is the smallest (most negative) margin. This applies to both adjacent elements and nested elements.
 
@@ -63,9 +64,7 @@ p {
 
 ## Specifications
 
-| Specification                                                                                        | Status                   | Comment             |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName("CSS2.1", "box.html#collapsing-margins", "margin collapsing")}} | {{Spec2("CSS2.1")}} | Initial definition. |
+{{Specifications}}
 
 ## See also
 

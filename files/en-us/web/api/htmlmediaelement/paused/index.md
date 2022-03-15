@@ -11,8 +11,8 @@ browser-compat: api.HTMLMediaElement.paused
 ---
 {{APIRef("HTML DOM")}}
 
-The read-only **`HTMLMediaElement.paused`** property
-tells whether the media element is paused.
+The read-only **`HTMLMediaElement.paused`** property
+tells whether the media element is paused.
 
 ## Syntax
 

@@ -143,5 +143,5 @@ section {
 
 - {{cssxref("offset")}}
 - {{cssxref("offset-distance")}}
-- {{cssxref("offset-rotation")}}
+- {{cssxref("offset-rotate")}}
 - [SVG `<path>`](/en-US/docs/Web/SVG/Tutorial/Paths)

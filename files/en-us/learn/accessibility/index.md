@@ -20,7 +20,7 @@ Learning some HTML, CSS, and JavaScript is useful if you want to become a web de
 
 ## Overview
 
-When someone describes a site as "accessible," they mean that any user can use all its features and content, regardless of how the user accesses the web — even and especially users with physical or mental impairments.
+When someone describes a site as "accessible", they mean that any user can use all its features and content, regardless of how the user accesses the web — even and especially users with physical or mental impairments.
 
 - Sites should be accessible to keyboard, mouse, and touch screen users, and any other way users access the web, including screen readers and voice assistants like Alexa and Google Home.
 - Applications should be understandable and usable by people regardless of auditory, visual, physical, or cognitive abilities.
@@ -43,9 +43,9 @@ The Firefox Accessibility Inspector is a very useful tool for checking out acces
 
 ## Prerequisites
 
-To get the most out of this module, it would be a good idea to either work through at least the first two modules of the [HTML](/en-US/docs/Learn/HTML), [CSS](/en-US/docs/Learn/CSS), and [JavaScript](/en-US/docs/Learn/JavaScript) topics, or perhaps even better, work through the relevant parts of the accessibility module as you work through the related technology topics.
+To get the most out of this module, it would be a good idea to either work through at least the first two modules of the [HTML](/en-US/docs/Learn/HTML), [CSS](/en-US/docs/Learn/CSS), and [JavaScript](/en-US/docs/Learn/JavaScript) topics, or perhaps even better, work through the relevant parts of the accessibility module as you work through the related technology topics.
 
-> **Note:** If you are working on a computer/tablet/other devices where you don't have the ability to create your own files, you can try out most of the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
+> **Note:** If you are working on a computer/tablet/other devices where you don't have the ability to create your own files, you can try out most of the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 
 ## Guides
 
@@ -54,7 +54,7 @@ To get the most out of this module, it would be a good idea to either work throu
 - [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML)
   - : A great deal of web content can be made accessible just by making sure the correct HTML elements are always used for the correct purpose. This article looks in detail at how HTML can be used to ensure maximum accessibility.
 - [CSS and JavaScript accessibility best practices](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
-  - : CSS and JavaScript, when used properly, also have the potential to allow for accessible web experiences, but if misused they can significantly harm accessibility. This article outlines some CSS and JavaScript best practices that should be considered to ensure that even complex content is as accessible as possible.
+  - : CSS and JavaScript, when used properly, also have the potential to allow for accessible web experiences, but if misused they can significantly harm accessibility. This article outlines some CSS and JavaScript best practices that should be considered to ensure that even complex content is as accessible as possible.
 - [WAI-ARIA basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)
   - : Following on from the previous article, sometimes making complex UI controls that involve unsemantic HTML and dynamic JavaScript-updated content can be difficult. WAI-ARIA is a technology that can help with such problems by adding in further semantics that browsers and assistive technologies can recognize and use to let users know what is going on. Here we'll show how to use it at a basic level to improve accessibility.
 - [Accessible multimedia](/en-US/docs/Learn/Accessibility/Multimedia)

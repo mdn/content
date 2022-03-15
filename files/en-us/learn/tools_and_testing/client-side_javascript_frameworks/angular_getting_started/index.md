@@ -248,7 +248,7 @@ export class AppComponent {
 ```
 
 Angular extends HTML with additional syntax that lets you insert dynamic values from your component.
-Angular automatically updates the rendered DOM when your component’s state changes.
+Angular automatically updates the rendered DOM when your component's state changes.
 One use of this feature is inserting dynamic text, as shown in the following example.
 
 ```html

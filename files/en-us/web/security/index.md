@@ -75,7 +75,7 @@ In [clickjacking](/en-US/docs/Glossary/Clickjacking), a user is fooled into clic
 ## User information security
 
 - [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords)
-  - : Serving login forms over HTTP is especially dangerous because of the wide variety of attacks that can be used against them to extract a user’s password. Network eavesdroppers could steal a user's password by sniffing the network, or by modifying the served page in transit.
+  - : Serving login forms over HTTP is especially dangerous because of the wide variety of attacks that can be used against them to extract a user's password. Network eavesdroppers could steal a user's password by sniffing the network, or by modifying the served page in transit.
 - [Privacy and the :visited selector](/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector)
   - : Before about 2010, the [CSS](/en-US/docs/Web/CSS) {{cssxref(":visited")}} selector allowed websites to uncover a user's browsing history and figure out what sites the user had visited. To mitigate this problem, browsers have limited the amount of information that can be obtained from visited links.
 

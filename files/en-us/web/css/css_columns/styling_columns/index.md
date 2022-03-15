@@ -13,13 +13,13 @@ As column boxes created inside multicol containers are anonymous boxes, there is
 
 ## Can I Style the Column Boxes?
 
-Sadly, not at present. The anonymous boxes that make up your columns can’t be targeted in any way, meaning it isn’t possible to change a box's background color or have one column larger than the others. Perhaps in future versions of the specification it might be. For now, however, we are able to change the spacing and add lines between columns.
+Sadly, not at present. The anonymous boxes that make up your columns can't be targeted in any way, meaning it isn't possible to change a box's background color or have one column larger than the others. Perhaps in future versions of the specification it might be. For now, however, we are able to change the spacing and add lines between columns.
 
 ## The `column-gap` property
 
 The gap between our columns is controlled by the `column-gap` property. This property was originally defined in the Multi-column Layout specification. However, it is now defined in [Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment) in order to unify gaps between boxes in other specifications such as [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout).
 
-The initial value of `column-gap` in multicol is `1em`. This means your columns will not run into each other. In other layout methods the initial value for `column-gap` is 0. If you use the keyword value “normal” the gap will be set to 1em.
+The initial value of `column-gap` in multicol is `1em`. This means your columns will not run into each other. In other layout methods the initial value for `column-gap` is 0. If you use the keyword value "normal" the gap will be set to 1em.
 
 You can change the gap by using any length unit as the value of `column-gap`. In the example below, the `column-gap` is set to 40px.
 

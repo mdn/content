@@ -15,7 +15,7 @@ tags:
 ---
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
-The format of audio and video media files is defined in two parts (three if a file has both audio and video in it, of course): the audio and/or video codecs used and the media container format (or file type) used.
+The format of audio and video media files is defined in two parts (three if a file has both audio and video in it, of course): the audio and/or video codecs used and the media container format (or file type) used.
 In this guide, we'll look at the container formats used most commonly on the web, covering basics about their specifications as well as their benefits, limitations, and ideal use cases.
 
 [WebRTC](/en-US/docs/Web/API/WebRTC_API) does not use a container at all.
@@ -50,12 +50,12 @@ To learn more about a specific container format, find it in this list and click 
   </thead>
   <tbody>
     <tr>
-      <th scope="row">{{anch("3GP")}}</th>
+      <th scope="row"><a href="#3gp">3GP</a></th>
       <td>Third Generation Partnership</td>
       <td>Firefox for Android</td>
     </tr>
     <tr>
-      <th scope="row">{{anch("ADTS")}}</th>
+      <th scope="row"><a href="#adts">ADTS</a></th>
       <td>Audio Data Transport Stream</td>
       <td>
         <p>Firefox</p>
@@ -64,38 +64,38 @@ To learn more about a specific container format, find it in this list and click 
       </td>
     </tr>
     <tr>
-      <th scope="row">{{anch("FLAC")}}</th>
+      <th scope="row"><a href="#flac">FLAC</a></th>
       <td>Free Lossless Audio Codec</td>
       <td>Chrome 56, Edge 16, Firefox 51, Safari 11</td>
     </tr>
     <tr>
-      <th scope="row">{{anch("MPEGMPEG-2", "MPEG / MPEG-2")}}</th>
+      <th scope="row"><a href="#mpegmpeg-2">MPEG / MPEG-2</a></th>
       <td>Moving Picture Experts Group (1 and 2)</td>
       <td>—</td>
     </tr>
     <tr>
-      <th scope="row">{{anch("MPEG-4_MP4", "MPEG-4 (MP4)")}}</th>
+      <th scope="row"><a href="#mpeg-4_mp4">MPEG-4 (MP4)</a></th>
       <td>Moving Picture Experts Group 4</td>
-      <td>Chrome 3, Edge 12, Firefox, Internet Explorer 9, Opera 24, Safari 3.1</td>
+      <td>Chrome 3, Edge 12, Firefox, Internet Explorer 9, Opera 24, Safari 3.1</td>
     </tr>
     <tr>
-      <th scope="row">{{anch("Ogg")}}</th>
+      <th scope="row"><a href="#ogg">Ogg</a></th>
       <td>Ogg</td>
       <td>
-        <p>Chrome 3, Firefox 3.5, Edge 17 (desktop only), Internet Explorer 9, Opera 10.50</p>
+        <p>Chrome 3, Firefox 3.5, Edge 17 (desktop only), Internet Explorer 9, Opera 10.50</p>
         <p>Edge requires <a href="https://www.microsoft.com/store/productId/9N5TDP8VCMHS">Web Media Extensions</a> to be installed.</p>
       </td>
     </tr>
     <tr>
-      <th scope="row">{{anch("QuickTime", "QuickTime (MOV)")}}</th>
+      <th scope="row"><a href="#quicktime">QuickTime (MOV)</a></th>
       <td>Apple QuickTime movie</td>
       <td>Only older versions of Safari, plus other browsers that supported Apple's QuickTime plugin</td>
     </tr>
     <tr>
-      <th scope="row">{{anch("WebM")}}</th>
+      <th scope="row"><a href="#webm">WebM</a></th>
       <td>Web Media</td>
       <td>
-        <p>Chrome 6, Edge 17 (desktop only), Firefox 4, Opera 10.6, Safari 14.1 (macOS), Safari 15 (iOS).</p>
+        <p>Chrome 6, Edge 17 (desktop only), Firefox 4, Opera 10.6, Safari 14.1 (macOS), Safari 15 (iOS).</p>
         <p>Edge requires <a href="https://www.microsoft.com/store/productId/9N5TDP8VCMHS">Web Media Extensions</a> to be installed.</p>
       </td>
     </tr>
@@ -570,7 +570,7 @@ In addition, you can [add the `codecs` parameter](/en-US/docs/Web/Media/Formats/
 ### Ogg
 
 The **{{interwiki("wikipedia", "Ogg")}}** container format is a free and open format maintained by the [Xiph.org Foundation](https://www.xiph.org/).
-The Ogg framework also defines patent unencumbered media data formats, such as the Theora video codec and the Vorbis and Opus audio codecs.
+The Ogg framework also defines patent unencumbered media data formats, such as the Theora video codec and the Vorbis and Opus audio codecs.
 [Xiph.org documents about the Ogg format](https://xiph.org/ogg/) are available on their web site.
 
 While Ogg has been around for a long time, it has never gained the wide support needed to make it a good first choice for a media container.
@@ -583,8 +583,8 @@ You can get more information about Ogg and its codecs in the [Theora Cookbook](h
 | ----------- | ----------- |
 | `audio/ogg` | `video/ogg` |
 
-The `application/ogg` MIME type can be used when you don't necessarily know whether the media contains audio or video.
-If at all possible, you should use one of the specific types, but fall back to `application/ogg` if you don't know the content format or formats.
+The `application/ogg` MIME type can be used when you don't necessarily know whether the media contains audio or video.
+If at all possible, you should use one of the specific types, but fall back to `application/ogg` if you don't know the content format or formats.
 
 You can also [add the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter#ogg) to the MIME type string to indicate which codecs are used for the audio and/or video tracks, and to optionally further describe the track media formats.
 
@@ -878,7 +878,7 @@ You can [add the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parame
 The **Waveform Audio File Format** (**WAVE**), usually referred to as WAV due to its filename extension being `.wav`, is a format developed by Microsoft and IBM to store audio bitstream data.
 
 It is derived from the Resource Interchange File Format (RIFF), and as such is similar to other formats such as Apple's AIFF.
-The WAV codec registry can be found at {{RFC(2361)}}; however, because nearly all WAV files use linear PCM, support for the other codecs is sparse.
+The WAV codec registry can be found at {{RFC(2361)}}; however, because nearly all WAV files use linear PCM, support for the other codecs is sparse.
 
 The WAVE format was first released in 1991.
 
@@ -889,7 +889,7 @@ The WAVE format was first released in 1991.
 | `audio/x-wav`    |
 | `audio/x-pn-wav` |
 
-The `audio/wave` MIME type is the standard type, and is preferred; however, the others have been used by various products over the years and may be used as well in some environments.
+The `audio/wave` MIME type is the standard type, and is preferred; however, the others have been used by various products over the years and may be used as well in some environments.
 
 <table class="standard-table">
   <caption>
@@ -1132,7 +1132,7 @@ If neither of those can be played, the text "This browser does not support the H
 | {{RFC(5334)}}                                                                                                                                             | Defines the Ogg media types and file extensions                                                                 |
 | [QuickTime File Format Specification](https://developer.apple.com/library/archive/documentation/QuickTime/QTFF/QTFFPreface/qtffPreface.html)                 | Defines the QuickTime movie (MOV) format                                                                        |
 | [Multimedia Programming Interface and Data Specifications 1.0](https://web.archive.org/web/20090417165828/http://www.kk.iij4u.or.jp/~kondo/wave/mpidata.txt) | The closest thing to an official WAVE specification                                                             |
-| [Resource Interchange File Format](https://docs.microsoft.com/en-us/windows/desktop/xaudio2/resource-interchange-file-format--riff-) (used by WAV)           | Defines the RIFF format; WAVE files are a form of RIFF                                                          |
+| [Resource Interchange File Format](https://docs.microsoft.com/windows/desktop/xaudio2/resource-interchange-file-format--riff-) (used by WAV)           | Defines the RIFF format; WAVE files are a form of RIFF                                                          |
 | [WebM Container Guidelines](https://www.webmproject.org/docs/container/)                                                                                     | Guide for adapting Matroska for WebM                                                                            |
 | [Matroska Specifications](https://matroska.org/technical/specs/index.html)                                                                                   | The specification for the Matroska container format upon which WebM is based                                    |
 | [WebM Byte Stream Format](https://w3c.github.io/media-source/webm-byte-stream-format.html)                                                                   | WebM byte stream format for use with [Media Source Extensions](/en-US/docs/Web/API/Media_Source_Extensions_API) |

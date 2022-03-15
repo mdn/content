@@ -26,7 +26,7 @@ property).
 > `scale(1, sy)` or
 > `scale3d(1, sy, 1)`.
 >
-> `transform: rotateX(180deg);`  === `transform: scaleY(-1);`
+> `transform: rotateX(180deg);`  === `transform: scaleY(-1);`
 
 ## Syntax
 
@@ -37,7 +37,7 @@ scaleY(s)
 ### Values
 
 - `s`
-  - : Is a {{cssxref("&lt;number&gt;")}} representing the scaling factor to apply on the ordinate of each point of the
+  - : Is a {{cssxref("&lt;number&gt;")}} representing the scaling factor to apply on the ordinate of each point of the
     element.
 
 <table class="standard-table">

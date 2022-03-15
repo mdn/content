@@ -57,7 +57,7 @@ addEventListener(type, listener, useCapture);
     {{domxref("Event")}} interface) when an event of the specified type occurs. This must
     be an object implementing the {{domxref("EventListener")}} interface, or a JavaScript
     [function](/en-US/docs/Web/JavaScript/Guide/Functions). See
-    {{anch("The event listener callback")}} for details on the callback itself.
+    [The event listener callback](#the_event_listener_callback) for details on the callback itself.
 - `options` {{optional_inline}}
 
   - : An object that specifies characteristics about the event listener. The available
@@ -76,7 +76,7 @@ addEventListener(type, listener, useCapture);
         specified by `listener` will never call
         {{domxref("Event.preventDefault", "preventDefault()")}}. If a passive listener
         does call `preventDefault()`, the user agent will do nothing other than
-        generate a console warning. If not specified, defaults to `false` – except that in browsers other than Safari and Internet Explorer, defaults to `true` for the {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events on the document-level nodes {{domxref("Window")}}, {{domxref("Document")}}, and {{domxref("Document.body")}}. See [Improving scrolling performance with passive listeners](#improving_scrolling_performance_with_passive_listeners) to learn more.
+        generate a console warning. If not specified, defaults to `false` – except that in browsers other than Safari and Internet Explorer, defaults to `true` for the {{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/mousewheel_event", "mousewheel")}}, {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events. See [Improving scrolling performance with passive listeners](#improving_scrolling_performance_with_passive_listeners) to learn more.
     - `signal`
       - : An {{domxref("AbortSignal")}}. The listener will be removed when the given `AbortSignal` object's {{domxref("AbortController/abort()", "abort()")}} method is called. If not specified, no `AbortSignal` is associated with the listener.
 
@@ -474,8 +474,7 @@ Click the outer, middle, inner containers respectively to see how the options wo
 
 Before using a particular value in the `options` object, it's a
 good idea to ensure that the user's browser supports it, since these are an addition
-that not all browsers have supported historically. See {{anch("Safely detecting option
-  support")}} for details.
+that not all browsers have supported historically. See [Safely detecting option support](#safely_detecting_option_support) for details.
 
 ## Other notes
 
@@ -813,7 +812,7 @@ performance during scroll handling.
 
 To prevent this problem, browsers other than Safari and Internet Explorer have changed
 the default value of the `passive` option to `true` for the
-{{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events on the document-level nodes
+{{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/mousewheel_event", "mousewheel")}}, {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events on the document-level nodes
 {{domxref("Window")}}, {{domxref("Document")}}, and {{domxref("Document.body")}}. This
 prevents the event listener from [canceling the event](/en-US/docs/Web/API/Event/preventDefault), so it can't block page rendering while
 the user is scrolling.

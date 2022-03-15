@@ -3,7 +3,6 @@ title: VRLayerInit.source
 slug: Web/API/VRLayerInit/source
 tags:
   - API
-  - Experimental
   - Deprecated
   - Property
   - Reference
@@ -19,16 +18,9 @@ The **`source`** property of the {{domxref("VRLayerInit")}} interface (dictionar
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Syntax
+## Value
 
-```js
-var myVRLayerInit = { };
-myVRLayerInit.source = myCanvas;
-```
-
-### Value
-
-An {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}} object.
+An {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}} object.
 
 ## Examples
 

@@ -178,7 +178,7 @@ The result looks like this:
 
 If you'd like to see the connecting lines, you can remove the lines that call `moveTo()`.
 
-> **Note:** To learn more about the `arc()` function, see the {{anch("Arcs")}} section below.
+> **Note:** To learn more about the `arc()` function, see the [Arcs](#arcs) section below.
 
 ### Lines
 
@@ -379,7 +379,7 @@ function draw() {
 
 ### Rectangles
 
-In addition to the three methods we saw in {{anch("Drawing rectangles")}}, which draw rectangular shapes directly to the canvas, there's also the `rect()` method, which adds a rectangular path to a currently open path.
+In addition to the three methods we saw in [Drawing rectangles](#drawing_rectangles), which draw rectangular shapes directly to the canvas, there's also the `rect()` method, which adds a rectangular path to a currently open path.
 
 - {{domxref("CanvasRenderingContext2D.rect", "rect(x, y, width, height)")}}
   - : Draws a rectangle whose top-left corner is specified by (`x`, `y`) with the specified `width` and `height`.

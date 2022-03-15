@@ -7,7 +7,6 @@ tags:
   - CSS Logical Property
   - CSS Property
   - Element size
-  - Experimental
   - Reference
   - Text Direction
   - Writing Mode
@@ -34,7 +33,7 @@ max-inline-size: 25em;
 max-inline-size: 75%;
 
 /* Keyword values */
-max-inline-size: auto;
+max-inline-size: none;
 max-inline-size: max-content;
 max-inline-size: min-content;
 max-inline-size: fit-content(20em);

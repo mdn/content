@@ -3,7 +3,6 @@ title: VRDisplayEvent.display
 slug: Web/API/VRDisplayEvent/display
 tags:
   - API
-  - Experimental
   - Deprecated
   - Property
   - Reference
@@ -20,13 +19,7 @@ The **`display`** read-only property of the {{domxref("VRDisplayEvent")}} interf
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Syntax
-
-```js
-var myDisplay = vrDisplayEventInstance.display;
-```
-
-### Value
+## Value
 
 A {{domxref("VRDisplay")}} object.
 
@@ -34,7 +27,7 @@ A {{domxref("VRDisplay")}} object.
 
 ```js
 window.addEventListener('vrdisplaypresentchange', function(e) {
-    console.log('Display ' + e.display.displayId + ' presentation has changed. Reason given: ' + e.reason + '.');
+    console.log('Display ' + e.display.displayId + ' presentation has changed. Reason given: ' + e.reason + '.');
   })
 ```
 

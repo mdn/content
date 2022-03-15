@@ -85,30 +85,30 @@ span.bold { font-weight: bold; }
 
 <body>
 
-    <br />
+    <br />
 
-    <div id="div1"><br />
-        <span class="bold">DIV #1</span><br />
-        position: relative;
-        <div id="div2"><br />
-            <span class="bold">DIV #2</span><br />
-            position: absolute;<br />
-            z-index: 2;
-        </div>
-    </div>
+    <div id="div1"><br />
+        <span class="bold">DIV #1</span><br />
+        position: relative;
+        <div id="div2"><br />
+            <span class="bold">DIV #2</span><br />
+            position: absolute;<br />
+            z-index: 2;
+        </div>
+    </div>
 
-    <br />
+    <br />
 
-    <div id="div3"><br />
-        <span class="bold">DIV #3</span><br />
-        position: relative;<br />
-        z-index: 1;
-        <div id="div4"><br />
-            <span class="bold">DIV #4</span><br />
-            position: absolute;<br />
-            z-index: 10;
-        </div>
-    </div>
+    <div id="div3"><br />
+        <span class="bold">DIV #3</span><br />
+        position: relative;<br />
+        z-index: 1;
+        <div id="div4"><br />
+            <span class="bold">DIV #4</span><br />
+            position: absolute;<br />
+            z-index: 10;
+        </div>
+    </div>
 
 </body>
 </html>

@@ -27,7 +27,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLOptionElement.defaultSelected")}}
   - : Has a value of either `true` or `false` that shows the initial value of the {{htmlattrxref("selected", "option")}} HTML attribute, indicating whether the option is selected by default or not.
 - {{domxref("HTMLOptionElement.disabled")}}
-  - : Has a value of either `true` or `false` representing the value of the {{htmlattrxref("disabled", "option")}} HTML attribute, which indicates that the option is unavailable to be selected. An option can also be disabled if it is a child of an {{HTMLElement("optgroup")}} element that is disabled.
+  - : Has a value of either `true` or `false` representing the value of the {{htmlattrxref("disabled", "option")}} HTML attribute, which indicates that the option is unavailable to be selected. An option can also be disabled if it is a child of an {{HTMLElement("optgroup")}} element that is disabled.
 - {{domxref("HTMLOptionElement.form")}} {{readonlyInline}}
   - : Is a {{domxref("HTMLFormElement")}} representing the same value as the `form` of the corresponding {{HTMLElement("select")}} element, if the option is a descendant of a {{HTMLElement("select")}} element, or null if none is found.
 - {{domxref("HTMLOptionElement.index")}} {{readonlyInline}}

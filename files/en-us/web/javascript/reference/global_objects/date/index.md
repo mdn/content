@@ -25,7 +25,7 @@ A JavaScript date is fundamentally specified as the number of milliseconds that 
 
 > **Note:** It's important to keep in mind that while the time value at the heart of a Date object is UTC, the basic methods to fetch the date and time or its components all work in the local (i.e. host system) time zone and offset.
 
-It should be noted that the maximum `Date` is not of the same value as the maximum safe integer (`Number.MAX_SAFE_INTEGER` is 9,007,199,254,740,991). Instead, it is defined in ECMA-262 that a maximum of ±100,000,000 (one hundred million) days relative to January 1, 1970 UTC (that is, April 20, 271821 BCE \~ September 13, 275760 CE) can be represented by the standard `Date` object (equivalent to ±8,640,000,000,000,000 milliseconds).
+It should be noted that the maximum `Date` is not of the same value as the maximum safe integer (`Number.MAX_SAFE_INTEGER` is 9,007,199,254,740,991). Instead, it is defined in ECMA-262 that a maximum of ±100,000,000 (one hundred million) days relative to January 1, 1970 UTC (that is, April 20, 271821 BCE \~ September 13, 275760 CE) can be represented by the standard `Date` object (equivalent to ±8,640,000,000,000,000 milliseconds).
 
 ### Date format and time zone conversions
 
@@ -165,7 +165,7 @@ let birthday = new Date(1995, 11, 17, 3, 24, 0)
 let birthday = new Date(628021800000)            // passing epoch timestamp
 ```
 
-###  To get Date, Month and Year or Time
+### To get Date, Month and Year or Time
 
 ```js
 const date = new Date();

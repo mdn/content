@@ -9,7 +9,7 @@ tags:
 ---
 {{ PreviousNext("Web/SVG/Tutorial/Other_content_in_SVG", "Web/SVG/Tutorial/SVG_Fonts") }}
 
-There are situations, where basic shapes do not provide the flexibility you need to achieve a certain effect. Drop shadows, to provide a popular example, cannot be created reasonably with a combination of gradients. Filters are SVG's mechanism to create sophisticated effects.
+There are situations, where basic shapes do not provide the flexibility you need to achieve a certain effect. Drop shadows, to provide a popular example, cannot be created reasonably with a combination of gradients. Filters are SVG's mechanism to create sophisticated effects.
 
 A basic example is to add a blur effect to SVG content. While basic blurs can be achieved with the help of gradients, the blur filter is needed to do anything beyond.
 

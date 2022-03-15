@@ -140,7 +140,7 @@ let foo = {
 };
 
 if (Object.hasOwn(foo, 'bar')) {
-  console.log(foo.bar); //true - remplementation of hasOwnProperty() does not affect Object
+  console.log(foo.bar); //true - reimplementation of hasOwnProperty() does not affect Object
 }
 ```
 

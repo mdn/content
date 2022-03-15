@@ -12,7 +12,7 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
 
-HTML (**H**yper**t**ext **M**arkup **L**anguage) is the code that is used to structure a web page and its content. For example, content could be structured within a set of paragraphs, a list of bulleted points, or using images and data tables. As the title suggests, this article will give you a basic understanding of HTML and its functions.
+HTML (**H**yper**T**ext **M**arkup **L**anguage) is the code that is used to structure a web page and its content. For example, content could be structured within a set of paragraphs, a list of bulleted points, or using images and data tables. As the title suggests, this article will give you a basic understanding of HTML and its functions.
 
 ## So what is HTML?
 
@@ -136,7 +136,7 @@ This section will cover some of the essential HTML elements you'll use for marki
 
 ### Headings
 
-Heading elements allow you to specify that certain parts of your content are headings — or subheadings. In the same way that a book has the main title, chapter titles, and subtitles, an HTML document can too. HTML contains 6 heading levels, {{htmlelement("h1")}}–{{htmlelement("h6")}}, although you'll commonly only use 3 to 4 at most:
+Heading elements allow you to specify that certain parts of your content are headings — or subheadings. In the same way that a book has the main title, chapter titles, and subtitles, an HTML document can too. HTML contains 6 heading levels, {{htmlelement("Heading_Elements", "&lt;h1&gt; - &lt;h6&gt;")}}, although you'll commonly only use 3 to 4 at most:
 
 ```html
 <!-- 4 heading levels: -->
@@ -146,7 +146,7 @@ Heading elements allow you to specify that certain parts of your content are hea
 <h4>My sub-subheading</h4>
 ```
 
-> **Note:** Anything in HTML between `<!--` and `-->` is a **HTML comment**. The browser ignores comments as it renders the code. In other words, they are not visible on the page - just in the code. HTML comments are a way for you to write helpful notes about your code or logic.
+> **Note:** Anything in HTML between `<!--` and `-->` is an **HTML comment**. The browser ignores comments as it renders the code. In other words, they are not visible on the page - just in the code. HTML comments are a way for you to write helpful notes about your code or logic.
 
 Now try adding a suitable title to your HTML page just above your {{htmlelement("img")}} element.
 
@@ -174,13 +174,13 @@ Each item inside the lists is put inside an {{htmlelement("li")}} (list item) el
 For example, if we wanted to turn the part of the following paragraph fragment into a list
 
 ```html
-<p>At Mozilla, we’re a global community of technologists, thinkers, and builders working together ... </p>
+<p>At Mozilla, we're a global community of technologists, thinkers, and builders working together ... </p>
 ```
 
 We could modify the markup to this
 
 ```html
-<p>At Mozilla, we’re a global community of</p>
+<p>At Mozilla, we're a global community of</p>
 
 <ul>
   <li>technologists</li>

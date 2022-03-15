@@ -100,7 +100,7 @@ Here we grab the message event data and set it as the `textContent` of the resul
 
 > **Note:** Notice that `onmessage` and `postMessage()` need to be hung off the `Worker` object when used in the main script thread, but not when used in the worker. This is because, inside the worker, the worker is effectively the global scope.
 
-> **Note:** When a message is passed between the main thread and worker, it is copied or "transferred" (moved), not shared. Read {{anch("Transferring data to and from workers further details", "Transferring data to and from workers: further details")}} for a much more thorough explanation.
+> **Note:** When a message is passed between the main thread and worker, it is copied or "transferred" (moved), not shared. Read [Transferring data to and from workers: further details](#transferring_data_to_and_from_workers_further_details) for a much more thorough explanation.
 
 ### Terminating a worker
 
@@ -213,7 +213,7 @@ When a message comes back through the port from the worker, we insert the calcul
 
 ## About thread safety
 
-The {{domxref("Worker")}} interface spawns real OS-level threads, and mindful programmers may be concerned that concurrency can cause “interesting” effects in your code if you aren't careful.
+The {{domxref("Worker")}} interface spawns real OS-level threads, and mindful programmers may be concerned that concurrency can cause "interesting" effects in your code if you aren't careful.
 
 However, since web workers have carefully controlled communication points with other threads, it's actually very hard to cause concurrency problems. There's no access to non-threadsafe components or the DOM. And you have to pass specific data in and out of a thread through serialized objects. So you have to work really hard to cause problems in your code.
 

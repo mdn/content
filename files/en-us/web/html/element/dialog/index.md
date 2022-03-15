@@ -82,6 +82,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - {{htmlattrdef("open")}}
   - : Indicates that the dialog is active and can be interacted with. When the `open` attribute is not set, the dialog _shouldn't_ be shown to the user.
 
+## Accessibility considerations
+
+The `dialog` element still has [compatibility issues with some forms of assistive technology](https://www.scottohara.me/blog/2019/03/05/open-dialog.html#incoming-dialog), which may prevent people from reading or using `dialog` element content. Because of this, it is advised to use an interim solution such as [a11y-dialog](https://a11y-dialog.netlify.app/) until support improves.
+
 ## Usage notes
 
 - {{HTMLElement("form")}} elements can close a dialog if they have the attribute `method="dialog"`. When such a form is submitted, the dialog closes with its {{domxref("HTMLDialogElement.returnValue", "returnValue")}} property set to the `value` of the button that was used to submit the form.
@@ -168,15 +172,10 @@ favDialog.addEventListener('close', function onClose() {
 
 {{Compat}}
 
-## Polyfill
-
-Include this polyfill to provide support for browsers without `<dialog>` element.
-
-[dialog-polyfill](https://github.com/GoogleChrome/dialog-polyfill)
-
 ## See also
 
 - The {{domxref("HTMLDialogElement/close_event", "close")}} event
 - The {{domxref("HTMLDialogElement/cancel_event", "cancel")}} event
 - [HTML forms guide](/en-US/docs/Learn/Forms).
 - The {{cssxref("::backdrop")}} pseudo-element
+- [dialog-polyfill](https://github.com/GoogleChrome/dialog-polyfill)

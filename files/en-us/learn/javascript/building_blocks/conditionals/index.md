@@ -648,7 +648,7 @@ In this example, you are going to take the ternary operator example we saw earli
 
 - It should accept the `choice` variable as its input expression.
 - For each case, the choice should equal one of the possible `<option> value`s that can be selected, that is, `white`, `black`, `purple`, `yellow`, or `psychedelic`.
-- For each case, the `update()` function should be run, and be passed two color values, the first one for the background color, and the second one for the text color. Remember that color values are strings, so need to be wrapped in quotes.
+- For each case, the `update()` function should be run, and be passed two color values, the first one for the background color, and the second one for the text color. Remember that color values are strings, so they need to be wrapped in quotes.
 
 If you make a mistake, you can always reset the example with the "Reset" button. If you get really stuck, press "Show solution" to see a solution.
 
@@ -677,7 +677,7 @@ const html = document.querySelector('.output');
 select.addEventListener('change', () => {
   const choice = select.value;
 
-  // ADD CONDITIONAL HERE
+  // ADD SWITCH STATEMENT
 });
 
 function update(bgColor, textColor) {

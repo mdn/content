@@ -195,7 +195,7 @@ The CSS Device Adaptation specification defines the following metadata name:
         <td><code>auto</code>, <code>contain</code> or <code>cover</code></td>
         <td>
           <p>
-            The <code>auto</code> value doesn’t affect the initial layout
+            The <code>auto</code> value doesn't affect the initial layout
             viewport, and the whole web page is viewable.
           </p>
           <p>

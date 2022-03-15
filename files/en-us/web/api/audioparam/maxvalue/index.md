@@ -25,7 +25,7 @@ var maxVal = audioParam.maxValue;
 
 ### Value
 
-A floating-point {{jsxref("Number")}} indicating the maximum value permitted for the
+A floating-point {{jsxref("Number")}} indicating the maximum value permitted for the
 parameter's nominal range.
 
 The default value of `maxValue` is the maximum positive single-precision

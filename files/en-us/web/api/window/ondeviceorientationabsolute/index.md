@@ -14,7 +14,7 @@ browser-compat: api.Window.ondeviceorientationabsolute
 ## Summary
 
 An event handler for the {{ event("deviceorientationabsolute") }} event
-containing information about an absolute device orientation change.
+containing information about an absolute device orientation change.
 
 ## Syntax
 

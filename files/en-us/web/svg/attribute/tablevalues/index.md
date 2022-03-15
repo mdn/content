@@ -11,10 +11,10 @@ The **`tableValues`** attribute defines a list of numbers defining a lookup tabl
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement("feFuncA")}}
-* {{SVGElement("feFuncB")}}
-* {{SVGElement("feFuncG")}}
-* {{SVGElement("feFuncR")}}
+- {{SVGElement("feFuncA")}}
+- {{SVGElement("feFuncB")}}
+- {{SVGElement("feFuncG")}}
+- {{SVGElement("feFuncR")}}
 
 ## Example
 
@@ -84,10 +84,10 @@ html, body, svg {
   </tbody>
 </table>
 
-* `<list-of-numbers>`
-    * : This value holds a comma- and/or space-separated list of {{cssxref("number")}}s, which define a lookup table for the color component transfer function. Each number can be between `0` and `1`.
+- `<list-of-numbers>`
+  - : This value holds a comma- and/or space-separated list of {{cssxref("number")}}s, which define a lookup table for the color component transfer function. Each number can be between `0` and `1`.
 
-        An empty list results in an identity transfer function.
+    An empty list results in an identity transfer function.
 
 ## Specifications
 

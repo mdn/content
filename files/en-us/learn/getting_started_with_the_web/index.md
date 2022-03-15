@@ -20,7 +20,7 @@ _Getting started with the Web_ is a concise series introducing you to the practi
 
 It's a lot of work to create a professional website, so if you're new to web development, we encourage you to start small. You won't build another Facebook right away, but it's not hard to make your own simple website online, so we'll start there.
 
-By working through the articles listed below,  you will go from nothing to getting your first webpage online. Let's begin our journey!
+By working through the articles listed below,  you will go from nothing to getting your first webpage online. Let's begin our journey!
 
 ### Installing basic software
 

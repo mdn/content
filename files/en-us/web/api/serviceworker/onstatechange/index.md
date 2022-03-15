@@ -20,12 +20,12 @@ An {{domxref("EventListener")}} property called whenever an event of type
 
 ```js
 ServiceWorker.onstatechange = function(statechangeevent) { /* ... */ }
-ServiceWorker.addEventListener('statechange', function(statechangeevent) { /* ... */ } )
+ServiceWorker.addEventListener('statechange', function(statechangeevent) { /* ... */ } )
 ```
 
 ## Examples
 
-This code snippet is from the [service
+This code snippet is from the [service
 worker registration-events sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([live
 demo](https://googlechrome.github.io/samples/service-worker/registration-events/)). The code listens for any change in the {{domxref("ServiceWorker.state")}}
 and returns its value.

@@ -9,7 +9,7 @@ browser-compat: api.NodeFilter
 ---
 {{APIRef("DOM")}}
 
-A **`NodeFilter`** interface represents an object used to filter the nodes in a {{domxref("NodeIterator")}} or {{domxref("TreeWalker")}}. A `NodeFilter` knows nothing about the document or traversing nodes; it only knows how to evaluate a single node against the provided filter.
+A **`NodeFilter`** interface represents an object used to filter the nodes in a {{domxref("NodeIterator")}} or {{domxref("TreeWalker")}}. A `NodeFilter` knows nothing about the document or traversing nodes; it only knows how to evaluate a single node against the provided filter.
 
 > **Note:** The browser doesn't provide any object implementing this interface. It is the user who is expected to write one, tailoring the `acceptNode()` method to its needs, and using it with some {{domxref("TreeWalker")}} or {{domxref("NodeIterator")}} objects.
 
@@ -49,11 +49,11 @@ _This interface doesn't inherit any methods._
             <p>
               Value to be returned by the
               {{domxref("NodeFilter.acceptNode()")}} method when a
-              node should be rejected. For {{domxref("TreeWalker")}}, child
+              node should be rejected. For {{domxref("TreeWalker")}}, child
               nodes are also rejected.
             </p>
             <p>
-              For {{ domxref("NodeIterator") }}, this flag is synonymous
+              For {{ domxref("NodeIterator") }}, this flag is synonymous
               with <code>FILTER_SKIP</code>.
             </p>
           </td>
@@ -89,7 +89,7 @@ const nodeIterator = document.createNodeIterator(
   // Object containing the function to use for the acceptNode method
   // of the NodeFilter
   {
-    acceptNode: function(node) {
+    acceptNode: function(node) {
       // Logic to determine whether to accept, reject or skip node
       // In this case, only accept nodes that have content
       // other than whitespace

@@ -54,7 +54,7 @@ See this code in a [JSFiddle demo](https://jsfiddle.net/zfnj5rv4/) or interact w
 <div class="dropzone">
   <div id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
     This div is draggable
-  </div>
+  </div>
 </div>
 <div class="dropzone"></div>
 <div class="dropzone"></div>

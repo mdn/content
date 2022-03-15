@@ -15,7 +15,7 @@ method interface returns a CSS property name from a {{domxref('CSSStyleDeclarati
 by index.
 
 This method doesn't throw exceptions as long as you provide
-arguments; the empty string is returned if the index is out of range and a
+arguments; the empty string is returned if the index is out of range and a
 `TypeError` is thrown if no argument is provided.
 
 ## Syntax
@@ -31,7 +31,7 @@ var propertyName = style.item(index);
 
 ### Return value
 
-- *`propertyName`* is a {{domxref('DOMString')}} that is the name of
+- *`propertyName`* is a {{domxref('DOMString')}} that is the name of
   the CSS property at the specified index.
 
 JavaScript has a special simpler syntax for obtaining an item from a NodeList by index:

@@ -30,12 +30,12 @@ piNode = document.createProcessingInstruction(target, data)
 
 ### Exceptions
 
-- `DOM_INVALID_CHARACTER`
+- `InvalidCharacterError` {{domxref("DOMException")}}
 
-  - : Throws if either of the following are true:
+  - : Thrown if either of the following are true:
 
-    - The processing instruction `target` is invalid — it should be a valid _[XML name](https://www.w3.org/TR/REC-xml/#dt-name)_ that doesn't contain "xml", "XML", or any case combination of the two, other than standardized ones such as `<?xml-stylesheet ?>`.
-    - The _closing processing instruction sequence_ (`?>`) is part of the `data`.
+    - The [`target`](#target) value is not a valid [XML name](https://www.w3.org/TR/REC-xml/#dt-name); for example, it starts with a number, hyphen, or period, or contains characters other than alphanumeric characters, underscores, hyphens, or periods.
+    - The _closing processing instruction sequence_ (`?>`) is part of the [`data`](#data) value.
 
 ## Example
 

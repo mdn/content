@@ -14,14 +14,14 @@ The **`stroke-linecap`** attribute is a presentation attribute defining the shap
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement('altGlyph')}}
-* {{SVGElement('path')}}
-* {{SVGElement('polyline')}}
-* {{SVGElement('line')}}
-* {{SVGElement('text')}}
-* {{SVGElement('textPath')}}
-* {{SVGElement('tref')}}
-* {{SVGElement('tspan')}}
+- {{SVGElement('altGlyph')}}
+- {{SVGElement('path')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('line')}}
+- {{SVGElement('text')}}
+- {{SVGElement('textPath')}}
+- {{SVGElement('tref')}}
+- {{SVGElement('tspan')}}
 
 ## Example
 
@@ -175,10 +175,6 @@ html,body,svg { height:100% }
 
 {{EmbedLiveSample('square', '100%', 200)}}
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Specifications
 
 <table class="no-markdown">
@@ -206,3 +202,7 @@ html,body,svg { height:100% }
     </tr>
   </tbody>
 </table>
+
+## Browser compatibility
+
+{{Compat}}

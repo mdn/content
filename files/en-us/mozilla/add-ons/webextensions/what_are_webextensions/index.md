@@ -9,9 +9,9 @@ tags:
 
 > **Note:** If you are already familiar with the basic concepts of browser extensions, skip this section to [see how extension files are put together](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension). Then, use the [reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions#reference) to start building your extension. Visit [Firefox Extension Workshop](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension) to learn more about the workflow for testing, publishing, and extensions for Firefox.
 
-An extension adds features and functions to a browser. It’s created using familiar web-based technologies—HTML, CSS, and JavaScript. It can take advantage of the same web APIs as JavaScript on a web page, but an extension also has access to its own set of JavaScript APIs. This means that you can do a lot more in an extension than you can with code in a web page. Here are just a few examples of the things you can do:
+An extension adds features and functions to a browser. It's created using familiar web-based technologies—HTML, CSS, and JavaScript. It can take advantage of the same web APIs as JavaScript on a web page, but an extension also has access to its own set of JavaScript APIs. This means that you can do a lot more in an extension than you can with code in a web page. Here are just a few examples of the things you can do:
 
-**Enhance or complement a website**: Use an add-on to deliver additional in-browser features or information from your website. Allow users to collect details from pages they visit to enhance the service you offer.
+**Enhance or complement a website**: Use an add-on to deliver additional in-browser features or information from your website. Allow users to collect details from pages they visit to enhance the service you offer.
 
 ![](amazon_add_on.png)
 
@@ -23,19 +23,19 @@ Examples: [Amazon Assistant for Firefox](https://addons.mozilla.org/en-US/firefo
 
 Examples: [MyWeb New Tab](https://addons.mozilla.org/en-US/firefox/addon/myweb-new-tab/), [Tabliss](https://addons.mozilla.org/en-US/firefox/addon/tabliss/), and [VivaldiFox](https://addons.mozilla.org/en-US/firefox/addon/vivaldifox/)
 
-**Add or remove content from web pages**: You might want to help users block intrusive ads from web pages, provide access to a travel guide whenever a country or city is mentioned in a web page, or reformat page content to offer a consistent reading experience. With the ability to access and update both a page’s HTML and CSS, extensions can help users see the web the way they want to.
+**Add or remove content from web pages**: You might want to help users block intrusive ads from web pages, provide access to a travel guide whenever a country or city is mentioned in a web page, or reformat page content to offer a consistent reading experience. With the ability to access and update both a page's HTML and CSS, extensions can help users see the web the way they want to.
 
 ![](ublock_origin_add_on.png)
 
 Examples: [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/), [Reader](https://addons.mozilla.org/en-US/firefox/addon/reader/), and [Toolbox for Google Play Store™](https://addons.mozilla.org/en-US/firefox/addon/toolbox-google-play-store/)
 
-**Add tools and new browsing features**: Add new features to a taskboard, or generate QR code images from URLs, hyperlinks, or page text. With flexible UI options and the power of the [WebExtensions APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions) you can easily add new features to a browser. And, you can enhance almost any website’s features or functionality, it doesn't have to be your website.
+**Add tools and new browsing features**: Add new features to a taskboard, or generate QR code images from URLs, hyperlinks, or page text. With flexible UI options and the power of the [WebExtensions APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions) you can easily add new features to a browser. And, you can enhance almost any website's features or functionality, it doesn't have to be your website.
 
 ![](qr_code_image_generator_add_on.png)
 
 Examples: [Swimlanes for Trello](https://addons.mozilla.org/en-US/firefox/addon/swimlanes-for-trello/) and [Tomato Clock](https://addons.mozilla.org/en-US/firefox/addon/tomato-clock/)
 
-**Games**: Offer traditional computer games with off-line play features, or explore new game possibilities; for example, by incorporating gameplay into everyday browsing.
+**Games**: Offer traditional computer games with off-line play features, or explore new game possibilities; for example, by incorporating gameplay into everyday browsing.
 
 ![](asteroids_in_popup_add_on_.png)
 

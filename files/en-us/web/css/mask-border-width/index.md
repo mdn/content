@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Masking
   - CSS Property
-  - Experimental
   - NeedsCompatTable
   - NeedsExample
   - Reference

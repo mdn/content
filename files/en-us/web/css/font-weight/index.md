@@ -53,15 +53,15 @@ The `font-weight` property is specified using any one of the values listed below
 - `bold`
   - : Bold font weight. Same as `700`.
 - `lighter`
-  - : One relative font weight lighter than the parent element. Note that only four font weights are considered for relative weight calculation; see the {{anch("Meaning of relative weights")}} section below.
+  - : One relative font weight lighter than the parent element. Note that only four font weights are considered for relative weight calculation; see the [Meaning of relative weights](#meaning_of_relative_weights) section below.
 - `bolder`
-  - : One relative font weight heavier than the parent element. Note that only four font weights are considered for relative weight calculation; see the {{anch("Meaning of relative weights")}} section below.
+  - : One relative font weight heavier than the parent element. Note that only four font weights are considered for relative weight calculation; see the [Meaning of relative weights](#meaning_of_relative_weights) section below.
 - `<number>`
   - : A {{cssxref("&lt;number&gt;")}} value between 1 and 1000, inclusive. Higher numbers represent weights that are bolder than (or as bold as) lower numbers. Certain commonly used values correspond to common weight names, as described in the [Common weight name mapping](#common_weight_name_mapping) section below.
 
-In earlier versions of the `font-weight` specification, the property accepts only keyword values and the numeric values 100, 200, 300, 400, 500, 600, 700, 800, and 900; non-variable fonts can only really make use of these set values, although fine-grained values (e.g. 451) will be translated to one of these values for non-variable fonts using the {{anch("Fallback weights")}} system.
+In earlier versions of the `font-weight` specification, the property accepts only keyword values and the numeric values 100, 200, 300, 400, 500, 600, 700, 800, and 900; non-variable fonts can only really make use of these set values, although fine-grained values (e.g. 451) will be translated to one of these values for non-variable fonts using the [Fallback weights](#fallback_weights) system.
 
-CSS Fonts Level 4 extends the syntax to accept any number between 1 and 1000 and introduces {{anch("Variable fonts")}}, which can make use of this much finer-grained range of font weights.
+CSS Fonts Level 4 extends the syntax to accept any number between 1 and 1000 and introduces [Variable fonts](#variable_fonts), which can make use of this much finer-grained range of font weights.
 
 ### Fallback weights
 
@@ -141,7 +141,7 @@ Note that when using relative weights, only four font weights are considered —
 
 ### Common weight name mapping
 
-The numerical values `100` to `900` roughly correspond to the following common weight names (see the [OpenType specification](https://docs.microsoft.com/en-us/typography/opentype/spec/os2#usweightclass)):
+The numerical values `100` to `900` roughly correspond to the following common weight names (see the [OpenType specification](https://docs.microsoft.com/typography/opentype/spec/os2#usweightclass)):
 
 | Value | Common weight name                                                                                                                |
 | ----- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -154,7 +154,7 @@ The numerical values `100` to `900` roughly correspond to the following common w
 | 700   | Bold                                                                                                                              |
 | 800   | Extra Bold (Ultra Bold)                                                                                                           |
 | 900   | Black (Heavy)                                                                                                                     |
-| 950   | [Extra Black (Ultra Black)](https://docs.microsoft.com/en-us/dotnet/api/system.windows.fontweights?view=netframework-4.8#remarks) |
+| 950   | [Extra Black (Ultra Black)](https://docs.microsoft.com/dotnet/api/system.windows.fontweights?view=netframework-4.8#remarks) |
 
 ### Variable fonts
 

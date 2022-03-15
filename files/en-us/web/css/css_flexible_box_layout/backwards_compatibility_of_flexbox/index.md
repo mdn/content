@@ -63,11 +63,11 @@ Given that flexbox usage is initiated with value of the {{cssxref("display")}} p
 
 ### Floated items
 
-> “float and clear do not create floating or clearance of flex item, and do not take it out-of-flow.” - [3. Flex Containers](https://www.w3.org/TR/css-flexbox-1/#flex-containers)
+> "float and clear do not create floating or clearance of flex item, and do not take it out-of-flow." - [3. Flex Containers](https://www.w3.org/TR/css-flexbox-1/#flex-containers)
 
 In the following live example, I have floated two blocks and then set `display: flex` on the container. The items are now flex items, which means they stretch to equal height. Any float behavior does not apply.
 
-You can test the fallback behavior by removing `display: flex` from the wrapper.
+You can test the fallback behavior by removing `display: flex` from the wrapper.
 
 {{EmbedGHLiveSample("css-examples/flexbox/browsers/float.html", '100%', 550)}}
 
@@ -83,11 +83,11 @@ Remove `display: flex` to see the fallback behavior. You'll see white space adde
 
 The CSS table display properties are potentially very useful as a fallback, due to the fact that they allow design patterns such as full height columns and vertical centering and work back as far as Internet Explorer 8.
 
-If you use `display: table-cell` on an item in your HTML it takes on the styling of an HTML table cell. CSS creates anonymous boxes to represent these items so that you do not need to wrap each item in a wrapper to represent the HTML table row, and a second one to represent the table element itself, You can’t see or style these anonymous boxes; they are there purely to fix up the tree.
+If you use `display: table-cell` on an item in your HTML it takes on the styling of an HTML table cell. CSS creates anonymous boxes to represent these items so that you do not need to wrap each item in a wrapper to represent the HTML table row, and a second one to represent the table element itself, You can't see or style these anonymous boxes; they are there purely to fix up the tree.
 
 If you then declare `display: flex` on the parent item, these anonymous boxes do not get created and so your item remains a direct child and can become a flex item — losing any of the table display features.
 
-> “Note: Some values of display normally trigger the creation of anonymous boxes around the original box. If such a box is a flex item, it is blockified first, and so anonymous box creation will not happen. For example, two contiguous flex items with display: table-cell will become two separate display: block flex items, instead of being wrapped into a single anonymous table.” - [4. Flex Items](https://www.w3.org/TR/css-flexbox-1/#flex-items)
+> "Note: Some values of display normally trigger the creation of anonymous boxes around the original box. If such a box is a flex item, it is blockified first, and so anonymous box creation will not happen. For example, two contiguous flex items with display: table-cell will become two separate display: block flex items, instead of being wrapped into a single anonymous table." - [4. Flex Items](https://www.w3.org/TR/css-flexbox-1/#flex-items)
 
 {{EmbedGHLiveSample("css-examples/flexbox/browsers/table-cell.html", '100%', 550)}}
 
@@ -119,4 +119,4 @@ For more information about using Feature Queries see [Using Feature Queries in C
 
 ## Conclusion
 
-While I’ve spent some time in this guide going through potential issues and fallbacks, flexbox is very much ready for you to be using in production work. This guide will help you in those cases where you do come across an issue or have the requirement to support older browsers.
+While I've spent some time in this guide going through potential issues and fallbacks, flexbox is very much ready for you to be using in production work. This guide will help you in those cases where you do come across an issue or have the requirement to support older browsers.

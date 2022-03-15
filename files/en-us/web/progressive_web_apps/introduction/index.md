@@ -19,7 +19,7 @@ This article provides an introduction to Progressive Web Apps (PWAs), discussing
 
 ## What is a Progressive Web App?
 
-> **Note:** The term "Progressive Web App" isn't a formal or official name. It's just a shorthand used initially by Google for the concept of creating a flexible, adaptable app using only web technologies.
+> **Note:** The term "Progressive Web App" isn't a formal or official name. It's just a shorthand used initially by Google for the concept of creating a flexible, adaptable app using only web technologies.
 
 PWAs are web apps developed using a number of specific technologies and standard patterns to allow them to take advantage of both web and native app features. For example, web apps are more discoverable than native apps; it's a lot easier and faster to visit a website than to install an application, and you can also share web apps by sending a link.
 
@@ -48,7 +48,7 @@ There are some key principles a web app should try to observe to be identified a
 - [Responsively designed](#responsiveness), so it's usable on any device with a screen and a browser—mobile phones, tablets, laptops, TVs, refrigerators, etc.
 - [Secure](#secure), so the connections between the user, the app, and your server are secured against any third parties trying to get access to sensitive data.
 
-Offering these features and making use of all the {{anch("Advantages of web applications", "advantages")}} offered by web applications can create a compelling, highly flexible offering for your users and customers.
+Offering these features and making use of all the [advantages](#advantages_of_web_applications) offered by web applications can create a compelling, highly flexible offering for your users and customers.
 
 ### Is it worth doing all that?
 
@@ -95,7 +95,7 @@ This is achieved using a combination of technologies: [Service Workers](/en-US/d
 
 ### Progressive enhancement support
 
-Modern web apps can be developed to provide an excellent experience to fully capable browsers, and an acceptable (although not quite as shiny) experience to less capable browsers. We've been doing this for years with best practices such as progressive enhancement. By using [progressive enhancement](/en-US/docs/Glossary/Progressive_Enhancement), PWAs are cross-browser. This means developers should take into account the differences in implementation of some PWA features and technologies between different browser implementations.
+Modern web apps can be developed to provide an excellent experience to fully capable browsers, and an acceptable (although not quite as shiny) experience to less capable browsers. We've been doing this for years with best practices such as progressive enhancement. By using [progressive enhancement](/en-US/docs/Glossary/Progressive_Enhancement), PWAs are cross-browser. This means developers should take into account the differences in implementation of some PWA features and technologies between different browser implementations.
 
 ### Re-engageability
 
@@ -107,7 +107,7 @@ Responsive web apps use technologies like [media queries](/en-US/docs/Web/CSS/Me
 
 ### Secure
 
-The web platform provides a secure delivery mechanism that prevents snooping while simultaneously ensuring that content hasn’t been tampered with, as long as you take advantage of {{Glossary("HTTPS")}} and develop your apps with security in mind.
+The web platform provides a secure delivery mechanism that prevents snooping while simultaneously ensuring that content hasn't been tampered with, as long as you take advantage of {{Glossary("HTTPS")}} and develop your apps with security in mind.
 
 It's also easy for users to ensure that they're installing the right app, because its URL will match your site's domain. This is very different from apps in app stores, which may have a number of similarly-named apps, some of which may even be based on your own site, which only adds to the confusion. Web apps eliminate that confusion and ensure that users get the best possible experience.
 
@@ -119,7 +119,7 @@ The key ingredient required for PWAs is [service worker](/en-US/docs/Web/API/Ser
 
 Other features such as [Web App Manifest](/en-US/docs/Web/Manifest), [Push](/en-US/docs/Web/API/Push_API) [Notifications](/en-US/docs/Web/API/Notifications_API), and [Add to Home Screen](/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen) functionality have wide support too. Currently, Safari has limited support for Web App Manifest and Add to Home Screen and no support for web push notifications. However, other major browsers support all these features.
 
-Above all you should follow the progressive enhancement rule: use technologies that enhance the appearance and utility of your app when they're available, but still offer the basic functionality of your app when those features are unavailable. Presenting a trusted website with a good performance is a consequence of using these enhancements; this in turn means building web apps which follow better practices. This way everybody will be able to use the app, but those with modern browsers will benefit from PWA features even more.
+Above all you should follow the progressive enhancement rule: use technologies that enhance the appearance and utility of your app when they're available, but still offer the basic functionality of your app when those features are unavailable. Presenting a trusted website with a good performance is a consequence of using these enhancements; this in turn means building web apps which follow better practices. This way everybody will be able to use the app, but those with modern browsers will benefit from PWA features even more.
 
 ## An example application
 
@@ -127,7 +127,7 @@ In this series of articles we will examine the source code of a super simple web
 
 You can [see this app in action](https://mdn.github.io/pwa-examples/js13kpwa/) online, and the source code is [available on GitHub](https://github.com/mdn/pwa-examples/tree/master/js13kpwa). We'll be examining this code carefully over the course of this series of articles.
 
-For now, let's move to the second part of this series, where we’ll be looking at the structure of our example app.
+For now, let's move to the second part of this series, where we'll be looking at the structure of our example app.
 
 {{NextMenu("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps")}}
 

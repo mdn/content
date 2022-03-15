@@ -55,7 +55,7 @@ Feature-Policy: <directive> <allowlist>
     - `'none'`: The feature is disabled in top-level and nested browsing contexts.
     - \<origin(s)>: The feature is allowed for specific origins (for example, https\://example.com). Origins should be separated by a space.
 
-    The values `*` (enable for all origins) or `'none'` (disable for all origins) may only be used alone, while `'self'` and `'src'` may be used with one or more origins.
+    The values `*` (enable for all origins) or `'none'` (disable for all origins) may only be used alone, while `'self'` and `'src'` may be used with one or more origins.
 
     Features have a _default_ allowlist, which is one of: `*`, `'self'`, or `'none'`.
 

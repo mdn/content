@@ -82,7 +82,7 @@ Some or all of the following will be included in the object, either because it's
     - `"none"`
       - : The track has the resolution offered by the camera, its driver or the OS.
     - `"crop-and-scale"`
-      - : The track's resolution might be the result of the user agent using cropping or downscaling from a higher camera resolution.
+      - : The track's resolution might be the result of the user agent using cropping or downscaling from a higher camera resolution.
 
 ### Properties of shared screen tracks
 

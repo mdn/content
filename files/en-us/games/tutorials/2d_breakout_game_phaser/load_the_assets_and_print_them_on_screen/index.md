@@ -45,7 +45,7 @@ The first parameter we want to give the asset is the name that will be used acro
 
 Of course, to load the image, it must be available in our code directory. [Grab the ball image from Github](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/ball.png), and save it inside an `/img` directory in the same place as your `index.html` file.
 
-Now, to show it on the screen we will use another Phaser method called `add.sprite()`;  add the following new code line inside the `create()` function as shown:
+Now, to show it on the screen we will use another Phaser method called `add.sprite()`;  add the following new code line inside the `create()` function as shown:
 
 ```js
 function create() {

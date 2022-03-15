@@ -8,7 +8,7 @@ tags:
 ---
 {{CSSRef}}
 
-In these guides, I have already touched on an important feature of grid layout: the support for different writing modes that is built into the specification. For this guide, we will look at this feature of grid and other modern layout methods, learning a little about writing modes and logical vs. physical properties as we do so.
+In these guides, I have already touched on an important feature of grid layout: the support for different writing modes that is built into the specification. For this guide, we will look at this feature of grid and other modern layout methods, learning a little about writing modes and logical vs. physical properties as we do so.
 
 ## Logical and physical properties and values
 
@@ -35,7 +35,7 @@ Another place you might see physical keywords in use, is when using `text-align:
 
 We call these keywords and properties _physical_ because they relate to the screen you are looking at. Left is always left, no matter what direction your text is running.
 
-This can become an issue when developing a site that has to work in multiple languages, including languages that have text starting on the right, rather than the left. Browsers are pretty good at dealing with text direction, and you don’t even need to be working in a {{glossary("rtl")}} language to take a look. In the example below, I have two paragraphs. One has no {{cssxref("text-align")}} property set, the second has `text-align` set to left. I have added `dir="rtl"` to the `html` element, which switches the writing mode from the default for an English language document of `ltr`. You can see that the first paragraph remains left to right, due to the `text-align` value being `left` . The second however, switches direction and the text runs from right to left .
+This can become an issue when developing a site that has to work in multiple languages, including languages that have text starting on the right, rather than the left. Browsers are pretty good at dealing with text direction, and you don't even need to be working in a {{glossary("rtl")}} language to take a look. In the example below, I have two paragraphs. One has no {{cssxref("text-align")}} property set, the second has `text-align` set to left. I have added `dir="rtl"` to the `html` element, which switches the writing mode from the default for an English language document of `ltr`. You can see that the first paragraph remains left to right, due to the `text-align` value being `left` . The second however, switches direction and the text runs from right to left .
 
 ![A simple example of text direction.](8_direction_simple_example.png)
 
@@ -43,7 +43,7 @@ This is a very simple example of the problem with physical values and properties
 
 ### Logical properties and values
 
-Logical properties and values do not make an assumption about text direction. Which is why in Grid Layout we use the keyword `start` when aligning something to the start of the container. For me, working in English, `start` may well be on the left, however it doesn’t have to be, and the word `start` infers no physical location.
+Logical properties and values do not make an assumption about text direction. Which is why in Grid Layout we use the keyword `start` when aligning something to the start of the container. For me, working in English, `start` may well be on the left, however it doesn't have to be, and the word `start` infers no physical location.
 
 ## Block and Inline
 
@@ -53,7 +53,7 @@ Once we begin dealing with logical, rather than physical properties, we stop see
 
 ## CSS writing modes
 
-I’m going to introduce another specification here, that I will be using in my examples: the CSS Writing Modes specification. This spec details how we can use these different writing modes in CSS, not just for the support of languages that have a different writing mode to English, but also for creative purposes. I’ll be using the {{cssxref("writing-mode")}} property to make changes to the writing mode applied to our grid, in order to demonstrate how the logical values work. If you want to dig into writing modes further, however, then I would recommend that you read Jen Simmons excellent article on [CSS Writing Modes](https://24ways.org/2016/css-writing-modes/). This goes into more depth on that specification than we will touch upon here.
+I'm going to introduce another specification here, that I will be using in my examples: the CSS Writing Modes specification. This spec details how we can use these different writing modes in CSS, not just for the support of languages that have a different writing mode to English, but also for creative purposes. I'll be using the {{cssxref("writing-mode")}} property to make changes to the writing mode applied to our grid, in order to demonstrate how the logical values work. If you want to dig into writing modes further, however, then I would recommend that you read Jen Simmons excellent article on [CSS Writing Modes](https://24ways.org/2016/css-writing-modes/). This goes into more depth on that specification than we will touch upon here.
 
 ### writing-mode
 
@@ -65,7 +65,7 @@ Writing Modes are more than just left to right and right to left text, and the `
 - `sideways-rl`
 - `sideways-lr`
 
-The value `horizontal-tb` is the default for text on the web. It is the direction in which you are reading this guide. The other properties will change the way that text flows in our document, matching the different writing modes found around the world. Again, for full details of these see [Jen’s article](https://24ways.org/2016/css-writing-modes/). As a simple example, I have two paragraphs below. The first uses the default `horizontal-tb`, and the second uses `vertical-rl`. In the mode text still runs left to right, however the direction of the text is vertical - inline text now runs down the page, from top to bottom.
+The value `horizontal-tb` is the default for text on the web. It is the direction in which you are reading this guide. The other properties will change the way that text flows in our document, matching the different writing modes found around the world. Again, for full details of these see [Jen's article](https://24ways.org/2016/css-writing-modes/). As a simple example, I have two paragraphs below. The first uses the default `horizontal-tb`, and the second uses `vertical-rl`. In the mode text still runs left to right, however the direction of the text is vertical - inline text now runs down the page, from top to bottom.
 
 ```css hidden
 .wrapper > p {
@@ -384,7 +384,7 @@ This is anti-clockwise! So the reverse of what we do for margins and padding. On
 
 ## Mixed writing modes and grid layout
 
-In addition to displaying documents, using the correct writing mode for the language, writing modes can be used creatively within documents that are otherwise `ltr`. In this next example I have a grid layout with a set of links down one side. I’ve used writing modes to turn these on their side in the column track:
+In addition to displaying documents, using the correct writing mode for the language, writing modes can be used creatively within documents that are otherwise `ltr`. In this next example I have a grid layout with a set of links down one side. I've used writing modes to turn these on their side in the column track:
 
 ```css
 .wrapper {

@@ -288,7 +288,7 @@ body {
 
 ### The minmax() function
 
-Our 100-pixel tall tracks won’t be very useful if we add content into those tracks that is taller than 100 pixels, in which case it would cause an overflow. It might be better to have tracks that are _at least_ 100 pixels tall and can still expand if more content becomes added. A fairly basic fact about the web is that you never really know how tall something is going to be — additional content or larger font sizes can cause problems with designs that attempt to be pixel perfect in every dimension.
+Our 100-pixel tall tracks won't be very useful if we add content into those tracks that is taller than 100 pixels, in which case it would cause an overflow. It might be better to have tracks that are _at least_ 100 pixels tall and can still expand if more content becomes added. A fairly basic fact about the web is that you never really know how tall something is going to be — additional content or larger font sizes can cause problems with designs that attempt to be pixel perfect in every dimension.
 
 The {{cssxref("minmax()")}} function lets us set a minimum and maximum size for a track, for example, `minmax(100px, auto)`. The minimum size is 100 pixels, but the maximum is `auto`, which will expand to accommodate more content. Try changing `grid-auto-rows` to use a minmax value:
 
@@ -522,14 +522,14 @@ The rules for `grid-template-areas` are as follows:
 - You need to have every cell of the grid filled.
 - To span across two cells, repeat the name.
 - To leave a cell empty, use a `.` (period).
-- Areas must be rectangular — for example, you can’t have an L-shaped area.
+- Areas must be rectangular — for example, you can't have an L-shaped area.
 - Areas can't be repeated in different locations.
 
 You can play around with our layout, changing the footer to only sit underneath the article and the sidebar to span all the way down. This is a very nice way to describe a layout because it's clear just from looking at the CSS to know exactly what's happening.
 
 ## Grid frameworks in CSS Grid
 
-Grid "frameworks" tend to be based around 12 or 16-column grids. With CSS Grid, you don’t need any third party tool to give you such a framework — it's already there in the spec.
+Grid "frameworks" tend to be based around 12 or 16-column grids. With CSS Grid, you don't need any third party tool to give you such a framework — it's already there in the spec.
 
 [Download the starting point file](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/11-grid-system-starting-point.html). This has a container with a 12-column grid defined and the same markup we used in the previous two examples. We can now use line-based placement to place our content on the 12-column grid.
 

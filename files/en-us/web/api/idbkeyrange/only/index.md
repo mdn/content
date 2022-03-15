@@ -15,7 +15,7 @@ browser-compat: api.IDBKeyRange.only
 {{ APIRef("IndexedDB") }}
 
 The **`only()`** method of the {{domxref("IDBKeyRange")}}
-interface creates a new key range containing a single value.
+interface creates a new key range containing a single value.
 
 {{AvailableInWorkers}}
 
@@ -27,7 +27,7 @@ var myIDBKeyRange = IDBKeyRange.only(value);
 
 ### Parameters
 
-*value* is the value for the new key range.
+*value* is the value for the new key range.
 
 ### Return value
 
@@ -44,14 +44,14 @@ This method may raise a {{domxref("DOMException")}} of the following types:
 ## Example
 
 The following example illustrates how you'd use an only key range. Here we declare
-a `keyRangeValue = IDBKeyRange.only("A");` — a range that only includes the
+a `keyRangeValue = IDBKeyRange.only("A");` — a range that only includes the
 value "A". We open a transaction (using {{domxref("IDBTransaction")}}) and an object
 store, and open a Cursor with {{domxref("IDBObjectStore.openCursor")}},
-declaring `keyRangeValue` as its optional key range value. This means that
+declaring `keyRangeValue` as its optional key range value. This means that
 the cursor will only retrieve the record with the key value "A".
 
 > **Note:** For a more complete example allowing you to experiment with
-> key range, have a look at our [IDBKeyRange](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange)
+> key range, have a look at our [IDBKeyRange](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange)
 > repo ([view the example
 > live too](https://mdn.github.io/indexeddb-examples/idbkeyrange/).)
 

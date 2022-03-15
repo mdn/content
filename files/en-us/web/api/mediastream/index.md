@@ -34,13 +34,6 @@ _This interface inherits properties from its parent, {{domxref("EventTarget")}}.
 - {{domxref("MediaStream.id")}} {{readonlyInline}}
   - : A {{domxref("DOMString")}} containing 36 characters denoting a universally unique identifier ({{Glossary("UUID")}}) for the object.
 
-### Event handlers
-
-- {{domxref("MediaStream.onaddtrack")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) containing the action to perform when an {{event("addtrack")}} event is fired when a new {{domxref("MediaStreamTrack")}} object is added.
-- {{domxref("MediaStream.onremovetrack")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) containing the action to perform when a {{event("removetrack")}} event is fired when a {{domxref("MediaStreamTrack")}} object is removed from it.
-
 ## Methods
 
 _This interface inherits methods from its parent, {{domxref("EventTarget")}}._
@@ -79,10 +72,8 @@ _This interface inherits methods from its parent, {{domxref("EventTarget")}}._
 
 - {{domxref("MediaStream/addtrack_event", "addtrack")}}
   - : Fired when a new {{domxref("MediaStreamTrack")}} object is added.
-    Also available via the {{domxref("MediaStream/onaddtrack", "onaddtrack")}} property.
 - {{domxref("MediaStream/removetrack_event", "removetrack")}}
   - : Fired when a {{domxref("MediaStreamTrack")}} object has been removed.
-    Also available via the {{domxref("MediaStream/onremovetrack", "onremovetrack")}} property.
 
 <!---->
 

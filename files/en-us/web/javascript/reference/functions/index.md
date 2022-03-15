@@ -46,7 +46,7 @@ The parameters of a function call are the function's _arguments_. Arguments may 
 (in the case of [primitive values](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#primitive_values))
 or _by reference_ (in the case of [objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#objects)).
 This means that if a function reassigns a primitive type parameter, the value won't change outside the function. In the case of
-an object type parameter, if it's reassigned or mutated, the change will impact outside of the function.
+an object type parameter, if its properties are mutated, the change will impact outside of the function.
 See the following example:
 
 ```js
@@ -581,7 +581,7 @@ the standard. Historically, this was left unspecified, and some browsers would d
 
 In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), all
 browsers that support ES2015 handle this the same way: `zero` is defined
-only if `shouldDefineZero` is true, and only in the scope of the
+only if `shouldDefineZero` is true, and only exists within that scope of the
 `if`-block.
 
 A safer way to define functions conditionally is to assign a function expression to a

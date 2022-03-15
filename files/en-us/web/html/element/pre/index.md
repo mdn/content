@@ -90,13 +90,13 @@ It is important to provide an alternate description for any images or diagrams c
 
 People experiencing low vision conditions and browsing with the aid of assistive technology such as a screen reader may not understand what the preformatted text characters are representing when they are read out in sequence.
 
-A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}} elements, supplemented by a combination of an {{htmlattrxref("id")}} and the [ARIA](/en-US/docs/Web/Accessibility/ARIA) `role` and [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attributes allow the preformatted text to be announced as an image, with the `figcaption` serving as the image's alternate description.
+A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}} elements, supplemented by the [ARIA](/en-US/docs/Web/Accessibility/ARIA) `role` and [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attributes on the `pre` element allow the preformatted ASCII art to be announced as an image with alternative text, and the `figcaption` serving as the image's caption.
 
 ### Example
 
 ```html
-<figure role="img" aria-labelledby="cow-caption">
-  <pre>
+<figure>
+  <pre role="img" aria-label="ASCII COW">
       ___________________________
   &lt; I'm an expert in my field. &gt;
       ---------------------------

@@ -19,7 +19,7 @@ WebAssembly has an S-expression-based textual representation, an intermediate fo
 
 ## A first look at the text format
 
-Let’s look at a simple example of this — the following program imports a function called `imported_func` from a module called `imports`, and exports a function called `exported_func`:
+Let's look at a simple example of this — the following program imports a function called `imported_func` from a module called `imports`, and exports a function called `exported_func`:
 
 ```wasm
 (module
@@ -35,11 +35,11 @@ The WebAssembly function `exported_func` is exported for use in our environment 
 
 ## Converting the text .wat into a binary .wasm file
 
-Let’s have a go at converting the above `.wat` text representation example into `.wasm` assembly format.
+Let's have a go at converting the above `.wat` text representation example into `.wasm` assembly format.
 
 1. To start with, make a copy of the above listing inside a text file; call it `simple.wat`.
-2. We need to assemble this textual representation into the assembly language the browser actually reads before we can use it. To do this, we can use the wabt tool, which includes compilers to convert between WebAssembly’s text representation and wasm, and vice versa, plus more besides. Go to <https://github.com/webassembly/wabt> — follow the instructions on this page to set up the tool.
-3. Once you’ve got the tool built, add the `/wabt/out/clang/Debug` directory to your system `PATH`.
+2. We need to assemble this textual representation into the assembly language the browser actually reads before we can use it. To do this, we can use the wabt tool, which includes compilers to convert between WebAssembly's text representation and wasm, and vice versa, plus more besides. Go to <https://github.com/webassembly/wabt> — follow the instructions on this page to set up the tool.
+3. Once you've got the tool built, add the `/wabt/out/clang/Debug` directory to your system `PATH`.
 4. Next, execute the wat2wasm program, passing it the path to the input file, followed by an `-o` parameter, followed by the path to the output file:
 
     ```bash
@@ -52,7 +52,7 @@ This will convert the wasm into a file called `simple.wasm`, which contains the 
 
 ## Viewing the assembly output
 
-Because the output file is assembly-based, it can’t be viewed in a normal text editor. However, you can view it using the wat2wasm tool’s `-v` option. Try this:
+Because the output file is assembly-based, it can't be viewed in a normal text editor. However, you can view it using the wat2wasm tool's `-v` option. Try this:
 
 ```bash
 wat2wasm simple.wat -v

@@ -85,7 +85,7 @@ You can see the effect of `animation-fill-mode` in the following example. It dem
 ```html
 <p>Move your mouse over the gray box!</p>
 <div class="demo">
- <div class="growsandstays">This grows and stays big.</div>
+ <div class="growsandstays">This grows and stays big.</div>
   <div class="grows">This just grows.</div>
 </div>
 ```

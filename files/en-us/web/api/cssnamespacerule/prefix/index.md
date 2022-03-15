@@ -12,7 +12,7 @@ browser-compat: api.CSSNamespaceRule.prefix
 ---
 {{ APIRef("CSSOM") }}
 
-The read-only **`prefix`** property of the {{domxref("CSSNamespaceRule")}} returns a {{domxref("DOMString")}} with the name of the prefix associated to this namespace. If there is no such prefix, it returns an empty string.
+The read-only **`prefix`** property of the {{domxref("CSSNamespaceRule")}} returns a {{domxref("DOMString")}} with the name of the prefix associated to this namespace. If there is no such prefix, it returns an empty string.
 
 ## Syntax
 

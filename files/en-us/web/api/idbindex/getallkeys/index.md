@@ -25,7 +25,7 @@ var allKeysRequest = IDBIndex.getAllKeys(query, count);
 
 ### Parameters
 
-- *query* {{optional_inline}}
+- *query* {{optional_inline}}
   - : A key or an {{domxref("IDBKeyRange")}} identifying the keys to retrieve. If this
     value is null or missing, the browser will use an unbound key range.
 - _count_ {{optional_inline}}

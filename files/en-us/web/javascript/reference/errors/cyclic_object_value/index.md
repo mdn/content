@@ -9,7 +9,7 @@ tags:
 ---
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "cyclic object value" occurs when object references were found
+The JavaScript exception "cyclic object value" occurs when object references were found
 in [JSON](https://www.json.org/). {{jsxref("JSON.stringify()")}} doesn't try
 to solve them and fails accordingly.
 

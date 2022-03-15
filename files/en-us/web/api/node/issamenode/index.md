@@ -29,7 +29,7 @@ isSameNode(otherNode);
 
 ### Return value
 
-A boolean value that is `true` if both nodes are stricly equal, `false` if not.
+A boolean value that is `true` if both nodes are strictly equal, `false` if not.
 
 ## Example
 

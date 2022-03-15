@@ -95,43 +95,43 @@ You can automate the creation of a DOM tree using a [JXON reverse algorithm](/en
 
 ```js
 {
-  "people": {
-    "person": [{
-      "address": [{
-        "@street": "321 south st",
-        "@city": "denver",
-        "@state": "co",
-        "@country": "usa"
-      }, {
-        "@street": "123 main st",
-        "@city": "arlington",
-        "@state": "ma",
-        "@country": "usa"
-      }],
-      "@first-name": "eric",
-      "@middle-initial": "H",
-      "@last-name": "jung"
-    }, {
-      "address": [{
-        "@street": "321 north st",
-        "@city": "atlanta",
-        "@state": "ga",
-        "@country": "usa"
-      }, {
-        "@street": "123 west st",
-        "@city": "seattle",
-        "@state": "wa",
-        "@country": "usa"
-      }, {
-        "@street": "321 south avenue",
-        "@city": "denver",
-        "@state": "co",
-        "@country": "usa"
-      }],
-      "@first-name": "jed",
-      "@last-name": "brown"
-    }]
-  }
+  "people": {
+    "person": [{
+      "address": [{
+        "@street": "321 south st",
+        "@city": "denver",
+        "@state": "co",
+        "@country": "usa"
+      }, {
+        "@street": "123 main st",
+        "@city": "arlington",
+        "@state": "ma",
+        "@country": "usa"
+      }],
+      "@first-name": "eric",
+      "@middle-initial": "H",
+      "@last-name": "jung"
+    }, {
+      "address": [{
+        "@street": "321 north st",
+        "@city": "atlanta",
+        "@state": "ga",
+        "@country": "usa"
+      }, {
+        "@street": "123 west st",
+        "@city": "seattle",
+        "@state": "wa",
+        "@country": "usa"
+      }, {
+        "@street": "321 south avenue",
+        "@city": "denver",
+        "@state": "co",
+        "@country": "usa"
+      }],
+      "@first-name": "jed",
+      "@last-name": "brown"
+    }]
+  }
 }
 ```
 

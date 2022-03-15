@@ -12,7 +12,7 @@ tags:
 ---
 {{GamesSidebar}}
 
-For rich gaming experiences on the web, the weapon of choice is WebGL, which is rendered on HTML {{htmlelement("canvas")}}. WebGL is basically an OpenGL ES 2.0 for the Web — it's a JavaScript API providing tools to build rich interactive animations and of course, also games. You can generate and render dynamic 3D graphics with JavaScript that is hardware accelerated.
+For rich gaming experiences on the web, the weapon of choice is WebGL, which is rendered on HTML {{htmlelement("canvas")}}. WebGL is basically an OpenGL ES 2.0 for the Web — it's a JavaScript API providing tools to build rich interactive animations and of course, also games. You can generate and render dynamic 3D graphics with JavaScript that is hardware accelerated.
 
 ## Documentation and browser support
 
@@ -26,7 +26,7 @@ The basics of 3D theory centers around shapes represented in a 3D space, with a 
 
 ## Advanced concepts
 
-You can do a lot more with WebGL. There are some advanced concepts which you should dive into and learn more about — like shaders, collision detection, or the latest hot topic: virtual reality on the web.
+You can do a lot more with WebGL. There are some advanced concepts which you should dive into and learn more about — like shaders, collision detection, or the latest hot topic: virtual reality on the web.
 
 ### Shaders
 
@@ -34,7 +34,7 @@ It's worth mentioning shaders, which are a separate story on their own. Shaders 
 
 ### Collision detection
 
-It's hard to imagine a game without collision detection — we always need to work out when something is hitting something else. We have information available for you to learn from:
+It's hard to imagine a game without collision detection — we always need to work out when something is hitting something else. We have information available for you to learn from:
 
 - [2D collision detection](/en-US/docs/Games/Techniques/2D_collision_detection)
 - [3D collision detection](/en-US/docs/Games/Techniques/3D_collision_detection)
@@ -49,15 +49,15 @@ There's also the [Building up a basic demo with A-Frame](/en-US/docs/Games/Techn
 
 Coding raw WebGL is fairly complex, but you'll want to get to grips with it in the long run, as your projects get more advanced (see our [WebGL documentation](/en-US/docs/Web/API/WebGL_API) to get started.) For real-world projects you'll probably also make use of a framework to speed up development and help you manage the project you're working on. Using a framework for 3D games also helps optimize the performance as a lot is taken care of by the tools you use, so you can focus on building the game itself.
 
-The most popular JavaScript 3D library is [Three.js](https://threejs.org/), a multi-purpose tool that makes common 3D techniques simpler to implement. There are other popular game development libraries and frameworks worth checking too; [A-Frame](https://aframe.io), [PlayCanvas](https://playcanvas.com/) and [Babylon.js](https://www.babylonjs.com/) are among the most recognizable ones with rich documentation, online editors and active communities.
+The most popular JavaScript 3D library is [Three.js](https://threejs.org/), a multi-purpose tool that makes common 3D techniques simpler to implement. There are other popular game development libraries and frameworks worth checking too; [A-Frame](https://aframe.io), [PlayCanvas](https://playcanvas.com/) and [Babylon.js](https://www.babylonjs.com/) are among the most recognizable ones with rich documentation, online editors and active communities.
 
 ### Building up a basic demo with A-Frame
 
-A-Frame is a web framework for building 3D and VR experiences. Under the hood, it is a Three.js framework with a declarative entity-component pattern, meaning we can build scenes with just HTML. See the [Building up a basic demo with A-Frame](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) subpage for the step-by-step process of creating the demo.
+A-Frame is a web framework for building 3D and VR experiences. Under the hood, it is a Three.js framework with a declarative entity-component pattern, meaning we can build scenes with just HTML. See the [Building up a basic demo with A-Frame](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) subpage for the step-by-step process of creating the demo.
 
 ### Building up a basic demo with Babylon.js
 
-Babylon.js is one of the most popular 3D game engines used by developers. As with any other 3D library, it provides built-in functions to help you implement common 3D functionality more quickly. See the [Building up a basic demo with Babylon.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js) subpage for the basics of using Babylon.js, including setting up a development environment, structuring the necessary HTML, and writing the JavaScript code.
+Babylon.js is one of the most popular 3D game engines used by developers. As with any other 3D library, it provides built-in functions to help you implement common 3D functionality more quickly. See the [Building up a basic demo with Babylon.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js) subpage for the basics of using Babylon.js, including setting up a development environment, structuring the necessary HTML, and writing the JavaScript code.
 
 ### Building up a basic demo with PlayCanvas
 

@@ -3,7 +3,6 @@ title: Gamepad.displayId
 slug: Web/API/Gamepad/displayId
 tags:
   - API
-  - Experimental
   - Gamepad
   - Property
   - Reference
@@ -24,13 +23,7 @@ A Gamepad is considered to be associated with a {{domxref("VRDisplay")}} if it r
 >
 > There is no direct replacement for this property. The {{domxref("Gamepad")}} object associated with an {{domxref("XRInputSource")}} can be obtained using the {{domxref("XRInputSource.gamepad")}} property.
 
-## Syntax
-
-```js
-const displayId = gamepadInstance.displayId;
-```
-
-### Value
+## Value
 
 A number representing the associated {{domxref("VRDisplay.displayId")}}. If the number is 0, then the gamepad is not associated with a VR display.
 

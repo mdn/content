@@ -31,7 +31,7 @@ Every `SpeechSynthesisVoice` has its own relative speech service including infor
 
 ## Examples
 
-The following snippet is excerpted from our [Speech synthesiser demo](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis).
+The following snippet is excerpted from our [Speech synthesizer demo](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis).
 
 ```js
 var synth = window.speechSynthesis;

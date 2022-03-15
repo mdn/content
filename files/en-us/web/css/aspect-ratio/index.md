@@ -12,7 +12,7 @@ browser-compat: css.properties.aspect-ratio
 ---
 {{CSSRef}}
 
-The **`aspect-ratio`**  [CSS](/en-US/docs/Web/CSS) property sets a **preferred aspect ratio** for the box, which will be used in the calculation of auto sizes and some other layout functions.
+The **`aspect-ratio`**  [CSS](/en-US/docs/Web/CSS) property sets a **preferred aspect ratio** for the box, which will be used in the calculation of auto sizes and some other layout functions.
 
 ```css
 aspect-ratio: 1 / 1;
@@ -30,7 +30,7 @@ aspect-ratio: unset;
 - `auto`
   - : [Replaced elements](/en-US/docs/Web/CSS/Replaced_element) with an intrinsic aspect ratio use _that_ aspect ratio, otherwise the box has no preferred aspect ratio. Size calculations involving intrinsic aspect ratio always work with the content box dimensions.
 - {{cssxref("&lt;ratio&gt;")}}
-  - : The box’s preferred aspect ratio is the specified ratio of `width` / `height`. If `height` and the preceding slash character are omitted, `height` defaults to `1`. Size calculations involving preferred aspect ratio work with the dimensions of the box specified by `box-sizing`.
+  - : The box's preferred aspect ratio is the specified ratio of `width` / `height`. If `height` and the preceding slash character are omitted, `height` defaults to `1`. Size calculations involving preferred aspect ratio work with the dimensions of the box specified by `box-sizing`.
 
 ## Formal definition
 
@@ -52,7 +52,7 @@ aspect-ratio: 0.5;
 
 ## Mapping width and height to aspect-ratio
 
-Browsers have added an internal `aspect-ratio` property that applies to [replaced elements](/en-US/docs/Web/CSS/Replaced_element) and other related elements that accept `width` and `height` attributes. This appears in the browser's internal UA stylesheet.
+Browsers have added an internal `aspect-ratio` property that applies to [replaced elements](/en-US/docs/Web/CSS/Replaced_element) and other related elements that accept `width` and `height` attributes. This appears in the browser's internal UA stylesheet.
 
 In Firefox, the internal stylesheet rule looks like this:
 

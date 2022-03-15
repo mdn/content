@@ -100,11 +100,11 @@ Try moving your mouse cursor into and out of the red and blue boxes.
 
 ```html
 <body id="body">
-  <div id="outer">
-    <div id="red"></div>
-    <div id="blue"></div>
-  </div>
-  <p id="log"></p>
+  <div id="outer">
+    <div id="red"></div>
+    <div id="blue"></div>
+  </div>
+  <p id="log"></p>
 </body>
 ```
 
@@ -154,7 +154,7 @@ function outListener(event) {
 function overListener(event) {
   let related = event.relatedTarget ? event.relatedTarget.id : "unknown";
 
-  log.innerText = `\ninto ${event.target.id} from ${related} ${mouseoutLog.innerText}`;
+  mouseoutLog.innerText = `\ninto ${event.target.id} from ${related} ${mouseoutLog.innerText}`;
 }
 ```
 

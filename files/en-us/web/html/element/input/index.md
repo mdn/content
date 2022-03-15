@@ -563,7 +563,7 @@ A few additional non-standard attributes are listed following the descriptions o
 - {{htmlattrdef("accept")}}
   - : Valid for the `file` input type only, the `accept` attribute defines which file types are selectable in a `file` upload control. See the {{HTMLElement("input/file", "file")}} input type.
 - {{htmlattrdef("alt")}}
-  - : Valid for the `image` button only, the `alt` attribute provides alternative text for the image, displaying the value of the attribute if the image {{htmlattrxref("scr", "input", "", 1)}} is missing or otherwise fails to load. See the {{HTMLElement("input/image", "image")}} input type.
+  - : Valid for the `image` button only, the `alt` attribute provides alternative text for the image, displaying the value of the attribute if the image {{htmlattrxref("src", "input", "", 1)}} is missing or otherwise fails to load. See the {{HTMLElement("input/image", "image")}} input type.
 - {{htmlattrdef("autocomplete")}}
 
   - : (**Not** a Boolean attribute!) The [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute takes as its value a space-separated string that describes what, if any, type of autocomplete functionality the input should provide. A typical implementation of autocomplete recalls previous values entered in the same input field, but more complex forms of autocomplete can exist. For instance, a browser could integrate with a device's contacts list to autocomplete `email` addresses in an email input field. See {{SectionOnPage("/en-US/docs/Web/HTML/Attributes/autocomplete", "Values")}} for permitted values.
@@ -590,7 +590,7 @@ A few additional non-standard attributes are listed following the descriptions o
   - : Introduced in the HTML Media Capture specification and valid for the `file` input type only, the `capture` attribute defines which media—microphone, video, or camera—should be used to capture a new file for upload with `file` upload control in supporting scenarios. See the {{HTMLElement("input/file", "file")}} input type.
 - {{htmlattrdef("checked")}}
 
-  - : Valid for both `radio` and `checkbox` types, `checked` is a Boolean attribute. If present on a `radio` type, it indicates that the radio button is the currently selected one in the group of same-named radio buttons. If present on a `checkbox` type, it indicates that the checkbox is checked by default (when the page loads). It does _not_ indicate whether this checkbox is currently checked: if the checkbox’s state is changed, this content attribute does not reflect the change. (Only the [`HTMLInputElement`’s `checked` IDL attribute](/en-US/docs/Web/API/HTMLInputElement) is updated.)
+  - : Valid for both `radio` and `checkbox` types, `checked` is a Boolean attribute. If present on a `radio` type, it indicates that the radio button is the currently selected one in the group of same-named radio buttons. If present on a `checkbox` type, it indicates that the checkbox is checked by default (when the page loads). It does _not_ indicate whether this checkbox is currently checked: if the checkbox's state is changed, this content attribute does not reflect the change. (Only the [`HTMLInputElement`'s `checked` IDL attribute](/en-US/docs/Web/API/HTMLInputElement) is updated.)
 
     > **Note:** Unlike other input controls, a checkboxes and radio buttons value are only included in the submitted data if they are currently `checked`. If they are, the name and the value(s) of the checked controls are submitted.
     >
@@ -664,13 +664,13 @@ A few additional non-standard attributes are listed following the descriptions o
 
   - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, it defines the maximum number of characters (as UTF-16 code units) the user can enter into the field. This must be an integer value `0` or higher. If no `maxlength` is specified, or an invalid value is specified, the field has no maximum length. This value must also be greater than or equal to the value of `minlength`.
 
-    The input will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) if the length of the text entered into the field is greater than `maxlength` UTF-16 code units long. By default, browsers prevent users from entering more characters than allowed by the `maxlength` attribute. See {{anch("Client-side validation")}} for more information.
+    The input will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) if the length of the text entered into the field is greater than `maxlength` UTF-16 code units long. By default, browsers prevent users from entering more characters than allowed by the `maxlength` attribute. See [Client-side validation](#client-side_validation) for more information.
 
 - {{htmlattrdef("min")}}
 
   - : Valid for `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`, it defines the most negative value in the range of permitted values. If the {{htmlattrxref("value", "input")}} entered into the element is less than this this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If the value of the `min` attribute isn't a number, then the element has no minimum value.
 
-    This value must be less than or equal to the value of the `max` attribute. If the `min` attribute is present but is not specified or is invalid, no `min` value is applied. If the `min` attribute is valid and a non-empty value is less than the minimum allowed by the `min` attribute, constraint validation will prevent form submission. See {{anch("Client-side validation")}} for more information.
+    This value must be less than or equal to the value of the `max` attribute. If the `min` attribute is present but is not specified or is invalid, no `min` value is applied. If the `min` attribute is valid and a non-empty value is less than the minimum allowed by the `min` attribute, constraint validation will prevent form submission. See [Client-side validation](#client-side_validation) for more information.
 
     There is a special case: if the data type is periodic (such as for dates or times), the value of `max` may be lower than the value of `min`, which indicates that the range may wrap around; for example, this allows you to specify a time range from 10 PM to 4 AM.
 
@@ -678,7 +678,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
   - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, it defines the minimum number of characters (as UTF-16 code units) the user can enter into the entry field. This must be an non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the input has no minimum length.
 
-    The input will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long, preventing form submission. See {{anch("Client-side validation")}} for more information.
+    The input will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long, preventing form submission. See [Client-side validation](#client-side_validation) for more information.
 
 - {{htmlattrdef("multiple")}}
   - : The Boolean `multiple` attribute, if set, means the user can enter comma separated email addresses in the email widget or can choose more than one file with the `file` input. See the {{HTMLElement("input/email", "email")}} and {{HTMLElement("input/file", "file")}} input type.
@@ -722,13 +722,13 @@ A few additional non-standard attributes are listed following the descriptions o
 
     > **Note:** If using the `pattern` attribute, inform the user about the expected format by including explanatory text nearby. You can also include a {{htmlattrxref("title", "input")}} attribute to explain what the requirements are to match the pattern; most browsers will display this title as a tooltip. The visible explanation is required for accessibility. The tooltip is an enhancement.
 
-    See {{anch("Client-side validation")}} for more information.
+    See [Client-side validation](#client-side_validation) for more information.
 
 - {{htmlattrdef("placeholder")}}
 
   - : The `placeholder` attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that provides a hint as to the expected type of data, rather than an explanation or prompt. The text _must not_ include carriage returns or line feeds. So for example if a field is expected to capture a user's first name, and its label is "First Name", a suitable placeholder might be "e.g. Mustafa".
 
-    > **Note:** The `placeholder` attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See {{anch("Labels")}} for more information.
+    > **Note:** The `placeholder` attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See [Labels](#labels) for more information.
 
 - {{htmlattrdef("readonly")}}
 
@@ -740,7 +740,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
   - : `required` is a Boolean attribute which, if present, indicates that the user must specify a value for the input before the owning form can be submitted. The `required` attribute is supported by `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `password`, `checkbox`, `radio`, and `file` inputs.
 
-    See {{anch("Client-side validation")}} and the [HTML attribute: `required`](/en-US/docs/Web/HTML/Attributes/required) for more information.
+    See [Client-side validation](#client-side_validation) and the [HTML attribute: `required`](/en-US/docs/Web/HTML/Attributes/required) for more information.
 
 - {{htmlattrdef("size")}}
   - : Valid for `email`, `password`, `tel`, `url` and `text` `input` types only. Specifies how much of the input is shown. Basically creates same result as setting CSS `width` property with a few specialities. The actual unit of the value depends on the input type. For `password` and `text`, it is a number of characters (or `em` units) with a default value of `20`, and for others, it is `pixel`s. CSS width takes precedence over size attribute.
@@ -755,20 +755,20 @@ A few additional non-standard attributes are listed following the descriptions o
     - `step` defaults to 1 for `number` and `range`.
     - For the date/time input types, `step` is expressed in seconds, with the **default step being 60 seconds**. The step scale factor is 1000 (which converts the seconds to milliseconds, as used in other algorithms).
 
-    The value must be a positive number—integer or float—or the special value `any`, which means no stepping is implied, and any value is allowed (barring other constraints, such as `{{anch("min")}}` and `{{anch("max")}}`).
+    The value must be a positive number—integer or float—or the special value `any`, which means no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
 
-    If `any` is not explicitly set, valid values for the `number`, date/time input types, and `range` input types are equal to the basis for stepping — the `{{anch("min")}}` value and increments of the step value, up to the `{{anch("max")}}` value, if specified.
+    If `any` is not explicitly set, valid values for the `number`, date/time input types, and `range` input types are equal to the basis for stepping — the [`min`](#min) value and increments of the step value, up to the [`max`](#max) value, if specified.
 
     For example, if you have `<input type="number" min="10" step="2">`, then any even integer, `10` or greater, is valid. If omitted, `<input type="number">`, any integer is valid, but floats (like `4.2`) are not valid, because `step` defaults to `1`. For `4.2` to be valid, `step` would have had to be set to `any`, 0.1, 0.2, or any the `min` value would have had to be a number ending in `.2`, such as `<input type="number" min="-5.2">`
 
     > **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the value is considered invalid in constraint validation and will match the `:invalid` pseudoclass.
 
-    See {{anch("Client-side validation")}} for more information.
+    See [Client-side validation](#client-side_validation) for more information.
 
 - {{htmlattrdef("tabindex")}}
   - : Global attribute valid for all elements, including all the input types, an integer attribute indicating if the element can take input focus (is focusable), if it should participate to sequential keyboard navigation. As all input types except for input of type hidden are focusable, this attribute should not be used on form controls, because doing so would require the management of the focus order for all elements within the document with the risk of harming usability and accessibility if done incorrectly.
 - {{htmlattrdef('title')}}
-  - : Global attribute valid for all elements, including all input types, containing a text representing advisory information related to the element it belongs to. Such information can typically, but not necessarily, be presented to the user as a tooltip. The title should NOT be used as the primary explanation of the purpose of the form control. Instead, use the {{htmlelement('label')}} element with a `for` attribute set to the form control's {{htmlattrdef('id')}} attribute. See {{anch("Labels")}} below.
+  - : Global attribute valid for all elements, including all input types, containing a text representing advisory information related to the element it belongs to. Such information can typically, but not necessarily, be presented to the user as a tooltip. The title should NOT be used as the primary explanation of the purpose of the form control. Instead, use the {{htmlelement('label')}} element with a `for` attribute set to the form control's {{htmlattrdef('id')}} attribute. See [Labels](#labels) below.
 - {{htmlattrdef("type")}}
 
   - : A string specifying the type of control to render. For example, to create a checkbox, a value of `checkbox` is used. If omitted (or an unknown value is specified), the input type `text` is used, creating a plaintext input field.
@@ -856,9 +856,9 @@ The following non-standard attributes are also available on some browsers. As a 
 
 - {{htmlattrdef("incremental")}} {{non-standard_inline}}
 
-  - : The Boolean attribute `incremental` is a WebKit and Blink extension (so supported by Safari, Opera, Chrome, etc.) which, if present, tells the {{Glossary("user agent")}} to process the input as a live search. As the user edits the value of the field, the user agent sends {{event("search")}} events to the {{domxref("HTMLInputElement")}} object representing the search box. This allows your code to update the search results in real time as the user edits the search.
+  - : The Boolean attribute `incremental` is a WebKit and Blink extension (so supported by Safari, Opera, Chrome, etc.) which, if present, tells the {{Glossary("user agent")}} to process the input as a live search. As the user edits the value of the field, the user agent sends {{domxref("HTMLInputElement/search_event", "search")}} events to the {{domxref("HTMLInputElement")}} object representing the search box. This allows your code to update the search results in real time as the user edits the search.
 
-    If `incremental` is not specified, the {{event("search")}} event is only sent when the user explicitly initiates a search (such as by pressing the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field).
+    If `incremental` is not specified, the {{domxref("HTMLInputElement/search_event", "search")}} event is only sent when the user explicitly initiates a search (such as by pressing the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field).
 
     The `search` event is rate-limited so that it is not sent more frequently than an implementation-defined interval.
 
@@ -890,7 +890,7 @@ The following methods are provided by the {{domxref("HTMLInputElement")}} interf
 
 - {{domxref("HTMLInputElement.checkValidity", "checkValidity()")}}
   - : Returns `true` if the element's value passes validity checks; otherwise, returns `false` and fires an {{domxref("HTMLInputElement.invalid_event", "invalid")}} event at the element.
-- {{domxref("HTMLFormElement.reportValidity", "reportValidity()")}}
+- {{domxref("HTMLInputElement.reportValidity", "reportValidity()")}}
   - : Returns `true` if the element's value passes validity checks; otherwise, returns `false`, fires an {{domxref("HTMLInputElement.invalid_event", "invalid")}} event at the element, and (if the event isn't canceled) reports the problem to the user.
 - {{domxref("HTMLInputElement.select", "select()")}}
   - : Selects the entire content of the `<input>` element, if the element's content is selectable. For elements with no selectable text content (such as a visual color picker or calendar date input), this method does nothing.
@@ -907,7 +907,7 @@ The following methods are provided by the {{domxref("HTMLInputElement")}} interf
 
 ## CSS
 
-Inputs, being replaced elements, have a few features not applicable to non form elements. There are CSS selectors that can specification target form controls based on their UI features, also known as UI pseudo-classes. The input element can also be targeted by type with attribute selectors. There are some properties that are especially useful as well.
+Inputs, being replaced elements, have a few features not applicable to non form elements. There are CSS selectors that can specifically target form controls based on their UI features, also known as UI pseudo-classes. The input element can also be targeted by type with attribute selectors. There are some properties that are especially useful as well.
 
 ### UI pseudo-classes
 
@@ -1348,7 +1348,6 @@ If you wanted to instead display custom error messages, you could use JavaScript
 
 ```js
 const nameInput = document.querySelector('input');
-const form = document.querySelector('form');
 
 nameInput.addEventListener('input', () => {
   nameInput.setCustomValidity('');
@@ -1625,7 +1624,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
 
 ### Labels
 
-When including inputs, it is an accessibility requirement to add labels along side. This is needed so those who use assistive technologies can tell what the input is for. Also, clicking or touching a label gives focus to the label's associated form control. This improves the accessibility and usability for sighted users, increases the area a user can click or touch to activate the form control. This is especially useful (and even needed) for radio buttons and checkboxes, which are tiny. For more information about labels in general see {{anch("Labels")}} .
+When including inputs, it is an accessibility requirement to add labels along side. This is needed so those who use assistive technologies can tell what the input is for. Also, clicking or touching a label gives focus to the label's associated form control. This improves the accessibility and usability for sighted users, increases the area a user can click or touch to activate the form control. This is especially useful (and even needed) for radio buttons and checkboxes, which are tiny. For more information about labels in general see [Labels](#labels) .
 
 The following is an example of how to associate the `<label>` with an `<input>` element in the above style. You need to give the `<input>` an `id` attribute. The `<label>` then needs a `for` attribute whose value is the same as the input's `id`.
 

@@ -3,7 +3,7 @@ title: VRDisplay.displayName
 slug: Web/API/VRDisplay/displayName
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -21,13 +21,7 @@ The **`displayName`** read-only property of the {{domxref("VRDisplay")}} interfa
 
 This will generally be something like "Oculus VR HMD (HMD)" or "Oculus VR HMD (Sensor)".
 
-## Syntax
-
-```js
-var myDisplayName = vrDisplayInstance.displayName;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} containing the human-readable name of the specific VR display.
 

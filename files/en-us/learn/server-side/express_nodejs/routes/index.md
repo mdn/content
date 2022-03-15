@@ -171,7 +171,7 @@ app.get('/users/:userId/books/:bookId', function (req, res) {
 })
 ```
 
-The names of route parameters must be made up of “word characters” (A-Z, a-z, 0-9, and \_).
+The names of route parameters must be made up of "word characters" (A-Z, a-z, 0-9, and \_).
 
 > **Note:** The URL _/book/create_ will be matched by a route like `/book/:bookId` (which will extract a "bookId" value of '`create`'). The first route that matches an incoming URL will be used, so if you want to process `/book/create` URLs separately, their route handler must be defined before your `/book/:bookId` route.
 

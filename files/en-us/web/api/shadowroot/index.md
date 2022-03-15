@@ -20,14 +20,14 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
 
 ## Properties
 
-- {{domxref("ShadowRoot.activeElement")}} {{readonlyInline}}
+- {{domxref("ShadowRoot.activeElement")}} {{readonlyInline}}
   - : Returns the {{domxref('Element')}} within the shadow tree that has focus.
 - {{domxref("ShadowRoot.delegatesFocus")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}
   - : Returns a boolean that indicates whether `delegatesFocus` was set when the shadow was attached (see {{domxref("Element.attachShadow()")}}).
 - {{DOMxRef("ShadowRoot.fullscreenElement")}} {{ReadOnlyInline}}
   - : The element that's currently in full screen mode for this shadow tree.
 - {{domxref("ShadowRoot.host")}} {{readonlyinline}}
-  - : Returns a reference to the DOM element the `ShadowRoot` is attached to.
+  - : Returns a reference to the DOM element the `ShadowRoot` is attached to.
 - {{domxref("ShadowRoot.innerHTML")}} {{non-standard_inline}}
   - : Sets or returns a reference to the DOM tree inside the `ShadowRoot`.
 - {{domxref("ShadowRoot.mode")}} {{readonlyinline}}
@@ -35,10 +35,10 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
     This defines whether or not the shadow root's internal features are accessible from JavaScript.
 - {{DOMxRef("ShadowRoot.pictureInPictureElement")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef('Element')}} within the shadow tree that is currently being presented in picture-in-picture mode.
-- {{DOMxRef("ShadowRoot.pointerLockElement")}} {{ReadOnlyInline}}
+- {{DOMxRef("ShadowRoot.pointerLockElement")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef('Element')}} set as the target for mouse events while the pointer is locked.
     `null` if lock is pending, pointer is unlocked, or if the target is in another tree.
-- {{domxref("ShadowRoot.styleSheets")}} {{readonlyInline}}
+- {{domxref("ShadowRoot.styleSheets")}} {{readonlyInline}}
   - : Returns a {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects for stylesheets explicitly linked into, or embedded in a shadow tree.
 
 ### Event handlers

@@ -37,7 +37,7 @@ createEquirectLayer(video, options)
       The default value is `mono`.
     - `lowerVerticalAngle`: Optional. A number indicating the lower vertical angle in radians for the sphere. Default value: `-1.570795` (-π/2).
     - `radius`: Optional. A number indicating the radius of the sphere. Default value `0.0`.
-    - `space`: **Required**. An {{domxref("XRSpace")}} object defining the layer's spatial relationship with the user’s physical environment.
+    - `space`: **Required**. An {{domxref("XRSpace")}} object defining the layer's spatial relationship with the user's physical environment.
     - `transform`: Optional. An {{domxref("XRRigidTransform")}} object defining the offset and orientation relative to `space`.
     - `upperVerticalAngle`: Optional. A number indicating the upper vertical angle in radians for the sphere. Default value: `1.570795` (π/2).
 

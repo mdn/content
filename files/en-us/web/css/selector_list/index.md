@@ -66,7 +66,7 @@ h1, h2:maybe-unsupported, h3 { font-family: sans-serif }
 
 This is because a single unsupported selector in a selector list invalidates the whole rule.
 
-A way to remedy this us to use the {{CSSxRef(":is", ":is()")}} or {{CSSxRef(":where", ":where()")}} selectors, which accept a forgiving selector list. This will ignore invalid selectors in the list but accept those which are valid.
+A way to remedy this us to use the {{CSSxRef(":is", ":is()")}} or {{CSSxRef(":where", ":where()")}} selectors, which accept a forgiving selector list. This will ignore invalid selectors in the list but accept those which are valid.
 
 ```css
 h1 { font-family: sans-serif }
@@ -88,4 +88,4 @@ h3 { font-family: sans-serif }
 
 ## See also
 
-- The {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} and {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} pseudo-classes, which accept a forgiving selector list.
+- The {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} and {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} pseudo-classes, which accept a forgiving selector list.

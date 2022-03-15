@@ -14,7 +14,7 @@ browser-compat: css.selectors.is
 ---
 {{CSSRef}}
 
-> **Note:** `:matches()` was renamed to `:is()` in [CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258).
+> **Note:** `:matches()` was renamed to `:is()` in [CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258).
 
 The **`:is()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) function takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list. This is useful for writing large selectors in a more compact form.
 
@@ -22,8 +22,8 @@ The **`:is()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Ps
 /* Selects any paragraph inside a header, main
    or footer element that is being hovered */
 :is(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
+  color: red;
+  cursor: pointer;
 }
 
 /* The above is equivalent to the following */
@@ -31,7 +31,7 @@ header p:hover,
 main p:hover,
 footer p:hover {
   color: red;
-  cursor: pointer;
+  cursor: pointer;
 }
 ```
 
@@ -118,13 +118,13 @@ Will be ignored in browsers which don't support `:unsupported` even if they supp
 }
 
 :matches(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
+  color: red;
+  cursor: pointer;
 }
 
 :is(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
+  color: red;
+  cursor: pointer;
 }
 ```
 
@@ -132,21 +132,21 @@ Will be ignored in browsers which don't support `:unsupported` even if they supp
 let matchedItems;
 
 try {
-  matchedItems = document.querySelectorAll(':is(header, main, footer) p');
+  matchedItems = document.querySelectorAll(':is(header, main, footer) p');
 } catch(e) {
-  try {
-    matchedItems = document.querySelectorAll(':matches(header, main, footer) p');
-  } catch(e) {
-    try {
-      matchedItems = document.querySelectorAll(':-webkit-any(header, main, footer) p');
-    } catch(e) {
-      try {
-        matchedItems = document.querySelectorAll(':-moz-any(header, main, footer) p');
-      } catch(e) {
-        console.log('Your browser doesn\'t support :is(), :matches(), or :any()');
-      }
-    }
-  }
+  try {
+    matchedItems = document.querySelectorAll(':matches(header, main, footer) p');
+  } catch(e) {
+    try {
+      matchedItems = document.querySelectorAll(':-webkit-any(header, main, footer) p');
+    } catch(e) {
+      try {
+        matchedItems = document.querySelectorAll(':-moz-any(header, main, footer) p');
+      } catch(e) {
+        console.log('Your browser doesn\'t support :is(), :matches(), or :any()');
+      }
+    }
+  }
 }
 
 matchedItems.forEach(applyHandler);
@@ -193,7 +193,7 @@ dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
 
 ### Simplifying section selectors
 
-The `:is()` pseudo-class is particularly useful when dealing with HTML5 [sections and headings](/en-US/docs/Web/HTML/Element/Heading_Elements). Since {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, and {{HTMLElement("nav")}} are commonly nested together, without `:is()`, styling them to match one another can be tricky.
+The `:is()` pseudo-class is particularly useful when dealing with HTML5 [sections and headings](/en-US/docs/Web/HTML/Element/Heading_Elements). Since {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, and {{HTMLElement("nav")}} are commonly nested together, without `:is()`, styling them to match one another can be tricky.
 
 For example, without `:is()`, styling all the {{HTMLElement("h1")}} elements at different depths could be very complicated:
 
@@ -274,6 +274,6 @@ some-element::after {
 
 ## See also
 
-- {{CSSxRef(":where", ":where()")}} - Like `:is()`, but with 0 [specificity](/en-US/docs/Web/CSS/Specificity).
+- {{CSSxRef(":where", ":where()")}} - Like `:is()`, but with 0 [specificity](/en-US/docs/Web/CSS/Specificity).
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
 - [Web components](/en-US/docs/Web/Web_Components)

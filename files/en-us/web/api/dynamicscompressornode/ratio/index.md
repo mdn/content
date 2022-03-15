@@ -12,7 +12,7 @@ browser-compat: api.DynamicsCompressorNode.ratio
 ---
 {{ APIRef("Web Audio API") }}
 
-The `ratio` property of the {{ domxref("DynamicsCompressorNode") }} interface Is a [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} representing the amount of change, in dB, needed in the input for a 1 dB change in the output.
+The `ratio` property of the {{ domxref("DynamicsCompressorNode") }} interface Is a [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} representing the amount of change, in dB, needed in the input for a 1 dB change in the output.
 
 The `ratio` property's default value is `12` and it can be set between `1` and `20`.
 

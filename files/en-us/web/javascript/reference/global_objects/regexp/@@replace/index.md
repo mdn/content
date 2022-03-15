@@ -48,7 +48,7 @@ A new string with some or all matches of a pattern replaced by a replacement.
 ## Description
 
 This method is called internally in {{jsxref("String.prototype.replace()")}} if the
-`pattern` argument is a {{jsxref("RegExp")}} object.  For example, following
+`pattern` argument is a {{jsxref("RegExp")}} object.  For example, following
 two examples return same result.
 
 ```js

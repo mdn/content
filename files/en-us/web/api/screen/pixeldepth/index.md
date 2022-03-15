@@ -12,8 +12,7 @@ browser-compat: api.Screen.pixelDepth
 {{APIRef("CSSOM")}}
 
 Returns the bit depth of the screen. Per the CSSOM, some implementations
-return `24` for compatibility reasons. See the {{anch("Browser
-  compatibility", "browser compatibility")}} section for those that don't.
+return `24` for compatibility reasons. See the [browser compatibility](#browser_compatibility) section for those that don't.
 
 ## Syntax
 

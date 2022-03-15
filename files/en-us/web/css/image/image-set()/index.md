@@ -14,7 +14,7 @@ browser-compat: css.types.image.image-set
 
 The **`image-set()`** [CSS](/en-US/docs/Web/CSS) [functional](/en-US/docs/Web/CSS/CSS_Functions) notation is a method of letting the browser pick the most appropriate CSS image from a given set, primarily for high pixel density screens.
 
-Resolution and bandwidth differ by device and network access. The `image-set()` function delivers the most appropriate image resolution for a user’s device, providing a set of image options — each with an associated resolution declaration — from which the browser picks the most appropriate for the device and settings. Resolution can be used as a proxy for filesize — a user agent on a slow mobile connection with a high-resolution screen may prefer to receive lower-resolution images rather than waiting for a higher resolution image to load.
+Resolution and bandwidth differ by device and network access. The `image-set()` function delivers the most appropriate image resolution for a user's device, providing a set of image options — each with an associated resolution declaration — from which the browser picks the most appropriate for the device and settings. Resolution can be used as a proxy for filesize — a user agent on a slow mobile connection with a high-resolution screen may prefer to receive lower-resolution images rather than waiting for a higher resolution image to load.
 
 `image-set()` allows the author to provide options rather than determining what each individual user needs.
 
@@ -31,7 +31,7 @@ where <image-set-option> = [ <image> | <string> ] <resolution> and
 - `<image>`
   - : The [`<image>`](/en-US/docs/Web/CSS/image) can be any image type except for an image set. The `image-set()` function may not be nested inside another `image-set()` function.
 - `<string>`
-  - : A `url()` to an image.
+  - : An url to an image.
 - `<resolution>`{{optional_inline}}
   - : [`<resolution>`](/en-US/docs/Web/CSS/resolution) units include `x` or `dppx`, for dots per pixel unit, `dpi`, for dots per inch, and `dpcm` for dots per centimeter. Every image within an `image-set()` must have a unique resolution.
 - `type(<string>)`{{optional_inline}}
@@ -61,8 +61,8 @@ There is no inbuilt fallback for `image-set()`; therefore to include a {{cssxref
 .box {
   background-image: url("large-balloons.jpg");
   background-image: image-set(
-    url("large-balloons.avif") type("image/avif"),
-    url("large-balloons.jpg") type("image/jpeg"));
+    "large-balloons.avif" type("image/avif"),
+    "large-balloons.jpg" type("image/jpeg"));
 }
 ```
 

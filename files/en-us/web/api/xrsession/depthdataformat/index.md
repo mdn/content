@@ -16,7 +16,7 @@ browser-compat: api.XRSession.depthDataFormat
 ---
 {{APIRef("WebXR Device API")}}
 
-The *read-only* **`depthDataFormat`** property of an `immersive-ar`
+The *read-only* **`depthDataFormat`** property of an `immersive-ar`
 {{DOMxRef("XRSession")}} describes which depth sensing data format is used.
 
 ## Value

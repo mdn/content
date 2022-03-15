@@ -40,7 +40,7 @@ Indicates whether the event can bubble. When true the event should propagate upw
 
 Type: _boolean_
 
-Indicates whether the event’s default action can be prevented. When true, the default action can be canceled. When false, the default action cannot be canceled.
+Indicates whether the event's default action can be prevented. When true, the default action can be canceled. When false, the default action cannot be canceled.
 
 **viewArg** \[in]
 

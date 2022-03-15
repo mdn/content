@@ -93,7 +93,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     This is a boolean attribute: the presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value.
 
-    See {{anch("Browser compatibility")}} for notes on browser support. See also [Async scripts for asm.js](/en-US/docs/Games/Techniques/Async_scripts).
+    See [Browser compatibility](#browser_compatibility) for notes on browser support. See also [Async scripts for asm.js](/en-US/docs/Games/Techniques/Async_scripts).
 
 - {{htmlattrdef("crossorigin")}}
   - : Normal `script` elements pass minimal information to the {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} for scripts which do not pass the standard {{Glossary("CORS")}} checks. To allow error logging for sites which use a separate domain for static media, use this attribute. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for a more descriptive explanation of its valid arguments.
@@ -147,9 +147,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ### Deprecated attributes
 
 - {{htmlattrdef("charset")}} {{Deprecated_inline}}
-  - : If present, its value must be an ASCII case-insensitive match for "`utf-8`". It’s unnecessary to specify the `charset` attribute, because documents must use UTF-8, and the `script` element inherits its character encoding from the document.
+  - : If present, its value must be an ASCII case-insensitive match for "`utf-8`". It's unnecessary to specify the `charset` attribute, because documents must use UTF-8, and the `script` element inherits its character encoding from the document.
 - {{htmlattrdef("language")}} {{Deprecated_inline}}
-  - : Like the `type` attribute, this attribute identifies the scripting language in use. Unlike the `type` attribute, however, this attribute’s possible values were never standardized. The `type` attribute should be used instead.
+  - : Like the `type` attribute, this attribute identifies the scripting language in use. Unlike the `type` attribute, however, this attribute's possible values were never standardized. The `type` attribute should be used instead.
 
 ## Notes
 

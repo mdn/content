@@ -40,7 +40,7 @@ Images—whether embedded using {{HTMLElement("img")}} or {{HTMLElement("picture
 Once your image has been converted to progressive form, you can use it as usual.
 
 ```html
-<img src="/images/stafff-photo-huge-progressive.jpg"
+<img src="/images/staff-photo-huge-progressive.jpg"
      alt="Staff Photo, taken in January of 1972">
 ```
 
