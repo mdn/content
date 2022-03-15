@@ -1943,7 +1943,6 @@
         "RTCRTPStreamStats"
       ],
       "types": [
-        "RTCIceCredentialType",
         "RTCIceTransportPolicy",
         "RTCBundlePolicy",
         "RTCRtcpMuxPolicy",

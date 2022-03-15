@@ -132,7 +132,7 @@ _No changes._
 
 - Removed the non-standard {{DOMxRef("XMLDocument.load()")}} method ({{bug(332175)}}).
 - Removed the non-standard {{DOMxRef("XMLDocument.async")}} property ({{bug(1328138)}}).
-- The {{domxref("RTCIceCredentialType")}} `token` value has been removed ({{bug(1529595)}}).
+- The {{domxref("RTCIceServer.credentialType")}} `token` value has been removed ({{bug(1529595)}}).
 
 ### HTTP
 
