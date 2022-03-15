@@ -63,7 +63,7 @@ pc.addEventListener("datachannel", ev => {
 
 `receiveChannel` is set to the value of the event's {{domxref("RTCDataChannelEvent.channel", "channel")}} property, which specifies the `RTCDataChannel` object representing the data channel linking the remote peer to the local one.
 
-This same code can also instead use the {{domxref("RTCPeerConnection")}} interface's {{domxref("RTCPeerConnection.ondatachannel", "ondatachannel")}} event handler property, like this:
+This same code can also instead use the {{domxref("RTCPeerConnection")}} interface's `ondatachannel` event handler property, like this:
 
 ```js
 pc.ondatachannel = ev => {
@@ -88,5 +88,4 @@ pc.ondatachannel = ev => {
 - [Using WebRTC data channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels)
 - [A simple RTCDataChannel sample](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
 - {{domxref("RTCDataChannelEvent")}}
-- {{domxref("RTCPeerConnection.ondatachannel")}}
 - {{domxref("RTCPeerConnection.createDataChannel()")}}

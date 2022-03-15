@@ -58,7 +58,7 @@ pc.addEventListener("negotiationneeded", ev => {
 
 After creating the offer, the local end is configured by calling {{domxref("RTCPeerConnection.setLocalDescription()")}}; then a signaling message is created and sent to the remote peer through the signaling server, to share that offer with the other peer. The other peer should recognize this message and follow up by creating its own {{domxref("RTCPeerConnection")}}, setting the remote description with {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}, and then creating an answer to send back to the offering peer.
 
-You can also set an event handler for the `negotiationneeded` event by assigning the event handler function to the {{domxref("RTCPeerConnection.onnegotiationneeded")}} property:
+You can also set an event handler for the `negotiationneeded` event by assigning the event handler function to the `onnegotiationneeded` property:
 
 ```js
 pc.onnegotiationneeded = ev => {

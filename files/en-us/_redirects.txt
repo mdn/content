@@ -8934,6 +8934,7 @@
 /en-US/docs/Web/API/RTCPeerConnection/onremovestream	/en-US/docs/Web/API/RTCPeerConnection/removestream_event
 /en-US/docs/Web/API/RTCPeerConnection/onsignalingstatechange	/en-US/docs/Web/API/RTCPeerConnection/signalingstatechange_event
 /en-US/docs/Web/API/RTCPeerConnection/ontrack	/en-US/docs/Web/API/RTCPeerConnection/track_event
+/en-US/docs/Web/API/RTCPeerConnection/signalingstatechange_event/onsignalingstatechange	/en-US/docs/Web/API/RTCPeerConnection/signalingstatechange_event
 /en-US/docs/Web/API/RTCPeerConnection/tonechange_event	/en-US/docs/Web/API/RTCDTMFSender/tonechange_event
 /en-US/docs/Web/API/RTCPeerConnectionEvent.RTCPeerConnectionIceEvent	/en-US/docs/Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent
 /en-US/docs/Web/API/RTCPeerConnectionIceEvent.RTCPeerConnectionIceEven	/en-US/docs/Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent

@@ -19,7 +19,7 @@ browser-compat: api.RTCPeerConnection.icegatheringstatechange_event
 ---
 {{APIRef("WebRTC")}}
 
-The **`icegatheringstatechange`** event is sent to the {{domxref("RTCPeerConnection.onicegatheringstatechange", "onicegatheringstatechange")}} event handler on an {{domxref("RTCPeerConnection")}} when the state of the {{Glossary("ICE")}} candidate gathering process changes.
+The **`icegatheringstatechange`** event is sent to the `onicegatheringstatechange` event handler on an {{domxref("RTCPeerConnection")}} when the state of the {{Glossary("ICE")}} candidate gathering process changes.
 This signifies that the value of the connection's {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} property has changed.
 
 When ICE first starts to gather connection candidates, the value changes from `new` to `gathering` to indicate that the process of collecting candidate configurations for the connection has begun. When the value changes to `complete`, all of the transports that make up the `RTCPeerConnection` have finished gathering ICE candidates.

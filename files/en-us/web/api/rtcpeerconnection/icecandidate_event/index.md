@@ -117,7 +117,7 @@ pc.addEventListener("icecandidate", ev => {
 }, false);
 ```
 
-You can also set the {{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}} event handler property directly:
+You can also set the `onicecandidate` event handler property directly:
 
 ```js
 pc.onicecandidate = ev => {

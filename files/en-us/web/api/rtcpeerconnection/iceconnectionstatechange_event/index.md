@@ -55,7 +55,7 @@ When the negotiation process runs out of candidates to check, the ICE connection
 
 ## Examples
 
-An event handler for this event can be added using the {{domxref("RTCPeerConnection.oniceconnectionstatechange")}} property or by using {{domxref("EventTarget.addEventListener", "addEventListener()")}} on the `RTCPeerConnection`.
+An event handler for this event can be added using the {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "oniceconnectionstatechange")}} property or by using {{domxref("EventTarget.addEventListener", "addEventListener()")}} on the `RTCPeerConnection`.
 
 In this example, a handler for `iceconnectionstatechange` is set up to update a call state indicator by using the value of {{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} to create a string which corresponds to the name of a CSS class that we can assign to the status indicator to cause it to reflect the current state of the connection.
 
@@ -87,5 +87,5 @@ pc.oniceconnectionstatechange = ev => {
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("RTCPeerConnection")}}
-- {{domxref("RTCPeerConnection.onIceConnectionStateChange")}}
+- {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "oniceconnectionstatechange")}}
 - {{domxref("RTCPeerConnection.iceConnectionState")}}

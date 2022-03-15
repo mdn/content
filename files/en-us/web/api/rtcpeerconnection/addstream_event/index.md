@@ -79,6 +79,5 @@ pc.addEventListener("addstream", ev => doAddStream(ev.stream), false);
 ## See also
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- {{domxref("RTCPeerConnection.onaddstream")}}
 - {{domxref("RTCPeerConnection.addStream()")}}
 - {{domxref("MediaStreamEvent")}}

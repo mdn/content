@@ -48,7 +48,7 @@ pc.addEventListener("signalingstatechange", ev => {
 }, false);
 ```
 
-Using {{domxref("RTCPeerConnection.onsignalingstatechange", "onsignalingstatechange")}}, it looks like this:
+Using `onsignalingstatechange`, it looks like this:
 
 ```js
 pc.onsignalingstatechange = ev => {
