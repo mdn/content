@@ -23,28 +23,32 @@ browser-compat: api.RTCDataChannel.error_event
 
 A WebRTC {{domxref("RTCDataChannel.error_event", "error")}} event is sent to an {{domxref("RTCDataChannel")}} object's {{domxref("RTCDataChannel.onerror", "onerror")}} error handler when an error occurs on the data channel.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("RTCErrorEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{DOMxRef("RTCDataChannel.onerror", "onerror")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 The {{domxref("RTCErrorEvent")}} object provides details about the error that occurred; see that article for details.
+
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('error', event => { });
+
+onerror = event => { };
+```
+
+## Event type
+
+An {{domxref("RTCErrorEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("RTCErrorEvent")}}
+
+## Event properties
+
+_In addition to the standard properties available on the {{domxref("Event")}} interface, `RTCErrorEvent` also includes the following:_
+
+- {{domxref("RTCErrorEvent.error", "error")}} {{ReadOnlyInline}}
+  - : An {{domxref("RTCError")}} object specifying the error which occurred; this object includes the type of error that occurred, information about where the error occurred (such as which line number in the {{Glossary("SDP")}} or what {{Glossary("SCTP")}} cause code was at issue).
 
 ## Examples
 
