@@ -68782,12 +68782,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/RTCIceCredentialType": {
-    "modified": "2020-10-15T22:20:11.863Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/RTCIceParameters": {
     "modified": "2020-10-15T22:06:42.205Z",
     "contributors": [
