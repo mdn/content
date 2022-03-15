@@ -93,7 +93,7 @@ These properties are available only on an instance of the `Notification` object 
 ## Events
 
 - {{domxref("Notification.click_event", "click")}}
-  - : Fires when the user clicks on the notification.
+  - : Fires when the user clicks the notification.
 - {{domxref("Notification.close_event", "close")}}
   - : Fires when the user closes the notification.
 - {{domxref("Notification.error_event", "error")}}
