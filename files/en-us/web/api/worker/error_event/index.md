@@ -5,7 +5,7 @@ tags:
   - API
   - Worker
   - EventHandler
-  - Property
+  - Event
   - Reference
   - Web Workers
   - Workers
