@@ -9,13 +9,15 @@ tags:
   - Service Workers
 browser-compat: api.NavigationPreloadManager.setHeaderValue
 ---
-{{ServiceWorkerSidebar}}{{SeeCompatTable}}
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 The **`setHeaderValue()`** method of the {{domxref("NavigationPreloadManager")}} interface sets the value of the {{HTTPHeader("Service-Worker-Navigation-Preload")}} header that will be sent with requests resulting from a {{domxref("fetch()")}} operation made during service worker navigation preloading.
 It returns an empty {{jsxref("Promise")}} that resolves with `undefined`.
 
 The presence of the {{HTTPHeader("Service-Worker-Navigation-Preload")}} header in preloading requests allows servers to configure the returned resource differently for preloading fetch requests than from normal fetch requests.
 The default directive is set to `true`: this method allows the possibility of configuring multiple different responses to preload requests.
+
+> **Note:** If a different response is sent during preload than normal fetch, then you must set `Vary: Service-Worker-Navigation-Preload` to ensure that caches know to store the different responses.
 
 ## Syntax
 

@@ -11,11 +11,12 @@ tags:
   - Service Workers
 browser-compat: api.NavigationPreloadManager
 ---
-{{ServiceWorkerSidebar}}{{SeeCompatTable}}
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-The **`NavigationPreloadManager`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) provides methods for managing the preloading of resources with a service worker.
+The **`NavigationPreloadManager`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) provides methods for managing the preloading of resources in parallel with service worker bootup.
 
 If supported, an object of this type is returned by {{domxref("ServiceWorkerRegistration.navigationPreload")}}.
+The result of a preload fetch request is waited on using the promise returned by {{domxref("FetchEvent.preloadResponse")}}.
 
 ## Methods
 
@@ -24,9 +25,9 @@ If supported, an object of this type is returned by {{domxref("ServiceWorkerRegi
 - {{domxref("NavigationPreloadManager.disable()")}}
   - : Disables navigation preloading, returning a {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}.
 - {{domxref("NavigationPreloadManager.setHeaderValue()")}}
-  - : Sets the value of the `Service-Worker-Navigation-Preload` header and returns an empty {{jsxref("Promise")}}.
+  - : Sets the value of the {{HTTPHeader("Service-Worker-Navigation-Preload")}} HTTP header sent in preloading requests and returns an empty {{jsxref("Promise")}}.
 - {{domxref("NavigationPreloadManager.getState()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves to an object with properties that indicate whether preloading is enabled, and the value sent with the {{HTTPHeader("Service-Worker-Navigation-Preload")}} HTTP header in requests triggered by a preloading {{domxref("fetch()")}}.
+  - : Returns a {{jsxref("Promise")}} that resolves to an object with properties that indicate whether preloading is enabled, and the value sent with the {{HTTPHeader("Service-Worker-Navigation-Preload")}} HTTP header in preloading requests.
 
 
 ## Description
@@ -36,64 +37,111 @@ When a user navigates to a page that uses a service worker, the browser boots up
 On receiving an event, the worker returns the resource from a cache if it is present, or otherwise fetches the resource from the remote server (storing a copy for returning in future requests).
 
 A service worker cannot process events from the browser until it has booted.
-This is unavoidable, but it isn't usually a problem because much of the time service workers are already started (they remain active for some time after processing other requests).
+This is unavoidable, but usually doesn't have much impact.
+Service workers are often already started (they remain active for some time after processing other requests).
 Even if a service worker does have to boot, much of the time it may be returning values from a cache, which is very fast.
-However if a worker has to boot before it can start fetching a remote resource then the delay can be significant.
+However in those cases where a worker has to boot before it can start fetching a remote resource then the delay can be significant.
 
-The {{domxref("NavigationPreloadManager")}} provides a mechanism to allow fetching of the resources to run in parallel with service worker boot, so that by the time the worker is able to handle the fetch request from the browser, the resource may either have fully or partially downloaded.
+The {{domxref("NavigationPreloadManager")}} provides a mechanism to allow fetching of the resources to run in parallel with service worker boot, so that by the time the worker is able to handle the fetch request from the browser, the resource may already have fully or partially downloaded.
 This makes the case where the worker has to start up "no worse" than when the worker is already started, and in some cases better.
 
-In addition, the preload manager sends the {{HTTPHeader("Service-Worker-Navigation-Preload")}} HTTP header with preload requests, allowing responses to be customized for preload requests.
+The preload manager sends the {{HTTPHeader("Service-Worker-Navigation-Preload")}} HTTP header with preload requests, allowing responses to be customized for preload requests.
+This might be used, for example, to reduce the data sent to just part of the original page, or to customise the response based on the user's log-in state.
 
 ## Examples
 
-#### Feature detection and enabling navigation preloading
+The examples here are from [Speed up Service Worker with Navigation Preloads](https://developers.google.com/web/updates/2017/02/navigation-preload#the-solution) (developers.google.com).
 
-{{domxref("ServiceWorkerRegistration.navigationPreload")}} gets the `NavigationPreloadManager` for the service worker, or `undefined` if the feature is not supported.
+### Feature detection and enabling navigation preloading
+
+Below we enable navigation preloading in the service worker's `activate` event handler, after first using {{domxref("ServiceWorkerRegistration.navigationPreload")}} to determine if the feature is supported (this returns either the `NavigationPreloadManager` for the service worker or `undefined` if the feature is not supported).
 
 ```js
-addEventListener('activate', event => {
-  event.waitUntil(async function() {
-    if (self.registration.navigationPreload) {
-      // Enable navigation preloads!
-      await self.registration.navigationPreload.enable();
-    }
-  }());
+addEventListener("activate", (event) => {
+  event.waitUntil(
+    (async function () {
+      if (self.registration.navigationPreload) {
+        // Enable navigation preloads!
+        await self.registration.navigationPreload.enable();
+      }
+    })()
+  );
 });
 ```
 
-#### Using a preloaded response
+### Using a preloaded response
 
-The following example shows the implementation of a fetch event that uses a preloaded response ({{domxref("FetchEvent.preloadResponse")}}).
+The following code shows a service worker fetch event handler that uses a preloaded response ({{domxref("FetchEvent.preloadResponse")}}).
 
-We first check for a cached response, and use it if one exists.
-If there is a {{jsxref("Promise")}} for the pre-loaded response we wait for that to resolve (download to complete).
-If there is no cached resource and not pre-loaded resource fetch in process, we start a a new fetch.
+The `fetch` event handler calls {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}} to pass a promise back to the controlled page.
+This promise will resolve with the requested resource, which may be from the cache, a preloaded fetch request, or a new network request.
+
+If there is a matching URL request in the {{domxref("Cache")}} object, then the code returns a resolved promise for fetching the response from the cache.
+If no match is found in the cache, the code returns the resolved preloaded response ({{domxref("FetchEvent.preloadResponse")}}).
+If there is no matching cache entry or preloaded response, the code starts a new fetch operation from the network and returns the (unresolved) promise for that fetch operation.
 
 ```js
-addEventListener('fetch', event => {
-  event.respondWith(async function() {
-    // Respond from the cache if we can
-    const cachedResponse = await caches.match(event.request);
-    if (cachedResponse) return cachedResponse;
+addEventListener("fetch", (event) => {
+  event.respondWith(
+    (async function () {
+      // Respond from the cache if we can
+      const cachedResponse = await caches.match(event.request);
+      if (cachedResponse) return cachedResponse;
 
-    // Else, use the preloaded response, if it's there
-    const response = await event.preloadResponse;
-    if (response) return response;
+      // Else, use the preloaded response, if it's there
+      const response = await event.preloadResponse;
+      if (response) return response;
 
-    // Else try the network.
-    return fetch(event.request);
-  }());
+      // Else try the network.
+      return fetch(event.request);
+    })()
+  );
 });
 ```
 
 ### Custom responses
 
-TBD
+The browser sends the HTTP header {{HTTPHeader("Service-Worker-Navigation-Preload")}} with preload requests, with a default directive value of `true`.
+This allows servers to differentiate between normal and preload fetch requests, and to send different responses in each case if required.
+
+> **Note:** If the response from preload and normal fetch operations can be different, then you must set `Vary: Service-Worker-Navigation-Preload` in requests to ensure that caches know to store different responses (based on the value of the directive).
+
+The header value can be changed to any other string value using {{domxref("NavigationPreloadManager.setHeaderValue()")}} in order to provide additional context for the prefetch operation.
+For example, you might set the value to the ID of your most recently cached resource, so that the server won't return any resources unless they are actually needed.
+Similarly, you could configure the returned information based on authentication status instead of using cookies.
+
+The code below shows how to set the value of the header directive to some variable `newValue`.
+
+```js
+navigator.serviceWorker.ready
+  .then((registration) => {
+    return registration.navigationPreload.setHeaderValue(newValue);
+  })
+  .then(() => {
+    console.log("Done!");
+  });
+```
+
+[Speed up Service Worker with Navigation Preloads > Custom responses for preloads](https://developers.google.com/web/updates/2017/02/navigation-preload) provides a more complete example of a site where the response for an article web page is constructed from a cached header and footer, so that only the article content is returned for a prefetch.
+
 
 ### Getting the state
 
-TBD
+You can use {{domxref("NavigationPreloadManager.getState()")}} to check whether navigation preloading is enabled and to determine what directive value is sent with the 
+{{HTTPHeader("Service-Worker-Navigation-Preload")}} HTTP header for preload requests.
+
+The code below shows how to get the promise that resolves to a `state` object and log the result.
+
+```js
+navigator.serviceWorker.ready
+  .then((registration) => {
+    return registration.navigationPreload.getState();
+  })
+  .then((state) => {
+    console.log(state.enabled); // boolean
+    console.log(state.headerValue); // string
+  });
+```
 
 ## Specifications
 

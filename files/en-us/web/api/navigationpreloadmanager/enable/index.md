@@ -11,7 +11,7 @@ tags:
   - Experimental
 browser-compat: api.NavigationPreloadManager.enable
 ---
-{{ServiceWorkerSidebar}}{{SeeCompatTable}}
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 The **`enable()`** method of the {{domxref("NavigationPreloadManager")}} interface is used to enable preloading of resources managed by the service worker.
 It returns a promise that resolves with `undefined`.

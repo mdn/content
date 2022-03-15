@@ -9,7 +9,7 @@ tags:
   - Service Workers
 browser-compat: api.NavigationPreloadManager.getState
 ---
-{{ServiceWorkerSidebar}}{{SeeCompatTable}}
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 The **`getState()`** method of the {{domxref("NavigationPreloadManager")}} interface returns a {{jsxref("Promise")}} that resolves to an object with properties that indicate whether preload is enabled and the value sent with the {{HTTPHeader("Service-Worker-Navigation-Preload")}} HTTP header.
 
