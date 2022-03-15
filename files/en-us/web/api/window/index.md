@@ -277,7 +277,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Accepts a variety of different image sources, and returns a {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at _(sx, sy)_ with width sw, and height sh.
 - {{domxref("fetch()")}}
   - : Starts the process of fetching a resource from the network.
-- {{domxref("EventTarget.removeEventListener")}}
+- {{domxref("EventTarget.removeEventListener()")}}
   - : Removes an event listener from the window.
 - {{domxref("setInterval()")}}
   - : Schedules a function to execute every time a given number of milliseconds elapses.
