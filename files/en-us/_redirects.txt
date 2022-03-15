@@ -7119,8 +7119,8 @@
 /en-US/docs/Web/API/AbortController/FetchController	/en-US/docs/Web/API/AbortController/AbortController
 /en-US/docs/Web/API/AbortSignal/onabort	/en-US/docs/Web/API/AbortSignal/abort_event
 /en-US/docs/Web/API/AbstractWorker	/en-US/docs/Web/API/Worker
-/en-US/docs/Web/API/AbstractWorker.onerror	/en-US/docs/Web/API/Worker/onerror
-/en-US/docs/Web/API/AbstractWorker/onerror	/en-US/docs/Web/API/Worker/onerror
+/en-US/docs/Web/API/AbstractWorker.onerror	/en-US/docs/Web/API/Worker/error_event
+/en-US/docs/Web/API/AbstractWorker/onerror	/en-US/docs/Web/API/Worker/error_event
 /en-US/docs/Web/API/AddressErrors/regionCode	/en-US/docs/Web/API/AddressErrors
 /en-US/docs/Web/API/AmbientLightSensor/reading	/en-US/docs/Web/API/AmbientLightSensor/illuminance
 /en-US/docs/Web/API/AmbientLightSensorReading	/en-US/docs/Web/API/AmbientLightSensor
@@ -9558,6 +9558,7 @@
 /en-US/docs/Web/API/Worker.terminate	/en-US/docs/Web/API/Worker/terminate
 /en-US/docs/Web/API/Worker/Functions_and_classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/API/Worker/Functions_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
+/en-US/docs/Web/API/Worker/onerror	/en-US/docs/Web/API/Worker/error_event
 /en-US/docs/Web/API/WorkerConsole	/en-US/docs/Web/API/console
 /en-US/docs/Web/API/WorkerConsole.info()	/en-US/docs/Web/API/console/info
 /en-US/docs/Web/API/WorkerConsole.log	/en-US/docs/Web/API/console/log

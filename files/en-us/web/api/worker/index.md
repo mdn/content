@@ -35,8 +35,6 @@ _Inherits properties from its parent, {{domxref("EventTarget")}}._
 
 ### Event handlers
 
-- {{domxref("Worker.onerror")}}
-  - : An {{ domxref("EventListener") }} called whenever an {{domxref("ErrorEvent")}} of type `error` event occurs.
 - {{domxref("Worker.onmessage")}}
   - : An {{ domxref("EventListener") }} called whenever a {{domxref("MessageEvent")}} of type `message` occurs — i.e. when a message is sent to the parent document from the worker via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}. The message is stored in the event's {{domxref("MessageEvent.data", "data")}} property.
 - {{domxref("Worker.onmessageerror")}}
@@ -53,6 +51,8 @@ _Inherits methods from its parent, {{domxref("EventTarget")}}._
 
 ## Events
 
+- [`error`](/en-US/docs/Web/API/Worker/error_event)
+  - : Fires when an error occurs in the worker.
 - [`message`](/en-US/docs/Web/API/Worker/message_event)
   - : Fires when the worker's parent receives a message from that worker.
     Also available via the [`onmessage`](/en-US/docs/Web/API/Worker/onmessage) property.
