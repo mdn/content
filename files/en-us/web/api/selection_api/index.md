@@ -24,7 +24,7 @@ The Selection API also provides two events, both firing on {{domxref("Document")
 ## Interfaces
 
 - {{domxref("Selection")}}
-  - : An interface which epresents the part of the document selected by the user or the current position of the caret.
+  - : An interface which represents the part of the document selected by the user or the current position of the caret.
 - {{domxref("Document/getSelection()", "Document.getSelection()")}}
   - : A method returning a `Selection` object representing the current selection or current position of the caret.
 - {{domxref("Window/getSelection()", "Window.getSelection()")}}
