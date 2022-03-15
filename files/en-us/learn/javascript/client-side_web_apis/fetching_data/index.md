@@ -194,6 +194,7 @@ fetch('products.json')
 The `fetch()` function returns a promise. If this completes successfully, the function inside the first `.then()` block contains the `response` returned from the network.
 
 Inside this function we:
+
 - check that the server didn't return an error (such as [`404 Not Found`](/en-US/docs/Web/HTTP/Status/404)). If it did, we throw the error.
 - call {{domxref("Response.json","json()")}} on the response. This will retrieve the data as a [JSON object](/en-US/docs/Learn/JavaScript/Objects/JSON). We return the promise returned by `response.json()`.
 
@@ -251,6 +252,7 @@ try {
 ```
 
 There are five stages to this:
+
 1. Create a new `XMLHttpRequest` object.
 2. Call its [`open()`](/en-US/docs/Web/API/XMLHttpRequest/open) method to initialize it.
 3. Add an event listener to its [`load`](/en-US/docs/Web/API/XMLHttpRequest/load_event) event, which fires when the response has completed successfully. In the listener we call `initialize()` with the data.

@@ -29,10 +29,10 @@ In this assessment you'll update a page to play a series of animations in a sequ
 
 Make a local copy of the files at <https://github.com/mdn/learning-area/tree/main/javascript/asynchronous/sequencing-animations/start>. It contains four files:
 
-* alice.svg
-* index.html
-* main.js
-* style.css
+- alice.svg
+- index.html
+- main.js
+- style.css
 
 The only file you'll need to edit is "main.js".
 

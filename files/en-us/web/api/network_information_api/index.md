@@ -61,7 +61,6 @@ if (connection) {
 
 {{Specifications("api.Navigator.connection")}}
 
-
 ## Browser compatibility
 
 ### NetworkInformation

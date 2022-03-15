@@ -73,7 +73,6 @@ var headers = [
 var myHeaders = new Headers(headers);
 ```
 
-
 ## Specifications
 
 {{Specifications}}

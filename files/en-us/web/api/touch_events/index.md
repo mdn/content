@@ -311,7 +311,6 @@ One technique for preventing things like `pinchZoom` on a page is to call `preve
 
 {{Specifications}}
 
-
 ## Browser compatibility
 
 ### Touch
