@@ -104,7 +104,7 @@ _No changes._
 
 #### Web workers
 
-- {{domxref("SharedWorkerGlobalScope.onconnect")}}'s event object is a {{domxref("MessageEvent")}} instance — its `data` property is now an empty string value rather than `null` ({{bug(1508824)}}).
+- {{domxref("SharedWorkerGlobalScope.connect_event", "SharedWorkerGlobalScope.connect")}}'s event object is a {{domxref("MessageEvent")}} instance — its `data` property is now an empty string value rather than `null` ({{bug(1508824)}}).
 
 #### Fetch and Service workers
 

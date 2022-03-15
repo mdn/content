@@ -9092,7 +9092,8 @@
 /en-US/docs/Web/API/SharedWorker/onerror	/en-US/docs/Web/API/SharedWorker/error_event
 /en-US/docs/Web/API/SharedWorkerGlobalScope.applicationCache	/en-US/docs/Web/API/SharedWorkerGlobalScope/applicationCache
 /en-US/docs/Web/API/SharedWorkerGlobalScope.name	/en-US/docs/Web/API/SharedWorkerGlobalScope/name
-/en-US/docs/Web/API/SharedWorkerGlobalScope.onconnect	/en-US/docs/Web/API/SharedWorkerGlobalScope/onconnect
+/en-US/docs/Web/API/SharedWorkerGlobalScope.onconnect	/en-US/docs/Web/API/SharedWorkerGlobalScope/connect_event
+/en-US/docs/Web/API/SharedWorkerGlobalScope/onconnect	/en-US/docs/Web/API/SharedWorkerGlobalScope/connect_event
 /en-US/docs/Web/API/Slotable	/en-US/docs/Web/API/Element
 /en-US/docs/Web/API/Slotable/assignedSlot	/en-US/docs/Web/API/Element/assignedSlot
 /en-US/docs/Web/API/Slottable	/en-US/docs/Web/API/Element

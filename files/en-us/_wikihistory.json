@@ -75727,15 +75727,6 @@
       "kscarfone"
     ]
   },
-  "Web/API/SharedWorkerGlobalScope/onconnect": {
-    "modified": "2020-10-15T21:32:17.432Z",
-    "contributors": [
-      "chrisdavidmills",
-      "ExE-Boss",
-      "fscholz",
-      "kscarfone"
-    ]
-  },
   "Web/API/SourceBuffer": {
     "modified": "2020-10-15T21:39:07.283Z",
     "contributors": [
