@@ -615,6 +615,7 @@ In the **capturing** phase:
 
 - The browser checks to see if the element's outer-most ancestor ({{htmlelement("html")}}) has a `click` event handler registered on it for the capturing phase, and runs it if so.
 - Then it moves on to the next element inside `<html>` and does the same thing, then the next one, and so on until it reaches the direct parent of the element that was actually selected.
+- Generally when event handlers are added to HTML code, they are not triggered during the event capture phase unless it is explicitly specified. This can be done by setting the capture property to true.
 
 In the **target** phase:
 
