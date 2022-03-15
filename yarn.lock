@@ -67,10 +67,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.11.tgz#bba69cb97e224d70b8755492b2e2d0103a60fa94"
   integrity sha512-sYJ5CWXVAJX3608rV3WowUGxPm3p7HCgoGh/eBseCQ2c5ALBz6oRTK2OWPFz679aBUik6IY1IlA89uxbb5/FjA==
 
-"@mdn/yari@0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.8.0.tgz#9d15e764c18ce6ee58f795056e8702ca0bbd4f8b"
-  integrity sha512-wjmumb/IyiS0U5Kqqf0jkAz5w0JKlNAiv7/y9pz2P8qOyX7Ah1ndZQgHvrwKTZhuTLhACKobAYTGRSWV9071BA==
+"@mdn/yari@0.8.7":
+  version "0.8.7"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.8.7.tgz#442222240a5a04137bcd242c7f28b57d15a41114"
+  integrity sha512-XSq21ZSrOtohlNGTjo9oh394adlGlr4WGxc2U2qStxpWJTpWIGuLXO9OHOxM8yqIGoDe39yqbkOmgnw9Aab9Ug==
   dependencies:
     "@babel/helper-builder-react-jsx" "^7.16.7"
     "@caporal/core" "2.0.2"
@@ -78,7 +78,7 @@
     "@mdn/browser-compat-data" "4.1.11"
     "@use-it/interval" "^1.0.0"
     accept-language-parser "1.5.0"
-    browser-specs "^3.1.0"
+    browser-specs "^3.2.0"
     chalk "4.1.2"
     cheerio "1.0.0-rc.10"
     cli-progress "^3.10.0"
@@ -86,7 +86,7 @@
     cookie "0.4.1"
     cookie-parser "1.4.6"
     cssesc "^3.0.0"
-    dayjs "1.10.8"
+    dayjs "1.11.0"
     dotenv "14.3.0"
     ejs "3.1.6"
     express "4.17.3"
@@ -114,7 +114,7 @@
     js-yaml "4.1.0"
     klaw-sync "^6.0.0"
     loglevel "^1.8.0"
-    lru-cache "^7.5.0"
+    lru-cache "^7.5.1"
     md5-file "5.0.0"
     mdast-util-from-markdown "^0.8.5"
     mdast-util-phrasing "^2.0.0"
@@ -593,10 +593,10 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.1.0.tgz#0774768c602e2e2da87ac1404d93d33bc0d807a2"
-  integrity sha512-Vlz9fQmDeVf+MpvRsfUb6g9tQwnWKoPagROsmJ5qq9WRkMzra5FV6rwwMvFdxZFTlnBpMTccNcs8XmH5sdYxyA==
+browser-specs@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.2.0.tgz#0caf1726d579bd0e7889fe9b032e318eac16f156"
+  integrity sha512-ZqZgXr+iaexLf1CUzZp/uBAX83vsl/pigTvK/Q2DGGroKqOr5Y/o5ezt37qvIFwL2LyrRBHRSO4PsduFAIfCHQ==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
@@ -1122,10 +1122,10 @@ currently-unhandled@^0.4.1:
   dependencies:
     array-find-index "^1.0.1"
 
-dayjs@1.10.8:
-  version "1.10.8"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.10.8.tgz#267df4bc6276fcb33c04a6735287e3f429abec41"
-  integrity sha512-wbNwDfBHHur9UOzNUjeKUOJ0fCb0a52Wx0xInmQ7Y8FstyajiV1NmK1e00cxsr9YrE9r7yAChE0VvpuY5Rnlow==
+dayjs@1.11.0:
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.0.tgz#009bf7ef2e2ea2d5db2e6583d2d39a4b5061e805"
+  integrity sha512-JLC809s6Y948/FuCZPm5IX8rRhQwOiyMb2TfVVQEixG7P8Lm/gt5S7yoQZmC8x1UehI9Pb7sksEt4xx14m+7Ug==
 
 debug@2.6.9:
   version "2.6.9"
@@ -2967,10 +2967,10 @@ lru-cache@^4.0.1:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
-lru-cache@^7.5.0:
-  version "7.5.0"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.5.0.tgz#5e14318d64e6f180a5cf3b9b955b2e89376c0efe"
-  integrity sha512-8neUvdgNtubJ+VNNqrqOLjUoIlN+NRPFtv1Vne2rQ4uPCxhp0W4TlqntzTLnVVezGXcSSdXTrKCTYooEQA7X6g==
+lru-cache@^7.5.1:
+  version "7.5.1"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.5.1.tgz#660a134c2c3c015aa453b03df55d2a9f0c216a0f"
+  integrity sha512-q1TS8IqKvcg3aScamKCHpepSrHF537Ww7nHahBOxhDu9D2YoBXAsj/7uFdZFj1xJr9LmyeJ62AdyofCHafUbIA==
 
 make-dir@^1.0.0, make-dir@^1.2.0:
   version "1.3.0"
