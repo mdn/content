@@ -50,7 +50,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - {{HTMLAttrDef("href")}}
 
-  - : The URL that the hyperlink points to. Links are not restricted to HTTP-based URLs — they can use any URL scheme supported by browsers:
+  - : The URL that the hyperlink points to. Links are not restricted to HTTP-based URLs — they can use any URL scheme supported by browsers.
 
     - Sections of a page with fragment URLs
     - Pieces of media files with media fragments
