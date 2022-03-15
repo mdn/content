@@ -58,7 +58,7 @@ pc.addEventListener("bufferedamountlow", ev => {
 
 After creating the `RTCPeerConnection`, this calls {{domxref("RTCPeerConnection.createDataChannel()")}} to create the data channel. Then a listener is created for `bufferedamountlow` to refill the incoming data buffer any time its contents fall below 65536 bytes.
 
-You can also set up a listener for `bufferedamountlow` using its event handler property, {{domxref("RTCDataChannel.onbufferedamountlow", "onbufferedamountlow")}}:
+You can also set up a listener for `bufferedamountlow` using its event handler property, {{domxref("RTCDataChannel.bufferedamountlow_event", "onbufferedamountlow")}}:
 
 ```js
 pc.onbufferedamountlow = ev => {

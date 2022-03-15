@@ -21,7 +21,7 @@ browser-compat: api.RTCDataChannel.open_event
 ---
 {{APIRef("WebRTC")}}
 
-The WebRTC **`open`** event is sent to an {{domxref("RTCDataChannel")}} object's {{domxref("RTCDataChannel.onopen", "onopen")}} event handler when the underlying transport used to send and receive the data channel's messages is opened or re-opened.
+The WebRTC **`open`** event is sent to an {{domxref("RTCDataChannel")}} object's `onopen` event handler when the underlying transport used to send and receive the data channel's messages is opened or re-opened.
 
 This event is not cancelable and does not bubble.
 
@@ -64,7 +64,7 @@ dc.addEventListener("open", ev => {
 }, false);
 ```
 
-This can also be done by directly setting the value of the channel's {{domxref("RTCDataChannel.onopen", "onopen")}} event handler property.
+This can also be done by directly setting the value of the channel's `onopen` event handler property.
 
 ```js
 dc.onopen = ev => {
