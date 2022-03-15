@@ -1967,7 +1967,6 @@
         "RTCStatsType",
         "RTCCodecType",
         "RTCQualityLimitationReason",
-        "RTCNetworkType",
         "RTCStatsIceCandidatePairState"
       ],
       "methods": ["MediaDevices.getUserMedia()"],
