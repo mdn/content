@@ -23,28 +23,30 @@ A **`datachannel`** event is sent to an {{domxref("RTCPeerConnection")}} instanc
 
 > **Note:** This event is _not_ dispatched when the local end of the connection creates the channel.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("RTCDataChannelEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{DOMxRef("RTCPeerConnection.ondatachannel", "ondatachannel")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('datachannel', event => { });
+
+ondatachannel = event => { };
+```
+
+## Event type
+
+An {{domxref("RTCDataChannelEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("RTCDataChannelEvent")}}
+
+## Event properties
+
+_Also inherits properties from {{DOMxRef("Event")}}._
+
+- {{DOMxRef("RTCDataChannelEvent.channel", "channel")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("RTCDataChannel")}} associated with the event.
 
 ## Examples
 

@@ -18,28 +18,21 @@ browser-compat: api.RTCPeerConnection.signalingstatechange_event
 
 A **`signalingstatechange`** event is sent to an {{domxref("RTCPeerConnection")}} to notify it that its signaling state, as indicated by the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} property, has changed.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{DOMxRef("RTCPeerConnection.onsignalingstatechange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('signalingstatechange', event => { });
+
+onsignalingstatechange = event => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 

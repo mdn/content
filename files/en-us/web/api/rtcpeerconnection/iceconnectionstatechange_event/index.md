@@ -23,30 +23,23 @@ browser-compat: api.RTCPeerConnection.iceconnectionstatechange_event
 An **`iceconnectionstatechange`** event is sent to an {{domxref("RTCPeerConnection")}} object each time the {{Glossary("ICE")}} connection state changes during the negotiation process.
 The new ICE connection state is available in the object's {{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} property.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{DOMxRef("RTCPeerConnection.oniceconnectionstatechange", "oniceconnectionstatechange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 One common task performed by the `iceconnectionstatechange` event listener: to trigger ICE restart when the state changes to `failed`. See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Session_lifetime", "ICE restart")}} for further information.
+
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('iceconnectionstatechange', event => { });
+
+oniceconnectionstatechange = event => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Usage notes
 

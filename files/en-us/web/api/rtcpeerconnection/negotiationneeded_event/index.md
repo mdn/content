@@ -20,30 +20,23 @@ browser-compat: api.RTCPeerConnection.negotiationneeded_event
 A **`negotiationneeded`** event is sent to the {{domxref("RTCPeerConnection")}} when negotiation of the connection through the signaling channel is required.
 This occurs both during the initial setup of the connection as well as any time a change to the communication environment requires reconfiguring the connection.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{DOMxRef("RTCPeerConnection.onnegotiationneeded")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 The `negotiationneeded` event is first dispatched to the {{domxref("RTCPeerConnection")}} when media is first added to the connection. This starts the process of {{Glossary("ICE")}} negotiation by instructing your code to begin exchanging ICE candidates through the signaling server. See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling", "Signaling transaction flow")}} for a description of the signaling process that begins with a `negotiationneeded` event.
+
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('iceconnectionstatechange', event => { });
+
+oniceconnectionstatechange = event => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
