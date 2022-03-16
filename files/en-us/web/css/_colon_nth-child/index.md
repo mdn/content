@@ -172,4 +172,4 @@ div em {
 
 ## See also
 
-- {{ Cssxref(":nth-of-type") }}, {{ Cssxref(":nth-last-child") }}
+- {{ Cssxref(":nth-of-type") }}, {{ Cssxref(":nth-last-child") }}, {{ Cssxref("&lt;an-plus-b&gt;") }}

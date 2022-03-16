@@ -72,4 +72,4 @@ span:nth-last-of-type(2) {
 
 ## See also
 
-- {{Cssxref(":nth-last-child")}}, {{Cssxref(":nth-of-type")}}
+- {{Cssxref(":nth-last-child")}}, {{Cssxref(":nth-of-type")}}, {{Cssxref("&lt;an-plus-b&gt;")}}

@@ -90,4 +90,4 @@ p.fancy:nth-of-type(2n+1) {
 
 ## See also
 
-- {{Cssxref(":nth-child")}}, {{Cssxref(":nth-last-of-type")}}
+- {{Cssxref(":nth-child")}}, {{Cssxref(":nth-last-of-type")}}, {{Cssxref("&lt;an-plus-b&gt;")}}
