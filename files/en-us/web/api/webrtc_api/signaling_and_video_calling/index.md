@@ -122,13 +122,13 @@ Each ICE candidate is sent to the other peer by sending a JSON message of type `
 
 Each ICE message suggests a communication protocol (TCP or UDP), IP address, port number, connection type (for example, whether the specified IP is the peer itself or a relay server), along with other information needed to link the two computers together. This includes NAT or other networking complexity.
 
-> **Note:** The important thing to note is this: the only thing your code is responsible for during ICE negotiation is accepting outgoing candidates from the ICE layer and sending them across the signaling connection to the other peer when your {{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}} handler is executed, and receiving ICE candidate messages from the signaling server (when the `"new-ice-candidate"` message is received) and delivering them to your ICE layer by calling {{domxref("RTCPeerConnection.addIceCandidate()")}}. That's it.
+> **Note:** The important thing to note is this: the only thing your code is responsible for during ICE negotiation is accepting outgoing candidates from the ICE layer and sending them across the signaling connection to the other peer when your {{domxref("RTCPeerConnection.icecandidate_event", "onicecandidate")}} handler is executed, and receiving ICE candidate messages from the signaling server (when the `"new-ice-candidate"` message is received) and delivering them to your ICE layer by calling {{domxref("RTCPeerConnection.addIceCandidate()")}}. That's it.
 >
 > The contents of the SDP are irrelevant to you in essentially all cases. Avoid the temptation to try to make it more complicated than that until you really know what you're doing. That way lies madness.
 
 All your signaling server now needs to do is send the messages it's asked to. Your workflow may also demand login/authentication functionality, but such details will vary.
 
-> **Note:** The {{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}} Event and {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}} Promise are both async calls which are handled separately. Be sure that your signaling does not change order! For example {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} with the server's ice candidates must be called after setting the answer with {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}.
+> **Note:** The {{domxref("RTCPeerConnection.icecandidate_event", "onicecandidate")}} Event and {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}} Promise are both async calls which are handled separately. Be sure that your signaling does not change order! For example {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} with the server's ice candidates must be called after setting the answer with {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}.
 
 ### Signaling transaction flow
 
@@ -350,19 +350,19 @@ After creating the {{domxref("RTCPeerConnection")}}, we set up handlers for the 
 
 The first three of these event handlers are required; you have to handle them to do anything involving streamed media with WebRTC. The rest aren't strictly required but can be useful, and we'll explore them. There are a few other events available that we're not using in this example, as well. Here's a summary of each of the event handlers we will be implementing:
 
-- {{domxref("RTCPeerConnection.onicecandidate")}}
+- {{domxref("RTCPeerConnection.icecandidate_event", "onicecandidate")}}
   - : The local ICE layer calls your {{event("icecandidate")}} event handler, when it needs you to transmit an ICE candidate to the other peer, through your signaling server. See [Sending ICE candidates](#sending_ice_candidates) for more information and to see the code for this example.
-- {{domxref("RTCPeerConnection.ontrack")}}
+- {{domxref("RTCPeerConnection.track_event", "ontrack")}}
   - : This handler for the {{event("track")}} event is called by the local WebRTC layer when a track is added to the connection. This lets you connect the incoming media to an element to display it, for example. See [Receiving new streams](#receiving_new_streams) for details.
-- {{domxref("RTCPeerConnection.onnegotiationneeded")}}
+- {{domxref("RTCPeerConnection.negotiationneeded_event", "onnegotiationneeded")}}
   - : This function is called whenever the WebRTC infrastructure needs you to start the session negotiation process anew. Its job is to create and send an offer, to the callee, asking it to connect with us. See [Starting negotiation](#starting_negotiation) to see how we handle this.
-- {{domxref("RTCPeerConnection.onremovetrack")}}
+- {{domxref("RTCPeerConnection.removetrack_event", "onremovetrack")}}
   - : This counterpart to `ontrack` is called to handle the {{event("removetrack")}} event; it's sent to the `RTCPeerConnection` when the remote peer removes a track from the media being sent. See [Handling the removal of tracks](#handling_the_removal_of_tracks).
-- {{domxref("RTCPeerConnection.oniceconnectionstatechange")}}
+- {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "oniceconnectionstatechange")}}
   - : The {{event("iceconnectionstatechange")}} event is sent by the ICE layer to let you know about changes to the state of the ICE connection. This can help you know when the connection has failed, or been lost. We'll look at the code for this example in [ICE connection state](#ice_connection_state) below.
-- {{domxref("RTCPeerConnection.onicegatheringstatechange")}}
+- {{domxref("RTCPeerConnection.icegatheringstatechange_event", "onicegatheringstatechange")}}
   - : The ICE layer sends you the {{event("icegatheringstatechange")}} event, when the ICE agent's process of collecting candidates shifts, from one state to another (such as starting to gather candidates or completing negotiation). See [ICE gathering state](#ice_gathering_state) below.
-- {{domxref("RTCPeerConnection.onsignalingstatechange")}}
+- {{domxref("RTCPeerConnection.signalingstatechange_event", "onsignalingstatechange")}}
   - : The WebRTC infrastructure sends you the {{event("signalingstatechange")}} message when the state of the signaling process changes (or if the connection to the signaling server changes). See [Signaling state](#signaling_state) to see our code.
 
 #### Starting negotiation
@@ -467,7 +467,7 @@ Any errors are caught and passed to `handleGetUserMediaError()`, described in [H
 
 The ICE negotiation process involves each peer sending candidates to the other, repeatedly, until it runs out of potential ways it can support the `RTCPeerConnection`'s media transport needs. Since ICE doesn't know about your signaling server, your code handles transmission of each candidate in your handler for the {{event("icecandidate")}} event.
 
-Your {{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}} handler receives an event whose `candidate` property is the SDP describing the candidate (or is `null` to indicate that the ICE layer has run out of potential configurations to suggest). The contents of `candidate` are what you need to transmit using your signaling server. Here's our example's implementation:
+Your {{domxref("RTCPeerConnection.icecandidate_event", "onicecandidate")}} handler receives an event whose `candidate` property is the SDP describing the candidate (or is `null` to indicate that the ICE layer has run out of potential configurations to suggest). The contents of `candidate` are what you need to transmit using your signaling server. Here's our example's implementation:
 
 ```js
 function handleICECandidateEvent(event) {

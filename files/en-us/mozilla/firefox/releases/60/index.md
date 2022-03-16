@@ -78,7 +78,7 @@ _No changes._
 - Removing a track from an {{domxref("RTCPeerConnection")}} using {{domxref("RTCPeerConnection.removeTrack", "removeTrack()")}} no longer removes the track's {{domxref("RTCRtpSender")}} from the peer connection's list of senders as reported by {{domxref("RTCPeerConnection.getSenders", "getSenders()")}} ({{bug(1290949)}}).
 - The {{domxref("RTCRtpContributingSource")}} and {{domxref("RTCRtpSynchronizationSource")}} objects' timestamps were previously being reported based on values returned by {{jsxref("Date.getTime()")}}. In Firefox 60, these have been fixed to correctly use the [Performance Timing API](/en-US/docs/Web/API/Performance_API) instead ({{bug(1433576)}}).
 - As per spec, the {{domxref("ConvolverNode.ConvolverNode","ConvolverNode()")}} constructor now throws a `NotSupportedError` {{domxref("DOMException")}} if the referenced {{domxref("AudioBuffer")}} does not have 1, 2, or 4 channels ({{bug(1443228)}}).
-- The obsolete {{domxref("RTCPeerConnection")}} event handler {{domxref("RTCPeerConnection.onremovestream")}} has been removed; by now you should be using {{event("removetrack")}} events instead ({{bug(1442385)}}).
+- The obsolete {{domxref("RTCPeerConnection")}} event handler {{domxref("RTCPeerConnection.removestream_event", "RTCPeerConnection.onremovestream")}} has been removed; by now you should be using {{event("removetrack")}} events instead ({{bug(1442385)}}).
 - The primary name for {{domxref("RTCDataChannel")}} is now in fact `RTCDataChannel`, instead of being an alias for `DataChannel`. The name `DataChannel` is no longer supported ({{bug(1173851)}}).
 
 #### Canvas and WebGL

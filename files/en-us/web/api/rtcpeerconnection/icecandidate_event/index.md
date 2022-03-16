@@ -19,26 +19,30 @@ browser-compat: api.RTCPeerConnection.icecandidate_event
 
 An **`icecandidate`** event is sent to an {{domxref("RTCPeerConnection")}} when an {{domxref("RTCIceCandidate")}} has been identified and added to the local peer by a call to {{domxref("RTCPeerConnection.setLocalDescription()")}}. The event handler should transmit the candidate to the remote peer over the signaling channel so the remote peer can add it to its set of remote candidates.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("RTCPeerConnectionIceEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{DOMxRef("RTCPeerConnection.onicecandidate")}}</td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('icecandidate', event => { });
+
+onicecandidate = event => { };
+```
+
+## Event type
+
+An {{domxref("RTCPeerConnectionIceEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("RTCPeerConnectionIceEvent")}}
+
+## Event properties
+
+_A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this event also implements these properties_.
+
+- {{domxref("RTCPeerConnectionIceEvent.candidate")}} {{readOnlyInline}}
+  - : Contains the {{domxref("RTCIceCandidate")}} containing the candidate associated with the event, or `null` if this event indicates that there are no further candidates to come.
 
 ## Description
 
@@ -113,7 +117,7 @@ pc.addEventListener("icecandidate", ev => {
 }, false);
 ```
 
-You can also set the {{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}} event handler property directly:
+You can also set the `onicecandidate` event handler property directly:
 
 ```js
 pc.onicecandidate = ev => {
