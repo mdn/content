@@ -285,7 +285,7 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support a numb
 
 ### T
 
-- {{CSSxRef("text-combine-upright", "-webkit-text-combine-upright")}}
+- {{CSSxRef("text-combine-upright", "-webkit-text-combine")}}
 - {{CSSxRef("text-decoration", "-epub-text-decoration")}}
 - {{CSSxRef("text-decoration-color", "-webkit-text-color-decoration")}}
 - {{CSSxRef("text-decoration-line", "-webkit-text-decoration-line")}}
