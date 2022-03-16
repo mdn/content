@@ -4,7 +4,6 @@ slug: Web/API/Headers/Headers
 tags:
   - API
   - Constructor
-  - Experimental
   - Fetch
   - Reference
 browser-compat: api.Headers.Headers

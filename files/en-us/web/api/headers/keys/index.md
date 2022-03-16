@@ -3,7 +3,6 @@ title: Headers.keys()
 slug: Web/API/Headers/keys
 tags:
   - API
-  - Experimental
   - Fetch API
   - Headers
   - Method
