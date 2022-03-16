@@ -10,6 +10,7 @@ tags:
   - Web Workers
   - Workers
   - onerror
+  - Event
 browser-compat: api.ServiceWorker.error_event
 ---
 {{APIRef("Service Workers API")}}

@@ -3,7 +3,7 @@ title: 'ServiceWorker: statechange event'
 slug: Web/API/ServiceWorker/statechange_event
 tags:
   - API
-  - Property
+  - Event
   - Reference
   - Service Workers
   - ServiceWorker
