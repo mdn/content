@@ -420,7 +420,7 @@ The following properties are supported with the `-webkit-` prefix in Firefox. Ma
 
 - {{CSSxRef("user-select", "-webkit-user-select")}}
 
-\*Supported with `-moz-` and `-webkit-` prefix in Firefox, but not supported without a prefix. Microsoft Edge and IE Mobile support this property with the `-webkit-` prefix, rather than `-ms-` for interoperability reasons as well.
+\* Supported with `-moz-` and `-webkit-` prefix in Firefox, but not supported without a prefix. Microsoft Edge and IE Mobile support this property with the `-webkit-` prefix, rather than `-ms-` for interoperability reasons as well.
 \*\* These values are supported even though they are not standard and are not on track to becoming standard.
 \*\*\* Use flex-box properties instead.
 
