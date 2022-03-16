@@ -9,7 +9,7 @@ tags:
   - PaymentRequest
   - Reference
   - Shipping
-  - events
+  - Event
   - onshippingoptionchange
   - payment
   - shippingoptionchange
@@ -74,7 +74,3 @@ paymentRequest.onshippingoptionchange = event => {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("PaymentRequest.shippingoptionchange_event", "onshippingoptionchange")}} event handler property

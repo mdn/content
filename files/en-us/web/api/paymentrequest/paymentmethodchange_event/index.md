@@ -13,7 +13,7 @@ browser-compat: api.PaymentRequest.paymentmethodchange_event
 ---
 {{APIRef}}
 
-**`paymentmethodchange`** events are delivered by the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) to a {{domxref("PaymentRequest")}} object when the user changes payment methods within a given payment handler.
+The **`paymentmethodchange`** event is delivered the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) to a {{domxref("PaymentRequest")}} object when the user changes the payment method within a given payment handler.
 
 For example, if the user switches from one credit card to another on their [Apple Pay](https://www.apple.com/apple-pay/) account, a `paymentmethodchange` event is fired to let you know about the change.
 
@@ -84,10 +84,6 @@ This begins by looking at the event's {{domxref("PaymentMethodChangeEvent.method
 
 Before the event handler returns, it calls the event's {{domxref("PaymentMethodChangeEvent.updateWith()")}} method to integrate the changes into the request.
 
-## Related events
-
-- {{event("merchantvalidation")}}, {{event("shippingaddresschange")}}, {{event("shippingoptionchange")}}, and {{event("payerdetailchange")}}
-
 ## Specifications
 
 {{Specifications}}
@@ -100,5 +96,7 @@ Before the event handler returns, it calls the event's {{domxref("PaymentMethodC
 
 - [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
 - [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
-- `onpaymentmethodchange` event handler property
-- Related events: {{event("merchantvalidation")}}, {{event("payerdetailchange")}}, {{event("shippingaddresschange")}}, {{event("shippingoptionchange")}}
+- {{domxref("PaymentRequest.merchantvalidation_event", "merchantvalidation")}} event
+- {{domxref("PaymentRequest.payerdetailchange_event", "payerdetailchange")}} event
+- {{domxref("PaymentRequest.shippingaddresschange_event", "shippingaddresschange")}} event
+- {{domxref("PaymentRequest.shippingoptionchange_event", "shippingoptionchange")}} event

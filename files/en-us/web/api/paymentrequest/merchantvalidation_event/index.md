@@ -12,7 +12,7 @@ tags:
   - Sales
   - Validation
   - Web
-  - events
+  - Event
   - merchantvalidation
   - payment
 browser-compat: api.PaymentRequest.merchantvalidation_event
@@ -84,10 +84,6 @@ const response = await request.show();
 
 For more information, see {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant Validation")}}.
 
-## Related events
-
-- {{event("payerdetailchange")}}, {{event("paymentmethodchange")}}, {{event("shippingaddresschange")}}, and {{event("shippingoptionchange")}}
-
 ## Browser compatibility
 
 {{Compat}}
@@ -99,3 +95,7 @@ For more information, see {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_A
 - `onmerchantvalidation` event handler property
 - {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant validation")}}
 - {{domxref("PaymentRequest")}}
+- {{domxref("PaymentRequest.payerdetailchange_event", "payerdetailchange")}} event
+- {{domxref("PaymentRequest.paymentmethodchange_event", "paymentmethodchange")}} event
+- {{domxref("PaymentRequest.shippingaddresschange_event", "shippingaddresschange")}} event
+- {{domxref("PaymentRequest.shippingoptionchange_event", "shippingoptionchange")}} event

@@ -11,7 +11,7 @@ tags:
   - PaymentRequestUpdateEvent
   - Reference
   - Shipping
-  - events
+  - Event
   - payment
   - shippingaddresschange
 browser-compat: api.PaymentRequest.shippingaddresschange_event
@@ -75,7 +75,3 @@ paymentRequest.onshippingaddresschange = event => {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("PaymentRequest.shippingaddresschange_event", "onshippingaddresschange")}} event handler property
