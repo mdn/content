@@ -21,7 +21,7 @@ The **`track`** event is sent to the `ontrack` event handler on {{domxref("RTCPe
 
 By the time this event is delivered, the new track has been fully added to the peer connection. See {{SectionOnPage("/en-US/docs/Web/API/RTCTrackEvent", "Track event types")}} for details.
 
-This event is not cancellable.
+This event is not cancellable and does not bubble.
 
 ## Syntax
 
