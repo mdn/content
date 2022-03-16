@@ -45,10 +45,10 @@ An {{domxref("RTCErrorEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-_In addition to the standard properties available on the {{domxref("Event")}} interface, `RTCErrorEvent` also includes the following:_
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
 - {{domxref("RTCErrorEvent.error", "error")}} {{ReadOnlyInline}}
-  - : An {{domxref("RTCError")}} object specifying the error which occurred; this object includes the type of error that occurred, information about where the error occurred (such as which line number in the {{Glossary("SDP")}} or what {{Glossary("SCTP")}} cause code was at issue).
+  - : An {{domxref("RTCError")}} object specifying the error which occurred; this object includes the type of error that occurred, and information about where the error occurred (such as which line number in the {{Glossary("SDP")}} or what {{Glossary("SCTP")}} cause code was at issue).
 
 ## Examples
 
