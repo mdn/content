@@ -53,7 +53,7 @@ musicTrack.addEventListener("unmute", event => {
 
 With these event handlers in place, when the track `musicTrack` enters its {{domxref("MediaStreamTrack.muted", "muted")}} state, the element with the ID `timeline-widget` gets its background color changed to `#aaa`. When the track exits the muted state—detected by the arrival of an `unmuted` event—the background color is restored to white.
 
-You can also use the {{domxref("MediaStreamTrack.unmute_event", "onunmute")}} event handler property to set up a handler for this event; similarly, the {{domxref("MediaStreamTrack.mute_event", "onmute")}} event handler is available for setting up a handler for the `mute` event. The following example shows this:
+You can also use the `onunmute` event handler property to set up a handler for this event; similarly, the {{domxref("MediaStreamTrack.mute_event", "onmute")}} event handler is available for setting up a handler for the `mute` event. The following example shows this:
 
 ```js
 musicTrack.onmute = event => {
@@ -75,4 +75,4 @@ musicTrack.mute = event = > {
 
 ## See also
 
-- {{domxref("MediaStreamTrack/mute_event", "mute")}} event
+- The {{domxref("MediaStreamTrack/mute_event", "mute")}} event
