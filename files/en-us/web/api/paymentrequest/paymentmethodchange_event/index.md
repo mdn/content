@@ -100,5 +100,5 @@ Before the event handler returns, it calls the event's {{domxref("PaymentMethodC
 
 - [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
 - [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
-- {{domxref("PaymentRequest.paymentmethodchange_event", "onpaymentmethodchange")}} event handler property
+- `onpaymentmethodchange` event handler property
 - Related events: {{event("merchantvalidation")}}, {{event("payerdetailchange")}}, {{event("shippingaddresschange")}}, {{event("shippingoptionchange")}}

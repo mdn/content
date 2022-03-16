@@ -63,7 +63,7 @@ const checkAddress = theAddress => {
 };
 ```
 
-You can also establish a handler for `shippingaddresschange` using the {{domxref("PaymentRequest.shippingaddresschange_event", "onshippingaddresschange")}} event handler property:
+You can also establish a handler for `shippingaddresschange` using the `onshippingaddresschange` event handler property:
 
 ```js
 paymentRequest.onshippingaddresschange = event => {
