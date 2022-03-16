@@ -60,9 +60,8 @@ property:
 ## See also
 
 - {{DOMxRef("DeviceMotionEvent.acceleration")}}
-- {{Event("devicemotion")}}
-- {{DOMxRef("window.ondevicemotion")}}
-- {{Event("deviceorientation")}}
+- {{DOMxRef("window.devicemotion_event") }}
+- {{DOMxRef("window.deviceorientation_event") }}
 - {{DOMxRef("DeviceOrientationEvent")}}
 - {{DOMxRef("Accelerometer")}}
 - [Detecting device

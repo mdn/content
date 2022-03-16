@@ -309,14 +309,6 @@ These are properties of the window object that can be set to establish event han
 
 _This interface inherits event handlers from the {{domxref("EventTarget")}} interface and implements event handlers from {{domxref("WindowEventHandlers")}}._
 
-- {{domxref("Window.ondevicemotion")}}
-  - : Called if accelerometer detects a change (For mobile devices)
-- {{domxref("Window.ondeviceorientation")}}
-  - : Called when the orientation is changed (For mobile devices)
-- {{domxref("Window.ondeviceorientationabsolute")}} {{non-standard_inline}}
-  - : An event handler property for any device orientation changes.
-- {{domxref("Window.ondeviceproximity")}} {{deprecated_inline}}
-  - : An event handler property for device proximity event (see {{domxref("DeviceProximityEvent")}})
 - {{domxref("WindowEventHandlers.onrejectionhandled")}}
   - : An event handler for handled {{jsxref("Promise")}} rejection events.
 - {{domxref("Window.onuserproximity")}} {{deprecated_inline}}

@@ -1,18 +1,20 @@
 ---
-title: 'Window: deviceorientation event'
-slug: Web/API/Window/deviceorientation_event
+title: 'Window: deviceorientationabsolute event'
+slug: Web/API/Window/deviceorientationabsolute_event
 tags:
-  - Device Orientation API
-  - Sensors
-  - Window Event
-  - events
-browser-compat: api.Window.deviceorientation_event
+  - API
+  - Device Orientation
+  - Mobile
+  - Orientation
+  - Event
+browser-compat: api.Window.deviceorientationabsolute_event
 ---
-{{APIRef}}
+{{ ApiRef() }}{{Non-standard_header}}
 
-The `deviceorientation` event is fired when fresh data is available from an orientation sensor about the current orientation of the device as compared to the Earth coordinate frame. This data is gathered from a magnetometer inside the device.
+## Summary
 
-See [Orientation and motion data explained](/en-US/docs/Web/Events/Orientation_and_motion_data_explained) for details.
+An event handler for the {{ event("deviceorientationabsolute") }} event
+containing information about an absolute device orientation change.
 
 This event is not cancelable and does not bubble.
 
@@ -21,9 +23,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('deviceorientation', event => { });
+addEventListener('deviceorientationabsolute', event => { });
 
-ondeviceorientation = event => { };
+ondeviceorientationabsolute = event => { };
 ```
 
 ## Event type
@@ -47,30 +49,9 @@ An {{domxref("DeviceOrientationEvent")}}. Inherits from {{domxref("Event")}}.
 - `DeviceOrientationEvent.webkitCompassAccuracy` {{Non-Standard_Inline}} {{readonlyinline}}
   - : The accuracy of the compass means that the deviation is positive or negative. It's usually 10.
 
-## Examples
-
-```js
-if (window.DeviceOrientationEvent) {
-    window.addEventListener("deviceorientation", function(event) {
-        // alpha: rotation around z-axis
-        var rotateDegrees = event.alpha;
-        // gamma: left to right
-        var leftToRight = event.gamma;
-        // beta: front back motion
-        var frontToBack = event.beta;
-
-        handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
-    }, true);
-}
-
-var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
-    // do something amazing
-};
-```
-
 ## Specifications
 
-{{Specifications}}
+This event handler is not currently part of any specification.
 
 ## Browser compatibility
 
@@ -78,6 +59,7 @@ var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
 
 ## See also
 
-- [`devicemotion`](/en-US/docs/Web/API/Window/devicemotion_event)
-- [Detecting device orientation](/en-US/docs/Web/Events/Detecting_device_orientation)
-- [Orientation and motion data explained](/en-US/docs/Web/Events/Orientation_and_motion_data_explained)
+- {{ event("deviceorientation") }}
+- {{ domxref("DeviceOrientationEvent") }}
+- {{domxref("Window.ondeviceorientation","ondeviceorientation")}}
+- [Detecting device orientation](/en-US/docs/Detecting_device_orientation)
