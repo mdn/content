@@ -35,17 +35,17 @@ An {{domxref("DeviceOrientationEvent")}}. Inherits from {{domxref("Event")}}.
 ## Event properties
 
 - {{domxref("DeviceOrientationEvent.absolute")}} {{readonlyinline}}
-  - : A boolean that indicates whether or not the device is providing orientation data absolutely.
+  - : A boolean that indicates whether the device is providing orientation data absolutely.
 - {{domxref("DeviceOrientationEvent.alpha")}} {{readonlyinline}}
   - : A number representing the motion of the device around the z axis, express in degrees with values ranging from 0 (inclusive) to 360 (exclusive).
 - {{domxref("DeviceOrientationEvent.beta")}} {{readonlyinline}}
-  - : A number representing the motion of the device around the x axis, express in degrees with values ranging from -180 (inclusive) to 180 (exclusive). This represents a front to back motion of the device.
+  - : A number representing the motion of the device around the x axis, expressed in degrees with values ranging from -180 (inclusive) to 180 (exclusive). This represents the front to back motion of the device.
 - {{domxref("DeviceOrientationEvent.gamma")}} {{readonlyinline}}
-  - : A number representing the motion of the device around the y axis, express in degrees with values ranging from -90 (inclusive) to 90 (exclusive). This represents a left to right motion of the device.
+  - : A number representing the motion of the device around the y axis, expressed in degrees with values ranging from -90 (inclusive) to 90 (exclusive). This represents the left to right motion of the device.
 - `DeviceOrientationEvent.webkitCompassHeading` {{Non-Standard_Inline}} {{readonlyinline}}
-  - : A number represents the difference between the motion of the device around the z axis of the world system and the direction of the north, express in degrees with values ranging from 0 to 360.
+  - : A number represents the difference between the motion of the device around the z axis of the world system and the direction of the north, expressed in degrees with values ranging from 0 to 360.
 - `DeviceOrientationEvent.webkitCompassAccuracy` {{Non-Standard_Inline}} {{readonlyinline}}
-  - : The accuracy of the compass means that the deviation is positive or negative. It's usually 10.
+  - : The accuracy of the compass given as a positive or negative deviation. It's usually 10.
 
 ## Examples
 
