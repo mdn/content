@@ -136,7 +136,6 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support a numb
 ### T
 
 - {{CSSxRef("-webkit-tap-highlight-color", "-webkit-tap-highlight-color")}}
-- {{CSSxRef("-webkit-text-combine", "-webkit-text-combine")}}
 - {{CSSxRef("-webkit-text-decoration-skip", "-webkit-text-decoration-skip")}}
 - {{CSSxRef("-webkit-text-decorations-in-effect", "-webkit-text-decorations-in-effect")}}
 - {{CSSxRef("-webkit-text-fill-color", "-webkit-text-fill-color")}}
