@@ -74541,18 +74541,6 @@
       "Meggin"
     ]
   },
-  "Web/API/ServiceWorker/onstatechange": {
-    "modified": "2020-10-15T21:32:16.664Z",
-    "contributors": [
-      "sideshowbarker",
-      "jpmedley",
-      "fscholz",
-      "abbycar",
-      "chrisdavidmills",
-      "Sebastianz",
-      "kscarfone"
-    ]
-  },
   "Web/API/ServiceWorker/scriptURL": {
     "modified": "2020-10-15T21:32:15.265Z",
     "contributors": [
@@ -74571,6 +74559,18 @@
       "sideshowbarker",
       "jpmedley",
       "mfluehr",
+      "fscholz",
+      "abbycar",
+      "chrisdavidmills",
+      "Sebastianz",
+      "kscarfone"
+    ]
+  },
+  "Web/API/ServiceWorker/statechange_event": {
+    "modified": "2020-10-15T21:32:16.664Z",
+    "contributors": [
+      "sideshowbarker",
+      "jpmedley",
       "fscholz",
       "abbycar",
       "chrisdavidmills",

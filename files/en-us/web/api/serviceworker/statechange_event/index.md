@@ -1,27 +1,32 @@
 ---
-title: ServiceWorker.onstatechange
-slug: Web/API/ServiceWorker/onstatechange
+title: 'ServiceWorker: statechange event'
+slug: Web/API/ServiceWorker/statechange_event
 tags:
   - API
-  - Property
+  - Event
   - Reference
   - Service Workers
   - ServiceWorker
-  - onstatechange
-browser-compat: api.ServiceWorker.onstatechange
+  - statechange
+browser-compat: api.ServiceWorker.statechange_event
 ---
 {{APIRef("Service Workers API")}}
 
-An {{domxref("EventListener")}} property called whenever an event of type
-`statechange` is fired; it is basically fired anytime the
-{{domxref("ServiceWorker.state")}} changes.
+The `statechange` event fires anytime the {{domxref("ServiceWorker.state")}} changes.
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js
-ServiceWorker.onstatechange = function(statechangeevent) { /* ... */ }
-ServiceWorker.addEventListener('statechange', function(statechangeevent) { /* ... */ } )
+addEventListener('statechange', event => { });
+
+onstatechange = event => { };
 ```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 

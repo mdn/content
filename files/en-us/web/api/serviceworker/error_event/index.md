@@ -1,26 +1,34 @@
 ---
-title: ServiceWorker.onerror
-slug: Web/API/ServiceWorker/onerror
+title: 'ServiceWorker: error event'
+slug: Web/API/ServiceWorker/error_event
 tags:
   - API
   - ServiceWorker
   - EventHandler
-  - Property
   - Reference
   - Web Workers
   - Workers
   - onerror
-browser-compat: api.ServiceWorker.onerror
+  - Event
+browser-compat: api.ServiceWorker.error_event
 ---
 {{APIRef("Service Workers API")}}
 
-The **`onerror`** property of the {{domxref("ServiceWorker")}} interface represents an [event handler](/en-US/docs/Web/Events/Event_handlers), that is a function to be called when the {{event("error")}} event occurs.
+The `error` event fires whenever an error occurs in the service worker.
 
 ## Syntax
 
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
 ```js
-myServiceWorker.onerror = function(event) { /* ... */ };
+addEventListener('error', event => { });
+
+onerror = event => { };
 ```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Example
 

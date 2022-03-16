@@ -9080,9 +9080,11 @@
 /en-US/docs/Web/API/Serial/ondisconnect	/en-US/docs/Web/API/SerialPort/disconnect_event
 /en-US/docs/Web/API/SerialPort/onconnect	/en-US/docs/Web/API/SerialPort/connect_event
 /en-US/docs/Web/API/SerialPort/ondisconnect	/en-US/docs/Web/API/SerialPort/disconnect_event
-/en-US/docs/Web/API/ServiceWorker.onstatechange	/en-US/docs/Web/API/ServiceWorker/onstatechange
+/en-US/docs/Web/API/ServiceWorker.onstatechange	/en-US/docs/Web/API/ServiceWorker/statechange_event
 /en-US/docs/Web/API/ServiceWorker.scriptURL	/en-US/docs/Web/API/ServiceWorker/scriptURL
 /en-US/docs/Web/API/ServiceWorker.state	/en-US/docs/Web/API/ServiceWorker/state
+/en-US/docs/Web/API/ServiceWorker/onerror	/en-US/docs/Web/API/ServiceWorker/error_event
+/en-US/docs/Web/API/ServiceWorker/onstatechange	/en-US/docs/Web/API/ServiceWorker/statechange_event
 /en-US/docs/Web/API/ServiceWorkerClient	/en-US/docs/Web/API/Client
 /en-US/docs/Web/API/ServiceWorkerClient/focus	/en-US/docs/Web/API/WindowClient/focus
 /en-US/docs/Web/API/ServiceWorkerClient/postMessage	/en-US/docs/Web/API/Client/postMessage
