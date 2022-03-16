@@ -83,7 +83,7 @@ There is also an event available called `ratechange`, which fires every time the
 ### Notes
 
 - Most browsers stop playing audio outside `playbackRate` bounds of 0.5 and 4, leaving the video playing silently. For most applications, it's recommended that you limit the range to between 0.5 and 4.
-- The pitch of the audio track does not change when `playBackRate` is altered.
+- The pitch of the audio track does not change when `playBackRate` is altered on the {{ htmlelement("video") }} element.
 - Negative values will not cause the media to play in reverse.
 - IE9+ switches to the default playback rate when an `ended` event is fired.
 - Firefox generates a `ratechange` event when the media source is substituted.
