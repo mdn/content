@@ -11,7 +11,7 @@ browser-compat: api.NDEFReader.readingerror_event
 ---
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
-The `readingerror` event of the {{DOMxRef("NDEFReader")}} interface is called whenever an error occurs during reading of NFC tags, e.g. when tags leave the reader's magnetic induction field.
+The `readingerror` event of the {{DOMxRef("NDEFReader")}} interface is fired whenever an error occurs during reading of NFC tags, e.g. when tags leave the reader's magnetic induction field.
 
 ## Syntax
 
