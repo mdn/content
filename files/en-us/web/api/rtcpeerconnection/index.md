@@ -225,23 +225,23 @@ _Also inherits methods from {{DOMxRef("EventTarget")}}._
 
 ### Obsolete methods
 
-- {{DOMxRef("RTCPeerConnection.addStream", "addStream()")}} {{Obsolete_Inline}}
+- {{DOMxRef("RTCPeerConnection.addStream", "addStream()")}} {{deprecated_inline}}
   - : Adds a {{DOMxRef("MediaStream")}} as a local source of audio or video.
     Instead of using this obsolete method,
     you should instead use {{DOMxRef("RTCPeerConnection.addTrack", "addTrack()")}}
     once for each track
     you wish to send to the remote peer.
-- {{DOMxRef("RTCPeerConnection.createDTMFSender", "createDTMFSender()")}} {{Obsolete_Inline}}
+- {{DOMxRef("RTCPeerConnection.createDTMFSender", "createDTMFSender()")}} {{deprecated_inline}}
   - : Creates a new {{DOMxRef("RTCDTMFSender")}},
     associated to a specific {{DOMxRef("MediaStreamTrack")}},
     that will be able to send {{Glossary("DTMF")}} phone signaling over the connection.
-- {{DOMxRef("RTCPeerConnection.getStreamById", "getStreamById()")}} {{Obsolete_Inline}}
+- {{DOMxRef("RTCPeerConnection.getStreamById", "getStreamById()")}} {{deprecated_inline}}
   - : Returns the {{DOMxRef("MediaStream")}} with the given id
     that is associated with local or remote end of the connection.
     This property has been replaced
     with the {{DOMxRef("RTCPeerConnection.getSenders", "getSenders()")}}
     and {{DOMxRef("RTCPeerConnection.getReceivers", "getReceivers()")}} methods.
-- {{DOMxRef("RTCPeerConnection.removeStream", "removeStream()")}} {{Obsolete_Inline}}
+- {{DOMxRef("RTCPeerConnection.removeStream", "removeStream()")}} {{deprecated_inline}}
   - : Removes a {{DOMxRef("MediaStream")}} as a local source of audio or video.
     Because this method is obsolete,
     you should instead use {{DOMxRef("RTCPeerConnection.removeTrack", "removeTrack()")}}.
@@ -278,12 +278,12 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
 
 ### Obsolete events
 
-- {{domxref("RTCPeerConnection.addstream_event", "addstream")}} {{Obsolete_Inline}}
+- {{domxref("RTCPeerConnection.addstream_event", "addstream")}} {{deprecated_inline}}
   - : Sent when a new {{domxref("MediaStream")}} has been added to the connection.
     Instead of listening for this obsolete event,
     you should listen for {{domxref("RTCPeerConnection.track_event", "track")}} events;
     one is sent for each {{domxref("MediaStreamTrack")}} added to the connection.
-- {{domxref("RTCPeerConnection.removestream_event", "removestream")}} {{Obsolete_Inline}}
+- {{domxref("RTCPeerConnection.removestream_event", "removestream")}} {{deprecated_inline}}
   - : Sent when a {{domxref("MediaStream")}} is removed from the connection.
     Instead of listening for this obsolete event,
     you should listen for {{domxref("MediaStream.removetrack_event", "removetrack")}} events on each stream.
