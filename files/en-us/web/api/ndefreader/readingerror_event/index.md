@@ -2,6 +2,7 @@
 title: 'NDEFReader: readingerror_event'
 slug: Web/API/NDEFReader/readingerror_event
 tags:
+  - Event
   - NDEF
   - Reference
   - Web NFC
