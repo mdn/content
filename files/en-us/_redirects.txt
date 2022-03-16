@@ -7517,10 +7517,10 @@
 /en-US/docs/Web/API/Connection	/en-US/docs/Web/API/NetworkInformation
 /en-US/docs/Web/API/Connection.bandwidth	/en-US/docs/Web/API/NetworkInformation
 /en-US/docs/Web/API/Connection.metered	/en-US/docs/Web/API/NetworkInformation
-/en-US/docs/Web/API/Connection.onchange	/en-US/docs/Web/API/NetworkInformation/onchange
+/en-US/docs/Web/API/Connection.onchange	/en-US/docs/Web/API/NetworkInformation/change_event
 /en-US/docs/Web/API/Connection/bandwidth	/en-US/docs/Web/API/NetworkInformation
 /en-US/docs/Web/API/Connection/metered	/en-US/docs/Web/API/NetworkInformation
-/en-US/docs/Web/API/Connection/onchange	/en-US/docs/Web/API/NetworkInformation/onchange
+/en-US/docs/Web/API/Connection/onchange	/en-US/docs/Web/API/NetworkInformation/change_event
 /en-US/docs/Web/API/Console._exception	/en-US/docs/Web/API/console/error
 /en-US/docs/Web/API/Console.count	/en-US/docs/Web/API/console/count
 /en-US/docs/Web/API/Console.debug	/en-US/docs/Web/API/console/log
@@ -8526,7 +8526,7 @@
 /en-US/docs/Web/API/Navigator.connection	/en-US/docs/Web/API/Navigator/connection
 /en-US/docs/Web/API/Navigator.connection.bandwidth	/en-US/docs/Web/API/NetworkInformation
 /en-US/docs/Web/API/Navigator.connection.metered	/en-US/docs/Web/API/NetworkInformation
-/en-US/docs/Web/API/Navigator.connection.onchange	/en-US/docs/Web/API/NetworkInformation/onchange
+/en-US/docs/Web/API/Navigator.connection.onchange	/en-US/docs/Web/API/NetworkInformation/change_event
 /en-US/docs/Web/API/Navigator.cookieEnabled	/en-US/docs/Web/API/Navigator/cookieEnabled
 /en-US/docs/Web/API/Navigator.geolocation	/en-US/docs/Web/API/Navigator/geolocation
 /en-US/docs/Web/API/Navigator.getBattery	/en-US/docs/Web/API/Navigator/getBattery
@@ -8594,10 +8594,11 @@
 /en-US/docs/Web/API/NavigatorStorage	/en-US/docs/Web/API/Navigator
 /en-US/docs/Web/API/NavigatorStorage/storage	/en-US/docs/Web/API/Navigator/storage
 /en-US/docs/Web/API/NetworkInformation.connection	/en-US/docs/Web/API/Navigator/connection
-/en-US/docs/Web/API/NetworkInformation.ontypechange	/en-US/docs/Web/API/NetworkInformation/onchange
+/en-US/docs/Web/API/NetworkInformation.ontypechange	/en-US/docs/Web/API/NetworkInformation/change_event
 /en-US/docs/Web/API/NetworkInformation/NetworkInformation.rtt	/en-US/docs/Web/API/NetworkInformation/rtt
 /en-US/docs/Web/API/NetworkInformation/connection	/en-US/docs/Web/API/Navigator/connection
-/en-US/docs/Web/API/NetworkInformation/ontypechange	/en-US/docs/Web/API/NetworkInformation/onchange
+/en-US/docs/Web/API/NetworkInformation/onchange	/en-US/docs/Web/API/NetworkInformation/change_event
+/en-US/docs/Web/API/NetworkInformation/ontypechange	/en-US/docs/Web/API/NetworkInformation/change_event
 /en-US/docs/Web/API/Node.appendChild	/en-US/docs/Web/API/Node/appendChild
 /en-US/docs/Web/API/Node.attributes	/en-US/docs/Web/API/Element/attributes
 /en-US/docs/Web/API/Node.baseURI	/en-US/docs/Web/API/Node/baseURI
@@ -10076,7 +10077,7 @@
 /en-US/docs/Web/API/window.navigator.connection	/en-US/docs/Web/API/Navigator/connection
 /en-US/docs/Web/API/window.navigator.connection.bandwidth	/en-US/docs/Web/API/NetworkInformation
 /en-US/docs/Web/API/window.navigator.connection.metered	/en-US/docs/Web/API/NetworkInformation
-/en-US/docs/Web/API/window.navigator.connection.onchange	/en-US/docs/Web/API/NetworkInformation/onchange
+/en-US/docs/Web/API/window.navigator.connection.onchange	/en-US/docs/Web/API/NetworkInformation/change_event
 /en-US/docs/Web/API/window.navigator.cookieEnabled	/en-US/docs/Web/API/Navigator/cookieEnabled
 /en-US/docs/Web/API/window.navigator.geolocation	/en-US/docs/Web/API/Navigator/geolocation
 /en-US/docs/Web/API/window.navigator.geolocation.clearWatch	/en-US/docs/Web/API/Geolocation/clearWatch

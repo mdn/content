@@ -62027,6 +62027,16 @@
       "Sebastianz"
     ]
   },
+  "Web/API/NetworkInformation/change_event": {
+    "modified": "2020-10-15T21:39:13.773Z",
+    "contributors": [
+      "fscholz",
+      "jpmedley",
+      "chrisdavidmills",
+      "YuichiNukiyama",
+      "teoli"
+    ]
+  },
   "Web/API/NetworkInformation/downlink": {
     "modified": "2020-10-15T21:56:55.792Z",
     "contributors": [
@@ -62052,16 +62062,6 @@
       "fscholz",
       "jpmedley",
       "diaboltron"
-    ]
-  },
-  "Web/API/NetworkInformation/onchange": {
-    "modified": "2020-10-15T21:39:13.773Z",
-    "contributors": [
-      "fscholz",
-      "jpmedley",
-      "chrisdavidmills",
-      "YuichiNukiyama",
-      "teoli"
     ]
   },
   "Web/API/NetworkInformation/rtt": {
