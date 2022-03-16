@@ -619,6 +619,7 @@ p {
   font-size: 1.5rem;
   color: red;
   font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.6;
 }
 ```
 
