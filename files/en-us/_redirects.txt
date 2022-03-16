@@ -9042,6 +9042,7 @@
 /en-US/docs/Web/API/Screen.unlockOrientation	/en-US/docs/Web/API/Screen/unlockOrientation
 /en-US/docs/Web/API/Screen.width	/en-US/docs/Web/API/Screen/width
 /en-US/docs/Web/API/Screen/onorientationchange	/en-US/docs/Web/API/Screen/orientationchange_event
+/en-US/docs/Web/API/ScreenOrientation/onchange	/en-US/docs/Web/API/ScreenOrientation
 /en-US/docs/Web/API/ScriptProcessorNode.bufferSize	/en-US/docs/Web/API/ScriptProcessorNode/bufferSize
 /en-US/docs/Web/API/ScriptProcessorNode.onaudioprocess	/en-US/docs/Web/API/ScriptProcessorNode/audioprocess_event
 /en-US/docs/Web/API/ScriptProcessorNode/audioprocess	/en-US/docs/Web/API/ScriptProcessorNode/audioprocess_event

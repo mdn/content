@@ -73649,15 +73649,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/ScreenOrientation/onchange": {
-    "modified": "2020-10-15T21:57:58.970Z",
-    "contributors": [
-      "sideshowbarker",
-      "cmkm",
-      "fscholz",
-      "jpmedley"
-    ]
-  },
   "Web/API/ScreenOrientation/type": {
     "modified": "2020-10-15T21:57:58.697Z",
     "contributors": [
