@@ -3,7 +3,6 @@ title: Headers.has()
 slug: Web/API/Headers/has
 tags:
   - API
-  - Experimental
   - Fetch
   - Method
   - Reference

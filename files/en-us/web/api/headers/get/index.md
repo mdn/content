@@ -3,7 +3,6 @@ title: Headers.get()
 slug: Web/API/Headers/get
 tags:
   - API
-  - Experimental
   - Fetch
   - Headers
   - Method
