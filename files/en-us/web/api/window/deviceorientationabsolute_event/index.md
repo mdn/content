@@ -50,7 +50,7 @@ An {{domxref("DeviceOrientationEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Specifications
 
-This event handler is not currently part of any specification.
+{{Specifications}}
 
 ## Browser compatibility
 
