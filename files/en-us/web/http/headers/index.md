@@ -176,10 +176,6 @@ Network client hints allow a server to choose what information is sent based on 
   - : Contains stored [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) previously sent by the server with the {{HTTPHeader("Set-Cookie")}} header.
 - {{HTTPHeader("Set-Cookie")}}
   - : Send cookies from the server to the user-agent.
-- {{HTTPHeader("Cookie2")}} {{deprecated_inline}}
-  - : Contains an HTTP cookie previously sent by the server with the {{HTTPHeader("Set-Cookie2")}} header, but has been **obsoleted**. Use {{HTTPHeader("Cookie")}} instead.
-- {{HTTPHeader("Set-Cookie2")}} {{deprecated_inline}}
-  - : Sends cookies from the server to the user-agent, but has been **obsoleted**. Use {{HTTPHeader("Set-Cookie")}} instead.
 
 ## CORS
 

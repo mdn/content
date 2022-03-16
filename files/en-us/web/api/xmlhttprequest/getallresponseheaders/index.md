@@ -41,9 +41,9 @@ None.
 ### Return value
 
 A string representing all of the response's headers (except those
-whose field name is `Set-Cookie` or `Set-Cookie2`) separated by
-{{Glossary('CRLF')}}, or `null` if no response has been received. If a
-network error happened, an empty string is returned.
+whose field name is `Set-Cookie`) separated by {{Glossary('CRLF')}},
+or `null` if no response has been received. If a network error
+happened, an empty string is returned.
 
 An example of what a raw header string looks like:
 

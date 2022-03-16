@@ -21,7 +21,6 @@ Forbidden header names start with `Proxy-` or `Sec-`, or are one of the followin
 - `Connection`
 - `Content-Length`
 - `Cookie`
-- `Cookie2`
 - `Date`
 - `DNT`
 - `Expect`

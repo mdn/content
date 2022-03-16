@@ -122901,12 +122901,6 @@
       "teoli"
     ]
   },
-  "Web/HTTP/Headers/Cookie2": {
-    "modified": "2020-10-15T21:49:05.254Z",
-    "contributors": [
-      "fscholz"
-    ]
-  },
   "Web/HTTP/Headers/Cross-Origin-Embedder-Policy": {
     "modified": "2020-10-15T22:31:47.379Z",
     "contributors": [
@@ -123615,12 +123609,6 @@
       "hamishwillee",
       "TehShrike",
       "ecxod",
-      "fscholz"
-    ]
-  },
-  "Web/HTTP/Headers/Set-Cookie2": {
-    "modified": "2020-10-15T21:49:04.908Z",
-    "contributors": [
       "fscholz"
     ]
   },
