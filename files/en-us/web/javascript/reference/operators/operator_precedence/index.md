@@ -183,8 +183,8 @@ Evaluating the right side
   </tbody>
 </table>
 
-Looking at the code snippets above, `6 / 3 / 2` is the same as
-`(6 / 3) / 2` because division is left-associative. Exponentiation, on the
+Looking at the code snippets above, `6 / 2 / 3` is the same as
+`(6 / 2) / 3` because division is left-associative. Exponentiation, on the
 other hand, is right-associative, so `2 ** 3 ** 2` is the same as
 `2 ** (3 ** 2)`. Thus, doing `(2 ** 3) ** 2` changes the order
 and results in the 64 seen in the table above.
