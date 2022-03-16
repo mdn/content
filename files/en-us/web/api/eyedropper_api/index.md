@@ -3,6 +3,7 @@ title: EyeDropper API
 slug: Web/API/EyeDropper_API
 tags:
   - API
+  - Experimental
   - EyeDropper
   - Overview
   - Reference
