@@ -15,7 +15,7 @@ The **`TextEncoderStream()`** constructor creates a new {{domxref("TextEncoderSt
 ## Syntax
 
 ```js
-let encoderStream = new TextEncoderStream();
+new TextEncoderStream();
 ```
 
 ## Examples
