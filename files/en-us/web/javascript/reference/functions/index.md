@@ -581,7 +581,7 @@ the standard. Historically, this was left unspecified, and some browsers would d
 
 In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), all
 browsers that support ES2015 handle this the same way: `zero` is defined
-only if `shouldDefineZero` is true, and only in the scope of the
+only if `shouldDefineZero` is true, and only exists within that scope of the
 `if`-block.
 
 A safer way to define functions conditionally is to assign a function expression to a

@@ -377,6 +377,10 @@ window.addEventListener("load", drawOutput);
 
 {{ EmbedLiveSample('Active_learning_Styling_a_nested_list', 700, 800) }}
 
+## Summary
+
+Lists are relatively easy to get the hang of styling once you know a few associated basic principles and specific properties. In the next article we'll move on to link styling techniques.
+
 ## See also
 
 CSS counters provide advanced tools for customizing list counting and styling, but they are quite complex. We recommend looking into these if you want to stretch yourself. See:
@@ -384,10 +388,6 @@ CSS counters provide advanced tools for customizing list counting and styling, b
 - {{cssxref("@counter-style")}}
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-reset")}}
-
-## Summary
-
-Lists are relatively easy to get the hang of styling once you know a few associated basic principles and specific properties. In the next article we'll move on to link styling techniques.
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 

@@ -88,7 +88,7 @@ _`RTCIceCandidatePairStats` is based upon {{domxref("RTCStats")}} and inherits i
 
 ### Obsolete properties
 
-The following properties have been removed from the specification and should no longer be used. You should update any existing code to avoid using them as soon as is practical. Check the {{anch("Browser compatibility", "compatibility table")}} for details on which browsers support them and in which versions.
+The following properties have been removed from the specification and should no longer be used. You should update any existing code to avoid using them as soon as is practical. Check the [compatibility table](#browser_compatibility) for details on which browsers support them and in which versions.
 
 - {{domxref("RTCIceCandidatePairStats.priority", "priority")}} {{deprecated_inline}} {{optional_inline}}
   - : An integer value indicating the candidate pair's priority.

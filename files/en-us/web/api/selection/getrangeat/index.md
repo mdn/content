@@ -3,14 +3,13 @@ title: Selection.getRangeAt()
 slug: Web/API/Selection/getRangeAt
 tags:
   - API
-  - Experimental
   - HTML Editing
   - Method
   - Reference
   - Selection
 browser-compat: api.Selection.getRangeAt
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ ApiRef("DOM") }}
 
 The **`Selection.getRangeAt()`** method returns a range object
 representing one of the ranges currently selected.

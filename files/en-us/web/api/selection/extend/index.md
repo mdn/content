@@ -3,14 +3,13 @@ title: Selection.extend()
 slug: Web/API/Selection/extend
 tags:
   - API
-  - Experimental
   - HTML Editing
   - Method
   - Reference
   - Selection
 browser-compat: api.Selection.extend
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ ApiRef("DOM") }}
 
 The **`Selection.extend()`** method moves the focus of the
 selection to a specified point. The anchor of the selection does not move. The selection

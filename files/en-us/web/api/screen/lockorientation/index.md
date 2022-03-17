@@ -124,5 +124,5 @@ Use {{domxref("ScreenOrientation.lock()")}} instead.
 
 - {{DOMxRef("Screen.orientation")}}
 - {{DOMxRef("Screen.unlockOrientation()")}}
-- {{DOMxRef("Screen.onorientationchange")}}
+- {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} event
 - [Managing screen orientation](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)

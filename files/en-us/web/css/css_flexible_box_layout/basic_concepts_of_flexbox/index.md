@@ -173,7 +173,7 @@ Using `flex: auto` is the same as using `flex: 1 1 auto`; everything is as with 
 
 Using `flex: none` will create fully inflexible flex items. It is as if you wrote `flex: 0 0 auto`. The items cannot grow or shrink but will be laid out using flexbox with a `flex-basis` of `auto`.
 
-The shorthand you often see in tutorials is `flex: 1` or `flex: 2` and so on. This is as if you used `flex: 1 1 0`. The items can grow and shrink from a `flex-basis` of 0.
+The shorthand you often see in tutorials is `flex: 1` or `flex: 2` and so on. This is as if you used `flex: 1 1 0` or `flex: 2 1 0` and so on, respectively. The items can grow and shrink from a `flex-basis` of 0.
 
 Try these shorthand values in the live example below.
 

@@ -20,7 +20,7 @@ that this channel is not needed anymore.
 ## Syntax
 
 ```js
-var str = channel.close();
+channel.close();
 ```
 
 ## Example

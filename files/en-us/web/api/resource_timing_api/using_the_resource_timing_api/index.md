@@ -19,7 +19,7 @@ The **Resource Timing API** provides a way to retrieve and analyze detailed netw
 
 The interface's properties create a _resource loading timeline_ with {{domxref("DOMHighResTimeStamp","high-resolution timestamps")}} for network events such as redirect start and end times, fetch start, DNS lookup start and end times, response start and end times, etc. The interface also includes other properties that provide data about the size of the fetched resource as well as the _type_ of resource that initiated the fetch.
 
-This document shows the use of Resource Timing interfaces. For more details about the interfaces, including examples, see each interface's reference page and the references in the {{anch("See also")}} section.
+This document shows the use of Resource Timing interfaces. For more details about the interfaces, including examples, see each interface's reference page and the references in the [See also](#see_also) section.
 
 A _live_ version of the examples is available on [Github](https://mdn.github.io/dom-examples/performance-apis/Using_the_Resource_Timing_API.html), as is the [source code](https://github.com/mdn/dom-examples/blob/master/performance-apis/Using_the_Resource_Timing_API.html). Pull requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
 
@@ -179,7 +179,7 @@ function set_resource_timing_buffer_size(n) {
 }
 ```
 
-The {{domxref("Performance")}} interface has a {{domxref("Performance.onresourcetimingbufferfull","onresourcetimingbufferfull")}} event handler that gets called (with an {{domxref("Event")}} of type {{domxref("Event.type")}} of "{{event("resourcetimingbufferfull")}}") when the browser's resource performance entry buffer is full. The following code example sets a {{domxref("Performance.onresourcetimingbufferfull","onresourcetimingbufferfull")}} event callback in the `init()` function.
+The {{domxref("Performance.resourcetimingbufferfull_event","resourcetimingbufferfull")}} event is fired at the {{domxref("Performance")}} object when the browser's resource performance entry buffer is full. The following code example sets a {{domxref("Performance.resourcetimingbufferfull_event","onresourcetimingbufferfull")}} event handler in the `init()` function.
 
 ```js
 function buffer_full(event) {

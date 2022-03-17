@@ -53,6 +53,8 @@ is closed. For this reason, you should not overuse any function that creates a d
 box (or modal window). Regardless, there are good reasons to [avoid using dialog boxes for
 confirmation](https://alistapart.com/article/neveruseawarning/).
 
+Alternatively {{HTMLElement("dialog")}} element can be used for confirmations.
+
 ## Specifications
 
 {{Specifications}}
@@ -63,5 +65,6 @@ confirmation](https://alistapart.com/article/neveruseawarning/).
 
 ## See also
 
+- {{HTMLElement("dialog")}} element
 - {{domxref("window.alert()")}}
 - {{domxref("window.prompt()")}}

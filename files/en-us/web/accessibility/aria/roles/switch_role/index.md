@@ -32,6 +32,28 @@ Assistive technologies may choose to represent `switch` widgets with a specializ
 
 Since a switch is an interactive control, it must be focusable and keyboard accessible. If the role is applied to a non-focusable element, use the `tabindex` attribute to change this. The expected keyboard shortcut for toggling the value of a switch is the <kbd>Space</kbd> key. The developer is required to change the value of the `aria-checked` attribute dynamically when the switch is toggled.
 
+### All descendants are presentational
+
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `switch`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `switch` element as it is a role that does not support semantic children.
+
+For example, consider the following `switch` element, which contains a heading.
+
+```html
+<div role="switch"><h3>Title of my switch</h3></div>
+```
+
+Because descendants of `switch` are presentational, the following code is equivalent:
+
+```html
+<div role="switch"><h3 role="presentation">Title of my switch</h3></div>
+```
+
+From the assistive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
+
+```html
+<div role="switch">Title of my switch</div>
+```
+
 ### Associated ARIA roles, states, and properties
 
 - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute

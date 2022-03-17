@@ -59,7 +59,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 ## Example
 
-In the following code snippet, we open a database asynchronously and make a request; `onerror` and `onsuccess` functions are included to handle the success and error cases. For a full working example, see our [To-do Notifications](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) app ([view example live](https://chrisdavidmills.github.io/to-do-notifications/).)
+In the following code snippet, we open a database asynchronously and make a request; `onerror` and `onsuccess` functions are included to handle the success and error cases. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app ([view example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
 var db;

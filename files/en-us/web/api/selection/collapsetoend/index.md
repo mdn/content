@@ -3,14 +3,13 @@ title: Selection.collapseToEnd()
 slug: Web/API/Selection/collapseToEnd
 tags:
   - API
-  - Experimental
   - HTML Editing
   - Method
   - Reference
   - Selection
 browser-compat: api.Selection.collapseToEnd
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ ApiRef("DOM") }}
 
 The **`Selection.collapseToEnd()`** method collapses the
 selection to the end of the last range in the selection. If the content of the selection

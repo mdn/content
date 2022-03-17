@@ -246,9 +246,9 @@ For example:
 - [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) are a great new feature for performing asynchronous operations and making sure those operations are complete before code that relies on their results is used for something else.
   As an example, the [Fetch API](/en-US/docs/Web/API/fetch) (a modern equivalent to [XMLHTTPRequest](/en-US/docs/Web/API/XMLHttpRequest)) uses promises to fetch resources across the network and make sure that the response has been returned before they are used (for example, displaying an image inside an {{htmlelement("img")}} element).
   They are not supported in IE at all but are supported across all modern browsers.
-- Arrow functions provide a shorter, more convenient syntax for writing [anonymous functions](/en-US/docs/Learn/JavaScript/Building_blocks/Functions#anonymous_functions), which also has other advantages (see [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)).
+- [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter, more convenient syntax for writing [anonymous functions](/en-US/docs/Learn/JavaScript/Building_blocks/Functions#anonymous_functions).
   For a quick example, see [arrow-function.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html) (see the [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/arrow-function.html) also).
-  Arrow functions are supported across all modern browsers, except for IE and Safari.
+  Arrow functions are supported across all modern browsers, except for IE.
 - Declaring [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) at the top of your JavaScript code causes it to be parsed with a stricter set of rules, meaning that more warnings and errors will be thrown, and some things will be disallowed that would otherwise be acceptable.
   It is arguably a good idea to use strict mode, as it makes for better, more efficient code, however it has limited/patchy support across browsers (see [Strict mode in browsers](/en-US/docs/Web/JavaScript/Reference/Strict_mode#strict_mode_in_browsers)).
 - [Typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) allow JavaScript code to access and manipulate raw binary data, which is necessary as browser APIs for example start to manipulate streams of raw video and audio data.
@@ -283,7 +283,7 @@ if ("geolocation" in navigator) {
 
 You could also write such a test for a CSS feature, for example by testing for the existence of _[element.style.property](/en-US/docs/Web/API/HTMLElement/style)_ (e.g. `paragraph.style.transform !== undefined`). But for both CSS and JavaScript, it is probably better to use an established feature detection library rather than writing your own all the time. Modernizr is the industry standard for feature detection tests.
 
-As a last point, don't confuse feature detection with **browser sniffing** (detecting what specific browser is accessing the site) — this is a terrible practice that should be discouraged at all costs. See {{anch("Using bad browser sniffing code")}}, later on, for more details.
+As a last point, don't confuse feature detection with **browser sniffing** (detecting what specific browser is accessing the site) — this is a terrible practice that should be discouraged at all costs. See [Using bad browser sniffing code](#using_bad_browser_sniffing_code), later on, for more details.
 
 > **Note:** Some features are known to be undetectable — see Modernizr's list of [Undetectables](https://github.com/Modernizr/Modernizr/wiki/Undetectables).
 
@@ -339,7 +339,7 @@ Let's work through an exercise — in this example we will use a Fetch polyfill 
     });
     ```
 
-6. Now if you load it in a browser that doesn't support Fetch (Safari and IE are obvious candidates), you should still see the flower image appear — cool!
+6. Now if you load it in a browser that doesn't support [Fetch](/en-US/docs/Web/API/fetch) (IE is an obvious candidate), you should still see the flower image appear — cool!
     ![](fetch-image.jpg)
 
 > **Note:** You can find our finished version at [fetch-polyfill-finished.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) (see also the [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)).
@@ -444,7 +444,7 @@ Many developers implemented bad browser sniffing code and didn't maintain it, an
 
 > **Note:** You should read [History of the browser user-agent string](https://webaim.org/blog/user-agent-string-history/) by Aaron Andersen for a useful and amusing take on this situation.
 
-The lesson to be learned here is — NEVER use browser sniffing. The only real use case for browser sniffing code in the modern day is if you are implementing a fix for a bug in a very specific version of a particular browser. But even then, most bugs get fixed pretty quickly in browser vendor rapid release cycles. It won't come up very often. {{anch("Feature detection")}} is almost always a better option — if you detect whether a feature is supported, you won't need to change your code when new browser versions come out, and the tests are much more reliable.
+The lesson to be learned here is — NEVER use browser sniffing. The only real use case for browser sniffing code in the modern day is if you are implementing a fix for a bug in a very specific version of a particular browser. But even then, most bugs get fixed pretty quickly in browser vendor rapid release cycles. It won't come up very often. [Feature detection](#feature_detection) is almost always a better option — if you detect whether a feature is supported, you won't need to change your code when new browser versions come out, and the tests are much more reliable.
 
 If you come across browser sniffing when joining an existing project, look at whether it can be replaced with something more sensible. Browser sniffing causes all kind of interesting bugs, like {{bug(1308462)}}.
 

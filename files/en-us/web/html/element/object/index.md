@@ -20,46 +20,23 @@ The **`<object>`** [HTML](/en-US/docs/Web/HTML) element represents an external r
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
-          >Content categories</a
-        >
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >;
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >;
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#embedded_content"
-          >embedded content</a
-        >, palpable content; if the element has a
-        {{htmlattrxref("usemap","object")}} attribute,
-        <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content"
-          >interactive content</a
-        >;
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_listed"
-          >listed</a
-        >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_submittable"
-          >submittable</a
-        >
-        <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#form-associated_content"
-          >form-associated</a
-        >
-        element.
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>;
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>;
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#embedded_content">embedded content</a>, palpable content; if the element has a
+        {{htmlattrxref("usemap","object")}} attribute, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content">interactive content</a>;
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_listed">listed</a>,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_submittable">submittable</a>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form-associated_content">form-associated</a> element.
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
         zero or more {{HTMLElement("param")}} elements, then
-        <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#transparent_content_model"
-          >transparent</a
-        >.
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#transparent_content_model">transparent</a>.
       </td>
     </tr>
     <tr>
@@ -69,25 +46,19 @@ The **`<object>`** [HTML](/en-US/docs/Web/HTML) element represents an external r
     <tr>
       <th scope="row">Permitted parents</th>
       <td>
-        Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#embedded_content"
-          >embedded content</a
-        >.
+        Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#embedded_content">embedded content</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
-        >
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a>
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("application")}}, {{ARIARole("document")}},
-        {{ARIARole("image")}}
+        {{ARIARole("application")}}, {{ARIARole("document")}}, {{ARIARole("image")}}
       </td>
     </tr>
     <tr>
@@ -132,18 +103,17 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Examples
 
-### Embed a flash movie
+### Embed a YouTube Video
 
 ```html
-<!-- Embed a flash movie -->
-<object data="movie.swf"
-  type="application/x-shockwave-flash"></object>
-
-<!-- Embed a flash movie with parameters -->
-<object data="movie.swf" type="application/x-shockwave-flash">
-  <param name="foo" value="bar">
+<object type="video/mp4"
+    data="https://www.youtube.com/watch?v=Sp9ZfSvpf7A"
+    width="1280"
+    height="720">
 </object>
 ```
+  
+Note that a `type` field is normally specified, but is not needed for youtube videos.
 
 ## Specifications
 

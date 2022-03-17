@@ -17,7 +17,7 @@ forward one page in the session history. It has the same effect as calling
 {{domxref("History.go", "history.go(1)")}}.
 
 This method is {{glossary("asynchronous")}}. Add a listener for the
-{{event("popstate")}} event in order to determine when the navigation has completed.
+{{domxref("Window/popstate_event", "popstate")}} event in order to determine when the navigation has completed.
 
 ## Syntax
 

@@ -38,7 +38,9 @@ For other products based on Gecko, the string can take one of two forms, where t
 `Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion appname/appversion`
 
 - `appname/appversion` indicates the application name and version. For instance, this could be "`Camino/2.1.1`", or "`SeaMonkey/2.7.1`".
-- `Firefox/firefoxversion` is an optional compatibility token that some Gecko-based browsers may choose to incorporate, to achieve maximum compatibility with websites that expect Firefox. `firefoxversion` will generally represent the equivalent Firefox release corresponding to the given Gecko version. Some Gecko-based browsers may not opt into using this token; for this reason, sniffers should be looking for Gecko — not Firefox! Whether this token appears is controlled by the _"general.useragent.compatMode.firefox"_ boolean pref.
+- `Firefox/firefoxversion` is an optional compatibility token that some Gecko-based browsers may choose to incorporate, to achieve maximum compatibility with websites that expect Firefox. `firefoxversion` will generally represent the equivalent Firefox release corresponding to the given Gecko version. Some Gecko-based browsers may not opt into using this token; for this reason, sniffers should be looking for Gecko — not Firefox!
+
+Prior to Firefox 4 and Gecko 2.0, it was possible for extensions and plug-ins to add user agent parts, but that has not been possible since {{ Bug(581008) }}.
 
 ## Mobile and Tablet indicators
 
@@ -218,10 +220,6 @@ Firefox for iOS uses the default Mobile Safari UA string, with an additional **F
 
 Regarding the deviation on iPad form factor, see this [issue](https://github.com/mozilla-mobile/firefox-ios/issues/6620).
 
-## Firefox Web Runtime
-
-The Web Runtime uses the same user agent string as desktop Firefox.
-
 ## Other Gecko-based browsers
 
 These are some sample UA strings from other Gecko-based browsers on various platforms. Note that many of these have not yet been released on Gecko 2.0!
@@ -233,12 +231,6 @@ These are some sample UA strings from other Gecko-based browsers on various plat
 | SeaMonkey on Windows           | Mozilla/5.0 (Windows NT 5.2; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 SeaMonkey/2.7.1                 |
 | SeaMonkey on Mac               | Mozilla/5.0 (Macintosh; Intel Mac OS X 10.5; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 SeaMonkey/2.7.1 |
 | SeaMonkey on Linux             | Mozilla/5.0 (X11; Linux i686; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 SeaMonkey/2.7.1                |
-
-## Implementation notes for applications, vendors, and extensions
-
-Prior to Firefox 4 and Gecko 2.0, it was possible for extensions to add user agent parts through the `general.useragent.extra.identifier` preferences. But that has not been possible since {{ Bug(581008) }}.
-
-In the past, specific plug-ins, add-ons or extensions added user agent parts to notify sites they were installed. The recommended way to do this, if it's absolutely necessary (remember that it slows down every request) is to [set a custom HTTP header](/en-US/docs/Setting_HTTP_request_headers).
 
 ## See also
 

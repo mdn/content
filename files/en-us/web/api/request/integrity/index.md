@@ -3,7 +3,6 @@ title: Request.integrity
 slug: Web/API/Request/integrity
 tags:
   - API
-  - Experimental
   - Fetch
   - Property
   - Reference

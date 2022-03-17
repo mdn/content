@@ -31,8 +31,7 @@ permission.
 
 > **Note:** The asynchronous Clipboard and [Permissions APIs](/en-US/docs/Web/API/Permissions_API) are still in the
 > process of being integrated into most browsers, so they often deviate from the
-> official rules for permissions and the like. Be sure to review the {{anch("Browser
-    compatibility", "compatibility table")}} before using these methods.
+> official rules for permissions and the like. Be sure to review the [compatibility table](#browser_compatibility) before using these methods.
 
 ## Syntax
 

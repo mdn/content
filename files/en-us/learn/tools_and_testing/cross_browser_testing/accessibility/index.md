@@ -178,7 +178,7 @@ Text alternatives are very important for accessibility — if a person has a vis
 
 > **Note:** For more information, read [Text alternatives](/en-US/docs/Learn/Accessibility/HTML#text_alternatives).
 
-Missing alt text can be tested for in a number of ways, for example using accessibility {{anch("Auditing tools")}}.
+Missing alt text can be tested for in a number of ways, for example using accessibility [Auditing tools](#auditing_tools).
 
 Alt text is slightly more complex for video and audio content. There is a way to define text tracks (e.g. subtitles) and display them when video is being played, in the form of the {{htmlelement("track")}} element, and the [WebVTT](/en-US/docs/Web/API/WebVTT_API) format (see [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) for a detailed tutorial). [Browser compatibility](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video#browser_compatibility) for these features is fairly good, but if you want to provide text alternatives for audio or support older browsers, a simple text transcript presented somewhere on the page or on a separate page might be a good idea.
 
@@ -445,7 +445,7 @@ VO has many keyboard commands, and we won't list them all here. The basic ones y
   </tbody>
 </table>
 
-This seems like a lot of commands, but it isn't so bad when you get used to it, and VO regularly gives you reminders of what commands to use in certain places. Have a play with VO now; you can then go on to play with some of our examples in the {{anch("Screenreader testing")}} section.
+This seems like a lot of commands, but it isn't so bad when you get used to it, and VO regularly gives you reminders of what commands to use in certain places. Have a play with VO now; you can then go on to play with some of our examples in the [Screenreader testing](#screenreader_testing) section.
 
 #### NVDA
 

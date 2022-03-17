@@ -82,7 +82,7 @@ element that allows multiple selections). The `for` statement declares the
 variable `i` and initializes it to `0`. It checks that
 `i` is less than the number of options in the `<select>`
 element, performs the succeeding `if` statement, and increments
-`i` by after each pass through the loop.
+`i` by 1 after each pass through the loop.
 
 ```html
 <form name="selectForm">

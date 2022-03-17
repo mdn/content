@@ -90,7 +90,7 @@ Bear in mind that some built-in browser functions are not part of the core JavaS
 
 ## Functions versus methods
 
-Programmers call **functions** that are part of objects **methods**. You don't need to learn about the inner workings of structured JavaScript objects yet — you can wait until our later module that will teach you all about the inner workings of objects, and how to create your own. For now, we just wanted to clear up any possible confusion of method versus function — you are likely to meet both terms as you look at the available related resources across the Web.
+**Functions** that are part of objects are called **methods**. You don't need to learn about the inner workings of structured JavaScript objects yet — you can wait until our later module that will teach you all about the inner workings of objects, and how to create your own. For now, we just wanted to clear up any possible confusion of method versus function — you are likely to meet both terms as you look at the available related resources across the Web.
 
 The built-in code we've made use of so far come in both forms: **functions** and **methods.** You can check the full list of the built-in functions, as well as the built-in objects and their corresponding methods [here](/en-US/docs/Web/JavaScript/Reference/Global_Objects).
 

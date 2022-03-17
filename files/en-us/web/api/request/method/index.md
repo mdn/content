@@ -3,7 +3,6 @@ title: Request.method
 slug: Web/API/Request/method
 tags:
   - API
-  - Experimental
   - Fetch
   - Property
   - Reference

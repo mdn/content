@@ -44,7 +44,7 @@ In this article we cover the absolute basics of HTML. To get you started, this a
 
 ## What is HTML?
 
-{{glossary("HTML")}} (Hypertext Markup Language) is not a programming language. It is a _markup language_ that tells web browsers how to structure the web pages you visit. It can be as complicated or as simple as the web developer wants it to be. HTML consists of a series of {{glossary("Element", "elements")}}, which you use to enclose, wrap, or _mark up_ different parts of content to make it appear or act in a certain way. The enclosing {{glossary("Tag", "tags")}} can make content into a hyperlink to connect to another page, italicize words, and so on. For example, consider the following line of text:
+{{glossary("HTML")}} (Hypertext Markup Language) is a _markup language_ that tells web browsers how to structure the web pages you visit. It can be as complicated or as simple as the web developer wants it to be. HTML consists of a series of {{glossary("Element", "elements")}}, which you use to enclose, wrap, or _mark up_ different parts of content to make it appear or act in a certain way. The enclosing {{glossary("Tag", "tags")}} can make content into a hyperlink to connect to another page, italicize words, and so on. For example, consider the following line of text:
 
 ```
 My cat is very grumpy
@@ -256,6 +256,8 @@ This would output the following:
 {{ EmbedLiveSample('Empty_elements', 700, 300, "", "") }}
 
 > **Note:** Empty elements are sometimes called _void elements_.
+
+> **Note:** In HTML, there is no requirement to add a `/` at the end of an empty element's tag, for example: `<img src="images/cat.jpg" alt="cat" />`. However, it is also a valid syntax and you may do this when you want your HTML to be valid XML.
 
 ## Attributes
 

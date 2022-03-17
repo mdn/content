@@ -41,7 +41,7 @@ element = document.querySelector(selectors);
 > **Note:** Characters that are not part of standard CSS syntax must be
 > escaped using a backslash character. Since JavaScript also uses backslash escaping, be
 > especially careful when writing string literals using these characters. See
-> {{anch("Escaping special characters")}} for more information.
+> [Escaping special characters](#escaping_special_characters) for more information.
 
 ### Return value
 

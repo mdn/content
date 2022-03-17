@@ -117,6 +117,10 @@ background-size: 25% 25%;
 
 And, yes, you can mix and match different angle units, but don't. The above is hard to read.
 
+### Formal syntax
+
+{{csssyntax}}
+
 ## Accessibility concerns
 
 Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. While it is possible to create pie charts, checkerboards, and other effects with conic gradients, CSS images provide no native way to assign alternative text, and therefore the image represented by the conic gradient will not be accessible to screen reader users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.

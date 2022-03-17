@@ -33,11 +33,6 @@ Workers may themselves spawn new workers, as long as those workers are hosted at
 
 _Inherits properties from its parent, {{domxref("EventTarget")}}._
 
-### Event handlers
-
-- {{domxref("Worker.onerror")}}
-  - : An {{ domxref("EventListener") }} called whenever an {{domxref("ErrorEvent")}} of type `error` event occurs.
-
 ## Methods
 
 _Inherits methods from its parent, {{domxref("EventTarget")}}._
@@ -49,16 +44,16 @@ _Inherits methods from its parent, {{domxref("EventTarget")}}._
 
 ## Events
 
+- [`error`](/en-US/docs/Web/API/Worker/error_event)
+  - : Fires when an error occurs in the worker.
 - [`message`](/en-US/docs/Web/API/Worker/message_event)
   - : Fires when the worker's parent receives a message from that worker.
 - [`messageerror`](/en-US/docs/Web/API/Worker/messageerror_event)
   - : Fires when a `Worker` object receives a message that can't be [deserialized](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 - [`rejectionhandled`](/en-US/docs/Web/API/Window/rejectionhandled_event)
   - : Fires every time a {{jsxref("Promise")}} rejects, regardless of whether or not there is a handler to catch the rejection.
-    Also available through the [`onrejectionhandled`](/en-US/docs/Web/API/WindowEventHandlers/onrejectionhandled) event handler property.
 - [`unhandledrejection`](/en-US/docs/Web/API/Window/unhandledrejection_event)
   - : Fires when a {{jsxref("Promise")}} rejects with no handler to catch the rejection.
-    Also available using the [`onunhandledrejection`](/en-US/docs/Web/API/WindowEventHandlers/onunhandledrejection) event handler property.
 
 ## Example
 

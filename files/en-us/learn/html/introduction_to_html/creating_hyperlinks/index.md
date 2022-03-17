@@ -62,7 +62,7 @@ For example, the BBC homepage contains many links that point not only to multipl
 
 ## Anatomy of a link
 
-A basic link is created by wrapping the text or other content, see {{anch("Block level links")}}, inside an {{htmlelement("a")}} element and using the {{htmlattrxref("href", "a")}} attribute, also known as a **Hypertext Reference**, or **target**, that contains the web address.
+A basic link is created by wrapping the text or other content, see [Block level links](#block_level_links), inside an {{htmlelement("a")}} element and using the {{htmlattrxref("href", "a")}} attribute, also known as a **Hypertext Reference**, or **target**, that contains the web address.
 
 ```html
 <p>I'm creating a link to
@@ -322,7 +322,7 @@ Here's an example that includes a cc, bcc, subject and body:
 </a>
 ```
 
-> **Note:** The values of each field must be URL-encoded, that is with non-printing characters (invisible characters like tabs, carriage returns, and page breaks) and spaces [percent-escaped](https://en.wikipedia.org/wiki/Percent-encoding).
+> **Note:** The values of each field must be URL-encoded with non-printing characters (invisible characters like tabs, carriage returns, and page breaks) and spaces [percent-escaped](https://en.wikipedia.org/wiki/Percent-encoding).
 > Also, note the use of the question mark (`?`) to separate the main URL from the field values, and ampersands (&) to separate each field in the `mailto:` URL.
 > This is standard URL query notation.
 > Read [The GET method](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data#the_get_method) to understand what URL query notation is more commonly used for.

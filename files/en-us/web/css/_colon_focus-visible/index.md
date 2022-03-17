@@ -74,10 +74,12 @@ custom-button:focus {
   background: lightgrey;
 }
 
-custom-button:focus:not(:focus-visible) {
-  /* Remove the focus indicator on mouse-focus for browsers
-     that do support :focus-visible */
-  background: transparent;
+@supports selector(:focus-visible) {
+  custom-button:focus {
+    /* Remove the focus indicator on mouse-focus for browsers
+       that do support :focus-visible */
+    background: transparent;
+  }
 }
 
 custom-button:focus-visible {
@@ -89,11 +91,7 @@ custom-button:focus-visible {
 }
 ```
 
-{{EmbedLiveSample("Selectively_showing_the_focus_indicator", "100%", 60)}}
-
-## Polyfill
-
-You can polyfill `:focus-visible` using [focus-visible.js](https://github.com/WICG/focus-visible).
+{{EmbedLiveSample("Selectively_showing_the_focus_indicator", "100%", 72)}}
 
 ## Accessibility concerns
 
@@ -119,3 +117,4 @@ It may not be obvious as to why the focus indicator is appearing and disappearin
 
 - {{CSSxRef(":focus")}}
 - {{CSSxRef(":focus-within")}}
+- [A polyfill for `:focus-visible`](https://github.com/WICG/focus-visible)

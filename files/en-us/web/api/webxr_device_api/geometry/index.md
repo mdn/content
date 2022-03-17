@@ -37,7 +37,7 @@ WebGL measures all distances and lengths in **meters**. WebXR inherits this stan
 
 ![Diagram showing a WebXR space whose X, Y, and Z coordinate axes each have a minimum value of -1 and a maximum of 1.](defaultspacedimensions.svg)
 
-This two cubic meter space encompasses the entire universe for the purposes of your code. Everything you draw must have its coordinates mapped to fit into this space, either explicitly within your code, or by using a transform to adjust the coordinates of all vertices. The most efficient way, of course, is to design your objects and code to use the same coordinate system as WebGL does.
+This eight cubic meter space encompasses the entire universe for the purposes of your code. Everything you draw must have its coordinates mapped to fit into this space, either explicitly within your code, or by using a transform to adjust the coordinates of all vertices. The most efficient way, of course, is to design your objects and code to use the same coordinate system as WebGL does.
 
 The WebGL coordinates and lengths are transformed automatically at render time to the size of the viewport in which the scene is being rendered.
 

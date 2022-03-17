@@ -56,7 +56,7 @@ That being said, you can also use Vue to write entire Single Page Applications (
 
 In addition to allowing you to progressively integrate Vue into your applications, Vue also provides a progressive approach to writing markup. Like most frameworks, Vue lets you create reusable blocks of markup via components. Most of the time, Vue components are written using a special HTML template syntax. When you need more control than the HTML syntax allows, you can write JSX or plain JavaScript functions to define your components.
 
-As you work through this tutorial, you might want to keep the [Vue guide](https://vuejs.org/v2/guide/) and [API documentation](https://vuejs.org/v2/api/) open in other tabs, so you can refer to them if you want more information on any sub topic.
+As you work through this tutorial, you might want to keep the [Vue guide](https://vuejs.org/guide/introduction.html) and [API documentation](https://vuejs.org/api/) open in other tabs, so you can refer to them if you want more information on any sub topic.
 For a good (but potentially biased) comparison between Vue and many of the other frameworks, see [Vue Docs: Comparison with Other Frameworks](https://vuejs.org/v2/guide/comparison.html).
 
 ## Installation

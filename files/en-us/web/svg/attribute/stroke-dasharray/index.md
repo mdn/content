@@ -82,10 +82,6 @@ html,body,svg { height:100% }
 
     If an odd number of values is provided, then the list of values is repeated to yield an even number of values. Thus, `5,3,2` is equivalent to `5,3,2,5,3,2`.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Specifications
 
 <table class="no-markdown">
@@ -113,3 +109,7 @@ html,body,svg { height:100% }
     </tr>
   </tbody>
 </table>
+
+## Browser compatibility
+
+{{Compat}}

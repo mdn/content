@@ -186,7 +186,7 @@ The `log()` function creates the log output by getting the current time from a {
 Then the message is appended to the box with the class `"log"`.
 
 We add a second method that logs information about {{domxref("MouseEvent")}} based events
-(such as {{event("mousedown")}}, {{event("click")}}, and {{event("mouseenter")}}):
+(such as {{domxref("Element/mousedown_event", "mousedown")}}, {{domxref("Element/click_event", "click")}}, and {{domxref("Element/mouseenter_event", "mouseenter")}}):
 
 ```js
 function logEvent(event) {

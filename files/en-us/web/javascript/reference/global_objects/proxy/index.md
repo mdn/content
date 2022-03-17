@@ -216,10 +216,14 @@ console.log(Peter.age);     // 13
 
 ### Manipulating DOM nodes
 
-Sometimes you want to toggle the attribute or class name of two different elements. Here's how using the {{jsxref("Global_Objects/Proxy/Proxy/set", "set()")}} handler.
+In this example we use `Proxy` to toggle an attribute of two different elements: so when we set the attribute on one element, the attribute is unset on the other one.
+
+We create a `view` object which is a proxy for an object with a `selected` property. The proxy handler defines the {{jsxref("Proxy/Proxy/set", "set()")}} handler.
+
+When we assign an HTML element to `view.selected`, the element's `'aria-selected'` attribute is set to `true`. If we then assign a different element to `view.selected`, this element's `'aria-selected'` attribute is set to `true` and the previous element's `'aria-selected'` attribute is automatically set to `false`.
 
 ```js
-let view = new Proxy({
+const view = new Proxy({
   selected: null
 },
 {
@@ -243,17 +247,23 @@ let view = new Proxy({
   }
 });
 
-let i1 = view.selected = document.getElementById('item-1');  //giving error here, i1 is null
-console.log(i1.getAttribute('aria-selected'));
-//  'true'
+const item1 = document.getElementById('item-1');
+const item2 = document.getElementById('item-2');
 
-let i2 = view.selected = document.getElementById('item-2');
-console.log(i1.getAttribute('aria-selected'));
-//  'false'
+// select item1:
+view.selected = item1;
 
-console.log(i2.getAttribute('aria-selected'));
-//  'true'
-Note: even if selected: !null, then giving oldval.setAttribute is not a function
+console.log(`item1: ${item1.getAttribute('aria-selected')}`);
+// item1: true
+
+// selecting item2 de-selects item1:
+view.selected = item2;
+
+console.log(`item1: ${item1.getAttribute('aria-selected')}`);
+// item1: false
+
+console.log(`item2: ${item2.getAttribute('aria-selected')}`);
+// item2: true
 ```
 
 ### Value correction and an extra property

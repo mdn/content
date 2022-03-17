@@ -398,40 +398,28 @@ Now to define the `setTime()` function. Add the following at the bottom of your 
 
 ```js
 function setTime() {
-  let minutes = Math.floor(media.currentTime / 60);
-  let seconds = Math.floor(media.currentTime - minutes * 60);
-  let minuteValue;
-  let secondValue;
+  const minutes = Math.floor(media.currentTime / 60);
+  const seconds = Math.floor(media.currentTime - minutes * 60);
 
-  if (minutes < 10) {
-    minuteValue = '0' + minutes;
-  } else {
-    minuteValue = minutes;
-  }
+  const minuteValue = minutes.toString().padStart(2, '0');
+  const secondValue = seconds.toString().padStart(2, '0');
 
-  if (seconds < 10) {
-    secondValue = '0' + seconds;
-  } else {
-    secondValue = seconds;
-  }
-
-  let mediaTime = minuteValue + ':' + secondValue;
+  const mediaTime = `${minuteValue}:${secondValue}`;
   timer.textContent = mediaTime;
 
-  let barLength = timerWrapper.clientWidth * (media.currentTime/media.duration);
-  timerBar.style.width = barLength + 'px';
+  const barLength = timerWrapper.clientWidth * (media.currentTime/media.duration);
+  timerBar.style.width = `${barLength}px`;
 }
 ```
 
 This is a fairly long function, so let's go through it step by step:
 
 1. First of all, we work out the number of minutes and seconds in the {{domxref("HTMLMediaElement.currentTime")}} value.
-2. Then we initialize two more variables — `minuteValue` and `secondValue`.
-3. The two `if` statements work out whether the number of minutes and seconds are less than 10. If so, they add a leading zero to the values, in the same way that a digital clock display works.
-4. The actual time value to display is set as `minuteValue` plus a colon character plus `secondValue`.
-5. The {{domxref("Node.textContent")}} value of the timer is set to the time value, so it displays in the UI.
-6. The length we should set the inner `<div>` to is worked out by first working out the width of the outer `<div>` (any element's {{domxref("Element.clientWidth", "clientWidth")}} property will contain its length), and then multiplying it by the {{domxref("HTMLMediaElement.currentTime")}} divided by the total {{domxref("HTMLMediaElement.duration")}} of the media.
-7. We set the width of the inner `<div>` to equal the calculated bar length, plus "px", so it will be set to that number of pixels.
+2. Then we initialize two more variables — `minuteValue` and `secondValue`. We use {{jsxref("String/padStart", "padStart()")}} to make each value 2 characters long, even if the numeric value is only a single digit.
+3. The actual time value to display is set as `minuteValue` plus a colon character plus `secondValue`.
+4. The {{domxref("Node.textContent")}} value of the timer is set to the time value, so it displays in the UI.
+5. The length we should set the inner `<div>` to is worked out by first working out the width of the outer `<div>` (any element's {{domxref("Element.clientWidth", "clientWidth")}} property will contain its length), and then multiplying it by the {{domxref("HTMLMediaElement.currentTime")}} divided by the total {{domxref("HTMLMediaElement.duration")}} of the media.
+6. We set the width of the inner `<div>` to equal the calculated bar length, plus "px", so it will be set to that number of pixels.
 
 #### Fixing play and pause
 

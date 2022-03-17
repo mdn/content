@@ -293,7 +293,7 @@ The `max-age=N` request directive indicates that the client allows a stored resp
 Cache-Control: max-age=3600
 ```
 
-In the case above, if the response with `Cache-Control: max-age=604800` was stored in caches 3 hours ago, the cache couldn't reuse that response.
+In the case above, if the response with `Cache-Control: max-age=604800` was generated more than 3 hours ago (calculated from `max-age` and the `Age` header), the cache couldn't reuse that response.
 
 Many browsers use this directive for **reloading**, as explained below.
 
@@ -317,7 +317,7 @@ The `max-stale=N` request directive indicates that the client allows a stored re
 Cache-Control: max-stale=3600
 ```
 
-In the case above, if the response with `Cache-Control: max-age=604800` was stored on caches 3 hours ago, the cache couldn't reuse that response.
+In the case above, if the response with `Cache-Control: max-age=604800` was generated more than 3 hours ago (calculated from `max-age` and the `Age` header), the cache couldn't reuse that response.
 
 Clients can use this header when the origin server is down or too slow and can accept cached responses from caches even if they are a bit old.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Fundamental layout comprehension'
+title: "Fundamental layout comprehension"
 slug: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
 tags:
   - Assessment
@@ -8,6 +8,7 @@ tags:
   - Layout
   - Learn
 ---
+
 {{LearnSidebar}}
 {{PreviousMenu("Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
 
@@ -15,7 +16,7 @@ If you have worked through this module then you will have already covered the ba
 
 > **Note:** You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >
-> If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
+> If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
 
 ## Project Brief
 
@@ -63,10 +64,10 @@ If you would like your work assessed, or are stuck and want to ask for help:
 1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
 2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
 
-    - A descriptive title such as "Assessment wanted for Fundamental Layout Comprehension".
-    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
-    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
-    - A link to the actual task or assessment page, so we can find the question you want help with.
+   - A descriptive title such as "Assessment wanted for Fundamental Layout Comprehension".
+   - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
+   - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
+   - A link to the actual task or assessment page, so we can find the question you want help with.
 
 {{PreviousMenu("Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
 
@@ -83,4 +84,4 @@ If you would like your work assessed, or are stuck and want to ask for help:
 - [Beginner's guide to media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
 - [Legacy layout methods](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
 - [Supporting older browsers](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental layout comprehension assessment](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)
+- Fundamental layout comprehension assessment

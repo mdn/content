@@ -513,6 +513,6 @@ dd {
 
 ## What can't we do with auto-placement (yet)?
 
-There are a couple of things that often come up as questions. Currently we can't do things like target every other cell of the grid with our items. A related issue may have already come to mind if you followed the last guide about named lines on the grid. It would be to define a rule that said "auto-place items against the next line named "n", and grid would then skip other lines.There is [an issue raised about this](https://github.com/w3c/csswg-drafts/issues/796) on the CSSWG GitHub repository, and you would be welcome to add your own use cases to this.
+There are a couple of things that often come up as questions. Currently we can't do things like target every other cell of the grid with our items. A related issue may have already come to mind if you followed the last guide about named lines on the grid. It would be to define a rule that said "auto-place items against the next line named "n", and grid would then skip other lines. There is [an issue raised about this](https://github.com/w3c/csswg-drafts/issues/796) on the CSSWG GitHub repository, and you would be welcome to add your own use cases to this.
 
 It may be that you come up with your own use cases for auto-placement or any other part of grid layout. If you do, raise them as issues or add to an existing issue that could solve your use case. This will help to make future versions of the specification better.

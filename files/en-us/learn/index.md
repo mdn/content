@@ -19,12 +19,6 @@ The aim of this area of MDN is not to take you from "beginner" to "expert" but t
 
 If you are a complete beginner, web development can be challenging — we will hold your hand and provide enough detail for you to feel comfortable and learn the topics properly. You should feel at home whether you are a student learning web development (on your own or as part of a class), a teacher looking for class materials, a hobbyist, or someone who just wants to understand more about how web technologies work.
 
-## What's new?
-
-The content in the learning area is being added to regularly. We have started keeping [Learning area release notes](/en-US/docs/Learn/Release_notes) to show what has changed — keep checking back frequently!
-
-If you have questions regarding topics you'd like to see covered or feel are missing, drop us a message on our [Discourse forum](https://discourse.mozilla.org/c/mdn).
-
 > **Callout:**
 >
 > #### Looking to become a front-end web developer?

@@ -154,7 +154,7 @@ function outListener(event) {
 function overListener(event) {
   let related = event.relatedTarget ? event.relatedTarget.id : "unknown";
 
-  log.innerText = `\ninto ${event.target.id} from ${related} ${mouseoutLog.innerText}`;
+  mouseoutLog.innerText = `\ninto ${event.target.id} from ${related} ${mouseoutLog.innerText}`;
 }
 ```
 

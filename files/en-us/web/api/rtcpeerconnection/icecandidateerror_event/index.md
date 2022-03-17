@@ -23,28 +23,38 @@ browser-compat: api.RTCPeerConnection.icecandidateerror_event
 
 The [WebRTC API](/en-US/docs/Web/API/WebRTC_API) event **`icecandidateerror`** is sent to an {{domxref("RTCPeerConnection")}} if an error occurs while performing ICE negotiations through a {{Glossary("STUN")}} or {{Glossary("TURN")}} server. The event object is of type {{domxref("RTCPeerConnectionIceErrorEvent")}}, and contains information describing the error in some amount of detail.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("RTCPeerConnectionIceErrorEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{DOMxRef("RTCPeerConnection.onicecandidateerror")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('icecandidateerror', event => { });
+
+onicecandidateerror = event => { };
+```
+
+## Event type
+
+An {{domxref("RTCPeerConnectionIceErrorEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("RTCPeerConnectionIceErrorEvent")}}
+
+## Event properties
+
+_The `RTCPeerConnectionIceErrorEvent` interface includes the properties found on the {{domxref("Event")}} interface, as well as the following properties:_
+
+- {{domxref("RTCPeerConnectionIceErrorEvent.address", "address")}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMString")}} providing the local IP address used to communicate with the {{Glossary("STUN")}} or {{Glossary("TURN")}} server being used to negotiate the connection, or `null` if the local IP address has not yet been exposed as part of a local ICE candidate.
+- {{domxref("RTCPeerConnectionIceErrorEvent.errorCode", "errorCode")}} {{ReadOnlyInline}}
+  - : An unsigned integer value stating the numeric [STUN error code](https://www.iana.org/assignments/stun-parameters/stun-parameters.xhtml#stun-parameters-6) returned by the STUN or TURN server. If no host candidate can reach the server, this property is set to the number 701, which is outside the range of valid STUN error codes. The 701 error is fired only once per server URL, and only while the is {{domxref("RTCPeerConnection.icegatheringstate", "icegatheringstate")}} is `gathering`.
+- {{domxref("RTCPeerConnectionIceErrorEvent.errorText", "errorText")}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMString")}} containing the STUN reason text returned by the STUN or TURN server. If communication with the STUN or TURN server couldn't be established at all, this string will be a browser-specific string explaining the error.
+- {{domxref("RTCPeerConnectionIceErrorEvent.port", "port")}} {{ReadOnlyInline}}
+  - : An unsigned integer value giving the port number over which communication with the STUN or TURN server is taking place, using the IP address given in `address`. `null` if the connection hasn't been established (that is, if `address` is `null`).
+- {{domxref("RTCPeerConnectionIceErrorEvent.url", "url")}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMString")}} indicating the URL of the STUN or TURN server with which the error occurred.
 
 ## Description
 

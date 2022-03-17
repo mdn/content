@@ -63,6 +63,28 @@ If the separator is focusable, providing a visible boundary between two sections
 
 An accessible name, with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) should be included if there is more than one focusable separator.
 
+### All descendants are presentational
+
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `separator`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `separator` element as it is a role that does not support semantic children.
+
+For example, consider the following `separator` element, which contains a heading.
+
+```html
+<div role="separator"><h3>Title of my separator</h3></div>
+```
+
+Because descendants of `separator` are presentational, the following code is equivalent:
+
+```html
+<div role="separator"><h3 role="presentation">Title of my separator</h3></div>
+```
+
+From the assistive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
+
+```html
+<div role="separator">Title of my separator</div>
+```
+
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) (default is horizontal for separator)

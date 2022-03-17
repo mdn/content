@@ -29,7 +29,7 @@ If the event generator script is hosted on a different origin, a new `EventSourc
 const evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );
 ```
 
-Once you've instantiated your event source, you can begin listening for messages from the server by attaching a handler for the {{event("message")}} event:
+Once you've instantiated your event source, you can begin listening for messages from the server by attaching a handler for the {{domxref("EventSource.message_event", "message")}} event:
 
 ```js
 evtSource.onmessage = function(event) {

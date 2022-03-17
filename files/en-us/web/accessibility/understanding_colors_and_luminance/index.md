@@ -40,7 +40,7 @@ While understanding these concepts are important for design and readability for 
 
 The [W3.org's](/en-US/docs/Glossary/W3C) [WAI](/en-US/docs/Glossary/WAI) publishes freely available guidelines, maintained by the AGWG (Accessibility Guidelines Working Group). Currently these are known as the [WCAG 2.1 accessibility guidelines](/en-US/docs/Glossary/WCAG). The next generation, [WCAG 3.0](https://www.w3.org/TR/wcag-3.0/), is presently published as a public working draft, pending further development and approvals.
 
-The WCAG 2.x guidelines attempt to define adequate[luminance contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) for sighted users with deficient color vision (inaccurately called "color blindness") or reduced vision, and further WCAG 2.x guidelines are intended to [prevent seizures and other physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders) in people with vestibular or neurological disorders.
+The WCAG 2.x guidelines attempt to define adequate [luminance contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) for sighted users with deficient color vision (inaccurately called "color blindness") or reduced vision, and further WCAG 2.x guidelines are intended to [prevent seizures and other physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders) in people with vestibular or neurological disorders.
 
 ## Color basics
 

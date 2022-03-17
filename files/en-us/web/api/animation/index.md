@@ -58,7 +58,7 @@ The **`Animation`** interface of the [Web Animations API](/en-US/docs/Web/API/We
 - {{domxref("Animation.pause()")}}
   - : Suspends playing of an animation.
 - {{domxref("animation.persist()")}}
-  - : Explicitly persists an animation, when it would otherwise be removed due to the browser's {{anch("Automatically removing filling animations")}} behavior.
+  - : Explicitly persists an animation, when it would otherwise be removed due to the browser's [Automatically removing filling animations](#automatically_removing_filling_animations) behavior.
 - {{domxref("Animation.play()")}}
   - : Starts or resumes playing of an animation, or begins the animation again if it previously finished.
 - {{domxref("Animation.reverse()")}}

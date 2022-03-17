@@ -57,6 +57,8 @@ _Doesn't inherit any properties._
   - : Returns {{domxref("MediaSession")}} object which can be used to provide metadata that can be used by the browser to present information about the currently-playing media to the user, such as in a global media controls UI.
 - {{domxref("Navigator.onLine")}} {{readonlyInline}}
   - : Returns a boolean value indicating whether the browser is working online.
+- {{domxref("Navigator.pdfViewerEnabled")}} {{readonlyinline}}
+  - : Returns `true` if the browser can display PDF files inline when navigating to them, and `false` otherwise.
 - {{domxref("Navigator.permissions")}} {{readonlyinline}} {{experimental_inline}}
   - : Returns a {{domxref("Permissions")}} object that can be used to query and update permission status of APIs covered by the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 - {{domxref("Navigator.presentation")}} {{readonlyInline}} {{experimental_inline}}
@@ -136,6 +138,8 @@ _Doesn't inherit any method._
   - : Allows web sites to register themselves as a possible handler for a given protocol.
 - {{domxref("Navigator.requestMediaKeySystemAccess()")}}
   - : Returns a {{jsxref("Promise")}} for a MediaKeySystemAccess object.
+- {{domxref("Navigator.requestMIDIAccess()")}}
+  - : Returns a {{jsxref('Promise')}} representing a request for access to MIDI devices on the user's system.
 - {{domxref("Navigator.sendBeacon()")}}
   - : Used to asynchronously transfer a small amount of data using {{Glossary("HTTP")}} from the User Agent to a web server.
 - {{domxref("Navigator.setAppBadge()")}}

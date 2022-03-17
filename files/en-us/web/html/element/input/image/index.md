@@ -26,7 +26,7 @@ browser-compat: html.elements.input.input-image
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>None — the <code>value</code> attribute should not be specified.</td>
     </tr>
     <tr>
