@@ -15,7 +15,7 @@ The commands are [detailed below](#path_commands).
 
 You can use this attribute with the following SVG elements: [`<path>`](#path), [`<glyph>`](#path), [`<missing-glyph>`](#missing-glyph).
 
-`d` is a [presentation attribute](/en-US/docs/Web/SVG/Attribute/Presentation), and hence can be also be [used as a CSS property](#using_d_as_a_css_property).
+`d` is a [presentation attribute](/en-US/docs/Web/SVG/Attribute/Presentation), and hence can also be [used as a CSS property](#using_d_as_a_css_property).
 
 ## Example
 
