@@ -1,6 +1,6 @@
 ---
 title: CSS styling text
-slug: Learn/CSS/CSS_styling_text
+slug: Learn/CSS/Styling_text
 tags:
   - Beginner
   - CSS
