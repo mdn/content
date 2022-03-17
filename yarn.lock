@@ -67,10 +67,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.12.tgz#d266138c24295440619ea562ce3f4ec22600e897"
   integrity sha512-y3Ntio6hb5+m6asxcA3nnIN6URjAFMji2EZZVYGd2Ag5On4mmvPhMnXdiIScCMXgHjFX+5qXuKaojLLhJHZPAg==
 
-"@mdn/yari@0.8.18":
-  version "0.8.18"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.8.18.tgz#30f4322ddd6cb7a319d6b3f02be27b8bd367f82f"
-  integrity sha512-BJH7yy27sAqWq1DsNC7p5t4JlfDt0U36O3jQEEN1b1XmklMYlANFsKLEi0VhhXfFWT+zgNElOY4OnIikr6L32g==
+"@mdn/yari@0.8.27":
+  version "0.8.27"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.8.27.tgz#da1ebb75a3aa45466c5e08a80b4888e1e6f0c67d"
+  integrity sha512-d0oT7+dKXW9zZI/39w3YohcsVGWyNfJlsC3/1CqNcWwYn/DH7pHrsa33bORM+56bo7FB+fMUhRXnaDK2NNDU4w==
   dependencies:
     "@babel/helper-builder-react-jsx" "^7.16.7"
     "@caporal/core" "2.0.2"
