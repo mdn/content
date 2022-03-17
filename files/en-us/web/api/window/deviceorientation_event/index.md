@@ -10,7 +10,7 @@ browser-compat: api.Window.deviceorientation_event
 ---
 {{APIRef}}
 
-The `deviceorientation` event is fired when fresh data is available from an orientation sensor about the current orientation of the device as compared to the Earth coordinate frame. This data is gathered from a magnetometer inside the device.
+The **`deviceorientation`** event is fired when fresh data is available from an orientation sensor about the current orientation of the device as compared to the Earth coordinate frame. This data is gathered from a magnetometer inside the device.
 
 See [Orientation and motion data explained](/en-US/docs/Web/Events/Orientation_and_motion_data_explained) for details.
 
