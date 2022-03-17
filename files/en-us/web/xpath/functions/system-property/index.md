@@ -11,7 +11,9 @@ The `system-property` function returns an object representing the given system-p
 
 ### Syntax
 
-    system-property(name)
+```
+system-property(name)
+```
 
 ### Arguments
 

@@ -18,7 +18,7 @@ The **`setAppBadge()`** method of the {{domxref("Navigator")}} interface a badge
 
 ```js
 let promise = Navigator.setAppBadge(contents);
-````
+```
 
 ### Parameters
 

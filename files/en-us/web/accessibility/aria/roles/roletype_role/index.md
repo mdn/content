@@ -31,8 +31,6 @@ Do not use.
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#roletype","ARIA: roletype role")}}                                             | {{Spec2('ARIA')}}                         |
 
-
-
 ## See Also
 
 - [ARIA: `structure` role](/en-US/docs/Web/Accessibility/ARIA/Roles/structure_role)

@@ -20,6 +20,8 @@ The **`DOMMatrix`** interface represents 4×4 matrices, suitable for 2D and 3D o
 
 This interface should be available inside [web workers](/en-US/docs/Web/API/Web_Workers_API), though some implementations don't allow it yet.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("DOMMatrix.DOMMatrix","DOMMatrix()")}}
@@ -55,11 +57,11 @@ _This interface includes the following methods, as well as the methods it inheri
 - {{domxref("DOMMatrix.invertSelf()")}}
   - : Modifies the matrix by inverting it. If the matrix can't be inverted, its components are all set to `NaN`, and {{domxref("DOMMatrix.is2D", "is2D")}} returns `false`.
 - {{domxref("DOMMatrix.multiplySelf()")}}
-  - : Modifies the matrix by post-multiplying it with the specified `DOMMatrix`. This is equivalent to the dot product `A⋅B`, where matrix `A` is the source matrix and `B` is the matrix given as an input to the method. Returns itself.
+  - : Modifies the matrix by post-multiplying it with the specified `DOMMatrix`. This is equivalent to the dot product `A⋅B`, where matrix `A` is the source matrix and `B` is the matrix given as an input to the method. Returns itself.
 - {{domxref("DOMMatrix.preMultiplySelf()")}}
   - : Modifies the matrix by pre-multiplying it with the specified `DOMMatrix`. This is equivalent to the dot product `B⋅A`, where matrix `A` is the source matrix and `B` is the matrix given as an input to the method. Returns itself.
 - {{domxref("DOMMatrix.translateSelf()")}}
-  - : Modifies the matrix by applying the specified vector. The default vector is `[0, 0, 0]`. Returns itself.
+  - : Modifies the matrix by applying the specified vector. The default vector is `[0, 0, 0]`. Returns itself.
 - {{domxref("DOMMatrix.scaleNonUniformSelf()")}} {{deprecated_inline}}
   - : Modifies the matrix by applying the specified scaling on the X, Y, and Z axes, centered at the given origin. By default, the Y and Z axes' scaling factors are both `1`, but the scaling factor for X must be specified. The default origin is `(0, 0, 0)`. Returns itself.
 - {{domxref("DOMMatrix.scaleSelf()")}}
@@ -92,7 +94,7 @@ _This interface inherits methods from {{domxref("DOMMatrixReadOnly")}}._
 
 ## Usage notes
 
-The matrix defined by the `DOMMatrix` interface is comprised of four rows of four columns each. While it's beyond the scope of this article to explain the mathematics involved, this 4×4 size is enough to describe any transformation you might apply to either 2D or 3D geometries.
+The matrix defined by the `DOMMatrix` interface is comprised of four rows of four columns each. While it's beyond the scope of this article to explain the mathematics involved, this 4×4 size is enough to describe any transformation you might apply to either 2D or 3D geometries.
 
 Here are The positions of the 16 elements (m_11 through m_44) which comprise the 4×4 abstract matrix:
 

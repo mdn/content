@@ -62,4 +62,3 @@ AudioDecoder.configure({ codec: 'opus', sampleRate: 44100, numberOfChannels: 2 }
 ## Browser compatibility
 
 {{Compat}}
-

@@ -23,6 +23,8 @@ browser-compat: api.MediaRecorderErrorEvent
 
 The `MediaRecorderErrorEvent` interface represents errors returned by the [MediaStream Recording API.](/en-US/docs/Web/API/MediaStream_Recording_API) It is an {{domxref("Event")}} object that encapsulates a reference to a {{domxref("DOMException")}} describing the error that occurred.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _Inherits properties from its parent interface, {{domxref("Event")}}_.

@@ -9,7 +9,7 @@ tags:
 ---
 {{jsSidebar("Errors")}}
 
-The JavaScript [strict
+The JavaScript [strict
 mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception "for-in loop head declarations may not have initializers"
 occurs when the head of a [for...in](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) contains
 an initializer expression, such as |`for (var i = 0 in obj)`|. This is not

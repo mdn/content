@@ -11,7 +11,9 @@ The `concat` function concatenates two or more strings and returns the resulting
 
 ### Syntax
 
-    concat(string1 ,string2 [,stringn]* )
+```
+concat( string1, string2 [,stringn]* )
+```
 
 ### Arguments
 

@@ -10,7 +10,7 @@ browser-compat: api.HTMLAreaElement.toString
 ---
 {{ApiRef("URL API")}}
 
-The **`HTMLAreaElement.toString()`** stringifier
+The **`HTMLAreaElement.toString()`** {{Glossary("stringifier")}}
 method returns a {{domxref("USVString")}} containing the whole URL. It is a read-only
 version of {{domxref("HTMLAreaElement.href")}}.
 

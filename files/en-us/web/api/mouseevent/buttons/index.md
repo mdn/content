@@ -17,7 +17,7 @@ The **`MouseEvent.buttons`** read-only property indicates which buttons are pres
 
 Each button that can be pressed is represented by a given number (see below).
 If more than one button is pressed, the button values are added together to produce a new number.
-For example, if the secondary (`2`) and auxilary (`4`) buttons are pressed simultaneously, the value is `6` (i.e., `2 + 4`).
+For example, if the secondary (`2`) and auxiliary (`4`) buttons are pressed simultaneously, the value is `6` (i.e., `2 + 4`).
 
 > **Note:** Do not confuse this property with the {{domxref("MouseEvent.button")}} property.
 > The {{domxref("MouseEvent.buttons")}} property indicates the state of buttons pressed during any kind of mouse event,

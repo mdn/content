@@ -13,8 +13,8 @@ The **`glyphRef`** attribute represents the glyph identifier, the format of whic
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("altGlyph")}}
-*   {{SVGElement("glyphRef")}}
+- {{SVGElement("altGlyph")}}
+- {{SVGElement("glyphRef")}}
 
 ## Usage notes
 
@@ -35,8 +35,8 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `<string>`
-    *   : This value represents the glyph identifier. Its format depends on the {{SVGAttr("format")}} of the given font.
+- `<string>`
+  - : This value represents the glyph identifier. Its format depends on the {{SVGAttr("format")}} of the given font.
 
 ## Specifications
 

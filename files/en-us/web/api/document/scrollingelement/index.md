@@ -14,10 +14,10 @@ browser-compat: api.Document.scrollingElement
 The **`scrollingElement`** read-only property of the
 {{domxref("Document")}} interface returns a reference to the {{domxref("Element")}} that
 scrolls the document. In standards mode, this is the root element of the
-document, {{domxref("document.documentElement")}}.
+document, {{domxref("document.documentElement")}}.
 
 When in quirks mode, the `scrollingElement` attribute returns the HTML
-`body` element if it exists and is [potentially
+`body` element if it exists and is [potentially
 scrollable](https://drafts.csswg.org/cssom-view/#potentially-scrollable), otherwise it returns null.
 
 ## Syntax

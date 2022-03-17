@@ -13,7 +13,7 @@ The **`stdDeviation`** attribute defines the standard deviation for the blur ope
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feGaussianBlur")}}
+- {{SVGElement("feGaussianBlur")}}
 
 ## Example
 
@@ -68,10 +68,10 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `<number-optional-number>`
-    *   : If two numbers are provided, the first number represents a standard deviation value along the x-axis. The second value represents a standard deviation along the y-axis. If one number is provided, then that value is used for both X and Y.
+- `<number-optional-number>`
+  - : If two numbers are provided, the first number represents a standard deviation value along the x-axis. The second value represents a standard deviation along the y-axis. If one number is provided, then that value is used for both X and Y.
 
-        A negative value is forbidden. A value of zero disables the effect of the given filter primitive (i.e., the result is the filter input image). If `stdDeviation` is 0 in only one of X or Y, then the effect is that the blur is only applied in the direction that has a non-zero value.
+    A negative value is forbidden. A value of zero disables the effect of the given filter primitive (i.e., the result is the filter input image). If `stdDeviation` is 0 in only one of X or Y, then the effect is that the blur is only applied in the direction that has a non-zero value.
 
 ## Specifications
 

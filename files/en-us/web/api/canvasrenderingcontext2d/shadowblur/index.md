@@ -41,7 +41,7 @@ ctx.shadowBlur = level;
 ### Adding a shadow to a shape
 
 This example adds a blurred shadow to a rectangle. The `shadowColor`
-property sets its color, and `shadowBlur` sets its level of bluriness.
+property sets its color, and `shadowBlur` sets its level of blurriness.
 
 #### HTML
 

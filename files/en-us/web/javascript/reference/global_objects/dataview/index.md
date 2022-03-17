@@ -31,7 +31,7 @@ console.log(littleEndian); // true or false
 
 ### 64-bit Integer Values
 
-Some browsers don’t have support for {{jsxref("DataView.prototype.setBigInt64()")}} and {{jsxref("DataView.prototype.setBigUint64()")}}. So to enable 64-bit operations in your code that will work across browsers, you could implement your own `getUint64()` function, to obtain values with precision up to {{jsxref("Number.MAX_SAFE_INTEGER")}} — which could suffice for certain cases.
+Some browsers don't have support for {{jsxref("DataView.prototype.setBigInt64()")}} and {{jsxref("DataView.prototype.setBigUint64()")}}. So to enable 64-bit operations in your code that will work across browsers, you could implement your own `getUint64()` function, to obtain values with precision up to {{jsxref("Number.MAX_SAFE_INTEGER")}} — which could suffice for certain cases.
 
 ```js
 function getUint64(dataview, byteOffset, littleEndian) {
@@ -142,7 +142,7 @@ view.getInt16(1); // 42
 
 ## See also
 
-- A polyfill of `DataView` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `DataView` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - [jDataView](https://github.com/jDataView/jDataView): JavaScript library that polyfills and extends the `DataView` API to all browsers and Node.js.
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("SharedArrayBuffer")}}

@@ -33,5 +33,3 @@ console.log(track);
 ## Browser compatibility
 
 {{Compat}}
-
-

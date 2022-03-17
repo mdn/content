@@ -3,38 +3,36 @@ title: 'AudioTrackList: change event'
 slug: Web/API/AudioTrackList/change_event
 tags:
   - API
+  - Audio Tracks
+  - Audio
   - AudioTrackList
   - Change
   - Event
+  - Reference
   - HTML API
+  - Media
 browser-compat: api.AudioTrackList.change_event
 ---
+
 {{APIRef}}
 
 The `change` event is fired when an audio track is enabled or disabled, for example by changing the track's [`enabled`](/en-US/docs/Web/API/AudioTrack/enabled) property.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("AudioTrackList/onchange", "onchange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('change', event => { })
+
+onchange = event => { }
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 

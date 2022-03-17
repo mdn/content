@@ -39,13 +39,13 @@ Hyperlinks, usually called links, are a foundational concept behind the Web. To 
 
 Back in 1989, Tim Berners-Lee, the Web's inventor, spoke of the three pillars on which the Web stands:
 
-1.  {{Glossary("URL")}}, an address system that keeps track of Web documents
-2.  {{Glossary("HTTP")}}, a transfer protocol to find documents when given their URLs
-3.  {{Glossary("HTML")}}, a document format allowing for embedded _hyperlinks_
+1. {{Glossary("URL")}}, an address system that keeps track of Web documents
+2. {{Glossary("HTTP")}}, a transfer protocol to find documents when given their URLs
+3. {{Glossary("HTML")}}, a document format allowing for embedded _hyperlinks_
 
 As you can see in the three pillars, everything on the Web revolves around documents and how to access them. The Web's original purpose was to provide an easy way to reach, read, and navigate through text documents. Since then, the Web has evolved to provide access to images, videos, and binary data, but these improvements have hardly changed the three pillars.
 
-Before the Web, it was quite hard to access documents and move from one to another. Being human-readable, URLs already made things easier, but it's hard to type a long URL whenever you want to access a document. This is where hyperlinks revolutionized everything. Links can correlate any text string with a URL, such that the user can instantly reach the target document by activating the link.
+Before the Web, it was quite hard to access documents and move from one to another. Being human-readable, URLs already made things easier, but it's hard to type a long URL whenever you want to access a document. This is where hyperlinks revolutionized everything. Links can correlate any text string with a URL, such that the user can instantly reach the target document by activating the link.
 
 Links stand out from the surrounding text by being underlined and in blue text. Tap or click a link to activate it, or if you use a keyboard, press Tab until the link is in focus and hit Enter or Spacebar.
 
@@ -80,7 +80,7 @@ Most links tie two webpages together. **Anchors** tie two sections of one docume
 
 Links matter both to users and search engines. Every time search engines crawl a webpage, they index the website by following the links available on the webpage. Search engines not only follow links to discover the various pages of the website, but they also use the link's visible text to determine which search queries are appropriate for reaching the target webpage.
 
-Links influence how readily a search engine will link to your site. The trouble is, it's hard to measure search engines' activities. Companies naturally want their sites to rank highly in search results.  We know the following about how search engines determine a site's rank:
+Links influence how readily a search engine will link to your site. The trouble is, it's hard to measure search engines' activities. Companies naturally want their sites to rank highly in search results. We know the following about how search engines determine a site's rank:
 
 - A link's _visible text_ influences which search queries will find a given URL.
 - The more _incoming links_ a webpage can boast of, the higher it ranks in search results.

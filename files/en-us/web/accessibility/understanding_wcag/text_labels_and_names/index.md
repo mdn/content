@@ -39,7 +39,7 @@ See the [`<area>` element reference page](/en-US/docs/Web/HTML/Element/area) for
 
 For any container whose contents act as a dialog box (for example, a modal dialog asking the user to make a choice or respond to an action being taken), give it a descriptive label or name, so that assistive technology users can easily discover what its purpose is.
 
-A dialog box is generally denoted by an ARIA [`role="dialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) or [`role="alertdialog"`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role); you can use  the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) attributes to provide a label.
+A dialog box is generally denoted by an ARIA [`role="dialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) or [`role="alertdialog"`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role); you can use  the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) attributes to provide a label.
 
 ### Examples
 
@@ -74,7 +74,7 @@ If the dialog box doesn't have a heading, you can instead use `aria-label` to co
 
 ## Documents must have a title
 
-It is important in each HTML document to include a {{htmlelement("title")}} that describes the page's purpose. A common navigation technique for users of assistive technology is to infer what content a page contains by reading its title. If the title is not available, they have to navigate the page to determine its content, which can be a time consuming and potentially confusing process.
+It is important in each HTML document to include a {{htmlelement("title")}} that describes the page's purpose. A common navigation technique for users of assistive technology is to infer what content a page contains by reading its title. If the title is not available, they have to navigate the page to determine its content, which can be a time consuming and potentially confusing process.
 
 ### Examples
 
@@ -102,7 +102,7 @@ To help the user, you can update the page title value to reflect significant pag
 
 ## Embedded content must be labeled
 
-Make sure that elements that embed content have a [title](/en-US/docs/Web/HTML/Global_attributes/title) attribute that describes the embedded content. This includes the {{htmlelement("embed")}} and  {{htmlelement("object")}} elements. These elements are often used for graphical content, much like the {{HTMLelement("img")}} element. A descriptive title helps users of assistive technology understand what the element is showing.
+Make sure that elements that embed content have a [title](/en-US/docs/Web/HTML/Global_attributes/title) attribute that describes the embedded content. This includes the {{htmlelement("embed")}} and  {{htmlelement("object")}} elements. These elements are often used for graphical content, much like the {{HTMLelement("img")}} element. A descriptive title helps users of assistive technology understand what the element is showing.
 
 ## Figures with optional captions should be labeled
 
@@ -189,10 +189,10 @@ As a best practice, also provide a {{htmlelement("title")}} for the document tha
 
 ```html
 <iframe
-    title="MDN Web docs"
-    width="300"
-    height="200"
-    src="https://developer.mozilla.org">
+    title="MDN Web docs"
+    width="300"
+    height="200"
+    src="https://developer.mozilla.org">
 </iframe>
 ```
 
@@ -214,7 +214,7 @@ As a best practice, also provide a {{htmlelement("title")}} for the document tha
 
 ## Content with images must be labeled
 
-Provide descriptive text for all contentful (that is, non-decorative) images and image-like elements. This includes SVG images, {{htmlelement("img")}}, {{htmlelement("canvas")}}, {{htmlelement("map")}}, and {{htmlelement("area")}} elements, as well as {{htmlelement("input")}} elements where `type=image` and {{htmlelement("object")}} elements where the `type` starts with `image/`. The typical way to do this is with the `alt` attribute. Be sure that the description conveys what is shown in the image.
+Provide descriptive text for all contentful (that is, non-decorative) images and image-like elements. This includes SVG images, {{htmlelement("img")}}, {{htmlelement("canvas")}}, {{htmlelement("map")}}, and {{htmlelement("area")}} elements, as well as {{htmlelement("input")}} elements where `type=image` and {{htmlelement("object")}} elements where the `type` starts with `image/`. The typical way to do this is with the `alt` attribute. Be sure that the description conveys what is shown in the image.
 
 ### Example
 

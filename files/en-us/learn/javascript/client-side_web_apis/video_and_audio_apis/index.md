@@ -44,7 +44,7 @@ HTML5 comes with elements for embedding rich media in documents — {{htmlelemen
 
 ## HTML5 video and audio
 
-The {{htmlelement("video")}} and {{htmlelement("audio")}} elements allow us to embed video and audio into web pages. As we showed in [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content), a typical implementation looks like this:
+The {{htmlelement("video")}} and {{htmlelement("audio")}} elements allow us to embed video and audio into web pages. As we showed in [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content), a typical implementation looks like this:
 
 ```html
 <video controls>
@@ -86,21 +86,21 @@ Open the HTML index file. You'll see a number of features; the HTML is dominated
 
 ```html
 <div class="player">
-  <video controls>
-    <source src="video/sintel-short.mp4" type="video/mp4">
-    <source src="video/sintel-short.webm" type="video/webm">
-    <!-- fallback content here -->
-  </video>
-  <div class="controls">
-    <button class="play" data-icon="P" aria-label="play pause toggle"></button>
-    <button class="stop" data-icon="S" aria-label="stop"></button>
-    <div class="timer">
+  <video controls>
+    <source src="video/sintel-short.mp4" type="video/mp4">
+    <source src="video/sintel-short.webm" type="video/webm">
+    <!-- fallback content here -->
+  </video>
+  <div class="controls">
+    <button class="play" data-icon="P" aria-label="play pause toggle"></button>
+    <button class="stop" data-icon="S" aria-label="stop"></button>
+    <div class="timer">
       <div></div>
       <span aria-label="timer">00:00</span>
     </div>
-    <button class="rwd" data-icon="B" aria-label="rewind"></button>
-    <button class="fwd" data-icon="F" aria-label="fast forward"></button>
-  </div>
+    <button class="rwd" data-icon="B" aria-label="rewind"></button>
+    <button class="fwd" data-icon="F" aria-label="fast forward"></button>
+  </div>
 </div>
 ```
 
@@ -213,8 +213,8 @@ Last but not least, let's look at the CSS for the timer:
 
 We've got a fairly complete HTML and CSS interface already; now we just need to wire up all the buttons to get the controls working.
 
-1.  Create a new JavaScript file in the same directory level as your index.html file. Call it `custom-player.js`.
-2.  At the top of this file, insert the following code:
+1. Create a new JavaScript file in the same directory level as your index.html file. Call it `custom-player.js`.
+2. At the top of this file, insert the following code:
 
     ```js
     const media = document.querySelector('video');
@@ -236,7 +236,7 @@ We've got a fairly complete HTML and CSS interface already; now we just need to 
     - The play/pause, stop, rewind, and fast forward buttons.
     - The outer timer wrapper `<div>`, the digital timer readout `<span>`, and the inner `<div>` that gets wider as the time elapses.
 
-3.  Next, insert the following at the bottom of your code:
+3. Next, insert the following at the bottom of your code:
 
     ```js
     media.removeAttribute('controls');
@@ -249,13 +249,13 @@ We've got a fairly complete HTML and CSS interface already; now we just need to 
 
 Let's implement probably the most important control — the play/pause button.
 
-1.  First of all, add the following to the bottom of your code, so that the `playPauseMedia()` function is invoked when the play button is clicked:
+1. First of all, add the following to the bottom of your code, so that the `playPauseMedia()` function is invoked when the play button is clicked:
 
     ```js
     play.addEventListener('click', playPauseMedia);
     ```
 
-2.  Now to define `playPauseMedia()` — add the following, again at the bottom of your code:
+2. Now to define `playPauseMedia()` — add the following, again at the bottom of your code:
 
     ```js
     function playPauseMedia() {
@@ -275,7 +275,7 @@ Let's implement probably the most important control — the play/pause button.
 
 #### Stopping the video
 
-1.  Next, let's add functionality to handle stopping the video. Add the following [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) lines below the previous one you added:
+1. Next, let's add functionality to handle stopping the video. Add the following [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) lines below the previous one you added:
 
     ```js
     stop.addEventListener('click', stopMedia);
@@ -284,7 +284,7 @@ Let's implement probably the most important control — the play/pause button.
 
     The {{event("click")}} event is obvious — we want to stop the video by running our `stopMedia()` function when the stop button is clicked. We do however also want to stop the video when it finishes playing — this is marked by the {{event("ended")}} event firing, so we also set up a listener to run the function on that event firing too.
 
-2.  Next, let's define `stopMedia()` — add the following function below `playPauseMedia()`:
+2. Next, let's define `stopMedia()` — add the following function below `playPauseMedia()`:
 
     ```js
     function stopMedia() {
@@ -302,14 +302,14 @@ Let's implement probably the most important control — the play/pause button.
 
 There are many ways that you can implement rewind and fast forward functionality; here we are showing you a relatively complex way of doing it, which doesn't break when the different buttons are pressed in an unexpected order.
 
-1.  First of all, add the following two [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) lines below the previous ones:
+1. First of all, add the following two [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) lines below the previous ones:
 
     ```js
     rwd.addEventListener('click', mediaBackward);
     fwd.addEventListener('click', mediaForward);
     ```
 
-2.  Now on to the event handler functions — add the following code below your previous functions to define `mediaBackward()` and `mediaForward()`:
+2. Now on to the event handler functions — add the following code below your previous functions to define `mediaBackward()` and `mediaForward()`:
 
     ```js
     let intervalFwd;
@@ -350,12 +350,12 @@ There are many ways that you can implement rewind and fast forward functionality
 
     Let's step through `mediaBackward()` (the functionality for `mediaForward()` is exactly the same, but in reverse):
 
-    1.  We clear any classes and intervals that are set on the fast forward functionality — we do this because if we press the `rwd` button after pressing the `fwd` button, we want to cancel any fast forward functionality and replace it with the rewind functionality. If we tried to do both at one, the player would break.
-    2.  We use an `if` statement to check whether the `active` class has been set on the `rwd` button, indicating that it has already been pressed. The {{domxref("Element.classList", "classList")}} is a rather handy property that exists on every element — it contains a list of all the classes set on the element, as well as methods for adding/removing classes, etc. We use the `classList.contains()` method to check whether the list contains the `active` class. This returns a boolean `true`/`false` result.
-    3.  If `active` has been set on the `rwd` button, we remove it using `classList.remove()`, clear the interval that has been set when the button was first pressed (see below for more explanation), and use {{domxref("HTMLMediaElement.play()")}} to cancel the rewind and start the video playing normally.
-    4.  If it hasn't yet been set, we add the `active` class to the `rwd` button using `classList.add()`, pause the video using {{domxref("HTMLMediaElement.pause()")}}, then set the `intervalRwd` variable to equal a {{domxref("setInterval()")}} call. When invoked, `setInterval()` creates an active interval, meaning that it runs the function given as the first parameter every x milliseconds, where x is the value of the 2nd parameter. So here we are running the `windBackward()` function every 200 milliseconds — we'll use this function to wind the video backwards constantly. To stop a {{domxref("setInterval()")}} running, you have to call {{domxref("clearInterval", "clearInterval()")}}, giving it the identifying name of the interval to clear, which in this case is the variable name `intervalRwd` (see the `clearInterval()` call earlier on in the function).
+    1. We clear any classes and intervals that are set on the fast forward functionality — we do this because if we press the `rwd` button after pressing the `fwd` button, we want to cancel any fast forward functionality and replace it with the rewind functionality. If we tried to do both at once, the player would break.
+    2. We use an `if` statement to check whether the `active` class has been set on the `rwd` button, indicating that it has already been pressed. The {{domxref("Element.classList", "classList")}} is a rather handy property that exists on every element — it contains a list of all the classes set on the element, as well as methods for adding/removing classes, etc. We use the `classList.contains()` method to check whether the list contains the `active` class. This returns a boolean `true`/`false` result.
+    3. If `active` has been set on the `rwd` button, we remove it using `classList.remove()`, clear the interval that has been set when the button was first pressed (see below for more explanation), and use {{domxref("HTMLMediaElement.play()")}} to cancel the rewind and start the video playing normally.
+    4. If it hasn't yet been set, we add the `active` class to the `rwd` button using `classList.add()`, pause the video using {{domxref("HTMLMediaElement.pause()")}}, then set the `intervalRwd` variable to equal a {{domxref("setInterval()")}} call. When invoked, `setInterval()` creates an active interval, meaning that it runs the function given as the first parameter every x milliseconds, where x is the value of the 2nd parameter. So here we are running the `windBackward()` function every 200 milliseconds — we'll use this function to wind the video backwards constantly. To stop a {{domxref("setInterval()")}} running, you have to call {{domxref("clearInterval", "clearInterval()")}}, giving it the identifying name of the interval to clear, which in this case is the variable name `intervalRwd` (see the `clearInterval()` call earlier on in the function).
 
-3.  Finally, we need to define the `windBackward()` and `windForward()` functions invoked in the `setInterval()` calls. Add the following below your two previous functions:
+3. Finally, we need to define the `windBackward()` and `windForward()` functions invoked in the `setInterval()` calls. Add the following below your two previous functions:
 
     ```js
     function windBackward() {
@@ -381,12 +381,12 @@ There are many ways that you can implement rewind and fast forward functionality
 
     Again, we'll just run through the first one of these functions as they work almost identically, but in reverse to one another. In `windBackward()` we do the following — bear in mind that when the interval is active, this function is being run once every 200 milliseconds.
 
-    1.  We start off with an `if` statement that checks to see whether the current time is less than 3 seconds, i.e., if rewinding by another three seconds would take it back past the start of the video. This would cause strange behavior, so if this is the case we stop the video playing by calling `stopMedia()`, remove the `active` class from the rewind button, and clear the `intervalRwd` interval to stop the rewind functionality. If we didn't do this last step, the video would just keep rewinding forever.
-    2.  If the current time is not within 3 seconds of the start of the video, we remove three seconds from the current time by executing `media.currentTime -= 3`. So in effect, we are rewinding the video by 3 seconds, once every 200 milliseconds.
+    1. We start off with an `if` statement that checks to see whether the current time is less than 3 seconds, i.e., if rewinding by another three seconds would take it back past the start of the video. This would cause strange behavior, so if this is the case we stop the video playing by calling `stopMedia()`, remove the `active` class from the rewind button, and clear the `intervalRwd` interval to stop the rewind functionality. If we didn't do this last step, the video would just keep rewinding forever.
+    2. If the current time is not within 3 seconds of the start of the video, we remove three seconds from the current time by executing `media.currentTime -= 3`. So in effect, we are rewinding the video by 3 seconds, once every 200 milliseconds.
 
 #### Updating the elapsed time
 
-The very last piece of our media player to implement is the time elapsed displays. To do this we'll run a function to update the time displays every time the {{event("timeupdate")}} event is fired on the `<video>` element. The frequency with which this event fires depends on your browser, CPU power, etc ([see this stackoverflow post](https://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)).
+The very last piece of our media player to implement is the time elapsed displays. To do this we'll run a function to update the time displays every time the {{event("timeupdate")}} event is fired on the `<video>` element. The frequency with which this event fires depends on your browser, CPU power, etc ([see this StackOverflow post](https://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)).
 
 Add the following `addEventListener()` line just below the others:
 
@@ -398,40 +398,28 @@ Now to define the `setTime()` function. Add the following at the bottom of your 
 
 ```js
 function setTime() {
-  let minutes = Math.floor(media.currentTime / 60);
-  let seconds = Math.floor(media.currentTime - minutes * 60);
-  let minuteValue;
-  let secondValue;
+  const minutes = Math.floor(media.currentTime / 60);
+  const seconds = Math.floor(media.currentTime - minutes * 60);
 
-  if (minutes < 10) {
-    minuteValue = '0' + minutes;
-  } else {
-    minuteValue = minutes;
-  }
+  const minuteValue = minutes.toString().padStart(2, '0');
+  const secondValue = seconds.toString().padStart(2, '0');
 
-  if (seconds < 10) {
-    secondValue = '0' + seconds;
-  } else {
-    secondValue = seconds;
-  }
-
-  let mediaTime = minuteValue + ':' + secondValue;
+  const mediaTime = `${minuteValue}:${secondValue}`;
   timer.textContent = mediaTime;
 
-  let barLength = timerWrapper.clientWidth * (media.currentTime/media.duration);
-  timerBar.style.width = barLength + 'px';
+  const barLength = timerWrapper.clientWidth * (media.currentTime/media.duration);
+  timerBar.style.width = `${barLength}px`;
 }
 ```
 
 This is a fairly long function, so let's go through it step by step:
 
-1.  First of all, we work out the number of minutes and seconds in the {{domxref("HTMLMediaElement.currentTime")}} value.
-2.  Then we initialize two more variables — `minuteValue` and `secondValue`.
-3.  The two `if` statements work out whether the number of minutes and seconds are less than 10. If so, they add a leading zero to the values, in the same way that a digital clock display works.
-4.  The actual time value to display is set as `minuteValue` plus a colon character plus `secondValue`.
-5.  The {{domxref("Node.textContent")}} value of the timer is set to the time value, so it displays in the UI.
-6.  The length we should set the inner `<div>` to is worked out by first working out the width of the outer `<div>` (any element's {{domxref("Element.clientWidth", "clientWidth")}} property will contain its length), and then multiplying it by the {{domxref("HTMLMediaElement.currentTime")}} divided by the total {{domxref("HTMLMediaElement.duration")}} of the media.
-7.  We set the width of the inner `<div>` to equal the calculated bar length, plus "px", so it will be set to that number of pixels.
+1. First of all, we work out the number of minutes and seconds in the {{domxref("HTMLMediaElement.currentTime")}} value.
+2. Then we initialize two more variables — `minuteValue` and `secondValue`. We use {{jsxref("String/padStart", "padStart()")}} to make each value 2 characters long, even if the numeric value is only a single digit.
+3. The actual time value to display is set as `minuteValue` plus a colon character plus `secondValue`.
+4. The {{domxref("Node.textContent")}} value of the timer is set to the time value, so it displays in the UI.
+5. The length we should set the inner `<div>` to is worked out by first working out the width of the outer `<div>` (any element's {{domxref("Element.clientWidth", "clientWidth")}} property will contain its length), and then multiplying it by the {{domxref("HTMLMediaElement.currentTime")}} divided by the total {{domxref("HTMLMediaElement.duration")}} of the media.
+6. We set the width of the inner `<div>` to equal the calculated bar length, plus "px", so it will be set to that number of pixels.
 
 #### Fixing play and pause
 
@@ -458,9 +446,9 @@ I think we've taught you enough in this article. The {{domxref("HTMLMediaElement
 
 Here are some suggestions for ways you could enhance the existing example we've built up:
 
-1.  The time display currently breaks if the video is an hour long or more (well, it won't display hours; just minutes and seconds). Can you figure out how to change the example to make it display hours?
-2.  Because `<audio>` elements have the same {{domxref("HTMLMediaElement")}} functionality available to them, you could easily get this player to work for an `<audio>` element too. Try doing so.
-3.  Can you work out a way to turn the timer inner `<div>` element into a true seek bar/scrobbler — i.e., when you click somewhere on the bar, it jumps to that relative position in the video playback? As a hint, you can find out the X and Y values of the element's left/right and top/bottom sides via the [`getBoundingClientRect()`](/en-US/docs/Web/API/Element/getBoundingClientRect) method, and you can find the coordinates of a mouse click via the event object of the click event, called on the {{domxref("Document")}} object. For example:
+1. The time display currently breaks if the video is an hour long or more (well, it won't display hours; just minutes and seconds). Can you figure out how to change the example to make it display hours?
+2. Because `<audio>` elements have the same {{domxref("HTMLMediaElement")}} functionality available to them, you could easily get this player to work for an `<audio>` element too. Try doing so.
+3. Can you work out a way to turn the timer inner `<div>` element into a true seek bar/scroller — i.e., when you click somewhere on the bar, it jumps to that relative position in the video playback? As a hint, you can find out the X and Y values of the element's left/right and top/bottom sides via the [`getBoundingClientRect()`](/en-US/docs/Web/API/Element/getBoundingClientRect) method, and you can find the coordinates of a mouse click via the event object of the click event, called on the {{domxref("Document")}} object. For example:
 
     ```js
     document.onclick = function(e) {
@@ -472,8 +460,8 @@ Here are some suggestions for ways you could enhance the existing example we've 
 
 - {{domxref("HTMLMediaElement")}}
 - [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) — simple guide to `<video>` and `<audio>` HTML.
-- [Audio and video delivery](/en-US/docs/Web/Guide/Audio_and_video_delivery) — detailed guide to delivering media inside the browser, with many tips, tricks, and links to further more advanced tutorials.
-- [Audio and video manipulation](/en-US/docs/Web/Guide/Audio_and_video_manipulation) — detailed guide to manipulating audio and video, e.g. with [Canvas API](/en-US/docs/Web/API/Canvas_API), [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), and more.
+- [Audio and video delivery](/en-US/docs/Web/Guide/Audio_and_video_delivery) — detailed guide to delivering media inside the browser, with many tips, tricks, and links to further more advanced tutorials.
+- [Audio and video manipulation](/en-US/docs/Web/Guide/Audio_and_video_manipulation) — detailed guide to manipulating audio and video, e.g. with [Canvas API](/en-US/docs/Web/API/Canvas_API), [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), and more.
 - {{htmlelement("video")}} and {{htmlelement("audio")}} reference pages.
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
 

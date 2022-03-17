@@ -70,11 +70,17 @@ Accept-Language: fr-CH, fr;q=0.9, en;q=0.8, de;q=0.7, *;q=0.5
 
 ## Examples
 
-    Accept-Language: de
+```
+Accept-Language: de
+```
 
-    Accept-Language: de-CH
+```
+Accept-Language: de-CH
+```
 
-    Accept-Language: en-US,en;q=0.5
+```
+Accept-Language: en-US,en;q=0.5
+```
 
 ## Specifications
 

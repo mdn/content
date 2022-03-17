@@ -37,7 +37,7 @@ A `<color>` can be defined in any of the following ways:
   This can specify any visible color.
 - Using the [Lab coordinate system](https://en.wikipedia.org/wiki/CIELAB_color_space), via the {{cssxref("color_value/lab()","lab()")}} functional notation.
   This can specify any visible color.
-- Using the {{cssxref("color_value/color()","color()")}} functional notation, to specify a color in a variety of predifined or custom color spaces.
+- Using the {{cssxref("color_value/color()","color()")}} functional notation, to specify a color in a variety of predefined or custom color spaces.
 
 > **Note:** This article describes the `<color>` data type in detail. To learn more about using color in HTML, see [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color).
 
@@ -87,7 +87,7 @@ There are a few caveats to consider when using color keywords:
     </tr>
   </thead>
   <tbody>
-    <tr style="position: relative">
+    <tr>
       <td rowspan="16">{{SpecName("CSS1")}}</td>
       <td style="text-align: center"><code>black</code></td>
       <td><code>#000000</code></td>
@@ -904,7 +904,7 @@ HSL colors are expressed through the functional `hsl()` and `hsla()` notations.
 
   - : `H` (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in {{SpecName("CSS4 Colors","#the-hsl-notation")}}. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in {{SpecName("CSS3 Colors", "#hsl-color")}}. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
 
-    `S` (saturation) and `L` (lightness) are percentages. `100%` **saturation** is completely saturated, while `0%` is completely unsaturated (gray). `100%` **lightness** is white, `0%` lightness is black, and `50%` lightness is “normal.”
+    `S` (saturation) and `L` (lightness) are percentages. `100%` **saturation** is completely saturated, while `0%` is completely unsaturated (gray). `100%` **lightness** is white, `0%` lightness is black, and `50%` lightness is "normal."
 
     `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 
@@ -1139,8 +1139,8 @@ In this example we provide a `<div>` and a text input. Entering a valid color in
 
 ```css
 div {
-  width: 100%;
-  height: 200px;
+  width: 100%;
+  height: 200px;
 }
 ```
 
@@ -1181,95 +1181,103 @@ inputElem.addEventListener('change', () => {
 
 This example shows the many ways in which a single color can be created with the various RGB color syntaxes.
 
-    /* These syntax variations all specify the same color: a fully opaque hot pink. */
+```css
+/* These syntax variations all specify the same color: a fully opaque hot pink. */
 
-    /* Hexadecimal syntax */
-    #f09
-    #F09
-    #ff0099
-    #FF0099
+/* Hexadecimal syntax */
+#f09
+#F09
+#ff0099
+#FF0099
 
-    /* Functional syntax */
-    rgb(255,0,153)
-    rgb(255, 0, 153)
-    rgb(255, 0, 153.0)
-    rgb(100%,0%,60%)
-    rgb(100%, 0%, 60%)
-    rgb(100%, 0, 60%) /* ERROR! Don't mix numbers and percentages. */
-    rgb(255 0 153)
+/* Functional syntax */
+rgb(255,0,153)
+rgb(255, 0, 153)
+rgb(255, 0, 153.0)
+rgb(100%,0%,60%)
+rgb(100%, 0%, 60%)
+rgb(100%, 0, 60%) /* ERROR! Don't mix numbers and percentages. */
+rgb(255 0 153)
 
-    /* Hexadecimal syntax with alpha value */
-    #f09f
-    #F09F
-    #ff0099ff
-    #FF0099FF
+/* Hexadecimal syntax with alpha value */
+#f09f
+#F09F
+#ff0099ff
+#FF0099FF
 
-    /* Functional syntax with alpha value */
-    rgb(255, 0, 153, 1)
-    rgb(255, 0, 153, 100%)
+/* Functional syntax with alpha value */
+rgb(255, 0, 153, 1)
+rgb(255, 0, 153, 100%)
 
-    /* Whitespace syntax */
-    rgb(255 0 153 / 1)
-    rgb(255 0 153 / 100%)
+/* Whitespace syntax */
+rgb(255 0 153 / 1)
+rgb(255 0 153 / 100%)
 
-    /* Functional syntax with floats value */
-    rgb(255, 0, 153.6, 1)
-    rgb(2.55e2, 0e0, 1.53e2, 1e2%)
+/* Functional syntax with floats value */
+rgb(255, 0, 153.6, 1)
+rgb(2.55e2, 0e0, 1.53e2, 1e2%)
+```
 
 ### RGB transparency variations
 
-    /* Hexadecimal syntax */
-    #3a30                    /*   0% opaque green */
-    #3A3F                    /* full opaque green */
-    #33aa3300                /*   0% opaque green */
-    #33AA3380                /*  50% opaque green */
+```css
+/* Hexadecimal syntax */
+#3a30                    /*   0% opaque green */
+#3A3F                    /* full opaque green */
+#33aa3300                /*   0% opaque green */
+#33AA3380                /*  50% opaque green */
 
-    /* Functional syntax */
-    rgba(51, 170, 51, .1)    /*  10% opaque green */
-    rgba(51, 170, 51, .4)    /*  40% opaque green */
-    rgba(51, 170, 51, .7)    /*  70% opaque green */
-    rgba(51, 170, 51,  1)    /* full opaque green */
+/* Functional syntax */
+rgba(51, 170, 51, .1)    /*  10% opaque green */
+rgba(51, 170, 51, .4)    /*  40% opaque green */
+rgba(51, 170, 51, .7)    /*  70% opaque green */
+rgba(51, 170, 51,  1)    /* full opaque green */
 
-    /* Whitespace syntax */
-    rgba(51 170 51 / 0.4)    /*  40% opaque green */
-    rgba(51 170 51 / 40%)    /*  40% opaque green */
+/* Whitespace syntax */
+rgba(51 170 51 / 0.4)    /*  40% opaque green */
+rgba(51 170 51 / 40%)    /*  40% opaque green */
 
-    /* Functional syntax with floats value */
-    rgba(51, 170, 51.6, 1)
-    rgba(5.1e1, 1.7e2, 5.1e1, 1e2%)
+/* Functional syntax with floats value */
+rgba(51, 170, 51.6, 1)
+rgba(5.1e1, 1.7e2, 5.1e1, 1e2%)
+```
 
 ### HSL syntax variations
 
-    /* These examples all specify the same color: a lavender. */
-    hsl(270,60%,70%)
-    hsl(270, 60%, 70%)
-    hsl(270 60% 70%)
-    hsl(270deg, 60%, 70%)
-    hsl(4.71239rad, 60%, 70%)
-    hsl(.75turn, 60%, 70%)
+```css
+/* These examples all specify the same color: a lavender. */
+hsl(270,60%,70%)
+hsl(270, 60%, 70%)
+hsl(270 60% 70%)
+hsl(270deg, 60%, 70%)
+hsl(4.71239rad, 60%, 70%)
+hsl(.75turn, 60%, 70%)
 
-    /* These examples all specify the same color: a lavender that is 15% opaque. */
-    hsl(270, 60%, 50%, .15)
-    hsl(270, 60%, 50%, 15%)
-    hsl(270 60% 50% / .15)
-    hsl(270 60% 50% / 15%)
+/* These examples all specify the same color: a lavender that is 15% opaque. */
+hsl(270, 60%, 50%, .15)
+hsl(270, 60%, 50%, 15%)
+hsl(270 60% 50% / .15)
+hsl(270 60% 50% / 15%)
+```
 
 ### HWB syntax variations
 
-    /* These examples all specify varying shades of a lime green. */
-    hwb(90 10% 10%)
-    hwb(90 50% 10%)
-    hwb(90deg 10% 10%)
-    hwb(1.5708rad 60% 0%)
-    hwb(.25turn 0% 40%)
+```css
+/* These examples all specify varying shades of a lime green. */
+hwb(90 10% 10%)
+hwb(90 50% 10%)
+hwb(90deg 10% 10%)
+hwb(1.5708rad 60% 0%)
+hwb(.25turn 0% 40%)
 
-    /* Same lime green but with an alpha value */
-    hwb(90 10% 10% / 0.5)
-    hwb(90 10% 10% / 50%)
+/* Same lime green but with an alpha value */
+hwb(90 10% 10% / 0.5)
+hwb(90 10% 10% / 50%)
+```
 
 ### Fully saturated colors
 
-<table class="standard-table">
+<table>
   <thead>
     <tr>
       <th scope="col">Notation</th>
@@ -1348,7 +1356,7 @@ This example shows the many ways in which a single color can be created with the
 
 ### Lighter and darker greens
 
-<table class="standard-table">
+<table>
   <thead>
     <tr>
       <th scope="col">Notation</th>
@@ -1392,7 +1400,7 @@ This example shows the many ways in which a single color can be created with the
 
 ### Saturated and desaturated greens
 
-<table class="standard-table">
+<table>
   <thead>
     <tr>
       <th scope="col">Notation</th>
@@ -1436,72 +1444,22 @@ This example shows the many ways in which a single color can be created with the
 
 ### HSL transparency variations
 
-    hsla(240, 100%, 50%, .05)     /*   5% opaque blue */
-    hsla(240, 100%, 50%, .4)      /*  40% opaque blue */
-    hsla(240, 100%, 50%, .7)      /*  70% opaque blue */
-    hsla(240, 100%, 50%, 1)       /* full opaque blue */
+```css
+hsla(240, 100%, 50%, .05)     /*   5% opaque blue */
+hsla(240, 100%, 50%, .4)      /*  40% opaque blue */
+hsla(240, 100%, 50%, .7)      /*  70% opaque blue */
+hsla(240, 100%, 50%, 1)       /* full opaque blue */
 
-    /* Whitespace syntax */
-    hsla(240 100% 50% / .05)      /*   5% opaque blue */
+/* Whitespace syntax */
+hsla(240 100% 50% / .05)      /*   5% opaque blue */
 
-    /* Percentage value for alpha */
-    hsla(240 100% 50% / 5%)       /*   5% opaque blue */
+/* Percentage value for alpha */
+hsla(240 100% 50% / 5%)       /*   5% opaque blue */
+```
 
 ## Specifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('CSS4 Colors', '#changes-from-3')}}</td>
-      <td>{{Spec2('CSS4 Colors')}}</td>
-      <td>
-        Adds LCH and Lab colors, the <code>hwb()</code> function, the <code>color()</code> functional notation,
-        <code>rebeccapurple</code>, four- (<code>#RGBA</code>) and eight-digit
-        (<code>#RRGGBBAA</code>) hexadecimal notations, <code>rgba()</code> and
-        <code>hsla()</code> as aliases of <code>rgb()</code> and
-        <code>hsl()</code> (both with identical parameter syntax),
-        space-separated function parameters as an alternative to commas,
-        percentages for alpha values, and angles for the hue component in
-        <code>hsl()</code> colors.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('CSS3 Colors', '#colorunits', '&lt;color&gt;')}}
-      </td>
-      <td>{{Spec2('CSS3 Colors')}}</td>
-      <td>
-        Deprecates system colors. Adds SVG colors and <code>rgba()</code>,
-        <code>hsl()</code>, and <code>hsla()</code> functional notations.
-      </td>
-    </tr>
-    <tr style="vertical-align: top">
-      <td style="vertical-align: top">
-        {{SpecName('CSS2.1', 'syndata.html#value-def-color', '&lt;color&gt;')}}
-      </td>
-      <td style="vertical-align: top">{{Spec2('CSS2.1')}}</td>
-      <td style="vertical-align: top">
-        Adds the <code>orange</code> keyword and system colors.
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top">
-        {{SpecName('CSS1', '#color-units', '&lt;color&gt;')}}
-      </td>
-      <td style="vertical-align: top">{{Spec2('CSS1')}}</td>
-      <td style="vertical-align: top">
-        Initial definition. Includes 16 basic color keywords.
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

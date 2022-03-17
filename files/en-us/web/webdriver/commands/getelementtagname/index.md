@@ -48,7 +48,9 @@ print(search_box.tag_name)
 
 Output:
 
-    INPUT
+```
+INPUT
+```
 
 ## Specifications
 

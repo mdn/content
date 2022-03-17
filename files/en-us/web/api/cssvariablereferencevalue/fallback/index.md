@@ -12,7 +12,7 @@ tags:
   - fallback
 browser-compat: api.CSSVariableReferenceValue.fallback
 ---
-{{draft}}{{APIRef("CSSOM")}}{{SeeCompatTable}}
+{{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 The **`fallback`** read-only property of the
 {{domxref("CSSVariableReferenceValue")}} interface returns the [custom

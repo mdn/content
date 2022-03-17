@@ -15,6 +15,8 @@ Detection API','','true')}} provides methods and events for detecting user activ
 
 This interface requires a secure context.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("IdleDetector.IdleDetector()")}}
@@ -36,9 +38,8 @@ This attribute returns `null` before `start()` is called.
 
 ## Events
 
-- {{domxref("IdleDetector.onchange")}}
-  - : Called when the value of `userState` or `screenState` has changed. This method
-receives an `Event` object.
+- {{domxref("IdleDetector.change_event", "change")}}
+  - : Called when the value of `userState` or `screenState` has changed.
 
 ## Methods
 
@@ -103,4 +104,3 @@ stopButton.addEventListener('click', () => {
 ## Browser compatibility
 
 {{Compat}}
-

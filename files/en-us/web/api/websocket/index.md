@@ -17,6 +17,8 @@ To construct a `WebSocket`, use the [`WebSocket()`](/en-US/docs/Web/API/WebSocke
 
 {{AvailableInWorkers}}
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("WebSocket.WebSocket", "WebSocket()")}}

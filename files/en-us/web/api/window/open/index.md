@@ -52,7 +52,7 @@ var window = window.open(url, windowName, [windowFeatures]);
   - : A {{domxref("DOMString")}} containing a comma-separated list of window features
     given with their corresponding values in the form _name=value_ — or for boolean features, just _name_. These
     features include options such as the window's default size and position, whether or
-    not to open a minimal popup window, and so forth. See {{anch("Window features")}}
+    not to open a minimal popup window, and so forth. See [Window features](#window_features)
     below for documentation of each of the features that can be specified.
 
 ### Return value
@@ -87,6 +87,9 @@ function openRequestedPopup() {
   windowObjectReference = window.open("http://www.cnn.com/", "CNN_WindowName", windowFeatures);
 }
 ```
+
+In Firefox on desktop, calling the function above creates a new browser window with a non-editable address bar and without the navigation buttons:
+![CNN's home page shown in a Firefox window with a non-editable address bar and without navigation buttons](popup.png)
 
 ```js
 var windowObjectReference;
@@ -143,10 +146,10 @@ Example: `popup=yes`, `popup=1`, and `popup` all have identical results.
 
 Otherwise:
 
-* To not request a popup, omit the _windowFeatures_ parameter.
-* Otherwise:
-   * Specifying any features in the _windowFeatures_ parameter other than `noopener` or `noreferer` has the effect of also requesting a popup.
-   * Otherwise, no popup is requested.
+- To not request a popup, omit the _windowFeatures_ parameter.
+- Otherwise:
+  - Specifying any features in the _windowFeatures_ parameter other than `noopener` or `noreferrer` has the effect of also requesting a popup.
+  - Otherwise, no popup is requested.
 
 ### Position and size features
 
@@ -657,14 +660,6 @@ ways to open links and more power to the tool they are using (a browser).
 - Unrequested popup windows
   - : Script-initiated windows opening automatically without the user's consent.
 
-## Specifications
-
-{{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
-
 ## Notes
 
 ### Popup condition
@@ -731,6 +726,14 @@ releases.**
 [MSIE 6 SP2
 has a similar error correction mechanism](https://msdn2.microsoft.com/en-us/library/ms997645.aspx#xpsp_topic5) but it is not activated by default in all
 security levels: a security setting can disable such error correction mechanism.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## Tutorials
 

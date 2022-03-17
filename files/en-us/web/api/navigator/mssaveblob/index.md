@@ -35,10 +35,12 @@ Explorer downloads a file with the following in the header, where
 `X-Download-Options` removes the file open button from the browser file
 download dialog:
 
-    Content-Length: <blob.size>
-    Content-Type: <blob.type>
-    Content-Disposition: attachment;filename=<defaultName>
-    X-Download-Options: noopen
+```
+Content-Length: <blob.size>
+Content-Type: <blob.type>
+Content-Disposition: attachment;filename=<defaultName>
+X-Download-Options: noopen
+```
 
 ## Specifications
 

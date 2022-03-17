@@ -81,11 +81,11 @@ whether the module instance contains a "name" custom section by checking that it
 ```js
 WebAssembly.compileStreaming(fetch('simple-name-section.wasm'))
 .then(function(mod) {
-  var nameSections = WebAssembly.Module.customSections(mod, "name");
-  if (nameSections.length != 0) {
-    console.log("Module contains a name section");
-    console.log(nameSections[0]);
-  };
+  var nameSections = WebAssembly.Module.customSections(mod, "name");
+  if (nameSections.length != 0) {
+    console.log("Module contains a name section");
+    console.log(nameSections[0]);
+  };
 });
 ```
 

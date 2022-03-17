@@ -17,7 +17,7 @@ browser-compat: webextensions.api.bookmarks.getSubTree
 
 The **`bookmarks.getSubTree()`** method asynchronously retrieves a {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}, given its ID.
 
-If the item is a folder, you can access all its descendants recursively using its `children` property and the `children` property of its descendants, if they are themselves folders.
+If the item is a folder, you can access all its descendants recursively using its `children` property and the `children` property of its descendants, if they are themselves folders.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -68,7 +68,7 @@ function logSubTree(bookmarkItems) {
 }
 
 function onRejected(error) {
-  console.log(`An error: ${error}`);
+  console.log(`An error: ${error}`);
 }
 
 var subTreeID = "root_____";

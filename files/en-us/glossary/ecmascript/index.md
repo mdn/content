@@ -10,4 +10,4 @@ tags:
 ## See also
 
 - {{Interwiki("wikipedia", "ECMAScript")}} on Wikipedia
-- [ECMAScript](http://www.ecmascript.org/)
+- [ECMAScript](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)

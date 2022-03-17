@@ -46,4 +46,3 @@ document.fonts.delete(font);
 ## Browser compatibility
 
 {{Compat}}
-

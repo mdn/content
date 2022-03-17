@@ -28,7 +28,9 @@ except exceptions.InvalidArgumentException as e:
 
 Output:
 
-    InvalidArgumentException: Expected -100 to be >= 0
+```
+InvalidArgumentException: Expected -100 to be >= 0
+```
 
 ## See also
 

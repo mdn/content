@@ -14,7 +14,7 @@ browser-compat: api.TouchEvent.metaKey
 
 ## Summary
 
-A boolean value indicating whether or not the <kbd>Meta</kbd> key is enabled when the touch event is created. If this key is enabled, the attribute's value is `true`. Otherwise, it is `false`.
+A boolean value indicating whether or not the <kbd>Meta</kbd> key is enabled when the touch event is created. If this key is enabled, the attribute's value is `true`. Otherwise, it is `false`.
 
 This property is {{readonlyInline}}.
 

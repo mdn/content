@@ -30,14 +30,14 @@ Math.trunc(x)
 
 ### Return value
 
-The integer part of the given number.
+The integer part of the given number.
 
 ## Description
 
 Unlike the other three `Math` methods: {{jsxref("Math.floor()")}},
 {{jsxref("Math.ceil()")}} and {{jsxref("Math.round()")}}, the way
-`Math.trunc()` works is very simple. It *truncates* (cuts off) the dot
-and the digits to the right of it, no matter whether the argument is a positive or
+`Math.trunc()` works is very simple. It *truncates* (cuts off) the dot
+and the digits to the right of it, no matter whether the argument is a positive or
 negative number.
 
 The argument passed to this method will be converted to number type implicitly.
@@ -71,7 +71,7 @@ Math.trunc();         // NaN
 
 ## See also
 
-- A polyfill of `Math.trunc` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [Polyfill of `Math.trunc` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
 - [A
   polyfill](https://github.com/behnammodi/polyfill/blob/master/math.polyfill.js)
 - {{jsxref("Math.abs()")}}

@@ -26,7 +26,7 @@ Warning. JavaScript execution won't be halted.
 
 The non-standard [expression
 closure](/en-US/docs/Web/JavaScript/Reference/Operators/Expression_closures) syntax (shorthand function syntax) is deprecated and shouldn't be used
-anymore. This syntax will be removed entirely in [bug 1083458](https://bugzilla.mozilla.org/show_bug.cgi?id=1083458) and
+anymore. This syntax will be removed entirely in [bug 1083458](https://bugzilla.mozilla.org/show_bug.cgi?id=1083458) and
 scripts using it will throw a {{jsxref("SyntaxError")}} then.
 
 ## Examples

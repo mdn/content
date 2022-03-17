@@ -20,13 +20,13 @@ used to stop media capture.
 When the `stop()` method is invoked, the UA queues a task that runs the
 following steps:
 
-1.  If {{domxref("MediaRecorder.state")}} is "inactive", raise a DOM
+1. If {{domxref("MediaRecorder.state")}} is "inactive", raise a DOM
     `InvalidState` error and terminate these steps. If the
     {{domxref("MediaRecorder.state")}} is not "inactive", continue on to the next step.
-2.  Set the {{domxref("MediaRecorder.state")}} to "inactive" and stop capturing media.
-3.  Raise a `dataavailable` event containing the Blob of data that has been
+2. Set the {{domxref("MediaRecorder.state")}} to "inactive" and stop capturing media.
+3. Raise a `dataavailable` event containing the Blob of data that has been
     gathered.
-4.  Raise a `stop` event.
+4. Raise a `stop` event.
 
 ## Syntax
 
@@ -37,7 +37,7 @@ MediaRecorder.stop()
 ### Errors
 
 An `InvalidState` error is raised if the `stop()` method is
-called while the `MediaRecorder` object’s {{domxref("MediaRecorder.state")}}
+called while the `MediaRecorder` object's {{domxref("MediaRecorder.state")}}
 is "inactive" — it makes no sense to stop media capture if it is already stopped.
 
 ## Example

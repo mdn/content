@@ -34,5 +34,3 @@ console.log(ready);
 ## Browser compatibility
 
 {{Compat}}
-
-

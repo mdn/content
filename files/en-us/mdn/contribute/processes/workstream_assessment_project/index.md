@@ -22,26 +22,26 @@ Once per month we have a content opportunity assessment meeting. During this mee
 
 The process looks like this:
 
-1.  Opportunities are initially submitted as issues to the [mdn content](https://github.com/mdn/content) or [openwebdocs project](https://github.com/openwebdocs/project) repos. These issues are given a preliminary quick assessment by a core team member to assess suitability.
-2.  If an idea is deemed suitable, the issue submitter is asked to fill in a full RFC document to be assessed. This is currently done by updating the existing issue's description to use the format seen at [OWD project: Making MDN syntax boxes beginner friendly](https://github.com/openwebdocs/project/issues/26).
+1. Opportunities are initially submitted as issues to the [mdn content](https://github.com/mdn/content) or [openwebdocs project](https://github.com/openwebdocs/project) repos. These issues are given a preliminary quick assessment by a core team member to assess suitability.
+2. If an idea is deemed suitable, the issue submitter is asked to fill in a full RFC document to be assessed. This is currently done by updating the existing issue's description to use the format seen at [OWD project: Making MDN syntax boxes beginner friendly](https://github.com/openwebdocs/project/issues/26).
 
-    - Note that in the "Priority assessment" table, each opportunity needs to be assessed against our [prioritisation criteria](https://github.com/openwebdocs/project/blob/main/steering-committee/prioritization-criteria.md).
+    - Note that in the "Priority assessment" table, each opportunity needs to be assessed against our [prioritization criteria](https://github.com/openwebdocs/project/blob/main/steering-committee/prioritization-criteria.md).
     - For each criterion, give the project a description as well as a rough score of none/small/medium/large.
 
-3.  Each month, we hold the opportunity assessment meeting to assess new opportunities, and record the results in the [content opportunities spreadsheet](https://docs.google.com/spreadsheets/d/13YYX5rRu4ATbo1Yl7rXHF9rbgXGBSLisguzo-cB8Fno/edit#gid=0). To be discussed in a meeting, each assessment needs an RFC submitted, to act as the basis for our discussion.
-4.  At the end of each opportunity assessment meeting, we stack rank the ideas:
+3. Each month, we hold the opportunity assessment meeting to assess new opportunities, and record the results in the [content opportunities spreadsheet](https://docs.google.com/spreadsheets/d/13YYX5rRu4ATbo1Yl7rXHF9rbgXGBSLisguzo-cB8Fno/edit#gid=0). To be discussed in a meeting, each assessment needs an RFC submitted, to act as the basis for our discussion.
+4. At the end of each opportunity assessment meeting, we stack rank the ideas:
 
     - We vote on the priority order for the ideas discussed by writing a simple number order in the meeting chat. For example if three opportunities were discussed and you thought that 2 was the most important, followed by 1, followed by 3, you'd write "2,1,3".
     - We tally the votes and create a priority order for that meeting's opportunities.
     - We then decide how those opportunities fit into the overall stack rank, by discussing where we think they'd fit.
 
-5.  In the middle of the last month in each quarter, we have a meeting to look at the submitted opportunities, and decide which ones should be put on the MDN content roadmap for the next quarter. We present this proposal to the [Open Web Docs (OWD)](https://github.com/openwebdocs) editorial steering committee to get signed off. Each assessed opportunity is given a decision word — "roadmap", "park" or "decline":
+5. In the middle of the last month in each quarter, we have a meeting to look at the submitted opportunities, and decide which ones should be put on the MDN content roadmap for the next quarter. We present this proposal to the [Open Web Docs (OWD)](https://github.com/openwebdocs) editorial steering committee to get signed off. Each assessed opportunity is given a decision word — "roadmap", "park" or "decline":
 
     - Roadmap — we are going ahead with this by putting it on the roadmap.
     - Park — we are not going forward with this yet, but will consider it in the future.
     - Decline — we are not going forward with this opportunity.
 
-6.  Projects that are added to the roadmap are moved onto the project setup stage. At this stage, each one needs a project lead assigned that will make sure the work happens.
+6. Projects that are added to the roadmap are moved onto the project setup stage. At this stage, each one needs a project lead assigned that will make sure the work happens.
 
 > **Note:** If there is any disagreement about any of the given scores or decisions during the opportunity assessment meetings, the chair of the meeting will listen to opposing views for a maximum of one minute per view, then make a final decision on the matter. The chair's decision is final.
 

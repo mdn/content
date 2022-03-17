@@ -8,6 +8,7 @@ tags:
   - Data Type
   - Reference
   - display-box
+spec-urls: https://drafts.csswg.org/css-display/#typedef-display-box
 ---
 {{CSSRef}}
 
@@ -19,7 +20,7 @@ Valid `<display-box>` values:
 
 - `contents`
 
-  - : These elements don't produce a specific box by themselves. They are replaced by their pseudo-box and their child boxes. Please note that the CSS Display Level 3 spec defines how the `contents` value should affect "unusual elements" — elements that aren’t rendered purely by CSS box concepts such as replaced elements. See [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) for more details.
+  - : These elements don't produce a specific box by themselves. They are replaced by their pseudo-box and their child boxes. Please note that the CSS Display Level 3 spec defines how the `contents` value should affect "unusual elements" — elements that aren't rendered purely by CSS box concepts such as replaced elements. See [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) for more details.
 
     _Due to a bug in browsers this will currently remove the element from the accessibility tree — screen readers will not look at what's inside. See the [Accessibility concerns](#accessibility_concerns) section below for more details._
 
@@ -91,9 +92,7 @@ In this example the outer {{htmlelement("div")}} has a 2-pixel red border and a 
 
 ## Specifications
 
-| Specification                                                                            | Status                           |
-| ---------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('CSS3 Display', '#typedef-display-box', 'display-box')}} | {{Spec2('CSS3 Display')}} |
+{{Specifications}}
 
 ## Browser compatibility
 

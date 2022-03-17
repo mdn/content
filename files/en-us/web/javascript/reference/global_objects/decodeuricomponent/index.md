@@ -69,7 +69,7 @@ needs a bit of preparation.
 
 ```js
 function decodeQueryParam(p) {
-  return decodeURIComponent(p.replace(/\+/g, ' '));
+  return decodeURIComponent(p.replace(/\+/g, ' '));
 }
 
 decodeQueryParam('search+query%20%28correct%29');

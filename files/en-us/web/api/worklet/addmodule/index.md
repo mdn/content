@@ -37,8 +37,8 @@ addPromise = worklet.addModule(moduleURL, options);
 
   - : An object with any of the following options:
 
-    - `credentials`: A {{domxref("RequestCredentials")}} value that
-      indicates whether to send credentials (e.g. cookies and HTTP authentification)
+    - `credentials`: A {{domxref("Request.credentials")}} value that
+      indicates whether to send credentials (e.g. cookies and HTTP authentication)
       when loading the module. Can be one of `"omit"`,
       `"same-origin"`, or `"include"`. Defaults to
       `"same-origin"`. See also {{domxref("Request.credentials")}}.
@@ -50,13 +50,13 @@ added. The promise doesn't return any value.
 
 ### Exceptions
 
-If `addModule()` fails, it rejects the promise, delivering one of the
+If `addModule()` fails, it rejects the promise, delivering one of the
 following errors to the rejection handler.
 
 - `AbortError`
   - : The specified script is invalid or could not be loaded.
 - `SyntaxError`
-  - : The specified `moduleURL` is invalid.
+  - : The specified `moduleURL` is invalid.
 
 ## Examples
 
@@ -65,7 +65,7 @@ following errors to the rejection handler.
 ```js
 const audioCtx = new AudioContext();
 const audioWorklet = audioCtx.audioWorklet;
-await audioWorklet.addModule('modules/bypassFilter.js', {
+audioWorklet.addModule('modules/bypassFilter.js', {
   credentials: 'omit',
 });
 ```
@@ -76,7 +76,7 @@ await audioWorklet.addModule('modules/bypassFilter.js', {
 CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js');
 ```
 
-Once a {{domxref('paintWorklet')}} is included, the CSS {{cssxref('paint()')}} function
+Once a {{domxref('paintWorklet')}} is included, the CSS {{cssxref('image/paint()')}} function
 can be used to include the image created by the worklet:
 
 ```css

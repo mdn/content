@@ -22,7 +22,7 @@ The **`AddressErrors`** dictionary is used by the [Payment Request API](/en-US/d
 
 `AddressErrors` is the type of the object returned by `shippingAddressErrors` in the object passed into {{domxref("PaymentRequestUpdateEvent.updateWith()")}} by the {{event("shippingaddresschange")}} event handler if a change to the address resulted in a validation error occurring.
 
-See the {{anch("Examples", "examples below")}} to see how this works.
+See the [examples below](#examples) to see how this works.
 
 ## Properties
 
@@ -90,7 +90,7 @@ function handleAddressChange(ev) {
 }
 ```
 
-See {{anch("Handling address changes")}} for a description of how this code works.
+See [Handling address changes](#handling_address_changes) for a description of how this code works.
 
 ### Complete example
 
@@ -213,7 +213,7 @@ window.addEventListener("load", function(ev) {
 }, false);
 ```
 
-See {{domxref("EventTarget.addEventListener", "addEventListener()")}}  for information about event handlers and how they work.
+See {{domxref("EventTarget.addEventListener", "addEventListener()")}}  for information about event handlers and how they work.
 
 #### HTML
 

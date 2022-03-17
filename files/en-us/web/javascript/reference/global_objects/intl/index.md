@@ -30,6 +30,8 @@ The **`Intl`** object is the namespace for the ECMAScript Internationalization A
   - : Constructor for objects that enable plural-sensitive formatting and language-specific rules for plurals.
 - {{jsxref("Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat", "Intl.RelativeTimeFormat()")}}
   - : Constructor for objects that enable language-sensitive relative time formatting.
+- {{jsxref("Global_Objects/Intl/Segmenter/Segmenter", "Intl.Segmenter()")}}
+  - : Constructor for objects that enable locale-sensitive text segmentation.
 
 ## Static methods
 
@@ -54,23 +56,23 @@ In the latter two cases, the actual locale used is the best-supported locale det
 
 A locale identifier is a string that consists of:
 
-1.  a language subtag,
-2.  (optionally) a script subtag,
-3.  (optionally) a region (or country) subtag,
-4.  (optionally) one or more variant subtags (all of which must be unique),
-5.  (optionally) one or more BCP 47 extension sequences, and
-6.  (optionally) a private-use extension sequence
+1. a language subtag,
+2. (optionally) a script subtag,
+3. (optionally) a region (or country) subtag,
+4. (optionally) one or more variant subtags (all of which must be unique),
+5. (optionally) one or more BCP 47 extension sequences, and
+6. (optionally) a private-use extension sequence
 
-...with all present subtags and sequences separated by hyphens. Locale identifiers are case-insensitive ASCII. However, it's conventional to use title case (first letter capitalized, successive letters lower case) for script subtags, upper case for region subtags, and lower case for everything else. For example:
+...with all present subtags and sequences separated by hyphens. Locale identifiers are case-insensitive ASCII. However, it's conventional to use title case (first letter capitalized, successive letters lower case) for script subtags, upper case for region subtags, and lower case for everything else. For example:
 
 - "`hi`": Hindi (language)
 - "`de-AT`": German (language) as used in Austria (region)
 - "`zh-Hans-CN`": Chinese (language) written in simplified characters (script) as used in China (region)
 - "`en-emodeng`": English (language) in the "Early modern English" dialect (variant)
 
-Subtags identifying languages, scripts, regions (including countries), and (rarely used) variants are registered in the [IANA Language Subtag Registry](https://www.iana.org/assignments/language-subtag-registry). This registry is periodically updated over time, and implementations may not always be up to date, so don't rely too much on subtags being universally supported.
+Subtags identifying languages, scripts, regions (including countries), and (rarely used) variants are registered in the [IANA Language Subtag Registry](https://www.iana.org/assignments/language-subtag-registry). This registry is periodically updated over time, and implementations may not always be up to date, so don't rely too much on subtags being universally supported.
 
-BCP 47 extension sequences consist of a single digit or letter (other than `"x"`) and one or more two- to eight-letter or digit subtags separated by hyphens. Only one sequence is permitted for each digit or letter: "`de-a-foo-a-foo`" is invalid. BCP 47 extension subtags are defined in the [Unicode CLDR Project](https://github.com/unicode-org/cldr/tree/master/common/bcp47). Currently only two extensions have defined semantics:
+BCP 47 extension sequences consist of a single digit or letter (other than `"x"`) and one or more two- to eight-letter or digit subtags separated by hyphens. Only one sequence is permitted for each digit or letter: "`de-a-foo-a-foo`" is invalid. BCP 47 extension subtags are defined in the [Unicode CLDR Project](https://github.com/unicode-org/cldr/tree/master/common/bcp47). Currently only two extensions have defined semantics:
 
 - The `"u"` (Unicode) extension can be used to request additional customization of {{jsxref("Intl.Collator")}}, {{jsxref("Intl.NumberFormat")}}, or {{jsxref("Intl.DateTimeFormat")}} objects. Examples:
 
@@ -81,7 +83,7 @@ BCP 47 extension sequences consist of a single digit or letter (other than `"x"`
 
 - The `"t"` (transformed) extension indicates transformed content: for example, text that was translated from another locale. No `Intl` functionality currently considers the `"t"` extension. However, this extension sometimes contains a nested locale (with no extensions): for example, the transformed extension in "`de-t-en`" contains the locale identifier for English. If a nested locale is present, it must be a valid locale identifier. For example, because "`en-emodeng-emodeng`" is invalid (because it contains a duplicate `emodeng` variant subtag), "`de-t-en-emodeng-emodeng`" is also invalid.
 
-Finally, a private-use extension sequence using the letter `"x"` may appear, followed by one or more one- to eight-letter or digit subtags separated by hyphens. This allows applications to encode information for their own private use, that will be ignored by all `Intl` operations.
+Finally, a private-use extension sequence using the letter `"x"` may appear, followed by one or more one- to eight-letter or digit subtags separated by hyphens. This allows applications to encode information for their own private use, that will be ignored by all `Intl` operations.
 
 ### Locale negotiation
 
@@ -138,6 +140,7 @@ log("de-DE");
   - {{jsxref("Intl/PluralRules", "Intl.PluralRules")}}
   - {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
   - {{jsxref("Intl/Locale", "Intl.Locale")}}
+  - {{jsxref("Intl/Segmenter", "Intl.Segmenter")}}
 
 - Methods
 

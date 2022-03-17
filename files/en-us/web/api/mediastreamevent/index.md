@@ -27,7 +27,7 @@ _A {{domxref("MediaStreamEvent")}} being an {{domxref("Event")}}, this event als
 
 ## Methods
 
-A {{domxref("MediaStreamEvent")}} being an {{domxref("Event")}}, this event also implements these properties. There is no specific {{domxref("MediaStreamEvent")}} method.
+A {{domxref("MediaStreamEvent")}} being an {{domxref("Event")}}, this event also implements these properties. There is no specific {{domxref("MediaStreamEvent")}} method.
 
 ## Examples
 

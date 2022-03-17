@@ -62,4 +62,3 @@ AudioData.copyTo(AudioBuffer, {planeIndex: 1});
 ## Browser compatibility
 
 {{Compat}}
-

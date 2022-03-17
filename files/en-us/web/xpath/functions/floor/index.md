@@ -11,7 +11,9 @@ The `floor` function evaluates a decimal number and returns the largest integer 
 
 ### Syntax
 
-    floor( number )
+```
+floor( number )
+```
 
 ### Arguments
 

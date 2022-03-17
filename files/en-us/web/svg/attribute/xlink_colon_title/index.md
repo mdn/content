@@ -17,27 +17,27 @@ The use of this information is highly dependent on the type of processing being 
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("a")}}
-*   {{SVGElement("altGlyph")}}
-*   {{SVGElement("animate")}}
-*   {{SVGElement("animateColor")}}
-*   {{SVGElement("animateMotion")}}
-*   {{SVGElement("animateTransform")}}
-*   {{SVGElement("cursor")}}
-*   {{SVGElement("feImage")}}
-*   {{SVGElement("filter")}}
-*   {{SVGElement("font-face-uri")}}
-*   {{SVGElement("glyphRef")}}
-*   {{SVGElement("image")}}
-*   {{SVGElement("linearGradient")}}
-*   {{SVGElement("mpath")}}
-*   {{SVGElement("pattern")}}
-*   {{SVGElement("radialGradient")}}
-*   {{SVGElement("script")}}
-*   {{SVGElement("set")}}
-*   {{SVGElement("textPath")}}
-*   {{SVGElement("tref")}}
-*   {{SVGElement("use")}}
+- {{SVGElement("a")}}
+- {{SVGElement("altGlyph")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("animateColor")}}
+- {{SVGElement("animateMotion")}}
+- {{SVGElement("animateTransform")}}
+- {{SVGElement("cursor")}}
+- {{SVGElement("feImage")}}
+- {{SVGElement("filter")}}
+- {{SVGElement("font-face-uri")}}
+- {{SVGElement("glyphRef")}}
+- {{SVGElement("image")}}
+- {{SVGElement("linearGradient")}}
+- {{SVGElement("mpath")}}
+- {{SVGElement("pattern")}}
+- {{SVGElement("radialGradient")}}
+- {{SVGElement("script")}}
+- {{SVGElement("set")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("use")}}
 
 ## Usage context
 
@@ -64,8 +64,8 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `<anything>`
-    *   : This value specifies the title used to describe the meaning of the link or resource.
+- `<anything>`
+  - : This value specifies the title used to describe the meaning of the link or resource.
 
 ## Specifications
 

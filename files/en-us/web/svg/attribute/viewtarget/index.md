@@ -12,7 +12,7 @@ The **`viewTarget`** attribute indicates the target object associated with the v
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("view")}}
+- {{SVGElement("view")}}
 
 ## Usage notes
 
@@ -33,8 +33,8 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `<xml-name>`
-    *   : This value specifies the name of the object associated with the view.
+- `<xml-name>`
+  - : This value specifies the name of the object associated with the view.
 
 ## Specifications
 

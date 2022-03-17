@@ -11,13 +11,13 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-Firefox 4 eliminates the status bar from the bottom of the browser window in favor of a new toolbar located at the bottom of the window. This new toolbar, with the ID "addon-bar", is a standard XUL {{ XULElem("toolbar") }}; add-ons can insert content into it, and the user can drag buttons into it while customizing their toolbars. This is the primary difference between the add-on bar and the old status bar; you can now put any XUL element into it, since it's a standard toolbar.
+Firefox 4 eliminates the status bar from the bottom of the browser window in favor of a new toolbar located at the bottom of the window. This new toolbar, with the ID "addon-bar", is a standard XUL {{ XULElem("toolbar") }}; add-ons can insert content into it, and the user can drag buttons into it while customizing their toolbars. This is the primary difference between the add-on bar and the old status bar; you can now put any XUL element into it, since it's a standard toolbar.
 
 > **Note:** For the time being, there is a status bar shim included so that add-ons that expect the status bar to be present will still work.
 
 ## Adding an element to the add-on bar
 
-The add-on bar is an XUL toolbar with the ID "addon-bar". The code below locates the most-recently used window and adds a new item to the add-on bar that displays the text "Hello world!" using an XUL {{ XULElem("label") }} element.
+The add-on bar is an XUL toolbar with the ID "addon-bar". The code below locates the most-recently used window and adds a new item to the add-on bar that displays the text "Hello world!" using an XUL {{ XULElem("label") }} element.
 
 ```js
 // Find the most recently used window
@@ -70,8 +70,10 @@ if (firstrun) {
 
 Adding support for the add-on bar while staying compatible with Firefox 3.6 and older will require using two overlays. The [chrome.manifest](/en-US/docs/Chrome_Registration) file can specify which file is used by which Firefox version by using [manifest flags](/en-US/docs/Chrome_Registration#Manifest_flags):
 
-    overlay chrome://browser/content/browser.xul chrome://myaddon/content/myaddon/overlayold.xul application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion<4.0
-    overlay chrome://browser/content/browser.xul chrome://myaddon/content/myaddon/overlay.xul application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion>=4.0
+```
+overlay chrome://browser/content/browser.xul chrome://myaddon/content/myaddon/overlayold.xul application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion<4.0
+overlay chrome://browser/content/browser.xul chrome://myaddon/content/myaddon/overlay.xul application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion>=4.0
+```
 
 Note: the appversion has to be at least 2 digits long or it won't work with versions of Gecko before 1.8.0.13 and 1.8.1.5.
 

@@ -58,7 +58,7 @@ async function captureWithCursor() {
     video: {
       displaySurface: "browser"
     },
-    audio: false;
+    audio: false
   };
 
   if (supportedConstraints.cursor) {

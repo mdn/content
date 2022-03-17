@@ -15,6 +15,8 @@ The **`WebSocket.close()`** method closes the
 {{domxref("WebSocket")}} connection or connection attempt, if any. If the connection is
 already `CLOSED`, this method does nothing.
 
+> **Note:** The process of closing the connection begins with a [closing handshake](https://www.rfc-editor.org/rfc/rfc6455.html#section-1.4), and the `close()` method does not discard previously-sent messages before starting that closing handshake; even if the user agent is still busy sending those messages, the handshake will only start after the messages are sent.
+
 ## Syntax
 
 ```js
@@ -32,23 +34,24 @@ WebSocket.close(code, reason);
 ### Parameters
 
 - `code` {{optional_inline}}
-  - : A numeric value indicating the status code explaining why the connection is being
-    closed. If this parameter is not specified, a default value of 1005 is assumed. See
-    the [list of status codes](/en-US/docs/Web/API/CloseEvent/code) of
-    {{domxref("CloseEvent")}} for permitted values.
+  - : An integer [WebSocket connection close code](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5) value indicating a reason for closure:
+    - If unspecified, a close code for the connection is automatically set: to `1000` for a normal closure, or otherwise to [another standard value in the range `1001`-`1015`](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.4.1) that indicates the actual reason the connection was closed.
+    - If specified, the value of this `code` parameter overrides the automatic setting of the close code for the connection, and instead sets a custom code.
+    The value must be an integer: either `1000`, or else a custom code of your choosing in the range `3000`-`4999`. If you specify a `code` value, you should also specify a [`reason`](#reason) value.
+
 - `reason` {{optional_inline}}
-  - : A human-readable string explaining why the connection is closing. This string must
-    be no longer than 123 bytes of UTF-8 text (**not** characters).
+  - : A string providing a custom [WebSocket connection close reason](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.6) (a concise human-readable prose explanation for the closure). The value must be no longer than 123 bytes (encoded in UTF-8).
 
-### Exceptions thrown
+    > **Note:** Because [UTF-8 uses two to four bytes](/en-US/docs/Glossary/UTF-8) to encode any non-[ASCII](/en-US/docs/Glossary/ASCII) characters, a 123-character `reason` value containing non-ASCII characters would exceed the 123-byte limit.
 
-- `INVALID_ACCESS_ERR`
-  - : An invalid `code` was specified.
-- `SYNTAX_ERR`
-  - : The `reason` string is too long or contains unpaired surrogates.
+    If you specify a `reason` value, you should also specify a [`code`](#code) value.
 
-> **Note:** In Gecko, this method didn't support any parameters prior to
-> Gecko 8.0 {{geckoRelease("8.0")}}.
+### Exceptions
+
+- `InvalidAccessError`
+  - : Thrown if [`code`](#code) is neither an integer equal to `1000` nor an integer in the range `3000`–`4999`.
+- `SyntaxError`
+  - : Thrown if the UTF-8-encoded [`reason`](#reason) value is longer than 123 bytes.
 
 ## Specifications
 
@@ -57,3 +60,7 @@ WebSocket.close(code, reason);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [RFC 6455](https://www.rfc-editor.org/rfc/rfc6455.html) (the WebSocket Protocol specification)

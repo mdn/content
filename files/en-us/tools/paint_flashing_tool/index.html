@@ -39,8 +39,8 @@ tags:
 
 <pre class="brush: html">&lt;body&gt;
     &lt;div id="container"&gt;
-      &lt;div class="moving-box" id="moving-box-left-margin"&gt;Transition using margin-left&lt;/div&gt;
-      &lt;div class="moving-box" id="moving-box-transform"&gt;Transition using transform&lt;/div&gt;
+      &lt;div class="moving-box" id="moving-box-left-margin"&gt;Transition using margin-left&lt;/div&gt;
+      &lt;div class="moving-box" id="moving-box-transform"&gt;Transition using transform&lt;/div&gt;
     &lt;/div&gt;
 &lt;/body&gt;
 
@@ -51,29 +51,29 @@ tags:
 }
 
 .moving-box {
-  height: 20%;
-  width:20%;
-  margin: 2%;
-  padding: 2%;
-  background-color: blue;
-  color: white;
-  font-size: 24px;
+  height: 20%;
+  width:20%;
+  margin: 2%;
+  padding: 2%;
+  background-color: blue;
+  color: white;
+  font-size: 24px;
 }
 
 #moving-box-left-margin {
-  transition: margin-left 4s;
+  transition: margin-left 4s;
 }
 
 #moving-box-transform {
-  transition: transform 4s;
+  transition: transform 4s;
 }
 
 body:hover #moving-box-left-margin{
-  margin-left: 74%;
+  margin-left: 74%;
 }
 
 body:hover #moving-box-transform {
-  transform: translate(300%);
+  transform: translate(300%);
 }</pre>
 
 <p>To see the transition, move the mouse into the space below:</p>

@@ -24,7 +24,9 @@ document.writeln(line);
 
 ## Example
 
-    document.writeln("<p>enter password:</p>");
+```js
+document.writeln("<p>enter password:</p>");
+```
 
 ## Notes
 

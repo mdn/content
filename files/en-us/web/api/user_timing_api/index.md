@@ -76,7 +76,7 @@ To remove a specific measure from the performance timeline, call `performance.cl
 
 ## Interoperability
 
-As shown in the {{domxref("Performance")}} interface's [Browser Compatibility](/en-US/docs/Web/API/Performance#browser_compatibility) table, the `User Timing` methods are broadly implemented by desktop and mobile browsers (the only exceptions are  Desktop Safari and Mobile Safari, however [the Safari Technology Preview 24 has support](https://developer.apple.com/safari/technology-preview/release-notes/#r24)).
+As shown in the {{domxref("Performance")}} interface's [Browser Compatibility](/en-US/docs/Web/API/Performance#browser_compatibility) table, the `User Timing` methods are broadly implemented by desktop and mobile browsers (the only exceptions are  Desktop Safari and Mobile Safari, however [the Safari Technology Preview 24 has support](https://developer.apple.com/safari/technology-preview/release-notes/#r24)).
 
 To test your browser's support for this API, run the [`perf-api-support`](https://mdn.github.io/dom-examples/performance-apis/perf-api-support.html) application.
 

@@ -27,7 +27,7 @@ A frame rate actually describes both the number of frames per second, and the ve
 - 24fps describes that there are 24 frames per second (0-23), and those frames play at the same speed as a real time clock.
 - 23.976fps is where things get weird. Like 24fps, it describes that there are 24 frames per second (0-23). Unlike 24fps, however, those 24 frames play at a slightly slower speed than a real time clock. As the frame rate number (23.976fps) implies, in one real time second you almost see 24 frames. It actually takes 1.001 seconds for 24 frames playing back at 23.976fps to display.
 
-In a single second this is not a big deal. As you extend to a few minutes, however, 24fps and 23.976fps will already be a few frames different from one other. As you extend to an hour, they will differ by 3.6s. Here’s some math to illustrate this:
+In a single second this is not a big deal. As you extend to a few minutes, however, 24fps and 23.976fps will already be a few frames different from one other. As you extend to an hour, they will differ by 3.6s. Here's some math to illustrate this:
 
 01:00:00:00 @ 24fps
 

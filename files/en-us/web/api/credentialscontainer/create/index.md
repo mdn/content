@@ -67,7 +67,6 @@ var promise = CredentialsContainer.create([options])
       - `attestation` {{optional_inline}}: A {{jsxref("String")}} which indicates how the attestation (for the authenticator's origin) should be transported.
       - `extensions` {{optional_inline}}: An object with several client extensions' inputs. Those extensions are used to request additional processing (e.g. dealing with legacy FIDO APIs credentials, prompting a specific text on the authenticator, etc.).
 
-
 ### Returns
 
 A {{jsxref("Promise")}} that resolves with a {{domxref("Credential")}} instance, such

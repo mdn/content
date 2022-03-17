@@ -12,7 +12,7 @@ tags:
   - Styling HTML
   - Styling text
   - Web
-  - color-adjust
+  - color-scheme
   - recipe:css-property
 browser-compat: css.properties.color-scheme
 ---
@@ -81,4 +81,4 @@ To opt the entire page into the user's color scheme preferences declare `color-s
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
 - {{cssxref("background-image")}}
-- {{cssxref("-webkit-print-color-adjust")}}
+- {{cssxref("print-color-adjust")}}

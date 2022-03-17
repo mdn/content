@@ -124,7 +124,7 @@ They currently have no value; they are empty containers. When you enter the vari
 scoobyDoo;
 ```
 
-> **Note:** Don't confuse a variable that exists but has no defined value with a variable that doesn't exist at all — they are very different things. In the box analogy you saw above, not existing would mean there's no box (variable) for a value to go in. No value defined would mean that there is a box, but it has no value inside it.
+> **Note:** Don't confuse a variable that exists but has no defined value with a variable that doesn't exist at all — they are very different things. In the box analogy you saw above, not existing would mean there's no box (variable) for a value to go in. No value defined would mean that there is a box, but it has no value inside it.
 
 ## Initializing a variable
 
@@ -159,7 +159,7 @@ var myName;
 var myAge;
 ```
 
-Back when JavaScript was first created, this was the only way to declare variables. The design of `var` is confusing and error-prone. So `let` was created in modern versions of JavaScript, a new keyword for creating variables that works somewhat differently to `var`, fixing its issues in the process.
+Back when JavaScript was first created, this was the only way to declare variables. The design of `var` is confusing and error-prone. So `let` was created in modern versions of JavaScript, a new keyword for creating variables that works somewhat differently to `var`, fixing its issues in the process.
 
 A couple of simple differences are explained below. We won't go into all the differences now, but you'll start to discover them as you learn more about JavaScript (if you really want to read about them now, feel free to check out our [let reference page](/en-US/docs/Web/JavaScript/Reference/Statements/let)).
 
@@ -267,7 +267,7 @@ So far we've looked at the first two, but there are others.
 
 ### Numbers
 
-You can store numbers in variables, either whole numbers like 30 (also called integers) or decimal numbers like 2.456 (also called floats or floating point numbers). You don't need to declare variable types in JavaScript, unlike some other programming languages. When you give a variable a number value, you don't include quotes:
+You can store numbers in variables, either whole numbers like 30 (also called integers) or decimal numbers like 2.456 (also called floats or floating point numbers). You don't need to declare variable types in JavaScript, unlike some other programming languages. When you give a variable a number value, you don't include quotes:
 
 ```js
 let myAge = 17;
@@ -313,7 +313,7 @@ myNameArray[0]; // should return 'Chris'
 myNumberArray[2]; // should return 40
 ```
 
-The square brackets specify an index value corresponding to the position of the value you want returned. You might have noticed that arrays in JavaScript are zero-indexed: the first element is at index 0.
+The square brackets specify an index value corresponding to the position of the value you want returned. You might have noticed that arrays in JavaScript are zero-indexed: the first element is at index 0.
 
 You'll learn a lot more about arrays in [a future article](/en-US/docs/Learn/JavaScript/First_steps/Arrays).
 
@@ -345,7 +345,7 @@ For example, if you declare a variable and give it a value enclosed in quotes, t
 let myString = 'Hello';
 ```
 
-Even if the value enclosed in quotes is just digits, it is still a string — not a number — so be careful:
+Even if the value enclosed in quotes is just digits, it is still a string — not a number — so be careful:
 
 ```js
 let myNumber = '500'; // oops, this is still a string
@@ -354,14 +354,14 @@ myNumber = 500; // much better — now this is a number
 typeof myNumber;
 ```
 
-Try entering the four lines above into your console one by one, and see what the results are. You'll notice that we are using a special operator called [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) — this returns the data type of the variable you type after it. The first time it is called, it should return `string`, as at that point the `myNumber` variable contains a string, `'500'`. Have a look and see what it returns the second time you call it.
+Try entering the four lines above into your console one by one, and see what the results are. You'll notice that we are using a special operator called [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) — this returns the data type of the variable you type after it. The first time it is called, it should return `string`, as at that point the `myNumber` variable contains a string, `'500'`. Have a look and see what it returns the second time you call it.
 
 ## Constants in JavaScript
 
 As well as variables, you can declare constants. These are like variables, except that:
 
-* you must initialize them when you declare them
-* you can't assign them a new value after you've initialized them.
+- you must initialize them when you declare them
+- you can't assign them a new value after you've initialized them.
 
 For example, using `let` you can declare a variable without initializing it:
 

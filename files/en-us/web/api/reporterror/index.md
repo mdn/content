@@ -34,12 +34,10 @@ self.reportError(throwable);
 
 Void.
 
-
 ### Exceptions
 
 - {{jsxref("TypeError")}}
   - : The method is called without an error argument.
-
 
 ## Example
 
@@ -72,7 +70,6 @@ self.addEventListener('error', (error) => {
 // > "someFile.js"
 ```
 
-
 ## Specifications
 
 {{Specifications}}
@@ -80,7 +77,6 @@ self.addEventListener('error', (error) => {
 ## Browser compatibility
 
 {{Compat}}
-
 
 ## See also
 

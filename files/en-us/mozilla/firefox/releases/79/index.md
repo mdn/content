@@ -9,7 +9,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 79 that will affect developers. Firefox 79 was released on July 28, 2020.
+This article provides information about the changes in Firefox 79 that will affect developers. Firefox 79 was released on July 28, 2020.
 
 See also [Firefox 79: The safe return of shared memory, new tooling, and platform updates](https://hacks.mozilla.org/2020/07/firefox-79/) on Mozilla hacks.
 
@@ -24,7 +24,7 @@ See also [Firefox 79: The safe return of shared memory, new tooling, and platfor
 
 #### Debugger
 
-- ["Blackbox" a source file](/en-US/docs/Tools/Debugger/How_to/Ignore_a_source) is now called "ignore" a source file.  ({{bug(1642811)}})
+- ["Blackbox" a source file](/en-US/docs/Tools/Debugger/How_to/Ignore_a_source) is now called "ignore" a source file. ({{bug(1642811)}})
 - Inline preview is now available on [exceptions](/en-US/docs/Tools/Debugger/How_to/Breaking_on_exceptions). ({{bug(1581708)}})
 - Items in the Watch Expressions and Scopes sections now have tooltips on hover, showing their values ({{bug(1631545)}})
 - In the [Call Stack section](/en-US/docs/Tools/Debugger/UI_Tour#call_stack), there is now a context menu option to **Restart Frame**, to execute the current stack frame from its beginning. ({{bug(1594467)}})
@@ -65,8 +65,8 @@ See also [Firefox 79: The safe return of shared memory, new tooling, and platfor
   - [Logical OR assignment (`||=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)
 
 - {{jsxref("Atomics")}} objects now also work with non-shared memory ({{bug(1630706)}}).
-- The [`Intl.DateTimeFormat()` constructor ](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat)now supports the `dateStyle` and `timeStyle` options ({{bug(1557718)}}).
-- The [`Intl.NumberFormat()` constructor ](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat)now supports more numbering systems ({{bug(1413504)}}).
+- The [`Intl.DateTimeFormat()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) now supports the `dateStyle` and `timeStyle` options ({{bug(1557718)}}).
+- The [`Intl.NumberFormat()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) now supports more numbering systems ({{bug(1413504)}}).
 
 ### HTTP
 
@@ -81,7 +81,7 @@ See also [Firefox 79: The safe return of shared memory, new tooling, and platfor
 
 #### Media, WebRTC, and Web Audio
 
-- Firefox now supports remote timestamps on statistics records whose {{domxref("RTCStatsType")}} is `remote-outbound-rtp`. The {{domxref("RTCRemoteOutboundRtpStreamStats")}} dictionary which is used to provide these statistics now includes the {{domxref("RTCRemoteOutboundRtpStreamStats.remoteTimestamp", "remoteTimestamp")}} property, which states the timestamp on the remote peer at which the statistics were collected or generated ({{bug(1615191)}}).
+- Firefox now supports remote timestamps on statistics records whose {{domxref("RTCStatsType")}} is `remote-outbound-rtp`. The {{domxref("RTCRemoteOutboundRtpStreamStats")}} dictionary which is used to provide these statistics now includes the {{domxref("RTCRemoteOutboundRtpStreamStats.remoteTimestamp", "remoteTimestamp")}} property, which states the timestamp on the remote peer at which the statistics were collected or generated ({{bug(1615191)}}).
 
 #### Removals
 

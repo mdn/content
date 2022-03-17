@@ -3,7 +3,7 @@ title: VRFrameData.rightViewMatrix
 slug: Web/API/VRFrameData/rightViewMatrix
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -15,21 +15,15 @@ browser-compat: api.VRFrameData.rightViewMatrix
 ---
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-The **`rightViewMatrix`** read-only property of the {{domxref("VRFrameData")}} interface returns a {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the view transform to be used for the right eye’s rendering.
+The **`rightViewMatrix`** read-only property of the {{domxref("VRFrameData")}} interface returns a {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the view transform to be used for the right eye's rendering.
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-This value may be passed directly to WebGL’s {{domxref("WebGLRenderingContext.uniformMatrix", "uniformMatrix4fv")}} function.
+This value may be passed directly to WebGL's {{domxref("WebGLRenderingContext.uniformMatrix", "uniformMatrix4fv")}} function.
 
 > **Warning:** It is highly recommended that applications use this matrix when rendering.
 
-## Syntax
-
-```js
-var myRVM = vrFrameDataInstance.rightViewMatrix;
-```
-
-### Value
+## Value
 
 A {{jsxref("Float32Array")}} object.
 

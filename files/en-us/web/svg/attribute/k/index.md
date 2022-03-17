@@ -15,8 +15,8 @@ The value is in the font coordinate system. This attribute is required.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("hkern")}}
-*   {{SVGElement("vkern")}}
+- {{SVGElement("hkern")}}
+- {{SVGElement("vkern")}}
 
 ## Context notes
 
@@ -43,8 +43,8 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `<number>`
-    *   : This value indicates the amount for decreasing the spacing between the two glyphs in the kerning pair.
+- `<number>`
+  - : This value indicates the amount for decreasing the spacing between the two glyphs in the kerning pair.
 
 ## Specifications
 

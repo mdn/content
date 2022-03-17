@@ -3,14 +3,13 @@ title: Selection.addRange()
 slug: Web/API/Selection/addRange
 tags:
   - API
-  - Experimental
   - HTML Editing
   - Method
   - Reference
   - Selection
 browser-compat: api.Selection.addRange
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ ApiRef("DOM") }}
 
 The **`Selection.addRange()`** method adds a
 {{domxref("Range")}} to a {{domxref("Selection")}}.

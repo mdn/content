@@ -9,7 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Number
 ---
-{{JSRef}}**`Number`** is a [primitive wrapper object](/en-US/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript) used to represent and manipulate numbers like `37` or `-9.25`.
+{{JSRef}}**`Number`** is a [primitive wrapper object](/en-US/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript) used to represent and manipulate numbers like `37` or `-9.25`.
 
 The `Number` constructor contains constants and methods for working with numbers. Values of other types can be converted to numbers using the `Number()` function.
 
@@ -17,7 +17,7 @@ The JavaScript `Number` type is a [double-precision 64-bit binary format IEEE 75
 
 A number literal like `37` in JavaScript code is a floating-point value, not an integer. There is no separate integer type in common everyday use. (JavaScript now has a {{jsxref("BigInt")}} type, but it was not designed to replace Number for everyday uses. `37` is still a `Number`, not a BigInt.)
 
-`Number` may also be expressed in literal forms like `0b101`, `0o13`, `0x0A`. Learn more on numeric [lexical grammar here](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals).
+`Number` may also be expressed in literal forms like `0b101`, `0o13`, `0x0A`. Learn more on numeric [lexical grammar here](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals).
 
 ## Description
 
@@ -65,7 +65,7 @@ Number(undefined)  // NaN
 - {{jsxref("Number.POSITIVE_INFINITY")}}
   - : Special value representing infinity. Returned on overflow.
 - {{jsxref("Number", "Number.prototype")}}
-  - : Allows the addition of properties to the `Number` object.
+  - : Allows the addition of properties to the `Number` object.
 
 ## Static methods
 
@@ -76,9 +76,9 @@ Number(undefined)  // NaN
 - {{jsxref("Number.isInteger()")}}
   - : Determine whether the passed value is an integer.
 - {{jsxref("Number.isSafeInteger()")}}
-  - : Determine whether the passed value is a safe integer (number between `-(2^53 - 1)` and `2^53 - 1`).
+  - : Determine whether the passed value is a safe integer (number between `-(2^53 - 1)` and `2^53 - 1`).
 - {{jsxref("Number.parseFloat()", "Number.parseFloat(<var>string</var>)")}}
-  - : This is the same as the global {{jsxref("parseFloat", "parseFloat()")}} function.
+  - : This is the same as the global {{jsxref("parseFloat", "parseFloat()")}} function.
 - {{jsxref("Number.parseInt()", "Number.parseInt(<var>string</var>, [<var>radix</var>])")}}
   - : This is the same as the global {{jsxref("parseInt", "parseInt()")}} function.
 
@@ -113,7 +113,7 @@ const notANum        = Number.NaN
 
 ### Integer range for Number
 
-The following example shows the minimum and maximum integer values that can be represented as `Number` object. (More details on this are described in the ECMAScript standard, chapter _[6.1.6 The Number Type](https://tc39.github.io/ecma262/#sec-ecmascript-language-types-number-type)._)
+The following example shows the minimum and maximum integer values that can be represented as `Number` object. (More details on this are described in the ECMAScript standard, chapter _[6.1.6 The Number Type](https://tc39.github.io/ecma262/#sec-ecmascript-language-types-number-type)._)
 
 ```js
 const biggestInt  = Number.MAX_SAFE_INTEGER  //  (2**53 - 1) =>  9007199254740991
@@ -122,7 +122,7 @@ const smallestInt = Number.MIN_SAFE_INTEGER  // -(2**53 - 1) => -900719925474099
 
 When parsing data that has been serialized to JSON, integer values falling outside of this range can be expected to become corrupted when JSON parser coerces them to `Number` type.
 
-A possible workaround is to use {{jsxref("String")}} instead.
+A possible workaround is to use {{jsxref("String")}} instead.
 
 Larger numbers can be represented using the {{jsxref("BigInt")}} type.
 
@@ -165,7 +165,7 @@ Number('-Infinity') // -Infinity
 
 ## See also
 
-- A polyfill of modern `Number` behavior (with support binary and octal literals) is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [Polyfill of modern `Number` behavior (with support binary and octal literals) in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
 - {{jsxref("NaN")}}
 - [Arithmetic operators](/en-US/docs/Web/JavaScript/Reference/Operators#arithmetic_operators)
 - The {{jsxref("Math")}} global object

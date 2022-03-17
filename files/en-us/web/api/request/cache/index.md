@@ -4,7 +4,6 @@ slug: Web/API/Request/cache
 tags:
   - API
   - Cache
-  - Experimental
   - Fetch
   - Property
   - Reference

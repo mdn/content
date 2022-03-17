@@ -3,7 +3,6 @@ title: Headers.entries()
 slug: Web/API/Headers/entries
 tags:
   - API
-  - Experimental
   - Fetch API
   - Headers
   - Method
@@ -45,8 +44,10 @@ for (var pair of myHeaders.entries()) {
 
 The result is:
 
-    content-type: text/xml
-    vary: Accept-Language
+```
+content-type: text/xml
+vary: Accept-Language
+```
 
 ## Browser compatibility
 

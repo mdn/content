@@ -12,7 +12,7 @@ tags:
 
 {{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}
 
-The **`x-ms-acceleratorkey`** attribute accessibly declares that an [accelerator key](https://docs.microsoft.com/en-us/windows/uwp/design/input/keyboard-accelerators) has been assigned to an element: the element is activated via JavaScript when the key(s) are pressed on a keyboard.
+The **`x-ms-acceleratorkey`** attribute accessibly declares that an [accelerator key](https://docs.microsoft.com/windows/uwp/design/input/keyboard-accelerators) has been assigned to an element: the element is activated via JavaScript when the key(s) are pressed on a keyboard.
 
 {{Non-standard_Inline}} This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
@@ -46,7 +46,7 @@ The accelerator key combination. For example:
 
   key.
 
-- `"Ctrl+; then K"` for a shortcut similar to [FogBugz’s old keyboard mode](https://support.fogbugz.com/hc/en-us/articles/360011254414-FogBugz-Keyboard-Shortcuts#:~:text=For%20Your%20Server%20or%20non-Ocelot%20Keyboard%20Shortcuts). This approach is more complicated, but does not override existing keyboard shortcuts provided by the user’s browser or operating system.
+- `"Ctrl+; then K"` for a shortcut similar to [FogBugz's old keyboard mode](https://support.fogbugz.com/hc/en-us/articles/360011254414-FogBugz-Keyboard-Shortcuts#:~:text=For%20Your%20Server%20or%20non-Ocelot%20Keyboard%20Shortcuts). This approach is more complicated, but does not override existing keyboard shortcuts provided by the user's browser or operating system.
 
 ## See also
 

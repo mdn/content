@@ -49,7 +49,6 @@ This method doesn't throw true exceptions; instead, it rejects the returned prom
     > This document is not allowed to use this feature.
     > For example, it might not be explicitly allowed or restricted via {{HTTPHeader("Feature-Policy")}} {{HTTPHeader("Feature-Policy/battery", "battery")}} feature.
 
-
 ## Example
 
 This example fetches the current charging state of the battery and establishes a

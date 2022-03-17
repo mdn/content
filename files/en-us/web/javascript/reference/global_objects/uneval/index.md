@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.uneval
 ---
 {{JSSidebar("Objects")}}{{Non-standard_Header}}{{deprecated_header}}
 
-The **`uneval()`** function creates a string representation of
+The **`uneval()`** function creates a string representation of
 the source code of an Object.
 
 ## Syntax

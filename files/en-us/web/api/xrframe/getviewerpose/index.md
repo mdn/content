@@ -19,9 +19,9 @@ browser-compat: api.XRFrame.getViewerPose
 ---
 {{APIRef("WebXR Device API")}}
 
-The **`getViewerPose()`** method, a member of the {{domxref("XRFrame")}} interface, returns a {{domxref("XRViewerPose")}} object which describes the viewer's pose (position and orientation) relative to the specified reference space.
+The **`getViewerPose()`** method, a member of the {{domxref("XRFrame")}} interface, returns a {{domxref("XRViewerPose")}} object which describes the viewer's pose (position and orientation) relative to the specified reference space.
 
-See the {{domxref("XRFrame.getPose", "getPose()")}} method for a way to calculate a pose that represents the difference between two spaces.
+See the {{domxref("XRFrame.getPose", "getPose()")}} method for a way to calculate a pose that represents the difference between two spaces.
 
 ## Syntax
 
@@ -45,7 +45,7 @@ to the specified reference space.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if `getViewerPose()` was not
     called within the context of a callback to a
-    session's {{domxref("XRSession.requestAnimationFrame",
+    session's {{domxref("XRSession.requestAnimationFrame",
     "XRSession.requestAnimationFrame()")}}.
 
 ## Examples

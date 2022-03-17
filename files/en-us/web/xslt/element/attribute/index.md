@@ -13,9 +13,11 @@ The `<xsl:attribute>` element creates an attribute in the output document, using
 
 ### Syntax
 
-    <xsl:attribute name=NAME namespace=URI>
-    	TEMPLATE
-    </xsl:attribute>
+```xml
+<xsl:attribute name=NAME namespace=URI>
+  TEMPLATE
+</xsl:attribute>
+```
 
 ### Required Attributes
 

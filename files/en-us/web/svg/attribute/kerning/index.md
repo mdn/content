@@ -15,11 +15,11 @@ The **`kerning`** attribute indicates whether the spacing between {{Glossary("gl
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("altGlyph")}}
-*   {{SVGElement("textPath")}}
-*   {{SVGElement("text")}}
-*   {{SVGElement("tref")}}
-*   {{SVGElement("tspan")}}
+- {{SVGElement("altGlyph")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("text")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
 
 ## Example
 
@@ -66,16 +66,16 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `auto`
-    *   : This value indicates that the spacing between {{Glossary("glyph", "glyphs")}} is adjusted based on kerning tables that are included in the font that will be used.
-*   `<length>`
-    *   : If a length is provided, then auto-kerning is disabled. Instead, inter-character spacing is set to the given length.
+- `auto`
+  - : This value indicates that the spacing between {{Glossary("glyph", "glyphs")}} is adjusted based on kerning tables that are included in the font that will be used.
+- `<length>`
+  - : If a length is provided, then auto-kerning is disabled. Instead, inter-character spacing is set to the given length.
 
-        If a length is provided without a unit identifier (e.g., an unqualified number such as 128), the length is processed as a width value in the current user coordinate system. If a unit identifier (e.g., `0.25em` or `1%`) is provided, then the length is converted into a corresponding value in the current user coordinate system.
+    If a length is provided without a unit identifier (e.g., an unqualified number such as 128), the length is processed as a width value in the current user coordinate system. If a unit identifier (e.g., `0.25em` or `1%`) is provided, then the length is converted into a corresponding value in the current user coordinate system.
 
-        The most common scenario, other than `auto`, is to set `kerning` to a value of `0` so that auto-kerning is disabled.
+    The most common scenario, other than `auto`, is to set `kerning` to a value of `0` so that auto-kerning is disabled.
 
-        The given length is added to the inter-character spacing value specified by the {{SVGAttr("letter-spacing")}} attribute.
+    The given length is added to the inter-character spacing value specified by the {{SVGAttr("letter-spacing")}} attribute.
 
 ## Browser compatibility
 
@@ -83,4 +83,4 @@ html, body, svg {
 
 ## See also
 
-*   {{cssxref("font-kerning", "CSS font-kerning")}}
+- {{cssxref("font-kerning", "CSS font-kerning")}}

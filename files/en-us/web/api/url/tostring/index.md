@@ -12,7 +12,7 @@ browser-compat: api.URL.toString
 ---
 {{ApiRef("URL API")}}
 
-The **`URL.toString()`** stringifier method returns a
+The **`URL.toString()`** {{Glossary("stringifier")}} method returns a
 {{domxref("USVString")}} containing the whole URL. It is effectively a read-only version
 of {{domxref("URL.href")}}.
 

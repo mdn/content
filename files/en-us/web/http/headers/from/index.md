@@ -9,7 +9,6 @@ browser-compat: http.headers.From
 ---
 {{HTTPSidebar}}
 
-
 The **`From`** request header contains an Internet email
 address for a human user who controls the requesting user agent.
 
@@ -18,7 +17,6 @@ must be sent, so you can be contacted if problems occur on servers, such as if t
 robot is sending excessive, unwanted, or invalid requests.
 
 > **Warning:** You must not use the `From` header for access control or authentication.
-
 
 <table class="properties">
   <tbody>
@@ -42,7 +40,7 @@ From: <email>
 ## Directives
 
 - \<email>
-  - : A machine-usable email address.
+  - : A machine-usable email address.
 
 ## Examples
 

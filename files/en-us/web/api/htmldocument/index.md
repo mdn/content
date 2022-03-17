@@ -13,11 +13,7 @@ browser-compat: api.HTMLDocument
 ---
 {{APIRef("HTML DOM")}}
 
-The **`HTMLDocument`** interface, which may be accessed through the `Window.HTMLDocument` property, extends the `Window.HTMLDocument` property to include methods and properties that are specific to {{Glossary("HTML")}} documents.
-
-{{InheritanceDiagram}}
-
-For the purposes of web development, you can generally think of `HTMLDocument` as an alias for {{DOMxRef("Document")}}, upon which `HTMLDocument` is based. You can find documentation for the members of `HTMLDocument` under the {{DOMxRef("Document")}} interface.
+For historical reasons, {{domxref("Window")}} objects have a `window.HTMLDocument` property whose value is the {{DOMxRef("Document")}} interface. So you can think of `HTMLDocument` as an alias for {{DOMxRef("Document")}}, and you can find documentation for `HTMLDocument` members under the documentation for the {{DOMxRef("Document")}} interface.
 
 ## Specifications
 

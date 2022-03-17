@@ -160,7 +160,7 @@ Elements that are relatively positioned remain in the normal flow of the documen
 }
 
 body {
-  width: 500px;
+  width: 500px;
   margin: 0 auto;
 }
 

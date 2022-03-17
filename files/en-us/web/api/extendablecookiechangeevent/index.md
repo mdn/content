@@ -20,6 +20,8 @@ Cookie changes that cause the `ExtendableCookieChangeEvent` to be dispatched are
 
 > **Note:** A cookie that is replaced due to the insertion of another cookie with the same name, domain, and path, is ignored and does not trigger a change event.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("ExtendableCookieChangeEvent.ExtendableCookieChangeEvent()")}}

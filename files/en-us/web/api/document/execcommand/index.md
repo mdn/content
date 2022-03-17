@@ -47,7 +47,7 @@ disabled.
 
 - `aCommandName`
   - : A {{domxref("DOMString")}} specifying the name of the command to execute. See
-    {{anch("Commands")}} for a list of possible commands.
+    [Commands](#commands) for a list of possible commands.
 - `aShowDefaultUI`
   - : A boolean value indicating whether the default user interface should be
     shown. This is not implemented in Mozilla.

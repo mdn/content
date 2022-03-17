@@ -18,7 +18,7 @@ browser-compat: api.AddressErrors.languageCode
 ---
 {{APIRef("Payment Request API")}}{{deprecated_header}}
 
-An object based on {{domxref("AddressErrors")}} includes a **`languageCode`** property when the address's {{domxref("PaymentAddress.languageCode", "languageCode")}} property couldn't be validated. The returned string explains the error and should offer suggestions for how to correct it.
+An object based on {{domxref("AddressErrors")}} includes a **`languageCode`** property when the address's {{domxref("PaymentAddress.languageCode", "languageCode")}} property couldn't be validated. The returned string explains the error and should offer suggestions for how to correct it.
 
 ## Syntax
 

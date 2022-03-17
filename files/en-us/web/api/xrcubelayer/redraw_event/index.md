@@ -27,6 +27,7 @@ addEventListener('redraw', event => { })
 
 onredraw = event => { }
 ```
+
 ## Event type
 
 An {{domxref("XRLayerEvent")}}. Inherits from {{domxref("Event")}}.

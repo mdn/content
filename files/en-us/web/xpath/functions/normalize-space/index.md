@@ -11,7 +11,9 @@ The `normalize-space` function strips leading and trailing white-space from a st
 
 ### Syntax
 
-    normalize-space( [string] )
+```
+normalize-space( [string] )
+```
 
 ### Arguments
 

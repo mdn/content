@@ -69,8 +69,8 @@ o3 instanceof C        // true since C.prototype is now in o3's prototype chain
 ```
 
 Note that the value of an `instanceof` test can change based on changes to
-the `prototype` property of constructors. It can also be changed by changing
-an object's prototype using `Object.setPrototypeOf`. It is also possible
+the `prototype` property of constructors. It can also be changed by changing
+an object's prototype using `Object.setPrototypeOf`. It is also possible
 using the non-standard `__proto__` property.
 
 ### `instanceof` and multiple context (e.g. frames or windows)
@@ -79,7 +79,7 @@ Different scopes have different execution environments. This means that they hav
 different built-ins (different global object, different constructors, etc.). This may
 result in unexpected results. For instance,
 `[] instanceof window.frames[0].Array` will return `false`,
-because ` Array.prototype !== ``window.frames[0].Array.prototype` and arrays
+because `Array.prototype !== window.frames[0].Array.prototype` and arrays
 inherit from the former.
 
 This may not make sense at first, but for scripts dealing with multiple frames or
@@ -87,8 +87,8 @@ windows, and passing objects from one context to another via functions, this wil
 valid and strong issue. For instance, you can securely check if a given object is, in
 fact, an Array using `Array.isArray(myObj)`
 
-For example, checking if a [Node](/en-US/docs/Web/API/Node) is a [SVGElement](/en-US/docs/Web/API/SVGElement) in a different context, you can
-use `myNode instanceof myNode.ownerDocument.defaultView.SVGElement`.
+For example, checking if a [Node](/en-US/docs/Web/API/Node) is a [SVGElement](/en-US/docs/Web/API/SVGElement) in a different context, you can
+use `myNode instanceof myNode.ownerDocument.defaultView.SVGElement`.
 
 ## Examples
 
@@ -179,7 +179,7 @@ do
 ```js
 if (!(mycar instanceof Car)) {
   // Do something, like:
-  // mycar = new Car(mycar)
+  // mycar = new Car(mycar)
 }
 ```
 

@@ -30,4 +30,3 @@ An integer indicating how many properties the `CustomStateSet` has.
 ## Browser compatibility
 
 {{Compat}}
-

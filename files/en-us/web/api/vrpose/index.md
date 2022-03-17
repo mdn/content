@@ -3,7 +3,7 @@ title: VRPose
 slug: Web/API/VRPose
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Landing
   - Reference
   - VR
@@ -18,26 +18,26 @@ The **`VRPose`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) rep
 
 > **Note:** This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-This interface is accessible through the {{domxref("VRDisplay.getPose()")}} and {{domxref("VRDisplay.getFrameData()")}} methods. {{domxref("VRDisplay.getPose()")}} is deprecated.
+This interface is accessible through the {{domxref("VRDisplay.getPose()")}} and {{domxref("VRDisplay.getFrameData()")}} methods. {{domxref("VRDisplay.getPose()")}} is deprecated.
 
 ## Properties
 
-- {{domxref("VRPose.position")}} {{readonlyInline}}
+- {{domxref("VRPose.position")}} {{deprecated_inline}}{{readonlyInline}}
   - : Returns the position of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}} as a 3D vector
-- {{domxref("VRPose.linearVelocity")}} {{readonlyInline}}
+- {{domxref("VRPose.linearVelocity")}} {{deprecated_inline}}{{readonlyInline}}
   - : Returns the linear velocity of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second.
-- {{domxref("VRPose.linearAcceleration")}} {{readonlyInline}}
+- {{domxref("VRPose.linearAcceleration")}} {{deprecated_inline}}{{readonlyInline}}
   - : Returns the linear acceleration of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second per second.
-- {{domxref("VRPose.orientation")}} {{readonlyInline}}
+- {{domxref("VRPose.orientation")}} {{deprecated_inline}}{{readonlyInline}}
   - : Returns the orientation of the sensor at the current {{domxref("VRPose.timestamp")}}, as a quarternion value.
-- {{domxref("VRPose.angularVelocity")}} {{readonlyInline}}
+- {{domxref("VRPose.angularVelocity")}} {{deprecated_inline}}{{readonlyInline}}
   - : Returns the angular velocity of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in radians per second.
-- {{domxref("VRPose.angularAcceleration")}} {{readonlyInline}}
+- {{domxref("VRPose.angularAcceleration")}} {{deprecated_inline}}{{readonlyInline}}
   - : Returns the angular acceleration of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second per second.
 
 ### Obsolete properties
 
-- {{domxref("VRPose.timeStamp")}} {{readonlyInline}} {{deprecated_inline}}
+- {{domxref("VRPose.timeStamp")}} {{deprecated_inline}}{{readonlyInline}}
   - : Returns the current time stamp of the system — a monotonically increasing value useful for determining if position data has been updated, and what order updates have occurred in. **This version of `timestamp` has been removed from the spec — instead, timestamps are now returned when {{domxref("VRDisplay.getFrameData()")}} is called — see {{domxref("VRFrameData.timestamp")}}.**
 
 ## Examples

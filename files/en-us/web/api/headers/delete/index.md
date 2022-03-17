@@ -3,7 +3,6 @@ title: Headers.delete()
 slug: Web/API/Headers/delete
 tags:
   - API
-  - Experimental
   - Fetch
   - Method
   - Reference
@@ -21,7 +20,7 @@ This method throws a {{jsxref("TypeError")}} for the following reasons:
 - The value of {{Glossary("Guard")}} is `immutable`.
 
 For security reasons, some headers can only be controller by the user agent. These
-headers include the {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}
+headers include the {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}
 and {{Glossary("Forbidden_response_header_name", "forbidden response header names",
   1)}}.
 

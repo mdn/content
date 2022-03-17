@@ -42,7 +42,6 @@ Vary: <header-name>, <header-name>, ...
 - \<header-name>
   - : A comma-separated list of request header names that could have influenced the generation of this response.
 
-
 ## Specifications
 
 {{Specifications}}
@@ -51,7 +50,7 @@ Vary: <header-name>, <header-name>, ...
 
 {{Compat}}
 
-## Compatibility notes
+### Compatibility notes
 
 - [Vary with care – Vary header problems in IE6-9](https://blogs.msdn.microsoft.com/ieinternals/2009/06/17/vary-with-care/)
 

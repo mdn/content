@@ -37,13 +37,13 @@ myCar.model = 'Mustang';
 myCar.year = 1969;
 ```
 
-The above example could also be written using an **[object initializer](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#object_initializers)**, which is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`):
+The above example could also be written using an **[object initializer](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#object_initializers)**, which is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`):
 
 ```js
 const myCar = {
   make: 'Ford',
-  model: 'Mustang',
-  year: 1969
+  model: 'Mustang',
+  year: 1969
 };
 ```
 
@@ -81,7 +81,7 @@ myObj['']               = 'Even an empty string';
 console.log(myObj);
 ```
 
-Please note that all keys in the square bracket notation are converted to string unless they're Symbols, since JavaScript object property names (keys) can only be strings or Symbols (at some point, private names will also be added as the [class fields proposal](https://github.com/tc39/proposal-class-fields) progresses, but you won't use them with `[]` form). For example, in the above code, when the key `obj` is added to the `myObj`, JavaScript will call the {{jsxref("Object.toString", "obj.toString()")}} method, and use this result string as the new key.
+Please note that all keys in the square bracket notation are converted to string unless they're Symbols, since JavaScript object property names (keys) can only be strings or Symbols (at some point, private names will also be added as the [class fields proposal](https://github.com/tc39/proposal-class-fields) progresses, but you won't use them with `[]` form). For example, in the above code, when the key `obj` is added to the `myObj`, JavaScript will call the {{jsxref("Object.toString", "obj.toString()")}} method, and use this result string as the new key.
 
 You can also access properties by using a string value that is stored in a variable:
 
@@ -184,8 +184,8 @@ You can also use object initializers to create arrays. See [array literals](/en-
 
 Alternatively, you can create an object with these two steps:
 
-1.  Define the object type by writing a constructor function. There is a strong convention, with good reason, to use a capital initial letter.
-2.  Create an instance of the object with `new`.
+1. Define the object type by writing a constructor function. There is a strong convention, with good reason, to use a capital initial letter.
+2. Create an instance of the object with `new`.
 
 To define an object type, create a function for the object type that specifies its name, properties, and methods. For example, suppose you want to create an object type for cars. You want this type of object to be called `Car`, and you want it to have properties for make, model, and year. To do this, you would write the following function:
 
@@ -296,7 +296,7 @@ You can refer to a property of an object either by its property name or by its o
 
 This restriction applies when you create an object and its properties with a constructor function (as we did previously with the `Car` object type) and when you define individual properties explicitly (for example, `myCar.color = 'red'`). If you initially define an object property with an index, such as `myCar[5] = '25 mpg'`, you subsequently refer to the property only as `myCar[5]`.
 
-The exception to this rule is array-like objects reflected from HTML, such as the `document.forms` array-like object. You can always refer to objects in these array-like objects by either their ordinal number (based on where they appear in the document) or their name (if defined). For example, if the second `<form>` tag in a document has a `name="myForm"` attribute, you can refer to the form as `document.forms[1]` or `document.forms['myForm']` or `document.forms.myForm`.
+The exception to this rule is array-like objects reflected from HTML, such as the `document.forms` array-like object. You can always refer to objects in these array-like objects by either their ordinal number (based on where they appear in the document) or their name (if defined). For example, if the second `<form>` tag in a document has a `name="myForm"` attribute, you can refer to the form as `document.forms[1]` or `document.forms['myForm']` or `document.forms.myForm`.
 
 ## Defining properties for an object type
 
@@ -319,11 +319,11 @@ objectName.methodName = functionName;
 const myObj = {
   myMethod: function(params) {
     // ...do something
-  },
+  },
 
-  // this works too!
-  myOtherMethod(params) {
-    // ...do something else
+  // this works too!
+  myOtherMethod(params) {
+    // ...do something else
   }
 };
 ```
@@ -374,18 +374,18 @@ car2.displayCar();
 
 ## Using `this` for object references
 
-JavaScript has a special keyword, [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), that you can use within a method to refer to the current object. For example, suppose you have 2 objects, `Manager`and `Intern`. Each object have their own `name`, `age` and `job`. In the function `sayHi()`, notice there is `this.name`. When added to the 2 objects they can be called and prints the `'Hello, My name is'` then adds the `name` value from that specific object. As shown below.
+JavaScript has a special keyword, [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), that you can use within a method to refer to the current object. For example, suppose you have 2 objects, `Manager`and `Intern`. Each object have their own `name`, `age` and `job`. In the function `sayHi()`, notice there is `this.name`. When added to the 2 objects they can be called and prints the `'Hello, My name is'` then adds the `name` value from that specific object. As shown below.
 
 ```js
 const Manager = {
-  name: "John",
-  age: 27,
-  job: "Software Engineer"
+  name: "John",
+  age: 27,
+  job: "Software Engineer"
 }
 const Intern = {
-  name: "Ben",
-  age: 21,
-  job: "Software Engineer Intern"
+  name: "Ben",
+  age: 21,
+  job: "Software Engineer Intern"
 }
 
 function sayHi() {
@@ -400,7 +400,7 @@ Manager.sayHi(); // Hello, my name is John'
 Intern.sayHi(); // Hello, my name is Ben'
 ```
 
-The `this` refers to the object that it is in. You can create a new function called `howOldAmI()` which logs a sentence saying how old the person is.
+The `this` refers to the object that it is in. You can create a new function called `howOldAmI()` which logs a sentence saying how old the person is.
 
 ```js
 function howOldAmI() {
@@ -452,8 +452,8 @@ Getters and setters can also be added to an object at any time after creation us
 const o = { a: 0 };
 
 Object.defineProperties(o, {
-    'b': { get: function() { return this.a + 1; } },
-    'c': { set: function(x) { this.a = x / 2; } }
+     'b': { get: function() { return this.a + 1; } },
+     'c': { set: function(x) { this.a = x / 2; } }
 });
 
 o.c = 10; // Runs the setter, which assigns 10 / 2 (5) to the 'a' property
@@ -503,7 +503,7 @@ fruit.name = 'grape';
 console.log(fruitbear); // output: { name: "grape" }, instead of { name: "apple" }
 ```
 
-For more information about comparison operators, see [equality operators](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators).
+For more information about comparison operators, see [equality operators](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators).
 
 ## See also
 

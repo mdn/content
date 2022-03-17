@@ -14,7 +14,7 @@ tags:
   - registerPaint
 browser-compat: api.PaintWorkletGlobalScope.registerPaint
 ---
-{{draft}}{{APIRef("CSS Painting API")}}
+{{APIRef("CSS Painting API")}}
 
 The
 **`PaintWorkletGlobalScope.registerPaint()`** method of the
@@ -50,7 +50,7 @@ registerPaint(name, class);
 The following shows registering an example worklet module. This should be in a separate
 js file. Note that `registerPaint()` is called without a reference to
 `PaintWorkletGlobalScope`. The file itself is loaded
-through `CSS.paintWorklet.addModule()` (documented here on the parent class
+through `CSS.paintWorklet.addModule()` (documented here on the parent class
 of PaintWorklet, at {{domxref('Worklet.addModule()')}}.
 
 ```js
@@ -87,7 +87,7 @@ the `CSS.paintWorklet.addModule()` method:
 </script>
 ```
 
-You can then use the `{{cssxref('paint()', 'paint()')}}` CSS function in your
+You can then use the `{{cssxref('paint()', 'paint()')}}` CSS function in your
 CSS anywhere an `{{cssxref('&lt;image&gt;')}}` value is valid.
 
 ```css

@@ -25,7 +25,7 @@ The {{domxref("RTCIceCandidateStats")}} dictionary's
 by a local {{Glossary("ICE")}} candidate to communicate with the {{Glossary("TURN")}}
 server.
 
-The ICE protocl being used by the candidate otherwise can be obtained from the
+The ICE protocol being used by the candidate otherwise can be obtained from the
 {{domxref("RTCIceCandidateStats.protocol", "protocol")}} property.
 
 ## Syntax

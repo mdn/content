@@ -9,38 +9,35 @@ tags:
   - addTrack
   - addTrack Event
   - events
-browser-compat: api.TextTrackList.addTrack_event
+  - Event
+browser-compat: api.TextTrackList.addtrack_event
 ---
 {{APIRef}}
 
-The `addtrack` event is fired when a track is added to a [`TextTrackList`](/en-US/docs/Web/API/TextTrackList).
+The **`addtrack`** event is fired when a track is added to a [`TextTrackList`](/en-US/docs/Web/API/TextTrackList).
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("TrackEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/TextTrackList/onaddtrack"
-            >onaddtrack</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('addtrack', event => { })
+
+onaddtrack = event => { }
+```
+
+## Event type
+
+An {{domxref("TrackEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("TrackEvent")}}
+
+## Event properties
+
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
+
+- {{domxref("TrackEvent.track", "track")}} {{ReadOnlyInline}}
+  - : The {{domxref("TextTrack")}} object to which the event refers.
 
 ## Examples
 
@@ -49,7 +46,7 @@ Using `addEventListener()`:
 ```js
 const mediaElement = document.querySelector('video, audio');
 
-mediaElement.textTracks.addEventListener('addtrack', (event) => {
+mediaElement.textTracks.addEventListener('addtrack', event => {
   console.log(`Text track: ${event.track.label} added`);
 });
 ```
@@ -59,7 +56,7 @@ Using the `onaddtrack` event handler property:
 ```js
 const mediaElement = document.querySelector('video, audio');
 
-mediaElement.textTracks.onaddtrack = (event) => {
+mediaElement.textTracks.onaddtrack = event => {
   console.log(`Text track: ${event.track.label} added`);
 };
 ```

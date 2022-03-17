@@ -106,8 +106,8 @@ We also define a function that returns a random number.
 
 The third part of the code is where we define and register the event handler. The `<button>` element has an event called `'click'` that fires when the user clicks the button. Objects that can fire events have an {{domxref("EventTarget/addEventListener", "addEventListener()")}} method, that takes at least two arguments: the name of the event and a function to handle the event. So we call the button's `addEventListener()` method, passing in:
 
-* the string `'click'`, to indicate that we want to listen to the click event
-* a function to call when the event happens. In our case the function generates a random RGB color and sets the page [`<body>`](/en-US/docs/Web/HTML/Element/body) [`background-color`](/en-US/docs/Web/CSS/background-color) equal to that color.
+- the string `'click'`, to indicate that we want to listen to the click event
+- a function to call when the event happens. In our case the function generates a random RGB color and sets the page [`<body>`](/en-US/docs/Web/HTML/Element/body) [`background-color`](/en-US/docs/Web/CSS/background-color) equal to that color.
 
 The example output is as follows. Try clicking the button:
 
@@ -170,10 +170,10 @@ btn.addEventListener('click', changeBackground);
 
 There are many different events that can be fired by a button element. Let's experiment.
 
-First, make a local copy of [random-color-addeventlistener.html](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html), and open it in your browser.
+First, make a local copy of [random-color-addeventlistener.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-addeventlistener.html), and open it in your browser.
 It's just a copy of the simple random color example we've played with already. Now try changing `click` to the following different values in turn, and observing the results in the example:
 
-- [`focus`](/en-US/docs/Web/API/Element/focus_event) and [`blur`](/en-US/docs/Web/API/Element/blur_event) — The color changes when the button is focused and unfocused; try pressing the tab to focus on the button and press the tab again to focus away from the button.
+- [`focus`](/en-US/docs/Web/API/Element/focus_event) and [`blur`](/en-US/docs/Web/API/Element/blur_event) — The color changes when the button is focused and unfocused; try pressing the tab to focus on the button and press the tab again to focus away from the button.
   These are often used to display information about filling in form fields when they are focused, or displaying an error message if a form field is filled with an incorrect value.
 - [`dblclick`](/en-US/docs/Web/API/Element/dblclick_event) — The color changes only when the button is double-clicked.
 - [`mouseover`](/en-US/docs/Web/API/Element/mouseover_event) and [`mouseout`](/en-US/docs/Web/API/Element/mouseout_event) — The color changes when the mouse pointer hovers over the button, or when the pointer moves off the button, respectively.
@@ -206,7 +206,7 @@ Then the event handler created by the code above can be removed like this:
 controller.abort(); // removes any/all event handlers associated with this controller
 ```
 
-For simple, small programs, cleaning up old, unused event handlers isn’t necessary, but for larger, more complex programs, it can improve efficiency.
+For simple, small programs, cleaning up old, unused event handlers isn't necessary, but for larger, more complex programs, it can improve efficiency.
 Also, the ability to remove event handlers allows you to have the same button performing different actions in different circumstances: all you have to do is add or remove handlers.
 
 ### Adding multiple listeners for a single event
@@ -444,7 +444,6 @@ The output is as follows:
 
 > **Note:** for the full source code, see [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/preventdefault-validation.html) (also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html) here.)
 
-
 ## Event bubbling and capture
 
 Event bubbling and capture are terms that describe phases in how the browser handles events targeted at nested elements.
@@ -523,9 +522,9 @@ You clicked on a BODY element
 
 In this case:
 
-* the click on the button fires first
-* followed by the click on its parent (the `<div>` element)
-* followed by the `<div>` element's parent (the `<body>` element).
+- the click on the button fires first
+- followed by the click on its parent (the `<div>` element)
+- followed by the `<div>` element's parent (the `<body>` element).
 
 We describe this by saying that the event **bubbles up** from the innermost element that was clicked.
 
@@ -621,7 +620,7 @@ In the **target** phase:
 
 - The browser checks to see if the {{domxref("Event.target", "target")}} property has an event handler for the `click` event registered on it, and runs it if so.
 - Then, if {{domxref("Event.bubbles", "bubbles")}} is `true`, it propagates the event to the direct parent of the selected element, then the next one, and so on until it reaches the `<html>` element.
-  Otherwise, if {{domxref("Event.bubbles", "bubbles")}} is `false`, it doesn’t propagate the event to any ancestors of the target.
+  Otherwise, if {{domxref("Event.bubbles", "bubbles")}} is `false`, it doesn't propagate the event to any ancestors of the target.
 
 In the **bubbling** phase, the exact opposite of the **capturing** phase occurs:
 
@@ -638,7 +637,7 @@ Along the way:
 > **Note:** All JavaScript events go through the capturing and target phases.
 > Whether an event enters the bubbling phase can be checked by the read-only {{domxref("Event.bubbles", "bubbles")}} property.
 
-> **Note:** Event listeners registered for the `<html>` element aren’t at the top of hierarchy.
+> **Note:** Event listeners registered for the `<html>` element aren't at the top of hierarchy.
 > For example, event listeners registered for the {{domxref("Window", "window")}} and {{domxref("Document", "document")}} objects are higher in the hierarchy.
 
 The following example demonstrates the behavior described above.

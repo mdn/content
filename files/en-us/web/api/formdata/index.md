@@ -11,7 +11,7 @@ browser-compat: api.FormData
 ---
 {{APIRef("XMLHttpRequest")}}
 
-The **`FormData`** interface provides a way to easily construct a set of key/value pairs representing form fields and their values, which can then be easily sent using the {{domxref("XMLHttpRequest.send()")}} method. It uses the same format a form would use if the encoding type were set to `"multipart/form-data"`.
+The **`FormData`** interface provides a way to easily construct a set of key/value pairs representing form fields and their values, which can then be easily sent using the {{domxref("fetch()")}} or {{domxref("XMLHttpRequest.send()")}} method. It uses the same format a form would use if the encoding type were set to `"multipart/form-data"`.
 
 You can also pass it directly to the {{domxref("URLSearchParams")}} constructor if you want to generate query parameters in the way a {{HTMLElement("form")}} would do if it were using simple `GET` submission.
 
@@ -37,13 +37,13 @@ An object implementing `FormData` can directly be used in a {{jsxref("Statements
 - {{domxref("FormData.getAll()")}}
   - : Returns an array of all the values associated with a given key from within a `FormData`.
 - {{domxref("FormData.has()")}}
-  - : Returns a boolean stating whether a `FormData` object contains a certain key.
+  - : Returns a boolean stating whether a `FormData` object contains a certain key.
 - {{domxref("FormData.keys()")}}
   - : Returns an {{jsxref("Iteration_protocols", "iterator")}} allowing to go through all keys of the key/value pairs contained in this object.
 - {{domxref("FormData.set()")}}
   - : Sets a new value for an existing key inside a `FormData` object, or adds the key/value if it does not already exist.
 - {{domxref("FormData.values()")}}
-  - : Returns an {{jsxref("Iteration_protocols", "iterator")}} allowing to go through all values  contained in this object.
+  - : Returns an {{jsxref("Iteration_protocols", "iterator")}} allowing to go through all values  contained in this object.
 
 ## Specifications
 

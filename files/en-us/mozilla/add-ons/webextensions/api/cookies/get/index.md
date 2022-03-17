@@ -53,7 +53,7 @@ var getting = browser.cookies.get(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('cookies.Cookie', 'Cookie')}} object containing details about the cookie, or `null` if the cookie was not found.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('cookies.Cookie', 'Cookie')}} object containing details about the cookie, or `null` if the cookie was not found.
 
 ## Browser compatibility
 

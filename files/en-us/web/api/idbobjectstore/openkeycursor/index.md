@@ -14,13 +14,13 @@ browser-compat: api.IDBObjectStore.openKeyCursor
 {{ APIRef("IndexedDB") }}
 
 The **`openKeyCursor()`** method of the
-{{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object
+{{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object
 whose result will be set to an {{domxref("IDBCursor")}} that can be used to iterate
-through matching results. Used for iterating through the keys of an object store with
+through matching results. Used for iterating through the keys of an object store with
 a cursor.
 
 To determine if the add operation has completed successfully, listen for the
-results’s `success` event.
+results's `success` event.
 
 ## Syntax
 
@@ -32,14 +32,14 @@ var request = objectStore.openKeyCursor(query, direction);
 
 ### Parameters
 
-- *query* {{optional_inline}}
+- *query* {{optional_inline}}
   - : The key range to be queried. If a single valid key is passed, this will default to a
     range containing only that key. If nothing is passed, this will default to a key range
     that selects all the records in this object store.
-- *direction* {{optional_inline}}
+- *direction* {{optional_inline}}
   - : An [`IDBCursorDirection`](https://w3c.github.io/IndexedDB/#enumdef-idbcursordirection) telling the cursor what direction to travel.
     Valid values are `"next"`, `"nextunique"`, `"prev"`,
-    and `"prevunique"`. The default is `"next"`.
+    and `"prevunique"`. The default is `"next"`.
 
 ### Return value
 

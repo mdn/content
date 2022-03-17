@@ -81,15 +81,15 @@ You should see a grid with perfectly straight black lines. If not, please consid
       </div>
       <div style="position: absolute;">
         <div style="position: absolute; background: #eef; top: -20px; height: 40px; width: 500px;">
-           </div>
+           </div>
         <div style="position: absolute; background: #eef; top: 480px; height: 40px; width: 500px;">
-           </div>
+           </div>
       </div>
       <div style="position: absolute;">
         <div style="position: absolute; background: #eef; left: -20px; width: 40px; height: 500px;">
-           </div>
+           </div>
         <div style="position: absolute; background: #eef; left: 480px; width: 40px; height: 500px;">
-           </div>
+           </div>
       </div>
     </div>
   </div>

@@ -46,7 +46,7 @@ which occurred.
 </div>
 
 <div class="button" id="play">
-  Play Animation
+  Play Animation
 </div>
 
 <pre id="log"></pre>
@@ -89,7 +89,7 @@ which occurred.
   font: bold 1.4em "Lucida Grande", "Open Sans", sans-serif;
 }
 
- 
+ 
 ```
 
 Leaving out some bits of the CSS that don't matter for the discussion here, let's take
@@ -137,7 +137,7 @@ migrate from the top-left corner of the container to the bottom-right corner.
 ```
 
 Since the CSS describes the animation but doesn't connect it to the box, we'll need
-some JavaScript code to do that.  We'll get to that shortly.
+some JavaScript code to do that.  We'll get to that shortly.
 
 ### JavaScript content
 

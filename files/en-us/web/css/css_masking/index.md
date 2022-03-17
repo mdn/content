@@ -7,6 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://drafts.fxtf.org/css-masking/
 ---
 {{CSSRef}}
 
@@ -39,7 +40,4 @@ tags:
 
 ## Specifications
 
-| Specification                                                                    | Status                       | Comment            |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("CSS Masks")}}                                                 | {{Spec2("CSS Masks")}} |                    |
-| {{SpecName('SVG1.1', 'masking.html#MaskProperty', 'mask')}} | {{Spec2('SVG1.1')}}     | Initial definition |
+{{Specifications}}

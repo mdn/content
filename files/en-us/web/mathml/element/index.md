@@ -13,7 +13,7 @@ The term **presentation markup** is used to describe the layout structure of mat
 
 MathML elements implement the {{domxref("MathMLElement")}} class.
 
-## MathML presentation elements A  to Z
+## MathML presentation elements A  to Z
 
 ### math
 

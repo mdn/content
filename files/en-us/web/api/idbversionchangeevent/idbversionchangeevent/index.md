@@ -11,7 +11,7 @@ tags:
   - Database
 browser-compat: api.IDBVersionChangeEvent.IDBVersionChangeEvent
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("IndexedDB")}}
+{{securecontext_header}}{{DefaultAPISidebar("IndexedDB")}}
 
 The **`IDBVersionChangeEvent()`** constructor
 creates a new {{domxref("IDBVersionChangeEvent")}} object, which is used to represent

@@ -13,4 +13,4 @@ _Responsive Web Design_ (**RWD**) is a Web development concept focusing on makin
 
 - [Summary and resources](/en-US/docs/Web/Progressive_web_apps)
 - [Pros and cons of going responsive](/en-US/docs/Web/Progressive_web_apps)
-- [Responsive Web Design](https://msdn.microsoft.com/en-us/magazine/hh653584.aspx)
+- [Responsive Web Design](https://msdn.microsoft.com/magazine/hh653584.aspx)

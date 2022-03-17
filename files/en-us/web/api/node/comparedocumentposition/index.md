@@ -39,7 +39,7 @@ following constant properties of {{domxref("Node")}}:
 - `Node.DOCUMENT_POSITION_CONTAINED_BY` (`16`)
   - : `otherNode` is a descendant of the node.
 - `Node.DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC` (`32`)
-  - The result relies upon arbitrary and/or implementation-specific behavior and is not guaranteed to be portable.
+  - : The result relies upon arbitrary and/or implementation-specific behavior and is not guaranteed to be portable.
 
 More than one bit is set if multiple scenarios apply. For example, if
 `otherNode` is located earlier in the document **_and_**

@@ -22,15 +22,19 @@ It should be noted that the value of the `priority` attribute follows UNIX conve
 
 To change the priority of an HTTP request, you need access to the [nsIChannel](/en-US/docs/XPCOM_Interface_Reference/nsIChannel) that the request is being made on. If you do not have an existing channel, then you can create one as follows:
 
-    var ios = Components.classes["@mozilla.org/network/io-service;1"]
-                        .getService(Components.interfaces.nsIIOService);
-    var ch = ios.newChannel("https://www.example.com/", null, null);
+```js
+var ios = Components.classes["@mozilla.org/network/io-service;1"]
+                    .getService(Components.interfaces.nsIIOService);
+var ch = ios.newChannel("https://www.example.com/", null, null);
+```
 
 Once you have an [nsIChannel](/en-US/docs/XPCOM_Interface_Reference/nsIChannel), you can access the priority as follows:
 
-    if (ch instanceof Components.interfaces.nsISupportsPriority) {
-      ch.priority = Components.interfaces.nsISupportsPriority.PRIORITY_LOWEST;
-    }
+```js
+if (ch instanceof Components.interfaces.nsISupportsPriority) {
+  ch.priority = Components.interfaces.nsISupportsPriority.PRIORITY_LOWEST;
+}
+```
 
 For convenience, the interface defines several standard priority values that you can use, ranging from `PRIORITY_HIGHEST` to `PRIORITY_LOWEST`.
 
@@ -38,12 +42,14 @@ For convenience, the interface defines several standard priority values that you
 
 If you are programming in [JavaScript](/en-US/docs/Web/JavaScript), you will probably want to use [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest), a much higher level abstraction of an HTTP request. You can access the `channel` member of an [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) once you have called the `open` method on it, as follows:
 
-    var req = new XMLHttpRequest();
-    req.open("GET", "https://www.example.com", false);
-    if (req.channel instanceof Components.interfaces.nsISupportsPriority) {
-      req.channel.priority = Components.interfaces.nsISupportsPriority.PRIORITY_LOWEST;
-    }
-    req.send(null);
+```js
+var req = new XMLHttpRequest();
+req.open("GET", "https://www.example.com", false);
+if (req.channel instanceof Components.interfaces.nsISupportsPriority) {
+  req.channel.priority = Components.interfaces.nsISupportsPriority.PRIORITY_LOWEST;
+}
+req.send(null);
+```
 
 > **Note:** This example uses a synchronous [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest), which you should not use in practice.
 
@@ -51,9 +57,11 @@ If you are programming in [JavaScript](/en-US/docs/Web/JavaScript), you will pro
 
 [nsISupportsPriority](/en-US/docs/nsISupportsPriority#adjustPriority) includes a convenience method named `adjustPriority`. You should use this if you want to alter the priority of a request by a certain amount. For example, if you would like to make a request have slightly higher priority than it currently has, you could do the following:
 
-    // assuming we already have a nsIChannel from above
-    if (ch instanceof Components.interfaces.nsISupportsPriority) {
-      ch.adjustPriority(-1);
-    }
+```js
+// assuming we already have a nsIChannel from above
+if (ch instanceof Components.interfaces.nsISupportsPriority) {
+  ch.adjustPriority(-1);
+}
+```
 
 Remember that lower numbers mean higher priority, so adjusting by a negative number will serve to increase the request's priority.

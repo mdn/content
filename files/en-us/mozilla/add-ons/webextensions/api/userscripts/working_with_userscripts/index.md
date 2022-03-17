@@ -14,11 +14,11 @@ By implementing userScripts, extension developers can modify how sites look and/
 
 Implement userScripts in your extension using the following steps:
 
-1.  Define the script in the extension's manifest using the `"user_scripts"` key.
-2.  Register the userScript
-3.  Implement the userScript functions
+1. Define the script in the extension's manifest using the `"user_scripts"` key.
+2. Register the userScript
+3. Implement the userScript functions
 
-Let's step through the processes using a small sample web extension that illustrates the process. The example is available in the [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub.
+Let's step through the processes using a small sample web extension that illustrates the process. The example is available in the [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub.
 
 ## userScripts Manifest
 

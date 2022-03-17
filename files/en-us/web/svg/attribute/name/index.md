@@ -12,7 +12,7 @@ The **`name`** attribute specifies either the name of a color profile or a font 
 
 You can use this attribute with the following SVG elements:
 
-*   {{ SVGElement("font-face-name") }}
+- {{ SVGElement("font-face-name") }}
 
 ## font-face-name
 
@@ -35,8 +35,8 @@ For {{SVGElement("font-face-name")}}, `name` defines the name of the font face.
   </tbody>
 </table>
 
-*   `<name>`
-    *   : This value specifies the name of a local font. Unlike the syntax allowed between the parentheses of the `local(…)` clause in an [`@font-face` rule `src`](/en-US/docs/Web/CSS/@font-face/src) descriptor, the font name specified in this attribute is not surrounded in single or double quotes.
+- `<name>`
+  - : This value specifies the name of a local font. Unlike the syntax allowed between the parentheses of the `local(…)` clause in an [`@font-face` rule `src`](/en-US/docs/Web/CSS/@font-face/src) descriptor, the font name specified in this attribute is not surrounded in single or double quotes.
 
 ## Specifications
 

@@ -15,7 +15,7 @@ For horizontally oriented glyph layouts, it indicates the alignment coordinate f
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("font-face")}}
+- {{SVGElement("font-face")}}
 
 ## Usage notes
 
@@ -63,4 +63,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-*   {{SVGAttr("v-alphabetic")}}
+- {{SVGAttr("v-alphabetic")}}

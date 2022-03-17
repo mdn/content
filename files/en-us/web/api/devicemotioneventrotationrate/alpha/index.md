@@ -14,7 +14,7 @@ browser-compat: api.DeviceMotionEventRotationRate.alpha
 {{ ApiRef("Device Orientation Events") }}
 
 This property indicates the rate of rotation around the Z axis -- in degrees per second
-\-- in a {{ domxref("DeviceMotionEventRotationRate") }} object.
+\-- in a {{ domxref("DeviceMotionEventRotationRate") }} object.
 
 ## Syntax
 

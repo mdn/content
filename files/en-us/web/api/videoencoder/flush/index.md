@@ -47,4 +47,3 @@ VideoEncoder.flush();
 ## Browser compatibility
 
 {{Compat}}
-

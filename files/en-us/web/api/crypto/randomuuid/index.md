@@ -28,7 +28,7 @@ A {{domxref("DOMString")}} containing a randomly generated, 36 character long v4
 
 ## Examples
 
-The method is accessed through the global {{domxref("crypto_property", "crypto")}} property.
+The method is accessed through the global {{domxref("crypto_property", "crypto")}} property.
 
 ```js
 /* Assuming that self.crypto.randomUUID() is available */

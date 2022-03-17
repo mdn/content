@@ -10,7 +10,7 @@ browser-compat: api.PerformanceResourceTiming.decodedBodySize
 ---
 {{APIRef("Resource Timing API")}}
 
-The **`decodedBodySize`** read-only property returns the size
+The **`decodedBodySize`** read-only property returns the size
 (in octets) received from the fetch (HTTP or cache) of the message body, after removing
 any applied content-codings. If the resource is retrieved from an application cache or
 local resources, it returns the size of the payload after removing any applied

@@ -34,7 +34,6 @@ browser-compat: webextensions.manifest.chrome_settings_overrides
 
 Use the `chrome_settings_overrides` key to override the browser's home page and add a new search engine.
 
-
 ## Syntax
 
 The `chrome_settings_overrides` key is an object that may have the following properties:
@@ -170,8 +169,8 @@ The `chrome_settings_overrides` key is an object that may have the following pro
 </table>
 
 ## Example
-This example shows how to set a search provider.
 
+This example shows how to set a search provider.
 
 ```json
 "chrome_settings_overrides": {

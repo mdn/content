@@ -29,9 +29,9 @@ form's submit {{HtmlElement("button")}} and does not have these differences.
 If a form control (such as a submit button) has a `name` or `id`
 of `submit`, this method will mask the form's submit method.
 
-{{HtmlElement("input")}} with attribute type="submit" will not be submitted with the
-form when using **`HTMLFormElement.submit()`**, but it would be
-submitted when you do it with original HTML form submit.
+{{HtmlElement("input")}} with attribute type="submit" will not be submitted with the
+form when using **`HTMLFormElement.submit()`**, but it would be
+submitted when you do it with original HTML form submit.
 
 ## Syntax
 

@@ -19,6 +19,8 @@ A `ServiceWorker` object is available in the {{domxref("ServiceWorkerRegistratio
 
 The `ServiceWorker` interface is dispatched a set of lifecycle events — `install` and `activate` — and functional events including `fetch`. A `ServiceWorker` object has an associated {{domxref("ServiceWorker.state")}}, related to its lifecycle.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _The `ServiceWorker` interface inherits properties from its parent, {{domxref("EventTarget")}}._
@@ -28,14 +30,14 @@ _The `ServiceWorker` interface inherits properties from its parent, {{domxref("E
 - {{domxref("ServiceWorker.state")}} {{readonlyinline}}
   - : Returns the state of the service worker. It returns one of the following values: `installing`, `installed,` `activating`, `activated`, or `redundant`.
 
-### Event handlers
-
-- {{domxref("ServiceWorker.onstatechange")}} {{readonlyinline}}
-  - : An {{domxref("EventListener")}} property called whenever an event of type `statechange` is fired; it is basically fired anytime the {{domxref("ServiceWorker.state")}} changes.
-
 ## Methods
 
 _The `ServiceWorker` interface inherits methods from its parent, {{domxref("EventTarget")}}._
+
+## Events
+
+- {{domxref("ServiceWorker.statechange_event", "statechange")}} {{readonlyinline}}
+  - : Fires anytime the {{domxref("ServiceWorker.state")}} changes.
 
 ## Examples
 

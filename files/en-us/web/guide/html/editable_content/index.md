@@ -49,7 +49,7 @@ Fortunately, in modern browsers things are somewhat more consistent. As of [Fire
 
 Try it out in the above example.
 
-> **Note:** Internet Explorer, which is no longer being developed, uses {{htmlelement("p")}} elements instead of `<div>`.
+> **Note:** Internet Explorer, which is no longer being developed, uses {{htmlelement("p")}} elements instead of `<div>`.
 
 If you want to use a different paragraph separator, the above browsers all support {{domxref("document.execCommand")}}, which provides a `defaultParagraphSeparator` command to allow you to change it. For example, to use {{htmlelement("p")}} elements:
 
@@ -57,7 +57,7 @@ If you want to use a different paragraph separator, the above browsers all suppo
 document.execCommand("defaultParagraphSeparator", false, "p");
 ```
 
-Additionally, Firefox supports the *non-standard* argument, `br`, for `defaultParagraphSeparator` since Firefox 55. This is useful if your web application expects the older Firefox behavior, and you don't want to or don't have the time to update it to use the new behavior. You can use the older Firefox behavior with this line:
+Additionally, Firefox supports the *non-standard* argument, `br`, for `defaultParagraphSeparator` since Firefox 55. This is useful if your web application expects the older Firefox behavior, and you don't want to or don't have the time to update it to use the new behavior. You can use the older Firefox behavior with this line:
 
 ```js
 document.execCommand("defaultParagraphSeparator", false, "br");
@@ -67,10 +67,12 @@ document.execCommand("defaultParagraphSeparator", false, "br");
 
 For security reasons, Firefox doesn't let JavaScript code use clipboard related features (copy, paste, etc.) by default. You can enable them by setting the preferences shown below using `about:config`:
 
-    user_pref("capability.policy.policynames", "allowclipboard");
-    user_pref("capability.policy.allowclipboard.sites", "https://www.mozilla.org");
-    user_pref("capability.policy.allowclipboard.Clipboard.cutcopy", "allAccess");
-    user_pref("capability.policy.allowclipboard.Clipboard.paste", "allAccess");
+```js
+user_pref("capability.policy.policynames", "allowclipboard");
+user_pref("capability.policy.allowclipboard.sites", "https://www.mozilla.org");
+user_pref("capability.policy.allowclipboard.Clipboard.cutcopy", "allAccess");
+user_pref("capability.policy.allowclipboard.Clipboard.paste", "allAccess");
+```
 
 ## Example: A simple but complete rich text editor
 
@@ -83,53 +85,53 @@ For security reasons, Firefox doesn't let JavaScript code use clipboard related 
 var oDoc, sDefTxt;
 
 function initDoc() {
-  oDoc = document.getElementById("textBox");
-  sDefTxt = oDoc.innerHTML;
-  if (document.compForm.switchMode.checked) { setDocMode(true); }
+  oDoc = document.getElementById("textBox");
+  sDefTxt = oDoc.innerHTML;
+  if (document.compForm.switchMode.checked) { setDocMode(true); }
 }
 
 function formatDoc(sCmd, sValue) {
-  if (validateMode()) { document.execCommand(sCmd, false, sValue); oDoc.focus(); }
+  if (validateMode()) { document.execCommand(sCmd, false, sValue); oDoc.focus(); }
 }
 
 function validateMode() {
-  if (!document.compForm.switchMode.checked) { return true ; }
-  alert("Uncheck \"Show HTML\".");
-  oDoc.focus();
-  return false;
+  if (!document.compForm.switchMode.checked) { return true ; }
+  alert("Uncheck \"Show HTML\".");
+  oDoc.focus();
+  return false;
 }
 
 function setDocMode(bToSource) {
-  var oContent;
-  if (bToSource) {
-    oContent = document.createTextNode(oDoc.innerHTML);
-    oDoc.innerHTML = "";
-    var oPre = document.createElement("pre");
-    oDoc.contentEditable = false;
-    oPre.id = "sourceText";
-    oPre.contentEditable = true;
-    oPre.appendChild(oContent);
-    oDoc.appendChild(oPre);
+  var oContent;
+  if (bToSource) {
+    oContent = document.createTextNode(oDoc.innerHTML);
+    oDoc.innerHTML = "";
+    var oPre = document.createElement("pre");
+    oDoc.contentEditable = false;
+    oPre.id = "sourceText";
+    oPre.contentEditable = true;
+    oPre.appendChild(oContent);
+    oDoc.appendChild(oPre);
     document.execCommand("defaultParagraphSeparator", false, "div");
-  } else {
-    if (document.all) {
-      oDoc.innerHTML = oDoc.innerText;
-    } else {
-      oContent = document.createRange();
-      oContent.selectNodeContents(oDoc.firstChild);
-      oDoc.innerHTML = oContent.toString();
-    }
-    oDoc.contentEditable = true;
-  }
-  oDoc.focus();
+  } else {
+    if (document.all) {
+      oDoc.innerHTML = oDoc.innerText;
+    } else {
+      oContent = document.createRange();
+      oContent.selectNodeContents(oDoc.firstChild);
+      oDoc.innerHTML = oContent.toString();
+    }
+    oDoc.contentEditable = true;
+  }
+  oDoc.focus();
 }
 
 function printDoc() {
-  if (!validateMode()) { return; }
-  var oPrntWin = window.open("","_blank","width=450,height=470,left=400,top=100,menubar=yes,toolbar=no,location=no,scrollbars=yes");
-  oPrntWin.document.open();
-  oPrntWin.document.write("<!doctype html><html><head><title>Print<\/title><\/head><body onload=\"print();\">" + oDoc.innerHTML + "<\/body><\/html>");
-  oPrntWin.document.close();
+  if (!validateMode()) { return; }
+  var oPrintWin = window.open("","_blank","width=450,height=470,left=400,top=100,menubar=yes,toolbar=no,location=no,scrollbars=yes");
+  oPrintWin.document.open();
+  oPrintWin.document.write("<!doctype html><html><head><title>Print<\/title><\/head><body onload=\"print();\">" + oDoc.innerHTML + "<\/body><\/html>");
+  oPrintWin.document.close();
 }
 </script>
 <style type="text/css">
@@ -137,17 +139,17 @@ function printDoc() {
 img.intLink { border: 0; }
 #toolBar1 select { font-size:10px; }
 #textBox {
-  width: 540px;
-  height: 200px;
-  border: 1px #000000 solid;
-  padding: 12px;
-  overflow: scroll;
+  width: 540px;
+  height: 200px;
+  border: 1px #000000 solid;
+  padding: 12px;
+  overflow: scroll;
 }
 #textBox #sourceText {
-  padding: 0;
-  margin: 0;
-  min-width: 498px;
-  min-height: 200px;
+  padding: 0;
+  margin: 0;
+  min-width: 498px;
+  min-height: 200px;
 }
 #editMode label { cursor: pointer; }
 </style>

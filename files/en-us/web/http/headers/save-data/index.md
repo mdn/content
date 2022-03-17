@@ -68,6 +68,7 @@ instance ensuring that the user is not served a lower-quality image from the cac
 ### With `Save-Data: on`
 
 Request:
+
 ```
 GET /image.jpg HTTP/1.0
 Host: example.com

@@ -13,7 +13,9 @@ The `<xsl:apply-imports>` element is fairly arcane, used mostly in complex style
 
 ### Syntax
 
-    <xsl:apply-imports/>
+```xml
+<xsl:apply-imports/>
+```
 
 ### Required Attributes
 

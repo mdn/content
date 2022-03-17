@@ -75,7 +75,7 @@ Servers proactively requests the client hint headers they are interested in from
 - {{HTTPHeader("Accept-CH")}} {{experimental_inline}}
   - : Servers can advertise support for Client Hints using the `Accept-CH` header field or an equivalent HTML `<meta>` element with [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#attr-http-equiv) attribute.
 - {{HTTPHeader("Accept-CH-Lifetime")}} {{experimental_inline}} {{deprecated_inline}}
-  - : Servers can ask the client to remember the set of Client Hints that the server supports for a specified period of time, to enable delivery of Client Hints on subsequent requests to the server’s origin.
+  - : Servers can ask the client to remember the set of Client Hints that the server supports for a specified period of time, to enable delivery of Client Hints on subsequent requests to the server's origin.
 
 The different categories of client hints are listed below.
 
@@ -101,7 +101,6 @@ The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)
   - : User agent's underlying operation system/platform.
 - {{HTTPHeader("Sec-CH-UA-Platform-Version")}} {{experimental_inline}}
   - : User agent's underlying operation system version.
- 
 
 ### Device client hints
 
@@ -125,7 +124,7 @@ Network client hints allow a server to choose what information is sent based on 
 - {{HTTPHeader("ECT")}}
   - : The {{Glossary("effective connection type")}} ("network profile") that best matches the connection's latency and bandwidth. This is part of the [Network Information API](/en-US/docs/Web/API/Network_Information_API).
 - {{HTTPHeader("RTT")}}
-  - : Application layer round trip time (RTT) in miliseconds, which includes the server processing time. This is part of the [Network Information API](/en-US/docs/Web/API/Network_Information_API).
+  - : Application layer round trip time (RTT) in milliseconds, which includes the server processing time. This is part of the [Network Information API](/en-US/docs/Web/API/Network_Information_API).
 - {{HTTPHeader("Save-Data")}} {{experimental_inline}}
   - : A boolean that indicates the user agent's preference for reduced data usage.
 
@@ -177,10 +176,6 @@ Network client hints allow a server to choose what information is sent based on 
   - : Contains stored [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) previously sent by the server with the {{HTTPHeader("Set-Cookie")}} header.
 - {{HTTPHeader("Set-Cookie")}}
   - : Send cookies from the server to the user-agent.
-- {{HTTPHeader("Cookie2")}} {{deprecated_inline}}
-  - : Contains an HTTP cookie previously sent by the server with the {{HTTPHeader("Set-Cookie2")}} header, but has been **obsoleted**. Use {{HTTPHeader("Cookie")}} instead.
-- {{HTTPHeader("Set-Cookie2")}} {{deprecated_inline}}
-  - : Sends cookies from the server to the user-agent, but has been **obsoleted**. Use {{HTTPHeader("Set-Cookie")}} instead.
 
 ## CORS
 
@@ -210,7 +205,7 @@ _Learn more about CORS [here](CORS)._
 ## Downloads
 
 - {{HTTPHeader("Content-Disposition")}}
-  - : Indicates if the resource transmitted should be displayed inline (default behavior without the header), or if it should be handled like a download and the browser should present a “Save As” dialog.
+  - : Indicates if the resource transmitted should be displayed inline (default behavior without the header), or if it should be handled like a download and the browser should present a "Save As" dialog.
 
 ## Message body information
 
@@ -290,16 +285,16 @@ _Learn more about CORS [here](CORS)._
   - : Allows sites to opt in to reporting and/or enforcement of Certificate Transparency requirements, which prevents the use of misissued certificates for that site from going unnoticed. When a site enables the Expect-CT header, they are requesting that Chrome check that any certificate for that site appears in public CT logs.
 - {{HTTPHeader("Feature-Policy")}}
   - : Provides a mechanism to allow and deny the use of browser features in its own frame, and in iframes that it embeds.
-- {{HTTPHeader("Origin-Isolation")}} {{experimental_inline}}
+- {{HTTPHeader("Origin-Isolation")}} {{experimental_inline}}
   - : Provides a mechanism to allow web applications to isolate their origins.
 - {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}})
   - : Force communication using HTTPS instead of HTTP.
 - {{HTTPHeader("Upgrade-Insecure-Requests")}}
-  - : Sends a signal to the server expressing the client’s preference for an encrypted and authenticated response, and that it can successfully handle the {{CSP("upgrade-insecure-requests")}} directive.
+  - : Sends a signal to the server expressing the client's preference for an encrypted and authenticated response, and that it can successfully handle the {{CSP("upgrade-insecure-requests")}} directive.
 - {{HTTPHeader("X-Content-Type-Options")}}
   - : Disables MIME sniffing and forces browser to use the type given in {{HTTPHeader("Content-Type")}}.
 - {{HTTPHeader("X-Download-Options")}}
-  - : The [`X-Download-Options`](<https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/jj542450(v=vs.85)?#the-noopen-directive>) HTTP header indicates that the browser (Internet Explorer) should not display the option to "Open" a file that has been downloaded from an application, to prevent phishing attacks as the file otherwise would gain access to execute in the context of the application. (Note: related [MS Edge bug](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/18488178/)).
+  - : The [`X-Download-Options`](<https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/compatibility/jj542450(v=vs.85)?#the-noopen-directive>) HTTP header indicates that the browser (Internet Explorer) should not display the option to "Open" a file that has been downloaded from an application, to prevent phishing attacks as the file otherwise would gain access to execute in the context of the application. (Note: related [MS Edge bug](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/18488178/)).
 - {{HTTPHeader("X-Frame-Options")}} (XFO)
   - : Indicates whether a browser should be allowed to render a page in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}}.
 - {{HTTPHeader("X-Permitted-Cross-Domain-Policies")}}
@@ -381,7 +376,7 @@ _Learn more about CORS [here](CORS)._
 - {{HTTPHeader("Large-Allocation")}}
   - : Tells the browser that the page being loaded is going to want to perform a large allocation.
 - {{HTTPHeader("Link")}}
-  - : The [`Link`](https://datatracker.ietf.org/doc/html/rfc5988#section-5) entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML {{HTMLElement("link")}} element.
+  - : The [`Link`](https://datatracker.ietf.org/doc/html/rfc5988#section-5) entity-header field provides a means for serializing one or more links in HTTP headers. It is semantically equivalent to the HTML {{HTMLElement("link")}} element.
 - {{HTTPHeader("Push-Policy")}} {{experimental_inline}}
   - : A [`Push-Policy`](https://datatracker.ietf.org/doc/html/draft-ruellan-http-accept-push-policy-00#section-3.2) defines the server behavior regarding push when processing a request.
 - {{HTTPHeader("Retry-After")}}

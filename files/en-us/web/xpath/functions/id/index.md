@@ -11,7 +11,9 @@ The `id` function finds nodes matching the given ids and returns a node-set cont
 
 ### Syntax
 
-    id(expression )
+```
+id( expression )
+```
 
 ### Arguments
 

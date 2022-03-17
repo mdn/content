@@ -23,7 +23,7 @@ The {{domxref("HTMLMediaElement")}} interface's
 **`currentTime`** property specifies the current playback time
 in seconds.
 
-Changing the value of `currentTime` seeks the media to
+Changing the value of `currentTime` seeks the media to
 the new time.
 
 ## Syntax

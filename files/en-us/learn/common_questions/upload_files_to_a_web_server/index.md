@@ -11,7 +11,7 @@ tags:
   - rsync
   - SFTP
 ---
-This article shows you how to publish your site online using file transfer tools.
+This article shows you how to publish your site online using file transfer tools.
 
 <table>
   <tbody>
@@ -84,15 +84,15 @@ Let's first look at `http://demozilla.examplehostingprovider.net/` — as you ca
 
 ![Our demozilla personal website, seen in a browser: it's empty](demozilla-empty.png)
 
-> **Note:** Depending on your hosting provider, most of the time you'll see a page saying something like “This website is hosted by \[Hosting Service].” when you first go to your web address.
+> **Note:** Depending on your hosting provider, most of the time you'll see a page saying something like "This website is hosted by \[Hosting Service]." when you first go to your web address.
 
 To connect your SFTP client to the distant server, follow these steps:
 
-1.  Choose _File > Site Manager..._ from the main menu.
-2.  In the _Site Manager_ window, press the _New Site_ button, then fill in the site name as **demozilla** in the provided space.
-3.  Fill in the SFTP server your host provided in the _Host:_ field.
-4.  In the _Logon Type:_ drop down, choose _Normal_, then fill in your provided username and password in the relevant fields.
-5.  Fill in the correct port and other information.
+1. Choose _File > Site Manager..._ from the main menu.
+2. In the _Site Manager_ window, press the _New Site_ button, then fill in the site name as **demozilla** in the provided space.
+3. Fill in the SFTP server your host provided in the _Host:_ field.
+4. In the _Logon Type:_ drop down, choose _Normal_, then fill in your provided username and password in the relevant fields.
+5. Fill in the correct port and other information.
 
 Your window should look something like this:
 
@@ -126,11 +126,11 @@ So far, so good, but are the files really online? You can double-check by going 
 
 ![Here we go: our website is live!](here-we-go.png)
 
-And our website is live!
+And our website is live!
 
 ## Rsync
 
-{{Glossary("Rsync")}} is a local-to-remote file synchronizing tool, which is generally available on most Unix-based systems (like macOS and Linux), but Windows versions exist too.
+{{Glossary("Rsync")}} is a local-to-remote file synchronizing tool, which is generally available on most Unix-based systems (like macOS and Linux), but Windows versions exist too.
 
 It is seen as a more advanced tool than SFTP, because by default it is used on the command line. A basic command looks like this:
 
@@ -148,7 +148,7 @@ You'd need to get such details from your hosting provider.
 
 For more information and further examples, see [How to Use Rsync to Copy/Sync Files Between Servers](https://www.atlantic.net/hipaa-compliant-cloud-hosting-services/how-to-use-rsync-copy-sync-files-servers/).
 
-Of course, it is a good idea to use a secure connection, as with FTP. In the case of Rsync, you specify SSH details to make the connection over SSH, using the `-e` option. For example:
+Of course, it is a good idea to use a secure connection, as with FTP. In the case of Rsync, you specify SSH details to make the connection over SSH, using the `-e` option. For example:
 
 ```bash
 rsync [-options] -e "ssh [SSH DETAILS GO HERE]" SOURCE user@x.x.x.x:DESTINATION

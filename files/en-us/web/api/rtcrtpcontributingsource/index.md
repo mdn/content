@@ -15,7 +15,7 @@ browser-compat: api.RTCRtpContributingSource
 ---
 {{APIRef("WebRTC API")}}
 
-The **`RTCRtpContributingSource`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) is used by {{domxref("RTCRtpReceiver.getContributingSources", "getContributingSources()")}} to provide information about a given contributing source (CSRC), including the most recent time a packet that the source contributed was played out.
+The **`RTCRtpContributingSource`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) is used by {{domxref("RTCRtpReceiver.getContributingSources", "getContributingSources()")}} to provide information about a given contributing source (CSRC), including the most recent time a packet that the source contributed was played out.
 
 The information provided is based on the last ten seconds of media received.
 

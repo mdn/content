@@ -25,7 +25,7 @@ An integer. If the device has no product ID, or the product ID cannot be accesse
 
 ## Examples
 
-The following example rerieves devices with {{domxref("HID.getDevices()")}} and logs the value of `productId` to the console.
+The following example retrieves devices with {{domxref("HID.getDevices()")}} and logs the value of `productId` to the console.
 
 ```js
 document.addEventListener('DOMContentLoaded', async () => {

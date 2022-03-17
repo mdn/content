@@ -17,6 +17,8 @@ An `AnalyserNode` has exactly one input and one output. The node works even if t
 
 ![Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT.](fttaudiodata_en.svg)
 
+{{InheritanceDiagram}}
+
 <table class="properties">
   <tbody>
     <tr>
@@ -41,12 +43,6 @@ An `AnalyserNode` has exactly one input and one output. The node works even if t
     </tr>
   </tbody>
 </table>
-
-## Inheritance
-
-This interface inherits from the following parent interfaces:
-
-{{InheritanceDiagram}}
 
 ## Constructor
 

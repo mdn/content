@@ -8,7 +8,7 @@ tags:
 
 ## Example
 
-In the following example there is a grid with three column tracks and two row tracks. This gives us 4 column lines and 3 row lines.
+In the following example there is a grid with three column tracks and two row tracks. This gives us 4 column lines and 3 row lines.
 
 ```css hidden
 * {box-sizing: border-box;}

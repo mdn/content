@@ -39,15 +39,15 @@ None.
 An object which contains the following properties:
 
 - endTime
-  - : The end time of the animation in milliseconds from the animation's start (if the {{domxref("KeyframeEffect")}} is associated with an {{domxref("Animation")}}). (Also includes `endDelay` in that calculation.)
+  - : The end time of the animation in milliseconds from the animation's start (if the {{domxref("KeyframeEffect")}} is associated with an {{domxref("Animation")}}). (Also includes `endDelay` in that calculation.)
 - activeDuration
-  - : The length of time in milliseconds that the animation's effects will run. This is equal to the [iteration duration](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect) multiplied by the [iteration count](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect).
+  - : The length of time in milliseconds that the animation's effects will run. This is equal to the [iteration duration](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect) multiplied by the [iteration count](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect).
 - localTime
-  - : The [current time](/en-US/docs/Web/API/AnimationTimeline/currentTime) of the animation in milliseconds. If the `KeyframeEffect` is not associated with an `Animation`, its value is `null`.
+  - : The [current time](/en-US/docs/Web/API/AnimationTimeline/currentTime) of the animation in milliseconds. If the `KeyframeEffect` is not associated with an `Animation`, its value is `null`.
 - progress
-  - : Indicates how far along the animation is through its current iteration with values between `0` and `1`. Returns `null` if the animation is not running or its `KeyframeEffect` isn't associated with an `Animation`.
+  - : Indicates how far along the animation is through its current iteration with values between `0` and `1`. Returns `null` if the animation is not running or its `KeyframeEffect` isn't associated with an `Animation`.
 - currentIteration
-  - : The number of times this animation has looped, starting from `0`. Returns `null` if the animation is not running or its `KeyframeEffect` isn't associated with an `Animation`.
+  - : The number of times this animation has looped, starting from `0`. Returns `null` if the animation is not running or its `KeyframeEffect` isn't associated with an `Animation`.
 
 ## Specifications
 

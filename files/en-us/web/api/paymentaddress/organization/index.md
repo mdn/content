@@ -34,7 +34,7 @@ var paymentOrganization = PaymentAddress.organization;
 A {{domxref("DOMString")}} whose value is the name of the organization or company
 located at the address described by the `PaymentAddress` object. This should
 be the name of the organization that is to receive the shipment for shipping addresses,
-or which is repsonsible for payment for payment addresses.
+or which is responsible for payment for payment addresses.
 
 ## Browser compatibility
 

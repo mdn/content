@@ -14,7 +14,7 @@ browser-compat: api.USBDevice.productId
 ---
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
-The **`productId`** read only property of the
+The **`productId`** read only property of the
 {{domxref("USBDevice")}} interface the manufacturer-defined code that identifies a USB
 device.
 

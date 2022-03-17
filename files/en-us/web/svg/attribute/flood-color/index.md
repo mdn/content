@@ -15,8 +15,8 @@ The **`flood-color`** attribute indicates what color to use to flood the current
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feFlood")}}
-*   {{SVGElement("feDropShadow")}}
+- {{SVGElement("feFlood")}}
+- {{SVGElement("feDropShadow")}}
 
 ## Example
 
@@ -28,12 +28,12 @@ html, body, svg {
 
 ```html
 <svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
-  <filter id="flood1">
-    <feFlood flood-color="skyblue" x="0" y="0" width="200" height="200"/>
-  </filter>
-  <filter id="flood2">
-    <feFlood flood-color="seagreen" x="0" y="0" width="200" height="200"/>
-  </filter>
+  <filter id="flood1">
+    <feFlood flood-color="skyblue" x="0" y="0" width="200" height="200"/>
+  </filter>
+  <filter id="flood2">
+    <feFlood flood-color="seagreen" x="0" y="0" width="200" height="200"/>
+  </filter>
 
   <rect x="0" y="0" width="200" height="200" style="filter: url(#flood1);" />
   <rect x="0" y="0" width="200" height="200" style="filter: url(#flood2); transform: translateX(220px);" />
@@ -98,4 +98,4 @@ html, body, svg {
 
 ## See also
 
-*   {{SVGAttr("flood-opacity")}}
+- {{SVGAttr("flood-opacity")}}

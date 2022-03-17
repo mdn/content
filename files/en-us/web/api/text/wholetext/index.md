@@ -19,7 +19,7 @@ This allows specifying any text node and obtaining all adjacent text as a single
 
 ## Value
 
-A {{jsxref("String")}} with the concanated text.
+A {{jsxref("String")}} with the concatenated text.
 
 ## Example
 
@@ -32,13 +32,13 @@ Suppose you have the following simple paragraph within your webpage:
 You decide you don't like the middle sentence, so you remove it:
 
 ```js
-const para = document.getElementsByTagname("p")[0]; // Reads the paragraph
+const para = document.getElementsByTagName("p")[0]; // Reads the paragraph
 para.removeChild(para.childNodes[1]); // Delete the strong element
 ```
 
 Now you end up with _"Through-hiking is great! However, casting a ballot is tricky."_, with two nodes before the hyperlink:
 
-1. `Through-hiking is great!  `
+1. `Through-hiking is great!`
 2. ` However, `
 
 To get those two nodes at once, you would call `para.childNodes[0].wholeText`:

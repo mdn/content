@@ -11,11 +11,11 @@ browser-compat: css.at-rules.media.hover
 ---
 {{CSSRef}}
 
-The **`hover`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test whether the user's *primary* input mechanism can hover over elements.
+The **`hover`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test whether the user's *primary* input mechanism can hover over elements.
 
 ## Syntax
 
-The `hover` feature is specified as a keyword value chosen from the list below.
+The `hover` feature is specified as a keyword value chosen from the list below.
 
 - `none`
   - : The primary input mechanism cannot hover at all or cannot conveniently hover (e.g., many mobile devices emulate hovering when the user performs an inconvenient long tap), or there is no primary pointing input mechanism.
@@ -54,5 +54,5 @@ The `hover` feature is specified as a keyword value chosen from the list below.
 
 ## See also
 
-- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 - [@media](/en-US/docs/Web/CSS/@media)

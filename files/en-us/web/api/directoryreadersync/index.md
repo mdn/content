@@ -20,7 +20,7 @@ This specification is pretty much abandoned, having failed to reach any substant
 
 ## Basic concepts
 
-Before you call the only method in this interface, [`readEntries()`](</#readEntries()> "#readEntries()"), create the [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryEntrySync) object. But DirectoryEntrySync (as well as [FileEntrySync](/en-US/docs/Web/API/FileEntrySync)) is not a data type that you can pass between a calling app and Web Worker thread. It's not a big deal, because you don't really need to have the main app and the worker thread see the same JavaScript object; you just need them to access the same files. You can do that by passing a list of  `filesystem:` URLs—which are just strings—instead of a list of entries. You can also use the `filesystem:` URL to look up the entry with [`resolveLocalFileSystemURL()`](</en-US/docs/Web/API/LocalFileSystem#resolvelocalfilesystemurl()>). That gets you back to a DirectoryEntrySync (as well as FileEntrySync) object.
+Before you call the only method in this interface, [`readEntries()`](</#readEntries()> "#readEntries()"), create the [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryEntrySync) object. But DirectoryEntrySync (as well as [FileEntrySync](/en-US/docs/Web/API/FileEntrySync)) is not a data type that you can pass between a calling app and Web Worker thread. It's not a big deal, because you don't really need to have the main app and the worker thread see the same JavaScript object; you just need them to access the same files. You can do that by passing a list of  `filesystem:` URLs—which are just strings—instead of a list of entries. You can also use the `filesystem:` URL to look up the entry with [`resolveLocalFileSystemURL()`](</en-US/docs/Web/API/LocalFileSystem#resolvelocalfilesystemurl()>). That gets you back to a DirectoryEntrySync (as well as FileEntrySync) object.
 
 #### Example
 
@@ -117,8 +117,10 @@ self.onmessage = function(e) {
 
 Returns a lost of entries from a specific directory. Call this method until an empty array is returned.
 
-    EntrySync readEntries (
-    ) raises (FileException);
+```
+EntrySync readEntries (
+) raises (FileException);
+```
 
 ##### Returns
 
@@ -142,8 +144,8 @@ This method can raise a [FileException](/en-US/docs/Web/API/FileException) with 
 
 ## See also
 
-Specification: {{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}
+Specification: {{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}
 
 Reference: [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 
-Introduction: [Basic Concepts About the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+Introduction: [Basic Concepts About the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

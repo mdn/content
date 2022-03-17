@@ -1,5 +1,5 @@
 ---
-title: 'HTMLTableElement: createTFoot()'
+title: HTMLTableElement.createTFoot()
 slug: Web/API/HTMLTableElement/createTFoot
 tags:
   - API

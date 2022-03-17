@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.Symbol
 ---
 {{JSRef}}
 
-**`Symbol`** is a built-in object whose constructor returns a `symbol` [primitive](/en-US/docs/Glossary/Primitive) — also called a **Symbol value** or just a **Symbol** — that’s guaranteed to be unique. Symbols are often used to add unique property keys to an object that won’t collide with keys any other code might add to the object, and which are hidden from any mechanisms other code will typically use to access the object. That enables a form of weak {{Glossary("encapsulation")}}, or a weak form of [information hiding](https://en.wikipedia.org/wiki/Information_hiding).
+**`Symbol`** is a built-in object whose constructor returns a `symbol` [primitive](/en-US/docs/Glossary/Primitive) — also called a **Symbol value** or just a **Symbol** — that's guaranteed to be unique. Symbols are often used to add unique property keys to an object that won't collide with keys any other code might add to the object, and which are hidden from any mechanisms other code will typically use to access the object. That enables a form of weak {{Glossary("encapsulation")}}, or a weak form of [information hiding](https://en.wikipedia.org/wiki/Information_hiding).
 
 Every `Symbol()` call is guaranteed to return a unique Symbol. Every `Symbol.for("key")` call will always return the same Symbol for a given value of `"key"`. When `Symbol.for("key")` is called, if a Symbol with the given key can be found in the global Symbol registry, that Symbol is returned. Otherwise, a new Symbol is created, added to the global Symbol registry under the given key, and returned.
 
@@ -104,8 +104,6 @@ The method {{jsxref("Object.getOwnPropertySymbols()")}} returns an array of Symb
 
 ## Instance methods
 
-- {{jsxref("Symbol.prototype.toSource()")}}
-  - : Returns a string containing the source of the Symbol. Overrides the {{jsxref("Object.prototype.toSource()")}} method.
 - {{jsxref("Symbol.prototype.toString()")}}
   - : Returns a string containing the description of the Symbol. Overrides the {{jsxref("Object.prototype.toString()")}} method.
 - {{jsxref("Symbol.prototype.valueOf()")}}
@@ -132,8 +130,8 @@ Some things to note when working with type conversion of Symbols.
 - When trying to convert a Symbol to a number, a {{jsxref("TypeError")}} will be thrown
   (e.g. `+sym` or `sym | 0`).
 - When using loose equality, `Object(sym) == sym` returns `true`.
-- `Symbol("foo") + "bar" `throws a {{jsxref("TypeError")}} (can't convert Symbol to string). This prevents you from silently creating a new string property name from a Symbol, for example.
-- The ["safer" `String(sym)` conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_conversion) works like a call to {{jsxref("Symbol.prototype.toString()")}} with Symbols, but note that `new String(sym)` will throw.
+- `Symbol("foo") + "bar"` throws a {{jsxref("TypeError")}} (can't convert Symbol to string). This prevents you from silently creating a new string property name from a Symbol, for example.
+- The ["safer" `String(sym)` conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_conversion) works like a call to {{jsxref("Symbol.prototype.toString()")}} with Symbols, but note that `new String(sym)` will throw.
 
 ### Symbols and for...in iteration
 
@@ -184,7 +182,7 @@ obj[Object(sym)]     // still 1
 
 ## See also
 
-- A polyfill of `Symbol` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- [Polyfill of `Symbol` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
 - [Glossary: Symbol data type](/en-US/docs/Glossary/Symbol)
 - {{jsxref("Operators/typeof", "typeof")}}
 - [Data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)

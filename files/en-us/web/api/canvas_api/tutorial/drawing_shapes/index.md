@@ -43,9 +43,9 @@ Below is the `draw()` function from the previous page, but now it is making use 
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
@@ -74,11 +74,11 @@ Unlike the path functions we'll see in the next section, all three rectangle fun
 
 ## Drawing paths
 
-Now let's look at paths. A path is a list of points, connected by segments of lines that can be of different shapes, curved or not, of different width and of different color. A path, or even a subpath, can be closed. To make shapes using paths, we take some extra steps:
+Now let's look at paths. A path is a list of points, connected by segments of lines that can be of different shapes, curved or not, of different width and of different color. A path, or even a subpath, can be closed. To make shapes using paths, we take some extra steps:
 
-1.  First, you create the path.
-2.  Then you use [drawing commands](/en-US/docs/Web/API/CanvasRenderingContext2D#paths) to draw into the path.
-3.  Once the path has been created, you can stroke or fill the path to render it.
+1. First, you create the path.
+2. Then you use [drawing commands](/en-US/docs/Web/API/CanvasRenderingContext2D#paths) to draw into the path.
+3. Once the path has been created, you can stroke or fill the path to render it.
 
 Here are the functions used to perform these steps:
 
@@ -87,7 +87,7 @@ Here are the functions used to perform these steps:
 - [Path methods](/en-US/docs/Web/API/CanvasRenderingContext2D#paths)
   - : Methods to set different paths for objects.
 - {{domxref("CanvasRenderingContext2D.closePath", "closePath()")}}
-  - : Adds a straight line to the path, going to the start of the current sub-path.
+  - : Adds a straight line to the path, going to the start of the current sub-path.
 - {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}}
   - : Draws the shape by stroking its outline.
 - {{domxref("CanvasRenderingContext2D.fill", "fill()")}}
@@ -109,9 +109,9 @@ For example, the code for drawing a triangle would look something like this:
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="100" height="100"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="100" height="100"></canvas>
+  </body>
 </html>
 ```
 
@@ -178,7 +178,7 @@ The result looks like this:
 
 If you'd like to see the connecting lines, you can remove the lines that call `moveTo()`.
 
-> **Note:** To learn more about the `arc()` function, see the {{anch("Arcs")}} section below.
+> **Note:** To learn more about the `arc()` function, see the [Arcs](#arcs) section below.
 
 ### Lines
 
@@ -193,9 +193,9 @@ The example below draws two triangles, one filled and one outlined.
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
@@ -254,9 +254,9 @@ The statement for the `clockwise` parameter results in the first and third row b
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="200"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="200"></canvas>
+  </body>
 </html>
 ```
 
@@ -327,7 +327,7 @@ function draw() {
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
 
-    // Quadratric curves example
+    // Quadratic curves example
     ctx.beginPath();
     ctx.moveTo(75, 25);
     ctx.quadraticCurveTo(25, 25, 25, 62.5);
@@ -379,7 +379,7 @@ function draw() {
 
 ### Rectangles
 
-In addition to the three methods we saw in {{anch("Drawing rectangles")}}, which draw rectangular shapes directly to the canvas, there's also the `rect()` method, which adds a rectangular path to a currently open path.
+In addition to the three methods we saw in [Drawing rectangles](#drawing_rectangles), which draw rectangular shapes directly to the canvas, there's also the `rect()` method, which adds a rectangular path to a currently open path.
 
 - {{domxref("CanvasRenderingContext2D.rect", "rect(x, y, width, height)")}}
   - : Draws a rectangle whose top-left corner is specified by (`x`, `y`) with the specified `width` and `height`.
@@ -392,9 +392,9 @@ So far, each example on this page has used only one type of path function per sh
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 

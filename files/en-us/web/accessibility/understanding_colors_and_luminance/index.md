@@ -1,6 +1,6 @@
 ---
 title: 'Web Accessibility: Understanding Colors and Luminance'
-slug: Web/Accessibility/Understanding_Colors_and_Luminance 
+slug: Web/Accessibility/Understanding_Colors_and_Luminance
 tags:
   - accessibility
   - CSS
@@ -40,7 +40,7 @@ While understanding these concepts are important for design and readability for 
 
 The [W3.org's](/en-US/docs/Glossary/W3C) [WAI](/en-US/docs/Glossary/WAI) publishes freely available guidelines, maintained by the AGWG (Accessibility Guidelines Working Group). Currently these are known as the [WCAG 2.1 accessibility guidelines](/en-US/docs/Glossary/WCAG). The next generation, [WCAG 3.0](https://www.w3.org/TR/wcag-3.0/), is presently published as a public working draft, pending further development and approvals.
 
-The WCAG 2.x guidelines attempt to define adequate[luminance contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) for sighted users with deficient color vision (inaccurately called "color blindness") or reduced vision, and further WCAG 2.x guidelines are intended to [prevent seizures and other physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders) in people with vestibular or neurological disorders.
+The WCAG 2.x guidelines attempt to define adequate [luminance contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) for sighted users with deficient color vision (inaccurately called "color blindness") or reduced vision, and further WCAG 2.x guidelines are intended to [prevent seizures and other physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders) in people with vestibular or neurological disorders.
 
 ## Color basics
 
@@ -153,7 +153,7 @@ We can also set the sRGB values directly by an 8bit integer number, which means 
 
 Shown after that, we can use a hex value. Hex value means "hexadecimal," where the 0-255 integer is represented by two digits that each range from 0-15. As there are no Arabic numerals above 9, we use the letters a-f to represent 10-15. We add the '#' symbol to indicate the value is hex. Thus, #ff = 255.
 
-In some of the previous examples, you'll notice that some have a fourth value which is called “alpha”, the A in RGBA. The alpha channel is not a color channel, but defines transparency in terms of the opacity value of the color. A higher value means the color is more opaque therefore less transparent. In the examples above, the alpha value is set to half or 50% opaque.
+In some of the previous examples, you'll notice that some have a fourth value which is called "alpha", the A in RGBA. The alpha channel is not a color channel, but defines transparency in terms of the opacity value of the color. A higher value means the color is more opaque therefore less transparent. In the examples above, the alpha value is set to half or 50% opaque.
 
 ### sRGB: the accessible colorspace
 
@@ -165,7 +165,7 @@ Some other display colorspaces use different primary colors. For the new [ultraH
 
 While some standards in development such as **[CSS Color Module Level 4](https://drafts.csswg.org/css-color-4/)** are adding additional colorspaces, sRGB will remain the default colorspace, and the preferred colorspace for accessibility for the foreseeable future.
 
-------------
+---
 
 ## Light and Luminance
 
@@ -245,15 +245,15 @@ The world standard in terms of colorimetry (measuring color) is the **CIE**, and
 
 #### Colorfulness
 
-Colorfulness is the “Attribute of a visual perception according to which the perceived color of an area appears to be more or less chromatic.” (CIE 17-233). For a color of a given chromaticity this attribute usually increases as the luminance is raised, except when the brightness is very high.
+Colorfulness is the "Attribute of a visual perception according to which the perceived color of an area appears to be more or less chromatic." (CIE 17-233). For a color of a given chromaticity this attribute usually increases as the luminance is raised, except when the brightness is very high.
 
 #### Saturation
 
-Saturation is the “Colorfulness of an area judged in proportion to its brightness.” (CIE 17-1136). For normal day viewing conditions a given chromaticity exhibits approximately constant saturation for all luminance levels, except when the brightness is very high.
+Saturation is the "Colorfulness of an area judged in proportion to its brightness." (CIE 17-1136). For normal day viewing conditions a given chromaticity exhibits approximately constant saturation for all luminance levels, except when the brightness is very high.
 
 #### Chroma
 
-Chroma is the “Colorfulness of an area judged as a proportion of the brightness of a similarly illuminated area that appears white or highly transmitting.” (CIE 17-139). A color exhibits approximately constant chroma for all levels of illuminance in normal day viewing conditions (except when the brightness is very high). If the luminance is increased, the chroma usually increases in the same circumstances.
+Chroma is the "Colorfulness of an area judged as a proportion of the brightness of a similarly illuminated area that appears white or highly transmitting." (CIE 17-139). A color exhibits approximately constant chroma for all levels of illuminance in normal day viewing conditions (except when the brightness is very high). If the luminance is increased, the chroma usually increases in the same circumstances.
 
 Here is an example of high chroma vs no chroma. On the right, each of the three sRGB primaries are at maximum. On the left, there is no chroma, also known as "achromatic."
 
@@ -327,19 +327,19 @@ The Epilepsy Foundation of America researched photic-related seizures thoroughly
 
 **Single, double, or triple flashes in one second are acceptable, but a sequence of flashes is not recommended when both of the following occur:**
 
-1.  More than three flashes within any one second period.
-2.  From the minimal expected viewing distance, the total area of concurrent flashes subtends a visual angle of 5° or more (200px to 300px square on a desktop monitor to as little as 50px square for a closely held mobile device).
+1. More than three flashes within any one second period.
+2. From the minimal expected viewing distance, the total area of concurrent flashes subtends a visual angle of 5° or more (200px to 300px square on a desktop monitor to as little as 50px square for a closely held mobile device).
 
 **When the light–dark stripes of any pattern are larger than a visual angle of 5° and the luminance of the lightest stripe is more than 50 cd/m², the pattern should display no more than:**
 
-1.  Five light–dark pairs of stripes, if the stripes change direction, oscillate, flash, or reverse in contrast.
-2.  Eight light–dark pairs of stripes, if the pattern is unchanging or continuously and smoothly drifting in one direction.
+1. Five light–dark pairs of stripes, if the stripes change direction, oscillate, flash, or reverse in contrast.
+2. Eight light–dark pairs of stripes, if the pattern is unchanging or continuously and smoothly drifting in one direction.
 
 The consensus recommendations are in this brief paper, [Photic- and Pattern-induced Seizures: Expert Consensus of the Epilepsy Foundation of America](https://www.epilepsy.com/sites/core/files/atoms/files/Epilepsia%20vol%2046%20issue%209%20Photosensitivity.pdf). Some additional insights are available in this UK paper covering [guidelines for preventing seizures.](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.9473&rep=rep1&type=pdf).
 
 Additional notes: The EFA recommendation from 2005 pre-dates smart phones, and was based on television set usage, defining a flash that _"occupies a solid visual angle of ≥0.006 steradians (∼10% of the central visual field or 25% of screen area at typical viewing distances)."_ This is essentially equivalent to a visual angle of 5° square. Since that time, mobile devices have substantially changed how we view media. For a typical smart phone viewed very close (5"-6" or 12cm-15cm) that would be an area about 50px to 70px square.
 
-----------
+---
 
 ## Modeling Light Color and Vision
 
@@ -353,7 +353,7 @@ The IEC standard for calculating relative luminance (Y) from an sRGB color is as
 
 Convert 8 bit sRGB values to float (0.0 to 1.0) by dividing by 255.0:
 
-**R´<sub>float</sub> = R´<sub>8bit</sub> / 255.0       G´<sub>float</sub> = G´<sub>8bit</sub> / 255.0       B´<sub>float</sub> = B´<sub>8bit</sub> / 255.0**
+**R´<sub>float</sub> = R´<sub>8bit</sub> / 255.0 G´<sub>float</sub> = G´<sub>8bit</sub> / 255.0 B´<sub>float</sub> = B´<sub>8bit</sub> / 255.0**
 
 If your sRGB values are 16 bit then convert to decimal by dividing by 65535.
 
@@ -361,7 +361,7 @@ If your sRGB values are 16 bit then convert to decimal by dividing by 65535.
 
 Linearize the data to remove the encoded transfer curve.
 
-**R<sub>lin</sub> = sRGBtoLin(R´<sub>float</sub>)    G<sub>lin</sub> = sRGBtoLin(G´<sub>float</sub>)    B<sub>lin</sub> = sRGBtoLin(B´<sub>float</sub>)**
+**R<sub>lin</sub> = sRGBtoLin(R´<sub>float</sub>) G<sub>lin</sub> = sRGBtoLin(G´<sub>float</sub>) B<sub>lin</sub> = sRGBtoLin(B´<sub>float</sub>)**
 
 Using the function shown below:
 

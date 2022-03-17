@@ -12,6 +12,8 @@ The **`CustomEvent`** interface represents events initialized by an application 
 
 {{AvailableInWorkers}}
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}

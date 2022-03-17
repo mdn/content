@@ -8,11 +8,15 @@ tags:
   - Reference
   - WAI-ARIA
 ---
-Accessible Rich Internet Applications **(ARIA)** is a set of attributes that define ways to make web content and web applications (especially those developed with JavaScript) more accessible to people with disabilities.
+Accessible Rich Internet Applications **(<abbr>ARIA</abbr>)** is a set of attributes that define ways to make web content and web applications (especially those developed with JavaScript) more accessible to people with disabilities.
 
-It supplements HTML so that interactions and widgets commonly used in applications can be passed to assistive technologies when there is not otherwise a mechanism. For example, ARIA enables accessible navigation landmarks in HTML4, JavaScript widgets, form hints and error messages, live content updates, and more.
+It supplements HTML so that interactions and widgets commonly used in applications can be passed to assistive technologies when there is not otherwise a mechanism. For example, ARIA enables accessible JavaScript widgets, form hints and error messages, live content updates, and more.
 
-> **Warning:** Many of these widgets were later incorporated into HTML5, and **developers should prefer using the correct semantic HTML element over using ARIA**, if such an element exists. For instance, native elements have built-in [keyboard accessibility](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets), roles and states. However, if you choose to use ARIA, you are responsible for mimicking (the equivalent) browser behavior in script.
+> **Warning:** Many of these widgets were later incorporated into HTML5, and **developers should prefer using the correct semantic HTML element over using ARIA**, if such an element exists. For instance, native elements have built-in [keyboard accessibility](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets), roles and states. However, if you choose to use ARIA, you are responsible for mimicking the equivalent browser behavior in script.
+
+[The first rule of ARIA](https://www.w3.org/TR/using-aria/#rule1) use is <q>"If you can use a native HTML element or attribute with the semantics and behavior you require already built in, instead of re-purposing an element and adding an ARIA role, state or property to make it accessible, then do so."</q>
+
+> **Note:** There is a saying "No ARIA is better than bad ARIA." In [WebAim's survey of over one million home pages](https://webaim.org/projects/million#aria), they found that Home pages with ARIA present averaged 41% more detected errors than those without ARIA. While ARIA is designed to make web pages more accessible, if used incorrectly, it can do more harm than good.
 
 Here's the markup for a progress bar widget:
 
@@ -22,7 +26,7 @@ Here's the markup for a progress bar widget:
 </div>
 ```
 
-This progress bar is built using a {{HTMLElement("div")}}, which has no meaning. Unfortunately, there isn't a more semantic tag available to developers in HTML 4, so we need to include ARIA roles and properties. These are specified by adding attributes to the element. In this example, the `role="progressbar"` attribute informs the browser that this element is actually a JavaScript-powered progress bar widget. The `aria-valuemin` and `aria-valuemax` attributes specify the minimum and maximum values for the progress bar, and the `aria-valuenow` describes the current state of it and therefore must be kept updated with JavaScript.
+This progress bar is built using a {{HTMLElement("div")}}, which has no meaning. We include ARIA roles and properties to add meaning. In this example, the [`role="progressbar"`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role) attribute informs the browser that this element is actually a JavaScript-powered progress bar widget. The [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) and [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) attributes specify the minimum and maximum values for the progress bar, and the [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) describes the current state of it and therefore must be kept updated with JavaScript.
 
 Along with placing them directly in the markup, ARIA attributes can be added to the element and updated dynamically using JavaScript code like this:
 
@@ -43,8 +47,17 @@ function updateProgress(percentComplete) {
 }
 ```
 
-> **Note:** ARIA was invented after HTML4, so does not validate in HTML4 or its XHTML variants. However, the accessibility gains it provides far outweigh any technical invalidity.
-> In HTML5, all ARIA attributes validate. The new landmark elements ({{HTMLElement("main")}}, {{HTMLElement("header")}}, {{HTMLElement("nav")}} etc.) have built-in ARIA roles, so there is no need to duplicate them.
+All content that is available to non-assistive technology users must be made available to assistive technologies. Similarly, no features should be included targeting assistive technology users that aren't also accessible to those not using assistive technologies. The above progressbar needs to be styled to make it look like a progressbar.
+
+It would have been much simpler to use the native {{HTMLElement('progress')}} element instead:
+
+```HTML
+<progress id="percent-loaded" value="75" max="100">75 %</progress>
+```
+
+> **Note:** The `min` attribute is not allowed for the {{HTMLElement('progress')}} element; its minimum value is always `0`.
+
+> **Note:** HTML landmark elements ({{HTMLElement("main")}}, {{HTMLElement("header")}}, {{HTMLElement("nav")}} etc.) have built-in implicit ARIA roles, so there is no need to duplicate them.
 
 ## Support
 
@@ -70,27 +83,27 @@ It is also important to test your authored ARIA with actual assistive technology
 - [Improving form accessibility](/en-US/docs/Web/Accessibility/ARIA/forms)
   - : ARIA is not just for dynamic content! Learn how to improve accessibility of HTML forms using additional ARIA attributes.
 
-## ARIA for Scripted Widgets
+## ARIA for scripted widgets
 
 - [Writing keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
   - : Built-in elements like {{HTMLElement("input")}}, {{HTMLElement("button")}} etc have built-in keyboard accessibility. If you 'fake' these with {{HTMLElement("div")}}s and ARIA, you must ensure your widgets are keyboard accessible.
 - [Live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
   - : Live regions provide suggestions to screen readers about how to handle changes to the contents of a page.
-- [Using ARIA Live Regions to announce content changes](https://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm)
+- [Using ARIA live regions to announce content changes](https://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm)
   - : A quick summary of live regions, by the makers of JAWS screen reader software. Live regions are also supported by NVDA with Firefox, and VoiceOver with Safari.
 
 ## References
 
-- [ARIA Roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
+- [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
   - : Reference pages covering all the WAI-ARIA roles discussed on MDN.
-- [ARIA States and Properties](/en-US/docs/Web/Accessibility/ARIA/Attributes)
+- [ARIA states and properties](/en-US/docs/Web/Accessibility/ARIA/Attributes)
   - : Reference pages covering all the WAI-ARIA states and properties discussed on MDN.
 
-## Standardization Efforts
+## Standardization efforts
 
-- [WAI-ARIA Specification](https://www.w3.org/TR/wai-aria-1.1/)
+- [WAI-ARIA specification](https://www.w3.org/TR/wai-aria-1.1/)
   - : The W3C specification itself.
-- [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices-1.1/)
+- [WAI-ARIA authoring practices](https://www.w3.org/TR/wai-aria-practices-1.1/)
   - : The official best practices documents how best to ARIA-ify common widgets and interactions. An excellent resource.
 
 ## Videos
@@ -99,7 +112,7 @@ Following talks are a great way to understand ARIA:
 
 [ARIA, Accessibility APIs and coding like you give a damn! – Léonie Watson](https://www.youtube.com/watch?v=qdB8SRhqvFc)
 
-## Filing Bugs
+## Filing bugs
 
 [File ARIA bugs on browsers, screen readers, and JavaScript libraries.](/en-US/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs)
 

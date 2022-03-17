@@ -32,5 +32,3 @@ console.log(AudioData.timestamp);
 ## Browser compatibility
 
 {{Compat}}
-
-

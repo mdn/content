@@ -32,7 +32,7 @@ None.
 ### Return value
 
 A {{jsxref("Promise")}} that resolves to a JavaScript object. This object could be
-anything that can be represented by JSON — an object, an array, a string, a number...
+anything that can be represented by JSON — an object, an array, a string, a number...
 
 ## Examples
 

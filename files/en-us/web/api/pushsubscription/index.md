@@ -14,7 +14,7 @@ browser-compat: api.PushSubscription
 ---
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 
-The `PushSubscription` interface of the [Push API](/en-US/docs/Web/API/Push_API) provides a subcription's URL endpoint and allows unsubscription from a push service.
+The `PushSubscription` interface of the [Push API](/en-US/docs/Web/API/Push_API) provides a subscription's URL endpoint and allows unsubscribing from a push service.
 
 An instance of this interface can be serialized.
 
@@ -23,7 +23,7 @@ An instance of this interface can be serialized.
 - {{domxref("PushSubscription.endpoint")}} {{readonlyinline}}
   - : A {{domxref("USVString")}} containing the endpoint associated with the push subscription.
 - {{domxref("PushSubscription.expirationTime")}} {{readonlyinline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} of the subscription expiration time associated with the push subscription, if there is one, or null otherwise.
+  - : A {{domxref("DOMHighResTimeStamp")}} of the subscription expiration time associated with the push subscription, if there is one, or null otherwise.
 - {{domxref("PushSubscription.options")}} {{readonlyinline}}
   - : An object containing the options used to create the subscription.
 - {{domxref("PushSubscription.subscriptionId")}} {{deprecated_inline}} {{readonlyinline}}
@@ -46,7 +46,7 @@ navigator.serviceWorker.ready.then(function(reg) {
     subscription.unsubscribe().then(function(successful) {
       // You've successfully unsubscribed
     }).catch(function(e) {
-      // Unsubscription failed
+      // Unsubscribing failed
     })
   })
 });

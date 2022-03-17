@@ -13,7 +13,7 @@ browser-compat: javascript.operators.comma
 ---
 {{jsSidebar("Operators")}}
 
-The **comma operator** (**`,`**) evaluates each of
+The **comma operator** (**`,`**) evaluates each of
 its operands (from left to right) and returns the value of the last operand. This lets
 you create a compound expression in which multiple expressions are evaluated, with the
 compound expression's final value being the value of the rightmost of its member

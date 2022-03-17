@@ -15,7 +15,7 @@ browser-compat: api.BluetoothRemoteGATTService.getCharacteristic
 {{SeeCompatTable}}
 
 The **`BluetoothGATTService.getCharacteristic()`** method
-returns a {{jsxref("Promise")}} to an instance of
+returns a {{jsxref("Promise")}} to an instance of
 {{domxref("BluetoothRemoteGATTCharacteristic")}} for a given universally unique identifier
 (UUID).
 
@@ -27,14 +27,14 @@ bluetoothGATTServiceInstance.getCharacteristic(characteristic).then(function(Blu
 
 ### Returns
 
-A {{jsxref("Promise")}} to an instance of {{domxref("BluetoothRemoteGATTCharacteristic")}}
+A {{jsxref("Promise")}} to an instance of {{domxref("BluetoothRemoteGATTCharacteristic")}}
 
 ### Parameters
 
 - characteristic
-  - : The UUID of a characteristic, for
-    example `'00002a37-0000-1000-8000-00805f9b34fb'` for the Heart Rate
-    Measurement characteristic.
+  - : The UUID of a characteristic, for
+    example `'00002a37-0000-1000-8000-00805f9b34fb'` for the Heart Rate
+    Measurement characteristic.
 
 ## Specifications
 

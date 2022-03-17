@@ -14,30 +14,30 @@ The **`opacity`** attribute specifies the transparency of an object or of a grou
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("a")}}
-*   {{SVGElement("audio")}}
-*   {{SVGElement("canvas")}}
-*   {{SVGElement("circle")}}
-*   {{SVGElement("ellipse")}}
-*   {{SVGElement("foreignObject")}}
-*   {{SVGElement("g")}}
-*   {{SVGElement("iframe")}}
-*   {{SVGElement("image")}}
-*   {{SVGElement("line")}}
-*   {{SVGElement("marker")}}
-*   {{SVGElement("path")}}
-*   {{SVGElement("polygon")}}
-*   {{SVGElement("polyline")}}
-*   {{SVGElement("rect")}}
-*   {{SVGElement("svg")}}
-*   {{SVGElement("switch")}}
-*   {{SVGElement("symbol")}}
-*   {{SVGElement("text")}}
-*   {{SVGElement("textPath")}}
-*   {{SVGElement("tspan")}}
-*   {{SVGElement("use")}}
-*   {{SVGElement("unknown")}}
-*   {{SVGElement("video")}}
+- {{SVGElement("a")}}
+- {{SVGElement("audio")}}
+- {{SVGElement("canvas")}}
+- {{SVGElement("circle")}}
+- {{SVGElement("ellipse")}}
+- {{SVGElement("foreignObject")}}
+- {{SVGElement("g")}}
+- {{SVGElement("iframe")}}
+- {{SVGElement("image")}}
+- {{SVGElement("line")}}
+- {{SVGElement("marker")}}
+- {{SVGElement("path")}}
+- {{SVGElement("polygon")}}
+- {{SVGElement("polyline")}}
+- {{SVGElement("rect")}}
+- {{SVGElement("svg")}}
+- {{SVGElement("switch")}}
+- {{SVGElement("symbol")}}
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tspan")}}
+- {{SVGElement("use")}}
+- {{SVGElement("unknown")}}
+- {{SVGElement("video")}}
 
 ## Example
 
@@ -50,14 +50,14 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="gradient" x1="0%" y1="0%" x2="0" y2="100%">
-      <stop offset="0%" style="stop-color:skyblue;" />
-      <stop offset="100%" style="stop-color:seagreen;" />
-    </linearGradient>
-  </defs>
-  <rect x="0" y="0" width="100%" height="100%" fill="url(#gradient)" />
-  <circle cx="50" cy="50" r="40" fill="black" />
-  <circle cx="150" cy="50" r="40" fill="black" opacity="0.3" />
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="0" y2="100%">
+      <stop offset="0%" style="stop-color:skyblue;" />
+      <stop offset="100%" style="stop-color:seagreen;" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#gradient)" />
+  <circle cx="50" cy="50" r="40" fill="black" />
+  <circle cx="150" cy="50" r="40" fill="black" opacity="0.3" />
 </svg>
 ```
 
@@ -82,8 +82,8 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `<alpha-value>`
-    *   : The uniform opacity setting to be applied across an entire object, as a {{cssxref("number")}}. Any values outside the range 0.0 (fully transparent) to 1.0 (fully opaque) will be clamped to this range.
+- `<alpha-value>`
+  - : The uniform opacity setting to be applied across an entire object, as a {{cssxref("number")}}. Any values outside the range 0.0 (fully transparent) to 1.0 (fully opaque) will be clamped to this range.
 
 ## Specifications
 
@@ -136,4 +136,4 @@ html, body, svg {
 
 ## See also
 
-*   {{cssxref("opacity", "CSS opacity")}}
+- {{cssxref("opacity", "CSS opacity")}}

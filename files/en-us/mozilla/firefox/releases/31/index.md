@@ -32,22 +32,22 @@ Highlights:
 - The {{cssxref("hyphens")}} property now support Polish hyphenation rules ({{Bug(987668)}}).
 - Removed an unwanted white space for multiple of 10,000 in Korean counter styles ({{Bug(985186)}}).
 - CSS opacity transition broken with parent pseudo :before and overflow auto ({{Bug(990340)}}).
-- The `::-moz-math-stretchy` pseudo-element has been removed ({{Bug(1000879)}}).
+- The `::-moz-math-stretchy` pseudo-element has been removed ({{Bug(1000879)}}).
 
 ### HTML
 
-- {{HTMLElement("track")}} has been implemented ({{Bug(629350)}}).
+- {{HTMLElement("track")}} has been implemented ({{Bug(629350)}}).
 
 ### JavaScript
 
-New ECMAScript 2015 features implemented:
+New ECMAScript 2015 features implemented:
 
 - New `Array` built-in: {{jsxref("Array.prototype.fill()")}} ({{Bug(911147)}})
 - New `Math` function: {{jsxref("Math.clz32()")}} ({{Bug(925123)}})
 - New `String` built-in: {{jsxref("String.prototype.normalize()")}} is available in Firefox Desktop ({{Bug(918987)}}).
 - New `Object` method {{jsxref("Object.setPrototypeOf()")}}.
 - New `Number` constants: {{jsxref("Number.MAX_SAFE_INTEGER")}} and {{jsxref("Number.MIN_SAFE_INTEGER")}}.
-- The ES2015 Proxy {{jsxref("Global_Objects/Proxy/Proxy/isExtensible", "isExtensible")}} trap have been implemented ({{bug(978235)}}).
+- The ES2015 Proxy {{jsxref("Global_Objects/Proxy/Proxy/isExtensible", "isExtensible")}} trap have been implemented ({{bug(978235)}}).
 
 ### Interfaces/APIs/DOM
 

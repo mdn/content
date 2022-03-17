@@ -9,7 +9,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 86 that will affect developers. Firefox 86 was released on February 23, 2021.
+This article provides information about the changes in Firefox 86 that will affect developers. Firefox 86 was released on February 23, 2021.
 
 > **Note:** See also [A Fabulous February Firefox — 86!](https://hacks.mozilla.org/2021/02/a-fabulous-february-firefox-86/) on Mozilla Hacks.
 
@@ -17,7 +17,7 @@ This article provides information about the changes in Firefox 86 that will aff
 
 ### Developer Tools
 
-- The `cd()` [web console helper function](/en-US/docs/Tools/Web_Console/Helpers), which was deprecated in Firefox 74, has now been removed. The `<iframe>` context picker tool described in [Working with iframes](/en-US/docs/Tools/Working_with_iframes) serves the same purpose, but is much better! For more information see {{bug(1607741)}}.
+- The `cd()` [web console helper function](/en-US/docs/Tools/Web_Console/Helpers), which was deprecated in Firefox 74, has now been removed. The `<iframe>` context picker tool described in [Working with iframes](/en-US/docs/Tools/Working_with_iframes) serves the same purpose, but is much better! For more information see {{bug(1607741)}}.
 - The different {{cssxref("margin")}} and {{cssxref("padding")}} shorthand and longhand properties are now marked as inactive on internal table elements because they have no effect on them. ({{bug(1551569)}}).
 - The {{cssxref("order")}} property was previously incorrectly marked as inactive for grid items. This got fixed in {{bug(1579017)}}.
 
@@ -31,8 +31,8 @@ _No changes._
 
 ### CSS
 
-- The {{cssxref(":autofill")}} pseudo-class is now enabled, with `-webkit-autofill` as an alias ({{bug(1685675)}}) and ({{bug(1475316)}}).
-- The {{cssxref("list-style-image")}} property now accepts any valid {{cssxref("image")}} ({{bug(1685078)}}).
+- The {{cssxref(":autofill")}} pseudo-class is now enabled, with `-webkit-autofill` as an alias ({{bug(1685675)}}) and ({{bug(1475316)}}).
+- The {{cssxref("list-style-image")}} property now accepts any valid {{cssxref("image")}} ({{bug(1685078)}}).
 
 ### JavaScript
 

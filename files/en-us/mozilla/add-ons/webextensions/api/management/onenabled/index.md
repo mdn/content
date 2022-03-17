@@ -55,7 +55,7 @@ Log the names of add-ons when they are enabled:
 
 ```js
 browser.management.onEnabled.addListener((info) => {
-  console.log(info.name + " was enabled");
+  console.log(info.name + " was enabled");
 });
 ```
 

@@ -60,8 +60,8 @@ It's important to keep in mind that the value of QP can change periodically—ev
 frame—so it's difficult to know for certain how substantial the compression is. The best
 you can do is make an estimate. You can use the value of
 {{domxref("RTCSentRtpStreamStats.framesEncoded")}} to get the number of frames that have
-been encoded so far, and compute an average from there. See {{anch("Calculating average
-  quantization")}} below for a function that does this.
+been encoded so far, and compute an average from there. See [Calculating average
+  quantization](#calculating_average_quantization) below for a function that does this.
 
 Also, the exact meaning of the QP value depends on the {{Glossary("codec")}} being
 used. For example, for the VP8 codec, the QP value can be anywhere from 1 to 127 and is

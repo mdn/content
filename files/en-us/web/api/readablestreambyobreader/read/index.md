@@ -11,10 +11,10 @@ tags:
   - read
 browser-compat: api.ReadableStreamBYOBReader.read
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`read()`** method of the
-{{domxref("ReadableStreamBYOBReader")}} interface returns a {{jsxref("Promise")}} that resolves with an obect representing the next chunk in the stream's queue.
+{{domxref("ReadableStreamBYOBReader")}} interface returns a {{jsxref("Promise")}} that resolves with an object representing the next chunk in the stream's queue.
 
 ## Syntax
 

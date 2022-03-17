@@ -6,6 +6,7 @@ tags:
   - Private
   - JavaScript
   - Language feature
+browser-compat: javascript.classes.private_class_fields
 ---
 {{JsSidebar("Classes")}}
 
@@ -95,8 +96,10 @@ class SubClass extends ClassWithPrivateField {
 }
 
 new SubClass();
-// SubClass {#privateField: 42, #subPrivateField: 23}
+// SubClass {#subPrivateField: 23}
 ```
+
+> **Note:** `#privateField` from the `ClassWithPrivateField` base class is private to `ClassWithPrivateField` and is not accessible from the derived `Subclass`.
 
 #### Private static fields
 
@@ -256,11 +259,11 @@ console.log(Derived.publicStaticMethod2());
 
 ## Specifications
 
-{{Specifications("javascript.classes")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("javascript.classes")}}
+{{Compat}}
 
 ## See also
 

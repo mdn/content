@@ -24,7 +24,7 @@ The **error object** is a JSON Object that bears three, and sometimes four, fiel
 
   - : Arbitrary and implementation-defined data that it can be useful to present the user with.
 
-    Many drivers include the [user prompt](/en-US/docs/Web/API/Window/alert)’s text when encountering an [unexpected alert open](/en-US/docs/Web/WebDriver/Errors/UnexpectedAlertOpen) error.
+    Many drivers include the [user prompt](/en-US/docs/Web/API/Window/alert)'s text when encountering an [unexpected alert open](/en-US/docs/Web/WebDriver/Errors/UnexpectedAlertOpen) error.
 
 ## Example
 
@@ -32,11 +32,11 @@ For example a [`GET`](/en-US/docs/Web/HTTP/Methods/GET) request to `/session/123
 
 ```json
 {
-	"value": {
-		"error": "invalid session id",
-		"message": "No active session with ID 1234",
-		"stacktrace": ""
-	}
+  "value": {
+    "error": "invalid session id",
+    "message": "No active session with ID 1234",
+    "stacktrace": ""
+  }
 }
 ```
 
@@ -46,14 +46,14 @@ Because both WebDriver and JavaScript execution is halted by such a dialog, we s
 
 ```json
 {
-	"value": {
-		"error": "unexpected alert open",
-		"message": "",
-		"stacktrace": "",
-		"data": {
-			"text": "Message from window.alert"
-		}
-	}
+  "value": {
+    "error": "unexpected alert open",
+    "message": "",
+    "stacktrace": "",
+    "data": {
+      "text": "Message from window.alert"
+    }
+  }
 }
 ```
 
@@ -70,9 +70,9 @@ In most [clients](/en-US/docs/Web/WebDriver/Clients) the error would be represen
 | [invalid cookie domain](/en-US/docs/Web/WebDriver/Errors/InvalidCookieDomain)         | {{HTTPStatus(400, "400 Bad Request")}}             | An illegal attempt was made to set a cookie under a different domain than the current page.                                                                                                                                                                           |
 | [invalid element state](/en-US/docs/Web/WebDriver/Errors/InvalidElementState)         | {{HTTPStatus(400, "400 Bad Request")}}             | A [command](/en-US/docs/Web/WebDriver/Command) could not be completed because the element is in an invalid state, e.g. attempting to [clear](/en-US/docs/Web/WebDriver/ElementClear) an element that isn't both editable and resettable.                              |
 | [invalid selector](/en-US/docs/Web/WebDriver/Errors/InvalidSelector)                  | {{HTTPStatus(400, "400 Bad Request")}}             | An element retrieval command provided an unknown selector strategy.                                                                                                                                                                                                   |
-| [invalid session id](/en-US/docs/Web/WebDriver/Errors/InvalidSessionID)               | {{HTTPStatus(404, "404 Not Found")}}                 | Given session ID is not recognized, meaning the session either does not exist of that it’s not active. Note that a session that [has been deleted](/en-US/docs/Web/WebDriver/DeleteSession) cannot be re-used.                                                        |
+| [invalid session id](/en-US/docs/Web/WebDriver/Errors/InvalidSessionID)               | {{HTTPStatus(404, "404 Not Found")}}                 | Given session ID is not recognized, meaning the session either does not exist of that it's not active. Note that a session that [has been deleted](/en-US/docs/Web/WebDriver/DeleteSession) cannot be re-used.                                                        |
 | [javascript error](/en-US/docs/Web/WebDriver/Errors/JavaScriptError)                  | {{HTTPStatus(500, "500 Internal Server Error")}} | An error occurred while executing JavaScript supplied by the user.                                                                                                                                                                                                    |
-| [move target out of bounds](/en-US/docs/Web/WebDriver/Errors/MoveTargetOutOfBounds)   | {{HTTPStatus(500, "500 Internal Server Error")}} | The target for mouse interaction is not in the browser’s viewport and cannot be brought into that viewport.                                                                                                                                                           |
+| [move target out of bounds](/en-US/docs/Web/WebDriver/Errors/MoveTargetOutOfBounds)   | {{HTTPStatus(500, "500 Internal Server Error")}} | The target for mouse interaction is not in the browser's viewport and cannot be brought into that viewport.                                                                                                                                                           |
 | [no such alert](/en-US/docs/Web/WebDriver/Errors/NoSuchAlert)                         | {{HTTPStatus(404, "404 Not Found")}}                 | An attempt was made to operate on a user prompt when one was not open.                                                                                                                                                                                                |
 | [no such cookie](/en-US/docs/Web/WebDriver/Errors/NoSuchCookie)                       | {{HTTPStatus(404, "404 Not Found")}}                 | No cookie matching the given path name was found amongst the [cookies](/en-US/docs/Glossary/Cookie) of the current [document](/en-US/docs/Web/API/Document).                                                                                                          |
 | [no such element](/en-US/docs/Web/WebDriver/Errors/NoSuchElement)                     | {{HTTPStatus(404, "404 Not Found")}}                 | An element could not be located on the page using the given search parameters.                                                                                                                                                                                        |
@@ -82,7 +82,7 @@ In most [clients](/en-US/docs/Web/WebDriver/Clients) the error would be represen
 | [session not created](/en-US/docs/Web/WebDriver/Errors/SessionNotCreated)             | {{HTTPStatus(500, "500 Internal Server Error")}} | A new session could not be created, either because the browser could not be started or because the provided [capabilities](/en-US/docs/Web/WebDriver/Capabilities) to start the session did not match.                                                                |
 | [stale element reference](/en-US/docs/Web/WebDriver/Errors/StaleElementReference)     | {{HTTPStatus(404, "404 Not Found")}}                 | A [command](/en-US/docs/Web/WebDriver/Command) failed because the referenced [element](/en-US/docs/Web/WebDriver/WebElement) is no longer attached to the DOM.                                                                                                        |
 | [timeout](/en-US/docs/Web/WebDriver/Errors/Timeout)                                   | {{HTTPStatus(408, "408 Request Timeout")}}         | An operation did not complete before its timeout expired.                                                                                                                                                                                                             |
-| [unable to set cookie](/en-US/docs/Web/WebDriver/Errors/UnableToSetCookie)            | {{HTTPStatus(500, "500 Internal Server Error")}} | A [command](/en-US/docs/Web/WebDriver/Command) to set a cookie’s value could not be satisfied.                                                                                                                                                                        |
+| [unable to set cookie](/en-US/docs/Web/WebDriver/Errors/UnableToSetCookie)            | {{HTTPStatus(500, "500 Internal Server Error")}} | A [command](/en-US/docs/Web/WebDriver/Command) to set a cookie's value could not be satisfied.                                                                                                                                                                        |
 | [unable to capture screen](/en-US/docs/Web/WebDriver/Errors/UnableToCaptureScreen)    | {{HTTPStatus(500, "500 Internal Server Error")}} | A screen capture was made impossible.                                                                                                                                                                                                                                 |
 | [unexpected alert open](/en-US/docs/Web/WebDriver/Errors/UnexpectedAlertOpen)         | {{HTTPStatus(500, "500 Internal Server Error")}} | A modal dialog was open, blocking this operation.                                                                                                                                                                                                                     |
 | [unknown command](/en-US/docs/Web/WebDriver/Errors/UnknownCommand)                    | {{HTTPStatus(404, "404 Not Found")}}                 | A [command](/en-US/docs/Web/WebDriver/Command) could not be executed because the driver was unaware of it.                                                                                                                                                            |

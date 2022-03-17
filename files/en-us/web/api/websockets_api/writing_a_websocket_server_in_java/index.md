@@ -12,13 +12,13 @@ tags:
 
 This example shows you how to create a WebSocket API server using Oracle Java.
 
-Although other server-side languages can be used to create a WebSocket server, this example uses Oracle Java to simplify the example code.
+Although other server-side languages can be used to create a WebSocket server, this example uses Oracle Java to simplify the example code.
 
-This server conforms to [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455), so it only handles connections from Chrome version 16, Firefox 11, IE 10 and higher.
+This server conforms to [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455), so it only handles connections from Chrome version 16, Firefox 11, IE 10 and higher.
 
 ## First steps
 
-WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Java's [ServerSocket](http://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html) class is located in the *java.net* package.
+WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Java's [ServerSocket](http://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html) class is located in the *java.net* package.
 
 ### ServerSocket
 
@@ -26,7 +26,7 @@ Constructor:
 
 ServerSocket`(int port)`
 
-When you instantiate the ServerSocket class, it is bound to the port number you specified by the _port_ argument.
+When you instantiate the ServerSocket class, it is bound to the port number you specified by the _port_ argument.
 
 Here's an implementation split into parts:
 
@@ -44,12 +44,12 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class WebSocket {
-	public static void main(String[] args) throws IOException, NoSuchAlgorithmException {
-		ServerSocket server = new ServerSocket(80);
-		try {
-			System.out.println("Server has started on 127.0.0.1:80.\r\nWaiting for a connection...");
-			Socket client = server.accept();
-			System.out.println("A client connected.");
+  public static void main(String[] args) throws IOException, NoSuchAlgorithmException {
+    ServerSocket server = new ServerSocket(80);
+    try {
+      System.out.println("Server has started on 127.0.0.1:80.\r\nWaiting for a connection...");
+      Socket client = server.accept();
+      System.out.println("A client connected.");
 ```
 
 ### Socket
@@ -66,7 +66,7 @@ Methods:
 Methods:
 
 ```java
-write(byte[] b, int off, int len)
+write(byte[] b, int off, int len)
 ```
 
 Writes _`len`_ bytes from the specified byte array starting at offset _`off`_ to this output stream.
@@ -76,7 +76,7 @@ Writes _`len`_ bytes from the specified byte array starting at offset _`off`_ to
 Methods:
 
 ```cpp
-read(byte[] b, int off, int len)
+read(byte[] b, int off, int len)
 ```
 
 Reads up to _len_ bytes of data from the input stream into an array of bytes.
@@ -84,9 +84,9 @@ Reads up to _len_ bytes of data from the input stream into an array of bytes.
 Let us extend our example.
 
 ```java
-			InputStream in = client.getInputStream();
-			OutputStream out = client.getOutputStream();
-			Scanner s = new Scanner(in, "UTF-8");
+InputStream in = client.getInputStream();
+OutputStream out = client.getOutputStream();
+Scanner s = new Scanner(in, "UTF-8");
 ```
 
 ## Handshaking
@@ -94,40 +94,42 @@ Let us extend our example.
 When a client connects to a server, it sends a GET request to upgrade the connection to a WebSocket from a simple HTTP request. This is known as handshaking.
 
 ```java
-			try {
-				String data = s.useDelimiter("\\r\\n\\r\\n").next();
-				Matcher get = Pattern.compile("^GET").matcher(data);
+try {
+  String data = s.useDelimiter("\\r\\n\\r\\n").next();
+  Matcher get = Pattern.compile("^GET").matcher(data);
 ```
 
 Creating the response is easier than understanding why you must do it in this way.
 
 You must,
 
-1.  Obtain the value of _Sec-WebSocket-Key_ request header without any leading and trailing whitespace
-2.  Link it with "258EAFA5-E914-47DA-95CA-C5AB0DC85B11"
-3.  Compute SHA-1 and Base64 code of it
-4.  Write it back as value of _Sec-WebSocket-Accept_ response header as part of a HTTP response.
+1. Obtain the value of _Sec-WebSocket-Key_ request header without any leading and trailing whitespace
+2. Link it with "258EAFA5-E914-47DA-95CA-C5AB0DC85B11"
+3. Compute SHA-1 and Base64 code of it
+4. Write it back as value of _Sec-WebSocket-Accept_ response header as part of a HTTP response.
 
 ```java
-				if (get.find()) {
-					Matcher match = Pattern.compile("Sec-WebSocket-Key: (.*)").matcher(data);
-					match.find();
-					byte[] response = ("HTTP/1.1 101 Switching Protocols\r\n"
-						+ "Connection: Upgrade\r\n"
-						+ "Upgrade: websocket\r\n"
-						+ "Sec-WebSocket-Accept: "
-						+ Base64.getEncoder().encodeToString(MessageDigest.getInstance("SHA-1").digest((match.group(1) + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11").getBytes("UTF-8")))
-						+ "\r\n\r\n").getBytes("UTF-8");
-					out.write(response, 0, response.length);
+if (get.find()) {
+  Matcher match = Pattern.compile("Sec-WebSocket-Key: (.*)").matcher(data);
+  match.find();
+  byte[] response = ("HTTP/1.1 101 Switching Protocols\r\n"
+    + "Connection: Upgrade\r\n"
+    + "Upgrade: websocket\r\n"
+    + "Sec-WebSocket-Accept: "
+    + Base64.getEncoder().encodeToString(MessageDigest.getInstance("SHA-1").digest((match.group(1) + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11").getBytes("UTF-8")))
+    + "\r\n\r\n").getBytes("UTF-8");
+  out.write(response, 0, response.length);
 ```
 
 ## Decoding messages
 
-After a successful handshake, client can send messages to the server, but now these are encoded.
+After a successful handshake, client can send messages to the server, but now these are encoded.
 
 If we send "abcdef", we get these bytes:
 
-    129 134 167 225 225 210 198 131 130 182 194 135
+```
+129 134 167 225 225 210 198 131 130 182 194 135
+```
 
 \- 129:
 
@@ -146,7 +148,7 @@ If the second byte minus 128 is between 0 and 125, this is the length of the mes
 
 \- 167, 225, 225 and 210 are the bytes of the key to decode. It changes every time.
 
-\- The remaining encoded bytes are the message.
+\- The remaining encoded bytes are the message.
 
 ### Decoding algorithm
 
@@ -155,20 +157,20 @@ decoded byte = encoded byte XOR (position of encoded byte BITWISE AND 0x3)th byt
 Example in Java:
 
 ```java
-					byte[] decoded = new byte[6];
-					byte[] encoded = new byte[] { (byte) 198, (byte) 131, (byte) 130, (byte) 182, (byte) 194, (byte) 135 };
-					byte[] key = new byte[] { (byte) 167, (byte) 225, (byte) 225, (byte) 210 };
-					for (int i = 0; i < encoded.length; i++) {
-						decoded[i] = (byte) (encoded[i] ^ key[i & 0x3]);
-					}
-				}
-			} finally {
-				s.close();
-			}
-		} finally {
-			server.close();
-		}
-	}
+          byte[] decoded = new byte[6];
+          byte[] encoded = new byte[] { (byte) 198, (byte) 131, (byte) 130, (byte) 182, (byte) 194, (byte) 135 };
+          byte[] key = new byte[] { (byte) 167, (byte) 225, (byte) 225, (byte) 210 };
+          for (int i = 0; i < encoded.length; i++) {
+            decoded[i] = (byte) (encoded[i] ^ key[i & 0x3]);
+          }
+        }
+      } finally {
+        s.close();
+      }
+    } finally {
+      server.close();
+    }
+  }
 }
 ```
 

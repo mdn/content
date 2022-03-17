@@ -62,7 +62,7 @@ The beta angle is 0° when the device's top and bottom are the same distance fro
 
 ### Gamma
 
-Rotation around the y axis -- that is, tilting the device toward the left or right -- causes the **gamma** rotation angle to change:
+Rotation around the y axis -- that is, tilting the device toward the left or right -- causes the **gamma** rotation angle to change:
 
 ![](gamma.png)
 

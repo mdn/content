@@ -17,14 +17,14 @@ browser-compat: api.HTMLAudioElement
 
 The **`HTMLAudioElement`** interface provides access to the properties of {{HTMLElement("audio")}} elements, as well as methods to manipulate them.
 
-This element is based on, and inherits properties and methods from, the {{domxref("HTMLMediaElement")}} interface.
+This element is based on, and inherits properties and methods from, the {{domxref("HTMLMediaElement")}} interface.
 
 {{InheritanceDiagram}}
 
 ## Constructor
 
 - {{domxref("HTMLAudioElement.Audio", "Audio()")}}
-  - : Creates and returns a new `HTMLAudioElement` object, optionally starting the process of loading an audio file into it if the file URL is given.
+  - : Creates and returns a new `HTMLAudioElement` object, optionally starting the process of loading an audio file into it if the file URL is given.
 
 ## Properties
 
@@ -61,9 +61,9 @@ then you can invoke the `play()` method on the element
 audioElement.play();
 ```
 
-> **Note:** A common gotcha is trying to play an audio element immediately on page load. Modern browser's default autoplay policy will block that from happening. Refer to [firefox](https://hacks.mozilla.org/2019/02/firefox-66-to-block-automatically-playing-audible-video-and-audio/) and [chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes) for best practices and work arounds.
+> **Note:** A common gotcha is trying to play an audio element immediately on page load. Modern browser's default autoplay policy will block that from happening. Refer to [firefox](https://hacks.mozilla.org/2019/02/firefox-66-to-block-automatically-playing-audible-video-and-audio/) and [chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes) for best practices and work arounds.
 
-Some of the more commonly used properties of the audio element include {{domxref("HTMLMediaElement.src", "src")}}, {{domxref("HTMLMediaElement.currentTime", "currentTime")}}, {{domxref("HTMLMediaElement.duration", "duration")}}, {{domxref("HTMLMediaElement.paused", "paused")}}, {{domxref("HTMLMediaElement.muted", "muted")}}, and {{domxref("HTMLMediaElement.volume", "volume")}}. This snippet copies the audio file's duration to a variable:
+Some of the more commonly used properties of the audio element include {{domxref("HTMLMediaElement.src", "src")}}, {{domxref("HTMLMediaElement.currentTime", "currentTime")}}, {{domxref("HTMLMediaElement.duration", "duration")}}, {{domxref("HTMLMediaElement.paused", "paused")}}, {{domxref("HTMLMediaElement.muted", "muted")}}, and {{domxref("HTMLMediaElement.volume", "volume")}}. This snippet copies the audio file's duration to a variable:
 
 ```js
 var audioElement = new Audio('car_horn.wav');

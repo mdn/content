@@ -354,7 +354,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
         <code>submit</code>, <code>reset</code>, <code>image</code>). Possible
         values are:<br /><code>on</code>: the browser can autocomplete the value
         using previously stored value<br /><code>off</code>: the user must
-        explicity enter a value
+        explicitly enter a value
       </td>
     </tr>
     <tr>
@@ -508,7 +508,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td>{{domxref("HTMLInputElement.accessKey", "accessKey")}}</td>
+      <td>{{domxref("HTMLElement.accessKey", "accessKey")}}</td>
       <td>
         <em><code>string</code>: </em><strong>Returns</strong> a string
         containing a single character that switches input focus to the control
@@ -664,7 +664,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       <td>
         Returns a boolean value that is <code>false</code> if the element is a
         candidate for constraint validation, and it does not satisfy its
-        constraints. In this case, it also fires an {{event("invalid")}}
+        constraints. In this case, it also fires an {{domxref("HTMLInputElement/invalid_event", "invalid")}}
         event at the element. It returns <code>true</code> if the element is not
         a candidate for constraint validation, or if it satisfies its
         constraints.

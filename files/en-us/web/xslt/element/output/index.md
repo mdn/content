@@ -13,17 +13,19 @@ The `<xsl:output>` element controls the characteristics of the output document. 
 
 ### Syntax
 
-    <xsl:output
-    	method="xml" | "html" | "text"
-    	version=STRING
-    	encoding=STRING
-    	omit-xml-declaration="yes" | "no"
-    	standalone="yes" | "no"
-    	doctype-public=STRING
-    	doctype-system=STRING
-    	cdata-section-elements=LIST-OF-NAMES
-    	indent="yes" | "no"
-    	media-type=STRING  />
+```xml
+<xsl:output
+  method="xml" | "html" | "text"
+  version=STRING
+  encoding=STRING
+  omit-xml-declaration="yes" | "no"
+  standalone="yes" | "no"
+  doctype-public=STRING
+  doctype-system=STRING
+  cdata-section-elements=LIST-OF-NAMES
+  indent="yes" | "no"
+  media-type=STRING />
+```
 
 ### Required Attributes
 

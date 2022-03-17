@@ -16,8 +16,8 @@ browser-compat: api.Window.matchMedia
 
 The {{domxref("Window")}} interface's **`matchMedia()`** method
 returns a new {{domxref("MediaQueryList")}} object that can then be used to determine if
-the {{domxref("document")}} matches the [media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) string,
-as well as to monitor the document to detect when it matches (or stops matching) that
+the {{domxref("document")}} matches the [media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) string,
+as well as to monitor the document to detect when it matches (or stops matching) that
 media query.
 
 ## Syntax
@@ -29,7 +29,7 @@ mqList = window.matchMedia(mediaQueryString)
 ### Parameters
 
 - `mediaQueryString`
-  - : A string specifying the media query to parse into a {{domxref("MediaQueryList")}}.
+  - : A string specifying the media query to parse into a {{domxref("MediaQueryList")}}.
 
 ### Return value
 
@@ -39,7 +39,7 @@ time.
 
 ## Usage notes
 
-You can use the returned media query to perform both instantanteous and event-driven
+You can use the returned media query to perform both instantaneous and event-driven
 checks to see if the document matches the media query.
 
 To perform a one-time, instantaneous check to see if the document matches the media
@@ -49,12 +49,12 @@ requirements.
 
 If you need to be kept aware of whether or not the document matches the media query at
 all times, you can instead watch for the {{domxref("MediaQueryList.change_event",
-  "change")}} event to be delivered to the object. There's [a good example of this](/en-US/docs/Web/API/Window/devicePixelRatio#example)
+  "change")}} event to be delivered to the object. There's [a good example of this](/en-US/docs/Web/API/Window/devicePixelRatio#monitoring_screen_resolution_or_zoom_level_changes)
 in the article on {{domxref("Window.devicePixelRatio")}}.
 
 ## Examples
 
-This example runs the media query `(max-width: 600px)` and  displays the
+This example runs the media query `(max-width: 600px)` and displays the
 value of the resulting `MediaQueryList`'s `matches` property in a
 {{HTMLElement("span")}}; as a result, the output will say "true" if the viewport is less
 than or equal to 600 pixels wide, and will say "false" if the window is wider than that.

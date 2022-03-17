@@ -13,9 +13,11 @@ The `<xsl:message>` element outputs a message (to the JavaScript Console in NS) 
 
 ### Syntax
 
-    <xsl:message terminate="yes" | "no" >
-    	TEMPLATE
-    </xsl:message>
+```xml
+<xsl:message terminate="yes" | "no" >
+  TEMPLATE
+</xsl:message>
+```
 
 ### Required Attributes
 

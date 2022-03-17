@@ -30,7 +30,7 @@ value = videoPlaybackQuality.creationTime;
 ### Value
 
 A {{domxref("DOMHighResTimeStamp")}} object which indicates the number of milliseconds
-that elapased between the time the browsing context was created and the time at which
+that elapsed between the time the browsing context was created and the time at which
 this sample of the video quality was obtained.
 
 For details on how the time is determined, see {{domxref("Performance.now()")}}.

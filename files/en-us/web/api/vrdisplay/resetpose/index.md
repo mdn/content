@@ -4,7 +4,6 @@ slug: Web/API/VRDisplay/resetPose
 tags:
   - API
   - Deprecated
-  - Experimental
   - Method
   - Reference
   - VR
@@ -20,14 +19,14 @@ The **`resetPose()`** method of the {{domxref("VRDisplay")}} interface resets th
 
 > **Note:** This method was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-After `resetPost()` has been called, future poses returned from {{domxref("VRDisplay.getPose()")}}/{{domxref("VRDisplay.getImmediatePose()")}} will describe positions relative to the `VRDisplay`'s position when `resetPose()` was last called and will treat the display’s yaw when `resetPose()` was last called as the forward orientation.
+After `resetPost()` has been called, future poses returned from {{domxref("VRDisplay.getPose()")}}/{{domxref("VRDisplay.getImmediatePose()")}} will describe positions relative to the `VRDisplay`'s position when `resetPose()` was last called and will treat the display's yaw when `resetPose()` was last called as the forward orientation.
 
 The VRDisplay's reported roll and pitch do not change when `resetPose()` is called as they are relative to gravity. Calling `resetPose()` may change the {{domxref("VRStageParameters.sittingToStandingTransform")}} matrix.
 
 ## Syntax
 
 ```js
-vrDisplayInstance.resetPose();
+resetPose()
 ```
 
 ### Parameters

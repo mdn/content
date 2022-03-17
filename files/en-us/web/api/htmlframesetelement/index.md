@@ -14,14 +14,16 @@ browser-compat: api.HTMLFrameSetElement
 
 The **`HTMLFrameSetElement`** interface provides special properties (beyond those of the regular {{domxref("HTMLElement")}} interface they also inherit) for manipulating {{HTMLELEment("frameset")}} elements.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}} and from {{domxref("WindowEventHandlers")}}._
 
 - {{domxref("HTMLFrameSetElement.cols")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}} structured as a comma-separated list specifying the width of each column inside a frameset.
+  - : Is a {{domxref("DOMString")}} structured as a comma-separated list specifying the width of each column inside a frameset.
 - {{domxref("HTMLFrameSetElement.rows")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}} structured as a comma-separated list specifying the height of each column inside a frameset.
+  - : Is a {{domxref("DOMString")}} structured as a comma-separated list specifying the height of each column inside a frameset.
 
 ## Methods
 

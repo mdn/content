@@ -13,7 +13,7 @@ Content is broken between column boxes in multiple-column layout in the same way
 
 ## Fragmentation basics
 
-The [CSS Fragmentation specification ](https://www.w3.org/TR/css-break-3/)details how content breaks between the fragmentation containers, or _fragmentainers_. In multicol, the fragmentainer is the column box.
+The [CSS Fragmentation specification](https://www.w3.org/TR/css-break-3/) details how content breaks between the fragmentation containers, or _fragmentainers_. In multicol, the fragmentainer is the column box.
 
 A column box can contain other markup and there are many places where a break would not be ideal. For example, we would generally prefer that the figcaption of an image not be separated into a new column away from the image it refers to and ending a column with a heading looks strange. The fragmentation properties give us ways to exercise some control over this.
 
@@ -60,7 +60,7 @@ In the example below, we are using the `orphans` property to control the number 
 
 {{EmbedGHLiveSample("css-examples/multicol/fragmentation/orphans.html", '100%', 800)}}
 
-## When things don’t work as expected
+## When things don't work as expected
 
 If you have small amounts of content and are trying to control breaks in a number of ways or on several elements, your content needs to break somewhere, so you may not always get the result you intended. To some extent your use of fragmentation is always a suggestion to the browser, to control breaks in this way if it is possible.
 

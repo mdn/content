@@ -173,17 +173,19 @@ When the `data-state` of the button is changed, the appropriate image will also 
 
 The {{htmlelement("progress") }} element has the following basic style set up:
 
-    .controls progress {
-       display:block;
-       width:100%;
-       height:81%;
-       margin-top:0.125rem;
-       border:none;
-       color:#0095dd;
-       -moz-border-radius:2px;
-       -webkit-border-radius:2px;
-       border-radius:2px;
-    }
+```css
+.controls progress {
+    display:block;
+    width:100%;
+    height:81%;
+    margin-top:0.125rem;
+    border:none;
+    color:#0095dd;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+}
+```
 
 Like the {{htmlelement("button") }} elements, {{htmlelement("progress") }} also has a default border, which is removed here. It is also given a slight rounded corner for aesthetic reasons. The `color` property is also defined here as Internet Explorer uses this defined color for styling the progress bar's background color as it increases.
 
@@ -202,7 +204,7 @@ As mentioned in the [previous article](/en-US/docs/Web/Guide/Audio_and_video_del
 }
 ```
 
-A `.data-state` class is also used here when a {{ htmlelement("progress") }} element is being "faked";  when it's in this state the background color needs to be set. The internal {{htmlelement("span") }} element used as the actual progressing part of the faked progress bar has its width initially set to 0% (it is updated via JavaScript) and it also has its background color set.
+A `.data-state` class is also used here when a {{ htmlelement("progress") }} element is being "faked";  when it's in this state the background color needs to be set. The internal {{htmlelement("span") }} element used as the actual progressing part of the faked progress bar has its width initially set to 0% (it is updated via JavaScript) and it also has its background color set.
 
 There are some browser-specific properties that need to be set to ensure that Firefox and Chrome use the required color for the progress bar:
 

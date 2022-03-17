@@ -17,7 +17,9 @@ browser-compat: javascript.builtins.Promise.any
 
 ## Syntax
 
-    Promise.any(iterable);
+```
+Promise.any(iterable);
+```
 
 ### Parameters
 
@@ -34,7 +36,7 @@ browser-compat: javascript.builtins.Promise.any
 
 This method is useful for returning the first promise that fulfills. It short-circuits after a promise fulfills, so it does not wait for the other promises to complete once it finds one. Unlike {{JSxRef("Promise.all()")}}, which returns an _array_ of fulfillment values, we only get one fulfillment value (assuming at least one promise fulfills). This can be beneficial if we need only one promise to fulfill but we do not care which one does. Note another difference: This method rejects upon receiving an _empty iterable_, since, truthfully, the iterable contains no items that fulfill.
 
-Also, unlike {{JSxRef("Promise.race()")}}, which returns the first _settled_ value (either fulfillment or rejection), this method returns the first _fulfilled_ value. This method will ignore all rejected promises up until the first promise that fulfils.
+Also, unlike {{JSxRef("Promise.race()")}}, which returns the first _settled_ value (either fulfillment or rejection), this method returns the first _fulfilled_ value. This method will ignore all rejected promises up until the first promise that fulfills.
 
 ### Fulfillment
 
@@ -50,9 +52,9 @@ If all of the passed-in promises reject, `Promise.any` asynchronously rejects wi
 
 ## Examples
 
-### First to fulfil
+### First to fulfill
 
-`Promise.any()` resolves with the first promise to fulfil, even if a promise rejects first. This is in contrast to {{jsxref("Promise.race()")}}, which resolves or rejects with the first promise to settle.
+`Promise.any()` resolves with the first promise to fulfill, even if a promise rejects first. This is in contrast to {{jsxref("Promise.race()")}}, which resolves or rejects with the first promise to settle.
 
 ```js
 const pErr = new Promise((resolve, reject) => {
@@ -69,14 +71,14 @@ const pFast = new Promise((resolve, reject) => {
 
 Promise.any([pErr, pSlow, pFast]).then((value) => {
   console.log(value);
-  // pFast fulfils first
+  // pFast fulfills first
 })
 // expected output: "Done quick"
 ```
 
 ### Rejections with AggregateError
 
-`Promise.any()` rejects with an {{jsxref("AggregateError")}} if no promise fulfils.
+`Promise.any()` rejects with an {{jsxref("AggregateError")}} if no promise fulfills.
 
 ```js
 const pErr = new Promise((resolve, reject) => {
@@ -128,7 +130,7 @@ Promise.any([coffee, tea]).then(value => {
 
 ## See also
 
-- A polyfill of `Promise.any` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
+- [Polyfill of `Promise.any` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
 - {{JSxRef("Promise")}}
 - {{JSxRef("Promise.allSettled()")}}
 - {{JSxRef("Promise.all()")}}

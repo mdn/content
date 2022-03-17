@@ -70,7 +70,7 @@ Take the following form:
 </form>
 ```
 
-The basic HTML form validation features will cause this to produce a default error message if you try to submit the form with either no valid filled in, or a value that does not match the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern).
+The basic HTML form validation features will cause this to produce a default error message if you try to submit the form with either no value filled in, or a value that does not match the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern).
 
 If you wanted to instead display custom error messages, you could use JavaScript like the following:
 

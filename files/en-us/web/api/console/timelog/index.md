@@ -35,21 +35,29 @@ console.timeLog(label);
 
 If no label parameter included:
 
-    default: 1042ms
+```
+default: 1042ms
+```
 
 If an existing `label` is included:
 
-    timer name: 1242ms
+```
+timer name: 1242ms
+```
 
 ### Exceptions
 
 If there is no running timer, `timeLog()` returns the warning:
 
-    Timer “default” doesn’t exist.
+```
+Timer "default" doesn't exist.
+```
 
-If a label parameter is included, but there is no corresponding timer:
+If a label parameter is included, but there is no corresponding timer:
 
-     Timer “timer name” doesn’t exist.
+```
+Timer "timer name" doesn't exist.
+```
 
 ## Examples
 

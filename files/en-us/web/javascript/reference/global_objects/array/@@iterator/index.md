@@ -56,9 +56,9 @@ const letterResult = document.getElementById('letterResult');
 // and let-scoped variables in for loops
 // const and var could also be used
 for (let letter of eArr) {
-  const li = document.createElement('LI');
-  li.textContent = letter;
-  letterResult.appendChild(li);
+  const li = document.createElement('LI');
+  li.textContent = letter;
+  letterResult.appendChild(li);
 }
 ```
 
@@ -132,7 +132,7 @@ logIterable(123);
 
 ## See also
 
-- A polyfill of `Array.prototype[@@iterator]` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype[@@iterator]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.keys()")}}
 - {{jsxref("Array.prototype.entries()")}}
 - {{jsxref("Array.prototype.forEach()")}}

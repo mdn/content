@@ -15,6 +15,8 @@ browser-compat: api.PermissionStatus
 
 The **`PermissionStatus`** interface of the [Permissions API](Permissions_API) provides the state of an object and an event handler for monitoring changes to said state.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 - {{domxref("PermissionStatus.name")}} {{readonlyinline}}

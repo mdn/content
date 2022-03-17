@@ -79,7 +79,9 @@ left out of the pool of candidates, as are any other candidates which aren't rel
 
 Consider this {{Glossary("SDP")}} attribute line (a-line) which describes an ICE candidate:
 
-    a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```
+a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```
 
 The fifth field, `"192.168.0.56"` is the IP address in this candidate's a-line string.
 

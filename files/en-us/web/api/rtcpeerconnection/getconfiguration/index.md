@@ -82,4 +82,3 @@ certificate to the connection.
 - {{domxref("RTCPeerConnection.setConfiguration()")}}
 - {{domxref("RTCPeerConnection.RTCPeerConnection")}}
 - {{domxref("RTCPeerConnection")}}
-

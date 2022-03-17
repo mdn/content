@@ -29,6 +29,7 @@ The following example shows a listbox with four element options out of the 118 i
   <li role="option" aria-setsize="118" aria-posinset="19">Potassium</li>
 </ul>
 ```
+
 The value of each `aria-posinset` is an integer greater than or equal to `1`, and less than or equal to the size of the set when that size is known.
 
 > **Note:** When using `aria-posinset` you must also include  value for [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize), which is the size of the entire set. If the size of the entire set is unknown, set `aria-setsize="-1"`.

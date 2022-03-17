@@ -13,7 +13,7 @@ tags:
   - values
 browser-compat: api.CSSMathProduct.values
 ---
-{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSMathProduct.values`** read-only
 property of the {{domxref("CSSMathProduct")}} interface returns a

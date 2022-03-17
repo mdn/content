@@ -21,16 +21,16 @@ access to first-party storage was granted, and rejects if access was denied.
 
 Storage access is granted based on a series of checks described here:
 
-1.  If the document already has been granted access, resolve.
-2.  If the document has a null origin, reject.
-3.  If the document's frame is the main frame, resolve.
-4.  If the sub frame's origin is equal to the main frame's, resolve.
-5.  If the sub frame is not sandboxed, skip to step 7.
-6.  If the sub frame doesn't have the token
+1. If the browser is not processing a user gesture, reject.
+2. If the document already has been granted access, resolve.
+3. If the document has a null origin, reject.
+4. If the document's frame is the main frame, resolve.
+5. If the sub frame's origin is equal to the main frame's, resolve.
+6. If the sub frame is not sandboxed, skip to step 7.
+7. If the sub frame doesn't have the token
     `allow-storage-access-by-user-activation`, reject.
-7.  If the sub frame's parent frame is not the top frame, reject.
-8.  If the browser is not processing a user gesture, reject.
-9.  Check any additional rules that the browser has. Examples: allow lists, block lists,
+8. If the sub frame's parent frame is not the top frame, reject.
+9. Check any additional rules that the browser has. Examples: allow lists, block lists,
     on-device classification, user settings, anti-[clickjacking](/en-US/docs/Glossary/Clickjacking) heuristics, or prompting
     the user for explicit permission. Reject if some rule is not fulfilled.
 10. Grant the document access to cookies and other site storage and store that fact for
@@ -39,7 +39,7 @@ Storage access is granted based on a series of checks described here:
 
 Assuming all of the requirements above are satisfied, Firefox will automatically grant
 storage access to the requesting origin on up to a threshold number of first-party
-sites in the current session for the duration of user’s session, up to a maximum of 24
+sites in the current session for the duration of user's session, up to a maximum of 24
 hours. After the requesting origin has exceeded the maximum allowable number of storage
 access grants, any future call to `requestStorageAccess()` during the same
 browsing session will prompt the user.
@@ -75,8 +75,8 @@ storage access to...
 ...equal or more sites than the maximum or has not been interacted with as a first party in the last 30 days::
 
 - The user is prompted
-- If the user clicks “Allow” or “Allow on any site” the request is resolved.
-- If the user clicks “Don’t Allow”, the storage access request is rejected and the
+- If the user clicks "Allow" or "Allow on any site" the request is resolved.
+- If the user clicks "Don't Allow", the storage access request is rejected and the
   requesting origin can re-request once it receives another user interaction.
 - If the user allows storage the requesting origin is given a persistent storage
   access grant on the current top-level site.
@@ -93,7 +93,7 @@ requesting origin has storage access to is decremented by one.
 > **Note:** If the requesting origin is not [classified
 > as a tracking origin](/en-US/docs/Web/Privacy/Storage_Access_Policy#tracking_protection_explained), the access request is automatically given an ephemeral
 > storage access grant, which will go away when the page is reloaded. The user is never
-> shown a prompt in this case, and calling `requestStorageAccess()` won’t
+> shown a prompt in this case, and calling `requestStorageAccess()` won't
 > have any side effects besides changing the value returned by
 > {{domxref("Document.hasStorageAccess()")}}.
 
@@ -144,7 +144,7 @@ being processed, whether the promise was fulfilled or rejected:
 ```js
 document.requestStorageAccess().then(
   () => { console.log('access granted') },
-  () => { console.log('access denied') }
+  () => { console.log('access denied') }
 );
 ```
 
@@ -152,7 +152,7 @@ document.requestStorageAccess().then(
 
 The API is currently only at the proposal stage — the standardization process has yet
 to begin. You can currently find specification details of the API at Apple's [Introducing
-Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) blog post, and the [Storage Access API proposal in the
+Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) blog post, and the [Storage Access API proposal in the
 Privacy CG](https://github.com/privacycg/storage-access).
 
 ## Browser compatibility

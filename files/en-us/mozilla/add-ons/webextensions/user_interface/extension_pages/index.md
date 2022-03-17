@@ -14,16 +14,18 @@ You can include HTML pages in your extension to provide forms, help, or any othe
 
 These pages also get access to the same privileged JavaScript APIs that are available to your extension's background scripts. However, they are in their own tab, with their own JavaScript event queue, their own globals, etc.
 
-Think of the background page as a "hidden extension page".
+Think of the background page as a "hidden extension page".
 
 ## Specifying extension pages
 
 You can include HTML files—and associated CSS or JavaScript files—in your extension. The files can be included in the root or organized within meaningful sub-folders.
 
-    /my-extension
-        /manifest.json
-        /my-page.html
-        /my-page.js
+```
+/my-extension
+    /manifest.json
+    /my-page.html
+    /my-page.js
+```
 
 ## Displaying extension pages
 

@@ -26,7 +26,7 @@ instance.exports
 
 ### Using exports
 
-After fetching some WebAssembly bytecode using fetch, we compile and instantiate the
+After fetching some WebAssembly bytecode using fetch, we compile and instantiate the
 module using the {{jsxref("WebAssembly.instantiateStreaming()")}} function, importing a
 JavaScript function into the WebAssembly Module in the process. We then call an [Exported WebAssembly function](/en-US/docs/WebAssembly/Exported_functions)
 that is exported by the `Instance`.

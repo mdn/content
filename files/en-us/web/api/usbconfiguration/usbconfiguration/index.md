@@ -13,7 +13,7 @@ tags:
   - WebUSB API
 browser-compat: api.USBConfiguration.USBConfiguration
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}
+{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}
 
 The **`USBConfiguration()`** constructor
 creates a new {{domxref("USBConfiguration")}} object which contains information about

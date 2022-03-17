@@ -21,8 +21,8 @@ var num = styles.length;
 
 ### Value
 
-An integer that provides the number of styles explicitly set on the parent of
-the instance.
+An integer that provides the number of styles explicitly set on the parent of
+the instance.
 
 ## Example
 
@@ -34,7 +34,9 @@ The following gets the number of explicitly set styles on the following HTML ele
 
 JavaScript code:
 
-    var myDiv = document.getElementById('div1'); var divStyle = myDiv.style; var len = divStyle.length; // 6
+```js
+var myDiv = document.getElementById('div1'); var divStyle = myDiv.style; var len = divStyle.length; // 6
+```
 
 ## Specifications
 

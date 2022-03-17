@@ -9,7 +9,7 @@ tags:
   - Method
 browser-compat: api.FileSystemDirectoryHandle.getFileHandle
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`getFileHandle()`** method of the
 {{domxref("FileSystemDirectoryHandle")}} interface returns a

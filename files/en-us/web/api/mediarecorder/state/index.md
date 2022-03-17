@@ -12,13 +12,13 @@ browser-compat: api.MediaRecorder.state
 ---
 {{APIRef("MediaStream Recording")}}
 
-The **`MediaRecorder.state`** read-only property returns the
+The **`MediaRecorder.state`** read-only property returns the
 current state of the current `MediaRecorder` object.
 
 ## Syntax
 
 ```js
-var state = MediaRecorder.state
+var state = MediaRecorder.state
 ```
 
 ### Values

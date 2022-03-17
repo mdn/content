@@ -20,7 +20,7 @@ The **`DeviceProximityEvent`** interface provides information about the distance
 - `DeviceProximityEvent.max` {{readonlyinline}}
   - : The maximum sensing distance the sensor is able to report, in centimeters.
 - `DeviceProximityEvent.min` {{readonlyinline}}
-  - : The minimum sensing distance the sensor is able to report, in centimeters. Ususally zero.
+  - : The minimum sensing distance the sensor is able to report, in centimeters. Usually zero.
 - `DeviceProximityEvent.value` {{readonlyinline}}
   - : The current device proximity, in centimeters.
 

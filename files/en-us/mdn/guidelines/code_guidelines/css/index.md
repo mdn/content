@@ -136,7 +136,7 @@ In addition, some shorthands only work as expected if you include the different 
 animation: 3s ease-in 1s 2 reverse both paused slidein;
 ```
 
-As an example, the first value that can be parsed as a [`<time>`](/en-US/docs/Web/CSS/time "The <time> CSS data type represents a time value expressed in seconds or milliseconds. It is used in animation, transition, and related properties.") is assigned to the [`animation-duration`](/en-US/docs/Web/CSS/animation-duration "The animation-duration CSS property sets the length of time that an animation takes to complete one cycle."), and the second one is assigned to [`animation-delay`](/en-US/docs/Web/CSS/animation-delay "The animation-delay CSS property sets when an animation starts. The animation can start later, immediately from its beginning, or immediately and partway through the animation."). For more details, read the full [animation syntax](/en-US/docs/Web/CSS/animation#syntax) details.
+As an example, the first value that can be parsed as a [`<time>`](/en-US/docs/Web/CSS/time) is assigned to the [`animation-duration`](/en-US/docs/Web/CSS/animation-duration), and the second one is assigned to [`animation-delay`](/en-US/docs/Web/CSS/animation-delay). For more details, read the full [animation syntax](/en-US/docs/Web/CSS/animation#syntax) details.
 
 ### Use double quotes around values
 

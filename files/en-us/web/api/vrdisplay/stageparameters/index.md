@@ -3,7 +3,6 @@ title: VRDisplay.stageParameters
 slug: Web/API/VRDisplay/stageParameters
 tags:
   - API
-  - Experimental
   - Deprecated
   - Property
   - Reference
@@ -20,13 +19,7 @@ The **`stageParameters`** read-only property of the {{domxref("VRDisplay")}} int
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Syntax
-
-```js
-var myStageParameters = vrDisplayInstance.stageParameters;
-```
-
-### Value
+## Value
 
 {{domxref("VRStageParameters")}} object containing the `VRDisplay`'s room-scale parameters, or `null` if the `VRDisplay` is not capable of supporting room-scale experiences.
 

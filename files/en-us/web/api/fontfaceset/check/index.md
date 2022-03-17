@@ -29,13 +29,13 @@ A {{jsxref("Boolean")}} value that is `true` if the font list is available.
 ### Parameters
 
 - `font`
-  - : a font specification using the [CSS value syntax](/en-US/docs/), for example `"italic bold 16px Roboto"`
+  - : a font specification using the [CSS value syntax](/en-US/docs/), for example `"italic bold 16px Roboto"`
 - `text`
   - : limit the font faces to those whose Unicode range contains at least one of the characters in text. This [does not check for individual glyph coverage](http://lists.w3.org/Archives/Public/www-style/2015Aug/0330.html).
 
 ## Examples
 
-In the following example, the first line will print `true` if the Courier font is availabe at `12px`. The second line will print `true` if the font `MyFont` contains the "ß" character.
+In the following example, the first line will print `true` if the Courier font is available at `12px`. The second line will print `true` if the font `MyFont` contains the "ß" character.
 
 ```js
 console.log(document.fonts.check("12px courier"));

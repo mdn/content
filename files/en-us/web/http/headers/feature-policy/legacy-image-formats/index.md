@@ -2,7 +2,7 @@
 title: 'Feature-Policy: legacy-image-formats'
 slug: Web/HTTP/Headers/Feature-Policy/legacy-image-formats
 tags:
-  - Direcive
+  - Directive
   - Feature-Policy
   - HTTP
   - Reference

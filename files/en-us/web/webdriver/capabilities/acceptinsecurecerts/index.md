@@ -13,16 +13,20 @@ The **`acceptInsecureCerts` capability** communicates whether expired or invalid
 
 Using the `acceptInsecureCerts` capability you can bypass, or implicitly trust, TLS certificates that the certificate service in the browser does not trust:
 
-    from selenium import webdriver
-    from selenium.common import exceptions
+```python
+from selenium import webdriver
+from selenium.common import exceptions
 
-    session = webdriver.Firefox(capabilities={"acceptInsecureCerts": True})
-    session.get("https://self-signed.badssl.com/")
-    print(session.current_url)
+session = webdriver.Firefox(capabilities={"acceptInsecureCerts": True})
+session.get("https://self-signed.badssl.com/")
+print(session.current_url)
+```
 
 Output:
 
-    https://self-signed.badssl.com/
+```
+https://self-signed.badssl.com/
+```
 
 ## See also
 

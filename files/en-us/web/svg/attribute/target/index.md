@@ -12,7 +12,7 @@ The **`target`** attribute should be used when there are multiple possible targe
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("a")}}
+- {{SVGElement("a")}}
 
 ## Example
 
@@ -30,13 +30,13 @@ text {
 
 ```html
 <svg viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
-  <a href="https://developer.mozilla.org" target="_self">
+  <a href="https://developer.mozilla.org" target="_self">
     <text x="0" y="20">Open link within iframe</text>
   </a>
-  <a href="https://developer.mozilla.org" target="_blank">
+  <a href="https://developer.mozilla.org" target="_blank">
     <text x="0" y="60">Open link in new tab or window</text>
   </a>
-  <a href="https://developer.mozilla.org" target="_top">
+  <a href="https://developer.mozilla.org" target="_top">
     <text x="0" y="100">Open link in this tab or window</text>
   </a>
 </svg>
@@ -66,20 +66,20 @@ text {
   </tbody>
 </table>
 
-*   `_replace` {{deprecated_inline}}
-    *   : The current SVG image is replaced by the linked content in the same rectangular area in the same frame as the current SVG image.
+- `_replace` {{deprecated_inline}}
+  - : The current SVG image is replaced by the linked content in the same rectangular area in the same frame as the current SVG image.
 
-        > **Note:** This value was never well implemented, and the distinction between `_replace` and `_self` has been made redundant by changes in the HTML definition of browsing contexts. Use `_self` to replace the current SVG document.
-*   `_self`
-    *   : The current SVG image is replaced by the linked content in the same browsing context as the current SVG image.
-*   `_parent`
-    *   : The immediate parent browsing context of the SVG image is replaced by the linked content, if it exists and can be securely accessed from this document.
-*   `_top`
-    *   : The content of the full active window or tab is replaced by the linked content, if it exists and can be securely accessed from this document
-*   `_blank`
-    *   : A new un-named window or tab is requested for the display of the linked content, if this document can securely do so. If the user agent does not support multiple windows/tabs, the result is the same as \_top.
-*   `<XML-Name>`
-    *   : Specifies the name of the browsing context (tab, inline frame, object, etc.) for display of the linked content. If a context with this name already exists, and can be securely accessed from this document, it is re-used, replacing the existing content. If it does not exist, it is created (the same as '\_blank', except that it now has a name). The name must be a valid XML Name \[XML11], and should not start with an underscore (U+005F LOW LINE character), to meet the requirements of a valid browsing context name from HTML.
+    > **Note:** This value was never well implemented, and the distinction between `_replace` and `_self` has been made redundant by changes in the HTML definition of browsing contexts. Use `_self` to replace the current SVG document.
+- `_self`
+  - : The current SVG image is replaced by the linked content in the same browsing context as the current SVG image.
+- `_parent`
+  - : The immediate parent browsing context of the SVG image is replaced by the linked content, if it exists and can be securely accessed from this document.
+- `_top`
+  - : The content of the full active window or tab is replaced by the linked content, if it exists and can be securely accessed from this document
+- `_blank`
+  - : A new un-named window or tab is requested for the display of the linked content, if this document can securely do so. If the user agent does not support multiple windows/tabs, the result is the same as \_top.
+- `<XML-Name>`
+  - : Specifies the name of the browsing context (tab, inline frame, object, etc.) for display of the linked content. If a context with this name already exists, and can be securely accessed from this document, it is re-used, replacing the existing content. If it does not exist, it is created (the same as '\_blank', except that it now has a name). The name must be a valid XML Name \[XML11], and should not start with an underscore (U+005F LOW LINE character), to meet the requirements of a valid browsing context name from HTML.
 
 ## Specifications
 

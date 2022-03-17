@@ -11,7 +11,7 @@ tags:
 
 The **Encoding API** provides a mechanism for handling text in various {{Glossary("character encoding", "character encodings")}}, including legacy non-{{Glossary("UTF-8")}} encodings.
 
-The API provides four interfaces: {{domxref("TextDecoder")}}, {{domxref("TextEncoder")}}, {{domxref("TextDecoderStream")}} and {{domxref("TextEncoderStream")}}.
+The API provides four interfaces: {{domxref("TextDecoder")}}, {{domxref("TextEncoder")}}, {{domxref("TextDecoderStream")}} and {{domxref("TextEncoderStream")}}.
 
 {{AvailableInWorkers}}
 
@@ -21,10 +21,6 @@ The API provides four interfaces: {{domxref("TextDecoder")}}, {{domxref("TextEnc
 - {{DOMxRef("TextEncoder")}}
 - {{DOMxRef("TextDecoderStream")}}
 - {{DOMxRef("TextEncoderStream")}}
-
-## Polyfill
-
-- A [shim](https://code.google.com/p/stringencoding/) allowing to use this interface in browsers that don't support it.
 
 ## Specifications
 
@@ -41,3 +37,7 @@ The API provides four interfaces: {{domxref("TextDecoder")}}, {{domxref("TextEnc
 ### `TextEncoder`
 
 {{Compat("api.TextEncoder")}}
+
+## See also
+
+- A [shim](https://code.google.com/p/stringencoding/) allowing to use this interface in browsers that don't support it

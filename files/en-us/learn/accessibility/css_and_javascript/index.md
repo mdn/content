@@ -34,7 +34,7 @@ CSS and JavaScript, when used properly, also have the potential to allow for acc
       <th scope="row">Objective:</th>
       <td>
         To gain familiarity with using CSS and JavaScript appropriately in your
-        web documents to maximise accessibility and not detract from it.
+        web documents to maximize accessibility and not detract from it.
       </td>
     </tr>
   </tbody>
@@ -92,7 +92,7 @@ You should:
 
 See [HTML text fundamentals](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) and [Styling text](/en-US/docs/Learn/CSS/Styling_text) for more information.
 
-#### Emphasised text
+#### Emphasized text
 
 Inline markup that confers specific emphasis to the text that it wraps:
 
@@ -102,7 +102,7 @@ Inline markup that confers specific emphasis to the text that it wraps:
 <p>Water droplets collecting on surfaces is called <strong>condensation</strong>.</p>
 ```
 
-You might want to add some simple coloring to your emphasised text:
+You might want to add some simple coloring to your emphasized text:
 
 ```css
 strong, em {
@@ -110,7 +110,7 @@ strong, em {
 }
 ```
 
-You will however rarely need to style emphasis elements in any significant way. The standard conventions of bold and italic text are very recognisable, and changing the style can cause confusion. For more on emphasis, see [Emphasis and importance](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#emphasis_and_importance).
+You will however rarely need to style emphasis elements in any significant way. The standard conventions of bold and italic text are very recognizable, and changing the style can cause confusion. For more on emphasis, see [Emphasis and importance](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#emphasis_and_importance).
 
 #### Abbreviations
 
@@ -217,7 +217,7 @@ On the other hand, you shouldn't use {{cssxref("visibility")}}`:hidden` or {{css
 
 It is possible for users to override your styles with their own custom styles, for example:
 
-- See Sarah Maddox's [How to use a custom style sheet (CSS) with Firefox](https://www.itsupportguides.com/knowledge-base/computer-accessibility/how-to-use-a-custom-style-sheet-css-with-firefox/) for a useful guide covering how to do this manually in Firefox, and [How to use a custom style sheet (CSS) with Internet Explorer](https://www.itsupportguides.com/knowledge-base/computer-accessibility/how-to-use-a-custom-style-sheet-css-with-internet-explorer/) by Adrian Gordon for the equivalent IE instructions.
+- See Sarah Maddox's [How to use a custom style sheet (CSS) with Firefox](https://www.itsupportguides.com/knowledge-base/computer-accessibility/how-to-use-a-custom-style-sheet-css-with-firefox/) for a useful guide covering how to do this manually in Firefox, and [How to use a custom style sheet (CSS) with Internet Explorer](https://www.itsupportguides.com/knowledge-base/computer-accessibility/how-to-use-a-custom-style-sheet-css-with-internet-explorer/) by Adrian Gordon for the equivalent IE instructions.
 - It is probably easier to do it using an extension, for example the Stylish extension is available for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/stylish/), [Safari](https://safari-extensions.apple.com/details/?id=com.sobolev.stylish-5555L95H45), [Opera](https://addons.opera.com/en/extensions/details/stylish/), and [Chrome](https://chrome.google.com/webstore/detail/stylish/fjnbnpbmkenffdnngjfgmeleoegfcffe).
 
 Users might do this for a variety of reasons. A visually impaired user might want to make the text bigger on all websites they visit, or a user with severe color deficiency might want to put all websites in high contrast colors that are easy for them to see. Whatever the need, you should be comfortable with this, and make your designs flexible enough so that such changes will work in your design. As an example, you might want to make sure your main content area can handle bigger text (maybe it will start to scroll to allow it all to be seen), and won't just hide it, or break completely.
@@ -235,7 +235,7 @@ Simple content and functionality is arguably easy to make accessible — for exa
 
 We also looked at an example of how to use JavaScript to build in functionality where it is missing — see [Building keyboard accessibility back in](/en-US/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in). This is not ideal — really you should just use the right element for the right job — but it shows that it is possible in situations where for some reason you can't control the markup that is used. Another way to improve accessibility for non-semantic JavaScript-powered widgets is to use WAI-ARIA to provide extra semantics for screen reader users. The next article will also cover this in detail.
 
-Complex functionality like 3D games are not so easy to make accessible — a complex 3D game created using [WebGL](/en-US/docs/Web/API/WebGL_API) will be rendered on a {{htmlelement("canvas")}} element, which has no facility at this time to provide text alternatives or other information for severely visually impaired users to make use of. It is arguable that such a game doesn't really have this group of people as a part of its main target audience, and it would be unreasonable to expect you to make it 100% accessible to blind people, however you could implement [keyboard controls](/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard) so it is usable by non-mouse users, and make the color scheme contrasting enough to be usable by those with color deficiencies.
+Complex functionality like 3D games are not so easy to make accessible — a complex 3D game created using [WebGL](/en-US/docs/Web/API/WebGL_API) will be rendered on a {{htmlelement("canvas")}} element, which has no facility at this time to provide text alternatives or other information for severely visually impaired users to make use of. It is arguable that such a game doesn't really have this group of people as a part of its main target audience, and it would be unreasonable to expect you to make it 100% accessible to blind people. However, you could implement [keyboard controls](/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard) so it is usable by non-mouse users, and make the color scheme contrasting enough to be usable by those with color deficiencies.
 
 ### The problem with too much JavaScript
 
@@ -296,16 +296,16 @@ For each input that doesn't have a value filled in when the form is submitted, w
 
 ```js
 function createLink(testItem) {
-  const listItem = document.createElement('li');
-  const anchor = document.createElement('a');
+  const listItem = document.createElement('li');
+  const anchor = document.createElement('a');
 
-  anchor.textContent = testItem.input.name + ' field is empty: fill in your ' + testItem.input.name + '.';
-  anchor.href = '#' + testItem.input.name;
-  anchor.onclick = function() {
-    testItem.input.focus();
-  };
-  listItem.appendChild(anchor);
-  errorList.appendChild(listItem);
+  anchor.textContent = testItem.input.name + ' field is empty: fill in your ' + testItem.input.name + '.';
+  anchor.href = '#' + testItem.input.name;
+  anchor.onclick = function() {
+    testItem.input.focus();
+  };
+  listItem.appendChild(anchor);
+  errorList.appendChild(listItem);
 }
 ```
 
@@ -317,10 +317,12 @@ In addition, the `errorField` is placed at the top of the source order (although
 
 As a final note, we have used some WAI-ARIA attributes in our demo to help solve accessibility problems caused by areas of content constantly updating without a page reload (screen readers won't pick this up or alert users to it by default):
 
-    <div class="errors" role="alert" aria-relevant="all">
-      <ul>
-      </ul>
-    </div>
+```html
+<div class="errors" role="alert" aria-relevant="all">
+  <ul>
+  </ul>
+</div>
+```
 
 We will explain these attributes in our next article, which covers [WAI-ARIA](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) in much more detail.
 

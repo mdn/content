@@ -12,7 +12,7 @@ tags:
   - Reference
 browser-compat: api.CSSMathProduct.CSSMathProduct
 ---
-{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSMathProduct()`** constructor creates
 a new {{domxref("CSSMathProduct")}} object which creates a new
@@ -27,7 +27,7 @@ var CSSMathProduct = new CSSMathProduct(args)
 ### Parameters
 
 - args
-  - : A list of values for the {{domxref('CSSMathProduct')}} object to be either a double
+  - : A list of values for the {{domxref('CSSMathProduct')}} object to be either a double
     integer or a {{domxref('CSSNumericValue')}}.
 
 ## Specifications

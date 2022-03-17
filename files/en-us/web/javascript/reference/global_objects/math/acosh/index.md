@@ -87,7 +87,7 @@ For all <math><semantics><mrow><mi>x</mi>
 <mo>≥</mo>
 <mn>1</mn>
 </mrow><annotation encoding="TeX">x \geq 1</annotation>
-</semantics></math>, we have <math>
+</semantics></math>, we have <math>
 <semantics><mrow><mo lspace="0em" rspace="thinmathspace">arcosh</mo>
 <mo stretchy="false">(</mo>
 <mi>x</mi>
@@ -122,7 +122,7 @@ Math.acosh = Math.acosh || function(x) {
 
 ## See also
 
-- A polyfill of `Math.acosh` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [Polyfill of `Math.acosh` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math.asinh()")}}
 - {{jsxref("Math.atanh()")}}
 - {{jsxref("Math.cosh()")}}

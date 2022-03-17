@@ -14,7 +14,7 @@ browser-compat: api.Crypto.subtle
 
 The **`Crypto.subtle`** read-only property returns a
 {{domxref("SubtleCrypto")}} which can then be used to perform low-level
-cryptographic operations.
+cryptographic operations.
 
 ## Syntax
 

@@ -77,5 +77,5 @@ document.getElementById('yourElemId').style.color = 'red';
 
 ## See also
 
-- A polyfill of `String.prototype.fontcolor` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.fontcolor` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.fontsize()")}}

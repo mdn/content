@@ -4,7 +4,7 @@ slug: Web/API/VRDisplayEvent/VRDisplayEvent
 tags:
   - API
   - Constructor
-  - Experimental
+  - Deprecated
   - Reference
   - VR
   - VRDisplayEvent

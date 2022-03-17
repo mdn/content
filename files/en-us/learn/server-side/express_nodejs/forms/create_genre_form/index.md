@@ -10,20 +10,20 @@ tags:
 ---
 This sub article shows how we define our page to create `Genre` objects (this is a good place to start because the `Genre` has only one field, its `name`, and no dependencies). Like any other pages, we need to set up routes, controllers, and views.
 
-## Import validation and sanitisation methods
+## Import validation and sanitization methods
 
-To use the _express-validator_ in our controllers we have to *require* the functions we want to use from the **'express-validator**' module.
+To use the _express-validator_ in our controllers we have to *require* the functions we want to use from the **'express-validator**' module.
 
-Open **/controllers/genreController.js**, and add the following line at the top of the file:
+Open **/controllers/genreController.js**, and add the following line at the top of the file:
 
 ```js
 const { body,validationResult } = require("express-validator");
 ```
 
-> **Note:** This syntax allows us to use `body` and `validationResult` as the associated middleware functions, as you will see in the post route section below. It is equivalent to:
+> **Note:** This syntax allows us to use `body` and `validationResult` as the associated middleware functions, as you will see in the post route section below. It is equivalent to:
 >
 > ```js
-> validator = require("express-validator");
+> validator = require("express-validator");
 > body = validator.body();
 > validationResult = validator.validationResult();
 > ```
@@ -48,7 +48,7 @@ Find the exported `genre_create_post()` controller method and replace it with th
 exports.genre_create_post =  [
 
   // Validate and sanitize the name field.
-  body('name', 'Genre name required').trim().isLength({ min: 1 }).escape(),
+  body('name', 'Genre name required').trim().isLength({ min: 1 }).escape(),
 
   // Process request after validation and sanitization.
   (req, res, next) => {
@@ -93,18 +93,18 @@ exports.genre_create_post =  [
 ];
 ```
 
-The first thing to note is that instead of being a single middleware function (with arguments `(req, res, next)`) the controller specifies an _array_ of middleware functions. The array is passed to the router function and each method is called in order.
+The first thing to note is that instead of being a single middleware function (with arguments `(req, res, next)`) the controller specifies an _array_ of middleware functions. The array is passed to the router function and each method is called in order.
 
-> **Note:** This approach is needed, because the validators are middleware functions.
+> **Note:** This approach is needed, because the validators are middleware functions.
 
-The first method in the array defines a body validator (`body()`) that validates and sanitizes the field. This uses `trim()` to remove any trailing/leading whitespace, checks that the _name_ field is not empty, and then uses `escape()` to remove any dangerous HTML characters).
+The first method in the array defines a body validator (`body()`) that validates and sanitizes the field. This uses `trim()` to remove any trailing/leading whitespace, checks that the _name_ field is not empty, and then uses `escape()` to remove any dangerous HTML characters).
 
 ```js
 // Validate that the name field is not empty.
 body('name', 'Genre name required').trim().isLength({ min: 1 }).escape(),
 ```
 
-After specifying the validators we create a middleware function to extract any validation errors. We use `isEmpty()` to check whether there are any errors in the validation result. If there are then we render the form again, passing in our sanitized genre object and the array of error messages (`errors.array()`).
+After specifying the validators we create a middleware function to extract any validation errors. We use `isEmpty()` to check whether there are any errors in the validation result. If there are then we render the form again, passing in our sanitized genre object and the array of error messages (`errors.array()`).
 
 ```js
 // Process request after validation and sanitization.
@@ -151,11 +151,11 @@ Genre.findOne({ 'name': req.body.name })
 });
 ```
 
-This same pattern is used in all our post controllers: we run validators (with sanitisers), then check for errors and either re-render the form with error information or save the data.
+This same pattern is used in all our post controllers: we run validators (with sanitizers), then check for errors and either re-render the form with error information or save the data.
 
 ## View
 
-The same view is rendered in both the `GET` and `POST` controllers/routes when we create a new `Genre` (and later on it is also used when we _update_ a `Genre`). In the `GET` case the form is empty, and we just pass a title variable. In the `POST` case the user has previously entered invalid data—in the `genre` variable we pass back a sanitized version of the entered data and in the `errors` variable we pass back an array of error messages.
+The same view is rendered in both the `GET` and `POST` controllers/routes when we create a new `Genre` (and later on it is also used when we _update_ a `Genre`). In the `GET` case the form is empty, and we just pass a title variable. In the `POST` case the user has previously entered invalid data—in the `genre` variable we pass back a sanitized version of the entered data and in the `errors` variable we pass back an array of error messages.
 
 ```js
 res.render('genre_form', { title: 'Create Genre'});
@@ -194,15 +194,15 @@ The last part of the page is the error code. This prints a list of errors, if th
 
 ## What does it look like?
 
-Run the application, open your browser to <http://localhost:3000/>, then select the _Create new genre_ link. If everything is set up correctly, your site should look something like the following screenshot. After you enter a value, it should be saved and you'll be taken to the genre detail page.
+Run the application, open your browser to `http://localhost:3000/`, then select the _Create new genre_ link. If everything is set up correctly, your site should look something like the following screenshot. After you enter a value, it should be saved and you'll be taken to the genre detail page.
 
 ![Genre Create Page - Express Local Library site](locallibary_express_genre_create_empty.png)
 
-The only error we validate against server-side is that the genre field must not be empty. The screenshot below shows what the error list would look like if you didn't supply a genre (highlighted in red).
+The only error we validate against server-side is that the genre field must not be empty. The screenshot below shows what the error list would look like if you didn't supply a genre (highlighted in red).
 
 ![](locallibary_express_genre_create_error.png)
 
-> **Note:** Our validation uses `trim()` to ensure that whitespace is not accepted as a genre name. We can also validate that the field is not empty on the client side by adding the value `required='true'` to the field definition in the form:
+> **Note:** Our validation uses `trim()` to ensure that whitespace is not accepted as a genre name. We can also validate that the field is not empty on the client side by adding the value `required='true'` to the field definition in the form:
 >
 > ```js
 > input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' value=(undefined===genre ? '' : genre.name), required='true' )
@@ -210,5 +210,5 @@ The only error we validate against server-side is that the genre field must not
 
 ## Next steps
 
-1.  Return to [Express Tutorial Part 6: Working with forms.](/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
-2.  Proceed to the next sub article of part 6: [Create Author form](/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form).
+1. Return to [Express Tutorial Part 6: Working with forms.](/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
+2. Proceed to the next sub article of part 6: [Create Author form](/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form).

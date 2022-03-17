@@ -83,7 +83,7 @@ span.tweaked {
 window.addEventListener('DOMContentLoaded', function () {
   // Select HTML elements
   var draggable = document.getElementById('source');
-  var dropable = document.getElementById('target');
+  var droppable = document.getElementById('target');
   var status = document.getElementById('status');
   var data = document.getElementById('data');
   var dropped = false;
@@ -91,9 +91,9 @@ window.addEventListener('DOMContentLoaded', function () {
   // Register event handlers
   draggable.addEventListener('dragstart', dragStartHandler);
   draggable.addEventListener('dragend', dragEndHandler);
-  dropable.addEventListener('dragover', dragOverHandler);
-  dropable.addEventListener('dragleave', dragLeaveHandler);
-  dropable.addEventListener('drop', dropHandler);
+  droppable.addEventListener('dragover', dragOverHandler);
+  droppable.addEventListener('dragleave', dragLeaveHandler);
+  droppable.addEventListener('drop', dropHandler);
 
   function dragStartHandler (event) {
     status.textContent = 'Drag in process';
@@ -126,9 +126,9 @@ window.addEventListener('DOMContentLoaded', function () {
       // Remove all event listeners
       draggable.removeEventListener('dragstart', dragStartHandler);
       draggable.removeEventListener('dragend', dragEndHandler);
-      dropable.removeEventListener('dragover', dragOverHandler);
-      dropable.removeEventListener('dragleave', dragLeaveHandler);
-      dropable.removeEventListener('drop', dropHandler);
+      droppable.removeEventListener('dragover', dragOverHandler);
+      droppable.removeEventListener('dragleave', dragLeaveHandler);
+      droppable.removeEventListener('drop', dropHandler);
     }
   }
 

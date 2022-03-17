@@ -95,7 +95,7 @@ Think of a template as a content fragment that is being stored for subsequent us
 
 This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-However, the {{domxref("HTMLTemplateElement")}} has a {{domxref("HTMLTemplateElement.content", "content")}} property, which is a read-only {{domxref("DocumentFragment")}} containing the DOM subtree which the template represents. Note that directly using the value of the {{domxref("HTMLTemplateElement.content", "content")}} could lead to unexpected behavior, see [Avoiding DocumentFragment pitfall](#avoiding_documentfragment_pitfall) section below.
+However, the {{domxref("HTMLTemplateElement")}} has a {{domxref("HTMLTemplateElement.content", "content")}} property, which is a read-only {{domxref("DocumentFragment")}} containing the DOM subtree which the template represents. Note that directly using the value of the {{domxref("HTMLTemplateElement.content", "content")}} could lead to unexpected behavior, see [Avoiding DocumentFragment pitfall](#avoiding_documentfragment_pitfall) section below.
 
 ## Examples
 

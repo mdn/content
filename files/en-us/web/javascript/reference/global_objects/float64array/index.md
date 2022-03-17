@@ -78,7 +78,7 @@ The **`Float64Array`** typed array represents an array of 64-bit floating point 
 - {{jsxref("TypedArray.reduceRight", "Float64Array.prototype.reduceRight()")}}
   - : Apply a function against an accumulator and each value of the array (from right-to-left) as to reduce it to a single value. See also {{jsxref("Array.prototype.reduceRight()")}}.
 - {{jsxref("TypedArray.reverse", "Float64Array.prototype.reverse()")}}
-  - : Reverses the order of the elements of an array — the first becomes the last, and the last becomes the first. See also {{jsxref("Array.prototype.reverse()")}}.
+  - : Reverses the order of the elements of an array — the first becomes the last, and the last becomes the first. See also {{jsxref("Array.prototype.reverse()")}}.
 - {{jsxref("TypedArray.set", "Float64Array.prototype.set()")}}
   - : Stores multiple values in the typed array, reading input values from a specified array.
 - {{jsxref("TypedArray.slice", "Float64Array.prototype.slice()")}}
@@ -139,7 +139,7 @@ var float64 = new Float64Array(iterable);
 
 ## See also
 
-- A polyfill of `Float64Array` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `Float64Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

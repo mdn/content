@@ -14,25 +14,25 @@ The **`mask`** attribute is a presentation attribute mainly used to bind a given
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement('a')}}
-*   {{SVGElement('circle')}}
-*   {{SVGElement('clipPath')}}
-*   {{SVGElement('ellipse')}}
-*   {{SVGElement('g')}}
-*   {{SVGElement('glyph')}}
-*   {{SVGElement('image')}}
-*   {{SVGElement('line')}}
-*   {{SVGElement('marker')}}
-*   {{SVGElement('mask')}}
-*   {{SVGElement('path')}}
-*   {{SVGElement('pattern')}}
-*   {{SVGElement('polygon')}}
-*   {{SVGElement('polyline')}}
-*   {{SVGElement('rect')}}
-*   {{SVGElement('svg')}}
-*   {{SVGElement('symbol')}}
-*   {{SVGElement('text')}}
-*   {{SVGElement('use')}}
+- {{SVGElement('a')}}
+- {{SVGElement('circle')}}
+- {{SVGElement('clipPath')}}
+- {{SVGElement('ellipse')}}
+- {{SVGElement('g')}}
+- {{SVGElement('glyph')}}
+- {{SVGElement('image')}}
+- {{SVGElement('line')}}
+- {{SVGElement('marker')}}
+- {{SVGElement('mask')}}
+- {{SVGElement('path')}}
+- {{SVGElement('pattern')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('svg')}}
+- {{SVGElement('symbol')}}
+- {{SVGElement('text')}}
+- {{SVGElement('use')}}
 
 ## Example
 

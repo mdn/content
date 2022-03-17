@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.Uint8ClampedArray.Uint8ClampedArray
 The **`Uint8ClampedArray()`** constructor creates a typed array
 of 8-bit unsigned integers clamped to 0-255; if you specified a value that is out of the
 range of \[0,255], 0 or 255 will be set instead; if you specify a non-integer, the
-nearest integer will be set. The contents are initialized to `0`. Once
+nearest integer will be set. The contents are initialized to `0`. Once
 established, you can reference elements in the array using the object's methods, or
 using standard array index syntax (that is, using bracket notation).
 
@@ -118,7 +118,7 @@ var dv = new Uint8ClampedArray([1, 2, 3]);
 
 ## See also
 
-- A polyfill of `Uint8ClampedArray` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `Uint8ClampedArray` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

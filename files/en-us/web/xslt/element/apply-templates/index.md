@@ -13,10 +13,12 @@ The `<xsl:apply-templates>` element selects a set of nodes in the input tree and
 
 ### Syntax
 
-    <xsl:apply-templates select=EXPRESSION mode=NAME>
-    	<xsl:with-param> [optional]
-    	<xsl:sort> [optional]
-    </xsl:apply-templates>
+```xml
+<xsl:apply-templates select=EXPRESSION mode=NAME>
+  <xsl:with-param> [optional]
+  <xsl:sort> [optional]
+</xsl:apply-templates>
+```
 
 ### Required Attributes
 

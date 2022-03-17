@@ -47,7 +47,7 @@ _Express_ apps can use any database supported by _Node_ (_Express_ itself doesn'
 
 When choosing a database, you should consider things like time-to-productivity/learning curve, performance, ease of replication/backup, cost, community support, etc. While there is no single "best" database, almost any of the popular solutions should be more than acceptable for a small-to-medium-sized site like our Local Library.
 
-For more information on the options see [Database integration](https://expressjs.com/en/guide/database-integration.html) (Express docs).
+For more information on the options see [Database integration](https://expressjs.com/en/guide/database-integration.html) (Express docs).
 
 ### What is the best way to interact with a database?
 
@@ -78,9 +78,9 @@ A few solutions that were popular at the time of writing are:
 
 As a general rule, you should consider both the features provided and the "community activity" (downloads, contributions, bug reports, quality of documentation, etc.) when selecting a solution. At the time of writing Mongoose is by far the most popular ODM, and is a reasonable choice if you're using MongoDB for your database.
 
-### Using Mongoose and MongoDb for the LocalLibrary
+### Using Mongoose and MongoDB for the LocalLibrary
 
-For the _Local Library_ example (and the rest of this topic) we're going to use the [Mongoose ODM](https://www.npmjs.com/package/mongoose) to access our library data. Mongoose acts as a front end to [MongoDB](https://www.mongodb.com/what-is-mongodb), an open source [NoSQL](https://en.wikipedia.org/wiki/NoSQL) database that uses a document-oriented data model. A “collection” of “documents” in a MongoDB database [is analogous to](https://docs.mongodb.com/manual/core/databases-and-collections/#collections) a “table” of “rows” in a relational database.
+For the _Local Library_ example (and the rest of this topic) we're going to use the [Mongoose ODM](https://www.npmjs.com/package/mongoose) to access our library data. Mongoose acts as a front end to [MongoDB](https://www.mongodb.com/what-is-mongodb), an open source [NoSQL](https://en.wikipedia.org/wiki/NoSQL) database that uses a document-oriented data model. A "collection" of "documents" in a MongoDB database [is analogous to](https://docs.mongodb.com/manual/core/databases-and-collections/#collections) a "table" of "rows" in a relational database.
 
 This ODM and database combination is extremely popular in the Node community, partially because the document storage and query system looks very much like JSON, and is hence familiar to JavaScript developers.
 
@@ -102,7 +102,7 @@ Once we've decided on our models and fields, we need to think about the relation
 
 With that in mind, the UML association diagram below shows the models we'll define in this case (as boxes). As discussed above, we've created models for the book (the generic details of the book), book instance (status of specific physical copies of the book available in the system), and author. We have also decided to have a model for the genre so that values can be created dynamically. We've decided not to have a model for the `BookInstance:status` — we will hard code the acceptable values because we don't expect these to change. Within each of the boxes, you can see the model name, the field names and types, and also the methods and their return types.
 
-The diagram also shows the relationships between the models, including their _multiplicities_. The multiplicities are the numbers on the diagram showing the numbers (maximum and minimum) of each model that may be present in the relationship. For example, the connecting line between the boxes shows that `Book` and a `Genre` are related. The numbers close to the `Book` model show that a `Genre` must have zero or more `Book`s (as many as you like), while the numbers on the other end of the line next to the `Genre` show that a book can have zero or more associated `Genre`s.
+The diagram also shows the relationships between the models, including their _multiplicities_. The multiplicities are the numbers on the diagram showing the numbers (maximum and minimum) of each model that may be present in the relationship. For example, the connecting line between the boxes shows that `Book` and a `Genre` are related. The numbers close to the `Book` model show that a `Genre` must have zero or more `Book`s (as many as you like), while the numbers on the other end of the line next to the `Genre` show that a book can have zero or more associated `Genre`s.
 
 > **Note:** As discussed in our [Mongoose primer](#mongoose_primer) below it is often better to have the field that defines the relationship between the documents/models in just _one_ model (you can still find the reverse relationship by searching for the associated `_id` in the other model). Below we have chosen to define the relationship between `Book`/`Genre` and `Book`/`Author` in the Book schema, and the relationship between the `Book`/`BookInstance` in the `BookInstance` Schema. This choice was somewhat arbitrary — we could equally well have had the field in the other schema.
 
@@ -112,7 +112,7 @@ The diagram also shows the relationships between the models, including their _mu
 
 ## Mongoose primer
 
-This section provides an overview of how to connect Mongoose to a MongoDB database, how to define a schema and a model, and how to make basic queries.
+This section provides an overview of how to connect Mongoose to a MongoDB database, how to define a schema and a model, and how to make basic queries.
 
 > **Note:** This primer is heavily influenced by the [Mongoose quick start](https://www.npmjs.com/package/mongoose) on _npm_ and the [official documentation](https://mongoosejs.com/docs/guide.html).
 
@@ -126,7 +126,7 @@ npm install mongoose
 
 Installing _Mongoose_ adds all its dependencies, including the MongoDB database driver, but it does not install MongoDB itself. If you want to install a MongoDB server then you can [download installers from here](https://www.mongodb.com/download-center) for various operating systems and install it locally. You can also use cloud-based MongoDB instances.
 
-> **Note:** For this tutorial, we'll be using the [MongoDB Atlas](https://www.mongodb.com/) cloud-based *database as a service* free tier to provide the database. This is suitable for development and makes sense for the tutorial because it makes "installation" operating system independent (database-as-a-service is also one approach you might use for your production database).
+> **Note:** For this tutorial, we'll be using the [MongoDB Atlas](https://www.mongodb.com/) cloud-based *database as a service* free tier to provide the database. This is suitable for development and makes sense for the tutorial because it makes "installation" operating system independent (database-as-a-service is also one approach you might use for your production database).
 
 ### Connecting to MongoDB
 
@@ -188,7 +188,7 @@ var Schema = mongoose.Schema;
 
 var SomeModelSchema = new Schema({
   a_string: String,
-  a_date: Date
+  a_date: Date
 });
 
 // Compile model from schema
@@ -220,11 +220,11 @@ var schema = new Schema(
 })
 ```
 
-Most of the [SchemaTypes](https://mongoosejs.com/docs/schematypes.html) (the descriptors after “type:” or after field names) are self-explanatory. The exceptions are:
+Most of the [SchemaTypes](https://mongoosejs.com/docs/schematypes.html) (the descriptors after "type:" or after field names) are self-explanatory. The exceptions are:
 
 - `ObjectId`: Represents specific instances of a model in the database. For example, a book might use this to represent its author object. This will actually contain the unique ID (`_id`) for the specified object. We can use the `populate()` method to pull in the associated information when needed.
 - [`Mixed`](https://mongoosejs.com/docs/schematypes.html#mixed): An arbitrary schema type.
-- `[]`: An array of items. You can perform JavaScript array operations on these models (push, pop, unshift, etc.). The examples above show an array of objects without a specified type and an array of `String` objects, but you can have an array of any type of object.
+- `[]`: An array of items. You can perform JavaScript array operations on these models (push, pop, unshift, etc.). The examples above show an array of objects without a specified type and an array of `String` objects, but you can have an array of any type of object.
 
 The code also shows both ways of declaring a field:
 
@@ -240,7 +240,7 @@ For more information about options see [SchemaTypes](https://mongoosejs.com/docs
 
 #### Validation
 
-Mongoose provides built-in and custom validators, and synchronous and asynchronous validators. It allows you to specify both the acceptable range of values and the error message for validation failure in all cases.
+Mongoose provides built-in and custom validators, and synchronous and asynchronous validators. It allows you to specify both the acceptable range of values and the error message for validation failure in all cases.
 
 The built-in validators include:
 
@@ -281,13 +281,13 @@ For more information see [Virtuals](https://mongoosejs.com/docs/guide.html#virtu
 
 #### Methods and query helpers
 
-A schema can also have [instance methods](https://mongoosejs.com/docs/guide.html#methods), [static methods](https://mongoosejs.com/docs/guide.html#statics), and [query helpers](https://mongoosejs.com/docs/guide.html#query-helpers). The instance and static methods are similar, but with the obvious difference that an instance method is associated with a particular record and has access to the current object. Query helpers allow you to extend mongoose's [chainable query builder API](https://mongoosejs.com/docs/queries.html) (for example, allowing you to add a query "byName" in addition to the `find()`, `findOne()` and `findById()` methods).
+A schema can also have [instance methods](https://mongoosejs.com/docs/guide.html#methods), [static methods](https://mongoosejs.com/docs/guide.html#statics), and [query helpers](https://mongoosejs.com/docs/guide.html#query-helpers). The instance and static methods are similar, but with the obvious difference that an instance method is associated with a particular record and has access to the current object. Query helpers allow you to extend mongoose's [chainable query builder API](https://mongoosejs.com/docs/queries.html) (for example, allowing you to add a query "byName" in addition to the `find()`, `findOne()` and `findById()` methods).
 
 ### Using models
 
 Once you've created a schema you can use it to create models. The model represents a collection of documents in the database that you can search, while the model's instances represent individual documents that you can save and retrieve.
 
-We provide a brief overview below. For more information see: [Models](https://mongoosejs.com/docs/models.html) (Mongoose docs).
+We provide a brief overview below. For more information see: [Models](https://mongoosejs.com/docs/models.html) (Mongoose docs).
 
 #### Creating and modifying documents
 
@@ -315,9 +315,9 @@ SomeModel.create({ name: 'also_awesome' }, function (err, awesome_instance) {
 });
 ```
 
-Every model has an associated connection (this will be the default connection when you use `mongoose.model()`). You create a new connection and call `.model()` on it to create the documents on a different database.
+Every model has an associated connection (this will be the default connection when you use `mongoose.model()`). You create a new connection and call `.model()` on it to create the documents on a different database.
 
-You can access the fields in this new record using the dot syntax, and change the values. You have to call `save()` or `update()` to store modified values back to the database.
+You can access the fields in this new record using the dot syntax, and change the values. You have to call `save()` or `update()` to store modified values back to the database.
 
 ```js
 // Access model field values using dot notation
@@ -326,7 +326,7 @@ console.log(awesome_instance.name); //should log 'also_awesome'
 // Change record by modifying the fields, then calling save().
 awesome_instance.name="New cool name";
 awesome_instance.save(function (err) {
-   if (err) return handleError(err); // saved!
+  if (err) return handleError(err); // saved!
 });
 ```
 
@@ -348,7 +348,7 @@ If you specify a callback, as shown above, the query will execute immediately. T
 
 > **Note:** All callbacks in Mongoose use the pattern `callback(error, result)`. If an error occurs executing the query, the `error` parameter will contain an error document and `result` will be null. If the query is successful, the `error` parameter will be null, and the `result` will be populated with the results of the query.
 
-> **Note:** It is important to remember that not finding any results is **not an error** for a search —but it may be a fail-case in the context of your application. If your application expects a search to find a value you can either check the result in the callback (`results==null`) or daisy chain the [orFail()](https://mongoosejs.com/docs/api.html#query_Query-orFail) method on the query.
+> **Note:** It is important to remember that not finding any results is **not an error** for a search —but it may be a fail-case in the context of your application. If your application expects a search to find a value you can either check the result in the callback (`results==null`) or daisy chain the [orFail()](https://mongoosejs.com/docs/api.html#query_Query-orFail) method on the query.
 
 If you don't specify a callback then the API will return a variable of type [Query](https://mongoosejs.com/docs/api.html#query-js). You can use this query object to build up your query and then execute it (with a callback) later using the `exec()` method.
 
@@ -385,7 +385,7 @@ Athlete.
   exec(callback); // where callback is the name of our callback function.
 ```
 
-The [find()](https://mongoosejs.com/docs/api.html#query_Query-find) method gets all matching records, but often you just want to get one match. The following methods query for a single record:
+The [find()](https://mongoosejs.com/docs/api.html#query_Query-find) method gets all matching records, but often you just want to get one match. The following methods query for a single record:
 
 - [`findById()`](https://mongoosejs.com/docs/api.html#model_Model.findById): Finds the document with the specified `id` (every document has a unique `id`).
 - [`findOne()`](https://mongoosejs.com/docs/api.html#query_Query-findOne): Finds a single document that matches the specified criteria.
@@ -393,7 +393,7 @@ The [find()](https://mongoosejs.com/docs/api.html#query_Query-find) method gets
 
 > **Note:** There is also a [`count()`](https://mongoosejs.com/docs/api.html#model_Model.count) method that you can use to get the number of items that match conditions. This is useful if you want to perform a count without actually fetching the records.
 
-There is a lot more you can do with queries. For more information see: [Queries](https://mongoosejs.com/docs/queries.html) (Mongoose docs).
+There is a lot more you can do with queries. For more information see: [Queries](https://mongoosejs.com/docs/queries.html) (Mongoose docs).
 
 #### Working with related documents — population
 
@@ -423,7 +423,7 @@ var Author = mongoose.model('Author', authorSchema);
 ```
 
 We can save our references to the related document by assigning the `_id` value.
-Below we create an author, then a story, and assign the author id to our story's author field.
+Below we create an author, then a story, and assign the author id to our story's author field.
 
 ```js
 var bob = new Author({ name: 'Bob Smith' });
@@ -509,7 +509,7 @@ SomeModel.find(callback_function);
 
 Now that we understand something of what Mongoose can do and how we want to design our models, it's time to start work on the _LocalLibrary_ website. The very first thing we want to do is set up a MongoDB database that we can use to store our library data.
 
-For this tutorial, we're going to use the [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) free cloud-hosted [sandbox](https://www.mongodb.com/cloud/atlas/pricing) database. This database tier is not considered suitable for production websites because it has no redundancy, but it is great for development and prototyping. We're using it here because it is free and easy to set up, and because MongoDB Atlas is a popular _database as a service_ vendor that you might reasonably choose for your production database (other popular choices at the time of writing include [Compose](https://www.compose.com/), [ScaleGrid](https://scalegrid.io/pricing.html) and [ObjectRocket](https://www.objectrocket.com/)).
+For this tutorial, we're going to use the [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) free cloud-hosted [sandbox](https://www.mongodb.com/cloud/atlas/pricing) database. This database tier is not considered suitable for production websites because it has no redundancy, but it is great for development and prototyping. We're using it here because it is free and easy to set up, and because MongoDB Atlas is a popular _database as a service_ vendor that you might reasonably choose for your production database (other popular choices at the time of writing include [Compose](https://www.compose.com/), [ScaleGrid](https://scalegrid.io/pricing.html) and [ObjectRocket](https://www.objectrocket.com/)).
 
 > **Note:** If you prefer you can set up a MongoDb database locally by downloading and installing the [appropriate binaries for your system](https://www.mongodb.com/download-center/community). The rest of the instructions in this article would be similar, except for the database URL you would specify when connecting. Note, however, that the [Express Tutorial Part 7: Deploying to Production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment) tutorial requires some form of remote database, since the free tier of the [Heroku](https://www.heroku.com/) service does not provide persistent storage. It is therefore highly recommended to use [MongoDB Atlas](https://www.mongodb.com/cloud/atlas).
 
@@ -517,44 +517,44 @@ You will first need to [create an account](https://www.mongodb.com/cloud/atlas/r
 
 After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) screen:
 
-1.  Click **Build a Cluster** button in the Clusters Overview section.
+1. Click **Build a Cluster** button in the Clusters Overview section.
     ![Create a cluster on MongoDB Atlas.](mongodb_atlas_-_createcluster.jpg)
-2.  This will open the _Create New Cluster_ screen.
+2. This will open the _Create New Cluster_ screen.
     ![Choose a cloud provider when using MongoDB Atlas.](mongodb_atlas_-_chooseproviderregion.jpg)
 
-    - Select any provider from the *Cloud Provider & Region* section. Different providers offer different regions.
-    - Select any region marked "FREE TIER AVAILABLE".
-    - Click the **Create Cluster** button (creation of the cluster will take some minutes).
+    - Select any provider from the *Cloud Provider & Region* section. Different providers offer different regions.
+    - Select any region marked "FREE TIER AVAILABLE".
+    - Click the **Create Cluster** button (creation of the cluster will take some minutes).
 
-3.  You will return to the _Cluster Overview_ screen.
+3. You will return to the _Cluster Overview_ screen.
     ![Setup a collection on MongoDB Atlas.](mongodb_atlas_-_createcollection.jpg)
 
-    - Click the **Collections** button.
+    - Click the **Collections** button.
 
-4.  This will open the _Collections_ section.
+4. This will open the _Collections_ section.
     ![Create a database on MongoDB Atlas.](mongodb_atlas_-_createdatabase2.png)
 
-    - Click the **Add My Own Data** button.
+    - Click the **Add My Own Data** button.
 
-5.  This will open the _Create Database_ screen.
+5. This will open the _Create Database_ screen.
     ![Details during database creation on MongoDB Atlas.](mongodb_atlas_-_databasedetails.jpg)
 
     - Enter the name for the new database as `local_library`.
     - Enter the name of the collection as `Collection0`.
     - Click the **Create** button to create the database.
 
-6.  You will return to the Collection screen with your database created.
+6. You will return to the Collection screen with your database created.
     ![Database creation confirmation on MongoDB Atlas.](mongodb_atlas_-_databasecreated.jpg)
 
     - Click the _Overview_ tab to return the cluster overview.
 
-7.  From the Cluster0 Overview screen click the **Connect** button.
+7. From the Cluster0 Overview screen click the **Connect** button.
     ![Configure a connection when after setting up a cluster in MongoDB Atlas.](mongodb_atlas_-_connectbutton.jpg)
-8.  This will open the Connect to Cluster screen.
+8. This will open the Connect to Cluster screen.
     ![Choose a connection type when connecting with MongoDB Atlas.](connect_to_cluster_allowanywhere.png)
 
-    - Click the **Allow Access from Anywhere** button.
-      This will open a form with `0.0.0.0/0` pre-seeded for the IP Address. Click the **Add IP Address** button.
+    - Click the **Allow Access from Anywhere** button.
+      This will open a form with `0.0.0.0/0` pre-seeded for the IP Address. Click the **Add IP Address** button.
 
       > **Note:** It is a best practice to limit the IP addresses that can connect to your database and other resources. Here we allow a connection from anywhere because we don't know where the request will come from after deployment.
 
@@ -562,25 +562,25 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 
       > **Note:** Avoid using special characters in your MongoDB user password as mongoose may not parse the connection string properly.
 
-    - If you have completed the 2 previous steps, the button **Choose a connection method** will turn green.
+    - If you have completed the 2 previous steps, the button **Choose a connection method** will turn green.
     - Click the **Choose a connection method** button.
 
-9.  You should now be able to access the _Choose a connection_ method tab.
+9. You should now be able to access the _Choose a connection_ method tab.
     ![Choose a connection type when connecting with MongoDB Atlas.](mongodb_atlas_-_chooseaconnectionmethod.jpg)
 
     - Click the **Connect Your Application** option.
 
 10. This will open the _Connect_ screen.
-    ![Choose the Short SRV connection when setting up a connection on MongoDB Atalas.](mongodb_atlas_-_connectforshortsrv_2020-03.png)
+    ![Choose the Short SRV connection when setting up a connection on MongoDB Atlas.](mongodb_atlas_-_connectforshortsrv_2020-03.png)
 
     - Click the **Copy** button to copy the connection string.
-    - Save this string somewhere safe.
+    - Save this string somewhere safe.
     - Update the password with your user's password.
-    - Replace test with `local_library`.
+    - Replace test with `local_library`.
 
 You have now created the database, and have a URL (with username and password) that can be used to access it. This will look something like: `mongodb+srv://your_user_name:your_password@cluster0.a9azn.mongodb.net/local_library?retryWrites=true`
 
-## Install Mongoose
+## Install Mongoose
 
 Open a command prompt and navigate to the directory where you created your [skeleton Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website). Enter the following command to install Mongoose (and its dependencies) and add it to your **package.json** file, unless you have already done so when reading the [Mongoose Primer](#installing_mongoose_and_mongodb) above.
 
@@ -620,7 +620,7 @@ Start by creating a folder for our models in the project root (**/models**) and 
 ### Author model
 
 Copy the `Author` schema code shown below and paste it into your **./models/author.js** file.
-The schema defines an author as having `String` SchemaTypes for the first and family names (required, with a maximum of 100 characters), and `Date` fields for the dates of birth and death.
+The schema defines an author as having `String` SchemaTypes for the first and family names (required, with a maximum of 100 characters), and `Date` fields for the dates of birth and death.
 
 ```js
 var mongoose = require('mongoose');
@@ -687,7 +687,7 @@ At the end of the module, we export the model.
 ### Book model
 
 Copy the `Book` schema code shown below and paste it into your **./models/book.js** file.
-Most of this is similar to the author model — we've declared a schema with a number of string fields and a virtual for getting the URL of specific book records, and we've exported the model.
+Most of this is similar to the author model — we've declared a schema with a number of string fields and a virtual for getting the URL of specific book records, and we've exported the model.
 
 ```js
 var mongoose = require('mongoose');
@@ -715,7 +715,7 @@ BookSchema
 module.exports = mongoose.model('Book', BookSchema);
 ```
 
-The main difference here is that we've created two references to other models:
+The main difference here is that we've created two references to other models:
 
 - author is a reference to a single `Author` model object, and is required.
 - genre is a reference to an array of `Genre` model objects. We haven't declared this object yet!
@@ -759,7 +759,7 @@ Everything else should be familiar from our previous schema.
 
 ### Genre model - challenge!
 
-Open your **./models/genre.js** file and create a schema for storing genres (the category of book, e.g. whether it is fiction or non-fiction, romance or military history, etc).
+Open your **./models/genre.js** file and create a schema for storing genres (the category of book, e.g. whether it is fiction or non-fiction, romance or military history, etc).
 
 The definition will be very similar to the other models:
 
@@ -774,17 +774,17 @@ That's it. We now have all models for the site set up!
 
 In order to test the models (and to create some example books and other items that we can use in our next articles) we'll now run an _independent_ script to create items of each type:
 
-1.  Download (or otherwise create) the file [populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js) inside your _express-locallibrary-tutorial_ directory (in the same level as `package.json`).
+1. Download (or otherwise create) the file [populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js) inside your _express-locallibrary-tutorial_ directory (in the same level as `package.json`).
 
     > **Note:** You don't need to know how [populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js) works; it just adds sample data into the database.
 
-2.  Enter the following commands in the project root to install the *async* module that is required by the script (we'll discuss this in later tutorials, )
+2. Enter the following commands in the project root to install the *async* module that is required by the script (we'll discuss this in later tutorials, )
 
     ```bash
     npm install async
     ```
 
-3.  Run the script using node in your command prompt, passing in the URL of your _MongoDB_ database (the same one you replaced the _insert_your_database_url_here_ placeholder with, inside `app.js` earlier):
+3. Run the script using node in your command prompt, passing in the URL of your _MongoDB_ database (the same one you replaced the _insert_your_database_url_here_ placeholder with, inside `app.js` earlier):
 
     ```bash
     node populatedb <your mongodb url>
@@ -792,7 +792,7 @@ In order to test the models (and to create some example books and other items th
 
     > **Note:** On some operating systems/terminals, you may need to wrap the database URL inside double (") or single (') quotation marks.
 
-4.  The script should run through to completion, displaying items as it creates them in the terminal.
+4. The script should run through to completion, displaying items as it creates them in the terminal.
 
 > **Note:** Go to your database on mongoDB Atlas (in the _Collections_ tab). You should now be able to drill down into individual collections of Books, Authors, Genres and BookInstances, and check out individual documents.
 
@@ -800,18 +800,18 @@ In order to test the models (and to create some example books and other items th
 
 In this article, we've learned a bit about databases and ORMs on Node/Express, and a lot about how Mongoose schema and models are defined. We then used this information to design and implement `Book`, `BookInstance`, `Author` and `Genre` models for the _LocalLibrary_ website.
 
-Last of all, we tested our models by creating a number of instances (using a standalone script). In the next article we'll look at creating some pages to display these objects.
+Last of all, we tested our models by creating a number of instances (using a standalone script). In the next article we'll look at creating some pages to display these objects.
 
 ## See also
 
 - [Database integration](https://expressjs.com/en/guide/database-integration.html) (Express docs)
 - [Mongoose website](https://mongoosejs.com/) (Mongoose docs)
-- [Mongoose Guide](https://mongoosejs.com/docs/guide.html) (Mongoose docs)
+- [Mongoose Guide](https://mongoosejs.com/docs/guide.html) (Mongoose docs)
 - [Validation](https://mongoosejs.com/docs/validation.html) (Mongoose docs)
 - [Schema Types](https://mongoosejs.com/docs/schematypes.html) (Mongoose docs)
 - [Models](https://mongoosejs.com/docs/models.html) (Mongoose docs)
 - [Queries](https://mongoosejs.com/docs/queries.html) (Mongoose docs)
-- [Population](https://mongoosejs.com/docs/populate.html) (Mongoose docs)
+- [Population](https://mongoosejs.com/docs/populate.html) (Mongoose docs)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
 

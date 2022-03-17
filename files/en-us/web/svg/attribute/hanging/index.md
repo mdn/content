@@ -13,7 +13,7 @@ The **`hanging`** attribute indicates the alignment coordinate for {{Glossary("g
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("font-face")}}
+- {{SVGElement("font-face")}}
 
 ## Usage notes
 
@@ -40,8 +40,8 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `<number>`
-    *   : This value indicates the alignment coordinate for the glyphs.
+- `<number>`
+  - : This value indicates the alignment coordinate for the glyphs.
 
 ## Specifications
 

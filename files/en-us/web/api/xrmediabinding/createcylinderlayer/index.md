@@ -37,7 +37,7 @@ createCylinderLayer(video, options)
       - `stereo-top-bottom`: A single {{domxref("XRSubImage")}} is allocated. Left eye gets the top area of the texture, right eye the bottom. This layout is designed to minimize draw calls for content that is already in stereo (for example stereo videos or images).
       The default value is `mono`.
     - `radius`: Optional. A number indicating the radius of the cylinder. Default value `2.0`.
-    - `space`: **Required**. An {{domxref("XRSpace")}} object defining the layer's spatial relationship with the user’s physical environment.
+    - `space`: **Required**. An {{domxref("XRSpace")}} object defining the layer's spatial relationship with the user's physical environment.
     - `transform`: Optional. An {{domxref("XRRigidTransform")}} object defining the offset and orientation relative to `space`.
 
 ### Return value

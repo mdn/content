@@ -64,16 +64,7 @@ text-decoration-style: unset;
 
 ### Setting a wavy underline
 
-```css
-.example {
-       -moz-text-decoration-line: underline;
-       -moz-text-decoration-style: wavy;
-       -moz-text-decoration-color: red;
-    -webkit-text-decoration-line: underline;
-    -webkit-text-decoration-style: wavy;
-    -webkit-text-decoration-color: red;
-}
-```
+The following creates a red wavy underline:
 
 #### CSS
 
@@ -106,3 +97,7 @@ text-decoration-style: unset;
 ## See also
 
 - When setting multiple line-decoration properties at once, it may be more convenient to use the {{cssxref("text-decoration")}} shorthand property instead.
+- {{cssxref("text-decoration-line")}}
+- {{cssxref("text-decoration-color")}}
+- {{cssxref("text-decoration-thickness")}}
+- {{cssxref("text-underline-offset")}}

@@ -29,16 +29,12 @@ Do not use.
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#command","ARIA: command role")}}                                             | {{Spec2('ARIA')}}                         |
 
-
 ## See Also
-
 
 - [ARIA: `widget` role](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role)
 - [ARIA: `button` role](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)
 - [ARIA: `link` role](/en-US/docs/Web/Accessibility/ARIA/Roles/link_role)
 - [ARIA: `menuitem` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
-
-
 
 <section id="Quick_links">
 

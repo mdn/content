@@ -26,7 +26,7 @@ var resultType = result.resultType;
 
 ### Return value
 
-An integer value representing the type of the result, as defined by the [type constants](#).
+An integer value representing the type of the result, as defined by the type constants.
 
 ## Constants
 

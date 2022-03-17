@@ -14,7 +14,7 @@ tags:
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-Now it's time to start tackling the footer functionality in our app. Here we'll get the todo counter to update to show the correct number of todos still to complete, and correctly apply styling to completed todos (i.e. where the checkbox has been checked). We'll also wire up our "Clear completed" button. Along the way, we'll learn about using conditional rendering in our templates.
+Now it's time to start tackling the footer functionality in our app. Here we'll get the todo counter to update to show the correct number of todos still to complete, and correctly apply styling to completed todos (i.e. where the checkbox has been checked). We'll also wire up our "Clear completed" button. Along the way, we'll learn about using conditional rendering in our templates.
 
 <table>
   <tbody>
@@ -57,13 +57,13 @@ To get the footer working, we need to implement the following three areas of fun
 - Filters for all, active, and completed todos.
 - A button to clear the completed todos.
 
-1.  Because we need access to our service from the footer component, we need to generate a class for the footer. Enter the following terminal command to do so:
+1. Because we need access to our service from the footer component, we need to generate a class for the footer. Enter the following terminal command to do so:
 
     ```bash
     ember generate component-class footer
     ```
 
-2.  Next, go and find the newly-created `todomvc/app/components/footer.js` file and update it to the following:
+2. Next, go and find the newly-created `todomvc/app/components/footer.js` file and update it to the following:
 
     ```js
     import Component from '@glimmer/component';
@@ -74,7 +74,7 @@ To get the footer working, we need to implement the following three areas of fun
     }
     ```
 
-3.  Now we need to go back to our `todo-data.js` file and add some functionality that will allow us to return the number of incomplete todos (useful for showing how many are left), and clear the completed todos out of the list (which is what the “Clear completed” functionality needs).
+3. Now we need to go back to our `todo-data.js` file and add some functionality that will allow us to return the number of incomplete todos (useful for showing how many are left), and clear the completed todos out of the list (which is what the "Clear completed" functionality needs).
 
     In `todo-data.js`, add the following getter underneath the existing `all()` getter to define what the incomplete todos actually are:
 
@@ -88,7 +88,7 @@ To get the footer working, we need to implement the following three areas of fun
 
     Using [`array.filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), we declare that "incomplete" todos are ones that have `isCompleted` equal to `false`.
 
-4.  Next, add the following action underneath the existing `add(text)` action:
+4. Next, add the following action underneath the existing `add(text)` action:
 
     ```js
     @action
@@ -99,8 +99,8 @@ To get the footer working, we need to implement the following three areas of fun
 
     This is rather nice for clearing the todos — we just need to set the `todos` array to equal the list of incomplete todos.
 
-5.  Finally, we need to make use of this new functionality in our `footer.hbs` template. Go to this file now.
-6.  First of all, replace this line:
+5. Finally, we need to make use of this new functionality in our `footer.hbs` template. Go to this file now.
+6. First of all, replace this line:
 
     ```js
     <strong>0</strong> todos left
@@ -112,7 +112,7 @@ To get the footer working, we need to implement the following three areas of fun
     <strong>\{{this.todos.incomplete.length}}</strong> todos left
     ```
 
-7.  Next, replace this:
+7. Next, replace this:
 
     ```html
     <button type="button" class="clear-completed">
@@ -193,13 +193,13 @@ As with the other components, we need a class to access the service.
 
 ### Creating a todo class
 
-1.  Run the following command in your terminal:
+1. Run the following command in your terminal:
 
     ```bash
     ember generate component-class todo
     ```
 
-2.  Now go to the newly-created `todomvc/app/components/todo.js` file and update the contents to look like so, to give the todo component access to the service:
+2. Now go to the newly-created `todomvc/app/components/todo.js` file and update the contents to look like so, to give the todo component access to the service:
 
     ```js
     import Component from '@glimmer/component';
@@ -210,7 +210,7 @@ As with the other components, we need a class to access the service.
     }
     ```
 
-3.  Next, go back again to our `todo-data.js` service file and add the following action just below the previous ones, which will allow us to toggle a completion state for each todo:
+3. Next, go back again to our `todo-data.js` service file and add the following action just below the previous ones, which will allow us to toggle a completion state for each todo:
 
     ```js
     @action
@@ -223,7 +223,7 @@ As with the other components, we need a class to access the service.
 
 Finally, we will edit the `todo.hbs` template such that the checkbox's value is now bound to the `isCompleted` property on the todo, and so that on change, the `toggleCompletion()` method on the todo service is invoked.
 
-1.  In `todo.hbs`, first find the following line:
+1. In `todo.hbs`, first find the following line:
 
     ```html
     <li>
@@ -235,13 +235,13 @@ Finally, we will edit the `todo.hbs` template such that the checkbox's value is 
     <li class="\{{ if @todo.isCompleted 'completed' }}">
     ```
 
-2.  Next, find the following line:
+2. Next, find the following line:
 
     ```html
     <input
-      aria-label="Toggle the completion of this todo"
-      class="toggle"
-      type="checkbox"
+      aria-label="Toggle the completion of this todo"
+      class="toggle"
+      type="checkbox"
     >
     ```
 
@@ -259,7 +259,7 @@ Finally, we will edit the `todo.hbs` template such that the checkbox's value is 
 
     > **Note:** The above snippet uses a new Ember-specific keyword — `fn`. `fn` allows for [partial application](https://en.wikipedia.org/wiki/Partial_application), which is similar to [`bind`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind), but it never changes the invocation context; this is equivalent to using `bind` with a `null` first argument.
 
-Try restarting the dev server and going to `localhost:4200` again, and you'll now see that we have a fully-operational “todos left” counter and Clear button:
+Try restarting the dev server and going to `localhost:4200` again, and you'll now see that we have a fully-operational "todos left" counter and Clear button:
 
 ![todos being marked as complete, and cleared](todos-being-marked-completed-and-cleared.gif)
 

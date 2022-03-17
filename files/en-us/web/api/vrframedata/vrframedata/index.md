@@ -4,7 +4,7 @@ slug: Web/API/VRFrameData/VRFrameData
 tags:
   - API
   - Constructor
-  - Experimental
+  - Deprecated
   - Reference
   - VR
   - VRFrameData
@@ -21,7 +21,7 @@ The **`VRFrameData()`** constructor creates a {{domxref("VRFrameData")}} object 
 ## Syntax
 
 ```js
-var myFrameData = new VRFrameData();
+new VRFrameData()
 ```
 
 ### Parameters

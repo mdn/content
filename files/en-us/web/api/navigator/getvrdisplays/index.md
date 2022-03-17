@@ -3,7 +3,7 @@ title: Navigator.getVRDisplays()
 slug: Web/API/Navigator/getVRDisplays
 tags:
   - API
-  - Experimental
+  - Deprecated
   - HTML DOM
   - Media
   - Method

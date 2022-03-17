@@ -40,7 +40,7 @@ This module contains the following articles, which will take you through all the
 - [HTML table basics](/en-US/docs/Learn/HTML/Tables/Basics)
   - : This article gets you started with HTML tables, covering the very basics such as rows and cells, headings, making cells span multiple columns and rows, and how to group together all the cells in a column for styling purposes.
 - [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)
-  - : This module looks at some more advanced features of HTML tables — such as captions/summaries and grouping your rows into table head, body and footer sections — as well as looking at the accessibility of tables for visually impaired users.
+  - : This module looks at some more advanced features of HTML tables — such as captions/summaries and grouping your rows into table head, body and footer sections — as well as looking at the accessibility of tables for visually impaired users.
 
 ## Assessments
 

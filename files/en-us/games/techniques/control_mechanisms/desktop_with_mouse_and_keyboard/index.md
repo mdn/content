@@ -13,7 +13,7 @@ tags:
 
 {{PreviousMenuNext("Games/Techniques/Control_mechanisms/Mobile_touch", "Games/Techniques/Control_mechanisms/Desktop_with_gamepad", "Games/Techniques/Control_mechanisms")}}
 
-Now, when we have our mobile controls in place and the game is playable on touch-enabled devices, it would be good to add mouse and keyboard support so the game can be playable on desktop also. That way we can broaden the list of supported platforms. We'll look at this below.
+Now, when we have our mobile controls in place and the game is playable on touch-enabled devices, it would be good to add mouse and keyboard support so the game can be playable on desktop also. That way we can broaden the list of supported platforms. We'll look at this below.
 
 It's also easier to test control-independent features like gameplay on desktop if you develop it there, so you don't have to push the files to a mobile device every time you make a change in the source code.
 
@@ -48,10 +48,10 @@ function keyDownHandler(event) {
         leftPressed = true;
     }
     if(event.keyCode == 40) {
-    	downPressed = true;
+      downPressed = true;
     }
     else if(event.keyCode == 38) {
-    	upPressed = true;
+      upPressed = true;
     }
 }
 ```
@@ -80,7 +80,7 @@ function draw() {
 
 The `draw` function first clears the whole Canvas — we draw everything from scratch on every single frame. Then the pressed key variables are checked and the `playerX` and `playerY` variables (that we define earlier just after `leftPressed` and the others) holding the position of the ship are adjusted by a given amount, let's say 5 pixels. Then the player's ship is drawn on the screen and the next draw is called from within the [requestAnimationFrame](/en-US/docs/Web/API/window/requestAnimationFrame).
 
-We could write our own `KeyCode` object containing the key codes. For example:
+We could write our own `KeyCode` object containing the key codes. For example:
 
 ```js
 var KeyboardHelper = { left: 37, up: 38, right: 39, down: 40 };
@@ -122,7 +122,7 @@ this.buttonShoot.onInputUp.add(this.shootingReleased, this);
 
 The button used for shooting works perfectly fine on both the mobile and desktop approach.
 
-If you want to use the mouse's cursor position on the screen, you can do so with `this.game.input.mousePointer`. Let's assume you'd like to shoot a bullet when the right half of the screen is clicked with a mouse, it would be done something like this:
+If you want to use the mouse's cursor position on the screen, you can do so with `this.game.input.mousePointer`. Let's assume you'd like to shoot a bullet when the right half of the screen is clicked with a mouse, it would be done something like this:
 
 ```js
 if(this.game.input.mousePointer.isDown) {
@@ -161,7 +161,7 @@ It's useful to provide an option to play the game on desktop without using a mou
 
 ### Controlling the game
 
-We can support keyboard input in games built with Phaser by enabling the basic cursor keys in the `create()` function using the `createCursorKeys()` function:
+We can support keyboard input in games built with Phaser by enabling the basic cursor keys in the `create()` function using the `createCursorKeys()` function:
 
 ```js
 this.cursors = this.input.keyboard.createCursorKeys();
@@ -204,7 +204,7 @@ else if(this.cursors.down.isDown || this.keyDown.isDown) {
 
 In the `update()` function we can now move the player's ship in any direction using one of the two sets of movement key options.
 
-We can also offer firing control alternatives. For cursor keys the natural shooting button would be on the other side of the keyboard, so the player can use the other hand — for example the <kbd>X</kbd> key. For <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> keys it can be the Space bar:
+We can also offer firing control alternatives. For cursor keys the natural shooting button would be on the other side of the keyboard, so the player can use the other hand — for example the <kbd>X</kbd> key. For <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> keys it can be the Space bar:
 
 ```js
 this.keyFire1 = this.input.keyboard.addKey(Phaser.KeyCode.X);
@@ -239,7 +239,7 @@ We can set the health of the player to maximum. Remember: it's a secret, so _don
 
 ### How to play
 
-We've implemented the controls, and now we should inform the player about their options to control the game. They wouldn't know about them otherwise! When showing the how to play screen where the various ways to control the ship in the game are shown, instead of showing them all to everyone, we can detect whether the game is launched on desktop or mobile and just show the appropriate controls for the device:
+We've implemented the controls, and now we should inform the player about their options to control the game. They wouldn't know about them otherwise! When showing the how to play screen where the various ways to control the ship in the game are shown, instead of showing them all to everyone, we can detect whether the game is launched on desktop or mobile and just show the appropriate controls for the device:
 
 ```js
 if(this.game.device.desktop) {
@@ -266,7 +266,7 @@ this.input.keyboard.onDownCallback = function() {
 };
 ```
 
-This hides the intro and starts the actual game without us having to set up another new key control just for this.
+This hides the intro and starts the actual game without us having to set up another new key control just for this.
 
 ### Pause and game over screens
 

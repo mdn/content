@@ -28,7 +28,9 @@ except exceptions.JavascriptException as e:
 
 Output:
 
-    JavascriptException: ReferenceError: foo is not defined
+```
+JavascriptException: ReferenceError: foo is not defined
+```
 
 ## See also
 

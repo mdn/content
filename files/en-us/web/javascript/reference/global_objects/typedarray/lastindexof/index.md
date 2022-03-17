@@ -76,6 +76,6 @@ uint8.lastIndexOf(2, -1); // 3
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.lastIndexOf` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.lastIndexOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray.prototype.indexOf()")}}
 - {{jsxref("Array.prototype.lastIndexOf()")}}

@@ -18,7 +18,8 @@ of the values given in the parameter `array`.
 ## Syntax
 
 ```js
-var newBlob = new Blob(array, options);
+new Blob(array);
+new Blob(array, options);
 ```
 
 ### Parameters
@@ -49,8 +50,8 @@ A new {{domxref("Blob")}} object containing the specified data.
 ## Example
 
 ```js
-var aFileParts = ['<a id="a"><b id="b">hey!</b></a>']; // an array consisting of a single DOMString
-var oMyBlob = new Blob(aFileParts, {type : 'text/html'}); // the blob
+const array = ['<a id="a"><b id="b">hey!</b></a>']; // an array consisting of a single DOMString
+const blob = new Blob(array, {type : 'text/html'}); // the blob
 ```
 
 ## Specifications

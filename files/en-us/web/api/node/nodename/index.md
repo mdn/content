@@ -13,7 +13,7 @@ The read-only **`nodeName`** property of {{domxref("Node")}} returns the name of
 
 ## Value
 
-A {{jsxref("String")}}. Values for the different types of nodes are:
+A string. Values for the different types of nodes are:
 
 - {{domxref("Attr")}}
   - : The value of {{domxref("Attr.name")}}, that is the _qualified name_ of the attribute.

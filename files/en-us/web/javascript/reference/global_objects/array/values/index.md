@@ -36,8 +36,8 @@ A new {{jsxref("Array")}} iterator object.
 ### Iteration using for...of loop
 
 ```js
-var arr = ['a', 'b', 'c', 'd', 'e'];
-var iterator = arr.values();
+const arr = ['a', 'b', 'c', 'd', 'e'];
+const iterator = arr.values();
 
 for (let letter of iterator) {
   console.log(letter);
@@ -54,15 +54,15 @@ Array.prototype.values === Array.prototype[Symbol.iterator]      //true
 ### Iteration using .next()
 
 ```js
-var arr = ['a', 'b', 'c', 'd', 'e'];
-var iterator = arr.values();
+const arr = ['a', 'b', 'c', 'd', 'e'];
+const iterator = arr.values();
 iterator.next();               // Object { value: "a", done: false }
 iterator.next().value;         // "b"
 iterator.next()["value"];      // "c"
 iterator.next();               // Object { value: "d", done: false }
 iterator.next();               // Object { value: "e", done: false }
 iterator.next();               // Object { value: undefined, done: true }
-iteraror.next().value;         // undefined 
+iterator.next().value;         // undefined 
 ```
 
 > **Warning:** The array iterator object is one use or temporary object
@@ -70,8 +70,8 @@ iteraror.next().value;         // undefined
 example:
 
 ```js
-var arr = ['a', 'b', 'c', 'd', 'e'];
- var iterator = arr.values();
+const arr = ['a', 'b', 'c', 'd', 'e'];
+ const iterator = arr.values();
  for (let letter of iterator) {
  console.log(letter);
 } //"a" "b" "c" "d" "e"
@@ -80,17 +80,17 @@ console.log(letter);
 } // undefined
 ```
 
-**reason:** When `next().done=true`  or
+**reason:** When `next().done=true` or
 `currentIndex>length` the `for..of` loop ends. See [Iteration
 protocols.](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 
 **Value**: there are no values stored in the array Iterator
-object; instead it stores the address of the array used in its creation and so depends
-on the values stored in that array.
+object; instead it stores the address of the array used in its creation and so depends
+on the values stored in that array.
 
 ```js
-var arr = ['a', 'b', 'c', 'd', 'e'];
-var iterator = arr.values();
+const arr = ['a', 'b', 'c', 'd', 'e'];
+const iterator = arr.values();
 console.log(iterator);        // Array Iterator {  }
 iterator.next().value;        // "a"
 arr[1]='n';
@@ -109,7 +109,7 @@ iterator.next().value;        //  "n"
 
 ## See also
 
-- A polyfill of `Array.prototype.values` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.values` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.keys()")}}
 - {{jsxref("Array.prototype.entries()")}}
 - {{jsxref("Array.prototype.forEach()")}}

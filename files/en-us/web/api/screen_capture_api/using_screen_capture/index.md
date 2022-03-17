@@ -54,13 +54,13 @@ function startCapture(displayMediaOptions) {
 
 Either way, the {{Glossary("user agent")}} responds by presenting a user interface that prompts the user to choose the screen area to share. Both of these implementations of `startCapture()` return the {{domxref("MediaStream")}} containing the captured display imagery.
 
-See {{anch("Options and constraints")}}, below, for more on both how to specify the type of surface you want as well as other ways to adjust the resulting stream.
+See [Options and constraints](#options_and_constraints), below, for more on both how to specify the type of surface you want as well as other ways to adjust the resulting stream.
 
 ### Example of a window allowing the user to select a display surface to capture
 
 [![Screenshot of Chrome's window for picking a source surface](chrome-screen-capture-window.png)](Chrome-Screen-Capture-Window.png)
 
-You can then use the captured stream, `captureStream`, for anything that accepts a stream as input. The {{anch("Examples", "examples")}} below show a few ways to make use of the stream.
+You can then use the captured stream, `captureStream`, for anything that accepts a stream as input. The [examples](#examples) below show a few ways to make use of the stream.
 
 ### Visible vs logical display surfaces
 
@@ -80,7 +80,7 @@ The constraints object passed into {{domxref("MediaDevices.getDisplayMedia", "ge
 
 See [Properties of shared screen tracks](/en-US/docs/Web/API/MediaTrackConstraints#properties_of_shared_screen_tracks) for details about additional constraints for configuring a screen-capture stream that are added to {{domxref("MediaTrackConstraints")}}, {{domxref("MediaTrackSupportedConstraints")}}, and {{domxref("MediaTrackSettings")}}).
 
-None of the constraints are applied in any way until after the content to capture has been selected. The contraints alter what you see in the resulting stream.
+None of the constraints are applied in any way until after the content to capture has been selected. The constraints alter what you see in the resulting stream.
 
 For example, if you specify a {{domxref("MediaTrackConstraints.width", "width")}} constraint for the video, it's applied by scaling the video after the user selects the area to share. It doesn't establish a restriction on the size of the source itself.
 
@@ -94,7 +94,7 @@ While display capture is in effect, the machine which is sharing screen contents
 
 {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} is most commonly used to capture video of a user's screen (or parts thereof). However, {{Glossary("user agent", "user agents")}} may allow the capture of audio along with the video content. The source of this audio might be the selected window, the entire computer's audio system, or the user's microphone (or a combination of all of the above).
 
-Before starting a project that will require sharing of audio, be sure to check the {{SectionOnPage("/en-US/docs/Web/API/MediaDevices/getDisplayMedia", "Browser compatibility", "code")}} to see if the browsers you wish compaibility with have support for audio in captured screen streams.
+Before starting a project that will require sharing of audio, be sure to check the {{SectionOnPage("/en-US/docs/Web/API/MediaDevices/getDisplayMedia", "Browser compatibility", "code")}} to see if the browsers you wish compatibility with have support for audio in captured screen streams.
 
 To request that the screen be shared with included audio, the options passed into `getDisplayMedia()` might look like this:
 
@@ -257,7 +257,7 @@ function dumpOptionsInfo() {
 }
 ```
 
-The track list is obtained by calling {{domxref("MediaStream.getVideoTracks", "getVideoTracks()")}} on the capture'd screen's {{domxref("MediaStream")}}. The settings currently in effect are obtained using {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} and the established constraints are gotten with {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}
+The track list is obtained by calling {{domxref("MediaStream.getVideoTracks", "getVideoTracks()")}} on the captured screen's {{domxref("MediaStream")}}. The settings currently in effect are obtained using {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} and the established constraints are gotten with {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}
 
 #### HTML
 
@@ -279,10 +279,10 @@ Click the Start Capture button to begin.</p>
 
 The key parts of the HTML are:
 
-1.  A {{HTMLElement("button")}} labeled "Start Capture" which, when clicked, calls the `startCapture()` function to request access to, and begin capturing, screen contents.
-2.  A second button, "Stop Capture", which upon being clicked calls `stopCapture()` to terminate capture of screen contents.
-3.  A {{HTMLElement("video")}} into which the captured screen contents are streamed.
-4.  A {{HTMLElement("pre")}} block into which logged text is placed by the intercepted {{domxref("console")}} method.
+1. A {{HTMLElement("button")}} labeled "Start Capture" which, when clicked, calls the `startCapture()` function to request access to, and begin capturing, screen contents.
+2. A second button, "Stop Capture", which upon being clicked calls `stopCapture()` to terminate capture of screen contents.
+3. A {{HTMLElement("video")}} into which the captured screen contents are streamed.
+4. A {{HTMLElement("pre")}} block into which logged text is placed by the intercepted {{domxref("console")}} method.
 
 #### CSS
 
@@ -322,7 +322,9 @@ In order to function when [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) 
 
 For example, this line in the HTTP headers will enable Screen Capture API for the document and any embedded {{HTMLElement("iframe")}} elements that are loaded from the same origin:
 
-    Feature-Policy: display-capture 'self'
+```
+Feature-Policy: display-capture 'self'
+```
 
 If you're performing screen capture within an `<iframe>`, you can request permission just for that frame, which is clearly more secure than requesting a more general permission:
 
@@ -330,6 +332,10 @@ If you're performing screen capture within an `<iframe>`, you can request permis
 <iframe src="https://mycode.example.net/etc" allow="display-capture">
 </iframe>
 ```
+
+## Browser compatibility
+
+{{Compat("api.MediaDevices.getDisplayMedia")}}
 
 ## See also
 

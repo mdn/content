@@ -33,5 +33,3 @@ console.log(completed);
 ## Browser compatibility
 
 {{Compat}}
-
-

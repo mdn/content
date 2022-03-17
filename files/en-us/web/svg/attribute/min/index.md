@@ -12,11 +12,11 @@ The **`min`** attribute specifies the minimum value of the active animation dura
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("animate")}}
-*   {{SVGElement("animateColor")}}
-*   {{SVGElement("animateMotion")}}
-*   {{SVGElement("animateTransform")}}
-*   {{SVGElement("set")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("animateColor")}}
+- {{SVGElement("animateMotion")}}
+- {{SVGElement("animateTransform")}}
+- {{SVGElement("set")}}
 
 ## Example
 
@@ -64,8 +64,8 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `<clock-value>`
-    *   : Specifies the length of the minimum value of the active duration, measured in local time. The value must be greater than 0.
+- `<clock-value>`
+  - : Specifies the length of the minimum value of the active duration, measured in local time. The value must be greater than 0.
 
 ## Specifications
 

@@ -121,7 +121,7 @@ circle2.bind("EnterFrame", function () {
 
 {{ EmbedLiveSample('Circle_Collision', '700', '300', '', 'Games/Techniques/2D_collision_detection') }}
 
-> **Note:** [Here is another example without Canvas or external libraries.](https://jsfiddle.net/jlr7245/teb4znk0/20/)
+> **Note:** [Here is another example without Canvas or external libraries.](https://jsfiddle.net/jlr7245/teb4znk0/20/)
 
 ## Separating Axis Theorem
 
@@ -129,11 +129,11 @@ This is a collision algorithm that can detect a collision between any two \*conv
 
 Implementing SAT is out of scope for this page so see the recommended tutorials below:
 
-1.  [Separating Axis Theorem (SAT) explanation](https://www.sevenson.com.au/actionscript/sat/)
-2.  [Collision detection and response](https://www.metanetsoftware.com/technique/tutorialA.html)
-3.  [Collision detection Using the Separating Axis Theorem](https://gamedevelopment.tutsplus.com/tutorials/collision-detection-using-the-separating-axis-theorem--gamedev-169)
-4.  [SAT (Separating Axis Theorem)](http://www.dyn4j.org/2010/01/sat/)
-5.  [Separating Axis Theorem](https://programmerart.weebly.com/separating-axis-theorem.html)
+1. [Separating Axis Theorem (SAT) explanation](https://www.sevenson.com.au/actionscript/sat/)
+2. [Collision detection and response](https://www.metanetsoftware.com/technique/tutorialA.html)
+3. [Collision detection Using the Separating Axis Theorem](https://gamedevelopment.tutsplus.com/tutorials/collision-detection-using-the-separating-axis-theorem--gamedev-169)
+4. [SAT (Separating Axis Theorem)](https://dyn4j.org/2010/01/sat/)
+5. [Separating Axis Theorem](https://programmerart.weebly.com/separating-axis-theorem.html)
 
 ## Collision Performance
 

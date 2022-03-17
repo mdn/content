@@ -25,11 +25,15 @@ Firefox 3 closes a security bug in frames and iframes that allowed them to inher
 
 The `<script>` element in `text/html` documents now requires a closing `</script>` in HTML 4 documents, even if you're not including any content in between. While in previous versions of Firefox, you could do:
 
-    <script ... />
+```html
+<script ... />
+```
 
 Now the markup must comply with the HTML specifications (if it's actually HTML), and hence you must actually close it, like this:
 
-    <script ...></script>
+```html
+<script ...></script>
+```
 
 This improves both compatibility and security.
 
@@ -53,7 +57,9 @@ Firefox 3 only allows web content to access items in the `chrome://browser/` and
 
 There is, however, a way for extensions to make their content web-accessible. They can specify a special flag in their `chrome.manifest` file, like this:
 
-    content mypackage location/ contentaccessible=yes
+```
+content mypackage location/ contentaccessible=yes
+```
 
 This shouldn't be something you need to do very often, but it's available for those rare cases in which it's needed. Note that it's possible that Firefox may alert the user that your extension uses the `contentaccessible` flag in this way, as it does constitute a potential security risk.
 

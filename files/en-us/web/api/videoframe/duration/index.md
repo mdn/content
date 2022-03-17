@@ -32,5 +32,3 @@ console.log(VideoFrame.duration);
 ## Browser compatibility
 
 {{Compat}}
-
-

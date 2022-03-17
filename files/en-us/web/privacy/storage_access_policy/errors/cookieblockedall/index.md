@@ -12,7 +12,9 @@ tags:
 
 Firefox:
 
-    CookieBlockedAll=Request to access cookies or storage on “X” was blocked because we are blocking all storage access requests.
+```
+CookieBlockedAll=Request to access cookies or storage on "X" was blocked because we are blocking all storage access requests.
+```
 
 ## What went wrong?
 

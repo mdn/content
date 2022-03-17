@@ -17,7 +17,7 @@ The legacy RegExp **$1, $2, $3, $4, $5, $6, $7, $8, $9** properties are static a
 
 ## Description
 
-The $1, ..., $9 properties are static, they are not a property of an individual regular expression object. Instead, you always use them as `RegExp.$1`, ..., `RegExp.$9`.
+The $1, ..., $9 properties are static, they are not a property of an individual regular expression object. Instead, you always use them as `RegExp.$1`, ..., `RegExp.$9`.
 
 The values of these properties are read-only and modified whenever successful matches are made.
 

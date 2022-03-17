@@ -24,7 +24,7 @@ _Inherits methods from its parent, {{domxref("PaymentAddress")}}_.
 
 ## Examples
 
-The following example propmpts the user to select contacts, then prints the first returned address to the console.
+The following example prompts the user to select contacts, then prints the first returned address to the console.
 
 ```js
 const props = ['address'];
@@ -48,4 +48,3 @@ async function getContacts() {
 ## Browser compatibility
 
 {{Compat}}
-

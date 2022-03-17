@@ -17,7 +17,7 @@ browser-compat: api.InputEvent.dataTransfer
 
 The **`dataTransfer`** read-only property of the
 {{domxref("InputEvent")}} interface returns a {{domxref("DataTransfer")}} object
-containing information about richtext or plaintext data being added to or removed from
+containing information about richtext or plaintext data being added to or removed from
 editable content.
 
 ## Syntax

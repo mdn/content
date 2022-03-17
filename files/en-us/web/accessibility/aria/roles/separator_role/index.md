@@ -29,6 +29,7 @@ A non-focusable separator is a static structural element that can be used to hel
 <h2>Two years later, my second post</h2>
   ....
 ```
+
 In the example, an image creates a visual separator between two blog posts. The author could have used a semantic thematic break {{HTMLElement('hr')}} element and styled it with CSS to make it blue (and not have to change the image when they change the blog's theme), or the author could have encompassed each post in the semantic {{HTMLElement('article')}} element, or both.
 
 ```html
@@ -62,6 +63,27 @@ If the separator is focusable, providing a visible boundary between two sections
 
 An accessible name, with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) should be included if there is more than one focusable separator.
 
+### All descendants are presentational
+
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `separator`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `separator` element as it is a role that does not support semantic children.
+
+For example, consider the following `separator` element, which contains a heading.
+
+```html
+<div role="separator"><h3>Title of my separator</h3></div>
+```
+
+Because descendants of `separator` are presentational, the following code is equivalent:
+
+```html
+<div role="separator"><h3 role="presentation">Title of my separator</h3></div>
+```
+
+From the assistive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
+
+```html
+<div role="separator">Title of my separator</div>
+```
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -99,7 +121,6 @@ An accessible name, with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attri
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#separator","ARIA: separator role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_separator_role","separator role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
-
 
 ## See Also
 

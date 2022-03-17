@@ -30,7 +30,7 @@ These resources are created by forward-thinking companies and web developers who
 ### Introductory level
 
 - [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML)
-  - : This module sets the stage, getting you used to important concepts and syntax, looking at applying HTML to text, how to create hyperlinks, and how to use HTML to structure a webpage.
+  - : This module sets the stage, getting you used to important concepts and syntax, looking at applying HTML to text, how to create hyperlinks, and how to use HTML to structure a webpage.
 - [MDN HTML element reference](/en-US/docs/Web/HTML/Element)
   - : A comprehensive reference for HTML elements, and how the different browsers support them.
 
@@ -44,7 +44,7 @@ These resources are created by forward-thinking companies and web developers who
 ### Intermediate level
 
 - [Multimedia and embedding](/en-US/docs/Learn/HTML/Multimedia_and_embedding)
-  - : This module explores how to use HTML to include multimedia in your web pages, including the different ways that images can be included, and how to embed video, audio, and even entire other webpages.
+  - : This module explores how to use HTML to include multimedia in your web pages, including the different ways that images can be included, and how to embed video, audio, and even entire other webpages.
 
 <!---->
 
@@ -106,7 +106,7 @@ These resources are created by forward-thinking companies and web developers who
 
 <!---->
 
-- [Quick Guide to Implement Web Fonts  (with @font-face)](https://www.html5rocks.com/tutorials/webfonts/quick/)
+- [Quick Guide to Implement Web Fonts  (with @font-face)](https://www.html5rocks.com/tutorials/webfonts/quick/)
   - : The @font-face feature from CSS3 allows you to use custom typefaces on the web in an accessible, manipulatable, and scalable way.
 - [Starting to Write CSS](https://davidwalsh.name/starting-css)
   - : An introduction to tools and methodologies to write more succinct, maintainable, and scalable CSS.
@@ -134,7 +134,7 @@ These resources are created by forward-thinking companies and web developers who
 - [Codecademy](https://www.codecademy.com/)
   - : Codecademy is an easy way to learn how to code JavaScript. It's interactive and you can do it with your friends.
 - [freeCodeCamp](https://freecodecamp.org/learn/)
-  - : freeCodeCamp teaches a variety of languages and frameworks for web development. It also has a [forum](https://freecodecamp.org/forum), an [internet radio station](https://coderadio.freecodecamp.org), and a [blog](https://freecodecamp.org/news).
+  - : freeCodeCamp teaches a variety of languages and frameworks for web development. It also has a [forum](https://freecodecamp.org/forum), an [internet radio station](https://coderadio.freecodecamp.org), and a [blog](https://freecodecamp.org/news).
 
 ### Intermediate level
 
@@ -153,6 +153,8 @@ These resources are created by forward-thinking companies and web developers who
   - : For programmers who want to learn JavaScript quickly and properly, and for JavaScript programmers who want to deepen their skills and/or look up specific topics.
 - [Essential JavaScript Design Patterns](https://www.addyosmani.com/resources/essentialjsdesignpatterns/book/)
   - : An introduction to essential JavaScript design patterns.
+- [JavaScript.info - The Modern JavaScript Tutorial](https://javascript.info/)
+  - : Part 1: The Language. Part 2: Working with Browsers.
 
 ### Advanced level
 

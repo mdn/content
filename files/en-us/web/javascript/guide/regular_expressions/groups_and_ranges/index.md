@@ -5,6 +5,7 @@ tags:
   - Guide
   - JavaScript
   - Reference
+  - Polyfill
   - Regular Expressions
   - groups
   - ranges
@@ -98,7 +99,7 @@ Groups and ranges indicate groups and ranges of expression characters.
       <td><code>(<em>x</em>)</code></td>
       <td>
         <p>
-          <strong>Capturing group: </strong>Matches <code><em>x</em></code> and
+          <strong>Capturing group: </strong>Matches <code><em>x</em></code> and
           remembers the match. For example, <code>/(foo)/</code> matches and
           remembers "foo" in "foo bar".
         </p>
@@ -156,17 +157,17 @@ Groups and ranges indicate groups and ranges of expression characters.
       <td>
         <p>
           A back reference to the last substring matching the
-          <strong>Named capture group</strong> specified by
+          <strong>Named capture group</strong> specified by
           <code>&#x3C;Name></code>.
         </p>
         <p>
           For example,
-          <code>/(?&#x3C;title>\w+), yes \k&#x3C;title>/</code> matches "Sir,
+          <code>/(?&#x3C;title>\w+), yes \k&#x3C;title>/</code> matches "Sir,
           yes Sir" in "Do you copy? Sir, yes Sir!".
         </p>
         <div class="notecard note">
           <p>
-            <strong>Note:</strong> <code>\k</code> is used literally here to
+            <strong>Note:</strong> <code>\k</code> is used literally here to
             indicate the beginning of a back reference to a Named capture group.
           </p>
         </div>
@@ -176,7 +177,7 @@ Groups and ranges indicate groups and ranges of expression characters.
       <td><code>(?&#x3C;Name>x)</code></td>
       <td>
         <p>
-          <strong>Named capturing group: </strong>Matches "x" and stores it on
+          <strong>Named capturing group: </strong>Matches "x" and stores it on
           the groups property of the returned matches under the name specified
           by <code>&#x3C;Name></code>. The angle brackets (<code>&#x3C;</code>
           and <code>></code>) are required for group name.
@@ -191,7 +192,7 @@ Groups and ranges indicate groups and ranges of expression characters.
     <tr>
       <td><code>(?:<em>x</em>)</code></td>
       <td>
-        <strong>Non-capturing group: </strong>Matches "x" but does not remember
+        <strong>Non-capturing group: </strong>Matches "x" but does not remember
         the match. The matched substring cannot be recalled from the resulting
         array's elements (<code>[1], ..., [n]</code>) or from the predefined
         <code>RegExp</code> object's properties (<code>$1, ..., $9</code>).
@@ -206,10 +207,10 @@ Groups and ranges indicate groups and ranges of expression characters.
 
 ```js
 var aliceExcerpt = "There was a long silence after this, and Alice could only hear whispers now and then.";
-var regexpVowels = /[aeiouy]/g;
+var regexpVowels = /[AEIOUYaeiouy]/g;
 
 console.log("Number of vowels:", aliceExcerpt.match(regexpVowels).length);
-// Number of vowels: 25
+// Number of vowels: 26
 ```
 
 ### Using groups
@@ -218,10 +219,10 @@ console.log("Number of vowels:", aliceExcerpt.match(regexpVowels).length);
 let personList = `First_Name: John, Last_Name: Doe
 First_Name: Jane, Last_Name: Smith`;
 
-let regexpNames =  /First_Name: (\w+), Last_Name: (\w+)/mg;
+let regexpNames =  /First_Name: (\w+), Last_Name: (\w+)/mg;
 let match = regexpNames.exec(personList);
 do {
-  console.log(`Hello ${match[1]} ${match[2]}`);
+  console.log(`Hello ${match[1]} ${match[2]}`);
 } while((match = regexpNames.exec(personList)) !== null);
 ```
 
@@ -234,12 +235,13 @@ First_Name: Jane, Last_Name: Smith`;
 let regexpNames =  /First_Name: (?<firstname>\w+), Last_Name: (?<lastname>\w+)/mg;
 let match = regexpNames.exec(personList);
 do {
-  console.log(`Hello ${match.groups.firstname} ${match.groups.lastname}`);
+  console.log(`Hello ${match.groups.firstname} ${match.groups.lastname}`);
 } while((match = regexpNames.exec(personList)) !== null);
 ```
 
 ## See also
 
+- A polyfill of [`RegExp` named capture groups](https://github.com/zloirock/core-js#ecmascript-string-and-regexp) is available in [`core-js`](https://github.com/zloirock/core-js)
 - [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
 
   - [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)

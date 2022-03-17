@@ -82,7 +82,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 > **Note:** Unlike the {{htmlelement("meter")}} element, the minimum value is always 0, and the `min` attribute is not allowed for the `<progress>` element.
 
-> **Note:** The {{cssxref(":indeterminate")}} pseudo-class can be used to match against indeterminate progress bars. To change the progress bar to indeterminate after giving it a value you must remove the value attribute with {{domxref("Element.removeAttribute", "element.removeAttribute('value')")}}.
+> **Note:** The {{cssxref(":indeterminate")}} pseudo-class can be used to match against indeterminate progress bars. To change the progress bar to indeterminate after giving it a value you must remove the value attribute with {{domxref("Element.removeAttribute", "element.removeAttribute('value')")}}.
 
 ## Examples
 
@@ -114,12 +114,12 @@ In most cases you should provide an accessible label when using `<progress>`. Wh
   <!-- OR -->
   
   <label for="progress-bar">Uploading Document</label>
-  <progress id="progress-bar" value="70" max="100">
+  <progress id="progress-bar" value="70" max="100">70 %</progress>
 ```
-    
+
 ### Describing a particular region
 
-If the `<progress>` element is describing the loading progress of a section of a page, use [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) to point to the status, and set [`aria-busy="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria_busy ) on the section that is being updated, removing the `aria-busy` attribute when it has finished loading.
+If the `<progress>` element is describing the loading progress of a section of a page, use [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) to point to the status, and set [`aria-busy="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy ) on the section that is being updated, removing the `aria-busy` attribute when it has finished loading.
 
 #### Example
 

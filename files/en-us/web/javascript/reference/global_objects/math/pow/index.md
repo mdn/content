@@ -10,9 +10,7 @@ browser-compat: javascript.builtins.Math.pow
 ---
 {{JSRef}}
 
-The **`Math.pow()`** function returns the
-`base` to the `exponent` power, as in
-`base^exponent`.
+The **`Math.pow()`** static method, given two arguments, _base_ and _exponent_, returns `base`<sup>`exponent`</sup>.
 
 {{EmbedInteractiveExample("pages/js/math-pow.html")}}
 

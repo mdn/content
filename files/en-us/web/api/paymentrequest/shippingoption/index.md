@@ -14,17 +14,17 @@ browser-compat: api.PaymentRequest.shippingOption
 ---
 {{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
-The **`shippingOption`** read-only attribute of
-the {{domxref('PaymentRequest')}} interface returns either the id of a selected shipping
-option, null (if no shipping option was set to be selected) or a shipping option
-selected by the user. It is initially `null` by when no "selected" shipping
+The **`shippingOption`** read-only attribute of
+the {{domxref('PaymentRequest')}} interface returns either the id of a selected shipping
+option, null (if no shipping option was set to be selected) or a shipping option
+selected by the user. It is initially `null` by when no "selected" shipping
 options are provided.
 
-This attribute is only populated if the constructor is called with the
-`requestShipping` flag set to `true`. If
-`requestShipping` was `false` (or missing),
- `shippingOption` returns `null`, even the developer provides
-a  selected a shipping option.
+This attribute is only populated if the constructor is called with the
+`requestShipping` flag set to `true`. If
+`requestShipping` was `false` (or missing),
+ `shippingOption` returns `null`, even the developer provides
+a selected a shipping option.
 
 ## Syntax
 
@@ -35,10 +35,10 @@ var shippingOption = request.shippingOption;
 
 ## Example
 
-In the example below, the {{domxref('PaymentRequest.onshippingoptionchange')}} and
-the {{domxref('PaymentRequest.onshippingaoptionchange')}} events are dispatched. In
-each calls to `updateDetails()`  are made, one using a promise, and the other
-with a plain JS object. This demotrates synchrounous and asynchronous updates to a
+In the example below, the {{domxref('PaymentRequest.shippingaddresschange_event', 'shippingaddresschange')}} and
+the {{domxref('PaymentRequest.shippingoptionchange_event', 'shippingoptionchange')}} events are dispatched. In
+each calls to `updateDetails()`  are made, one using a promise, and the other
+with a plain JS object. This demonstrates synchronous and asynchronous updates to a
 payment sheet.
 
 ```js

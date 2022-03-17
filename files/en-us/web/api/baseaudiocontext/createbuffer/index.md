@@ -37,7 +37,7 @@ reference page.
 ## Syntax
 
 ```js
-var buffer = baseAudioContext.createBuffer(numOfchannels, length, sampleRate);
+var buffer = baseAudioContext.createBuffer(numOfChannels, length, sampleRate);
 ```
 
 ### Parameters

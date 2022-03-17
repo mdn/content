@@ -16,6 +16,13 @@ The **`test()`** method executes a search for a match between a
 regular expression and a specified string. Returns `true` or
 `false`.
 
+JavaScript {{jsxref("RegExp")}} objects are **stateful** when they have
+the {{jsxref("RegExp.global", "global")}} or {{jsxref("RegExp.sticky", "sticky")}} flags
+set (e.g. `/foo/g` or `/foo/y`). They store a
+{{jsxref("RegExp.lastIndex", "lastIndex")}} from the previous match. Using this
+internally, `test()` can be used to iterate over multiple matches in a string
+of text (with capture groups).
+
 {{EmbedInteractiveExample("pages/js/regexp-prototype-test.html", "taller")}}
 
 ## Syntax

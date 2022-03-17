@@ -17,6 +17,8 @@ The `AudioDestinationNode` interface represents the end destination of an audio 
 
 The `AudioDestinationNode` of a given `AudioContext` can be retrieved using the {{domxref("BaseAudioContext/destination", "AudioContext.destination")}} property.
 
+{{InheritanceDiagram}}
+
 <table class="properties">
   <tbody>
     <tr>

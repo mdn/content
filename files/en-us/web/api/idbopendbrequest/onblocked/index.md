@@ -43,14 +43,14 @@ request.onerror = function(event) {
 };
 
 request.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+  note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable.
-  // This is used a lot below
+  // This is used a lot below
   db = request.result;
 
   // Run the displayData() function to populate the task list with
-  // all the to-do list data already in the IDB
+  // all the to-do list data already in the IDB
   displayData();
 };
 

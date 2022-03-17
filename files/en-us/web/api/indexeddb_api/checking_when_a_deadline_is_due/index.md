@@ -65,11 +65,11 @@ In this segment, we check to see if the form fields have all been filled in. If 
     var transaction = db.transaction(["toDoList"], "readwrite");
 
     // report on the success of opening the transaction
-    transaction.oncomplete = function(event) {
+    transaction.oncomplete = event => {
       note.innerHTML += '<li>Transaction opened for task addition.</li>';
     };
 
-    transaction.onerror = function(event) {
+    transaction.onerror = event => {
       note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
     };
 
@@ -85,7 +85,7 @@ In this section we create an object called `newItem` that stores the data in the
 > **Note:** The `db` variable stores a reference to the IndexedDB database instance; we can then use various properties of this variable to manipulate the data.
 
 ```js
-    request.onsuccess = function(event) {
+    request.onsuccess = event => {
 
       note.innerHTML += '<li>New item added to database.</li>';
 
@@ -133,7 +133,7 @@ The `Date` object has a number of methods to extract various parts of the date a
 ```js
    var objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
 
-  objectStore.openCursor().onsuccess = function(event) {
+  objectStore.openCursor().onsuccess = event => {
     var cursor = event.target.result;
 
     if(cursor) {
@@ -192,7 +192,7 @@ The `notified == "no"` check is designed to make sure you will only get one noti
     // get the to-do list object that has this title as it's title
     var request = objectStore.get(title);
 
-    request.onsuccess = function() {
+    request.onsuccess = () => {
       // grab the data object returned as the result
       var data = request.result;
 
@@ -203,7 +203,7 @@ The `notified == "no"` check is designed to make sure you will only get one noti
       var requestUpdate = objectStore.put(data);
 
       // when this new request succeeds, run the displayData() function again to update the display
-      requestUpdate.onsuccess = function() {
+      requestUpdate.onsuccess = () => {
         displayData();
       }
 ```

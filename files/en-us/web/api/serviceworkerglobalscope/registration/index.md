@@ -13,7 +13,7 @@ browser-compat: api.ServiceWorkerGlobalScope.registration
 ---
 {{APIRef("Service Workers API")}}
 
-The **`registration`** read-only property of the {{domxref("ServiceWorkerGlobalScope")}} interface returns a reference to the {{domxref("ServiceWorkerRegistration")}} object, which represents the service worker's registration.
+The **`registration`** read-only property of the {{domxref("ServiceWorkerGlobalScope")}} interface returns a reference to the {{domxref("ServiceWorkerRegistration")}} object, which represents the service worker's registration.
 
 ## Syntax
 

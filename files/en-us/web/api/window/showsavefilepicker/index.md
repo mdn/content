@@ -10,7 +10,7 @@ tags:
   - working with files
 browser-compat: api.Window.showSaveFilePicker
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`showSaveFilePicker()`** method of the
 {{domxref("Window")}} interface shows a file picker that allows a user to save a file.
@@ -19,7 +19,7 @@ Either by selecting an existing file, or entering a name for a new file.
 ## Syntax
 
 ```js
-var FileSystemFileHandle = Window.showSaveFilePicker();
+window.showSaveFilePicker();
 ```
 
 ### Parameters

@@ -15,7 +15,9 @@ To compute the minimum value of the node-set, the node set is sorted into ascend
 
 ## Syntax
 
-    math:min(nodeSet)
+```
+math:min(nodeSet)
+```
 
 ### Parameters
 

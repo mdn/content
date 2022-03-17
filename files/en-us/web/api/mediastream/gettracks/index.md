@@ -14,11 +14,11 @@ browser-compat: api.MediaStream.getTracks
 ---
 {{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
-The **_`getTracks()`_** method of the
-{{domxref("MediaStream")}} interface returns a sequence that represents all the
-{{domxref("MediaStreamTrack")}} objects in this
-stream's [`track set`](https://www.w3.org/TR/mediacapture-streams/#track-set),
-regardless of {{domxref("MediaStreamTrack.kind")}}.
+The **_`getTracks()`_** method of the
+{{domxref("MediaStream")}} interface returns a sequence that represents all the
+{{domxref("MediaStreamTrack")}} objects in this
+stream's [`track set`](https://www.w3.org/TR/mediacapture-streams/#track-set),
+regardless of {{domxref("MediaStreamTrack.kind")}}.
 
 ## Syntax
 

@@ -81,10 +81,10 @@ The center of rotation is blue. The non-rotated rectangle is gray, and the rotat
 This example rotates a shape around its center point. To do this, the following steps
 are applied to the matrix:
 
-1.  First, {{domxref("CanvasRenderingContext2D.translate()", "translate()")}} moves the
+1. First, {{domxref("CanvasRenderingContext2D.translate()", "translate()")}} moves the
     matrix's origin to the shape's center.
-2.  `rotate()` rotates the matrix by the desired amount.
-3.  Finally, `translate()` moves the matrix's origin back to its starting
+2. `rotate()` rotates the matrix by the desired amount.
+3. Finally, `translate()` moves the matrix's origin back to its starting
     point. This is done by applying the values of the shape's center coordinates in a
     negative direction.
 

@@ -45,7 +45,7 @@ includes(searchElement, fromIndex)
     positive values of `fromIndex`, or at
     `arr.length + fromIndex` for negative values of
     `fromIndex` (using the {{interwiki("wikipedia", "absolute
-    value")}} of `fromIndex` as the number of elements from the end
+    value")}} of `fromIndex` as the number of elements from the end
     of the array at which to start the search).
 
     Defaults to `0`.
@@ -133,7 +133,7 @@ The example below illustrates `includes()` method called on the function's
 
 ## See also
 
-- A polyfill of `Array.prototype.includes` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.includes` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("TypedArray.prototype.includes()")}}
 - {{jsxref("String.prototype.includes()")}}
 - {{jsxref("Array.prototype.indexOf()")}}

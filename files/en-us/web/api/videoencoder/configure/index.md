@@ -57,7 +57,6 @@ VideoEncoder.configure(config)
         - `"quality"` (default)
         - `"realtime"`
 
-
 ### Return Value
 
 None.
@@ -102,4 +101,3 @@ encoder.configure(config);
 ## Browser compatibility
 
 {{Compat}}
-

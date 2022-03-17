@@ -43,7 +43,7 @@ If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor
 - {{domxref("URL.hostname", "hostname")}}
   - : A {{domxref("USVString")}} containing the domain of the URL.
 - {{domxref("URL.href", "href")}}
-  - : A stringifier that returns a {{domxref("USVString")}} containing the whole URL.
+  - : A {{Glossary("stringifier")}} that returns a {{domxref("USVString")}} containing the whole URL.
 - {{domxref("URL.origin", "origin")}} {{readonlyInline}}
   - : Returns a {{domxref("USVString")}} containing the origin of the URL, that is its scheme, its domain and its port.
 - {{domxref("URL.password", "password")}}
@@ -125,7 +125,7 @@ const response = await fetch(new URL('http://www.example.com/démonstration.html
 
 ## See also
 
-- A polyfill of `URL` is available in [`core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
+- [Polyfill of `URL` in `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
 - [URL API](/en-US/docs/Web/API/URL_API)
 - [What is a URL?](/en-US/docs/Learn/Common_questions/What_is_a_URL)
 - Property to obtain a `URL` object: {{domxref("URL")}}.

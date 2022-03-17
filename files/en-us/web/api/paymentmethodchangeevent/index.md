@@ -17,6 +17,8 @@ browser-compat: api.PaymentMethodChangeEvent
 
 The **`PaymentMethodChangeEvent`** interface of the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) describes the {{domxref("PaymentRequest/paymentmethodchange_event", "paymentmethodchange")}} event which is fired by some payment handlers when the user switches payment instruments (e.g., a user selects a "store" card to make a purchase while using Apple Pay).
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("PaymentMethodChangeEvent.PaymentMethodChangeEvent", "PaymentMethodChangeEvent()")}}

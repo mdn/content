@@ -11,9 +11,11 @@ browser-compat: api.OffscreenCanvas
 ---
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
-The **`OffscreenCanvas`** interface provides a canvas that can be rendered off screen. It is available in both the window and [worker](/en-US/docs/Web/API/Web_Workers_API) contexts.
+The **`OffscreenCanvas`** interface provides a canvas that can be rendered off screen. It is available in both the window and [worker](/en-US/docs/Web/API/Web_Workers_API) contexts.
 
 {{AvailableInWorkers}}
+
+{{InheritanceDiagram}}
 
 ## Constructors
 
@@ -40,7 +42,7 @@ The **`OffscreenCanvas`** interface provides a canvas that can be rendered off s
 
 ### Synchronous display of frames produced by an `OffscreenCanvas`
 
-One way to use the `OffscreenCanvas` API, is to use a rendering context that has been obtained from an `OffscreenCanvas` object to generate new frames. Once a new frame has finished rendering in this context,  the {{domxref("OffscreenCanvas.transferToImageBitmap", "transferToImageBitmap()")}} method can be called to save the most recent rendered image. This method returns an {{domxref("ImageBitmap")}} object, which can be used in a variety of Web APIs and also in a second canvas without creating a transfer copy.
+One way to use the `OffscreenCanvas` API, is to use a rendering context that has been obtained from an `OffscreenCanvas` object to generate new frames. Once a new frame has finished rendering in this context,  the {{domxref("OffscreenCanvas.transferToImageBitmap", "transferToImageBitmap()")}} method can be called to save the most recent rendered image. This method returns an {{domxref("ImageBitmap")}} object, which can be used in a variety of Web APIs and also in a second canvas without creating a transfer copy.
 
 To display the `ImageBitmap`, you can use a {{domxref("ImageBitmapRenderingContext")}} context, which can be created by calling `canvas.getContext("bitmaprenderer")` on a (visible) canvas element. This context only provides functionality to replace the canvas's contents with the given `ImageBitmap`. A call to {{domxref("ImageBitmapRenderingContext.transferFromImageBitmap()")}} with the previously rendered and saved `ImageBitmap` from the OffscreenCanvas, will display the `ImageBitmap` on the canvas and transfer its ownership to the canvas. A single `OffscreenCanvas` may transfer frames into an arbitrary number of other `ImageBitmapRenderingContext` objects.
 
@@ -102,14 +104,14 @@ You can also use requestAnimationFrame in workers
 
 ```js
 onmessage = function(evt) {
-  const canvas = evt.data.canvas;
-  const gl = canvas.getContext("webgl");
+  const canvas = evt.data.canvas;
+  const gl = canvas.getContext("webgl");
 
-  function render(time) {
-    // ... some drawing using the gl context ...
-    requestAnimationFrame(render);
-  }
-  requestAnimationFrame(render);
+  function render(time) {
+    // ... some drawing using the gl context ...
+    requestAnimationFrame(render);
+  }
+  requestAnimationFrame(render);
 };
 ```
 

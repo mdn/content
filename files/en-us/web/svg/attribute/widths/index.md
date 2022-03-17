@@ -13,7 +13,7 @@ The **`widths`** attribute indicates a list of range values, each followed by on
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("font-face")}}
+- {{SVGElement("font-face")}}
 
 ## Usage notes
 
@@ -40,12 +40,12 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `<number>`
-    *   : This value is a comma-separated list of UCS range values as defined in [ISO 10646](https://www.iso.org/standard/29819.html), each followed by one or more glyph widths.
+- `<number>`
+  - : This value is a comma-separated list of UCS range values as defined in [ISO 10646](https://www.iso.org/standard/29819.html), each followed by one or more glyph widths.
 
-        If this attribute is used, the {{SVGAttr("units-per-em")}} attribute must also be used.
+    If this attribute is used, the {{SVGAttr("units-per-em")}} attribute must also be used.
 
-        If the range is omitted, a range of U+0-7FFFFFFF is assumed which covers all characters and their glyphs. If not enough glyph widths are given, the last in the list is replicated to cover that range. If too many widths are provided, the extras are ignored.
+    If the range is omitted, a range of U+0-7FFFFFFF is assumed which covers all characters and their glyphs. If not enough glyph widths are given, the last in the list is replicated to cover that range. If too many widths are provided, the extras are ignored.
 
 ## Specifications
 
@@ -74,4 +74,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-*   [ISO 10646](https://www.iso.org/standard/29819.html)
+- [ISO 10646](https://www.iso.org/standard/29819.html)

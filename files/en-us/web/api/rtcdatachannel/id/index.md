@@ -47,10 +47,12 @@ This can be also useful for logging and debugging purposes.
 
 ## Example
 
-    var pc = new RTCPeerConnection();
-    var dc = pc.createDataChannel("my channel");
+```js
+var pc = new RTCPeerConnection();
+var dc = pc.createDataChannel("my channel");
 
-    console.log("Channel id: " + dc.id);
+console.log("Channel id: " + dc.id);
+```
 
 ## Specifications
 

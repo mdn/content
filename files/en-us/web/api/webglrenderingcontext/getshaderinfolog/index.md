@@ -46,7 +46,7 @@ gl.compileShader(shader);
 var message = gl.getShaderInfoLog(shader);
 
 if (message.length > 0) {
-  /* message may be an error or a warning */
+  /* message may be an error or a warning */
   throw message;
 }
 ```

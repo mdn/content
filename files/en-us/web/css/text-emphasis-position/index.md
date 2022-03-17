@@ -29,7 +29,7 @@ text-emphasis-position: left under;
 /* Global values */
 text-emphasis-position: inherit;
 text-emphasis-position: initial;
-text-emphasis-postition: revert;
+text-emphasis-position: revert;
 text-emphasis-position: unset;
 ```
 

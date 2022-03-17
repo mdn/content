@@ -17,8 +17,8 @@ browser-compat: api.BlobBuilder
 
 The **`BlobBuilder`** interface provides an easy way to
 construct {{domxref("Blob")}} objects. Just create a `BlobBuilder` and append
-chunks of data to it by calling the {{manch("append")}} method. When you're done
-building your blob, call {{manch("getBlob")}} to retrieve a {{domxref("Blob")}}
+chunks of data to it by calling the [`append()`](#append) method. When you're done
+building your blob, call [`getBlob()`](#getblob) to retrieve a {{domxref("Blob")}}
 containing the data you sent into the blob builder.
 
 ## Method overview
@@ -81,15 +81,15 @@ the value is coerced to a string before being appended to the blob.
 
 ```js
 void append(
-  in ArrayBuffer data
+  in ArrayBuffer data
 );
 
 void append(
-  in Blob data
+  in Blob data
 );
 
 void append(
-  in String data,
+  in String data,
   [optional] in String endings
 );
 ```
@@ -107,11 +107,11 @@ void append(
 ### getBlob()
 
 Returns the {{domxref("Blob")}} object that has been constructed using the data passed
-through calls to {{manch("append")}}.
+through calls to [`append()`](#append).
 
 ```js
 Blob getBlob(
-  in DOMString contentType {{optional_inline}}
+  in DOMString contentType {{optional_inline}}
 );
 ```
 
@@ -124,8 +124,8 @@ Blob getBlob(
 #### Return value
 
 A {{domxref("Blob")}} object containing all of the data passed to any calls to
-{{manch("append")}} made since the `BlobBuilder` was created. This also
-resets the `BlobBuilder` so that the next call to {{manch("append")}} is
+[`append()`](#append) made since the `BlobBuilder` was created. This also
+resets the `BlobBuilder` so that the next call to [`append()`](#append) is
 starting a new, empty blob.
 
 ### getFile() {{non-standard_inline}}

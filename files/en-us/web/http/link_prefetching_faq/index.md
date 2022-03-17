@@ -21,7 +21,7 @@ Starting in Gecko 1.9.1 (Firefox 3.5), HTTPS content can be prefetched.
 
 ### What are the prefetching hints?
 
-The browser looks for either an HTML {{ HTMLElement("link") }} or an [HTTP `Link:` header](/en-US/docs/Web/HTTP/Headers "HTTP headers") with a relation type of either `next` or `prefetch`. An example using the `link` tag follows:
+The browser looks for either an HTML {{ HTMLElement("link") }} or an [HTTP `Link:` header](/en-US/docs/Web/HTTP/Headers) with a relation type of either `next` or `prefetch`. An example using the `link` tag follows:
 
 ```html
 <link rel="prefetch" href="/images/big.jpeg">

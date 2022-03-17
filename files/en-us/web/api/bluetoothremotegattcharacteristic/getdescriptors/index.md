@@ -14,7 +14,7 @@ browser-compat: api.BluetoothRemoteGATTCharacteristic.getDescriptors
 ---
 {{SeeCompatTable}}
 
-The **`BluetoothRemoteGATTCharacteristic.getDescriptors()`** method
+The **`BluetoothRemoteGATTCharacteristic.getDescriptors()`** method
 returns a {{jsxref("Promise")}} that resolves to an {{jsxref("Array")}} of all
 {{domxref("BluetoothRemoteGATTDescriptor")}} objects for a given descriptor UUID.
 
@@ -26,8 +26,8 @@ BluetoothRemoteGATTCharacteristic.getDescriptors(bluetoothDescriptorUUID).then(f
 
 ### Returns
 
-A {{jsxref("Promise")}} that resolves to an {{jsxref("Array")}}
-of {{domxref("BluetoothRemoteGATTDescriptor")}} objects.
+A {{jsxref("Promise")}} that resolves to an {{jsxref("Array")}}
+of {{domxref("BluetoothRemoteGATTDescriptor")}} objects.
 
 ## Specifications
 

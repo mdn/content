@@ -11,8 +11,8 @@ The **`path`** attribute has two different meanings, either it defines a text pa
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("animateMotion")}}
-*   {{SVGElement("textPath")}}
+- {{SVGElement("animateMotion")}}
+- {{SVGElement("textPath")}}
 
 ## Example
 
@@ -58,8 +58,8 @@ For {{SVGElement("animateMotion")}}, `path` defines the motion path, expressed i
   </tbody>
 </table>
 
-*   `<path-data>`
-    *   : This value defines the motion path along which the referenced element is animated. For detailed information about the commands that can be used, see the [explanation for the `d` attribute](/en-US/docs/Web/SVG/Attribute/d#Path_commands).
+- `<path-data>`
+  - : This value defines the motion path along which the referenced element is animated. For detailed information about the commands that can be used, see the [explanation for the `d` attribute](/en-US/docs/Web/SVG/Attribute/d#Path_commands).
 
 ## textPath
 
@@ -82,8 +82,8 @@ For {{SVGElement("textPath")}}, `path` defines the path onto which the {{Glossar
   </tbody>
 </table>
 
-*   `<path-data>`
-    *   : This value defines the text path along which the glyphs of the `<text>` element are aligned. For detailed information about the commands that can be used, see the [explanation for the `d` attribute](/en-US/docs/Web/SVG/Attribute/d#Path_commands).
+- `<path-data>`
+  - : This value defines the text path along which the glyphs of the `<text>` element are aligned. For detailed information about the commands that can be used, see the [explanation for the `d` attribute](/en-US/docs/Web/SVG/Attribute/d#Path_commands).
 
 ## Specifications
 

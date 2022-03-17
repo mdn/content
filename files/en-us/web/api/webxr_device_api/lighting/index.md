@@ -29,9 +29,9 @@ Although this article isn't a comprehensive guide to lighting a 3D scene, it's u
 **Figure: A diagram showing how the angle of reflection corresponds to the angle of incidence.**
 ![A diagram showing how the angle of reflection corresponds to the angle of incidence.](law-of-reflection.svg)
 
-Every object we see, we see because the object either emits or reflects light (or both). The incoming light ray—the **incident ray**—arrives at an angle known as the **angle of incidence**. The angle of incidence, Θᵢ, is the angle between the incident ray and the surface's {{interwiki("wikipedia", "normal vector")}}.
+Every object we see, we see because the object either emits or reflects light (or both). The incoming light ray—the **incident ray**—arrives at an angle known as the **angle of incidence**. The angle of incidence, Θᵢ, is the angle between the incident ray and the surface's {{interwiki("wikipedia", "normal vector")}}.
 
-For rough surfaces, light is reflected equally in every direction. However, glossy, mirror-like surfaces reflect most of the light in a direction whose **angle of reflection**, Θᵣ, is equal to the angle of incidence, except it's on the opposite side of the normal vector. The **reflected ray**, then, departs along at that angle off the normal. This is the **{{interwiki("wikipedia", "law of reflection")}}**. This is the foundation for much of what's involved in shading a scene, and comes into play in terms of how different types of light source behave.
+For rough surfaces, light is reflected equally in every direction. However, glossy, mirror-like surfaces reflect most of the light in a direction whose **angle of reflection**, Θᵣ, is equal to the angle of incidence, except it's on the opposite side of the normal vector. The **reflected ray**, then, departs along at that angle off the normal. This is the **{{interwiki("wikipedia", "law of reflection")}}**. This is the foundation for much of what's involved in shading a scene, and comes into play in terms of how different types of light source behave.
 
 The reflected light ray's color may, of course, be altered in intensity and/or hue due to the light's interaction with the surface, but the angle is always the same.
 
@@ -39,11 +39,11 @@ The reflected light ray's color may, of course, be altered in intensity and/or h
 
 A light source has three major components; each component is in essence a type of light
 
-There are three kinds of light that can affect the color and brightness of objects and their pixels as displayed on the viewer's screen or headset.
+There are three kinds of light that can affect the color and brightness of objects and their pixels as displayed on the viewer's screen or headset.
 
 #### Ambient light
 
-**Ambient light** is light that doesn't come from a defined source, but is just present throughout the scene. This light reaches every surface in the scene at the same intensity from every direction, and is then reflected equally in every direction. As a result, the effect applied by ambient light is universally equal all through the scene.
+**Ambient light** is light that doesn't come from a defined source, but is just present throughout the scene. This light reaches every surface in the scene at the same intensity from every direction, and is then reflected equally in every direction. As a result, the effect applied by ambient light is universally equal all through the scene.
 
 **Figure: A sphere with only ambient lighting. Note the total lack of any shading to indicate the depth of the sphere.**
 ![A sphere which only has ambient lighting. Note the total lack of any shading to indicate the depth of the sphere.](sphere-ambient-light-only.jpg)
@@ -84,7 +84,7 @@ Ambient light sources generally don't correspond to any object within the scene,
 
 #### Directional light sources
 
-A **directional light source** is a light source that comes from a specific direction, but not from a specific source, so its emitted light rays are parallel to one another. In addition, the intensity of the light doesn't change over distance. This means that shadows cast by directional lights are very sharp, with an essentially instant transition between lighted and shadowed.
+A **directional light source** is a light source that comes from a specific direction, but not from a specific source, so its emitted light rays are parallel to one another. In addition, the intensity of the light doesn't change over distance. This means that shadows cast by directional lights are very sharp, with an essentially instant transition between lighted and shadowed.
 
 **Figure: Earth and moon both half-lit by the sun's directional lighting.**
 ![A photo taken by the Galileo spacecraft from about 6.3 million kilometers away, with Earth and moon both half-lit by the sun.](earthandmoon.jpg)
@@ -93,13 +93,13 @@ The most common example of a directional light is the sun. While the sun is in a
 
 #### Point light sources
 
-A **point light source** is a light source located at a specific location, radiating outward equally in every direction. Light bulbs, candles, and the like are examples of point light sources. The closer an object is to a point light source, the brighter the light it casts onto that object. The rate at which the brightness of a point light falls off is called **attenuation**, and is a configurable feature of the light source in WebGL and other lighting systems.
+A **point light source** is a light source located at a specific location, radiating outward equally in every direction. Light bulbs, candles, and the like are examples of point light sources. The closer an object is to a point light source, the brighter the light it casts onto that object. The rate at which the brightness of a point light falls off is called **attenuation**, and is a configurable feature of the light source in WebGL and other lighting systems.
 
 Between the law of reflection and the fact that the brightness of the light rays decreases with distance, the light emitted by a point source and reflected back tends to be brightest at the closest point to the light source and dimmer the farther away it is. Even if the surface is flat, the closest point to the light source is the center, with rays becoming increasingly long as the angle away from the normal changes.
 
 #### Spot light sources
 
-A **spot light source** (or **spotlight**) is a light source which is located at a specific position, emitting a cone of light in the direction of its orientation vector. A tapering rate parameter defines how quickly the brightness of the light falls off at the edges of the cone of light, and, as with point lights, an attenuation parameter controls how the light fades over distance.
+A **spot light source** (or **spotlight**) is a light source which is located at a specific position, emitting a cone of light in the direction of its orientation vector. A tapering rate parameter defines how quickly the brightness of the light falls off at the edges of the cone of light, and, as with point lights, an attenuation parameter controls how the light fades over distance.
 
 **Figure: Photo of a spotlight shining upon a stucco wall at night.**
 ![Photo of a spotlight shining upon a stucco wall at night.](spotlight-on-stucco.jpg)
@@ -116,11 +116,11 @@ Additionally, the more accurate the lighting is designed to be, the more computa
 
 Although some graphics libraries include support for light source objects and automatically calculate and apply lighting effect for you, WebGL does not. Fortunately, lighting isn't overly difficult to apply in your own vertex and fragment shaders.
 
-For each polygon in the scene, the **vertex shader** program determines the vertices' colors, and then the **fragment shader** generates each pixel in the polygon by combining the appropriate texel from the assigned texture, any color tint or effect, and other visual data. It is at this time that the scene's lighting is considered and applied as appropriate to the pixel before the pixel is stored into the framebuffer.
+For each polygon in the scene, the **vertex shader** program determines the vertices' colors, and then the **fragment shader** generates each pixel in the polygon by combining the appropriate texel from the assigned texture, any color tint or effect, and other visual data. It is at this time that the scene's lighting is considered and applied as appropriate to the pixel before the pixel is stored into the framebuffer.
 
 The color of each pixel in the final, rendered, scene is calculated using some intricate math that factors in things like:
 
-- The color of the **texture element** (the pixel within the texture mapped onto the object; also known as a **texel**) corresponding to the screen pixel, given the object geometry, the viewer position and orientation relative to each polygon, and so forth.
+- The color of the **texture element** (the pixel within the texture mapped onto the object; also known as a **texel**) corresponding to the screen pixel, given the object geometry, the viewer position and orientation relative to each polygon, and so forth.
 - The viewer position and distance.
 - The surface material and reflectivity.
 - The concavity or convexity of the surface at the target location.
@@ -132,13 +132,13 @@ You can learn more about how to perform lighting in WebGL in the article [Lighti
 
 ## Lighting issues for mixed reality content
 
-In addition to the usual issues that you need to contend with while lighting a scene, the VR or AR use case adds additional areas of concern when writing your shaders. In this section, we provide some basic mixed reality lighting guidelines to consider as you construct, render, and light your scene. While some of these are also useful in any other 3D setting, most are specific to virtual reality and, in some cases even more so, to augmented reality.
+In addition to the usual issues that you need to contend with while lighting a scene, the VR or AR use case adds additional areas of concern when writing your shaders. In this section, we provide some basic mixed reality lighting guidelines to consider as you construct, render, and light your scene. While some of these are also useful in any other 3D setting, most are specific to virtual reality and, in some cases even more so, to augmented reality.
 
 Since your scene is intended to represent a setting a person or their avatar can exist within, you should try to achieve some degree of consistency and realism in terms of the positioning and presentation of your light sources. Obviously, there are exceptions to this guideline, such as when your scene represents an otherworldly or alien setting, or when your goal is to create an unsettling visual effect.
 
 ### Realism in light source placement
 
-When possible, you should try to make your virtual light sources correspond to objects that actually exists. If you have a virtual room that needs overhead lighting, have a model of a ceiling lamp at the location of your light source. There are exceptions, such as the ambient lighting that adds a baseline amount of lighting to your setting, and the sun, which is a directional light (that is, a light source where every light ray is parallel, coming from somewhere in the sky and ending somewhere within your scene).
+When possible, you should try to make your virtual light sources correspond to objects that actually exists. If you have a virtual room that needs overhead lighting, have a model of a ceiling lamp at the location of your light source. There are exceptions, such as the ambient lighting that adds a baseline amount of lighting to your setting, and the sun, which is a directional light (that is, a light source where every light ray is parallel, coming from somewhere in the sky and ending somewhere within your scene).
 
 Try to place light sources in realistic locations for the setting and the mood you're trying to create. A scene intended to feel like a naturally-lit, real-world setting doesn't have studio lighting. It has sunlight, possibly light reflected off of objects or water within the scene, and so forth, but not lamps directed at the faces of objects or people in the scene.
 
@@ -146,19 +146,19 @@ Try to place light sources in realistic locations for the setting and the mood y
 
 If your light source is located within the scene, you probably should try to ensure the viewer's avatar can't physically intersect with the light source. The results could be... strange.
 
-If the viewer's avatar is meant to have physical form, it should have a model, even if the viewer can never see it, so that light interacts with the avatar correctly. Minimally, this means the avatar should cast an appropriate shadow; however, depending on factors such as whether or not the avatar can be seen and the materials, texturing, and other attributes of the its model—including, especially, its reflectivity—the avatar may also need to reflect light, as well as potentially affect the coloration of the light reflected off of it.
+If the viewer's avatar is meant to have physical form, it should have a model, even if the viewer can never see it, so that light interacts with the avatar correctly. Minimally, this means the avatar should cast an appropriate shadow; however, depending on factors such as whether or not the avatar can be seen and the materials, texturing, and other attributes of the its model—including, especially, its reflectivity—the avatar may also need to reflect light, as well as potentially affect the coloration of the light reflected off of it.
 
 ### Realism in augmented reality
 
-Augmented reality introduces an additional level of complexity to lighting your objects, since your virtual objects need to exist within a physical world that has its own light sources. As such, you should try to match your lighting to the real world's light sources as much as possible. This is done using a technique known as {{anch("Lighting estimation")}}.
+Augmented reality introduces an additional level of complexity to lighting your objects, since your virtual objects need to exist within a physical world that has its own light sources. As such, you should try to match your lighting to the real world's light sources as much as possible. This is done using a technique known as [Lighting estimation](#lighting_estimation).
 
 Conversely, you should try to avoid having virtual objects that are themselves light sources, unless you're prepared to create code that can cast that lighting onto the real world setting. Casting light onto real-world objects is essentially the opposite of casting shadows. It can be done, but is not as widely implemented.
 
 ## Lighting estimation
 
-**Lighting estimation** is a technique used by augmented reality platforms to attempt to match the lighting of the virtual objects in the scene to the lighting of the real world surrounding the viewer. This involves the collection of data that may come from various sensors (including the accelerometer and compass, if available), cameras, and potentially others. Other data is collected using the [Geolocation API](/en-US/docs/Web/API/Geolocation_API), and then all this data is put through algorithms and machine learning engines to generate the estimated lighting information.
+**Lighting estimation** is a technique used by augmented reality platforms to attempt to match the lighting of the virtual objects in the scene to the lighting of the real world surrounding the viewer. This involves the collection of data that may come from various sensors (including the accelerometer and compass, if available), cameras, and potentially others. Other data is collected using the [Geolocation API](/en-US/docs/Web/API/Geolocation_API), and then all this data is put through algorithms and machine learning engines to generate the estimated lighting information.
 
-At present, WebXR doesn't offer support for lighting estimation. However, a [specification is currently being drafted](https://github.com/immersive-web/lighting-estimation) under the auspices of the W3C. You can learn all about the proposed API and a fair amount about the concept of lighting estimation in the [explainer documnent](https://github.com/immersive-web/lighting-estimation/blob/master/lighting-estimation-explainer.md) that's included in the specification's GitHub repository.
+At present, WebXR doesn't offer support for lighting estimation. However, a [specification is currently being drafted](https://github.com/immersive-web/lighting-estimation) under the auspices of the W3C. You can learn all about the proposed API and a fair amount about the concept of lighting estimation in the [explainer document](https://github.com/immersive-web/lighting-estimation/blob/master/lighting-estimation-explainer.md) that's included in the specification's GitHub repository.
 
 In essence, lighting estimation collects this information about the light sources and the shape and orientation of the objects in the scene, along with information about the materials they're made of, then returns data you can use to create virtual light source objects that approximately match the real world's lighting.
 
@@ -172,14 +172,14 @@ Of course, many AR applications make it pretty clear where the user is located. 
 
 ### Ambient Light Sensor API
 
-The collection of light data using the [Ambient Light Sensor API](/en-US/docs/Web/API/AmbientLightSensor) introduces various potential privacy issues.
+The collection of light data using the [Ambient Light Sensor API](/en-US/docs/Web/API/AmbientLightSensor) introduces various potential privacy issues.
 
 - Lighting information can leak to the web information about the user's surroundings and device usage patterns. Such information can be used to enhance user profiling and behavior analysis data.
 - If two or more devices access content that uses the same third-party script, that script can be used to correlate lighting information and how it changes over time to attempt to determine a spatial relationship between the devices; this could in theory indicate that the devices are in the same general area, for example.
 
 ### How browsers mitigate these issues
 
-In order to help mitigate these risks, browsers are required by the WebXR Lighting Estimation API specification to report lighting information that is fudged somewhat from the true value. There are many ways this could be done.
+In order to help mitigate these risks, browsers are required by the WebXR Lighting Estimation API specification to report lighting information that is fudged somewhat from the true value. There are many ways this could be done.
 
 #### Spherical harmonics precision
 
@@ -187,9 +187,9 @@ Browsers can mitigate the risk of fingerprinting by reducing the precision of {{
 
 #### Decoupling orientation from lighting
 
-In an AR application that uses geolocation to determine orientation and potentially position information, avoiding having that information directly correlate to the state of the lighting is another way browsers can protect users from fingerprinting attacks. By ensuring that the compass direction and the light directionality aren't identical on every device that's near (or claims to be near) the user's location, the ability to find users based on the state of the lighting around them is removed.
+In an AR application that uses geolocation to determine orientation and potentially position information, avoiding having that information directly correlate to the state of the lighting is another way browsers can protect users from fingerprinting attacks. By ensuring that the compass direction and the light directionality aren't identical on every device that's near (or claims to be near) the user's location, the ability to find users based on the state of the lighting around them is removed.
 
-Wwhen the browser provides details about a very bright, directional light source, that source probably represents the sun. The directionality of this bright light source combined with the time of day can be used to determine the user's geographic location without involving the Geolocation API. By ensuring that the coordinates of the AR scene don't align with compass coordinates, and by reducing the precision of the sun's light angle, the location can no longer be accurately estimated using this technique.
+When the browser provides details about a very bright, directional light source, that source probably represents the sun. The directionality of this bright light source combined with the time of day can be used to determine the user's geographic location without involving the Geolocation API. By ensuring that the coordinates of the AR scene don't align with compass coordinates, and by reducing the precision of the sun's light angle, the location can no longer be accurately estimated using this technique.
 
 #### Temporal and spatial filtering
 

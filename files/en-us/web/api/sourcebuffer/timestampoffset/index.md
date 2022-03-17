@@ -14,7 +14,7 @@ tags:
   - timestampOffset
 browser-compat: api.SourceBuffer.timestampOffset
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{draft}}
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 The **`timestampOffset`** property of the
 {{domxref("SourceBuffer")}} interface controls the offset applied to timestamps inside

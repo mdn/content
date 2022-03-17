@@ -28,13 +28,13 @@ Let's try it out! Using a text editor, paste the three lines of CSS (above) into
 
 To make the code work, we still need to apply this CSS (above) to your HTML document. Otherwise, the styling won't change the appearance of the HTML. (If you haven't been following our project, pause here to read [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files) and [HTML basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics).)
 
-1.  Open your `index.html` file. Paste the following line in the head (between the {{HTMLElement("head")}} and `</head>` tags):
+1. Open your `index.html` file. Paste the following line in the head (between the {{HTMLElement("head")}} and `</head>` tags):
 
     ```html
     <link href="styles/style.css" rel="stylesheet">
     ```
 
-2.  Save `index.html` and load it in your browser. You should see something like this:
+2. Save `index.html` and load it in your browser. You should see something like this:
 
 ![A mozilla logo and some paragraphs. The paragraph text has been styled red by our css.](website-screenshot-styled.png)If your paragraph text is red, congratulations! Your CSS is working.
 
@@ -151,7 +151,7 @@ There are many more selectors to discover. To learn more, see the MDN [Selectors
 
 Now that we've explored some CSS fundamentals, let's improve the appearance of the example by adding more rules and information to the `style.css` file.
 
-1.  First, find the [output from Google Fonts](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#font) that you previously saved from [What will your website look like?](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like). Add the {{htmlelement("link")}} element somewhere inside your `index.html`'s head (anywhere between the {{HTMLElement("head")}} and `</head>` tags). It looks something like this:
+1. First, find the [output from Google Fonts](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#font) that you previously saved from [What will your website look like?](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like). Add the {{htmlelement("link")}} element somewhere inside your `index.html`'s head (anywhere between the {{HTMLElement("head")}} and `</head>` tags). It looks something like this:
 
     ```html
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -159,8 +159,8 @@ Now that we've explored some CSS fundamentals, let's improve the appearance of t
 
     This code links your page to a style sheet that loads the Open Sans font family with your webpage.
 
-2.  Next, delete the existing rule you have in your `style.css` file. It was a good test, but let's not continue with lots of red text.
-3.  Add the following lines (shown below), replacing the `font-family` assignment with your `font-family` selection from [What will your website look like?](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#font). The property `font-family` refers to the font(s) you want to use for text. This rule defines a global base font and font size for the whole page. Since {{HTMLElement("html")}} is the parent element of the whole page, all elements inside it inherit the same `font-size` and `font-family`.
+2. Next, delete the existing rule you have in your `style.css` file. It was a good test, but let's not continue with lots of red text.
+3. Add the following lines (shown below), replacing the `font-family` assignment with your `font-family` selection from [What will your website look like?](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#font). The property `font-family` refers to the font(s) you want to use for text. This rule defines a global base font and font size for the whole page. Since {{HTMLElement("html")}} is the parent element of the whole page, all elements inside it inherit the same `font-size` and `font-family`.
 
     ```css
     html {
@@ -171,18 +171,18 @@ Now that we've explored some CSS fundamentals, let's improve the appearance of t
 
     > **Note:** Anything in CSS between `/*` and `*/` is a **CSS comment**. The browser ignores comments as it renders the code. CSS comments are a way for you to write helpful notes about your code or logic.
 
-4.  Now let's set font sizes for elements that will have text inside the HTML body ({{htmlelement("h1")}}, {{htmlelement("li")}}, and {{htmlelement("p")}}). We'll also center the heading. Finally, let's expand the second ruleset (below) with settings for line height and letter spacing to make body content more readable.
+4. Now let's set font sizes for elements that will have text inside the HTML body ({{htmlelement("h1")}}, {{htmlelement("li")}}, and {{htmlelement("p")}}). We'll also center the heading. Finally, let's expand the second ruleset (below) with settings for line height and letter spacing to make body content more readable.
 
     ```css
     h1 {
-      font-size: 60px;
-      text-align: center;
+      font-size: 60px;
+      text-align: center;
     }
 
     p, li {
-      font-size: 16px;
-      line-height: 2;
-      letter-spacing: 1px;
+      font-size: 16px;
+      line-height: 2;
+      letter-spacing: 1px;
     }
     ```
 
@@ -195,6 +195,8 @@ Adjust the `px` values as you like. Your work-in-progress should look similar to
 Something you'll notice about writing CSS: a lot of it is about boxes. This includes setting size, color, and position. Most HTML elements on your page can be thought of as boxes sitting on top of other boxes.
 
 ![a big stack of boxes or crates sat on top of one another](boxes.jpg)
+
+Photo from [https://www.geograph.org.uk/photo/3418115](https://www.geograph.org.uk/photo/3418115) Copyright © [Jim Barton](https://www.geograph.org.uk/profile/26362) [cc-by-sa/2.0](https://creativecommons.org/licenses/by-sa/2.0/)
 
 CSS layout is mostly based on the _box model._ Each box taking up space on your page has properties like:
 
@@ -236,7 +238,7 @@ body {
 }
 ```
 
-There are several declarations for the {{htmlelement("body")}} element. Let's go through these line-by-line:
+There are several declarations for the {{htmlelement("body")}} element. Let's go through these line-by-line:
 
 - `width: 600px;` This forces the body to always be 600 pixels wide.
 - `margin: 0 auto;` When you set two values on a property like `margin` or `padding`, the first value affects the element's top _and_ bottom side (setting it to `0` in this case); the second value affects the left _and_ right side. (Here, `auto` is a special value that divides the available horizontal space evenly between left and right). You can also use one, two, three, or four values, as documented in [Margin Syntax](/en-US/docs/Web/CSS/margin#syntax).
@@ -266,7 +268,7 @@ Finally, `text-shadow` applies a shadow to the text content of the element. Its 
 - The first pixel value sets the **horizontal offset** of the shadow from the text: how far it moves across.
 - The second pixel value sets the **vertical offset** of the shadow from the text: how far it moves down.
 - The third pixel value sets the **blur radius** of the shadow. A larger value produces a more fuzzy-looking shadow.
-- The fourth value sets the base color of the shadow.
+- The fourth value sets the base color of the shadow.
 
 Try experimenting with different values to see how it changes the appearance.
 

@@ -38,9 +38,7 @@ The state of ARIA technology has always depended on the community. If you notice
   </tbody>
   </table>
 
-
 ### Browsers
-
 
 <table style="width: 100%;">
  <thead>

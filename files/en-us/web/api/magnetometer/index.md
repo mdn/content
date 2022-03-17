@@ -20,6 +20,8 @@ To use this sensor, the user must grant permission to the `'magnetometer'` devic
 
 If a feature policy blocks use of a feature, it's because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("Magnetometer.Magnetometer", "Magnetometer()")}}
@@ -34,9 +36,17 @@ If a feature policy blocks use of a feature, it's because your code is inconsist
 - {{domxref('Magnetometer.z')}} {{readonlyinline}}
   - : Returns a double containing the magnetic field around the device's z axis.
 
+## Methods
+
+_`Magnetometer` doesn't have own methods. However, it inherits methods from its parent interfaces, {{domxref("Sensor")}} and {{domxref("EventTarget")}}._
+
+## Events
+
+_`Magnetometer` doesn't have own events. However, it inherits events from its parent interface, {{domxref('Sensor')}}._
+
 ## Example
 
-The magnetometer is typically read in the {{domxref('Sensor.onreading')}} event callback. In the example below this occurs sixty times a second.
+The magnetometer is typically read in the {{domxref('Sensor.reading_event', 'reading')}} event callback. In the example below this occurs sixty times a second.
 
 ```js
 let magSensor = new Magnetometer({frequency: 60});

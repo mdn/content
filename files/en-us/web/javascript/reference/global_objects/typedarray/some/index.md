@@ -74,7 +74,7 @@ index of the element, and the array object being traversed.
 If a `thisArg` parameter is provided to `some`, it will be passed
 to `callbackFn` when invoked, for use as its `this` value.
 Otherwise, the value `undefined` will be passed for use as its
-`this` value.  The `this` value ultimately observable by
+`this` value.  The `this` value ultimately observable by
 `callbackFn` is determined according to [the usual rules for
 determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
 
@@ -133,6 +133,6 @@ new Uint8Array([12, 5, 8, 1, 4]).some(elem => elem > 10); // true
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.some` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.some` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray.prototype.every()")}}
 - {{jsxref("Array.prototype.some()")}}

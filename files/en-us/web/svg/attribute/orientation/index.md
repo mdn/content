@@ -13,7 +13,7 @@ The **`orientation`** attribute indicates that the given {{Glossary("glyph")}} i
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("glyph")}}
+- {{SVGElement("glyph")}}
 
 ## Usage notes
 
@@ -36,10 +36,10 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `h`
-    *   : This value indicates that the glyph is only used for a horizontal text direction.
-*   `v`
-    *   : This value indicates that the glyph is only used for a vertical text direction.
+- `h`
+  - : This value indicates that the glyph is only used for a horizontal text direction.
+- `v`
+  - : This value indicates that the glyph is only used for a vertical text direction.
 
 ## Specifications
 

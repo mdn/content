@@ -38,11 +38,13 @@ iceRole = RTCIceTransport.role;
 
 ### Value
 
-A {{domxref("DOMString")}} specifying whether the {{domxref("RTCIceTransport")}}
-represents the controlling agent or the controlled agent. The value must be one of those
-found in the enumerated type {{domxref("RTCIceRole")}}:
+A string specifying whether the {{domxref("RTCIceTransport")}}
+represents the controlling agent or the controlled agent. The value must be one of the following:
 
-{{page("/en-US/docs/Web/API/RTCIceRole", "Values")}}
+- `"controlling"`
+  - : The {{domxref("RTCIceTransport")}} object is serving as the controlling agent.
+- `"controlled"`
+  - : The transport is the controlled agent.
 
 ## Specifications
 

@@ -15,6 +15,8 @@ The `Notification` interface of the [Notifications API](/en-US/docs/Web/API/Noti
 
 These notifications' appearance and specific functionality vary across platforms but generally they provide a way to asynchronously provide information to the user.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("Notification.Notification", "Notification()")}}
@@ -48,7 +50,7 @@ These properties are available only on instances of the `Notification` object.
 - {{domxref("Notification.body")}} {{readonlyinline}}
   - : The body string of the notification as specified in the constructor's `options` parameter.
 - {{domxref("Notification.data")}} {{readonlyinline}}
-  - : Returns a structured clone of the notification’s data.
+  - : Returns a structured clone of the notification's data.
 - {{domxref("Notification.dir")}} {{readonlyinline}}
   - : The text direction of the notification as specified in the constructor's `options` parameter.
 - {{domxref("Notification.lang")}} {{readonlyinline}}

@@ -50,7 +50,7 @@ Even though this player will define its own custom control set, the `controls` a
 
 A poster image is defined for the video, and the `preload` attribute is set to `metadata`, which informs the browser that it should initially only attempt to load the metadata from the video file rather than the entire video file. This provides the player with data such as video duration and format.
 
-> **Note:** IE9 behaves differently than most other browsers when a `poster` attribute is set. Most browsers interpret the presence of a `poster` attribute to mean that the specified image is to be displayed until the user chooses to play the video. IE9 will only use the specified poster image in this way if `preload="none"` is set; otherwise, it will take the first still of the video and display that instead.
+> **Note:** IE9 behaves differently than most other browsers when a `poster` attribute is set. Most browsers interpret the presence of a `poster` attribute to mean that the specified image is to be displayed until the user chooses to play the video. IE9 will only use the specified poster image in this way if `preload="none"` is set; otherwise, it will take the first still of the video and display that instead.
 
 Three different video sources are provided for the player: MP4, WebM, and Ogg. Using these different source formats gives the best chance of being supported across all browsers that support HTML5 video. For further information on video formats and browser compatibility, see [supported media formats](/en-US/docs/Web/Media/Formats#browser_compatibility).
 
@@ -316,14 +316,14 @@ var isFullScreen = function() {
 }
 ```
 
-This function checks all the various browser prefixed versions to try and determine the correct result.
+This function checks all the various browser prefixed versions to try and determine the correct result.
 
 If the browser is currently in fullscreen mode, then it must be exited and vice versa. Support for the different prefixed versions of the relevant action are checked in order to call the correct one. Interestingly `document` must be used for exiting/cancelling fullscreen mode, whereas any HTML element can request fullscreen mode, here the `videoContainer` is used as it also contains the custom controls which should also appear with the video in fullscreen mode.
 
 The exception to this is Safari 5.1, which will only allow `webkitRequestFullScreen` to be called on the {{ htmlelement("video") }} element. The custom controls will only appear on this browser in fullscreen mode with some WebKit specific CSS:
 
-1.  The default browser controls have to be hidden with `video::-webkit-media-controls { display:none !important; }`
-2.  The custom controls container needs to have a special `z-index` value: `.controls { z-index:2147483647; }`
+1. The default browser controls have to be hidden with `video::-webkit-media-controls { display:none !important; }`
+2. The custom controls container needs to have a special `z-index` value: `.controls { z-index:2147483647; }`
 
 Dealing with WebKit-specific code in this way will affect all WebKit browsers, but everything works as expected in more advanced WebKit browsers such as Chrome and the latest Opera.
 

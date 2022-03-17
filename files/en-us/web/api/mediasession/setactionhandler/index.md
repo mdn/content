@@ -47,7 +47,7 @@ navigator.mediaSession.setActionHandler(type, callback)
     - `seekto`
       - : Moves the playback position to the specified time within the media.
         The time to which to seek is specified in the `seekTime` property passed to the callback.
-        If you intend to perform multiple `seekto` operations in rapid succession, you can also specify the `fastSeek` property passed to the callback with a value of `true`. 
+        If you intend to perform multiple `seekto` operations in rapid succession, you can also specify the `fastSeek` property passed to the callback with a value of `true`.
         This lets the browser know it can take steps to optimize repeated operations, and is likely to result in improved performance.
     - `skipad`
       - : Skips past the currently playing advertisement or commercial.
@@ -59,15 +59,15 @@ navigator.mediaSession.setActionHandler(type, callback)
     - `action`
       - : A {{domxref("DOMString")}} representing the action type. This property allows a single callback to handle multiple action types.
     - `fastSeek` {{optional_inline}}
-      - : An `{{anch("seekto")}}` action may *optionally* include this property, which is a Boolean value indicating whether or not to perform a "fast" seek.
+      - : A [`seekto`](#seekto) action may *optionally* include this property, which is a Boolean value indicating whether or not to perform a "fast" seek.
         A "fast" seek is a seek being performed in a rapid sequence, such as when fast-forwarding or reversing through the media, rapidly skipping through it.
         This property can be used to indicate that you should use the shortest possible method to seek the media.
-        `fastSeek` is not included on the final action in the seek sequence in this situation.
+        `fastSeek` is not included on the final action in the seek sequence in this situation.
     - `seekOffset` {{optional_inline}}
-      - : If the `action` is either `{{anch("seekforward")}}` or `{{anch("seekbackward")}}` and this property is present, it is a floating point value which indicates the number of seconds to move the play position forward or backward.
+      - : If the `action` is either [`seekforward`](#seekforward) or [`seekbackward`](#seekbackward) and this property is present, it is a floating point value which indicates the number of seconds to move the play position forward or backward.
         If this property isn't present, those actions should choose a reasonable default distance to skip forward or backward (such as 7 or 10 seconds).
     - `seekTime` {{optional_inline}}
-      - : If the `action` is `{{anch("seekto")}}`, this property must be present and must be a floating-point value indicating the absolute time within the media to move the playback position to, where 0 indicates the beginning of the media. This property is not present for other action types.
+      - : If the `action` is [`seekto`](#seekto), this property must be present and must be a floating-point value indicating the absolute time within the media to move the playback position to, where 0 indicates the beginning of the media. This property is not present for other action types.
 
 ### Return value
 
@@ -183,19 +183,19 @@ navigator.mediaSession.setActionHandler("seekforward", handleSeek);
 navigator.mediaSession.setActionHandler("seekbackward", handleSeek);
 
 function handleSeek(details) {
-  switch(details.action) {
-    case "seekforward":
-      audio.currentTime = Math.min(audio.currentTime + skipTime,
-              audio.duration);
-      break;
-    case "seekbackward":
-      audio.currentTime = Math.max(audio.currentTime - skipTime, 0);
-      break;
-  }
+  switch(details.action) {
+    case "seekforward":
+      audio.currentTime = Math.min(audio.currentTime + skipTime,
+              audio.duration);
+      break;
+    case "seekbackward":
+      audio.currentTime = Math.max(audio.currentTime - skipTime, 0);
+      break;
+  }
 }
 ```
 
-Here, the `handleSeek()` function handles both `seekbackward` and `seekforward` actions.
+Here, the `handleSeek()` function handles both `seekbackward` and `seekforward` actions.
 
 ## Specifications
 

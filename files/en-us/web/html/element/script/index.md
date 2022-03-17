@@ -93,19 +93,19 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     This is a boolean attribute: the presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value.
 
-    See {{anch("Browser compatibility")}} for notes on browser support. See also [Async scripts for asm.js](/en-US/docs/Games/Techniques/Async_scripts).
+    See [Browser compatibility](#browser_compatibility) for notes on browser support. See also [Async scripts for asm.js](/en-US/docs/Games/Techniques/Async_scripts).
 
 - {{htmlattrdef("crossorigin")}}
   - : Normal `script` elements pass minimal information to the {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} for scripts which do not pass the standard {{Glossary("CORS")}} checks. To allow error logging for sites which use a separate domain for static media, use this attribute. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for a more descriptive explanation of its valid arguments.
 - {{htmlattrdef("defer")}}
 
-  - : This Boolean attribute is set to indicate to a browser that the script is meant to be executed after the document has been parsed, but before firing {{event("DOMContentLoaded")}}.
+  - : This Boolean attribute is set to indicate to a browser that the script is meant to be executed after the document has been parsed, but before firing {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}.
 
     Scripts with the `defer` attribute will prevent the `DOMContentLoaded` event from firing until the script has loaded and finished evaluating.
 
     > **Warning:** This attribute must not be used if the `src` attribute is absent (i.e. for inline scripts), in this case it would have no effect.
     >
-    > The `defer` attribute has no effect on [module scripts ](/en-US/docs/Web/JavaScript/Guide/Modules)— they defer by default.
+    > The `defer` attribute has no effect on [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules) — they defer by default.
 
     Scripts with the `defer` attribute will execute in the order in which they appear in the document.
 
@@ -147,15 +147,15 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ### Deprecated attributes
 
 - {{htmlattrdef("charset")}} {{Deprecated_inline}}
-  - : If present, its value must be an ASCII case-insensitive match for "`utf-8`". It’s unnecessary to specify the `charset` attribute, because documents must use UTF-8, and the `script` element inherits its character encoding from the document.
+  - : If present, its value must be an ASCII case-insensitive match for "`utf-8`". It's unnecessary to specify the `charset` attribute, because documents must use UTF-8, and the `script` element inherits its character encoding from the document.
 - {{htmlattrdef("language")}} {{Deprecated_inline}}
-  - : Like the `type` attribute, this attribute identifies the scripting language in use. Unlike the `type` attribute, however, this attribute’s possible values were never standardized. The `type` attribute should be used instead.
+  - : Like the `type` attribute, this attribute identifies the scripting language in use. Unlike the `type` attribute, however, this attribute's possible values were never standardized. The `type` attribute should be used instead.
 
 ## Notes
 
 Scripts without {{HTMLAttrxRef("async", "script")}} , {{HTMLAttrxRef("defer", "script")}} or `type="module"` attributes, as well as inline scripts, are fetched and executed immediately, before the browser continues to parse the page.
 
-The script should be served with the `text/javascript` MIME type, but browsers are lenient and only block them if the script is served with an image type (`image/*`); a video type (`video/*`); an audio (`audio/*`) type; or `text/csv`. If the script is blocked, an {{event("error")}} is sent to the element, if not a {{event("load")}} event is sent.
+The script should be served with the `text/javascript` MIME type, but browsers are lenient and only block them if the script is served with an image type (`image/*`); a video type (`video/*`); an audio (`audio/*`) type; or `text/csv`. If the script is blocked, an {{domxref("Element/error_event", "error")}} is sent to the element, if not a {{domxref("Element/load_event", "load")}} event is sent.
 
 ## Examples
 

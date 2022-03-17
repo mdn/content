@@ -31,12 +31,15 @@ On browsers that don't support inputs of type `url`, a `url` input falls back to
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>A {{domxref("DOMString")}} representing a URL, or empty</td>
     </tr>
     <tr>
       <td><strong>Events</strong></td>
-      <td>{{event("change")}} and {{event("input")}}</td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} and
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
     </tr>
     <tr>
       <td><strong>Supported Common Attributes</strong></td>
@@ -75,10 +78,10 @@ On browsers that don't support inputs of type `url`, a `url` input falls back to
 
 The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} which is automatically validated as conforming to URL syntax. More specifically, there are two possible value formats that will pass validation:
 
-1.  An empty string ("") indicating that the user did not enter a value or that the value was removed.
-2.  A single properly-formed absolute URL. This doesn't necessarily mean the URL address exists, but it is at least formatted correctly. In simple terms, this means `urlscheme://restofurl`.
+1. An empty string ("") indicating that the user did not enter a value or that the value was removed.
+2. A single properly-formed absolute URL. This doesn't necessarily mean the URL address exists, but it is at least formatted correctly. In simple terms, this means `urlscheme://restofurl`.
 
-See {{anch("Validation")}} for details on how URLs are validated to ensure that they're formatted properly.
+See [Validation](#validation) for details on how URLs are validated to ensure that they're formatted properly.
 
 ## Additional attributes
 
@@ -108,7 +111,7 @@ If the specified pattern is not specified or is invalid, no regular expression i
 
 > **Note:** Use the {{htmlattrxref("title", "input")}} attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.
 
-See the section {{anch("Pattern validation")}} for details and an example.
+See the section [Pattern validation](#pattern_validation) for details and an example.
 
 ### placeholder
 
@@ -128,7 +131,7 @@ A Boolean attribute which, if present, means this field cannot be edited by the 
 
 The `size` attribute is a numeric value indicating how many characters wide the input field should be. The value must be a number greater than zero, and the default value is 20. Since character widths vary, this may or may not be exact and should not be relied upon to be so; the resulting input may be narrower or wider than the specified number of characters, depending on the characters and the font ({{cssxref("font")}} settings in use).
 
-This does _not_ set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the `{{anch("maxlength")}}` attribute.
+This does _not_ set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the [`maxlength`](#maxlength) attribute.
 
 ### spellcheck
 
@@ -141,7 +144,7 @@ This does _not_ set a limit on how many characters the user can enter into the f
 - "" (empty string) or no value
   - : Follow the element's default behavior for spell checking. This may be based upon a parent's `spellcheck` setting or other factors.
 
-An input field can have spell checking enabled if it doesn't have the {{anch("readonly")}} attribute set and is not disabled.
+An input field can have spell checking enabled if it doesn't have the [readonly](#readonly) attribute set and is not disabled.
 
 The value returned by reading `spellcheck` may not reflect the actual state of spell checking within a control, if the {{Glossary("user agent", "user agent's")}} preferences override the setting.
 
@@ -211,7 +214,7 @@ The physical size of the input box can be controlled using the {{htmlattrxref("s
 
 ```html
 <input id="myURL" name="myURL" type="url"
-       size="30">
+       size="30">
 ```
 
 {{ EmbedLiveSample('Physical_input_element_size', 600, 40) }}
@@ -224,7 +227,7 @@ The example below creates a 30-character wide URL address entry box, requiring t
 
 ```html
 <input id="myURL" name="myURL" type="url"
-       size="30" minlength="10" maxlength="80">
+       size="30" minlength="10" maxlength="80">
 ```
 
 {{EmbedLiveSample("Element_value_length", 600, 40) }}
@@ -250,13 +253,13 @@ Taking it a step further, you can provide a list of default options from which t
 
 ```html
 <input id="myURL" name="myURL" type="url"
-       list="defaultURLs">
+       list="defaultURLs">
 
 <datalist id="defaultURLs">
-  <option value="https://developer.mozilla.org/">
-  <option value="http://www.google.com/">
-  <option value="http://www.microsoft.com/">
-  <option value="https://www.mozilla.org/">
+  <option value="https://developer.mozilla.org/">
+  <option value="http://www.google.com/">
+  <option value="http://www.microsoft.com/">
+  <option value="https://www.mozilla.org/">
   <option value="http://w3.org/">
 </datalist>
 ```
@@ -271,13 +274,13 @@ You can opt to include the {{htmlattrxref("label", "option")}} attribute on one 
 
 ```html
 <input id="myURL" name="myURL" type="url"
-       list="defaultURLs">
+       list="defaultURLs">
 
 <datalist id="defaultURLs">
-  <option value="https://developer.mozilla.org/" label="MDN Web Docs">
-  <option value="http://www.google.com/" label="Google">
-  <option value="http://www.microsoft.com/" label="Microsoft">
-  <option value="https://www.mozilla.org/" label="Mozilla">
+  <option value="https://developer.mozilla.org/" label="MDN Web Docs">
+  <option value="http://www.google.com/" label="Google">
+  <option value="http://www.microsoft.com/" label="Microsoft">
+  <option value="https://www.mozilla.org/" label="Mozilla">
   <option value="http://w3.org/" label="W3C">
 </datalist>
 ```
@@ -347,22 +350,22 @@ div {
 
 ```html
 <form>
-  <div>
-    <label for="myURL">Enter the problem website address:</label>
-    <input id="myURL" name="myURL" type="url"
-           required pattern=".*\.myco\..*"
-           title="The URL must be in a Myco domain">
-    <span class="validity"></span>
-  </div>
-  <div>
-    <label for="myComment">What is the problem?</label>
-    <input id="myComment" name="myComment" type="text"
-           required>
-    <span class="validity"></span>
-  </div>
-  <div>
-    <button>Submit</button>
-  </div>
+  <div>
+    <label for="myURL">Enter the problem website address:</label>
+    <input id="myURL" name="myURL" type="url"
+           required pattern=".*\.myco\..*"
+           title="The URL must be in a Myco domain">
+    <span class="validity"></span>
+  </div>
+  <div>
+    <label for="myComment">What is the problem?</label>
+    <input id="myComment" name="myComment" type="text"
+           required>
+    <span class="validity"></span>
+  </div>
+  <div>
+    <button>Submit</button>
+  </div>
 </form>
 ```
 
@@ -382,7 +385,7 @@ That's why, instead, we specify the string "The URL must be in a myco domain". B
 
 ## Examples
 
-There's not much else to say about `url` type inputs; check the {{anch("Pattern validation")}} and {{anch("Using URL inputs")}} sections for numerous examples.
+There's not much else to say about `url` type inputs; check the [Pattern validation](#pattern_validation) and [Using URL inputs](#using_url_inputs) sections for numerous examples.
 
 You can also find our [pattern validation example on GitHub](https://github.com/mdn/learning-area/blob/master/html/forms/url-example/index.html) (see it [running live also](https://mdn.github.io/learning-area/html/forms/url-example/)).
 

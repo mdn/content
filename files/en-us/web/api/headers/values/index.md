@@ -3,7 +3,6 @@ title: Headers.values()
 slug: Web/API/Headers/values
 tags:
   - API
-  - Experimental
   - Fetch API
   - Headers
   - Method
@@ -44,8 +43,10 @@ for (var value of myHeaders.values()) {
 
 The result is:
 
-    text/xml
-    Accept-Language
+```
+text/xml
+Accept-Language
+```
 
 ## Browser compatibility
 

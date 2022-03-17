@@ -30,7 +30,7 @@ An object containing the following values.
 - `usbVendorId`
   - : If the port is part of a USB device, an unsigned short integer that identifies a USB device vendor, otherwise `undefined`.
 - `usbProductId`
-  - : If the port is part of a USB device, an unsigned short integer that identiffies a USB device, otherwise `undefined`.
+  - : If the port is part of a USB device, an unsigned short integer that identifies a USB device, otherwise `undefined`.
 
 ## Specifications
 

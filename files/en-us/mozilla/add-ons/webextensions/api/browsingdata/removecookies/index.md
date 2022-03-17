@@ -16,7 +16,7 @@ browser-compat: webextensions.api.browsingData.removeCookies
 
 Clears the browser's cookies.
 
-You can use the `removalOptions` parameter, which is a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, to:
+You can use the `removalOptions` parameter, which is a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, to:
 
 - clear only cookies created after a given time
 - control whether to clear cookies only set from normal web pages or to clear cookies set from hosted apps and extensions as well.
@@ -39,10 +39,6 @@ var removing = browser.browsingData.removeCookies(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the removal has finished. If any error occurs, the promise will be rejected with an error message.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -86,6 +82,10 @@ function onError(error) {
 browser.browsingData.removeCookies({}).
 then(onRemoved, onError);
 ```
+
+## Browser compatibility
+
+{{Compat}}
 
 {{WebExtExamples}}
 

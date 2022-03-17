@@ -3,7 +3,7 @@ title: VRFrameData.timestamp
 slug: Web/API/VRFrameData/timestamp
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -23,13 +23,7 @@ Timestamps are useful for determining if position state data has been updated fr
 
 The timestamp starts at 0 the first time {{domxref("VRDisplay.getFrameData()")}} is invoked for a given {{domxref("VRDisplay")}}.
 
-## Syntax
-
-```js
-var myTimestamp = vrFrameDataInstance.timestamp;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}} object.
 

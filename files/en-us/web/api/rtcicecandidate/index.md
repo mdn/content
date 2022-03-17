@@ -35,31 +35,31 @@ For details on how the ICE process works, see [Lifetime of a WebRTC session](/en
 
 ## Properties
 
-- {{domxref("RTCIceCandidate.address", "address")}} {{readonlyInline}}
+- {{domxref("RTCIceCandidate.address", "address")}} {{readonlyInline}}
   - : A {{domxref("DOMString")}} containing the IP address of the candidate.
-- {{domxref("RTCIceCandidate.candidate", "candidate")}} {{readonlyInline}}
-  - : A {{domxref("DOMString")}} representing the transport address for the candidate that can be used for connectivity checks. The format of this address is a `candidate-attribute` as defined in {{RFC(5245)}}. This string is empty (`""`) if the `RTCIceCandidate` is an "end of candidates" indicator.
+- {{domxref("RTCIceCandidate.candidate", "candidate")}} {{readonlyInline}}
+  - : A {{domxref("DOMString")}} representing the transport address for the candidate that can be used for connectivity checks. The format of this address is a `candidate-attribute` as defined in {{RFC(5245)}}. This string is empty (`""`) if the `RTCIceCandidate` is an "end of candidates" indicator.
 - {{domxref("RTCIceCandidate.component", "component")}} {{ReadOnlyInline}}
-  - : A string which indicates whether the candidate is an RTP or an RTCP candidate; its value is either `rtp` or `rtcp`, and is derived from the  `"component-id"` field in the `candidate` a-line string.
-- {{domxref("RTCIceCandidate.foundation", "foundation")}} {{readonlyInline}}
+  - : A string which indicates whether the candidate is an RTP or an RTCP candidate; its value is either `rtp` or `rtcp`, and is derived from the  `"component-id"` field in the `candidate` a-line string.
+- {{domxref("RTCIceCandidate.foundation", "foundation")}} {{readonlyInline}}
   - : Returns a {{domxref("DOMString")}} containing a unique identifier that is the same for any candidates of the same type, share the same base (the address from which the ICE agent sent the candidate), and come from the same {{Glossary("STUN")}} server. This is used to help optimize ICE performance while prioritizing and correlating candidates that appear on multiple {{domxref("RTCIceTransport")}} objects.
-- {{domxref("RTCIceCandidate.port", "port")}} {{readonlyInline}}
+- {{domxref("RTCIceCandidate.port", "port")}} {{readonlyInline}}
   - : An integer value indicating the candidate's port number.
-- {{domxref("RTCIceCandidate.priority", "priority")}} {{readonlyInline}}
+- {{domxref("RTCIceCandidate.priority", "priority")}} {{readonlyInline}}
   - : A long integer value indicating the candidate's priority.
-- {{domxref("RTCIceCandidate.protocol", "protocol")}} {{readonlyInline}}
+- {{domxref("RTCIceCandidate.protocol", "protocol")}} {{readonlyInline}}
   - : A string indicating whether the candidate's protocol is `"tcp"` or `"udp"`.
-- {{domxref("RTCIceCandidate.relatedAddress", "relatedAddress")}} {{readonlyInline}}
+- {{domxref("RTCIceCandidate.relatedAddress", "relatedAddress")}} {{readonlyInline}}
   - : If the candidate is derived from another candidate, `relatedAddress` is a {{domxref("DOMString")}} containing that host candidate's IP address. For host candidates, this value is `null`.
-- {{domxref("RTCIceCandidate.relatedPort", "relatedPort")}} {{readonlyInline}}
-  - : For a candidate that is derived from another, such as a relay or reflexive candidate, the `relatedPort` is a number indicating the port number of the candidate from which this candidate is derived. For host candidates, the `relatedPort` property is `null`.
-- {{domxref("RTCIceCandidate.sdpMid", "sdpMid")}} {{readonlyInline}}
+- {{domxref("RTCIceCandidate.relatedPort", "relatedPort")}} {{readonlyInline}}
+  - : For a candidate that is derived from another, such as a relay or reflexive candidate, the `relatedPort` is a number indicating the port number of the candidate from which this candidate is derived. For host candidates, the `relatedPort` property is `null`.
+- {{domxref("RTCIceCandidate.sdpMid", "sdpMid")}} {{readonlyInline}}
   - : A {{domxref("DOMString")}} specifying the candidate's media stream identification tag which uniquely identifies the media stream within the component with which the candidate is associated, or `null` if no such association exists.
-- {{domxref("RTCIceCandidate.sdpMLineIndex", "sdpMLineIndex")}} {{readonlyInline}}
-  - : If not `null`, `sdpMLineIndex` indicates the zero-based index number of the media description (as defined in [RFC 4566](https://datatracker.ietf.org/doc/html/rfc4566)) in the {{Glossary("SDP")}} with which the candidate is associated.
-- {{domxref("RTCIceCandidate.tcpType", "tcpType")}} {{readonlyInline}}
-  - : If `protocol` is `"tcp"`, `tcpType` represents the type of TCP candidate. Otherwise, `tcpType` is `null`.
-- {{domxref("RTCIceCandidate.type", "type")}} {{readonlyInline}}
+- {{domxref("RTCIceCandidate.sdpMLineIndex", "sdpMLineIndex")}} {{readonlyInline}}
+  - : If not `null`, `sdpMLineIndex` indicates the zero-based index number of the media description (as defined in [RFC 4566](https://datatracker.ietf.org/doc/html/rfc4566)) in the {{Glossary("SDP")}} with which the candidate is associated.
+- {{domxref("RTCIceCandidate.tcpType", "tcpType")}} {{readonlyInline}}
+  - : If `protocol` is `"tcp"`, `tcpType` represents the type of TCP candidate. Otherwise, `tcpType` is `null`.
+- {{domxref("RTCIceCandidate.type", "type")}} {{readonlyInline}}
   - : A {{domxref("DOMString")}} indicating the type of candidate as one of the strings listed on [`RTCIceCandidate.type`](/en-US/docs/Web/API/RTCIceCandidate/type#values).
 - {{domxref("RTCIceCandidate.usernameFragment", "usernameFragment")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMString")}} containing a randomly-generated username fragment ("ice-ufrag") which ICE uses for message integrity along with a randomly-generated password ("ice-pwd"). You can use this string to verify generations of ICE generation; each generation of the same ICE process will use the same `usernameFragment`, even across ICE restarts.

@@ -17,7 +17,7 @@ browser-compat: webextensions.api.types.BrowserSetting.onChange
 
 The `BrowserSetting.onChange` event is fired when the setting is changed.
 
-On Firefox, it doesn’t fire if the change has been made through `about:config`.
+On Firefox, it doesn't fire if the change has been made through `about:config`.
 
 ## Syntax
 

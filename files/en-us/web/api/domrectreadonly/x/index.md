@@ -4,16 +4,13 @@ slug: Web/API/DOMRectReadOnly/x
 tags:
   - API
   - DOM
-  - DOMRect
   - DOMRectReadOnly
-  - Experimental
   - Geometry
   - Property
   - Reference
-  - x
 browser-compat: api.DOMRectReadOnly.x
 ---
-{{APIRef("DOM")}}{{ SeeCompatTable() }}
+{{APIRef("Geometry Interfaces")}}
 
 The **`x`** read-only property of the **`DOMRectReadOnly`** interface represents the x coordinate of the `DOMRect`'s origin.
 

@@ -13,7 +13,9 @@ The `<xsl:strip-space>` element defines the elements in the source document for 
 
 ### Syntax
 
-    <xsl:strip-space elements=LIST-OF-ELEMENT-NAMES  />
+```xml
+<xsl:strip-space elements=LIST-OF-ELEMENT-NAMES />
+```
 
 ### Required Attributes
 

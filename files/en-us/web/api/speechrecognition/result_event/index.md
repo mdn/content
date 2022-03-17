@@ -11,32 +11,34 @@ browser-compat: api.SpeechRecognition.result_event
 
 The **`result`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is fired when the speech recognition service returns a result — a word or phrase has been positively recognized and this has been communicated back to the app
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("SpeechRecognitionEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/SpeechRecognition/onresult"
-            >onresult</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('result', event => { })
+
+onresult = event => { }
+```
+
+## Event type
+
+An {{domxref("SpeechRecognitionEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("SpeechRecognitionEvent")}}
+
+## Event properties
+
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
+
+- {{domxref("SpeechRecognitionEvent.emma")}} {{readonlyinline}}
+  - : Returns an Extensible MultiModal Annotation markup language (EMMA) — XML — representation of the result.
+- {{domxref("SpeechRecognitionEvent.interpretation")}} {{readonlyinline}}
+  - : Returns the semantic meaning of what the user said.
+- {{domxref("SpeechRecognitionEvent.resultIndex")}} {{readonlyinline}}
+  - : Returns the lowest index value result in the {{domxref("SpeechRecognitionResultList")}} "array" that has actually changed.
+- {{domxref("SpeechRecognitionEvent.results")}} {{readonlyinline}}
+  - : Returns a {{domxref("SpeechRecognitionResultList")}} object representing all the speech recognition results for the current session.
 
 ## Examples
 
@@ -54,7 +56,7 @@ recognition.addEventListener('result', function(event) {
 });
 ```
 
-Or use the [`onresult`](/en-US/docs/Web/API/SpeechRecognition/onresult) event handler property:
+Or use the `onresult` event handler property:
 
 ```js
 recognition.onresult = function(event) {

@@ -74,7 +74,7 @@ for (let view of xrPose.views) {
 }
 ```
 
-For each of the views, the value of `eye` is checked and  if it's either
+For each of the views, the value of `eye` is checked and  if it's either
 `left` or `right`, we check to see if the
 `body.leftEye.injured` or `body.rightEye.injured` property is
 `true`; if so, we call a function `updateInjury()` on that eye to

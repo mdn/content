@@ -71,11 +71,7 @@ console.log(usedOptions.type);   // "conjunction" (the default value)
 ## See also
 
 - {{jsxref("Intl.ListFormat")}}
-- {{jsxref("Intl/NumberFormat/resolvedOptions",
-		"Intl.NumberFormat.prototype.resolvedOptions()")}}
-- {{jsxref("Intl/Collator/resolvedOptions",
-		"Intl.Collator.prototype.resolvedOptions()")}}
-- {{jsxref("Intl/DateTimeFormat/resolvedOptions",
-		"Intl.DateTimeFormat.prototype.resolvedOptions()")}}
-- {{jsxref("Intl/PluralRules/resolvedOptions",
-		"Intl.PluralRules.prototype.resolvedOptions()")}}
+- {{jsxref("Intl/NumberFormat/resolvedOptions", "Intl.NumberFormat.prototype.resolvedOptions()")}}
+- {{jsxref("Intl/Collator/resolvedOptions", "Intl.Collator.prototype.resolvedOptions()")}}
+- {{jsxref("Intl/DateTimeFormat/resolvedOptions", "Intl.DateTimeFormat.prototype.resolvedOptions()")}}
+- {{jsxref("Intl/PluralRules/resolvedOptions", "Intl.PluralRules.prototype.resolvedOptions()")}}

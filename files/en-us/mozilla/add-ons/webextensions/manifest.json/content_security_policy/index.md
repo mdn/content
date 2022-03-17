@@ -93,7 +93,6 @@ Keep the rest of the policy, but also require that images should be packaged wit
 "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'"
 ```
 
-
 ### Invalid examples
 
 Policy that omits the `"object-src"` directive:

@@ -17,6 +17,8 @@ The `ConstantSourceNode` interface—part of the Web Audio API—represents an a
 
 A `ConstantSourceNode` has no inputs and exactly one monaural (one-channel) output. The output's value is always the same as the value of the {{domxref("ConstantSourceNode.offset", "offset")}} parameter.
 
+{{InheritanceDiagram}}
+
 <table class="properties">
   <tbody>
     <tr>
@@ -42,13 +44,13 @@ _Inherits properties from its parent interface, {{domxref("AudioScheduledSourceN
 - {{domxref("ConstantSourceNode.offset", "offset")}}
   - : An {{domxref("AudioParam")}} which specifies the value that this source continuously outputs. The default value is 1.0.
 
-### Event handlers
+### Events
 
-_Inherits event handlers from its parent interface, {{domxref("AudioScheduledSourceNode")}}._
+_Inherits events from its parent interface, {{domxref("AudioScheduledSourceNode")}}._
 
-> **Note:** Some browsers' implementations of this event handler are part of the  {{domxref("AudioScheduledSourceNode")}} interface.
+> **Note:** Some browsers' implementations of these events are part of the  {{domxref("AudioScheduledSourceNode")}} interface.
 
-- {{domxref("AudioScheduledSourceNode.onended()","onended")}}
+- {{domxref("AudioScheduledSourceNode.ended_event","ended")}}
   - : Fired whenever the {{domxref('ConstantSourceNode')}} data has stopped playing.
 
 ## Methods

@@ -18,11 +18,11 @@ If a \<length> is provided with one of the unit identifiers (e.g. .25em or 1%), 
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("altGlyph")}}
-*   {{SVGElement("text")}}
-*   {{SVGElement("textPath")}}
-*   {{SVGElement("tref")}}
-*   {{SVGElement("tspan")}}
+- {{SVGElement("altGlyph")}}
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
 
 ## Example
 
@@ -34,8 +34,8 @@ html, body, svg {
 
 ```html
 <svg viewBox="0 0 250 50" xmlns="http://www.w3.org/2000/svg">
-  <text y="20" word-spacing="2">Bigger spacing between words</text>
-  <text x="0" y="40" word-spacing="-0.5">Smaller spacing between words</text>
+  <text y="20" word-spacing="2">Bigger spacing between words</text>
+  <text x="0" y="40" word-spacing="-0.5">Smaller spacing between words</text>
 </svg>
 ```
 
@@ -96,4 +96,4 @@ For a description of the values, please refer to the [CSS `letter-spacing`](/en-
 
 ## See also
 
-*   {{cssxref("word-spacing", "CSS word-spacing")}}
+- {{cssxref("word-spacing", "CSS word-spacing")}}

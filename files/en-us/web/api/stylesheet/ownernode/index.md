@@ -35,7 +35,7 @@ nodeRef = stylesheet.ownerNode
   <link rel="stylesheet" href="example.css">
  </head>
  <body>
-   <button onclick="alert(document.styleSheets[0].ownerNode)">Show example.css’s ownerNode</button>
+   <button onclick="alert(document.styleSheets[0].ownerNode)">Show example.css's ownerNode</button>
  </body>
 </html>
 // Displays "object HTMLLinkElement"

@@ -8,7 +8,7 @@ tags:
   - ARIA Tabpanel
   - ARIA widget
   - Reference
-  - Needscontent
+  - NeedsContent
 ---
 {{draft}}
 
@@ -20,10 +20,9 @@ TBD
 
 ## Description
 
-An element with the `tabpanel` role
+An element with the `tabpanel` role
 
 ### Associated Roles and Attributes
-
 
 ### Keyboard interaction
 
@@ -62,7 +61,6 @@ Any additional benefits this feature has for non-typical screen reader users, li
 ## Precedence order
 
 What are the related properties, and in what order will this attribute or property be read, which property will take precedence over this one, and which property will be overwritten.
-
 
 <section id="Quick_links">
 

@@ -16,8 +16,8 @@ browser-compat: api.ServiceWorkerGlobalScope.onpushsubscriptionchange
 
 The **`ServiceWorkerGlobalScope.onpushsubscriptionchange`**
 event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired to indicate a
-change in push subscription that was triggered outside the application's control, e.g.
-when browser refresh the push subscription.
+change in push subscription that was triggered outside the application's control; for example,
+when the browser refreshes the push subscription.
 
 Previously, it was defined as the event interface that is fired whenever a push
 subscription has been invalidated (or is about to become so). This offers an opportunity

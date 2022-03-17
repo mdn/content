@@ -12,7 +12,7 @@ tags:
   - Property
   - Read-only
   - Reference
-  - Téléphone
+  - Telephone
   - payment
   - paymentAddress
 browser-compat: api.PaymentAddress.phone

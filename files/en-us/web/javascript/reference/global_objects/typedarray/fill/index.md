@@ -47,9 +47,7 @@ The elements interval to fill is \[`start`,
 `end`).
 
 The **`fill()`** method takes up to three arguments
-`value`,
-` start``start ` and
-`end`. The `start` and
+`value`, `start` and `end`. The `start` and
 `end` arguments are optional with default values of `0`
 and the `length` of the `this` object.
 
@@ -92,5 +90,5 @@ if (!Uint8Array.prototype.fill) {
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.fill` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.fill` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("Array.prototype.fill()")}}

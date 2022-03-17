@@ -32,5 +32,3 @@ console.log(VideoFrame.codedHeight);
 ## Browser compatibility
 
 {{Compat}}
-
-

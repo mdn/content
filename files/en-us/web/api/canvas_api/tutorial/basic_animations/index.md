@@ -19,13 +19,13 @@ Probably the biggest limitation is, that once a shape gets drawn, it stays that 
 
 These are the steps you need to take to draw a frame:
 
-1.  **Clear the canvas**
+1. **Clear the canvas**
     Unless the shapes you'll be drawing fill the complete canvas (for instance a backdrop image), you need to clear any shapes that have been drawn previously. The easiest way to do this is using the {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} method.
-2.  **Save the canvas state**
+2. **Save the canvas state**
     If you're changing any setting (such as styles, transformations, etc.) which affect the canvas state and you want to make sure the original state is used each time a frame is drawn, you need to save that original state.
-3.  **Draw animated shapes**
+3. **Draw animated shapes**
     The step where you do the actual frame rendering.
-4.  **Restore the canvas state**
+4. **Restore the canvas state**
     If you've saved the state, restore it before drawing a new frame.
 
 ## Controlling an animation
@@ -45,7 +45,7 @@ First there's the {{domxref("setInterval()")}}, {{domxref("setTimeout()")}}, and
 - {{domxref("Window.requestAnimationFrame()", "requestAnimationFrame(callback)")}}
   - : Tells the browser that you wish to perform an animation and requests that the browser call a specified function to update an animation before the next repaint.
 
-If you don't want any user interaction you can use the `setInterval()` function which repeatedly executes the supplied code. If we wanted to make a game, we could use keyboard or mouse events to control the animation and use `setTimeout()`. By setting {{domxref("EventListener")}}s, we catch any user interaction and execute our animation functions.
+If you don't want any user interaction you can use the `setInterval()` function which repeatedly executes the supplied code. If we wanted to make a game, we could use keyboard or mouse events to control the animation and use `setTimeout()`. By setting {{domxref("EventListener")}}s, we catch any user interaction and execute our animation functions.
 
 > **Note:** In the examples below, we'll use the {{domxref("window.requestAnimationFrame()")}} method to control the animation. The `requestAnimationFrame` method provides a smoother and more efficient way for animating by calling the animation frame when the system is ready to paint the frame. The number of callbacks is usually 60 times per second and may be reduced to a lower rate when running in background tabs. For more information about the animation loop, especially for games, see the article [Anatomy of a video game](/en-US/docs/Games/Anatomy) in our [Game development zone](/en-US/docs/Games).
 
@@ -273,59 +273,59 @@ img.onload = function() {
     imgW = img.width * scale;
     imgH = img.height * scale;
 
-    if (imgW > CanvasXSize) {
-        // image larger than canvas
-        x = CanvasXSize - imgW;
-    }
     if (imgW > CanvasXSize) {
-        // image width larger than canvas
-        clearX = imgW;
-    } else {
-        clearX = CanvasXSize;
-    }
+        // image larger than canvas
+        x = CanvasXSize - imgW;
+    }
+    if (imgW > CanvasXSize) {
+        // image width larger than canvas
+        clearX = imgW;
+    } else {
+        clearX = CanvasXSize;
+    }
     if (imgH > CanvasYSize) {
-        // image height larger than canvas
-        clearY = imgH;
-    } else {
-        clearY = CanvasYSize;
-    }
+        // image height larger than canvas
+        clearY = imgH;
+    } else {
+        clearY = CanvasYSize;
+    }
 
     // get canvas context
     ctx = document.getElementById('canvas').getContext('2d');
 
-    // set refresh rate
+    // set refresh rate
     return setInterval(draw, speed);
 }
 
 function draw() {
     ctx.clearRect(0, 0, clearX, clearY); // clear the canvas
 
-    // if image is <= Canvas Size
+    // if image is <= Canvas Size
     if (imgW <= CanvasXSize) {
         // reset, start from beginning
         if (x > CanvasXSize) {
-            x = -imgW + x;
-        }
+            x = -imgW + x;
+        }
         // draw additional image1
         if (x > 0) {
-            ctx.drawImage(img, -imgW + x, y, imgW, imgH);
-        }
+            ctx.drawImage(img, -imgW + x, y, imgW, imgH);
+        }
         // draw additional image2
         if (x - imgW > 0) {
-            ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
-        }
+            ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
+        }
     }
 
     // image is > Canvas Size
     else {
         // reset, start from beginning
         if (x > (CanvasXSize)) {
-            x = CanvasXSize - imgW;
-        }
+            x = CanvasXSize - imgW;
+        }
         // draw additional image
         if (x > (CanvasXSize-imgW)) {
-            ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
-        }
+            ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
+        }
     }
     // draw image
     ctx.drawImage(img, x, y,imgW, imgH);

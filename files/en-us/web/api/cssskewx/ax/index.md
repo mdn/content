@@ -12,7 +12,7 @@ tags:
   - Property
 browser-compat: api.CSSSkewX.ax
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`ax`** property of the
 {{domxref("CSSSkewX")}} interface gets and sets the angle used to distort the element

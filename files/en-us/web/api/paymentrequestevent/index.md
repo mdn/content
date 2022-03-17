@@ -15,6 +15,8 @@ browser-compat: api.PaymentRequestEvent
 
 The **`PaymentRequestEvent`** interface of the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) is the object passed to a payment handler when a {{domxref("PaymentRequest")}} is made.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("PaymentRequestEvent.PaymentRequestEvent","PaymentRequestEvent()")}}{{experimental_inline}}
@@ -23,7 +25,7 @@ The **`PaymentRequestEvent`** interface of the [Payment Request API](/en-US/docs
 ## Properties
 
 - {{domxref("PaymentRequestEvent.instrumentKey","instrumentKey")}}{{readonlyInline}}{{experimental_inline}}
-  - : Returns a {{domxref("PaymentInstrument")}} object reflecting the payment instrument selected by the user or an empty string if the user has not registered or chosen a payment instrument.
+  - : Returns a {{domxref("PaymentInstrument")}} object reflecting the payment instrument selected by the user or an empty string if the user has not registered or chosen a payment instrument.
 - {{domxref("PaymentRequestEvent.methodData","methodData")}}{{readonlyInline}}{{experimental_inline}}
   - : Returns an array of {{domxref("PaymentMethodData")}} objects containing payment method identifiers for the payment methods that the web site accepts and any associated payment method specific data.
 - {{domxref("PaymentRequestEvent.modifiers","modifiers")}}{{readonlyInline}}{{experimental_inline}}

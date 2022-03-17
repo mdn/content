@@ -22,7 +22,7 @@ VTTCue.position = "auto";
 
 ### Value
 
-A number, or `"auto"` representing the identation of the cue within the line.
+A number, or `"auto"` representing the indentation of the cue within the line.
 
 ## Examples
 

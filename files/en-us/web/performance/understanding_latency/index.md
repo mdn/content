@@ -11,15 +11,15 @@ tags:
 
 ## What is Latency?
 
-Latency is generally considered to be the amount of time it takes from when a request is made by the user to the time it takes for the response to get back to that user.  On a first request, for the first 14Kb bytes, latency is longer because it includes a {{glossary('DNS')}} lookup, a {{glossary('TCP handshake')}}, the secure {{glossary('TLS')}} negotiation. Subsequent requests will have less latency because the connection to the server is already set.
+Latency is generally considered to be the amount of time it takes from when a request is made by the user to the time it takes for the response to get back to that user.  On a first request, for the first 14Kb bytes, latency is longer because it includes a {{glossary('DNS')}} lookup, a {{glossary('TCP handshake')}}, the secure {{glossary('TLS')}} negotiation. Subsequent requests will have less latency because the connection to the server is already set.
 
 Latency describes the amount of delay on a network or Internet connection. Low latency implies that there are no or almost no delays. High latency implies that there are many delays. One of the main aims of improving performance is to reduce latency.
 
-The latency associated with a single asset, especially a basic HTML page, may seem trivial. But websites generally involve multiple requests: the HTML includes requests for multiple  CSS, scripts, and media files. The greater the number and size of these requests, the greater the impact of high latency on user experience.
+The latency associated with a single asset, especially a basic HTML page, may seem trivial. But websites generally involve multiple requests: the HTML includes requests for multiple  CSS, scripts, and media files. The greater the number and size of these requests, the greater the impact of high latency on user experience.
 
 On a connection with low latency, requested resources will appear almost immediately. On a connection with high latency, there will be a discernible delay between the time that a request is sent, and the resources are returned. We can determine the amount of latency by measuring the speed with which the data moves from one network location to another.
 
-Latency can be measured one way, for example, the amount of time it takes to send a request for resources, or the length of the entire round-trip from the browser’s request for a resource to the moment when the requested resource arrives at the browser.
+Latency can be measured one way, for example, the amount of time it takes to send a request for resources, or the length of the entire round-trip from the browser's request for a resource to the moment when the requested resource arrives at the browser.
 
 ## Network throttling
 
@@ -46,7 +46,7 @@ Also, on the network tab, you can see how long each request took to complete. We
 
 ![The time it took for a large SVG asset to load.](latencymlw.png)
 
-When a request is in a queue, waiting for a network connection it is considered **blocked**. Blocking happens when there are too many simultaneous connections made to a single server over HTTP. If all connections are in use, the browser can't download more resources until a connection is released, meaning those requests and resources are blocked.
+When a request is in a queue, waiting for a network connection it is considered **blocked**. Blocking happens when there are too many simultaneous connections made to a single server over HTTP. If all connections are in use, the browser can't download more resources until a connection is released, meaning those requests and resources are blocked.
 
 **DNS resolution** is the time it took to do the {{glossary('DNS lookup')}}. The greater the number of [hostnames](/en-US/docs/Web/API/URL/hostname), the more DNS lookups need to be done.
 
@@ -56,12 +56,12 @@ The **{{glossary('TLS')}} handshake** is how long it took to set up a secure con
 
 **Sending** is the time taken to send the HTTP request to the server.
 
-**Waiting** is disk latency, the time it took for the server to complete its response. Disk latency used to be the main area of performance concern. However server performance has improved as computer memory, or CPU, has improved. Depending on the complexity of what is needed from the server, this can still be an issue.
+**Waiting** is disk latency, the time it took for the server to complete its response. Disk latency used to be the main area of performance concern. However server performance has improved as computer memory, or CPU, has improved. Depending on the complexity of what is needed from the server, this can still be an issue.
 
-**Receiving** is the time it takes to download the asset. The receiving time is determined by a combination of the network capacity and the asset file size. If the image been cached, this would have been nearly instantaneous. Had we throttled, receiving could have been 43seconds!
+**Receiving** is the time it takes to download the asset. The receiving time is determined by a combination of the network capacity and the asset file size. If the image been cached, this would have been nearly instantaneous. Had we throttled, receiving could have been 43seconds!
 
 ## Measuring latency
 
-**Network latency** is the time it takes for a data request to get from the computer making the request, to the computer responding. Including the time it takes for a byte of data to make it from the responding computer back to the requesting computer.  It is generally measured as a round trip delay.
+**Network latency** is the time it takes for a data request to get from the computer making the request, to the computer responding. Including the time it takes for a byte of data to make it from the responding computer back to the requesting computer.  It is generally measured as a round trip delay.
 
 **Disk latency** is the time it takes from the moment a computer, usually a server, receives a request, to the time the computer returns the response.

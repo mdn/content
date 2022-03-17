@@ -3,7 +3,6 @@ title: Request.headers
 slug: Web/API/Request/headers
 tags:
   - API
-  - Experimental
   - Fetch
   - Headers
   - Property
@@ -47,7 +46,7 @@ var myHeaders = new Headers();
 myHeaders.append('Content-Type', 'image/jpeg');
 
 var myInit = {
-  method: 'GET',
+  method: 'GET',
   headers: myHeaders,
   mode: 'cors',
   cache: 'default'

@@ -29,7 +29,7 @@ This technique is often used by sites that let you download executables, to ensu
 
 1. Note down the file's name and the SHA256 checksum provided by the website.
 2. Download the executable.
-3. Run `sha256sum /path/to/the/file` in the terminal to generate your own code. If you are using a Mac you may have to [install it seperately](https://unix.stackexchange.com/questions/426837/no-sha256sum-in-macos).
+3. Run `sha256sum /path/to/the/file` in the terminal to generate your own code. If you are using a Mac you may have to [install it separately](https://unix.stackexchange.com/questions/426837/no-sha256sum-in-macos).
 4. Compare the two strings - they should match unless the file has been compromised.
 
 ![Examples of SHA256 from the download for the software "Blender". These look like 32 hexadecimal numbers followed by a file name like "blender.zip"](blender-sha256-example.png)
@@ -65,15 +65,15 @@ async function fileHash(file) {
 
   // Use the subtle crypto API to perform a SHA256 Sum of the file's Array Buffer
   // The resulting hash is stored in an array buffer
-	const hashAsArrayBuffer = await crypto.subtle.digest('SHA-256', arrayBuffer);
+  const hashAsArrayBuffer = await crypto.subtle.digest('SHA-256', arrayBuffer);
 
   // To display it as as a string we will get the hexadecimal value of each byte of the array buffer
   // This gets us an array where each byte of the array buffer becomes one item in the array
   const uint8ViewOfHash = new Uint8Array(hashAsArrayBuffer);
   // We then convert it to a regular array so we can convert each item to hexadecimal strings
-  // Where to characters of 0-9 or a-f represent a number between 0 and 16, containing 4 bits of information, so 2 of them is 8 bits (1 byte). 
+  // Where to characters of 0-9 or a-f represent a number between 0 and 16, containing 4 bits of information, so 2 of them is 8 bits (1 byte).
   const hashAsString = Array.from(uint8ViewOfHash).map(b => b.toString(16).padStart(2, '0')).join('');
-	return hashAsString;
+  return hashAsString;
 }
 
 async function hashTheseFiles(e) {
@@ -187,7 +187,7 @@ async function hashTheseFiles(e) {
 
 {{EmbedLiveSample("how-git-stores-files")}}
 
-Notice how it uses the [Encoding API]() to produce the header, which is concatenated with the original ArrayBuffer to produce the string to be hashed.
+Notice how it uses the [Encoding API](/en-US/docs/Web/API/Encoding_API) to produce the header, which is concatenated with the original ArrayBuffer to produce the string to be hashed.
 
 ## How git generates commit hashes
 
@@ -203,7 +203,7 @@ Essentially it's the UTF8 string (null character written as `\0`):
 commit [size in bytes as decimal of this info]\0tree [tree hash]
 parent [parent commit hash]
 author [author info] [timestamp]
-committer [commiter info] [timestamp]
+committer [committer info] [timestamp]
 
 commit message
 ```

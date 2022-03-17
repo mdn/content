@@ -14,14 +14,14 @@ browser-compat: api.FontFaceSet.ready
 ---
 {{APIRef("CSS Font Loading API")}}
 
-The `ready` read-only property of the {{domxref("FontFaceSet")}} interface
-returns a {{jsxref("Promise")}} that resolves to the given {{domxref("FontFaceSet")}}.
+The `ready` read-only property of the {{domxref("FontFaceSet")}} interface
+returns a {{jsxref("Promise")}} that resolves to the given {{domxref("FontFaceSet")}}.
 
 The promise will only resolve once the document has completed loading fonts, layout operations are completed, and no further font loads are needed.
 
 ## Value
 
-A {{jsxref("Promise")}} that resolves to the given {{domxref("FontFaceSet")}}.
+A {{jsxref("Promise")}} that resolves to the given {{domxref("FontFaceSet")}}.
 
 ## Examples
 

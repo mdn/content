@@ -46,14 +46,16 @@ A string which is one of the following:
 
 Consider this {{Glossary("SDP")}} attribute line (a-line):
 
-    a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```
+a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```
 
 This is an ICE candidate a-line, whose {{domxref("RTCIceCandidate.foundation",
   "foundation")}} is 4234997325. The next field on the a-line, `"1"`, is the
 component ID. A value of `"1"` indicates RTP, which is recorded in the
 `component` property as `"rtp"`. If this value were instead
 `"2"`, the a-line would be describing an RTCP candidate, and
-`compoment` would be `"rtcp"`.
+`component` would be `"rtcp"`.
 
 ## Example
 

@@ -14,7 +14,7 @@ browser-compat: html.elements.rb
 
 {{HTMLRef}}{{deprecated_header}}
 
-The **`<rb>`** [HTML](/en-US/docs/Web/HTML) element is used to delimit the base text component of a  {{HTMLElement("ruby") }} annotation, i.e. the text that is being annotated. One `<rb>` element should wrap each separate atomic segment of the base text.
+The **`<rb>`** [HTML](/en-US/docs/Web/HTML) element is used to delimit the base text component of a  {{HTMLElement("ruby") }} annotation, i.e. the text that is being annotated. One `<rb>` element should wrap each separate atomic segment of the base text.
 
 <table class="properties">
   <tbody>
@@ -34,7 +34,7 @@ The **`<rb>`** [HTML](/en-US/docs/Web/HTML) element is used to delimit the base 
       <th scope="row">Tag omission</th>
       <td>
         The end tag can be omitted if the element is immediately followed by an
-        {{HTMLElement("rt")}}, {{HTMLElement("rtc")}}, or
+        {{HTMLElement("rt")}}, {{HTMLElement("rtc")}}, or
         {{HTMLElement("rp")}} element or another
         <code>&#x3C;rb></code> element, or if there is no more content in the
         parent element.

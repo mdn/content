@@ -34,11 +34,13 @@ window.defaultStatus = sMsg;
 
 ## Example
 
-    <html>
-     <body onload="window.defaultStatus='hello!';"/>
-      <button onclick="window.confirm('Are you sure you want to quit?');">confirm</button>
-     </body>
-    </html>
+```html
+<html>
+  <body onload="window.defaultStatus='hello!';"/>
+  <button onclick="window.confirm('Are you sure you want to quit?');">confirm</button>
+  </body>
+</html>
+```
 
 ## Notes
 

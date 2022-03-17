@@ -35,7 +35,7 @@ tags:
 - D3E [`KeyboardEvent.key`](/en-US/docs/Web/API/KeyboardEvent#key_names_and_char_values) is now supported, but only for non-printable keys ({{bug(842927)}}).
 - The `title` attribute of {{domxref("DOMImplementation.createHTMLDocument")}} is now optional as per updated DOM specification.
 - The ability to add a sidebar panel (`window.sidebar.addPanel`) has been dropped ({{bug(691647)}}).
-- The unprefixed {{domxref("Window.requestAnimationFrame")}} and {{domxref("Window.cancelAnimationFrame")}} methods has been added ({{bug(704063)}}). The unprefixed {{domxref("Window.requestAnimationFrame")}} receives a {{domxref("DOMHighResTimeStamp")}} as argument; the prefixed version did, and still is, received a {{domxref("DOMTimeStamp")}}({{bug(753453)}}).
+- The unprefixed {{domxref("Window.requestAnimationFrame")}} and {{domxref("Window.cancelAnimationFrame")}} methods has been added ({{bug(704063)}}). The unprefixed {{domxref("Window.requestAnimationFrame")}} receives a {{domxref("DOMHighResTimeStamp")}} as argument; the prefixed version did, and still is, received a {{domxref("DOMTimeStamp")}}({{bug(753453)}}).
 - The text argument for {{domxref("window.alert")}} and {{domxref("window.confirm")}} is now optional ({{bug(861605)}}).
 - The {{domxref("HTMLMediaElement.initialTime")}} property, removed from the spec, is no more supported ({{bug(742537)}}).
 - The {{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}} constructor has been added ({{bug(848293)}}).
@@ -52,7 +52,7 @@ tags:
 
 - The blink effect for `text-decoration: blink;` has no more effect, but is still a valid value ({{bug(857820)}}).
 - In-flow {{cssxref("::after")}} and {{cssxref("::before")}} pseudo-elements are now flex items ({{bug(867454)}}).
-- The way to compute [viewport units](/en-US/docs/Web/CSS/length#viewport-percentage_lengths) has been changed. In conjunction with `overflow:auto`, space taken by eventual scrollbars is not substracted from the viewport, whereas in the case of `overflow:scroll`, it is. ({{bug(811403)}})
+- The way to compute [viewport units](/en-US/docs/Web/CSS/length#viewport-percentage_lengths) has been changed. In conjunction with `overflow:auto`, space taken by eventual scrollbars is not subtracted from the viewport, whereas in the case of `overflow:scroll`, it is. ({{bug(811403)}})
 
 ### MathML
 

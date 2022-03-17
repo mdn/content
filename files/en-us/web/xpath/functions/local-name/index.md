@@ -11,7 +11,9 @@ The `local-name` function returns a string representing the local name of the fi
 
 ### Syntax
 
-    local-name( [node-set] )
+```
+local-name( [node-set] )
+```
 
 ### Arguments
 

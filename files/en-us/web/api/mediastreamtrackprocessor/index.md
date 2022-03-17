@@ -52,4 +52,3 @@ trackProcessor.readable.pipeThrough(transformer).pipeTo(trackGenerator.writable)
 ## Browser compatibility
 
 {{Compat}}
-

@@ -15,9 +15,11 @@ browser-compat: api.XRSession
 ---
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
-The WebXR Device API's **`XRSession`** interface represents an ongoing XR session, providing methods and properties used to interact with and control the session. To open a WebXR session, use the {{domxref("XRSystem")}} interface's {{domxref("XRSystem.requestSession", "requestSession()")}} method.
+The {{domxref("WebXR Device API")}}'s **`XRSession`** interface represents an ongoing XR session, providing methods and properties used to interact with and control the session. To open a WebXR session, use the {{domxref("XRSystem")}} interface's {{domxref("XRSystem.requestSession", "requestSession()")}} method.
 
 With `XRSession` methods, you can poll the viewer's position and orientation (the {{domxref("XRViewerPose")}}), gather information about the user's environment, and present imagery to the user. `XRSession` supports both inline and immersive virtual and augmented reality modes.
+
+{{InheritanceDiagram}}
 
 ## Properties
 

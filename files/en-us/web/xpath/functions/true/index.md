@@ -11,7 +11,9 @@ The `true` function returns a boolean value of true.
 
 ### Syntax
 
-    true()
+```
+true()
+```
 
 ### Returns
 

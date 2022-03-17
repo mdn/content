@@ -45,7 +45,9 @@ document.enableStyleSheetsForSet(name);
 
 ## Example
 
-    document.enableStyleSheetsForSet("Some style sheet set name");
+```js
+document.enableStyleSheetsForSet("Some style sheet set name");
+```
 
 ## Browser compatibility
 

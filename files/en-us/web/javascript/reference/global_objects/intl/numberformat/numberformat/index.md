@@ -35,8 +35,7 @@ new Intl.NumberFormat(locales, options)
 
   - : A string with a BCP 47 language tag, or an array of such strings. For the
     general form and interpretation of the `locales`
-    argument, see the {{jsxref("Global_Objects/Intl", "Intl",
-			"#Locale_identification_and_negotiation", 1)}} page. The following Unicode
+    argument, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} page. The following Unicode
     extension key is allowed:
 
     - `nu`
@@ -62,8 +61,8 @@ new Intl.NumberFormat(locales, options)
         "`sora`", "`sund`", "`takr`",
         "`talu`", "`tamldec`", "`telu`",
         "`thai`", "`tibt`", "`tirh`",
-        "`vaii`", "`wara`", "`wcho`".  — see
-        the [standard
+        "`vaii`", "`wara`", "`wcho`". — see
+        the [standard
         Unicode numeral systems list](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem).
 
 - `options` {{optional_inline}}
@@ -133,7 +132,7 @@ new Intl.NumberFormat(locales, options)
         - "`auto`" sign display for negative numbers only
         - "`exceptZero`" sign display for positive and negative
           numbers, but not zero
-        - "`negative`" sign display for negative numbers only, excluding negative zero.
+        - "`negative`" sign display for negative numbers only, excluding negative zero. {{experimental_inline}}
         - "`never`" never display sign
 
     - `style`

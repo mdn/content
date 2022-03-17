@@ -1,6 +1,6 @@
 ---
 title: Mobile accessibility checklist
-slug: Web/Accessibility/Mobile_accessibility_checklist 
+slug: Web/Accessibility/Mobile_accessibility_checklist
 tags:
   - Accessibility
   - Firefox OS
@@ -49,7 +49,7 @@ This document provides a concise checklist of accessibility requirements for mob
 
 ## Handling state
 
-- Standard controls such as radio buttons and checkboxes are handled by the operating system. However, for other custom controls state changes must be provided via [ARIA States](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) such as` aria-checked`, `aria-disabled`, `aria-selected`, `aria-expanded`, and `aria-pressed`.
+- Standard controls such as radio buttons and checkboxes are handled by the operating system. However, for other custom controls state changes must be provided via [ARIA States](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) such as `aria-checked`, `aria-disabled`, `aria-selected`, `aria-expanded`, and `aria-pressed`.
 
 ## Orientation
 

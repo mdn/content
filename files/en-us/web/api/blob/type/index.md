@@ -4,29 +4,16 @@ slug: Web/API/Blob/type
 tags:
   - API
   - Blob
-  - DOM
-  - File
   - File API
-  - Format
-  - MIME
-  - MIME Type
   - Property
   - Reference
-  - Type
 browser-compat: api.Blob.type
 ---
 {{APIRef("File API")}}
 
-The **`type`** property of a
-{{domxref("Blob")}} object returns the {{Glossary("MIME type")}} of the file.
+The **`type`** property of a {{domxref("Blob")}} object returns the {{Glossary("MIME type")}} of the file.
 
-## Syntax
-
-```js
-var mimetype = blob.type
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} containing the file's MIME type, or an empty string if the
 type could not be determined.
@@ -36,25 +23,48 @@ type could not be determined.
 This example asks the user to select a number of files, then checks each file to make
 sure it's one of a given set of image file types.
 
+### HTML
+
+```html
+<input type="file" id="input" multiple>
+<output id="output">Choose image files...</output>
+```
+
+```css hidden
+output {
+  display: block;
+  margin-top: 16px;
+}
+```
+
+### JavaScript
+
 ```js
-var i, fileInput, files, allowedFileTypes;
-
-// fileInput is a HTMLInputElement: <input type="file" multiple id="myfileinput">
-fileInput = document.getElementById("myfileinput");
-
-// files is a FileList object (similar to NodeList)
-files = fileInput.files;
-
 // our application only allows GIF, PNG, and JPEG images
-allowedFileTypes = ["image/png", "image/jpeg", "image/gif"];
+const allowedFileTypes = ["image/png", "image/jpeg", "image/gif"];
 
-for (i = 0; i < files.length; i++) {
-  // Test if file.type is an allowed file type.
-  if (allowedFileTypes.indexOf(files[i].type) > -1) {
-    // file type matched is one of allowed file types. Do something here.
+const input = document.getElementById('input');
+const output = document.getElementById('output');
+
+input.addEventListener('change', (event) => {
+  const files = event.target.files;
+
+  if (files.length === 0) {
+    output.innerText = 'Choose image files...';
+    return;
+  }
+
+  if (Array.from(files).every((file) => allowedFileTypes.includes(file.type))) {
+    output.innerText = 'All files clear!';
+  } else {
+    output.innerText = 'Please choose image files only.';
   }
 });
 ```
+
+### Result
+
+{{EmbedLiveSample("Example")}}
 
 ## Specifications
 

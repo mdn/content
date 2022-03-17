@@ -61,7 +61,7 @@ catch (e) {
 ## See also
 
 - [What
-  does “can’t access dead object” mean?](https://blog.mozilla.org/addons/2012/09/12/what-does-cant-access-dead-object-mean/)
+  does "can't access dead object" mean?](https://blog.mozilla.org/addons/2012/09/12/what-does-cant-access-dead-object-mean/)
 - [Common
   causes of memory leaks in extensions](/en-US/docs/Extensions/Common_causes_of_memory_leaks_in_extensions)
 - [Components.utils](/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils)

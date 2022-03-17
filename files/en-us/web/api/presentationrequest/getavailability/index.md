@@ -32,7 +32,7 @@ When the `getAvailability()` method is called, the user agent _MUST_ run the fol
     1. [Reject](https://www.w3.org/TR/presentation-api/#dfn-rejecting-a-promise) _P_ with a `NotSupportedError` {{domxref("DOMException")}}.
     2. Abort all the remaining steps.
 
-6.  If there exists a tuple (*A*, *presentationUrls*) in the [set of availability objects](https://www.w3.org/TR/presentation-api/#dfn-set-of-availability-objects), then:
+6. If there exists a tuple (*A*, *presentationUrls*) in the [set of availability objects](https://www.w3.org/TR/presentation-api/#dfn-set-of-availability-objects), then:
 
     1. [Resolve](https://www.w3.org/TR/presentation-api/#dfn-resolving-a-promise) _P_ with _A_.
     2. Abort all the remaining steps.

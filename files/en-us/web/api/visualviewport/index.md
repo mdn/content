@@ -12,11 +12,13 @@ browser-compat: api.VisualViewport
 ---
 {{APIRef("Visual Viewport")}}
 
-The **`VisualViewport`** interface of the [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API) represents the visual viewport for a given window. For a page containing iframes, each iframe, as well as the containing page, will have a unique window object. Each window on a page will have a unique `VisualViewport` representing the properties associated with that window.
+The **`VisualViewport`** interface of the [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API) represents the visual viewport for a given window. For a page containing iframes, each iframe, as well as the containing page, will have a unique window object. Each window on a page will have a unique `VisualViewport` representing the properties associated with that window.
 
 You can get a window's visual viewport using {{domxref("Window.visualViewport")}}.
 
 > **Note:** Only the top-level window has a visual viewport that's distinct from the layout viewport. Therefore, it's generally only the `VisualViewport` object of the top-level window that's useful. For an {{htmlelement("iframe")}}, visual viewport metrics like {{domxref("VisualViewport.width")}} always correspond to layout viewport metrics like {{domxref("Element.clientWidth", "document.documentElement.clientWidth")}}.
+
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -52,7 +54,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 ### Hiding an overlaid box on zoom
 
-This example, taken from the [Visual Viewport README](https://github.com/WICG/visual-viewport), shows how to write a simple bit of code that will hide an overlaid box (which might contain an advert, say) when the user zooms in. This is a nice way to improve the user experience when zooming in on pages. A [live sample](https://wicg.github.io/visual-viewport/examples/hide-on-zoom.html)  is also available.
+This example, taken from the [Visual Viewport README](https://github.com/WICG/visual-viewport), shows how to write a simple bit of code that will hide an overlaid box (which might contain an advert, say) when the user zooms in. This is a nice way to improve the user experience when zooming in on pages. A [live sample](https://wicg.github.io/visual-viewport/examples/hide-on-zoom.html)  is also available.
 
 ```js
 var bottomBar = document.getElementById('bottombar');
@@ -76,21 +78,21 @@ This example, also taken from the [Visual Viewport README](https://github.com/WI
 var bottomBar = document.getElementById('bottombar');
 var viewport = window.visualViewport;
 function viewportHandler() {
-  var layoutViewport = document.getElementById('layoutViewport');
+  var layoutViewport = document.getElementById('layoutViewport');
 
-  // Since the bar is position: fixed we need to offset it by the visual
-  // viewport's offset from the layout viewport origin.
-  var offsetLeft = viewport.offsetLeft;
-  var offsetTop = viewport.height
-              - layoutViewport.getBoundingClientRect().height
-              + viewport.offsetTop;
+  // Since the bar is position: fixed we need to offset it by the visual
+  // viewport's offset from the layout viewport origin.
+  var offsetLeft = viewport.offsetLeft;
+  var offsetTop = viewport.height
+              - layoutViewport.getBoundingClientRect().height
+              + viewport.offsetTop;
 
-  // You could also do this by setting style.left and style.top if you
-  // use width: 100% instead.
-  bottomBar.style.transform = 'translate(' +
-                              offsetLeft + 'px,' +
-                              offsetTop + 'px) ' +
-                              'scale(' + 1/viewport.scale + ')'
+  // You could also do this by setting style.left and style.top if you
+  // use width: 100% instead.
+  bottomBar.style.transform = 'translate(' +
+                              offsetLeft + 'px,' +
+                              offsetTop + 'px) ' +
+                              'scale(' + 1/viewport.scale + ')'
 }
 window.visualViewport.addEventListener('scroll', viewportHandler);
 window.visualViewport.addEventListener('resize', viewportHandler);

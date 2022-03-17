@@ -13,7 +13,7 @@ browser-compat: html.elements.select
 
 {{HTMLRef}}
 
-The **`<select>`** [HTML](/en-US/docs/Web/HTML) element represents a control that provides a menu of options:
+The **`<select>`** [HTML](/en-US/docs/Web/HTML) element represents a control that provides a menu of options.
 
 {{EmbedInteractiveExample("pages/tabbed/select.html", "tabbed-standard")}}
 
@@ -193,7 +193,7 @@ This example shows how you could use some CSS and JavaScript to provide extensiv
 
 This example basically:
 
-- Clones the `<select>`'s context (the [`<option>`s](/en-US/docs/Web/HTML/Element/option)) in a parent wrapper and reimplements the standard expected behavior using additional HTML elements and JavaScript. This includes basic tab behavior to provide keyboard accessibility.
+- Clones the `<select>`'s context (the [`<option>`s](/en-US/docs/Web/HTML/Element/option)) in a parent wrapper and reimplements the standard expected behavior using additional HTML elements and JavaScript. This includes basic tab behavior to provide keyboard accessibility.
 - Maps some standards native `attributes` to `data-attributes` of the new elements in order to manage state and CSS.
 
 > **Note:** Not all native features are supported, it's a Proof of Concept. IT starts from standard HTML but the same results can be achieved starting from JSON data, custom HTML, or other solutions.
@@ -202,34 +202,34 @@ This example basically:
 
 ```html
 <form>
- <fieldset>
-    <legend>Standard controls</legend>
-    <select
-       name=1A
-       id=select
-       autocomplete=off
-       required
-       >
-       <option>Carrots</option>
-       <option>Peas</option>
-       <option>Beans</option>
-       <option>Pneumonoultramicroscopicsilicovolcanoconiosis</option>
-    </select>
- </fieldset>
- <fieldset id=custom>
-    <legend>Custom controls</legend>
-    <select
-       name="2A"
-       id="select"
-       autocomplete="off"
-       required
-       >
-       <option>Carrots</option>
-       <option>Peas</option>
-       <option>Beans</option>
-       <option>Pneumonoultramicroscopicsilicovolcanoconiosis</option>
-    </select>
-  </fieldset>
+ <fieldset>
+    <legend>Standard controls</legend>
+    <select
+       name=1A
+       id=select
+       autocomplete=off
+       required
+       >
+       <option>Carrots</option>
+       <option>Peas</option>
+       <option>Beans</option>
+       <option>Pneumonoultramicroscopicsilicovolcanoconiosis</option>
+    </select>
+ </fieldset>
+ <fieldset id=custom>
+    <legend>Custom controls</legend>
+    <select
+       name="2A"
+       id="select"
+       autocomplete="off"
+       required
+       >
+       <option>Carrots</option>
+       <option>Peas</option>
+       <option>Beans</option>
+       <option>Pneumonoultramicroscopicsilicovolcanoconiosis</option>
+    </select>
+  </fieldset>
 </form>
 ```
 

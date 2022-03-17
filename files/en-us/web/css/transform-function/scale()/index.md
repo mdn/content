@@ -21,7 +21,7 @@ This scaling transformation is characterized by a two-dimensional vector. Its co
 done in each direction. If both coordinates are equal, the scaling is uniform (_isotropic_) and the aspect
 ratio of the element is preserved (this is a [homothetic transformation](https://en.wikipedia.org/wiki/Homothetic_transformation)).
 
-When a coordinate value is outside the \[-1, 1] range, the element grows along that dimension; when inside, it
+When a coordinate value is outside the \[-1, 1] range, the element grows along that dimension; when inside, it
 shrinks. If it is negative, the result a [point reflection](https://en.wikipedia.org/wiki/Point_reflection)
 in that dimension. A value of 1 has no effect.
 
@@ -42,9 +42,9 @@ scale(sx, sy)
 ### Values
 
 - `sx`
-  - : A {{cssxref("&lt;number&gt;")}} representing the abscissa of the scaling vector.
+  - : A {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} representing the abscissa of the scaling vector.
 - `sy`
-  - : A {{cssxref("&lt;number&gt;")}} representing the ordinate of the scaling vector. If not defined, its default value
+  - : A {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} representing the ordinate of the scaling vector. If not defined, its default value
     is `sx`, resulting in a uniform scaling that preserves the element's aspect ratio.
 
 <table class="standard-table">
@@ -60,20 +60,20 @@ scale(sx, sy)
     <tr>
       <td rowspan="2">
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd></mtr
               ><mtr
                 ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td>
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
@@ -85,13 +85,13 @@ scale(sx, sy)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td rowspan="2">
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
@@ -103,13 +103,13 @@ scale(sx, sy)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td rowspan="2">
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
@@ -124,7 +124,7 @@ scale(sx, sy)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>

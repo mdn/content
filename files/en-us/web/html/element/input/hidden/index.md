@@ -20,7 +20,7 @@ browser-compat: html.elements.input.input-hidden
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
         A {{domxref("DOMString")}} representing the value of the hidden
         data you want to pass back to the server.
@@ -69,13 +69,13 @@ As mentioned above, hidden inputs can be used anywhere that you want to include 
 
 One of the most common uses for hidden inputs is to keep track of what database record needs to be updated when an edit form is submitted. A typical workflow looks like this:
 
-1.  User decides to edit some content they have control over, such as a blog post, or a product entry. They get started by pressing the edit button.
-2.  The content to be edited is taken from the database and loaded into an HTML form to allow the user to make changes.
-3.  After editing, the user submits the form, and the updated data is sent back to the server to be updated in the database.
+1. User decides to edit some content they have control over, such as a blog post, or a product entry. They get started by pressing the edit button.
+2. The content to be edited is taken from the database and loaded into an HTML form to allow the user to make changes.
+3. After editing, the user submits the form, and the updated data is sent back to the server to be updated in the database.
 
 The idea here is that during step 2, the ID of the record being updated is kept in a hidden input. When the form is submitted in step 3, the ID is automatically sent back to the server with the record content. The ID lets the site's server-side component know exactly which record needs to be updated with the submitted data.
 
-You can see a full example of what this might look like in the {{anch("Examples")}} section below.
+You can see a full example of what this might look like in the [Examples](#examples) section below.
 
 ### Improving website security
 
@@ -91,7 +91,7 @@ Hidden inputs don't participate in constraint validation; they have no real valu
 
 ## Examples
 
-Let's look at how we might implement a simple version of the edit form we described earlier (see {{anch("Tracking edited content")}}), using a hidden input to remember the ID of the record being edited.
+Let's look at how we might implement a simple version of the edit form we described earlier (see [Tracking edited content](#tracking_edited_content)), using a hidden input to remember the ID of the record being edited.
 
 The edit form's HTML might look a little bit like this:
 

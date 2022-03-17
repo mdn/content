@@ -88,10 +88,10 @@ killTween.start();
 
 Let's walk through this so you can see what's happening here:
 
-1.  When defining a new tween you have to specify which property will be tweened — in our case, instead of hiding the bricks instantly when hit by the ball, we will make their width and height scale to zero, so they will nicely disappear. To the end, we use the `add.tween()` method, specifying `brick.scale` as the argument as this is what we want to tween.
-2.  The `to()` method defines the state of the object at the end of the tween. It takes an object containing the chosen parameter's desired ending values (scale takes a scale value, 1 being 100% of size, 0 being 0% of size, etc.), the time of the tween in milliseconds and the type of easing to use for the tween.
-3.  We will also add the optional `onComplete` event handler, which defines a function to be executed when the tween finishes.
-4.  The last thing do to is to start the tween right away using `start()`.
+1. When defining a new tween you have to specify which property will be tweened — in our case, instead of hiding the bricks instantly when hit by the ball, we will make their width and height scale to zero, so they will nicely disappear. To the end, we use the `add.tween()` method, specifying `brick.scale` as the argument as this is what we want to tween.
+2. The `to()` method defines the state of the object at the end of the tween. It takes an object containing the chosen parameter's desired ending values (scale takes a scale value, 1 being 100% of size, 0 being 0% of size, etc.), the time of the tween in milliseconds and the type of easing to use for the tween.
+3. We will also add the optional `onComplete` event handler, which defines a function to be executed when the tween finishes.
+4. The last thing do to is to start the tween right away using `start()`.
 
 That's the expanded version of the tween definition, but we can also use the shorthand syntax:
 

@@ -11,7 +11,7 @@ browser-compat: api.HTMLCanvasElement.toDataURL
 ---
 {{APIRef("Canvas API")}}
 
-The **`HTMLCanvasElement.toDataURL()`** method returns a [data URI](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) containing a representation of the image in the format specified by the `type` parameter.
+The **`HTMLCanvasElement.toDataURL()`** method returns a [data URI](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) containing a representation of the image in the format specified by the `type` parameter.
 
 The desired file format and image quality may be specified.
 If the file format is not specified, or if the given format is not supported, then the data will be exported as `image/png`.
@@ -20,7 +20,6 @@ In other words, if the returned value starts with `data:image/png` for any other
 Browsers are required to support `image/png`; many will support additional formats including `image/jpg` and `image/webp`.
 
 The created image data will have a resolution of 96dpi for file formats that support encoding resolution metadata.
-
 
 ## Syntax
 

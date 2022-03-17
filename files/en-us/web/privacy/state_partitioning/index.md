@@ -87,7 +87,7 @@ efforts as the Work Item is standardized.
 - [**Network Partitioning**](#network_partitioning): Enabled by default for all users since Firefox 85.
 - [**Dynamic State Partitioning**](#dynamic_state_partitioning):
   - Since Firefox 86: Enabled for users that have
-    ["Strict" privacy protections ](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection)enabled.
+    ["Strict" privacy protections](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection) enabled.
   - Since Firefox 90: Enabled in private browsing.
 
 ### Network Partitioning
@@ -127,7 +127,7 @@ for cross-site tracking. As such, the following network APIs and caches are
 
 To prevent JavaScript accessible storage APIs being used for cross-site
 tracking, Firefox partitions accessible storage by top-level site. This
-mechanism ieans that, generally, a third-party embedded in one top-level site
+mechanism means that, generally, a third-party embedded in one top-level site
 cannot access data stored under another top-level site.
 
 However, unlike Network Partitioning, this boundary is dynamic and access
@@ -197,7 +197,7 @@ third-party integrations that are common on the web to continue to function.
 
 Third-party frames may use
 [`document.requestStorageAccess`
-](/en-US/docs/Web/API/Document/requestStorageAccess)to request unpartitioned storage access through the
+](/en-US/docs/Web/API/Document/requestStorageAccess) to request unpartitioned storage access through the
 [Storage Access API](/en-US/docs/Web/API/Storage_Access_API). Once
 granted, the requesting third-party will gain access to its first-party
 storage bucket (i.e., the storage it would have access to if visited as a
@@ -226,9 +226,9 @@ with storage in a third-party context. In the following examples,
 
 | Reason                                                                                                  | Console Message                                                                                                                                       |
 | ------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Storage of a third-party frame is partitioned                                                           | Partitioned cookie or storage access was provided to “b.example” because it is loaded in the third-party context and storage partitioning is enabled. |
-| Storage access is granted through a **heuristic**                                                       | Storage access automatically granted for First-Party isolation “b.example” on “a.example”.                                                            |
-| Storage access is granted via the [StorageAccessAPI](/en-US/docs/Web/API/Document/requestStorageAccess) | Storage access granted for origin “b.example” on “a.example”.                                                                                         |
+| Storage of a third-party frame is partitioned                                                           | Partitioned cookie or storage access was provided to "b.example" because it is loaded in the third-party context and storage partitioning is enabled. |
+| Storage access is granted through a **heuristic**                                                       | Storage access automatically granted for First-Party isolation "b.example" on "a.example".                                                            |
+| Storage access is granted via the [StorageAccessAPI](/en-US/docs/Web/API/Document/requestStorageAccess) | Storage access granted for origin "b.example" on "a.example".                                                                                         |
 
 #### Clear Third-Party Storage-Access
 
@@ -239,7 +239,7 @@ Information Panel](https://support.mozilla.org/en-US/kb/site-information-panel) 
 
 #### Test Preferences
 
-> **Warning:** Make sure to set these prefs in a separate
+> **Warning:** Make sure to set these preferences in a separate
 > Firefox profile or reset them after testing.
 
 ##### Disable Web Compatibility Features
@@ -251,12 +251,13 @@ State Partitioning mechanism in Firefox and it does not rely on temporary
 heuristics.
 
 Features disabled by the pref include:
+
 - [Storage access heuristics](#storage_access_heuristics): Unpartitioned storage
-  access can only be aquired via the Storage Access API.
+  access can only be acquired via the Storage Access API.
 - Automatic storage access grants:
   [document.requestStorageAccess](/en-US/docs/Web/API/Document/requestStorageAccess)
   will always prompt the user.
-- [SmartBlock’s "unblock on opt-in"
+- [SmartBlock's "unblock on opt-in"
   feature](https://blog.mozilla.org/security/2021/07/13/smartblock-v2/), which
   will allow certain trackers when users interact with them.
 - Any temporary [anti-tracking
@@ -265,7 +266,7 @@ Features disabled by the pref include:
 
 ##### Disable Heuristics
 
-The following prefs can be used to disable individual storage access
+The following preferences can be used to disable individual storage access
 heuristics via the
 [config editor](https://support.mozilla.org/en-US/kb/about-config-editor-firefox):
 
@@ -306,4 +307,6 @@ For example, to disable partitioning for `tracker.example`
 on `example.com` and for `social.example` on
 `news.example`, you would set the pref to the following:
 
-     https://tracker.example,http://example.com;https://social.example,https://news.example
+```
+https://tracker.example,http://example.com;https://social.example,https://news.example
+```

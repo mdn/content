@@ -29,7 +29,6 @@ Do not use.
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#composite","ARIA: composite role")}}                                             | {{Spec2('ARIA')}}                         |
 
-
 ## See Also
 
 - [ARIA: `widget` role](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role)

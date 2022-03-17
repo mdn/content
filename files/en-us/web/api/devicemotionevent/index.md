@@ -19,10 +19,12 @@ The `DeviceMotionEvent` provides web developers with information about the speed
 
 > **Warning:** Currently, Firefox and Chrome do not handle the coordinates the same way. Take care about this while using them.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
-- {{DOMxRef("DeviceMotionEvent.DeviceMotionEvent()")}} {{Non-standard_Inline}}
-  - : Creates a new `DeviceMotionEvent`.
+- {{DOMxRef("DeviceMotionEvent.DeviceMotionEvent()")}} {{Non-standard_Inline}}
+  - : Creates a new `DeviceMotionEvent`.
 
 ## Properties
 
@@ -39,7 +41,7 @@ The `DeviceMotionEvent` provides web developers with information about the speed
 
 ```js
 window.addEventListener('devicemotion', function(event) {
-  console.log(event.acceleration.x + ' m/s2');
+  console.log(event.acceleration.x + ' m/s2');
 });
 ```
 
@@ -59,4 +61,4 @@ window.addEventListener('devicemotion', function(event) {
 - {{DOMxRef("Accelerometer")}}
 - {{DOMxRef("LinearAccelerationSensor")}}
 - [Detecting device orientation](/en-US/docs/Web/Events/Detecting_device_orientation)
-- [Orientation and motion data explained](/en-US/docs/Web/Events/Orientation_and_motion_data_explained "Orientation and motion data explained")
+- [Orientation and motion data explained](/en-US/docs/Web/Events/Orientation_and_motion_data_explained)

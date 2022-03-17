@@ -42,7 +42,7 @@ ws.add(window); // add the window object to the WeakSet
 
 ws.has(window); // true
 
-// Weakset only takes objects as arguments
+// WeakSet only takes objects as arguments
 ws.add(1);
 // results in "TypeError: Invalid value used in weak set" in Chrome
 // and "TypeError: 1 is not a non-null object" in Firefox

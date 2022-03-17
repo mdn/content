@@ -6,7 +6,7 @@ tags:
   - Experimental
 browser-compat: api.AudioParamMap
 ---
-{{draft}}{{APIRef("Web Audio API")}}
+{{APIRef("Web Audio API")}}
 
 The Web Audio API interface **`AudioParamMap`** represents a set of multiple audio parameters, each described as a mapping of a {{domxref("DOMString")}} identifying the parameter to the {{domxref("AudioParam")}} object representing its value.
 

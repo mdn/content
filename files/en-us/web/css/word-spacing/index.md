@@ -43,7 +43,7 @@ word-spacing: unset;
 - {{cssxref("length")}}
   - : Specifies extra spacing in addition to the intrinsic inter-word spacing defined by the font.
 - {{cssxref("percentage")}}
-  - : Specifies extra spacing as a percentage of the affected character’s advance width.
+  - : Specifies extra spacing as a percentage of the affected character's advance width.
 
 ## Examples
 

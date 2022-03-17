@@ -10,7 +10,7 @@ tags:
 The **stale element reference** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Errors) that occurs because the referenced [web element](/en-US/docs/Web/WebDriver/WebElement) is no longer attached to the [DOM](/en-US/docs/Glossary/DOM).
 
 Every DOM element is represented in WebDriver by a unique identifying reference, known as a _[web element](/en-US/docs/Web/WebDriver/WebElement)_.
-The web element reference is a {{Glossary("UUID")}} used to execute commands targeting specific elements, such as [getting an element’s tag name](/en-US/docs/Web/WebDriver/Commands/GetElementTagName) and [retrieving a property](/en-US/docs/Web/WebDriver/Commands/GetElementProperty) off an element.
+The web element reference is a {{Glossary("UUID")}} used to execute commands targeting specific elements, such as [getting an element's tag name](/en-US/docs/Web/WebDriver/Commands/GetElementTagName) and [retrieving a property](/en-US/docs/Web/WebDriver/Commands/GetElementProperty) off an element.
 
 When an element is no longer attached to the DOM, i.e. it has been removed from the document or the document has changed, it is said to be _stale_. Staleness occurs for example when you have a web element reference and the document it was retrieved from navigates.
 
@@ -42,7 +42,9 @@ except exceptions.StaleElementReferenceException as e:
 
 Output:
 
-    StaleElementReferenceException: The element reference of e75a1764-ff73-40fa-93c1-08cb90394b65 is stale either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
+```
+StaleElementReferenceException: The element reference of e75a1764-ff73-40fa-93c1-08cb90394b65 is stale either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
+```
 
 ### Node removal
 
@@ -73,7 +75,9 @@ except exceptions.StaleElementReferenceException as e:
 
 Output:
 
-    StaleElementReferenceException: The element reference of e75a1764-ff73-40fa-93c1-08cb90394b65 is stale either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
+```
+StaleElementReferenceException: The element reference of e75a1764-ff73-40fa-93c1-08cb90394b65 is stale either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
+```
 
 ## See also
 

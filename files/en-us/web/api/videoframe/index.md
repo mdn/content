@@ -29,7 +29,6 @@ Created frames may then turned into a media track, for example with the {{domxre
 
 ## Properties
 
-
 - {{domxref("VideoFrame.format")}}{{ReadOnlyInline}}
   - : Returns the pixel format of the `VideoFrame`.
 - {{domxref("VideoFrame.codedWidth")}}{{ReadOnlyInline}}
@@ -102,4 +101,3 @@ while (true) {
 
 - [Video processing with WebCodecs](https://web.dev/webcodecs/)
 - [WebCodecs examples](https://w3c.github.io/webcodecs/samples/)
-

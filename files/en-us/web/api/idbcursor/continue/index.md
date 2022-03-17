@@ -57,23 +57,25 @@ our [IDBCursor
 example](https://github.com/mdn/indexeddb-examples/tree/master/idbcursor) ([view
 example live](https://mdn.github.io/indexeddb-examples/idbcursor/).)
 
-    function displayData() {
-      var transaction = db.transaction(['rushAlbumList'], "readonly");
-      var objectStore = transaction.objectStore('rushAlbumList');
+```js
+function displayData() {
+  var transaction = db.transaction(['rushAlbumList'], "readonly");
+  var objectStore = transaction.objectStore('rushAlbumList');
 
-      objectStore.openCursor().onsuccess = function(event) {
-        var cursor = event.target.result;
-        if(cursor) {
-          var listItem = document.createElement('li');
-          listItem.innerHTML = cursor.value.albumTitle + ', ' + cursor.value.year;
-          list.appendChild(listItem);
+  objectStore.openCursor().onsuccess = function(event) {
+    var cursor = event.target.result;
+    if(cursor) {
+      var listItem = document.createElement('li');
+      listItem.innerHTML = cursor.value.albumTitle + ', ' + cursor.value.year;
+      list.appendChild(listItem);
 
-          cursor.continue();
-        } else {
-          console.log('Entries all displayed.');
-        }
-      };
-    };
+      cursor.continue();
+    } else {
+      console.log('Entries all displayed.');
+    }
+  };
+};
+```
 
 ## Specifications
 

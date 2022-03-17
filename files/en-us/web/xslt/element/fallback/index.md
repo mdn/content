@@ -13,9 +13,11 @@ The `<xsl:fallback>` element specifies what template to use if a given extension
 
 ### Syntax
 
-    <xsl:fallback>
-    	TEMPLATE
-    </xsl:fallback>
+```xml
+<xsl:fallback>
+  TEMPLATE
+</xsl:fallback>
+```
 
 ### Required Attributes
 

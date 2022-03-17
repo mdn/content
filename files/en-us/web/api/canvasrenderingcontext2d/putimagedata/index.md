@@ -142,7 +142,7 @@ The output might look like:
 ```plain
 before: Uint8ClampedArray(4) [ 1, 127, 255, 1 ]
 after: Uint8ClampedArray(4) [ 255, 255, 255, 1 ]
-````
+```
 
 ## Specifications
 

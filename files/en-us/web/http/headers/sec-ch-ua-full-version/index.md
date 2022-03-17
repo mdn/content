@@ -8,7 +8,7 @@ tags:
   - HTTP Header
   - Reference
   - Request header
-  - Exerimental
+  -  Experimental
 browser-compat: http.headers.Sec-CH-UA-Full-Version
 ---
 {{HTTPSidebar}} {{deprecated_header}} {{securecontext_header}}
@@ -33,7 +33,6 @@ The **`Sec-CH-UA-Full-Version`** [user agent client hint](/en-US/docs/Web/HTTP/C
   </tbody>
 </table>
 
-
 ## Syntax
 
 ```http
@@ -44,7 +43,6 @@ Sec-CH-UA-Full-Version: <version>
 
 - `<version>`
   - : A string containing the full version number, like "96.0.4664.93".
-
 
 ## Examples
 

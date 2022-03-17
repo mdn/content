@@ -3,7 +3,6 @@ title: VREyeParameters.maximumFieldOfView
 slug: Web/API/VREyeParameters/maximumFieldOfView
 tags:
   - API
-  - Experimental
   - Deprecated
   - Property
   - Reference
@@ -20,13 +19,7 @@ The **`maximumFieldOfView`** read-only property of the {{domxref("VREyeParameter
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Syntax
-
-```js
-var maxFOV = myEyeParameters.maximumFieldOfView;
-```
-
-### Value
+## Value
 
 A {{domxref("VRFieldOfView")}} object.
 

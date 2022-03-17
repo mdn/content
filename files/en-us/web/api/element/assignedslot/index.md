@@ -1,5 +1,5 @@
 ---
-title: 'Element: assignedSlot'
+title: Element.assignedSlot
 slug: Web/API/Element/assignedSlot
 tags:
   - API

@@ -17,6 +17,7 @@ tags:
   - form
   - passwords
   - textarea
+browser-compat: html.global_attributes.autocomplete
 ---
 
 {{HTMLSidebar}}
@@ -33,9 +34,9 @@ For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute
 
 > **Note:** In order to provide autocompletion, user-agents might require `<input>`/`<select>`/`<textarea>` elements to:
 >
-> 1.  Have a `name` and/or `id` attribute
-> 2.  Be descendants of a `<form>` element
-> 3.  The form to have a {{HTMLElement("input/submit", "submit")}} button
+> 1. Have a `name` and/or `id` attribute
+> 2. Be descendants of a `<form>` element
+> 3. The form to have a {{HTMLElement("input/submit", "submit")}} button
 
 ## Values
 
@@ -83,13 +84,13 @@ For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute
 - "`address-line1`", "`address-line2`", "`address-line3`"
   - : Each individual line of the street address. These should only be present if the "`street-address`" is not present.
 - "`address-level4`"
-  - : The finest-grained {{anch("Administrative levels in addresses", "administrative level")}}, in addresses which have four levels.
+  - : The finest-grained [administrative level](#administrative_levels_in_addresses), in addresses which have four levels.
 - "`address-level3`"
-  - : The third {{anch("Administrative levels in addresses", "administrative level")}}, in addresses with at least three administrative levels.
+  - : The third [administrative level](#administrative_levels_in_addresses), in addresses with at least three administrative levels.
 - "`address-level2`"
-  - : The second {{anch("Administrative levels in addresses", "administrative level")}}, in addresses with at least two of them. In countries with two administrative levels, this would typically be the city, town, village, or other locality in which the address is located.
+  - : The second [administrative level](#administrative_levels_in_addresses), in addresses with at least two of them. In countries with two administrative levels, this would typically be the city, town, village, or other locality in which the address is located.
 - "`address-level1`"
-  - : The first {{anch("Administrative levels in addresses", "administrative level")}} in the address. This is typically the province in which the address is located. In the United States, this would be the state. In Switzerland, the canton. In the United Kingdom, the post town.
+  - : The first [administrative level](#administrative_levels_in_addresses) in the address. This is typically the province in which the address is located. In the United States, this would be the state. In Switzerland, the canton. In the United Kingdom, the post town.
 - "`country`"
   - : A country or territory code.
 - "`country-name`"
@@ -233,13 +234,11 @@ An address in Japan is typically **written in one line**, in an order from the l
 
 ## Specifications
 
-| Specification                                                        |
-| -------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "#attr-fe-autocomplete", "autocomplete")}} |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("html.global_attributes.autocomplete")}}
+{{Compat}}
 
 ## See also
 

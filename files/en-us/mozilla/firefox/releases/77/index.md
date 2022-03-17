@@ -9,9 +9,9 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 77 that will affect developers. Firefox 77 was released on [June 2, 2020](https://wiki.mozilla.org/RapidRelease/Calendar).
+This article provides information about the changes in Firefox 77 that will affect developers. Firefox 77 was released on [June 2, 2020](https://wiki.mozilla.org/RapidRelease/Calendar).
 
-**See also the accompanying hacks post —[ New in Firefox 77: DevTool improvements and web platform updates](https://hacks.mozilla.org/2020/06/new-in-firefox-77-devtool-improvements-and-web-platform-updates/).**
+**See also the accompanying hacks post — [New in Firefox 77: DevTool improvements and web platform updates](https://hacks.mozilla.org/2020/06/new-in-firefox-77-devtool-improvements-and-web-platform-updates/).**
 
 ## Changes for web developers
 
@@ -58,7 +58,7 @@ This article provides information about the changes in Firefox 77 that will aff
 ### API changes
 
 - {{WebExtAPIRef("tabs.goBack")}} and {{WebExtAPIRef("tabs.goForward")}} are now supported. ({{bug(1603796)}})
-- {{WebExtAPIRef("browsingData.remove")}} with type `serviceWorkers` and `indexedDB` now supports deleting by hostname. ({{bug(1632990)}} and {{bug(1551301)}})
+- {{WebExtAPIRef("browsingData.remove")}} with type `serviceWorkers` and `indexedDB` now supports deleting by hostname. ({{bug(1632990)}} and {{bug(1551301)}})
 - The {{WebExtAPIRef("tabs.duplicate")}} API now supports `duplicateProperties`, enabling the position and active status of a duplicated tab to be specified. ({{bug(1560218)}})
 - The {{WebExtAPIRef("permissions")}} API events {{WebExtAPIRef("permissions.onAdded")}} and {{WebExtAPIRef("permissions.onRemoved")}} are now supported. ({{bug(1444294)}})
 - Multiple `Content-Security-Policy` header changes requested in {{WebExtAPIRef("webRequest.onHeadersReceived")}} are merged. ({{bug(1462989 )}})
@@ -66,12 +66,12 @@ This article provides information about the changes in Firefox 77 that will aff
 
 ### Manifest changes
 
-- The following permissions are now optional, they can be specified in the [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions)[ ](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions)manifest key and requested using the {{WebExtAPIRef("permissions")}} API: `browsingData` ({{bug(1630417)}}), `pkcs11` ({{bug(1630418)}}), `proxy` ({{bug(1548011)}}), and `sessions` ({{bug(1630414)}}).
+- The following permissions are now optional, they can be specified in the [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) manifest key and requested using the {{WebExtAPIRef("permissions")}} API: `browsingData` ({{bug(1630417)}}), `pkcs11` ({{bug(1630418)}}), `proxy` ({{bug(1548011)}}), and `sessions` ({{bug(1630414)}}).
 
 ### Other
 
 - Use of the `unlimitedStorage` permission no longer results in a prompt during extension installation or update. See [Requesting the right permissions](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/) for more information. ({{bug(1630413)}})
-- Changes related to [SameSite cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) mean that when setting [host permissions ](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)to bypass tracking protection for extension pages hosts must be specified as a full domain or with wildcards. However, for Content scripts tracking protection can only be bypassed for hosts specified with a full domain.
+- Changes related to [SameSite cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) mean that when setting [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) to bypass tracking protection for extension pages hosts must be specified as a full domain or with wildcards. However, for Content scripts tracking protection can only be bypassed for hosts specified with a full domain.
 
 ## Older versions
 

@@ -7,11 +7,11 @@ tags:
   - History API
   - History API Tutorial
 ---
-HTML5 introduced the {{DOMxRef("History.pushState","pushState()")}} and {{DOMxRef("History.replaceState","replaceState()")}} methods for add and modifying history entries, respectively. These methods work in conjunction with the {{domxref("WindowEventHandlers/onpopstate","onpopstate")}} event.
+HTML5 introduced the {{DOMxRef("History.pushState","pushState()")}} and {{DOMxRef("History.replaceState","replaceState()")}} methods for add and modifying history entries, respectively. These methods work in conjunction with the {{domxref("WindowEventHandlers/onpopstate","onpopstate")}} event.
 
 ## Adding and modifying history entries
 
-Using {{DOMxRef("History.pushState","pushState()")}} changes the referrer that gets used in the HTTP header for {{domxref("XMLHttpRequest")}} objects created after you change the state. The referrer will be the URL of the document whose window is `this` at the time of creation of the {{domxref("XMLHttpRequest")}} object.
+Using {{DOMxRef("History.pushState","pushState()")}} changes the referrer that gets used in the HTTP header for {{domxref("XMLHttpRequest")}} objects created after you change the state. The referrer will be the URL of the document whose window is `this` at the time of creation of the {{domxref("XMLHttpRequest")}} object.
 
 ### Example of pushState() method
 
@@ -19,7 +19,7 @@ Suppose `https://mozilla.org/foo.html` executes the following JavaScript:
 
 ```js
 let stateObj = {
-    foo: "bar",
+    foo: "bar",
 }
 
 history.pushState(stateObj, "page 2", "bar.html")
@@ -29,9 +29,9 @@ This will cause the URL bar to display `https://mozilla.org/bar.html`, but won't
 
 Suppose now that the user navigates to `https://google.com`, then clicks the **Back** button. At this point, the URL bar will display `https://mozilla.org/bar.html` and `history.state` will contain the `stateObj`. The `popstate` event won't be fired because the page has been reloaded. The page itself will look like `bar.html`.
 
-If the user clicks **Back** once again, the URL will change to `https://mozilla.org/foo.html`, and the document will get a `popstate` event, this time with a `null` state object. Here too, going back doesn't change the document's contents from what they were in the previous step, although the document might update its contents manually upon receiving the `popstate` event.
+If the user clicks **Back** once again, the URL will change to `https://mozilla.org/foo.html`, and the document will get a `popstate` event, this time with a `null` state object. Here too, going back doesn't change the document's contents from what they were in the previous step, although the document might update its contents manually upon receiving the `popstate` event.
 
-### The pushState() method
+### The pushState() method
 
 `pushState()` takes three parameters: a **state object**; a **title** (currently ignored); and (optionally), a **URL**.
 
@@ -60,7 +60,7 @@ Note that `pushState()` never causes a `hashchange` event to be fired, even if t
 
 In other documents, it creates an element with a `null` namespace URI.
 
-### The replaceState() method
+### The replaceState() method
 
 `history.replaceState()` operates exactly like `history.pushState()`, except that `replaceState()` modifies the current history entry instead of creating a new one. Note that this doesn't prevent the creation of a new entry in the global browser history.
 
@@ -77,7 +77,7 @@ let stateObj = { foo: "bar" }
 history.pushState(stateObj, "page 2", "bar.html")
 ```
 
-The explanation of these two lines above can be found at the above section *[Example of pushState() method](#example_of_pushstate_method)* section.
+The explanation of these two lines above can be found at the above section *[Example of pushState() method](#example_of_pushstate_method)* section.
 
 Next, suppose `https://mozilla.org/bar.html` executes the following JavaScript:
 
@@ -87,19 +87,19 @@ history.replaceState(stateObj, "page 3", "bar2.html")
 
 This will cause the URL bar to display `https://mozilla.org/bar2.html`, but won't cause the browser to load `bar2.html` or even check that `bar2.html` exists.
 
-Suppose now that the user navigates to `https://www.microsoft.com`, then clicks the **Back** button. At this point, the URL bar will display `https://mozilla.org/bar2.html`. If the user now clicks **Back** again, the URL bar will display `https://mozilla.org/foo.html`, and totally bypass `bar.html`.
+Suppose now that the user navigates to `https://www.microsoft.com`, then clicks the **Back** button. At this point, the URL bar will display `https://mozilla.org/bar2.html`. If the user now clicks **Back** again, the URL bar will display `https://mozilla.org/foo.html`, and totally bypass `bar.html`.
 
 ### The popstate event
 
-A `popstate` event is dispatched to the window every time the active history entry changes. If the history entry being activated was created by a call to {{DOMxRef("History.pushState","pushState")}} or affected by a call to {{DOMxRef("History.replaceState","replaceState")}}, the `popstate` event's `state` property contains a copy of the history entry's state object.
+A `popstate` event is dispatched to the window every time the active history entry changes. If the history entry being activated was created by a call to {{DOMxRef("History.pushState","pushState")}} or affected by a call to {{DOMxRef("History.replaceState","replaceState")}}, the `popstate` event's `state` property contains a copy of the history entry's state object.
 
 See {{ domxref("WindowEventHandlers.onpopstate") }} for sample usage.
 
 ### Reading the current state
 
-When your page loads, it might have a non-null state object.  This can happen, for example, if the page sets a state object (using {{DOMxRef("History.pushState","pushState()")}} or {{DOMxRef("History.replaceState","replaceState()")}}) and then the user restarts their browser. When the page reloads, the page will receive an `onload` event, but no `popstate` event. However, if you read the {{DOMxRef("History.state","history.state")}} property, you'll get back the state object you would have gotten if a `popstate` had fired.
+When your page loads, it might have a non-null state object.  This can happen, for example, if the page sets a state object (using {{DOMxRef("History.pushState","pushState()")}} or {{DOMxRef("History.replaceState","replaceState()")}}) and then the user restarts their browser. When the page reloads, the page will receive an `onload` event, but no `popstate` event. However, if you read the {{DOMxRef("History.state","history.state")}} property, you'll get back the state object you would have gotten if a `popstate` had fired.
 
-You can read the state of the current history entry without waiting for a `popstate` event using the {{DOMxRef("History.state","history.state")}} property like this:
+You can read the state of the current history entry without waiting for a `popstate` event using the {{DOMxRef("History.state","history.state")}} property like this:
 
 ```js
 let currentState = history.state

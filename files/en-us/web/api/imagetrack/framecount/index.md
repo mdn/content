@@ -33,5 +33,3 @@ console.log(track.frameCount);
 ## Browser compatibility
 
 {{Compat}}
-
-

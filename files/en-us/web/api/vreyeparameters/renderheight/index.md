@@ -3,7 +3,6 @@ title: VREyeParameters.renderHeight
 slug: Web/API/VREyeParameters/renderHeight
 tags:
   - API
-  - Experimental
   - Deprecated
   - Property
   - Reference
@@ -22,13 +21,7 @@ The **`renderHeight`** read-only property of the {{domxref("VREyeParameters")}} 
 
 This is already in device pixel units, so there's no need to multiply by [Window.devicePixelRatio](/en-US/docs/Web/API/Window/devicePixelRatio) before setting to [HTMLCanvasElement.height.](/en-US/docs/Web/API/HTMLCanvasElement/height)
 
-## Syntax
-
-```js
-var myRenderHeight = eyeParametersInstance.renderHeight;
-```
-
-### Value
+## Value
 
 A number, representing the height in pixels.
 

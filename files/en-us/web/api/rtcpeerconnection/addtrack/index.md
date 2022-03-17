@@ -23,9 +23,7 @@ which will be transmitted to the other peer.>
 
 > **Note:** Adding a track to a connection triggers renegotiation by
 > firing a {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event. See
-> {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling",
-
-    "Starting negotiation")}} for details.
+> {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling", "Starting negotiation")}} for details.
 
 ## Syntax
 
@@ -104,7 +102,7 @@ async openCall(pc) {
 The result is a set of tracks being sent to the remote peer, with no stream
 associations. The handler for the {{DOMxRef("RTCPeerConnection/track_event", "track")}} event on the remote peer will be
 responsible for determining what stream to add each track to, even if that means adding
-them all to the same stream. The {{domxref("RTCPeerConnection.ontrack", "ontrack")}}
+them all to the same stream. The {{domxref("RTCPeerConnection.track_event", "ontrack")}}
 handler might look like this:
 
 ```js
@@ -280,5 +278,4 @@ returned by {{domxref("MediaStream.getTracks()")}} and passing them to
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - [Introduction to the Real-time
   Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
-- {{domxref("RTCPeerConnection.ontrack")}}
 - {{DOMxRef("RTCPeerConnection/track_event", "track")}}

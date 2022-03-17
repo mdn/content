@@ -27,7 +27,7 @@ This interface includes methods for working with files—including copying, movi
 
 The `FileSystemEntrySync` interface includes methods that you would expect for manipulating files and directories, but it also include a really handy method for getting a URL of the entry: [`toURL()`](#tourl). It also introduces a new URL scheme: `filesystem:`.
 
-You can use the `filesystem:` scheme on Google Chrome to see all the files and folders that are stored in the origin of your app. Just use `filesystem:` scheme for the root directory of the origin of the app. For example, if your app is in [`https://www.html5rocks.com/en/`](https://www.html5rocks.com/en/), open `filesystem:http://www.html5rocks.com/temporary/` in a tab. Chrome shows a read-only list of all the files and folders stored the origin of your app.
+You can use the `filesystem:` scheme on Google Chrome to see all the files and folders that are stored in the origin of your app. Just use `filesystem:` scheme for the root directory of the origin of the app. For example, if your app is in [`https://www.html5rocks.com/en/`](https://www.html5rocks.com/en/), open `filesystem:http://www.html5rocks.com/temporary/` in a tab. Chrome shows a read-only list of all the files and folders stored the origin of your app.
 
 ## Method overview
 
@@ -114,9 +114,9 @@ You can use the `filesystem:` scheme on Google Chrome to see all the files and f
       <td><code>fullpath</code></td>
       <td><code>readonly DOMString</code></td>
       <td>
-        <p>The full absolute path from the root to the entry.</p>
+        <p>The full absolute path from the root to the entry.</p>
         <p>
-          An absolute path is a relative path from the root directory, prepended
+          An absolute path is a relative path from the root directory, prepended
           with a '<code>/</code>'.
         </p>
       </td>
@@ -145,8 +145,10 @@ You can use the `filesystem:` scheme on Google Chrome to see all the files and f
 
 Look up metadata about this entry. \[ todo: specify what kind of metadata ]
 
-    Metadata getMetada ()
-      raises (FileException);
+```
+Metadata getMetadata()
+  raises (FileException);
+```
 
 #### Parameter
 
@@ -167,9 +169,9 @@ This method can raise a [FileException](/en-US/docs/Web/API/FileException) with 
 
 ### moveTo()
 
-Move an entry to a different location on the file system. Moving a file over an existing file replaces that existing file. Moving a directory over an existing empty directory replaces that directory. \[todo: What if the directory is not empty? ]
+Move an entry to a different location on the file system. Moving a file over an existing file replaces that existing file. Moving a directory over an existing empty directory replaces that directory. \[todo: What if the directory is not empty? ]
 
-\[todo: Verify ] This is the same method for renaming files. You can keep it in the same location and then define the `newName` parameter.
+\[todo: Verify ] This is the same method for renaming files. You can keep it in the same location and then define the `newName` parameter.
 
 You cannot do the following:
 
@@ -178,11 +180,11 @@ You cannot do the following:
 - Move a file to a path occupied by a directory or move a directory to a path occupied by a file
 - Move any element to a path occupied by a directory that is not empty.
 
-<!---->
-
-    FileSystemEntrySync moveTo (
-      in DirectoryEntrySync parent, optional DOMString newName
-    ) raises (FileException);
+```
+FileSystemEntrySync moveTo (
+  in DirectoryEntrySync parent, optional DOMString newName
+) raises (FileException);
+```
 
 #### Parameters
 
@@ -226,7 +228,7 @@ This method can raise a [FileException](/en-US/docs/Web/API/FileException) with 
         <ul>
           <li>Moving an entry into its parent without changing its name</li>
           <li>
-            Moving a parent directory into one of its child directories. [todo:
+            Moving a parent directory into one of its child directories. [todo:
             verify ]
           </li>
         </ul>
@@ -246,9 +248,11 @@ This method can raise a [FileException](/en-US/docs/Web/API/FileException) with 
 
 Copy an entry to a different location on the file system. You cannot copy an entry inside itself if it is a directory, nor can you copy it into its parent without providing a new name. Directory copies are always recursive—that is, all contents of the directory are copied. You cannot change this behavior. Files are duplicated.
 
-    void copyTo (
-      in DirectoryEntrySync parent, optional DOMString newName
-    ) raises (FileException);
+```
+void copyTo (
+  in DirectoryEntrySync parent, optional DOMString newName
+) raises (FileException);
+```
 
 #### Parameters
 
@@ -291,7 +295,7 @@ This method can raise a [FileException](/en-US/docs/Web/API/FileException) with 
         <p>You tried one of the following disallowed operations:</p>
         <ul>
           <li>Moving an entry into its parent without changing its name</li>
-          <li>Moving a parent directory into one of its child directories. </li>
+          <li>Moving a parent directory into one of its child directories.</li>
         </ul>
       </td>
     </tr>
@@ -319,13 +323,15 @@ This method can raise a [FileException](/en-US/docs/Web/API/FileException) with 
 
 ### toURL()
 
-Returns a URL that can be used to identify this entry. It exposes a new URL scheme—`filesystem:`—that you can use to fill `src` or `href` attributes. For example, if you wanted to display an image and have its [fileEntry](/en-US/docs/Web/API/FileSystemFileEntry), calling `toURL()` gives you the image file's file system URL. You get something like: `filesystem:http://example.com/temporary/lolcat.png.`
+Returns a URL that can be used to identify this entry. It exposes a new URL scheme—`filesystem:`—that you can use to fill `src` or `href` attributes. For example, if you wanted to display an image and have its [fileEntry](/en-US/docs/Web/API/FileSystemFileEntry), calling `toURL()` gives you the image file's file system URL. You get something like: `filesystem:http://example.com/temporary/lolcat.png.`
 
 The file system URL does not expire. Because the method describes a location on disk, the URL is valid for as long as that location exists. You can delete the file and recreate it, and it's all good.
 
 You can supply the `mimeType` to simulate the optional MIME type header associated with HTTP downloads.
 
-    DOMString toURL ();
+```
+DOMString toURL ();
+```
 
 #### Parameter
 
@@ -343,8 +349,10 @@ None
 
 Deletes a file or directory. You cannot delete an empty directory or the root directory of a file system. If you want to remove an empty directory, use [`removeRecursively()`](</en-US/docs/Web/API/DirectoryEntrySync#removerecursively()>) instead.
 
-    void remove (
-    ) raises (FileException);
+```
+void remove (
+) raises (FileException);
+```
 
 #### Parameter
 
@@ -374,7 +382,7 @@ This method can raise a [FileException](/en-US/docs/Web/API/FileException) with 
       <td><code>INVALID_MODIFICATION_ERR</code></td>
       <td>
         <p>
-          You tried to remove a directory that is not empty. If you want to
+          You tried to remove a directory that is not empty. If you want to
           remove an empty directory, use
           <a href="/en-US/docs/Web/API/DirectoryEntrySync#removerecursively()"
             ><code>removeRecursively()</code></a
@@ -395,9 +403,11 @@ This method can raise a [FileException](/en-US/docs/Web/API/FileException) with 
 
 ### getParent()
 
-Look up the parent [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryEntrySync) containing the entry. If this entry is the root of its file system, then the parent is itself.
+Look up the parent [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryEntrySync) containing the entry. If this entry is the root of its file system, then the parent is itself.
 
-    void getParent ();
+```
+void getParent ();
+```
 
 #### Parameter
 
@@ -422,4 +432,4 @@ Specification:{{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", 
 
 Reference: [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 
-Introduction: [Basic Concepts About the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+Introduction: [Basic Concepts About the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

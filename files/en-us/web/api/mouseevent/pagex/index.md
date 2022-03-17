@@ -17,14 +17,14 @@ browser-compat: api.MouseEvent.pageX
 ---
 {{APIRef("CSSOM View")}}
 
-The **`pageX`** read-only property of the {{domxref("MouseEvent")}} interface returns the X (horizontal) coordinate (in pixels) at which the mouse was clicked, relative to the left edge of the entire document.
+The **`pageX`** read-only property of the {{domxref("MouseEvent")}} interface returns the X (horizontal) coordinate (in pixels) at which the mouse was clicked, relative to the left edge of the entire document.
 This includes any portion of the document not currently visible.
 
 Being based on the edge of the document as it is, this property takes into account any horizontal scrolling of the page.
 For example, if the page is scrolled such that 200 pixels of the left side of the document are scrolled out of view, and the mouse is clicked 100 pixels inward from the left edge of the view, the value returned by `pageX` will be 300.
 
 Originally, this property was defined as a `long` integer. The [CSSOM View Module](/en-US/docs/Web/CSS/CSSOM_View) redefined it as a
-`double` float. See the {{anch("Browser compatibility")}} section for
+`double` float. See the [Browser compatibility](#browser_compatibility) section for
 details.
 
 See {{SectionOnPage("/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems", "Page")}} for some additional information about coordinates specified in this fashion.
@@ -37,7 +37,7 @@ This property was originally specified in the Touch Events specification as a lo
 floating-point number to allow for subpixel precision.
 Even though numeric types both are represented by `Number` in JavaScript, they may be handled differently internally in the browser's code, resulting in potential behavior differences.
 
-See {{anch("Browser compatibility")}} to learn which browsers have been updated to use the revised data type.
+See [Browser compatibility](#browser_compatibility) to learn which browsers have been updated to use the revised data type.
 
 ## Example
 

@@ -77,7 +77,7 @@ Tier 2 content is less commonly-used, but useful nonetheless.
 
 ## Other content
 
-There is other content on MDN that is outside our web platform technology remit — such as archived content and Firefox-specific docs (e.g. DevTools, platform internals). This content has been deprioritised completely, and in most cases we are trying to find new homes for it, or delete it if it is no longer useful. We would not recommend that our community spends any time working on any areas not specifically listed on this page.
+There is other content on MDN that is outside our web platform technology remit — such as archived content and Firefox-specific docs (e.g. DevTools, platform internals). This content has been deprioritized completely, and in most cases we are trying to find new homes for it, or delete it if it is no longer useful. We would not recommend that our community spends any time working on any areas not specifically listed on this page.
 
 ## Tier 1 WebAPIs
 

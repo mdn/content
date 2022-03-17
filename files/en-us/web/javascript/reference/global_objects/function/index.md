@@ -14,14 +14,14 @@ Every JavaScript function is actually a `Function` object. This can be seen with
 ## Constructor
 
 - {{jsxref("Function/Function", "Function()")}}
-  - : Creates a new `Function` object. Calling the constructor directly can create functions dynamically but suffers from security and similar (but far less significant) performance issues to {{jsxref("Global_Objects/eval")}}. However, unlike eval, the `Function` constructor creates functions that execute in the global scope only.
+  - : Creates a new `Function` object. Calling the constructor directly can create functions dynamically but suffers from security and similar (but far less significant) performance issues to {{jsxref("Global_Objects/eval", "eval()")}}. However, unlike `eval()`, the `Function` constructor creates functions that execute in the global scope only.
 
 ## Instance properties
 
-- {{jsxref("Function.prototype.arguments")}}
+- {{jsxref("Function.prototype.arguments")}} {{Deprecated_Inline}}
   - : An array corresponding to the arguments passed to a function.
     This is deprecated as a property of {{jsxref("Function")}}. Use the {{jsxref("Functions/arguments", "arguments")}} object (available within the function) instead.
-- {{jsxref("Function.prototype.caller")}}
+- {{jsxref("Function.prototype.caller")}} {{Deprecated_Inline}}
   - : Specifies the function that invoked the currently executing function.
     This property is deprecated, and is only functional for some non-strict functions.
 - {{jsxref("Function.prototype.displayName")}}
@@ -47,7 +47,7 @@ Every JavaScript function is actually a `Function` object. This can be seen with
 
 ### Difference between Function constructor and function declaration
 
-Functions created with the `Function` constructor do not create closures to their creation contexts; they always are created in the global scope. When running them, they will only be able to access their own local variables and global ones, not the ones from the scope in which the `Function` constructor was created. This is different from using {{jsxref("Global_Objects/eval")}} with code for a function expression.
+Functions created with the `Function` constructor do not create closures to their creation contexts; they always are created in the global scope. When running them, they will only be able to access their own local variables and global ones, not the ones from the scope in which the `Function` constructor was created. This is different from using {{jsxref("Global_Objects/eval", "eval()")}} with code for a function expression.
 
 ```js
 var x = 10;

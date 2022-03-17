@@ -9,7 +9,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 67 that will affect developers. Firefox 67 was released on May 21, 2019.
+This article provides information about the changes in Firefox 67 that will affect developers. Firefox 67 was released on May 21, 2019.
 
 ## Changes for web developers
 
@@ -36,7 +36,7 @@ This article provides information about the changes in Firefox 67 that will af
 - [Network Monitor](/en-US/docs/Tools/Network_Monitor) enhancements:
 
   - The [Header](/en-US/docs/Tools/Network_Monitor/request_details#headers) panel of the Network monitor will now display a notification for resources belonging to a known tracker ({{bug(1485416)}}).
-  - In the Network monitor [request columns](/en-US/docs/Tools/Network_Monitor/request_list#network_request_columns), you can control the visible columns and column sorting. The context menu now includes a command to restore the list sort parameters to the default ({{bug(1454962)}}).
+  - In the Network monitor [request columns](/en-US/docs/Tools/Network_Monitor/request_list#network_request_columns), you can control the visible columns and column sorting. The context menu now includes a command to restore the list sort parameters to the default ({{bug(1454962)}}).
   - You can change the [width of the columns](/en-US/docs/Tools/Network_Monitor/request_list#network_request_columns) in the Network Monitor to suit your workflow ({{bug(1358414)}}).
 
 #### Removals
@@ -109,7 +109,7 @@ _No changes._
 
 #### Removals
 
-- The deprecated `ShadowRoot.getElementsByTagName`, `ShadowRoot.getElementsByTagNameNS`, and `ShadowRoot.getElementsByClassName` properties (part of Shadow DOM v0) have been removed ({{bug(1535438)}}).
+- The deprecated `ShadowRoot.getElementsByTagName`, `ShadowRoot.getElementsByTagNameNS`, and `ShadowRoot.getElementsByClassName` properties (part of Shadow DOM v0) have been removed ({{bug(1535438)}}).
 - [`document.createEvent("TouchEvent")`](/en-US/docs/Web/API/Document/createEvent), {{domxref("document.createTouch()")}}, {{domxref("document.createTouchList()")}}, and the `ontouch*` event handler properties have been disabled on desktop to improve web compatibility on websites where touch support is used for mobile detection ({{bug(1412485)}}). In such cases, websites have been seen to behave incorrectly or unexpectedly on touchscreen laptops.
 
 ### Security

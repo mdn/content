@@ -102,12 +102,12 @@ let result = someInterface.customMethod?.();
 > function, using `?.` will still raise a {{JSxRef("TypeError")}} exception
 > (`someInterface.customMethod is not a function`).
 
-> **Note:** If `someInterface` itself is `null` or
-> `undefined`, a {{JSxRef("TypeError")}} exception will still be
-> raised (`someInterface is null`). If you expect that
-> `someInterface` itself may be `null` or `undefined`,
-> you have to use `?.` at this position as
-> well: `someInterface?.customMethod?.()`
+> **Note:** If `someInterface` itself is `null` or
+> `undefined`, a {{JSxRef("TypeError")}} exception will still be
+> raised (`someInterface is null`). If you expect that
+> `someInterface` itself may be `null` or `undefined`,
+> you have to use `?.` at this position as
+> well: `someInterface?.customMethod?.()`
 
 #### Dealing with optional callbacks or event handlers
 

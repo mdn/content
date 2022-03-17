@@ -54,7 +54,9 @@ Finally, you'll need to send the nonce value in a
 [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) header
 (prepend `nonce-`):
 
-    Content-Security-Policy: script-src 'nonce-8IBTHwOdqNKAWeKl7plt8g=='
+```
+Content-Security-Policy: script-src 'nonce-8IBTHwOdqNKAWeKl7plt8g=='
+```
 
 ### Accessing nonces and nonce hiding
 

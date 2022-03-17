@@ -38,7 +38,7 @@ The example below shows the source for a set of elements marked up with `itempro
 <table class="standard-table">
   <tbody>
     <tr>
-      <td rowspan="2"> </td>
+      <td rowspan="2"> </td>
       <th colspan="2"><strong>Item</strong></th>
     </tr>
     <tr>
@@ -245,7 +245,7 @@ A property is an unordered set of unique tokens that are case-sensitive and repr
 <table class="standard-table">
   <thead>
     <tr>
-      <th rowspan="2" scope="col"> </th>
+      <th rowspan="2" scope="col"> </th>
       <th colspan="2" scope="col">Item</th>
     </tr>
     <tr>
@@ -289,15 +289,15 @@ A property is an unordered set of unique tokens that are case-sensitive and repr
 
 **Tokens** are either strings or URL's. An item is called a **typed item** if it is a URL. Otherwise, it is a string. Strings cannot contain a period or a colon (see below).
 
-1.  If the item is a typed item it must be either:
+1. If the item is a typed item it must be either:
 
-    1.  A defined property name, or
-    2.  A valid URL, which refers to the vocabulary definition, or
-    3.  A valid URL that is used as a proprietary item property name (i.e. one not defined in a public specification), or
+    1. A defined property name, or
+    2. A valid URL, which refers to the vocabulary definition, or
+    3. A valid URL that is used as a proprietary item property name (i.e. one not defined in a public specification), or
 
-2.  If the item is not a typed item it must be:
+2. If the item is not a typed item it must be:
 
-    1.  A string that contains no "`.`" (U+002E FULL STOP) characters and no "`:`" characters (U+003A COLON) and is used as a proprietary item property name (again, one not defined in a public specification).
+    1. A string that contains no "`.`" (U+002E FULL STOP) characters and no "`:`" characters (U+003A COLON) and is used as a proprietary item property name (again, one not defined in a public specification).
 
 > **Note:** The rules above disallow ":" characters in non-URL values because otherwise they could not be distinguished from URLs. Values with "." characters are reserved for future extensions. Space characters are disallowed because otherwise the values would be parsed as multiple tokens.
 

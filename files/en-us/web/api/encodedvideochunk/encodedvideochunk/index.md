@@ -35,7 +35,6 @@ new EncodedVideoChunk(init);
     - `data`
       - : A {{domxref("BufferSource")}} containing the video data.
 
-
 ## Examples
 
 In the following example a new `EncodedVideoChunk` is created.

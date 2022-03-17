@@ -45,7 +45,7 @@ Transactions can fail for a fixed number of reasons, all of which (except the us
 
 ## Firefox durability guarantees
 
-Note that as of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see {{Bug("1112702")}}.) Previously in a `readwrite` transaction {{domxref("IDBTransaction.oncomplete")}} was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the `complete` event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The `complete` event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare, most consumers should not need to concern themselves further.
+Note that as of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see {{Bug("1112702")}}.) Previously in a `readwrite` transaction, a {{domxref("IDBTransaction.complete_event","complete")}} event was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the `complete` event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The `complete` event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare, most consumers should not need to concern themselves further.
 
 If you must ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the `complete` event by creating a transaction using the experimental (non-standard) `readwriteflush` mode (see {{domxref("IDBDatabase.transaction")}}.
 
@@ -78,14 +78,14 @@ Inherits from: {{domxref("EventTarget")}}
 Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
 
 - [`abort`](/en-US/docs/Web/API/IDBTransaction/abort_event)
-  - : Fired when an `IndexedDB` transaction is aborted.
-    Also available via the [`onabort`](/en-US/docs/Web/API/IDBTransaction/onabort) property.
+  - : An event fired when the `IndexedDB` transaction is aborted.
+    Also available via the `onabort` property; this event bubbles to {{domxref("IDBDatabase")}}.
 - [`complete`](/en-US/docs/Web/API/IDBTransaction/complete_event)
-  - : Fired when a transaction successfully completes.
-    Also available via the [`oncomplete`](/en-US/docs/Web/API/IDBTransaction/oncomplete) property.
+  - : An event fired when the transaction successfully completes.
+    Also available via the `oncomplete` property.
 - [`error`](/en-US/docs/Web/API/IDBTransaction/error_event)
-  - : Fired when a request returns an error and the event bubbles up to the transaction object.
-    Also available via the [`onerror`](/en-US/docs/Web/API/IDBTransaction/onerror) property.
+  - : An event fired when a request returns an error and the event bubbles up to the connection object ({{domxref("IDBDatabase")}}).
+    Also available via the `onerror` property.
 
 ## Mode constants
 
@@ -143,7 +143,7 @@ Transactions can have one of three modes:
   </tbody>
 </table>
 
-Even if these constants are now deprecated, you can still use them to provide backward compatibility if required (in Chrome [the change was made in version 21](http://peter.sh/2012/05/tab-sizing-string-values-for-indexeddb-and-chrome-21/)). You should code defensively in case the object is not available anymore:
+Even if these constants are now deprecated, you can still use them to provide backward compatibility if required (in Chrome [the change was made in version 21](https://peter.sh/2012/05/tab-sizing-string-values-for-indexeddb-and-chrome-21/)). You should code defensively in case the object is not available anymore:
 
 ```js
 var myIDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || { READ_WRITE: "readwrite" };
@@ -158,7 +158,7 @@ In the following code snippet, we open a read/write transaction on our database 
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+  note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db
   // variable. This is used a lot below

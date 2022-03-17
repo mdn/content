@@ -2,34 +2,24 @@
 title: AbstractRange.endContainer
 slug: Web/API/AbstractRange/endContainer
 tags:
-  - API
-  - AbstractRange
-  - DOM
-  - DOM API
-  - End
-  - Node
-  - Position
   - Property
-  - Range
   - Read-only
   - Reference
-  - container
-  - endContainer
 browser-compat: api.AbstractRange.endContainer
 ---
 {{APIRef("DOM")}}
 
-The **`endContainer`** property of the {{domxref("AbstractRange")}} interface returns the {{domxref("Node")}} in which the end of the range is located.
+The read-only **`endContainer`** property of the {{domxref("AbstractRange")}} interface returns the {{domxref("Node")}} in which the end of the range is located.
 
-## Syntax
+## Value
+
+The {{domxref("Node")}} which contains the last character of the range.
+
+## Example
 
 ```js
-var endNode = range.endContainer
+let endNode = range.endContainer;
 ```
-
-### Value
-
-The DOM {{domxref("Node")}} which contains the final character of the range.
 
 ## Specifications
 

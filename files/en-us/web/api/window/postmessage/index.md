@@ -26,7 +26,7 @@ Broadly, one window may obtain a reference to another (_e.g.,_ via
 `targetWindow = window.opener`), and then dispatch a
 {{domxref("MessageEvent")}} on it with `targetWindow.postMessage()`. The
 receiving window is then free to [handle this event](/en-US/docs/Web/Events/Event_handlers) as needed. The arguments passed to `window.postMessage()`
-(_i.e.,_ the “message”) are [exposed to the receiving window through the event object](#the_dispatched_event).
+(_i.e.,_ the "message") are [exposed to the receiving window through the event object](#the_dispatched_event).
 
 ## Syntax
 
@@ -144,9 +144,9 @@ property available to window and worker contexts:
 
 ```js
 if (crossOriginIsolated) {
-  // Post SharedArrayBuffer
+  // Post SharedArrayBuffer
 } else {
-  // Do something else
+  // Do something else
 }
 ```
 
@@ -158,7 +158,7 @@ example).
 
 ```js
 /*
- * In window A's scripts, with A being on <http://example.com:8080>:
+ * In window A's scripts, with A being on http://example.com:8080:
  */
 
 var popup = window.open(/* popup details */);
@@ -186,7 +186,7 @@ window.addEventListener("message", (event) => {
 
 ```js
 /*
- * In the popup's scripts, running on <http://example.com>:
+ * In the popup's scripts, running on http://example.com:
  */
 
 // Called sometime after postMessage is called

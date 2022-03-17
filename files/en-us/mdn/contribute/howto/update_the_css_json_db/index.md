@@ -14,17 +14,17 @@ Several characteristics of a CSS property, like its syntax or if it can be anima
 
 To update or check the content of the CSS JSON DB, you will need to gather information from different sources.
 
-1.  **Latest spec**
+1. **Latest spec**
     Whether it is a W3C Recommendation or an early editor's draft, you should refer to the latest available draft of the spec that covers (or specifies that cover) that feature. To find it, you can usually do a web search. The latest version will often be linked to from all versions of the spec, listed under "latest draft" or similar.
-2.  **Latest web browsers**
+2. **Latest web browsers**
     These should be experimental/alpha builds such as [Firefox Nightly](https://nightly.mozilla.org/)/[Chrome Canary](https://www.google.com/intl/en/chrome/browser/canary.html) that are more likely to support the features you are documenting. This is especially pertinent if you are documenting a nascent/experimental feature.
-3.  **Additional info**
+3. **Additional info**
     Find as much info as you can to better understand how the specific feature works. E.g. blog posts or demos are good resources.
-4.  **Engineering contacts**
-    It is really useful to find yourself a friendly engineering contact to ask questions about the spec, someone who is involved in the standardization of the API, or its implementation in a browser. If you have the implementation bug on Bugzilla, the engineer who implemented the feature is a good contact: asking him in the bug, with a needinfo flag is a good way of having an answer about a specific question. Other good places to find knowledgeable people are:
+4. **Engineering contacts**
+    It is really useful to find yourself a friendly engineering contact to ask questions about the spec, someone who is involved in the standardization of the API, or its implementation in a browser. If you have the implementation bug on Bugzilla, the engineer who implemented the feature is a good contact: asking him in the bug, with a needinfo flag is a good way of having an answer about a specific question. Other good places to find knowledgeable people are:
 
     - Your internal company address book, if you work for a relevant company.
-    - A public mailing list that is involved in the discussion of that API,  such as Mozilla's [dev-platform](https://lists.mozilla.org/listinfo/dev-platform) list, or the W3C list [www-style](https://lists.w3.org/Archives/Public/www-style/).
+    - A public mailing list that is involved in the discussion of that API, such as Mozilla's [dev-platform](https://lists.mozilla.org/listinfo/dev-platform) list, or the W3C list [www-style](https://lists.w3.org/Archives/Public/www-style/).
     - The spec itself. For example, the [CSS Animations spec](https://drafts.csswg.org/css-animations/) lists the authors and their contact details at the top.
 
 ## Update the CSS information database
@@ -130,9 +130,9 @@ You can use the macros [\\{{cssxref}}](https://github.com/mozilla/kumascript/blo
         <p>l10n/css.json</p>
         <pre class="brush:js">
 "discrete": {
-  "en-US": "discrete",
-  "de": "diskret",
-  "fr": "discrète"
+  "en-US": "discrete",
+  "de": "diskret",
+  "fr": "discrète"
 }</pre
         >
       </td>
@@ -151,17 +151,17 @@ You can use the macros [\\{{cssxref}}](https://github.com/mozilla/kumascript/blo
         >
         <pre class="brush:js">
 "percentages": [
-  "background-position",
+  "background-position",
   "background-size"
 ]</pre
         >
         <p>l10n/css.json</p>
         <pre class="brush:js">
 "logicalWidthOfContainingBlock": {
-  "en-US": "logical-width of containing block",
-  "de": "logische Breite des beinhaltenden Blocks",
-  "fr": "largeur logique du bloc englobant",
-  "ru": "логическая высота содержащего блока"
+  "en-US": "logical-width of containing block",
+  "de": "logische Breite des beinhaltenden Blocks",
+  "fr": "largeur logique du bloc englobant",
+  "ru": "логическая высота содержащего блока"
 }</pre
         >
       </td>
@@ -201,11 +201,11 @@ You can use the macros [\\{{cssxref}}](https://github.com/mozilla/kumascript/blo
         <pre class="brush:js">"appliesto": "absolutelyPositionedElements"</pre>
         <pre class="brush:js">
 "appliesto": [
-  "border-image-outset",
-  "border-image-repeat",
-  "border-image-slice",
-  "border-image-source",
-  "border-image-width"
+  "border-image-outset",
+  "border-image-repeat",
+  "border-image-slice",
+  "border-image-source",
+  "border-image-width"
 ]</pre
         >
         <p>l10n/css.json</p>
@@ -232,9 +232,9 @@ You can use the macros [\\{{cssxref}}](https://github.com/mozilla/kumascript/blo
         <pre class="brush:js">"computed": "normalizedAngle"</pre>
         <pre class="brush:js">
 "computed": [
-    "border-width",
-    "border-style",
-    "color"
+    "border-width",
+    "border-style",
+    "color"
 ]</pre
         >
         <p>l10n/css.json</p>

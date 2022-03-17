@@ -13,9 +13,11 @@ The `<xsl:if>` element contains a test attribute and a template. If the test eva
 
 ### Syntax
 
-    <xsl:if test=EXPRESSION>
-    	TEMPLATE
-    </xsl:if>
+```xml
+<xsl:if test=EXPRESSION>
+  TEMPLATE
+</xsl:if>
+```
 
 ### Required Attributes
 

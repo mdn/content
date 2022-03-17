@@ -135,11 +135,11 @@ And here's the result
 
 ## Locking the screen orientation
 
-> **Warning:** This API is experimental and currently available on [Firefox OS](/en-US/docs/Mozilla/Firefox_OS) and [Firefox for Android](/en-US/docs/Mozilla/Firefox_for_Android) with a `moz` prefix, and for Internet Explorer on Windows 8.1 and above  with a `ms` prefix.
+> **Warning:** This API is experimental and currently available on [Firefox OS](/en-US/docs/Mozilla/Firefox_OS) and [Firefox for Android](/en-US/docs/Mozilla/Firefox_for_Android) with a `moz` prefix, and for Internet Explorer on Windows 8.1 and above  with a `ms` prefix.
 
-Some devices (mainly mobile devices) can dynamically change the orientation of the screen based on their own orientation, ensuring that the user will always be able to read what's on the screen. While this behavior is perfectly suited for text content, there is some content that can be negatively affected by such a change. For example, games based on the orientation of the device could be messed up by such a change of the orientation.
+Some devices (mainly mobile devices) can dynamically change the orientation of the screen based on their own orientation, ensuring that the user will always be able to read what's on the screen. While this behavior is perfectly suited for text content, there is some content that can be negatively affected by such a change. For example, games based on the orientation of the device could be messed up by such a change of the orientation.
 
-The Screen Orientation API is made to prevent or handle such a change.
+The Screen Orientation API is made to prevent or handle such a change.
 
 ### Listening orientation change
 
@@ -155,7 +155,7 @@ screen.addEventListener("orientationchange", function () {
 
 Any web application can lock the screen to suits its own needs. The screen is locked using the {{domxref("Screen.lockOrientation()")}} method and unlocked using the {{domxref("Screen.unlockOrientation()")}}.
 
-The {{domxref("Screen.lockOrientation()")}} accepts a string (or series of strings) to define the kind of lock to apply. Accepted values are: `portrait-primary`, `portrait-secondary`, `landscape-primary`, `landscape-secondary`, `portrait`, `landscape` (See {{domxref("Screen.lockOrientation")}}  to know more about each of those values).
+The {{domxref("Screen.lockOrientation()")}} accepts a string (or series of strings) to define the kind of lock to apply. Accepted values are: `portrait-primary`, `portrait-secondary`, `landscape-primary`, `landscape-secondary`, `portrait`, `landscape` (See {{domxref("Screen.lockOrientation")}}  to know more about each of those values).
 
 ```js
 screen.lockOrientation('landscape');
@@ -178,6 +178,6 @@ For a Firefox OS and Firefox Android (soon to work on Firefox desktop too) speci
 - {{domxref("Screen.orientation")}}
 - {{domxref("Screen.lockOrientation()")}}
 - {{domxref("Screen.unlockOrientation()")}}
-- {{domxref("Screen.onorientationchange")}}
+- {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} event
 - [The orientation media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#orientation)
 - [A short introduction to media queries in Firefox 3.5](http://hacks.mozilla.org/2009/06/media-queries/)

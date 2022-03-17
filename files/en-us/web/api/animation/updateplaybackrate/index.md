@@ -4,7 +4,6 @@ slug: Web/API/Animation/updatePlaybackRate
 tags:
   - API
   - Animation
-  - Experimental
   - Interface
   - Method
   - Reference
@@ -15,16 +14,15 @@ tags:
   - web animations api
 browser-compat: api.Animation.updatePlaybackRate
 ---
-{{APIRef("Web Animations")}}{{SeeCompatTable}}
+{{APIRef("Web Animations")}}
 
-The
-**`updatePlaybackRate()`** method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s
+The **`updatePlaybackRate()`** method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s
 {{domxref("Animation")}} Interface sets the speed of an animation after first
 synchronizing its playback position.
 
 In some cases, an animation may run on a separate thread or process and will continue
 updating even while long-running JavaScript delays the main thread. In such a case,
-setting the {{domxref("Animation.playbackRate", "playbackRate")}} on the animation
+setting the {{domxref("Animation.playbackRate", "playbackRate")}} on the animation
 directly may cause the animation's playback position to jump since its playback
 position on the main thread may have drifted from the playback position where it is
 currently running.

@@ -9,7 +9,7 @@ tags:
   - Method
 browser-compat: api.FileSystemDirectoryHandle.resolve
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`resolve()`** method of the
 {{domxref("FileSystemDirectoryHandle")}} interface returns an {{jsxref('Array')}} of

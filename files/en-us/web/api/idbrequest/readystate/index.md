@@ -14,10 +14,10 @@ browser-compat: api.IDBRequest.readyState
 ---
 {{ APIRef("IndexedDB") }}
 
-The **`readyState`** read-only property of the
-{{domxref("IDBRequest")}} interface returns the state of the request.
+The **`readyState`** read-only property of the
+{{domxref("IDBRequest")}} interface returns the state of the request.
 
-\>Every request starts in the `pending` state. The state changes to
+\>Every request starts in the `pending` state. The state changes to
 `done` when the request completes successfully or when an error
 occurs.
 
@@ -37,17 +37,17 @@ following two values:
 | Value     | Meaning                 |
 | --------- | ----------------------- |
 | `pending` | The request is pending. |
-| `done`    | The request is done.    |
+| `done`    | The request is done.    |
 
 ## Example
 
-The following example requests a given record title, `onsuccess` gets the
+The following example requests a given record title, `onsuccess` gets the
 associated record from the {{domxref("IDBObjectStore")}} (made available
-as `objectStoreTitleRequest.result`), updates
+as `objectStoreTitleRequest.result`), updates
 one property of the record, and then puts the updated record back into the object
 store in another request. The `readyState` of the 2nd request is logged to
 the developer console. For a full working example, see our
-[To-do Notifications](https://github.com/mdn/to-do-notifications/) app
+[To-do Notifications](https://github.com/mdn/to-do-notifications/) app
 ([view example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
@@ -67,14 +67,14 @@ objectStoreTitleRequest.onsuccess = function() {
   data.notified = "yes";
 
   // Create another request that inserts the item
-  // back into the database
+  // back into the database
   var updateTitleRequest = objectStore.put(data);
 
   // Log the source of this request
-  console.log("The readyState of this request is " + updateTitlerequest.readyState);
+  console.log("The readyState of this request is " + updateTitleRequest.readyState);
 
   // When this new request succeeds, run the displayData()
-  // function again to update the display
+  // function again to update the display
   updateTitleRequest.onsuccess = function() {
     displayData();
   };

@@ -12,4 +12,4 @@ tags:
 
 ## See also
 
-- [WebP ](https://en.wikipedia.org/wiki/WebP)on Wikipedia
+- [WebP](https://en.wikipedia.org/wiki/WebP) on Wikipedia

@@ -12,7 +12,9 @@ tags:
 
 Firefox:
 
-    CookieBlockedTracker=Request to access cookies or storage on “X” was blocked because it came from a tracker and content blocking is enabled.
+```
+CookieBlockedTracker=Request to access cookies or storage on "X" was blocked because it came from a tracker and content blocking is enabled.
+```
 
 ## What went wrong?
 

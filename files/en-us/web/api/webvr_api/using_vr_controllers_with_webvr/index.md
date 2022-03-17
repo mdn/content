@@ -35,7 +35,7 @@ However, in this article we will mainly be concentrating on some of the new feat
 
 There are two types of controller you'll encounter with VR hardware:
 
-- 6DoF (six-degrees-of-freedom) controllers provide access to both positional and orientation data — they can manipulate a VR scene and the objects it contains with movement but also rotatation. A good example is the HTC VIVE controllers.
+- 6DoF (six-degrees-of-freedom) controllers provide access to both positional and orientation data — they can manipulate a VR scene and the objects it contains with movement but also rotation. A good example is the HTC VIVE controllers.
 - 3DoF (three-degrees-of-freedom) controllers provide orientation but not positional data. A good example is the Google Daydream controller, which can be rotated to point to different things in 3D space like a laser pointer, but can't be moved inside a 3D scene.
 
 ## Basic controller access
@@ -59,7 +59,7 @@ if(navigator.getVRDisplays && navigator.getGamepads) {
 }
 ```
 
-Here we first use a tracking variable, `initialRun`, to note that this is the first time we have loaded the page. You'll find out more about this later on. Next, we detect to see if the WebVR and Gamepad APIs are supported by cheking for the existence of the {{domxref("Navigator.getVRDisplays()")}} and {{domxref("Navigator.getGamepads()")}} methods. If so, we run our `reportDisplays()` custom function to start the process off. This function looks like so:
+Here we first use a tracking variable, `initialRun`, to note that this is the first time we have loaded the page. You'll find out more about this later on. Next, we detect to see if the WebVR and Gamepad APIs are supported by checking for the existence of the {{domxref("Navigator.getVRDisplays()")}} and {{domxref("Navigator.getGamepads()")}} methods. If so, we run our `reportDisplays()` custom function to start the process off. This function looks like so:
 
 ```js
 function reportDisplays() {
@@ -116,7 +116,7 @@ function reportGamepads() {
 
 This works in a similar manner to `reportDisplays()` — we get an array of {{domxref("Gamepad")}} objects using the non-promise-based `getGamepads()` method, then cycle through each one and print out information on each:
 
-- The {{domxref("Gamepad.displayId")}} property is the same as the `displayId` of the headet the controller is associated with, and therefore useful for tying controller and headset information together.
+- The {{domxref("Gamepad.displayId")}} property is the same as the `displayId` of the headset the controller is associated with, and therefore useful for tying controller and headset information together.
 - The {{domxref("Gamepad.index")}} property is unique numerical index that identifies each connected controller.
 - {{domxref("Gamepad.hand")}} returns which hand the controller is expected to be held in.
 - {{domxref("Gamepad.hapticActuators")}} returns an array of the haptic actuators available in the controller. Here we are returning its length so we can see how many each has available.
@@ -193,7 +193,7 @@ if(gp) {
 
 Here we get the connected gamepads with {{domxref("Navigator.getGamepads")}}, then store the first gamepad detected in the `gp` variable. As we only need one gamepad for this demo, we'll just ignore the others.
 
-The next thing we do is to get the {{domxref("GamepadPose")}} object for the controller stored in gpPose (by querying {{domxref("Gamepad.pose")}}), and also store the current gamepad position and orientation for this frame in variables so they are easuy to access later. We also display the post stats for this frame in the DOM using the `displayPoseStats()` function. All of this is only done if `gp` actually has a value (if a gamepad is connected), which stops the demo erroring if we don't have our gamepad connected.
+The next thing we do is to get the {{domxref("GamepadPose")}} object for the controller stored in gpPose (by querying {{domxref("Gamepad.pose")}}), and also store the current gamepad position and orientation for this frame in variables so they are easy to access later. We also display the post stats for this frame in the DOM using the `displayPoseStats()` function. All of this is only done if `gp` actually has a value (if a gamepad is connected), which stops the demo erroring if we don't have our gamepad connected.
 
 Slightly later in the code, you can find this block:
 

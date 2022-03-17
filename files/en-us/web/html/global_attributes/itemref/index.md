@@ -30,8 +30,8 @@ The `itemref` attribute can only be specified on elements that have an `itemscop
 <p id="a">Name: <span itemprop="name">Amanda</span> </p>
 <div id="b" itemprop="band" itemscope itemref="c"></div>
 <div id="c">
-    <p>Band: <span itemprop="name">Jazz Band</span> </p>
-    <p>Size: <span itemprop="size">12</span> players</p>
+    <p>Band: <span itemprop="name">Jazz Band</span> </p>
+    <p>Size: <span itemprop="size">12</span> players</p>
 </div>
 ```
 
@@ -42,12 +42,12 @@ The `itemref` attribute can only be specified on elements that have an `itemscop
 ```json
 {
   "@id": "amanda",
-  "name": "Amanda",
-  "band": {
-    "@id": "b",
-    "name": "Jazz Band",
-    "size": 12
-  }
+  "name": "Amanda",
+  "band": {
+    "@id": "b",
+    "name": "Jazz Band",
+    "size": 12
+  }
 }
 ```
 

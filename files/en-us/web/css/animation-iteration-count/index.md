@@ -72,24 +72,26 @@ The **`animation-iteration-count`** property is specified as one or more comma-s
 
 ```css
 .box {
-  background-color: rebeccapurple;
-  border-radius: 10px;
+  background-color: rebeccapurple;
+  border-radius: 10px;
   width: 100px;
-  height: 100px;
-  animation-name: rotate;
-  animation-duration: 0.7s;
-  animation-iteration-count: 10;
+  height: 100px;
+  animation-name: rotate;
+  animation-duration: 0.7s;
+  animation-iteration-count: 10;
 }
 
 @keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 ```
+
+#### Result
 
 {{EmbedLiveSample("Examples","100%","250")}}
 
@@ -105,5 +107,5 @@ See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) fo
 
 ## See also
 
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations "Tutorial about CSS animations")
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API

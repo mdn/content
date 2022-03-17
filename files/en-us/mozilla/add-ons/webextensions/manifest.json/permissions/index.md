@@ -63,7 +63,9 @@ The extra privileges include:
 
 In Firefox, from version 56 onwards, extensions automatically get host permissions for their own origin, which is of the form:
 
-    moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
+```
+moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
+```
 
 where `60a20a9b-1ad4-af49-9b6c-c64c98c37920` is the extension's internal ID. The extension can get this URL programmatically by calling {{webextAPIref("extension/getURL", "extension.getURL()")}}:
 

@@ -11,7 +11,7 @@ browser-compat: api.HTMLElement.click
 ---
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLElement.click()`** method simulates a mouse click on
+The **`HTMLElement.click()`** method simulates a mouse click on
 an element.
 
 When `click()` is used with supported elements (such as an

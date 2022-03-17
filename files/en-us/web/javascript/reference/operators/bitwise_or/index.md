@@ -26,7 +26,7 @@ a | b
 
 The operands are converted to 32-bit integers and expressed by a series of bits (zeroes
 and ones). Numbers with more than 32 bits get their most significant bits discarded. For
-example, the following integer with more than 32 bits will be converted to a 32 bit
+example, the following integer with more than 32 bits will be converted to a 32 bit
 integer:
 
 ```js
@@ -57,7 +57,7 @@ The truth table for the OR operation is:
 ```
 
 Bitwise ORing any number `x` with `0` yields
-`x`.
+`x` converted to a 32-bit integer.
 
 ## Examples
 

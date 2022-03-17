@@ -13,7 +13,7 @@ browser-compat: api.HTMLInputElement.showPicker
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLInputElement.showPicker()`** method shows a browser picker to the
-user. 
+user.
 
 A browser picker is shown when the element is one of these types: `"date"`,
 `"month"`, `"week"`, `"time"`, `"datetime-local"`, `"color"`, or `"file"`. It
@@ -39,25 +39,25 @@ element.showPicker();
 
 ## Example
 
-Click the button in this example to show a browser date picker.
+Click the button in this example to show a color picker.
 
 ### HTML
 
 ```html
-<input type="date">
-<button>Show the date picker</button>
+<input type="color">
+<button>Show the color picker</button>
 ```
 
 ### JavaScript
 
 ```js
 const button = document.querySelector("button");
-const dateInput = document.querySelector("input");
+const colorInput = document.querySelector("input");
 
 button.addEventListener("click", () => {
   try {
-    dateInput.showPicker();
-    // A date picker is shown.
+    colorInput.showPicker();
+    // A color picker is shown.
   } catch (error) {
     window.alert(error);
     // Use external library when this fails.
@@ -68,7 +68,6 @@ button.addEventListener("click", () => {
 ### Result
 
 {{EmbedLiveSample("Example")}}
-
 
 ## Specifications
 

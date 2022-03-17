@@ -3,17 +3,16 @@ title: Selection.containsNode()
 slug: Web/API/Selection/containsNode
 tags:
   - API
-  - Experimental
   - HTML Editing
   - Method
   - Reference
   - Selection
 browser-compat: api.Selection.containsNode
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ ApiRef("DOM") }}
 
 The **`Selection.containsNode()`** method indicates whether a
-specfied node is part of the selection.
+specified node is part of the selection.
 
 ## Syntax
 

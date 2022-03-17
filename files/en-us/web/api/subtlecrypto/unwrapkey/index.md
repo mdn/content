@@ -65,16 +65,16 @@ const result = crypto.subtle.unwrapKey(
   to be used to encrypt the exported key, and any extra parameters as required:
 
   - To use [RSA-OAEP](/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep),
-    pass an [`RsaOaepParams`](/en-US/docs/Web/API/RsaOaepParams "This dictionary represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(),  when using the RSA_OAEP algorithm.")
+    pass an [`RsaOaepParams`](/en-US/docs/Web/API/RsaOaepParams)
     object.
   - To use [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr),
-    pass an [`AesCtrParams`](/en-US/docs/Web/API/AesCtrParams "This dictionary represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(),  when using the AES-CTR algorithm.")
+    pass an [`AesCtrParams`](/en-US/docs/Web/API/AesCtrParams)
     object.
   - To use [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc),
-    pass an [`AesCbcParams`](/en-US/docs/Web/API/AesCbcParams "This dictionary represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(), when using the AES-CBC algorithm.")
+    pass an [`AesCbcParams`](/en-US/docs/Web/API/AesCbcParams)
     object.
   - To use [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm),
-    pass an [`AesGcmParams`](/en-US/docs/Web/API/AesGcmParams "This dictionary represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(),  when using the AES-GCM algorithm.")
+    pass an [`AesGcmParams`](/en-US/docs/Web/API/AesGcmParams)
     object.
   - To use [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw),
     pass the string `"AES-KW"` or an object of the form
@@ -83,11 +83,11 @@ const result = crypto.subtle.unwrapKey(
 - `unwrappedKeyAlgo` is a dictionary object defining the type of
   key to unwrap and providing extra algorithm-specific parameters as required.
 
-  - For [RSASSA-PKCS1-v1_5](/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss), or [RSA-OAEP](/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep): Pass an
+  - For [RSASSA-PKCS1-v1_5](/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss), or [RSA-OAEP](/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep): Pass an
     [`RsaHashedImportParams`](/en-US/docs/Web/API/RsaHashedImportParams)
     object.
   - For [ECDSA](/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa) or [ECDH](/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh): Pass
-    an [`EcKeyImportParams`](/en-US/docs/Web/API/EcKeyImportParams)
+    an [`EcKeyImportParams`](/en-US/docs/Web/API/EcKeyImportParams)
     object.
   - For [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac): Pass an
     [`HmacImportParams`](/en-US/docs/Web/API/HmacImportParams)
@@ -97,29 +97,29 @@ const result = crypto.subtle.unwrapKey(
     `{ "name": ALGORITHM }`, where `ALGORITHM` is the name of
     the algorithm.
 
-- `extractable` is a [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean "The Boolean object is an object wrapper for a boolean value.")
-  indicating whether it will be possible to export  the key using [`SubtleCrypto.exportKey()`](/en-US/docs/Web/API/SubtleCrypto/exportKey "The SubtleCrypto.exportKey() method exports a key: that is, it takes as input a CryptoKey object and gives you the key in an external, portable format.")
-  or [`SubtleCrypto.wrapKey()`](/en-US/docs/Web/API/SubtleCrypto/wrapKey 'The SubtleCrypto.wrapKey() method "wraps" a key. This means that it exports the key in an external, portable format, then encrypts the exported key. Wrapping a key helps protect it in untrusted environments, such as an otherwise unprotected data store or in transmission over an unprotected network.').
-- `keyUsages` is an [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array "The JavaScript Array object is a global object that is used in the construction of arrays; which are high-level, list-like objects.")
+- `extractable` is a [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
+  indicating whether it will be possible to export the key using [`SubtleCrypto.exportKey()`](/en-US/docs/Web/API/SubtleCrypto/exportKey)
+  or [`SubtleCrypto.wrapKey()`](/en-US/docs/Web/API/SubtleCrypto/wrapKey).
+- `keyUsages` is an [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
   indicating what can be done with the key. Possible values of the array are:
 
-  - `encrypt`: The key may be used to [`encrypt`](/en-US/docs/Web/API/SubtleCrypto/encrypt "The SubtleCrypto.encrypt() method encrypts data.")
+  - `encrypt`: The key may be used to [`encrypt`](/en-US/docs/Web/API/SubtleCrypto/encrypt)
     messages.
-  - `decrypt`: The key may be used to [`decrypt`](/en-US/docs/Web/API/SubtleCrypto/decrypt 'The SubtleCrypto.decrypt() method decrypts some encrypted data. It takes as arguments a key to decrypt with, some optional extra parameters, and the data to decrypt (also known as ciphertext). It returns a Promise which will be resolved with the decrypted data (also known as "plaintext").')
+  - `decrypt`: The key may be used to [`decrypt`](/en-US/docs/Web/API/SubtleCrypto/decrypt)
     messages.
-  - `sign`: The key may be used to [`sign`](/en-US/docs/Web/API/SubtleCrypto/sign "The SubtleCrypto.sign() method generates a digital signature.")
+  - `sign`: The key may be used to [`sign`](/en-US/docs/Web/API/SubtleCrypto/sign)
     messages.
-  - `verify`: The key may be used to [`verify`](/en-US/docs/Web/API/SubtleCrypto/verify "The SubtleCrypto.verify() method verifies a digital signature.")
+  - `verify`: The key may be used to [`verify`](/en-US/docs/Web/API/SubtleCrypto/verify)
     signatures.
-  - `deriveKey`: The key may be used in [`deriving a new key`](/en-US/docs/Web/API/SubtleCrypto/deriveKey "The SubtleCrypto.deriveKey() method can be used to derive a secret key from a master key.").
-  - `deriveBits`: The key may be used in [`deriving bits`](/en-US/docs/Web/API/SubtleCrypto/deriveBits "The SubtleCrypto.deriveBits() method can be used to derive a collection of bits from a base key.").
-  - `wrapKey`: The key may be used to [`wrap a key`](/en-US/docs/Web/API/SubtleCrypto/wrapKey 'The SubtleCrypto.wrapKey() method "wraps" a key. This means that it exports the key in an external, portable format, then encrypts the exported key. Wrapping a key helps protect it in untrusted environments, such as an otherwise unprotected data store or in transmission over an unprotected network.').
+  - `deriveKey`: The key may be used in [`deriving a new key`](/en-US/docs/Web/API/SubtleCrypto/deriveKey).
+  - `deriveBits`: The key may be used in [`deriving bits`](/en-US/docs/Web/API/SubtleCrypto/deriveBits).
+  - `wrapKey`: The key may be used to [`wrap a key`](/en-US/docs/Web/API/SubtleCrypto/wrapKey).
   - `unwrapKey`: The key may be used to unwrap a key.
 
 ### Return value
 
-- `result` is a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.")
-  that fulfills with the unwrapped key as a [`CryptoKey`](/en-US/docs/Web/API/CryptoKey "The CryptoKey interface represents a cryptographic key derived from a specific key algorithm.")
+- `result` is a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+  that fulfills with the unwrapped key as a [`CryptoKey`](/en-US/docs/Web/API/CryptoKey)
   object.
 
 ### Exceptions

@@ -39,6 +39,7 @@ The maximum value is defined with [`aria-valuemax`](/en-US/docs/Web/Accessibilit
 ## Associated roles
 
 Used in roles:
+
 - [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role)
 - [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
 - [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role)
@@ -46,6 +47,7 @@ Used in roles:
 - [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
 
 Inherited into roles:
+
 - [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role)
 - [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role)
 - [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)

@@ -13,7 +13,7 @@ tags:
   - videoTracks
 browser-compat: api.SourceBuffer.videoTracks
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{draft}}
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 The **`videoTracks`** read-only property of the
 {{domxref("SourceBuffer")}} interface returns a list of the video tracks currently

@@ -15,12 +15,14 @@ browser-compat: api.DocumentFragment
 
 The **`DocumentFragment`** interface represents a minimal document object that has no parent.
 
-It is used as a lightweight version of {{domxref("Document")}} that stores a segment of a document structure comprised of nodes just like a standard document. The key difference is due to the fact that the document fragment isn't part of the active document tree structure. Changes made to the fragment don't affect the document (even on {{Glossary("reflow")}}) or incur any performance impact when changes are made.{{InheritanceDiagram}}
+It is used as a lightweight version of {{domxref("Document")}} that stores a segment of a document structure comprised of nodes just like a standard document. The key difference is due to the fact that the document fragment isn't part of the active document tree structure. Changes made to the fragment don't affect the document (even on {{Glossary("reflow")}}) or incur any performance impact when changes are made.
+
+{{InheritanceDiagram}}
 
 ## Constructor
 
 - {{ domxref("DocumentFragment.DocumentFragment()", "DocumentFragment()") }}
-  - : Creates and returns a new `DocumentFragment` object.
+  - : Creates and returns a new `DocumentFragment` object.
 
 ## Properties
 
@@ -50,7 +52,7 @@ _This interface inherits the methods of its parent, {{domxref("Node")}}._
 - {{DOMxRef("DocumentFragment.replaceChildren()")}}
   - : Replaces the existing children of a `DocumentFragment` with a specified new set of children.
 - {{domxref("DocumentFragment.getElementById()")}}
-  - : Returns the first {{domxref("Element")}} node within the `DocumentFragment`, in document order, that matches the specified ID. Functionally equivalent to {{domxref("Document.getElementById()")}}.
+  - : Returns the first {{domxref("Element")}} node within the `DocumentFragment`, in document order, that matches the specified ID. Functionally equivalent to {{domxref("Document.getElementById()")}}.
 
 ## Usage notes
 
@@ -77,9 +79,9 @@ var fruits = ['Apple', 'Orange', 'Banana', 'Melon']
 var fragment = new DocumentFragment()
 
 fruits.forEach(function (fruit) {
-  var li = document.createElement('li')
-  li.innerHTML = fruit
-  fragment.appendChild(li)
+  var li = document.createElement('li')
+  li.innerHTML = fruit
+  fragment.appendChild(li)
 })
 
 list.appendChild(fragment)

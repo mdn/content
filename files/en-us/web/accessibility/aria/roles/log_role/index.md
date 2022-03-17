@@ -22,7 +22,6 @@ In contrast to other types of live region, a log is sequentially ordered and new
 
 By default, updates contain only the changes to the live region and these are announced when the user is idle. Elements with the role `log` have an implicit `aria-live` value of `polite`.  Where the user needs to hear the entire live region upon a change `aria-atomic="true"` should be set. To have announcements made as soon as possible and where the user may be interrupted, `aria-live="assertive"` can be set for more aggressive updates.
 
-
 ### Associated WAI-ARIA roles, states, and properties
 
 - `aria-atomic`
@@ -55,7 +54,6 @@ With an area that has scrolling text, such as a stock ticker, the [`marquee`](/e
 - [ARIA: `status` role](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)
 - [ARIA: `timer` role](/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role)
 - [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
-
 
 <section id="Quick_links">
 

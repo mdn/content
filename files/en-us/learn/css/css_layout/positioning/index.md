@@ -63,7 +63,7 @@ Now add the following rule to the bottom of your CSS:
 }
 ```
 
-If you save and refresh, you'll see no difference at all, except for the updated background color of the 2nd paragraph. This is fine — as we said before, static positioning is the default behavior!
+If you save and refresh, you'll see no difference at all, except for the updated background color of the 2nd paragraph. This is fine — as we said before, static positioning is the default behavior!
 
 > **Note:** You can see the example at this point live at [`1_static-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html) ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html)).
 
@@ -75,7 +75,7 @@ Relative positioning is the first position type we'll take a look at. This is ve
 position: relative;
 ```
 
-If you save and refresh at this stage, you won't see a change in the result at all.  So how do you modify the element's position? You need to use the {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}} properties, which we'll explain in the next section.
+If you save and refresh at this stage, you won't see a change in the result at all.  So how do you modify the element's position? You need to use the {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}} properties, which we'll explain in the next section.
 
 ### Introducing top, bottom, left, and right
 
@@ -104,8 +104,8 @@ If you now save and refresh, you'll get a result something like this:
 
 ```css hidden
 body {
-  width: 500px;
-  margin: 0 auto;
+  width: 500px;
+  margin: 0 auto;
 }
 
 p {
@@ -162,8 +162,8 @@ If you now save and refresh, you should see something like so:
 
 ```css hidden
 body {
-  width: 500px;
-  margin: 0 auto;
+  width: 500px;
+  margin: 0 auto;
 }
 
 p {
@@ -188,23 +188,23 @@ span {
 
 {{ EmbedLiveSample('Setting_position_absolute', '100%', 450) }}
 
-First of all, note that the gap where the positioned element should be in the document flow is no longer there — the first and third elements have closed together like it no longer exists! Well, in a way, this is true. An absolutely positioned element no longer exists in the normal document flow. Instead, it sits on its own layer separate from everything else. This is very useful: it means that we can create isolated UI features that don't interfere with the layout of other elements on the page.  For example, popup information boxes, control menus, rollover panels, UI features that can be dragged and dropped anywhere on the page, and so on.
+First of all, note that the gap where the positioned element should be in the document flow is no longer there — the first and third elements have closed together like it no longer exists! Well, in a way, this is true. An absolutely positioned element no longer exists in the normal document flow. Instead, it sits on its own layer separate from everything else. This is very useful: it means that we can create isolated UI features that don't interfere with the layout of other elements on the page.  For example, popup information boxes, control menus, rollover panels, UI features that can be dragged and dropped anywhere on the page, and so on.
 
-Second, notice that the position of the element has changed. This is because {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}} behave in a different way with absolute positioning. Rather than positioning the element based on its relative position within the normal document flow, they specify the distance the element should be from each of the containing element's sides. So in this case, we are saying that the absolutely positioned element should sit 30px from the top of the "containing element" and 30px from the left. (In this case, the "containing element" is the **initial containing block**. See the section below for more information)
+Second, notice that the position of the element has changed. This is because {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}} behave in a different way with absolute positioning. Rather than positioning the element based on its relative position within the normal document flow, they specify the distance the element should be from each of the containing element's sides. So in this case, we are saying that the absolutely positioned element should sit 30px from the top of the "containing element" and 30px from the left. (In this case, the "containing element" is the **initial containing block**. See the section below for more information)
 
 > **Note:** You can use {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}} to resize elements if you need to. Try setting `top: 0; bottom: 0; left: 0; right: 0;` and `margin: 0;` on your positioned elements and see what happens! Put it back again afterwards...
 
-> **Note:** Yes, margins still affect positioned elements. Margin collapsing doesn't, however.
+> **Note:** Yes, margins still affect positioned elements. Margin collapsing doesn't, however.
 
 > **Note:** You can see the example at this point live at [`3_absolute-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html) ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/3_absolute-positioning.html)).
 
 ### Positioning contexts
 
-Which element is the "containing element" of an absolutely positioned element? This is very much dependent on the position property of the ancestors of the positioned element (See [Identifying the containing block](/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block)).
+Which element is the "containing element" of an absolutely positioned element? This is very much dependent on the position property of the ancestors of the positioned element (See [Identifying the containing block](/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block)).
 
-If no ancestor elements have their position property explicitly defined, then by default all ancestor elements will have a static position. The result of this is the absolutely positioned element will be contained in the **initial containing block**. The initial containing block has the dimensions of the viewport and is also the block that contains the {{htmlelement("html")}} element. In other words, the absolutely positioned element will be displayed outside of the {{htmlelement("html")}} element and be positioned relative to the initial viewport.
+If no ancestor elements have their position property explicitly defined, then by default all ancestor elements will have a static position. The result of this is the absolutely positioned element will be contained in the **initial containing block**. The initial containing block has the dimensions of the viewport and is also the block that contains the {{htmlelement("html")}} element. In other words, the absolutely positioned element will be displayed outside of the {{htmlelement("html")}} element and be positioned relative to the initial viewport.
 
-The positioned element is nested inside the {{htmlelement("body")}} in the HTML source, but in the final layout it's 30px away from the top and the left edges of the page. We can change the **positioning context**, that is, which element the absolutely positioned element is positioned relative to. This is done by setting positioning on one of the element's ancestors: to one of the elements it's nested inside of (you can't position it relative to an element it's not nested inside of). To see this, add the following declaration to your `body` rule:
+The positioned element is nested inside the {{htmlelement("body")}} in the HTML source, but in the final layout it's 30px away from the top and the left edges of the page. We can change the **positioning context**, that is, which element the absolutely positioned element is positioned relative to. This is done by setting positioning on one of the element's ancestors: to one of the elements it's nested inside of (you can't position it relative to an element it's not nested inside of). To see this, add the following declaration to your `body` rule:
 
 ```css
 position: relative;
@@ -226,8 +226,8 @@ This should give the following result:
 
 ```css hidden
 body {
-  width: 500px;
-  margin: 0 auto;
+  width: 500px;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -300,8 +300,8 @@ You should now see the lime paragraph on top:
 
 ```css hidden
 body {
-  width: 500px;
-  margin: 0 auto;
+  width: 500px;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -341,7 +341,7 @@ Note that `z-index` only accepts unitless index values; you can't specify that y
 
 ## Fixed positioning
 
-Let's now look at fixed positioning. This works in exactly the same way as absolute positioning, with one key difference: whereas absolute positioning fixes an element in place relative to its nearest positioned ancestor (the initial containing block if there isn't one), **fixed positioning** _usually_ fixes an element in place relative to the visible portion of the viewport. (An exception to this occurs if one of the element's ancestors is a fixed containing block because its [transform property](/en-US/docs/Web/CSS/transform) has a value other than _none_.) This means that you can create useful UI items that are fixed in place, like persistent navigation menus that are always visible no matter how much the page scrolls.
+Let's now look at fixed positioning. This works in exactly the same way as absolute positioning, with one key difference: whereas absolute positioning fixes an element in place relative to its nearest positioned ancestor (the initial containing block if there isn't one), **fixed positioning** _usually_ fixes an element in place relative to the visible portion of the viewport. (An exception to this occurs if one of the element's ancestors is a fixed containing block because its [transform property](/en-US/docs/Web/CSS/transform) has a value other than _none_.) This means that you can create useful UI items that are fixed in place, like persistent navigation menus that are always visible no matter how much the page scrolls.
 
 Let's put together a simple example to show what we mean. First of all, delete the existing `p:nth-of-type(1)` and `.positioned` rules from your CSS.
 

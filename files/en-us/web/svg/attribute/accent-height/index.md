@@ -14,7 +14,7 @@ The **`accent-height`** attribute defines the distance from the origin to the to
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("font-face")}}
+- {{SVGElement("font-face")}}
 
 ## font-face
 
@@ -66,5 +66,5 @@ For {{SVGElement("font-face")}}, `accent-height` defines the distance from the o
 
 ## See also
 
-*   {{SVGAttr("cap-height")}}
-*   {{SVGAttr("x-height")}}
+- {{SVGAttr("cap-height")}}
+- {{SVGAttr("x-height")}}

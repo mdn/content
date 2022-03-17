@@ -131,5 +131,5 @@ p { color: hsla(0, 100%, 50%, 0.5); }
 ## See also
 
 - The {{cssxref("&lt;color&gt;")}} data type
-- Other color-related properties: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, and {{cssxref("color-adjust")}}
+- Other color-related properties: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, and {{cssxref("print-color-adjust")}}
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)

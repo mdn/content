@@ -92,12 +92,12 @@ These types are used within a {{domxref("WebGLRenderingContext")}}.
     <tr>
       <td><code>GLfloat</code></td>
       <td><code>unrestricted float</code></td>
-      <td>32-bit IEEE floating point number.</td>
+      <td>32-bit IEEE floating point number.</td>
     </tr>
     <tr>
       <td><code>GLclampf</code></td>
       <td><code>unrestricted float</code></td>
-      <td>Clamped 32-bit IEEE floating point number.</td>
+      <td>Clamped 32-bit IEEE floating point number.</td>
     </tr>
   </tbody>
 </table>

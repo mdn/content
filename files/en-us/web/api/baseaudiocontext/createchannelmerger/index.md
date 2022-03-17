@@ -14,8 +14,8 @@ browser-compat: api.BaseAudioContext.createChannelMerger
 ---
 {{ APIRef("Web Audio API") }}
 
-The `createChannelMerger()` method of the {{domxref("BaseAudioContext")}} interface creates a {{domxref("ChannelMergerNode")}},
-which combines channels from multiple audio streams into a single audio stream.
+The `createChannelMerger()` method of the {{domxref("BaseAudioContext")}} interface creates a {{domxref("ChannelMergerNode")}},
+which combines channels from multiple audio streams into a single audio stream.
 
 > **Note:** The {{domxref("ChannelMergerNode.ChannelMergerNode", "ChannelMergerNode()")}} constructor is the
 > recommended way to create a {{domxref("ChannelMergerNode")}}; see
@@ -31,7 +31,7 @@ createChannelMerger(numberOfInputs)
 
 - numberOfInputs
   - : The number of channels in the input audio streams, which the output stream will
-    contain; the default is 6 if this parameter is not specified.
+    contain; the default is 6 if this parameter is not specified.
 
 ### Returns
 
@@ -42,7 +42,7 @@ A {{domxref("ChannelMergerNode")}}.
 The following example shows how you could separate a stereo track (say, a piece of
 music), and process the left and right channel differently. To use them, you need to use
 the second and third parameters of the {{domxref("AudioNode/connect", "AudioNode.connect(AudioNode)")}}
-method, which allow you to specify both the index of the channel to connect from and the
+method, which allow you to specify both the index of the channel to connect from and the
 index of the channel to connect to.
 
 ```js

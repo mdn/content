@@ -12,7 +12,7 @@ tags:
   - Reliability
   - SLI
   - Slice Loss Indication
-  - Transmisison
+  - Transmission
   - WebRTC
   - WebRTC API
   - compression

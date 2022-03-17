@@ -55,11 +55,13 @@ console.countReset();
 
 Console output will look something like this:
 
-    "default: 1"
-    "default: 2"
-    "default: 3"
-    "default: 4"
-    "default: 0"
+```
+"default: 1"
+"default: 2"
+"default: 3"
+"default: 4"
+"default: 0"
+```
 
 Note that the call to `console.counterReset()` resets the value of the
 default counter to zero.
@@ -87,11 +89,13 @@ console.count("alice");
 
 We will see output like this:
 
-    "bob: 1"
-    "alice: 1"
-    "alice: 2"
-    "bob: 0"
-    "alice: 3"
+```
+"bob: 1"
+"alice: 1"
+"alice: 2"
+"bob: 0"
+"alice: 3"
+```
 
 Resetting the value of the counter "bob" only changes the value of that counter. The
 value of "alice" is unchanged.

@@ -9,9 +9,12 @@ tags:
   - NeedsContent
   - Reference
   - Security
+spec-urls:
+  - https://html.spec.whatwg.org/multipage/infrastructure.html#cors-settings-attributes
+  - https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-crossorigin
 ---
 
-{{HTMLSidebar}}{{draft}}
+{{HTMLSidebar}}
 
 The crossorigin attribute, valid on the {{ HTMLElement("audio") }}, {{ HTMLElement("img") }}, {{ HTMLElement("link") }}, {{ HTMLElement("script") }}, and {{ HTMLElement("video") }} elements, provides support for [CORS](/en-US/docs/Web/HTTP/CORS), defining how the element handles crossorigin requests, thereby enabling the configuration of the CORS requests for the element's fetched data. Depending on the element, the attribute can be a CORS settings attribute.
 
@@ -54,7 +57,7 @@ By default (that is, when the attribute is not specified), CORS is not used at a
 
 An invalid keyword and an empty string will be handled as the `anonymous` keyword.
 
-> **Note:** Prior to Firefox 83 the `crossorigin` attribute was not supported for `rel="icon"` there is also [an open issue for Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645).
+> **Note:** Prior to Firefox 83 the `crossorigin` attribute was not supported for `rel="icon"` there is also [an open issue for Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645).
 
 ### Example: crossorigin with the script element
 
@@ -74,31 +77,7 @@ The `use-credentials` value must be used when fetching a [manifest](/en-US/docs/
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'infrastructure.html#cors-settings-attributes', 'CORS settings attributes')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'embedded-content.html#attr-img-crossorigin', 'crossorigin')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -110,7 +89,7 @@ The `use-credentials` value must be used when fetching a [manifest](/en-US/docs/
 
 {{Compat("html.elements.video.crossorigin")}}
 
-### link crossorigin
+### link crossorigin
 
 {{Compat("html.elements.link.crossorigin")}}
 

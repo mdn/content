@@ -81,7 +81,7 @@ reference space.
 
 In all cases, once the space has been obtained, it gets passed into the
 `refSpaceCreated()` function. For immersive spaces, the specified space is
-saved for future use. However, for inline sesions, we know we're in a space not
+saved for future use. However, for inline sessions, we know we're in a space not
 automatically adjusted for floor level, so we request an offset reference space to shift
 the viewer's height to 1.5 meters above the presumed floor level of 0 meters. That new
 reference space is used instead of the one initially received.

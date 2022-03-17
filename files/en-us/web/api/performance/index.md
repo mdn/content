@@ -16,19 +16,21 @@ The **`Performance`** interface provides access to performance-related informati
 
 An object of this type can be obtained by calling the {{domxref("window.performance")}} read-only attribute.
 
-> **Note:** This interface and its members are available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) via [`WorkerGlobalScope.performance`](/en-US/docs/Web/API/WorkerGlobalScope/performance) , except where indicated below. Also, note that performance markers and measures are per context. If you create a mark on the main thread (or other worker), you cannot see it in a worker thread, and vice versa.
+> **Note:** This interface and its members are available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) via [`WorkerGlobalScope.performance`](/en-US/docs/Web/API/WorkerGlobalScope/performance) , except where indicated below. Also, note that performance markers and measures are per context. If you create a mark on the main thread (or other worker), you cannot see it in a worker thread, and vice versa.
+
+{{InheritanceDiagram}}
 
 ## Properties
 
 _The `Performance` interface doesn't inherit any properties._
 
-- {{domxref("Performance.navigation")}} {{readonlyInline}} {{deprecated_inline}}
+- {{domxref("Performance.navigation")}} {{readonlyInline}} {{deprecated_inline}}
 
   - : A legacy {{domxref("PerformanceNavigation")}} object that provides useful context about the operations included in the times listed in `timing`, including whether the page was a load or a refresh, how many redirections occurred, and so forth.
 
     > **Note:** Not available in workers.
 
-- {{domxref("Performance.timing")}} {{readonlyInline}} {{deprecated_inline}}
+- {{domxref("Performance.timing")}} {{readonlyInline}} {{deprecated_inline}}
 
   - : A legacy {{domxref("PerformanceTiming")}} object containing latency-related performance information.
 
@@ -36,7 +38,7 @@ _The `Performance` interface doesn't inherit any properties._
 
 - {{domxref("Performance.memory")}} {{readonlyInline}} {{Non-standard_inline}}
   - : A _non-standard_ extension added in Chrome, this property provides an object with basic memory usage information. _You **should not use** this non-standard API._
-- {{domxref("Performance.timeOrigin")}} {{readonlyInline}} {{Non-standard_inline}}
+- {{domxref("Performance.timeOrigin")}} {{readonlyInline}} {{Non-standard_inline}}
   - : Returns the high resolution timestamp of the start time of the performance measurement.
 
 ## Methods
@@ -72,7 +74,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{DOMxRef("Performance.resourcetimingbufferfull_event", "resourcetimingbufferfull")}}
   - : Fired when the browser's [resource timing buffer](/en-US/docs/Web/API/Performance/setResourceTimingBufferSize) is full.
-    Also available via the {{DOMxRef("Performance.onresourcetimingbufferfull", "onresourcetimingbufferfull")}} property.
 
 ## Specifications
 

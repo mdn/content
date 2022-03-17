@@ -13,7 +13,7 @@ The **`yChannelSelector`** attribute indicates which color channel from {{SVGAtt
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feDisplacementMap")}}
+- {{SVGElement("feDisplacementMap")}}
 
 ## Example
 
@@ -66,14 +66,14 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `R`
-    *   : This keyword specifies that the red color channel of the input image defined in {{SVGAttr("in2")}} will be used to displace the pixels of the input image defined in {{SVGAttr("in")}} along the y-axis.
-*   `G`
-    *   : This keyword specifies that the green color channel of the input image defined in {{SVGAttr("in2")}} will be used to displace the pixels of the input image defined in {{SVGAttr("in")}} along the y-axis.
-*   `B`
-    *   : This keyword specifies that the blue color channel of the input image defined in {{SVGAttr("in2")}} will be used to displace the pixels of the input image defined in {{SVGAttr("in")}} along the y-axis.
-*   `A`
-    *   : This keyword specifies that the alpha channel of the input image defined in {{SVGAttr("in2")}} will be used to displace the pixels of the input image defined in {{SVGAttr("in")}} along the y-axis.
+- `R`
+  - : This keyword specifies that the red color channel of the input image defined in {{SVGAttr("in2")}} will be used to displace the pixels of the input image defined in {{SVGAttr("in")}} along the y-axis.
+- `G`
+  - : This keyword specifies that the green color channel of the input image defined in {{SVGAttr("in2")}} will be used to displace the pixels of the input image defined in {{SVGAttr("in")}} along the y-axis.
+- `B`
+  - : This keyword specifies that the blue color channel of the input image defined in {{SVGAttr("in2")}} will be used to displace the pixels of the input image defined in {{SVGAttr("in")}} along the y-axis.
+- `A`
+  - : This keyword specifies that the alpha channel of the input image defined in {{SVGAttr("in2")}} will be used to displace the pixels of the input image defined in {{SVGAttr("in")}} along the y-axis.
 
 ## Specifications
 

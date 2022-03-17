@@ -19,11 +19,11 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 
 ### B
 
-- {{CSSxRef("-moz-binding")}} {{Deprecated_Inline}}
-- {{CSSxRef("-moz-border-bottom-colors")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-border-left-colors")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-border-right-colors")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-border-top-colors")}} {{deprecated_inline}}
+- {{CSSxRef("-moz-binding")}} {{Deprecated_Inline}}
+- {{CSSxRef("-moz-border-bottom-colors")}} {{deprecated_inline}}
+- {{CSSxRef("-moz-border-left-colors")}} {{deprecated_inline}}
+- {{CSSxRef("-moz-border-right-colors")}} {{deprecated_inline}}
+- {{CSSxRef("-moz-border-top-colors")}} {{deprecated_inline}}
 - {{CSSxRef("-moz-box-align")}}
 - {{CSSxRef("-moz-box-direction")}}
 - {{CSSxRef("-moz-box-flex")}}
@@ -54,15 +54,15 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 ### S–Z
 
 - {{CSSxRef("-moz-stack-sizing")}}
-- {{CSSxRef(":-moz-system-metric(images-in-menus)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(mac-graphite-theme)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(scrollbar-end-backward)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(scrollbar-end-forward)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(scrollbar-start-backward)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(scrollbar-start-forward)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(scrollbar-thumb-proportional)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(touch-enabled)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(windows-default-theme)")}} {{deprecated_inline}}
+- {{CSSxRef(":-moz-system-metric(images-in-menus)")}} {{deprecated_inline}}
+- {{CSSxRef(":-moz-system-metric(mac-graphite-theme)")}} {{deprecated_inline}}
+- {{CSSxRef(":-moz-system-metric(scrollbar-end-backward)")}} {{deprecated_inline}}
+- {{CSSxRef(":-moz-system-metric(scrollbar-end-forward)")}} {{deprecated_inline}}
+- {{CSSxRef(":-moz-system-metric(scrollbar-start-backward)")}} {{deprecated_inline}}
+- {{CSSxRef(":-moz-system-metric(scrollbar-start-forward)")}} {{deprecated_inline}}
+- {{CSSxRef(":-moz-system-metric(scrollbar-thumb-proportional)")}} {{deprecated_inline}}
+- {{CSSxRef(":-moz-system-metric(touch-enabled)")}} {{deprecated_inline}}
+- {{CSSxRef(":-moz-system-metric(windows-default-theme)")}} {{deprecated_inline}}
 - {{CSSxRef("-moz-user-focus")}}
 - {{CSSxRef("-moz-user-input")}}
 - {{CSSxRef("-moz-user-modify")}}
@@ -73,81 +73,94 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 
 > **Note:** To maximize the compatibility of your CSS, you should use the unprefixed standard properties instead of the prefixed ones listed below. Once a given property is standardized and implemented without the prefix, the prefixed version is typically dropped after a while.
 
-- ### A
-- {{CSSxRef("animation", "-moz-animation")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("animation-delay", "-moz-animation-delay")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("animation-direction", "-moz-animation-direction")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("animation-duration", "-moz-animation-duration")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("animation-fill-mode", "-moz-animation-fill-mode")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("animation-iteration-count", "-moz-animation-iteration-count")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("animation-name", "-moz-animation-name")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("animation-play-state", "-moz-animation-play-state")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("animation-timing-function","-moz-animation-timing-function")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("appearance","-moz-appearance")}} {{Experimental_Inline}}
-- ### B
-- {{CSSxRef("backface-visibility", "-moz-backface-visibility")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+### A
+
+- {{CSSxRef("animation", "-moz-animation")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("animation-delay", "-moz-animation-delay")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("animation-direction", "-moz-animation-direction")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("animation-duration", "-moz-animation-duration")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("animation-fill-mode", "-moz-animation-fill-mode")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("animation-iteration-count", "-moz-animation-iteration-count")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("animation-name", "-moz-animation-name")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("animation-play-state", "-moz-animation-play-state")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("animation-timing-function","-moz-animation-timing-function")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("appearance","-moz-appearance")}} {{Experimental_Inline}}
+
+### B
+
+- {{CSSxRef("backface-visibility", "-moz-backface-visibility")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("background-clip", "-moz-background-clip")}}{{deprecated_inline}}
 - {{CSSxRef("background-origin", "-moz-background-origin")}}{{deprecated_inline}}
 - {{CSSxRef("-moz-background-inline-policy")}}{{deprecated_inline}} \[Superseded by the standard version {{CSSxRef("box-decoration-break")}}]
 - {{CSSxRef("background-size", "-moz-background-size")}}{{deprecated_inline}}
-- {{CSSxRef("border-inline-end","-moz-border-end")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-end")}}]
-- {{CSSxRef("border-inline-color","-moz-border-end-color")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-end-color")}}]
-- {{CSSxRef("border-inline-style","-moz-border-end-style")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-end-style")}}]
-- {{CSSxRef("border-inline-width","-moz-border-end-width")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-end-width")}}]
-- {{CSSxRef("border-image","-moz-border-image")}} {{Deprecated_Inline}}
-- {{CSSxRef("border-inline-start","-moz-border-start")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-start")}}]
-- {{CSSxRef("border-inline-start-color","-moz-border-start-color")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-start-color")}}]
-- {{CSSxRef("border-inline-start-style","-moz-border-start-style")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-start-style")}}]
-- {{CSSxRef("border-inline-start-width","-moz-border-start-width")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-start-width")}}]
-- {{CSSxRef("box-sizing", "-moz-box-sizing")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- ### C
-- {{CSSxRef("clip-path")}} {{Experimental_Inline}} \[Applying to more than SVG]
-- {{CSSxRef("column-count","-moz-column-count")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("column-fill","-moz-column-fill")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("column-gap","-moz-column-gap")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("column-width","-moz-column-width")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("column-rule","-moz-column-rule")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("column-rule-width","-moz-column-rule-width")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("column-rule-style","-moz-column-rule-style")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("column-rule-color","-moz-column-rule-color")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("-moz-context-properties")}} {{Experimental_Inline}}
-- ### F–M
-- {{CSSxRef("filter")}} {{Experimental_Inline}} \[Applying to more than SVG]
-- {{CSSxRef("font-feature-settings","-moz-font-feature-settings")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("font-language-override","-moz-font-language-override")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("hyphens","-moz-hyphens")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("margin-inline-end","-moz-margin-end")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("margin-inline-end")}}]
-- {{CSSxRef("margin-inline-start","-moz-margin-start")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("margin-inline-start")}}]
-- {{CSSxRef("mask")}} {{Experimental_Inline}} \[Applying to more than SVG]
-- ### O
+- {{CSSxRef("border-inline-end","-moz-border-end")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-end")}}]
+- {{CSSxRef("border-inline-color","-moz-border-end-color")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-end-color")}}]
+- {{CSSxRef("border-inline-style","-moz-border-end-style")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-end-style")}}]
+- {{CSSxRef("border-inline-width","-moz-border-end-width")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-end-width")}}]
+- {{CSSxRef("border-image","-moz-border-image")}} {{Deprecated_Inline}}
+- {{CSSxRef("border-inline-start","-moz-border-start")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-start")}}]
+- {{CSSxRef("border-inline-start-color","-moz-border-start-color")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-start-color")}}]
+- {{CSSxRef("border-inline-start-style","-moz-border-start-style")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-start-style")}}]
+- {{CSSxRef("border-inline-start-width","-moz-border-start-width")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-start-width")}}]
+- {{CSSxRef("box-sizing", "-moz-box-sizing")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+
+### C
+
+- {{CSSxRef("clip-path")}} {{Experimental_Inline}} \[Applying to more than SVG]
+- {{CSSxRef("column-count","-moz-column-count")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("column-fill","-moz-column-fill")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("column-gap","-moz-column-gap")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("column-width","-moz-column-width")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("column-rule","-moz-column-rule")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("column-rule-width","-moz-column-rule-width")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("column-rule-style","-moz-column-rule-style")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("column-rule-color","-moz-column-rule-color")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("-moz-context-properties")}} {{Experimental_Inline}}
+
+### F–M
+
+- {{CSSxRef("filter")}} {{Experimental_Inline}} \[Applying to more than SVG]
+- {{CSSxRef("font-feature-settings","-moz-font-feature-settings")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("font-language-override","-moz-font-language-override")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("hyphens","-moz-hyphens")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("margin-inline-end","-moz-margin-end")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("margin-inline-end")}}]
+- {{CSSxRef("margin-inline-start","-moz-margin-start")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("margin-inline-start")}}]
+- {{CSSxRef("mask")}} {{Experimental_Inline}} \[Applying to more than SVG]
+
+### O
+
 - {{CSSxRef("opacity","-moz-opacity")}} {{deprecated_inline}}
 - {{CSSxRef("outline","-moz-outline")}} {{deprecated_inline}}
 - {{CSSxRef("outline-color","-moz-outline-color")}} {{deprecated_inline}}
 - {{CSSxRef("outline-offset","-moz-outline-offset")}} {{deprecated_inline}}
 - {{CSSxRef("outline-style","-moz-outline-style")}} {{deprecated_inline}}
 - {{CSSxRef("outline-width","-moz-outline-width")}} {{deprecated_inline}}
-- ### P
-- {{CSSxRef("padding-inline-end","-moz-padding-end")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("padding-inline-start")}}]
-- {{CSSxRef("padding-inline-start","-moz-padding-start")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("padding-inline-end")}}]
-- {{CSSxRef("perspective", "-moz-perspective")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("perspective-origin","-moz-perspective-origin")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("pointer-events")}} {{Experimental_Inline}} \[Applying to more than SVG]
-- ### T–U
-- {{CSSxRef("tab-size","-moz-tab-size")}} {{Experimental_Inline}}
+
+### P
+
+- {{CSSxRef("padding-inline-end","-moz-padding-end")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("padding-inline-start")}}]
+- {{CSSxRef("padding-inline-start","-moz-padding-start")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("padding-inline-end")}}]
+- {{CSSxRef("perspective", "-moz-perspective")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("perspective-origin","-moz-perspective-origin")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("pointer-events")}} {{Experimental_Inline}} \[Applying to more than SVG]
+
+### T–U
+
+- {{CSSxRef("tab-size","-moz-tab-size")}} {{Experimental_Inline}}
 - {{CSSxRef("text-align-last","-moz-text-align-last")}}{{deprecated_inline}}
 - {{CSSxRef("text-decoration-color","-moz-text-decoration-color")}}{{deprecated_inline}}
 - {{CSSxRef("text-decoration-line","-moz-text-decoration-line")}}{{deprecated_inline}}
 - {{CSSxRef("text-decoration-style","-moz-text-decoration-style")}}{{deprecated_inline}}
-- {{CSSxRef("text-size-adjust","-moz-text-size-adjust")}} {{Experimental_Inline}}
-- {{CSSxRef("transform", "-moz-transform")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("transform-origin", "-moz-transform-origin")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("transform-style", "-moz-transform-style")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("transition", "-moz-transition")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("transition-delay", "-moz-transition-delay")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("transition-duration", "-moz-transition-duration")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("transition-property", "-moz-transition-property")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("transition-timing-function", "-moz-transition-timing-function")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
-- {{CSSxRef("user-select","-moz-user-select")}} {{Experimental_Inline}}
+- {{CSSxRef("text-size-adjust","-moz-text-size-adjust")}} {{Experimental_Inline}}
+- {{CSSxRef("transform", "-moz-transform")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("transform-origin", "-moz-transform-origin")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("transform-style", "-moz-transform-style")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("transition", "-moz-transition")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("transition-delay", "-moz-transition-delay")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("transition-duration", "-moz-transition-duration")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("transition-property", "-moz-transition-property")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("transition-timing-function", "-moz-transition-timing-function")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+- {{CSSxRef("user-select","-moz-user-select")}} {{Experimental_Inline}}
 
 ## Values
 
@@ -244,18 +257,18 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 
 ### {{CSSxRef("background-image")}}
 
-- #### Gradients
+#### Gradients
 
-  - {{CSSxRef("linear-gradient","-moz-linear-gradient")}} {{Deprecated_Inline}}
-  - {{CSSxRef("radial-gradient","-moz-radial-gradient")}} {{Deprecated_Inline}}
+- {{CSSxRef("linear-gradient","-moz-linear-gradient")}} {{Deprecated_Inline}}
+- {{CSSxRef("radial-gradient","-moz-radial-gradient")}} {{Deprecated_Inline}}
 
-- #### Elements
+#### Elements
 
-  - {{CSSxRef("element","-moz-element")}}
+- {{CSSxRef("element","-moz-element")}}
 
-- #### Sub-images
+#### Sub-images
 
-  - {{CSSxRef("-moz-image-rect")}}
+- {{CSSxRef("-moz-image-rect")}}
 
 ### {{CSSxRef("border-color")}}
 
@@ -305,12 +318,12 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 
 ### {{CSSxRef("display")}}
 
-- `-moz-box` {{deprecated_inline}}
-- `-moz-inline-block` {{deprecated_inline}}
-- `-moz-inline-box` {{Deprecated_Inline}}
+- `-moz-box` {{deprecated_inline}}
+- `-moz-inline-block` {{deprecated_inline}}
+- `-moz-inline-box` {{Deprecated_Inline}}
 - `-moz-inline-grid` {{deprecated_inline}}
 - `-moz-inline-stack` {{deprecated_inline}}
-- `-moz-inline-table` {{deprecated_inline}}
+- `-moz-inline-table` {{deprecated_inline}}
 - `-moz-grid` {{deprecated_inline}}
 - `-moz-grid-group` {{deprecated_inline}}
 - `-moz-grid-line` {{deprecated_inline}}
@@ -385,9 +398,9 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 
 ### {{CSSxRef("overflow")}}
 
-- {{CSSxRef("-moz-scrollbars-none")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-scrollbars-horizontal")}} {{Deprecated_Inline}}
-- {{CSSxRef("-moz-scrollbars-vertical")}} {{Deprecated_Inline}}
+- {{CSSxRef("-moz-scrollbars-none")}} {{deprecated_inline}}
+- {{CSSxRef("-moz-scrollbars-horizontal")}} {{Deprecated_Inline}}
+- {{CSSxRef("-moz-scrollbars-vertical")}} {{Deprecated_Inline}}
 - {{CSSxRef("-moz-hidden-unscrollable")}}
 
 ### {{CSSxRef("text-align")}}
@@ -414,7 +427,8 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 
 ## Pseudo-elements and pseudo-classes
 
-- ### A – D
+### A – D
+
 - {{CSSxRef("::-moz-anonymous-block")}}
 - {{CSSxRef("::-moz-anonymous-positioned-block")}}
 - {{CSSxRef(":-moz-any")}}
@@ -424,7 +438,9 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef("::-moz-color-swatch")}}
 - {{CSSxRef("::-moz-cell-content")}}
 - {{CSSxRef(":-moz-drag-over")}}
-- ### F – I
+
+### F – I
+
 - {{CSSxRef(":-moz-first-node")}}
 - {{CSSxRef("::-moz-focus-inner")}}
 - {{CSSxRef("::-moz-focus-outer")}}
@@ -435,7 +451,9 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef(":-moz-handler-crashed")}}
 - {{CSSxRef(":-moz-handler-disabled")}}
 - {{CSSxRef("::-moz-inline-table")}}
-- ### L
+
+### L
+
 - {{CSSxRef(":-moz-last-node")}}
 - {{CSSxRef(":-moz-list-bullet")}}
 - {{CSSxRef(":-moz-list-number")}}
@@ -445,7 +463,9 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef(":-moz-lwtheme")}}
 - {{CSSxRef(":-moz-lwtheme-brighttext")}}
 - {{CSSxRef(":-moz-lwtheme-darktext")}}
-- ### N – R
+
+### N – R
+
 - {{CSSxRef(":-moz-native-anonymous")}}
 - {{CSSxRef(":-moz-only-whitespace")}}
 - {{CSSxRef("::-moz-page")}}
@@ -460,7 +480,9 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef("::-moz-range-track")}}
 - {{CSSxRef(":-moz-read-only")}}
 - {{CSSxRef(":-moz-read-write")}}
-- ### S
+
+### S
+
 - {{CSSxRef("::-moz-scrolled-canvas")}}
 - {{CSSxRef("::-moz-scrolled-content")}}
 - {{CSSxRef("::-moz-scrolled-page-sequence")}}
@@ -468,7 +490,9 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef(":-moz-submit-invalid")}}
 - {{CSSxRef(":-moz-suppressed")}}
 - {{CSSxRef("::-moz-svg-foreign-content")}}
-- ### T
+
+### T
+
 - {{CSSxRef("::-moz-table")}}
 - {{CSSxRef("::-moz-table-cell")}}
 - {{CSSxRef("::-moz-table-column")}}
@@ -490,7 +514,9 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef(":-moz-tree-row(hover)")}}
 - {{CSSxRef(":-moz-tree-separator")}}
 - {{CSSxRef(":-moz-tree-twisty")}}
-- ### U – X
+
+### U – X
+
 - {{CSSxRef(":-moz-ui-invalid")}}
 - {{CSSxRef(":-moz-ui-valid")}}
 - {{CSSxRef(":-moz-user-disabled")}}
@@ -512,7 +538,7 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 
 ## Other
 
-- {{CSSxRef("-moz-alt-content")}} (see {{Bug(11011)}})
+- {{CSSxRef("-moz-alt-content")}} (see {{Bug(11011)}})
 
 ## See also
 

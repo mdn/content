@@ -14,6 +14,8 @@ browser-compat: api.CloseEvent
 
 A `CloseEvent` is sent to clients using {{Glossary("WebSockets")}} when the connection is closed. This is delivered to the listener indicated by the `WebSocket` object's `onclose` attribute.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}}

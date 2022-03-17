@@ -14,7 +14,7 @@ The `onreadingerror` property of the {{DOMxRef("NDEFReader")}} interface is call
 
 ## Examples
 
-The following example shows how to process events using both the `onreading` and `onreadingerror` event handlerss.
+The following example shows how to process events using both the `onreading` and `onreadingerror` event handlers.
 
 ```js
 const ndef = new NDEFReader();

@@ -32,23 +32,23 @@ The following example shows a grid with 6 columns, of which columns 1, 2, 5, and
 
 ```html
 <div role="grid" aria-colcount="6">
-  <div role="rowgroup">
-    <div role="row">
-      <div role="columnheader" aria-colindex="1">First name</div>
-      <div role="columnheader" aria-colindex="2">Last name</div>
-      <div role="columnheader" aria-colindex="5">City</div>
-      <div role="columnheader" aria-colindex="6">Zip</div>
-    </div>
-  </div>
-  <div role="rowgroup">
-    <div role="row">
-      <div role="gridcell" aria-colindex="1">Debra</div>
-      <div role="gridcell" aria-colindex="2">Burks</div>
-      <div role="gridcell" aria-colindex="5">New York</div>
-      <div role="gridcell" aria-colindex="6">14127</div>
-    </div>
-  </div>
-  …
+  <div role="rowgroup">
+    <div role="row">
+      <div role="columnheader" aria-colindex="1">First name</div>
+      <div role="columnheader" aria-colindex="2">Last name</div>
+      <div role="columnheader" aria-colindex="5">City</div>
+      <div role="columnheader" aria-colindex="6">Zip</div>
+    </div>
+  </div>
+  <div role="rowgroup">
+    <div role="row">
+      <div role="gridcell" aria-colindex="1">Debra</div>
+      <div role="gridcell" aria-colindex="2">Burks</div>
+      <div role="gridcell" aria-colindex="5">New York</div>
+      <div role="gridcell" aria-colindex="6">14127</div>
+    </div>
+  </div>
+  …
 </div>
 ```
 
@@ -58,23 +58,23 @@ When using semantic table header elements and not all columns are in the DOM, th
 
 ```html
 <table aria-colcount="6">
-  <thead>
-    <tr>
-      <th aria-colindex="1" scope="col">First name</th>
-      <th aria-colindex="2" scope="col">Last name</th>
-      <th aria-colindex="5" scope="col">City</th>
-      <th aria-colindex="6" scope="col">Zip</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Debra</td>
-      <td>Burks</td>
-      <td>New York</td>
-      <td>14127</td>
-    </tr>
-    ...
-  </tbody>
+  <thead>
+    <tr>
+      <th aria-colindex="1" scope="col">First name</th>
+      <th aria-colindex="2" scope="col">Last name</th>
+      <th aria-colindex="5" scope="col">City</th>
+      <th aria-colindex="6" scope="col">Zip</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Debra</td>
+      <td>Burks</td>
+      <td>New York</td>
+      <td>14127</td>
+    </tr>
+    ...
+  </tbody>
 </table>
 ```
 

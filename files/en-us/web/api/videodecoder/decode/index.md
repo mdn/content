@@ -57,4 +57,3 @@ for (let i = 0; i < responses.length; i++) {
 ## Browser compatibility
 
 {{Compat}}
-

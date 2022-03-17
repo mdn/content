@@ -14,18 +14,6 @@ tags:
 
 MDN Web Docs (previously known as MDN — the Mozilla Developer Network) is an evolving learning platform for Web technologies and the software that powers the Web, including [CSS](/en-US/docs/Web/CSS), [HTML](/en-US/docs/Web/HTML), and [JavaScript](/en-US/docs/Web/JavaScript). We also have a detailed set of beginner's learning material — see [Learn Web development](/en-US/docs/Learn).
 
-## Our mission
-
-MDN's mission is simple: provide developers with the information they need to easily build projects on the [open Web](/en-US/docs/Web). If it's an open technology exposed to the Web, we want to document it.
-
-If you're not sure whether a particular topic should be covered on MDN, read [Does this belong on MDN?](/en-US/docs/MDN/Guidelines/Does_this_belong_on_MDN)
-
-## How you can help
-
-Our community is a global one. We have amazing contributors all around the world who help us create content, fix bugs, review content changes, and add sample code.
-
-However, you don't need to be a professional coder or writer to help MDN! Head over to our [Contribute](/en-US/docs/MDN/Contribute) pages to find something you can do to help, based on your expertise and how much time you have to spare.
-
 ## Using MDN Web Docs content
 
 MDN's content is available free of charge, and under open source licenses.
@@ -40,7 +28,7 @@ MDN's content is entirely available under various open source licenses. This sec
 
 When reusing MDN content, you need to ensure two things:
 
-1.  Attribution is given to the original content.
+1. Attribution is given to the original content.
 
     Please attribute "Mozilla Contributors" and include a hyperlink (online) or URL (in print) to the specific wiki page for the content being sourced. For example, to provide attribution for this article, you can write:
 
@@ -48,7 +36,7 @@ When reusing MDN content, you need to ensure two things:
 
     Note that in the example, "Mozilla Contributors" links to the history of the cited page. See [Best practices for attribution](https://wiki.creativecommons.org/Marking/Users) for further explanation.
 
-2.  Your reuse is published under the same license as the original content—CC-BY-SA v2.5 or any later version.
+2. Your reuse is published under the same license as the original content—CC-BY-SA v2.5 or any later version.
 
 #### Code samples and snippets
 
@@ -77,17 +65,3 @@ The rights in the trademarks, logos, and service marks of the Mozilla Foundation
 ### Linking to MDN
 
 We regularly get users asking us questions about how to link to MDN, or even if doing so is allowed. The short answer is: **yes, you can link to MDN!** Not only is the hypertext link the essence of the Web, it is both a way to point your users to valuable resources and a show of trust toward the work our community does.
-
-## Reporting problems with MDN Web Docs
-
-See [How to report a problem on MDN](/en-US/docs/MDN/Contribute/Howto/Report_a_problem).
-
-## History of MDN Web Docs
-
-The MDN Web Docs (previously _Mozilla Developer Network (MDN)_, previously _Mozilla Developer Center (MDC)_, a.k.a. _Devmo_) project started in early 2005, when the [Mozilla Foundation](https://foundation.mozilla.org) obtained a license from AOL to use the original Netscape [DevEdge](https://web.archive.org/web/*/devedge.netscape.com "Project:en/DevEdge") content. The DevEdge content was mined for still-useful material, which was then migrated by volunteers into this wiki so it would be easier to update and maintain.
-
-The name was changed to MDN Web Docs in June 2017. See [The Future of MDN: A Focus on Web Docs](https://blog.mozilla.org/opendesign/future-mdn-focus-web-docs/) for the rationale behind this decision.
-
-You can find more history of MDN on our [10th anniversary celebration](/en-US/docs/MDN/At_ten) page, including an oral history by some of the people who were involved, and on our [MDN Web Docs: 15 years young](https://hacks.mozilla.org/2020/07/mdn-web-docs-15-years-young/) blog post, which provides a report on our 15th anniversary!
-
-On December 14 2020, we went through another evolutionary step, migrating to our new Yari platform and storing all of our [content in a GitHub repo](https://github.com/mdn/content). Read [Welcome Yari: MDN Web Docs has a new platform](https://hacks.mozilla.org/2020/12/welcome-yari-mdn-web-docs-has-a-new-platform/) for more details.

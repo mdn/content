@@ -94,7 +94,7 @@ This approach gives you the correct URL regardless of the browser your extension
 
 Note that if you make a page web-accessible, any website may link or redirect to that page. The page should then treat any input (POST data, for examples) as if it came from an untrusted source, just as a normal web page should.
 
-Web-accessible extension resources are not blocked by [CORS](/en-US/docs/Web/HTTP/CORS) or [CSP](/en-US/docs/Web/HTTP/CSP). Because of this ability to bypass security checks, extensions should avoid the use of web-accessible scripts when possible. A web-accessible extension script can unexpectedly be misused by malcious websites to weaken the security of other websites. Follow the [security best practices](https://extensionworkshop.com/documentation/develop/build-a-secure-extension/) by avoiding injection of moz-extension:-URLs in web pages and ensuring that third-party libraries are up to date.
+Web-accessible extension resources are not blocked by [CORS](/en-US/docs/Web/HTTP/CORS) or [CSP](/en-US/docs/Web/HTTP/CSP). Because of this ability to bypass security checks, extensions should avoid the use of web-accessible scripts when possible. A web-accessible extension script can unexpectedly be misused by malicious websites to weaken the security of other websites. Follow the [security best practices](https://extensionworkshop.com/documentation/develop/build-a-secure-extension/) by avoiding injection of moz-extension:-URLs in web pages and ensuring that third-party libraries are up to date.
 
 ## Example
 

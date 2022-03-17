@@ -28,9 +28,11 @@ This media could be from a microphone (through {{domxref("MediaDevices.getUserMe
 
 A `MediaStreamAudioSourceNode` has no inputs and exactly one output, and is created using the {{domxref("AudioContext.createMediaStreamSource()")}} method.
 
-The `MediaStreamAudioSourceNode` takes the audio from the _first_ {{domxref("MediaStreamTrack")}} whose {{domxref("MediaStreamTrack.kind", "kind")}} attribute's value is `audio`. See {{anch("Track ordering")}} for more information about the order of tracks.
+The `MediaStreamAudioSourceNode` takes the audio from the _first_ {{domxref("MediaStreamTrack")}} whose {{domxref("MediaStreamTrack.kind", "kind")}} attribute's value is `audio`. See [Track ordering](#track_ordering) for more information about the order of tracks.
 
 The number of channels output by the node matches the number of tracks found in the selected audio track.
+
+{{InheritanceDiagram}}
 
 <table class="properties">
   <tbody>

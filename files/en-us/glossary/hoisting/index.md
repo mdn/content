@@ -16,7 +16,6 @@ Note that doing so can lead to unexpected errors, and is not generally recommend
 > **Note:** The term hoisting is not used in any normative specification prose prior to [ECMAScript® 2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/index.html).
 > Hoisting was thought up as a general way of thinking about how execution contexts (specifically the creation and execution phases) work in JavaScript.
 
-
 ## Function hoisting
 
 One of the advantages of hoisting is that it lets you use a function before you declare it in your code.
@@ -44,7 +43,6 @@ catName("Tiger");
 The result of the code above is the same: "My cat's name is Tiger"
 */
 ```
-
 
 ## Variable hoisting
 
@@ -112,12 +110,10 @@ The code will succeed provided the line that initializes the variable is execute
 
 For information and examples see [`let` > temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz).
 
-
 ## `class` hoisting
 
 Classes defined using a [class declaration](/en-US/docs/Web/JavaScript/Reference/Classes#class_declarations) are hoisted, which means that JavaScript has a reference to the class.
 However the class is not initialized by default, so any code that uses it before the line in which it is initialized is executed will throw a `ReferenceError`.
-
 
 ## Function and class expression hoisting
 
@@ -126,7 +122,6 @@ However the class is not initialized by default, so any code that uses it before
 The expressions evaluate to a function or class (respectively), which are typically assigned to a variable.
 In this case the variable declaration is hoisted and the expression is its initialization.
 Therefore the expressions are not evaluated until the relevant line is executed.
-
 
 ## See also
 

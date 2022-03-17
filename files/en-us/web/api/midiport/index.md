@@ -14,6 +14,8 @@ The **`MIDIPort`** interface of the {{domxref('Web MIDI API','','',' ')}} repres
 
 A `MIDIPort` instance is created when a new MIDI device is connected. Therefore it has no constructor.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 - {{domxref("MIDIPort.id")}}{{ReadOnlyInline}}

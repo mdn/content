@@ -3,7 +3,6 @@ title: Request.redirect
 slug: Web/API/Request/redirect
 tags:
   - API
-  - Experimental
   - Fetch
   - Property
   - Redirect

@@ -27,7 +27,7 @@ var characteristic = BluetoothRemoteGATTCharacteristic.characteristic
 
 ### Returns
 
-An instance of  {{domxref("BluetoothRemoteGATTCharacteristic")}}.
+An instance of  {{domxref("BluetoothRemoteGATTCharacteristic")}}.
 
 ## Specifications
 

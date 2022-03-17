@@ -44,7 +44,7 @@ var gettingCurrent = browser.windows.getCurrent(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a [`windows.Window`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/Window "Information about a browser window.") object containing the details of the window. If any error occurs, the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a [`windows.Window`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/Window) object containing the details of the window. If any error occurs, the promise will be rejected with an error message.
 
 ## Browser compatibility
 

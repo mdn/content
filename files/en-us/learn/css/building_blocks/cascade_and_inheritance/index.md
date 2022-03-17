@@ -129,9 +129,9 @@ We can look at a list of links and explore how universal values work. The live e
 
 For example:
 
-1.  The second list item has the class `my-class-1` applied. This sets the color of the `<a>` element nested inside to inherit. If you remove the rule how does it change the color of the link?
-2.  Do you understand why the third and fourth links are the color that they are? The third link is set to `initial`, which means it uses the initial value of the property (in this case black) and not the browser default for links, which is blue. The fourth is set to `unset` which means that the link text uses the color of the parent element, green.
-3.  Which of the links will change color if you define a new color for the `<a>` element — for example `a { color: red; }`?
+1. The second list item has the class `my-class-1` applied. This sets the color of the `<a>` element nested inside to inherit. If you remove the rule how does it change the color of the link?
+2. Do you understand why the third and fourth links are the color that they are? The third link is set to `initial`, which means it uses the initial value of the property (in this case black) and not the browser default for links, which is blue. The fourth is set to `unset` which means that the link text uses the color of the parent element, green.
+3. Which of the links will change color if you define a new color for the `<a>` element — for example `a { color: red; }`?
 
 {{EmbedGHLiveSample("css-examples/learn/cascade/keywords.html", '100%', 800)}}
 
@@ -151,9 +151,9 @@ We now understand why a paragraph nested deep in the structure of your HTML is t
 
 There are three factors to consider, listed here in increasing order of importance. Later ones overrule earlier ones:
 
-1.  **Source order**
-2.  **Specificity**
-3.  **Importance**
+1. **Source order**
+2. **Specificity**
+3. **Importance**
 
 We will look at these to see how browsers figure out exactly what CSS should be applied.
 
@@ -177,10 +177,10 @@ Let's now have a look at how the browser will calculate specificity. We already 
 
 The amount of specificity a selector has is measured using four different values (or components), which can be thought of as thousands, hundreds, tens, and ones — four single digits in four columns:
 
-1.  **Thousands**: Score one in this column if the declaration is inside a {{htmlattrxref("style")}} attribute, aka inline styles. Such declarations don't have selectors, so their specificity is always 1000.
-2.  **Hundreds**: Score one in this column for each ID selector contained inside the overall selector.
-3.  **Tens**: Score one in this column for each class selector, attribute selector, or pseudo-class contained inside the overall selector.
-4.  **Ones**: Score one in this column for each element selector or pseudo-element contained inside the overall selector.
+1. **Thousands**: Score one in this column if the declaration is inside a {{htmlattrxref("style")}} attribute, aka inline styles. Such declarations don't have selectors, so their specificity is always 1000.
+2. **Hundreds**: Score one in this column for each ID selector contained inside the overall selector.
+3. **Tens**: Score one in this column for each class selector, attribute selector, or pseudo-class contained inside the overall selector.
+4. **Ones**: Score one in this column for each element selector or pseudo-element contained inside the overall selector.
 
 > **Note:** The universal selector (`*`), combinators (`+`, `>`, `~`, ' '), and negation pseudo-class (`:not`) have no effect on specificity.
 
@@ -218,10 +218,10 @@ Take a look at this example where we have two paragraphs, one of which has an ID
 
 Let's walk through this to see what's happening — try removing some of the properties to see what happens if you are finding it hard to understand:
 
-1.  You'll see that the third rule's {{cssxref("color")}} and {{cssxref("padding")}} values have been applied, but the {{cssxref("background-color")}} hasn't. Why? Really all three should surely apply, because rules later in the source order generally override earlier rules.
-2.  However, the rules above it win, because class selectors have higher specificity than element selectors.
-3.  Both elements have a {{htmlattrxref("class")}} of `better`, but the 2nd one has an {{htmlattrxref("id")}} of `winning` too. Since IDs have an _even higher_ specificity than classes (you can only have one element with each unique ID on a page, but many elements with the same class — ID selectors are _very specific_ in what they target), the red background color and the 1px black border should both be applied to the 2nd element, with the first element getting the gray background color, and no border, as specified by the class.
-4.  The 2nd element _does_ get the red background color, but no border. Why? Because of the `!important` declaration in the second rule — including this after `border: none` means that this declaration will win over the border value in the previous rule, even though the ID has higher specificity.
+1. You'll see that the third rule's {{cssxref("color")}} and {{cssxref("padding")}} values have been applied, but the {{cssxref("background-color")}} hasn't. Why? Really all three should surely apply, because rules later in the source order generally override earlier rules.
+2. However, the rules above it win, because class selectors have higher specificity than element selectors.
+3. Both elements have a {{htmlattrxref("class")}} of `better`, but the 2nd one has an {{htmlattrxref("id")}} of `winning` too. Since IDs have an _even higher_ specificity than classes (you can only have one element with each unique ID on a page, but many elements with the same class — ID selectors are _very specific_ in what they target), the red background color and the 1px black border should both be applied to the 2nd element, with the first element getting the gray background color, and no border, as specified by the class.
+4. The 2nd element _does_ get the red background color, but no border. Why? Because of the `!important` declaration in the second rule — including this after `border: none` means that this declaration will win over the border value in the previous rule, even though the ID has higher specificity.
 
 > **Note:** The only way to override this `!important` declaration would be to include another `!important` declaration on a declaration with the _same specificity_ later in the source order, or one with higher specificity.
 
@@ -237,11 +237,11 @@ Finally, it is also useful to note that the importance of a CSS declaration depe
 
 Conflicting declarations will be applied in the following order, with later ones overriding earlier ones:
 
-1.  Declarations in user agent style sheets (e.g. the browser's default styles, used when no other styling is set).
-2.  Normal declarations in user style sheets (custom styles set by a user).
-3.  Normal declarations in author style sheets (these are the styles set by us, the web developers).
-4.  Important declarations in author style sheets
-5.  Important declarations in user style sheets
+1. Declarations in user agent style sheets (e.g. the browser's default styles, used when no other styling is set).
+2. Normal declarations in user style sheets (custom styles set by a user).
+3. Normal declarations in author style sheets (these are the styles set by us, the web developers).
+4. Important declarations in author style sheets
+5. Important declarations in user style sheets
 
 It makes sense for web developers' stylesheets to override user stylesheets, so the design can be kept as intended, but sometimes users have good reasons to override web developer styles, as mentioned above — this can be achieved by using `!important` in their rules.
 
@@ -261,21 +261,21 @@ Refer back here if you start to come across strange issues with styles not apply
 
 ## In this module
 
-1.  **Cascade and inheritance**
-2.  [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+1. **Cascade and inheritance**
+2. [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [Organizing your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing)

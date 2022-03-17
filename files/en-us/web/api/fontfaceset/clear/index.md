@@ -34,4 +34,3 @@ None.
 ## Browser compatibility
 
 {{Compat}}
-

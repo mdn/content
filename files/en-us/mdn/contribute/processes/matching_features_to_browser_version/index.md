@@ -68,9 +68,9 @@ Chrome for Android shares version numbers with the desktop release, although not
 
 ### Version numbers for features in Android WebView
 
-The Android WebView component switched to being based off the latest version of Chrome during the Chrome 37 lifecycle, so any feature that's present in Android WebView _and_ was introduced during or after the Chrome 37 time period should have the same versions as the Chrome release at the same time. For example, if a feature is added to WebView while Chrome 55 is current, then the value of `version_added` is `55`.
+The Android WebView component switched to being based off the latest version of Chrome during the Chrome 37 lifecycle, so any feature that's present in Android WebView _and_ was introduced during or after the Chrome 37 time period should have the same versions as the Chrome release at the same time. For example, if a feature is added to WebView while Chrome 55 is current, then the value of `version_added` is `55`.
 
-If a feature is added to WebView prior to the Chrome 37 time period, and its version number is not known (looking these up is a more difficult process), specify `≤37` as the version. Otherwise, if you do know the WebView component's version number, use that instead.
+If a feature is added to WebView prior to the Chrome 37 time period, and its version number is not known (looking these up is a more difficult process), specify `≤37` as the version. Otherwise, if you do know the WebView component's version number, use that instead.
 
 #### Features excluded from WebView
 
@@ -124,7 +124,7 @@ The specific appearance of the display will vary depending on what tool you're u
 Here, the mouse is pointing at a row with the revision number `199991` beside it. This has opened up a tooltip with details about that revision: It was created for bug 1032835, entitled "addTrack/removeTrack on-top of existing implementation". The tooltip includes several links which can be helpful:
 
 - <40 digit hexadecimal changeset number>
-  - : The changeset number is the first thing shown in the tooltip. This link will take you to a page describing this file as it pertains to the changeset, with the changes highlighted. On the single-file view within a changeset, clicking the `changeset` link at the top of the page will take you to the changeset's overview. From there, the information under {{anch("From a Mercurial changeset number")}} will show you how to track down the version information.
+  - : The changeset number is the first thing shown in the tooltip. This link will take you to a page describing this file as it pertains to the changeset, with the changes highlighted. On the single-file view within a changeset, clicking the `changeset` link at the top of the page will take you to the changeset's overview. From there, the information under [From a Mercurial changeset number](#from_a_mercurial_changeset_number) will show you how to track down the version information.
 - Bugzilla bug link
   - : A link back to the bug on Bugzilla that corresponds to this change. You may find useful information in the bug, including potentially the version number the change shipped in, but odds are good that's where you started.
 - Parent changeset revision number
@@ -132,7 +132,7 @@ Here, the mouse is pointing at a row with the revision number `199991` beside it
 - `diff`
   - : A link that will produce a diff showing the differences between the parent changeset and the changeset that introduced the change you're looking at.
 - `changeset`
-  - : A link to the overview page for the entire changeset that includes the changes made to this line of code. This page should give you the information you require; see {{anch("From a Mercurial changeset number")}} for details.
+  - : A link to the overview page for the entire changeset that includes the changes made to this line of code. This page should give you the information you require; see [From a Mercurial changeset number](#from_a_mercurial_changeset_number) for details.
 
 > **Note:** If you aren't able to find the change because it apparently happens before Firefox was migrated to Mercurial from CVS, try using Mercurial blame on the [Unified Firefox repository](https://hg.mozilla.org/mozilla-unified/), which has tags in place, each representing the code state at specific points in the history of the project, including each beta and each release build. See {{SectionOnPage("/en-US/docs/MDN/Contribute/Processes/Browser_information_resources", "Unified Firefox repository")}} for details.
 
@@ -144,7 +144,7 @@ Consider {{bug(1435161)}}. This bug covers implementing the {{domxref("PaymentRe
 
 ![Screenshot showing "RESOLVED FIXED in Firefox 64" at the top of the Bugzilla screen](bugzilla-fixedin-top.png)
 
-Right below the bug summary, you see the text "RESOLVED FIXED in Firefox 64". This corresponds to the presence of the tracking flag named `firefox45` having the value `fixed`.  On older bugs, before the release-numbered tracking flags were added, you might instead find one of these:
+Right below the bug summary, you see the text "RESOLVED FIXED in Firefox 64". This corresponds to the presence of the tracking flag named `firefox45` having the value `fixed`. On older bugs, before the release-numbered tracking flags were added, you might instead find one of these:
 
 - A tracking flag named `relnote-firefox` with the status set to the version of Firefox the feature arrived in. This tracking flag is intended to indicate when a feature needs to be mentioned in the release notes for the browser, but serves just as well to tell us when a feature was added.
 
@@ -162,11 +162,11 @@ If you're updating compatibility data for a given API interface, or for a proper
 
 A good place to start: do a Bugzilla search for a bug that mentions what you're looking for:
 
-- If you're looking for the addition of an entire interface, try searching for the name of that interface or, failing that, the name of the API that includes the interface within the summary of the bug and whose status is `RESOLVED`. For example, if looking for information about when {{domxref("CustomEvent")}} might have arrived, [this would be the search](https://bugzilla.mozilla.org/buglist.cgi?list_id=14565782&short_desc_type=allwordssubstr&short_desc=CustomEvent&classification=Client%20Software&classification=Components&query_format=advanced&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED). This returns a few results, the second of which is the one we're looking for: {{bug(427537)}}, "Implement CustomEvent DOM3 specification". Armed with that bug number, we can go back to the {{anch("Getting the Firefox release for a bug number", "previous section")}} and determine when this interface was added to Firefox.
+- If you're looking for the addition of an entire interface, try searching for the name of that interface or, failing that, the name of the API that includes the interface within the summary of the bug and whose status is `RESOLVED`. For example, if looking for information about when {{domxref("CustomEvent")}} might have arrived, [this would be the search](https://bugzilla.mozilla.org/buglist.cgi?list_id=14565782&short_desc_type=allwordssubstr&short_desc=CustomEvent&classification=Client%20Software&classification=Components&query_format=advanced&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED). This returns a few results, the second of which is the one we're looking for: {{bug(427537)}}, "Implement CustomEvent DOM3 specification". Armed with that bug number, we can go back to the [previous section](#getting_the_firefox_release_for_a_bug_number) and determine when this interface was added to Firefox.
 - If you're looking for a property or method on an interface having been added, try searching for the interface name and the method or property name both, similar to the previous suggestion. You may find that the method was added along with the entire interface or API, so be sure to watch for the addition of the broader area too.
 - If all else fails, just search for the API name, ideally limiting the search to bugs that are also resolved, as in the first suggestion above.
 
-If you find a bug that corresponds to the feature you need compatibility information for, you can then go to {{anch("Getting the Firefox release for a bug number")}} to review how to isolate that compatibility data from the bug's contents.
+If you find a bug that corresponds to the feature you need compatibility information for, you can then go to [Getting the Firefox release for a bug number](#getting_the_firefox_release_for_a_bug_number) to review how to isolate that compatibility data from the bug's contents.
 
 #### Finding the version from the source tree
 
@@ -183,9 +183,9 @@ A web API feature change corresponds to adding, removing, or altering the signat
 
 The easiest way to identify the compatibility of a feature is to look for when the feature was added to or altered to match the compatibility point you're looking for within the [WebIDL](/en-US/docs/Glossary/WebIDL) file that describes the corresponding interface. There are a few ways you can locate this file, depending on how the API is implemented and how old it is. From most to least likely to work, here they are:
 
-1.  For a given interface named `InterfaceName`, go to [DXR](https://dxr.mozilla.org/mozilla-central/source/) and type <kbd>file:<em>InterfaceName</em>.webidl</kbd> in the search box at the top of the page and pressing <kbd>Enter</kbd>. You will probably have to then click on the name of the file in a list of files (usually only a one-file-long list).
-2.  If the interface isn't found, then search for it by looking for the main interface in the API. For example, a large number of the interfaces, types, and so on for [WebRTC](/en-US/docs/Web/API/WebRTC_API) are located in the file `RTCPeerConnection.webidl` in the Firefox source code, so if you don't find a WebRTC interface by its name, look in that file instead.
-3.  Failing that, try looking for <kbd>file:<em>interfacename</em>.idl</kbd> to see if perhaps the interface is one which is still using the older Mozilla [XPIDL](/en-US/docs/Archive/Mozilla/XPIDL) syntax to describe it. This should not happen very often, if at all.
+1. For a given interface named `InterfaceName`, go to [DXR](https://dxr.mozilla.org/mozilla-central/source/) and type <kbd>file:<em>InterfaceName</em>.webidl</kbd> in the search box at the top of the page and pressing <kbd>Enter</kbd>. You will probably have to then click on the name of the file in a list of files (usually only a one-file-long list).
+2. If the interface isn't found, then search for it by looking for the main interface in the API. For example, a large number of the interfaces, types, and so on for [WebRTC](/en-US/docs/Web/API/WebRTC_API) are located in the file `RTCPeerConnection.webidl` in the Firefox source code, so if you don't find a WebRTC interface by its name, look in that file instead.
+3. Failing that, try looking for <kbd>file:<em>interfacename</em>.idl</kbd> to see if perhaps the interface is one which is still using the older Mozilla [XPIDL](/en-US/docs/Archive/Mozilla/XPIDL) syntax to describe it. This should not happen very often, if at all.
 
 Once in the WebIDL file, click the "Blame" link under "VCS Links" in the Navigation box near the top-right corner of the DXR page.
 
@@ -195,13 +195,13 @@ Once in the blame view, hover the mouse cursor over the revision number at the l
 
 ![](hg-tooltip-revision.png)
 
-This shows you information about the changeset; if the information shown is what you're looking for, click the `changeset` link in the tooltip popup, then see {{anch("From a Mercurial changeset number")}} for details on how to get the version information you need from there.
+This shows you information about the changeset; if the information shown is what you're looking for, click the `changeset` link in the tooltip popup, then see [From a Mercurial changeset number](#from_a_mercurial_changeset_number) for details on how to get the version information you need from there.
 
 If you can't find the changeset you need just by browsing the blame page, the next thing to try is to look through the revision history. Click on the `revisions` link at the top of the Mercurial blame page, or the "Log" link in the Navigation box on the DXR page. This will present a list of every changeset that altered the file you're looking at. Look for a revision that matches the feature change you're interested in; if you find a promising revision, click the `diff` link next to that revision.
 
 ![](hg-revisions-ontrack.png)
 
-This takes you to the changeset details page. From here, you can collect the information you need as covered in {{anch("From a Mercurial changeset number")}}.
+This takes you to the changeset details page. From here, you can collect the information you need as covered in [From a Mercurial changeset number](#from_a_mercurial_changeset_number).
 
 ##### For HTML elements
 
@@ -254,14 +254,14 @@ To determine when support for a given **value** for a property was added, try op
 
 ```cpp
 const KTableEntry nsCSSProps::kScrollSnapTypeKTable[] = {
-  { eCSSKeyword_none,      NS_STYLE_SCROLL_SNAP_TYPE_NONE },
-  { eCSSKeyword_mandatory, NS_STYLE_SCROLL_SNAP_TYPE_MANDATORY },
-  { eCSSKeyword_proximity, NS_STYLE_SCROLL_SNAP_TYPE_PROXIMITY },
-  { eCSSKeyword_UNKNOWN,   -1 }
+  { eCSSKeyword_none,      NS_STYLE_SCROLL_SNAP_TYPE_NONE },
+  { eCSSKeyword_mandatory, NS_STYLE_SCROLL_SNAP_TYPE_MANDATORY },
+  { eCSSKeyword_proximity, NS_STYLE_SCROLL_SNAP_TYPE_PROXIMITY },
+  { eCSSKeyword_UNKNOWN,   -1 }
 };
 ```
 
-And there it is. From here, it's back to the same blame and/or revision list technique covered under {{anch("Using Mercurial blame")}}.
+And there it is. From here, it's back to the same blame and/or revision list technique covered under [Using Mercurial blame](#using_mercurial_blame).
 
 ### From a Mercurial changeset number
 
@@ -318,17 +318,17 @@ _If you have insights into locating release versions for changes to Opera, pleas
 
 ### Presto
 
-Before Opera switched to Chromium, it used an engine developed by Opera called Presto. These resources will help you identify when features were added or removed in Presto-based versions of Opera—that is, Opera version 12.1 and earlier.
+Before Opera switched to Chromium, it used an engine developed by Opera called Presto. These resources will help you identify when features were added or removed in Presto-based versions of Opera—that is, Opera version 12.1 and earlier.
 
 ### Blink (Chromium)
 
-After Opera 12.10, Edge adopted the Blink engine, becoming based upon Chromium. The version number jumped to 15. The Blink engine version became Opera's version plus 13 -- that is, Opera 15 used Blink 28 (15+13=28) -- until Opera Desktop 69 and Opera Android 43. The browser files within the browser-compat-data project contain a mapping of Opera versions to Chromium/Blink versions; see [browsers/opera.json](https://github.com/mdn/browser-compat-data/blob/master/browsers/opera.json) and [browsers/opera_android.json](https://github.com/mdn/browser-compat-data/blob/master/browsers/opera_android.json).
+After Opera 12.10, Edge adopted the Blink engine, becoming based upon Chromium. The version number jumped to 15. The Blink engine version became Opera's version plus 13 -- that is, Opera 15 used Blink 28 (15+13=28) -- until Opera Desktop 69 and Opera Android 43. The browser files within the browser-compat-data project contain a mapping of Opera versions to Chromium/Blink versions; see [browsers/opera.json](https://github.com/mdn/browser-compat-data/blob/master/browsers/opera.json) and [browsers/opera_android.json](https://github.com/mdn/browser-compat-data/blob/master/browsers/opera_android.json).
 
 While most features will be the same between all Chromium browsers, there may be some exceptions. Here are some resources to help you identify those:
 
 ## Safari
 
-Fortunately, the WebKit source repository, found in SVN and available on the web using Trac, has branches for every WebKit version number, and tags for each Safari version. This makes it actually quite easy to narrow down when a given feature arrives. Find when the entry point for the feature was added, which is often in an IDL file. The WebKit version number at the time is in a `Source/WebCore/Configurations/Version.xcconfig` or `WebCore/Configurations/Version.xcconfig` file. The release branch may have already happened, so go through the branches or tags to verify that it was included.
+Fortunately, the WebKit source repository, found in SVN and available on the web using Trac, has branches for every WebKit version number, and tags for each Safari version. This makes it actually quite easy to narrow down when a given feature arrives. Find when the entry point for the feature was added, which is often in an IDL file. The WebKit version number at the time is in a `Source/WebCore/Configurations/Version.xcconfig` or `WebCore/Configurations/Version.xcconfig` file. The release branch may have already happened, so go through the branches or tags to verify that it was included.
 
 You can then compare the WebKit version number to the Safari version history found on Wikipedia, if necessary, to determine exactly which Safari version was shipped with the change in place.
 
@@ -345,4 +345,4 @@ You can then compare the WebKit version number to the Safari version history fou
   - [By WebKit build number](https://trac.webkit.org/browser/webkit/branches) (SVN branches)
   - {{interwiki("wikipedia", "Safari version history")}} (list of Safari versions with feature summaries and the corresponding WebKit build number for each)
 
-> **Warning:** Version numbers listed in the documentation at <https://developer.apple.com/documentation/webkitjs> are inaccurate.  Please use other resources to determine the version numbers.
+> **Warning:** Version numbers listed in the documentation at <https://developer.apple.com/documentation/webkitjs> are inaccurate. Please use other resources to determine the version numbers.

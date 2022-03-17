@@ -50,7 +50,7 @@ table-layout: unset;
 
 ### Fixed-width tables with text-overflow
 
-This example uses a fixed table layout, combined with the {{cssxref("width")}} property, to restrict the table's width. The {{cssxref("text-overflow")}} property is used to apply an ellipsis to words that are too long to fit. If the table layout were `auto`, the table would grow to accommodate its contents, despite the specified `width`.
+This example uses a fixed table layout, combined with the {{cssxref("width")}} property, to restrict the table's width. The {{cssxref("text-overflow")}} property is used to apply an ellipsis to words that are too long to fit. If the table layout were `auto`, the table would grow to accommodate its contents, despite the specified `width`.
 
 #### HTML
 
@@ -73,10 +73,10 @@ table {
 }
 
 td {
-  border: 1px solid blue;
+  border: 1px solid blue;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 ```
 

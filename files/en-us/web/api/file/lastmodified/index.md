@@ -13,7 +13,7 @@ browser-compat: api.File.lastModified
 
 The **`File.lastModified`** read-only property provides the
 last modified date of the file as the number of milliseconds since the Unix
-epoch (January 1, 1970 at midnight). Files without a known last modified date return the
+epoch (January 1, 1970 at midnight). Files without a known last modified date return the
 current date.
 
 ## Syntax
@@ -38,12 +38,12 @@ A number that represents the number of milliseconds since the Unix epoch.
 const fileInput = document.querySelector('#fileInput');
 fileInput.addEventListener('change', (event) => {
   // files is a FileList object (similar to NodeList)
-  const files = event.target.files;
+  const files = event.target.files;
 
   for (let file of files) {
-    const date = new Date(file.lastModified);
-    console.log(`${file.name} has a last modified date of ${date}`);
-  }
+    const date = new Date(file.lastModified);
+    console.log(`${file.name} has a last modified date of ${date}`);
+  }
 });
 ```
 
@@ -60,7 +60,7 @@ moment the `File` object gets created.
 
 ```js
 const fileWithDate = new File([], 'file.bin', {
-  lastModified: new Date(2017, 1, 1),
+  lastModified: new Date(2017, 1, 1),
 });
 console.log(fileWithDate.lastModified); //returns 1485903600000
 
@@ -72,7 +72,7 @@ console.log(fileWithoutDate.lastModified); //returns current time
 
 To offer protection against timing attacks and fingerprinting, the precision of
 `someFile.lastModified` might get rounded depending on browser settings.
-In Firefox, the `privacy.reduceTimerPrecision`  preference is enabled by
+In Firefox, the `privacy.reduceTimerPrecision`  preference is enabled by
 default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
 
 ```js

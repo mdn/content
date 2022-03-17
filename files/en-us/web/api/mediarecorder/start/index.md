@@ -72,7 +72,7 @@ mediaRecorder.start(timeslice)
 
 Errors that can be detected immediately are thrown as DOM exceptions. All other errors
 are reported through {{event("error")}} events sent to the `MediaRecorder`
-object. You can implement the {{domxref("MediaRecorder.onerror", "onerror")}} event
+object. You can implement the {{domxref("MediaRecorder.error_event", "onerror")}} event
 handler to respond to these errors.
 
 - `InvalidModificationError` {{domxref("DOMException")}}

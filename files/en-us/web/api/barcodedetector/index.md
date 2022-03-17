@@ -9,7 +9,7 @@ tags:
   - barcode detector
 browser-compat: api.BarcodeDetector
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}
+{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}
 
 The **`BarcodeDetector`** interface of the {{domxref('Barcode Detection API')}} allows detection of linear and two dimensional barcodes in images.
 

@@ -30,7 +30,7 @@ The API defines {{domxref('PaintWorklet')}}, a {{domxref('worklet')}} that can b
 ## Interfaces
 
 - {{domxref('PaintWorklet')}}
-  - : Programmatically generates an image where a CSS property expects a file. Access this interface through [`CSS.paintWorklet`](/en-US/docs/Web/API/CSS/paintWorklet "paintWorklet is a static, read-only property of the CSS interface that provides access to the PaintWorklet, which programmatically generates an image where a CSS property expects a file.").
+  - : Programmatically generates an image where a CSS property expects a file. Access this interface through [`CSS.paintWorklet`](/en-US/docs/Web/API/CSS/paintWorklet).
 - {{domxref('PaintWorkletGlobalScope')}}
   - : The global execution context of the `paintWorklet`.
 - {{domxref('PaintRenderingContext2D')}}

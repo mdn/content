@@ -39,4 +39,3 @@ The `sheet` property of the processing instruction will return `rule.css`.
 ## See also
 
 - The [DOM API](/en-US/docs/Web/API/Document_Object_Model)
-

@@ -128,7 +128,7 @@ Math.atanh = Math.atanh || function(x) {
 
 ## See also
 
-- A polyfill of `Math.atanh` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [Polyfill of `Math.atanh` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.asinh()")}}
 - {{jsxref("Math.cosh()")}}

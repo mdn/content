@@ -13,7 +13,7 @@ When SVG was specified, support for web fonts was not widespread in browsers. Si
 
 > **Note:** SVG Fonts are currently supported only in Safari and Android Browser.
 >
-> Internet Explorer [hasn't considered implementing this](http://blogs.msdn.com/b/ie/archive/2010/08/04/html5-modernized-fourth-ie9-platform-preview-available-for-developers.aspx), the functionality has been [removed from Chrome 38](https://www.chromestatus.com/feature/5930075908210688) (and Opera 25) and Firefox has [postponed its implementation indefinitely](https://bugzilla.mozilla.org/show_bug.cgi?id=119490) to concentrate on [WOFF](/en-US/docs/Web/Guide/WOFF). Other tools however like the [Adobe SVG Viewer](http://www.adobe.com/svg/viewer/install/) plugin, Batik and parts of Inkscape support SVG font embedding.
+> Internet Explorer [hasn't considered implementing this](http://blogs.msdn.com/b/ie/archive/2010/08/04/html5-modernized-fourth-ie9-platform-preview-available-for-developers.aspx), the functionality has been [removed from Chrome 38](https://www.chromestatus.com/feature/5930075908210688) (and Opera 25) and Firefox has [postponed its implementation indefinitely](https://bugzilla.mozilla.org/show_bug.cgi?id=119490) to concentrate on [WOFF](/en-US/docs/Web/Guide/WOFF). Other tools however like the [Adobe SVG Viewer](http://www.adobe.com/svg/viewer/install/) plugin, Batik and parts of Inkscape support SVG font embedding.
 
 The base for defining an SVG font is the {{ SVGElement("font") }} element.
 
@@ -21,20 +21,22 @@ The base for defining an SVG font is the {{ SVGElement("font") }} element.
 
 There are some ingredients required for embedding a font in SVG. Let's show an example declaration (the one [from the specification](https://www.w3.org/TR/SVG/fonts.html#FontElement)), and explain the details.
 
-    <font id="Font1" horiz-adv-x="1000">
-      <font-face font-family="Super Sans" font-weight="bold" font-style="normal"
-          units-per-em="1000" cap-height="600" x-height="400"
-          ascent="700" descent="300"
-          alphabetic="0" mathematical="350" ideographic="400" hanging="500">
-        <font-face-src>
-          <font-face-name name="Super Sans Bold"/>
-        </font-face-src>
-      </font-face>
-      <missing-glyph><path d="M0,0h200v200h-200z"/></missing-glyph>
-      <glyph unicode="!" horiz-adv-x="300"><!-- Outline of exclam. pt. glyph --></glyph>
-      <glyph unicode="@"><!-- Outline of @ glyph --></glyph>
-      <!-- more glyphs -->
-    </font>
+```html
+<font id="Font1" horiz-adv-x="1000">
+  <font-face font-family="Super Sans" font-weight="bold" font-style="normal"
+      units-per-em="1000" cap-height="600" x-height="400"
+      ascent="700" descent="300"
+      alphabetic="0" mathematical="350" ideographic="400" hanging="500">
+    <font-face-src>
+      <font-face-name name="Super Sans Bold"/>
+    </font-face-src>
+  </font-face>
+  <missing-glyph><path d="M0,0h200v200h-200z"/></missing-glyph>
+  <glyph unicode="!" horiz-adv-x="300"><!-- Outline of exclam. pt. glyph --></glyph>
+  <glyph unicode="@"><!-- Outline of @ glyph --></glyph>
+  <!-- more glyphs -->
+</font>
+```
 
 We start with the {{ SVGElement("font") }} element. This bears an id attribute, to enable it to be referenced via a URI (see below). The `horiz-adv-x` attribute determines how wide a character is on average compared to the path definitions of the single glyphs. The value `1000` sets a reasonable value to work with. There are several accompanying attributes that help further define the basic glyph-box layout.
 
@@ -48,18 +50,22 @@ The actual glyphs are then defined by {{ SVGElement("glyph") }} elements. The mo
 
 There are two further elements that can be defined inside `font`: {{ SVGElement("hkern") }} and {{ SVGElement("vkern") }}. Each carries references to at least two characters (attributes `u1` and `u2`) and an attribute `k` that determines how much the distance between those characters should be decreased. The below example instructs user agents to place the "A" and "V" characters closer together the standard distance between characters.
 
-    <hkern u1="A" u2="V" k="20" />
+```html
+<hkern u1="A" u2="V" k="20" />
+```
 
 ## Referencing a font
 
 When you have put together your font declaration as described above, you can just use a simple `font-family` attribute to actually apply the font to some SVG text:
 
-    <font>
-      <font-face font-family="Super Sans" />
-      <!-- and so on -->
-    </font>
+```html
+<font>
+  <font-face font-family="Super Sans" />
+  <!-- and so on -->
+</font>
 
-    <text font-family="Super Sans">My text uses Super Sans</text>
+<text font-family="Super Sans">My text uses Super Sans</text>
+```
 
 However, you are free to combine several methods for great freedom of how and where to define the font.
 
@@ -67,29 +73,33 @@ However, you are free to combine several methods for great freedom of how and wh
 
 You can use `@font-face` to reference remote (and not so remote) fonts:
 
-    <font id="Super_Sans">
-      <!-- and so on -->
-    </font>
+```html
+<font id="Super_Sans">
+  <!-- and so on -->
+</font>
 
-    <style type="text/css">
-    @font-face {
-      font-family: "Super Sans";
-      src: url(#Super_Sans);
-    }
-    </style>
+<style type="text/css">
+@font-face {
+  font-family: "Super Sans";
+  src: url(#Super_Sans);
+}
+</style>
 
-    <text font-family="Super Sans">My text uses Super Sans</text>
+<text font-family="Super Sans">My text uses Super Sans</text>
+```
 
 ### Option: reference a remote font
 
 The above mentioned `font-face-uri` element allows you to reference an external font, hence allowing greater re-usability:
 
-    <font>
-      <font-face font-family="Super Sans">
-        <font-face-src>
-          <font-face-uri xlink:href="fonts.svg#Super_Sans" />
-        </font-face-src>
-      </font-face>
-    </font>
+```html
+<font>
+  <font-face font-family="Super Sans">
+    <font-face-src>
+      <font-face-uri xlink:href="fonts.svg#Super_Sans" />
+    </font-face-src>
+  </font-face>
+</font>
+```
 
 {{ PreviousNext("Web/SVG/Tutorial/Filter_effects", "Web/SVG/Tutorial/SVG_Image_Tag") }}

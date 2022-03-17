@@ -11,7 +11,9 @@ The `unparsed-entity-url()` function returns the URI of the unparsed entity with
 
 ### Syntax
 
-    string unparsed-entity-url(string)
+```
+string unparsed-entity-url(string)
+```
 
 ### Arguments
 

@@ -28,7 +28,7 @@ The marquee is required to have an accessible name.  Use [`aria-labelledby`](/en
 
   - : Defines when assistive technology should inform the user of updates to content. Elements with the role `marquee` have an implicit [aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live) value of `off`, meaning screen readers will not announce changes inside the marquee, even when the user is idle.
 
-- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or `aria-labelledby`
+- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 
   - : The `marquee` is required to have an accessible name.  Use `aria-labelledby` if a visible label is present, otherwise use `aria-label`.
 
@@ -37,8 +37,6 @@ The marquee is required to have an accessible name.  Use [`aria-labelledby`](/en
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#marquee","ARIA: marquee role")}}                                             | {{Spec2('ARIA')}}                         |
-
-
 
 ## See Also
 

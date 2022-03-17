@@ -11,9 +11,11 @@ tags:
   - working with directories
 browser-compat: api.FileSystemDirectoryHandle
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`FileSystemDirectoryHandle`** interface of the {{domxref('File System Access API')}} provides a handle to a file system directory. The interface is accessed via the {{domxref('window.showDirectoryPicker()')}} method.
+
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -74,6 +76,27 @@ async function returnPathDirectories(directoryHandle) {
       console.log(name);
     }
   }
+}
+```
+
+The following example scans recursively through a directory to return {{domxref('FileSystemFileHandle')}} objects for each file in that directory:
+
+```js
+async function* getFilesRecursively (entry) {
+  if (entry.kind === 'file') {
+    const file = await entry.getFile();
+    if (file !== null) {
+      file.relativePath = getRelativePath(entry);
+      yield file;
+    }
+  } else if (entry.kind === 'directory') {
+    for await (const handle of entry.values()) {
+      yield* getFilesRecursively(handle);
+    }
+  }
+}
+for await (const fileHandle of getFilesRecursively(directoryHandle)) {
+  console.log(fileHandle);
 }
 ```
 

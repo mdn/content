@@ -29,7 +29,7 @@ var AudioParam = AudioParam.cancelScheduledValues(startTime)
 
 ### Returns
 
-A reference to this `AudioParam` object. In some older implementations this
+A reference to this `AudioParam` object. In some older implementations this
 method returns {{jsxref('undefined')}}.
 
 ## Examples

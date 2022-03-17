@@ -43,24 +43,25 @@ While adding `disabled` to an HTML form control causes `:disabled` user-agent st
   opacity: 0.5;
 }
 ```
+
 > **Note:** If you are using CSS's [`pointer-events: none;`](/en-US/docs/Web/CSS/pointer-events) to make an element non-clickable, make sure you disable interactivity with JavaScript as well. `pointer-events: none;` prevents mouse clicks, but does not prevent the element from being activated via the keyboard.
 
 ```js
+function onClick(event) {
+  event.preventDefault();
+}
+
 function toggleDisabled(element, status, update) {
   if(status) {
     //element.input.disabled = false;
     element.setAttribute('aria-disabled', 'false');
     update.textContent = 'The element is now enabled.';
-    element.removeEventListener('click', function (event) {
-      event.preventDefault();
-    }
+    element.removeEventListener('click', onClick);
   } else {
     //element.input.disabled = true;
     element.setAttribute('aria-disabled', 'true');
     update.textContent = 'The element is now disabled.';
-    element.addEventListener('click', function (event) {
-      event.preventDefault();
-    }
+    element.addEventListener('click', onClick);
   }
 }
 ```
@@ -91,6 +92,7 @@ If you used just CSS to style the disabled state using an attribute selector, th
 ## Associated roles
 
 Used in roles:
+
 - [`application`](/en-US/docs/Web/Accessibility/ARIA/roles/application_role)
 - [`button`](/en-US/docs/Web/Accessibility/ARIA/roles/button_role)
 - [`composite`](/en-US/docs/Web/Accessibility/ARIA/roles/composite_role)
@@ -104,6 +106,7 @@ Used in roles:
 - [`tab`](/en-US/docs/Web/Accessibility/ARIA/roles/tab_role)
 
 Inherits into roles:
+
 - [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/roles/checkbox_role)
 - [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/roles/columnheader_role)
 - [`combobox`](/en-US/docs/Web/Accessibility/ARIA/roles/combobox_role)

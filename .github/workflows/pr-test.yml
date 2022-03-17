@@ -23,23 +23,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v2.5.1
+        uses: actions/setup-node@v3.0.0
         with:
           node-version: "12"
-
-      - name: Cache node_modules
-        uses: actions/cache@v2.1.7
-        id: cached-node_modules
-        with:
-          path: |
-            node_modules
-          key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}-${{ hashFiles('.github/workflows/pr-test.yml') }}
+          cache: yarn
 
       - name: Install all yarn packages
-        if: steps.cached-node_modules.outputs.cache-hit != 'true'
         run: |
           yarn --frozen-lockfile
 

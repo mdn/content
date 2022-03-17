@@ -111,9 +111,9 @@ Some combination—but not necessarily all—of the following properties will ex
 - focusMode
   - : A {{jsxref("String")}} specifying one of `"none"`, `"manual"`, `"single-shot"`, or `"continuous"`.
 - pointsOfInterest
-  - : The pixel coordinates on the sensor of one or more points of interest. This is either an object in the form { x:_value_, y:*value* } or an array of such objects, where *value* is a double-precision integer.
+  - : The pixel coordinates on the sensor of one or more points of interest. This is either an object in the form { x:_value_, y:*value* } or an array of such objects, where *value* is a double-precision integer.
 - exposureCompensation
-  - : A [`ConstrainDouble`](#constraindouble) (a double-precision integer) specifying f-stop adjustment by up to ±3.
+  - : A [`ConstrainDouble`](#constraindouble) (a double-precision integer) specifying f-stop adjustment by up to ±3.
 - colorTemperature
   - : A [`ConstrainDouble`](#constraindouble) (a double-precision integer) specifying a desired color temperature in degrees kelvin.
 - iso
@@ -129,7 +129,7 @@ Some combination—but not necessarily all—of the following properties will ex
 - focusDistance
   - : A [`ConstrainDouble`](#constraindouble) (a double-precision integer) specifying distance to a focused object.
 - zoom
-  - : A [`ConstrainDouble`](#constraindouble) (a double-precision integer) specifying the desired focal length.
+  - : A [`ConstrainDouble`](#constraindouble) (a double-precision integer) specifying the desired focal length.
 - torch
   - : A boolean value defining whether the fill light is continuously connected, meaning it stays on as long as the track is active.
 
@@ -146,7 +146,7 @@ Some combination—but not necessarily all—of the following properties will ex
 - {{domxref("MediaTrackConstraints.width", "width")}}
   - : A [`ConstrainULong`](#constrainulong) specifying the video width or range of widths which are acceptable and/or required.
 - resizeMode
-  - : A [`ConstrainDOMString`](#constraindomstring) object specifying a mode or an array of modes the UA can use to derive the resolution of a video track. Allowed values are `none` and `crop-and-scale`. `none` means that the user agent uses the resolution provided by the camera, its driver or the OS. `crop-and-scale` means that the user agent can use cropping and downscaling on the camera output  in order to satisfy other constraints that affect the resolution.
+  - : A [`ConstrainDOMString`](#constraindomstring) object specifying a mode or an array of modes the UA can use to derive the resolution of a video track. Allowed values are `none` and `crop-and-scale`. `none` means that the user agent uses the resolution provided by the camera, its driver or the OS. `crop-and-scale` means that the user agent can use cropping and downscaling on the camera output  in order to satisfy other constraints that affect the resolution.
 
 ### Properties of shared screen tracks
 

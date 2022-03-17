@@ -17,7 +17,7 @@ With the things you have learned in the last few lessons you should find that yo
       <th scope="row">Prerequisites:</th>
       <td>
         Before attempting this assessment you should have worked through the
-        rest of the CSS basics module, and also have an understanding of HTML
+        rest of the CSS basics module, and also have an understanding of HTML
         basics (study
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
@@ -33,9 +33,9 @@ With the things you have learned in the last few lessons you should find that yo
 
 ## Starting point
 
-You can work in the live editor below, or you can [download the starting point file](https://github.com/mdn/css-examples/blob/master/learn/getting-started/biog-download.html/) to work with in your own editor. This is a single page containing both the HTML and the starting point CSS (in the head of the document). If you prefer you could move this CSS to a separate file when you create the example on your local computer. Alternatively use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
+You can work in the live editor below, or you can [download the starting point file](https://github.com/mdn/css-examples/blob/master/learn/getting-started/biog-download.html/) to work with in your own editor. This is a single page containing both the HTML and the starting point CSS (in the head of the document). If you prefer you could move this CSS to a separate file when you create the example on your local computer. Alternatively use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 
-> **Note:** If you get stuck, then ask us for help — see the [Assessment or further help](/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge#assessment_or_further_help) section at the bottom of this page.
+> **Note:** If you get stuck, then ask us for help — see the [Assessment or further help](/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge#assessment_or_further_help) section at the bottom of this page.
 
 ## Working with CSS
 
@@ -51,11 +51,11 @@ The following live example shows a biography, which has been styled using CSS. T
 
 In the box below, you will find some CSS already in place. This selects parts of the document using element selectors, classes, and pseudo-classes. Make the following changes to this CSS:
 
-1.  Make the level one heading pink, using the CSS color keyword `hotpink`.
-2.  Give the heading a 10px dotted {{cssxref("border-bottom")}} which uses the CSS color keyword `purple`.
-3.  Make the level 2 heading italic.
-4.  Give the `ul` used for the contact details a {{cssxref("background-color")}} of `#eeeeee`, and a 5px solid purple {{cssxref("border")}}. Use some {{cssxref("padding")}} to push the content away from the border.
-5.  Make the links `green` on hover.
+1. Make the level one heading pink, using the CSS color keyword `hotpink`.
+2. Give the heading a 10px dotted {{cssxref("border-bottom")}} which uses the CSS color keyword `purple`.
+3. Make the level 2 heading italic.
+4. Give the `ul` used for the contact details a {{cssxref("background-color")}} of `#eeeeee`, and a 5px solid purple {{cssxref("border")}}. Use some {{cssxref("padding")}} to push the content away from the border.
+5. Make the links `green` on hover.
 
 You should end up with something like this image.
 
@@ -71,8 +71,8 @@ Remember that there is no wrong answer here — at this stage in your learning y
 
 If you would like your work assessed, or are stuck and want to ask for help:
 
-1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
-2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
 
     - A descriptive title such as "Assessment wanted for CSS First Steps".
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
@@ -87,8 +87,8 @@ Congratulations on finishing this first module. You should now have a good gener
 
 ## In this module
 
-1.  [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
-3.  [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4.  [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [Using your new knowledge](/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+1. [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
+3. [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [Using your new knowledge](/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

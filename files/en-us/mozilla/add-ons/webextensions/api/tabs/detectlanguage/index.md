@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ```js
 var detecting = browser.tabs.detectLanguage(
   tabId,                  // optional integer
-  callback                // optional function
+  callback                // optional function
 )
 ```
 
@@ -33,7 +33,7 @@ var detecting = browser.tabs.detectLanguage(
 - `tabId` {{optional_inline}}
   - : `integer`. Defaults to the active tab of the current window.
 - `callback` {{optional_inline}}
-  - : `function`. Currently, if a `tabId` is specified, this method uses this callback to return the results instead of returning a promise. The callback receives as its only input parameter a string containing the detected language code such as `en` or `fr`.
+  - : `function`. Currently, if a `tabId` is specified, this method uses this callback to return the results instead of returning a promise. The callback receives as its only input parameter a string containing the detected language code such as `en` or `fr`.
 
 ### Return value
 

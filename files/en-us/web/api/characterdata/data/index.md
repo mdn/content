@@ -39,7 +39,7 @@ output.value = comment.data;
 
 ```html
 <span>Result: </span>Not set.
-````
+```
 
 ```js
 let span = document.getElementsByTagName("span")[0];

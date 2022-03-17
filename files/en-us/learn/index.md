@@ -19,12 +19,6 @@ The aim of this area of MDN is not to take you from "beginner" to "expert" but t
 
 If you are a complete beginner, web development can be challenging — we will hold your hand and provide enough detail for you to feel comfortable and learn the topics properly. You should feel at home whether you are a student learning web development (on your own or as part of a class), a teacher looking for class materials, a hobbyist, or someone who just wants to understand more about how web technologies work.
 
-## What's new?
-
-The content in the learning area is being added to regularly. We have started keeping [Learning area release notes](/en-US/docs/Learn/Release_notes) to show what has changed — keep checking back frequently!
-
-If you have questions regarding topics you'd like to see covered or feel are missing, drop us a message on our [Discourse forum](https://discourse.mozilla.org/c/mdn).
-
 > **Callout:**
 >
 > #### Looking to become a front-end web developer?
@@ -78,25 +72,25 @@ The code examples you'll encounter in the Learning Area are all [available on Gi
 
 If you prefer to copy the repo in a more flexible way that allows for automatic updates, you can follow the more complex instructions:
 
-1.  [Install Git](https://git-scm.com/downloads) on your machine. This is the underlying version control system software that GitHub works on top of.
-2.  Open your computer's [command prompt](https://www.lifewire.com/how-to-open-command-prompt-2618089) (Windows) or terminal ([Linux](https://help.ubuntu.com/community/UsingTheTerminal), [macOS](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)).
-3.  To copy the learning area repo to a folder called learning-area in the current location your command prompt/terminal is pointing to, use the following command:
+1. [Install Git](https://git-scm.com/downloads) on your machine. This is the underlying version control system software that GitHub works on top of.
+2. Open your computer's [command prompt](https://www.lifewire.com/how-to-open-command-prompt-2618089) (Windows) or terminal ([Linux](https://help.ubuntu.com/community/UsingTheTerminal), [macOS](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)).
+3. To copy the learning area repo to a folder called learning-area in the current location your command prompt/terminal is pointing to, use the following command:
 
     ```bash
     git clone https://github.com/mdn/learning-area
     ```
 
-4.  You can now enter the directory and find the files you are after (either using your Finder/File Explorer or the [`cd` command](<https://en.wikipedia.org/wiki/Cd_(command)>)).
+4. You can now enter the directory and find the files you are after (either using your Finder/File Explorer or the [`cd` command](<https://en.wikipedia.org/wiki/Cd_(command)>)).
 
 You can update the `learning-area` repository with any changes made to the master version on GitHub with the following steps:
 
-1.  In your command prompt/terminal, go inside the `learning-area` directory using `cd`. For example, if you were in the parent directory:
+1. In your command prompt/terminal, go inside the `learning-area` directory using `cd`. For example, if you were in the parent directory:
 
     ```bash
     cd learning-area
     ```
 
-2.  Update the repository using the following command:
+2. Update the repository using the following command:
 
     ```bash
     git pull

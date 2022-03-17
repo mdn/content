@@ -30,7 +30,7 @@ topWindowPos = window.screenTop
 ### Returns
 
 A number equal to the number of CSS pixels from the top edge of the browser viewport to
-the  top edge of the screen.
+the  top edge of the screen.
 
 ## Examples
 

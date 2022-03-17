@@ -38,7 +38,6 @@ Landmarks ensure content is in navigable regions. Use {{HTMLElement('main')}} fo
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#landmark","ARIA: landmark role")}}                                             | {{Spec2('ARIA')}}                         |
 
-
 ## See Also
 
 - [ARIA: `section` role](/en-US/docs/Web/Accessibility/ARIA/Roles/section_role)
@@ -50,8 +49,6 @@ Landmarks ensure content is in navigable regions. Use {{HTMLElement('main')}} fo
 - [ARIA: `navigation` role](/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role)
 - [ARIA: `region` role](/en-US/docs/Web/Accessibility/ARIA/Roles/region_role)
 - [ARIA: `search` role](/en-US/docs/Web/Accessibility/ARIA/Roles/search_role)
-
-
 
 <section id="Quick_links">
 

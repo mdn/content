@@ -19,6 +19,8 @@ You don't create {{DOMxRef("RTCSctpTransport")}} objects yourself; instead, you 
 
 Possibly the most useful property on this interface is its {{DOMxRef("RTCSctpTransport.maxMessageSize", "maxMessageSize")}} property, which you can use to determine the upper limit on the size of messages you can send over a data channel on the peer connection.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _Also inherits properties from: {{DOMxRef("EventTarget")}}_

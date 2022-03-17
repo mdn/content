@@ -35,8 +35,7 @@ new Intl.Collator(locales, options)
 
   - : Optional. A string with a BCP 47 language tag, or an array of such strings. For
     the general form and interpretation of the `locales` argument, see
-    the {{jsxref("Global_Objects/Intl", "Intl page",
-			"#Locale_identification_and_negotiation", 1)}}.
+    the {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}.
 
     The following Unicode extension keys are allowed:
 
@@ -46,22 +45,22 @@ new Intl.Collator(locales, options)
 
     - `co`
       - : Variant collations for certain locales. Possible values include:
-          - `big5han`
-          - `compat`
-          - `dict`
-          - `direct`
-          - `ducet`
-          - `eor`
-          - `gb2312`
-          - `phonebk`(only supported in German)
-          - `phonetic`
-          - `pinyin`
-          - `reformed`
-          - `searchjl`
-          - `stroke`
-          - `trad`
-          - `unihan`
-          - `zhuyin`
+        - `big5han`
+        - `compat`
+        - `dict`
+        - `direct`
+        - `ducet`
+        - `eor`
+        - `gb2312`
+        - `phonebk`(only supported in German)
+        - `phonetic`
+        - `pinyin`
+        - `reformed`
+        - `searchjl`
+        - `stroke`
+        - `trad`
+        - `unihan`
+        - `zhuyin`
         > **Note:**  This option can be also be set through the `options` property "`collation`".
     - `kn`
       - : Whether numeric collation should be used, such that "1" < "2" <
@@ -137,22 +136,22 @@ new Intl.Collator(locales, options)
 
     - `collation`
       - : Variant collations for certain locales. Possible values include:
-          - `big5han`
-          - `compat`
-          - `dict`
-          - `direct`
-          - `ducet`
-          - `eor`
-          - `gb2312`
-          - `phonebk`(only supported in German)
-          - `phonetic`
-          - `pinyin`
-          - `reformed`
-          - `searchjl`
-          - `stroke`
-          - `trad`
-          - `unihan`
-          - `zhuyin`
+        - `big5han`
+        - `compat`
+        - `dict`
+        - `direct`
+        - `ducet`
+        - `eor`
+        - `gb2312`
+        - `phonebk`(only supported in German)
+        - `phonetic`
+        - `pinyin`
+        - `reformed`
+        - `searchjl`
+        - `stroke`
+        - `trad`
+        - `unihan`
+        - `zhuyin`
         > **Note:** This option can also be set through the `co` Unicode
         > extension key; if both are provided, this `options`
         > property takes precedence.

@@ -18,7 +18,7 @@ or multiple files and returns a handle for the file(s).
 ## Syntax
 
 ```js
-var FileSystemHandles = Window.showOpenFilePicker();
+window.showOpenFilePicker();
 ```
 
 ### Parameters

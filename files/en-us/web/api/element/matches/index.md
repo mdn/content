@@ -15,7 +15,7 @@ browser-compat: api.Element.matches
 
 The **`matches()`** method checks to see if the
 {{domxref("Element")}} would be selected by the provided
-`selectorString` -- in other words -- checks if the element "is"
+`selectorString` -- in other words -- checks if the element "is"
 the selector.
 
 ## Syntax

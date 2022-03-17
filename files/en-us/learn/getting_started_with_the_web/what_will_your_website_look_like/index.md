@@ -24,9 +24,9 @@ Before doing anything, you need some ideas. What should your website actually do
 
 To begin, you'll need to answer these questions:
 
-1.  **What is your website about?** Do you like dogs, New York, or Pac-Man?
-2.  **What information are you presenting on the subject?** Write a title and a few paragraphs and think of an image you'd like to show on your page.
-3.  **What does your website look like,** in simple high-level terms? What's the background color? What kind of font is appropriate: formal, cartoony, bold and loud, subtle?
+1. **What is your website about?** Do you like dogs, New York, or Pac-Man?
+2. **What information are you presenting on the subject?** Write a title and a few paragraphs and think of an image you'd like to show on your page.
+3. **What does your website look like,** in simple high-level terms? What's the background color? What kind of font is appropriate: formal, cartoony, bold and loud, subtle?
 
 > **Note:** Complex projects need detailed guidelines that go into all the details of colors, fonts, spacing between items on a page, appropriate writing style, and so on. This is sometimes called a design guide, design system, or brand book, and you can see an example at the [Firefox Photon Design System](https://design.firefox.com/photon/).
 
@@ -58,8 +58,8 @@ To choose a color, go to [the Color Picker](/en-US/docs/Web/CSS/CSS_Colors/Color
 
 To choose an image, go to [Google Images](https://www.google.com/imghp?gws_rd=ssl) and search for something suitable.
 
-1.  When you find the image you want, click on the image to get an enlarged view of it.
-2.  Right-click the image (Ctrl + click on a Mac), choose _Save Image As..._, and choose a safe place to save your image. Alternatively, copy the image's web address from your browser's address bar for later use.
+1. When you find the image you want, click on the image to get an enlarged view of it.
+2. Right-click the image (Ctrl + click on a Mac), choose _Save Image As..._, and choose a safe place to save your image. Alternatively, copy the image's web address from your browser's address bar for later use.
 
 ![](updated-google-images.png)
 
@@ -71,9 +71,9 @@ Note that most images on the web, including in Google Images, are copyrighted. T
 
 To choose a font:
 
-1.  Go to [Google Fonts](https://www.google.com/fonts) and find one you like.
-2.  Copy the lines of code Google gives you into your text editor to save for later.
-3.  For more details about using Google Fonts, see [this page](https://developers.google.com/fonts/docs/getting_started)
+1. Go to [Google Fonts](https://www.google.com/fonts) and find one you like.
+2. Copy the lines of code Google gives you into your text editor to save for later.
+3. For more details about using Google Fonts, see [this page](https://developers.google.com/fonts/docs/getting_started)
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
 

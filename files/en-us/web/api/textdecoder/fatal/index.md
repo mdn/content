@@ -22,5 +22,3 @@ If this value is `false` malformed data is replaced with placeholder characters.
 ## Browser compatibility
 
 {{Compat}}
-
-

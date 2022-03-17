@@ -9,7 +9,7 @@ tags:
 ---
 {{CSSRef}}
 
-« [CSS](/en-US/docs/Web/CSS) « [Understanding CSS z-index](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index "Understanding CSS z-index")
+« [CSS](/en-US/docs/Web/CSS) « [Understanding CSS z-index](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index)
 
 ## Stacking context example 3
 

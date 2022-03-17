@@ -18,7 +18,7 @@ The **`MediaList`** interface represents the media queries of a stylesheet, e.g.
 ## Properties
 
 - {{domxref("MediaList.mediaText")}}
-  - : A stringifier that returns a {{domxref("DOMString")}} representing the `MediaList` as text, and also allows you to set a new `MediaList`.
+  - : A {{Glossary("stringifier")}} that returns a {{domxref("DOMString")}} representing the `MediaList` as text, and also allows you to set a new `MediaList`.
 - {{domxref("MediaList.length")}} {{readonlyInline}}
   - : Returns the number of media queries in the `MediaList`.
 

@@ -15,8 +15,7 @@ browser-compat: javascript.builtins.String.raw
 The static **`String.raw()`** method
 is a tag function of [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals).
 This is _similar_ to the `r` prefix in Python, or the `@`
-prefix in C# for string literals. (But it is not _identical_; see explanations
-in [this issue](https://bugs.chromium.org/p/v8/issues/detail?id=5016).)
+prefix in C# for string literals.
 It's used to get the raw string form of template literals, that is, substitutions (e.g.
 `${foo}`) are processed, but escapes (e.g. `\n`) are not.
 
@@ -56,7 +55,7 @@ The raw string form of a given template literal.
 In most cases, `String.raw()` is used with template literal. The first
 syntax mentioned above is only rarely used, because the JavaScript engine will call this
 with proper arguments for you, (just like with other [tag
-functions](/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_template_literals)).
+functions](/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates)).
 
 `String.raw()` is the only built-in tag function of template literals. It
 works just like the default template function and performs concatenation. You can even
@@ -94,7 +93,7 @@ String.raw({
 // in the template literal.
 // The rest of the arguments are the substitutions.
 
-// The first argument’s 'raw' value can be any iterable, even a string!
+// The first argument's 'raw' value can be any iterable, even a string!
 // For example, 'test' is treated as ['t', 'e', 's', 't'].
 // The following is equivalent to
 // `t${0}e${1}s${2}t`:
@@ -111,7 +110,7 @@ String.raw({ raw: 'test' }, 0, 1, 2); // 't0e1s2t'
 
 ## See also
 
-- A polyfill of `String.raw` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.raw` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - [Template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals)
 - {{jsxref("String")}}
 - [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)

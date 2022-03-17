@@ -129,4 +129,4 @@ Because the `text-underline-position` property inherits and is not reset by the 
 ## See also
 
 - The {{cssxref("text-decoration")}} property is a shorthand for setting most text-decoration properties, including {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, and {{cssxref("text-decoration-style")}}. However, it does not set `text-underline-position`.
-- Microsoft [non-standard values documentation](https://msdn.microsoft.com/en-us/library/ie/ms531176%28v=vs.85%29.aspx)
+- Microsoft [non-standard values documentation](https://msdn.microsoft.com/library/ie/ms531176%28v=vs.85%29.aspx)

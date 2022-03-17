@@ -15,7 +15,7 @@ browser-compat: api.GlobalEventHandlers.onformdata
 
 The **`onformdata`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
-processing {{domxref("HTMLFormElement/formdata_event", "formdata")}} events, fired after the entry list representing the
+processing {{domxref("HTMLFormElement/formdata_event", "formdata")}} events, fired after the entry list representing the
 form's data is constructed. This happens when the form is submitted, but can also be
 triggered by the invocation of a {{domxref("FormData.FormData", "FormData()")}}
 constructor. `onformdata` is available on {{domxref("HTMLFormElement")}}.

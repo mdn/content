@@ -50,21 +50,21 @@ As in previous articles, let's learn about the real basics of arrays by entering
 
 Arrays consist of square brackets and items that are separated by commas.
 
-1.  Suppose we want to store a shopping list in an array. Paste the following code into the console:
+1. Suppose we want to store a shopping list in an array. Paste the following code into the console:
 
     ```js
     const shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
     console.log(shopping);
     ```
 
-2.  In the above example, each item is a string, but in an array we can store various data types — strings, numbers, objects, and even other arrays. We can also mix data types in a single array — we do not have to limit ourselves to storing only numbers in one array, and in another only strings. For example:
+2. In the above example, each item is a string, but in an array we can store various data types — strings, numbers, objects, and even other arrays. We can also mix data types in a single array — we do not have to limit ourselves to storing only numbers in one array, and in another only strings. For example:
 
     ```js
     const sequence = [1, 1, 2, 3, 5, 8, 13];
     const random = ['tree', 795, [0, 1, 2]];
     ```
 
-3.  Before proceeding, create a few example arrays.
+3. Before proceeding, create a few example arrays.
 
 ## Finding the length of an array
 
@@ -79,7 +79,7 @@ console.log(shopping.length);  // 5
 
 Items in an array are numbered, starting from zero. This number is called the item's *index*. So the first item has index 0, the second has index 1, and so on. You can access individual items in the array using bracket notation and supplying the item's index, in the same way that you [accessed the letters in a string](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#retrieving_a_specific_string_character).
 
-1.  Enter the following into your console:
+1. Enter the following into your console:
 
     ```js
     const shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
@@ -87,7 +87,7 @@ Items in an array are numbered, starting from zero. This number is called the it
     // returns "bread"
     ```
 
-2.  You can also modify an item in an array by giving a single array item a new value. Try this:
+2. You can also modify an item in an array by giving a single array item a new value. Try this:
 
     ```js
     const shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
@@ -98,14 +98,14 @@ Items in an array are numbered, starting from zero. This number is called the it
 
     > **Note:** We've said it before, but just as a reminder — computers start counting from 0!
 
-3.  Note that an array inside an array is called a multidimensional array. You can access an item inside an array that is itself inside another array by chaining two sets of square brackets together. For example, to access one of the items inside the array that is the third item inside the `random` array (see previous section), we could do something like this:
+3. Note that an array inside an array is called a multidimensional array. You can access an item inside an array that is itself inside another array by chaining two sets of square brackets together. For example, to access one of the items inside the array that is the third item inside the `random` array (see previous section), we could do something like this:
 
     ```js
     const random = ['tree', 795, [0, 1, 2]];
     random[2][2];
     ```
 
-4.  Try making some more modifications to your array examples before moving on. Play around a bit, and see what works and what doesn't.
+4. Try making some more modifications to your array examples before moving on. Play around a bit, and see what works and what doesn't.
 
 ## Finding items in an array
 
@@ -114,7 +114,7 @@ This is fine if you know the index of an item, but what if you don't? You can fi
 ```js
 const birds = ['Parrot', 'Falcon', 'Owl'];
 console.log(birds.indexOf('Owl'));   //  2
-console.log(birds.indexOf('Rabbit')) // -1
+console.log(birds.indexOf('Rabbit')); // -1
 ```
 
 ## Adding items
@@ -122,28 +122,28 @@ console.log(birds.indexOf('Rabbit')) // -1
 To add one or more items to the end of an array we can use {{jsxref("Array.prototype.push()","push()")}}. Note that you need to include one or more items that you want to add to the end of your array.
 
 ```js
-const myArray = ['Manchester', 'Liverpool'];
-myArray.push('Cardiff');
-console.log(myArray);      // [ "Manchester", "Liverpool", "Cardiff" ]
-myArray.push('Bradford', 'Brighton');
-console.log(myArray);      // [ "Manchester", "Liverpool", "Cardiff", "Bradford", "Brighton" ]
+const cities = ['Manchester', 'Liverpool'];
+cities.push('Cardiff');
+console.log(cities);      // [ "Manchester", "Liverpool", "Cardiff" ]
+cities.push('Bradford', 'Brighton');
+console.log(cities);      // [ "Manchester", "Liverpool", "Cardiff", "Bradford", "Brighton" ]
 ```
 
 The new length of the array is returned when the method call completes. If you wanted to store the new array length in a variable, you could do something like this:
 
 ```js
-const myArray = ['Manchester', 'Liverpool'];
-const newLength = myArray.push('Bristol');
-console.log(myArray);     // [ "Manchester", "Liverpool", "Bristol" ]
-console.log(newLength);   // 3
+const cities = ['Manchester', 'Liverpool'];
+const newLength = cities.push('Bristol');
+console.log(cities);     // [ "Manchester", "Liverpool", "Bristol" ]
+console.log(newLength);  // 3
 ```
 
 To add an item to the start of the array, use {{jsxref("Array.prototype.unshift()","unshift()")}}:
 
 ```js
-const myArray = ['Manchester', 'Liverpool'];
-myArray.unshift('Edinburgh');
-console.log(myArray);     // [ "Edinburgh", "Manchester", "Liverpool" ]
+const cities = ['Manchester', 'Liverpool'];
+cities.unshift('Edinburgh');
+console.log(cities);     // [ "Edinburgh", "Manchester", "Liverpool" ]
 ```
 
 ## Removing items
@@ -151,47 +151,47 @@ console.log(myArray);     // [ "Edinburgh", "Manchester", "Liverpool" ]
 To remove the last item from the array, use {{jsxref("Array.prototype.pop()","pop()")}}.
 
 ```js
-const myArray = ['Manchester', 'Liverpool'];
-myArray.pop();
-console.log(myArray);     // [ "Manchester" ]
+const cities = ['Manchester', 'Liverpool'];
+cities.pop();
+console.log(cities);     // [ "Manchester" ]
 ```
 
 The `pop()` method returns the item that was removed. To save that item in a new variable, you could do this:
 
 ```js
-const myArray = ['Manchester', 'Liverpool'];
-const removedItem = myArray.pop();
-console.log(removedItem);     // "Liverpool"
+const cities = ['Manchester', 'Liverpool'];
+const removedCity = cities.pop();
+console.log(removedCity);   // "Liverpool"
 ```
 
 To remove the first item from an array, use {{jsxref("Array.prototype.shift()","shift()")}}:
 
 ```js
-const myArray = ['Manchester', 'Liverpool'];
-myArray.shift();
-console.log(myArray);     // [ "Liverpool" ]
+const cities = ['Manchester', 'Liverpool'];
+cities.shift();
+console.log(cities);     // [ "Liverpool" ]
 ```
 
 If you know the index of an item, you can remove it from the array using {{jsxref("Array.prototype.splice()","splice()")}}:
 
 ```js
-const myArray = ['Manchester', 'Liverpool', 'Edinburgh', 'Carlisle'];
-const index = myArray.indexOf('Liverpool');
+const cities = ['Manchester', 'Liverpool', 'Edinburgh', 'Carlisle'];
+const index = cities.indexOf('Liverpool');
 if (index !== -1) {
-  myArray.splice(index, 1);
+  cities.splice(index, 1);
 }
-console.log(myArray);     // [ "Manchester", "Edinburgh", "Carlisle" ]
+console.log(cities);     // [ "Manchester", "Edinburgh", "Carlisle" ]
 ```
 
 In this call to `splice()`, the first argument says where to start removing items, and the second argument says  how many items should be removed. So you can remove more than one item:
 
 ```js
-const myArray = ['Manchester', 'Liverpool', 'Edinburgh', 'Carlisle'];
-const index = myArray.indexOf('Liverpool');
+const cities = ['Manchester', 'Liverpool', 'Edinburgh', 'Carlisle'];
+const index = cities.indexOf('Liverpool');
 if (index !== -1) {
-  myArray.splice(index, 2);
+  cities.splice(index, 2);
 }
-console.log(myArray);     // [ "Manchester", "Carlisle" ]
+console.log(cities);     // [ "Manchester", "Carlisle" ]
 ```
 
 ## Accessing every item
@@ -212,25 +212,21 @@ Sometimes you will want to do the same thing to each item in an array, leaving y
 function double(number) {
   return number * 2;
 }
-
 const numbers = [5, 2, 7, 6];
 const doubled = numbers.map(double);
-
 console.log(doubled);  // [ 10, 4, 14, 12 ]
 ```
 
 We give a function to the `map()`, and `map()` calls the function once for each item in the array, passing in the item. It then adds the return value from each function call to a new array, and finally returns the new array.
 
-Sometimes you'll want to create a new array containing only the items in the original array that match some test. You can do this using {{jsxref("Array.prototype.filter()","filter()")}}. The code below takes an array of strings and filters out all strings that are less than 8 characters long:
+Sometimes you'll want to create a new array containing only the items in the original array that match some test. You can do that using {{jsxref("Array.prototype.filter()","filter()")}}. The code below takes an array of strings and returns an array containing just the strings that are greater than 8 characters long:
 
 ```js
 function isLong(city) {
   return city.length > 8;
 }
-
 const cities = ['London', 'Liverpool', 'Totnes', 'Edinburgh'];
 const longer = cities.filter(isLong);
-
 console.log(longer);  // [ "Liverpool", "Edinburgh" ]
 ```
 
@@ -242,36 +238,36 @@ Often you'll be presented with some raw data contained in a big long string, and
 
 > **Note:** Okay, this is technically a string method, not an array method, but we've put it in with arrays as it goes well here.
 
-1.  Let's play with this, to see how it works. First, create a string in your console:
+1. Let's play with this, to see how it works. First, create a string in your console:
 
     ```js
-    const myData = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
+    const data = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
     ```
 
-2.  Now let's split it at each comma:
+2. Now let's split it at each comma:
 
     ```js
-    const myArray = myData.split(',');
-    myArray;
+    const cities = data.split(',');
+    cities;
     ```
 
-3.  Finally, try finding the length of your new array, and retrieving some items from it:
+3. Finally, try finding the length of your new array, and retrieving some items from it:
 
     ```js
-    myArray.length;
-    myArray[0]; // the first item in the array
-    myArray[1]; // the second item in the array
-    myArray[myArray.length-1]; // the last item in the array
+    cities.length;
+    cities[0]; // the first item in the array
+    cities[1]; // the second item in the array
+    cities[cities.length - 1]; // the last item in the array
     ```
 
-4.  You can also go the opposite way using the {{jsxref("Array.prototype.join()","join()")}} method. Try the following:
+4. You can also go the opposite way using the {{jsxref("Array.prototype.join()","join()")}} method. Try the following:
 
     ```js
-    const myNewString = myArray.join(',');
-    myNewString;
+    const commaSeparated = cities.join(',');
+    commaSeparated;
     ```
 
-5.  Another way of converting an array to a string is to use the {{jsxref("Array.prototype.toString()","toString()")}} method. `toString()` is arguably simpler than `join()` as it doesn't take a parameter, but more limiting. With `join()` you can specify different separators, whereas `toString()` always uses a comma. (Try running Step 4 with a different character than a comma.)
+5. Another way of converting an array to a string is to use the {{jsxref("Array.prototype.toString()","toString()")}} method. `toString()` is arguably simpler than `join()` as it doesn't take a parameter, but more limiting. With `join()` you can specify different separators, whereas `toString()` always uses a comma. (Try running Step 4 with a different character than a comma.)
 
     ```js
     const dogNames = ['Rocket','Flash','Bella','Slugger'];
@@ -282,12 +278,12 @@ Often you'll be presented with some raw data contained in a big long string, and
 
 Let's return to the example we described earlier — printing out product names and prices on an invoice, then totaling the prices and printing them at the bottom. In the editable example below there are comments containing numbers — each of these marks a place where you have to add something to the code. They are as follows:
 
-1.  Below the `// number 1` comment are a number of strings, each one containing a product name and price separated by a colon. We'd like you to turn this into an array and store it in an array called `products`.
-2.  Below the `// number 2` comment, start a `for...of()` loop to go through every item in the `products` array.
-3.  Below the `// number 3` comment we want you to write a line of code that splits the current array item (`name:price`) into two separate items, one containing just the name and one containing just the price. If you are not sure how to do this, consult the [Useful string methods](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods) article for some help, or even better, look at the {{anch("Converting between strings and arrays")}} section of this article.
-4.  As part of the above line of code, you'll also want to convert the price from a string to a number. If you can't remember how to do this, check out the [first strings article](/en-US/docs/Learn/JavaScript/First_steps/Strings#numbers_versus_strings).
-5.  There is a variable called `total` that is created and given a value of 0 at the top of the code. Inside the loop (below `// number 4`) we want you to add a line that adds the current item price to that total in each iteration of the loop, so that at the end of the code the correct total is printed onto the invoice. You might need an [assignment operator](/en-US/docs/Learn/JavaScript/First_steps/Math#assignment_operators) to do this.
-6.  We want you to change the line just below `// number 5` so that the `itemText` variable is made equal to "current item name — $current item price", for example "Shoes — $23.99" in each case, so the correct information for each item is printed on the invoice. This is just simple string concatenation, which should be familiar to you.
+1. Below the `// number 1` comment are a number of strings, each one containing a product name and price separated by a colon. We'd like you to turn this into an array and store it in an array called `products`.
+2. Below the `// number 2` comment, start a `for...of()` loop to go through every item in the `products` array.
+3. Below the `// number 3` comment we want you to write a line of code that splits the current array item (`name:price`) into two separate items, one containing just the name and one containing just the price. If you are not sure how to do this, consult the [Useful string methods](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods) article for some help, or even better, look at the [Converting between strings and arrays](#converting_between_strings_and_arrays) section of this article.
+4. As part of the above line of code, you'll also want to convert the price from a string to a number. If you can't remember how to do this, check out the [first strings article](/en-US/docs/Learn/JavaScript/First_steps/Strings#numbers_versus_strings).
+5. There is a variable called `total` that is created and given a value of 0 at the top of the code. Inside the loop (below `// number 4`) we want you to add a line that adds the current item price to that total in each iteration of the loop, so that at the end of the code the correct total is printed onto the invoice. You might need an [assignment operator](/en-US/docs/Learn/JavaScript/First_steps/Math#assignment_operators) to do this.
+6. We want you to change the line just below `// number 5` so that the `itemText` variable is made equal to "current item name — $current item price", for example "Shoes — $23.99" in each case, so the correct information for each item is printed on the invoice. This is just simple string concatenation, which should be familiar to you.
 7. Finally, below the `// number 6` comment, you'll need to add a `}` to mark the end of the `for...of()` loop.
 
 ```html hidden
@@ -355,7 +351,7 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener('click', () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
@@ -363,8 +359,8 @@ reset.addEventListener('click', function() {
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener('click', () => {
+  if (solution.value === 'Show solution') {
     textarea.value = solutionEntry;
     solution.value = 'Hide solution';
   } else {
@@ -380,11 +376,13 @@ let total = 0;
 list.innerHTML = '';
 totalBox.textContent = '';
 
-const products = ['Underpants:6.99',
+const products = [
+  'Underpants:6.99',
   'Socks:5.99',
   'T-shirt:14.99',
   'Trousers:31.99',
-  'Shoes:23.99'];
+  'Shoes:23.99',
+];
 
 for (const product of products) {
   const subArray = product.split(':');
@@ -407,13 +405,15 @@ window.addEventListener('load', updateCode);
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
-  if (e.keyCode === 9) {
-    e.preventDefault();
+const KEY_TAB = 9;
+const KEY_ESC = 27;
+
+textarea.onkeydown = (event) => {
+  if (event.keyCode === KEY_TAB) {
+    event.preventDefault();
     insertAtCaret('\t');
   }
-
-  if (e.keyCode === 27) {
+  if (event.keyCode === KEY_ESC) {
     textarea.blur();
   }
 };
@@ -434,15 +434,14 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
   }
-
   updateCode();
 };
 ```
@@ -481,8 +480,8 @@ In this example we're going to show a much simpler use — here we're giving you
 
 To complete the app, we need you to:
 
-1.  Add a line below the `// number 1` comment that adds the current value entered into the search input to the start of the array. This can be retrieved using `searchInput.value`.
-2.  Add a line below the `// number 2` comment that removes the value currently at the end of the array.
+1. Add a line below the `// number 1` comment that adds the current value entered into the search input to the start of the array. This can be retrieved using `searchInput.value`.
+2. Add a line below the `// number 2` comment that removes the value currently at the end of the array.
 
 ```html hidden
 <h2>Live output</h2>
@@ -508,8 +507,9 @@ const searchBtn = document.querySelector('.output button');
 list.innerHTML = '';
 
 const myHistory = [];
+const MAX_HISTORY = 5;
 
-searchBtn.onclick = function() {
+searchBtn.onclick = () => {
   // we will only allow a term to be entered if the search input isn't empty
   if (searchInput.value !== '') {
     // number 1
@@ -526,9 +526,8 @@ searchBtn.onclick = function() {
     }
 
     // If the array length is 5 or more, remove the oldest search term
-    if (myHistory.length >= 5) {
+    if (myHistory.length >= MAX_HISTORY) {
       // number 2
-
     }
 
     // empty the search input and focus it, ready for the next term to be entered
@@ -577,7 +576,7 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener('click', () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
@@ -585,8 +584,8 @@ reset.addEventListener('click', function() {
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener('click', () => {
+  if (solution.value === 'Show solution') {
     textarea.value = solutionEntry;
     solution.value = 'Hide solution';
   } else {
@@ -603,8 +602,9 @@ const searchBtn = document.querySelector('.output button');
 list.innerHTML = '';
 
 const myHistory = [];
+const MAX_HISTORY = 5;
 
-searchBtn.onclick = function() {
+searchBtn.onclick = () => {
   // we will only allow a term to be entered if the search input isn't empty
   if (searchInput.value !== '') {
     myHistory.unshift(searchInput.value);
@@ -621,7 +621,7 @@ searchBtn.onclick = function() {
     }
 
     // If the array length is 5 or more, remove the oldest search term
-    if (myHistory.length >= 5) {
+    if (myHistory.length >= MAX_HISTORY) {
       myHistory.pop();
     }
 
@@ -638,13 +638,15 @@ window.addEventListener('load', updateCode);
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
-  if (e.keyCode === 9) {
-    e.preventDefault();
+const KEY_TAB = 9;
+const KEY_ESC = 27;
+
+textarea.onkeydown = (event) => {
+  if (event.keyCode === KEY_TAB) {
+    event.preventDefault();
     insertAtCaret('\t');
   }
-
-  if (e.keyCode === 27) {
+  if (event.keyCode === KEY_ESC) {
     textarea.blur();
   }
 };
@@ -665,15 +667,14 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
   }
-
   updateCode();
 };
 ```

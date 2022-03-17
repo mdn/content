@@ -14,10 +14,10 @@ Each time in the list corresponds to a value in the {{SVGAttr("values")}} attrib
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("animate")}}
-*   {{SVGElement("animateColor")}}
-*   {{SVGElement("animateMotion")}}
-*   {{SVGElement("animateTransform")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("animateColor")}}
+- {{SVGElement("animateMotion")}}
+- {{SVGElement("animateTransform")}}
 
 ## Example
 
@@ -70,14 +70,14 @@ Each successive time value must be greater than or equal to the preceding time v
 
 The `keyTimes` list semantics depends upon the interpolation mode:
 
-*   For linear and spline animation, the first time value in the list must be 0, and the last time value in the list must be `1`. The key time associated with each value defines when the value is set; values are interpolated between the key times.
-*   For discrete animation, the first time value in the list must be `0`. The time associated with each value defines when the value is set; the animation function uses that value until the next time defined in the list.
+- For linear and spline animation, the first time value in the list must be 0, and the last time value in the list must be `1`. The key time associated with each value defines when the value is set; values are interpolated between the key times.
+- For discrete animation, the first time value in the list must be `0`. The time associated with each value defines when the value is set; the animation function uses that value until the next time defined in the list.
 
 If the {{SVGAttr("calcMode")}} attribute is set to `paced`, the `keyTimes` attribute is ignored.
 
 If the duration of the animation is indefinite, any `keyTimes` specification will be ignored.
 
- * Safari issue: `keyTimes` values should be separated with semicolumn without space before, f.e: `keyTimes="0; 0.25; 0.5; 0.75; 1"`
+- Safari issue: `keyTimes` values should be separated with semicolon without space before, f.e: `keyTimes="0; 0.25; 0.5; 0.75; 1"`
 
 ## Specifications
 

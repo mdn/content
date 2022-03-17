@@ -18,9 +18,9 @@ The `aria-hidden` attribute can be used to hide non-interactive content from the
 
 Adding `aria-hidden="true"` to an element removes that element and all of its children from the accessibility tree. This can improve the experience for assistive technology users by hiding:
 
--  Purely decorative content, such as icons or images
--  Duplicated content, such as repeated text
--  Offscreen or collapsed content, such as menus
+- Purely decorative content, such as icons or images
+- Duplicated content, such as repeated text
+- Offscreen or collapsed content, such as menus
 
 The presence of the `aria-hidden` attribute hides content from assistive technology but doesn't visually hide anything.  
 
@@ -34,7 +34,7 @@ Use caution when using `aria-hidden` to hide visibly rendered content from assis
 
 > **Note:** Consider all disabilities when hiding visibly rendered content from assistive technologies. Not all users of assistive technology are visually impaired. If visible content doesn't match text content in the accessibility API, the user experience will be negatively impacted for sighted users.
 
-On the surface, the `aria-hidden="true"` and the `role="presentation"` and its synonoym `role="none"` seem similar, but the intent behind each is different.
+On the surface, the `aria-hidden="true"` and the `role="presentation"` and its synonym `role="none"` seem similar, but the intent behind each is different.
 
 - `aria-hidden="true"` will remove the entire element from the accessibility API.
 - `role="presentation"` and `role="none"` will remove the semantic meaning of an element while still exposing it and its content to assistive technology.  

@@ -37,7 +37,7 @@ The MathML `<mpadded>` element is used to add extra padding and to set the gener
 
 ### Pseudo-units
 
-It is possible to use the keywords `"depth`",` "height"`, and `"width"` as a pseudo-unit for the attributes `depth`, `height`, `lspace`, `voffset`, and `width`. They represent each length of the same-named dimension.
+It is possible to use the keywords `"depth`", `"height"`, and `"width"` as a pseudo-unit for the attributes `depth`, `height`, `lspace`, `voffset`, and `width`. They represent each length of the same-named dimension.
 Prior to Gecko 7.0 {{ geckoRelease("7.0") }} the MathML2 pseudo-unit `lspace` was allowed, which is no longer present in the MathML3 Recommendation and has been removed now.
 
 ## Examples
@@ -45,11 +45,11 @@ Prior to Gecko 7.0 {{ geckoRelease("7.0") }} the MathML2 pseudo-unit `lspace` wa
 ```html
 <math>
 
-  <mpadded height="+150px" width="100px" lspace="2height">
-    <mi> x </mi>
-    <mo> + </mo>
-    <mi> y </mi>
-  </mpadded>
+  <mpadded height="+150px" width="100px" lspace="2height">
+    <mi> x </mi>
+    <mo> + </mo>
+    <mi> y </mi>
+  </mpadded>
 
 </math>
 ```

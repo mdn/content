@@ -13,9 +13,11 @@ browser-compat: api.RTCPeerConnectionIceEvent
 
 {{APIRef("WebRTC")}}
 
-The **`RTCPeerConnectionIceEvent`** interface represents events that occurs in relation to {{Glossary("ICE")}} candidates with the target, usually an {{domxref("RTCPeerConnection")}}.
+The **`RTCPeerConnectionIceEvent`** interface represents events that occur in relation to {{Glossary("ICE")}} candidates with the target, usually an {{domxref("RTCPeerConnection")}}.
 
 Only one event is of this type: {{event("icecandidate")}}.
+
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -31,7 +33,7 @@ _A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this 
 
 ## Methods
 
-_A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this event also implements these properties. There is no specific {{domxref("RTCDataChannelEvent")}} method._
+_A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this event also implements these properties. There is no specific {{domxref("RTCDataChannelEvent")}} method._
 
 ## Examples
 

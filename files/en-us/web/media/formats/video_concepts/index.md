@@ -21,7 +21,7 @@ tags:
   - color
   - rgb
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}{{draft}}
+{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
 In this article, we explore important concepts that are useful to understand in order to fully grasp how to work with video on the web.
 

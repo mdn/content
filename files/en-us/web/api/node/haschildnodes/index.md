@@ -19,7 +19,7 @@ whether the given {{domxref("Node")}} has [child nodes](/en-US/docs/Web/API/Node
 hasChildNodes();
 ```
 
-### Paramenters
+### Parameters
 
 None.
 

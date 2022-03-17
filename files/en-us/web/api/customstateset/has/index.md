@@ -35,4 +35,3 @@ A {{jsxref("Boolean")}}, `true` if `value` exists in the `CustomStateSet`.
 ## Browser compatibility
 
 {{Compat}}
-

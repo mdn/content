@@ -37,24 +37,24 @@ html,body,svg { height:100% }
 
 ## Attributes
 
-*   {{SVGAttr("type")}}
-    *   : This attribute defines type of the style sheet language to use as a media type string.
-        *Value type*: [**\<string>**](/en-US/docs/Web/SVG/Content_type#string); *Default value*: `text/css`; *Animatable*: **no**
-*   {{SVGAttr("media")}}
-    *   : This attribute defines to which {{cssxref('@media', 'media')}} the style applies.
-        *Value type*: [**\<string>**](/en-US/docs/Web/SVG/Content_type#string); *Default value*: `all`; *Animatable*: **no**
-*   {{SVGAttr("title")}}
-    *   : This attribute the title of the style sheet which can be used to switch between alternate style sheets.
-        *Value type*: [**\<string>**](/en-US/docs/Web/SVG/Content_type#string); *Default value*: *none*; *Animatable*: **no**
+- {{SVGAttr("type")}}
+  - : This attribute defines type of the style sheet language to use as a media type string.
+    *Value type*: [**\<string>**](/en-US/docs/Web/SVG/Content_type#string); *Default value*: `text/css`; *Animatable*: **no**
+- {{SVGAttr("media")}}
+  - : This attribute defines to which {{cssxref('@media', 'media')}} the style applies.
+    *Value type*: [**\<string>**](/en-US/docs/Web/SVG/Content_type#string); *Default value*: `all`; *Animatable*: **no**
+- {{SVGAttr("title")}}
+  - : This attribute the title of the style sheet which can be used to switch between alternate style sheets.
+    *Value type*: [**\<string>**](/en-US/docs/Web/SVG/Content_type#string); *Default value*: *none*; *Animatable*: **no**
 
 ### Global attributes
 
-*   [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
-    *   : Most notably: {{SVGAttr('id')}}
-*   [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
-    *   : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-*   Event Attributes
-    *   : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Document element event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
+- [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
+  - : Most notably: {{SVGAttr('id')}}
+- [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
+  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+- Event Attributes
+  - : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Document element event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
 
 ## Usage notes
 
@@ -70,4 +70,4 @@ html,body,svg { height:100% }
 
 ## See also
 
-*   {{HTMLElement("style", "&lt;style&gt; element in HTML")}}
+- {{HTMLElement("style", "&lt;style&gt; element in HTML")}}

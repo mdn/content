@@ -12,7 +12,7 @@ tags:
   - WebUSB API
 browser-compat: api.USBConfiguration.interfaces
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("")}}
+{{securecontext_header}}{{DefaultAPISidebar("")}}
 
 The **`interfaces`** read-only property of the
 {{domxref("USBConfiguration")}} interface returns an array containing instances of the

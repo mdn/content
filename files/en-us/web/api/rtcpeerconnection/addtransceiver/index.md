@@ -38,10 +38,14 @@ rtpTransceiver = RTCPeerConnection.addTransceiver(trackOrKind, init);
     "kind")}} of the receiver's {{domxref("RTCRtpReceiver.track", "track")}}, and by
     extension of the {{domxref("RTCRtpReceiver")}} itself.
 - `init` {{optional_inline}}
-  - : An object that conforms to the {{domxref("RTCRtpTransceiverInit")}} dictionary which
-    provides any options that you may wish to specify when creating the new transceiver.
+  - : An object for specifying any options when creating the new transceiver.
     Possible values are:
-    {{page("/en-US/docs/Web/API/RTCRtpTransceiverInit", "Properties")}}
+    - `direction` {{optional_inline}}
+      - : The new transceiver's preferred directionality. This value is used to initialize the new {{domxref("RTCRtpTransceiver")}} object's {{domxref("RTCRtpTransceiver.direction")}} property.
+    - `sendEncodings` {{optional_inline}}
+      - : A list of encodings to allow when sending RTP media from the {{domxref("RTCRtpSender")}}. Each entry is of type {{domxref("RTCRtpEncodingParameters")}}.
+    - `streams` {{optional_inline}}
+      - : A list of {{domxref("MediaStream")}} objects to add to the transceiver's {{domxref("RTCRtpReceiver")}}; when the remote peer's {{domxref("RTCPeerConnection")}}'s {{event("track")}} event occurs, these are the streams that will be specified by that event.
 
 ### Exceptions
 

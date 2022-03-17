@@ -34,9 +34,9 @@ Start a brand new project by clicking on the _New_ button:
 
 The resulting dialog box will show a few different options. There are starter kits available, but we don't want to load models or start a platform game.
 
-1.  We want to start small, so we will use the empty project — click on the Blank Project option and enter a name for it (we are using "MDN Games demo".)
-2.  Enter a description if you want — it is optional.
-3.  Click _Create_ to have it created.
+1. We want to start small, so we will use the empty project — click on the Blank Project option and enter a name for it (we are using "MDN Games demo".)
+2. Enter a description if you want — it is optional.
+3. Click _Create_ to have it created.
 
 ![PlayCanvas Editor - New project](playcanvas-editor-newproject.png)
 
@@ -145,10 +145,10 @@ this.entity.rotate(dt*10, dt*20, dt*30);
 
 In the line above `this.entity` refers to the object to which the script will be attached (the box); using the `dt` variable, which contains the delta time passed since the previous frame, we can rotate the box by a different amount around all three axes.
 
-1.  Save the changes using the Save button in the top right of the code editor, then return to the main editor tab. Here, follow these steps:
-2.  Be sure you have the box selected on the scene.
-3.  Click on _Add component_, then _Script_ in the entity inspector.
-4.  At the bottom of the screen you can see the list of scripts available — for now there's only `boxAnimation.js` — clicking it will add the animation script to the box object.
+1. Save the changes using the Save button in the top right of the code editor, then return to the main editor tab. Here, follow these steps:
+2. Be sure you have the box selected on the scene.
+3. Click on _Add component_, then _Script_ in the entity inspector.
+4. At the bottom of the screen you can see the list of scripts available — for now there's only `boxAnimation.js` — clicking it will add the animation script to the box object.
 
 ![PlayCanvas Editor - Box script](playcanvas-editor-boxscript.png)
 
@@ -156,9 +156,9 @@ In the line above `this.entity` refers to the object to which the script will be
 
 Now we'll do the same steps for cylinder. First:
 
-1.  Create a new Script asset.
-2.  Name it `cylinderAnimation.js`.
-3.  Double click the script icon to launch the code editor.
+1. Create a new Script asset.
+2. Name it `cylinderAnimation.js`.
+3. Double click the script icon to launch the code editor.
 
 This time instead of rotating the object we will try to scale it. For that we'll need a timer to store the total amount of time passed since the start of the animation. Add this code to the `initialize()` function:
 

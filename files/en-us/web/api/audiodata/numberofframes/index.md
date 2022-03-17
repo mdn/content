@@ -32,5 +32,3 @@ console.log(AudioData.numberOfFrames);
 ## Browser compatibility
 
 {{Compat}}
-
-

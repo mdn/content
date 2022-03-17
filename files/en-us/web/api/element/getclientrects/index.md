@@ -85,7 +85,7 @@ third block.
 ```html
 <h3>A paragraph with a span inside</h3>
 <p>Both the span and the paragraph have a border set. The
-  client rects are in red. Note that the p has onlyone border
+  client rects are in red. Note that the p has only one border
   box, while the span has multiple border boxes.</p>
 
 <div>
@@ -153,29 +153,29 @@ Example 3: This HTML creates two tables with captions. Client rects are painted 
   caption, the client rects do include the caption.</p>
 
 <div>
-  <strong>Original</strong>
-  <table>
-    <caption>caption</caption>
-    <thead>
-      <tr><th>thead</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>tbody</td></tr>
-    </tbody>
-  </table>
+  <strong>Original</strong>
+  <table>
+    <caption>caption</caption>
+    <thead>
+      <tr><th>thead</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>tbody</td></tr>
+    </tbody>
+  </table>
 </div>
 
 <div>
-  <strong>table's rect</strong>
-  <table class="withClientRectsOverlay">
-    <caption>caption</caption>
-    <thead>
-      <tr><th>thead</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>tbody</td></tr>
-    </tbody>
-  </table>
+  <strong>table's rect</strong>
+  <table class="withClientRectsOverlay">
+    <caption>caption</caption>
+    <thead>
+      <tr><th>thead</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>tbody</td></tr>
+    </tbody>
+  </table>
 </div>
 ```
 
@@ -210,24 +210,24 @@ The JavaScript code draws the client rects for all HTML elements that have CSS c
 
 ```js
 function addClientRectsOverlay(elt) {
-  /* Absolutely position a div over each client rect so that its border width
-     is the same as the rectangle's width.
-     Note: the overlays will be out of place if the user resizes or zooms. */
-  var rects = elt.getClientRects();
-  for (var i = 0; i != rects.length; i++) {
-    var rect = rects[i];
-    var tableRectDiv = document.createElement('div');
-    tableRectDiv.style.position = 'absolute';
-    tableRectDiv.style.border = '1px solid red';
-    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
-    tableRectDiv.style.margin = tableRectDiv.style.padding = '0';
-    tableRectDiv.style.top = (rect.top + scrollTop) + 'px';
-    tableRectDiv.style.left = (rect.left + scrollLeft) + 'px';
-    // We want rect.width to be the border width, so content width is 2px less.
-    tableRectDiv.style.width = (rect.width - 2) + 'px';
-    tableRectDiv.style.height = (rect.height - 2) + 'px';
-    document.body.appendChild(tableRectDiv);
+  /* Absolutely position a div over each client rect so that its border width
+     is the same as the rectangle's width.
+     Note: the overlays will be out of place if the user resizes or zooms. */
+  var rects = elt.getClientRects();
+  for (var i = 0; i != rects.length; i++) {
+    var rect = rects[i];
+    var tableRectDiv = document.createElement('div');
+    tableRectDiv.style.position = 'absolute';
+    tableRectDiv.style.border = '1px solid red';
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
+    tableRectDiv.style.margin = tableRectDiv.style.padding = '0';
+    tableRectDiv.style.top = (rect.top + scrollTop) + 'px';
+    tableRectDiv.style.left = (rect.left + scrollLeft) + 'px';
+    // We want rect.width to be the border width, so content width is 2px less.
+    tableRectDiv.style.width = (rect.width - 2) + 'px';
+    tableRectDiv.style.height = (rect.height - 2) + 'px';
+    document.body.appendChild(tableRectDiv);
   }
 }
 

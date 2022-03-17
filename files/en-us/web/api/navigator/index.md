@@ -57,6 +57,8 @@ _Doesn't inherit any properties._
   - : Returns {{domxref("MediaSession")}} object which can be used to provide metadata that can be used by the browser to present information about the currently-playing media to the user, such as in a global media controls UI.
 - {{domxref("Navigator.onLine")}} {{readonlyInline}}
   - : Returns a boolean value indicating whether the browser is working online.
+- {{domxref("Navigator.pdfViewerEnabled")}} {{readonlyinline}}
+  - : Returns `true` if the browser can display PDF files inline when navigating to them, and `false` otherwise.
 - {{domxref("Navigator.permissions")}} {{readonlyinline}} {{experimental_inline}}
   - : Returns a {{domxref("Permissions")}} object that can be used to query and update permission status of APIs covered by the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 - {{domxref("Navigator.presentation")}} {{readonlyInline}} {{experimental_inline}}
@@ -71,8 +73,6 @@ _Doesn't inherit any properties._
   - : Returns the user agent string for the current browser.
 - {{domxref("Navigator.userAgentData")}} {{readonlyInline}}
   - : Returns a {{domxref("NavigatorUAData")}} object, which gives access to information about the browser and operating system of the user.
-- {{domxref("Navigator.vendor")}} {{readonlyInline}}
-  - : Returns the vendor name of the current browser (e.g., "Netscape6").
 - {{domxref("Navigator.webdriver")}} {{readonlyInline}} {{experimental_inline}}
   - : Indicates whether the user agent is controlled by automation.
 - {{domxref("Navigator.windowControlsOverlay")}} {{readonlyInline}}
@@ -96,16 +96,16 @@ _Doesn't inherit any properties._
 ### Deprecated properties
 
 - {{domxref("Navigator.appCodeName")}} {{readonlyInline}} {{deprecated_inline}}
-  - : Returns the internal "code" name of the current browser. Do not rely on this property to return the correct value.
+  - : Always returns `'Mozilla'`, in any browser.
 - {{domxref("Navigator.appName")}} {{readonlyInline}} {{deprecated_inline}}
-  - : Returns a {{domxref("DOMString")}} with the official name of the browser. Do not rely on this property to return the correct value.
+  - : Always returns `'Netscape'`, in any browser.
 - {{domxref("Navigator.appVersion")}} {{readonlyInline}} {{deprecated_inline}}
   - : Returns the version of the browser as a {{domxref("DOMString")}}. Do not rely on this property to return the correct value.
 - {{domxref("Navigator.activeVRDisplays")}} {{readonlyInline}} {{deprecated_inline}}
   - : Returns an array containing every {{domxref("VRDisplay")}} object that is currently presenting ({{domxref("VRDisplay.ispresenting")}} is `true`).
 - {{domxref("Navigator.battery")}} {{readonlyInline}} {{deprecated_inline}}
-  - : Returns a {{domxref("BatteryManager")}} object you can use to get information about the battery charging status.
-- {{domxref("Navigator.doNotTrack")}} {{readonlyInline}} {{experimental_inline}}
+  - : Returns a {{domxref("BatteryManager")}} object. Use {{domxref("Navigator.getBattery()")}} instead.
+- {{domxref("Navigator.doNotTrack")}} {{readonlyInline}} {{deprecated_inline}}
   - : Reports the value of the user's do-not-track preference. When this value is "yes", your web site or application should not track the user.
 - {{domxref("Navigator.mimeTypes")}} {{readonlyInline}}{{deprecated_inline}}
   - : Returns an {{domxref("MimeTypeArray")}} listing the MIME types supported by the browser.
@@ -116,11 +116,13 @@ _Doesn't inherit any properties._
 - {{domxref("Navigator.plugins")}} {{readonlyInline}}{{deprecated_inline}}
   - : Returns a {{domxref("PluginArray")}} listing the plugins installed in the browser.
 - {{domxref("Navigator.product")}} {{readonlyInline}} {{deprecated_inline}}
-  - : Always returns `'Gecko'`, on any browser. This property is kept only for compatibility purpose.
+  - : Always returns `'Gecko'`, in any browser.
 - {{domxref("Navigator.productSub")}} {{readonlyInline}} {{deprecated_inline}}
-  - : Returns the build number of the current browser (e.g., "20060909").
+  - : Returns either the string `'20030107'`, or `'"20100101'`.
+- {{domxref("Navigator.vendor")}} {{readonlyInline}} {{deprecated_inline}}
+  - : Returns either the empty string, `'Apple Computer Inc.'`, or `'Google Inc.'`.
 - {{domxref("Navigator.vendorSub")}} {{readonlyInline}} {{deprecated_inline}}
-  - : Returns the vendor version number (e.g. "6.1").
+  - : Always returns the empty string.
 
 ## Methods
 
@@ -132,12 +134,12 @@ _Doesn't inherit any method._
   - : Clears a badge on the current app's icon and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 - {{domxref("Navigator.getBattery()")}}
   - : Returns a promise that resolves with a {{domxref("BatteryManager")}} object that returns information about the battery charging status.
-- {{domxref("Navigator.javaEnabled()")}} {{readonlyInline}}
-  - : Returns false.
 - {{domxref("Navigator.registerProtocolHandler()")}}
   - : Allows web sites to register themselves as a possible handler for a given protocol.
 - {{domxref("Navigator.requestMediaKeySystemAccess()")}}
   - : Returns a {{jsxref("Promise")}} for a MediaKeySystemAccess object.
+- {{domxref("Navigator.requestMIDIAccess()")}}
+  - : Returns a {{jsxref('Promise')}} representing a request for access to MIDI devices on the user's system.
 - {{domxref("Navigator.sendBeacon()")}}
   - : Used to asynchronously transfer a small amount of data using {{Glossary("HTTP")}} from the User Agent to a web server.
 - {{domxref("Navigator.setAppBadge()")}}
@@ -155,6 +157,8 @@ _Doesn't inherit any method._
   - : After having prompted the user for permission, returns the audio or video stream associated to a camera or microphone on the local computer.
 - {{domxref("Navigator.taintEnabled()")}} {{deprecated_inline}}
   - : Returns `false`. JavaScript taint/untaint functions removed in JavaScript 1.2.
+- {{domxref("Navigator.javaEnabled()")}} {{deprecated_inline}}
+  - : Always returns false.
 
 ## Specifications
 

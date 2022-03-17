@@ -28,13 +28,13 @@ array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Type
 sort()
 
 // Arrow function
-sort((firstEl, secondEl) => { /* ... */ } )
+sort((a, b) => { /* ... */ } )
 
 // Compare function
 sort(compareFn)
 
 // Inline compare function
-sort(function compareFn(firstEl, secondEl) { /* ... */ })
+sort(function compareFn(a, b) { /* ... */ })
 ```
 
 ### Parameters
@@ -78,5 +78,5 @@ numbers.sort((a, b) => a - b); // compare numbers
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.sort` with modern behavior like stable sort is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.sort` with modern behavior like stable sort in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("Array.prototype.sort()")}}

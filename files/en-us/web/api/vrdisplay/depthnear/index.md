@@ -3,7 +3,7 @@ title: VRDisplay.depthNear
 slug: Web/API/VRDisplay/depthNear
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -21,15 +21,7 @@ The **`depthNear`** property of the {{domxref("VRDisplay")}} interface gets and 
 
 Generally you should leave the value as is, but you might want to increase it if you are trying to improve performance on slower computers, and/or your UI makes sense with the near boundary made further away.
 
-## Syntax
-
-```js
-var mydepthNear = vrDisplayInstance.depthNear;
-
-vrDisplayInstance.depthNear = 1.0;
-```
-
-### Value
+## Value
 
 A double, representing the z-depth in meters; its initial value is `0.01`.
 

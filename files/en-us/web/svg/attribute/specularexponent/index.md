@@ -12,8 +12,8 @@ The **`specularExponent`** attribute controls the focus for the light source. Th
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feSpecularLighting")}}
-*   {{SVGElement("feSpotLight")}}
+- {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feSpotLight")}}
 
 ## Example
 
@@ -130,4 +130,4 @@ For {{SVGElement("feSpotLight")}}, `specularExponent` defines the exponent value
 
 ## See also
 
-*   [Description of Phong reflection model on Wikipedia](https://en.wikipedia.org/wiki/Phong_reflection_model)
+- [Description of Phong reflection model on Wikipedia](https://en.wikipedia.org/wiki/Phong_reflection_model)

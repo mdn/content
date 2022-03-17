@@ -38,5 +38,3 @@ idleDetector.addEventListener('change', () => {
 ## Browser compatibility
 
 {{Compat}}
-
-

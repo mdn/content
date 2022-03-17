@@ -35,21 +35,23 @@ To associate the comment with the text being commented, we need to wrap the comm
 
 Since `aria-details` can now accept multiple IDs, we can associate multiple comments with the same annotation, like so:
 
-    <p>The last half of the song is a slow-rising crescendo that peaks at the
-    <mark aria-details="thread-1 thread-2">end of the guitar solo</mark>, before fading away sharply.</p>
+```html
+<p>The last half of the song is a slow-rising crescendo that peaks at the
+<mark aria-details="thread-1 thread-2">end of the guitar solo</mark>, before fading away sharply.</p>
 
-    <div role="comment" id="thread-1" data-author="chris">
-      <h3>Chris said</h3>
-      <p class="comment-text">I really think this moment could use more cowbell.</p>
-      <p><time datetime="2019-03-30T19:29">March 30 2019, 19:29</time></p>
-    </div>
+<div role="comment" id="thread-1" data-author="chris">
+  <h3>Chris said</h3>
+  <p class="comment-text">I really think this moment could use more cowbell.</p>
+  <p><time datetime="2019-03-30T19:29">March 30 2019, 19:29</time></p>
+</div>
 
-    <div role="comment" id="thread-2" data-author="chris">
-      <h3>Marcus said</h3>
-      <p class="comment-text">The guitar solo could do with a touch more chorus,
-        and a slightly lower volume.</p>
-      <p><time datetime="2019-03-29T15:35">March 29 2019, 15:35</time></p>
-    </div>
+<div role="comment" id="thread-2" data-author="chris">
+  <h3>Marcus said</h3>
+  <p class="comment-text">The guitar solo could do with a touch more chorus,
+    and a slightly lower volume.</p>
+  <p><time datetime="2019-03-29T15:35">March 29 2019, 15:35</time></p>
+</div>
+```
 
 ### Nested comments
 
@@ -77,8 +79,6 @@ Nested comments are also possible with ARIA annotations — nest the comments in
 ## Specifications
 
 Will be part of WAI-ARIA 1.3, which is still being drafted.
-
-
 
 ## See also
 

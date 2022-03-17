@@ -16,6 +16,8 @@ The **`SharedWorker`** interface represents a specific kind of worker that can b
 
 > **Note:** If SharedWorker can be accessed from several browsing contexts, all those browsing contexts must share the exact same origin (same protocol, host and port).
 
+{{InheritanceDiagram}}
+
 ## Constructors
 
 - {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}
@@ -25,10 +27,13 @@ The **`SharedWorker`** interface represents a specific kind of worker that can b
 
 _Inherits properties from its parent, {{domxref("EventTarget")}}._
 
-- {{domxref("SharedWorker.onerror")}}
-  - : Is an {{domxref("EventListener")}} that is called whenever an {{domxref("ErrorEvent")}} of type `error` event occurs.
 - {{domxref("SharedWorker.port")}} {{readonlyInline}}
   - : Returns a {{domxref("MessagePort")}} object used to communicate with and control the shared worker.
+
+## Events
+
+- {{domxref("SharedWorker.error_event", "error")}}
+  - : Fires when an error occurs in the shared worker.
 
 ## Methods
 
@@ -69,7 +74,7 @@ myWorker.port.onmessage = function(e) {
 }
 ```
 
-Inside the worker we use the {{domxref("SharedWorkerGlobalScope.onconnect")}} handler to connect to the same port discussed above. The ports associated with that worker are accessible in the {{event("connect")}} event's `ports` property — we then use {{domxref("MessagePort")}} `start()` method to start the port, and the `onmessage` handler to deal with messages sent from the main threads.
+Inside the worker we use the {{domxref("SharedWorkerGlobalScope.connect_event", "onconnect")}} handler to connect to the same port discussed above. The ports associated with that worker are accessible in the {{event("connect")}} event's `ports` property — we then use {{domxref("MessagePort")}} `start()` method to start the port, and the `onmessage` handler to deal with messages sent from the main threads.
 
 ```js
 onconnect = function(e) {

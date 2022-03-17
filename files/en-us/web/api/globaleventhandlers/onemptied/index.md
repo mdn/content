@@ -27,7 +27,7 @@ The `emptied` event is fired when the media has become empty; for example,
 this event is sent if the media has already been loaded (or partially loaded), and the
 `load()` method is called to reload it.
 
-See the  [`emptied`](/en-US/docs/Web/API/HTMLMediaElement/emptied_event) event
+See the  [`emptied`](/en-US/docs/Web/API/HTMLMediaElement/emptied_event) event
 documentation for more information about the event.
 
 ## Specifications

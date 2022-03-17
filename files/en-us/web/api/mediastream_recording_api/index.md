@@ -24,19 +24,19 @@ The MediaStream Recording API is comprised of a single major interface, {{domxre
 
 The process of recording a stream is simple:
 
-1.  Set up a {{domxref("MediaStream")}} or {{domxref("HTMLMediaElement")}} (in the form of an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element) to serve as the source of the media data.
-2.  Create a {{domxref("MediaRecorder")}} object, specifying the source stream and any desired options (such as the container's MIME type or the desired bit rates of its tracks).
-3.  Set {{domxref("MediaRecorder.ondataavailable")}} to an event handler for the {{event("dataavailable")}} event; this will be called whenever data is available for you.
-4.  Once the source media is playing and you've reached the point where you're ready to record video, call {{domxref("MediaRecorder.start()")}} to begin recording.
-5.  Your {{event("dataavailable")}} event handler gets called every time there's data ready for you to do with as you will; the event has a `data` attribute whose value is a {{domxref("Blob")}} that contains the media data. You can force a `dataavailable` event to occur, thereby delivering the latest sound to you so you can filter it, save it, or whatever.
-6.  Recording stops automatically when the source media stops playing.
-7.  You can stop recording at any time by calling {{domxref("MediaRecorder.stop()")}}.
+1. Set up a {{domxref("MediaStream")}} or {{domxref("HTMLMediaElement")}} (in the form of an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element) to serve as the source of the media data.
+2. Create a {{domxref("MediaRecorder")}} object, specifying the source stream and any desired options (such as the container's MIME type or the desired bit rates of its tracks).
+3. Set {{domxref("MediaRecorder.dataavailable_event", "ondataavailable")}} to an event handler for the {{event("dataavailable")}} event; this will be called whenever data is available for you.
+4. Once the source media is playing and you've reached the point where you're ready to record video, call {{domxref("MediaRecorder.start()")}} to begin recording.
+5. Your {{event("dataavailable")}} event handler gets called every time there's data ready for you to do with as you will; the event has a `data` attribute whose value is a {{domxref("Blob")}} that contains the media data. You can force a `dataavailable` event to occur, thereby delivering the latest sound to you so you can filter it, save it, or whatever.
+6. Recording stops automatically when the source media stops playing.
+7. You can stop recording at any time by calling {{domxref("MediaRecorder.stop()")}}.
 
 > **Note:** Individual {{domxref("Blob")}}s containing slices of the recorded media will not necessarily be individually playable. The media needs to be reassembled before playback.
 
-If anything goes wrong during recording, an {{event("error")}} event is sent to the `MediaRecorder`. You can listen for `error` events by setting up a {{domxref("MediaRecorder.onerror", "onerror")}} event handler.
+If anything goes wrong during recording, an {{event("error")}} event is sent to the `MediaRecorder`. You can listen for `error` events by setting up a {{domxref("MediaRecorder.error_event", "onerror")}} event handler.
 
-Example here, we use an HTML Canvas as source of the {{domxref("MediaStream")}}, and stop recording after 9 seconds.
+Example here, we use an HTML Canvas as source of the {{domxref("MediaStream")}}, and stop recording after 9 seconds.
 
 ```js
 var canvas = document.querySelector("canvas");
@@ -143,10 +143,10 @@ To learn more about using the MediaStream Recording API, see [Using the MediaStr
 - [Recording a media element](/en-US/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element)
 - [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12)
 - {{domxref("MediaDevices.getUserMedia")}}
-- [HTML5’s Media Recorder API in Action on Chrome and Firefox](https://addpipe.com/blog/mediarecorder-api/)
+- [HTML5's Media Recorder API in Action on Chrome and Firefox](https://addpipe.com/blog/mediarecorder-api/)
 - [MediaRecorder polyfill](https://github.com/ai/audio-recorder-polyfill) for Safari and Edge
 - [TutorRoom](https://github.com/chrisjohndigital/TutorRoom): HTML5 video capture/playback/download using getUserMedia and the MediaRecorder API ([source on GitHub](https://github.com/chrisjohndigital/TutorRoom))
 - [Simple video recording demo](http://codepen.io/anon/pen/gpmPzm)
 - [Advanced media stream recorder sample](https://quickblox.github.io/javascript-media-recorder/sample/)
-- [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML5 video language lab web application using MediaDevices and the MediaStream Recording API for video recording ([source on GitHub](https://github.com/chrisjohndigital/OpenLang))
+- [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML5 video language lab web application using MediaDevices and the MediaStream Recording API for video recording ([source on GitHub](https://github.com/chrisjohndigital/OpenLang))
 - [MediaStream Recorder API Now Available in Safari Technology Preview 73](https://addpipe.com/blog/safari-technology-preview-73-adds-limited-mediastream-recorder-api-support/)

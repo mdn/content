@@ -30,7 +30,7 @@ By setting its value to `ignore`, you can disable focusing the element, which me
 
 {{cssinfo}}
 
-> **Note:** This property doesn't work for XUL {{XULElem("textbox")}} elements, because the `textbox` itself never takes focus. Instead, XBL creates an anonymous HTML {{HTMLElement("input")}} element inside the `textbox`, and that element is what receives focus. You can stop the `textbox` from taking keyboard focus by setting its tab index to `-1`, and from taking mouse focus by preventing the default action of `mousedown` events.
+> **Note:** This property doesn't work for XUL {{XULElem("textbox")}} elements, because the `textbox` itself never takes focus. Instead, XBL creates an anonymous HTML {{HTMLElement("input")}} element inside the `textbox`, and that element is what receives focus. You can stop the `textbox` from taking keyboard focus by setting its tab index to `-1`, and from taking mouse focus by preventing the default action of `mousedown` events.
 
 ## Syntax
 

@@ -74,7 +74,7 @@ g.return(1); // { value: 1, done: true }
 
 ### Using return() with try...finally
 
-When the `return` method is called on a generator that is suspended within a `try` block, execution in the generator proceeds to the `finally` block — since the `finally` block of `try...finally` statements always executes.
+When the `return` method is called on a generator that is suspended within a `try` block, execution in the generator proceeds to the `finally` block — since the `finally` block of `try...finally` statements always executes.
 
 ```js
 function* gen() {

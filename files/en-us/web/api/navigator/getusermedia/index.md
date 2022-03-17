@@ -67,8 +67,8 @@ navigator.getUserMedia(constraints, successCallback, errorCallback);
 
 - `errorCallback`
   - : When the call fails, the function specified in the `errorCallback` is
-    invokedwith a {{domxref("MediaStreamError")}} object as its sole argument; this
-    object is modeled on {{domxref("DOMException")}}. See {{anch("Errors")}} below for a
+    invoked with a {{domxref("MediaStreamError")}} object as its sole argument; this
+    object is modeled on {{domxref("DOMException")}}. See [Errors](#errors) below for a
     list of the errors which can occur.
 
 ### Return value

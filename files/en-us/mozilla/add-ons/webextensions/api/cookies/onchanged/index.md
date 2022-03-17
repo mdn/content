@@ -15,14 +15,14 @@ browser-compat: webextensions.api.cookies.onChanged
 ---
 {{AddonSidebar()}}
 
-The `onChanged` event of the {{WebExtAPIRef("cookies")}} API fires when a cookie that the extension can access is set or removed.
+The `onChanged` event of the {{WebExtAPIRef("cookies")}} API fires when a cookie that the extension can access is set or removed.
 
 > **Note:** When [storage partitioning](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#Storage_partitioning) is active, `cookies.Cookie.partitionKey` contains the description of the cookie's storage partition. When modifying cookies, it's important to pass this value to {{WebExtAPIRef("cookies.set()")}} or {{WebExtAPIRef("cookies.remove()")}} to ensure the extension works with the correct cookie.
 
 Note that updating a cookie's properties is implemented as a two step process:
 
-1.  First, the cookie to be updated is first removed entirely, generating a notification with a {{WebExtAPIRef("cookies.OnChangedCause")}} of `overwrite`.
-2.  Next, a new cookie is written with the updated values, generating a second notification with a {{WebExtAPIRef("cookies.OnChangedCause")}} of `explicit`.
+1. First, the cookie to be updated is first removed entirely, generating a notification with a {{WebExtAPIRef("cookies.OnChangedCause")}} of `overwrite`.
+2. Next, a new cookie is written with the updated values, generating a second notification with a {{WebExtAPIRef("cookies.OnChangedCause")}} of `explicit`.
 
 ## Syntax
 
@@ -58,7 +58,7 @@ Events have three functions:
         - `removed`
           - : A `boolean` that is set to `true` if a cookie was removed, and false if not.
         - `cookie`
-          - : A {{WebExtAPIRef('cookies.Cookie')}} object  containing information about the cookie that was set or removed.
+          - : A {{WebExtAPIRef('cookies.Cookie')}} object containing information about the cookie that was set or removed.
         - `cause`
           - : A {{WebExtAPIRef('cookies.OnChangedCause')}} value representing the underlying reason behind the cookie's change.
 
@@ -72,10 +72,10 @@ This example listens for `onChanged` events and logs details from the `changeInf
 
 ```js
 browser.cookies.onChanged.addListener(function(changeInfo) {
-  console.log('Cookie changed: ' +
-              '\n * Cookie: ' + JSON.stringify(changeInfo.cookie) +
-              '\n * Cause: ' + changeInfo.cause +
-              '\n * Removed: ' + changeInfo.removed);
+  console.log('Cookie changed: ' +
+              '\n * Cookie: ' + JSON.stringify(changeInfo.cookie) +
+              '\n * Cause: ' + changeInfo.cause +
+              '\n * Removed: ' + changeInfo.removed);
 });
 ```
 

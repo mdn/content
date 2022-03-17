@@ -15,7 +15,7 @@ browser-compat: api.BluetoothRemoteGATTServer.disconnect
 {{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTServer.disconnect()`** method causes
-the script execution environment to disconnect from `this.device`.
+the script execution environment to disconnect from `this.device`.
 
 ## Syntax
 

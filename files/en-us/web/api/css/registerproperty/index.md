@@ -15,7 +15,7 @@ values, and properties that do or do not inherit their value.
 
 Registering a custom property allows you to tell the browser how the custom property
 should behave; what are allowed types, whether the custom property inherits its value,
-and what the default value of the custom property is.
+and what the default value of the custom property is.
 
 ## Syntax
 
@@ -64,10 +64,10 @@ default value, and have it not inherit its value:
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-color',
-  syntax: '<color>',
-  inherits: false,
-  initialValue: '#c0ffee',
+  name: '--my-color',
+  syntax: '<color>',
+  inherits: false,
+  initialValue: '#c0ffee',
 });
 ```
 
@@ -78,25 +78,25 @@ works, but that it doesn't with the unregistered property!
 
 ```css
 .registered {
-  --my-color: #c0ffee;
-  background-image: linear-gradient(to right, #fff, var(--my-color));
-  transition: --my-color 1s ease-in-out;
+  --my-color: #c0ffee;
+  background-image: linear-gradient(to right, #fff, var(--my-color));
+  transition: --my-color 1s ease-in-out;
 }
 
 .registered:hover,
 .registered:focus {
-  --my-color: #b4d455;
+  --my-color: #b4d455;
 }
 
 .unregistered {
-  --unregistered: #c0ffee;
-  background-image: linear-gradient(to right, #fff, var(--unregistered));
-  transition: --unregistered 1s ease-in-out;
+  --unregistered: #c0ffee;
+  background-image: linear-gradient(to right, #fff, var(--unregistered));
+  transition: --unregistered 1s ease-in-out;
 }
 
 .unregistered:hover,
 .unregistered:focus {
-  --unregistered: #b4d455;
+  --unregistered: #b4d455;
 }
 button {
   font-size: 3vw;

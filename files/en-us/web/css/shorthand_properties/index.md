@@ -20,7 +20,7 @@ The CSS specification defines shorthand properties to group the definition of co
 
 Even if they are very convenient to use, there are a few edge cases to keep in mind when using them:
 
-1.  A value which is not specified is set to its initial value. That sounds anecdotal, but it really means that it **overrides** previously set values. Therefore:
+1. A value which is not specified is set to its initial value. That sounds anecdotal, but it really means that it **overrides** previously set values. Therefore:
 
     ```css
     background-color: red;
@@ -29,10 +29,10 @@ Even if they are very convenient to use, there are a few edge cases to keep in m
 
     will not set the color of the background to `red` but to {{cssxref("background-color")}}'s default, `transparent`, as the second rule has precedence.
 
-2.  Only the individual properties values can inherit. As missing values are replaced by their initial value, it is impossible to allow inheritance of individual properties by omitting them. The keyword `inherit` can be applied to a property, but only as a whole, not as a keyword for one value or another. That means that the only way to make some specific value to be inherited is to use the longhand property with the keyword `inherit`.
-3.  Shorthand properties try not to force a specific order for the values of the properties they replace. This works well when these properties use values of different types, as the order has no importance, but this does not work as easily when several properties can have identical values. Handling of these cases are grouped in several categories:
+2. Only the individual properties values can inherit. As missing values are replaced by their initial value, it is impossible to allow inheritance of individual properties by omitting them. The keyword `inherit` can be applied to a property, but only as a whole, not as a keyword for one value or another. That means that the only way to make some specific value to be inherited is to use the longhand property with the keyword `inherit`.
+3. Shorthand properties try not to force a specific order for the values of the properties they replace. This works well when these properties use values of different types, as the order has no importance, but this does not work as easily when several properties can have identical values. Handling of these cases are grouped in several categories:
 
-    1.  Shorthands handling properties related to edges of a box, like {{cssxref("border-style")}}, {{cssxref("margin")}} or {{cssxref("padding")}}, always use a consistent 1-to-4-value syntax representing those edges:
+    1. Shorthands handling properties related to edges of a box, like {{cssxref("border-style")}}, {{cssxref("margin")}} or {{cssxref("padding")}}, always use a consistent 1-to-4-value syntax representing those edges:
 
         <table class="standard-table">
           <tbody>
@@ -79,7 +79,7 @@ Even if they are very convenient to use, there are a few edge cases to keep in m
           </tbody>
         </table>
 
-    2.  Similarly, shorthands handling properties related to corners of a box, like {{cssxref("border-radius")}}, always use a consistent 1-to-4-value syntax representing those corners:
+    2. Similarly, shorthands handling properties related to corners of a box, like {{cssxref("border-radius")}}, always use a consistent 1-to-4-value syntax representing those corners:
 
         <table class="standard-table">
           <tbody>

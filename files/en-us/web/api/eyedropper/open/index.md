@@ -34,6 +34,7 @@ eyeDropper.open({ signal: abortController.signal });
 A {{jsxref("Promise")}} that eventually resolves when the user selects a pixel color from the screen.
 
 The promise resolves to an object with the following property:
+
 - `sRGBHex`
   - : A string representing the selected color, in hexadecimal sRGB format (`#aabbcc`).
 
@@ -42,8 +43,8 @@ The promise resolves to an object with the following property:
 Exceptions are not thrown but returned when the {{jsxref("Promise")}} is rejected.
 The promise is rejected in two cases:
 
-* When the user dismisses the eyedropper mode by pressing the <kbd>Escape</kbd> key.
-* When the eyedropper mode is aborted by the {{domxref("AbortController")}} passed as an argument to `open()`.
+- When the user dismisses the eyedropper mode by pressing the <kbd>Escape</kbd> key.
+- When the eyedropper mode is aborted by the {{domxref("AbortController")}} passed as an argument to `open()`.
 
 ## Specifications
 

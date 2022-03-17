@@ -29,8 +29,6 @@ Do not use.
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#input","ARIA: input role")}}                                             | {{Spec2('ARIA')}}                         |
 
-
-
 ## See Also
 
 - [ARIA: `widget` role](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role)
@@ -42,8 +40,6 @@ Do not use.
 - [ARIA: `spinbutton` role](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
 - [ARIA: `textbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role)
 - [HTML: the `input` element](en-US/docs/Web/HTML/Element/input/)
-
-
 
 <section id="Quick_links">
 

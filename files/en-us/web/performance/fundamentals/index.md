@@ -88,11 +88,11 @@ The key to fast startup is to keep two things in mind: UPP is all that matters, 
 
 For example, to paint an application's first frame that comprises visually some HTML and CSS to style that HTML:
 
-1.  The HTML must be parsed
-2.  The DOM for that HTML must be constructed
-3.  Resources like images in that part of the DOM have to be loaded and decoded
-4.  The CSS styles must be applied to that DOM
-5.  The styled document has to be reflowed
+1. The HTML must be parsed
+2. The DOM for that HTML must be constructed
+3. Resources like images in that part of the DOM have to be loaded and decoded
+4. The CSS styles must be applied to that DOM
+5. The styled document has to be reflowed
 
 Nowhere in that list is "load the JS file needed for an uncommon menu"; "fetch and decode the image for the High Scores list", etc. Those work items are not on the critical path to painting the first frame.
 
@@ -135,7 +135,7 @@ The following practical tips will help improve one or more of the Application pe
 
 #### Use CSS animations and transitions
 
-Instead of using some library’s `animate()` function, which probably currently uses many badly performing technologies ({{domxref("setTimeout()")}} or `top`/`left` positioning, for example) use [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations). In many cases, you can actually use [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) to get the job done. This works well because the browser is designed to optimize these effects and use the GPU to handle them smoothly with minimal impact on processor performance. Another benefit is that you can define these effects in CSS along with the rest of your app's look-and-feel, using a standardized syntax.
+Instead of using some library's `animate()` function, which probably currently uses many badly performing technologies ({{domxref("setTimeout()")}} or `top`/`left` positioning, for example) use [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations). In many cases, you can actually use [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) to get the job done. This works well because the browser is designed to optimize these effects and use the GPU to handle them smoothly with minimal impact on processor performance. Another benefit is that you can define these effects in CSS along with the rest of your app's look-and-feel, using a standardized syntax.
 
 CSS animations give you very granular control over your effects using [keyframes](/en-US/docs/Web/CSS/@keyframes), and you can even watch events fired during the animation process in order to handle other tasks that need to be performed at set points in the animation process. You can easily trigger these animations with the {{cssxref(":hover")}}, {{cssxref(":focus")}}, or {{cssxref(":target")}}, or by dynamically adding and removing classes on parent elements.
 
@@ -157,13 +157,13 @@ Instead, you should try to use {{domxref("window.requestAnimationFrame()")}}. Th
 
 #### Make events immediate
 
-As old-school, accessibility-aware Web developers we love click events since they also support keyboard input. On mobile devices, these are too slow. You should use {{event("touchstart")}} and {{event("touchend")}} instead. The reason is that these don’t have a delay that makes the interaction with the app appear sluggish. If you test for touch support first, you don’t sacrifice accessibility, either. For example, the Financial Times uses a library called [fastclick](https://github.com/ftlabs/fastclick) for that purpose, which is available for you to use.
+As old-school, accessibility-aware Web developers we love click events since they also support keyboard input. On mobile devices, these are too slow. You should use {{event("touchstart")}} and {{event("touchend")}} instead. The reason is that these don't have a delay that makes the interaction with the app appear sluggish. If you test for touch support first, you don't sacrifice accessibility, either. For example, the Financial Times uses a library called [fastclick](https://github.com/ftlabs/fastclick) for that purpose, which is available for you to use.
 
 #### Keep your interface simple
 
 One big performance issue we found in HTML5 apps was that moving lots of [DOM](/en-US/docs/Web/API/Document_Object_Model) elements around makes everything sluggish — especially when they feature lots of gradients and drop shadows. It helps a lot to simplify your look-and-feel and move a proxy element around when you drag and drop.
 
-When, for example, you have a long list of elements (let’s say tweets), don’t move them all. Instead, keep in your DOM tree only the ones that are visible and a few on either side of the currently visible set of tweets. Hide or remove the rest. Keeping the data in a JavaScript object instead of accessing the DOM can vastly improve your app's performance. Think of the display as a presentation of your data rather than the data itself. That doesn’t mean you can't use straight HTML as the source; just read it once and then scroll 10 elements, changing the content of the first and last accordingly to your position in the results list, instead of moving 100 elements that aren’t visible. The same trick applies in games to sprites: if they aren’t currently on the screen, there is no need to poll them. Instead re-use elements that scroll off screen as new ones coming in.
+When, for example, you have a long list of elements (let's say tweets), don't move them all. Instead, keep in your DOM tree only the ones that are visible and a few on either side of the currently visible set of tweets. Hide or remove the rest. Keeping the data in a JavaScript object instead of accessing the DOM can vastly improve your app's performance. Think of the display as a presentation of your data rather than the data itself. That doesn't mean you can't use straight HTML as the source; just read it once and then scroll 10 elements, changing the content of the first and last accordingly to your position in the results list, instead of moving 100 elements that aren't visible. The same trick applies in games to sprites: if they aren't currently on the screen, there is no need to poll them. Instead re-use elements that scroll off screen as new ones coming in.
 
 ## General application performance analysis
 

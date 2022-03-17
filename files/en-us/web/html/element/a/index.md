@@ -20,7 +20,7 @@ browser-compat: html.elements.a
 
 The **`<a>`** [HTML](/en-US/docs/Web/HTML) element (or _anchor_ element), with [its `href` attribute](#attr-href), creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.
 
-Content within each `<a>` **should** indicate the link's destination. If the `href` attribute is present, pressing the enter key while focused on the `<a>` element will activate it.
+Content within each `<a>` **should** indicate the link's destination. If the `href` attribute is present, pressing the enter key while focused on the `<a>` element will activate it.
 
 {{EmbedInteractiveExample("pages/tabbed/a.html")}}
 
@@ -30,7 +30,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - {{HTMLAttrDef("download")}}
 
-  - : Prompts the user to save the linked URL instead of navigating to it. Can be used with or without a value:
+  - : Causes the browser to treat the linked URL as a download. Can be used with or without a value:
 
     - Without a value, the browser will suggest a filename/extension, generated from various sources:
 
@@ -43,10 +43,11 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     > **Note:**
     >
     > - `download` only works for [same-origin URLs](/en-US/docs/Web/Security/Same-origin_policy), or the `blob:` and `data:` schemes.
+    > - How browsers treat downloads varies by browser, user settings, and other factors. The user may be prompted before a download starts, or the file may be saved automatically, or it may open automatically, either in an external application or in the browser itself.
     > - If the `Content-Disposition` header has different information from the `download` attribute, resulting behavior may differ:
     >
     >   - If the header specifies a `filename`, it takes priority over a filename specified in the `download` attribute.
-    >   - If the header specifies a disposition of `inline`, Chrome, and Firefox 82 and later, prioritize the attribute and treat it as a download. Firefox versions before 82 prioritize the header and will display the content inline.
+    >   - If the header specifies a disposition of `inline`, Chrome and Firefox prioritize the attribute and treat it as a download. Old Firefox versions (before 82) prioritize the header and will display the content inline.
 
 - {{HTMLAttrDef("href")}}
 
@@ -84,12 +85,12 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - `_self`: the current browsing context. (Default)
     - `_blank`: usually a new tab, but users can configure browsers to open a new window instead.
     - `_parent`: the parent browsing context of the current one. If no parent, behaves as `_self`.
-    - `_top`: the topmost browsing context (the "highest" context that’s an ancestor of the current one). If no ancestors, behaves as `_self`.
+    - `_top`: the topmost browsing context (the "highest" context that's an ancestor of the current one). If no ancestors, behaves as `_self`.
 
     > **Note:** Setting `target="_blank"` on `<a>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Link_types/noopener) which does not set `window.opener`. See [browser compatibility](#browser_compatibility) for support status.
 
 - {{HTMLAttrDef("type")}}
-  - : Hints at the linked URL’s format with a {{Glossary("MIME type")}}. No built-in functionality.
+  - : Hints at the linked URL's format with a {{Glossary("MIME type")}}. No built-in functionality.
 
 ### Deprecated attributes
 
@@ -111,7 +112,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
   - : Specified a reverse link; the opposite of [the `rel` attribute](#rel). Deprecated for being very confusing.
 - {{HTMLAttrDef("shape")}}{{Deprecated_Inline}}
 
-  - : The shape of the hyperlink’s region in an image map.
+  - : The shape of the hyperlink's region in an image map.
 
     > **Note:** Use the {{HTMLElement("area")}} element for image maps instead.
 
@@ -289,7 +290,7 @@ See {{RFC(3966)}} for syntax, additional features, and other details about the `
 
 ### Using the download attribute to save a \<canvas> as a PNG
 
-To save a {{HTMLElement("canvas")}} element’s contents as an image, you can create a link with a `download` attribute and the canvas data as a `data:` URL:
+To save a {{HTMLElement("canvas")}} element's contents as an image, you can create a link with a `download` attribute and the canvas data as a `data:` URL:
 
 #### Example painting app with save link
 
@@ -354,7 +355,7 @@ document.querySelector('a').addEventListener('click', event =>
 
 ## Security and privacy
 
-`<a>` elements can have consequences for users’ security and privacy. See [`Referer` header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) for information.
+`<a>` elements can have consequences for users' security and privacy. See [`Referer` header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) for information.
 
 Using `target="_blank"` without [`rel="noreferrer"`](/en-US/docs/Web/HTML/Link_types/noreferrer) and [`rel="noopener"`](/en-US/docs/Web/HTML/Link_types/noopener) makes the website vulnerable to {{domxref("window.opener")}} API exploitation attacks ([vulnerability description](https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/)), although note that, in newer browser versions setting `target="_blank"` implicitly provides the same protection as setting `rel="noopener"`. See [browser compatibility](#browser_compatibility) for details.
 
@@ -366,7 +367,7 @@ Using `target="_blank"` without [`rel="noreferrer"`](/en-US/docs/Web/HTML/Link_t
 
 #### Inaccessible, weak link text
 
-A sadly common mistake is to only link the words “click here” or “here”:
+A sadly common mistake is to only link the words "click here" or "here":
 
 ```html example-bad
 <p>
@@ -376,7 +377,7 @@ A sadly common mistake is to only link the words “click here” or “here”:
 
 #### Strong link text
 
-Luckily, this is an easy fix, and it’s actually shorter than the inaccessible version!
+Luckily, this is an easy fix, and it's actually shorter than the inaccessible version!
 
 ```html example-good
 <p>
@@ -384,7 +385,7 @@ Luckily, this is an easy fix, and it’s actually shorter than the inaccessible 
 </p>
 ```
 
-Assistive software has shortcuts to list all links on a page. However, strong link text benefits all users — the “list all links” shortcut emulates how sighted users quickly scan pages.
+Assistive software has shortcuts to list all links on a page. However, strong link text benefits all users — the "list all links" shortcut emulates how sighted users quickly scan pages.
 
 ### onclick events
 
@@ -439,16 +440,18 @@ If an icon is used to signify link behavior, make sure it has {{HTMLAttrxRef("al
 
 A **skip link** is a link placed as early as possible in {{HTMLElement("body")}} content that points to the beginning of the page's main content. Usually, CSS hides a skip link offscreen until focused.
 
-    <body>
-      <a href="#content" class="skip-link">Skip to main content</a>
+```html
+<body>
+  <a href="#content" class="skip-link">Skip to main content</a>
 
-      <header>
-        …
-      </header>
+  <header>
+    …
+  </header>
 
-      <main id="content"> </main> <!-- The skip link jumps to here -->
+  <main id="content"> </main> <!-- The skip link jumps to here -->
 
-    </body>
+</body>
+```
 
 ```css
 .skip-link {
@@ -476,7 +479,7 @@ Skip links are especially useful for people who navigate with the aid of assisti
 
 Interactive elements, like links, should provide an area large enough that it is easy to activate them. This helps a variety of people, including those with motor control issues and those using imprecise inputs such as a touchscreen. A minimum size of 44×44 [CSS pixels](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) is recommended.
 
-Text-only links in prose content are exempt from this requirement, but it’s still a good idea to make sure enough text is hyperlinked to be easily activated.
+Text-only links in prose content are exempt from this requirement, but it's still a good idea to make sure enough text is hyperlinked to be easily activated.
 
 - [Understanding Success Criterion 2.5.5: Target Size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
 - [Target Size and 2.5.5](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)

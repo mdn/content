@@ -23,8 +23,8 @@ Any article that has a static code example (just blocks of HTML, CSS, JavaScript
 
 ## What are the steps to do the task?
 
-1.  Find a code example that you think should be converted to be "live".
-2.  Convert the code sample to be "live".
-3.  Delete any code or image that was previously used to display the output of the sample.
+1. Find a code example that you think should be converted to be "live".
+2. Convert the code sample to be "live".
+3. Delete any code or image that was previously used to display the output of the sample.
 
 For more information on creating and editing Live Samples, see [Using the live sample system](/en-US/docs/MDN/Structures/Live_samples)

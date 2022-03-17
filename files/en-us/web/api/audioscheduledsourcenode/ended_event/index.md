@@ -18,30 +18,23 @@ browser-compat: api.AudioScheduledSourceNode.ended_event
 
 The `ended` event of the {{domxref("AudioScheduledSourceNode")}} interface is fired when the source node has stopped playing.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("AudioScheduledSourceNode.onended")}}</td>
-    </tr>
-  </tbody>
-</table>
-
-## Usage notes
-
 This event occurs when a {{domxref("AudioScheduledSourceNode")}} has stopped playing, either because it's reached a predetermined stop time, the full duration of the audio has been performed, or because the entire buffer has been played.
+
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('ended', event => { });
+
+onended = event => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -53,7 +46,7 @@ node.addEventListener('ended', () => {
 })
 ```
 
-You can also set up the event handler using the {{domxref("AudioScheduledSourceNode.onended")}} property:
+You can also set up the event handler using the `onended` property:
 
 ```js
 node.onended = function() {
@@ -82,5 +75,5 @@ For an example of the ended event in use, see our [audio-buffer example on GitHu
 - {{domxref("HTMLVideoElement")}}
 - {{HTMLElement("audio")}}
 - {{HTMLElement("video")}}
-- {{domxref("HTMLMediaElement.ended_event", 'HTMLMediaElement: ended event')}}
-- {{domxref("MediaStreamTrack.ended_event", 'MediaStreamTrack: ended event')}}
+- The HTMLMediaElement {{domxref("HTMLMediaElement.ended_event", 'ended')}} event
+- The MediaStreamTrack {{domxref("MediaStreamTrack.ended_event", 'ended')}} event

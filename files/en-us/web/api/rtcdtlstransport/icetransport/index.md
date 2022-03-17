@@ -13,7 +13,7 @@ browser-compat: api.RTCDtlsTransport.iceTransport
 {{APIRef("WebRTC")}}
 
 The read-only **{{DOMxRef("RTCDtlsTransport")}}**
-property **`iceTransport`** contains areference
+property **`iceTransport`** contains a reference
 to the underlying {{DOMxRef("RTCIceTransport")}}.
 
 ## Syntax

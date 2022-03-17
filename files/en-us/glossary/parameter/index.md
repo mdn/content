@@ -20,7 +20,6 @@ const argument = 'foo';
 example(argument);
 ```
 
-
 Note the difference between _parameters_ and _arguments_:
 
 - Function parameters are the names listed in the function's definition.

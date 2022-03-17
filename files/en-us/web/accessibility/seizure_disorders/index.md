@@ -1,6 +1,6 @@
 ---
 title: Web accessibility for seizures and physical reactions
-slug: Web/Accessibility/Seizure_disorders 
+slug: Web/Accessibility/Seizure_disorders
 tags:
   - Media Queries
   - PEAT
@@ -45,7 +45,7 @@ That same article continues that many factors must combine to trigger the photos
 
 You don't even need an image or video to cause harm. A {{HTMLElement('div')}} element set to change color and luminosity at high frequency, easily done via JavaScript, can cause real harm. And, flickering can occur everywhere. For example, "spinners" commonly used to display while pages load can easily "flicker" while spinning.
 
-Additional concerns exist for individuals with motor-skill problems. For example, the page for Trace Research & Development Center’s [Photosensitive Epilepsy Analysis Tool](https://trace.umd.edu/peat) notes that _"Photosensitive seizures can be provoked by certain types of flashing in web or computer content, including mouse-overs that cause large areas of the screen to rapidly flash on and off repeatedly"_.
+Additional concerns exist for individuals with motor-skill problems. For example, the page for Trace Research & Development Center's [Photosensitive Epilepsy Analysis Tool](https://trace.umd.edu/peat) notes that _"Photosensitive seizures can be provoked by certain types of flashing in web or computer content, including mouse-overs that cause large areas of the screen to rapidly flash on and off repeatedly"_.
 
 ### Other physical reactions
 
@@ -82,7 +82,7 @@ These standards are based on earlier research. In 2004, The Epilepsy Foundation 
 
 ### Size and distance
 
-#### How big? It depends.  
+#### How big? It depends.
 
 "Relative" size and distance both matter. According to [PEAT](https://trace.umd.edu/peat), _"The combined area of flashes occurring concurrently occupies no more than a total of one quarter of any 341 x 256 pixel rectangle anywhere on the displayed screen area when the content is viewed at 1024 by 768 pixels."_
 
@@ -505,7 +505,7 @@ The more often the screen is refreshed, the more stable it appears to the human 
 A very old article, Tech Republic's ["Epilepsy and CRT/LCD screen flicker"](https://www.techrepublic.com/forums/discussions/epilepsy-and-crt-lcd-screen-flicker/), had an interesting response concerning the refresh rates in Hz:
 
 - _"This effect is noticeable, and documented, up to 70 Hz."_
-- _"These studies would seem to indicate that you should stay away from refresh rates under 70 Hz, and use a rate not divisible by 10."_
+- _"These studies would seem to indicate that you should stay away from refresh rates under 70 Hz, and use a rate not divisible by 10."_
 
 Eric Bailey, of CSS-Tricks, found an innovative use the update feature which, used in combination with animation-duration or transition-duration, to conclude at a rate that is imperceptible to the human eye. In other words, Eric's techniques address the refresh-rate problem. The CSS below is from the CSS-Tricks article, [" Revisiting prefers-reduced-motion, the reduced motion media query"](https://css-tricks.com/revisiting-prefers-reduced-motion-the-reduced-motion-media-query/).
 
@@ -520,7 +520,7 @@ Eric Bailey, of CSS-Tricks, found an innovative use the update feature which, us
 
 From W3.org's page on [Media Queries 4](https://www.w3.org/TR/mediaqueries-4/):
 
-The `update `media feature is used to query the ability of the output device to modify the appearance of content once it has been rendered. It has the values of "none", "slow", and "fast".
+The `update` media feature is used to query the ability of the output device to modify the appearance of content once it has been rendered. It has the values of "none", "slow", and "fast".
 
 ## Developmental & Experimental Features
 
@@ -535,7 +535,7 @@ EnvironmentMQ (Planned in Media Queries Level 5)
 - `light-level`
   - : [`light-level`](https://drafts.csswg.org/mediaqueries-5/#light-level) has three valid values: dim, normal, and washed. Interestingly, the specification refrains from actually defining the three levels in terms of a measurement of lux, because devices with a light sensor usually adjust the brightness of the screen automatically. The specifications also note the difference in technology, such as e-ink, which remains readable in bright daylight, versus liquid crystals, which do not.
 - `environment-blending`
-  - : From W3C's Draft document, Media Queries Level 5: _"The [`environment-blending`](https://drafts.csswg.org/mediaqueries-5/#descdef-media-environment-blending) media feature is used to query the characteristics of the user’s display so the author can adjust the style of the document. An author might choose to adjust the visuals and/or layout of the page depending on the display technology to increase the appeal or improve legibility."_
+  - : From W3C's Draft document, Media Queries Level 5: _"The [`environment-blending`](https://drafts.csswg.org/mediaqueries-5/#descdef-media-environment-blending) media feature is used to query the characteristics of the user's display so the author can adjust the style of the document. An author might choose to adjust the visuals and/or layout of the page depending on the display technology to increase the appeal or improve legibility."_
 
 ##### User Preference Media Features (Planned in Media Queries Level 5)
 
@@ -556,7 +556,7 @@ Section 4.2 from the CSSWG.org drafts integrates with the [event loop](https://h
 
 #### Personalization Help and Support
 
-The requirement for the `literal `property is taken from [section 23 Non-literal Text and Images](https://www.w3.org/TR/personalization-semantics-help-1.0/).
+The requirement for the `literal` property is taken from [section 23 Non-literal Text and Images](https://www.w3.org/TR/personalization-semantics-help-1.0/).
 
 **Requirement:** Some users cannot understand non-literal text and icons such as metaphors, idioms etc. The `literal` property is intended to identify text or images as non-literal and allows the author to explain non-literal text and images to users.
 
@@ -595,6 +595,7 @@ The Web Animations model is intended to provide the features necessary for expre
 - [WCAG 2.1 Understanding 2.3.1 - missing/vague dimension definitions #585](https://github.com/w3c/wcag/issues/585)
 
 #### Epilepsy and Seizures
+
 - [Shedding Light on Photosensitivity, One of Epilepsy's Most Complex Conditions](https://www.epilepsy.com/article/2014/3/shedding-light-photosensitivity-one-epilepsys-most-complex-conditions-0) Epilepsy Foundation: _"Certain individuals are born with special sensitivity to flashing lights or contrasting visual patterns, such as stripes, grids and checkerboards. Because of this condition, their brain will produce seizure-like discharges when exposed to this type of visual stimulation."_
 - [Gamma oscillations and photosensitive epilepsy](https://www.sciencedirect.com/science/article/pii/S0960982217304062?via%3Dihub) Current Biology [Volume 27, Issue 9](https://www.sciencedirect.com/science/journal/09609822/27/9), 8 May 2017, Pages R336-R338: _"Certain [visual images](https://www.sciencedirect.com/topics/biochemistry-genetics-and-molecular-biology/retina-image), even in the absence of [motion](https://www.sciencedirect.com/topics/biochemistry-genetics-and-molecular-biology/motion) or flicker, can trigger seizures in patients with photosensitive epilepsy."_
 - [Photosensitive Seizures. Cedars-Sinai](https://www.cedars-sinai.edu/Patients/Health-Conditions/Photosensitive-Seizures.aspx) "_Photosensitive seizures are triggered by flashing or flickering lights. These seizures can also be triggered by certain patterns such as stripes._"

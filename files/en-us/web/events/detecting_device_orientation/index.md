@@ -130,13 +130,13 @@ function handleOrientation(event) {
 window.addEventListener('deviceorientation', handleOrientation);
 ```
 
-{{LiveSampleLink("Orientation_example", "Click here")}} to open this example in a new window; because {{event("deviceorientation")}} doesn't work in a cross-origin {{HTMLElement("iframe")}} in all browsers.
+{{LiveSampleLink("Orientation_example", "Click here")}} to open this example in a new window; because {{domxref("Window/deviceorientation_event", "deviceorientation")}} doesn't work in a cross-origin {{HTMLElement("iframe")}} in all browsers.
 
 {{EmbedLiveSample('Orientation_example', '230', '260')}}
 
 ## Processing motion events
 
-Motion events are handled the same way as the orientation events except that they have their own event's name: {{event("devicemotion")}}
+Motion events are handled the same way as the orientation events except that they have their own event's name: {{domxref("Window/devicemotion_event", "devicemotion")}}
 
 ```js
 window.addEventListener("devicemotion", handleMotion, true);

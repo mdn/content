@@ -15,7 +15,7 @@ Firefox 79 includes protection against redirect tracking. This document describe
 
 Cross-site navigations are a core feature of the web; a person might search for "best running shoes" on a search engine, click a search result to read reviews, and finally click a link to buy a pair of shoes from an online store. In the past, each of these websites could embed resources from the same tracker, and the tracker could use its cookies to link all of these page visits to the same person. To protect the privacy of Firefox users, [Enhanced Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop) (ETP) already blocks trackers from using cookies when they are embedded in a third-party context, but still allows them to use cookies as a first party because blocking first party cookies causes websites to break. Redirect tracking takes advantage of this to circumvent third-party cookie blocking.
 
-Redirect trackers work by forcing you to make an imperceptible and momentary stopover to their website as part of that journey. So instead of navigating directly from the review website to the retailer, you’ll end up navigating to the redirect tracker first rather than to the retailer. This means that the tracker is loaded as a first party. The redirect tracker associates tracking data with the identifiers they have stored in their first-party cookies and then forwards you to the retailer.
+Redirect trackers work by forcing you to make an imperceptible and momentary stopover to their website as part of that journey. So instead of navigating directly from the review website to the retailer, you'll end up navigating to the redirect tracker first rather than to the retailer. This means that the tracker is loaded as a first party. The redirect tracker associates tracking data with the identifiers they have stored in their first-party cookies and then forwards you to the retailer.
 
 ## Redirect tracking protection explained
 
@@ -25,9 +25,9 @@ To protect against redirect tracking Firefox periodically clears cookies and sit
 
 An origin will be cleared if it fulfills the following conditions:
 
-1.  It has stored cookies or accessed other site storage (e.g. [localStorage](/en-US/docs/Web/API/Web_Storage_API), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), or the [Cache API](/en-US/docs/Web/API/CacheStorage)) within the last 72 hours. Since cookies are per-host, we will clear both the `http` and `https` origin variants of a cookie host.
-2.  The origin is [classified as a tracker](/en-US/docs/Mozilla/Firefox/Privacy/Storage_access_policy#tracking_protection_explained) in our Tracking Protection list.
-3.  No origin with the same base domain (eTLD+1) has a user-interaction permission.
+1. It has stored cookies or accessed other site storage (e.g. [localStorage](/en-US/docs/Web/API/Web_Storage_API), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), or the [Cache API](/en-US/docs/Web/API/CacheStorage)) within the last 72 hours. Since cookies are per-host, we will clear both the `http` and `https` origin variants of a cookie host.
+2. The origin is [classified as a tracker](/en-US/docs/Mozilla/Firefox/Privacy/Storage_access_policy#tracking_protection_explained) in our Tracking Protection list.
+3. No origin with the same base domain (eTLD+1) has a user-interaction permission.
 
     - This permission is granted to an origin for 45 days once a user interacts with a top-level document from that origin. "Interacting" includes scrolling.
     - Although this permission is stored on a per-origin level, we will check whether any origin with the same base domain has it, to avoid breaking sites with subdomains and a corresponding cookie setup.
@@ -79,8 +79,8 @@ The time until user interaction permissions expire can be set to a lower amount 
 
 ## Other implementations
 
-WebKit first shipped redirect tracking protection in [ITP 2.0](https://webkit.org/blog/8311/intelligent-tracking-prevention-2-0/) (they refer to the same attack as bounce tracking). As of July 2020, there are several significant differences between WebKit’s implementation and Firefox’s implementation:
+WebKit first shipped redirect tracking protection in [ITP 2.0](https://webkit.org/blog/8311/intelligent-tracking-prevention-2-0/) (they refer to the same attack as bounce tracking). As of July 2020, there are several significant differences between WebKit's implementation and Firefox's implementation:
 
 - The list of origins to be cleared in Firefox is based on our [tracking protection list](/en-US/docs/Mozilla/Firefox/Privacy/Storage_access_policy#tracking_protection_explained); WebKit relies on ITP's classification.
-- Firefox's definition of "interaction" includes user scrolling when visiting the origin as a first party; WebKit’s does not.
-- Firefox will not clear data for an origin if it has received interaction as a first party in the last 45 days of calendar time; WebKit’s interaction window is 30 days of browser use (e.g. days in which the user has had at least one interaction with Safari).
+- Firefox's definition of "interaction" includes user scrolling when visiting the origin as a first party; WebKit's does not.
+- Firefox will not clear data for an origin if it has received interaction as a first party in the last 45 days of calendar time; WebKit's interaction window is 30 days of browser use (e.g. days in which the user has had at least one interaction with Safari).

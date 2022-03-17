@@ -22,7 +22,7 @@ mask the form's reset method. It does not reset other attributes in the input, s
 `disabled`.
 
 Note that if {{domxref("Element.setAttribute", "setAttribute()")}} is called to set
-the value of a particular attribute, a subsequent call to `reset()` won’t
+the value of a particular attribute, a subsequent call to `reset()` won't
 reset the attribute to its default value, but instead will keep the attribute at
 whatever value the {{domxref("Element.setAttribute", "setAttribute()")}} call set it to.
 

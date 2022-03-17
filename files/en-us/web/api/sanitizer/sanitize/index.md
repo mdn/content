@@ -67,4 +67,3 @@ frame_element.replaceChildren(sanitized_frame_tree);
 
 - {{domxref('HTML Sanitizer API')}}
 - {{domxref("Element.setHTML()")}}
-

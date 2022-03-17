@@ -11,7 +11,9 @@ The `namespace-uri` function returns a string representing the namespace URI of 
 
 ### Syntax
 
-    namespace-uri( [node-set] )
+```
+namespace-uri( [node-set] )
+```
 
 ### Arguments
 

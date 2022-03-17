@@ -23,7 +23,7 @@ browser-compat: api.RTCRemoteOutboundRtpStreamStats.localId
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRemoteOutboundRtpStreamStats")}}
-dictionary's  **`localId`** property is a string which can be
+dictionary's  **`localId`** property is a string which can be
 used to identify the {{domxref("RTCInboundRtpStreamStats")}} object whose
 {{domxref("RTCInboundRtpStreamStats.remoteId", "remoteId")}} matches this value.
 
@@ -38,7 +38,7 @@ let localId = rtcRemoteOutboundRtpStreamStats.localId;
 
 ### Value
 
-A {{domxref("DOMString")}} which can be compared to the value of an
+A {{domxref("DOMString")}} which can be compared to the value of an
 {{domxref("RTCInboundRtpStreamStats")}} object's
 {{domxref("RTCInboundRtpStreamStats.remoteId", "remoteId")}} property to see if the two
 represent statistics for each of the two sides of the same set of data received by the
@@ -56,7 +56,7 @@ that `remote-outbound-rtp` describes statistics about the transmission(s)
 from the perspective of the remote peer, while `inbound-rtp` offers
 statistics about the incoming data from the local peer's perspective.
 
-You can {{anch("Try it and fork it", "examine, try out, and experiment")}} with this
+You can [examine, try out, and experiment](#try_it_and_fork_it) with this
 example on Glitch.
 
 ## Example
@@ -76,9 +76,9 @@ This function calls the {{domxref("RTCPeerConnection")}} method
 let startReport;
 
 async function networkTestStart(pc) {
-  if (pc) {
-    startReport = await pc.getStats();
-  }
+  if (pc) {
+    startReport = await pc.getStats();
+  }
 }
 ```
 
@@ -103,7 +103,7 @@ two peers. Let's create a utility function to help us look up the value of a key
 paired statistics object.
 
 The `findReportEntry()` function shown below examines
-an {{domxref("RTCStatsReport")}}, returning the {{domxref("RTCStats")}}-based statistics
+an {{domxref("RTCStatsReport")}}, returning the {{domxref("RTCStats")}}-based statistics
 record which contains the specified `key` — _and_ for which the key
 has the specified `value`. If no match is found (or the statistics report has
 no record corresponding to the statistics category indicated by `key`.
@@ -187,7 +187,7 @@ async function networkTestStop(pc) {
 Here's what's going on in the `networkTestStop()` function: after calling
 the {{domxref("RTCPeerConnection")}} method {{domxref("RTCPeerConnection.getStats",
   "getStats()")}} to get the latest statistics report for the connection and storing it in
-`endReport`,  This is an {{domxref("RTCStatsReport")}} object, which maps
+`endReport`,  This is an {{domxref("RTCStatsReport")}} object, which maps
 strings taken from the {{domxref("RTCStatsType")}} enumerated type to objects of the
 corresponding {{domxref("RTCStats")}}-based type.
 
@@ -200,7 +200,7 @@ giving details about the state of things _from the perspective of the remote
 peer_. This statistics record is stored in `endRemoteOutbound`.
 
 Once the ending `remote-outbound-rtp` record is found, we use
-its {{domxref("RTCStats.id", "id")}} property to get its ID. WIth that in hand, we can
+its {{domxref("RTCStats.id", "id")}} property to get its ID. WIth that in hand, we can
 look up the `remote-outbound-rtp` record in the starting statistics record
 (`startReport`), which we store into `startRemoteOutbound`.
 
@@ -250,7 +250,7 @@ and `networkTestStop()`).
 ### Try it and fork it
 
 This example is [available
-on Glitch for you to try out](https://websocket-webrtc-chat-with-stats.glitch.me), examine, or remix.  You can also [access
+on Glitch for you to try out](https://websocket-webrtc-chat-with-stats.glitch.me), examine, or remix.  You can also [access
 it directly](https://33030790-3517-4d21-9b93-511347fa1ebd@api.glitch.com/git/websocket-webrtc-chat-with-stats) using Glitch's Git server.
 
 [Remix It](https://glitch.com/edit/?utm_content=project_websocket-webrtc-chat-with-stats&utm_source=remix_this&utm_medium=button&utm_campaign=glitchButton#!/remix/websocket-webrtc-chat-with-stats)

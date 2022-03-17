@@ -30,7 +30,7 @@ HTMLSlotElement.assignedNodes(options)
   - : An object that sets options for the nodes to be returned. The available options are:
 
     - `flatten`
-      - : A {{jsxref('Boolean')}} indicating whether to return the assigned nodes of any available child `<slot>` elements (`true`) or not (`false`). Defaults to `false`.
+      - : A boolean value indicating whether to return the assigned nodes of any available child `<slot>` elements (`true`) or not (`false`). Defaults to `false`.
 
 ### Return value
 
@@ -45,8 +45,8 @@ it live also](https://mdn.github.io/web-components-examples/slotchange/)).
 ```js
 let slots = this.shadowRoot.querySelectorAll('slot');
 slots[1].addEventListener('slotchange', function(e) {
-  let nodes = slots[1].assignedNodes();
-  console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
+  let nodes = slots[1].assignedNodes();
+  console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
 });
 ```
 

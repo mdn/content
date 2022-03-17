@@ -39,14 +39,14 @@ This article assumes that:
 
 Before you get started with working on any particular repo, follow these steps:
 
-1.  Install Git on your computer. Go to the [Git downloads page](https://git-scm.com/downloads), download the latest version for your computer, and install it. If you are a Windows user, you should also install the [Git for Windows](https://gitforwindows.org/) package, which includes Gitbash.
-2.  While you are at it, install the other required dependencies for working locally with MDN — [Node.js](https://nodejs.org/en/download/) and [yarn](https://classic.yarnpkg.com/en/docs/install).
+1. Install Git on your computer. Go to the [Git downloads page](https://git-scm.com/downloads), download the latest version for your computer, and install it. If you are a Windows user, you should also install the [Git for Windows](https://gitforwindows.org/) package, which includes Gitbash.
+2. While you are at it, install the other required dependencies for working locally with MDN — [Node.js](https://nodejs.org/en/download/) and [yarn](https://classic.yarnpkg.com/en/docs/install).
 
-    1.  Install Node.js by following the above link and downloading and installing the latest version for your computer.
-    2.  Once you've installed Node.js, install yarn by running `npm install --global yarn`.
+    1. Install Node.js by following the above link and downloading and installing the latest version for your computer.
+    2. Once you've installed Node.js, install yarn by running `npm install --global yarn`.
 
-3.  Create a separate directory somewhere on your computer to store all of your Git repos in, which is easy to find and navigate to on the command line. A directory called mdn-git inside your home/user directory would be suitable.
-4.  [Sign up for a GitHub account](https://github.com/join) if you don't already have one. You'll need this to contribute to MDN's repos.
+3. Create a separate directory somewhere on your computer to store all of your Git repos in, which is easy to find and navigate to on the command line. A directory called mdn-git inside your home/user directory would be suitable.
+4. [Sign up for a GitHub account](https://github.com/join) if you don't already have one. You'll need this to contribute to MDN's repos.
 
 ### Setting up SSH authentication on GitHub
 
@@ -71,29 +71,29 @@ It is possible to do the two things separately, but in practice you will nearly 
 
 Let's fork <https://github.com/mdn/content> right now; you'll definitely be contributing to this repo at some point. Follow these steps:
 
-1.  Locate the Fork button at the top-right hand corner of the content repo's page, and press it:
+1. Locate the Fork button at the top-right hand corner of the content repo's page, and press it:
 
     ![Button labeled fork, with the number 609 next to it](fork-button.png)
 
-2.  A modal window will appear, asking you where you want to fork the repo to. Select your personal GitHub account.
+2. A modal window will appear, asking you where you want to fork the repo to. Select your personal GitHub account.
 
     A message will appear saying something like "Forking mdn/content. It should only take a few seconds." Once GitHub has finished forking, your browser should redirect to the page for the new fork. As an example, my fork of <https://github.com/mdn/content> is available at <https://github.com/chrisdavidmills/content>.
 
 Now you've forked the repo, it is time to clone your fork locally. To do this:
 
-1.  Go to your fork's page on github.com (e.g. `https://github.com/<your-user-name>/content`).
-2.  Press the green "Code" button at the top of the files list. Something similar to the following popup should appear as a result:
+1. Go to your fork's page on github.com (e.g. `https://github.com/<your-user-name>/content`).
+2. Press the green "Code" button at the top of the files list. Something similar to the following popup should appear as a result:
 
     ![Popup window showing a clone URL along with options to open with github desktop and download zip](code-popup.png)
 
-3.  If you set up SSH authentication as instructed above, click the "SSH" tab and copy the `git@github.com:<your-user-name>/content.git` URL from the text field in the box. If you didn't set up SSH authentication, copy the URL from the text field on the "HTTPS" tab instead, which should look like this: `https://github.com/<your-user-name>/content.git`.
-4.  Now open up the command line on your computer, and navigate into the directory you set up earlier to store your local git repo clones in using the cd command, e.g.
+3. If you set up SSH authentication as instructed above, click the "SSH" tab and copy the `git@github.com:<your-user-name>/content.git` URL from the text field in the box. If you didn't set up SSH authentication, copy the URL from the text field on the "HTTPS" tab instead, which should look like this: `https://github.com/<your-user-name>/content.git`.
+4. Now open up the command line on your computer, and navigate into the directory you set up earlier to store your local git repo clones in using the cd command, e.g.
 
     ```bash
     cd git
     ```
 
-5.  Clone your fork by entering a command with the following form:
+5. Clone your fork by entering a command with the following form:
 
     ```bash
     git clone the-url-you-copied
@@ -122,14 +122,14 @@ git remote add remote-name repo-you-want-to-point-to
 
 So, to add your remote:
 
-1.  Go to the github.com page for the main version of the repo (<https://github.com/mdn/content> in this example) and retrieve the SSH or HTTPS URL as appropriate, from the "Code" popup.
-2.  In your command line, `cd` into your content directory:
+1. Go to the github.com page for the main version of the repo (<https://github.com/mdn/content> in this example) and retrieve the SSH or HTTPS URL as appropriate, from the "Code" popup.
+2. In your command line, `cd` into your content directory:
 
     ```bash
     cd content
     ```
 
-3.  Now run a command along the following lines, replacing _remote-name_ and _repo-you-want-to-point-to_ as appropriate:
+3. Now run a command along the following lines, replacing _remote-name_ and _repo-you-want-to-point-to_ as appropriate:
 
     ```bash
     git remote add remote-name repo-you-want-to-point-to
@@ -173,7 +173,7 @@ Next up, you should update your main branch so that it contains the same content
 
 To update your repo:
 
-1.  First fetch the updated contents of your remote with the following command:
+1. First fetch the updated contents of your remote with the following command:
 
     ```bash
     git fetch remote-name
@@ -185,7 +185,7 @@ To update your repo:
     git fetch mozilla
     ```
 
-2.  Next, replace the contents of your main branch with the remote repo's main branch. There are many different ways you could do this, but I tend to use the `rebase` command, like this:
+2. Next, replace the contents of your main branch with the remote repo's main branch. There are many different ways you could do this, but I tend to use the `rebase` command, like this:
 
     ```bash
     git rebase remote-name/main-branch-name
@@ -197,7 +197,7 @@ To update your repo:
     git rebase mozilla/main
     ```
 
-3.  Finally, push those changes up to the remote version of your fork using:
+3. Finally, push those changes up to the remote version of your fork using:
 
     ```bash
     git push
@@ -211,19 +211,19 @@ Once you've got your main branch up to date in your fork, you must always create
 
 To create a new branch:
 
-1.  Go to your fork's page on github.com (i.e. mine is <https://github.com/chrisdavidmills/content>) and find the branch button at the top left hand corner of the file list, which should say "main" on it:
+1. Go to your fork's page on github.com (i.e. mine is <https://github.com/chrisdavidmills/content>) and find the branch button at the top left hand corner of the file list, which should say "main" on it:
 
     ![Button labeled main](branch-button.png)
 
-2.  Click on this, and you'll be presented with a list of branches and a text field that says "Find or create a branch…":
+2. Click on this, and you'll be presented with a list of branches and a text field that says "Find or create a branch…":
 
     ![menu showing list of branch names with a text box labeled find or create a branch](branch-menu.png)
 
-3.  If you enter part of an existing branch name in the text field, it will filter the list of branches against that string, allowing you to search for existing branches easily. However, we want to create a new branch. Enter a branch name that doesn't already exist (try something like test-branch) and the display will change to give you a button labelled "Create branch: test-branch from 'main'":
+3. If you enter part of an existing branch name in the text field, it will filter the list of branches against that string, allowing you to search for existing branches easily. However, we want to create a new branch. Enter a branch name that doesn't already exist (try something like test-branch) and the display will change to give you a button labelled "Create branch: test-branch from 'main'":
 
     ![menu showing a new branch name test-branch entered into a text box, with a create branch button below it](new-branch.png)
 
-4.  Once you are happy with your branch name, click on this button, and the display will update to show the branch name in the branch button:
+4. Once you are happy with your branch name, click on this button, and the display will update to show the branch name in the branch button:
 
     ![Button labeled test-branch](branch-button-new-branch.png)
 
@@ -240,9 +240,9 @@ The previous section taught you how to create a new branch in your fork, but it 
 
 To do this, go back to your terminal and, making sure you are inside the repo directory you are working with (`content` for this example):
 
-1.  Pull remote changes to your local clone by running the command `git pull`
-2.  You should get a message along the lines of `* [new branch] test-branch -> origin/test-branch`
-3.  To switch to your branch (meaning change over from "main", to work in that branch instead) run the command `git switch test-branch`
+1. Pull remote changes to your local clone by running the command `git pull`
+2. You should get a message along the lines of `* [new branch] test-branch -> origin/test-branch`
+3. To switch to your branch (meaning change over from "main", to work in that branch instead) run the command `git switch test-branch`
 
 If you were successful, git should tell you something like this:
 
@@ -268,8 +268,8 @@ At this point you are ready to make changes to the repo you are working on — t
 
 If you just want to follow along with this tutorial for example's sake, let's do something simple.
 
-1.  Go into the `content/README.md` file, and add a single letter into the top heading of the README.
-2.  Now go back to your command line and enter the `git status` command again. This time git should tell you something like this:
+1. Go into the `content/README.md` file, and add a single letter into the top heading of the README.
+2. Now go back to your command line and enter the `git status` command again. This time git should tell you something like this:
 
     ```plain
     Your branch is up to date with 'origin/test-branch'.
@@ -282,7 +282,7 @@ If you just want to follow along with this tutorial for example's sake, let's do
         no changes added to commit (use "git add" and/or "git commit -a")
     ```
 
-3.  So at this point it is telling you what files you have modified. The next stage is to "add" them, which means add them to a list of files that you want to commit to push up to the remote fork. To add this file to the commit list, type the following:
+3. So at this point it is telling you what files you have modified. The next stage is to "add" them, which means add them to a list of files that you want to commit to push up to the remote fork. To add this file to the commit list, type the following:
 
     ```bash
     git add README.md
@@ -290,7 +290,7 @@ If you just want to follow along with this tutorial for example's sake, let's do
 
     > **Note:** `README.md` is the path to the file you have changed, not just its name. If it were inside a subdirectory, you'd have to write the full path to the file.
 
-4.  If you run `git status` again, you'll now see this:
+4. If you run `git status` again, you'll now see this:
 
     ```plain
     On branch test-branch
@@ -301,7 +301,7 @@ If you just want to follow along with this tutorial for example's sake, let's do
             modified:   README.md
     ```
 
-5.  Git is telling us that `README.md` is now in our commit list. To include all the files in the commit list in a commit (a single set of changes that we will later try to send to the main branch), enter the following (the `-m` option is short for message"):
+5. Git is telling us that `README.md` is now in our commit list. To include all the files in the commit list in a commit (a single set of changes that we will later try to send to the main branch), enter the following (the `-m` option is short for message"):
 
     ```bash
     git commit -m 'my first commit'
@@ -316,7 +316,7 @@ If you just want to follow along with this tutorial for example's sake, let's do
 
     To show that it has registered that you've made a commit.
 
-6.  Run `git status` again, and you'll get this information:
+6. Run `git status` again, and you'll get this information:
 
     ```plain
     On branch test-branch
@@ -346,7 +346,7 @@ To github.com:chrisdavidmills/content.git
 
 At this point, go back to your remote fork's github.com page. You should see a message along the lines of "This branch is 1 commit ahead of mdn:main. " meaning that our fork's content has a content change (commit) in it that mozilla's "main" branch doesn't have.
 
-1.  To send our change up to the main copy of the repo, we need to create a pull request. This can be easily done using the "Compare & pull request" button that you should see up the top of the files list, once the branch has had a change pushed to it.
+1. To send our change up to the main copy of the repo, we need to create a pull request. This can be easily done using the "Compare & pull request" button that you should see up the top of the files list, once the branch has had a change pushed to it.
 
     ![Banner with text test branch had recent pushes, and a button labeled compare and pull request](compare-and-pull-request.png)
 
@@ -356,12 +356,12 @@ At this point, go back to your remote fork's github.com page. You should see a m
 
     > **Warning:** Only follow the rest of these steps if you have a real change to make to the repo! Please do not actually submit test PRs to our repos.
 
-2.  At this point, enter a useful title and description for your PR, saying exactly what it changed, why this is a good thing, and what related issue it fixed, if appropriate. Specifically, include a line saying `Fixes issue-url`. GitHub automatically renders this as a link to the issue number, e.g. `Fixes #1234` and, in addition, automatically closes the related issue once the pull request is merged.
-3.  Once you are ready to send your pull request, click the "Create pull request" button. This will cause your pull request (PR) to appear in the repo's [Pull requests list](https://github.com/mdn/content/pulls), where it'll be reviewed by our review teams, and hopefully merged into the main codebase.
+2. At this point, enter a useful title and description for your PR, saying exactly what it changed, why this is a good thing, and what related issue it fixed, if appropriate. Specifically, include a line saying `Fixes issue-url`. GitHub automatically renders this as a link to the issue number, e.g. `Fixes #1234` and, in addition, automatically closes the related issue once the pull request is merged.
+3. Once you are ready to send your pull request, click the "Create pull request" button. This will cause your pull request (PR) to appear in the repo's [Pull requests list](https://github.com/mdn/content/pulls), where it'll be reviewed by our review teams, and hopefully merged into the main codebase.
 
     If the review team has changes they want you to make, they'll tell you in comments in the pull request thread (you should receive an email notification to tell you this).
 
-4.  If you want to make further changes to the same pull request you've already submitted, you can do so by making more commits on the same local branch and then pushing them as explained previously. There is no need to create a completely new pull request. **Just make sure you are making them on the same branch as before**.
+4. If you want to make further changes to the same pull request you've already submitted, you can do so by making more commits on the same local branch and then pushing them as explained previously. There is no need to create a completely new pull request. **Just make sure you are making them on the same branch as before**.
 
 ## Troubleshooting
 
@@ -401,14 +401,14 @@ This will take it back to the state when the changes in that commit are not yet 
 
 At this point, there is not really any going back, or rewinding. Instead, you need to push another commit to reverse the effects of the one you want to get rid of. You could do this manually using some of the tools we've already given you above, but there is a built-in command that makes this easier — `git revert`. This can be used to automatically create a commit that reverts changes back to the point you specify.
 
-1.  At its simplest, you can run the following command to create a commit that will get your remote branch back to the state you were in before you started committing:
+1. At its simplest, you can run the following command to create a commit that will get your remote branch back to the state you were in before you started committing:
 
     ```bash
     git revert HEAD
     ```
 
-2.  This will result in a commit message file being opened up in your default text editor that you need to check to make sure you are happy with it. Close this, and git will finalize creating the commit.
-3.  Now you just need to push it:
+2. This will result in a commit message file being opened up in your default text editor that you need to check to make sure you are happy with it. Close this, and git will finalize creating the commit.
+3. Now you just need to push it:
 
     ```bash
     git push

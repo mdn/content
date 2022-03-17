@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Background
   - CSS Property
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.background-position-y
@@ -61,9 +60,9 @@ The `background-position-y` property is specified as one or more values, separat
 - `bottom`
   - : Aligns the bottom edge of the background image with the bottom edge of the background position layer.
 - {{cssxref("&lt;length&gt;")}}
-  - : The offset of the given background image's horizontal edge from the corresponding background position layer's top horizontal edge. (Some browsers allow assigning the bottom edge for offset).
+  - : The offset of the given background image's horizontal edge from the corresponding background position layer's top horizontal edge. (Some browsers allow assigning the bottom edge for offset).
 - {{cssxref("&lt;percentage&gt;")}}
-  - : The offset of the given background image's vertical position relative to the container. A value of 0% means that the top edge of the background image is aligned with the top edge of the container, and a value of 100% means that the *bottom* edge of the background image is aligned with the *bottom* edge of the container, thus a value of 50% vertically centers the background image.
+  - : The offset of the given background image's vertical position relative to the container. A value of 0% means that the top edge of the background image is aligned with the top edge of the container, and a value of 100% means that the *bottom* edge of the background image is aligned with the *bottom* edge of the container, thus a value of 50% vertically centers the background image.
 
 ## Formal definition
 
@@ -89,13 +88,13 @@ The following example shows a simple background image implementation, with backg
 
 ```css
 div {
-  width: 300px;
-  height: 300px;
-  background-color: skyblue;
-  background-image: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png);
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: bottom 10px;
+  width: 300px;
+  height: 300px;
+  background-color: skyblue;
+  background-image: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom 10px;
 }
 ```
 

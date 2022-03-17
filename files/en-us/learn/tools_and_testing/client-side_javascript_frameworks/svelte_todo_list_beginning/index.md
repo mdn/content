@@ -1,5 +1,5 @@
 ---
-title: Starting our Svelte Todo list app
+title: Starting our Svelte to-do list app
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning
 tags:
@@ -15,9 +15,9 @@ tags:
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-Now that we have a basic understanding of how things work in Svelte, we can start building our example app: a todo list. In this article we will first have a look at the desired functionality of our app, then we'll create a `Todos.svelte` component and put static markup and styles in place, leaving everything ready to start developing our To-Do list app features, which we'll go on to in subsequent articles.
+Now that we have a basic understanding of how things work in Svelte, we can start building our example app: a to-do list. In this article we will first have a look at the desired functionality of our app, and then we'll create a `Todos.svelte` component and put static markup and styles in place, leaving everything ready to start developing our to-do list app features, which we'll go on to in subsequent articles.
 
-We want our users to be able to browse, add and delete tasks, and also to mark them as complete. This will be the basic functionality that we'll be developing in this tutorial series, plus we'll look at some more advanced concepts along the way too.
+We want our users to be able to browse, add and delete tasks, and also to mark them as complete. This will be the basic functionality that we'll be developing in this tutorial series, and we'll look at some more advanced concepts along the way too.
 
 <table>
   <tbody>
@@ -55,7 +55,7 @@ We want our users to be able to browse, add and delete tasks, and also to mark t
 
 ### Git
 
-Clone the github repo (if you haven't already done it) with:
+Clone the GitHub repo (if you haven't already done it) with:
 
 ```bash
 git clone https://github.com/opensas/mdn-svelte-tutorial.git
@@ -81,44 +81,44 @@ To code along with us using the REPL, start at
 
 <https://svelte.dev/repl/b7b831ea3a354d3789cefbc31e2ca495?version=3.23.2>
 
-## Todo list app features
+## To-do list app features
 
-This is how our Todo list app wil look like once it's ready:
+This is what our to-do list app will look like once it's ready:
 
-![typical todo list app, with a title of 'what needs to be done', an input to enter more todos, and a list of todos with checkboxes](01-todo-list-app.png)
+![typical to-do list app, with a title of 'what needs to be done', an input to enter more to-dos, and a list of to-dos with checkboxes](01-todo-list-app.png)
 
 Using this UI our user will be able to:
 
-- Browse their tasks.
-- Mark tasks as completed/pending without deleting them.
-- Remove tasks.
-- Add new tasks.
-- Filter tasks by status: all tasks, active tasks, or completed tasks.
-- Edit tasks.
-- Mark all tasks as active/completed.
-- Remove all completed tasks.
+- Browse their tasks
+- Mark tasks as completed/pending without deleting them
+- Remove tasks
+- Add new tasks
+- Filter tasks by status: all tasks, active tasks, or completed tasks
+- Edit tasks
+- Mark all tasks as active/completed
+- Remove all completed tasks
 
 ## Building our first component
 
-Let's create a `Todos.svelte` component — this will contain our list of todos.
+Let's create a `Todos.svelte` component. This will contain our list of to-dos.
 
-1.  Create a new folder — `src/components`.
+1. Create a new folder — `src/components`.
 
-    > **Note:** you can put your components anywhere inside the `src` folder, but the `components` folder is a recognized convention to follow, allowing you to find your components easily.
+    > **Note:** You can put your components anywhere inside the `src` folder, but the `components` folder is a recognized convention to follow, allowing you to find your components easily.
 
-2.  Create a file named `src/components/Todos.svelte` with the following content:
-
-    ```html
-    <h1>Svelte To-Do list</h1>
-    ```
-
-3.  Change the `title` element in `public/index.html` to contain the text _Svelte To-do list_:
+2. Create a file named `src/components/Todos.svelte` with the following content:
 
     ```html
-    <title>Svelte To-Do list</title>
+    <h1>Svelte to-do list</h1>
     ```
 
-4.  Open `src/App.svelte` and replace its contents with the following:
+3. Change the `title` element in `public/index.html` to contain the text _Svelte to-do list_:
+
+    ```html
+    <title>Svelte to-do list</title>
+    ```
+
+4. Open `src/App.svelte` and replace its contents with the following:
 
     ```html
     <script>
@@ -128,7 +128,7 @@ Let's create a `Todos.svelte` component — this will contain our list of todos.
     <Todos />
     ```
 
-5.  In development mode, Svelte will issue a warning in the browser console when specifying a prop that doesn't exist in the component; in this case we have a `name` prop being specified when we instantiate the `App` component inside `src/main.js`, which isn't used inside `App`. The console should currently give you a message along the lines of "\<App> was created with unknown prop 'name'". To get rid of this, remove the `name` prop from `src/main.js`; it should now look like so:
+5. In development mode, Svelte will issue a warning in the browser console when specifying a prop that doesn't exist in the component; in this case we have a `name` prop being specified when we instantiate the `App` component inside `src/main.js`, which isn't used inside `App`. The console should currently give you a message along the lines of "\<App> was created with unknown prop 'name'". To get rid of this, remove the `name` prop from `src/main.js`; it should now look like so:
 
     ```js
     import App from './App.svelte'
@@ -273,21 +273,21 @@ For the moment we will start with a static markup representation of our app, so 
 
 Check the rendered out again, and you'll see something like this:
 
-![A todo list app, but unstyled, with a title of `what needs to be done`, inputs, checkboxes, etc.](03-unstyled-todo-app.png)
+![A to-do list app, but unstyled, with a title of `what needs to be done`, inputs, checkboxes, etc.](03-unstyled-todo-app.png)
 
-The HTML markup above is not very nicely styled and it's also functionally useless. Nevertheless, let's have a look at the markup and see how it relates to our desired features:
+The HTML markup above is not very nicely styled and it's also functionally useless. Nevertheless, let's have a look at the markup and see how it relates to our desired features:
 
-- A label and a text box for entering new tasks.
-- Three buttons to filter by task status.
-- A label showing the total number of tasks and the completed tasks.
-- An unordered list, which holds a list item for each task.
-- When the task is being edited, the list item has an input and two button to cancel or save modifications.
-- If the task is not being edited, there's a checkbox to set the completed status, and two buttons to edit or delete the task.
-- Finally there are two buttons to check/uncheck all task and to remove completed tasks.
+- A label and a text box for entering new tasks
+- Three buttons to filter by task status
+- A label showing the total number of tasks and the completed tasks
+- An unordered list, which holds a list item for each task
+- When the task is being edited, the list item has an input and two button to cancel or save modifications
+- If the task is not being edited, there's a checkbox to set the completed status, and two buttons to edit or delete the task
+- Finally there are two buttons to check/uncheck all task and to remove completed tasks
 
 In subsequent articles we'll get all these features working, and more besides.
 
-### Accessibility features of the todo list
+### Accessibility features of the to-do list
 
 You may notice some unusual attributes here. For example:
 
@@ -309,7 +309,7 @@ Further down, you can find the following `<ul>` element:
 <ul role="list" className="todo-list stack-large" aria-labelledby="list-heading">
 ```
 
-The `role` attribute helps assistive technology explain what kind of semantic value an element has — or what its purpose is. A `<ul>` is treated like a list by default, but the styles we're about to add will break that functionality. This role will restore the "list" meaning to the `<ul>`  element. If you want to learn more about why this is necessary, you can check out Scott O'Hara’s article, “Fixing Lists”.
+The `role` attribute helps assistive technology explain what kind of semantic value an element has — or what its purpose is. A `<ul>` is treated like a list by default, but the styles we're about to add will break that functionality. This role will restore the "list" meaning to the `<ul>` element. If you want to learn more about why this is necessary, you can check out Scott O'Hara's article "Fixing Lists".
 
 The `aria-labelledby` attribute tells assistive technologies that we're treating our `<h2>` with an `id` of `list-heading` as the label that describes the purpose of the list beneath it. Making this association gives the list a more informative context, which could help screen reader users better understand the purpose of it.
 
@@ -356,7 +356,7 @@ You can tell Svelte to ignore this warning for the next block of markup with a [
 
 > **Note:** With VSCode you can automatically add this ignore comment by clicking on the _Quick fix..._ link or pressing <kbd>Ctrl</kbd> + <kbd>.</kbd>.
 
-If you want to globally disable this warning you can add this `onwarn` handler to your `rollup.config.js` file inside the configuration for the `Svelte` plugin, like this:
+If you want to globally disable this warning, you can add this `onwarn` handler to your `rollup.config.js` file inside the configuration for the `Svelte` plugin, like this:
 
 ```js
 plugins: [
@@ -381,15 +381,15 @@ plugins: [
 ]
 ```
 
-By design, these warnings are implemented in the compiler itself, and not as a plug-in that you may choose to add to your project. The idea is to check for a11y issues in your markup by default and let you opt-out of specific warnings.
+By design, these warnings are implemented in the compiler itself, and not as a plug-in that you may choose to add to your project. The idea is to check for a11y issues in your markup by default and let you opt out of specific warnings.
 
-> **Note:** you should only disable these warnings if you have good reasons to do so, for example while building a quick prototype. It's important to be a good web citizen and make your pages accessible to the broadest possible userbase.
+> **Note:** You should only disable these warnings if you have good reasons to do so, for example while building a quick prototype. It's important to be a good web citizen and make your pages accessible to the broadest possible userbase.
 
 The accessibility rules checked by Svelte are taken from [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#supported-rules), a plugin for eslint that provides static checks for many accessibility rules on JSX elements. Svelte aims to implement all of them in its compiler, and most of them have already been ported to Svelte. On GitHub you can see [which accessibility checks are still missing](https://github.com/sveltejs/svelte/issues/820). You can check the meaning of each rule by clicking on its link.
 
 ## Styling our markup
 
-Let's make the todo list look a little better. Replace the contents of the file `public/global.css` with the following:
+Let's make the to-do list look a little better. Replace the contents of the file `public/global.css` with the following:
 
 ```css
 /* RESETS */
@@ -694,7 +694,7 @@ body {
 
 With our markup styled, everything now looks better:
 
-![Our todo list app, styled, with a title of 'what needs to be done', an input to enter more todos, and a list of todos with checkboxes](05-styled-todo-app.png)
+![Our to-do list app, styled, with a title of 'what needs to be done', an input to enter more to-dos, and a list of to-dos with checkboxes](05-styled-todo-app.png)
 
 ## The code so far
 
@@ -722,7 +722,7 @@ To see the current state of the code in a REPL, visit:
 
 ## Summary
 
-With our markup and styling in place our Todo list app is starting to take shape, and we have everything ready so that we can start to focus on the features we have to implement.
+With our markup and styling in place, our to-do list app is starting to take shape, and we have everything ready so that we can start to focus on the features we have to implement.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
@@ -733,7 +733,7 @@ With our markup and styling in place our Todo list app is starting to take shape
 - React
 
   - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+  - [Beginning our React to-do list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
   - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
   - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
   - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
@@ -757,14 +757,14 @@ With our markup and styling in place our Todo list app is starting to take shape
   - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
   - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
   - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+  - [Vue conditional rendering: editing existing to-dos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
   - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
   - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
 
 - Svelte
 
   - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+  - [Starting our Svelte to-do list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
   - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
   - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
   - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
@@ -775,7 +775,7 @@ With our markup and styling in place our Todo list app is starting to take shape
 - Angular
 
   - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+  - [Beginning our Angular to-do list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
   - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
   - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
   - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)

@@ -42,7 +42,7 @@ BiquadFilterNode.getFrequencyResponse(frequencyArray, magResponseOutput, phaseRe
     is the sample rate of the {{domxref("AudioContext")}}), the corresponding value in
     this array is {{jsxref("NaN")}}. These are unitless values.
 - `phaseResponseOutput`
-  - : A {{jsxref("Float32Array")}} to receive the computed phase response values in
+  - : A {{jsxref("Float32Array")}} to receive the computed phase response values in
     radians for each frequency value in the input `frequencyArray`. For any
     frequency in `frequencyArray` whose value is outside the range 0.0 to
     `sampleRate`/2 (where {{domxref("BaseAudioContext/sampleRate", "sampleRate")}}
@@ -95,7 +95,7 @@ var freqResponseOutput = document.querySelector('.freq-response-output');
 
 Finally, after creating our biquad filter, we use `getFrequencyResponse()`
 to generate the response data and put it in our arrays, then loop through each data set
-and output  them in a human-readable list at the bottom of the page:
+and output  them in a human-readable list at the bottom of the page:
 
 ```js
 var biquadFilter = audioCtx.createBiquadFilter();

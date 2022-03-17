@@ -278,7 +278,7 @@ Finally, CSS declaration blocks are paired with _selectors_ to produce _CSS rule
 
 Setting CSS properties to specific values is the primary way of defining layout and styling for a document. The CSS engine calculates which declarations apply to every single element of a page.
 
-> **Warning:** CSS properties and values are case-sensitive. The property and value in each pair are separated by a colon. (`:`)
+CSS properties and values are case-insensitive. The property and value in a property-value pair are separated by a colon (`:`).
 
 **Look up different values of properties listed below. Write CSS rules that apply styling to different HTML elements:**
 
@@ -566,8 +566,8 @@ It's useful to understand how the browser uses HTML and CSS to display a webpage
 
 ## In this module
 
-1.  [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
-3.  How CSS is structured
-4.  [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [Using your new knowledge](/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+1. [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
+3. How CSS is structured
+4. [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [Using your new knowledge](/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

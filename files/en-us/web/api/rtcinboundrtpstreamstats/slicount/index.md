@@ -25,7 +25,7 @@ browser-compat: api.RTCInboundRtpStreamStats.sliCount
 The **`sliCount`** property of the
 {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates how many **Slice
 Loss Indication** (**SLI**) packets the
-{{domxref("RTCRtpReceiver")}} for which this object provdes statistics sent to the
+{{domxref("RTCRtpReceiver")}} for which this object provides statistics sent to the
 remote {{domxref("RTCRtpSender")}}.
 
 An SLI packet is used by a decoder to let

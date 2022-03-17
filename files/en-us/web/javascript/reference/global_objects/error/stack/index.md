@@ -17,11 +17,11 @@ The non-standard **`stack`** property of {{jsxref("Error")}} objects offer a tra
 
 Each step will be separated by a newline, with the first part of the line being the function name (if not a call from the global scope), then by an at (@) sign, the file location (except when the function is the error constructor as the error is being thrown), a colon, and, if there is a file location, the line number. (Note that the {{jsxref("Error")}} object also possesses the `fileName`, `lineNumber` and `columnNumber` properties for retrieving these from the error thrown (but only the error, and not its trace).)
 
-Note that this is the format used by Firefox. There is no standard formatting. However, Safari 6+ and Opera 12- use a very similar format. Browsers using the V8 JavaScript engine (such as Chrome, Opera 15+, Android Browser) and IE10+, on the other hand, uses a different format (see [the archived MSDN error.stack docs](https://web.archive.org/web/20140210004225/https://msdn.microsoft.com/en-us/library/windows/apps/hh699850.aspx)).
+Note that this is the format used by Firefox. There is no standard formatting. However, Safari 6+ and Opera 12- use a very similar format. Browsers using the V8 JavaScript engine (such as Chrome, Opera 15+, Android Browser) and IE10+, on the other hand, uses a different format (see [the archived MSDN error.stack docs](https://web.archive.org/web/20140210004225/https://msdn.microsoft.com/library/windows/apps/hh699850.aspx)).
 
 **Argument values in the stack**: Prior to Firefox 14, the function name would be followed by the argument values converted to string in parentheses immediately before the at (`@`) sign. While an object (or array, etc.) would appear in the converted form `"[object Object]"`, and as such could not be evaluated back into the actual objects, scalar values could be retrieved (though it may be — it is still possible in Firefox 14 — easier to use `arguments.callee.caller.arguments`, as could the function name be retrieved by `arguments.callee.caller.name`). `"undefined"` is listed as `"(void 0)"`. Note that if string arguments were passed in with values such as `"@"`, `"("`, `")"` (or if in file names), you could not easily rely on these for breaking the line into its component parts. Thus, in Firefox 14 and later this is less of an issue.
 
-Different browsers set this value at different times. For example, Firefox sets it when creating an {{jsxref("Error")}} object, while PhantomJS sets it only when throwing the {{jsxref("Error")}}, and [archived MSDN docs](https://web.archive.org/web/20140210004225/https://msdn.microsoft.com/en-us/library/windows/apps/hh699850.aspx) also seem to match the PhantomJS implementation.
+Different browsers set this value at different times. For example, Firefox sets it when creating an {{jsxref("Error")}} object, while PhantomJS sets it only when throwing the {{jsxref("Error")}}, and [archived MSDN docs](https://web.archive.org/web/20140210004225/https://msdn.microsoft.com/library/windows/apps/hh699850.aspx) also seem to match the PhantomJS implementation.
 
 ## Examples
 
@@ -122,5 +122,5 @@ Not part of any standard.
 
 - [Components.stack](/en-US/docs/Components.stack)
 - External projects: [TraceKit](https://github.com/csnover/TraceKit/) and [javascript-stacktrace](https://github.com/eriwen/javascript-stacktrace)
-- MSDN: [archived error.stack docs](https://web.archive.org/web/20140210004225/https://msdn.microsoft.com/en-us/library/windows/apps/hh699850.aspx)
+- MSDN: [archived error.stack docs](https://web.archive.org/web/20140210004225/https://msdn.microsoft.com/library/windows/apps/hh699850.aspx)
 - [Overview of the V8 JavaScript stack trace API](https://github.com/v8/v8/wiki/Stack%20Trace%20API)

@@ -25,7 +25,6 @@ Avoid including controls whose operation requires arrow keys used for toolbar na
 
 If any of the otherwise interactive elements within the toolbar are temporarily disabled, consider letting them remain focusable so screen reader users can be made aware of their presence.
 
-
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation)
@@ -41,15 +40,14 @@ Implement focus management so the keyboard tab sequence includes one stop for th
 - <kbd>Tab</kbd> and <kbd>Shift + Tab</kbd>
   - : Move focus into and out of the toolbar. When focus moves into a toolbar:
 
-    * If focus is moving into the toolbar for the first time, focus is set on the first control that is not disabled.
-    * If the toolbar has previously contained focus, focus is optionally set on the control that last had focus. Otherwise, it is set on the first control that is not disabled.
+    - If focus is moving into the toolbar for the first time, focus is set on the first control that is not disabled.
+    - If the toolbar has previously contained focus, focus is optionally set on the control that last had focus. Otherwise, it is set on the first control that is not disabled.
 
 - <kbd>Home</kbd> (Optional)
   - : Moves focus to first element.
 
 - <kbd>End</kbd> (Optional)
   - : Moves focus to last element.
-
 
 #### Horizontal toolbar
 
@@ -93,8 +91,6 @@ Avoid including controls whose operation requires arrow keys used for toolbar na
 
 If any of the otherwise interactive elements within the toolbar are disabled, consider letting them remain focusable so screen reader users can be made aware of their presence.
 
-
-
 ## Specifications
 
 | Specification                                                                                                                    | Status                                           |
@@ -102,11 +98,10 @@ If any of the otherwise interactive elements within the toolbar are disabled, co
 | {{SpecName("ARIA","#toolbar","ARIA: toolbar role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#toolbar","toolbar role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
-
 ## See Also
 
 - [The CSS `:focus` pseudoclass](/en-US/docs/Web/CSS/:focus)
-- [The CSS `:focus-within` pseudclass](/en-US/docs/Web/CSS/:focus-within)
+- [The CSS `:focus-within` pseudoclass](/en-US/docs/Web/CSS/:focus-within)
 
 <section id="Quick_links">
 

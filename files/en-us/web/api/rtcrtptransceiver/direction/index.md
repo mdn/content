@@ -106,7 +106,9 @@ by each of those methods. The SDP contains an a-line which specifies the directi
 For example, if the `direction` is specified as `"sendrecv"`, the
 corresponding SDP a-line is:
 
-    a=sendrecv
+```
+a=sendrecv
+```
 
 ## Specifications
 

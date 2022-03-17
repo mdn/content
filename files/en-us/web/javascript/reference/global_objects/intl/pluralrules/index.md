@@ -55,12 +55,7 @@ new Intl.PluralRules('ar-EG').select(18);
 // → 'many'
 ```
 
-
 ### Using locales
-
-## Polyfill
-
-[formatjs Intl.PluralRules polyfill](https://formatjs.io/docs/polyfills/intl-pluralrules)
 
 ## Specifications
 
@@ -73,3 +68,4 @@ new Intl.PluralRules('ar-EG').select(18);
 ## See also
 
 - {{jsxref("Intl")}}
+- [A polyfill of `Intl.PluralRules` in FormatJS](https://formatjs.io/docs/polyfills/intl-pluralrules)

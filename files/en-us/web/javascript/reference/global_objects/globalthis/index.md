@@ -21,7 +21,7 @@ The global **`globalThis`** property contains the global `this` value, which is 
 
 ## Description
 
-Historically, accessing the global object has required different syntax in different JavaScript environments. On the web you can use {{domxref("Window.window", "window")}}, {{domxref("Window.self", "self")}}, or {{domxref("Window.frames", "frames")}} - but in [Web Workers](/en-US/docs/Web/API/Worker) only `self` will work. In Node.js none of these work, and you must instead use `global`.
+Historically, accessing the global object has required different syntax in different JavaScript environments. On the web you can use {{domxref("Window.window", "window")}}, {{domxref("Window.self", "self")}}, or {{domxref("Window.frames", "frames")}} - but in [Web Workers](/en-US/docs/Web/API/Worker) only `self` will work. In Node.js none of these work, and you must instead use `global`.
 The `this` keyword could be used inside functions running in non–strict mode, but `this` will be `undefined` in Modules and inside functions running in strict mode. You can also use `Function('return this')()`, but environments that disable {{jsxref("Global_Objects/eval", "eval()")}}, like {{Glossary("CSP")}} in browsers, prevent use of {{jsxref("Function")}} in this way.
 
 The `globalThis` property provides a standard way of accessing the global `this` value (and hence the global object itself) across environments. Unlike similar properties such as `window` and `self`, it's guaranteed to work in window and non-window contexts. In this way, you can access the global object in a consistent manner without having to know which environment the code is being run in. To help you remember the name, just remember that in global scope the `this` value is `globalThis`.
@@ -73,5 +73,5 @@ if (typeof globalThis.setTimeout !== 'function') {
 
 ## See also
 
-- A polyfill of `globalThis` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-globalthis)
+- [Polyfill of `globalThis` in `core-js`](https://github.com/zloirock/core-js#ecmascript-globalthis)
 - {{jsxref("Operators/this", "this")}}

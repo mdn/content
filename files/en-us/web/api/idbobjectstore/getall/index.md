@@ -15,7 +15,7 @@ browser-compat: api.IDBObjectStore.getAll
 {{ APIRef("IndexedDB") }}
 
 The **`getAll()`** method of the
-{{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object
+{{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object
 containing all objects in the object store matching the specified parameter or all
 objects in the store if no parameters are given.
 
@@ -29,9 +29,9 @@ This method produces the same result for:
 
 To tell these situations apart, you either call
 
-1.  the {{domxref("IDBObjectStore.openCursor","openCursor()")}} method with the same
+1. the {{domxref("IDBObjectStore.openCursor","openCursor()")}} method with the same
     key. That method provides a cursor if the record exists, and no cursor if it does not.
-2.  the {{domxref("IDBObjectStore.count","count()")}} method with the same key, which
+2. the {{domxref("IDBObjectStore.count","count()")}} method with the same key, which
     will return 1 if the row exists and 0 if it doesn't.
 
 ## Syntax
@@ -44,17 +44,17 @@ var request = objectStore.getAll(query, count);
 
 ### Parameters
 
-- *query* {{optional_inline}}
+- *query* {{optional_inline}}
   - : A key or {{domxref("IDBKeyRange")}} to be queried. If nothing is passed, this will
     default to a key range that selects all the records in this object store.
-- *count* {{optional_inline}}
+- *count* {{optional_inline}}
   - : Specifies the number of values to return if more than one is found. If it is lower
     than `0` or greater than `2^32 - 1` a
     {{jsxref("TypeError")}} exception will be thrown.
 
 ### Return value
 
-An {{domxref("IDBRequest")}} object on which subsequent events related to this
+An {{domxref("IDBRequest")}} object on which subsequent events related to this
 operation are fired.
 
 ### Exceptions
@@ -64,7 +64,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `TransactionInactiveError` {{domxref("DOMException")}}
   - : Thrown if this {{domxref("IDBObjectStore")}}'s transaction is inactive.
 - `DataError` {{domxref("DOMException")}}
-  - : Thrown if key or key range provided contains an invalid key or is null.
+  - : Thrown if key or key range provided contains an invalid key or is null.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("IDBObjectStore")}} has been deleted or removed.
 - {{jsxref("TypeError")}}

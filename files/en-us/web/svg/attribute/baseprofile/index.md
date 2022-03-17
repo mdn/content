@@ -16,7 +16,7 @@ Each SVG profile should define the text that is appropriate for this attribute.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("svg")}}
+- {{SVGElement("svg")}}
 
 ## Context notes
 

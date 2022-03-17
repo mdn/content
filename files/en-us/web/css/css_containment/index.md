@@ -7,9 +7,10 @@ tags:
   - Guide
   - Paint
   - Performance
+spec-urls: https://drafts.csswg.org/css-contain/#contain-property
 ---
 {{CSSRef}}
-The aim of the CSS Containment specification is to improve performance of web pages by allowing developers to isolate a subtree of the page from the rest of the page. If the browser knows that a part of the page is independent, rendering can be optimized and performance improved. The specification defines a single CSS property {{cssxref("contain")}}. This document describes the basic aims of the specification.
+The aim of the CSS Containment specification is to improve performance of web pages by allowing developers to isolate a subtree of the page from the rest of the page. If the browser knows that a part of the page is independent, rendering can be optimized and performance improved. The specification defines a single CSS property {{cssxref("contain")}}. This document describes the basic aims of the specification.
 
 ## Basic example
 
@@ -57,14 +58,14 @@ article {
 }
 ```
 
-Layout is normally scoped to the entire document, which means that if you move one element the entire document needs to be treated as if things could have moved anywhere. By using `contain: layout` you can tell the browser it only needs to check this element — everything inside the element is scoped to that element and does not affect the rest of the page, and the containing box establishes an independent formatting context.
+Layout is normally scoped to the entire document, which means that if you move one element the entire document needs to be treated as if things could have moved anywhere. By using `contain: layout` you can tell the browser it only needs to check this element — everything inside the element is scoped to that element and does not affect the rest of the page, and the containing box establishes an independent formatting context.
 
 In addition:
 
 - `float` layout will be performed independently.
 - Margins won't collapse across a layout containment boundary
 - The layout container will be a containing block for `absolute`/`fixed` position descendants.
-- The containing box creates a stacking context, therefore {{cssxref("z-index")}} can be used.
+- The containing box creates a stacking context, therefore {{cssxref("z-index")}} can be used.
 
 ### Paint containment
 
@@ -100,7 +101,7 @@ article {
 
 Despite the name, style containment does not provide scoped styles such as you would get with the [Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM). The main use case is to prevent situations where a [CSS Counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) could be changed in an element, which could then affect the rest of the tree.
 
-Using `contain: style` would ensure that the {{cssxref("counter-increment")}} and {{cssxref("counter-set")}} properties created new counters scoped to that subtree only.
+Using `contain: style` would ensure that the {{cssxref("counter-increment")}} and {{cssxref("counter-set")}} properties created new counters scoped to that subtree only.
 
 > **Note:** `style` containment is "at-risk" in the spec and may not be supported everywhere (it's not currently supported in Firefox).
 
@@ -129,9 +130,7 @@ contain: strict style;
 
 ## Specifications
 
-| Specification                                                                            | Status                                   | Comment               |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------- |
-| {{SpecName('CSS Containment 2', '#contain-property', 'contain')}} | {{Spec2('CSS Containment 2')}} | Added `style` keyword |
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -142,4 +141,4 @@ contain: strict style;
 ## External resources
 
 - [An Introduction to CSS Containment](https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/)
-- [Everything You Need to Know About the CSS `will-change` Property](https://dev.opera.com/articles/css-will-change-property)
+- [Everything You Need to Know About the CSS `will-change` Property](https://dev.opera.com/articles/css-will-change-property)

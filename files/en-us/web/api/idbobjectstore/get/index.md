@@ -14,8 +14,8 @@ browser-compat: api.IDBObjectStore.get
 {{ APIRef("IndexedDB") }}
 
 The **`get()`** method of the {{domxref("IDBObjectStore")}}
-interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread,
-returns the object store selected by the specified key. This is for retrieving
+interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread,
+returns the object store selected by the specified key. This is for retrieving
 specific records from an object store.
 
 If a value is successfully found, then a structured clone of it is created and set as
@@ -40,7 +40,7 @@ var request = objectStore.get(key);
 
 ### Return value
 
-An {{domxref("IDBRequest")}} object on which subsequent events related to this
+An {{domxref("IDBRequest")}} object on which subsequent events related to this
 operation are fired.
 
 ### Exceptions
@@ -50,17 +50,17 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `TransactionInactiveError` {{domxref("DOMException")}}
   - : Thrown if this {{domxref("IDBObjectStore")}}'s transaction is inactive.
 - `DataError` {{domxref("DOMException")}}
-  - : Thrown if key or key range provided contains an invalid key.
+  - : Thrown if key or key range provided contains an invalid key.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("IDBObjectStore")}} has been deleted or removed.
 
 ## Example
 
 In the following code snippet, we open a read/write transaction on our database and get
-one specific record from object store using `get()` — a sample record with
+one specific record from object store using `get()` — a sample record with
 the key "Walk dog". Once this data object is retrieved, you could then update it using
-normal JavaScript, then put it back into the database using  a
-{{domxref("IDBObjectStore.put")}} operation. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app
+normal JavaScript, then put it back into the database using  a
+{{domxref("IDBObjectStore.put")}} operation. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app
 ([view
 example live](https://mdn.github.io/to-do-notifications/).)
 
@@ -69,10 +69,10 @@ example live](https://mdn.github.io/to-do-notifications/).)
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+  note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable.
-  // This is used a lot below
+  // This is used a lot below
   db = DBOpenRequest.result;
 
   // Run the getData() function to get the data from the database
@@ -85,7 +85,7 @@ function getData() {
 
   // report on the success of the transaction completing, when everything is done
   transaction.oncomplete = function(event) {
-    note.innerHTML += '<li>Transaction completed.</li>';
+    note.innerHTML += '<li>Transaction completed.</li>';
   };
 
   transaction.onerror = function(event) {
@@ -98,12 +98,12 @@ function getData() {
   // Make a request to get a record by key from the object store
   var objectStoreRequest = objectStore.get("Walk dog");
 
-  objectStoreRequest.onsuccess = function(event) {
-    // report the success of our request
-    note.innerHTML += '<li>Request successful.</li>';
+  objectStoreRequest.onsuccess = function(event) {
+    // report the success of our request
+    note.innerHTML += '<li>Request successful.</li>';
 
     var myRecord = objectStoreRequest.result;
-  };
+  };
 
 };
 ```

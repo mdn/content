@@ -29,9 +29,9 @@ This interface extends the following {{domxref("PerformanceEntry")}} properties 
 - {{domxref("PerformanceEntry.startTime")}}{{readonlyInline}}
   - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} for the time a resource fetch started. This value is equivalent to {{domxref("PerformanceResourceTiming.fetchStart")}}.
 - {{domxref("PerformanceEntry.duration")}}{{readonlyInline}}
-  - : Returns a {{domxref("DOMHighResTimeStamp","timestamp")}} that is the difference between the {{domxref("PerformanceResourceTiming.responseEnd","responseEnd")}} and the {{domxref("PerformanceEntry.startTime","startTime")}} properties.
+  - : Returns a {{domxref("DOMHighResTimeStamp","timestamp")}} that is the difference between the {{domxref("PerformanceResourceTiming.responseEnd","responseEnd")}} and the {{domxref("PerformanceEntry.startTime","startTime")}} properties.
 
-The interface also supports the following properties which are listed in the order in which they are recorded for the fetching of a single resource. An alphabetical listing is shown in the navigation, at left.
+The interface also supports the following properties which are listed in the order in which they are recorded for the fetching of a single resource. An alphabetical listing is shown in the navigation, at left.
 
 - {{domxref('PerformanceResourceTiming.initiatorType')}}{{readonlyInline}}
   - : A {{domxref("DOMString","string")}} representing the _type_ of resource that initiated the performance entry, as specified in {{domxref('PerformanceResourceTiming.initiatorType')}}.

@@ -25,7 +25,7 @@ A number representing the current time in milliseconds, or `null`.
 ## Reduced time precision
 
 To offer protection against timing attacks and fingerprinting, the precision of `playbackEvent.currentTime` might get rounded depending on browser settings.
-In Firefox, the `privacy.reduceTimerPrecision`  preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
+In Firefox, the `privacy.reduceTimerPrecision`  preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
 
 ```js
 // reduced time precision (2ms) in Firefox 60

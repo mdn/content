@@ -13,7 +13,7 @@ tags:
   - write
 browser-compat: api.BluetoothCharacteristicProperties.write
 ---
-{{draft}}{{securecontext_header}}{{APIRef("Bluetooth API")}}
+{{securecontext_header}}{{APIRef("Bluetooth API")}}
 
 The **`write`** read-only property of the
 {{domxref("BluetoothCharacteristicProperties")}} interface returns a

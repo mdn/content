@@ -7,6 +7,7 @@ tags:
   - Input
   - Reference
   - Select
+spec-urls: https://html.spec.whatwg.org/multipage/input.html#attr-input-size
 ---
 
 {{HTMLSidebar}}
@@ -17,7 +18,7 @@ The `size` attribute has no impact on constraint validation.
 
 ## Examples
 
-By adding `size` on some input types, the width of the input can be controlled. Adding size on a select changes the height, definining how many options are visible in the closed state.
+By adding `size` on some input types, the width of the input can be controlled. Adding size on a select changes the height, defining how many options are visible in the closed state.
 
 ```html
 <label for="fruit">Enter a fruit</label> <input type="text" size="15" id="fruit">
@@ -44,10 +45,7 @@ By adding `size` on some input types, the width of the input can be controlled. 
 
 ## Specifications
 
-| Specification                                                               | Status                   |
-| --------------------------------------------------------------------------- | ------------------------ |
-| {{SpecName('HTML WHATWG', 'input.html#attr-input-size', 'size attribute')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5.1', 'input.html#attr-size-accept', 'size attribute')}}    | {{Spec2('HTML5.1')}}     |
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -77,7 +77,7 @@ The contact information provided by an `<address>` element's contents can take w
       </td>
     </tr>
     <tr>
-      <th scope="row">Implicit ARIA role</th>
+      <th scope="row">Implicit ARIA role</th>
       <td>
         <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
           >No corresponding role</a
@@ -101,7 +101,7 @@ The contact information provided by an `<address>` element's contents can take w
 
 ## Attributes
 
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes "HTML/Global attributes").
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 ## Usage notes
 

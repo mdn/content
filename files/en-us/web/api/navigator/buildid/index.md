@@ -25,7 +25,9 @@ A string representing the build identifier of the application. The build ID is i
 
 ## Example
 
-    console.log(navigator.buildID);
+```js
+console.log(navigator.buildID);
+```
 
 ## Specifications
 

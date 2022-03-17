@@ -14,7 +14,7 @@ tags:
   - values()
 browser-compat: api.CSSUnparsedValue.values
 ---
-{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSUnparsedValue.values()`** method
 returns a new _array iterator_ object that contains the

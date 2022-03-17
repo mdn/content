@@ -6,12 +6,11 @@ tags:
   - AnimationEvent
   - CSSOM
   - Constructor
-  - Experimental
   - Reference
   - Web Animations
 browser-compat: api.AnimationEvent.AnimationEvent
 ---
-{{APIRef("Web Animations")}}{{SeeCompatTable}}
+{{APIRef("Web Animations API")}}
 
 The **`AnimationEvent()`** constructor returns a newly created
 {{domxref("AnimationEvent")}}, representing an event in relation with an animation.
@@ -46,7 +45,7 @@ _The `AnimationEvent()` constructor also inherits arguments from
     `(-1 * delay)`. It defaults to `0.0`.
 - `pseudoElement` {{optional_inline}}
   - : Is a {{domxref("DOMString")}}, starting with `"::"`, containing the name
-    of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements "Learn more about pseudo-elements.") the animation runs on.
+    of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on.
     If the animation doesn't run on a pseudo-element but on the element itself, specify an
     empty string: `""`. It defaults to `""`.
 

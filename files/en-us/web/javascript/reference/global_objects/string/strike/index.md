@@ -56,7 +56,7 @@ console.log(worldString.strike()); // <strike>Hello, world</strike>
 
 ## See also
 
-- A polyfill of `String.prototype.strike` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.strike` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.blink()")}}
 - {{jsxref("String.prototype.bold()")}}
 - {{jsxref("String.prototype.italics()")}}

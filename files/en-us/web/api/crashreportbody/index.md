@@ -16,6 +16,8 @@ The `CrashReportBody` interface of the [Reporting API](/en-US/docs/Web/API/Repor
 
 A crash report is generated when a document becomes unusable due to the browser (or one of its processes) crashing. For security reasons, no details of the crash are communicated in the body except for a general crash reason.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 - `reason`

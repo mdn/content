@@ -21,7 +21,6 @@ The `measure` can be retrieved using any of the {{domxref("Performance")}} inter
 {{domxref("Performance.getEntriesByName","getEntriesByName()")}} or
 {{domxref("Performance.getEntriesByType","getEntriesByType()")}}).
 
-
 {{AvailableInWorkers}}
 
 ## Syntax
@@ -43,15 +42,15 @@ If only `measureName` is specified, the start timestamp is set to zero, and the 
 - `MeasureOptions` {{optional_inline}}
   - : An object that may contain all measure options (the `startMark` and `endMark` may be specified in this object or as their own arguments):
 
-      - `detail`
-        - : Arbitrary metadata to be included in the measure.
-      - `start`
-        - : Timestamp {{domxref("DOMHighResTimeStamp")}} to be used as the start time, or {{domxref("DOMString")}} to be used as start mark.
+    - `detail`
+      - : Arbitrary metadata to be included in the measure.
+    - `start`
+      - : Timestamp {{domxref("DOMHighResTimeStamp")}} to be used as the start time, or {{domxref("DOMString")}} to be used as start mark.
           If this represents the name of a start mark, then it is defined in the same way as `startMark` (in other words it must be the name of an existing mark or a {{domxref("PerformanceTiming")}} property).
-      - `duration`
-        - : Duration between the start and end mark times ({{domxref("DOMHighResTimeStamp")}}).
-      - `end`
-        - : Timestamp ({{domxref("DOMHighResTimeStamp")}}) to be used as the end time, or {{domxref("DOMString")}} to be used as end mark.
+    - `duration`
+      - : Duration between the start and end mark times ({{domxref("DOMHighResTimeStamp")}}).
+    - `end`
+      - : Timestamp ({{domxref("DOMHighResTimeStamp")}}) to be used as the end time, or {{domxref("DOMString")}} to be used as end mark.
           If this represents the name of an end mark, then it is defined in the same way as `endMark` (in other words it must be the name of an existing mark or a {{domxref("PerformanceTiming")}} property).
 
 - `startMark` {{optional_inline}}
@@ -63,7 +62,6 @@ If only `measureName` is specified, the start timestamp is set to zero, and the 
   - : A {{domxref("DOMString")}} representing the name of the measure's ending mark.
     This may also be the name of a {{domxref("PerformanceTiming")}} property.
     Specifying a name that does not represent an existing {{domxref('PerformanceMark')}} or {{domxref("PerformanceTiming")}} raises a `SyntaxError` {{domxref("DOMException")}}.
-
 
 ### Return value
 
@@ -92,7 +90,7 @@ The returned _measure_ will have the following property values:
 
 - `TypeError` {{domxref("DOMException")}}
   - : This can be thrown in any case where the start, end or duration might be ambiguous:
-    
+
     - Both `endMark` and `MeasureOptions` are specified.
     - `MeasureOptions` is specified without either `start` and `end` members.
     - `MeasureOptions` is specified with all of `start`, `end`, and `duration` members (which might then be inconsistent).
@@ -110,7 +108,6 @@ The returned _measure_ will have the following property values:
 
 - `RangeError`
   - : The `MeasureOptions.detail` value is non-`null` and memory cannot be allocated during serialization using the HTML "StructuredSerialize" algorithm.
-
 
 ## Example
 

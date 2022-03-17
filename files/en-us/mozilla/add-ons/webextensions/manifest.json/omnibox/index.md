@@ -24,7 +24,7 @@ browser-compat: webextensions.manifest.omnibox
       <td>
         <pre class="brush: json">
 "omnibox": {
-  "keyword": "mdn"
+  "keyword": "mdn"
 }</pre
         >
       </td>

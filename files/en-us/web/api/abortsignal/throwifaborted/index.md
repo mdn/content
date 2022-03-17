@@ -15,7 +15,8 @@ browser-compat: api.AbortSignal.throwIfAborted
 
 The **`throwIfAborted()`** method throws the signal's abort {{domxref("AbortSignal.reason", "reason")}} if the signal has been aborted; otherwise it does nothing.
 
-An API that needs to support aborting can accept an {{domxref("AbortSignal")}} object and use **`throwIfAborted()`** to test and throw when the `abort` event is signalled.
+An API that needs to support aborting can accept an {{domxref("AbortSignal")}} object and use `throwIfAborted()` to test and throw when the [`abort`](/en-US/docs/Web/API/AbortSignal/abort_event) event is signalled.
+
 This method can also be used to abort operations at particular points in code, rather than passing to functions that take a signal.
 
 ## Syntax
@@ -26,18 +27,17 @@ throwIfAborted()
 
 ### Return value
 
-{{jsxref('undefined')}}
-
+None.
 
 ## Examples
 
 The examples below come from the specification.
 
-### Aborting a polling operation 
+### Aborting a polling operation
 
 This example demonstrates how you can use `throwIfAborted()` to abort a polling operation.
 
-Consider an aysnchronous `waitForCondition()` function that is called with another asynchronous function "`func`", a target value "`targetValue`, and an `AbortSignal`.
+Consider an asynchronous `waitForCondition()` function that is called with another asynchronous function "`func`", a target value "`targetValue`, and an `AbortSignal`.
 The method compares the result of `func` with `targetValue` in a loop, returning when they match.
 
 ```js
@@ -105,7 +105,7 @@ controller.abort();
 ```
 
 APIs that do not return promises might react in a similar manner.
-In some cases it may make sense to absorb the signal. 
+In some cases it may make sense to absorb the signal.
 
 ## Specifications
 

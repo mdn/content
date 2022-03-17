@@ -7,6 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-backgrounds/
 ---
 {{CSSRef}}
 
@@ -80,8 +81,4 @@ These styles can also decorate borders with lines or images, and make them squar
 
 ## Specifications
 
-| Specification                                | Status                                   | Comment |
-| -------------------------------------------- | ---------------------------------------- | ------- |
-| {{ SpecName('CSS3 Backgrounds') }} | {{ Spec2('CSS3 Backgrounds') }} |         |
-| {{SpecName('CSS2.1', 'box.html')}} | {{Spec2('CSS2.1')}}                 |         |
-| {{SpecName('CSS1', '#border')}}     | {{Spec2('CSS1')}}                 |         |
+{{Specifications}}

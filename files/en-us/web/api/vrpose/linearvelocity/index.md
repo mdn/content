@@ -3,7 +3,7 @@ title: VRPose.linearVelocity
 slug: Web/API/VRPose/linearVelocity
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -21,13 +21,7 @@ The **`linearVelocity`** read-only property of the {{domxref("VRPose")}} interfa
 
 In other words, the current velocity at which the sensor is moving along the `x`, `y`, and `z` axes.
 
-## Syntax
-
-```js
-var myLinearVelocity = VRPose.linearVelocity;
-```
-
-### Value
+## Value
 
 A {{jsxref("Float32Array")}}, or `null` if the VR sensor is not able to provide linear velocity data.
 

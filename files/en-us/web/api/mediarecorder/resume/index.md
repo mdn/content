@@ -21,12 +21,12 @@ paused.
 When the `resume()` method is invoked, the browser queues a task that runs
 the following steps:
 
-1.  If {{domxref("MediaRecorder.state")}} is "inactive", raise a DOM
+1. If {{domxref("MediaRecorder.state")}} is "inactive", raise a DOM
     `InvalidState` error and terminate these steps. If
     {{domxref("MediaRecorder.state")}} is not "inactive", continue to the next step.
-2.  Set {{domxref("MediaRecorder.state")}} to "recording".
-3.  Continue gathering data into the current {{domxref("Blob")}}.
-4.  Raise a `resume` event.
+2. Set {{domxref("MediaRecorder.state")}} to "recording".
+3. Continue gathering data into the current {{domxref("Blob")}}.
+4. Raise a `resume` event.
 
 ## Syntax
 
@@ -37,7 +37,7 @@ MediaRecorder.resume()
 ### Errors
 
 An `InvalidState` error is raised if the `resume()` method is
-called while the `MediaRecorder` object’s {{domxref("MediaRecorder.state")}}
+called while the `MediaRecorder` object's {{domxref("MediaRecorder.state")}}
 is "inactive" — the recording cannot be resumed if it is not already paused; if
 {{domxref("MediaRecorder.state")}} is already "recording", `resume()` has no
 effect.

@@ -122,9 +122,9 @@ To display text _with_ notational meaning, use {{ MathMLElement("mi") }} and {{ 
 ```html
 <math>
 
-  <mtext> Theorem of Pythagoras </mtext>
+  <mtext> Theorem of Pythagoras </mtext>
 
-  <mtext> /* comment here */ </mtext>
+  <mtext> /* comment here */ </mtext>
 
 </math>
 ```

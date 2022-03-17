@@ -11,7 +11,7 @@ tags:
   - close
 browser-compat: api.ReadableByteStreamController.close
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`close()`** method of the
 {{domxref("ReadableByteStreamController")}} interface closes the associated stream.

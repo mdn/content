@@ -201,7 +201,7 @@ You can also use the older promise-based approach to work with payments, using t
 functions on the promise returned by `show()`:
 
 ```js
-function processsPayment() {
+function processPayment() {
   const payRequest = new PaymentRequest(methodData, details, options);
 
   payRequest.onshippingaddresschange = ev => ev.updateWith(checkAddress(payRequest));

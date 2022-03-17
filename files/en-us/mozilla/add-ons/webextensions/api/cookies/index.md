@@ -55,8 +55,8 @@ To use this API, an add-on must specify the "cookies" [API permission](/en-US/do
 
 Trackers use third-party cookies, that is, cookies set by a website other than the one you are on, to identify the websites you visit. For example:
 
-1.  You visit `a-shopping-site.com`, which uses `ad-tracker.com` to deliver its adverts on the web. `ad-tracker.com` sets a cookie associated with the `ad-tracker.com` domain. While you are on `a-shopping-site.com`, `ad-tracker.com` receives information about the products you browse.
-2.  You now visit `a-news-site.com` that uses `ad-tracker.com` to deliver adverts. `ad-tracker.com` read its cookie and use the information collected from `a-shopping-site.com` to decide which adverts to display to you.
+1. You visit `a-shopping-site.com`, which uses `ad-tracker.com` to deliver its adverts on the web. `ad-tracker.com` sets a cookie associated with the `ad-tracker.com` domain. While you are on `a-shopping-site.com`, `ad-tracker.com` receives information about the products you browse.
+2. You now visit `a-news-site.com` that uses `ad-tracker.com` to deliver adverts. `ad-tracker.com` read its cookie and use the information collected from `a-shopping-site.com` to decide which adverts to display to you.
 
 Firefox includes features to prevent tracking. These features separate cookies so that trackers cannot make an association between websites visited. So, in the preceding example, `ad-tracker.com` cannot see the cookie created on `a-news-site.com` when visiting `a-shopping-site.com`. The first iteration of this protection was first-party isolation which is now being superseded by [dynamic partitioning](/en-US/docs/Web/Privacy/State_Partitioning#dynamic_partitioning).
 

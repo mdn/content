@@ -23,8 +23,8 @@ You construct a regular expression in one of two ways:
 - Using a regular expression literal, which consists of a pattern enclosed between slashes, as follows:
 
   ```js
-    let re = /ab+c/;
-    ```
+  const re = /ab+c/;
+  ```
 
   Regular expression literals provide compilation of the regular expression when the script is loaded.
   If the regular expression remains constant, using this can improve performance.
@@ -32,8 +32,8 @@ You construct a regular expression in one of two ways:
 - Or calling the constructor function of the {{jsxref("RegExp")}} object, as follows:
 
   ```js
-    let re = new RegExp('ab+c');
-    ```
+  const re = new RegExp('ab+c');
+  ```
 
   Using the constructor function provides runtime compilation of the regular expression.
   Use the constructor function when you know the regular expression pattern will be changing, or you don't know the pattern and are getting it from another source, such as user input.
@@ -200,16 +200,16 @@ Once remembered, the substring can be recalled for other use. See [Groups and ra
 
 Regular expressions are used with the {{jsxref("RegExp")}} methods {{jsxref("RegExp/test", "test()")}} and {{jsxref("RegExp/exec", "exec()")}} and with the {{jsxref("String")}} methods {{jsxref("String/match", "match()")}}, {{jsxref("String/replace", "replace()")}}, {{jsxref("String/search", "search()")}}, and {{jsxref("String/split", "split()")}}.
 
-| Method                                                           | Description                                                                                                      |
-| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("RegExp.exec", "exec()")}}                 | Executes a search for a match in a string. It returns an array of information or `null` on a mismatch.           |
-| {{jsxref("RegExp.test", "test()")}}                 | Tests for a match in a string. It returns `true` or `false`.                                                     |
-| {{jsxref("String.match", "match()")}}                 | Returns an array containing all of the matches, including capturing groups, or `null` if no match is found.      |
-| {{jsxref("String.matchAll", "matchAll()")}}         | Returns an iterator containing all of the matches, including capturing groups.                                   |
-| {{jsxref("String.search", "search()")}}             | Tests for a match in a string. It returns the index of the match, or `-1` if the search fails.                   |
-| {{jsxref("String.replace", "replace()")}}         | Executes a search for a match in a string, and replaces the matched substring with a replacement substring.      |
+| Method                                          | Description                                                                                                      |
+| ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| {{jsxref("RegExp.exec", "exec()")}}             | Executes a search for a match in a string. It returns an array of information or `null` on a mismatch.           |
+| {{jsxref("RegExp.test", "test()")}}             | Tests for a match in a string. It returns `true` or `false`.                                                     |
+| {{jsxref("String.match", "match()")}}           | Returns an array containing all of the matches, including capturing groups, or `null` if no match is found.      |
+| {{jsxref("String.matchAll", "matchAll()")}}     | Returns an iterator containing all of the matches, including capturing groups.                                   |
+| {{jsxref("String.search", "search()")}}         | Tests for a match in a string. It returns the index of the match, or `-1` if the search fails.                   |
+| {{jsxref("String.replace", "replace()")}}       | Executes a search for a match in a string, and replaces the matched substring with a replacement substring.      |
 | {{jsxref("String.replaceAll", "replaceAll()")}} | Executes a search for all matches in a string, and replaces the matched substrings with a replacement substring. |
-| {{jsxref("String.split", "split()")}}                 | Uses a regular expression or a fixed string to break a string into an array of substrings.                       |
+| {{jsxref("String.split", "split()")}}           | Uses a regular expression or a fixed string to break a string into an array of substrings.                       |
 
 When you want to know whether a pattern is found in a string, use the `test()` or `search()` methods; for more information (but slower execution) use the `exec()` or `match()` methods.
 If you use `exec()` or `match()` and if the match succeeds, these methods return an array and update properties of the associated regular expression object and also of the predefined regular expression object, `RegExp`.
@@ -218,17 +218,17 @@ If the match fails, the `exec()` method returns `null` (which coerces to `false`
 In the following example, the script uses the `exec()` method to find a match in a string.
 
 ```js
-var myRe = /d(b+)d/g;
-var myArray = myRe.exec('cdbbdbsbz');
+const myRe = /d(b+)d/g;
+const myArray = myRe.exec('cdbbdbsbz');
 ```
 
 If you do not need to access the properties of the regular expression, an alternative way of creating `myArray` is with this script:
 
 ```js
-var myArray = /d(b+)d/g.exec('cdbbdbsbz');
-    // similar to "cdbbdbsbz".match(/d(b+)d/g); however,
-    // "cdbbdbsbz".match(/d(b+)d/g) outputs Array [ "dbbd" ], while
-    // /d(b+)d/g.exec('cdbbdbsbz') outputs Array [ 'dbbd', 'bb', index: 1, input: 'cdbbdbsbz' ].
+const myArray = /d(b+)d/g.exec('cdbbdbsbz');
+// similar to 'cdbbdbsbz'.match(/d(b+)d/g); however,
+// 'cdbbdbsbz'.match(/d(b+)d/g) outputs [ "dbbd" ]
+// while /d(b+)d/g.exec('cdbbdbsbz') outputs [ 'dbbd', 'bb', index: 1, input: 'cdbbdbsbz' ]
 ```
 
 (See [Using the global search flag with `exec()`](#using_the_global_search_flag_with_exec) for further info about the different behaviors.)
@@ -236,8 +236,8 @@ var myArray = /d(b+)d/g.exec('cdbbdbsbz');
 If you want to construct the regular expression from a string, yet another alternative is this script:
 
 ```js
-var myRe = new RegExp('d(b+)d', 'g');
-var myArray = myRe.exec('cdbbdbsbz');
+const myRe = new RegExp('d(b+)d', 'g');
+const myArray = myRe.exec('cdbbdbsbz');
 ```
 
 With these scripts, the match succeeds and returns the array and updates the properties shown in the following table.
@@ -301,9 +301,9 @@ For this reason, if you use this form without assigning it to a variable, you ca
 For example, assume you have this script:
 
 ```js
-var myRe = /d(b+)d/g;
-var myArray = myRe.exec('cdbbdbsbz');
-console.log('The value of lastIndex is ' + myRe.lastIndex);
+const myRe = /d(b+)d/g;
+const myArray = myRe.exec('cdbbdbsbz');
+console.log(`The value of lastIndex is ${myRe.lastIndex}`);
 
 // "The value of lastIndex is 5"
 ```
@@ -311,8 +311,8 @@ console.log('The value of lastIndex is ' + myRe.lastIndex);
 However, if you have this script:
 
 ```js
-var myArray = /d(b+)d/g.exec('cdbbdbsbz');
-console.log('The value of lastIndex is ' + /d(b+)d/g.lastIndex);
+const myArray = /d(b+)d/g.exec('cdbbdbsbz');
+console.log(`The value of lastIndex is ${/d(b+)d/g.lastIndex}`);
 
 // "The value of lastIndex is 0"
 ```
@@ -325,26 +325,26 @@ If you need to access the properties of a regular expression created with an obj
 Regular expressions have optional flags that allow for functionality like global searching and case-insensitive searching.
 These flags can be used separately or together in any order, and are included as part of the regular expression.
 
-| Flag | Description                                                                                                                                         | Corresponding property                                                                                 |
-| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| `d`  | Generate indices for substring matches.                                                                                                             | [`RegExp.prototype.hasIndices`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices) |
-| `g`  | Global search.                                                                                                                                      | [`RegExp.prototype.global`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global)         |
-| `i`  | Case-insensitive search.                                                                                                                            | [`RegExp.prototype.ignoreCase`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) |
-| `m`  | Multi-line search.                                                                                                                                  | [`RegExp.prototype.multiline`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline)   |
-| `s`  | Allows `.` to match newline characters.                                                                                                             | [`RegExp.prototype.dotAll`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll)         |
-| `u`  | "unicode"; treat a pattern as a sequence of unicode code points.                                                                                    | [`RegExp.prototype.unicode`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)       |
-| `y`  | Perform a "sticky" search that matches starting at the current position in the target string. See {{jsxref("RegExp.sticky", "sticky")}}. | [`RegExp.prototype.sticky`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky)         |
+| Flag | Description                                                                                                                              | Corresponding property                    |
+| ---- | ---------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| `d`  | Generate indices for substring matches.                                                                                                  | {{jsxref("RegExp.prototype.hasIndices")}} |
+| `g`  | Global search.                                                                                                                           | {{jsxref("RegExp.prototype.global")}}     |
+| `i`  | Case-insensitive search.                                                                                                                 | {{jsxref("RegExp.prototype.ignoreCase")}} |
+| `m`  | Multi-line search.                                                                                                                       | {{jsxref("RegExp.prototype.multiline")}}  |
+| `s`  | Allows `.` to match newline characters.                                                                                                  | {{jsxref("RegExp.prototype.dotAll")}}     |
+| `u`  | "unicode"; treat a pattern as a sequence of unicode code points.                                                                         | {{jsxref("RegExp.prototype.unicode")}}    |
+| `y`  | Perform a "sticky" search that matches starting at the current position in the target string. See {{jsxref("RegExp.sticky", "sticky")}}. | {{jsxref("RegExp.prototype.sticky")}}     |
 
 To include a flag with the regular expression, use this syntax:
 
 ```js
-var re = /pattern/flags;
+const re = /pattern/flags;
 ```
 
 or
 
 ```js
-var re = new RegExp('pattern', 'flags');
+const re = new RegExp('pattern', 'flags');
 ```
 
 Note that the flags are an integral part of a regular expression. They cannot be added or removed later.
@@ -352,9 +352,9 @@ Note that the flags are an integral part of a regular expression. They cannot be
 For example, `re = /\w+\s/g` creates a regular expression that looks for one or more characters followed by a space, and it looks for this combination throughout the string.
 
 ```js
-var re = /\w+\s/g;
-var str = 'fee fi fo fum';
-var myArray = str.match(re);
+const re = /\w+\s/g;
+const str = 'fee fi fo fum';
+const myArray = str.match(re);
 console.log(myArray);
 
 // ["fee ", "fi ", "fo "]
@@ -363,13 +363,13 @@ console.log(myArray);
 You could replace the line:
 
 ```js
-var re = /\w+\s/g;
+const re = /\w+\s/g;
 ```
 
 with:
 
 ```js
-var re = new RegExp('\\w+\\s', 'g');
+const re = new RegExp('\\w+\\s', 'g');
 ```
 
 and get the same result.
@@ -379,17 +379,22 @@ If the `m` flag is used, `^` and `$` match at the start or end of any line withi
 
 #### Using the global search flag with exec()
 
-The behavior associated with the `g` flag is different when the `.exec()` method is used.
-The roles of "class" and "argument" get reversed: In the case of `.match()`, the string class (or data type) owns the method and the regular expression is just an argument, while in the case of `.exec()`, it is the regular expression that owns the method, with the string being the argument.
-Contrast this _`str.match(re)`_ versus _`re.exec(str)`_.
-The `g` flag is used with the **`.exec()`** method to get iterative progression.
+{{jsxref("RegExp.prototype.exec()")}} method with the `g` flag returns each match and its position iteratively.
 
 ```js
-var xArray; while(xArray = re.exec(str)) console.log(xArray);
-// produces:
-// ["fee ", index: 0, input: "fee fi fo fum"]
-// ["fi ", index: 4, input: "fee fi fo fum"]
-// ["fo ", index: 7, input: "fee fi fo fum"]
+const str = 'fee fi fo fum';
+const re = /\w+\s/g;
+
+console.log(re.exec(str)); // ["fee ", index: 0, input: "fee fi fo fum"]
+console.log(re.exec(str)); // ["fi ", index: 4, input: "fee fi fo fum"]
+console.log(re.exec(str)); // ["fo ", index: 7, input: "fee fi fo fum"]
+console.log(re.exec(str)); // null
+```
+
+In contrast, {{jsxref("String.prototype.match()")}} method returns all matches at once, but without their position.
+
+```js
+console.log(str.match(re)); // ["fee ", "fi ", "fo "]
 ```
 
 ## Examples
@@ -416,8 +421,6 @@ The regular expression looks for:
 6. followed by four digits `\d{4}`
 7. followed by the end of the line of data: `$`
 
-The `click` event activated when the user presses <kbd>Enter</kbd> sets the value of `phoneInput.value`.
-
 #### HTML
 
 ```html
@@ -426,26 +429,36 @@ The `click` event activated when the user presses <kbd>Enter</kbd> sets the valu
   <br>
   The expected format is like ###-###-####.
 </p>
-<form action="#" onSubmit="return false">
+<form id="form">
   <input id="phone">
-    <button onClick="testInfo(document.querySelector('#phone'));">Check</button>
+  <button type="submit">Check</button>
 </form>
-<p id="out"></p>
+<p id="output"></p>
 ```
 
 #### JavaScript
 
 ```js
-var re = /^(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}$/;
+const form = document.querySelector('#form');
+const input = document.querySelector('#phone');
+const output = document.querySelector('#output');
+
+const re = /^(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}$/;
+
 function testInfo(phoneInput) {
-  var OK = re.exec(phoneInput.value);
-  var out = document.querySelector('#out');
-  if (!OK) {
-    out.textContent = `${phoneInput.value} isn't a phone number with area code!`;
+  const ok = re.exec(phoneInput.value);
+
+  if (!ok) {
+    output.textContent = `${phoneInput.value} isn't a phone number with area code!`;
   } else {
-    out.textContent = `Thanks, your phone number is ${OK[0]}`;
+    output.textContent = `Thanks, your phone number is ${ok[0]}`;
   }
-} 
+}
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  testInfo(input);
+});
 ```
 
 #### Result
@@ -458,6 +471,8 @@ function testInfo(phoneInput) {
   - : An online tool to learn, build, & test Regular Expressions.
 - [Regex tester](https://regex101.com/)
   - : An online regex builder/debugger
+- [Regex interactive tutorial](https://regexlearn.com/)
+  - : An online interactive tutorials, Cheatsheet, & Playground.
 - [Regex visualizer](https://extendsclass.com/regex-tester.html)
   - : An online visual regex tester.
 

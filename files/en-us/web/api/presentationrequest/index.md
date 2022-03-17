@@ -16,6 +16,8 @@ A `PresentationRequest` object is used to initiate or reconnect to a presentatio
 
 When a `PresentationRequest` is constructed, the given `urls` _MUST_ be used as the list of _presentation request URLs_ which are each a possible [presentation URL](https://www.w3.org/TR/presentation-api/#dfn-presentation-url) for the `PresentationRequest` instance.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("PresentationRequest.PresentationRequest","PresentationRequest()")}}
@@ -28,7 +30,7 @@ None
 ### Event handlers
 
 - {{domxref("PresentationRequest.onconnectionavailable")}}
-  - : Fires on a successful call to {{DOMxRef("PresentationRequest.start","PresentationRequest.start()")}} or {{DOMxRef("PresentationRequest.join","PresentationRequest.join()")}}. This method provides a object with a reference to the created or joined object.
+  - : Fires on a successful call to {{DOMxRef("PresentationRequest.start","PresentationRequest.start()")}} or {{DOMxRef("PresentationRequest.join","PresentationRequest.join()")}}. This method provides a object with a reference to the created or joined object.
 
 ## Methods
 

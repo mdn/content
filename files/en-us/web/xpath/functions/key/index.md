@@ -11,7 +11,9 @@ The `key` function returns a node-set of nodes that have the given value for the
 
 ### Syntax
 
-    key(keyname ,value )
+```
+key( keyname, value )
+```
 
 ### Arguments
 

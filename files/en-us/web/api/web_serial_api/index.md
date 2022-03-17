@@ -90,6 +90,10 @@ while (port.readable) {
 | ---------------------------------------- | ------------------------------------ | ------------------- |
 | {{SpecName('Web Serial API')}} | {{Spec2('Web Serial API')}} | Initial definition. |
 
+## Browser compatibility
+
+{{Compat("api.Serial")}}
+
 ## See also
 
 - [Read from and write to a serial port](https://web.dev/serial/)

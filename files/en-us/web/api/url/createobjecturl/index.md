@@ -16,7 +16,7 @@ browser-compat: api.URL.createObjectURL
 {{APIRef("URL API")}}
 
 The **`URL.createObjectURL()`** static
-method creates a {{domxref("DOMString")}} containing a URL representing the object
+method creates a {{domxref("DOMString")}} containing a URL representing the object
 given in the parameter.
 
 The URL lifetime is tied to the {{domxref("document")}}
@@ -86,7 +86,7 @@ support for doing this.
 
 ## See also
 
-- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications "Using files from web applications")
+- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
 - [Using
   object URLs to display images](/en-US/docs/Web/API/File/Using_files_from_web_applications#example_using_object_urls_to_display_images)
 - {{domxref("URL.revokeObjectURL()")}}

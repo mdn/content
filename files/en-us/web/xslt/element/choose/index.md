@@ -13,11 +13,13 @@ The `<xsl:choose>` element defines a choice among a number of alternatives. It b
 
 ### Syntax
 
-    <xsl:choose>
-        <xsl:when test="[whatever to test1]"></xsl:when>
-        <xsl:when test="[whatever to test2]"></xsl:when>
-        <xsl:otherwise></xsl:otherwise> [optional]
-    </xsl:choose>
+```xml
+<xsl:choose>
+  <xsl:when test="[whatever to test1]"></xsl:when>
+  <xsl:when test="[whatever to test2]"></xsl:when>
+  <xsl:otherwise></xsl:otherwise> [optional]
+</xsl:choose>
+```
 
 ### Required Attributes
 

@@ -18,7 +18,7 @@ The **`oncancel`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) for
 processing {{event("cancel")}} events sent to a {{HTMLElement("dialog")}} element.
 
-The `cancel` event fires when the user indicates a wish to dismiss a
+The `cancel` event fires when the user indicates a wish to dismiss a
 `<dialog>`. This event handler prevents the event from bubbling, so any
 parent handlers are not notified of the event.
 

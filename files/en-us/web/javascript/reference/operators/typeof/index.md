@@ -195,7 +195,7 @@ class newClass{};
 
 ### Exceptions
 
-All current browsers expose a non-standard host object [`document.all`](/en-US/docs/Web/API/Document/all "The Document interface's read-only all property returns an HTMLAllCollection rooted at the document node. In other words, it returns the entire contents of the page.")
+All current browsers expose a non-standard host object [`document.all`](/en-US/docs/Web/API/Document/all)
 with type `undefined`.
 
 ```js
@@ -209,12 +209,12 @@ standards as a "willful violation" of the original ECMA JavaScript standard.
 
 ### Real-world usage
 
-`typeof` is very useful, but it's not as versatile as might be required. For
-example, `typeof([])` , is `'object'`, as well as
-`typeof(new Date())`, `typeof(/abc/)`, etc.
+`typeof` is very useful, but it's not as versatile as might be required. For
+example, `typeof([])` , is `'object'`, as well as
+`typeof(new Date())`, `typeof(/abc/)`, etc.
 
-For greater specificity in checking types, a `typeof` wrapper for usage in
-production-level code would be as follows (provided `obj` exists):
+For greater specificity in checking types, a `typeof` wrapper for usage in
+production-level code would be as follows (provided `obj` exists):
 
 ```js
   function type(obj, showFullClass) {
@@ -237,8 +237,8 @@ production-level code would be as follows (provided `obj` exists):
   }
 ```
 
-For checking non-existent variables that would otherwise throw
-a {{JSxRef("ReferenceError")}}, use `typeof nonExistentVar === 'undefined'`.
+For checking non-existent variables that would otherwise throw
+a {{JSxRef("ReferenceError")}}, use `typeof nonExistentVar === 'undefined'`.
 
 ## Specifications
 

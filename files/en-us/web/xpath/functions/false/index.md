@@ -11,7 +11,9 @@ The `false` function returns boolean false.
 
 ### Syntax
 
-    false()
+```
+false()
+```
 
 ### Returns
 
@@ -21,9 +23,11 @@ Boolean `false`.
 
 This function is useful part of a comparison:
 
-    <xsl:if test="boolean((1 &gt; 2) = false())">
-     The expression evaluates as true
-    </xsl:if>
+```xml
+<xsl:if test="boolean((1 &gt; 2) = false())">
+  The expression evaluates as true
+</xsl:if>
+```
 
 ### Defined
 

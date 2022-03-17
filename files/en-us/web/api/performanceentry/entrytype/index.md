@@ -13,8 +13,8 @@ browser-compat: api.PerformanceEntry.entryType
 {{APIRef("Performance Timeline API")}}
 
 The **`entryType`** property returns
-a {{domxref("DOMString")}} representing the type of performance metric such as, for
-example, "`mark`". This property is read only.
+a {{domxref("DOMString")}} representing the type of performance metric such as, for
+example, "`mark`". This property is read only.
 
 {{AvailableInWorkers}}
 
@@ -26,8 +26,8 @@ var type = entry.entryType;
 
 ### Return value
 
-The return value depends on the subtype of the `PerformanceEntry` object and
-affects the value of the {{domxref('PerformanceEntry.name')}} property as shown by the
+The return value depends on the subtype of the `PerformanceEntry` object and
+affects the value of the {{domxref('PerformanceEntry.name')}} property as shown by the
 table below.
 
 ### Performance entry type names
@@ -70,7 +70,7 @@ table below.
       <td>{{domxref('PerformanceMark')}}</td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        The name used when the mark was created by calling
+        The name used when the mark was created by calling
         {{domxref("Performance.mark","performance.mark()")}}.
       </td>
     </tr>
@@ -119,7 +119,7 @@ function run_PerformanceEntry() {
 
   // Check the entryType of all the "begin" entries
   var entriesNamedBegin = performance.getEntriesByName("begin");
-	for (var i=0; i < entriesNamedBegin.length; i++) {
+  for (var i=0; i < entriesNamedBegin.length; i++) {
       var typeOfEntry = entriesNamedBegin[i].entryType;
       console.log("Entry is type: " + typeOfEntry);
   }

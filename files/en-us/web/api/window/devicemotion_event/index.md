@@ -12,37 +12,45 @@ browser-compat: api.Window.devicemotion_event
 
 The `devicemotion` event is fired at a regular interval and indicates the amount of physical force of acceleration the device is receiving at that time. It also provides information about the rate of rotation, if available.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("DeviceMotionEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("Window.ondevicemotion")}}</td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('devicemotion', event => { });
+
+ondevicemotion = event => { };
+```
+
+## Event type
+
+An {{domxref("DeviceMotionEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("DeviceMotionEvent")}}
+
+## Event properties
+
+- {{DOMxRef("DeviceMotionEvent.acceleration")}}{{ReadOnlyInline}}
+  - : An object giving the acceleration of the device on the three axis: x, y, and z. Acceleration is expressed in [m/s²](https://en.wikipedia.org/wiki/Meter_per_second_squared).
+- {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}}{{ReadOnlyInline}}
+  - : An object giving the acceleration of the device on the three axis: x, y, and z with the effect of gravity. Acceleration is expressed in [m/s²](https://en.wikipedia.org/wiki/Meter_per_second_squared).
+- {{DOMxRef("DeviceMotionEvent.rotationRate")}}{{ReadOnlyInline}}
+  - : An object giving the rate of change of the device's orientation on the three orientation axis: alpha, beta and gamma. Rotation rate is expressed in degrees per seconds.
+- {{DOMxRef("DeviceMotionEvent.interval")}}{{ReadOnlyInline}}
+  - : A number representing the interval of time, in milliseconds, at which data is obtained from the device.
 
 ## Examples
 
 ```js
 function handleMotionEvent(event) {
 
-    var x = event.accelerationIncludingGravity.x;
-    var y = event.accelerationIncludingGravity.y;
-    var z = event.accelerationIncludingGravity.z;
+    var x = event.accelerationIncludingGravity.x;
+    var y = event.accelerationIncludingGravity.y;
+    var z = event.accelerationIncludingGravity.z;
 
-    // Do something awesome.
+    // Do something awesome.
 }
 
 window.addEventListener("devicemotion", handleMotionEvent, true);

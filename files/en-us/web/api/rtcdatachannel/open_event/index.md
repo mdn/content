@@ -4,7 +4,7 @@ slug: Web/API/RTCDataChannel/open_event
 tags:
   - API
   - Connectivity
-  - Connetion
+  - Connection
   - Data Channel
   - Networking
   - RTCDataChannel

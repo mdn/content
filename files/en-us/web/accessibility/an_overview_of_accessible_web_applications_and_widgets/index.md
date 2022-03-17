@@ -8,7 +8,7 @@ tags:
   - Web apps
   - Widget
 ---
-Most JavaScript libraries offer a library of client-side widgets that mimic the behavior of familiar desktop interfaces. Sliders, menu bars, file list views, and more can be built with a combination of JavaScript, CSS, and HTML. Since the HTML4 specification doesn't provide built-in tags that semantically describe these kinds of widgets, developers typically resort to using generic elements such as {{HTMLElement('div')}} and {{HTMLElement('span')}}. While this results in a widget that looks like its desktop counterpart, there usually isn't enough semantic information in the markup to be usable by an assistive technology.
+Most JavaScript libraries offer a library of client-side widgets that mimic the behavior of familiar desktop interfaces. Sliders, menu bars, file list views, and more can be built with a combination of JavaScript, CSS, and HTML. Since the HTML4 specification doesn't provide built-in tags that semantically describe these kinds of widgets, developers typically resort to using generic elements such as {{HTMLElement('div')}} and {{HTMLElement('span')}}. While this results in a widget that looks like its desktop counterpart, there usually isn't enough semantic information in the markup to be usable by an assistive technology.
 
 ## The problem
 
@@ -19,21 +19,21 @@ _Example 1: Markup for a tabs widget built without ARIA labeling. There's no inf
 ```html
 <!-- This is a tabs widget. How would you know, looking only at the markup? -->
 <ol>
-  <li id="ch1Tab">
-    <a href="#ch1Panel">Chapter 1</a>
-  </li>
-  <li id="ch2Tab">
-    <a href="#ch2Panel">Chapter 2</a>
-  </li>
-  <li id="quizTab">
-    <a href="#quizPanel">Quiz</a>
-  </li>
+  <li id="ch1Tab">
+    <a href="#ch1Panel">Chapter 1</a>
+  </li>
+  <li id="ch2Tab">
+    <a href="#ch2Panel">Chapter 2</a>
+  </li>
+  <li id="quizTab">
+    <a href="#quizPanel">Quiz</a>
+  </li>
 </ol>
 
 <div>
-  <div id="ch1Panel">Chapter 1 content goes here</div>
-  <div id="ch2Panel">Chapter 2 content goes here</div>
-  <div id="quizPanel">Quiz content goes here</div>
+  <div id="ch1Panel">Chapter 1 content goes here</div>
+  <div id="ch2Panel">Chapter 2 content goes here</div>
+  <div id="quizPanel">Quiz content goes here</div>
 </div>
 ```
 
@@ -47,7 +47,7 @@ _Example 2: How the tabs widget might be styled visually. Users might recognize 
 
 The ARIA specification is split up into three different types of attributes: roles, states, and properties. Roles describe widgets that aren't otherwise available in HTML 4, such as sliders, menu bars, tabs, and dialogs. Properties describe characteristics of these widgets, such as if they are draggable, have a required element, or have a popup associated with them. States describe the current interaction state of an element, informing the assistive technology if it is busy, disabled, selected, or hidden.
 
-ARIA attributes are interpreted automatically by the browser and translated to the operating system's native accessibility APIs. So an element with role="slider" will be controlled in the same way as a native slider is controlled on the operating system.
+ARIA attributes are interpreted automatically by the browser and translated to the operating system's native accessibility APIs. So an element with role="slider" will be controlled in the same way as a native slider is controlled on the operating system.
 
 This provides a much more consistent user experience than was possible in the previous generation of web applications, since assistive technology users can apply all of their knowledge of how desktop applications work when they are using web-based applications.
 
@@ -57,26 +57,26 @@ _Example 3: Markup for the tabs widget with ARIA attributes added._
 <!-- Now *these* are Tabs! -->
 <!-- We've added role attributes to describe the tab list and each tab. -->
 <ol role="tablist">
-  <li id="ch1Tab" role="tab">
-    <a href="#ch1Panel">Chapter 1</a>
-  </li>
-  <li id="ch2Tab" role="tab">
-    <a href="#ch2Panel">Chapter 2</a>
-  </li>
-  <li id="quizTab" role="tab">
-    <a href="#quizPanel">Quiz</a>
-  </li>
+  <li id="ch1Tab" role="tab">
+    <a href="#ch1Panel">Chapter 1</a>
+  </li>
+  <li id="ch2Tab" role="tab">
+    <a href="#ch2Panel">Chapter 2</a>
+  </li>
+  <li id="quizTab" role="tab">
+    <a href="#quizPanel">Quiz</a>
+  </li>
 </ol>
 
 <div>
-  <!-- Notice the role and aria-labelledby attributes we've added to describe these panels. -->
-  <div id="ch1Panel" role="tabpanel" aria-labelledby="ch1Tab">Chapter 1 content goes here</div>
-  <div id="ch2Panel" role="tabpanel" aria-labelledby="ch2Tab">Chapter 2 content goes here</div>
-  <div id="quizPanel" role="tabpanel" aria-labelledby="quizTab">Quiz content goes here</div>
+  <!-- Notice the role and aria-labelledby attributes we've added to describe these panels. -->
+  <div id="ch1Panel" role="tabpanel" aria-labelledby="ch1Tab">Chapter 1 content goes here</div>
+  <div id="ch2Panel" role="tabpanel" aria-labelledby="ch2Tab">Chapter 2 content goes here</div>
+  <div id="quizPanel" role="tabpanel" aria-labelledby="quizTab">Quiz content goes here</div>
 </div>
 ```
 
-ARIA is [well supported](https://caniuse.com/#feat=wai-aria) by all major browsers, including Firefox, Safari, Opera, Chrome, and Internet Explorer, and many assistive technologies.
+ARIA is [well supported](https://caniuse.com/#feat=wai-aria) by all major browsers, including Firefox, Safari, Opera, Chrome, and Internet Explorer, and many assistive technologies.
 
 ### Presentational changes
 
@@ -84,7 +84,7 @@ Dynamic presentational changes include using CSS to change the appearance of con
 
 #### State changes
 
-ARIA provides attributes for declaring the current state of a UI widget. Examples include (but are certainly not limited to):
+ARIA provides attributes for declaring the current state of a UI widget. Examples include (but are certainly not limited to):
 
 - **`aria-checked`**: indicates the state of a checkbox or radio button
 - **`aria-disabled`**: indicates that an element is visible, but not editable or otherwise operable
@@ -98,11 +98,11 @@ Developers should use ARIA states to indicate the state of UI widget elements an
 
 When content visibility is changed (i.e., an element is hidden or shown), developers should change the **`aria-hidden`** property value. The techniques described above should be used to declare CSS to visually hide an element using `display:none`.
 
-Here is an example of a tooltip that uses **`aria-hidden`** to control the visibility of the tooltip. The example shows a simple web form with tooltips containing instructions associated with the entry fields.
+Here is an example of a tooltip that uses **`aria-hidden`** to control the visibility of the tooltip. The example shows a simple web form with tooltips containing instructions associated with the entry fields.
 
-In this example, the HTML for the tooltip has the form shown in Example 2a. Line 9 sets the **`aria-hidden`** state to `true`.
+In this example, the HTML for the tooltip has the form shown in Example 2a. Line 9 sets the **`aria-hidden`** state to `true`.
 
-_Example 2a. HTML for a tooltip_
+_Example 2a. HTML for a tooltip_
 
 ```html
 <div class="text">
@@ -141,9 +141,9 @@ var showTip = function(el) {
 
 ARIA allows developers to declare a semantic role for an element that otherwise offers incorrect or no semantics. The **`role`** of an element should not change. Instead, remove the original element and replace it with an element with the new **`role`**.
 
-For example, consider an "inline edit" widget: a component that allows users to edit a piece of text in place, without switching contexts. This component has a "view" mode, in which the text is not editable, but is activatable, and an "edit" mode, in which the text can be edited. A developer might be tempted to implement the "view" mode using a read-only text  {{ HTMLElement("input") }} element and setting its ARIA **`role`** to `button`, then switching to "edit" mode by making the element writable and removing the **`role`** attribute in "edit" mode (since {{ HTMLElement("input") }} elements have their own role semantics).
+For example, consider an "inline edit" widget: a component that allows users to edit a piece of text in place, without switching contexts. This component has a "view" mode, in which the text is not editable, but is activatable, and an "edit" mode, in which the text can be edited. A developer might be tempted to implement the "view" mode using a read-only text {{ HTMLElement("input") }} element and setting its ARIA **`role`** to `button`, then switching to "edit" mode by making the element writable and removing the **`role`** attribute in "edit" mode (since {{ HTMLElement("input") }} elements have their own role semantics).
 
-Do not do this. Instead, implement the "view" mode using a different element altogether, such as a {{ HTMLElement("div") }} or {{ HTMLElement("span") }} with a **`role`** of `button`, and the « edit » mode using a text  {{ HTMLElement("input") }} element.
+Do not do this. Instead, implement the "view" mode using a different element altogether, such as a {{ HTMLElement("div") }} or {{ HTMLElement("span") }} with a **`role`** of `button`, and the "edit" mode using a text {{ HTMLElement("input") }} element.
 
 ### Asynchronous content changes
 
@@ -168,6 +168,6 @@ So, for the Tabs widget example above, the user should be able to navigate into 
 ## See also
 
 - [ARIA](/en-US/docs/Web/Accessibility/ARIA)
-- [Writing Keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
+- [Writing Keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
 - [WAI-ARIA Specification](https://www.w3.org/TR/wai-aria-1.1/)
-- [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/)
+- [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/)

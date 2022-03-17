@@ -35,8 +35,8 @@ The boolean value `true` if the given value is an integer. Otherwise `false`.
 
 If the target value is an integer, return `true`, otherwise return
 `false`. If the value is {{jsxref("NaN")}} or {{jsxref("Infinity")}}, return
-`false`. The method will also return `true` for floating point
-numbers that can be represented as integer.
+`false`. The method will also return `true` for floating point
+numbers that can be represented as integer.
 
 ## Examples
 
@@ -74,5 +74,5 @@ Number.isInteger(5.0000000000000001); // true
 
 ## See also
 
-- A polyfill of `Number.isInteger` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [Polyfill of `Number.isInteger` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
 - The {{jsxref("Number")}} object it belongs to.

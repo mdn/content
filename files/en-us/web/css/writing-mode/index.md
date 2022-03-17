@@ -54,7 +54,7 @@ The `writing-mode` property is specified as one of the values listed below. The 
   - : Deprecated except for SVG1 documents. For CSS, use `horizontal-tb` instead.
 - `tb` {{deprecated_inline}}
   - : Deprecated except for SVG1 documents. For CSS, use `vertical-lr` instead.
-- `tb-lr` {{deprecated_inline}}
+- `tb-lr` {{deprecated_inline}}
   - : Deprecated except for SVG1 documents. For CSS, use `vertical-lr` instead.
 - `tb-rl` {{deprecated_inline}}
   - : Deprecated except for SVG1 documents. For CSS, use `vertical-rl` instead.

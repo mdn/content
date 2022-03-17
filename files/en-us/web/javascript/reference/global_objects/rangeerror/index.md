@@ -14,12 +14,12 @@ The **`RangeError`** object indicates an error when a value is not in the set or
 
 ## Description
 
-A `RangeError` is thrown when trying to pass a value as an argument to a function that does not allow a range that includes the value.
+A `RangeError` is thrown when trying to pass a value as an argument to a function that does not allow a range that includes the value.
 
 This can be encountered when:
 
-- passing a value that is not one of the allowed string values to {{jsxref("String.prototype.normalize()")}}, or
-- when attempting to create an array of an illegal length with the {{jsxref("Array")}} constructor, or
+- passing a value that is not one of the allowed string values to {{jsxref("String.prototype.normalize()")}}, or
+- when attempting to create an array of an illegal length with the {{jsxref("Array")}} constructor, or
 - when passing bad values to the numeric methods {{jsxref("Number.prototype.toExponential()")}}, {{jsxref("Number.prototype.toFixed()")}} or {{jsxref("Number.prototype.toPrecision()")}}.
 
 ## Constructor
@@ -30,7 +30,7 @@ This can be encountered when:
 ## Instance properties
 
 - {{jsxref("Error.prototype.message", "RangeError.prototype.message")}}
-  - : Error message. Although ECMA-262 specifies that {{jsxref("RangeError")}} should provide its own `message` property, in [SpiderMonkey](/en-US/docs/Mozilla/Projects/SpiderMonkey), it inherits {{jsxref("Error.prototype.message")}}.
+  - : Error message.
 - {{jsxref("Error.prototype.name", "RangeError.prototype.name")}}
   - : Error name. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.fileName", "RangeError.prototype.fileName")}}
@@ -49,20 +49,20 @@ This can be encountered when:
 ```js
 function check(n)
 {
-    if( !(n >= -500 && n <= 500) )
-    {
-        throw new RangeError("The argument must be between -500 and 500.")
-    }
+    if( !(n >= -500 && n <= 500) )
+    {
+        throw new RangeError("The argument must be between -500 and 500.")
+    }
 }
 
 try
 {
-    check(2000)
+    check(2000)
 }
 catch(error)
 {
     if (error instanceof RangeError)
-    {
+    {
         // Handle the error
     }
 }
@@ -73,20 +73,20 @@ catch(error)
 ```js
 function check(value)
 {
-    if(["apple", "banana", "carrot"].includes(value) === false)
-    {
-        throw new RangeError('The argument must be an "apple", "banana", or "carrot".')
-    }
+    if(["apple", "banana", "carrot"].includes(value) === false)
+    {
+        throw new RangeError('The argument must be an "apple", "banana", or "carrot".')
+    }
 }
 
 try
 {
-    check("cabbage")
+    check("cabbage")
 }
 catch(error)
 {
     if(error instanceof RangeError)
-    {
+    {
         // Handle the error
     }
 }

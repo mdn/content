@@ -2,7 +2,7 @@
 title: Types of attacks
 slug: Web/Security/Types_of_attacks
 ---
-{{draft}}
+
 
 This article describes various types of security attacks and techniques to mitigate them.
 
@@ -12,28 +12,28 @@ This article describes various types of security attacks and techniques to mitig
 
 ## Cross-site scripting (XSS)
 
-Cross-site scripting (XSS) is a security exploit which allows an attacker to inject into a website malicious client-side code. This code is executed by the victims and lets the attackers bypass access controls and impersonate users. According to the Open Web Application Security Project, XSS was the [seventh most common Web app vulnerability](https://owasp.org/www-project-top-ten/2017/Top_10) in 2017.
+Cross-site scripting (XSS) is a security exploit which allows an attacker to inject into a website malicious client-side code. This code is executed by the victims and lets the attackers bypass access controls and impersonate users. According to the Open Web Application Security Project, XSS was the [seventh most common Web app vulnerability](https://owasp.org/www-project-top-ten/2017/Top_10) in 2017.
 
-These attacks succeed if the Web app does not employ enough validation or encoding. The user's browser cannot detect the malicious script is untrustworthy, and so gives it access to any cookies, session tokens, or other sensitive site-specific information, or lets the malicious script rewrite the {{glossary("HTML")}} content.
+These attacks succeed if the Web app does not employ enough validation or encoding. The user's browser cannot detect the malicious script is untrustworthy, and so gives it access to any cookies, session tokens, or other sensitive site-specific information, or lets the malicious script rewrite the {{glossary("HTML")}} content.
 
-Cross-site scripting attacks usually occur when 1) data enters a Web app through an untrusted source (most often a Web request) or 2) dynamic content is sent to a Web user without being validated for malicious content.
+Cross-site scripting attacks usually occur when 1) data enters a Web app through an untrusted source (most often a Web request) or 2) dynamic content is sent to a Web user without being validated for malicious content.
 
-The malicious content often includes {{glossary("JavaScript")}}, but sometimes HTML, Flash, or any other code the browser can execute. The variety of attacks based on XSS is almost limitless, but they commonly include transmitting private data like cookies or other session information to the attacker, redirecting the victim to a webpage controlled by the attacker, or performing other malicious operations on the user's machine under the guise of the vulnerable site.
+The malicious content often includes {{glossary("JavaScript")}}, but sometimes HTML, Flash, or any other code the browser can execute. The variety of attacks based on XSS is almost limitless, but they commonly include transmitting private data like cookies or other session information to the attacker, redirecting the victim to a webpage controlled by the attacker, or performing other malicious operations on the user's machine under the guise of the vulnerable site.
 
 XSS attacks can be put into three categories: stored (also called persistent), reflected (also called non-persistent), or DOM-based.
 
 - Stored XSS Attacks
-  - : The injected script is stored permanently on the target servers. The victim then retrieves this malicious script from the server when the browser sends a request for data.
+  - : The injected script is stored permanently on the target servers. The victim then retrieves this malicious script from the server when the browser sends a request for data.
 - Reflected XSS Attacks
-  - : When a user is tricked into clicking a malicious link, submitting a specially crafted form, or browsing to a malicious site, the injected code travels to the vulnerable website. The Web server reflects the injected script back to the user's browser, such as in an error message, search result, or any other response that includes data sent to the server as part of the request. The browser executes the code because it assumes the response is from a "trusted" server which the user has already interacted with.
+  - : When a user is tricked into clicking a malicious link, submitting a specially crafted form, or browsing to a malicious site, the injected code travels to the vulnerable website. The Web server reflects the injected script back to the user's browser, such as in an error message, search result, or any other response that includes data sent to the server as part of the request. The browser executes the code because it assumes the response is from a "trusted" server which the user has already interacted with.
 - DOM-based XSS Attacks
-  - : The payload is executed as a result of modifying the DOM environment (in the victim’s browser) used by the original client-side script. That is, the page itself does not change, but the client side code contained in the page runs in an unexpected manner because of the malicious modifications to the DOM environment.
+  - : The payload is executed as a result of modifying the DOM environment (in the victim's browser) used by the original client-side script. That is, the page itself does not change, but the client side code contained in the page runs in an unexpected manner because of the malicious modifications to the DOM environment.
 
 ## Cross-site request forgery (CSRF)
 
 CSRF (sometimes also called XSRF) is a related class of attack. The attacker causes the user's browser to perform a request to the website's backend without the user's consent or knowledge. An attacker can use an XSS payload to launch a CSRF attack.
 
-Wikipedia mentions a good example for CSRF. In this situation, someone includes an image that isn’t really an image (for example in an unfiltered chat or forum), instead it really is a request to your bank’s server to withdraw money:
+Wikipedia mentions a good example for CSRF. In this situation, someone includes an image that isn't really an image (for example in an unfiltered chat or forum), instead it really is a request to your bank's server to withdraw money:
 
 ```html
 <img src="https://bank.example.com/withdraw?account=bob&amount=1000000&for=mallory">
@@ -72,11 +72,13 @@ Exfiltration avenues can be limited by deploying a strict Content-Security-Polic
 
 ### Session fixation
 
-A third party is able to determine a user’s session identifier (i.e., by reading it or setting it), and therefore interact with the server as that user. Stealing cookies is one way to do this.
+A third party is able to determine a user's session identifier (i.e., by reading it or setting it), and therefore interact with the server as that user. Stealing cookies is one way to do this.
 
 Recall that a subdomain such as application.example.com can set a cookie to be sent with requests to example.com or other sub-domains by setting the `Domain` attribute:
 
-    Set-Cookie: CSRF=e8b667; Secure; Domain=example.com
+```
+Set-Cookie: CSRF=e8b667; Secure; Domain=example.com
+```
 
 If a vulnerable application is available on a sub-domain, this mechanism can be abused in a session fixation attack. When the user visits a page on the parent domain (or another subdomain), the application may trust the existing value sent in the user's cookie. This could allow an attacker to bypass CSRF protection or hijack a session after the user logs in.
 Alternatively, if the parent domain does not use [HTTP Strict-Transport-Security](/en-US/docs/Glossary/HSTS) with `includeSubdomains` set, a user subject to an active MitM (perhaps connected to an open WiFi network) could be served a response with a Set-Cookie header from a non-existent sub-domain. The end result would be much the same, with the browser storing the illegitimate cookie and sending it to all other pages under example.com.

@@ -3,6 +3,7 @@ title: 'Document: paste event'
 slug: Web/API/Document/paste_event
 tags:
   - API
+  - Clipboard API
   - Document
   - Event
   - Reference
@@ -12,37 +13,42 @@ browser-compat: api.Document.paste_event
 ---
 {{APIRef}}
 
-The **`paste`** event is fired when the user has initiated a "paste" action through the browser's user interface.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("ClipboardEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("HTMLElement/onpaste", "onpaste")}}</td>
-    </tr>
-  </tbody>
-</table>
+The **`paste`** event fires when the user initiates a paste action through the browser's user interface.
 
 The original target for this event is the {{domxref("Element")}} that was the intended target of the paste action. You can listen for this event on the {{domxref("Document")}} interface to handle it in the capture or bubbling phases. For full details on this event please see the page on the [Element: paste event](/en-US/docs/Web/API/Element/paste_event).
 
-## Examples
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-document.addEventListener('paste', (event) => {
-    console.log('paste action initiated')
+addEventListener('paste', event => { });
+
+onpaste = event => { };
+```
+
+## Event type
+
+A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("ClipboardEvent")}}
+
+## Examples
+
+To be informed when a user pastes data to the webpage from their clipboard, you can add a handler to your {{domxref("Document")}} instance using {{domxref("EventTarget.addEventListener", "addEventListener()")}}, like this:
+
+```js
+document.addEventListener("paste", function(event) {
+  /* the session has shut down */
 });
+```
+
+Alternatively, you can use the `Document.onpaste` event handler property to establish a handler for the `paste` event:
+
+```js
+document.onpaste = function(event) {
+ /* the session has shut down */
+}
 ```
 
 ## Specifications
@@ -55,6 +61,6 @@ document.addEventListener('paste', (event) => {
 
 ## See also
 
-- Related events: {{domxref("Document/cut_event", "cut")}}, {{domxref("Document/copy_event", "copy")}}
+- Related events: {{domxref("Document/copy_event", "copy")}}, {{domxref("Document/cut_event", "cut")}}
 - This event on {{domxref("Element")}} targets: {{domxref("Element/paste_event", "paste")}}
 - This event on {{domxref("Window")}} targets: {{domxref("Window/paste_event", "paste")}}

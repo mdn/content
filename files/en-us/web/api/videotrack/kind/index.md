@@ -23,7 +23,7 @@ string indicating the category of video contained in the
 
 The `kind` can be used
 to determine the scenarios in which specific tracks should be enabled or disabled. See
-{{anch("Video track kind strings")}} for a list of the kinds available for video tracks.
+[Video track kind strings](#video_track_kind_strings) for a list of the kinds available for video tracks.
 
 ## Syntax
 
@@ -34,7 +34,7 @@ var trackKind = VideoTrack.kind;
 ### Value
 
 A {{domxref("DOMString")}} specifying the type of content the media represents. The
-string is one of those found in {{anch("Video track kind strings")}} below.
+string is one of those found in [Video track kind strings](#video_track_kind_strings) below.
 
 ## Video track kind strings
 

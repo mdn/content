@@ -43,11 +43,11 @@ There are a few concepts worth digging into before looking at how the flex prope
 
 ### Flex item sizing
 
-In order to work out how much space there is available to lay out flex items, the browser needs to know how big the item is to start with. How is this worked out for items that don’t have a width or a height applied using an absolute length unit?
+In order to work out how much space there is available to lay out flex items, the browser needs to know how big the item is to start with. How is this worked out for items that don't have a width or a height applied using an absolute length unit?
 
 There is a concept in CSS of {{CSSxRef('width','min-content','#min-content')}} and {{CSSxRef('width','max-content','#max-content')}} — these keywords are [defined in the CSS Intrinsic and Extrinsic Sizing Specification](https://drafts.csswg.org/css-sizing-3/#width-height-keywords), and can be used in place of a [length unit](/en-US/docs/Web/CSS/length).
 
-In the live example below for instance I have two paragraph elements that contain a string of text. The first paragraph has a width of `min-content`. In a browser that supports this keyword you should be able to see that the text has taken all of the soft wrapping opportunities available to it, becoming as small as it can be without overflowing. This then, is the `min-content` size of that string. Essentially, the longest word in the string is dictating the size.
+In the live example below for instance I have two paragraph elements that contain a string of text. The first paragraph has a width of `min-content`. In a browser that supports this keyword you should be able to see that the text has taken all of the soft wrapping opportunities available to it, becoming as small as it can be without overflowing. This then, is the `min-content` size of that string. Essentially, the longest word in the string is dictating the size.
 
 The second paragraph has a value of `max-content` and so it does the opposite. It gets as big as it possibly can be, taking no soft-wrapping opportunities. It would overflow the box it is in if that container was too narrow.
 
@@ -89,7 +89,7 @@ If you want flexbox to completely ignore the size of the item when doing space d
 
 ## The flex-grow property
 
-The {{CSSxRef("flex-grow")}} property specifies the **flex grow factor**, which determines how much the flex item will grow relative to the rest of the flex items in the flex container when the positive free space is distributed.
+The {{CSSxRef("flex-grow")}} property specifies the **flex grow factor**, which determines how much the flex item will grow relative to the rest of the flex items in the flex container when the positive free space is distributed.
 
 If all of your items have the same `flex-grow` factor then space will be distributed evenly between all of them. If this is the situation that you want then typically you would use `1` as the value, however you could give them all a `flex-grow` of `88`, or `100`, or `1.2` if you like — it is a ratio. If the factor is the same for all, and there is positive free space in the flex container then it will be distributed equally to all.
 
@@ -99,7 +99,7 @@ Things can get confusing in terms of how `flex-grow` and `flex-basis` interact. 
 
 `flex: 1 1 auto;`
 
-In this case the `flex-basis` value is `auto` and the items don’t have a width set, and so are auto-sized. This means that flexbox is looking at the `max-content` size of the items. After laying the items out we have some positive free space in the flex container, shown in this image as the hatched area:
+In this case the `flex-basis` value is `auto` and the items don't have a width set, and so are auto-sized. This means that flexbox is looking at the `max-content` size of the items. After laying the items out we have some positive free space in the flex container, shown in this image as the hatched area:
 
 ![Images shows the positive free space as a hatched area](ratios2.png)
 
@@ -119,7 +119,7 @@ Try changing the `flex-grow` factor from 1 to 0 in this live example to see the 
 
 ### Giving items different flex-grow factors
 
-Our understanding of how `flex-grow` works with `flex-basis` allows us to have further control over our individual item sizes by assigning items different `flex-grow` factors. If we keep our `flex-basis` at `0` so all of the space can be distributed, we could assign each of the three flex items a different `flex-grow` factor. In the example below I am using the following values:
+Our understanding of how `flex-grow` works with `flex-basis` allows us to have further control over our individual item sizes by assigning items different `flex-grow` factors. If we keep our `flex-basis` at `0` so all of the space can be distributed, we could assign each of the three flex items a different `flex-grow` factor. In the example below I am using the following values:
 
 - `1` for the first item.
 - `1` for the second item.
@@ -133,13 +133,13 @@ Remember that you can use any positive value here. It is the ratio between one i
 
 ## The `flex-shrink` property
 
-The {{CSSxRef("flex-shrink")}} property specifies the **flex shrink factor**, which determines how much the flex item will shrink relative to the rest of the flex items in the flex container when negative free space is distributed.
+The {{CSSxRef("flex-shrink")}} property specifies the **flex shrink factor**, which determines how much the flex item will shrink relative to the rest of the flex items in the flex container when negative free space is distributed.
 
 This property deals with situations where the browser calculates the `flex-basis` values of the flex items, and finds that they are too large to fit into the flex container. As long as `flex-shrink` has a positive value the items will shrink in order that they do not overflow the container.
 
 So where `flex-grow` deals with adding available space, `flex-shrink` manages taking away space to make boxes fit into their container without overflowing.
 
-In the next live example I have three items in a flex container; I’ve given each a width of 200 pixels, and the container is 500 pixels wide. With `flex-shrink` set to `0` the items are not allowed to shrink and so they overflow the box.
+In the next live example I have three items in a flex container; I've given each a width of 200 pixels, and the container is 500 pixels wide. With `flex-shrink` set to `0` the items are not allowed to shrink and so they overflow the box.
 
 {{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-shrink.html", '100%', 500)}}
 
@@ -147,11 +147,11 @@ Change the `flex-shrink` value to `1` and you will see each item shrink by the s
 
 ### Combining `flex-shrink` and `flex-basis`
 
-You could say that `flex-shrink` works in pretty much the same way as `flex-grow`. However there are two reasons why it isn’t _quite_ the same.
+You could say that `flex-shrink` works in pretty much the same way as `flex-grow`. However there are two reasons why it isn't _quite_ the same.
 
-While it is usually subtle, defined in the specification is one reason why `flex-shrink` isn’t quite the same for negative space as `flex-grow` is for positive space:
+While it is usually subtle, defined in the specification is one reason why `flex-shrink` isn't quite the same for negative space as `flex-grow` is for positive space:
 
-> “Note: The flex shrink factor is multiplied by the flex base size when distributing negative space. This distributes negative space in proportion to how much the item is able to shrink, so that e.g. a small item won’t shrink to zero before a larger item has been noticeably reduced.”
+> "Note: The flex shrink factor is multiplied by the flex base size when distributing negative space. This distributes negative space in proportion to how much the item is able to shrink, so that e.g. a small item won't shrink to zero before a larger item has been noticeably reduced."
 
 The second reason is that flexbox prevents small items from shrinking to zero size during this removal of negative free space. The items will be floored at their `min-content` size — the size that they become if they take advantage of any soft wrapping opportunities available to them.
 
@@ -159,13 +159,13 @@ You can see this `min-content` flooring happen in the below example, where the `
 
 {{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-shrink-min-content.html", '100%', 500)}}
 
-In practice the shrinking behavior does tend to give you reasonable results. You don’t usually want your content to disappear completely or for boxes to get smaller than their minimum content, so the above rules make sense in terms of sensible behavior for content that needs to be shrunk in order to fit into a container.
+In practice the shrinking behavior does tend to give you reasonable results. You don't usually want your content to disappear completely or for boxes to get smaller than their minimum content, so the above rules make sense in terms of sensible behavior for content that needs to be shrunk in order to fit into a container.
 
 ### Giving items different `flex-shrink` factors
 
 In the same way as `flex-grow`, you can give flex-items different `flex-shrink` factors. This can help change the default behavior if, for example, you want an item to shrink more or less rapidly than its siblings or not shrink at all.
 
-In the following live example the first item has a `flex-shrink` factor of 1, the second `0` (so it won’t shrink at all), and the third `4`. The third item therefore shrinks more rapidly than the first. Play around with the different values — as for `flex-grow` you can use decimals or larger numbers here. Choose whatever makes most sense to you.
+In the following live example the first item has a `flex-shrink` factor of 1, the second `0` (so it won't shrink at all), and the third `4`. The third item therefore shrinks more rapidly than the first. Play around with the different values — as for `flex-grow` you can use decimals or larger numbers here. Choose whatever makes most sense to you.
 
 {{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-shrink-ratios.html", '100%', 570)}}
 
@@ -175,17 +175,17 @@ The key to really understanding how flex item sizing works is in understanding t
 
 ### What sets the base size of the item?
 
-1.  Is `flex-basis` set to `auto`, and does the item have a width set? If so, the size will be based on that width.
-2.  Is `flex-basis` set to `auto` or `content` (in a supporting browser)? If so, the size is based on the item size.
-3.  Is `flex-basis` a length unit, but not zero? If so this is the size of the item.
-4.  Is `flex-basis` set to `0`? if so then the item size is not taken into consideration for the space-sharing calculation.
+1. Is `flex-basis` set to `auto`, and does the item have a width set? If so, the size will be based on that width.
+2. Is `flex-basis` set to `auto` or `content` (in a supporting browser)? If so, the size is based on the item size.
+3. Is `flex-basis` a length unit, but not zero? If so this is the size of the item.
+4. Is `flex-basis` set to `0`? if so then the item size is not taken into consideration for the space-sharing calculation.
 
 ### Do we have available space?
 
-Items can’t grow with no positive free space, and they won’t shrink unless there is negative free space.
+Items can't grow with no positive free space, and they won't shrink unless there is negative free space.
 
-1.  If we took all of the items and added up their widths (or heights if working in a column), is that total **less** than the total width (or height) of the container? If so, then you have positive free space and `flex-grow` comes into play.
-2.  If we took all of the items and added up their widths (or heights if working in a column), is that total **more** than the total width (or height) of the container? If so, you have negative free space and `flex-shrink` comes into play.
+1. If we took all of the items and added up their widths (or heights if working in a column), is that total **less** than the total width (or height) of the container? If so, then you have positive free space and `flex-grow` comes into play.
+2. If we took all of the items and added up their widths (or heights if working in a column), is that total **more** than the total width (or height) of the container? If so, you have negative free space and `flex-shrink` comes into play.
 
 ### Other ways to distribute space
 

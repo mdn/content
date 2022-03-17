@@ -83,7 +83,7 @@ Per the HTML specification, the default style for `<summary>` elements includes 
 
 You can also change the style to `display: block` to remove the disclosure triangle.
 
-See the {{anch("Browser compatibility")}} section for details, as not all browsers support full functionality of this element yet.
+See the [Browser compatibility](#browser_compatibility) section for details, as not all browsers support full functionality of this element yet.
 
 ## Examples
 
@@ -108,7 +108,7 @@ A simple example showing the use of `<summary>` in a {{HTMLElement("details")}} 
 
 ### Summaries as headings
 
-You can use heading elements in `<summary>`, like this:
+You can use heading elements in `<summary>`, like this:
 
 ```html
 <details open>
@@ -129,7 +129,7 @@ This currently has some spacing issues that could be addressed using CSS.
 
 ### HTML in summaries
 
-This example adds some semantics to the `<summary>` element to indicate the label as important:
+This example adds some semantics to the `<summary>` element to indicate the label as important:
 
 ```html
 <details open>

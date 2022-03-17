@@ -14,13 +14,13 @@ The global `aria-describedby` attribute identifies the element (or elements) tha
 
 ## Description
 
-The `aria-describedby` attribute lists the {{HTMLattrxref('id')}}s of the elements that describe the object. It is used to establish a relationship between widgets or groups and the text that describes them. 
+The `aria-describedby` attribute lists the {{HTMLattrxref('id')}}s of the elements that describe the object. It is used to establish a relationship between widgets or groups and the text that describes them.
 
 The `aria-describedby` attribute is not limited to form controls. It can also be used to associate static text with widgets, groups of elements, regions that have a heading, definitions, and more. The `aria-describedby` attribute can be used with semantic HTML elements and with elements that have an ARIA [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles/).
 
 The `aria-describedby` attribute is very similar to [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby/) attribute. While the `aria-labelledby` lists the `id`s of the labels or elements that describe the essence of an object, the `aria-describedby` lists the `id`s of the descriptions or elements providing more information that the user might need. Both `aria-labelledby` and `aria-describedby` reference other elements to calculate a text alternative, but a label should be concise, while a description is intended to provide more verbose information; a label describes the essence of an object, while a description provides more information that the user might need.
 
-The elements linked via `aria-describedby` don't need to be visible. It is possible to reference an element even if that element is hidden. For example, a form control can have a description that is hidden by default that is revealed on request using a disclosure widget like a "more information" icon. The sited user clicks on the icon; for assistive technology users the description is referenced from that form field directly with `aria-describedby`.
+The elements linked via `aria-describedby` don't need to be visible. It is possible to reference an element even if that element is hidden. For example, a form control can have a description that is hidden by default that is revealed on request using a disclosure widget like a "more information" icon. The sighted user clicks on the icon; for assistive technology users the description is referenced from that form field directly with `aria-describedby`.
 
 The `aria-describedby` property is appropriate when the associated content contains descriptions experienced as plain text. If the content contains a large amount of content, useful semantics, or has a complex structure requiring user navigation, use [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details). `aria-details` allows assistive technology users to visit the associated structured content and provides additional navigation commands, making it easier to understand the structure, or to experience the information in smaller pieces.
 
@@ -39,7 +39,7 @@ The `aria-describedby` property is appropriate when the associated content conta
 ## Values
 
 - ID reference list
-  - : The `id` or space-separated list of elements IDs that describe the current element. 
+  - : The `id` or space-separated list of elements IDs that describe the current element.
 
 ## Associated roles
 

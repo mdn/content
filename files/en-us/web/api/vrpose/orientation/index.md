@@ -3,7 +3,7 @@ title: VRPose.orientation
 slug: Web/API/VRPose/orientation
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Orientation
   - Property
   - Reference
@@ -28,13 +28,7 @@ The value is a {{jsxref("Float32Array")}}, made up of the following values:
 
 The orientation yaw (rotation around the y axis) is relative to the initial yaw of the sensor when it was first read or the yaw of the sensor at the point that {{domxref("VRDisplay.resetPose()")}} was last called.
 
-## Syntax
-
-```js
-var myOrientation = VRPose.orientation;
-```
-
-### Value
+## Value
 
 A {{jsxref("Float32Array")}}, or `null` if the VR sensor is not able to provide orientation data.
 

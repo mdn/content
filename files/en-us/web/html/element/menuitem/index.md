@@ -97,21 +97,21 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ```html
 <!-- A <div> element with a context menu -->
 <div contextmenu="popup-menu">
-  Right-click to see the adjusted context menu
+  Right-click to see the adjusted context menu
 </div>
 
 <menu type="context" id="popup-menu">
-  <menuitem type="checkbox" checked>Checkbox</menuitem>
-  <hr>
-  <menuitem type="command" label="This command does nothing" icon="favicon-192x192.png">
-    Commands don't render their contents.
-  </menuitem>
-  <menuitem type="command" label="This command has javascript" onclick="alert('command clicked')">
-    Commands don't render their contents.
-  </menuitem>
-  <hr>
-  <menuitem type="radio" radiogroup="group1">Radio Button 1</menuitem>
-  <menuitem type="radio" radiogroup="group1">Radio Button 2</menuitem>
+  <menuitem type="checkbox" checked>Checkbox</menuitem>
+  <hr>
+  <menuitem type="command" label="This command does nothing" icon="favicon-192x192.png">
+    Commands don't render their contents.
+  </menuitem>
+  <menuitem type="command" label="This command has javascript" onclick="alert('command clicked')">
+    Commands don't render their contents.
+  </menuitem>
+  <hr>
+  <menuitem type="radio" radiogroup="group1">Radio Button 1</menuitem>
+  <menuitem type="radio" radiogroup="group1">Radio Button 2</menuitem>
 </menu>
 ```
 
@@ -119,9 +119,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ```css
 div {
-  width: 300px;
-  height: 80px;
-  background-color: lightgreen;
+  width: 300px;
+  height: 80px;
+  background-color: lightgreen;
 }
 ```
 

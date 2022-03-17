@@ -2,9 +2,5 @@
 title: "Legacy documentation"
 weight: 1000
 description: >
-  This page needs a description.
+  Unedited contributor documentation migrated from GitHub and MDN itself.
 ---
-
-{{% pageinfo %}}
-This is a placeholder page.
-{{% /pageinfo %}}

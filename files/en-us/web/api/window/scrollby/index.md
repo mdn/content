@@ -40,19 +40,25 @@ window.scrollBy(options)
 
 To scroll down one page:
 
-    window.scrollBy(0, window.innerHeight);
+```js
+window.scrollBy(0, window.innerHeight);
+```
 
 To scroll up:
 
-    window.scrollBy(0, -window.innerHeight);
+```js
+window.scrollBy(0, -window.innerHeight);
+```
 
 Using `options`:
 
-    window.scrollBy({
-      top: 100,
-      left: 100,
-      behavior: 'smooth'
-    });
+```js
+window.scrollBy({
+  top: 100,
+  left: 100,
+  behavior: 'smooth'
+});
+```
 
 ## Notes
 

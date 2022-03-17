@@ -23,9 +23,9 @@ The read-only **`badInput`** property of a [ValidityState](/en-US/docs/Web/API/V
 ```js
 var input = document.getElementById("age");
 if (input.validity.badInput) {
-  console.log("Bad input detected…");
+  console.log("Bad input detected…");
 } else {
-  console.log("Content of input OK.");
+  console.log("Content of input OK.");
 }
 ```
 

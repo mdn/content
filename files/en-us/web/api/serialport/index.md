@@ -8,11 +8,11 @@ tags:
   - SerialPort
 browser-compat: api.SerialPort
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}
-
-## Description
+{{securecontext_header}}{{APIRef("Serial API")}}
 
 The `SerialPort` interface of the {{domxref("Web_Serial_API", "Web Serial API")}} provides access to a serial port on the host device.
+
+{{InheritanceDiagram}}
 
 ## Constructor
 
@@ -24,13 +24,6 @@ Instances of this interface may be obtained by calling methods of the {{domxref(
   - : Returns a {{domxref("ReadableStream")}} for receiving data from the device connected to the port.
 - {{domxref("SerialPort.writable")}}{{readonlyInline}}
   - : Returns a {{domxref("WritableStream")}} for sending data to the device connected to the port.
-
-### Event handlers
-
-- {{domxref("SerialPort.onconnect")}}
-  - : An event handler called when the port has connected to the device.
-- {{domxref("SerialPort.ondisconnect")}}
-  - : An event handler called when the port has disconnected from the device.
 
 ## Methods
 
@@ -44,6 +37,13 @@ Instances of this interface may be obtained by calling methods of the {{domxref(
   - : Returns a {{jsxref("Promise")}} that resolves with an object containing the current state of the port's control signals.
 - {{domxref("SerialPort.close()")}}
   - : Returns a {{jsxref("Promise")}} that resolves when the port closes.
+
+## Events
+
+- {{domxref("SerialPort.connect_event", "connect")}}
+  - : An event fired when the port has connected to the device.
+- {{domxref("SerialPort.disconnect_event", "disconnect")}}
+  - : An event fired when the port has disconnected from the device.
 
 ## Examples
 

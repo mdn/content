@@ -130,7 +130,7 @@ function NavigatorExample() {
   txt+= "Cookies Enabled: " + navigator.cookieEnabled  + "; ";
   txt+= "Platform: " + navigator.platform  + "; ";
   txt+= "User-agent header: " + navigator.userAgent  + "; ";
-  console.log("NavigatorExample", txt);
+  console.log("NavigatorExample", txt);
 }
   </pre>
 </figure>

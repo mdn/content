@@ -22,7 +22,7 @@ To understand common patterns, it helps to read browser documentation. If you ar
 ### Browser vendor documentation
 
 - Mozilla: You're in the right place, just browse MDN
-- Microsoft: [Internet Explorer Standards Support Documentation](https://msdn.microsoft.com/en-us/library/ff410218%28v=vs.85%29.aspx)
+- Microsoft: [Internet Explorer Standards Support Documentation](https://msdn.microsoft.com/library/ff410218%28v=vs.85%29.aspx)
 - WebKit: Because there are several different editions of this engine, things are a little trickier.
 
   - [The WebKit blog](https://www.webkit.org/blog/) and [Planet WebKit](https://planet.webkit.org/) aggregate the best articles by WebKit core developers.
@@ -45,8 +45,8 @@ The input types added in HTML5 are all useable, even in ancient browsers, becaus
 
 ```html
 <label for="myColor">
-  Pick a color
-  <input type="color" id="myColor" name="color">
+  Pick a color
+  <input type="color" id="myColor" name="color">
 </label>
 ```
 
@@ -194,7 +194,7 @@ Modernizr.load({
 
 The Modernizr team conveniently maintains [a list of great polyfills](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills). Just pick what you need.
 
-> **Note:** Modernizr has other awesome features to help you in dealing with unobstructive JavaScript and graceful degradation techniques. Please [read the Modernizr documentation](https://modernizr.com/docs/).
+> **Note:** Modernizr has other awesome features to help you in dealing with unobstructive JavaScript and graceful degradation techniques. Please [read the Modernizr documentation](https://modernizr.com/docs/).
 
 ### Pay attention to performance
 

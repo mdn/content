@@ -9,7 +9,7 @@ tags:
   - Request header
   - Deprecated
   - Non-standard
-  - Exerimental
+  -  Experimental
 browser-compat: http.headers.DPR
 ---
 {{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}

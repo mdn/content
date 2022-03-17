@@ -40,5 +40,3 @@ console.log(colorSpace.primaries);
 ## Browser compatibility
 
 {{Compat}}
-
-

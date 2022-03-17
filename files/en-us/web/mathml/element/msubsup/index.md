@@ -42,7 +42,7 @@ Rendering in your browser: <math><msubsup><mo>∫</mo> <mn>0 </mn><mn>1</mn></ms
 ```html
 <math displaystyle="true">
 
-  <msubsup>
+  <msubsup>
     <mo> &#x222B;<!--Integral --> </mo>
     <mn> 0 </mn>
     <mn> 1 </mn>

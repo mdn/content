@@ -40,5 +40,3 @@ console.log(colorSpace.transfer);
 ## Browser compatibility
 
 {{Compat}}
-
-

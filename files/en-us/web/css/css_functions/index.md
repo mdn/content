@@ -10,6 +10,10 @@ tags:
   - Reference
   - Types
   - data types
+spec-urls:
+  - https://drafts.csswg.org/css-values/
+  - https://drafts.csswg.org/css-color/
+  - https://drafts.csswg.org/css-images/
 ---
 {{CSSRef}}
 
@@ -181,18 +185,18 @@ These functions may be used wherever an {{cssxref("&lt;image&gt;")}} is valid as
 - {{cssxref("gradient/conic-gradient()", "conic-gradient()")}}
   - : Conic gradients transition colors progressively around a circle.
 - {{cssxref("image/image()","image()")}} {{Experimental_Inline}}
-  - : Defines an {{cssxref("&lt;image&gt;")}} in a similar fashion to the {{cssxref("url()")}} function, but with added functionality including specifying the image's directionality, specifying fallback images for when the preferred image is not supported
+  - : Defines an {{cssxref("&lt;image&gt;")}} in a similar fashion to the {{cssxref("url()")}} function, but with added functionality including specifying the image's directionality and fallback images for when the preferred image is not supported.
 - {{cssxref("image/image-set()","image-set()")}} {{Experimental_Inline}}
   - : A method of letting the browser pick the most appropriate CSS image from a given set, primarily for high pixel density screens.
 - {{cssxref("gradient/linear-gradient()","linear-gradient()")}}
   - : Linear gradients transition colors progressively along an imaginary line.
 - {{cssxref("gradient/radial-gradient()","radial-gradient()")}}
   - : Radial gradients transition colors progressively from a center point (origin).
-- {{cssxref("gradient/repeating-linear-gradient()","repeating-linear-gradiant()")}}
+- {{cssxref("gradient/repeating-linear-gradient()","repeating-linear-gradient()")}}
   - : Is similar to `linear-gradient()` and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container.
 - {{cssxref("gradient/repeating-radial-gradient()","repeating-radial-gradient()")}}
   - : Is similar to `radial-gradient()` and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container.
-- {{cssxref("gradient/repeating-conic-gradient()","repeat-conic-gradiant()")}}
+- {{cssxref("gradient/repeating-conic-gradient()","repeating-conic-gradient()")}}
   - : Is similar to `conic-gradient()` and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container.
 - {{cssxref("cross-fade()")}}
   - : Can be used to blend two or more images at a defined transparency.
@@ -270,15 +274,9 @@ The following functions are used to define a CSS grid.
 
 ## Specifications
 
-| Specification                        | Status                           | Comment                                                                                                                                                                                                                                                               |
-| ------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS4 Values")}} | {{Spec2("CSS4 Values")}} | Adds `toggle()`, `attr()`, `calc()`, `min()`, `max()`, `clamp()`, `round()`, `mod()`, `rem()`, `mod()`, `sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, `atan2()`, `pow()`, `sqrt()`, `hypot()`, `log()`, `exp()`, `abs()` and `sign()` functional notation. |
-| {{SpecName("CSS3 Values")}} | {{Spec2("CSS3 Values")}} | Adds `calc()` functional notation.                                                                                                                                                                                                                                    |
-| {{SpecName("CSS4 Colors")}} | {{Spec2("CSS4 Colors")}} | Adds commaless syntaxes for the `rgb()`, `rgba()`, `hsl()`, and `hsla()` functional notation. Allows alpha values in `rgb()` and `hsl()`, turning `rgba()` and `hsla()` into (deprecated) aliases for them. Adds `hwb()`, `device-cmyk()`, and `color()` functions.   |
-| {{SpecName("CSS3 Colors")}} | {{Spec2("CSS3 Colors")}} | Adds `rgba()`, `hsl()`, `hsla()` functional notation.                                                                                                                                                                                                                 |
-| {{SpecName("CSS4 Images")}} | {{Spec2("CSS4 Images")}} | Adds `element()`, `image()`, `image-set()` and `conic-gradient()` functional notation.                                                                                                                                                                                |
+{{Specifications}}
 
 ## See also
 
 - [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units)
-- [Introduction to CSS: Values and Units ](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Introduction to CSS: Values and Units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)

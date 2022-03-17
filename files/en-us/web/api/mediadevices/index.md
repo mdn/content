@@ -23,15 +23,11 @@ browser-compat: api.MediaDevices
 
 The **`MediaDevices`** interface provides access to connected media input devices like cameras and microphones, as well as screen sharing. In essence, it lets you obtain access to any hardware source of media data.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _Inherits properties from its parent interface, {{domxref("EventTarget")}}._
-
-## Events
-
-- {{domxref("MediaDevices/devicechange_event", "devicechange")}}
-  - : Fired when a media input or output device is attached to or removed from the user's computer.
-    Also available via the {{domxref("MediaDevices/ondevicechange", "ondevicechange")}} property.
 
 ## Methods
 
@@ -47,6 +43,11 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
   - : With the user's permission through a prompt, turns on a camera and/or a microphone on the system and provides a {{domxref("MediaStream")}} containing a video track and/or an audio track with the input.
 - {{domxref("MediaDevices.selectAudioOutput", "selectAudioOutput()") }}
   - : Prompts the user to select a specific audio output device.
+
+## Events
+
+- {{domxref("MediaDevices/devicechange_event", "devicechange")}}
+  - : Fired when a media input or output device is attached to or removed from the user's computer.
 
 ## Example
 

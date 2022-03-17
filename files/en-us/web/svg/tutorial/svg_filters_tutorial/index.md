@@ -10,7 +10,7 @@ SVG allows us to use similar tools as the bitmap description language such as th
 
 Filters act like layers. When creating them, try applying and testing the effect step by step.
 
-This element has different attributes that help us create the clipping region. Between the filter tags, we can define the *primitives* that allow us to implement the desired effect. One of these primitives is the [feGaussianBlur](https://www.w3.org/TR/SVG/filters.html#feGaussianBlurElement). The keyword [SourceAlpha](https://www.w3.org/TR/SVG/filters.html#SourceAlpha) identifies the input for this primitive, is in this case input '`in`'. The amount of blur to be applied is done using the ` stdDeviation  `attribute`.`
+This element has different attributes that help us create the clipping region. Between the filter tags, we can define the *primitives* that allow us to implement the desired effect. One of these primitives is the [feGaussianBlur](https://www.w3.org/TR/SVG/filters.html#feGaussianBlurElement). The keyword [SourceAlpha](https://www.w3.org/TR/SVG/filters.html#SourceAlpha) identifies the input for this primitive, is in this case input '`in`'. The amount of blur to be applied is done using the `stdDeviation` attribute.
 
 ### SVG filter example
 
@@ -26,9 +26,9 @@ This element has different attributes that help us create the clipping region. B
 </g>
 ```
 
-This above example will not produced the desired output. Instead we need to add more filter primitives which will produce the desire rendering. By adding ` feoffset  `and`  result,  `the effect layer is defined
+This above example will not produced the desired output. Instead we need to add more filter primitives which will produce the desire rendering. By adding `feoffset` and `result`, the effect layer is defined
 
-` <result>  `attribute is a reference that can be use later. It is quite different to an XML id and only can be referenced within the actual `filter. `**<`feoffset`>** primitive has the blur result from the Gaussian blur. **<`feMerge`>** primitive contains the nodes **<`feMergeNode`>** taking as input the result offsetBlur , this will allow it to appear below the  `sourceGraphic`
+`<result>` attribute is a reference that can be use later. It is quite different to an XML id and only can be referenced within the actual `filter`.**<`feoffset`>** primitive has the blur result from the Gaussian blur. **<`feMerge`>** primitive contains the nodes **<`feMergeNode`>** taking as input the result offsetBlur , this will allow it to appear below the `sourceGraphic`
 
 ### Implementation of more primitives
 
@@ -42,5 +42,5 @@ This above example will not produced the desired output. Instead we need to add 
       <feMergeNode in="SourceGraphic"/>
     </feMerge>
   </filter>
-</defs> 
+</defs>
 ```

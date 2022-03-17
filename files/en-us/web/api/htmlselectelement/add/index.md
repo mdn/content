@@ -24,7 +24,7 @@ collection.add(item[, before]);
 
 - _item_ is an {{domxref("HTMLOptionElement")}} or
   {{domxref("HTMLOptGroupElement")}}
-- _before_ is optional and an element of the collection, or an index of type
+- _before_ is optional and an element of the collection, or an index of type
   _long_, representing the _item_ should be inserted before. If this
   parameter is `null` (or the index does not exist), the new element is
   appended to the end of the collection.

@@ -16,12 +16,12 @@ We will now prove the Pythagorean theorem:
 squares of the other two sides.
 
 i.e, If a and b are the legs and c is the hypotenuse then<math>
-<mrow><msup><mi>  a </mi><mn>2</mn>
+<mrow><msup><mi>  a </mi><mn>2</mn>
 </msup><mo>+ </mo><msup><mi>b </mi><mn>2</mn>
 </msup><mo>= </mo><msup><mi>c </mi><mn>2</mn>
 </msup></mrow></math>.
 
-**Proof:**  We can prove the theorem algebraically by showing that the area of the big square
+**Proof:**  We can prove the theorem algebraically by showing that the area of the big square
 equals the area of the inner square (hypotenuse squared) plus the area of the four triangles:
 
 <math><mtable columnalign="right center left"><mtr><mtd><msup><mrow><mo>( </mo><mi>a </mi><mo>+ </mo><mi>b </mi><mo>) </mo></mrow><mn>2 </mn></msup></mtd><mtd><mo>= </mo></mtd><mtd><msup><mi>c </mi><mn>2</mn>

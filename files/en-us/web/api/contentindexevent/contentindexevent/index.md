@@ -12,7 +12,7 @@ tags:
   - events
 browser-compat: api.ContentIndexEvent.ContentIndexEvent
 ---
-{{draft}}{{DefaultAPISidebar("Content Index API")}}
+{{DefaultAPISidebar("Content Index API")}}
 
 The **`ContentIndexEvent()`** constructor
 creates a new {{domxref("ContentIndexEvent")}} object whose type and other options are

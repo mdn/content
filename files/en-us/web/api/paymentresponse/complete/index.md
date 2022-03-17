@@ -16,12 +16,12 @@ browser-compat: api.PaymentResponse.complete
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The {{domxref("PaymentRequest")}} method
-**`complete()`** of the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) notifies the
-{{Glossary("user agent")}} that the user interaction is over, and causes any remaining
+**`complete()`** of the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) notifies the
+{{Glossary("user agent")}} that the user interaction is over, and causes any remaining
 user interface to be closed.
 
 This method must be called after the user accepts
-the payment request and the {{jsxref("Promise")}} returned by the
+the payment request and the {{jsxref("Promise")}} returned by the
 {{domxref('PaymentRequest.show()')}} method is resolved.
 
 ## Syntax
@@ -50,7 +50,7 @@ completePromise = paymentRequest.complete(result);
 
     > **Note:** In older versions of the specification, an empty string,
     > `""`, was used instead of `unknown` to indicate a completion
-    > without a known result state. See the {{anch("Browser compatibility")}} section
+    > without a known result state. See the [Browser compatibility](#browser_compatibility) section
     > below for details.
 
 ### Return value
@@ -72,31 +72,33 @@ the exceptions listed below.
 ## Examples
 
 The following example sends payment information to a secure server using the [Fetch API](/en-US/docs/Web/API/Fetch_API). It
-calls `complete()` with an answer appropriate to the status in the response.
+calls `complete()` with an answer appropriate to the status in the response.
 
-    // Initialization of PaymentRequest arguments are excerpted for the
-    //   sake of brevity.
-    var payment = new PaymentRequest(supportedInstruments, details, options);
+```js
+// Initialization of PaymentRequest arguments are excerpted for the
+//   sake of brevity.
+var payment = new PaymentRequest(supportedInstruments, details, options);
 
-    payment.show().then(function(paymentResponse) {
-      var fetchOptions = {
-        method: 'POST',
-        credentials: include,
-        body: JSON.stringify(paymentResponse)
-      };
-      var serverPaymentRequest = new Request('secure/payment/endpoint');
-      fetch(serverPaymentRequest, fetchOptions).then( response => {
-        if (response.status < 400) {
-          paymentResponse.complete("success");
-        } else {
-          paymentResponse.complete("fail");
-        };
-      }).catch( reason => {
-        paymentResponse.complete("fail");
-      });
-    }).catch(function(err) {
-      console.error("Uh oh, something bad happened", err.message);
-    });
+payment.show().then(function(paymentResponse) {
+  var fetchOptions = {
+    method: 'POST',
+    credentials: include,
+    body: JSON.stringify(paymentResponse)
+  };
+  var serverPaymentRequest = new Request('secure/payment/endpoint');
+  fetch(serverPaymentRequest, fetchOptions).then( response => {
+    if (response.status < 400) {
+      paymentResponse.complete("success");
+    } else {
+      paymentResponse.complete("fail");
+    };
+  }).catch( reason => {
+    paymentResponse.complete("fail");
+  });
+}).catch(function(err) {
+  console.error("Uh oh, something bad happened", err.message);
+});
+```
 
 ## Specifications
 

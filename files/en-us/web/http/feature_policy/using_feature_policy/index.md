@@ -38,7 +38,7 @@ An `allowlist` is a list of origins that takes one or more of the following valu
 - `'none'`: The feature is disabled in top-level and nested browsing contexts.
 - \<origin(s)>: The feature is allowed for specific origins (for example, https\://example.com). Origins should be separated by a space.
 
-The values `*` (enable for all origins) or `'none'` (disable for all origins) may only be used alone, while `'self'` and `'src'` may be used with one or more origins.
+The values `*` (enable for all origins) or `'none'` (disable for all origins) may only be used alone, while `'self'` and `'src'` may be used with one or more origins.
 
 Features are each defined to have a default allowlist, which is one of:
 
@@ -91,7 +91,7 @@ For example, allow all browsing contexts within this iframe to use fullscreen:
 <iframe src="https://example.com..." allow="fullscreen"></iframe>
 ```
 
-The default `<iframe>` [allowlist](#allowlist) value is `'src'`, so this is equivalent to:
+The default `<iframe>` [allowlist](#allowlist) value is `'src'`, so this is equivalent to:
 
 ```html
 <iframe src="https://example.com..." allow="fullscreen 'src'"></iframe>
@@ -118,7 +118,7 @@ Scripts inherit the policy of their browsing context, regardless of their origin
 
 All iframes inherit the policy of their parent page. If the iframe has an `allow` attribute, the policies of the parent page and the `allow` attribute are combined, using the most restrictive subset. For an iframe to have a feature enabled, the origin must be in the allowlist for both the parent page and the allow attribute.
 
-Disabling a feature in a policy is a one-way toggle. If a feature has been disabled for a child frame by its parent frame, the child cannot re-enable it, and neither can any of the child's descendants.
+Disabling a feature in a policy is a one-way toggle. If a feature has been disabled for a child frame by its parent frame, the child cannot re-enable it, and neither can any of the child's descendants.
 
 ## Enforcing best practices for good user experiences
 

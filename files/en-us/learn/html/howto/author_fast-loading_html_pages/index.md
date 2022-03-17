@@ -60,10 +60,10 @@ So, in particular, for pages which are generated dynamically, a little research 
 
 More information:
 
-1.  [HTTP Conditional Get for RSS Hackers](https://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
-2.  [HTTP 304: Not Modified](https://annevankesteren.nl/archives/2005/05/http-304)
-3.  [HTTP ETag on Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag)
-4.  [Caching in HTTP](https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html)
+1. [HTTP Conditional Get for RSS Hackers](https://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
+2. [HTTP 304: Not Modified](https://annevankesteren.nl/archives/2005/05/http-304)
+3. [HTTP ETag on Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag)
+4. [Caching in HTTP](https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html)
 
 ### Optimally order the components of the page
 
@@ -91,19 +91,23 @@ Tables are still considered valid markup but should be used for displaying tabul
 
 Rather than deeply nesting tables as in:
 
+```html
+<table>
+  <table>
     <table>
-      <table>
-        <table>
-              ...
-        </table>
-      </table>
+          ...
     </table>
+  </table>
+</table>
+```
 
 use non-nested tables or divs as in
 
-    <table>...</table>
-    <table>...</table>
-    <table>...</table>
+```html
+<table>...</table>
+<table>...</table>
+<table>...</table>
+```
 
 See also: [CSS Flexible Box Layout](https://www.w3.org/TR/css-flexbox-1/) and [CSS Grid Layout](https://www.w3.org/TR/css-grid-1/) specifications.
 
@@ -121,7 +125,9 @@ If the browser can immediately determine the height and/or width of your images 
 
 Tables should use the CSS selector: property combination:
 
-      table-layout: fixed;
+```css
+table-layout: fixed;
+```
 
 and should specify widths of columns using the [`<col>`](/en-US/docs/Web/HTML/Element/col) and the [`<colgroup>`](/en-US/docs/Web/HTML/Element/colgroup) elements.
 

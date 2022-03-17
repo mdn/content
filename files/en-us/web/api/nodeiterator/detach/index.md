@@ -27,15 +27,17 @@ nodeIterator.detach();
 
 ## Example
 
-    var nodeIterator = document.createNodeIterator(
-        document.body,
-        NodeFilter.SHOW_ELEMENT,
-        { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-        false
-    );
-    nodeIterator.detach(); // detaches the iterator
+```js
+var nodeIterator = document.createNodeIterator(
+    document.body,
+    NodeFilter.SHOW_ELEMENT,
+    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+    false
+);
+nodeIterator.detach(); // detaches the iterator
 
-    nodeIterator.nextNode(); // throws an INVALID_STATE_ERR exception
+nodeIterator.nextNode(); // throws an INVALID_STATE_ERR exception
+```
 
 ## Specifications
 

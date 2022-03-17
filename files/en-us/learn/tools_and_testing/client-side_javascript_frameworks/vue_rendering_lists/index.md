@@ -55,7 +55,7 @@ To be an effective to-do list, we need to be able to render multiple to-do items
 
 ### Adding some data to render
 
-First we need to get an array of to-do items. To do that, we’ll add a `data` property to the `App.vue` component object, containing a `ToDoItems` field whose value is an array of todo items. While we'll eventually add a mechanism to add new todo items, we can start with some mock to do items. Each to-do item will be represented by an object with a `name` and a `done` property.
+First we need to get an array of to-do items. To do that, we'll add a `data` property to the `App.vue` component object, containing a `ToDoItems` field whose value is an array of todo items. While we'll eventually add a mechanism to add new todo items, we can start with some mock to do items. Each to-do item will be represented by an object with a `name` and a `done` property.
 
 Add a few sample to-do items, along the lines of those seen below. This way you have some data available for rendering using `v-for`.
 
@@ -78,7 +78,7 @@ export default {
 };
 ```
 
-Now that we have a list of items, we can use the `v-for` directive to display them. Directives are applied to elements like other attributes. In case of `v-for`, you use a special syntax similar to a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop in JavaScript —  `v-for="item in items"` — where `items` is the array you want to iterate over, and `item` is a reference to the current element in the array.
+Now that we have a list of items, we can use the `v-for` directive to display them. Directives are applied to elements like other attributes. In case of `v-for`, you use a special syntax similar to a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop in JavaScript — `v-for="item in items"` — where `items` is the array you want to iterate over, and `item` is a reference to the current element in the array.
 
 `v-for` attaches to the element you want to repeat, and renders that element and its children. In this case, we want to display an `<li>` element for every to-do item inside our `ToDoItems` array. Then we want to pass the data from each to-do item to a `ToDoItem` component.
 
@@ -88,13 +88,13 @@ Before we do that, there's one other piece of syntax to know about that is used 
 
 To make sure that Vue can accurately compare the `key` attributes, they need to be string or numeric values. While it would be great to use the name field, this field will eventually be controlled by user input, which means we can't guarantee that the names would be unique. We could use `lodash.uniqueid()`, however, like we did in the previous article.
 
-1.  Import `lodash.uniqueid` into your `App` component in the same way you did with your `ToDoItem` component, using
+1. Import `lodash.uniqueid` into your `App` component in the same way you did with your `ToDoItem` component, using
 
     ```js
      import uniqueId from 'lodash.uniqueid';
     ```
 
-2.  Next, add an `id` field to each element in your `ToDoItems` array, and assign each of them a value of `uniqueId('todo-')`.
+2. Next, add an `id` field to each element in your `ToDoItems` array, and assign each of them a value of `uniqueId('todo-')`.
 
     Your `App.vue` `<script>` element contents should now look like this:
 
@@ -120,7 +120,7 @@ To make sure that Vue can accurately compare the `key` attributes, they need to 
     };
     ```
 
-3.  Now, add the `v-for` directive and `key` attribute to the `<li>` element in your `App.vue` template, like so:
+3. Now, add the `v-for` directive and `key` attribute to the `<li>` element in your `App.vue` template, like so:
 
     ```html
     <ul>
@@ -132,7 +132,7 @@ To make sure that Vue can accurately compare the `key` attributes, they need to 
 
     When you make this change, every JavaScript expression between the `<li>` tags will have access to the `item` value in addition to the other component attributes. This means we can pass the fields of our item objects to our `ToDoItem` component — just remember to use the `v-bind` syntax. This is really useful, as we want our todo items to display their `label` properties as their label, not a static label of "My Todo Item". In addition, we want their checked status to reflect their `done` properties, not always be set to `done="false"`.
 
-4.  Update the `label="My ToDo Item"` attribute to `:label="item.label"`, and the `:done="false"` attribute to `:done="item.done"`, as seen in context below:
+4. Update the `label="My ToDo Item"` attribute to `:label="item.label"`, and the `:done="false"` attribute to `:done="item.done"`, as seen in context below:
 
     ```html
     <ul>
@@ -150,10 +150,10 @@ Now when you look at your running app, it'll show the todo items with their prop
 
 There's one little bit of refactoring we can do here. Instead of generating the `id` for the checkboxes inside your `ToDoItem` component, we can turn the `id` into a prop. While this isn't strictly necessary, it makes it easier for us to manage since we already need to create a unique `id` for each todo item anyway.
 
-1.  Add a new prop to your `ToDoItem` component — `id`.
-2.  Make it required, and make its type a `String`.
-3.  To prevent name collisions, remove the `id` field from your `data` attribute.
-4.  You are no longer using `uniqueId`, so you need to remove the `import uniqueId from 'lodash.uniqueid';` line, otherwise your app will throw an error.
+1. Add a new prop to your `ToDoItem` component — `id`.
+2. Make it required, and make its type a `String`.
+3. To prevent name collisions, remove the `id` field from your `data` attribute.
+4. You are no longer using `uniqueId`, so you need to remove the `import uniqueId from 'lodash.uniqueid';` line, otherwise your app will throw an error.
 
 The `<script>` contents in your `ToDoItem` component should now look something like this:
 

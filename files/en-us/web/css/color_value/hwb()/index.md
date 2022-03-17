@@ -43,4 +43,3 @@ hwb(194 0% 0% / .5) /* #00c3ff with 50% opacity */
 ## Browser compatibility
 
 {{Compat}}
-

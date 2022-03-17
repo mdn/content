@@ -73,7 +73,7 @@ The features of note are:
 - {{htmlattrxref("src","video")}}
   - : In the same way as for the {{htmlelement("img")}} element, the `src` (source) attribute contains a path to the video you want to embed. It works in exactly the same way.
 - {{htmlattrxref("controls","video")}}
-  - : Users must be able to control video and audio playback (it's especially critical for people who have [epilepsy](https://en.wikipedia.org/wiki/Epilepsy#Epidemiology).) You must either use the `controls` attribute to include the browser's own control interface, or build your interface using the appropriate [JavaScript API](/en-US/docs/Web/API/HTMLMediaElement). At a minimum, the interface must include a way to start and stop the media, and to adjust the volume.
+  - : Users must be able to control video and audio playback (it's especially critical for people who have [epilepsy](https://en.wikipedia.org/wiki/Epilepsy#Epidemiology).) You must either use the `controls` attribute to include the browser's own control interface, or build your interface using the appropriate [JavaScript API](/en-US/docs/Web/API/HTMLMediaElement). At a minimum, the interface must include a way to start and stop the media, and to adjust the volume.
 - The paragraph inside the `<video>` tags
   - : This is called **fallback content** — this will be displayed if the browser accessing the page doesn't support the `<video>` element, allowing us to provide a fallback for older browsers. This can be anything you like; in this case, we've provided a direct link to the video file, so the user can at least access it some way regardless of what browser they are using.
 
@@ -244,8 +244,8 @@ This is the second.
 
 To get this displayed along with the HTML media playback, you need to:
 
-1.  Save it as a `.vtt` file in a sensible place.
-2.  Link to the `.vtt` file with the {{htmlelement("track")}} element. `<track>` should be placed within `<audio>` or `<video>`, but after all `<source>` elements. Use the {{htmlattrxref("kind","track")}} attribute to specify whether the cues are `subtitles`, `captions`, or `descriptions`. Further, use {{htmlattrxref("srclang","track")}} to tell the browser what language you have written the subtitles in. Finally, add {{htmlattrxref("label","track")}} to help readers identify the language they are searching for.
+1. Save it as a `.vtt` file in a sensible place.
+2. Link to the `.vtt` file with the {{htmlelement("track")}} element. `<track>` should be placed within `<audio>` or `<video>`, but after all `<source>` elements. Use the {{htmlattrxref("kind","track")}} attribute to specify whether the cues are `subtitles`, `captions`, or `descriptions`. Further, use {{htmlattrxref("srclang","track")}} to tell the browser what language you have written the subtitles in. Finally, add {{htmlattrxref("label","track")}} to help readers identify the language they are searching for.
 
 Here's an example:
 
@@ -273,11 +273,11 @@ If you are unable to source any video or audio, then you can feel free to use ou
 
 We would like you to:
 
-1.  Save your audio and video files in a new directory on your computer.
-2.  Create a new HTML file in the same directory, called `index.html`.
-3.  Add {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements to the page; make them display the default browser controls.
-4.  Give both of them {{HTMLElement("source")}} elements so that browsers will find the audio format they support best and load it. These should include {{htmlattrxref("type", "source")}} attributes.
-5.  Give the `<video>` element a poster that will be displayed before the video starts to be played. Have fun creating your own poster graphic.
+1. Save your audio and video files in a new directory on your computer.
+2. Create a new HTML file in the same directory, called `index.html`.
+3. Add {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements to the page; make them display the default browser controls.
+4. Give both of them {{HTMLElement("source")}} elements so that browsers will find the audio format they support best and load it. These should include {{htmlattrxref("type", "source")}} attributes.
+5. Give the `<video>` element a poster that will be displayed before the video starts to be played. Have fun creating your own poster graphic.
 
 For an added bonus, you could try researching text tracks, and work out how to add some captions to your video.
 

@@ -11,13 +11,13 @@ tags:
   - text alternatives
   - time-based media
 ---
-This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Perceivable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Perceivable states that users must be able to perceive it in some way, using one or more of their senses.
+This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Perceivable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Perceivable states that users must be able to perceive it in some way, using one or more of their senses.
 
-> **Note:** To read the W3C definitions for Perceivable and its guidelines and success criteria, see [Principle 1: Perceivable - Information and user interface components must be presentable to users in ways they can perceive.](https://www.w3.org/TR/WCAG21/#perceivable)
+> **Note:** To read the W3C definitions for Perceivable and its guidelines and success criteria, see [Principle 1: Perceivable - Information and user interface components must be presentable to users in ways they can perceive.](https://www.w3.org/TR/WCAG21/#perceivable)
 
 ## Guideline 1.1 — Providing text alternatives for non-text content
 
-The key here is that text can be converted to other forms that people with disabilities can use.  For example, it can be spoken by a screenreader, converted to large print, or represented on a braille display. Non-text content refers to multimedia such as images, audio, and video.
+The key here is that text can be converted to other forms that people with disabilities can use. For example, it can be spoken by a screenreader, converted to large print, or represented on a braille display. Non-text content refers to multimedia such as images, audio, and video.
 
 <table class="standard-table">
   <thead>
@@ -29,7 +29,7 @@ The key here is that text can be converted to other forms that people with disab
   </thead>
   <tbody>
     <tr>
-      <td rowspan="5">1.1.1 Provide text equivalents  (A)</td>
+      <td rowspan="5">1.1.1 Provide text equivalents (A)</td>
       <td>
         All images that convey meaningful content should be given suitable
         alternative text.
@@ -44,7 +44,7 @@ The key here is that text can be converted to other forms that people with disab
       <td>
         Complex images or charts should have an accessible alternative provided,
         either on the same page or via a link. Use a regular link instead of
-        a `longdesc` attribute.
+        a `longdesc` attribute.
       </td>
       <td>
         <p>
@@ -67,10 +67,10 @@ The key here is that text can be converted to other forms that people with disab
       </td>
       <td>
         <p>
-          See <a href="/en-US/docs/Learn/Accessibility/HTML#text_alternatives"
+          See <a href="/en-US/docs/Learn/Accessibility/HTML#text_alternatives"
             >Text alternatives</a
           >
-          for static caption options, and
+          for static caption options, and
           <a href="/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts"
             >Audio transcripts</a
           >,
@@ -92,7 +92,7 @@ The key here is that text can be converted to other forms that people with disab
       </td>
       <td>
         Buttons are simple—you should make sure the button text describes the
-        function of the button (e.g., <code
+        function of the button (e.g., <code
           >&#x3C;button>Upload image&#x3C;/button></code
         >). For more information on other UI controls, see
         <a href="/en-US/docs/Learn/Accessibility/HTML#ui_controls"
@@ -112,7 +112,7 @@ The key here is that text can be converted to other forms that people with disab
           <a
             href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders"
             >Backgrounds</a
-          >).  If you have to include an image via an
+          >). If you have to include an image via an
           {{htmlelement("img")}} element, give it a blank alt
           (`alt=""`). Otherwise, screenreaders may try to read out
           the filepath, etc.
@@ -220,13 +220,13 @@ This guideline refers to the ability of content to be consumed by users in multi
           <li>
             Image alt text. Content images should have text available that
             clearly describes the image's contents, which can be
-            programmatically associated with it (e.g., `alt` text),
+            programmatically associated with it (e.g., `alt` text),
             or otherwise is easy to associate (e.g., describes it and is sat
-            right next to it). This should mean that the full meaning can still
+            right next to it). This should mean that the full meaning can still
             be inferred even if you can't see the image.
           </li>
           <li>
-            Lists. If the order of list items is important, use an ordered list
+            Lists. If the order of list items is important, use an ordered list
             ({{htmlelement("ol")}}).
           </li>
         </ul>
@@ -330,7 +330,7 @@ This guideline refers to the ability of content to be consumed by users in multi
     </tr>
     <tr>
       <td>
-        1.3.5 Identify Input Purpose (AA) <em
+        1.3.5 Identify Input Purpose (AA) <em
           ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
             >added in 2.1</a
           ></em
@@ -342,7 +342,7 @@ This guideline refers to the ability of content to be consumed by users in multi
           <a href="https://www.w3.org/TR/WCAG21/#input-purposes"
             >53 input fields</a
           >
-          to programmatically identify the purpose of a field.
+          to programmatically identify the purpose of a field.
         </p>
       </td>
       <td>
@@ -354,7 +354,7 @@ This guideline refers to the ability of content to be consumed by users in multi
     </tr>
     <tr>
       <td>
-        1.3.6 Identify Purpose (AAA) <em
+        1.3.6 Identify Purpose (AAA) <em
           ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
             >added in 2.1</a
           ></em
@@ -513,14 +513,14 @@ This guideline relates to making sure core content is easy to discern from backg
             maximum readability.
           </li>
           <li>
-            Text should not be fully justified (e.g., <code
+            Text should not be fully justified (e.g., <code
               >text-align: justify;</code
             >).
           </li>
           <li>
             Line height should be at least 1.5 times the text size within
-            paragraphs (e.g., `line-height: 1.5;`), and at least 2.25
-            times the text size between paragraphs (e.g., <code
+            paragraphs (e.g., `line-height: 1.5;`), and at least 2.25
+            times the text size between paragraphs (e.g., <code
               >padding: 2.25rem;</code
             >).
           </li>
@@ -543,7 +543,7 @@ This guideline relates to making sure core content is easy to discern from backg
     </tr>
     <tr>
       <td>
-        1.4.10 Reflow (AA) <em
+        1.4.10 Reflow (AA) <em
           ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
             >added in 2.1</a
           ></em
@@ -552,8 +552,8 @@ This guideline relates to making sure core content is easy to discern from backg
       <td>
         <ul>
           <li>
-            No horizontal scrolling for left-to-right languages (like English)
-            or right-to-left languages (like Arabic)
+            No horizontal scrolling for left-to-right languages (like English)
+            or right-to-left languages (like Arabic)
           </li>
           <li>
             No vertical scrolling for top-to-bottom languages (like Japanese)
@@ -572,7 +572,7 @@ This guideline relates to making sure core content is easy to discern from backg
     </tr>
     <tr>
       <td>
-        1.4.11 Non-Text Contrast(AA) <em
+        1.4.11 Non-Text Contrast(AA) <em
           ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
             >added in 2.1</a
           ></em
@@ -591,7 +591,7 @@ This guideline relates to making sure core content is easy to discern from backg
     </tr>
     <tr>
       <td>
-        1.4.12 Text Spacing (AA) <em
+        1.4.12 Text Spacing (AA) <em
           ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
             >added in 2.1</a
           ></em
@@ -623,7 +623,7 @@ This guideline relates to making sure core content is easy to discern from backg
     </tr>
     <tr>
       <td>
-        1.4.13 Content on Hover or Focus (AA) <em
+        1.4.13 Content on Hover or Focus (AA) <em
           ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
             >added in 2.1</a
           ></em
@@ -663,7 +663,7 @@ This guideline relates to making sure core content is easy to discern from backg
 
 - [WCAG](en-US/docs/Web/Accessibility/Understanding_WCAG)
 
-  1.  Perceivable
-  2.  [Operable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable)
-  3.  [Understandable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable)
-  4.  [Robust](/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust)
+  1. Perceivable
+  2. [Operable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable)
+  3. [Understandable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable)
+  4. [Robust](/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust)

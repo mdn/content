@@ -17,7 +17,6 @@ The **`HTMLAreaElement.hostname`** property is a {{domxref("USVString")}} contai
 A {{domxref("USVString")}} containing the domain of the URL associated with the `area` element.
 It can be used as both a setter and getter.
 
-
 ## Examples
 
 ```html

@@ -35,23 +35,23 @@ tags:
 ```
 
 - [General_Category](https://unicode.org/reports/tr18/#General_Category_Property) (`gc`)
-- [Script](https://unicode.org/reports/tr24/#Script) (`sc`)
-- [Script_Extensions](https://unicode.org/reports/tr24/#Script_Extensions) (`scx`)
+- [Script](https://unicode.org/reports/tr24/#Script) (`sc`)
+- [Script_Extensions](https://unicode.org/reports/tr24/#Script_Extensions) (`scx`)
 
 See also [PropertyValueAliases.txt](https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt)
 
 - UnicodeBinaryPropertyName
-  - : The name of a [binary property](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties). E.g.: [`ASCII`](https://unicode.org/reports/tr18/#General_Category_Property), [`Alpha`](https://unicode.org/reports/tr44/#Alphabetic), `Math`, [`Diacritic`](https://unicode.org/reports/tr44/#Diacritic), [`Emoji`](https://unicode.org/reports/tr51/#Emoji_Properties), [`Hex_Digit`](https://unicode.org/reports/tr44/#Hex_Digit), `Math`, [`White_space`](https://unicode.org/reports/tr44/#White_Space), etc. See [Unicode Data PropList.txt ](https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt)for more info.
+  - : The name of a [binary property](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties). E.g.: [`ASCII`](https://unicode.org/reports/tr18/#General_Category_Property), [`Alpha`](https://unicode.org/reports/tr44/#Alphabetic), `Math`, [`Diacritic`](https://unicode.org/reports/tr44/#Diacritic), [`Emoji`](https://unicode.org/reports/tr51/#Emoji_Properties), [`Hex_Digit`](https://unicode.org/reports/tr44/#Hex_Digit), `Math`, [`White_space`](https://unicode.org/reports/tr44/#White_Space), etc. See [Unicode Data PropList.txt](https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt) for more info.
 - UnicodePropertyName
   - : The name of a [non-binary](https://tc39.es/ecma262/multipage/text-processing.html#table-nonbinary-unicode-properties) property:
 - UnicodePropertyValue
-  - : One of the tokens listed in the Values section, below. Many values have aliases or shorthand (e.g. the value `Decimal_Number` for the `General_Category` property may be written `Nd`, `digit`, or `Decimal_Number`). For most values, the *`UnicodePropertyName`* part and equals sign may be omitted. If a *`UnicodePropertyName`* is specified, the value must correspond to the property type given.
+  - : One of the tokens listed in the Values section, below. Many values have aliases or shorthand (e.g. the value `Decimal_Number` for the `General_Category` property may be written `Nd`, `digit`, or `Decimal_Number`). For most values, the *`UnicodePropertyName`* part and equals sign may be omitted. If a *`UnicodePropertyName`* is specified, the value must correspond to the property type given.
 
 > **Note:** As there are many properties and values available, we will not describe them exhaustively here but rather provide various examples
 
 ## Rationale
 
-Before ES2018 there was no performance-efficient way to match characters from different sets based on `scripts` (like Macedonian, Greek, Georgian etc.) or `propertyName` (like Emoji etc) in JavaScript. Check out [tc39 Proposal on Unicode Property Escapes](https://github.com/tc39/proposal-regexp-unicode-property-escapes) for more info.
+Before ES2018 there was no performance-efficient way to match characters from different sets based on `scripts` (like Macedonian, Greek, Georgian etc.) or `propertyName` (like Emoji etc) in JavaScript. Check out [tc39 Proposal on Unicode Property Escapes](https://github.com/tc39/proposal-regexp-unicode-property-escapes) for more info.
 
 ## Examples
 
@@ -63,7 +63,7 @@ They can be used to match letters, numbers, symbols, punctuations, spaces, etc. 
 
 ```js
 // finding all the letters of a text
-let story = "It’s the Cheshire Cat: now I shall have somebody to talk to.";
+let story = "It's the Cheshire Cat: now I shall have somebody to talk to.";
 
 // Most explicit form
 story.match(/\p{General_Category=Letter}/gu);

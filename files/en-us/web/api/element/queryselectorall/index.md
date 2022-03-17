@@ -41,7 +41,7 @@ elementList = parentNode.querySelectorAll(selectors);
 > **Note:** Characters which are not part of standard CSS syntax must be
 > escaped using a backslash character. Since JavaScript also uses backslash escaping,
 > special care must be taken when writing string literals using these characters. See
-> {{anch("Escaping special characters")}} for more information.
+> [Escaping special characters](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences) for more information.
 
 ### Return value
 
@@ -96,7 +96,7 @@ var matches = myBox.querySelectorAll("div.note, div.alert");
 ```
 
 Here, we get a list of the document's `<p>` elements whose immediate
-parent element is a {{domxref("div")}} with the class `"highlighted"` and
+parent element is a {{HTMLElement("div")}} with the class `"highlighted"` and
 which are located inside a container whose ID is `"test"`.
 
 ```js
@@ -105,7 +105,7 @@ var matches = container.querySelectorAll("div.highlighted > p");
 ```
 
 This example uses an [attribute
-selector](/en-US/docs/Web/CSS/Attribute_selectors) to return a list of the {{domxref("iframe")}} elements in the document
+selector](/en-US/docs/Web/CSS/Attribute_selectors) to return a list of the {{HTMLElement("iframe")}} elements in the document
 that contain an attribute named `"data-src"`:
 
 ```js
@@ -125,7 +125,7 @@ var matches = container.querySelectorAll("li[data-active='1']");
 
 Once the {{domxref("NodeList")}} of matching elements is returned, you can examine it
 just like any array. If the array is empty (that is, its `length` property is
-0\), then no matches were found.
+`0`), then no matches were found.
 
 Otherwise, you can use standard array notation to access the contents of the list. You
 can use any common looping statement, such as:
@@ -138,9 +138,9 @@ highlightedItems.forEach(function(userItem) {
 });
 ```
 
-> **Note:** NodeList is not a genuine array, that is to say it doesn't
-> have the array methods like slice, some, map etc. To convert it into an array, try
-> Array.from(nodeList).
+> **Note:** `NodeList` is not a genuine array, that is to say it doesn't
+> have array methods like `slice`, `some`, `map`, etc. To convert it into an array, try
+> `Array.from(nodeList)`.
 
 ## User notes
 
@@ -205,5 +205,3 @@ inner.length; // 0
   {{domxref("Document.querySelectorAll()")}}
 - {{domxref("DocumentFragment.querySelector()")}} and
   {{domxref("DocumentFragment.querySelectorAll()")}}
-- [Code snippets for
-  `querySelector()`](/en-US/docs/Code_snippets/QuerySelector)

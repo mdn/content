@@ -17,7 +17,7 @@ browser-compat: api.HTMLTableElement.rows
 {{APIRef("HTML DOM")}}
 
 The read-only {{domxref("HTMLTableElement")}}
-property **`rows`** returns a live
+property **`rows`** returns a live
 {{domxref("HTMLCollection")}} of all the rows in the table, including the rows
 contained within any {{HTMLElement("thead")}}, {{HTMLElement("tfoot")}}, and
 {{HTMLElement("tbody")}} elements.

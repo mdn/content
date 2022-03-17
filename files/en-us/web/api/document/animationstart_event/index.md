@@ -47,7 +47,7 @@ This listens for the `animationstart` event and logs a message when it is fired:
 
 ```js
 document.addEventListener('animationstart', () => {
-  console.log('Animation started');
+  console.log('Animation started');
 });
 ```
 
@@ -55,7 +55,7 @@ The same, but using `onanimationstart`:
 
 ```js
 document.onanimationstart = () => {
-  console.log('Animation started');
+  console.log('Animation started');
 };
 ```
 

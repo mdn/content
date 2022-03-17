@@ -71,7 +71,7 @@ conversion is never less than `s.length` bytes and never greater than
 is expected to be short-lived, it makes sense to allocate `s.length * 3`
 bytes for the output, in which case the first conversion attempt is guaranteed to
 convert the whole string. Note that the `s.length * 3` is rare because the
-string would have to be packed with some of the few characters that expant into 3
+string would have to be packed with some of the few characters that expand into 3
 bytes. It is unlikely that long text will exceed `s.length * 2` bytes in
 length. Thus, a more optimistic approach might be to allocate
 `s.length * 2 + 5` bytes, and perform reallocation in the rare circumstance

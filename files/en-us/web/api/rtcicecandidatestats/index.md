@@ -31,7 +31,7 @@ The WebRTC API's **`RTCIceCandidateStats`** dictionary provides statistics relat
 - {{domxref("RTCIceCandidateStats.deleted", "deleted")}} {{optional_inline}}
   - : A Boolean value indicating whether or not the candidate has been released or deleted; the default value is `false`. For local candidates, it's value is `true` if the candidate has been deleted or released. For host candidates, `true` means that any network resources (usually a network socket) associated with the candidate have already been released. For {{Glossary("TURN")}} candidates, the TURN allocation is no longer active for deleted candidates. This property is not present for remote candidates.
 - {{domxref("RTCIceCandidateStats.networkType", "networkType")}} {{optional_inline}}
-  - : A string from the {{domxref("RTCNetworkType")}} enumerated type which indicates the type of interface used for a local candidate. This property is only present for local candidates.
+  - : A string which indicates the type of interface used for a local candidate. This property is only present for local candidates.
 - {{domxref("RTCIceCandidateStats.port", "port")}} {{optional_inline}}
   - : The network port number used by the candidate.
 - {{domxref("RTCIceCandidateStats.priority", "priority")}} {{optional_inline}}
@@ -41,7 +41,7 @@ The WebRTC API's **`RTCIceCandidateStats`** dictionary provides statistics relat
 - {{domxref("RTCIceCandidateStats.relayProtocol", "relayProtocol")}} {{optional_inline}}
   - : A string identifying the protocol used by the endpoint for communicating with the {{Glossary("TURN")}} server; valid values are `tcp`, `udp`, and `tls`. Only present for local candidates.
 - {{domxref("RTCIceCandidateStats.transportId", "transportId")}} {{optional_inline}}
-  - : A string uniquely identifiying the transport object that was inspected in order to obtain the {{domxref("RTCTransportStats")}} associated with the candidate correspondin to these statistics.
+  - : A string uniquely identifying the transport object that was inspected in order to obtain the {{domxref("RTCTransportStats")}} associated with the candidate corresponding to these statistics.
 - {{domxref("RTCIceCandidateStats.url", "url")}} {{optional_inline}}
   - : For local candidates, the `url` property is the {{Glossary("URL")}} of the {{Glossary("ICE")}} server from which the candidate was received. This URL matches the one included in the {{domxref("RTCPeerConnectionIceEvent")}} object representing the {{event("icecandidate")}} event that delivered the candidate to the local peer.
 

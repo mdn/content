@@ -152,7 +152,7 @@ array[1];
 
 ## See also
 
-- A polyfill of `String.prototype.matchAll` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.matchAll` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.match()")}}
 - [Using regular
   expressions in JavaScript](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)

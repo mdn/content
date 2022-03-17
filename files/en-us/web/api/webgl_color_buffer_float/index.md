@@ -21,9 +21,9 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 ## Constants
 
 - `ext.RGBA32F_EXT`
-  - : RGBA 32-bit floating-point color-renderable format.
+  - : RGBA 32-bit floating-point color-renderable format.
 - `ext.RGB32F_EXT` ({{deprecated_inline}})
-  - : RGB 32-bit floating-point color-renderable format.
+  - : RGB 32-bit floating-point color-renderable format.
 - `ext.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT`
   - : ?
 - `ext.UNSIGNED_NORMALIZED_EXT`

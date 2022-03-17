@@ -70,8 +70,8 @@ IDBDatabase.transaction(storeNames, mode, options);
 
     As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to
     increase performance (see {{Bug("1112702")}}), which is the same behavior as other
-    IndexedDB-supporting browsers. Previously in a `readwrite` transaction
-    {{domxref("IDBTransaction.oncomplete")}} was fired only when all data was guaranteed
+    IndexedDB-supporting browsers. Previously in a `readwrite` transaction, a
+    {{domxref("IDBTransaction.complete_event", "complete")}} event was fired only when all data was guaranteed
     to have been flushed to disk. In Firefox 40+ the `complete` event is
     fired after the OS has been told to write the data but potentially before that data
     has actually been flushed to disk. The `complete` event may thus be
@@ -128,8 +128,8 @@ var db;
 // Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+DBOpenRequest.onsuccess = event => {
+  note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable.
   // This is used a lot below
@@ -145,11 +145,11 @@ DBOpenRequest.onsuccess = function(event) {
 var transaction = db.transaction(["toDoList"], "readwrite");
 
 // report on the success of opening the transaction
-transaction.oncomplete = function(event) {
+transaction.oncomplete = event => {
   note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
 };
 
-transaction.onerror = function(event) {
+transaction.onerror = event => {
   note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
 };
 
@@ -175,5 +175,4 @@ var objectStore = transaction.objectStore("toDoList");
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

@@ -21,7 +21,7 @@ the linear velocity in meters per second relative to the base
 
 A {{DOMxRef("DOMPointReadOnly")}} describing the linear velocity in meters
 per second relative to the base {{DOMxRef("XRSpace")}}. Returns {{jsxref("null")}}
-if the user agent can’t populate this value.
+if the user agent can't populate this value.
 
 ## Specifications
 

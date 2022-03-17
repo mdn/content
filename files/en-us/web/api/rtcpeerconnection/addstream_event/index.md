@@ -21,28 +21,32 @@ The obsolete **`addstream`** event is sent to an {{domxref("RTCPeerConnection")}
 
 > **Warning:** This event has been removed from the WebRTC specification. You should instead watch for the {{domxref("RTCPeerConnection.track_event", "track")}} event, which is sent for each media track added to the `RTCPeerConnection`.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("MediaStreamEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{DOMxRef("RTCPeerconnection.onaddstream")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 You can, similarly, watch for streams to be removed from the connection by monitoring the {{domxref("RTCPeerConnection.removestream_event", "removestream")}} event.
+
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('addstream', event => { });
+
+onaddstream = event => { };
+```
+
+## Event type
+
+An {{domxref("MediaStreamEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("MediaStreamEvent")}}
+
+## Event properties
+
+_A {{domxref("MediaStreamEvent")}} being an {{domxref("Event")}}, this event also implements these properties_.
+
+- {{domxref("MediaStreamEvent.stream")}} {{readOnlyInline}}
+  - : Contains the {{domxref("MediaStream")}} containing the stream associated with the event.
 
 ## Examples
 
@@ -75,6 +79,5 @@ pc.addEventListener("addstream", ev => doAddStream(ev.stream), false);
 ## See also
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- {{domxref("RTCPeerConnection.onaddstream")}}
 - {{domxref("RTCPeerConnection.addStream()")}}
 - {{domxref("MediaStreamEvent")}}

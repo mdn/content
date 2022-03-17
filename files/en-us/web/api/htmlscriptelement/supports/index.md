@@ -37,7 +37,6 @@ HTMLScriptElement.supports(type)
 
     Any other value will cause the method to return `false`.
 
-
 ### Return value
 
 Returns `true` if the indicated script type is supported and `false` otherwise.
@@ -69,7 +68,6 @@ else
 ```
 
 {{ EmbedLiveSample('Examples') }}
-
 
 ## Specifications
 

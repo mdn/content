@@ -30,8 +30,8 @@ string is user configurable. For example:
 
 - In Firefox, you can change the preference `general.useragent.override` in
   `about:config`. Some Firefox extensions do that; however, this only changes
-  the HTTP header that gets sent, and doesn't affect browser detection performed by
-  JavaScript code.
+  the HTTP header that gets sent and that is returned by `navigator.userAgent`.
+  There might be other methods that utilize JavaScript code to identify the browser.
 - Opera 6+ allows users to set the browser identification string via a menu.
 - Microsoft Internet Explorer uses the Windows registry.
 - Safari and iCab allow users to change the browser user agent string to predefined

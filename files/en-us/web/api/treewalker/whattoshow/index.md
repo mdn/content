@@ -10,9 +10,9 @@ browser-compat: api.TreeWalker.whatToShow
 ---
 {{ APIRef("DOM") }}
 
-The **`TreeWalker.whatToShow`** read-only property returns an
-`unsigned long` being a bitmask made of constants describing the types of
-{{domxref("Node")}} that must to be presented. Non-matching nodes are skipped, but their
+The **`TreeWalker.whatToShow`** read-only property returns a
+bitmask that indicates the types of
+[nodes](/en-US/docs/Web/API/Node) to show. Non-matching nodes are skipped, but their
 children may be included, if relevant. The possible values are:
 
 <table class="no-markdown">
@@ -50,32 +50,32 @@ children may be included, if relevant. The possible values are:
         <code>NodeFilter.SHOW_CDATA_SECTION</code> {{deprecated_inline}}
       </td>
       <td><code>8</code></td>
-      <td>Shows {{ domxref("CDATASection") }} nodes.</td>
+      <td>Shows {{ domxref("CDATASection") }} nodes.</td>
     </tr>
     <tr>
       <td><code>NodeFilter.SHOW_COMMENT</code></td>
       <td><code>128</code></td>
-      <td>Shows {{ domxref("Comment") }} nodes.</td>
+      <td>Shows {{ domxref("Comment") }} nodes.</td>
     </tr>
     <tr>
       <td><code>NodeFilter.SHOW_DOCUMENT</code></td>
       <td><code>256</code></td>
-      <td>Shows {{ domxref("Document") }} nodes.</td>
+      <td>Shows {{ domxref("Document") }} nodes.</td>
     </tr>
     <tr>
       <td><code>NodeFilter.SHOW_DOCUMENT_FRAGMENT</code></td>
       <td><code>1024</code></td>
-      <td>Shows {{ domxref("DocumentFragment") }} nodes.</td>
+      <td>Shows {{ domxref("DocumentFragment") }} nodes.</td>
     </tr>
     <tr>
       <td><code>NodeFilter.SHOW_DOCUMENT_TYPE</code></td>
       <td><code>512</code></td>
-      <td>Shows {{ domxref("DocumentType") }} nodes.</td>
+      <td>Shows {{ domxref("DocumentType") }} nodes.</td>
     </tr>
     <tr>
       <td><code>NodeFilter.SHOW_ELEMENT</code></td>
       <td><code>1</code></td>
-      <td>Shows {{ domxref("Element") }} nodes.</td>
+      <td>Shows {{ domxref("Element") }} nodes.</td>
     </tr>
     <tr>
       <td><code>NodeFilter.SHOW_ENTITY</code> {{deprecated_inline}}</td>
@@ -100,12 +100,12 @@ children may be included, if relevant. The possible values are:
     <tr>
       <td><code>NodeFilter.SHOW_PROCESSING_INSTRUCTION</code></td>
       <td><code>64</code></td>
-      <td>Shows {{ domxref("ProcessingInstruction") }} nodes.</td>
+      <td>Shows {{ domxref("ProcessingInstruction") }} nodes.</td>
     </tr>
     <tr>
       <td><code>NodeFilter.SHOW_TEXT</code></td>
       <td><code>4</code></td>
-      <td>Shows {{ domxref("Text") }} nodes.</td>
+      <td>Shows {{ domxref("Text") }} nodes.</td>
     </tr>
   </tbody>
 </table>
@@ -126,7 +126,7 @@ var treeWalker = document.createTreeWalker(
     false
 );
 if( (treeWalker.whatToShow == NodeFilter.SHOW_ALL) ||
-    (treeWalker.whatToShow % (NodeFilter.SHOW_COMMENT*2)) >= NodeFilter.SHOW_COMMENT) {
+    (treeWalker.whatToShow % (NodeFilter.SHOW_COMMENT*2)) >= NodeFilter.SHOW_COMMENT) {
     // treeWalker will show comments
 }
 ```

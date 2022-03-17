@@ -4,7 +4,7 @@ slug: Web/API/Window/onvrdisplayfocus
 tags:
   - API
   - Event Handler
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -36,7 +36,7 @@ window.onvrdisplayfocus = function() { /* ... */ };
 
 ```js
 window.onvrdisplayfocus = function() {
-  info.textContent = 'Display focused.';
+  info.textContent = 'Display focused.';
 };
 ```
 

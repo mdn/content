@@ -13,7 +13,7 @@ The **WebCodecs API** gives web developers low-level access to the individual fr
 It is useful for web applications that require full control over the way media is processed.
 For example, video or audio editors, and video conferencing.
 
-##  Concepts and Usage
+## Concepts and Usage
 
 Many Web APIs use media codecs internally.
 For example, the {{domxref("Web Audio API")}}, and the {{domxref("WebRTC API")}}.
@@ -27,7 +27,7 @@ reducing performance and power efficiency, and adding additional development ove
 The WebCodecs API provides access to codecs that are already in the browser.
 It gives access to raw video frames, chunks of audio data, image decoders, audio and video encoders and decoders.
 
-##  Interfaces
+## Interfaces
 
 - {{domxref("AudioDecoder")}}
   - : Decodes {{domxref("EncodedAudioChunk")}} objects.

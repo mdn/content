@@ -9,7 +9,7 @@ tags:
   - Method
 browser-compat: api.DataTransferItem.getAsFileSystemHandle
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("HTML Drag and Drop API")}}
+{{securecontext_header}}{{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 The **`getAsFileSystemHandle()`** method of the
 {{domxref("DataTransferItem")}} interface returns a {{domxref('FileSystemFileHandle')}}
@@ -28,7 +28,7 @@ None.
 
 ### Return value
 
-A {{domxref('FileSystemFileHandle')}} or {{domxref('FileSystemDirectoryHandle')}}.
+A {{jsxref('Promise')}} fulfilled with a {{domxref('FileSystemFileHandle')}} or {{domxref('FileSystemDirectoryHandle')}}.
 
 ### Exceptions
 

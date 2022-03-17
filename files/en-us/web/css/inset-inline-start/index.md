@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.inset-inline-start
@@ -32,7 +31,7 @@ inset-inline-start: revert;
 inset-inline-start: unset;
 ```
 
-The shorthand for `inset-inline-start` and {{cssxref("inset-inline-end")}} is {{cssxref("inset-inline")}}.
+The shorthand for `inset-inline-start` and {{cssxref("inset-inline-end")}} is {{cssxref("inset-inline")}}.
 
 ## Syntax
 

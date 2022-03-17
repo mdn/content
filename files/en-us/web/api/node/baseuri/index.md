@@ -28,7 +28,7 @@ The base URL is determined as follows:
 
 ## Value
 
-A {{jsxref("String")}} representing the base URL of the {{domxref("Node")}}.
+A string representing the base URL of the {{domxref("Node")}}.
 
 ## Examples
 

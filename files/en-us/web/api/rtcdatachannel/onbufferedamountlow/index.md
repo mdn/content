@@ -44,16 +44,18 @@ This example responds to the {{DOMxRef("RTCDataChannel.bufferedamountlow_event",
 {{domxref("RTCDataChannel.send()")}} to queue up the retrieved data for sending on the
 data channel.
 
-    pc = new RTCPeerConnection();
-    dc = pc.createDataChannel("SendFile");
+```js
+pc = new RTCPeerConnection();
+dc = pc.createDataChannel("SendFile");
 
-    /* ... */
+/* ... */
 
-    dc.onbufferedamountlow = function() {
-      if (source.position <= source.length) {
-        dc.send(source.readFile(65536));
-      }
-    }
+dc.onbufferedamountlow = function() {
+  if (source.position <= source.length) {
+    dc.send(source.readFile(65536));
+  }
+}
+```
 
 ## Specifications
 

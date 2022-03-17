@@ -31,7 +31,7 @@ tags:
 
 <h2 id="Source_list_pane">Source list pane</h2>
 
-<p>The source list pane lists all the JavaScript source files loaded into the page (<a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#debugging_worker_threads">including scripts for active web workers</a>), and enables you to select one to debug. At the top level sources are organized by origin, and under that they're organized by the directory structure from which they are served.</p>
+<p>The source list pane lists all the JavaScript source files loaded into the page (<a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#debugging_worker_threads">including scripts for active web workers</a>), and enables you to select one to debug. At the top level sources are organized by origin, and under that they're organized by the directory structure from which they are served.</p>
 
 <p><img alt="" src="debugger_uitour_02.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
@@ -99,11 +99,11 @@ tags:
  <li><strong>Jump to generated location</strong> is used when you have a sourcemap in a project and are currently viewing the original file. Selecting it takes you to the generated file where the selected item was placed.</li>
  <li><strong>Continue to here</strong> causes the debugger to continue execution to the currently selected line (execution will stop before it gets there if there is a breakpoint "on the way").</li>
  <li><strong>Copy to clipboard</strong> copies selected text in the pane into the system clipboard.</li>
- <li><strong>Copy source text</strong> copies all text in the file into the clipboard.</li>
+ <li><strong>Copy source text</strong> copies all text in the file into the clipboard.</li>
  <li><strong>Copy source URI</strong> copies the file location into the clipboard.</li>
  <li><strong>Download file</strong> opens a file dialog so you can save the file locally.</li>
  <li><strong>Reveal in tree</strong> highlights the file in the source pane list hierarchy.</li>
- <li><strong>Ignore source</strong> causes the debugger to skip the file when "stepping into" functions; this can be helpful for avoiding stepping into libraries used by your code.</li>
+ <li><strong>Ignore source</strong> causes the debugger to skip the file when "stepping into" functions; this can be helpful for avoiding stepping into libraries used by your code.</li>
  <li><strong>Show inline preview</strong> toggles the inline preview feature, which displays the value of the variable right next to the source when execution is paused.</li>
  <li><strong>Wrap lines</strong>/<strong>Unwap lines</strong> toggles the wrapping of long lines in the pane.</li>
 </ul>
@@ -157,14 +157,14 @@ tags:
 
 <h2 id="Call_stack">Call stack</h2>
 
-<p>The <em>call stack</em> becomes visible when the debugger is paused.</p>
+<p>The <em>call stack</em> becomes visible when the debugger is paused.</p>
 
 <p><img alt="" src="debugger_uitour_call_stack.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
-<p>The stack lists the chain of functions that are waiting to complete, with the frame for the function that was called last at the top (i.e. the most deeply nested function). Selecting a line opens the associated file in the source pane, at the specified location. It also updates the <a href="#scopes">Scopes</a> section with the variables for that frame/scope.</p>
+<p>The stack lists the chain of functions that are waiting to complete, with the frame for the function that was called last at the top (i.e. the most deeply nested function). Selecting a line opens the associated file in the source pane, at the specified location. It also updates the <a href="#scopes">Scopes</a> section with the variables for that frame/scope.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The call stack is a useful tool for tracking execution flow through your application! It allows you to confirm that functions are called in the order you expect, and with sensible variable values.</p>
+<p><strong>Note</strong>: The call stack is a useful tool for tracking execution flow through your application! It allows you to confirm that functions are called in the order you expect, and with sensible variable values.</p>
 </div>
 
 <p>Call stack lines for frames in your own code show the function name and the file location in which it was called.</p>
@@ -173,7 +173,7 @@ tags:
 <p><strong>Note</strong>: If you click <strong>Step over</strong> (<kbd>F10</kbd>) after changing the selected line in the source pane, the debugger executes until reaching the line following the newly-selected line (disregarding whatever line the debugger originally stopped at).</p>
 </div>
 
-<p>Lines for JavaScript frameworks/libraries <em>used</em> by your code (React, jQuery, Angular, Webpack, Backbone etc.) are grouped by default, and represented by a framework-specific icon (see the <em>jQuery</em> frame in the screenshot above). Generally you won't want to debug into the code of frameworks or libraries, so grouping these reduces the complexity of the call stack list. You can still expand and inspect the grouped frames if needed, or disable framework grouping using a context menu option: <strong>Disable framework grouping</strong>. <br>
+<p>Lines for JavaScript frameworks/libraries <em>used</em> by your code (React, jQuery, Angular, Webpack, Backbone etc.) are grouped by default, and represented by a framework-specific icon (see the <em>jQuery</em> frame in the screenshot above). Generally you won't want to debug into the code of frameworks or libraries, so grouping these reduces the complexity of the call stack list. You can still expand and inspect the grouped frames if needed, or disable framework grouping using a context menu option: <strong>Disable framework grouping</strong>. <br>
  <br>
  You can also use the context menu to <strong>Ignore source</strong> for a particular line. This will remove the line from the call stack, and the debugger will subsequently skip through any calls into that file. Note that you'll have to use the source pane "eye icon" or source list if you want to <em>Unignore</em> the source later!</p>
 

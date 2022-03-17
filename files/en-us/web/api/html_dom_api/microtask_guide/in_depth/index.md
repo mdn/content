@@ -17,7 +17,7 @@ When debugging or, possibly, when trying to decide upon the best approach to sol
 
 ## Introduction
 
-JavaScript is an inherently single-threaded language. It was designed in an era in which this was a positive choice; there were few multi-processor computers available to the general public, and the expected amount of code that would be handled by JavaScript was relatively low at that time.
+JavaScript is an inherently single-threaded language. It was designed in an era in which this was a positive choice; there were few multi-processor computers available to the general public, and the expected amount of code that would be handled by JavaScript was relatively low at that time.
 
 As time passed, of course, we know that computers have evolved into powerful multi-core systems, and JavaScript has become one of the most prolifically-used languages in the computing world. A vast number of the most popular applications are based at least in part on JavaScript code. To support this, it was necessary to find ways to allow for projects to escape the limitations of a single-threaded language.
 
@@ -109,7 +109,7 @@ The event loop, then, drives everything that happens in the browser as it pertai
 There are three types of event loop:
 
 - Window event loop
-  - : The window event loop is the one that drives all of the windows sharing a similar origin (though there are further limits to this as described elsewhere in this article XXXX ????).
+  - : The window event loop is the one that drives all of the windows sharing a similar origin (though there are further limits to this, as described below).
 - Worker event loop
   - : A worker event loop is one which drives a worker; this includes all forms of workers, including basic [web workers](/en-US/docs/Web/API/Web_Workers_API), [shared workers](/en-US/docs/Web/API/SharedWorker), and [service workers](/en-US/docs/Web/API/Service_Worker_API). Workers are kept in one or more agents that are separate from the "main" code; the browser may use a single event loop for all of the workers of a given type or may use multiple event loops to handle them.
 - Worklet event loop

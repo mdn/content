@@ -36,8 +36,8 @@ Firefox 15 shipped on August 28, 2012. This article lists key changes that are u
 - On keyboard events, support for querying the key location (standard, left or right of modifier key, in the Numpad) using the [KeyboardEvent.location](/en-US/docs/Web/API/KeyboardEvent#attributes_location) attribute, has been implemented ({{bug("166240")}}).
 - KeyboardEvent.keycode result has been computed from better rules which were almost same on Windows/Linux/Mac. And now they are available on some keyboard layouts which are not ASCII capable layouts on Linux and Mac, such as Arabic, Cyrillic, Thai and so on. See [the document for virtual key codes](/en-US/docs/Web/API/KeyboardEvent#virtual_key_codes).
 - The [`range.detach()`](/en-US/docs/Web/API/Range/detach) method has been transformed in a no-op and will probably be removed in the future.
-- The method `HTMLVideoElement.mozHasAudio()` has been implemented. It indicates if there is an audio track associated to a given video element. ([bug ](https://bugzilla.mozilla.org/show_bug.cgi?id=480376)[480376](https://bugzilla.mozilla.org/show_bug.cgi?id=480376))
-- The `Performance` API has a new method, [`now()`](/en-US/docs/Web/API/Performance/now), supporting high resolution timers of type` DOMHighResTimeStamp`. ([bug 539095](https://bugzilla.mozilla.org/show_bug.cgi?id=539095)).
+- The method `HTMLVideoElement.mozHasAudio()` has been implemented. It indicates if there is an audio track associated to a given video element. ([bug 480376](https://bugzilla.mozilla.org/show_bug.cgi?id=480376))
+- The `Performance` API has a new method, [`now()`](/en-US/docs/Web/API/Performance/now), supporting high resolution timers of type `DOMHighResTimeStamp`. ([bug 539095](https://bugzilla.mozilla.org/show_bug.cgi?id=539095)).
 - The [WebSMS API](/en-US/docs/API/WebSMS) has been updated and now supports a `read` attribute indicating whether an SMS text message is read or unread.
 - The [FileHandle API](https://wiki.mozilla.org/WebAPI/FileHandleAPI) has been implemented.
 - The [`Blob`](/en-US/docs/Web/API/Blob) constructor now takes `ArrayBufferView` as a member of `blobParts` parameter in addition to `ArrayBuffer`. ([bug 752402](https://bugzilla.mozilla.org/show_bug.cgi?id=752402))
@@ -48,9 +48,9 @@ Firefox 15 shipped on August 28, 2012. This article lists key changes that are u
 ### JavaScript
 
 - Support for the [`DataView`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView) interface from the Typed Arrays specification has been added. This provides low-level access to the data contained in an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
-- Support for new ECMAScript 2015 built-ins:  [`Number.isNaN()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN), [`Number.toInteger()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toInteger), [`Number.isInteger()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger), [`Number.isFinite()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isFinite) has been added. ([bug 749818](https://bugzilla.mozilla.org/show_bug.cgi?id=749818), [bug 761495](https://bugzilla.mozilla.org/show_bug.cgi?id=749818), [bug 761480](https://bugzilla.mozilla.org/show_bug.cgi?id=749818)).
-- Support for ECMAScript 2015 [default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) has been added. ([bug 757676](https://bugzilla.mozilla.org/show_bug.cgi?id=757676)).
-- Support for ECMAScript 2015 [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) has been added. ([bug 574132](https://bugzilla.mozilla.org/show_bug.cgi?id=574132)).
+- Support for new ECMAScript 2015 built-ins:  [`Number.isNaN()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN), [`Number.toInteger()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toInteger), [`Number.isInteger()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger), [`Number.isFinite()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isFinite) has been added. ([bug 749818](https://bugzilla.mozilla.org/show_bug.cgi?id=749818), [bug 761495](https://bugzilla.mozilla.org/show_bug.cgi?id=749818), [bug 761480](https://bugzilla.mozilla.org/show_bug.cgi?id=749818)).
+- Support for ECMAScript 2015 [default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) has been added. ([bug 757676](https://bugzilla.mozilla.org/show_bug.cgi?id=757676)).
+- Support for ECMAScript 2015 [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) has been added. ([bug 574132](https://bugzilla.mozilla.org/show_bug.cgi?id=574132)).
 
 ### WebGL
 

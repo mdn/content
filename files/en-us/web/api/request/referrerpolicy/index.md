@@ -3,7 +3,6 @@ title: Request.referrerPolicy
 slug: Web/API/Request/referrerPolicy
 tags:
   - API
-  - Experimental
   - Fetch
   - Property
   - Reference
@@ -27,7 +26,7 @@ var myReferrerPolicy = request.referrerPolicy;
 ### Value
 
 A {{domxref("DOMString")}} representing the request's `referrerPolicy`. For
-more information and possible values, see the {{HTTPHeader("Referrer-Policy")}} HTTP
+more information and possible values, see the {{HTTPHeader("Referrer-Policy")}} HTTP
 header page.
 
 ## Example

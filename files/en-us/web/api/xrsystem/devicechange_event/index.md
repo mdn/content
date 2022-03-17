@@ -16,7 +16,7 @@ browser-compat: api.XRSystem.devicechange_event
 ---
 {{APIRef("WebXR Device API")}}
 
-A **`devicechange`** event is fired on an {{DOMxRef("XRSystem")}} object whenever the availability of immersive XR devices has changed; for example, a VR headset or AR goggles have been connected or disconnected. It's a generic {{DOMxRef("Event")}} with no added properties.
+A **`devicechange`** event is fired on an {{DOMxRef("XRSystem")}} object whenever the availability of immersive XR devices has changed; for example, a VR headset or AR goggles have been connected or disconnected. It's a generic {{DOMxRef("Event")}} with no added properties.
 
 > **Note:** Not to be confused with the {{domxref("MediaDevices")}} {{DOMxRef("MediaDevices.devicechange_event", "devicechange")}} event.
 
@@ -42,36 +42,36 @@ Triggered whenever the availability of immersive XR devices has changed. For exa
 
 ### Use cases
 
-You can use this event to, for example, monitor for the availability of a WebXR-compatible device so that you can enable a UI element which the user can use to activate immersive mode. This is shown in the {{anch("Example", "example")}} below.
+You can use this event to, for example, monitor for the availability of a WebXR-compatible device so that you can enable a UI element which the user can use to activate immersive mode. This is shown in the [example](#example) below.
 
 ## Examples
 
-The example shown here handles the `devicechange` event by toggling the availability of the "Enter XR" button based on whether or not any immersive devices are currently available.
+The example shown here handles the `devicechange` event by toggling the availability of the "Enter XR" button based on whether or not any immersive devices are currently available.
 
 ```js
 if (navigator.xr) {
-  navigator.xr.addEventListener("devicechange", event => {
-    navigator.xr.isSessionSupported("immersive-vr")
-    .then(immersiveOK) => {
-      if (immersiveOK) {
-        enableXRButton.disabled = false;
-      } else {
-        enableXRButton.disabled = true;
-      }
-    });
-  });
+  navigator.xr.addEventListener("devicechange", event => {
+    navigator.xr.isSessionSupported("immersive-vr")
+    .then(immersiveOK) => {
+      if (immersiveOK) {
+        enableXRButton.disabled = false;
+      } else {
+        enableXRButton.disabled = true;
+      }
+    });
+  });
 }
 ```
 
-When `devicechange` is received, the handler set up in this code calls the `XR` method {{domxref("XRSystem.isSessionSupported", "isSessionSupported()")}} to find out if there's a device available that can handle immersive VR presentations. If there is, the button to enter XR mode is enabled; otherwise it's disabled.
+When `devicechange` is received, the handler set up in this code calls the `XR` method {{domxref("XRSystem.isSessionSupported", "isSessionSupported()")}} to find out if there's a device available that can handle immersive VR presentations. If there is, the button to enter XR mode is enabled; otherwise it's disabled.
 
-You can also use the `ondevicechange` event handler property to set a single handler for `devicechange` events:
+You can also use the `ondevicechange` event handler property to set a single handler for `devicechange` events:
 
 ```js
 if (navigator.xr) {
-  navigator.xr.ondevicechange = event => {
-    /* ... etc ... */
-  };
+  navigator.xr.ondevicechange = event => {
+    /* ... etc ... */
+  };
 }
 ```
 

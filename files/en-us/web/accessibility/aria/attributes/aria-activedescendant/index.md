@@ -1,6 +1,6 @@
 ---
 title: 'aria-activedescendant'
-slug: web/Accessibility/ARIA/Attributes/aria-activedescendant
+slug: Web/Accessibility/ARIA/Attributes/aria-activedescendant
 tags: 
   - Accessibility
   - ARIA
@@ -16,7 +16,7 @@ The `aria-activedescendant` attribute identifies the currently active element wh
 
 The `aria-activedescendant` property provides a method of managing focus for assistive technologies on interactive elements when they contain multiple focusable descendants, such as menus, grids, and toolbars. Instead of the screen reader moving focus between owned elements, `aria-activedescendant` can be used on container elements to refer to the currently active element, informing assistive technology users of the currently active element when focused.
 
-With aria-activedescendant, the browser keeps the DOM focus on the container element or on an input element that controls the container element. However, the user agent communicates desktop focus events and states to the assistive technology as if the element referenced by `aria-activedescendant` has focus.
+With `aria-activedescendant`, the browser keeps the DOM focus on the container element or on an input element that controls the container element. However, the user agent communicates desktop focus events and states to the assistive technology as if the element referenced by `aria-activedescendant` has focus.
 
 This attribute is only relevant on elements with role of [`composite`](/en-US/docs/Web/Accessibility/ARIA/Roles/composite_role) widget, [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role), [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role), [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role), or [`application`](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role) whose `id` is referenced as the attribute value.
 
@@ -30,7 +30,7 @@ The value of `aria-activedescendant` refers to an owned element of the controlle
 
 > **Note:** The attribute is supported only on a few roles. For example, `dialog`s do not support `aria-activedescendant`. When a combobox opens a dialog, DOM focus moves into the dialog from the combobox as it is not referenceable with this attribute.
 
-> **Note:** When a descendant of a listbox, grid, or tree popup is focused, DOM focus remains on the combobox and the combobox has aria-activedescendant set to a value that refers to the focused element within the popup.
+> **Note:** When a descendant of a `listbox`, `grid`, or `tree` popup is focused, DOM focus remains on the combobox and the combobox has `aria-activedescendant` set to a value that refers to the focused element within the popup.
 
 ## Values
 

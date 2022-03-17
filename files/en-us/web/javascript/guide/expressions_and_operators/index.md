@@ -159,14 +159,14 @@ console.log(x = f()); // Logs the return value directly.
 
 // An assignment expression can be nested in any place
 // where expressions are generally allowed,
-// such as as array literals’ elements or as function calls’ arguments.
+// such as as array literals' elements or as function calls' arguments.
 console.log([ 0, x = f(), 0 ]);
 console.log(f(0, x = f(), 0));
 ```
 
 The evaluation result matches the expression to the right of the `=` sign in the
-“Meaning” column of the table above. That means that `x = f()` evaluates into
-whatever `f()`’s result is, `x += f()` evaluates into the resulting sum `x + f()`,
+"Meaning" column of the table above. That means that `x = f()` evaluates into
+whatever `f()`'s result is, `x += f()` evaluates into the resulting sum `x + f()`,
 `x **= f()` evaluates into the resulting power `x ** y`, and so on.
 
 In the case of logical assignments, `x &&= f()`,
@@ -181,7 +181,7 @@ like array literals, the assignment expressions are **grouped right to left**
 [right-associative]: https://en.wikipedia.org/wiki/Operator_associativity
 
 Note that, for all assignment operators other than `=` itself,
-the resulting values are always based on the operands’ values _before_
+the resulting values are always based on the operands' values _before_
 the operation.
 
 For example, assume that the following functions `f` and `g`
@@ -214,11 +214,11 @@ because the assignment operator `=` is [right-associative][].
 However, it evaluates from left to right:
 
 1. The assignment expression `y = x = f()` starts to evaluate.
-    1. The `y` on this assignment’s left-hand side evaluates
+    1. The `y` on this assignment's left-hand side evaluates
        into a reference to the variable named `y`.
     2. The assignment expression `x = f()` starts to evaluate.
-        1. The `x` on this assignment’s left-hand side evaluates
-           into a reference to the variable named `y`.
+        1. The `x` on this assignment's left-hand side evaluates
+           into a reference to the variable named `x`.
         2. The function call `f()` prints "F!" to the console and
            then evaluates to the number `2`.
         3. That `2` result from `f()` is assigned to `x`.
@@ -235,25 +235,25 @@ However, it evaluates from left to right:
 `y = [ f(), x = g() ]` also evaluates from left to right:
 
 1. The assignment expression `y = [ f(), x = g() ]` starts to evaluate.
-    1. The `y` on this assignment’s left-hand evaluates
+    1. The `y` on this assignment's left-hand evaluates
        into a reference to the variable named `y`.
     2. The inner array literal `[ f(), x = g() ]` starts to evaluate.
-      1. The function call `f()` prints "F!" to the console and
-         then evaluates to the number `2`.
-      2. The assignment expression `x = g()` starts to evaluate.
-          1. The `x` on this assignment’s left-hand side evaluates
-             into a reference to the variable named `x`.
-          2. The function call `g()` prints "3!" to the console and
-             then evaluates to the number `3`.
-          3. That `3` result from `f()` is assigned to `x`.
-      3. The assignment expression `x = g()` has now finished evaluating;
-         its result is the new value of `x`, which is `3`.
-         That `3` result becomes the next element
-         in the inner array literal (after the `2` from the `f()`).
-    2. The inner array literal `[ f(), x = g() ]`
+        1. The function call `f()` prints "F!" to the console and
+           then evaluates to the number `2`.
+        2. The assignment expression `x = g()` starts to evaluate.
+            1. The `x` on this assignment's left-hand side evaluates
+               into a reference to the variable named `x`.
+            2. The function call `g()` prints "G!" to the console and
+               then evaluates to the number `3`.
+            3. That `3` result from `g()` is assigned to `x`.
+        3. The assignment expression `x = g()` has now finished evaluating;
+           its result is the new value of `x`, which is `3`.
+           That `3` result becomes the next element
+           in the inner array literal (after the `2` from the `f()`).
+    3. The inner array literal `[ f(), x = g() ]`
        has now finished evaluating;
        its result is an array with two values: `[ 2, 3 ]`.
-    3. That `[ 2, 3 ]` array is now assigned to `y`.
+    4. That `[ 2, 3 ]` array is now assigned to `y`.
 2. The assignment expression `y = [ f(), x = g() ]` has
    now finished evaluating;
    its result is the new value of `y` – which happens to be `[ 2, 3 ]`.
@@ -268,7 +268,7 @@ However, it evaluates from left to right:
 For more information about objects, read [Working with Objects][object].)
 
 1. The assignment expression `x[f()] = g()` starts to evaluate.
-    1. The `x[f()]` property access on this assignment’s left-hand
+    1. The `x[f()]` property access on this assignment's left-hand
        starts to evaluate.
         1. The `x` in this property access evaluates
            into a reference to the variable named `x`.
@@ -277,9 +277,9 @@ For more information about objects, read [Working with Objects][object].)
     2. The `x[f()]` property access on this assignment
        has now finished evaluating;
        its result is a variable property reference: `x[2]`.
-    2. Then the function call `g()` prints "G!" to the console and
+    3. Then the function call `g()` prints "G!" to the console and
        then evaluates to the number `3`.
-    3. That `3` is now assigned to `x[2]`.
+    4. That `3` is now assigned to `x[2]`.
        (This step will succeed only if `x` is assigned to an [object][].)
 2. The assignment expression `x[f()] = g()` has
    now finished evaluating;
@@ -382,7 +382,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#nonidentity"
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality"
           >Strict not equal</a
         >
         (<code>!==</code>)
@@ -612,8 +612,10 @@ Conceptually, the bitwise logical operators work as follows:
   Numbers with more than 32 bits get their most significant bits discarded.
   For example, the following integer with more than 32 bits will be converted to a 32 bit integer:
 
-      Before: 1110 0110 1111 1010 0000 0000 0000 0110 0000 0000 0001
-      After:               1010 0000 0000 0000 0110 0000 0000 0001
+  ```
+  Before: 1110 0110 1111 1010 0000 0000 0000 0110 0000 0000 0001
+  After:                 1010 0000 0000 0000 0110 0000 0000 0001
+  ```
 
 - Each bit in the first operand is paired with the corresponding bit in the second operand: first bit to first bit, second bit to second bit, and so on.
 - The operator is applied to each pair of bits, and the result is constructed bitwise.
@@ -819,7 +821,7 @@ The rules of logic guarantee that these evaluations are always correct. Note tha
 _anything_ part of the above expressions is not evaluated, so any side effects of
 doing so do not take effect.
 
-Note that for the second case, in modern code you can use the new [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) (`??`) that works like `||`, but it only returns the second expression, when the first one is "[nullish](/en-US/docs/Glossary/Nullish)", i.e. [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null "The value null represents the intentional absence of any object value. It is one of JavaScript's primitive values and is treated as falsy for boolean operations.")
+Note that for the second case, in modern code you can use the new [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) (`??`) that works like `||`, but it only returns the second expression, when the first one is "[nullish](/en-US/docs/Glossary/Nullish)", i.e. [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)
 or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined "The global undefined property represents the primitive value undefined.
 It is one of JavaScript's primitive types.").
 It is thus the better alternative to provide defaults, when values like `''` or `0` are valid values for the first expression, too.

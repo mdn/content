@@ -22,13 +22,13 @@ The **`<altGlyphDef>`** [SVG](/en-US/docs/Web/SVG) element defines a substitutio
 
 ### Global attributes
 
-*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
 
 ### Specific attributes
 
 *None*
 
-## DOM Interface
+## DOM Interface
 
 This element implements the {{domxref("SVGAltGlyphDefElement")}} interface.
 
@@ -42,6 +42,6 @@ This element implements the {{domxref("SVGAltGlyphDefElement")}} interface.
 
 ## See also
 
-*   {{SVGElement("glyph")}}
-*   {{SVGElement("glyphRef")}}
-*   {{SVGElement("altGlyphDef")}}
+- {{SVGElement("glyph")}}
+- {{SVGElement("glyphRef")}}
+- {{SVGElement("altGlyphDef")}}

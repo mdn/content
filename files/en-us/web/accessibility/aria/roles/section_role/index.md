@@ -28,7 +28,6 @@ Do not use.
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#section","ARIA: section role")}}                                             | {{Spec2('ARIA')}}                         |
 
-
 ## See Also
 
 - [ARIA: `structure` role](/en-US/docs/Web/Accessibility/ARIA/Roles/structure_role)
@@ -66,8 +65,6 @@ Do not use.
 - [ARIA: `term` role](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role)
 - [ARIA: `time` role](/en-US/docs/Web/Accessibility/ARIA/Roles/time_role)
 - [ARIA: `tooltip` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role)
-
-
 
 <section id="Quick_links">
 

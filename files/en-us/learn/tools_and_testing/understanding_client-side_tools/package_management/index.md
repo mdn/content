@@ -43,7 +43,7 @@ A simple example of a useful dependency that your project might need is some cod
 
 A project dependency can be an entire JavaScript library or framework — such as React or Vue — or a very small utility like our human-readable date library, or it can be a command line tool such as Prettier or eslint, which we talked about in previous articles.
 
-Without modern build tools, dependencies like this might be included in your project using a simple [`<script>`](/en-US/docs/Web/HTML/Element/script) element, but this might not work right out of the box and you will likely need some modern tooling to bundle your code and dependencies together when they are released on the web. A bundle is the term that’s generally used to refer to a single file on your web server that contains all the JavaScript for your software — typically compressed as much as possible to help reduce the time it takes to get your software downloaded and displayed in your visitors’ browser.
+Without modern build tools, dependencies like this might be included in your project using a simple [`<script>`](/en-US/docs/Web/HTML/Element/script) element, but this might not work right out of the box and you will likely need some modern tooling to bundle your code and dependencies together when they are released on the web. A bundle is the term that's generally used to refer to a single file on your web server that contains all the JavaScript for your software — typically compressed as much as possible to help reduce the time it takes to get your software downloaded and displayed in your visitors' browser.
 
 In addition, what happens if you find a better tool that you want to use instead of the current one, or a new version of your dependency is released that you want to update to? This is not too painful for a couple of dependencies, but in larger projects with many dependencies this kind of thing can become really challenging to keep track of. It makes more sense to use a **package manager** such as npm, as this will guarantee that the code is added and removed cleanly, as well as a host of other advantages.
 
@@ -76,21 +76,21 @@ To see local dependencies really shine, all you need to do is try to download an
 
 For a package manager to work, it needs to know where to install packages from, and this comes in the form of a package registry. The registry is a central place that a package is published to and thus can be installed from. npm, as well as being a package manager, is also the name of the most commonly-used package registry for JavaScript packages. The npm registry exists at [npmjs.com](https://www.npmjs.com/).
 
-npm is not the only option. You could manage your own package registry — products like [Microsoft Azure](https://azure.microsoft.com/en-us/) allow you to create proxies to the npm registry (so you can override or lock certain packages), [GitHub also offers a package registry service](https://github.com/features/packages), and there will be likely more options appearing as time goes on.
+npm is not the only option. You could manage your own package registry — products like [Microsoft Azure](https://azure.microsoft.com/) allow you to create proxies to the npm registry (so you can override or lock certain packages), [GitHub also offers a package registry service](https://github.com/features/packages), and there will be likely more options appearing as time goes on.
 
-What is important is that you ensure you've chosen the best registry for you. Many projects will use npm, and we’ll stick to this in our examples throughout the rest of the module.
+What is important is that you ensure you've chosen the best registry for you. Many projects will use npm, and we'll stick to this in our examples throughout the rest of the module.
 
 ## Using the package ecosystem
 
-Let’s run through an example to get you started with using a package manager and registry to install a command line utility.
+Let's run through an example to get you started with using a package manager and registry to install a command line utility.
 
 [Parcel](https://parceljs.org/) is a(nother) tool that developers commonly use in their development process. Parcel is clever in that it can watch the contents of our code for calls to dependencies and automatically installs any dependencies it sees that our code needs. It can also automatically build our code.
 
-In our previous chapter we installed Prettier as a global tool. Here however, let’s use npm to install Parcel as a local tool, as best practices dictate. We'll install it as part of an experimental app.
+In our previous chapter we installed Prettier as a global tool. Here however, let's use npm to install Parcel as a local tool, as best practices dictate. We'll install it as part of an experimental app.
 
 ### Setting up the app as an npm package
 
-First of all, create a new directory to store our experimental app in, somewhere sensible that you’ll find again. We’ll call it parcel-experiment, but you can call it whatever you like:
+First of all, create a new directory to store our experimental app in, somewhere sensible that you'll find again. We'll call it parcel-experiment, but you can call it whatever you like:
 
 ```bash
 mkdir parcel-experiment
@@ -185,7 +185,7 @@ Once that's done _All The Things_, we're now ready for some "modern client-side 
 }
 ```
 
-This is part of the npm magic — if in future you move your codebase to another location, on another machine, you can recreate the same set up by running the command `npm install`, and npm will look at the dependencies and install them for you.
+This is part of the npm magic — if in the future you move your codebase to another location, on another machine, you can recreate the same set up by running the command `npm install`, and npm will look at the dependencies and install them for you.
 
 One disadvantage is that Parcel is only available inside our `parcel-experiment` app; you won't be able to run it in a different directory. But the advantages outweigh the disadvantages.
 
@@ -214,7 +214,7 @@ Next, we need to add an `index.js` file in the same directory as `index.html`. F
 
 ### Having fun with Parcel
 
-Now we’ll run our newly installed Parcel tool. In your terminal, run the following command:
+Now we'll run our newly installed Parcel tool. In your terminal, run the following command:
 
 ```bash
  parcel index.html
@@ -229,9 +229,9 @@ Server running at http://localhost:1234
 
 > **Note:** If you have trouble with the terminal returning a "command not found" type error, try running the above command with the `npx` utility, i.e. `npx parcel index.html`.
 
-Now we're ready to benefit from the full JavaScript package ecosystem. For a start, there is now a local web server running at `http://localhost:1234`. Go there now and you’ll not see anything for now, but what is cool is that when you do make changes to your app, Parcel will rebuild it and refresh the server automatically so you can instantly see the effect your update had.
+Now we're ready to benefit from the full JavaScript package ecosystem. For a start, there is now a local web server running at `http://localhost:1234`. Go there now and you'll not see anything for now, but what is cool is that when you do make changes to your app, Parcel will rebuild it and refresh the server automatically so you can instantly see the effect your update had.
 
-Now for some page content. Let's say we want to show human-readable relative dates, such as "2 hours ago", "4 days ago" and so on. The [`date-fns`](https://date-fns.org/) package’s `formatDistanceToNow()` method is useful for this (there's other packages that do the same thing too).
+Now for some page content. Let's say we want to show human-readable relative dates, such as "2 hours ago", "4 days ago" and so on. The [`date-fns`](https://date-fns.org/) package's `formatDistanceToNow()` method is useful for this (there's other packages that do the same thing too).
 
 In the `index.js` file, add the following code and save it:
 
@@ -244,7 +244,7 @@ document.body.textContent = formatDistanceToNow(new Date(date)) + ' ago';
 
 Go back to `http://localhost:1234` and you'll see how long ago it is since the author turned 18.
 
-What's particularly special about the code above is that it is using the `formatDistanceToNow()` function from the `date-fns` package, which we didn’t install! Parcel has spotted that you need the module, searched for it in the `npmjs.com` package registry, and installed it locally for us, automatically. You can prove this by looking in our `package.json` file again — you'll see that the `dependencies` field have been updated for us:
+What's particularly special about the code above is that it is using the `formatDistanceToNow()` function from the `date-fns` package, which we didn't install! Parcel has spotted that you need the module, searched for it in the `npmjs.com` package registry, and installed it locally for us, automatically. You can prove this by looking in our `package.json` file again — you'll see that the `dependencies` field have been updated for us:
 
 ```json
 "dependencies": {
@@ -253,7 +253,7 @@ What's particularly special about the code above is that it is using the `format
 }
 ```
 
-Parcel has also added the files required for someone else to pick up this project and install any dependencies that we’ve used. If you take a look in the directory you ran the `parcel` command in, you’ll find a number of new files; the most interesting of which are:
+Parcel has also added the files required for someone else to pick up this project and install any dependencies that we've used. If you take a look in the directory you ran the `parcel` command in, you'll find a number of new files; the most interesting of which are:
 
 - `node_modules`: The dependency files of Parcel and date-fns.
 - `dist`: The distribution directory — these are the automatically packaged, minified files Parcel has built for us, and the files it is serving at `localhost:1234`. These are the files you would upload to your web server when releasing the site online for public consumption.
@@ -288,11 +288,11 @@ Again, the destination for our production files is the `dist` directory.
 
 ### Reducing your app's file size
 
-However, as with all tools that "help" developers there's often a trade off. In this particular case it's the file size. The JavaScript bundle my-project.fb76efcf.js is a whopping 195K — very large, given that all it does is print a line of text. Sure there's some calculation, but we definitely don’t need 195K worth of JavaScript to do this!.
+However, as with all tools that "help" developers there's often a trade off. In this particular case it's the file size. The JavaScript bundle my-project.fb76efcf.js is a whopping 195K — very large, given that all it does is print a line of text. Sure there's some calculation, but we definitely don't need 195K worth of JavaScript to do this!.
 
 When you use development tooling it's worth questioning whether they're doing the right thing for you. In this case, the bundle is nearly 200K because it has in fact included the entire `date-fns` library, not just the function we're using.
 
-If we had avoided any development tools and pointed a `<script src=””>` element to a hosted version of `date-fns`, roughly the same thing would have happened — all of the library would be downloaded when our example page is loaded in a browser.
+If we had avoided any development tools and pointed a `<script src="">` element to a hosted version of `date-fns`, roughly the same thing would have happened — all of the library would be downloaded when our example page is loaded in a browser.
 
 However, this is where development tooling has a chance to shine. Whilst the tooling is on our machine, we can ask the software to inspect our use of the code and only include the functions that we're actually using in production — a process known as "Tree Shaking".
 
@@ -301,16 +301,16 @@ This makes a lot of sense as we want to reduce file size and thus make our app l
 Although the list grows by the month, there are three main offerings for tools that generate bundles from our source code: Webpack, [Rollup](https://rollupjs.org/guide/en/), and Parcel. There will be more available than this, but these are popular ones:
 
 - The RollUp tool offers tree shaking and code splitting as its core features.
-- Webpack requires some configuration (though “some” might be understating the complexity of some developers’ Webpack configurations).
+- Webpack requires some configuration (though "some" might be understating the complexity of some developers' Webpack configurations).
 - In the case of Parcel (prior to Parcel version 2), there's a special flag required — `--experimental-scope-hoisting` — which will tree shake while building.
 
-Let’s stick with Parcel for now, given that we’ve already got it installed. Try running the following command:
+Let's stick with Parcel for now, given that we've already got it installed. Try running the following command:
 
 ```bash
 parcel build index.html --experimental-scope-hoisting
 ```
 
-You’ll see that this makes a huge difference:
+You'll see that this makes a huge difference:
 
 ```bash
 ✨  Built in 7.87s.
@@ -345,7 +345,7 @@ yarn is often thought to be quicker than npm in terms of installation process (t
 
 > **Note:** The npm package manager is **not** required to install packages from the npm registry, even though they share the same name. pnpm and yarn can consume the same `package.json` format as npm, and can install any package from the npm and other package registries.
 
-Let’s review the common actions you’ll want to perform with package managers.
+Let's review the common actions you'll want to perform with package managers.
 
 ### Initialise a new project
 
@@ -363,7 +363,7 @@ npm install date-fns
 yarn add date-fns
 ```
 
-We also saw `install` in action above. This would directly add the `date-fns` package to the working directory in a sub-directory called `node_modules`, along with `date-fns`’s own dependencies.
+We also saw `install` in action above. This would directly add the `date-fns` package to the working directory in a sub-directory called `node_modules`, along with `date-fns`'s own dependencies.
 
 By default this command will install the latest version of `date-fns`, but you can control this too. You can ask for `date-fns@1`, which gives you the latest 1.x version (which is 1.30.1). Or you could try `date-fns@^2.3.0`, which means the latest version after or including 2.3.0 (2.8.1 at the time of writing).
 
@@ -402,7 +402,7 @@ yarn why date-fns
 
 This command will show what version of a dependency is installed and how it came to be included in your project. It's possible that another, top level, package could have pulled in `date-fns`. It's equally possible (and not ideal) that you have multiple versions of a package in your project (this has been seen many times over with the [lodash](https://lodash.com/) package, as it's so useful).
 
-Although the package manager will do it’s best to deduplicate packages you may want to investigate exactly which version is installed.
+Although the package manager will do it's best to deduplicate packages you may want to investigate exactly which version is installed.
 
 ### More commands
 
@@ -417,19 +417,19 @@ npm run dev
 # or yarn run dev
 ```
 
-This would run a custom script for starting our project in “development mode”. In fact, we regularly include this in all projects as the local development setup tends to run slightly differently to how it would run in production.
+This would run a custom script for starting our project in "development mode". In fact, we regularly include this in all projects as the local development setup tends to run slightly differently to how it would run in production.
 
-If you tried running this in your Parcel test project from earlier it would (likely) claim the “dev script is missing”. This is because npm, yarn (and the like) are looking for a property called dev in the `scripts` property of your `package.json` file.
+If you tried running this in your Parcel test project from earlier it would (likely) claim the "dev script is missing". This is because npm, yarn (and the like) are looking for a property called dev in the `scripts` property of your `package.json` file.
 
-Parcel can run a development server using the command `parcel serve filename.html`, and we’d like to use that often during our development.
+Parcel can run a development server using the command `parcel serve filename.html`, and we'd like to use that often during our development.
 
-So let’s create a custom shorthand command — “dev” — in our `package.json`.
+So let's create a custom shorthand command — "dev" — in our `package.json`.
 
 If you followed the tutorial from earlier, you should have a `package.json` file inside your parcel-experiment directory. Open it up, and its `scripts` member should look like this:
 
 ```json
 "scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1",
+  "test": "echo \"Error: no test specified\" && exit 1",
 },
 ```
 
@@ -437,12 +437,12 @@ Update it so that it looks like this, and save the file:
 
 ```json
 "scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1",
+  "test": "echo \"Error: no test specified\" && exit 1",
   "dev": "parcel serve index.html"
 },
 ```
 
-We’ve added a custom `dev` command as an npm script.
+We've added a custom `dev` command as an npm script.
 
 Now try running the following in your terminal, making sure you are inside the `parcel-experiment` directory:
 

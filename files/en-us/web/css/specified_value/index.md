@@ -5,14 +5,15 @@ tags:
   - CSS
   - Guide
   - Reference
+spec-urls: https://www.w3.org/TR/CSS22/cascade.html#specified-value
 ---
 {{CSSRef}}
 
 The **specified value** of a [CSS](/en-US/docs/Web/CSS) property is the value it receives from the document's style sheet. The specified value for a given property is determined according to the following rules:
 
-1.  If the document's style sheet explicitly specifies a value for the property, the given value will be used.
-2.  If the document's style sheet doesn't specify a value but it is an inherited property, the value will be taken from the parent element.
-3.  If none of the above pertain, the element's [initial value](/en-US/docs/Web/CSS/initial_value) will be used.
+1. If the document's style sheet explicitly specifies a value for the property, the given value will be used.
+2. If the document's style sheet doesn't specify a value but it is an inherited property, the value will be taken from the parent element.
+3. If none of the above pertain, the element's [initial value](/en-US/docs/Web/CSS/initial_value) will be used.
 
 ## Examples
 
@@ -50,10 +51,7 @@ p {
 
 ## Specifications
 
-| Specification                                                                                    | Status                   | Comment             |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName("CSS2.2", "cascade.html#specified-value", "cascaded value")}} | {{Spec2("CSS2.2")}} |                     |
-| {{SpecName("CSS2.1", "cascade.html#specified-value", "cascaded value")}} | {{Spec2("CSS2.1")}} | Initial definition. |
+{{Specifications}}
 
 ## See also
 

@@ -42,7 +42,7 @@ input[type=range]::-moz-range-thumb {
 
 A progress bar using this style might look something like this:
 
-![The thumb of the <input type=right> styled in green](screen_shot_2015-12-04_at_13.30.08.png)
+![The thumb of the \<input type=right> styled in green](screen_shot_2015-12-04_at_13.30.08.png)
 
 ## Specifications
 
@@ -56,7 +56,7 @@ Not part of any standard.
 
 - The pseudo-elements used by Gecko to style other parts of a range input:
 
-  - {{cssxref("::-moz-range-track")}} represents the groove in which the thumb slides.
+  - {{cssxref("::-moz-range-track")}} represents the groove in which the thumb slides.
   - {{cssxref("::-moz-range-progress")}} represents the lower portion of the track.
 
 - Similar pseudo-elements used by other browsers:

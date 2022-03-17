@@ -20,6 +20,8 @@ The **`GravitySensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/Senso
 
 To use this sensor, the user must grant permission to the `'accelerometer'` device sensor through the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("GravitySensor.GravitySensor", "GravitySensor()")}}
@@ -27,11 +29,19 @@ To use this sensor, the user must grant permission to the `'accelerometer'` devi
 
 ## Properties
 
-_Inherits properties from its ancestor, {{domxref('Accelerometer')}}._
+_Inherits properties from its ancestors, {{domxref('Accelerometer')}}, {{domxref('Sensor')}}, and {{domxref('EventTarget')}}._
+
+## Methods
+
+_`GravitySensor` doesn't have own methods. However, it inherits methods from its parent interfaces, {{domxref("Sensor")}} and {{domxref("EventTarget")}}._
+
+## Events
+
+_`GravitySensor` doesn't have own events. However, it inherits events from its parent interface, {{domxref('Sensor')}}._
 
 ## Example
 
-Gravity is typically read in the {{domxref('Sensor.onreading')}} event callback. In the example below this occurs sixty times a second.
+Gravity is typically read in the {{domxref('Sensor.reading_event', 'reading')}} event callback. In the example below this occurs sixty times a second.
 
 ```js
 let gravitySensor = new GravitySensor({frequency: 60});

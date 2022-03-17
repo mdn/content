@@ -3,7 +3,7 @@ title: VRDisplay.getImmediatePose()
 slug: Web/API/VRDisplay/getImmediatePose
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Method
   - Deprecated
   - Reference
@@ -14,7 +14,7 @@ tags:
   - getImmediatePose()
 browser-compat: api.VRDisplay.getImmediatePose
 ---
-{{deprecated_header}}{{APIRef("WebVR API")}}{{SeeCompatTable}}
+{{deprecated_header}}{{APIRef("WebVR API")}}
 
 The **`getImmediatePose()`** method of the {{domxref("VRDisplay")}} interface returns a {{domxref("VRPose")}} object defining the current pose of the `VRDisplay`, with no prediction applied.
 
@@ -23,7 +23,7 @@ The **`getImmediatePose()`** method of the {{domxref("VRDisplay")}} interface re
 ## Syntax
 
 ```js
-var myImmediatePose = vrDisplayInstance.getImmediatePose();
+getImmediatePose()
 ```
 
 ### Parameters

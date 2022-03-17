@@ -41,9 +41,11 @@ element = el.nextElementSibling;
 
 This example outputs the following into the console when it loads:
 
-    Siblings of div-01:
-    DIV
-    SCRIPT
+```
+Siblings of div-01:
+DIV
+SCRIPT
+```
 
 ## Specifications
 

@@ -7,7 +7,7 @@ browser-compat: api.InputDeviceCapabilities.firesTouchEvents
 ---
 {{SeeCompatTable}}{{APIRef()}}
 
-The **`InputDeviceCapabilities.firesTouchEvents`** read-only
+The **`InputDeviceCapabilities.firesTouchEvents`** read-only
 property returns a boolean value that indicates whether the device dispatches
 touch events.
 

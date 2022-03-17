@@ -10,9 +10,10 @@ tags:
   - Reference
   - maxlength
   - textarea
+spec-urls: https://html.spec.whatwg.org/multipage/input.html#attr-input-maxlength
 ---
 
-{{HTMLSidebar}}{{draft}}
+{{HTMLSidebar}}
 
 The **`maxlength`** attribute defines the maximum number of characters (as UTF-16 code units) the user can enter into an {{htmlelement('input')}} or {{htmlelement('textarea')}}. This must be an integer value 0 or higher.
 
@@ -34,28 +35,7 @@ While the browser will generally prevent user from entering more text than the m
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'input.html#attr-input-maxlength', 'maxlength attribute')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML5.1', 'input.html#attr-maxlength-accept', 'maxlength attribute')}}
-      </td>
-      <td>{{Spec2('HTML5.1')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

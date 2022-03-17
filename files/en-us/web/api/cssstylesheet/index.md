@@ -18,6 +18,8 @@ browser-compat: api.CSSStyleSheet
 
 The **`CSSStyleSheet`** interface represents a single [CSS](/en-US/docs/Web/CSS) stylesheet, and lets you inspect and modify the list of rules contained in the stylesheet. It inherits properties and methods from its parent, {{domxref("StyleSheet")}}.
 
+{{InheritanceDiagram}}
+
 A stylesheet consists of a collection of {{domxref("CSSRule")}} objects representing each of the rules in the stylesheet. The rules are contained in a {{domxref("CSSRuleList")}}, which can be obtained from the stylesheet's {{domxref("CSSStyleSheet.cssRules", "cssRules")}} property.
 
 For example, one rule might be a {{domxref("CSSStyleRule")}} object containing a style such as:
@@ -30,7 +32,7 @@ h1, h2 {
 
 Another rule might be an _at-rule_ such as {{cssxref("@import")}} or {{cssxref("@media")}}, and so forth.
 
-See the {{anch("Obtaining a StyleSheet")}} section for the various ways a `CSSStyleSheet` object can be obtained. A `CSSStyleSheet` object can also be directly constructed. The constructor, and the {{domxref("CSSStyleSheet.replace()")}}, and {{domxref("CSSStyleSheet.replaceSync()")}} methods are newer additions to the specification, enabling _Constructable Stylesheets_.
+See the [Obtaining a StyleSheet](#obtaining_a_stylesheet) section for the various ways a `CSSStyleSheet` object can be obtained. A `CSSStyleSheet` object can also be directly constructed. The constructor, and the {{domxref("CSSStyleSheet.replace()")}}, and {{domxref("CSSStyleSheet.replaceSync()")}} methods are newer additions to the specification, enabling _Constructable Stylesheets_.
 
 ## Constructor
 
@@ -126,7 +128,7 @@ A (possibly incomplete) list of ways a stylesheet can be associated with a docum
     </tr>
     <tr>
       <td>
-        CSS {{cssxref("@import")}} rule in other style sheets applied to
+        CSS {{cssxref("@import")}} rule in other style sheets applied to
         the document
       </td>
       <td>Yes</td>

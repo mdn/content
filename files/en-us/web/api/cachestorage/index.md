@@ -17,9 +17,9 @@ The **`CacheStorage`** interface represents the storage for {{domxref("Cache")}}
 
 The interface:
 
-- Provides a master directory of all the named caches that can be accessed by a {{domxref("ServiceWorker")}} or other type of worker or {{domxref("window")}} scope (you’re not limited to only using it with service workers).
+- Provides a master directory of all the named caches that can be accessed by a {{domxref("ServiceWorker")}} or other type of worker or {{domxref("window")}} scope (you're not limited to only using it with service workers).
 
-  > **Note:** [Chrome and Safari only expose \`CacheStorage\` to the windowed context over HTTPS](https://bugs.chromium.org/p/chromium/issues/detail?id=1026063). {{domxref("caches")}} will be undefined unless an SSL certificate is configured.
+  > **Note:** [Chrome and Safari only expose \`CacheStorage\` to the windowed context over HTTPS](https://bugs.chromium.org/p/chromium/issues/detail?id=1026063). {{domxref("caches")}} will be undefined unless an SSL certificate is configured.
 
 - Maintains a mapping of string names to corresponding {{domxref("Cache")}} objects.
 
@@ -56,9 +56,9 @@ This code snippet is from the MDN [sw-test example](https://github.com/mdn/sw-te
 
 In the second code block, we wait for a {{domxref("FetchEvent")}} to fire. We construct a custom response like so:
 
-1.  Check whether a match for the request is found in the CacheStorage. If so, serve that.
-2.  If not, fetch the request from the network, then also open the cache created in the first block and add a clone of the request to it using {{domxref("Cache.put")}} (`cache.put(event.request, response.clone())`.)
-3.  If this fails (e.g. because the network is down), return a fallback response.
+1. Check whether a match for the request is found in the CacheStorage. If so, serve that.
+2. If not, fetch the request from the network, then also open the cache created in the first block and add a clone of the request to it using {{domxref("Cache.put")}} (`cache.put(event.request, response.clone())`.)
+3. If this fails (e.g. because the network is down), return a fallback response.
 
 Finally, return whatever the custom response ended up being equal to, using {{domxref("FetchEvent.respondWith")}}.
 

@@ -11,7 +11,7 @@ tags:
   - Reference
 browser-compat: api.CSSVariableReferenceValue.CSSVariableReferenceValue
 ---
-{{draft}}{{APIRef("CSSOM")}}{{SeeCompatTable}}
+{{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 Creates a new {{domxref('CSSVariableReferenceValue')}}.
 

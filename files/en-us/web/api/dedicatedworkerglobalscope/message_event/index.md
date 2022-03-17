@@ -52,7 +52,7 @@ The worker can listen for this message using [`addEventListener()`](/en-US/docs/
 // inside static/scripts/worker.js
 
 self.addEventListener('message', (event) => {
-    console.log(`Received message from parent: ${event.data}`);
+    console.log(`Received message from parent: ${event.data}`);
 });
 ```
 
@@ -62,7 +62,7 @@ Alternatively, it could listen using the [`onmessage`](/en-US/docs/Web/API/Dedic
 // static/scripts/worker.js
 
 self.onmessage = (event) => {
-    console.log(`Received message from parent: ${event.data}`);
+    console.log(`Received message from parent: ${event.data}`);
 };
 ```
 

@@ -29,7 +29,7 @@ try {
   //Error is thrown if "log.txt" already exists.
 var fileEntry = fs.root.getFile('log.txt', {create: true, exclusive:true}0;
 } catch (e) {
-  onErrror(e);
+  onError(e);
 }
 ```
 
@@ -158,4 +158,4 @@ Specification: {{spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", 
 
 Reference: [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 
-Introduction: [Basic Concepts About the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+Introduction: [Basic Concepts About the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

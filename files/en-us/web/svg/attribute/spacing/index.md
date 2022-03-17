@@ -13,7 +13,7 @@ The **`spacing`** attribute indicates how the user agent should determine the sp
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("textPath")}}
+- {{SVGElement("textPath")}}
 
 ## Usage notes
 
@@ -34,10 +34,10 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `auto`
-    *   : This value indicates that the user agent should use text-on-a-path layout algorithms to adjust the spacing between typographic characters in order to achieve visually appealing results.
-*   `exact`
-    *   : This value indicates that the typographic characters should be rendered exactly according to the spacing rules as specified by the layout rules for text-on-a-path.
+- `auto`
+  - : This value indicates that the user agent should use text-on-a-path layout algorithms to adjust the spacing between typographic characters in order to achieve visually appealing results.
+- `exact`
+  - : This value indicates that the typographic characters should be rendered exactly according to the spacing rules as specified by the layout rules for text-on-a-path.
 
 ## Specifications
 

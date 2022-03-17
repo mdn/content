@@ -13,7 +13,9 @@ The `<xsl:value-of>` element evaluates an XPath expression, converts it to a str
 
 ### Syntax
 
-    <xsl:value-of select=EXPRESSION disable-output-escaping="yes" | "no"  />
+```xml
+<xsl:value-of select=EXPRESSION disable-output-escaping="yes" | "no"  />
+```
 
 ### Required Attributes
 

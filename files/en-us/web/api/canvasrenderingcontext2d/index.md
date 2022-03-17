@@ -14,7 +14,7 @@ browser-compat: api.CanvasRenderingContext2D
 
 The **`CanvasRenderingContext2D`** interface, part of the [Canvas API](/en-US/docs/Web/API/Canvas_API), provides the 2D rendering context for the drawing surface of a {{HTMLElement("canvas")}} element. It is used for drawing shapes, text, images, and other objects.
 
-See the interface's properties and methods in the sidebar and below. The [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial "Canvas tutorial") has more explanation, examples, and resources, as well.
+See the interface's properties and methods in the sidebar and below. The [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial) has more explanation, examples, and resources, as well.
 
 ## Basic example
 
@@ -179,7 +179,7 @@ The following methods can be used to manipulate paths of objects.
 - {{domxref("CanvasRenderingContext2D.scrollPathIntoView()")}}
   - : Scrolls the current path or a given path into the view.
 - {{domxref("CanvasRenderingContext2D.clip()")}}
-  - : Creates a clipping path from the current sub-paths. Everything drawn after `clip()` is called appears inside the clipping path only. For an example, see [Clipping paths](/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing "Clipping paths") in the Canvas tutorial.
+  - : Creates a clipping path from the current sub-paths. Everything drawn after `clip()` is called appears inside the clipping path only. For an example, see [Clipping paths](/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing) in the Canvas tutorial.
 - {{domxref("CanvasRenderingContext2D.isPointInPath()")}}
   - : Reports whether or not the specified point is contained in the current path.
 - {{domxref("CanvasRenderingContext2D.isPointInStroke()")}}
@@ -198,7 +198,7 @@ Objects in the `CanvasRenderingContext2D` rendering context have a current trans
 - {{domxref("CanvasRenderingContext2D.scale()")}}
   - : Adds a scaling transformation to the canvas units by x horizontally and by y vertically.
 - {{domxref("CanvasRenderingContext2D.translate()")}}
-  - : Adds a translation transformation by moving the canvas and its origin x horzontally and y vertically on the grid.
+  - : Adds a translation transformation by moving the canvas and its origin x horizontally and y vertically on the grid.
 - {{domxref("CanvasRenderingContext2D.transform()")}}
   - : Multiplies the current transformation matrix with the matrix described by its arguments.
 - {{domxref("CanvasRenderingContext2D.setTransform()")}}
@@ -252,7 +252,7 @@ The `CanvasRenderingContext2D` rendering context contains a variety of drawing s
 ### Filters
 
 - {{experimental_inline}} {{domxref("CanvasRenderingContext2D.filter")}}
-  - : Applies a CSS or SVG filter to the canvas, e.g., to change its brightness or bluriness.
+  - : Applies a CSS or SVG filter to the canvas, e.g., to change its brightness or blurriness.
 
 ## Non-standard APIs
 
@@ -310,7 +310,7 @@ Most of these APIs are [deprecated and were removed shortly after Chrome 36](htt
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozCurrentTransform`
   - : Sets or gets the current transformation matrix, see {{domxref("CanvasRenderingContext2D.currentTransform")}}.
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozCurrentTransformInverse`
-  - : Sets or gets the current inversed transformation matrix.
+  - : Sets or gets the current inverted transformation matrix.
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozImageSmoothingEnabled`
   - : See {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}}.
 - {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozTextStyle`

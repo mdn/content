@@ -36,5 +36,5 @@ A {{DOMxRef("USVString")}}.
 
 ## See also
 
-- [HTML `lang` attribute](/en-US/docs/Web/HTML/Global_attributes/lang), that declares content langauge of the document or its elements
+- [HTML `lang` attribute](/en-US/docs/Web/HTML/Global_attributes/lang), that declares content language of the document or its elements
 - HTTP headers that declare content language: {{HTTPHeader("Content-Language")}} and {{HTTPHEader("Accept-Language")}}

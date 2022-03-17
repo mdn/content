@@ -24,6 +24,8 @@ Each {{domxref("BaseAudioContext")}} has a single {{domxref("AudioWorklet")}} av
 
 As the global execution context is shared across the current `BaseAudioContext`, it's possible to define any other variables and perform any actions allowed in worklets — apart from defining `AudioWorkletProcessor`-derived classes.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 - {{domxref("AudioWorkletGlobalScope.currentFrame", "currentFrame")}} {{readonlyinline}}
@@ -55,7 +57,7 @@ class TestProcessor extends AudioWorkletProcessor {
     console.log(currentTime)
   }
   // the process method is required - output silence,
-  // which the outputs are already filled with
+  // which the outputs are already filled with
   process (inputs, outputs, parameters) {
     return true
   }

@@ -44,7 +44,6 @@ output.textContent = "This processing instruction's target is: " + doc.firstChil
 
 {{EmbedLiveSample("In an XML document", "100%", 50)}}
 
-
 ### In an HTML document
 
 The processing instruction line will be considered, and represented, as a {{domxref("Comment")}} object.
@@ -57,7 +56,7 @@ The processing instruction line will be considered, and represented, as a {{domx
 ```js
 let node = document.getElementsByTagName("pre")[0].previousSibling.previousSibling;
 
-let result = "Node with the processing instructiion: " + node.nodeName + ": " + node.nodeValue + "\n";
+let result = "Node with the processing instruction: " + node.nodeName + ": " + node.nodeValue + "\n";
 
 document.getElementsByTagName("pre")[0].textContent = result;
 ```
@@ -75,4 +74,3 @@ document.getElementsByTagName("pre")[0].textContent = result;
 ## See also
 
 - The [DOM API](/en-US/docs/Web/API/Document_Object_Model)
-

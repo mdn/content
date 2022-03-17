@@ -17,7 +17,7 @@ The **`oninput`** property of the
 processes {{event("input")}} events on the {{HTMLElement("input")}},
 {{HTMLElement("select")}}, and {{HTMLElement("textarea")}} elements. It also handles
 these events on elements where {{domxref("HTMLElement.contentEditable",
-  "contenteditable")}} or {{domxref("Document.designMode", "designMode")}} are turned on.
+  "contenteditable")}} or {{domxref("Document.designMode", "designMode")}} are turned on.
 
 > **Note:** Unlike `oninput`, the
 > {{domxref("GlobalEventHandlers.onchange", "onchange")}} event handler is not

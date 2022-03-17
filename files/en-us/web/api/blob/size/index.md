@@ -4,13 +4,9 @@ slug: Web/API/Blob/size
 tags:
   - API
   - Blob
-  - Bytes
   - File API
-  - Files
   - Property
   - Reference
-  - length
-  - size
 browser-compat: api.Blob.size
 ---
 {{APIRef("File API")}}
@@ -18,13 +14,7 @@ browser-compat: api.Blob.size
 The {{domxref("Blob")}} interface's **`size`** property returns
 the size of the {{domxref("Blob")}} or {{domxref("File")}} in bytes.
 
-## Syntax
-
-```js
-var sizeInBytes = blob.size
-```
-
-### Value
+## Value
 
 The number of bytes of data contained within the `Blob` (or
 `Blob`-based object, such as a {{domxref("File")}}).
@@ -35,17 +25,38 @@ This example uses an {{HTMLElement("input")}} element of type `file` to ask
 the user for a group of files, then iterates over those files outputting their names and
 lengths in bytes.
 
-```js
-// fileInput is a HTMLInputElement: <input type="file" multiple id="myfileinput">
-var fileInput = document.getElementById("myfileinput");
+### HTML
 
-// files is a FileList object (similar to NodeList)
-var files = fileInput.files;
+```html
+<input type="file" id="input" multiple>
+<output id="output">Choose files...</output>
+```
 
-for (var i = 0; i < files.length; i++) {
-  console.log(files[i].name + " has a size of " + files[i].size + " Bytes");
+```css hidden
+output {
+  display: block;
+  margin-top: 16px;
 }
 ```
+
+### JavaScript
+
+```js
+const input = document.getElementById('input');
+const output = document.getElementById('output');
+
+input.addEventListener('change', (event) => {
+  output.innerText = '';
+
+  for (const file of event.target.files) {
+    output.innerText += `${file.name} has a size of ${file.size} bytes.\n`;
+  }
+});
+```
+
+### Result
+
+{{EmbedLiveSample("Example")}}
 
 ## Specifications
 

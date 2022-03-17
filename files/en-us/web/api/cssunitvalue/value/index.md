@@ -12,7 +12,7 @@ tags:
   - value
 browser-compat: api.CSSUnitValue.value
 ---
-{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSUnitValue.value`** property of the
 {{domxref("CSSUnitValue")}} interface returns a double indicating the number of units.

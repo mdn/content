@@ -29,8 +29,6 @@ Do not use.
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#select","ARIA: select role")}}                                             | {{Spec2('ARIA')}}                         |
 
-
-
 ## See Also
 
 - [ARIA: `composite` role](/en-US/docs/Web/Accessibility/ARIA/Roles/composite_role)
@@ -39,8 +37,6 @@ Do not use.
 - [ARIA: `menu` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role)
 - [ARIA: `radiogroup` role](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role)
 - [ARIA: `tree` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role)
-
-
 
 <section id="Quick_links">
 

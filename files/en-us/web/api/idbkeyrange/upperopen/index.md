@@ -33,24 +33,24 @@ A boolean value:
 | Value   | Indication                                              |
 | ------- | ------------------------------------------------------- |
 | `true`  | The upper-bound value is not included in the key range. |
-| `false` | The upper-bound value is included in the key range.     |
+| `false` | The upper-bound value is included in the key range.     |
 
 ## Example
 
 The following example illustrates how you'd use a key range. Here we
-declare `keyRangeValue = IDBKeyRange.upperBound("F", "W", true, true);` — a
+declare `keyRangeValue = IDBKeyRange.upperBound("F", "W", true, true);` — a
 range that includes everything between "F" and "W" but not including them — since both
 the upper and lower bounds have been declared as open (`true`). We open a
 transaction (using {{domxref("IDBTransaction")}}) and an object store, and open a Cursor
-with {{domxref("IDBObjectStore.openCursor")}}, declaring `keyRangeValue` as
+with {{domxref("IDBObjectStore.openCursor")}}, declaring `keyRangeValue` as
 its optional key range value.
 
-After declaring the key range, we log its `upperOpen` property value to the
+After declaring the key range, we log its `upperOpen` property value to the
 console, which should appear as "true": the upper bound is open, so won't be included in
 the range.
 
 > **Note:** For a more complete example allowing you to experiment with
-> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/IDBKeyRange-example) repo ([view the example live too](https://mdn.github.io/IDBKeyRange-example/).)
+> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/IDBKeyRange-example) repo ([view the example live too](https://mdn.github.io/IDBKeyRange-example/).)
 
 ```js
 function displayData() {

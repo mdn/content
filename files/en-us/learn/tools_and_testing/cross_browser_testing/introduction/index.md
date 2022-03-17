@@ -46,22 +46,22 @@ Remember that you are not your users — just because your site works on your Ma
 
 > **Note:** [Make the web work for everyone](https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/) provides more useful perspective on the different browsers people use, their market share, and related cross browser compatibility issues.
 
-We should explain a few bits of terminology here. To start with, when we talk about sites "working cross browser", we are really saying that they should provide an acceptable user experience across different browsers. It is potentially OK for a site to not deliver the exact same experience on all browsers, as long as the core functionality is accessible in some way. On modern browsers you might get something animated, 3D and shiny, whereas on older browsers you might just get a flat graphic representing the same information. As long as the site owner is happy with this, then you have done your job.
+We should explain a few bits of terminology here. To start with, when we talk about sites "working cross browser", we are really saying that they should provide an acceptable user experience across different browsers. It is potentially OK for a site to not deliver the exact same experience on all browsers, as long as the core functionality is accessible in some way. On modern browsers you might get something animated, 3D and shiny, whereas on older browsers you might just get a flat graphic representing the same information. As long as the site owner is happy with this, then you have done your job.
 
 On the other hand, it is not OK for a site to work fine for sighted users, but be completely inaccessible for visually impaired users because their screen reader application can't read any of the information stored on it.
 
-Second, when we say "across an acceptable number of web browsers", we don't mean 100% of the browsers in the world — this is just about impossible. You can make some informed calls as to what browsers and devices your users will be using (as we'll discuss in the second article in the series — see [Gotta test 'em all?](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#gotta_test_em_all)), but you can't guarantee everything. As a web developer, you need to agree on a range of browsers and devices that the code definitely needs to work on with the site owner, but beyond that, you need to code defensively to give other browsers the best chance possible of being able to use your content. This is one of the great challenges of web development.
+Second, when we say "across an acceptable number of web browsers", we don't mean 100% of the browsers in the world — this is just about impossible. You can make some informed calls as to what browsers and devices your users will be using (as we'll discuss in the second article in the series — see [Gotta test 'em all?](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#gotta_test_em_all)), but you can't guarantee everything. As a web developer, you need to agree on a range of browsers and devices that the code definitely needs to work on with the site owner, but beyond that, you need to code defensively to give other browsers the best chance possible of being able to use your content. This is one of the great challenges of web development.
 
 > **Note:** We'll cover defensive coding later in the module too.
 
 ## Why do cross browser issues occur?
 
-There are many different reasons why cross browser issues occur, and note that here we are talking about issues where things behave different across different browsers / devices / browsing preferences. Before you even get to cross browser issues, you should have already fixed out bugs in your code (see [Debugging HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML), [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS), and [What went wrong? Troubleshooting JavaScript](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong) from previous topics to refresh your memory if needed).
+There are many different reasons why cross browser issues occur, and note that here we are talking about issues where things behave different across different browsers / devices / browsing preferences. Before you even get to cross browser issues, you should have already fixed out bugs in your code (see [Debugging HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML), [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS), and [What went wrong? Troubleshooting JavaScript](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong) from previous topics to refresh your memory if needed).
 
 Cross browser issues commonly occur because:
 
 - sometimes browsers have bugs, or implement features differently. This situation is a lot less bad than it used to be; back when IE4 and Netscape 4 were competing to be the dominant browser in the 1990s, browser companies deliberately implemented things differently to each other to try to gain competitive advantage, which made life hell for developers. Browsers are much better at following standards these days, but differences and bugs still creep through sometimes.
-- some browsers may have different levels of support for technology features than others. This is inevitable when you are dealing with bleeding edge features that browsers are just getting round to implementing, or if you have to support really old browsers that are no longer being developed, which may have been frozen (i.e. no more new work done on them) a long time before a new feature was even invented. As an example, if you want to use cutting edge JavaScript features in your site, they might not work in older browsers. If you need to support older browsers, you might have to not use those, or convert your code to old fashioned syntax using some kind of cross-compiler where needed.
+- some browsers may have different levels of support for technology features than others. This is inevitable when you are dealing with bleeding edge features that browsers are just getting round to implementing, or if you have to support really old browsers that are no longer being developed, which may have been frozen (i.e. no more new work done on them) a long time before a new feature was even invented. As an example, if you want to use cutting edge JavaScript features in your site, they might not work in older browsers. If you need to support older browsers, you might have to not use those, or convert your code to old fashioned syntax using some kind of cross-compiler where needed.
 - some devices may have constraints that cause a web site to run slowly, or display badly. For example, if a site has been designed to look nice on a desktop PC, it will probably look tiny and be hard to read on a mobile device. If your site includes a load of big animations, it might be OK on a high spec tablet, but might be sluggish or jerky on a low end device.
 
 and more reasons besides.
@@ -70,7 +70,7 @@ In later articles, we'll explore common cross browser problems, and look at solu
 
 ## Workflows for cross browser testing
 
-All of this cross browser testing business may sound time consuming and scary, but it needn't be — you just need to plan carefully for it, and make sure you do enough testing in the right places to make sure you don't run into unexpected problems. If you are working on a large project, you should be testing it regularly, to make sure that new features work for your target audience, and that new additions to the code don't break old features that were previously working.
+All of this cross browser testing business may sound time-consuming and scary, but it needn't be — you just need to plan carefully for it, and make sure you do enough testing in the right places to make sure you don't run into unexpected problems. If you are working on a large project, you should be testing it regularly, to make sure that new features work for your target audience, and that new additions to the code don't break old features that were previously working.
 
 If you leave all the testing to the end of a project, any bugs you uncover will be a lot more expensive and time consuming to fix than if you uncover them and fix them as you go along.
 
@@ -84,11 +84,11 @@ Steps 2–4 will tend to be repeated as many times as necessary to get all of th
 
 In the initial planning phase, you will probably have several planning meetings with the site owner/client (this might be your boss, or someone from an external company you are building a web site for), in which you determine exactly what the web site should be — what content and functionality should it have, what should it look like, etc. At this point you'll also want to know how much time you have to develop the site — what is their deadline, and how much are they going to pay you for your work? We won't go into much detail about this, but cross-browser issues can have a serious effect on such planning.
 
-Once you've got an idea of the required featureset, and what technologies you will likely build these features with, you should start exploring the target audience — what browsers, devices, etc. will the target audience for this site be using? The client might already have data about this from previous research they've done, e.g. from other web sites they own, or from previous versions of the web site you are now working on. If not, you will be able to get a good idea by looking at other sources, such as usage stats for competitors, or countries the site will be serving. You can also use a bit of intuition.
+Once you've got an idea of the required feature set, and what technologies you will likely build these features with, you should start exploring the target audience — what browsers, devices, etc. will the target audience for this site be using? The client might already have data about this from previous research they've done, e.g. from other web sites they own, or from previous versions of the web site you are now working on. If not, you will be able to get a good idea by looking at other sources, such as usage stats for competitors, or countries the site will be serving. You can also use a bit of intuition.
 
 So for example, you might be building an e-commerce site that serves customers in North America. The site should work entirely in the last few versions of the most popular desktop and mobile (iOS, Android, Windows phone) browsers — this should include Chrome (and Opera as it is based on the same rendering engine as Chrome), Firefox, IE/Edge, and Safari. It should also provide an acceptable experience on IE 8 and 9, and be accessible with WCAG AA compliance.
 
-Now you know your target testing platforms, you should go back and review the required featureset and what technologies you are going to use. For example, if the e-commerce site owner wants a WebGL-powered 3D tour of each product built into the product pages, they will need to accept that this just won't work in IE versions before 11. You'd have to agree to provide a version of the site without this feature to users of older IE versions.
+Now you know your target testing platforms, you should go back and review the required feature set and what technologies you are going to use. For example, if the e-commerce site owner wants a WebGL-powered 3D tour of each product built into the product pages, they will need to accept that this just won't work in IE versions before 11. You'd have to agree to provide a version of the site without this feature to users of older IE versions.
 
 You should compile a list of the potential problem areas.
 
@@ -112,9 +112,9 @@ Normally your development will involve a combination of the above three approach
 
 After each implementation phase, you will need to test the new functionality. To start with, you should make sure there are no general issues with your code that are stopping your feature from working:
 
-1.  Test it in a couple of stable browsers on your system, like Firefox, Safari, Chrome, or IE/Edge.
-2.  Do some lo-fi accessibility testing, such as trying to use your site with only the keyboard, or using your site via a screen reader to see if it is navigable.
-3.  Test on a mobile platform, such as Android or iOS.
+1. Test it in a couple of stable browsers on your system, like Firefox, Safari, Chrome, or IE/Edge.
+2. Do some lo-fi accessibility testing, such as trying to use your site with only the keyboard, or using your site via a screen reader to see if it is navigable.
+3. Test on a mobile platform, such as Android or iOS.
 
 At this point, fix any problems you find with your new code.
 
@@ -124,7 +124,7 @@ Next, you should try expanding your list of test browsers to a full list of targ
 - Test it in common phone and tablet browsers (e.g. iOS Safari on iPhone/iPad, Chrome and Firefox on iPhone/iPad/Android),
 - Also do tests in any other browsers you have included inside your target list.
 
-The most lo-fi option is to just do all the testing you can by yourself (pulling in team mates to help out if you are working in a  team). You should try to test it on real physical devices where possible.
+The most lo-fi option is to just do all the testing you can by yourself (pulling in team mates to help out if you are working in a team). You should try to test it on real physical devices where possible.
 
 If you haven't got the means to test all those different browser, operating system, and device combinations on physical hardware, you can also make use of emulators (emulate a device using software on your desktop computer) and virtual machines (software that allows you to emulate multiple operating system/software combinations on your desktop computer). This is a very popular choice, especially in some circumstances — for example, Windows doesn't let you have multiple versions of Windows installed simultaneously on the same machine, so using multiple virtual machines is often the only option here.
 
@@ -135,7 +135,7 @@ Finally, you can get smarter with your testing using auditing or automation tool
 - see if a button click causes something to happen successfully (like for example, a map displaying), displaying the results once the tests are completed
 - take a screenshot of each, allowing you to see if a layout is consistent across the different browsers.
 
-You can also go further than this, if wished. There are commercial tools available such as [Browserling](https://www.browserling.com), [Sauce Labs](https://saucelabs.com/), [Browser Stack](https://www.browserstack.com/), [Endtest](https://endtest.io), [LambdaTest](https://www.lambdatest.com/), [TestingBot](https://testingbot.com), and [CrossBrowserTesting](https://crossbrowsertesting.com) that do this kind of thing for you, without you having to worry about the setup, if you wish to invest some money in your testing. It is also possible to set up an environment that automatically runs tests for you, and then only lets you check in your changes to the central code repository if the tests still pass.
+You can also go further than this, if wished. There are commercial tools available such as [Browserling](https://www.browserling.com), [Sauce Labs](https://saucelabs.com/), [Browser Stack](https://www.browserstack.com/), [Endtest](https://endtest.io), [LambdaTest](https://www.lambdatest.com/), [TestingBot](https://testingbot.com), and [CrossBrowserTesting](https://crossbrowsertesting.com) that do this kind of thing for you, without you having to worry about the setup, if you wish to invest some money in your testing. It is also possible to set up an environment that automatically runs tests for you, and then only lets you check in your changes to the central code repository if the tests still pass.
 
 #### Testing on prerelease browsers
 
@@ -155,7 +155,7 @@ Once you've discovered a bug, you need to try to fix it.
 
 The first thing to do is to narrow down where the bug occurs as much as possible. Get as much information as you can from the person reporting the bug — what platform(s), device(s), browser version(s), etc. Try it on similar configurations (e.g. the same browser version on different desktop platforms, or a few different versions of the same browser on the same platform) to see how widely the bug persists.
 
-It might not be your fault — if a bug exists in a browser, then hopefully the vendor will rapidly fix it. It might have already been fixed — for example if a bug is present in Firefox release 49, but it is no longer there in Firefox Nightly (version 52), then they have fixed it. If it is not fixed, then you may want to file a bug (see {{anch("Reporting bugs")}}, below).
+It might not be your fault — if a bug exists in a browser, then hopefully the vendor will rapidly fix it. It might have already been fixed — for example if a bug is present in Firefox release 49, but it is no longer there in Firefox Nightly (version 52), then they have fixed it. If it is not fixed, then you may want to file a bug (see [Reporting bugs](#reporting_bugs), below).
 
 If it is your fault, you need to fix it! Finding out the cause of the bug involves the same strategy as any web development bug (again, see [Debugging HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML), [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS), and [What went wrong? Troubleshooting JavaScript](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong)). Once you've discovered what is causing your bug, you need to decide how to work around it in the particular browser it is causing problems in — you can't just change the problem code outright, as this may break the code in other browsers. The general approach is usually to fork the code in some way, for example use JavaScript feature detection code to detect situations in which a problem feature doesn't work, and run some different code in those cases that does work.
 

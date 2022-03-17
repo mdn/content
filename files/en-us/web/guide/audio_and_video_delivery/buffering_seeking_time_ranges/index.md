@@ -43,10 +43,12 @@ A {{ domxref("TimeRanges") }} Object consists of the following properties:
 
 Without any user interaction there is usually only one time range, but if you jump about in the media more than one time range can appear, as illustrated by the below visualization. This represents two buffered time ranges — one spanning 0 to 5 seconds and the second spanning 15 to 19 seconds.
 
-    ------------------------------------------------------
-    |=============|                    |===========|     |
-    ------------------------------------------------------
-    0             5                    15          19    21
+```
+------------------------------------------------------
+|=============|                    |===========|     |
+------------------------------------------------------
+0             5                    15          19    21
+```
 
 For this audio instance, the associated {{ domxref("TimeRanges") }} object would have the following available properties:
 
@@ -95,7 +97,7 @@ and a little bit of JavaScript:
 
         var startX = myAudio.buffered.start(i) * inc;
         var endX = myAudio.buffered.end(i) * inc;
-        var width = endX - startX;
+        var width = endX - startX;
 
         context.fillRect(startX, 0, width, myCanvas.height);
         context.rect(startX, 0, width, myCanvas.height);
@@ -187,12 +189,12 @@ window.onload = function(){
   myAudio.addEventListener('progress', function() {
     var duration =  myAudio.duration;
     if (duration > 0) {
-      for (var i = 0; i < myAudio.buffered.length; i++) {
-            if (myAudio.buffered.start(myAudio.buffered.length - 1 - i) < myAudio.currentTime) {
-                document.getElementById("buffered-amount").style.width = (myAudio.buffered.end(myAudio.buffered.length - 1 - i) / duration) * 100 + "%";
-                break;
-            }
-        }
+      for (var i = 0; i < myAudio.buffered.length; i++) {
+            if (myAudio.buffered.start(myAudio.buffered.length - 1 - i) < myAudio.currentTime) {
+                document.getElementById("buffered-amount").style.width = (myAudio.buffered.end(myAudio.buffered.length - 1 - i) / duration) * 100 + "%";
+                break;
+            }
+        }
     }
   });
 
@@ -217,7 +219,7 @@ This should give you results similar to the following, where the light grey bar 
 
 ## A quick word about Played
 
-It’s worth mentioning the `played` property — this tells us which time ranges have been played within the media. For example:
+It's worth mentioning the `played` property — this tells us which time ranges have been played within the media. For example:
 
 ```js
 var played = audio.played; // returns a TimeRanges object

@@ -11,7 +11,9 @@ The `function-available` function determines if a given function is available an
 
 ### Syntax
 
-    function-available(name )
+```
+function-available( name )
+```
 
 ### Arguments
 

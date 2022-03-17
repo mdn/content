@@ -30,6 +30,8 @@ event's `state` property contains a copy of the history entry's state object.
 > popstate event on page load. Chrome did until version 34, while Safari did until
 > version 10.0.
 
+{{InheritanceDiagram}}
+
 ## Syntax
 
 ```js

@@ -67,7 +67,7 @@ You can find the [HTML markup](https://github.com/mdn/imsc/blob/master/imscjs-de
 
 ## Accessing the DOM
 
-An IMSC subtitle is rendered by HTML markup with inline CSS. It represents the IMSC subtitles during a specific period on the timeline of the associated media element. As we saw in the {{anch("Rendering an IMSC snapshot")}} section above, the markup is inserted into a `<div>` element using the `renderHtml()` method. We can think of this `<div>` element as a container for the HTML that was generated from IMSC code. Later we pass the corresponding DOM element as a parameter to `renderHtml()` method.
+An IMSC subtitle is rendered by HTML markup with inline CSS. It represents the IMSC subtitles during a specific period on the timeline of the associated media element. As we saw in the [Rendering an IMSC snapshot](#rendering_an_imsc_snapshot) section above, the markup is inserted into a `<div>` element using the `renderHtml()` method. We can think of this `<div>` element as a container for the HTML that was generated from IMSC code. Later we pass the corresponding DOM element as a parameter to `renderHtml()` method.
 
 For convenience we assign this DOM element to a variable.
 
@@ -119,7 +119,7 @@ After we have set up everything, we can concentrate on implementing the IMSC sub
 
 Above we explained that we need to generate IMSC snapshots. In the following section we go a bit deeper into what that means and why this is necessary.
 
-As we learned in {{anch("Parsing the IMSC document")}}, the first step is to parse the IMSC document into an imscJS object.
+As we learned in [Parsing the IMSC document](#parsing_the_imsc_document), the first step is to parse the IMSC document into an imscJS object.
 
 ```js
 var imscDoc = imsc.fromXML(text);
@@ -143,7 +143,7 @@ What happens is the following:
 
 - At second 0 there is no subtitle.
 - At second 1 the text "Hello" must appear.
-- At second 2 the text “Hello” must still stay “on screen” but the text "world!" needs to be added. So, from second 2 to 3 we have a subtitle representing the text "Hello world!".
+- At second 2 the text "Hello" must still stay "on screen" but the text "world!" needs to be added. So, from second 2 to 3 we have a subtitle representing the text "Hello world!".
 
 To map this into HTML we need at least two cues: one that represents the text "Hello" from second 1-2 and the other representing the text "Hello world!" from second 2-3.
 
@@ -153,17 +153,17 @@ Luckily in IMSC and imscJS this scenario is quite easy to cover, because IMSC ha
 
 Let's have a closer look what that means.
 
-In our HTML/CSS implementation we can think of IMSC subtitles as a rendering layer that is put on top of the video. At each point in time on the media timeline the rendering layer has one specific state. For these “states” IMSC has a conceptual model, the "intermediate synchronous document format", which represents what is eventually rendered in that layer. Each time the rendering needs to change, a new representation is created. What is created is called an **Intermediate Synchronous Document** or **ISD**. This ISD has no dependency on the ISD's that come before or after. It is completely stateless and has all information needed to render the subtitle.
+In our HTML/CSS implementation we can think of IMSC subtitles as a rendering layer that is put on top of the video. At each point in time on the media timeline the rendering layer has one specific state. For these "states" IMSC has a conceptual model, the "intermediate synchronous document format", which represents what is eventually rendered in that layer. Each time the rendering needs to change, a new representation is created. What is created is called an **Intermediate Synchronous Document** or **ISD**. This ISD has no dependency on the ISD's that come before or after. It is completely stateless and has all information needed to render the subtitle.
 
 So how can we get the times when the ISD changes?
 
-This is easy: we just call the `getMediaTimeEvents()` method on the imscJS document object (see also {{anch("Parsing the IMSC document")}}):
+This is easy: we just call the `getMediaTimeEvents()` method on the imscJS document object (see also [Parsing the IMSC document](#parsing_the_imsc_document)):
 
 ```js
 var timeEvents = imscDoc.getMediaTimeEvents(); // timeEvents = [0,1,2,3]
 ```
 
-To get an ISD document that corresponds to a time event we need to call the imscJS method `generateISD()`. We explained this briefly in {{anch("Generating an IMSC snapshot")}}. So for the ISD at second 2 we need to do the following:
+To get an ISD document that corresponds to a time event we need to call the imscJS method `generateISD()`. We explained this briefly in [Generating an IMSC snapshot](#generating_an_imsc_snapshot). So for the ISD at second 2 we need to do the following:
 
 ```js
 imsc.generateISD(imscDoc, 2);
@@ -263,8 +263,8 @@ Native video player controls are part of the browser and not the HTML markup. Al
 
 This causes two problems when using imscJS:
 
-1.  The IMSC HTML overlay covers the complete video. It sits on top of the `<video>` element. Although you can see the player controls (because most of the overlay has a transparent background), pointer events like mouse clicks are not coming through to the controls. Because they can’t be accessed by standard CSS you can also not change the z-index of the controls to solve this problem. So, if you always have a subtitle overlay, you will not able be able to stop the video once it has started. This would be a very bad user experience.
-2.  Usually the native video player controls have a caption user interface. You can select a text track or to switch off the rendering of subtitles. Unfortunately, the caption interface only controls the rendering of WebVTT subtitles. The browser does not know that we are rendering subtitles with imscJS, so these controls will have no effect.
+1. The IMSC HTML overlay covers the complete video. It sits on top of the `<video>` element. Although you can see the player controls (because most of the overlay has a transparent background), pointer events like mouse clicks are not coming through to the controls. Because they can't be accessed by standard CSS you can also not change the z-index of the controls to solve this problem. So, if you always have a subtitle overlay, you will not able be able to stop the video once it has started. This would be a very bad user experience.
+2. Usually the native video player controls have a caption user interface. You can select a text track or to switch off the rendering of subtitles. Unfortunately, the caption interface only controls the rendering of WebVTT subtitles. The browser does not know that we are rendering subtitles with imscJS, so these controls will have no effect.
 
 For the first problem there is a straightforward CSS solution. We need to set the CSS property `pointer-events` to `none` (see the [sample code](https://github.com/mdn/imsc/blob/master/imscjs-demo/css/style.css) on github for the complete CSS).
 

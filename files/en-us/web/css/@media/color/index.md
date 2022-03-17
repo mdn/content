@@ -11,13 +11,13 @@ browser-compat: css.at-rules.media.color
 ---
 {{CSSRef}}
 
-The **`color`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the number of bits per color component (red, green, blue) of the output device.
+The **`color`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the number of bits per color component (red, green, blue) of the output device.
 
 ## Syntax
 
-The `color` feature is specified as an {{cssxref("&lt;integer&gt;")}} value that represents the number of bits per color component (red, green, blue) of the output device. If the device is not a color device, the value is zero. It is a range feature, meaning that you can also use the prefixed **`min-color`** and **`max-color`** variants to query minimum and maximum values, respectively.
+The `color` feature is specified as an {{cssxref("&lt;integer&gt;")}} value that represents the number of bits per color component (red, green, blue) of the output device. If the device is not a color device, the value is zero. It is a range feature, meaning that you can also use the prefixed **`min-color`** and **`max-color`** variants to query minimum and maximum values, respectively.
 
-> **Note:** If the various color components are represented by different numbers of bits, the smallest number is used. For example, if a display uses 5 bits for blue and red and 6 bits for green, then the device is considered to use 5 bits per color component. If the device uses indexed colors, the minimum number of bits per color component in the color table is used.
+> **Note:** If the various color components are represented by different numbers of bits, the smallest number is used. For example, if a display uses 5 bits for blue and red and 6 bits for green, then the device is considered to use 5 bits per color component. If the device uses indexed colors, the minimum number of bits per color component in the color table is used.
 
 See [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color) to learn more about using CSS to apply color to HTML.
 
@@ -33,21 +33,21 @@ See [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_co
 
 ```css
 p {
-  color: black;
+  color: black;
 }
 
 /* Any color device */
 @media (color) {
-  p {
-    color: red;
-  }
+  p {
+    color: red;
+  }
 }
 
 /* Any color device with at least 8 bits per color component */
 @media (min-color: 8) {
-  p {
-    color: #24ba13;
-  }
+  p {
+    color: #24ba13;
+  }
 }
 ```
 

@@ -12,7 +12,7 @@ tags:
   - unit
 browser-compat: api.CSSUnitValue.unit
 ---
-{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSUnitValue.unit`** read-only property
 of the {{domxref("CSSUnitValue")}} interface returns a {{jsxref('USVString')}}

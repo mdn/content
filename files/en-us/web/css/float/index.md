@@ -17,7 +17,7 @@ The **`float`** CSS property places an element on the left or right side of its 
 
 A _floating element_ is one where the computed value of `float` is not `none`.
 
-As `float` implies the use of the block layout, it modifies the computed value of the {{cssxref("display")}} values, in some cases:
+As `float` implies the use of the block layout, it modifies the computed value of the {{cssxref("display")}} values, in some cases:
 
 | Specified value      | Computed value |
 | -------------------- | -------------- |

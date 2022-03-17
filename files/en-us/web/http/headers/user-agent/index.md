@@ -71,7 +71,7 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0
 
 ## Chrome UA string
 
-The Chrome (or Chromium/Blink-based engines) user agent string is similar to Firefox’s. For compatibility, it adds strings like `KHTML, like Gecko` and `Safari`.
+The Chrome (or Chromium/Blink-based engines) user agent string is similar to Firefox's. For compatibility, it adds strings like `KHTML, like Gecko` and `Safari`.
 
 ### Examples
 
@@ -161,3 +161,4 @@ PostmanRuntime/7.26.5
 - [User-Agent detection, history and checklist](https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/)
 - [Firefox user agent string reference](/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox)
 - [Browser detection using the user agent](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent)
+- [Client hints](/en-US/docs/Web/HTTP/Client_hints)

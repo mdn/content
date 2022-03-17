@@ -16,7 +16,7 @@ the replacement text.
 
 > **Note:** In order to achieve a similar effect in modern browsers,
 > consider using {{domxref("Node.textContent")}}, {{domxref("Element.innerHTML")}},
-> {{domxref("HTMLELement.innerText")}}, or {{domxref("CharacterData.replaceData()")}}.
+> {{domxref("HTMLElement.innerText")}}, or {{domxref("CharacterData.replaceData()")}}.
 
 ## Syntax
 
@@ -48,7 +48,7 @@ A {{domxref("Text")}} node with the replaced string, or `null` if the replaces s
 This method was originally present in the DOM specification. It has been removed and this feature is no longer on track to become a standard.
 
 Instead, consider using algorithms based on {{domxref("Node.textContent")}}, {{domxref("Element.innerHTML")}},
-{{domxref("HTMLELement.innerText")}}, or {{domxref("CharacterData.replaceData()")}}.
+{{domxref("HTMLElement.innerText")}}, or {{domxref("CharacterData.replaceData()")}}.
 
 ## Browser compatibility
 
@@ -58,4 +58,4 @@ Instead, consider using algorithms based on {{domxref("Node.textContent")}}, {{d
 
 - The {{domxref("Text")}} interface it belongs to.
 - {{domxref("Node.textContent")}}, {{domxref("Element.innerHTML")}},
-  {{domxref("HTMLELement.innerText")}}, {{domxref("CharacterData.replaceData()")}}
+  {{domxref("HTMLElement.innerText")}}, {{domxref("CharacterData.replaceData()")}}

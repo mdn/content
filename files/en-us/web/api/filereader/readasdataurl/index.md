@@ -21,7 +21,7 @@ file's data as a base64 encoded string.
 > **Note:** The blob's {{domxref("FileReader.result","result")}} cannot be
 > directly decoded as Base64 without first removing the Data-URL declaration preceding
 > the Base64-encoded data. To retrieve only the Base64 encoded string, first
-> remove `data:*/*;base64,` from the result.
+> remove `data:*/*;base64,` from the result.
 
 ## Syntax
 
@@ -47,18 +47,18 @@ instanceOfFileReader.readAsDataURL(blob);
 
 ```js
 function previewFile() {
-  const preview = document.querySelector('img');
-  const file = document.querySelector('input[type=file]').files[0];
-  const reader = new FileReader();
+  const preview = document.querySelector('img');
+  const file = document.querySelector('input[type=file]').files[0];
+  const reader = new FileReader();
 
-  reader.addEventListener("load", function () {
-    // convert image file to base64 string
-    preview.src = reader.result;
-  }, false);
+  reader.addEventListener("load", function () {
+    // convert image file to base64 string
+    preview.src = reader.result;
+  }, false);
 
-  if (file) {
-    reader.readAsDataURL(file);
-  }
+  if (file) {
+    reader.readAsDataURL(file);
+  }
 }
 ```
 
@@ -112,7 +112,7 @@ function previewFiles() {
 > **Note:** The [`FileReader()`](/en-US/docs/Web/API/FileReader) constructor was
 > not supported by Internet Explorer for versions before 10. For a full compatibility code
 > you can see our [crossbrowser possible solution for image
-> preview](https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html "crossbrowser_image_preview.html"). See also [this more
+> preview](https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html). See also [this more
 > powerful example](https://mdn.mozillademos.org/files/3698/image_upload_preview.html).
 
 ## Specifications

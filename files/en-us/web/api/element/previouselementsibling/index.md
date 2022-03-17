@@ -47,12 +47,14 @@ element = el.previousElementSibling;
 
 This example outputs the following into the page when it loads:
 
-    Siblings of div-03
+```
+Siblings of div-03
 
-       1. LI
-       2. LI
-       3. DIV
-       4. DIV
+   1. LI
+   2. LI
+   3. DIV
+   4. DIV
+```
 
 ## Specifications
 

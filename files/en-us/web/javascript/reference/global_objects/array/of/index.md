@@ -19,7 +19,7 @@ The difference between **`Array.of()`** and the
 **`Array`** constructor is in the handling of integer arguments:
 **`Array.of(7)`** creates an array with a single element,
 `7`, whereas **`Array(7)`** creates an empty array
-with a `length` property of `7` (**Note:** this
+with a `length` property of `7` (**Note:** this
 implies an array of `7` empty slots, not slots with actual
 {{jsxref("undefined")}} values).
 
@@ -80,7 +80,7 @@ Array.of(undefined); // [undefined]
 
 ## See also
 
-- A polyfill of `Array.of` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.of` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - [A
   polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
 - {{jsxref("Array")}}

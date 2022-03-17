@@ -398,13 +398,17 @@ If the MIME type for the video is not set correctly on the server, the video may
 
 If you use Apache Web Server to serve Ogg Theora videos, you can fix this problem by adding the video file type extensions to "video/ogg" MIME type. The most common video file type extensions are ".ogm", ".ogv", or ".ogg". To do this, edit the "mime.types" file in "/etc/apache" or use the `"AddType"` configuration directive in `httpd.conf`.
 
-    AddType video/ogg .ogm
-    AddType video/ogg .ogv
-    AddType video/ogg .ogg
+```
+AddType video/ogg .ogm
+AddType video/ogg .ogv
+AddType video/ogg .ogg
+```
 
 If you serve your videos as WebM, you can fix this problem for the Apache Web Server by adding the extension used by your video files (".webm" is the most common one) to the MIME type "video/webm" via the "mime.types" file in "/etc/apache" or via the "AddType" configuration directive in `httpd.conf`.
 
-    AddType video/webm .webm
+```
+AddType video/webm .webm
+```
 
 Your web host may provide an easy interface to MIME type configuration changes for new technologies until a global update naturally occurs.
 
@@ -418,21 +422,23 @@ If automatic captioning services are used, it is important to review the generat
 
 In addition to spoken dialog, subtitles and transcripts should also identify music and sound effects that communicate important information. This includes emotion and tone:
 
-    14
-    00:03:14 --> 00:03:18
-    [Dramatic rock music]
+```
+14
+00:03:14 --> 00:03:18
+[Dramatic rock music]
 
-    15
-    00:03:19 --> 00:03:21
-    [whispering] What's that off in the distance?
+15
+00:03:19 --> 00:03:21
+[whispering] What's that off in the distance?
 
-    16
-    00:03:22 --> 00:03:24
-    It's… it's a…
+16
+00:03:22 --> 00:03:24
+It's… it's a…
 
-    16 00:03:25 --> 00:03:32
-    [Loud thumping]
-    [Dishes clattering]
+16 00:03:25 --> 00:03:32
+[Loud thumping]
+[Dishes clattering]
+```
 
 Captions should not obstruct the main subject of the video. They can be positioned using [the `align` VTT cue setting](/en-US/docs/Web/API/WebVTT_API#cue_settings).
 

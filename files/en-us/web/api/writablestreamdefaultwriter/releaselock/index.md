@@ -7,7 +7,7 @@ tags:
   - Method
   - Reference
   - Streams
-  - WritiableStream
+  - WritableStream
   - releaseLock
 browser-compat: api.WritableStreamDefaultWriter.releaseLock
 ---
@@ -22,7 +22,7 @@ in the same way from now on; otherwise, the writer will appear closed.
 ## Syntax
 
 ```js
-writableStreamDefaultWritere.releaseLock()
+writableStreamDefaultWriter.releaseLock()
 ```
 
 ### Parameters

@@ -27,8 +27,8 @@ createCylinderLayer(init)
     - `aspectRatio`: Optional. A number indicating the ratio of the visible cylinder section. It is the ratio of the width of the visible section of the cylinder divided by its height. The width is calculated by multiplying the `radius` with the `centralAngle`. The default value is `2.0`.
     - `centralAngle`: Optional. A number indicating the angle in radians of the visible section of the cylinder. Default value: `0.78539` (π / 4).
     - `colorFormat`: Optional. A {{domxref("GLenum")}} defining the data type of the color texture data. Possible values:
-        - `gl.RGB`
-        - `gl.RGBA`
+      - `gl.RGB`
+      - `gl.RGBA`
       Additionally, for contexts with the {{domxref("EXT_sRGB")}} extension enabled:
       - `ext.SRGB_EXT`
       - `ext.SRGB_ALPHA_EXT`
@@ -65,7 +65,7 @@ createCylinderLayer(init)
       The default value is `mono`.
     - `mipLevels`: Optional. A number specifying desired number of mip levels. The default value is `1`.
     - `radius`: Optional. A number indicating the radius of the cylinder. Default value: `2.0`.
-    - `space`: **Required**. An {{domxref("XRSpace")}} object defining the layer's spatial relationship with the user’s physical environment.
+    - `space`: **Required**. An {{domxref("XRSpace")}} object defining the layer's spatial relationship with the user's physical environment.
     - `textureType`: Optional. A string defining the type of texture the layer will have. Possible values:
       - `texture`: The textures of {{domxref("XRWebGLSubImage")}} will be of type `gl.TEXTURE_2D`.
       - `texture-array`: the textures of {{domxref("XRWebGLSubImage")}} will be of type `gl.TEXTURE_2D_ARRAY` (WebGL 2 contexts only).

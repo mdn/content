@@ -126,11 +126,11 @@ One well-supported media feature is `orientation`, which allows us to test for p
 
 [Open this example](https://mdn.github.io/css-examples/learn/media-queries/orientation.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/master/learn/media-queries/orientation.html).
 
-A standard desktop view has a landscape orientation, and a design that works well in this orientation may not work as well when viewed on a phone or tablet in portrait mode. Testing for orientation can help you to create a layout which is optimised for devices in portrait mode.
+A standard desktop view has a landscape orientation, and a design that works well in this orientation may not work as well when viewed on a phone or tablet in portrait mode. Testing for orientation can help you to create a layout which is optimized for devices in portrait mode.
 
 #### Use of pointing devices
 
-As part of the Level 4 specification, the `hover` media feature was introduced. This feature means you can test if the user has the ability to hover over an element, which essentially means they are using some kind of pointing device; touchscreen and keyboard navigation does not hover.
+As part of the Level 4 specification, the `hover` media feature was introduced. This feature means you can test if the user has the ability to hover over an element, which essentially means they are using some kind of pointing device; touchscreen and keyboard navigation does not hover.
 
 ```css
 @media (hover: hover) {
@@ -144,7 +144,7 @@ As part of the Level 4 specification, the `hover` media feature was introduced. 
 
 If we know the user cannot hover, we could display some interactive features by default. For users who can hover, we might choose to make them available when a link is hovered over.
 
-Also in Level 4 is the `pointer` media feature. This takes three possible values, `none`, `fine` and `coarse`. A `fine` pointer is something like a mouse or trackpad. It enables the user to precisely target a small area. A `coarse` pointer is your finger on a touchscreen. The value `none` means the user has no pointing device; perhaps they are navigating with the keyboard only or with voice commands.
+Also in Level 4 is the `pointer` media feature. This takes three possible values, `none`, `fine` and `coarse`. A `fine` pointer is something like a mouse or trackpad. It enables the user to precisely target a small area. A `coarse` pointer is your finger on a touchscreen. The value `none` means the user has no pointing device; perhaps they are navigating with the keyboard only or with voice commands.
 
 Using `pointer` can help you to design better interfaces that respond to the type of interaction a user is having with a screen. For example, you could create larger hit areas if you know that the user is interacting with the device as a touchscreen.
 
@@ -200,7 +200,7 @@ In the early days of responsive design, many designers would attempt to target v
 
 There are now far too many devices, with a huge variety of sizes, to make that feasible. This means that instead of targeting specific sizes for all designs, a better approach is to change the design at the size where the content starts to break in some way. Perhaps the line lengths become far too long, or a boxed out sidebar gets squashed and hard to read. That's the point at which you want to use a media query to change the design to a better one for the space you have available. This approach means that it doesn't matter what the exact dimensions are of the device being used, every range is catered for. The points at which a media query is introduced are known as **breakpoints**.
 
-The [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode) in Firefox DevTools is very useful for working out where these breakpoints should go. You can easily make the viewport smaller and larger to see where the content would be improved by adding a media query and tweaking the design.
+The [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode) in Firefox DevTools is very useful for working out where these breakpoints should go. You can easily make the viewport smaller and larger to see where the content would be improved by adding a media query and tweaking the design.
 
 ![A screenshot of a layout in a mobile view in Firefox DevTools.](rwd-mode.png)
 
@@ -212,7 +212,7 @@ The view for the very smallest devices is quite often a simple single column of 
 
 The below walkthrough takes you through this approach with a very simple layout. In a production site you are likely to have more things to adjust within your media queries, however the approach would be exactly the same.
 
-### Walkthrough: a simple mobile-first layout
+### Walkthrough: a simple mobile-first layout
 
 Our starting point is an HTML document with some CSS applied to add background colors to the various parts of the layout.
 
@@ -381,7 +381,7 @@ If you look at the HTML source in the above example, you'll see the following el
 <meta name="viewport" content="width=device-width,initial-scale=1">
 ```
 
-This is the [viewport meta tag](/en-US/docs/Web/HTML/Viewport_meta_tag) — it exists as a way control how mobile browsers render content. This is needed because by default, most mobile browsers lie about their viewport width. Non-responsive sites commonly look really bad when rendered in a narrow viewport, so mobile browsers usually render the site with a viewport width wider than the real device width by default (usually 960 pixels), and then shrink the rendered result so that it fits in the display.
+This is the [viewport meta tag](/en-US/docs/Web/HTML/Viewport_meta_tag) — it exists as a way to control how mobile browsers render content. This is needed because by default, most mobile browsers lie about their viewport width. Non-responsive sites commonly look really bad when rendered in a narrow viewport, so mobile browsers usually render the site with a viewport width wider than the real device width by default (usually 960 pixels), and then shrink the rendered result so that it fits in the display.
 
 This is all well and good, but it means that responsive sites are not going to work as expected. If the viewport width is reported as 960 pixels, then mobile layouts (for example created using a media query of `@media screen and (max-width: 600px) { ... }`) are not going to render as expected.
 
@@ -438,7 +438,7 @@ This could be achieved using the following:
 
 [Open the grid layout example](https://mdn.github.io/css-examples/learn/media-queries/grid.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/master/learn/media-queries/grid.html).
 
-With the example open in your browser, make the screen wider and narrower to see the number of column tracks change. The nice thing about this method is that grid is not looking at the viewport width, but the width it has available for this component. It might seem strange to wrap up a section about media queries with a suggestion that you might not need one at all! However, in practice you will find that good use of modern layout methods, enhanced with media queries, will give the best results.
+With the example open in your browser, make the screen wider and narrower to see the number of column tracks change. The nice thing about this method is that grid is not looking at the viewport width, but the width it has available for this component. It might seem strange to wrap up a section about media queries with a suggestion that you might not need one at all! However, in practice you will find that good use of modern layout methods, enhanced with media queries, will give the best results.
 
 ## Test your skills!
 
@@ -448,7 +448,7 @@ You've reached the end of this article, but can you remember the most important 
 
 In this lesson you have learned about media queries, and also discovered how to use them in practice to create a mobile first responsive design.
 
-You could use the starting point that we have created to test out more media queries. For example, perhaps you could change the size of the navigation if you detect that the visitor has a coarse pointer, using the `pointer` media feature.
+You could use the starting point that we have created to test out more media queries. For example, perhaps you could change the size of the navigation if you detect that the visitor has a coarse pointer, using the `pointer` media feature.
 
 You could also experiment with adding different components and seeing whether the addition of a media query, or using a layout method like flexbox or grid is the most appropriate way to make the components responsive. Very often there is no right or wrong way — you should experiment and see which works best for your design and content.
 

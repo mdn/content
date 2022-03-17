@@ -5,7 +5,7 @@ tags:
   - Security
   - Web
 ---
-**Certificate Transparency** is an open framework designed to protect against and monitor for certificate misissuances. Newly issued certificates are 'logged' to publicly run, often independent CT logs which maintain an append-only, cryptographically assured record of issued TLS certificates.
+**Certificate Transparency** is an open framework designed to protect against and monitor for certificate mis-issuances. Newly issued certificates are 'logged' to publicly run, often independent CT logs which maintain an append-only, cryptographically assured record of issued TLS certificates.
 
 In this way, certificate authorities (CAs) can be subject to much greater public scrutiny and oversight. Potentially malicious certificates, such as those that violate the CA/B Forum _Baseline Requirements_, can be detected and revoked much more quickly. Browser vendors and root store maintainers are also empowered to make more informed decisions regarding problematic CAs that they may decide to distrust.
 
@@ -29,7 +29,7 @@ The specification states that compliant servers _must_ provide a number of these
 
 With the X.509 certificate extension, the included SCTs are decided by the issuing CA. There should be no need for web servers to be modified if this mechanism is used.
 
-With the latter methods, servers will need to be updated to send the required data. The advantage is that the server operator can customise the CT log sources providing the SCTs sent via the TLS extension/stapled OCSP response.
+With the latter methods, servers will need to be updated to send the required data. The advantage is that the server operator can customize the CT log sources providing the SCTs sent via the TLS extension/stapled OCSP response.
 
 ## Browser Requirements
 
@@ -39,7 +39,7 @@ Apple [requires](https://support.apple.com/en-gb/HT205280) a varying number of S
 
 Firefox [does not](https://bugzilla.mozilla.org/show_bug.cgi?id=1281469) currently check or require the use of CT logs for sites that users visit.
 
-The [Expect-CT header ](/en-US/docs/Web/HTTP/Headers/Expect-CT)can be used to request that a browser _always_ enforces the requirement for certificate transparency (e.g. in Chrome, even if the certificate was issued with a notBefore date prior to April).
+The [Expect-CT header](/en-US/docs/Web/HTTP/Headers/Expect-CT) can be used to request that a browser _always_ enforces the requirement for certificate transparency (e.g. in Chrome, even if the certificate was issued with a notBefore date prior to April).
 
 ## Specifications
 

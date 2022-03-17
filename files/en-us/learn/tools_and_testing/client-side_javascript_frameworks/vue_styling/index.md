@@ -166,7 +166,7 @@ Now that we've reset our CSS to be uniform across browsers, we need to customize
 
 There are already some styles present in the file. Let's remove those and replace them with the styles below. These styles do a few things — adding some styling to buttons and inputs, and customizing the `#app` element and its children.
 
-Update your `App.vue` file’s `<style>` element so it looks like so:
+Update your `App.vue` file's `<style>` element so it looks like so:
 
 ```css
 <style>
@@ -289,11 +289,11 @@ If you check the app, you'll see that our todo list is now in a card, and we hav
 
 We should apply the button CSS classes to the `<button>` in our `ToDoForm` component. Since Vue templates are valid HTML, this is done in the same way to how you might do it in plain HTML — by adding a `class=""` attribute to the element.
 
-Add `class="btn btn__primary btn__lg"` to your form’s `<button>` element:
+Add `class="btn btn__primary btn__lg"` to your form's `<button>` element:
 
 ```html
 <button type="submit" class="btn btn__primary btn__lg">
-  Add
+  Add
 </button>
 ```
 

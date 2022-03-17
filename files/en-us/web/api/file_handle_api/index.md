@@ -8,7 +8,7 @@ tags:
 ---
 {{non-standard_header}}
 
-The FileHandle API allows for the manipulating of files, including creating files and modifying their content (unlike the [File API](/en-US/docs/Web/API/File)). Because the files manipulated through that API can be physically stored on the device, the editing part uses a turn-based locking mechanism in order to avoid race issues.
+The FileHandle API allows for the manipulating of files, including creating files and modifying their content (unlike the [File API](/en-US/docs/Web/API/File)). Because the files manipulated through that API can be physically stored on the device, the editing part uses a turn-based locking mechanism in order to avoid race issues.
 
 ## API Overview
 
@@ -146,7 +146,7 @@ action.onsuccess = function () {
 }
 
 action.onerror = function () {
-  console.log('Oups :( Unable to read a 1GB file')
+  console.log('Oops :( Unable to read a 1GB file')
 }
 ```
 

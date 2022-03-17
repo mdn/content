@@ -51,7 +51,7 @@ browser.menus.onHidden.addListener(function() {
 });
 ```
 
-Note that it is possible to call menus API functions synchronously, and in this case you don't have to perform this check:
+Note that it is possible to call menus API functions synchronously, and in this case you don't have to perform this check:
 
 ```js
 browser.menus.onShown.addListener(async function(info, tab) {

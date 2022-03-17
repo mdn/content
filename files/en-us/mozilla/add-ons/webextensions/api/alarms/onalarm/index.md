@@ -51,7 +51,7 @@ Handle an alarm going off:
 
 ```js
 function handleAlarm(alarmInfo) {
-  console.log("on alarm: " + alarmInfo.name);
+  console.log("on alarm: " + alarmInfo.name);
 }
 
 browser.alarms.onAlarm.addListener(handleAlarm);

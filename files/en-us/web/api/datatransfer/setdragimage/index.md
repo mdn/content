@@ -57,7 +57,7 @@ None.
 
 ## Example
 
-This example shows how to use the `setDragImage()` method. Note the example
+This example shows how to use the `setDragImage()` method. Note the example
 refers to an image file named `example.gif`. If that file is present, it will
 be used as the drag image and if that file is not present, the browser will use its
 default drag image.

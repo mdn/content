@@ -14,9 +14,9 @@ browser-compat: api.ServiceWorkerContainer.getRegistration
 
 The **`getRegistration()`** method of the
 {{domxref("ServiceWorkerContainer")}} interface gets a
-{{domxref("ServiceWorkerRegistration")}} object whose scope URL matches the provided
-client URL.  The method returns a {{jsxref("Promise")}} that resolves to
-a {{domxref("ServiceWorkerRegistration")}} or `undefined`.
+{{domxref("ServiceWorkerRegistration")}} object whose scope URL matches the provided
+client URL.  The method returns a {{jsxref("Promise")}} that resolves to
+a {{domxref("ServiceWorkerRegistration")}} or `undefined`.
 
 ## Syntax
 

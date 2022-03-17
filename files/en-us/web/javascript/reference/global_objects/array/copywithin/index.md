@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.Array.copyWithin
 {{JSRef}}
 
 The **`copyWithin()`** method shallow copies part of an array
-to another location in the same array and returns it without modifying its length.
+to another location in the same array and returns it without modifying its length.
 
 {{EmbedInteractiveExample("pages/js/array-copywithin.html")}}
 
@@ -52,7 +52,7 @@ copyWithin(target, start, end)
     counted from the end.
 
     If `end` is omitted, `copyWithin` will copy until the last
-    index (default to `arr.length`).
+    index (default to `arr.length`).
 
 ### Return value
 
@@ -70,7 +70,7 @@ The `copyWithin` function is intentionally _generic_, it does not
 require that its `this` value be an {{jsxref("Array")}} object.
 
 The `copyWithin` method is a mutable method. It does not alter the length of
-`this`, but it will change its content and create new properties, if
+`this`, but it will change its content and create new properties, if
 necessary.
 
 ## Examples
@@ -114,7 +114,7 @@ i32a.copyWithin(0, 2)
 
 ## See also
 
-- A polyfill of `Array.prototype.copyWithin` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.copyWithin` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - [A
   polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
 - {{jsxref("Array")}}

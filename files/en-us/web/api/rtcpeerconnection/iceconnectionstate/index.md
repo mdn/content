@@ -84,8 +84,10 @@ The current state of the ICE agent and its connection. The value is one of the f
 
 ## Example
 
-    var pc = new RTCPeerConnection();
-    var state = pc.iceConnectionState;
+```js
+var pc = new RTCPeerConnection();
+var state = pc.iceConnectionState;
+```
 
 ## Specifications
 

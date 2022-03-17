@@ -6,13 +6,14 @@ tags:
   - Battery API
   - Device API
   - Interface
-  - Deprecated
   - Reference
 browser-compat: api.BatteryManager
 ---
-{{APIRef}}{{deprecated_header}}
+{{APIRef}}
 
 The `BatteryManager` interface of the [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) provides information about the system's battery charge level. The {{domxref("navigator.getBattery()")}} method returns a promise that resolves with a `BatteryManager` interface.
+
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -25,20 +26,20 @@ The `BatteryManager` interface of the [Battery Status API](/en-US/docs/Web/API/B
 - {{domxref("BatteryManager.level")}} {{ReadOnlyInline}}
   - : A number representing the system's battery charge level scaled to a value between 0.0 and 1.0.
 
-### Event handlers
-
-- {{domxref("BatteryManager.onchargingchange")}}
-  - : A handler for the {{event("chargingchange")}} event; This event is sent when the battery charging state is updated.
-- {{domxref("BatteryManager.onchargingtimechange")}}
-  - : A handler for the {{event("chargingtimechange")}} event; This event is sent when the battery charging time is updated
-- {{domxref("BatteryManager.ondischargingtimechange")}}
-  - : A handler for the {{event("dischargingtimechange")}} event; This event is sent when the battery discharging time is updated.
-- {{domxref("BatteryManager.onlevelchange")}}
-  - : A handler for the {{event("levelchange")}} event; This event is sent when the battery level is updated.
-
 ## Methods
 
 _Inherits methods from its parent interface:_ {{domxref("EventTarget")}}.
+
+## Events
+
+- {{domxref("BatteryManager.chargingchange_event", "chargingchange")}}
+  - : Fired when the battery charging state (the {{domxref("BatteryManager.charging", "charging")}} property) is updated.
+- {{domxref("BatteryManager.chargingtimechange_event", "chargingtimechange")}}
+  - : Fired when the battery charging time (the {{domxref("BatteryManager.chargingTime", "chargingTime")}} property) is updated.
+- {{domxref("BatteryManager.dischargingtimechange_event", "dischargingtimechange")}}
+  - : Fired when the battery discharging time (the {{domxref("BatteryManager.dischargingTime", "dischargingTime")}} property) is updated.
+- {{domxref("BatteryManager.levelchange_event", "levelchange")}}
+  - : Fired when the battery level (the {{domxref("BatteryManager.level", "level")}} property) is updated.
 
 ## Specifications
 

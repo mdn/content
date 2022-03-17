@@ -16,7 +16,7 @@ tags:
 ---
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
-This article discusses the twin concepts of **constraints** and **capabilities**, as well as media settings, and includes an example we call the {{anch("Example Constraint exerciser", "Constraint Exerciser")}}. The Constraint Exerciser lets you experiment with the results of different constraint sets being applied to the audio and video tracks coming from the computer's A/V input devices (such as its webcam and microphone).
+This article discusses the twin concepts of **constraints** and **capabilities**, as well as media settings, and includes an example we call the [Constraint Exerciser](#example_constraint_exerciser). The Constraint Exerciser lets you experiment with the results of different constraint sets being applied to the audio and video tracks coming from the computer's A/V input devices (such as its webcam and microphone).
 
 Historically, writing scripts for the Web that work intimately with Web APIs has had a well-known challenge: often, your code needs to know whether or not an API exists and if so, what its limitations are on the {{Glossary("user agent")}} it's running on. Figuring this out has often been difficult, and has usually involved looking at some combination of which {{Glossary("user agent")}} (or browser) you're running on, which version it is, looking to see if certain objects exist, trying to see whether various things work or not and determining what errors occur, and so forth. The result has been a lot of very fragile code, or a reliance on libraries which figure this stuff out for you, then implement {{Glossary("polyfill", "polyfills")}} to patch the holes in the implementation on your behalf.
 
@@ -26,10 +26,10 @@ Capabilities and constraints let the browser and Web site or app exchange inform
 
 The process works like this (using {{domxref("MediaStreamTrack")}} as an example):
 
-1.  If needed, call {{domxref("MediaDevices.getSupportedConstraints()")}} to get the list of **supported constraints**, which tells you what constrainable properties the browser knows about. This isn't always necessary, since any that aren't known will be ignored when you specify them—but if you have any that you can't get by without, you can start by checking to be sure they're on the list.
-2.  Once the script knows whether the property or properties it wishes to use are supported, it can then check the **capabilities** of the API and its implementation by examining the object returned by the track's `getCapabilities()` method; this object lists each supported constraint and the values or range of values which are supported.
-3.  Finally, the track's `applyConstraints()` method is called to configure the API as desired by specifying the values or ranges of values it wishes to use for any of the constrainable properties about which it has a preference.
-4.  The track's `getConstraints()` method returns the set of constraints passed into the most recent call to `applyConstraints()`. This may not represent the actual current state of the track, due to properties whose requested values had to be adjusted and because platform default values aren't represented. For a complete representation of the track's current configuration, use `getSettings()`.
+1. If needed, call {{domxref("MediaDevices.getSupportedConstraints()")}} to get the list of **supported constraints**, which tells you what constrainable properties the browser knows about. This isn't always necessary, since any that aren't known will be ignored when you specify them—but if you have any that you can't get by without, you can start by checking to be sure they're on the list.
+2. Once the script knows whether the property or properties it wishes to use are supported, it can then check the **capabilities** of the API and its implementation by examining the object returned by the track's `getCapabilities()` method; this object lists each supported constraint and the values or range of values which are supported.
+3. Finally, the track's `applyConstraints()` method is called to configure the API as desired by specifying the values or ranges of values it wishes to use for any of the constrainable properties about which it has a preference.
+4. The track's `getConstraints()` method returns the set of constraints passed into the most recent call to `applyConstraints()`. This may not represent the actual current state of the track, due to properties whose requested values had to be adjusted and because platform default values aren't represented. For a complete representation of the track's current configuration, use `getSettings()`.
 
 In the Media Stream API, both {{domxref("MediaStream")}} and {{domxref("MediaStreamTrack")}} have constrainable properties.
 
@@ -47,7 +47,7 @@ In this example, the supported constraints are fetched, and a control that lets 
 
 ## How constraints are defined
 
-A single constraint is an object whose name matches the constrainable property whose desired value or range of values is being specified. This object contains zero or more individual constraints, as well as an optional sub-object named `advanced`, which contains another set of zero or more constraints  which the user agent must satisfy if at all possible. The user agent attempts to satisfy constraints in the order specified in the constraint set.
+A single constraint is an object whose name matches the constrainable property whose desired value or range of values is being specified. This object contains zero or more individual constraints, as well as an optional sub-object named `advanced`, which contains another set of zero or more constraints which the user agent must satisfy if at all possible. The user agent attempts to satisfy constraints in the order specified in the constraint set.
 
 The most important thing to understand is that most constraints aren't requirements; instead, they're requests. There are exceptions, and we'll get to those shortly.
 
@@ -73,7 +73,7 @@ Simple constraints like these, specifying a single value, are always treated as 
 
 ### Specifying a range of values
 
-Sometimes, any value within a range is acceptable for a property's value. You can specify ranges with either or both minimum and maximum values, and you can even specify an ideal value within the range, if you choose. If you provide an ideal value, the browser will try to get as close as possible to matching that value, given the other constraints specified.
+Sometimes, any value within a range is acceptable for a property's value. You can specify ranges with either or both minimum and maximum values, and you can even specify an ideal value within the range, if you choose. If you provide an ideal value, the browser will try to get as close as possible to matching that value, given the other constraints specified.
 
 ```js
 let supports = navigator.mediaDevices.getSupportedConstraints();
@@ -97,7 +97,7 @@ if (!supports["width"] || !supports["height"] || !supports["frameRate"] || !supp
 }
 ```
 
-Here, after ensuring that the constrainable properties for which matches must be found are supported (`width`, `height`, `frameRate`, and `facingMode`), we set up constraints which request a width no smaller than 640 and no larger than 1920 (but preferably 1920), a height no smaller than 400 (but ideally 1080), an aspect ratio of 16:9 (1.777777778), and a frame rate no greater than 30 frames per second. In addition, the only acceptable input device is a camera facing the user (a "selfie cam"). If the `width`, `height`, `frameRate`, or `facingMode` constraints can't be met, the promise returned by `applyConstraints()` will be rejected.
+Here, after ensuring that the constrainable properties for which matches must be found are supported (`width`, `height`, `frameRate`, and `facingMode`), we set up constraints which request a width no smaller than 640 and no larger than 1920 (but preferably 1920), a height no smaller than 400 (but ideally 1080), an aspect ratio of 16:9 (1.777777778), and a frame rate no greater than 30 frames per second. In addition, the only acceptable input device is a camera facing the user (a "selfie cam"). If the `width`, `height`, `frameRate`, or `facingMode` constraints can't be met, the promise returned by `applyConstraints()` will be rejected.
 
 > **Note:** Constraints which are specified using any or all of `max`, `min`, or `exact` are always treated as mandatory. If any constraint which uses one or more of those can't be met when calling `applyConstraints()`, the promise will be rejected.
 
@@ -393,16 +393,16 @@ function startVideo() {
     video: videoConstraints,
     audio: audioConstraints
   }).then(function(stream) {
-    let audioTracks = stream.getAudioTracks();
-    let videoTracks = stream.getVideoTracks();
+    let audioTracks = stream.getAudioTracks();
+    let videoTracks = stream.getVideoTracks();
 
-    videoElement.srcObject = stream;
-    if (audioTracks.length) {
-        audioTrack = audioTracks[0];
-    }
-    if (videoTracks.length) {
-        videoTrack = videoTracks[0];
-    }
+    videoElement.srcObject = stream;
+    if (audioTracks.length) {
+        audioTrack = audioTracks[0];
+    }
+    if (videoTracks.length) {
+        videoTrack = videoTracks[0];
+    }
   }).then(function() {
     return new Promise(function(resolve) {
       videoElement.onloadedmetadata = resolve;
@@ -415,12 +415,12 @@ function startVideo() {
 
 There are several steps here:
 
-1.  It calls `buildConstraints()` to create the {{domxref("MediaTrackConstraints")}} objects for the two tracks from the code in the edit boxes.
-2.  It calls {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}}, passing in the constraints objects for the video and audio tracks. This returns a {{domxref("MediaStream")}} with the audio and video from a source matching the inputs (typically a webcam, although if you provide the right constraints you can get media from other sources).
-3.  When the stream is obtained, it's attached to the {{HTMLElement("video")}} element so that it's visible on screen, and we grab the audio track and video track into the variables `audioTrack` and `videoTrack`.
-4.  Then we set up a promise which resolves when the {{event("onloadedmetadata")}} event occurs on the video element.
-5.  When that happens, we know the video has started playing, so we call our `getCurrentSettings()` function (described above) to display the actual settings that the browser decided upon after considering our constraints and the capabilities of the hardware.
-6.  If an error occurs, we log it using the `handleError()` method that we'll look at farther down in this article.
+1. It calls `buildConstraints()` to create the {{domxref("MediaTrackConstraints")}} objects for the two tracks from the code in the edit boxes.
+2. It calls {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}}, passing in the constraints objects for the video and audio tracks. This returns a {{domxref("MediaStream")}} with the audio and video from a source matching the inputs (typically a webcam, although if you provide the right constraints you can get media from other sources).
+3. When the stream is obtained, it's attached to the {{HTMLElement("video")}} element so that it's visible on screen, and we grab the audio track and video track into the variables `audioTrack` and `videoTrack`.
+4. Then we set up a promise which resolves when the {{event("onloadedmetadata")}} event occurs on the video element.
+5. When that happens, we know the video has started playing, so we call our `getCurrentSettings()` function (described above) to display the actual settings that the browser decided upon after considering our constraints and the capabilities of the hardware.
+6. If an error occurs, we log it using the `handleError()` method that we'll look at farther down in this article.
 
 We also need to set up an event listener to watch for the "Start Video" button to be clicked:
 
@@ -434,10 +434,10 @@ document.getElementById("startButton").addEventListener("click", function() {
 
 Next, we set up an event listener for the "Apply Constraints" button. If it's clicked and there's not already media in use, we call `startVideo()`, and let that function handle starting the stream with the specified settings in place. Otherwise, we follow these steps to apply the updated constraints to the already-active stream:
 
-1.  `buildConstraints()` is called to construct updated {{domxref("MediaTrackConstraints")}} objects for the audio track (`audioConstraints`) and the video track (`videoConstraints`).
-2.  {{domxref("MediaStreamTrack.applyConstraints()")}} is called on the video track (if there is one) to apply the new `videoConstraints`. If this succeeds, the contents of the video track's current settings box are updated based on the result of calling its {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} method.
-3.  Once that's done, `applyConstraints()` is called on the audio track (if there is one) to apply the new audio constraints. If this succeeds, the contents of the audio track's current settings box are updated based on the result of calling its {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} method.
-4.  If an error occurs applying either set of constraints, `handleError()` is used to output a message into the log.
+1. `buildConstraints()` is called to construct updated {{domxref("MediaTrackConstraints")}} objects for the audio track (`audioConstraints`) and the video track (`videoConstraints`).
+2. {{domxref("MediaStreamTrack.applyConstraints()")}} is called on the video track (if there is one) to apply the new `videoConstraints`. If this succeeds, the contents of the video track's current settings box are updated based on the result of calling its {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} method.
+3. Once that's done, `applyConstraints()` is called on the audio track (if there is one) to apply the new audio constraints. If this succeeds, the contents of the audio track's current settings box are updated based on the result of calling its {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} method.
+4. If an error occurs applying either set of constraints, `handleError()` is used to output a message into the log.
 
 ```js
 document.getElementById("applyButton").addEventListener("click", function() {
@@ -468,10 +468,10 @@ Then we set up the handler for the stop button.
 document.getElementById("stopButton").addEventListener("click", function() {
   if (videoTrack) {
     videoTrack.stop();
-  }
-  if (audioTrack) {
+  }
+  if (audioTrack) {
     audioTrack.stop();
-  }
+  }
 
   videoTrack = audioTrack = null;
   videoElement.srcObject = null;

@@ -169,7 +169,7 @@ If you have multiple content scripts communicating at the same time, you might w
 var ports = []
 
 function connected(p) {
-  ports[p.sender.tab.id]    = p
+  ports[p.sender.tab.id]    = p
   //...
 }
 
@@ -177,8 +177,8 @@ browser.runtime.onConnect.addListener(connected)
 
 browser.browserAction.onClicked.addListener(function() {
   ports.forEach(p => {
-        p.postMessage({greeting: "they clicked the button!"})
-    })
+        p.postMessage({greeting: "they clicked the button!"})
+    })
 });
 ```
 

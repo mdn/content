@@ -25,7 +25,7 @@ A boolean value, true if the connection is open.
 
 ## Examples
 
-The following example rerieves devices with {{domxref("HID.getDevices()")}} and logs the value of `opened` to the console.
+The following example retrieves devices with {{domxref("HID.getDevices()")}} and logs the value of `opened` to the console.
 
 ```js
 document.addEventListener('DOMContentLoaded', async () => {

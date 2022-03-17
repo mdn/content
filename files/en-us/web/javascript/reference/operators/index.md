@@ -186,7 +186,7 @@ Logical operators are typically used with boolean (logical) values, and when the
 ### Optional Chaining operator
 
 - {{JSxRef("Operators/Optional_chaining", "?.")}}
-  - : The optional chaining operator returns `undefined` instead of causing an error if a reference is [nullish](/en-US/docs/Glossary/Nullish) ([`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null) or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+  - : The optional chaining operator returns `undefined` instead of causing an error if a reference is [nullish](/en-US/docs/Glossary/Nullish) ([`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null) or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
 ### Assignment operators
 

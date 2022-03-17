@@ -91,9 +91,9 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 Other elements can be used in tandem with `<kbd>` to represent more specific scenarios:
 
-- Nesting a `<kbd>` element within another `<kbd>` element represents an actual key or other unit of input as a portion of a larger input. See {{anch("Representing keystrokes within an input")}} below.
-- Nesting a `<kbd>` element inside a {{HTMLElement("samp")}} element represents input that has been echoed back to the user by the system. See {{anch("Echoed input")}}, below, for an example.
-- Nesting a `<samp>` element inside a `<kbd>` element, on the other hand, represents input which is based on text presented by the system, such as the names of menus and menu items, or the names of buttons displayed on the screen. See the example under {{anch("Representing onscreen input options")}} below.
+- Nesting a `<kbd>` element within another `<kbd>` element represents an actual key or other unit of input as a portion of a larger input. See [Representing keystrokes within an input](#representing_keystrokes_within_an_input) below.
+- Nesting a `<kbd>` element inside a {{HTMLElement("samp")}} element represents input that has been echoed back to the user by the system. See [Echoed input](#echoed_input), below, for an example.
+- Nesting a `<samp>` element inside a `<kbd>` element, on the other hand, represents input which is based on text presented by the system, such as the names of menus and menu items, or the names of buttons displayed on the screen. See the example under [Representing onscreen input options](#representing_onscreen_input_options) below.
 
 > **Note:** You can define a custom style to override the browser's default font selection for the `<kbd>` element, although the user's preferences may potentially override your CSS.
 
@@ -194,7 +194,7 @@ Document</samp></kbd></kbd>.</p>
 to confirm once you've entered the name of the new file.</p>
 ```
 
-This does some interesting nesting. For the menu option description, the entire input is enclosed in a `<kbd>` element. Then, inside that, both the menu and menu item names are  contained within both `<kbd>` and `<samp>`, indicating an input which is selected from a screen widget.
+This does some interesting nesting. For the menu option description, the entire input is enclosed in a `<kbd>` element. Then, inside that, both the menu and menu item names are  contained within both `<kbd>` and `<samp>`, indicating an input which is selected from a screen widget.
 
 #### Result
 

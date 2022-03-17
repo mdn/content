@@ -14,7 +14,7 @@ The **stacking context** is a three-dimensional conceptualization of HTML elemen
 
 ## The stacking context
 
-In the previous part of this article, [Using z-index](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index), the rendering order of certain elements is influenced by their `z-index` value. This occurs because these elements have special properties which cause them to form a _stacking context_.
+In the previous part of this article, [Using z-index](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index), we showed that the rendering order of certain elements is influenced by their `z-index` value. This occurs because these elements have special properties which cause them to form a _stacking context_.
 
 A stacking context is formed, anywhere in the document, by any element in the following scenarios:
 
@@ -34,7 +34,6 @@ A stacking context is formed, anywhere in the document, by any element in the fo
   - {{cssxref("mask")}} / {{cssxref("mask-image")}} / {{cssxref("mask-border")}}
 
 - Element with a {{cssxref("isolation")}} value `isolate`.
-- Element with a {{cssxref("-webkit-overflow-scrolling")}} value `touch`.
 - Element with a {{cssxref("will-change")}} value specifying any property that would create a stacking context on non-initial value (see [this post](http://dev.opera.com/articles/css-will-change-property/)).
 - Element with a {{cssxref("contain")}} value of `layout`, or `paint`, or a composite value that includes either of them (i.e. `contain: strict`, `contain: content`).
 

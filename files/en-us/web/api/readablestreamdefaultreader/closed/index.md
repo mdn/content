@@ -14,8 +14,8 @@ browser-compat: api.ReadableStreamDefaultReader.closed
 
 The **`closed`** read-only property of the
 {{domxref("ReadableStreamDefaultReader")}} interface returns a
-{{jsxref("Promise")}} that fulfills when the stream closes or the reader's lock
-is released, or rejects if the stream throws an error. This property enables you
+{{jsxref("Promise")}} that fulfills when the stream closes, or rejects if the
+stream throws an error or the reader's lock is released. This property enables you
 to write code that responds to an end to the streaming process.
 
 ## Syntax

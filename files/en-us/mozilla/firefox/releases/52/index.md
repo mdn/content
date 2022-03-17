@@ -87,7 +87,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - Duplicate `__proto__` properties are now allowed in [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) ({{bug(1204024)}}).
 - {{jsxref("Array.prototype.toLocaleString()")}} has been re-implemented to support the Intl API parameters "`locales`" and "`options`" ({{bug(1130636)}}).
 - {{jsxref("TypedArray")}} constructors now accept [iterables](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) to create new typed arrays ({{bug(1232266)}}).
-- {{jsxref("TypedArray.from()")}}, {{jsxref("TypedArray.of()")}}, {{jsxref("TypedArray.prototype.filter()")}}, {{jsxref("TypedArray.prototype.map()")}}, {{jsxref("TypedArray.prototype.slice()")}}, {{jsxref("TypedArray.prototype.subarray()")}} now require that their `this` values are valid Typed Array constructors ({{bug(1122396)}}).
+- {{jsxref("TypedArray.from()")}}, {{jsxref("TypedArray.of()")}}, {{jsxref("TypedArray.prototype.filter()")}}, {{jsxref("TypedArray.prototype.map()")}}, {{jsxref("TypedArray.prototype.slice()")}}, {{jsxref("TypedArray.prototype.subarray()")}} now require that their `this` values are valid Typed Array constructors ({{bug(1122396)}}).
 - The non-standard {{jsxref("ArrayBuffer.slice()")}} method (not {{jsxref("ArrayBuffer.prototype.slice()")}}) is deprecated and now presents a warning when used ({{bug(1316913)}}).
 - [Unicode code point escapes](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#unicode_code_point_escapes) can now also be used as identifiers (e.g. "`let \u{61} = 123`", see {{bug(1314037)}}).
 - To conform with ES2015, `\u2e2f` and `ⸯ` now throw when used as identifier, for details see {{bug(917436)}} and {{bug(1197230)}}.
@@ -104,15 +104,15 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - [Touch events](/en-US/docs/Web/API/Touch_events) have been reenabled on Windows desktop platforms — see {{bug(1244402)}}. (They were disabled in Firefox 24 because they broke a number of major sites; see {{bug(888304)}}.)
 - The {{event("focusin")}} and {{event("focusout")}} events are now implemented ({{bug("687787")}}).
 - The {{domxref("isSecureContext")}} property has been implemented (see {{bug(1269052)}}).
-- The [Web App Manifest](/en-US/docs/Web/Manifest) install event has been renamed appinstalled (see {{domxref("Window.onappinstalled")}}, {{event("appinstalled")}}) to avoid confusion with the service worker install event (see {{domxref("ServiceWorkerGlobalScope.oninstall")}}). See {{bug(1309099)}} for more details about this update.
+- The [Web App Manifest](/en-US/docs/Web/Manifest) install event has been renamed appinstalled (see {{domxref("Window.appinstalled_event")}}, {{event("appinstalled")}}) to avoid confusion with the service worker install event (see {{domxref("ServiceWorkerGlobalScope.oninstall")}}). See {{bug(1309099)}} for more details about this update.
 - The {{domxref("DataTransfer.types")}} property of the [Drag and drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) now returns a frozen array of {{domxref("DOMString")}}s rather than a {{domxref("DOMStringList")}} (see {{bug(1298243)}}).
-- The {{Event("loadstart")}} and {{Event("loadend")}} events are now fired on {{htmlelement("img")}} elements (see {{bug(1264769)}}, and also see {{domxref("GlobalEventHandlers.onloadstart")}} and {{domxref("GlobalEventHandlers.onloadend")}}).
+- The {{Event("loadstart")}} and {{Event("loadend")}} events are now fired on {{htmlelement("img")}} elements (see {{bug(1264769)}}, and also see {{domxref("GlobalEventHandlers.onloadstart")}} and {{domxref("GlobalEventHandlers.onloadend")}}).
 - The {{domxref("Notification.requireInteraction")}} of the [Notifications API](/en-US/docs/Web/API/Notifications_API) has been implemented (see {{bug(862395)}}.)
 - The {{domxref("Window.open()")}} method now has a `noopener` [window feature](/en-US/docs/Web/API/Window/open#window_functionality_features) available (see {{bug(1267339)}}), which mirrors the functionality of the `rel="noopener"` [Link type](/en-US/docs/Web/HTML/Link_types).
 - The {{domxref("CustomElementRegistry.get()")}} method of the [Web Components API](/en-US/docs/Web/Web_Components) has been implemented (see {{bug(1275838)}}).
 - [Pointer Event](/en-US/docs/Web/API/Pointer_events) {{domxref("PointerEvent.width","width")}} and {{domxref("PointerEvent.height","height")}} properties now default to a value of 1 (see {{bug(1304315)}}).
 - The [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) has been updated to include changes in the [latest spec](https://wicg.github.io/entries-api/) (see {{bug(1284987)}} for the exact details).
-- The {{domxref("Event.cancelBubble", "cancelBubble")}} property, which was defined on {{domxref("UIEvent")}}, is now defined on the {{domxref("Event")}} interface instead. See {{bug(1298970)}} for more details.
+- The {{domxref("Event.cancelBubble", "cancelBubble")}} property, which was defined on {{domxref("UIEvent")}}, is now defined on the {{domxref("Event")}} interface instead. See {{bug(1298970)}} for more details.
 
 #### Changes and removals
 
@@ -134,7 +134,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 ### WebRTC
 
 - When an ICE connection is temporarily disrupted, the {{domxref("RTCPeerConnection.iceConnectionState")}} property now gets set to `"disconnected"`; this indicates a transitory failure that may resolve itself shortly, with the connection returning to the `"connected"` state afterward ({{bug(852665)}}).
-- The {{domxref("MediaDevices.ondevicechange")}} event handler and corresponding {{event("devicechange")}} event, which were implemented but disabled by default on Mac only in Firefox 51, have been implemented on Windows and Linux and are now enabled by default on all platforms.
+- The {{domxref("MediaDevices.devicechange_event")}} event and its corresponding handler, which were implemented but disabled by default on Mac only in Firefox 51, have been implemented on Windows and Linux and are now enabled by default on all platforms.
 - The {{domxref("MediaStream.active")}} property is now supported. This read-only Boolean property indicates whether or not at least one track on the stream is currently playing.
 - Prior to Firefox 52, the {{domxref("MediaStreamTrack.stop()")}} method could only stop local tracks (that is, tracks obtained through {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}). Now a variety of tracks can be stopped, including those on a {{domxref("MediaStream")}} associated with a [WebRTC](/en-US/docs/Glossary/WebRTC) connection, [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) stream, or {{domxref("CanvasCaptureMediaStreamTrack", "CanvasCaptureMediaStream")}}.
 - Previously, changing a {{domxref("TextTrack")}}'s {{domxref("TextTrack.mode", "mode")}} repeatedly during a single pass through the Firefox event loop would result in multiple {{event("change")}} events being delivered to the {{domxref("TextTrackList")}} specified by the parent media element's {{domxref("HTMLMediaElement.textTracks", "textTracks")}} property. Now these changes are consolidated into one event ({{bug(882674)}}).

@@ -17,7 +17,7 @@ The **`stop-color`** attribute indicates what color to use at a gradient stop.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("stop")}}
+- {{SVGElement("stop")}}
 
 ## Usage notes
 
@@ -46,12 +46,12 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `currentcolor`
-    *   : This keyword denotes the current fill color and can be specified in the same manner as within a [`<paint>`](/en-US/docs/Web/SVG/Content_type#paint) specification for the {{SVGAttr("fill")}} and {{SVGAttr("stroke")}} attributes.
-*   `<color>`
-    *   : This value indicates a color value.
-*   `<icccolor>`
-    *   : This value refers to an ICC color profile.
+- `currentcolor`
+  - : This keyword denotes the current fill color and can be specified in the same manner as within a [`<paint>`](/en-US/docs/Web/SVG/Content_type#paint) specification for the {{SVGAttr("fill")}} and {{SVGAttr("stroke")}} attributes.
+- `<color>`
+  - : This value indicates a color value.
+- `<icccolor>`
+  - : This value refers to an ICC color profile.
 
 ## Specifications
 
@@ -90,4 +90,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-*   {{SVGAttr("stop-opacity")}}
+- {{SVGAttr("stop-opacity")}}

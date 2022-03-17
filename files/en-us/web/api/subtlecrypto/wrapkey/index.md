@@ -61,16 +61,16 @@ const result = crypto.subtle.wrapKey(
   to be used to encrypt the exported key, and any required extra parameters:
 
   - To use [RSA-OAEP](/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep),
-    pass an [`RsaOaepParams`](/en-US/docs/Web/API/RsaOaepParams "This dictionary represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(),  when using the RSA_OAEP algorithm.")
+    pass an [`RsaOaepParams`](/en-US/docs/Web/API/RsaOaepParams)
     object.
   - To use [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr),
-    pass an [`AesCtrParams`](/en-US/docs/Web/API/AesCtrParams "This dictionary represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(),  when using the AES-CTR algorithm.")
+    pass an [`AesCtrParams`](/en-US/docs/Web/API/AesCtrParams)
     object.
   - To use [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc),
-    pass an [`AesCbcParams`](/en-US/docs/Web/API/AesCbcParams "This dictionary represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(), when using the AES-CBC algorithm.")
+    pass an [`AesCbcParams`](/en-US/docs/Web/API/AesCbcParams)
     object.
   - To use [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm),
-    pass an [`AesGcmParams`](/en-US/docs/Web/API/AesGcmParams "This dictionary represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(),  when using the AES-GCM algorithm.")
+    pass an [`AesGcmParams`](/en-US/docs/Web/API/AesGcmParams)
     object.
   - To use [AES-KW](#aes-kw),
     pass the string `"AES-KW"`, or an object of the form
@@ -78,7 +78,7 @@ const result = crypto.subtle.wrapKey(
 
 ### Return value
 
-- `result` is a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.")
+- `result` is a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
   that fulfills with an
   [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
   containing the encrypted exported key.

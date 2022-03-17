@@ -40,7 +40,7 @@ Activating a service worker to deliver a push message can result in increased re
 - {{domxref("PushMessageData")}}
   - : Provides access to push data sent by a server, and includes methods to manipulate the received data.
 - {{domxref("PushSubscription")}}
-  - : Provides a subcription's URL endpoint, and allows unsubscription from a push service.
+  - : Provides a subscription's URL endpoint, and allows unsubscribing from a push service.
 - {{domxref("PushSubscriptionOptions")}}
   - : Represents the options associated with the push subscription.
 

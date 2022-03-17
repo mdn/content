@@ -35,4 +35,3 @@ Returns `true` if `value` was in the `CustomStateSet`; otherwise `false`.
 ## Browser compatibility
 
 {{Compat}}
-

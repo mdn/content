@@ -13,8 +13,8 @@ The **`operator`** attribute has two meanings based on the context it's used in.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feComposite")}}
-*   {{SVGElement("feMorphology")}}
+- {{SVGElement("feComposite")}}
+- {{SVGElement("feMorphology")}}
 
 ## Example
 
@@ -67,25 +67,25 @@ For {{SVGElement("feComposite")}}, `operator` defines the compositing operation 
   </tbody>
 </table>
 
-*   `over`
-    *   : This value indicates that the source graphic defined in the {{SVGAttr("in")}} attribute is placed over the destination graphic defined in the {{SVGAttr("in2")}} attribute.
-*   `in`
-    *   : This value indicates that the parts of the source graphic defined in the `in` attribute that overlap the destination graphic defined in the `in2` attribute, replace the destination graphic.
-*   `out`
-    *   : This value indicates that the parts of the source graphic defined in the `in` attribute that fall outside the destination graphic defined in the `in2` attribute, are displayed.
-*   `atop`
-    *   : This value indicates that the parts of the source graphic defined in the `in` attribute, which overlap the destination graphic defined in the `in2` attribute, replace the destination graphic. The parts of the destination graphic that do not overlap with the source graphic stay untouched.
-*   `xor`
-    *   : This value indicates that the non-overlapping regions of the source graphic defined in the `in` attribute and the destination graphic defined in the `in2` attribute are combined.
-*   `lighter`
-    *   : This value indicates that the sum of the source graphic defined in the `in` attribute and the destination graphic defined in the `in2` attribute is displayed.
-*   `arithmetic`
-    *   : This value indicates that the source graphic defined in the `in` attribute and the destination graphic defined in the `in2` attribute are combined using the following formula:
+- `over`
+  - : This value indicates that the source graphic defined in the {{SVGAttr("in")}} attribute is placed over the destination graphic defined in the {{SVGAttr("in2")}} attribute.
+- `in`
+  - : This value indicates that the parts of the source graphic defined in the `in` attribute that overlap the destination graphic defined in the `in2` attribute, replace the destination graphic.
+- `out`
+  - : This value indicates that the parts of the source graphic defined in the `in` attribute that fall outside the destination graphic defined in the `in2` attribute, are displayed.
+- `atop`
+  - : This value indicates that the parts of the source graphic defined in the `in` attribute, which overlap the destination graphic defined in the `in2` attribute, replace the destination graphic. The parts of the destination graphic that do not overlap with the source graphic stay untouched.
+- `xor`
+  - : This value indicates that the non-overlapping regions of the source graphic defined in the `in` attribute and the destination graphic defined in the `in2` attribute are combined.
+- `lighter`
+  - : This value indicates that the sum of the source graphic defined in the `in` attribute and the destination graphic defined in the `in2` attribute is displayed.
+- `arithmetic`
+  - : This value indicates that the source graphic defined in the `in` attribute and the destination graphic defined in the `in2` attribute are combined using the following formula:
 
-        `result = k1*i1*i2 + k2*i1 + k3*i2 + k4`
+    `result = k1*i1*i2 + k2*i1 + k3*i2 + k4`
 
-        where:
-        `i1` and `i2` indicate the corresponding pixel channel values of the input image, which map to `in` and `in2` respectively, and {{SVGAttr("k1")}},{{SVGAttr("k2")}},{{SVGAttr("k3")}},and {{SVGAttr("k4")}} indicate the values of the attributes with the same name.
+    where:
+    `i1` and `i2` indicate the corresponding pixel channel values of the input image, which map to `in` and `in2` respectively, and {{SVGAttr("k1")}},{{SVGAttr("k2")}},{{SVGAttr("k3")}},and {{SVGAttr("k4")}} indicate the values of the attributes with the same name.
 
 ## feMorphology
 
@@ -108,10 +108,10 @@ For {{SVGElement("feMorphology")}}, `operator` defines whether to erode (i.e., t
   </tbody>
 </table>
 
-*   `erode`
-    *   : This value thins the source graphic defined in the {{SVGAttr("in")}} attribute.
-*   `dilate`
-    *   : This value fattens the source graphic defined in the `in` attribute.
+- `erode`
+  - : This value thins the source graphic defined in the {{SVGAttr("in")}} attribute.
+- `dilate`
+  - : This value fattens the source graphic defined in the `in` attribute.
 
 ## Specifications
 

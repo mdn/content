@@ -7,6 +7,7 @@ tags:
   - Guide
   - Reference
   - Web
+spec-urls: https://drafts.csswg.org/selectors/#specificity-rules
 ---
 {{CSSRef}}
 
@@ -22,11 +23,11 @@ Specificity is a weight that is applied to a given CSS declaration, determined b
 
 The following list of selector types increases by specificity:
 
-1.  [Type selectors](/en-US/docs/Web/CSS/Type_selectors) (e.g., `h1`) and pseudo-elements (e.g., `::before`).
-2.  [Class selectors](/en-US/docs/Web/CSS/Class_selectors) (e.g., `.example`), attributes selectors (e.g., `[type="radio"]`) and pseudo-classes (e.g., `:hover`).
-3.  [ID selectors](/en-US/docs/Web/CSS/ID_selectors) (e.g., `#example`).
+1. [Type selectors](/en-US/docs/Web/CSS/Type_selectors) (e.g., `h1`) and pseudo-elements (e.g., `::before`).
+2. [Class selectors](/en-US/docs/Web/CSS/Class_selectors) (e.g., `.example`), attributes selectors (e.g., `[type="radio"]`) and pseudo-classes (e.g., `:hover`).
+3. [ID selectors](/en-US/docs/Web/CSS/ID_selectors) (e.g., `#example`).
 
-Universal selector ({{CSSxRef("Universal_selectors", "*")}}), combinators ({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, ['` `'](/en-US/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}) and negation pseudo-class ({{CSSxRef(":not", ":not()")}}) have no effect on specificity. (The selectors declared _inside_ `:not()` do, however.)
+Universal selector ({{CSSxRef("Universal_selectors", "*")}}), combinators ({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/en-US/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}) and negation pseudo-class ({{CSSxRef(":not", ":not()")}}) have no effect on specificity. (The selectors declared _inside_ `:not()` do, however.)
 
 For more information, visit: ["Specificity" in "Cascade and inheritance"](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#Specificity_2), you can also visit: <https://specifishity.com>
 
@@ -45,8 +46,8 @@ When an `important` rule is used on a style declaration, this declaration overri
 
 **Instead of using `!important`, consider:**
 
-1.  Make better use of the CSS cascade
-2.  Use more specific rules. By indicating one or more elements before the element you're selecting, the rule becomes more specific and gets higher priority:
+1. Make better use of the CSS cascade
+2. Use more specific rules. By indicating one or more elements before the element you're selecting, the rule becomes more specific and gets higher priority:
 
     ```html
     <div id="test">
@@ -62,7 +63,7 @@ When an `important` rule is used on a style declaration, this declaration overri
 
     No matter the order, text will be green because that rule is most specific. (Also, the rule for blue overwrites the rule for red, notwithstanding the order of the rules)
 
-3.  As a nonsense special case for (2), duplicate simple selectors to increase specificity when you have nothing more to specify.
+3. As a nonsense special case for (2), duplicate simple selectors to increase specificity when you have nothing more to specify.
 
     ```css
     #myId#myId span { color: yellow; }
@@ -73,7 +74,7 @@ When an `important` rule is used on a style declaration, this declaration overri
 
 ##### A) Overriding inline styles
 
-Your global CSS file that sets visual aspects of your site globally may be overwritten by inline styles defined directly on individual elements. Both inline styles and !important are considered very bad practice, but sometimes you need the latter to override the former.
+Your global CSS file that sets visual aspects of your site globally may be overwritten by inline styles defined directly on individual elements. Both inline styles and !important are considered bad practice, but sometimes you need the latter to override the former.
 
 In this case, you could set certain styles in your global CSS file as !important, thus overriding inline styles set directly on elements.
 
@@ -312,12 +313,7 @@ This is because the `h1` selector targets the element specifically, but the gree
 
 ## Specifications
 
-| Specification                                                                                                                | Status                               | Comment                                                                               |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------- |
-| {{SpecName("CSS4 Selectors", "#specificity-rules", "Calculating a selector's specificity")}} | {{Spec2("CSS4 Selectors")}} | Add the specificity adjustment selector {{CSSxRef(":where", ":where()")}}. |
-| {{SpecName("CSS3 Selectors", "#specificity", "Calculating a selector's specificity")}}         | {{Spec2("CSS3 Selectors")}} | Add [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements).                           |
-| {{SpecName("CSS2.1", "cascade.html#specificity", "Calculating a selector's specificity")}}     | {{Spec2("CSS2.1")}}             | Add [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes).                             |
-| {{SpecName("CSS1", "#cascading-order", "Cascading order")}}                                             | {{Spec2("CSS1")}}             | Initial definition.                                                                   |
+{{Specifications}}
 
 ## See also
 

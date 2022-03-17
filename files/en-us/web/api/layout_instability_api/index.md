@@ -16,7 +16,7 @@ The **Layout Instability API** provides interfaces for measuring and reporting l
 
 A layout shift happens when any element that is visible in the viewport changes its start position between two frames. These elements are described as being **unstable**, and contribute to a poor [Cumulative Layout Shift (CLS)](https://web.dev/cls/) score, indicating a lack of visual stability.
 
-The Layout Instabiliy API provides a way to measure and report on these layout shifts. All tools for debugging layout shifts, including those in DevTools, use this API. The API can also be used to observe and debug layout shifts by logging the information to the console, to send the data to a server endpoint, or to Google Analytics.
+The Layout Instability API provides a way to measure and report on these layout shifts. All tools for debugging layout shifts, including those in DevTools, use this API. The API can also be used to observe and debug layout shifts by logging the information to the console, to send the data to a server endpoint, or to Google Analytics.
 
 ## Interfaces
 
@@ -31,7 +31,7 @@ The following example observes all layout shifts, and prints them to the console
 
 ```js
 new PerformanceObserver((list) => {
-	console.log(list.getEntries());
+  console.log(list.getEntries());
 }).observe({type: 'layout-shift', buffered: true});
 ```
 

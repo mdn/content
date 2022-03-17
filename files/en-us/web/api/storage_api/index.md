@@ -11,7 +11,7 @@ tags:
   - Storage API
   - Usage
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Storage")}} {{AvailableInWorkers}}
+{{securecontext_header}}{{DefaultAPISidebar("Storage")}} {{AvailableInWorkers}}
 
 The Storage Standard defines a common, shared storage system to be used by all APIs and technologies that store content-accessible data for individual Web sites. The Storage API gives sites' code the ability to find out how much space they can use, how much they are already using, and even control whether or not they need to be alerted before the {{Glossary("user agent")}} disposes of site data in order to make room for other things.
 
@@ -22,7 +22,6 @@ Site storage—the data stored for a Web site which is managed by the Storage St
 - [Service Worker registrations](/en-US/docs/Web/API/Service_Worker_API)
 - [Web Storage API data](/en-US/docs/Web/API/Web_Storage_API) managed using {{domxref("window.localStorage")}}
 - History state information saved using {{domxref("History.pushState()")}}
-- [Application caches](/en-US/docs/Web/HTML/Using_the_application_cache) (highly deprecated!)
 - [Notification data](/en-US/docs/Web/API/Notifications_API)
 - Other kinds of site-accessible, site-specific data that may be maintained
 
@@ -36,7 +35,7 @@ The site storage system described by the Storage Standard and interacted with us
 - Origin 2 has no data stored in it yet; it's just an empty box waiting for content. This origin, however, has a lower quota than the other two do. It may be a less-visited site, or one known to have lower data storage requirements.
 - Origin 3's storage unit is completely full; it's reached its quota and can't store any more data without some existing material being removed.
 
-{{Glossary("User agent", "User agents")}} are likely to use various techniques to determine the quota for various origins. One of the most likely methods—one which the specification specifically encourages, in fact—would be to consider the popularity and/or usage levels of individual sites to determine what their quotas should be.  It's also conceivable that the browser might offer a user interface to customize these quotas.
+{{Glossary("User agent", "User agents")}} are likely to use various techniques to determine the quota for various origins. One of the most likely methods—one which the specification specifically encourages, in fact—would be to consider the popularity and/or usage levels of individual sites to determine what their quotas should be.  It's also conceivable that the browser might offer a user interface to customize these quotas.
 
 ## Box modes
 
@@ -73,7 +72,7 @@ To determine the estimated quota and usage values for a given origin, use the {{
 
 ```js
 navigator.storage.estimate().then(estimate => {
-  // estimate.quota is the estimated quota
+  // estimate.quota is the estimated quota
   // estimate.usage is the estimated number of bytes used
 });
 ```

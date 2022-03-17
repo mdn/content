@@ -13,7 +13,9 @@ The `<xsl:import>` element is a top-level element that serves to import the cont
 
 ### Syntax
 
-    <xsl:import href=URI  />
+```xml
+<xsl:import href=URI />
+```
 
 ### Required Attributes
 

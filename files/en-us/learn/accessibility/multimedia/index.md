@@ -213,25 +213,25 @@ Note that we also check to see if the `currentTime` is more than the total media
 Last of all, add the following to the end of the code, to control the time elapsed display:
 
 ```js
-player.ontimeupdate = function() {
-  let minutes = Math.floor(player.currentTime / 60);
-  let seconds = Math.floor(player.currentTime - minutes * 60);
+player.ontimeupdate = function () {
+  const minutes = Math.floor(player.currentTime / 60);
+  const seconds = Math.floor(player.currentTime - minutes * 60);
   let minuteValue;
   let secondValue;
 
-  if (minutes<10) {
+  if (minutes < 10) {
     minuteValue = "0" + minutes;
   } else {
     minuteValue = minutes;
   }
 
-  if (seconds<10) {
+  if (seconds < 10) {
     secondValue = "0" + seconds;
   } else {
     secondValue = seconds;
   }
 
-  mediaTime = minuteValue + ":" + secondValue;
+  const mediaTime = minuteValue + ":" + secondValue;
   timeLabel.textContent = mediaTime;
 };
 ```
@@ -256,7 +256,7 @@ In terms of actually creating the transcript, your options are:
 
 - Commercial services — You could pay a professional to do the transcription, see for example companies like [Scribie](https://scribie.com/), [Casting Words](https://castingwords.com/), or [Rev](https://www.rev.com/). Look around and ask for advice to make sure you find a reputable company that you'll be able to work with effectively.
 - Community/grassroots/self transcription — If you are part of an active community or team in your workplace, then you could ask them for help with doing the translations. You could even have a go at doing them yourself.
-- Automated services — There are AI services available, like [Trint](https://trint.com) or [Transcribear](https://transcribear.com/index.html). Upload a video/audio file to the site, and it automatically transcribes it for you. On YouTube, you can choose to generate automated captions/transcripts. Depending on how clear the spoken audio is, the resulting transcript quality will vary greatly.
+- Automated services — There are AI services available, like [Trint](https://trint.com) or [Transcribear](https://transcribear.com/index.html). Upload a video/audio file to the site, and it automatically transcribes it for you. On YouTube, you can choose to generate automated captions/transcripts. Depending on how clear the spoken audio is, the resulting transcript quality will vary greatly.
 
 As with most things in life, you tend to get what you pay for; different services will vary in accuracy and time taken to produce the transcript. If you pay a reputable company or AI service to do the transcription, you will probably get it done rapidly and to a high quality. If you don't want to pay for it, you are likely to get it done at a lower quality, and/or slowly.
 
@@ -264,7 +264,7 @@ It is not OK to publish an audio resource but promise to publish the transcript 
 
 ### Transcript examples
 
-If you use an automated service, then you'll probably have to use the user interface that the tool provides. For example, take a look at our [Wait, ARIA Roles Have Categories?](https://www.youtube.com/watch?v=mwF-PpJOjMs) video and choose the three-dot menu (. . .) _> Show Transcript_. You'll see the transcript come up in a separate panel.
+If you use an automated service, then you'll probably have to use the user interface that the tool provides. For example, take a look at our [Wait, ARIA Roles Have Categories?](https://www.youtube.com/watch?v=mwF-PpJOjMs) video and choose the three-dot menu (. . .) _> Show Transcript_. You'll see the transcript come up in a separate panel.
 
 If you are creating your own user interface to present your audio and associated transcript, you can do it however you like, but it might make sense to include it in a showable/hideable panel; see our [audio-transcript-ui](https://mdn.github.io/learning-area/accessibility/multimedia/audio-transcript-ui/) example (also see the [source code](https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/audio-transcript-ui)).
 
@@ -305,17 +305,19 @@ Text tracks for displaying with HTML5 video need to be written in WebVTT, a text
 
 A typical WebVTT file will look something like this:
 
-    WEBVTT
+```
+WEBVTT
 
-    1
-    00:00:22.230 --> 00:00:24.606
-    This is the first subtitle.
+1
+00:00:22.230 --> 00:00:24.606
+This is the first subtitle.
 
-    2
-    00:00:30.739 --> 00:00:34.074
-    This is the second.
+2
+00:00:30.739 --> 00:00:34.074
+This is the second.
 
-      ...
+...
+```
 
 To get this displayed along with the HTML media playback, you need to:
 

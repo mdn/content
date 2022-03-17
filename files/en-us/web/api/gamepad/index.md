@@ -29,6 +29,8 @@ A Gamepad object can be returned in one of two ways: via the `gamepad` property 
   - : An enum defining what hand the controller is being held in, or is most likely to be held in.
 - {{domxref("Gamepad.hapticActuators")}} {{readonlyInline}}
   - : An array containing {{domxref("GamepadHapticActuator")}} objects, each of which represents haptic feedback hardware available on the controller.
+- {{domxref("Gamepad.vibrationActuator")}} {{readonlyInline}}
+  - : A {{domxref("GamepadHapticActuator")}} object, which represents haptic feedback hardware available on the controller.
 - {{domxref("Gamepad.id")}} {{readonlyInline}}
   - : A {{domxref("DOMString")}} containing identifying information about the controller.
 - {{domxref("Gamepad.index")}} {{readonlyInline}}

@@ -12,7 +12,7 @@ tags:
   - configurationValue
 browser-compat: api.USBConfiguration.configurationValue
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}
+{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}
 
 The **`configurationValue`** read-only property
 of the {{domxref("USBConfiguration")}} interface null
@@ -26,7 +26,7 @@ var value = USBConfiguration.configurationValue
 ### Value
 
 The [configuration
-descriptor](https://www.beyondlogic.org/usbnutshell/usb5.shtml#ConfigurationDescriptors) of the {{domxref("USBDevice")}} specified in the constructor of the
+descriptor](https://www.beyondlogic.org/usbnutshell/usb5.shtml#ConfigurationDescriptors) of the {{domxref("USBDevice")}} specified in the constructor of the
 current {{domxref("USBConfiguration")}} instance.
 
 ## Specifications

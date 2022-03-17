@@ -10,9 +10,9 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-These interfaces were moved to new locations in the tree in Gecko 1.9.2. This is generally only interesting to people doing development on Mozilla itself.
+These interfaces were moved to new locations in the tree in Gecko 1.9.2. This is generally only interesting to people doing development on Mozilla itself.
 
-## Moved DOM interfaces
+## Moved DOM interfaces
 
 The following interfaces were moved from `dom/public/idl/base/` to `dom/interfaces/base/`:
 
@@ -760,7 +760,7 @@ The following interfaces moved from `dom/public/idl/svg/` to `dom/interfaces/svg
   </tbody>
 </table>
 
-The IDL files for DOM workers have moved as well, from `dom/public/idl/threads/` to `dom/interfaces/threads/`:
+The IDL files for DOM workers have moved as well, from `dom/public/idl/threads/` to `dom/interfaces/threads/`:
 
 <table>
   <tbody>

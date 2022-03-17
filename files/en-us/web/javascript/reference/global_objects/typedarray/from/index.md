@@ -152,7 +152,7 @@ Uint8Array.from({length: 5}, (v, k) => k);
 
 ## See also
 
-- A polyfill of `TypedArray.from` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.from` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray.of()")}}
 - {{jsxref("Array.from()")}}
 - {{jsxref("Array.prototype.map()")}}

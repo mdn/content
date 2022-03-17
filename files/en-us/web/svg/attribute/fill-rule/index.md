@@ -14,14 +14,14 @@ The **`fill-rule`** attribute is a presentation attribute defining the algorithm
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement('altGlyph')}}
-*   {{SVGElement('path')}}
-*   {{SVGElement('polygon')}}
-*   {{SVGElement('polyline')}}
-*   {{SVGElement('text')}}
-*   {{SVGElement('textPath')}}
-*   {{SVGElement('tref')}}
-*   {{SVGElement('tspan')}}
+- {{SVGElement('altGlyph')}}
+- {{SVGElement('path')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('text')}}
+- {{SVGElement('textPath')}}
+- {{SVGElement('tref')}}
+- {{SVGElement('tspan')}}
 
 ## Example
 
@@ -32,8 +32,8 @@ html,body,svg { height:100% }
 ```html
 <svg viewBox="-10 -10 220 120" xmlns="http://www.w3.org/2000/svg">
   <!-- Default value for fill-rule -->
-  <polygon fill-rule="nonzero" stroke="red"
-   points="50,0 21,90 98,35 2,35 79,90"/>
+  <polygon fill-rule="nonzero" stroke="red"
+   points="50,0 21,90 98,35 2,35 79,90"/>
 
   <!--
   The center of the shape has two
@@ -41,8 +41,8 @@ html,body,svg { height:100% }
   between it and infinity. It is therefore
   considered outside the shape, and not filled.
   -->
-  <polygon fill-rule="evenodd" stroke="red"
-   points="150,0 121,90 198,35 102,35 179,90"/>
+  <polygon fill-rule="evenodd" stroke="red"
+   points="150,0 121,90 198,35 102,35 179,90"/>
 </svg>
 ```
 
@@ -81,27 +81,27 @@ html,body,svg { height:100% }
 
 ```html
 <svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effect of nonzero fill rule on crossing path segments -->
-  <polygon fill-rule="nonzero" stroke="red"
-           points="50,0 21,90 98,35 2,35 79,90"/>
+  <!-- Effect of nonzero fill rule on crossing path segments -->
+  <polygon fill-rule="nonzero" stroke="red"
+           points="50,0 21,90 98,35 2,35 79,90"/>
 
-  <!--
-  Effect of nonzero fill rule on a shape inside a shape
-  with the path segment moving in the same direction
-  (both squares drawn clockwise, to the "right")
-  -->
-  <path fill-rule="nonzero" stroke="red"
-        d="M110,0  h90 v90 h-90 z
-           M130,20 h50 v50 h-50 z"/>
+  <!--
+  Effect of nonzero fill rule on a shape inside a shape
+  with the path segment moving in the same direction
+  (both squares drawn clockwise, to the "right")
+  -->
+  <path fill-rule="nonzero" stroke="red"
+        d="M110,0  h90 v90 h-90 z
+           M130,20 h50 v50 h-50 z"/>
 
-  <!--
-  Effect of nonzero fill rule on a shape inside a shape
-  with the path segment moving in the opposite direction
-  (one square drawn clockwise, the other anti-clockwise)
-  -->
-  <path fill-rule="nonzero" stroke="red"
-        d="M210,0  h90 v90 h-90 z
-           M230,20 v50 h50 v-50 z"/>
+  <!--
+  Effect of nonzero fill rule on a shape inside a shape
+  with the path segment moving in the opposite direction
+  (one square drawn clockwise, the other anti-clockwise)
+  -->
+  <path fill-rule="nonzero" stroke="red"
+        d="M210,0  h90 v90 h-90 z
+           M230,20 v50 h50 v-50 z"/>
 </svg>
 ```
 
@@ -119,35 +119,31 @@ html,body,svg { height:100% }
 
 ```html
 <svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effect of evenodd fill rule on crossing path segments -->
-  <polygon fill-rule="evenodd" stroke="red"
-           points="50,0 21,90 98,35 2,35 79,90"/>
+  <!-- Effect of evenodd fill rule on crossing path segments -->
+  <polygon fill-rule="evenodd" stroke="red"
+           points="50,0 21,90 98,35 2,35 79,90"/>
 
-  <!--
-  Effect of evenodd fill rule on a shape inside a shape
-  with the path segment moving in the same direction
-  (both squares drawn clockwise, to the "right")
-  -->
-  <path fill-rule="evenodd" stroke="red"
-        d="M110,0  h90 v90 h-90 z
-           M130,20 h50 v50 h-50 z"/>
+  <!--
+  Effect of evenodd fill rule on a shape inside a shape
+  with the path segment moving in the same direction
+  (both squares drawn clockwise, to the "right")
+  -->
+  <path fill-rule="evenodd" stroke="red"
+        d="M110,0  h90 v90 h-90 z
+           M130,20 h50 v50 h-50 z"/>
 
-  <!--
-  Effect of evenodd fill rule on a shape inside a shape
-  with the path segment moving in opposite direction
-  (one square drawn clockwise, the other anti-clockwise)
-  -->
-  <path fill-rule="evenodd" stroke="red"
-        d="M210,0  h90 v90 h-90 z
-           M230,20 v50 h50 v-50 z"/>
+  <!--
+  Effect of evenodd fill rule on a shape inside a shape
+  with the path segment moving in opposite direction
+  (one square drawn clockwise, the other anti-clockwise)
+  -->
+  <path fill-rule="evenodd" stroke="red"
+        d="M210,0  h90 v90 h-90 z
+           M230,20 v50 h50 v-50 z"/>
 </svg>
 ```
 
 {{EmbedLiveSample('evenodd', '100%', 200)}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Specifications
 
@@ -176,3 +172,7 @@ html,body,svg { height:100% }
     </tr>
   </tbody>
 </table>
+
+## Browser compatibility
+
+{{Compat}}

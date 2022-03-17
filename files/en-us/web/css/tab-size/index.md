@@ -36,7 +36,7 @@ tab-size: unset;
 ### Values
 
 - {{CSSxRef("&lt;integer&gt;")}}
-  - : A multiple of the advance width of the space character (U+0020) to be used as the width of tabs. Must be nonnegative.
+  - : A multiple of the advance width of the space character (U+0020) to be used as the width of tabs. Must be nonnegative.
 - {{CSSxRef("&lt;length&gt;")}}
   - : The width of tabs. Must be nonnegative.
 

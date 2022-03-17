@@ -27,7 +27,7 @@ abort(reason)
 
 - `reason`
   - : The reason why the operation was aborted, which can be any JavaScript value.
-    If not specified, the reason is set to "AbortError" {{domxref("DOMException")}}. 
+    If not specified, the reason is set to "AbortError" {{domxref("DOMException")}}.
 
 ### Return value
 

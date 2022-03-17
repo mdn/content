@@ -35,7 +35,7 @@ decoder = new TextDecoder(utfLabel, options);
   - : Is a `TextDecoderOptions` dictionary with the property:
 
     - `fatal`
-      - : A [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean "The Boolean object is an object wrapper for a boolean value.")
+      - : A [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
         flag indicating if the {{DOMxRef("TextDecoder.decode()")}} method must throw a
         {{jsxref("TypeError")}} when an coding error is found. It defaults to `false`.
 

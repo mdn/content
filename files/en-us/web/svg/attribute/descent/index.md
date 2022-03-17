@@ -15,7 +15,7 @@ The **`descent`** attribute defines the maximum unaccented depth of the font.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("font-face")}}
+- {{SVGElement("font-face")}}
 
 ## Usage notes
 

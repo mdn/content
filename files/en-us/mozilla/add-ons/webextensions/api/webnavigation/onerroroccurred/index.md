@@ -49,7 +49,7 @@ Events have three functions:
 
   - : Function that will be called when this event occurs.
 
-    The `listener` function will be called with the following arguments:
+    The `listener` function will be called with the following arguments:
 
     - `details`
 

@@ -9,7 +9,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 81 that will affect developers. Firefox 81 was released on September 22, 2020.
+This article provides information about the changes in Firefox 81 that will affect developers. Firefox 81 was released on September 22, 2020.
 
 ## Changes for web developers
 
@@ -17,12 +17,12 @@ This article provides information about the changes in Firefox 81 that will aff
 
 - The [Debugger](/en-US/docs/Tools/Debugger) now uses the TypeScript icon for `.ts` and `.tsx` files ({{bug(1642769)}}). Previously a generic file icon was used.
 - We've added support for line wrapping in the [Debugger source pane](/en-US/docs/Tools/Debugger/UI_Tour#source_pane) ({{bug(1590885)}}).
-- We've removed unnecessary [color vision simulations](/en-US/docs/Tools/Accessibility_inspector/Simulation) (protanomaly, deuteranomaly, and tritanomaly) from the [Accessibility Inspector](/en-US/docs/Tools/Accessibility_inspector), and added a simulation for achromatopsia (no color) ({{bug(1655053)}}).
-- Autocompletion is now supported when adding a [class to an element](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#viewing_and_changing_classes_on_an_element). Offered classes are based on existing classes in the document ({{bug(1492797)}}).
+- We've removed unnecessary [color vision simulations](/en-US/docs/Tools/Accessibility_inspector/Simulation) (protanomaly, deuteranomaly, and tritanomaly) from the [Accessibility Inspector](/en-US/docs/Tools/Accessibility_inspector), and added a simulation for achromatopsia (no color) ({{bug(1655053)}}).
+- Autocompletion is now supported when adding a [class to an element](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#viewing_and_changing_classes_on_an_element). Offered classes are based on existing classes in the document ({{bug(1492797)}}).
 
 ### HTML
 
-- Automatic downloads are now blocked in a sandboxed [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) element ({{bug(1558394)}}).
+- Automatic downloads are now blocked in a sandboxed [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) element ({{bug(1558394)}}).
 
 #### Removals
 
@@ -30,8 +30,8 @@ This article provides information about the changes in Firefox 81 that will aff
 
 ### CSS
 
-- We now support the value of `clip` for the {{CSSxRef("overflow")}} property, via renaming `overflow: -moz-hidden-unscrollable` ({{bug(1531609)}}).
-- The {{CSSxRef("text-combine-upright")}} property has been made non-animatable to comply with the spec ({{bug(1654195)}}).
+- We now support the value of `clip` for the {{CSSxRef("overflow")}} property, via renaming `overflow: -moz-hidden-unscrollable` ({{bug(1531609)}}).
+- The {{CSSxRef("text-combine-upright")}} property has been made non-animatable to comply with the spec ({{bug(1654195)}}).
 
 #### Removals
 
@@ -44,17 +44,17 @@ _No changes._
 ### HTTP
 
 - Firefox now accepts non-standard [`Content-Disposition`](/en-US/docs/Web/HTTP/Headers/Content-Disposition) headers with a unquoted filename containing spaces ({{bug(1440677)}}).
-- Firefox now supports the HTTP [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy) header's [`web-share`](/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share) directive, which can be used to restrict access to the [Web Share API](/en-US/docs/Web/API/Navigator/share) to trusted origins. Note that Firefox does not support the Web Share API itself, at time of writing ({{bug(1653199)}}).
+- Firefox now supports the HTTP [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy) header's [`web-share`](/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share) directive, which can be used to restrict access to the [Web Share API](/en-US/docs/Web/API/Navigator/share) to trusted origins. Note that Firefox does not support the Web Share API itself, at time of writing ({{bug(1653199)}}).
 
 ### APIs
 
 #### Gamepad
 
-- The threshold for gamepad joystick activation has been increased. This reduces the chance of inadvertent gamepad activation, both from controllers that send small axis values when they are idle, and very small bumps. ({{bug(1539178)}})
+- The threshold for gamepad joystick activation has been increased. This reduces the chance of inadvertent gamepad activation, both from controllers that send small axis values when they are idle, and very small bumps. ({{bug(1539178)}})
 
 #### Workers/Service workers
 
-- Strict MIME type checks are now enforced on worker and shared worker scripts, i.e. scripts targeted by the {{domxref("Worker.Worker()", "Worker()")}} and {{domxref("SharedWorker.SharedWorker()", "SharedWorker()")}} constructors must now be served with `text/javascript` ({{bug(1569123)}}).
+- Strict MIME type checks are now enforced on worker and shared worker scripts, i.e. scripts targeted by the {{domxref("Worker.Worker()", "Worker()")}} and {{domxref("SharedWorker.SharedWorker()", "SharedWorker()")}} constructors must now be served with `text/javascript` ({{bug(1569123)}}).
 
 ### WebDriver conformance (Marionette)
 

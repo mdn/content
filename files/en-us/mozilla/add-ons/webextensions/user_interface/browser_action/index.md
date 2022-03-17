@@ -27,7 +27,7 @@ You define the browser action's properties using the [`browser_action`](/en-US/d
 
 The only mandatory key is `default_icon`.
 
-There are two ways to specify a browser action: with or without a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups). If you don't specify a popup, when the user clicks the button an event is dispatched to the extension, which the extension listens for using [`browserAction.onClicked`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked "Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."):
+There are two ways to specify a browser action: with or without a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups). If you don't specify a popup, when the user clicks the button an event is dispatched to the extension, which the extension listens for using [`browserAction.onClicked`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked):
 
 ```js
 browser.browserAction.onClicked.addListener(handleClick);

@@ -10,49 +10,61 @@ browser-compat: api.Window.deviceorientation_event
 ---
 {{APIRef}}
 
-The `deviceorientation` event is fired when fresh data is available from an orientation sensor about the current orientation of the device as compared to the Earth coordinate frame. This data is gathered from a magnetometer inside the device.
+The **`deviceorientation`** event is fired when fresh data is available from an orientation sensor about the current orientation of the device as compared to the Earth coordinate frame. This data is gathered from a magnetometer inside the device.
 
 See [Orientation and motion data explained](/en-US/docs/Web/Events/Orientation_and_motion_data_explained) for details.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("DeviceOrientationEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("window.ondeviceorientation")}}</td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('deviceorientation', event => { });
+
+ondeviceorientation = event => { };
+```
+
+## Event type
+
+An {{domxref("DeviceOrientationEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("DeviceOrientationEvent")}}
+
+## Event properties
+
+- {{domxref("DeviceOrientationEvent.absolute")}} {{readonlyinline}}
+  - : A boolean that indicates whether the device is providing orientation data absolutely.
+- {{domxref("DeviceOrientationEvent.alpha")}} {{readonlyinline}}
+  - : A number representing the motion of the device around the z axis, express in degrees with values ranging from 0 (inclusive) to 360 (exclusive).
+- {{domxref("DeviceOrientationEvent.beta")}} {{readonlyinline}}
+  - : A number representing the motion of the device around the x axis, expressed in degrees with values ranging from -180 (inclusive) to 180 (exclusive). This represents the front to back motion of the device.
+- {{domxref("DeviceOrientationEvent.gamma")}} {{readonlyinline}}
+  - : A number representing the motion of the device around the y axis, expressed in degrees with values ranging from -90 (inclusive) to 90 (exclusive). This represents the left to right motion of the device.
+- `DeviceOrientationEvent.webkitCompassHeading` {{Non-Standard_Inline}} {{readonlyinline}}
+  - : A number represents the difference between the motion of the device around the z axis of the world system and the direction of the north, expressed in degrees with values ranging from 0 to 360.
+- `DeviceOrientationEvent.webkitCompassAccuracy` {{Non-Standard_Inline}} {{readonlyinline}}
+  - : The accuracy of the compass given as a positive or negative deviation. It's usually 10.
 
 ## Examples
 
 ```js
 if (window.DeviceOrientationEvent) {
-    window.addEventListener("deviceorientation", function(event) {
-        // alpha: rotation around z-axis
-        var rotateDegrees = event.alpha;
-        // gamma: left to right
-        var leftToRight = event.gamma;
-        // beta: front back motion
-        var frontToBack = event.beta;
+    window.addEventListener("deviceorientation", function(event) {
+        // alpha: rotation around z-axis
+        var rotateDegrees = event.alpha;
+        // gamma: left to right
+        var leftToRight = event.gamma;
+        // beta: front back motion
+        var frontToBack = event.beta;
 
-        handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
-    }, true);
+        handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
+    }, true);
 }
 
 var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
-    // do something amazing
+    // do something amazing
 };
 ```
 

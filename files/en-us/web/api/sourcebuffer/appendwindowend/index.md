@@ -14,12 +14,12 @@ tags:
   - appendWindowEnd
 browser-compat: api.SourceBuffer.appendWindowEnd
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{draft}}
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 The **`appendWindowEnd`** property of the
 {{domxref("SourceBuffer")}} interface controls the timestamp for the end of the [append window](https://w3c.github.io/media-source/#append-window), a
 timestamp range that can be used to filter what media data is appended to the
-`SourceBuffer`. Coded media frames with timestamps wthin this range will be
+`SourceBuffer`. Coded media frames with timestamps within this range will be
 appended, whereas those outside the range will be filtered out.
 
 The default value of `appendWindowEnd` is positive infinity.

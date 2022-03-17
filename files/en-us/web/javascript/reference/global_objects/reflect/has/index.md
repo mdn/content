@@ -87,7 +87,7 @@ Reflect.has(c, 'foo') // true
 
 ## See also
 
-- A polyfill of `Reflect.has` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [Polyfill of `Reflect.has` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
 - [`in`
   operator](/en-US/docs/Web/JavaScript/Reference/Operators/in)

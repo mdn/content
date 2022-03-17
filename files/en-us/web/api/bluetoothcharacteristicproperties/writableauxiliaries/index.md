@@ -13,7 +13,7 @@ tags:
   - writableAuxiliaries
 browser-compat: api.BluetoothCharacteristicProperties.writableAuxiliaries
 ---
-{{draft}}{{securecontext_header}}{{APIRef("Bluetooth API")}}
+{{securecontext_header}}{{APIRef("Bluetooth API")}}
 
 The **`writableAuxiliaries`** read-only
 property of the {{domxref("BluetoothCharacteristicProperties")}} interface returns a

@@ -66,9 +66,9 @@ array.
 
 `callbackFn` is invoked with three arguments:
 
-1.  the value of the element
-2.  the index of the element
-3.  the typed array object being traversed
+1. the value of the element
+2. the index of the element
+3. the typed array object being traversed
 
 If a `thisArg` parameter is provided to `filter()`, it
 will be passed to `callbackFn` when invoked, for use as its
@@ -122,7 +122,7 @@ new Uint8Array([12, 5, 8, 130, 44]).filter(elem => elem >= 10);
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.filter` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.filter` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray.prototype.every()")}}
 - {{jsxref("TypedArray.prototype.some()")}}
 - {{jsxref("Array.prototype.filter()")}}

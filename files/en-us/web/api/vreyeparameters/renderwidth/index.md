@@ -3,7 +3,6 @@ title: VREyeParameters.renderWidth
 slug: Web/API/VREyeParameters/renderWidth
 tags:
   - API
-  - Experimental
   - Deprecated
   - Property
   - Reference
@@ -22,13 +21,7 @@ The **`renderWidth`** read-only property of the {{domxref("VREyeParameters")}} i
 
 This is already in device pixel units, so there's no need to multiply by [Window.devicePixelRatio](/en-US/docs/Web/API/Window/devicePixelRatio) before setting to [HTMLCanvasElement.width.](/en-US/docs/Web/API/HTMLCanvasElement/width)
 
-## Syntax
-
-```js
-var myRenderWidth = eyeParametersInstance.renderWidth;
-```
-
-### Value
+## Value
 
 A number, representing the width in pixels.
 

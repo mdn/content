@@ -22,9 +22,9 @@ The {{domxref("ImageData")}} object represents the underlying pixel data of an a
 - `data`
   - : A {{jsxref("Uint8ClampedArray")}} representing a one-dimensional array containing the data in the RGBA order, with integer values between `0` and `255` (included).
 
-The `data` property returns a {{jsxref("Uint8ClampedArray")}} which can be accessed to look at the raw pixel data; each pixel is represented by four one-byte values (red, green, blue, and alpha, in that order; that is, "RGBA" format). Each color component is represented by an integer between 0 and 255. Each component is assigned a consecutive index within the array, with the top left pixel's red component being at index 0 within the array. Pixels then proceed from left to right, then downward, throughout the array.
+The `data` property returns a {{jsxref("Uint8ClampedArray")}} which can be accessed to look at the raw pixel data; each pixel is represented by four one-byte values (red, green, blue, and alpha, in that order; that is, "RGBA" format). Each color component is represented by an integer between 0 and 255. Each component is assigned a consecutive index within the array, with the top left pixel's red component being at index 0 within the array. Pixels then proceed from left to right, then downward, throughout the array.
 
-The {{jsxref("Uint8ClampedArray")}} contains `height` × `width` × 4 bytes of data, with index values ranging from 0 to (`height`×`width`×4)-1.
+The {{jsxref("Uint8ClampedArray")}} contains `height` × `width` × 4 bytes of data, with index values ranging from 0 to (`height`×`width`×4)-1.
 
 For example, to read the blue component's value from the pixel at column 200, row 50 in the image, you would do the following:
 
@@ -57,7 +57,7 @@ var blueForCoord = imageData.data[blueIndex];
 var alphaForCoord = imageData.data[alphaIndex];
 ```
 
-Or, if ES2015 is appropriate:
+Or, if ES2015 is appropriate:
 
 ```js
 const xCoord = 50;
@@ -121,30 +121,30 @@ img.src = './assets/rhino.jpg';
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 img.onload = function() {
-  ctx.drawImage(img, 0, 0);
-  img.style.display = 'none';
+  ctx.drawImage(img, 0, 0);
+  img.style.display = 'none';
 };
 var hoveredColor = document.getElementById('hovered-color');
 var selectedColor = document.getElementById('selected-color');
 
 function pick(event, destination) {
-  var x = event.layerX;
-  var y = event.layerY;
-  var pixel = ctx.getImageData(x, y, 1, 1);
-  var data = pixel.data;
+  var x = event.layerX;
+  var y = event.layerY;
+  var pixel = ctx.getImageData(x, y, 1, 1);
+  var data = pixel.data;
 
-    const rgba = `rgba(${data[0]}, ${data[1]}, ${data[2]}, ${data[3] / 255})`;
-    destination.style.background = rgba;
-    destination.textContent = rgba;
+    const rgba = `rgba(${data[0]}, ${data[1]}, ${data[2]}, ${data[3] / 255})`;
+    destination.style.background = rgba;
+    destination.textContent = rgba;
 
-    return rgba;
+    return rgba;
 }
 
 canvas.addEventListener('mousemove', function(event) {
-    pick(event, hoveredColor);
+    pick(event, hoveredColor);
 });
 canvas.addEventListener('click', function(event) {
-    pick(event, selectedColor);
+    pick(event, selectedColor);
 });
 ```
 
@@ -183,50 +183,50 @@ var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 img.onload = function() {
-    ctx.drawImage(img, 0, 0);
+    ctx.drawImage(img, 0, 0);
 };
 
 var original = function() {
-    ctx.drawImage(img, 0, 0);
+    ctx.drawImage(img, 0, 0);
 };
 
 var invert = function() {
-    ctx.drawImage(img, 0, 0);
-    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    const data = imageData.data;
-    for (var i = 0; i < data.length; i += 4) {
-        data[i]     = 255 - data[i];     // red
-        data[i + 1] = 255 - data[i + 1]; // green
-        data[i + 2] = 255 - data[i + 2]; // blue
-    }
-    ctx.putImageData(imageData, 0, 0);
+    ctx.drawImage(img, 0, 0);
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    const data = imageData.data;
+    for (var i = 0; i < data.length; i += 4) {
+        data[i]     = 255 - data[i];     // red
+        data[i + 1] = 255 - data[i + 1]; // green
+        data[i + 2] = 255 - data[i + 2]; // blue
+    }
+    ctx.putImageData(imageData, 0, 0);
 };
 
 var grayscale = function() {
-    ctx.drawImage(img, 0, 0);
-    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    const data = imageData.data;
-    for (var i = 0; i < data.length; i += 4) {
-        var avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
-        data[i]     = avg; // red
-        data[i + 1] = avg; // green
-        data[i + 2] = avg; // blue
-    }
-    ctx.putImageData(imageData, 0, 0);
+    ctx.drawImage(img, 0, 0);
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    const data = imageData.data;
+    for (var i = 0; i < data.length; i += 4) {
+        var avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
+        data[i]     = avg; // red
+        data[i + 1] = avg; // green
+        data[i + 2] = avg; // blue
+    }
+    ctx.putImageData(imageData, 0, 0);
 };
 
 const inputs = document.querySelectorAll('[name=color]');
 for (const input of inputs) {
-    input.addEventListener("change", function(evt) {
-        switch (evt.target.value) {
-            case "inverted":
-                return invert();
-            case "grayscale":
-                return grayscale();
-            default:
-                return original();
-        }
-    });
+    input.addEventListener("change", function(evt) {
+        switch (evt.target.value) {
+            case "inverted":
+                return invert();
+            case "grayscale":
+                return grayscale();
+            default:
+                return original();
+        }
+    });
 }
 ```
 
@@ -238,14 +238,14 @@ Also see the source code — [HTML](https://github.com/mdn/dom-examples/blob/mas
 
 ## Zooming and anti-aliasing
 
-With the help of the {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} method, a second canvas and the {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} property, we are able to zoom into our picture and see the details. A third canvas without {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} is also drawn onto to be able to have a side by side comparison
+With the help of the {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} method, a second canvas and the {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} property, we are able to zoom into our picture and see the details. A third canvas without {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} is also drawn onto to be able to have a side by side comparison
 
 We get the position of the mouse and crop an image of 5 pixels left and above to 5 pixels right and below. Then we copy that one over to another canvas and resize the image to the size we want it to. In the zoom canvas we resize a 10×10 pixel crop of the original canvas to 200×200.
 
 ```js
 zoomctx.drawImage(canvas,
                   Math.min(Math.max(0, x - 5), img.width - 10),
-                  Math.min(Math.max(0, y - 5), img.height - 10),
+                  Math.min(Math.max(0, y - 5), img.height - 10),
                   10, 10, 0, 0, 200, 200);
 ```
 
@@ -256,41 +256,41 @@ var img = new Image();
 img.crossOrigin = 'anonymous';
 img.src = './assets/rhino.jpg';
 img.onload = function() {
-  draw(this);
+  draw(this);
 };
 
 function draw(img) {
-  var canvas = document.getElementById('canvas');
-  var ctx = canvas.getContext('2d');
-  ctx.drawImage(img, 0, 0);
+  var canvas = document.getElementById('canvas');
+  var ctx = canvas.getContext('2d');
+  ctx.drawImage(img, 0, 0);
 
-  var smoothedZoomCtx = document.getElementById('smoothed-zoom').getContext('2d');
-  smoothedZoomCtx.imageSmoothingEnabled = true;
-  smoothedZoomCtx.mozImageSmoothingEnabled = true;
-  smoothedZoomCtx.webkitImageSmoothingEnabled = true;
-  smoothedZoomCtx.msImageSmoothingEnabled = true;
+  var smoothedZoomCtx = document.getElementById('smoothed-zoom').getContext('2d');
+  smoothedZoomCtx.imageSmoothingEnabled = true;
+  smoothedZoomCtx.mozImageSmoothingEnabled = true;
+  smoothedZoomCtx.webkitImageSmoothingEnabled = true;
+  smoothedZoomCtx.msImageSmoothingEnabled = true;
 
-  var pixelatedZoomCtx = document.getElementById('pixelated-zoom').getContext('2d');
-  pixelatedZoomCtx.imageSmoothingEnabled = false;
+  var pixelatedZoomCtx = document.getElementById('pixelated-zoom').getContext('2d');
+  pixelatedZoomCtx.imageSmoothingEnabled = false;
   pixelatedZoomCtx.mozImageSmoothingEnabled = false;
   pixelatedZoomCtx.webkitImageSmoothingEnabled = false;
   pixelatedZoomCtx.msImageSmoothingEnabled = false;
 
-  var zoom = function(ctx, x, y) {
-    ctx.drawImage(canvas,
-        Math.min(Math.max(0, x - 5), img.width - 10),
-        Math.min(Math.max(0, y - 5), img.height - 10),
-        10, 10,
-        0, 0,
-        200, 200);
-  };
+  var zoom = function(ctx, x, y) {
+    ctx.drawImage(canvas,
+        Math.min(Math.max(0, x - 5), img.width - 10),
+        Math.min(Math.max(0, y - 5), img.height - 10),
+        10, 10,
+        0, 0,
+        200, 200);
+  };
 
-  canvas.addEventListener('mousemove', function(event) {
-    const x = event.layerX;
-    const y = event.layerY;
-    zoom(smoothedZoomCtx, x, y);
-    zoom(pixelatedZoomCtx, x, y);
-  });
+  canvas.addEventListener('mousemove', function(event) {
+    const x = event.layerX;
+    const y = event.layerY;
+    zoom(smoothedZoomCtx, x, y);
+    zoom(pixelatedZoomCtx, x, y);
+  });
 }
 ```
 

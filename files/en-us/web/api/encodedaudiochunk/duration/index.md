@@ -40,5 +40,3 @@ console.log(chunk.duration); //2000000
 ## Browser compatibility
 
 {{Compat}}
-
-

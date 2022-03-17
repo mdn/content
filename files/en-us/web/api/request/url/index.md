@@ -3,7 +3,6 @@ title: Request.url
 slug: Web/API/Request/url
 tags:
   - API
-  - Experimental
   - Fetch
   - Property
   - Reference

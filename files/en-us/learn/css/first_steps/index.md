@@ -26,15 +26,15 @@ CSS (Cascading Style Sheets) is used to style and lay out web pages — for exam
 
 Before starting this module, you should have:
 
-1.  Basic familiarity with using computers, and using the Web passively (i.e. looking at it, consuming the content.)
-2.  A basic work environment set up as detailed in [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software), and an understanding of how to create and manage files, as detailed in [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
-3.  Basic familiarity with HTML, as discussed in the [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) module.
+1. Basic familiarity with using computers, and using the Web passively (i.e. looking at it, consuming the content.)
+2. A basic work environment set up as detailed in [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software), and an understanding of how to create and manage files, as detailed in [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
+3. Basic familiarity with HTML, as discussed in the [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) module.
 
 > **Note:** If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 
 ## Guides
 
-This module contains the following articles, which will take you through all the basic theory of CSS, and provide opportunities for you to test out some skills.
+This module contains the following articles, which will take you through all the basic theory of CSS, and provide opportunities for you to test out some skills.
 
 - [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
   - : **{{Glossary("CSS")}}** (Cascading Style Sheets) allows you to create great-looking web pages, but how does it work under the hood? This article explains what CSS is, with a simple syntax example, and also covers some key terms about the language.

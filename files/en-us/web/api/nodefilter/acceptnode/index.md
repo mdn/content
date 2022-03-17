@@ -36,23 +36,31 @@ must be accepted or not by the {{ domxref("NodeIterator") }} or {{ domxref("Tree
     <tr>
       <td><code>NodeFilter.FILTER_REJECT</code></td>
       <td>
-        Value to be returned by the
-        {{ domxref("NodeFilter.acceptNode()") }} method when a node
-        should be rejected. The children of rejected nodes are not visited by
-        the {{ domxref("NodeIterator") }} or
-        {{ domxref("TreeWalker") }} object; this value is treated as
-        "skip this node and all its children".
+          <p>
+            Value to be returned by the
+            {{domxref("NodeFilter.acceptNode()")}} method when a
+            node should be rejected. For {{domxref("TreeWalker")}}, child
+            nodes are also rejected.
+          </p>
+          <p>
+            For {{ domxref("NodeIterator") }}, this flag is synonymous
+            with <code>FILTER_SKIP</code>.
+          </p>
       </td>
     </tr>
     <tr>
       <td><code>NodeFilter.FILTER_SKIP</code></td>
       <td>
-        Value to be returned by
-        {{ domxref("NodeFilter.acceptNode()") }} for nodes to be
-        skipped by the {{ domxref("NodeIterator") }} or
-        {{ domxref("TreeWalker") }} object. The children of skipped
-        nodes are still considered. This is treated as "skip this node but not
-        its children".
+          <p>
+            Value to be returned by
+            {{domxref("NodeFilter.acceptNode()")}} for nodes to be
+            skipped by the {{domxref("NodeIterator")}} or
+            {{domxref("TreeWalker")}} object.
+          </p>
+          <p>
+            The children of skipped nodes are still considered. This is treated as
+            "skip this node but not its children".
+          </p>
       </td>
     </tr>
   </tbody>

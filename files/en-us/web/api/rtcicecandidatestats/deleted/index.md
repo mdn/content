@@ -36,7 +36,7 @@ meaning varies depending on the type of candidate:
     {{RFC(5245, "8.3")}}.
 - Host candidate
   - : A value of `true` indicates that the candidate's network resources have
-    been released. This generally mean sthat any associated socket(s) have been closed and
+    been released. This generally mean that any associated socket(s) have been closed and
     released.
 - Remote (TURN) candidate
   - : A value of `true` means the candidate's {{Glossary("TURN")}} allocation
@@ -61,7 +61,7 @@ window.setInterval(function() {
         statsOutput += `<h2>Report: ${report.type}</h3>\n<strong>ID:</strong> ${report.id}<br>\n` +
                        `<strong>Timestamp:</strong> ${report.timestamp}<br>\n`;
 
-        // Now the statistics for this report; we intentially drop the ones we
+        // Now the statistics for this report; we intentionally drop the ones we
         // sorted to the top above
 
         Object.keys(report).forEach(statName => {

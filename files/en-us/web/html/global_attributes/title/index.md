@@ -49,7 +49,7 @@ If this attribute is set to the empty string, it means its ancestors' `title`s a
 
 ```html
 <div title="CoolTip">
-  <p>Hovering here will show “CoolTip”.</p>
+  <p>Hovering here will show "CoolTip".</p>
   <p title="">Hovering here will show nothing.</p>
 </div>
 ```

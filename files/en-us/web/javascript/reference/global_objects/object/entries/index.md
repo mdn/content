@@ -55,7 +55,7 @@ same as that given by looping over the property values of the object manually.
 To add compatible `Object.entries()` support in older environments that do
 not natively support it, you can use any of the following:
 
-- a demonstration implementation of `Object.entries` in the [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) (if
+- a demonstration implementation of `Object.entries` in the [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) (if
   you don't need any support for IE);
 - a polyfill in the [es-shims/Object.entries](https://github.com/es-shims/Object.entries)
   repositories;
@@ -63,14 +63,14 @@ not natively support it, you can use any of the following:
 
 ```js
 if (!Object.entries) {
-  Object.entries = function( obj ){
+  Object.entries = function( obj ){
     var ownProps = Object.keys( obj ),
-        i = ownProps.length,
+        i = ownProps.length,
         resArray = new Array(i); // preallocate the Array
-    while (i--)
-      resArray[i] = [ownProps[i], obj[ownProps[i]]];
+    while (i--)
+      resArray[i] = [ownProps[i], obj[ownProps[i]]];
 
-    return resArray;
+    return resArray;
   };
 }
 ```
@@ -148,7 +148,7 @@ Object.entries(obj).forEach(([key, value]) => console.log(`${key}: ${value}`)); 
 
 ## See also
 
-- A polyfill of `Object.entries` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Polyfill of `Object.entries` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - [Enumerability
   and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}

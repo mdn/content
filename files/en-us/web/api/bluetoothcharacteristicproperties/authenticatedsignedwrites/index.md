@@ -13,9 +13,9 @@ tags:
   - authenticatedSignedWrites
 browser-compat: api.BluetoothCharacteristicProperties.authenticatedSignedWrites
 ---
-{{draft}}{{securecontext_header}}{{APIRef("Bluetooth API")}}
+{{securecontext_header}}{{APIRef("Bluetooth API")}}
 
-The **`authenticatedSignedWrites`** read-only
+The **`authenticatedSignedWrites`** read-only
 property of the {{domxref("BluetoothCharacteristicProperties")}} interface returns a
 `boolean` that is `true` if signed writing to the characteristic
 value is permitted.

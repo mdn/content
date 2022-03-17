@@ -13,7 +13,7 @@ browser-compat: api.XRDepthInformation
 ---
 {{APIRef("WebXR Device API")}} {{secureContext_header}}
 
-The **`XRDepthInformation`** interface contains information about the distance from the user’s device to the real-world geometry in the user’s environment.
+The **`XRDepthInformation`** interface contains information about the distance from the user's device to the real-world geometry in the user's environment.
 
 This interface is the parent of:
 
@@ -29,7 +29,7 @@ You will usually interact with these child interfaces. However, `XRDepthInformat
 - {{domxref("XRDepthInformation.height")}} {{ReadOnlyInline}}
   - : Contains the height of the depth buffer (number of rows).
 - {{domxref("XRDepthInformation.normDepthBufferFromNormView")}} {{ReadOnlyInline}}
-  - : An {{domxref("XRRigidTransform")}} that needs to be applied when indexing into the depth buffer. The transformation that the matrix represents changes the coordinate system from normalized view coordinates to normalized depth-buffer coordinates that can then be scaled by depth buffer’s `width` and `height` to obtain the absolute depth-buffer coordinates.
+  - : An {{domxref("XRRigidTransform")}} that needs to be applied when indexing into the depth buffer. The transformation that the matrix represents changes the coordinate system from normalized view coordinates to normalized depth-buffer coordinates that can then be scaled by depth buffer's `width` and `height` to obtain the absolute depth-buffer coordinates.
 - {{domxref("XRDepthInformation.rawValueToMeters")}} {{ReadOnlyInline}}
   - : Contains the scale factor by which the raw depth values must be multiplied in order to get the depths in meters.
 - {{domxref("XRDepthInformation.width")}} {{ReadOnlyInline}}

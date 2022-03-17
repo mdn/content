@@ -23,7 +23,6 @@ Learn how to create add-ons for [Firefox](https://www.mozilla.org/firefox/), how
 - Developer release notes
   - : [Developer-focused release notes](/en-US/docs/Mozilla/Firefox/Releases); learn what new capabilities for both Web sites and add-ons arrive in each version of Firefox.
 
-
 ## Firefox channels
 
 Firefox is available in five **channels**.

@@ -103,24 +103,26 @@ here is the rest of the paragraph.</p>
 
 The presence of the `del` element is not announced by most screen reading technology in its default configuration. It can be made to be announced by using the CSS {{cssxref("content")}} property, along with the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements.
 
-    del::before,
-    del::after {
-      clip-path: inset(100%);
-      clip: rect(1px, 1px, 1px, 1px);
-      height: 1px;
-      overflow: hidden;
-      position: absolute;
-      white-space: nowrap;
-      width: 1px;
-    }
+```css
+del::before,
+del::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
 
-    del::before {
-      content: " [deletion start] ";
-    }
+del::before {
+  content: " [deletion start] ";
+}
 
-    del::after {
-      content: " [deletion end] ";
-    }
+del::after {
+  content: " [deletion end] ";
+}
+```
 
 Some people who use screen readers deliberately disable announcing content that creates extra verbosity. Because of this, it is important to not abuse this technique and only apply it in situations where not knowing content has been deleted would adversely affect understanding.
 

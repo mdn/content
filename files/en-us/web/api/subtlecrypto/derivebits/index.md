@@ -17,7 +17,7 @@ The **`deriveBits()`** method of the
 key.
 
 It takes as its arguments the base key, the derivation algorithm to use, and the length
-of the bit string to derive. It returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.")
+of the bit string to derive. It returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 which will be fulfilled with an
 [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
 containing the derived bits.
@@ -38,15 +38,15 @@ algorithms](/en-US/docs/Web/API/SubtleCrypto/deriveKey#supported_algorithms) for
 
 ```js
 const result = crypto.subtle.deriveBits(
-    algorithm,
-    baseKey,
-    length
+    algorithm,
+    baseKey,
+    length
 );
 ```
 
 ### Parameters
 
-- `algorithm` is an object defining the [derivation
+- `algorithm` is an object defining the [derivation
   algorithm](/en-US/docs/Web/API/SubtleCrypto/deriveKey#supported_algorithms) to use.
 
   - To use [ECDH](/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh), pass
@@ -54,9 +54,9 @@ const result = crypto.subtle.deriveBits(
     [`EcdhKeyDeriveParams`](/en-US/docs/Web/API/EcdhKeyDeriveParams)
     object.
   - To use [HKDF](/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf), pass
-    an [`HkdfParams`](/en-US/docs/Web/API/HkdfParams) object.
+    an [`HkdfParams`](/en-US/docs/Web/API/HkdfParams) object.
   - To use [PBKDF2](/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2),
-    pass a [`Pbkdf2Params`](/en-US/docs/Web/API/Pbkdf2Params)
+    pass a [`Pbkdf2Params`](/en-US/docs/Web/API/Pbkdf2Params)
     object.
 
 - _`baseKey`_ is a {{domxref("CryptoKey")}} representing the input
@@ -69,8 +69,8 @@ const result = crypto.subtle.deriveBits(
 
 ### Return value
 
-- `result` is a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.")
-  that fulfills with an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer "The ArrayBuffer object is used to represent a generic, fixed-length raw binary data buffer. You cannot directly manipulate the contents of an ArrayBuffer; instead, you create one of the typed array objects or a DataView object which represents the buffer in a specific format, and use that to read and write the contents of the buffer.")
+- `result` is a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+  that fulfills with an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
   containing the derived bits.
 
 ### Exceptions

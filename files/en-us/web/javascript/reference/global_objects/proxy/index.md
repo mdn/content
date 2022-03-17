@@ -14,7 +14,9 @@ The `Proxy` object enables you to create a proxy for another object, which can i
 
 ## Description
 
-A `Proxy` is created with two parameters:
+The `Proxy` object allows you to create an object that can be used in place of the original object, but which may redefine fundamental `Object` operations like getting, setting, and defining properties. Proxy objects are commonly used to log property accesses, validate, format, or sanitize inputs, and so on.
+
+You create a `Proxy` with two parameters:
 
 - `target`: the original object which you want to proxy
 - `handler`: an object that defines which operations will be intercepted and how to redefine intercepted operations.
@@ -39,7 +41,7 @@ console.log(proxy1.message1); // hello
 console.log(proxy1.message2); // everyone
 ```
 
-To customise the proxy, we define functions on the handler object:
+To customize the proxy, we define functions on the handler object:
 
 ```js
 const target = {
@@ -48,7 +50,7 @@ const target = {
 };
 
 const handler2 = {
-  get: function(target, prop, receiver) {
+  get(target, prop, receiver) {
     return "world";
   }
 };
@@ -74,7 +76,7 @@ const target = {
 };
 
 const handler3 = {
-  get: function (target, prop, receiver) {
+  get(target, prop, receiver) {
     if (prop === "message2") {
       return "world";
     }
@@ -106,7 +108,7 @@ In this simple example, the number `37` gets returned as the default value when 
 
 ```js
 const handler = {
-  get: function(obj, prop) {
+  get(obj, prop) {
     return prop in obj ?
       obj[prop] :
       37;
@@ -148,7 +150,7 @@ With a `Proxy`, you can easily validate the passed value for an object. This exa
 
 ```js
 let validator = {
-  set: function(obj, prop, value) {
+  set(obj, prop, value) {
     if (prop === 'age') {
       if (!Number.isInteger(value)) {
         throw new TypeError('The age is not an integer');
@@ -214,14 +216,18 @@ console.log(Peter.age);     // 13
 
 ### Manipulating DOM nodes
 
-Sometimes you want to toggle the attribute or class name of two different elements. Here's how using the {{jsxref("Global_Objects/Proxy/Proxy/set", "set()")}} handler.
+In this example we use `Proxy` to toggle an attribute of two different elements: so when we set the attribute on one element, the attribute is unset on the other one.
+
+We create a `view` object which is a proxy for an object with a `selected` property. The proxy handler defines the {{jsxref("Proxy/Proxy/set", "set()")}} handler.
+
+When we assign an HTML element to `view.selected`, the element's `'aria-selected'` attribute is set to `true`. If we then assign a different element to `view.selected`, this element's `'aria-selected'` attribute is set to `true` and the previous element's `'aria-selected'` attribute is automatically set to `false`.
 
 ```js
-let view = new Proxy({
+const view = new Proxy({
   selected: null
 },
 {
-  set: function(obj, prop, newval) {
+  set(obj, prop, newval) {
     let oldval = obj[prop];
 
     if (prop === 'selected') {
@@ -241,17 +247,23 @@ let view = new Proxy({
   }
 });
 
-let i1 = view.selected = document.getElementById('item-1');  //giving error here, i1 is null
-console.log(i1.getAttribute('aria-selected'));
-//  'true'
+const item1 = document.getElementById('item-1');
+const item2 = document.getElementById('item-2');
 
-let i2 = view.selected = document.getElementById('item-2');
-console.log(i1.getAttribute('aria-selected'));
-//  'false'
+// select item1:
+view.selected = item1;
 
-console.log(i2.getAttribute('aria-selected'));
-//  'true'
-Note: even if selected: !null, then giving oldval.setAttribute is not a function
+console.log(`item1: ${item1.getAttribute('aria-selected')}`);
+// item1: true
+
+// selecting item2 de-selects item1:
+view.selected = item2;
+
+console.log(`item1: ${item1.getAttribute('aria-selected')}`);
+// item1: false
+
+console.log(`item2: ${item2.getAttribute('aria-selected')}`);
+// item2: true
 ```
 
 ### Value correction and an extra property
@@ -263,7 +275,7 @@ let products = new Proxy({
   browsers: ['Internet Explorer', 'Netscape']
 },
 {
-  get: function(obj, prop) {
+  get(obj, prop) {
     // An extra property
     if (prop === 'latestBrowser') {
       return obj.browsers[obj.browsers.length - 1];
@@ -272,7 +284,7 @@ let products = new Proxy({
     // The default behavior to return the value
     return obj[prop];
   },
-  set: function(obj, prop, value) {
+  set(obj, prop, value) {
     // An extra property
     if (prop === 'latestBrowser') {
       obj.browsers.push(value);
@@ -321,7 +333,7 @@ let products = new Proxy([
   { name: 'Thunderbird', type: 'mailer' }
 ],
 {
-  get: function(obj, prop) {
+  get(obj, prop) {
     // The default behavior to return the value; prop is usually an integer
     if (prop in obj) {
       return obj[prop];
@@ -383,7 +395,7 @@ Now in order to create a complete sample `traps` list, for didactic purposes, we
 */
 
 var docCookies = new Proxy(docCookies, {
-  get: function (oTarget, sKey) {
+  get (oTarget, sKey) {
     return oTarget[sKey] || oTarget.getItem(sKey) || undefined;
   },
   set: function (oTarget, sKey, vValue) {

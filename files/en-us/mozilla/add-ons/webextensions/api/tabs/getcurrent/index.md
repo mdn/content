@@ -15,7 +15,7 @@ browser-compat: webextensions.api.tabs.getCurrent
 ---
 {{AddonSidebar()}}
 
-Get a {{WebExtAPIRef("tabs.Tab")}} containing information about the tab that this script is running in.
+Get a {{WebExtAPIRef("tabs.Tab")}} containing information about the tab that this script is running in.
 
 > **Note:** This function is only useful in contexts where there is a browser tab, such as an [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages).
 >

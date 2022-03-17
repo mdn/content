@@ -23,8 +23,8 @@ You can access `CacheStorage` through the global
 {{domxref("caches")}} property.
 
 > **Note:** If the specified {{domxref("Cache")}} does not exist, a new
-> cache is created with that `cacheName` and a {{jsxref("Promise")}} that
-> resolves to this new {{domxref("Cache")}} object is returned.
+> cache is created with that `cacheName` and a {{jsxref("Promise")}} that
+> resolves to this new {{domxref("Cache")}} object is returned.
 
 ## Syntax
 

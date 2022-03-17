@@ -5,13 +5,12 @@ tags:
   - API
   - AnimationEvent
   - CSSOM
-  - Experimental
   - Property
   - Reference
   - Web Animations
 browser-compat: api.AnimationEvent.elapsedTime
 ---
-{{SeeCompatTable}}{{ apiref("Web Animations API") }}
+{{APIRef("Web Animations API")}}
 
 The **`AnimationEvent.elapsedTime`** read-only property is a
 `float` giving the amount of time the animation has been running, in seconds,

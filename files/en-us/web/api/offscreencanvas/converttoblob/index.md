@@ -59,7 +59,6 @@ The promise may be rejected with the following exceptions:
 - `EncodingError` {{domxref("DOMException")}}
   - : The blob could not be created due to an encoding error.
 
-
 ## Examples
 
 ```js

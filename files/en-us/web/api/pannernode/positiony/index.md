@@ -14,7 +14,7 @@ browser-compat: api.PannerNode.positionY
 
 The **`positionY`** property of the {{ domxref("PannerNode")
     }} interface specifies the Y coordinate of the audio source's position in 3D Cartesian
-coordinates, corresponding to the *vertical* axis (top-bottom). The complete
+coordinates, corresponding to the *vertical* axis (top-bottom). The complete
 vector is defined by the position of the audio source, given as
 ({{domxref("PannerNode.positionX", "positionX")}}, {{domxref("PannerNode.positionY",
     "positionY")}}, {{domxref("PannerNode.positionZ", "positionZ")}}), and the orientation
@@ -50,7 +50,7 @@ source's position, in 3D Cartesian coordinates.
 
 ## Example
 
-The following example starts an oscillator and pans it above the listener after 1
+The following example starts an oscillator and pans it above the listener after 1
 second, below the listener after 2 seconds, and back to the center after 3 seconds. Note
 that in this case, the change will mainly affect the timbre of the oscillator, as it's a
 simple mono wave.

@@ -19,9 +19,9 @@ This article is a primer introducing each of the ways CSS color can be used in H
 
 The use of color is a fundamental form of human expression. Children experiment with color before they even have the manual dexterity to draw. Maybe that's why color is one of the first things people often want to experiment with when learning to develop websites. With [CSS](/en-US/docs/Web/CSS), there are lots of ways to add color to your [HTML](/en-US/docs/Web/HTML) [elements](/en-US/docs/Web/HTML/Element) to create just the look you want.
 
-We're going to touch on most of what you'll need to know when using color, including a {{anch("Things that can have color", "list of what you can color and what CSS properties are involved")}}, {{anch("How to describe a color", "how you describe colors")}}, and how to actually {{anch("Using color", "use colors both in stylesheets and in scripts")}}. We'll also take a look at how to {{anch("Letting the user picka color", "let the user pick a color")}}.
+We're going to touch on most of what you'll need to know when using color, including a [list of what you can color and what CSS properties are involved](#things_that_can_have_color), [how you describe colors](#how_to_describe_a_color), and how to actually [use colors both in stylesheets and in scripts](#using_color). We'll also take a look at how to [let the user pick a color](#letting_the_user_pick_a_color).
 
-Then we'll wrap things up with a brief discussion of how to {{anch("Using color wisely", "use color wisely")}}: how to select appropriate colors, keeping in mind the needs of people with differing visual capabilities.
+Then we'll wrap things up with a brief discussion of how to [use color wisely](#using_color_wisely): how to select appropriate colors, keeping in mind the needs of people with differing visual capabilities.
 
 ## Things that can have color
 
@@ -50,8 +50,8 @@ Whenever an element is rendered, these properties are used to determine the colo
 
 Every element is a box with some sort of content, and has a background and a border in addition to whatever contents the box may have.
 
-- {{anch("Borders")}}
-  - : See the section {{anch("Borders")}} for a list of the CSS properties you can use to set the colors of a box's borders.
+- [Borders](#borders)
+  - : See the section [Borders](#borders) for a list of the CSS properties you can use to set the colors of a box's borders.
 - {{cssxref("background-color")}}
   - : The background color to use in areas of the element that have no foreground content.
 - {{cssxref("column-rule-color")}}
@@ -145,9 +145,9 @@ The saturation (S) component of the color specifies what percentage of the final
 
 Think of it like creating the perfect paint color:
 
-1.  You start with base paint that's the maximum intensity possible for a given color, such as the most intense blue that can be represented by the user's screen. This is the **hue** (H) component: a value representing the angle around the color wheel for the vivid hue we want to use as our base.
-2.  Then select a greyscale paint that corresponds how bright you want the color to be; this is the luminance. Do you want it to be very bright and nearly white, or very dark and closer to black, or somewhere in between? This is specified using a percentage, where 0% is perfectly black and 100% is perfectly white. (regardless of the saturation or hue). In between values are a literal grey area.
-3.  Now that you have a grey paint and a perfectly vivid color, you need to mix them together. The saturation (S) component of the color indicates what percentage of the final color should be comprised of that perfectly vivid color. The rest of the final color is made up of the grey paint that represents the saturation.
+1. You start with base paint that's the maximum intensity possible for a given color, such as the most intense blue that can be represented by the user's screen. This is the **hue** (H) component: a value representing the angle around the color wheel for the vivid hue we want to use as our base.
+2. Then select a greyscale paint that corresponds how bright you want the color to be; this is the luminance. Do you want it to be very bright and nearly white, or very dark and closer to black, or somewhere in between? This is specified using a percentage, where 0% is perfectly black and 100% is perfectly white. (regardless of the saturation or hue). In between values are a literal grey area.
+3. Now that you have a grey paint and a perfectly vivid color, you need to mix them together. The saturation (S) component of the color indicates what percentage of the final color should be comprised of that perfectly vivid color. The rest of the final color is made up of the grey paint that represents the saturation.
 
 You can also optionally include an alpha channel, to make the color less than 100% opaque.
 
@@ -235,7 +235,7 @@ hwb(90 10% 10% / 50%)
 
 ## Using color
 
-Now that you know what CSS properties exist that let you apply color to elements and the formats you can use to describe colors, you can put this together to begin to make use of color. As you may have seen from the list under {{anch("Things that can have color")}}, there are plenty of things you can color with CSS. Let's look at this from two sides: using color within a {{Glossary("stylesheet")}}, and adding and changing color using {{Glossary("JavaScript")}} code to alter the styles of elements.
+Now that you know what CSS properties exist that let you apply color to elements and the formats you can use to describe colors, you can put this together to begin to make use of color. As you may have seen from the list under [Things that can have color](#things_that_can_have_color), there are plenty of things you can color with CSS. Let's look at this from two sides: using color within a {{Glossary("stylesheet")}}, and adding and changing color using {{Glossary("JavaScript")}} code to alter the styles of elements.
 
 ### Specifying colors in stylesheets
 
@@ -328,7 +328,7 @@ The `.boxLeft` class—which, cleverly, is used to style the box on the left—f
 }
 ```
 
-> **Note:** When you try to show it in Safari, it will not show properly. Because Safari doesn't support `text-decoration: underline wavy #88ff88`.
+> **Note:** When you try to show it in Safari, it will not show properly. Because Safari doesn't support `text-decoration: underline wavy #88ff88`.
 
 Finally, the `.boxRight` class describes the unique properties of the box that's drawn on the right. It's configured to float the box to the right so that it appears next to the previous box. Then the following colors are established:
 
@@ -342,7 +342,7 @@ Finally, the `.boxRight` class describes the unique properties of the box that's
 
 There are many situations in which your website may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own {{interwiki("wikipedia", "color picker")}}, HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using `"color"` as the value of its {{htmlattrxref("type", "input")}} attribute.
 
-The `<input>` element represents a color only in the {{anch("Hexadecimal string notation", "hexadecimal string notation")}} covered above.
+The `<input>` element represents a color only in the [hexadecimal string notation](#hexadecimal_string_notation) covered above.
 
 ### Example: Picking a color
 
@@ -424,7 +424,7 @@ When trying to decide upon a base color, you may find that browser extensions th
 
 #### Fleshing out the palette
 
-Once you have decided on your base color, there are plenty of online tools that can help you build out a palette of appropriate colors to use along with your base color by applying color theory to your base color to determine appropriate added colors. Many of these tools also support viewing the colors filtered so you can see what they would look like to people with various forms of color blindness. See {{anch("Color and accessibility")}} for a brief explanation of why this matters.
+Once you have decided on your base color, there are plenty of online tools that can help you build out a palette of appropriate colors to use along with your base color by applying color theory to your base color to determine appropriate added colors. Many of these tools also support viewing the colors filtered so you can see what they would look like to people with various forms of color blindness. See [Color and accessibility](#color_and_accessibility) for a brief explanation of why this matters.
 
 A few examples (all free to use as of the time this list was last revised):
 
@@ -491,15 +491,19 @@ Once you have these colors, you will probably still need to select appropriate n
 
 ### Color, backgrounds, contrast, and printing
 
-What looks good on screen may look very different on paper. In addition, ink can be expensive, and if a user is printing your page, they don't necessarily need all the backgrounds and such using up their precious ink when all that matters is the text itself. Most browsers, by default, remove background images when printing documents.
+What looks good on screen may look very different on paper.
+In addition, ink can be expensive, and if a user is printing your page, they don't necessarily need all the backgrounds and such using up their precious ink when all that matters is the text itself.
+Most browsers, by default, remove background images when printing documents.
 
-If your background colors and images have been selected carefully and/or are crucial to the usefulness of the content, you can use the CSS {{cssxref("color-adjust")}} property to tell the browser that it should not make adjustments to the appearance of content.
+If your background colors and images have been selected carefully and/or are crucial to the usefulness of the content, you can use the CSS {{cssxref("print-color-adjust")}} property to tell the browser that it should not make adjustments to the appearance of content.
 
-The default value of `color-adjust`, `economy`, indicates that the browser is allowed to make appearance changes as it deems necessary in order to try to optimize the legibility and/or print economy of the content, given the type of output device the document is being drawn onto.
+The default value of `print-color-adjust`, `economy`, indicates that the browser is allowed to make appearance changes as it deems necessary in order to try to optimize the legibility and/or print economy of the content, given the type of output device the document is being drawn onto.
 
-You can set `color-adjust` to `exact` to tell the browser that the element or elements on which you use it have been designed specifically to best work with the colors and images left as they are. With this set, the browser won't tamper with the appearance of the element, and will draw it as indicated by your CSS.
+You can set `print-color-adjust` to `exact` to tell the browser that the element or elements on which you use it have been designed specifically to best work with the colors and images left as they are.
+With this set, the browser won't tamper with the appearance of the element, and will draw it as indicated by your CSS.
 
-> **Note:** There is no guarantee, though, that `color-adjust: exact` will result in your CSS being used exactly as given. If the browser provides user preferences to change the output (such as a "don't print backgrounds" checkbox in a print dialog box), that overrides the value of `color-adjust`.
+> **Note:** There is no guarantee, though, that `print-color-adjust: exact` will result in your CSS being used exactly as given.
+> If the browser provides user preferences to change the output (such as a "don't print backgrounds" checkbox in a print dialog box), that overrides the value of `print-color-adjust`.
 
 ## See also
 

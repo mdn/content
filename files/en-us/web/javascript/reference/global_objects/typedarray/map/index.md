@@ -130,6 +130,6 @@ const doubles = numbers.map(function(num) {
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.map` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.map` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray.prototype.filter()")}}
 - {{jsxref("Array.prototype.map()")}}

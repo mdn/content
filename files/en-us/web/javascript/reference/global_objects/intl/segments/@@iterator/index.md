@@ -25,7 +25,6 @@ The one iterator function available is `.next()`, as described in the [iterator 
 
 A new Iterator object.
 
-
 ## Examples
 
 ```js
@@ -66,5 +65,5 @@ while (!result.done) {
 
 ## See also
 
-* [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
-* [`Array.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [`Array.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)

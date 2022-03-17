@@ -13,7 +13,7 @@ The **`azimuth`** attribute specifies the direction angle for the light source o
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feDistantLight")}}
+- {{SVGElement("feDistantLight")}}
 
 ## Example
 

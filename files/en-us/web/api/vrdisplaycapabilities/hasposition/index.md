@@ -3,7 +3,7 @@ title: VRDisplayCapabilities.hasPosition
 slug: Web/API/VRDisplayCapabilities/hasPosition
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -19,13 +19,7 @@ The **`hasPosition`** read-only property of the {{domxref("VRDisplayCapabilities
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Syntax
-
-```js
-var hasItGotPosition = vrDisplayCapabilitiesInstance.hasPosition;
-```
-
-### Value
+## Value
 
 A boolean value.
 

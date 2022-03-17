@@ -20,7 +20,7 @@ The `color-gamut` feature is specified as a keyword value chosen from the list b
 - `srgb`
   - : The output device can support approximately the [sRGB](https://en.wikipedia.org/wiki/SRGB) gamut or more. This includes the vast majority of color displays.
 - `p3`
-  - : The output device can support approximately the gamut specified by the [DCI P3 Color Space](https://en.wikipedia.org/wiki/DCI-P3) or more. The p3 gamut is larger than and includes the srgb gamut.
+  - : The output device can support approximately the gamut specified by the [Display P3](https://www.color.org/chardata/rgb/DisplayP3.xalter)  Color Space or more. The p3 gamut is larger than and includes the srgb gamut.
 - `rec2020`
   - : The output device can support approximately the gamut specified by the [ITU-R Recommendation BT.2020 Color Space](https://en.wikipedia.org/wiki/Rec._2020) or more. The rec2020 gamut is larger than and includes the p3 gamut.
 
@@ -56,5 +56,5 @@ The `color-gamut` feature is specified as a keyword value chosen from the list b
 
 ## See also
 
-- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 - [@media](/en-US/docs/Web/CSS/@media)

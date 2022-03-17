@@ -46,7 +46,7 @@ isSessionSupported(mode)
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves to `true` if the specified session
+A {{jsxref("Promise")}} that resolves to `true` if the specified session
 mode is supported; otherwise the promise resolves to `false`.
 
 ### Exceptions

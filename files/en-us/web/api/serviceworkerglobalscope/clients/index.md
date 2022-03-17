@@ -14,7 +14,7 @@ browser-compat: api.ServiceWorkerGlobalScope.clients
 {{APIRef("Service Workers API")}}
 
 The **`clients`** read-only property of the
-{{domxref("ServiceWorkerGlobalScope")}} interface returns the [`Clients`](/en-US/docs/Web/API/Clients "The ServiceWorkerClients interface of the ServiceWorker API represents a container for a list of ServiceWorkerClient objects.")
+{{domxref("ServiceWorkerGlobalScope")}} interface returns the [`Clients`](/en-US/docs/Web/API/Clients)
 object associated with the service worker.
 
 ## Syntax

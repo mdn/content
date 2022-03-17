@@ -15,7 +15,7 @@ tags:
 ---
 {{apiref("Streams")}}
 
-As a JavaScript developer, programmatically reading and manipulating streams of data received over the network, chunk by chunk, is very useful! But how do you use the Streams API’s readable stream functionality? This article explains the basics.
+As a JavaScript developer, programmatically reading and manipulating streams of data received over the network, chunk by chunk, is very useful! But how do you use the Streams API's readable stream functionality? This article explains the basics.
 
 > **Note:** This article assumes that you understand the use cases of readable streams, and are aware of the high-level concepts. If not, we suggest that you first read the [Streams concepts and usage overview](/en-US/docs/Web/API/Streams_API#concepts_and_usage) and dedicated [Streams API concepts](/en-US/docs/Web/API/Streams_API/Concepts) article, then come back.
 
@@ -48,7 +48,7 @@ This provides us with a {{domxref("ReadableStream")}} object.
 
 ### Attaching a reader
 
-Now we’ve got our streaming body, reading the stream requires attaching a reader to it. This is done using the {{domxref("ReadableStream.getReader()")}} method:
+Now we've got our streaming body, reading the stream requires attaching a reader to it. This is done using the {{domxref("ReadableStream.getReader()")}} method:
 
 ```js
 // Fetch the original image
@@ -77,7 +77,7 @@ Also note that the previous example can be reduced by one step, as `response.bod
 
 ### Reading the stream
 
-Now you’ve got your reader attached, you can read data chunks out of the stream using the {{domxref("ReadableStreamDefaultReader.read()")}} method. This reads one chunk out of the stream, which you can then do anything you like with. For example, our Simple stream pump example goes on to enqueue each chunk in a new, custom `ReadableStream` (we will find more about this in the next section), then create a new {{domxref("Response")}} out of it, consume it as a {{domxref("Blob")}}, create an object URL out of that blob using {{domxref("URL.createObjectURL()")}}, and then display it on screen in an {{htmlelement("img")}} element, effectively creating a copy of the image we originally fetched.
+Now you've got your reader attached, you can read data chunks out of the stream using the {{domxref("ReadableStreamDefaultReader.read()")}} method. This reads one chunk out of the stream, which you can then do anything you like with. For example, our Simple stream pump example goes on to enqueue each chunk in a new, custom `ReadableStream` (we will find more about this in the next section), then create a new {{domxref("Response")}} out of it, consume it as a {{domxref("Blob")}}, create an object URL out of that blob using {{domxref("URL.createObjectURL()")}}, and then display it on screen in an {{htmlelement("img")}} element, effectively creating a copy of the image we originally fetched.
 
 ```js
   return new ReadableStream({
@@ -105,7 +105,7 @@ Now you’ve got your reader attached, you can read data chunks out of the strea
 .catch(err => console.error(err));
 ```
 
-Let’s look in detail at how `read()` is used. In the `pump()` function seen above we first invoke `read()`, which returns a promise containing a results object — this has the results of our read in it, in the form `{ done, value }`:
+Let's look in detail at how `read()` is used. In the `pump()` function seen above we first invoke `read()`, which returns a promise containing a results object — this has the results of our read in it, in the form `{ done, value }`:
 
 ```js
 return reader.read().then(({ done, value }) => {
@@ -126,9 +126,9 @@ if (done) {
 }
 ```
 
-> **Note:** `close()` is part of the new custom stream, not the original stream we are discussing here. We’ll explain more about the custom stream in the next section.
+> **Note:** `close()` is part of the new custom stream, not the original stream we are discussing here. We'll explain more about the custom stream in the next section.
 
-If `done` is not `true`, we process the new chunk we’ve read (contained in the `value` property of the results object) and then call the `pump()` function again to read the next chunk.
+If `done` is not `true`, we process the new chunk we've read (contained in the `value` property of the results object) and then call the `pump()` function again to read the next chunk.
 
 ```js
 // Enqueue the next data chunk into our target stream
@@ -136,20 +136,20 @@ controller.enqueue(value);
 return pump();
 ```
 
-This is the standard pattern you’ll see when using stream readers:
+This is the standard pattern you'll see when using stream readers:
 
-1.  You write a function that starts off by reading the stream.
-2.  If there is no more stream to read, you return out of the function.
-3.  If there is more stream to read, you process the current chunk then run the function again.
-4.  You keep running the function recursively until there is no more stream to read, in which case step 2 is followed.
+1. You write a function that starts off by reading the stream.
+2. If there is no more stream to read, you return out of the function.
+3. If there is more stream to read, you process the current chunk then run the function again.
+4. You keep running the function recursively until there is no more stream to read, in which case step 2 is followed.
 
 ## Creating your own custom readable stream
 
-The Simple stream pump example we’ve been studying throughout this article includes a second part — once we’ve read the image from the fetch body in chunks, we then enqueue them into another, custom stream of our own creation. How do we create this? The `ReadableStream()` constructor.
+The Simple stream pump example we've been studying throughout this article includes a second part — once we've read the image from the fetch body in chunks, we then enqueue them into another, custom stream of our own creation. How do we create this? The `ReadableStream()` constructor.
 
 ### The ReadableStream() constructor
 
-It is easy to read from a stream when the browser provides it for you as in the case of Fetch, but sometimes you need to create a custom stream and populate it with your own chunks. The {{domxref("ReadableStream.ReadableStream","ReadableStream()")}} constructor allows you to do this via a syntax that looks complex at first, but actually isn’t too bad.
+It is easy to read from a stream when the browser provides it for you as in the case of Fetch, but sometimes you need to create a custom stream and populate it with your own chunks. The {{domxref("ReadableStream.ReadableStream","ReadableStream()")}} constructor allows you to do this via a syntax that looks complex at first, but actually isn't too bad.
 
 The generic syntax skeleton looks like this:
 
@@ -172,14 +172,14 @@ const stream = new ReadableStream({
 });
 ```
 
-The constructor takes two objects as parameters. The first object is required, and creates a model in JavaScript of the underlying source the data is being read from. The second object is optional, and allows you to specify a [custom queuing strategy](/en-US/docs/Web/API/Streams_API/Concepts#internal_queues_and_queuing_strategies) to use for your stream. You’ll rarely have to do this, so we’ll just concentrate on the first one for now.
+The constructor takes two objects as parameters. The first object is required, and creates a model in JavaScript of the underlying source the data is being read from. The second object is optional, and allows you to specify a [custom queuing strategy](/en-US/docs/Web/API/Streams_API/Concepts#internal_queues_and_queuing_strategies) to use for your stream. You'll rarely have to do this, so we'll just concentrate on the first one for now.
 
 The first object can contain up to five members, only the first of which is required:
 
-1.  `start(controller)` — A method that is called once, immediately after the `ReadableStream` is constructed. Inside this method, you should include code that sets up the stream functionality, e.g. beginning generation of data or otherwise getting access to the source.
-2.  `pull(controller)` — A method that, when included, is called repeatedly until the stream’s internal queue is full. This can be used to control the stream as more chunks are enqueued.
-3.  `cancel()` — A method that, when included, will be called if the app signals that the stream is to be cancelled (e.g. if {{domxref("ReadableStream.cancel()")}} is called). The contents should do whatever is necessary to release access to the stream source.
-4.  `type` and `autoAllocateChunkSize` — These are used — when included — to signify that the stream is to be a bytestream. Bytestreams will be covered separately in a future tutorial, as they are somewhat different in purpose and use case to regular (default) streams. They are also not implemented anywhere as yet.
+1. `start(controller)` — A method that is called once, immediately after the `ReadableStream` is constructed. Inside this method, you should include code that sets up the stream functionality, e.g. beginning generation of data or otherwise getting access to the source.
+2. `pull(controller)` — A method that, when included, is called repeatedly until the stream's internal queue is full. This can be used to control the stream as more chunks are enqueued.
+3. `cancel()` — A method that, when included, will be called if the app signals that the stream is to be cancelled (e.g. if {{domxref("ReadableStream.cancel()")}} is called). The contents should do whatever is necessary to release access to the stream source.
+4. `type` and `autoAllocateChunkSize` — These are used — when included — to signify that the stream is to be a bytestream. Bytestreams will be covered separately in a future tutorial, as they are somewhat different in purpose and use case to regular (default) streams. They are also not implemented anywhere as yet.
 
 Looking at our simple example code again, you can see that our `ReadableStream()` constructor only includes a single method — `start()`, which serves to read all the data out of our fetch stream.
 
@@ -206,11 +206,11 @@ Looking at our simple example code again, you can see that our `ReadableStream()
 
 ### ReadableStream controllers
 
-You’ll notice that the `start()` and `pull()` methods passed into the `ReadableStream()` constructor are given `controller` parameters — these are instances of the {{domxref("ReadableStreamDefaultController")}} class, which can be used to control your stream.
+You'll notice that the `start()` and `pull()` methods passed into the `ReadableStream()` constructor are given `controller` parameters — these are instances of the {{domxref("ReadableStreamDefaultController")}} class, which can be used to control your stream.
 
-In our example we are using the controller’s {{domxref("ReadableStreamDefaultController.enqueue","enqueue()")}} method to enqueue a value into the custom stream after it is read from the fetch body.
+In our example we are using the controller's {{domxref("ReadableStreamDefaultController.enqueue","enqueue()")}} method to enqueue a value into the custom stream after it is read from the fetch body.
 
-In addition, when we are done reading the fetch body we use the controller’s {{domxref("ReadableStreamDefaultController.close","close()")}} method to close the custom stream — any previously-enqueued chunks can still be read from it, but no more can be enqueued, and the stream is closed when reading has finished.
+In addition, when we are done reading the fetch body we use the controller's {{domxref("ReadableStreamDefaultController.close","close()")}} method to close the custom stream — any previously-enqueued chunks can still be read from it, but no more can be enqueued, and the stream is closed when reading has finished.
 
 ### Reading from custom streams
 
@@ -228,7 +228,7 @@ But a custom stream is still a `ReadableStream` instance, meaning you can attach
 
 > **Note:** In order to consume a stream using {{domxref("FetchEvent.respondWith()")}}, the enqueued stream contents must be of type {{jsxref("Uint8Array")}}; for example, encoded using {{domxref("TextEncoder")}}.
 
-The custom stream constructor has a `start()` method that uses a {{domxref("setInterval()")}} call to generate a random string every second. {{domxref("ReadableStreamDefaultController.enqueue()")}} is then used to enqueue it into the stream. When the button is pressed, the interval is cancelled, and a function called `readStream()` is invoked to read the data back out of the stream again. We also close the stream, as we’ve stopped enqueuing chunks to it.
+The custom stream constructor has a `start()` method that uses a {{domxref("setInterval()")}} call to generate a random string every second. {{domxref("ReadableStreamDefaultController.enqueue()")}} is then used to enqueue it into the stream. When the button is pressed, the interval is cancelled, and a function called `readStream()` is invoked to read the data back out of the stream again. We also close the stream, as we've stopped enqueuing chunks to it.
 
 ```js
 const stream = new ReadableStream({
@@ -295,7 +295,7 @@ function readStream() {
 
 ### Closing and cancelling streams
 
-We’ve already shown examples of using {{domxref("ReadableStreamDefaultController.close()")}} to close a reader. As we said before, any previously enqueued chunks will still be read, but no more can be enqueued because it is closed.
+We've already shown examples of using {{domxref("ReadableStreamDefaultController.close()")}} to close a reader. As we said before, any previously enqueued chunks will still be read, but no more can be enqueued because it is closed.
 
 If you wanted to completely get rid of the stream and discard any enqueued chunks, you'd use {{domxref("ReadableStream.cancel()")}} or {{domxref("ReadableStreamDefaultReader.cancel()")}}.
 
@@ -303,7 +303,7 @@ If you wanted to completely get rid of the stream and discard any enqueued chunk
 
 Sometimes you might want to read a stream twice, simultaneously. This is achieved via the {{domxref("ReadableStream.tee()")}} method — it outputs an array containing two identical copies of the original readable stream, which can then be read independently by two separate readers.
 
-You might do this for example in a [ServiceWorker](/en-US/docs/Web/API/Service_Worker_API) if you want to fetch a response from the server and stream it to the browser, but also stream it to the Service Worker cache. Since a response body cannot be consumed more than once, and a stream can't be read by more than one reader at once, you’d need two copies to do this.
+You might do this for example in a [ServiceWorker](/en-US/docs/Web/API/Service_Worker_API) if you want to fetch a response from the server and stream it to the browser, but also stream it to the Service Worker cache. Since a response body cannot be consumed more than once, and a stream can't be read by more than one reader at once, you'd need two copies to do this.
 
 We provide an example of this in our [Simple tee example](https://github.com/mdn/dom-examples/blob/master/streams/simple-tee-example/index.html) ([see it live also](https://mdn.github.io/dom-examples/streams/simple-tee-example/)). This example works much the same way as our Simple random stream, except that when the button is pressed to stop generating random strings, the custom stream is taken and teed, and both resulting streams are then read:
 
@@ -336,4 +336,4 @@ fetch('png-logo.png')
 
 ## Summary
 
-That explains the basics of “default” readable streams. We’ll explain bytestreams in a separate future article, once they are available in browsers.
+That explains the basics of "default" readable streams. We'll explain bytestreams in a separate future article, once they are available in browsers.

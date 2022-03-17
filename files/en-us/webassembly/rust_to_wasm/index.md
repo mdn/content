@@ -190,11 +190,11 @@ $ wasm-pack build --target web
 
 This does a number of things (and they take a lot of time, especially the first time you run `wasm-pack`). To learn about them in detail, check out [this blog post on Mozilla Hacks](https://hacks.mozilla.org/2018/04/hello-wasm-pack/). In short, `wasm-pack build`:
 
-1.  Compiles your Rust code to WebAssembly.
-2.  Runs `wasm-bindgen` on that WebAssembly, generating a JavaScript file that wraps up that WebAssembly file into a module the browser can understand.
-3.  Creates a `pkg` directory and move that JavaScript file and your WebAssembly code into it.
-4.  Reads your `Cargo.toml` and produces an equivalent `package.json`.
-5.  Copies your `README.md` (if you have one) into the package.
+1. Compiles your Rust code to WebAssembly.
+2. Runs `wasm-bindgen` on that WebAssembly, generating a JavaScript file that wraps up that WebAssembly file into a module the browser can understand.
+3. Creates a `pkg` directory and move that JavaScript file and your WebAssembly code into it.
+4. Reads your `Cargo.toml` and produces an equivalent `package.json`.
+5. Copies your `README.md` (if you have one) into the package.
 
 The end result? You have a package inside of the `pkg` directory.
 
@@ -204,9 +204,9 @@ If you check out the generated WebAssembly code size, it may be a few hundred ki
 
 ## Using the package on the web
 
-Now that we've got a compiled wasm module. let’s run it in the browser.
+Now that we've got a compiled wasm module. let's run it in the browser.
 
-Let’s start by creating a file named `index.html` in the root of the project, and give it the following contents:
+Let's start by creating a file named `index.html` in the root of the project, and give it the following contents:
 
 ```html
 <!DOCTYPE html>
@@ -233,13 +233,13 @@ Serve the root directory of the project with a local web server, (e.g. `python3 
 
 > **Note:** Make sure to use an up to date web server that supports the `application/wasm` MIME type. Older web servers might not support it yet.
 
-Load `index.html` from the web server (if you used the python3 example: <http://localhost:8000>). An alert box appears on the screen, with `Hello, WebAssembly!` in it. We've successfully called from JavaScript into Rust, and from Rust into JavaScript.
+Load `index.html` from the web server (if you used the python3 example: `http://localhost:8000`). An alert box appears on the screen, with `Hello, WebAssembly!` in it. We've successfully called from JavaScript into Rust, and from Rust into JavaScript.
 
 ## Making our package available to npm
 
 If you want to use the WebAssembly module with npm, we'll need to make a few changes.
 
-Let’s start by recompiling out Rust with the target bundler option:
+Let's start by recompiling out Rust with the target bundler option:
 
 ```bash
 $ wasm-pack build --target bundler
@@ -337,7 +337,7 @@ $ npm install
 $ npm run serve
 ```
 
-This starts a web server. Load <http://localhost:8080> and an alert box appears on the screen, with `Hello, WebAssembly with NPM!` in it. We've successfully used the Rust module with npm.
+This starts a web server. Load `http://localhost:8080` and an alert box appears on the screen, with `Hello, WebAssembly with NPM!` in it. We've successfully used the Rust module with npm.
 
 ## Conclusion
 

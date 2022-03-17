@@ -30,12 +30,12 @@ where immediateID is a ID returned by {{DOMxRef("window.setImmediate")}}.
 
 ```js
 let immediateID = setImmediate(() => {
-  // Run some code
+  // Run some code
 }
 
 document.getElementById("button")
   .addEventListener(() => {
-  clearImmediate(immediateID);
+  clearImmediate(immediateID);
 });
 ```
 
@@ -51,5 +51,5 @@ specification is no longer being worked on.
 
 ## See also
 
-- A polyfill of `clearImmediate` is available in [`core-js`](https://github.com/zloirock/core-js#setimmediate)
+- [Polyfill of `clearImmediate` in `core-js`](https://github.com/zloirock/core-js#setimmediate)
 - {{DOMxRef("Window.setImmediate()")}}

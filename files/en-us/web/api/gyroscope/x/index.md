@@ -23,19 +23,13 @@ If a feature policy blocks use of a feature it is because your code is inconsist
 with the policies set on your server. This is not something that would ever be shown to
 a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
 
-## Syntax
-
-```js
-var x = gyroscope.x
-```
-
-### Value
+## Value
 
 A {{jsxref('Number')}}.
 
 ## Example
 
-The gyroscope is typically read in the {{domxref('Sensor.onreading')}} event callback.
+The gyroscope is typically read in the {{domxref('Sensor.reading_event', 'reading')}} event callback.
 In the example below this occurs sixty times a second.
 
 ```js

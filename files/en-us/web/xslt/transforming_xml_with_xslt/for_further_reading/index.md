@@ -79,13 +79,13 @@ tags:
 
 - **Jeni's XSLT Pages**
 
-  - **Index**: <http://www.jenitennison.com/xslt/>
+  - **Index**: <https://www.jenitennison.com/xslt/>
 
 <!---->
 
 - **XMLPitstop.com**
 
-  - **StyleSheet Center**: <http://www.xmlpitstop.com/default_datatype_SSC.html>
+  - **StyleSheet Center**: <https://www.xmlpitstop.com/default_datatype_SSC.html>
 
 <!---->
 
@@ -103,7 +103,7 @@ tags:
 
 - **XSL-List**
 
-  - **Subscribe**: <http://www.mulberrytech.com/xsl/xsl-list/>
+  - **Subscribe**: <https://www.mulberrytech.com/xsl/xsl-list/index.html>
   - **Archives**: <https://www.biglist.com/lists/xsl-list/archives/>
 
     - The XSL-List is a very active general mailing list, hosted by [Mulberry Technologies](http://mulberrytech.com/)

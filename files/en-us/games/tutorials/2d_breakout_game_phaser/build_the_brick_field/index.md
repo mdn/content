@@ -54,7 +54,7 @@ function create(){
 }
 ```
 
-Now onto the function itself. Add the `initBricks()` function at the end of our games code, just before the closing \</script> tag, as shown below. To begin with we've included the  `brickInfo` object, as this will come in handy very soon:
+Now onto the function itself. Add the `initBricks()` function at the end of our games code, just before the closing \</script> tag, as shown below. To begin with we've included the  `brickInfo` object, as this will come in handy very soon:
 
 ```js
 function initBricks() {
@@ -117,7 +117,7 @@ var brickX = (c*(brickInfo.width+brickInfo.padding))+brickInfo.offset.left;
 var brickY = (r*(brickInfo.height+brickInfo.padding))+brickInfo.offset.top;
 ```
 
-Each `brickX` position is worked out as `brickInfo.width` plus `brickInfo.padding`, multiplied by the column number, `c`, plus the `brickInfo.offset.left`; the logic for the `brickY` is identical except that it uses the values for row number, `r`, `brickInfo.height`, and `brickInfo.offset.top`. Now every single brick can be placed in its correct place, with padding between each brick, and drawn at an offset from the left and top Canvas edges.
+Each `brickX` position is worked out as `brickInfo.width` plus `brickInfo.padding`, multiplied by the column number, `c`, plus the `brickInfo.offset.left`; the logic for the `brickY` is identical except that it uses the values for row number, `r`, `brickInfo.height`, and `brickInfo.offset.top`. Now every single brick can be placed in its correct place, with padding between each brick, and drawn at an offset from the left and top Canvas edges.
 
 ## Checking the initBricks() code
 

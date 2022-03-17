@@ -8,15 +8,15 @@ browser-compat: svg.elements.animate.repeatCount
 ---
 {{SVGRef}}
 
-The **`repeatCount`** attribute indicates the number of times an animation will take place.
+The **`repeatCount`** attribute indicates the number of times an animation will take place.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("animate")}}
-*   {{SVGElement("animateColor")}}
-*   {{SVGElement("animateMotion")}}
-*   {{SVGElement("animateTransform")}}
-*   {{SVGElement("set")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("animateColor")}}
+- {{SVGElement("animateMotion")}}
+- {{SVGElement("animateTransform")}}
+- {{SVGElement("set")}}
 
 ## Example
 
@@ -60,10 +60,10 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `<number>`
-    *   : This value specifies the number of iterations. It can include partial iterations expressed as fraction values. A fractional value describes a portion of the simple duration. Values must be greater than `0`.
-*   `indefinite`
-    *   : This value indicates that the animation will be repeated indefinitely (i.e. until the document ends).
+- `<number>`
+  - : This value specifies the number of iterations. It can include partial iterations expressed as fraction values. A fractional value describes a portion of the simple duration. Values must be greater than `0`.
+- `indefinite`
+  - : This value indicates that the animation will be repeated indefinitely (i.e. until the document ends).
 
 ## Specifications
 

@@ -12,7 +12,7 @@ Firefox includes a new storage access policy that blocks cookies and other site 
 
 This cookie policy has been available in Firefox since version 63. This documentation describes the policy that we intend to ship to Firefox Release users, but may not match what is implemented in the current Release version of Firefox. That's because we document new aspects of the policy as soon as they land in [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly), our pre-release channel. Firefox Nightly may also contain experimental features that we don't yet plan to ship to Release users; experimental features will not be included in this documentation, but may nevertheless impact the functionality of domains classified as trackers.
 
-We recommend sites test with [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly), as this includes the newest version of our protections. As described above, note that Nightly may include additional protections that end up getting removed or changed before they reach our Release users. We’ll keep this page updated with the newest information as we strengthen our protections.
+We recommend sites test with [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly), as this includes the newest version of our protections. As described above, note that Nightly may include additional protections that end up getting removed or changed before they reach our Release users. We'll keep this page updated with the newest information as we strengthen our protections.
 
 These protections are on by default in Nightly. The cookie policy can be enabled in other versions of Firefox through the [Content Blocking settings](https://support.mozilla.org/en-US/kb/content-blocking) (these steps will vary by version; the linked documentation includes a dropdown to select the appropriate Firefox version).
 
@@ -50,7 +50,7 @@ Cookies:
 
 DOM Storage:
 
-- [localStorage](/en-US/docs/Web/API/Web_Storage_API): [`Window.localStorage`](/en-US/docs/Web/API/Window/localStorage): read and write attempts throw a `SecurityError` exception.  Prior to Firefox 70: [`Window.localStorage`](/en-US/docs/Web/API/Window/localStorage) is `null`. Thus, attempts to read and write using this object will throw a `TypeError` exception.
+- [localStorage](/en-US/docs/Web/API/Web_Storage_API): [`Window.localStorage`](/en-US/docs/Web/API/Window/localStorage): read and write attempts throw a `SecurityError` exception. Prior to Firefox 70: [`Window.localStorage`](/en-US/docs/Web/API/Window/localStorage) is `null`. Thus, attempts to read and write using this object will throw a `TypeError` exception.
 - [sessionStorage](/en-US/docs/Web/API/Web_Storage_API): read and write attempts are permitted.
 - [IndexedDB](/en-US/docs/Web/API/IndexedDB_API): attempting to access the IndexedDB factory object throws a `SecurityError` exception.
 
@@ -79,11 +79,11 @@ HTTP Referrers
 
 ### What is not blocked by the policy?
 
-1.  This policy does not currently restrict third-party storage access for resources that are not classified as tracking resources. We may choose to apply additional restrictions to third-party storage access in the future.
-2.  The restrictions applied by the policy will not prevent third-party scripts classified as tracking resources from accessing storage in the main context of the page. These scripts can continue to use storage scoped to the top-level origin.
-3.  Origins classified as trackers will have access to their own storage when they are loaded in a first-party context.
-4.  Cross-origin resources loaded from the same eTLD+1 as the top-level context will still have access to their storage.
-5.  Origins normally classified as trackers will [not be blocked if the top-level page origin is determined to be from the same organization as them](https://github.com/mozilla-services/shavar-prod-lists#entity-list).
+1. This policy does not currently restrict third-party storage access for resources that are not classified as tracking resources. We may choose to apply additional restrictions to third-party storage access in the future.
+2. The restrictions applied by the policy will not prevent third-party scripts classified as tracking resources from accessing storage in the main context of the page. These scripts can continue to use storage scoped to the top-level origin.
+3. Origins classified as trackers will have access to their own storage when they are loaded in a first-party context.
+4. Cross-origin resources loaded from the same eTLD+1 as the top-level context will still have access to their storage.
+5. Origins normally classified as trackers will [not be blocked if the top-level page origin is determined to be from the same organization as them](https://github.com/mozilla-services/shavar-prod-lists#entity-list).
 
 ## Storage access grants
 
@@ -101,7 +101,7 @@ Third-party storage access may be granted to resources that have been classified
 
 ### Scope of storage access
 
-When storage access is granted, it is scoped to the site of the opener document or subdomains of that origin. Access that is granted on the subdomain of an origin does extend to the top-level origin. As an example, if a resource from `tracker.example` is granted storage access on `foo.example.com`, then `tracker.example` will be able to access its cookies on `bar.foo.example.com` and on `example.com`. 
+When storage access is granted, it is scoped to the site of the opener document or subdomains of that origin. Access that is granted on the subdomain of an origin does extend to the top-level origin. As an example, if a resource from `tracker.example` is granted storage access on `foo.example.com`, then `tracker.example` will be able to access its cookies on `bar.foo.example.com` and on `example.com`.
 
 When storage access is granted to `tracker.example` on `example.com`, all resources loaded from `tracker.example` on any top-level document loaded from `example.com` are immediately given storage access. This includes all resources loaded in the main context of the page, embedded `<iframe>`s, and resources loaded within embedded `<iframe>`s. Storage access is not extended to other resources loaded on `example.com` (e.g. `other-tracker.example`), nor to other first parties on which `tracker.example` is embedded (e.g. `example.org`).
 
@@ -119,13 +119,13 @@ Consider the following embedding scenarios on a top-level page loaded from `exam
 
 ### Storage access expiration
 
-The storage access grant expires after 30 days. Domains classified as tracking resources may be granted third-party storage access on multiple first parties, and the storage permission for each party expires independently. The above heuristics will also serve to extend the lifetime of a third-party storage permission on origins that have already been granted access.  Each time the heuristic is activated, or a success call to the Storage Access API is made, the pre-existing storage access expiration will be extended by 30 days, counting from the time the previous access was granted.
+The storage access grant expires after 30 days. Domains classified as tracking resources may be granted third-party storage access on multiple first parties, and the storage permission for each party expires independently. The above heuristics will also serve to extend the lifetime of a third-party storage permission on origins that have already been granted access. Each time the heuristic is activated, or a success call to the Storage Access API is made, the pre-existing storage access expiration will be extended by 30 days, counting from the time the previous access was granted.
 
-Please note that in the future we expect to make changes to how long storage access will remain valid for.  As mentioned before, the way to know that you will be able to use storage as a third-party going forward will be using the Storage Access API.
+Please note that in the future we expect to make changes to how long storage access will remain valid for. As mentioned before, the way to know that you will be able to use storage as a third-party going forward will be using the Storage Access API.
 
 ## Debugging
 
-We encourage site owners to test their sites, particularly those that rely on third-party content integrations. We’ve added several new features to Firefox to make testing easier.
+We encourage site owners to test their sites, particularly those that rely on third-party content integrations. We've added several new features to Firefox to make testing easier.
 
 ### Developer Tools notifications
 
@@ -135,13 +135,13 @@ The [Network Monitor](/en-US/docs/Tools/Network_Monitor) in Firefox Developer To
 
 ### Adding custom domains to the Tracking Protection list
 
-Curious how things will work if a third-party domain on your site were classified as a tracker? We’ve added a preference that allows you to add custom domains to the Tracking Protection URL classifier. To do so:
+Curious how things will work if a third-party domain on your site were classified as a tracker? We've added a preference that allows you to add custom domains to the Tracking Protection URL classifier. To do so:
 
-1.  Type `about:config` in your address bar. If you are presented with a page that warns you "This may void your warranty!", click "I accept the risk!"
-2.  Search for the preference name "urlclassifier.trackingAnnotationTable.testEntries".
-3.  If the preference already exists, edit the preference value.
-4.  If the preference does not exist, click "String" and then "+" to create a new preference.
-5.  For the preference value enter comma separated origins that you’d like to have classified as trackers. E.g. "example.net,example.org".
+1. Type `about:config` in your address bar. If you are presented with a page that warns you "This may void your warranty!", click "I accept the risk!"
+2. Search for the preference name "urlclassifier.trackingAnnotationTable.testEntries".
+3. If the preference already exists, edit the preference value.
+4. If the preference does not exist, click "String" and then "+" to create a new preference.
+5. For the preference value enter comma separated origins that you'd like to have classified as trackers. E.g. "example.net,example.org".
 
 > **Warning:** Be sure to remove these entries after you have finished testing.
 
@@ -161,9 +161,9 @@ If these services are embedded into the main context of the page, they can conti
 
 ### I use third-party services for social login, like, and share button integration. Will my users still be able to make use of these services?
 
-This depends on how the social integration is implemented. We expect that many of the popular social integrations will continue to function as they do under Firefox’s current cookie policy with some minor differences in the user experience.
+This depends on how the social integration is implemented. We expect that many of the popular social integrations will continue to function as they do under Firefox's current cookie policy with some minor differences in the user experience.
 
-A social content provider that is classified as a tracker will not have access to their third-party cookies when the user first visits a new first party. Thus, the user may appear logged out to the service despite being logged in when they visit the provider’s website directly. Depending on the type of integration, the user may have to take some action to interact with the social content provider before the provider is given access to their cookies. For example:
+A social content provider that is classified as a tracker will not have access to their third-party cookies when the user first visits a new first party. Thus, the user may appear logged out to the service despite being logged in when they visit the provider's website directly. Depending on the type of integration, the user may have to take some action to interact with the social content provider before the provider is given access to their cookies. For example:
 
 - For social login, the user may have to click a login button on the first party.
 - For social like or share buttons, the user will have to first interact with the button in a logged-out state. Once they do, many social content providers will prompt them to log in.
@@ -174,6 +174,6 @@ After these interactions, the provider will receive third-party storage access i
 
 This depends on how the third party has implemented the measurement tool, but generally ad conversion measurement will be more difficult. Consider the following examples:
 
-1.  You run an ad on a social media website that is seen several times by a user, but never clicked. That user later visits your website, which includes a conversion tracking tag from the same social media website. This type of conversion is often referred to as a “view-through conversion.” Since the social media website does not have access to their third-party storage, they will not recognize the user as the same user that saw the advertisements on their website and the conversion will not be tracked. We expect that most view-through conversion tracking techniques will no longer work, including those offered by display networks.
-2.  You run an ad on a display network or social media website that is clicked by a user. That user lands on your website, which includes a conversion tracking tag from the same website that displayed your ad. This type of conversion is often referred to as a “click-through conversion.” Since the social media site or display network will not have access to their third-party storage, they will not recognize the user as the same user that saw the advertisements on their website and the conversion will not be tracked. We expect that this version of click-through conversion will no longer work.
-3.  You run an ad that appears on a social media website. A user clicks on your advertisement and is taken to a landing page that contains a conversion tracking tag from the third-party network. On the social media website, the network annotates the advertisement landing page URL with a query parameter that signals that the visit was the result of a click on an advertisement. On your website, the display network’s tag checks the URL query parameters and saves any ad tracking parameters to first-party storage. If a user later completes a conversion event, the network’s tag checks first-party storage to determine which click (or clicks) was responsible for the visit. We expect that click-through conversion implemented in this way will continue to work.
+1. You run an ad on a social media website that is seen several times by a user, but never clicked. That user later visits your website, which includes a conversion tracking tag from the same social media website. This type of conversion is often referred to as a "view-through conversion." Since the social media website does not have access to their third-party storage, they will not recognize the user as the same user that saw the advertisements on their website and the conversion will not be tracked. We expect that most view-through conversion tracking techniques will no longer work, including those offered by display networks.
+2. You run an ad on a display network or social media website that is clicked by a user. That user lands on your website, which includes a conversion tracking tag from the same website that displayed your ad. This type of conversion is often referred to as a "click-through conversion." Since the social media site or display network will not have access to their third-party storage, they will not recognize the user as the same user that saw the advertisements on their website and the conversion will not be tracked. We expect that this version of click-through conversion will no longer work.
+3. You run an ad that appears on a social media website. A user clicks on your advertisement and is taken to a landing page that contains a conversion tracking tag from the third-party network. On the social media website, the network annotates the advertisement landing page URL with a query parameter that signals that the visit was the result of a click on an advertisement. On your website, the display network's tag checks the URL query parameters and saves any ad tracking parameters to first-party storage. If a user later completes a conversion event, the network's tag checks first-party storage to determine which click (or clicks) was responsible for the visit. We expect that click-through conversion implemented in this way will continue to work.

@@ -14,6 +14,8 @@ The **`DragEvent`** interface is a {{domxref("Event","DOM event")}} that represe
 
 This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref("Event")}}.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 - {{domxref('DragEvent.dataTransfer')}} {{readonlyInline}}
@@ -37,7 +39,7 @@ Although this interface has a constructor, it is not possible to create a useful
 - {{event('dragleave')}}
   - : This event is fired when a dragged element or text selection leaves a valid drop target.
 - {{event('dragover')}}
-  - : This event is fired continuously when an element or text selection is being dragged and the mouse pointer is over a valid drop target (every 50 ms WHEN mouse is not moving ELSE much faster between 5 ms (slow movement) and 1ms (fast movement) approximately. This firing pattern is different than {{Event("mouseover")}} ).
+  - : This event is fired continuously when an element or text selection is being dragged and the mouse pointer is over a valid drop target (every 50 ms WHEN mouse is not moving ELSE much faster between 5 ms (slow movement) and 1ms (fast movement) approximately. This firing pattern is different than {{Event("mouseover")}} ).
 - {{event('dragstart')}}
   - : This event is fired when the user starts dragging an element or text selection.
 - {{event('drop')}}

@@ -186,20 +186,6 @@ Properties contain no syntax section. Instead, add a "Value" section containing 
 
 If accessing the property can throw an exception, include an "Exceptions" subsection explaining each exception; this should be set up just like the one described for methods and constructors above.
 
-### Event handlers
-
-Event handler properties are still properties, but they have some differences in their syntax sections.
-
-#### Syntax block
-
-Start with a syntax block, like this (see {{DOMxRef("Window.onvrdisplaypresentchange")}}):
-
-```js
-window.onvrdisplaypresentchange = functionRef;
-```
-
-And that's it — event handler properties are always settable, and always contain a function; therefore no more information is needed.
-
 ## JavaScript reference syntax
 
 JavaScript built-in object reference pages follow the same basic rules as API reference pages; e.g. for methods and properties. There are a few differences that you might observe:

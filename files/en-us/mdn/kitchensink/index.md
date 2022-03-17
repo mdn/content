@@ -13,7 +13,7 @@ tags:
 
 The **kitchensink** is a page that _attempts_ to incorporate every possible content element and Yari macro.
 
-This page attempts to be the complete intersection of every other page. No in terms of the text but in terms of the styles and macros.
+This page attempts to be the complete intersection of every other page. Not in terms of the text but in terms of the styles and macros.
 Let's start with some notes...
 
 Text that uses the `<kbd>` tag: <kbd>Shift</kbd>
@@ -34,14 +34,16 @@ Text that uses the `<kbd>` tag: <kbd>Shift</kbd>
 
 ### Plain text
 
-      ___________________________
-    < I'm an expert in my field. >
-      ---------------------------
-             \   ^__^
-              \  (oo)\_______
-                 (__)\       )\/\
-                     ||----w |
-                     ||     ||
+```
+  ___________________________
+< I'm an expert in my field. >
+  ---------------------------
+         \   ^__^
+          \  (oo)\_______
+             (__)\       )\/\
+                 ||----w |
+                 ||     ||
+```
 
 ### HTML
 
@@ -193,7 +195,7 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
       <td><code>auto</code>, <code>contain</code> or <code>cover</code></td>
       <td>
         <p>
-          The <code>auto</code> value doesn’t affect the initial layout viewport, and the whole web page is viewable.
+          The <code>auto</code> value doesn't affect the initial layout viewport, and the whole web page is viewable.
         </p>
         <p>
           The <code>contain</code> value means that the viewport is scaled to
@@ -246,9 +248,9 @@ var rect1 = {x: 5, y: 5, width: 50, height: 50}
 var rect2 = {x: 20, y: 10, width: 10, height: 10}
 
 if (rect1.x < rect2.x + rect2.width &&
-   rect1.x + rect1.width > rect2.x &&
-   rect1.y < rect2.y + rect2.height &&
-   rect1.y + rect1.height > rect2.y) {
+   rect1.x + rect1.width > rect2.x &&
+   rect1.y < rect2.y + rect2.height &&
+   rect1.y + rect1.height > rect2.y) {
     // collision detected!
 }
 
@@ -304,7 +306,7 @@ this.color("blue");
 - [Accessibility resources at MDN](/en-US/docs/Web/Accessibility)
 - {{Interwiki("wikipedia", "Web accessibility")}} on Wikipedia
 
-The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) macro inserts a localised note box indicating that a feature is available in a [Web worker](/en-US/docs/Web/API/Web_Workers_API) context.
+The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) macro inserts a localized note box indicating that a feature is available in a [Web worker](/en-US/docs/Web/API/Web_Workers_API) context.
 
 {{AvailableInWorkers}}
 
