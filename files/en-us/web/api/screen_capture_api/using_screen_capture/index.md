@@ -257,7 +257,7 @@ function dumpOptionsInfo() {
 }
 ```
 
-The track list is obtained by calling {{domxref("MediaStream.getVideoTracks", "getVideoTracks()")}} on the capture'd screen's {{domxref("MediaStream")}}. The settings currently in effect are obtained using {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} and the established constraints are gotten with {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}
+The track list is obtained by calling {{domxref("MediaStream.getVideoTracks", "getVideoTracks()")}} on the captured screen's {{domxref("MediaStream")}}. The settings currently in effect are obtained using {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} and the established constraints are gotten with {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}
 
 #### HTML
 
