@@ -3,7 +3,6 @@ title: Request.mode
 slug: Web/API/Request/mode
 tags:
   - API
-  - Experimental
   - Fetch
   - Property
   - Reference
