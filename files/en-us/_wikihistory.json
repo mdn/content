@@ -85237,6 +85237,14 @@
       "louisremi"
     ]
   },
+  "Web/API/Window/deviceorientationabsolute_event": {
+    "modified": "2020-10-15T21:45:27.913Z",
+    "contributors": [
+      "wbamberg",
+      "PushpitaPikuDey",
+      "jpmedley"
+    ]
+  },
   "Web/API/Window/dialogArguments": {
     "modified": "2020-10-15T21:14:36.218Z",
     "contributors": [
@@ -86198,44 +86206,6 @@
       "Sheppy",
       "ethertank",
       "louisremi"
-    ]
-  },
-  "Web/API/Window/ondevicemotion": {
-    "modified": "2020-10-15T21:10:42.063Z",
-    "contributors": [
-      "mfuji09",
-      "ExE-Boss",
-      "wbamberg",
-      "fscholz",
-      "cpigat",
-      "jsx",
-      "teoli",
-      "libreGeekingKid",
-      "Jeremie",
-      "Sheppy"
-    ]
-  },
-  "Web/API/Window/ondeviceorientation": {
-    "modified": "2019-03-24T00:11:40.711Z",
-    "contributors": [
-      "jpmedley",
-      "fscholz",
-      "teoli",
-      "cpigat",
-      "jsx",
-      "libreGeekingKid",
-      "dtbwije",
-      "Jeremie",
-      "Sheppy",
-      "kohei.yoshino"
-    ]
-  },
-  "Web/API/Window/ondeviceorientationabsolute": {
-    "modified": "2020-10-15T21:45:27.913Z",
-    "contributors": [
-      "wbamberg",
-      "PushpitaPikuDey",
-      "jpmedley"
     ]
   },
   "Web/API/Window/ondragdrop": {

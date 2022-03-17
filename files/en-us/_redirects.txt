@@ -2187,8 +2187,8 @@
 /en-US/docs/DOM/window.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
 /en-US/docs/DOM/window.onclose	/en-US/docs/Web/API/GlobalEventHandlers/onclose
 /en-US/docs/DOM/window.oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
-/en-US/docs/DOM/window.ondevicemotion	/en-US/docs/Web/API/Window/ondevicemotion
-/en-US/docs/DOM/window.ondeviceorientation	/en-US/docs/Web/API/Window/ondeviceorientation
+/en-US/docs/DOM/window.ondevicemotion	/en-US/docs/Web/API/Window/devicemotion_event
+/en-US/docs/DOM/window.ondeviceorientation	/en-US/docs/Web/API/Window/deviceorientation_event
 /en-US/docs/DOM/window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
 /en-US/docs/DOM/window.onerror	/en-US/docs/Web/API/GlobalEventHandlers/onerror
 /en-US/docs/DOM/window.onfocus	/en-US/docs/Web/API/GlobalEventHandlers/onfocus
@@ -3348,8 +3348,8 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
 /en-US/docs/Document_Object_Model_(DOM)/window.onclose	/en-US/docs/Web/API/GlobalEventHandlers/onclose
 /en-US/docs/Document_Object_Model_(DOM)/window.oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
-/en-US/docs/Document_Object_Model_(DOM)/window.ondevicemotion	/en-US/docs/Web/API/Window/ondevicemotion
-/en-US/docs/Document_Object_Model_(DOM)/window.ondeviceorientation	/en-US/docs/Web/API/Window/ondeviceorientation
+/en-US/docs/Document_Object_Model_(DOM)/window.ondevicemotion	/en-US/docs/Web/API/Window/devicemotion_event
+/en-US/docs/Document_Object_Model_(DOM)/window.ondeviceorientation	/en-US/docs/Web/API/Window/deviceorientation_event
 /en-US/docs/Document_Object_Model_(DOM)/window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
 /en-US/docs/Document_Object_Model_(DOM)/window.onerror	/en-US/docs/Web/API/GlobalEventHandlers/onerror
 /en-US/docs/Document_Object_Model_(DOM)/window.onfocus	/en-US/docs/Web/API/GlobalEventHandlers/onfocus
@@ -9521,6 +9521,9 @@
 /en-US/docs/Web/API/Window/onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
 /en-US/docs/Web/API/Window/oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
 /en-US/docs/Web/API/Window/ondblclick	/en-US/docs/Web/API/GlobalEventHandlers/ondblclick
+/en-US/docs/Web/API/Window/ondevicemotion	/en-US/docs/Web/API/Window/devicemotion_event
+/en-US/docs/Web/API/Window/ondeviceorientation	/en-US/docs/Web/API/Window/deviceorientation_event
+/en-US/docs/Web/API/Window/ondeviceorientationabsolute	/en-US/docs/Web/API/Window/deviceorientationabsolute_event
 /en-US/docs/Web/API/Window/ondeviceproximity	/en-US/docs/Web/API/DeviceProximityEvent
 /en-US/docs/Web/API/Window/onfocus	/en-US/docs/Web/API/GlobalEventHandlers/onfocus
 /en-US/docs/Web/API/Window/ongamepadconnected	/en-US/docs/Web/API/Window/gamepadconnected_event
@@ -10137,8 +10140,8 @@
 /en-US/docs/Web/API/window.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
 /en-US/docs/Web/API/window.onclose	/en-US/docs/Web/API/GlobalEventHandlers/onclose
 /en-US/docs/Web/API/window.oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
-/en-US/docs/Web/API/window.ondevicemotion	/en-US/docs/Web/API/Window/ondevicemotion
-/en-US/docs/Web/API/window.ondeviceorientation	/en-US/docs/Web/API/Window/ondeviceorientation
+/en-US/docs/Web/API/window.ondevicemotion	/en-US/docs/Web/API/Window/devicemotion_event
+/en-US/docs/Web/API/window.ondeviceorientation	/en-US/docs/Web/API/Window/deviceorientation_event
 /en-US/docs/Web/API/window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
 /en-US/docs/Web/API/window.onerror	/en-US/docs/Web/API/GlobalEventHandlers/onerror
 /en-US/docs/Web/API/window.onfocus	/en-US/docs/Web/API/GlobalEventHandlers/onfocus
