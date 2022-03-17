@@ -51412,15 +51412,6 @@
       "markg"
     ]
   },
-  "Web/API/HTMLMediaElement/onencrypted": {
-    "modified": "2020-10-15T21:51:06.926Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "david_ross",
-      "jpmedley"
-    ]
-  },
   "Web/API/HTMLMediaElement/onerror": {
     "modified": "2020-10-15T21:52:40.332Z",
     "contributors": [
