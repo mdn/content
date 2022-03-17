@@ -55,8 +55,8 @@ acceleration on three axis. Each axis is represented with its own property:
 ## See also
 
 - {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}}
-- {{DOMxRef("window.devicemotion_event") }}
-- {{DOMxRef("window.deviceorientation_event") }}
+- {{DOMxRef("window.devicemotion_event", "devicemotion") }} event
+- {{DOMxRef("window.deviceorientation_event", "deviceorientation") }} event
 - {{DOMxRef("DeviceOrientationEvent")}}
 - {{DOMxRef("LinearAccelerationSensor")}}
 - [Detecting device

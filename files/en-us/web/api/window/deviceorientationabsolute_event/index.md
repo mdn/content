@@ -11,7 +11,6 @@ browser-compat: api.Window.deviceorientationabsolute_event
 ---
 {{ ApiRef() }}{{Non-standard_header}}
 
-## Summary
 
 The **`deviceorientationabsolute`** event is sent to the `ondeviceorientationabsolute` event handler on a {{domxref('Window')}} event when absolute device orientation changes.
 
@@ -60,5 +59,5 @@ An {{domxref("DeviceOrientationEvent")}}. Inherits from {{domxref("Event")}}.
 
 - {{ event("deviceorientation") }}
 - {{ domxref("DeviceOrientationEvent") }}
-- {{domxref("Window.ondeviceorientation","ondeviceorientation")}}
+- {{DOMxRef("window.deviceorientation_event", "deviceorientation") }} event
 - [Detecting device orientation](/en-US/docs/Detecting_device_orientation)

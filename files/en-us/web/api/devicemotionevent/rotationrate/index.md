@@ -53,8 +53,8 @@ rates of the device around each of its axes:
 ## See also
 
 - {{DOMxRef("DeviceMotionEvent") }}
-- {{DOMxRef("window.devicemotion_event") }}
-- {{DOMxRef("window.deviceorientation_event") }}
+- {{DOMxRef("window.devicemotion_event", "devicemotion") }} event
+- {{DOMxRef("window.deviceorientation_event", "deviceorientation") }} event
 - {{DOMxRef("DeviceOrientationEvent") }}
 - [Detecting device
   orientation](/en-US/docs/Web/API/Detecting_device_orientation)
