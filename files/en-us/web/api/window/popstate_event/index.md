@@ -44,7 +44,7 @@ The **`popstate`** event of the {{domxref("Window")}} interface is fired when th
 
 ## The history stack
 
-If the history entry being activated was created by a call to [`history.pushState()`](</en-US/docs/Web/API/History_API#the_pushstate()_method>) or was affected by a call to [`history.replaceState()`](</en-US/docs/Web/API/History_API#the_replacestate()_method>), the `popstate` event's `state` property contains a copy of the history entry's state object.
+If the history entry being activated was created by a call to [`history.pushState()`](/en-US/docs/Web/API/History/pushState) or was affected by a call to [`history.replaceState()`](/en-US/docs/Web/API/History/replaceState), the `popstate` event's `state` property contains a copy of the history entry's state object.
 
 These methods and their corresponding events can be used to add data to the history stack which can be used to reconstruct a dynamically generated page, or to otherwise alter the state of the content being presented while remaining on the same {{domxref("Document")}}.
 
