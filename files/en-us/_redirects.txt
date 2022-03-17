@@ -5186,6 +5186,7 @@
 /en-US/docs/Learn/CSS/Building_blocks/Selectors/Writing_Modes_Tasks	/en-US/docs/Learn/CSS/Building_blocks/Writing_Modes_Tasks
 /en-US/docs/Learn/CSS/CSS_layout/Using_Media_Queries	/en-US/docs/Learn/CSS/CSS_layout/Media_queries
 /en-US/docs/Learn/CSS/CSS_properties	/en-US/docs/Learn/CSS/Building_blocks/Selectors
+/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge	/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page
 /en-US/docs/Learn/CSS/Howto/customize_a_list	/en-US/docs/Learn/CSS/Styling_text/Styling_lists
 /en-US/docs/Learn/CSS/Howto/style_text	/en-US/docs/Learn/CSS/Styling_text/Fundamentals
 /en-US/docs/Learn/CSS/Introduction_to_CSS	/en-US/docs/Learn/CSS/First_steps
