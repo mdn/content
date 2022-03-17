@@ -7,12 +7,12 @@ tags:
   - SMIL
   - SVG animations
   - SVGAnimationElement
-  - events
+  - Event
 browser-compat: api.SVGAnimationElement.endEvent_event
 ---
 {{APIRef("SVG")}}
 
-The `endEvent` event of the {{domxref("SVGAnimationElement")}} interface is fired when at the active end of the animation is reached.
+The **`endEvent`** event of the {{domxref("SVGAnimationElement")}} interface is fired when at the active end of the animation is reached.
 
 > **Note:** This event is not raised at the simple end of each animation repeat. This event may be raised both in the course of normal (i.e. scheduled or interactive) timeline play, as well as in the case that the element was ended with a DOM method.
 
