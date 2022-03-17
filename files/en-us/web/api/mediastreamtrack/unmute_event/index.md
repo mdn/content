@@ -19,30 +19,23 @@ The **`unmute`** event is sent to a {{domxref("MediaStreamTrack")}} when the tra
 
 This ends the {{domxref("MediaStreamTrack.muted", "muted")}} state that began with the {{domxref("MediaStreamTrack/mute_event", "mute")}} event.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("MediaStreamTrack.onunmute", "onunmute")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 > **Note:** The condition that most people think of as "muted" (that is, a user-controllable way to silence a track) is actually managed using the {{domxref("MediaStreamTrack.enabled")}} property, for which there are no events.
+
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('unmute', event => { });
+
+onunmute = event => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -60,7 +53,7 @@ musicTrack.addEventListener("unmute", event => {
 
 With these event handlers in place, when the track `musicTrack` enters its {{domxref("MediaStreamTrack.muted", "muted")}} state, the element with the ID `timeline-widget` gets its background color changed to `#aaa`. When the track exits the muted state—detected by the arrival of an `unmuted` event—the background color is restored to white.
 
-You can also use the {{domxref("MediaStreamTrack.onunmute", "onunmute")}} event handler property to set up a handler for this event; similarly, the {{domxref("MediaStreamTrack.onmute", "onmute")}} event handler is available for setting up a handler for the `mute` event. The following example shows this:
+You can also use the `onunmute` event handler property to set up a handler for this event; similarly, the {{domxref("MediaStreamTrack.mute_event", "onmute")}} event handler is available for setting up a handler for the `mute` event. The following example shows this:
 
 ```js
 musicTrack.onmute = event => {
@@ -82,5 +75,4 @@ musicTrack.mute = event = > {
 
 ## See also
 
-- {{domxref("MediaStreamTrack.onunmute", "onunmute")}} event handler property
-- {{domxref("MediaStreamTrack/mute_event", "mute")}} event
+- The {{domxref("MediaStreamTrack/mute_event", "mute")}} event

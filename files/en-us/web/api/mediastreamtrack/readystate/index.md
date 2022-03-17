@@ -44,4 +44,4 @@ It takes one of the following values:
 
 - [Media Stream API](/en-US/docs/Web/API/Media_Streams_API)
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
-- {{domxref("MediaStreamTrack.onended")}}
+- The {{domxref("MediaStreamTrack.ended_event", "ended")}} event
