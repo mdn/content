@@ -9005,6 +9005,9 @@
 /en-US/docs/Web/API/RotationRate.gamma	/en-US/docs/Web/API/DeviceMotionEvent/rotationRate
 /en-US/docs/Web/API/SVGAElement/SVGAlement.target	/en-US/docs/Web/API/SVGAElement/target
 /en-US/docs/Web/API/SVGAnimatedPoints	/en-US/docs/Web/API/SVGPolygonElement
+/en-US/docs/Web/API/SVGAnimationElement/onbegin	/en-US/docs/Web/API/SVGAnimationElement/beginEvent_event
+/en-US/docs/Web/API/SVGAnimationElement/onend	/en-US/docs/Web/API/SVGAnimationElement/endEvent_event
+/en-US/docs/Web/API/SVGAnimationElement/onrepeat	/en-US/docs/Web/API/SVGAnimationElement/repeatEvent_event
 /en-US/docs/Web/API/SVGElement/dataset	/en-US/docs/Web/API/HTMLElement/dataset
 /en-US/docs/Web/API/SVGElement/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
 /en-US/docs/Web/API/SVGElement/onblur	/en-US/docs/Web/API/GlobalEventHandlers/onblur

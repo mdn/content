@@ -72044,30 +72044,6 @@
       "louisremi"
     ]
   },
-  "Web/API/SVGAnimationElement/onbegin": {
-    "modified": "2020-10-15T21:54:08.402Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz",
-      "Sebastianz"
-    ]
-  },
-  "Web/API/SVGAnimationElement/onend": {
-    "modified": "2020-10-15T21:54:08.639Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz",
-      "Sebastianz"
-    ]
-  },
-  "Web/API/SVGAnimationElement/onrepeat": {
-    "modified": "2020-10-15T21:54:08.460Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz",
-      "Sebastianz"
-    ]
-  },
   "Web/API/SVGAnimationElement/repeatEvent_event": {
     "modified": "2020-10-15T21:19:37.261Z",
     "contributors": [
