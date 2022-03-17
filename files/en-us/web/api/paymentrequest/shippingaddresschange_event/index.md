@@ -40,7 +40,7 @@ An {{domxref("PaymentRequestUpdateEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-_Provides only the properties inherited from its parent interface, {{domxref("Event")}}._
+_Provides only the properties inherited from {{domxref("Event")}}._
 
 ## Usage notes
 
