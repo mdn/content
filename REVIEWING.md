@@ -14,8 +14,7 @@ for example:
   but also sometimes by community volunteers.
 - "Drive-by fixes" — small updates done to the site to fix typos, grammatical
   issues, and technical inaccuracies, usually as they are found by users of MDN.
-- MDN content bug fixes, usually done by volunteers to close issues opened
-  by users on our [sprints](https://github.com/mdn/sprints/issues) repo.
+- MDN content bug fixes, usually done by volunteers to close issues on this repo.
 
 Regardless of how a content change is done, they will be submitted as
 [pull requests](https://github.com/mdn/content/pulls) on this repo, which will
