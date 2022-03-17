@@ -30,7 +30,7 @@ var shippingOption = PaymentRequest.shippingOption;
 
 ## Example
 
-In the example below, the {{domxref('PaymentRequest.onshippingaoptionchange')}} event
+In the example below, the {{domxref('PaymentRequest.shippingoptionchange_event', 'shippingoptionchange')}} event
 is called. It calls `updateDetails()` to toggle the shipping method between
 "standard" and "express".
 

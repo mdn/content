@@ -64958,45 +64958,6 @@
       "rsolomakhin"
     ]
   },
-  "Web/API/PaymentRequest/onmerchantvalidation": {
-    "modified": "2020-10-15T22:08:42.855Z",
-    "contributors": [
-      "sideshowbarker",
-      "rsolomakhin",
-      "Sheppy",
-      "marcoscaceres"
-    ]
-  },
-  "Web/API/PaymentRequest/onpaymentmethodchange": {
-    "modified": "2020-10-15T22:06:08.345Z",
-    "contributors": [
-      "Sheppy",
-      "marcoscaceres"
-    ]
-  },
-  "Web/API/PaymentRequest/onshippingaddresschange": {
-    "modified": "2020-10-15T21:48:28.422Z",
-    "contributors": [
-      "Sheppy",
-      "samouss",
-      "fscholz",
-      "jpmedley",
-      "chrisdavidmills",
-      "dgashmdn"
-    ]
-  },
-  "Web/API/PaymentRequest/onshippingoptionchange": {
-    "modified": "2020-10-15T21:48:27.044Z",
-    "contributors": [
-      "marcoscaceres",
-      "samouss",
-      "fscholz",
-      "jpmedley",
-      "chrisdavidmills",
-      "libbymc",
-      "dgashmdn"
-    ]
-  },
   "Web/API/PaymentRequest/paymentmethodchange_event": {
     "modified": "2020-10-15T22:08:31.709Z",
     "contributors": [
