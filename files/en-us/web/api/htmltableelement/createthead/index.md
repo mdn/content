@@ -1,5 +1,5 @@
 ---
-title: 'HTMLTableElement: createTHead()'
+title: HTMLTableElement.createTHead()
 slug: Web/API/HTMLTableElement/createTHead
 tags:
   - API
