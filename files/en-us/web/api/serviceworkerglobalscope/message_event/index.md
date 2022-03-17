@@ -14,32 +14,38 @@ browser-compat: api.ServiceWorkerGlobalScope.message_event
 The **`message`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface occurs when incoming messages are received. Controlled pages can use the {{domxref("ServiceWorker.postMessage()")}} method to send messages to service workers.
 The service worker can optionally send a response back via the {{domxref("Client.postMessage()")}}, corresponding to the controlled page.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("ExtendableMessageEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/onmessage"
-            >onmessage</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('message', event => { });
+
+onmessage = event => { };
+```
+
+## Event type
+
+An {{domxref("ExtendableMessageEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("ExtendableMessageEvent")}}
+
+## Event properties
+
+_Inherits properties from its parent, {{domxref("ExtendableEvent")}}_.
+
+- {{domxref("ExtendableMessageEvent.data")}} {{readonlyinline}}
+  - : Returns the event's data. It can be any data type.
+- {{domxref("ExtendableMessageEvent.origin")}} {{readonlyinline}}
+  - : Returns the origin of the {{domxref("Client")}} that sent the message.
+- {{domxref("ExtendableMessageEvent.lastEventId")}} {{readonlyinline}}
+  - : Represents, in [server-sent events](/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events), the last event ID of the event source. This is an empty string.
+- {{domxref("ExtendableMessageEvent.source")}} {{readonlyinline}}
+  - : Returns a reference to the {{domxref("Client")}} object that sent the message.
+- {{domxref("ExtendableMessageEvent.ports")}} {{readonlyinline}}
+  - : Returns the array containing the {{domxref("MessagePort")}} objects representing the ports of the associated message channel.
 
 ## Examples
 

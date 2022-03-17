@@ -134,7 +134,7 @@ Highlights:
 - The interface {{domxref("FetchEvent")}} now extends {{domxref("ExtendableEvent")}}, giving it access to the {{domxref("ExtendableEvent.waitUntil()")}} method. ({{bug(1214772)}}).
 - Following a recent change in the specification, `FetchEvent.client` has been removed ({{bug(1218135)}}).
 - To match the latest specification, the {{domxref("ServiceWorkerContainer.onreloadpage")}} has been removed ({{bug(1218139)}}).
-- The event handlers {{domxref("ServiceWorkerGlobalScope.onbeforeevicted")}} and {{domxref("ServiceWorkerGlobalScope.onevicted")}} have been removed as they weren't following the spec. They will be reintroduced in the future, but their removal will allow feature detection to work as expected ({{bug(1218142)}}).
+- The event handlers {{domxref("ServiceWorkerGlobalScope.beforeevicted_event", "onbeforeevicted")}} and {{domxref("ServiceWorkerGlobalScope.evicted_event", "onevicted")}} have been removed as they weren't following the spec. They will be reintroduced in the future, but their removal will allow feature detection to work as expected ({{bug(1218142)}}).
 - In the {{domxref("FetchEvent.FetchEvent", "FetchEvent()")}} constructor, if the `isReload` member is not present in the options dictionary, it now defaults to `false` ({{bug(1216401)}}).
 - The {{domxref("Client.frameType")}} property is now implemented on the right interface; it was on {{domxref("WindowClient")}} before ({{bug(1218146)}}).
 - When AppCache is used to provide offline support for a page, a warning message is now displayed in the console advising developers to use [Service workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers) instead ({{bug("1204581")}}.)

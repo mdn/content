@@ -43,7 +43,7 @@ The following additions to the {{domxref('Service Worker API')}} are specified i
 
 - {{domxref("ServiceWorkerRegistration.sync")}} {{readonlyinline}}
   - : Returns a reference to the {{domxref("SyncManager")}} interface for registering tasks to run with network connectivity.
-- {{domxref("ServiceWorkerGlobalScope.onsync")}}
+- {{domxref("ServiceWorkerGlobalScope.sync_event", "onsync")}}
   - : An event handler fired whenever a {{Event("sync")}} event occurs. This happens either immediately if the network is available or as soon as the network becomes available.
 
 ## Examples

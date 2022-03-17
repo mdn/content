@@ -22,7 +22,7 @@ This is used to represent messages in:
 - [Web sockets](/en-US/docs/Web/API/WebSockets_API) (see the `onmessage` property of the [WebSocket](/en-US/docs/Web/API/WebSocket) interface).
 - Cross-document messaging (see {{domxref("Window.postMessage()")}} and {{domxref("Window.onmessage")}}).
 - [Channel messaging](/en-US/docs/Web/API/Channel_Messaging_API) (see {{domxref("MessagePort.postMessage()")}} and {{domxref("MessagePort.onmessage")}}).
-- Cross-worker/document messaging (see the above two entries, but also {{domxref("Worker.postMessage()")}}, {{domxref("Worker.onmessage")}}, {{domxref("ServiceWorkerGlobalScope.onmessage")}}, etc.)
+- Cross-worker/document messaging (see the above two entries, but also {{domxref("Worker.postMessage()")}}, {{domxref("Worker.onmessage")}}, {{domxref("ServiceWorkerGlobalScope.message_event")}}, etc.)
 - [Broadcast channels](/en-US/docs/Web/API/Broadcast_Channel_API) (see {{domxref("Broadcastchannel.postMessage()")}}) and {{domxref("BroadcastChannel.onmessage")}}).
 - WebRTC data channels (see {{domxref("RTCDataChannel.onmessage")}}).
 

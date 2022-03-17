@@ -35,7 +35,7 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} or otherwise 
 ## Example
 
 This code snippet is from the [navigation
-preload page](https://developers.google.com/web/updates/2017/02/navigation-preload#the-solution). The {{domxref("ServiceWorkerGlobalScope.onfetch")}} event handler
+preload page](https://developers.google.com/web/updates/2017/02/navigation-preload#the-solution). The {{domxref("ServiceWorkerGlobalScope.fetch_event", "onfetch")}} event handler
 listens for the `fetch` event. When fired, pass a promise that back to the
 controlled page to {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}}.
 This promise resolves to the first matching URL request in the {{domxref("Cache")}}

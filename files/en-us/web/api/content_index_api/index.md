@@ -37,7 +37,7 @@ The following additions to the {{domxref('ServiceWorker')}} have been specified 
 
 - {{domxref("ServiceWorkerRegistration.index")}} {{readonlyinline}}
   - : Returns a reference to the {{domxref("ContentIndex")}} interface for indexing cached pages.
-- {{domxref("ServiceWorkerGlobalScope.oncontentdelete")}}
+- {{domxref("ServiceWorkerGlobalScope.contentdelete_event", "oncontentdelete")}}
   - : An event handler fired whenever a {{Event("contentdelete")}} event occurs. This happens when content is removed by the user agent.
 
 ## Examples
