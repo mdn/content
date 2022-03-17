@@ -3,7 +3,6 @@ title: Request.clone()
 slug: Web/API/Request/clone
 tags:
   - API
-  - Experimental
   - Fetch
   - Method
   - Reference

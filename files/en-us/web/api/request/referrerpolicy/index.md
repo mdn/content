@@ -3,7 +3,6 @@ title: Request.referrerPolicy
 slug: Web/API/Request/referrerPolicy
 tags:
   - API
-  - Experimental
   - Fetch
   - Property
   - Reference

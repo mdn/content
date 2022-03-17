@@ -4,7 +4,6 @@ slug: Web/API/Request/Request
 tags:
   - API
   - Constructor
-  - Experimental
   - Fetch
   - Reference
   - request

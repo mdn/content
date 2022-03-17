@@ -3,7 +3,6 @@ title: Request.headers
 slug: Web/API/Request/headers
 tags:
   - API
-  - Experimental
   - Fetch
   - Headers
   - Property
