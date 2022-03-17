@@ -43,11 +43,6 @@ _The properties below are inherited from its parent interface, {{domxref("Abstra
 - {{domxref("StaticRange.startOffset")}} {{ReadOnlyInline}}
   - : Returns an integer value indicating the offset into the node specified by `startContainer` at which the first character of the range is located.
 
-## Methods
-
-- {{domxref("StaticRange.toRange()")}}
-  - : Returns a new {{domxref("Range")}} object which describes the same range as the source `StaticRange`, but is "live" with values that change to reflect changes in the contents of the DOM tree.
-
 ## Usage notes
 
 A DOM range specifies a span of content in a document, potentially beginning inside one node (or element) and ending inside another one. Unlike a {{domxref("Range")}}, a `StaticRange` represents a range which is fixed in time; it does not change to try to keep the same content within it as the document changes. If any changes are made to the DOM, the actual data contained within the range specified by a `StaticRange` may change. This lets the {{Glossary("user agent")}} avoid a lot of work that is unnecessary if the web app or site doesn't need a live-updating range.
