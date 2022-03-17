@@ -74,10 +74,10 @@ track.onended = function() {
 
 ## See also
 
-- {{domxref("HTMLMediaElement.playing_event", 'HTMLMediaElement: playing event')}}
-- {{domxref("HTMLMediaElement.waiting_event", 'HTMLMediaElement: waiting event')}}
-- {{domxref("HTMLMediaElement.seeking_event", 'HTMLMediaElement: seeking event')}}
+- The HTMLMediaElement {{domxref("HTMLMediaElement.playing_event", 'playing')}} event
+- The HTMLMediaElement {{domxref("HTMLMediaElement.waiting_event", 'waiting')}} event
+- The HTMLMediaElement {{domxref("HTMLMediaElement.seeking_event", 'seeking')}} event
 - {{HTMLElement("audio")}}
 - {{HTMLElement("video")}}
-- {{domxref("HTMLMediaElement.ended_event", 'HTMLMediaElement: ended event')}}
-- {{domxref("AudioScheduledSourceNode.ended_event", 'AudioScheduledSourceNode: ended event')}}
+- The HTMLMediaElement {{domxref("HTMLMediaElement.ended_event", 'ended')}} event
+- The AudioScheduledSourceNode {{domxref("AudioScheduledSourceNode.ended_event", 'ended')}} event
