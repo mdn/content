@@ -39,6 +39,10 @@ An {{domxref("PaymentRequestUpdateEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PaymentRequestUpdateEvent")}}
 
+## Event properties
+
+_Provides only the properties inherited from its parent interface, {{domxref("Event")}}._
+
 ## Examples
 
 This code snippet sets up a handler for the `shippingoptionchange` event. The code recalculates the total charge for the payment based on the selected shipping option. For example, if there are three options (such as "Free ground shipping", "2-day air", and "Next day"), each time the user chooses one of those options, this event handler is called to recalculate the total based on the changed shipping option.

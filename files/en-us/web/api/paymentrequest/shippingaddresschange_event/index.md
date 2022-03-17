@@ -38,6 +38,10 @@ An {{domxref("PaymentRequestUpdateEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PaymentRequestUpdateEvent")}}
 
+## Event properties
+
+_Provides only the properties inherited from its parent interface, {{domxref("Event")}}._
+
 ## Usage notes
 
 Depending on the browser, the shipping address information may be redacted for privacy reasons. That is, the {{domxref("PaymentAddress")}} which contains the shipping address may have some portions of its content altered, obscured, or left out entirely in order to prevent identifying the user without their consent (since if they choose to have you ship products to them, you'll need their address).
