@@ -12,14 +12,6 @@ tags:
 
 A `menuitemradio` is checkable menuitem in a set of elements with the same role, only one of which can be checked at a time.
 
-
-A checkable menuitem in a set of elements with the same role, only one of which can be checked at a time.
-
-
-
-
-
-
 ## Description
 
 The items in menu and menubars are menu items. There are three types of menu items: [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role), and `menuitemradio`.
@@ -80,9 +72,9 @@ When a `menu` opens, or when a `menubar` receives focus, keyboard focus is place
 If the `menuitemradio` is in a submenu in a `menubar` or a menu opened with a menu button, the following keyboard interactions must be programmed in. :
 
 - <kbd>Enter</kbd>
-  - : Toggles the `aria-checked` state of the `menuitemradio`  and closes the menu.
+  - : If not checked, checks the focused `menuitemradio` and unchecks any other checked `menuitemradio` element in the same group. Also, closes the menu.
 - <kbd>Space</kbd> 
-  - : Toggles the `aria-checked` state of the `menuitemradio`. Does not close the menu.
+  - : If not checked, checks the focused `menuitemradio` and unchecks any other checked `menuitemradio` element in the same group without closing the menu.
 - <kbd>Escape</kbd>
   - : Closes menu. In menubar, moves focus to parent menubar item.
 - <kbd>Right Arrow</kbd>
