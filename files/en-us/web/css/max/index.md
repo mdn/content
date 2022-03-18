@@ -25,7 +25,7 @@ In the first above example, the width will be at least 400px, but will be wider 
 
 The `max()` function takes one or more comma-separated expressions as its parameter, with the largest (most positive) expression value used as the value of the property to which it is assigned.
 
-The expressions can be math expressions (using arithmetic operators), literal values, or other expressions, such as {{CSSxRef("attr()", "attr()")}}, that evaluate to a valid argument type (like {{CSSxRef("&lt;length&gt;")}}), or nested {{CSSxRef("min()", "min()")}} and `max()` functions.
+The expressions can be math expressions (using arithmetic operators), literal values, or other expressions, such as {{CSSxRef("attr", "attr()")}}, that evaluate to a valid argument type (like {{CSSxRef("&lt;length&gt;")}}), or nested {{CSSxRef("min", "min()")}} and `max()` functions.
 
 You can use different units for each value in your expression. You may also use parentheses to establish computation order when needed.
 
@@ -70,7 +70,7 @@ Think of the `max()` function as finding the minimum value allowed for a propert
 
 ## Accessibility concerns
 
-When `max()` is used for controlling text size, make sure the text is always large enough to read. A suggestion is to use the {{CSSxRef("min()", "min()")}} function nested within a `max()` that has as its second value a [relative length unit](/en-US/docs/Web/CSS/length#relative_length_units) that is always large enough to read. For example:
+When `max()` is used for controlling text size, make sure the text is always large enough to read. A suggestion is to use the {{CSSxRef("min", "min()")}} function nested within a `max()` that has as its second value a [relative length unit](/en-US/docs/Web/CSS/length#relative_length_units) that is always large enough to read. For example:
 
 ```css
 small {
@@ -93,7 +93,7 @@ This ensures a minimum size of _1rem_, with a text size that scales if the page 
 
 ## See also
 
-- {{CSSxRef("calc()", "calc()")}}
-- {{CSSxRef("clamp()", "clamp()")}}
-- {{CSSxRef("min()", "min()")}}
+- {{CSSxRef("calc", "calc()")}}
+- {{CSSxRef("clamp", "clamp()")}}
+- {{CSSxRef("min", "min()")}}
 - [CSS Values](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)

@@ -64,12 +64,12 @@ drop-shadow(.5rem .5rem 1rem #e23)
 
 - {{cssxref("&lt;filter-function&gt;")}}
 - CSS {{cssxref("box-shadow")}} property
-- {{cssxref("filter-function/blur()", "blur()")}}
-- {{cssxref("filter-function/brightness()", "brightness()")}}
-- {{cssxref("filter-function/contrast()", "contrast()")}}
-- {{cssxref("filter-function/grayscale()", "grayscale()")}}
-- {{cssxref("filter-function/hue-rotate()", "hue-rotate()")}}
-- {{cssxref("filter-function/invert()", "invert()")}}
-- {{cssxref("filter-function/opacity()", "opacity()")}}
-- {{cssxref("filter-function/saturate()", "saturate()")}}
-- {{cssxref("filter-function/sepia()", "sepia()")}}
+- {{cssxref("filter-function/blur", "blur()")}}
+- {{cssxref("filter-function/brightness", "brightness()")}}
+- {{cssxref("filter-function/contrast", "contrast()")}}
+- {{cssxref("filter-function/grayscale", "grayscale()")}}
+- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
+- {{cssxref("filter-function/invert", "invert()")}}
+- {{cssxref("filter-function/opacity", "opacity()")}}
+- {{cssxref("filter-function/saturate", "saturate()")}}
+- {{cssxref("filter-function/sepia", "sepia()")}}

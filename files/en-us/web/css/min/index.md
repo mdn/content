@@ -24,7 +24,7 @@ In the first above example, the width will be at most 200px, but will be smaller
 
 The `min()` function takes one or more comma-separated expressions as its parameter, with the smallest (most negative) expression value result used as the value.
 
-The expressions can be math expressions (using arithmetic operators), literal values, or other expressions, such as {{CSSxRef("attr()")}}, that evaluate to a valid argument type (like {{CSSxRef("&lt;length&gt;")}}).
+The expressions can be math expressions (using arithmetic operators), literal values, or other expressions, such as {{CSSxRef("attr", "attr()")}}, that evaluate to a valid argument type (like {{CSSxRef("&lt;length&gt;")}}).
 
 You can use different units for each value in your expression, if you wish. You may also use parentheses to establish computation order when needed.
 
@@ -92,7 +92,7 @@ Here, the form itself, along with the margin, border, and padding, will be 100% 
 
 ## See also
 
-- {{CSSxRef("calc()")}}
-- {{CSSxRef("clamp()")}}
-- {{CSSxRef("max()")}}
+- {{CSSxRef("calc", "calc()")}}
+- {{CSSxRef("clamp", "clamp()")}}
+- {{CSSxRef("max", "max()")}}
 - [CSS Values](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)

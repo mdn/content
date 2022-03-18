@@ -17,7 +17,7 @@ browser-compat: css.types.clamp
 
 The **`clamp()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) clamps a value between an upper and lower bound. `clamp()` enables selecting a middle value within a range of values between a defined minimum and maximum. It takes three parameters: a minimum value, a preferred value, and a maximum allowed value. The `clamp()` function can be used anywhere a {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, or {{CSSxRef("&lt;integer&gt;")}} is allowed.
 
-`clamp(MIN, VAL, MAX)` is resolved as `{{CSSxRef("max()")}}(MIN, {{CSSxRef("min()")}}(VAL, MAX))`
+`clamp(MIN, VAL, MAX)` is resolved as `{{CSSxRef("max", "max()")}}(MIN, {{CSSxRef("min", "min()")}}(VAL, MAX))`
 
 {{EmbedInteractiveExample("pages/css/function-clamp.html")}}
 
@@ -33,7 +33,7 @@ The preferred value is the expression whose value will be used as long as the re
 
 The maximum value is the largest (most positive) expression value to which the value of the property will be assigned if the preferred value is greater than this upper bound.
 
-The expressions can be math functions (see {{CSSxRef("calc()")}} for more information), literal values, other expressions that evaluate to a valid argument type (like {{CSSxRef("&lt;length&gt;")}}), or nested {{CSSxRef("min()")}} and {{CSSxRef("max()")}} functions. For math expressions, you can use addition, subtraction, multiplication, and division without using the `calc()` function itself. You may also use parentheses to establish computation order when needed.
+The expressions can be math functions (see {{CSSxRef("calc", "calc()")}} for more information), literal values, other expressions that evaluate to a valid argument type (like {{CSSxRef("&lt;length&gt;")}}), or nested {{CSSxRef("min", "min()")}} and {{CSSxRef("max", "max()")}} functions. For math expressions, you can use addition, subtraction, multiplication, and division without using the `calc()` function itself. You may also use parentheses to establish computation order when needed.
 
 You can use different units for each value in your expressions and different units in any math function making up any of the arguments.
 
@@ -42,7 +42,7 @@ You can use different units for each value in your expressions and different uni
 - Math expressions involving percentages for widths and heights on table columns, table column groups, table rows, table row groups, and table cells in both auto and fixed layout tables _may_ be treated as if `auto` had been specified.
 - It is permitted to nest `max()` and `min()` functions as expression values, in which case the inner ones are treated as simple parentheses. The expressions are full math expressions, so you can use direct addition, subtraction, multiplication and division without using the calc() function itself.
 - The expression can be values combining the addition ( + ), subtraction ( - ), multiplication ( \* ) and division ( / ) operators, using standard operator precedence rules. Make sure to put a space on each side of the + and - operands. The operands in the expression may be any {{CSSxRef("&lt;length&gt;")}} syntax value. You can use different units for each value in your expression. You may also use parentheses to establish computation order when needed.
-- Oftentimes you will want to use {{CSSxRef("min()")}} and {{CSSxRef("max()")}} within a `clamp()` function.
+- Oftentimes you will want to use {{CSSxRef("min", "min()")}} and {{CSSxRef("max", "max()")}} within a `clamp()` function.
 
 ### Formal syntax
 
@@ -52,7 +52,7 @@ You can use different units for each value in your expressions and different uni
 
 ### min, max, and clamp comparison
 
-In this example we have a simple responsive example that makes use of {{CSSxRef("min()")}}, {{CSSxRef("max()")}}, and {{CSSxRef("clamp()")}} for some of the sizes.
+In this example we have a simple responsive example that makes use of {{CSSxRef("min", "min()")}}, {{CSSxRef("max", "max()")}}, and {{CSSxRef("clamp", "clamp()")}} for some of the sizes.
 
 The [`<body>`](/en-US/docs/Web/HTML/Element/body) element's [`width`](/en-US/docs/Web/CSS/width) is set as `min(1000px, calc(70% + 100px))`. This means that the width will be set at `1000px`, unless the result of `calc(70% + 100px)` is less than `1000px`, in which case it will be set to that value instead. `min()` allows you set a maximum value.
 
@@ -104,7 +104,7 @@ p {
 
 ## See also
 
-- {{CSSxRef("calc()")}}
-- {{CSSxRef("max()")}}
-- {{CSSxRef("min()")}}
+- {{CSSxRef("calc", "calc()")}}
+- {{CSSxRef("max", "max()")}}
+- {{CSSxRef("min", "min()")}}
 - [CSS Values](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)

@@ -14,7 +14,7 @@ tags:
 
 The **`rgb()`** functional notation expresses a color according to its red, green, and blue components. An optional alpha component represents the color's transparency.
 
-> **Note:** CSS Colors Level 4 made some changes to `rgb()`. In browsers that support the standard {{cssxref("color_value/rgba()","rgba()")}} is an alias for `rgb()`, they accept the same parameters and behave the same way.
+> **Note:** CSS Colors Level 4 made some changes to `rgb()`. In browsers that support the standard {{cssxref("color_value/rgba","rgba()")}} is an alias for `rgb()`, they accept the same parameters and behave the same way.
 >
 > The Level 4 specification also allows for space-separated in addition to comma-separated values.
 

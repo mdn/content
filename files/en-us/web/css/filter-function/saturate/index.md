@@ -48,12 +48,12 @@ saturate(200%)  /* Double saturation */
 ## See also
 
 - {{cssxref("&lt;filter-function&gt;")}}
-- {{cssxref("filter-function/blur()", "blur()")}}
-- {{cssxref("filter-function/brightness()", "brightness()")}}
-- {{cssxref("filter-function/contrast()", "contrast()")}}
-- {{cssxref("filter-function/drop-shadow()", "drop-shadow()")}}
-- {{cssxref("filter-function/grayscale()", "grayscale()")}}
-- {{cssxref("filter-function/hue-rotate()", "hue-rotate()")}}
-- {{cssxref("filter-function/invert()", "invert()")}}
-- {{cssxref("filter-function/opacity()", "opacity()")}}
-- {{cssxref("filter-function/sepia()", "sepia()")}}
+- {{cssxref("filter-function/blur", "blur()")}}
+- {{cssxref("filter-function/brightness", "brightness()")}}
+- {{cssxref("filter-function/contrast", "contrast()")}}
+- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
+- {{cssxref("filter-function/grayscale", "grayscale()")}}
+- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
+- {{cssxref("filter-function/invert", "invert()")}}
+- {{cssxref("filter-function/opacity", "opacity()")}}
+- {{cssxref("filter-function/sepia", "sepia()")}}

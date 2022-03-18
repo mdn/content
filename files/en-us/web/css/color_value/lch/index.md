@@ -13,7 +13,7 @@ browser-compat: css.types.color.lch
 ---
 {{CSSRef}}
 
-The **`lch()`** functional notation expresses a given color in the LCH color space. It has the same L axis as {{cssxref("color_value/lab()","lab()")}}, but uses polar coordinates C (Chroma) and H (Hue).
+The **`lch()`** functional notation expresses a given color in the LCH color space. It has the same L axis as {{cssxref("color_value/lab","lab()")}}, but uses polar coordinates C (Chroma) and H (Hue).
 
 ## Syntax
 
@@ -46,4 +46,4 @@ lch(52.2345% 72.2 56.2 / .5);
 ## See also
 
 - [LCH colors in CSS: what, why, and how?](https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/)
-- [Safari Technology Preview 122 release notes](https://webkit.org/blog/11577/release-notes-for-safari-technology-preview-122/): includes `lch()` and {{cssxref("color_value/lab()",'lab()')}} colors.
+- [Safari Technology Preview 122 release notes](https://webkit.org/blog/11577/release-notes-for-safari-technology-preview-122/): includes `lch()` and {{cssxref("color_value/lab",'lab()')}} colors.

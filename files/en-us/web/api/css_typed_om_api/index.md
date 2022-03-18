@@ -73,9 +73,9 @@ CSSStyleValue is the base class through which all CSS values are expressed. Subc
 
   - : A tree of subclasses representing numeric values that are more complicated than a single value and unit, including:
 
-    - {{domxref('CSSMathInvert')}} - represents a CSS {{cssxref("calc()","calc()")}} value used as `calc(1 / <value>)`.
-    - {{domxref('CSSMathMax')}} - represents the CSS {{cssxref("max()","max()")}} function.
-    - {{domxref('CSSMathMin')}} - represents the CSS {{cssxref("min()","min()")}} function.
+    - {{domxref('CSSMathInvert')}} - represents a CSS {{cssxref("calc","calc()")}} value used as `calc(1 / <value>)`.
+    - {{domxref('CSSMathMax')}} - represents the CSS {{cssxref("max","max()")}} function.
+    - {{domxref('CSSMathMin')}} - represents the CSS {{cssxref("min","min()")}} function.
     - {{domxref('CSSMathNegate')}} - negates the value passed into it.
     - {{domxref('CSSMathProduct')}} - represents the result obtained by calling {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}.
     - {{domxref('CSSMathSum')}} - represents the result obtained by calling {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}.

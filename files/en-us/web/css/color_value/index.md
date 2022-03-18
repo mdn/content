@@ -29,15 +29,15 @@ A `<color>` can be defined in any of the following ways:
 - Using a keyword (such as `blue` or `transparent`). All existing keywords specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB)
 - Using the [RGB cubic-coordinate](https://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation) system (via the #-hexadecimal or the `rgb()` and `rgba()` functional notations).
   These always specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB)
-- Using the [HSL cylindrical-coordinate](https://en.wikipedia.org/wiki/HSL_and_HSV) system (via the {{cssxref("color_value/hsl()","hsl()")}} and {{cssxref("color_value/hsla()","hsla()")}} functional notations).
+- Using the [HSL cylindrical-coordinate](https://en.wikipedia.org/wiki/HSL_and_HSV) system (via the {{cssxref("color_value/hsl","hsl()")}} and {{cssxref("color_value/hsla","hsla()")}} functional notations).
   These always specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB)
-- Using the [HWB cylindrical-coordinate](https://en.wikipedia.org/wiki/HWB_color_model) system (via the {{cssxref("color_value/hwb()","hwb()")}} functional notation).
+- Using the [HWB cylindrical-coordinate](https://en.wikipedia.org/wiki/HWB_color_model) system (via the {{cssxref("color_value/hwb","hwb()")}} functional notation).
   These always specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB)
-- Using the [LCH cylindrical coordinate system](https://en.wikipedia.org/wiki/CIELAB_color_space#Cylindrical_representation:_CIELCh_or_CIEHLC), via the {{cssxref("color_value/lch()","lch()")}} functional notation.
+- Using the [LCH cylindrical coordinate system](https://en.wikipedia.org/wiki/CIELAB_color_space#Cylindrical_representation:_CIELCh_or_CIEHLC), via the {{cssxref("color_value/lch","lch()")}} functional notation.
   This can specify any visible color.
-- Using the [Lab coordinate system](https://en.wikipedia.org/wiki/CIELAB_color_space), via the {{cssxref("color_value/lab()","lab()")}} functional notation.
+- Using the [Lab coordinate system](https://en.wikipedia.org/wiki/CIELAB_color_space), via the {{cssxref("color_value/lab","lab()")}} functional notation.
   This can specify any visible color.
-- Using the {{cssxref("color_value/color()","color()")}} functional notation, to specify a color in a variety of predefined or custom color spaces.
+- Using the {{cssxref("color_value/color","color()")}} functional notation, to specify a color in a variety of predefined or custom color spaces.
 
 > **Note:** This article describes the `<color>` data type in detail. To learn more about using color in HTML, see [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color).
 
@@ -1090,13 +1090,13 @@ The following keywords were defined in earlier versions of the CSS Color Module.
 ### Lab colors
 
 CSS Color 4 introduced Lab colors.
-Lab colors are specified via the {{cssxref("color_value/lab()","lab()")}} functional notation.
+Lab colors are specified via the {{cssxref("color_value/lab","lab()")}} functional notation.
 They are not limited to a specific color space, and can represent the entire spectrum of human vision.
 
 ### LCH colors
 
 CSS Color 4 introduced LCH colors.
-LCH colors are specified via the {{cssxref("color_value/lch()","lch()")}} functional notation.
+LCH colors are specified via the {{cssxref("color_value/lch","lch()")}} functional notation.
 They are not limited to a specific color space, and can represent the entire spectrum of human vision.
 
 In fact, LCH is the polar form of Lab. It is more human friendly than Lab, as its chroma and hue components specify qualities of the desired color, as opposed to mixing.
@@ -1109,7 +1109,7 @@ Please note that LCH hue is not the same as HSL hue and LCH chroma is not the sa
 ### color() colors
 
 CSS Color 4 introduced this notation.
-Colors specified via the {{cssxref("color_value/color()","color()")}} function can specify a color in any of the predefined color spaces,
+Colors specified via the {{cssxref("color_value/color","color()")}} function can specify a color in any of the predefined color spaces,
 as well as custom color spaces, defined via the [`@color-profile`](/en-US/docs/Web/CSS/@color-profile) rule.
 
 ## Interpolation

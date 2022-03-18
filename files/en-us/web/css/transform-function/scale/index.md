@@ -223,4 +223,4 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- {{cssxref("transform-function/scale3d()", "scale3d()")}}
+- {{cssxref("transform-function/scale3d", "scale3d()")}}

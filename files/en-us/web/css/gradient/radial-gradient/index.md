@@ -61,7 +61,7 @@ A radial gradient is specified by indicating the center of the gradient (where t
 
 As with any gradient, a radial gradient has [no intrinsic dimensions](/en-US/docs/Web/CSS/image#description); i.e., it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element it applies to.
 
-To create a radial gradient that repeats so as to fill its container, use the {{cssxref("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}} function instead.
+To create a radial gradient that repeats so as to fill its container, use the {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}} function instead.
 
 Because `<gradient>`s belong to the `<image>` data type, they can only be used where `<image>`s can be used. For this reason, `radial-gradient()` won't work on {{Cssxref("background-color")}} and other properties that use the {{cssxref("&lt;color&gt;")}} data type.
 
@@ -137,9 +137,9 @@ Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradie
 ## See also
 
 - [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
-- Other gradient functions: {{cssxref("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}}, {{cssxref("gradient/linear-gradient()", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}}, {{cssxref("gradient/conic-gradient()", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient()", "repeating-conic-gradient()")}}
+- Other gradient functions: {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - {{cssxref("&lt;image&gt;")}}
-- {{cssxref("image/image()","image()")}}
-- {{cssxref("element()")}}
-- {{cssxref("image/image-set()","image-set()")}}
-- {{cssxref("cross-fade()")}}
+- {{cssxref("image/image","image()")}}
+- {{cssxref("element", "element()")}}
+- {{cssxref("image/image-set","image-set()")}}
+- {{cssxref("cross-fade", "cross-fade()")}}

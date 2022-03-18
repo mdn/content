@@ -64,4 +64,4 @@ div {
 
 ## See also
 
-- {{CSSxRef("sign", "sign()")}}
+- {{CSSxRef("sign_function", "sign()")}}

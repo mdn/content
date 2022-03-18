@@ -84,8 +84,8 @@ Browsers do not provide any special information on background images to assistiv
 ## See also
 
 - {{cssxref("image")}}
-- {{cssxref("image/image()", "image()")}}
-- {{cssxref("element()")}}
-- {{cssxref("url()")}}
+- {{cssxref("image/image", "image()")}}
+- {{cssxref("element", "element()")}}
+- {{cssxref("url", "url()")}}
 - {{cssxref("&lt;gradient&gt;")}}
-- {{cssxref("cross-fade()")}}
+- {{cssxref("cross-fade", "cross-fade()")}}

@@ -126,15 +126,15 @@ div {
 - Image-related data types: {{cssxref("&lt;image&gt;")}}, {{cssxref("&lt;gradient&gt;")}}
 - Image-related functions:
 
-  - {{cssxref("cross-fade()")}}
-  - {{cssxref("element()")}}
-  - {{cssxref("image/image()", "image()")}}
-  - {{cssxref("image/image-set()", "image-set()")}}
-  - {{cssxref("gradient/linear-gradient()", "linear-gradient()")}}
-  - {{cssxref("gradient/radial-gradient()", "radial-gradient()")}}
-  - {{cssxref("gradient/conic-gradient()", "conic-gradient()")}}
-  - {{cssxref("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}}
-  - {{cssxref("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}}
-  - {{cssxref("gradient/repeating-conic-gradient()", "repeating-conic-gradient()")}}
-  - {{cssxref("image/paint()", "paint()")}}
-  - {{cssxref("url()", "url()")}}
+  - {{cssxref("cross-fade", "cross-fade()")}}
+  - {{cssxref("element", "element()")}}
+  - {{cssxref("image/image", "image()")}}
+  - {{cssxref("image/image-set", "image-set()")}}
+  - {{cssxref("gradient/linear-gradient", "linear-gradient()")}}
+  - {{cssxref("gradient/radial-gradient", "radial-gradient()")}}
+  - {{cssxref("gradient/conic-gradient", "conic-gradient()")}}
+  - {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}
+  - {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
+  - {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
+  - {{cssxref("image/paint", "paint()")}}
+  - {{cssxref("url", "url()")}}

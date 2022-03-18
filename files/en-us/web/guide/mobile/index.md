@@ -48,7 +48,7 @@ To create web sites that will work acceptably across different mobile browsers:
 - If you do need to use these features, check whether other browsers implement their own versions of these features, and target them too.
 - For browsers that don't support these features, provide an acceptable fallback.
 
-For example, if you set a gradient as a background for some text using a vendor-prefixed property like `-webkit-linear-gradient`, it's best to include the other vendor-prefixed versions of the {{cssxref("linear-gradient()")}} property. If you don't do that, at least make sure that the default background contrasts with the text: that way, the page will at least be usable in a browser which is not targeted by your `linear-gradient` rule.
+For example, if you set a gradient as a background for some text using a vendor-prefixed property like `-webkit-linear-gradient`, it's best to include the other vendor-prefixed versions of the {{cssxref("linear-gradient", "linear-gradient()")}} property. If you don't do that, at least make sure that the default background contrasts with the text: that way, the page will at least be usable in a browser which is not targeted by your `linear-gradient` rule.
 
 See this [list of Gecko-specific properties](/en-US/docs/Web/CSS/Mozilla_Extensions), and this [list of WebKit-specific properties](/en-US/docs/Web/CSS/WebKit_Extensions), and Peter Beverloo's [table of vendor-specific properties](http://peter.sh/experiments/vendor-prefixed-css-property-overview/).
 

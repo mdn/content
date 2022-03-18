@@ -80,5 +80,5 @@ body {
 
 ## See also
 
-- {{cssxref("env()","env(…)")}} – read‑only environment variables controlled by the user‑agent.
+- {{cssxref("env","env(…)")}} – read‑only environment variables controlled by the user‑agent.
 - [Using CSS variables](/en-US/docs/Web/CSS/Using_CSS_custom_properties)

@@ -14,7 +14,7 @@ tags:
 
 The **`hsl()`** functional notation expresses a given color according to its hue, saturation, and lightness components. An optional alpha component represents the color's transparency.
 
-> **Note:** CSS Colors Level 4 made some changes to `hsl()`. In browsers that support the standard {{cssxref("color_value/hsla()","hsla()")}} is an alias for `hsl()`, they accept the same parameters and behave the same way.
+> **Note:** CSS Colors Level 4 made some changes to `hsl()`. In browsers that support the standard {{cssxref("color_value/hsla","hsla()")}} is an alias for `hsl()`, they accept the same parameters and behave the same way.
 >
 > The Level 4 specification also allows for space-separated in addition to comma-separated values.
 

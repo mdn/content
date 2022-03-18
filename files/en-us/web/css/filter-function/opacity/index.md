@@ -50,12 +50,12 @@ opacity(1)    /* No effect */
 
 - {{cssxref("&lt;filter-function&gt;")}}
 - CSS {{cssxref("opacity")}} property
-- {{cssxref("filter-function/blur()", "blur()")}}
-- {{cssxref("filter-function/brightness()", "brightness()")}}
-- {{cssxref("filter-function/contrast()", "contrast()")}}
-- {{cssxref("filter-function/drop-shadow()", "drop-shadow()")}}
-- {{cssxref("filter-function/grayscale()", "grayscale()")}}
-- {{cssxref("filter-function/hue-rotate()", "hue-rotate()")}}
-- {{cssxref("filter-function/invert()", "invert()")}}
-- {{cssxref("filter-function/saturate()", "saturate()")}}
-- {{cssxref("filter-function/sepia()", "sepia()")}}
+- {{cssxref("filter-function/blur", "blur()")}}
+- {{cssxref("filter-function/brightness", "brightness()")}}
+- {{cssxref("filter-function/contrast", "contrast()")}}
+- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
+- {{cssxref("filter-function/grayscale", "grayscale()")}}
+- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
+- {{cssxref("filter-function/invert", "invert()")}}
+- {{cssxref("filter-function/saturate", "saturate()")}}
+- {{cssxref("filter-function/sepia", "sepia()")}}
