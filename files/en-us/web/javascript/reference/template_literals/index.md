@@ -17,7 +17,7 @@ browser-compat: javascript.grammar.template_literals
 
 Template literals are literals delimited with backtick (\`) characters, allowing for [multi-line strings](#multi-line_strings), for [string interpolation](#string-interpolation) with embedded expressions, and for special constructs called [tagged templates](#tagged-templates).
 
-Template literals are sometimes informally called _template strings_, because one of their most common uses is to create strings by substituting placeholder variables and expressions ([string interpolation](#string-interpolation)). 
+Template literals are sometimes informally called _template strings_, because one of their most common uses is to create strings by substituting placeholder variables and expressions ([string interpolation](#string-interpolation)).
 Not however they ate are _not_ string literals, and can't be used everywhere a string literal can be used. In addition, a tagged template literal may not result in a string; it can be used with a custom [tag function](#tagged-templates) to create any type of object.
 
 ## Syntax

@@ -11,7 +11,6 @@ browser-compat: api.Window.deviceorientationabsolute_event
 ---
 {{ ApiRef() }}{{Non-standard_header}}
 
-
 The **`deviceorientationabsolute`** event is sent to the `ondeviceorientationabsolute` event handler on a {{domxref('Window')}} event when absolute device orientation changes.
 
 This event is not cancelable and does not bubble.
