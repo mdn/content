@@ -407,7 +407,7 @@ For example, the following regular exppression might be used to match against an
 /\p{L}*/u
 ```
 
-However, there are a number of other differences between unicode and non-unicode regular expressions that one should be aware of:
+There are a number of other differences between unicode and non-unicode regular expressions that one should be aware of:
 
 - Unicode regular expressions do not support so-called "identity escapes"; that is, patterns where an escaping backslash is superfluous and effectively ignored. For example, `/\a/` is a valid regular expression matching the letter 'a', but `/\a/u` is not.
 
