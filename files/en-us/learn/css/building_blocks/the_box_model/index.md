@@ -93,7 +93,7 @@ Below this, we have a block-level paragraph, inside which are two `<span>` eleme
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/block.html", '100%', 1050)}}
 
-In the next example we can see how `inline` elements behave. The `<span>` elements in the first paragraph are inline by default and so do not force line breaks.
+In the next example, we can see how `inline` elements behave. The `<span>` elements in the first paragraph are inline by default and so do not force line breaks.
 
 We also have a `<ul>` element which is set to `display: inline-flex`, creating an inline box around some flex items.
 
