@@ -113,7 +113,7 @@ The "index.html" file and the "style.css" files are already complete:
     <label for="quota">Number of primes:</label>
     <input type="text" id="quota" name="quota" value="1000000">
 
-    <button id="generate-primes">Generate primes</button>
+    <button id="generate">Generate primes</button>
     <button id="reload">Reload</button>
 
     <textarea id="user-input" rows="5" cols="62">Try typing in here immediately after pressing "Generate primes"</textarea>
@@ -146,7 +146,7 @@ const worker = new Worker('./generate.js');
 // When the user clicks "Generate primes", send a message to the worker.
 // The message command is "generate", and the message also contains "quota",
 // which is the number of primes to generate.
-document.querySelector('#generate-primes').addEventListener('click', () => {
+document.querySelector('#generate').addEventListener('click', () => {
   const quota = document.querySelector('#quota').value;
   worker.postMessage({
     command: 'generate',
