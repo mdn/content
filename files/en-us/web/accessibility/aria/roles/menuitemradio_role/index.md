@@ -14,15 +14,20 @@ A `menuitemradio` is checkable menuitem in a set of elements with the same role,
 
 ## Description
 
-The items in menu and menubars are menu items. There are three types of menu items: [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role), and `menuitemradio`.
+The items in menu and menubars are menu items. There are three types of menu items: [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role), and `menuitemradio`. To limit the number of checked menu items to one within a group, use the `menuitemradio` role on all the elements in the group.
+A `menuitemradio` is checkable menuitem in a set of elements with the same role, of which only can be checked at a time.
 
-These three elements can only be contained in, or owned by, an element with role [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role) or [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role), optionally nested within a grouping element with role of [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role). Being nested or otherwised owned (see [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)) in a `menu` or `menubar` identifies the menu items as being related widgets. When all items in a submenu are members of the same radio group, the `group` is defined by the menu element; the `group` element is not necessary.
+The three menu item elements can only be contained in, or owned by, an element with role [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role) or [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role), optionally nested within a grouping element with role of [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role). Being nested or otherwised owned (see [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)) in a `menu` or `menubar` identifies the menu items as being related widgets. 
 
-Menu items containing the role of `menuitemradio` must include the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute to expose the radio button's state to assistive technology, unless using [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/Input/checkbox), in which case the ['checked'](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input/checkbox#attr-checked) attribute should be used.
+When all items in a submenu are members of the same radio group, the `group` is defined by the menu element; the `group` element is not necessary.
 
-Similar to the 'checked' attribute of {{HTMLElement('input')}}s of type `radio`, the `aria-checked` attribute of a `menuitemradio` indicates whether the menu item is checked (`true`), unchecked (`false`). If missing, the value defaults to `false`.
+Menu items containing the role of `menuitemradio` must include the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute to expose the radio button's state to assistive technology, unless using [`<input type="radio">`](/en-US/docs/Web/HTML/Element/Input/checkbox), in which case the ['checked'](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input/checkbox#attr-checked) attribute should be used.
 
-Only one `menuitemradio` in a group can be checked at the same time. When one item in the group is checked, having `aria-checked="true"`, the previously checked item becomes unchecked, like all the other `menuitemradio` in the group except the newly selected one, have `aria-checked="false"` set. 
+Similar to the 'checked' attribute of {{HTMLElement('input')}}s of type `radio`, the `aria-checked` attribute of a `menuitemradio` indicates whether the menu item is checked (`true`), unchecked (`false`). If missing, the value defaults to `false`. There is no `mixed` value like there is for `menuitemcheckbox`. 
+
+Only one `menuitemradio` in a group can be checked at the same time. When one item in the group is checked, the `aria-checked` attribute gets set to `true`, while the previously checked `menuitemradio` element in the same group, if there was one, becomes unchecked, by having the `aria-checked` attribute value switched to `false`.  
+
+If your want more than one item in a group to be checked, or if you want to enable checking and unchecking an item, consider using `menuitemcheckbox`.
 
 If a `menu` or `menubar` contains more than one group of `menuitemradio` elements, or if the `menu` contains a group of `menuitemradio` elements as well as other, unrelated `menuitem` elements and/or `menuitemcheckbox` elements, contain each set of related `menuitemradio` elements in a `group` element or delimit the group the `menuitemradio` elements from the other menu items with a `separator` element (or an HTML element with an equivalent role such as a {{HTMLElement('fieldset')}} grouping or a thematic break {{HTMLElement('hr')}} separator.
 
