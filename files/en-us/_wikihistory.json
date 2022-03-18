@@ -88312,6 +88312,16 @@
       "kscarfone"
     ]
   },
+  "Web/API/WorkerGlobalScope/error_event": {
+    "modified": "2020-10-15T21:32:16.897Z",
+    "contributors": [
+      "sideshowbarker",
+      "fscholz",
+      "teoli",
+      "chrisdavidmills",
+      "kscarfone"
+    ]
+  },
   "Web/API/WorkerGlobalScope/importScripts": {
     "modified": "2020-10-15T21:32:17.758Z",
     "contributors": [
@@ -88360,27 +88370,7 @@
       "kscarfone"
     ]
   },
-  "Web/API/WorkerGlobalScope/onerror": {
-    "modified": "2020-10-15T21:32:16.897Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "teoli",
-      "chrisdavidmills",
-      "kscarfone"
-    ]
-  },
-  "Web/API/WorkerGlobalScope/onlanguagechange": {
-    "modified": "2020-10-15T21:32:18.564Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "teoli",
-      "chrisdavidmills",
-      "kscarfone"
-    ]
-  },
-  "Web/API/WorkerGlobalScope/onoffline": {
+  "Web/API/WorkerGlobalScope/offline_event": {
     "modified": "2020-10-15T21:32:19.561Z",
     "contributors": [
       "sideshowbarker",
@@ -88390,7 +88380,7 @@
       "kscarfone"
     ]
   },
-  "Web/API/WorkerGlobalScope/ononline": {
+  "Web/API/WorkerGlobalScope/online_event": {
     "modified": "2020-10-15T21:32:22.533Z",
     "contributors": [
       "sideshowbarker",

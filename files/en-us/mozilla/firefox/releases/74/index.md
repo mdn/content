@@ -56,7 +56,7 @@ _No changes._
 
 #### DOM events
 
-- Firefox 74 now supports the {{domxref("WorkerGlobalScope.languagechange_event", "languagechange_event")}} event and its companion event handler property, {{domxref("WorkerGlobalScope.onlanguagechange", "onlanguagechange")}}, which is triggered when the user changes their preferred language ({{bug(1154779)}}). This was previously listed in our [compatibility database](https://github.com/mdn/browser-compat-data) as supported from Firefox 3.5, but this was in error.
+- Firefox 74 now supports the {{domxref("WorkerGlobalScope.languagechange_event", "languagechange_event")}} event and its companion event handler property, `onlanguagechange`, which is triggered when the user changes their preferred language ({{bug(1154779)}}). This was previously listed in our [compatibility database](https://github.com/mdn/browser-compat-data) as supported from Firefox 3.5, but this was in error.
 
 #### Canvas and WebGL
 
