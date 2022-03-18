@@ -101,15 +101,16 @@ X-Forwarded-For: 203.0.113.195,2001:db8:85a3:8d3:1319:8a2e:370:7348,150.172.238.
 Improper parsing of the `X-Forwarded-For` header can result in spoofed values being used
 for security-related purposes, resulting in the negative consequences mentioned above.
 
-There may be multiple `X-Forwarded-For` headers present in a request (per [RFC 
+There may be multiple `X-Forwarded-For` headers present in a request (per [RFC
 2616](https://datatracker.ietf.org/doc/html/rfc2616#section-4.2)). The IP addresses in
 these headers must be treated as a single list, starting with the first IP address of the
 first header and continuing to the last IP address of the last header. There are two ways
 of making this single list:
+
 - join the `X-Forwarded-For` full header values with commas and then split by comma into a list, or
 - split each `X-Forwarded-For` header by comma into lists and then join the lists
 
-It is insufficient to use only one of multiple `X-Forwarded-For` headers. 
+It is insufficient to use only one of multiple `X-Forwarded-For` headers.
 
 (Some reverse proxies will automatically join multiple `X-Forwarded-For` headers into one,
 but it is safest to not assume that this is the case.)
@@ -127,10 +128,11 @@ space](https://en.wikipedia.org/wiki/Private_network).)
 
 When choosing the first _trustworthy_ `X-Forwarded-For` client IP address, additional
 configuration is required. There are two common methods:
-- **Trusted proxy count**: The count of reverse proxies between the internet and the 
+
+- **Trusted proxy count**: The count of reverse proxies between the internet and the
    server is configured. The `X-Forwarded-For` IP list is searched from the rightmost by
    that count minus one. (For example, if there is only one reverse proxy, that proxy will
-   add the client's IP address, so the rightmost address should be used. If there are 
+   add the client's IP address, so the rightmost address should be used. If there are
    three reverse proxies, the last two IP addresses will be internal.)
 - **Trusted proxy list**: The IPs or IP ranges of the trusted reverse proxies are
    configured. The `X-Forwarded-For` IP list is searched from the rightmost, skipping all
@@ -142,7 +144,7 @@ proxy rather than the actual client computer, but it is the only IP suitable for
 uses.
 
 Note that if the server is directly connectable from the internet — even if it is also
-behind a trusted reverse proxy — _no part_ of the `X-Forwarded-For` IP list can be 
+behind a trusted reverse proxy — _no part_ of the `X-Forwarded-For` IP list can be
 considered trustworthy or safe for security-related uses.
 
 ## Specifications

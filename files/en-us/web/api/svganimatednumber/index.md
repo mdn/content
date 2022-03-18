@@ -13,7 +13,7 @@ browser-compat: api.SVGAnimatedNumber
 
 ## SVG animated number interface
 
-The `SVGAnimatedNumber` interface is used for attributes of basic type [\<Number>](/en-US/docs/SVG/Content_type#Number) which can be animated.
+The `SVGAnimatedNumber` interface is used for attributes of basic type [\<Number>](/en-US/docs/Web/SVG/Content_type#Number) which can be animated.
 
 ### Interface overview
 
