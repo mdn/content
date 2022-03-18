@@ -409,7 +409,7 @@ For example, the following regular exppression might be used to match against an
 
 There are a number of other differences between unicode and non-unicode regular expressions that one should be aware of:
 
-- Unicode regular expressions do not support so-called "identity escapes"; that is, patterns where an escaping backslash is superfluous and effectively ignored. For example, `/\a/` is a valid regular expression matching the letter 'a', but `/\a/u` is not.
+- Unicode regular expressions do not support so-called "identity escapes"; that is, patterns where an escaping backslash is not needed and effectively ignored. For example, `/\a/` is a valid regular expression matching the letter 'a', but `/\a/u` is not.
 
 - Curly brackets need to be escaped when not used as quantifiers. For example, `/{/` is a valid regular expression matching the curly bracket '{', but `/{/u` is not -- instead, the bracket should be escaped and `/\{/u` should be used instead.
 
