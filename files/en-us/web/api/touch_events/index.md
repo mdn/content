@@ -48,6 +48,8 @@ This example tracks multiple touchpoints at a time, allowing the user to draw in
   Your browser does not support canvas element.
 </canvas>
 <br>
+<button onclick="window.startup();">Initialize</button>
+<br>
 Log: <pre id="log" style="border: 1px solid #ccc;"></pre>
 ```
 
@@ -57,11 +59,12 @@ When the page loads, the `startup()` function shown below will be called.
 
 ```js
 function startup() {
-  var el = document.getElementById("canvas");
+  const el = document.getElementById("canvas");
   el.addEventListener("touchstart", handleStart, false);
   el.addEventListener("touchend", handleEnd, false);
   el.addEventListener("touchcancel", handleCancel, false);
   el.addEventListener("touchmove", handleMove, false);
+  log("Initialized.");
 }
 
 document.addEventListener("DOMContentLoaded", startup);
@@ -74,7 +77,7 @@ This sets up all the event listeners for our {{HTMLElement("canvas")}} element s
 We'll keep track of the touches in-progress.
 
 ```js
-var ongoingTouches = [];
+const ongoingTouches = [];
 ```
 
 When a {{domxref("Element/touchstart_event", "touchstart")}} event occurs, indicating that a new touch on the surface has occurred, the `handleStart()` function below is called.
@@ -83,14 +86,14 @@ When a {{domxref("Element/touchstart_event", "touchstart")}} event occurs, indic
 function handleStart(evt) {
   evt.preventDefault();
   console.log("touchstart.");
-  var el = document.getElementById("canvas");
-  var ctx = el.getContext("2d");
-  var touches = evt.changedTouches;
+  const el = document.getElementById("canvas");
+  const ctx = el.getContext("2d");
+  const touches = evt.changedTouches;
 
-  for (var i = 0; i < touches.length; i++) {
+  for (let i = 0; i < touches.length; i++) {
     console.log("touchstart:" + i + "...");
     ongoingTouches.push(copyTouch(touches[i]));
-    var color = colorForTouch(touches[i]);
+    const color = colorForTouch(touches[i]);
     ctx.beginPath();
     ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false);  // a circle at the start
     ctx.fillStyle = color;
@@ -111,13 +114,13 @@ Each time one or more fingers move, a {{domxref("Element/touchmove_event", "touc
 ```js
 function handleMove(evt) {
   evt.preventDefault();
-  var el = document.getElementById("canvas");
-  var ctx = el.getContext("2d");
-  var touches = evt.changedTouches;
+  const el = document.getElementById("canvas");
+  const ctx = el.getContext("2d");
+  const touches = evt.changedTouches;
 
-  for (var i = 0; i < touches.length; i++) {
-    var color = colorForTouch(touches[i]);
-    var idx = ongoingTouchIndexById(touches[i].identifier);
+  for (let i = 0; i < touches.length; i++) {
+    const color = colorForTouch(touches[i]);
+    let idx = ongoingTouchIndexById(touches[i].identifier);
 
     if (idx >= 0) {
       console.log("continuing touch "+idx);
@@ -153,13 +156,13 @@ When the user lifts a finger off the surface, a {{domxref("Element/touchend_even
 function handleEnd(evt) {
   evt.preventDefault();
   log("touchend");
-  var el = document.getElementById("canvas");
-  var ctx = el.getContext("2d");
-  var touches = evt.changedTouches;
+  const el = document.getElementById("canvas");
+  const ctx = el.getContext("2d");
+  const touches = evt.changedTouches;
 
-  for (var i = 0; i < touches.length; i++) {
-    var color = colorForTouch(touches[i]);
-    var idx = ongoingTouchIndexById(touches[i].identifier);
+  for (let i = 0; i < touches.length; i++) {
+    const color = colorForTouch(touches[i]);
+    let idx = ongoingTouchIndexById(touches[i].identifier);
 
     if (idx >= 0) {
       ctx.lineWidth = 4;
@@ -186,10 +189,10 @@ If the user's finger wanders into browser UI, or the touch otherwise needs to be
 function handleCancel(evt) {
   evt.preventDefault();
   console.log("touchcancel.");
-  var touches = evt.changedTouches;
+  const touches = evt.changedTouches;
 
-  for (var i = 0; i < touches.length; i++) {
-    var idx = ongoingTouchIndexById(touches[i].identifier);
+  for (let i = 0; i < touches.length; i++) {
+    let idx = ongoingTouchIndexById(touches[i].identifier);
     ongoingTouches.splice(idx, 1);  // remove it; we're done
   }
 }
@@ -207,13 +210,13 @@ To make each touch's drawing look different, the `colorForTouch()` function is u
 
 ```js
 function colorForTouch(touch) {
-  var r = touch.identifier % 16;
-  var g = Math.floor(touch.identifier / 3) % 16;
-  var b = Math.floor(touch.identifier / 7) % 16;
+  let r = touch.identifier % 16;
+  let g = Math.floor(touch.identifier / 3) % 16;
+  let b = Math.floor(touch.identifier / 7) % 16;
   r = r.toString(16); // make it a hex digit
   g = g.toString(16); // make it a hex digit
   b = b.toString(16); // make it a hex digit
-  var color = "#" + r + g + b;
+  let color = "#" + r + g + b;
   console.log("color for touch with identifier " + touch.identifier + " = " + color);
   return color;
 }
@@ -237,8 +240,8 @@ The `ongoingTouchIndexById()` function below scans through the `ongoingTouches` 
 
 ```js
 function ongoingTouchIndexById(idToFind) {
-  for (var i = 0; i < ongoingTouches.length; i++) {
-    var id = ongoingTouches[i].identifier;
+  for (let i = 0; i < ongoingTouches.length; i++) {
+    const id = ongoingTouches[i].identifier;
 
     if (id == idToFind) {
       return i;
@@ -252,16 +255,21 @@ function ongoingTouchIndexById(idToFind) {
 
 ```js
 function log(msg) {
-  var p = document.getElementById('log');
+  const p = document.getElementById('log');
   p.innerHTML = msg + "\n" + p.innerHTML;
 }
 ```
 
-#### Result
+### Result
 
-{{EmbedLiveSample('Demo')}}
+You can test this example on mobile devices by touching the box below.
 
-You can also {{LiveSampleLink('Demo', 'view the results of the demo code in a separate page')}} (or try it out on [jsFiddle here](https://jsfiddle.net/Darbicus/z3Xdx/10/)).
+{{EmbedLiveSample('Example','100%', 880)}}
+
+> **Note:** More generally, the example will work on platforms that provide touch events. 
+> You can test this on desktop versions of Firefox by enabling "touch simulation" in [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode#toggling_responsive_design_mode), and then pressing the "Initialize" button to reload the content.
+
+You can also [try it out on jsFiddle here](https://jsfiddle.net/Darbicus/z3Xdx/10/).
 
 ## Additional tips
 
@@ -277,9 +285,9 @@ function onTouch(evt) {
   if (evt.touches.length > 1 || (evt.type == "touchend" && evt.touches.length > 0))
     return;
 
-  var newEvt = document.createEvent("MouseEvents");
-  var type = null;
-  var touch = null;
+  let newEvt = document.createEvent("MouseEvents");
+  let type = null;
+  let touch = null;
 
   switch (evt.type) {
     case "touchstart":
