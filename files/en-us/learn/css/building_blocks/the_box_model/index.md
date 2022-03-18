@@ -258,7 +258,7 @@ To set the width, style, or color of a single side, you can use one of the more 
 - {{cssxref("border-left-style")}}
 - {{cssxref("border-left-color")}}
 
-**In the example below, we have used various shorthands and longhands to create borders. Play around with the different properties to check that you understand how they work. The MDN pages for the border properties give you information about the different styles of border you can choose from.**
+In the example below, we have used various shorthands and longhands to create borders. Play around with the different properties to check that you understand how they work. The MDN pages for the border properties give you information about the different styles of border you can choose from.
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/border.html", '100%', 700)}}
 
