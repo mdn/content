@@ -15,13 +15,10 @@ browser-compat: javascript.grammar.template_literals
 ---
 {{JsSidebar("More")}}
 
-Template literals are literals delimited with backticks (<code>`</code>), allowing embedded expressions called *substitutions*.
+Template literals are literals delimited with backtick (\`) characters, allowing for [multi-line strings](#multi-line_strings), for [string interpolation](#string-interpolation) with embedded expressions, and for special constructs called [tagged templates](#tagged-templates).
 
-- *Untagged* template literals result in strings, which makes them useful for string interpolation (and multiline strings, since unescaped newlines are allowed).
-
-- *Tagged* template literals call a function (the *tag function*) with an array of any text segments from the literal followed by arguments with the values of any substitutions, which is useful for [DSLs](https://en.wikipedia.org/wiki/Domain-specific_language).
-
-Template literals are sometimes informally called *template strings*, but they aren't string literals and can't be used everywhere a string literal can be used. Also, a tagged template literal may not result in a string; it's up to the tag function what it creates (if anything).
+Template literals are sometimes informally called _template strings_, because one of their most common uses is to create strings by substituting placeholder variables and expressions ([string interpolation](#string-interpolation)). 
+Not however they ate are _not_ string literals, and can't be used everywhere a string literal can be used. In addition, a tagged template literal may not result in a string; it can be used with a custom [tag function](#tagged-templates) to create any type of object.
 
 ## Syntax
 
@@ -44,18 +41,12 @@ example`string text ${expression} string text`
 
 ## Description
 
-Template literals are enclosed by the backtick (\` \`) ([grave accent](https://en.wikipedia.org/wiki/Grave_accent)) character instead
+Template literals are enclosed by backtick (\`) characters instead
 of double or single quotes.
 
-Template literals can contain placeholders. These are indicated by the dollar sign and
-curly braces (`${expression}`). The expressions in the
-placeholders and the text between the backticks (\` \`) get passed to a function.
+Along with having normal strings, template literals can also contain other parts called _placeholders_, which are embedded expressions delimited by a dollar sign and curly braces: `${expression}`. The strings and placeholders get passed to a function — either a default function, or a function you supply. The default function (when you don’t supply your own) just performs [string interpolation](#string-interplotion) to do substitution of the placeholders and then concatenate the parts into a single string.
 
-The default function just concatenates the parts into a single string. If there is an
-expression preceding the template literal, this is
-called a **tagged template**. In that case, the tag expression (usually
-a function) gets called with the template literal, which you can then manipulate before
-outputting.
+To supply a function of your own, precede the template literal with a function name; the result is called a [**tagged template**](#tagged-templates). In that case, the template literal is passed to your tag function, where you can then perform whatever operations you want on the different parts of the template literal.
 
 To escape a backtick in a template literal, put a backslash (`\`) before the
 backtick.
@@ -78,7 +69,7 @@ console.log('string text line 1\n' +
 // string text line 2"
 ```
 
-Using template literals, you can do the same like this:
+Using template literals, you can do the same with this:
 
 ```js
 console.log(`string text line 1
@@ -87,10 +78,9 @@ string text line 2`);
 // string text line 2"
 ```
 
-### Expression interpolation
+### String interpolation
 
-In order to embed expressions within normal strings, you would use the following
-syntax:
+Without template literals, when you want to combine output from expressions with strings, you’d need to use the "`+`" (plus sign) [concatenation operator](#string_operators):
 
 ```js
 let a = 5;
@@ -100,8 +90,9 @@ console.log('Fifteen is ' + (a + b) + ' and\nnot ' + (2 * a + b) + '.');
 // not 20."
 ```
 
-Now, with template literals, you are able to make use of the syntactic sugar, making
-substitutions like this more readable:
+That can be hard to read – especially when you have multiple expressions.
+
+With template literals, you can avoid the concatenation operator — and improve the readability of your code — by using placeholders of the form "`${expression}`" to perform substitutions for embedded expressions:
 
 ```js
 let a = 5;
@@ -115,31 +106,28 @@ not ${2 * a + b}.`);
 ### Nesting templates
 
 In certain cases, nesting a template is the easiest (and perhaps more readable) way to
-have configurable strings. Within a backticked template, it is simple to allow inner
-backticks by using them inside a placeholder `${ }` within the template.
+have configurable strings. Within a backtick-delimited template, it is simple to allow inner
+backticks by using them inside an `${expression}` placeholder within the template.
 
-For instance, if condition a is `true`, then `return` this
-templated literal.
+For example, without template literals, if you wanted to return a certain value based on a particular condition, you could do something like the following:
 
-In ES5:
-
-```js
+```js example-bad
 let classes = 'header';
 classes += (isLargeScreen() ?
   '' : item.isCollapsed ?
     ' icon-expander' : ' icon-collapser');
 ```
 
-In ES2015 with template literals and without nesting:
+With a template literal but without nesting, you could do this:
 
-```js
+```js example-bad
 const classes = `header ${ isLargeScreen() ? '' :
   (item.isCollapsed ? 'icon-expander' : 'icon-collapser') }`;
 ```
 
-In ES2015 with nested template literals:
+With nesting of template literals, you can do this:
 
-```js
+```js example-good
 const classes = `header ${ isLargeScreen() ? '' :
   `icon-${item.isCollapsed ? 'expander' : 'collapser'}` }`;
 ```
