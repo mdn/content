@@ -89,7 +89,7 @@ console.log('Fifteen is ' + (a + b) + ' and\nnot ' + (2 * a + b) + '.');
 // not 20."
 ```
 
-That can make your code harder to read – especially when you have multiple expressions.
+That can be hard to read – especially when you have multiple expressions.
 
 With template literals, you can avoid the concatenation operator — and improve the readability of your code — by using placeholders of the form "`${expression}`" to perform substitutions for embedded expressions:
 
