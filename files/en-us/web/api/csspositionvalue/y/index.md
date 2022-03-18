@@ -48,7 +48,7 @@ console.log(position.x.value, position.y.value);
 
 ## See also
 
-- {{domxref("CSSPositionValue.CSSPositionValue")}}
+- {{domxref("CSSPositionValue.CSSPositionValue", "CSSPositionValue()")}}
 - {{domxref("CSSPositionValue.x")}}
 - [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
 - [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)

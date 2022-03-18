@@ -18,7 +18,7 @@ The **`MIDIMessageEvent`** interface of the [Web MIDI API](/en-US/docs/Web/API/W
 
 ## Constructor
 
-- {{domxref("MIDIMessageEvent.MIDIMessageEvent")}}
+- {{domxref("MIDIMessageEvent.MIDIMessageEvent", "MIDIMessageEvent()")}}
   - : Creates a new `MIDIMessageEvent` object instance.
 
 ## Properties

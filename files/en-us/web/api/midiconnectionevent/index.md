@@ -19,7 +19,7 @@ The **`MIDIConnectionEvent`** interface of the [Web MIDI API](/en-US/docs/Web/AP
 
 ## Constructor
 
-- {{domxref("MIDIConnectionEvent.MIDIConnectionEvent")}}
+- {{domxref("MIDIConnectionEvent.MIDIConnectionEvent", "MIDIConnectionEvent()")}}
   - : Creates a new `MIDIConnectionEvent` object.
 
 ## Properties
