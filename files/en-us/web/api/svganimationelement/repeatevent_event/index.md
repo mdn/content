@@ -115,6 +115,6 @@ animateElem.onrepeat = () => {
 
 ## See also
 
-- [SVG animation with SMIL](/en-US/docs/SVG/SVG_animation_with_SMIL)
+- [SVG animation with SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL)
 - {{domxref("SVGAnimationElement.beginEvent_event", "beginEvent")}} event
 - {{domxref("SVGAnimationElement.endEvent_event", "endEvent")}} event
