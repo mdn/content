@@ -12,49 +12,19 @@ browser-compat: http.headers.X-Forwarded-For
 ---
 {{HTTPSidebar}}
 
-The **`X-Forwarded-For`** (XFF) header is a de-facto standard header for identifying the originating IP address of a client connecting to a web server through proxy server, such as an HTTP proxy or a load balancer.
+The **`X-Forwarded-For`** (XFF) request header is a de-facto standard header for identifying the originating IP address of a client connecting to a web server through a proxy server.
+
+> **Warning:** Improper use of this header can be a security risk. For details, see the [Security and privacy concerns](#security_and_privacy_concerns) section.
 
 When a client connects directly to a server, the
-client's IP address will be available to the server and will often be written to server
-access logs. However, when the client connection passes through one or more proxies
-([forward or reverse](https://en.wikipedia.org/wiki/Proxy_server)), the server will only
-see the final proxy's IP address, which is often of little use. This is especially true if
-the final proxy is something like a load balancer, which is part of the same installation
-as the server. To obtain a more useful IP address, the `X-Forwarded-For` request header is
+client's IP address is sent to the server (and is often written to server
+access logs). But if a client connection passes through any [forward or reverse](https://en.wikipedia.org/wiki/Proxy_server) proxies, the server only
+sees the final proxy's IP address, which is often of little use. That’s especially true if
+the final proxy is a load balancer which is part of the same installation
+as the server. So, to provide a more-useful client IP address to the server, the `X-Forwarded-For` request header is
 used.
 
-A standardized version of this header is the HTTP {{HTTPHeader("Forwarded")}} header.
-
-This header, by design, exposes privacy-sensitive information, such as the IP address
-of the client. Therefore the user's privacy must be kept in mind when deploying this
-header.
-
-> **Warning:** Improper use of this header can be a security risk.
-
-When there is no trusted reverse proxy (such as a load balancer) between the client and
-the server, no part of the `X-Forwarded-For` header is trustworthy (similar to any HTTP
-header). If the client and all proxies are benign and well-behaved, then the list of IPs
-will have the meanings described [below](#directives). However, if the client or any proxy
-is malicious or misconfigured, then any part — or the entirety — of the header may be
-spoofed (and may not be a list or contain IP addresses at all).
-
-If there are one or more trusted reverse proxies between the client and the
-server, the final `X-Forwarded-For` IP addresses (one for each trusted proxy) will be trustworthy, as they
-were added by those trusted proxies. (This is true as long as the server is _only_
-accessible through those proxies and not also directly). 
-
-Any security-related use of `X-Forwarded-For` (such as for rate limiting or IP-based
-access control) _must only_ use IP addresses added by a trusted proxy. Using untrustworthy
-values can result in rate limiter avoidance, access control bypass, memory exhaustion, or
-other negative security or availability consequences.
-
-Conversely, leftmost (untrusted) values must only be used where there will be no negative
-impact from the possibility of using spoofed values.
-
-> **Note:** See below for guidance on [parsing](#parsing) and [selecting an IP address](#selecting_an_ip_address).
-
-`X-Forwarded-For` is also an email-header indicating that an email-message
-was forwarded from another account.
+For detailed guidance on using this header, see the [Parsing](#parsing) and [Selecting an IP address](#selecting_an_ip_address) sections.
 
 <table class="properties">
   <tbody>
@@ -64,10 +34,37 @@ was forwarded from another account.
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>yes</td>
     </tr>
   </tbody>
 </table>
+
+A standardized version of this header is the HTTP {{HTTPHeader("Forwarded")}} header.
+
+## Security and privacy concerns
+
+This header, by design, exposes privacy-sensitive information, such as the IP address
+of the client. Therefore the user's privacy must be kept in mind when deploying this
+header.
+
+The `X-Forwarded-For` header is untrustworthy when no trusted reverse proxy (e.g., a load balancer) is between the client and
+server. If the client and all proxies are benign and well-behaved, then the list of IP addresses in the header
+has the meaning described in the [Directives](#directives) section. But if there’s a risk the client or any proxy
+is malicious or misconfigured, then it’s possible any part (or the entirety) of the header may have been
+spoofed (and may not be a list or contain IP addresses at all).
+
+If any trusted reverse proxies are between the client and
+server, the final `X-Forwarded-For` IP addresses (one for each trusted proxy) are trustworthy, as they
+were added by trusted proxies. (That’s true as long as the server is _only_
+accessible through those proxies and not also directly).
+
+Any security-related use of `X-Forwarded-For` (such as for rate limiting or IP-based
+access control) _must only_ use IP addresses added by a trusted proxy. Using untrustworthy
+values can result in rate-limiter avoidance, access-control bypass, memory exhaustion, or
+other negative security or availability consequences.
+
+Conversely, leftmost (untrusted) values must only be used where there will be no negative
+impact from the possibility of using spoofed values.
 
 ## Syntax
 
