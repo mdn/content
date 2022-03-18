@@ -29,6 +29,7 @@ A good place to learn about general guidelines for contributing to
 [Guidelines document](https://developer.mozilla.org/en-US/docs/MDN/Guidelines).
 For example, you can find out more about MDN's writing-style guidelines via the
 [Writing style guide](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide).
+Note that you will need to sign your commits with a GPG key when pushing from a local machiene and have a [GPG key](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-new-gpg-key-to-your-github-account) provided in settings. 
 
 ### Prerequisite knowledge
 
@@ -286,7 +287,7 @@ and then push the branch to your fork. Remember, the default name that
     ```sh
     cd ~/repos/mdn/content
     git add .
-    git commit
+    git commit -S
     git push -u origin my-work
     ```
 
@@ -405,7 +406,7 @@ or `index.md` file.
 
     ```sh
     git add files/en-us/folder/you/created
-    git commit
+    git commit -S
     git push -u origin my-add
     ```
 
@@ -453,7 +454,7 @@ as create new files):
 push your branch to your fork:
 
     ```sh
-    git commit -a
+    git commit -S -a
     git push -u origin my-move
     ```
 
@@ -512,7 +513,7 @@ entire `/en-US/Learn/Accessibility` tree:
 push your branch to your fork:
 
     ```sh
-    git commit -a
+    git commit -S -a
     git push -u origin my-delete
     ```
 
@@ -557,7 +558,7 @@ The best way to do this is to use the `yarn content add-redirect` command:
 pushing your branch to your fork:
 
     ```sh
-    git commit -a
+    git commit -S -a
     git push -u origin my-delete
     ```
 
@@ -613,7 +614,7 @@ push your branch to your fork:
 
     ```sh
     git add files/en-us/web/css/my-cool-image.png files/en-us/web/css/index.html
-    git commit
+    git commit -S
     git push -u origin my-images
     ```
 
