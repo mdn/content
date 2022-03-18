@@ -401,7 +401,7 @@ console.log(str.match(re)); // ["fee ", "fi ", "fo "]
 
 The "u" flag is used to create "unicode" regular expressions; that is, regular expressions which support matching against unicode text. This is mainly accomplished through the use of [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes), which are supported only within "unicode" regular expressions.
 
-For example, the following regular exppression might be used to match against an arbitrary unicode "word":
+For example, the following regular expression might be used to match against an arbitrary unicode "word":
 
 ```js
 /\p{L}*/u
