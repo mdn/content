@@ -12,7 +12,6 @@ tags:
   - import
 browser-compat: javascript.statements.import
 spec-urls:
-  - https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html#sec-imports
   - https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#sec-import-calls
 ---
 {{jsSidebar("Statements")}}
