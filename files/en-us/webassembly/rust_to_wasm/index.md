@@ -18,7 +18,7 @@ There are two main use cases for Rust and WebAssembly:
 - Build an entire application — an entire web app based in Rust.
 - Build a part of an application — using Rust in an existing JavaScript frontend.
 
-For now, the Rust team is focusing on the latter case, and so that's what we cover here. For the former case, check out projects like [`yew`](https://github.com/DenisKolodin/yew).
+For now, the Rust team is focusing on the latter case, and so that's what we cover here. For the former case, check out projects like [`yew`](https://github.com/yewstack/yew).
 
 In this tutorial, we build a package using `wasm-pack`, a tool for building JavaScript packages in Rust. This package will contain only WebAssembly and JavaScript code, and so the users of the package won't need Rust installed. They may not even notice that it's written in Rust.
 
