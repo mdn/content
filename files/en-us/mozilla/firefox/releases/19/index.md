@@ -24,7 +24,7 @@ Firefox 19 was released on February 19, 2013. This article lists key changes tha
 - The `-moz-initial` value has been unprefixed ({{bug("806068")}}). `-moz-initial` will be kept for a while as an alias; however, authors are strongly encouraged to switch over to `initial`.
 - The CSS {{cssxref("text-transform")}} property now supports the `full-width` keyword, which allows a more seamless inclusion of Latin characters in text using ideographic fixed-width characters, like Chinese or Japanese ({{bug("774560")}}).
 - The CSS {{cssxref("page-break-inside")}} has been implemented ({{bug("685012")}}).
-- The CSS {{cssxref("calc()", "calc()")}} function can now be used on `<color-stop>` (on {{cssxref("&lt;gradient&gt;")}}).
+- The CSS {{cssxref("calc", "calc()")}} function can now be used on `<color-stop>` (on {{cssxref("&lt;gradient&gt;")}}).
 - The CSS {{cssxref("@page")}} at-rule is now supported ({{bug("115199")}}). Note that the pseudo-classes {{cssxref(":first")}}, {{cssxref(":right")}}, and {{cssxref(":left")}} are not yet implemented.
 - The `:-moz-placeholder` pseudo-class is replaced by the `::-moz-placeholder` pseudo-_element_ ({{bug("737786")}}).
 - Declarations qualified with `!important` appearing in {{cssxref("@keyframes")}} are now ignored, per spec ({{bug(784466)}}).

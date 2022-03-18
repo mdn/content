@@ -106,7 +106,7 @@ processor.doLoad()
 
 This is a pretty simple example showing how to manipulate video frames using a canvas. For efficiency, you should consider using {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} instead of `setTimeout()` when running on browsers that support it.
 
-You can achieve the same result by applying the {{cssxref("filter-function/grayscale()", "grayscale()")}} CSS function to the source `<video>` element.
+You can achieve the same result by applying the {{cssxref("filter-function/grayscale", "grayscale()")}} CSS function to the source `<video>` element.
 
 > **Note:** Due to potential security issues if your video is on a different domain than your code, you'll need to enable [CORS (Cross Origin Resource Sharing)](/en-US/docs/Web/HTTP/CORS) on your video server.
 

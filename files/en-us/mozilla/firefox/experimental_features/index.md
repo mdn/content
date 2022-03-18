@@ -309,7 +309,7 @@ The {{cssxref("backdrop-filter")}} property applies filter effects to the area b
 
 ### The fit-content() function for width and other sizing properties
 
-The {{cssxref("fit-content()")}} function as it applies to {{cssxref("width")}} and other sizing properties. This function is already well-supported for CSS Grid Layout track sizing. (See {{bug(1312588)}} for more details.)
+The {{cssxref("fit-content", "fit-content()")}} function as it applies to {{cssxref("width")}} and other sizing properties. This function is already well-supported for CSS Grid Layout track sizing. (See {{bug(1312588)}} for more details.)
 
 <table>
   <thead>

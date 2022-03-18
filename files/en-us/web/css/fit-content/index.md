@@ -15,7 +15,7 @@ The **`fit-content`** behaves as `fit-content(stretch)`. In practice this means 
 
 When used as laid out box size for {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} and {{cssxref("max-height")}} the maximum and minimum sizes refer to the content size.
 
-> **Note:** The CSS Sizing specification also defines the {{cssxref("fit-content()", "fit-content()")}} function. This page details the keyword.
+> **Note:** The CSS Sizing specification also defines the {{cssxref("fit-content", "fit-content()")}} function. This page details the keyword.
 
 ## Syntax
 

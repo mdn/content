@@ -56,20 +56,20 @@ The `clip-path` property is specified as one or a combination of the values list
 ### Values
 
 - `<clip-source>`
-  - : A {{cssxref("url()")}} referencing an [SVG](/en-US/docs/Web/SVG) {{SVGElement("clipPath")}} element.
+  - : A {{cssxref("url", "url()")}} referencing an [SVG](/en-US/docs/Web/SVG) {{SVGElement("clipPath")}} element.
 - {{cssxref("&lt;basic-shape&gt;")}}
 
   - : A shape whose size and position is defined by the `<geometry-box>` value. If no geometry box is specified, the `border-box` will be used as the reference box. One of:
 
-    - {{cssxref("basic-shape/inset()","inset()")}}
+    - {{cssxref("basic-shape/inset","inset()")}}
       - : Defines an inset rectangle.
-    - {{cssxref("basic-shape/circle()","circle()")}}
+    - {{cssxref("basic-shape/circle","circle()")}}
       - : Defines a circle using a radius and a position.
-    - {{cssxref("basic-shape/ellipse()","ellipse()")}}
+    - {{cssxref("basic-shape/ellipse","ellipse()")}}
       - : Defines an ellipse using two radii and a position.
-    - {{cssxref("basic-shape/polygon()","polygon()")}}
+    - {{cssxref("basic-shape/polygon","polygon()")}}
       - : Defines a polygon using an SVG filling rule and a set of vertices.
-    - {{cssxref("path()","path()")}}
+    - {{cssxref("path","path()")}}
       - : Defines a shape using an optional SVG filling rule and an SVG path definition.
 
 - `<geometry-box>`
