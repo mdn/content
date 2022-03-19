@@ -29,7 +29,7 @@ A good place to learn about general guidelines for contributing to
 [Guidelines document](https://developer.mozilla.org/en-US/docs/MDN/Guidelines).
 For example, you can find out more about MDN's writing-style guidelines via the
 [Writing style guide](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide).
-Note that you will need to sign your commits with a GPG key when pushing from a local machiene and have a [GPG key](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-new-gpg-key-to-your-github-account) provided in settings.
+Note that you will need to sign your commits with a GPG key when pushing from a local machiene and have a [GPG key](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-new-gpg-key-to-your-github-account) provided in settings when using GitHub's UI.
 
 ### Prerequisite knowledge
 
