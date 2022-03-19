@@ -804,24 +804,7 @@ the last one added.
 
 ### Improving scrolling performance with passive listeners
 
-According to the specification, the default value for the `passive` option
-is always `false`. However, this introduces the potential for event listeners
-handling certain touch events (among others) to block the browser's main thread while it
-is attempting to handle scrolling, resulting in possibly enormous reduction in
-performance during scroll handling.
-
-To prevent this problem, browsers other than Safari and Internet Explorer have changed
-the default value of the `passive` option to `true` for the
-{{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/mousewheel_event", "mousewheel")}}, {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events on the document-level nodes
-{{domxref("Window")}}, {{domxref("Document")}}, and {{domxref("Document.body")}}. This
-prevents the event listener from [canceling the event](/en-US/docs/Web/API/Event/preventDefault), so it can't block page rendering while
-the user is scrolling.
-
-> **Note:** See the compatibility table below if you need to know which
-> browsers (and/or which versions of those browsers) implement this altered behavior.
-
-You can override this behavior by explicitly setting the value of `passive`
-to `false`, as shown here:
+Setting the `passive` option to `true` — as shown in the following example — enables performance optimizations that can dramatically improve the performance of an application.
 
 ```js
 /* Feature detection */
@@ -845,12 +828,23 @@ window.addEventListener('scroll', function(event) {
 }, passiveIfSupported );
 ```
 
-On older browsers that don't support the `options` parameter to
-`addEventListener()`, attempting to use it prevents the use of the
-`useCapture` argument without proper use of [feature detection](#safely_detecting_option_support).
+The specification for `addEventListener()` defines the default value for the `passive` option as always being `false`. However, that introduces the potential for event listeners handling touch events and wheel events to block the browser's main thread while the browser is attempting to handle scrolling — possibly resulting in an enormous reduction in performance during scroll handling.
+
+To prevent that problem, browsers other than Safari and Internet Explorer have changed the default value of the `passive` option to `true` for the {{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/mousewheel_event", "mousewheel")}}, {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events on the document-level nodes {{domxref("Window")}}, {{domxref("Document")}}, and {{domxref("Document.body")}}. That prevents the event listener from [canceling the event](/en-US/docs/Web/API/Event/preventDefault), so it can't block page rendering while the user is scrolling.
+
+> **Note:** See the compatibility table below if you need to know which
+> browsers (and/or which versions of those browsers) implement this altered behavior.
+
+Because of that, when you want to override that behavior and ensure the `passive` option is `false` in all browsers, you must explicitly set the option to `false` (rather than relying on the default).
 
 You don't need to worry about the value of `passive` for the basic {{domxref("Element/scroll_event", "scroll")}} event.
 Since it can't be canceled, event listeners can't block page rendering anyway.
+
+### Older browsers
+
+In older browsers that don't support the `options` parameter to
+`addEventListener()`, attempting to use it prevents the use of the
+`useCapture` argument without proper use of [feature detection](#safely_detecting_option_support).
 
 ## Specifications
 
