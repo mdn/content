@@ -52,14 +52,6 @@ To demonstrate just the very basics of registering and installing a service work
 
 You can see the [source code on GitHub](https://github.com/mdn/sw-test/), and [view the example live](https://mdn.github.io/sw-test/).
 
-
-
-## Enter service workers
-
-> **Note:** We're using the [es6](http://es6-features.org/) **arrow functions** syntax in the Service Worker Implementation.
-
-Now let's get on to service workers!
-
 ### Registering your worker
 
 The first block of code in our app's JavaScript file — `app.js` — is as follows. This is our entry point into using service workers.
