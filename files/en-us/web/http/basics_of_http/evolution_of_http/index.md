@@ -47,7 +47,7 @@ Unlike subsequent evolutions, there were no HTTP headers. This meant that only H
 HTTP/0.9 was very limited, but browsers and servers quickly made it more versatile:
 
 - Versioning information was sent within each request (`HTTP/1.0` was appended to the `GET` line).
-- A status code line was also sent at the beginning of a response. This allowed the browser itself recognize the success or failure of a request and adapt its behavior accordingly. For example, updating or using its local cache in a specific way.
+- A status code line was also sent at the beginning of a response. This allowed the browser itself to recognize the success or failure of a request and adapt its behavior accordingly. For example, updating or using its local cache in a specific way.
 - The concept of HTTP headers was introduced for both requests and responses. Metadata could be transmitted and the protocol became extremely flexible and extensible.
 - Documents other than plain HTML files could be transmitted thanks to the {{HTTPHeader("Content-Type")}} header.
 
