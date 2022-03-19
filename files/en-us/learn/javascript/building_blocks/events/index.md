@@ -365,7 +365,7 @@ Most event objects have a standard set of properties and methods available on th
 Some event objects add extra properties that are relevant to that particular type of event. For example, the {{domxref("Document/keydown_event", "keydown")}} event fires when the user presses a key. Its event object is a {{domxref("KeyboardEvent")}}, which is a specialized `Event` object with a `key` property that tells you which key was pressed:
 
 ```html
-<input id="textBox" type="text"></input>
+<input id="textBox" type="text">
 <div id="output"></div>
 ```
 
