@@ -15,7 +15,7 @@ Mobile devices have quite different hardware characteristics compared with deskt
 
 ### Working with small screens
 
-[Responsive Web Design](/en-US/docs/Web/Progressive_web_apps) is a term for a set of techniques that enables your web site to adapt its layout as its viewing environment — most obviously, the size and orientation of the screen — changes. It includes techniques such as:
+[Responsive Web Design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) is a term for a set of techniques that enables your web site to adapt its layout as its viewing environment — most obviously, the size and orientation of the screen — changes. It includes techniques such as:
 
 - fluid CSS layouts, to make the page adapt smoothly as the browser window size changes
 - the use of [media queries](/en-US/docs/Web/CSS/Media_Queries) to conditionally include CSS rules appropriate for the device screen [width](/en-US/docs/Web/CSS/@media/width) and [height](/en-US/docs/Web/CSS/@media/height)

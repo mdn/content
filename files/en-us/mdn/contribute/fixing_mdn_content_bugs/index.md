@@ -26,7 +26,6 @@ The labels below help you find tasks based on how much time you have available.
 
 If you'd prefer to browse your tasks and choose by technology category instead, you can also find content type labels on [issues in the content repository](https://github.com/mdn/content/issues).
 
-
 ## How can you benefit?
 
 - Fixing MDN content bugs is a great way to learn more about web technologies — as you research a problem and create the required content, you will gain a deeper understanding of the subject, and improve your skills.

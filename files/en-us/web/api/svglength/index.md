@@ -13,7 +13,7 @@ browser-compat: api.SVGLength
 
 ## SVG length interface
 
-The `SVGLength` interface correspond to the [\<length>](/en-US/docs/SVG/Content_type#Length) basic data type.
+The `SVGLength` interface correspond to the [\<length>](/en-US/docs/Web/SVG/Content_type#Length) basic data type.
 
 An `SVGLength` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
@@ -280,7 +280,7 @@ value: 26.66666603088379, valueInSpecifiedUnits 8: 0.277777761220932, valueAsStr
             a {{ domxref("DOMException") }} with code
             <code>SYNTAX_ERR</code> is raised if the assigned string cannot be
             parsed as a valid
-            <a href="/en-US/docs/SVG/Content_type#Length">&#x3C;length></a>.
+            <a href="/en-US/docs/Web/SVG/Content_type#Length">&#x3C;length></a>.
           </li>
           <li>
             a {{ domxref("DOMException") }} with code

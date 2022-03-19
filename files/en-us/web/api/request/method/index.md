@@ -28,7 +28,7 @@ A {{jsxref("String")}} indicating the method of the request.
 ## Example
 
 In the following snippet, we create a new request using the
-{{domxref("Request.Request()")}} constructor (for an image file in the same directory as
+{{domxref("Request.Request", "Request()")}} constructor (for an image file in the same directory as
 the script), then save the method of the request in a variable:
 
 ```js

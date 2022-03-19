@@ -23,7 +23,7 @@ If inline PDF viewing is not supported then an empty list is returned.
 > **Note:** Use {{domxref("Navigator.pdfViewerEnabled")}} to determine if inline viewing of PDF files is supported. Do not infer it from this property.
 >
 > The "five standard plugins" are those that developers have most commonly used to feature detect inline PDF viewing.
-> Returning these ensures that legacy code can more reliably determine whether inline viewing is supported. 
+> Returning these ensures that legacy code can more reliably determine whether inline viewing is supported.
 > However this approach is not recommended for new code because this property may eventually be removed.
 
 Legacy browser versions also list plugins for Adobe Flash and PDF viewer extensions.
@@ -35,13 +35,13 @@ Legacy browser versions also list plugins for Adobe Flash and PDF viewer extensi
 The returned value is not a JavaScript array, but has the `length` property and supports accessing individual items using bracket notation (`plugins[2]`), as well as via `item(index)` and `namedItem("name")` methods.
 
 If PDF inline viewing is supported this will contain entries for the following plugins:
+
 - "PDF Viewer"
 - "Chrome PDF Viewer"
 - "Chromium PDF Viewer"
 - "Microsoft Edge PDF Viewer"
 - "WebKit built-in PDF"
 If inline viewing of PDFs is not supported then an empty object is returned.
-
 
 ## Examples
 
