@@ -219,7 +219,7 @@ function dragstart_handler(ev) {
 
 Learn more about drag feedback images in:
 
-- [Setting the Drag Feedback Image](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragfeedback "Setting the Drag Feedback Image")
+- [Setting the Drag Feedback Image](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#setting_the_drag_feedback_image "Setting the Drag Feedback Image")
 
 ### Define the drag _effect_
 
