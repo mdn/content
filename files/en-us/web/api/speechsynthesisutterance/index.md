@@ -20,7 +20,7 @@ It contains the content the speech service should read and information about how
 
 ## Constructor
 
-- {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()")}}
+- {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance", "SpeechSynthesisUtterance()")}}
   - : Returns a new `SpeechSynthesisUtterance` object instance.
 
 ## Properties

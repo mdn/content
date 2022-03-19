@@ -17,7 +17,7 @@ The `USBConfiguration` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_
 
 ## Constructor
 
-- {{domxref("USBConfiguration.USBConfiguration()")}}
+- {{domxref("USBConfiguration.USBConfiguration", "USBConfiguration()")}}
   - : Creates a new `USBConfiguration` object which contains information about the configuration on the provided `USBDevice` with the given configuration value.
 
 ## Properties

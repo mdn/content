@@ -22,7 +22,7 @@ Custom properties are represented by `CSSUnparsedValue` and {{cssxref('var()')}}
 
 ## Constructor
 
-- {{domxref("CSSUnparsedValue.CSSUnparsedValue()")}}
+- {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}}
   - : Creates a new `CSSUnparsedValue` object.
 
 ## Properties

@@ -20,7 +20,7 @@ The **`CSSPerspective`** interface of the {{domxref('CSS_Object_Model#css_typed_
 
 ## Constructor
 
-- {{domxref("CSSPerspective.CSSPerspective()")}}
+- {{domxref("CSSPerspective.CSSPerspective", "CSSPerspective()")}}
   - : Creates a new `CSSPerspective` object.
 
 ## Properties
