@@ -119,7 +119,7 @@ After your service worker is registered, the browser will attempt to install the
 
 The install event is fired when an install is successfully completed. The install event is generally used to populate your browser's offline caching capabilities with the assets you need to run your app offline. To do this, we use Service Worker's storage API — {{domxref("cache")}} — a global object on the service worker that allows us to store assets delivered by responses, and keyed by their requests. This API works in a similar way to the browser's standard cache, but it is specific to your domain. It persists until you tell it not to — again, you have full control.
 
-Let's start this section by looking at a code sample — this is the first one of two important [parts you'll find in our service worker](https://github.com/mdn/sw-test/blob/gh-pages/sw.js#L1-54):
+Here's how our service worker handles the `install` event:
 
 ```js
 const addResourcesToCache = async (resources) => {
