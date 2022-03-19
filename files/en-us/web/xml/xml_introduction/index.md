@@ -13,7 +13,7 @@ There are many languages based on XML, including [XHTML](/en-US/docs/Glossary/XH
 
 ## Structure of an XML document
 
-Whole structure XML and XML based languages built on {{Glossary("tag")}}s.
+The whole structure of XML and XML-based languages is built on {{Glossary("tag")}}s.
 
 ### XML declaration
 
