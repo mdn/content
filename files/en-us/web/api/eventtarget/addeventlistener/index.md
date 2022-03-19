@@ -828,7 +828,7 @@ window.addEventListener('scroll', function(event) {
 }, passiveIfSupported );
 ```
 
-The specification for `addEventListener()` defines the default value for the `passive` option as always being`false`. However, that introduces the potential for event listeners handling touch events and wheel events to block the browser's main thread while the browser is attempting to handle scrolling — possibly resulting in an enormous reduction in performance during scroll handling.
+The specification for `addEventListener()` defines the default value for the `passive` option as always being `false`. However, that introduces the potential for event listeners handling touch events and wheel events to block the browser's main thread while the browser is attempting to handle scrolling — possibly resulting in an enormous reduction in performance during scroll handling.
 
 To prevent that problem, browsers other than Safari and Internet Explorer have changed the default value of the `passive` option to `true` for the {{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/mousewheel_event", "mousewheel")}}, {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events on the document-level nodes {{domxref("Window")}}, {{domxref("Document")}}, and {{domxref("Document.body")}}. That prevents the event listener from [canceling the event](/en-US/docs/Web/API/Event/preventDefault), so it can't block page rendering while the user is scrolling.
 
