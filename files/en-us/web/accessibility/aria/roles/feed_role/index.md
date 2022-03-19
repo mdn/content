@@ -72,7 +72,7 @@ None, except as required by any attributes. For example, setting [`aria-busy`](/
 
 ## Best practices
 
-To ensure good user experience, avoid inserting or removing articles in the middle of a `feed`, load new articles before the user has reached the end of the feed, and provide keyboard commands for moving focus among articles so that keyboard users can navigate through your feed. See {{anch('Keyboard interactions')}}.
+To ensure good user experience, avoid inserting or removing articles in the middle of a `feed`, load new articles before the user has reached the end of the feed, and provide keyboard commands for moving focus among articles so that keyboard users can navigate through your feed. See [Keyboard interactions](#keyboard_interactions).
 
 ## Specifications
 

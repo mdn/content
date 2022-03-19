@@ -123,7 +123,7 @@ Support has been added for multi-reporters; that is, memory reporters that gathe
 
 ### Changes to the build system
 
-- The ActiveX embedding API is no longer built and support has been removed from the build system. Supporting interfaces have also been removed; see {{ anch("Removed interfaces") }}.
+- The ActiveX embedding API is no longer built and support has been removed from the build system. Supporting interfaces have also been removed; see [Removed interfaces](#removed_interfaces).
 - You should no longer specify `-Zc:wchar_t-` when building on Windows. See the [updated Build documentation](/en-US/docs/Mozilla/Developer_guide/Build_Instructions#build_and_install) for details.
 
 ### Interface changes
