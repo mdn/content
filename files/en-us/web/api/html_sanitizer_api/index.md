@@ -3,6 +3,7 @@ title: HTML Sanitizer API
 slug: Web/API/HTML_Sanitizer_API
 tags:
   - HTML Sanitizer API
+  - Experimental
   - Landing
   - Web API
   - sanitize
