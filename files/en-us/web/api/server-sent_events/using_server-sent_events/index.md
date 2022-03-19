@@ -61,7 +61,7 @@ This code is similar, except that it will be called automatically whenever the s
 
 ## Sending events from the server
 
-The server-side script that sends events needs to respond using the MIME type `text/event-stream`. Each notification is sent as a block of text terminated by a pair of newlines. For details on the format of the event stream, see {{ anch("Event stream format") }}.
+The server-side script that sends events needs to respond using the MIME type `text/event-stream`. Each notification is sent as a block of text terminated by a pair of newlines. For details on the format of the event stream, see [Event stream format](#event_stream_format).
 
 The {{Glossary("PHP")}} code for the example we're using here follows:
 

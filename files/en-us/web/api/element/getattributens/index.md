@@ -14,7 +14,7 @@ browser-compat: api.Element.getAttributeNS
 The **`getAttributeNS()`** method of the {{domxref("Element")}}
 interface returns the string value of the attribute with the specified namespace and
 name. If the named attribute does not exist, the value returned will either be
-`null` or `""` (the empty string); see {{Anch("Notes")}} for
+`null` or `""` (the empty string); see [Notes](#notes) for
 details.
 
 ## Syntax

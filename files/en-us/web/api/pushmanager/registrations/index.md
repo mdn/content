@@ -27,7 +27,7 @@ var request = navigator.push.registrations();
 A {{domxref("DOMRequest")}} object to handle the success or failure of the method call.
 
 If the method call is successful, the request's `result` will be an array of
-{{Anch("PushRegistration")}} objects.
+[PushRegistration](#pushregistration) objects.
 
 ### PushRegistration
 

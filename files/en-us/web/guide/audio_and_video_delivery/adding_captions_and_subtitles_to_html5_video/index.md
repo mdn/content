@@ -42,7 +42,7 @@ Video providers (such as the [Blender Foundation](https://www.blender.org/founda
 
 ## Modifications to the HTML and CSS
 
-This section summarizes the modifications made to the previous article's code in order to facilitate the addition of subtitles to the video. If you are not interested in this, and just want to get straight into the JavaScript and more relevant CSS, skip to the {{ anch("Subtitle implementation") }} section.
+This section summarizes the modifications made to the previous article's code in order to facilitate the addition of subtitles to the video. If you are not interested in this, and just want to get straight into the JavaScript and more relevant CSS, skip to the [Subtitle implementation](#subtitle_implementation) section.
 
 In this example we are using a different video, [Sintel](https://www.sintel.org/), as it actually has some speech in it and therefore is better for illustrating how subtitles work!
 
