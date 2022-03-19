@@ -93,6 +93,8 @@ In brief, here are the basic conceptual differences between inline and block-lev
 
 - Content model
   - : Generally, inline elements may contain only data and other inline elements. An exception is the inline `a` element which may contain block level elements such as `div`.
+    > **Note:** Links that wrap multiple lines of block-level content make for a poor-to-unusable experience for some assistive technology. It is one of those things where just because you technically can does not mean you should in the practical.
+
 - Formatting
   - : By default, inline elements do not force a new line to begin in the document flow. Block elements, on the other hand, typically cause a line break to occur (although, as usual, this can be changed using CSS).
 
