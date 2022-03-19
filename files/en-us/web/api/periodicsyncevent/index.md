@@ -22,7 +22,7 @@ An instance of this event is passed to the {{domxref('ServiceWorkerGlobalScope.o
 
 ## Constructor
 
-- {{domxref("PeriodicSyncEvent.PeriodicSyncEvent()")}}
+- {{domxref("PeriodicSyncEvent.PeriodicSyncEvent", "PeriodicSyncEvent()")}}
   - : Creates a new `PeriodicSyncEvent` object. This constructor is not typically used. The browser creates these objects itself and provides them to {{domxref('ServiceWorkerGlobalScope.onperiodicsync')}} callback.
 
 ## Properties

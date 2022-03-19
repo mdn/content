@@ -14,7 +14,7 @@ tags:
 ---
 {{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
-{{domxref("Element.animate()")}}, {{domxref("KeyframeEffect.KeyframeEffect()")}}, and {{domxref("KeyframeEffect.setKeyframes()")}} all accept objects formatted to represent a set of keyframes. There are several options to this format, which are explained below.
+{{domxref("Element.animate()")}}, {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}, and {{domxref("KeyframeEffect.setKeyframes()")}} all accept objects formatted to represent a set of keyframes. There are several options to this format, which are explained below.
 
 ## Syntax
 
@@ -150,5 +150,5 @@ The following special attributes may also be specified:
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
 - {{domxref("Element.animate()")}}
-- {{domxref("KeyframeEffect.KeyframeEffect()")}}
+- {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}
 - {{domxref("KeyframeEffect.setKeyframes()")}}

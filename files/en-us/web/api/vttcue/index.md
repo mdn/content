@@ -15,7 +15,7 @@ The `VTTCue` interface—part of the API for handling WebVTT (text tracks on med
 
 ## Constructor
 
-- {{domxref("VTTCue.VTTCue()")}}
+- {{domxref("VTTCue.VTTCue", "VTTCue()")}}
   - : Returns a newly created `VTTCue` object that covers the given time range and has the given text.
 
 ## Properties

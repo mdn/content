@@ -19,7 +19,7 @@ The **`CSSMathMax`** interface of the {{domxref('CSS_Object_Model#css_typed_obje
 
 ## Constructor
 
-- {{domxref("CSSMathMax.CSSMathMax()")}}
+- {{domxref("CSSMathMax.CSSMathMax", "CSSMathMax()")}}
   - : Creates a new `CSSMathMax` object.
 
 ## Properties

@@ -23,7 +23,7 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
 ## Constructor
 
-- {{domxref("InstallEvent.InstallEvent()")}}
+- {{domxref("InstallEvent.InstallEvent", "InstallEvent()")}}
   - : Creates a new `InstallEvent` object.
 
 ## Properties
