@@ -15,7 +15,7 @@ browser-compat: api.HTMLFormElement.reset
 
 The **`HTMLFormElement.reset()`** method restores a form
 element's default values. This method does the same thing as clicking the form's
-{{domxref("Element.input.reset", "reset button")}}.
+[`<input type="reset">`](/en-US/docs/Web/HTML/Element/input/reset).
 
 If a form control (such as a reset button) has a name or id of _reset_ it will
 mask the form's reset method. It does not reset other attributes in the input, such as
