@@ -533,7 +533,7 @@ If you want to experiment with writing some HTML on your local computer, you can
 3. Paste the code into the new text file.
 4. Save the file as `index.html`.
 
-> **Note:** You can also find this basic HTML template on the [MDN Learning Area Github repo](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html).
+> **Note:** You can also find this basic HTML template on the [MDN Learning Area Github repo](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html).
 
 You can now open this file in a web browser to see what the rendered code looks like. Edit the code and refresh the browser to see what the result is. Initially the page looks like this:
 

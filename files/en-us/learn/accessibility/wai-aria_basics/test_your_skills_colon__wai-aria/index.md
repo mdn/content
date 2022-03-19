@@ -27,7 +27,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/accessibility/tasks/html-css/aria/aria1-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/html-css/aria/aria1-download.html) to work in your own editor or in an online editor.
 
 ## WAI-ARIA 2
 
@@ -42,7 +42,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/accessibility/tasks/html-css/aria/aria2-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/html-css/aria/aria2-download.html) to work in your own editor or in an online editor.
 
 ## WAI-ARIA 3
 
@@ -52,7 +52,7 @@ The problem we have now is that when the DOM changes to show a new description, 
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/accessibility/tasks/js/aria/aria-js1-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/js/aria/aria-js1-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

@@ -28,7 +28,7 @@ In this task we want you to structure the provided form features:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/form-structure/form-structure1-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/form-structure/form-structure1-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

@@ -31,7 +31,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/accessibility/tasks/html-css/css/css-a11y1-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/html-css/css/css-a11y1-download.html) to work in your own editor or in an online editor.
 
 ## CSS accessibility 2
 
@@ -48,7 +48,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/accessibility/tasks/html-css/css/css-a11y2-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/html-css/css/css-a11y2-download.html) to work in your own editor or in an online editor.
 
 ## JavaScript accessibility 1
 
@@ -58,7 +58,7 @@ But it is not very accessible — in its current state you can only operate it w
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/accessibility/tasks/js/js/js1-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/js/js/js1-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

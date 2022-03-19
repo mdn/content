@@ -39,7 +39,7 @@ The multiple-column layout specification provides you with a method for laying c
 
 ## A basic example
 
-Let's explore how to use multiple-column layout — often referred to as _multicol_. You can follow along by [downloading the multicol starting point file](https://github.com/mdn/learning-area/blob/master/css/css-layout/multicol/0-starting-point.html) and adding the CSS into the appropriate places. At the bottom of the section you can see an example of what the final code should look like.
+Let's explore how to use multiple-column layout — often referred to as _multicol_. You can follow along by [downloading the multicol starting point file](https://github.com/mdn/learning-area/blob/main/css/css-layout/multicol/0-starting-point.html) and adding the CSS into the appropriate places. At the bottom of the section you can see an example of what the final code should look like.
 
 ### A three-column layout
 

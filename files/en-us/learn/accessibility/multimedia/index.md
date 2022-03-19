@@ -68,7 +68,7 @@ Implementing controls for web-based audio/video shouldn't be a problem, right? L
 
 ### The problem with native HTML5 controls
 
-HTML5 video and audio instances even come with a set of inbuilt controls that allow you to control the media straight out of the box. For example (see `native-controls.html` [source code](https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/native-controls.html) and [live](https://mdn.github.io/learning-area/accessibility/multimedia/native-controls.html)):
+HTML5 video and audio instances even come with a set of inbuilt controls that allow you to control the media straight out of the box. For example (see `native-controls.html` [source code](https://github.com/mdn/learning-area/blob/main/accessibility/multimedia/native-controls.html) and [live](https://mdn.github.io/learning-area/accessibility/multimedia/native-controls.html)):
 
 ```html
 <audio controls>
@@ -107,7 +107,7 @@ Let's take the video example from above and add custom controls to them.
 
 #### Basic setup
 
-First, grab a copy of our [custom-controls-start.html](https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/custom-controls-start.html), [custom-controls.css](https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/custom-controls.css), [rabbit320.mp4](https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.mp4), and [rabbit320.webm](https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.webm) files and save them in a new directory on your hard drive.
+First, grab a copy of our [custom-controls-start.html](https://github.com/mdn/learning-area/blob/main/accessibility/multimedia/custom-controls-start.html), [custom-controls.css](https://github.com/mdn/learning-area/blob/main/accessibility/multimedia/custom-controls.css), [rabbit320.mp4](https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.mp4), and [rabbit320.webm](https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.webm) files and save them in a new directory on your hard drive.
 
 Create a new file called main.js and save it in the same directory.
 

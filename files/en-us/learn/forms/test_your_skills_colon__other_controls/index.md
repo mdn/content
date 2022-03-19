@@ -34,7 +34,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/other-controls/other-controls1-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/other-controls/other-controls1-download.html) to work in your own editor or in an online editor.
 
 ## Other controls 2
 
@@ -50,7 +50,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/other-controls/other-controls2-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/other-controls/other-controls2-download.html) to work in your own editor or in an online editor.
 
 ## Other controls 3
 
@@ -66,7 +66,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/other-controls/other-controls3-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/other-controls/other-controls3-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

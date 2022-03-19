@@ -69,7 +69,7 @@ Our form will contain three text fields and one button. We are asking the user f
 
 Ok, let's have a go at creating the HTML for our form. We will use the following HTML elements: {{HTMLelement("form")}}, {{HTMLelement("label")}}, {{HTMLelement("input")}}, {{HTMLelement("textarea")}}, and {{HTMLelement("button")}}.
 
-Before you go any further, make a local copy of our [simple HTML template](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) — you'll enter your form HTML into here.
+Before you go any further, make a local copy of our [simple HTML template](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html) — you'll enter your form HTML into here.
 
 ### The `<form>` element
 
@@ -181,7 +181,7 @@ The {{htmlelement("button")}} element also accepts a `type` attribute — this a
 
 Now that you have finished writing your form's HTML code, try saving it and looking at it in a browser. At the moment, you'll see that it looks rather ugly.
 
-> **Note:** If you don't think you've got the HTML code right, try comparing it with our finished example — see [first-form.html](https://github.com/mdn/learning-area/blob/master/html/forms/your-first-HTML-form/first-form.html) ([also see it live](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form.html)).
+> **Note:** If you don't think you've got the HTML code right, try comparing it with our finished example — see [first-form.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form.html) ([also see it live](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form.html)).
 
 Forms are notoriously tricky to style nicely. It is beyond the scope of this article to teach you form styling in detail, so for the moment we will just get you to add some CSS to make it look OK.
 
@@ -265,7 +265,7 @@ button {
 
 Save and reload, and you'll see that your form should look much less ugly.
 
-> **Note:** You can find our version on GitHub at [first-form-styled.html](https://github.com/mdn/learning-area/blob/master/html/forms/your-first-HTML-form/first-form-styled.html) ([also see it live](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html)).
+> **Note:** You can find our version on GitHub at [first-form-styled.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html) ([also see it live](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html)).
 
 ## Sending form data to your web server
 

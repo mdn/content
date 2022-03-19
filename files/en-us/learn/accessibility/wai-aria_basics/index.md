@@ -160,7 +160,7 @@ If you go to VoiceOver's landmarks menu (accessed using VoiceOver key + U and th
 
 However, we could do better here. The search form is a really important landmark that people will want to find, but it is not listed in the landmarks menu or treated like a notable landmark, beyond the actual input being called out as a search input (`<input type="search">`). In addition, some older browsers (most notably IE8) don't recognize the semantics of the HTML5 elements.
 
-Let's improve it by the use of some ARIA features. First, we'll add some [`role`](/en-US/docs/Web/accessibility/ARIA/roles) attributes to our HTML structure. You can try taking a copy of our original files (see [index.html](https://github.com/mdn/learning-area/blob/master/accessibility/aria/website-no-roles/index.html) and [style.css](https://github.com/mdn/learning-area/blob/master/accessibility/aria/website-no-roles/style.css)), or navigating to our [website-aria-roles](https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles) example ([see it live](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)), which has a structure like this:
+Let's improve it by the use of some ARIA features. First, we'll add some [`role`](/en-US/docs/Web/accessibility/ARIA/roles) attributes to our HTML structure. You can try taking a copy of our original files (see [index.html](https://github.com/mdn/learning-area/blob/main/accessibility/aria/website-no-roles/index.html) and [style.css](https://github.com/mdn/learning-area/blob/main/accessibility/aria/website-no-roles/style.css)), or navigating to our [website-aria-roles](https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles) example ([see it live](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)), which has a structure like this:
 
 ```html
 <header>
@@ -202,7 +202,7 @@ Content loaded into the DOM can be easily accessed using a screenreader, from te
 
 The problem is that modern web apps are often not just static text — they tend to have a lot of dynamically updating content, i.e. content that updates without the entire page reloading via a mechanism like [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest), [Fetch](/en-US/docs/Web/API/Fetch_API), or [DOM APIs](/en-US/docs/Web/API/Document_Object_Model). These are sometimes referred to as **live regions**.
 
-Let's look at a quick example — see [aria-no-live.html](https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-no-live.html) (also [see it running live](https://mdn.github.io/learning-area/accessibility/aria/aria-no-live.html)). In this example we have a simple random quote box:
+Let's look at a quick example — see [aria-no-live.html](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-no-live.html) (also [see it running live](https://mdn.github.io/learning-area/accessibility/aria/aria-no-live.html)). In this example we have a simple random quote box:
 
 ```html
 <section>
@@ -227,7 +227,7 @@ WAI-ARIA fortunately provides a useful mechanism to provide these alerts — the
 - `polite`: Updates should be announced only if the user is idle.
 - `assertive`: Updates should be announced to the user as soon as possible.
 
-We'd like you to take a copy of [aria-no-live.html](https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-no-live.html) and [quotes.json](https://github.com/mdn/learning-area/blob/master/accessibility/aria/quotes.json), and update your `<section>` tag as follows:
+We'd like you to take a copy of [aria-no-live.html](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-no-live.html) and [quotes.json](https://github.com/mdn/learning-area/blob/main/accessibility/aria/quotes.json), and update your `<section>` tag as follows:
 
 ```html
 <section aria-live="assertive">
@@ -245,7 +245,7 @@ There is an additional consideration here — only the bit of text that updates 
 
 The `aria-atomic="true"` attribute tells screenreaders to read out the entire element contents as one atomic unit, not just the bits that were updated.
 
-> **Note:** You can see the finished example at [aria-live.html](https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-live.html) ([see it running live](https://mdn.github.io/learning-area/accessibility/aria/aria-live.html)).
+> **Note:** You can see the finished example at [aria-live.html](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-live.html) ([see it running live](https://mdn.github.io/learning-area/accessibility/aria/aria-live.html)).
 
 > **Note:** The [`aria-relevant`](https://www.w3.org/TR/wai-aria-1.1/#aria-relevant) property is also quite useful for controlling what gets read out when a live region is updated. You can for example only get content additions or removals read out.
 
@@ -282,7 +282,7 @@ First of all, let's revisit the form example we first looked at in our CSS and J
 
 We could go further with our ARIA usage, and provide some more validation help. How about indicating whether fields are required in the first place, and what range the age should be?
 
-1. At this point, take a copy of our [form-validation.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/form-validation.html) and [validation.js](https://github.com/mdn/learning-area/blob/master/accessibility/css/validation.js) files, and save them in a local directory.
+1. At this point, take a copy of our [form-validation.html](https://github.com/mdn/learning-area/blob/main/accessibility/css/form-validation.html) and [validation.js](https://github.com/mdn/learning-area/blob/main/accessibility/css/validation.js) files, and save them in a local directory.
 2. Open them both in a text editor and have a look at how the code works.
 3. First of all, add a paragraph just above the opening `<form>` tag, like the one below, and mark both the form `<label>`s with an asterisk. This is normally how we mark required fields for sighted users.
 
@@ -343,7 +343,7 @@ A few times in this course already, we've mentioned the native accessibility of 
 
 But what about screenreaders? They still won't see the elements as buttons. If we test our [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) example in a screenreader, our fake buttons will be reported using phrases like "Click me!, group", which is obviously confusing.
 
-We can fix this using a WAI-ARIA role. Make a local copy of [fake-div-buttons.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html), and add [`role="button"`](/en-US/docs/Web/accessibility/ARIA/roles/button_role) to each button `<div>`, for example:
+We can fix this using a WAI-ARIA role. Make a local copy of [fake-div-buttons.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html), and add [`role="button"`](/en-US/docs/Web/accessibility/ARIA/roles/button_role) to each button `<div>`, for example:
 
 ```html
 <div data-message="This is from the first button" tabindex="0" role="button">Click me!</div>
@@ -357,11 +357,11 @@ Now when you try this using a screenreader, you'll have buttons be reported usin
 
 There are a whole host of other [roles](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) that can identify non-semantic element structures as common UI features that go beyond what's available in standard HTML, for example [`combobox`](https://www.w3.org/TR/wai-aria-1.1/#combobox), [`slider`](https://www.w3.org/TR/wai-aria-1.1/#slider), [`tabpanel`](https://www.w3.org/TR/wai-aria-1.1/#tabpanel), [`tree`](https://www.w3.org/TR/wai-aria-1.1/#tree). You can see a number of useful examples in the [Deque university code library](https://dequeuniversity.com/library/), to give you an idea of how such controls can be made accessible.
 
-Let's go through an example of our own. We'll return to our simple absolutely-positioned tabbed interface (see [Hiding things](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#hiding_things) in our CSS and JavaScript accessibility article), which you can find at [Tabbed info box example](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) (see [source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)).
+Let's go through an example of our own. We'll return to our simple absolutely-positioned tabbed interface (see [Hiding things](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#hiding_things) in our CSS and JavaScript accessibility article), which you can find at [Tabbed info box example](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) (see [source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)).
 
 This example as-is works fine in terms of keyboard accessibility — you can happily tab between the different tabs and select them to show the tab contents. It is also fairly accessible too — you can scroll through the content and use the headings to navigate, even if you can't see what is happening on screen. It is however not that obvious what the content is — a screenreader currently reports the content as a list of links, and some content with three headings. It doesn't give you any idea of what the relationship is between the content. Giving the user more clues as to the structure of the content is always good.
 
-To improve things, we've created a new version of the example called [aria-tabbed-info-box.html](https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-tabbed-info-box.html) ([see it running live](https://mdn.github.io/learning-area/accessibility/aria/aria-tabbed-info-box.html)). We've updated the structure of the tabbed interface like so:
+To improve things, we've created a new version of the example called [aria-tabbed-info-box.html](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-tabbed-info-box.html) ([see it running live](https://mdn.github.io/learning-area/accessibility/aria/aria-tabbed-info-box.html)). We've updated the structure of the tabbed interface like so:
 
 ```html
 <ul role="tablist">

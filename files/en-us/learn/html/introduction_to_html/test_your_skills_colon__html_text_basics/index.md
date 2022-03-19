@@ -24,7 +24,7 @@ In this task we want you to mark up the provided HTML using semantic heading and
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/basic-text/basic-text1-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/basic-text/basic-text1-download.html) to work in your own editor or in an online editor.
 
 ## HTML text basics 2
 
@@ -36,7 +36,7 @@ Try updating the live code below to create the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/basic-text/basic-text2-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/basic-text/basic-text2-download.html) to work in your own editor or in an online editor.
 
 ## HTML text basics 3
 
@@ -48,7 +48,7 @@ Try updating the live code below to create the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/basic-text/basic-text3-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/basic-text/basic-text3-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 
