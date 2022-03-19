@@ -44,100 +44,13 @@ The below graphic shows a summary of the available service worker events:
 
 ![install, activate, message, fetch, sync, push](sw-events.png)
 
-### Promises
-
-[Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) are a great mechanism for running async operations, with success dependant on one another. This is central to the way service workers work.
-
-Promises can do a variety of things, but all you need to know for now is that if something returns a promise, you can attach `.then()` to the end and include callbacks inside it for success cases, or you can insert `.catch()` on the end if you want to include a failure callback.
-
-Let's compare a traditional synchronous callback structure to its asynchronous promise equivalent.
-
-#### sync
-
-```js
-try {
-  const value = myFunction();
-  console.log(value);
-} catch(err) {
-  console.log(err);
-}
-```
-
-#### async
-
-```js
-myFunction().then((value) => {
-  console.log(value);
-}).catch((err) => {
-  console.log(err);
-});
-```
-
-In the first example, we have to wait for `myFunction()` to run and return `value` before any more of the code can execute. In the second example, `myFunction()` returns a promise for `value`, then the rest of the code can carry on running. When the promise resolves, the code inside `then` will be run, asynchronously.
-
-Now for a real example — what if we wanted to load images dynamically, but we wanted to make sure the images were loaded before we tried to display them? This is a standard thing to do, but it can be a bit of a pain. We can use `.onload` to only display the image after it's loaded, but what about events that start happening before we start listening to them? We could try to work around this using `.complete`, but it's still not foolproof, and what about multiple images? And, ummm, it's still synchronous, so blocks the main thread.
-
-Instead, we could build our own promise to handle this kind of case. (See our [Promises test](https://github.com/mdn/js-examples/tree/master/promises-test) example for the source code, or [look at it running live](https://mdn.github.io/js-examples/promises-test/).)
-
-> **Note:** A real service worker implementation would use caching and onfetch rather than the XMLHttpRequest API. Those features are not used here so that you can focus on understanding Promises.
-
-```js
-const imgLoad = (url) => {
-  return new Promise((resolve, reject) => {
-    var request = new XMLHttpRequest();
-    request.open('GET', url);
-    request.responseType = 'blob';
-
-    request.onload = () => {
-      if (request.status == 200) {
-        resolve(request.response);
-      } else {
-        reject(Error('Image didn\'t load successfully; error code:' + request.statusText));
-      }
-    };
-
-    request.onerror = () => {
-      reject(Error('There was a network error.'));
-    };
-
-    request.send();
-  });
-}
-```
-
-We return a new promise using the `Promise()` constructor, which takes as an argument a callback function with `resolve` and `reject` parameters. Somewhere in the function, we need to define what happens for the promise to resolve successfully or be rejected — in this case return a 200 OK status or not — and then call `resolve` on success, or `reject` on failure. The rest of the contents of this function is fairly standard XHR stuff, so we won't worry about that for now.
-
-When we come to call the `imgLoad()` function, we call it with the url to the image we want to load, as we might expect, but the rest of the code is a little different:
-
-```js
-let body = document.querySelector('body');
-let myImage = new Image();
-
-imgLoad('myLittleVader.jpg').then((response) => {
-  var imageURL = window.URL.createObjectURL(response);
-  myImage.src = imageURL;
-  body.appendChild(myImage);
-}, (Error) => {
-  console.log(Error);
-});
-```
-
-On to the end of the function call, we chain the promise `then()` method, which contains two functions — the first one is executed when the promise successfully resolves, and the second is called when the promise is rejected. In the resolved case, we display the image inside `myImage` and append it to the body (its argument is the `request.response` contained inside the promise's `resolve` method); in the rejected case we return an error to the console.
-
-This all happens asynchronously.
-
-> **Note:** You can also chain promise calls together, for example:
-> `myPromise().then(success, failure).then(success).catch(failure);`
-
-> **Note:** You can find a lot more out about promises by reading Jake Archibald's excellent [JavaScript Promises: there and back again](https://www.html5rocks.com/en/tutorials/es6/promises/).
-
 ## Service workers demo
 
 To demonstrate just the very basics of registering and installing a service worker, we have created a simple demo called [sw-test](https://github.com/mdn/sw-test), which is a simple Star wars Lego image gallery. It uses a promise-powered function to read image data from a JSON object and load the images using Ajax, before displaying the images in a line down the page. We've kept things static and simple for now. It also registers, installs, and activates a service worker, and when more of the spec is supported by browsers it will cache all the files required so it will work offline!
 
 ![](demo-screenshot.png)
 
-You can see the [source code on GitHub](https://github.com/mdn/sw-test/), and [view the example live](https://mdn.github.io/sw-test/). The one bit we'll call out here is the promise (see [app.js lines 22-47](https://github.com/mdn/sw-test/blob/gh-pages/app.js#L22-L47)), which is a modified version of what you read about above, in the [Promises test demo](https://mdn.github.io/js-examples/promises-test/). It is different in the following ways:
+You can see the [source code on GitHub](https://github.com/mdn/sw-test/), and [view the example live](https://mdn.github.io/sw-test/).
 
 
 
