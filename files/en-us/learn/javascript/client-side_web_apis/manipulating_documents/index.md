@@ -56,7 +56,7 @@ In this article we'll focus mostly on manipulating the document, but we'll show 
 
 The document currently loaded in each one of your browser tabs is represented by a document object model. This is a "tree structure" representation created by the browser that enables the HTML structure to be easily accessed by programming languages — for example the browser itself uses it to apply styling and other information to the correct elements as it renders a page, and developers like you can manipulate the DOM with JavaScript after the page has been rendered.
 
-We have created a simple example page at [dom-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dom-example.html) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example.html)). Try opening this up in your browser — it is a very simple page containing a {{htmlelement("section")}} element inside which you can find an image, and a paragraph with a link inside. The HTML source code looks like this:
+We have created a simple example page at [dom-example.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example.html) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example.html)). Try opening this up in your browser — it is a very simple page containing a {{htmlelement("section")}} element inside which you can find an image, and a paragraph with a link inside. The HTML source code looks like this:
 
 ```html
 <!DOCTYPE html>
@@ -96,7 +96,7 @@ It is useful to familiarize yourself with this terminology before working with t
 
 To start learning about DOM manipulation, let's begin with a practical example.
 
-1. Take a local copy of the [dom-example.html page](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dom-example.html) and the [image](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dinosaur.png) that goes along with it.
+1. Take a local copy of the [dom-example.html page](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example.html) and the [image](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dinosaur.png) that goes along with it.
 2. Add a `<script></script>` element just above the closing `</body>` tag.
 3. To manipulate an element inside the DOM, you first need to select it and store a reference to it inside a variable. Inside your script element, add the following line:
 
@@ -252,7 +252,7 @@ At this point, we haven't really done anything useful! There is no point using J
 
 In the next section we will look at a more practical use of DOM APIs.
 
-> **Note:** You can find our [finished version of the dom-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dom-example-manipulated.html) demo on GitHub ([see it live also](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example-manipulated.html)).
+> **Note:** You can find our [finished version of the dom-example.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example-manipulated.html) demo on GitHub ([see it live also](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example-manipulated.html)).
 
 ## Active learning: A dynamic shopping list
 
@@ -268,7 +268,7 @@ The finished demo will look something like this:
 
 To complete the exercise, follow the steps below, and make sure that the list behaves as described above.
 
-1. To start with, download a copy of our [shopping-list.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/shopping-list.html) starting file and make a copy of it somewhere. You'll see that it has some minimal CSS, a list with a label, input, and button, and an empty list and {{htmlelement("script")}} element. You'll be making all your additions inside the script.
+1. To start with, download a copy of our [shopping-list.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list.html) starting file and make a copy of it somewhere. You'll see that it has some minimal CSS, a list with a label, input, and button, and an empty list and {{htmlelement("script")}} element. You'll be making all your additions inside the script.
 2. Create three variables that hold references to the list ({{htmlelement("ul")}}), {{htmlelement("input")}}, and {{htmlelement("button")}} elements.
 3. Create a [function](/en-US/docs/Learn/JavaScript/Building_blocks/Functions) that will run in response to the button being clicked.
 4. Inside the function body, start off by storing the current [value](/en-US/docs/Web/API/HTMLInputElement#properties) of the input element in a variable.
@@ -280,7 +280,7 @@ To complete the exercise, follow the steps below, and make sure that the list be
 10. Attach an event handler to the delete button, so that when clicked it will delete the entire list item it is inside.
 11. Finally, use the [`focus()`](/en-US/docs/Web/API/HTMLElement/focus) method to focus the input element ready for entering the next shopping list item.
 
-> **Note:** If you get really stuck, have a look at our [finished shopping list](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/shopping-list-finished.html) ([see it running live also](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html).)
+> **Note:** If you get really stuck, have a look at our [finished shopping list](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list-finished.html) ([see it running live also](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html).)
 
 ## Summary
 

@@ -37,7 +37,7 @@ In the assessment for this module, we present to you a simple site with a number
 
 ## Starting point
 
-To get this assessment started, you should go and grab the [ZIP containing the files that comprise the example](https://github.com/mdn/learning-area/blob/master/accessibility/assessment-start/assessment-files.zip?raw=true). Decompress the contents into a new directory somewhere on your local computer.
+To get this assessment started, you should go and grab the [ZIP containing the files that comprise the example](https://github.com/mdn/learning-area/blob/main/accessibility/assessment-start/assessment-files.zip?raw=true). Decompress the contents into a new directory somewhere on your local computer.
 
 Alternatively, you could use a site like [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/) to do your assessment. You could paste the HTML, CSS, and JavaScript into one of these online editors. If the online editor you are using doesn't have a separate CSS/JS panel, feel free to put them in appropriate `<style>` / `<script>` elements.
 

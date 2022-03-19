@@ -121,7 +121,7 @@ Let's return to the example of the Web Audio API — this is a fairly complex AP
 - {{domxref("MediaElementAudioSourceNode")}}, which represents an {{htmlelement("audio")}} element containing sound you want to play and manipulate inside the audio context.
 - {{domxref("AudioDestinationNode")}}, which represents the destination of the audio, i.e. the device on your computer that will actually output it — usually your speakers or headphones.
 
-So how do these objects interact? If you look at our [simple web audio example](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/web-audio/index.html) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/introduction/web-audio/)), you'll first see the following HTML:
+So how do these objects interact? If you look at our [simple web audio example](https://github.com/mdn/learning-area/blob/main/javascript/apis/introduction/web-audio/index.html) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/introduction/web-audio/)), you'll first see the following HTML:
 
 ```html
 <audio src="outfoxing.mp3"></audio>
@@ -234,7 +234,7 @@ Ball.prototype.draw = function() {
 };
 ```
 
-> **Note:** You can see this code in action in our [bouncing balls demo](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html) (see it [running live](https://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) also).
+> **Note:** You can see this code in action in our [bouncing balls demo](https://github.com/mdn/learning-area/blob/main/javascript/apis/introduction/bouncing-balls.html) (see it [running live](https://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) also).
 
 ### They often use events to handle changes in state
 
