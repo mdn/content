@@ -28,7 +28,7 @@ setHeaderValue(value)
 ### Parameters
 
 - `value`
-- : An arbitrary string value, which the target server uses to determine what should returned for the requested resource.
+  - : An arbitrary string value, which the target server uses to determine what should returned for the requested resource.
 
 ### Return Value
 
