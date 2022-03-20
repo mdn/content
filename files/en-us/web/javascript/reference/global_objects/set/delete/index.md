@@ -47,7 +47,7 @@ mySet.delete('foo'); // Returns true. Successfully removed.
 mySet.has('foo');    // Returns false. The "foo" element is no longer present.
 ```
 
-Let's checkout below how to delete an Object from a Set.
+Let's check out below how to delete an Object from a Set.
 
 ```js
 const setObj = new Set();   // Create a new set.
