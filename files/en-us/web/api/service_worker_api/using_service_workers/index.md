@@ -323,9 +323,10 @@ We have opted for this fallback image because the only updates that are likely t
 
 ## Service Worker Navigation Preload
 
-If enabled, this feature starts downloading resources as soon as the fetch request is made, and in parallel with service worker bootup. This ensures that download starts immediately, rather than having to wait until the service worker has booted. That delay happens relatively rarely, but is unavoidable when it does happen, and significant.
+If enabled, the [navigation preload](/en-US/docs/Web/API/NavigationPreloadManager) feature starts downloading resources as soon as the fetch request is made, and in parallel with service worker bootup.
+This ensures that download starts immediately, rather than having to wait until the service worker has booted. That delay happens relatively rarely, but is unavoidable when it does happen, and may be significant.
 
-First the feature needs be enabled with `registration.navigationPreload.enable()`:
+First the feature needs be enabled with {{domxref("NavigationPreloadManager.enable()", "registration.navigationPreload.enable()")}}:
 
 ```js
 const enableNavigationPreload = async () => {
@@ -340,7 +341,9 @@ self.addEventListener('activate', (event) => {
 });
 ```
 
-Then we need to make use of `event.preloadResponse`, which is passed as `preloadResponsePromise` to the `cacheFirst` function. Instead of first doing a cache check and then fetching from the network if that doesn't succeed, there is a middle step. So the new process is:
+Then we need to make use of {{domxref("FetchEvent.preloadResponse", "event.preloadResponse")}}, which is passed as `preloadResponsePromise` to the `cacheFirst` function.
+Instead of first doing a cache check and then fetching from the network if that doesn't succeed, there is a middle step.
+So the new process is:
 
 1. Check cache
 2. Wait on `preloadResponsePromise`
@@ -364,7 +367,7 @@ const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
     return responseFromCache;
   }
 
-  // Next try to use the preloaded response, if it's there
+  // Next try to use (and cache) the preloaded response, if it's there
   const preloadResponse = await preloadResponsePromise;
   if (preloadResponse) {
     console.info('using preload response', preloadResponse);
