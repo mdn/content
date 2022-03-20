@@ -222,7 +222,7 @@ Let's put these ideas into practice and build a slightly more involved form — 
           <ul>
               <li>
                 <label for="title_1">
-                  <input type="radio" id="title_1" name="title" value="K" >
+                  <input type="radio" id="title_1" name="title" value="K">
                   King
                 </label>
               </li>
