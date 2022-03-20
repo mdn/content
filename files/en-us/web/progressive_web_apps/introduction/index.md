@@ -45,7 +45,7 @@ There are some key principles a web app should try to observe to be identified a
 - [Network independent](#network_independence), so it works offline or with a poor network connection.
 - [Progressively enhanced](#progressive_enhancement_support), so it's still usable on a basic level on older browsers, but fully-functional on the latest ones.
 - [Re-engageable](#re-engageability), so it's able to send notifications whenever there's new content available.
-- [Responsively designed](#responsiveness), so it's usable on any device with a screen and a browser—mobile phones, tablets, laptops, TVs, refrigerators, etc.
+- [Responsively designed](#responsiveness), so it's usable on any device with a screen and a browser— mobile phones, tablets, laptops, TVs, etc.
 - [Secure](#secure), so the connections between the user, the app, and your server are secured against any third parties trying to get access to sensitive data.
 
 Offering these features and making use of all the [advantages](#advantages_of_web_applications) offered by web applications can create a compelling, highly flexible offering for your users and customers.
