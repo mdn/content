@@ -19,10 +19,10 @@ background color of the table.
 
 The `bgColor` attribute is deprecated in HTML 4.01. The CSS
 {{cssxref("background-color")}} property should be used instead by modifying the
-element's [`style`](/en-US/docs/DOM/style#DOM_Style_Object) object
+element's [`style`](/en-US/docs/Web/API/HTMLElement/style) object
 or using a style rule.
 
-Also available on DOM [`tbody`](/en-US/docs/DOM/table.tBodies), [`row`](/en-US/docs/DOM/table.rows) and [`cell`](/en-US/docs/DOM/table.cells) objects.
+Also available on DOM [`tbody`](/en-US/docs/Web/API/HTMLTableElement/tBodies), [`row`](/en-US/docs/Web/API/HTMLTableElement/rows) and [`cell`](/en-US/docs/DOM/table.cells) objects.
 
 ## Syntax
 
