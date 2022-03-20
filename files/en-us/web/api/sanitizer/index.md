@@ -7,7 +7,7 @@ tags:
   - sanitize
 browser-compat: api.Sanitizer
 ---
-{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
+{{SeeCompatTable}}{{securecontext_header}}{{APIRef("Sanitizer")}}
 
 The **`Sanitizer`** interface of the {{domxref('HTML Sanitizer API')}} provides methods to sanitize untrusted strings of HTML, {{domxref("Document")}} and {{domxref("DocumentFragment")}} objects.
 After sanitization, unwanted elements or attributes are removed, and the returned objects can safely be inserted into a document's DOM.
