@@ -29,7 +29,6 @@ HTML is normally stored as an `.html` file, served by a {{Glossary("Server","web
 ## See also
 
 - {{interwiki("wikipedia", "HTML", "HTML")}} on Wikipedia
-- [Our HTML tutorial](/en-US/docs/Learn/HTML)
+- [Our HTML Guide](/en-US/docs/Learn/HTML)
 - [The web course on codecademy.com](https://www.codecademy.com/learn/learn-html)
-- [The HTML documentation on MDN](/en-US/docs/Web/HTML)
-- [The HTML specification](https://www.w3.org/TR/html5/)
+- [The HTML specification](https://html.spec.whatwg.org/)
