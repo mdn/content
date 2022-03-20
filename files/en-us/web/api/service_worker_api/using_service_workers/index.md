@@ -324,9 +324,10 @@ We have opted for this fallback image because the only updates that are likely t
 ## Service Worker Navigation Preload
 
 If enabled, the [navigation preload](/en-US/docs/Web/API/NavigationPreloadManager) feature starts downloading resources as soon as the fetch request is made, and in parallel with service worker bootup.
-This ensures that download starts immediately, rather than having to wait until the service worker has booted. That delay happens relatively rarely, but is unavoidable when it does happen, and may be significant.
+This ensures that download starts immediately on navigation to a page, rather than having to wait until the service worker has booted.
+That delay happens relatively rarely, but is unavoidable when it does happen, and may be significant.
 
-First the feature needs be enabled with {{domxref("NavigationPreloadManager.enable()", "registration.navigationPreload.enable()")}}:
+First the feature must be enabled during service worker activation, using {{domxref("NavigationPreloadManager.enable()", "registration.navigationPreload.enable()")}}:
 
 ```js
 const enableNavigationPreload = async () => {
@@ -341,13 +342,16 @@ self.addEventListener('activate', (event) => {
 });
 ```
 
-Then we need to make use of {{domxref("FetchEvent.preloadResponse", "event.preloadResponse")}}, which is passed as `preloadResponsePromise` to the `cacheFirst` function.
-Instead of first doing a cache check and then fetching from the network if that doesn't succeed, there is a middle step.
-So the new process is:
+Then use {{domxref("FetchEvent.preloadResponse", "event.preloadResponse")}} to wait for the preloaded resource to finish downloading in our `fetch` event handler.
+
+Continuing the example from the previous sections, we insert the code to wait for the preloaded resource between the cache check and fetching from the network if that doesn't succeed.
+
+The new process is:
 
 1. Check cache
-2. Wait on `preloadResponsePromise`
-3. If neither of these are defined then we go to the network.
+2. Wait on `event.preloadResponse`, which is passed as `preloadResponsePromise` to the `cacheFirst` function.
+   Cache the result if it returns.
+4. If neither of these are defined then we go to the network.
 
 ```js
 const addResourcesToCache = async (resources) => {
@@ -398,6 +402,7 @@ const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
   }
 };
 
+// Enable navigation preload
 const enableNavigationPreload = async () => {
   if (self.registration.navigationPreload) {
     // Enable navigation preloads!
@@ -435,6 +440,10 @@ self.addEventListener('fetch', (event) => {
   );
 });
 ```
+
+Note that in this example we download and cache the same data for the resource whether it is downloaded "normally" or preloaded.
+You can instead choose to download and cache a different resource on preload.
+For more information see [`NavigationPreloadManager` > Custom responses](/en-US/docs/Web/API/NavigationPreloadManager#custom_responses).
 
 ## Updating your service worker
 
