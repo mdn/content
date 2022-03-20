@@ -43,7 +43,7 @@ The {{domxref('StylePropertyMap')}} interface of the CSS Typed Object Model API 
 
 The {{domxref('CSSUnparsedValue')}} interface of the CSS Typed Object Model API represents property values that reference custom properties. It consists of a list of string fragments and variable references.
 
-- {{domxref('CSSUnparsedValue.CSSUnparsedValue()')}} constructor
+- {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}} constructor
   - : Creates a new CSSUnparsedValue object which represents property values that reference custom properties.
 - {{domxref('CSSUnparsedValue.entries()')}}
   - : Method returning an array of a given object's own enumerable property \[key, value] pairs in the same order as that provided by a for...in loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).
@@ -56,8 +56,8 @@ The {{domxref('CSSUnparsedValue')}} interface of the CSS Typed Object Model API 
 
 The {{domxref('CSSKeywordValue')}} interface of the CSS Typed Object Model API creates an object to represent CSS keywords and other identifiers.
 
-- {{domxref('CSSKeywordValue.CSSKeywordValue()')}} constructor
-  - : Constructor creates a new {{domxref('CSSKeywordValue.CSSKeywordValue()')}} object which represents CSS keywords and other identifiers.
+- {{domxref("CSSKeywordValue.CSSKeywordValue", "CSSKeywordValue()")}} constructor
+  - : Constructor creates a new {{domxref("CSSKeywordValue.CSSKeywordValue", "CSSKeywordValue()")}} object which represents CSS keywords and other identifiers.
 - {{domxref('CSSKeywordValue.value()')}}
   - : Property of the CSSKeywordValue interface returning or setting the value of the CSSKeywordValue.
 

@@ -21,7 +21,7 @@ would be represented by a `CSSNumericValue`.
 ## Syntax
 
 ```js
-var CSSUnitValue = new CSSUnitValue()
+new CSSUnitValue()
 ```
 
 ### Parameters

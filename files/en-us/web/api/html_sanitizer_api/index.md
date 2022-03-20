@@ -21,7 +21,7 @@ To access the API you would use the {{domxref('Sanitizer.Sanitizer()','Sanitizer
 The configuration options parameter allows you to specify the allowed and dis-allowed elements and attributes, and to enable custom elements and comments.
 
 The most common use-case - preventing XSS - is handled by the default configuration.
-Creating a {{domxref('Sanitizer.Sanitizer')}} with a custom configuration is necessary only to handle additional, application-specific use cases.
+Creating a {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} with a custom configuration is necessary only to handle additional, application-specific use cases.
 
 The API has three main methods for sanitizing data:
 
