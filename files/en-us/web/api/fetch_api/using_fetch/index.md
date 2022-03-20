@@ -124,7 +124,7 @@ fetch('https://example.com/profile', {
   headers: {
     'Content-Type': 'application/json',
   },
-  body: JSON.stringify(data),
+  body: JSON.stringify(data)
 })
 .then(response => response.json())
 .then(data => {
@@ -174,7 +174,7 @@ for (let i = 0; i < photos.files.length; i++) {
 
 fetch('https://example.com/posts', {
   method: 'POST',
-  body: formData,
+  body: formData
 })
 .then(response => response.json())
 .then(result => {
@@ -190,7 +190,7 @@ fetch('https://example.com/posts', {
 The chunks that are read from a response are not broken neatly at line boundaries and are Uint8Arrays, not strings. If you want to fetch a text file and process it line by line, it is up to you to handle these complications. The following example shows one way to do this by creating a line iterator (for simplicity, it assumes the text is UTF-8, and doesn't handle fetch errors).
 
 ```js
-async function* makeTextFileLineIterator(fileURL) {
+async function makeTextFileLineIterator(fileURL) {
   const utf8Decoder = new TextDecoder('utf-8');
   const response = await fetch(fileURL);
   const reader = response.body.getReader();
@@ -262,7 +262,7 @@ const myRequest = new Request('flowers.jpg', {
   method: 'GET',
   headers: myHeaders,
   mode: 'cors',
-  cache: 'default',
+  cache: 'default'
 });
 
 fetch(myRequest)
