@@ -16,7 +16,7 @@ The **`getInfo()`** method of the {{domxref("SerialPort")}} interface returns an
 ## Syntax
 
 ```js
-var promise = SerialPort.getInfo();
+SerialPort.getInfo();
 ```
 
 ### Parameters
