@@ -19,7 +19,7 @@ This configuration may be customized using constructor options.
 
 ## Constructors
 
-- {{domxref('Sanitizer.Sanitizer')}}
+- {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}}
   - : Creates and returns a `Sanitizer` object, optionally with custom sanitization behavior.
 
 ## Methods
