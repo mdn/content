@@ -344,7 +344,7 @@ self.addEventListener('activate', (event) => {
 
 Then use {{domxref("FetchEvent.preloadResponse", "event.preloadResponse")}} to wait for the preloaded resource to finish downloading in the `fetch` event handler.
 
-Continuing the example from the previous sections, we insert the code to wait for the preloaded resource between the cache check and fetching from the network if that doesn't succeed.
+Continuing the example from the previous sections, we insert the code to wait for the preloaded resource after the cache check, and before fetching from the network if that doesn't succeed.
 
 The new process is:
 
