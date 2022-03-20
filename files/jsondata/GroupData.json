@@ -765,7 +765,7 @@
     "HTML Sanitizer API": {
       "overview": ["HTML Sanitizer API"],
       "interfaces": ["Sanitizer"],
-      "methods": ["Sanitizer.sanitize", "Sanitizer.sanitizeToString"],
+      "methods": [],
       "properties": [],
       "events": []
     },
