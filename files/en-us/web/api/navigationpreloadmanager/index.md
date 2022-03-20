@@ -27,7 +27,7 @@ The result of a preload fetch request is waited on using the promise returned by
 - {{domxref("NavigationPreloadManager.setHeaderValue()")}}
   - : Sets the value of the {{HTTPHeader("Service-Worker-Navigation-Preload")}} HTTP header sent in preloading requests and returns an empty {{jsxref("Promise")}}.
 - {{domxref("NavigationPreloadManager.getState()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves to an object with properties that indicate whether preloading is enabled, and the value sent with the {{HTTPHeader("Service-Worker-Navigation-Preload")}} HTTP header in preloading requests.
+  - : Returns a {{jsxref("Promise")}} that resolves to an object with properties that indicate whether preloading is enabled, and what value will be sent in the {{HTTPHeader("Service-Worker-Navigation-Preload")}} HTTP header in preloading requests.
 
 
 ## Description
@@ -40,13 +40,13 @@ A service worker cannot process events from the browser until it has booted.
 This is unavoidable, but usually doesn't have much impact.
 Service workers are often already started (they remain active for some time after processing other requests).
 Even if a service worker does have to boot, much of the time it may be returning values from a cache, which is very fast.
-However in those cases where a worker has to boot before it can start fetching a remote resource then the delay can be significant.
+However, in those cases where a worker has to boot before it can start fetching a remote resource, then the delay can be significant.
 
-The {{domxref("NavigationPreloadManager")}} provides a mechanism to allow fetching of the resources to run in parallel with service worker boot, so that by the time the worker is able to handle the fetch request from the browser, the resource may already have fully or partially downloaded.
+The {{domxref("NavigationPreloadManager")}} provides a mechanism to allow fetching of the resources to run in parallel with service worker boot, so that by the time the worker is able to handle the fetch request from the browser, the resource may already have been fully or partially downloaded.
 This makes the case where the worker has to start up "no worse" than when the worker is already started, and in some cases better.
 
 The preload manager sends the {{HTTPHeader("Service-Worker-Navigation-Preload")}} HTTP header with preload requests, allowing responses to be customized for preload requests.
-This might be used, for example, to reduce the data sent to just part of the original page, or to customise the response based on the user's log-in state.
+This might be used, for example, to reduce the data sent to just part of the original page, or to customize the response based on the user's log-in state.
 
 ## Examples
 
