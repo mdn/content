@@ -92,10 +92,15 @@ You can obtain the largest safe value that can be incremented with Numbers by us
 This example demonstrates, where incrementing the {{jsxref("Number.MAX_SAFE_INTEGER")}} returns the expected result:
 
 ```js
-> const x = 2n ** 53n;
-9007199254740992n
-> const y = x + 1n;
-9007199254740993n
+// BigInt
+> const x = BigInt(Number.MAX_SAFE_INTEGER);
+9007199254740991n
+> x + 1n === x + 2n; // 9007199254740992n === 9007199254740993n
+false
+
+// Number
+> Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2; // 9007199254740992 === 9007199254740992
+true
 ```
 
 You can use the operators `+`, `*`, `-`, `**`, and `%` with BigInts—just like with Numbers. A BigInt is not strictly equal to a Number, but it is loosely so.
