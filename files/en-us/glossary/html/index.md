@@ -24,7 +24,7 @@ You can extend HTML elements with {{Glossary("attribute","attributes")}}:
 
 ![Detail of the structure of an HTML element](anatomy-of-an-html-element.png)
 
-An HTML file is normally saved with an `.htm` or `.html` extension, served by a {{Glossary("Server","web server")}}, and can be rendered by any {{Glossary("Browser","Web browser")}}.
+HTML is normally stored as an `.html` file, served by a {{Glossary("Server","web server")}}, and can be rendered by any {{Glossary("Browser","Web browser")}}.
 
 ## See also
 
