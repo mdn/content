@@ -28,7 +28,7 @@ console.countReset([label]);
 ### Parameters
 
 - `label` {{optional_inline}}
-  - : A {{jsxref("String")}}. If supplied, `countReset()` resets the count for
+  - : A string. If supplied, `countReset()` resets the count for
     that label to 0. If omitted, `countReset()` resets the default counter to
     0\.
 
