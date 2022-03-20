@@ -27,7 +27,7 @@ console.count([label]);
 ### Parameters
 
 - `label` {{Optional_Inline}}
-  - : A {{jsxref("String")}}. If supplied, `count()` outputs the number of
+  - : A string. If supplied, `count()` outputs the number of
     times it has been called with that label. If omitted, `count()` behaves as
     though it was called with the "default" label.
 
