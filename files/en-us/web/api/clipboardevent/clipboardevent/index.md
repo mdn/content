@@ -8,13 +8,12 @@ tags:
   - ClipboardEvent
   - Constructor
   - Cut
-  - Experimental
   - Reference
   - copy
   - paste
 browser-compat: api.ClipboardEvent.ClipboardEvent
 ---
-{{APIRef("Clipboard API")}}{{SeeCompatTable}}
+{{APIRef("Clipboard API")}}
 
 The **`ClipboardEvent()`** constructor returns a newly created
 {{domxref("ClipboardEvent")}}, representing an event providing information related to

@@ -7,14 +7,13 @@ tags:
   - Clipboard API
   - ClipboardEvent
   - Cut
-  - Experimental
   - Property
   - Read-only
   - copy
   - paste
 browser-compat: api.ClipboardEvent.clipboardData
 ---
-{{ apiref("Clipboard API") }} {{SeeCompatTable}}
+{{APIRef("Clipboard API")}}
 
 The **`ClipboardEvent.clipboardData`** property holds a
 {{domxref("DataTransfer")}} object, which can be used:
