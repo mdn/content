@@ -19,7 +19,7 @@ new {{domxref("URLSearchParams")}} object.
 ## Syntax
 
 ```js
-var URLSearchParams = new URLSearchParams(init);
+new URLSearchParams(init);
 ```
 
 ### Parameters

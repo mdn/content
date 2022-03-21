@@ -22,7 +22,7 @@ The **`ClipboardItem()`** constructor of the {{domxref("Clipboard API")}} create
 ## Syntax
 
 ```js
-var ClipboardItem = new ClipboardItem(ClipboardItemData);
+new ClipboardItem(ClipboardItemData);
 ```
 
 ### Parameters

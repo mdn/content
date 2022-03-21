@@ -25,7 +25,7 @@ applied.
 ## Syntax
 
 ```js
-var OverconstrainedError = new OverconstrainedError()
+new OverconstrainedError()
 ```
 
 ### Parameters
