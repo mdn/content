@@ -120,7 +120,7 @@ function handleMove(evt) {
 
   for (let i = 0; i < touches.length; i++) {
     const color = colorForTouch(touches[i]);
-    let idx = ongoingTouchIndexById(touches[i].identifier);
+    const idx = ongoingTouchIndexById(touches[i].identifier);
 
     if (idx >= 0) {
       console.log("continuing touch "+idx);
@@ -216,7 +216,7 @@ function colorForTouch(touch) {
   r = r.toString(16); // make it a hex digit
   g = g.toString(16); // make it a hex digit
   b = b.toString(16); // make it a hex digit
-  let color = "#" + r + g + b;
+  const color = "#" + r + g + b;
   console.log("color for touch with identifier " + touch.identifier + " = " + color);
   return color;
 }
@@ -285,7 +285,7 @@ function onTouch(evt) {
   if (evt.touches.length > 1 || (evt.type == "touchend" && evt.touches.length > 0))
     return;
 
-  let newEvt = document.createEvent("MouseEvents");
+  const newEvt = document.createEvent("MouseEvents");
   let type = null;
   let touch = null;
 
