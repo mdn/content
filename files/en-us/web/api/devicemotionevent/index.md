@@ -5,7 +5,6 @@ tags:
   - API
   - Device Orientation
   - DeviceMotionEvent
-  - Experimental
   - Interface
   - Mobile
   - Motion
