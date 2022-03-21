@@ -79,7 +79,7 @@ string text line 2`);
 
 ### String interpolation
 
-Without template literals, when you want to combine output from expressions with strings, you’d need to use the "`+`" (plus sign) [concatenation operator](#string_operators):
+Without template literals, when you want to combine output from expressions with strings, you’d [concatenate them](/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenation_using_) using the "`+`" (plus sign) ([addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)):
 
 ```js
 let a = 5;
