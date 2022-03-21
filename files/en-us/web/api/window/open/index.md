@@ -41,14 +41,17 @@ open(url, target, windowFeatures);
   - : A string containing a comma-separated list of window features in the form _name=value_ — or for boolean features, just _name_. These features include options such as the window's default size and position, whether or not to open a minimal popup window, and so forth. The following options are supported:
     - `popup`
       - : If this feature is enabled, it requests that a minimal popup window be used. The UI features included in the popup window will be automatically decided by the browser, generally including an address bar only.
-      
+
         If `popup` is not enabled, and there are no window features declared, the new browsing context will be a tab.
 
         > **Note:** Specifying any features in the _windowFeatures_ parameter, other than `noopener` or `noreferer`, also has the effect of requesting a popup.
 
-        To enable the feature, specify `popup` either with no value at all, or else set it to `yes` or `1`.
+        To enable the feature, specify `popup` either with no value at all, or else set it to `yes`, `1`, or `true`.
 
-        Example: `popup=yes`, `popup=1`, and `popup` all have identical results.
+        Example: `popup=yes`, `popup=1`, `popup=true`, and `popup` all have identical results.
+
+        > **Note:** [The `true` value was introduced in March 2022](https://github.com/whatwg/html/pull/7425).
+        > For better compatibility with older browsers, use one of the other values.
 
     - `width` or `innerWidth`
       - : Specifies the width of the content area, including scrollbars. The minimum required value is 100.
