@@ -6819,7 +6819,7 @@
 /en-US/docs/Tools/Page_Inspector/How_to/Use_the_Inspector_API	https://firefox-source-docs.mozilla.org/devtools-user/index.html#page-inspector
 /en-US/docs/Tools/Page_Inspector/How_to/View_fonts	https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_fonts/index.html
 /en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations	https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html
-/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations/Animations_examples	/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations/Animation_inspector_example:_CSS_transitions
+/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations/Animations_examples	https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/animation_inspector_example_colon__css_transitions/index.html
 /en-US/docs/Tools/Page_Inspector/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#page_inspector
 /en-US/docs/Tools/Page_Inspector/Style_panel	https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#CSS_pane
 /en-US/docs/Tools/Page_Inspector/UI_Tour	https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html
@@ -6863,7 +6863,7 @@
 /en-US/docs/Tools/Web_Console/UI_Tour	https://firefox-source-docs.mozilla.org/devtools-user/web_console/ui_tour/index.html
 /en-US/docs/Tools/Web_Console/WebConsoleHelp	https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html
 /en-US/docs/Tools/about:debugging	https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html
-/en-US/docs/Tools/about:debugging/about:debugging_before_Firefox_67	/en-US/docs/Tools/about:debugging/about:debugging_before_Firefox_68
+/en-US/docs/Tools/about:debugging/about:debugging_before_Firefox_67	https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/about_colon_debugging_before_firefox_68/index.html
 /en-US/docs/Tools/about_colon_debugging/about_colon_debugging_before_firefox_68	https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/about_colon_debugging_before_firefox_68/index.html
 /en-US/docs/Tools/accessibility_inspector/simulation	https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/simulation/index.html
 /en-US/docs/Tools/accessing_the_developer_tools	https://firefox-source-docs.mozilla.org/devtools-user/accessing_the_developer_tools/index.html
