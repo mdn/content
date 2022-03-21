@@ -15,9 +15,9 @@ browser-compat: javascript.grammar.template_literals
 ---
 {{JsSidebar("More")}}
 
-Template literals are literals delimited with backtick (\`) characters, allowing for [multi-line strings](#multi-line_strings), for [string interpolation](#string-interpolation) with embedded expressions, and for special constructs called [tagged templates](#tagged-templates).
+Template literals are literals delimited with backtick (\`) characters, allowing for [multi-line strings](#multi-line_strings), for [string interpolation](#string_interpolation) with embedded expressions, and for special constructs called [tagged templates](#tagged_templates).
 
-Template literals are sometimes informally called _template strings_, because they are used most commonly for [string interpolation](#string-interpolation) (to create strings by doing substitution of placeholders). However, a tagged template literal may not result in a string; it can be used with a custom [tag function](#tagged-templates) to perform whatever operations you want on the different parts of the template literal.
+Template literals are sometimes informally called _template strings_, because they are used most commonly for [string interpolation](#string_interpolation) (to create strings by doing substitution of placeholders). However, a tagged template literal may not result in a string; it can be used with a custom [tag function](#tagged_templates) to perform whatever operations you want on the different parts of the template literal.
 
 ## Syntax
 
@@ -43,9 +43,9 @@ example`string text ${expression} string text`
 Template literals are enclosed by backtick (\`) characters instead
 of double or single quotes.
 
-Along with having normal strings, template literals can also contain other parts called _placeholders_, which are embedded expressions delimited by a dollar sign and curly braces: `${expression}`. The strings and placeholders get passed to a function — either a default function, or a function you supply. The default function (when you don’t supply your own) just performs [string interpolation](#string-interplotion) to do substitution of the placeholders and then concatenate the parts into a single string.
+Along with having normal strings, template literals can also contain other parts called _placeholders_, which are embedded expressions delimited by a dollar sign and curly braces: `${expression}`. The strings and placeholders get passed to a function — either a default function, or a function you supply. The default function (when you don’t supply your own) just performs [string interpolation](#string_interpolation) to do substitution of the placeholders and then concatenate the parts into a single string.
 
-To supply a function of your own, precede the template literal with a function name; the result is called a [**tagged template**](#tagged-templates). In that case, the template literal is passed to your tag function, where you can then perform whatever operations you want on the different parts of the template literal.
+To supply a function of your own, precede the template literal with a function name; the result is called a [**tagged template**](#tagged_templates). In that case, the template literal is passed to your tag function, where you can then perform whatever operations you want on the different parts of the template literal.
 
 To escape a backtick in a template literal, put a backslash (`\`) before the
 backtick.
