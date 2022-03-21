@@ -53,7 +53,7 @@ Let's look at by far the most common type of conditional statement you'll use in
 
 Basic `if...else` syntax looks like the following in {{glossary("pseudocode")}}:
 
-```
+```js
 if (condition) {
   code to run if condition is true
 } else {
@@ -73,7 +73,7 @@ This code is pretty human-readable — it is saying "**if** the **condition** re
 
 You should note that you don't have to include the `else` and the second curly brace block — the following is also perfectly legal code:
 
-```
+```js
 if (condition) {
   code to run if condition is true
 }
@@ -85,7 +85,7 @@ However, you need to be careful here — in this case, the second block of code 
 
 As a final point, you may sometimes see `if...else` statements written without the curly braces, in the following shorthand style:
 
-```
+```js example-bad
 if (condition) code to run if condition is true
 else run some other code instead
 ```
