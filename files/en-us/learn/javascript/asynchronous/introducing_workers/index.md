@@ -105,7 +105,7 @@ The "index.html" file and the "style.css" files are already complete:
   <head>
     <meta charset="UTF-8">
     <script type="text/javascript" src="main.js" defer></script>
-    <link href="style.css"rel="stylesheet"></link>
+    <link href="style.css"rel="stylesheet">
   </head>
 
   <body>
