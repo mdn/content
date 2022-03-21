@@ -23,7 +23,7 @@ The `DeviceMotionEvent` provides web developers with information about the speed
 
 ## Constructor
 
-- {{domxref("DeviceMotionEvent.DeviceMotionEvent", "DeviceMotionEvent()")}} {{Non-standard_Inline}}
+- {{domxref("DeviceMotionEvent.DeviceMotionEvent", "DeviceMotionEvent()")}}
   - : Creates a new `DeviceMotionEvent`.
 
 ## Properties
