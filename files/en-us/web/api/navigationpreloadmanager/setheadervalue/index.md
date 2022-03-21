@@ -50,7 +50,8 @@ navigator.serviceWorker.ready
   })
   .then(() => {
     console.log("Done!");
-  });
+  })
+  .catch(e => console.error("NavigationPreloadManager not supported: " + e.message));
   
 ```
 
