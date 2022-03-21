@@ -86396,18 +86396,6 @@
       "Anonymous"
     ]
   },
-  "Web/API/Window/open/Obsolete_features": {
-    "modified": "2020-03-20T01:29:55.063Z",
-    "contributors": [
-      "arai"
-    ]
-  },
-  "Web/API/Window/open/Privileged_features": {
-    "modified": "2020-03-20T01:30:35.736Z",
-    "contributors": [
-      "arai"
-    ]
-  },
   "Web/API/Window/openDialog": {
     "modified": "2020-10-15T21:14:01.242Z",
     "contributors": [
