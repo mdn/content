@@ -140,9 +140,12 @@ Whether or not to use a popup window affects the {{domxref("BarProp.visible")}} 
       If this feature is present and disabled, it requests that the browser not use a minimal
       pop-up window for the secondary window.
 
-To enable the feature, specify `popup` either with no value at all, or else set it to `yes` or `1`.
+To enable the feature, specify `popup` either with no value at all, or else set it to `yes`, `1`, or `true`.
 
-Example: `popup=yes`, `popup=1`, and `popup` all have identical results.
+Example: `popup=yes`, `popup=1`, `popup=true` and `popup` all have identical results.
+
+> **Note:** [The `true` value was introduced in March 2022](https://github.com/whatwg/html/pull/7425).
+> For better compatibility with older browsers, use one of the other values.
 
 Otherwise:
 
@@ -215,8 +218,11 @@ of the most recently rendered window.
 > following features are just a condition for whether to open a popup or not. See the [popup condition](#popup_condition) section.
 
 The following features control the visibility of each UI part.
-To enable them, either specify them with no value at all, or else set them to `yes` or `1`.
-To disable them, either omit them, or else set them to `no` or `0`.
+To enable them, either specify them with no value at all, or else set them to `yes`, `1`, or `true`.
+To disable them, either omit them, or else set them to `no`, `0`, or `false`.
+
+> **Note:** [The `true` value was introduced in March 2022](https://github.com/whatwg/html/pull/7425).
+> For better compatibility with older browsers, use one of the other values.
 
 - `menubar`
 
