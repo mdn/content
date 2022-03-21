@@ -23,28 +23,24 @@ modification of the clipboard, that is {{event("cut")}}, {{event("copy")}}, and
 ## Syntax
 
 ```js
-var clipboardEvent = new ClipboardEvent(type[, options]);
+new ClipboardEvent(type)
+new ClipboardEvent(type, options)
 ```
 
 ### Parameters
 
-_The `ClipboardEvent()` constructor also inherits arguments from
-{{domxref("Event.Event", "Event()")}}._
+_The `ClipboardEvent()` constructor also inherits arguments from {{domxref("Event.Event", "Event()")}}._
 
 - _type_
-  - : Is a {{domxref("DOMString")}} representing the name of the type of the
-    `ClipboardEvent`. It is case-sensitive and can be: `'copy'`,
-    `'cut'`, or `'paste'`.
+  - : Is a {{domxref("DOMString")}} representing the name of the type of the `ClipboardEvent`.
+    It is case-sensitive and can be: `'copy'`, `'cut'`, or `'paste'`.
 - *options* {{optional_inline}}
 
   - : Options are as follows:
 
-    - `clipboardData`: A {{domxref("DataTransfer")}} containing the data
-      concerned by the clipboard event.
-    - `dataType`{{non-standard_inline}}: A {{domxref("DOMString")}}
-      containing the MIME-type of the data contained in the `data` argument.
-    - `data`{{non-standard_inline}}: A {{domxref("DOMString")}} containing
-      the data concerned by the clipboard event.
+    - `clipboardData`: A {{domxref("DataTransfer")}} containing the data concerned by the clipboard event.
+    - `dataType`{{non-standard_inline}}: A {{domxref("DOMString")}} containing the MIME-type of the data contained in the `data` argument.
+    - `data`{{non-standard_inline}}: A {{domxref("DOMString")}} containing the data concerned by the clipboard event.
 
 ## Specifications
 
