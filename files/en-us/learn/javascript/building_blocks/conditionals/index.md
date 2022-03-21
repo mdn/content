@@ -83,14 +83,14 @@ run some other code
 
 However, you need to be careful here — in this case, the second block of code is not controlled by the conditional statement, so it **always** runs, regardless of whether the condition returns `true` or `false`. This is not necessarily a bad thing, but it might not be what you want — often you want to run one block of code _or_ the other, not both.
 
-As a final point, you may sometimes see `if...else` statements written without the curly braces, in the following shorthand style:
+As a final point, while not recommended, you may sometimes see `if...else` statements written without the curly braces:
 
-```
+```example-bad
 if (condition) code to run if condition is true
 else run some other code instead
 ```
 
-This is perfectly valid code, but using it is not recommended — it is much easier to read the code and work out what is going on if you use the curly braces to delimit the blocks of code, and use multiple lines and indentation.
+This syntax is perfectly valid, but is much easier to understand the code if you use the curly braces to delimit the blocks of code, and use multiple lines and indentation.
 
 ### A real example
 
