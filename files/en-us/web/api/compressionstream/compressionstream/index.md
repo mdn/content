@@ -15,7 +15,7 @@ The **`CompressionStream()`** constructor creates a new {{domxref("CompressionSt
 ## Syntax
 
 ```js
-let CompressionStream = new CompressionStream(format);
+new CompressionStream(format);
 ```
 
 ### Parameters

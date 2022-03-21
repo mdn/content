@@ -22,7 +22,7 @@ value of the individual {{CSSXRef('transform')}} property in CSS.
 ## Syntax
 
 ```js
-var CSSSkewX = new CSSSkewX(ax);
+new CSSSkewX(ax);
 ```
 
 ### Parameters

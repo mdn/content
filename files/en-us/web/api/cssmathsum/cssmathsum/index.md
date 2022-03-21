@@ -23,7 +23,7 @@ or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue'
 ## Syntax
 
 ```js
-var CSSMathSum = new CSSMathSum(values)
+new CSSMathSum(values)
 ```
 
 ### Parameters
