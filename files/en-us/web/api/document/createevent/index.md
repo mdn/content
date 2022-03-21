@@ -27,7 +27,7 @@ var event = document.createEvent(type);
 - `type` is a string that represents the type of event to be
   created. Possible event types include `"UIEvents"`,
   `"MouseEvents"`, `"MutationEvents"`, and
-  `"HTMLEvents"`. See {{Anch("Notes")}} section for details.
+  `"HTMLEvents"`. See [Notes](#notes) section for details.
 
 ## Example
 

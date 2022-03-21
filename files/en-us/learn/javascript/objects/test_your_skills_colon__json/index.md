@@ -19,7 +19,7 @@ This aim of this skill test is to assess whether you've understood our [Working 
 
 ## JSON 1
 
-The one and only task in this article concerns accessing JSON data and using it in your page. JSON data about some mother cats and their kittens is available in [sample.json](https://github.com/mdn/learning-area/blob/master/javascript/oojs/tasks/json/sample.json). The JSON is loaded into the page as a text string and made available in the `catString` parameter of the `displayCatInfo()` function. Your task is to fill in the missing parts of the `displayCatInfo()` function to store:
+The one and only task in this article concerns accessing JSON data and using it in your page. JSON data about some mother cats and their kittens is available in [sample.json](https://github.com/mdn/learning-area/blob/main/javascript/oojs/tasks/json/sample.json). The JSON is loaded into the page as a text string and made available in the `catString` parameter of the `displayCatInfo()` function. Your task is to fill in the missing parts of the `displayCatInfo()` function to store:
 
 - The names of the three mother cats, separated by commas, in the `motherInfo` variable.
 - The total number of kittens, and how many are male and female, in the `kittenInfo` variable.

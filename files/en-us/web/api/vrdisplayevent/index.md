@@ -20,7 +20,7 @@ The **`VRDisplayEvent`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_
 
 ## Constructor
 
-- {{domxref("VRDisplayEvent.VRDisplayEvent()")}} {{deprecated_inline}}
+- {{domxref("VRDisplayEvent.VRDisplayEvent", "VRDisplayEvent()")}} {{deprecated_inline}}
   - : Creates a `VRDisplayEvent` object instance.
 
 ## Properties

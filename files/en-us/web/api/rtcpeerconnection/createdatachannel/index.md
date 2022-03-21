@@ -73,7 +73,7 @@ dataChannel = RTCPeerConnection.createDataChannel(label[, options]);
         data channels are negotiated in-band,
         where one side calls `createDataChannel`, and
         the other side listens to the {{domxref("RTCDataChannelEvent")}} event
-        using the {{DOMxRef("RTCPeerConnection.ondatachannel", "ondatachannel")}} event handler.
+        using the {{DOMxRef("RTCPeerConnection.datachannel_event", "ondatachannel")}} event handler.
         Alternatively (`true`),
         they can be negotiated out of-band,
         where both sides call `createDataChannel`

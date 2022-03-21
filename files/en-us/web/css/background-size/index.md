@@ -88,7 +88,7 @@ These attributes are as follows:
   If it has both horizontal and vertical intrinsic dimensions, it also has intrinsic proportions.
   If it has no dimensions or only one dimension, it may or may not have proportions.
 - CSS {{cssxref("&lt;gradient&gt;")}}s have no intrinsic dimensions or intrinsic proportions.
-- Background images created with the {{cssxref("element()")}} function use the intrinsic dimensions and proportions of the generating element.
+- Background images created with the {{cssxref("element", "element()")}} function use the intrinsic dimensions and proportions of the generating element.
 
 > **Note:** In Gecko, background images created using the [`element()`](</en-US/docs/Web/CSS/element()>) function are currently treated as images with the dimensions of the element, or of the background positioning area if the element is SVG, with the corresponding intrinsic proportion. This is non-standard behavior.
 

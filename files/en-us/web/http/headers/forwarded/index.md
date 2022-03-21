@@ -30,7 +30,7 @@ The alternative and de-facto standard versions of this header are the {{HTTPHead
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>yes</td>
     </tr>
   </tbody>
 </table>

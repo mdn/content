@@ -21,7 +21,7 @@ configured as specified.
 ## Syntax
 
 ```js
-var ContentIndexEvent = new ContentIndexEvent(type, ContentIndexEventInit);
+new ContentIndexEvent(type, ContentIndexEventInit);
 ```
 
 ### Parameters

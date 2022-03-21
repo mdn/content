@@ -18,7 +18,7 @@ The `USBAlternateInterface` interface of the [WebUSB API](/en-US/docs/Web/API/We
 
 ## Constructor
 
-- {{domxref("USBAlternateInterface.USBAlternateInterface")}}
+- {{domxref("USBAlternateInterface.USBAlternateInterface", "USBAlternateInterface()")}}
   - : Creates a new `USBAlternateInterface` object which will be populated with information about the alternate interface of the provided `USBInterface` with the given alternate setting number.
 
 ## Properties

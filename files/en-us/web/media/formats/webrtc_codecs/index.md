@@ -361,7 +361,7 @@ If the media is video, we call a method called `preferCodec()` for both the send
 
 Finally, we call the {{domxref("RTCRtpTransceiver")}}'s {{domxref("RTCRtpTransceiver.setCodecPreferences", "setCodecPreferences()")}} method to specify that the given send and receive codecs are allowed, in the newly rearranged order.
 
-That's done for each transceiver on the `RTCPeerConnection`; once all of the transceivers have been updated, we call the {{domxref("RTCPeerConnection.onnegotiationneeded", "onnegotiationneeded")}} event handler, which will create a new offer, update the local description, send the offer along to the remote peer, and so on, thereby triggering the renegotiation of the connection.
+That's done for each transceiver on the `RTCPeerConnection`; once all of the transceivers have been updated, we call the {{domxref("RTCPeerConnection.negotiationneeded_event", "onnegotiationneeded")}} event handler, which will create a new offer, update the local description, send the offer along to the remote peer, and so on, thereby triggering the renegotiation of the connection.
 
 The `preferCodec()` function called by the code above looks like this to move a specified codec to the top of the list (to be prioritized during negotiation):
 

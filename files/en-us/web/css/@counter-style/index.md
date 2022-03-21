@@ -151,6 +151,6 @@ The [Counter styles converter](https://r12a.github.io/app-counters/) pulls from 
 ## See also
 
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}, {{Cssxref("list-style-type")}}
-- {{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles.
-- CSS {{Cssxref("counter()")}} and {{Cssxref("counters()")}} functions
+- {{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles.
+- CSS {{Cssxref("counter", "counter()")}} and {{Cssxref("counters", "counters()")}} functions
 - [Counter style demo](https://mdn.github.io/css-examples/counter-style-demo/) ([code](https://github.com/mdn/css-examples/tree/master/counter-style-demo))

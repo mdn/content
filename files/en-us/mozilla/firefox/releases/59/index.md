@@ -29,8 +29,8 @@ This article provides information about the changes in Firefox 59 that will affe
 - The {{cssxref("overscroll-behavior")}} property and its associated longhand properties — {{cssxref("overscroll-behavior-x")}} and {{cssxref("overscroll-behavior-y")}} — have been implemented ({{bug(951793)}}), and it has been enabled by default on all releases ({{bug(1428879)}}).
 - The behavior of "unusual elements" (elements that aren't rendered purely by CSS box concepts such as replaced elements) when given a {{cssxref("display")}} value of `contents` has been updated as per spec ({{bug(1427292)}}). See [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) for exactly what the specified behaviors are.
 - {{cssxref("position")}} `sticky` is now supported on appropriate [HTML table](/en-US/docs/Learn/HTML/Tables) parts (e.g. {{htmlelement("th")}} elements) ({{bug(975644)}}).
-- {{cssxref("calc()")}} is now supported in {{cssxref("&lt;color&gt;")}} values — `rgb()`, `rgba()`, `hsl()`, and `hsla()` ({{bug(984021)}}).
-- {{cssxref("calc()")}} in [media query](/en-US/docs/Web/CSS/Media_Queries) values is now supported {{bug(1396057)}}.
+- {{cssxref("calc", "calc()")}} is now supported in {{cssxref("&lt;color&gt;")}} values — `rgb()`, `rgba()`, `hsl()`, and `hsla()` ({{bug(984021)}}).
+- {{cssxref("calc", "calc()")}} in [media query](/en-US/docs/Web/CSS/Media_Queries) values is now supported {{bug(1396057)}}.
 - The {{cssxref("@document")}} at-rule has been limited to use only in user and UA sheets ({{bug(1035091)}}).
 - Implement the {{cssxref("font-optical-sizing")}} property ({{bug(1435692)}}).
 
@@ -66,7 +66,7 @@ _No changes._
 
 #### Media and WebRTC
 
-- The {{domxref("MediaStreamTrack")}} property {{domxref("MediaStreamTrack.muted")}}, along with the events {{event("mute")}} and {{event("unmute")}} and the corresponding event handlers, {{domxref("MediaStreamTrack.onmute", "onmute")}} and {{domxref("MediaStreamTrack.onmute", "onunmute")}}, have been implemented. A track's `muted` state indicates that the track is not currently able to provide media data.
+- The {{domxref("MediaStreamTrack")}} property {{domxref("MediaStreamTrack.muted")}}, along with the events {{event("mute")}} and {{event("unmute")}} and the corresponding event handlers, {{domxref("MediaStreamTrack.mute_event", "onmute")}} and {{domxref("MediaStreamTrack.unmute_event", "onunmute")}}, have been implemented. A track's `muted` state indicates that the track is not currently able to provide media data.
 
   > **Note:** The `muted` state of a track isn't useful for what's typically thought of as muting and unmuting a track. Instead, use the {{domxref("MediaStreamTrack.enabled", "enabled")}} property; setting `enabled` to `false` causes the track to output only empty frames.
 

@@ -765,7 +765,7 @@
     "HTML Sanitizer API": {
       "overview": ["HTML Sanitizer API"],
       "interfaces": ["Sanitizer"],
-      "methods": ["Sanitizer.sanitize", "Sanitizer.sanitizeToString"],
+      "methods": [],
       "properties": [],
       "events": []
     },
@@ -1943,7 +1943,6 @@
         "RTCRTPStreamStats"
       ],
       "types": [
-        "RTCIceCredentialType",
         "RTCIceTransportPolicy",
         "RTCBundlePolicy",
         "RTCRtcpMuxPolicy",
@@ -1951,7 +1950,6 @@
         "RTCIceGatheringState",
         "RTCPeerConnectionState",
         "RTCIceConnectionState",
-        "RTCSdpType",
         "RTCIceProtocol",
         "RTCIceTcpCandidateType",
         "RTCIceCandidateType",
@@ -1968,7 +1966,6 @@
         "RTCStatsType",
         "RTCCodecType",
         "RTCQualityLimitationReason",
-        "RTCNetworkType",
         "RTCStatsIceCandidatePairState"
       ],
       "methods": ["MediaDevices.getUserMedia()"],

@@ -67,7 +67,7 @@ It's not guaranteed that you'll be able to switch into fullscreen mode. For exam
 
 ## Getting out of full screen mode
 
-The user always has the ability to exit fullscreen mode of their own accord; see {{Anch("Things your users want to know")}}. You can also do so programmatically by calling the {{DOMxRef("Document.exitFullscreen()")}} method.
+The user always has the ability to exit fullscreen mode of their own accord; see [Things your users want to know](#things_your_users_want_to_know). You can also do so programmatically by calling the {{DOMxRef("Document.exitFullscreen()")}} method.
 
 ## Other information
 

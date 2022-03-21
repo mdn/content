@@ -69,11 +69,11 @@ The **`Animation`** interface of the [Web Animations API](/en-US/docs/Web/API/We
 ## Events
 
 - {{domxref("Animation.cancel_event", "cancel")}}
-  - : Allows you to set and run an event handler that fires when the {{domxref("Animation.cancel()")}} method is called or when the animation enters the `"idle"` play state from another state.
+  - : Fires when the {{domxref("Animation.cancel()")}} method is called or when the animation enters the `"idle"` play state from another state.
 - {{domxref("Animation.finish_event" , "finish")}}
-  - : Allows you to set and run an event handler that fires when the animation finishes playing.
+  - : Fires when the animation finishes playing.
 - {{domxref("animation.remove_event", "remove")}}
-  - : Allows you to set and run an event handler that fires when the animation is removed (i.e., put into an `active` replace state).
+  - : Fires when the animation is removed (i.e., put into an `active` replace state).
 
 ## Automatically removing filling animations
 
@@ -82,7 +82,7 @@ It is possible to trigger a large number of animations on the same element. If t
 You can see this in action in our simple [replace indefinite animations demo](https://mdn.github.io/dom-examples/web-animations-api/replace-indefinite-animations.html). The related JavaScript features are:
 
 - {{domxref("animation.commitStyles()")}} for committing the end styling state of an animation to the element being animated, even after that animation has been removed.
-- The {{domxref("animation/remove_event", "remove")}} event on the {{domxref("Animation")}} interface for setting and running an event handler that fires when the animation is removed (i.e., put into an `active` replace state).
+- The {{domxref("animation/remove_event", "remove")}} event on the {{domxref("Animation")}} interface fires when the animation is removed (i.e., put into an `active` replace state).
 - {{domxref("animation.persist()")}} for when you explicitly want an animations to be retained.
 - {{domxref("animation.replaceState")}} to return the replace state of the animation. This will be `active` if the animation has been removed, or `persisted` if {{domxref("Animation.persist", "persist()")}} has been invoked.
 

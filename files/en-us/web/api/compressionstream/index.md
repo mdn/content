@@ -14,7 +14,7 @@ The **`CompressionStream`** interface of the {{domxref('Compression Streams API'
 
 ## Constructor
 
-- {{domxref("CompressionStream.CompressionStream()")}}
+- {{domxref("CompressionStream.CompressionStream", "CompressionStream()")}}
   - : Creates a new `CompressionStream`
 
 ## Properties

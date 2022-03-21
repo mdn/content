@@ -58,7 +58,7 @@ The `margin` property may be specified using one, two, three, or four values. Ea
 - {{cssxref("length")}}
   - : The size of the margin as a fixed value.
 - {{cssxref("percentage")}}
-  - : The size of the margin as a percentage, relative to the _width_ of the [containing block](/en-US/docs/Web/CSS/Containing_block).
+  - : The size of the margin as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Containing_block).
 - `auto`
   - : The browser selects a suitable margin to use. For example, in certain cases this value can be used to center an element.
 

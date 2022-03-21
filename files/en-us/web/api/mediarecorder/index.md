@@ -33,8 +33,6 @@ The **`MediaRecorder`** interface of the [MediaStream Recording API](/en-US/docs
   - : Returns the current state of the `MediaRecorder` object (`inactive`, `recording`, or `paused`.)
 - {{domxref("MediaRecorder.stream")}} {{readonlyInline}}
   - : Returns the stream that was passed into the constructor when the `MediaRecorder` was created.
-- {{domxref("MediaRecorder.ignoreMutedMedia")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Indicates whether the `MediaRecorder` instance will record input when the input {{domxref("MediaStreamTrack")}} is muted. If this attribute is `false`, `MediaRecorder` will record silence for audio and black frames for video. The default is `false`.
 - {{domxref("MediaRecorder.videoBitsPerSecond")}} {{readonlyInline}} {{experimental_inline}}
   - : Returns the video encoding bit rate in use. This may differ from the bit rate specified in the constructor (if it was provided).
 - {{domxref("MediaRecorder.audioBitsPerSecond")}} {{readonlyInline}} {{experimental_inline}}
@@ -62,19 +60,19 @@ The **`MediaRecorder`** interface of the [MediaStream Recording API](/en-US/docs
 
 Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
 
-- [`dataavailable`]((/en-US/docs/Web/API/MediaRecorder/dataavailable_event)
+- [`dataavailable`](/en-US/docs/Web/API/MediaRecorder/dataavailable_event)
   - : Fires periodically each time `timeslice` milliseconds of media have been recorded (or when the entire media has been recorded, if `timeslice` wasn't specified). The event, of type {{domxref("BlobEvent")}}, contains the recorded media in its {{domxref("BlobEvent.data", "data")}} property.
-- [`error`]((/en-US/docs/Web/API/MediaRecorder/error_event)
+- [`error`](/en-US/docs/Web/API/MediaRecorder/error_event)
   - : Fired when there are fatal errors that stop recording. The received event is based on the {{domxref("MediaRecorderErrorEvent")}} interface, whose {{domxref("MediaRecorderErrorEvent.error", "error")}} property contains a {{domxref("DOMException")}} that describes the actual error that occurred.
-- [`pause`]((/en-US/docs/Web/API/MediaRecorder/pause_event)
+- [`pause`](/en-US/docs/Web/API/MediaRecorder/pause_event)
   - : Fired when media recording is paused.
-- [`resume`]((/en-US/docs/Web/API/MediaRecorder/resume_event)
+- [`resume`](/en-US/docs/Web/API/MediaRecorder/resume_event)
   - : Fired when media recording resumes after being paused.
-- [`start`]((/en-US/docs/Web/API/MediaRecorder/start_event)
+- [`start`](/en-US/docs/Web/API/MediaRecorder/start_event)
   - : Fired when media recording starts.
-- [`stop`]((/en-US/docs/Web/API/MediaRecorder/stop_event)
+- [`stop`](/en-US/docs/Web/API/MediaRecorder/stop_event)
   - : Fired when media recording ends, either when the {{domxref("MediaStream")}} ends, or after the {{domxref("MediaRecorder.stop()")}} method is called.
-- [`warning`]((/en-US/docs/Web/API/MediaRecorder/warning_event) {{deprecated_inline}}
+- [`warning`](/en-US/docs/Web/API/MediaRecorder/warning_event) {{deprecated_inline}}
   - : Fired when media recording has a non-fatal error, or after the {{domxref("MediaRecorder.onwarning()")}} method is called.
 
 ## Example

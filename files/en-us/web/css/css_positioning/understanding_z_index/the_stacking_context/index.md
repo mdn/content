@@ -34,7 +34,6 @@ A stacking context is formed, anywhere in the document, by any element in the fo
   - {{cssxref("mask")}} / {{cssxref("mask-image")}} / {{cssxref("mask-border")}}
 
 - Element with a {{cssxref("isolation")}} value `isolate`.
-- Element with a {{cssxref("-webkit-overflow-scrolling")}} value `touch`.
 - Element with a {{cssxref("will-change")}} value specifying any property that would create a stacking context on non-initial value (see [this post](http://dev.opera.com/articles/css-will-change-property/)).
 - Element with a {{cssxref("contain")}} value of `layout`, or `paint`, or a composite value that includes either of them (i.e. `contain: strict`, `contain: content`).
 

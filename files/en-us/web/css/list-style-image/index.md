@@ -113,4 +113,4 @@ ul {
 ## See also
 
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-type")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("url()", "url()")}} function
+- {{cssxref("url", "url()")}} function

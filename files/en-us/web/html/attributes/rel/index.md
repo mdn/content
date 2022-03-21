@@ -61,7 +61,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
   - : Indicates an alternate representation of the current document. Valid for {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, the meaning depends on the values of the other attributes.
 
-    - With the `{{anch('stylesheet')}}` keyword on a `<link>`, it creates an alternate stylesheet.
+    - With the [`stylesheet`](#stylesheet) keyword on a `<link>`, it creates an alternate stylesheet.
 
       ```html
       <!-- a persistent style sheet -->
@@ -173,7 +173,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
     While this attribute defines the link as being a stylesheet, the interaction with other attributes and other key terms within the rel value impact whether the stylesheet is downloaded and/or used.
 
-    When used with the {{anch('alternate')}} keyword, it defines an alternative style sheet. In this case, include a non-empty [`title`](type).
+    When used with the [alternate](#alternate) keyword, it defines an alternative style sheet. In this case, include a non-empty [`title`](type).
 
     The external stylesheet will not be used or even downloaded if the media does not match the value of the [`media`](media) attribute.
 

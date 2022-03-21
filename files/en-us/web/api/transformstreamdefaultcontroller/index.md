@@ -12,7 +12,7 @@ browser-compat: api.TransformStreamDefaultController
 
 The **`TransformStreamDefaultController`** interface of the {{domxref('Streams API','','',' ')}} provides methods to manipulate the associated {{domxref("ReadableStream")}} and {{domxref("WritableStream")}}.
 
-When constructing a {{domxref("TransformStream")}}, the `TransformStreamDefaultController` is created. It therefore has no constructor. The way to get an instance of `TransformStreamDefaultController` is via the callback methods of {{domxref("TransformStream.TransformStream()")}}.
+When constructing a {{domxref("TransformStream")}}, the `TransformStreamDefaultController` is created. It therefore has no constructor. The way to get an instance of `TransformStreamDefaultController` is via the callback methods of {{domxref("TransformStream.TransformStream", "TransformStream()")}}.
 
 ## Properties
 

@@ -3,7 +3,6 @@ title: Headers.set()
 slug: Web/API/Headers/set
 tags:
   - API
-  - Experimental
   - Fetch
   - Method
   - Reference

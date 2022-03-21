@@ -25,7 +25,7 @@ var docTitle = document.title;
 
 _docTitle_ is a string containing the _document_'s title. If the
 title was overridden by setting `document.title`, it contains that value.
-Otherwise, it contains the title specified in the markup (see the {{Anch("Notes")}}
+Otherwise, it contains the title specified in the markup (see the [Notes](#notes)
 below).
 
 ```js

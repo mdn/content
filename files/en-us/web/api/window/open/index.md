@@ -39,7 +39,6 @@ open(url, target, windowFeatures);
 
 - `windowFeatures` {{optional_inline}}
   - : A string containing a comma-separated list of window features in the form _name=value_ — or for boolean features, just _name_. These features include options such as the window's default size and position, whether or not to open a minimal popup window, and so forth. The following options are supported:
-
     - `popup`
       - : If this feature is enabled, it requests that a minimal popup window be used. The UI features included in the popup window will be automatically decided by the browser, generally including an address bar only.
       

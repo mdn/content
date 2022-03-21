@@ -34,9 +34,7 @@ An `RTCRtpCapabilities` object contains an array of objects conforming to {{domx
 
 ### The codecs array
 
-The `codecs` array is an array of objects conforming to the dictionary {{domxref("RTCRtpCodecCapability")}}. Each of these objects describes a single codec and its basic capabilities. Its properties are:
-
-{{page("/en-US/docs/Web/API/RTCRtpCodecCapability", "Properties")}}
+The `codecs` array is an array of objects conforming to the dictionary {{domxref("RTCRtpCodecCapability")}}. Each of these objects describes a single codec and its basic capabilities.
 
 The browser will only report distinct capability combinations separately. If two sets of capabilities can be described as one, they will be. That means that, for instance, if there are two entries for the H.264 codec (as identified by the {{domxref("RTCRtpCodecCapability.mimeType", "mimeType")}} being "video/H264"), there are other values in the capabilities objects indicating how they're different in some way.
 

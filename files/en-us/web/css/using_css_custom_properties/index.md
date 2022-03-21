@@ -11,7 +11,7 @@ tags:
 ---
 {{CSSRef}}
 
-**Custom properties** (sometimes referred to as **CSS variables** or **cascading variables**) are entities defined by CSS authors that contain specific values to be reused throughout a document. They are set using custom property notation (e.g., **`--main-color: black;`**) and are accessed using the {{cssxref("var()", "var()")}} function (e.g., `color: var(--main-color);`).
+**Custom properties** (sometimes referred to as **CSS variables** or **cascading variables**) are entities defined by CSS authors that contain specific values to be reused throughout a document. They are set using custom property notation (e.g., **`--main-color: black;`**) and are accessed using the {{cssxref("var", "var()")}} function (e.g., `color: var(--main-color);`).
 
 Complex websites have very large amounts of CSS, often with a lot of repeated values. For example, the same color might be used in hundreds of different places, requiring global search and replace if that color needs to change. Custom properties allow a value to be stored in one place, then referenced in multiple other places. An additional benefit is semantic identifiers. For example, `--main-text-color` is easier to understand than `#00ff00`, especially if this same color is also used in other contexts.
 
@@ -39,7 +39,7 @@ However, this doesn't always have to be the case: you maybe have a good reason f
 
 > **Note:** Custom property names are case sensitive — `--my-color` will be treated as a separate custom property to `--My-color`.
 
-As mentioned earlier, you use the custom property value by specifying your custom property name inside the {{cssxref("var()", "var()")}} function, in place of a regular property value:
+As mentioned earlier, you use the custom property value by specifying your custom property name inside the {{cssxref("var", "var()")}} function, in place of a regular property value:
 
 ```css
 element {

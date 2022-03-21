@@ -19,7 +19,7 @@ The **`CSSUnitValue`** interface of the {{domxref('CSS_Object_Model#css_typed_ob
 
 ## Constructor
 
-- {{domxref("CSSUnitValue/CSSUnitValue", "CSSStyleValue.CSSUnitValue()")}}
+- {{domxref("CSSUnitValue.CSSUnitValue", "CSSUnitValue()")}}
   - : Creates a new `CSSUnitValue` object.
 
 ## Properties

@@ -33,7 +33,7 @@ Below is a list of interfaces based on the `CSSTransformValue` interface.
 
 ## Constructor
 
-- {{domxref("CSSTransformValue.CSSTransformValue()")}}
+- {{domxref("CSSTransformValue.CSSTransformValue", "CSSTransformValue()")}}
   - : Creates a new `CSSTransformValue` object.
 
 ## Properties

@@ -104,5 +104,5 @@ then sending that offer to the other peer.
 ## See also
 
 - {{domxref("RTCPeerConnection.getConfiguration()")}}
-- {{domxref("RTCPeerConnection.RTCPeerConnection")}}
+- {{domxref("RTCPeerConnection.RTCPeerConnection", "RTCPeerConnection()")}}
 - {{domxref("RTCPeerConnection")}}

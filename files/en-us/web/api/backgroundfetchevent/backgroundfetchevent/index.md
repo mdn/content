@@ -15,7 +15,7 @@ The **`BackgroundFetchEvent()`** constructor creates a new {{domxref("Background
 ## Syntax
 
 ```js
-let BackgroundFetchEvent = new BackgroundFetchEvent(type, BackgroundFetchEventInit);
+new BackgroundFetchEvent(type, BackgroundFetchEventInit);
 ```
 
 ### Parameters

@@ -12,7 +12,7 @@ The **`AudioEncoder`** interface of the {{domxref('WebCodecs API','','','true')}
 
 ## Constructor
 
-- {{domxref("AudioEncoder.AudioEncoder()")}}
+- {{domxref("AudioEncoder.AudioEncoder", "AudioEncoder()")}}
   - : Creates a new `AudioEncoder` object.
 
 ## Properties

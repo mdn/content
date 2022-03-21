@@ -66,7 +66,7 @@ The summary paragraph — start by naming the interface, saying what API it is p
 
 ## Constructor
 
-- {{DOMxRef("NameOfTheInterface.NameOfTheInterface")}}
+- {{DOMxRef("NameOfTheInterface.NameOfTheInterface", "NameOfTheInterface()")}}
   - : Creates a new instance of the {{DOMxRef("NameOfTheInterface")}} object.
 
 ## Properties

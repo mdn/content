@@ -15,7 +15,7 @@ browser-compat: api.Response.type
 The **`type`** read-only property of the {{domxref("Response")}} interface contains the type of the response.
 It can be one of the following:
 
-- `basic`: Normal, same origin response, with all headers exposed except "Set-Cookie" and "Set-Cookie2″.
+- `basic`: Normal, same origin response, with all headers exposed except "Set-Cookie".
 - `cors`: Response was received from a valid cross-origin request. [Certain headers and the body](https://fetch.spec.whatwg.org/#concept-filtered-response-cors) may be accessed.
 - `error`: Network error.
   No useful information describing the error is available.

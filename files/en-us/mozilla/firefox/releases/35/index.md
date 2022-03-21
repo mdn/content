@@ -26,7 +26,7 @@ Highlights:
 - The {{cssxref("mask-type")}} property has been activated by default ({{bug(1058519)}}).
 - The {{cssxref("filter")}} property is now activated by default ({{bug(1057180)}}).
 - The {{cssxref("@font-face")}} at-rule now supports WOFF2 fonts ({{bug(1064737)}}).
-- The {{cssxref("symbols()")}} functional notation is now supported ({{bug(966168)}}).
+- The {{cssxref("symbols", "symbols()")}} functional notation is now supported ({{bug(966168)}}).
 - The CSS Font Loading API has been implemented ({{bug(1028497)}}).
 - Using `-moz-appearance` with the `none` value on a combobox now remove the dropdown button ({{bug(649849)}}).
 - The property accessor `element.style["css-property-name"]` has been added to match other browsers ({{bug(958887)}}).

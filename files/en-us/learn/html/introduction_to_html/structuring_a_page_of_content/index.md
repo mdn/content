@@ -41,7 +41,7 @@ Structuring a page of content ready for laying it out using CSS is a very import
 
 ## Starting point
 
-To get this assessment started, you should go and grab the [zip file containing all the starting assets](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/structuring-a-page-of-content-start/assets.zip?raw=true).
+To get this assessment started, you should go and grab the [zip file containing all the starting assets](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/structuring-a-page-of-content-start/assets.zip?raw=true).
 
 The zip file contains:
 

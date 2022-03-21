@@ -46,14 +46,14 @@ _This interface also inherits properties of its parent, {{domxref("EventTarget")
     - `other`
     - `unknown`
 
-### Event handlers
-
-- {{domxref("NetworkInformation.onchange")}}
-  - : The event that's fired when connection information changes and the {{event("change")}} is fired on this object.
-
 ## Methods
 
 _This interface also inherits methods of its parent, {{domxref("EventTarget")}}._
+
+## Events
+
+- {{domxref("NetworkInformation.change_event", "change")}}
+  - : The event that's fired when connection information changes.
 
 ## Specifications
 

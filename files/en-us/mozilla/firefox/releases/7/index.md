@@ -61,7 +61,7 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 - `Node.getFeature` has been removed.
 - The `HTMLInsElement` and `HTMLDelElement` interfaces have been removed, since the {{ HTMLElement("ins") }} and {{ HTMLElement("del") }} elements actually use the {{ domxref("HTMLModElement") }} interface.
 - In a effort to conform to the upcoming [DOM4](https://www.w3.org/TR/dom/) specification where {{ domxref("Attr") }} do not inherit from {{ domxref("Node") }} anymore (it did in DOM Core 1, 2 and 3), many {{ domxref("Node") }} properties and methods on the {{ domxref("Attr") }} interface are [now reporting warnings](/en-US/docs/Web/API/Attr#deprecated_properties_and_methods) as we work toward removing them in a later version.
-- Added support for the {{ domxref("window.ondeviceorientation") }} and {{ domxref("window.ondevicemotion") }} properties on {{ domxref("window") }} objects.
+- Added support for the {{ domxref("window.deviceorientation_event", "ondeviceorientation") }} and {{ domxref("window.devicemotion_event", "ondevicemotion") }} properties on {{ domxref("window") }} objects.
 - {{ domxref("window.resizeTo") }}, {{ domxref("window.resizeBy") }}, {{ domxref("window.moveTo") }} , and {{ domxref("window.moveBy") }} no longer apply to the main window.
 
 ### JavaScript
@@ -123,7 +123,7 @@ Support has been added for multi-reporters; that is, memory reporters that gathe
 
 ### Changes to the build system
 
-- The ActiveX embedding API is no longer built and support has been removed from the build system. Supporting interfaces have also been removed; see {{ anch("Removed interfaces") }}.
+- The ActiveX embedding API is no longer built and support has been removed from the build system. Supporting interfaces have also been removed; see [Removed interfaces](#removed_interfaces).
 - You should no longer specify `-Zc:wchar_t-` when building on Windows. See the [updated Build documentation](/en-US/docs/Mozilla/Developer_guide/Build_Instructions#build_and_install) for details.
 
 ### Interface changes

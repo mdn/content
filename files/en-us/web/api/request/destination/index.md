@@ -3,7 +3,6 @@ title: Request.destination
 slug: Web/API/Request/destination
 tags:
   - API
-  - Experimental
   - Fetch
   - Fetch API
   - Files

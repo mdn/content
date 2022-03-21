@@ -22,7 +22,7 @@ This interface inherits from the {{domxref("Event")}} interface.
 
 ## Constructor
 
-- {{domxref("ServiceWorkerMessageEvent.ServiceWorkerMessageEvent()")}} {{deprecated_inline}}
+- {{domxref("ServiceWorkerMessageEvent.ServiceWorkerMessageEvent", "ServiceWorkerMessageEvent()")}} {{deprecated_inline}}
   - : Creates a new `ServiceWorkerMessageEvent` object instance.
 
 ## Properties

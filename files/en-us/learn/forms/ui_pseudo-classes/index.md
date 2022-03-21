@@ -155,7 +155,7 @@ This is really useful — screenreaders already let their users know when a radi
 
 > **Note:** This also shows how you can combine a pseudo-class and pseudo-element if required.
 
-Back to our required/optional example from before, this time we'll not alter the appearance of the input itself — we'll use generated content to add an indicating label ([see it live here](https://mdn.github.io/learning-area/html/forms/pseudo-classes/required-optional-generated.html), and see the [source code here](https://github.com/mdn/learning-area/blob/master/html/forms/pseudo-classes/required-optional-generated.html)).
+Back to our required/optional example from before, this time we'll not alter the appearance of the input itself — we'll use generated content to add an indicating label ([see it live here](https://mdn.github.io/learning-area/html/forms/pseudo-classes/required-optional-generated.html), and see the [source code here](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/required-optional-generated.html)).
 
 First of all, we'll add a paragraph to the top of the form to say what you are looking for:
 
@@ -226,7 +226,7 @@ You can target form controls using the {{cssxref(":valid")}} and {{cssxref(":inv
 - Controls whose current value is outside the range limits specified by the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max","input")}} attributes are (matched with) `:invalid`, but also matched by {{cssxref(":out-of-range")}}, as you'll see later on.
 - There are some other ways to make an element matched by `:valid`/`:invalid`, as you'll see in the [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation) article. But we'll keep things simple for now.
 
-Let's go in and look at a simple example of `:valid`/`:invalid` (see [valid-invalid.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/valid-invalid.html) for the live version, and also check out the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/pseudo-classes/valid-invalid.html)).
+Let's go in and look at a simple example of `:valid`/`:invalid` (see [valid-invalid.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/valid-invalid.html) for the live version, and also check out the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/valid-invalid.html)).
 
 As in the previous example, we've got extra `<span>`s to generate content on, which we'll use to provide indicators of valid/invalid data:
 
@@ -284,7 +284,7 @@ As we hinted at above, there are two other related pseudo-classes to consider �
 
 It is worth noting that inputs whose data is in-range will also be matched by the `:valid` pseudo-class and inputs whose data is out-of-range will also be matched by the `:invalid` pseudo-class. So why have both? The issue is really one of semantics — out-of-range is a more specific type of invalid communication, so you might want to provide a different message for out-of-range inputs, which will be more helpful to users than just saying "invalid". You might even want to provide both.
 
-Let's look at an example that does exactly this. Our [out-of-range.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/out-of-range.html) demo (see also the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/pseudo-classes/out-of-range.html)) builds on top of the previous example to provide out-of-range messages for the numeric inputs, as well as saying whether they are required.
+Let's look at an example that does exactly this. Our [out-of-range.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/out-of-range.html) demo (see also the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/out-of-range.html)) builds on top of the previous example to provide out-of-range messages for the numeric inputs, as well as saying whether they are required.
 
 The numeric input looks like this:
 
@@ -431,7 +431,7 @@ function toggleBilling() {
 
 It uses the [`change` event](/en-US/docs/Web/API/HTMLElement/change_event) to let the user enable/disable the billing fields, and toggle the styling of the associated labels.
 
-You can see the example in action below (also [see it live here](https://mdn.github.io/learning-area/html/forms/pseudo-classes/enabled-disabled-shipping.html), and see the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/pseudo-classes/enabled-disabled-shipping.html)):
+You can see the example in action below (also [see it live here](https://mdn.github.io/learning-area/html/forms/pseudo-classes/enabled-disabled-shipping.html), and see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/enabled-disabled-shipping.html)):
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/enabled-disabled-shipping.html", '100%', 600)}}
 
@@ -441,7 +441,7 @@ In a similar manner to `:disabled` and `:enabled`, the `:read-only` and `:read-w
 
 An input is set to read-only using the `readonly` attribute. As an example, imagine a confirmation page where the developer has sent the details filled in on previous pages over to this page, with the aim of getting the user to check them all in one place, add any final data that is needed, and then confirm the order by submitting. At this point, all the final form data can be sent to the server in one go.
 
-Let's look at what a form might look like (see [readonly-confirmation.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/readonly-confirmation.html) for the live example; also [see the source code](https://github.com/mdn/learning-area/blob/master/html/forms/pseudo-classes/readonly-confirmation.html)).
+Let's look at what a form might look like (see [readonly-confirmation.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/readonly-confirmation.html) for the live example; also [see the source code](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/readonly-confirmation.html)).
 
 A fragment of the HTML is as follows — note the readonly attribute:
 
@@ -564,7 +564,7 @@ See the live result below:
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/radios-checked-default.html", '100%', 200)}}
 
-> **Note:** You can also find the example live on GitHub at [radios-checked-default.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-default.html) (also see the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/pseudo-classes/radios-checked-default.html).)
+> **Note:** You can also find the example live on GitHub at [radios-checked-default.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-default.html) (also see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-default.html).)
 
 For the `:indeterminate` example, we've got no default selected radio button — this is important — if there was, then there would be no indeterminate state to style. We style the indeterminate radio buttons with the following CSS:
 
@@ -591,7 +591,7 @@ See the live result below:
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html", '100%', 200)}}
 
-> **Note:** You can also find the example live on GitHub at [radios-checked-indeterminate.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html) (also see the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/pseudo-classes/radios-checked-indeterminate.html).)
+> **Note:** You can also find the example live on GitHub at [radios-checked-indeterminate.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html) (also see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-indeterminate.html).)
 
 > **Note:** You can find an [interesting example involving `indeterminate` states](/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes) on the [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) reference page.
 

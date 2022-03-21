@@ -30,7 +30,7 @@ Tags get used on MDN several ways:
 - [API identification](#api_identification)
   - : Reference pages about an API need to identify the specific component of the API being documented (that is, what interface it's a part of, and what property or method the page covers, if applicable).
 - [Technology status](#technology_status)
-  - : What's the status of the technology? Is it non-standard? Obsolete or deprecated? Experimental?
+  - : What's the status of the technology? Is it non-standard? Deprecated? Experimental?
 - [Skill level](#skill_level)
   - : For tutorials and guides, how advanced is the material covered by the article?
 - [Document metadata](#document_metadata)
@@ -124,9 +124,7 @@ Here are possible values for these tags:
 - `Non-standard`
   - : Indicates that the technology or API described on the page is not part of a standard, whether it's stable or not in any browsers which implement it (if it's not stable, it should also be Experimental). If you don't use this tag, your readers will assume the technology is standard. The compatibility table on the page should clarify which browser(s) support this technology or API.
 - `Deprecated`
-  - : The technology or API covered on the page is marked as deprecated in the specification, and is likely to eventually be removed, but is generally still available in current versions of browsers.
-- `Obsolete`
-  - : The technology or API has been deemed obsolete and has been removed (or is actively being removed) from all or most current browsers.
+  - : The technology or API covered on the page is no longer recommended. It might be removed in the future or might only be kept for compatibility purposes. Avoid using this functionality.
 - `Experimental`
   - : The technology is not standardized, and is an experimental technology or API that may or may not ever become part of a standard. It is also subject to change in the browser engine (typically only one) that implements it. If the technology isn't part of any specification (even in draft form), it should also have the Non-standard tag.
 - `Needs Privileges`

@@ -173,7 +173,7 @@ Place the distances along the three axes in the corresponding positions in the t
 
 ## Manipulating the DOM with a matrix
 
-A really easy way to start using a matrix is to use the CSS {{cssxref("transform-function/matrix3d()","matrix3d()")}} {{cssxref("transform")}}. First we'll set up a simple {{htmlelement("div")}} with some content. The style is not shown, but it's set to a fixed width and height and is centered on the page. The `<div>` has a transition set for the transform so that matrix is animated in making it easy to see what is being done.
+A really easy way to start using a matrix is to use the CSS {{cssxref("transform-function/matrix3d","matrix3d()")}} {{cssxref("transform")}}. First we'll set up a simple {{htmlelement("div")}} with some content. The style is not shown, but it's set to a fixed width and height and is centered on the page. The `<div>` has a transition set for the transform so that matrix is animated in making it easy to see what is being done.
 
 ```html
 <div id='move-me' class='transformable'>
