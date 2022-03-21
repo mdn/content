@@ -9,7 +9,7 @@ tags:
   - Service Workers
 browser-compat: api.NavigationPreloadManager.setHeaderValue
 ---
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{APIRef("Service Workers API")}}
 
 The **`setHeaderValue()`** method of the {{domxref("NavigationPreloadManager")}} interface sets the value of the {{HTTPHeader("Service-Worker-Navigation-Preload")}} header that will be sent with requests resulting from a {{domxref("fetch()")}} operation made during service worker navigation preloading.
 It returns an empty {{jsxref("Promise")}} that resolves with `undefined`.
@@ -51,6 +51,7 @@ navigator.serviceWorker.ready
   .then(() => {
     console.log("Done!");
   });
+  
 ```
 
 ## Specifications

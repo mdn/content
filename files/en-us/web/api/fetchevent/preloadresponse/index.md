@@ -3,7 +3,6 @@ title: FetchEvent.preloadResponse
 slug: Web/API/FetchEvent/preloadResponse
 tags:
   - API
-  - Experimental
   - FetchEvent
   - Offline
   - Property

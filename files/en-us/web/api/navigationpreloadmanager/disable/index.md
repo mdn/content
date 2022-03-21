@@ -8,10 +8,9 @@ tags:
   - Offline
   - Service Workers
   - NavigationPreloadManager
-  - Experimental
 browser-compat: api.NavigationPreloadManager.disable
 ---
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{APIRef("Service Workers API")}}
 
 The **`disable()`** method of the {{domxref("NavigationPreloadManager")}} interface halts the automatic preloading of service-worker-managed resources previously started using {{domxref("NavigationPreloadManager.enable()","enable()")}}
 It returns a promise that resolves with `undefined`.
