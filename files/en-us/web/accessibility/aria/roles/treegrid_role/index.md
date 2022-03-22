@@ -78,7 +78,7 @@ Like all ARIA attributes, adding `aria-readonly` only informs assistive technolo
 
 ### Keyboard interactions
 
-When creating an accessible treegrid, moving focus among rows and cells of the grid with a keyboard must be implemented. Moving focus into the grid may result in the first cell or the first row being focused. Whether focus goes to a cell or the row depends requirements, with some treegrids not providing focus to rows.
+Being able to move focus among rows and cells of the grid with a keyboard must be implemented in order to create an accessible treegrid. Moving focus into the grid may result in the first cell or the first row being focused. Whether focus goes to the next adjacent cell or the row depends on its content requirements, with some treegrids not providing focus to rows.
 
 The following keyboard interactions need to be supported when an element in the grid has received focus, e.g., after a user has moved focus to the grid with Tab. 
 
