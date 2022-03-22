@@ -1,6 +1,6 @@
 ---
 title: HTMLMediaElement.preservesPitch
-slug: Web/API/HTMLMediaElement/preservespitch
+slug: Web/API/HTMLMediaElement/preservesPitch
 tags:
   - API
   - HTML DOM
