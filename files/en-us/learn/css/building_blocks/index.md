@@ -66,7 +66,7 @@ This module contains the following articles, which cover the most essential part
   - : Styling an HTML table isn't the most glamorous job in the world, but sometimes we all have to do it. This article provides a guide to making HTML tables look good, with some specific table styling techniques highlighted.
 - [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
   - : Sometimes when writing CSS you will encounter an issue where your CSS doesn't seem to be doing what you expect. This article will give you guidance on how to go about debugging a CSS problem, and show you how the DevTools included in all modern browsers can help you find out what is going on.
-- [Organizing your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing)
+- [Organizing  your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing)
   - : As you start to work on larger stylesheets and big projects you will discover that maintaining a huge CSS file can be challenging. In this article, we will take a brief look at some best practices for writing your CSS to make it easily maintainable, and some of the solutions you will find in use by others to help improve maintainability.
 
 ## Assessments
