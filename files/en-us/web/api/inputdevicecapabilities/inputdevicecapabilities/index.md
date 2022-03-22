@@ -10,7 +10,8 @@ device responsible for generating a touch event.
 ## Syntax
 
 ```js
-new InputDeviceCapabilities([InputDeviceCapabilitiesInit])
+new InputDeviceCapabilities()
+new InputDeviceCapabilities(InputDeviceCapabilitiesInit)
 ```
 
 ### Returns
