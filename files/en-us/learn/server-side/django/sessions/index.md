@@ -16,7 +16,8 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django")}}
 
-This tutorial extends our [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) website, adding a session-based visit-counter to the home page. This is a relatively simple example, but it does show how you can use the session framework to provide persistent behavior for anonymous users in your own sites.
+This tutorial extends our [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) website, adding a session-based visit-counter to the home page.
+This is a relatively simple example, but it does show how you can use the session framework to provide persistent behavior for anonymous users in your own sites.
 
 <table>
   <tbody>
@@ -40,7 +41,8 @@ This tutorial extends our [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tu
 
 The [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) website we created in the previous tutorials allows users to browse books and authors in the catalog. While the content is dynamically generated from the database, every user will essentially have access to the same pages and types of information when they use the site.
 
-In a "real" library you may wish to provide individual users with a customized experience, based on their previous use of the site, preferences, etc. For example, you could hide warning messages that the user has previously acknowledged next time they visit the site, or store and respect their preferences (e.g. the number of search results that they want to be displayed on each page).
+In a "real" library you may wish to provide individual users with a customized experience, based on their previous use of the site, preferences, etc.
+For example, you could hide warning messages that the user has previously acknowledged next time they visit the site, or store and respect their preferences (such as, the number of search results that they want to be displayed on each page).
 
 The session framework lets you implement this sort of behavior, allowing you to store and retrieve arbitrary data on a per-site-visitor basis.
 
@@ -72,7 +74,8 @@ MIDDLEWARE = [
 
 ## Using sessions
 
-You can access the `session` attribute in the view from the `request` parameter (an `HttpRequest` passed in as the first argument to the view). This session attribute represents the specific connection to the current user (or to be more precise, the connection to the current _browser_, as identified by the session id in the browser's cookie for this site).
+You can access the `session` attribute within a view from the `request` parameter (an `HttpRequest` passed in as the first argument to the view).
+This session attribute represents the specific connection to the current user (or to be more precise, the connection to the current _browser_, as identified by the session id in the browser's cookie for this site).
 
 The `session` attribute is a dictionary-like object that you can read and write as many times as you like in your view, modifying it as wished. You can do all the normal dictionary operations, including clearing all data, testing if a key is present, looping through data, etc. Most of the time though, you'll just use the standard "dictionary" API to get and set values.
 
