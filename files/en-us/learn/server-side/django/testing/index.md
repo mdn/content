@@ -21,10 +21,7 @@ As websites grow they become harder to test manually. Not only is there more to 
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Complete all previous tutorial topics, including
-        <a href="/en-US/docs/Learn/Server-side/Django/Forms"
-          >Django Tutorial Part 9: Working with forms</a
-        >.
+        Complete all previous tutorial topics, including <a href="/en-US/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a>.
       </td>
     </tr>
     <tr>
@@ -36,7 +33,7 @@ As websites grow they become harder to test manually. Not only is there more to 
 
 ## Overview
 
-The [Local Library](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) currently has pages to display lists of all books and authors, detail views for `Book` and `Author` items, a page to renew `BookInstance`s, and pages to create, update, and delete `Author` items (and `Book` records too, if you completed the _challenge_ in the [forms tutorial](/en-US/docs/Learn/Server-side/Django/Forms)). Even with this relatively small site, manually navigating to each page and _superficially_ checking that everything works as expected can take several minutes. As we make changes and grow the site, the time required to manually check that everything works "properly" will only grow. If we were to continue as we are, eventually we'd be spending most of our time testing, and very little time improving our code.
+The [Local Library](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) currently has pages to display lists of all books and authors, detail views for `Book` and `Author` items, a page to renew `BookInstance` items, and pages to create, update, and delete `Author` items (and `Book` records too, if you completed the _challenge_ in the [forms tutorial](/en-US/docs/Learn/Server-side/Django/Forms)). Even with this relatively small site, manually navigating to each page and _superficially_ checking that everything works as expected can take several minutes. As we make changes and grow the site, the time required to manually check that everything works "properly" will only grow. If we were to continue as we are, eventually we'd be spending most of our time testing, and very little time improving our code.
 
 Automated tests can really help with this problem! The obvious benefits are that they can be run much faster than manual tests, can test to a much lower level of detail, and test exactly the same functionality every time (human testers are nowhere near as reliable!) Because they are fast, automated tests can be executed more regularly, and if a test fails, they point to exactly where code is not performing as expected.
 
@@ -59,7 +56,7 @@ There are numerous types, levels, and classifications of tests and testing appro
 
 ### What does Django provide for testing?
 
-Testing a website is a complex task, because it is made of several layers of logic – from HTTP-level request handling, queries models, to form validation and processing, and template rendering.
+Testing a website is a complex task, because it is made of several layers of logic – from HTTP-level request handling, to model queries, to form validation and processing, and template rendering.
 
 Django provides a test framework with a small hierarchy of classes that build on the Python standard [`unittest`](https://docs.python.org/3/library/unittest.html#module-unittest "(in Python v3.5)") library. Despite the name, this test framework is suitable for both unit and integration tests. The Django framework adds API methods and tools to help test web and Django-specific behavior. These allow you to simulate requests, insert test data, and inspect your application's output. Django also provides an API ([LiveServerTestCase](https://docs.djangoproject.com/en/4.0/topics/testing/tools/#liveservertestcase)) and tools for [using different testing frameworks](https://docs.djangoproject.com/en/4.0/topics/testing/advanced/#other-testing-frameworks), for example you can integrate with the popular [Selenium](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment) framework to simulate a user interacting with a live browser.
 
@@ -110,7 +107,8 @@ class Author(models.Model):
 
 Similarly, you should check that the custom methods `get_absolute_url()` and `__str__()` behave as required because they are your code/business logic. In the case of `get_absolute_url()` you can trust that the Django `reverse()` method has been implemented properly, so what you're testing is that the associated view has actually been defined.
 
-> **Note:** Astute readers may note that we would also want to constrain the date of birth and death to sensible values, and check that death comes after birth. In Django this constraint would be added to your form classes (although you can define validators for model fields and model validators these are only used at the form level if they are called by the model's clean() method. This requires a ModelForm or the model's clean() method needs to be specifically called.)
+> **Note:** Astute readers may note that we would also want to constrain the date of birth and death to sensible values, and check that death comes after birth.
+> In Django this constraint would be added to your form classes (although you can define validators for model fields and model validators these are only used at the form level if they are called by the model's `clean()` method. This requires a `ModelForm`, or the model's `clean()` method needs to be specifically called.)
 
 With that in mind let's start looking at how to define and run tests.
 
@@ -233,7 +231,8 @@ Here we see that we had one test failure, and we can see exactly what function f
 
 > **Note:** The most important thing to learn from the test output above is that it is much more valuable if you use descriptive/informative names for your objects and methods.
 
-The text shown in **bold** above would not normally appear in the test output (this is generated by the `print()` functions in our tests). This shows how the `setUpTestData()` method is called once for the class and `setUp()` is called before each method.
+The output of the `print()` functions shows how the `setUpTestData()` method is called once for the class and `setUp()` is called before each method.
+Again, remember that normally you would not add this kind of `print()` to your tests.
 
 The next sections show how you can run specific tests, and how to control how much information the tests display.
 
@@ -246,6 +245,18 @@ python3 manage.py test --verbosity 2
 ```
 
 The allowed verbosity levels are 0, 1, 2, and 3, with the default being "1".
+
+### Speeding things up
+
+If your tests are independent, on a multiprocessor machine you can significantly speed them up by running them in parallel.
+The use of `--parallel auto` below runs one test process per available core.
+The `auto` is optional, and you can also specify a particular number of cores to use.
+
+```bash
+python3 manage.py test --parallel auto
+```
+
+For more information, including what to do if your tests are not independent, see [DJANGO_TEST_PROCESSES](https://docs.djangoproject.com/en/4.0/ref/django-admin/#envvar-DJANGO_TEST_PROCESSES).
 
 ### Running specific tests
 
@@ -264,6 +275,11 @@ python3 manage.py test catalog.tests.test_models.YourTestClass
 # Run the specified method
 python3 manage.py test catalog.tests.test_models.YourTestClass.test_one_plus_one_equals_two
 ```
+
+### Other test runner options
+
+The test runner provides many other options, including the ability to shuffle tests (`--shuffle`), run them in debug mode (`--debug-mode`), and use the Python logger to capture the results.
+For more information see the Django [test runner](https://docs.djangoproject.com/en/4.0/ref/django-admin/#test) documentation.
 
 ## LocalLibrary tests
 
@@ -384,7 +400,7 @@ AssertionError: 'Died' != 'died'
 
 This is a very minor bug, but it does highlight how writing tests can more thoroughly check any assumptions you may have made.
 
-> **Note:** Change the label for the date_of_death field (/catalog/models.py) to "died" and re-run the tests.
+> **Note:** Change the label for the `date_of_death` field (**/catalog/models.py**) to "died" and re-run the tests.
 
 The patterns for testing the other models are similar so we won't continue to discuss these further. Feel free to create your own tests for our other models.
 
@@ -905,7 +921,7 @@ Django provides test APIs to check that the correct template is being called by 
 
 ## Other recommended test tools
 
-Django's test framework can help you write effective unit and integration tests — we've only scratched the surface of what the underlying **unittest** framework can do, let alone Django's additions (for example, check out how you can use [unittest.mock](https://docs.python.org/3.5/library/unittest.mock-examples.html) to patch third party libraries so you can more thoroughly test your own code).
+Django's test framework can help you write effective unit and integration tests — we've only scratched the surface of what the underlying **unittest** framework can do, let alone Django's additions (for example, check out how you can use [unittest.mock](https://docs.python.org/3/library/unittest.mock-examples.html) to patch third party libraries so you can more thoroughly test your own code).
 
 While there are numerous other test tools that you can use, we'll just highlight two:
 
