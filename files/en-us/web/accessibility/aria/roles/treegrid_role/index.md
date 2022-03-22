@@ -166,7 +166,6 @@ If focus is on a cell, moves focus to the last cell in the row. If focus is in t
 
 If a treegrid supports selection of cells, rows, or columns, the following keys are commonly used for these functions.
 
-
 <table>
 <tr>
 <td><kbd>Control + Space</kbd></td>
