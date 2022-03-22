@@ -17,8 +17,6 @@ The `treegrid` role identifies an element as being grid whose rows can be expand
 ## Description
 
 A `treegrid` is a hierarchical data grid, or table, consisting of tabular information that is editable or interactive.  A `treegrid` is a combination of the [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role) and [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) roles.  Like a `grid`, the `treegrid` is made up of rows, columns, and gridcells. Like a `tree`, parent nodes in a `treegrid` are expandable and collapisble.
-
-
 The `treegrid` widget contains one or more [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) elements, optionally with [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role) elements grouping the rows. Each row, in turn, contains one or more cells. Each cell is either a DOM descendant of or owned by a row element and is either a [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role), [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role), or [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role) element, with the `gridcell` role being used for all cells that do not contain column or row header information.
 
 A `row` that can be expanded or collapsed to show or hide a set of child rows is a **parent row**. Each parent row has the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) state set on either the row element or on a cell contained in the row. 
