@@ -56,7 +56,7 @@ const numFiles = fileList.length;
 Individual {{DOMxRef("File")}} objects can be retrieved by accessing the list as an array:
 
 ```js
-for (let i = 0, numFiles = fileList.length; i < numFiles; i++) {
+for (let i = 0; numFiles = fileList.length; i < numFiles; i++) {
   const file = fileList[i];
   // ...
 }
