@@ -97,12 +97,6 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}, and implements tho
 
 Most event handler properties, of the form `onXYZ`, are defined on the {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("GlobalEventHandlers")}} or {{DOMxRef("TouchEventHandlers")}} interfaces and implemented by `HTMLElement`. In addition, the following handlers are specific to `HTMLElement`.
 
-- {{DOMxRef("HTMLElement.oncopy")}} {{Non-standard_Inline}}
-  - : Returns the event handling code for the `copy` event ({{bug("280959")}}).
-- {{DOMxRef("HTMLElement.oncut")}} {{Non-standard_Inline}}
-  - : Returns the event handling code for the `cut` event ({{bug("280959")}}).
-- {{DOMxRef("HTMLElement.onpaste")}} {{Non-standard_Inline}}
-  - : Returns the event handling code for the `paste` event ({{bug("280959")}}).
 - {{DOMxRef("TouchEventHandlers.ontouchstart")}} {{Non-standard_Inline}}
   - : Returns the event handling code for the {{domxref("Element/touchstart_event", "touchstart")}} event.
 - {{DOMxRef("TouchEventHandlers.ontouchend")}} {{Non-standard_Inline}}
@@ -133,6 +127,12 @@ _Inherits methods from its parent, {{DOMxRef("Element")}}, and implements those 
 
 Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
 
+- {{DOMxRef("HTMLElement.copy_event", "copy")}}
+  - : Fired when the user initiates a copy action through the browser's user interface.
+- {{DOMxRef("HTMLElement.cut_event", "cut")}}
+  - : Fired when the user initiates a cut action through the browser's user interface.
+- {{DOMxRef("HTMLElement.paste_event", "paste")}}
+  - : Fired when the user initiates a paste action through the browser's user interface.
 - {{domxref("HTMLInputElement/invalid_event", "invalid")}}
   - : Fired when an element does not satisfy its constraints during constraint validation.
     Also available via the {{domxref("GlobalEventHandlers/oninvalid", "oninvalid")}} property.
