@@ -48,7 +48,7 @@ This example tracks multiple touchpoints at a time, allowing the user to draw in
   Your browser does not support canvas element.
 </canvas>
 <br>
-<button onclick="window.startup();">Initialize</button>
+<button id="myBtn">Initialize</button>
 <br>
 Log: <pre id="log" style="border: 1px solid #ccc;"></pre>
 ```
@@ -56,10 +56,11 @@ Log: <pre id="log" style="border: 1px solid #ccc;"></pre>
 ### Setting up the event handlers
 
 When the page loads, the `startup()` function shown below will be called.
+This sets up all the event listeners for our {{HTMLElement("canvas")}} element so we can handle the touch events as they occur.
 
 ```js
 function startup() {
-  const el = document.getElementById("canvas");
+  const el = document.getElementById('canvas');
   el.addEventListener('touchstart', handleStart);
   el.addEventListener('touchend', handleEnd);
   el.addEventListener('touchcancel', handleCancel);
@@ -70,7 +71,13 @@ function startup() {
 document.addEventListener("DOMContentLoaded", startup);
 ```
 
-This sets up all the event listeners for our {{HTMLElement("canvas")}} element so we can handle the touch events as they occur.
+In addition, below we add an event listener for the "Initialize" button, which also calls the `startup()` method.
+This allows you to refresh the event handlers without reloading the page (this is not strictly needed by the example, but makes simulating the events on desktop a little bit easier.)
+
+```js
+const myBtn = document.getElementById('myBtn');
+myBtn.addEventListener('click', () => {window.startup()} );
+```
 
 #### Tracking new touches
 
