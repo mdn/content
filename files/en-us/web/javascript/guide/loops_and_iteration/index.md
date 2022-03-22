@@ -75,19 +75,36 @@ element that allows multiple selections).
 
 ```html
 <form name="selectForm">
-  <div>
-    <label for="musicTypes">Choose some music types, then click the button below:</label>
-    <select id="musicTypes" name="musicTypes" multiple>
-      <option selected>R&B</option>
-      <option>Jazz</option>
-      <option>Blues</option>
-      <option>New Age</option>
-      <option>Classical</option>
-      <option>Opera</option>
-    </select>
-  </div>
+  <label for="musicTypes">Choose some music types, then click the button below:</label>
+  <select id="musicTypes" name="musicTypes" multiple>
+    <option selected>R&B</option>
+    <option>Jazz</option>
+    <option>Blues</option>
+    <option>New Age</option>
+    <option>Classical</option>
+    <option>Opera</option>
+  </select>
   <button id="btn" type="button">How many are selected?</button>
+  <hr>
+  <label for="result">Output:</label>
+  <output id="result" for="musicTypes">You have selected 0 option(s).</output>
 </form>
+```
+
+```css hidden
+label,
+button,
+output {
+  display: block;
+}
+
+button {
+  margin-top: 0.5em;
+}
+
+hr {
+  margin: 1em 0;
+}
 ```
 
 #### JavaScript
@@ -106,14 +123,17 @@ function howMany(selectObject) {
 }
 
 const btn = document.getElementById('btn');
+const result = document.getElementById('result');
+
 btn.addEventListener('click', () => {
-  alert(`Number of options selected: ${howMany(document.selectForm.musicTypes)}`);
+  const musicTypes = document.selectForm.musicTypes;
+  result.textContent = `You have selected ${howMany(musicTypes)} option(s).`;
 });
 ```
 
 #### Result
 
-{{EmbedLiveSample("example")}}
+{{EmbedLiveSample("example", '100%', 240)}}
 
 ## `do...while` statement
 
