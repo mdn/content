@@ -313,20 +313,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : An event handler for handled {{jsxref("Promise")}} rejection events.
 - {{domxref("Window.onuserproximity")}} {{deprecated_inline}}
   - : An event handler property for user proximity events (see {{domxref("UserProximityEvent")}}).
-- {{domxref("Window.onvrdisplayconnect")}} {{deprecated_inline}}
-  - : Represents an event handler that will run when a compatible VR device has been connected to the computer (when the {{event("vrdisplayconnected")}} event fires).
-- {{domxref("Window.onvrdisplaydisconnect")}} {{deprecated_inline}}
-  - : Represents an event handler that will run when a compatible VR device has been disconnected from the computer (when the {{event("vrdisplaydisconnected")}} event fires).
-- {{domxref("Window.onvrdisplayactivate")}} {{deprecated_inline}}
-  - : Represents an event handler that will run when a display is able to be presented to (when the {{event("vrdisplayactivate")}} event fires), for example if an HMD has been moved to bring it out of standby, or woken up by being put on.
-- {{domxref("Window.onvrdisplaydeactivate")}} {{deprecated_inline}}
-  - : Represents an event handler that will run when a display can no longer be presented to (when the {{event("vrdisplaydeactivate")}} event fires), for example if an HMD has gone into standby or sleep mode due to a period of inactivity.
-- {{domxref("Window.onvrdisplayblur")}} {{deprecated_inline}}
-  - : Represents an event handler that will run when presentation to a display has been paused for some reason by the browser, OS, or VR hardware (when the {{event("vrdisplayblur")}} event fires) — for example, while the user is interacting with a system menu or browser, to prevent tracking or loss of experience.
-- {{domxref("Window.onvrdisplayfocus")}} {{deprecated_inline}}
-  - : Represents an event handler that will run when presentation to a display has resumed after being blurred (when the {{event("vrdisplayfocus")}} event fires).
-- {{domxref("Window.onvrdisplaypresentchange")}} {{deprecated_inline}}
-  - : represents an event handler that will run when the presenting state of a VR device changes — i.e. goes from presenting to not presenting, or vice versa (when the {{event("vrdisplaypresentchange")}} event fires).
 
 ### Event handlers implemented from elsewhere
 
@@ -433,6 +419,20 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 - {{domxref("Window/storage_event", "storage")}}
   - : Fired when a storage area (`localStorage` or `sessionStorage`) has been modified in the context of another document.
     Also available via the {{domxref("WindowEventHandlers/onstorage", "onstorage")}} property.
+- {{domxref("Window.vrdisplayconnect_event", "vrdisplayconnect")}} {{deprecated_inline}}
+  - : Fired when a compatible VR device has been connected to the computer.
+- {{domxref("Window.vrdisplaydisconnect_event", "vrdisplaydisconnect")}} {{deprecated_inline}}
+  - : Fired when a compatible VR device has been disconnected from the computer.
+- {{domxref("Window.vrdisplayactivate_event", "vrdisplayactivate")}} {{deprecated_inline}}
+  - : Fired when a display is able to be presented to.
+- {{domxref("Window.vrdisplaydeactivate_event", "vrdisplaydeactivate")}} {{deprecated_inline}}
+  - : Fired when a display can no longer be presented to.
+- {{domxref("Window.vrdisplayblur_event", "vrdisplayblur")}} {{deprecated_inline}}
+  - : Fired when presentation to a display has been paused for some reason by the browser, OS, or VR hardware.
+- {{domxref("Window.vrdisplayfocus_event", "vrdisplayfocus")}} {{deprecated_inline}}
+  - : Fired when presentation to a display has resumed after being blurred.
+- {{domxref("Window.vrdisplaypresentchange_event", "vrdisplaypresentchange")}} {{deprecated_inline}}
+  - : Fired when the presenting state of a VR device changes — i.e. goes from presenting to not presenting, or vice versa.
 
 ### Animation events
 
