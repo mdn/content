@@ -18,7 +18,8 @@ The **`DeviceOrientationEvent()`** constructor creates a new
 ## Syntax
 
 ```js
-new DeviceOrientationEvent(type[, options])
+new DeviceOrientationEvent(type)
+new DeviceOrientationEvent(type, options)
 ```
 
 ### Parameters
