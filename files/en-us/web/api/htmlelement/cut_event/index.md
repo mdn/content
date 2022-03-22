@@ -77,8 +77,7 @@ editor.oncut = preventCut;
 
 ## Specifications
 
-[WHATWG
-Standard](https://html.spec.whatwg.org/multipage/webappapis.html#handler-oncut)
+{{Specifications}}
 
 ## Browser compatibility
 

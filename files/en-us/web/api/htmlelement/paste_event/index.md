@@ -72,8 +72,7 @@ editor.onpaste = logPaste;
 
 ## Specifications
 
-[WHATWG
-Standard](https://html.spec.whatwg.org/multipage/webappapis.html#handler-onpaste)
+{{Specifications}}
 
 ## Browser compatibility
 
