@@ -21,7 +21,7 @@ The **`FontFaceSetLoadEvent()`** constructor creates a new
 ## Syntax
 
 ```js
-var fontFaceSetLoadEvent = new FontFaceSetLoadEvent(type[, options])
+new FontFaceSetLoadEvent(type[, options])
 ```
 
 ### Parameters

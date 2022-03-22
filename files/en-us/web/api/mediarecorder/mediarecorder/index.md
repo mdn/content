@@ -26,7 +26,7 @@ and codec configuration(s) to use by specifying [the `codecs` parameter](/en-US/
 ## Syntax
 
 ```js
-var mediaRecorder = new MediaRecorder(stream[, options]);
+new MediaRecorder(stream[, options]);
 ```
 
 ### Parameters

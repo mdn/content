@@ -17,7 +17,7 @@ The **`Animation()`** constructor of the [Web Animations API](/en-US/docs/Web/AP
 ## Syntax
 
 ```js
-var animation = new Animation([effect][, timeline]);
+new Animation([effect][, timeline]);
 ```
 
 ### Parameters

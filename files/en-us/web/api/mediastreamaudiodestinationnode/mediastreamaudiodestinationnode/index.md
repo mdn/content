@@ -17,7 +17,7 @@ The **`MediaStreamAudioDestinationNode()`** constructor of the [Web Audio API](/
 ## Syntax
 
 ```js
-var myAudioDest = new MediaStreamAudioDestinationNode(context, options);
+new MediaStreamAudioDestinationNode(context, options);
 ```
 
 ### Parameters

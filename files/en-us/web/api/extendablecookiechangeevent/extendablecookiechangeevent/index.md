@@ -17,7 +17,7 @@ The **`ExtendableCookieChangeEvent()`** constructor creates a new {{domxref("Ext
 ## Syntax
 
 ```js
-var extendableCookieChangeEvent = new ExtendableCookieChangeEvent(type, [eventInitDict]);
+new ExtendableCookieChangeEvent(type, [eventInitDict]);
 ```
 
 ### Parameters

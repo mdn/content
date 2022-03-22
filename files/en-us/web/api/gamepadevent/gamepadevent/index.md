@@ -17,7 +17,7 @@ The **`GamepadEvent()`** constructor creates a new
 ## Syntax
 
 ```js
-var gamepadEvent = new GamepadEvent(typeArg, options)
+new GamepadEvent(typeArg, options)
 ```
 
 ### Parameters

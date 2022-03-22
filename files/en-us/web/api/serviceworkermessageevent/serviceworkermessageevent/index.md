@@ -23,7 +23,7 @@ The **`ServiceWorkerMessageEvent()`** constructor creates a new
 ## Syntax
 
 ```js
-var mySWME = new ServiceWorkerMessageEvent(type, init);
+new ServiceWorkerMessageEvent(type, init);
 ```
 
 ### Parameters

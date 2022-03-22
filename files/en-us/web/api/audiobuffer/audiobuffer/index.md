@@ -23,7 +23,7 @@ the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new
 ## Syntax
 
 ```js
-var audioBuffer = new AudioBuffer(options);
+new AudioBuffer(options);
 ```
 
 ### Parameters

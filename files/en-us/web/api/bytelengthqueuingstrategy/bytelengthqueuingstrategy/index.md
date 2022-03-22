@@ -19,7 +19,7 @@ instance.
 ## Syntax
 
 ```js
-var byteLengthQueuingStrategy = new ByteLengthQueuingStrategy({highWaterMark});
+new ByteLengthQueuingStrategy({highWaterMark});
 ```
 
 ### Parameters

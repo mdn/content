@@ -13,7 +13,7 @@ created {{domxref("PictureInPictureEvent")}} object with an optional
 ## Syntax
 
 ```js
-var pictureInPictureEvent = new PictureInPictureEvent(typeArg[, pictureInPictureInit]);
+new PictureInPictureEvent(typeArg[, pictureInPictureInit]);
 ```
 
 ### Properties

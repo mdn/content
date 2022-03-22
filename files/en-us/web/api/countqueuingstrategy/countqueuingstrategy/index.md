@@ -18,7 +18,7 @@ creates and returns a `CountQueuingStrategy` object instance.
 ## Syntax
 
 ```js
-var countQueuingStrategy = new CountQueuingStrategy({highWaterMark});
+new CountQueuingStrategy({highWaterMark});
 ```
 
 ### Parameters

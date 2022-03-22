@@ -21,7 +21,7 @@ received from the `init` object for global {{domxref('fetch()')}}.
 ## Syntax
 
 ```js
-var myCredential = new FederatedCredential(init)
+new FederatedCredential(init)
 ```
 
 ### Parameters

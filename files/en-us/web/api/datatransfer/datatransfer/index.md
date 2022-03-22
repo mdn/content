@@ -18,7 +18,7 @@ The **`DataTransfer`** constructor creates a new
 ## Syntax
 
 ```js
-var dataTrans = new DataTransfer()
+new DataTransfer()
 ```
 
 ### Parameters

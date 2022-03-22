@@ -21,7 +21,7 @@ low-order filter.
 ## Syntax
 
 ```js
-var biquadFilterNode = new BiquadFilterNode(context, options)
+new BiquadFilterNode(context, options)
 ```
 
 ### Parameters

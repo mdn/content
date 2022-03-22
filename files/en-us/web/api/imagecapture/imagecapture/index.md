@@ -21,7 +21,7 @@ creates a new {{domxref("ImageCapture")}} object.
 ## Syntax
 
 ```js
-const imageCapture = new ImageCapture(videoTrack)
+new ImageCapture(videoTrack)
 ```
 
 ### Parameters
