@@ -15,9 +15,6 @@ browser-compat: api.HTMLElement.paste_event
 
 The **`paste`** event fires when the user initiates a paste action through the browser's user interface.
 
-Note that there is currently no DOM-only way to obtain the text being pasted; you'll
-have to use an {{ Interface("nsIClipboard") }} to get that information.
-
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
