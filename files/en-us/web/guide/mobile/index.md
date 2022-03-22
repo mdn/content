@@ -20,7 +20,7 @@ Mobile devices have quite different hardware characteristics compared with deskt
 - fluid CSS layouts, to make the page adapt smoothly as the browser window size changes
 - the use of [media queries](/en-US/docs/Web/CSS/Media_Queries) to conditionally include CSS rules appropriate for the device screen [width](/en-US/docs/Web/CSS/@media/width) and [height](/en-US/docs/Web/CSS/@media/height)
 
-The [viewport meta tag](/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) instructs the browser to display your site at the appropriate scale for the user's device.
+The [viewport meta tag](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design#the_viewport_meta_tag) instructs the browser to display your site at the appropriate scale for the user's device.
 
 ### Working with touch screens
 
