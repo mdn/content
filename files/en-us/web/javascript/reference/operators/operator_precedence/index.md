@@ -204,8 +204,8 @@ short-circuiting.
 Short-circuiting is jargon for conditional evaluation. For example, in the expression
 `a && (b + c)`, if `a` is {{Glossary("falsy")}}, then
 the sub-expression `(b + c)` will not even get evaluated, even if it is in
-parentheses. We could say that the logical conjuction operator ("&&") is
-"short-circuited". Along with logical conjuction, other short-circuited operators
+parentheses. We could say that the logical conjunction operator ("&&") is
+"short-circuited". Along with logical conjunction, other short-circuited operators
 include logical disjunction ("OR"), nullish-coalescing, optional chaining, and the
 conditional operator. Some more examples follow.
 

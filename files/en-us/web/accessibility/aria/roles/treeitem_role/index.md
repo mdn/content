@@ -18,7 +18,7 @@ A [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role) is a hierarchical
 
 An example of a `tree` is a file system selection user interface: a tree view displaying folders and files. Each folder and file is a `treeitem`. Folder items, which are `treeitem` elements, can be expanded to reveal the contents of the folder—which may be files, folders, or both, and are all `treeitems`—and collapsed, hiding its contents. 
 
-In a tree hierarchy, the *root node* has the role `tree`. All other nodes, other than the root node, have the role of `treeitem`, whether or not thay have children. A `treeitem` that is a parent is a **parent node**. A `treeitem` that is not a parent is an *end node*. 
+In a tree hierarchy, the *root node* has the role `tree`. All other nodes, other than the root node, have the role of `treeitem`, whether or not they have children. A `treeitem` that is a parent is a **parent node**. A `treeitem` that is not a parent is an *end node*. 
 
 Tree items that have children can be expanded or collapsed, showing and hiding their children. A parent node that is expanded so its child nodes are visible is an **open node**. A parent node that is collapsed so the child nodes are not visible is a **closed node**. 
 
@@ -26,7 +26,7 @@ Each parent node contains or owns an element with role [`group`](/en-US/docs/Web
 
 Each parent node should include the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute. It is set to `false` when closed `true` when open. End nodes should not have the `aria-expanded` attribute included as the presence of the attribute indicates to assistive technologies that the node is a parent.
 
-> **Note:** ARIA tree views use naviation more similar to native applications than to web applications and are navigated primarily with arrow keys on the keyboard instead of the <kbd>Tab</kbd>. This form of navigation is not common for most browser content, though normal and expected for native applications. For this reason, consider alternative options to address the functionality you need before creating a tree view. 
+> **Note:** ARIA tree views use navigation more similar to native applications than to web applications and are navigated primarily with arrow keys on the keyboard instead of the <kbd>Tab</kbd>. This form of navigation is not common for most browser content, though normal and expected for native applications. For this reason, consider alternative options to address the functionality you need before creating a tree view. 
 
 Any element with a `treeitem` role must be nested in, or owned by, an element with role `tree`. Tree items can be a child of `tree`, `treeitem`, or an element with role `group` that is contained in, or owned by, an element with role `tree` or `treeitem`. If a `treeitem` is not nested within a `tree`, or nested in a `group` that is owned by a `tree`, include the {{HTMLattrxref('id')}} of the `treeitem` in the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) attribute value on the owning `tree`, `treeitem` or `group` element.
 
@@ -230,7 +230,7 @@ The above provides the semantics for a tree view, but does not provide any of th
 
 If the tree items aren't by default focusable, JavaScript can be used [`tabIndex="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) to all the treeitems except the one that should receive focus when the user tabs into the tree which should be set to `tabIndex="0"`.  
 
-All the keyboard functionality in Keyboard interactions and all pointer events need to be programmed, including focus management, going up and down the tree, exapanding and collapsing parent nodes, and selection management.  
+All the keyboard functionality in Keyboard interactions and all pointer events need to be programmed, including focus management, going up and down the tree, expanding and collapsing parent nodes, and selection management.  
 
 If the tree has more than 7 tree items, including type ahead functionality is recommended.
 
