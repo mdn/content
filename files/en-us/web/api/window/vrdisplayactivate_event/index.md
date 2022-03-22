@@ -4,8 +4,8 @@ slug: Web/API/Window/vrdisplayactivate_event
 tags:
   - Reference
   - WebVR
-  - events
-  - onvrdisplayactivate
+  - Event
+  - Deprecated
   - vrdisplayactivate
 browser-compat: api.Window.vrdisplayactivate_event
 ---

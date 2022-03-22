@@ -5,7 +5,7 @@ tags:
   - Event
   - Reference
   - WebVR
-  - onvrdisplayconnect
+  - Deprecated
   - vrdisplayconnect
 browser-compat: api.Window.vrdisplayconnect_event
 ---

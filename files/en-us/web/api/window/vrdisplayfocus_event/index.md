@@ -4,8 +4,8 @@ slug: Web/API/Window/vrdisplayfocus_event
 tags:
   - Reference
   - WebVR
-  - events
-  - onvrdisplayfocus
+  - Event
+  - Deprecated
   - vrdisplayfocus
 browser-compat: api.Window.vrdisplayfocus_event
 ---

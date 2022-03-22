@@ -2,11 +2,10 @@
 title: 'Window: vrdisplayblur event'
 slug: Web/API/Window/vrdisplayblur_event
 tags:
-  - Experimental
   - Reference
   - WebVR
-  - events
-  - onvrdisplayblur
+  - Event
+  - Deprecated
   - vrdisplayblur
 browser-compat: api.Window.vrdisplayblur_event
 ---

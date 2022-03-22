@@ -5,7 +5,7 @@ tags:
   - Event
   - Reference
   - WebVR
-  - onvrdisplaypresentchange
+  - Deprecated
   - vrdisplaypresentchange
 browser-compat: api.Window.vrdisplaypresentchange_event
 ---

@@ -5,7 +5,8 @@ tags:
   - Reference
   - Web VR
   - Window
-  - events
+  - Event
+  - Deprecated
   - vrdisplaypointerrestricted
 browser-compat: api.Window.vrdisplaypointerrestricted_event
 ---

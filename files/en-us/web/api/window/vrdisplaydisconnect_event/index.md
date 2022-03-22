@@ -5,7 +5,7 @@ tags:
   - Event
   - Reference
   - WebVR
-  - onvrdisplaydisconnect
+  - Deprecated
   - vrdisplaydisconnect
 browser-compat: api.Window.vrdisplaydisconnect_event
 ---
