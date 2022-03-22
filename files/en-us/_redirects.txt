@@ -8952,6 +8952,7 @@
 /en-US/docs/Web/API/PeriodicSyncManager/getTags()	/en-US/docs/Web/API/PeriodicSyncManager/getTags
 /en-US/docs/Web/API/PeriodicSyncManager/register()	/en-US/docs/Web/API/PeriodicSyncManager/register
 /en-US/docs/Web/API/PeriodicSyncManager/unregister()	/en-US/docs/Web/API/PeriodicSyncManager/unregister
+/en-US/docs/Web/API/PermissionStatus/onchange	/en-US/docs/Web/API/PermissionStatus/change_event
 /en-US/docs/Web/API/PermissionStatus/status	/en-US/docs/Web/API/PermissionStatus/state
 /en-US/docs/Web/API/PhotoCapabilities	/en-US/docs/Web/API/ImageCapture/getPhotoCapabilities
 /en-US/docs/Web/API/PhotoCapabilities/fillLightMode	/en-US/docs/Web/API/ImageCapture/getPhotoCapabilities

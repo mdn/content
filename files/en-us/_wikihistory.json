@@ -64526,7 +64526,7 @@
       "jpmedley"
     ]
   },
-  "Web/API/PermissionStatus/onchange": {
+  "Web/API/PermissionStatus/change_event": {
     "modified": "2020-10-15T21:34:19.516Z",
     "contributors": [
       "sideshowbarker",

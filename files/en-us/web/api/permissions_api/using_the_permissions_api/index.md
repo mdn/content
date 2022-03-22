@@ -65,9 +65,9 @@ function handlePermission() {
       report(result.state);
       geoBtn.style.display = 'inline';
     }
-    result.onchange = function() {
+    result.addEventListener('change', function() {
       report(result.state);
-    }
+    });
   });
 }
 
@@ -108,7 +108,7 @@ function revokePermission() {
 
 ### Responding to permission state changes
 
-You'll notice that there is an `onchange` event handler in the code above, attached to the {{domxref("PermissionStatus")}} object — this allows us to respond to any changes in the permission status for the API we are interested in. At the moment we are just reporting the change in state.
+You'll notice that we're listening to the {{domxref("PermissionStatus.change_event", "change")}} event in the code above, attached to the {{domxref("PermissionStatus")}} object — this allows us to respond to any changes in the permission status for the API we are interested in. At the moment we are just reporting the change in state.
 
 ## Conclusion and future work
 
