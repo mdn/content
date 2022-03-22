@@ -53,6 +53,8 @@ If the `treegrid` container itself receives focus, the value of its [`aria-activ
 
 If the `treegrid` is disabled, make that disabled state visually apparent, programmatically enforced, and include the [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) attribute on the `treegrid` itself to inform assistive technologies of its disabled state.
 
+### Treegrid sorting
+
 If the treegrid provides sort functions, the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort) attribute is included on relevant header cell elements, not on the grid itself. 
 
 If the `treegrid` has an attached [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role/) that opens when Right clicked, include [`aria-haspopup="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) on the the `treegrid` element. This informs assistive technologies that the `treegrid` has an associated popup. The ability for both keyboard and pointer device users to open and set focus in the menu must be added with JavaScript.
