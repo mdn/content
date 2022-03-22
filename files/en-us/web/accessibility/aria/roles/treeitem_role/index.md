@@ -16,7 +16,7 @@ A `treeitem` is an item in a `tree`.
 
 A [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role) is a hierarchical list with parent and child nodes that can expand and collapse. A `treeitem` is a node in a `tree`. The root of the tree is `tree`, but all tree nodes are `treeitem` elements, even if they themselves have nested `treeitem` nodes. 
 
-An example of a `tree` is a file system selection user interface: a tree view displaying folders and files. Each folder and file is a `treeitem`. Folder items, which are `treeitem` elements, can be expanded to reveal the contents of the folder -- which may be files, folders, or both, and are all `treeitems` -- and collapsed, hiding its contents. 
+An example of a `tree` is a file system selection user interface: a tree view displaying folders and files. Each folder and file is a `treeitem`. Folder items, which are `treeitem` elements, can be expanded to reveal the contents of the folder—which may be files, folders, or both, and are all `treeitems`—and collapsed, hiding its contents. 
 
 In a tree hierarchy, the *root node* has the role `tree`. All other nodes, other than the root node, have the role of `treeitem`, whether or not thay have children. A `treeitem` that is a parent is a **parent node**. A `treeitem` that is not a parent is an *end node*. 
 
