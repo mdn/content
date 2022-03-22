@@ -11,7 +11,7 @@ tags:
   - unLock
 browser-compat: api.Keyboard.unlock
 ---
-{{APIRef("Keyboard API")}}{{SeeCompatTable}}
+{{APIRef("Keyboard API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`unlock()`** method of the
 {{domxref("Keyboard")}} interface unlocks all keys captured by the
@@ -20,7 +20,7 @@ The **`unlock()`** method of the
 ## Syntax
 
 ```js
-Keyboard.unlock()
+navigator.keyboard.unlock()
 ```
 
 ### Parameters
