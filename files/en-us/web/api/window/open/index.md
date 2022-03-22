@@ -44,7 +44,7 @@ open(url, target, windowFeatures);
 
         If `popup` is not enabled, and there are no window features declared, the new browsing context will be a tab.
 
-        > **Note:** Specifying any features in the _windowFeatures_ parameter, other than `noopener` or `noreferer`, also has the effect of requesting a popup.
+        > **Note:** Specifying any features in the _windowFeatures_ parameter, other than `noopener` or `noreferrer`, also has the effect of requesting a popup.
 
         To enable the feature, specify `popup` either with no value at all, or else set it to `yes`, `1`, or `true`.
 
@@ -71,7 +71,7 @@ open(url, target, windowFeatures);
         When `noopener` is used, non-empty target names, other than `_top`, `_self`, and `_parent`, are treated like `_blank` in terms of deciding whether to open a new browsing context.
 
     - `noreferrer`
-      - : If this feature is set, the browser will omit the {{HTTPHeader("Referer")}} header, as well as set `noonpener` to true. See [`rel="noreferrer"`](/en-US/docs/Web/HTML/Link_types#noreferrer) for more information.
+      - : If this feature is set, the browser will omit the {{HTTPHeader("Referer")}} header, as well as set `noopener` to true. See [`rel="noreferrer"`](/en-US/docs/Web/HTML/Link_types#noreferrer) for more information.
 
 
 ### Return value

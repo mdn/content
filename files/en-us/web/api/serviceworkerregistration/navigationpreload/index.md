@@ -13,7 +13,7 @@ browser-compat: api.ServiceWorkerRegistration.navigationPreload
 
 The **`navigationPreload`** read-only property of the {{domxref("ServiceWorkerRegistration")}} interface returns the {{domxref("NavigationPreloadManager")}} associated with the current service worker registration.
 
-The returned object allows resources managed by a service worker to be pre-emptively downloaded in parallel with service worker boot up.
+The returned object allows resources managed by a service worker to be preemptively downloaded in parallel with service worker boot up.
 
 ## Value
 

@@ -26,11 +26,11 @@ var promise = SerialPort.setSignals(options);
   - : An object with any of the following values:
 
     - `dataTerminalReady`
-      - : A boolean indicating whether to invoke the operating system to either assert (if true) or deassert (if false) the "data terminal ready" or "DTR" signal on the serial port.
+      - : A boolean indicating whether to invoke the operating system to either assert (if true) or de-assert (if false) the "data terminal ready" or "DTR" signal on the serial port.
     - `requestToSend`
-      - : A boolean indicating whether to invoke the operating system to either assert (if true) or deassert (if false) the "request to send" or "RTS" signal on the serial port.
+      - : A boolean indicating whether to invoke the operating system to either assert (if true) or de-assert (if false) the "request to send" or "RTS" signal on the serial port.
     - `break`
-      - : A boolean indicating whether to invoke the operating system to either assert (if true) or deassert (if false) the "break" signal on the serial port.
+      - : A boolean indicating whether to invoke the operating system to either assert (if true) or de-assert (if false) the "break" signal on the serial port.
 
 ### Return value
 
