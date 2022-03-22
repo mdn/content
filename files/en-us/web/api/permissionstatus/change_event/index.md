@@ -3,13 +3,11 @@ title: 'PermissionStatus: change event'
 slug: Web/API/PermissionStatus/change_event
 tags:
   - API
-  - Event Handler
-  - Experimental
+  - Event
   - PermissionStatus
   - Permissions
-  - Property
   - Reference
-  - onchange
+  - change
 browser-compat: api.PermissionStatus.change_event
 ---
 {{APIRef("Permissions API")}}{{SeeCompatTable}}
