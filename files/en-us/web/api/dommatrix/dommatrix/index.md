@@ -20,7 +20,8 @@ operations.
 ## Syntax
 
 ```js
-new DOMMatrix([init])
+new DOMMatrix()
+new DOMMatrix(init)
 ```
 
 ### Parameters
