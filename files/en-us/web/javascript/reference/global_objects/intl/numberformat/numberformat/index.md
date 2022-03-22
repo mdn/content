@@ -191,7 +191,7 @@ new Intl.NumberFormat(locales, options)
         - "`lessPrecision`": the result with less precision wins a conflict
 
     - `roundingIncrement`
-      - : Option for control rounding increment precision, must be a Number in the following list:
+      - : Option for control rounding increment precision, must be a number in the following list:
         "`1`", " `2`", "`5`", "`10`", "`20`", " `25`", "`50`", "`100`", "`200`", "`250`", "`500`", "`1000`", "`2000`", "`2500`", " `5000`".
         > **Note:** `roundingIncrement` option controls the rounding increment to be used when formatting numbers, it indicates the increment at which rounding should take place relative to the calculated rounding magnitude, it cannot be mixed with significant digits rounding or any setting of `roundingPriority` other than "auto".
         >
