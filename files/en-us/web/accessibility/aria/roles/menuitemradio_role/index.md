@@ -15,6 +15,7 @@ A `menuitemradio` is checkable menuitem in a set of elements with the same role,
 ## Description
 
 The items in menu and menubars are menu items. There are three types of menu items: [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role), and `menuitemradio`. To limit the number of checked menu items to one within a group, use the `menuitemradio` role on all the elements in the group.
+
 A `menuitemradio` is checkable menuitem in a set of elements with the same role, of which only can be checked at a time.
 
 The three menu item elements can only be contained in, or owned by, an element with role [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role) or [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role), optionally nested within a grouping element with role of [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role). Being nested or otherwised owned (see [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)) in a `menu` or `menubar` identifies the menu items as being related widgets. 
