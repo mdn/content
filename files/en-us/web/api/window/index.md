@@ -428,19 +428,19 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
   - : Fired when a storage area (`localStorage` or `sessionStorage`) has been modified in the context of another document.
     Also available via the {{domxref("WindowEventHandlers/onstorage", "onstorage")}} property.
 - {{domxref("Window.vrdisplayconnect_event", "vrdisplayconnect")}} {{deprecated_inline}}
-  - : Represents an event handler that will run when a compatible VR device has been connected to the computer.
+  - : Fired when a compatible VR device has been connected to the computer.
 - {{domxref("Window.vrdisplaydisconnect_event", "vrdisplaydisconnect")}} {{deprecated_inline}}
-  - : Represents an event handler that will run when a compatible VR device has been disconnected from the computer.
+  - : Fired when a compatible VR device has been disconnected from the computer.
 - {{domxref("Window.vrdisplayactivate_event", "vrdisplayactivate")}} {{deprecated_inline}}
-  - : Represents an event handler that will run when a display is able to be presented to.
+  - : Fired when a display is able to be presented to.
 - {{domxref("Window.vrdisplaydeactivate_event", "vrdisplaydeactivate")}} {{deprecated_inline}}
-  - : Represents an event handler that will run when a display can no longer be presented to.
+  - : Fired when a display can no longer be presented to.
 - {{domxref("Window.vrdisplayblur_event", "vrdisplayblur")}} {{deprecated_inline}}
-  - : Represents an event handler that will run when presentation to a display has been paused for some reason by the browser, OS, or VR hardware.
+  - : Fired when presentation to a display has been paused for some reason by the browser, OS, or VR hardware.
 - {{domxref("Window.vrdisplayfocus_event", "vrdisplayfocus")}} {{deprecated_inline}}
-  - : Represents an event handler that will run when presentation to a display has resumed after being blurred.
+  - : Fired when presentation to a display has resumed after being blurred.
 - {{domxref("Window.vrdisplaypresentchange_event", "vrdisplaypresentchange")}} {{deprecated_inline}}
-  - : represents an event handler that will run when the presenting state of a VR device changes — i.e. goes from presenting to not presenting, or vice versa.
+  - : Fired when the presenting state of a VR device changes — i.e. goes from presenting to not presenting, or vice versa.
 
 ### Animation events
 

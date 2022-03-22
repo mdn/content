@@ -101,19 +101,19 @@ The WebVR API extends the following APIs, adding the listed features.
 #### Window events
 
 - {{DOMxRef("Window.vrdisplaypresentchange_event", "vrdisplaypresentchange")}}
-  - : Represents an event handler that will run when the presenting state of a VR display changes — i.e. goes from presenting to not presenting or vice versa.
+  - : Fired when the presenting state of a VR display changes — i.e. goes from presenting to not presenting or vice versa.
 - {{DOMxRef("Window.vrdisplayconnect_event", "vrdisplayconnect")}}
-  - : Represents an event handler that will run when a compatible VR display has been connected to the computer.
+  - : Fired when a compatible VR display has been connected to the computer.
 - {{DOMxRef("Window.vrdisplaydisconnect_event", "vrdisplaydisconnect")}}
-  - : Represents an event handler that will run when a compatible VR display has been disconnected from the computer.
+  - : Fired when a compatible VR display has been disconnected from the computer.
 - {{DOMxRef("Window.vrdisplayactivate_event", "vrdisplayactivate")}}
-  - : Represents an event handler that will run when a display is able to be presented to.
+  - : Fired when a display is able to be presented to.
 - {{DOMxRef("Window.vrdisplaydeactivate_event", "vrdisplaydeactivate")}}
-  - : Represents an event handler that will run when a display can no longer be presented to.
+  - : Fired when a display can no longer be presented to.
 - {{DOMxRef("Window.vrdisplayblur_event", "vrdisplayblur")}}
-  - : Represents an event handler that will run when presentation to a display has been paused for some reason by the browser, OS, or VR hardware.
+  - : Fired when presentation to a display has been paused for some reason by the browser, OS, or VR hardware.
 - {{DOMxRef("Window.vrdisplayfocus_event", "vrdisplayfocus")}}
-  - : Represents an event handler that will run when presentation to a display has resumed after being blurred.
+  - : Fired when presentation to a display has resumed after being blurred.
 
 ## Examples
 

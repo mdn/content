@@ -27,7 +27,6 @@ onvrdisplaydisconnect = event => { };
 
 ## Event type
 
-If the event has a special type, mention it along with its inheritance. If not, indicate that it it a generic event:
 
 An {{domxref("VRDisplayEvent")}}. Inherits from {{domxref("Event")}}.
 
