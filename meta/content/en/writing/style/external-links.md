@@ -7,7 +7,7 @@ description: >
 ---
 
 External links are allowed on MDN,
-but they require extra care to make sure they’re useful to the MDN’s audience.
+but they require extra care to make sure they’re useful to MDN’s audience.
 If you’re considering an external link, act to minimize the risks of:
 
 - Broken or outdated links
