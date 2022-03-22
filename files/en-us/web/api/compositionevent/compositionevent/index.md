@@ -16,7 +16,8 @@ constructor creates a new {{domxref("CompositionEvent")}} object instance.
 ## Syntax
 
 ```js
-const myEvent = new CompositionEvent(typeArg [, CompositionEventInit])
+new CompositionEvent(typeArg)
+new CompositionEvent(typeArg, CompositionEventInit)
 ```
 
 ### Values

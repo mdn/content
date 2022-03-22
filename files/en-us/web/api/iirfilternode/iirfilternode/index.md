@@ -21,7 +21,7 @@ which implements a general infinite impulse response filter.
 ## Syntax
 
 ```js
-var iIRFilterNode = new IIRFilterNode(context, options)
+new IIRFilterNode(context, options)
 ```
 
 ### Parameters

@@ -21,7 +21,7 @@ The **`MediaMetadata()`** constructor creates a new
 ## Syntax
 
 ```js
-var mediaMetadata = new MediaMetadata([metadata])
+new MediaMetadata([metadata])
 ```
 
 ### Parameters

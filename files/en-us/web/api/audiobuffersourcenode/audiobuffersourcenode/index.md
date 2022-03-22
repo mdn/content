@@ -19,7 +19,7 @@ constructor creates a new {{domxref("AudioBufferSourceNode")}} object instance.
 ## Syntax
 
 ```js
-var audioBufferSourceNode = new AudioBufferSourceNode(context, options)
+new AudioBufferSourceNode(context, options)
 ```
 
 ### Parameters

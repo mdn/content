@@ -21,7 +21,7 @@ instance.
 ## Syntax
 
 ```js
-var readableStreamDefaultReader = new ReadableStreamDefaultReader(stream);
+new ReadableStreamDefaultReader(stream);
 ```
 
 ### Parameters

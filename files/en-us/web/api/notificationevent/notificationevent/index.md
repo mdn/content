@@ -19,7 +19,7 @@ The **`NotificationEvent()`** constructor creates a new
 ## Syntax
 
 ```js
-var myNotificationEvent = new NotificationEvent(type, NotificationEventInit);
+new NotificationEvent(type, NotificationEventInit);
 ```
 
 ### Parameters

@@ -18,7 +18,7 @@ The `SpeechSynthesisUtterance()` constructor of the {{domxref("SpeechSynthesisUt
 ## Syntax
 
 ```js
-var utterThis = new SpeechSynthesisUtterance(text);
+new SpeechSynthesisUtterance(text);
 ```
 
 ### Parameters

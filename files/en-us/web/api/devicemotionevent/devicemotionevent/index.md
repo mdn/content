@@ -22,7 +22,8 @@ The **`DeviceMotionEvent()`** constructor creates a new
 ## Syntax
 
 ```js
-var deviceMotionEvent = new DeviceMotionEvent(type[, options])
+new DeviceMotionEvent(type)
+new DeviceMotionEvent(type, options)
 ```
 
 ### Parameters
