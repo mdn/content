@@ -60,11 +60,11 @@ When the page loads, the `startup()` function shown below will be called.
 ```js
 function startup() {
   const el = document.getElementById("canvas");
-  el.addEventListener("touchstart", handleStart, false);
-  el.addEventListener("touchend", handleEnd, false);
-  el.addEventListener("touchcancel", handleCancel, false);
-  el.addEventListener("touchmove", handleMove, false);
-  log("Initialized.");
+  el.addEventListener('touchstart', handleStart, false);
+  el.addEventListener('touchend', handleEnd, false);
+  el.addEventListener('touchcancel', handleCancel, false);
+  el.addEventListener('touchmove', handleMove, false);
+  log('Initialized.');
 }
 
 document.addEventListener("DOMContentLoaded", startup);
@@ -85,20 +85,20 @@ When a {{domxref("Element/touchstart_event", "touchstart")}} event occurs, indic
 ```js
 function handleStart(evt) {
   evt.preventDefault();
-  console.log("touchstart.");
-  const el = document.getElementById("canvas");
-  const ctx = el.getContext("2d");
+  console.log('touchstart.');
+  const el = document.getElementById('canvas');
+  const ctx = el.getContext('2d');
   const touches = evt.changedTouches;
 
   for (let i = 0; i < touches.length; i++) {
-    console.log("touchstart:" + i + "...");
+    console.log(`touchstart: ${i}...`);
     ongoingTouches.push(copyTouch(touches[i]));
     const color = colorForTouch(touches[i]);
     ctx.beginPath();
     ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false);  // a circle at the start
     ctx.fillStyle = color;
     ctx.fill();
-    console.log("touchstart:" + i + ".");
+    console.log(`touchstart: ${i}.`);
   }
 }
 ```
@@ -114,8 +114,8 @@ Each time one or more fingers move, a {{domxref("Element/touchmove_event", "touc
 ```js
 function handleMove(evt) {
   evt.preventDefault();
-  const el = document.getElementById("canvas");
-  const ctx = el.getContext("2d");
+  const el = document.getElementById('canvas');
+  const ctx = el.getContext('2d');
   const touches = evt.changedTouches;
 
   for (let i = 0; i < touches.length; i++) {
@@ -123,20 +123,20 @@ function handleMove(evt) {
     const idx = ongoingTouchIndexById(touches[i].identifier);
 
     if (idx >= 0) {
-      console.log("continuing touch "+idx);
+      console.log(`continuing touch ${ idx }`);
       ctx.beginPath();
-      console.log("ctx.moveTo(" + ongoingTouches[idx].pageX + ", " + ongoingTouches[idx].pageY + ");");
+      console.log(`ctx.moveTo( ${ ongoingTouches[idx].pageX }, ${ ongoingTouches[idx].pageY } );`);
       ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
-      console.log("ctx.lineTo(" + touches[i].pageX + ", " + touches[i].pageY + ");");
+      console.log(`ctx.lineTo( ${ touches[i].pageX }, ${ touches[i].pageY } );`);
       ctx.lineTo(touches[i].pageX, touches[i].pageY);
       ctx.lineWidth = 4;
       ctx.strokeStyle = color;
       ctx.stroke();
 
       ongoingTouches.splice(idx, 1, copyTouch(touches[i]));  // swap in the new touch record
-      console.log(".");
+      console.log('.');
     } else {
-      console.log("can't figure out which touch to continue");
+      console.log('can\'t figure out which touch to continue');
     }
   }
 }
@@ -156,8 +156,8 @@ When the user lifts a finger off the surface, a {{domxref("Element/touchend_even
 function handleEnd(evt) {
   evt.preventDefault();
   log("touchend");
-  const el = document.getElementById("canvas");
-  const ctx = el.getContext("2d");
+  const el = document.getElementById('canvas');
+  const ctx = el.getContext('2d');
   const touches = evt.changedTouches;
 
   for (let i = 0; i < touches.length; i++) {
@@ -173,7 +173,7 @@ function handleEnd(evt) {
       ctx.fillRect(touches[i].pageX - 4, touches[i].pageY - 4, 8, 8);  // and a square at the end
       ongoingTouches.splice(idx, 1);  // remove it; we're done
     } else {
-      console.log("can't figure out which touch to end");
+      console.log('can\'t figure out which touch to end');
     }
   }
 }
@@ -188,7 +188,7 @@ If the user's finger wanders into browser UI, or the touch otherwise needs to be
 ```js
 function handleCancel(evt) {
   evt.preventDefault();
-  console.log("touchcancel.");
+  console.log('touchcancel.');
   const touches = evt.changedTouches;
 
   for (let i = 0; i < touches.length; i++) {
@@ -217,7 +217,7 @@ function colorForTouch(touch) {
   g = g.toString(16); // make it a hex digit
   b = b.toString(16); // make it a hex digit
   const color = "#" + r + g + b;
-  console.log("color for touch with identifier " + touch.identifier + " = " + color);
+  console.log(`color for touch with identifier ${ touch.identifier } = ${ color }`);
   return color;
 }
 ```
@@ -256,7 +256,7 @@ function ongoingTouchIndexById(idToFind) {
 ```js
 function log(msg) {
   const p = document.getElementById('log');
-  p.innerHTML = msg + "\n" + p.innerHTML;
+  p.innerHTML = `${ msg } \n${ p.innerHTML }`;
 }
 ```
 
