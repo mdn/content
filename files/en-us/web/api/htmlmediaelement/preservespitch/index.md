@@ -27,7 +27,9 @@ audio.preservesPitch = false;
 
 A boolean value defaulting to `true`.
 
-## Example
+## Examples
+
+### Setting the preservesPitch property
 
 In this example, we have an {{HTMLElement("audio")}} element, a range control that adjusts the playback rate, and a checkbox that sets `preservesPitch`.
 
@@ -66,7 +68,7 @@ pitch.addEventListener('change', () => {
 });
 ```
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Setting the preservesPitch property")}}
 
 ## Specifications
 
