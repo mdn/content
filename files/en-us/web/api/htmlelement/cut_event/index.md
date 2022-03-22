@@ -31,6 +31,13 @@ A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("ClipboardEvent")}}
 
+## Event properties
+
+_Also inherits properties from its parent {{domxref("Event")}}_.
+
+- {{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}
+  - : Is a {{domxref("DataTransfer")}} object containing the data affected by the user-initiated {{event("cut")}}, {{event("copy")}}, or {{event("paste")}} operation, along with its MIME type.
+
 ### Value
 
 `functionRef` is a function name or a [function
