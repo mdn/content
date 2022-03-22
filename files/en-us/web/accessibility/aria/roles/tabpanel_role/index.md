@@ -18,7 +18,9 @@ The `tabpanel` role indicates the element is a container for the resources assoc
 
 A `tabpanel` is part of the a tab interface, a common user experience pattern in which a group of visual tabs each enable quick switching between multiple layered views. Each tab is defined as such with the `tab` role. The `tablist` role is used on the container grouping the selectable tabs. The `tablist` is usually above or to the side of a content area. The `tabpanel` role is the role of the container of every pane of content that is made visible by selecting a tab. Only one `tabpanel` is visible at a time.
 
-Only the `tabpanel` associated with the currently selected `tab` is displayed; the other `tabpanel` elements, those associated with the unselected `tabs` are hidden. Selecting a different `tab` changes the currently visible tab panel; the content area changes by making visible a new panel while hiding the previously visible panel and making the newly selected tab more prominent than the other tabs. User focus, however, does not change on tab selection. 
+Only the `tabpanel` associated with the currently selected `tab` is displayed. The other `tabpanel` elements, the ones associated with the unselected `tabs` are hidden. 
+
+Selecting a different `tab` changes the currently visible tab panel. The content area changes by making visible a new panel while hiding the previously visible panel and making the newly selected tab more prominent than the other tabs. User focus, however, does not change on tab selection. 
 
 Tabs do not act as anchor links to individual panels. While semantic HTML may be coded with the tabs being anchor links natigating to the tab's associated tabpanel, when JavaScript is used to progressively enhance the content to a tabbed interface, the link's default behavior should be prevented.  
 
