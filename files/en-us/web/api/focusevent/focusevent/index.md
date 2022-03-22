@@ -19,7 +19,8 @@ set to the other target.
 ## Syntax
 
 ```js
-new FocusEvent(typeArg[, focusEventInit]);
+new FocusEvent(typeArg);
+new FocusEvent(typeArg, focusEventInit);
 ```
 
 ### Properties
