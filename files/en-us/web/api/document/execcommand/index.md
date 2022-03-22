@@ -303,5 +303,6 @@ This feature is not part of any current specification. It is no longer on track 
 
 ## See also
 
+- [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
 - {{domxref("HTMLElement.contentEditable")}}
 - {{domxref("document.designMode")}}
