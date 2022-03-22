@@ -16,7 +16,8 @@ and returns a readable stream object from the given handlers.
 ## Syntax
 
 ```js
-new ReadableStream(underlyingSource[, queuingStrategy]);
+new ReadableStream(underlyingSource)
+new ReadableStream(underlyingSource, queuingStrategy)
 ```
 
 ### Parameters
