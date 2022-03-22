@@ -27,7 +27,9 @@ When your grid UI calls for rows supporting `aria-expanded` or if your grid requ
 
 Each `row` or `gridcell` in a row should be keyboard focusable, and keyboard focus for all these tree grid descendants must be managed.  The exception to this rule is column header cells which aren't required to be focusable if they do not provide functionality such as sort or filter. Every row and cell should either contain a focusable element or be focusable itself, regardless of whether individual cell content is editable or interactive. 
 
-If the `treegrid` allows the user to choose just one item for an action, then it is known as a "single-select" treegrid. In single-select treegrids, the item with focus also has a selected state set with [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected). 
+### Single and multi-select treegrids
+
+If the `treegrid` allows the user to choose just one item for an action, then it is known as a **single-select** treegrid. In single-select treegrids, the item with focus also has a selected state set with [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected). 
 
 If the treegrid supports selection of more than one row or cell, it is a **multi-select** treegrid. In the multi-select treegrid, the selected state is independent of the focus. The visual design and assitive technologies must distinguish between items that are selected and the item that has focus.  
 
