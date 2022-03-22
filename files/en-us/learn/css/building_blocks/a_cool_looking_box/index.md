@@ -106,4 +106,4 @@ If you would like your work assessed, or are stuck and want to ask for help:
 - [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 - [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
 - [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-- [Organizing your CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing)
+- [Organizing your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing)
