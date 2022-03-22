@@ -78,9 +78,6 @@ editor.onpaste = logPaste;
 
 {{Compat}}
 
-Since Firefox 13, the preference `dom.event.clipboardevents.enabled`
-controls this feature. It defaults to `true` but can be disabled.
-
 ## See also
 
 - Related events
