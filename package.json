@@ -12,7 +12,7 @@
     "filecheck": "env-cmd --silent cross-env CONTENT_ROOT=files yari-filecheck --cwd=.",
     "content": "env-cmd --silent cross-env CONTENT_ROOT=files yari-tool",
     "build": "env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build yari-build",
-    "lint:md": "markdownlint \"*.md\" \"rfcs/**/*.md\""
+    "lint:md": "markdownlint \"**/*.md\" -i node_modules"
   },
   "dependencies": {
     "@mdn/yari": "1.14.31",
