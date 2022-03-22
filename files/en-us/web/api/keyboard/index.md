@@ -12,7 +12,7 @@ tags:
   - keyboard
 browser-compat: api.Keyboard
 ---
-{{SeeCompatTable}}{{APIRef("Keyboard API")}}
+{{SeeCompatTable}}{{APIRef("Keyboard API")}}{{securecontext_header}}
 
 The **`Keyboard`** interface of the [Keyboard API](/en-US/docs/Web/API/Keyboard_API) provides functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.
 
