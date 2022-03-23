@@ -19,13 +19,13 @@ The **`length`** property of an object which is an instance of type `Array` sets
 The value of the `length` property is an integer with a positive sign and a value less than 2 to the 32nd power (2^32).
 
 ```js
-var namelistA = new Array(4294967296); //2 to the 32nd power = 4294967296
-var namelistC = new Array(-100) //negative sign
+const namelistA = new Array(4294967296); //2 to the 32nd power = 4294967296
+const namelistC = new Array(-100) //negative sign
 
 console.log(namelistA.length); //RangeError: Invalid array length
 console.log(namelistC.length); //RangeError: Invalid array length
 
-var namelistB = [];
+const namelistB = [];
 namelistB.length = Math.pow(2,32)-1; //set array length less than 2 to the 32nd power
 console.log(namelistB.length);
 
@@ -63,8 +63,8 @@ As you can see, the `length` property does not necessarily indicate the number o
 In the following example, the array `numbers` is iterated through by looking at the `length` property. The value in each element is then doubled.
 
 ```js
-var numbers = [1, 2, 3, 4, 5];
-var length = numbers.length;
+const numbers = [1, 2, 3, 4, 5];
+const length = numbers.length;
 for (var i = 0; i < length; i++) {
   numbers[i] *= 2;
 }
@@ -76,7 +76,7 @@ for (var i = 0; i < length; i++) {
 The following example shortens the array `numbers` to a length of 3 if the current length is greater than 3.
 
 ```js
-var numbers = [1, 2, 3, 4, 5];
+const numbers = [1, 2, 3, 4, 5];
 
 if (numbers.length > 3) {
   numbers.length = 3;
@@ -89,7 +89,7 @@ console.log(numbers.length); // 3
 ### Create empty array of fixed length
 
 ```js
-var numbers = [];
+const numbers = [];
 numbers.length = 3;
 console.log(numbers); // [undefined, undefined, undefined]
 ```

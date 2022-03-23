@@ -34,7 +34,7 @@ history.pushState(state, unused, url)
 
   - : The `state` object is a JavaScript object which is associated with the
     new history entry created by `pushState()`. Whenever the user navigates to
-    the new `state`, a {{event("popstate")}} event is fired, and
+    the new `state`, a {{domxref("Window/popstate_event", "popstate")}} event is fired, and
     the `state` property of the event contains a copy of the history entry's
     `state` object.
 
@@ -75,7 +75,7 @@ But `pushState()` has a few advantages:
 - You can associate arbitrary data with your new history entry. With the hash-based
   approach, you need to encode all of the relevant data into a short string.
 
-Note that `pushState()` never causes a {{event("hashchange")}} event to be
+Note that `pushState()` never causes a {{domxref("Window/hashchange_event", "hashchange")}} event to be
 fired, even if the new URL differs from the old URL only in its hash.
 
 ## Examples

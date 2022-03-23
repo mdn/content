@@ -176,10 +176,6 @@ Network client hints allow a server to choose what information is sent based on 
   - : Contains stored [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) previously sent by the server with the {{HTTPHeader("Set-Cookie")}} header.
 - {{HTTPHeader("Set-Cookie")}}
   - : Send cookies from the server to the user-agent.
-- {{HTTPHeader("Cookie2")}} {{deprecated_inline}}
-  - : Contains an HTTP cookie previously sent by the server with the {{HTTPHeader("Set-Cookie2")}} header, but has been **obsoleted**. Use {{HTTPHeader("Cookie")}} instead.
-- {{HTTPHeader("Set-Cookie2")}} {{deprecated_inline}}
-  - : Sends cookies from the server to the user-agent, but has been **obsoleted**. Use {{HTTPHeader("Set-Cookie")}} instead.
 
 ## CORS
 
@@ -329,6 +325,9 @@ _Learn more about CORS [here](CORS)._
   - : It is a request header that indicates whether or not a navigation request was triggered by user activation. It is a Structured Header whose value is a boolean so possible values are `?0` for false and `?1` for true.
 - {{HTTPHeader("Sec-Fetch-Dest")}}
   - : It is a request header that indicates the request's destination to a server. It is a Structured Header whose value is a token with possible values `audio`, `audioworklet`, `document`, `embed`, `empty`, `font`, `image`, `manifest`, `object`, `paintworklet`, `report`, `script`, `serviceworker`, `sharedworker`, `style`, `track`, `video`, `worker`, and `xslt`.
+- {{HTTPHeader("Service-Worker-Navigation-Preload")}}
+  - : A request header sent in preemptive request to {{domxref("fetch()")}} a resource during service worker boot.
+    The value, which is set with {{domxref("NavigationPreloadManager.setHeaderValue()")}}, can be used to inform a server that a different resource should be returned than in a normal `fetch()` operation.
 
 ## Server-sent events
 

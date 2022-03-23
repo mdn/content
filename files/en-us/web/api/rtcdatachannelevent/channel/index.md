@@ -53,7 +53,6 @@ pc.ondatachannel = function(event) {
 
 - {{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}}
 - {{domxref("RTCDataChannel")}}
-- {{domxref("RTCPeerConnection.ondatachannel")}}
 - [A simple
   RTCDataChannel sample](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
 - {{domxref("RTCPeerConnection")}}

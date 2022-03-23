@@ -23,12 +23,12 @@ The resulting value includes the year, month, and day, but _not_ the time. The {
 
 {{EmbedInteractiveExample("pages/tabbed/input-date.html", "tabbed-shorter")}}
 
-The input UI generally varies from browser to browser; see {{anch("Browser compatibility")}} for further details. In unsupported browsers, the control degrades gracefully to [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text).
+The input UI generally varies from browser to browser; see [Browser compatibility](#browser_compatibility) for further details. In unsupported browsers, the control degrades gracefully to [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text).
 
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
         A {{domxref("DOMString")}} representing a date in YYYY-MM-DD
         format, or empty
@@ -111,9 +111,9 @@ If both the `max` and `min` attributes are set, this value must be a date string
 
 ### step
 
-The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping (`{{anch("min")}}` if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.
+The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping ([`min`](#min) if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.
 
-A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as `{{anch("min")}}` and `{{anch("max")}}`).
+A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
 
 > **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
 
@@ -125,7 +125,7 @@ For `date` inputs, the value of `step` is given in days; and is treated as a num
 
 Date inputs sound convenient — they provide an easy interface for choosing dates, and they normalize the data format sent to the server regardless of the user's locale. However, there are currently issues with `<input type="date">` because of its limited browser support.
 
-In this section, we'll look at basic and then more complex uses of `<input type="date">`, and offer advice on mitigating the browser support issue later (see {{anch("Handling browser support")}}).
+In this section, we'll look at basic and then more complex uses of `<input type="date">`, and offer advice on mitigating the browser support issue later (see [Handling browser support](#handling_browser_support)).
 
 > **Note:** Hopefully, over time browser support will become ubiquitous, and this problem will fade away.
 
@@ -174,7 +174,7 @@ The result is that only days in April 2017 can be selected — the month and yea
 
 By default, `<input type="date">` doesn't validate the entered value beyond its format. The interfaces generally don't let you enter anything that isn't a date — which is helpful — but you can leave the field empty or enter an invalid date in browsers where the input falls back to type `text` (like the 32nd of April).
 
-If you use {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} to restrict the available dates (see {{anch("Setting maximum and minimum dates")}}), supporting browsers will display an error if you try to submit a date that is out of bounds. However, you'll need to double-check the submitted results to ensure the value is within these dates, if the date picker isn't fully supported on the user's device.
+If you use {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} to restrict the available dates (see [Setting maximum and minimum dates](#setting_maximum_and_minimum_dates)), supporting browsers will display an error if you try to submit a date that is out of bounds. However, you'll need to double-check the submitted results to ensure the value is within these dates, if the date picker isn't fully supported on the user's device.
 
 You can also use the {{htmlattrxref("required", "input")}} attribute to make filling in the date mandatory — an error will be displayed if you try to submit an empty date field. This should work in most browsers, even if they fall back to a text input.
 
@@ -223,7 +223,7 @@ input:valid+span::after {
 
 ## Handling browser support
 
-As mentioned, the major problem with date inputs is {{anch("Browser compatibility", "browser support")}}.
+As mentioned, the major problem with date inputs is [browser support](#browser_compatibility).
 
 Unsupporting browsers gracefully degrade to a text input, but this creates problems in consistency of user interface (the presented controls are different) and data handling.
 
@@ -367,7 +367,7 @@ var test = document.createElement('input');
 try {
   test.type = 'date';
 } catch (e) {
-  console.log(e.description);
+  console.log(e.message);
 }
 
 // if it does, run the code inside the if() {} block
@@ -399,10 +399,10 @@ function populateDays(month) {
   } else if(month === 'April' | month === 'June' | month === 'September' | month === 'November') {
     dayNum = 30;
   } else {
-  // If month is February, calculate whether it is a leap year or not
-  var year = yearSelect.value;
-  var isLeap = new Date(year, 1, 29).getMonth() == 1;
-  isLeap ? dayNum = 29 : dayNum = 28;
+    // If month is February, calculate whether it is a leap year or not
+    var year = yearSelect.value;
+    var isLeap = new Date(year, 1, 29).getMonth() == 1;
+    dayNum = isLeap ? 29 : 28;
   }
 
   // inject the right number of new <option> elements into the day <select>

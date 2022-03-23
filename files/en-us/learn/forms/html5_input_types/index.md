@@ -62,7 +62,7 @@ On some devices — notably touch devices with dynamic keyboards like smart phon
 
 ![firefox for android email keyboard, with ampersand displayed by default.](fx-android-email-type-keyboard.jpg)
 
-> **Note:** You can find examples of the basic text input types at [basic input examples](https://mdn.github.io/learning-area/html/forms/basic-input-examples/) (see the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/basic-input-examples/index.html) also).
+> **Note:** You can find examples of the basic text input types at [basic input examples](https://mdn.github.io/learning-area/html/forms/basic-input-examples/) (see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/basic-input-examples/index.html) also).
 
 This is another good reason for using these newer input types, improving the user experience for users of these devices.
 

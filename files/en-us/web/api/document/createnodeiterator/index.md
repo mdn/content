@@ -54,7 +54,7 @@ const nodeIterator = document.createNodeIterator(root[, whatToShow[, filter]]);
     to include it in the list of iterable nodes (a simple callback function may also be
     used instead). The method should return one of `NodeFilter.FILTER_ACCEPT`,
     `NodeFilter.FILTER_REJECT`, or `NodeFilter.FILTER_SKIP`. See the
-    {{ anch("Example") }}.
+    [Example](#example).
 
 ## Example
 

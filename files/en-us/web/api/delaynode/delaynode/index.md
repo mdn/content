@@ -22,8 +22,8 @@ its propagation to the output.
 ## Syntax
 
 ```js
-var delayNode = new DelayNode(context);
-var delayNode = new DelayNode(context, options);
+new DelayNode(context);
+new DelayNode(context, options);
 ```
 
 ### Parameters

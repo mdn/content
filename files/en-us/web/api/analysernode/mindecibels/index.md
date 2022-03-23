@@ -14,14 +14,7 @@ browser-compat: api.AnalyserNode.minDecibels
 
 The **`minDecibels`** property of the {{ domxref("AnalyserNode") }} interface is a double value representing the minimum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte values — basically, this specifies the minimum value for the range of results when using `getByteFrequencyData()`.
 
-## Syntax
-
-```js
-var curValue = analyserNode.minDecibels;
-analyserNode.minDecibels = newValue;
-```
-
-### Value
+## Value
 
 A double, representing the minimum [decibel](https://en.wikipedia.org/wiki/Decibel) value for scaling the FFT analysis data, where `0` dB is the loudest possible sound, `-10` dB is a 10th of that, etc. The default value is `-100` dB.
 

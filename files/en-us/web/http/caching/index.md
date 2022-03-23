@@ -144,7 +144,7 @@ Web developers invented a technique that Steve Souders called [revving](https://
 
 This technique has an additional benefit: updating two cached resources at the same time will not lead to the situation where the outdated version of one resource is used in combination with the new version of the other one. This is very important when websites have CSS stylesheets or JS scripts that have mutual dependencies, meaning that they depend on each other because they refer to the same HTML elements.
 
-![How the revved cache mechanism works. With minor typo fix to grammar issue: https://github.com/mdn/sprints/issues/2618](http_revved_fix_typo.png)
+![How the revved cache mechanism works](http_revved_fix_typo.png)
 
 The revision version added to revved resources doesn't need to be a classical revision string like 1.1.3, or even a monotonously growing suite of numbers. It can be anything that prevents collisions, like a hash or a date.
 

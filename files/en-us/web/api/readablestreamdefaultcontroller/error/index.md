@@ -37,8 +37,7 @@ readableStreamDefaultController.error(e);
 ### Exceptions
 
 - TypeError
-  - : The source object is not a `ReadableStreamDefaultController`, or the
-    stream is not readable for some other reason.
+  - : The source object is not a `ReadableStreamDefaultController`.
 
 ## Examples
 

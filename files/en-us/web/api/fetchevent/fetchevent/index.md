@@ -21,7 +21,7 @@ The **`FetchEvent()`** constructor creates a new
 ## Syntax
 
 ```js
-var fetchEvent = new FetchEvent(type, init);
+new FetchEvent(type, init);
 ```
 
 ### Parameters

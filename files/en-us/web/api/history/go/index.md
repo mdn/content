@@ -17,7 +17,7 @@ session history. You can use it to move forwards and backwards through the histo
 depending on the value of a parameter.
 
 This method is {{glossary("asynchronous")}}. Add a listener for the
-{{event("popstate")}} event in order to determine when the navigation has completed.
+{{domxref("Window/popstate_event", "popstate")}} event in order to determine when the navigation has completed.
 
 ## Syntax
 
@@ -81,6 +81,6 @@ history.go(0);
 - {{domxref("History")}}
 - {{DOMxRef("History.back","back()")}}
 - {{DOMxRef("History.forward","forward()")}}
-- {{event("popstate")}} event
+- {{domxref("Window/popstate_event", "popstate")}} event
 - [Working with
   the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)

@@ -25,15 +25,7 @@ shift](https://en.wikipedia.org/wiki/Doppler_effect) appropriate for the speed t
 > **Note:** Bear in mind that no propagation delay is automatically
 > applied to a sound far from the listener.
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var myListener = audioCtx.listener;
-myListener.speedOfSound = 343.3;
-```
-
-### Value
+## Value
 
 A double.
 

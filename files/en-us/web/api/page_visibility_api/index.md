@@ -137,8 +137,12 @@ The Page Visibility API adds the following properties to the {{domxref("Document
 
         > **Note:** Not all browsers support the `unloaded` value.
 
-- {{domxref("Document.onvisibilitychange")}}
-  - : An {{domxref("EventListener")}} providing the code to be called when the {{event("visibilitychange")}} event is fired.
+## Events added to the Document interface
+
+The Page Visibility API adds the following events to the {{domxref("Document")}} interface:
+
+- {{domxref("Document.visibilitychange_event", "visibilitychange")}}
+  - : Fired when the content of a tab has become visible or has been hidden.
 
 ```js
 // startSimulation and pauseSimulation defined elsewhere
@@ -164,8 +168,3 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 ### `Document.visibilityState`
 
 {{Compat("api.Document.visibilityState")}}
-
-## See also
-
-- Description of the [Page Visibility API](https://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx "Page Visibility on IEBlog") on the IEBlog.
-- Description of the [Page Visibility API](https://code.google.com/chrome/whitepapers/pagevisibility.html) by Google

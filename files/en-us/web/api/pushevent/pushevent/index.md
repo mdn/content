@@ -21,7 +21,7 @@ service worker context.
 ## Syntax
 
 ```js
-const myPushEvent = new PushEvent(type, eventInitDict);
+new PushEvent(type, eventInitDict);
 ```
 
 ### Parameters

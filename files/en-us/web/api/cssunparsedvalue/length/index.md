@@ -31,7 +31,7 @@ An integer.
 
 ## Examples
 
-In this example we employ the {{domxref('CSSUnparsedValue.CSSUnparsedValue()')}}
+In this example we employ the {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}}
 constructor, then query the length:
 
 ```js
@@ -50,7 +50,7 @@ console.log( values.length ) // 3
 
 ## See also
 
-- {{domxref("CSSUnparsedValue.CSSUnparsedValue()")}}
+- {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}}
 - {{domxref("CSSUnparsedValue.entries")}}
 - {{domxref("CSSUnparsedValue.forEach")}}
 - {{domxref("CSSUnparsedValue.keys")}}

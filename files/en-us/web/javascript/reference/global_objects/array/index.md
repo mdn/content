@@ -449,7 +449,7 @@ console.log(fruitsAlias);
 
 ### Grouping the elements of an array
 
-The {{jsxref("Array.prototype.groupBy()")}} methods can be used group the elements of an array, using a test function that returns a string indicating the group of the current element.
+The {{jsxref("Array.prototype.groupBy()")}} methods can be used to group the elements of an array, using a test function that returns a string indicating the group of the current element.
 
 Here we have a simple inventory array that contains "food" objects that have a `name` and a `type`.
 

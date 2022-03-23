@@ -30,7 +30,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - {{HTMLAttrDef("download")}}
 
-  - : Prompts the user to save the linked URL instead of navigating to it. Can be used with or without a value:
+  - : Causes the browser to treat the linked URL as a download. Can be used with or without a value:
 
     - Without a value, the browser will suggest a filename/extension, generated from various sources:
 
@@ -43,10 +43,11 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     > **Note:**
     >
     > - `download` only works for [same-origin URLs](/en-US/docs/Web/Security/Same-origin_policy), or the `blob:` and `data:` schemes.
+    > - How browsers treat downloads varies by browser, user settings, and other factors. The user may be prompted before a download starts, or the file may be saved automatically, or it may open automatically, either in an external application or in the browser itself.
     > - If the `Content-Disposition` header has different information from the `download` attribute, resulting behavior may differ:
     >
     >   - If the header specifies a `filename`, it takes priority over a filename specified in the `download` attribute.
-    >   - If the header specifies a disposition of `inline`, Chrome, and Firefox 82 and later, prioritize the attribute and treat it as a download. Firefox versions before 82 prioritize the header and will display the content inline.
+    >   - If the header specifies a disposition of `inline`, Chrome and Firefox prioritize the attribute and treat it as a download. Old Firefox versions (before 82) prioritize the header and will display the content inline.
 
 - {{HTMLAttrDef("href")}}
 

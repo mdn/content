@@ -21,7 +21,7 @@ a new {{domxref("CSSMathProduct")}} object which creates a new
 ## Syntax
 
 ```js
-var CSSMathProduct = new CSSMathProduct(args)
+new CSSMathProduct(args)
 ```
 
 ### Parameters

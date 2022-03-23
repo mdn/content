@@ -208,7 +208,7 @@ Creating a list of all these subpages is a good way to track them. For example:
   - end
   - …
 
-Each interface in the list has a separate page created for it as a subpage of https\://developer.mozilla.org/en-US/docs/Web/API; for example, the document for {{domxref("AudioContext")}} would be located at https\://developer.mozilla.org/en-US/docs/Web/API/AudioContext. Each {{anch("Interface pages", "interface page")}} explains what that interface does and provides a list of the methods and properties that comprise the interface. Then each method and property is documented on its own page, which is created as a subpage of the interface it's a member of. For instance, {{domxref("BaseAudioContext/currentTime")}} is documented at https\://developer.mozilla.org/en-US/docs/Web/API/AudioContext/currentTime.
+Each interface in the list has a separate page created for it as a subpage of https\://developer.mozilla.org/en-US/docs/Web/API; for example, the document for {{domxref("AudioContext")}} would be located at https\://developer.mozilla.org/en-US/docs/Web/API/AudioContext. Each [interface page](#interface_pages) explains what that interface does and provides a list of the methods and properties that comprise the interface. Then each method and property is documented on its own page, which is created as a subpage of the interface it's a member of. For instance, {{domxref("BaseAudioContext/currentTime")}} is documented at https\://developer.mozilla.org/en-US/docs/Web/API/AudioContext/currentTime.
 
 ## Create the pages
 

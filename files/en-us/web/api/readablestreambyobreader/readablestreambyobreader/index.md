@@ -21,7 +21,7 @@ constructor creates and returns a `ReadableStreamBYOBReader` object instance.
 ## Syntax
 
 ```js
-var readableStreamBYOBReader = new ReadableStreamBYOBReader(stream);
+new ReadableStreamBYOBReader(stream);
 ```
 
 ### Parameters

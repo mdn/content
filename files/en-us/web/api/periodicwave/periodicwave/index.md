@@ -18,7 +18,7 @@ The **`PeriodicWave()`** constructor of the [Web Audio API](/en-US/docs/Web/API/
 ## Syntax
 
 ```js
-var myWave = new PeriodicWave(context, options);
+new PeriodicWave(context, options);
 ```
 
 ### Parameters

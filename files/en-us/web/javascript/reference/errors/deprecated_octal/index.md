@@ -32,7 +32,7 @@ for octal literals use the "0o" prefix instead
 Octal literals and octal escape sequences are deprecated and will throw a
 {{jsxref("SyntaxError")}} in strict mode. With ECMAScript 2015 and later, the
 standardized syntax uses a leading zero followed by a lowercase or uppercase Latin
-letter "O" (`0o` or `0O)`.
+letter "O" (`0o` or `0O`).
 
 ## Examples
 

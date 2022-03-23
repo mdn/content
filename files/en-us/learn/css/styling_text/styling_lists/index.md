@@ -42,7 +42,7 @@ tags:
 
 ## A simple list example
 
-To begin with, let's look at a simple list example. Throughout this article, we'll look at unordered, ordered, and description lists — all have styling features that are similar, as well as some that are particular to themselves. The unstyled example is [available on Github](https://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html) (check out the [source code](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/unstyled-list.html) too.)
+To begin with, let's look at a simple list example. Throughout this article, we'll look at unordered, ordered, and description lists — all have styling features that are similar, as well as some that are particular to themselves. The unstyled example is [available on Github](https://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html) (check out the [source code](https://github.com/mdn/learning-area/blob/main/css/styling-text/styling-lists/unstyled-list.html) too.)
 
 The HTML for our list example looks like so:
 
@@ -98,7 +98,7 @@ If you go to the live example now and investigate the list elements using [brows
 
 ## Handling list spacing
 
-When styling lists, you need to adjust their styles so they keep the same vertical spacing as their surrounding elements (such as paragraphs and images; sometimes called vertical rhythm), and the same horizontal spacing as each other (you can see the [finished styled example](https://mdn.github.io/learning-area/css/styling-text/styling-lists/) on Github, and [find the source code](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/index.html) too.)
+When styling lists, you need to adjust their styles so they keep the same vertical spacing as their surrounding elements (such as paragraphs and images; sometimes called vertical rhythm), and the same horizontal spacing as each other (you can see the [finished styled example](https://mdn.github.io/learning-area/css/styling-text/styling-lists/) on Github, and [find the source code](https://github.com/mdn/learning-area/blob/main/css/styling-text/styling-lists/index.html) too.)
 
 The CSS used for the text styling and spacing is as follows:
 
@@ -377,6 +377,10 @@ window.addEventListener("load", drawOutput);
 
 {{ EmbedLiveSample('Active_learning_Styling_a_nested_list', 700, 800) }}
 
+## Summary
+
+Lists are relatively easy to get the hang of styling once you know a few associated basic principles and specific properties. In the next article we'll move on to link styling techniques.
+
 ## See also
 
 CSS counters provide advanced tools for customizing list counting and styling, but they are quite complex. We recommend looking into these if you want to stretch yourself. See:
@@ -384,10 +388,6 @@ CSS counters provide advanced tools for customizing list counting and styling, b
 - {{cssxref("@counter-style")}}
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-reset")}}
-
-## Summary
-
-Lists are relatively easy to get the hang of styling once you know a few associated basic principles and specific properties. In the next article we'll move on to link styling techniques.
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 

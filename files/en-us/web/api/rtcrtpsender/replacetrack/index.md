@@ -29,7 +29,7 @@ not require negotiation.
 Among the use cases for `replaceTrack()` is the common need to switch
 between the rear- and front-facing cameras on a phone. With `replaceTrack()`,
 you can have a track object for each camera and switch between the two as needed. See
-the example {{anch("Switching cameras")}} below.
+the example [Switching cameras](#switching_cameras) below.
 
 ## Syntax
 
@@ -50,7 +50,7 @@ trackReplacedPromise = sender.replaceTrack(newTrack);
 A {{jsxref("Promise")}} which is fulfilled once the track has been successfully
 replaced. The promise is rejected if the track cannot be replaced for any reason; this
 is commonly because the change would require renegotiation of the codec, which is not
-allowed (see {{anch("Things that require negotiation")}}).
+allowed (see [Things that require negotiation](#things_that_require_negotiation)).
 
 If `newTrack` was omitted or was `null`,
 `replaceTrack()` stops the sender. No negotiation is required in this case.

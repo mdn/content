@@ -62,7 +62,7 @@ previous pairing, and the `selectedcandidatepairchange` event is fired again.
 
 ## Examples
 
-See [`RTCIceTransport.onselectedcandidatepairchange`](/en-US/docs/Web/API/RTCIceTransport/onselectedcandidatepairchange#example) for example code.
+See [`RTCIceTransport.onselectedcandidatepairchange`](/en-US/docs/Web/API/RTCIceTransport/selectedcandidatepairchange_event#example) for example code.
 
 ## Specifications
 

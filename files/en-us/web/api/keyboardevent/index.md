@@ -144,7 +144,7 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
     > **Note:** This does not describe the locale of the data being entered. A user may be using one keyboard layout while typing text in a different language.
 
 - {{domxref("KeyboardEvent.location")}} {{Readonlyinline}}
-  - : Returns a {{jsxref("Number")}} representing the location of the key on the keyboard or other input device. A list of the constants identifying the locations is shown above in {{anch("Keyboard locations")}}.
+  - : Returns a {{jsxref("Number")}} representing the location of the key on the keyboard or other input device. A list of the constants identifying the locations is shown above in [Keyboard locations](#keyboard_locations).
 - {{domxref("KeyboardEvent.metaKey")}} {{Readonlyinline}}
 
   - : Returns a boolean value that is `true` if the <kbd>Meta</kbd> key (on Mac keyboards, the <kbd>⌘ Command</kbd> key; on Windows keyboards, the Windows key (<kbd>⊞</kbd>)) was active when the key event was generated.

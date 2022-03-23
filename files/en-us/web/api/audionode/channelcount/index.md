@@ -20,14 +20,7 @@ The **`channelCount`** property of the {{ domxref("AudioNode") }} interface repr
 - It is used as a maximum value if the `channelCountMode` value is `clamped-max`.
 - It is used as the exact value if the `channelCountMode` value is `explicit`.
 
-## Syntax
-
-```js
-var oscillator = audioCtx.createOscillator();
-var channels = oscillator.channelCount;
-```
-
-### Value
+## Value
 
 An integer.
 

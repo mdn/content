@@ -43,7 +43,7 @@ IDBReq.onsuccess = function(){
 
 {{domxref("IDBDatabase.createMutableFile","createMutableFile()")}} takes two arguments: a name and an optional type. Both of these are just descriptive and are not used by the database. However, they are important for the {{domxref("FileHandle")}} object as it can generate {{domxref("File")}} objects which inherit their own {{domxref("File.name","name")}} and {{domxref("File.type","type")}} from those values. That said, as the name does not match any real filename it can be an empty string, for example, and it doesn't even have to be unique.
 
-> **Note:** the above code only creates a "temporary file" that exists only while you hold the {{domxref("FileHandle")}} instance. If you want a file to survive a page refresh/app relaunch, you need to store the handle in a more permanent location, like the database itself. See {{Anch("File storage")}} below to learn more about this.
+> **Note:** the above code only creates a "temporary file" that exists only while you hold the {{domxref("FileHandle")}} instance. If you want a file to survive a page refresh/app relaunch, you need to store the handle in a more permanent location, like the database itself. See [File storage](#file_storage) below to learn more about this.
 
 ### Perform read and write operations
 

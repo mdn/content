@@ -15,13 +15,7 @@ The read-only **`media`** property of the
 {{domxref("CSSMediaRule")}} interface {{domxref("MediaList")}} represents the intended
 destination medium for style information.
 
-## Syntax
-
-```js
-var media = CSSMediaRule.media;
-```
-
-### Value
+## Value
 
 a {{domxref("MediaList")}}
 

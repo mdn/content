@@ -15,13 +15,7 @@ The **`downloaded`** read-only property of the {{domxref("BackgroundFetchRegistr
 
 If the value of this property changes, the  [progress](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event) event is fired at the associated {{domxref("BackgroundFetchRegistration")}} object.
 
-## Syntax
-
-```js
-let downloaded = BackgroundFetchRegistration.downloaded;
-```
-
-### Value
+## Value
 
 A {{jsxref("number")}}.
 

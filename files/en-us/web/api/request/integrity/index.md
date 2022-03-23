@@ -3,7 +3,6 @@ title: Request.integrity
 slug: Web/API/Request/integrity
 tags:
   - API
-  - Experimental
   - Fetch
   - Property
   - Reference
@@ -29,7 +28,7 @@ If an integrity has not been specified, the property returns `''`.
 
 ## Example
 
-In the following snippet, we create a new request using the {{domxref("Request.Request()")}} constructor (for an image file in the same directory as the script), then save the request `integrity` value in a variable:
+In the following snippet, we create a new request using the {{domxref("Request.Request", "Request()")}} constructor (for an image file in the same directory as the script), then save the request `integrity` value in a variable:
 
 ```js
 var myRequest = new Request('flowers.jpg');

@@ -35,7 +35,7 @@ Alternatively, you can use the `window.ongamepadconnected` event handler propert
 window.ongamepadconnected = event => {
     // All buttons and axes values can be accessed through
     const gamepad = event.gamepad;
-});
+};
 ```
 
 ## Specifications

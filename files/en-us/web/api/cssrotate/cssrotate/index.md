@@ -21,7 +21,7 @@ individual {{CSSXref('transform')}} property in CSS.
 ## Syntax
 
 ```js
-var CSSRotate = new CSSRotate(x,y,z,angle);
+new CSSRotate(x,y,z,angle);
 ```
 
 ### Parameters

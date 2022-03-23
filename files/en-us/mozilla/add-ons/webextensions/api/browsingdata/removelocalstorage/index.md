@@ -40,10 +40,6 @@ var removing = browser.browsingData.removeLocalStorage(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the removal has finished. If any error occurs, the promise will be rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Remove all local storage:
@@ -60,6 +56,10 @@ function onError(error) {
 browser.browsingData.removeLocalStorage({}).
 then(onRemoved, onError);
 ```
+
+## Browser compatibility
+
+{{Compat}}
 
 {{WebExtExamples}}
 

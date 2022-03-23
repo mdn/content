@@ -15,7 +15,7 @@ spec-urls: https://drafts.csswg.org/css-lists/#auto-numbering
 
 **CSS counters** let you set a counter for an element and display that counter. For example, it can be used to automatically assign heading numbers in a web page, to renumber an {{htmlelement("ol","ordered list")}}, or to display the index number of an element that matches a particular selector.
 
-Counters are created by applying {{cssxref("counter-reset")}}, {{cssxref("counter-increment")}} and {{cssxref("counter-set")}} properties, and {{cssxref("counter()")}} and {{cssxref("counters()")}} functions as a value of {{cssxref("content")}} property. For reversed counters, the `reversed()` function can also be used as a value of `counter-reset` property.
+Counters are created by applying {{cssxref("counter-reset")}}, {{cssxref("counter-increment")}} and {{cssxref("counter-set")}} properties, and {{cssxref("counter", "counter()")}} and {{cssxref("counters", "counters()")}} functions as a value of {{cssxref("content")}} property. For reversed counters, the `reversed()` function can also be used as a value of `counter-reset` property.
 
 Let's look at the actual HTML and CSS descriptions and see how the counter is used.
 
@@ -50,7 +50,7 @@ To check the status of the counter, let's try it from the display first.
 p::before { content: counter(num) ". "; }
 ```
 
-The {{cssxref("counter()")}} function is used in the {{cssxref("content")}} property. This statement allows the display of a counter with the counter name `num`. The counter name can be any name except `initial`, `inherit`, `unset`, `revert`, or `none`. Here we use `num` as an example.
+The {{cssxref("counter", "counter()")}} function is used in the {{cssxref("content")}} property. This statement allows the display of a counter with the counter name `num`. The counter name can be any name except `initial`, `inherit`, `unset`, `revert`, or `none`. Here we use `num` as an example.
 
 If you apply this CSS, you will see something like this.
 
@@ -128,7 +128,7 @@ The basic usage of a counter is to use a combination of the {{cssxref("counter-r
 
 ### counter() and counters()
 
-The {{cssxref("counters()")}} function of the {{cssxref("content")}} property is useful when HTML is nested as shown below.
+The {{cssxref("counters", "counters()")}} function of the {{cssxref("content")}} property is useful when HTML is nested as shown below.
 
 #### HTML
 
@@ -157,7 +157,7 @@ li { counter-increment: num; }
 li::marker { content: counter(num) ". "; }
 ```
 
-Let's start with the {{cssxref("counter()")}} function. Such HTML and CSS will look like this.
+Let's start with the {{cssxref("counter", "counter()")}} function. Such HTML and CSS will look like this.
 
 #### Result
 
@@ -178,7 +178,7 @@ li { counter-increment: num; }
 li::marker { content: counters(num, "-") ". "; }
 ```
 
-Next, try using {{cssxref("counters()")}} instead of {{cssxref("counter()")}}. If you apply this CSS, you will see something like this.
+Next, try using {{cssxref("counters", "counters()")}} instead of {{cssxref("counter", "counter()")}}. If you apply this CSS, you will see something like this.
 
 #### Result
 
@@ -191,7 +191,7 @@ Next, try using {{cssxref("counters()")}} instead of {{cssxref("counter()")}}. I
     2-2. (2-2)
 ```
 
-Specifying {{cssxref("counter-reset")}} for nested HTML automatically creates a hierarchical counter. Use the {{cssxref("counter()")}} function to display only the end of the hierarchy, or the {{cssxref("counters()")}} function to display the hierarchical counter as is, to get the desired result.
+Specifying {{cssxref("counter-reset")}} for nested HTML automatically creates a hierarchical counter. Use the {{cssxref("counter", "counter()")}} function to display only the end of the hierarchy, or the {{cssxref("counters", "counters()")}} function to display the hierarchical counter as is, to get the desired result.
 
 ## Advanced: Detailed counter behavior
 
@@ -345,7 +345,7 @@ If you apply this CSS, you will see something like this.
 
 ### Changing counter style
 
-The {{cssxref("counter()")}} and {{cssxref("counters()")}} functions accept the following arguments respectively.
+The {{cssxref("counter", "counter()")}} and {{cssxref("counters", "counters()")}} functions accept the following arguments respectively.
 
 - `counter(<counter-name>, <counter-style>)`
 - `counters(<counter-name>, <separator>, <counter-style>)`
@@ -425,7 +425,7 @@ Note that if `counter-reset: reversed(list-item)` is specified, it behaves as if
 li::marker { content: counters(list-item, "-") ". "; }
 ```
 
-In this example, for nested {{htmlelement("ol","ordered list")}} HTML, the {{cssxref("content")}} property for `li::marker` is replaced with {{cssxref("counters()")}} instead of {{cssxref("counter()")}}. You can display a hierarchical counter simply by rewriting it.
+In this example, for nested {{htmlelement("ol","ordered list")}} HTML, the {{cssxref("content")}} property for `li::marker` is replaced with {{cssxref("counters", "counters()")}} instead of {{cssxref("counter", "counter()")}}. You can display a hierarchical counter simply by rewriting it.
 
 #### Result
 
@@ -828,5 +828,5 @@ Firefox 68 and later, which do not apply implicit `counter-reset: list-item`, ar
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-set")}}
 - {{cssxref("content")}}
-- {{cssxref("counter()")}} and {{cssxref("counters()")}} functions
+- {{cssxref("counter", "counter()")}} and {{cssxref("counters", "counters()")}} functions
 - {{cssxref("@counter-style")}}

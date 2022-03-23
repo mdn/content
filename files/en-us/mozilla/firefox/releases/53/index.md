@@ -132,7 +132,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 
 - Removed {{property_prefix("-moz")}} prefixed variant of {{cssxref(":dir", ":dir()")}} pseudo-class ({{bug(1270406)}}).
 - The `-moz` prefixed version of {{cssxref("text-align-last")}} got removed ({{bug(1276808)}}).
-- Removed {{property_prefix("-moz")}} prefixed variant of {{cssxref("calc()")}} method ({{bug(1331296)}}).
+- Removed {{property_prefix("-moz")}} prefixed variant of {{cssxref("calc", "calc()")}} method ({{bug(1331296)}}).
 - The proprietary `-moz-samplesize` media fragment (added to aid in delivery of downsampled images to low memory Firefox OS devices; see {{bug(854795)}}) has been removed ({{bug(1311246)}}).
 
 ### JavaScript

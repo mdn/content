@@ -49,7 +49,6 @@ Listen to this event using [`addEventListener()`](/en-US/docs/Web/API/EventTarge
 
 - [`payerdetailchange`](/en-US/docs/Web/API/PaymentResponse/payerdetailchange_event){{securecontext_inline}}{{deprecated_inline}}
   - : Fired during a retry when the user makes changes to their personal information while filling out a payment request form. Allows the developer to revalidate any requested user data (e.g., the phone number or the email address) if it changes.
-    Also available via the [`onpayerdetailchange`](/en-US/docs/Web/API/PaymentResponse/onpayerdetailchange) property.
 
 ## Specifications
 

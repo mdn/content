@@ -37,23 +37,6 @@ initialized to 0.
 A {{jsxref("RangeError")}} is thrown if the `length` is larger than
 {{jsxref("Number.MAX_SAFE_INTEGER")}} (>= 2 \*\* 53) or negative.
 
-## Compatibility notes
-
-Starting with ECMAScript 2015, `ArrayBuffer` constructors require to be
-constructed with a {{jsxref("Operators/new", "new")}} operator. Calling an
-`ArrayBuffer` constructor as a function without `new`, will throw
-a {{jsxref("TypeError")}} from now on.
-
-```js example-bad
-var dv = ArrayBuffer(10);
-// TypeError: calling a builtin ArrayBuffer constructor
-// without new is forbidden
-```
-
-```js example-good
-var dv = new ArrayBuffer(10);
-```
-
 ## Examples
 
 ### Creating an ArrayBuffer
@@ -73,6 +56,23 @@ var view   = new Int32Array(buffer);
 ## Browser compatibility
 
 {{Compat}}
+
+### Compatibility notes
+
+Starting with ECMAScript 2015, `ArrayBuffer` constructors require to be
+constructed with a {{jsxref("Operators/new", "new")}} operator. Calling an
+`ArrayBuffer` constructor as a function without `new`, will throw
+a {{jsxref("TypeError")}} from now on.
+
+```js example-bad
+var dv = ArrayBuffer(10);
+// TypeError: calling a builtin ArrayBuffer constructor
+// without new is forbidden
+```
+
+```js example-good
+var dv = new ArrayBuffer(10);
+```
 
 ## See also
 

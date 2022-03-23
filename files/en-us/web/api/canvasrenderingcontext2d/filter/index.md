@@ -29,7 +29,7 @@ The `filter` property accepts a value of `"none"` or one or more
 of the following filter functions in a {{domxref("DOMString")}}.
 
 - [`url()`](</en-US/docs/Web/CSS/filter#url()>)
-  - : A CSS {{cssxref("url()")}}. Takes an IRI pointing to an SVG filter element,
+  - : A CSS {{cssxref("url", "url()")}}. Takes an IRI pointing to an SVG filter element,
     which may be embedded in an external XML file.
 - [`blur()`](</en-US/docs/Web/CSS/filter#blur()>)
   - : A CSS {{cssxref("&lt;length&gt;")}}. Applies a Gaussian blur to the drawing. It

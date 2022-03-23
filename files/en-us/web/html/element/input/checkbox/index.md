@@ -24,7 +24,7 @@ browser-compat: html.elements.input.input-checkbox
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
         A {{domxref("DOMString")}} representing the value of the
         checkbox.
@@ -41,9 +41,9 @@ browser-compat: html.elements.input.input-checkbox
     <tr>
       <td><strong>IDL attributes</strong></td>
       <td>
-        <code>{{anch("attr-checked", "checked")}}</code>,
-        <code>{{anch("attr-indeterminate", "indeterminate")}}</code> and
-        <code>{{anch("attr-value", "value")}}</code>
+        <code><a href="#attr-checked">checked</a></code>,
+        <code><a href="#attr-indeterminate">indeterminate</a></code> and
+        <code><a href="#attr-value">value</a></code>
       </td>
     </tr>
     <tr>
@@ -93,11 +93,11 @@ In addition to the common attributes shared by all {{HTMLElement("input")}} elem
 
     Essentially, then, the `indeterminate` attribute adds a third possible state to the checkbox: "I don't know." In this state, the browser may draw the checkbox in grey or with a different mark inside the checkbox. For instance, browsers on macOS may draw the checkbox with a hyphen "-" inside to indicate an unexpected state.
 
-    > **Note:** No browser currently supports `indeterminate` as an attribute. It must be set via JavaScript. See {{anch("Indeterminate state checkboxes")}} for details.
+    > **Note:** No browser currently supports `indeterminate` as an attribute. It must be set via JavaScript. See [Indeterminate state checkboxes](#indeterminate_state_checkboxes) for details.
 
 - {{htmlattrdef("value")}}
 
-  - : The `value` attribute is one which all {{HTMLElement("input")}}s share; however, it serves a special purpose for inputs of type `checkbox`: when a form is submitted, only checkboxes which are currently checked are submitted to the server, and the reported value is the value of the `value` attribute. If the `value` is not otherwise specified, it is the string `on` by default. This is demonstrated in the section {{anch("Value")}} above.
+  - : The `value` attribute is one which all {{HTMLElement("input")}}s share; however, it serves a special purpose for inputs of type `checkbox`: when a form is submitted, only checkboxes which are currently checked are submitted to the server, and the reported value is the value of the `value` attribute. If the `value` is not otherwise specified, it is the string `on` by default. This is demonstrated in the section [Value](#value) above.
 
 ## Using checkbox inputs
 
@@ -107,7 +107,7 @@ We already covered the most basic use of checkboxes above. Let's now look at the
 
 The example we saw above only contained one checkbox; in real-world situations you'll be likely to encounter multiple checkboxes. If they are completely unrelated, then you can just deal with them all separately, as shown above. However, if they're all related, things are not quite so simple.
 
-For example, in the following demo we include multiple checkboxes to allow the user to select their interests (see the full version in the {{anch("Examples")}} section).
+For example, in the following demo we include multiple checkboxes to allow the user to select their interests (see the full version in the [Examples](#examples) section).
 
 ```html
 <fieldset>
@@ -125,7 +125,7 @@ For example, in the following demo we include multiple checkboxes to allow the u
 
 {{EmbedLiveSample('Handling_multiple_checkboxes', 600, 100)}}
 
-In this example you will see that we've given each checkbox the same `name`. If both checkboxes are checked and then the form is submitted, you'll get a string of name/value pairs submitted like this: `interest=coding&interest=music`. When this string reaches the server, you need to parse it other than as an associative array, so all values, not only the last value, of `interest` are captured. For one technique used with PHP, see [Handle Multiple Checkboxes with a Single Serverside Variable](https://stackoverflow.com/questions/18745456/handle-multiple-checkboxes-with-a-single-serverside-variable), for example.
+In this example you will see that we've given each checkbox the same `name`. If both checkboxes are checked and then the form is submitted, you'll get a string of name/value pairs submitted like this: `interest=coding&interest=music`. When this string reaches the server, you need to parse it other than as an associative array, so all values, not only the last value, of `interest` are captured. For one technique used with Python, see [Handle Multiple Checkboxes with a Single Serverside Variable](https://stackoverflow.com/questions/18745456/handle-multiple-checkboxes-with-a-single-serverside-variable), for example.
 
 ### Checking boxes by default
 

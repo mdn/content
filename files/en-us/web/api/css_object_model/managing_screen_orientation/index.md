@@ -178,6 +178,6 @@ For a Firefox OS and Firefox Android (soon to work on Firefox desktop too) speci
 - {{domxref("Screen.orientation")}}
 - {{domxref("Screen.lockOrientation()")}}
 - {{domxref("Screen.unlockOrientation()")}}
-- {{domxref("Screen.onorientationchange")}}
+- {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} event
 - [The orientation media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#orientation)
 - [A short introduction to media queries in Firefox 3.5](http://hacks.mozilla.org/2009/06/media-queries/)

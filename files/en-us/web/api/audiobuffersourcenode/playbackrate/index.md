@@ -22,13 +22,7 @@ values less than 1.0 cause the sound to play more slowly, while values greater t
 When set to another value, the `AudioBufferSourceNode` resamples the audio
 before sending it to the output.
 
-## Syntax
-
-```js
-AudioBufferSourceNode.playbackRate.value = playbackRateProportion;
-```
-
-### Value
+## Value
 
 An {{domxref("AudioParam")}} whose {{domxref("AudioParam.value", "value")}} is a
 floating-point value indicating the playback rate of the audio as a decimal proportion

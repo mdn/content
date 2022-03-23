@@ -14,7 +14,7 @@ The aim of this skill test is to assess whether you've understood our [How to st
 
 > **Note:** You can try out the solution in the interactive editor below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >
-> If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
+> If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
 
 ## Form structure 1
 
@@ -28,7 +28,7 @@ In this task we want you to structure the provided form features:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/form-structure/form-structure1-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/form-structure/form-structure1-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

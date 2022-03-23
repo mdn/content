@@ -45,11 +45,11 @@ content-visibility: unset;
 
 {{cssinfo}}
 
-## Accessibility concerns
+## Accessibility
 
-Headings and other content will be suppressed by `content-visibility` if they are considered off-screen. This means that screen reader users may lose the benefit of having a complete page outline read out loud.
+Prior to Chromium 90, offscreen headers and landmark roles within `content-visibility: auto` were not exposed to a11y tools. As of Chromium 90, this has been corrected, and off-screen content within a `content-visibility: auto` element remains in the document object model and the accessability tree. This allows improving page performance with `content-visibility: auto` without negatively impacting accessability.
 
-For more information read [Content-visibility and Accessible Semantics](https://marcysutton.com/content-visibility-accessible-semantics).
+However, one caveat to keep in mind is that, since styles for off-screen content are not rendered, elements intentionally hidden with `display: none` or `visibility: hidden` *will still appear in the accessability tree*. If you don't want an element to appear in the accessability tree, use `aria-hidden="true"`.
 
 ## Examples
 

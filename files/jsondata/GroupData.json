@@ -765,7 +765,7 @@
     "HTML Sanitizer API": {
       "overview": ["HTML Sanitizer API"],
       "interfaces": ["Sanitizer"],
-      "methods": ["Sanitizer.sanitize", "Sanitizer.sanitizeToString"],
+      "methods": [],
       "properties": [],
       "events": []
     },
@@ -1212,6 +1212,7 @@
       "events": []
     },
     "Selection API": {
+      "overview": ["Selection API"],
       "interfaces": ["Selection"],
       "properties": [
         "Document.onselectionchange",
@@ -1942,7 +1943,6 @@
         "RTCRTPStreamStats"
       ],
       "types": [
-        "RTCIceCredentialType",
         "RTCIceTransportPolicy",
         "RTCBundlePolicy",
         "RTCRtcpMuxPolicy",
@@ -1950,7 +1950,6 @@
         "RTCIceGatheringState",
         "RTCPeerConnectionState",
         "RTCIceConnectionState",
-        "RTCSdpType",
         "RTCIceProtocol",
         "RTCIceTcpCandidateType",
         "RTCIceCandidateType",
@@ -1960,8 +1959,6 @@
         "RTCDegradationPreference",
         "RTCDtlsTransportState",
         "RTCIceGathererState",
-        "RTCIceTransportState",
-        "RTCIceRole",
         "RTCIceComponent",
         "RTCSctpTransportState",
         "RTCDataChannelState",
@@ -1969,7 +1966,6 @@
         "RTCStatsType",
         "RTCCodecType",
         "RTCQualityLimitationReason",
-        "RTCNetworkType",
         "RTCStatsIceCandidatePairState"
       ],
       "methods": ["MediaDevices.getUserMedia()"],

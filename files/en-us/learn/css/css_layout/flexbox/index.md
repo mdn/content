@@ -53,7 +53,7 @@ As you'll see in subsequent sections, flexbox makes a lot of layout tasks much e
 
 ## Introducing a simple example
 
-In this article, you'll work through a series of exercises to help you understand how flexbox works. To get started, you should make a local copy of the first starter file — [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) from our github repo. Load it in a modern browser (like Firefox or Chrome) and have a look at the code in your code editor. You can also [see it live here](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html).
+In this article, you'll work through a series of exercises to help you understand how flexbox works. To get started, you should make a local copy of the first starter file — [flexbox0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox0.html) from our github repo. Load it in a modern browser (like Firefox or Chrome) and have a look at the code in your code editor. You can also [see it live here](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html).
 
 ![Image showing the starting point of Flexbox tutorial](bih741v.png)
 
@@ -106,7 +106,7 @@ You'll see that this puts the items back in a column layout, much like they were
 
 ## Wrapping
 
-One issue that arises when you have a fixed width or height in your layout is that eventually your flexbox children will overflow their container, breaking the layout. Have a look at our [flexbox-wrap0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html) example and try [viewing it live](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html) (take a local copy of this file now if you want to follow along with this example):
+One issue that arises when you have a fixed width or height in your layout is that eventually your flexbox children will overflow their container, breaking the layout. Have a look at our [flexbox-wrap0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox-wrap0.html) example and try [viewing it live](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html) (take a local copy of this file now if you want to follow along with this example):
 
 ![](flexbox-example3.png)
 
@@ -145,7 +145,7 @@ flex-flow: row wrap;
 
 ## Flexible sizing of flex items
 
-Let's now return to our first example and look at how we can control what proportion of space flex items take up compared to the other flex items. Fire up your local copy of [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html), or take a copy of [flexbox1.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox1.html) as a new starting point ([see it live](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox1.html)).
+Let's now return to our first example and look at how we can control what proportion of space flex items take up compared to the other flex items. Fire up your local copy of [flexbox0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox0.html), or take a copy of [flexbox1.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox1.html) as a new starting point ([see it live](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox1.html)).
 
 First, add the following rule to the bottom of your CSS:
 
@@ -197,7 +197,7 @@ We'd advise against using the longhand flex properties unless you really have to
 
 ## Horizontal and vertical alignment
 
-You can also use flexbox features to align flex items along the main or cross axis. Let's explore this by looking at a new example: [flex-align0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html) ([see it live also](https://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html)). We're going to turn this into a neat, flexible button/toolbar. At the moment you'll see a horizontal menu bar with some buttons jammed into the top left-hand corner.
+You can also use flexbox features to align flex items along the main or cross axis. Let's explore this by looking at a new example: [flex-align0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flex-align0.html) ([see it live also](https://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html)). We're going to turn this into a neat, flexible button/toolbar. At the moment you'll see a horizontal menu bar with some buttons jammed into the top left-hand corner.
 
 ![](flexbox-example5.png)
 
@@ -274,7 +274,7 @@ button:last-child {
 
 ## Nested flex boxes
 
-It's possible to create some pretty complex layouts with flexbox. It's perfectly OK to set a flex item to also be a flex container, so that its children are also laid out like flexible boxes. Have a look at [complex-flexbox.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/complex-flexbox.html) ([see it live also](https://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html)).
+It's possible to create some pretty complex layouts with flexbox. It's perfectly OK to set a flex item to also be a flex container, so that its children are also laid out like flexible boxes. Have a look at [complex-flexbox.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/complex-flexbox.html) ([see it live also](https://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html)).
 
 ![](flexbox-example7.png)
 

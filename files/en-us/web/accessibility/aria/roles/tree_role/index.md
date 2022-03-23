@@ -44,7 +44,7 @@ Each element serving as a tree node has role `treeitem`, except for the root tre
 
 `treeitem` nodes can be direct children of the `tree` root node, nested within a `treeitem` node, or, optionally nested in a [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) element, which, when nested in a `tree` is an expandable collections of treeitem elements.
 
-Do not include `aria-expanded` on end nodes -- those without tree item children -- as that would incorrectly described the node as a parent node to assistive technologies.
+Do not include `aria-expanded` on end nodes -- those without tree item children -- as that would incorrectly describe the node as a parent node to assistive technologies.
 
 ### DOM placement and presence
 

@@ -125,5 +125,5 @@ h1 {
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-set")}}
 - {{cssxref("content")}}
-- {{cssxref("counter()")}} and {{cssxref("counters()")}} functions
+- {{cssxref("counter", "counter()")}} and {{cssxref("counters", "counters()")}} functions
 - {{cssxref("@counter-style")}}

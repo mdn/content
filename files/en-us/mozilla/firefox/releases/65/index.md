@@ -65,7 +65,7 @@ This article provides information about the changes in Firefox 65 that will affe
   - `user-select` now behaves consistently inside and outside shadow DOM.
   - The proprietary `-moz-text` value has been removed.
 
-- CSS environment variables (the {{cssxref("env()")}} function) have been implemented ({{bug(1462233)}}).
+- CSS environment variables (the {{cssxref("env", "env()")}} function) have been implemented ({{bug(1462233)}}).
 
 #### Removals
 
@@ -104,7 +104,7 @@ _No changes._
 
 #### Web workers
 
-- {{domxref("SharedWorkerGlobalScope.onconnect")}}'s event object is a {{domxref("MessageEvent")}} instance — its `data` property is now an empty string value rather than `null` ({{bug(1508824)}}).
+- {{domxref("SharedWorkerGlobalScope.connect_event", "SharedWorkerGlobalScope.connect")}}'s event object is a {{domxref("MessageEvent")}} instance — its `data` property is now an empty string value rather than `null` ({{bug(1508824)}}).
 
 #### Fetch and Service workers
 
@@ -117,7 +117,7 @@ _No changes._
 #### Media, Web Audio, and WebRTC
 
 - The {{domxref("WebRTC API", "WebRTC", "", "1")}} {{domxref("RTCIceCandidateStats")}} dictionary has been updated according to the latest spec changes ({{bug(1324788)}}, {{bug(1489040)}}; RTCIceCandidateStats has been updated to the latest spec for more details on exactly what has changed).
-- The {{domxref("MediaRecorder")}} `pause` and `resume` events (and their corresponding event handler properties — {{domxref("MediaRecorder.onpause")}} and {{domxref("MediaRecorder.onresume")}}) were not previously implemented, even though compatibility tables claimed they had been. They have now been implemented ({{bug(1458538)}}, {{bug(1514016)}}).
+- The {{domxref("MediaRecorder")}} `pause` and `resume` events (and their corresponding event handler properties were not previously implemented, even though compatibility tables claimed they had been. They have now been implemented ({{bug(1458538)}}, {{bug(1514016)}}).
 
 #### Canvas and WebGL
 

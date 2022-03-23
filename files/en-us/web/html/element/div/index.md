@@ -33,7 +33,7 @@ As a "pure" container, the `<div>` element does not inherently represent anythin
       <td>
         <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
           >Flow content</a
-        >, palpable content.
+        >, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content">palpable content</a>.
       </td>
     </tr>
     <tr>

@@ -14,7 +14,7 @@ The **`DOMParser()`** constructor creates a new [`DOMParser`](/en-US/docs/Web/AP
 ## Syntax
 
 ```js
-const parser = new DOMParser();
+new DOMParser();
 ```
 
 ### Parameters

@@ -4,7 +4,6 @@ slug: Web/API/Headers/Headers
 tags:
   - API
   - Constructor
-  - Experimental
   - Fetch
   - Reference
 browser-compat: api.Headers.Headers
@@ -17,7 +16,7 @@ The **`Headers()`** constructor creates a new
 ## Syntax
 
 ```js
-var myHeaders = new Headers(init);
+new Headers(init);
 ```
 
 ### Parameters
@@ -25,7 +24,7 @@ var myHeaders = new Headers(init);
 - `init` {{optional_inline}}
   - : An object containing any [HTTP headers](/en-US/docs/Web/HTTP/Headers)
     that you want to pre-populate your `Headers` object with. This can be a
-    simple object literal with {{jsxref("String")}} values; or an existing
+    simple object literal with {{jsxref("String")}} values, an array of name-value pairs, where each pair is a 2-element string array; or an existing
     `Headers` object. In the last case, the new `Headers` object
     copies its data from the existing `Headers` object.
 
@@ -59,6 +58,18 @@ You can now create another `Headers` object, passing it the first
 ```js
 var secondHeadersObj = new Headers(myHeaders);
 secondHeadersObj.get('Content-Type'); // Would return 'image/jpeg' — it inherits it from the first headers object
+```
+
+You can also add the headers you want as the `Headers` object is created by using a two-dimensional array to add multiple headers with the same values. In
+the following snippet we create a new {{domxref("Headers")}} object with multiple `Set-Cookie` headers
+by passing the constructor an init array as an argument:
+
+```js
+var headers = [
+  ['Set-Cookie', 'greeting=hello'],
+  ['Set-Cookie', 'name=world']
+];
+var myHeaders = new Headers(headers);
 ```
 
 ## Specifications

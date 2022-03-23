@@ -27,7 +27,7 @@ Access to the contents of the clipboard is gated behind the [Permissions API](/e
 
 ## Constructor
 
-- {{domxref("ClipboardItem.ClipboardItem()")}}
+- {{domxref("ClipboardItem.ClipboardItem", "ClipboardItem()")}}
   - : Creates a new **`ClipboardItem`** object, with the {{Glossary("MIME type")}} as the key and {{domxref("Blob")}} as the value
 
 ## Properties
@@ -50,7 +50,7 @@ _This interface defines the following methods._
 
 ### Writing To Clipboard
 
-Here we're writing a new {{domxref("ClipboardItem.ClipboardItem()")}} to the {{domxref("Clipboard API", "clipboard")}} by requesting a png image using the {{domxref("Fetch API")}}, and in turn, the {{domxref("Response.blob()", "responses' blob()")}} method, to create the new {{domxref("ClipboardItem")}}.
+Here we're writing a new {{domxref("ClipboardItem.ClipboardItem", "ClipboardItem()")}} to the {{domxref("Clipboard API", "clipboard")}} by requesting a png image using the {{domxref("Fetch API")}}, and in turn, the {{domxref("Response.blob()", "responses' blob()")}} method, to create the new {{domxref("ClipboardItem")}}.
 
 ```js
 async function writeClipImg() {

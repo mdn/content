@@ -63,7 +63,7 @@ Workers can also spawn other workers, so these APIs are also available: {{domxre
 - {{DOMxRef("WorkerLocation")}}
   - : Defines the absolute location of the script executed by the {{domxref("Worker")}}.
 - {{DOMxRef("SharedWorker")}}
-  - : Represents a specific kind of worker that can be _accessed_ from several {{glossary("browsing context", "browsing contexts")}}, being several windows, iframes or even workers.
+  - : Represents a specific kind of worker that can be accessed from several {{glossary("browsing context", "browsing contexts")}} (i.e. windows, tabs, or iframes) or even other workers.
 - {{DOMxRef("WorkerGlobalScope")}}
   - : Represents the generic scope of any worker (doing the same job as {{DOMxRef("Window")}} does for normal web content). Different types of worker have scope objects that inherit from this interface and add more specific features.
 - {{DOMxRef("DedicatedWorkerGlobalScope")}}

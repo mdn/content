@@ -29,7 +29,7 @@ establish which portion of the DOM to watch and what kinds of changes to watch f
 ## Syntax
 
 ```js
-const observer = new MutationObserver(callback)
+new MutationObserver(callback)
 ```
 
 ### Parameters
@@ -46,7 +46,7 @@ const observer = new MutationObserver(callback)
     2. the {{domxref("MutationObserver")}} which invoked the
         `callback`.
 
-    See the {{anch("Example", "example")}} below for more details.
+    See the [example](#example) below for more details.
 
 ### Return value
 

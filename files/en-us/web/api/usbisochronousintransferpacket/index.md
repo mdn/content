@@ -18,7 +18,7 @@ The `USBIsochronousInTransferPacket` interface of the [WebUSB API](/en-US/docs/W
 
 ## Constructor
 
-- {{domxref("USBIsochronousInTransferPacket.USBIsochronousInTransferPacket()")}}
+- {{domxref("USBIsochronousInTransferPacket.USBIsochronousInTransferPacket", "USBIsochronousInTransferPacket()")}}
   - : Creates a new `USBIsochronousInTransferPacket` object with the provided `status` and `data` fields.
 
 ## Properties

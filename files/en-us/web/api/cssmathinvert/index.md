@@ -19,7 +19,7 @@ The **`CSSMathInvert`** interface of the {{domxref('CSS_Object_Model#css_typed_o
 
 ## Constructor
 
-- {{domxref("CSSMathInvert.CSSMathInvert()")}}
+- {{domxref("CSSMathInvert.CSSMathInvert", "CSSMathInvert()")}}
   - : Creates a new `CSSMathInvert` object.
 
 ## Properties

@@ -34,7 +34,7 @@ A 204 response is cacheable by default (an {{HTTPHeader("ETag")}} header is incl
 
 {{Compat}}
 
-## Compatibility notes
+### Compatibility notes
 
 - Although this status code is intended to describe a response with no body, servers
   may erroneously include data following the headers. The protocol allows user agents to

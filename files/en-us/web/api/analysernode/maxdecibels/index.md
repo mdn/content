@@ -14,14 +14,7 @@ browser-compat: api.AnalyserNode.maxDecibels
 
 The **`maxDecibels`** property of the {{domxref("AnalyserNode")}} interface is a double value representing the maximum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte values — basically, this specifies the maximum value for the range of results when using `getByteFrequencyData()`.
 
-## Syntax
-
-```js
-var curValue = analyserNode.maxDecibels;
-analyserNode.maxDecibels = newValue;
-```
-
-### Value
+## Value
 
 A double, representing the maximum [decibel](https://en.wikipedia.org/wiki/Decibel) value for scaling the FFT analysis data, where `0` dB is the loudest possible sound, `-10` dB is a 10th of that, etc. The default value is `-30` dB.
 

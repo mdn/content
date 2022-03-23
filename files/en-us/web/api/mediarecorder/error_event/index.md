@@ -9,32 +9,64 @@ browser-compat: api.MediaRecorder.error_event
 
 The {{domxref("MediaRecorder")}} interface's **`error`** event is fired when an error occurs: for example because recording wasn't allowed or was attempted using an unsupported codec.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("MediaRecorderErrorEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/MediaRecorder/onerror">onerror</a></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
 
-For details of the all the possible errors see the documentation for the event handler property: [`onerror`](/en-US/docs/Web/API/MediaRecorder/onerror).
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('event', event => { });
+
+onevent = event => { };
+```
+
+## Event type
+
+An {{domxref("MediaRecorderErrorEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("MediaRecorderErrorEvent")}}
+
+## Event properties
+
+_Inherits properties from its parent interface, {{domxref("Event")}}_.
+
+- {{domxref("MediaRecorderErrorEvent.error", "error")}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMException")}} containing information about the error that occurred.
+
+### Value
+
+A function to be called whenever an error occurs during the recorder's lifetime. In
+addition to other general errors that might occur, the following errors are specifically
+possible when using the MediaStream Recording API; to determine which occurred, check
+the value of {{domxref("DOMException.name", "MediaRecorderErrorEvent.error.name")}}.
+
+- `InvalidStateError`
+  - : An attempt was made to stop or pause an inactive recorder, start or resume an
+    active recorder, or otherwise manipulate the `MediaRecorder` while in the
+    wrong state. This exception can also occur when a request is made on a source that has
+    been deleted or removed.
+- `SecurityError`
+  - : The {{domxref("MediaStream")}} is configured to disallow recording. This may be the
+    case, for example, with sources obtained using {{domxref("MediaDevices.getUserMedia",
+    "getUserMedia()")}} when the user denies permission to use an input device.
+- `NotSupportedError`
+  - : An attempt was made to instantiate a `MediaRecorder` using a MIME type
+    that isn't supported on the user's device; one or more of the requested container,
+    codecs, or profiles as well as other information may be invalid.
+- `InvalidModificationError`
+  - : The number of tracks on the stream being recorded has changed. You can't add or
+    remove tracks while recording media.
+- `UnknownError`
+  - : An non-security related error occurred that cannot otherwise be categorized.
+    Recording stops, the `MediaRecorder`'s {{domxref("MediaRecorder.state",
+    "state")}} becomes `inactive`, one last {{event("dataavailable")}} event is
+    sent to the `MediaRecorder` with the remaining received data, and finally a
+    {{event("stop")}} event is sent.
+
+These errors may occur either directly because of a call to a
+`MediaRecorder` method, or indirectly due to a problem arising during the
+recording process.
 
 ## Examples
 

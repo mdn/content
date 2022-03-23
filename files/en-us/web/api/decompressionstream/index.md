@@ -14,7 +14,7 @@ The **`DecompressionStream`** interface of the {{domxref('Compression Streams AP
 
 ## Constructor
 
-- {{domxref("DecompressionStream.DecompressionStream()")}}
+- {{domxref("DecompressionStream.DecompressionStream", "DecompressionStream()")}}
   - : Creates a new `DecompressionStream`
 
 ## Properties

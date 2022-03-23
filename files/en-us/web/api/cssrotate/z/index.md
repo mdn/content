@@ -20,13 +20,7 @@ The **`z`** property of the
 vector. A positive value moves the element towards the viewer, and a negative value
 farther away.
 
-## Syntax
-
-```js
-var rotateZ = CSSRotate.z;
-```
-
-### Value
+## Value
 
 A double integer or a {{domxref("CSSNumericValue")}}
 

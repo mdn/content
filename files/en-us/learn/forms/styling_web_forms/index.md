@@ -169,7 +169,7 @@ The {{HTMLElement("legend")}} element is very important for accessibility — it
 
 Let's look at a concrete example of how to style an HTML form. We will build a fancy-looking "postcard" contact form; [see here for the finished version](https://mdn.github.io/learning-area/html/forms/postcard-example/).
 
-If you want to follow along with this example, make a local copy of our [postcard-start.html file](https://github.com/mdn/learning-area/blob/master/html/forms/postcard-example/postcard-start.html), and follow the below instructions.
+If you want to follow along with this example, make a local copy of our [postcard-start.html file](https://github.com/mdn/learning-area/blob/main/html/forms/postcard-example/postcard-start.html), and follow the below instructions.
 
 ### The HTML
 

@@ -19,7 +19,7 @@ The **`DocumentTimeline()`** constructor of the [Web Animations API](/en-US/docs
 ## Syntax
 
 ```js
-var sharedTimeline = new DocumentTimeline(options);
+new DocumentTimeline(options);
 ```
 
 ### Parameters

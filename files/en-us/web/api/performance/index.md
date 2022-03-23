@@ -74,7 +74,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{DOMxRef("Performance.resourcetimingbufferfull_event", "resourcetimingbufferfull")}}
   - : Fired when the browser's [resource timing buffer](/en-US/docs/Web/API/Performance/setResourceTimingBufferSize) is full.
-    Also available via the {{DOMxRef("Performance.onresourcetimingbufferfull", "onresourcetimingbufferfull")}} property.
 
 ## Specifications
 

@@ -3,14 +3,13 @@ title: Selection.type
 slug: Web/API/Selection/type
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - Selection
   - Type
 browser-compat: api.Selection.type
 ---
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
 The **`type`** read-only property of the
 {{domxref("Selection")}} interface returns a {{domxref("DOMString")}} describing the

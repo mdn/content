@@ -42,7 +42,7 @@ This article provides information about the changes in Firefox 66 that will affe
 
 - We implemented the {{cssxref("@media/overflow-inline", "overflow-inline")}} and {{cssxref("@media/overflow-block", "overflow-block")}} media queries ({{Bug(1422235)}}).
 - {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} are now animatable, as per the rules set out in their specs ({{bug(1348519)}}).
-- We now support {{cssxref("calc()")}} with percentages for table cells and column widths ({{bug(957915)}}).
+- We now support {{cssxref("calc", "calc()")}} with percentages for table cells and column widths ({{bug(957915)}}).
 - The `min-content` and `max-content` keywords are now available unprefixed ({{bug(1322780)}}). These can be set on:
 
   - {{cssxref("width")}}

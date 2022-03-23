@@ -42,15 +42,6 @@ _This interface also inherits properties from its parent, {{domxref("EventTarget
 - {{domxref("EventSource.withCredentials")}} {{readonlyinline}}
   - : A boolean value indicating whether the `EventSource` object was instantiated with cross-origin ([CORS](/en-US/docs/Web/HTTP/CORS)) credentials set (`true`), or not (`false`, the default).
 
-### Event handlers
-
-- {{domxref("EventSource.onerror")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) called when an error occurs and the {{domxref("EventSource/error_event", "error")}} event is dispatched on an `EventSource` object.
-- {{domxref("EventSource.onmessage")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) called when a {{domxref("EventSource/message_event", "message")}} event is received, that is when a message is coming from the source.
-- {{domxref("EventSource.onopen")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) called when an {{domxref("EventSource/open_event", "open")}} event is received, that is when the connection was just opened.
-
 ## Methods
 
 _This interface also inherits methods from its parent, {{domxref("EventTarget")}}._

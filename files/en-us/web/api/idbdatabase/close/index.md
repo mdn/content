@@ -46,7 +46,7 @@ DBOpenRequest.onsuccess = event => {
   // store the result of opening the database in the db variable.
   db = DBOpenRequest.result;
 
-  // now let"s close the database again!
+  // now let's close the database again!
   db.close();
 };
 ```

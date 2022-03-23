@@ -15,7 +15,7 @@ For details about how to use `FileReader`, see [Using files from web application
 ## Syntax
 
 ```js
-const reader = new FileReader();
+new FileReader();
 ```
 
 ### Parameters

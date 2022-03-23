@@ -13,7 +13,7 @@ browser-compat: html.elements.select
 
 {{HTMLRef}}
 
-The **`<select>`** [HTML](/en-US/docs/Web/HTML) element represents a control that provides a menu of options:
+The **`<select>`** [HTML](/en-US/docs/Web/HTML) element represents a control that provides a menu of options.
 
 {{EmbedInteractiveExample("pages/tabbed/select.html", "tabbed-standard")}}
 
