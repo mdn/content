@@ -23,13 +23,7 @@ first sample in the buffer is actually processed by the audio output device.
 
 It varies depending on the platform and the available hardware.
 
-## Syntax
-
-```js
-var outputLatency = audioCtx.outputLatency;
-```
-
-### Value
+## Value
 
 A double representing the output latency in seconds.
 

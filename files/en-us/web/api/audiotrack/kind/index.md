@@ -25,13 +25,7 @@ The `kind` can be used
 to determine the scenarios in which specific tracks should be enabled or disabled. See
 [Audio track kind strings](#audio_track_kind_strings) for a list of the kinds available for audio tracks.
 
-## Syntax
-
-```js
-var trackKind = AudioTrack.kind;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} specifying the type of content the media represents. The
 string is one of those found in [Audio track kind strings](#audio_track_kind_strings) below.

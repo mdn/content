@@ -14,14 +14,7 @@ browser-compat: api.AnalyserNode.smoothingTimeConstant
 
 The **`smoothingTimeConstant`** property of the {{ domxref("AnalyserNode") }} interface is a double value representing the averaging constant with the last analysis frame. It's basically an average between the current buffer and the last buffer the `AnalyserNode` processed, and results in a much smoother set of value changes over time.
 
-## Syntax
-
-```js
-var smoothValue = analyserNode.smoothingTimeConstant;
-analyserNode.smoothingTimeConstant = newValue;
-```
-
-### Value
+## Value
 
 A double within the range `0` to `1` (`0` meaning no time averaging). The default value is `0.8`.
 

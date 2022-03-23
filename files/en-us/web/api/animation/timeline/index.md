@@ -15,15 +15,7 @@ browser-compat: api.Animation.timeline
 
 The **`Animation.timeline`** property of the {{domxref("Animation")}} interface returns or sets the {{domxref("AnimationTimeline", "timeline")}} associated with this animation. A timeline is a source of time values for synchronization purposes, and is an {{domxref("AnimationTimeline")}}-based object. By default, the animation's timeline and the {{domxref("Document")}}'s timeline are the same.
 
-## Syntax
-
-```js
-var animationsTimeline = Animation.timeline;
-
-Animation.timeline = newTimeline;
-```
-
-### Value
+## Value
 
 A {{domxref("AnimationTimeline", "timeline object", "", 1)}} to use as the timing source for the animation, or `null` to use the default, which is the {{domxref("Document")}}'s timeline.
 
