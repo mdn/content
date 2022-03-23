@@ -41,7 +41,7 @@ An {{domxref("RTCDataChannelEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("RTCDataChannelEvent")}}
 
-## Events
+## Event properties
 
 _Also inherits properties from its parent interface, {{DOMxRef("Event")}}._
 

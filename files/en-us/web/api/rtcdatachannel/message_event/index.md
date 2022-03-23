@@ -42,7 +42,7 @@ An {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MessageEvent")}}
 
-## Events
+## Event properties
 
 _Also inherits properties from its parent interface, {{domxref("Event")}}._
 
