@@ -46921,6 +46921,40 @@
       "Sebastianz"
     ]
   },
+  "Web/API/HTMLElement/copy_event": {
+    "modified": "2020-10-15T21:03:53.270Z",
+    "contributors": [
+      "mfuji09",
+      "hoang4",
+      "mfluehr",
+      "fscholz",
+      "valtlai",
+      "teoli",
+      "kscarfone",
+      "nairakhil13",
+      "Sheppy",
+      "ethertank",
+      "ziyunfei",
+      "Mgjbot",
+      "Potappo"
+    ]
+  },
+  "Web/API/HTMLElement/cut_event": {
+    "modified": "2020-10-15T21:03:56.356Z",
+    "contributors": [
+      "mfluehr",
+      "fscholz",
+      "valtlai",
+      "teoli",
+      "kscarfone",
+      "nairakhil13",
+      "Sheppy",
+      "ethertank",
+      "ziyunfei",
+      "Mgjbot",
+      "Potappo"
+    ]
+  },
   "Web/API/HTMLElement/dataset": {
     "modified": "2020-11-29T09:53:07.128Z",
     "contributors": [
@@ -47358,41 +47392,20 @@
       "Dria"
     ]
   },
-  "Web/API/HTMLElement/oncopy": {
-    "modified": "2020-10-15T21:03:53.270Z",
+  "Web/API/HTMLElement/outerText": {
+    "modified": "2020-10-15T21:43:21.147Z",
     "contributors": [
       "mfuji09",
-      "hoang4",
       "mfluehr",
       "fscholz",
       "valtlai",
-      "teoli",
-      "kscarfone",
-      "nairakhil13",
-      "Sheppy",
-      "ethertank",
-      "ziyunfei",
-      "Mgjbot",
-      "Potappo"
+      "erikadoyle",
+      "Rob W",
+      "rolfedh",
+      "cvrebert"
     ]
   },
-  "Web/API/HTMLElement/oncut": {
-    "modified": "2020-10-15T21:03:56.356Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "valtlai",
-      "teoli",
-      "kscarfone",
-      "nairakhil13",
-      "Sheppy",
-      "ethertank",
-      "ziyunfei",
-      "Mgjbot",
-      "Potappo"
-    ]
-  },
-  "Web/API/HTMLElement/onpaste": {
+  "Web/API/HTMLElement/paste_event": {
     "modified": "2020-10-15T21:03:50.733Z",
     "contributors": [
       "mfluehr",
@@ -47409,19 +47422,6 @@
       "ziyunfei",
       "Mgjbot",
       "Potappo"
-    ]
-  },
-  "Web/API/HTMLElement/outerText": {
-    "modified": "2020-10-15T21:43:21.147Z",
-    "contributors": [
-      "mfuji09",
-      "mfluehr",
-      "fscholz",
-      "valtlai",
-      "erikadoyle",
-      "Rob W",
-      "rolfedh",
-      "cvrebert"
     ]
   },
   "Web/API/HTMLElement/pointercancel_event": {
