@@ -66009,60 +66009,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/RTCDataChannel/onbufferedamountlow": {
-    "modified": "2020-12-10T14:54:31.667Z",
-    "contributors": [
-      "bershanskiy",
-      "kdxu",
-      "fscholz",
-      "jpmedley",
-      "Sheppy",
-      "rolfedh"
-    ]
-  },
-  "Web/API/RTCDataChannel/onclose": {
-    "modified": "2020-10-15T21:29:06.143Z",
-    "contributors": [
-      "fscholz",
-      "jpmedley",
-      "Sheppy",
-      "teoli"
-    ]
-  },
-  "Web/API/RTCDataChannel/onclosing": {
-    "modified": "2020-10-15T22:28:18.800Z",
-    "contributors": [
-      "bershanskiy"
-    ]
-  },
-  "Web/API/RTCDataChannel/onerror": {
-    "modified": "2020-10-15T21:29:06.359Z",
-    "contributors": [
-      "fscholz",
-      "jpmedley",
-      "Sheppy",
-      "teoli"
-    ]
-  },
-  "Web/API/RTCDataChannel/onmessage": {
-    "modified": "2020-10-15T21:29:06.158Z",
-    "contributors": [
-      "fscholz",
-      "joerlo",
-      "jpmedley",
-      "Sheppy",
-      "teoli"
-    ]
-  },
-  "Web/API/RTCDataChannel/onopen": {
-    "modified": "2020-10-15T21:29:06.165Z",
-    "contributors": [
-      "fscholz",
-      "jpmedley",
-      "Sheppy",
-      "teoli"
-    ]
-  },
   "Web/API/RTCDataChannel/open_event": {
     "modified": "2020-10-15T22:15:06.409Z",
     "contributors": [
