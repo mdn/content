@@ -201,6 +201,8 @@ main {
 }
 ```
 
+> **Note:** Using `position:fixed` makes sure the header does not scroll with the rest of the content, and instead stays aligned with the window control buttons, even on device/browsers that support elastic overscroll (also known as rubber banding).
+
 ## Specifications
 
 {{Specifications}}
