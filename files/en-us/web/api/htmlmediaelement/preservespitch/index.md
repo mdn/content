@@ -80,4 +80,5 @@ pitch.addEventListener('change', () => {
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement.playbackRate")}}
+- [Web Audio playbackRate explained](/en-US/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained)
