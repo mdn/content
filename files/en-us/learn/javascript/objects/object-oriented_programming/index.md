@@ -189,7 +189,7 @@ class Student : extends Person
         Student(name, year)
     methods
        introduceSelf()
-       canStudyArchery() { return this.year < 1 }
+       canStudyArchery() { return this.year > 1 }
 ```
 
 ```js
@@ -210,7 +210,7 @@ class Student : extends Person
         Student(name, year)
     methods
        introduceSelf()
-       canStudyArchery() { return this.year < 1 }
+       canStudyArchery() { return this.year > 1 }
 
 student = new Student('Weber', 1)
 student.year // error: 'year' is a private property of Student
