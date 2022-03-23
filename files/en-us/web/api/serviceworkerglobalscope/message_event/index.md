@@ -34,7 +34,7 @@ An {{domxref("ExtendableMessageEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-_Inherits properties from its parent, {{domxref("ExtendableEvent")}}_.
+_Inherits properties from its parent, {{domxref("ExtendableMessageEvent")}}_.
 
 - {{domxref("ExtendableMessageEvent.data")}} {{readonlyinline}}
   - : Returns the event's data. It can be any data type.

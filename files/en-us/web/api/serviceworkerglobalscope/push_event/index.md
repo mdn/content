@@ -38,7 +38,7 @@ An {{domxref("PushEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-_Inherits properties from its parent, {{domxref("ExtendableEvent")}}. Additional properties:_
+_Inherits properties from its parent, {{domxref("PushEvent")}}. Additional properties:_
 
 - {{domxref("PushEvent.data")}} {{readonlyinline}}
   - : Returns a reference to a {{domxref("PushMessageData")}} object containing data sent to the {{domxref("PushSubscription")}}.

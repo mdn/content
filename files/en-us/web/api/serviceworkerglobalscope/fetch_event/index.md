@@ -14,9 +14,7 @@ browser-compat: api.ServiceWorkerGlobalScope.fetch_event
 ---
 {{APIRef("Service Workers API")}}
 
-The **onfetch** property of the {{domxref("ServiceWorkerGlobalScope")}}
-interface is an event handler fired whenever a {{Event("fetch")}} event occurs (usually
-when the {{domxref("fetch()")}} method is called.)
+The **fetch** event is fired when the {{domxref("fetch()")}} method is called.
 
 This event is not cancelable and does not bubble.
 

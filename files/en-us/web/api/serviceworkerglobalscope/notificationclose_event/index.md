@@ -2,13 +2,9 @@
 title: 'ServiceWorkerGlobalScope: notificationclose event'
 slug: Web/API/ServiceWorkerGlobalScope/notificationclose_event
 tags:
-  - API
-  - Experimental
-  - Interface
-  - Property
+  - Event
   - Reference
   - ServiceWorkerGlobalScope
-  - onnotificationclose
 browser-compat: api.ServiceWorkerGlobalScope.notificationclose_event
 ---
 {{APIRef("Service Workers API")}}
