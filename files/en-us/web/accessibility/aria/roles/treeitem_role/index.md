@@ -14,35 +14,35 @@ A `treeitem` is an item in a `tree`.
 
 ## Description
 
-A [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role) is a hierarchical list with parent and child nodes that can expand and collapse. A `treeitem` is a node in a `tree`. The root of the tree is `tree`, but all tree nodes are `treeitem` elements, even if they themselves have nested `treeitem` nodes. 
+A [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role) is a hierarchical list with parent and child nodes that can expand and collapse. A `treeitem` is a node in a `tree`. The root of the tree is `tree`, but all tree nodes are `treeitem` elements, even if they themselves have nested `treeitem` nodes.
 
-An example of a `tree` is a file system selection user interface: a tree view displaying folders and files. Each folder and file is a `treeitem`. Folder items, which are `treeitem` elements, can be expanded to reveal the contents of the folder—which may be files, folders, or both, and are all `treeitems`—and collapsed, hiding its contents. 
+An example of a `tree` is a file system selection user interface: a tree view displaying folders and files. Each folder and file is a `treeitem`. Folder items, which are `treeitem` elements, can be expanded to reveal the contents of the folder—which may be files, folders, or both, and are all `treeitems`—and collapsed, hiding its contents.
 
-In a tree hierarchy, the *root node* has the role `tree`. All other nodes, other than the root node, have the role of `treeitem`, whether or not they have children. A `treeitem` that is a parent is a **parent node**. A `treeitem` that is not a parent is an *end node*. 
+In a tree hierarchy, the *root node* has the role `tree`. All other nodes, other than the root node, have the role of `treeitem`, whether or not they have children. A `treeitem` that is a parent is a **parent node**. A `treeitem` that is not a parent is an *end node*.
 
-Tree items that have children can be expanded or collapsed, showing and hiding their children. A parent node that is expanded so its child nodes are visible is an **open node**. A parent node that is collapsed so the child nodes are not visible is a **closed node**. 
+Tree items that have children can be expanded or collapsed, showing and hiding their children. A parent node that is expanded so its child nodes are visible is an **open node**. A parent node that is collapsed so the child nodes are not visible is a **closed node**.
 
-Each parent node contains or owns an element with role [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role). A parent node is an expandable collection of `treeitem` elements. These child nodes are not direct descendants of the parent node: rather, they  should be enclosed in an element with the `group` role. 
+Each parent node contains or owns an element with role [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role). A parent node is an expandable collection of `treeitem` elements. These child nodes are not direct descendants of the parent node: rather, they  should be enclosed in an element with the `group` role.
 
 Each parent node should include the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute. It is set to `false` when closed `true` when open. End nodes should not have the `aria-expanded` attribute included as the presence of the attribute indicates to assistive technologies that the node is a parent.
 
-> **Note:** ARIA tree views use navigation more similar to native applications than to web applications and are navigated primarily with arrow keys on the keyboard instead of the <kbd>Tab</kbd>. This form of navigation is not common for most browser content, though normal and expected for native applications. For this reason, consider alternative options to address the functionality you need before creating a tree view. 
+> **Note:** ARIA tree views use navigation more similar to native applications than to web applications and are navigated primarily with arrow keys on the keyboard instead of the <kbd>Tab</kbd>. This form of navigation is not common for most browser content, though normal and expected for native applications. For this reason, consider alternative options to address the functionality you need before creating a tree view.
 
 Any element with a `treeitem` role must be nested in, or owned by, an element with role `tree`. Tree items can be a child of `tree`, `treeitem`, or an element with role `group` that is contained in, or owned by, an element with role `tree` or `treeitem`. If a `treeitem` is not nested within a `tree`, or nested in a `group` that is owned by a `tree`, include the {{HTMLattrxref('id')}} of the `treeitem` in the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) attribute value on the owning `tree`, `treeitem` or `group` element.
 
 Trees can be "single-select", allowing users to choose just one `treeitem` for an action, or "multi-select", where users are able to select more than one `treeitem` nodes for an action. In both cases, to be keyboard accessible, focus must be managed for all tree descendants.
 
-In single-select trees, only one treeitem can have [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) (or [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)) set to `true`. When a single-select tree receives focus, if no `treeitem` is selected before the tree receives focus, focus is set on the first `treeitem`. If a `treeitem` is selected before the tree receives focus, focus is set on the single `treeitem` that has `aria-selected="true"` set. 
+In single-select trees, only one treeitem can have [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) (or [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)) set to `true`. When a single-select tree receives focus, if no `treeitem` is selected before the tree receives focus, focus is set on the first `treeitem`. If a `treeitem` is selected before the tree receives focus, focus is set on the single `treeitem` that has `aria-selected="true"` set.
 
 All nodes that are selectable but not selected have either `aria-selected` or `aria-checked` set to `false`.  If the tree contains nodes that are not selectable, do not include either `aria-selected` or `aria-checked`, as the presence of either attribute indicates to assistive technologies the node is selectable.
 
-No more than one node can be selected at a time unless the `tree` node has [`aria-multiselectable="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) set. 
+No more than one node can be selected at a time unless the `tree` node has [`aria-multiselectable="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) set.
 
 When a multi-select tree receives focus, if none of the tree items are selected before the tree receives focus, focus is set on the first `treeitem`. If one or more tree items are selected before the tree receives focus, focus is set on the first selected `treeitem`.
 
-In multi-select trees, all selected tree items have either `aria-selected="true"` (or `aria-checked="true"`) set. All tree item nodes that are selectable but not currently selected should have `aria-selected="false"` (or `aria-checked="false"`) set. 
+In multi-select trees, all selected tree items have either `aria-selected="true"` (or `aria-checked="true"`) set. All tree item nodes that are selectable but not currently selected should have `aria-selected="false"` (or `aria-checked="false"`) set.
 
-Either `aria-selected` or `aria-checked` can be used to indicate selection for `treeitem` elements. Some user interfaces indicate selection with `aria-selected` in single-select trees and with `aria-checked` in multi-select trees. 
+Either `aria-selected` or `aria-checked` can be used to indicate selection for `treeitem` elements. Some user interfaces indicate selection with `aria-selected` in single-select trees and with `aria-checked` in multi-select trees.
 
 Using both `aria-selected` and `aria-checked` in the same `tree` is strongly discouraged. Don't use both `aria-selected` and `aria-checked` on treeitems in a single tree unless the meaning and purpose of `aria-selected` is different from the meaning and purpose of `aria-checked`, the meaning and purpose of each state apparent, and the user interface provides a separate method for controlling each state.
 
@@ -57,14 +57,14 @@ A `treeitem` is required to have an accessible name. Generally, that name comes 
 - [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role) role
   - : The root node for the hierarchical list of parent and child `treeitem` nodes that can expand and collapse
 - [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role
-  - : Identifies a set of `treeitem` child nodes. 
+  - : Identifies a set of `treeitem` child nodes.
   
 - [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
   - : Set on the the root `tree` and on `group` nodes that are parents of `treeitem` nodes, to indicate whether the tree view is expanded (`true`) or collapsed (`false`).
 - [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
-  - Set to `true` or `false`, indicates a `treeitem` is selectable, and whether or not it is currently selected. 
+  - Set to `true` or `false`, indicates a `treeitem` is selectable, and whether or not it is currently selected.
 - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
-  - Set to `true` or `false`, indicates the `treeitem` can be checked, and whether or not it is currently checked. 
+  - Set to `true` or `false`, indicates the `treeitem` can be checked, and whether or not it is currently checked.
   
 ### Keyboard interactions
 
@@ -118,7 +118,7 @@ For a vertically oriented `tree`, which is the default orientation:
 <td>Type a character*</td>
 <td>
 <ul>
-<li>Focus moves to the next node with a name that starts with the typed character. 
+<li>Focus moves to the next node with a name that starts with the typed character.
 <li>If multiple characters are typed in rapid succession, focus moves to the next node with a name that starts with the string of characters typed.
 </td>
 </tr>
@@ -134,7 +134,7 @@ For a vertically oriented `tree`, which is the default orientation:
 
 ### Multi-select keyboard interactions
 
-There are two interaction models for multi-select trees: While you can require that users press a modifier key, such as <kbd>Shift</kbd> or <kbd>Control</kbd> while navigating the list in order to avoid losing selection states, the model that does not require the user to hold a modifier key is recommended. 
+There are two interaction models for multi-select trees: While you can require that users press a modifier key, such as <kbd>Shift</kbd> or <kbd>Control</kbd> while navigating the list in order to avoid losing selection states, the model that does not require the user to hold a modifier key is recommended.
 
 #### Recommended multi user select model:
 
@@ -226,7 +226,7 @@ The following is how one might mark up a directory listing of web development co
 </div>
 ```
 
-The above provides the semantics for a tree view, but does not provide any of the interactivity. That must be added in with JavaScript. 
+The above provides the semantics for a tree view, but does not provide any of the interactivity. That must be added in with JavaScript.
 
 If the tree items aren't by default focusable, JavaScript can be used [`tabIndex="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) to all the treeitems except the one that should receive focus when the user tabs into the tree which should be set to `tabIndex="0"`.  
 
@@ -242,7 +242,6 @@ If the tree has more than 7 tree items, including type ahead functionality is re
 | {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_treeitem_role","treeitem role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 ## See Also
-
 
 <section id="Quick_links">
 

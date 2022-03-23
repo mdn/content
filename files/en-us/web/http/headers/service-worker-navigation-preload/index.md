@@ -40,10 +40,9 @@ Service-Worker-Navigation-Preload: <value>
 ## Directives
 
 - `<value>`
-  - : An arbitrary value that indicates what data should be sent in the response to the preload request. 
-    This defaults to `true`. 
+  - : An arbitrary value that indicates what data should be sent in the response to the preload request.
+    This defaults to `true`.
     It maybe set to any other string value in the service worker, using {{domxref("NavigationPreloadManager.setHeaderValue()")}}.
-    
 
 ## Examples
 
@@ -60,7 +59,6 @@ For example, in order to request that a fragment of the requested resource be re
 Service-Worker-Navigation-Preload: json_fragment1
 ```
 
-
 ## Specifications
 
 {{Specifications}}
@@ -68,4 +66,3 @@ Service-Worker-Navigation-Preload: json_fragment1
 ## Browser compatibility
 
 {{Compat}}
-

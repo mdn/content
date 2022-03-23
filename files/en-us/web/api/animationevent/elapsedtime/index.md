@@ -20,7 +20,6 @@ when this event fired, excluding any time the animation was paused. For an
 {{cssxref("animation-delay")}}, in which case the event will be fired with
 `elapsedTime` containing `(-1 * delay)`.
 
-
 ## Value
 
 A `float` giving the amount of time in seconds.

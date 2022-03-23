@@ -29,7 +29,6 @@ The result of a preload fetch request is waited on using the promise returned by
 - {{domxref("NavigationPreloadManager.getState()")}}
   - : Returns a {{jsxref("Promise")}} that resolves to an object with properties that indicate whether preloading is enabled, and what value will be sent in the {{HTTPHeader("Service-Worker-Navigation-Preload")}} HTTP header in preloading requests.
 
-
 ## Description
 
 Service workers handle {{domxref("fetch()")}} events on behalf of a site, for pages within a given scope.
@@ -124,10 +123,9 @@ navigator.serviceWorker.ready
 
 [Speed up Service Worker with Navigation Preloads > Custom responses for preloads](https://developers.google.com/web/updates/2017/02/navigation-preload) provides a more complete example of a site where the response for an article web page is constructed from a cached header and footer, so that only the article content is returned for a prefetch.
 
-
 ### Getting the state
 
-You can use {{domxref("NavigationPreloadManager.getState()")}} to check whether navigation preloading is enabled and to determine what directive value is sent with the 
+You can use {{domxref("NavigationPreloadManager.getState()")}} to check whether navigation preloading is enabled and to determine what directive value is sent with the
 {{HTTPHeader("Service-Worker-Navigation-Preload")}} HTTP header for preload requests.
 
 The code below shows how to get the promise that resolves to a `state` object and log the result.

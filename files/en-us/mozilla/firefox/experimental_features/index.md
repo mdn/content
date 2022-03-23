@@ -985,7 +985,6 @@ Preloading occurs in parallel with worker bootup, reducing the total time from s
   </tbody>
 </table>
 
-
 ### WebVR API
 
 #### WebVR API (Disabled)
