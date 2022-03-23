@@ -62,20 +62,20 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@4.1.12":
-  version "4.1.12"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.12.tgz#d266138c24295440619ea562ce3f4ec22600e897"
-  integrity sha512-y3Ntio6hb5+m6asxcA3nnIN6URjAFMji2EZZVYGd2Ag5On4mmvPhMnXdiIScCMXgHjFX+5qXuKaojLLhJHZPAg==
+"@mdn/browser-compat-data@4.1.13":
+  version "4.1.13"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.13.tgz#40303f692fff93abe7a0f5782432ec717af9b280"
+  integrity sha512-OFTriJmUcXnA1RjfKDJOfEmhHO44OV7Gxpqnh7eOM+3qep64Yt+uNF4jEeIFHnwTFH5tMcnBQxEI91dXDGiGYQ==
 
-"@mdn/yari@0.9.8":
-  version "0.9.8"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.9.8.tgz#6916b83420391baff5b4ae251bd05b9816831dec"
-  integrity sha512-nFajR01rFw38U4eQPmJ6AFRNKR8KLugmF8hmdRc4MIBc1izuesKxjTQyMxkNmBxrICV2+DC3PPBHYQFinbG5ZQ==
+"@mdn/yari@0.9.19":
+  version "0.9.19"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.9.19.tgz#58a78d74bab2f437d3e9927868c5839d1426e46c"
+  integrity sha512-zo/Ix0JZhOLqlfXaRi9HGLc4N72MSlm8wLalXMWB+wUzUvRZiJ+/6jX5QgcQKBHPcmuqqxO3vXHIXfAYyZDIlQ==
   dependencies:
     "@babel/helper-builder-react-jsx" "^7.16.7"
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
-    "@mdn/browser-compat-data" "4.1.12"
+    "@mdn/browser-compat-data" "4.1.13"
     "@use-it/interval" "^1.0.0"
     accept-language-parser "1.5.0"
     browser-specs "^3.4.0"
