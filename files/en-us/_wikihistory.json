@@ -61403,6 +61403,20 @@
       "Jeremie"
     ]
   },
+  "Web/API/Notification/click_event": {
+    "modified": "2020-10-15T21:24:26.244Z",
+    "contributors": [
+      "mfuji09",
+      "booc0mtaco",
+      "chrisdavidmills",
+      "fscholz",
+      "jpmedley",
+      "mnoorenberghe",
+      "MHasan",
+      "kscarfone",
+      "Jeremie"
+    ]
+  },
   "Web/API/Notification/close": {
     "modified": "2020-10-15T21:24:24.856Z",
     "contributors": [
@@ -61413,6 +61427,21 @@
       "jpmedley",
       "abbycar",
       "Sebastianz",
+      "MHasan",
+      "kscarfone",
+      "Jeremie"
+    ]
+  },
+  "Web/API/Notification/close_event": {
+    "modified": "2020-10-15T21:24:23.018Z",
+    "contributors": [
+      "mfuji09",
+      "sideshowbarker",
+      "booc0mtaco",
+      "chrisdavidmills",
+      "mfluehr",
+      "clshortfuse",
+      "fscholz",
       "MHasan",
       "kscarfone",
       "Jeremie"
@@ -61439,6 +61468,19 @@
       "fscholz",
       "jpmedley",
       "abbycar",
+      "jsx",
+      "kscarfone",
+      "Jeremie"
+    ]
+  },
+  "Web/API/Notification/error_event": {
+    "modified": "2020-10-15T21:24:22.391Z",
+    "contributors": [
+      "mfuji09",
+      "booc0mtaco",
+      "chrisdavidmills",
+      "fscholz",
+      "Sheppy",
       "jsx",
       "kscarfone",
       "Jeremie"
@@ -61491,63 +61533,6 @@
       "chrisdavidmills",
       "MaxMaeder",
       "bershanskiy"
-    ]
-  },
-  "Web/API/Notification/onclick": {
-    "modified": "2020-10-15T21:24:26.244Z",
-    "contributors": [
-      "mfuji09",
-      "booc0mtaco",
-      "chrisdavidmills",
-      "fscholz",
-      "jpmedley",
-      "mnoorenberghe",
-      "MHasan",
-      "kscarfone",
-      "Jeremie"
-    ]
-  },
-  "Web/API/Notification/onclose": {
-    "modified": "2020-10-15T21:24:23.018Z",
-    "contributors": [
-      "mfuji09",
-      "sideshowbarker",
-      "booc0mtaco",
-      "chrisdavidmills",
-      "mfluehr",
-      "clshortfuse",
-      "fscholz",
-      "MHasan",
-      "kscarfone",
-      "Jeremie"
-    ]
-  },
-  "Web/API/Notification/onerror": {
-    "modified": "2020-10-15T21:24:22.391Z",
-    "contributors": [
-      "mfuji09",
-      "booc0mtaco",
-      "chrisdavidmills",
-      "fscholz",
-      "Sheppy",
-      "jsx",
-      "kscarfone",
-      "Jeremie"
-    ]
-  },
-  "Web/API/Notification/onshow": {
-    "modified": "2020-10-15T21:24:25.134Z",
-    "contributors": [
-      "mfuji09",
-      "sideshowbarker",
-      "booc0mtaco",
-      "chrisdavidmills",
-      "mfluehr",
-      "clshortfuse",
-      "fscholz",
-      "MHasan",
-      "kscarfone",
-      "Jeremie"
     ]
   },
   "Web/API/Notification/permission": {
@@ -61609,6 +61594,21 @@
       "jpmedley",
       "freaktechnik",
       "newyork-anthonyng"
+    ]
+  },
+  "Web/API/Notification/show_event": {
+    "modified": "2020-10-15T21:24:25.134Z",
+    "contributors": [
+      "mfuji09",
+      "sideshowbarker",
+      "booc0mtaco",
+      "chrisdavidmills",
+      "mfluehr",
+      "clshortfuse",
+      "fscholz",
+      "MHasan",
+      "kscarfone",
+      "Jeremie"
     ]
   },
   "Web/API/Notification/silent": {
