@@ -16,13 +16,6 @@ The `numberOfChannels` property of the {{ domxref("AudioBuffer") }}
 interface returns an integer representing the number of discrete audio channels
 described by the PCM data stored in the buffer.
 
-## Syntax
-
-```js
-var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
-myArrayBuffer.numberOfChannels;
-```
-
 ### Value
 
 An integer.

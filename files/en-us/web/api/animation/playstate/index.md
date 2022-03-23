@@ -17,14 +17,6 @@ The **`Animation.playState`** property of the [Web Animations API](/en-US/docs/W
 
 > **Note:** This property is read-only for CSS Animations and Transitions.
 
-## Syntax
-
-```js
-var currentPlayState = Animation.playState;
-
-Animation.playState = newState;
-```
-
 ### Value
 
 - `idle`

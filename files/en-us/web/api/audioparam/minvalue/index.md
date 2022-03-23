@@ -17,12 +17,6 @@ The **`minValue`**
 read-only property of the {{domxref("AudioParam")}} interface represents the minimum
 possible value for the parameter's nominal (effective) range.
 
-## Syntax
-
-```js
-var minVal = audioParam.minValue;
-```
-
 ### Value
 
 A floating-point {{jsxref("Number")}} indicating the minimum value permitted for the

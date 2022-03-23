@@ -21,13 +21,6 @@ the {{domxref("AudioBuffer")}} is reached.
 
 The `loop` property's default value is `false`.
 
-## Syntax
-
-```js
-var loopingEnabled = AudioBufferSourceNode.loop;
-AudioBufferSourceNode.loop = true | false;
-```
-
 ### Value
 
 A Boolean which is `true` if looping is enabled; otherwise, the value is

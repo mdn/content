@@ -17,12 +17,6 @@ The **`maxValue`**
 read-only property of the {{domxref("AudioParam")}} interface represents the maximum
 possible value for the parameter's nominal (effective) range.
 
-## Syntax
-
-```js
-var maxVal = audioParam.maxValue;
-```
-
 ### Value
 
 A floating-point {{jsxref("Number")}} indicating the maximum value permitted for the

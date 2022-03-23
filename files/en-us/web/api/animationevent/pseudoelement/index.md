@@ -20,12 +20,6 @@ The **`AnimationEvent.pseudoElement`** read-only property is a
 If the animation doesn't run on a pseudo-element but on the element, an empty string:
 ` ''``. `
 
-## Syntax
-
-```js
-name = AnimationEvent.pseudoElement
-```
-
 ## Specifications
 
 {{Specifications}}

@@ -14,12 +14,6 @@ browser-compat: api.AnalyserNode.frequencyBinCount
 
 The **`frequencyBinCount`** read-only property of the {{domxref("AnalyserNode")}} interface is an unsigned integer half that of the {{domxref("AnalyserNode.fftSize")}}. This generally equates to the number of data values you will have to play with for the visualization.
 
-## Syntax
-
-```js
-var arrayLength = analyserNode.frequencyBinCount;
-```
-
 ### Value
 
 An unsigned integer, equal to the number of values that {{domxref("AnalyserNode.getByteFrequencyData()")}} and {{domxref("AnalyserNode.getFloatFrequencyData()")}} copy into the provided `TypedArray`.

@@ -23,12 +23,6 @@ property **`label`** returns a string specifying the audio
 track's human-readable label, if one is available; otherwise, it returns an empty
 string.
 
-## Syntax
-
-```js
-var audioTrackLabel = AudioTrack.label;
-```
-
 ### Value
 
 A {{domxref("DOMString")}} specifying the track's human-readable label, if one is

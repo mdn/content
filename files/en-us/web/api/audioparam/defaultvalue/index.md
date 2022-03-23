@@ -17,12 +17,6 @@ read-only property of the {{ domxref("AudioParam") }} interface represents the i
 value of the attributes as defined by the specific {{domxref("AudioNode")}} creating
 the `AudioParam`.
 
-## Syntax
-
-```js
-var defaultVal = audioParam.defaultValue;
-```
-
 ### Value
 
 A floating-point {{jsxref("Number")}}.

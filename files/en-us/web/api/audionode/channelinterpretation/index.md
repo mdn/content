@@ -16,13 +16,6 @@ The **`channelInterpretation`** property of the {{domxref("AudioNode")}} interfa
 
 The property has two options: `speakers` and `discrete`. These are documented in [Basic concepts behind Web Audio API > up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing).
 
-## Syntax
-
-```js
-var oscillator = audioCtx.createOscillator();
-oscillator.channelInterpretation = 'discrete';
-```
-
 ### Value
 
 The values are documented in [Basic concepts behind Web Audio API > up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing).

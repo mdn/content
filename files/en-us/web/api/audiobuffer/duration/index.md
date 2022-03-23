@@ -16,13 +16,6 @@ The **`duration`** property of the {{ domxref("AudioBuffer")
     }} interface returns a double representing the duration, in seconds, of the PCM data
 stored in the buffer.
 
-## Syntax
-
-```js
-var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
-myArrayBuffer.duration;
-```
-
 ### Value
 
 A double.

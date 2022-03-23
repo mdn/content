@@ -17,12 +17,6 @@ the {{ domxref("AudioNode") }} interface returns the number of outputs coming ou
 the node. Destination nodes — like {{domxref("AudioDestinationNode") }} — have
 a value of 0 for this attribute.
 
-## Syntax
-
-```js
-var numOutputs = audioNode.numberOfOutputs;
-```
-
 ### Value
 
 An integer ≥ 0.

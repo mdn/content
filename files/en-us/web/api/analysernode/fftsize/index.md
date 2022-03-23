@@ -14,13 +14,6 @@ browser-compat: api.AnalyserNode.fftSize
 
 The **`fftSize`** property of the {{domxref("AnalyserNode")}} interface is an unsigned long value and represents the window size in samples that is used when performing a [Fast Fourier Transform](https://en.wikipedia.org/wiki/Fast_Fourier_transform) (FFT) to get frequency domain data.
 
-## Syntax
-
-```js
-var curValue = analyserNode.fftSize;
-analyserNode.fftSize = newValue;
-```
-
 ### Value
 
 An unsigned integer, representing the window size of the FFT, given in number of samples. A higher value will result in more details in the frequency domain but fewer details in the time domain.
