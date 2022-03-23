@@ -197,7 +197,7 @@ new Intl.NumberFormat(locales, options)
         - It indicates the increment at which rounding should take place relative to the calculated rounding magnitude.
         - It cannot be mixed with significant-digits rounding or any setting of `roundingPriority` other than `auto`.
         >
-        > For Example: 
+        > For example: 
         >  If `maximumFractionDigits` is 2 and `roundingIncrement` is 5, then the number is rounded to the nearest 0.05 ("nickel rounding").
         > ```js
         >
