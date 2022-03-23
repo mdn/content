@@ -58,16 +58,6 @@ browser-compat: html.elements.input.input-file
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
-      <td><strong>Properties</strong></td>
-      <td>
-        <p>
-          <a href="/en-US/docs/Web/API/HTMLInputElement#properties_file"
-            >Properties that apply only to elements of type <code>file</code></a
-          >
-        </p>
-      </td>
-    </tr>
-    <tr>
       <td><strong>Methods</strong></td>
       <td>
         {{domxref("HTMLInputElement.select", "select()")}}

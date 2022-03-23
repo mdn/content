@@ -58,6 +58,10 @@ On browsers that don't support inputs of type `email`, a `email` input falls bac
       <td><code>list</code> and <code>value</code></td>
     </tr>
     <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>Methods</strong></td>
       <td>
         {{domxref("HTMLInputElement.select", "select()")}}
