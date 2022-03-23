@@ -20,9 +20,10 @@ At that time, the W3C nearly abandoned HTML in favor of {{Glossary("XHTML")}}, p
 
 ## syntax
 
-An HTML document is a plaintext document structured with [elements](/en-US/docs/Web/HTML/Element). Elements are surrounded by matching opening and closing {{Glossary("tag","tags")}}. Each tag begins and ends with angle brackets (`<>`). There are a few empty tags that cannot enclose any text, for instance {{htmlelement("img")}}.
+An HTML document is a plaintext file structured with {{Glossary("element","elements")}}. Elements are surrounded by matching opening and closing {{Glossary("tag","tags")}}. Each tag begins and ends with angle brackets (`<>`). There are a few empty tags that cannot enclose any text, for instance {{htmlelement("img")}}. You can further extend HTML elements with {{Glossary("attribute","attributes")}}.
 
-You can extend HTML elements with {{Glossary("attribute","attributes")}}:
+- [All HTML Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+- [All HTML Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes)
 
 ![Detail of the structure of an HTML element](anatomy-of-an-html-element.png)
 
