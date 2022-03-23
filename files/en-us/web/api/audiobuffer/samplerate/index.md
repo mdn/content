@@ -16,7 +16,7 @@ The **`sampleRate`** property of the {{
   domxref("AudioBuffer") }} interface returns a float representing the sample rate, in
 samples per second, of the PCM data stored in the buffer.
 
-### Value
+## Value
 
 A floating-point value indicating the current sample rate of the buffers data, in
 samples per second.

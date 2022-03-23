@@ -18,7 +18,7 @@ The read-only **`Animation.ready`** property of the [Web Animations API](/en-US/
 
 > **Note:** Since the same {{jsxref("Promise")}} is used for both pending `play` and pending `pause` requests, authors are advised to check the state of the animation when the promise is resolved.
 
-### Value
+## Value
 
 A {{jsxref("Promise")}} which resolves when the animation is ready to be played. You'll typically use a construct similar to this when using the ready promise:
 

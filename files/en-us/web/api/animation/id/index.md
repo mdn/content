@@ -14,7 +14,7 @@ browser-compat: api.Animation.id
 
 The **`Animation.id`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns or sets a string used to identify the animation.
 
-### Value
+## Value
 
 A {{domxref("DOMString")}} which can be used to identify the animation, or `null` if the animation has no `id`.
 

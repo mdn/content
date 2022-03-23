@@ -21,7 +21,7 @@ the {{domxref("AudioBuffer")}} is reached.
 
 The `loop` property's default value is `false`.
 
-### Value
+## Value
 
 A Boolean which is `true` if looping is enabled; otherwise, the value is
 `false`.

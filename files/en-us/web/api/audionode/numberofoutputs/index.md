@@ -17,7 +17,7 @@ the {{ domxref("AudioNode") }} interface returns the number of outputs coming ou
 the node. Destination nodes — like {{domxref("AudioDestinationNode") }} — have
 a value of 0 for this attribute.
 
-### Value
+## Value
 
 An integer ≥ 0.
 

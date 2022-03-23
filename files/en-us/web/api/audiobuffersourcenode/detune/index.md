@@ -20,7 +20,7 @@ representing detuning of oscillation in [cents](https://en.wikipedia.org/wiki/Ce
 For example, values of +100 and -100 detune the source up or down by one semitone,
 while +1200 and -1200 detune it up or down by one octave.
 
-### Value
+## Value
 
 A [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}}
 whose value indicates the detuning of oscillation in [cents](https://en.wikipedia.org/wiki/Cent_%28music%29).

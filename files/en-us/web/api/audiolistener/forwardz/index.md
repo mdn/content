@@ -17,7 +17,7 @@ The `forwardZ` read-only property of the {{ domxref("AudioListener") }} interfac
 
 > **Note:** The parameter is _a-rate_ when used with a {{domxref("PannerNode")}} whose {{domxref("PannerNode.panningModel", "panningModel")}} is set to equalpower, or _k-rate_ otherwise.
 
-### Value
+## Value
 
 An {{domxref("AudioParam")}}. Its default value is -1, and it can range between positive and negative infinity.
 

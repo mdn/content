@@ -17,7 +17,7 @@ The **`Animation.currentTime`** property of the [Web Animations API](/en-US/docs
 
 If the animation lacks a {{domxref("AnimationTimeline", "timeline")}}, is inactive, or hasn't been played yet, `currentTime`'s return value is `null`.
 
-### Value
+## Value
 
 A number representing the current time in milliseconds, or `null` to deactivate the animation.
 

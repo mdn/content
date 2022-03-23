@@ -19,7 +19,7 @@ browser-compat: api.AddressErrors.organization
 
 An object based on {{domxref("AddressErrors")}} includes an **`organization`** property when the address's {{domxref("PaymentAddress.organization", "organization")}} property couldn't be validated. The returned string explains the error and should offer suggestions for how to correct it.
 
-### Value
+## Value
 
 If the value specified in the {{domxref("PaymentAddress")}} object's {{domxref("PaymentAddress.organization", "organization")}} property could not be validated, this property contains a {{domxref("DOMString")}} offering a human-readable explanation of the validation error and offers suggestions for correcting it.
 

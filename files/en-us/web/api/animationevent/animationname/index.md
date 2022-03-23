@@ -16,6 +16,11 @@ The **`AnimationEvent.animationName`** read-only property is a
 {{domxref("DOMString")}} containing the value of the {{cssxref("animation-name")}} CSS
 property associated with the transition.
 
+
+## Value 
+
+A [DOMString](https://developer.mozilla.org/en-US/docs/Web/API/DOMString) containing the value of the [animation-name](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-name) CSS property.
+
 ## Specifications
 
 {{Specifications}}

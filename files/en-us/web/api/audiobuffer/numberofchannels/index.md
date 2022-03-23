@@ -16,7 +16,7 @@ The `numberOfChannels` property of the {{ domxref("AudioBuffer") }}
 interface returns an integer representing the number of discrete audio channels
 described by the PCM data stored in the buffer.
 
-### Value
+## Value
 
 An integer.
 
