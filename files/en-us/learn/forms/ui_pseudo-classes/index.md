@@ -521,7 +521,7 @@ Basically, we build the styling for the radio button "inner circle" using the `:
 
 As mentioned above, the {{cssxref(":default")}} pseudo-class matches radios/checkboxes that are checked by default, on page load, even when unchecked. This could be useful for adding an indicator to a list of options to remind the user what the defaults (or starting options) were, in case they want to reset their choices.
 
-Also mentioned above radios/checkboxes will be matched by the {{cssxref(":indeterminate")}} pseudo-class when they are in a state where they are neither checked nor unchecked. But what does this mean? Elements that are indeterminate include:
+Also, the radios/checkboxes mentioned above will be matched by the {{cssxref(":indeterminate")}} pseudo-class when they are in a state where they are neither checked nor unchecked. But what does this mean? Elements that are indeterminate include:
 
 - {{HTMLElement("input/radio")}} inputs, when all radio buttons in a same-named group are unchecked
 - {{HTMLElement("input/checkbox")}} inputs whose `indeterminate` property is set to `true` via JavaScript
