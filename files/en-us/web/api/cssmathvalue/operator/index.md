@@ -20,13 +20,7 @@ current subtype represents. For example, if the current `CSSMathValue`
 subtype is `CSSMathSum`, this property will return the string
 `"sum"`.
 
-## Syntax
-
-```js
-var aString = CSSMathValue.operator;
-```
-
-### Value
+## Value
 
 A {{jsxref('String')}}.
 

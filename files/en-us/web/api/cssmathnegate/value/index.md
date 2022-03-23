@@ -16,13 +16,7 @@ browser-compat: api.CSSMathNegate.value
 The CSSMathNegate.value read-only property of the
 {{domxref("CSSMathNegate")}} interface returns a {{domxref('CSSNumericValue')}} object.
 
-## Syntax
-
-```js
-var cssNumericValue = CSSMathNegate.value;
-```
-
-### Value
+## Value
 
 A {{domxref('CSSNumericValue')}}.
 

@@ -13,14 +13,7 @@ browser-compat: api.CSSPageRule.selectorText
 
 The **`selectorText`** property of the {{domxref("CSSPageRule")}} interface gets and sets the selectors associated with the `CSSPageRule`.
 
-## Syntax
-
-```js
-var text = CSSPageRule.selectorText;
-CSSPageRule.selectorText = text;
-```
-
-### Value
+## Value
 
 A {{domxref('CSSOMString')}}.
 

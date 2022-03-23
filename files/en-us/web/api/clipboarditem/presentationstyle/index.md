@@ -21,13 +21,7 @@ The read-only
 **`presentationStyle`** property of the {{domxref("ClipboardItem")}}
 interface returns a {{jsxref("String")}} indicating how an item should be presented.
 
-## Syntax
-
-```js
-var presentationStyle = clipboardItem.presentationStyle;
-```
-
-### Value
+## Value
 
 One of either `"unspecified"`, `"inline"` or `"attachment"`.
 

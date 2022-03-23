@@ -19,13 +19,7 @@ The **`x`** property of the
 {{domxref("CSSPositionValue")}} interface returns the item's position along the web
 page's horizontal axis.
 
-## Syntax
-
-```js
-var x = CSSPositionValue.x
-```
-
-### Value
+## Value
 
 A {{domxref('CSSNumericValue')}}.
 

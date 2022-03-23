@@ -16,13 +16,7 @@ The read-only **`type`** property of the
 {{domxref("CSSRule")}} interface is a deprecated property that returns an integer
 indicating which type of rule the {{domxref("CSSRule")}} represents.
 
-## Syntax
-
-```js
-var type = cssRule.type;
-```
-
-### Value
+## Value
 
 An integer which will be one of the type constants listed in the table below.
 

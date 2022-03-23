@@ -30,13 +30,7 @@ the credential's generation.
 > **Note:** This property may only be used in top-level contexts and will
 > not be available in an {{HTMLElement("iframe")}} for example.
 
-## Syntax
-
-```js
-signature = authenticatorAssertionResponse.signature
-```
-
-### Value
+## Value
 
 An {{jsxref("ArrayBuffer")}} object which the signature of the authenticator (using its
 private key) for both {{domxref("AuthenticatorAssertionResponse.authenticatorData")}}
