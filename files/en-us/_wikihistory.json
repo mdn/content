@@ -58699,13 +58699,13 @@
       "bershanskiy"
     ]
   },
-  "Web/API/NDEFReader/onreading": {
+  "Web/API/NDEFReader/reading_event": {
     "modified": "2020-10-15T22:28:15.471Z",
     "contributors": [
       "bershanskiy"
     ]
   },
-  "Web/API/NDEFReader/onreadingerror": {
+  "Web/API/NDEFReader/readingerror_event": {
     "modified": "2020-12-08T07:17:13.308Z",
     "contributors": [
       "sideshowbarker"
