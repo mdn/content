@@ -20,13 +20,7 @@ The **`write`** read-only property of the
 `boolean` that is `true` if the writing to the characteristic with
 response is permitted.
 
-## Syntax
-
-```js
-var aBoolean = BluetoothCharacteristicProperties.write;
-```
-
-### Value
+## Value
 
 A boolean value.
 

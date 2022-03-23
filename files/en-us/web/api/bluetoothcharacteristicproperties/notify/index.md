@@ -20,13 +20,7 @@ The **`notify`** read-only property of the
 `boolean` that is `true` if notifications of the characteristic
 value without acknowledgement is permitted.
 
-## Syntax
-
-```js
-var aBoolean = BluetoothCharacteristicProperties.notify;
-```
-
-### Value
+## Value
 
 A boolean value.
 

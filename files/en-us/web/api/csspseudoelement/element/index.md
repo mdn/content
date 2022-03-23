@@ -16,13 +16,7 @@ The **`element`** read-only property of the
 {{DOMxRef('CSSPseudoElement')}} interface returns a reference to the originating element
 of the pseudo-element, in other words its parent element.
 
-## Syntax
-
-```js
-var originatingElement = cssPseudoElement.element;
-```
-
-### Value
+## Value
 
 An {{DOMxRef('Element')}} representing the pseudo-element's originating element.
 

@@ -17,13 +17,7 @@ browser-compat: api.CSSPropertyRule.initialValue
 
 The read-only **`initialValue`** nullable property of the {{domxref("CSSPropertyRule")}} interface returns the initial value of the custom property registration represented by the {{cssxref("@property")}} rule, controlling the property's initial value.
 
-## Syntax
-
-```js
-const initialValue = CSSPropertyRule.initialValue;
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}} which is a {{CSSXref("&lt;declaration-value&gt;")}} as
 defined in [CSS

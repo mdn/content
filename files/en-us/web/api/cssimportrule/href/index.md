@@ -19,13 +19,7 @@ The read-only **`href`** property of the
 The resolved URL will be the {{HTMLAttrxRef("href","link")}} attribute of the
 associated stylesheet.
 
-## Syntax
-
-```js
-var href = CSSImportRule.href;
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}}.
 

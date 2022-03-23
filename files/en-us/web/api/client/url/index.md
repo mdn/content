@@ -16,13 +16,7 @@ browser-compat: api.Client.url
 The **`url`** read-only property of the {{domxref("Client")}}
 interface returns the URL of the current service worker client.
 
-## Syntax
-
-```js
-var clientUrl = client.url;
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}}.
 

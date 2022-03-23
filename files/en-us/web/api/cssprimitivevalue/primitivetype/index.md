@@ -23,13 +23,7 @@ The **`primitiveType`** read-only property of the
 > - the untyped [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model), widely supported, or
 > - the modern [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API), less supported and considered experimental.
 
-## Syntax
-
-```js
-type = cssPrimitiveValue.primitiveType;
-```
-
-### Value
+## Value
 
 An `unsigned short` representing the type of the value. Possible values are:
 

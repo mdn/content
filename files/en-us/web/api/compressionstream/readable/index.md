@@ -13,13 +13,7 @@ browser-compat: api.CompressionStream.readable
 
 The **`readable`** read-only property of the {{domxref("CompressionStream")}} interface returns a {{domxref("ReadableStream")}}.
 
-## Syntax
-
-```js
-let stream = CompressionStream.readable;
-```
-
-### Value
+## Value
 
 A {{domxref("ReadableStream")}}.
 

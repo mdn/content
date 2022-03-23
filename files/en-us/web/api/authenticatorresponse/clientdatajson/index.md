@@ -21,14 +21,7 @@ child objects of `AuthenticatorResponse`, specifically
 {{domxref("AuthenticatorAttestationResponse")}} or
 {{domxref("AuthenticatorAssertionResponse")}}.
 
-## Syntax
-
-```js
-var arrayBuffer = AuthenticatorAttestationResponse.clientDataJSON;
-var arrayBuffer = AuthenticatorAssertionResponse.clientDataJSON;
-```
-
-### Value
+## Value
 
 An {{jsxref("ArrayBuffer")}}.
 

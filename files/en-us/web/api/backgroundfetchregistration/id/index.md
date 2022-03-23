@@ -13,13 +13,7 @@ browser-compat: api.BackgroundFetchRegistration.id
 
 The **`id`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns a copy of the background fetch's `ID`.
 
-## Syntax
-
-```js
-let id = BackgroundFetchRegistration.id;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString","string")}}.
 
