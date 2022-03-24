@@ -33,7 +33,7 @@ new ResizeObserver(callback)
     - `entries`
       - : An array of {{domxref('ResizeObserverEntry')}} objects that can be used to
         access the new dimensions of the element after each change.
-    - `observer`
+    - `observer`{{optional_inline}}
       - : A reference to the `ResizeObserver` itself, so it will definitely be
         accessible from inside the callback, should you need it. This could be used for
         example to automatically unobserve the observer when a certain condition is
