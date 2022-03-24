@@ -33,7 +33,18 @@ An {{domxref("ExtendableMessageEvent")}}. Inherits from {{domxref("ExtendableEve
 
 ## Event properties
 
-{{page("/en-us/docs/Web/API/ExtendableMessageEvent", "Properties")}}
+_Inherits properties from its parent, {{domxref("ExtendableEvent")}}_.
+
+- {{domxref("ExtendableMessageEvent.data")}} {{readonlyinline}}
+  - : Returns the event's data. It can be any data type.
+- {{domxref("ExtendableMessageEvent.origin")}} {{readonlyinline}}
+  - : Returns the origin of the {{domxref("Client")}} that sent the message.
+- {{domxref("ExtendableMessageEvent.lastEventId")}} {{readonlyinline}}
+  - : Represents, in [server-sent events](/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events), the last event ID of the event source. This is an empty string.
+- {{domxref("ExtendableMessageEvent.source")}} {{readonlyinline}}
+  - : Returns a reference to the {{domxref("Client")}} object that sent the message.
+- {{domxref("ExtendableMessageEvent.ports")}} {{readonlyinline}}
+  - : Returns the array containing the {{domxref("MessagePort")}} objects representing the ports of the associated message channel.
 
 ## Examples
 
