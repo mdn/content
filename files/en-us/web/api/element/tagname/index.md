@@ -24,13 +24,7 @@ For example, if the element is an {{HTMLElement("img")}}, its
 `tagName` property is `"IMG"` (for HTML documents; it may be cased
 differently for XML/XHTML documents).
 
-## Syntax
-
-```js
-elementName = Element.tagName;
-```
-
-### Value
+## Value
 
 A string indicating the element's tag name. This string's capitalization depends on the
 document type:

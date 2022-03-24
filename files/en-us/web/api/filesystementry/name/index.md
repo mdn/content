@@ -19,13 +19,7 @@ specifying the entry's name; this is the entry within its parent directory (the 
 component of the path as indicated by the {{domxref("FileSystemEntry.fullPath",
     "fullPath")}} property).
 
-## Syntax
-
-```js
-var name = FileSystemEntry.name;
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}} indicating the entry's name.
 

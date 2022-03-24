@@ -17,14 +17,7 @@ The **`ariaLevel`** property of the {{domxref("Element")}} interface reflects th
 
 > **Note:** Where possible use an HTML {{htmlelement("h1")}} or other correct heading level as these have built in semantics and do not require ARIA attributes.
 
-## Syntax
-
-```js
-var ariaLevel = element.ariaLevel;
-element.ariaLevel = ariaLevel
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} containing an integer.
 

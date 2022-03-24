@@ -15,14 +15,7 @@ browser-compat: api.Element.ariaExpanded
 
 The **`ariaExpanded`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute, which indicates whether a grouping element owned or controlled by this element is expanded or collapsed.
 
-## Syntax
-
-```js
-var ariaExpanded = element.ariaExpanded;
-element.ariaExpanded = ariaExpanded
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} with one of the following values:
 

@@ -22,13 +22,7 @@ dispatched by the user attempting to reload the page, and `false` otherwise.
 Pressing the refresh button is a reload while clicking a link and pressing the back
 button is not.
 
-## Syntax
-
-```js
-var reloaded = FetchEvent.isReload
-```
-
-### Value
+## Value
 
 A boolean value.
 

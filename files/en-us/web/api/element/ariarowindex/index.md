@@ -15,14 +15,7 @@ browser-compat: api.Element.ariaRowIndex
 
 The **`ariaRowIndex`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) attribute, which defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.
 
-## Syntax
-
-```js
-var ariaRowIndex = element.ariaRowIndex;
-element.ariaRowIndex = ariaRowIndex
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} which contains an integer.
 

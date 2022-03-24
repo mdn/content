@@ -19,13 +19,7 @@ property of the {{domxref("FileSystemEntry")}} interface contains a
 {{domxref("FileSystem")}} object that represents the file system on which the entry
 resides.
 
-## Syntax
-
-```js
-var filesystem = FileSystemEntry.filesystem;
-```
-
-### Value
+## Value
 
 A {{domxref("FileSystem")}} representing the file system on which the file or directory
 described by the `FileSystemEntry` is located..

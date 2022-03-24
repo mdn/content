@@ -18,13 +18,13 @@ The items in menu and menubars are menu items. There are three types of menu ite
 
 A `menuitemradio` is checkable menuitem in a set of elements with the same role, of which only can be checked at a time.
 
-The three menu item elements can only be contained in, or owned by, an element with role [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role) or [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role), optionally nested within a grouping element with role of [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role). Being nested or otherwise owned (see [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)) in a `menu` or `menubar` identifies the menu items as being related widgets. 
+The three menu item elements can only be contained in, or owned by, an element with role [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role) or [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role), optionally nested within a grouping element with role of [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role). Being nested or otherwise owned (see [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)) in a `menu` or `menubar` identifies the menu items as being related widgets.
 
 When all items in a submenu are members of the same radio group, the `group` is defined by the menu element; the `group` element is not necessary.
 
 Menu items containing the role of `menuitemradio` must include the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute to expose the radio button's state to assistive technology, unless using [`<input type="radio">`](/en-US/docs/Web/HTML/Element/Input/checkbox), in which case the ['checked'](/en-US/docs/Web/HTML/Element/Input/checkbox#attr-checked) attribute should be used.
 
-Similar to the 'checked' attribute of {{HTMLElement('input')}}s of type `radio`, the `aria-checked` attribute of a `menuitemradio` indicates whether the menu item is checked (`true`), unchecked (`false`). If missing, the value defaults to `false`. There is no `mixed` value like there is for `menuitemcheckbox`. 
+Similar to the 'checked' attribute of {{HTMLElement('input')}}s of type `radio`, the `aria-checked` attribute of a `menuitemradio` indicates whether the menu item is checked (`true`), unchecked (`false`). If missing, the value defaults to `false`. There is no `mixed` value like there is for `menuitemcheckbox`.
 
 Only one `menuitemradio` in a group can be checked at the same time. When one item in the group is checked, the `aria-checked` attribute gets set to `true`, while the previously checked `menuitemradio` element in the same group, if there was one, becomes unchecked, by having the `aria-checked` attribute value switched to `false`.  
 
@@ -36,7 +36,7 @@ An accessible name is required. Ideally, the accessible name should come from an
 
 If all elements in the set are not present in the DOM include the [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) and [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) properties. When specifying `aria-setsize` and `aria-posinset` on a `menuitemradio`, set the value with respect to the total number of items in the menu, excluding any separators.
 
-The `menuitemradio` element can have phrasing content, but can not have interactive content as descendants and no descendants with a `tabindex` attribute specified. 
+The `menuitemradio` element can have phrasing content, but can not have interactive content as descendants and no descendants with a `tabindex` attribute specified.
 
 ### All descendants are presentational
 
@@ -73,13 +73,13 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 ### Keyboard interactions
 
-When a `menu` opens, or when a `menubar` receives focus, keyboard focus is placed on the first item. All items in both are focusable, including all `menuitemradio` elements. 
+When a `menu` opens, or when a `menubar` receives focus, keyboard focus is placed on the first item. All items in both are focusable, including all `menuitemradio` elements.
 
 If the `menuitemradio` is in a submenu in a `menubar` or a menu opened with a menu button, the following keyboard interactions must be programmed in. :
 
 - <kbd>Enter</kbd>
   - : If not checked, checks the focused `menuitemradio` and unchecks any other checked `menuitemradio` element in the same group. Also, closes the menu.
-- <kbd>Space</kbd> 
+- <kbd>Space</kbd>
   - : If not checked, checks the focused `menuitemradio` and unchecks any other checked `menuitemradio` element in the same group without closing the menu.
 - <kbd>Escape</kbd>
   - : Closes menu. In menubar, moves focus to parent menubar item.
@@ -113,7 +113,7 @@ If the `menuitemradio` is in a submenu in a `menubar` or a menu opened with a me
 <li role="menuitemradio" tabindex="-1" aria-checked="false">Purple</li>
 ```
 
-The [`tabindex="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) makes the `menuitemradio` focusable but not part of the page tab sequence. Had we included `aria-checked="true"` it would have indicated that the `menuitemradio` was checked, and we would have visually styled the selected state to look checked using the attribute selector `[role='menuitemradio'][aria-checked='true']`. Instead, the presence of `aria-checked="false indicates to assistive technologies that the `menuitemradio` is checkable but not currently checked. The accessible name "purple" comes from the contents. 
+The [`tabindex="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) makes the `menuitemradio` focusable but not part of the page tab sequence. Had we included `aria-checked="true"` it would have indicated that the `menuitemradio` was checked, and we would have visually styled the selected state to look checked using the attribute selector `[role='menuitemradio'][aria-checked='true']`. Instead, the presence of `aria-checked="false indicates to assistive technologies that the`menuitemradio` is checkable but not currently checked. The accessible name "purple" comes from the contents.
 
 The visual appearance of the selected state is a checked radio button which we can create using [generated content](/en-US/docs/Web/CSS/CSS_Generated_Content), making it visible and the same color as the content by synchronizing with the `aria-checked` value using CSS [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) and changing the [`background-color`](/en-US/docs/Web/CSS/background-color).
 
@@ -137,7 +137,7 @@ The visual appearance of the selected state is a checked radio button which we c
 
 Don't use the [`background`](/en-US/docs/Web/CSS/background) shorthand property, as that will override the [`background-clip`](/en-US/docs/Web/CSS/background-clip) property we used to create the radio button effect.
 
-### Prefer HTML 
+### Prefer HTML
 
 The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. As such, it is recommended to use the native [HTML radio button](/en-US/docs/Web/HTML/Element/input/radio) form control instead of recreating a radio button's functionality with JavaScript and ARIA.
 
@@ -150,9 +150,9 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 
 ## See Also
 
--  [`menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
--  [`radio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role)
--  [`<input type="radio">`](/en-US/docs/Web/HTML/Element/Input/radio)
+- [`menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
+- [`radio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role)
+- [`<input type="radio">`](/en-US/docs/Web/HTML/Element/Input/radio)
 
 <section id="Quick_links">
 

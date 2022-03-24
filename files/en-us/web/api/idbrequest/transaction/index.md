@@ -22,7 +22,7 @@ This property can be `null` for requests not made within transactions,
 such as for requests returned from {{domxref("IDBFactory.open")}} — in this case
 you're just connecting to a database, so there is no transaction to return. If a
 version upgrade is needed when opening a database then during the
-{{domxref("IDBOpenDBRequest.onupgradeneeded", "upgradeneeded")}} event handler the
+{{domxref("IDBOpenDBRequest.upgradeneeded_event", "upgradeneeded")}} event handler the
 **`transaction`** property will be an
 {{domxref("IDBTransaction")}} with {{domxref("IDBTransaction.mode", "mode")}} equal
 to `"versionchange"`, and can be used to access existing object stores and

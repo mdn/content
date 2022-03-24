@@ -27,13 +27,7 @@ Additionally, if the fetch isn't a navigation, `replacesClientId` will be an
 empty string. This could be used to access/communicate with a client that will
 imminently be replaced, right before a navigation.
 
-## Syntax
-
-```js
-var myReplacedClientId = fetchEvent.replacesClientId;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}.
 

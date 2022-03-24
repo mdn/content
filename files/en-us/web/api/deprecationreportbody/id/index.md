@@ -13,13 +13,7 @@ browser-compat: api.DeprecationReportBody.id
 
 The **`id`** read-only property of the {{domxref("DeprecationReportBody")}} interface returns a string representing the feature or API that is deprecated. This can be used to group or count related reports.
 
-## Syntax
-
-```js
-let id = DeprecationReportBody.id;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString","string")}}.
 

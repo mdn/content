@@ -19,13 +19,7 @@ The **`loaded`** read-only property of the
 current `FontFace` object when the font specified in the object's constructor
 is done loading or rejects with a `SyntaxError`.
 
-## Syntax
-
-```js
-let promise = FontFace.loaded;
-```
-
-### Value
+## Value
 
 A {{jsxref('Promise')}} that resolves with the current `FontFace` object.
 

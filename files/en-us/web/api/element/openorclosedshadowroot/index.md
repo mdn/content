@@ -28,13 +28,7 @@ property represents the shadow root hosted by the element, regardless if its
 Use {{DOMxRef("Element.attachShadow()")}} to add a shadow
 root to an existing element.
 
-## Syntax
-
-```js
-var shadowroot = element.openOrClosedShadowRoot;
-```
-
-### Value
+## Value
 
 A {{DOMxRef("ShadowRoot")}} object instance, regardless if its
 {{DOMxRef("ShadowRoot.mode", "mode")}} is set to `open` or

@@ -15,13 +15,7 @@ browser-compat: api.Document.images
 The **`images`** read-only property of
 the {{domxref("Document")}} interface returns a [collection](/en-US/docs/Web/API/HTMLCollection) of the [images](/en-US/docs/Web/API/HTMLImageElement/Image) in the current HTML document.
 
-## Syntax
-
-```js
-var imageCollection = document.images;
-```
-
-### Value
+## Value
 
 An {{domxref("HTMLCollection")}} providing a live list of all of the images contained
 in the current document. Each entry in the collection is an

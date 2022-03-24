@@ -19,14 +19,7 @@ The **`unicodeRange`** property of the
 encompassing the font. It is equivalent to the {{cssxref("@font-face/unicode-range",
   "unicode-range")}} descriptor.
 
-## Syntax
-
-```js
-let unicodeRangeDescriptor = FontFace.unicodeRange;
-FontFace.unicodeRange = unicodeRangeDescriptor;
-```
-
-### Value
+## Value
 
 A {{domxref('CSSOMString')}} containing a descriptor as it would appear in a style
 sheet's `@font-face` rule.

@@ -5680,9 +5680,12 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/omnibox/OnInputEnteredDisposition	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox/OnInputEnteredDisposition
 /en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Bundled_web_pages	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 /en-US/docs/Mozilla/Add-ons/WebExtensions/web-ext	https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/
+/en-US/docs/Mozilla/Command_Line_Options	https://wiki.mozilla.org/Firefox/CommandLineOptions
 /en-US/docs/Mozilla/Debugging/HTTP_logging	https://firefox-source-docs.mozilla.org/networking/http/logging.html
 /en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_Firefox_build/Linux_and_MacOS_build_preparation	https://firefox-source-docs.mozilla.org/setup/linux_build.html
 /en-US/docs/Mozilla/Developer_guide/ESLint	https://firefox-source-docs.mozilla.org/code-quality/lint/index.html
+/en-US/docs/Mozilla/Developer_guide/Source_Code/Directory_structure	https://firefox-source-docs.mozilla.org/contributing/directory_structure.html
+/en-US/docs/Mozilla/Firefox/Performance_best_practices_for_Firefox_fe_engineers	https://firefox-source-docs.mozilla.org/performance/bestpractices.html
 /en-US/docs/Mozilla/Firefox/Privacy	/en-US/docs/Web/Privacy
 /en-US/docs/Mozilla/Firefox/Privacy/Redirect_tracking_protection	/en-US/docs/Web/Privacy/Redirect_tracking_protection
 /en-US/docs/Mozilla/Firefox/Privacy/State_Partitioning	/en-US/docs/Web/Privacy/State_Partitioning
@@ -5699,6 +5702,7 @@
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_47_for_developers	/en-US/docs/Mozilla/Firefox/Releases/47
 /en-US/docs/Mozilla/Firefox/Releases/developers	/en-US/docs/Mozilla/Firefox/Releases/63
 /en-US/docs/Mozilla/MathML_Project/Fonts	/en-US/docs/Web/MathML/Fonts
+/en-US/docs/Mozilla/Performance/Profiling_with_the_Built-in_Profiler	https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html
 /en-US/docs/Mozilla/Performance/Scroll-linked_effects	https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html
 /en-US/docs/Mozilla/Projects/NSPR	https://firefox-source-docs.mozilla.org/nspr/index.html
 /en-US/docs/Mozilla/Projects/NSPR/Creating_a_cookie_log	https://firefox-source-docs.mozilla.org/nspr/index.html
@@ -6864,6 +6868,7 @@
 /en-US/docs/Tools/Web_Console/WebConsoleHelp	https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html
 /en-US/docs/Tools/about:debugging	https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html
 /en-US/docs/Tools/about:debugging/about:debugging_before_Firefox_67	https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/about_colon_debugging_before_firefox_68/index.html
+/en-US/docs/Tools/about_colon_debugging	https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html
 /en-US/docs/Tools/about_colon_debugging/about_colon_debugging_before_firefox_68	https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/about_colon_debugging_before_firefox_68/index.html
 /en-US/docs/Tools/accessibility_inspector/simulation	https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/simulation/index.html
 /en-US/docs/Tools/accessing_the_developer_tools	https://firefox-source-docs.mozilla.org/devtools-user/accessing_the_developer_tools/index.html
@@ -8397,9 +8402,11 @@
 /en-US/docs/Web/API/IDBObjectStore.transaction	/en-US/docs/Web/API/IDBObjectStore/transaction
 /en-US/docs/Web/API/IDBOpenDBRequest.cmp	/en-US/docs/Web/API/IDBFactory/cmp
 /en-US/docs/Web/API/IDBOpenDBRequest.deleteDatabase	/en-US/docs/Web/API/IDBFactory/deleteDatabase
-/en-US/docs/Web/API/IDBOpenDBRequest.onblocked	/en-US/docs/Web/API/IDBOpenDBRequest/onblocked
-/en-US/docs/Web/API/IDBOpenDBRequest.onupgrade	/en-US/docs/Web/API/IDBOpenDBRequest/onupgradeneeded
-/en-US/docs/Web/API/IDBOpenDBRequest.onupgradeneeded	/en-US/docs/Web/API/IDBOpenDBRequest/onupgradeneeded
+/en-US/docs/Web/API/IDBOpenDBRequest.onblocked	/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event
+/en-US/docs/Web/API/IDBOpenDBRequest.onupgrade	/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event
+/en-US/docs/Web/API/IDBOpenDBRequest.onupgradeneeded	/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event
+/en-US/docs/Web/API/IDBOpenDBRequest/onblocked	/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event
+/en-US/docs/Web/API/IDBOpenDBRequest/onupgradeneeded	/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event
 /en-US/docs/Web/API/IDBRequest.add	/en-US/docs/Web/API/IDBObjectStore/add
 /en-US/docs/Web/API/IDBRequest.clear	/en-US/docs/Web/API/IDBObjectStore/clear
 /en-US/docs/Web/API/IDBRequest.count	/en-US/docs/Web/API/IDBIndex/count
@@ -8409,8 +8416,8 @@
 /en-US/docs/Web/API/IDBRequest.getAll	/en-US/docs/Web/API/IDBIndex/getAll
 /en-US/docs/Web/API/IDBRequest.getAllKeys	/en-US/docs/Web/API/IDBIndex/getAllKeys
 /en-US/docs/Web/API/IDBRequest.getKey	/en-US/docs/Web/API/IDBIndex/getKey
-/en-US/docs/Web/API/IDBRequest.onerror	/en-US/docs/Web/API/IDBRequest/onerror
-/en-US/docs/Web/API/IDBRequest.onsuccess	/en-US/docs/Web/API/IDBRequest/onsuccess
+/en-US/docs/Web/API/IDBRequest.onerror	/en-US/docs/Web/API/IDBRequest/error_event
+/en-US/docs/Web/API/IDBRequest.onsuccess	/en-US/docs/Web/API/IDBRequest/success_event
 /en-US/docs/Web/API/IDBRequest.open	/en-US/docs/Web/API/IDBFactory/open
 /en-US/docs/Web/API/IDBRequest.openCursor	/en-US/docs/Web/API/IDBIndex/openCursor
 /en-US/docs/Web/API/IDBRequest.openKeyCursor	/en-US/docs/Web/API/IDBIndex/openKeyCursor
@@ -8421,6 +8428,8 @@
 /en-US/docs/Web/API/IDBRequest.transaction	/en-US/docs/Web/API/IDBRequest/transaction
 /en-US/docs/Web/API/IDBRequest.update	/en-US/docs/Web/API/IDBCursor/update
 /en-US/docs/Web/API/IDBRequest/blocked_event	/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event
+/en-US/docs/Web/API/IDBRequest/onerror	/en-US/docs/Web/API/IDBRequest/error_event
+/en-US/docs/Web/API/IDBRequest/onsuccess	/en-US/docs/Web/API/IDBRequest/success_event
 /en-US/docs/Web/API/IDBRequest/upgradeneeded_event	/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event
 /en-US/docs/Web/API/IDBTransaction.abort	/en-US/docs/Web/API/IDBTransaction/abort
 /en-US/docs/Web/API/IDBTransaction.db	/en-US/docs/Web/API/IDBTransaction/db
@@ -9280,6 +9289,8 @@
 /en-US/docs/Web/API/ServiceWorkerContainer.controller	/en-US/docs/Web/API/ServiceWorkerContainer/controller
 /en-US/docs/Web/API/ServiceWorkerContainer.getRegistration([scope])	/en-US/docs/Web/API/ServiceWorkerContainer/getRegistration
 /en-US/docs/Web/API/ServiceWorkerContainer.register	/en-US/docs/Web/API/ServiceWorkerContainer/register
+/en-US/docs/Web/API/ServiceWorkerContainer/oncontrollerchange	/en-US/docs/Web/API/ServiceWorkerContainer/controllerchange_event
+/en-US/docs/Web/API/ServiceWorkerContainer/onerror	/en-US/docs/Web/API/ServiceWorkerContainer/error_event
 /en-US/docs/Web/API/ServiceWorkerContainer/onmessage	/en-US/docs/Web/API/ServiceWorkerContainer/message_event
 /en-US/docs/Web/API/ServiceWorkerGlobalScope.skipWaiting	/en-US/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting
 /en-US/docs/Web/API/ServiceWorkerGlobalScope/ServiceWorkerGlobalScope.onfetch	/en-US/docs/Web/API/ServiceWorkerGlobalScope/onfetch

@@ -12,7 +12,7 @@ browser-compat: api.ServiceWorkerContainer.message_event
 
 The **`message`** event is used in a page controlled by a service worker to receive messages from the service worker.
 
-This event is not cancellable and does not bubble.
+This event is not cancelable and does not bubble.
 
 ## Syntax
 

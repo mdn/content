@@ -13,13 +13,7 @@ browser-compat: api.ElementInternals.shadowRoot
 
 The **`shadowRoot`** read-only property of the {{domxref("ElementInternals")}} interface returns the {{domxref("ShadowRoot")}} for this element.
 
-## Syntax
-
-```js
-let shadowRoot = ElementInternals.shadowRoot;
-```
-
-### Value
+## Value
 
 A {{domxref("ShadowRoot")}} if the element has a shadow root, otherwise `null`.
 

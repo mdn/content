@@ -58,7 +58,7 @@ However, unlike the `unload` event, there is a legitimate use case for the `befo
 
 It is recommended that developers listen for `beforeunload` only in this scenario, and only when they actually have unsaved changes, so as to minimize the effect on performance. See the Examples section below for an example of this.
 
-See the [Page Lifecycle API](https://developers.google.com/web/updates/2018/07/page-lifecycle-api#the-beforeunload-event) guide for more information about the problems associated with the `beforeunload` event.
+See the [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/) guide for more information about the problems associated with the `beforeunload` event.
 
 ## Examples
 

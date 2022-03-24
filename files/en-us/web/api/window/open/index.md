@@ -73,12 +73,12 @@ open(url, target, windowFeatures);
     - `noreferrer`
       - : If this feature is set, the browser will omit the {{HTTPHeader("Referer")}} header, as well as set `noopener` to true. See [`rel="noreferrer"`](/en-US/docs/Web/HTML/Link_types#noreferrer) for more information.
 
-
 ### Return value
 
 A [WindowProxy](/en-US/docs/Glossary/WindowProxy) object. The returned reference can be used to access properties and methods of the new window as long as it complies with [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) security requirements.
 
 ## Description
+
 The {{domxref("Window")}} interface's open() method takes a URL as a parameter, and loads the resource it identifies into a new or existing tab or window. The target parameter determines which window or tab to load the resource into, and the windowFeatures parameter can be used to control the size and position of a new window, and to open the new window as a popup with minimal UI features.
 
 Note that remote URLs won't load immediately. When window.open() returns, the window always contains about:blank. The actual fetching of the URL is deferred and starts after the current script block finishes executing. The window creation and the loading of the referenced resource are done asynchronously.
