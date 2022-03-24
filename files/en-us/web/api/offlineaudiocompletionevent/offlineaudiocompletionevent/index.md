@@ -22,7 +22,7 @@ The **`OfflineAudioCompletionEvent()`** constructor of the [Web Audio API](/en-U
 ## Syntax
 
 ```js
-var offlineAudioCompletionEvent = new OfflineAudioCompletionEvent(type, init)
+new OfflineAudioCompletionEvent(type, init)
 ```
 
 ### Parameters

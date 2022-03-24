@@ -18,7 +18,7 @@ The **`Worker()`** constructor creates a {{domxref("Worker")}} object that execu
 ## Syntax
 
 ```js
-var myWorker = new Worker(aURL, options);
+new Worker(aURL, options);
 ```
 
 ### Parameters

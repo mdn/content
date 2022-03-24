@@ -20,7 +20,7 @@ Every CSS declaration includes a property / value pair. Depending on the propert
 - {{cssxref("&lt;custom-ident&gt;")}}
 - Pre-defined keywords as an `<ident>`
 - {{cssxref("&lt;string&gt;")}}
-- {{cssxref("url()","url()")}}
+- {{cssxref("url","url()")}}
 
 Text data types are either `<string>`, a quoted series of characters, or an `<ident>`, a "CSS Identifier" which is an unquoted string. A `<string>` must be quoted with either single or double quotes. CSS Identifiers, listed in the specifications as `<ident>` or `<custom-ident>`, must be unquoted.
 
@@ -85,7 +85,7 @@ A fourth value of {{cssxref("revert")}} was added in the Cascade Level 4 specifi
 
 ### URLs
 
-A {{cssxref("url()","url()")}} type uses functional notation, which accepts a `<string>` that is a URL. This may be an absolute URL or a relative URL. For example, if you wanted to include a background image, you might use either of the following.
+A {{cssxref("url","url()")}} type uses functional notation, which accepts a `<string>` that is a URL. This may be an absolute URL or a relative URL. For example, if you wanted to include a background image, you might use either of the following.
 
 ```css
 .box {
@@ -97,7 +97,7 @@ A {{cssxref("url()","url()")}} type uses functional notation, which accepts a `<
 }
 ```
 
-The parameter for `url()` can be either quoted or unquoted. If unquoted, it is parsed as a `<url-token>`, which has extra requirements including the escaping of certain characters. See {{cssxref("url()","url()")}}  for more information.
+The parameter for `url()` can be either quoted or unquoted. If unquoted, it is parsed as a `<url-token>`, which has extra requirements including the escaping of certain characters. See {{cssxref("url","url()")}}  for more information.
 
 ## Numeric data types
 
@@ -248,13 +248,13 @@ The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object ins
 
 ### Functional notation
 
-- {{cssxref("calc()", "calc()")}}
-- {{cssxref("min()", "min()")}}
-- {{cssxref("max()", "max()")}}
-- {{cssxref("minmax()", "minmax()")}}
-- {{cssxref("clamp()", "clamp()")}}
+- {{cssxref("calc", "calc()")}}
+- {{cssxref("min", "min()")}}
+- {{cssxref("max", "max()")}}
+- {{cssxref("minmax", "minmax()")}}
+- {{cssxref("clamp", "clamp()")}}
 - {{cssxref("toggle", "toggle()")}}
-- {{cssxref("attr()", "attr()")}}
+- {{cssxref("attr", "attr()")}}
 
 [Functional notation](/en-US/docs/Web/CSS/CSS_Functions) is a type of value that can represent more complex types or invoke special processing by CSS. The syntax starts with the name of the function immediately followed by a left parenthesis `(` followed by the argument(s) to the notation followed by a right parenthesis `)`. Functions can take multiple arguments, which are formatted similarly to a CSS property value.
 

@@ -59,7 +59,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
 
 - `<url>` {{optional_inline}}
   - : A `url(…)` or a comma separated list `url(…), url(…), …`, pointing to an image file.
-    More than one {{cssxref("url()")}} may be provided as fallbacks, in case some cursor image types are not supported.
+    More than one {{cssxref("url", "url()")}} may be provided as fallbacks, in case some cursor image types are not supported.
     A non-URL fallback (one or more of the keyword values) _must_ be at the end of the fallback list.
 - `<x>` `<y>` {{optional_inline}}
   - : Optional x- and y-coordinates indicating the cursor hotspot; the precise position within the cursor that is being pointed to.
@@ -402,4 +402,4 @@ Cursor changes that intersect toolbar areas are commonly blocked to avoid spoofi
 ## See also
 
 - {{cssxref("pointer-events")}}
-- {{cssxref("url()", "url()")}} function
+- {{cssxref("url", "url()")}} function

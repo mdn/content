@@ -17,13 +17,7 @@ The **`Animation.finished`** read-only property of the [Web Animations API](/en-
 
 > **Note:** Every time the animation leaves the `finished` play state (that is, when it starts playing again), a new `Promise` is created for this property. The new `Promise` will resolve once the new animation sequence has completed.
 
-## Syntax
-
-```js
-var animationsPromise = Animation.finished;
-```
-
-### Value
+## Value
 
 A {{jsxref("Promise")}} object which will resolve once the animation has finished running.
 

@@ -14,7 +14,7 @@ The **`VideoDecoder`** interface of the {{domxref('WebCodecs API','','','true')}
 
 ## Constructor
 
-- {{domxref("VideoDecoder.VideoDecoder()")}}
+- {{domxref("VideoDecoder.VideoDecoder", "VideoDecoder()")}}
   - : Creates a new `VideoDecoder` object.
 
 ## Properties

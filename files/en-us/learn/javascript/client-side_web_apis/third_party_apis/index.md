@@ -47,7 +47,7 @@ The APIs we've covered so far are built into the browser, but not all APIs are. 
 
 Third party APIs are APIs provided by third parties — generally companies such as Facebook, Twitter, or Google — to allow you to access their functionality via JavaScript and use it on your site. One of the most obvious examples is using mapping APIs to display custom maps on your pages.
 
-Let's look at a [Simple Mapquest API example](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/mapquest/live/index.html), and use it to illustrate how third-party APIs differ from browser APIs.
+Let's look at a [Simple Mapquest API example](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/mapquest/finished/), and use it to illustrate how third-party APIs differ from browser APIs.
 
 > **Note:** You might want to just [get all our code examples](/en-US/docs/Learn#getting_our_code_examples) at once, in which case you can then just search the repo for the example files you need in each section.
 
@@ -111,7 +111,7 @@ Requiring a key enables the API provider to hold users of the API accountable fo
 
 Let's add some more functionality to the Mapquest example to show how to use some other features of the API.
 
-1. To start this section, make yourself a copy of the [mapquest starter file](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/mapquest/start/index.html), in a new directory. If you've already [cloned the examples repository](/en-US/docs/Learn#getting_our_code_examples), you'll already have a copy of this file, which you can find in the _javascript/apis/third-party-apis/mapquest/start_ directory.
+1. To start this section, make yourself a copy of the [mapquest starter file](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/mapquest/start/index.html), in a new directory. If you've already [cloned the examples repository](/en-US/docs/Learn#getting_our_code_examples), you'll already have a copy of this file, which you can find in the _javascript/apis/third-party-apis/mapquest/start_ directory.
 2. Next, you need to go to the [Mapquest developer site](https://developer.mapquest.com/), create an account, and then create a developer key to use with your example. (At the time of writing, it was called a "consumer key" on the site, and the key creation process also asked for an optional "callback URL". You don't need to fill in a URL here: just leave it blank.)
 3. Open up your starting file, and replace the API key placeholder with your key.
 
@@ -169,7 +169,7 @@ Finally, we chain `.addTo(map)` to the end of the chain to actually add the mark
 
 Have a play with the other options shown in the documentation and see what you can come up with! Mapquest provides some pretty advanced functionality, such as directions, searching, etc.
 
-> **Note:** If you have trouble getting the example to work, check your code against our [finished version](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/mapquest/finished/script.js) (also [see it running live here](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/mapquest/finished/)).
+> **Note:** If you have trouble getting the example to work, check your code against our [finished version](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/mapquest/finished/script.js) (also [see it running live here](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/mapquest/finished/)).
 
 ## A RESTful API — NYTimes
 
@@ -189,7 +189,7 @@ Most APIs require you to use some kind of developer key, for reasons of security
 
 1. Let's request a key for the Article Search API — create a new app, selecting this as the API you want to use (fill in a name and description, toggle the switch under the "Article Search API" to the on position, and then click "Create").
 2. Get the API key from the resulting page.
-3. Now, to start the example off, make a copy of all the files in the [nytimes/start](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/start) directory. If you've already [cloned the examples repository](/en-US/docs/Learn#getting_our_code_examples), you'll already have a copy of these files, which you can find in the _javascript/apis/third-party-apis/nytimes/start_ directory. Initially the `script.js` file contains a number of variables needed for the setup of the example; below we'll fill in the required functionality.
+3. Now, to start the example off, make a copy of all the files in the [nytimes/start](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/nytimes/start) directory. If you've already [cloned the examples repository](/en-US/docs/Learn#getting_our_code_examples), you'll already have a copy of these files, which you can find in the _javascript/apis/third-party-apis/nytimes/start_ directory. Initially the `script.js` file contains a number of variables needed for the setup of the example; below we'll fill in the required functionality.
 
 The app will end up allowing you to type in a search term and optional start and end dates, which it will then use to query the Article Search API and display the search results.
 
@@ -380,7 +380,7 @@ This allows us to write a simplistic pagination function.
 
     The second function works nearly exactly the same way in reverse, but we also have to take the extra step of checking that `pageNumber` is not already zero before decrementing it — if the fetch request runs with a minus `page` URL parameter, it could cause errors. If the `pageNumber` is already 0, we [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) out of the function — if we are already at the first page, we don't need to load the same results again.
 
-> **Note:** You can find our [finished NYTimes API example code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/finished/index.html) (also [see it running live here](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/finished/)).
+> **Note:** You can find our [finished NYTimes API example code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/nytimes/finished/index.html) (also [see it running live here](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/finished/)).
 
 ## YouTube example
 

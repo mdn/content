@@ -21,7 +21,7 @@ properties that take a position, for example {{cssxref('object-position')}}.
 ## Syntax
 
 ```js
-cvar cssPositionValue = new CSSPositionValue(x, y)
+new CSSPositionValue(x, y)
 ```
 
 ### Parameters

@@ -45,7 +45,7 @@ These types include keywords and identifiers as well as strings, and urls.
 - `<string>`
   - : A quoted string, such as used for a value of the {{cssxref("content")}} property. See more information on the {{cssxref("&lt;string&gt;")}} type.
 - `<url>`
-  - : A pointer to a resource, for example as the value of {{cssxref("background-image")}}. See more information on the {{cssxref("url()")}} page.
+  - : A pointer to a resource, for example as the value of {{cssxref("background-image")}}. See more information on the {{cssxref("url", "url()")}} page.
 
 ## Numeric data types
 
@@ -71,7 +71,7 @@ These types are used to specify distance and other quantities.
 - `<length>`
   - : Lengths are a `<dimension>` and refer to distances. See more information on the {{cssxref("&lt;length&gt;")}} page.
 - `<angle>`
-  - : Angles are used in properties such as {{cssxref("gradient/linear-gradient()", "linear-gradient()")}} and are a `<dimension>` with one of `deg`, `grad`, `rad`, or `turn` units attached. See more information on the {{cssxref("&lt;angle&gt;")}} page.
+  - : Angles are used in properties such as {{cssxref("gradient/linear-gradient", "linear-gradient()")}} and are a `<dimension>` with one of `deg`, `grad`, `rad`, or `turn` units attached. See more information on the {{cssxref("&lt;angle&gt;")}} page.
 - `<time>`
   - : Duration units are a `<dimension>` with an `s` or `ms` unit. See more information on the {{cssxref("&lt;time&gt;")}} page.
 - `<frequency>`

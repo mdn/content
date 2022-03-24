@@ -30,7 +30,7 @@ API](/en-US/docs/Web/API/MediaStream_Recording_API).
 ## Syntax
 
 ```js
-var errorEvent = new MediaRecorderErrorEvent(errorInfo)
+new MediaRecorderErrorEvent(errorInfo)
 ```
 
 ### Parameters

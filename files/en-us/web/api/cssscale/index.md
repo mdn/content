@@ -20,7 +20,7 @@ The **`CSSScale`** interface of the {{domxref('CSS_Object_Model#css_typed_object
 
 ## Constructor
 
-- {{domxref("CSSScale.CSSScale()")}}
+- {{domxref("CSSScale.CSSScale", "CSSScale()")}}
   - : Creates a new `CSSScale` object.
 
 ## Properties

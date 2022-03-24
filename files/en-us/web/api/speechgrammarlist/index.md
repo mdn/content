@@ -20,7 +20,7 @@ Grammar is defined using [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (
 
 ## Constructor
 
-- {{domxref("SpeechGrammarList.SpeechGrammarList()")}}
+- {{domxref("SpeechGrammarList.SpeechGrammarList", "SpeechGrammarList()")}}
   - : Creates a new `SpeechGrammarList` object.
 
 ## Properties

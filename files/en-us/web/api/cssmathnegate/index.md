@@ -19,7 +19,7 @@ The **`CSSMathNegate`** interface of the {{domxref('CSS_Object_Model#css_typed_o
 
 ## Constructor
 
-- {{domxref("CSSMathNegate.CSSMathNegate()")}}
+- {{domxref("CSSMathNegate.CSSMathNegate", "CSSMathNegate()")}}
   - : Creates a new `CSSMathNegate` object.
 
 ## Properties

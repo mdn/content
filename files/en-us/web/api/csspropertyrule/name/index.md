@@ -17,13 +17,7 @@ browser-compat: api.CSSPropertyRule.name
 
 The read-only **`name`** property of the {{domxref("CSSPropertyRule")}} interface represents the property name, this being the serialization of the name given to the custom property in the {{cssxref("@property")}} rule's prelude.
 
-## Syntax
-
-```js
-const name = CSSPropertyRule.name;
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}}.
 

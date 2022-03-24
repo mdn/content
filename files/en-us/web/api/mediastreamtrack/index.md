@@ -75,16 +75,12 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
 
 - {{domxref("MediaStreamTrack/ended_event", "ended")}}
   - : Sent when playback of the track ends (when the value {{domxref("MediaStreamTrack.readyState", "readyState")}} changes to `ended`).
-    Also available using the {{domxref("MediaStreamTrack/onended", "onended")}} event handler property.
 - {{domxref("MediaStreamTrack/mute_event", "mute")}}
   - : Sent to the `MediaStreamTrack` when the value of the {{domxref("MediaStreamTrack.muted", "muted")}} property is changed to `true`, indicating that the track is unable to provide data temporarily (such as when the network is experiencing a service malfunction).
-    Also available using the {{domxref("MediaStreamTrack/onmute", "onmute")}} event handler property.
 - {{domxref("MediaStreamTrack/overconstrained_event", "overconstrained")}} {{deprecated_inline}}
   - : Sent when the constraints specified for the track cause the track to be incompatible and therefore to not be used.
-    Also available through the {{domxref("MediaStreamTrack/onoverconstrained", "onoverconstrained")}} event handler property.
 - {{domxref("MediaStreamTrack/unmute_event", "unmute")}}
   - : Sent to the track when data becomes available again, ending the `muted` state.
-    Also available through the {{domxref("MediaStreamTrack/onunmute", "onunmute")}} event handler property.
 
 ## Specifications
 

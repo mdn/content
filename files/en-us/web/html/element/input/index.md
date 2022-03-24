@@ -45,7 +45,7 @@ The available types are as follows:
       <td>{{HTMLElement("input/button", "button")}}</td>
       <td>
         A push button with no default behavior displaying the value of the
-        {{anch('attr-value', 'value')}} attribute, empty by default.
+        <a href="#attr-value">value</a> attribute, empty by default.
       </td>
       <td id="examplebutton">
         <pre class="brush: html hidden">
@@ -125,7 +125,7 @@ The available types are as follows:
       <td>{{HTMLElement("input/file", "file")}}</td>
       <td>
         A control that lets the user select a file. Use the
-        {{anch('attr-accept', 'accept')}} attribute to define the
+        [accept](#attr-accept) attribute to define the
         types of files that the control can select.
       </td>
       <td id="examplefile">
@@ -152,8 +152,8 @@ The available types are as follows:
       <td>{{HTMLElement("input/image", "image")}}</td>
       <td>
         A graphical <code>submit</code> button. Displays an image defined by the
-        <code>src</code> attribute. The {{anch('attr-alt', 'alt')}}
-        attribute displays if the image {{anch('attr-src', 'src')}} is
+        <code>src</code> attribute. The [alt](#attr-alt)
+        attribute displays if the image [src](#attr-src) is
         missing.
       </td>
       <td id="exampleimage">
@@ -204,7 +204,7 @@ The available types are as follows:
       <td>{{HTMLElement("input/radio", "radio")}}</td>
       <td>
         A radio button, allowing a single value to be selected out of multiple
-        choices with the same {{anch('attr-name', 'name')}} value.
+        choices with the same [name](#attr-name) value.
       </td>
       <td id="exampleradio">
         <pre class="brush: html hidden">
@@ -218,8 +218,8 @@ The available types are as follows:
       <td>
         A control for entering a number whose exact value is not important.
         Displays as a range widget defaulting to the middle value. Used in
-        conjunction {{anch('attr-min', 'min')}} and
-        {{anch('attr-max', 'max')}} to define the range of acceptable
+        conjunction [min](#attr-min) and
+        [max](#attr-max) to define the range of acceptable
         values.
       </td>
       <td id="examplerange">
@@ -1010,9 +1010,9 @@ Inputs, being replaced elements, have a few features not applicable to non form 
       <td>{{Cssxref(":in-range")}}</td>
       <td>
         A non-empty input whose current value is within the range limits
-        specified by the {{anch('htmlattrdefmin', 'min')}} and
-        {{anch('htmlattrdefmax', 'max')}} attributes and the
-        {{anch('htmlattrdefstep', 'step')}} .
+        specified by the [min](#htmlattrdefmin) and
+        [max](#htmlattrdefmax) attributes and the
+        [step](#htmlattrdefstep) .
       </td>
     </tr>
     <tr>
@@ -1197,7 +1197,7 @@ Not only is the placeholder not accessible to screen readers, but once the user 
 
 > **Warning:** Client-side validation is useful, but it does _not_ guarantee that the server will receive valid data. If the data must be in a specific format, _always_ verify it also on the server-side, and return a [`400` HTTP response](/en-US/docs/Web/HTTP/Status/400) if the format is invalid.
 
-In addition to using CSS to style inputs based on the {{cssxref(":valid")}} or {{cssxref(":invalid")}} UI states based on the current state of each input, as noted in the {{anch('UI pseudo-classes')}} section above, the browser provides for client-side validation on (attempted) form submission. On form submission, if there is a form control that fails constraint validation, supporting browsers will display an error message on the first invalid form control; displaying a default message based on the error type, or a message set by you.
+In addition to using CSS to style inputs based on the {{cssxref(":valid")}} or {{cssxref(":invalid")}} UI states based on the current state of each input, as noted in the [UI pseudo-classes](#ui_pseudo-classes) section above, the browser provides for client-side validation on (attempted) form submission. On form submission, if there is a form control that fails constraint validation, supporting browsers will display an error message on the first invalid form control; displaying a default message based on the error type, or a message set by you.
 
 Some input types and other attributes place limits on what values are valid for a given input. For example, `<input type="number" min="2" max="10" step="2">` means only the number 2, 4, 6, 8, or 10 are valid. Several errors could occur, including a `rangeUnderflow` error if the value is less than 2, `rangeOverflow` if greater than 10, `stepMismatch` if the value is a number between 2 and 10, but not an even integer (does not match the requirements of the `step` attribute), or `typeMismatch` if the value is not a number.
 

@@ -307,7 +307,7 @@ We start with creating the CSS for the animation. This animation will last for 3
 We'll use JavaScript code to listen for all three possible animation events. This code configures our event listeners; we call it when the document is first loaded in order to set things up.
 
 ```js
-var element = document.getElementById("watchme");
+const element = document.getElementById("watchme");
 element.addEventListener("animationstart", listener, false);
 element.addEventListener("animationend", listener, false);
 element.addEventListener("animationiteration", listener, false);
@@ -325,7 +325,7 @@ The events get delivered to the `listener()` function, which is shown below.
 
 ```js
 function listener(event) {
-  var l = document.createElement("li");
+  const l = document.createElement("li");
   switch(event.type) {
     case "animationstart":
       l.textContent = `Started: elapsed time is ${event.elapsedTime}`;

@@ -53,7 +53,7 @@ Margins surround the border edge of a box, and provide spacing between boxes.
 
 #### Properties controlling the paddings of a box
 
-Padding in inserted between the content edge and border edge of a box.
+Padding is inserted between the content edge and border edge of a box.
 
 - {{CSSxRef("padding")}}
 - {{CSSxRef("padding-bottom")}}

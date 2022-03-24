@@ -15,13 +15,7 @@ The **`parentRule`** property of the {{domxref("CSSRule")}}
 interface returns the containing rule of the current rule if this exists, or otherwise
 returns null.
 
-## Syntax
-
-```js
-var parentRule = cssRule.parentRule
-```
-
-### Values
+## Values
 
 - `parentRule`
   - : A {{domxref("CSSRule")}} which is the type of the containing rules. If the current

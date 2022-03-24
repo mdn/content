@@ -65,7 +65,7 @@ This article provides information about the changes in Firefox 65 that will affe
   - `user-select` now behaves consistently inside and outside shadow DOM.
   - The proprietary `-moz-text` value has been removed.
 
-- CSS environment variables (the {{cssxref("env()")}} function) have been implemented ({{bug(1462233)}}).
+- CSS environment variables (the {{cssxref("env", "env()")}} function) have been implemented ({{bug(1462233)}}).
 
 #### Removals
 

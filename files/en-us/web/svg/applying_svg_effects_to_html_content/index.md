@@ -7,7 +7,7 @@ tags:
   - HTML
   - SVG
 ---
-Modern browsers support using [SVG](/en-US/docs/SVG) within [CSS](/en-US/docs/Web/CSS) styles to apply graphical effects to HTML content.
+Modern browsers support using [SVG](/en-US/docs/Web/SVG) within [CSS](/en-US/docs/Web/CSS) styles to apply graphical effects to HTML content.
 
 You may specify SVG in styles either within the same document or an external style sheet. There are 3 properties you can use: [`mask`](/en-US/docs/Web/CSS/mask), [`clip-path`](/en-US/docs/Web/CSS/clip-path), and [`filter`](/en-US/docs/Web/CSS/filter).
 
@@ -250,5 +250,5 @@ The SVG is then imported from a file named `resources.svg`, using the clip path 
 
 ## See also
 
-- [SVG](/en-US/docs/SVG)
+- [SVG](/en-US/docs/Web/SVG)
 - [SVG Effects for HTML Content](http://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content\_04.html) (blog post)

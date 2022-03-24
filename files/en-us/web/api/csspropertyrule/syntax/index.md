@@ -17,13 +17,7 @@ browser-compat: api.CSSPropertyRule.syntax
 
 The read-only **`syntax`** property of the {{domxref("CSSPropertyRule")}} interface returns the literal syntax of the custom property registration represented by the {{cssxref("@property")}} rule, controlling how the property's value is parsed at computed-value time.
 
-## Syntax
-
-```js
-const syntax = CSSPropertyRule.syntax;
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}}.
 

@@ -22,15 +22,7 @@ indicated by the {{domxref("AudioBufferSourceNode.loopStart", "loopStart")}} pro
 This is only used if the {{domxref("AudioBufferSourceNode.loop", "loop")}} property is
 `true`.
 
-## Syntax
-
-```js
-AudioBufferSourceNode.loopEnd = endOffsetInSeconds;
-
-var endOffsetInSeconds = AudioBufferSourceNode.loopEnd;
-```
-
-### Value
+## Value
 
 A floating-point number indicating the offset, in seconds, into the audio buffer at
 which each loop will loop return to the beginning of the loop (that is, the current play

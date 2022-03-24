@@ -77,9 +77,7 @@ This specification fires events with the following custom interface:
 
 ## Examples
 
-- [eLibri:](https://marco-c.github.io/eLibri/) A powerful library and eBook reader application, written by Marco Castelluccio, winner of the IndexedDB Mozilla DevDerby.
 - [To-do Notifications](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/)): The reference application for the examples in the reference docs.
-- [Storing images and files in IndexedDB](https://hacks.mozilla.org/2012/02/storing-images-and-files-in-indexeddb/)
 
 ## Specifications
 

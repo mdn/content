@@ -22,7 +22,7 @@ the configuration on the provided USBDevice with the given configuration value.
 ## Syntax
 
 ```js
-var USBConfiguration = new USBConfiguration(device, configurationValue)
+new USBConfiguration(device, configurationValue)
 ```
 
 ### Parameters

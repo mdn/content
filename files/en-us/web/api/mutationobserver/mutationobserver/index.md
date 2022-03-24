@@ -29,7 +29,7 @@ establish which portion of the DOM to watch and what kinds of changes to watch f
 ## Syntax
 
 ```js
-const observer = new MutationObserver(callback)
+new MutationObserver(callback)
 ```
 
 ### Parameters

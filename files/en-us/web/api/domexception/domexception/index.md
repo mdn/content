@@ -17,9 +17,9 @@ The **`DOMException()`** constructor returns a
 ## Syntax
 
 ```js
-var domException = new DOMException();
-var domException = new DOMException(message);
-var domException = new DOMException(message, name);
+new DOMException();
+new DOMException(message);
+new DOMException(message, name);
 ```
 
 ### Parameters

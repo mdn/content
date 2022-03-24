@@ -23,7 +23,7 @@ spec-urls: https://drafts.csswg.org/css-counter-styles/
 
 ### Functions
 
-- {{cssxref("symbols()")}}
+- {{cssxref("symbols", "symbols()")}}
 
 ### At-rules
 

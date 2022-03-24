@@ -19,7 +19,7 @@ The **`CSSMathMin`** interface of the {{domxref('CSS_Object_Model#css_typed_obje
 
 ## Constructor
 
-- {{domxref("CSSMathMin.CSSMathMin()")}}
+- {{domxref("CSSMathMin.CSSMathMin", "CSSMathMin()")}}
   - : Creates a new `CSSMathMin` object.
 
 ## Properties

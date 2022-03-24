@@ -16,7 +16,7 @@ If `playbackRate` is negative, the media is **not** played backwards.
 
 The audio is muted when the fast forward or slow motion is outside a useful range (for example, Gecko mutes the sound outside the range `0.25` to `4.0`).
 
-The pitch of the audio is corrected by default and is the same for every speed. Some browsers implement the non-standard {{domxref("HTMLMediaElement.preservesPitch")}} {{non-standard_inline}} property to control this.
+The pitch of the audio is corrected by default. You can disable pitch correction using the {{domxref("HTMLMediaElement.preservesPitch")}} property.
 
 ## Syntax
 

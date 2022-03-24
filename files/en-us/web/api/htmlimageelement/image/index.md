@@ -25,7 +25,7 @@ equivalent to {{DOMxRef("Document.createElement()",
 ## Syntax
 
 ```js
-var htmlImageElement = new Image(width, height);
+new Image(width, height);
 ```
 
 ### Parameters

@@ -52,7 +52,7 @@ It is worth bearing in mind, as we explore these systems, that none of them actu
 
 ## A two column layout
 
-Let's start with the simplest possible example — a two column layout. You can follow along by creating a new `index.html` file on your computer, filling it with a [simple HTML template](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html), and inserting the below code into it at the appropriate places. At the bottom of the section you can see a live example of what the final code should look like.
+Let's start with the simplest possible example — a two column layout. You can follow along by creating a new `index.html` file on your computer, filling it with a [simple HTML template](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html), and inserting the below code into it at the appropriate places. At the bottom of the section you can see a live example of what the final code should look like.
 
 First of all, we need some content to put into our columns. Replace whatever is inside the body currently with the following:
 
@@ -113,7 +113,7 @@ Putting this all together should give us a result like so:
 
 You'll notice here that we are using percentages for all the widths — this is quite a good strategy, as it creates a **liquid layout**, one that adjusts to different screen sizes and keeps the same proportions for the column widths at smaller screen sizes. Try adjusting the width of your browser window to see for yourself. This is a valuable tool for responsive web design.
 
-> **Note:** You can see this example running at [0_two-column-layout.html](https://mdn.github.io/learning-area/css/css-layout/floats/0_two-column-layout.html) (see also [the source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/0_two-column-layout.html)).
+> **Note:** You can see this example running at [0_two-column-layout.html](https://mdn.github.io/learning-area/css/css-layout/floats/0_two-column-layout.html) (see also [the source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/floats/0_two-column-layout.html)).
 
 ## Creating simple legacy grid frameworks
 
@@ -127,7 +127,7 @@ In the next sections we will look at how to create both. We will create a 12 col
 
 Lets first create a grid system that uses fixed width columns.
 
-Start out by making a local copy of our sample [simple-grid.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/simple-grid.html) file, which contains the following markup in its body.
+Start out by making a local copy of our sample [simple-grid.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/simple-grid.html) file, which contains the following markup in its body.
 
 ```html
 <div class="wrapper">
@@ -227,7 +227,7 @@ Add the following at the bottom of your CSS:
 
 With these classes created we can now lay out different width columns on the grid. Try saving and loading the page in your browser to see the effects.
 
-> **Note:** If you are having trouble getting the above example to work, try comparing it against our [finished version](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/simple-grid-finished.html) on GitHub ([see it running live](https://mdn.github.io/learning-area/css/css-layout/grids/simple-grid-finished.html) also).
+> **Note:** If you are having trouble getting the above example to work, try comparing it against our [finished version](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/simple-grid-finished.html) on GitHub ([see it running live](https://mdn.github.io/learning-area/css/css-layout/grids/simple-grid-finished.html) also).
 
 Try modifying the classes on your elements or even adding and removing some containers, to see how you can vary the layout. For example, you could make the second row look like this:
 
@@ -268,7 +268,7 @@ So we need to replace the 20 pixel {{cssxref("margin-left")}} on our `.col` rule
 
 #### Updating our grid
 
-To get started in this section, make a new copy of your previous example page, or make a local copy of our [simple-grid-finished.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/simple-grid-finished.html) code to use as a starting point.
+To get started in this section, make a new copy of your previous example page, or make a local copy of our [simple-grid-finished.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/simple-grid-finished.html) code to use as a starting point.
 
 Update the second CSS rule (with the `.wrapper` selector) as follows:
 
@@ -320,11 +320,11 @@ Update the bottom block of CSS rules with the following:
 
 Now save your code, load it in a browser, and try changing the viewport width — you should see the column widths adjust nicely to suit.
 
-> **Note:** If you are having trouble getting the above example to work, try comparing it against our [finished version on GitHub](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid.html) ([see it running live](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid.html) also).
+> **Note:** If you are having trouble getting the above example to work, try comparing it against our [finished version on GitHub](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid.html) ([see it running live](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid.html) also).
 
 ### Easier calculations using the calc() function
 
-You could use the {{cssxref("calc()")}} function to do the math right inside your CSS — this allows you to insert simple mathematical equations into your CSS values, to calculate what a value should be. It is especially useful when there is complex math to be done, and you can even compute a calculation that uses different units, for example "I want this element's height to always be 100% of its parent's height, minus 50px". See [this example from a MediaRecorder API tutorial](</en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API#keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()>).
+You could use the {{cssxref("calc", "calc()")}} function to do the math right inside your CSS — this allows you to insert simple mathematical equations into your CSS values, to calculate what a value should be. It is especially useful when there is complex math to be done, and you can even compute a calculation that uses different units, for example "I want this element's height to always be 100% of its parent's height, minus 50px". See [this example from a MediaRecorder API tutorial](</en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API#keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()>).
 
 Anyway, back to our grids! Any column that spans more than one column of our grid has a total width of 6.25% multiplied by the number of columns spanned plus 2.08333333% multiplied by the number of gutters (which will always be the number of columns minus 1). The `calc()` function allows us to do this calculation right inside the width value, so for any item spanning 4 columns we can do this, for example:
 
@@ -350,7 +350,7 @@ Try replacing your bottom block of rules with the following, then reload it in t
 .col.span12 { width: calc((6.25%*12) + (2.08333333%*11)); }
 ```
 
-> **Note:** You can see our finished version in [fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-calc.html) (also [see it live](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)).
+> **Note:** You can see our finished version in [fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-calc.html) (also [see it live](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)).
 
 > **Note:** If you can't get this to work, it might be because your browser does not support the `calc()` function, although it is fairly well supported across browsers — as far back as IE9.
 
@@ -374,7 +374,7 @@ The grid we have created works well as long as we want to start all of the conta
 
 Let's try this out.
 
-Start with your previous code, or use our [fluid-grid.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid.html) file as a starting point.
+Start with your previous code, or use our [fluid-grid.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid.html) file as a starting point.
 
 Let's create a class in our CSS that will offset a container element by one column width. Add the following to the bottom of your CSS:
 
@@ -406,7 +406,7 @@ Try replacing it with
 
 > **Note:** Notice that you need to reduce the number of columns spanned, to make room for the offset!
 
-Try loading and refreshing to see the difference, or check out our [fluid-grid-offset.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-offset.html) example (see it [running live](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-offset.html) also). The finished example should look like this:
+Try loading and refreshing to see the difference, or check out our [fluid-grid-offset.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-offset.html) example (see it [running live](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-offset.html) also). The finished example should look like this:
 
 ![](offset-grid-finished.png)
 
@@ -450,7 +450,7 @@ body {
 }
 ```
 
-You can try making these replacements in your own example, or look at our [flexbox-grid.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/flexbox-grid.html) example code (see it [running live](https://mdn.github.io/learning-area/css/css-layout/grids/flexbox-grid.html) also).
+You can try making these replacements in your own example, or look at our [flexbox-grid.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/flexbox-grid.html) example code (see it [running live](https://mdn.github.io/learning-area/css/css-layout/grids/flexbox-grid.html) also).
 
 Here we are turning each row into a flex container. With a flexbox-based grid we still need rows in order to allow us to have elements that add up to less than 100%. We set that container to `display: flex`.
 
@@ -476,7 +476,7 @@ Let's take a look at one of these standalone systems as it demonstrates common t
 
 To get started visit the [Skeleton website](http://getskeleton.com/), and choose "Download" to download the ZIP file. Unzip this and copy the skeleton.css and normalize.css files into a new directory.
 
-Make a copy of our [html-skeleton.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton.html) file and save it in the same directory as the skeleton and normalize CSS.
+Make a copy of our [html-skeleton.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/html-skeleton.html) file and save it in the same directory as the skeleton and normalize CSS.
 
 Include the skeleton and normalize CSS in the HTML page, by adding the following to its head:
 
@@ -561,7 +561,7 @@ Next, give the containers on the second row classes explaining the number of col
 
 Try saving your HTML file and loading it in your browser to see the effect.
 
-> **Note:** If you are having trouble getting this example to work, try comparing it to our [html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton-finished.html) file (see it [running live](https://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html) also).
+> **Note:** If you are having trouble getting this example to work, try comparing it to our [html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/html-skeleton-finished.html) file (see it [running live](https://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html) also).
 
 If you look in the skeleton.css file you can see how this works. For example, Skeleton has the following defined to style elements with "three columns" classes added to them.
 

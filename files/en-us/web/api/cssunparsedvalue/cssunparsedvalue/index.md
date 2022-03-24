@@ -21,7 +21,7 @@ that reference custom properties.
 ## Syntax
 
 ```js
-var CSSUnparsedValue = new CSSUnparsedValue(members)
+new CSSUnparsedValue(members)
 ```
 
 ### Parameters

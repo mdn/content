@@ -45,7 +45,7 @@ It is an {{domxref("AudioNode")}} that acts as an audio destination, created usi
 
 ## Constructor
 
-- {{domxref("MediaStreamAudioDestinationNode.MediaStreamAudioDestinationNode()")}}
+- {{domxref("MediaStreamAudioDestinationNode.MediaStreamAudioDestinationNode", "MediaStreamAudioDestinationNode()")}}
   - : Creates a new `MediaStreamAudioDestinationNode` object instance.
 
 ## Properties

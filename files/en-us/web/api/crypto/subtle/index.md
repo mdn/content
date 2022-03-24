@@ -16,13 +16,7 @@ The **`Crypto.subtle`** read-only property returns a
 {{domxref("SubtleCrypto")}} which can then be used to perform low-level
 cryptographic operations.
 
-## Syntax
-
-```js
-var crypto = crypto.subtle;
-```
-
-### Value
+## Value
 
 A {{domxref("SubtleCrypto")}} object you can use to interact with the Web Crypto API's
 low-level cryptography features.

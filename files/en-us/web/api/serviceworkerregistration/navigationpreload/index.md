@@ -4,27 +4,18 @@ slug: Web/API/ServiceWorkerRegistration/navigationPreload
 tags:
   - API
   - NavigationPreloadManager
-  - Offline
   - Property
   - Service Workers
-  - ServiceWorkerRegistration
   - Workers
 browser-compat: api.ServiceWorkerRegistration.navigationPreload
 ---
-{{APIRef("Service Workers API")}}
+{{ServiceWorkerSidebar}}
 
-The **`navigationPreload`** read-only property of the
-{{domxref("ServiceWorkerRegistration")}} interface returns the
-{{domxref("NavigationPreloadManager")}} associated with the current service worker
-registration.
+The **`navigationPreload`** read-only property of the {{domxref("ServiceWorkerRegistration")}} interface returns the {{domxref("NavigationPreloadManager")}} associated with the current service worker registration.
 
-## Syntax
+The returned object allows resources managed by a service worker to be preemptively downloaded in parallel with service worker boot up.
 
-```js
-var navigationPreloadManager = serviceWorkerRegistration.navigationPreload;
-```
-
-### Value
+## Value
 
 An instance of {{domxref("NavigationPreloadManager")}}.
 

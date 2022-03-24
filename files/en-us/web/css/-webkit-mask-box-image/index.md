@@ -29,7 +29,7 @@ browser-compat: css.properties.-webkit-mask-box-image
 Where:
 
 - \<mask-box-image>
-  - : `{{cssxref("url()", "&lt;uri&gt;")}} | <gradient> | none`
+  - : `{{cssxref("url", "&lt;uri&gt;")}} | <gradient> | none`
 - \<top> \<right> \<bottom> \<left>
   - : `<length> | <percentage>`
 - \<x-repeat> \<y-repeat>

@@ -22,13 +22,7 @@ using an {{domxref("AudioBuffer")}} as the source of the sound data.
 If the `buffer` property is set to the value `null`, the node
 generates a single channel containing silence (that is, every sample is 0).
 
-## Syntax
-
-```js
-AudioBufferSourceNode.buffer = soundBuffer;
-```
-
-### Value
+## Value
 
 An {{domxref("AudioBuffer")}} which contains the data representing the sound which the
 node will play.

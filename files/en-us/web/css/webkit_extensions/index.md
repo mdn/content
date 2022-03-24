@@ -436,7 +436,7 @@ The following properties were once supported with the -webkit- prefix but are no
 - `-webkit-grid-columns` (See [`grid-column)`](/en-US/docs/Web/CSS/grid-column)
 - `-webkit-grid-rows` (See [`grid-row)`](/en-US/docs/Web/CSS/grid-row)
 - `-webkit-hyphenate-charset`
-- `-webkit-image-set (See {{CSSxRef("image/image-set()", "image-set")}})
+- `-webkit-image-set (See {{CSSxRef("image/image-set", "image-set")}})
 - `-webkit-mask-attachment`
 - `-webkit-match-nearest-mail-blockquote-color`
 - {{CSSxRef("-webkit-margin-collapse", "-webkit-margin-collapse")}}
@@ -459,7 +459,7 @@ The following properties were once supported with the -webkit- prefix but are no
 ## Pseudo-classes
 
 - {{CSSxRef(":animating-full-screen-transition", ":-webkit-animating-full-screen-transition")}}
-- {{CSSxRef(":any()", ":-webkit-any()")}}
+- {{CSSxRef(":any", ":-webkit-any()")}}
 - {{CSSxRef(":any-link", ":-webkit-any-link")}}\*
 - {{CSSxRef(":autofill",":-webkit-autofill")}}
 - {{CSSxRef(":autofill-strong-password",":-webkit-autofill-strong-password")}}

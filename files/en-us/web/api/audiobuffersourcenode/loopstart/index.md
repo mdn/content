@@ -21,15 +21,7 @@ seconds, where in the {{domxref("AudioBuffer")}} the restart of the play must ha
 
 The `loopStart` property's default value is `0`.
 
-## Syntax
-
-```js
-AudioBufferSourceNode.loopStart = startOffsetInSeconds;
-
-startOffsetInSeconds = AudioBufferSourceNode.loopStart;
-```
-
-### Value
+## Value
 
 A floating-point number indicating the offset, in seconds, into the audio buffer at
 which each loop should begin during playback. This value is only used when the

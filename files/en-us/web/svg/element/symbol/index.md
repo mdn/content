@@ -49,10 +49,10 @@ html,body,svg { height:100% }
     *Value type*: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; *Default value*: `xMidYMid meet`; *Animatable*: **yes**
 - {{SVGAttr("refX")}}
   - : This attribute determines the x coordinate of the reference point of the symbol.
-    *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage)|`left`|`center`|`right` ; *Default value*: `0`; *Animatable*: **yes**
+    *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage)|`left`|`center`|`right` ; *Default value*: None; *Animatable*: **yes**
 - {{SVGAttr("refY")}}
   - : This attribute determines the y coordinate of the reference point of the symbol.
-    *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage)|`top`|`center`|`bottom` ; *Default value*: `0`; *Animatable*: **yes**
+    *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage)|`top`|`center`|`bottom` ; *Default value*: None; *Animatable*: **yes**
 - {{SVGAttr("viewBox")}}
   - : This attribute defines the bound of the SVG viewport for the current symbol.
     *Value type*: **[\<list-of-numbers>](/en-US/docs/Web/SVG/Content_type#list-of-ts)** ; *Default value*: none; *Animatable*: **yes**

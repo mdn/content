@@ -21,7 +21,7 @@ Refer to the documentation for {{Cssxref("angle")}} and {{Cssxref("percentage")}
 
 ## Use in calc()
 
-Where an `<angle-percentage>` is specified as an allowable type, this means that the percentage resolves to an angle and therefore can be used in a {{Cssxref("calc()")}} expression.
+Where an `<angle-percentage>` is specified as an allowable type, this means that the percentage resolves to an angle and therefore can be used in a {{Cssxref("calc", "calc()")}} expression.
 
 ## Specifications
 

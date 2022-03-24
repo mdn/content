@@ -17,7 +17,7 @@ The **`PannerNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API/We
 ## Syntax
 
 ```js
-var myPanner = new PannerNode(context, options);
+new PannerNode(context, options);
 ```
 
 ### Parameters

@@ -15,7 +15,7 @@ The object consumes a stream of media frames as input, which can be audio or vid
 
 ## Constructor
 
-- {{domxref("MediaStreamTrackGenerator.MediaStreamTrackGenerator()")}}
+- {{domxref("MediaStreamTrackGenerator.MediaStreamTrackGenerator", "MediaStreamTrackGenerator()")}}
   - : Creates a new `MediaStreamTrackGenerator` object which accepts either {{domxref("VideoFrame")}} or {{domxref("AudioFrame")}} objects.
 
 ## Properties

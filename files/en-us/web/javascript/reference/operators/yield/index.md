@@ -12,9 +12,7 @@ browser-compat: javascript.operators.yield
 ---
 {{jsSidebar("Operators")}}
 
-The `yield` keyword is used to pause and resume a generator function
-({{jsxref("Statements/function*", "function*")}} or [legacy
-generator function](/en-US/docs/Archive/Web/JavaScript/Legacy_generator_function_statement)).
+The `yield` keyword is used to pause and resume a [generator function](/en-US/docs/Web/JavaScript/Reference/Statements/function*).
 
 {{EmbedInteractiveExample("pages/js/expressions-yield.html", "taller")}}
 

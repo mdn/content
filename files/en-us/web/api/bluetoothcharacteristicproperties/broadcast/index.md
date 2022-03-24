@@ -20,13 +20,7 @@ The **`broadcast`** read-only property of the
 `boolean` that is `true` if the broadcast of the characteristic
 value is permitted using the Server Characteristic Configuration Descriptor.
 
-## Syntax
-
-```js
-var aBoolean = BluetoothCharacteristicProperties.broadcast;
-```
-
-### Value
+## Value
 
 A boolean value.
 

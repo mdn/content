@@ -16,15 +16,7 @@ The `maxchannelCount` property of the {{ domxref("AudioDestinationNode") }} inte
 
 The {{domxref("AudioNode.channelCount")}} property can be set between 0 and this value (both included). If `maxChannelCount` is `0`, like in {{domxref("OfflineAudioContext")}}, the channel count cannot be changed.
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var myDestination = audioCtx.destination;
-myDestination.maxChannelCount = 2;
-```
-
-### Value
+## Value
 
 An `unsigned long`.
 

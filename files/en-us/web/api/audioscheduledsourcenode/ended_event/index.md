@@ -75,5 +75,5 @@ For an example of the ended event in use, see our [audio-buffer example on GitHu
 - {{domxref("HTMLVideoElement")}}
 - {{HTMLElement("audio")}}
 - {{HTMLElement("video")}}
-- {{domxref("HTMLMediaElement.ended_event", 'HTMLMediaElement: ended event')}}
-- {{domxref("MediaStreamTrack.ended_event", 'MediaStreamTrack: ended event')}}
+- The HTMLMediaElement {{domxref("HTMLMediaElement.ended_event", 'ended')}} event
+- The MediaStreamTrack {{domxref("MediaStreamTrack.ended_event", 'ended')}} event
