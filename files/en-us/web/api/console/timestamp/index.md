@@ -13,7 +13,7 @@ browser-compat: api.console.timeStamp
 ---
 {{APIRef("Console API")}}{{Non-standard_header}}
 
-The **`console.timeStamp`** method adds a single marker to the browser's [Performance](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference)
+The **`console.timeStamp`** method adds a single marker to the browser's [Performance](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/)
 or [Waterfall](/en-US/docs/Tools/Performance/Waterfall) tool. This lets you
 correlate a point in your code with the other events recorded in the timeline, such as
 layout and paint events.
