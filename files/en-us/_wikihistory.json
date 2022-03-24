@@ -53111,32 +53111,6 @@
       "louisremi"
     ]
   },
-  "Web/API/IDBRequest/onerror": {
-    "modified": "2020-10-15T21:25:26.043Z",
-    "contributors": [
-      "sideshowbarker",
-      "vitaly-zdanevich",
-      "fscholz",
-      "jpmedley",
-      "libbymc",
-      "rolfedh",
-      "robincafolla",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/IDBRequest/onsuccess": {
-    "modified": "2020-10-15T21:25:26.283Z",
-    "contributors": [
-      "sideshowbarker",
-      "chrisdavidmills",
-      "wbamberg",
-      "fscholz",
-      "jpmedley",
-      "libbymc",
-      "rolfedh",
-      "robincafolla"
-    ]
-  },
   "Web/API/IDBRequest/readyState": {
     "modified": "2020-10-15T21:25:24.484Z",
     "contributors": [

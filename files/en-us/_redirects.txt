@@ -8408,8 +8408,8 @@
 /en-US/docs/Web/API/IDBRequest.getAll	/en-US/docs/Web/API/IDBIndex/getAll
 /en-US/docs/Web/API/IDBRequest.getAllKeys	/en-US/docs/Web/API/IDBIndex/getAllKeys
 /en-US/docs/Web/API/IDBRequest.getKey	/en-US/docs/Web/API/IDBIndex/getKey
-/en-US/docs/Web/API/IDBRequest.onerror	/en-US/docs/Web/API/IDBRequest/onerror
-/en-US/docs/Web/API/IDBRequest.onsuccess	/en-US/docs/Web/API/IDBRequest/onsuccess
+/en-US/docs/Web/API/IDBRequest.onerror	/en-US/docs/Web/API/IDBRequest/error_event
+/en-US/docs/Web/API/IDBRequest.onsuccess	/en-US/docs/Web/API/IDBRequest/success_event
 /en-US/docs/Web/API/IDBRequest.open	/en-US/docs/Web/API/IDBFactory/open
 /en-US/docs/Web/API/IDBRequest.openCursor	/en-US/docs/Web/API/IDBIndex/openCursor
 /en-US/docs/Web/API/IDBRequest.openKeyCursor	/en-US/docs/Web/API/IDBIndex/openKeyCursor
@@ -8420,6 +8420,8 @@
 /en-US/docs/Web/API/IDBRequest.transaction	/en-US/docs/Web/API/IDBRequest/transaction
 /en-US/docs/Web/API/IDBRequest.update	/en-US/docs/Web/API/IDBCursor/update
 /en-US/docs/Web/API/IDBRequest/blocked_event	/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event
+/en-US/docs/Web/API/IDBRequest/onerror	/en-US/docs/Web/API/IDBRequest/error_event
+/en-US/docs/Web/API/IDBRequest/onsuccess	/en-US/docs/Web/API/IDBRequest/success_event
 /en-US/docs/Web/API/IDBRequest/upgradeneeded_event	/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event
 /en-US/docs/Web/API/IDBTransaction.abort	/en-US/docs/Web/API/IDBTransaction/abort
 /en-US/docs/Web/API/IDBTransaction.db	/en-US/docs/Web/API/IDBTransaction/db
