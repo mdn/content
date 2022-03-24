@@ -19,14 +19,7 @@ A slot is a placeholder inside a [web
 component](/en-US/docs/Web/Web_Components) that users can fill with their own markup (see [Using templates and
 slots](/en-US/docs/Web/Web_Components/Using_templates_and_slots) for more information).
 
-## Syntax
-
-```js
-var aString = element.slot
-element.slot = aString
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}.
 

@@ -27,13 +27,7 @@ if the entry is a directory.
 > both `isDirectory` and `isFile` as needed to ensure that the
 > entry is something you know how to work with.
 
-## Syntax
-
-```js
-var isFile = FileSystemEntry.isFile;
-```
-
-### Value
+## Value
 
 A Boolean indicating whether or not the {{domxref("FileSystemEntry")}} is a file.
 

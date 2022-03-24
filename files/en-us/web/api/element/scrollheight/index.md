@@ -29,13 +29,7 @@ fit without a need for vertical scrollbar, its `scrollHeight` is equal to
 > **Note:** This property will round the value to an integer. If you need a fractional value, use
 > {{domxref("Element.getBoundingClientRect()")}}.
 
-## Syntax
-
-```js
-elemScrollHeight = element.scrollHeight;
-```
-
-### Value
+## Value
 
 An integer corresponding to the scrollHeight pixel value of the element.
 

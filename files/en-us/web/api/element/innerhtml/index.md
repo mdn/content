@@ -21,15 +21,7 @@ within the element.
 To insert the HTML into the document rather than replace the contents of an element,
 use the method {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.
 
-## Syntax
-
-```js
-const content = element.innerHTML;
-
-element.innerHTML = content;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} containing the HTML serialization of the element's
 descendants. Setting the value of `innerHTML` removes all of the element's

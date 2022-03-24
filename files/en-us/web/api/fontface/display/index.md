@@ -33,14 +33,7 @@ below.)
   - : If the font face still is not loaded, the fallback font will be shown and no swap
     will occur.
 
-## Syntax
-
-```js
-let display = FontFace.display
-FontFace.display = display
-```
-
-### Value
+## Value
 
 A {{domxref("CSSOMString")}} with one of the following values.
 
