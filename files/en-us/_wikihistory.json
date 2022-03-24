@@ -53027,35 +53027,6 @@
       "louisremi"
     ]
   },
-  "Web/API/IDBOpenDBRequest/onblocked": {
-    "modified": "2020-10-15T21:25:23.801Z",
-    "contributors": [
-      "sideshowbarker",
-      "wbamberg",
-      "fscholz",
-      "jpmedley",
-      "libbymc",
-      "chrisdavidmills",
-      "teoli",
-      "eharris",
-      "eicto"
-    ]
-  },
-  "Web/API/IDBOpenDBRequest/onupgradeneeded": {
-    "modified": "2020-11-08T01:33:35.849Z",
-    "contributors": [
-      "realityforge",
-      "sideshowbarker",
-      "wbamberg",
-      "fscholz",
-      "lukaselmer",
-      "jpmedley",
-      "libbymc",
-      "chrisdavidmills",
-      "teoli",
-      "freaktechnik"
-    ]
-  },
   "Web/API/IDBOpenDBRequest/upgradeneeded_event": {
     "modified": "2020-11-08T01:32:40.873Z",
     "contributors": [

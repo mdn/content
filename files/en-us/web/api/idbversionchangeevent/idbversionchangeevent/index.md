@@ -16,7 +16,7 @@ browser-compat: api.IDBVersionChangeEvent.IDBVersionChangeEvent
 The **`IDBVersionChangeEvent()`** constructor
 creates a new {{domxref("IDBVersionChangeEvent")}} object, which is used to represent
 when a version of the database has changed, as a result of the
-{{domxref('IDBOpenDBRequest.onupgradeneeded')}} event handler.
+{{domxref('IDBOpenDBRequest.upgradeneeded_event', 'onupgradeneeded')}} event handler.
 
 ## Syntax
 

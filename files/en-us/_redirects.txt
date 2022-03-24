@@ -8396,9 +8396,11 @@
 /en-US/docs/Web/API/IDBObjectStore.transaction	/en-US/docs/Web/API/IDBObjectStore/transaction
 /en-US/docs/Web/API/IDBOpenDBRequest.cmp	/en-US/docs/Web/API/IDBFactory/cmp
 /en-US/docs/Web/API/IDBOpenDBRequest.deleteDatabase	/en-US/docs/Web/API/IDBFactory/deleteDatabase
-/en-US/docs/Web/API/IDBOpenDBRequest.onblocked	/en-US/docs/Web/API/IDBOpenDBRequest/onblocked
-/en-US/docs/Web/API/IDBOpenDBRequest.onupgrade	/en-US/docs/Web/API/IDBOpenDBRequest/onupgradeneeded
-/en-US/docs/Web/API/IDBOpenDBRequest.onupgradeneeded	/en-US/docs/Web/API/IDBOpenDBRequest/onupgradeneeded
+/en-US/docs/Web/API/IDBOpenDBRequest.onblocked	/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event
+/en-US/docs/Web/API/IDBOpenDBRequest.onupgrade	/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event
+/en-US/docs/Web/API/IDBOpenDBRequest.onupgradeneeded	/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event
+/en-US/docs/Web/API/IDBOpenDBRequest/onblocked	/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event
+/en-US/docs/Web/API/IDBOpenDBRequest/onupgradeneeded	/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event
 /en-US/docs/Web/API/IDBRequest.add	/en-US/docs/Web/API/IDBObjectStore/add
 /en-US/docs/Web/API/IDBRequest.clear	/en-US/docs/Web/API/IDBObjectStore/clear
 /en-US/docs/Web/API/IDBRequest.count	/en-US/docs/Web/API/IDBIndex/count
