@@ -6864,6 +6864,7 @@
 /en-US/docs/Tools/Web_Console/WebConsoleHelp	https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html
 /en-US/docs/Tools/about:debugging	https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html
 /en-US/docs/Tools/about:debugging/about:debugging_before_Firefox_67	https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/about_colon_debugging_before_firefox_68/index.html
+/en-US/docs/Tools/about_colon_debugging	https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html
 /en-US/docs/Tools/about_colon_debugging/about_colon_debugging_before_firefox_68	https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/about_colon_debugging_before_firefox_68/index.html
 /en-US/docs/Tools/accessibility_inspector/simulation	https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/simulation/index.html
 /en-US/docs/Tools/accessing_the_developer_tools	https://firefox-source-docs.mozilla.org/devtools-user/accessing_the_developer_tools/index.html
