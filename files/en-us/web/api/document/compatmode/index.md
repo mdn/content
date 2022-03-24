@@ -15,13 +15,7 @@ The **`Document.compatMode`** read-only property indicates
 whether the document is rendered in [Quirks mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) or
 Standards mode.
 
-## Syntax
-
-```js
-const mode = document.compatMode
-```
-
-### Value
+## Value
 
 An enumerated value that can be:
 

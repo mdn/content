@@ -17,14 +17,7 @@ The **`ariaDisabled`** property of the {{domxref("Element")}} interface reflects
 
 > **Note:** Where possible, use the {{htmlelement("input")}} element with `type="button"` or the {{htmlelement("button")}} element —  because those elements have built in semantics and do not require ARIA attributes.
 
-## Syntax
-
-```js
-var ariaDisabled = element.ariaDisabled;
-element.ariaDisabled = ariaDisabled
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} with one of the following values:
 

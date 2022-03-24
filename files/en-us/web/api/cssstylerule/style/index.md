@@ -13,13 +13,7 @@ browser-compat: api.CSSStyleRule.style
 
 The read-only **`style`** property is the {{ domxref("CSSStyleDeclaration") }} interface for the [declaration block](https://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block) of the {{ DOMXref("CSSStyleRule") }}.
 
-## Syntax
-
-```js
-styleObj = cssRule.style
-```
-
-### Value
+## Value
 
 A {{domxref("CSSStyleDeclaration")}} object, with the following properties:
 

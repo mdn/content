@@ -17,14 +17,7 @@ The **`ariaMultiline`** property of the {{domxref("Element")}} interface reflect
 
 > **Note:** Where possible use an HTML {{htmlelement("input")}} element with `type="text"` or a {{htmlelement("textarea")}} as these have built in semantics and do not require ARIA attributes.
 
-## Syntax
-
-```js
-var ariaMultiline = element.ariaMultiline;
-element.ariaMultiline = ariaMultiline
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} with one of the following values:
 

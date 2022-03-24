@@ -13,14 +13,7 @@ browser-compat: api.CSSStyleRule.selectorText
 
 The **`selectorText`** property of the {{domxref("CSSStyleRule")}} interface gets and sets the selectors associated with the `CSSStyleRule`.
 
-## Syntax
-
-```js
-var text = CSSStyleRule.selectorText;
-CSSStyleRule.selectorText = text;
-```
-
-### Value
+## Value
 
 A {{domxref('CSSOMString')}}.
 

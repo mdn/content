@@ -14,13 +14,7 @@ browser-compat: api.DOMRectReadOnly.left
 
 The **`left`** read-only property of the **`DOMRectReadOnly`** interface returns the left coordinate value of the `DOMRect.` (Has the same value as `x`, or `x + width` if `width` is negative.)
 
-## Syntax
-
-```js
-var recLeft = DOMRect.left;
-```
-
-### Value
+## Value
 
 A double.
 

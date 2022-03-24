@@ -28,13 +28,7 @@ attribute set.
 Although this property is read-only, it will not throw if it is modified (even in
 strict mode); the setter is a no-operation and it will be ignored.
 
-## Syntax
-
-```js
-var isFullscreenAvailable = document.fullscreenEnabled;
-```
-
-### Value
+## Value
 
 A boolean value which is `true` if the document and the
 elements within can be placed into fullscreen mode by calling

@@ -26,13 +26,7 @@ otherwise by a [Feature-Policy](/en-US/docs/Web/HTTP/Headers/Feature-Policy/pict
 Although this property is read-only, it will not throw if it is modified (even in
 strict mode); the setter is a no-operation and will be ignored.
 
-## Syntax
-
-```js
-let isPictureInPictureAvailable = document.pictureInPictureEnabled;
-```
-
-### Value
+## Value
 
 A boolean value, which is `true` if a video can enter
 picture-in-picture and be displayed in a floating window by calling
