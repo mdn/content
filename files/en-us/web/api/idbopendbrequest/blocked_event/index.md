@@ -12,28 +12,32 @@ browser-compat: api.IDBOpenDBRequest.blocked_event
 
 The `blocked` handler is executed when an open connection to a database is blocking a `versionchange` transaction on the same database.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("IDBVersionChangeEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{DOMxRef("IDBOpenDBRequest.onblocked", "onblocked")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('blocked', event => { });
+
+onblocked = event => { };
+```
+
+## Event type
+
+An {{domxref("IDBVersionChangeEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("IDBVersionChangeEvent")}}
+
+## Event properties
+
+_Also inherits properties from its parent, {{domxref("Event")}} interface._
+
+- {{ domxref("IDBVersionChangeEvent.oldVersion") }} {{readonlyInline}}
+  - : Returns the old version of the database.
+- {{ domxref("IDBVersionChangeEvent.newVersion") }} {{readonlyInline}}
+  - : Returns the new version of the database.
 
 ## Examples
 
@@ -116,4 +120,3 @@ DBOpenRequest.onsuccess = (event) => {
 ## See also
 
 - [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- {{DOMxRef("IDBOpenDBRequest.onblocked", "onblocked")}} event handler property
