@@ -66,7 +66,7 @@ To specify the size of multiple background images, separate the value for each o
   - : Scales the image as large as possible within its container without cropping or stretching the image.
     If the container is larger than the image, this will result in image tiling, unless the {{cssxref("background-repeat")}} property is set to `no-repeat`.
 - `cover`
-  - : Scales the image (while preserving its ratio) to the smallest possible size to fill the container (that is: both its height and width completely _covers_ the container), living no empty space.
+  - : Scales the image (while preserving its ratio) to the smallest possible size to fill the container (that is: both its height and width completely _cover_ the container), leaving no empty space.
     If the proportions of the background differ from the element, the image is cropped either vertically or horizontally.
 - `auto`
   - : Scales the background image in the corresponding direction such that its intrinsic proportions are maintained.
