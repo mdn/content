@@ -32,7 +32,18 @@ An {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-{{page("/en-us/docs/Web/API/MessageEvent", "Properties")}}
+_This interface also inherits properties from its parent, {{domxref("Event")}}._
+
+- {{domxref("MessageEvent.data")}} {{readonlyInline}}
+  - : The data sent by the message emitter.
+- {{domxref("MessageEvent.origin")}} {{readonlyInline}}
+  - : A {{domxref("USVString")}} representing the origin of the message emitter.
+- {{domxref("MessageEvent.lastEventId")}} {{readonlyInline}}
+  - : A {{domxref("DOMString")}} representing a unique ID for the event.
+- {{domxref("MessageEvent.source")}} {{readonlyInline}}
+  - : A `MessageEventSource` (which can be a {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
+- {{domxref("MessageEvent.ports")}} {{readonlyInline}}
+  - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
 
 ## Example
 
