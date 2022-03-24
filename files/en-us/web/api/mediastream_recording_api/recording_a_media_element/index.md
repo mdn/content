@@ -21,8 +21,8 @@ While the article Using the MediaStream Recording API demonstrates using the {{d
 ### HTML content
 
 ```html hidden
-<p>Click the "Start" button to begin video recording for a few seconds. You can stop
-   the video by clicking the creatively-named "Stop" button. The "Download"
+<p>Click the "Start Recording" button to begin video recording for a few seconds. You can stop
+   recording by clicking the "Stop Recording" button. The "Download"
    button will download the received data (although it's in a raw, unwrapped form
    that isn't very useful).
 </p>
@@ -34,7 +34,7 @@ Let's start by looking at the key bits of the HTML. There's a little more than t
 ```html
 <div class="left">
   <div id="startButton" class="button">
-    Start
+    Start Recording
   </div>
   <h2>Preview</h2>
   <video id="preview" width="160" height="120" autoplay muted></video>
@@ -46,7 +46,7 @@ We present our main interface in two columns. On the left is a start button and 
 ```html
 <div class="right">
   <div id="stopButton" class="button">
-    Stop
+    Stop Recording
   </div>
   <h2>Recording</h2>
   <video id="recording" width="160" height="120" controls></video>
