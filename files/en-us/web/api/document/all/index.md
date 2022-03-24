@@ -19,13 +19,7 @@ property returns an {{DOMxRef("HTMLAllCollection")}} rooted at the document node
 other words, it returns all of the document's elements, accessible by order (like an
 array) and by ID (like a regular object).
 
-## Syntax
-
-```js
-var htmlAllCollection = document.all;
-```
-
-### Value
+## Value
 
 An {{DOMxRef("HTMLAllCollection")}} which contains every element in the document.
 

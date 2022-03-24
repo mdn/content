@@ -15,13 +15,7 @@ The **`head`** read-only property of
 the {{domxref("Document")}} interface returns the {{HTMLElement("head")}} element of
 the current document.
 
-## Syntax
-
-```js
-var objRef = document.head;
-```
-
-### Value
+## Value
 
 An {{domxref("HTMLHeadElement")}}.
 

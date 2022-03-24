@@ -26,13 +26,7 @@ corresponding to the {{cssxref("@import")}} at-rule which imported the styleshee
 the document. If the stylesheet wasn't imported into the document using
 `@import`, the returned value is `null`.
 
-## Syntax
-
-```js
-var ownerRule = cssStyleSheet.ownerRule;
-```
-
-### Value
+## Value
 
 A {{domxref("CSSImportRule")}} corresponding to the {{cssxref("@import")}} rule which
 imported the stylesheet into the document. If the stylesheet wasn't imported into the

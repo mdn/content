@@ -16,13 +16,7 @@ state of the {{domxref("document")}}.
 When the value of this property changes, a {{event("readystatechange")}} event fires on
 the {{domxref("document")}} object.
 
-## Syntax
-
-```js
-let string = document.readyState;
-```
-
-### Values
+## Values
 
 The `readyState` of a document can be one of following:
 

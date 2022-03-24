@@ -15,14 +15,7 @@ browser-compat: api.Element.ariaRowIndexText
 
 The **`ariaRowIndexText`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext) attribute, which defines a human readable text alternative of aria-rowindex.
 
-## Syntax
-
-```js
-var ariaRowIndexText = element.ariaRowIndexText;
-element.ariaRowIndexText = ariaRowIndexText
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}.
 

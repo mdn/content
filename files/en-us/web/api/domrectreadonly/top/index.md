@@ -14,13 +14,7 @@ browser-compat: api.DOMRectReadOnly.top
 
 The **`top`** read-only property of the **`DOMRectReadOnly`** interface returns the top coordinate value of the `DOMRect.` (Has the same value as `y`, or `y + height` if `height` is negative.)
 
-## Syntax
-
-```js
-var recTop = DOMRect.top;
-```
-
-### Value
+## Value
 
 A double.
 

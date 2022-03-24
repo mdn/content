@@ -18,13 +18,7 @@ the [error code constants](/en-US/docs/Web/API/DOMException#error_names), or
 exceptions don't use this anymore: they put this info in the
 {{domxref("DOMException.name")}} attribute.
 
-## Syntax
-
-```js
-var domExceptionCode = domExceptionInstance.code;
-```
-
-### Value
+## Value
 
 A short number.
 

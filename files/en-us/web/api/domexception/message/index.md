@@ -15,13 +15,7 @@ The **`message`** read-only property of the
 {{domxref("DOMException")}} interface returns a {{ domxref("DOMString") }} representing
 a message or description associated with the given [error name](/en-US/docs/Web/API/DOMException#error_names).
 
-## Syntax
-
-```js
-var domExceptionMessage = domExceptionInstance.message;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}.
 
