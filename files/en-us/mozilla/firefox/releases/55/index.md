@@ -29,11 +29,11 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 - Exposed the {{cssxref("transform-box")}} property by default ({{bug(1208550)}}).
 - Implemented the [frames() timing function](</en-US/docs/Web/CSS/easing-function#the_frames()_class_of_timing-functions>) ({{bug(1248340)}}).
 - Implemented the {{cssxref("text-justify")}} property ({{bug(1343512)}}, {{bug("276079")}}).
-- \[css-grid] {{cssxref("fit-content")}} unexpectedly reserves space for full clamp size in {{cssxref("repeat()")}} ({{bug(1359060)}}).
+- \[css-grid] {{cssxref("fit-content")}} unexpectedly reserves space for full clamp size in {{cssxref("repeat", "repeat()")}} ({{bug(1359060)}}).
 - The {{cssxref("float")}} / {{cssxref("clear")}} logical values — `inline-start` and `inline-end` — which were previously implemented but preffed off in release channels, are now available in all channels by default ({{bug(1253919)}}).
 - The `layout.css.variables.enabled` preference has been removed completely meaning that the [CSS variables](/en-US/docs/Web/CSS/Using_CSS_custom_properties) feature is enabled all the time and can no longer be disabled ({{bug(1312328)}}).
 - Implemented the proprietary {{cssxref("-moz-context-properties")}} property ({{bug(1058040)}}).
-- Zero (0) angle value without degree unit is not correctly interpreted in {{cssxref("linear-gradient()")}} ({{bug(1363292)}}).
+- Zero (0) angle value without degree unit is not correctly interpreted in {{cssxref("linear-gradient", "linear-gradient()")}} ({{bug(1363292)}}).
 - The {{cssxref("::cue")}} pseudo-element is now supported; it matches on text cues presented within a media element ({{bug(1318542)}}).
 
 ### SVG

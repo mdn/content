@@ -16,13 +16,7 @@ The **`withCredentials`** read-only property of the
 {{domxref("EventSource")}} interface returns a boolean value indicating whether
 the `EventSource` object was instantiated with CORS credentials set.
 
-## Syntax
-
-```js
-var myWithCredentials = eventSource.withCredentials;
-```
-
-### Value
+## Value
 
 A boolean value indicating whether the `EventSource` object was
 instantiated with CORS credentials set (`true`), or not (`false`,

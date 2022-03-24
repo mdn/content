@@ -18,7 +18,7 @@ The **`ConvolverNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API
 ## Syntax
 
 ```js
-var convolverNode = new ConvolverNode(context, options)
+new ConvolverNode(context, options)
 ```
 
 ### Parameters

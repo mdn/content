@@ -17,7 +17,8 @@ The **`Request()`** constructor creates a new
 ## Syntax
 
 ```js
-var myRequest = new Request(input[, init]);
+new Request(input)
+new Request(input, init)
 ```
 
 ### Parameters

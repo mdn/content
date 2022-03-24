@@ -99,5 +99,5 @@ When browser compatibility is crucial, there are a few options:
 ## See also
 
 - [Render blocking CSS](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css)
-- [Optimizing loading and rendering](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization#optimizing_loading_and_rendering)
+- [Optimizing loading and rendering](https://web.dev/fast/#optimize-webfonts)
 - [Lazy loading images and video](https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video)

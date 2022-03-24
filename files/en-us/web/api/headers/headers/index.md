@@ -16,7 +16,7 @@ The **`Headers()`** constructor creates a new
 ## Syntax
 
 ```js
-var myHeaders = new Headers(init);
+new Headers(init);
 ```
 
 ### Parameters

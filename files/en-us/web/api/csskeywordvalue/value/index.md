@@ -18,14 +18,7 @@ The **`value`** property of the
 {{domxref("CSSKeywordValue")}} interface returns or sets the value of the
 `CSSKeywordValue`.
 
-## Syntax
-
-```js
-var val = cssKeywordValue.value
-cssKeywordValue.value = val
-```
-
-### Value
+## Value
 
 A {{domxref('USVString')}}.
 

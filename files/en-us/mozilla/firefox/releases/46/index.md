@@ -36,7 +36,7 @@ Highlights:
 - Gecko now accepts the `-webkit-` prefixed version of [some properties](https://wiki.mozilla.org/Compatibility/Mobile/Non_Standard_Compatibility); it requires to switch `layout.css.prefixes.webkit` to `true` ({{bug(1213126)}}).
 - The experimental support of the {{cssxref("@font/font-display", "font-display")}} descriptor (of {{cssxref("@font")}}; it requires to switch `layout.css.font-display.enabled` to `true` ({{bug(1157064)}}).
 - Added support for [`@media (-webkit-transform-3d)`](/en-US/docs/Web/CSS/@media/-webkit-transform-3d) as a media query for 3D transform support, if about:config pref `layout.css.prefixes.webkit` is set to `true` ({{bug(1239799)}}).
-- {{cssxref("linear-gradient()")}} support for the omission of `0deg` units ({{bug(1239153)}}).
+- {{cssxref("linear-gradient", "linear-gradient()")}} support for the omission of `0deg` units ({{bug(1239153)}}).
 - Added `-webkit-filter` for web compatibility, behind the preference `layout.css.prefixes.webkit`, defaulting to `false` ({{bug(1236506)}}).
 - \[css-align] "unsafe start" (formerly "true start") should serialize to "start" etc ({{bug(1230398)}}).
 

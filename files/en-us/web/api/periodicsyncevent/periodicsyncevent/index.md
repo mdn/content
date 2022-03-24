@@ -21,7 +21,7 @@ used. The browser creates these objects itself and provides them to
 ## Syntax
 
 ```js
-var PeriodicSyncEvent = new PeriodicSyncEvent();
+new PeriodicSyncEvent();
 ```
 
 ### Parameters

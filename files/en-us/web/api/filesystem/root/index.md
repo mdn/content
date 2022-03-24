@@ -19,13 +19,7 @@ The read-only **`root`** property of the
 object representing the root directory of the file system, for use with the [File and Directory Entries
 API](/en-US/docs/Web/API/File_and_Directory_Entries_API).
 
-## Syntax
-
-```js
-var rootDirEnt = FileSystem.root;
-```
-
-### Value
+## Value
 
 A {{domxref("FileSystemDirectoryEntry")}} representing the file system's root
 directory.

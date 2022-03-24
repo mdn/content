@@ -21,7 +21,7 @@ represents a non-linear distorter.
 ## Syntax
 
 ```js
-var waveShaperNode = new WaveShaperNode(context, options)
+new WaveShaperNode(context, options)
 ```
 
 ### Parameters

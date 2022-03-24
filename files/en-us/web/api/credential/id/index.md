@@ -18,13 +18,7 @@ The **`id`** property of the
 credential's identifier. This might be any one of a GUID, username, or email
 address.
 
-## Syntax
-
-```js
-var id = Credential.id;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} containing the credential's identifier.
 

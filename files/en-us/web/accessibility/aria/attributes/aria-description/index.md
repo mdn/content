@@ -26,7 +26,7 @@ The global `aria-description` attribute provides a mechanism for the developer t
 </div>
 ```
 
-The `aria-description` attribute is similar to [`aria-label`](../aria-label) in that both provide a text string to associate with the element, but a label should be short and concise, while the description can be longer as it is intended to provide more context and information.
+The `aria-description` attribute is similar to [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) in that both provide a text string to associate with the element, but a label should be short and concise, while the description can be longer as it is intended to provide more context and information.
 
 The `aria-description` and `aria-describedby` properties have the same purpose; both provide the user with additional descriptive text for the object on which it is set. If descriptive text is available in the DOM, use [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) instead.
 

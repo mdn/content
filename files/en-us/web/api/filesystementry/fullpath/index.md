@@ -22,13 +22,7 @@ by the entry.
 This can also be thought of as a path which is relative to the root directory, with a
 "/" prepended to it to make it absolute.
 
-## Syntax
-
-```js
-var fullPath = FileSystemEntry.fullPath;
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}} indicating the entry's full path.
 

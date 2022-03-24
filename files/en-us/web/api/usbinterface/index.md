@@ -18,7 +18,7 @@ The `USBInterface` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API)
 
 ## Constructor
 
-- {{domxref("USBInterface.USBInterface")}}
+- {{domxref("USBInterface.USBInterface", "USBInterface()")}}
   - : Creates a new `USBInterface` object which will be populated with information about the interface on the provided `USBConfiguration` with the given interface number.
 
 ## Properties

@@ -103,7 +103,7 @@ You can however control the size of these rows with the property `grid-auto-rows
 
 ### Sizing rows using minmax()
 
-You can use {{cssxref("minmax()","minmax()")}} in your value for {{cssxref("grid-auto-rows")}} enabling the creation of rows that are a minimum size but then grow to fit content if it is taller.
+You can use {{cssxref("minmax","minmax()")}} in your value for {{cssxref("grid-auto-rows")}} enabling the creation of rows that are a minimum size but then grow to fit content if it is taller.
 
 ```css hidden
 * {box-sizing: border-box;}

@@ -123,11 +123,11 @@ This is shown in the diagram below, in which the controller is located down and 
 
 Each input source has a {{domxref("XRInputSource.gamepad", "gamepad")}} property which, if not `NULL`, is a {{domxref("Gamepad")}} object describing the various controls and widgets available on the controller. If the input device only has the primary movement sensors, a squeeze control, and a button, it may not have a `Gamepad` record. If, however, the `gamepad` is present, you can use it to identify and poll the buttons and axes available on the controller.
 
-While the `Gamepad` record is defined by the [Gamepad API](/en-US/docs/Web/API/Gamepad_API) specification, it's not actually managed by the Gamepad API, and doesn't function exactly the same way. See {{Anch("Advanced controllers using the gamepad object")}} for more detailed information.
+While the `Gamepad` record is defined by the [Gamepad API](/en-US/docs/Web/API/Gamepad_API) specification, it's not actually managed by the Gamepad API, and doesn't function exactly the same way. See [Advanced controllers using the gamepad object](#advanced_controllers_using_the_gamepad_object) for more detailed information.
 
 #### Profile strings
 
-Each input source can have zero or more **input profile name** strings, found in the array {{domxref("XRInputSource.profiles", "profiles")}}, each of which describes a preferred visual representation of the input source within the 3D world as well as how the input source functions. The use of these profiles is briefly described under {{Anch("Input profiles")}} below.
+Each input source can have zero or more **input profile name** strings, found in the array {{domxref("XRInputSource.profiles", "profiles")}}, each of which describes a preferred visual representation of the input source within the 3D world as well as how the input source functions. The use of these profiles is briefly described under [Input profiles](#input_profiles) below.
 
 ### Transient input sources
 

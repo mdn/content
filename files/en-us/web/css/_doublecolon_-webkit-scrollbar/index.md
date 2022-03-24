@@ -131,6 +131,5 @@ Not part of any standard.
 ## See also
 
 - WebKit blog on [Styling Scrollbars](https://webkit.org/blog/363/styling-scrollbars/)
-- [WebKit test](https://trac.webkit.org/export/41842/trunk/LayoutTests/scrollbars/overflow-scrollbar-combinations.html) for scrollbar styles mentioned above
 - {{CSSxRef("scrollbar-width")}}
 - {{CSSxRef("scrollbar-color")}}

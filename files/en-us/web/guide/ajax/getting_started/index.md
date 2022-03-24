@@ -203,12 +203,10 @@ First off, let's create a valid XML document that we'll request later on. The do
 </root>
 ```
 
-In the script we only need to change the request line to:
+Next, in `makeRequest()`, we need to replace `test.html` with the XML file we just created:
 
-```html
-...
-onclick="makeRequest('test.xml')">
-...
+```js
+httpRequest.open('GET', 'test.xml');
 ```
 
 Then in `alertContents()`, we need to replace the line `alert(httpRequest.responseText);` with:

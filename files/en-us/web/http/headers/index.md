@@ -325,6 +325,9 @@ _Learn more about CORS [here](CORS)._
   - : It is a request header that indicates whether or not a navigation request was triggered by user activation. It is a Structured Header whose value is a boolean so possible values are `?0` for false and `?1` for true.
 - {{HTTPHeader("Sec-Fetch-Dest")}}
   - : It is a request header that indicates the request's destination to a server. It is a Structured Header whose value is a token with possible values `audio`, `audioworklet`, `document`, `embed`, `empty`, `font`, `image`, `manifest`, `object`, `paintworklet`, `report`, `script`, `serviceworker`, `sharedworker`, `style`, `track`, `video`, `worker`, and `xslt`.
+- {{HTTPHeader("Service-Worker-Navigation-Preload")}}
+  - : A request header sent in preemptive request to {{domxref("fetch()")}} a resource during service worker boot.
+    The value, which is set with {{domxref("NavigationPreloadManager.setHeaderValue()")}}, can be used to inform a server that a different resource should be returned than in a normal `fetch()` operation.
 
 ## Server-sent events
 

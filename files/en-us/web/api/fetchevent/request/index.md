@@ -21,15 +21,9 @@ the event handler.
 
 This property is non-nullable (since version 46, in the case of Firefox.) If a request
 is not provided by some other means, the constructor `init` object must
-contain a request (see {{domxref("FetchEvent.FetchEvent()")}}.)
+contain a request (see {{domxref("FetchEvent.FetchEvent", "FetchEvent()")}}.)
 
-## Syntax
-
-```js
-var recentRequest = fetchEvent.request;
-```
-
-### Value
+## Value
 
 A {{domxref("Request")}} object.
 

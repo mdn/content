@@ -19,7 +19,7 @@ The **`PresentationConnectionCloseEvent`** interface of the [Presentation API](/
 
 ## Constructor
 
-- {{DOMxRef("PresentationConnectionCloseEvent.PresentationConnectionCloseEvent()")}}
+- {{domxref("PresentationConnectionCloseEvent.PresentationConnectionCloseEvent", "PresentationConnectionCloseEvent()")}}
   - : Creates a new PresentationConnectionCloseEvent.
 
 ## Properties

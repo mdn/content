@@ -15,7 +15,7 @@ The **`EyeDropper()`** constructor returns a new {{DOMxRef("EyeDropper")}} objec
 ## Syntax
 
 ```js
-let eyeDropper = new EyeDropper();
+new EyeDropper();
 ```
 
 ## Specifications

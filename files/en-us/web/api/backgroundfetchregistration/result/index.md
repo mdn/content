@@ -15,13 +15,7 @@ The **`result`** read-only property of the {{domxref("BackgroundFetchRegistratio
 
 If the value of this property changes, the  [progress](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event) event is fired at the associated {{domxref("BackgroundFetchRegistration")}} object.
 
-## Syntax
-
-```js
-let theResult = BackgroundFetchRegistration.result;
-```
-
-### Value
+## Value
 
 One of the following strings:
 

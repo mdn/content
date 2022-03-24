@@ -28,7 +28,7 @@ Our basic form styling assessment is fairly free-form, and you have a lot of fle
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/styling-basics/styling-basics1-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/styling-basics/styling-basics1-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

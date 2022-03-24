@@ -14,7 +14,7 @@ The **`ImageDecoder`** interface of the {{domxref('WebCodecs API','','','true')}
 
 ## Constructor
 
-- {{domxref("ImageDecoder.ImageDecoder()")}}
+- {{domxref("ImageDecoder.ImageDecoder", "ImageDecoder()")}}
   - : Creates a new `ImageDecoder` object.
 
 ## Properties

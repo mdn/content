@@ -17,7 +17,7 @@ The **Touch`Event()`** constructor creates a new {{domxref("TouchEvent")}}.
 ## Syntax
 
 ```js
-const event = new TouchEvent(typeArg, touchEventInit);
+new TouchEvent(typeArg, touchEventInit);
 ```
 
 ### Values

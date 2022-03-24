@@ -56,4 +56,4 @@ navigator.languages  //["en-US", "zh-CN", "ja-JP"]
 
 - {{domxref("WorkerNavigator.language")}}
 - {{domxref("WorkerNavigator")}}
-- {{domxref("WorkerGlobalScope.onlanguagechange")}}
+- {{domxref("WorkerGlobalScope.languagechange_event", "languagechange")}} event

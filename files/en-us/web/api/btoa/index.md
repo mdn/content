@@ -126,7 +126,7 @@ const original = fromBinary(decoded);
 console.log(original);                // ☸☹☺☻☼☾☿
 ```
 
-See also the example `utf8_to_b64` and `b64_to_utf8` functions in the [Solution #1 – escaping the string before encoding it](https://developer.mozilla.org/en-US/docs/Glossary/Base64#solution_1_%E2%80%93_escaping_the_string_before_encoding_it) section of the {{Glossary("Base64")}} glossary entry.
+See also the example `utf8_to_b64` and `b64_to_utf8` functions in the [Solution #1 – escaping the string before encoding it](/en-US/docs/Glossary/Base64#solution_1_%E2%80%93_escaping_the_string_before_encoding_it) section of the {{Glossary("Base64")}} glossary entry.
 
 ## Specifications
 

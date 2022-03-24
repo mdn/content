@@ -23,7 +23,6 @@ Otherwise an empty list is returned.
 
 Legacy browser versions do not hard-code the list returned by the property, and might return other MIME types.
 
-
 ## Value
 
 A `MimeTypeArray` object which has a `length` property as well as `item(index)` and `namedItem(name)` methods.

@@ -20,13 +20,7 @@ The **`length`** property of the
 It is used to apply a perspective transform to the element and its content. If the
 value is 0 or a negative number, no perspective transform is applied.
 
-## Syntax
-
-```js
-var length = CSSPerspective.length;
-```
-
-### Value
+## Value
 
 A {{domxref("CSSNumericValue")}}
 

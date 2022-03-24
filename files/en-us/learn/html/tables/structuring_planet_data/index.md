@@ -31,7 +31,7 @@ In our table assessment, we provide you with some data on the planets in our sol
 
 ## Starting point
 
-To start the assessment, make local copies of [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/blank-template.html), [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/minimal-table.css), and [planets-data.txt](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/planets-data.txt) in a new directory in your local computer.
+To start the assessment, make local copies of [blank-template.html](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/blank-template.html), [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/minimal-table.css), and [planets-data.txt](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/planets-data.txt) in a new directory in your local computer.
 
 Alternatively, you could use a site like [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/) to do your assessment, pasting in the HTML, CSS and JavaScript. If using an online editor that doesn't have separate JavaScript/CSS panels, feel free to put them inline `<script>` or `<style>` elements inside the HTML document.
 

@@ -17,14 +17,7 @@ The **`ariaMultiSelectable`** property of the {{domxref("Element")}} interface r
 
 > **Note:** Where possible use an HTML {{htmlelement("select")}} element as this has built in semantics and does not require ARIA attributes.
 
-## Syntax
-
-```js
-var ariaMultiSelectable = element.ariaMultiSelectable;
-element.ariaMultiSelectable = ariaMultiSelectable
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} with one of the following values:
 

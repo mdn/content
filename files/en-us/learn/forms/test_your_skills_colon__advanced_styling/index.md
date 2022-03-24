@@ -29,7 +29,7 @@ We've already provided you with a basic reset to build upon.
 3. Once you've removed the native styling, you'll need to add back one of the features it was providing, to keep same look and feel we originally had. How do you do this?
 4. One thing that is inconsistent across browsers (particularly looking at Safari here) is the position of the standard blue focus outline. How can you remove this?
 5. There is a major problem with just getting rid of the blue focus outline. What is it? Can you add some kind of styling back in so that users can tell when the search box is being hovered or focused?
-6. Another thing that commonly denotes a search box is a magnifying glass icon. We've made one available in the same directory as our HTML files — see [search-24px.png](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/advanced-styling/search-24px.png) — plus a `<div>` element after the search input to help you attach it, should you need it. Can you figure out a sensible way to attach it, and can you use some CSS to get it to sit to the right of the search box, and be lined up vertically as well?
+6. Another thing that commonly denotes a search box is a magnifying glass icon. We've made one available in the same directory as our HTML files — see [search-24px.png](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/advanced-styling/search-24px.png) — plus a `<div>` element after the search input to help you attach it, should you need it. Can you figure out a sensible way to attach it, and can you use some CSS to get it to sit to the right of the search box, and be lined up vertically as well?
 
 Try updating the live code below to recreate the finished example:
 
@@ -37,7 +37,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/advanced-styling/advanced-styling1-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/advanced-styling/advanced-styling1-download.html) to work in your own editor or in an online editor.
 
 ## Advanced form styling 2
 
@@ -56,7 +56,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/advanced-styling/advanced-styling2-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/advanced-styling/advanced-styling2-download.html) to work in your own editor or in an online editor.
 
 ## Advanced form styling 3
 
@@ -69,7 +69,7 @@ What we'd like you to do is make use of some advanced pseudo-classes to provide 
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/advanced-styling/advanced-styling3-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/advanced-styling/advanced-styling3-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

@@ -18,7 +18,7 @@ The **`handler.deleteProperty()`** method is a trap for the
 ## Syntax
 
 ```js
-const p = new Proxy(target, {
+new Proxy(target, {
   deleteProperty: function(target, property) {
   }
 });

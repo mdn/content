@@ -29,7 +29,7 @@ Try submitting your form — it should refuse to submit until the above constrai
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/form-validation/form-validation1-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/form-validation/form-validation1-download.html) to work in your own editor or in an online editor.
 
 ## Form validation 2
 
@@ -45,7 +45,7 @@ Again, to help you might want to consider adding some simple CSS to show when a 
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/form-validation/form-validation2-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/form-validation/form-validation2-download.html) to work in your own editor or in an online editor.
 
 ## Form validation 3
 
@@ -56,7 +56,7 @@ In our final task for this set, we are providing you with a similar example to w
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/form-validation/form-validation3-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/form-validation/form-validation3-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

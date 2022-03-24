@@ -20,7 +20,7 @@ The **`MediaKeyMessageEvent`** constructor creates a new
 ## Syntax
 
 ```js
-var mediaKeyMessageEvent = new MediaKeyMessageEvent(typeArg, options)
+new MediaKeyMessageEvent(typeArg, options)
 ```
 
 ### Parameters

@@ -19,7 +19,7 @@ This interface requires a secure context.
 
 ## Constructor
 
-- {{domxref("IdleDetector.IdleDetector()")}}
+- {{domxref("IdleDetector.IdleDetector", "IdleDetector()")}}
   _ : Creates a new `IdleDetector` object.
 
 ## Properties

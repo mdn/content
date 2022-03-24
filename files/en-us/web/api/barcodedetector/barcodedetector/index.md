@@ -19,7 +19,7 @@ barcodes in images.
 ## Syntax
 
 ```js
-var BarcodeDetector = new BarcodeDetector();
+new BarcodeDetector();
 ```
 
 ### Parameters

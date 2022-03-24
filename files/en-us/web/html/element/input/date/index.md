@@ -367,7 +367,7 @@ var test = document.createElement('input');
 try {
   test.type = 'date';
 } catch (e) {
-  console.log(e.description);
+  console.log(e.message);
 }
 
 // if it does, run the code inside the if() {} block
@@ -399,10 +399,10 @@ function populateDays(month) {
   } else if(month === 'April' | month === 'June' | month === 'September' | month === 'November') {
     dayNum = 30;
   } else {
-  // If month is February, calculate whether it is a leap year or not
-  var year = yearSelect.value;
-  var isLeap = new Date(year, 1, 29).getMonth() == 1;
-  isLeap ? dayNum = 29 : dayNum = 28;
+    // If month is February, calculate whether it is a leap year or not
+    var year = yearSelect.value;
+    var isLeap = new Date(year, 1, 29).getMonth() == 1;
+    dayNum = isLeap ? 29 : 28;
   }
 
   // inject the right number of new <option> elements into the day <select>

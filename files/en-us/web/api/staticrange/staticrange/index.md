@@ -24,7 +24,7 @@ the range as well as a Boolean indicating whether or not the range is
 ## Syntax
 
 ```js
-var staticRange = new StaticRange(rangeSpec)
+new StaticRange(rangeSpec)
 ```
 
 ### Parameters

@@ -7,13 +7,12 @@ tags:
   - Clipboard API
   - Cut
   - Event
-  - Experimental
   - Interface
   - copy
   - paste
 browser-compat: api.ClipboardEvent
 ---
-{{APIRef("Clipboard API")}} {{SeeCompatTable}}
+{{APIRef("Clipboard API")}}
 
 The **`ClipboardEvent`** interface represents events providing information related to modification of the clipboard, that is {{event("cut")}}, {{event("copy")}}, and {{event("paste")}} events.
 

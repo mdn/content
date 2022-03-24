@@ -20,13 +20,7 @@ The **`read`** read-only property of the
 `boolean` that is `true` if the reading of the characteristic
 value is permitted.
 
-## Syntax
-
-```js
-var aBoolean = BluetoothCharacteristicProperties.read;
-```
-
-### Value
+## Value
 
 A boolean value.
 

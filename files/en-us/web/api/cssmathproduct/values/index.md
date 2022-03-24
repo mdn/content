@@ -20,13 +20,7 @@ property of the {{domxref("CSSMathProduct")}} interface returns a
 {{domxref('CSSNumericArray')}} object which contains one or more
 {{domxref('CSSNumericValue')}} objects.
 
-## Syntax
-
-```js
-var cssNumericArray = CSSMathProduct.values;
-```
-
-### Value
+## Value
 
 A {{domxref('CSSNumericArray')}}.
 

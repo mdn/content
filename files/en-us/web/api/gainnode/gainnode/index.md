@@ -20,7 +20,7 @@ change in volume.
 ## Syntax
 
 ```js
-var gainNode = new GainNode(context, options)
+new GainNode(context, options)
 ```
 
 ### Parameters

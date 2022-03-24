@@ -36,7 +36,7 @@ notification is fired using the `Notification()` constructor.
 
 ```js
 var options = {
-  body: 'Do you like my body?',
+  body: 'Do you like my Notification?',
   renotify: true
 }
 

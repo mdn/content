@@ -17,14 +17,7 @@ browser-compat: api.CSSUnitValue.value
 The **`CSSUnitValue.value`** property of the
 {{domxref("CSSUnitValue")}} interface returns a double indicating the number of units.
 
-## Syntax
-
-```js
-var cssUnitValue = CSSUnitValue.value;
-CSSUnitValue.value = cssUnitValue;
-```
-
-### Value
+## Value
 
 A double.
 

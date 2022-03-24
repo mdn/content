@@ -40,7 +40,7 @@ In this assessment, you'll get some more practice in creating cool-looking boxes
 
 To get this assessment started, you should:
 
-- Make local copies of the starting [HTML](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/cool-information-box-start/index.html) and [CSS](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/cool-information-box-start/style.css) — save them as `index.html` and `style.css` in a new directory.
+- Make local copies of the starting [HTML](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/cool-information-box-start/index.html) and [CSS](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/cool-information-box-start/style.css) — save them as `index.html` and `style.css` in a new directory.
 
 Alternatively, you could use a site like [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/) to do your assessment. You could paste the HTML and fill in the CSS into one of these online editors. If the online editor you are using doesn't have a separate CSS panel, feel free to put it in a `<style>` element in the head of the document.
 
@@ -106,4 +106,4 @@ If you would like your work assessed, or are stuck and want to ask for help:
 - [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 - [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
 - [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-- [Organizing your CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing)
+- [Organizing your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing)

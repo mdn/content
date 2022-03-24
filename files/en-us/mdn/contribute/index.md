@@ -39,10 +39,7 @@ The links in this section lead to detailed guides explaining how to do a particu
       </td>
       <td>
         Our <a href="https://github.com/mdn/content/issues">content repo</a> is
-        where people submit issues to report problems found with MDN docs
-        (you'll also find some bugs to fix at the older
-        <a href="https://github.com/mdn/sprints/">sprints repo</a>, but we'll be
-        closing it down eventually). We get a lot of content bugs, and any help
+        where people submit issues to report problems found with MDN docs. We get a lot of content bugs, and any help
         you can give in fixing them would be much appreciated.
       </td>
       <td>

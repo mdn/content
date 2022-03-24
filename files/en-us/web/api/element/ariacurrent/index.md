@@ -15,14 +15,7 @@ browser-compat: api.Element.ariaCurrent
 
 The **`ariaCurrent`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-current`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-current) attribute, which indicates the element that represents the current item within a container or set of related elements.
 
-## Syntax
-
-```js
-var ariaCurrent = element.ariaCurrent;
-element.ariaCurrent = ariaCurrent
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} with one of the following values:
 

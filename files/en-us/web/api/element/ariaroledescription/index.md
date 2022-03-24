@@ -15,14 +15,7 @@ browser-compat: api.Element.ariaRoleDescription
 
 The **`ariaRoleDescription`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) attribute, which defines a human-readable, author-localized description for the role of an element.
 
-## Syntax
-
-```js
-var ariaRoleDescription = element.ariaRoleDescription;
-element.ariaRoleDescription = ariaRoleDescription
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}.
 

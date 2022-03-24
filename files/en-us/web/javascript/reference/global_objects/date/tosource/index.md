@@ -5,11 +5,12 @@ tags:
   - Date
   - JavaScript
   - Method
+  - Non-standard
   - Prototype
   - Reference
 browser-compat: javascript.builtins.Date.toSource
 ---
-{{JSRef}} {{deprecated_header}}
+{{JSRef}} {{non-standard_header}}
 
 The **`toSource()`** method returns a string representing the
 source code of the object.

@@ -824,7 +824,7 @@ The JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) specification describes 
             <tr>
               <th scope="row">Greyscale</th>
               <td><em>n/a</em></td>
-              <td>JPEG has no distinct greyscale mode.</td>
+              <td>True greyscale can be supported using the single luma channel (Y).</td>
             </tr>
             <tr>
               <th scope="row">True color</th>

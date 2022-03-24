@@ -12,3 +12,4 @@ A _forbidden response header name_ is an [HTTP header](/en-US/docs/Web/HTTP/Head
 ## See also
 
 - [Fetch specification: forbidden response-header name](https://fetch.spec.whatwg.org/#forbidden-response-header-name)
+- {{Glossary("Forbidden header name")}} (Glossary)

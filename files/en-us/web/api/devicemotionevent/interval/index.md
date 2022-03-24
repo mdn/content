@@ -35,9 +35,8 @@ var interval = deviceMotionEvent.interval;
 ## See also
 
 - {{DOMxRef("DeviceMotionEvent")}}
-- {{Event("devicemotion")}}
-- {{DOMxRef("window.ondevicemotion")}}
-- {{Event("deviceorientation")}}
+- {{DOMxRef("window.devicemotion_event", "devicemotion") }} event
+- {{DOMxRef("window.deviceorientation_event", "deviceorientation") }} event
 - {{DOMxRef("DeviceOrientationEvent")}}
 - [Detecting device
   orientation](/en-US/docs/Web/API/Detecting_device_orientation)

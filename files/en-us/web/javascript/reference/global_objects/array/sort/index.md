@@ -177,8 +177,8 @@ using one.
 
 ```js
 let stringArray = ['Blue', 'Humpback', 'Beluga'];
-let numericStringArray = ['80', '9', '700'];
 let numberArray = [40, 1, 5, 200];
+let numericStringArray = ['80', '9', '700'];
 let mixedNumericArray = ['80', '9', '700', 40, 1, 5, 200];
 
 function compareNumbers(a, b) {
@@ -193,8 +193,8 @@ numberArray.sort(); // [1, 200, 40, 5]
 numberArray.sort(compareNumbers); // [1, 5, 40, 200]
 
 numericStringArray.join(); // '80,9,700'
-numericStringArray.sort(); // [700, 80, 9]
-numericStringArray.sort(compareNumbers); // [9, 80, 700]
+numericStringArray.sort(); // ['700', '80', '9']
+numericStringArray.sort(compareNumbers); // ['9', '80', '700']
 
 mixedNumericArray.join(); // '80,9,700,40,1,5,200'
 mixedNumericArray.sort(); // [1, 200, 40, 5, '700', '80', '9']
