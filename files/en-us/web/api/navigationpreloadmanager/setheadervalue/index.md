@@ -62,4 +62,3 @@ navigator.serviceWorker.ready
 ## Browser compatibility
 
 {{Compat}}
-

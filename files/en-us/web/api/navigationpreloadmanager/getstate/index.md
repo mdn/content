@@ -27,14 +27,12 @@ A {{jsxref("Promise")}} that resolves with an object that has the following prop
   - : `true` if preloading is enabled, and `false` otherwise.
 - `headerValue`
   - : A string containing the value that will be sent in the `Service-Worker-Navigation-Preload` HTTP header following a preloading {{domxref("fetch()")}}.
-    This defaults to `true` unless the value was changed using {{domxref("NavigationPreloadManager.setHeaderValue()")}}. 
-
+    This defaults to `true` unless the value was changed using {{domxref("NavigationPreloadManager.setHeaderValue()")}}.
 
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : There is no active worker associated with the registration to which this {{domxref("NavigationPreloadManager")}} belongs.
-
 
 ## Examples
 

@@ -69,7 +69,6 @@ _This interface also inherits methods from {{domxref("EventTarget")}}._
 - {{domxref("MIDIPort.statechange_event")}}
   - : Called when an existing port changes its state or connection.
 
-
 ## Examples
 
 ### List ports and their information

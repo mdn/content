@@ -351,7 +351,7 @@ The new process is:
 1. Check cache
 2. Wait on `event.preloadResponse`, which is passed as `preloadResponsePromise` to the `cacheFirst` function.
    Cache the result if it returns.
-4. If neither of these are defined then we go to the network.
+3. If neither of these are defined then we go to the network.
 
 ```js
 const addResourcesToCache = async (resources) => {

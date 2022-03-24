@@ -15,7 +15,7 @@ A `menuitemcheckbox` is a `menuitem` with a checkable state whose possible value
 
 The items in menu and menubars are menu items. There are three types of menu items: [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role), and `menuitemcheckbox`.
 
-These three elements can only be contained in, or owned by, an element with role [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role) or [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role), optionally nested within a grouping element with role of [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role). Being nested or otherwise owned (see [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)) in a `menu` or `menubar` identifies the menu items as being related widgets. 
+These three elements can only be contained in, or owned by, an element with role [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role) or [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role), optionally nested within a grouping element with role of [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role). Being nested or otherwise owned (see [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)) in a `menu` or `menubar` identifies the menu items as being related widgets.
 
 Menu items, including `menuitemcheckbox` elements, may be grouped within `group` elements or separated by elements with the [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) role or other equivalent native role such as {{HTMLElement('fieldset')}} and {{HTMLElement('hr')}}.
 
@@ -27,7 +27,7 @@ An accessible name is required. Ideally, the accessible name should come from an
 
 If all elements in the set are not present in the DOM include the [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) and [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) properties. When specifying `aria-setsize` and `aria-posinset` on a `menuitemcheckbox`, set the value with respect to the total number of items in the menu, excluding any separators.
 
-The `menuitemcheckbox` element can have phrasing content, but can not have interactive content as descendants and no descendants with a `tabindex` attribute specified. 
+The `menuitemcheckbox` element can have phrasing content, but can not have interactive content as descendants and no descendants with a `tabindex` attribute specified.
 
 ### All descendants are presentational
 
@@ -64,13 +64,13 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 ### Keyboard interactions
 
-When a `menu` opens, or when a `menubar` receives focus, keyboard focus is placed on the first item. All items in both are focusable, including all `menuitemcheckbox` elements. 
+When a `menu` opens, or when a `menubar` receives focus, keyboard focus is placed on the first item. All items in both are focusable, including all `menuitemcheckbox` elements.
 
 If the `menuitemcheckbox` is in a submenu in a `menubar` or a menu opened with a menu button, the following keyboard interactions must be programmed in. :
 
 - <kbd>Enter</kbd>
   - : Toggles the `aria-checked` state of the `menuitemcheckbox`  and closes the menu.
-- <kbd>Space</kbd> 
+- <kbd>Space</kbd>
   - : Toggles the `aria-checked` state of the `menuitemcheckbox`. Does not close the menu.
 - <kbd>Escape</kbd>
   - : Closes menu. In menubar, moves focus to parent menubar item.
@@ -104,7 +104,7 @@ If the `menuitemcheckbox` is in a submenu in a `menubar` or a menu opened with a
 <li role="menuitemcheckbox" tabindex="-1" aria-checked="false">Purple</li>
 ```
 
-The [`tabindex="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) makes the `menuitemcheckbox` focusable but not part of the page tab sequence. Had we included `aria-checked="true"` it would have indicated that the `menuitemcheckbox` was checked, and we would have visually styled the selected state to look checked using the attribute selector `[role='menuitemcheckbox'][aria-checked='true']`. Instead, the presence of `aria-checked="false	indicates to assistive technologies that the `menuitemcheckbox` is checkable but not currently checked. The accessible name "purple" comes from the contents. 
+The [`tabindex="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) makes the `menuitemcheckbox` focusable but not part of the page tab sequence. Had we included `aria-checked="true"` it would have indicated that the `menuitemcheckbox` was checked, and we would have visually styled the selected state to look checked using the attribute selector `[role='menuitemcheckbox'][aria-checked='true']`. Instead, the presence of `aria-checked="false"` indicates to assistive technologies that the `menuitemcheckbox` is checkable but not currently checked. The accessible name "purple" comes from the contents.
 
 The visual appearance of the selected state is a checked checkbox which we can create using [generated content](/en-US/docs/Web/CSS/CSS_Generated_Content), making it visible and the same color as the content by synchronizing with the `aria-checked` value using CSS [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) and [inheriting](/en-US/docs/Web/CSS/inherit) the color.
 
@@ -125,7 +125,7 @@ The visual appearance of the selected state is a checked checkbox which we can c
 }
 ```
 
-### Prefer HTML 
+### Prefer HTML
 
 The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. As such, it is recommended to use the native [HTML checkbox](/en-US/docs/Web/HTML/Element/input/checkbox) form control instead of recreating a checkbox's functionality with JavaScript and ARIA.
 
@@ -138,9 +138,9 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 
 ## See Also
 
--  [`menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
--  [`checkbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
--  [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/Input/checkbox)
+- [`menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
+- [`checkbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
+- [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/Input/checkbox)
 
 <section id="Quick_links">
 
