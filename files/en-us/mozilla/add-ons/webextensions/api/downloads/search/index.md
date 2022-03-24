@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var searching = browser.downloads.search(query);
+let searching = browser.downloads.search(query);
 ```
 
 ### Parameters
@@ -56,7 +56,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var searching = browser.downloads.search({
+let searching = browser.downloads.search({
   query:["imgur"]
 });
 
@@ -79,9 +79,9 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var id = 13;
+let id = 13;
 
-var searching = browser.downloads.search({id});
+let searching = browser.downloads.search({id});
 searching.then(logDownloads, onError);
 ```
 
@@ -101,7 +101,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var searching = browser.downloads.search({});
+let searching = browser.downloads.search({});
 searching.then(logDownloads, onError);
 ```
 
@@ -121,7 +121,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var searching = browser.downloads.search({
+let searching = browser.downloads.search({
    limit: 1,
    orderBy: ["-startTime"]
 });

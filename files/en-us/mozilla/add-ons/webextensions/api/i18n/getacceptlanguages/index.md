@@ -24,7 +24,7 @@ See the [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interna
 ## Syntax
 
 ```js
-var gettingAcceptLanguages = browser.i18n.getAcceptLanguages()
+let gettingAcceptLanguages = browser.i18n.getAcceptLanguages()
 ```
 
 ### Parameters
@@ -47,7 +47,7 @@ function onGot(languages) {
   //e.g. Array [ "en-US", "en" ]
 }
 
-var gettingAcceptLanguages = browser.i18n.getAcceptLanguages();
+let gettingAcceptLanguages = browser.i18n.getAcceptLanguages();
 gettingAcceptLanguages.then(onGot);
 ```
 

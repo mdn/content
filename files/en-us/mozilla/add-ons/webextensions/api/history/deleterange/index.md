@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var deletingRange = browser.history.deleteRange(
+let deletingRange = browser.history.deleteRange(
   range           // object
 )
 ```

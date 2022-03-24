@@ -56,7 +56,7 @@ browser.i18n.getMessage(
 Get the localized string for `"messageContent"`, with `target.url` substituted:
 
 ```js
-var message = browser.i18n.getMessage("messageContent", target.url);
+let message = browser.i18n.getMessage("messageContent", target.url);
 console.log(message);
 ```
 

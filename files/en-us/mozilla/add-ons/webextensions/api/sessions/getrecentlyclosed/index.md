@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingSessions = browser.sessions.getRecentlyClosed(
+let gettingSessions = browser.sessions.getRecentlyClosed(
   filter             // optional object
 )
 ```
@@ -65,7 +65,7 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener(function() {
-  var gettingSessions = browser.sessions.getRecentlyClosed({
+  let gettingSessions = browser.sessions.getRecentlyClosed({
     maxResults: 1
   });
   gettingSessions.then(restoreMostRecent, onError);

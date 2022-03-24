@@ -28,7 +28,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var requesting = browser.permissions.request(
+let requesting = browser.permissions.request(
   permissions                // Permissions object
 )
 ```

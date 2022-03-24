@@ -25,7 +25,7 @@ window.addEventListener("afterprint", resumeFunction, false);
 ## Syntax
 
 ```js
-var openingPreview = browser.tabs.printPreview()
+let openingPreview = browser.tabs.printPreview()
 ```
 
 ### Parameters

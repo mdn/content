@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var clearing = setting.clear(
+let clearing = setting.clear(
   details     // object
 )
 ```
@@ -53,7 +53,7 @@ function onCleared(result) {
   }
 }
 
-var clearing = browser.privacy.network.webRTCIPHandlingPolicy.clear({});
+let clearing = browser.privacy.network.webRTCIPHandlingPolicy.clear({});
 clearing.then(onCleared);
 ```
 

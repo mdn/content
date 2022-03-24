@@ -40,7 +40,7 @@ None.
 ## Examples
 
 ```js
-var uiLanguage = browser.i18n.getUILanguage();
+let uiLanguage = browser.i18n.getUILanguage();
 console.log(uiLanguage);
 
 //e.g. "fr"

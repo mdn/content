@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var duplicating = browser.tabs.duplicate(
+let duplicating = browser.tabs.duplicate(
   tabId,              // integer
   duplicateProperties // optional object
 )
@@ -64,13 +64,13 @@ function onError(error) {
 function duplicateFirstTab(tabs) {
   console.log(tabs);
   if (tabs.length > 0) {
-    var duplicating = browser.tabs.duplicate(tabs[0].id);
+    let duplicating = browser.tabs.duplicate(tabs[0].id);
     duplicating.then(onDuplicated, onError);
   }
 }
 
 // Query for all open tabs
-var querying = browser.tabs.query({});
+let querying = browser.tabs.query({});
 querying.then(duplicateFirstTab, onError);
 ```
 

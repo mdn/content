@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var getBookmarks = browser.bookmarks.get(
+let getBookmarks = browser.bookmarks.get(
   idOrIdList                // string or string array
 )
 ```
@@ -49,7 +49,7 @@ function onRejected(error) {
   console.log(`An error: ${error}`);
 }
 
-var gettingBookmarks = browser.bookmarks.get("bookmarkAAAA");
+let gettingBookmarks = browser.bookmarks.get("bookmarkAAAA");
 gettingBookmarks.then(onFulfilled, onRejected);
 ```
 

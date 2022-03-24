@@ -59,7 +59,7 @@ In this example the extension Hansel connects to the extension Gretel:
 
 ```js
 console.log("connecting to Gretel");
-var myPort = browser.runtime.connect(
+let myPort = browser.runtime.connect(
   "gretel@mozilla.org"
 );
 
@@ -75,7 +75,7 @@ browser.browserAction.onClicked.addListener(() => {
 Gretel listens for the connection and checks that the sender is really Hansel:
 
 ```js
-var portFromHansel;
+let portFromHansel;
 
 browser.runtime.onConnectExternal.addListener((port) => {
   console.log(port);

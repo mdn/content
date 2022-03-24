@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var detecting = browser.tabs.detectLanguage(
+let detecting = browser.tabs.detectLanguage(
   tabId,                  // optional integer
   callback                // optional function
 )
@@ -53,7 +53,7 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener(function() {
-  var detecting = browser.tabs.detectLanguage();
+  let detecting = browser.tabs.detectLanguage();
   detecting.then(onLanguageDetected, onError);
 });
 ```
@@ -71,14 +71,14 @@ function onError(error) {
 
 function detectLanguages(tabs) {
   for (tab of tabs) {
-    var onFulfilled = onLanguageDetected.bind(null, tab.url);
-    var detecting = browser.tabs.detectLanguage(tab.id);
+    let onFulfilled = onLanguageDetected.bind(null, tab.url);
+    let detecting = browser.tabs.detectLanguage(tab.id);
     detecting.then(onFulfilled, onError);
   }
 }
 
 browser.browserAction.onClicked.addListener(function() {
-  var querying = browser.tabs.query({});
+  let querying = browser.tabs.query({});
   querying.then(detectLanguages, onError);
 });
 ```

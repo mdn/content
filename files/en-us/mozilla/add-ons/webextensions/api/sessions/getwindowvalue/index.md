@@ -23,7 +23,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var retrieving = browser.sessions.getWindowValue(
+let retrieving = browser.sessions.getWindowValue(
   windowId,    // integer
   key          // string
 )

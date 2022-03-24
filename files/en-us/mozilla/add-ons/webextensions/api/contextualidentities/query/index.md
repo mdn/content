@@ -21,7 +21,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var getContext = browser.contextualIdentities.query(
+let getContext = browser.contextualIdentities.query(
   details                  // object
 )
 ```

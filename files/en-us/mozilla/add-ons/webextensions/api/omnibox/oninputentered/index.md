@@ -95,7 +95,7 @@ Return an array of SuggestResult objects,
 one for each CSS property that matches the user's input.
 */
 function getMatchingProperties(input) {
-  var result = [];
+  let result = [];
   for (prop of props) {
     if (prop.indexOf(input) === 0) {
       console.log(prop);

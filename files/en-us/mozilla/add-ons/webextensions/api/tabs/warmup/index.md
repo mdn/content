@@ -27,7 +27,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var warming = browser.tabs.warmup(
+let warming = browser.tabs.warmup(
   tabId               // integer
 )
 ```

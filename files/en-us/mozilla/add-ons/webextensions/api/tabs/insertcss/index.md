@@ -30,7 +30,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var inserting = browser.tabs.insertCSS(
+let inserting = browser.tabs.insertCSS(
   tabId,           // optional integer
   details          // object
 )
@@ -73,7 +73,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 This example inserts into the currently active tab CSS which is taken from a string.
 
 ```js
-var css = "body { border: 20px dotted pink; }";
+let css = "body { border: 20px dotted pink; }";
 
 browser.browserAction.onClicked.addListener(() => {
 
@@ -81,7 +81,7 @@ browser.browserAction.onClicked.addListener(() => {
     console.log(`Error: ${error}`);
   }
 
-  var insertingCSS = browser.tabs.insertCSS({code: css});
+  let insertingCSS = browser.tabs.insertCSS({code: css});
   insertingCSS.then(null, onError);
 });
 ```
@@ -95,7 +95,7 @@ browser.browserAction.onClicked.addListener(() => {
     console.log(`Error: ${error}`);
   }
 
-  var insertingCSS = browser.tabs.insertCSS(2, {file: "content-style.css"});
+  let insertingCSS = browser.tabs.insertCSS(2, {file: "content-style.css"});
   insertingCSS.then(null, onError);
 });
 ```

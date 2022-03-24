@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingTitle = browser.pageAction.getTitle(
+let gettingTitle = browser.pageAction.getTitle(
   details // object
 )
 ```
@@ -54,7 +54,7 @@ function gotTitle(title) {
 }
 
 browser.pageAction.onClicked.addListener((tab) => {
-  var gettingTitle = browser.pageAction.getTitle({
+  let gettingTitle = browser.pageAction.getTitle({
     tabId: tab.id
   });
   gettingTitle.then(gotTitle);

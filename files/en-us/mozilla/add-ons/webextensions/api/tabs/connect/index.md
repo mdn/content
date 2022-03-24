@@ -54,7 +54,7 @@ In this example a background script listens for a click on a [browser action](/e
 ```js
 function connectToTab(tabs) {
   if (tabs.length > 0) {
-    var examplePort = browser.tabs.connect(
+    let examplePort = browser.tabs.connect(
       tabs[0].id,
       {name: "tabs-connect-example"}
     );
@@ -67,7 +67,7 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener(function() {
-  var gettingActive = browser.tabs.query({
+  let gettingActive = browser.tabs.query({
     currentWindow: true, active: true
   });
   gettingActive.then(connectToTab, onError);
