@@ -41,7 +41,7 @@ hanging-punctuation: unset;
 
 ## Syntax
 
-The `hanging-punctuation` property may be specified with one, two, or three values.
+The `hanging-punctuation` property may be specified with one, two, or three space-separated values.
 
 - **One-value** syntax uses any one of the keyword values in the list below.
 - **Two-value** syntax uses one of the following:
