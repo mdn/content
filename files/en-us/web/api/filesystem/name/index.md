@@ -19,13 +19,7 @@ The read-only **`name`** property of the
 {{domxref("USVString")}} is unique among all file systems currently exposed by the [File and Directory Entries
 API](/en-US/docs/Web/API/File_and_Directory_Entries_API).
 
-## Syntax
-
-```js
-var fsName = FileSystem.name;
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}} representing the file system's name.
 

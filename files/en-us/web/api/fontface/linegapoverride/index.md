@@ -13,14 +13,7 @@ browser-compat: api.FontFace.lineGapOverride
 
 The **`lineGapOverride`** property of the {{domxref("FontFace")}} interface returns and sets the value of the {{cssxref("@font-face/line-gap-override")}} descriptor. The possible values are `normal`, indicating that the metric used should be obtained from the font file, or a percentage.
 
-## Syntax
-
-```js
-let lineGapOverride = FontFace.lineGapOverride;
-FontFace.lineGapOverride = '90%';
-```
-
-### Value
+## Value
 
 A {{domxref("CSSOMString","string")}}.
 

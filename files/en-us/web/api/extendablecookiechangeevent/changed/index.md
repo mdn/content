@@ -13,13 +13,7 @@ browser-compat: api.ExtendableCookieChangeEvent.changed
 
 The **`changed`** read-only property of the {{domxref("ExtendableCookieChangeEvent")}} interface returns any cookies that have been changed by the given `ExtendableCookieChangeEvent` instance.
 
-## Syntax
-
-```js
-var array = ExtendableCookieChangeEvent.changed;
-```
-
-### Value
+## Value
 
 An array of objects containing the changed cookie(s). Each object contains the following properties:
 

@@ -17,13 +17,7 @@ represents the shadow root hosted by the element.
 
 Use {{DOMxRef("Element.attachShadow()")}} to add a shadow root to an existing element.
 
-## Syntax
-
-```js
-var shadowroot = element.shadowRoot;
-```
-
-### Value
+## Value
 
 A {{DOMxRef("ShadowRoot")}} object instance, or `null` if the associated
 shadow root was attached with its {{DOMxRef("ShadowRoot.mode", "mode")}} set to
