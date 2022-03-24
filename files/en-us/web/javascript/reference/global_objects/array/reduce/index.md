@@ -97,7 +97,7 @@ naming can help mitigate readability drawbacks.
 The `reduce()` method itself does not mutate the array it is used on. However, it is possible for code inside the callback function to mutate the array. These are the possible scenarios of array mutations and how `reduce()` behaves in these scenarios:
 
 - If elements are appended to the array _after_ `reduce()` begins to iterate over the array, the callback function does not iterate over the appended elements.
-- If existing elements of the array are changed, their values as passed to the callback function will be the values at the time `reduce()` iterates over the elements.
+- If existing elements of the array do get changed, the values passed to the callback function will be the values from the time that reduce() was first called on the array.
 - Array elements that are deleted _after_ the call to `reduce()` begins _and_ before being iterated over are not visited by `reduce()`.
 
 ### Edge cases
