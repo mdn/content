@@ -42,5 +42,4 @@ console.timeStamp(label);
 
 - {{domxref("console.time()")}}
 - {{domxref("console.timeEnd()")}}
-- [Adding
-  timestamps to the Waterfall](/en-US/docs/Tools/Performance/Waterfall#timestamp_markers)
+- [Adding timestamps to the waterfall](https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html#timestamp_markers)
