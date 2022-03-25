@@ -17,14 +17,7 @@ final `':'`.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-const protocol = url.protocol
-url.protocol = newProtocol
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}}.
 

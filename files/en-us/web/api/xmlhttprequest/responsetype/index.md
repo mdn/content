@@ -25,15 +25,7 @@ It also lets the author change the
 response type. If an empty string is set as the value of `responseType`, the
 default value of `text` is used.
 
-## Syntax
-
-```js
-var type = XMLHttpRequest.responseType;
-
-XMLHttpRequest.responseType = type;
-```
-
-### Value
+## Value
 
 A string which specifies what type of data the response contains.
 It can take the following values:

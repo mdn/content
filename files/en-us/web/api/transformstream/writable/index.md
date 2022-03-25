@@ -13,13 +13,7 @@ browser-compat: api.TransformStream.writable
 
 The **`writable`** read-only property of the {{domxref("TransformStream")}} interface returns the {{domxref("WritableStream")}} instance controlled by this `TransformStream`.
 
-## Syntax
-
-```js
-let writable = TransformStream.writable;
-```
-
-### Value
+## Value
 
 A {{domxref("WritableStream")}}.
 

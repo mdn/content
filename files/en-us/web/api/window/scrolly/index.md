@@ -22,13 +22,7 @@ browsers, meaning that it isn't necessarily a whole number. You can get the numb
 pixels the document is scrolled horizontally from the {{domxref("Window.scrollX",
   "scrollX")}} property.
 
-## Syntax
-
-```js
-var y = window.scrollY
-```
-
-### Value
+## Value
 
 In practice, the returned value is a double-precision floating-point value indicating
 the number of pixels the document is currently scrolled vertically from the origin,

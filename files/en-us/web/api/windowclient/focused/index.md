@@ -18,13 +18,7 @@ The **`focused`** read-only property of the
 {{domxref("WindowClient")}} interface is a boolean value that indicates whether
 the current client has focus.
 
-## Syntax
-
-```js
-var myFocused = windowClient.focused;
-```
-
-### Value
+## Value
 
 A boolean value.
 

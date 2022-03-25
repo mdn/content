@@ -20,13 +20,7 @@ the purpose of loading a USB driver that will work with that device. The other t
 properties are `USBDevice.deviceClass`
 and `USBDevice.deviceSubclass`.
 
-## Syntax
-
-```js
-var number = USBDevice.deviceProtocol
-```
-
-### Value
+## Value
 
 A number.
 
