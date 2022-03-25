@@ -67,7 +67,7 @@ console.log(Rectangle.name);
 // output: "Rectangle"
 
 // named
-let Rectangle = class Rectangle2 {
+Rectangle = class Rectangle2 {
   constructor(height, width) {
     this.height = height;
     this.width = width;
