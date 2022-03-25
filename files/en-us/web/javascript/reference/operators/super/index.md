@@ -16,9 +16,9 @@ The **super** keyword is used to access and call functions on an object's
 parent.
 
 The `super.prop` and `super[expr]` expressions are valid in any
-[method
-definition](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) in both [classes](/en-US/docs/Web/JavaScript/Reference/Classes) and [object
-literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer).
+[method definition](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)
+in both [classes](/en-US/docs/Web/JavaScript/Reference/Classes) and
+[object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
 ## Syntax
 
@@ -37,8 +37,8 @@ also be used to call functions on a parent object.
 
 ### Using `super` in classes
 
-This code snippet is taken from the [classes
-sample](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) ([live demo](https://googlechrome.github.io/samples/classes-es6/index.html)).
+This code snippet is taken from the [classes sample](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html)
+([live demo](https://googlechrome.github.io/samples/classes-es6/index.html)).
 Here `super()` is called to avoid duplicating the constructor parts' that are
 common between `Rectangle` and `Square`.
 
@@ -145,8 +145,8 @@ console.log(y.prop); // 1
 
 ### Using `super.prop` in object literals
 
-Super can also be used in the [object
-initializer / literal](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) notation. In this example, two objects define a method. In
+Super can also be used in the [object initializer / literal](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+notation. In this example, two objects define a method. In
 the second object, `super` calls the first object's method. This works with
 the help of {{jsxref("Object.setPrototypeOf()")}} with which we are able to set the
 prototype of `obj2` to `obj1`, so that `super` is able

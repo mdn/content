@@ -135,8 +135,8 @@ console.log(object[bar])
 A method is not bound to the object that it is a method of. Specifically,
 `this` is not fixed in a method. Put another way, `this` does not
 necessarily refer to the object containing a method. Instead, `this` is
-"passed" by the function call. See [method
-binding](/en-US/docs/Web/JavaScript/Reference/Operators/this#method_binding).
+"passed" by the function call.
+See [method binding](/en-US/docs/Web/JavaScript/Reference/Operators/this#method_binding).
 
 ## Examples
 
@@ -172,5 +172,4 @@ x = document.forms['form_name'].elements[strFormControl].value
 
 - {{jsxref("Object")}}
 - {{jsxref("Object.defineProperty()")}}
-- [Optional
-  chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+- [Optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
