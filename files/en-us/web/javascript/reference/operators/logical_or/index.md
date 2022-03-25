@@ -77,8 +77,8 @@ console.log( B() || A() );
 ### Operator precedence
 
 The following expressions might seem equivalent, but they are not, because the
-`&&` operator is executed before the `||` operator (see [operator
-precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
+`&&` operator is executed before the `||` operator
+(see [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
 
 ```js
 true || false && false      // returns true, because && is executed first
@@ -106,8 +106,8 @@ o10 = false || varObject // f || object returns varObject
 
 > **Note:** If you use this operator to provide a default value to some
 > variable, be aware that any _falsy_ value will not be used. If you only need to
-> filter out {{jsxref("null")}} or {{jsxref("undefined")}}, consider using [the
-> nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator).
+> filter out {{jsxref("null")}} or {{jsxref("undefined")}}, consider using
+> [the nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator).
 
 ### Conversion rules for booleans
 
@@ -166,8 +166,7 @@ is always equal to:
 
 ## See also
 
-- [The
-  nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [The nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
 - {{jsxref("Boolean")}}
 - {{Glossary("Truthy")}}
 - {{Glossary("Falsy")}}
