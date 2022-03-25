@@ -28,9 +28,7 @@ The process a browser uses to paint changes to a page when an element is animati
 2. **Layout**: next, the browser uses the computed styles to figure out the position and geometry for the elements. This operation is labeled "layout" but is also sometimes called "reflow".
 3. **Paint**: finally, the browser needs to repaint the elements to the screen. One last step is not shown in this sequence: the page may be split into layers, which are painted independently and then combined in a process called "Composition".
 
-The process a browser uses to paint updated changes to a canvas element is different. In the \<canvas> scenario, the page layout is not changing. Rather, the page is being repainted, repeatedly, based on JavaScript canvas API functions. When a canvas is animating a drawing, the canvas animation can be described as a waterfall consisting of the following steps:
-
-These sequences need to fit into a single frame, since the screen isn't updated until they are complete.
+This sequence needs to fit into a single frame, since the screen isn't updated until it is complete.
 
 ## CSS property cost
 
