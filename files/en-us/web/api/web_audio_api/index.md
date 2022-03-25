@@ -162,7 +162,7 @@ Using audio worklets, you can define custom audio nodes written in JavaScript or
 - {{domxref("AudioWorkletNode")}}
   - : The `AudioWorkletNode` interface represents an {{domxref("AudioNode")}} that is embedded into an audio graph and can pass messages to the corresponding `AudioWorkletProcessor`.
 - {{domxref("AudioWorkletProcessor")}}
-  - : The `AudioWorkletProcessor` interface represents audio processing code running in a `AudioWorkletGlobalScope` that generates, processes, or analyses audio directly, and can pass messages to the corresponding `AudioWorkletNode`.
+  - : The `AudioWorkletProcessor` interface represents audio processing code running in a `AudioWorkletGlobalScope` that generates, processes, or analyzes audio directly, and can pass messages to the corresponding `AudioWorkletNode`.
 - {{domxref("AudioWorkletGlobalScope")}}
   - : The `AudioWorkletGlobalScope` interface is a `WorkletGlobalScope`-derived object representing a worker context in which an audio processing script is run; it is designed to enable the generation, processing, and analysis of audio data directly using JavaScript in a worklet thread rather than on the main thread.
 
