@@ -97,3 +97,5 @@ The `text-decoration-line` property is specified as `none`, or **one or more** s
 - When setting multiple line-decoration properties at once, it may be more convenient to use the {{cssxref("text-decoration")}} shorthand property instead, which also includes:
   - {{cssxref("text-decoration-style")}}
   - {{cssxref("text-decoration-color")}}
+  - {{cssxref("text-decoration-thickness")}}
+- {{cssxref("text-underline-offset")}}
