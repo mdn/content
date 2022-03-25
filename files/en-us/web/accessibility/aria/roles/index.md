@@ -55,7 +55,7 @@ For most document structure roles, semantic HTML equivalent elements are availab
 - [rowheader](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role) (use `{{HTMLElement('th','&lt;th scope="row">')}}`)
 - [separator](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) (use {{HTMLElement('hr')}} if it doesn't have focus)
 - [table](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) (use {{HTMLElement('table')}})
-- [term](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role) (use {{HTMLElement('dfn')}}
+- [term](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role) (use {{HTMLElement('dfn')}})
 
 These and  [`associationlist`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`associationlistitemkey`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`associationlistitemvalue`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`blockquote`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`caption`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`code`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`deletion`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`emphasis`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`insertion`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`paragraph`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`strong`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), and [`time`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles) are included for completeness, but in most cases are rarely, if ever, useful.
 
