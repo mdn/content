@@ -21,13 +21,7 @@ a link with a {{htmlattrxref("target", "a")}} attribute.
 In other words, if window `A` opens window `B`,
 `B.opener` returns `A`.
 
-## Syntax
-
-```js
-const openerWindow = window.opener
-```
-
-### Value
+## Value
 
 A {{domxref("Window")}}-like object referring to the window that opened the current
 window (using {{domxref("window.open()")}}, or by a link with {{htmlattrxref("target",

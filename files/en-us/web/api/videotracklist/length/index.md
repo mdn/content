@@ -25,13 +25,7 @@ one video track in the media element.
 A value of 0 indicates that there are no
 video tracks in the media.
 
-## Syntax
-
-```js
-var trackCount = VideoTrackList.length;
-```
-
-### Value
+## Value
 
 A number indicating how many video tracks are included in the
 `VideoTrackList`. Each track can be accessed by treating the

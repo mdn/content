@@ -13,14 +13,7 @@ browser-compat: api.TextTrackCue.startTime
 
 The **`startTime`** property of the {{domxref("TextTrackCue")}} interface returns and sets the start time of the cue.
 
-## Syntax
-
-```js
-let startTime = TextTrackCue.startTime;
-TextTrackCue.startTime = 1;
-```
-
-### Value
+## Value
 
 An integer representing the start time, in seconds.
 
