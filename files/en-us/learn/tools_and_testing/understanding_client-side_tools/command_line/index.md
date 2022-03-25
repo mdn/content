@@ -61,7 +61,7 @@ Anyway, the terminal is not going away anytime soon.
 
 ### What does the terminal look like?
 
-Below you can see some of the different flavours of programs that are available that can get you to a terminal.
+Below you can see some of the different flavors of programs that are available that can get you to a terminal.
 
 The next images show the command prompts available in Windows — there's a good range of options from the "cmd" program to "powershell" — which can be run from the start menu by typing the program name.
 
