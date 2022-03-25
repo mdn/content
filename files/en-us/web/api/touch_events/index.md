@@ -273,11 +273,11 @@ You can test this example on mobile devices by touching the box below.
 
 {{EmbedLiveSample('Example','100%', 880)}}
 
-> **Note:** More generally, the example will work on platforms that provide touch events. 
+> **Note:** More generally, the example will work on platforms that provide touch events.
 > You can test this on desktop platforms that can simulate such events:
+>
 > - On Firefox enable "touch simulation" in [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode#toggling_responsive_design_mode) (you may need to reload the page).
 > - On Chrome use [Device mode](https://developer.chrome.com/docs/devtools/device-mode/) and set the [Device type](https://developer.chrome.com/docs/devtools/device-mode/#type) to one that sends touch events.
-
 
 ## Additional tips
 
