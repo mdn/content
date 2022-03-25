@@ -22,21 +22,14 @@ Protecting user data is an essential part of any website design. We previously e
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Read the Server-side programming "<a
-          href="/en-US/docs/Learn/Server-side/First_steps/Website_security"
-          >Website security</a
-        >" topic. Complete the Django tutorial topics up to (and including) at
-        least
-        <a href="/en-US/docs/Learn/Server-side/Django/Forms"
-          >Django Tutorial Part 9: Working with forms</a
-        >.
+        Read the Server-side programming "<a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a>" topic.
+        Complete the Django tutorial topics up to (and including) at least <a href="/en-US/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To understand the main things you need to do (or not do) to secure your
-        Django web application.
+        To understand the main things you need to do (or not do) to secure your Django web application.
       </td>
     </tr>
   </tbody>
@@ -73,7 +66,7 @@ Django's template system protects you against the majority of XSS attacks by [es
 6. When you save the author it will be displayed as shown below. Because of the XSS protections the `alert()` should not be run. Instead the script is displayed as plain text.
     ![Author detail view XSS test](author_detail_alert_xss.png)
 
-If you view the page HTML source code, you can see that the dangerous characters for the script tags have been turned into their harmless escape code equivalents (e.g. `>` is now `&gt;`)
+If you view the page HTML source code, you can see that the dangerous characters for the script tags have been turned into their harmless escape code equivalents (for example, `>` is now `&gt;`)
 
 ```html
 <h1>Author: Boon&lt;script&gt;alert(&#39;Test alert&#39;);&lt;/script&gt;, David (Boonie) </h1>
@@ -87,9 +80,10 @@ It is also possible for XSS attacks to originate from other untrusted source of 
 
 CSRF attacks allow a malicious user to execute actions using the credentials of another user without that user's knowledge or consent. For example consider the case where we have a hacker who wants to create additional authors for our LocalLibrary.
 
-> **Note:** Obviously our hacker isn't in this for the money! A more ambitious hacker could use the same approach on other sites to perform much more harmful tasks (e.g. transfer money to their own accounts, etc.)
+> **Note:** Obviously our hacker isn't in this for the money! A more ambitious hacker could use the same approach on other sites to perform much more harmful tasks (such as transferring money to their own accounts, and so on.)
 
-In order to do this, they might create an HTML file like the one below, which contains an author-creation form (like the one we used in the previous section) that is submitted as soon as the file is loaded. They would then send the file to all the Librarians and suggest that they open the file (it contains some harmless information, honest!). If the file is opened by any logged in librarian, then the form would be submitted with their credentials and a new author would be created.
+In order to do this, they might create an HTML file like the one below, which contains an author-creation form (like the one we used in the previous section) that is submitted as soon as the file is loaded.
+They would then send the file to all the Librarians and suggest that they open the file (it contains some harmless information, honest!). If the file is opened by any logged in librarian, then the form would be submitted with their credentials and a new author would be created.
 
 ```html
 <html>
