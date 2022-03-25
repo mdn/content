@@ -60,7 +60,7 @@ The tooltip should appear on focus or when the element is hovered on, without ke
 ```html
 <label for="password">Password:</label>
 <input aria-describedby="passwordrules" id="password" type="password" />
-<div hidden role="tooltip" id="passwordrules">
+<div role="tooltip" id="passwordrules">
   <p>
       Password Rules:
   </p>
