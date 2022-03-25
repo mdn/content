@@ -45,7 +45,14 @@ dataTransfer.getData(format);
     **`DataTransfer.getData()`** not returning an expected
     value, because not all browsers enforce this restriction.
     
-    During the dragstart event, new data can be added to the drag data store. During the drop event, the list of items representing dragged data can be read, including the data and new data can be added. For all other events, the formats and kinds in the drag data store list of items representing dragged data can be enumerated, but the data itself is unavailable and no new data can be added.
+    During the `dragstart` event, new data can be added to the drag data store.
+
+    During the `drop` event, the list of items representing dragged data can be read,
+    including the data and new data can be added.
+
+    For all other events, the formats and kinds in the drag data store list of items
+    representing dragged data can be enumerated,
+    but the data itself is unavailable and no new data can be added.
 
 
 ## Example
