@@ -67,10 +67,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.13.tgz#40303f692fff93abe7a0f5782432ec717af9b280"
   integrity sha512-OFTriJmUcXnA1RjfKDJOfEmhHO44OV7Gxpqnh7eOM+3qep64Yt+uNF4jEeIFHnwTFH5tMcnBQxEI91dXDGiGYQ==
 
-"@mdn/yari@0.9.38":
-  version "0.9.38"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.9.38.tgz#d00c20517f815930d29070eba8507ed9fc30d8d4"
-  integrity sha512-mi+lB0L2qHIwQD7uSo8XnRGOMsc1uAATwRFRVoijXBRbRilTTo7lhQgurUbG+De+yeobZ4nFYiSglp2Oo9XeXg==
+"@mdn/yari@0.9.51":
+  version "0.9.51"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.9.51.tgz#abe25d2a9458e83780af3cc70de1390d47906f90"
+  integrity sha512-Nd8zzwIZB2MW5VO6jub5AOwAjn7EMlO045bkgRgMEnbfwGbpyk0+Gwy2R7pRq4aSCetf1X25X6XQb/sCDaXSpw==
   dependencies:
     "@babel/helper-builder-react-jsx" "^7.16.7"
     "@caporal/core" "2.0.2"
@@ -109,7 +109,7 @@
     imagemin-mozjpeg "9.0.0"
     imagemin-pngquant "9.0.2"
     imagemin-svgo "9.0.0"
-    inquirer "^8.2.1"
+    inquirer "^8.2.2"
     is-svg "4.2.2"
     js-yaml "4.1.0"
     klaw-sync "^6.0.0"
@@ -2507,10 +2507,10 @@ inquirer@^6.0.0:
     strip-ansi "^5.1.0"
     through "^2.3.6"
 
-inquirer@^8.2.1:
-  version "8.2.1"
-  resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-8.2.1.tgz#e00022e3e8930a92662f760f020686530a84671d"
-  integrity sha512-pxhBaw9cyTFMjwKtkjePWDhvwzvrNGAw7En4hottzlPvz80GZaMZthdDU35aA6/f5FRZf3uhE057q8w1DE3V2g==
+inquirer@^8.2.2:
+  version "8.2.2"
+  resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-8.2.2.tgz#1310517a87a0814d25336c78a20b44c3d9b7629d"
+  integrity sha512-pG7I/si6K/0X7p1qU+rfWnpTE1UIkTONN1wxtzh0d+dHXtT/JG6qBgLxoyHVsQa8cFABxAPh0pD6uUUHiAoaow==
   dependencies:
     ansi-escapes "^4.2.1"
     chalk "^4.1.1"
