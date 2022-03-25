@@ -39,7 +39,7 @@ For now, HTTP is by far the most commonly supported protocol used to transfer me
 
 ### RTMP
 
-Real Time Messaging Protocol (RTMP) is a proprietary protocol developed by Macromedia (now Adobe) and supported by the Adobe Flash plugin. RTMP comes in various flavours including RTMPE (Encrypted), RTMPS (Secure over SSL/TLS) and RTMPT (encapsulated within HTTP requests).
+Real Time Messaging Protocol (RTMP) is a proprietary protocol developed by Macromedia (now Adobe) and supported by the Adobe Flash plugin. RTMP comes in various flavors including RTMPE (Encrypted), RTMPS (Secure over SSL/TLS) and RTMPT (encapsulated within HTTP requests).
 
 ### RTSP
 
