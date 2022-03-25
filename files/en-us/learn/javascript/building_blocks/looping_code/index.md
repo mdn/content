@@ -781,7 +781,7 @@ const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay',
 const admitted = document.querySelector('.admitted');
 const refused = document.querySelector('.refused');
 admitted.textContent = 'Admit: ';
-refused.textContent = 'Refuse: '
+refused.textContent = 'Refuse: ';
 
 // loop starts here
 
