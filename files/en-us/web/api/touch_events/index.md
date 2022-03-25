@@ -260,9 +260,11 @@ function ongoingTouchIndexById(idToFind) {
 
 ```js
 function log(msg) {
-  const p = document.getElementById('log');
-  p.innerHTML = `${ msg } \n${ p.innerHTML }`;
+  const container = document.getElementById('log');
+  container.textContent = `${ msg } \n${ container.textContent }`;
 }
+
+
 ```
 
 ### Result
