@@ -28,7 +28,7 @@ An {{domxref("HTMLHeadElement")}}.
 </head>
 
 <script>
-  var theHead = document.head;
+  const theHead = document.head;
 
   console.log(theHead.id); // "my-document-head";
 
