@@ -17,13 +17,7 @@ a `double` representing the altitude of the position in meters above the [WGS84]
 ellipsoid (which defines the nominal sea level surface). This value is `null`
 if the implementation cannot provide this data.
 
-## Syntax
-
-```js
-let alt = geolocationCoordinatesInstance.altitude
-```
-
-### Value
+## Value
 
 A `double` representing the altitude of the position in meters above the [WGS84](http://earth-info.nga.mil/GandG/publications/tr8350.2/wgs84fin.pdf)
 ellipsoid.

@@ -19,13 +19,7 @@ The **`linearAcceleration`** read-only property of the {{domxref("GamepadPose")}
 
 In other words, the current acceleration of the sensor, along the `x`, `y`, and `z` axes.
 
-## Syntax
-
-```js
-var myGamepadLinAcc = gamepadPoseInstance.linearAcceleration;
-```
-
-### Value
+## Value
 
 A {{jsxref("Float32Array")}}, or `null` if the gamepad is not able to provide linear acceleration data.
 

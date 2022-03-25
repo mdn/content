@@ -30,13 +30,7 @@ image height, it will be rendered this tall.
 > images on low-end devices](https://bugs.chromium.org/p/chromium/issues/detail?id=1187043#c7). In such cases, `naturalHeight` will consider the height of the image modified
 > by such browser interventions as the natural height, and returns this value.
 
-## Syntax
-
-```js
-let naturalHeight = htmlImageElement.naturalHeight;
-```
-
-### Value
+## Value
 
 An integer value indicating the intrinsic height, in CSS pixels, of the image. This is
 the height at which the image is naturally drawn when no constraint or specific value is

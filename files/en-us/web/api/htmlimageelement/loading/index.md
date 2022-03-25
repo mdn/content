@@ -32,14 +32,7 @@ This helps
 to optimize the loading of the document's contents by postponing loading the image until
 it's expected to be needed, rather than immediately during the initial page load.
 
-## Syntax
-
-```js
-let imageLoadScheduling = htmlImageElement.loading;
-htmlImageElement.loading = eagerOrLazy;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} providing a hint to the user agent as to how to best
 schedule the loading of the image to optimize page performance. The possible values are:

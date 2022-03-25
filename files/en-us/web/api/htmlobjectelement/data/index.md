@@ -18,14 +18,7 @@ The **`data`** property of the
 reflects the {{htmlattrxref("data", "object")}} HTML attribute, specifying the address
 of a resource's data.
 
-## Syntax
-
-```js
-var data = HTMLObjectElement.data;
-HTMLObjectElement.data;
-```
-
-### Value
+## Value
 
 A {{domxref('DOMString')}}.
 

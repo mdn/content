@@ -20,13 +20,7 @@ name of the connected database.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var dbName = IDBDatabase.name;
-```
-
-### Value
+## Value
 
 A {{ domxref("DOMString")}} containing the name of the connected database.
 

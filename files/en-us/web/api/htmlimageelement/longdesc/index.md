@@ -23,14 +23,7 @@ which contains a long-form description of the image. This can be used to
 provide optional added details beyond the short description provided in the
 {{htmlattrxref("title")}} attribute.
 
-## Syntax
-
-```js
-descURL = htmlImageElement.longDesc;
-htmlImageElement.longDesc = descURL;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} which may be either an empty string (indicating that no long
 description is available) or the URL of a file containing a long form description of the

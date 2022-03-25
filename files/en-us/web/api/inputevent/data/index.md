@@ -20,13 +20,7 @@ The **`data`** read-only property of the
 characters. This may be an empty string if the change doesn't insert text, such as when
 characters are deleted.
 
-## Syntax
-
-```js
-var aString = inputEvent.data;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}.
 

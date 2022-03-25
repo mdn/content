@@ -38,14 +38,7 @@ for example, to support visually impaired users.
 The alternate text is displayed in the space the image would occupy and should be able
 to take the place of the image _without altering the meaning of the page_.
 
-## Syntax
-
-```js
-htmlImageElement.alt = altText;
-let altText = htmlImageElement.alt;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} which contains the alternate text to display when the image
 is not loaded or for use by assistive devices.

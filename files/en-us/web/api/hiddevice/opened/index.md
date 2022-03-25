@@ -13,13 +13,7 @@ browser-compat: api.HIDDevice.opened
 
 The **`opened`** read-only property of the {{domxref("HIDDevice")}} interface returns true if the connection to the {{domxref("HIDDevice")}} is open and ready to transfer data.
 
-## Syntax
-
-```js
-let opened = HIDDevice.opened;
-```
-
-### Value
+## Value
 
 A boolean value, true if the connection is open.
 

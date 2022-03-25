@@ -15,13 +15,7 @@ browser-compat: api.Gamepad.hapticActuators
 
 The **`hapticActuators`** read-only property of the {{domxref("Gamepad")}} interface returns an array containing {{domxref("GamepadHapticActuator")}} objects, each of which represents haptic feedback hardware available on the controller.
 
-## Syntax
-
-```js
-var myHapticActuators = gamepadInstance.hapticActuators;
-```
-
-### Value
+## Value
 
 An array containing {{domxref("GamepadHapticActuator")}} objects.
 

@@ -21,14 +21,7 @@ drawn in {{Glossary("CSS pixel", "CSS pixels")}} if it's being drawn or rendered
 any visual medium such as a screen or printer. Otherwise, it's the natural, pixel
 density-corrected width of the image.
 
-## Syntax
-
-```js
-htmlImageElement.width = newWidth;
-let width = htmlImageElement.width;
-```
-
-### Value
+## Value
 
 An integer value indicating the width of the image. The way the width is defined
 depends on whether or not the image is being rendered to a visual medium, such as a

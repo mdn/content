@@ -21,13 +21,7 @@ When a database is first created, this attribute is an empty string.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var myInteger = IDBDatabase.version;
-```
-
-### Value
+## Value
 
 An integer containing the version of the connected database.
 

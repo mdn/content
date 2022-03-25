@@ -19,14 +19,7 @@ interface contains a string which names the index.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var indexName = IDBIndex.name;
-IDBIndex.name = indexName;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} specifying a name for the index.
 

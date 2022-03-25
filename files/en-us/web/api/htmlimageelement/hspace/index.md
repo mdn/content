@@ -31,14 +31,7 @@ when laying out the page.
 This property reflects the {{Glossary("HTML")}} {{htmlattrxref("hspace", "img")}}
 attribute.
 
-## Syntax
-
-```js
-htmlImageElement.hspace = marginWidth;
-marginWidth = htmlImageElement.hspace;
-```
-
-### Value
+## Value
 
 An integer value specifying the width, in pixels, of the horizontal margin to apply to
 the left and right sides of the image.

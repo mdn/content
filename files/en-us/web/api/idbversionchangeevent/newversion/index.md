@@ -20,13 +20,7 @@ database.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var newVersion = IDBVersionChangeEvent.newVersion
-```
-
-### Value
+## Value
 
 A [64-bit
 integer](</en-US/docs/NSPR_API_Reference/Long_Long_(64-bit)_Integers>).
