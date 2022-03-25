@@ -643,7 +643,8 @@ As part of a move toward a standardized and powerful format for the `codecs` par
 In this format, the `codecs` parameter's value begins with a four-character code identifying the codec being used in the container, which is then followed by a series of period (`.`) separated two-digit values.
 
 ```plain
-cccc.PP.LL.DD[.CC.cp.tc.mc.FF]
+cccc.PP.LL.DD
+cccc.PP.LL.DD.CC.cp.tc.mc.FF
 ```
 
 The first four components are required; everything from `CC` (chroma subsampling) onward is optional, but all or nothing. Each of these components is described in the following table. Following the table are some examples.
