@@ -41,9 +41,12 @@ dataTransfer.getData(format);
 - Data availability
   - : The [HTML5
     Drag and Drop Specification](https://www.w3.org/TR/2011/WD-html5-20110113/dnd.html#drag-data-store-mode) dictates a `drag data store mode`.
-    This may result in unexpected behavior, being
+    This may result in undefined behavior, being
     **`DataTransfer.getData()`** not returning an expected
-    value.
+    value, because not all browsers enforce this restriction.
+    
+    During the dragstart event, new data can be added to the drag data store. During the drop event, the list of items representing dragged data can be read, including the data and new data can be added. For all other events, the formats and kinds in the drag data store list of items representing dragged data can be enumerated, but the data itself is unavailable and no new data can be added.
+
 
 ## Example
 
