@@ -50,7 +50,7 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 In this example the service worker get the client's ID from a [`fetch`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/onfetch) event and then sends it a message using [`Client.postMessage`](/en-US/docs/Web/API/Client/postMessage):
 
 ```js
-// in the service worker
+// service-worker.js
 async function messageClient(clientId) {
     const client = await clients.get(clientId);
     client.postMessage('Hi client!');
@@ -67,10 +67,19 @@ addEventListener('fetch', (event) => {
 The client can receive the message by listening to the `message` event:
 
 ```js
-// in the page being controlled
+// main.js
 navigator.serviceWorker.addEventListener('message', (message) => {
     console.log(message);
 });
+```
+
+Alternatively, he client can receive the message with the `onmessage` event handler:
+
+```js
+// main.js
+navigator.serviceWorker.onmessage = (message) => {
+    console.log(message);
+};
 ```
 
 ## Specifications

@@ -16,7 +16,7 @@ The **`ServiceWorkerGlobalScope`** interface of the [Service Worker API](/en-US/
 
 Developers should keep in mind that the ServiceWorker state is not persisted across the termination/restart cycle, so each event handler should assume it's being invoked with a bare, default global state.
 
-Once successfully registered, a service worker can and will be terminated when idle to conserve memory and processor power. An active service worker is automatically restarted to respond to events, such as {{domxref("ServiceWorkerGlobalScope.onfetch")}} or {{domxref("ServiceWorkerGlobalScope.onmessage")}}.
+Once successfully registered, a service worker can and will be terminated when idle to conserve memory and processor power. An active service worker is automatically restarted to respond to events, such as {{domxref("ServiceWorkerGlobalScope.fetch_event", "onfetch")}} or {{domxref("ServiceWorkerGlobalScope.message_event", "onmessage")}}.
 
 Additionally, synchronous requests are not allowed from within a service worker — only asynchronous requests, like those initiated via the {{domxref("fetch()")}} method, can be used.
 
@@ -49,7 +49,6 @@ This interface inherits from the {{domxref("WorkerGlobalScope")}} interface, and
     Also available via the {{domxref("ServiceWorkerGlobalScope.oninstall")}} property.
 - {{domxref("ServiceWorkerGlobalScope/message_event", "message")}}
   - : Occurs when incoming messages are received. Controlled pages can use the {{domxref("MessagePort.postMessage()")}} method to send messages to service workers. The service worker can optionally send a response back via the {{domxref("MessagePort")}} exposed in [`event.data.port`](https://html.spec.whatwg.org/multipage/comms.html#messageport), corresponding to the controlled page.
-    Also available via the {{domxref("ServiceWorkerGlobalScope.onmessage")}} property.
 - {{domxref("ServiceWorkerGlobalScope/notificationclick_event", "notificationclick")}}
   - : Occurs when a user clicks on a displayed notification.
     Also available via the {{domxref("ServiceWorkerGlobalScope.onnotificationclick")}} property.

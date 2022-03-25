@@ -33137,23 +33137,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/DedicatedWorkerGlobalScope/onmessage": {
-    "modified": "2020-10-15T21:32:19.699Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "teoli",
-      "chrisdavidmills",
-      "kscarfone"
-    ]
-  },
-  "Web/API/DedicatedWorkerGlobalScope/onmessageerror": {
-    "modified": "2020-10-15T21:56:48.376Z",
-    "contributors": [
-      "fscholz",
-      "chrisdavidmills"
-    ]
-  },
   "Web/API/DedicatedWorkerGlobalScope/postMessage": {
     "modified": "2020-10-15T21:32:21.510Z",
     "contributors": [
@@ -57854,26 +57837,6 @@
       "wbamberg"
     ]
   },
-  "Web/API/MessagePort/onmessage": {
-    "modified": "2020-10-15T21:32:30.523Z",
-    "contributors": [
-      "fscholz",
-      "DomenicDenicola",
-      "stevenwdv",
-      "libbymc",
-      "Sebastianz",
-      "chrisdavidmills",
-      "kscarfone"
-    ]
-  },
-  "Web/API/MessagePort/onmessageerror": {
-    "modified": "2020-10-15T21:56:24.410Z",
-    "contributors": [
-      "fscholz",
-      "chrisdavidmills",
-      "jpmedley"
-    ]
-  },
   "Web/API/MessagePort/postMessage": {
     "modified": "2020-10-15T21:32:30.897Z",
     "contributors": [
@@ -72538,20 +72501,6 @@
       "kscarfone"
     ]
   },
-  "Web/API/ServiceWorkerGlobalScope/onmessage": {
-    "modified": "2020-10-15T21:33:43.199Z",
-    "contributors": [
-      "Wind1808",
-      "hwde",
-      "zbjornson",
-      "fscholz",
-      "chrisdavidmills",
-      "g0ne",
-      "Sebastianz",
-      "kscarfone",
-      "jpmedley"
-    ]
-  },
   "Web/API/ServiceWorkerGlobalScope/onnotificationclick": {
     "modified": "2020-10-15T21:33:32.757Z",
     "contributors": [
@@ -85761,23 +85710,6 @@
       "kscarfone"
     ]
   },
-  "Web/API/WindowEventHandlers/onmessage": {
-    "modified": "2020-10-15T21:58:06.745Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "StripTM",
-      "jpmedley"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onmessageerror": {
-    "modified": "2020-10-15T21:56:39.230Z",
-    "contributors": [
-      "fscholz",
-      "chrisdavidmills",
-      "jpmedley"
-    ]
-  },
   "Web/API/WindowEventHandlers/onpopstate": {
     "modified": "2020-10-15T21:07:13.307Z",
     "contributors": [
@@ -85940,26 +85872,6 @@
     "modified": "2020-10-15T22:17:02.572Z",
     "contributors": [
       "wbamberg"
-    ]
-  },
-  "Web/API/Worker/onmessage": {
-    "modified": "2020-10-15T21:24:57.006Z",
-    "contributors": [
-      "fscholz",
-      "Christian_S",
-      "ExE-Boss",
-      "erikadoyle",
-      "nmve",
-      "teoli",
-      "chrisdavidmills",
-      "kscarfone"
-    ]
-  },
-  "Web/API/Worker/onmessageerror": {
-    "modified": "2020-10-15T21:56:49.561Z",
-    "contributors": [
-      "ExE-Boss",
-      "chrisdavidmills"
     ]
   },
   "Web/API/Worker/postMessage": {
