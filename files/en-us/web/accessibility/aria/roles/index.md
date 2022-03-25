@@ -39,7 +39,7 @@ For most document structure roles, semantic HTML equivalent elements are availab
 - [application](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role)
 - [article](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role) (use {{HTMLElement('article')}})
 - [cell](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) (use {{HTMLElement('td')}})
-- [columnheader](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) (use {{HTMLElement('th', '&lt;th scope="col">')}})
+- [columnheader](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) (use `{{HTMLElement('th', '&lt;th scope="col">')}}`)
 - [definition](/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role) (use {{HTMLElement('dfn')}}
 - [directory](/en-US/docs/Web/Accessibility/ARIA/Roles/directory_role)
 - [document](/en-US/docs/Web/Accessibility/ARIA/Roles/document_role)
@@ -52,7 +52,7 @@ For most document structure roles, semantic HTML equivalent elements are availab
 - [meter](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role)  (use {{HTMLElement('meter')}} instead)
 - [row](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) (use the {{HTMLElement('tr')}} with {{HTMLElement('table')}})
 - [rowgroup](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role) (use {{HTMLElement('thead')}}, {{HTMLElement('tfoot')}} and {{HTMLElement('tbody')}})
-- [rowheader](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role) (use {{HTMLElement('th','&lt;th scope="row">')}})
+- [rowheader](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role) (use `{{HTMLElement('th','&lt;th scope="row">')}}`)
 - [separator](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) (use {{HTMLElement('hr')}} if it doesn't have focus)
 - [table](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) (use {{HTMLElement('table')}})
 - [term](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role) (use {{HTMLElement('dfn')}}
