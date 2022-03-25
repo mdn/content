@@ -48,8 +48,6 @@ This example tracks multiple touchpoints at a time, allowing the user to draw in
   Your browser does not support canvas element.
 </canvas>
 <br>
-<button id="myBtn">Initialize</button>
-<br>
 Log: <pre id="log" style="border: 1px solid #ccc;"></pre>
 ```
 
@@ -69,14 +67,6 @@ function startup() {
 }
 
 document.addEventListener("DOMContentLoaded", startup);
-```
-
-In addition, below we add an event listener for the "Initialize" button, which also calls the `startup()` method.
-This allows you to refresh the event handlers without reloading the page (this is not strictly needed by the example, but makes simulating the events on desktop a little bit easier.)
-
-```js
-const myBtn = document.getElementById('myBtn');
-myBtn.addEventListener('click', () => {window.startup()} );
 ```
 
 #### Tracking new touches
@@ -275,7 +265,7 @@ You can test this example on mobile devices by touching the box below.
 
 > **Note:** More generally, the example will work on platforms that provide touch events. 
 > You can test this on desktop platforms that can simulate such events:
-> - On Firefox enable "touch simulation" in [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode#toggling_responsive_design_mode), and then press the "Initialize" button to reload the content.
+> - On Firefox enable "touch simulation" in [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode#toggling_responsive_design_mode) (you may need to reload the page).
 > - On Chrome use [Device mode](https://developer.chrome.com/docs/devtools/device-mode/) and set the [Device type](https://developer.chrome.com/docs/devtools/device-mode/#type) to one that sends touch events.
 
 
