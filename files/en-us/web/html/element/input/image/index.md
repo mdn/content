@@ -52,6 +52,10 @@ browser-compat: html.elements.input.input-image
       <td>None.</td>
     </tr>
     <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>Methods</strong></td>
       <td>None.</td>
     </tr>

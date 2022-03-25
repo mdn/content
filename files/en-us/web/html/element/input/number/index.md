@@ -51,6 +51,10 @@ On browsers that don't support inputs of type `number`, a `number` input falls b
       <td><code>list</code>, <code>value</code>, <code>valueAsNumber</code></td>
     </tr>
     <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>Methods</strong></td>
       <td>
         {{domxref("HTMLInputElement.select", "select()")}},
