@@ -20,13 +20,7 @@ The **`dataTransfer`** read-only property of the
 containing information about richtext or plaintext data being added to or removed from
 editable content.
 
-## Syntax
-
-```js
-var dataTransfer = inputEvent.dataTransfer
-```
-
-### Value
+## Value
 
 A {{domxref("DataTransfer")}} object.
 

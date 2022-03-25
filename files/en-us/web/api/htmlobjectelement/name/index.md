@@ -18,14 +18,7 @@ The **`name`** property of the
 reflects the {{htmlattrxref("name", "object")}} HTML attribute, specifying the name of
 the browsing context.
 
-## Syntax
-
-```js
-var String = HTMLObjectElement.name;
-HTMLObjectElement.name = String;
-```
-
-### Value
+## Value
 
 A {{domxref('DOMString')}}.
 

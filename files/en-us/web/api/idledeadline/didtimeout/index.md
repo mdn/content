@@ -33,13 +33,7 @@ you should react by performing the needed task or, ideally, a minimal amount of 
 that can be done to keep things moving along, then schedule a new callback to try again
 to get the rest of the work done.
 
-## Syntax
-
-```js
-var timedOut = IdleDeadline.didTimeout;
-```
-
-### Value
+## Value
 
 A Boolean which is `true` if the callback is running due to the callback's
 timeout period elapsing or `false` if the callback is running because the

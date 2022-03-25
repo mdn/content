@@ -22,14 +22,7 @@ interface's **`crossOrigin`** attribute is a string which
 specifies the Cross-Origin Resource Sharing ({{Glossary("CORS")}}) setting to use when
 retrieving the image.
 
-## Syntax
-
-```js
-htmlImageElement.crossOrigin = crossOriginMode;
-let crossOriginMode = htmlImageElement.crossOrigin;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} of a keyword specifying the CORS mode to use when fetching
 the image resource. If you don't specify `crossOrigin`, the image is fetched

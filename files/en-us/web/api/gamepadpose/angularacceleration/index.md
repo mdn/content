@@ -19,13 +19,7 @@ The **`angularAcceleration`** read-only property of the {{domxref("GamepadPose")
 
 In other words, the current acceleration of the sensor's rotation around the `x`, `y`, and `z` axes.
 
-## Syntax
-
-```js
-var myGamepadAngAcc = gamepadPoseInstance.angularAcceleration;
-```
-
-### Value
+## Value
 
 A {{jsxref("Float32Array")}}, or `null` if the gamepad is not able to provide angular acceleration information.
 

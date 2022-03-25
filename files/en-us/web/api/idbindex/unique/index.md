@@ -24,13 +24,7 @@ will not be able to accept duplicate entries.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var isUnique = IDBIndex.unique;
-```
-
-### Value
+## Value
 
 A boolean value:
 

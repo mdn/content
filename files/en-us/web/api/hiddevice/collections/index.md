@@ -13,13 +13,7 @@ browser-compat: api.HIDDevice.collections
 
 The **`collections`** read-only property of the {{domxref("HIDDevice")}} interface returns an array of report formats
 
-## Syntax
-
-```js
-let collections = HIDDevice.collections;
-```
-
-### Value
+## Value
 
 An array of report formats. Each entry contains the following:
 
