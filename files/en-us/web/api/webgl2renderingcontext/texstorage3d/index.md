@@ -60,6 +60,8 @@ void gl.texStorage3D(target, levels, internalformat, width, height, depth);
     - `gl.RGBA16F`
     - `gl.RGBA32F`
     - `gl.RGBA8UI`
+    - 
+    In addition if the {{domxref("WEBGL_compressed_texture_etc")}} extension is supported, the following values are also possible:
     - `gl.COMPRESSED_R11_EAC`
     - `gl.COMPRESSED_SIGNED_R11_EAC`
     - `gl.COMPRESSED_RG11_EAC`
