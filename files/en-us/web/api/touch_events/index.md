@@ -51,6 +51,14 @@ This example tracks multiple touchpoints at a time, allowing the user to draw in
 Log: <pre id="log" style="border: 1px solid #ccc;"></pre>
 ```
 
+```css
+#log {
+  height: 200px;
+  width: 600px;
+  overflow: scroll;
+}
+```
+
 ### Setting up the event handlers
 
 When the page loads, the `startup()` function shown below will be called.
@@ -82,20 +90,20 @@ When a {{domxref("Element/touchstart_event", "touchstart")}} event occurs, indic
 ```js
 function handleStart(evt) {
   evt.preventDefault();
-  console.log('touchstart.');
+  log('touchstart.');
   const el = document.getElementById('canvas');
   const ctx = el.getContext('2d');
   const touches = evt.changedTouches;
 
   for (let i = 0; i < touches.length; i++) {
-    console.log(`touchstart: ${i}...`);
+    log(`touchstart: ${i}.`);
     ongoingTouches.push(copyTouch(touches[i]));
     const color = colorForTouch(touches[i]);
+    log(`color of touch with id ${ touches[i].identifier } = ${ color }`);
     ctx.beginPath();
     ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false);  // a circle at the start
     ctx.fillStyle = color;
     ctx.fill();
-    console.log(`touchstart: ${i}.`);
   }
 }
 ```
@@ -120,20 +128,19 @@ function handleMove(evt) {
     const idx = ongoingTouchIndexById(touches[i].identifier);
 
     if (idx >= 0) {
-      console.log(`continuing touch ${ idx }`);
+      log(`continuing touch ${ idx }`);
       ctx.beginPath();
-      console.log(`ctx.moveTo( ${ ongoingTouches[idx].pageX }, ${ ongoingTouches[idx].pageY } );`);
+      log(`ctx.moveTo( ${ ongoingTouches[idx].pageX }, ${ ongoingTouches[idx].pageY } );`);
       ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
-      console.log(`ctx.lineTo( ${ touches[i].pageX }, ${ touches[i].pageY } );`);
+      log(`ctx.lineTo( ${ touches[i].pageX }, ${ touches[i].pageY } );`);
       ctx.lineTo(touches[i].pageX, touches[i].pageY);
       ctx.lineWidth = 4;
       ctx.strokeStyle = color;
       ctx.stroke();
 
       ongoingTouches.splice(idx, 1, copyTouch(touches[i]));  // swap in the new touch record
-      console.log('.');
     } else {
-      console.log('can\'t figure out which touch to continue');
+      log('can\'t figure out which touch to continue');
     }
   }
 }
@@ -170,7 +177,7 @@ function handleEnd(evt) {
       ctx.fillRect(touches[i].pageX - 4, touches[i].pageY - 4, 8, 8);  // and a square at the end
       ongoingTouches.splice(idx, 1);  // remove it; we're done
     } else {
-      console.log('can\'t figure out which touch to end');
+      log('can\'t figure out which touch to end');
     }
   }
 }
@@ -185,7 +192,7 @@ If the user's finger wanders into browser UI, or the touch otherwise needs to be
 ```js
 function handleCancel(evt) {
   evt.preventDefault();
-  console.log('touchcancel.');
+  log('touchcancel.');
   const touches = evt.changedTouches;
 
   for (let i = 0; i < touches.length; i++) {
@@ -203,7 +210,8 @@ This example uses two convenience functions that should be looked at briefly to 
 
 #### Selecting a color for each touch
 
-To make each touch's drawing look different, the `colorForTouch()` function is used to pick a color based on the touch's unique identifier. This identifier is an opaque number, but we can at least rely on it differing between the currently-active touches.
+To make each touch's drawing look different, the `colorForTouch()` function is used to pick a color based on the touch's unique identifier.
+This identifier is an opaque number, but we can at least rely on it differing between the currently-active touches.
 
 ```js
 function colorForTouch(touch) {
@@ -214,12 +222,12 @@ function colorForTouch(touch) {
   g = g.toString(16); // make it a hex digit
   b = b.toString(16); // make it a hex digit
   const color = "#" + r + g + b;
-  console.log(`color for touch with identifier ${ touch.identifier } = ${ color }`);
   return color;
 }
 ```
 
-The result from this function is a string that can be used when calling {{HTMLElement("canvas")}} functions to set drawing colors. For example, for a {{domxref("Touch.identifier")}} value of 10, the resulting string is "#a31".
+The result from this function is a string that can be used when calling {{HTMLElement("canvas")}} functions to set drawing colors.
+For example, for a {{domxref("Touch.identifier")}} value of 10, the resulting string is "#a31".
 
 #### Copying a touch object
 
