@@ -23,7 +23,7 @@ The system wake lock is exposed through the global {{domxref('Navigator.wakeLock
 
 ## Examples
 
-The following asynchronous function requests a {{domxref("WakeLockSentinel")}} object. The {{domxref("WakeLock.request", "WakeLockrequest()")}} method is wrapped in a `try...catch` statement to account for if the browser refuses the request for any reason.
+The following asynchronous function requests a {{domxref("WakeLockSentinel")}} object. The {{domxref("WakeLock.request", "WakeLock.request()")}} method is wrapped in a `try...catch` statement to account for if the browser refuses the request for any reason.
 
 ```js
 try {
