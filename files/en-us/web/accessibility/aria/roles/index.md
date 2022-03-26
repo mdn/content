@@ -36,6 +36,7 @@ Document Structure roles are used to provide a structural description for a sect
 - [note](/en-US/docs/Web/Accessibility/ARIA/Roles/note_role)
 
 For most document structure roles, semantic HTML equivalent elements are available and supported. Avoid using:
+
 - [application](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role)
 - [article](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role) (use {{HTMLElement('article')}})
 - [cell](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) (use {{HTMLElement('td')}})
