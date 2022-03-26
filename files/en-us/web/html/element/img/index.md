@@ -369,15 +369,15 @@ The value of the `title` attribute is usually presented to the user as a tooltip
             with non-empty <code>alt</code> attribute or no
             <code>alt</code> attribute:
             <code
-              ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Role_Img"
-                >img</a
+              ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/img_role"
+                ><code>img</code></a
               ></code
             >
           </li>
           <li>
             with empty <code>alt</code> attribute:
-            <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-              >no corresponding role</a
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"
+              ><code>presentation</code></a
             >
           </li>
         </ul>
