@@ -489,7 +489,7 @@ One thing to consider is whether your images have meaning inside your content, o
 
 If you do want to provide extra contextual information, you should put it in the text surrounding the image, or inside a `title` attribute, as shown above. In this case, most screen readers will read out the alt text, the title attribute, and the filename. In addition, browsers display title text as tooltips when moused over.
 
-![](title-attribute.png)
+![Screenshot of a red Tyrannosaurus Rex with the text "The mozilla red dinosaur" displayed as tooltip on mouseover.](title-attribute.png)
 
 Let's have another quick look at the fourth method:
 
