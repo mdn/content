@@ -26,13 +26,7 @@ The read-only **`region`** property of the
 administrative subdivision of the country in which the address is located. For example,
 this may be a state, province, oblast, or prefecture.
 
-## Syntax
-
-```js
-var paymentRegion = PaymentAddress.region;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} specifying the top-level administrative subdivision within
 the country in which the address is located. This region has different names in

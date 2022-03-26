@@ -23,13 +23,7 @@ property of the {{domxref("MediaDeviceInfo")}} interface returns a
 Only available during active `MediaStream`
 use, or when persistent permissions have been granted.
 
-## Syntax
-
-```js
-var label = MediaDeviceInfo.label;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} which describes the media device. For security reasons, the
 `label` is always an empty string (`""`) if the user has not

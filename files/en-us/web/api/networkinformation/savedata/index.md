@@ -18,13 +18,7 @@ The **`NetworkInformation.saveData`** read-only
 property of the {{domxref("NetworkInformation")}} interface returns `true` if
 the user has set a reduced data usage option on the user agent.
 
-## Syntax
-
-```js
-var saveData = NetworkInformation.saveData;
-```
-
-### Value
+## Value
 
 A {{jsxref('Boolean')}}.
 

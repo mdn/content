@@ -27,13 +27,7 @@ See {{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API", "The root e
   and root margin")}} for a more in-depth look at the root margin and how it works with
 the root's bounding box.
 
-## Syntax
-
-```js
-var marginString = IntersectionObserver.rootMargin;
-```
-
-### Value
+## Value
 
 A string, formatted similarly to the CSS {{cssxref("margin")}} property's value, which
 contains offsets for one or more sides of the root's bounding box. These offsets are
