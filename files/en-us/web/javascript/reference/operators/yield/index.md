@@ -23,7 +23,7 @@ The `yield` keyword is used to pause and resume a [generator function](/en-US/do
 ```
 
 - `expression` {{optional_inline}}
-  - : Defines the value to return from the generator function via 
+  - : Defines the value to return from the generator function via
     [the iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol).
     If omitted, `undefined` is returned instead.
 - `rv` {{optional_inline}}
