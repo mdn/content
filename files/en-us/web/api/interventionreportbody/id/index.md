@@ -13,13 +13,7 @@ browser-compat: api.InterventionReportBody.id
 
 The **`id`** read-only property of the {{domxref("InterventionReportBody")}} interface returns a string identifying the intervention that generated the report. This can be used to group reports.
 
-## Syntax
-
-```js
-let id = InterventionReportBody.id;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString","string")}}.
 

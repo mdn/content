@@ -14,13 +14,7 @@ The `records` property of
 {{DOMxRef("NDEFMessage")}} interface represents a list of {{DOMxRef("NDEFRecord")}}s
 present in the NDEF message.
 
-## Syntax
-
-```js
-var recordList = NDEFMessage.records;
-```
-
-### Value
+## Value
 
 A list of {{DOMxRef("NDEFRecord")}} object that represent data recorded in the message.
 

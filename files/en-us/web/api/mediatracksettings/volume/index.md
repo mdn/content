@@ -30,13 +30,7 @@ the value of {{domxref("MediaTrackSupportedConstraints.volume")}} as returned by
 to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is
 unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
-
-```js
-var volume = MediaTrackSettings.volume;
-```
-
-### Value
+## Value
 
 A double-precision floating-point number indicating the volume, from 0.0 to 1.0, of the
 audio track as currently configured.

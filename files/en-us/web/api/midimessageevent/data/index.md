@@ -13,13 +13,7 @@ browser-compat: api.MIDIMessageEvent.data
 
 The **`data`** read-only property of the {{domxref("MIDIMessageEvent")}} interface returns the MIDI data bytes of a single MIDI message.
 
-## Syntax
-
-```js
-let data = MIDIMessageEvent.data;
-```
-
-### Value
+## Value
 
 A {{jsxref("Uint8Array")}}.
 

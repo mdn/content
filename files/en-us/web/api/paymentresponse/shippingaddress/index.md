@@ -19,13 +19,7 @@ The **`shippingAddress`** read-only property of
 the `PaymentRequest` interface returns a {{domxref('PaymentAddress')}} object
 containing the shipping address provided by the user.
 
-## Syntax
-
-```js
-var shippingAddress = PaymentRequest.shippingAddress;
-```
-
-### Value
+## Value
 
 A {{domxref("PaymentAddress")}} object providing details comprising the shipping
 address provided by the user.

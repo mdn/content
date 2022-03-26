@@ -24,13 +24,7 @@ across multiple tabs, workers, or other code within the origin. For example, if 
 tab of a web application should be synchronizing network resources with an offline
 database, it could use a lock name such as `"net_db_sync"`.
 
-## Syntax
-
-```js
-var name = Lock.name
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}.
 

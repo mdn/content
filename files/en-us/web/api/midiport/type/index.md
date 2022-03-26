@@ -13,13 +13,7 @@ browser-compat: api.MIDIPort.type
 
 The **`type`** read-only property of the {{domxref("MIDIPort")}} interface returns the type of the port, indicating whether this is an input or output MIDI port.
 
-## Syntax
-
-```js
-let type = MIDIPort.type;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString","string")}} containing the type of the port, one of:
 

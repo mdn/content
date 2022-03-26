@@ -13,13 +13,7 @@ browser-compat: api.MIDIConnectionEvent.port
 
 The **`port`** read-only property of the {{domxref("MIDIConnectionEvent")}} interface returns the port that has been disconnected or connected.
 
-## Syntax
-
-```js
-let port = MIDIConnectionEvent.port;
-```
-
-### Value
+## Value
 
 A {{domxref("MIDIPort")}} object.
 

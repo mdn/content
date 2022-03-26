@@ -33,13 +33,7 @@ Because {{Glossary("RTP")}} doesn't include this information, tracks associated 
 [WebRTC](/en-US/docs/Web/API/WebRTC_API) {{domxref("RTCPeerConnection")}}
 will never include this property.
 
-## Syntax
-
-```js
-var groupId = MediaTrackSettings.groupId;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} whose value is a browsing-session unique identifier for a
 group of devices which includes the source of the track's contents. Two devices share

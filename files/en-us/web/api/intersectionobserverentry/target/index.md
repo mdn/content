@@ -20,13 +20,7 @@ read-only **`target`** property indicates which targeted
 {{domxref("Element")}} has changed its amount of intersection with the intersection
 root.
 
-## Syntax
-
-```js
-var target = IntersectionObserverEntry.target;
-```
-
-### Value
+## Value
 
 The `IntersectionObserverEntry`'s `target` property specifies
 which {{domxref("Element")}} previously targeted by calling

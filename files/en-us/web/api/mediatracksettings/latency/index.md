@@ -38,13 +38,7 @@ Because {{Glossary("RTP")}} doesn't include this information, tracks associated 
 [WebRTC](/en-US/docs/Web/API/WebRTC_API) {{domxref("RTCPeerConnection")}}
 will never include this property.
 
-## Syntax
-
-```js
-var latency = MediaTrackSettings.latency;
-```
-
-### Value
+## Value
 
 A double-precision floating-point number indicating the estimated latency, in seconds,
 of the audio track as currently configured.

@@ -22,13 +22,7 @@ The {{domxref("PromiseRejectionEvent")}} interface's
 {{domxref("PromiseRejectionEvent.reason")}} property to learn why the promise was
 rejected.
 
-## Syntax
-
-```js
-promise = PromiseRejectionEvent.promise
-```
-
-### Value
+## Value
 
 The JavaScript {{jsxref("Promise")}} which was rejected, and whose rejection went
 unhandled.
