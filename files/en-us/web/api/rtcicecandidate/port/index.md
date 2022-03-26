@@ -24,13 +24,7 @@ number on the device at the address given by {{domxref("RTCIceCandidate.address"
 The `port` field's value is set from the `candidateInfo` options object passed to the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor.
 You can't specify the value of `port` directly in the options object, but its value is automatically extracted from the object's `candidate` a-line, if it's formatted properly.
 
-## Syntax
-
-```js
-var port = RTCIceCandidate.port;
-```
-
-### Value
+## Value
 
 A 16-bit number indicating the port number on the device at the address indicated by {{domxref("RTCIceCandidate/address", "address")}} at which the candidate's peer can be reached.
 

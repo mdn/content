@@ -30,13 +30,7 @@ You can't specify the value of `relatedAddress` directly in the options object, 
 The related address and port ({{domxref("RTCIceCandidate.relatedPort", "relatedPort")}}) are not used at all by {{Glossary("ICE")}} itself; they are provided
 for analysis and diagnostic purposes only, and their inclusion may be blocked by security systems, so do not rely on them having non-`null` values.
 
-## Syntax
-
-```js
-var relAddress = RTCIceCandidate.relatedAddress;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} which contains the candidate's related address. For both
 peer and server reflexive candidates, the related address (and related port) are the

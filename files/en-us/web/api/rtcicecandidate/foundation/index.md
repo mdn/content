@@ -25,13 +25,7 @@ which uniquely identifies the candidate across multiple transports.
 The `foundation` can therefore be used to correlate candidates that are present on
 multiple {{domxref("RTCIceTransport")}} objects
 
-## Syntax
-
-```js
-var foundation = RTCIceCandidate.foundation;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} which uniquely identifies the candidate across all
 `RTCIceTransport`s on which it is available.

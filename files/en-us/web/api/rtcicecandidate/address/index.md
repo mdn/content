@@ -25,13 +25,7 @@ The `address` is `null` by default if not otherwise specified.
 The `address` field's value is set from the `candidateInfo` options object passed to the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor.
 You can't specify the value of `address` directly in the options object, but its value is automatically extracted from the object's `candidate` a-line, if it's formatted properly.
 
-## Syntax
-
-```js
-var address = RTCIceCandidate.address;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} providing the IP address from which the candidate comes.
 

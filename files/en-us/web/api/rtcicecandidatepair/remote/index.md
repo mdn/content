@@ -23,13 +23,7 @@ The **`remote`** property of the
 {{domxref("RTCIceCandidate")}} describing the configuration of the remote end of a
 viable WebRTC connection.
 
-## Syntax
-
-```js
-remoteCandidate = RTCIceCandidatePair.remote;
-```
-
-### Value
+## Value
 
 An {{domxref("RTCIceCandidate")}} which describes the configuration of the remote end
 of a viable pair of ICE candidates. The `RTCIceCandidatePair` is returned by

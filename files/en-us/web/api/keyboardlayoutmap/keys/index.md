@@ -20,13 +20,7 @@ the {{domxref("KeyboardLayoutMap")}} interface returns a new Array
 Iterator object that contains the keys for each index in the
 array.
 
-## Syntax
-
-```js
-iterator = KeyboardLayoutMap.keys
-```
-
-### Value
+## Value
 
 An iterator.
 

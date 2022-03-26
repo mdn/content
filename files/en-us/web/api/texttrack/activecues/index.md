@@ -13,13 +13,7 @@ browser-compat: api.TextTrack.activeCues
 
 The **`activeCues`** read-only property of the {{domxref("TextTrack")}} interface returns a {{domxref("TextTrackCueList")}} object listing the currently active cues.
 
-## Syntax
-
-```js
-let activeCues = TextTrack.activeCues;
-```
-
-### Value
+## Value
 
 A {{domxref("TextTrackCueList")}} object.
 

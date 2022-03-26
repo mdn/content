@@ -23,13 +23,7 @@ The **`city`** read-only property of
 the {{domxref('PaymentAddress')}} interface returns a string containing the city or
 town portion of the address.
 
-## Syntax
-
-```js
-var paymentCity = PaymentAddress.city;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} indicating the city or town portion of the address described
 by the {{domxref("PaymentAddress")}} object.

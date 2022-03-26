@@ -22,13 +22,7 @@ The **`lastEventID`** read-only property of the
 {{domxref("ServiceWorkerMessageEvent")}} interface represents, in [server-sent
 events](/en-US/docs/Web/API/en-US/docs/Server-sent_events/Using_server-sent_events), the last event ID of the event source.
 
-## Syntax
-
-```js
-var myLastEventId = ServiceWorkerMessageEventInstance.lastEventId;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}.
 

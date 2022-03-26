@@ -15,13 +15,7 @@ The **`fatal`** read-only property of the {{domxref("TextDecoderStream")}} inter
 
 The two possible values of error mode are `fatal` or `replacement`, the default being `replacement` which pushes a replacement character `U+FFFD` (�) to the output.
 
-## Syntax
-
-```js
-var fatal = TextDecoderStream.fatal;
-```
-
-### Value
+## Value
 
 A {{jsxref("boolean")}} which will return `true` if the error mode is set to `fatal`. Otherwise it returns `false`.
 

@@ -18,13 +18,7 @@ The **`size`** read-only property of the
 {{domxref("StylePropertyMapReadOnly")}} interface returns an unsinged long integer
 containing the size of the `StylePropertyMapReadOnly` object.
 
-## Syntax
-
-```js
-var size = StylePropertyMapReadOnly.size
-```
-
-### Value
+## Value
 
 An unsigned long integer.
 
