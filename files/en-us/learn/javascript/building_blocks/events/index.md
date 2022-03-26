@@ -615,7 +615,6 @@ In the **capturing** phase:
 
 - The browser checks to see if the element's outer-most ancestor ({{htmlelement("html")}}) has a `click` event handler registered on it for the capturing phase, and runs it if so.
 - Then it moves on to the next element inside `<html>` and does the same thing, then the next one, and so on until it reaches the direct parent of the element that was actually selected.
-- Generally when event handlers are added to HTML code, they are not triggered during the event capture phase unless it is explicitly specified. This can be done by setting the capture property to true.
 
 In the **target** phase:
 
@@ -630,10 +629,12 @@ In the **bubbling** phase, the exact opposite of the **capturing** phase occurs:
 
 In modern browsers, by default, all event handlers are registered for the bubbling phase.
 So in our current example, when you select the video, the event bubbles from the `<video>` element outwards to the `<html>` element.
+To register an event handler for the capturing phase, instead of the bubbling phase, pass the `useCapture` argument or the `capture` option to [addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener).
 Along the way:
 
 - It finds the `click` handler on the `video` element and runs it, so the video first starts playing.
 - It then finds the `click` handler on the `videoBox` element and runs that, so the video is hidden as well.
+- Generally when event handlers are added to HTML code, they are not triggered during the event capture phase unless it is explicitly specified. This can be done by setting the capture property to true.
 
 > **Note:** All JavaScript events go through the capturing and target phases.
 > Whether an event enters the bubbling phase can be checked by the read-only {{domxref("Event.bubbles", "bubbles")}} property.
