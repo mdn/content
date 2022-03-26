@@ -107,8 +107,6 @@ If the value is not `null`, it's the element that's currently in picture-in-pict
 
 If the value is `null`, no video is in the floating window. So we can request a video to enter the picture-in-picture mode. We do it by calling {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}} on the {{HTMLElement("video")}} element.
 
-
-
 ## Specifications
 
 | Specification                                                   |
