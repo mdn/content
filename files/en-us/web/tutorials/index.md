@@ -153,6 +153,8 @@ These resources are created by forward-thinking companies and web developers who
   - : For programmers who want to learn JavaScript quickly and properly, and for JavaScript programmers who want to deepen their skills and/or look up specific topics.
 - [Essential JavaScript Design Patterns](https://www.addyosmani.com/resources/essentialjsdesignpatterns/book/)
   - : An introduction to essential JavaScript design patterns.
+- [JavaScript.info - The Modern JavaScript Tutorial](https://javascript.info/)
+  - : Part 1: The Language. Part 2: Working with Browsers.
 
 ### Advanced level
 

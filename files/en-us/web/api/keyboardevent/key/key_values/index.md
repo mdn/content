@@ -1226,7 +1226,7 @@ Some keys are common across multiple languages, while others exist only on keybo
       </td>
       <td></td>
       <td></td>
-      <td>See {{anch("Dead keycodes for Linux")}} below</td>
+      <td>See <a href="#dead_keycodes_for_linux">Dead keycodes for Linux</a> below</td>
       <td></td>
     </tr>
     <tr>
@@ -3080,7 +3080,7 @@ The values below are derived in part form a number of consumer electronics techn
 - [ANSI/CEA-2014-B](http://www.ce.org/Standards/Standard-Listings/R7-Home-Network-Committee/CEA-2014-B-(ANSI%29.aspx): Web-based Protocol and Framework for Remote User Interface on UPnP™ Networks and the Internet
 - [Android KeyEvent key code values](https://developer.android.com/reference/android/view/KeyEvent.html)
 
-> **Note:** Remote controls typically include keys whose values are already defined elsewhere, such as under {{anch("Multimedia keys")}} or {{anch("Audio control keys")}}. Those keys' values will match what's documented in those tables.
+> **Note:** Remote controls typically include keys whose values are already defined elsewhere, such as under [Multimedia keys](#multimedia_keys) or [Audio control keys](#audio_control_keys). Those keys' values will match what's documented in those tables.
 
 <table class="no-markdown">
   <thead>

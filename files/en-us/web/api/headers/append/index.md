@@ -4,7 +4,6 @@ slug: Web/API/Headers/append
 tags:
   - API
   - Append
-  - Experimental
   - Fetch
   - Method
   - Reference

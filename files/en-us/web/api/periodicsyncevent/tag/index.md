@@ -20,13 +20,7 @@ the {{domxref('PeriodicSyncEvent')}}. This is specified when calling the
 {{domxref('PeriodicSyncManager')}} interface. Multiple tags can be used by the web app
 to run different periodic tasks at different frequencies.
 
-## Syntax
-
-```js
-const tag = PeriodicSyncEvent.tag;
-```
-
-### Value
+## Value
 
 Returns a {{jsxref('String')}} of the defined identifier.
 

@@ -22,7 +22,7 @@ starts sending {{Glossary("DTMF")}} tones to the remote peer over the
 {{domxref("RTCPeerConnection")}}.
 
 Sending of the tones is performed asynchronously,
-with {{event("tonechange")}} events sent to the `RTCDTMFSender` every time
+with [`tonechange`](/en-US/docs/Web/API/RTCDTMFSender/tonechange_event) events sent to the `RTCDTMFSender` every time
 a tone starts or ends.
 
 As long as the connection is active, you can send tones at any time. Calling

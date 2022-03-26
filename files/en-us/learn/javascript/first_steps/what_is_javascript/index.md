@@ -94,7 +94,7 @@ function updateName() {
 
 {{ EmbedLiveSample('A_high-level_definition', '100%', 80) }}
 
-Try clicking on this last version of the text label to see what happens (note also that you can find this demo on GitHub — see the [source code](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/javascript-label.html), or [run it live](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html))!
+Try clicking on this last version of the text label to see what happens (note also that you can find this demo on GitHub — see the [source code](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/javascript-label.html), or [run it live](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html))!
 
 JavaScript can do a lot more than that — let's explore what in more detail.
 
@@ -103,8 +103,8 @@ JavaScript can do a lot more than that — let's explore what in more detail.
 The core client-side JavaScript language consists of some common programming features that allow you to do things like:
 
 - Store useful values inside variables. In the above example for instance, we ask for a new name to be entered then store that name in a variable called `name`.
-- Operations on pieces of text (known as "strings" in programming). In the above example we take the string "Player 1: " and join it to the `name` variable to create the complete text label, e.g. ''Player 1: Chris".
-- Running code in response to certain events occurring on a web page. We used a {{Event("click")}} event in our example above to detect when the button is clicked and then run the code that updates the text label.
+- Operations on pieces of text (known as "strings" in programming). In the above example we take the string "Player 1: " and join it to the `name` variable to create the complete text label, e.g. "Player 1: Chris".
+- Running code in response to certain events occurring on a web page. We used a {{Event("click")}} event in our example above to detect when the label is clicked and then run the code that updates the text label.
 - And much more!
 
 What is even more exciting however is the functionality built on top of the client-side JavaScript language. So-called **Application Programming Interfaces** (**APIs**) provide you with extra superpowers to use in your JavaScript code.
@@ -131,7 +131,7 @@ They generally fall into two categories.
 
 **Third party APIs** are not built into the browser by default, and you generally have to grab their code and information from somewhere on the Web. For example:
 
-- The [Twitter API](https://dev.twitter.com/overview/documentation) allows you to do things like displaying your latest tweets on your website.
+- The [Twitter API](https://developer.twitter.com/en/docs) allows you to do things like displaying your latest tweets on your website.
 - The [Google Maps API](https://developers.google.com/maps/) and [OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API) allows you to embed custom maps into your website, and other such functionality.
 
 > **Note:** These APIs are advanced, and we'll not be covering any of these in this module. You can find out much more about these in our [Client-side web APIs module](/en-US/docs/Learn/JavaScript/Client-side_web_APIs).
@@ -225,7 +225,7 @@ Whereas CSS uses {{htmlelement("link")}} elements to apply external stylesheets 
 
 ### Internal JavaScript
 
-1. First of all, make a local copy of our example file [apply-javascript.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript.html). Save it in a directory somewhere sensible.
+1. First of all, make a local copy of our example file [apply-javascript.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript.html). Save it in a directory somewhere sensible.
 2. Open the file in your web browser and in your text editor. You'll see that the HTML creates a simple web page containing a clickable button.
 3. Next, go to your text editor and add the following in your head — just before your closing `</head>` tag:
 
@@ -262,7 +262,7 @@ Whereas CSS uses {{htmlelement("link")}} elements to apply external stylesheets 
 > Did you add your {{htmlelement("script")}} element just before the `</head>` tag?
 > Did you enter the JavaScript exactly as shown? **JavaScript is case sensitive, and very fussy, so you need to enter the syntax exactly as shown, otherwise it may not work.**
 
-> **Note:** You can see this version on GitHub as [apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html) ([see it live too](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)).
+> **Note:** You can see this version on GitHub as [apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html) ([see it live too](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)).
 
 ### External JavaScript
 
@@ -296,7 +296,7 @@ This works great, but what if we wanted to put our JavaScript in an external fil
    This is generally a good thing in terms of organizing your code and making it reusable across multiple HTML files.
    Plus, the HTML is easier to read without huge chunks of script dumped in it.
 
-> **Note:** You can see this version on GitHub as [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) and [script.js](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/script.js) ([see it live too](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)).
+> **Note:** You can see this version on GitHub as [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) and [script.js](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/script.js) ([see it live too](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)).
 
 ### Inline JavaScript handlers
 
@@ -395,7 +395,7 @@ They won't run until the page content has all loaded, which is useful if your sc
 
 Here is a visual representation of the different script loading methods and what that means for your page:
 
-![async vs defer](async-defer.jpg)
+![](async-defer.jpg)
 
 _This image is from the [HTML spec](https://html.spec.whatwg.org/images/asyncdefer.svg), copied and cropped to a reduced version, under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license terms._
 

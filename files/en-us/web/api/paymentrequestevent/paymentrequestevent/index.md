@@ -20,7 +20,7 @@ a {{domxref("PaymentRequest")}} is made..
 ## Syntax
 
 ```js
-var paymentRequestEvent = new PaymentRequestEvent(type, options)
+new PaymentRequestEvent(type, options)
 ```
 
 ### Parameters

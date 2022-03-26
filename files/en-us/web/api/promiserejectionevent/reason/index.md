@@ -20,13 +20,7 @@ property is any JavaScript value or {{jsxref("Object")}} which provides the reas
 passed into {{jsxref("Promise.reject()")}}. This in theory provides information about
 why the promise was rejected.
 
-## Syntax
-
-```js
-reason = PromiseRejectionEvent.reason
-```
-
-### Value
+## Value
 
 A  value or object which provides information you can use to understand why the promise
 was rejected. This could be anything from an error code to an object with text, links,

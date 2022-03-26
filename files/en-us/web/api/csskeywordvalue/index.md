@@ -21,7 +21,7 @@ The interface instance name is a {{Glossary("stringifier")}} meaning that when u
 
 ## Constructor
 
-- {{domxref("CSSKeywordValue.CSSKeywordValue()")}}
+- {{domxref("CSSKeywordValue.CSSKeywordValue", "CSSKeywordValue()")}}
   - : Creates a new `CSSKeywordValue` object.
 
 ## Properties

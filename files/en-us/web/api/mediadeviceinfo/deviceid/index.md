@@ -21,13 +21,7 @@ It is un-guessable by other applications, and unique to the origin of
 the calling application. It is reset when the user clears cookies. For private browsing,
 a different identifier is used that is not persisted across sessions.
 
-## Syntax
-
-```js
-var deviceID = MediaDeviceInfo.deviceId
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}.
 

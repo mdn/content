@@ -3,7 +3,6 @@ title: Request.redirect
 slug: Web/API/Request/redirect
 tags:
   - API
-  - Experimental
   - Fetch
   - Property
   - Redirect
@@ -33,7 +32,7 @@ If not specified when the request is created, it takes the default value of `fol
 
 ## Example
 
-In the following snippet, we create a new request using the {{domxref("Request.Request()")}} constructor (for an image file in the same directory as the script), then save the request `redirect` value in a variable:
+In the following snippet, we create a new request using the {{domxref("Request.Request", "Request()")}} constructor (for an image file in the same directory as the script), then save the request `redirect` value in a variable:
 
 ```js
 var myRequest = new Request('flowers.jpg');

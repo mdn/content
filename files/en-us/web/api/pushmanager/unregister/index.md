@@ -32,7 +32,7 @@ var request = navigator.push.unregister(pushEndpoint);
 A {{domxref("DOMRequest")}} object to handle the success or failure of the method call.
 
 If the method call is successful, the request's `result` will be a
-{{Anch("PushRegistration")}} object representing the endpoint that has been
+[PushRegistration](#pushregistration) object representing the endpoint that has been
 unregistered.
 
 ### PushRegistration

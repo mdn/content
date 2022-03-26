@@ -20,7 +20,7 @@ The ID of the extension.
 ## Syntax
 
 ```js
-var myAddonId = browser.runtime.id;
+let myAddonId = browser.runtime.id;
 ```
 
 ### Value

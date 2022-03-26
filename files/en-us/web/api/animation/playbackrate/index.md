@@ -18,15 +18,7 @@ The **`Animation.playbackRate`** property of the [Web Animations API](/en-US/doc
 
 Animations have a **playback rate** that provides a scaling factor from the rate of change of the animation's {{domxref("DocumentTimeline", "timeline")}} time values to the animation's current time. The playback rate is initially `1`.
 
-## Syntax
-
-```js
-var currentPlaybackRate = Animation.playbackRate;
-
-Animation.playbackRate = newRate;
-```
-
-### Value
+## Value
 
 Takes a number that can be 0, negative, or positive. Negative values reverse the animation. The value is a scaling factor, so for example a value of 2 would double the playback rate.
 

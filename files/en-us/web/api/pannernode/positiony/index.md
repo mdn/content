@@ -35,15 +35,7 @@ The {{domxref("AudioParam")}} contained by this property is read only; however, 
 can still change the value of the parameter by assigning a new value to its
 {{domxref("AudioParam.value")}} property.
 
-## Syntax
-
-```js
-var positionY = PannerNode.positionY;
-
-PannerNode.positionY.value = newPositionY;
-```
-
-### Value
+## Value
 
 An {{domxref("AudioParam")}} whose `value` is the Y coordinate of the audio
 source's position, in 3D Cartesian coordinates.

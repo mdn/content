@@ -31,13 +31,7 @@ stylesheet.
 > While `rules` is unlikely to be removed soon, its availability is not as
 > widespread and using it will result in compatibility problems for your site or app.
 
-## Syntax
-
-```js
-var rules = cssStyleSheet.rules;
-```
-
-### Value
+## Value
 
 A live-updating {{domxref("CSSRuleList")}} containing each of the CSS rules making up
 the stylesheet. Each entry in the rule list is a {{domxref("CSSRule")}} object

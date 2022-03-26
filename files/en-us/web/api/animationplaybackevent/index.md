@@ -23,7 +23,7 @@ As animations play, they report changes to their {{domxref("Animation.playState"
 
 ## Constructor
 
-- {{domxref("AnimationPlaybackEvent.AnimationPlaybackEvent()")}}
+- {{domxref("AnimationPlaybackEvent.AnimationPlaybackEvent", "AnimationPlaybackEvent()")}}
   - : Constructs a new `AnimationPlaybackEvent` object instance.
 
 ## Properties

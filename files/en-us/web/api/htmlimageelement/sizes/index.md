@@ -27,14 +27,7 @@ conditions.
 Each condition is specified using the same conditional format used
 by [media queries](/en-US/docs/Web/CSS/Media_Queries).
 
-## Syntax
-
-```js
-let sizes = htmlImageElement.sizes;
-htmlImageElement.sizes = sizes;
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}} containing a comma-separated list of source size descriptors
 followed by an optional fallback size. Each **source size descriptor** is

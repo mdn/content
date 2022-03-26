@@ -21,7 +21,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var showing = browser.tabs.show(
+let showing = browser.tabs.show(
   tabIds          // integer or integer array
 )
 ```

@@ -27,7 +27,7 @@ Finally, note that {{cssxref("@import")}} and {{cssxref("@charset")}} obey speci
 
 ## Origin of CSS declarations
 
-The CSS cascade algorithm's job is to select CSS declarations in order to determine the correct values for CSS properties. CSS declarations originate from different origins: the **{{anch("User-agent stylesheets")}}**, the **{{anch("Author stylesheets")}}**, and the **{{anch("User stylesheets")}}**.
+The CSS cascade algorithm's job is to select CSS declarations in order to determine the correct values for CSS properties. CSS declarations originate from different origins: the **[User-agent stylesheets](#user-agent_stylesheets)**, the **[Author stylesheets](#author_stylesheets)**, and the **[User stylesheets](#user_stylesheets)**.
 
 Though style sheets come from these different origins, they overlap in scope; to make this work, the cascade algorithm defines how they interact.
 

@@ -20,7 +20,7 @@ The **`CSSTranslate`** interface of the {{domxref('CSS_Object_Model#css_typed_ob
 
 ## Constructor
 
-- {{domxref("CSSTranslate.CSSTranslate()")}}
+- {{domxref("CSSTranslate.CSSTranslate", "CSSTranslate()")}}
   - : Creates a new `CSSTranslate` object.
 
 ## Properties

@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingInfo = browser.management.get(
+let gettingInfo = browser.management.get(
   id                  // string
 )
 ```
@@ -45,13 +45,13 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 Log the name of the add-on whose ID is "my-add-on":
 
 ```js
-var id = "my-add-on";
+let id = "my-add-on";
 
 function got(info) {
   console.log(info.name);
 }
 
-var getting = browser.management.get(id);
+let getting = browser.management.get(id);
 getting.then(got);
 ```
 

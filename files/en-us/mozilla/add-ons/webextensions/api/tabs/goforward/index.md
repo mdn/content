@@ -21,7 +21,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var goingForward = browser.tabs.goForward(
+let goingForward = browser.tabs.goForward(
   tabId,                       // optional integer
   callback                       // optional function
 )
@@ -55,7 +55,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var goingForward = browser.tabs.goForward();
+let goingForward = browser.tabs.goForward();
 goingForward.then(onGoForward, onError);
 ```
 

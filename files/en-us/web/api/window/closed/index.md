@@ -15,13 +15,7 @@ browser-compat: api.Window.closed
 The **`Window.closed`** read-only property indicates whether
 the referenced window is closed or not.
 
-## Syntax
-
-```js
-const isClosed = windowRef.closed;
-```
-
-### Value
+## Value
 
 A boolean value. Possible values:
 

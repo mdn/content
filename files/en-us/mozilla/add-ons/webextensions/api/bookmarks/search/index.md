@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var searching = browser.bookmarks.search(
+let searching = browser.bookmarks.search(
   query                  // string or object
 )
 ```
@@ -71,7 +71,7 @@ function onRejected(error) {
   console.log(`An error: ${error}`);
 }
 
-var searching = browser.bookmarks.search({});
+let searching = browser.bookmarks.search({});
 
 searching.then(onFulfilled, onRejected);
 ```
@@ -92,7 +92,7 @@ function onRejected(error) {
 }
 
 function checkActiveTab(tab) {
-  var searching = browser.bookmarks.search({url: tab.url});
+  let searching = browser.bookmarks.search({url: tab.url});
   searching.then(onFulfilled, onRejected);
 }
 

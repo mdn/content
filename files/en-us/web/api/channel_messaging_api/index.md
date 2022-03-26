@@ -20,7 +20,7 @@ A message channel is created using the {{domxref("MessageChannel.MessageChannel"
 
 When these transferable objects are transferred, they are no longer usable on the context they previously belonged to. A port, after it is sent, can no longer be used by the original context.
 
-The other browsing context can listen for the message using {{domxref("MessagePort.onmessage")}}, and grab the contents of the message using the event's `data` attribute. You could then respond by sending a message back to the original document using {{domxref("MessagePort.postMessage")}}.
+The other browsing context can listen for the message using {{domxref("MessagePort.message_event", "onmessage")}}, and grab the contents of the message using the event's `data` attribute. You could then respond by sending a message back to the original document using {{domxref("MessagePort.postMessage")}}.
 
 When you want to stop sending messages down the channel, you can invoke {{domxref("MessagePort.close")}} to close the ports.
 

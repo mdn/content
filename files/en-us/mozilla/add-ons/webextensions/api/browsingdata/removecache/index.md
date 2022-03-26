@@ -23,7 +23,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var removing = browser.browsingData.removeCache(
+let removing = browser.browsingData.removeCache(
   removalOptions            // RemovalOptions object
 )
 ```
@@ -36,10 +36,6 @@ var removing = browser.browsingData.removeCache(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the removal has finished. If any error occurs, the promise will be rejected with an error message.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -57,6 +53,10 @@ function onError(error) {
 browser.browsingData.removeCache({}).
 then(onRemoved, onError);
 ```
+
+## Browser compatibility
+
+{{Compat}}
 
 {{WebExtExamples}}
 

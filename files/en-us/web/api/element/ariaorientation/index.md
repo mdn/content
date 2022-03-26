@@ -15,14 +15,7 @@ browser-compat: api.Element.ariaOrientation
 
 The **`ariaOrientation`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) attribute, which indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
 
-## Syntax
-
-```js
-var ariaOrientation = element.ariaOrientation;
-element.ariaOrientation = ariaOrientation
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} with one of the following values:
 

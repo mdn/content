@@ -39,7 +39,7 @@ The `@layer` at-rule is used to create a cascade layer in one of three ways. The
 A cascade layer can be created with {{cssxref("@import")}}, in this case the rules would be in the imported stylesheet:
 
 ```css
-@import(utilities.css) layer(utilities);
+@import 'utilities.css' layer(utilities);
 ```
 
 You can also create a named cascade layer without assigning any styles. This can be a single name:

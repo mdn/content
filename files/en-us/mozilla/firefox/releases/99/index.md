@@ -37,9 +37,18 @@ This article provides information about the changes in Firefox 99 that will affe
 
 ### APIs
 
+- {{domxref("navigator.pdfViewerEnabled")}} is now enabled, and is the recommend way to determine whether a browser supports inline display of PDF files when navigating to them.
+  Sites that use the deprecated properties {{domxref("navigator.plugins")}} and {{domxref("navigator.mimeTypes")}} to infer PDF viewer support should now use the new property, even though these now return hard-coded mock values that match the signal provided by `pdfViewerEnabled` ({{bug(1720353)}}).
+- The [Network Information API](/en-US/docs/Web/API/Network_Information_API) was previously enabled on Android (only), but is now disabled by default on all platforms.
+  The API is on the path for removal because it exposes a significant amount of user information that might be used for fingerprinting.
+  ({{bug(1720353)}}).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
+
+- The [`RTCPeerConnection.setConfiguration()`](/en-US/docs/Web/API/RTCPeerConnection/setConfiguration) method is now supported.
+  Among other things, this allows sites to adjust the configuration to changing network conditions ({{bug(1253706)}}).
 
 #### Removals
 

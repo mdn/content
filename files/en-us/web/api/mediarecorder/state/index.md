@@ -15,13 +15,7 @@ browser-compat: api.MediaRecorder.state
 The **`MediaRecorder.state`** read-only property returns the
 current state of the current `MediaRecorder` object.
 
-## Syntax
-
-```js
-var state = MediaRecorder.state
-```
-
-### Values
+## Values
 
 A string containing one of the following values:
 

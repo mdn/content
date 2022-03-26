@@ -43,7 +43,9 @@ dataTransfer.getData(format);
     Drag and Drop Specification](https://www.w3.org/TR/2011/WD-html5-20110113/dnd.html#drag-data-store-mode) dictates a `drag data store mode`.
     This may result in unexpected behavior, being
     **`DataTransfer.getData()`** not returning an expected
-    value.
+    value, because not all browsers enforce this restriction.
+
+    During the `dragstart` and `drop` events, it is safe to access the data. For all other events, the data should be considered unavailable. Despite this, the items and their formats can still be enumerated.
 
 ## Example
 

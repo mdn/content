@@ -20,7 +20,7 @@ other identifiers.
 ## Syntax
 
 ```js
-var cssKeywordValue = new CSSKeywordValue(val)
+new CSSKeywordValue(val)
 ```
 
 ### Parameters

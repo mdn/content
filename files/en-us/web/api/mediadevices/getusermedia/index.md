@@ -68,7 +68,7 @@ navigator.mediaDevices.getUserMedia(constraints)
 
 > **Note:** If the current document isn't loaded securely,
 > `navigator.mediaDevices` will be `undefined`, and you cannot use
-> `getUserMedia()`. See {{anch("Security")}} for more information on this and
+> `getUserMedia()`. See [Security](#security) for more information on this and
 > other security issues related to using `getUserMedia()`.
 
 ## Syntax

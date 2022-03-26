@@ -13,14 +13,7 @@ browser-compat: api.VTTCue.line
 
 The **`line`** property of the {{domxref("VTTCue")}} interface represents the cue line of this WebVTT cue.
 
-## Syntax
-
-```js
-let line = VTTCue.line;
-  VTTCue.line = a;
-```
-
-### Value
+## Value
 
 A number, or `"auto"` representing the cue line of this WebVTT cue.
 

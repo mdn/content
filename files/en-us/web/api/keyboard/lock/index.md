@@ -11,7 +11,7 @@ tags:
   - lock()
 browser-compat: api.Keyboard.lock
 ---
-{{APIRef("Keyboard Map API")}}{{SeeCompatTable}}
+{{APIRef("Keyboard Map API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`lock()`** method of the
 {{domxref("Keyboard")}} interface returns a {{jsxref('Promise')}} after enabling the
@@ -22,7 +22,8 @@ system.
 ## Syntax
 
 ```js
-var promise = Keyboard.lock([keyCodes[]])
+navigator.keyboard.lock()
+navigator.keyboard.lock(keyCodes)
 ```
 
 ### Parameters

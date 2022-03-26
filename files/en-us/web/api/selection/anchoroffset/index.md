@@ -3,7 +3,6 @@ title: Selection.anchorOffset
 slug: Web/API/Selection/anchorOffset
 tags:
   - API
-  - Experimental
   - HTML Editing
   - Property
   - Read-only
@@ -11,7 +10,7 @@ tags:
   - Selection
 browser-compat: api.Selection.anchorOffset
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ ApiRef("DOM") }}
 
 The **`Selection.anchorOffset`** read-only property returns the
 number of characters that the selection's anchor is offset within the

@@ -7,41 +7,39 @@ tags:
   - SMIL
   - SVG animations
   - SVGAnimationElement
-  - events
+  - Event
 browser-compat: api.SVGAnimationElement.endEvent_event
 ---
 {{APIRef("SVG")}}
 
-The `endEvent` event of the {{domxref("SVGAnimationElement")}} interface is fired when at the active end of the animation is reached.
+The **`endEvent`** event of the {{domxref("SVGAnimationElement")}} interface is fired when at the active end of the animation is reached.
 
 > **Note:** This event is not raised at the simple end of each animation repeat. This event may be raised both in the course of normal (i.e. scheduled or interactive) timeline play, as well as in the case that the element was ended with a DOM method.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("TimeEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/SVGAnimationElement/onend"
-            >onend</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('endEvent', event => { });
+
+onend = event => { };
+```
+
+## Event type
+
+An {{domxref("TimeEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("TimeEvent")}}
+
+## Event properties
+
+- {{domxref("TimeEvent.detail")}} {{ReadOnlyInline}}
+  - : Is a `long` that specifies some detail information about the Event, depending on the type of the event. For this event type, indicates the repeat number for the animation.
+- {{domxref("TimeEvent.view")}} {{ReadOnlyInline}}
+  - : Is a {{domxref("WindowProxy")}} that identifies the Window from which the event was generated.
 
 ## Examples
 
@@ -113,7 +111,7 @@ btn.addEventListener('click', () => {
 
 ### Event handler property equivalent
 
-Note that you can also create an event listener for the `end` event using the [`onend`](/en-US/docs/Web/API/SVGAnimationElement/onend) event handler property:
+Note that you can also create an event listener for the `end` event using the `onend` event handler property:
 
 ```js
 animateElem.onend = () => {
@@ -131,6 +129,6 @@ animateElem.onend = () => {
 
 ## See also
 
-- [SVG animation with SMIL](/en-US/docs/SVG/SVG_animation_with_SMIL)
-- {{event("beginEvent")}}
-- {{event("repeatEvent")}}
+- [SVG animation with SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL)
+- {{domxref("SVGAnimationElement.beginEvent_event", "beginEvent")}} event
+- {{domxref("SVGAnimationElement.repeatEvent_event", "repeatEvent")}} event

@@ -24,7 +24,7 @@ See the [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interna
 ## Syntax
 
 ```js
-var detectingLanguages = browser.i18n.detectLanguage(
+let detectingLanguages = browser.i18n.detectLanguage(
   text                  // string
 )
 ```
@@ -63,9 +63,9 @@ function onLanguageDetected(langInfo) {
   }
 }
 
-var text = "L'homme est né libre, et partout il est dans les fers."
+let text = "L'homme est né libre, et partout il est dans les fers."
 
-var detecting = browser.i18n.detectLanguage(text);
+let detecting = browser.i18n.detectLanguage(text);
 detecting.then(onLanguageDetected);
 ```
 

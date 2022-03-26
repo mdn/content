@@ -18,7 +18,7 @@ The **`DOMRectReadOnly()`** constructor creates a new
 ## Syntax
 
 ```js
-const myDOMRectReadOnly = new DOMRectReadOnly(x, y, width, height)
+new DOMRectReadOnly(x, y, width, height)
 ```
 
 ### Parameters

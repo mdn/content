@@ -19,14 +19,7 @@ interface indicates the name of this object store.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-IDBObjectStore.name = myNewName;
-var myObjectStoreName = IDBObjectStore.name;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} containing the object
 store's name.

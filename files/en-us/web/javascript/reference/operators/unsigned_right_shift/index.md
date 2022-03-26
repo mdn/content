@@ -38,7 +38,7 @@ the same result. For example, `9 >>> 2` yields 2, the same as
 `9 >> 2`:
 
 ```js
-.     9 (base 10): 00000000000000000000000000001001 (base 2)
+      9 (base 10): 00000000000000000000000000001001 (base 2)
                    --------------------------------
 9 >>> 2 (base 10): 00000000000000000000000000000010 (base 2) = 2 (base 10)
 ```
@@ -48,7 +48,7 @@ However, this is not the case for negative numbers. For example,
 `-9 >> 2` (which yields `-3`):
 
 ```js
-.     -9 (base 10): 11111111111111111111111111110111 (base 2)
+      -9 (base 10): 11111111111111111111111111110111 (base 2)
                     --------------------------------
 -9 >>> 2 (base 10): 00111111111111111111111111111101 (base 2) = 1073741821 (base 10)
 ```
@@ -72,7 +72,5 @@ However, this is not the case for negative numbers. For example,
 
 ## See also
 
-- [Bitwise
-  operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators)
-- [Unsigned
-  right shift assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment)
+- [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators)
+- [Unsigned right shift assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment)

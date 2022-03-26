@@ -67,7 +67,7 @@ function to be called.
 
 The above example uses {{domxref("EventTarget.addEventListener",
   "addEventListener()")}} to add the handler for `error` events. You can also
-use the `RTCDataChannel` object's {{domxref("RTCDataChannel.onerror",
+use the `RTCDataChannel` object's {{domxref("RTCDataChannel.error_event",
   "onerror")}} event handler property, like this:
 
 ```js

@@ -17,14 +17,7 @@ The **`ariaReadOnly`** property of the {{domxref("Element")}} interface reflects
 
 > **Note:** Where possible use an HTML {{htmlelement("input")}} element with `type="text"` or a {{htmlelement("textarea")}} as these have built in semantics and do not require ARIA attributes.
 
-## Syntax
-
-```js
-var ariaReadOnly = element.ariaReadOnly;
-element.ariaReadOnly = ariaReadOnly
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} with one of the following values:
 

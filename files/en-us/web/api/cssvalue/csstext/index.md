@@ -23,13 +23,7 @@ interface represents the current computed CSS property value.
 > - the untyped [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model), widely supported, or
 > - the modern [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API), less supported and considered experimental.
 
-## Syntax
-
-```js
-cssText = cssValue.cssText;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} representing the current CSS property value.
 

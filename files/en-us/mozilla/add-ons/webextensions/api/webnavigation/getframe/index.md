@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingFrame = browser.webNavigation.getFrame(
+let gettingFrame = browser.webNavigation.getFrame(
   details                // object
 )
 ```
@@ -68,13 +68,13 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var gettingFrame = browser.webNavigation.getFrame({
+let gettingFrame = browser.webNavigation.getFrame({
   tabId: 19,
   frameId: 1537
 });
 
 // Edge specific - processId is required not optional, must be integer not null
-//var gettingFrame = browser.webNavigation.getFrame({ tabId: 19, processId: 0, frameId: 1537 });
+//let gettingFrame = browser.webNavigation.getFrame({ tabId: 19, processId: 0, frameId: 1537 });
 
 gettingFrame.then(onGot, onError);
 ```

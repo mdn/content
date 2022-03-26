@@ -13,13 +13,7 @@ browser-compat: api.BackgroundFetchRecord.request
 
 The **`request`** read-only property of the {{domxref("BackgroundFetchRecord")}} interface returns the details of the resource to be fetched.
 
-## Syntax
-
-```js
-var request = BackgroundFetchRecord.request;
-```
-
-### Value
+## Value
 
 A {{domxref("Request")}}.
 

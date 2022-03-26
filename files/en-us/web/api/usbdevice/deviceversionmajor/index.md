@@ -18,13 +18,7 @@ The **`deviceVersionMajor`** read only property of the
 {{domxref("USBDevice")}} interface he major version number of the device in a semantic
 versioning scheme.
 
-## Syntax
-
-```js
-var serialNumber = USBDevice.deviceVersionMajor
-```
-
-### Value
+## Value
 
 A number.
 

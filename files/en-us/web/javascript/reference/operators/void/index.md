@@ -32,8 +32,8 @@ The `void` operator is often used merely to obtain the
 equivalent to "`void 0`"). In these cases, the global variable
 {{jsxref("undefined")}} can be used.
 
-It should be noted that [the
-precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) of the `void` operator should be taken into account and that
+It should be noted that [the precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+of the `void` operator should be taken into account and that
 parentheses can help clarify the resolution of the expression following the
 `void` operator:
 
@@ -46,9 +46,9 @@ void (2 == '2'); // void (2 == '2'), returns undefined
 
 ### Immediately Invoked Function Expressions
 
-When using an [immediately-invoked function
-expression](/en-US/docs/Glossary/IIFE), `void` can be used to force the `function`
-keyword to be treated as an expression instead of a declaration.
+When using an [immediately-invoked function expression](/en-US/docs/Glossary/IIFE),
+`void` can be used to force the `function` keyword
+to be treated as an expression instead of a declaration.
 
 ```js
 void function iife() {

@@ -21,13 +21,7 @@ stores](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#object_store) curren
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var list[] = IDBDatabase.objectStoreNames;
-```
-
-### Value
+## Value
 
 A {{ domxref("DOMStringList") }} containing a list of
 the names of the [object stores](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#object_store)currently

@@ -44,133 +44,49 @@ The below graphic shows a summary of the available service worker events:
 
 ![install, activate, message, fetch, sync, push](sw-events.png)
 
-### Promises
-
-[Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) are a great mechanism for running async operations, with success dependant on one another. This is central to the way service workers work.
-
-Promises can do a variety of things, but all you need to know for now is that if something returns a promise, you can attach `.then()` to the end and include callbacks inside it for success cases, or you can insert `.catch()` on the end if you want to include a failure callback.
-
-Let's compare a traditional synchronous callback structure to its asynchronous promise equivalent.
-
-#### sync
-
-```js
-try {
-  const value = myFunction();
-  console.log(value);
-} catch(err) {
-  console.log(err);
-}
-```
-
-#### async
-
-```js
-myFunction().then((value) => {
-  console.log(value);
-}).catch((err) => {
-  console.log(err);
-});
-```
-
-In the first example, we have to wait for `myFunction()` to run and return `value` before any more of the code can execute. In the second example, `myFunction()` returns a promise for `value`, then the rest of the code can carry on running. When the promise resolves, the code inside `then` will be run, asynchronously.
-
-Now for a real example — what if we wanted to load images dynamically, but we wanted to make sure the images were loaded before we tried to display them? This is a standard thing to do, but it can be a bit of a pain. We can use `.onload` to only display the image after it's loaded, but what about events that start happening before we start listening to them? We could try to work around this using `.complete`, but it's still not foolproof, and what about multiple images? And, ummm, it's still synchronous, so blocks the main thread.
-
-Instead, we could build our own promise to handle this kind of case. (See our [Promises test](https://github.com/mdn/js-examples/tree/master/promises-test) example for the source code, or [look at it running live](https://mdn.github.io/js-examples/promises-test/).)
-
-> **Note:** A real service worker implementation would use caching and onfetch rather than the XMLHttpRequest API. Those features are not used here so that you can focus on understanding Promises.
-
-```js
-const imgLoad = (url) => {
-  return new Promise((resolve, reject) => {
-    var request = new XMLHttpRequest();
-    request.open('GET', url);
-    request.responseType = 'blob';
-
-    request.onload = () => {
-      if (request.status == 200) {
-        resolve(request.response);
-      } else {
-        reject(Error('Image didn\'t load successfully; error code:' + request.statusText));
-      }
-    };
-
-    request.onerror = () => {
-      reject(Error('There was a network error.'));
-    };
-
-    request.send();
-  });
-}
-```
-
-We return a new promise using the `Promise()` constructor, which takes as an argument a callback function with `resolve` and `reject` parameters. Somewhere in the function, we need to define what happens for the promise to resolve successfully or be rejected — in this case return a 200 OK status or not — and then call `resolve` on success, or `reject` on failure. The rest of the contents of this function is fairly standard XHR stuff, so we won't worry about that for now.
-
-When we come to call the `imgLoad()` function, we call it with the url to the image we want to load, as we might expect, but the rest of the code is a little different:
-
-```js
-let body = document.querySelector('body');
-let myImage = new Image();
-
-imgLoad('myLittleVader.jpg').then((response) => {
-  var imageURL = window.URL.createObjectURL(response);
-  myImage.src = imageURL;
-  body.appendChild(myImage);
-}, (Error) => {
-  console.log(Error);
-});
-```
-
-On to the end of the function call, we chain the promise `then()` method, which contains two functions — the first one is executed when the promise successfully resolves, and the second is called when the promise is rejected. In the resolved case, we display the image inside `myImage` and append it to the body (its argument is the `request.response` contained inside the promise's `resolve` method); in the rejected case we return an error to the console.
-
-This all happens asynchronously.
-
-> **Note:** You can also chain promise calls together, for example:
-> `myPromise().then(success, failure).then(success).catch(failure);`
-
-> **Note:** You can find a lot more out about promises by reading Jake Archibald's excellent [JavaScript Promises: there and back again](https://www.html5rocks.com/en/tutorials/es6/promises/).
-
 ## Service workers demo
 
 To demonstrate just the very basics of registering and installing a service worker, we have created a simple demo called [sw-test](https://github.com/mdn/sw-test), which is a simple Star wars Lego image gallery. It uses a promise-powered function to read image data from a JSON object and load the images using Ajax, before displaying the images in a line down the page. We've kept things static and simple for now. It also registers, installs, and activates a service worker, and when more of the spec is supported by browsers it will cache all the files required so it will work offline!
 
 ![](demo-screenshot.png)
 
-You can see the [source code on GitHub](https://github.com/mdn/sw-test/), and [view the example live](https://mdn.github.io/sw-test/). The one bit we'll call out here is the promise (see [app.js lines 22-47](https://github.com/mdn/sw-test/blob/gh-pages/app.js#L22-L47)), which is a modified version of what you read about above, in the [Promises test demo](https://mdn.github.io/js-examples/promises-test/). It is different in the following ways:
-
-1. In the original, we only passed in a URL to an image we wanted to load. In this version, we pass in a JSON fragment containing all the data for a single image (see what they look like in [image-list.js](https://github.com/mdn/sw-test/blob/gh-pages/image-list.js)). This is because all the data for each promise resolve has to be passed in with the promise, as it is asynchronous. If you just passed in the url, and then tried to access the other items in the JSON separately when the `for()` loop is being iterated through later on, it wouldn't work, as the promise wouldn't resolve at the same time as the iterations are being done (that is a synchronous process.)
-2. We actually resolve the promise with an array, as we want to make the loaded image blob available to the resolving function later on in the code, but also the image name, credits and alt text (see [app.js lines 31-34](https://github.com/mdn/sw-test/blob/gh-pages/app.js#L31-L34)). Promises will only resolve with a single argument, so if you want to resolve with multiple values, you need to use an array/object.
-3. To access the resolved promise values, we then access this function as you'd then expect (see [app.js lines 60-64](https://github.com/mdn/sw-test/blob/gh-pages/app.js#L60-L64)). This may seem a bit odd at first, but this is the way promises work.
-
-## Enter service workers
-
-> **Note:** We're using the [es6](http://es6-features.org/) **arrow functions** syntax in the Service Worker Implementation.
-
-Now let's get on to service workers!
+You can see the [source code on GitHub](https://github.com/mdn/sw-test/), and [view the example live](https://mdn.github.io/sw-test/).
 
 ### Registering your worker
 
 The first block of code in our app's JavaScript file — `app.js` — is as follows. This is our entry point into using service workers.
 
 ```js
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./sw-test/sw.js', {scope: './sw-test/'})
-  .then((reg) => {
-    // registration worked
-    console.log('Registration succeeded. Scope is ' + reg.scope);
-  }).catch((error) => {
-    // registration failed
-    console.log('Registration failed with ' + error);
-  });
-}
+const registerServiceWorker = async () => {
+  if ('serviceWorker' in navigator) {
+    try {
+      const registration = await navigator.serviceWorker.register(
+        '/sw-test/sw.js',
+        {
+          scope: '/sw-test/',
+        }
+      );
+      if (registration.installing) {
+        console.log('Service worker installing');
+      } else if (registration.waiting) {
+        console.log('Service worker installed');
+      } else if (registration.active) {
+        console.log('Service worker active');
+      }
+    } catch (error) {
+      console.error(`Registration failed with ${error}`);
+    }
+  }
+};
+
+// ...
+
+registerServiceWorker();
 ```
 
-1. The outer block performs a feature detection test to make sure service workers are supported before trying to register one.
+1. The if-block performs a feature detection test to make sure service workers are supported before trying to register one.
 2. Next, we use the {{domxref("ServiceWorkerContainer.register()") }} function to register the service worker for this site, which is just a JavaScript file residing inside our app (note this is the file's URL relative to the origin, not the JS file that references it.)
 3. The `scope` parameter is optional, and can be used to specify the subset of your content that you want the service worker to control. In this case, we have specified '`/sw-test/'`, which means all content under the app's origin. If you leave it out, it will default to this value anyway, but we specified it here for illustration purposes.
-4. The `.then()` promise function is used to chain a success case onto our promise structure.  When the promise resolves successfully, the code inside it executes.
-5. Finally, we chain a `.catch()` function onto the end that will run if the promise is rejected.
 
 This registers a service worker, which runs in a worker context, and therefore has no DOM access. You then run code in the service worker outside of your normal pages to control their loading.
 
@@ -203,33 +119,35 @@ After your service worker is registered, the browser will attempt to install the
 
 The install event is fired when an install is successfully completed. The install event is generally used to populate your browser's offline caching capabilities with the assets you need to run your app offline. To do this, we use Service Worker's storage API — {{domxref("cache")}} — a global object on the service worker that allows us to store assets delivered by responses, and keyed by their requests. This API works in a similar way to the browser's standard cache, but it is specific to your domain. It persists until you tell it not to — again, you have full control.
 
-Let's start this section by looking at a code sample — this is the [first block you'll find in our service worker](https://github.com/mdn/sw-test/blob/gh-pages/sw.js#L1-L18):
+Here's how our service worker handles the `install` event:
 
 ```js
-self.addEventListener('install', (event) => {
+const addResourcesToCache = async (resources) => {
+  const cache = await caches.open("v1");
+  await cache.addAll(resources);
+};
+
+self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open('v1').then((cache) => {
-      return cache.addAll([
-        './sw-test/',
-        './sw-test/index.html',
-        './sw-test/style.css',
-        './sw-test/app.js',
-        './sw-test/image-list.js',
-        './sw-test/star-wars-logo.jpg',
-        './sw-test/gallery/',
-        './sw-test/gallery/bountyHunters.jpg',
-        './sw-test/gallery/myLittleVader.jpg',
-        './sw-test/gallery/snowTroopers.jpg'
-      ]);
-    })
+    addResourcesToCache([
+      "/sw-test/",
+      "/sw-test/index.html",
+      "/sw-test/style.css",
+      "/sw-test/app.js",
+      "/sw-test/image-list.js",
+      "/sw-test/star-wars-logo.jpg",
+      "/sw-test/gallery/bountyHunters.jpg",
+      "/sw-test/gallery/myLittleVader.jpg",
+      "/sw-test/gallery/snowTroopers.jpg",
+    ])
   );
 });
 ```
 
 1. Here we add an `install` event listener to the service worker (hence `self`), and then chain a {{domxref("ExtendableEvent.waitUntil()") }} method onto the event — this ensures that the service worker will not install until the code inside `waitUntil()` has successfully occurred.
-2. Inside `waitUntil()` we use the [`caches.open()`](/en-US/docs/Web/API/CacheStorage/open) method to create a new cache called `v1`, which will be version 1 of our site resources cache. This returns a promise for a created cache; once resolved, we then call a function that calls `addAll()` on the created cache, which for its parameter takes an array of origin-relative URLs to all the resources you want to cache.
+2. Inside `addResourcesToCache` we use the [`caches.open()`](/en-US/docs/Web/API/CacheStorage/open) method to create a new cache called `v1`, which will be version 1 of our site resources cache. Then we call a function that calls `addAll()` on the created cache, which for its parameter takes an array of origin-relative URLs to all the resources you want to cache.
 3. If the promise is rejected, the install fails, and the worker won't do anything. This is OK, as you can fix your code and then try again the next time registration occurs.
-4. After a successful installation, the service worker activates. This doesn't have much of a distinct use the first time your service worker is installed/activated, but it means more when the service worker is updated (see the {{anch("Updating your service worker") }} section later on.)
+4. After a successful installation, the service worker activates. This doesn't have much of a distinct use the first time your service worker is installed/activated, but it means more when the service worker is updated (see the [Updating your service worker](#updating_your_service_worker) section later on.)
 
 > **Note:** [localStorage](/en-US/docs/Web/API/Web_Storage_API) works in a similar way to service worker cache, but it is synchronous, so not allowed in service workers.
 
@@ -309,12 +227,16 @@ So `caches.match(event.request)` is great when there is a match in the service w
 Fortunately, service workers' promise-based structure makes it trivial to provide further options towards success. We could do this:
 
 ```js
+const cacheFirst = async (request) => {
+  const responseFromCache = await caches.match(request);
+  if (responseFromCache) {
+    return responseFromCache;
+  }
+  return fetch(request);
+};
+
 self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request).then((response) => {
-      return response || fetch(event.request);
-    })
-  );
+  event.respondWith(cacheFirst(event.request));
 });
 ```
 
@@ -323,46 +245,205 @@ If the resources aren't in the cache, they are requested from the network.
 If we were being really clever, we would not only request the resource from the network; we would also save it into the cache so that later requests for that resource could be retrieved offline too! This would mean that if extra images were added to the Star Wars gallery, our app could automatically grab them and cache them. The following would do the trick:
 
 ```js
+const putInCache = async (request, response) => {
+  const cache = await caches.open("v1");
+  await cache.put(request, response);
+}
+
+const cacheFirst = async (request) => {
+  const responseFromCache = await caches.match(request);
+  if (responseFromCache) {
+    return responseFromCache;
+  }
+  const responseFromNetwork = await fetch(request);
+  putInCache(request, responseFromNetwork.clone())
+  return responseFromNetwork;
+};
+
 self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request).then((resp) => {
-      return resp || fetch(event.request).then((response) => {
-        return caches.open('v1').then((cache) => {
-          cache.put(event.request, response.clone());
-          return response;
-        });
-      });
-    })
-  );
+  event.respondWith(cacheFirst(event.request));
 });
 ```
 
-Here we return the default network request with `return fetch(event.request)`, which returns a promise. When this promise is resolved, we respond by running a function that grabs our cache using `caches.open('v1')`; this also returns a promise. When that promise resolves, `cache.put()` is used to add the resource to the cache. The resource is grabbed from `event.request`, and the response is then cloned with `response.clone()` and added to the cache. The clone is put in the cache, and the original response is returned to the browser to be given to the page that called it.
+If the request url is not available in the cache, we request the resource from the network request with `await fetch(request)`. After that, we put a clone of the response into the cache. The `putInCache` function uses `caches.open('v1')` and `cache.put()` to add the resource to the cache. The original response is returned to the browser to be given to the page that called it.
 
-Cloning the response is necessary because request and response streams can only be read once.  In order to return the response to the browser and put it in the cache we have to clone it. So the original gets returned to the browser and the clone gets sent to the cache.  They are each read once.
+Cloning the response is necessary because request and response streams can only be read once.  In order to return the response to the browser and put it in the cache we have to clone it. So the original gets returned to the browser and the clone gets sent to the cache. They are each read once.
+
+What might look a bit weird is that the promise returned by `putInCache` is not awaited. But the reason is that we don't want to wait until the response clone has been added to the cache before returning a response.
 
 The only trouble we have now is that if the request doesn't match anything in the cache, and the network is not available, our request will still fail. Let's provide a default fallback so that whatever happens, the user will at least get something:
 
 ```js
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request).then((resp) => {
-      return resp || fetch(event.request).then((response) => {
-        let responseClone = response.clone();
-        caches.open('v1').then((cache) => {
-          cache.put(event.request, responseClone);
-        });
+const putInCache = async (request, response) => {
+  const cache = await caches.open("v1");
+  await cache.put(request, response);
+};
 
-        return response;
-      }).catch(() => {
-        return caches.match('./sw-test/gallery/myLittleVader.jpg');
-      })
+const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
+  // First try to get the resource from the cache
+  const responseFromCache = await caches.match(request);
+  if (responseFromCache) {
+    return responseFromCache;
+  }
+
+  // Next try to get the resource from the network
+  try {
+    const responseFromNetwork = await fetch(request);
+    // response may be used only once
+    // we need to save clone to put one copy in cache
+    // and serve second one
+    putInCache(request, responseFromNetwork.clone());
+    return responseFromNetwork;
+  } catch (error) {
+    const fallbackResponse = await caches.match(fallbackUrl);
+    if (fallbackResponse) {
+      return fallbackResponse;
+    }
+    // when even the fallback response is not available,
+    // there is nothing we can do, but we must always
+    // return a Response object
+    return new Response('Network error happened', {
+      status: 408,
+      headers: { 'Content-Type': 'text/plain' },
+    });
+  }
+};
+
+self.addEventListener("fetch", (event) => {
+  event.respondWith(
+    cacheFirst({
+      request: event.request,
+      fallbackUrl: "/sw-test/gallery/myLittleVader.jpg",
     })
   );
 });
 ```
 
 We have opted for this fallback image because the only updates that are likely to fail are new images, as everything else is depended on for installation in the `install` event listener we saw earlier.
+
+## Service Worker Navigation Preload
+
+If enabled, the [navigation preload](/en-US/docs/Web/API/NavigationPreloadManager) feature starts downloading resources as soon as the fetch request is made, and in parallel with service worker bootup.
+This ensures that download starts immediately on navigation to a page, rather than having to wait until the service worker has booted.
+That delay happens relatively rarely, but is unavoidable when it does happen, and may be significant.
+
+First the feature must be enabled during service worker activation, using {{domxref("NavigationPreloadManager.enable()", "registration.navigationPreload.enable()")}}:
+
+```js
+const enableNavigationPreload = async () => {
+  if (self.registration.navigationPreload) {
+    // Enable navigation preloads!
+    await self.registration.navigationPreload.enable();
+  }
+};
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(enableNavigationPreload());
+});
+```
+
+Then use {{domxref("FetchEvent.preloadResponse", "event.preloadResponse")}} to wait for the preloaded resource to finish downloading in the `fetch` event handler.
+
+Continuing the example from the previous sections, we insert the code to wait for the preloaded resource after the cache check, and before fetching from the network if that doesn't succeed.
+
+The new process is:
+
+1. Check cache
+2. Wait on `event.preloadResponse`, which is passed as `preloadResponsePromise` to the `cacheFirst` function.
+   Cache the result if it returns.
+3. If neither of these are defined then we go to the network.
+
+```js
+const addResourcesToCache = async (resources) => {
+  const cache = await caches.open('v1');
+  await cache.addAll(resources);
+};
+
+const putInCache = async (request, response) => {
+  const cache = await caches.open('v1');
+  await cache.put(request, response);
+};
+
+const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
+  // First try to get the resource from the cache
+  const responseFromCache = await caches.match(request);
+  if (responseFromCache) {
+    return responseFromCache;
+  }
+
+  // Next try to use (and cache) the preloaded response, if it's there
+  const preloadResponse = await preloadResponsePromise;
+  if (preloadResponse) {
+    console.info('using preload response', preloadResponse);
+    putInCache(request, preloadResponse.clone());
+    return preloadResponse;
+  }
+
+  // Next try to get the resource from the network
+  try {
+    const responseFromNetwork = await fetch(request);
+    // response may be used only once
+    // we need to save clone to put one copy in cache
+    // and serve second one
+    putInCache(request, responseFromNetwork.clone());
+    return responseFromNetwork;
+  } catch (error) {
+    const fallbackResponse = await caches.match(fallbackUrl);
+    if (fallbackResponse) {
+      return fallbackResponse;
+    }
+    // when even the fallback response is not available,
+    // there is nothing we can do, but we must always
+    // return a Response object
+    return new Response('Network error happened', {
+      status: 408,
+      headers: { 'Content-Type': 'text/plain' },
+    });
+  }
+};
+
+// Enable navigation preload
+const enableNavigationPreload = async () => {
+  if (self.registration.navigationPreload) {
+    // Enable navigation preloads!
+    await self.registration.navigationPreload.enable();
+  }
+};
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(enableNavigationPreload());
+});
+
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    addResourcesToCache([
+      '/sw-test/',
+      '/sw-test/index.html',
+      '/sw-test/style.css',
+      '/sw-test/app.js',
+      '/sw-test/image-list.js',
+      '/sw-test/star-wars-logo.jpg',
+      '/sw-test/gallery/bountyHunters.jpg',
+      '/sw-test/gallery/myLittleVader.jpg',
+      '/sw-test/gallery/snowTroopers.jpg',
+    ])
+  );
+});
+
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    cacheFirst({
+      request: event.request,
+      preloadResponsePromise: event.preloadResponse,
+      fallbackUrl: '/sw-test/gallery/myLittleVader.jpg',
+    })
+  );
+});
+```
+
+Note that in this example we download and cache the same data for the resource whether it is downloaded "normally" or preloaded.
+You can instead choose to download and cache a different resource on preload.
+For more information see [`NavigationPreloadManager` > Custom responses](/en-US/docs/Web/API/NavigationPreloadManager#custom_responses).
 
 ## Updating your service worker
 
@@ -371,22 +452,25 @@ If your service worker has previously been installed, but then a new version of 
 You'll want to update your `install` event listener in the new service worker to something like this (notice the new version number):
 
 ```js
+const addResourcesToCache = async (resources) => {
+  const cache = await caches.open('v2')
+  await cache.addAll(resources);
+}
+
 self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open('v2').then((cache) => {
-      return cache.addAll([
-        './sw-test/',
-        './sw-test/index.html',
-        './sw-test/style.css',
-        './sw-test/app.js',
-        './sw-test/image-list.js',
+  event.waitUntil(addResourcesToCache(
+    [
+      './sw-test/',
+      './sw-test/index.html',
+      './sw-test/style.css',
+      './sw-test/app.js',
+      './sw-test/image-list.js',
 
-        …
+      …
 
-        // include other new resources for the new version...
-      ]);
-    })
-  );
+      // include other new resources for the new version...
+    ]
+  ));
 });
 ```
 
@@ -401,18 +485,19 @@ You also get an `activate` event. This is generally used to do stuff that would 
 Promises passed into `waitUntil()` will block other events until completion, so you can rest assured that your clean-up operation will have completed by the time you get your first `fetch` event on the new service worker.
 
 ```js
-self.addEventListener('activate', (event) => {
-  var cacheKeeplist = ['v2'];
+const deleteCache = async key => {
+  await caches.delete(key)
+}
 
-  event.waitUntil(
-    caches.keys().then((keyList) => {
-      return Promise.all(keyList.map((key) => {
-        if (cacheKeeplist.indexOf(key) === -1) {
-          return caches.delete(key);
-        }
-      }));
-    })
-  );
+const deleteOldCaches = async () => {
+   const cacheKeepList = ['v2'];
+   const keyList = await caches.keys()
+   const cachesToDelete = keyList.filter(key => !cacheKeepList.includes(key))
+   await Promise.all(cachesToDelete.map(deleteCache));
+}
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(deleteOldCaches());
 });
 ```
 

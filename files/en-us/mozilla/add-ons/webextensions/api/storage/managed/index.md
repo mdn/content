@@ -40,7 +40,7 @@ Here's an example manifest:
 Given this manifest, the "favorite-color-examples\@mozilla.org" extension could access the data using code like this:
 
 ```js
-var storageItem = browser.storage.managed.get('color');
+let storageItem = browser.storage.managed.get('color');
 storageItem.then((res) => {
   console.log(`Managed color is: ${res.color}`);
 });

@@ -13,13 +13,7 @@ browser-compat: api.ElementInternals.validationMessage
 
 The **`validationMessage`** read-only property of the {{domxref("ElementInternals")}} interface returns the validation message for the element.
 
-## Syntax
-
-```js
-let validationMessage = ElementInternals.validationMessage;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString","string")}} containing the validation message of this element.
 

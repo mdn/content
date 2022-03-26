@@ -32,7 +32,7 @@ To use the topSites API you must have the "topSites" [API permission](/en-US/doc
 ## Syntax
 
 ```js
-var gettingTopSites = browser.topSites.get(
+let gettingTopSites = browser.topSites.get(
     options  // object
 )
 ```
@@ -83,7 +83,7 @@ function onError(error) {
   console.log(error);
 }
 
-var gettingTopSites = browser.topSites.get();
+let gettingTopSites = browser.topSites.get();
 gettingTopSites.then(logTopSites, onError);
 ```
 
@@ -100,7 +100,7 @@ function onError(error) {
   console.log(error);
 }
 
-var gettingTopSites = browser.topSites.get({
+let gettingTopSites = browser.topSites.get({
   includeBlocked: true,
   onePerDomain: false
 });

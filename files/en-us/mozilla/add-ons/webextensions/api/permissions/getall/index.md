@@ -20,7 +20,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingAll = browser.permissions.getAll()
+let gettingAll = browser.permissions.getAll()
 ```
 
 ### Parameters

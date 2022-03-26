@@ -15,7 +15,7 @@ The **`BackgroundFetchUpdateUIEvent()`** constructor creates a new {{domxref("Ba
 ## Syntax
 
 ```js
-let BackgroundFetchEvent = new BackgroundFetchEvent(type, BackgroundFetchEventInit);
+new BackgroundFetchEvent(type, BackgroundFetchEventInit);
 ```
 
 ### Parameters

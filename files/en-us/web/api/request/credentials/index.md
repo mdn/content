@@ -35,7 +35,7 @@ This is similar to XHR's [`withCredentials`](/en-US/docs/Web/API/XMLHttpRequest/
 
 ## Example
 
-In the following snippet, we create a new request using the {{domxref("Request.Request()")}} constructor (for an image file in the same directory as the script), then save the request credentials in a variable:
+In the following snippet, we create a new request using the {{domxref("Request.Request", "Request()")}} constructor (for an image file in the same directory as the script), then save the request credentials in a variable:
 
 ```js
 var myRequest = new Request('flowers.jpg');

@@ -23,13 +23,7 @@ into the host system's audio subsystem ready for playing.
 > {{domxref("AudioContext.AudioContext()", "construction time", "", "true")}} with the
 > `latencyHint` option, but the browser may ignore the option.
 
-## Syntax
-
-```js
-var baseLatency = audioCtx.baseLatency;
-```
-
-### Value
+## Value
 
 A double representing the base latency in seconds.
 

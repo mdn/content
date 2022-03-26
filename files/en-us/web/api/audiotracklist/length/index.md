@@ -23,13 +23,7 @@ property **`length`** returns the number of entries in the
 representing one audio track in the media element. A value of 0 indicates that
 there are no audio tracks in the media.
 
-## Syntax
-
-```js
-var trackCount = AudioTrackList.length;
-```
-
-### Value
+## Value
 
 A number indicating how many audio tracks are included in the
 `AudioTrackList`. Each track can be accessed by treating the

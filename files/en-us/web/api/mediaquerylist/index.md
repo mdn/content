@@ -47,7 +47,6 @@ _The following events are delivered to `MediaQueryList` objects:_
 
 - {{DOMxRef("MediaQueryList.change_event", "change")}}
   - : Sent to the `MediaQueryList` when the result of running the media query against the document changes. For example, if the media query is `(min-width: 400px)`, the `change` event is fired any time the width of the document's {{Glossary("viewport")}} changes such that its width moves across the 400px boundary in either direction.
-    Also available using the {{DOMxRef("MediaQueryList.onchange", "onchange")}} event handler property.
 
 ## Examples
 

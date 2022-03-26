@@ -36,7 +36,7 @@ Because descendants of `tab` are presentational, the following code is equivalen
 
 ```html
 <div role="tab"><h3 role="presentation">Title of my tab</h3></div>
-````
+```
 
 From the assistive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
 
@@ -213,8 +213,6 @@ It is recommended to use a {{HTMLElement('button')}} element with the role `tab`
 ## Precedence order
 
 What are the related properties, and in what order will this attribute or property be read, which property will take precedence over this one, and which property will be overwritten.
-
-Screenreader support is still to be determined. Visit https://github.com/mdn/content/blob/main/rfcs/aria-roles.md for more information.
 
 ## Specifications
 

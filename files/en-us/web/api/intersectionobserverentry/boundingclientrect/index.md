@@ -19,13 +19,7 @@ The {{domxref("IntersectionObserverEntry")}} interface's read-only
 {{domxref("DOMRectReadOnly")}} which in essence describes a rectangle describing the
 smallest rectangle that contains the entire target element.
 
-## Syntax
-
-```js
-var boundsRect = IntersectionObserverEntry.boundingClientRect;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMRectReadOnly")}} which describes the smallest rectangle that contains
 every part of the target element whose intersection change is being described. This

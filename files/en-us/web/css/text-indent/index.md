@@ -189,6 +189,7 @@ p {
   - [`text-overflow`](/en-US/docs/Web/CSS/text-overflow)
   - [`text-rendering`](/en-US/docs/Web/CSS/text-rendering)
   - [`text-transform`](/en-US/docs/Web/CSS/text-transform)
+  - {{cssxref('hanging-punctuation')}}
 
 - [CSS Text Decoration](/en-US/docs/Web/CSS/CSS_Text_Decoration) CSS module
 - [CSS Text module](/en-US/docs/Web/CSS/CSS_Text)

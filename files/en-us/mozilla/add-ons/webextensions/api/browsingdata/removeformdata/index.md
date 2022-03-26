@@ -26,7 +26,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var removing = browser.browsingData.removeFormData(
+let removing = browser.browsingData.removeFormData(
   removalOptions            // RemovalOptions object
 )
 ```
@@ -39,10 +39,6 @@ var removing = browser.browsingData.removeFormData(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the removal has finished. If any error occurs, the promise will be rejected with an error message.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -61,7 +57,7 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-var oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+let oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
 
 browser.browsingData.removeFormData(
   {since: oneWeekAgo}).
@@ -82,6 +78,10 @@ function onError(error) {
 browser.browsingData.removeFormData({}).
 then(onRemoved, onError);
 ```
+
+## Browser compatibility
+
+{{Compat}}
 
 {{WebExtExamples}}
 

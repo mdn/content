@@ -15,14 +15,7 @@ browser-compat: api.Element.ariaAutoComplete
 
 The **`ariaAutoComplete`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-autocomplete`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete) attribute, which indicates whether inputting text could trigger display of one or more predictions of the user's intended value for a combobox, searchbox, or textbox and specifies how predictions would be presented if they were made.
 
-## Syntax
-
-```js
-var ariaAutoComplete = element.ariaAutoComplete;
-element.ariaAutoComplete = ariaAutoComplete
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} with one of the following values:
 

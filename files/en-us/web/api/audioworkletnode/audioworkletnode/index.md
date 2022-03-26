@@ -19,8 +19,8 @@ processing.
 ## Syntax
 
 ```js
-var node = new AudioWorkletNode(context, name);
-var node = new AudioWorkletNode(context, name, options);
+new AudioWorkletNode(context, name);
+new AudioWorkletNode(context, name, options);
 ```
 
 ### Parameters

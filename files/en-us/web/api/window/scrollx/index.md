@@ -20,13 +20,7 @@ meaning that it isn't necessarily a whole number. You can get the number of pixe
 document is scrolled vertically from the {{domxref("Window.scrollY", "scrollY")}}
 property.
 
-## Syntax
-
-```js
-var x = window.scrollX;
-```
-
-### Value
+## Value
 
 In practice, the returned value is a double-precision floating-point value indicating
 the number of pixels the document is currently scrolled horizontally from the origin,

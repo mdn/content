@@ -53,7 +53,7 @@ This example will make use of the [Canvas API](/en-US/docs/Learn/JavaScript/Clie
 
 ## Getting started
 
-To begin with, make local copies of our [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css), and [`main.js`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main.js) files. These contain the following, respectively:
+To begin with, make local copies of our [`index.html`](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/style.css), and [`main.js`](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/main.js) files. These contain the following, respectively:
 
 1. A very simple HTML document featuring an {{HTMLElement("h1")}} element, a {{HTMLElement("canvas")}} element to draw our balls on, and elements to apply our CSS and JavaScript to our HTML.
 2. Some very simple styles, which mainly serve to style and position the `<h1>`, and get rid of any scrollbars or margin around the edge of the page (so that it looks nice and neat).
@@ -312,7 +312,7 @@ function loop() {
 
 Save and refresh the demo again, and you'll see your balls change color when they collide!
 
-> **Note:** If you have trouble getting this example to work, try comparing your JavaScript code against our [finished version](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) (also see it [running live](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)).
+> **Note:** If you have trouble getting this example to work, try comparing your JavaScript code against our [finished version](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/main-finished.js) (also see it [running live](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)).
 
 ## Summary
 

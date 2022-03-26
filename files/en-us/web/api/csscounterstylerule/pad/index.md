@@ -13,14 +13,7 @@ browser-compat: api.CSSCounterStyleRule.pad
 
 The **`pad`** property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the value of the {{cssxref("@counter-style/pad", "pad")}} descriptor. If the descriptor does not have a value set, this attribute returns an empty string.
 
-## Syntax
-
-```js
-let pad = CSSCounterStyleRule.pad;
-CSSCounterStyleRule.pad = a;
-```
-
-### Value
+## Value
 
 A {{domxref("CSSOMString")}}
 

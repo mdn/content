@@ -77,39 +77,11 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
     It can have on of the following values:
     `connecting`, `open`, `closing`, or `closed`.
 
-### Event handlers
-
-_Also inherits event handlers from {{DOMxRef("EventTarget")}}._
-
-- {{DOMxRef("RTCDataChannel.onbufferedamountlow", "onbufferedamountlow")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers)
-    which specifies a function the browser calls
-    when the{{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event is sent to the data channel.
-- {{DOMxRef("RTCDataChannel.onclose", "onclose")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers)
-    which specifies a function to be called by the browser
-    when the {{DOMxRef("RTCDataChannel.close_event", "close")}} event is received by the data channel.
-- {{DOMxRef("RTCDataChannel.onclosing", "onclosing")}} {{Experimental_inline}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers)
-    which specifies a function to be called by the browser
-    when the {{DOMxRef("RTCDataChannel.closing_event", "closing")}} event is received by the data channel.
-- {{DOMxRef("RTCDataChannel.onerror", "onerror")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers)
-    which specifies a function to be called
-    when the {{DOMxRef("RTCDataChannel.error_event", "error")}} event is received.
-- {{DOMxRef("RTCDataChannel.onmessage", "onmessage")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers)
-    which specifies a function to be called
-    when the {{DOMxRef("RTCDataChannel.message_event", "message")}} event is fired on the channel.
-- {{DOMxRef("RTCDataChannel.onopen", "onopen")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers)
-    which specifies a function to be called when the {{DOMxRef("RTCDataChannel.open_event", "open")}} event is fired on the
-
 ### Obsolete properties
 
-- {{DOMxRef("RTCDataChannel.reliable", "reliable")}} {{ReadOnlyInline}} {{Obsolete_Inline}}
+- {{DOMxRef("RTCDataChannel.reliable", "reliable")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Indicates whether or not the data channel is _reliable_.
-- {{DOMxRef("RTCDataChannel.stream", "stream")}} {{ReadOnlyInline}} {{Obsolete_Inline}}
+- {{DOMxRef("RTCDataChannel.stream", "stream")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns an ID number (between 0 and 65,535)
     which uniquely identifies the data channel.
 
@@ -130,25 +102,19 @@ _Also inherits methods from {{DOMxRef("EventTarget")}}._
   - : Sent
     when the number of bytes of data in the outgoing data buffer
     falls below the value specified by {{domxref("RTCDataChannel.bufferedAmountLowThreshold", "bufferedAmountLowThreshold")}}.
-    Also available as the {{domxref("RTCDataChannel.onbufferedamountlow", "onbufferedamountlow")}} event handler property.
 - {{domxref("RTCDataChannel.close_event", "close")}}
   - : Sent when the underlying data transport closes.
-    Also available as the {{domxref("RTCDataChannel.onclose", "onclose")}} event handler property.
 - {{domxref("RTCDataChannel.closing_event", "closing")}} {{Experimental_inline}}
   - : Sent when the underlying data transport is about to start closing.
-    Also available as the {{domxref("RTCDataChannel.onclosing", "onclosing")}} event handler property.
 - {{domxref("RTCDataChannel.error_event", "error")}}
   - : Sent when an error occurs on the data channel.
-    Also available as the {{domxref("RTCDataChannel.onerror", "onerror")}} event handler property.
 - {{domxref("RTCDataChannel.message_event", "message")}}
   - : Sent when a message has been received from the remote peer.
     The message contents can be found
     in the event's {{domxref("MessageEvent.data", "data")}} property.
-    Also available as the {{domxref("RTCDataChannel.onmessage", "onmessage")}} event handler property.
 - {{domxref("RTCDataChannel.open_event", "open")}}
   - : Sent when the data channel is first opened,
     or when an existing data channel's underlying connection re-opens.
-    Also available as the {{domxref("RTCDataChannel.onopen", "onopen")}} event handler property.
 
 ## Data format
 

@@ -21,13 +21,7 @@ The **`constraint`** read-only property of the
 {{domxref("OverconstrainedError")}} interface returns the constraint that was supplied
 in the constructor, meaning the constraint that was not satisfied.
 
-## Syntax
-
-```js
-var constraint = Overconstrainederror.constraint;
-```
-
-### Value
+## Value
 
 A {{domxref('String')}}
 

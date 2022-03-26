@@ -16,13 +16,7 @@ Returns the `ServiceWorker` serialized script URL defined as part of [`ServiceWo
 Must be on the same origin as the document that registers the
 `ServiceWorker`.
 
-## Syntax
-
-```js
-someURL = ServiceWorker.scriptURL
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}} (see the [WebIDL definition of
 USVString](https://heycam.github.io/webidl/#idl-USVString).)

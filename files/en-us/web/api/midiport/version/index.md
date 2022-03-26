@@ -13,13 +13,7 @@ browser-compat: api.MIDIPort.version
 
 The **`version`** read-only property of the {{domxref("MIDIPort")}} interface returns the version of the port.
 
-## Syntax
-
-```js
-let version = MIDIPort.version;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString","string")}} containing the version of the port.
 

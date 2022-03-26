@@ -17,7 +17,7 @@ The **`AbortController()`** constructor creates a new {{domxref("AbortController
 ## Syntax
 
 ```js
-const controller = new AbortController();
+new AbortController();
 ```
 
 ### Parameters

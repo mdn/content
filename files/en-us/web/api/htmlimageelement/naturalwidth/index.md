@@ -36,13 +36,7 @@ returns the natural height of the image.
 > images on low-end devices](https://bugs.chromium.org/p/chromium/issues/detail?id=1187043#c7). In such cases, `naturalWidth` will consider the width of the image modified
 > by such browser interventions as the natural width, and returns this value.
 
-## Syntax
-
-```js
-let naturalWidth = htmlImageElement.naturalWidth;
-```
-
-### Value
+## Value
 
 An integer value indicating the intrinsic width of the image, in CSS pixels. This is
 the width at which the image is naturally drawn when no constraint or specific value is

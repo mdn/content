@@ -25,13 +25,7 @@ JavaScript {{jsxref("Object")}}, or {{domxref("DOMString")}}, depending on the v
 of the request's {{domxref("XMLHttpRequest.responseType", "responseType")}}
 property.
 
-## Syntax
-
-```js
-var body = XMLHttpRequest.response;
-```
-
-### Value
+## Value
 
 An appropriate object based on the value of {{domxref("XMLHttpRequest.responseType",
   "responseType")}}. You may attempt to request the data be provided in a specific format

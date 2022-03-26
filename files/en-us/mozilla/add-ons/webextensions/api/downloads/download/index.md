@@ -29,7 +29,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var downloading = browser.downloads.download(
+let downloading = browser.downloads.download(
   options                   // object
 )
 ```
@@ -95,9 +95,9 @@ function onFailed(error) {
   console.log(`Download failed: ${error}`);
 }
 
-var downloadUrl = "https://example.org/image.png";
+let downloadUrl = "https://example.org/image.png";
 
-var downloading = browser.downloads.download({
+let downloading = browser.downloads.download({
   url : downloadUrl,
   filename : 'my-image-again.png',
   conflictAction : 'uniquify'

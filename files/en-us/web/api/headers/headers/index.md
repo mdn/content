@@ -4,7 +4,6 @@ slug: Web/API/Headers/Headers
 tags:
   - API
   - Constructor
-  - Experimental
   - Fetch
   - Reference
 browser-compat: api.Headers.Headers
@@ -17,7 +16,7 @@ The **`Headers()`** constructor creates a new
 ## Syntax
 
 ```js
-var myHeaders = new Headers(init);
+new Headers(init);
 ```
 
 ### Parameters
@@ -72,7 +71,6 @@ var headers = [
 ];
 var myHeaders = new Headers(headers);
 ```
-
 
 ## Specifications
 

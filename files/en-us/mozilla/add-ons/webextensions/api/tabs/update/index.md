@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var updating = browser.tabs.update(
+let updating = browser.tabs.update(
   tabId,              // optional integer
   updateProperties    // object
 )
@@ -97,7 +97,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var updating = browser.tabs.update({url: "https://developer.mozilla.org"});
+let updating = browser.tabs.update({url: "https://developer.mozilla.org"});
 updating.then(onUpdated, onError);
 ```
 
@@ -113,14 +113,14 @@ function onError(error) {
 }
 
 function updateFirstTab(tabs) {
-  var updating = browser.tabs.update(tabs[0].id, {
+  let updating = browser.tabs.update(tabs[0].id, {
     active: true,
     url: "https://developer.mozilla.org"
   });
   updating.then(onUpdated, onError);
 }
 
-var querying = browser.tabs.query({currentWindow:true});
+let querying = browser.tabs.query({currentWindow:true});
 querying.then(updateFirstTab, onError);
 ```
 

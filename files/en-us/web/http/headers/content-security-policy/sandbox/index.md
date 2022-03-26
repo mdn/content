@@ -69,7 +69,7 @@ where `<value>` can optionally be one of the following values:
 - `allow-popups-to-escape-sandbox`
   - : Allows a sandboxed document to open new windows without forcing the sandboxing flags
     upon them. This will allow, for example, a third-party advertisement to be safely
-    sandboxed without forcing the same restrictions upon a landing page.
+    sandboxed without forcing the same restrictions upon the page the ad links to.
 - `allow-presentation`
   - : Allows embedders to have control over whether an iframe can start a presentation
     session.

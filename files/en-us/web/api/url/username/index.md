@@ -17,14 +17,7 @@ is a {{domxref("USVString")}} containing the username specified before the domai
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-const usernameString = url.username
-url.username = newUsername
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}}.
 

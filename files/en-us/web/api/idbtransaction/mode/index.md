@@ -22,13 +22,7 @@ read-only, or do you want to write to the object stores?) The default value is
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var myCurrentMode = IDBTransaction.mode;
-```
-
-### Value
+## Value
 
 An {{domxref("IDBTransactionMode")}} object defining the mode for isolating access to
 data in the current object stores:

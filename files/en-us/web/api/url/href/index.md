@@ -16,14 +16,7 @@ a {{domxref("USVString")}} containing the whole URL.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-const urlString = url.href
-url.href = newUrlString
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}}.
 

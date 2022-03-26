@@ -20,14 +20,7 @@ have a fragment identifier, this property contains an empty string — `""`.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-const string = url.hash
-url.hash = newHash
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}}.
 

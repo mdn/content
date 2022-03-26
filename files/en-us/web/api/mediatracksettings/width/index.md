@@ -30,13 +30,7 @@ the value of {{domxref("MediaTrackSupportedConstraints.width")}} as returned by 
 to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is
 unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
-
-```js
-var width = MediaTrackSettings.width;
-```
-
-### Value
+## Value
 
 An integer value indicating the width, in pixels, of the video track as currently
 configured.

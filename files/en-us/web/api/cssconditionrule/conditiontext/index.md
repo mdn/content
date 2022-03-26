@@ -15,14 +15,7 @@ The **`conditionText`** property of
 the {{domxref("CSSConditionRule")}} interface returns or sets the text of the CSS
 rule.
 
-## Syntax
-
-```js
-var text = CSSConditionRule.conditionText
-cssConditionRule.conditionText = text
-```
-
-### Value
+## Value
 
 A {{domxref('CSSOMString')}}.
 

@@ -16,13 +16,7 @@ The **`size`** read-only property of
 the {{domxref("MediaKeyStatusMap")}} interface returns the number of key/value paIrs
 in the status map.
 
-## Syntax
-
-```js
-var size = MediaKeyStatusMap.size;
-```
-
-### Value
+## Value
 
 A long integer.
 

@@ -25,7 +25,7 @@ You must also pass the "blocking" option to `webRequest.onHeadersReceived.addLis
 ## Syntax
 
 ```js
-var gettingInfo = browser.webRequest.getSecurityInfo(
+let gettingInfo = browser.webRequest.getSecurityInfo(
   requestId,       // string
   options          // object
 )

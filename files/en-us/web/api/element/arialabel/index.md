@@ -15,14 +15,7 @@ browser-compat: api.Element.ariaLabel
 
 The **`ariaLabel`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute, which defines a string value that labels the current element.
 
-## Syntax
-
-```js
-var ariaLabel = element.ariaLabel;
-element.ariaLabel = ariaLabel
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}.
 

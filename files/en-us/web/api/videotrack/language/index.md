@@ -25,13 +25,7 @@ For tracks that include multiple languages
 (such as a movie in English in which a few lines are spoken in other languages), this
 should be the video's primary language.
 
-## Syntax
-
-```js
-var videoTrackLanguage = VideoTrack.language;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} specifying the BCP 47 ({{RFC(5646)}}) format language tag of
 the primary language used in the video track, or an empty string (`""`) if

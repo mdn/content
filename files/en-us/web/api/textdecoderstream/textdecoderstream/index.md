@@ -15,7 +15,7 @@ The **`TextDecoderStream()`** constructor creates a new {{domxref("TextDecoderSt
 ## Syntax
 
 ```js
-var TextDecoderStream = new TextDecoderStream(label,options);
+new TextDecoderStream(label,options);
 ```
 
 ### Parameters

@@ -71,7 +71,7 @@ predator — Tommy the cat had many a story to tell. But it was a rare
 occasion such as this that he did.</p>
 ```
 
-You can find the [finished example on GitHub](https://mdn.github.io/learning-area/css/styling-text/fundamentals/) (see also [the source code](https://github.com/mdn/learning-area/blob/master/css/styling-text/fundamentals/index.html)).
+You can find the [finished example on GitHub](https://mdn.github.io/learning-area/css/styling-text/fundamentals/) (see also [the source code](https://github.com/mdn/learning-area/blob/main/css/styling-text/fundamentals/index.html)).
 
 ### Color
 
@@ -619,6 +619,7 @@ p {
   font-size: 1.5rem;
   color: red;
   font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.6;
 }
 ```
 

@@ -24,7 +24,7 @@ to {{jsxref("undefined")}}.
 ## Syntax
 
 ```js
-cache.match(request, {options}).then(function(response) {
+cache.match(request, options).then(function(response) {
   // Do something with the response
 });
 ```

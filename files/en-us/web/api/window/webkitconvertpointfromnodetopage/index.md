@@ -23,7 +23,7 @@ coordinate system, the {{domxref("Window")}} method
 which specifies the same position in the page's coordinate system. This method is
 non-standard and _should not be used_.
 
-> **Warning:** Please review the {{anch("Browser compatibility")}} section before using this method,
+> **Warning:** Please review the [Browser compatibility](#browser_compatibility) section before using this method,
 > as it's not widely supported (nor is the {{domxref("WebKitPoint")}} object it uses).
 
 ## Syntax

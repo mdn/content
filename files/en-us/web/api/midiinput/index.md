@@ -21,23 +21,23 @@ The **`MIDIInput`** interface of the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI
 
 _This interface doesn't implement any specific properties, but inherits properties from {{domxref("MIDIPort")}}._
 
-### Event handlers
-
-- {{domxref("MIDIInput.onmidimessage")}}
-  - : When the current port receives a MIDI message it triggers a call to this event handler.
-
 ## Methods
 
 _This interface doesn't implement any specific methods, but inherits methods from {{domxref("MIDIPort")}}._
 
+### Events
+
+- {{domxref("MIDIInput.midimessage_event", "midimessage")}}
+  - : Fired when the current port receives a MIDI message.
+
 ## Examples
 
-In the following example the name of each `MIDIInput` is printed to the console. Then, `onmidimessage` events are listened for on all input ports. When a message is received the {{domxref("MIDIMessageEvent.data")}} property is printed to the console.
+In the following example the name of each `MIDIInput` is printed to the console. Then, `midimessage` events are listened for on all input ports. When a message is received the {{domxref("MIDIMessageEvent.data")}} property is printed to the console.
 
 ```js
 inputs.forEach((input) => {
   console.log(input.name); /* inherited property from MIDIPort */
-  input.onmidimessage = function(message) {
+  input.onmidimessage = message => {
     console.log(message.data);
   }
 })

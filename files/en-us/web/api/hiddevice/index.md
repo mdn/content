@@ -29,10 +29,10 @@ This interface also inherits properties from {{domxref("EventTarget")}}.
 - {{domxref("HIDDevice.collections")}}{{ReadOnlyInline}}
   - : Returns an array of report formats for the HID device.
 
-### Event handlers
+### Events
 
-- {{domxref("HIDDevice.oninputreport")}}
-  - : An event handler that fires when a report is sent from the device.
+- {{domxref("HIDDevice.inputreport_event", "inputreport")}}
+  - : Fires when a report is sent from the device.
 
 ## Methods
 

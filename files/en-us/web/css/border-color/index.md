@@ -152,7 +152,7 @@ ul {
 
 #### Result
 
-{{EmbedLiveSample("Complete_border-color_usage", 600, 300)}}
+{{EmbedLiveSample("Complete_border-color_usage", 600, 700)}}
 
 ## Specifications
 

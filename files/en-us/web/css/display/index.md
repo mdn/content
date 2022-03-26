@@ -14,7 +14,7 @@ browser-compat: css.properties.display
 
 The **`display`** [CSS](/en-US/docs/Web/CSS) property sets whether an element is treated as a [block or inline element](/en-US/docs/Web/CSS/CSS_Flow_Layout) and the layout used for its children, such as [flow layout](/en-US/docs/Web/CSS/CSS_Flow_Layout), [grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) or [flex](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout).
 
-Formally, the **`display`** property sets an element's inner and outer _display types_. The outer type sets an element's participation in [flow layout](/en-US/docs/Web/CSS/CSS_Flow_Layout); the inner type sets the layout of children. Some values of `display` are fully defined in their own individual specifications; for example the detail of what happens when `display: flex` is declared is defined in the CSS Flexible Box Model specification. See [the table at the end of this document](#specifications) for all of the individual specifications.
+Formally, the **`display`** property sets an element's inner and outer _display types_. The outer type sets an element's participation in [flow layout](/en-US/docs/Web/CSS/CSS_Flow_Layout); the inner type sets the layout of children. Some values of `display` are fully defined in their own individual specifications; for example the detail of what happens when `display: flex` is declared is defined in the CSS Flexible Box Model specification.
 
 ## Syntax
 
@@ -221,7 +221,7 @@ display: unset;
 
 ## Description
 
-The individual pages for the different types of value that `display` can have set on it feature multiple examples of those values in action — see the {{anch("Syntax")}} section. In addition, see the following material, which covers the various values of display in depth.
+The individual pages for the different types of value that `display` can have set on it feature multiple examples of those values in action — see the [Syntax](#syntax) section. In addition, see the following material, which covers the various values of display in depth.
 
 - [Adapting to the new two-value syntax of display](/en-US/docs/Web/CSS/display/two-value_syntax_of_display)
 

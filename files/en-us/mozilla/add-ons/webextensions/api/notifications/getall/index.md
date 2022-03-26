@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingAll = browser.notifications.getAll()
+let gettingAll = browser.notifications.getAll()
 ```
 
 ### Parameters
@@ -44,7 +44,7 @@ Note that you can define an ID for a notification explicitly by passing it into 
 This example shows a notification when the user clicks a browser action, unless the notification was already being shown, in which case it clears the notification. It uses getAll() to figure out whether the notification is being shown:
 
 ```js
-var myNotification = "my-notification";
+let myNotification = "my-notification";
 
 function toggleAlarm(all) {
   let ids = Object.keys(all);

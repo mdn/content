@@ -66,8 +66,8 @@ To specify the size of multiple background images, separate the value for each o
   - : Scales the image as large as possible within its container without cropping or stretching the image.
     If the container is larger than the image, this will result in image tiling, unless the {{cssxref("background-repeat")}} property is set to `no-repeat`.
 - `cover`
-  - : Scales the image as large as possible to fill the container, stretching the image if necessary.
-    If the proportions of the image differ from the element, it is cropped either vertically or horizontally so that no empty space remains.
+  - : Scales the image (while preserving its ratio) to the smallest possible size to fill the container (that is: both its height and width completely _cover_ the container), leaving no empty space.
+    If the proportions of the background differ from the element, the image is cropped either vertically or horizontally.
 - `auto`
   - : Scales the background image in the corresponding direction such that its intrinsic proportions are maintained.
 - {{cssxref("&lt;length&gt;")}}
@@ -88,7 +88,7 @@ These attributes are as follows:
   If it has both horizontal and vertical intrinsic dimensions, it also has intrinsic proportions.
   If it has no dimensions or only one dimension, it may or may not have proportions.
 - CSS {{cssxref("&lt;gradient&gt;")}}s have no intrinsic dimensions or intrinsic proportions.
-- Background images created with the {{cssxref("element()")}} function use the intrinsic dimensions and proportions of the generating element.
+- Background images created with the {{cssxref("element", "element()")}} function use the intrinsic dimensions and proportions of the generating element.
 
 > **Note:** In Gecko, background images created using the [`element()`](</en-US/docs/Web/CSS/element()>) function are currently treated as images with the dimensions of the element, or of the background positioning area if the element is SVG, with the corresponding intrinsic proportion. This is non-standard behavior.
 

@@ -17,7 +17,7 @@ The **`CSSVariableReferenceValue`** interface of the {{domxref('CSS_Object_Model
 
 ## Constructor
 
-- {{domxref("CSSVariableReferenceValue.CSSVariableReferenceValue()")}}
+- {{domxref("CSSVariableReferenceValue.CSSVariableReferenceValue", "CSSVariableReferenceValue()")}}
   - : Creates a new `CSSVariableReferenceValue` object.
 
 ## Properties

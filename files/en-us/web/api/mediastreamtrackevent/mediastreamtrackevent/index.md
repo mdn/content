@@ -19,7 +19,7 @@ announcing that a {{domxref("MediaStreamTrack")}} has been added to or removed f
 ## Syntax
 
 ```js
-var trackEvent = new MediaStreamTrackEvent(type, {track: aMediaStreamTrack});
+new MediaStreamTrackEvent(type, {track: aMediaStreamTrack});
 ```
 
 ### Parameters

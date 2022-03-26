@@ -22,13 +22,7 @@ The `origin` read-only property of the
 {{domxref("ServiceWorkerMessageEvent")}} interface returns the origin of the service
 worker's environment settings object.
 
-## Syntax
-
-```js
-var myOrigin = ServiceWorkerMessageEventInstance.origin;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}.
 

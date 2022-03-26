@@ -19,13 +19,7 @@ The **`rightDegrees`** read-only property of the {{domxref("VRFieldOfView")}} in
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Syntax
-
-```js
-var myRightDegrees = VRFieldOfView.rightDegrees;
-```
-
-### Value
+## Value
 
 A double.
 

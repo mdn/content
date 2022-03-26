@@ -13,13 +13,7 @@ browser-compat: api.NDEFReadingEvent.message
 
 The **`message`** property of the {{domxref("NDEFReadingEvent")}} interface returns an {{DOMxRef("NDEFMessage")}} object containing the received message.
 
-## Syntax
-
-```js
-let aMessage = NDEFReadingEvent.message;
-```
-
-### Value
+## Value
 
 An {{domxref("NDEFMessage")}} object.
 

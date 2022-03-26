@@ -23,13 +23,7 @@ resource to use in the element.
 > an {{domxref("HTMLSourceElement")}} (which represents a {{HTMLElement("source")}}
 > element).
 
-## Syntax
-
-```js
-var mediaUrl = HTMLMediaElement.src;
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}} object containing the URL of a media resource to use in the
 element; this property reflects the value of the HTML element's `src`

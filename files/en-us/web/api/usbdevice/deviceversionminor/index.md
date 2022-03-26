@@ -18,13 +18,7 @@ The **`deviceVersionMinor`** read only property of the
 {{domxref("USBDevice")}} interface the minor version number of the device in a semantic
 versioning scheme.
 
-## Syntax
-
-```js
-var serialNumber = USBDevice.deviceVersionMinor
-```
-
-### Value
+## Value
 
 A number.
 

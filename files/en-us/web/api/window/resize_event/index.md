@@ -41,7 +41,7 @@ In some earlier browsers it was possible to register `resize` event handlers on 
 
 There is a proposal to allow all elements to be notified of resize changes. See [Resize Observer](https://wicg.github.io/ResizeObserver/) to read the draft document, and [GitHub issues](https://github.com/WICG/ResizeObserver/issues) to read the on-going discussions.
 
-If the resize event is triggered too many times for your application, see [Optimizing window.onresize](http://bencentra.com/code/2015/02/27/optimizing-window-resize.html) to control the time after which the event fires.
+If the resize event is triggered too many times for your application, see [Optimizing window.onresize](https://bencentra.com/code/2015/02/27/optimizing-window-resize.html) to control the time after which the event fires.
 
 ## Examples
 

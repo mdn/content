@@ -19,7 +19,7 @@ The **`SyncEvent()`** constructor creates a new
 ## Syntax
 
 ```js
-var mySyncEvent = new SyncEvent(type, init)
+new SyncEvent(type, init)
 ```
 
 ### Parameters

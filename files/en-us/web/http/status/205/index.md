@@ -25,7 +25,7 @@ a canvas state, or to refresh the UI.
 | ------------------------------------------------------------ | ------------------------------------------------------------- |
 | {{RFC("7231", "205 Reset Content" , "6.3.6")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-## Compatibility Notes
+## Compatibility notes
 
 - Browser behavior differs if this response erroneously includes a body on persistent
   connections See [204 No Content](/en-US/docs/Web/HTTP/Status/204) for more

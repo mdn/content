@@ -15,13 +15,7 @@ The **`orientType`** read-only property of the {{domxref("SVGMarkerElement")}} i
 
 This _something else_ is most likely to be the keyword `auto-start-reverse` however the spec leaves it open for this to be other values. Unsupported values will generally be thrown away by the parser, leaving the value the default of `auto`.
 
-## Syntax
-
-```js
-let orientType = SVGMarkerElement.orientType;
-```
-
-### Value
+## Value
 
 An {{domxref("SVGAnimatedEnumeration")}} object. This contains one of the following values:
 

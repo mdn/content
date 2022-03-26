@@ -21,13 +21,7 @@ its {{domxref("MediaStreamTrack")}}s is not in the {{domxref("MediaStreamTrack.e
 state. Once every track has ended, the stream's `active` property becomes
 `false`.
 
-## Syntax
-
-```js
-const isActive = MediaStream.active;
-```
-
-### Value
+## Value
 
 A Boolean value which is `true` if the stream is currently active;
 otherwise, the value is `false`.

@@ -50,7 +50,7 @@ Because descendants of `button` are presentational, the following code is equiva
 
 ```html
 <div role="button"><h3 role="presentation">Title of my button</h3></div>
-````
+```
 
 From the assistive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
 

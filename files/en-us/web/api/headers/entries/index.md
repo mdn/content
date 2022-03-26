@@ -3,7 +3,6 @@ title: Headers.entries()
 slug: Web/API/Headers/entries
 tags:
   - API
-  - Experimental
   - Fetch API
   - Headers
   - Method

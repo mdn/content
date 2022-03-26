@@ -44,7 +44,7 @@ This article acts as a box of tricks, providing an introduction to some interest
 
 {{cssxref("box-shadow")}} allows you to apply one or more drop shadows to an element's box. Like text shadows, box shadows are supported pretty well across browsers, including IE9+ and Edge. Users of older IE versions might just have to cope with no shadows, so just test your designs to make sure your content is legible without them.
 
-You can find the examples in this section at [box-shadow.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/box-shadow.html) (see the [source code](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/box-shadow.html) too).
+You can find the examples in this section at [box-shadow.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/box-shadow.html) (see the [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/box-shadow.html) too).
 
 ### A simple box shadow
 
@@ -197,7 +197,7 @@ There are two properties that use blend modes in CSS:
 - {{cssxref("background-blend-mode")}}, which blends together multiple background images and colors set on a single element.
 - {{cssxref("mix-blend-mode")}}, which blends together the element it is set on with elements it is overlapping — both background and content.
 
-You can find a lot more examples than are available here in our [blend-modes.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html) example page (see [source code](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/blend-modes.html)), and on the {{cssxref("&lt;blend-mode&gt;")}} reference page.
+You can find a lot more examples than are available here in our [blend-modes.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html) example page (see [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/blend-modes.html)), and on the {{cssxref("&lt;blend-mode&gt;")}} reference page.
 
 > **Note:** Blend modes are also very new, and slightly less well supported than filters. There is no support as yet in Edge, and Safari only supports some of the blend mode options.
 
@@ -336,7 +336,7 @@ So why have other browsers implemented a `-webkit-` prefix? Mainly for browser c
 
 If you do want to use such features in your production work, make sure to test across browsers thoroughly and check that, where these features don't work, the site is still usable.
 
-> **Note:** For a full `-webkit-background-clip: text` code example, see [background-clip-text.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html) (see also the [source code](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/background-clip-text.html)).
+> **Note:** For a full `-webkit-background-clip: text` code example, see [background-clip-text.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html) (see also the [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/background-clip-text.html)).
 
 ## Summary
 

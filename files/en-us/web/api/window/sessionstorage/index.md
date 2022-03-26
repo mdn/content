@@ -45,13 +45,7 @@ The keys and the values are _always_ in the UTF-16 {{domxref("DOMString")}}
 format, which uses two bytes per character. As with objects, integer keys are
 automatically converted to strings.
 
-## Syntax
-
-```js
-myStorage = window.sessionStorage;
-```
-
-### Value
+## Value
 
 A {{DOMxRef("Storage")}} object which can be used to access the current origin's
 session storage space.

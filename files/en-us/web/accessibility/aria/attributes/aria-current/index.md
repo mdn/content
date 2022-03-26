@@ -85,7 +85,7 @@ If the element representing the current page in the breadcrumb was not a link, t
 - {{domxref("Element.ariaCurrent")}}
   - : The [`ariaCurrent`](/en-US/docs/Web/API/Element/ariaCurrent) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-current` attribute.
 - {{domxref("ElementInternals.ariaCurrent")}}
-  - : The [`ariaCurrent`](https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaCurrent) property of the {{domxref("ElementInternals")}} interface reflects the value of the `aria-current` attribute.
+  - : The [`ariaCurrent`](/en-US/docs/Web/API/ElementInternals/ariaCurrent) property of the {{domxref("ElementInternals")}} interface reflects the value of the `aria-current` attribute.
 
 ## Associated roles
 

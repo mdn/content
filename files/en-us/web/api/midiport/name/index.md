@@ -13,13 +13,7 @@ browser-compat: api.MIDIPort.name
 
 The **`name`** read-only property of the {{domxref("MIDIPort")}} interface returns the system name of the port.
 
-## Syntax
-
-```js
-let aname = MIDIPort.name;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString","string")}} containing the system name of the port.
 

@@ -26,13 +26,7 @@ This ID uniquely identifies a given stream for the component with which the cand
 This property can be configured by specifying the value of the `sdpMid` property in the `candidateInfo` options object that is passed to the {{domxref("RTCIceCandidate.RTCIceCandidate","RTCIceCandidate()")}} constructor.
 If you call the constructor with an m-line string instead of the options object, the value of `sdpMid` is extracted from the specified candidate m-line string.
 
-## Syntax
-
-```js
-var sdpMid = RTCIceCandidate.sdpMid;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} which uniquely identifies the source media component from
 which the candidate draws data, or `null` if no such association exists for the candidate.

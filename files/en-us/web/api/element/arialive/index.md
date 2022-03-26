@@ -14,14 +14,7 @@ browser-compat: api.Element.ariaLive
 
 The **`ariaLive`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) attribute, which indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
 
-## Syntax
-
-```js
-var ariaLive = element.ariaLive;
-element.ariaLive = ariaLive
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} with one of the following values:
 

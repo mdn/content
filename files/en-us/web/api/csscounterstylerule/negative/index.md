@@ -13,14 +13,7 @@ browser-compat: api.CSSCounterStyleRule.negative
 
 The **`negative`** property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the value of the {{cssxref("@counter-style/negative","negative")}} descriptor. If the descriptor does not have a value set, this attribute returns an empty string.
 
-## Syntax
-
-```js
-let negative = CSSCounterStyleRule.negative;
-CSSCounterStyleRule.negative = a;
-```
-
-### Value
+## Value
 
 A {{domxref("CSSOMString")}}
 

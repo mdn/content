@@ -20,7 +20,7 @@ The **`CSSMatrixComponent`** interface of the {{domxref('CSS_Object_Model#css_ty
 
 ## Constructor
 
-- {{domxref("CSSMatrixComponent.CSSMatrixComponent()")}}
+- {{domxref("CSSMatrixComponent.CSSMatrixComponent", "CSSMatrixComponent()")}}
   - : Creates a new `CSSMatrixComponent` object.
 
 ## Properties

@@ -62,7 +62,7 @@ For example, the BBC homepage contains many links that point not only to multipl
 
 ## Anatomy of a link
 
-A basic link is created by wrapping the text or other content, see {{anch("Block level links")}}, inside an {{htmlelement("a")}} element and using the {{htmlattrxref("href", "a")}} attribute, also known as a **Hypertext Reference**, or **target**, that contains the web address.
+A basic link is created by wrapping the text or other content, see [Block level links](#block_level_links), inside an {{htmlelement("a")}} element and using the {{htmlattrxref("href", "a")}} attribute, also known as a **Hypertext Reference**, or **target**, that contains the web address.
 
 ```html
 <p>I'm creating a link to
@@ -96,7 +96,7 @@ I'm creating a link to <a href="https://www.mozilla.org/en-US/" title="The best 
 
 ### Active learning: creating your own example link
 
-Create an HTML document using your local code editor and our [getting started template](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html).
+Create an HTML document using your local code editor and our [getting started template](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html).
 
 - Inside the HTML body, add one or more paragraphs or other types of content you already know about.
 - Change some of the content into links.
@@ -272,10 +272,10 @@ For this exercise, we'd like you to link some pages together with a navigation m
 
 You'll need to make local copies of the following four pages, all in the same directory. For a complete file list, see the [navigation-menu-start](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-start) directory:
 
-- [index.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/navigation-menu-start/index.html)
-- [projects.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/navigation-menu-start/projects.html)
-- [pictures.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/navigation-menu-start/pictures.html)
-- [social.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/navigation-menu-start/social.html)
+- [index.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/navigation-menu-start/index.html)
+- [projects.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/navigation-menu-start/projects.html)
+- [pictures.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/navigation-menu-start/pictures.html)
+- [social.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/navigation-menu-start/social.html)
 
 You should:
 
@@ -322,7 +322,7 @@ Here's an example that includes a cc, bcc, subject and body:
 </a>
 ```
 
-> **Note:** The values of each field must be URL-encoded, that is with non-printing characters (invisible characters like tabs, carriage returns, and page breaks) and spaces [percent-escaped](https://en.wikipedia.org/wiki/Percent-encoding).
+> **Note:** The values of each field must be URL-encoded with non-printing characters (invisible characters like tabs, carriage returns, and page breaks) and spaces [percent-escaped](https://en.wikipedia.org/wiki/Percent-encoding).
 > Also, note the use of the question mark (`?`) to separate the main URL from the field values, and ampersands (&) to separate each field in the `mailto:` URL.
 > This is standard URL query notation.
 > Read [The GET method](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data#the_get_method) to understand what URL query notation is more commonly used for.

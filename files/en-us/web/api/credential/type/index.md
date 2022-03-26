@@ -17,13 +17,7 @@ The **`type`** property of the
 credential's type. Valid values are `password`, `federated` and
 `public-key`.
 
-## Syntax
-
-```js
-var credType = Credential.type;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} contains a credential's given name.
 

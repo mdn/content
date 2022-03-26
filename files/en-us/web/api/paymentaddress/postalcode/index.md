@@ -29,13 +29,7 @@ jurisdiction for mail routing, for example, the {{interwiki("wikipedia", "ZIP Co
 in the United States or the {{interwiki("wikipedia", "Postal Index Number")}} (PIN code)
 in India.
 
-## Syntax
-
-```js
-var paymentPostalCode = PaymentAddress.postalCode;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} which contains the postal code portion of the address. A
 postal code is a string (either numeric or alphanumeric) which is used by a postal

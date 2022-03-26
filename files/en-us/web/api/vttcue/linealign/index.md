@@ -13,14 +13,7 @@ browser-compat: api.VTTCue.lineAlign
 
 The **`lineAlign`** property of the {{domxref("VTTCue")}} interface represents the alignment of this VTT cue.
 
-## Syntax
-
-```js
-let lineAlign = VTTCue.lineAlign;
-VTTCue.lineAlign = a;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString","string")}} containing one of the following values:
 

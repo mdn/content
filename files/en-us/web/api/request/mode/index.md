@@ -3,7 +3,6 @@ title: Request.mode
 slug: Web/API/Request/mode
 tags:
   - API
-  - Experimental
   - Fetch
   - Property
   - Reference
@@ -55,10 +54,10 @@ Requests can be initiated in a variety of ways, and the mode for a request depen
 the particular means by which it was initiated.
 
 For example, when a `Request` object is created using the
-{{domxref("Request.Request")}} constructor, the value of the `mode` property
+{{domxref("Request.Request", "Request()")}} constructor, the value of the `mode` property
 for that `Request` is set to `cors`.
 
-However, for requests created other than by the {{domxref("Request.Request")}}
+However, for requests created other than by the {{domxref("Request.Request", "Request()")}}
 constructor, `no-cors` is typically used as the mode; for example, for
 embedded resources where the request is initiated from markup, unless the
 [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin)
@@ -71,7 +70,7 @@ mode — that is, for the {{HTMLElement("link")}} or {{HTMLElement("script")}} e
 ## Example
 
 In the following snippet, we create a new request using the
-{{domxref("Request.Request()")}} constructor (for an image file in the same directory as
+{{domxref("Request.Request", "Request()")}} constructor (for an image file in the same directory as
 the script), then save the request mode in a variable:
 
 ```js

@@ -16,14 +16,7 @@ The **`length`** property of the {{ domxref("AudioBuffer") }}
 interface returns an integer representing the length, in sample-frames, of the PCM data
 stored in the buffer.
 
-## Syntax
-
-```js
-var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
-myArrayBuffer.length;
-```
-
-### Value
+## Value
 
 An integer.
 

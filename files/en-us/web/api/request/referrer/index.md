@@ -3,7 +3,6 @@ title: Request.referrer
 slug: Web/API/Request/referrer
 tags:
   - API
-  - Experimental
   - Fetch
   - Property
   - Reference
@@ -33,7 +32,7 @@ A {{domxref("DOMString")}} representing the request's referrer.
 ## Example
 
 In the following snippet, we create a new request using the
-{{domxref("Request.Request()")}} constructor (for an image file in the same directory as
+{{domxref("Request.Request", "Request()")}} constructor (for an image file in the same directory as
 the script), then save the request referrer in a variable:
 
 ```js

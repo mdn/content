@@ -20,7 +20,7 @@ new {{domxref("CSSMathMin")}} object which represents the CSS
 ## Syntax
 
 ```js
-var CSSMathMin = new CSSMathMin(args);
+new CSSMathMin(args);
 ```
 
 ### Parameters

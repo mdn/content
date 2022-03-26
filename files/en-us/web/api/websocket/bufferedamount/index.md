@@ -12,10 +12,10 @@ browser-compat: api.WebSocket.bufferedAmount
 {{APIRef("Web Sockets API")}}
 
 The **`WebSocket.bufferedAmount`** read-only property returns
-the number of bytes of data that have been queued using calls to {{manch("send")}} but
+the number of bytes of data that have been queued using calls to [`send()`](/en-US/docs/Web/API/WebSocket/send) but
 not yet transmitted to the network. This value resets to zero once all queued data has
 been sent. This value does not reset to zero when the connection is closed; if you keep
-calling {{manch("send")}}, this will continue to climb.
+calling [`send()`](/en-US/docs/Web/API/WebSocket/send), this will continue to climb.
 
 ## Syntax
 

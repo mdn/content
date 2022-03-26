@@ -18,14 +18,7 @@ The **`type`** property of the
 reflects the {{htmlattrxref("type", "object")}} HTML attribute, specifying the MIME type
 of the resource.
 
-## Syntax
-
-```js
-var String = HTMLObjectElement.type
-HTMLObjectElement.type = String;
-```
-
-### Value
+## Value
 
 A {{domxref('DOMString')}}.
 

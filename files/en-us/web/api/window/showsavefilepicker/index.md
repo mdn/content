@@ -19,7 +19,7 @@ Either by selecting an existing file, or entering a name for a new file.
 ## Syntax
 
 ```js
-var FileSystemFileHandle = Window.showSaveFilePicker();
+window.showSaveFilePicker();
 ```
 
 ### Parameters

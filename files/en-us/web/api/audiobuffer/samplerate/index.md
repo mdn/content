@@ -16,14 +16,7 @@ The **`sampleRate`** property of the {{
   domxref("AudioBuffer") }} interface returns a float representing the sample rate, in
 samples per second, of the PCM data stored in the buffer.
 
-## Syntax
-
-```js
-var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
-myArrayBuffer.sampleRate;
-```
-
-### Value
+## Value
 
 A floating-point value indicating the current sample rate of the buffers data, in
 samples per second.

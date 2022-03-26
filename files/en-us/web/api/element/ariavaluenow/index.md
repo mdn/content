@@ -15,14 +15,7 @@ browser-compat: api.Element.ariaValueNow
 
 The **`ariaValueNow`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) attribute, which defines the current value for a range widget.
 
-## Syntax
-
-```js
-var ariaValueNow = element.ariaValueNow;
-element.ariaValueNow = ariaValueNow
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} which contains a number.
 

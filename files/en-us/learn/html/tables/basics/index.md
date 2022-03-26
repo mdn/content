@@ -216,7 +216,7 @@ You can also have a [look at the live example](https://mdn.github.io/learning-ar
 
 Be under no illusion; for tables to be effective on the web, you need to provide some styling information with [CSS](/en-US/docs/Learn/CSS), as well as good solid structure with HTML. In this module we are focusing on the HTML part; to find out about the CSS part you should visit our [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables) article after you've finished here.
 
-We won't focus on CSS in this module, but we have provided a minimal CSS stylesheet for you to use that will make your tables more readable than the default you get without any styling. You can find the [stylesheet here](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css), and you can also find an [HTML template](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) that applies the stylesheet — these together will give you a good starting point for experimenting with HTML tables.
+We won't focus on CSS in this module, but we have provided a minimal CSS stylesheet for you to use that will make your tables more readable than the default you get without any styling. You can find the [stylesheet here](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css), and you can also find an [HTML template](https://github.com/mdn/learning-area/blob/main/html/tables/basic/blank-template.html) that applies the stylesheet — these together will give you a good starting point for experimenting with HTML tables.
 
 ### When should you NOT use HTML tables?
 
@@ -232,7 +232,7 @@ In short, using tables for layout rather than [CSS layout techniques](/en-US/doc
 
 We've talked table theory enough, so, let's dive into a practical example and build up a simple table.
 
-1. First of all, make a local copy of [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) in a new directory on your local machine.
+1. First of all, make a local copy of [blank-template.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/blank-template.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css) in a new directory on your local machine.
 2. The content of every table is enclosed by these two tags : **[`<table></table>`](/en-US/docs/Web/HTML/Element/table)**. Add these inside the body of your HTML.
 3. The smallest container inside a table is a table cell, which is created by a **[`<td>`](/en-US/docs/Web/HTML/Element/td)** element ('td' stands for 'table data'). Add the following inside your table tags:
 
@@ -300,7 +300,7 @@ This should result in a table that looks something like the following:
 
 {{EmbedLiveSample("Result")}}
 
-> **Note:** You can also find this on GitHub as [simple-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
+> **Note:** You can also find this on GitHub as [simple-table.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/simple-table.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
 
 ## Adding headers with \<th> elements
 
@@ -366,11 +366,11 @@ The problem here is that, while you can kind of make out what's going on, it is 
 
 Let's have a go at improving this table.
 
-1. First, make a local copy of our [dogs-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) files in a new directory on your local machine. The HTML contains the same Dogs example as you saw above.
+1. First, make a local copy of our [dogs-table.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/dogs-table.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css) files in a new directory on your local machine. The HTML contains the same Dogs example as you saw above.
 2. To recognize the table headers as headers, both visually and semantically, you can use the **[`<th>`](/en-US/docs/Web/HTML/Element/th)** element ('th' stands for 'table header'). This works in exactly the same way as a `<td>`, except that it denotes a header, not a normal cell. Go into your HTML, and change all the `<td>` elements surrounding the table headers into `<th>` elements.
 3. Save your HTML and load it in a browser, and you should see that the headers now look like headers.
 
-> **Note:** You can find our finished example at [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html) on GitHub ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
+> **Note:** You can find our finished example at [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/dogs-table-fixed.html) on GitHub ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
 
 ### Why are headers useful?
 
@@ -432,12 +432,12 @@ We need a way to get "Animals", "Hippopotamus", and "Crocodile" to span across t
 
 Let's use `colspan` and `rowspan` to improve this table.
 
-1. First, make a local copy of our [animals-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) files in a new directory on your local machine. The HTML contains the same animals example as you saw above.
+1. First, make a local copy of our [animals-table.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/animals-table.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css) files in a new directory on your local machine. The HTML contains the same animals example as you saw above.
 2. Next, use `colspan` to make "Animals", "Hippopotamus", and "Crocodile" span across two columns.
 3. Finally, use `rowspan` to make "Horse" and "Chicken" span across two rows.
 4. Save and open your code in a browser to see the improvement.
 
-> **Note:** You can find our finished example at [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) on GitHub ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
+> **Note:** You can find our finished example at [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/animals-table-fixed.html) on GitHub ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
 
 ## Providing common styling to columns
 
@@ -529,7 +529,7 @@ Below you can see the timetable of a languages teacher. On Friday she has a new 
 
 Recreate the table by following the steps below.
 
-1. First, make a local copy of our [timetable.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable.html) file in a new directory on your local machine. The HTML contains the same table you saw above, minus the column styling information.
+1. First, make a local copy of our [timetable.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/timetable.html) file in a new directory on your local machine. The HTML contains the same table you saw above, minus the column styling information.
 2. Add a `<colgroup>` element at the top of the table, just underneath the `<table>` tag, in which you can add your `<col>` elements (see the remaining steps below).
 3. The first two columns need to be left unstyled.
 4. Add a background color to the third column. The value for your `style` attribute is `background-color:#97DB9A;`
@@ -538,7 +538,7 @@ Recreate the table by following the steps below.
 7. Add a different background color plus a border to the sixth column, to signify that this is a special day and she's teaching a new class. The values for your `style` attribute are `background-color:#DCC48E; border:4px solid #C1437A;`
 8. The last two days are free days, so just set them to no background color but a set width; the value for the `style` attribute is `width: 42px;`
 
-See how you get on with the example. If you get stuck, or want to check your work, you can find our version on GitHub as [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html)).
+See how you get on with the example. If you get stuck, or want to check your work, you can find our version on GitHub as [timetable-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/timetable-fixed.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html)).
 
 ## Summary
 

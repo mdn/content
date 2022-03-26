@@ -13,13 +13,7 @@ browser-compat: api.ExtendableCookieChangeEvent.deleted
 
 The **`deleted`** read-only property of the {{domxref("ExtendableCookieChangeEvent")}} interface returns any cookies that have been deleted by the given `ExtendableCookieChangeEvent` instance.
 
-## Syntax
-
-```js
-var array = ExtendableCookieChangeEvent.deleted;
-```
-
-### Value
+## Value
 
 An array of objects containing the deleted cookie(s). Each object contains the following properties:
 

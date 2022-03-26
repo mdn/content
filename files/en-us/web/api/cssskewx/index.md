@@ -20,7 +20,7 @@ The **`CSSSkewX`** interface of the {{domxref('CSS_Object_Model#css_typed_object
 
 ## Constructor
 
-- {{domxref("CSSSkewX.CSSSkewX()")}}
+- {{domxref("CSSSkewX.CSSSkewX", "CSSSkewX()")}}
   - : Creates a new `CSSSkewX` object.
 
 ## Properties

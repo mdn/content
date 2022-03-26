@@ -44,7 +44,7 @@ This section lists some types of HTTP requests which are considered active conte
 - {{HTMLElement("iframe")}} (`src` attribute)
 - {{domxref("XMLHttpRequest")}} requests
 - {{domxref("fetch()")}} requests
-- All cases in CSS where a {{cssxref("url()")}} value is used ({{cssxref("@font-face")}}, {{cssxref("cursor")}}, {{cssxref("background-image")}}, and so forth).
+- All cases in CSS where a {{cssxref("url", "url()")}} value is used ({{cssxref("@font-face")}}, {{cssxref("cursor")}}, {{cssxref("background-image")}}, and so forth).
 - {{HTMLElement("object")}} (`data` attribute)
 - {{domxref("Navigator.sendBeacon")}} (`url` attribute)
 

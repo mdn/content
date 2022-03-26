@@ -13,12 +13,15 @@ browser-compat: api.NavigatorUAData.getHighEntropyValues
 
 The **`getHighEntropyValues()`** method of the {{domxref("NavigatorUAData")}} interface is a {{jsxref("Promise")}} that resolves with a dictionary object containing the _high entropy_ values the user-agent returns.
 
-> **Note:** The terms _high entropy_ and _low entropy_ refer to the amount of information these values reveal about the browser. The values returned as properties are deemed low entropy, and unlikely to identify a user. The values returned by {{domxref("NavigatorUAData.getHighEntropyValues()")}} could potentially reveal more information. These values are therefore retrieved via a {{jsxref("Promise")}}, allowing time for the browser to request user permission, or make other checks.
+> **Note:** The terms _high entropy_ and _low entropy_ refer to the amount of information these values reveal about the browser.
+> The values returned as properties are deemed low entropy, and unlikely to identify a user.
+> The values returned by {{domxref("NavigatorUAData.getHighEntropyValues()")}} could potentially reveal more information.
+> These values are therefore retrieved via a {{jsxref("Promise")}}, allowing time for the browser to request user permission, or make other checks.
 
 ## Syntax
 
 ```js
-NavigatorUAData.getHighEntropyValues(hints);
+getHighEntropyValues(hints)
 ```
 
 ### Parameters
@@ -31,11 +34,12 @@ NavigatorUAData.getHighEntropyValues(hints);
     - `"bitness"`
     - `"model"`
     - `"platformVersion"`
-    - `"uaFullVersion"`
+    - `"uaFullVersion"` {{deprecated_inline}}
+    - `"fullVersionList"`
 
 ### Return value
 
-An object containing some or all of the following values, based on the hints requested:
+A {{jsxref("Promise")}} that resolves to an object containing some or all of the following values (based on the hints requested):
 
 - `architecture`
   - : A {{domxref("DOMString","string")}} containing the platform architecture. For example, `"x86"`.
@@ -45,24 +49,28 @@ An object containing some or all of the following values, based on the hints req
   - : A {{domxref("DOMString","string")}} containing the device model. For example, `"Pixel 2XL"`.
 - `platformVersion`
   - : A {{domxref("DOMString","string")}} containing the platform version. For example, `"10.0"`.
-- `uaFullVersion`
+- `uaFullVersion` {{deprecated_inline}}
   - : A {{domxref("DOMString","string")}} containing the full browser version. For example, `"91.0.4472.124"`.
+- `fullVersionList`
+  - : An array of brand information containing the browser name and full version.
+    For example, `"Chromium";v="91.0.4472.124","Google Chrome";v="91.0.4472.124"`.
 
 ### Exceptions
 
-- A {{domxref("DOMException")}} `NotAllowedError`
+- `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if the user-agent decides that one or more of the `hints` requested should not be returned.
 
 ## Examples
 
-In the following example a number of hints are requested using the `getHighEntropyValues()` method. When the promise resolves, this information is printed to the console.
+In the following example a number of hints are requested using the `getHighEntropyValues()` method.
+When the promise resolves, this information is printed to the console.
 
 ```js
 navigator.userAgentData.getHighEntropyValues(
   ["architecture",
   "model",
   "platformVersion",
-  "uaFullVersion"])
+  "fullVersionList"])
   .then(ua => { console.log(ua) });
 ```
 

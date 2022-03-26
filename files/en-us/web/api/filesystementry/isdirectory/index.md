@@ -27,13 +27,7 @@ entry is a file.
 > both `isDirectory` and `isFile` as needed to ensure that the
 > entry is something you know how to work with.
 
-## Syntax
-
-```js
-var isDirectory = FileSystemEntry.isDirectory;
-```
-
-### Value
+## Value
 
 A Boolean indicating whether or not the {{domxref("FileSystemEntry")}} is a directory.
 

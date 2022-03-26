@@ -85,7 +85,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - {{ htmlattrdef("required") }}
   - : This attribute specifies that the user must fill in a value before submitting a form.
 - {{ htmlattrdef("rows") }}
-  - : The number of visible text lines for the control.
+  - : The number of visible text lines for the control. If it is specified, it must be a positive integer. If it is not specified, the default value is 2.
 - {{ htmlattrdef("spellcheck") }}
 
   - : Specifies whether the `<textarea>` is subject to spell checking by the underlying browser/OS. The value can be:

@@ -60,7 +60,7 @@ This article provides information about the changes in Firefox 70 that will affe
 #### Removals
 
 - We have retired support for 3-valued \<position> (excluding background)({{Bug(1559276)}}).
-- The `none` value is now invalid in {{cssxref("counter()")}} / {{cssxref("counters()")}} — a change which makes the Level 3 spec match CSS 2.1 {{Bug(1576821)}}).
+- The `none` value is now invalid in {{cssxref("counter", "counter()")}} / {{cssxref("counters", "counters()")}} — a change which makes the Level 3 spec match CSS 2.1 {{Bug(1576821)}}).
 
 ### SVG
 

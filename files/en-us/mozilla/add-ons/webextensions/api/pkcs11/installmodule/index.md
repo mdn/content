@@ -21,7 +21,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var installing = browser.pkcs11.installModule(
+let installing = browser.pkcs11.installModule(
   name,              // string
   flags              // integer
 )

@@ -19,13 +19,7 @@ read-only **`intersectionRatio`** property tells you how much
 of the target element is currently visible within the root's intersection ratio, as a
 value between 0.0 and 1.0.
 
-## Syntax
-
-```js
-var intersectionRatio = IntersectionObserverEntry.intersectionRatio;
-```
-
-### Value
+## Value
 
 A number between 0.0 and 1.0 which indicates how much of the target element is actually
 visible within the root's intersection rectangle. More precisely, this value is the

@@ -24,15 +24,7 @@ track is currently enabled for use. If the track is disabled by setting
 `enabled` to `false`, the track is muted and does not produce
 audio.
 
-## Syntax
-
-```js
-isAudioEnabled = AudioTrack.enabled;
-
-AudioTrack.enabled = true | false;
-```
-
-### Value
+## Value
 
 The `enabled` property is a Boolean whose value is `true` if the
 track is enabled; enabled tracks produce audio while the media is playing. Setting

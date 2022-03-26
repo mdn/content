@@ -17,13 +17,7 @@ the {{domxref("AudioNode")}} interface returns the number of inputs feeding the
 node. Source nodes are defined as nodes having a `numberOfInputs`
 property with a value of 0.
 
-## Syntax
-
-```js
-var numInputs = audioNode.numberOfInputs;
-```
-
-### Value
+## Value
 
 An integer ≥ 0.
 

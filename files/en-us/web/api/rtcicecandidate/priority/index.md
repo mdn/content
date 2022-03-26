@@ -22,13 +22,7 @@ The **{{domxref("RTCIceCandidate")}}** interface's read-only **`priority`** prop
 The `priority` field's value is set from the `candidateInfo` options object passed to the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor.
 You can't specify the value of `priority` directly in the options object, but its value is automatically extracted from the object's `candidate` a-line, if it's formatted properly.
 
-## Syntax
-
-```js
-var priority = RTCIceCandidate.priority;
-```
-
-### Value
+## Value
 
 A long, unsigned integer value indicating the priority of the candidate according to the remote peer.
 The larger this value is, the more preferable the remote peer considers this candidate to be.

@@ -22,7 +22,7 @@ _Inherits properties from its ancestor {{domxref("CSSRule")}}._
   - : Returns the url specified by the {{cssxref("@import")}} rule.
 - {{domxref("CSSImportRule.media")}}
   - : Returns the value of the `media` attribute of the associated stylesheet.
-- {{domxref("CSSImportRule.stylesheet")}}{{readonlyinline}}
+- {{domxref("CSSImportRule.styleSheet")}}{{readonlyinline}}
   - : Returns the associated stylesheet.
 
 ## Methods

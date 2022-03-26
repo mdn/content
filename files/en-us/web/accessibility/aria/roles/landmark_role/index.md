@@ -18,7 +18,7 @@ A landmark is an important subsection of a page. The `landmark` role is an abstr
 
 ## Description
 
-A `landmark` is an abstract role for a section of content that is important enough that users will likely want to be able to navigate to the section easily and have it included in a dynamically generated summary of the page.  Landmarks allow assistive techonologies to navigate and to find content quickly.
+A `landmark` is an abstract role for a section of content that is important enough that users will likely want to be able to navigate to the section easily and have it included in a dynamically generated summary of the page.  Landmarks allow assistive technologies to navigate and to find content quickly.
 
 To create a landmark role, define the purpose of the content by using a semantic element such as `<section>`, `<nav>`, or `<main>`, or adding an ARIA role that is a subclass of the `landmark` role such as [`role="banner"`](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role), [`role="complementary"`](/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role), or [`role="region"`](/en-US/docs/Web/Accessibility/ARIA/Roles/region_role).  Do not use `role="landmark"`.
 

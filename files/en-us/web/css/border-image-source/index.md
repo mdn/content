@@ -73,4 +73,4 @@ border-image-source: unset;
 - {{cssxref("outline")}}
 - {{cssxref("box-shadow")}}
 - {{cssxref("background-image")}}
-- {{cssxref("url()", "url()")}} function
+- {{cssxref("url", "url()")}} function

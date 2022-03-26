@@ -52,7 +52,7 @@ navigator.userAgentData.getHighEntropyValues(
   "model",
   "platform",
   "platformVersion",
-  "uaFullVersion"])
+  "fullVersionList"])
   .then(ua => { console.log(ua) });
 ```
 

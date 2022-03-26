@@ -192,7 +192,7 @@ The `pause()` method is used to tell the audio to pause. It takes no parameters.
 myAudio.pause();
 ```
 
-> **Note:** There is no stop method — to implement a stop function, you'd have to pause the media then set the `{{ anch("currentTime") }}` property value to 0.
+> **Note:** There is no stop method — to implement a stop function, you'd have to pause the media then set the [`currentTime`](#currenttime) property value to 0.
 
 #### canPlayType
 

@@ -19,13 +19,7 @@ the {{domxref("ServiceWorkerRegistration")}} interface returns a reference to th
 {{domxref('PeriodicSyncManager')}} interface, which allows for registering of tasks to
 run at specific intervals.
 
-## Syntax
-
-```js
-var PeriodicSyncManagerObject = ServiceWorkerRegistration.periodicSync;
-```
-
-### Value
+## Value
 
 A PeriodicSyncManager {{jsxref('Object')}}.
 

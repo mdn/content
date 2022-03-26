@@ -21,13 +21,7 @@ contains a {{domxref("USVString")}} which specifies the file's path relative to 
 directory selected by the user in an {{HTMLElement("input")}} element with its
 {{htmlattrxref("webkitdirectory", "input")}} attribute set.
 
-## Syntax
-
-```js
-relativePath = File.webkitRelativePath
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}} containing the path of the file relative to the ancestor
 directory the user selected.
