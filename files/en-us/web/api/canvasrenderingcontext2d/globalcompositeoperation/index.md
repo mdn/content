@@ -28,7 +28,7 @@ Tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 ctx.globalCompositeOperation = type;
 ```
 
-`type` is a {{jsxref("String")}} identifying which of the compositing or
+`type` is a string identifying which of the compositing or
 blending mode operations to use.
 
 ### Types
