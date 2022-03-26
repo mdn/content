@@ -29,13 +29,7 @@ You can't specify the value of `relatedPort` directly in the options object, but
 The related address ({{domxref("RTCIceCandidate.relatedAddress", "relatedAddress")}}) and port are not used at all by {{Glossary("ICE")}} itself; they are provided for
 analysis and diagnostic purposes only, and their inclusion may be blocked by security systems, so do not rely on them having non-`null` values.
 
-## Syntax
-
-```js
-var relPort = RTCIceCandidate.relatedPort;
-```
-
-### Value
+## Value
 
 An unsigned 16-bit value containing the candidate's related port number, if any. For
 both peer and server reflexive candidates, the related address and port describe the

@@ -23,13 +23,7 @@ The **{{domxref("RTCIceCandidate")}}** interface's read-only **`tcpType`** prope
 The `tcpType` field's value is set from the `candidateInfo` options object passed to the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor.
 You can't specify the value of `tcpType` directly in the options object, but its value is automatically extracted from the object's `candidate` a-line, if it's formatted properly.
 
-## Syntax
-
-```js
-var tcpType = RTCIceCandidate.tcpType;
-```
-
-### Value
+## Value
 
 If the {{domxref("RTCIceCandidate.protocol","protocol")}} is "tcp", `tcpType` has one of the following values:
 

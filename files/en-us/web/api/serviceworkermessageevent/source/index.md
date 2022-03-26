@@ -23,13 +23,7 @@ The **`source`** read-only property of the
 {{domxref("ServiceWorker")}} object of the associated service worker that sent the
 message.
 
-## Syntax
-
-```js
-var mySource = ServiceWorkerMessageEventInstance.source;
-```
-
-### Value
+## Value
 
 A {{domxref("ServiceWorker")}} or {{domxref("MessagePort")}} object.
 

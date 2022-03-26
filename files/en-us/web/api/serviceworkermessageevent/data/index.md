@@ -22,13 +22,7 @@ The **`data`** read-only property of the
 {{domxref("ServiceWorkerMessageEvent")}} interface returns the event's data. It can be
 any data type.
 
-## Syntax
-
-```js
-var myData = ServiceWorkerMessageEventInstance.data;
-```
-
-### Value
+## Value
 
 Any data type.
 

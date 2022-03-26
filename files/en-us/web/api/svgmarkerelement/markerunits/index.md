@@ -13,13 +13,7 @@ browser-compat: api.SVGMarkerElement.markerUnits
 
 The **`markerUnits`** read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedEnumeration")}} object. This object returns an integer which represents the keyword values that the {{SVGattr("markerUnits")}} attribute accepts.
 
-## Syntax
-
-```js
-let markerUnits = SVGMarkerElement.markerUnits;
-```
-
-### Value
+## Value
 
 An {{domxref("SVGAnimatedEnumeration")}} object. The `baseVal` property of this object contains one of the following values:
 

@@ -32,13 +32,7 @@ this sender has produced to date on the video track corresponding to this
 In general, the higher this
 number is, the more heavily compressed the video data is.
 
-## Syntax
-
-```js
-var qpSum = RTCOutboundRtpStreamStats.qpSum;
-```
-
-### Value
+## Value
 
 An unsigned 64-bit integer value which indicates the sum of the quantization parameter
 (QP) value for every frame sent so far on the track described by the
