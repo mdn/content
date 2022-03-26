@@ -265,7 +265,6 @@ switch (action) {
     break;
   default:
     console.log('Empty action received.');
-    break;
 }
 ```
 
@@ -296,7 +295,6 @@ switch (action) {
   } // added brackets
   default: { // added brackets
     console.log('Empty action received.');
-    break;
   } // added brackets
 }
 ```
