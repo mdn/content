@@ -28,7 +28,7 @@ var curScriptElement = document.currentScript;
 This example checks to see if the script is being executed asynchronously:
 
 ```js
-if (document.currentScript.async) {
+if (document.currentScript?.async) {
   console.log("Executing asynchronously");
 } else {
   console.log("Executing synchronously");
