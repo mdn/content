@@ -54,11 +54,11 @@ A variable that has not been assigned a value has the value `undefined`. See {{j
 
 ### Number type
 
-ECMAScript has two built-in numeric types: **Number** and **BigInt** (see below).
+ECMAScript has two built-in numeric types: **Number** and **BigInt**:
 
-The Number type is a [double-precision 64-bit binary format IEEE 754 value](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) (numbers between -(2^53 − 1) and 2^53 − 1). In addition to representing floating-point numbers, the number type has three symbolic values: `+Infinity`, `-Infinity`, and {{jsxref("NaN")}} ("**N**ot a **N**umber").
+The Number type is a [double-precision 64-bit binary format IEEE 754 value](https://en.wikipedia.org/wiki/Double_precision_floating-point_format). It is capable of storing floating-point numbers between 2^-1074 and 2^1024, but only integers in the range -(2^53 − 1) to 2^53 − 1. Values outside of the range from {{jsxref("Number.MIN_VALUE")}} and {{jsxref("Number.MAX_VALUE")}} are automatically converted to either `+Infinity` or `-Infinity`, which behave similarly to mathematical infinity, but with some slight differences; see {{jsxref("Number.POSITIVE_INFINITY")}} for details.
 
-To check for the largest available value or smallest available value within {{jsxref("Infinity", "±Infinity")}}, you can use the constants {{jsxref("Number.MAX_VALUE")}} or {{jsxref("Number.MIN_VALUE")}}.
+The third numerical symbol is {{jsxref("NaN")}} ("**N**ot a **N**umber"), which can be typically encountered when the result of an arithmetical operation cannot be expressed as a number. It is also the only value in JavaScript that is not equal to itself.
 
 > **Note:** Starting with ECMAScript 2015, you are also able to check if a number is in the double-precision floating-point number range using {{jsxref("Number.isSafeInteger()")}} as well as {{jsxref("Number.MAX_SAFE_INTEGER")}} and {{jsxref("Number.MIN_SAFE_INTEGER")}}.
 >
