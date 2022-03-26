@@ -9,8 +9,8 @@ browser-compat: javascript.statements.label
 ---
 {{jsSidebar("Statements")}}
 
-The **labeled statement** can be used with {{jsxref("Statements/break",
-  "break")}} or {{jsxref("Statements/continue", "continue")}} statements. It is prefixing
+The **labeled statement** can be used with {{jsxref("Statements/break", "break")}}
+or {{jsxref("Statements/continue", "continue")}} statements. It is prefixing
 a statement with an identifier which you can refer to.
 
 {{EmbedInteractiveExample("pages/js/statement-label.html")}}
@@ -156,9 +156,8 @@ console.log('swap');
 
 ### Labeled function declarations
 
-Starting with ECMAScript 2015, labeled function declarations are now standardized for
-non-strict code in the [web
-compatibility annex of the specification](https://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations).
+Starting with ECMAScript 2015, labeled function declarations are now standardized for non-strict code in the
+[web compatibility annex of the specification](https://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations).
 
 ```js
 L: function F() {}
@@ -173,8 +172,8 @@ L: function F() {}
 // SyntaxError: functions cannot be labelled
 ```
 
-[Generator
-functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*) can neither be labeled in strict code, nor in non-strict code:
+[Generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
+can neither be labeled in strict code, nor in non-strict code:
 
 ```js
 L: function* F() {}

@@ -35,8 +35,8 @@ class name [extends otherName] {
 The class body of a class declaration is executed in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). The
 `constructor` method is optional.
 
-Class declarations are not {{Glossary("Hoisting", "hoisted")}} (unlike [function
-declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function)).
+Class declarations are not {{Glossary("Hoisting", "hoisted")}}
+(unlike [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function)).
 
 ## Examples
 
@@ -94,8 +94,6 @@ class Foo {}; // Uncaught SyntaxError: Identifier 'Foo' has already been declare
 
 ## See also
 
-- [`function`
-  declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
-- [`class`
-  expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
+- [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
+- [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)

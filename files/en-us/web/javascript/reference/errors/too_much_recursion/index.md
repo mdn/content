@@ -134,5 +134,4 @@ console.log(tony);
 ## See also
 
 - {{Glossary("Recursion")}}
-- [Recursive
-  functions](/en-US/docs/Web/JavaScript/Guide/Functions#Recursion)
+- [Recursive functions](/en-US/docs/Web/JavaScript/Guide/Functions#Recursion)
