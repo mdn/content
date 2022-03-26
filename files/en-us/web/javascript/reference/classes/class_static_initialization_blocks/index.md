@@ -9,7 +9,7 @@ tags:
   - Static
   - Reference
   - Initialization
-browser-compat: javascript.classes.class_static_initialization_blocks
+browser-compat: javascript.classes.static_initialization_blocks
 ---
 {{jsSidebar("Classes")}}
 
