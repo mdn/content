@@ -13,13 +13,7 @@ browser-compat: api.PerformanceElementTiming.url
 
 The **`url`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the initial URL of the resource request when the element is an image.
 
-## Syntax
-
-```js
-var url = PerformanceElementTiming.url;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} which is the initial URL of the resources request for images or 0 for text.
 

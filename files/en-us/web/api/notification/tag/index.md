@@ -23,13 +23,7 @@ tag, linking them together. One notification can then be programmatically replac
 another to avoid the users' screen being filled up with a huge number of similar
 notifications.
 
-## Syntax
-
-```js
-var tag = Notification.tag;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}.
 

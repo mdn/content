@@ -20,13 +20,7 @@ read-only **`intersectionRect`** property is a
 contains the entire portion of the target element which is currently visible within
 the intersection root.
 
-## Syntax
-
-```js
-var intersectionRect = IntersectionObserverEntry.intersectionRect;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMRectReadOnly")}} which describes the part of the target element that's
 currently visible within the root's intersection rectangle.

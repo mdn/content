@@ -24,13 +24,7 @@ This string may be either
 one of the standardized payment method identifiers or a URL used by the payment handler
 to process payments.
 
-## Syntax
-
-```js
-var methodName = PaymentResponse.methodName;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} uniquely identifying the payment handler being used to
 process the payment. This may be either a standardized identifier, or a URL used by the

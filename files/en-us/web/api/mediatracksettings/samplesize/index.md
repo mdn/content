@@ -31,13 +31,7 @@ the value of {{domxref("MediaTrackSupportedConstraints.sampleSize")}} as returne
 call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
 is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
-
-```js
-var sampleSize = MediaTrackSettings.sampleSize;
-```
-
-### Value
+## Value
 
 An integer value indicating how many bits each audio sample is represented by. The most
 commonly used sample size for many years now is 16 bits per sample, which was used for

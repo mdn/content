@@ -24,13 +24,7 @@ what went wrong by examining the `error` property within the
 `MediaRecorderErrorEvent` received by the `MediaRecorder`'s
 {{event("error")}} event handler, {{domxref("MediaRecorder.error_event", "onerror")}}.
 
-## Syntax
-
-```js
-error = MediaRecorderErrorEvent.error;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMException")}} describing the error represented by the event. The
 error's {{domxref("DOMException.name", "name")}} property's value may be any exception

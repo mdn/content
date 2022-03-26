@@ -13,13 +13,7 @@ browser-compat: api.OTPCredential.code
 
 The **`code`** property of the {{domxref("OTPCredential")}} interface returns the one-time password.
 
-## Syntax
-
-```js
-let code = OTPCredential.code;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString","string")}} containing the one-time password.
 
