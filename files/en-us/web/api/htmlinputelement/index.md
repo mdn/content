@@ -188,7 +188,6 @@ Some properties only apply to input element types that support the corresponding
 - {{domxref("HTMLInputElement.size", "size")}}
   - : `unsigned long`: **Returns / Sets** the element's {{ htmlattrxref("size", "input") }} attribute, containing visual size of the control. This value is in pixels unless the value of {{htmlattrxref("type","input")}} is `text` or `password`, in which case, it is an integer number of characters. Applies only when {{htmlattrxref("type","input")}} is set to `text`, `search`, `tel`, `url`, `email`, or `password`.
 
-
 ## Methods
 
 - {{domxref("HTMLElement/blur", "blur()")}}

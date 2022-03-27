@@ -71,15 +71,15 @@ If an extension attempts to store items that exceed these limits, the call to [`
 
 The `sync` object implements the methods defined on the {{WebExtAPIRef("storage.StorageArea")}} type:
 
-- {{WebExtAPIRef("storage.StorageArea.get()", "storage.<let>StorageArea</let>.get()")}}
+- {{WebExtAPIRef("storage.StorageArea.get()", "storage.StorageArea.get()")}}
   - : Retrieves one or more items from the storage area.
-- {{WebExtAPIRef("storage.StorageArea.getBytesInUse()", "storage.<let>StorageArea</let>.getBytesInUse()")}}
+- {{WebExtAPIRef("storage.StorageArea.getBytesInUse()", "storage.StorageArea.getBytesInUse()")}}
   - : Gets the amount of storage space (in bytes) used one or more items being stored in the storage area.
-- {{WebExtAPIRef("storage.StorageArea.set()", "storage.<let>StorageArea</let>.set()")}}
+- {{WebExtAPIRef("storage.StorageArea.set()", "storage.StorageArea.set()")}}
   - : Stores one or more items in the storage area. If the item already exists, its value will be updated.
-- {{WebExtAPIRef("storage.StorageArea.remove()", "storage.<let>StorageArea</let>.remove()")}}
+- {{WebExtAPIRef("storage.StorageArea.remove()", "storage.StorageArea.remove()")}}
   - : Removes one or more items from the storage area.
-- {{WebExtAPIRef("storage.StorageArea.clear()", "storage.<let>StorageArea</let>.clear()")}}
+- {{WebExtAPIRef("storage.StorageArea.clear()", "storage.StorageArea.clear()")}}
   - : Removes all items from the storage area.
 
 ## Browser compatibility
