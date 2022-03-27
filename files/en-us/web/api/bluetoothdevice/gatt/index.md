@@ -16,13 +16,7 @@ The
 **`BluetoothDevice.gatt`** read-only property returns
 a reference to the device's {{DOMxRef("BluetoothRemoteGATTServer")}}.
 
-## Syntax
-
-```js
-var gattServer = instanceOfBluetoothDevice.gatt
-```
-
-### Returns
+## Value
 
 A reference to the device's {{DOMxRef("BluetoothRemoteGATTServer")}}.
 

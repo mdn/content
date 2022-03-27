@@ -20,19 +20,9 @@ to shapes and images before they are drawn onto the canvas.
 > styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas
 > Tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
-## Syntax
+## Value
 
-```js
-ctx.globalAlpha = value;
-```
-
-### Options
-
-- `value`
-  - : A number between `0.0` (fully transparent) and `1.0` (fully
-    opaque), inclusive. The default value is `1.0`. Values outside that range,
-    including {{jsxref("Infinity")}} and {{jsxref("NaN")}}, will not be set, and
-    `globalAlpha` will retain its previous value.
+A number between `0.0` (fully transparent) and `1.0` (fully opaque), inclusive. The default value is `1.0`. Values outside that range, including {{jsxref("Infinity")}} and {{jsxref("NaN")}}, will not be set, and `globalAlpha` will retain its previous value.
 
 ## Examples
 

@@ -16,19 +16,11 @@ The `Q` property of the {{ domxref("BiquadFilterNode") }} interface is an [a-rat
 
 It is a dimensionless value with a default value of `1` and a nominal range of `0.0001` to `1000`.
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var biquadFilter = audioCtx.createBiquadFilter();
-biquadfilter.Q.value = 100;
-```
-
-> **Note:** Though the `AudioParam` returned is read-only, the value it represents is not.
-
 ### Value
 
 An {{domxref("AudioParam")}}.
+
+> **Note:** Though the `AudioParam` returned is read-only, the value it represents is not.
 
 ## Example
 

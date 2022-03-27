@@ -17,17 +17,9 @@ property of the Canvas 2D API specifies the current text style to use when drawi
 This string uses the same syntax as the [CSS font](/en-US/docs/Web/CSS/font)
 specifier.
 
-## Syntax
+## Value
 
-```js
-ctx.font = value;
-```
-
-### Options
-
-- `value`
-  - : A {{domxref("DOMString")}} parsed as CSS {{cssxref("font")}} value. The default font
-    is 10px sans-serif.
+A {{domxref("DOMString")}} parsed as CSS {{cssxref("font")}} value. The default font is 10px sans-serif.
 
 ## Examples
 

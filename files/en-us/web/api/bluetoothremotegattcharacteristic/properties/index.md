@@ -18,13 +18,7 @@ The **`BluetoothRemoteGATTCharacteristic.properties`**
 read-only property returns a {{domxref('BluetoothCharacteristicProperties')}} instance
 containing the properties of this characteristic.
 
-## Syntax
-
-```js
-var properties = BluetoothRemoteGATTCharacteristic.properties
-```
-
-### Returns
+### Value
 
 The properties of this characteristic.
 
