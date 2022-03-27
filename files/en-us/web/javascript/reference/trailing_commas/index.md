@@ -90,8 +90,7 @@ function f(p,) {}
 (p,) => {};
 ```
 
-The trailing comma also works with [method
-definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) for classes or objects:
+The trailing comma also works with [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) for classes or objects:
 
 ```js
 class C {
@@ -120,8 +119,7 @@ Math.max(10, 20,);
 #### Illegal trailing commas
 
 Function parameter definitions or function invocations only containing a comma will
-throw a {{Jsxref("SyntaxError")}}. Furthermore, when using a [rest
-parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), trailing commas are not allowed:
+throw a {{Jsxref("SyntaxError")}}. Furthermore, when using a [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), trailing commas are not allowed:
 
 ```js example-bad
 function f(,) {} // SyntaxError: missing formal parameter
@@ -134,8 +132,8 @@ function f(...p,) {} // SyntaxError: parameter after rest parameter
 
 ### Trailing commas in destructuring
 
-A trailing comma is also allowed on the left-hand side when using [destructuring
-assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
+A trailing comma is also allowed on the left-hand side when using
+[destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
 
 ```js
 // array destructuring with trailing comma
@@ -229,5 +227,4 @@ Trailing commas are valid in named imports and named exports.
 
 ## See also
 
-- Initial ECMAScript proposal: [trailing function
-  commas](https://github.com/tc39/proposal-trailing-function-commas) by Jeff Morrison
+- Initial ECMAScript proposal: [trailing function commas](https://github.com/tc39/proposal-trailing-function-commas) by Jeff Morrison

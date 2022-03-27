@@ -10,8 +10,8 @@ tags:
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing : after property id" occurs when objects are created
-using the [object
-initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) syntax. A colon (`:`) separates keys and values for the
+using the [object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) syntax.
+A colon (`:`) separates keys and values for the
 object's properties. Somehow, this colon is missing or misplaced.
 
 ## Message
@@ -27,9 +27,8 @@ SyntaxError: missing : after property id (Firefox)
 
 ## What went wrong?
 
-When creating objects with the [object
-initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) syntax, a colon (`:`) separates keys and values for the
-object's properties.
+When creating objects with the [object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) syntax,
+a colon (`:`) separates keys and values for the object's properties.
 
 ```js
 var obj = { propertyKey: 'value' };
@@ -93,5 +92,4 @@ var obj = { ['b'+'ar']: 'foo' };
 
 ## See also
 
-- [Object
-  initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- [Object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)

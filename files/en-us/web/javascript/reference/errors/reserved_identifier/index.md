@@ -9,8 +9,8 @@ tags:
 ---
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "_variable_ is a reserved identifier" occurs when [reserved
-keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords) are used as identifiers.
+The JavaScript exception "_variable_ is a reserved identifier" occurs
+when [reserved keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords) are used as identifiers.
 
 ## Message
 
@@ -26,8 +26,8 @@ SyntaxError: Unexpected reserved word (Chrome)
 
 ## What went wrong?
 
-[Reserved
-keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords) will throw in if they are used as identifiers. These are reserved in
+[Reserved keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords) will throw in
+if they are used as identifiers. These are reserved in
 strict mode and sloppy mode:
 
 - `enum`

@@ -11,9 +11,8 @@ tags:
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "invalid 'instanceof' operand" occurs when the right hand side
-operands of the [`instanceof`
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) isn't used with a constructor object, i.e. an object which has a
-`prototype` property and is callable.
+operands of the [`instanceof` operator](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof)
+isn't used with a constructor object, i.e. an object which has a `prototype` property and is callable.
 
 ## Message
 
@@ -30,9 +29,9 @@ TypeError: Right-hand side of 'instanceof' is not callable (Chrome)
 
 ## What went wrong?
 
-The [`instanceof`
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) expects the right hand side operands to be a constructor object, i.e. an
-object which has a `prototype` property and is callable.
+The [`instanceof` operator](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) expects
+the right hand side operands to be a constructor object,
+i.e. an object which has a `prototype` property and is callable.
 
 ## Examples
 
@@ -50,10 +49,10 @@ x instanceof f;       // TypeError: invalid 'instanceof' operand f
 x instanceof x;       // TypeError: x is not a function
 ```
 
-To fix these errors, you will either need to replace the [`instanceof`
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) with the [`typeof`
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/typeof), or to make sure you use the function name, instead of the result of its
-evaluation.
+To fix these errors, you will either need to replace
+the [`instanceof` operator](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof)
+with the [`typeof` operator](/en-US/docs/Web/JavaScript/Reference/Operators/typeof),
+or to make sure you use the function name, instead of the result of its evaluation.
 
 ```js example-good
 typeof "test" == "string"; // true
@@ -69,7 +68,5 @@ x instanceof Foo;          // true
 
 ## See also
 
-- [`instanceof`
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof)
-- [`typeof`
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
+- [`instanceof` operator](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof)
+- [`typeof` operator](/en-US/docs/Web/JavaScript/Reference/Operators/typeof)

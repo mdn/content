@@ -204,8 +204,7 @@ t3Closure({name: 'MDN', age: 30}); //"I'm MDN. I'm almost 30 years old."
 
 The special `raw` property, available on the first argument to the tag
 function, allows you to access the raw strings as they were entered, without processing
-[escape
-sequences](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#using_special_characters_in_strings).
+[escape sequences](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#using_special_characters_in_strings).
 
 ```js
 function tag(strings) {
@@ -258,8 +257,9 @@ latex`\unicode`
 #### ES2018 revision of illegal escape sequences
 
 Tagged templates should allow the embedding of languages (for example [DSLs](https://en.wikipedia.org/wiki/Domain-specific_language), or [LaTeX](https://en.wikipedia.org/wiki/LaTeX)), where other escapes sequences
-are common. The ECMAScript proposal [Template Literal
-Revision](https://tc39.github.io/proposal-template-literal-revision/) (integrated in the ECMAScript 2018 standard) removed the
+are common.
+The ECMAScript proposal [Template Literal Revision](https://tc39.github.io/proposal-template-literal-revision/)
+(integrated in the ECMAScript 2018 standard) removed the
 syntax restriction of ECMAScript escape sequences from tagged templates.
 
 However, illegal escape sequences must still be represented in the "cooked"
@@ -296,7 +296,5 @@ let bad = `bad escape sequence: \unicode`;
 - {{jsxref("String")}}
 - {{jsxref("String.raw()")}}
 - [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [Template-like
-  strings in ES3 compatible syntax](https://gist.github.com/WebReflection/8f227532143e63649804)
-- ["ES6 in
-  Depth: Template strings" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/)
+- [Template-like strings in ES3 compatible syntax](https://gist.github.com/WebReflection/8f227532143e63649804)
+- ["ES6 in Depth: Template strings" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/)

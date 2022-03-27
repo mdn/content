@@ -10,10 +10,9 @@ tags:
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "is not iterable" occurs when the value which is given as the
-right hand-side of [for…of
-](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)or as argument of a function such as {{jsxref("Promise.all")}} or
-{{jsxref("TypedArray.from")}}, is not an [iterable
-object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
+right hand-side of [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
+or as argument of a function such as {{jsxref("Promise.all")}} or {{jsxref("TypedArray.from")}},
+is not an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
 
 ## Message
 
@@ -28,21 +27,21 @@ TypeError: 'x' is not a function or its return value is not iterable (Chrome)
 
 ## What went wrong?
 
-The value which is given as the right hand-side of [for…of
-](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)or as argument of a function such as {{jsxref("Promise.all")}} or
-{{jsxref("TypedArray.from")}}, is not an [iterable
-object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). An iterable can be a built-in iterable type such as
+The value which is given as the right hand-side of [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
+or as argument of a function such as {{jsxref("Promise.all")}} or {{jsxref("TypedArray.from")}},
+is not an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
+An iterable can be a built-in iterable type such as
 {{jsxref("Array")}}, {{jsxref("String")}} or {{jsxref("Map")}}, a generator result, or
-an object implementing the [iterable
-protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol).
+an object implementing the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol).
 
 ## Examples
 
 ### Iterating over Object properties
 
-In JavaScript, {{jsxref("Object")}}s are not iterable unless they implement the [iterable
-protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol). Therefore, you cannot use [for…of
-](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) to iterate over the properties of an object.
+In JavaScript, {{jsxref("Object")}}s are not iterable unless they implement
+the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol).
+Therefore, you cannot use [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
+to iterate over the properties of an object.
 
 ```js example-bad
 var obj = { 'France': 'Paris', 'England': 'London' };
@@ -145,8 +144,7 @@ Array.from(myEmptyIterable);  // []
 
 ## See also
 
-- [iterable
-  protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)
+- [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)
 - {{jsxref("Object.keys")}}
 - {{jsxref("Object.entries")}}
 - {{jsxref("Map")}}
