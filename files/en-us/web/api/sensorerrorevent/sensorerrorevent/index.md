@@ -22,8 +22,8 @@ errors thrown by any of the interfaces based on {{domxref('Sensor')}}.
 ## Syntax
 
 ```js
- new SensorErrorEvent(type);
- new SensorErrorEvent(type, {error: domException});
+new SensorErrorEvent(type);
+new SensorErrorEvent(type, {error: domException});
 ```
 
 ### Parameters

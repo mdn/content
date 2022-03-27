@@ -16,7 +16,7 @@ and untrusted {{domxref("PointerEvent")}} object instance.
 ## Syntax
 
 ```js
- new PointerEvent(type, PointerEventInit);
+new PointerEvent(type, PointerEventInit);
 ```
 
 ### Arguments
