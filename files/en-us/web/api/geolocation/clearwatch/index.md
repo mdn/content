@@ -38,7 +38,7 @@ function success(pos) {
   var crd = pos.coords;
 
   if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
-    console.log('Congratulation, you reach the target');
+    console.log('Congratulation, you reached the target');
     navigator.geolocation.clearWatch(id);
   }
 };
