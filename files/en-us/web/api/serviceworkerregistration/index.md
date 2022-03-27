@@ -26,27 +26,24 @@ The lifetime of a service worker registration is beyond that of the `ServiceWork
 
 _Also implements properties from its parent interface,_ {{domxref("EventTarget")}}.
 
-- {{domxref("ServiceWorkerRegistration.scope")}} {{readonlyinline}}
-  - : Returns a unique identifier for a service worker registration. This must be on the same origin as the document that registers the {{domxref("ServiceWorker")}}.
-- {{domxref("ServiceWorkerRegistration.installing")}} {{readonlyinline}}
-  - : Returns a service worker whose state is `installing`. This is initially set to `null`.
-- {{domxref("ServiceWorkerRegistration.waiting")}} {{readonlyinline}}
-  - : Returns a service worker whose state is `installed`. This is initially set to `null`.
 - {{domxref("ServiceWorkerRegistration.active")}} {{readonlyinline}}
   - : Returns a service worker whose state is `activating` or `activated`. This is initially set to `null`. An active worker will control a {{domxref("Client")}} if the client's URL falls within the scope of the registration (the `scope` option set when {{domxref("ServiceWorkerContainer.register")}} is first called.)
+- {{domxref("ServiceWorkerRegistration.index")}} {{readonlyinline}}
+  - : Returns a reference to the {{domxref("ContentIndex")}} interface, for managing indexed content for offline viewing.
+- {{domxref("ServiceWorkerRegistration.installing")}} {{readonlyinline}}
+  - : Returns a service worker whose state is `installing`. This is initially set to `null`.
 - {{domxref("ServiceWorkerRegistration.navigationPreload")}} {{readonlyinline}}
   - : Returns the instance of {{domxref("NavigationPreloadManager")}} associated with the current service worker registration.
 - {{domxref("ServiceWorkerRegistration.pushManager")}} {{readonlyinline}}
   - : Returns a reference to the {{domxref("PushManager")}} interface for managing push subscriptions including subscribing, getting an active subscription, and accessing push permission status.
+- {{domxref("ServiceWorkerRegistration.scope")}} {{readonlyinline}}
+  - : Returns a unique identifier for a service worker registration. This must be on the same origin as the document that registers the {{domxref("ServiceWorker")}}.
 - {{domxref("ServiceWorkerRegistration.sync")}} {{non-standard_inline}} {{readonlyinline}}
   - : Returns a reference to the {{domxref("SyncManager")}} interface, which manages background synchronization processes.
-- {{domxref("ServiceWorkerRegistration.index")}} {{readonlyinline}}
-  - : Returns a reference to the {{domxref("ContentIndex")}} interface, for managing indexed content for offline viewing.
-
-### Unimplemented properties
-
-- {{domxref("serviceWorkerRegistration.periodicSync")}} {{non-standard_inline}} {{readonlyinline}}
-  - : Returns a reference to the {{domxref("PeriodicSyncManager")}} interface, which manages periodic background synchronization processes. This was mentioned as an idea in the SW explainer at some point, but as yet has not been implemented anywhere.
+- {{domxref("ServiceWorkerRegistration.waiting")}} {{readonlyinline}}
+  - : Returns a service worker whose state is `installed`. This is initially set to `null`.
+- {{domxref("ServiceWorkerRegistration.updateViaCache")}} {{readonlyinline}}
+  - : Returns a string indicating what is the cache strategy to use when updating the service worker scripts. It can be one of the following: `imports`, `all`, or `none`.
 
 ### Event handlers
 
@@ -61,12 +58,10 @@ _Also implements methods from its parent interface,_ {{domxref("EventTarget")}}.
   - : Returns a {{jsxref("Promise")}} that resolves to an array of {{domxref("Notification")}} objects.
 - {{domxref("ServiceWorkerRegistration.showNotification()")}}
   - : Displays the notification with the requested title.
-- {{domxref("ServiceWorkerRegistration.update()")}}
-  - : Checks the server for an updated version of the service worker without consulting caches.
 - {{domxref("ServiceWorkerRegistration.unregister()")}}
   - : Unregisters the service worker registration and returns a {{jsxref("Promise")}}. The service worker will finish any ongoing operations before it is unregistered.
-- {{domxref("ServiceWorkerRegistration.updateViaCache")}}
-  - : Updates the service worker registration. The extent of the update depends on the cache mode, which was set by {{domxref('ServiceWorkerContainer.register')}}.
+- {{domxref("ServiceWorkerRegistration.update()")}}
+  - : Checks the server for an updated version of the service worker without consulting caches.
 
 ## Examples
 
