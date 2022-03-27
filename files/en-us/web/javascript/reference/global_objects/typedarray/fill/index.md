@@ -15,8 +15,8 @@ browser-compat: javascript.builtins.TypedArray.fill
 
 The **`fill()`** method fills all the elements of a typed array
 from a start index to an end index with a static value. This method has the same
-algorithm as {{jsxref("Array.prototype.fill()")}}. _TypedArray_ is one of the [typed
-array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+algorithm as {{jsxref("Array.prototype.fill()")}}. _TypedArray_ is one of the
+[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
 
 {{EmbedInteractiveExample("pages/js/typedarray-fill.html","shorter")}}
 

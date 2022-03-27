@@ -52,9 +52,9 @@ A {{jsxref("TypeError")}}, if `target` or
 ## Description
 
 `Reflect.construct()` allows you to invoke a constructor with a variable
-number of arguments. (This would also be possible by using the [spread
-syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) combined with the [`new`
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/new).)
+number of arguments. (This would also be possible by using the
+[spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) combined with the
+[`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new).)
 
 ```js
 let obj = new Foo(...args)

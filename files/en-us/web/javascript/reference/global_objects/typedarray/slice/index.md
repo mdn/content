@@ -16,8 +16,7 @@ browser-compat: javascript.builtins.TypedArray.slice
 The **`slice()`** method returns a new typed array (with a new
 underlying buffer), that contains a copy of a portion of the original typed array. This
 method has the same algorithm as {{jsxref("Array.prototype.slice()")}}.
-_TypedArray_ is one of the [typed
-array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
+_TypedArray_ is one of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
 {{EmbedInteractiveExample("pages/js/typedarray-slice.html","shorter")}}
 

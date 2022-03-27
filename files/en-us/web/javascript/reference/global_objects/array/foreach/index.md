@@ -83,8 +83,7 @@ deleted, their value as passed to `callbackFn` will be the value at
 the time `forEach()` visits them; elements that are deleted before being
 visited are not visited. If elements that are already visited are removed (e.g. using
 {{jsxref("Array.prototype.shift()", "shift()")}}) during the iteration, later elements
-will be skipped. ([See
-this example, below](#modifying_the_array_during_iteration).)
+will be skipped. ([See this example, below](#modifying_the_array_during_iteration).)
 
 > **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
 

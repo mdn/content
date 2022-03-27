@@ -93,8 +93,8 @@ element, the index of the element, and the array object being mapped.
 If a `thisArg` parameter is provided, it will be used as callback's
 `this` value. Otherwise, the value {{jsxref("undefined")}} will be used as
 its `this` value. The `this` value ultimately observable by
-`callbackFn` is determined according to [the usual rules for
-determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
+`callbackFn` is determined according to
+[the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
 
 `map` does not mutate the array on which it is called (although
 `callbackFn`, if invoked, may do so).

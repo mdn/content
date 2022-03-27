@@ -16,8 +16,8 @@ The **`Object.setPrototypeOf()`** method sets the prototype
 another object or {{jsxref("null")}}.
 
 > **Warning:** Changing the `[[Prototype]]` of an object is, by
-> the nature of [how modern
-> JavaScript engines optimize property accesses](https://mathiasbynens.be/notes/prototypes), currently a very slow operation
+> the nature of [how modern JavaScript engines optimize property accesses](https://mathiasbynens.be/notes/prototypes),
+> currently a very slow operation
 > in every browser and JavaScript engine. In addition, the effects of altering
 > inheritance are subtle and far-flung, and are not limited to the time spent in the
 > `Object.setPrototypeOf(...)` statement, but may extend to

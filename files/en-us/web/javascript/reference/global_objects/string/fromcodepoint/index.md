@@ -96,7 +96,7 @@ if (!String.fromCodePoint) (function(stringFromCharCode) {
 
 ## Examples
 
-### Using `fromCodePoint()`
+### Using fromCodePoint()
 
 Valid input:
 
@@ -120,7 +120,7 @@ String.fromCodePoint(3e-2);     // RangeError
 String.fromCodePoint(NaN);      // RangeError
 ```
 
-### Compared to `fromCharCode()`
+### Compared to fromCharCode()
 
 {{jsxref("String.fromCharCode()")}} cannot return supplementary characters (i.e. code
 points `0x010000` – `0x10FFFF`) by specifying their code point.

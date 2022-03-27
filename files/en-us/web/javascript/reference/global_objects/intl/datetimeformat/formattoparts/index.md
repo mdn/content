@@ -166,8 +166,8 @@ console.log(dateString);
 ### Named Years and Mixed calendars
 
 In some cases, calendars use named years. Chinese and Tibetan calendars, for example,
-use a 60-year [sexagenary
-cycle](https://en.wikipedia.org/wiki/Sexagenary_cycle) of named years. These years are disambiguated by relationship to
+use a 60-year [sexagenary cycle](https://en.wikipedia.org/wiki/Sexagenary_cycle) of named years.
+These years are disambiguated by relationship to
 corresponding years on the Gregorian calendar. When this is the case, the result of
 `formatToParts()` will contain an entry for `relatedYear` when a
 year would normally be present, containing the 4-digit Gregorian year, instead of an

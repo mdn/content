@@ -56,8 +56,8 @@ replace(substr, replacerFunction)
 - `replacerFunction` (replacement)
   - : A function to be invoked to create the new substring to be used to replace the
     matches to the given `regexp` or `substr`.
-    The arguments supplied to this function are described in the "[Specifying a function as a
-    parameter](#specifying_a_function_as_a_parameter)" section below.
+    The arguments supplied to this function are described in the
+    "[Specifying a function as a parameter](#specifying_a_function_as_a_parameter)" section below.
 
 ### Return value
 
@@ -140,8 +140,9 @@ This logs `'Twas the night before Christmas...'`.
 ### Using global and ignore with replace()
 
 Global replace can only be done with a regular expression. In the following example,
-the regular expression includes the [global
-and ignore case flags](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags_2) which permits `replace()` to replace each
+the regular expression includes the
+[global and ignore case flags](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags_2)
+which permits `replace()` to replace each
 occurrence of `'apples'` in the string with `'oranges'`.
 
 ```js
@@ -156,8 +157,8 @@ This logs `'oranges are round, and oranges are juicy'`.
 ### Switching words in a string
 
 The following script switches the words in the string. For the replacement text, the
-script uses [capturing
-groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) and the `$1` and `$2` replacement patterns.
+script uses [capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
+and the `$1` and `$2` replacement patterns.
 
 ```js
 let re = /(\w+)\s(\w+)/;

@@ -63,7 +63,7 @@ object, without having to rewrite the method for the new object.
 
 ## Examples
 
-### Using `call` to chain constructors for an object
+### Using call() to chain constructors for an object
 
 You can use `call` to chain constructors for an object (similar to Java).
 
@@ -95,7 +95,7 @@ const cheese = new Food('feta', 5);
 const fun = new Toy('robot', 40);
 ```
 
-### Using `call` to invoke an anonymous function
+### Using call() to invoke an anonymous function
 
 In this example, we create an anonymous function and use `call` to invoke it
 on every object in an array.
@@ -123,7 +123,7 @@ for (let i = 0; i < animals.length; i++) {
 }
 ```
 
-### Using `call` to invoke a function and specifying the context for '`this`'
+### Using call() to invoke a function and specifying the context for 'this'
 
 In the example below, when we call `greet`, the value of `this`
 will be bound to object `obj`.
@@ -141,7 +141,7 @@ const obj = {
 greet.call(obj);  // cats typically sleep between 12 and 16 hours
 ```
 
-### Using `call` to invoke a function and without specifying the first argument
+### Using call() to invoke a function and without specifying the first argument
 
 In the example below, we invoke the `display` function without passing the
 first argument. If the first argument is not passed, the value of `this` is
@@ -184,5 +184,4 @@ display.call(); // Cannot read the property of 'sData' of undefined
 
 - {{jsxref("Function.prototype.bind()")}}
 - {{jsxref("Function.prototype.apply()")}}
-- [Introduction
-  to Object-Oriented JavaScript](/en-US/docs/Learn/JavaScript/Objects)
+- [Introduction to Object-Oriented JavaScript](/en-US/docs/Learn/JavaScript/Objects)

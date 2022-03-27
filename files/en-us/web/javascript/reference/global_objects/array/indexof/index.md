@@ -44,8 +44,8 @@ The first index of the element in the array; **-1** if not found.
 ## Description
 
 `indexOf()` compares `searchElement` to elements of
-the Array using [strict
-equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) (the same method used by the `===` or triple-equals operator).
+the Array using [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+(the same method used by the `===` or triple-equals operator).
 
 > **Note:** For the String method, see
 > {{jsxref("String.prototype.indexOf()")}}.

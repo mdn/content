@@ -16,8 +16,7 @@ browser-compat: javascript.builtins.TypedArray.filter
 The **`filter()`** method creates a new typed array with all
 elements that pass the test implemented by the provided function. This method has the
 same algorithm as {{jsxref("Array.prototype.filter()")}}. _TypedArray_ is one of
-the [typed
-array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
 
 {{EmbedInteractiveExample("pages/js/typedarray-filter.html")}}
 
@@ -74,8 +73,8 @@ If a `thisArg` parameter is provided to `filter()`, it
 will be passed to `callbackFn` when invoked, for use as its
 `this` value. Otherwise, the value `undefined` will be passed for
 use as its `this` value. The `this` value ultimately observable by
-`callbackFn` is determined according to [the usual rules for
-determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
+`callbackFn` is determined according to
+[the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
 
 `filter()` does not mutate the typed array on which it is called.
 
@@ -104,8 +103,7 @@ new Uint8Array([12, 5, 8, 130, 44]).filter(isBigEnough);
 
 ### Filtering typed array elements using arrow functions
 
-[Arrow
-functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter syntax for the same test.
+[Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter syntax for the same test.
 
 ```js
 new Uint8Array([12, 5, 8, 130, 44]).filter(elem => elem >= 10);

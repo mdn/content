@@ -16,8 +16,7 @@ browser-compat: javascript.builtins.Object.is
 {{JSRef}}
 
 The **`Object.is()`** method determines whether two values are
-[the same
-value](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness).
+[the same value](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness).
 
 ## Syntax
 
@@ -38,8 +37,7 @@ A {{jsxref("Boolean")}} indicating whether or not the two arguments are the same
 
 ## Description
 
-`Object.is()` determines whether two values are [the same
-value](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness). Two values are the same if one of the following holds:
+`Object.is()` determines whether two values are [the same value](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness). Two values are the same if one of the following holds:
 
 - both {{jsxref("undefined")}}
 - both {{jsxref("null")}}
