@@ -19,8 +19,7 @@ with a given name using prototype-based inheritance.
 {{EmbedInteractiveExample("pages/js/statement-class.html")}}
 
 You can also define a class using a {{jsxref("Operators/class", "class expression",
-    "", 1)}}. But unlike a class expression, a class declaration doesn't allow an existing
-class to be declared again and will throw a {{jsxref("SyntaxError")}} if attempted.
+    "", 1)}}, which allows redeclarations and omitting class names. Attempting to place **class declaration** in the same scope, under the same name, will throw a {{jsxref("SyntaxError")}}.
 
 ## Syntax
 
