@@ -21,8 +21,8 @@ The **`TransitionEvent()`** constructor returns a newly created
 
 ```js
 new TransitionEvent(type, {propertyName: aPropertyName,
-                                         elapsedTime  : aFloat,
-                                         pseudoElement: aPseudoElementName});
+                           elapsedTime  : aFloat,
+                           pseudoElement: aPseudoElementName});
 ```
 
 ### Arguments
