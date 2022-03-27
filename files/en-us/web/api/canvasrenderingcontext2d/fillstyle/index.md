@@ -23,13 +23,11 @@ color, gradient, or pattern to use inside shapes. The default style is `#000`
 
 ## Value
 
-- `color`
-  - : A {{domxref("DOMString")}} parsed as [CSS](/en-US/docs/Web/CSS)
-    {{cssxref("&lt;color&gt;")}} value.
-- `gradient`
-  - : A {{domxref("CanvasGradient")}} object (a linear or radial gradient).
-- `pattern`
-  - : A {{domxref("CanvasPattern")}} object (a repeating image).
+One of the followings:
+
+- A {{domxref("DOMString")}} parsed as CSS {{cssxref("<color>")}} value.
+- A {{domxref("CanvasGradient")}} object (a linear or radial gradient).
+- A {{domxref("CanvasPattern")}} object (a repeating image).
 
 ## Examples
 
