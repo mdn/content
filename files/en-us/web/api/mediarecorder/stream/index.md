@@ -16,13 +16,7 @@ The **`MediaRecorder.stream`** read-only property returns the
 stream that was passed into the `MediaRecorder()` constructor when the
 `MediaRecorder` was created.
 
-## Syntax
-
-```js
-var stream = MediaRecorder.stream
-```
-
-### Values
+## Values
 
 The MediaStream passed into the `MediaRecorder()` constructor when the
 `MediaRecorder` was originally created.

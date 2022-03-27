@@ -21,7 +21,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var capturing = browser.tabs.captureTab(
+let capturing = browser.tabs.captureTab(
   tabId,               // optional integer
   options              // optional extensionTypes.ImageDetails
 )
@@ -52,7 +52,7 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener(function() {
-  var capturing = browser.tabs.captureTab();
+  let capturing = browser.tabs.captureTab();
   capturing.then(onCaptured, onError);
 });
 ```

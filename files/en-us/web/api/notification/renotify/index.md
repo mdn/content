@@ -17,13 +17,7 @@ The **`renotify`** read-only property of the
 after a new notification replaces an old one, as specified in the `renotify`
 option of the {{domxref("Notification.Notification","Notification()")}} constructor.
 
-## Syntax
-
-```js
-var renotify = Notification.renotify;
-```
-
-### Value
+## Value
 
 A boolean value. `false` is the default; `true` makes
 the notification renotify the user.

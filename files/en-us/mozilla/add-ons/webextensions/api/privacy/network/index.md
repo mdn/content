@@ -62,12 +62,12 @@ function onSet(result) {
 
 browser.browserAction.onClicked.addListener(() => {
 
-  var getting = browser.privacy.network.webRTCIPHandlingPolicy.get({});
+  let getting = browser.privacy.network.webRTCIPHandlingPolicy.get({});
   getting.then((got) => {
     console.log(got.value);
     if ((got.levelOfControl === "controlled_by_this_extension") ||
         (got.levelOfControl === "controllable_by_this_extension")) {
-      var setting = browser.privacy.network.webRTCIPHandlingPolicy.set({
+      let setting = browser.privacy.network.webRTCIPHandlingPolicy.set({
         value: "default_public_interface_only"
       });
       setting.then(onSet);

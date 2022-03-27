@@ -22,7 +22,7 @@ Alias for {{WebExtAPIRef("runtime.getBackgroundPage()")}}.
 ## Syntax
 
 ```js
-var page = browser.extension.getBackgroundPage()
+let page = browser.extension.getBackgroundPage()
 ```
 
 ### Parameters
@@ -50,7 +50,7 @@ A script running in a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_
 ```js
 // popup.js
 
-var page = browser.extension.getBackgroundPage();
+let page = browser.extension.getBackgroundPage();
 page.foo(); // -> "I'm defined in background.js"
 ```
 

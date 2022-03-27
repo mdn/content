@@ -163,8 +163,8 @@ browser.menus.create({
   checked: false
 }, onCreated);
 
-var makeItBlue = 'document.body.style.border = "5px solid blue"';
-var makeItGreen = 'document.body.style.border = "5px solid green"';
+let makeItBlue = 'document.body.style.border = "5px solid blue"';
+let makeItGreen = 'document.body.style.border = "5px solid green"';
 
 browser.menus.onClicked.addListener(function(info, tab) {
   if (info.menuItemId == "radio-blue") {

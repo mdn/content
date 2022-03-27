@@ -31,13 +31,7 @@ height of the media in its natural size.
 See [About intrinsic width and
   height](#about_intrinsic_width_and_height) for more details.
 
-## Syntax
-
-```js
-height = htmlVideoElement.videoHeight;
-```
-
-### Value
+## Value
 
 An integer value specifying the intrinsic height of the video in CSS pixels. If the
 element's {{domxref("HTMLMediaElement.readyState", "readyState")}} is

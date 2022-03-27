@@ -24,13 +24,7 @@ More precisely, `innerWidth` returns the width of the window's
 layout viewport—can be obtained from the {{domxref("Window.innerHeight",
   "innerHeight")}} property.
 
-## Syntax
-
-```js
-let intViewportWidth = window.innerWidth;
-```
-
-### Value
+## Value
 
 An integer value indicating the width of the window's layout viewport in pixels. This
 property is read-only, and has no default value.

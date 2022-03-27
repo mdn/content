@@ -27,15 +27,7 @@ The object can be a {{domxref("MediaStream")}}, a {{domxref("MediaSource")}}, a
 > back to creating a URL with {{domxref("URL.createObjectURL()")}} and assign it to
 > {{domxref("HTMLMediaElement.src")}}. See below for an example.
 
-## Syntax
-
-```js
-var sourceObject = HTMLMediaElement.srcObject;
-
-HTMLMediaElement.srcObject = sourceObject;
-```
-
-### Value
+## Value
 
 A {{domxref('MediaStream')}}, {{domxref('MediaSource')}}, {{domxref('Blob')}}, or
 {{domxref('File')}} object (though see the compatibility table for what is actually

@@ -202,7 +202,7 @@ This code cancels requests for images that are made to URLs under "https\://mdn.
 
 ```js
 // match pattern for the URLs to redirect
-var pattern = "https://mdn.mozillademos.org/*";
+let pattern = "https://mdn.mozillademos.org/*";
 
 // cancel function returns an object
 // which contains a property `cancel` set to `true`
@@ -224,7 +224,7 @@ This code replaces, by redirection, all network requests for images that are mad
 
 ```js
 // match pattern for the URLs to redirect
-var pattern = "https://mdn.mozillademos.org/*";
+let pattern = "https://mdn.mozillademos.org/*";
 
 // redirect function
 // returns an object with a property `redirectURL`
@@ -249,10 +249,10 @@ This code is exactly like the previous example, except that the listener handles
 
 ```js
 // match pattern for the URLs to redirect
-var pattern = "https://mdn.mozillademos.org/*";
+let pattern = "https://mdn.mozillademos.org/*";
 
 // URL we will redirect to
-var redirectUrl = "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif";
+let redirectUrl = "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif";
 
 // redirect function returns a Promise
 // which is resolved with the redirect URL when a timer expires
@@ -277,9 +277,9 @@ browser.webRequest.onBeforeRequest.addListener(
 Another example, that redirects all images to a data url:
 
 ```js
-var pattern = "https://mdn.mozillademos.org/*";
+let pattern = "https://mdn.mozillademos.org/*";
 
-var image = `
+let image = `
   <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
     <rect style="stroke-width: 10; stroke: #666;" width="100%" height="100%" fill="#d4d0c8" />
     <text transform="translate(0, 9)" x="50%" y="50%" width="100%" fill="#666" height="100%" style="text-anchor: middle; font: bold 10pt 'Segoe UI', Arial, Helvetica, Sans-serif;">Blocked</text>
@@ -305,9 +305,9 @@ function randomColor() {
   return "#" + Math.floor(Math.random()*16777215).toString(16);
 }
 
-var pattern = "https://mdn.mozillademos.org/*";
+let pattern = "https://mdn.mozillademos.org/*";
 
-var image = `
+let image = `
   <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
     <rect width="100%" height="100%" fill="${randomColor()}"/>
   </svg>

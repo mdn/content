@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var deletingUrl = browser.history.deleteUrl(
+let deletingUrl = browser.history.deleteUrl(
   details         // object
 )
 ```
@@ -49,7 +49,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) will 
 Remove all visits to "https\://example.org/" from history, then check that this URL no longer returned from {{WebExtAPIRef("history.search()")}}:
 
 ```js
-var urlToRemove = "https://example.org/";
+let urlToRemove = "https://example.org/";
 
 function onGot(results) {
   if (!results.length) {
@@ -60,7 +60,7 @@ function onGot(results) {
 }
 
 function onRemoved() {
-  var searching = browser.history.search({
+  let searching = browser.history.search({
     text: urlToRemove,
     startTime: 0
   });
@@ -68,7 +68,7 @@ function onRemoved() {
   searching.then(onGot);
 }
 
-var deletingUrl = browser.history.deleteUrl({url: urlToRemove});
+let deletingUrl = browser.history.deleteUrl({url: urlToRemove});
 
 deletingUrl.then(onRemoved);
 ```
@@ -91,7 +91,7 @@ function onGot(results) {
   }
 }
 
-var searching = browser.history.search({
+let searching = browser.history.search({
   text: "",
   startTime: 0,
   maxResults: 1

@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingPopup = browser.pageAction.getPopup(
+let gettingPopup = browser.pageAction.getPopup(
   details               // object
 )
 ```
@@ -60,7 +60,7 @@ browser.contextMenus.create({
 
 browser.contextMenus.onClicked.addListener(function(info, tab) {
   if (info.menuItemId == "get-popup") {
-    var gettingPopup = browser.pageAction.getPopup({tabId: tab.id});
+    let gettingPopup = browser.pageAction.getPopup({tabId: tab.id});
     gettingPopup.then(gotPopup);
   }
 });

@@ -73,7 +73,7 @@ function logCookies(cookies) {
   }
 }
 
-var gettingAll = browser.cookies.getAll({});
+let gettingAll = browser.cookies.getAll({});
 gettingAll.then(logCookies);
 ```
 

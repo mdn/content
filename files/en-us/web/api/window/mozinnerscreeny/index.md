@@ -19,13 +19,7 @@ coordinates.
 
 > **Note:** This coordinate is reported in CSS pixels, not in hardware pixels.
 
-## Syntax
-
-```js
-screenY = window.mozInnerScreenY;
-```
-
-### Value
+## Value
 
 - _screenY_ stores the `window.mozInnerScreenY` property value.
 - The `window.mozInnerScreenY` property is a floating point, read-only

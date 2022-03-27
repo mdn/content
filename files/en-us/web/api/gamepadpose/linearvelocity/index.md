@@ -19,13 +19,7 @@ The **`linearVelocity`** read-only property of the {{domxref("GamepadPose")}} in
 
 In other words, the current velocity at which the sensor is moving along the `x`, `y`, and `z` axes.
 
-## Syntax
-
-```js
-var myGamepadLinVel = gamepadPoseInstance.linearVelocity;
-```
-
-### Value
+## Value
 
 A {{jsxref("Float32Array")}}, or `null` if the gamepad is not able to provide linear velocity data.
 

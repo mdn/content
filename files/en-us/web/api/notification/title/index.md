@@ -18,13 +18,7 @@ The **`title`** read-only property of the
 specified in the `title` parameter of the
 {{domxref("Notification.Notification","Notification()")}} constructor.
 
-## Syntax
-
-```js
-var title = Notification.title;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}.
 

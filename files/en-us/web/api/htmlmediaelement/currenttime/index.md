@@ -26,14 +26,7 @@ in seconds.
 Changing the value of `currentTime` seeks the media to
 the new time.
 
-## Syntax
-
-```js
-var currentTime = htmlMediaElement.currentTime;
-htmlMediaElement.currentTime = 35;
-```
-
-### Value
+## Value
 
 A double-precision floating-point value indicating the current playback time in
 seconds.

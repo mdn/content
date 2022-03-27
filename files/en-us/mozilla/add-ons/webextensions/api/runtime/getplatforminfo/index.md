@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var getting = browser.runtime.getPlatformInfo()
+let getting = browser.runtime.getPlatformInfo()
 ```
 
 ### Parameters
@@ -46,7 +46,7 @@ function gotPlatformInfo(info) {
   console.log(info.os);
 }
 
-var gettingInfo = browser.runtime.getPlatformInfo();
+let gettingInfo = browser.runtime.getPlatformInfo();
 gettingInfo.then(gotPlatformInfo);
 ```
 

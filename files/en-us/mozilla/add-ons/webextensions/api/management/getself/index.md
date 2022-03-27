@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingSelf = browser.management.getSelf()
+let gettingSelf = browser.management.getSelf()
 ```
 
 ### Parameters
@@ -46,7 +46,7 @@ function gotSelf(info) {
   console.log("Add-on name: " + info.name);
 }
 
-var gettingSelf = browser.management.getSelf();
+let gettingSelf = browser.management.getSelf();
 gettingSelf.then(gotSelf);
 ```
 

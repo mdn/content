@@ -114,7 +114,9 @@ You can then target just that query container by adding the name to the containe
 }
 ```
 
-There are many things to be worked out, however this is the basic concept. The basic features as shown here can already be tested out in Chrome. Go to `chrome://flags`, search for Container Queries and enable that flag.
+There are many things to be worked out, however this is the basic concept. The basic features as shown here can already be tested out in Chrome and Safari Technology Preview. 
+ - Chrome: Go to `chrome://flags`, search for Container Queries and enable that flag.
+ - Safari Technology Preview: Enabled by default.
 
 You can then take a look at [my demo](https://codepen.io/rachelandrew/pen/NWdaxde) showing a simple `inline-size` scenario, or [this growing collection of container queries demos](https://codepen.io/collection/XQrgJo).
 

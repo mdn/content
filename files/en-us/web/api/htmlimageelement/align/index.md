@@ -30,14 +30,7 @@ to the left or right margin.
 The `align` property reflects the HTML {{htmlattrxref("align", "img")}}
 content attribute.
 
-## Syntax
-
-```js
-htmlImageElement.align = alignMode;
-alignMode = htmlImageElement.align;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} specifying one of the following strings which set the
 alignment mode for the image.

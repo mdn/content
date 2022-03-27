@@ -22,13 +22,7 @@ observer's root. If this is `true`, then, the
 intersection; if it's `false`, then you know the transition is from
 intersecting to not-intersecting.
 
-## Syntax
-
-```js
-var isIntersecting = IntersectionObserverEntry.isIntersecting;
-```
-
-### Value
+## Value
 
 A Boolean value which indicates whether the
 {{domxref("IntersectionObserverEntry.target", "target")}} element has transitioned into

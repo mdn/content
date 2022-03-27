@@ -37,12 +37,12 @@ function onSet(result) {
   }
 }
 
-  var getting = browser.privacy.services.passwordSavingEnabled.get({});
+  let getting = browser.privacy.services.passwordSavingEnabled.get({});
   getting.then((got) => {
     console.log(got.value);
     if ((got.levelOfControl === "controlled_by_this_extension") ||
         (got.levelOfControl === "controllable_by_this_extension")) {
-      var setting = browser.privacy.services.passwordSavingEnabled.set({
+      let setting = browser.privacy.services.passwordSavingEnabled.set({
         value: false
       });
       setting.then(onSet);

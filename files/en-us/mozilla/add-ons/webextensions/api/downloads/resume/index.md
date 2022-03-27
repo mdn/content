@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var resuming = browser.downloads.resume(
+let resuming = browser.downloads.resume(
   downloadId      // integer
 )
 ```
@@ -43,7 +43,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If t
 ## Examples
 
 ```js
-var downloadId = 2;
+let downloadId = 2;
 
 function onResumed() {
   console.log(`Resumed download`);
@@ -53,7 +53,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var resuming = browser.downloads.resume(downloadId);
+let resuming = browser.downloads.resume(downloadId);
 resuming.then(onResumed, onError);
 ```
 

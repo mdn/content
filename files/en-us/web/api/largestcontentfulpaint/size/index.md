@@ -15,13 +15,7 @@ The **`size`** read-only property of the {{domxref("LargestContentfulPaint")}} i
 
 The `size` of the element is the `width` times `height` of the {{domxref("DOMRectReadOnly","rectangle")}} that this element creates on the screen.
 
-## Syntax
-
-```js
-let size = LargestContentfulPaint.size;
-```
-
-### Value
+## Value
 
 An integer representing the width times height of the element.
 

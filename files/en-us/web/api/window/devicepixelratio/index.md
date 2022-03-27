@@ -34,13 +34,7 @@ value of `devicePixelRatio` changes (which can happen, for example, if the
 user drags the window to a display with a different pixel density). See
 [the example below](#monitoring_screen_resolution_or_zoom_level_changes).
 
-## Syntax
-
-```js
-value = window.devicePixelRatio;
-```
-
-### Value
+## Value
 
 A double-precision floating-point value indicating the ratio of the display's
 resolution in physical pixels to the resolution in CSS pixels. A value of 1 indicates a

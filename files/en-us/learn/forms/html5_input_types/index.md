@@ -60,7 +60,7 @@ You can also use the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) attr
 
 On some devices — notably touch devices with dynamic keyboards like smart phones — a different virtual keypad might be presented that is more suitable for entering email addresses, including the `@` key. See the Firefox for Android keyboard screenshot below for an example:
 
-![firefox for android email keyboard, with ampersand displayed by default.](fx-android-email-type-keyboard.jpg)
+![firefox for android email keyboard, with the at sign displayed by default.](fx-android-email-type-keyboard.jpg)
 
 > **Note:** You can find examples of the basic text input types at [basic input examples](https://mdn.github.io/learning-area/html/forms/basic-input-examples/) (see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/basic-input-examples/index.html) also).
 

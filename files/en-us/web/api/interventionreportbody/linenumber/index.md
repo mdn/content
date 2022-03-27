@@ -15,13 +15,7 @@ The **`lineNumber`** read-only property of the {{domxref("InterventionReportBody
 
 > **Note:** This property is most useful alongside {{domxref("InterventionReportBody.sourceFile")}} as it enables the location of the line in that file where the feature is used.
 
-## Syntax
-
-```js
-let lineNumber = InterventionReportBody.lineNumber;
-```
-
-### Value
+## Value
 
 An integer, or `null` if the line is not known.
 

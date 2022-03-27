@@ -16,14 +16,7 @@ The **`name`** property of the {{domxref("HTMLSlotElement")}}
 interface returns or sets the slot name. A slot is a placeholder inside a web component
 that users can fill with their own markup.
 
-## Syntax
-
-```js
-let name = htmlSlotElement.name
-htmlSlotElement.name = name
-```
-
-### Value
+## Value
 
 A {{domxref('DOMString','string')}}.
 

@@ -68,7 +68,7 @@ function onError(error) {
 }
 
 function restoreMostRecent() {
-  var gettingSessions = browser.sessions.getRecentlyClosed({
+  let gettingSessions = browser.sessions.getRecentlyClosed({
     maxResults: 1
   });
   gettingSessions.then(restoreSession, onError);

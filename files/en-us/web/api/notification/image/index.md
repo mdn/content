@@ -18,13 +18,7 @@ The `image` read-only property of the
 part of the notification, as specified in the `image` option of the
 {{domxref("Notification.Notification","Notification()")}} constructor.
 
-## Syntax
-
-```js
-var image = Notification.image;
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}}.
 

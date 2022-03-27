@@ -33,14 +33,7 @@ The `srcset` property, along with the {{domxref("HTMLImageElement.sizes",
 can be used together to make pages that use appropriate images for the rendering
 situation.
 
-## Syntax
-
-```js
-htmlImageElement.srcset = imageCandidateStrings;
-let srcset = htmlImageElement.srcset;
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}} containing a comma-separated list of one or more image
 candidate strings to be used when determining which image resource to present inside the

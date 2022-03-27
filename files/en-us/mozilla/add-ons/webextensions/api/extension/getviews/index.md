@@ -27,7 +27,7 @@ In Firefox, if this method is called from a page that is part of a private brows
 ## Syntax
 
 ```js
-var windows = browser.extension.getViews(
+let windows = browser.extension.getViews(
   fetchProperties // optional object
 )
 ```
@@ -56,9 +56,9 @@ var windows = browser.extension.getViews(
 Get all windows belonging to this extension, and log their URLs:
 
 ```js
-var windows = browser.extension.getViews();
+let windows = browser.extension.getViews();
 
-for (var extensionWindow of windows) {
+for (let extensionWindow of windows) {
   console.log(extensionWindow.location.href);
 }
 ```
@@ -66,13 +66,13 @@ for (var extensionWindow of windows) {
 Get only windows in browser tabs hosting content packaged with the extension:
 
 ```js
-var windows = browser.extension.getViews({type: "tab"});
+let windows = browser.extension.getViews({type: "tab"});
 ```
 
 Get only windows in popups:
 
 ```js
-var windows = browser.extension.getViews({type: "popup"});
+let windows = browser.extension.getViews({type: "popup"});
 ```
 
 {{WebExtExamples}}

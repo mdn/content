@@ -13,13 +13,7 @@ browser-compat: api.SerialPort.writable
 
 The **`writable`** read-only property of the {{domxref("SerialPort")}} interface returns a {{domxref("WritableStream")}} for sending data to the device connected to the port. Chunks written to this stream must be instances of {{domxref("BufferSource")}} (for example, an {{jsxref("ArrayBuffer")}} or {{domxref("ArrayBufferView")}} such as {{jsxref("Uint8Array")}}). This property is non-null as long as the port is open and has not encountered a fatal error.
 
-## Syntax
-
-```js
-var writableStream = SerialPort.writable;
-```
-
-### Value
+## Value
 
 A {{domxref("WritableStream")}}
 

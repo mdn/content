@@ -18,13 +18,7 @@ the {{domxref("HTMLObjectElement")}} interface returns a boolean value that
 indicates whether the element is a candidate for constraint validation. Always false for
 HTMLObjectElement objects.
 
-## Syntax
-
-```js
-var Boolean = HTMLObjectElement.willValidate;
-```
-
-### Value
+## Value
 
 A boolean value.
 

@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var getting = browser.cookies.get(
+let getting = browser.cookies.get(
   details                // object
 )
 ```
@@ -71,14 +71,14 @@ function logCookie(cookie) {
 }
 
 function getCookie(tabs) {
-  var getting = browser.cookies.get({
+  let getting = browser.cookies.get({
     url: tabs[0].url,
     name: "favorite-color"
   });
   getting.then(logCookie);
 }
 
-var getActive = browser.tabs.query({
+let getActive = browser.tabs.query({
   active: true,
   currentWindow: true
 });

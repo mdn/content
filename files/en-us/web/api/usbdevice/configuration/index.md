@@ -18,13 +18,7 @@ The **`configuration`** read only property of the
 {{domxref("USBDevice")}} interface returns a {{domxref("USBConfiguration")}} object for
 the currently selected interface for a paired USB device.
 
-## Syntax
-
-```js
-var USBConfiguration = USBDevice.configuration
-```
-
-### Value
+## Value
 
 A {{domxref("USBConfiguration")}} object.
 

@@ -24,13 +24,7 @@ You can't specify the value of `protocol` directly in the options object, but it
 
 `protocol` is `null` by default if not specified properly in the SDP, but this is an error condition and will result in a thrown exception when you call {{domxref("RTCPeerConnection.addIceCandidate()")}}.
 
-## Syntax
-
-```js
-var protocol = RTCIceCandidate.protocol;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} that indicates what network protocol the candidate uses:
 

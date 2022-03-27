@@ -259,10 +259,9 @@ arr1 = [...arr2, ...arr1];
 
 ### Spread in object literals
 
-The [Rest/Spread
-Properties for ECMAScript](https://github.com/tc39/proposal-object-rest-spread) proposal (ES2018) added spread properties to
-{{jsxref("Operators/Object_initializer", "object literals", 1)}}. It copies own
-enumerable properties from a provided object onto a new object.
+The [Rest/Spread Properties for ECMAScript](https://github.com/tc39/proposal-object-rest-spread) proposal (ES2018)
+added spread properties to {{jsxref("Operators/Object_initializer", "object literals", 1)}}.
+It copies own enumerable properties from a provided object onto a new object.
 
 Shallow-cloning (excluding prototype) or merging of objects is now possible using a
 shorter syntax than {{jsxref("Object.assign()")}}.

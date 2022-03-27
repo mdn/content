@@ -25,13 +25,7 @@ element that are currently selected. The list of selected options is an
 An option is considered selected if it has an {{domxref("HTMLOptionElement.selected")}}
 attribute.
 
-## Syntax
-
-```js
-var selectedCollection = HTMLSelectElement.selectedOptions;
-```
-
-### Value
+## Value
 
 An {{domxref("HTMLCollection")}} which lists every currently selected
 {{domxref("HTMLOptionElement")}} which is either a child of the

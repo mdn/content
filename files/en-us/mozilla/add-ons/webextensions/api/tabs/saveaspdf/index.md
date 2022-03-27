@@ -21,7 +21,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var saving = browser.tabs.saveAsPDF(
+let saving = browser.tabs.saveAsPDF(
   pageSettings   // object
 )
 ```

@@ -31,13 +31,7 @@ the value of {{domxref("MediaTrackSupportedConstraints.channelCount")}} as retur
 call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
 is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
-
-```js
-var channelCount = MediaTrackSettings.channelCount;
-```
-
-### Value
+## Value
 
 An integer value indicating the number of audio channels on the track. A value of 1
 indicates monaural sound, 2 means stereo, and so forth.

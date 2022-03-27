@@ -15,13 +15,7 @@ browser-compat: api.Gamepad.pose
 
 The **`pose`** read-only property of the {{domxref("Gamepad")}} interface returns a {{domxref("GamepadPose")}} object representing the pose information associated with a WebVR controller (e.g. its position and orientation in 3D space).
 
-## Syntax
-
-```js
-var myGamepadPose = gamepadInstance.pose;
-```
-
-### Value
+## Value
 
 A {{domxref("GamepadPose")}} object.
 

@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var removing = browser.menus.remove(
+let removing = browser.menus.remove(
   menuItemId      // integer or string
 )
 ```
@@ -59,7 +59,7 @@ browser.menus.create({
 
 browser.menus.onClicked.addListener(function(info, tab) {
   if (info.menuItemId == "remove-me") {
-    var removing = browser.menus.remove(info.menuItemId);
+    let removing = browser.menus.remove(info.menuItemId);
     removing.then(onRemoved, onError);
   }
 });

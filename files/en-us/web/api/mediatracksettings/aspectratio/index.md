@@ -31,13 +31,7 @@ the value of {{domxref("MediaTrackSupportedConstraints.aspectRatio")}} as return
 call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
 is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
-
-```js
-var aspectRatio = MediaTrackSettings.aspectRatio;
-```
-
-### Value
+## Value
 
 A double-precision floating-point number indicating the current configuration of the
 track's aspect ratio. The aspect ratio is computed by taking the track's width, dividing

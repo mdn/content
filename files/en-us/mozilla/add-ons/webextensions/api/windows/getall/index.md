@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingAll = browser.windows.getAll(
+let gettingAll = browser.windows.getAll(
   getInfo                // optional object
 )
 ```
@@ -63,7 +63,7 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  var getting = browser.windows.getAll({
+  let getting = browser.windows.getAll({
     populate: true,
     windowTypes: ["normal"]
   });

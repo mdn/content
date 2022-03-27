@@ -18,14 +18,7 @@ The **`useMap`** property of the
 reflects the {{htmlattrxref("usemap", "object")}} HTML attribute, specifying a
 {{HTMLElement("map")}} element to use.
 
-## Syntax
-
-```js
-var String = HTMLObjectElement.useMap;
-HTMLObjectElement.useMap = String;
-```
-
-### Value
+## Value
 
 A {{domxref('DOMString')}}.
 

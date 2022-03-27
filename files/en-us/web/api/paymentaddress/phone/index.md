@@ -23,13 +23,7 @@ The read-only **`phone`** property of the
 {{domxref('PaymentAddress')}} interface returns a string containing the telephone number
 of the recipient or contact person.
 
-## Syntax
-
-```js
-var paymentPhone = PaymentAddress.phone;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} containing the telephone number for the recipient of the
 shipment or of the responsible party for payment. If no phone number is available, this

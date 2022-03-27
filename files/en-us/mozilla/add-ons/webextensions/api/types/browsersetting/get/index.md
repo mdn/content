@@ -20,7 +20,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var getting = setting.get(
+let getting = setting.get(
   details     // object
 )
 ```
@@ -70,7 +70,7 @@ See {{WebExtAPIRef("types.BrowserSetting")}}.
 Log the value and level of control for the `networkPredictionEnabled` property of the {{WebExtAPIRef("privacy.network")}} object, for private browsing windows. Note that this requires the "privacy" browser permission.
 
 ```js
-var getting = browser.privacy.network.networkPredictionEnabled.get({});
+let getting = browser.privacy.network.networkPredictionEnabled.get({});
 
 getting.then((got) => {
   console.log(`Value: ${got.value}`);

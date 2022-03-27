@@ -32,13 +32,7 @@ Prior to HTML 5, the returned object was an {{domxref("HTMLCollection")}}, on wh
 > within a given document using the document's {{domxref("Document.forms", "forms")}}
 > property.
 
-## Syntax
-
-```js
-nodeList = HTMLFormElement.elements
-```
-
-### Value
+## Value
 
 An {{domxref("HTMLFormControlsCollection")}} containing all non-image controls in the
 form. This is a live collection; if form controls are added to or removed from the form,

@@ -45,8 +45,9 @@ a property that holds an actual value.
 Note the following when working with the `set` syntax:
 
 - It can have an identifier which is either a number or a string;
-- It must have exactly one parameter (see [Incompatible ES5 change: literal getter and setter
-  functions must now have exactly zero or one arguments](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) for more information);
+- It must have exactly one parameter
+  (see [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/)
+  for more information);
 - It must not appear in an object literal with another `set` or with a
   data entry for the same property.
   ( `{ set x(v) { }, set x(v) { } }` and
@@ -141,5 +142,4 @@ console.log(obj.baz);
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.defineGetter", "__defineGetter__")}}
 - {{jsxref("Object.defineSetter", "__defineSetter__")}}
-- [Defining
-  Getters and Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters) in JavaScript Guide
+- [Defining getters and setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters) in JavaScript Guide

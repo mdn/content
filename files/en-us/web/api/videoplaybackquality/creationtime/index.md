@@ -21,13 +21,7 @@ The read-only **`creationTime`** property on the
 {{domxref("VideoPlaybackQuality")}} interface reports the number of milliseconds since
 the browsing context was created this quality sample was recorded.
 
-## Syntax
-
-```js
-value = videoPlaybackQuality.creationTime;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}} object which indicates the number of milliseconds
 that elapsed between the time the browsing context was created and the time at which

@@ -16,13 +16,7 @@ The **`scrollRestoration`** property of {{DOMxRef("History")}}
 interface allows web applications to explicitly set default scroll restoration behavior
 on history navigation.
 
-## Syntax
-
-```js
-const scrollRestore = history.scrollRestoration
-```
-
-### Values
+## Values
 
 - `auto`
   - : The location on the page to which the user has scrolled will be restored.

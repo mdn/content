@@ -20,11 +20,9 @@ currently connected to the system.
 This can be used to distinguish multiple controllers; a gamepad that is disconnected
 and reconnected will retain the same index.
 
-## Syntax
+## Value
 
-```js
-const index = gamepad.index;
-```
+A {{jsxref("number") }}.
 
 ## Example
 
@@ -34,10 +32,6 @@ window.addEventListener("gamepadconnected", function() {
   gamepadInfo.innerHTML = "Gamepad connected at index " + gp.index + ": " + gp.id + ".";
 });
 ```
-
-### Value
-
-A {{jsxref("number") }}.
 
 ## Specifications
 

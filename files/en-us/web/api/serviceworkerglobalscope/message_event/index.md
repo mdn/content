@@ -28,13 +28,13 @@ onmessage = event => { };
 
 ## Event type
 
-An {{domxref("ExtendableMessageEvent")}}. Inherits from {{domxref("Event")}}.
+An {{domxref("ExtendableMessageEvent")}}. Inherits from {{domxref("ExtendableEvent")}}.
 
 {{InheritanceDiagram("ExtendableMessageEvent")}}
 
 ## Event properties
 
-_Inherits properties from its parent, {{domxref("ExtendableMessageEvent")}}_.
+_Inherits properties from its parent, {{domxref("ExtendableEvent")}}_.
 
 - {{domxref("ExtendableMessageEvent.data")}} {{readonlyinline}}
   - : Returns the event's data. It can be any data type.
@@ -52,7 +52,7 @@ _Inherits properties from its parent, {{domxref("ExtendableMessageEvent")}}_.
 In the below example a page gets a handle to the {{domxref("ServiceWorker")}} object via {{domxref("ServiceWorkerRegistration.active")}}, and then calls its `postMessage()` function.
 
 ```js
-// in the page being controlled
+// main.js
 if (navigator.serviceWorker) {
 
   navigator.serviceWorker.register('service-worker.js');
@@ -72,8 +72,20 @@ if (navigator.serviceWorker) {
 The service worker can receive the message by listening to the `message` event:
 
 ```js
-// in the service worker
+// service-worker.js
 addEventListener('message', event => {
+  // event is an ExtendableMessageEvent object
+  console.log(`The client sent me a message: ${event.data}`);
+
+  event.source.postMessage("Hi client");
+});
+```
+
+Alternatively, the script can listen for the message using `onmessage`:
+
+```js
+// service-worker.js
+self.onmessage = event => {
   // event is an ExtendableMessageEvent object
   console.log(`The client sent me a message: ${event.data}`);
 

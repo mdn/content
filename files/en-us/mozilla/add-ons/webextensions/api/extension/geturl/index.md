@@ -46,7 +46,7 @@ browser.extension.getURL(
 Given a file packaged with the add-on at "beasts/frog.html", get the full URL like this:
 
 ```js
-var fullURL = browser.extension.getURL("beasts/frog.html");
+let fullURL = browser.extension.getURL("beasts/frog.html");
 
 // -> something like:
 // moz-extension://2c127fa4-62c7-7e4f-90e5-472b45eecfdc/beasts/frog.html

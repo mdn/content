@@ -25,13 +25,7 @@ The coordinate system is as follows:
 
 Positions are measured in meters from an origin point — this point is the position the sensor was first read at.
 
-## Syntax
-
-```js
-var myGamepadPosition = gamepadPoseInstance.position;
-```
-
-### Value
+## Value
 
 A {{jsxref("Float32Array")}}, or `null` if the gamepad is not able to provide position data.
 

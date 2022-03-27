@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var removing = browser.tabs.removeCSS(
+let removing = browser.tabs.removeCSS(
   tabId,           // optional integer
   details          // object
 )
@@ -58,17 +58,17 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 This example adds some CSS using {{WebExtAPIRef("tabs.insertCSS")}}, then removes it again when the user clicks a browser action:
 
 ```js
-var css = "body { border: 20px dotted pink; }";
+let css = "body { border: 20px dotted pink; }";
 
 function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var insertingCSS = browser.tabs.insertCSS(2, {code: css});
+let insertingCSS = browser.tabs.insertCSS(2, {code: css});
 insertingCSS.then(null, onError);
 
 browser.browserAction.onClicked.addListener(() => {
-  var removing = browser.tabs.removeCSS(2, {code: css});
+  let removing = browser.tabs.removeCSS(2, {code: css});
   removing.then(null, onError);
 });
 ```

@@ -23,13 +23,7 @@ The **`organization`** read-only
 property of the {{domxref('PaymentAddress')}} interface returns a string containing
 the name of the organization, firm, company, or institution at the address.
 
-## Syntax
-
-```js
-var paymentOrganization = PaymentAddress.organization;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} whose value is the name of the organization or company
 located at the address described by the `PaymentAddress` object. This should

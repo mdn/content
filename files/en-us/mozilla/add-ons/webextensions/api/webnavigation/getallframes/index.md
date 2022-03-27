@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingFrames = browser.webNavigation.getAllFrames(
+let gettingFrames = browser.webNavigation.getAllFrames(
   details                // object
 )
 ```
@@ -73,13 +73,13 @@ function onError(error) {
 }
 
 function logAllFrames(tabs) {
-  var gettingAllFrames = browser.webNavigation.getAllFrames({tabId: tabs[0].id});
+  let gettingAllFrames = browser.webNavigation.getAllFrames({tabId: tabs[0].id});
   gettingAllFrames.then(logFrameInfo, onError);
 }
 
 browser.browserAction.onClicked.addListener(function() {
 
-  var querying = browser.tabs.query({
+  let querying = browser.tabs.query({
     currentWindow: true,
     active: true
   });

@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingTree = browser.bookmarks.getTree()
+let gettingTree = browser.bookmarks.getTree()
 ```
 
 ### Parameters
@@ -67,7 +67,7 @@ function onRejected(error) {
   console.log(`An error: ${error}`);
 }
 
-var gettingTree = browser.bookmarks.getTree();
+let gettingTree = browser.bookmarks.getTree();
 gettingTree.then(logTree, onRejected);
 ```
 

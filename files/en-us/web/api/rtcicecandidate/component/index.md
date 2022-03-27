@@ -27,13 +27,7 @@ an RTCP candidate.
 If a candidate represents both RTP and RTCP multiplexed together, it is reported as an
 RTP candidate.
 
-## Syntax
-
-```js
-var component = RTCIceCandidate.component;
-```
-
-### Value
+## Value
 
 A string which is one of the following:
 

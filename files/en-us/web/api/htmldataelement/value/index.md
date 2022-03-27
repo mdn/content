@@ -17,14 +17,7 @@ The **`value`** property of the {{domxref("HTMLDataElement")}}
 interface returns a {{domxref("DOMString")}} reflecting the {{htmlattrxref("value",
   "data")}} HTML attribute.
 
-## Syntax
-
-```js
-var aValue = htmlDataElement.value
-htmlDataElement.value = aValue
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}.
 

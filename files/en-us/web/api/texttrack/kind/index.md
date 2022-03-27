@@ -13,13 +13,7 @@ browser-compat: api.TextTrack.kind
 
 The **`kind`** read-only property of the {{domxref("TextTrack")}} interface returns the kind of text track this object represents. This decides how the track will be handled by a user agent.
 
-## Syntax
-
-```js
-let kind = TextTrack.kind;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString","string")}}. One of:
 

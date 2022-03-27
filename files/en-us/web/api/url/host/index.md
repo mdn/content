@@ -18,14 +18,7 @@ a {{domxref("USVString")}} containing the host, that is the {{domxref("URL.hostn
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-const host = url.host
-url.host = newHost
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}}.
 

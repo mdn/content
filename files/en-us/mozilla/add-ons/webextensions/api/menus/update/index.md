@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var updating = browser.menus.update(
+let updating = browser.menus.update(
   id,               // integer or string
   updateProperties // object
 )
@@ -136,7 +136,7 @@ browser.menus.create({
 
 browser.menus.onClicked.addListener(function(info, tab) {
   if (info.menuItemId == "do-not-click-me") {
-    var updating = browser.menus.update(info.menuItemId, {
+    let updating = browser.menus.update(info.menuItemId, {
       title: "Do not click this button again"
     });
     updating.then(onUpdated, onError);

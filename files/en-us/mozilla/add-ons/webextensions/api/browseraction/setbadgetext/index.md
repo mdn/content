@@ -64,7 +64,7 @@ This API is also available as `chrome.browserAction.setBadgeText()`.
 Add a badge indicating how many times the user clicked the button:
 
 ```js
-var clicks = 0;
+let clicks = 0;
 
 function increment() {
   browser.browserAction.setBadgeText({text: (++clicks).toString()});

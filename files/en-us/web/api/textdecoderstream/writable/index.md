@@ -13,13 +13,7 @@ browser-compat: api.TextDecoderStream.writable
 
 The **`writable`** read-only property of the {{domxref("TextDecoderStream")}} interface returns a {{domxref("WritableStream")}}.
 
-## Syntax
-
-```js
-var writable = TextDecoderStream.writable;
-```
-
-### Value
+## Value
 
 A {{domxref("WritableStream")}}.
 

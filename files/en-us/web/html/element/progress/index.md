@@ -96,7 +96,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 On Windows 7, the resulting progress looks like this:
 
-![progress-firefox.JPG](progress-firefox.jpg)
+![progress-firefox.JPG](Windows 7 progress bar screenshot. A rectangular gray bar with progress shown in green.)
   
 ## Accessibility Concerns
   

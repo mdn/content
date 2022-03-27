@@ -26,13 +26,7 @@ The {{domxref("VideoPlaybackQuality")}} interface's read-only
 video frames that have been received since the {{HTMLElement("video")}} element was
 last loaded or reloaded.
 
-## Syntax
-
-```js
-corruptFrameFount = videoPlaybackQuality.corruptedVideoFrames;
-```
-
-### Value
+## Value
 
 The number of corrupted video frames that have been received since the
 {{HTMLElement("video")}} element was last loaded or reloaded.

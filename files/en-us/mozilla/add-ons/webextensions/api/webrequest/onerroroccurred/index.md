@@ -148,7 +148,7 @@ Events have three functions:
 ## Examples
 
 ```js
-var target = "<all_urls>";
+let target = "<all_urls>";
 
 /*
 e.g., with no network:

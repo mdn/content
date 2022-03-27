@@ -22,14 +22,7 @@ drawn, in {{Glossary("CSS pixels")}} if the image is being drawn or rendered to 
 visual medium such as the screen or a printer; otherwise, it's the natural, pixel
 density corrected height of the image.
 
-## Syntax
-
-```js
-htmlImageElement.height = newHeight;
-let height = htmlImageElement.height;
-```
-
-### Value
+## Value
 
 An integer value indicating the height of the image. The terms in which the height is
 defined depends on whether the image is being rendered to a visual medium or not.

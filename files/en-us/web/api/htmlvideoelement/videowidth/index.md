@@ -26,13 +26,7 @@ width of the media in its natural size.
 
 See [About intrinsic width and height](#about_intrinsic_width_and_height) for more details.
 
-## Syntax
-
-```js
-width = htmlVideoElement.videoWidth;
-```
-
-### Value
+## Value
 
 An integer value specifying the intrinsic width of the video in CSS pixels. If the
 element's {{domxref("HTMLMediaElement.readyState", "readyState")}} is

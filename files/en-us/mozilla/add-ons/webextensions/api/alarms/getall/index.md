@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var getAlarms = browser.alarms.getAll()
+let getAlarms = browser.alarms.getAll()
 ```
 
 ### Parameters
@@ -37,12 +37,12 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ```js
 function gotAll(alarms) {
-  for (var alarm of alarms) {
+  for (let alarm of alarms) {
     console.log(alarm.name);
   }
 }
 
-var getAlarms = browser.alarms.getAll();
+let getAlarms = browser.alarms.getAll();
 getAlarms.then(gotAll);
 ```
 

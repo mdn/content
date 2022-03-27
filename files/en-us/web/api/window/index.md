@@ -354,8 +354,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : An event handler property for {{event("languagechange")}} events on the window.
 - {{domxref("GlobalEventHandlers.onload")}}
   - : Called after all resources and the DOM are fully loaded. WILL NOT get called when the page is loaded from cache, such as with back button.
-- {{domxref("WindowEventHandlers.onmessage")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("message")}} event is raised.
 - {{domxref("GlobalEventHandlers.onmousedown")}}
   - : Called when ANY mouse button is pressed.
 - {{domxref("GlobalEventHandlers.onmousemove")}}
@@ -526,10 +524,8 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - {{domxref("Window/message_event", "message")}}
   - : Fired when the window receives a message, for example from a call to {{domxref("Window/postMessage", "Window.postMessage()")}} from another browsing context.
-    Also available via the {{domxref("WindowEventHandlers/onmessage", "onmessage")}} property.
 - {{domxref("Window/messageerror_event", "messageerror")}}
   - : Fired when a `Window` object receives a message that can't be deserialized.
-    Also available via the {{domxref("WindowEventHandlers/onmessageerror", "onmessageerror")}} property.
 
 ### Print events
 

@@ -13,13 +13,7 @@ browser-compat: api.TextDecoderStream.readable
 
 The **`readable`** read-only property of the {{domxref("TextDecoderStream")}} interface returns a {{domxref("ReadableStream")}}.
 
-## Syntax
-
-```js
-var readable = TextDecoderStream.readable;
-```
-
-### Value
+## Value
 
 A {{domxref("ReadableStream")}}.
 

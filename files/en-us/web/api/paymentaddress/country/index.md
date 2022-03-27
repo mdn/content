@@ -24,13 +24,7 @@ always in its canonical upper-case form.
 Some examples of valid `country` values: `"US"`,
 `"GB"`, `"CN"`, or `"JP"`.
 
-## Syntax
-
-```js
-var paymentCountry = PaymentAddress.country;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} which contains the ISO3166-1 alpha-2 code identifying the
 country in which the address is located, or an empty string if no country is available,

@@ -23,13 +23,7 @@ The `source` read-only property of the
 {{domxref("MessagePort")}} objects connected with the message channel the message is
 being sent through.
 
-## Syntax
-
-```js
-var myPorts = ServiceWorkerMessageEventInstance.ports;
-```
-
-### Value
+## Value
 
 An array of {{domxref("MessagePort")}} objects.
 

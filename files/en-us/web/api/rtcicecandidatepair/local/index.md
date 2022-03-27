@@ -23,13 +23,7 @@ The **`local`** property of the
 {{domxref("RTCIceCandidate")}} which describes the configuration of the local end of a
 viable WebRTC connection.
 
-## Syntax
-
-```js
-localCandidate = RTCIceCandidatePair.local;
-```
-
-### Value
+## Value
 
 An {{domxref("RTCIceCandidate")}} which describes the configuration of the local end of
 a viable pair of ICE candidates. The `RTCIceCandidatePair` is returned by the

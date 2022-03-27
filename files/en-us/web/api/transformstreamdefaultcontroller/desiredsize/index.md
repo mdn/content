@@ -17,13 +17,7 @@ The internal queue of a `ReadableStream` contains chunks that have been enqueued
 
 If the `desiredSize` is `0` then the queue is full. Therefore you can use this information to [manually apply backpressure](/en-US/docs/Web/API/Streams_API/Concepts#backpressure) to manage the queue.
 
-## Syntax
-
-```js
-let desiredSize = TransformStreamDefaultController.desiredSize;
-```
-
-### Value
+## Value
 
 The desired size.
 

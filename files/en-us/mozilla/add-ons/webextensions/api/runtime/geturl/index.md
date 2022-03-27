@@ -45,7 +45,7 @@ browser.runtime.getURL(
 Given a file packaged with the extension at "beasts/frog.html", get the full URL like this:
 
 ```js
-var fullURL = browser.runtime.getURL("beasts/frog.html");
+let fullURL = browser.runtime.getURL("beasts/frog.html");
 console.log(fullURL);
 // Returns something like:
 // moz-extension://2c127fa4-62c7-7e4f-90e5-472b45eecfdc/beasts/frog.html
