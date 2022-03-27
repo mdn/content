@@ -14,19 +14,12 @@ browser-compat: api.BiquadFilterNode.detune
 
 The `detune` property of the {{ domxref("BiquadFilterNode") }} interface is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing detuning of the frequency in [cents](https://en.wikipedia.org/wiki/Cent_%28music%29).
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var biquadFilter = audioCtx.createBiquadFilter();
-biquadFilter.detune.value = 100;
-```
-
-> **Note:** Though the `AudioParam` returned is read-only, the value it represents is not.
-
 ### Value
 
 An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}.
+
+> **Note:** Though the `AudioParam` returned is read-only, the value it represents is not.
+
 
 ## Example
 

@@ -20,13 +20,7 @@ property returns {{domxref("DOMString")}} containing the UUID of the characteris
 example `'00002a37-0000-1000-8000-00805f9b34fb'` for the Heart Rate
 Measurement characteristic.
 
-## Syntax
-
-```js
-var uuid = BluetoothRemoteGATTCharacteristic.uuid
-```
-
-### Returns
+## Value
 
 A {{domxref("DOMString")}}.
 

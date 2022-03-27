@@ -16,19 +16,11 @@ The `frequency` property of the {{ domxref("BiquadFilterNode") }} interface is a
 
 Its default value is `350`, with a nominal range of `10` to the [Nyquist frequency](https://en.wikipedia.org/wiki/Nyquist_frequency) — that is, half of the sample rate.
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var biquadFilter = audioCtx.createBiquadFilter();
-biquadFilter.frequency.value = 3000;
-```
-
-> **Note:** Though the `AudioParam` returned is read-only, the value it represents is not.
-
 ### Value
 
 An {{domxref("AudioParam")}}.
+
+> **Note:** Though the `AudioParam` returned is read-only, the value it represents is not.
 
 ## Example
 

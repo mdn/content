@@ -21,13 +21,7 @@ The `audioWorklet` read-only property of the
 {{domxref("AudioWorkletProcessor")}}-derived classes which implement custom audio
 processing.
 
-## Syntax
-
-```js
-baseAudioContextInstance.audioWorklet;
-```
-
-### Value
+## Value
 
 An {{domxref("AudioWorklet")}} instance.
 

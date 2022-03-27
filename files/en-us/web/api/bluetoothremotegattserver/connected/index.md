@@ -18,11 +18,9 @@ property returns a boolean value that returns true while this script execution
 environment is connected to `this.device`. It can be false while the user
 agent is physically connected.
 
-## Syntax
+## Value
 
-```js
-var connected = BluetoothRemoteGATTServer.connected
-```
+A `boolean`.
 
 ## Specifications
 

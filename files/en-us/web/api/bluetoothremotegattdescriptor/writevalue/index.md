@@ -7,7 +7,7 @@ tags:
   - BluetoothGattDescriptor
   - BluetoothRemoteGATTDescriptor
   - Experimental
-  - Property
+  - Method
   - Reference
   - Web Bluetooth API
   - writeValue()
