@@ -20,7 +20,7 @@ The **`TransitionEvent()`** constructor returns a newly created
 ## Syntax
 
 ```js
-new TransitionEvent(type, {propertyName: aPropertyName,
+new TransitionEvent(type, {propertyName : aPropertyName,
                            elapsedTime  : aFloat,
                            pseudoElement: aPseudoElementName});
 ```
