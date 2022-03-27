@@ -43,10 +43,10 @@ a {{jsxref("TypeError")}} is thrown.
 
 ### Using validate
 
-The following example (see the validate.html [source
-code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/validate.html), and [see it
-live too](https://mdn.github.io/webassembly-examples/js-api-examples/validate.html)) fetches a .wasm module and converts it into a typed array. The
-`validate()` method is then used to check whether the module is valid.
+The following example (see the validate.html [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/validate.html),
+and [see it live too](https://mdn.github.io/webassembly-examples/js-api-examples/validate.html))
+fetches a .wasm module and converts it into a typed array.
+The `validate()` method is then used to check whether the module is valid.
 
 ```js
 fetch('simple.wasm').then(response =>
@@ -70,5 +70,4 @@ fetch('simple.wasm').then(response =>
 
 - [WebAssembly](/en-US/docs/WebAssembly) overview page
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly
-  JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

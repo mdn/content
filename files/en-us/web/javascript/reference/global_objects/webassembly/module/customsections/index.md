@@ -45,13 +45,13 @@ If `module` is not a {{jsxref("WebAssembly.Module")}} object instance, a
 A wasm module is comprised of a sequence of **sections**. Most of these
 sections are fully specified and validated by the wasm spec, but modules can also
 contain **custom sections** that are ignored and skipped over during
-validation. (Read [High
-level structure](https://github.com/WebAssembly/design/blob/master/BinaryEncoding.md#high-level-structure) for information on section structures, and how normal sections
+validation. (Read [High level structure](https://github.com/WebAssembly/design/blob/master/BinaryEncoding.md#high-level-structure)
+for information on section structures, and how normal sections
 ("known sections") and custom sections are distinguished.)
 
-This provides developers with a way to include custom data inside wasm modules for
-other purposes, for example the [name
-custom section](https://github.com/WebAssembly/design/blob/master/BinaryEncoding.md#name-section), which allows developers to provide names for all the functions and
+This provides developers with a way to include custom data inside wasm modules for other purposes,
+for example the [name custom section](https://github.com/WebAssembly/design/blob/master/BinaryEncoding.md#name-section),
+which allows developers to provide names for all the functions and
 locals in the module (like "symbols" in a native build).
 
 Note that the WebAssembly text format currently doesn't have a syntax specified for
@@ -70,8 +70,8 @@ wast2wasm simple-name-section.was -o simple-name-section.wasm --debug-names
 ### Using customSections
 
 The following example (see the custom-section.html [source](https://github.com/mdn/webassembly-examples/blob/master/other-examples/custom-section.html)
-and [live
-example](https://mdn.github.io/webassembly-examples/other-examples/custom-section.html)) compiles the loaded simple-name-section.wasm byte code.
+and [live example](https://mdn.github.io/webassembly-examples/other-examples/custom-section.html))
+compiles the loaded simple-name-section.wasm byte code.
 
 We then do a check using `WebAssembly.Module.customSections`, looking to see
 whether the module instance contains a "name" custom section by checking that its
@@ -101,5 +101,4 @@ WebAssembly.compileStreaming(fetch('simple-name-section.wasm'))
 
 - [WebAssembly](/en-US/docs/WebAssembly) overview page
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly
-  JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
