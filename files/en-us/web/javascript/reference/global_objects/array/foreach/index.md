@@ -72,8 +72,8 @@ that have been deleted or are uninitialized. (For sparse arrays, [see example be
 If a `thisArg` parameter is provided to `forEach()`,
 it will be used as callback's `this` value. The
 `thisArg` value ultimately observable by
-`callbackFn` is determined according to [the usual rules for
-determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
+`callbackFn` is determined according to
+[the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
 
 The range of elements processed by `forEach()` is set before the first
 invocation of `callbackFn`. Elements which are assigned to indexes
@@ -230,8 +230,9 @@ Since the `thisArg` parameter (`this`) is provided to
 `forEach()`, it is passed to `callback` each time it's
 invoked. The callback uses it as its `this` value.
 
-> **Note:** If passing the callback function used an [arrow function
-> expression](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), the `thisArg` parameter could be omitted,
+> **Note:** If passing the callback function used an
+> [arrow function expression](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions),
+> the `thisArg` parameter could be omitted,
 > since all arrow functions lexically bind the {{jsxref("Operators/this", "this")}}
 > value.
 

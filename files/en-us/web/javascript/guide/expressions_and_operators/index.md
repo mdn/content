@@ -290,8 +290,8 @@ For more information about objects, read [Working with Objects][object].)
 #### Avoid assignment chains
 
 Chaining assignments or nesting assignments in other expressions can
-result in surprising behavior. For this reason, [chaining assignments
-in the same statement is discouraged][discourage assign chain]).
+result in surprising behavior. For this reason,
+[chaining assignments in the same statement is discouraged][discourage assign chain]).
 
 In particular, putting a variable chain in a [`const`][], [`let`][], or [`var`][] statement often does *not* work.
 Only the outermost/leftmost variable would get declared;
@@ -463,8 +463,7 @@ var var2 = 4;
 </table>
 
 > **Note:** `=>` is not a comparison operator but rather is the notation
-> for [Arrow
-> functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+> for [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ### Arithmetic operators
 
@@ -847,8 +846,8 @@ mystring += 'bet'; // evaluates to "alphabet" and assigns this value to mystring
 
 ### Conditional (ternary) operator
 
-The [conditional
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) is the only JavaScript operator that takes three operands.
+The [conditional operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+is the only JavaScript operator that takes three operands.
 The operator can have one of two values based on a condition.
 The syntax is:
 
@@ -871,8 +870,8 @@ This statement assigns the value "adult" to the variable `status` if
 
 ### Comma operator
 
-The [comma
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator) (`,`) evaluates both of its operands and returns the value of the last operand.
+The [comma operator](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator) (`,`)
+evaluates both of its operands and returns the value of the last operand.
 This operator is primarily used inside a `for` loop, to allow multiple variables to be updated each time through the loop.
 It is regarded bad style to use it elsewhere, when it is not necessary.
 Often two separate statements can and should be used instead.
@@ -1004,8 +1003,7 @@ typeof String;   // returns "function"
 
 #### `void`
 
-The [`void`
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/void) is used in either of the following ways:
+The [`void` operator](/en-US/docs/Web/JavaScript/Reference/Operators/void) is used in either of the following ways:
 
 ```js
 void (expression)
@@ -1055,9 +1053,8 @@ var mycar = { make: 'Honda', model: 'Accord', year: 1998 };
 
 #### `instanceof`
 
-The [`instanceof`
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) returns `true` if the specified object is of the specified
-object type. The syntax is:
+The [`instanceof` operator](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) returns `true`
+if the specified object is of the specified object type. The syntax is:
 
 ```js
 objectName instanceof objectType
@@ -1104,8 +1101,8 @@ The following table describes the precedence of operators, from highest to lowes
 | comma                  | `,`                                                     |
 
 A more detailed version of this table, complete with links to additional details about
-each operator, may be found in [JavaScript
-Reference](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table).
+each operator, may be found in the
+[JavaScript Reference](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table).
 
 ## Expressions
 

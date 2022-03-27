@@ -60,7 +60,7 @@ There are five basic forms for the `Date()` constructor:
     - `dateString`
 
       - : A string value representing a date, specified in a format recognized by the
-        {{jsxref("Date.parse()")}} method. (These formats are 
+        {{jsxref("Date.parse()")}} method. (These formats are
         [IETF-compliant RFC 2822 timestamps](https://datatracker.ietf.org/doc/html/rfc2822#page-14),
         and also strings in a
         [version of ISO8601](https://www.ecma-international.org/ecma-262/11.0/#sec-date.parse).)
