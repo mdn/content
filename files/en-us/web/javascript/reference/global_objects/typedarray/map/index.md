@@ -78,8 +78,8 @@ If a `thisArg` parameter is provided to `map()`, it
 will be passed to `callbackFn` when invoked, for use as its
 `this` value. Otherwise, the value {{jsxref("undefined")}} will be passed for
 use as its `this` value. The `this` value ultimately observable by
-`callbackFn` is determined according to [the usual rules for
-determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
+`callbackFn` is determined according to
+[the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
 
 `map()` does not mutate the typed array on which it is called (although
 `callbackFn`, if invoked, may do so).

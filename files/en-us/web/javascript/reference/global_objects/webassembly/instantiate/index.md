@@ -60,8 +60,7 @@ fields:
   compiled WebAssembly module. This `Module` can be instantiated again,
   shared via {{domxref("Worker.postMessage", "postMessage()")}} or [cached in IndexedDB](/en-US/docs/WebAssembly/Caching_modules).
 - `instance`: A {{jsxref("WebAssembly.Instance")}} object that contains all
-  the [Exported WebAssembly
-  functions](/en-US/docs/WebAssembly/Exported_functions).
+  the [Exported WebAssembly functions](/en-US/docs/WebAssembly/Exported_functions).
 
 #### Exceptions
 
@@ -129,14 +128,13 @@ fetch('simple.wasm').then(response =>
 ```
 
 > **Note:** You can also find this example at [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html)
-> on GitHub ([view
-> it live also](https://mdn.github.io/webassembly-examples/js-api-examples/)).
+> on GitHub ([view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/)).
 
 ### Second overload example
 
 The following example (see our [index-compile.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html)
-demo on GitHub, and [view
-it live](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html) also) compiles the loaded simple.wasm byte code using the
+demo on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html) also)
+compiles the loaded simple.wasm byte code using the
 {{jsxref("WebAssembly.compileStreaming()")}} method and then sends it to a [worker](/en-US/docs/Web/API/Web_Workers_API) using
 {{domxref("Worker.postMessage", "postMessage()")}}.
 
@@ -187,5 +185,4 @@ onmessage = function(e) {
 
 - [WebAssembly](/en-US/docs/WebAssembly) overview page
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly
-  JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

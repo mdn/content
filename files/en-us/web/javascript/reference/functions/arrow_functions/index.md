@@ -13,22 +13,22 @@ browser-compat: javascript.functions.arrow_functions
 {{jsSidebar("Functions")}}
 
 An **arrow function expression** is a compact alternative to a traditional
-[function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function), but is limited and can't be used in all situations.
+[function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function),
+but is limited and can't be used in all situations.
 
-**Differences & Limitations:**
+There are differences between _arrow functions_ and _traditional functions_, as well as some limitations:
 
-- Does not have its own bindings to
+- Arrow functions don't have their own bindings to
   [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) or [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super),
   and should not be used as [`methods`](/en-US/docs/Glossary/Method).
-- Does not have [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) keyword.
-- Not suitable for
+- Arrow function don't have access to the [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) keyword.
+- Arrow functions aren't suitable for
   [`call`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call),
   [`apply`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
   and [`bind`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
   methods, which generally rely on establishing a [scope](/en-US/docs/Glossary/Scope).
-- Can not be used as [constructors](/en-US/docs/Glossary/Constructor).
-- Can not use [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield), within its body.
+- Arrow functions cannot be used as [constructors](/en-US/docs/Glossary/Constructor).
+- Arrow functions cannot use [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield), within its body.
 
 {{EmbedInteractiveExample("pages/js/functions-arrow.html")}}
 

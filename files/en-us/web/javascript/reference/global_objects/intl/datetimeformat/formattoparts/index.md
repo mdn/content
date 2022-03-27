@@ -140,8 +140,10 @@ formatter.formatToParts(date);
 ```
 
 Now the information is available separately and it can be formatted and concatenated
-again in a customized way. For example by using {{jsxref("Array.prototype.map()")}}, [arrow
-functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), a [switch statement](/en-US/docs/Web/JavaScript/Reference/Statements/switch), [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals),
+again in a customized way. For example by using {{jsxref("Array.prototype.map()")}},
+[arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions),
+a [switch statement](/en-US/docs/Web/JavaScript/Reference/Statements/switch),
+[template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals),
 and {{jsxref("Array.prototype.join()")}}.
 
 ```js

@@ -44,8 +44,8 @@ to {{jsxref("WebAssembly/Table/length","Table.prototype.length")}}, a
 ### Using get
 
 The following example (see [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html)
-on GitHub, and [view it
-live](https://mdn.github.io/webassembly-examples/js-api-examples/table.html) also) compiles and instantiates the loaded table.wasm byte code using the
+on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/table.html) also)
+compiles and instantiates the loaded table.wasm byte code using the
 {{jsxref("WebAssembly.instantiateStreaming()")}} method. It then retrieves the
 references stored in the exported table.
 
@@ -75,5 +75,4 @@ simple value.
 
 - [WebAssembly](/en-US/docs/WebAssembly) overview page
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly
-  JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

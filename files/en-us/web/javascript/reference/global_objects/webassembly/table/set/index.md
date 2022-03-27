@@ -48,9 +48,9 @@ Void.
 
 ### Using Table.set
 
-The following example (see table2.html [source
-code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) and [live
-version](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html)) creates a new WebAssembly Table instance with an initial size of 2
+The following example (see table2.html [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html)
+and [live version](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html))
+creates a new WebAssembly Table instance with an initial size of 2
 references. We then print out the table length and contents of the two indexes
 (retrieved via {{jsxref("WebAssembly/Table/get","Table.prototype.get()")}}) to show that
 the length is two, and the indexes currently contain no function references (they
@@ -76,8 +76,8 @@ var importObj = {
 Finally, we load and instantiate a wasm module (table2.wasm) using the
 {{jsxref("WebAssembly.instantiateStreaming()")}}, log the table length, and invoke the
 two referenced functions that are now stored in the table (the table2.wasm module (see
-[text
-representation](https://github.com/mdn/webassembly-examples/blob/master/text-format-examples/table2.was)) adds two function references to the table, both of which print out
+[text representation](https://github.com/mdn/webassembly-examples/blob/master/text-format-examples/table2.was))
+adds two function references to the table, both of which print out
 a simple value):
 
 ```js
@@ -108,5 +108,4 @@ same table is visible and callable inside the wasm instance too.
 
 - [WebAssembly](/en-US/docs/WebAssembly) overview page
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly
-  JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
