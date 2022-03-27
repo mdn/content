@@ -17,7 +17,7 @@ The **`DocumentFragment()`** constructor returns a new, empty
 ## Syntax
 
 ```js
-fragment = new DocumentFragment()
+new DocumentFragment()
 ```
 
 ## Example

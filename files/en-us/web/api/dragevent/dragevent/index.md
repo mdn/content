@@ -24,7 +24,7 @@ This interface inherits properties from {{domxref("MouseEvent")}} and
 ## Syntax
 
 ```js
- event = new DragEvent(type, DragEventInit);
+new DragEvent(type, DragEventInit);
 ```
 
 ### Arguments
