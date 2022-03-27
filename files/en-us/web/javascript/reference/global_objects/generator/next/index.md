@@ -136,5 +136,4 @@ g.next(2);
 ## See also
 
 - {{jsxref("Statements/function*", "function*")}}
-- [Iterators and
-  generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)

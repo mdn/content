@@ -79,8 +79,8 @@ console.log(letter);
 ```
 
 **reason:** When `next().done=true` or
-`currentIndex>length` the `for..of` loop ends. See [Iteration
-protocols.](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+`currentIndex>length` the `for..of` loop ends.
+See [Iteration protocols.](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 
 **Value**: there are no values stored in the array Iterator
 object; instead it stores the address of the array used in its creation and so depends

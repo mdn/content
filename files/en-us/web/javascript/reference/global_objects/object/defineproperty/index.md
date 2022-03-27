@@ -94,8 +94,7 @@ An **accessor descriptor** also has the following optional keys:
 
 If a descriptor has neither of `value`, `writable`,
 `get` and `set` keys, it is treated as a data descriptor. If a
-descriptor has both \[`value` or `writable`] and \[`get`
-or `set`] keys, an exception is thrown.
+descriptor has both \[`value` or `writable`] and \[`get` or `set`] keys, an exception is thrown.
 
 Bear in mind that these attributes are not necessarily the descriptor's own properties.
 Inherited properties will be considered as well. In order to ensure these defaults are
@@ -248,8 +247,8 @@ it but doesn't throw an error either.
 #### Enumerable attribute
 
 The `enumerable` property attribute defines whether the property is picked
-by {{jsxref("Object.assign()")}} or [spread
-](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)operator. For non-{{jsxref("Global_Objects/Symbol", "Symbol")}} properties it also defines whether it shows
+by {{jsxref("Object.assign()")}} or [spread](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)operator.
+For non-{{jsxref("Global_Objects/Symbol", "Symbol")}} properties it also defines whether it shows
 up in a {{jsxref("Statements/for...in", "for...in")}} loop and
 {{jsxref("Object.keys()")}} or not.
 
@@ -508,8 +507,7 @@ console.log(myclass.prototype.y); // 1
 
 ## See also
 
-- [Enumerability and
-  ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}

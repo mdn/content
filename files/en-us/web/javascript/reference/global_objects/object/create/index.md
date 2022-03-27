@@ -45,8 +45,7 @@ A new object with the specified prototype object and properties.
 The `proto` parameter has to be either
 
 - {{jsxref("null")}} or
-- an {{jsxref("Object")}} excluding [primitive
-  wrapper objects](/en-US/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript).
+- an {{jsxref("Object")}} excluding [primitive wrapper objects](/en-US/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript).
 
 If `proto` is neither of these a {{jsxref("TypeError")}} is thrown.
 

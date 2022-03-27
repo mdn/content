@@ -102,7 +102,7 @@ for (let name of Object.keys(example)) {
 }
 ```
 
-But if you need to use `for..in`, you can use `Object.hasOwn()` to skip the inherited properties:
+But if you need to use `for...in`, you can use `Object.hasOwn()` to skip the inherited properties:
 
 ```js
 let example = { foo: true, bar: true };

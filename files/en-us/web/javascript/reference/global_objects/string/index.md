@@ -18,8 +18,9 @@ sequence of characters.
 
 Strings are useful for holding data that can be represented in text form. Some of the
 most-used operations on strings are to check their {{jsxref("String.length",
-  "length")}}, to build and concatenate them using the [+ and += string
-operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#string_operators), checking for the existence or location of substrings with the
+  "length")}}, to build and concatenate them using the
+[+ and += string operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#string_operators),
+checking for the existence or location of substrings with the
 {{jsxref("String.prototype.indexOf()", "indexOf()")}} method, or extracting substrings
 with the {{jsxref("String.prototype.substring()", "substring()")}} method.
 
@@ -39,8 +40,7 @@ const string4 = new String("A String object");
 ```
 
 String primitives and string objects can be used interchangeably in most situations.
-See "[String primitives and String
-objects](#string_primitives_and_string_objects)" below.
+See "[String primitives and String objects](#string_primitives_and_string_objects)" below.
 
 String literals can be specified using single or double quotes, which are treated
 identically, or using the backtick character <kbd>`</kbd>. This last form specifies a [template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals):
@@ -69,8 +69,7 @@ nor configurable. (See {{jsxref("Object.defineProperty()")}} for more informatio
 ### Comparing strings
 
 In C, the `strcmp()` function is used for comparing strings. In JavaScript,
-you just use the [less-than
-and greater-than operators](/en-US/docs/Web/JavaScript/Reference/Operators):
+you just use the [less-than and greater-than operators](/en-US/docs/Web/JavaScript/Reference/Operators):
 
 ```js
 let a = 'a'
@@ -415,8 +414,7 @@ String(undefinedVar);     // "undefined"
 
 ## See also
 
-- [Text formatting in the
-  JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
+- [Text formatting in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
 - {{jsxref("RegExp")}}
 - {{domxref("DOMString")}}
 - [Binary strings](/en-US/docs/Web/API/DOMString/Binary)

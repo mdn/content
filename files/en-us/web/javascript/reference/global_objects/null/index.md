@@ -46,8 +46,7 @@ foo; //null
 
 ### Difference between `null` and `undefined`
 
-When checking for `null` or `undefined`, beware of the [differences
-between equality (==) and identity (===) operators](/en-US/docs/Web/JavaScript/Reference/Operators), as the former performs
+When checking for `null` or `undefined`, beware of the [differences between equality (==) and identity (===) operators](/en-US/docs/Web/JavaScript/Reference/Operators), as the former performs
 type-conversion.
 
 ```js

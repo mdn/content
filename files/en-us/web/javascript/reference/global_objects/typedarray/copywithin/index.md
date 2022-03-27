@@ -18,8 +18,7 @@ The copy is taken from the index positions of the second and third arguments
 `start` and `end`. The
 `end` argument is optional and defaults to the length of the
 array. This method has the same algorithm as {{jsxref("Array.prototype.copyWithin")}}.
-_TypedArray_ is one of the [typed
-array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+_TypedArray_ is one of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
 
 {{EmbedInteractiveExample("pages/js/typedarray-copywithin.html")}}
 

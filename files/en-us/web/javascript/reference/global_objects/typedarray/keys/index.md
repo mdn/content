@@ -74,5 +74,4 @@ console.log(eArr.next().value); // 4
 - {{jsxref("TypedArray.prototype.@@iterator()",
     "TypedArray.prototype[@@iterator]()")}}
 - [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
-- [Iteration
-  protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
