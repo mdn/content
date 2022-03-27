@@ -53,7 +53,7 @@ These attributes are enumerated, and have the following possible values:
   </tbody>
 </table>
 
-By default (that is, when the attribute is not specified), CORS is not used at all. The "anonymous" keyword means that there will be no exchange of **user credentials** via cookies, client-side SSL certificates or HTTP authentication as described in the [Terminology section of the CORS specification](https://www.w3.org/TR/cors/#user-credentials), unless it is in the same origin.
+By default (that is, when the attribute is not specified), CORS is not used at all. The "anonymous" keyword means that there will be no exchange of **user credentials** via cookies, client-side SSL certificates or HTTP authentication as described in the [Infrastructure section of the CORS specification](https://fetch.spec.whatwg.org/#infrastructure), unless it is in the same origin.
 
 An invalid keyword and an empty string will be handled as the `anonymous` keyword.
 
