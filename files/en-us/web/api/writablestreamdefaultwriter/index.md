@@ -78,7 +78,7 @@ The following example shows the creation of a `WritableStream` with a custom sin
      });
  }
 
- const decoder = new TextDecoder("utf-8");
+ const decoder = new TextDecoder("utf-16");
  const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
  let result = "";
  const writableStream = new WritableStream({
