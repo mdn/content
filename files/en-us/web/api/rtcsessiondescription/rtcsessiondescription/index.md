@@ -28,7 +28,7 @@ specified object.
 ## Syntax
 
 ```js
-sessionDescription = new RTCSessionDescription(rtcSessionDescriptionInit);
+new RTCSessionDescription(rtcSessionDescriptionInit);
 ```
 
 ### Values

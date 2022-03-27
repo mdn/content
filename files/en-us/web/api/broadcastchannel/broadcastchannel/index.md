@@ -20,7 +20,7 @@ The **`BroadcastChannel()`** constructor creates a new
 ## Syntax
 
 ```js
- channel = new BroadcastChannel(channelName);
+new BroadcastChannel(channelName);
 ```
 
 ### Values

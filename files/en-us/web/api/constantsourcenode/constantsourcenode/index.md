@@ -20,7 +20,7 @@ constantly outputs samples whose values are always the same.
 ## Syntax
 
 ```js
-var constantSourceNode = new ConstantSourceNode(context, options);
+new ConstantSourceNode(context, options);
 ```
 
 ### Parameters

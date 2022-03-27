@@ -19,7 +19,8 @@ access reports.
 ## Syntax
 
 ```js
-new ReportingObserver(callback[, options]);
+new ReportingObserver(callback);
+new ReportingObserver(callback, options);
 ```
 
 ### Parameters

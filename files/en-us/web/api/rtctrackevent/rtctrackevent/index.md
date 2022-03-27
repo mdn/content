@@ -26,7 +26,7 @@ objects are created by WebRTC and delivered to your `RTCPeerConnector`'s
 ## Syntax
 
 ```js
-trackEvent = new RTCTrackEvent(eventInfo);
+new RTCTrackEvent(eventInfo);
 ```
 
 ### Parameters

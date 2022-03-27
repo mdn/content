@@ -16,7 +16,8 @@ object instance.
 ## Syntax
 
 ```js
-new File(bits, name[, options]);
+new File(bits, name);
+new File(bits, name, options);
 ```
 
 ### Parameters
