@@ -20,8 +20,8 @@ The **`BlobEvent()`** constructor returns a newly created
 ## Syntax
 
 ```js
- new BlobEvent({data: aSpecificBlob});
- new BlobEvent({data: aSpecificBlob}, timecode);
+new BlobEvent({data: aSpecificBlob});
+new BlobEvent({data: aSpecificBlob}, timecode);
 ```
 
 ### Arguments
