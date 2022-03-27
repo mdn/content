@@ -68,7 +68,7 @@ The first object can contain up to four members, all of which are optional:
 The constructor call in our example looks like this:
 
 ```js
-const decoder = new TextDecoder("utf-8");
+const decoder = new TextDecoder("utf-16");
 const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 let result = "";
 const writableStream = new WritableStream({
