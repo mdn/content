@@ -75,13 +75,17 @@ Cache-Control: public
 
 #### Expiration
 
-The most important directive here is `max-age=<seconds>`, which is the maximum amount of time in which a resource will be considered [fresh](#freshness). This directive is relative to the time of the request, and overrides the {{HTTPHeader("Expires")}} header (if set). For the files in the application that will not change, you can normally use aggressive caching. This includes static files such as images, CSS files, and JavaScript files.
-
-For more details, see also the [Freshness](#freshness) section.
+The most important directive here is `max-age=<seconds>`, which is the maximum amount of time in which a resource will be considered [fresh](#freshness).
+This directive is relative to the time that the response was sent by the server, and overrides the {{HTTPHeader("Expires")}} header (if set). 
 
 ```
 Cache-Control: max-age=31536000
 ```
+
+You can use a large `max-age` value for files that rarely or never change.
+This might include images, HTML, CSS files, and JavaScript files.
+
+For more details, see also the [Freshness](#freshness) section.
 
 #### Validation
 
