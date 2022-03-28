@@ -23,12 +23,6 @@ second.
 > **Note:** If the hardware isn't capable of providing this
 > information, this property returns `null`.
 
-## Syntax
-
-```js
-var rotationRate = deviceMotionEvent.rotationRate;
-```
-
 ## Value
 
 The `rotationRate` property is a read only object describing the rotation

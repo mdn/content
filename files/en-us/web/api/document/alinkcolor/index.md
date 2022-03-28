@@ -14,16 +14,8 @@ browser-compat: api.Document.alinkColor
 Returns or sets the color of an active link in the document body. A link is active
 during the time between `mousedown` and `mouseup` events.
 
-## Syntax
-
-```js
-var color = document.alinkColor;
-document.alinkColor = color;
-```
-
-_color_ is a string containing the name of the color (e.g., `blue`,
-`darkblue`, etc.) or the hexadecimal value of the color (e.g.,
-`#0000FF`)
+## Value
+A string containing the name of the color (e.g., `blue`, `darkblue`, etc.) or the hexadecimal value of the color (e.g., `#0000FF`).
 
 ## Notes
 

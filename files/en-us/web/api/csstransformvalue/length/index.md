@@ -18,13 +18,7 @@ The read-only **`length`** property of the
 {{domxref("CSSTransformValue")}} interface returns the number of transform components in
 the list.
 
-## Syntax
-
-```js
-var length = CSSTransformValue.length;
-```
-
-### Return value
+## Value
 
 An integer representing the number of transform components in the list.
 

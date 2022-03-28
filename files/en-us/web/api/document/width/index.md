@@ -23,14 +23,7 @@ pixels.
 
 Not supported by Internet Explorer.
 
-## Syntax
-
-```js
-pixels = document.width;
-```
-
-## Example
-
+## Examples
 ```js
 function init() {
   alert("The width of the document is " + document.width + " pixels.");

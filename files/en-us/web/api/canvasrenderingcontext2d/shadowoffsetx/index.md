@@ -23,17 +23,9 @@ horizontally.
 > {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}} properties must
 > be non-zero, as well.
 
-## Syntax
+## Value
 
-```js
-ctx.shadowOffsetX = offset;
-```
-
-- `offset`
-  - : A float specifying the distance that shadows will be offset horizontally. Positive
-    values are to the right, and negative to the left. The default value is `0`
-    (no horizontal offset). {{jsxref("Infinity")}} and {{jsxref("NaN")}} values are
-    ignored.
+A float specifying the distance that shadows will be offset horizontally. Positive values are to the right, and negative to the left. The default value is `0` (no horizontal offset). {{jsxref("Infinity")}} and {{jsxref("NaN")}} values are ignored.
 
 ## Examples
 

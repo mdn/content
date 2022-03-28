@@ -14,14 +14,7 @@ browser-compat: api.Document.URL
 The **`URL`** read-only property of the {{domxref("Document")}}
 interface returns the document location as a string.
 
-## Syntax
-
-```js
-const url = document.URL
-```
-
-## Example
-
+## Examples
 ### JavaScript
 
 ```js

@@ -14,17 +14,7 @@ The **`DocumentFragment.lastElementChild`** read-only property
 returns the document fragment's last child {{domxref("Element")}}, or `null` if there
 are no child elements.
 
-## Syntax
-
-```js
-// Getter
-element = fragment.lastElementChild;
-
-// No setter; read-only property
-```
-
-## Example
-
+## Examples
 ```js
 let fragment = new DocumentFragment();
 fragment.lastElementChild; // null

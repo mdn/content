@@ -21,13 +21,7 @@ The alignment is relative to the `x` value of the
 `textAlign` is `"center"`, then the text's left edge will be at
 `x - (textWidth / 2)`.
 
-## Syntax
-
-```js
-ctx.textAlign = "left" || "right" || "center" || "start" || "end";
-```
-
-### Options
+## Value
 
 Possible values:
 

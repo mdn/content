@@ -14,17 +14,7 @@ The **`DocumentFragment.firstElementChild`** read-only property
 returns the document fragment's first child {{domxref("Element")}}, or `null` if there
 are no child elements.
 
-## Syntax
-
-```js
-// Getter
-element = fragment.firstElementChild;
-
-// No setter; read-only property
-```
-
-## Example
-
+## Examples
 ```js
 let fragment = new DocumentFragment();
 fragment.firstElementChild; // null

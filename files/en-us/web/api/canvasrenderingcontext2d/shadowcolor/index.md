@@ -27,15 +27,9 @@ stroking.
 > {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}} properties must
 > be non-zero, as well.
 
-## Syntax
+## Value
 
-```js
-ctx.shadowColor = color;
-```
-
-- `color`
-  - : A {{domxref("DOMString")}} parsed as a [CSS](/en-US/docs/Web/CSS)
-    {{cssxref("&lt;color&gt;")}} value. The default value is fully-transparent black.
+A {{domxref("DOMString")}} parsed as a [CSS](/en-US/docs/Web/CSS) {{cssxref("&lt;color&gt;")}} value. The default value is fully-transparent black.
 
 ## Examples
 

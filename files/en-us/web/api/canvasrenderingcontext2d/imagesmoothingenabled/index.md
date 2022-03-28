@@ -24,17 +24,9 @@ images, the default resizing algorithm will blur the pixels. Set this property t
 > {{domxref("CanvasRenderingContext2D.imageSmoothingQuality", "imageSmoothingQuality")}}
 > property.
 
-## Syntax
+## Value
 
-```js
-ctx.imageSmoothingEnabled = value;
-```
-
-### Options
-
-- `value`
-  - : A boolean value indicating whether to smooth scaled images or not. The
-    default value is `true`.
+A boolean value indicating whether to smooth scaled images or not. The default value is `true`.
 
 ## Examples
 

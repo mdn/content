@@ -25,14 +25,7 @@ stylesheet's {{domxref("CSSRuleList", "cssRules")}}`[index]` properties
 {{domxref("CSSStyleRule.style", ".style")}} (or its sub-properties). See [Using
 dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information) for details.
 
-## Syntax
-
-```js
-string = cssRule.cssText
-```
-
-## Example
-
+## Examples
 ```css
 body {
   background-color: darkblue;

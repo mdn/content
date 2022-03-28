@@ -16,13 +16,9 @@ The **`domain`** property of the {{domxref("Document")}}
 interface gets/sets the domain portion of the {{glossary("origin")}} of the current
 document, as used by the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
 
-## Syntax
+## Value
 
 ### Getter
-
-```js
-const domainString = document.domain
-```
 
 The getter for this property returns the domain portion of the current document's
 origin. In most cases, this will be the hostname portion of the document's URL. However,
@@ -36,10 +32,6 @@ there are some exceptions:
 Usually it is better to use the {{domxref("Location.hostname")}} property instead.
 
 ### Setter
-
-```js
-document.domain = domainString
-```
 
 The setter for this property can be used to _change_ a page's
 {{glossary("origin")}}, and thus modify how certain security checks are performed. It

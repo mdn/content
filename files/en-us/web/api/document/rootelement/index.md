@@ -19,12 +19,6 @@ that is the root element of the {{domxref("document")}} if it is an
 {{domxref("Document.documentElement")}}, which returns the root element for all
 documents.
 
-## Syntax
-
-```js
-const element = document.rootElement
-```
-
 ## Notes
 
 If the document is a non-empty SVG document, then the `rootElement` will be
