@@ -24,6 +24,7 @@ responses to requests.
 A {{domxref("CacheStorage")}} object.
 
 ## Examples
+
 The following example shows how you'd use a cache in a [service worker](/en-US/docs/Web/API/Service_Worker_API) context to store
 assets offline.
 

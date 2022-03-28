@@ -108,5 +108,5 @@ In the context of the rendering waterfall, some properties are more expensive th
 
 Most web browsers include tools to provide insight into the work the browser is doing when it animates elements of a page. Using these tools you can measure an application's animation frame rate, and diagnose performance bottlenecks if any are found.
 
-* [Chrome performance tools](https://developer.chrome.com/docs/devtools/#performance)
-* [Firefox performance tools](https://firefox-source-docs.mozilla.org/devtools-user/performance/)
+- [Chrome performance tools](https://developer.chrome.com/docs/devtools/#performance)
+- [Firefox performance tools](https://firefox-source-docs.mozilla.org/devtools-user/performance/)

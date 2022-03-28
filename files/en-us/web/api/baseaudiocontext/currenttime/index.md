@@ -22,6 +22,7 @@ can be used for scheduling audio playback, visualizing timelines, etc. It starts
 A floating point number.
 
 ## Examples
+
 ```js
 var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
