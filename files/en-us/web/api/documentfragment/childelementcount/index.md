@@ -18,6 +18,7 @@ To get the number of children of a specific element, see {{domxref("Element.chil
 ## Value
 
 A number representing the number of children of the element.
+
 ## Examples
 
 ```js
