@@ -48,13 +48,15 @@ find(function(element, index, array) { /* ... */ }, thisArg)
 
 - `callbackFn`
 
-  - : Function to execute on each value in the array, taking 3 arguments:
+  - : Function to execute on each value in the array.
+  
+    The function is called with the following arguments:
 
     - `element`
       - : The current element in the array.
-    - `index` {{optional_inline}}
+    - `index`
       - : The index (position) of the current element in the array.
-    - `array` {{optional_inline}}
+    - `array`
       - : The array that `find` was called on.
 
     The callback must return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate a matching element has been found.

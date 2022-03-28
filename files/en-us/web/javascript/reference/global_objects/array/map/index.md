@@ -42,17 +42,16 @@ map(function(element, index, array) { /* ... */ }, thisArg)
 
 - `callbackFn`
 
-  - : Function that is called for every element of `arr`. Each time
-    `callbackFn` executes, the returned value is added to
-    `newArray`.
+  - : Function that is called for every element of `arr`.
+    Each time `callbackFn` executes, the returned value is added to `newArray`.
 
-    The `callbackFn` function accepts the following arguments:
+    The function is called with the following arguments:
 
     - `element`
       - : The current element being processed in the array.
-    - `index`{{optional_inline}}
+    - `index`
       - : The index of the current element being processed in the array.
-    - `array`{{optional_inline}}
+    - `array`
       - : The array `map` was called upon.
 
 - `thisArg`{{optional_inline}}

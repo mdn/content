@@ -44,14 +44,15 @@ map(function(currentValue, index, array) { /* ... */ }, thisArg)
 
 - `callbackFn`
 
-  - : A callback function that produces an element of the new typed array, taking three
-    arguments:
+  - : A callback function that produces an element of the new typed array.
+
+    The function is called with the following arguments:
 
     - `currentValue`
       - : The current element being processed in the typed array.
-    - `index` {{optional_inline}}
+    - `index`
       - : The index of the current element being processed in the typed array.
-    - `array` {{optional_inline}}
+    - `array`
       - : The typed array `map()` was called upon.
 
 - `thisArg` {{optional_inline}}

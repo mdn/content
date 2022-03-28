@@ -44,7 +44,9 @@ groupByToMap(function(element, index, array) { /* ... */ }, thisArg)
 
 - `callbackFn`
 
-  - : Function to execute on each element in the array, taking 3 arguments:
+  - : Function to execute on each element in the array.
+
+    The function is called with the following arguments:
 
     - `element`
       - : The current element in the array.
