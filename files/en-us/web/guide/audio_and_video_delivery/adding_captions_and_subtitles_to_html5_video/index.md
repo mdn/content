@@ -18,7 +18,7 @@ In this article, we will refer to the Video player with captions example. This e
 
 ![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
-> **Note:** You can find the [source on Github](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions), and also [view the example live](https://iandevlin.github.io/mdn/video-player-with-captions/).
+> **Note:** You can find the [source on GitHub](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions), and also [view the example live](https://iandevlin.github.io/mdn/video-player-with-captions/).
 
 ## HTML5 and Video Captions
 

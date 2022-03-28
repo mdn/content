@@ -19,7 +19,7 @@ This article is for Touch Event Horizon and A Game Related To It
 
 ![](tapping.png)
 
-[Github repository](https://github.com/EnclaveGames/Touch-Event-Horizon)
+[GitHub repository](https://github.com/EnclaveGames/Touch-Event-Horizon)
 
 [Live demo](https://touch.enclavegames.com/)
 

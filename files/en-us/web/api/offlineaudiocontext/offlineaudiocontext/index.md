@@ -78,7 +78,7 @@ const source = offlineCtx.createBufferSource();
 ```
 
 For a full working example, see our [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/)
-Github repo (see the [source
+GitHub repo (see the [source
 code](https://github.com/mdn/webaudio-examples/blob/master/offline-audio-context-promise/index.html) too.)
 
 ## Specifications

@@ -70,7 +70,7 @@ promise `AudioBuffer`. This is then played as part of a simple standard audio
 graph.
 
 > **Note:** For a working example, see our [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/)
-> Github repo (see the [source
+> GitHub repo (see the [source
 > code](https://github.com/mdn/webaudio-examples) too.)
 
 ```js

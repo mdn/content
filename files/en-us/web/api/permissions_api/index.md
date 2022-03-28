@@ -35,7 +35,7 @@ More APIs will gain Permissions API support over time.
 
 ## Examples
 
-We have made a simple example available called Location Finder. You can [run the example live](https://chrisdavidmills.github.io/location-finder-permissions-api/), or [view the source code on Github](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages).
+We have made a simple example available called Location Finder. You can [run the example live](https://chrisdavidmills.github.io/location-finder-permissions-api/), or [view the source code on GitHub](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages).
 
 Read more about how it works in our article [Using the Permissions API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API).
 

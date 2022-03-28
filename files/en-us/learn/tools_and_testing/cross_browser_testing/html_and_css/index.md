@@ -76,7 +76,7 @@ There are many online linter applications, the best of which are probably [Dirty
 
 However, it is not very convenient to have to copy and paste your code over to a web page to check its validity several times. What you really want is a linter that will fit into your standard workflow with the minimum of hassle.
 
-Many code editors have linter plugins. Github's [Atom](https://atom.io/) code editor for example has a rich plugin ecosystem available, with many linting options. To show you an example of how such plugins generally work:
+Many code editors have linter plugins. GitHub's [Atom](https://atom.io/) code editor for example has a rich plugin ecosystem available, with many linting options. To show you an example of how such plugins generally work:
 
 1. Install Atom (if you haven't got an up-to-date version already installed) — download it from the Atom page linked above.
 2. Go to Atom's _Preferences..._ dialog (e.g. by Choosing _Atom > Preferences..._ on Mac, or _File > Preferences..._ on Windows/Linux) and choose the _Install_ option in the left hand menu.

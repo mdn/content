@@ -130,7 +130,7 @@ _No change._
 
 #### Details
 
-[Github commits made between Firefox 35 and Firefox 36](https://github.com/mozilla/addon-sdk/compare/firefox35...firefox36).
+[GitHub commits made between Firefox 35 and Firefox 36](https://github.com/mozilla/addon-sdk/compare/firefox35...firefox36).
 
 ### JavaScript code modules
 

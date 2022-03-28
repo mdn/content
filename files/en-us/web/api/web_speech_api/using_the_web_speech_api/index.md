@@ -27,7 +27,7 @@ To show simple usage of Web speech recognition, we've written a demo called [Spe
 
 ![The UI of an app titled Speech Color changer. It invites the user to tap the screen and say a color, and then it turns the background of the app that color. In this case it has turned the background red.](speech-color-changer.png)
 
-To run the demo, you can clone (or [directly download](https://github.com/mdn/web-speech-api/archive/master.zip)) the Github repo it is part of, open the HTML index file in a supporting desktop browser, or navigate to the [live demo URL](https://mdn.github.io/web-speech-api/speech-color-changer/) in a supporting mobile browser like Chrome.
+To run the demo, you can clone (or [directly download](https://github.com/mdn/web-speech-api/archive/master.zip)) the GitHub repo it is part of, open the HTML index file in a supporting desktop browser, or navigate to the [live demo URL](https://mdn.github.io/web-speech-api/speech-color-changer/) in a supporting mobile browser like Chrome.
 
 ### Browser support
 
@@ -182,7 +182,7 @@ To show simple usage of Web speech synthesis, we've provided a demo called [Spea
 
 ![UI of an app called speak easy synthesis. It has an input field in which to input text to be synthesized, slider controls to change the rate and pitch of the speech, and a drop down menu to choose between different voices.](speak-easy-synthesis.png)
 
-To run the demo, you can clone (or [directly download](https://github.com/mdn/web-speech-api/archive/master.zip)) the Github repo it is part of, open the HTML index file in a supporting desktop browser, or navigate to the [live demo URL](https://mdn.github.io/web-speech-api/speak-easy-synthesis/) in a supporting mobile browser like Chrome, or Firefox OS.
+To run the demo, you can clone (or [directly download](https://github.com/mdn/web-speech-api/archive/master.zip)) the GitHub repo it is part of, open the HTML index file in a supporting desktop browser, or navigate to the [live demo URL](https://mdn.github.io/web-speech-api/speak-easy-synthesis/) in a supporting mobile browser like Chrome, or Firefox OS.
 
 ### Browser support
 

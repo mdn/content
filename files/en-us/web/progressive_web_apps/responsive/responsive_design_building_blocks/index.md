@@ -28,7 +28,7 @@ The best place to start is with fluid measurements for our application layout â€
 
 We've written a simple-but-fun prototype for an application called Snapshot, which takes a video stream from your webcam (using {{domxref("navigator.getUserMedia", "getUserMedia()")}}) then allows you to capture stills from that video stream (using HTML5 {{HTMLElement("canvas")}}), and save them to a gallery. You can then view previously-captured images and delete them. Other articles will discuss the functionality in more detail, but here we're interested in the layout.
 
-> **Note:** You can find the [Snapshot app on Github](https://github.com/chrisdavidmills/snapshot); check out the code and help improve it. You can also see [Snapshot running live](https://chrisdavidmills.github.io/snapshot/). Note that `getUserMedia()` is an experimental technology, which currently only works in Google Chrome and Firefox desktop. More functionality and a clean up of the styling of Snapshot are planned for a future date.
+> **Note:** You can find the [Snapshot app on GitHub](https://github.com/chrisdavidmills/snapshot); check out the code and help improve it. You can also see [Snapshot running live](https://chrisdavidmills.github.io/snapshot/). Note that `getUserMedia()` is an experimental technology, which currently only works in Google Chrome and Firefox desktop. More functionality and a clean up of the styling of Snapshot are planned for a future date.
 
 Our desktop layout for Snapshot is three columns, containing the camera viewer, image capture view, and gallery, respectively.
 

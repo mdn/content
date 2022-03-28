@@ -38,7 +38,7 @@ const buttons = gamepad.buttons;
 
 The following code is taken from my Gamepad API button demo (you can [view the demo live](https://chrisdavidmills.github.io/gamepad-buttons/), and
 [find the source
-code](https://github.com/chrisdavidmills/gamepad-buttons/tree/master) on Github.) Note the code fork — in Chrome
+code](https://github.com/chrisdavidmills/gamepad-buttons/tree/master) on GitHub.) Note the code fork — in Chrome
 {{domxref("Navigator.getGamepads")}} needs a `webkit` prefix and the button
 values are stores as an array of double values, whereas in Firefox
 {{domxref("Navigator.getGamepads")}} doesn't need a prefix, and the button values are
