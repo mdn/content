@@ -21,10 +21,10 @@ requests.
 A {{domxref("USVString")}} indicating the hinted priority of the request.
 Possible values are:
 
-- **`high`**: Fetch the iframe document at a high priority relative to other
-  iframe documents.
-- **`low`**: Fetch the iframe document at a low priority relative to other
-  iframe documents.
+- **`high`**: Fetch the request at a high priority relative to other
+  requests of a similar type.
+- **`low`**: Fetch the request at a low priority relative to other
+  requests of a similar type.
 - **`auto`**: Default mode, which indicates no preference for
   the fetch priority. The browser decides what is best for the user.
 
