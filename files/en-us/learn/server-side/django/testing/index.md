@@ -470,7 +470,7 @@ That's all for forms; we do have some others, but they are automatically created
 
 To validate our view behavior we use the Django test [Client](https://docs.djangoproject.com/en/3.1/topics/testing/tools/#django.test.Client). This class acts like a dummy web browser that we can use to simulate `GET` and `POST` requests on a URL and observe the response. We can see almost everything about the response, from low-level HTTP (result headers and status codes) through to the template we're using to render the HTML and the context data we're passing to it. We can also see the chain of redirects (if any) and check the URL and status code at each step. This allows us to verify that each view is doing what is expected.
 
-Let's start with one of our simplest views, which provides a list of all Authors. This is displayed at URL **/catalog/authors/** (an URL named 'authors' in the URL configuration).
+Let's start with one of our simplest views, which provides a list of all Authors. This is displayed at URL **/catalog/authors/** (a URL named 'authors' in the URL configuration).
 
 ```python
 class AuthorListView(generic.ListView):

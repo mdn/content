@@ -71,7 +71,7 @@ _See the [Mozilla Hacks blog post](https://hacks.mozilla.org/2014/02/css-source-
 ### Interfaces/APIs/DOM
 
 - A new type of workers, {{domxref("SharedWorker")}}, is now available by default ({{bug(924089)}}).
-- The {{domxref("URL")}} interface now supports the {{domxref("URL.searchParams", "searchParams")}} property returning a {{domxref("URLSearchParams")}} object, allowing to modify the search params of an URL ({{bug(887836)}}). The {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor allows easier parsing of query strings.
+- The {{domxref("URL")}} interface now supports the {{domxref("URL.searchParams", "searchParams")}} property returning a {{domxref("URLSearchParams")}} object, allowing to modify the search params of a URL ({{bug(887836)}}). The {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor allows easier parsing of query strings.
 - The {{domxref("WorkerNavigator.onLine", "navigator.onLine")}} property is now supported on {{domxref("WorkerNavigator")}}, allowing to know the online/offline status in workers ({{bug(925437)}}).
 - As part of the implementation of Web Components, the {{domxref("HTMLShadowElement")}} interface has been implemented behind the `dom.webcomponents.enabled`. Flip it to `true` if you want to use it. ({{bug(887538)}})
 - The read-only property {{domxref("HTMLIFrameElement.sandbox")}} is no longer a {{domxref("DOMString")}} but a {{domxref("DOMTokenList")}} ({{bug(845057)}}).
