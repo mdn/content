@@ -116,11 +116,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : Provides a hint of the relative priority to use when fetching an external script. Allowed values:
 
     - `high`
-      - : Signal a high-priority fetch relative to other external scripts..
+      - : Signals a high-priority fetch relative to other external scripts..
     - `low`
-      - : Signal a low-priority fetch relative to other external scripts.
+      - : Signals a low-priority fetch relative to other external scripts.
     - `auto`
-      - : Default: Signal automatic determination of fetch priority relative to other external scripts.
+      - : Default: Signals automatic determination of fetch priority relative to other external scripts.
 
 - {{htmlattrdef("integrity")}}
   - : This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered free of unexpected manipulation. See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity).

@@ -109,11 +109,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : Provides a hint of the relative priority to use when fetching the iframe document. Allowed values:
 
     - `high`
-      - : Signal a high-priority fetch relative to other iframe documents.
+      - : Signals a high-priority fetch relative to other iframe documents.
     - `low`
-      - : Signal a low-priority fetch relative to other iframe documents.
+      - : Signals a low-priority fetch relative to other iframe documents.
     - `auto`
-      - : Default: Signal automatic determination of fetch priority relative to other iframe documents.
+      - : Default: Signals automatic determination of fetch priority relative to other iframe documents.
 
 - {{htmlattrdef("height")}}
   - : The height of the frame in CSS pixels. Default is `150`.

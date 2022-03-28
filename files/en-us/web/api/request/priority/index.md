@@ -13,17 +13,20 @@ browser-compat: api.Request.priority
 {{APIRef("Fetch")}}
 
 The **`priority`** read-only property of the {{domxref("Request")}}
-interface contains the hinted priority of the request relative to other requests.
+interface contains the hinted priority of the request relative to other
+requests.
 
-## Syntax
-
-```js
-var myPriority = request.priority;
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}} indicating the hinted priority of the request.
+Possible values are:
+
+- **`high`**: Fetch the iframe document at a high priority relative to other
+  iframe documents.
+- **`low`**: Fetch the iframe document at a low priority relative to other
+  iframe documents.
+- **`auto`**: Default mode, which indicates no preference for
+  the fetch priority. The browser decides what is best for the user.
 
 ## Example
 

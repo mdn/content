@@ -123,11 +123,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : Provides a hint of the relative priority to use when fetching the image. Allowed values:
 
     - `high`
-      - : Signal a high-priority fetch relative to other images.
+      - : Signals a high-priority fetch relative to other images.
     - `low`
-      - : Signal a low-priority fetch relative to other images.
+      - : Signals a low-priority fetch relative to other images.
     - `auto`
-      - : Default: Signal automatic determination of fetch priority relative to other images.
+      - : Default: Signals automatic determination of fetch priority relative to other images.
 
 - {{htmlattrdef("height")}}
   - : The intrinsic height of the image, in pixels. Must be an integer without a unit.

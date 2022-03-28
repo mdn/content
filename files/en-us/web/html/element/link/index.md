@@ -189,11 +189,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : Provides a hint of the relative priority to use when fetching a preloaded resource. Allowed values:
 
     - `high`
-      - : Signal a high-priority fetch relative to other resources of the same type.
+      - : Signals a high-priority fetch relative to other resources of the same type.
     - `low`
-      - : Signal a low-priority fetch relative to other resources of the same type.
+      - : Signals a low-priority fetch relative to other resources of the same type.
     - `auto`
-      - : Default: Signal automatic determination of fetch priority relative to other resources of the same type.
+      - : Default: Signals automatic determination of fetch priority relative to other resources of the same type.
 
 - {{HTMLAttrDef("href")}}
   - : This attribute specifies the {{glossary("URL")}} of the linked resource. A URL can be absolute or relative.
