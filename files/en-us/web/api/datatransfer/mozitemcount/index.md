@@ -22,17 +22,11 @@ dragged.
 
 This property is {{readonlyInline}}.
 
-## Syntax
-
-```js
-dataTransfer.mozItemCount;
-```
-
-### Return value
+## Value
 
 A `number` representing the number of items being dragged.
 
-## Example
+## Examples
 
 This example shows the use of the `mozItemCount` property.
 

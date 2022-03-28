@@ -23,18 +23,12 @@ event.
 
 This property is {{readonlyInline}}.
 
-## Syntax
-
-```js
-dataTransfer.mozUserCancelled;
-```
-
-### Return value
+## Value
 
 A boolean value representing `true` if the user canceled the drag
 event and returns `false` otherwise.
 
-## Example
+## Examples
 
 This example shows the use of the `mozUserCancelled` property in the
 {{event("dragend")}} event handler.

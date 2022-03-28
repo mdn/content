@@ -15,16 +15,11 @@ The **`Document.mozSyntheticDocument`** property indicates
 whether or not the document is a synthetic one; that is, a document representing a
 standalone image, video, audio, or the like.
 
-## Syntax
+## Value
 
-```js
-var isSynthetic = document.mozSyntheticDocument;
-```
+A boolean value that is `true` if the document is synthetic, or `false` otherwise.
 
-On return, `isSynthetic` is `true` if the document is a synthetic
-one; otherwise it's `false`.
-
-## Example
+## Examples
 
 This can be useful if you have a contextual menu item you only want to display for
 synthetic documents (or, conversely, for documents that aren't synthetic).

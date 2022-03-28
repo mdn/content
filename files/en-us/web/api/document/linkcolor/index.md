@@ -22,19 +22,11 @@ This property is deprecated. As an alternative, you can set the CSS
 `document.body.link`, although this is [deprecated in HTML
 4.01](https://www.w3.org/TR/html401/struct/global.html#adef-link).
 
-## Syntax
+## Value
 
-```js
-color = document.linkColor
-document.linkColor = color
-```
+A string representing the color as a word (e.g., `red`) or hexadecimal value (e.g., `#ff0000`).
 
-### Parameters
-
-- `color` is a string representing the color as a word (e.g.,
-  `red`) or hexadecimal value (e.g., `#ff0000`).
-
-## Example
+## Examples
 
 ```js
 document.linkColor = 'blue';

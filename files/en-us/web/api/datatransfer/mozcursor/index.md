@@ -32,17 +32,11 @@ The possible values are:
 
 > **Note:** This property is Gecko-specific.
 
-## Syntax
-
-```js
-dataTransfer.mozCursor;
-```
-
-### Return value
+## Value
 
 A {{domxref("DOMString")}} representing one of the values listed above.
 
-## Example
+## Examples
 
 This example shows the use of the `mozCursor` property.
 

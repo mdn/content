@@ -19,15 +19,9 @@ Canvas 2D API specifies the color, gradient, or pattern to use for the strokes
 > styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas
 > tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
-## Syntax
+## Value
 
-```js
-ctx.strokeStyle = color;
-ctx.strokeStyle = gradient;
-ctx.strokeStyle = pattern;
-```
-
-### Options
+One of the followings:
 
 - `color`
   - : A {{domxref("DOMString")}} parsed as [CSS](/en-US/docs/Web/CSS)

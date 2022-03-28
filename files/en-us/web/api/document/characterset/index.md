@@ -28,11 +28,9 @@ text](https://en.wikipedia.org/wiki/Mojibake).
 > **Note:** The properties `document.charset` and `document.inputEncoding`
 > are legacy aliases for `document.characterSet`. Do not use them any more.
 
-## Syntax
+## Value
 
-```js
-var string = document.characterSet;
-```
+A string.
 
 ## Examples
 

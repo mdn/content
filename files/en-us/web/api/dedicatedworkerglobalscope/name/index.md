@@ -19,17 +19,11 @@ The **`name`** read-only property of the
 the {{domxref("Worker.Worker", "Worker()")}} constructor can pass to get a reference to
 the {{domxref("DedicatedWorkerGlobalScope")}}.
 
-## Syntax
-
-```js
-var nameObj = self.name;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}.
 
-## Example
+## Examples
 
 If a worker is created using a constructor with a `name` option:
 

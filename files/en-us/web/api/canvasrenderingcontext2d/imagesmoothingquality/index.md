@@ -21,15 +21,9 @@ image smoothing.
 > {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}
 > must be `true`.
 
-## Syntax
+## Value
 
-```js
-ctx.imageSmoothingQuality = "low" || "medium" || "high"
-```
-
-### Options
-
-Possible values:
+One of the followings:
 
 - `"low"`
   - : Low quality.
@@ -38,7 +32,7 @@ Possible values:
 - `"high"`
   - : High quality.
 
-## Example
+## Examples
 
 ### Setting image smoothing quality
 

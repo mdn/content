@@ -17,13 +17,11 @@ browser-compat: api.Client.id
 
 The **`id`** read-only property of the {{domxref("Client")}} interface returns the universally unique identifier of the {{domxref("Client")}} object.
 
-## Syntax
+## Value
 
-```js
-var clientId = client.id;
-```
+A string uniquely identifying the object.
 
-## Example
+## Examples
 
 ```js
 TBD
