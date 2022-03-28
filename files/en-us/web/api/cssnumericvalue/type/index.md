@@ -1,5 +1,5 @@
 ---
-title: CSSNumericValue.type
+title: CSSNumericValue.type()
 slug: Web/API/CSSNumericValue/type
 tags:
   - API
