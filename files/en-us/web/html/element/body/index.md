@@ -91,22 +91,22 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{htmlattrdef("alink")}} {{deprecated_inline}}
   - : Color of text for hyperlinks when selected.
-    **Do not use this attribute! Use CSS {{cssxref("color")}} property in conjunction with the {{cssxref(":active")}} pseudo-class instead.**
+    **Do not use this attribute! Use the CSS {{cssxref("color")}} property in conjunction with the {{cssxref(":active")}} pseudo-class instead.**
 - {{htmlattrdef("background")}} {{deprecated_inline}}
   - : URI of a image to use as a background.
-    **Do not use this attribute! Use CSS {{cssxref("background")}} property on the element instead.**
+    **Do not use this attribute! Use the CSS {{cssxref("background")}} property on the element instead.**
 - {{htmlattrdef("bgcolor")}} {{deprecated_inline}}
   - : Background color for the document.
-    **Do not use this attribute! Use CSS {{cssxref("background-color")}} property on the element instead.**
+    **Do not use this attribute! Use the CSS {{cssxref("background-color")}} property on the element instead.**
 - {{htmlattrdef("bottommargin")}} {{deprecated_inline}}
   - : The margin of the bottom of the body.
-    **Do not use this attribute! Use  CSS {{cssxref("margin-bottom")}} property on the element instead.**
+    **Do not use this attribute! Use the CSS {{cssxref("margin-bottom")}} property on the element instead.**
 - {{htmlattrdef("leftmargin")}} {{deprecated_inline}}
   - : The margin of the left of the body.
-    **Do not use this attribute! Use CSS {{cssxref("margin-left")}} property on the element instead.**
+    **Do not use this attribute! Use the CSS {{cssxref("margin-left")}} property on the element instead.**
 - {{htmlattrdef("link")}} {{deprecated_inline}}
   - : Color of text for unvisited hypertext links.
-    **Do not use this attribute! Use CSS {{cssxref("color")}} property in conjunction with the {{cssxref(":link")}} pseudo-class instead.**
+    **Do not use this attribute! Use the CSS {{cssxref("color")}} property in conjunction with the {{cssxref(":link")}} pseudo-class instead.**
 - {{htmlattrdef("onafterprint")}}
   - : Function to call after the user has printed the document.
 - {{htmlattrdef("onbeforeprint")}}
@@ -145,16 +145,16 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : Function to call when the document is going away.
 - {{htmlattrdef("rightmargin")}} {{deprecated_inline}}
   - : The margin of the right of the body.
-    **Do not use this attribute! Use CSS {{cssxref("margin-right")}} property on the element instead.**
+    **Do not use this attribute! Use the CSS {{cssxref("margin-right")}} property on the element instead.**
 - {{htmlattrdef("text")}} {{deprecated_inline}}
   - : Foreground color of text.
     **Do not use this attribute! Use CSS {{cssxref("color")}} property on the element instead.**
 - {{htmlattrdef("topmargin")}} {{deprecated_inline}}
   - : The margin of the top of the body.
-    **Do not use this attribute! Use CSS {{cssxref("margin-top")}} property on the element instead.**
+    **Do not use this attribute! Use the CSS {{cssxref("margin-top")}} property on the element instead.**
 - {{htmlattrdef("vlink")}} {{deprecated_inline}}
   - : Color of text for visited hypertext links.
-    **Do not use this attribute! Use CSS {{cssxref("color")}} property in conjunction with the {{cssxref(":visited")}} pseudo-class instead.**
+    **Do not use this attribute! Use the CSS {{cssxref("color")}} property in conjunction with the {{cssxref(":visited")}} pseudo-class instead.**
 
 ## Example
 
