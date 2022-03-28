@@ -67,10 +67,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.13.tgz#40303f692fff93abe7a0f5782432ec717af9b280"
   integrity sha512-OFTriJmUcXnA1RjfKDJOfEmhHO44OV7Gxpqnh7eOM+3qep64Yt+uNF4jEeIFHnwTFH5tMcnBQxEI91dXDGiGYQ==
 
-"@mdn/yari@0.9.51":
-  version "0.9.51"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.9.51.tgz#abe25d2a9458e83780af3cc70de1390d47906f90"
-  integrity sha512-Nd8zzwIZB2MW5VO6jub5AOwAjn7EMlO045bkgRgMEnbfwGbpyk0+Gwy2R7pRq4aSCetf1X25X6XQb/sCDaXSpw==
+"@mdn/yari@0.9.62":
+  version "0.9.62"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.9.62.tgz#2e5d87c2175e5c66f60e8099d796d53f0df19d21"
+  integrity sha512-r2ux9Mu+6TVCY1nG1l2NdVFJZ69UmS8FYVfo7WTvILa66mqzQ302nK/nxBM+CfjgE6ziQ8f30J9naKC6Ya7PUg==
   dependencies:
     "@babel/helper-builder-react-jsx" "^7.16.7"
     "@caporal/core" "2.0.2"
@@ -78,7 +78,7 @@
     "@mdn/browser-compat-data" "4.1.13"
     "@use-it/interval" "^1.0.0"
     accept-language-parser "1.5.0"
-    browser-specs "^3.4.0"
+    browser-specs "^3.5.0"
     chalk "4.1.2"
     cheerio "1.0.0-rc.10"
     cli-progress "^3.10.0"
@@ -593,10 +593,10 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^3.4.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.4.0.tgz#2f378f8892c194592e6a7def293b01696beaf25a"
-  integrity sha512-9BqYEGQQFnhYyRuqp5biy5HNlN5ymi7ee3ZxA67xc4rDWzCHMVBcxCF3s6rE5YzYnpV+YMJqwVfcCWiA5+Bwkw==
+browser-specs@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.5.0.tgz#0d4e1711fcc887d9f982e5e9bb7e64eadffb3bc6"
+  integrity sha512-dQg7v+1exPSNmahGhrq+cY+SrXkRkEYLMAMpgCs3rZHE7CfTRPfLw2E9bQCcspGfvlpeoQKUHnRJiVZRP5xEGg==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
