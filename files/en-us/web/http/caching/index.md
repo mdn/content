@@ -82,7 +82,8 @@ This directive is relative to the time that the response was sent by the server,
 Cache-Control: max-age=31536000
 ```
 
-You can use a large `max-age` value for files that rarely or never change, including images, CSS files, and JavaScript files.
+You can use a large `max-age` value for files that rarely or never change.
+This might include images, HTML, CSS files, and JavaScript files.
 
 For more details, see also the [Freshness](#freshness) section.
 
