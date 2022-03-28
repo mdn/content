@@ -94,125 +94,45 @@ Being able to move focus among rows and cells of the grid with a keyboard must b
 
 The following keyboard interactions need to be supported when an element in the grid has received focus, e.g., after a user has moved focus to the grid with Tab. 
 
-<table>
-<tr>
-<td><kbd>Enter</kbd></td>
-<td>If cell-only focus is enabled and focus is on the first cell with the `aria-expanded` property, opens or closes the child rows. Otherwise, performs the default action for the cell.
-</td>
-</tr>
-<tr>
-<td><kbd>Tab</kbd></td>
-<td>If the row containing focus contains focusable elements such as an {{HTMLElement('input')}}, {{HTMLElement('button')}} or {{HTMLElement('a')}}, ,moves the focus to the next input in the row. If focus is on the last focusable element in the row, moves focus out of the treegrid widget to the next focusable element.
-</td>
-</tr>
-<tr>
-<td><kbd>Right Arrow</kbd></td>
-<td>
-If focus is on a collapsed row, expand the row.
-If focus is on an expanded row or is on a row that does not have child rows, moves focus to the first cell in the row.
-If focus is on the right-most cell in a row, focus does not move.
-If focus is on any other cell, moves focus one cell to the right.</td>
-</tr>
-<tr>
-<td><kbd>Left Arrow</kbd></td>
-<td>
-If focus is on an expanded row, collapses the row.
-If focus is on a collapsed row or on a row that does not have child rows, focus does not move.
-If focus is on the first cell in a row and row focus is supported, moves focus to the row.
-If focus is on the first cell in a row and row focus is not supported, focus does not move.
-If focus is on any other cell, moves focus one cell to the left.
-</td>
-</tr>
-<tr>
-<td><kbd>Down Arrow</kbd></td>
-<td>
-If focus is on a row, moves focus one row down. If focus is on the last row, focus does not move.
-If focus is on a cell, moves focus one cell down. If focus is on the bottom cell in the column, focus does not move.
-</td>
-</tr>
-<tr>
-<td><kbd>Up Arrow</kbd></td>
-<td>
-If focus is on a row, moves focus one row up. If focus is on the first row, focus does not move.
-If focus is on a cell, moves focus one cell up. If focus is on the top cell in the column, focus does not move.
-</td>
-</tr>
-<tr>
-<td><kbd>Page Down</kbd></td>
-<td>
-If focus is on a row or cell, moves focus down a predetermined number of rows or cells. Usually, it moves down the equivalent of the height of the treegrid, scrolling so the bottom row in the currently visible set of rows becomes one of the first visible rows. If focus is in the last row , focus does not move.
-</td>
-</tr>
-<tr>
-<td><kbd>Page Up</kbd></td>
-<td>
-If focus is on a row or cell, moves focus up an predetermined number of rows. Usually, it moves up the equivalent of the height of the treegrid, scrolling so the top row in the currently visible set of rows becomes one of the last visible rows. If focus is in the first row, focus does not move.
-</td>
-</tr>
-<tr>
-<td><kbd>Home</kbd> <kbd>Control + Home</kbd></td>
-<td>
-If focus is on a row, moves focus to the first row. If focus is in the first row, focus does not move.
-If focus is on a cell, moves focus to the first cell in the row. If focus is in the first cell of the row, focus does not move.
-</td>
-</tr>
-<tr>
-<td><kbd>End</kbd> <kbd>Control + End</kbd></td><td>
-If focus is on a row, moves focus to the last row. If focus is in the last row, focus does not move.
-If focus is on a cell, moves focus to the last cell in the row. If focus is in the last cell of the row, focus does not move. If not all rows are present in the DOM, this can be used to focus on the last row present in the DOM, or on the last row available if the entire database were present in the DOM.
-</td>
-</tr>
-</table>
+- <kbd>Enter</kbd>
+  - : If cell-only focus is enabled and focus is on the first cell with the `aria-expanded` property, opens or closes the child rows. Otherwise, performs the default action for the cell.
+- <kbd>Tab</kbd>
+  - : If the row containing focus contains focusable elements such as an {{HTMLElement('input')}}, {{HTMLElement('button')}} or {{HTMLElement('a')}}, ,moves the focus to the next input in the row. If focus is on the last focusable element in the row, moves focus out of the treegrid widget to the next focusable element.
+- <kbd>Right Arrow</kbd>
+  - : If focus is on a collapsed row, expand the row. If focus is on an expanded row or is on a row that does not have child rows, moves focus to the first cell in the row. If focus is on the right-most cell in a row, focus does not move. If focus is on any other cell, moves focus one cell to the right.
+- <kbd>Left Arrow</kbd>
+  - : If focus is on an expanded row, collapses the row. If focus is on a collapsed row or on a row that does not have child rows, focus does not move. If focus is on the first cell in a row and row focus is supported, moves focus to the row. If focus is on the first cell in a row and row focus is not supported, focus does not move. If focus is on any other cell, moves focus one cell to the left.
+- <kbd>Down Arrow</kbd>
+  - : If focus is on a row, moves focus one row down. If focus is on the last row, focus does not move. If focus is on a cell, moves focus one cell down. If focus is on the bottom cell in the column, focus does not move.
+- <kbd>Up Arrow</kbd>
+  - : If focus is on a row, moves focus one row up. If focus is on the first row, focus does not move. If focus is on a cell, moves focus one cell up. If focus is on the top cell in the column, focus does not move.
+- <kbd>Page Down</kbd>
+  - : If focus is on a row or cell, moves focus down a predetermined number of rows or cells. Usually, it moves down the equivalent of the height of the treegrid, scrolling so the bottom row in the currently visible set of rows becomes one of the first visible rows. If focus is in the last row , focus does not move.
+- <kbd>Page Up</kbd>
+  - : If focus is on a row or cell, moves focus up an predetermined number of rows. Usually, it moves up the equivalent of the height of the treegrid, scrolling so the top row in the currently visible set of rows becomes one of the last visible rows. If focus is in the first row, focus does not move.
+- <kbd>Home</kbd> <kbd>Control + Home</kbd>
+  - : If focus is on a row, moves focus to the first row. If focus is in the first row, focus does not move. If focus is on a cell, moves focus to the first cell in the row. If focus is in the first cell of the row, focus does not move.
+- <kbd>End</kbd> <kbd>Control + End</kbd></td><td>
+  - : If focus is on a row, moves focus to the last row. If focus is in the last row, focus does not move. If focus is on a cell, moves focus to the last cell in the row. If focus is in the last cell of the row, focus does not move. If not all rows are present in the DOM, this can be used to focus on the last row present in the DOM, or on the last row available if the entire database were present in the DOM.
+
 
 If a treegrid supports selection of cells, rows, or columns, the following keys are commonly used for these functions.
 
-<table>
-<tr>
-<td><kbd>Control + Space</kbd></td>
-<td>
-If focus is on a row, selects all cells.
-If focus is on a cell, selects the column that contains the focus.
-</td>
-</tr>
-<tr>
-<td><kbd>Shift + Space</kbd></td>
-<td>
-If focus is on a row, select the row.
-If focus is on a cell, select the row that contains the focus. If the treegrid includes a column with checkboxes for selecting rows, this key can also be used as a shortcut for checking the box when focus is not on the checkbox.
-</td>
-</tr>
-<tr>
-<td><kbd>Control + A</kbd></td>
-<td>Selects all cells.
-</td>
-</tr>
-<tr>
-<td><kbd>Shift + Right Arrow</kbd></td>
-<td>
-if focus is on a cell, extends selection one cell to the right.
-</td>
-</tr>
-<tr>
-<td><kbd>Shift + Left Arrow</kbd></td>
-<td>
-if focus is on a cell, extends selection one cell to the left.
-</td>
-</tr>
-<tr>
-<td><kbd>Shift + Down Arrow</kbd></td>
-<td>
-If focus is on a row, extends selection to all the cells in the next row.
-If focus is on a cell, extends selection one cell down.
-</td>
-</tr>
-<tr>
-<td><kbd>Shift + Up Arrow</kbd></td>
-<td>
-If focus is on a row, extends selection to all the cells in the previous row.
-If focus is on a cell, extends selection one cell up.
-</td>
-</tr>
-</table>
+- <kbd>Control + Space</kbd>
+  - : If focus is on a row, selects all cells. If focus is on a cell, selects the column that contains the focus.
+- <kbd>Shift + Space</kbd>
+  - : If focus is on a row, select the row. If focus is on a cell, select the row that contains the focus. If the treegrid includes a column with checkboxes for selecting rows, this key can also be used as a shortcut for checking the box when focus is not on the checkbox.
+- <kbd>Control + A</kbd>
+  - : Selects all cells.
+- <kbd>Shift + Right Arrow</kbd>
+  - : if focus is on a cell, extends selection one cell to the right.
+- <kbd>Shift + Left Arrow</kbd>
+  - : if focus is on a cell, extends selection one cell to the left.
+- <kbd>Shift + Down Arrow</kbd>
+  - : If focus is on a row, extends selection to all the cells in the next row. If focus is on a cell, extends selection one cell down.
+- <kbd>Shift + Up Arrow</kbd>
+  - : If focus is on a row, extends selection to all the cells in the previous row. If focus is on a cell, extends selection one cell up.
+
 
 If navigation functions can dynamically add more rows or columns to the DOM, key events that move focus to the beginning or end of the grid, such as <kbd>control + End</kbd>, may move focus to the last row in the DOM rather than the last available row in the back-end data.
 
