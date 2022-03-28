@@ -20,6 +20,7 @@ To get the number of children of a specific element, see {{domxref("Element.chil
 A number.
 
 ## Examples
+
 ```js
 document.children;
 // HTMLCollection, usually containing an <html> element, the document's only child

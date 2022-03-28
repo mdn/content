@@ -20,6 +20,7 @@ The **`styleSheetSets`** read-only property returns a live list of all of the cu
 A list of style sheet sets that are available.
 
 ## Examples
+
 Given an {{HTMLElement("ul")}} (list) element with the ID "sheetList", you can populate
 it with the names of all the available style sheet sets with code like this:
 

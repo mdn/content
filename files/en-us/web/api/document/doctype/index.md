@@ -23,6 +23,7 @@ returned object implements the {{domxref("DocumentType")}} interface. Use
 A {{domxref("DocumentType")}} object.
 
 ## Examples
+
 ```js
 var doctypeObj = document.doctype;
 

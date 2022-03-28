@@ -32,6 +32,7 @@ document (e.g. the content of the `<title>` element in an HTML
 document).
 
 ## Examples
+
 ```js
 <!DOCTYPE html>
 <html>

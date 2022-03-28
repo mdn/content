@@ -20,6 +20,7 @@ The **`Document.implementation`** property returns a
 A {{domxref("DOMImplementation")}} object.
 
 ## Examples
+
 ```js
 var modName = "HTML";
 var modVer = "2.0";

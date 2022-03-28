@@ -26,6 +26,7 @@ Some example types are: `text/plain` and `text/html`.
 A {{domxref("DOMString")}} representing the drag data item's type.
 
 ## Examples
+
 This example shows the use of the `type` property.
 
 ```js

@@ -22,6 +22,7 @@ Returns the height of the {{domxref("document")}} object. In most cases, this is
 to the {{HTMLElement("body")}} element of the current document.
 
 ## Examples
+
 ```js
 // alert document height
 alert(document.height);

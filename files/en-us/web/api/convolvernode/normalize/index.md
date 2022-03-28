@@ -28,6 +28,7 @@ effect until the next time the `buffer` attribute is set.
 A boolean.
 
 ## Examples
+
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var convolver = audioCtx.createConvolver();

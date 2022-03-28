@@ -29,6 +29,7 @@ A {{domxref("Node")}} representing `node` where the drag originated. Returns
 `null` for external drags or if the node cannot be accessed.
 
 ## Examples
+
 This example shows the use of the `mozSourceNode` property in the
 {{event("dragend")}} event handler.
 

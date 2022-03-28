@@ -20,6 +20,7 @@ The **`documentURI`** read-only property of the
 A string.
 
 ## Examples
+
 ### JavaScript
 
 ```js

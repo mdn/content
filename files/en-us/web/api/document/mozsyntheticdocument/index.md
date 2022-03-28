@@ -17,9 +17,10 @@ standalone image, video, audio, or the like.
 
 ## Value
 
-`true` if the document is a synthetic one otherwise it's `false`.
+A boolean value that is `true` if the document is synthetic, or `false` otherwise.
 
 ## Examples
+
 This can be useful if you have a contextual menu item you only want to display for
 synthetic documents (or, conversely, for documents that aren't synthetic).
 

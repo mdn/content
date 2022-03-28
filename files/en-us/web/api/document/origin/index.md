@@ -20,6 +20,10 @@ The **`Document.origin`** read-only property returns the
 document's origin. In most cases, this property is equivalent to
 `document.defaultView.location.origin`.
 
+## Value
+
+A string containing the document's origin.
+
 ## Examples
 
 ```js

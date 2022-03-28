@@ -37,6 +37,7 @@ The possible values are:
 A {{domxref("DOMString")}} representing one of the values listed above.
 
 ## Examples
+
 This example shows the use of the `mozCursor` property.
 
 ```js

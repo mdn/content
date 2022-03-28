@@ -22,6 +22,7 @@ will only reference the element while it's initially being processed.
 A {{HTMLElement("script")}} or null.
 
 ## Examples
+
 This example checks to see if the script is being executed asynchronously:
 
 ```js

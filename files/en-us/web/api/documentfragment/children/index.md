@@ -27,6 +27,7 @@ If the document fragment has no element children, then `children` is an empty li
 `length` of `0`.
 
 ## Examples
+
 ```js
 let fragment = new DocumentFragment()
 fragment.children; // HTMLCollection []

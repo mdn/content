@@ -32,6 +32,7 @@ mode isn't currently in use by the `document`>, the returned
 value is `null`.
 
 ## Examples
+
 This example presents a function, `isVideoInFullscreen()`, which looks at
 the value returned by `fullscreenElement`; if the document is in fullscreen
 mode (`fullscreenElement` isn't `null`) and the fullscreen

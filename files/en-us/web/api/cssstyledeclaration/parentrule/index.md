@@ -21,6 +21,7 @@ The CSS rule that contains this declaration block or `null` if this
 {{domxref('CSSStyleDeclaration')}} is not attached to a {{domxref('CSSRule')}}.
 
 ## Examples
+
 The following JavaScript code gets the parent CSS style rule from a
 {{domxref('CSSStyleDeclaration')}}:
 

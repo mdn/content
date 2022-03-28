@@ -29,6 +29,7 @@ Setting the value of this property is equivalent to calling
 > attribute.
 
 ## Examples
+
 ```js
 console.log('Current style sheet set: ' + document.selectedStyleSheetSet);
 

@@ -15,6 +15,7 @@ Returns or sets the color of an active link in the document body. A link is acti
 during the time between `mousedown` and `mouseup` events.
 
 ## Value
+
 A string containing the name of the color (e.g., `blue`, `darkblue`, etc.) or the hexadecimal value of the color (e.g., `#0000FF`).
 
 ## Notes

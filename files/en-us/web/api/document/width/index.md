@@ -23,7 +23,12 @@ pixels.
 
 Not supported by Internet Explorer.
 
+## Value
+
+A number that represents the width of the document in pixels.
+
 ## Examples
+
 ```js
 function init() {
   alert("The width of the document is " + document.width + " pixels.");

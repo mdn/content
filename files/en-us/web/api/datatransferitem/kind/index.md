@@ -29,6 +29,7 @@ the following values:
   - : If the kind of drag data item is a _plain Unicode string_.
 
 ## Examples
+
 This example shows the use of the `kind` property.
 
 ```js

@@ -23,6 +23,7 @@ objects representing the items being dragged in a drag operation, one list item 
 object being dragged. If the drag operation had no data, the list is empty.
 
 ## Examples
+
 This example shows the use of the `items` and
 {{domxref("DataTransfer.types","types")}} properties.
 

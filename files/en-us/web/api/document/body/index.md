@@ -25,6 +25,7 @@ One of the followings:
 
 
 ## Examples
+
 ```js
 // Given this HTML: <body id="oldBodyElement"></body>
 alert(document.body.id); // "oldBodyElement"

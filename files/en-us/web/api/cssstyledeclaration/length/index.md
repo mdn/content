@@ -19,6 +19,7 @@ An integer that provides the number of styles explicitly set on the parent of
 the instance.
 
 ## Examples
+
 The following gets the number of explicitly set styles on the following HTML element:
 
 ```html

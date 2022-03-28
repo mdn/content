@@ -23,6 +23,7 @@ See {{domxref("Element.firstElementChild")}} for the first child element of spec
 A {{domxref("Element")}} object, or `null`.
 
 ## Examples
+
 ```js
 document.firstElementChild;
 // returns the root <html> element, the only child of the document

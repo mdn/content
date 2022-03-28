@@ -23,6 +23,7 @@ See {{domxref("Element.lastElementChild")}} for the last child element of specif
 The root `<html>` element.
 
 ## Examples
+
 ```js
 document.lastElementChild;
 // returns the root <html> element, the only child of the document

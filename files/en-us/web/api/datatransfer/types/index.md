@@ -28,6 +28,7 @@ will be empty. If any files are included in the drag operation, then one of the 
 will be the string `Files`.
 
 ## Examples
+
 This example shows the use of the `types` and
 {{domxref("DataTransfer.items","items")}} properties.
 

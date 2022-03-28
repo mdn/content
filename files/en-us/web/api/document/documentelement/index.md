@@ -21,6 +21,7 @@ example, the {{HTMLElement("html")}} element for HTML documents).
 A {{domxref("Element")}} object.
 
 ## Examples
+
 ```js
 const rootElement = document.documentElement;
 const firstTier = rootElement.childNodes;

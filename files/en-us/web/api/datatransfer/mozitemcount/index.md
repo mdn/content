@@ -27,6 +27,7 @@ This property is {{readonlyInline}}.
 A `number` representing the number of items being dragged.
 
 ## Examples
+
 This example shows the use of the `mozItemCount` property.
 
 ```js

@@ -27,6 +27,7 @@ The style sheet set that was most recently set. If the current style sheet set h
 > {{domxref("document.enableStyleSheetsForSet()")}} is called.
 
 ## Examples
+
 ```js
 let lastSheetSet = document.lastStyleSheetSet;
 

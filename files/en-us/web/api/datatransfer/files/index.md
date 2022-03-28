@@ -23,6 +23,7 @@ A {{domxref("FileList","list")}} of the files in a drag operation, one list item
 each file in the operation. If the drag operation had no files, the list is empty.
 
 ## Examples
+
 There are two live examples of this interface:
 
 - Firefox only: <https://jsfiddle.net/9C2EF/>

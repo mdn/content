@@ -21,6 +21,7 @@ This property is {{readonlyInline}}.
 A {{domxref("DataTransfer")}} object which contains the {{domxref("DragEvent","drag event's data")}}.
 
 ## Examples
+
 This example illustrates accessing the drag and drop data within the
 {{event("dragend")}} event handler.
 

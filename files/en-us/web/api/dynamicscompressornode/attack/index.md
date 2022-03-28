@@ -23,6 +23,7 @@ An {{domxref("AudioParam")}}.
 > **Note:** Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.
 
 ## Examples
+
 ```js
 var audioCtx = new AudioContext();
 var compressor = audioCtx.createDynamicsCompressor();

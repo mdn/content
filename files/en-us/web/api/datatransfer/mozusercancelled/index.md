@@ -29,6 +29,7 @@ A boolean value representing `true` if the user canceled the drag
 event and returns `false` otherwise.
 
 ## Examples
+
 This example shows the use of the `mozUserCancelled` property in the
 {{event("dragend")}} event handler.
 

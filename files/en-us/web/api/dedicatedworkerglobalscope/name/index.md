@@ -24,6 +24,7 @@ the {{domxref("DedicatedWorkerGlobalScope")}}.
 A {{domxref("DOMString")}}.
 
 ## Examples
+
 If a worker is created using a constructor with a `name` option:
 
 ```js

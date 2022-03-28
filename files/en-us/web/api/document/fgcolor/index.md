@@ -21,6 +21,7 @@ the current document.
 A string representing the color as a word (e.g., "red") or hexadecimal value (e.g., "`#ff0000`").
 
 ## Examples
+
 ```js
 document.fgColor = "white";
 document.bgColor = "darkblue";

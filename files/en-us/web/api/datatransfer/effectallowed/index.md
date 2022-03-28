@@ -59,6 +59,7 @@ Internet Explorer will change the value to be lowercased; thus, `linkMove`
 will become `linkmove`, and so on.
 
 ## Examples
+
 This example shows the use of the `effectAllowed` and
 {{domxref("DataTransfer.dropEffect", "dropEffect")}} properties.
 

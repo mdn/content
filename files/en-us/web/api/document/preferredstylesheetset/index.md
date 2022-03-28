@@ -25,6 +25,7 @@ The author's preferred style sheet set. This is determined from the order of sty
 If there isn't a preferred style sheet set defined by the author, the empty string (`""`) is returned.
 
 ## Examples
+
 ```js
 if (document.preferredStyleSheetSet) {
   console.log("The preferred style sheet set is: " + document.preferredStyleSheetSet);

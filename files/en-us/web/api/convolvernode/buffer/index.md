@@ -23,6 +23,7 @@ This _{{domxref("AudioBuffer")}}_ must have the same sample-rate as the `AudioCo
 An {{domxref("AudioBuffer")}}.
 
 ## Examples
+
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var convolver = audioCtx.createConvolver();

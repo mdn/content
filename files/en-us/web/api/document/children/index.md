@@ -31,6 +31,7 @@ If the document has no element children, then `children` is an empty list with a
 `length` of `0`.
 
 ## Examples
+
 ```js
 document.children;
 // HTMLCollection [<html>]
