@@ -1,6 +1,6 @@
 ---
-title: ServiceWorkerGlobalScope.onfetch
-slug: Web/API/ServiceWorkerGlobalScope/onfetch
+title: 'ServiceWorkerGlobalScope: fetch event'
+slug: Web/API/ServiceWorkerGlobalScope/fetch_event
 tags:
   - API
   - Property
@@ -10,13 +10,27 @@ tags:
   - ServiceWorkerGlobalScope
   - Workers
   - onfetch
-browser-compat: api.ServiceWorkerGlobalScope.onfetch
+browser-compat: api.ServiceWorkerGlobalScope.fetch_event
 ---
 {{APIRef("Service Workers API")}}
 
-The **onfetch** property of the {{domxref("ServiceWorkerGlobalScope")}}
-interface is an event handler fired whenever a {{Event("fetch")}} event occurs (usually
-when the {{domxref("fetch()")}} method is called.)
+The **fetch** event is fired when the {{domxref("fetch()")}} method is called.
+
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('fetch', event => { });
+
+onfetch = event => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Syntax
 
@@ -28,7 +42,7 @@ serviceWorkerGlobalScope.onfetch = function(fetchEvent) { /* ... */ };
 
 This code snippet is from the [service
 worker prefetch sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js) (see [prefetch
-example live](https://googlechrome.github.io/samples/service-worker/prefetch/).) The {{domxref("ServiceWorkerGlobalScope.onfetch")}} event handler
+example live](https://googlechrome.github.io/samples/service-worker/prefetch/).) The {{domxref("ServiceWorkerGlobalScope.fetch_event", "onfetch")}} event handler
 listens for the `fetch` event. When fired, the code returns a promise that
 resolves to the first matching request in the {{domxref("Cache")}} object. If no match
 is found, the code fetches a response from the network.

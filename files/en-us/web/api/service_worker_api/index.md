@@ -97,15 +97,15 @@ In the future, service workers will be able to do a number of other useful thing
 - {{DOMxRef("ExtendableMessageEvent")}} {{Experimental_Inline}}
   - : The event object of a {{domxref("ServiceWorkerGlobalScope/message_event")}} event fired on a service worker (when a channel message is received on the {{DOMxRef("ServiceWorkerGlobalScope")}} from another context) — extends the lifetime of such events.
 - {{DOMxRef("FetchEvent")}} {{Experimental_Inline}}
-  - : The parameter passed into the {{DOMxRef("ServiceWorkerGlobalScope.onfetch")}} handler, `FetchEvent` represents a fetch action that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a {{DOMxRef("ServiceWorker")}}. It contains information about the request and resulting response, and provides the {{DOMxRef("FetchEvent.respondWith", "FetchEvent.respondWith()")}} method, which allows us to provide an arbitrary response back to the controlled page.
+  - : The parameter passed into the {{DOMxRef("ServiceWorkerGlobalScope.fetch_event", "onfetch")}} handler, `FetchEvent` represents a fetch action that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a {{DOMxRef("ServiceWorker")}}. It contains information about the request and resulting response, and provides the {{DOMxRef("FetchEvent.respondWith", "FetchEvent.respondWith()")}} method, which allows us to provide an arbitrary response back to the controlled page.
 - {{DOMxRef("InstallEvent")}} {{Experimental_Inline}}
-  - : The parameter passed into the {{DOMxRef("ServiceWorkerGlobalScope.oninstall", "oninstall")}} handler, the `InstallEvent` interface represents an install action that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a {{DOMxRef("ServiceWorker")}}. As a child of {{DOMxRef("ExtendableEvent")}}, it ensures that functional events such as {{DOMxRef("FetchEvent")}} are not dispatched during installation.
+  - : The parameter passed into the {{DOMxRef("ServiceWorkerGlobalScope.install_event", "oninstall")}} handler, the `InstallEvent` interface represents an install action that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a {{DOMxRef("ServiceWorker")}}. As a child of {{DOMxRef("ExtendableEvent")}}, it ensures that functional events such as {{DOMxRef("FetchEvent")}} are not dispatched during installation.
 - {{DOMxRef("NavigationPreloadManager")}} {{Experimental_Inline}}
   - : Provides methods for managing the preloading of resources with a service worker.
 - {{DOMxRef("Navigator.serviceWorker")}}
   - : Returns a {{DOMxRef("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{DOMxRef("ServiceWorker")}} objects for the [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
 - {{DOMxRef("NotificationEvent")}} {{Experimental_Inline}}
-  - : The parameter passed into the {{DOMxRef("ServiceWorkerGlobalScope.onnotificationclick", "onnotificationclick")}} handler, the `NotificationEvent` interface represents a notification click event that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a {{DOMxRef("ServiceWorker")}}.
+  - : The parameter passed into the {{DOMxRef("ServiceWorkerGlobalScope.notificationclick_event", "onnotificationclick")}} handler, the `NotificationEvent` interface represents a notification click event that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a {{DOMxRef("ServiceWorker")}}.
 - {{DOMxRef("ServiceWorker")}} {{Experimental_Inline}}
   - : Represents a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same `ServiceWorker` object.
 - {{DOMxRef("ServiceWorkerContainer")}} {{Experimental_Inline}}

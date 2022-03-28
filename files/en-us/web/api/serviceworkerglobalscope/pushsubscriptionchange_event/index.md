@@ -19,28 +19,21 @@ The **`pushsubscriptionchange`** event is sent to the [global scope](/en-US/docs
 
 This may occur if the subscription was refreshed by the browser, but it may also happen if the subscription has been revoked or lost.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("PushSubscriptionChangeEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange", "onpushsubscriptionchange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('pushsubscriptionchange', event => { });
+
+onpushsubscriptionchange = event => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Usage notes
 
@@ -74,7 +67,7 @@ self.addEventListener("pushsubscriptionchange", event => {
 
 When a `pushsubscriptionchange` event arrives, indicating that the subscription has expired, we resubscribe by calling the push manager's {{domxref("PushManager.subscribe", "subscribe()")}} method. When the returned promise is resolved, we receive the new subscription. This is delivered to the app server using a {{domxref("fetch()")}} call to post a {{Glossary("JSON")}} formatted rendition of the subscription's {{domxref("PushSubscription.endpoint", "endpoint")}} to the app server.
 
-You can also use the {{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange", "onpushsubscriptionchange")}} event handler property to set up the event handler:
+You can also use the `onpushsubscriptionchange` event handler property to set up the event handler:
 
 ```js
 self.onpushsubscriptionchange = event => {
@@ -96,4 +89,3 @@ self.onpushsubscriptionchange = event => {
 ## See also
 
 - [Using the Push API](/en-US/docs/Web/API/Push_API)
-- {{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange", "onpushsubscriptionchange")}} event handler property

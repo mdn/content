@@ -31,7 +31,7 @@ A {{domxref("Request")}} object.
 
 This code snippet is from the [service
 worker fetch sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js) ([run the fetch
-sample live](https://googlechrome.github.io/samples/service-worker/prefetch/)). The {{domxref("ServiceWorkerGlobalScope.onfetch")}} event handler
+sample live](https://googlechrome.github.io/samples/service-worker/prefetch/)). The {{domxref("ServiceWorkerGlobalScope.fetch_event", "onfetch")}} event handler
 listens for the `fetch` event. When fired, pass a promise that back to the
 controlled page to {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}}.
 This promise resolves to the first matching URL request in the {{domxref("Cache")}}

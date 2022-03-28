@@ -29,7 +29,7 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} or otherwise 
 
 This code snippet is from [Speed up Service Worker with Navigation Preloads](https://developers.google.com/web/updates/2017/02/navigation-preload#the-solution).
 
-The {{domxref("ServiceWorkerGlobalScope.onfetch")}} event handler listens for the `fetch` event.
+The {{domxref("ServiceWorkerGlobalScope.fetch_event", "onfetch")}} event handler listens for the `fetch` event.
 When fired, the handler calls {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}} to pass a promise back to the controlled page.
 This promise will resolve with the requested resource.
 
