@@ -45,7 +45,9 @@ reduce(function(accumulator, currentValue, index, array) { /* ... */ }, initialV
 
 - `callbackFn`
 
-  - : Function to execute on each value in the typed array, taking four arguments:
+  - : Function to execute on each value in the typed array.
+
+    The function is called with the following arguments:
 
     - `accumulator`
       - : The value previously returned in the last invocation of the callback, or

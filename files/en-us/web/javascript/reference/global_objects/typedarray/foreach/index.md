@@ -42,7 +42,9 @@ forEach(function(element, index, array) { /* ... */ }, thisArg)
 
 - `callbackFn`
 
-  - : Function that produces an element of the new typed array, taking three arguments:
+  - : Function that produces an element of the new typed array.
+
+    The function is called with the following arguments:
 
     - `element`
       - : The current element being processed in the typed array.

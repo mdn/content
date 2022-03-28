@@ -42,9 +42,10 @@ filter(function(element, index, array) { /* ... */ }, thisArg)
 ### Parameters
 
 - `callbackFn`
-  - : Function to test each element of the typed array. Invoked with arguments
-    `(element, index, array)`. Return
-    `true` to keep the element, `false` otherwise.
+  - : Function to test each element of the typed array.
+
+    The function is called with the following arguments: `(element, index, array)`. 
+    Return `true` to keep the element, `false` otherwise.
 - `thisArg`{{optional_inline}}
   - : Value to use as `this` when executing `callbackFn`.
 

@@ -41,13 +41,15 @@ every(function(element, index, array) { /* ... */ }, thisArg)
 
 - `callbackFn`
 
-  - : A function to test for each element, taking three arguments:
+  - : A function to test for each element.
+  
+    The function is called with the following arguments:
 
     - `element`
       - : The current element being processed in the array.
-    - `index` {{Optional_inline}}
+    - `index`
       - : The index of the current element being processed in the array.
-    - `array` {{Optional_inline}}
+    - `array`
       - : The array `every` was called upon.
 
 - `thisArg` {{Optional_inline}}

@@ -41,13 +41,15 @@ forEach(function(element, index, array) { /* ... */ }, thisArg)
 
 - `callbackFn`
 
-  - : Function to execute on each element. It accepts between one and three arguments:
+  - : Function to execute on each element.
+  
+    The function is called with the following arguments:
 
     - `element`
       - : The current element being processed in the array.
-    - `index` {{optional_inline}}
+    - `index`
       - : The index of `element` in the array.
-    - `array` {{optional_inline}}
+    - `array`
       - : The array `forEach()` was called upon.
 
 - `thisArg` {{optional_inline}}
