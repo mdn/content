@@ -194,13 +194,13 @@ Once we've done all that we can set up a Heroku account, get the Heroku client, 
 
 That's all the overview you need in order to get started (see [How Heroku works](https://devcenter.heroku.com/articles/how-heroku-works) for a more comprehensive guide).
 
-### Creating an application repository in Github
+### Creating an application repository in GitHub
 
 Heroku is closely integrated with the **git** source code version control system, using it to upload/synchronize any changes you make to the live system. It does this by adding a new heroku "remote" repository named _heroku_ pointing to a repository for your source on the Heroku cloud. During development you use git to store changes on your own repository. When you want to deploy your site, you sync your changes to the Heroku repository.
 
 > **Note:** If you're used to following good software development practices you are probably already using git or some other SCM system. If you already have a git repository, then you can skip this step.
 
-There are a lot of ways to work with git, but one of the easiest is to first set up an account on [Github](https://github.com/), create the repository there, and then sync to it locally:
+There are a lot of ways to work with git, but one of the easiest is to first set up an account on [GitHub](https://github.com/), create the repository there, and then sync to it locally:
 
 1. Visit <https://github.com/> and create an account.
 2. Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
@@ -232,7 +232,7 @@ Now that the repository ("repo") is created we are going to want to clone it on 
     cd django_local_library
     ```
 
-The final steps are to copy your application into this local project directory and then add (or "push", in git lingo) the local repository to your remote Github repository:
+The final steps are to copy your application into this local project directory and then add (or "push", in git lingo) the local repository to your remote GitHub repository:
 
 1. Copy your Django application into this folder (all the files at the same level as **manage.py** and below, **not** their containing locallibrary folder).
 2. Open the **.gitignore** file, copy the following lines into the bottom of it, and then save (this file is used to identify files that should not be uploaded to git by default).
@@ -274,15 +274,15 @@ The final steps are to copy your application into this local project directory a
     git commit -m "First version of application moved into github"
     ```
 
-6. At this point, the remote repository has not been changed. Synchronize (`push`) your local repository to the remote Github repository using the following command:
+6. At this point, the remote repository has not been changed. Synchronize (`push`) your local repository to the remote GitHub repository using the following command:
 
     ```bash
     git push origin main
     ```
 
-> **Warning:** In 2020 Github change the default repo branch name to "main" (from "master"). If using an older/existing repository you might call `git push origin master` instead.
+> **Warning:** In 2020 GitHub change the default repo branch name to "main" (from "master"). If using an older/existing repository you might call `git push origin master` instead.
 
-When this operation completes, you should be able to go back to the page on Github where you created your repo, refresh the page, and see that your whole application has now been uploaded. You can continue to update your repository as files change using this add/commit/push cycle.
+When this operation completes, you should be able to go back to the page on GitHub where you created your repo, refresh the page, and see that your whole application has now been uploaded. You can continue to update your repository as files change using this add/commit/push cycle.
 
 > **Note:** This is a good point to make a backup of your "vanilla" project — while some of the changes we're going to be making in the following sections might be useful for deployment on any platform (or development) others might not.
 >
@@ -470,7 +470,7 @@ python-3.8.6
 
 > **Note:** Heroku only supports a small number of [Python runtimes](https://devcenter.heroku.com/articles/python-support#supported-python-runtimes) (at time of writing, this includes the one above). Heroku will use a supported runtime irrespective of the value specified in this file.
 
-#### Re-test and save changes to Github
+#### Re-test and save changes to GitHub
 
 Before we proceed, lets test the site again locally and make sure it wasn't broken by any of our changes above. Run the development web server as usual and then check the site still works as you expect on your browser.
 
@@ -478,7 +478,7 @@ Before we proceed, lets test the site again locally and make sure it wasn't brok
 python3 manage.py runserver
 ```
 
-Next, lets `push` our changes to Github. In the terminal (after having navigated to our local repository), enter the following commands:
+Next, lets `push` our changes to GitHub. In the terminal (after having navigated to our local repository), enter the following commands:
 
 ```python
 git add -A
@@ -606,7 +606,7 @@ ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127
 # ALLOWED_HOSTS = ['fathomless-scrubland-30645.herokuapp.com', '127.0.0.1']
 ```
 
-Then save your settings and commit them to your Github repo and to Heroku:
+Then save your settings and commit them to your GitHub repo and to Heroku:
 
 ```bash
 git add -A
@@ -639,7 +639,7 @@ If you need more information than these can provide you will need to start looki
 
 ## Summary
 
-That's the end of this tutorial on setting up Django apps in production, and also the series of tutorials on working with Django. We hope you've found them useful. You can check out a fully worked-through version of the [source code on Github here](https://github.com/mdn/django-locallibrary-tutorial).
+That's the end of this tutorial on setting up Django apps in production, and also the series of tutorials on working with Django. We hope you've found them useful. You can check out a fully worked-through version of the [source code on GitHub here](https://github.com/mdn/django-locallibrary-tutorial).
 
 The next step is to read our last few articles, and then complete the assessment task.
 

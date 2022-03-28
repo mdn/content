@@ -10,13 +10,13 @@ tags:
   - git
   - publish
 ---
-[GitHub](https://github.com/) is a "social coding" site. It allows you to upload code repositories for storage in the [Git](https://git-scm.com/) **version control system.** You can then collaborate on code projects, and the system is open-source by default, meaning that anyone in the world can find your GitHub code, use it, learn from it, and improve on it. You can do that with other people's code too! This article provides a basic guide to publishing content using Github's gh-pages feature.
+[GitHub](https://github.com/) is a "social coding" site. It allows you to upload code repositories for storage in the [Git](https://git-scm.com/) **version control system.** You can then collaborate on code projects, and the system is open-source by default, meaning that anyone in the world can find your GitHub code, use it, learn from it, and improve on it. You can do that with other people's code too! This article provides a basic guide to publishing content using GitHub's gh-pages feature.
 
 ## Publishing content
 
 GitHub is a very important and useful community to get involved in, and Git/GitHub is a very popular [version control system](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) — most tech companies now use it in their workflow. GitHub has a very useful feature called [GitHub Pages](https://pages.github.com/), which allows you to publish website code live on the Web.
 
-### Basic Github setup
+### Basic GitHub setup
 
 1. First of all, [install Git](https://git-scm.com/downloads) on your machine. This is the underlying version control system software that GitHub works on top of.
 2. Next, [sign up for a GitHub account](https://github.com/join). It's simple and easy.
@@ -24,7 +24,7 @@ GitHub is a very important and useful community to get involved in, and Git/GitH
 
 ### Preparing your code for upload
 
-You can store any code you like in a Github repository, but to use the GitHub Pages feature to full effect, your code should be structured as a typical website, e.g. with the primary entry point being an HTML file called `index.html`.
+You can store any code you like in a GitHub repository, but to use the GitHub Pages feature to full effect, your code should be structured as a typical website, e.g. with the primary entry point being an HTML file called `index.html`.
 
 The other thing you need to do before moving on is to initialise your code directory as a Git repository. To do this:
 
@@ -42,7 +42,7 @@ The other thing you need to do before moving on is to initialise your code direc
 
 #### An aside on command line interfaces
 
-The best way to upload your code to Github is via the command line — this is a window where you type in commands to do things like create files and run programs, rather than clicking inside a user interface. It will look something like this:
+The best way to upload your code to GitHub is via the command line — this is a window where you type in commands to do things like create files and run programs, rather than clicking inside a user interface. It will look something like this:
 
 ![](command-line.png)
 

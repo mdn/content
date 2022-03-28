@@ -47,7 +47,7 @@ Code samples should be as self-contained and easy to understand as possible. The
 Further general best practices are as follows:
 
 - The sample should be short and ideally only show the feature you are immediately interested in.
-- **Only** include code that is essential for the example. A large amount of non-relevant code can easily distract or confuse the audience. If you want to provide a full, more lengthy, example put it in one of our [Github repos](https://github.com/mdn/) (or a JSBin, Codepen, or similar) and then provide the link to the full version above or below the sample.
+- **Only** include code that is essential for the example. A large amount of non-relevant code can easily distract or confuse the audience. If you want to provide a full, more lengthy, example put it in one of our [GitHub repos](https://github.com/mdn/) (or a JSBin, Codepen, or similar) and then provide the link to the full version above or below the sample.
 - Don't include unnecessary server-side code, libraries, frameworks, preprocessors, and other such dependencies — they make the code less portable, and harder to run and understand. Use vanilla code where possible.
 - Don't assume knowledge of any libraries, frameworks, preprocessors, or other non-native features. For example, use class names that make sense within the example rather than classnames that make sense to BEM or Bootstrap users.
 - Write your code as cleanly and understandably as possible, even if it is not the most efficient way to do it.

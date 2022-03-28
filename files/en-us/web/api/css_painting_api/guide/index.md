@@ -73,7 +73,7 @@ This can be done using the paint worklet's `addModule()` method in a `<script>` 
 
 ## Using the paint worklet
 
-In our example, the paintworklet is stored on Github. To use it, we first register it:
+In our example, the paintworklet is stored on GitHub. To use it, we first register it:
 
 ```js
 CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/01partOne/header-highlight.js');

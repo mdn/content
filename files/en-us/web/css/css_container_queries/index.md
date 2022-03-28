@@ -123,7 +123,7 @@ You can then take a look at [my demo](https://codepen.io/rachelandrew/pen/NWdaxd
 
 ## Share your feedback
 
-This early stage of development is the perfect time to share your feedback on the specification as it develops. Specification author Miriam Suzanne is keeping [a list of open questions](https://css.oddbird.net/rwd/query/explainer/). Issues raised against the feature can be found in [a project](https://github.com/w3c/csswg-drafts/projects/18) on the CSS Working Group Github. If you have thoughts on any of these questions, or want to raise something new, please do!
+This early stage of development is the perfect time to share your feedback on the specification as it develops. Specification author Miriam Suzanne is keeping [a list of open questions](https://css.oddbird.net/rwd/query/explainer/). Issues raised against the feature can be found in [a project](https://github.com/w3c/csswg-drafts/projects/18) on the CSS Working Group GitHub. If you have thoughts on any of these questions, or want to raise something new, please do!
 
 It is always helpful to see use cases, particularly those that might not be solved by the current proposal. Any feedback will be very welcome and will help make the feature even better once in lands in release versions of browsers.
 

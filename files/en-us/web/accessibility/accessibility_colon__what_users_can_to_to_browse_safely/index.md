@@ -62,7 +62,7 @@ Browsers offer much power to their users; it's just a matter of knowing where to
 #### Use browser extensions
 
 - [Gif Blocker](https://chrome.google.com/webstore/detail/gif-blocker/ahkidgegbmbnggcnmejhobepkaphkfhl?hl=en) For Chrome, GIF Blocker is an extension available at the web store.
-- [Gif Scrubber](https://chrome.google.com/webstore/detail/gif-scrubber/gbdacbnhlfdlllckelpdkgeklfjfgcmp?hl=en) Gif Scrubber is a chrome extension that allows you to control gifs like a video player. There is a Github repository for it at **<https://github.com/0ui/gif-scrubber>**
+- [Gif Scrubber](https://chrome.google.com/webstore/detail/gif-scrubber/gbdacbnhlfdlllckelpdkgeklfjfgcmp?hl=en) Gif Scrubber is a chrome extension that allows you to control gifs like a video player. There is a GitHub repository for it at **<https://github.com/0ui/gif-scrubber>**
 - [Beeline Reader](https://www.beelinereader.com/) Beeline Reader has a browser extension that allows you to set up for grayscale and Dyslexi font, among other things
 
 ![Screenshot showing modes of Beeline Reader a user can adjust in browser](beelinereader.png)

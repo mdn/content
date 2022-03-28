@@ -218,7 +218,7 @@ Method: test_one_plus_one_equals_two.
 FAIL: test_false_is_true (catalog.tests.tests_models.YourTestClass)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "D:\Github\django_tmp\library_w_t_2\locallibrary\catalog\tests\tests_models.py", line 22, in test_false_is_true
+  File "D:\GitHub\django_tmp\library_w_t_2\locallibrary\catalog\tests\tests_models.py", line 22, in test_false_is_true
     self.assertTrue(False)
 AssertionError: False is not true
 

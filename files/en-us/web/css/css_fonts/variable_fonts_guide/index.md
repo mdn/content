@@ -249,7 +249,7 @@ The following example pages show two different ways to structure your CSS. The f
 ## Resources
 
 - [W3C CSS Fonts Module 4 Specification](https://drafts.csswg.org/css-fonts-4) (editor's draft)
-- [W3C Github issue queue](https://github.com/w3c/csswg-drafts/issues)
+- [W3C GitHub issue queue](https://github.com/w3c/csswg-drafts/issues)
 - [Microsoft Open Type Variations introduction](https://docs.microsoft.com/typography/opentype/spec/otvaroverview)
 - [Microsoft OpenType Design-Variation Axis Tag Registry](https://docs.microsoft.com/typography/opentype/spec/dvaraxisreg)
 - [Wakamai Fondue](https://wakamaifondue.com) (a site that will tell you what your font can do via a simple drag-and-drop inspection interface)

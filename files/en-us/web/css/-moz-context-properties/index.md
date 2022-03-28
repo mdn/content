@@ -79,7 +79,7 @@ Now that you've done this, the SVG image can use the values of the {{SVGAttr("fi
 
 Here we've set the image `src` to a data URI containing a simple SVG image; the `<rect>` inside has been made to take its `fill` and `stroke` values from the {{SVGAttr("fill")}} and {{SVGAttr("stroke")}} set on the `<img>` element by giving them the `context-fill`/`context-stroke` keywords in their values, along with a fallback color for the fill (red) which will be used in the case that the SVG is loaded standalone in a top-level window (where it will have no context element to provide context values). Note that if a color is set directly on the SVG, but then the context color is also specified, the context color overrides the direct color.
 
-> **Note:** You can find a [working example on Github](https://mdn.github.io/css-examples/moz-context-properties/).
+> **Note:** You can find a [working example on GitHub](https://mdn.github.io/css-examples/moz-context-properties/).
 
 ## Specifications
 

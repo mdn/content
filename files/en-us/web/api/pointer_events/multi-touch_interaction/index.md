@@ -12,7 +12,7 @@ Pointer events extend DOM input events to support various pointing input devices
 
 Pointer events have many similarities to mouse events but they support multiple simultaneous pointers such as multiple fingers on a touch screen. This additional feature can be used to provide richer user interaction models but at the cost of additional complexity in the multi-touch interaction handling. This document demonstrates via example code, using pointer events with different multi-touch interactions.
 
-A _live_ version of this application is available on [Github](https://mdn.github.io/dom-examples/pointerevents/Multi-touch_interaction.html). The [source code is available on Github](https://github.com/mdn/dom-examples/blob/master/pointerevents/Multi-touch_interaction.html); pull requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
+A _live_ version of this application is available on [GitHub](https://mdn.github.io/dom-examples/pointerevents/Multi-touch_interaction.html). The [source code is available on GitHub](https://github.com/mdn/dom-examples/blob/master/pointerevents/Multi-touch_interaction.html); pull requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
 
 ## Example
 
