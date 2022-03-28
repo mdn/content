@@ -54,7 +54,7 @@ As you can see, the `length` property does not necessarily indicate the number o
 
 - `Writable`: If this attribute set to `false`, the value of the property cannot be changed.
 - `Configurable`: If this attribute set to `false`, any attempts to delete the property or change its attributes (`Writable`, `Configurable`, or `Enumerable`) will fail.
-- `Enumerable`: If this attribute set to `true`, the property will be iterated over during [for](/en-US/docs/Web/JavaScript/Reference/Statements/for) or [for...in](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops.
+- `Enumerable`: If this attribute set to `true`, the property will be iterated over during [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) or [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops.
 
 ## Examples
 
