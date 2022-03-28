@@ -76,7 +76,7 @@ Cache-Control: public
 #### Expiration
 
 The most important directive here is `max-age=<seconds>`, which is the maximum amount of time in which a resource will be considered [fresh](#freshness).
-This directive is relative to the time that the response was sent by the server, and overrides the {{HTTPHeader("Expires")}} header (if set). 
+This directive is relative to the time that the response was sent by the server, and overrides the {{HTTPHeader("Expires")}} header (if set).
 
 ```
 Cache-Control: max-age=31536000

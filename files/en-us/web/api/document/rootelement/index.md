@@ -23,7 +23,6 @@ documents.
 
 For SVG elements, the {{domxref("Element")}} that is the root element of the {{domxref("document")}}; otherwise `null`.
 
-
 If the document is a non-empty SVG document, then the `rootElement` will be
 an {{domxref("SVGSVGElement")}}, identical to the `documentElement`.
 

@@ -19,10 +19,9 @@ The **`Document.body`** property represents the
 
 One of the followings:
 
-- {{HTMLElement("body")}} 
+- {{HTMLElement("body")}}
 - {{HTMLElement("frameset")}}
 - `null`
-
 
 ## Examples
 
