@@ -128,7 +128,7 @@ If the string contains the substring, it returns the index of the first occurren
 
 ```js
 const tagline = 'MDN - Resources for developers, by developers';
-console.log(tagline.indexOf("developers")); // 20
+console.log(tagline.indexOf('developers')); // 20
 ```
 
 Starting at `0`, if you count the number of characters (including the whitespace) from the beginning of the string, the first occurrence of the substring `"developers"` is at index `20`.
