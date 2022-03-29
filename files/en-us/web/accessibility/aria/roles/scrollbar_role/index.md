@@ -140,8 +140,8 @@ When using the ARIA roles instead of native UI features, CSS must be used to sty
 CSS could have been used to ensure the overflowing value of PI had a native scrollbar:
 
 ```html
-<h3>Pi</h3>
-<p class="pi">
+<h3 id="PI">Pi</h3>
+<p class="pi" tabindex="0" aria-labelledby="PI">
 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679
 </p>
 ```
@@ -152,7 +152,7 @@ CSS could have been used to ensure the overflowing value of PI had a native scro
 }
 ```
 
-The above CSS means a native scroll bar will appear when the user interacts with the paragraph's viewport if the lenght of the longest word in the paragraph is wider than the paragraphs containing box.
+The above CSS means a native scroll bar will appear when the user interacts with the paragraph's viewport if the lenght of the longest word in the paragraph is wider than the paragraphs containing box. The `tabindex` attribute was added to allow people using a keyboard to navigate to, and scroll around the overflowed content.
 
 ## Specifications
 
