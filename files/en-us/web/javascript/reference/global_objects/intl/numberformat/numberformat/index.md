@@ -191,9 +191,29 @@ new Intl.NumberFormat(locales, options)
         - "`lessPrecision`": the result with less precision wins a conflict
 
     - `roundingIncrement`
-      - : A Number in the following list:
+      - : Specifies the rounding-increment precision. Must be one of the following integers:
         "`1`", " `2`", "`5`", "`10`", "`20`", " `25`", "`50`", "`100`", "`200`", "`250`", "`500`", "`1000`", "`2000`", "`2500`", " `5000`".
-        > **Note:** `roundingIncrement` option cannot be mixed with significant digits rounding or any setting of `roundingPriority` other than "auto".
+        > **Note:** The `roundingIncrement` option controls the rounding increment to be used when formatting numbers:
+        - It indicates the increment at which rounding should take place relative to the calculated rounding magnitude.
+        - It cannot be mixed with significant-digits rounding or any setting of `roundingPriority` other than `auto`.
+        >
+        > For example, if `maximumFractionDigits` is 2 and `roundingIncrement` is 5, then the number is rounded to the nearest 0.05 ("nickel rounding").
+        > ```js
+        >
+        > const nf = new Intl.NumberFormat("en-US", {
+        >   style: "currency",
+        >   currency: "USD",
+        >   maximumFractionDigits: 2, 
+        >   roundingIncrement: 5
+        > });
+        >
+        > console.log(nf.format(11.29));  // > output: "$11.30"
+        > console.log(nf.format(11.25));  // > output: "$11.25"
+        > console.log(nf.format(11.22));  // > output: "$11.20"  
+        > ```
+        > If you set `minimumFractionDigits` and `maximumFractionDigits`, they must set them to the same value; otherwise a `RangeError` is thrown.
+        >
+     
 
     - `trailingZeroDisplay`
       - : A string expressing the strategy for displaying trailing zeros on whole numbers. The default is "`auto`".
