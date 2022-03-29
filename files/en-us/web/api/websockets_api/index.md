@@ -58,6 +58,7 @@ The **WebSocket API** is an advanced technology that makes it possible to open a
 - [Channels](https://channels.readthedocs.io/en/stable/index.html): Django library that adds support for WebSockets (and other protocols that require long running asynchronous connections).
 - [Flask-SocketIO](https://flask-socketio.readthedocs.io/en/latest/): gives Flask applications access to low latency bi-directional communications between the clients and the server.
 - [Gorilla WebSocket](https://pkg.go.dev/github.com/gorilla/websocket): Gorilla WebSocket is a [Go](https://golang.org/) implementation of the WebSocket protocol.
+- [Soketi](https://docs.soketi.app/): Soketi is a simple, fast, and resilient open-source WebSockets server. The server is built on top of uWebSockets.js - a [C++](https://devdocs.io/cpp/) application ported to Node.js.
 
 ## Related Topics
 
