@@ -21,13 +21,13 @@ A `menu` widget is usually opened, or made visible, by activating a menu button,
 
 When a user activates a choice in a menu, the menu usually closes. If the menu choice action opens a submenu, the menu remains open as the submenu is opened. 
 
-When a menu opens, keyboard focus is placed on the first menu item. To be keyboard accessible, you need to [manage focus](https://usability.yale.edu/web-accessibility/articles/focus-keyboard-operability) for all descendants: all menu items within the `menu` are focusable; the menu button which opens the menu and the menu items, rather than the menu itself, are the focusable elements. 
+When a menu opens, keyboard focus is placed on the first menu item. To be keyboard accessible, you need to [manage focus](https://usability.yale.edu/web-accessibility/articles/focus-keyboard-operability) for all descendants: all menu items within the `menu` are focusable. The menu button which opens the menu and the menu items, rather than the menu itself, are the focusable elements. 
 
 Menu items include [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role), and [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role). [Disabled](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) menu items are focusable but cannot be activated. 
 
 Menu items can be grouped in elements with the [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role, and separated by elements with role [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role). Neither `group` nor `separator` receive focus or are interactive. 
 
-If a `menu` is opened as a result of a context action, <kbd>Escape</kbd> or <kbd>Enter</kbd> may return focus to the invoking context. 
+If a `menu` is opened as a result of a context action, <kbd>Escape</kbd> or <kbd>Enter</kbd> may return focus to the invoking context. If focus was on the menu button, <kbd>Enter</kbd> opens the menu, giving focus to the first menu item. If focus is on the menu itself, <kbd>Escape</kbd> closes the menu and returns focus to the menubutton or parent menubar item (or the context action that opened the menu). 
 
 Elements with the role `menu` have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) value of `vertical`. Include `aria-orientation="horizontal"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation).
 
@@ -77,7 +77,51 @@ If the menu is visually persistent, consider the [`menubar`](/en-US/docs/Web/Acc
 
 ## Examples
 
-The following snippet of code is a popup menu that is displayed when the menu button is activated. It is a menu to select the text color from a list of color options:
+Below are two example menu implementations. 
+
+### Example 1: navigation menu
+
+<div>
+  <button id="menubutton" aria-haspopup="true" aria-controls="menu">
+    <img src="hamburger.svg" alt="Menu: Page Sections">
+  </button>
+  <ul id="menu" role="menu" aria-labelledby="menubutton">
+    <li role="presentation">
+      <a role="menuitem" href="#description">
+        Description
+      </a>
+    </li>
+    <li role="presentation">
+      <a role="menuitem" href="#associated_wai-aria_roles_states_and_properties">
+        Associated WAI-ARIA roles, states, and properties
+      </a>
+    </li>
+    <li role="presentation">
+      <a role="menuitem" href="#keyboard_interactions">
+        Keyboard interactions
+      </a>
+    </li>
+    <li role="presentation">
+      <a role="menuitem" href="#examples">
+        Examples
+      </a>
+    </li>
+    <li role="presentation">
+      <a role="menuitem" href="#specifications">
+        Specifications
+      </a>
+    </li>
+    <li role="presentation">
+      <a role="menuitem" href="#see_also">
+        See Also
+      </a>
+    </li>
+  </ul>
+</div>
+
+### Example 2: menubar submenu option picker
+
+The following snippet of code is a popup menu nested in a menubar. It is displayed when the menu button is activated. It is a menu to select the text color from a list of color options:
 
 ```html
 <div>
@@ -97,11 +141,13 @@ The button that opens the menu has [`aria-haspopup="menu"`](/en-US/docs/Web/Acce
 
 For a menu to open, the user generally interacts with a menu button as the opener. The menu button must be focusable and respond to both click and keyboard events. When focused, selecting <kbd>Enter</kbd>, <kbd>Space</kbd>, <kbd>Down Arrow</kbd>, or the <kbd>Up Arrow</kbd> should open the menu and place focus on a menu item.  
 
-The opening and closing of the menu toggles the [`aria-expanded="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute on the button. It is added when the menu is open. Removed or set to `false` when the menu is closed. The `true` value indicates that the menu is displayed and that activating the menu button closes the menu. Keyboard users should not be able to focus on the the menu button when the menu is open.
+The opening and closing of the menu toggles the [`aria-expanded="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute on the button. It is added when the menu is open. Removed or set to `false` when the menu is closed. The `true` value indicates that the menu is displayed and that activating the menu button closes the menu. 
+
+When the menu is open, the button itself generally does not received focus as users arrow thru the menuitems. Rather, <kbd>Escape</kbd> and optionally <kbd>Shift + Tab</kbd> closes the menu and returns focus to the menu button. 
 
 The `menu` role was set on the {{HTMLElement('ul')}}, identifying the `<ul>` element as a menu. 
 
-The showing and hiding of the menu can be done with CSS. For example, in this code example with can use the attribute and adjacent sibling selectors to toggle the visibility of the menu:
+The showing and hiding of the menu can be done with CSS. For example, in these code examples we can use the attribute and adjacent sibling selectors to toggle the visibility of the menu:
 
 ```css
 [role="menu"] { 
@@ -112,7 +158,7 @@ The showing and hiding of the menu can be done with CSS. For example, in this co
 }
 ```
 
-The `aria-label="Color: purple"` is set on the `menu` element. It defines the accessible name for the menu as "Text color: purple"; identifying the purpose of the menu (selecting a text color) and the current value (purple). When a selection to a new color is made, the value of the `aria-label` property should be updated as well.
+The navigation example has a static button. In submenu example has a button that gets updated when the user selects a new value. In this case, the `aria-label="Text Color: purple"` is set on the `menu` element. It defines the accessible name for the menu as "Text color: purple"; identifying the purpose of the menu (selecting a text color) and the current value (purple). When a selection to a new color is made, the value of the `aria-label` property should be updated as well.
 
 ## Specifications
 
@@ -127,7 +173,7 @@ The `aria-label="Color: purple"` is set on the `menu` element. It defines the ac
 - [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
 - [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
 - [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
-- [`aria-haspopup](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup)
+- [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup)
 
 <section id="Quick_links">
 
