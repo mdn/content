@@ -99,7 +99,7 @@ function provided by its {{jsxref("Collator.prototype.compare", "compare")}} pro
 
 ```js
 let items = ['réservé', 'Premier', 'Cliché', 'communiqué', 'café', 'Adieu'];
-items.sort( (a, b) => a.localeCompare(b, 'fr', {ignorePunctuation: true}));
+items.sort( (a, b) => a.localeCompare(b, 'fr', { ignorePunctuation: true }));
 // ['Adieu', 'café', 'Cliché', 'communiqué', 'Premier', 'réservé']
 ```
 
@@ -155,7 +155,7 @@ console.log('ä'.localeCompare('a', 'sv', { sensitivity: 'base' })); // a positi
 console.log("2".localeCompare("10")); // 1
 
 // numeric using options:
-console.log("2".localeCompare("10", undefined, {numeric: true})); // -1
+console.log("2".localeCompare("10", undefined, { numeric: true })); // -1
 
 // numeric using locales tag:
 console.log("2".localeCompare("10", "en-u-kn-true")); // -1
