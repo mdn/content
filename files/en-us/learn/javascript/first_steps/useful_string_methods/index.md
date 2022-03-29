@@ -127,7 +127,7 @@ You can find the position of a substring inside a larger string using the {{jsxr
 If the string contains the substring, it returns the index of the first occurrence of the substring, and `-1` otherwise.
 
 ```js
-let tagline = "MDN - Resources for developers, by developers";
+const tagline = 'MDN - Resources for developers, by developers';
 console.log(tagline.indexOf("developers")); // 20
 ```
 
