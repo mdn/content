@@ -142,11 +142,11 @@ This, on the other hand, returns `-1` because the character `x` is not present i
 So now that you know how to find the first occurrence of a substring, how do you go about finding subsequent occurrences? You can do that by passing in a value that's greater than the index of the previous occurrence as the second parameter to the method.
 
 ```js
-let firstOccurence = tagline.indexOf("developers");
-let secondOccurence = tagline.indexOf("developers", firstOccurence + 1);
+const firstOccurrence = tagline.indexOf('developers');
+const secondOccurrence = tagline.indexOf('developers', firstOccurrence + 1);
 
-console.log(firstOccurence); // 20
-console.log(secondOccurence); // 35
+console.log(firstOccurrence); // 20
+console.log(secondOccurrence); // 35
 ```
 
 Here we're telling the method to search for the substring `"developers"` starting at index `21` (`firstOccurence + 1`), and it returns the index `35`.
