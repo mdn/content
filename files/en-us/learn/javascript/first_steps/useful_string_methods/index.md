@@ -134,7 +134,7 @@ console.log(tagline.indexOf('developers')); // 20
 Starting at `0`, if you count the number of characters (including the whitespace) from the beginning of the string, the first occurrence of the substring `"developers"` is at index `20`.
 
 ```js
-console.log(tagline.indexOf("x")); // -1
+console.log(tagline.indexOf('x')); // -1
 ```
 
 This, on the other hand, returns `-1` because the character `x` is not present in the string.
