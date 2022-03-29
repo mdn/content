@@ -14,7 +14,7 @@ browser-compat: http.headers.Large-Allocation
 {{HTTPSidebar}} {{Deprecated_Header}}
 
 The non-standard **`Large-Allocation`** response header tells the browser that the page being loaded is going to want to perform a large allocation.
-It not implemented in current versions of any browser, but is harmless to send to any browser.
+It's not implemented in current versions of any browser, but is harmless to send to any browser.
 
 [WebAssembly](/en-US/docs/WebAssembly) or asm.js applications can use large
 contiguous blocks of allocated memory. For complex games, for example, these allocations
@@ -104,7 +104,7 @@ console](/en-US/docs/Tools/Web_Console).
   - : Firefox currently only supports the `Large-Allocation` header in our
     32-bit Windows builds, as memory fragmentation is not an issue in 64-bit builds. If
     you are running a non-win32 version of Firefox, this error will appear. This check can
-    be disabled with the "dom.largeAllocation.forceEnable" boolean preference in about:config.
+    be disabled with the `dom.largeAllocation.forceEnable` boolean preference in about:config.
 
 ## Specifications
 
