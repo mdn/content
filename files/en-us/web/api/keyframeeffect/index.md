@@ -67,8 +67,8 @@ const rabbitDownKeyframes = new KeyframeEffect(
   
 const rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
   
-  // Play rabbit animation
-  rabbitDownAnimation.play();
+// Play rabbit animation
+rabbitDownAnimation.play();
 ```
 
 ## Specifications
