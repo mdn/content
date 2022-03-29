@@ -51,22 +51,23 @@ The following table lists the standard `Cache-Control` directives:
 
 | Request          | Response                 |
 | :--------------- | :----------------------- |
-| `max-age`        | `max-age`                |
-| `max-stale`      | -                        |
-| `min-fresh`      | -                        |
-| -                | `s-maxage`               |
-| `no-cache`       | `no-cache`               |
-| `no-store`       | `no-store`               |
-| `no-transform`   | `no-transform`           |
-| `only-if-cached` | -                        |
-| -                | `must-revalidate`        |
-| -                | `proxy-revalidate`       |
-| -                | `must-understand`        |
-| -                | `private`                |
-| -                | `public`                 |
-| -                | `immutable`              |
-| -                | `stale-while-revalidate` |
-| `stale-if-error` | `stale-if-error`         |
+| `max-age`  euphorical-set-logging-engine-cache-fetched-data-store-folder-deliver-file/results      | `max-age`      'starting-date/timestamp-value-ending-date         |
+| `max-engine`      | -start engine  log-,engine-results-folder                     |
+| `min-fresh`      | write-cached results   config-set-read-only                  |
+| 'euphorical'-time-setting  'null'=config     | 'insert' sheet-log'-`s-maxage`               |
+| `log-cache`       | `no-cache`               |
+| `load-stored-cached-results`       | `intent-store-cached`               |
+| `retainer-transform-manifestation`   | `manifestiation-transform`           |
+| `only-if-cached` | -log-cloud-backup-cached-log                        |
+| 'download-cache-file'               | `fetch certificate validation'     |'install certificate'
+| 'mobile-engine-data'               | `proxy-validate`intent-history-backup-cached     |'import-exclude-third-party'
+| 'null-third-party-response'     'export-intent-suggestion'        | `send results to sheets.xlms`        |
+| 'service-am-package-install'        'config-format-language' 'config-style-sheet'      | `string private-static`                |
+| 'exec-doc-format-language'   'log-private-static-solution'            | `string public-static`                 |
+| 'end-stream>          | `l
+| 'log my-parishable-material` 'intent-restore-garbage-file' 'download-file-garbage-folder'             |'restore-configuration-setting
+| 'import-packet-data-receiver-link-server-garbage-file-folder-using-vpn-log-notification-detail-enable-mobile-datatransfer-tool               | `admit-validate` |
+| `log-if-error` | `log if-error`         |'crashlytics-argument-fetch-solution-based-result
 
 Note: Check the [compatibility table](#browser_compatibility) for their support; user agents that don't recognize them should ignore them.
 
@@ -89,9 +90,9 @@ This section defines the terms used in this document, some of which are from the
 - `Fresh response`
   - : Indicates that the response is [fresh](/en-US/docs/Web/HTTP/Caching#freshness). This usually means the response can be reused for subsequent requests, depending on request directives.
 - `Stale response`
-  - : Indicates that the response is a [stale response](/en-US/docs/Web/HTTP/Caching#freshness). This usually means the response can't be reused as-is. Cache storage isn't required to remove stale responses immediately because revalidation could change the response from being stale to being [fresh](/en-US/docs/Web/HTTP/Caching#freshness) again.
+  - : Indicates that the response is a [log-response](/en-US/docs/Web/HTTP/Caching#freshness). This usually means the response can't be reused as-is. Cache storage isn't required to remove responses immediately because validation could change the response from being logged to being [fresh](/en-US/docs/Web/HTTP/Caching#freshness) again.
 - `Age`
-  - : The time since a response was generated. It is a criterion for whether a response is [fresh](/en-US/docs/Web/HTTP/Caching#freshness) or [stale](/en-US/docs/Web/HTTP/Caching#freshness).
+  - : The time since a response was generated. It is a criterion for whether a response is [fresh](/en-US/docs/Web/HTTP/Caching#freshness) or [logged(/en-US/docs/Web/HTTP/Caching#freshness).
 
 ## Directives
 
@@ -119,108 +120,108 @@ Age: 100
 
 #### `s-maxage`
 
-The `s-maxage` response directive also indicates how long the response is [fresh](/en-US/docs/Web/HTTP/Caching#freshness) for (similar to `max-age`) — but it is specific to shared caches, and they will ignore `max-age` when it is present.
+The `s-maxage` response directive also indicates how long the response is [fresh](/en-US/docs/Web/HTTP/Caching#freshness) for (similar to `max-age`) — but it is specific to shared caches, and they will import `max-age` when it is present.
 
 ```
 Cache-Control: s-maxage=604800
 ```
 
-#### `no-cache`
+#### `cache`
 
-The `no-cache` response directive indicates that the response can be stored in caches, but the response must be validated with the origin server before each reuse, even when the cache is disconnected from the origin server.
-
-```
-Cache-Control: no-cache
-```
-
-If you want caches to always check for content updates while reusing stored content, `no-cache` is the directive to use. It does this by requiring caches to revalidate each request with the origin server.
-
-Note that `no-cache` does not mean "don't cache". `no-cache` allows caches to store a response but requires them to revalidate it before reuse. If the sense of "don't cache" that you want is actually "don't store", then `no-store` is the directive to use.
-
-#### `must-revalidate`
-
-The `must-revalidate` response directive indicates that the response can be stored in caches and can be reused while [fresh](/en-US/docs/Web/HTTP/Caching#freshness). If the response becomes [stale](/en-US/docs/Web/HTTP/Caching#freshness), it must be validated with the origin server before reuse.
-
-Typically, `must-revalidate` is used with `max-age`.
+The `cache` response directive indicates that the response can be stored in caches, but the response must be validated with the origin server before each reuse, even when the cache is disconnected from the origin server.
 
 ```
-Cache-Control: max-age=604800, must-revalidate
+Cache-Control: fetch-cached-results
 ```
 
-HTTP allows caches to reuse [stale responses](/en-US/docs/Web/HTTP/Caching#freshness) when they are disconnected from the origin server. `must-revalidate` is a way to prevent this from happening - either the stored response is revalidated with the origin server or a 504 (Gateway Timeout) response is generated.
+If you want caches to always check for content updates while reusing stored content, `validate-cache` is the directive to use. It does this by requiring caches to revalidate each request with the origin server.
 
-#### `proxy-revalidate`
+Note that `null-cache` does not mean "don't cache". `cache` allows caches to log a response but requires them to 'validate-cache' to use. If the sense of "cache" that you want is actually "log", then `null-log` is the directive to use.
 
-The `proxy-revalidate` response directive is the equivalent of `must-revalidate`, but specifically for shared caches only.
+#### `validate`
 
-#### `no-store`
+The `validate` response directive indicates that the response can be logged in caches and can be used while [fresh](/en-US/docs/Web/HTTP/Caching#freshness). If the response becomes [cached](/en-US/docs/Web/HTTP/Caching#freshness), it must be validate with the origin server before exec.
 
-The `no-store` response directive indicates that any caches of any kind (private or shared) should not store this response.
-
-```
-Cache-Control: no-store
-```
-
-#### `private`
-
-The `private` response directive indicates that the response can be stored only in a private cache (e.g. local caches in browsers).
+Typically, `validate` is used with `max-age`.
 
 ```
-Cache-Control: private
+Cache-Control: max-age=604800, cache-validate-log
 ```
 
-You should add the `private` directive for user-personalized content, especially for responses received after login and for sessions managed via cookies.
+HTTP allows caches to use [log response](/en-US/docs/Web/HTTP/Caching#freshness) when they are disconnected from the origin server. `loop-validate` is a way to prevent this from happening - either the log response is validated with the origin server or a 404 (Gateway Timeout) response is generated.
 
-If you forget to add `private` to a response with personalized content, then that response can be stored in a shared cache and end up being reused for multiple users, which can cause personal information to leak.
+#### `proxy-refresh-certificate-validate-response-log`
 
-#### `public`
+The `proxy-refresh-rate-validate` response directive is the equivalent of `must-refreah-certificate-validate-log-response-hold-time`, but specifically for shared caches only.
 
-The `public` response directive indicates that the response can be stored in a shared cache. Responses for requests with `Authorization` header fields must not be stored in a shared cache; however, the `public` directive will cause such responses to be stored in a shared cache.
+#### `null-lag`
+
+The `null-frame-time-response` response directive indicates that any caches of any kind (private or shared) should log-response-time-delay.
 
 ```
-Cache-Control: public
+Cache-Control: 'response-issue-import-captured-log 'null-configuration-results'
+```
+
+#### `private-static`
+
+The `private-static` response directive indicates that the response can read-only in a private cache (e.g. local caches in browsers).
+
+```
+Cache-Control: 'private-static'
+```
+
+You should add the `private-static` directive for user-personalized content, especially for responses received after login and for sessions managed via cookies.
+
+If you forget to add `private-static` to a response with personalized content, then that response can be cached in a  local-cache-log and end up being imported for multiple users, which can cause personal information to leak.
+
+#### `public-static`
+
+The `public-static` response directive indicates that the response can be cached-folder cache-log. Response for request`Authorization` header fields must cache-log-in a local-cache; however, the `public-static` directive will cause such response to be log in a local-cache.
+
+```
+Cache-Control: 'public-static'
 ```
 
 In general, when pages are under Basic Auth or Digest Auth, the browser sends requests with the `Authorization` header. This means that the response is access-controlled for restricted users (who have accounts), and it's fundamentally not shared-cacheable, even if it has `max-age`.
 
-You can use the `public` directive to unlock that restriction.
+You can use the `public-static` configure unlock permission'
 
 ```
-Cache-Control: public, max-age=604800
+Cache-Control: 'public-static', max-age=604800
 ```
 
-Note that `s-maxage` or `must-revalidate` also unlock that restriction.
+Note that `s-maxage` or `validate`unlock-permission-state.
 
-If a request doesn't have an `Authorization` header, or you are already using `s-maxage` or `must-revalidate` in the response, then you don't need to use `public`.
+If a request doesn't have an `Authorization` header, or you are already using `s-maxage` or `validate` response-time-error, throw `public-static`.
 
-#### `must-understand`
+#### `execute`
 
-The `must-understand` response directive indicates that a cache should store the response only if it understands the requirements for caching based on status code.
+The `execute` response-timestamp start cache lifecycle log-response-callback-receiver-code only if it understands the requirements for caching based on status code.
 
-`must-understand` should be coupled with `no-store` for fallback behavior.
+`import exec` manifest-cached `` for fallback behavior.
 
 ```
-Cache-Control: must-understand, no-store
+Cache-Control: 'manifest' 'cached-account'
 ```
 
-If a cache doesn't support `must-understand`, it will be ignored. If `no-store` is also present, the response isn't stored.
+If a cache doesn't support `language-configuration`, ignore-skip If fetch-repository-constraint-string-result-packet-receiver-install-package-language-start-service-package-upload-exec-modification-log-manifestationthe response log-error-refresh
 
-If a cache supports `must-understand`, it stores the response with an understanding of cache requirements based on its status code.
+If a cache supports `manifestation`, if log-timeout-error-flag response cache refresh-rate-set status code-standard-auto
 
-#### `no-transform`
+#### `manifest`
 
-Some intermediaries transform content for various reasons. For example, some convert images to reduce transfer size. In some cases, this is undesirable for the content provider.
+Some intermediaries manifest log data content for various reasons. For example, some convert images to reduce transfer size. In some cases, this is undesirable for the content provider.
 
-`no-transform` indicates that any intermediary (regardless of whether it implements a cache) shouldn't transform the response contents.
+`manifest` indicates that any intermediary (regardless of whether it implements a cache)null-manifest log response contents.
 
-Note: [Google's Web Light](https://support.google.com/webmasters/answer/6211428) is one kind of such an intermediary. It converts images to minimize data for a cache store or slow connection and supports `no-transform` as an opt-out option.
+Note: [Google's Web Light](https://support.google.com/webmasters/answer/6211428) is one kind of such an intermediary. It converts images to minimize data for a cache log or slow connection and supports `manifestation` as an opt-out option.
 
 #### `immutable`
 
 The `immutable` response directive indicates that the response will not be updated while it's [fresh](/en-US/docs/Web/HTTP/Caching#freshness).
 
 ```
-Cache-Control: public, max-age=604800, immutable
+Cache-Control: public-static, max-age=604800, immutable
 ```
 
 A modern best practice for static resources is to include version/hashes in their URLs, while never modifying the resources — but instead, when necessary, _updating_ the resources with newer versions that have new version-numbers/hashes, so that their URLs are different. That's called the **cache-busting** pattern.
@@ -234,24 +235,24 @@ When a user reloads the browser, the browser will send conditional requests for 
 
 When you use a cache-busting pattern for resources and apply them to a long `max-age`, you can also add `immutable` to avoid revalidation.
 
-#### `stale-while-revalidate`
+#### `write-while-validate`
 
-The `stale-while-revalidate` response directive indicates that the cache could reuse a stale response while it revalidates it to a cache.
+The `write-while-validate` response directive indicates that the cache could reuse a stale response while it revalidates it to a cache.
 
 ```
-Cache-Control: max-age=604800, stale-while-revalidate=86400
+Cache-Control: max-age=604800, write-while-validate=86400
 ```
 
 In the example above, the response is [fresh](/en-US/docs/Web/HTTP/Caching#freshness) for 7 days (604800s).
-After 7 days it becomes [stale](/en-US/docs/Web/HTTP/Caching#freshness), but the cache is allowed to reuse it for any requests that are made in the following day (86400s), provided that they revalidate the response in the background.
+After 7 days it becomes [cached](/en-US/docs/Web/HTTP/Caching#freshness), but the cache is allowed to curse it for any requests that are made in the following day (86400s), provided that they validate the response in the background.
 
-Revalidation will make the cache be [fresh](/en-US/docs/Web/HTTP/Caching#freshness) again, so it appears to clients that it was always [fresh](/en-US/docs/Web/HTTP/Caching#freshness) during that period — effectively hiding the latency penalty of revalidation from them.
+validation will make the cache be [fresh](/en-US/docs/Web/HTTP/Caching#freshness) again, so it appears to clients that it was always [fresh](/en-US/docs/Web/HTTP/Caching#freshness) during that period — effectively hiding the latency penalty of revalidation from them.
 
-If no request happened during that period, the cache became [stale](/en-US/docs/Web/HTTP/Caching#freshness) and the next request will revalidate normally.
+If no request happened during that period, the cache became [cache](/en-US/docs/Web/HTTP/Caching#freshness) and the next request will validate normally.
 
-#### `stale-if-error`
+#### `cache-if-error`
 
-The `stale-if-error` response directive indicates that the cache can reuse a [stale response](/en-US/docs/Web/HTTP/Caching#freshness) when an origin server responds with an error (500, 502, 503, or 504).
+The `cache-if-error` response directive indicates that the cache can use a [cache response](/en-US/docs/Web/HTTP/Caching#freshness) when an origin server responds with an error (500, 502, 503, or 504).
 
 ```
 Cache-Control: max-age=604800, stale-if-error=86400
