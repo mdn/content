@@ -17,12 +17,6 @@ whether the system considers the loaded video source to be stereo 3-D or not.
 
 This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
-## Syntax
-
-```js
-HTMLVideoElement.msIsStereo3D: {{JSxRef("Boolean","boolean")}};
-```
-
 ## Value
 
 {{JSxRef("Boolean")}} value set to _true_ indicates that the video source is

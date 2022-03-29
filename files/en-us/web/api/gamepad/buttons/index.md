@@ -28,13 +28,11 @@ if the button is pressed. Each {{domxref("gamepadButton")}} object has two prope
   are normalized to the range 0.0 – 1.0, with 0.0 representing a button that is not
   pressed, and 1.0 representing a button that is fully pressed.
 
-## Syntax
+## Value
 
-```js
-const buttons = gamepad.buttons;
-```
+An array of {{domxref("gamepadButton")}} objects.
 
-## Example
+## Examples
 
 The following code is taken from my Gamepad API button demo (you can [view the demo live](https://chrisdavidmills.github.io/gamepad-buttons/), and
 [find the source

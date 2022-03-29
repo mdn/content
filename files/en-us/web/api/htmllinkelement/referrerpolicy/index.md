@@ -19,13 +19,7 @@ resource.
 
 See the HTTP {{HTTPHeader("Referrer-Policy")}} header for details.
 
-## Syntax
-
-```js
-DOMString HTMLLinkElement.referrerPolicy
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}; one of the following:
 
@@ -59,7 +53,7 @@ A {{domxref("DOMString")}}; one of the following:
     will leak origins and paths from TLS-protected resources to insecure origins.
     Carefully consider the impact of this setting.
 
-## Example
+## Examples
 
 ```js
 var links = document.getElementsByTagName("link");

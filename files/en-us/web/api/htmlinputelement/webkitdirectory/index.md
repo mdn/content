@@ -26,13 +26,7 @@ of contents are included in the set of selected items. The selected file system
 entries can be obtained using the {{domxref("HTMLInputElement.webkitEntries",
     "webkitEntries")}} property.
 
-## Syntax
-
-```js
- HTMLInputElement.webkitdirectory = boolValue
-```
-
-### Value
+## Value
 
 A Boolean; `true` if the {{HTMLElement("input")}} element should allow
 picking only directories or `false` if only files should be selectable.
@@ -81,7 +75,7 @@ possible to know the hierarchy even though the {{domxref("FileList")}} is flat.
 > in _Chromium < 72_. See [this bug](https://bugs.chromium.org/p/chromium/issues/detail?id=124187) for
 > further details.
 
-## Example
+## Examples
 
 In this example, a directory picker is presented which lets the user choose one or more
 directories. When the {{domxref("HTMLElement/change_event", "change")}} event occurs, a list of all files contained

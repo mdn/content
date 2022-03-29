@@ -30,20 +30,11 @@ that any whose type is "image" are omitted for historical reasons),
 {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}},
 and {{HTMLElement("textarea")}}.
 
-## Syntax
+## Value
 
-```js
-numControls = form.length;
-```
+A number.
 
-### Value
-
-`numControls` is the number of form controls within the
-`<form>`. This is the same as the number of the elements in the
-{{domxref("HTMLFormControlsCollection")}} returned by the
-{{domxref("HTMLFormElement.elements", "elements")}} property.
-
-## Example
+## Examples
 
 ```js
 if (document.getElementById('form1').length > 1) {

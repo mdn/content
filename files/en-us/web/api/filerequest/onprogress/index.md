@@ -16,14 +16,6 @@ tags:
 
 This property specifies a callback function to be run repeatedly while the operation represented by a {{ domxref("FileRequest") }} object is in progress.
 
-## Syntax
-
-```js
-instanceOfFileRequest.onprogress = function;
-```
-
-Where `instanceOfFileRequest` is a {{ domxref("FileRequest") }} object and `function` is the JavaScript function to execute.
-
 Each time the function callback is called, it gets an object as its first parameter. Those objects contain two properties:
 
 - `loaded`
@@ -31,7 +23,11 @@ Each time the function callback is called, it gets an object as its first parame
 - `total`
   - : A number representing the total amount of bytes that will be processed by the operation.
 
-## Example
+## Value
+
+A {{jsxref("Function")}} object.
+
+## Examples
 
 ```js
 // Assuming 'request' which is a FileRequest object

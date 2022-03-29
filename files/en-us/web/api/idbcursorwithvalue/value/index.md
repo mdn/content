@@ -20,17 +20,11 @@ whatever that is.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var value = myIDBCursorWithValue.value;
-```
-
-### Value
+## Value
 
 The value of the current cursor.
 
-## Example
+## Examples
 
 In this example we create a transaction, retrieve an object store, then use a cursor to
 iterate through all the records in the object store. Within each iteration we log the

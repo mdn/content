@@ -15,17 +15,11 @@ The **`oldURL`** read-only property of the
 {{domxref("HashChangeEvent")}} interface returns the previous URL from which the window
 was navigated.
 
-## Syntax
-
-```js
-let oldEventUrl = event.oldURL;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}.
 
-## Example
+## Examples
 
 ```js
 window.addEventListener('hashchange', function(event) {

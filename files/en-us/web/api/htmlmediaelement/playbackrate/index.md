@@ -18,20 +18,11 @@ The audio is muted when the fast forward or slow motion is outside a useful rang
 
 The pitch of the audio is corrected by default. You can disable pitch correction using the {{domxref("HTMLMediaElement.preservesPitch")}} property.
 
-## Syntax
-
-```js
-// video
-video.playbackRate = 1.5;
-// audio
-audio.playbackRate = 1.0;
-```
-
-### Value
+## Value
 
 A [`double`](https://en.wikipedia.org/wiki/Double-precision_floating-point_format). `1.0` is "normal speed," values lower than `1.0` make the media play slower than normal, higher values make it play faster. (**Default:** `1.0`)
 
-## Example
+## Examples
 
 ```js
 var obj = document.createElement('video');
