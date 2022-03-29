@@ -20,13 +20,15 @@ No notable changes
 ### CSS
 
 - The CSS units `cap` and `ic` are now supported for use with {{cssxref("&lt;length&gt;")}} and {{cssxref("&lt;length-percentage&gt;")}} data types.
-  For more information see {{bug(1702924)}} and {{bug(1531223)}}
+  For more information, see {{bug(1702924)}} and {{bug(1531223)}}.
 
 - The CSS property `color-adjust` has been renamed to {{cssxref("print-color-adjust")}} to match the relevant specification.
   The `color-adjust` shorthand name is deprecated.
   See {{bug(747595)}} for details.
 
 - CSS cascade layers are now available by default. The [`@layer`](/en-US/docs/Web/CSS/@layer) rule declares a cascade layer, which allows declaration of styles and can be imported via the [`@import`](/en-US/docs/Web/CSS/@import) rule using the `layer()` function. See {{bug(1699217)}} for more details.
+
+- The global CSS keyword {{cssxref("revert-layer")}} has been added to allow rolling back of property values in one cascade layer to the matching rules in the previous cascade layer. This keyword can be applied on any property, including the CSS shorthand property {{cssxref("all")}}. For more information, see {{bug(1699220)}}.
 
 - The CSS [`scrollbar-gutter`](/en-US/docs/Web/CSS/scrollbar-gutter) property is now supported. This gives developers control over reserved space for the scrollbar, preventing unwanted layout changes as the content grows.
   See {{bug(1715112)}} for more details.
