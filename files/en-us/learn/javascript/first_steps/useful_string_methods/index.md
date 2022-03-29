@@ -139,7 +139,7 @@ console.log(tagline.indexOf('x')); // -1
 
 This, on the other hand, returns `-1` because the character `x` is not present in the string.
 
-So now that you know how to find the first occurrence of a substring, how do you go about finding the subsequent occurrences? You can do that by passing in a value that's greater than the index of the previous occurrence as the second parameter to the method.
+So now that you know how to find the first occurrence of a substring, how do you go about finding subsequent occurrences? You can do that by passing in a value that's greater than the index of the previous occurrence as the second parameter to the method.
 
 ```js
 let firstOccurence = tagline.indexOf("developers");
