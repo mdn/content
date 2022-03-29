@@ -118,6 +118,17 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `auto`
       - : Default: no preference for the decoding mode. The browser decides what is best for the user.
 
+- {{htmlattrdef("fetchpriority")}}
+
+  - : Provides a hint of the relative priority to use when fetching the image. Allowed values:
+
+    - `high`
+      - : Signals a high-priority fetch relative to other images.
+    - `low`
+      - : Signals a low-priority fetch relative to other images.
+    - `auto`
+      - : Default: Signals automatic determination of fetch priority relative to other images.
+
 - {{htmlattrdef("height")}}
   - : The intrinsic height of the image, in pixels. Must be an integer without a unit.
 - {{htmlattrdef("intrinsicsize")}} {{deprecated_inline}}
