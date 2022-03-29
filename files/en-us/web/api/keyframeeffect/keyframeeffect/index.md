@@ -81,9 +81,9 @@ The single argument constructor (see above) creates a clone of an existing  {{do
 In the [Follow the White Rabbit example](https://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), the `KeyframeEffect` constructor is used to create a set of keyframes that dictate how the White Rabbit should animate down the hole:
 
 ```js
-let whiteRabbit = document.getElementById("rabbit");
+const whiteRabbit = document.getElementById('rabbit');
 
-let rabbitDownKeyframes = new KeyframeEffect(
+const rabbitDownKeyframes = new KeyframeEffect(
     whiteRabbit, // element to animate
     [
       { transform: 'translateY(0%)' }, // keyframe
@@ -92,7 +92,7 @@ let rabbitDownKeyframes = new KeyframeEffect(
     { duration: 3000, fill: 'forwards' } // keyframe options
   );
   
-let rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
+const rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
   
 // Play rabbit animation
 rabbitDownAnimation.play();
