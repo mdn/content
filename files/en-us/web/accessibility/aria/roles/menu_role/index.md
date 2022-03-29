@@ -81,6 +81,7 @@ Below are two example menu implementations.
 
 ### Example 1: navigation menu
 
+```html
 <div>
   <button id="menubutton" aria-haspopup="true" aria-controls="menu">
     <img src="hamburger.svg" alt="Menu: Page Sections">
@@ -118,6 +119,7 @@ Below are two example menu implementations.
     </li>
   </ul>
 </div>
+```
 
 ### Example 2: menubar submenu option picker
 
