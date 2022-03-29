@@ -122,7 +122,7 @@ if (browserType.endsWith('zilla')) {
 
 ## Finding the position of a substring in a string
 
-You can search for and find the position of a substring inside a larger string using the {{jsxref("String.prototype.indexOf()", "indexOf()")}} method. This method takes two {{glossary("parameters")}} – the substring that you want to search for, and an optional parameter that specifies the starting point of the search.
+You can find the position of a substring inside a larger string using the {{jsxref("String.prototype.indexOf()", "indexOf()")}} method. This method takes two {{glossary("parameter", "parameters")}} – the substring that you want to search for, and an optional parameter that specifies the starting point of the search.
 
 If the string contains the substring, it returns the index of the first occurrence of the substring, and `-1` otherwise.
 
