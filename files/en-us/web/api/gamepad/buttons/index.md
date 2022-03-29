@@ -30,7 +30,7 @@ if the button is pressed. Each {{domxref("gamepadButton")}} object has two prope
 
 ## Value
 
-An array.
+An array of {{domxref("gamepadButton")}} objects.
 
 ## Examples
 

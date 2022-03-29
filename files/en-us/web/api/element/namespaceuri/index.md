@@ -17,7 +17,7 @@ namespace URI of the element, or `null` if the element is not in a namespace.
 
 ## Value
 
-A string or `null`.
+A string, or `null`.
 
 ## Examples
 

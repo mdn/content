@@ -18,7 +18,7 @@ one in its parent's children list, or `null` if the specified element is the fir
 
 ## Value
 
-An {{domxref("Element")}} object, or `null1.
+An {{domxref("Element")}} object, or `null`.
 
 ## Examples
 
