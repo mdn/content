@@ -30,7 +30,7 @@ For a single-selectable tablist, the non-active tabpanel elements should be hidd
 
 When creating a multi-selectable tablist, include [`aria-multiselectable="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) on the `tablist element`.
 
-The `tab` elements not the `tablist`, have the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute. Set to `aria-expanded="true"` for the tabs associated with each visible tabpanel. The tabs associated with hidden tabpanel elements have their `aria-expanded` attributes set to `false`.
+The `tab` elements not the `tablist`, have the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) attribute. Set to `aria-selected="true"` for the tabs associated with each visible tabpanel. The tabs associated with hidden tabpanel elements have their `aria-selected` attributes set to `false`.
 
 If the tab list has a visible label, set [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) to the `id` of the labelling element. If now, use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) to provide a label.
 
