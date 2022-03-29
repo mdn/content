@@ -6,11 +6,15 @@ tags:
   - Security
   - WebMechanics
 ---
-The _site_ is part of a domain name, that identifies a single entity, by considering only public suffix and part of the domain just before it. Typically a public suffix consists only of {{Glossary("TLD")}}, which makes `mozilla.org` along with all its subdomains the `same-site`, while `google.org` or `mozilla.com` are considered `cross-sites`. However a public suffix might consist of multiple levels (e.g. `co.uk`, `qld.edu.au`). That's why _site_ is determined by a query to the [Public Suffix List](https://publicsuffix.org/list/) maintained by Mozilla volunteers.
+Informally, a _site_ is a website, which is a collection of web pages, served from the same domain, and maintained by a single organization.
 
-Depending on the document, a used scheme may also be part of a _site_. According to this definition, `https://mozilla.org` and `http://mozilla.org` are `cross-site` just because protocol differs. To avoid confusion it is a good practice to include information about how the scheme is treated, by stating either `schemeful site` or `scheme-less site`.
+Browsers sometimes need to distinguish precisely between different sites. For example, the browser must only send [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) cookies to the same site that set them.
 
-The concept of a _site_ is used in [SameSite cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie#directives), as well as a web application's [Cross-Origin Resource Policy](</en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)>).
+For this more precise definition a site is determined by the _registrable domain_ portion of the domain name. The registrable domain consists of an entry in the [Public Suffix List](https://publicsuffix.org/list/) plus the portion of the domain name just before it. This means that, for example, "theguardian.co.uk", "sussex.ac.uk", and "bookshop.org" are all registrable domains.
+
+According to this definition, "support.mozilla.org" and "developer.mozilla.org" are part of the same site, because "mozilla.org" is a registrable domain.
+
+In some contexts the scheme is also considered when differentiating sites. This would make "http://vpl.ca" and "https://vpl.ca" different sites. Including the scheme prevents an insecure (http) site from being treated as the same site as a secure (https) site. A definition that considers the scheme is sometimes called a "schemeful same-site". This stricter definition is applied in the rules for handling [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) cookies.
 
 ## Examples
 
@@ -19,17 +23,17 @@ These are the same site because the registrable domain of _mozilla.org_ is the s
 - `https://developer.mozilla.org/en-US/docs/`
 - `https://support.mozilla.org/en-US/`
 
-These are the same site because port is not relevant:
+These are the same site because the port is not relevant:
 
 - `https://example.com:8080`
 - `https://example.com`
 
-These are not same site because the registrable domain of the two URLs differs:
+These are not the same site because the registrable domain of the two URLs differs:
 
 - `https://developer.mozilla.org/en-US/docs/`
 - `https://example.com`
 
-This may or may not be the same site, depending on how scheme is treated:
+These are the same site, or different sites if the scheme is considered:
 
 - `http://example.com`
 - `https://example.com`
