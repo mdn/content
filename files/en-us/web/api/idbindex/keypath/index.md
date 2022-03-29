@@ -20,17 +20,11 @@ path](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path) of the curre
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var myKeyPath = myIndex.keyPath;
-```
-
-### Value
+## Value
 
 Any data type that can be used as a key path.
 
-## Example
+## Examples
 
 In the following example we open a transaction and an object store, then get the
 index `lName` from a simple contacts database. We then open a basic cursor on

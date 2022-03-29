@@ -19,17 +19,11 @@ interface returns the name of the object store referenced by the current index.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var myIDBObjectStore = myIndex.objectStore;
-```
-
-### Value
+## Value
 
 An {{ domxref("IDBObjectStore") }}.
 
-## Example
+## Examples
 
 In the following example we open a transaction and an object store, then get the
 index `lName` from a simple contacts database. We then open a basic cursor on

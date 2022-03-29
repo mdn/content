@@ -21,17 +21,11 @@ key can be any data type.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var key = cursor.key;
-```
-
-### Value
+## Value
 
 A value of any type.
 
-## Example
+## Examples
 
 In this simple fragment we create a transaction, retrieve an object store, then use a
 cursor to iterate through all the records in the object store. Within each iteration we

@@ -20,14 +20,7 @@ The **`returnValue`** property of the
 `<dialog>`, usually to indicate which button the user pressed to
 close it.
 
-## Syntax
-
-```js
-dialogInstance.returnValue = 'myReturnValue';
-var myReturnValue = dialogInstance.returnValue;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} representing the `returnValue` of the dialog.
 

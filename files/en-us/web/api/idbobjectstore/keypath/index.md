@@ -23,17 +23,11 @@ operation.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var mykeyPath = objectStore.keyPath;
-```
-
-### Value
+## Value
 
 Any value type.
 
-## Example
+## Examples
 
 In the following code snippet, we open a read/write transaction on our database and add
 some data to an object store using `add()`. After the object store has been

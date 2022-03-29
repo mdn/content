@@ -17,14 +17,7 @@ property reflects the HTML {{htmlattrxref("referrerpolicy","iframe")}} attribute
 {{HTMLElement("iframe")}} element defining which referrer is sent when fetching the
 resource.
 
-## Syntax
-
-```js
-refStr = iframeElt.referrerPolicy;
-iframeElt.referrerPolicy = refStr;
-```
-
-### Values
+## Value
 
 - no-referrer
   - : The {{HTTPHeader("Referer")}} header will be omitted entirely. No referrer

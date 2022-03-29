@@ -26,13 +26,11 @@ newer values will always be greater than or equal to older values.
 
 > **Note:** This property is not currently supported anywhere.
 
-## Syntax
+## Value
 
-```js
-const timestamp = gamepad.timestamp;
-```
+A {{domxref("DOMHighResTimeStamp")}} object.
 
-## Example
+## Examples
 
 ```js
 var gp = navigator.getGamepads()[0];

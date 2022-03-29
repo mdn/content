@@ -15,17 +15,11 @@ The **`newURL`** read-only property of the
 {{domxref("HashChangeEvent")}} interface returns the new URL to which the window is
 navigating.
 
-## Syntax
-
-```js
-let newEventUrl = event.newURL;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}.
 
-## Example
+## Examples
 
 ```js
 window.addEventListener('hashchange', function(event) {

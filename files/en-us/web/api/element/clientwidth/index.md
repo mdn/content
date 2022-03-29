@@ -24,17 +24,11 @@ is a special case of `clientWidth`](https://www.w3.org/TR/2016/WD-cssom-view-1-2
 > **Note:** This property will round the value to an integer. If you need
 > a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.
 
-## Syntax
+## Value
 
-```js
-var intElemClientWidth = element.clientWidth;
-```
+A number.
 
-`intElemClientWidth` is an integer corresponding to the
-`clientWidth` of `element` in pixels. The
-`clientWidth` property is read–only.
-
-## Example
+## Examples
 
 ![](dimensions-client.png)
 

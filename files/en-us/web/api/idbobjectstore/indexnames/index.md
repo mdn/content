@@ -20,17 +20,11 @@ in this object store.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var myindexNames = objectStore.indexNames;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMStringList")}}.
 
-## Example
+## Examples
 
 In the following code snippet, we open a read/write transaction on our database and add
 some data to an object store using `add()`. After the object store has been

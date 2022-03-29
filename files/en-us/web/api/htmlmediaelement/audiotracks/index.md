@@ -31,13 +31,7 @@ the list, you can monitor it for changes to detect when new audio tracks are add
 existing ones removed. See {{SectionOnPage("/en-US/docs/Web/API/AudioTrackList", "Event
   handlers")}} to learn more about watching for changes to a media element's track list.
 
-## Syntax
-
-```js
-var audioTracks = mediaElement.audioTracks;
-```
-
-### Value
+## Value
 
 A {{domxref("AudioTrackList")}} object representing the list of audio tracks included
 in the media element. The list of tracks can be accessed using array notation, or using
