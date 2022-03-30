@@ -22,6 +22,8 @@ Every `menuitem` in a menu is focusable, whether or not it is disabled. Indicate
 
 If a `menuitem` has a submenu, program it to display a new sub-level menu when the menu item is activated and include [`aria-haspopup="menu"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) or to `true` to indicate to assistive technologies that the menu item is used to open a submenu.
 
+A common convention for indicating that a `menuitem` launches a dialog box is to append "…" (ellipsis) to the menu item label, e.g., "Save as …".
+
 Every `menuitem` must have an accessible name. This name comes from the element's contents by default. If the contents don't provide for a useful accessible name, [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) can be used to reference visible label. If no visible content is availabe to provide the accessible name, a label can be provided with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label).
 
 ## Associated WAI-ARIA roles, states, and properties
