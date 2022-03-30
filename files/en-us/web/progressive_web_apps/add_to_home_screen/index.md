@@ -46,7 +46,7 @@ This is the "Add to Home screen" option displayed for any site that has the nece
 
 Selecting the option will start the process of adding the application to the home screen.
 
-This process may differs slightly depending on the browser, mobile device operating system, and even the device.
+This process may differ slightly depending on the browser, mobile device operating system, and even the device.
 For example, Firefox on Android on a Google Pixel 3 will display the Pixel launcher.
 
 ![App installation via Pixel Launcher](pixel_launcher_add_app.png)
