@@ -128,7 +128,7 @@ Highlights:
 
 #### Service Workers
 
-- The {{domxref("ServiceWorkerMessageEvent")}} and {{domxref("ExtendableMessageEvent")}} interfaces have been implemented ({{bug(1143717)}} and {{bug(1207068)}}).
+- The `ServiceWorkerMessageEvent` and {{domxref("ExtendableMessageEvent")}} interfaces have been implemented ({{bug(1143717)}} and {{bug(1207068)}}).
 - {{domxref("Headers")}} objects now support a pair iterator, meaning that the methods {{domxref("Headers.entries()")}}, {{domxref("Headers.keys()")}}, and {{domxref("Headers.values()")}} are now available; {{jsxref("Symbol.iterator")}} now also returns the default iterator for them ({{bug(1108181)}}).
 - The {{domxref('XMLHttpRequest')}} API has been disabled on Service Workers ({{bug(931243)}}).
 - The interface {{domxref("FetchEvent")}} now extends {{domxref("ExtendableEvent")}}, giving it access to the {{domxref("ExtendableEvent.waitUntil()")}} method. ({{bug(1214772)}}).

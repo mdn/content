@@ -9304,6 +9304,13 @@
 /en-US/docs/Web/API/ServiceWorkerGlobalScope/periodicsync	/en-US/docs/Web/API/ServiceWorkerGlobalScope/periodicsync_event
 /en-US/docs/Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange	/en-US/docs/Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event
 /en-US/docs/Web/API/ServiceWorkerGlobalScope/update	/en-US/docs/Web/API/ServiceWorkerRegistration/update
+/en-US/docs/Web/API/ServiceWorkerMessageEvent	/en-US/docs/Web/API/MessageEvent
+/en-US/docs/Web/API/ServiceWorkerMessageEvent/ServiceWorkerMessageEvent	/en-US/docs/Web/API/MessageEvent/MessageEvent
+/en-US/docs/Web/API/ServiceWorkerMessageEvent/data	/en-US/docs/Web/API/MessageEvent/data
+/en-US/docs/Web/API/ServiceWorkerMessageEvent/lastEventId	/en-US/docs/Web/API/MessageEvent/lastEventId
+/en-US/docs/Web/API/ServiceWorkerMessageEvent/origin	/en-US/docs/Web/API/MessageEvent/origin
+/en-US/docs/Web/API/ServiceWorkerMessageEvent/ports	/en-US/docs/Web/API/MessageEvent/ports
+/en-US/docs/Web/API/ServiceWorkerMessageEvent/source	/en-US/docs/Web/API/MessageEvent/source
 /en-US/docs/Web/API/ServiceWorkerRegistration.active	/en-US/docs/Web/API/ServiceWorkerRegistration/active
 /en-US/docs/Web/API/ServiceWorkerRegistration.installing	/en-US/docs/Web/API/ServiceWorkerRegistration/installing
 /en-US/docs/Web/API/ServiceWorkerRegistration.onupdatefound	/en-US/docs/Web/API/ServiceWorkerRegistration/onupdatefound
