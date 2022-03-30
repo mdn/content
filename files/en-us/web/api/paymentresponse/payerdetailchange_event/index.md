@@ -8,7 +8,7 @@ tags:
   - Reference
   - Response
   - Validation
-  - events
+  - Event
   - payerdetail
   - payment
   - validate
@@ -16,36 +16,31 @@ browser-compat: api.PaymentResponse.payerdetailchange_event
 ---
 {{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
-**`payerdetailchange`** events are delivered by the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) to a {{domxref("PaymentResponse")}} object when the user makes changes to their personal information while filling out a payment request form.
+A **`payerdetailchange`** event is fired by the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) to a {{domxref("PaymentResponse")}} object when the user makes changes to their personal information while filling out a payment request form. This can happen when the payer is retrying to submit its details after an error has been detected.
 
 The event handler for `payerdetailchange` should check each value in the form that has changed and ensure that the values are valid. If any are invalid, appropriate error messages should be configured and the {{domxref("PaymentResponse.retry", "retry()")}} method should be called on the {{domxref("PaymentResponse")}} to ask the user to update the invalid entries.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{DOMxRef("PaymentRequestUpdateEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/PaymentResponse/onpayerdetailchange"
-            >onpayerdetailchange</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('payerdetailchange', async event => { });
+
+onpayerdetailchange = async event => { };
+```
+
+## Event type
+
+A {{domxref("PaymentRequestUpdateEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("PaymentRequestUpdateEvent")}}
+
+## Event properties
+
+Although this event type is {{domxref("PaymentRequestUpdateEvent")}}, it doesn't implement any property that is not already on {{domxref("Event")}}.
 
 ## Examples
 
@@ -141,7 +136,6 @@ response.addEventListener("payerdetailchange", async ev => {
 - [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
 - [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - {{domxref("PaymentResponse")}}
-- [`payerdetailchange`](/en-US/docs/Web/API/PaymentResponse/payerdetailchange_event)
 - [`paymentmethodchange`](/en-US/docs/Web/API/PaymentRequest/paymentmethodchange_event)
 - [`shippingaddresschange`](/en-US/docs/Web/API/PaymentRequest/shippingaddresschange_event)
 - [`shippingoptionchange`](/en-US/docs/Web/API/PaymentRequest/shippingoptionchange_event)

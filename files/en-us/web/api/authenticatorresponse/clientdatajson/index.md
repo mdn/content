@@ -12,29 +12,22 @@ browser-compat: api.AuthenticatorResponse.clientDataJSON
 ---
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-The **`clientDataJSON`** property of the
-{{domxref("AuthenticatorResponse")}} interface stores a [JSON](/en-US/docs/Learn/JavaScript/Objects/JSON) string in an
+The **`clientDataJSON`** property of the
+{{domxref("AuthenticatorResponse")}} interface stores a [JSON](/en-US/docs/Learn/JavaScript/Objects/JSON) string in an
 {{jsxref("ArrayBuffer")}}, representing the client data that was passed to
 {{domxref("CredentialsContainer.create()")}} or
 {{domxref("CredentialsContainer.get()")}}. This property is only accessed on one of the
-child objects of `AuthenticatorResponse`, specifically
+child objects of `AuthenticatorResponse`, specifically
 {{domxref("AuthenticatorAttestationResponse")}} or
 {{domxref("AuthenticatorAssertionResponse")}}.
 
-## Syntax
-
-```js
-var arrayBuffer = AuthenticatorAttestationResponse.clientDataJSON;
-var arrayBuffer = AuthenticatorAssertionResponse.clientDataJSON;
-```
-
-### Value
+## Value
 
 An {{jsxref("ArrayBuffer")}}.
 
 ## Properties
 
-After the `clientDataJSON` object is converted from an
+After the `clientDataJSON` object is converted from an
 `ArrayBuffer` to a JavaScript object, it will have the following properties:
 
 - `type`

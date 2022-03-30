@@ -22,7 +22,8 @@ The **`DeviceMotionEvent()`** constructor creates a new
 ## Syntax
 
 ```js
-var deviceMotionEvent = new DeviceMotionEvent(type[, options])
+new DeviceMotionEvent(type)
+new DeviceMotionEvent(type, options)
 ```
 
 ### Parameters
@@ -33,15 +34,15 @@ var deviceMotionEvent = new DeviceMotionEvent(type[, options])
 
   - : Options are as follows:
 
-    - `acceleration`: An object giving the acceleration of the device on
-      the three axis X, Y and Z. Acceleration is expressed in [m/s²](https://en.wikipedia.org/wiki/Meter_per_second_squared).
-    - `accelerationIncludingGravity`: An object giving the acceleration of
+    - `acceleration`: An object giving the acceleration of the device on
+      the three axis X, Y and Z. Acceleration is expressed in [m/s²](https://en.wikipedia.org/wiki/Meter_per_second_squared).
+    - `accelerationIncludingGravity`: An object giving the acceleration of
       the device on the three axis X, Y and Z with the effect of gravity. Acceleration
-      is expressed in [m/s²](https://en.wikipedia.org/wiki/Meter_per_second_squared).
-    - `rotationRate`: An object giving the rate of change of the device's
+      is expressed in [m/s²](https://en.wikipedia.org/wiki/Meter_per_second_squared).
+    - `rotationRate`: An object giving the rate of change of the device's
       orientation on the three orientation axis alpha, beta and gamma. Rotation rate is
       express in degrees per seconds.
-    - `interval`: A number representing the interval of time, in
+    - `interval`: A number representing the interval of time, in
       milliseconds, at which data is obtained from the device.
 
 ## Specifications

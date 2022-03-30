@@ -19,7 +19,7 @@ Pointer lock lets you access mouse events even when the cursor goes past the bou
 
 ## Basic concepts
 
-Pointer lock is related to [mouse capture](/en-US/docs/Web/API/Element/setCapture "element.setCapture"). Mouse capture provides continued delivery of events to a target element while a mouse is being dragged, but it stops when the mouse button is released. Pointer lock is different from mouse capture in the following ways:
+Pointer lock is related to [mouse capture](/en-US/docs/Web/API/Element/setCapture). Mouse capture provides continued delivery of events to a target element while a mouse is being dragged, but it stops when the mouse button is released. Pointer lock is different from mouse capture in the following ways:
 
 - It is persistent: Pointer lock does not release the mouse until an explicit API call is made or the user uses a specific release gesture.
 - It is not limited by browser or screen boundaries.
@@ -229,7 +229,7 @@ function canvasDraw() {
 
 Pointer lock can only lock one iframe at a time. If you lock one iframe, you cannot try to lock another iframe and transfer the target to it; pointer lock will error out. To avoid this limitation, first unlock the locked iframe, and then lock the other.
 
-While iframes work by default, "sandboxed" iframes block Pointer lock. The ability to avoid this limitation, in the form of the attribute/value combination `<iframe sandbox="allow-pointer-lock">`, is expected to appear in Chrome soon.
+While iframes work by default, "sandboxed" iframes block Pointer lock. To avoid this limitation, use `<iframe sandbox="allow-pointer-lock">`.
 
 ## Specifications
 

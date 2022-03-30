@@ -79,7 +79,7 @@ as {{HTTPHeader("Accept-Language")}}.
 Say you're creating a new blog post through a site's API:
 
 ```
-PUT /new/post
+POST /new/post
 Host: example.com
 Content-Type: text/markdown
 
@@ -88,15 +88,16 @@ Content-Type: text/markdown
 I made this through `example.com`'s API. I hope it worked.
 ```
 
-The site returns a generic success message confirming the post was published. The
-server specifies _where_ the new post is with `Content-Location`:
+The site returns the published post in the response body. The server specifies  _where_ the new post is with the `Content-Location` header, indicating that this location refers to the content (the body) of this response:
 
 ```
 HTTP/1.1 201 Created
-Content-Type: text/plain; charset=utf-8
+Content-Type: text/markdown
 Content-Location: /my-first-blog-post
 
-✅ Success!
+# My first blog post
+
+I made this through `example.com`'s API. I hope it worked.
 ```
 
 ### Indicating the URL of a transaction's result

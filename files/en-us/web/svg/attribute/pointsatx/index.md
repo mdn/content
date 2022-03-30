@@ -13,7 +13,7 @@ The **`pointsAtX`** attribute represents the x location in the coordinate system
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feSpotLight")}}
+- {{SVGElement("feSpotLight")}}
 
 ## Example
 

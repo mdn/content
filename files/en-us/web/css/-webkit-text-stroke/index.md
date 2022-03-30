@@ -32,8 +32,8 @@ text-stroke: unset;
 
 This property is a shorthand for the following CSS properties:
 
-- [`-webkit-stroke-color`](/en-US/docs/Web/CSS/-webkit-text-stroke-color)
-- [`-webkit-stroke-width`](/en-US/docs/Web/CSS/-webkit-text-stroke-width)
+- [`-webkit-text-stroke-color`](/en-US/docs/Web/CSS/-webkit-text-stroke-color)
+- [`-webkit-text-stroke-width`](/en-US/docs/Web/CSS/-webkit-text-stroke-width)
 
 ## Syntax
 

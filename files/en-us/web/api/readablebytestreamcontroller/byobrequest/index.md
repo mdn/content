@@ -11,7 +11,7 @@ tags:
   - byobRequest
 browser-compat: api.ReadableByteStreamController.byobRequest
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`byobRequest`** read-only property of the
 {{domxref("ReadableByteStreamController")}} interface returns the current BYOB pull

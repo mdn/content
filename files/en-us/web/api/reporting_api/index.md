@@ -9,7 +9,7 @@ tags:
   - Reporting
   - Secure context
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Reporting API")}}
+{{SeeCompatTable}}{{APIRef("Reporting API")}}
 
 The Reporting API provides a generic reporting mechanism for web applications to use to make reports available based on various platform features (for example [Content Security Policy](/en-US/docs/Web/HTTP/CSP), [Feature-Policy](/en-US/docs/Web/HTTP/Headers/Feature-Policy), or feature deprecation reports) in a consistent manner.
 
@@ -71,9 +71,9 @@ The spec defines the following report types:
 - Deprecation report
   - : Indicates that a WebAPI or other browser feature being used in the website is expected to stop working in a future release. Indicated by a {{domxref("Report.body")}} property with a {{domxref("DeprecationReportBody")}} return value.
 - Intervention report
-  - : Indicates that a request made by the website has been denied by the browser, e.g. for security or user annoyance reasons. Indicated by a {{domxref("Report.body")}} property with a {{domxref("InterventionReportBody")}} return value.
+  - : Indicates that a request made by the website has been denied by the browser, e.g. for security or user annoyance reasons. Indicated by a {{domxref("Report.body")}} property with a {{domxref("InterventionReportBody")}} return value.
 - Crash report
-  - : Indicates that the website stopped running due to a browser crash. Indicated by a {{domxref("Report.body")}} property with a {{domxref("CrashReportBody")}} return value.
+  - : Indicates that the website stopped running due to a browser crash. Indicated by a {{domxref("Report.body")}} property with a {{domxref("CrashReportBody")}} return value.
 
 ## Examples
 
@@ -126,7 +126,7 @@ This causes a deprecation report to be generated; because of the event handler w
 
 ## Browser compatibility
 
-Support is at an early stage right now. Firefox supports the JavaScript API and the `Report-To` header behind prefs:
+Support is at an early stage right now. Firefox supports the JavaScript API and the `Report-To` header behind preferences:
 
 - JavaScript API: `dom.reporting.enabled` (enabled in nightly only)
 - HTTP header: `dom.reporting.header.enabled`

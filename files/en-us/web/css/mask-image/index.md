@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Masking
   - CSS Property
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.mask-image
@@ -43,7 +42,7 @@ mask-image: unset;
 - `none`
   - : This keyword is interpreted as an opaque white image layer.
 - `<mask-source>`
-  - : A {{cssxref("url()","url()")}} reference to a {{SVGElement("mask")}} or to a CSS image.
+  - : A {{cssxref("url","url()")}} reference to a {{SVGElement("mask")}} or to a CSS image.
 - {{cssxref("&lt;image&gt;")}}
   - : An image value used as mask image layer.
 

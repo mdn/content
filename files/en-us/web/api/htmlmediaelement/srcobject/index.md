@@ -14,30 +14,22 @@ browser-compat: api.HTMLMediaElement.srcObject
 ---
 {{APIRef("HTML DOM")}}
 
-The **`srcObject`** property of the
+The **`srcObject`** property of the
 {{domxref("HTMLMediaElement")}} interface sets or returns the object which serves as
 the source of the media associated with the {{domxref("HTMLMediaElement")}}.
 
-The object can be a {{domxref("MediaStream")}}, a {{domxref("MediaSource")}}, a
+The object can be a {{domxref("MediaStream")}}, a {{domxref("MediaSource")}}, a
 {{domxref("Blob")}}, or a {{domxref("File")}} (which inherits from `Blob`).
 
 > **Note:** As of March 2020, only Safari supports setting objects other
 > than `MediaStream`. Until other browsers catch up, for
-> `MediaSource`, `Blob` and `File`, consider falling
+> `MediaSource`, `Blob` and `File`, consider falling
 > back to creating a URL with {{domxref("URL.createObjectURL()")}} and assign it to
 > {{domxref("HTMLMediaElement.src")}}. See below for an example.
 
-## Syntax
+## Value
 
-```js
-var sourceObject = HTMLMediaElement.srcObject;
-
-HTMLMediaElement.srcObject = sourceObject;
-```
-
-### Value
-
-A {{domxref('MediaStream')}}, {{domxref('MediaSource')}}, {{domxref('Blob')}}, or
+A {{domxref('MediaStream')}}, {{domxref('MediaSource')}}, {{domxref('Blob')}}, or
 {{domxref('File')}} object (though see the compatibility table for what is actually
 supported).
 

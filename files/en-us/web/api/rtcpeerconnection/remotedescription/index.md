@@ -10,6 +10,7 @@ tags:
   - remoteDescription
 browser-compat: api.RTCPeerConnection.remoteDescription
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only property
@@ -25,7 +26,7 @@ code calling {{domxref("RTCPeerConnection.setRemoteDescription()")}} in response
 ## Syntax
 
 ```js
- var sessionDescription = peerConnection.remoteDescription;
+var sessionDescription = peerConnection.remoteDescription;
 ```
 
 On a more fundamental level, the returned value is the value of
@@ -72,4 +73,4 @@ else {
   {{domxref("RTCPeerConnection.pendingLocalDescription")}},
   {{domxref("RTCPeerConnection.currentLocalDescription")}},
   {{domxref("RTCPeerConnection.localDescription")}}
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)

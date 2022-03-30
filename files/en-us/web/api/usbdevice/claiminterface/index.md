@@ -39,12 +39,14 @@ A {{jsxref("promise")}}.
 The following example shows `claimInterface()` in the context of connecting
 to a USB device.
 
-    async function connectDevice(usbDevice) {
-      await usbDevice.open();
-      if (usbDevice.configuration === null)
-        await usbDevice.selectConfiguration(1);
-      await usbDevice.claimInterface(0);
-    }
+```js
+async function connectDevice(usbDevice) {
+  await usbDevice.open();
+  if (usbDevice.configuration === null)
+    await usbDevice.selectConfiguration(1);
+  await usbDevice.claimInterface(0);
+}
+```
 
 ## Specifications
 

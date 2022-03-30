@@ -13,19 +13,13 @@ tags:
   - Property
 browser-compat: api.CSSRotate.angle
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`angle`** property of the
 {{domxref("CSSRotate")}} interface gets and sets the angle of rotation. A positive angle
 denotes a clockwise rotation, a negative angle a counter-clockwise one.
 
-## Syntax
-
-```js
-var rotateAngle = CSSRotate.angle;
-```
-
-### Value
+## Value
 
 A {{domxref("CSSNumericValue")}}
 

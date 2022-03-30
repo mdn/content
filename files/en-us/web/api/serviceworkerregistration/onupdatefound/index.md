@@ -23,7 +23,7 @@ service worker.
 ## Syntax
 
 ```js
-serviceWorkerRegistration.onupdatefound = function() { ... };
+serviceWorkerRegistration.onupdatefound = function() { /* ... */ };
 ```
 
 ## Specifications

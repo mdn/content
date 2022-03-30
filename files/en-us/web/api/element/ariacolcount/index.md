@@ -13,14 +13,9 @@ browser-compat: api.Element.ariaColCount
 ---
 {{DefaultAPISidebar("DOM")}}
 
-The **`ariaColCount`** property of the {{domxref("Element")}} interface reflects the value of the `aria-colcount` attribute, which defines the number of columns in a table, grid, or treegrid.
+The **`ariaColCount`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) attribute, which defines the number of columns in a table, grid, or treegrid.
 
-## Syntax
-
-    var ariaColCount = element.ariaColCount;
-    element.ariaColCount = ariaColCount
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}.
 

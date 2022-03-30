@@ -27,7 +27,7 @@ console.count([label]);
 ### Parameters
 
 - `label` {{Optional_Inline}}
-  - : A {{jsxref("String")}}. If supplied, `count()` outputs the number of
+  - : A string. If supplied, `count()` outputs the number of
     times it has been called with that label. If omitted, `count()` behaves as
     though it was called with the "default" label.
 
@@ -53,10 +53,12 @@ console.count();
 
 Console output will look something like this:
 
-    "default: 1"
-    "default: 2"
-    "default: 3"
-    "default: 4"
+```
+"default: 1"
+"default: 2"
+"default: 3"
+"default: 4"
+```
 
 The label is displayed as `default` because no explicit label was supplied.
 
@@ -81,10 +83,12 @@ console.count("alice");
 
 We will see output like this:
 
-    "bob: 1"
-    "alice: 1"
-    "alice: 2"
-    "alice: 3"
+```
+"bob: 1"
+"alice: 1"
+"alice: 2"
+"alice: 3"
+```
 
 We're now maintaining separate counts based only on the value of `label`.
 

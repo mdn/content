@@ -13,7 +13,7 @@ The **`User Timing`** interface allows the developer to create application speci
 
 This document shows how to create `mark` and `measure` {{domxref("PerformanceEntry.entryType","performance entry types")}} and how to use `User Timing` methods (which are extensions of the {{domxref("Performance")}} interface) to retrieve and remove entries from the browser's _performance timeline_.
 
-A _live_ version of the examples is available on [Github](https://mdn.github.io/dom-examples/performance-apis/Using_the_User_Timing_API.html), as is the [source code](https://github.com/mdn/dom-examples/blob/master/performance-apis/Using_the_User_Timing_API.html). Pull requests, enhancement requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
+A _live_ version of the examples is available on [GitHub](https://mdn.github.io/dom-examples/performance-apis/Using_the_User_Timing_API.html), as is the [source code](https://github.com/mdn/dom-examples/blob/master/performance-apis/Using_the_User_Timing_API.html). Pull requests, enhancement requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
 
 ## Performance `marks`
 
@@ -198,7 +198,7 @@ The {{domxref("Performance.clearMeasures","performance.clearMeasures()")}} metho
 ```js
 function clear_measures(obj) {
   if (performance.clearMeasures === undefined) {
-    log("Clear Mearsures: performance.clearMeasures Not supported", 1);
+    log("Clear Measures: performance.clearMeasures Not supported", 1);
     return;
   }
   log("Clear measures", 1);

@@ -13,14 +13,7 @@ browser-compat: api.VTTCue.positionAlign
 
 The **`positionAlign`** property of the {{domxref("VTTCue")}} interface is used to determine what {{domxref("VTTCue.position")}} is anchored to.
 
-## Syntax
-
-```js
-let positionAlign = VTTCue.position;
-VTTCue.position = a;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString","string")}} containing one of the following values:
 
@@ -32,7 +25,7 @@ A {{domxref("DOMString","string")}} containing one of the following values:
   - : Line-right alignment.
 - `"auto"`
 
-  - : Automatic alignment, which depends on the text alignment of the cue, intepreted as follows:
+  - : Automatic alignment, which depends on the text alignment of the cue, interpreted as follows:
 
     - **line-left:** if the text alignment is left, the cue is using a LTR language and the text alignment is start, or the cue is using a RTL language and the text alignment is end.
     - **line-right:** if the text alignment is right, the cue is using a RTL language and the text alignment is start, or the cue is using a LTR language and the text-alignment is end.

@@ -10,9 +10,9 @@ browser-compat: http.status.403
 ---
 {{HTTPSidebar}}
 
-The HTTP **`403 Forbidden`** client error status response code indicates that the server understands the request but refuses to authorize it.
+The HTTP **`403 Forbidden`** response status code indicates that the server understands the request but refuses to authorize it.
 
-This status is similar to {{HTTPStatus("401")}}, but in this case, re-authenticating will make no difference. The access is permanently forbidden and tied to the application logic, such as insufficient rights to a resource.
+This status is similar to {{HTTPStatus("401")}}, but for the **`403 Forbidden`** status code re-authenticating makes no difference. The access is permanently forbidden and tied to the application logic, such as insufficient rights to a resource.
 
 ## Status
 

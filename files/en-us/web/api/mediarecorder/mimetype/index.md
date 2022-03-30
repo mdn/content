@@ -17,7 +17,7 @@ browser-compat: api.MediaRecorder.mimeType
 {{APIRef("MediaStream Recording")}}
 
 The **`mimeType`** read-only
-property returns the {{Glossary("MIME")}} media type that was specified when creating
+property returns the {{Glossary("MIME")}} media type that was specified when creating
 the {{domxref("MediaRecorder")}} object, or, if none was specified, which was chosen
 by the browser. This is the file format of the file that would result from
 writing all of the recorded data to disk.
@@ -34,7 +34,7 @@ about container and codec support across browsers.
 ## Syntax
 
 ```js
-var mimeType = mediaRecorder.mimeType
+var mimeType = mediaRecorder.mimeType
 ```
 
 ### Value
@@ -105,7 +105,7 @@ by `m.mimeType` would then be
 - [The "codecs" parameter in
   common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
 - [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder +
-  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
+  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/web-dictaphone/).)
 - [simpl.info MediaStream Recording
   demo](http://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("MediaDevices.getUserMedia()")}}

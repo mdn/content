@@ -13,7 +13,7 @@ browser-compat: api.SVGSetElement
 
 The **`SVGSetElement`** interface corresponds to the {{SVGElement("set")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

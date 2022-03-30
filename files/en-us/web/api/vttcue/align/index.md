@@ -13,14 +13,7 @@ browser-compat: api.VTTCue.align
 
 The **`align`** property of the {{domxref("VTTCue")}} interface represents the alignment of all of the lines of text in the text box.
 
-## Syntax
-
-```js
-let align = VTTCue.align;
-VTTCue.align = a;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString","string")}} containing one of the following values:
 

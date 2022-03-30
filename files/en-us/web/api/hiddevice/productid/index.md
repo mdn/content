@@ -13,19 +13,13 @@ browser-compat: api.HIDDevice.productId
 
 The **`productId`** read-only property of the {{domxref("HIDDevice")}} interface returns the product ID of the connected HID device.
 
-## Syntax
-
-```js
-let productId = HIDDevice.productId;
-```
-
-### Value
+## Value
 
 An integer. If the device has no product ID, or the product ID cannot be accessed this will return `0`.
 
 ## Examples
 
-The following example rerieves devices with {{domxref("HID.getDevices()")}} and logs the value of `productId` to the console.
+The following example retrieves devices with {{domxref("HID.getDevices()")}} and logs the value of `productId` to the console.
 
 ```js
 document.addEventListener('DOMContentLoaded', async () => {

@@ -37,8 +37,8 @@ padStart(targetLength, padString)
 - `padString` {{optional_inline}}
   - : The string to pad the current `str` with. If
     `padString` is too long to stay within the
-    `targetLength`, it will be truncated from the end. The default
-    value is "` `" (`U+0020 'SPACE'`).
+    `targetLength`, it will be truncated from the end.
+    The default value is the unicode "space" character (U+0020).
 
 ### Return value
 
@@ -81,7 +81,7 @@ console.log(leftFillNum(num, 5));
 
 ## See also
 
-- A polyfill of `String.prototype.padStart` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.padStart` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.padEnd()")}}
 - [A
   polyfill](https://github.com/behnammodi/polyfill/blob/master/string.polyfill.js)

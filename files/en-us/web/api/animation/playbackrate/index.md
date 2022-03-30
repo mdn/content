@@ -12,29 +12,21 @@ tags:
   - web animations api
 browser-compat: api.Animation.playbackRate
 ---
-{{APIRef("Web Animations")}}{{SeeCompatTable}}
+{{APIRef("Web Animations")}}
 
-The **`Animation.playbackRate`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns or sets the playback rate of the animation.
+The **`Animation.playbackRate`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns or sets the playback rate of the animation.
 
-Animations have a **playback rate** that provides a scaling factor from the rate of change of the animation's {{domxref("DocumentTimeline", "timeline")}} time values to the animation’s current time. The playback rate is initially `1`.
+Animations have a **playback rate** that provides a scaling factor from the rate of change of the animation's {{domxref("DocumentTimeline", "timeline")}} time values to the animation's current time. The playback rate is initially `1`.
 
-## Syntax
-
-```js
-var currentPlaybackRate = Animation.playbackRate;
-
-Animation.playbackRate = newRate;
-```
-
-### Value
+## Value
 
 Takes a number that can be 0, negative, or positive. Negative values reverse the animation. The value is a scaling factor, so for example a value of 2 would double the playback rate.
 
-> **Note:** Setting an animation’s `playbackRate` to `0` effectively pauses the animation (however, its {{domxref("Animation.playstate", "playstate")}} does not necessarily become `paused`).
+> **Note:** Setting an animation's `playbackRate` to `0` effectively pauses the animation (however, its {{domxref("Animation.playstate", "playstate")}} does not necessarily become `paused`).
 
 ## Examples
 
-In the [Growing/Shrinking Alice Game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) example, clicking or tapping the bottle causes Alice's growing animation (`aliceChange`) to reverse, causing her to shrink:
+In the [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) example, clicking or tapping the bottle causes Alice's growing animation (`aliceChange`) to reverse, causing her to shrink:
 
 ```js
 var shrinkAlice = function() {
@@ -60,7 +52,7 @@ cake.addEventListener("mousedown", growAlice, false);
 cake.addEventListener("touchstart", growAlice, false);
 ```
 
-In another example, the [Red Queen's Race Game](http://codepen.io/rachelnabors/pen/PNGGaV?editors=0010), Alice and the Red Queen are constantly slowing down:
+In another example, the [Red Queen's Race Game](https://codepen.io/rachelnabors/pen/PNGGaV?editors=0010), Alice and the Red Queen are constantly slowing down:
 
 ```js
 setInterval( function() {

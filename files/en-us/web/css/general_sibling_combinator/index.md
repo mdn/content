@@ -10,7 +10,7 @@ browser-compat: css.selectors.general_sibling
 ---
 {{CSSRef("Selectors")}}
 
-The **general sibling combinator** (`~`) separates two selectors and matches _all iterations_ of the second element, that are following the first element (though not necessarily immediately), and are children of the same parent {{Glossary("element")}}.
+The **general sibling combinator** (`~`) separates two selectors and matches _all iterations_ of the second element, that are following the first element (though not necessarily immediately), and are children of the same parent {{Glossary("element")}}.
 
 ```css
 /* Paragraphs that are siblings of and
@@ -48,7 +48,6 @@ p ~ span {
 <div> How are you? </div>
 <p> Whatever it may be, keep smiling. </p>
 <h1> Dream big </h1>
-<h2> that's all. </h2>
 <span>And yet again this is a red span!</span>
 ```
 

@@ -11,7 +11,7 @@ browser-compat: api.HID.getDevices
 ---
 {{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
 
-The **`getDevices()`** method of the {{domxref("HID")}} interface gets a list of the connected HID devices.
+The **`getDevices()`** method of the {{domxref("HID")}} interface gets a list of the connected HID devices that the user has previously been granted access to in response to a {{domxref("HID.requestDevice","requestDevice()")}} call.
 
 ## Syntax
 

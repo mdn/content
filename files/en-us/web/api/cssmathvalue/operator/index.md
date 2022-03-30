@@ -12,7 +12,7 @@ tags:
   - Reference
 browser-compat: api.CSSMathValue.operator
 ---
-{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSMathValue.operator`** read-only
 property of the {{domxref("CSSMathValue")}} interface indicates the operator that the
@@ -20,13 +20,7 @@ current subtype represents. For example, if the current `CSSMathValue`
 subtype is `CSSMathSum`, this property will return the string
 `"sum"`.
 
-## Syntax
-
-```js
-var aString = CSSMathValue.operator;
-```
-
-### Value
+## Value
 
 A {{jsxref('String')}}.
 
@@ -64,7 +58,7 @@ We add the JavaScript
 ```js
 const styleMap = document.querySelector('div').computedStyleMap();
 
-console.log( styleMap.get('width') );                   // CSSMathSum {values: CSSNumericArray, operator: "sum"}
+console.log( styleMap.get('width') );                   // CSSMathSum {values: CSSNumericArray, operator: "sum"}
 console.log( styleMap.get('width').values );            // CSSNumericArray {0: CSSUnitValue, 1: CSSMathNegate, length: 2}
 console.log( styleMap.get('width').operator );          // 'sum'
 console.log( styleMap.get('width').values[1].operator ) // 'negate'

@@ -24,11 +24,10 @@ Created frames may then turned into a media track, for example with the {{domxre
 
 ## Constructor
 
-- {{domxref("VideoFrame.VideoFrame()")}}
+- {{domxref("VideoFrame.VideoFrame", "VideoFrame()")}}
   - : Creates a new `VideoFrame` object.
 
 ## Properties
-
 
 - {{domxref("VideoFrame.format")}}{{ReadOnlyInline}}
   - : Returns the pixel format of the `VideoFrame`.
@@ -45,9 +44,9 @@ Created frames may then turned into a media track, for example with the {{domxre
 - {{domxref("VideoFrame.displayHeight")}}{{ReadOnlyInline}}
   - : Returns the height of the `VideoFrame` when displayed after applying aspect ratio adjustments.
 - {{domxref("VideoFrame.duration")}}{{ReadOnlyInline}}
-  - : Returns an integer indicating the duration of the audio in microseconds.
+  - : Returns an integer indicating the duration of the video in microseconds.
 - {{domxref("VideoFrame.timestamp")}}{{ReadOnlyInline}}
-  - : Returns an integer indicating the timestamp of the audio in microseconds.
+  - : Returns an integer indicating the timestamp of the video in microseconds.
 - {{domxref("VideoFrame.colorSpace")}}{{ReadOnlyInline}}
   - : Returns a {{domxref("VideoColorSpace")}} object.
 
@@ -102,4 +101,3 @@ while (true) {
 
 - [Video processing with WebCodecs](https://web.dev/webcodecs/)
 - [WebCodecs examples](https://w3c.github.io/webcodecs/samples/)
-

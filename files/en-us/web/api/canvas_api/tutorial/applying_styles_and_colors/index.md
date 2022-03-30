@@ -163,25 +163,25 @@ In this second example, we do something similar to the one above, but instead of
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById('canvas').getContext('2d');
 
-  // Draw background
-  ctx.fillStyle = 'rgb(255, 221, 0)';
-  ctx.fillRect(0, 0, 150, 37.5);
-  ctx.fillStyle = 'rgb(102, 204, 0)';
-  ctx.fillRect(0, 37.5, 150, 37.5);
-  ctx.fillStyle = 'rgb(0, 153, 255)';
-  ctx.fillRect(0, 75, 150, 37.5);
-  ctx.fillStyle = 'rgb(255, 51, 0)';
-  ctx.fillRect(0, 112.5, 150, 37.5);
+  // Draw background
+  ctx.fillStyle = 'rgb(255, 221, 0)';
+  ctx.fillRect(0, 0, 150, 37.5);
+  ctx.fillStyle = 'rgb(102, 204, 0)';
+  ctx.fillRect(0, 37.5, 150, 37.5);
+  ctx.fillStyle = 'rgb(0, 153, 255)';
+  ctx.fillRect(0, 75, 150, 37.5);
+  ctx.fillStyle = 'rgb(255, 51, 0)';
+  ctx.fillRect(0, 112.5, 150, 37.5);
 
-  // Draw semi transparent rectangles
-  for (var i = 0; i < 10; i++) {
-    ctx.fillStyle = 'rgba(255, 255, 255, ' + (i + 1) / 10 + ')';
-    for (var j = 0; j < 4; j++) {
-      ctx.fillRect(5 + i * 14, 5 + j * 37.5, 14, 27.5);
-    }
-  }
+  // Draw semi transparent rectangles
+  for (var i = 0; i < 10; i++) {
+    ctx.fillStyle = 'rgba(255, 255, 255, ' + (i + 1) / 10 + ')';
+    for (var j = 0; j < 4; j++) {
+      ctx.fillRect(5 + i * 14, 5 + j * 37.5, 14, 27.5);
+    }
+  }
 }
 ```
 
@@ -257,7 +257,7 @@ To fix this, you have to be very precise in your path creation. Knowing that a `
 
 > **Note:** Be aware that in our vertical line example, the Y position still referenced an integer gridline position—if it hadn't, we would see pixels with half coverage at the endpoints (but note also that this behavior depends on the current `lineCap` style whose default value is `butt`; you may want to compute consistent strokes with half-pixel coordinates for odd-width lines, by setting the `lineCap` style to `square`, so that the outer border of the stroke around the endpoint will be automatically extended to cover the whole pixel exactly).
 >
-> Note also that only start and final endpoints of a path are affected: if a path is closed with `closePath()`, there's no start and final endpoint; instead, all endpoints in the path are connected to their attached previous and next segment using the current setting of the `lineJoin` style, whose default value is `miter`, with the effect of automatically extending the outer borders of the connected segments to their intersection point, so that the rendered stroke will exactly cover full pixels centered at each endpoint if those connected segments are horizontal and/or vertical). See the next two sections for demonstrations of these additional line styles.
+> Note also that only start and final endpoints of a path are affected: if a path is closed with `closePath()`, there's no start and final endpoint; instead, all endpoints in the path are connected to their attached previous and next segment using the current setting of the `lineJoin` style, whose default value is `miter`, with the effect of automatically extending the outer borders of the connected segments to their intersection point, so that the rendered stroke will exactly cover full pixels centered at each endpoint if those connected segments are horizontal and/or vertical. See the next two sections for demonstrations of these additional line styles.
 
 For even-width lines, each half ends up being an integer amount of pixels, so you want a path that is between pixels (that is, (3,1) to (3,5)), instead of down the middle of pixels.
 
@@ -322,7 +322,7 @@ The `lineJoin` property determines how two connecting segments (of lines, arcs o
 There are three possible values for this property: `round`, `bevel` and `miter`. By default this property is set to `miter`. Note that the `lineJoin` setting has no effect if the two connected segments have the same direction, because no joining area will be added in this case:
 
 - `round`
-  - : Rounds off the corners of a shape by filling an additional sector of disc centered at the common endpoint of connected segments. The radius for these rounded corners is equal to half the line width.
+  - : Rounds off the corners of a shape by filling an additional sector of disc centered at the common endpoint of connected segments. The radius for these rounded corners is equal to half the line width.
 - `bevel`
   - : Fills an additional triangular area between the common endpoint of connected segments, and the separate outside rectangular corners of each segment.
 - `miter`
@@ -364,7 +364,7 @@ As you've seen in the previous example, when joining two lines with the `miter` 
 
 The `miterLimit` property determines how far the outside connection point can be placed from the inside connection point. If two lines exceed this value, a bevel join gets drawn instead. Note that the maximum miter length is the product of the line width measured in the current coordinate system, by the value of this `miterLimit` property (whose default value is 10.0 in the HTML {{HTMLElement("canvas")}}), so the `miterLimit` can be set independently from the current display scale or any affine transforms of paths: it only influences the effectively rendered shape of line edges.
 
-More exactly, the miter limit is the maximum allowed ratio of the extension length (in the HTML canvas, it is measured between the outside corner of the joined edges of the line and the common endpoint of connecting segments specified in the path) to half the line width. It can equivalently be defined as the maximum allowed ratio of the distance between the inside and outside points of jonction of edges, to the total line width. It is then equal to the cosecant of half the minimum inner angle of connecting segments below which no miter join will be rendered, but only a bevel join:
+More exactly, the miter limit is the maximum allowed ratio of the extension length (in the HTML canvas, it is measured between the outside corner of the joined edges of the line and the common endpoint of connecting segments specified in the path) to half the line width. It can equivalently be defined as the maximum allowed ratio of the distance between the inside and outside points of junction of edges, to the total line width. It is then equal to the cosecant of half the minimum inner angle of connecting segments below which no miter join will be rendered, but only a bevel join:
 
 - `miterLimit` = **max** `miterLength` / `lineWidth` = 1 / **sin** ( **min** _θ_ / 2 )
 - The default miter limit of 10.0 will strip all miters for sharp angles below about 11 degrees.
@@ -448,19 +448,19 @@ var ctx = document.getElementById('canvas').getContext('2d');
 var offset = 0;
 
 function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.setLineDash([4, 2]);
-  ctx.lineDashOffset = -offset;
-  ctx.strokeRect(10, 10, 100, 100);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.setLineDash([4, 2]);
+  ctx.lineDashOffset = -offset;
+  ctx.strokeRect(10, 10, 100, 100);
 }
 
 function march() {
-  offset++;
-  if (offset > 16) {
-    offset = 0;
-  }
-  draw();
-  setTimeout(march, 20);
+  offset++;
+  if (offset > 16) {
+    offset = 0;
+  }
+  draw();
+  setTimeout(march, 20);
 }
 
 march();
@@ -764,7 +764,7 @@ When using `fill` (or {{domxref("CanvasRenderingContext2D.clip", "clip")}} and {
 
 Two values are possible:
 
-- **`"nonzero`**": The [non-zero winding rule](https://en.wikipedia.org/wiki/Nonzero-rule), which is the default rule.
+- **`"nonzero"`**: The [non-zero winding rule](https://en.wikipedia.org/wiki/Nonzero-rule), which is the default rule.
 - **`"evenodd"`**: The [even-odd winding rule](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
 In this example we are using the `evenodd` rule.
@@ -773,8 +773,8 @@ In this example we are using the `evenodd` rule.
 function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   ctx.beginPath();
-  ctx.arc(50, 50, 30, 0, Math.PI * 2, true);
-  ctx.arc(50, 50, 15, 0, Math.PI * 2, true);
+  ctx.arc(50, 50, 30, 0, Math.PI * 2, true);
+  ctx.arc(50, 50, 15, 0, Math.PI * 2, true);
   ctx.fill('evenodd');
 }
 ```

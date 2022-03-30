@@ -16,17 +16,17 @@ browser-compat: api.BluetoothRemoteGATTServer.getPrimaryService
 
 The **`BluetoothRemoteGATTServer.getPrimaryService()`** method
 returns a promise to the primary {{domxref("BluetoothRemoteGATTService")}} offered by the
-bluetooth device for a specified {{domxref("BluetoothServiceUUID")}}.
+bluetooth device for a specified {{domxref("BluetoothServiceUUID")}}.
 
 ## Syntax
 
 ```js
-BluetoothRemoteGATTServer.getPrimaryService(bluetoothServiceUUID).then(function(bluetoothGATTService) { ... })
+BluetoothRemoteGATTServer.getPrimaryService(bluetoothServiceUUID).then(function(bluetoothGATTService) { /* ... */ })
 ```
 
 ### Returns
 
-A {{jsxref("Promise")}} that resolves to a {{domxref("BluetoothRemoteGATTService")}} object.
+A {{jsxref("Promise")}} that resolves to a {{domxref("BluetoothRemoteGATTService")}} object.
 
 ### Parameters
 

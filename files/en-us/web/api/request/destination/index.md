@@ -3,7 +3,6 @@ title: Request.destination
 slug: Web/API/Request/destination
 tags:
   - API
-  - Experimental
   - Fetch
   - Fetch API
   - Files
@@ -39,9 +38,9 @@ where the received data is stored for processing later. Others are script-based,
 which case the received data is delivered to a script by calling it and passing the data
 along. Script-based destinations include {{HTMLElement("script")}} elements, as well as
 any of the {{domxref("Worklet")}}-based destinations
-(including {{domxref("AudioWorklet")}} and {{domxref("PaintWorklet")}}), and the
-{{domxref("Worker")}}-based destinations, including {{domxref("ServiceWorker")}}
-and {{domxref("SharedWorker")}}.
+(including {{domxref("AudioWorklet")}} and {{domxref("PaintWorklet")}}), and the
+{{domxref("Worker")}}-based destinations, including {{domxref("ServiceWorker")}}
+and {{domxref("SharedWorker")}}.
 
 ## Syntax
 
@@ -86,7 +85,7 @@ Possible values are:
 - `"style"`
   - : The target is a style
 - `"track"`
-  - : The target is an HTML {{HTMLELement("track")}}.
+  - : The target is an HTML {{HTMLElement("track")}}.
 - `"video"`
   - : The target is video data.
 - `"worker"`

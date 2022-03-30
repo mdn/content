@@ -14,11 +14,11 @@ The **`font-family`** attribute indicates which font family will be used to rend
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("altGlyph")}}
-*   {{SVGElement("text")}}
-*   {{SVGElement("textPath")}}
-*   {{SVGElement("tref")}}
-*   {{SVGElement("tspan")}}
+- {{SVGElement("altGlyph")}}
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
 
 ## Example
 
@@ -30,8 +30,8 @@ html, body, svg {
 
 ```html
 <svg viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg">
-  <text y="20" font-family="Arial, Helvetica, sans-serif">Sans serif</text>
-  <text x="100" y="20" font-family="monospace">Monospace</text>
+  <text y="20" font-family="Arial, Helvetica, sans-serif">Sans serif</text>
+  <text x="100" y="20" font-family="monospace">Monospace</text>
 </svg>
 ```
 
@@ -102,4 +102,4 @@ For a description of the values, please refer to the [CSS `font-family`](/en-US/
 
 ## See also
 
-*   {{cssxref("font-family", "CSS font-family")}}
+- {{cssxref("font-family", "CSS font-family")}}

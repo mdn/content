@@ -12,7 +12,7 @@ The **`orient`** attribute indicates how a marker is rotated when it is placed a
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("marker")}}
+- {{SVGElement("marker")}}
 
 ## Example
 
@@ -71,18 +71,18 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `auto`
-    *   : This value indicates that the marker is oriented such that its positive x-axis is pointing in a direction relative to the path at the position the marker is placed.
-*   `auto-start-reverse`
-    *   : If placed by {{SVGAttr("marker-start")}}, the marker is oriented 180° different from the orientation that would be used if `auto` where specified. For all other markers, `auto-start-reverse` means the same as `auto`.
+- `auto`
+  - : This value indicates that the marker is oriented such that its positive x-axis is pointing in a direction relative to the path at the position the marker is placed.
+- `auto-start-reverse`
+  - : If placed by {{SVGAttr("marker-start")}}, the marker is oriented 180° different from the orientation that would be used if `auto` where specified. For all other markers, `auto-start-reverse` means the same as `auto`.
 
-        > **Note:** This allows a single arrowhead marker to be defined that can be used for both the start and end of a path, i.e. which points outwards from both ends.
-*   `<angle>`
-    *   : This value indicates that the marker is oriented such that the specified angle is that measured between the shape's positive x-axis and the marker's positive x-axis.
+    > **Note:** This allows a single arrowhead marker to be defined that can be used for both the start and end of a path, i.e. which points outwards from both ends.
+- `<angle>`
+  - : This value indicates that the marker is oriented such that the specified angle is that measured between the shape's positive x-axis and the marker's positive x-axis.
 
-        > **Note:** For example, if a value of `45` is given, then the marker's positive x-axis would be pointing down and right in the shape's coordinate system.
-*   `<number>`
-    *   : This value indicates an angle in degrees. The marker is oriented such that the specified angle is that measured between the shape's positive x-axis and the marker's positive x-axis.
+    > **Note:** For example, if a value of `45` is given, then the marker's positive x-axis would be pointing down and right in the shape's coordinate system.
+- `<number>`
+  - : This value indicates an angle in degrees. The marker is oriented such that the specified angle is that measured between the shape's positive x-axis and the marker's positive x-axis.
 
 ## Specifications
 

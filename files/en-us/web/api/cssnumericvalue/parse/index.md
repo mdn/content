@@ -12,7 +12,7 @@ tags:
   - parse()
 browser-compat: api.CSSNumericValue.parse
 ---
-{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`parse()`** method of the
 {{domxref("CSSNumericValue")}} interface converts a value string into an object whose

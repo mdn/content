@@ -19,7 +19,7 @@ method should be used instead.
 > **Warning:** This feature is deprecated and should be avoided. Use the {{DOMxRef("ScreenOrientation.unlock()")}} method instead.
 
 > **Note:** This method only works for installed Web apps or for Web pages
-> in [full-screen mode](/en-US/docs/Web/API/Fullscreen_API).
+> in [fullscreen mode](/en-US/docs/Web/API/Fullscreen_API).
 
 ## Syntax
 
@@ -58,5 +58,5 @@ Use {{domxref("ScreenOrientation.unlock()")}} instead.
 
 - {{DOMxRef("Screen.orientation")}}
 - {{DOMxRef("Screen.lockOrientation()")}}
-- {{DOMxRef("Screen.onorientationchange")}}
+- {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} event
 - [Managing screen orientation](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)

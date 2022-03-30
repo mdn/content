@@ -15,7 +15,9 @@ The **`setOrientToAuto()`** method of the {{domxref("SVGMarkerElement")}} interf
 
 ## Syntax
 
-    setOrientToAuto();
+```js
+setOrientToAuto();
+```
 
 ### Parameters
 

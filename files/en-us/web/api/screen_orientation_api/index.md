@@ -9,7 +9,7 @@ tags:
   - Overview
   - Screen Orientation
 ---
-{{DefaultAPISidebar("Screen Orientation API")}}{{Draft}}{{SeeCompatTable}}
+{{DefaultAPISidebar("Screen Orientation API")}}{{SeeCompatTable}}
 
 The **Screen Orientation API** provides information about the orientation of the screen.
 

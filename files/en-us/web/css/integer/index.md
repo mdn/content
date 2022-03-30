@@ -21,18 +21,20 @@ The `<integer>` data type consists of one or several decimal digits, 0 through 9
 
 ## Interpolation
 
-When animated, values of the `<integer>` data type are interpolated using discrete, whole steps. The calculation is done as if they were real, floating-point numbers; the discrete value is obtained using the [floor function](https://en.wikipedia.org/wiki/Floor_function). The speed of the interpolation is determined by the [timing function](/en-US/docs/Web/CSS/timing-function) associated with the animation.
+When animated, values of the `<integer>` data type are interpolated using discrete, whole steps. The calculation is done as if they were real, floating-point numbers; the discrete value is obtained using the [floor function](https://en.wikipedia.org/wiki/Floor_function). The speed of the interpolation is determined by the [timing function](/en-US/docs/Web/CSS/easing-function) associated with the animation.
 
 ## Examples
 
 ### Valid integers
 
-    12          Positive integer (without a leading + sign)
-    +123        Positive integer (with a leading + sign)
-    -456        Negative integer
-    0           Zero
-    +0          Zero, with a leading +
-    -0          Zero, with a leading -
+```css example-good
+12          Positive integer (without a leading + sign)
++123        Positive integer (with a leading + sign)
+-456        Negative integer
+0           Zero
++0          Zero, with a leading +
+-0          Zero, with a leading -
+```
 
 ### Invalid integers
 

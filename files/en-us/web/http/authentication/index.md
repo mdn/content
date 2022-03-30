@@ -23,7 +23,7 @@ The challenge and response flow works like this:
 2. A client that wants to authenticate itself with the server can then do so by including an {{HTTPHeader("Authorization")}} request header with the credentials.
 3. Usually a client will present a password prompt to the user and will then issue the request including the correct `Authorization` header.
 
-![A sequence diagram illustrating HTTP messages between a client and a server lifeline.](http-auth-sequence-diagram.png "Sequence Diagram of Client-server HTTP Authentication")
+![A sequence diagram illustrating HTTP messages between a client and a server lifeline.](http-auth-sequence-diagram.png)
 
 The general message flow above is the same for most (if not all) [authentication schemes](#authentication_schemes).
 The actual information in the headers and the way it is encoded does change!
@@ -100,7 +100,7 @@ Some common authentication schemes include:
 - **VAPID**
   - : See {{rfc(8292)}}
 - **SCRAM**
-  - : See {{rfc(7804)}} 
+  - : See {{rfc(7804)}}
 - **AWS4-HMAC-SHA256**
   - : See [AWS docs](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html). This scheme is used for AWS3 server authentication.
 
@@ -108,7 +108,6 @@ Schemes can differ in security strength and in their availability in client or s
 
 The "Basic" authentication scheme offers very poor security, but is widely supported and easy to set up.
 It is introduced in more detail below.
-
 
 ## Basic authentication scheme
 
@@ -138,9 +137,9 @@ aladdin:$apr1$ZjTqBB3f$IF9gdYAGlMrs2fuINjHsz.
 user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
 ```
 
-### Restricting access with nginx and basic authentication
+### Restricting access with Nginx and basic authentication
 
-For nginx, you will need to specify a location that you are going to protect and the `auth_basic` directive that provides the name to the password-protected area.
+For Nginx, you will need to specify a location that you are going to protect and the `auth_basic` directive that provides the name to the password-protected area.
 The `auth_basic_user_file` directive then points to a `.htpasswd` file containing the encrypted user credentials, just like in the Apache example above.
 
 ```
@@ -159,7 +158,7 @@ https://username:password@www.example.com/
 ```
 
 **The use of these URLs is deprecated**.
-In Chrome, the `username:password@` part in URLs is even [stripped out](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7) for security reasons. In Firefox, it is checked if the site actually requires authentication and if not, Firefox will warn the user with a prompt "You are about to log in to the site “www\.example.com” with the username “username”, but the website does not require authentication. This may be an attempt to trick you."
+In Chrome, the `username:password@` part in URLs is even [stripped out](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7) for security reasons. In Firefox, it is checked if the site actually requires authentication and if not, Firefox will warn the user with a prompt "You are about to log in to the site "www\.example.com" with the username "username", but the website does not require authentication. This may be an attempt to trick you."
 
 ## See also
 

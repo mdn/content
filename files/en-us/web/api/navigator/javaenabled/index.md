@@ -14,13 +14,17 @@ This method always returns false.
 
 ## Syntax
 
-    result = window.navigator.javaEnabled()
+```js
+result = window.navigator.javaEnabled()
+```
 
 ## Example
 
-    if (window.navigator.javaEnabled()) {
-       // code will never be executed; the condition is always false
-    }
+```js
+if (window.navigator.javaEnabled()) {
+    // code will never be executed; the condition is always false
+}
+```
 
 ## Specifications
 

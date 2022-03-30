@@ -15,18 +15,12 @@ browser-compat: api.BluetoothRemoteGATTService.isPrimary
 {{SeeCompatTable}}
 
 The **`BluetoothGATTService.isPrimary`** read-only property
-returns a boolean value that indicates whether this is a primary service. If it
+returns a boolean value that indicates whether this is a primary service. If it
 is not a primary service, it is a secondary service.
 
-## Syntax
+## Value
 
-```js
-var isPrimary = BluetoothGATTService.isPrimary
-```
-
-### Returns
-
-A boolean value.
+A boolean value.
 
 ## Specifications
 

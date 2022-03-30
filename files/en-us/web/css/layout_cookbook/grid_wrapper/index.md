@@ -26,7 +26,7 @@ Items placed on the grid should be able to align to a horizontally-centered max-
 
 ## Choices made
 
-This recipe uses the CSS Grid {{cssxref("minmax()")}} function to define the grid track sizes in the {{cssxref("grid-template-columns")}} property. For the central columns with a maximum width we can set a minimum value of 0 or greater and a maximum value that specifies the maximum size the column tracks will grow to. Using a numeric unit (pixels, ems, rems) will create a fixed maximum size for the central wrapper, whereas using percentage values or viewport units will mean this wrapper grows or shrinks in response to its context.
+This recipe uses the CSS Grid {{cssxref("minmax", "minmax()")}} function to define the grid track sizes in the {{cssxref("grid-template-columns")}} property. For the central columns with a maximum width we can set a minimum value of 0 or greater and a maximum value that specifies the maximum size the column tracks will grow to. Using a numeric unit (pixels, ems, rems) will create a fixed maximum size for the central wrapper, whereas using percentage values or viewport units will mean this wrapper grows or shrinks in response to its context.
 
 The outer two columns have a maximum size of `1fr`, meaning that they will each expand to fill the remaining available space in the grid container.
 
@@ -51,7 +51,7 @@ When using this recipe at page level it can be useful to set a `max-width` along
 }
 ```
 
-To “break out” a full-width item to the edge of the viewport you can then use this trick (courtesy of [Una Kravets](https://una.im/)):
+To "break out" a full-width item to the edge of the viewport you can then use this trick (courtesy of [Una Kravets](https://una.im/)):
 
 ```css
 .item {
@@ -71,7 +71,7 @@ Although Grid enables us to position items anywhere (within reason), it is impor
 
 The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
 
-#### grid-template-columns
+### grid-template-columns
 
 {{Compat("css.properties.grid-template-columns")}}
 
@@ -79,5 +79,5 @@ The various layout methods have different browser support. See the charts below 
 
 - {{Cssxref("grid-template-columns")}}
 - [CSS Grid Layout on MDN](/en-US/docs/Web/CSS/CSS_Grid_Layout)
-- Article:[ CSS Grid: More flexibility with minmax()](https://css-irl.info/more-flexibility-with-minmax/)
+- Article: [CSS Grid: More flexibility with minmax()](https://css-irl.info/more-flexibility-with-minmax/)
 - Article: [Breaking Out with CSS Grid](https://rachelandrew.co.uk/archives/2017/06/01/breaking-out-with-css-grid-explained/)

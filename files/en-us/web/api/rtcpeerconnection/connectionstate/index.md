@@ -23,7 +23,7 @@ This state essentially represents the aggregate state of all ICE transports
 being used by the connection.
 
 When this property's value changes,
-a {{domxref("RTCPeerconnection.connectionstatechange_event", "connectionstatechange")}} event
+a {{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}} event
 is sent to the {{domxref("RTCPeerConnection")}} instance.
 
 ## Syntax
@@ -34,7 +34,7 @@ var connectionState = RTCPeerConnection.connectionState;
 
 ## Value
 
-A string representing the current state of the connection, that is one of the following litterals:
+A string representing the current state of the connection, that is one of the following literals:
 
 - `new`
   - : At least one of the connection's {{Glossary("ICE")}} transports
@@ -88,5 +88,5 @@ var connectionState = pc.connectionState;
 - [Lifetime of a WebRTC
   session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
 - {{domxref("RTCPeerConnection")}}
-- {{domxref("RTCPeerconnection.connectionstatechange_event", "connectionstatechange")}}
+- {{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}}
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)

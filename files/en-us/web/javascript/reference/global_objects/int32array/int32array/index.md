@@ -25,7 +25,9 @@ new Int32Array(); // new in ES2017
 new Int32Array(length);
 new Int32Array(typedArray);
 new Int32Array(object);
-new Int32Array(buffer [, byteOffset [, length]]);
+new Int32Array(buffer);
+new Int32Array(buffer, byteOffset);
+new Int32Array(buffer, byteOffset, length);
 ```
 
 ### Parameters
@@ -36,7 +38,7 @@ new Int32Array(buffer [, byteOffset [, length]]);
     `BYTES_PER_ELEMENT`_ bytes, containing zeros.
 - `typedArray`
   - : When called with a `typedArray` argument, which can be an object of any
-    of the typed array types (such as `Int32Array`), the
+    of the **non**-{{glossary("bigint")}} typed-array types (such as `Int32Array`), the
     `typedArray` gets copied into a new typed array. Each value in
     `typedArray` is converted to the corresponding type of the
     constructor before being copied into the new array. The length of the new typed array
@@ -113,7 +115,7 @@ var dv = new Int32Array([1, 2, 3]);
 
 ## See also
 
-- A polyfill of `Int32Array` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `Int32Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

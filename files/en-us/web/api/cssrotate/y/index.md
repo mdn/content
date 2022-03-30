@@ -13,19 +13,13 @@ tags:
   - Property
 browser-compat: api.CSSRotate.y
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`y`** property of the
 {{domxref("CSSRotate")}} interface gets and sets the ordinate or y-axis of the
 translating vector.
 
-## Syntax
-
-```js
-varrotateY = CSSRotate.y;
-```
-
-### Value
+## Value
 
 A double integer or a {{domxref("CSSNumericValue")}}
 

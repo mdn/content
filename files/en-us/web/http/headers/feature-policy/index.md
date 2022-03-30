@@ -55,7 +55,7 @@ Feature-Policy: <directive> <allowlist>
     - `'none'`: The feature is disabled in top-level and nested browsing contexts.
     - \<origin(s)>: The feature is allowed for specific origins (for example, https\://example.com). Origins should be separated by a space.
 
-    The values `*` (enable for all origins) or `'none'` (disable for all origins) may only be used alone, while `'self'` and `'src'` may be used with one or more origins.
+    The values `*` (enable for all origins) or `'none'` (disable for all origins) may only be used alone, while `'self'` and `'src'` may be used with one or more origins.
 
     Features have a _default_ allowlist, which is one of: `*`, `'self'`, or `'none'`.
 
@@ -66,7 +66,7 @@ Feature-Policy: <directive> <allowlist>
 - {{httpheader('Feature-Policy/ambient-light-sensor','ambient-light-sensor')}}
   - : Controls whether the current document is allowed to gather information about the amount of light in the environment around the device through the {{DOMxRef("AmbientLightSensor")}} interface.
 - {{httpheader('Feature-Policy/autoplay','autoplay')}}
-  - : Controls whether the current document is allowed to autoplay media requested through the {{domxref("HTMLMediaElement")}} interface. When this policy is disabled and there were no user gestures, the {{jsxref("Promise")}} returned by {{domxref("HTMLMediaElement.play()")}} will reject with a {{domxref("DOMException")}}. The autoplay attribute on {{HTMLELement("audio")}} and {{HTMLElement("video")}} elements will be ignored.
+  - : Controls whether the current document is allowed to autoplay media requested through the {{domxref("HTMLMediaElement")}} interface. When this policy is disabled and there were no user gestures, the {{jsxref("Promise")}} returned by {{domxref("HTMLMediaElement.play()")}} will reject with a {{domxref("DOMException")}}. The autoplay attribute on {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements will be ignored.
 - {{httpheader('Feature-Policy/battery','battery')}}
   - : Controls whether the use of the [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) is allowed. When this policy is disabled, the {{JSxRef("Promise")}} returned by {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}} will reject with a {{Exception("NotAllowedError")}} {{DOMxRef("DOMException")}}.
 - {{httpheader('Feature-Policy/camera', 'camera')}}
@@ -85,7 +85,7 @@ Feature-Policy: <directive> <allowlist>
   - : Controls whether the current document is allowed to use {{DOMxRef("Element.requestFullScreen()")}}. When this policy is disabled, the returned {{JSxRef("Promise")}} rejects with a {{JSxRef("TypeError")}}.
 - {{httpheader('Feature-Policy/gamepad','gamepad')}}
   - : Controls whether the current document is allowed to use the [Gamepad API](/en-US/docs/Web/API/Gamepad_API).
-    When this policy is disabled, calls to {{domxref('Navigator.getGamepads()')}} will throw a `SecurityError` {{domxref('DOMException')}}, and the {{event("gamepadconnected")}} and {{event("gamepaddisconnected")}} events will not fire.
+    When this policy is disabled, calls to {{domxref('Navigator.getGamepads()')}} will throw a `SecurityError` {{domxref('DOMException')}}, and the {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} and {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} events will not fire.
 - {{httpheader('Feature-Policy/geolocation','geolocation')}}
   - : Controls whether the current document is allowed to use the {{domxref('Geolocation')}} Interface. When this policy is disabled, calls to {{domxref('Geolocation.getCurrentPosition','getCurrentPosition()')}} and {{domxref('Geolocation.watchPosition','watchPosition()')}} will cause those functions' callbacks to be invoked with a {{domxref('GeolocationPositionError')}} code of `PERMISSION_DENIED`.
 - {{httpheader('Feature-Policy/gyroscope','gyroscope')}}
@@ -120,10 +120,6 @@ Feature-Policy: <directive> <allowlist>
   - : Controls whether the current document is allowed to change the size of media elements after the initial layout is complete.
 - {{httpheader('Feature-Policy/usb', 'usb')}}
   - : Controls whether the current document is allowed to use the [WebUSB API](https://wicg.github.io/webusb/).
-- {{httpheader('Feature-Policy/vibrate', 'vibrate')}} {{deprecated_inline}}{{experimental_inline}}{{Non-standard_Inline}}
-  - : Controls whether the current document is allowed to trigger device vibrations via {{DOMxRef("Navigator.vibrate","Navigator.vibrate()")}} method of [Vibration API](/en-US/docs/Web/API/Vibration_API).
-- {{httpheader('Feature-Policy/vr', 'vr')}} {{deprecated_inline}}
-  - : Controls whether the current document is allowed to use the [WebVR API](/en-US/docs/Web/API/WebVR_API). When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("Navigator.getVRDisplays","Navigator.getVRDisplays()")}} will reject with a {{domxref("DOMException")}}. Keep in mind that the WebVR standard is in the process of being replaced with [WebXR](/en-US/docs/Web/API/WebXR_Device_API).
 - {{httpheader('Feature-Policy/screen-wake-lock', 'screen-wake-lock')}}
   - : Controls whether the current document is allowed to use [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API) to indicate that device should not turn off or dim the screen.
 - {{httpheader("Feature-Policy/web-share", "web-share")}}

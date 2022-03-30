@@ -18,7 +18,7 @@ The **`AnalyserNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API/
 ## Syntax
 
 ```js
-var analyserNode = new AnalyserNode(context, options);
+new AnalyserNode(context, options);
 ```
 
 ### Parameters
@@ -29,8 +29,8 @@ var analyserNode = new AnalyserNode(context, options);
 
   - : An object with the following properties, all optional:
 
-    - **`fftSize`**: The desired initial size of the [FFT](https://en.wikipedia.org/wiki/Fast_Fourier_transform) for [frequency-domain](https://en.wikipedia.org/wiki/Frequency_domain) analysis. 
-      The default is `2048`.
+    - **`fftSize`**: The desired initial size of the [FFT](https://en.wikipedia.org/wiki/Fast_Fourier_transform) for [frequency-domain](https://en.wikipedia.org/wiki/Frequency_domain) analysis.
+      The default is `2048`.
     - **`maxDecibels`**: The desired initial maximum power in [dB](https://en.wikipedia.org/wiki/Decibel) for FFT analysis.
       The default is `-30`.
     - **`minDecibels`**: The desired initial minimum power in dB for FFT analysis.

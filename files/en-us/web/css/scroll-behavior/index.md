@@ -15,7 +15,7 @@ The **`scroll-behavior`** [CSS](/en-US/docs/Web/CSS) property sets the behavior 
 
 {{EmbedInteractiveExample("pages/css/scroll-behavior.html")}}
 
-Note that any other scrolls, such as those performed by the user, are not affected by this property. When this property is specified on the root element, it applies to the viewport instead. This property specified on the `body` element will *not* propagate to the viewport.
+Note that any other scrolls, such as those performed by the user, are not affected by this property. When this property is specified on the root element, it applies to the viewport instead. This property specified on the `body` element will *not* propagate to the viewport.
 
 User agents are allowed to ignore this property.
 

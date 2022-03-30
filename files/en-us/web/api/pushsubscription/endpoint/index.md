@@ -16,8 +16,8 @@ browser-compat: api.PushSubscription.endpoint
 {{SeeCompatTable}}{{APIRef("Push API")}}
 
 The **`endpoint`** read-only property of the
-{{domxref("PushSubscription")}} interface returns a {{domxref("USVString")}} containing
-the endpoint associated with the push subscription.
+{{domxref("PushSubscription")}} interface returns a {{domxref("USVString")}} containing
+the endpoint associated with the push subscription.
 
 The endpoint takes the form of a custom URL pointing to a push server, which can be
 used to send a push message to the particular service worker instance that subscribed to

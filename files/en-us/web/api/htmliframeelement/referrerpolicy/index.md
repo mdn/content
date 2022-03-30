@@ -17,21 +17,14 @@ property reflects the HTML {{htmlattrxref("referrerpolicy","iframe")}} attribute
 {{HTMLElement("iframe")}} element defining which referrer is sent when fetching the
 resource.
 
-## Syntax
-
-```js
-refStr = iframeElt.referrerPolicy;
-iframeElt.referrerPolicy = refStr;
-```
-
-### Values
+## Value
 
 - no-referrer
   - : The {{HTTPHeader("Referer")}} header will be omitted entirely. No referrer
     information is sent along with requests.
 - no-referrer-when-downgrade
   - : The URL is sent
-    as a referrer when the protocol security level stays the same (HTTP→HTTP,
+    as a referrer when the protocol security level stays the same (HTTP→HTTP,
     HTTPS→HTTPS), but isn't sent to a less secure destination (HTTPS→HTTP).
 - origin
   - : Only send the origin of the document as the referrer in all cases.
@@ -41,7 +34,7 @@ iframeElt.referrerPolicy = refStr;
   - : Send a full URL when performing a same-origin request, but only send the origin of
     the document for other cases.
 - same-origin
-  - : A referrer will be sent for [same-site origins](/en-US/docs/Web/Security/Same-origin_policy), but
+  - : A referrer will be sent for [same-site origins](/en-US/docs/Web/Security/Same-origin_policy), but
     cross-origin requests will contain no referrer information.
 - strict-origin
   - : Only send the origin of the document as the referrer when the protocol security

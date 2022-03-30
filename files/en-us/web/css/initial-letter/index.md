@@ -70,17 +70,17 @@ The keyword value `normal`, or a `<number>` optionally followed by an `<integer>
 #### CSS
 
 ```css
-.normal {
+.normal::first-letter {
   -webkit-initial-letter: normal;
   initial-letter: normal;
 }
 
-.onefive {
+.onefive::first-letter {
   -webkit-initial-letter: 1.5;
   initial-letter: 1.5;
 }
 
-.three {
+.three::first-letter {
   -webkit-initial-letter: 3.0;
   initial-letter: 3.0;
 }

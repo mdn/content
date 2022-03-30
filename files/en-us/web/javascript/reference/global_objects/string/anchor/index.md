@@ -18,8 +18,8 @@ The **`anchor()`** method creates a string beginning with an
 `<a name="...">` start tag, then some text, and then an
 `</a>` end tag.
 
-> **Warning:** Don't use this method. Use [DOM
-> APIs](/en-US/docs/Web/API/Document_Object_Model) instead. Also, the HTML specification no longer allows the
+> **Warning:** Don't use this method. Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) instead.
+> Also, the HTML specification no longer allows the
 > {{HTMLElement("a")}} element to have a `name` attribute, so this method
 > doesn't even create valid markup.
 
@@ -42,8 +42,8 @@ then the text _str_, and then an `</a>` end tag.
 
 ## Description
 
-Don't use this method. Use [DOM
-APIs](/en-US/docs/Web/API/Document_Object_Model) instead. Also, the HTML specification no longer allows the
+Don't use this method. Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) instead.
+Also, the HTML specification no longer allows the
 {{HTMLElement("a")}} element to have a `name` attribute, so this method
 doesn't even create valid markup.
 
@@ -73,5 +73,5 @@ will output the following HTML:
 
 ## See also
 
-- A polyfill of `String.prototype.anchor` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.anchor` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.link()")}}

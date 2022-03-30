@@ -31,7 +31,7 @@ speechGrammarListInstance.addFromURI(src,weight);
 
 ### Returns
 
-Void.
+{{jsxref('undefined')}}.
 
 ### Parameters
 

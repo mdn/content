@@ -19,13 +19,7 @@ resource.
 
 See the HTTP {{HTTPHeader("Referrer-Policy")}} header for details.
 
-## Syntax
-
-```js
-DOMString HTMLLinkElement.referrerPolicy
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}; one of the following:
 
@@ -34,7 +28,7 @@ A {{domxref("DOMString")}}; one of the following:
     information is sent along with requests.
 - no-referrer-when-downgrade
   - : The URL is sent
-    as a referrer when the protocol security level stays the same (e.g.HTTP→HTTP,
+    as a referrer when the protocol security level stays the same (e.g.HTTP→HTTP,
     HTTPS→HTTPS), but isn't sent to a less secure destination (e.g. HTTPS→HTTP).
 - origin
   - : Only send the origin of the document as the referrer in all cases.
@@ -44,7 +38,7 @@ A {{domxref("DOMString")}}; one of the following:
   - : Send a full URL when performing a same-origin request, but only send the origin of
     the document for other cases.
 - same-origin
-  - : A referrer will be sent for [same-site origins](/en-US/docs/Web/Security/Same-origin_policy), but
+  - : A referrer will be sent for [same-site origins](/en-US/docs/Web/Security/Same-origin_policy), but
     cross-origin requests will contain no referrer information.
 - strict-origin
   - : Only send the origin of the document as the referrer when the protocol security
@@ -59,7 +53,7 @@ A {{domxref("DOMString")}}; one of the following:
     will leak origins and paths from TLS-protected resources to insecure origins.
     Carefully consider the impact of this setting.
 
-## Example
+## Examples
 
 ```js
 var links = document.getElementsByTagName("link");

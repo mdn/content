@@ -58,10 +58,10 @@ which successfully resolves once the WebGL context is ready to be used for rende
 This method doesn't throw traditional exceptions; instead, the promise rejects with one
 of the following errors as the value passed into the rejection handler:
 
-- `AbortError`
-  - : Switching the context over to the WebXR-compatible context failed.
-- `InvalidStateError`
-  - : The WebGL context has been lost or there is no available WebXR device.
+- `AbortError` {{domxref("DOMException")}}
+  - : Returned if switching the context over to the WebXR-compatible context failed.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Returned if the WebGL context has been lost or there is no available WebXR device.
 
 ## Usage notes
 
@@ -164,9 +164,9 @@ async function handleStartButtonClick(event) {
 
 function startGame() {
   currentScene = "scene1";
-  loadSceneResources(currentScene);
+  loadSceneResources(currentScene);
 
-  /* and so on */
+  /* and so on */
 }
 ```
 
@@ -183,7 +183,7 @@ session and set the `usingXR` flag to `true`.
 If the other button was clicked, we ensure that `xrSession` is
 `NULL` and clear `usingXR` to `false`.
 
-Then the `startGame()` function is called to trigger the beginning of
+Then the `startGame()` function is called to trigger the beginning of
 gameplay.
 
 Handlers are provided for both

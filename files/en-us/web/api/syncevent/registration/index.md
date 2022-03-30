@@ -20,7 +20,7 @@ var syncReg = SyncEvent.registration
 
 ### Value
 
-A {{domxref("SyncRegistration")}} object
+A {{domxref("SyncRegistration")}} object
 
 ## Browser compatibility
 

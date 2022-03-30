@@ -16,7 +16,7 @@ The **`:placeholder-shown`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/do
 ```css
 /* Selects any element with an active placeholder */
 :placeholder-shown {
-  border: 2px solid silver;
+  border: 2px solid silver;
 }
 ```
 
@@ -71,7 +71,7 @@ When form fields are too small, placeholder text can get cropped in an undesirab
 
 ```css
 #input2:placeholder-shown {
-  text-overflow: ellipsis;
+  text-overflow: ellipsis;
 }
 ```
 
@@ -87,19 +87,19 @@ The following example highlights the Branch and ID code fields with a custom sty
 
 ```html
 <form id="test">
-  <p>
-    <label for="name">Enter Student Name:</label>
-    <input id="name" placeholder="Student Name"/>
-  </p>
-  <p>
-    <label for="branch">Enter Student Branch:</label>
-    <input id="branch" placeholder="Student Branch"/>
-  </p>
-  <p>
-    <label for="sid">Enter Student ID:</label>
-    <input type="number" pattern="[0-9]{8}" title="8 digit ID" id="sid" class="studentid" placeholder="8 digit id"/>
-  </p>
-  <input type="submit"/>
+  <p>
+    <label for="name">Enter Student Name:</label>
+    <input id="name" placeholder="Student Name"/>
+  </p>
+  <p>
+    <label for="branch">Enter Student Branch:</label>
+    <input id="branch" placeholder="Student Branch"/>
+  </p>
+  <p>
+    <label for="sid">Enter Student ID:</label>
+    <input type="number" pattern="[0-9]{8}" title="8 digit ID" id="sid" class="studentid" placeholder="8 digit id"/>
+  </p>
+  <input type="submit"/>
 </form>
 ```
 
@@ -107,14 +107,14 @@ The following example highlights the Branch and ID code fields with a custom sty
 
 ```css
 input {
-  background-color: #E8E8E8;
-  color: black;
+  background-color: #E8E8E8;
+  color: black;
 }
 
 input.studentid:placeholder-shown {
-  background-color: yellow;
-  color: red;
-  font-style: italic;
+  background-color: yellow;
+  color: red;
+  font-style: italic;
 }
 ```
 

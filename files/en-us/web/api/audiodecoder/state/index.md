@@ -39,5 +39,3 @@ console.log(AudioDecoder.state);
 ## Browser compatibility
 
 {{Compat}}
-
-

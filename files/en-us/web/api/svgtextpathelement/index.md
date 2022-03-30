@@ -13,7 +13,7 @@ browser-compat: api.SVGTextPathElement
 
 The **`SVGTextPathElement`** interface corresponds to the {{SVGElement("textPath")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Constants
 

@@ -13,20 +13,14 @@ tags:
   - write
 browser-compat: api.BluetoothCharacteristicProperties.write
 ---
-{{draft}}{{securecontext_header}}{{APIRef("Bluetooth API")}}
+{{securecontext_header}}{{APIRef("Bluetooth API")}}
 
 The **`write`** read-only property of the
 {{domxref("BluetoothCharacteristicProperties")}} interface returns a
 `boolean` that is `true` if the writing to the characteristic with
 response is permitted.
 
-## Syntax
-
-```js
-var aBoolean = BluetoothCharacteristicProperties.write;
-```
-
-### Value
+## Value
 
 A boolean value.
 

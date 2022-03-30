@@ -15,16 +15,10 @@ The global **`crossOriginIsolated`** read-only property returns a boolean value 
 indicates whether a {{JSxRef("SharedArrayBuffer")}} can be sent via a
 {{DOMxRef("Window.postMessage()")}} call.
 
-This value is dependant on any {{HTTPHeader("Cross-Origin-Opener-Policy")}} and
+This value is dependent on any {{HTTPHeader("Cross-Origin-Opener-Policy")}} and
 {{HTTPHeader("Cross-Origin-Embedder-Policy")}} headers present in the response.
 
-## Syntax
-
-```js
-var myCrossOriginIsolated = self.crossOriginIsolated; // or just crossOriginIsolated
-```
-
-### Value
+## Value
 
 A boolean value
 

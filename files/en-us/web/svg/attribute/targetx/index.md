@@ -14,7 +14,7 @@ The **`targetX`** attribute determines the positioning in horizontal direction o
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feConvolveMatrix")}}
+- {{SVGElement("feConvolveMatrix")}}
 
 ## Usage notes
 
@@ -35,8 +35,8 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `<integer>`
-    *   : This value indicates the positioning in horizontal direction of the convolution matrix relative to a given target pixel in the input image.
+- `<integer>`
+  - : This value indicates the positioning in horizontal direction of the convolution matrix relative to a given target pixel in the input image.
 
 ## Specifications
 
@@ -72,4 +72,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-*   {{SVGAttr("targetY")}}
+- {{SVGAttr("targetY")}}

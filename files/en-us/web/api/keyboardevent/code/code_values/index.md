@@ -791,7 +791,7 @@ when using it.
       <th scope="row"><code>0xE02E</code></th>
       <td><code>"VolumeDown"</code> (⚠️ Not the same on Chrome)</td>
       <td>
-        <code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> prior to
+        <code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> prior to
         Chrome 52) (⚠️ Not the same on Firefox)
       </td>
     </tr>
@@ -804,7 +804,7 @@ when using it.
       <th scope="row"><code>0xE030</code></th>
       <td><code>"VolumeUp"</code> (⚠️ Not the same on Chrome)</td>
       <td>
-        <code>"AudioVolumeUp"</code> (was <code>"VolumeUp"</code> prior to Chrome
+        <code>"AudioVolumeUp"</code> (was <code>"VolumeUp"</code> prior to Chrome
         52) (⚠️ Not the same on Firefox)
       </td>
     </tr>

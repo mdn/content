@@ -11,7 +11,7 @@ tags:
   - ServiceWorker
 browser-compat: api.NotificationEvent.NotificationEvent
 ---
-{{APIRef("Web Notifications")}}{{draft}}
+{{APIRef("Web Notifications")}}
 
 The **`NotificationEvent()`** constructor creates a new
 {{domxref("NotificationEvent")}} object.
@@ -19,7 +19,7 @@ The **`NotificationEvent()`** constructor creates a new
 ## Syntax
 
 ```js
-var myNotificationEvent = new NotificationEvent(type, NotificationEventInit);
+new NotificationEvent(type, NotificationEventInit);
 ```
 
 ### Parameters

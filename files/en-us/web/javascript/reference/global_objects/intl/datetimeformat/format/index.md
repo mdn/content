@@ -18,8 +18,7 @@ The **`Intl.DateTimeFormat.prototype.format()`** method formats
 a date according to the locale and formatting options of this
 {{jsxref("Intl.DateTimeFormat")}} object.
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-format.html",
-	"taller")}}
+{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-format.html", "taller")}}
 
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
@@ -96,8 +95,8 @@ let formattedDate = Intl.DateTimeFormat(undefined, {
 // false in IE and Edge
 ```
 
-> **Note:** See also this [StackOverflow
-> thread](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results) for more details and examples.
+> **Note:** See also this [StackOverflow thread](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results)
+> for more details and examples.
 
 ## Specifications
 

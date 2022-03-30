@@ -12,7 +12,7 @@ tags:
   - toSum()
 browser-compat: api.CSSNumericValue.toSum
 ---
-{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`toSum()`** method of the
 {{domxref("CSSNumericValue")}} interface converts the object's value to a

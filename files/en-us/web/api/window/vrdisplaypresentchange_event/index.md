@@ -5,7 +5,7 @@ tags:
   - Event
   - Reference
   - WebVR
-  - onvrdisplaypresentchange
+  - Deprecated
   - vrdisplaypresentchange
 browser-compat: api.Window.vrdisplaypresentchange_event
 ---
@@ -15,32 +15,32 @@ The **`vrdisplaypresentchange`** event of the [WebVR API](/en-US/docs/Web/API/We
 
 > **Note:** This event was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("VRDisplayEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/Window/onvrdisplaypresentchange"
-            >onvrdisplaypresentchange</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('vrdisplaypresentchange', event => { });
+
+onvrdisplaypresentchange = event => { };
+```
+
+## Event type
+
+An {{domxref("VRDisplayEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("VRDisplayEvent")}}
+
+## Event properties
+
+_`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Event")}}._
+
+- {{domxref("VRDisplayEvent.display")}} {{deprecated_inline}}{{readonlyInline}}
+  - : The {{domxref("VRDisplay")}} associated with this event.
+- {{domxref("VRDisplayEvent.reason")}} {{deprecated_inline}}{{readonlyInline}}
+  - : A human-readable reason why the event was fired.
 
 ## Examples
 

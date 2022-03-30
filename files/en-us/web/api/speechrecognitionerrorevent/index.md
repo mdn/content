@@ -7,6 +7,8 @@ browser-compat: api.SpeechRecognitionErrorEvent
 
 The **`SpeechRecognitionErrorEvent`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents error messages from the recognition service.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _`SpeechRecognitionErrorEvent` also inherits properties from its parent interface, {{domxref("Event")}}._

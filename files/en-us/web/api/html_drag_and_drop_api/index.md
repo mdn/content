@@ -69,7 +69,7 @@ Each [drag event type](/en-US/docs/Web/API/DragEvent#event_types) has an associa
       <td>
         …a dragged item enters a valid drop target. (See
         <a
-          href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets"
+          href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#specifying_drop_targets"
           title="Specifying Drop Targets"
           >Specifying Drop Targets</a
         >.)
@@ -129,7 +129,7 @@ Each [drag event type](/en-US/docs/Web/API/DragEvent#event_types) has an associa
   </tbody>
 </table>
 
-**Note:** Neither `dragstart` nor `dragend` events are fired when dragging a file into the browser from the OS.
+> **Note:** Neither `dragstart` nor `dragend` events are fired when dragging a file into the browser from the OS.
 
 ## Interfaces
 
@@ -139,7 +139,7 @@ The {{domxref("DragEvent")}} interface has a constructor and one {{domxref("Drag
 
 {{domxref("DataTransfer")}} objects include the drag event's state, such as the type of drag being done (like `copy` or `move`), the drag's data (one or more items), and the MIME type of each _drag item_. {{domxref("DataTransfer")}} objects also have methods to add or remove items to the drag's data.
 
-The {{domxref("DragEvent")}} and {{domxref("DataTransfer")}} interfaces should be the only ones needed to add HTML Drag and Drop capabilities to an application. (Firefox supports some {{anch("Gecko specific interfaces","Gecko-specific extensions")}} to the {{domxref("DataTransfer")}} object, but those extensions will only work on Firefox.)
+The {{domxref("DragEvent")}} and {{domxref("DataTransfer")}} interfaces should be the only ones needed to add HTML Drag and Drop capabilities to an application. (Firefox supports some [Gecko-specific extensions](#gecko_specific_interfaces) to the {{domxref("DataTransfer")}} object, but those extensions will only work on Firefox.)
 
 Each {{domxref("DataTransfer")}} object contains an {{domxref("DataTransfer.items","items")}} property, which is a {{domxref("DataTransferItemList","list")}} of {{domxref("DataTransferItem")}} objects. A {{domxref("DataTransferItem")}} object represents a single _drag item_, each with a {{domxref("DataTransferItem.kind","kind")}} property (either `string` or `file`) and a {{domxref("DataTransferItem.type","type")}} property for the data item's MIME type. The {{domxref("DataTransferItem")}} object also has methods to get the drag item's data.
 
@@ -147,7 +147,7 @@ The {{domxref("DataTransferItemList")}} object is a list of {{domxref("DataTrans
 
 A key difference between the {{domxref("DataTransfer")}} and {{domxref("DataTransferItem")}} interfaces is that the former uses the synchronous {{domxref("DataTransfer.getData","getData()")}} method to access a drag item's data, but the latter instead uses the asynchronous {{domxref("DataTransferItem.getAsString","getAsString()")}} method.
 
-**Note:** {{domxref("DragEvent")}} and {{domxref("DataTransfer")}} are broadly supported on desktop browsers. However, the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces have limited browser support. See {{anch("Interoperability")}} for more information about drag-and-drop interoperability.
+> **Note:** {{domxref("DragEvent")}} and {{domxref("DataTransfer")}} are broadly supported on desktop browsers. However, the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces have limited browser support. See [Interoperability](#interoperability) for more information about drag-and-drop interoperability.
 
 ### Gecko-specific interfaces
 
@@ -181,7 +181,7 @@ Making an element _draggable_ requires adding the {{htmlattrxref("draggable")}} 
 
 For more information, see:
 
-- [Draggable attribute reference](/en-US/docs/Web/HTML/Global_attributes/draggable "draggable global attribute")
+- [Draggable attribute reference](/en-US/docs/Web/HTML/Global_attributes/draggable)
 - [Drag operations guide](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute)
 
 ### Define the drag's data
@@ -219,7 +219,7 @@ function dragstart_handler(ev) {
 
 Learn more about drag feedback images in:
 
-- [Setting the Drag Feedback Image](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragfeedback "Setting the Drag Feedback Image")
+- [Setting the Drag Feedback Image](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#setting_the_drag_feedback_image "Setting the Drag Feedback Image")
 
 ### Define the drag _effect_
 
@@ -227,9 +227,9 @@ The {{domxref("DataTransfer.dropEffect","dropEffect")}} property is used to cont
 
 Three effects may be defined:
 
-1.  **`copy`** indicates that the dragged data will be copied from its present location to the drop location.
-2.  **`move`** indicates that the dragged data will be moved from its present location to the drop location.
-3.  **`link`** indicates that some form of relationship or connection will be created between the source and drop locations.
+1. **`copy`** indicates that the dragged data will be copied from its present location to the drop location.
+2. **`move`** indicates that the dragged data will be moved from its present location to the drop location.
+3. **`link`** indicates that some form of relationship or connection will be created between the source and drop locations.
 
 During the drag operation, drag effects may be modified to indicate that certain effects are allowed at certain locations.
 
@@ -243,7 +243,7 @@ function dragstart_handler(ev) {
 
 For more details, see:
 
-- [Drag Effects](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drageffects "Drag Effects")
+- [Drag Effects](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drag_effects "Drag Effects")
 
 ### Define a _drop zone_
 
@@ -317,7 +317,7 @@ This event fires regardless of whether the drag completed or was canceled. The {
 
 For more information about handling the end of a drag operation, see:
 
-- [Finishing a Drag](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragend "Finishing a Drag")
+- [Finishing a Drag](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#finishing_a_drag "Finishing a Drag")
 
 ## Interoperability
 

@@ -17,13 +17,11 @@ The `currentTime` read-only property of the {{ domxref("BaseAudioContext") }}
 interface returns a double representing an ever-increasing hardware timestamp in seconds that
 can be used for scheduling audio playback, visualizing timelines, etc. It starts at 0.
 
-## Syntax
+## Value
 
-```js
-var curTime = baseAudioContext.currentTime;
-```
+A floating point number.
 
-## Example
+## Examples
 
 ```js
 var AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -39,7 +37,7 @@ console.log(audioCtx.currentTime);
 
 To offer protection against timing attacks and fingerprinting, the precision of
 `audioCtx.currentTime` might get rounded depending on browser settings.
-In Firefox, the `privacy.reduceTimerPrecision`  preference is enabled by
+In Firefox, the `privacy.reduceTimerPrecision`  preference is enabled by
 default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
 
 ```js
@@ -73,4 +71,4 @@ is larger.
 
 ## See also
 
-- [Using Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

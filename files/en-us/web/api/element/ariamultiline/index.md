@@ -13,16 +13,11 @@ browser-compat: api.Element.ariaMultiline
 ---
 {{DefaultAPISidebar("DOM")}}
 
-The **`ariaMultiline`** property of the {{domxref("Element")}} interface reflects the value of the `aria-multiline` attribute, which indicates whether a text box accepts multiple lines of input or only a single line.
+The **`ariaMultiline`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-multiline`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiline) attribute, which indicates whether a text box accepts multiple lines of input or only a single line.
 
 > **Note:** Where possible use an HTML {{htmlelement("input")}} element with `type="text"` or a {{htmlelement("textarea")}} as these have built in semantics and do not require ARIA attributes.
 
-## Syntax
-
-    var ariaMultiline = element.ariaMultiline;
-    element.ariaMultiline = ariaMultiline
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} with one of the following values:
 

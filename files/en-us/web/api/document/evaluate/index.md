@@ -82,7 +82,7 @@ query would start from the root node (`html`) which would be more
 wasteful.)
 
 See [Introduction to using XPath in
-JavaScript](/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript "Introduction to using XPath in JavaScript") for more information.
+JavaScript](/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript) for more information.
 
 ## Notes
 

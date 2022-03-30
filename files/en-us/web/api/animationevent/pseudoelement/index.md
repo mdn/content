@@ -6,13 +6,12 @@ tags:
   - AnimationEvent
   - CSS
   - CSSOM
-  - Experimental
   - Property
   - Reference
   - Web Animations
 browser-compat: api.AnimationEvent.pseudoElement
 ---
-{{SeeCompatTable}}{{ apiref("Web Animations API") }}
+{{APIRef("Web Animations API")}}
 
 ## Summary
 
@@ -21,11 +20,9 @@ The **`AnimationEvent.pseudoElement`** read-only property is a
 If the animation doesn't run on a pseudo-element but on the element, an empty string:
 ` ''``. `
 
-## Syntax
+## Value
 
-```js
-name = AnimationEvent.pseudoElement
-```
+A string, starting with `'::'`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on.
 
 ## Specifications
 

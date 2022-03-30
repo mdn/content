@@ -10,7 +10,7 @@ tags:
   - PWA
   - contact picker
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}
+{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}
 
 The Contact Picker API allows users to select entries from their contact list and share limited details of the selected entries with a website or application.
 
@@ -30,8 +30,10 @@ This API is only available from a secure top-level browsing context and very car
 
 ## Interfaces
 
+- {{domxref("ContactAddress")}}
+  - : Represents a physical address.
 - {{domxref("ContactsManager")}}
-  - : The **`ContactsManager`** interface provides a way for users to select and share limited details of contacts with a web application.
+  - : Provides a way for users to select and share limited details of contacts with a web application.
 - {{domxref("Navigator.contacts")}}
   - : Returns a {{domxref("ContactsManager")}} object instance, from which all other functionality can be accessed.
 

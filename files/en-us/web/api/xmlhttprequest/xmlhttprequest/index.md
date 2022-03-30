@@ -25,7 +25,7 @@ XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest).
 ## Syntax
 
 ```js
-const request = new XMLHttpRequest();
+new XMLHttpRequest();
 ```
 
 ### Parameters
@@ -58,7 +58,7 @@ const request = new XMLHttpRequest(paramsDictionary);
     - `mozAnon`
       - : Boolean: Setting this flag to `true` will cause the browser not to
         expose the {{Glossary("origin")}} and [user
-        credentials](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials "Definition of “User credentials” in the XMLHttpRequest specification.") when fetching resources. Most important, this means that
+        credentials](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials "Definition of "User credentials" in the XMLHttpRequest specification.") when fetching resources. Most important, this means that
         {{Glossary("Cookie", "cookies")}} will not be sent unless explicitly added using
         setRequestHeader.
 

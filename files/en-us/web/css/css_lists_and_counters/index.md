@@ -7,6 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-lists/
 ---
 {{CSSRef}}
 
@@ -25,12 +26,9 @@ tags:
 
 - [Consistent list indentation](/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation)
   - : Explains how to achieve consistent list indentation across different browsers.
-- [Using CSS Counters](/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+- [Using CSS Counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)
   - : Explains how to use the CSS counter properties to control list counters.
 
 ## Specifications
 
-| Specification                                        | Status                           | Comment            |
-| ---------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Lists')}}                 | {{Spec2('CSS3 Lists')}} |                    |
-| {{SpecName('CSS2.1', 'generate.html')}} | {{Spec2('CSS2.1')}}         | Initial definition |
+{{Specifications}}

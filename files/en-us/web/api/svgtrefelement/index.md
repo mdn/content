@@ -16,7 +16,7 @@ The **`SVGTRefElement`** interface corresponds to the {{SVGElement("tref")}} ele
 
 Object-oriented access to the attributes of the {{SVGElement("tref")}} element via the SVG DOM is not possible.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

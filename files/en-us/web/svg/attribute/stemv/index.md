@@ -17,7 +17,7 @@ If this attribute is used, the {{SVGAttr("units-per-em")}} must also be used.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("font-face")}}
+- {{SVGElement("font-face")}}
 
 ## Usage notes
 
@@ -44,8 +44,8 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `<number>`
-    *   : This value indicates the vertical stem width of the font.
+- `<number>`
+  - : This value indicates the vertical stem width of the font.
 
 ## Specifications
 
@@ -74,4 +74,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-*   {{SVGAttr("stemh")}}
+- {{SVGAttr("stemh")}}

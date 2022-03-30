@@ -16,8 +16,8 @@ The `USBEndpoint` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) 
 
 ## Constructor
 
-- **`{{domxref("USBEndpoint.USBEndpoint")}}`**
-  - : Creates a new `USBEndpoint` object which will be populated with information about the endpoint on the provided {{domxref('USBAltenateInterface')}} with the given endpoint number and transfer direction.
+- **`{{domxref("USBEndpoint.USBEndpoint", "USBEndpoint()")}}`**
+  - : Creates a new `USBEndpoint` object which will be populated with information about the endpoint on the provided {{domxref('USBAlternateInterface')}} with the given endpoint number and transfer direction.
 
 ## Properties
 

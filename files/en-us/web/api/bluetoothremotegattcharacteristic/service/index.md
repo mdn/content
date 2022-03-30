@@ -14,16 +14,10 @@ browser-compat: api.BluetoothRemoteGATTCharacteristic.service
 ---
 {{SeeCompatTable}}
 
-The **`BluetoothRemoteGATTCharacteristic.service`** read-only
-property returns the {{domxref("BluetoothRemoteGATTService")}} this characteristic belongs to.
+The **`BluetoothRemoteGATTCharacteristic.service`** read-only
+property returns the {{domxref("BluetoothRemoteGATTService")}} this characteristic belongs to.
 
-## Syntax
-
-```js
-var bluetoothRemoteGATTServiceInstance = BluetoothRemoteGATTCharacteristic.service
-```
-
-### Returns
+## Value
 
 An instance {{domxref("BluetoothRemoteGATTService")}}.
 

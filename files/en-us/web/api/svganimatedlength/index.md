@@ -16,9 +16,9 @@ The `SVGAnimatedLength` interface represents attributes of type [\<length>](/en-
 - {{domxref("baseVal")}} {{ReadOnlyInline}}
   - : A {{domxref("SVGLength")}} representing the base value of the given attribute before applying any animations.
 - {{domxref("animVal")}} {{ReadOnlyInline}}
-  - : If the given attribute or property is being animated, 
-    a {{domxref("SVGLength")}} containing the current animated value of the attribute or property. 
-    If the given attribute or property is not currently being animated, 
+  - : If the given attribute or property is being animated,
+    a {{domxref("SVGLength")}} containing the current animated value of the attribute or property.
+    If the given attribute or property is not currently being animated,
     a {{domxref("SVGLength")}} containing the same value as <code>baseVal</code>.
 
 ## Methods

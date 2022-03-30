@@ -15,11 +15,7 @@ The **`emptyHTML`** read-only property of the {{domxref("TrustedTypePolicyFactor
 
 This object can be used when the application requires an empty string to be inserted into an injection sink.
 
-## Syntax
-
-    var emptyHTML = TrustedTypePolicyFactory.emptyHTML;
-
-### Value
+## Value
 
 A {{domxref("TrustedHTML")}} object.
 

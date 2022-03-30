@@ -17,14 +17,14 @@ browser-compat: api.WindowEventHandlers.onrejectionhandled
 {{APIRef}}
 
 The **`onrejectionhandled`** property of the
-{{domxref("WindowEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
+{{domxref("WindowEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
 processing {{event("rejectionhandled")}} events. These events are raised when
 {{jsxref("Promise")}}s are rejected.
 
 ## Syntax
 
 ```js
-window.addEventListener("rejectionhandled", function(event) { ... });
+window.addEventListener("rejectionhandled", function(event) { /* ... */ });
 window.onrejectionhandled = function(event) { ...};
 ```
 

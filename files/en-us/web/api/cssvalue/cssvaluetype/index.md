@@ -25,13 +25,7 @@ property value.
 > - the untyped [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model), widely supported, or
 > - the modern [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API), less supported and considered experimental.
 
-## Syntax
-
-```js
-cssValueType = cssValue.cssValueType;
-```
-
-### Value
+## Value
 
 An `unsigned short` representing a code defining the type of the value.
 Possible values are:
@@ -76,7 +70,7 @@ Possible values are:
   </tbody>
 </table>
 
-## Example
+## Examples
 
 ```js
 var styleDeclaration = document.styleSheets[0].cssRules[0].style;

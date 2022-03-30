@@ -52,5 +52,4 @@ that's why you rarely want to use the String constructor at all.
 
 ## See also
 
-- [Text formatting in the
-  JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
+- [Text formatting in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Text_formatting)

@@ -14,7 +14,7 @@ browser-compat: api.MediaConfiguration
 ---
 {{APIRef("Media Capabilities API")}}
 
-The **`MediaConfiguration`** [`MediaCapabilities`](/en-US/docs/Web/API/MediaCapabilities "The MediaCapabilities interface of the Media Capabilities API provides information about the decoding abilities of the device, system and browser. The API can be used to query the browser about the decoding abilities of the device based on codecs, profile, resolution, and bitrates. The  information can be used to serve optimal media streams to the user and determine if  playback should be smooth and power efficient.") dictionary of the [Media Capabilities API](/en-US/docs/Web/API/MediaCapabilities) describes how media and audio files must be configured, or defined, to be passed as a parameter of the {{domxref("MediaCapabilities.encodingInfo()")}} and {{domxref("MediaCapabilities.encodingInfo()")}} methods.
+The **`MediaConfiguration`** [`MediaCapabilities`](/en-US/docs/Web/API/MediaCapabilities) dictionary of the [Media Capabilities API](/en-US/docs/Web/API/MediaCapabilities) describes how media and audio files must be configured, or defined, to be passed as a parameter of the {{domxref("MediaCapabilities.encodingInfo()")}} and {{domxref("MediaCapabilities.encodingInfo()")}} methods.
 
 ## Properties
 
@@ -37,7 +37,7 @@ A valid media encoding configuration, to be submitted as the parameter for {{dom
 A valid [audio configuration](/en-US/docs/Web/API/AudioConfiguration) includes:
 
 - **contentType**: Valid audio MIME type.
-- **channels**:  Number of channels used by the audio track.
+- **channels**: Number of channels used by the audio track.
 - **bitrate**: Number of bits used to encode one second of the audio file.
 - **samplerate**: Number of audio samples making up one second of the audio file.
 
@@ -54,9 +54,9 @@ A valid [video configuration](/en-US/docs/Web/API/VideoConfiguration) includes:
 ```js
 //Create a video configuration to be tested
 const videoDecoderConfig = {
-  type : 'file', // 'record', 'transmission', or 'media-source'
+  type : 'file', // 'record', 'transmission', or 'media-source'
   video : {
-    contentType : "video/webm;codecs=vp8", // valid content type
+    contentType : "video/webm;codecs=vp8", // valid content type
     width : 800,     // width of the video
     height : 600,    // height of the video
     bitrate : 10000, // number of bits used to encode 1s of video
@@ -67,7 +67,7 @@ const videoDecoderConfig = {
 const audioEncoderConfig = {
   type : 'file', // 'record', 'transmission', or 'media-source'
   audio : {
-    contentType : "audio/ogg", // valid content type
+    contentType : "audio/ogg", // valid content type
     channels : 2,     // audio channels used by the track
     bitrate : 132700, // number of bits used to encode 1s of audio
     samplerate : 5200 // number of audio samples making up that 1s.

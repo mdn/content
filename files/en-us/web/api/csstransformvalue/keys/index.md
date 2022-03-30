@@ -12,9 +12,9 @@ tags:
   - keys
 browser-compat: api.CSSTransformValue.keys
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{Draft}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
-The **`CSSTransformValue.keys()`** method
+The **`CSSTransformValue.keys()`** method
 returns a new _array iterator_ object that contains the keys
 for each index in the array.
 

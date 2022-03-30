@@ -13,14 +13,14 @@ browser-compat: api.RTCIceServer
 ---
 {{DefaultAPISidebar("WebRTC")}}
 
-The **`RTCIceServer`** dictionary defines how to connect to a single ICE server (such as a {{Glossary("STUN")}} or {{Glossary("TURN")}} server). Objects of this type are provided in the [configuration](/en-US/docs/Web/API/RTCConfiguration) of an {{domxref("RTCPeerConnection")}}, in the {{domxref("RTCConfiguration.iceServers", "iceServers")}} array.
+The **`RTCIceServer`** dictionary defines how to connect to a single ICE server (such as a {{Glossary("STUN")}} or {{Glossary("TURN")}} server). Objects of this type are provided in the [configuration](/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection#parameters) of an {{domxref("RTCPeerConnection")}}, in the `iceServers` array.
 
 ## Properties
 
 - {{domxref("RTCIceServer.credential", "credential")}} {{optional_inline}}
   - : The credential to use when logging into the server. This is only used if the `RTCIceServer` represents a TURN server.
 - {{domxref("RTCIceServer.credentialType", "credentialType")}} {{optional_inline}}
-  - : If the `RTCIceServer` represents a TURN server, this attribute specifies what kind of `credential` is to be used when connecting. This must be one of the values defined by the {{domxref("RTCIceCredentialType")}} enum. The default is `password`.
+  - : If the `RTCIceServer` represents a TURN server, this attribute specifies what kind of `credential` is to be used when connecting. The default is `password`.
 - {{domxref("RTCIceServer.urls", "urls")}}
   - : This **required** property is either a single {{domxref("DOMString")}} or an array of {{domxref("DOMString")}}s, each specifying a URL which can be used to connect to the server.
 - {{domxref("RTCIceServer.username", "username")}} {{optional_inline}}
@@ -66,6 +66,5 @@ Once the configuration object has been created, it is passed into the {{domxref(
 ## See also
 
 - {{domxref("RTCPeerConnection")}}
-- {{domxref("RTCConfiguration")}}
 - [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
 - [WebRTC connectivity](/en-US/docs/Web/API/WebRTC_API/Connectivity)

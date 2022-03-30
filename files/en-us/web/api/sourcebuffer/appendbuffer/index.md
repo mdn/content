@@ -15,7 +15,7 @@ tags:
   - appendBuffer
 browser-compat: api.SourceBuffer.appendBuffer
 ---
-{{draft}}{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 The **`appendBuffer()`** method of the
 {{domxref("SourceBuffer")}} interface appends media segment data from an

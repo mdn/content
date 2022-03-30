@@ -13,7 +13,7 @@ browser-compat: api.SVGFilterElement
 
 The **`SVGFilterElement`** interface provides access to the properties of {{SVGElement("filter")}} elements, as well as methods to manipulate them.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

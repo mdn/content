@@ -14,7 +14,9 @@ The **`DecompressionStream()`** constructor creates a new {{domxref("Decompressi
 
 ## Syntax
 
-    let DecompressionStream = new DecompressionStream(format);
+```js
+new DecompressionStream(format);
+```
 
 ### Parameters
 

@@ -38,11 +38,6 @@ This event enables a web page to trigger a confirmation dialog asking the user i
 
 According to the specification, to show the confirmation dialog an event handler should call {{domxref("Event.preventDefault()", "preventDefault()")}} on the event.
 
-However note that not all browsers support this method, and some instead require the event handler to implement one of two legacy methods:
-
-- assigning a string to the event's `returnValue` property
-- returning a string from the event handler.
-
 To combat unwanted pop-ups, browsers may not display prompts created in `beforeunload` event handlers unless the page has been interacted with, or may even not display them at all.
 
 The HTML specification states that calls to {{domxref("window.alert()")}}, {{domxref("window.confirm()")}}, and {{domxref("window.prompt()")}} methods may be ignored during this event. See the [HTML specification](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#user-prompts) for more details.
@@ -53,9 +48,9 @@ The `beforeunload` event suffers from the same problems as the [`unload`](/en-US
 
 Especially on mobile, the `beforeunload` event is not reliably fired. For example, the `beforeunload` event is not fired at all in the following scenario:
 
-1.  A mobile user visits your page.
-2.  The user then switches to a different app.
-3.  Later, the user closes the browser from the app manager.
+1. A mobile user visits your page.
+2. The user then switches to a different app.
+3. Later, the user closes the browser from the app manager.
 
 The `beforeunload` event is not compatible with the [back/forward cache](https://web.dev/bfcache/) (bfcache), because many pages using this event assume that the page will not continue to exist after the event is fired. To combat this, browsers will not place pages in the bfcache if they have `beforeunload` listeners, and this is bad for performance.
 
@@ -63,7 +58,7 @@ However, unlike the `unload` event, there is a legitimate use case for the `befo
 
 It is recommended that developers listen for `beforeunload` only in this scenario, and only when they actually have unsaved changes, so as to minimize the effect on performance. See the Examples section below for an example of this.
 
-See the [Page Lifecycle API](https://developers.google.com/web/updates/2018/07/page-lifecycle-api#the-beforeunload-event) guide for more information about the problems associated with the `beforeunload` event.
+See the [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/) guide for more information about the problems associated with the `beforeunload` event.
 
 ## Examples
 
@@ -100,8 +95,8 @@ See [WindowEventHandlers/onbeforeunload](/en-US/docs/Web/API/WindowEventHandlers
 
 - Related events: {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/load_event", "load")}}, {{domxref("Window/unload_event", "unload")}}
 - [Unloading Documents — Prompt to unload a document](https://html.spec.whatwg.org/#prompt-to-unload-a-document)
-- [Remove Custom Messages in onbeforeload Dialogs after Chrome 51](https://developers.google.com/web/updates/2016/04/chrome-51-deprecations?hl=en#remove_custom_messages_in_onbeforeunload_dialogs)
+- [Remove Custom Messages in onbeforeload Dialogs after Chrome 51](https://developer.chrome.com/blog/chrome-51-deprecations/#remove-custom-messages-in-onbeforeunload-dialogs)
 - [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) explains in detail why you should use `visibilitychange`, not `beforeunload`/`unload`.
-- [Page Lifecycle API](https://developers.google.com/web/updates/2018/07/page-lifecycle-api#developer-recommendations-for-each-state) gives best-practices guidance on handling page lifecyle behavior in your web applications.
-- [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle): a JavaScript library that deals with cross-browser inconsistencies in page lifecyle behavior.
+- [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/#developer-recommendations-for-each-state) gives best-practices guidance on handling page lifecycle behavior in your web applications.
+- [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle): a JavaScript library that deals with cross-browser inconsistencies in page lifecycle behavior.
 - [Back/forward cache](https://web.dev/bfcache/) explains what the back/forward cache is, and its implications for various page lifecycle events.

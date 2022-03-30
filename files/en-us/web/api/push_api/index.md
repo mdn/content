@@ -25,11 +25,11 @@ For an app to receive push messages, it has to have an active [service worker](/
 
 The resulting {{domxref("PushSubscription")}} includes all the information that the application needs to send a push message: an endpoint and the encryption key needed for sending data.
 
-The service worker will be started as necessary to handle incoming push messages, which are delivered to the {{domxref("ServiceWorkerGlobalScope.onpush")}} event handler. This allows apps to react to push messages being received, for example, by displaying a notification (using {{domxref("ServiceWorkerRegistration.showNotification()")}}.)
+The service worker will be started as necessary to handle incoming push messages, which are delivered to the {{domxref("ServiceWorkerGlobalScope.push_event", "onpush")}} event handler. This allows apps to react to push messages being received, for example, by displaying a notification (using {{domxref("ServiceWorkerRegistration.showNotification()")}}.)
 
 Each subscription is unique to a service worker. The endpoint for the subscription is a unique [capability URL](https://www.w3.org/TR/capability-urls/): knowledge of the endpoint is all that is necessary to send a message to your application. The endpoint URL therefore needs to be kept secret, or other applications might be able to send push messages to your application.
 
-Activating a service worker to deliver a push message can result in increased resource usage, particularly of the battery. Different browsers have different schemes for handling this, there is currently no standard mechanism. Firefox allows a limited number (quota) of push messages to be sent to an application, although Push messages that generate notifications are exempt from this limit. The limit is refreshed each time the site is visited. In comparison, Chrome applies no limit, but requires that every push message causes a notification to be displayed.
+Activating a service worker to deliver a push message can result in increased resource usage, particularly of the battery. Different browsers have different schemes for handling this, there is currently no standard mechanism. Firefox allows a limited number (quota) of push messages to be sent to an application, although Push messages that generate notifications are exempt from this limit. The limit is refreshed each time the site is visited. In Chrome there are no limits.
 
 ## Interfaces
 
@@ -40,7 +40,7 @@ Activating a service worker to deliver a push message can result in increased re
 - {{domxref("PushMessageData")}}
   - : Provides access to push data sent by a server, and includes methods to manipulate the received data.
 - {{domxref("PushSubscription")}}
-  - : Provides a subcription's URL endpoint, and allows unsubscription from a push service.
+  - : Provides a subscription's URL endpoint, and allows unsubscribing from a push service.
 - {{domxref("PushSubscriptionOptions")}}
   - : Represents the options associated with the push subscription.
 
@@ -50,14 +50,14 @@ The following additions to the [Service Worker API](/en-US/docs/Web/API/Service_
 
 - {{domxref("ServiceWorkerRegistration.pushManager")}} {{readonlyinline}}
   - : Returns a reference to the {{domxref("PushManager")}} interface for managing push subscriptions including subscribing, getting an active subscription, and accessing push permission status. This is the entry point into using Push messaging.
-- {{domxref("ServiceWorkerGlobalScope.onpush")}}
+- {{domxref("ServiceWorkerGlobalScope.push_event", "onpush")}}
   - : An event handler fired whenever a {{Event("push")}} event occurs; that is, whenever a server push message is received.
-- {{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange")}}
+- {{domxref("ServiceWorkerGlobalScope.pushsubscriptionchange_event", "onpushsubscriptionchange")}}
   - : An event handler fired whenever a {{Event("pushsubscriptionchange")}} event occurs; for example, when a push subscription has been invalidated, or is about to be invalidated (e.g. when a push service sets an expiration time.)
 
 ## Examples
 
-Mozilla's [ServiceWorker Cookbook](https://serviceworke.rs/) contains many useful Push examples.
+Mozilla's [ServiceWorker Cookbook](https://github.com/mozilla/serviceworker-cookbook) contains many useful Push examples.
 
 ## Specifications
 

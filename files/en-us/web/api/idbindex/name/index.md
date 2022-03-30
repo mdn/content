@@ -19,36 +19,29 @@ interface contains a string which names the index.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var indexName = IDBIndex.name;
-IDBIndex.name = indexName;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} specifying a name for the index.
 
 ### Exceptions
 
-There are a several exceptions which can occur when you attempt to change an index's
+There are a several exceptions that can occur when you attempt to change an index's
 name.
 
-- `InvalidStateError`
-  - : The index, or its object store, has been deleted; or the current transaction is not
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the index, or its object store, has been deleted or if the current transaction is not
     an upgrade transaction. You can only rename indexes during upgrade transactions; that
     is, when the mode is `"versionchange"`.
-- `TransactionInactiveError`
-  - : The current transaction is not active.
-- `ConstraintError`
-  - : An index is already using the specified `name`.
+- `TransactionInactiveError` {{domxref("DOMException")}}
+  - : Thrown if the current transaction is not active.
+- `ConstraintError` {{domxref("DOMException")}}
+  - : Thrown if an index is already using the specified `name`.
 
-## Example
+## Examples
 
 In the following example we open a transaction and an object store, then get the
-index `lName` from a simple contacts database. We then open a basic cursor on
-the index using {{domxref("IDBIndex.openCursor()")}} — this works the same as opening a
+index `lName` from a simple contacts database. We then open a basic cursor on
+the index using {{domxref("IDBIndex.openCursor()")}} — this works the same as opening a
 cursor directly on an {{domxref("IDBObjectStore")}} using
 {{domxref("IDBObjectStore.openCursor", "openCursor()")}} except that the returned
 records are sorted based on the index, not the primary key.
@@ -57,8 +50,8 @@ The name of the index is logged to the console: it should be returned as
 `lName`.
 
 Finally, we iterate through each record, inserting the data into an HTML table. For a
-complete working example, see our [IndexedDB-examples
-demo repo](https://github.com/mdn/indexeddb-examples/tree/master/idbindex) ([View the
+complete working example, see our [IndexedDB-examples
+demo repo](https://github.com/mdn/indexeddb-examples/tree/master/idbindex) ([View the
 example live](https://mdn.github.io/indexeddb-examples/idbindex)).
 
 ```js

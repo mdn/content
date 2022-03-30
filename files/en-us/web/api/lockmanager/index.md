@@ -20,7 +20,7 @@ The **`LockManager`** interface of the [Web Locks API](/en-US/docs/Web/API/Web_L
 - {{domxref('LockManager.request()')}}
   - : Requests a {{domxref('Lock')}} object with parameters specifying its name and characteristics.
 - {{domxref('LockManager.query()')}}
-  - : Returns a {{jsxref('Promise')}} that resolves with a {{domxref('LockManagerSnapshot')}} which contains information about held and pending locks.
+  - : Returns a {{jsxref('Promise')}} that resolves with an object that contains information about held and pending locks.
 
 ## Specifications
 

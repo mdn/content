@@ -13,7 +13,9 @@ browser-compat: api.PublicKeyCredential
 ---
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-The **`PublicKeyCredential`** interface provides information about a public key / private key pair, which is a credential for logging in to a service using an un-phishable and data-breach resistant asymmetric key pair instead of a password. It inherits from {{domxref("Credential")}}, and was created by the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) extension to the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API). Other interfaces that inherit from {{domxref("Credential")}} are {{domxref("PasswordCredential")}} and {{domxref("FederatedCredential")}}.
+The **`PublicKeyCredential`** interface provides information about a public key / private key pair, which is a credential for logging in to a service using an un-phishable and data-breach resistant asymmetric key pair instead of a password. It inherits from {{domxref("Credential")}}, and was created by the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) extension to the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API). Other interfaces that inherit from {{domxref("Credential")}} are {{domxref("PasswordCredential")}} and {{domxref("FederatedCredential")}}.
+
+{{InheritanceDiagram}}
 
 > **Note:** This API is restricted to top-level contexts. Use from within an {{HTMLElement("iframe")}} element will not have any effect.
 
@@ -21,11 +23,11 @@ The **`PublicKeyCredential`** interface provides information about a public key 
 
 - `PublicKeyCredential.type` {{ReadOnlyInline()}}{{securecontext_inline}}
   - : Inherited from {{domxref("Credential")}}. Always set to `public-key` for `PublicKeyCredential` instances.
-- {{domxref("PublicKeyCredential.id")}} {{ReadOnlyInline()}}{{securecontext_inline}}
-  - : Inherited from {{domxref("Credential")}} and overridden to be the [base64url encoding](/en-US/docs/Glossary/Base64) of {{domxref("PublicKeyCredential.rawId")}}.
+- {{domxref("PublicKeyCredential.id")}} {{ReadOnlyInline()}}{{securecontext_inline}}
+  - : Inherited from {{domxref("Credential")}} and overridden to be the [base64url encoding](/en-US/docs/Glossary/Base64) of {{domxref("PublicKeyCredential.rawId")}}.
 - {{domxref("PublicKeyCredential.rawId")}} {{ReadOnlyInline()}}{{securecontext_inline}}
-  - : An {{jsxref("ArrayBuffer")}} that holds the globally unique identifier for this `PublicKeyCredential`. This identifier can be used to look up credentials for future calls to {{domxref("CredentialsContainer.get")}}.
-- {{domxref("PublicKeyCredential.response")}} {{ReadOnlyInline()}} {{securecontext_inline}}
+  - : An {{jsxref("ArrayBuffer")}} that holds the globally unique identifier for this `PublicKeyCredential`. This identifier can be used to look up credentials for future calls to {{domxref("CredentialsContainer.get")}}.
+- {{domxref("PublicKeyCredential.response")}} {{ReadOnlyInline()}} {{securecontext_inline}}
   - : An instance of an {{domxref("AuthenticatorResponse")}} object. It is either of type {{domxref("AuthenticatorAttestationResponse")}} if the `PublicKeyCredential` was the results of a {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} call, or of type {{domxref("AuthenticatorAssertionResponse")}} if the `PublicKeyCredential` was the result of a {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} call.
 
 ## Methods

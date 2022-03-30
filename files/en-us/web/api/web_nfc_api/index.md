@@ -6,11 +6,11 @@ tags:
   - Reference
   - Web NFC
 ---
-{{DefaultAPISidebar("Web NFC API")}}{{Draft}}{{SeeCompatTable}}
+{{DefaultAPISidebar("Web NFC API")}}{{SeeCompatTable}}
 
 The Web NFC API allows exchanging data over NFC via light-weight NFC Data Exchange Format (NDEF) messages.
 
-> **Note:** Devices and tags have to be formatted and recorded specifically to support NDEF record format to be used with Web NFC. Low-level operations are currently not supported by the API, however there is a public discussion about API that would add such functuionality.
+> **Note:** Devices and tags have to be formatted and recorded specifically to support NDEF record format to be used with Web NFC. Low-level operations are currently not supported by the API, however there is a public discussion about API that would add such functionality.
 
 ## Interfaces
 

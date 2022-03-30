@@ -13,7 +13,7 @@ The **`limitingConeAngle`** attribute represents the angle in degrees between th
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feSpotLight")}}
+- {{SVGElement("feSpotLight")}}
 
 ## Example
 
@@ -26,12 +26,12 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg">
   <filter id="spotLight1" x="0" y="0" width="100%" height="100%">
-    <feDiffuseLighting diffuseConstant="2">
+    <feDiffuseLighting diffuseConstant="2">
       <feSpotLight x="10" y="10" z="50" pointsAtX="100" pointsAtY="100" limitingConeAngle="10" />
     </feDiffuseLighting>
   </filter>
   <filter id="spotLight2" x="0" y="0" width="100%" height="100%">
-    <feDiffuseLighting diffuseConstant="2">
+    <feDiffuseLighting diffuseConstant="2">
       <feSpotLight x="10" y="10" z="50" pointsAtX="100" pointsAtY="100" limitingConeAngle="40" />
     </feDiffuseLighting>
   </filter>

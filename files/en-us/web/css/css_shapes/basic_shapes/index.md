@@ -9,7 +9,7 @@ tags:
 ---
 {{CSSRef}}
 
-CSS Shapes can be defined using the {{cssxref("&lt;basic-shape&gt;")}} type, and in this guide I’ll explain how each of the different values accepted by this type work. They range from simple circles to complex polygons.
+CSS Shapes can be defined using the {{cssxref("&lt;basic-shape&gt;")}} type, and in this guide I'll explain how each of the different values accepted by this type work. They range from simple circles to complex polygons.
 
 Before looking at the shapes, it is worth understanding two pieces of information that go together to make these shapes possible:
 

@@ -13,7 +13,7 @@ browser-compat: api.XRHitTestResult
 ---
 {{APIRef("WebXR Device API")}} {{secureContext_header}}
 
-The **`XRHitTestResult`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) contains a single result of a hit test. You can get an array of `XRHitTestResult` objects for a frame by calling {{domxref("XRFrame.getHitTestResults()")}}.
+The **`XRHitTestResult`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) contains a single result of a hit test. You can get an array of `XRHitTestResult` objects for a frame by calling {{domxref("XRFrame.getHitTestResults()")}}.
 
 ## Properties
 
@@ -30,7 +30,7 @@ None.
 
 ### Getting `XRHitTestResult` objects within the frame loop
 
-In addition to showing `XRHitTestResult` within a frame loop, this example demonstrates a few things you must do before requesting this object. While setting up the session, specify `"hit-test"` as one of the `requiredFeatures`. Next, call {{domxref("XRSession.requestHitTestSource()")}} with the desired references. (Obtain this by calling {{domxref("XRSession.requestReferenceSpace()")}}.) This returns a {{domxref("XRHitTestSource")}}. That you will use in the frame loop to get `XRHitTestResult` objects. 
+In addition to showing `XRHitTestResult` within a frame loop, this example demonstrates a few things you must do before requesting this object. While setting up the session, specify `"hit-test"` as one of the `requiredFeatures`. Next, call {{domxref("XRSession.requestHitTestSource()")}} with the desired references. (Obtain this by calling {{domxref("XRSession.requestReferenceSpace()")}}.) This returns a {{domxref("XRHitTestSource")}}. That you will use in the frame loop to get `XRHitTestResult` objects.
 
 ```js
 const xrSession = navigator.xr.requestSession("immersive-ar", {

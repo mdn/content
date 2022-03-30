@@ -11,10 +11,10 @@ tags:
   - size
 browser-compat: api.ByteLengthQueuingStrategy.size
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`size()`** method of the
-{{domxref("ByteLengthQueuingStrategy")}} interface returns the given chunk’s
+{{domxref("ByteLengthQueuingStrategy")}} interface returns the given chunk's
 `byteLength` property.
 
 ## Syntax

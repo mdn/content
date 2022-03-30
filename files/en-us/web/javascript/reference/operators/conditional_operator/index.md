@@ -16,13 +16,9 @@ browser-compat: javascript.operators.conditional
 ---
 {{jsSidebar("Operators")}}
 
-The **conditional (ternary) operator** is the
-only JavaScript operator that takes three operands: a condition followed by a
-question mark (`?`), then an expression to execute if the condition is
-{{Glossary("truthy")}} followed by a colon (`:`), and finally the
-expression to execute if the condition is {{Glossary("falsy")}}. This
-operator is frequently used as a shortcut for the [`if`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
-statement.
+The **conditional (ternary) operator** is the only JavaScript operator that takes three operands:
+a condition followed by a question mark (`?`), then an expression to execute if the condition is {{Glossary("truthy")}} followed by a colon (`:`), and finally the expression to execute if the condition is {{Glossary("falsy")}}.
+This operator is frequently used as an alternative to an [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement.
 
 {{EmbedInteractiveExample("pages/js/expressions-conditionaloperators.html")}}
 
@@ -37,21 +33,14 @@ condition ? exprIfTrue : exprIfFalse
 - `condition`
   - : An expression whose value is used as a condition.
 - `exprIfTrue`
-  - : An expression which is evaluated if the `condition`
-    evaluates to a {{Glossary("truthy")}} value (one which equals or can be converted
-    to `true`).
+  - : An expression which is executed if the `condition` evaluates to a {{Glossary("truthy")}} value (one which equals or can be converted to `true`).
 - `exprIfFalse`
-  - : An expression which is executed if the `condition` is
-    {{Glossary("falsy")}} (that is, has a value which can be converted to
-    `false`).
+  - : An expression which is executed if the `condition` is {{Glossary("falsy")}} (that is, has a value which can be converted to `false`).
 
 ## Description
 
-Besides `false`, possible falsy expressions are: `null`,
-`NaN`, `0`, the empty string (`""`), and
-`undefined`. If `condition` is any of these, the
-result of the conditional expression will be the result of executing the expression
-`exprIfFalse`.
+Besides `false`, possible falsy expressions are: `null`, `NaN`, `0`, the empty string (`""`), and `undefined`.
+If `condition` is any of these, the result of the conditional expression will be the result of executing the expression `exprIfFalse`.
 
 ## Examples
 
@@ -79,8 +68,7 @@ console.log(greeting(null));             // "Howdy, stranger"
 
 ### Conditional chains
 
-The ternary operator is right-associative, which means it can be "chained" in the
-following way, similar to an `if … else if … else if … else` chain:
+The ternary operator is right-associative, which means it can be "chained" in the following way, similar to an `if … else if … else if … else` chain:
 
 ```js
 function example(…) {
@@ -110,13 +98,8 @@ function example(…) {
 
 ## See also
 
-- [if
-  statement](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
-- [Nullish
-  coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
-- [Optional
-  chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-- [Making
-  decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Expressions
-  and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+- [if statement](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
+- [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [Optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+- [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)

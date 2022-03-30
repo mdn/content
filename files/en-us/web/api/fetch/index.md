@@ -19,20 +19,18 @@ resource from the network, returning a promise which is fulfilled once the respo
 available.
 
 The promise resolves to the {{domxref("Response")}} object
-representing the response to your request. The promise _does not_ reject on HTTP
-errors — it only rejects on network errors. You must use `then` handlers to
-check for HTTP errors.
-
-`WindowOrWorkerGlobalScope` is implemented by both {{domxref("Window")}} and
-{{domxref("WorkerGlobalScope")}}, which means that the `fetch()` method is
-available in pretty much any context in which you might want to fetch resources.
+representing the response to your request.
 
 A {{domxref("fetch()")}} promise only rejects when a
-network error is encountered (which is usually when there’s a permissions issue or
+network error is encountered (which is usually when there's a permissions issue or
 similar). A {{domxref("fetch()")}} promise _does
 not_ reject on HTTP errors (`404`, etc.). Instead, a
 `then()` handler must check the {{domxref("Response.ok")}} and/or
 {{domxref("Response.status")}} properties.
+
+`WindowOrWorkerGlobalScope` is implemented by both {{domxref("Window")}} and
+{{domxref("WorkerGlobalScope")}}, which means that the `fetch()` method is
+available in pretty much any context in which you might want to fetch resources.
 
 The `fetch()` method is controlled by the `connect-src` directive
 of [Content Security Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy)
@@ -53,7 +51,7 @@ const fetchResponsePromise = fetch(resource [, init])
 
   - : This defines the resource that you wish to fetch. This can either be:
 
-    - A string or any other object with a [stringifier](/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#stringifiers) — including a {{domxref("URL")}} object — that provides the URL of the resource you want to fetch.
+    - A string or any other object with a {{Glossary("stringifier")}} — including a {{domxref("URL")}} object — that provides the URL of the resource you want to fetch.
     - A {{domxref("Request")}} object.
 
 - `init` {{optional_inline}}
@@ -95,7 +93,7 @@ const fetchResponsePromise = fetch(resource [, init])
             > **Note:** Credentials may be included in simple and "final" cross-origin requests, but should not be included in [CORS preflight requests](/en-US/docs/Web/HTTP/CORS#preflight_requests_and_credentials).
 
     - `cache`
-      - : A string indicating how the request will interact with the browser’s [HTTP cache](/en-US/docs/Web/HTTP/Caching). The possible values, `default`, `no-store`, `reload`, `no-cache`, `force-cache`, and `only-if-cached`, are documented in the article for the {{domxref("Request/cache", "cache")}} property of the {{domxref("Request")}} object.
+      - : A string indicating how the request will interact with the browser's [HTTP cache](/en-US/docs/Web/HTTP/Caching). The possible values, `default`, `no-store`, `reload`, `no-cache`, `force-cache`, and `only-if-cached`, are documented in the article for the {{domxref("Request/cache", "cache")}} property of the {{domxref("Request")}} object.
     - `redirect`
 
       - : How to handle a `redirect` response:
@@ -137,7 +135,132 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
   - : The request was aborted due to a call to the {{domxref("AbortController")}}
     {{domxref("AbortController.abort", "abort()")}} method.
 - `TypeError`
-  - : The specified URL string includes user credentials that should instead be passed with an {{HTTPHeader("Authorization")}} header, or a `NetworkError` has happened (this can include [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors)).
+  - : Can occur for the following reasons:
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Reason</th>
+      <th scope="col">Failing examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Invalid header name.</td>
+      <td>
+        <pre>
+// space in "C ontent-Type"
+const headers = {
+  'C ontent-Type': 'text/xml',
+  'Breaking-Bad': '<3',
+};
+fetch('https://example.com/', { headers });
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Invalid header value. The header object must contain exactly two elements.
+      </td>
+      <td>
+        <pre>
+const headers = [
+  ['Content-Type', 'text/html', 'extra'],
+  ['Accept'],
+];
+fetch('https://example.com/', { headers });
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Invalid URL or scheme, or using a scheme that fetch does not support, or using a scheme that is not supported for a particular request mode.
+      </td>
+      <td>
+        <pre>
+fetch('blob://example.com/', { mode: 'cors' });
+        </pre>
+      </td>
+    </tr>
+      <td>URL includes credentials.</td>
+      <td>
+        <pre>
+fetch('https://user:password@example.com/');
+        </pre>
+      </td>
+    <tr>
+      <td>Invalid referrer URL.</td>
+      <td>
+        <pre>
+fetch('https://example.com/', { referrer: './abc\u0000df' });
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>Invalid modes (<code>navigate</code> and <code>websocket</code>).</td>
+      <td>
+        <pre>
+fetch('https://example.com/', { mode: 'navigate' });
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        If the request cache mode is "only-if-cached" and the request mode is other than "same-origin".
+      </td>
+      <td>
+        <pre>
+fetch('https://example.com/', {
+  cache: 'only-if-cached',
+  mode: 'no-cors',
+});
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        If the request method is an invalid name token or one of forbidden headers
+        (<code>'CONNECT'</code>, <code>'TRACE'</code> or <code>'TRACK'</code>).
+      </td>
+      <td>
+        <pre>
+fetch('https://example.com/', { method: 'CONNECT' });
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        If the request mode is "no-cors" and the request method is not a CORS-safe-listed method
+        (<code>'GET'</code>, <code>'HEAD'</code>, or <code>'POST'</code>).
+      </td>
+      <td>
+        <pre>
+fetch('https://example.com/', {
+  method: 'CONNECT',
+  mode: 'no-cors',
+});
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        If the request method is <code>'GET'</code> or <code>'HEAD'</code> and the body is non-null or not undefined.
+      </td>
+      <td>
+        <pre>
+fetch('https://example.com/', {
+  method: 'GET',
+  body: new FormData(),
+});
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>If fetch throws a network error.</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Examples
 
@@ -152,19 +275,19 @@ handled properly, then create an Object URL of it and display it in an
 ```js
 const myImage = document.querySelector('img');
 
-let myRequest = new Request('flowers.jpg');
+const myRequest = new Request('flowers.jpg');
 
 fetch(myRequest)
-.then(function(response) {
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  }
-  return response.blob();
-})
-.then(function(response) {
-  let objectURL = URL.createObjectURL(response);
-  myImage.src = objectURL;
-});
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${ response.status }`);
+    }
+    
+    return response.blob();
+  })
+  .then((response) => {
+    myImage.src = URL.createObjectURL(response);
+  });
 ```
 
 In the [Fetch
@@ -175,28 +298,29 @@ Request init live](https://mdn.github.io/fetch-examples/fetch-with-init-then-req
 ```js
 const myImage = document.querySelector('img');
 
-let myHeaders = new Headers();
+const myHeaders = new Headers();
 myHeaders.append('Accept', 'image/jpeg');
 
 const myInit = {
   method: 'GET',
   headers: myHeaders,
   mode: 'cors',
-  cache: 'default'
+  cache: 'default',
 };
 
-let myRequest = new Request('flowers.jpg');
+const myRequest = new Request('flowers.jpg');
 
-fetch(myRequest, myInit).then(function(response) {
-  // ...
-});
+fetch(myRequest, myInit)
+  .then((response) => {
+    // ...
+  });
 ```
 
 You could also pass the `init` object in with the
 `Request` constructor to get the same effect:
 
 ```js
-let myRequest = new Request('flowers.jpg', myInit);
+const myRequest = new Request('flowers.jpg', myInit);
 ```
 
 You can also use an object literal as `headers` in
@@ -206,13 +330,13 @@ You can also use an object literal as `headers` in
 const myInit = {
   method: 'GET',
   headers: {
-    'Accept': 'image/jpeg'
+    'Accept': 'image/jpeg',
   },
   mode: 'cors',
-  cache: 'default'
+  cache: 'default',
 };
 
-let myRequest = new Request('flowers.jpg', myInit);
+const myRequest = new Request('flowers.jpg', myInit);
 ```
 
 ## Specifications

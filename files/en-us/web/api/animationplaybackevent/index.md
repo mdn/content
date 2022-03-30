@@ -19,16 +19,18 @@ The AnimationPlaybackEvent interface of the [Web Animations API](/en-US/docs/Web
 
 As animations play, they report changes to their {{domxref("Animation.playState", "playState")}} through animation events.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
-- {{domxref("AnimationPlaybackEvent.AnimationPlaybackEvent()")}}
+- {{domxref("AnimationPlaybackEvent.AnimationPlaybackEvent", "AnimationPlaybackEvent()")}}
   - : Constructs a new `AnimationPlaybackEvent` object instance.
 
-## Attributes
+## Properties
 
-- {{domxref("AnimationPlaybackEvent.currentTime")}}
+- {{domxref("AnimationPlaybackEvent.currentTime")}} {{readonlyinline}}
   - : The current time of the animation that generated the event.
-- {{domxref("AnimationPlaybackEvent.timelineTime")}}
+- {{domxref("AnimationPlaybackEvent.timelineTime")}} {{readonlyinline}}
   - : The time value of the timeline of the animation that generated the event.
 
 ## Specifications

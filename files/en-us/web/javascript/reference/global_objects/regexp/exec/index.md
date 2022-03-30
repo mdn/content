@@ -253,7 +253,7 @@ Found ab. Next match starts at 9
 >
 > Also, be sure that the global flag ("`g`") is set, or it will also cause
 > an infinite loop.
-> 
+>
 > In addition, when matching zero-length characters (e.g. `/^/gm`),
 > increase its {{jsxref("RegExp.lastIndex", "lastIndex")}} each time to avoid
 > an infinite loop.
@@ -280,7 +280,6 @@ This will log a message containing `'hello world!'`.
 
 ## See also
 
-- [Regular
-  Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) chapter in the [JavaScript
-  Guide](/en-US/docs/Web/JavaScript/Guide)
+- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) chapter in the
+  [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
 - {{jsxref("RegExp")}}

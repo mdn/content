@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.WebAssembly.Table.set
 {{JSRef}}
 
 The **`set()`** prototype method of
-the {{jsxref("WebAssembly.Table")}} object mutates a reference stored at a given index
+the {{jsxref("WebAssembly.Table")}} object mutates a reference stored at a given index
 to a different value.
 
 ## Syntax
@@ -38,7 +38,7 @@ Void.
 ### Exceptions
 
 - If _index_ is greater than or equal
-  to {{jsxref("WebAssembly/Table/length","Table.prototype.length")}}, a
+  to {{jsxref("WebAssembly/Table/length","Table.prototype.length")}}, a
   {{jsxref("RangeError")}} is thrown.
 - If _value_ is not an exported WebAssembly function or
   [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null),
@@ -48,11 +48,11 @@ Void.
 
 ### Using Table.set
 
-The following example (see table2.html [source
-code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) and [live
-version](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html)) creates a new WebAssembly Table instance with an initial size of 2
+The following example (see table2.html [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html)
+and [live version](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html))
+creates a new WebAssembly Table instance with an initial size of 2
 references. We then print out the table length and contents of the two indexes
-(retrieved via {{jsxref("WebAssembly/Table/get","Table.prototype.get()")}}) to show that
+(retrieved via {{jsxref("WebAssembly/Table/get","Table.prototype.get()")}}) to show that
 the length is two, and the indexes currently contain no function references (they
 currently return {{jsxref("null")}}).
 
@@ -76,16 +76,16 @@ var importObj = {
 Finally, we load and instantiate a wasm module (table2.wasm) using the
 {{jsxref("WebAssembly.instantiateStreaming()")}}, log the table length, and invoke the
 two referenced functions that are now stored in the table (the table2.wasm module (see
-[text
-representation](https://github.com/mdn/webassembly-examples/blob/master/text-format-examples/table2.was)) adds two function references to the table, both of which print out
+[text representation](https://github.com/mdn/webassembly-examples/blob/master/text-format-examples/table2.was))
+adds two function references to the table, both of which print out
 a simple value):
 
 ```js
 WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
 .then(function(obj) {
-  console.log(tbl.length);
-  console.log(tbl.get(0)());
-  console.log(tbl.get(1)());
+  console.log(tbl.length);
+  console.log(tbl.get(0)());
+  console.log(tbl.get(1)());
 });
 ```
 
@@ -108,5 +108,4 @@ same table is visible and callable inside the wasm instance too.
 
 - [WebAssembly](/en-US/docs/WebAssembly) overview page
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly
-  JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

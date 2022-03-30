@@ -12,11 +12,13 @@ tags:
   - keyboard
 browser-compat: api.Keyboard
 ---
-{{SeeCompatTable}}{{APIRef("Keyboard API")}}
+{{SeeCompatTable}}{{APIRef("Keyboard API")}}{{securecontext_header}}
 
 The **`Keyboard`** interface of the [Keyboard API](/en-US/docs/Web/API/Keyboard_API) provides functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.
 
 A list of valid code values is found in the [UI Events KeyboardEvent code Values](https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system) spec.
+
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -24,11 +26,11 @@ None.
 
 ## Methods
 
-- {{domxref('Keyboard.getLayoutMap()')}} {{experimental_inline}}
+- {{domxref('Keyboard.getLayoutMap()')}} {{experimental_inline}}
   - : Returns a {{jsxref('Promise')}} that resolves with an instance of {{domxref('KeyboardLayoutMap')}} which is a map-like object with functions for retrieving the strings associated with specific physical keys.
-- {{domxref('Keyboard.lock()')}} {{experimental_inline}}
+- {{domxref('Keyboard.lock()')}} {{experimental_inline}}
   - : Returns a {{jsxref('Promise')}} after enabling the capture of keypresses for any or all of the keys on the physical keyboard.
-- {{domxref('Keyboard.unlock()')}} {{experimental_inline}}
+- {{domxref('Keyboard.unlock()')}} {{experimental_inline}}
   - : Unlocks all keys captured by the `lock()` method and returns synchronously.
 
 ## Example

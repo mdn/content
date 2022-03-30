@@ -1,7 +1,7 @@
 ---
 title: >-
   Reason: Credential is not supported if the CORS header
-  ‘Access-Control-Allow-Origin’ is ‘*’
+  'Access-Control-Allow-Origin' is '*'
 slug: Web/HTTP/CORS/Errors/CORSNotSupportingCredentials
 tags:
   - CORS

@@ -18,13 +18,7 @@ The **`body`** read-only property of the
 specified in the `body` option of the
 {{domxref("Notification.Notification","Notification()")}} constructor.
 
-## Syntax
-
-```js
-var body = Notification.body;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}.
 

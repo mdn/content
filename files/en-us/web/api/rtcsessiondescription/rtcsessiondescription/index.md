@@ -12,6 +12,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCSessionDescription.RTCSessionDescription
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}{{deprecated_header}}
 
 The **`RTCSessionDescription()`** constructor creates a new
@@ -27,7 +28,7 @@ specified object.
 ## Syntax
 
 ```js
- sessionDescription = new RTCSessionDescription(rtcSessionDescriptionInit);
+new RTCSessionDescription(rtcSessionDescriptionInit);
 ```
 
 ### Values
@@ -39,12 +40,9 @@ specified object.
     the following properties:
 
     - `type`
-      - : **Required.** A string which is a member of the
-        `RTCSdpType` enum; it must have one of the following values:{{page("/en-US/docs/Web/API/RTCSessionDescription", "RTCSdpType")}}
+      - : **Required.** A string which is used to set the `type` property of the new `RTCSessionDescription` object.
     - `sdp`
-      - : A string containing a {{Glossary("SDP")}} message describing the session. This
-        value is an empty string (`""`) by default and may not be
-        `null`.
+      - : A string containing a {{Glossary("SDP")}} message describing the session. This value is an empty string (`""`) by default and may not be `null`.
 
 ## Example
 
@@ -81,5 +79,5 @@ This feature is not part of any current specification. It is no longer on track 
 
 ## See also
 
-- [WebRTC API](/en-US/docs/Web/Guide/API/WebRTC_API)
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("RTCSessionDescription")}}

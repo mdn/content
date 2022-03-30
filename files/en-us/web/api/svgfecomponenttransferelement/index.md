@@ -13,7 +13,7 @@ browser-compat: api.SVGFEComponentTransferElement
 
 The **`SVGFEComponentTransferElement`** interface corresponds to the {{SVGElement("feComponentTransfer")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

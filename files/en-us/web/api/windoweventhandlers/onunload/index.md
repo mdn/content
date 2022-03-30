@@ -27,9 +27,9 @@ its content and resources. The resource removal is processed _after_ the
 > itself) are not the right features to use with
 > [`sendBeacon()`](/en-US/docs/Web/API/Navigator/sendBeacon).
 > Instead for
-> `sendBeacon(),` use
+> `sendBeacon(),` use
 > the
-> [`visibilitychange`](/en-US/docs/Web/API/Document/visibilitychange_event) and
+> [`visibilitychange`](/en-US/docs/Web/API/Document/visibilitychange_event) and
 > [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event) events.
 > See discussion comments in the blog post [Beacon API is
 > broken](https://volument.com/blog/sendbeacon-is-broken#comments).
@@ -37,8 +37,8 @@ its content and resources. The resource removal is processed _after_ the
 ## Syntax
 
 ```js
-window.addEventListener("unload", function(event) { ... });
-window.onunload = function(event) { ... };
+window.addEventListener("unload", function(event) { /* ... */ });
+window.onunload = function(event) { /* ... */ };
 ```
 
 Typically, it is better to use {{domxref("EventTarget.addEventListener",

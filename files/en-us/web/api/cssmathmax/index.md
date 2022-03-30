@@ -11,13 +11,15 @@ tags:
   - Interface
 browser-compat: api.CSSMathMax
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
+{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-The **`CSSMathMax`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the CSS {{CSSXref('max()','max()')}} function.  It inherits properties and methods from its parent {{domxref('CSSNumericValue')}}.
+The **`CSSMathMax`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the CSS {{CSSXref('max()','max()')}} function.  It inherits properties and methods from its parent {{domxref('CSSNumericValue')}}.
+
+{{InheritanceDiagram}}
 
 ## Constructor
 
-- {{domxref("CSSMathMax.CSSMathMax()")}}
+- {{domxref("CSSMathMax.CSSMathMax", "CSSMathMax()")}}
   - : Creates a new `CSSMathMax` object.
 
 ## Properties

@@ -17,18 +17,12 @@ browser-compat: api.HTMLVideoElement.autoPictureInPicture
 ---
 {{APIRef("HTML DOM")}}
 
-The {{domxref("HTMLVideoElement")}} 
+The {{domxref("HTMLVideoElement")}}
 **`autoPictureInPicture`** property reflects the HTML
 attribute indicating whether the video should enter or leave picture-in-picture mode
 automatically.
 
-## Syntax
-
-```js
-autoPictureInPicture = htmlVideoElement.autoPictureInPicture;
-```
-
-### Value
+## Value
 
 A boolean value that is `true` if the video should enter or
 leave picture-in-picture mode automatically when changing tab and/or application.

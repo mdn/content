@@ -14,7 +14,7 @@ tags:
   - Reference
 browser-compat: api.CSSUnparsedValue.entries
 ---
-{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSUnparsedValue.entries()`** method
 returns an array of a given object's own enumerable property `[key, value]`
@@ -49,7 +49,7 @@ An array of the given `CSSUnparsedValue` object's own enumerable property
 
 ## See also
 
-- {{domxref("CSSUnparsedValue.CSSUnparsedValue()")}}
+- {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}}
 - {{domxref("CSSUnparsedValue.forEach")}}
 - {{domxref("CSSUnparsedValue.keys")}}
 - {{domxref("CSSUnparsedValue.length")}}

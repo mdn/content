@@ -56,7 +56,7 @@ const numFiles = fileList.length;
 Individual {{DOMxRef("File")}} objects can be retrieved by accessing the list as an array:
 
 ```js
-for (let i = 0, numFiles = fileList.length; i < numFiles; i++) {
+for (let i = 0; numFiles = fileList.length; i < numFiles; i++) {
   const file = fileList[i];
   // ...
 }
@@ -177,7 +177,7 @@ input.visually-hidden:focus-within + label {
 }
 ```
 
-There is no need to add JavaScript code to call `fileElem.click()`. Also in this case you can style the label element as you wish. You need to provide a visual cue for the focus status of the hidden input field on its label, be it an outline as shown above, or background-color or box-shadow. (As of time of writing, Firefox doesn’t show this visual cue for `<input type="file">` elements.)
+There is no need to add JavaScript code to call `fileElem.click()`. Also in this case you can style the label element as you wish. You need to provide a visual cue for the focus status of the hidden input field on its label, be it an outline as shown above, or background-color or box-shadow. (As of time of writing, Firefox doesn't show this visual cue for `<input type="file">` elements.)
 
 ## Selecting files using drag and drop
 
@@ -285,7 +285,7 @@ The HTML that presents the interface looks like this:
 </div>
 ```
 
-This establishes our file {{HTMLElement("input")}} element as well as a link that invokes the file picker (since we keep the file input hidden to prevent that less-than-attractive user interface from being displayed). This is explained in the section {{anch("Using hidden file input elements using the click() method")}}, as is the method that invokes the file picker.
+This establishes our file {{HTMLElement("input")}} element as well as a link that invokes the file picker (since we keep the file input hidden to prevent that less-than-attractive user interface from being displayed). This is explained in the section [Using hidden file input elements using the click() method](#using_hidden_file_input_elements_using_the_click_method), as is the method that invokes the file picker.
 
 The `handleFiles()` method follows:
 
@@ -333,16 +333,16 @@ This starts by fetching the URL of the {{HTMLElement("div")}} with the ID `fileL
 
 If the {{DOMxRef("FileList")}} object passed to `handleFiles()` is `null`, we set the inner HTML of the block to display "No files selected!". Otherwise, we start building our file list, as follows:
 
-1.  A new unordered list ({{HTMLElement("ul")}}) element is created.
-2.  The new list element is inserted into the {{HTMLElement("div")}} block by calling its {{DOMxRef("Node.appendChild()")}} method.
-3.  For each {{DOMxRef("File")}} in the {{DOMxRef("FileList")}} represented by `files`:
+1. A new unordered list ({{HTMLElement("ul")}}) element is created.
+2. The new list element is inserted into the {{HTMLElement("div")}} block by calling its {{DOMxRef("Node.appendChild()")}} method.
+3. For each {{DOMxRef("File")}} in the {{DOMxRef("FileList")}} represented by `files`:
 
-    1.  Create a new list item ({{HTMLElement("li")}}) element and insert it into the list.
-    2.  Create a new image ({{HTMLElement("img")}}) element.
-    3.  Set the image's source to a new object URL representing the file, using {{DOMxRef("URL.createObjectURL()")}} to create the blob URL.
-    4.  Set the image's height to 60 pixels.
-    5.  Set up the image's load event handler to release the object URL since it's no longer needed once the image has been loaded. This is done by calling the {{DOMxRef("URL.revokeObjectURL()")}} method and passing in the object URL string as specified by `img.src`.
-    6.  Append the new list item to the list.
+    1. Create a new list item ({{HTMLElement("li")}}) element and insert it into the list.
+    2. Create a new image ({{HTMLElement("img")}}) element.
+    3. Set the image's source to a new object URL representing the file, using {{DOMxRef("URL.createObjectURL()")}} to create the blob URL.
+    4. Set the image's height to 60 pixels.
+    5. Set up the image's load event handler to release the object URL since it's no longer needed once the image has been loaded. This is done by calling the {{DOMxRef("URL.revokeObjectURL()")}} method and passing in the object URL string as specified by `img.src`.
+    6. Append the new list item to the list.
 
 Here is a live demo of the code above:
 
@@ -399,18 +399,38 @@ function FileUpload(img, file) {
   };
   reader.readAsBinaryString(file);
 }
+
+function createThrobber(img) {
+  const throbberWidth = 64;
+  const throbberHeight = 6;
+  const throbber = document.createElement('canvas');
+  throbber.classList.add('upload-progress');
+  throbber.setAttribute('width', throbberWidth);
+  throbber.setAttribute('height', throbberHeight);
+  img.parentNode.appendChild(throbber);
+  throbber.ctx = throbber.getContext('2d');
+  throbber.ctx.fillStyle = 'orange';
+  throbber.update = function(percent) {
+    throbber.ctx.fillRect(0, 0, throbberWidth * percent / 100, throbberHeight);
+    if (percent === 100) {
+      throbber.ctx.fillStyle = 'green';
+    }
+  }
+  throbber.update(0);
+  return throbber;
+}
 ```
 
 The `FileUpload()` function shown above creates a throbber, which is used to display progress information, and then creates an {{DOMxRef("XMLHttpRequest")}} to handle uploading the data.
 
 Before actually transferring the data, several preparatory steps are taken:
 
-1.  The `XMLHttpRequest`'s upload `progress` listener is set to update the throbber with new percentage information so that as the upload progresses the throbber will be updated based on the latest information.
-2.  The `XMLHttpRequest`'s upload `load` event handler is set to update the throbber progress information to 100% to ensure the progress indicator actually reaches 100% (in case of granularity quirks during the process). It then removes the throbber since it's no longer needed. This causes the throbber to disappear once the upload is complete.
-3.  The request to upload the image file is opened by calling `XMLHttpRequest`'s `open()` method to start generating a POST request.
-4.  The MIME type for the upload is set by calling the `XMLHttpRequest` function `overrideMimeType()`. In this case, we're using a generic MIME type; you may or may not need to set the MIME type at all depending on your use case.
-5.  The `FileReader` object is used to convert the file to a binary string.
-6.  Finally, when the content is loaded the `XMLHttpRequest` function `send()` is called to upload the file's content.
+1. The `XMLHttpRequest`'s upload `progress` listener is set to update the throbber with new percentage information so that as the upload progresses the throbber will be updated based on the latest information.
+2. The `XMLHttpRequest`'s upload `load` event handler is set to update the throbber progress information to 100% to ensure the progress indicator actually reaches 100% (in case of granularity quirks during the process). It then removes the throbber since it's no longer needed. This causes the throbber to disappear once the upload is complete.
+3. The request to upload the image file is opened by calling `XMLHttpRequest`'s `open()` method to start generating a POST request.
+4. The MIME type for the upload is set by calling the `XMLHttpRequest` function `overrideMimeType()`. In this case, we're using a generic MIME type; you may or may not need to set the MIME type at all depending on your use case.
+5. The `FileReader` object is used to convert the file to a binary string.
+6. Finally, when the content is loaded the `XMLHttpRequest` function `send()` is called to upload the file's content.
 
 ### Asynchronously handling the file upload process
 

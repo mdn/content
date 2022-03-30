@@ -38,7 +38,7 @@ font-size: 14px;
 font-size-adjust: 0.5;
 ```
 
-... is really specifying that the lowercase letters of the font should be `7px` high (0.5 × 14px).  This will still produce reasonable results in browsers that do not support `font-size-adjust`, where a `14px` font will be used.
+... is really specifying that the lowercase letters of the font should be `7px` high (0.5 × 14px).  This will still produce reasonable results in browsers that do not support `font-size-adjust`, where a `14px` font will be used.
 
 ## Syntax
 
@@ -55,11 +55,11 @@ font-size-adjust: 0.5;
     - `cap-height`
       - : Normalize the cap-height of the fonts, using the cap-height by the font size.
     - `ch-width`
-      - : Normalize the horizontal narrow pitch of the fonts, using the advance width of “0” (ZERO, U+0030) divided by the font size.
+      - : Normalize the horizontal narrow pitch of the fonts, using the advance width of "0" (ZERO, U+0030) divided by the font size.
     - `ic-width`
-      - : Normalize the horizontal wide pitch of the font, using the advance width of “水” (CJK water ideograph, U+6C34) divided by the font size.
+      - : Normalize the horizontal wide pitch of the font, using the advance width of "水" (CJK water ideograph, U+6C34) divided by the font size.
     - `ic-height`
-      - : Normalize the vertical wide pitch of the font, using the advance height of “水” (CJK water ideograph, U+6C34) divided by the font size.
+      - : Normalize the vertical wide pitch of the font, using the advance height of "水" (CJK water ideograph, U+6C34) divided by the font size.
 
 - {{cssxref("&lt;number&gt;")}}
 
@@ -128,3 +128,4 @@ font-size-adjust: 0.5;
 - {{cssxref("font-size")}}
 - {{cssxref("font-weight")}}
 - [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+- {{cssxref("@font-face/size-adjust", "size-adjust")}} descriptor

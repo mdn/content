@@ -31,11 +31,11 @@ A `RequestCredentials` dictionary value indicating whether the user agent should
 - `same-origin`: Send user credentials (cookies, basic http auth, etc..) if the URL is on the same origin as the calling script. **This is the default value.**
 - `include`: Always send user credentials (cookies, basic http auth, etc..), even for cross-origin calls.
 
-This is similar to XHR’s [`withCredentials`](/en-US/docs/Web/API/XMLHttpRequest/withCredentials) flag, but with three available values instead of two.
+This is similar to XHR's [`withCredentials`](/en-US/docs/Web/API/XMLHttpRequest/withCredentials) flag, but with three available values instead of two.
 
 ## Example
 
-In the following snippet, we create a new request using the {{domxref("Request.Request()")}} constructor (for an image file in the same directory as the script), then save the request credentials in a variable:
+In the following snippet, we create a new request using the {{domxref("Request.Request", "Request()")}} constructor (for an image file in the same directory as the script), then save the request credentials in a variable:
 
 ```js
 var myRequest = new Request('flowers.jpg');

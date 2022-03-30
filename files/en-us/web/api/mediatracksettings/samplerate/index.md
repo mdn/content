@@ -31,13 +31,7 @@ the value of {{domxref("MediaTrackSupportedConstraints.sampleRate")}} as returne
 call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
 is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
-
-```js
-var sampleRate = MediaTrackSettings.sampleRate;
-```
-
-### Value
+## Value
 
 An integer value indicating how many samples each second of audio data includes. Common
 values include 44,100 (standard CD audio), 48,000 (standard digital audio), 96,000

@@ -13,7 +13,7 @@ browser-compat: api.SVGFEGaussianBlurElement
 
 The **`SVGFEGaussianBlurElement`** interface corresponds to the {{SVGElement("feGaussianBlur")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Constants
 

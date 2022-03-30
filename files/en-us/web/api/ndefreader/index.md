@@ -11,19 +11,12 @@ browser-compat: api.NDEFReader
 
 The **`NDEFReader`** interface of the [Web NFC API](/en-US/docs/Web/API/Web_NFC_API) is used to read from and write data to compatible NFC devices, e.g. NFC tags supporting NDEF, when these devices are within the reader's magnetic induction field.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{DOMxRef("NDEFReader.NDEFReader", "NDEFReader()")}} {{Experimental_Inline}}
   - : Returns a new `NDEFReader` object.
-
-## Properties
-
-_Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
-
-- {{DOMxRef("NDEFReader.onreading")}} {{Experimental_Inline}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when the `reading` event is raised.
-- {{DOMxRef("NDEFReader.onreadingerror")}} {{Experimental_Inline}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when when the `readingerror` event is raised. This occurs when a tag is in proximity of a reading device, but cannot be read.
 
 ## Methods
 
@@ -33,6 +26,15 @@ _The `NDEFReader` interface inherits the methods of {{domxref("EventTarget")}}, 
   - : Activates a reading device and returns a {{jsxref("Promise")}} that either resolves when an NFC tag is read or rejects if a hardware or permission error is encountered. This method triggers a permission prompt if the "nfc" permission has not been previously granted.
 - {{DOMxRef("NDEFReader.write", "NDEFReader.write()")}} {{Experimental_Inline}}
   - : Attempts to write an NDEF message to a tag and returns a {{jsxref("Promise")}} that either resolves when a message has been written to the tag or rejects if a hardware or permission error is encountered. This method triggers a permission prompt if the "nfc" permission has not been previously granted.
+
+## Events
+
+_Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
+
+- {{DOMxRef("NDEFReader.reading_event", "reading")}} {{Experimental_Inline}}
+  - : Fires when a new reading is available from compatible NFC devices.
+- {{DOMxRef("NDEFReader.readingerror_event", "readingerror")}} {{Experimental_Inline}}
+  - : Fires when a tag is in proximity of a reading device, but cannot be read.
 
 ## Examples
 

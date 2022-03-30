@@ -12,18 +12,12 @@ browser-compat: api.Element.shadowRoot
 ---
 {{APIRef("Shadow DOM")}}
 
-The `Element.shadowRoot` read-only property
+The `Element.shadowRoot` read-only property
 represents the shadow root hosted by the element.
 
-Use {{DOMxRef("Element.attachShadow()")}} to add a shadow root to an existing element.
+Use {{DOMxRef("Element.attachShadow()")}} to add a shadow root to an existing element.
 
-## Syntax
-
-```js
-var shadowroot = element.shadowRoot;
-```
-
-### Value
+## Value
 
 A {{DOMxRef("ShadowRoot")}} object instance, or `null` if the associated
 shadow root was attached with its {{DOMxRef("ShadowRoot.mode", "mode")}} set to
@@ -61,20 +55,20 @@ update the CSS found inside it:
 
 ```js
 function updateStyle(elem) {
-  const shadow = elem.shadowRoot;
-  const childNodes = Array.from(shadow.childNodes);
+  const shadow = elem.shadowRoot;
+  const childNodes = Array.from(shadow.childNodes);
 
-  childNodes.forEach(childNode => {
-    if (childNode.nodeName === 'STYLE') {
-      childNode.textContent = `
-        div {
-          width: ${elem.getAttribute('l')}px;
-          height: ${elem.getAttribute('l')}px;
-          background-color: ${elem.getAttribute('c')};
-        }
-      `;
-    }
-  });
+  childNodes.forEach(childNode => {
+    if (childNode.nodeName === 'STYLE') {
+      childNode.textContent = `
+        div {
+          width: ${elem.getAttribute('l')}px;
+          height: ${elem.getAttribute('l')}px;
+          background-color: ${elem.getAttribute('c')};
+        }
+      `;
+    }
+  });
 }
 ```
 

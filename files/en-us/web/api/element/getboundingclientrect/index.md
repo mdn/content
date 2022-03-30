@@ -47,13 +47,13 @@ describe the position and size of the overall rectangle in pixels. Properties ot
 
 ![](element-box-diagram.png)
 
-The `width` and `height` properties of the {{domxref("DOMRect")}}
+The `width` and `height` properties of the {{domxref("DOMRect")}}
 object returned by the method include the `padding` and
 `border-width`, not only the content width/height. In the standard box model,
-this would be equal to the `width` or `height` property of the
-element + `padding` + `border-width`. But
-if [`box-sizing: border-box`](/en-US/docs/Web/CSS/box-sizing) is
-set for the element this would be directly equal to its `width` or
+this would be equal to the `width` or `height` property of the
+element + `padding` + `border-width`. But
+if [`box-sizing: border-box`](/en-US/docs/Web/CSS/box-sizing) is
+set for the element this would be directly equal to its `width` or
 `height`.
 
 The returned value can be thought of as the union of the rectangles returned by
@@ -189,7 +189,7 @@ update();
 
 The returned `DOMRect` object can be modified in modern browsers. This was
 not true with older versions which effectively returned `DOMRectReadOnly`.
-With IE and Edge, not being able to add missing properties to their returned [`ClientRect`](<https://msdn.microsoft.com/en-us/library/hh826029(VS.85).aspx>),
+With IE and Edge, not being able to add missing properties to their returned [`ClientRect`](<https://msdn.microsoft.com/library/hh826029(VS.85).aspx>),
 object prevents backfilling `x` and `y`.
 
 Due to compatibility problems (see below), it is safest to rely on only properties
@@ -209,7 +209,7 @@ emptyObj = { ...rect }
 {width, ...emptyObj} = rect
 ```
 
-`DOMRect` properties `top`, `left`,
+`DOMRect` properties `top`, `left`,
 `right`, and `bottom` are computed using the values of the
 object's other properties.
 
@@ -221,6 +221,6 @@ object's other properties.
 
 - {{domxref("Element.getClientRects", "getClientRects()")}}
 - [MSDN:
-  `getBoundingClientRect`](<https://msdn.microsoft.com/en-us/library/ms536433(VS.85).aspx>)
+  `getBoundingClientRect`](<https://msdn.microsoft.com/library/ms536433(VS.85).aspx>)
 - [MSDN:
-  `ClientRect`](<https://msdn.microsoft.com/en-us/library/hh826029(VS.85).aspx>), an earlier version of `DOMRect`
+  `ClientRect`](<https://msdn.microsoft.com/library/hh826029(VS.85).aspx>), an earlier version of `DOMRect`

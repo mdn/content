@@ -51,4 +51,3 @@ chunk.copyTo(newBuffer);
 ## Browser compatibility
 
 {{Compat}}
-

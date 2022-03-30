@@ -14,13 +14,13 @@ browser-compat: api.FileReader.readAsBinaryString
 The `readAsBinaryString` method is used to start reading the contents of the
 specified {{domxref("Blob")}} or {{domxref("File")}}. When the read operation is
 finished, the {{domxref("FileReader.readyState","readyState")}} becomes
-`DONE`, and the {{event("loadend")}} is triggered. At that time, the
+`DONE`, and the {{domxref("FileReader.loadend_event")}} is triggered. At that time, the
 {{domxref("FileReader.result","result")}} attribute contains the raw binary data from
 the file.
 
 Note that this method was once removed from the File API specification, but
 re-introduced for backward compatibility.
-Using {{domxref("FileReader.readAsArrayBuffer()")}} is recommended.
+Using {{domxref("FileReader.readAsArrayBuffer()")}} is recommended.
 
 ## Syntax
 
@@ -38,9 +38,9 @@ instanceOfFileReader.readAsBinaryString(blob);
 ```js
 var canvas = document.createElement('canvas');
 var height = 200;
-var width  = 200;
+var width  = 200;
 
-canvas.width  = width;
+canvas.width  = width;
 canvas.height = height;
 
 var ctx = canvas.getContext('2d');
@@ -57,7 +57,7 @@ canvas.toBlob(function (blob) {
     console.log(reader.result);
   }
 
-  reader.readAsBinaryString(blob);
+  reader.readAsBinaryString(blob);
 });
 ```
 

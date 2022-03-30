@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Layout
   - Maximum Height
   - Maximum Width
@@ -40,7 +39,7 @@ max-block-size: 25em;
 max-block-size: 75%;
 
 /* Keyword values */
-max-block-size: auto;
+max-block-size: none;
 max-block-size: max-content;
 max-block-size: min-content;
 max-block-size: fit-content(20em);
@@ -56,16 +55,27 @@ max-block-size: unset;
 
 The `max-block-size` property's value can be any value that's legal for the {{cssxref("max-width")}} and {{cssxref("max-height")}} properties:
 
-{{page("/en-US/docs/Web/CSS/max-width", "Values")}}
+- {{cssxref("&lt;length&gt;")}}
+  - : Defines the `max-block-size` as an absolute value.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Defines the `max-block-size` as a percentage of the containing block's size in block axis.
+- `none`
+  - : No limit on the size of the box.
+- `max-content`
+  - : The intrinsic preferred `max-block-size`.
+- `min-content`
+  - : The intrinsic minimum `max-block-size`.
+- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
+  - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, argument))`.
 
 ### How writing-mode affects directionality
 
 The values of `writing-mode` affect the mapping of `max-block-size` to `max-width` or `max-height` as follows:
 
-| Values of `writing-mode`                                                                                                                                                                              | `max-block-size` is equivalent to |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
-| `horizontal-tb`, `lr` {{deprecated_inline}}, `lr-tb` {{deprecated_inline}}, `rl` {{deprecated_inline}}, `rb` {{deprecated_inline}}, `rb-rl` {{deprecated_inline}}  | {{cssxref("max-height")}}  |
-| `vertical-rl`, `vertical-lr`, `sideways-rl` {{experimental_inline}}, `sideways-lr` {{experimental_inline}}, `tb` {{deprecated_inline}}, `tb-rl` {{deprecated_inline}} | {{cssxref("max-width")}}  |
+| Values of `writing-mode`                                                                                                                                              | `max-block-size` is equivalent to |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
+| `horizontal-tb`, `lr` {{deprecated_inline}}, `lr-tb` {{deprecated_inline}}, `rl` {{deprecated_inline}}, `rb` {{deprecated_inline}}, `rb-rl` {{deprecated_inline}}     | {{cssxref("max-height")}}         |
+| `vertical-rl`, `vertical-lr`, `sideways-rl` {{experimental_inline}}, `sideways-lr` {{experimental_inline}}, `tb` {{deprecated_inline}}, `tb-rl` {{deprecated_inline}} | {{cssxref("max-width")}}          |
 
 > **Note:** The `writing-mode` values `sideways-lr` and `sideways-rl` were removed from the CSS Writing Modes Level 3 specification late in its design process. They may be restored in Level 4.
 
@@ -94,24 +104,18 @@ The HTML establishes the two {{HTMLElement("div")}} blocks that will be presente
 ```html
 <p>Writing mode <code>horizontal-tb</code> (the default):</p>
 <div class="standard-box horizontal">
-  Call me Ishmael. Some years ago—never mind how
-  long precisely—having little or no money in my
-  purse, and nothing particular to interest me on
-  shore, I thought I would sail about a little and see
-  the watery part of the world. It is a way I have of
-  driving off the spleen and regulating the
-  circulation.
+  Call me Ishmael. Some years ago—never mind how long precisely—having little or
+  no money in my purse, and nothing particular to interest me on shore, I
+  thought I would sail about a little and see the watery part of the world. It
+  is a way I have of driving off the spleen and regulating the circulation.
 </div>
 
 <p>Writing mode <code>vertical-rl</code>:</p>
 <div class="standard-box vertical">
-  Call me Ishmael. Some years ago—never mind how
-  long precisely—having little or no money in my
-  purse, and nothing particular to interest me on
-  shore, I thought I would sail about a little and see
-  the watery part of the world. It is a way I have of
-  driving off the spleen and regulating the
-  circulation.
+  Call me Ishmael. Some years ago—never mind how long precisely—having little or
+  no money in my purse, and nothing particular to interest me on shore, I
+  thought I would sail about a little and see the watery part of the world. It
+  is a way I have of driving off the spleen and regulating the circulation.
 </div>
 ```
 

@@ -28,7 +28,7 @@ The element's presentation may vary substantially from one browser and/or platfo
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
         A 7-character {{domxref("DOMString")}} specifying a
         {{cssxref("&lt;color&gt;")}} in lower-case hexadecimal notation
@@ -51,6 +51,10 @@ The element's presentation may vary substantially from one browser and/or platfo
     <tr>
       <td><strong>IDL attributes</strong></td>
       <td><code>list</code> and <code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
       <td><strong>Methods</strong></td>
@@ -85,7 +89,7 @@ If you don't specify a value, the default is `#000000`, which is black. The valu
 
 ### Tracking color changes
 
-As is the case with other {{HTMLElement("input")}} types, there are two events that can be used to detect changes to the color value: {{domxref("HTMLElement/input_event", "input")}} and {{domxref("HTMLElement/change_event", "change")}}. `input` is fired on the `<input>` element every time the color changes. The `change` event is fired when the user dismisses the color picker. In both cases, you can determine the new value of the element by looking at its {{domxref("HTMLInputElement.value", "value")}}.
+As is the case with other {{HTMLElement("input")}} types, there are two events that can be used to detect changes to the color value: {{domxref("HTMLElement/input_event", "input")}} and {{domxref("HTMLElement/change_event", "change")}}. `input` is fired on the `<input>` element every time the color changes. The `change` event is fired when the user dismisses the color picker. In both cases, you can determine the new value of the element by looking at its {{htmlattrxref("value", "input")}}.
 
 Here's an example that watches changes over time to the color value:
 
@@ -180,7 +184,7 @@ function updateFirst(event) {
 }
 ```
 
-When the color picker is dismissed, indicating that the value will not be changing again (unless the user re-opens the color picker), a `change` event is sent to the element. We handle that event using the `updateAll()` function, using {{domxref("HTMLInputElement.value", "Event.target.value")}} to obtain the final selected color:
+When the color picker is dismissed, indicating that the value will not be changing again (unless the user re-opens the color picker), a `change` event is sent to the element. We handle that event using the `updateAll()` function, using {{htmlattrxref("value", "input", "Event.target.value")}} to obtain the final selected color:
 
 ```js
 function updateAll(event) {

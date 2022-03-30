@@ -16,13 +16,13 @@ The marker is rendered on every vertex other than the first and last vertices of
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("circle")}}
-*   {{SVGElement("ellipse")}}
-*   {{SVGElement("line")}}
-*   {{SVGElement("path")}}
-*   {{SVGElement("polygon")}}
-*   {{SVGElement("polyline")}}
-*   {{SVGElement("rect")}}
+- {{SVGElement("circle")}}
+- {{SVGElement("ellipse")}}
+- {{SVGElement("line")}}
+- {{SVGElement("path")}}
+- {{SVGElement("polygon")}}
+- {{SVGElement("polyline")}}
+- {{SVGElement("rect")}}
 
 ## Example
 
@@ -65,10 +65,10 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `none`
-    *   : Indicates that no marker symbol shall be drawn at the given vertices.
-*   `<marker-ref>`
-    *   : This value is a reference to a {{SVGElement("marker")}} element, which will be drawn at the given vertices. If the reference is not valid, then no marker will be drawn.
+- `none`
+  - : Indicates that no marker symbol shall be drawn at the given vertices.
+- `<marker-ref>`
+  - : This value is a reference to a {{SVGElement("marker")}} element, which will be drawn at the given vertices. If the reference is not valid, then no marker will be drawn.
 
 ## Specifications
 
@@ -104,6 +104,6 @@ html, body, svg {
 
 ## See also
 
-*   {{SVGElement("marker")}}
-*   {{SVGAttr("marker-start")}}
-*   {{SVGAttr("marker-end")}}
+- {{SVGElement("marker")}}
+- {{SVGAttr("marker-start")}}
+- {{SVGAttr("marker-end")}}

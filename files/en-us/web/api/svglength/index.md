@@ -13,7 +13,7 @@ browser-compat: api.SVGLength
 
 ## SVG length interface
 
-The `SVGLength` interface correspond to the [\<length>](/en-US/docs/SVG/Content_type#Length) basic data type.
+The `SVGLength` interface correspond to the [\<length>](/en-US/docs/Web/SVG/Content_type#Length) basic data type.
 
 An `SVGLength` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
@@ -22,7 +22,7 @@ An `SVGLength` object can be designated as read only, which means that attempts 
 <table class="no-markdown">
   <tbody>
     <tr>
-      <th scope="row">Also implement</th>
+      <th scope="row">Also implement</th>
       <td><var>None</var></td>
     </tr>
     <tr>
@@ -77,7 +77,7 @@ An `SVGLength` object can be designated as read only, which means that attempts 
       </td>
     </tr>
     <tr>
-      <th scope="row">Normative document</th>
+      <th scope="row">Normative document</th>
       <td>
         <a href="https://www.w3.org/TR/SVG11/types.html#InterfaceSVGLength"
           >SVG 1.1 (2nd Edition)</a
@@ -115,10 +115,10 @@ function start() {
 }
 ]]></script>
   <rect id="myRect"
-        x="1cm" y="1cm"
-        fill="green" stroke="black" stroke-width="1"
-        width="1cm" height="1cm"
-  />
+        x="1cm" y="1cm"
+        fill="green" stroke="black" stroke-width="1"
+        width="1cm" height="1cm"
+  />
 </svg>
 ```
 
@@ -219,7 +219,7 @@ value: 26.66666603088379, valueInSpecifiedUnits 8: 0.277777761220932, valueAsStr
   <tbody>
     <tr>
       <td><code>unitType</code></td>
-      <td>unsigned short</td>
+      <td>unsigned short</td>
       <td>
         The type of the value as specified by one of the
         <code>SVG_LENGTHTYPE_*</code> constants defined on this interface.
@@ -280,7 +280,7 @@ value: 26.66666603088379, valueInSpecifiedUnits 8: 0.277777761220932, valueAsStr
             a {{ domxref("DOMException") }} with code
             <code>SYNTAX_ERR</code> is raised if the assigned string cannot be
             parsed as a valid
-            <a href="/en-US/docs/SVG/Content_type#Length">&#x3C;length></a>.
+            <a href="/en-US/docs/Web/SVG/Content_type#Length">&#x3C;length></a>.
           </li>
           <li>
             a {{ domxref("DOMException") }} with code

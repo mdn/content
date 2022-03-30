@@ -3,7 +3,6 @@ title: VRDisplayEvent
 slug: Web/API/VRDisplayEvent
 tags:
   - API
-  - Experimental
   - Deprecated
   - Interface
   - Reference
@@ -21,23 +20,23 @@ The **`VRDisplayEvent`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_
 
 ## Constructor
 
-- {{domxref("VRDisplayEvent.VRDisplayEvent()")}}
+- {{domxref("VRDisplayEvent.VRDisplayEvent", "VRDisplayEvent()")}} {{deprecated_inline}}
   - : Creates a `VRDisplayEvent` object instance.
 
 ## Properties
 
 _`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Event")}}._
 
-- {{domxref("VRDisplayEvent.display")}} {{readonlyInline}}
+- {{domxref("VRDisplayEvent.display")}} {{deprecated_inline}}{{readonlyInline}}
   - : The {{domxref("VRDisplay")}} associated with this event.
-- {{domxref("VRDisplayEvent.reason")}} {{readonlyInline}}
+- {{domxref("VRDisplayEvent.reason")}} {{deprecated_inline}}{{readonlyInline}}
   - : A human-readable reason why the event was fired.
 
 ## Examples
 
 ```js
 window.addEventListener('vrdisplaypresentchange', function(e) {
-  console.log('Display ' + e.display.displayId + ' presentation has changed. Reason given: ' + e.reason + '.');
+  console.log('Display ' + e.display.displayId + ' presentation has changed. Reason given: ' + e.reason + '.');
 })
 ```
 

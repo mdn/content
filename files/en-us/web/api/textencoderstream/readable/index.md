@@ -14,11 +14,7 @@ browser-compat: api.TextEncoderStream.readable
 
 The **`readable`** read-only property of the {{domxref("TextEncoderStream")}} interface returns a {{domxref("ReadableStream")}}.
 
-## Syntax
-
-    var readable = TextEncoderStream.readable;
-
-### Value
+## Value
 
 A {{domxref("ReadableStream")}}.
 

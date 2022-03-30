@@ -168,31 +168,31 @@ A common navigation technique for users of screen reading software is jumping fr
 
 Headings may be nested as subsections to reflect the organization of the content of the page. Most screen readers can also generate an ordered list of all the headings on a page, which can help a person quickly determine the hierarchy of the content:
 
-1.  `h1` Beetles
+1. `h1` Beetles
 
-    1.  `h2` Etymology
-    2.  `h2` Distribution and Diversity
-    3.  `h2` Evolution
+    1. `h2` Etymology
+    2. `h2` Distribution and Diversity
+    3. `h2` Evolution
 
-        1.  `h3` Late Paleozoic
-        2.  `h3` Jurassic
-        3.  `h3` Cretaceous
-        4.  `h3` Cenozoic
+        1. `h3` Late Paleozoic
+        2. `h3` Jurassic
+        3. `h3` Cretaceous
+        4. `h3` Cenozoic
 
-    4.  `h2` External Morphology
+    4. `h2` External Morphology
 
-        1.  `h3` Head
+        1. `h3` Head
 
-            1.  `h4` Mouthparts
+            1. `h4` Mouthparts
 
-        2.  `h3` Thorax
+        2. `h3` Thorax
 
-            1.  `h4` Prothorax
-            2.  `h4` Pterothorax
+            1. `h4` Prothorax
+            2. `h4` Pterothorax
 
-        3.  `h3` Legs
-        4.  `h3` Wings
-        5.  `h3` Abdomen
+        3. `h3` Legs
+        4. `h3` Wings
+        5. `h3` Abdomen
 
 When headings are nested, heading levels may be "skipped" when closing a subsection.
 
@@ -208,7 +208,7 @@ When headings are nested, heading levels may be "skipped" when closing a subsect
 
 Another common navigation technique for users of screen reading software is to generate a list of [sectioning content](/en-US/docs/Web/HTML/Element#content_sectioning) and use it to determine the page's layout.
 
-Sectioning content can be labeled using a combination of the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) and {{htmlattrxref("id")}} attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.
+Sectioning content can be labeled using a combination of the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) and {{htmlattrxref("id")}} attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.
 
 #### Example
 
@@ -232,7 +232,7 @@ Sectioning content can be labeled using a combination of the [`aria-labelledby`]
 
 In this example, screen reading technology would announce that there are two {{HTMLElement("nav")}} sections, one called "Primary navigation" and one called "Footer navigation". If labels were not provided, the person using screen reading software may have to investigate each `nav` element's contents to determine their purpose.
 
-- [Using the aria-labelledby attribute](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
+- [Using the aria-labelledby attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 - [Labeling Regions • Page Structure • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)
 
 ## Specifications

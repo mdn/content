@@ -14,14 +14,14 @@ browser-compat: api.SVGAnimatedInteger
 
 ## SVG animated integer interface
 
-The `SVGAnimatedInteger` interface is used for attributes of basic type [\<integer>](/en-US/docs/SVG/Content_type#Integer) which can be animated.
+The `SVGAnimatedInteger` interface is used for attributes of basic type [\<integer>](/en-US/docs/Web/SVG/Content_type#Integer) which can be animated.
 
 ### Interface overview
 
 <table class="no-markdown">
   <tbody>
     <tr>
-      <th scope="row">Also implement</th>
+      <th scope="row">Also implement</th>
       <td><em>None</em></td>
     </tr>
     <tr>
@@ -38,7 +38,7 @@ The `SVGAnimatedInteger` interface is used for attributes of basic type [\<integ
       </td>
     </tr>
     <tr>
-      <th scope="row">Normative document</th>
+      <th scope="row">Normative document</th>
       <td>
         <a
           href="https://www.w3.org/TR/SVG11/types.html#InterfaceSVGAnimatedInteger"

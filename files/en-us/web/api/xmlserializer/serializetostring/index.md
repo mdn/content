@@ -40,14 +40,14 @@ A {{domxref("DOMString")}} containing the XML representation of the specified DO
 
 ### Exceptions
 
-- `TypeError`
-  - : The specified `rootNode` is not a compatible node type. The root node
+- `TypeError` {{domxref("DOMException")}}
+  - : Thrown if the specified `rootNode` is not a compatible node type. The root node
     must be either {{domxref("Node")}} or {{domxref("Attr")}}.
-- `InvalidStateError`
-  - : The tree could not be successfully serialized, probably due to issues with the
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the tree could not be successfully serialized, probably due to issues with the
     content's compatibility with XML serialization.
-- `SyntaxError`
-  - : A serialization of HTML was requested but could not succeed due to the content not
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if a serialization of HTML was requested but could not succeed due to the content not
     being well-formed.
 
 ## Usage notes

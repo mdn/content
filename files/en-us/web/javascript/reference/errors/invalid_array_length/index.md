@@ -9,7 +9,7 @@ tags:
 ---
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "Invalid array length" occurs when specifying an array length that is either negative or exceeds the maximum supported by the platform (i.e. when creating an {{jsxref("Array")}} or {{jsxref("ArrayBuffer")}}, or when setting the {{jsxref("Array.length")}} property).
+The JavaScript exception "Invalid array length" occurs when specifying an array length that is either negative, a floating number or exceeds the maximum supported by the platform (i.e. when creating an {{jsxref("Array")}} or {{jsxref("ArrayBuffer")}}, or when setting the {{jsxref("Array.length")}} property).
 
 The maximum allowed array length depends on the platform, browser and browser version.
 For {{jsxref("Array")}} the maximum length is 4GB-1 (2^32-1).
@@ -37,6 +37,7 @@ An invalid array length might appear in these situations:
 - Creating an {{jsxref("Array")}} or {{jsxref("ArrayBuffer")}} with a negative length, or setting a negative value for the {{jsxref("Array.length")}} property.
 - Creating an {{jsxref("Array")}} or setting the {{jsxref("Array.length")}} property greater than 2GB-1 (2^32-1).
 - Creating an {{jsxref("ArrayBuffer")}} that is bigger than 2GB-1 (2^32-1) on a 32-bit system or 8GB (2^33) on a 64-bit system.
+- Creating an {{jsxref("Array")}} or setting the {{jsxref("Array.length")}} property to a floating number.
 - Before Firefox 89: Creating an {{jsxref("ArrayBuffer")}} that is bigger than 2GB-1 (2^32-1).
 
 If you are creating an `Array`, using the constructor, you probably want to
@@ -61,6 +62,10 @@ a.length = a.length - 1;         // set -1 to the length property
 
 let b = new Array(Math.pow(2, 32) - 1);
 b.length = b.length + 1;         // set 2^32 to the length property
+b.length = 2.5;                  // set an integer to the length property
+
+let c = new Array(2.5);          // pass an integer
+
 ```
 
 ### Valid cases
@@ -77,9 +82,12 @@ a.length = Math.max(0, a.length - 1);
 
 let b = new Array(Math.pow(2, 32) - 1);
 b.length = Math.min(0xffffffff, b.length + 1);
-
 // 0xffffffff is the hexadecimal notation for 2^32 - 1
 // which can also be written as (-1 >>> 0)
+
+b.length = 3;
+
+let c = new Array(3);
 ```
 
 ## See also

@@ -42,7 +42,7 @@ rtpEncodingParameters = {
 
 ### Value
 
-A double-precison floating-point number specifying the amount by which to reduce the
+A double-precision floating-point number specifying the amount by which to reduce the
 size of the video during encoding. The default value, 1.0, means that the video will be
 encoded at its original size. A value of 2.0 would reduce the size of the video by a
 factor of 2 both horizontally and vertically, resulting in a video 25% the original

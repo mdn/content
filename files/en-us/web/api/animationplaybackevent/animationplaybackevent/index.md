@@ -20,21 +20,21 @@ The **`AnimationPlaybackEvent()`** constructor of the [Web Animations API](/en-U
 ## Syntax
 
 ```js
-var animationPlaybackEvent = new AnimationPlaybackEvent(type, eventInitDict);
+new AnimationPlaybackEvent(type, eventInitDict);
 ```
 
 ### Parameters
 
 - `{{domxref("Event.type", "type")}}`
-  - : A [`DOMString`](/en-US/docs/Web/API/DOMString "DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String.") representing the name of the event.
+  - : A [`DOMString`](/en-US/docs/Web/API/DOMString) representing the name of the event.
 - `eventInitDict` {{optional_inline}}
 
   - : An optional `EventInit` dictionary object containing the following fields:
 
     - `bubbles` {{optional_inline}}
-      - : Defaults to `false`, of type [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean "The Boolean object is an object wrapper for a boolean value."), indicating if the event bubbles or not.
+      - : Defaults to `false`, of type [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean), indicating if the event bubbles or not.
     - `cancelable` {{optional_inline}}
-      - : Defaults to `false`, of type [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean "The Boolean object is an object wrapper for a boolean value."), indicating if the event can be canceled or not.
+      - : Defaults to `false`, of type [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean), indicating if the event can be canceled or not.
     - `detail` {{optional_inline}}
       - : Defaults to `null`, of type any — an event-dependent value associated with the event.
 
@@ -51,5 +51,5 @@ var animationPlaybackEvent = new AnimationPlaybackEvent(type, eventInitDict);
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
 - {{domxref("AnimationPlayBackEvent")}}
 - {{domxref("Animation.playState")}}
-- {{domxref("CustomEvent.CustomEvent")}}
-- {{domxref("Event.Event")}}
+- {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}
+- {{domxref("Event.Event", "Event()")}}

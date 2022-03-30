@@ -11,15 +11,17 @@ tags:
   - Reference
 browser-compat: api.CSSMathSum
 ---
-{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSMathSum`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the result obtained by calling {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}.
 
-A CSSMathSum is the object type returned when the  [`StylePropertyMapReadOnly.get()`](/en-US/docs/Web/API/StylePropertyMapReadOnly/get) method is used on a CSS property whose value is created with a [`calc()`](</en-US/docs/Web/CSS/calc()>) function.
+A CSSMathSum is the object type returned when the  [`StylePropertyMapReadOnly.get()`](/en-US/docs/Web/API/StylePropertyMapReadOnly/get) method is used on a CSS property whose value is created with a [`calc()`](</en-US/docs/Web/CSS/calc()>) function.
+
+{{InheritanceDiagram}}
 
 ## Constructor
 
-- {{domxref("CSSMathSum.CSSMathSum()")}}
+- {{domxref("CSSMathSum.CSSMathSum", "CSSMathSum()")}}
   - : Creates a new `CSSMathSum` object.
 
 ## Properties
@@ -56,13 +58,13 @@ We add the JavaScript
 ```js
 const styleMap = document.querySelector('div').computedStyleMap();
 
-console.log( styleMap.get('width') );                  // CSSMathSum {values: CSSNumericArray, operator: "sum"}
+console.log( styleMap.get('width') );                  // CSSMathSum {values: CSSNumericArray, operator: "sum"}
 console.log( styleMap.get('width').operator );         // 'sum'
-console.log( styleMap.get('width').values );           // CSSNumericArray {0: CSSUnitValue, 1: CSSUnitValue, length: 2}
-console.log( styleMap.get('width').values[0] );        // CSSUnitValue {value: 30, unit: "percent"}
+console.log( styleMap.get('width').values );           // CSSNumericArray {0: CSSUnitValue, 1: CSSUnitValue, length: 2}
+console.log( styleMap.get('width').values[0] );        // CSSUnitValue {value: 30, unit: "percent"}
 console.log( styleMap.get('width').values[0].value );  // 30
 console.log( styleMap.get('width').values[0].unit );   // 'percent'
-console.log( styleMap.get('width').values[1] );        // CSSUnitValue {value: -20, unit: "px"}
+console.log( styleMap.get('width').values[1] );        // CSSUnitValue {value: -20, unit: "px"}
 console.log( styleMap.get('width').values[1].value );  //  -20
 console.log( styleMap.get('width').values[1].unit );   // 'px'
 ```
@@ -72,8 +74,8 @@ console.log( styleMap.get('width').values[1].unit );   // 'px'
 The specification is still evolving. In the future we may write the last three lines as:
 
 ```js
-console.log( styleMap.get('width').values[1] );            // CSSMathNegate {value: CSSUnitValue, operator: "negate"}
-console.log( styleMap.get('width').values[1].value );      // CSSUnitValue {value: 20, unit: "px"}
+console.log( styleMap.get('width').values[1] );            // CSSMathNegate {value: CSSUnitValue, operator: "negate"}
+console.log( styleMap.get('width').values[1].value );      // CSSUnitValue {value: 20, unit: "px"}
 console.log( styleMap.get('width').values[1].value.unit ); // 'px'
 ```
 

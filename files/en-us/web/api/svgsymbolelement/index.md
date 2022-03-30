@@ -15,7 +15,7 @@ browser-compat: api.SVGSymbolElement
 
 The **`SVGSymbolElement`** interface corresponds to the {{SVGElement("symbol")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

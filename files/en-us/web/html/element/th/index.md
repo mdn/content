@@ -1,5 +1,5 @@
 ---
-title: <th>
+title: '<th>: The Table Header element'
 slug: Web/HTML/Element/th
 tags:
   - Element

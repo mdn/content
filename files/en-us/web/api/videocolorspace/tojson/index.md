@@ -43,4 +43,3 @@ console.log(colorSpace.toJSON());
 ## Browser compatibility
 
 {{Compat}}
-

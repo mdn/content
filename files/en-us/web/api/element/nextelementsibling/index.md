@@ -14,16 +14,11 @@ The **`Element.nextElementSibling`** read-only
 property returns the element immediately following the specified one in its parent's
 children list, or `null` if the specified element is the last one in the list.
 
-## Syntax
+## Value
 
-```js
-// Getter
-element = el.nextElementSibling;
+A {{domxref("Element")}} object, or `null`.
 
-// No setter; read-only property
-```
-
-## Example
+## Examples
 
 ```html
 <div id="div-01">Here is div-01</div>
@@ -41,9 +36,11 @@ element = el.nextElementSibling;
 
 This example outputs the following into the console when it loads:
 
-    Siblings of div-01:
-    DIV
-    SCRIPT
+```
+Siblings of div-01:
+DIV
+SCRIPT
+```
 
 ## Specifications
 

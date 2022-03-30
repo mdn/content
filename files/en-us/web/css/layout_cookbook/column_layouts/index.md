@@ -93,23 +93,23 @@ Use Grid:
 
 The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
 
-#### column-width
+### column-width
 
 {{Compat("css.properties.column-width")}}
 
-#### column-rule
+### column-rule
 
 {{Compat("css.properties.column-rule")}}
 
-#### flex
+### flex
 
 {{Compat("css.properties.flex")}}
 
-#### flex-wrap
+### flex-wrap
 
 {{Compat("css.properties.flex-wrap")}}
 
-#### grid-template-columns
+### grid-template-columns
 
 {{Compat("css.properties.grid-template-columns")}}
 

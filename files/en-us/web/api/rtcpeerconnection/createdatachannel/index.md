@@ -73,7 +73,7 @@ dataChannel = RTCPeerConnection.createDataChannel(label[, options]);
         data channels are negotiated in-band,
         where one side calls `createDataChannel`, and
         the other side listens to the {{domxref("RTCDataChannelEvent")}} event
-        using the {{DOMxRef("RTCPeerConnection.ondatachannel", "ondatachannel")}} event handler.
+        using the {{DOMxRef("RTCPeerConnection.datachannel_event", "ondatachannel")}} event handler.
         Alternatively (`true`),
         they can be negotiated out of-band,
         where both sides call `createDataChannel`
@@ -96,26 +96,23 @@ included; otherwise, the defaults listed above are established.
 
 ### Exceptions
 
-- `InvalidStateError`
-  - : The {{domxref("RTCPeerConnection")}} is closed.
-- `TypeError`
-
-  - : This can happen in a couple of situations:
-
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the {{domxref("RTCPeerConnection")}} is closed.
+- `TypeError` {{domxref("DOMException")}}
+  - : Thrown in the following situations:
     - The label and/or protocol string is too long; these cannot be longer than 65,535
       bytes (bytes, rather than characters).
     - The `id` is 65535. While this is a valid unsigned 16-bit value, it's
       not a permitted value for `id`.
-
-- `SyntaxError`
-  - : Values were specified for both the `maxPacketLifeTime` and
-    `maxRetransmits` options. You may only specify a non-`null`
-    value for one of these.
-- `ResourceInUse`
-  - : An `id` was specified, but another {{domxref("RTCDataChannel")}} is
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if values were specified for both the `maxPacketLifeTime` and
+    `maxRetransmits` options. You may specify a non-`null`
+    value for only one of these.
+- `ResourceInUse` {{domxref("DOMException")}}
+  - : Thrown if an `id` was specified, but another {{domxref("RTCDataChannel")}} is
     already using the same value.
-- `OperationError`
-  - : Either the specified `id` is already in use or, if no `id` was
+- `OperationError` {{domxref("DOMException")}}
+  - : Thrown if either the specified `id` is already in use, or if no `id` was
     specified, the WebRTC layer was unable to automatically generate an ID because all IDs
     are in use.
 
@@ -123,7 +120,7 @@ included; otherwise, the defaults listed above are established.
 
 This example shows how to create a data channel and set up handlers for the
 {{DOMxRef("RTCDataChannel/open_event", "open")}} and {{DOMxRef("RTCDataChannel/message_event", "message")}} events to send and receive messages on it
-(For brievity, the example assumes onnegotiationneeded is set up).
+(For brevity, the example assumes onnegotiationneeded is set up).
 
 ```js
 // Offerer side

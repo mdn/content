@@ -16,8 +16,8 @@ browser-compat: javascript.builtins.TypedArray.find
 
 The **`find()`** method returns a value of an element in the
 typed array, if it satisfies the provided testing function. Otherwise
-{{jsxref("undefined")}} is returned. _TypedArray_ is one of the [typed
-array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+{{jsxref("undefined")}} is returned. _TypedArray_ is one of the
+[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
 
 See also the {{jsxref("TypedArray.findIndex", "findIndex()")}} method, which returns
 the **index** of a found element in the typed array instead of its value.
@@ -28,26 +28,28 @@ the **index** of a found element in the typed array instead of its value.
 
 ```js
 // Arrow function
-find((element) => { ... } )
-find((element, index) => { ... } )
-find((element, index, array) => { ... } )
+find((element) => { /* ... */ } )
+find((element, index) => { /* ... */ } )
+find((element, index, array) => { /* ... */ } )
 
 // Callback function
 find(callbackFn)
 find(callbackFn, thisArg)
 
 // Inline callback function
-find(function callbackFn(element) { ... })
-find(function callbackFn(element, index) { ... })
-find(function callbackFn(element, index, array){ ... })
-find(function callbackFn(element, index, array) { ... }, thisArg)
+find(function(element) { /* ... */ })
+find(function(element, index) { /* ... */ })
+find(function(element, index, array){ /* ... */ })
+find(function(element, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
 
-  - : Function to execute on each value in the typed array, taking three arguments:
+  - : Function to execute on each value in the typed array.
+
+    The function is called with the following arguments:
 
     - `element`
       - : The current element being processed in the typed array.
@@ -100,13 +102,13 @@ returns {{jsxref("undefined")}} if there is no prime number).
 
 ```js
 function isPrime(element, index, array) {
-  var start = 2;
-  while (start <= Math.sqrt(element)) {
-    if (element % start++ < 1) {
-      return false;
-    }
-  }
-  return element > 1;
+  var start = 2;
+  while (start <= Math.sqrt(element)) {
+    if (element % start++ < 1) {
+      return false;
+    }
+  }
+  return element > 1;
 }
 
 var uint8 = new Uint8Array([4, 5, 8, 12]);
@@ -123,6 +125,6 @@ console.log(uint8.find(isPrime)); // 5
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.find` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.find` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray.prototype.findIndex()")}}
 - {{jsxref("TypedArray.prototype.every()")}}

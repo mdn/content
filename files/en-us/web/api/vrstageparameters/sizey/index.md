@@ -3,7 +3,6 @@ title: VRStageParameters.sizeY
 slug: Web/API/VRStageParameters/sizeY
 tags:
   - API
-  - Experimental
   - Deprecated
   - Property
   - Reference
@@ -22,13 +21,7 @@ The **`sizeY`** read-only property of the {{domxref("VRStageParameters")}} inter
 
 The bounds are defined as an axis-aligned rectangle on the floor, for safety purposes. Content should not require the user to move beyond these bounds; however, it is possible for the user to ignore the bounds resulting in position values outside of this rectangle. The center of the rectangle is at (0,0,0) in standing-space coordinates.
 
-## Syntax
-
-```js
-var mySizeY = vrStageParametersInstance.sizeY;
-```
-
-### Value
+## Value
 
 A float representing the depth in meters.
 

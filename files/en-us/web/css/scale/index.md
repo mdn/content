@@ -65,7 +65,7 @@ scale: unset;
 
 ```html
 <div>
-  <p class="scale">Scaling</p>
+  <p class="scale">Scaling</p>
 </div>
 ```
 

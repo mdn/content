@@ -125,9 +125,9 @@ focusNoScrollMethod = function getFocusWithoutScrolling() {
   `HTMLElement`
 - Behavior of the focus in relation to different HTML features like
   {{HTMLAttrxRef("tabindex")}} or {{Glossary("shadow tree","shadow dom", 1)}},
-  which previously remained under-specified, were recently updated (as October
-  of 2019). Checkout [WHATWG
-  blog](https://blog.whatwg.org/focusing-on-focus) for more info.
+  which previously remained under-specified, were recently updated (as October
+  of 2019). Checkout [WHATWG
+  blog](https://blog.whatwg.org/focusing-on-focus) for more info.
 
 ## Browser compatibility
 
@@ -137,3 +137,5 @@ focusNoScrollMethod = function getFocusWithoutScrolling() {
 
 - {{domxref("HTMLElement.blur")}} to remove the focus from an element.
 - {{domxref("document.activeElement")}} to know which is the currently focused element.
+- {{domxref("Element/focusin_event", "focusin")}} event: fired when an element is about to gain focus.
+- {{domxref("Element/focusout_event", "focusout")}} event: fired when an element is about to lose focus.

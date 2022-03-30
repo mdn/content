@@ -26,7 +26,7 @@ This element implements the {{domxref("HTMLDirectoryElement")}} interface.
 
 ## Attributes
 
-Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes "HTML/Global attributes").
+Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 - {{htmlattrdef("compact")}}
   - : This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute depends on the user agent and it doesn't work in all browsers.
@@ -45,6 +45,6 @@ Not part of any current specifications.
 - CSS properties that may be specially useful to style the `<dir>` element:
 
   - The {{cssxref('list-style')}} property, useful to choose the way the ordinal is displayed.
-  - [CSS counters](/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters), useful to handle complex nested lists.
+  - [CSS counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters), useful to handle complex nested lists.
   - The {{Cssxref('line-height')}} property, useful to simulate the deprecated {{htmlattrxref("compact", "dir")}} attribute.
   - The {{cssxref('margin')}} property, useful to control the indent of the list.

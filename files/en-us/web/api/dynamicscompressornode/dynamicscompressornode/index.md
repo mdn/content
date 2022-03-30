@@ -20,7 +20,7 @@ multiple sounds are played and multiplexed together at once.
 ## Syntax
 
 ```js
-var dynamicsCompressorNode = new DynamicsCompressorNode(context, options)
+new DynamicsCompressorNode(context, options)
 ```
 
 ### Parameters

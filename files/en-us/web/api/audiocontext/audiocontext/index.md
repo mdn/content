@@ -48,7 +48,7 @@ new AudioContext(options);
   - : Indicates the sample rate to use for the new context. The value must be a floating-point value indicating the sample
     rate, in samples per second, for which to configure the new context; additionally, the
     value must be one which is supported by {{domxref("AudioBuffer.sampleRate")}}.
-    The value is typically be between 8,000 Hz and 96,000 Hz; the default will vary depending on the output device, but the sample rate 44,100 Hz is the most common.
+    The value will typically be between 8,000 Hz and 96,000 Hz; the default will vary depending on the output device, but the sample rate 44,100 Hz is the most common.
     If the `sampleRate` property is not included in the options, or the options are not specified when creating the audio context, the new context's output device's preferred sample rate is used by default.
 
 ### Return value
@@ -57,8 +57,8 @@ The newly constructed {{domxref("AudioContext")}} instance.
 
 ### Exceptions
 
-- `NotSupportedError`
-  - : The specified `sampleRate` isn't supported by the context.
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if the specified `sampleRate` isn't supported by the context.
 
 ## Usage notes
 
@@ -75,7 +75,7 @@ browser implementations to decide.
 
 #### Per-tab audio context limitation in Chrome
 
-Prior to version 66 Google Chrome only supported up to six audio contexts _per
+Prior to version 66 Google Chrome only supported up to six audio contexts _per
 tab_ at a time.
 
 #### Non-standard exceptions in Chrome

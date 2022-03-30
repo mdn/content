@@ -32,5 +32,3 @@ console.log(VideoDecoder.decodeQueueSize);
 ## Browser compatibility
 
 {{Compat}}
-
-

@@ -19,7 +19,7 @@ The `unicode` attribute contributes to the process for deciding which glyph(s) a
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("glyph")}}
+- {{SVGElement("glyph")}}
 
 ## Context notes
 
@@ -40,8 +40,8 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `<string>`
-    *   : This value specifies one or more Unicode characters corresponding to a glyph.
+- `<string>`
+  - : This value specifies one or more Unicode characters corresponding to a glyph.
 
 ## Specifications
 

@@ -21,7 +21,7 @@ The **`EvalError`** object indicates an error regarding the global {{jsxref("Glo
 ## Instance properties
 
 - {{jsxref("Error.prototype.message", "EvalError.prototype.message")}}
-  - : Error message. Although ECMA-262 specifies that {{jsxref("EvalError")}} should provide its own `message` property, in [SpiderMonkey](/en-US/docs/Mozilla/Projects/SpiderMonkey), it inherits {{jsxref("Error.prototype.message")}}.
+  - : Error message.
 - {{jsxref("Error.prototype.name", "EvalError.prototype.name")}}
   - : Error name. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.fileName", "EvalError.prototype.fileName")}}

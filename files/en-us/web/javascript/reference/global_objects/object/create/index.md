@@ -45,8 +45,7 @@ A new object with the specified prototype object and properties.
 The `proto` parameter has to be either
 
 - {{jsxref("null")}} or
-- an {{jsxref("Object")}} excluding [primitive
-  wrapper objects](/en-US/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript).
+- an {{jsxref("Object")}} excluding [primitive wrapper objects](/en-US/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript).
 
 If `proto` is neither of these a {{jsxref("TypeError")}} is thrown.
 
@@ -367,7 +366,7 @@ o2 = Object.create({p: 42}) */
 
 ## See also
 
-- A polyfill of `Object.create` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Polyfill of `Object.create` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.prototype.isPrototypeOf()")}}

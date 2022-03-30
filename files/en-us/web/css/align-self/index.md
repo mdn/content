@@ -76,8 +76,7 @@ align-self: unset;
   - : The cross-end margin edge of the flex item is flushed with the cross-end edge of the line.
 - `center`
   - : The flex item's margin box is centered within the line on the cross-axis. If the cross-size of the item is larger than the flex container, it will overflow equally in both directions.
-- `baseline first baseline`
-  `last baseline`
+- `baseline`, `first baseline`, `last baseline`
   - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
     The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
 - `stretch`

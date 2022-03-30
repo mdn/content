@@ -14,7 +14,7 @@ The **Broadcast Channel API** allows basic communication between {{glossary("bro
 
 {{AvailableInWorkers}}
 
-By creating a {{domxref("BroadcastChannel")}} object, you can receive any messages that are posted to it. You don't have to maintain a reference to the frames or workers you wish to communicate with: they can “subscribe” to a particular channel by constructing their own {{domxref("BroadcastChannel")}} with the same name, and have bi-directional communication between all of them.
+By creating a {{domxref("BroadcastChannel")}} object, you can receive any messages that are posted to it. You don't have to maintain a reference to the frames or workers you wish to communicate with: they can "subscribe" to a particular channel by constructing their own {{domxref("BroadcastChannel")}} with the same name, and have bi-directional communication between all of them.
 
 ![The principle of the Broadcast Channel API](broadcastchannel.png)
 
@@ -38,17 +38,17 @@ It is enough to call the {{domxref("BroadcastChannel.postMessage", "postMessage(
 bc.postMessage('This is a test message.');
 ```
 
-Any kind of object can be sent, not just a {{domxref("DOMString")}}.
+Data sent to the channel is serialized using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). That means you can send a broad variety of data objects safely without having to serialize them yourself.
 
-The API doesn't associate any semantics to messages, so it is up to the code to know what kind of messages to expect and what to do with them.
+The API doesn't associate any semantics to messages, so it is up to the code to know what kind of messages to expect and what to do with them.
 
 ### Receiving a message
 
-When a message is posted, a {{event("message")}} event is dispatched to each {{domxref("BroadcastChannel")}} object connected to this channel. A function can be run for this event with the {{domxref("BroadcastChannel.onmessage", "onmessage")}} event handler:
+When a message is posted, a [`message`](/en-us/docs/Web/API/BroadcastChannel/message_event) event is dispatched to each {{domxref("BroadcastChannel")}} object connected to this channel. A function can be run for this event using the {{domxref("BroadcastChannel/message_event", "onmessage")}} event handler:
 
 ```js
 // A handler that only logs the event to the console:
-bc.onmessage = function (ev) { console.log(ev); }
+bc.onmessage = event => { console.log(event); }
 ```
 
 ### Disconnecting a channel

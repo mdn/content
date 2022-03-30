@@ -3,7 +3,6 @@ title: SpeechRecognition.maxAlternatives
 slug: Web/API/SpeechRecognition/maxAlternatives
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechRecognition
@@ -13,7 +12,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognition.maxAlternatives
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`maxAlternatives`** property of the
 {{domxref("SpeechRecognition")}} interface sets the maximum number of
@@ -22,14 +21,7 @@ The **`maxAlternatives`** property of the
 
 The default value is 1.
 
-## Syntax
-
-```js
-var myMaxAlternativeNumber = mySpeechRecognition.maxAlternatives;
-mySpeechRecognition.maxAlternatives = 2;
-```
-
-### Value
+## Value
 
 A number representing the maximum returned alternatives for each result.
 

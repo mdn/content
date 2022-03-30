@@ -14,23 +14,17 @@ browser-compat: api.IDBIndex.multiEntry
 ---
 {{ APIRef("IndexedDB") }}
 
-The **`multiEntry`** read-only property of the
-{{domxref("IDBIndex")}} interface returns a boolean value that affects how the index
+The **`multiEntry`** read-only property of the
+{{domxref("IDBIndex")}} interface returns a boolean value that affects how the index
 behaves when the result of evaluating the index's key path yields an array.
 
 This is decided when the index is created, using the
 {{domxref("IDBObjectStore.createIndex")}} method. This method takes an optional
-`options` parameter whose `multiEntry` property is set to `true`/`false`.
+`options` parameter whose `multiEntry` property is set to `true`/`false`.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var isMultiEntry = myIndex.multiEntry;
-```
-
-### Value
+## Value
 
 A boolean value:
 
@@ -39,21 +33,21 @@ A boolean value:
 | true  | There is one record in the index for each item in an array of keys. |
 | false | There is one record for each key that is an array.                  |
 
-## Example
+## Examples
 
 In the following example we open a transaction and an object store, then get the
-index `lName` from a simple contacts database. We then open a basic cursor on
-the index using {{domxref("IDBIndex.openCursor")}} — this works the same as opening a
-cursor directly on an `ObjectStore` using
+index `lName` from a simple contacts database. We then open a basic cursor on
+the index using {{domxref("IDBIndex.openCursor")}} — this works the same as opening a
+cursor directly on an `ObjectStore` using
 {{domxref("IDBObjectStore.openCursor")}} except that the returned records are sorted
 based on the index, not the primary key.
 
 The multi-entry status of the index is logged to the console: it should be returned
-as `false`.
+as `false`.
 
 Finally, we iterate through each record, and insert the data into an HTML table. For a
-complete working example, see our [IndexedDB-examples
-demo repo](https://github.com/mdn/indexeddb-examples/tree/master/idbindex) ([View the
+complete working example, see our [IndexedDB-examples
+demo repo](https://github.com/mdn/indexeddb-examples/tree/master/idbindex) ([View the
 example live](https://mdn.github.io/indexeddb-examples/idbindex).)
 
 ```js

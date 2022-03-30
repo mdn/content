@@ -17,21 +17,12 @@ property of the Canvas 2D API sets the thickness of lines.
 
 > **Note:** Lines can be drawn with the
 > {{domxref("CanvasRenderingContext2D.stroke()",
-    "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
+    "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
 > and {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.
 
-## Syntax
+## Value
 
-```js
-ctx.lineWidth = value;
-```
-
-### Options
-
-- `value`
-  - : A number specifying the line width, in coordinate space units. Zero, negative,
-    {{jsxref("Infinity")}}, and {{jsxref("NaN")}} values are ignored. This value is
-    `1.0` by default.
+A number specifying the line width, in coordinate space units. Zero, negative, {{jsxref("Infinity")}}, and {{jsxref("NaN")}} values are ignored. This value is `1.0` by default.
 
 ## Examples
 

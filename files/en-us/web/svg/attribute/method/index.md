@@ -14,7 +14,7 @@ The **`method`** attribute indicates the method by which text should be rendered
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("textPath")}}
+- {{SVGElement("textPath")}}
 
 ## textPath
 
@@ -37,10 +37,10 @@ For {{SVGElement("textPath")}}, `method` indicates the method by which text shou
   </tbody>
 </table>
 
-*   align
-    *   : This value indicates that the characters should be rendered so that they are not stretched or warped. The characters are rotated, scaled and stretched when they are rendered. As a result, for fonts with connected characters (e.g. cursive fonts), the connections may not align properly when text is rendered along the path.
-*   stretch
-    *   : This value indicates that the character outlines will be converted into paths, and then stretched and possibly warped. With this approach, connected characters, such as in cursive fonts, will maintain their connections.
+- align
+  - : This value indicates that the characters should be rendered so that they are not stretched or warped. The characters are rotated, scaled and stretched when they are rendered. As a result, for fonts with connected characters (e.g. cursive fonts), the connections may not align properly when text is rendered along the path.
+- stretch
+  - : This value indicates that the character outlines will be converted into paths, and then stretched and possibly warped. With this approach, connected characters, such as in cursive fonts, will maintain their connections.
 
 ## Specifications
 

@@ -48,13 +48,13 @@ operations](https://www.nczonline.net/blog/2009/08/11/timed-array-processing-in-
 
 The feature can be emulated in a few different ways:
 
-- {{DOMxRef("Window.postMessage", "postMessage")}} can be used to trigger an immediate but yielding callback.
+- {{DOMxRef("Window.postMessage", "postMessage")}} can be used to trigger an immediate but yielding callback.
   Do note that Internet Explorer 8 includes a synchronous version of
   `postMessage`, which means it cannot be used as a fallback.
 - {{DOMxRef("MessageChannel")}} can be used reliably inside of Web Workers whereas the
   semantics of postMessage mean it cannot be used there.
 - `setTimeout(fn, 0)` _can_ potentially be used, however as it is
-  clamped to 4ms for timers nested more than 5 levels deep [per the HTML
+  clamped to 4ms for timers nested more than 5 levels deep [per the HTML
   spec](https://html.spec.whatwg.org/multipage/webappapis.html#timers), it does not make for a suitable polyfill for the natural immediacy of
   `setImmediate`.
 
@@ -72,7 +72,7 @@ specification is no longer being worked on.
 
 ## See also
 
-- A polyfill of `setImmediate` is available in [`core-js`](https://github.com/zloirock/core-js#setimmediate)
+- [Polyfill of `setImmediate` in `core-js`](https://github.com/zloirock/core-js#setimmediate)
 - {{DOMxRef("Window.clearImmediate()")}}
 - [Microsoft
   `setImmediate` API Demo](http://ie.microsoft.com/testdrive/Performance/setImmediateSorting/Default.html)

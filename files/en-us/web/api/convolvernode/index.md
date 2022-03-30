@@ -15,6 +15,8 @@ The `ConvolverNode` interface is an {{domxref("AudioNode")}} that performs a Lin
 
 > **Note:** For more information on the theory behind Linear Convolution, see the [Convolution article on Wikipedia](https://en.wikipedia.org/wiki/Convolution).
 
+{{InheritanceDiagram}}
+
 <table class="properties">
   <tbody>
     <tr>

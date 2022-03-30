@@ -23,8 +23,10 @@ Gets/sets the status bar text for the given window.
 
 ## Syntax
 
-    var sMsg = window.defaultStatus;
-    window.defaultStatus = sMsg;
+```js
+var sMsg = window.defaultStatus;
+window.defaultStatus = sMsg;
+```
 
 ### Parameters
 
@@ -32,11 +34,13 @@ Gets/sets the status bar text for the given window.
 
 ## Example
 
-    <html>
-     <body onload="window.defaultStatus='hello!';"/>
-      <button onclick="window.confirm('Are you sure you want to quit?');">confirm</button>
-     </body>
-    </html>
+```html
+<html>
+  <body onload="window.defaultStatus='hello!';"/>
+  <button onclick="window.confirm('Are you sure you want to quit?');">confirm</button>
+  </body>
+</html>
+```
 
 ## Notes
 

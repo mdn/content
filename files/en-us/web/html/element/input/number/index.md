@@ -27,7 +27,7 @@ On browsers that don't support inputs of type `number`, a `number` input falls b
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>A {{jsxref("Number")}} representing a number, or empty</td>
     </tr>
     <tr>
@@ -51,6 +51,10 @@ On browsers that don't support inputs of type `number`, a `number` input falls b
       <td><code>list</code>, <code>value</code>, <code>valueAsNumber</code></td>
     </tr>
     <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>Methods</strong></td>
       <td>
         {{domxref("HTMLInputElement.select", "select()")}},
@@ -63,7 +67,7 @@ On browsers that don't support inputs of type `number`, a `number` input falls b
 
 ## Value
 
-A {{jsxref("Number")}} representing the value of the number entered into the input. You can set a default value for the input by including a number inside the {{htmlattrxref("value", "input")}} attribute, like so:
+A number representing the value of the number entered into the input. You can set a default value for the input by including a number inside the {{htmlattrxref("value", "input")}} attribute, like so:
 
 ```html
 <input id="number" type="number" value="42">
@@ -95,7 +99,7 @@ This value must be less than or equal to the value of the `max` attribute.
 
 The `placeholder` attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text _must not_ include carriage returns or line feeds.
 
-If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossary("RTL")}}) but needs to present the placeholder in the opposite directionality, you can use Unicode bidirectional algorithm formatting characters to override directionality within the placeholder; see {{SectionOnPage("/en-US/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Overriding BiDi using Unicode control characters")}} for those characters.
+If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossary("RTL")}}) but needs to present the placeholder in the opposite directionality, you can use Unicode bidirectional algorithm formatting characters to override directionality within the placeholder; see [How to use Unicode controls for bidi text](https://www.w3.org/International/questions/qa-bidi-unicode-controls) for more information.
 
 > **Note:** Avoid using the `placeholder` attribute if you can. It is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for more information.
 
@@ -107,9 +111,9 @@ A Boolean attribute which, if present, means this field cannot be edited by the 
 
 ### step
 
-The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping (`{{anch("min")}}` if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.
+The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping ([`min`](#min) if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.
 
-A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as `{{anch("min")}}` and `{{anch("max")}}`).
+A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
 
 > **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
 

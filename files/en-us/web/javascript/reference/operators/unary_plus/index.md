@@ -29,7 +29,7 @@ perform any other operations on the number. It can convert string representation
 integers and floats, as well as the non-string values `true`,
 `false`, and `null`. Integers in both decimal and hexadecimal
 (`0x`-prefixed) formats are supported. Negative numbers are supported (though
-not for hex). Using the operator on BigInt values throws a TypeError. If it cannot parse
+not for hex). Using the operator on BigInt values throws a TypeError. If it cannot parse
 a particular value, it will evaluate to {{jsxref("NaN")}}.
 
 ## Examples
@@ -66,21 +66,12 @@ console.log(+y);
 
 ## See also
 
-- [Addition
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Subtraction
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Division
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplication
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Remainder
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Exponentiation
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Increment
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Decrement
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Unary
-  negation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Subtraction operator](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Division operator](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
+- [Multiplication operator](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Remainder operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Exponentiation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Increment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
+- [Decrement operator](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [Unary negation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)

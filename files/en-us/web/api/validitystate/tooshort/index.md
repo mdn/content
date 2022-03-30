@@ -1,5 +1,5 @@
 ---
-title: validityState.tooShort
+title: ValidityState.tooShort
 slug: Web/API/ValidityState/tooShort
 browser-compat: api.ValidityState.tooShort
 ---
@@ -15,5 +15,5 @@ The read-only **`tooShort`** property of a **[`ValidityState`](/en-US/docs/Web/A
 
 ## See also
 
-- [Guide: Constraint validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Guide: Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
 - [Tutorial: Form data validation](/en-US/docs/Learn/Forms/Form_validation)

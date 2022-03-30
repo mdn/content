@@ -18,7 +18,7 @@ The **`white-space`** CSS property sets how {{Glossary("whitespace", "white spac
 
 The property specifies two things:
 
-- Whether and how white-space is collapsed.
+- Whether and how white space is [collapsed](#collapsing_of_white_space).
 - Whether lines may wrap at soft-wrap opportunities.
 
 > **Note:** To make words break _within themselves_, use {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, or {{CSSxRef("hyphens")}} instead.
@@ -46,22 +46,22 @@ The `white-space` property is specified as a single keyword chosen from the list
 ### Values
 
 - `normal`
-  - : Sequences of white space are collapsed. Newline characters in the source are handled the same as other white space. Lines are broken as necessary to fill line boxes.
+  - : Sequences of white space are [collapsed](#collapsing_of_white_space). Newline characters in the source are handled the same as other white space. Lines are broken as necessary to fill line boxes.
 - `nowrap`
-  - : Collapses white space as for `normal`, but suppresses line breaks (text wrapping) within the source.
+  - : [Collapses](#collapsing_of_white_space) white space as for `normal`, but suppresses line breaks (text wrapping) within the source.
 - `pre`
   - : Sequences of white space are preserved. Lines are only broken at newline characters in the source and at {{HTMLElement("br")}} elements.
 - `pre-wrap`
   - : Sequences of white space are preserved. Lines are broken at newline characters, at {{HTMLElement("br")}}, and as necessary to fill line boxes.
 - `pre-line`
-  - : Sequences of white space are collapsed. Lines are broken at newline characters, at {{HTMLElement("br")}}, and as necessary to fill line boxes.
+  - : Sequences of white space are [collapsed](#collapsing_of_white_space). Lines are broken at newline characters, at {{HTMLElement("br")}}, and as necessary to fill line boxes.
 - `break-spaces`
 
   - : The behavior is identical to that of `pre-wrap`, except that:
 
     - Any sequence of preserved white space always takes up space, including at the end of the line.
     - A line breaking opportunity exists after every preserved white space character, including between white space characters.
-    - Such preserved spaces take up space and do not hang, and thus affect the box’s intrinsic sizes (min-content size and max-content size).
+    - Such preserved spaces take up space and do not hang, and thus affect the box's intrinsic sizes (min-content size and max-content size).
 
 The following table summarizes the behavior of the various `white-space` values:
 
@@ -136,6 +136,10 @@ The following table summarizes the behavior of the various `white-space` values:
 >   - : All other space separators defined in Unicode, other than those already defined as spaces.
 >
 > Where white space is said to _hang_, this can affect the size of the box when measured for intrinsic sizing.
+
+## Collapsing of white space
+
+The CSS Text specification contains a [Collapsing and Transformation](https://drafts.csswg.org/css-text/#white-space-phase-1) section that precisely defines what "white space is collapsed" means, including an example with an illustration. Usually, it means reducing sequences of multiple white-space characters down to a single space character — though in some cases it means reducing them to no character (the empty string).
 
 ## Formal definition
 

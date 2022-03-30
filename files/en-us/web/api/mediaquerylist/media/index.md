@@ -17,13 +17,7 @@ The **`media`** read-only property of the
 {{DOMxRef("MediaQueryList")}} interface is a {{DOMxRef("DOMString")}} representing a
 serialized media query.
 
-## Syntax
-
-```js
-var media = MediaQueryList.media;
-```
-
-### Value
+## Value
 
 A {{DOMxRef("DOMString")}} representing a serialized media query.
 

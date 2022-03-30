@@ -3,7 +3,6 @@ title: SpeechSynthesisUtterance.rate
 slug: Web/API/SpeechSynthesisUtterance/rate
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechSynthesisUtterance
@@ -13,11 +12,9 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisUtterance.rate
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
-The **`rate`** property of the
-{{domxref("SpeechSynthesisUtterance")}} interface gets and sets the speed at which the
-utterance will be spoken at.
+The **`rate`** property of the {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the speed at which the utterance will be spoken at.
 
 If unset, a default value of 1 will be used.
 
@@ -30,14 +27,12 @@ speechSynthesisUtteranceInstance.rate = 1.5;
 
 ### Value
 
-A float representing the rate value. It can range between 0.1 (lowest) and 10
-(highest), with 1 being the default pitch for the current platform or voice, which
-should correspond to a normal speaking rate. Other values act as a percentage relative
-to this, so for example 2 is twice as fast, 0.5 is half as fast, etc.
+A float representing the rate value.
+It can range between 0.1 (lowest) and 10 (highest), with 1 being the default pitch for the current platform or voice, which should correspond to a normal speaking rate.
+Other values act as a percentage relative to this, so for example 2 is twice as fast, 0.5 is half as fast, etc.
 
-Some speech synthesis engines or voices may constrain the minimum and maximum rates
-further. If [SSML](https://www.w3.org/TR/speech-synthesis/) is used, this
-value will be overridden by [prosody tags](https://www.w3.org/TR/speech-synthesis/#S3.2.4) in the markup.
+Some speech synthesis engines or voices may constrain the minimum and maximum rates further.
+If [SSML](https://www.w3.org/TR/speech-synthesis/) is used, this value will be overridden by [prosody tags](https://www.w3.org/TR/speech-synthesis/#S3.2.4) in the markup.
 
 ## Examples
 

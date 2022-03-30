@@ -27,13 +27,7 @@ in the list. The range of valid values of the indices is `0` to
 > - the untyped [CSS Object Model](CSS_Object_Model), widely supported, or
 > - the modern [CSS Typed Object Model API](CSS_Typed_OM_API), less supported and considered experimental.
 
-## Syntax
-
-```js
-var length = cssValueList.length;
-```
-
-### Value
+## Value
 
 An `unsigned long` representing the number of {{domxref("CSSValue")}}s.
 

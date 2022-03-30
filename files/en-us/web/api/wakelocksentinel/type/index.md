@@ -10,10 +10,10 @@ tags:
   - screen
 browser-compat: api.WakeLockSentinel.type
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
+{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
 
 The read-only **`type`** property of the
-{{domxref("WakeLockSentinel")}} interface returns a {{jsxref("String")}}
+{{domxref("WakeLockSentinel")}} interface returns a string
 representation of the currently acquired {{domxref("WakeLockSentinel")}} type.
 
 ## Syntax
@@ -24,7 +24,7 @@ var type = sentinel.type;
 
 ### Value
 
-A {{jsxref("String")}} representation of the currently acquired wake lock type.
+A string representation of the currently acquired wake lock type.
 
 - _type_ {{ReadOnlyInline}}
 

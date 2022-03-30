@@ -15,11 +15,15 @@ Makes a request to bring the window to the front. It may fail due to user settin
 
 ## Syntax
 
-    window.focus()
+```js
+window.focus()
+```
 
 ## Example
 
-    if (clicked) { window.focus(); }
+```js
+if (clicked) { window.focus(); }
+```
 
 ## Specifications
 

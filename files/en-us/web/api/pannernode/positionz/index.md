@@ -35,23 +35,15 @@ The {{domxref("AudioParam")}} contained by this property is read only; however, 
 can still change the value of the parameter by assigning a new value to its
 {{domxref("AudioParam.value")}} property.
 
-## Syntax
-
-```js
-var positionZ = PannerNode.positionZ;
-
-PannerNode.positionZ.value = newPositionZ;
-```
-
-### Value
+## Value
 
 An {{domxref("AudioParam")}} whose `value` is the Z coordinate of the audio
 source's position, in 3D Cartesian coordinates.
 
 ## Example
 
-The following example starts an oscillator and moves it in front of the listener after
-1 second, behind the listener after 2 seconds, and back to the listener's position after
+The following example starts an oscillator and moves it in front of the listener after
+1 second, behind the listener after 2 seconds, and back to the listener's position after
 3 seconds. Note that in this case, the change will mainly affect the timbre and
 perceived volume of the sound.
 

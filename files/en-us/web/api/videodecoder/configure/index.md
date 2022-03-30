@@ -11,12 +11,12 @@ browser-compat: api.VideoDecoder.configure
 ---
 {{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
 
-The **`configure()`** method of the {{domxref("VideoDecoder")}} interface enqueues a control message to configure the audio decoder for decoding chunks.
+The **`configure()`** method of the {{domxref("VideoDecoder")}} interface enqueues a control message to configure the video decoder for decoding chunks.
 
 ## Syntax
 
 ```js
-AudioDecoder.configure(config)
+VideoDecoder.configure(config)
 ```
 
 ### Parameters
@@ -61,20 +61,19 @@ AudioDecoder.configure(config)
     - `optimizeForLatency`
       - : A boolean. If `true`this is a hint that the selected decoder should be optimized to minimize the number of {{domxref("EncodedVideoChunk")}} objects that have to be decoded before a {{domxref("VideoFrame")}} is output.
 
-
 > **Note:** The registrations in the [WebCodecs Codec Registry](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry) link to a specification detailing whether and how to populate the optional `description` member.
 
 ### Return Value
 
-{{jsxref("Undefined")}}.
+None.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `TypeError`
+- `TypeError` {{domxref("DOMException")}}
   - : Thrown if the provided `config` is invalid.
-- {{domxref("DOMException")}} `InvalidStateError`
+- `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("VideoDecoder.state","state")}} is `"closed"`.
-- {{domxref("DOMException")}} `NotSupportedError`
+- `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the provided `config` is valid but the user agent cannot provide a codec that can decode this profile.
 
 ## Examples
@@ -106,4 +105,3 @@ decoder.configure(config);
 ## Browser compatibility
 
 {{Compat}}
-

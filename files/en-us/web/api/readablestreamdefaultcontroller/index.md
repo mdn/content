@@ -12,7 +12,7 @@ browser-compat: api.ReadableStreamDefaultController
 ---
 {{APIRef("Streams")}}
 
-The **`ReadableStreamDefaultController`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a controller allowing control of a {{domxref("ReadableStream")}}'s state and internal queue. Default controllers are for streams that are not byte streams.
+The **`ReadableStreamDefaultController`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a controller allowing control of a {{domxref("ReadableStream")}}'s state and internal queue. Default controllers are for streams that are not byte streams.
 
 ## Constructor
 

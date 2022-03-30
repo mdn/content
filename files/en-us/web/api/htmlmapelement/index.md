@@ -12,7 +12,7 @@ browser-compat: api.HTMLMapElement
 
 The **`HTMLMapElement`** interface provides special properties and methods (beyond those of the regular object {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of map elements.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

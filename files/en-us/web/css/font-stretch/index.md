@@ -147,8 +147,6 @@ The table below demonstrates the effect of supplying various different percentag
 
 ### Setting font stretch percentages
 
-> **Note:** This example will only work in browsers that support `<percentage>` values.
-
 {{EmbedGHLiveSample("css-examples/variable-fonts/font-stretch.html", '100%', 950)}}
 
 ## Specifications

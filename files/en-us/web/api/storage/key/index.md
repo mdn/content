@@ -48,7 +48,7 @@ The following function iterates over the local storage keys and gets the value s
 each key:
 
 ```js
-for(var i =0; i < localStorage.length; i++){
+for (var i = 0; i < localStorage.length; i++) {
   console.log(localStorage.getItem(localStorage.key(i)));
 }
 ```

@@ -15,7 +15,9 @@ The **`toString()`** method of the {{domxref("TrustedHTML")}} interface returns 
 
 ## Syntax
 
-    var str = TrustedHTML.toString();
+```js
+var str = TrustedHTML.toString();
+```
 
 ### Return value
 

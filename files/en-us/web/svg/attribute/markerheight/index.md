@@ -13,7 +13,7 @@ The **`markerHeight`** attribute represents the height of the viewport into whic
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("marker")}}
+- {{SVGElement("marker")}}
 
 ## Usage notes
 
@@ -37,11 +37,11 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `<length-percentage>`
-    *   : This value defines either an absolute or a relative height of the marker.
-        Relative values refer to the height specified via the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
-*   `<number>`
-    *   : This value defines the height of the marker in the units defined by the {{SVGAttr("markerUnits")}} attribute.
+- `<length-percentage>`
+  - : This value defines either an absolute or a relative height of the marker.
+    Relative values refer to the height specified via the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
+- `<number>`
+  - : This value defines the height of the marker in the units defined by the {{SVGAttr("markerUnits")}} attribute.
 
 A value of zero disables rendering of the element and negative values are an error.
 
@@ -79,8 +79,8 @@ A value of zero disables rendering of the element and negative values are an err
 
 ## See also
 
-*   {{SVGElement("marker")}}
-*   {{SVGAttr("markerWidth")}}
-*   {{SVGAttr("markerUnits")}}
-*   {{SVGAttr("viewBox")}}
-*   {{SVGAttr("preserveAspectRatio")}}
+- {{SVGElement("marker")}}
+- {{SVGAttr("markerWidth")}}
+- {{SVGAttr("markerUnits")}}
+- {{SVGAttr("viewBox")}}
+- {{SVGAttr("preserveAspectRatio")}}

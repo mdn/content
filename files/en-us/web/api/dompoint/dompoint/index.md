@@ -26,7 +26,7 @@ You can also create a `DOMPoint` by calling the
 ## Syntax
 
 ```js
-point = new DOMPoint(x, y, z, w);
+new DOMPoint(x, y, z, w);
 ```
 
 ### Parameters

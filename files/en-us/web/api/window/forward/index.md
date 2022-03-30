@@ -20,7 +20,9 @@ Moves the window one document forward in history. This was a Firefox-specific me
 
 ## Syntax
 
-    window.forward();
+```js
+window.forward();
+```
 
 ### Parameters
 
@@ -32,11 +34,13 @@ None
 
 ## Example
 
-    function goForward() {
-      if (canGoForward) {
-        window.forward();
-      }
-    }
+```js
+function goForward() {
+  if (canGoForward) {
+    window.forward();
+  }
+}
+```
 
 ## Specifications
 

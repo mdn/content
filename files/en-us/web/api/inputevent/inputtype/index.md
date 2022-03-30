@@ -19,13 +19,7 @@ The **`inputType`** read-only property of the
 {{domxref("InputEvent")}} interface returns the type of change made to editable content.
 Possible changes include for example inserting, deleting, and formatting text.
 
-## Syntax
-
-```js
-var aString = inputEvent.inputType;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} containing the type of input that was made. There are many
 possible values, such as `insertText`, `deleteContentBackward`,

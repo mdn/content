@@ -12,7 +12,7 @@ tags:
   - getAll
 browser-compat: api.ContentIndex.getAll
 ---
-{{draft}}{{DefaultAPISidebar("Content Index API")}}
+{{DefaultAPISidebar("Content Index API")}}
 
 The **`getAll()`** method of the
 {{domxref("ContentIndex")}} interface returns a {{jsxref('Promise')}} that resolves with

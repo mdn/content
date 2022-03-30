@@ -71,4 +71,4 @@ In this example, the `:lang()` pseudo-class is used to match the parents of quot
 - Language-related pseudo-classes: {{cssxref(":lang")}}, {{cssxref(":dir")}}
 - HTML {{htmlattrxref("lang")}} attribute
 - HTML {{htmlattrxref("translate")}} attribute
-- [BCP 47 - Tags for Identifying Languages](https://datatracker.ietf.org/doc/html/bcp47)
+- {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}

@@ -15,13 +15,7 @@ The **`cssRules`** property of the
 {{domxref("CSSGroupingRule")}} interface returns a {{domxref("CSSRuleList")}} containing
 a collection of {{domxref("CSSRule")}} objects.
 
-## Syntax
-
-```js
-let cssRules = cssGroupingRule.cssRules;
-```
-
-### Value
+## Value
 
 a {{domxref("CSSRuleList")}}.
 

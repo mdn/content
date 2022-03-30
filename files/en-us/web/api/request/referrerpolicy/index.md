@@ -3,7 +3,6 @@ title: Request.referrerPolicy
 slug: Web/API/Request/referrerPolicy
 tags:
   - API
-  - Experimental
   - Fetch
   - Property
   - Reference
@@ -27,13 +26,13 @@ var myReferrerPolicy = request.referrerPolicy;
 ### Value
 
 A {{domxref("DOMString")}} representing the request's `referrerPolicy`. For
-more information and possible values, see the {{HTTPHeader("Referrer-Policy")}} HTTP
+more information and possible values, see the {{HTTPHeader("Referrer-Policy")}} HTTP
 header page.
 
 ## Example
 
 In the following snippet, we create a new request using the
-{{domxref("Request.Request()")}} constructor (for an image file in the same directory as
+{{domxref("Request.Request", "Request()")}} constructor (for an image file in the same directory as
 the script), then save the request referrer policy in a variable:
 
 ```js

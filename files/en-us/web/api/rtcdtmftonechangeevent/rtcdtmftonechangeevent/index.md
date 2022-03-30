@@ -19,7 +19,7 @@ The **`RTCDTMFToneChangeEvent()`** constructor creates a new
 ## Syntax
 
 ```js
- var event = new RTCDTMFToneChangeEvent(type, options);
+ new RTCDTMFToneChangeEvent(type, options);
 ```
 
 ### Parameters
@@ -34,18 +34,15 @@ The **`RTCDTMFToneChangeEvent()`** constructor creates a new
 
     - `tone`
       - : A {{domxref("DOMString")}} containing a single DTMF tone character which has
-        just begun to play, or an empty string (`""`) to indicate that the
-        previous tone has stopped playing. See {{anch("Tone characters")}} for details on
-        what characters are permitted.
+        just begun to play, or an empty string (`""`) to indicate that the previous
+        tone has stopped playing. See
+        [Tone characters](/en-US/docs/Web/API/RTCDTMFSender/toneBuffer#tone_buffer_format)
+        for details on what characters are permitted.
 
 ### Return value
 
 A newly-created {{domxref("RTCDTMFToneChangeEvent")}}, configured as specified in the
 provided options.
-
-### Tone characters
-
-{{page("/en-US/docs/Web/API/RTCDTMFSender/toneBuffer", "DTMF tone characters")}}
 
 ## Specifications
 

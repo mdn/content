@@ -31,7 +31,7 @@ AudioBufferSourceNode.start([when][, offset][, duration]);
   - : The time, in seconds, at which the sound should begin to play, in the same time
     coordinate system used by the {{domxref("AudioContext")}}. If `when` is
     less than ({{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}, or if it's 0, the sound begins to
-    play at once. **The default value is 0.**
+    play at once. **The default value is 0.**
 - `offset` {{optional_inline}}
   - : An offset, specified as the number of seconds in the same time coordinate system as
     the `AudioContext`, to the time within the audio buffer that playback
@@ -57,11 +57,11 @@ AudioBufferSourceNode.start([when][, offset][, duration]);
 
 ### Exceptions
 
-- `TypeError`
-  - : A negative value was specified for one or more of the three time parameters. Please
+- `TypeError` {{domxref("DOMException")}}
+  - : Thrown if a negative value was specified for one or more of the three time parameters. Please
     don't attempt to tamper with the laws of temporal physics.
-- `InvalidStateError`
-  - : `start()` has already been called. You can only call this function once
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if `start()` has already been called. You can only call this function once
     during the lifetime of an `AudioBufferSourceNode`.
 
 ## Examples

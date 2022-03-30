@@ -130,20 +130,20 @@ The table below shows each of these operations using an image of the MDN logo co
 
 ### Global attributes
 
-*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-*   [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-*   [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
-*   {{SVGAttr("class")}}
-*   {{SVGAttr("style")}}
+- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
+- [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
 
 ### Specific attributes
 
-*   {{SVGAttr("in")}}: First input for the given filter primitive.
-*   {{SVGAttr("in2")}}: Second input for the given filter primitive (works the same as the `in` attribute).
-*   {{SVGAttr("operator")}}: `over` | `in` | `out` | `atop` | `xor` | `lighter` | `arithmetic`
-*   {{SVGAttr("k1")}}, {{SVGAttr("k2")}}, {{SVGAttr("k3")}}, {{SVGAttr("k4")}}: Values used for calculating the result pixel in `arithmetic` {{SVGAttr("operator")}} filter primitives.
+- {{SVGAttr("in")}}: First input for the given filter primitive.
+- {{SVGAttr("in2")}}: Second input for the given filter primitive (works the same as the `in` attribute).
+- {{SVGAttr("operator")}}: `over` | `in` | `out` | `atop` | `xor` | `lighter` | `arithmetic`
+- {{SVGAttr("k1")}}, {{SVGAttr("k2")}}, {{SVGAttr("k3")}}, {{SVGAttr("k4")}}: Values used for calculating the result pixel in `arithmetic` {{SVGAttr("operator")}} filter primitives.
 
-## DOM Interface
+## DOM Interface
 
 This element implements the {{domxref("SVGFECompositeElement")}} interface.
 
@@ -233,22 +233,22 @@ This example defines filters for each of the supported operations (`over`, `atop
 
 ## See also
 
-*   {{SVGElement("filter")}}
-*   {{SVGElement("animate")}}
-*   {{SVGElement("set")}}
-*   {{SVGElement("feBlend")}}
-*   {{SVGElement("feColorMatrix")}}
-*   {{SVGElement("feComponentTransfer")}}
-*   {{SVGElement("feConvolveMatrix")}}
-*   {{SVGElement("feDiffuseLighting")}}
-*   {{SVGElement("feDisplacementMap")}}
-*   {{SVGElement("feFlood")}}
-*   {{SVGElement("feGaussianBlur")}}
-*   {{SVGElement("feImage")}}
-*   {{SVGElement("feMerge")}}
-*   {{SVGElement("feMorphology")}}
-*   {{SVGElement("feOffset")}}
-*   {{SVGElement("feSpecularLighting")}}
-*   {{SVGElement("feTile")}}
-*   {{SVGElement("feTurbulence")}}
-*   [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)
+- {{SVGElement("filter")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("set")}}
+- {{SVGElement("feBlend")}}
+- {{SVGElement("feColorMatrix")}}
+- {{SVGElement("feComponentTransfer")}}
+- {{SVGElement("feConvolveMatrix")}}
+- {{SVGElement("feDiffuseLighting")}}
+- {{SVGElement("feDisplacementMap")}}
+- {{SVGElement("feFlood")}}
+- {{SVGElement("feGaussianBlur")}}
+- {{SVGElement("feImage")}}
+- {{SVGElement("feMerge")}}
+- {{SVGElement("feMorphology")}}
+- {{SVGElement("feOffset")}}
+- {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feTile")}}
+- {{SVGElement("feTurbulence")}}
+- [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)

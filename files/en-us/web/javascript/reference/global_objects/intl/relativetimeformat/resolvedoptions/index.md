@@ -57,7 +57,7 @@ The resulting object has the following properties:
 
 ## Examples
 
-### Using the `resolvedOptions` method
+### Using the resolvedOptions() method
 
 ```js
 var de = new Intl.RelativeTimeFormat('de-DE');

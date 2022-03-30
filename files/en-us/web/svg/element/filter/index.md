@@ -19,24 +19,24 @@ The **`<filter>`** [SVG](/en-US/docs/Web/SVG) element defines a custom filter ef
 
 ### Global attributes
 
-*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-*   [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-*   [XLink attributes](/en-US/docs/Web/SVG/Attribute#xlink_attributes)
-*   {{SVGAttr("class")}}
-*   {{SVGAttr("style")}}
+- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
+- [XLink attributes](/en-US/docs/Web/SVG/Attribute#xlink_attributes)
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
 
 ### Specific attributes
 
-*   {{SVGAttr("x")}}
-*   {{SVGAttr("y")}}
-*   {{SVGAttr("width")}}
-*   {{SVGAttr("height")}}
-*   {{SVGAttr("filterRes")}}
-*   {{SVGAttr("filterUnits")}}
-*   {{SVGAttr("primitiveUnits")}}
-*   {{SVGAttr("xlink:href")}}
+- {{SVGAttr("x")}}
+- {{SVGAttr("y")}}
+- {{SVGAttr("width")}}
+- {{SVGAttr("height")}}
+- {{SVGAttr("filterRes")}}
+- {{SVGAttr("filterUnits")}}
+- {{SVGAttr("primitiveUnits")}}
+- {{SVGAttr("xlink:href")}}
 
-## DOM Interface
+## DOM Interface
 
 This element implements the {{domxref("SVGFilterElement")}} interface.
 
@@ -70,21 +70,21 @@ This element implements the {{domxref("SVGFilterElement")}} interface.
 
 ## See also
 
-*   {{SVGElement("feBlend")}}
-*   {{SVGElement("feColorMatrix")}}
-*   {{SVGElement("feComponentTransfer")}}
-*   {{SVGElement("feComposite")}}
-*   {{SVGElement("feConvolveMatrix")}}
-*   {{SVGElement("feDiffuseLighting")}}
-*   {{SVGElement("feDisplacementMap")}}
-*   {{SVGElement("feDropShadow")}}
-*   {{SVGElement("feFlood")}}
-*   {{SVGElement("feGaussianBlur")}}
-*   {{SVGElement("feImage")}}
-*   {{SVGElement("feMerge")}}
-*   {{SVGElement("feMorphology")}}
-*   {{SVGElement("feOffset")}}
-*   {{SVGElement("feSpecularLighting")}}
-*   {{SVGElement("feTile")}}
-*   {{SVGElement("feTurbulence")}}
-*   [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)
+- {{SVGElement("feBlend")}}
+- {{SVGElement("feColorMatrix")}}
+- {{SVGElement("feComponentTransfer")}}
+- {{SVGElement("feComposite")}}
+- {{SVGElement("feConvolveMatrix")}}
+- {{SVGElement("feDiffuseLighting")}}
+- {{SVGElement("feDisplacementMap")}}
+- {{SVGElement("feDropShadow")}}
+- {{SVGElement("feFlood")}}
+- {{SVGElement("feGaussianBlur")}}
+- {{SVGElement("feImage")}}
+- {{SVGElement("feMerge")}}
+- {{SVGElement("feMorphology")}}
+- {{SVGElement("feOffset")}}
+- {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feTile")}}
+- {{SVGElement("feTurbulence")}}
+- [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)

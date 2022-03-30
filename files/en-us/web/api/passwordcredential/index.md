@@ -16,6 +16,8 @@ The interface of the [Credential Management API](/en-US/docs/Web/API/Credential_
 
 > **Note:** This interface is restricted to top-level contexts and cannot be used from an {{HTMLElement("iframe")}}.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("PasswordCredential.PasswordCredential()","PasswordCredential()")}}{{securecontext_inline}}

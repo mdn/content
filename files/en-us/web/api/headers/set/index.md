@@ -3,7 +3,6 @@ title: Headers.set()
 slug: Web/API/Headers/set
 tags:
   - API
-  - Experimental
   - Fetch
   - Method
   - Reference
@@ -42,7 +41,7 @@ myHeaders.set(name, value);
 
 ### Returns
 
-Void.
+{{jsxref('undefined')}}.
 
 ## Example
 

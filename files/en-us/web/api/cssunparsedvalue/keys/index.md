@@ -14,7 +14,7 @@ tags:
   - keys()
 browser-compat: api.CSSUnparsedValue.keys
 ---
-{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSUnparsedValue.keys()`** method
 returns a new _array iterator_ object that contains the keys
@@ -44,7 +44,7 @@ A new {{jsxref("Array")}}.
 
 ## See also
 
-- {{domxref("CSSUnparsedValue.CSSUnparsedValue()")}}
+- {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}}
 - {{domxref("CSSUnparsedValue.entries")}}
 - {{domxref("CSSUnparsedValue.forEach")}}
 - {{domxref("CSSUnparsedValue.length")}}

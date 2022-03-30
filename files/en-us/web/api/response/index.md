@@ -3,7 +3,6 @@ title: Response
 slug: Web/API/Response
 tags:
   - API
-  - Experimental
   - Fetch
   - Fetch API
   - Interface
@@ -15,7 +14,7 @@ browser-compat: api.Response
 
 The **`Response`** interface of the [Fetch API](/en-US/docs/Web/API/Fetch_API) represents the response to a request.
 
-You can create a new `Response` object using the {{domxref("Response.Response()")}} constructor, but you are more likely to encounter a `Response` object being returned as the result of another API operation—for example, a service worker {{domxref("Fetchevent.respondWith")}}, or a simple {{domxref("fetch()")}}.
+You can create a new `Response` object using the {{domxref("Response.Response", "Response()")}} constructor, but you are more likely to encounter a `Response` object being returned as the result of another API operation—for example, a service worker {{domxref("FetchEvent.respondWith")}}, or a simple {{domxref("fetch()")}}.
 
 ## Constructor
 
@@ -35,7 +34,7 @@ You can create a new `Response` object using the {{domxref("Response.Response()"
 - {{domxref("Response.redirected")}} {{ReadOnlyInline}}
   - : Indicates whether or not the response is the result of a redirect (that is, its URL list has more than one entry).
 - {{domxref("Response.status")}} {{readonlyinline}}
-  - : The status code of the response. (This will be `200` for a success).
+  - : The status code of the response. (This will be `200` for a success).
 - {{domxref("Response.statusText")}} {{readonlyinline}}
   - : The status message corresponding to the status code. (e.g., `OK` for `200`).
 - {{domxref("Response.trailers")}}
@@ -58,7 +57,7 @@ You can create a new `Response` object using the {{domxref("Response.Response()"
 - {{domxref("Response.formData()")}}
   - : Returns a promise that resolves with a {{domxref("FormData")}} representation of the response body.
 - {{domxref("Response.json()")}}
-  - : Returns a promise that resolves with the result of parsing the response body text as {{jsxref("JSON")}}.
+  - : Returns a promise that resolves with the result of parsing the response body text as {{jsxref("JSON")}}.
 - {{domxref("Response.redirect()")}}
   - : Creates a new response with a different URL.
 - {{domxref("Response.text()")}}
@@ -68,7 +67,8 @@ You can create a new `Response` object using the {{domxref("Response.Response()"
 
 ### Fetching an image
 
-In our [basic fetch example](https://github.com/mdn/fetch-examples/tree/master/basic-fetch) ([run example live](https://mdn.github.io/fetch-examples/basic-fetch/)) we use a simple `fetch()` call to grab an image and display it in an {{htmlelement("img")}} element. The `fetch()` call returns a promise, which resolves to the `Response` object associated with the resource fetch operation.
+In our [basic fetch example](https://github.com/mdn/fetch-examples/tree/master/basic-fetch) ([run example live](https://mdn.github.io/fetch-examples/basic-fetch/)) we use a simple `fetch()` call to grab an image and display it in an {{htmlelement("img")}} element.
+The `fetch()` call returns a promise, which resolves to the `Response` object associated with the resource fetch operation.
 
 You'll notice that since we are requesting an image, we need to run {{domxref("Response.blob")}} to give the response its correct MIME type.
 
@@ -82,7 +82,7 @@ fetch('flowers.jpg')
 });
 ```
 
-You can also use the {{domxref("Response.Response()")}} constructor to create your own custom `Response` object:
+You can also use the {{domxref("Response.Response", "Response()")}} constructor to create your own custom `Response` object:
 
 ```js
 const response = new Response();

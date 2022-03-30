@@ -12,7 +12,7 @@ browser-compat: api.HTMLAnchorElement
 
 The **`HTMLAnchorElement`** interface represents hyperlink elements and provides special properties and methods (beyond those of the regular {{domxref("HTMLElement")}} object interface that they inherit from) for manipulating the layout and presentation of such elements. This interface corresponds to [`<a>`](/en-US/docs/Web/HTML/Element/a) element; not to be confused with [`<link>`](/en-US/docs/Web/HTML/Element/link), which is represented by [`HTMLLinkElement`](/en-US/docs/Web/API/HTMLLinkElement))
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -29,7 +29,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLAnchorElement.hostname")}}
   - : Is a {{domxref("USVString")}} representing the hostname in the referenced URL.
 - {{domxref("HTMLAnchorElement.href")}}
-  - : Is a {{domxref("USVString")}} that is the result of parsing the {{htmlattrxref("href", "a")}} HTML attribute relative to the document, containing a valid URL of a linked resource.
+  - : Is a {{domxref("USVString")}} that is the result of parsing the {{htmlattrxref("href", "a")}} HTML attribute relative to the document, containing a valid URL of a linked resource.
 - {{domxref("HTMLAnchorElement.hreflang")}}
   - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("hreflang", "a")}} HTML attribute, indicating the language of the linked resource.
 - {{domxref("HTMLAnchorElement.origin")}} {{readonlyInline}}

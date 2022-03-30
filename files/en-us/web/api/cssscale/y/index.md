@@ -12,19 +12,13 @@ tags:
   - Property
 browser-compat: api.CSSScale.y
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`y`** property of the
 {{domxref("CSSScale")}} interface gets and sets the ordinate or y-axis of the
 translating vector.
 
-## Syntax
-
-```js
-var scaleY = CSSScale.y;
-```
-
-### Value
+## Value
 
 A double integer or a {{domxref("CSSNumericValue")}}
 

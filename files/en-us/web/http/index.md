@@ -26,6 +26,9 @@ Learn how to use HTTP with guides and tutorials.
   - : How cookies work is defined by [RFC 6265](https://datatracker.ietf.org/doc/html/rfc6265). When serving an HTTP request, a server can send a `Set-Cookie` HTTP header with the response. The client then returns the cookie's value with every request to the same server in the form of a `Cookie` request header. The cookie can also be set to expire on a certain date, or restricted to a specific domain and path.
 - [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
   - : **Cross-site HTTP requests** are HTTP requests for resources from a **different domain** than the domain of the resource making the request. For instance, an HTML page from Domain A (`http://domaina.example/`) makes a request for an image on Domain B (`http://domainb.foo/image.jpg`) via the `img` element. Web pages today very commonly load cross-site resources, including CSS stylesheets, images, scripts, and other resources. CORS allows web developers to control how their site reacts to cross-site requests.
+- [HTTP Client Hints](/en-US/docs/Web/HTTP/Client_hints)
+  - : **Client Hints** are a set of response headers that a server can use to proactively request information from a client about the device, network, user, and user-agent-specific preferences.
+    The server can then determine which resources to send, based on the information that the client chooses to provide.
 - [Evolution of HTTP](/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP)
   - : A brief description of the changes between the early versions of HTTP, to the modern HTTP/2, the emergent HTTP/3 and beyond.
 - [Mozilla web security guidelines](https://wiki.mozilla.org/Security/Guidelines/Web_Security)

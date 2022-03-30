@@ -45,35 +45,39 @@ with other directives.
 
 ## Syntax
 
-    Content-Security-Policy: report-to <json-field-value>;
+```
+Content-Security-Policy: report-to <json-field-value>;
+```
 
 ## Examples
 
 See {{HTTPHeader("Content-Security-Policy-Report-Only")}} for more information and
 examples.
 
-    Report-To: { "group": "csp-endpoint",
-                 "max_age": 10886400,
-                 "endpoints": [
-                   { "url": "https://example.com/csp-reports" }
-                 ] },
-               { "group": "hpkp-endpoint",
-                 "max_age": 10886400,
-                 "endpoints": [
-                   { "url": "https://example.com/hpkp-reports" }
-                 ] }
-    Content-Security-Policy: ...; report-to csp-endpoint
+```
+Report-To: { "group": "csp-endpoint",
+              "max_age": 10886400,
+              "endpoints": [
+                { "url": "https://example.com/csp-reports" }
+              ] },
+            { "group": "hpkp-endpoint",
+              "max_age": 10886400,
+              "endpoints": [
+                { "url": "https://example.com/hpkp-reports" }
+              ] }
+Content-Security-Policy: ...; report-to csp-endpoint
+```
 
-<!---->
+```
+Report-To: { "group": "endpoint-1",
+              "max_age": 10886400,
+              "endpoints": [
+                { "url": "https://example.com/reports" },
+                { "url": "https://backup.com/reports" }
+              ] }
 
-    Report-To: { "group": "endpoint-1",
-                 "max_age": 10886400,
-                 "endpoints": [
-                   { "url": "https://example.com/reports" },
-                   { "url": "https://backup.com/reports" }
-                 ] }
-
-    Content-Security-Policy: ...; report-to endpoint-1
+Content-Security-Policy: ...; report-to endpoint-1
+```
 
 ## Specifications
 

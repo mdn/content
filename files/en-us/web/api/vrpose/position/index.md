@@ -3,7 +3,7 @@ title: VRPose.position
 slug: Web/API/VRPose/position
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Position
   - Property
   - Reference
@@ -21,7 +21,7 @@ The **`position`** read-only property of the {{domxref("VRPose")}} interface ret
 
 The coordinate system is as follows:
 
-- Positive X is to the user’s right.
+- Positive X is to the user's right.
 - Positive Y is up.
 - Positive Z is behind the user.
 
@@ -29,13 +29,7 @@ Positions are measured in meters from an origin point — this point is either t
 
 > **Note:** By default, all positions are given as a sitting space position. Transforming this point with {{domxref("VRStageParameters.sittingToStandingTransform")}} — when you are working with a room display for example — converts this to a standing space position.
 
-## Syntax
-
-```js
-var myPosition = VRPose.position;
-```
-
-### Value
+## Value
 
 A {{jsxref("Float32Array")}}, or null if the VR sensor is not able to provide position data.
 

@@ -17,7 +17,7 @@ The **`WheelEvent()`** constructor returns a newly created
 ## Syntax
 
 ```js
-var wheelEvent = new WheelEvent(typeArg, wheelEventInit);
+new WheelEvent(typeArg, wheelEventInit);
 ```
 
 ### Properties

@@ -51,14 +51,16 @@ var searchParams = new URLSearchParams("key1=value1&key2=value2");
 
 // Log the values
 searchParams.forEach(function(value, key) {
-  console.log(value, key);
+  console.log(value, key);
 });
 ```
 
 The result is:
 
-    value1 key1
-    value2 key2
+```
+value1 key1
+value2 key2
+```
 
 ## Specifications
 

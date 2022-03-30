@@ -64,7 +64,7 @@ A document's used base URL can be accessed by scripts with {{domxref('Node/baseU
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-> **Warning:** If either of the following attributes are specified, this element **must** come before other elements with attribute values of URLs, such as {{HTMLElement("link")}}’s `href` attribute.
+> **Warning:** If either of the following attributes are specified, this element **must** come before other elements with attribute values of URLs, such as {{HTMLElement("link")}}'s `href` attribute.
 
 - {{htmlattrdef("href")}}
   - : The base URL to be used throughout the document for relative URLs. Absolute and relative URLs are allowed.
@@ -87,9 +87,9 @@ If multiple `<base>` elements are used, only the first `href` and first `target`
 
 Links pointing to a fragment in the document — e.g. `<a href="#some-id">` — are resolved with the `<base>`, triggering an HTTP request to the base URL with the fragment attached. For example:
 
-1.  Given `<base href="https://example.com">`
-2.  ...and this link: `<a href="#anchor">Anker</a>`
-3.  ...the link points to `https://example.com/#anchor`.
+1. Given `<base href="https://example.com">`
+2. ...and this link: `<a href="#anchor">To anchor</a>`
+3. ...the link points to `https://example.com/#anchor`.
 
 ### Open Graph
 

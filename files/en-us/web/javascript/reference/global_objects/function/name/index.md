@@ -102,7 +102,7 @@ try { object_someMethod } catch(e) { console.log(e); }
 // ReferenceError: object_someMethod is not defined
 ```
 
-The name property is read-only and cannot be changed by the assigment operator:
+The name property is read-only and cannot be changed by the assignment operator:
 
 ```js
  let object = {

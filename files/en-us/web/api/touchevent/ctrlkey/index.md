@@ -14,13 +14,15 @@ browser-compat: api.TouchEvent.ctrlKey
 
 ## Summary
 
-A boolean value indicating whether the <kbd>control</kbd> (Control) key is enabled when the touch event is created. If this key is enabled, the attribute's value is `true`. Otherwise, it is `false`.
+A boolean value indicating whether the <kbd>control</kbd> (Control) key is enabled when the touch event is created. If this key is enabled, the attribute's value is `true`. Otherwise, it is `false`.
 
 This property is {{readonlyInline}}.
 
 ## Syntax
 
-    var ctrlEnabled = touchEvent.ctrlKey;
+```js
+var ctrlEnabled = touchEvent.ctrlKey;
+```
 
 ### Return value
 

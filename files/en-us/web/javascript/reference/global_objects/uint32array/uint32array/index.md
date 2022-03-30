@@ -39,7 +39,7 @@ new Uint32Array(buffer, byteOffset, length);
     `BYTES_PER_ELEMENT`_ bytes, containing zeros.
 - `typedArray`
   - : When called with a `typedArray` argument, which can be an object of any
-    of the typed array types (such as `Int32Array`), the
+    of the **non**-{{glossary("bigint")}} typed-array types (such as `Int32Array`), the
     `typedArray` gets copied into a new typed array. Each value in
     `typedArray` is converted to the corresponding type of the
     constructor before being copied into the new array. The length of the new typed array
@@ -116,7 +116,7 @@ var dv = new Uint32Array([1, 2, 3]);
 
 ## See also
 
-- A polyfill of `Uint32Array` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `Uint32Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

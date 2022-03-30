@@ -25,8 +25,8 @@ valueOf()
 
 The primitive value of the specified object.
 
-> **Note:** A [(unary)
-> plus sign](/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_plus) can sometimes be used as a shorthand for `valueOf`, e.g. in
+> **Note:** A [(unary) plus sign](/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_plus)
+> can sometimes be used as a shorthand for `valueOf`, e.g. in
 > `+new Number()`. Also see [Using unary plus](#using_unary_plus).
 
 ## Description

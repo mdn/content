@@ -10,7 +10,7 @@ tags:
   - WritableStreamDefaultWriter
 browser-compat: api.WritableStreamDefaultWriter.WritableStreamDefaultWriter
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`WritableStreamDefaultWriter()`**
 constructor creates a new {{domxref("WritableStreamDefaultWriter")}} object instance.
@@ -21,7 +21,7 @@ constructor creates a new {{domxref("WritableStreamDefaultWriter")}} object inst
 ## Syntax
 
 ```js
-var writableStreamDefaultWriter = new WritableStreamDefaultWriter(stream);
+new WritableStreamDefaultWriter(stream);
 ```
 
 ### Parameters

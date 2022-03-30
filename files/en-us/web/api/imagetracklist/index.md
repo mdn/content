@@ -30,4 +30,3 @@ The **`ImageTrackList`** interface of the {{domxref('WebCodecs API','','','true'
 ## Browser compatibility
 
 {{Compat}}
-

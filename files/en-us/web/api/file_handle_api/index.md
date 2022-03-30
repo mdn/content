@@ -8,7 +8,7 @@ tags:
 ---
 {{non-standard_header}}
 
-The FileHandle API allows for the manipulating of files, including creating files and modifying their content (unlike the [File API](/en-US/docs/Web/API/File)). Because the files manipulated through that API can be physically stored on the device, the editing part uses a turn-based locking mechanism in order to avoid race issues.
+The FileHandle API allows for the manipulating of files, including creating files and modifying their content (unlike the [File API](/en-US/docs/Web/API/File)). Because the files manipulated through that API can be physically stored on the device, the editing part uses a turn-based locking mechanism in order to avoid race issues.
 
 ## API Overview
 
@@ -43,7 +43,7 @@ IDBReq.onsuccess = function(){
 
 {{domxref("IDBDatabase.createMutableFile","createMutableFile()")}} takes two arguments: a name and an optional type. Both of these are just descriptive and are not used by the database. However, they are important for the {{domxref("FileHandle")}} object as it can generate {{domxref("File")}} objects which inherit their own {{domxref("File.name","name")}} and {{domxref("File.type","type")}} from those values. That said, as the name does not match any real filename it can be an empty string, for example, and it doesn't even have to be unique.
 
-> **Note:** the above code only creates a "temporary file" that exists only while you hold the {{domxref("FileHandle")}} instance. If you want a file to survive a page refresh/app relaunch, you need to store the handle in a more permanent location, like the database itself. See {{Anch("File storage")}} below to learn more about this.
+> **Note:** the above code only creates a "temporary file" that exists only while you hold the {{domxref("FileHandle")}} instance. If you want a file to survive a page refresh/app relaunch, you need to store the handle in a more permanent location, like the database itself. See [File storage](#file_storage) below to learn more about this.
 
 ### Perform read and write operations
 
@@ -146,7 +146,7 @@ action.onsuccess = function () {
 }
 
 action.onerror = function () {
-  console.log('Oups :( Unable to read a 1GB file')
+  console.log('Oops :( Unable to read a 1GB file')
 }
 ```
 

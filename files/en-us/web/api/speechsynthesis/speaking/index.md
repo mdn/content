@@ -3,7 +3,6 @@ title: SpeechSynthesis.speaking
 slug: Web/API/SpeechSynthesis/speaking
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechSynthesis
@@ -13,7 +12,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesis.speaking
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`speaking`** read-only property of the
 {{domxref("SpeechSynthesis")}} interface is a boolean value that returns
@@ -21,13 +20,7 @@ The **`speaking`** read-only property of the
 if `SpeechSynthesis` is in a
 {{domxref("SpeechSynthesis/pause()","paused")}} state.
 
-## Syntax
-
-```js
-var amISpeaking = speechSynthesisInstance.speaking;
-```
-
-### Value
+## Value
 
 A boolean value.
 

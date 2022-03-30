@@ -17,14 +17,14 @@ browser-compat: html.elements.input.input-file
 
 {{HTMLRef("Input_types")}}
 
-{{HTMLElement("input")}} elements with **`type="file"`** let the user choose one or more files from their device storage. Once chosen, the files can be uploaded to a server using[ form submission](/en-US/docs/Learn/Forms), or manipulated using JavaScript code and [the File API](/en-US/docs/Web/API/File/Using_files_from_web_applications).
+{{HTMLElement("input")}} elements with **`type="file"`** let the user choose one or more files from their device storage. Once chosen, the files can be uploaded to a server using [form submission](/en-US/docs/Learn/Forms), or manipulated using JavaScript code and [the File API](/en-US/docs/Web/API/File/Using_files_from_web_applications).
 
 {{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}
 
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
         A {{domxref("DOMString")}} representing the path to the selected
         file.
@@ -46,7 +46,6 @@ browser-compat: html.elements.input.input-file
       <td>
         {{htmlattrxref("accept", "input/file")}},
         {{htmlattrxref("capture", "input/file")}},
-        {{htmlattrxref("files", "input/file")}},
         {{htmlattrxref("multiple", "input/file")}}
       </td>
     </tr>
@@ -57,16 +56,6 @@ browser-compat: html.elements.input.input-file
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Properties</strong></td>
-      <td>
-        <p>
-          <a href="/en-US/docs/Web/API/HTMLInputElement#properties_file"
-            >Properties that apply only to elements of type <code>file</code></a
-          >
-        </p>
-      </td>
     </tr>
     <tr>
       <td><strong>Methods</strong></td>
@@ -83,9 +72,9 @@ A file input's {{htmlattrxref("value", "input")}} attribute contains a {{domxref
 
 > **Note:**
 >
-> 1.  If multiple files are selected, the string represents the first selected file. JavaScript can access the other files [through the input's `files` property](/en-US/docs/Web/API/File/Using_files_from_web_applications#getting_information_about_selected_files).
-> 2.  If no file is yet selected, the string is `""` (empty).
-> 3.  The string [is prefixed with `C:\fakepath\`](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly), to prevent malicious software from guessing the user's file structure.
+> 1. If multiple files are selected, the string represents the first selected file. JavaScript can access the other files [through the input's `files` property](/en-US/docs/Web/API/File/Using_files_from_web_applications#getting_information_about_selected_files).
+> 2. If no file is yet selected, the string is `""` (empty).
+> 3. The string [is prefixed with `C:\fakepath\`](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly), to prevent malicious software from guessing the user's file structure.
 
 ## Additional attributes
 
@@ -93,7 +82,7 @@ In addition to the common attributes shared by all {{HTMLElement("input")}} elem
 
 ### accept
 
-The [`accept`](/en-US/docs/Web/HTML/Attributes/accept) attribute value is a string that defines the file types the file input should accept. This string is a comma-separated list of **{{anch("Unique file type specifiers", "unique file type specifiers")}}**. Because a given file type may be identified in more than one manner, it's useful to provide a thorough set of type specifiers when you need files of a given format.
+The [`accept`](/en-US/docs/Web/HTML/Attributes/accept) attribute value is a string that defines the file types the file input should accept. This string is a comma-separated list of **[unique file type specifiers](#unique_file_type_specifiers)**. Because a given file type may be identified in more than one manner, it's useful to provide a thorough set of type specifiers when you need files of a given format.
 
 For instance, there are a number of ways Microsoft Word files can be identified, so a site that accepts Word files might use an `<input>` like this:
 
@@ -107,10 +96,6 @@ For instance, there are a number of ways Microsoft Word files can be identified,
 The [`capture`](/en-US/docs/Web/HTML/Attributes/capture) attribute value is a string that specifies which camera to use for capture of image or video data, if the [`accept`](/en-US/docs/Web/HTML/Attributes/accept) attribute indicates that the input should be of one of those types. A value of `user` indicates that the user-facing camera and/or microphone should be used. A value of `environment` specifies that the outward-facing camera and/or microphone should be used. If this attribute is missing, the {{Glossary("user agent")}} is free to decide on its own what to do. If the requested facing mode isn't available, the user agent may fall back to its preferred default mode.
 
 > **Note:** `capture` was previously a Boolean attribute which, if present, requested that the device's media capture device(s) such as camera or microphone be used instead of requesting a file input.
-
-### files
-
-A {{domxref("FileList")}} object that lists every selected file. This list has no more than one member unless the {{htmlattrxref("multiple", "input/file")}} attribute is specified.
 
 ### multiple
 
@@ -168,7 +153,7 @@ This produces the following output:
 
 {{EmbedLiveSample('A_basic_example', 650, 90)}}
 
-> **Note:** You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
+> **Note:** You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
 
 Regardless of the user's device or operating system, the file input provides a button that opens up a file picker dialog that allows the user to choose a file.
 
@@ -231,7 +216,7 @@ This produces a similar-looking output to the previous example:
 
 {{EmbedLiveSample('Limiting_accepted_file_types', 650, 90)}}
 
-> **Note:** You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-with-accept.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html).
+> **Note:** You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-with-accept.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html).
 
 It may look similar, but if you try selecting a file with this input, you'll see that the file picker only lets you select the file types specified in the `accept` value (the exact interface differs across browsers and operating systems).
 
@@ -241,20 +226,20 @@ Because of this, you should make sure that the `accept` attribute is backed up b
 
 ### Notes
 
-1.  You cannot set the value of a file picker from a script — doing something like the following has no effect:
+1. You cannot set the value of a file picker from a script — doing something like the following has no effect:
 
     ```js
     const input = document.querySelector("input[type=file]");
     input.value = "foo";
     ```
 
-2.  When a file is chosen using an `<input type="file">`, the real path to the source file is not shown in the input's `value` attribute for obvious security reasons. Instead, the filename is shown, with `C:\fakepath\` appended to the beginning of it. There are some historical reasons for this quirk, but it is supported across all modern browsers, and in fact is [defined in the spec](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly).
+2. When a file is chosen using an `<input type="file">`, the real path to the source file is not shown in the input's `value` attribute for obvious security reasons. Instead, the filename is shown, with `C:\fakepath\` appended to the beginning of it. There are some historical reasons for this quirk, but it is supported across all modern browsers, and in fact is [defined in the spec](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly).
 
 ## Examples
 
 In this example, we'll present a slightly more advanced file chooser that takes advantage of the file information available in the `HTMLInputElement.files` property, as well as showing off a few clever tricks.
 
-> **Note:** You can see the complete source code for this example on GitHub — [file-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)). We won't explain the CSS; the JavaScript is the main focus.
+> **Note:** You can see the complete source code for this example on GitHub — [file-example.html](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-example.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)). We won't explain the CSS; the JavaScript is the main focus.
 
 First of all, let's look at the HTML:
 
@@ -344,7 +329,7 @@ input.style.opacity = 0;
 
 > **Note:** {{cssxref("opacity")}} is used to hide the file input instead of {{cssxref("visibility", "visibility: hidden")}} or {{cssxref("display", "display: none")}}, because assistive technology interprets the latter two styles to mean the file input isn't interactive.
 
-Next, we add an [event listener](/en-US/docs/Web/API/EventTarget/addEventListener) to the input to listen for changes to its selected value changes (in this case, when files are selected). The event listener invokes our custom `updateImageDisplay()` function.
+Next, we add an [event listener](/en-US/docs/Web/API/EventTarget/addEventListener) to the input to listen for changes to its selected value (in this case, when files are selected). The event listener invokes our custom `updateImageDisplay()` function.
 
 ```js
 input.addEventListener('change', updateImageDisplay);
@@ -379,7 +364,7 @@ function updateImageDisplay() {
     const list = document.createElement('ol');
     preview.appendChild(list);
 
-    for(const file of curFiles) {
+    for(const file of curFiles) {
       const listItem = document.createElement('li');
       const para = document.createElement('p');
       if(validFileType(file)) {
@@ -406,15 +391,15 @@ The custom `validFileType()` function takes a {{domxref("File")}} object as a pa
 // https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types
 const fileTypes = [
   "image/apng",
-  "image/bmp",
-  "image/gif",
-  "image/jpeg",
-  "image/pjpeg",
-  "image/png",
-  "image/svg+xml",
-  "image/tiff",
-  "image/webp",
-  "image/x-icon"
+  "image/bmp",
+  "image/gif",
+  "image/jpeg",
+  "image/pjpeg",
+  "image/png",
+  "image/svg+xml",
+  "image/tiff",
+  "image/webp",
+  "image/x-icon"
 ];
 
 function validFileType(file) {

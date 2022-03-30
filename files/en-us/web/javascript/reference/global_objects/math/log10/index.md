@@ -39,7 +39,7 @@ of a number, that is
 </msup><mo>=</mo>
 <mi>x</mi>
 </mrow><annotation encoding="TeX">\forall x > 0, \mathtt{\operatorname{Math.log10}(x)} =
-\log_10(x) = \text{the unique} \; y \; \text{such that} \; 10^y = x</annotation></semantics></math>
+\log_{10}(x) = \text{the unique} \; y \; \text{such that} \; 10^y = x</annotation></semantics></math>
 
 {{EmbedInteractiveExample("pages/js/math-log10.html")}}
 
@@ -103,7 +103,7 @@ Math.log10 = Math.log10 || function(x) {
 
 ## See also
 
-- A polyfill of `Math.log10` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [Polyfill of `Math.log10` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math.exp()")}}
 - {{jsxref("Math.log()")}}
 - {{jsxref("Math.log1p()")}}

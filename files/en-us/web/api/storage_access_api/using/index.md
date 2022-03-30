@@ -11,15 +11,15 @@ tags:
 ---
 {{SeeCompatTable}}{{DefaultAPISidebar("Storage Access API")}}
 
-The [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) should be used by embedded cross-origin documents to verify whether they have access to their first-party storage and, if not, to request access. We’ll briefly look at a common storage access scenario.
+The [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) should be used by embedded cross-origin documents to verify whether they have access to their first-party storage and, if not, to request access. We'll briefly look at a common storage access scenario.
 
 ## Usage notes
 
-The Storage Access API is designed to allow embedded content to request access to storage that would otherwise be blocked when a user’s browser is set to block all third-party cookies. Since embedded content won’t know which storage policy is in use by the user, it’s best to always check whether the embedded frame has storage access before attempting to read or write from storage. This is particularly true for {{domxref("Document.cookie")}} access, as browsers will often return an empty cookie jar when third-party cookies are blocked.
+The Storage Access API is designed to allow embedded content to request access to storage that would otherwise be blocked when a user's browser is set to block all third-party cookies. Since embedded content won't know which storage policy is in use by the user, it's best to always check whether the embedded frame has storage access before attempting to read or write from storage. This is particularly true for {{domxref("Document.cookie")}} access, as browsers will often return an empty cookie jar when third-party cookies are blocked.
 
 ## Accessing a user's cookies in an embedded cross-origin iframe
 
-In this example we show how an embedded cross-origin {{htmlelement("iframe")}} can access a user’s cookies under a storage access policy that blocks third-party cookies.
+In this example we show how an embedded cross-origin {{htmlelement("iframe")}} can access a user's cookies under a storage access policy that blocks third-party cookies.
 
 First of all, if the `<iframe>` is sandboxed, the embedding website needs to add the `allow-storage-access-by-user-activation` [sandbox token](/en-US/docs/Web/HTML/Element/iframe#attr-sandbox) to allow storage access requests to be successful, along with `allow-scripts` and `allow-same-origin` to allow it to call the API, and execute in an origin that can have cookies:
 

@@ -14,11 +14,7 @@ browser-compat: api.GeolocationCoordinates.latitude
 
 The **`GeolocationCoordinates.latitude`** read-only property is a `double` representing the latitude of the position in decimal degrees.
 
-## Syntax
-
-    let lat = geolocationCoordinatesinstance.latitude
-
-### Value
+## Value
 
 A `double` representing the latitude of the position in decimal degrees.
 

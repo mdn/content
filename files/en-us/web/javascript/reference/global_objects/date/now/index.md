@@ -27,27 +27,13 @@ Date.now()
 
 A {{jsxref("Number")}} representing the milliseconds elapsed since the UNIX epoch.
 
-## Polyfill
-
-This method was standardized in ECMA-262 5th edition. Engines which have not
-been updated to support this method can work around the absence of this method using the
-following shim:
-
-```js
-if (!Date.now) {
-  Date.now = function now() {
-    return new Date().getTime();
-  };
-}
-```
-
 ## Examples
 
 ### Reduced time precision
 
 To offer protection against timing attacks and fingerprinting, the precision of
 `Date.now()` might get rounded depending on browser settings.
-In Firefox, the `privacy.reduceTimerPrecision`  preference is enabled by
+In Firefox, the `privacy.reduceTimerPrecision`  preference is enabled by
 default and defaults to 20µs in Firefox 59; in 60 it will be 2ms.
 
 ```js
@@ -81,7 +67,7 @@ is larger.
 
 ## See also
 
-- A polyfill of `Date.now` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-date)
+- [Polyfill of `Date.now` in `core-js`](https://github.com/zloirock/core-js#ecmascript-date)
 - {{domxref("Performance.now()")}} — provides timestamps with sub-millisecond
   resolution for use in measuring web page performance
 - {{domxref("console.time()")}} / {{domxref("console.timeEnd()")}}

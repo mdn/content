@@ -11,11 +11,11 @@ browser-compat: css.properties.width.fit-content
 ---
 {{CSSRef}}
 
-The **`fit-content`** behaves as `fit-content(stretch)`. In practice this means that the box will use the available space, but never more than {{cssxref("max-content")}}.
+The **`fit-content`** behaves as `fit-content(stretch)`. In practice this means that the box will use the available space, but never more than {{cssxref("max-content")}}.
 
-When used as laid out box size for {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} and {{cssxref("max-height")}} the maximum and minimum sizes refer to the content size.
+When used as laid out box size for {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} and {{cssxref("max-height")}} the maximum and minimum sizes refer to the content size.
 
-> **Note:** The CSS Sizing specification also defines the {{cssxref("fit-content()", "fit-content()")}} function. This page details the keyword.
+> **Note:** The CSS Sizing specification also defines the {{cssxref("fit-content_function", "fit-content()")}} function. This page details the keyword.
 
 ## Syntax
 
@@ -42,14 +42,14 @@ block-size: fit-content
 
 ```css
 .container {
-  border: 2px solid #ccc;
-  padding: 10px;
-  width: 20em;
+  border: 2px solid #ccc;
+  padding: 10px;
+  width: 20em;
 }
 
 .item {
-  width: -moz-fit-content;
-  width: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   background-color: #8ca0ff;
   padding: 5px;
   margin-bottom: 1em;
@@ -72,4 +72,4 @@ block-size: fit-content
 
 ## See also
 
-- Related sizing keywords: {{cssxref("min-content")}}, {{cssxref("max-content")}}
+- Related sizing keywords: {{cssxref("min-content")}}, {{cssxref("max-content")}}

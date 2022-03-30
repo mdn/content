@@ -57,7 +57,7 @@ offset-path: unset;
 
   - : Specifies a [CSS shape](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes) including `circle()`, `ellipse()`, `inset()`, `polygon()`, or `path()`.
 
-    - `path()`
+    - {{cssxref("path","path()")}}
       - : A path string defined with SVG coordinate syntax.
 
 - `none`
@@ -65,7 +65,7 @@ offset-path: unset;
 
 ## Description
 
-This property defines a path an animated element can follow. An offset path is either a specified path with one or multiple sub-paths or the geometry of a not-styled basic shape. The element’s exact position on the offset path is determined by the {{cssxref("offset-distance")}} property. Each shape or path must define an initial position for the computed value of `0` for {{cssxref("offset-distance")}} and an initial direction which specifies the rotation of the object to the initial position.
+This property defines a path an animated element can follow. An offset path is either a specified path with one or multiple sub-paths or the geometry of a not-styled basic shape. The element's exact position on the offset path is determined by the {{cssxref("offset-distance")}} property. Each shape or path must define an initial position for the computed value of `0` for {{cssxref("offset-distance")}} and an initial direction which specifies the rotation of the object to the initial position.
 
 Early versions of the spec called this property `motion-path`. It was changed to `offset-path` because the property describes static positions, not motion.
 
@@ -163,6 +163,7 @@ The top and bottom halves of the scissors would appear in the top left of the ca
 - {{cssxref("offset-distance")}}
 - {{cssxref("offset-rotate")}}
 - [SVG \<path>](/en-US/docs/Web/SVG/Tutorial/Paths)
+- {{cssxref("path","path()")}}
 
 Other demos:
 

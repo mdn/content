@@ -27,7 +27,8 @@ a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implem
 ## Syntax
 
 ```js
-var linearAccelerationSensor = new LinearAccelerationSensor([options])
+new LinearAccelerationSensor()
+new LinearAccelerationSensor(options)
 ```
 
 ### Parameters
@@ -37,8 +38,8 @@ var linearAccelerationSensor = new LinearAccelerationSensor([options])
   - : Options are as follows:
 
     - `frequency`: The desired number of times per second a sample should
-      be taken, meaning the number of times per second that
-      {{domxref('sensor.onreading')}} will be called. A whole number or decimal may be
+      be taken, meaning the number of times per second that the
+      {{domxref('sensor.reading_event', 'reading')}} event will be called. A whole number or decimal may be
       used, the latter for frequencies less than a second. The actual reading frequency
       depends on device hardware and consequently may be less than requested.
     - `referenceFrame`: Either `'device'` or
@@ -51,3 +52,7 @@ var linearAccelerationSensor = new LinearAccelerationSensor([options])
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref('sensor.reading_event', 'reading')}} event

@@ -31,7 +31,7 @@ it _cannot_ access media of the specified format.
 ## Syntax
 
 ```js
-var isItSupported = mediaSource.isTypeSupported(mimeType);
+var isItSupported = MediaSource.isTypeSupported(mimeType);
 ```
 
 ### Parameters

@@ -194,6 +194,6 @@ The above HTML will output:
 - CSS properties that may be specially useful to style the `<ul>` element:
 
   - the {{CSSxRef("list-style")}} property, to choose the way the ordinal displays.
-  - [CSS counters](/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters), to handle complex nested lists.
+  - [CSS counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters), to handle complex nested lists.
   - the {{CSSxRef("line-height")}} property, to simulate the deprecated {{HTMLAttrxRef("compact", "ul")}} attribute.
   - the {{CSSxRef("margin")}} property, to control the list indentation.

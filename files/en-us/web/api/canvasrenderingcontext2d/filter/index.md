@@ -9,27 +9,20 @@ tags:
   - Property
 browser-compat: api.CanvasRenderingContext2D.filter
 ---
-{{APIRef}} {{SeeCompatTable}}
+{{APIRef}}
 
 The
 **`CanvasRenderingContext2D.filter`**
 property of the Canvas 2D API provides filter effects such as blurring and grayscaling.
 It is similar to the CSS {{cssxref("filter")}} property and accepts the same values.
 
-## Syntax
-
-```js
-ctx.filter = "<filter-function1> [<filter-function2>] [<filter-functionN>]";
-ctx.filter = "none";
-```
-
-### Values
+## Value
 
 The `filter` property accepts a value of `"none"` or one or more
 of the following filter functions in a {{domxref("DOMString")}}.
 
 - [`url()`](</en-US/docs/Web/CSS/filter#url()>)
-  - : A CSS {{cssxref("url()")}}. Takes an IRI pointing to an SVG filter element,
+  - : A CSS {{cssxref("url", "url()")}}. Takes an IRI pointing to an SVG filter element,
     which may be embedded in an external XML file.
 - [`blur()`](</en-US/docs/Web/CSS/filter#blur()>)
   - : A CSS {{cssxref("&lt;length&gt;")}}. Applies a Gaussian blur to the drawing. It
@@ -128,8 +121,8 @@ photo of a rhino.
 ```html
 <canvas id="canvas" width="400" height="150"></canvas>
 <div style="display:none;">
-  <img id="source"
-       src="rhino.jpg">
+  <img id="source"
+       src="rhino.jpg">
 </div>
 ```
 

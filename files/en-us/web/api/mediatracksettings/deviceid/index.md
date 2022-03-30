@@ -33,13 +33,7 @@ Because {{Glossary("RTP")}} doesn't include this information, tracks associated 
 [WebRTC](/en-US/docs/Web/API/WebRTC_API) {{domxref("RTCPeerConnection")}}
 will never include this property.
 
-## Syntax
-
-```js
-var deviceId = MediaTrackSettings.deviceId;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} whose value is an origin-unique identifier for the track's
 source. This ID is valid across multiple browsing sessions for the same origin and is

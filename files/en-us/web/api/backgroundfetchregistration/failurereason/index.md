@@ -9,15 +9,13 @@ tags:
   - BackgroundFetchRegistration
 browser-compat: api.BackgroundFetchRegistration.failureReason
 ---
-{{DefaultAPISidebar("Background Fetch API")}}
+{{APIRef("Background Fetch API")}}
 
 The **`failureReason`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns a string with a value that indicates a reason for a background fetch failure.
 
-## Syntax
+If the value of this property changes, the  [progress](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event) event is fired at the associated {{domxref("BackgroundFetchRegistration")}} object.
 
-    let failureReason = BackgroundFetchRegistration.failureReason;
-
-### Value
+## Value
 
 One of the following strings:
 
@@ -36,7 +34,7 @@ One of the following strings:
 
 ## Examples
 
-Logging {{domxref("BackgroundFetchRegistration.failureReason")}} to the console prints the reason the fetch failed, or an empty string if it was successful or has not yet completed.
+Logging this property to the console prints the reason the fetch failed, or an empty string if it was successful or has not yet completed.
 
 ```js
 console.log(bgFetch.failureReason);

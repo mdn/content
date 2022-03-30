@@ -6,18 +6,18 @@ tags:
   - Bluetooth
   - BluetoothRemoteGATTCharacteristic
   - Experimental
-  - Property
+  - Method
   - Reference
   - Web Bluetooth API
   - writeValueWithResponse
 browser-compat: api.BluetoothRemoteGATTCharacteristic.writeValueWithResponse
 ---
-The **`BluetoothRemoteGATTCharacteristic.writeValueWithResponse()`** method sets a {{domxref("BluetoothRemoteGATTCharacteristic")}} object’s `value` property to the bytes contained in a given {{JSxRef("ArrayBuffer")}}, calls [`WriteCharacteristicValue`(_this_=`this`, _value=value_, _response_=`"required"`)](https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue), and returns the resulting {{JSxRef("Promise")}}.
+The **`BluetoothRemoteGATTCharacteristic.writeValueWithResponse()`** method sets a {{domxref("BluetoothRemoteGATTCharacteristic")}} object's `value` property to the bytes contained in a given {{JSxRef("ArrayBuffer")}}, calls [`WriteCharacteristicValue`(_this_=`this`, _value=value_, _response_=`"required"`)](https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue), and returns the resulting {{JSxRef("Promise")}}.
 
 ## Syntax
 
 ```js
-BluetoothRemoteGATTCharacteristic.writeValueWithResponse(value).then(function() { ... })
+BluetoothRemoteGATTCharacteristic.writeValueWithResponse(value).then(function() { /* ... */ })
 ```
 
 ### Returns

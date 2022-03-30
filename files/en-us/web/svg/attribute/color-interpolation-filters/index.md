@@ -21,24 +21,24 @@ The **`color-interpolation-filters`** attribute specifies the color space for im
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feSpotLight")}}
-*   {{SVGElement("feBlend")}}
-*   {{SVGElement("feColorMatrix")}}
-*   {{SVGElement("feComponentTransfer")}}
-*   {{SVGElement("feComposite")}}
-*   {{SVGElement("feConvolveMatrix")}}
-*   {{SVGElement("feDiffuseLighting")}}
-*   {{SVGElement("feDisplacementMap")}}
-*   {{SVGElement("feDropShadow")}}
-*   {{SVGElement("feFlood")}}
-*   {{SVGElement("feGaussianBlur")}}
-*   {{SVGElement("feImage")}}
-*   {{SVGElement("feMerge")}}
-*   {{SVGElement("feMorphology")}}
-*   {{SVGElement("feOffset")}}
-*   {{SVGElement("feSpecularLighting")}}
-*   {{SVGElement("feTile")}}
-*   {{SVGElement("feTurbulence")}}
+- {{SVGElement("feSpotLight")}}
+- {{SVGElement("feBlend")}}
+- {{SVGElement("feColorMatrix")}}
+- {{SVGElement("feComponentTransfer")}}
+- {{SVGElement("feComposite")}}
+- {{SVGElement("feConvolveMatrix")}}
+- {{SVGElement("feDiffuseLighting")}}
+- {{SVGElement("feDisplacementMap")}}
+- {{SVGElement("feDropShadow")}}
+- {{SVGElement("feFlood")}}
+- {{SVGElement("feGaussianBlur")}}
+- {{SVGElement("feImage")}}
+- {{SVGElement("feMerge")}}
+- {{SVGElement("feMorphology")}}
+- {{SVGElement("feOffset")}}
+- {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feTile")}}
+- {{SVGElement("feTurbulence")}}
 
 ## Usage notes
 
@@ -59,12 +59,12 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `auto`
-    *   : Indicates that the user agent can choose either the `sRGB` or `linearRGB` spaces for color interpolation. This option indicates that the author doesn't require that color interpolation occur in a particular color space.
-*   `sRGB`
-    *   : Indicates that color interpolation should occur in the sRGB color space.
-*   `linearRGB`
-    *   : Indicates that color interpolation should occur in the linearized RGB color space as described in [the sRGB specification](https://webstore.iec.ch/publication/6169).
+- `auto`
+  - : Indicates that the user agent can choose either the `sRGB` or `linearRGB` spaces for color interpolation. This option indicates that the author doesn't require that color interpolation occur in a particular color space.
+- `sRGB`
+  - : Indicates that color interpolation should occur in the sRGB color space.
+- `linearRGB`
+  - : Indicates that color interpolation should occur in the linearized RGB color space as described in [the sRGB specification](https://webstore.iec.ch/publication/6169).
 
 ## Specifications
 
@@ -100,5 +100,5 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-*   [sRGB specification](https://webstore.iec.ch/publication/6169)
-*   {{SVGAttr("color-interpolation")}}
+- [sRGB specification](https://webstore.iec.ch/publication/6169)
+- {{SVGAttr("color-interpolation")}}

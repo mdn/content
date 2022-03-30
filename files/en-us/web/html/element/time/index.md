@@ -1,5 +1,5 @@
 ---
-title: <time>
+title: '<time>: The (Date) Time element'
 slug: Web/HTML/Element/time
 tags:
   - Element
@@ -22,7 +22,7 @@ It may represent one of the following:
 
 - A time on a 24-hour clock.
 - A precise date in the {{interwiki("wikipedia", "Gregorian calendar")}} (with optional time and timezone information).
-- [A valid time duration](https://www.w3.org/TR/2014/REC-html5-20141028/infrastructure.html#valid-duration-string).
+- [A valid time duration](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-duration-string).
 
 {{EmbedInteractiveExample("pages/tabbed/time.html", "tabbed-shorter")}}
 
@@ -85,7 +85,7 @@ It may represent one of the following:
 
 ## Attributes
 
-Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 - {{htmlattrdef("datetime")}}
   - : This attribute indicates the time and/or date of the element and must be in one of the formats described below.
@@ -94,11 +94,11 @@ Like all other HTML elements, this element supports the [global attributes](/en
 
 This element is for presenting dates and times in a machine readable format. For example, this can help a user agent offer to add an event to a user's calendar.
 
-This element should not be used for dates prior to the introduction of the Gregorian calendar (due to complications in calculating those dates).
+This element should not be used for dates prior to the introduction of the Gregorian calendar (due to complications in calculating those dates).
 
-The _datetime value_ (the machine-readable value of the datetime) is the value of the element’s `datetime` attribute, which must be in the proper format (see below). If the element does not have a `datetime` attribute, **it must not have any element descendants**, and the _datetime value_ is the element’s child text content.
+The _datetime value_ (the machine-readable value of the datetime) is the value of the element's `datetime` attribute, which must be in the proper format (see below). If the element does not have a `datetime` attribute, **it must not have any element descendants**, and the _datetime value_ is the element's child text content.
 
-### Valid datetime Values
+### Valid datetime values
 
 - a valid year string
   - : `2011`
@@ -153,7 +153,7 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
 
 #### Output
 
-{{EmbedLiveSample('Simple_example', 250, 60)}}
+{{EmbedLiveSample('Simple_example', 250, 80)}}
 
 ### `datetime` example
 
@@ -166,7 +166,7 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
 
 #### Output
 
-{{EmbedLiveSample('datetime_example', 250, 60)}}
+{{EmbedLiveSample('datetime_example', 250, 80)}}
 
 ## Specifications
 

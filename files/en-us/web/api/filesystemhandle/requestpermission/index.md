@@ -9,7 +9,7 @@ tags:
   - Method
 browser-compat: api.FileSystemHandle.requestPermission
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`requestPermission()`** method of the
 {{domxref("FileSystemHandle")}} interface requests read or readwrite permissions for the

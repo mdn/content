@@ -15,8 +15,10 @@ The **`getAll()`** method of the {{domxref("CookieStore")}} interface returns a 
 
 ## Syntax
 
-    var list = cookieStore.getAll(name);
-    var list = cookieStore.getAll(options);
+```js
+var list = cookieStore.getAll(name);
+var list = cookieStore.getAll(options);
+```
 
 ### Parameters
 

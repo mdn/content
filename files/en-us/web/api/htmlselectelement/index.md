@@ -13,7 +13,7 @@ browser-compat: api.HTMLSelectElement
 
 The **`HTMLSelectElement`** interface represents a {{HTMLElement("select")}} HTML Element. These elements also share all of the properties and methods of other HTML elements via the {{domxref("HTMLElement")}} interface.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -34,7 +34,7 @@ _This interface inherits the properties of {{domxref("HTMLElement")}}, and of {{
 - {{domxref("HTMLSelectElement.name")}}
   - : A {{domxref("DOMString")}} reflecting the {{htmlattrxref("name", "select")}} HTML attribute, containing the name of this control used by servers and DOM search functions.
 - {{domxref("HTMLSelectElement.options")}}{{ReadOnlyInline}}
-  - : An {{domxref("HTMLOptionsCollection")}} representing the set of {{HTMLElement("option")}} ({{domxref("HTMLOptionElement")}}) elements contained by this element.
+  - : An {{domxref("HTMLOptionsCollection")}} representing the set of {{HTMLElement("option")}} ({{domxref("HTMLOptionElement")}}) elements contained by this element.
 - {{domxref("HTMLSelectElement.required")}}
   - : A boolean value reflecting the {{htmlattrxref("required", "select")}} HTML attribute, which indicates whether the user is required to select a value before submitting the form.
 - {{domxref("HTMLSelectElement.selectedIndex")}}
@@ -44,13 +44,13 @@ _This interface inherits the properties of {{domxref("HTMLElement")}}, and of {{
 - {{domxref("HTMLSelectElement.size")}}
   - : A `long` reflecting the {{htmlattrxref("size", "select")}} HTML attribute, which contains the number of visible items in the control. The default is 1, unless `multiple` is `true`, in which case it is 4.
 - {{domxref("HTMLSelectElement.type")}}{{ReadOnlyInline}}
-  - : A {{domxref("DOMString")}} represeting the form control's type. When `multiple` is `true`, it returns `"select-multiple"`; otherwise, it returns `"select-one"`.
+  - : A {{domxref("DOMString")}} representing the form control's type. When `multiple` is `true`, it returns `"select-multiple"`; otherwise, it returns `"select-one"`.
 - {{domxref("HTMLSelectElement.validationMessage")}}{{ReadOnlyInline}}
   - : A {{domxref("DOMString")}} representing a localized message that describes the validation constraints that the control does not satisfy (if any). This attribute is the empty string if the control is not a candidate for constraint validation (`willValidate` is false), or it satisfies its constraints.
 - {{domxref("HTMLSelectElement.validity")}}{{ReadOnlyInline}}
   - : A {{domxref("ValidityState")}} reflecting the validity state that this control is in.
 - {{domxref("HTMLSelectElement.value")}}
-  - : A {{domxref("DOMString")}} reflecting the value of the form control. Returns the `value` property of the first selected option element if there is one, otherwise the empty string.
+  - : A {{domxref("DOMString")}} reflecting the value of the form control. Returns the `value` property of the first selected option element if there is one, otherwise the empty string.
 - {{domxref("HTMLSelectElement.willValidate")}}{{ReadOnlyInline}}
   - : A boolean value that indicates whether the button is a candidate for constraint validation. It is `false` if any conditions bar it from constraint validation.
 
@@ -81,6 +81,8 @@ _This interface inherits the methods of {{domxref("HTMLElement")}}, and of {{dom
 
 Listen to these events using {{domxref("EventTarget/addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface:
 
+- {{domxref("HTMLElement/change_event", "change")}} event
+  - : Fires when the user selects an option.
 - {{domxref("HTMLElement/input_event", "input")}} event
   - : Fires when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed.
 

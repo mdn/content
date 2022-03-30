@@ -35,7 +35,7 @@ panner.setVelocity(0,0,17);
 
 ### Returns
 
-Void.
+{{jsxref('undefined')}}.
 
 ## Example
 

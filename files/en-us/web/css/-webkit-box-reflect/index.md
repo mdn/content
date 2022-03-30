@@ -34,7 +34,7 @@ The **`-webkit-box-reflect`** [CSS](/en-US/docs/Web/CSS) property lets you refle
 -webkit-box-reflect: unset;
 ```
 
-> **Warning:** This feature is **not intended to be used by Web sites**. To achieve reflection on the Web, the standard way is to use the CSS {{CSSxRef("element()", "element()")}} function.
+> **Warning:** This feature is **not intended to be used by Web sites**. To achieve reflection on the Web, the standard way is to use the CSS {{CSSxRef("element", "element()")}} function.
 
 ## Syntax
 
@@ -57,7 +57,7 @@ The **`-webkit-box-reflect`** [CSS](/en-US/docs/Web/CSS) property lets you refle
 
 ## Specifications
 
-Not part of any standard. The standard way to do reflection in CSS is to use the CSS {{CSSxRef("element()", "element()")}} function.
+Not part of any standard. The standard way to do reflection in CSS is to use the CSS {{CSSxRef("element", "element()")}} function.
 
 ## Browser compatibility
 

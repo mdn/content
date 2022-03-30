@@ -11,11 +11,11 @@ browser-compat: svg.elements.feDiffuseLighting.diffuseConstant
 
 The **`diffuseConstant`** attribute represents the k<sub>d</sub> value in the [Phong lighting model](https://en.wikipedia.org/wiki/Phong_reflection_model). In SVG, this can be any non-negative number.
 
-It’s used to determine the final RGB value of a given pixel. The brighter the lighting-color, the smaller this number should be.
+It's used to determine the final RGB value of a given pixel. The brighter the lighting-color, the smaller this number should be.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feDiffuseLighting")}}
+- {{SVGElement("feDiffuseLighting")}}
 
 ## Example
 
@@ -98,4 +98,4 @@ html, body, svg {
 
 ## See also
 
-*   [Description of Phong reflection model on Wikipedia](https://en.wikipedia.org/wiki/Phong_reflection_model)
+- [Description of Phong reflection model on Wikipedia](https://en.wikipedia.org/wiki/Phong_reflection_model)

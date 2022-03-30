@@ -69,13 +69,13 @@ rotate: unset;
 
 ```html
 <div>
-  <p class="rotate">Rotation</p>
+  <p class="rotate">Rotation</p>
 </div>
 ```
 
 #### CSS
 
-```css hidden
+```css
 * {
   box-sizing: border-box;
 }
@@ -97,9 +97,7 @@ p {
   font-size: 1.2rem;
   text-align: center;
 }
-```
 
-```css
 .rotate {
   transition: rotate 1s;
 }

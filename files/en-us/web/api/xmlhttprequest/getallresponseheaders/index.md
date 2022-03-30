@@ -40,24 +40,26 @@ None.
 
 ### Return value
 
-A {{jsxref("String")}} representing all of the response's headers (except those
-whose field name is `Set-Cookie` or `Set-Cookie2`) separated by
-{{Glossary('CRLF')}}, or `null` if no response has been received. If a
-network error happened, an empty string is returned.
+A string representing all of the response's headers (except those
+whose field name is `Set-Cookie`) separated by {{Glossary('CRLF')}},
+or `null` if no response has been received. If a network error
+happened, an empty string is returned.
 
 An example of what a raw header string looks like:
 
-    date: Fri, 08 Dec 2017 21:04:30 GMT\r\n
-    content-encoding: gzip\r\n
-    x-content-type-options: nosniff\r\n
-    server: meinheld/0.6.1\r\n
-    x-frame-options: DENY\r\n
-    content-type: text/html; charset=utf-8\r\n
-    connection: keep-alive\r\n
-    strict-transport-security: max-age=63072000\r\n
-    vary: Cookie, Accept-Encoding\r\n
-    content-length: 6502\r\n
-    x-xss-protection: 1; mode=block\r\n
+```
+date: Fri, 08 Dec 2017 21:04:30 GMT\r\n
+content-encoding: gzip\r\n
+x-content-type-options: nosniff\r\n
+server: meinheld/0.6.1\r\n
+x-frame-options: DENY\r\n
+content-type: text/html; charset=utf-8\r\n
+connection: keep-alive\r\n
+strict-transport-security: max-age=63072000\r\n
+vary: Cookie, Accept-Encoding\r\n
+content-length: 6502\r\n
+x-xss-protection: 1; mode=block\r\n
+```
 
 Each line is terminated by both carriage return and line feed characters
 (`\r\n`). These are essentially delimiters separating each of the headers.
@@ -67,8 +69,7 @@ Each line is terminated by both carriage return and line feed characters
 
 ## Example
 
-This example examines the headers in the request's {{event("readystatechange")}} event
-handler, {{domxref("XMLHttpRequest.onreadystatechange")}}. The code shows how to obtain
+This example examines the headers in the request's {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}} event. The code shows how to obtain
 the raw header string, as well as how to convert it into an array of individual headers
 and then how to take that array and create a mapping of header names to their values.
 

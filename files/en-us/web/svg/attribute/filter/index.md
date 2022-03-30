@@ -9,7 +9,7 @@ browser-compat: svg.attributes.presentation.filter
 ---
 {{SVGRef}}
 
-The **`filter`** attribute specifies the filter effects defined by the {{SVGElement("filter")}} element that shall be applied to its element.
+The **`filter`** attribute specifies the filter effects defined by the {{SVGElement("filter")}} element that shall be applied to its element.
 
 > **Note:** As a presentation attribute, `filter` can be used as a CSS property. See {{cssxref("filter", "CSS filter")}} for further information.
 
@@ -98,5 +98,5 @@ For a description of the values see the {{cssxref("filter","CSS filter")}} prope
 
 ## See also
 
-*   {{SVGElement("filter")}}
-*   {{cssxref("filter","CSS filter")}}
+- {{SVGElement("filter")}}
+- {{cssxref("filter","CSS filter")}}

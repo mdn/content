@@ -43,11 +43,11 @@ the candidate.
 
 - If the value of `address` is comprised entirely of digits from 0-9 with
   periods as separators, the value is interpreted as an IPv4 address.
-- If the value is entirely comprised of hexadecimal digits and colon (":") 
+- If the value is entirely comprised of hexadecimal digits and colon (":")
   characters, it is interpreted as an IPv6 address.
 - Otherwise, the `address` is presumed to be a fully-qualified domain name,
   which is resolved first using an AAAA record (assuming IPv6 is available), then using
-  an A record (if no result is found or the device onlu supports IPv4). If multiple IP
+  an A record (if no result is found or the device only supports IPv4). If multiple IP
   addresses are returned in response to the query, the {{Glossary("user agent")}}
   selects one, which is then used for the duration of ICE processing.
 

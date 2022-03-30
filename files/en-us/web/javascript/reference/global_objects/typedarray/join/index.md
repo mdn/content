@@ -15,8 +15,8 @@ browser-compat: javascript.builtins.TypedArray.join
 
 The **`join()`** method joins all elements of an array into a
 string. This method has the same algorithm as {{jsxref("Array.prototype.join()")}}.
-_TypedArray_ is one of the [typed
-array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+_TypedArray_ is one of the
+[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
 
 {{EmbedInteractiveExample("pages/js/typedarray-join.html")}}
 
@@ -77,6 +77,6 @@ If you need to support truly obsolete JavaScript engines that don't support
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.join` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.join` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("Array.prototype.join()")}}

@@ -7,6 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-box/
 ---
 {{CSSRef}}
 
@@ -14,7 +15,7 @@ tags:
 
 ## The Box Model
 
-A box in CSS consists of a content area, which is where any text, images, or other HTML elements are displayed. This is optionally surrounded by padding, a border, and a margin, on one or more sides. The box model describes how these elements work together to create a box as displayed by CSS. To learn more about it read [Introduction to the CSS Box Model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+A box in CSS consists of a content area, which is where any text, images, or other HTML elements are displayed. This is optionally surrounded by padding, a border, and a margin, on one or more sides. The box model describes how these elements work together to create a box as displayed by CSS. To learn more about it read [Introduction to the CSS Box Model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model).
 
 ### Box-edge keywords
 
@@ -31,7 +32,7 @@ The Box Model specification defines a set of keywords that refer to the edges of
 - `stroke-box`
   - : In SVG refers to the stroke bounding box, in CSS treated as `content-box`.
 - `view-box`
-  - : In SVG refers to the nearest SVG viewport element’s origin box, which is a rectangle with the width and height of the initial SVG user coordinate system established by the {{svgattr("viewBox")}} attribute for that element. In CSS treated as `border-box`.
+  - : In SVG refers to the nearest SVG viewport element's origin box, which is a rectangle with the width and height of the initial SVG user coordinate system established by the {{svgattr("viewBox")}} attribute for that element. In CSS treated as `border-box`.
 
 ## Reference
 
@@ -48,11 +49,11 @@ Margins surround the border edge of a box, and provide spacing between boxes.
 - {{CSSxRef("margin-left")}}
 - {{CSSxRef("margin-right")}}
 - {{CSSxRef("margin-top")}}
-- {{CSSxRef("margin-trim")}} {{Experimental_Inline}}
+- {{CSSxRef("margin-trim")}} {{Experimental_Inline}}
 
 #### Properties controlling the paddings of a box
 
-Padding in inserted between the content edge and border edge of a box.
+Padding is inserted between the content edge and border edge of a box.
 
 - {{CSSxRef("padding")}}
 - {{CSSxRef("padding-bottom")}}
@@ -80,8 +81,4 @@ There are other properties that relate to the box model, that are defined elsewh
 
 ## Specifications
 
-| Specification                                | Status                       | Comment             |
-| -------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName("CSS3 Box")}}             | {{Spec2("CSS3 Box")}} | Added `margin-trim` |
-| {{SpecName("CSS2.1", "box.html")}} | {{Spec2("CSS2.1")}}     |                     |
-| {{SpecName("CSS1")}}                 | {{Spec2("CSS1")}}     | Initial definition. |
+{{Specifications}}

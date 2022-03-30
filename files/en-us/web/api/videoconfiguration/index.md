@@ -14,7 +14,7 @@ browser-compat: api.VideoConfiguration
 ---
 {{APIRef("Media Capabilities API")}}
 
-The **`VideoConfiguration`** dictionary of the [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API) is used to define the video file being tested when calling the {{domxref("MediaCapabilities")}} methods {{domxref("MediaCapabilities.encodingInfo", "encodingInfo()")}} and {{domxref("MediaCapabilities.decodingInfo", "decodingInfo()")}} to determine whether or not the described video configuration is supported, and how smoothly and how smoooth and power-efficient it can be handled.
+The **`VideoConfiguration`** dictionary of the [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API) is used to define the video file being tested when calling the {{domxref("MediaCapabilities")}} methods {{domxref("MediaCapabilities.encodingInfo", "encodingInfo()")}} and {{domxref("MediaCapabilities.decodingInfo", "decodingInfo()")}} to determine whether or not the described video configuration is supported, and how smoothly and how smooth and power-efficient it can be handled.
 
 ## Properties
 

@@ -18,7 +18,7 @@ Since a platform's _system clock_ is subject to various _skews_ (such as NTP adj
 
 The {{domxref("DOMHighResTimeStamp")}} type, as its name implies, represents a high resolution point in time. This type is a `double` and is used by the performance interfaces. The value could be a discrete point in time or the difference in time between two discrete points in time.
 
-The unit of `DOMHighResTimeStamp` is milliseconds and should be accurate to 5 µs (microseconds). However, If the browser is unable to provide a time value accurate to 5 microseconds (because, for example, due to hardware or software constraints), the browser can represent the value as a time in milliseconds accurate to a millisecond.
+The unit of `DOMHighResTimeStamp` is milliseconds and should be accurate to 5 µs (microseconds). However, If the browser is unable to provide a time value accurate to 5 microseconds (because, for example, due to hardware or software constraints), the browser can represent the value as a time in milliseconds accurate to a millisecond.
 
 ## Methods
 
@@ -38,8 +38,6 @@ The `{{domxref("Performance.navigation","navigation")}}` property returns a {{do
   - : Provides methods and properties containing timing-related performance information for the given page.
 - {{domxref('PerformanceEntry')}}
   - : Provides methods and properties the encapsulate a single performance metric that is part of the performance timeline.
-- {{domxref('PerformanceFrameTiming')}}
-  - : Provides methods and properties containing frame timing data about the browser's event loop.
 - {{domxref('PerformanceMark')}}
   - : An abstract interface for [`performance entries`](/en-US/docs/Web/API/PerformanceEntry) with an [`entry type`](/en-US/docs/Web/API/PerformanceEntry/entryType) of "`mark`". Entries of this type are created by calling [`performance.mark()`](/en-US/docs/Web/API/Performance/mark) to add a named [`DOMHighResTimeStamp`](/en-US/docs/Web/API/DOMHighResTimeStamp) (the mark) to the browser's performance timeline.
 - {{domxref('PerformanceMeasure')}}
@@ -56,7 +54,6 @@ The `{{domxref("Performance.navigation","navigation")}}` property returns a {{do
 | Specification                                                     |
 | ----------------------------------------------------------------- |
 | [High Resolution Time](https://w3c.github.io/hr-time/)            |
-| [Frame Timing](https://wicg.github.io/frame-timing/)              |
 | [Navigation Timing](https://w3c.github.io/navigation-timing/)     |
 | [Performance Timing](https://w3c.github.io/performance-timeline/) |
 | [Resource Timing](https://w3c.github.io/resource-timing/)         |
@@ -66,7 +63,7 @@ The `{{domxref("Performance.navigation","navigation")}}` property returns a {{do
 
 As shown in the {{domxref("Performance")}} interface's [Browser Compatibility](/en-US/docs/Web/API/Performance#browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers.
 
-To test your browser's support for the {{domxref("Performance")}} interface, run the [`perf-api-support`](https://mdn.github.io/web-performance/perf-api-support.html) application.
+To test your browser's support for the {{domxref("Performance")}} interface, run the [`perf-api-support`](https://mdn.github.io/dom-examples/performance-apis/perf-api-support.html) application.
 
 ## See also
 

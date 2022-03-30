@@ -23,7 +23,7 @@ number of form controls using the {{domxref("HTMLFormElement.length", "length")}
 property.
 
 You can access a particular form control in the returned collection by using either an
-index or the element's `name` or`id` attributes.
+index or the element's `name` or `id` attributes.
 
 Prior to HTML 5, the returned object was an {{domxref("HTMLCollection")}}, on which
 `HTMLFormControlsCollection` is based.
@@ -32,13 +32,7 @@ Prior to HTML 5, the returned object was an {{domxref("HTMLCollection")}}, on wh
 > within a given document using the document's {{domxref("Document.forms", "forms")}}
 > property.
 
-## Syntax
-
-```js
-nodeList = HTMLFormElement.elements
-```
-
-### Value
+## Value
 
 An {{domxref("HTMLFormControlsCollection")}} containing all non-image controls in the
 form. This is a live collection; if form controls are added to or removed from the form,
@@ -50,7 +44,7 @@ in the form by following a preorder, depth-first traversal of the tree. This is 
 
 {{page("/en-US/docs/Web/API/HTMLFormElement", "Elements that are considered form controls")}}
 
-## Example
+## Examples
 
 ### Quick syntax example
 

@@ -20,19 +20,19 @@ This article shows how to use WebRTC to access the camera on a computer or mobil
 
 ![WebRTC-based image capture app — on the left we have a video stream taken from a webcam and a take photo button, on the right we have the still image output from taking the photo](web-rtc-demo.png)
 
-You can also jump straight to the [code on Github](https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill) if you like.
+You can also jump straight to the [Demo](#demo) if you like.
 
 ## The HTML markup
 
-[Our HTML interface](https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill/index.html) has two main operational sections: the stream and capture panel and the presentation panel. Each of these is presented side-by-side in its own {{HTMLElement("div")}} to facilitate styling and control.
+[Our HTML interface](#html) has two main operational sections: the stream and capture panel and the presentation panel. Each of these is presented side-by-side in its own {{HTMLElement("div")}} to facilitate styling and control.
 
 The first panel on the left contains two components: a {{HTMLElement("video")}} element, which will receive the stream from WebRTC, and a {{HTMLElement("button")}} the user clicks to capture a video frame.
 
 ```html
-  <div class="camera">
-    <video id="video">Video stream not available.</video>
-    <button id="startbutton">Take photo</button>
-  </div>
+<div class="camera">
+  <video id="video">Video stream not available.</video>
+  <button id="startbutton">Take photo</button>
+</div>
 ```
 
 This is straightforward, and we'll see how it ties together when we get into the JavaScript code.
@@ -42,18 +42,18 @@ Next, we have a {{HTMLElement("canvas")}} element into which the captured frames
 We also have an {{HTMLElement("img")}} element into which we will draw the image — this is the final display shown to the user.
 
 ```html
-  <canvas id="canvas">
-  </canvas>
-  <div class="output">
-    <img id="photo" alt="The screen capture will appear in this box.">
-  </div>
+<canvas id="canvas">
+  <div class="output">
+    <img id="photo" alt="The screen capture will appear in this box.">
+  </div>
+</canvas>
 ```
 
 That's all of the relevant HTML. The rest is just some page layout fluff and a bit of text offering a link back to this page.
 
 ## The JavaScript code
 
-Now let's take a look at the [JavaScript code](https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill/capture.js). We'll break it up into a few bite-sized pieces to make it easier to explain.
+Now let's take a look at the [JavaScript code](#javascript). We'll break it up into a few bite-sized pieces to make it easier to explain.
 
 ### Initialization
 
@@ -163,7 +163,7 @@ To capture a still photo each time the user clicks the `startbutton`, we need to
     }, false);
 ```
 
-This method is simple enough: it just calls our `takepicture()` function, defined below in the section {{anch("Capturing a frame from the stream")}}, then calls {{domxref("Event.preventDefault()")}} on the received event to prevent the click from being handled more than once.
+This method is simple enough: it just calls our `takepicture()` function, defined below in the section [Capturing a frame from the stream](#capturing_a_frame_from_the_stream), then calls {{domxref("Event.preventDefault()")}} on the received event to prevent the click from being handled more than once.
 
 #### Wrapping up the startup() method
 
@@ -174,7 +174,7 @@ There are only two more lines of code in the `startup()` method:
   }
 ```
 
-This is where we call the `clearphoto()` method we'll describe below in the section {{anch("Clearing the photo box")}}.
+This is where we call the `clearphoto()` method we'll describe below in the section [Clearing the photo box](#clearing_the_photo_box).
 
 ### Clearing the photo box
 
@@ -191,7 +191,7 @@ Clearing the photo box involves creating an image, then converting it into a for
   }
 ```
 
-We start by getting a reference to the hidden {{HTMLElement("canvas")}} element that we use for offscreen rendering.  Next we set the `fillStyle` to `#AAA` (a fairly light grey), and fill the entire canvas with that color by calling {{domxref("CanvasRenderingContext2D.fillRect()","fillRect()")}}.
+We start by getting a reference to the hidden {{HTMLElement("canvas")}} element that we use for offscreen rendering. Next we set the `fillStyle` to `#AAA` (a fairly light grey), and fill the entire canvas with that color by calling {{domxref("CanvasRenderingContext2D.fillRect()","fillRect()")}}.
 
 Last in this function, we convert the canvas into a PNG image and call `{{domxref("Element.setAttribute", "photo.setAttribute()")}}` to make our captured still box display the image.
 
@@ -225,20 +225,224 @@ Once the canvas contains the captured image, we convert it to PNG format by call
 
 If there isn't a valid image available (that is, the `width` and `height` are both 0), we clear the contents of the captured frame box by calling `clearphoto()`.
 
+## Demo
+
+### HTML
+
+```html
+<div class="contentarea">
+  <h1>
+    MDN - WebRTC: Still photo capture demo
+  </h1>
+  <p>
+   This example demonstrates how to set up a media stream using your built-in webcam, fetch an image from that stream, and create a PNG using that image.
+  </p>
+  <div class="camera">
+    <video id="video">Video stream not available.</video>
+    <button id="startbutton">Take photo</button> 
+  </div>
+  <canvas id="canvas">
+  </canvas>
+  <div class="output">
+    <img id="photo" alt="The screen capture will appear in this box."> 
+  </div>
+  <p>
+    Visit our article <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Taking_still_photos"> Taking still photos with WebRTC</a> to learn more about the technologies used here.
+  </p>
+</div>
+```
+
+### CSS
+
+```css
+#video {
+  border: 1px solid black;
+  box-shadow: 2px 2px 3px black;
+  width:320px;
+  height:240px;
+}
+
+#photo {
+  border: 1px solid black;
+  box-shadow: 2px 2px 3px black;
+  width:320px;
+  height:240px;
+}
+
+#canvas {
+  display:none;
+}
+
+.camera {
+  width: 340px;
+  display:inline-block;
+}
+
+.output {
+  width: 340px;
+  display:inline-block;
+  vertical-align: top;
+}
+
+#startbutton {
+  display:block;
+  position:relative;
+  margin-left:auto;
+  margin-right:auto;
+  bottom:32px;
+  background-color: rgba(0, 150, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  font-family: "Lucida Grande", "Arial", sans-serif;
+  color: rgba(255, 255, 255, 1.0);
+}
+
+.contentarea {
+  font-size: 16px;
+  font-family: "Lucida Grande", "Arial", sans-serif;
+  width: 760px;
+}
+```
+
+### JavaScript
+
+```js
+(function() {
+  // The width and height of the captured photo. We will set the
+  // width to the value defined here, but the height will be
+  // calculated based on the aspect ratio of the input stream.
+
+  var width = 320;    // We will scale the photo width to this
+  var height = 0;     // This will be computed based on the input stream
+
+  // |streaming| indicates whether or not we're currently streaming
+  // video from the camera. Obviously, we start at false.
+
+  var streaming = false;
+
+  // The various HTML elements we need to configure or control. These
+  // will be set by the startup() function.
+
+  var video = null;
+  var canvas = null;
+  var photo = null;
+  var startbutton = null;
+
+  function showViewLiveResultButton() {
+    if (window.self !== window.top) {
+      // Ensure that if our document is in a frame, we get the user
+      // to first open it in its own tab or window. Otherwise, it
+      // won't be able to request permission for camera access.
+      document.querySelector(".contentarea").remove();
+      const button = document.createElement("button");
+      button.textContent = "View live result of the example code above";
+      document.body.append(button);
+      button.addEventListener('click', () => window.open(location.href));
+      return true;
+    }
+    return false;
+  }
+
+  function startup() {
+    if (showViewLiveResultButton()) { return; }
+    video = document.getElementById('video');
+    canvas = document.getElementById('canvas');
+    photo = document.getElementById('photo');
+    startbutton = document.getElementById('startbutton');
+
+    navigator.mediaDevices.getUserMedia({video: true, audio: false})
+    .then(function(stream) {
+      video.srcObject = stream;
+      video.play();
+    })
+    .catch(function(err) {
+      console.log("An error occurred: " + err);
+    });
+
+    video.addEventListener('canplay', function(ev){
+      if (!streaming) {
+        height = video.videoHeight / (video.videoWidth/width);
+      
+        // Firefox currently has a bug where the height can't be read from
+        // the video, so we will make assumptions if this happens.
+      
+        if (isNaN(height)) {
+          height = width / (4/3);
+        }
+      
+        video.setAttribute('width', width);
+        video.setAttribute('height', height);
+        canvas.setAttribute('width', width);
+        canvas.setAttribute('height', height);
+        streaming = true;
+      }
+    }, false);
+
+    startbutton.addEventListener('click', function(ev){
+      takepicture();
+      ev.preventDefault();
+    }, false);
+    
+    clearphoto();
+  }
+
+  // Fill the photo with an indication that none has been
+  // captured.
+
+  function clearphoto() {
+    var context = canvas.getContext('2d');
+    context.fillStyle = "#AAA";
+    context.fillRect(0, 0, canvas.width, canvas.height);
+
+    var data = canvas.toDataURL('image/png');
+    photo.setAttribute('src', data);
+  }
+  
+  // Capture a photo by fetching the current contents of the video
+  // and drawing it into a canvas, then converting that to a PNG
+  // format data URL. By drawing it on an offscreen canvas and then
+  // drawing that to the screen, we can change its size and/or apply
+  // other changes before drawing it.
+
+  function takepicture() {
+    var context = canvas.getContext('2d');
+    if (width && height) {
+      canvas.width = width;
+      canvas.height = height;
+      context.drawImage(video, 0, 0, width, height);
+    
+      var data = canvas.toDataURL('image/png');
+      photo.setAttribute('src', data);
+    } else {
+      clearphoto();
+    }
+  }
+
+  // Set up our event listener to run the startup process
+  // once loading is complete.
+  window.addEventListener('load', startup, false);
+})();
+
+```
+
+### Result
+
+{{EmbedLiveSample('Demo', '100%', 30)}}
+
 ## Fun with filters
 
-Since we're capturing images from the user's webcam by grabbing frames from a {{HTMLElement("video")}} element, we can very easily apply filters and fun effects to the video. As it turns out, any CSS filters you apply to the element using the {{cssxref("filter")}} property affect the captured photo. These filters can range from the simple (making the image black and white)  to the extreme (gaussian blurs and hue rotation).
+Since we're capturing images from the user's webcam by grabbing frames from a {{HTMLElement("video")}} element, we can very easily apply filters and fun effects to the video. As it turns out, any CSS filters you apply to the element using the {{cssxref("filter")}} property affect the captured photo. These filters can range from the simple (making the image black and white) to the extreme (gaussian blurs and hue rotation).
 
 You can play with this effect using, for example, the Firefox developer tools' [style editor](/en-US/docs/Tools/Style_Editor); see [Edit CSS filters](/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_filters) for details on how to do so.
 
 ## Using specific devices
 
-You can, if needed, restrict the set of permitted video sources to a specific device or set of devices. To do so, call {{domxref("MediaDevices.enumerateDevices")}}. When the promise is fulfilled with an array of {{domxref("MediaDeviceInfo")}}  objects describing the available devices, find the ones that you want to allow and specify the corresponding {{domxref("MediaTrackConstraints.deviceId", "deviceId")}} or `deviceId`s in the {{domxref("MediaTrackConstraints")}} object passed into {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}.
+You can, if needed, restrict the set of permitted video sources to a specific device or set of devices. To do so, call {{domxref("MediaDevices.enumerateDevices")}}. When the promise is fulfilled with an array of {{domxref("MediaDeviceInfo")}} objects describing the available devices, find the ones that you want to allow and specify the corresponding {{domxref("MediaTrackConstraints.deviceId", "deviceId")}} or `deviceId`s in the {{domxref("MediaTrackConstraints")}} object passed into {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}.
 
 ## See also
 
-- [Try this sample](https://mdn-samples.mozilla.org/s/webrtc-capturestill)
-- [Sample code on Github](https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill)
+- [Sample code on GitHub](https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill)
 - {{domxref("MediaDevices.getUserMedia")}}
 - {{SectionOnPage("/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images", "Using frames from a video")}}
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}

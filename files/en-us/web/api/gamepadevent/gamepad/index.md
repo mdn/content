@@ -15,13 +15,11 @@ The **`GamepadEvent.gamepad`** property of the
 object, providing access to the associated gamepad data for fired
 {{event("gamepadconnected")}} and {{event("gamepaddisconnected")}} events.
 
-## Syntax
+## Value
 
-```js
-readonly attribute Gamepad gamepad;
-```
+A {{domxref("Gamepad")}} object.
 
-## Example
+## Examples
 
 The `gamepad` property being called on a fired
 {{event("gamepadconnected")}} event.

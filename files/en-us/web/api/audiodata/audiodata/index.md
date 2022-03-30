@@ -1,5 +1,5 @@
 ---
-title: AudioData.AudioData()
+title: AudioData()
 slug: Web/API/AudioData/AudioData
 tags:
   - API
@@ -55,4 +55,3 @@ new AudioData(init);
 ## Browser compatibility
 
 {{Compat}}
-

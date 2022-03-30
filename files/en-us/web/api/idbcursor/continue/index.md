@@ -36,43 +36,15 @@ cursor.continue(key);
 
 This method may raise a {{domxref("DOMException")}} of one of the following types:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>TransactionInactiveError</code></td>
-      <td>This IDBCursor's transaction is inactive.</td>
-    </tr>
-    <tr>
-      <td><code>DataError</code></td>
-      <td>
-        <p>The key parameter may have any of the following conditions:</p>
-        <ul>
-          <li>The key is not a valid key.</li>
-          <li>
-            The key is less than or equal to this cursor's position and the
-            cursor's direction is <code>next</code> or <code>nextunique</code>.
-          </li>
-          <li>
-            The key is greater than or equal to this cursor's position and this
-            cursor's direction is <code>prev</code> or <code>prevunique</code>.
-          </li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>
-        The cursor is currently being iterated or has iterated past its end.
-      </td>
-    </tr>
-  </tbody>
-</table>
+- `TransactionInactiveError` {{domxref("DOMException")}}
+  - : Thrown if this IDBCursor's transaction is inactive.
+- `DataError` {{domxref("DOMException")}}
+  - : Thrown if the key parameter has any of the following conditions:
+    - The key is not a valid key.
+    - The key is less than or equal to this cursor's position, and the cursor's direction is `next` or `nextunique`.
+    - The key is greater than or equal to this cursor's position and this cursor's direction is `prev` or `prevunique`.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the cursor is currently being iterated or has iterated past its end.
 
 ## Example
 
@@ -85,23 +57,25 @@ our [IDBCursor
 example](https://github.com/mdn/indexeddb-examples/tree/master/idbcursor) ([view
 example live](https://mdn.github.io/indexeddb-examples/idbcursor/).)
 
-    function displayData() {
-      var transaction = db.transaction(['rushAlbumList'], "readonly");
-      var objectStore = transaction.objectStore('rushAlbumList');
+```js
+function displayData() {
+  var transaction = db.transaction(['rushAlbumList'], "readonly");
+  var objectStore = transaction.objectStore('rushAlbumList');
 
-      objectStore.openCursor().onsuccess = function(event) {
-        var cursor = event.target.result;
-        if(cursor) {
-          var listItem = document.createElement('li');
-          listItem.innerHTML = cursor.value.albumTitle + ', ' + cursor.value.year;
-          list.appendChild(listItem);
+  objectStore.openCursor().onsuccess = function(event) {
+    var cursor = event.target.result;
+    if(cursor) {
+      var listItem = document.createElement('li');
+      listItem.innerHTML = cursor.value.albumTitle + ', ' + cursor.value.year;
+      list.appendChild(listItem);
 
-          cursor.continue();
-        } else {
-          console.log('Entries all displayed.');
-        }
-      };
-    };
+      cursor.continue();
+    } else {
+      console.log('Entries all displayed.');
+    }
+  };
+};
+```
 
 ## Specifications
 

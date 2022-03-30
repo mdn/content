@@ -13,7 +13,7 @@ browser-compat: api.SVGDescElement
 
 The **`SVGDescElement`** interface corresponds to the {{SVGElement("desc")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

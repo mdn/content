@@ -25,7 +25,7 @@ The {{domxref("RTCRtpCodecParameters")}} dictionary, part of the WebRTC API, is 
 
 In addition to being the type of the {{domxref("RTCRtpParameters.codecs")}} property, it's used when calling {{domxref("RTCRtpTransceiver.setCodecPreferences()")}} to configure a transceiver's codecs before beginning the offer/answer process to establish a WebRTC peer connection.
 
-Most of the fields in this property take values which are defined and maintained by the Internet Assigned Numbers Authority (IANA). References to relevant IANA documents are provided in the {{anch("See also", "see also")}} section at the end of this article.
+Most of the fields in this property take values which are defined and maintained by the Internet Assigned Numbers Authority (IANA). References to relevant IANA documents are provided in the [see also](#see_also) section at the end of this article.
 
 ## Properties
 

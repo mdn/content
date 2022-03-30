@@ -21,7 +21,7 @@ takes up to two arguments: callback functions for the success and failure cases 
 > `then` will be missing the handler(s), but will not generate any errors. If
 > the `Promise` that `then` is called on adopts a state
 > (`fulfillment` or `rejection`) for which `then` has
-> no handler, the returned promise adopts the final state of the original
+> no handler, the returned promise adopts the final state of the original
 > `Promise` on which `then` was called.
 
 ## Syntax
@@ -100,9 +100,9 @@ setTimeout(() => {
 
 ## Description
 
-As the `then` and {{jsxref("Promise.prototype.catch()")}} methods return
-promises, they [can be
-chained](/en-US/docs/Web/JavaScript/Guide/Using_promises#Chaining) — an operation called _composition_.
+As the `then` and {{jsxref("Promise.prototype.catch()")}} methods return promises,
+they [can be chained](/en-US/docs/Web/JavaScript/Guide/Using_promises#Chaining)
+— an operation called _composition_.
 
 ## Examples
 

@@ -87,11 +87,11 @@ offscreen.getContext(contextType, contextAttributes);
     - **`alpha`**: Boolean that indicates if the canvas
       contains an alpha buffer.
     - **`depth`**: Boolean that indicates that the drawing
-      buffer has a depth buffer of at least 16 bits.
+      buffer is requested to have a depth buffer of at least 16 bits.
     - **`stencil`**: Boolean that indicates that the drawing
-      buffer has a stencil buffer of at least 8 bits.
+      buffer is requested to have a stencil buffer of at least 8 bits.
     - **`antialias`**: Boolean that indicates whether or not
-      to perform anti-aliasing.
+      to perform anti-aliasing if possible.
     - **`premultipliedAlpha`**: Boolean that indicates that
       the page compositor will assume the drawing buffer contains colors with
       pre-multiplied alpha.

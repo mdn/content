@@ -14,12 +14,14 @@ browser-compat: api.DedicatedWorkerGlobalScope
 
 The **`DedicatedWorkerGlobalScope`** object (the {{domxref("Worker")}} global scope) is accessible through the {{domxref("window.self","self")}} keyword. Some additional global functions, namespaces objects, and constructors, not typically associated with the worker global scope, but available on it, are listed in the [JavaScript Reference](/en-US/docs/Web/JavaScript/Reference). See also: [Functions available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}._
 
 - {{domxref("DedicatedWorkerGlobalScope.name")}} {{readOnlyinline}}
-  - : The name that the {{domxref("Worker")}} was (optionally) given when it was created using the {{domxref("Worker.Worker", "Worker()")}} constructor. This is mainly useful for debugging purposes.
+  - : The name that the {{domxref("Worker")}} was (optionally) given when it was created using the {{domxref("Worker.Worker", "Worker()")}} constructor. This is mainly useful for debugging purposes.
 
 ### Properties inherited from WorkerGlobalScope
 
@@ -33,15 +35,6 @@ _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} in
   - : Returns the {{domxref("WorkerNavigator")}} associated with the worker. `WorkerNavigator` is a specific navigator object, mostly a subset of the {{domxref("Navigator")}} for browsing scopes, but adapted to workers.
 - {{domxref("WorkerGlobalScope.performance")}} {{readOnlyinline}} {{Non-standard_inline}}
   - : Returns the {{domxref("Performance")}} object associated with the worker, which is a regular performance object, but with a subset of its properties and methods available.
-
-### Event handlers
-
-_This interface inherits event handlers from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}._
-
-- {{domxref("DedicatedWorkerGlobalScope.onmessage")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("message")}} event is raised. These events are of type {{domxref("MessageEvent")}} and will be called when the worker receives a message from the document that started it (i.e. from the {{domxref("Worker.postMessage")}} method.)
-- {{domxref("DedicatedWorkerGlobalScope.onmessageerror")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("messageerror")}} event is raised.
 
 ## Methods
 
@@ -78,10 +71,8 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
 
 - [`message`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/message_event)
   - : Fired when the worker receives a message from its parent.
-    Also available via the [`onmessage`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/onmessage) property.
 - [`messageerror`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event)
   - : Fired when a worker receives a message that can't be deserialized.
-    Also available via the [`onmessageerror`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/onmessageerror) property.
 
 ## Specifications
 

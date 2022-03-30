@@ -15,7 +15,9 @@ The **`createHTML()`** method of the {{domxref("TrustedTypePolicy")}} interface 
 
 ## Syntax
 
-    var str = TrustedTypePolicy.createHTML(input[,args]);
+```js
+var str = TrustedTypePolicy.createHTML(input[,args]);
+```
 
 ### Parameters
 

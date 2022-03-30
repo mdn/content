@@ -26,14 +26,9 @@ the document with [CSS](/en-US/docs/Web/CSS).
 > **Note:** Identifiers are case-sensitive, but you should avoid creating
 > IDs that differ only in the capitalization.
 
-## Syntax
+## Value
 
-```js
-var idStr = element.id; // Get the id
-element.id = idStr; // Set the id
-```
-
-- `idStr` is the identifier of the element.
+A string.
 
 ## Specifications
 

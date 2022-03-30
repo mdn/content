@@ -2,31 +2,27 @@
 title: DOMTokenList.contains()
 slug: Web/API/DOMTokenList/contains
 tags:
-  - API
-  - Contains
-  - DOM
-  - DOMTokenList
   - Method
   - Reference
 browser-compat: api.DOMTokenList.contains
 ---
 {{APIRef("DOM")}}
 
-The **`contains()`** method of the {{domxref("DOMTokenList")}}
-interface returns a boolean value — `true` if the underlying list
-contains the given `token`, otherwise `false`.
+The **`contains()`** method of the {{domxref("DOMTokenList")}} interface
+returns a boolean value — `true` if the underlying list contains the given token,
+otherwise `false`.
 
 ## Syntax
 
 ```js
-tokenList.contains(token);
+contains(token);
 ```
 
 ### Parameters
 
 - `token`
-  - : A {{domxref("DOMString")}} representing the token you want to check for the
-    existence of in the list.
+  - : A string representing the token
+    you want to check for the existence of in the list.
 
 ### Return value
 
@@ -50,13 +46,12 @@ First, the HTML:
 Now the JavaScript:
 
 ```js
-let span = document.querySelector("span");
-let classes = span.classList;
-let result = classes.contains("c");
-if (result) {
+const span = document.querySelector("span");
+const classes = span.classList;
+if (classes.contains("c")) {
   span.textContent = "The classList contains 'c'";
 } else {
-   span.textContent = "The classList does not contain 'c'";
+  span.textContent = "The classList does not contain 'c'";
 }
 ```
 

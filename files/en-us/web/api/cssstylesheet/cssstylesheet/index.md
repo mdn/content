@@ -1,5 +1,5 @@
 ---
-title: CSSStyleSheet.CSSStyleSheet()
+title: CSSStyleSheet()
 slug: Web/API/CSSStyleSheet/CSSStyleSheet
 tags:
   - API
@@ -51,6 +51,6 @@ console.log(stylesheet.media);
 
 {{Compat}}
 
-## Polyfill
+## See also
 
 - [construct-style-sheets-polyfill](https://www.npmjs.com/package/construct-style-sheets-polyfill)

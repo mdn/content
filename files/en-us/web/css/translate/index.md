@@ -62,7 +62,7 @@ translate: unset;
 
 ```html
 <div>
-  <p class="translate">Translation</p>
+  <p class="translate">Translation</p>
 </div>
 ```
 

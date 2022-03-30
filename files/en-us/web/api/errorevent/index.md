@@ -11,7 +11,7 @@ browser-compat: api.ErrorEvent
 
 The **`ErrorEvent`** interface represents events providing information related to errors in scripts or in files.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

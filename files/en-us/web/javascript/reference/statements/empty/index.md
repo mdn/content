@@ -26,7 +26,7 @@ The empty statement is a semicolon (`;`) indicating that no statement will
 be executed, even if JavaScript syntax requires one.
 
 The opposite behavior, where you want multiple statements, but JavaScript only allows a
-single one, is possible using a[ block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block),
+single one, is possible using a [block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block),
 which combines several statements into a single one.
 
 ## Examples
@@ -56,26 +56,6 @@ In the following example, the usage is probably not intentional:
 ```js example-bad
 if (condition);       // Caution, this "if" does nothing!
    killTheUniverse()  // So this always gets executed!!!
-```
-
-In the next example, an {{jsxref("Statements/if...else", "if...else")}} statement
-without curly braces (`{}`) is used.
-
-If `three` is `true`, nothing will happen, `four` does
-not matter, and also the `launchRocket()` function in the `else`
-case will not be executed.
-
-```js example-bad
-if (one)
-  doOne();
-else if (two)
-  doTwo();
-else if (three)
-  ; // nothing here
-else if (four)
-  doFour();
-else
-  launchRocket();
 ```
 
 ## Specifications

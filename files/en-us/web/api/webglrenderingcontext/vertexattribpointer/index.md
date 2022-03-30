@@ -153,7 +153,7 @@ to tell WebGL to use the default value, while calling
   "gl.enableVertexAttribArray()")}} will read the values from the array buffer as
 specified with `gl.vertexAttribPointer()`.
 
-Similarily, if our vertex shader expects e.g. a 4-component attribute with
+Similarly, if our vertex shader expects e.g. a 4-component attribute with
 `vec4` but in our `gl.vertexAttribPointer()` call we set the
 `size` to `2`, then WebGL will set the first two components based
 on the array buffer, while the third and fourth components are taken from the default
@@ -185,14 +185,14 @@ This example shows how to send your vertex attributes to the shader program. We 
 imaginary data structure where the attributes of each vertex are stored interleaved with
 a length of 20 bytes per vertex:
 
-1.  **position:** We need to store the X, Y and Z coordinates. For highest
+1. **position:** We need to store the X, Y and Z coordinates. For highest
     precision, we use 32-bit floats; in total this uses 12 bytes.
-2.  **normal vector:** We need to store the X, Y and Z components of the
+2. **normal vector:** We need to store the X, Y and Z components of the
     normal vector, but since precision is not that important, we use 8-bit signed
     integers. For better performance, we align the data to 32 bits by also storing a
     fourth zero-valued component, bringing the total size to 4 bytes. Also, we tell WebGL
     to normalize the values because our normals are always in range \[-1, 1].
-3.  **texture coordinate:** We need to store the U and V coordinates; for
+3. **texture coordinate:** We need to store the U and V coordinates; for
     this 16-bit unsigned integers offer enough precision, the total size is 4 bytes. We
     also tell WebGL to normalize the values to \[0, 1].
 

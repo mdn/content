@@ -10,12 +10,12 @@ browser-compat: api.FileReader.FileReader
 ---
 The **`FileReader()`** constructor creates a new FileReader.
 
-For details about how to use `FileReader`, see [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications).
+For details about how to use `FileReader`, see [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications).
 
 ## Syntax
 
 ```js
-const reader = new FileReader();
+new FileReader();
 ```
 
 ### Parameters
@@ -30,9 +30,9 @@ The following code snippet shows creation of a [`FileReader`](/en-US/docs/Web/AP
 function printFile(file) {
   const reader = new FileReader();
   reader.onload = function(evt) {
-    console.log(evt.target.result);
-  };
-  reader.readAsText(file);
+    console.log(evt.target.result);
+  };
+  reader.readAsText(file);
 }
 ```
 

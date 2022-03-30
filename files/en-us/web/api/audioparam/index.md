@@ -18,7 +18,7 @@ The Web Audio API's `AudioParam` interface represents an audio-related parameter
 
 An `AudioParam` can be set to a specific value or a change in value, and can be scheduled to happen at a specific time and following a specific pattern.
 
-Each `AudioParam` has a list of events, initially empty, that define when and how values change. When this list is not empty, changes using the `AudioParam.value` attributes are ignored. This list of events allows us to schedule changes that have to happen at very precise times, using arbitrary timelime-based automation curves. The time used is the one defined in {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}.
+Each `AudioParam` has a list of events, initially empty, that define when and how values change. When this list is not empty, changes using the `AudioParam.value` attributes are ignored. This list of events allows us to schedule changes that have to happen at very precise times, using arbitrary timeline-based automation curves. The time used is the one defined in {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}.
 
 ## AudioParam types
 
@@ -30,13 +30,13 @@ An _a-rate_ `AudioParam` takes the current audio parameter value for each [sampl
 
 ### k-rate
 
-A _k-rate_ `AudioParam` uses the same initial audio parameter value for the whole block processed; that is, 128 sample frames. In other words, the same value applies to every frame in the audio as it's processed by the node.
+A _k-rate_ `AudioParam` uses the same initial audio parameter value for the whole block processed; that is, 128 sample frames. In other words, the same value applies to every frame in the audio as it's processed by the node.
 
 ## Properties
 
 - {{domxref("AudioParam.defaultValue")}} {{readonlyInline}}
-  - : Represents the initial volume of the attribute as defined by the specific {{domxref("AudioNode")}} creating the `AudioParam`.
-- {{domxref("AudioParam.maxValue")}} {{readonlyInline}}
+  - : Represents the initial value of the attribute as defined by the specific {{domxref("AudioNode")}} creating the `AudioParam`.
+- {{domxref("AudioParam.maxValue")}} {{readonlyInline}}
   - : Represents the maximum possible value for the parameter's nominal (effective) range.
 - {{domxref("AudioParam.minValue")}} {{readonlyinline}}
   - : Represents the minimum possible value for the parameter's nominal (effective) range.
@@ -58,7 +58,7 @@ A _k-rate_ `AudioParam` uses the same initial audio parameter value for the whol
 - {{domxref("AudioParam.cancelScheduledValues()")}}
   - : Cancels all scheduled future changes to the `AudioParam`.
 - {{domxref("AudioParam.cancelAndHoldAtTime()")}}
-  - : Cancels all scheduled future changes to the `AudioParam` but holds its value at a given time until further changes are made using other methods.
+  - : Cancels all scheduled future changes to the `AudioParam` but holds its value at a given time until further changes are made using other methods.
 
 ## Examples
 

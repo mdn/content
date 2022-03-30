@@ -13,8 +13,8 @@ browser-compat: api.MediaStreamTrack.getSettings
 {{APIRef("Media Capture and Streams")}}
 
 The **`getSettings()`** method of the
-{{domxref("MediaStreamTrack")}} interface returns a {{domxref("MediaTrackSettings")}}
-object containing the current values of each of the constrainable properties for the
+{{domxref("MediaStreamTrack")}} interface returns a {{domxref("MediaTrackSettings")}}
+object containing the current values of each of the constrainable properties for the
 current `MediaStreamTrack`.
 
 See [Capabilities, constraints,
@@ -28,7 +28,7 @@ const settings = track.getSettings()
 
 ### Returns
 
-A {{domxref("MediaTrackSettings")}} object describing the current configuration of the
+A {{domxref("MediaTrackSettings")}} object describing the current configuration of the
 track's constrainable properties.
 
 > **Note:** The returned object identifies the current values of every

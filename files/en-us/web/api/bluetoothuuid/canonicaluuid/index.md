@@ -44,4 +44,3 @@ console.log(result); // "0000110a-0000-1000-8000-00805f9b34fb"
 ## Browser compatibility
 
 {{Compat}}
-

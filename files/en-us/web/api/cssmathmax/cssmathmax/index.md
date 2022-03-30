@@ -11,7 +11,7 @@ tags:
   - Houdini
 browser-compat: api.CSSMathMax.CSSMathMax
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
+{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSMathMax()`** constructor creates a
 new {{domxref("CSSMathMax")}} object which represents the CSS {{CSSXref('max()',
@@ -20,7 +20,7 @@ new {{domxref("CSSMathMax")}} object which represents the CSS {{CSSXref('max()',
 ## Syntax
 
 ```js
-var CSSMathMax = new CSSMathMax(args);
+new CSSMathMax(args);
 ```
 
 ### Parameters

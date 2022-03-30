@@ -10,9 +10,9 @@ browser-compat: api.HTMLBRElement
 ---
 {{APIRef("HTML DOM")}}
 
-The **`HTMLBRElement`** interface represents a HTML line break element ({{htmlelement("br")}}). It inherits from {{domxref("HTMLElement")}}.
+The **`HTMLBRElement`** interface represents an HTML line break element ({{htmlelement("br")}}). It inherits from {{domxref("HTMLElement")}}.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

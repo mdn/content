@@ -193,8 +193,6 @@ Setting the pixel storage mode affects the
 textures with the {{domxref("WebGLRenderingContext.texImage2D()")}} and
 {{domxref("WebGLRenderingContext.texSubImage2D()")}} methods.
 
-
-
 ```js
 var tex = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, tex);

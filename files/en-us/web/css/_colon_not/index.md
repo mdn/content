@@ -29,8 +29,6 @@ The `:not()` pseudo-class has a number of [quirks, tricks, and unexpected result
 
 The `:not()` pseudo-class requires a comma-separated list of one or more selectors as its argument. The list must not contain another negation selector or a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements).
 
-> **Warning:** The ability to list more than one selector is experimental and not yet widely supported.
-
 {{csssyntax}}
 
 ## Description
@@ -55,8 +53,8 @@ There are several unusual effects and outcomes when using `:not()` that you shou
 <p class="fancy">I am so very fancy!</p>
 <div>I am NOT a paragraph.</div>
 <h2>
-  <span class="foo">foo inside h2</span>
-  <span class="bar">bar inside h2</span>
+  <span class="foo">foo inside h2</span>
+  <span class="bar">bar inside h2</span>
 </h2>
 ```
 
@@ -91,7 +89,7 @@ body :not(div, .fancy) {
 /* Elements inside an <h2> that aren't a <span> with a class of foo. */
 /* Complex selectors such as an element with a class are not well supported yet. */
 h2 :not(span.foo) {
-  color: red;
+  color: red;
 }
 ```
 

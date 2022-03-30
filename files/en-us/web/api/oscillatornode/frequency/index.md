@@ -21,7 +21,7 @@ var oscillator = audioCtx.createOscillator();
 oscillator.frequency.setValueAtTime(440, audioCtx.currentTime); // value in hertz
 ```
 
-> **Note:** though the `AudioParam` returned is read-only, the value it represents is not.
+> **Note:** though the `AudioParam` returned is read-only, the value it represents is not.
 
 ### Value
 

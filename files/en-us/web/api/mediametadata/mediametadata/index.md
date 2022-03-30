@@ -3,6 +3,7 @@ title: MediaMetadata()
 slug: Web/API/MediaMetadata/MediaMetadata
 tags:
   - Audio
+  - Experimental
   - Media
   - Media Session API
   - MediaMetadata
@@ -21,14 +22,15 @@ The **`MediaMetadata()`** constructor creates a new
 ## Syntax
 
 ```js
-var mediaMetadata = new MediaMetadata([metadata])
+new MediaMetadata()
+new MediaMetadata(metadata)
 ```
 
 ### Parameters
 
 - _metadata_ {{optional_inline}}
 
-  - : The metadata parameters are as follows:
+  - : The metadata parameters are as follows:
 
     - `title`: The title of the media to be played.
     - `artist`: The name of the artist, group, creator, etc. of the media
@@ -44,7 +46,7 @@ correct format of metadata.
 
 ```js
 if ('mediaSession' in navigator){
-  navigator.mediaSession.metadata = new MediaMetadata({
+  navigator.mediaSession.metadata = new MediaMetadata({
     title: 'Unforgettable',
     artist: 'Nat King Cole',
     album: 'The Ultimate Collection (Remastered)',

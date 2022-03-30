@@ -18,7 +18,7 @@ The **`PromiseRejectionEvent`** interface represents events which are sent to th
 
 For details on promise rejection events, see {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Constructor
 

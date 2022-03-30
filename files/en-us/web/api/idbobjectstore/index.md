@@ -11,7 +11,7 @@ browser-compat: api.IDBObjectStore
 ---
 {{APIRef("IndexedDB")}}
 
-The **`IDBObjectStore`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) represents an object store in a database. Records within an object store are sorted according to their keys. This sorting enables fast insertion, look-up, and ordered retrieval.
+The **`IDBObjectStore`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) represents an object store in a database. Records within an object store are sorted according to their keys. This sorting enables fast insertion, look-up, and ordered retrieval.
 
 {{AvailableInWorkers}}
 
@@ -39,17 +39,17 @@ The **`IDBObjectStore`** interface of the [IndexedDB API](/en-US/docs/Web/API/In
 - {{domxref("IDBObjectStore.createIndex()")}}
   - : Creates a new index during a version upgrade, returning a new {{domxref("IDBIndex")}} object in the connected database.
 - {{domxref("IDBObjectStore.delete()")}}
-  - : returns an {{domxref("IDBRequest")}} object, and, in a separate thread, deletes the store object selected by the specified key. This is for deleting individual records out of an object store.
+  - : returns an {{domxref("IDBRequest")}} object, and, in a separate thread, deletes the store object selected by the specified key. This is for deleting individual records out of an object store.
 - {{domxref("IDBObjectStore.deleteIndex()")}}
   - : Destroys the specified index in the connected database, used during a version upgrade.
 - {{domxref("IDBObjectStore.get()")}}
-  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, returns the store object store selected by the specified key. This is for retrieving specific records from an object store.
+  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, returns the store object store selected by the specified key. This is for retrieving specific records from an object store.
 - {{domxref("IDBObjectStore.getKey()")}}
   - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread retrieves and returns the record key for the object in the object stored matching the specified parameter.
 - {{domxref("IDBObjectStore.getAll()")}}
-  - : Returns an {{domxref("IDBRequest")}} object retrieves all objects in the object store matching the specified parameter or all objects in the store if no parameters are given.
+  - : Returns an {{domxref("IDBRequest")}} object retrieves all objects in the object store matching the specified parameter or all objects in the store if no parameters are given.
 - {{domxref("IDBObjectStore.getAllKeys()")}}
-  - : Returns an {{domxref("IDBRequest")}} object retrieves record keys for all objects in the object store matching the specified parameter or all objects in the store if no parameters are given.
+  - : Returns an {{domxref("IDBRequest")}} object retrieves record keys for all objects in the object store matching the specified parameter or all objects in the store if no parameters are given.
 - {{domxref("IDBObjectStore.index()")}}
   - : Opens an index from this object store after which it can, for example, be used to return a sequence of records sorted by that index using a cursor.
 - {{domxref("IDBObjectStore.openCursor()")}}
@@ -61,14 +61,14 @@ The **`IDBObjectStore`** interface of the [IndexedDB API](/en-US/docs/Web/API/In
 
 ## Example
 
-This example shows a variety of different uses of object stores, from updating the data structure with {{domxref("IDBObjectStore.createIndex")}} inside an `onupgradeneeded` function, to adding a new item to our object store with {{domxref("IDBObjectStore.add")}}. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)
+This example shows a variety of different uses of object stores, from updating the data structure with {{domxref("IDBObjectStore.createIndex")}} inside an `onupgradeneeded` function, to adding a new item to our object store with {{domxref("IDBObjectStore.add")}}. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
 // Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+  note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in db.
   db = DBOpenRequest.result;
@@ -104,7 +104,7 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
 // Create a new item to add in to the object store
 var newItem = [
-  { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: 'December', year: 2013, notified: "no" }
+  { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: 'December', year: 2013, notified: "no" }
 ];
 
 // open a read/write db transaction, ready for adding the data

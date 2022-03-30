@@ -45,8 +45,6 @@ Produces:
 
 ![firefox confirm](firefoxcomfirmdialog_zpsf00ec381.png)
 
-
-
 ## Notes
 
 Dialog boxes are modal windows — they
@@ -54,6 +52,8 @@ prevent the user from accessing the rest of the program's interface until the di
 is closed. For this reason, you should not overuse any function that creates a dialog
 box (or modal window). Regardless, there are good reasons to [avoid using dialog boxes for
 confirmation](https://alistapart.com/article/neveruseawarning/).
+
+Alternatively {{HTMLElement("dialog")}} element can be used for confirmations.
 
 ## Specifications
 
@@ -65,5 +65,6 @@ confirmation](https://alistapart.com/article/neveruseawarning/).
 
 ## See also
 
+- {{HTMLElement("dialog")}} element
 - {{domxref("window.alert()")}}
 - {{domxref("window.prompt()")}}

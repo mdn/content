@@ -7,6 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-animations/
 ---
 {{CSSRef}}
 
@@ -24,11 +25,13 @@ tags:
 - {{cssxref("animation-iteration-count")}}
 - {{cssxref("animation-name")}}
 - {{cssxref("animation-play-state")}}
+- {{cssxref("animation-timeline")}}
 - {{cssxref("animation-timing-function")}}
 
 ### CSS At-rules
 
 - {{cssxref("@keyframes")}}
+- {{cssxref("@scroll-timeline")}}
 
 ## Guides
 
@@ -41,9 +44,7 @@ tags:
 
 ## Specifications
 
-| Specification                                | Status                                   | Comment             |
-| -------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{ SpecName('CSS3 Animations') }} | {{ Spec2('CSS3 Animations') }} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

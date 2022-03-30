@@ -15,7 +15,7 @@ Values are separated by space characters and/or a comma. The number of entries i
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feConvolveMatrix")}}
+- {{SVGElement("feConvolveMatrix")}}
 
 ## Example
 
@@ -68,10 +68,10 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `<list of numbers>`
-    *   : The list of {{cssxref("number")}}s that make up the kernel matrix for the convolution. Values are separated by space characters and/or a comma. The number of entries in the list must equal `<orderX>` times `<orderY>`.
+- `<list of numbers>`
+  - : The list of {{cssxref("number")}}s that make up the kernel matrix for the convolution. Values are separated by space characters and/or a comma. The number of entries in the list must equal `<orderX>` times `<orderY>`.
 
-        If the result of `orderX` \* `orderY` is not equal to the number of entries in the value list, the filter primitive acts as a pass through filter.
+    If the result of `orderX` \* `orderY` is not equal to the number of entries in the value list, the filter primitive acts as a pass through filter.
 
 ## Specifications
 

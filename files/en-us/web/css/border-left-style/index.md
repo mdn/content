@@ -101,7 +101,7 @@ tr, td {
 .b10 {border-left-style: outset;}
 ```
 
-Result
+#### Result
 
 {{ EmbedLiveSample('Examples', 300, 200) }}
 

@@ -46,7 +46,7 @@ An integer parsed from the given `string`.
 
 Or {{jsxref("NaN")}} when
 
-- the `radix` is smaller than `2` or bigger than
+- the `radix` modulo `2**32` is smaller than `2` or bigger than
   `36`, or
 - the first non-whitespace character cannot be converted to a number.
 
@@ -85,11 +85,11 @@ A value passed as the radix argument is coerced to a Number (if necessary), then
 value is 0, `NaN` or `Infinity` (undefined is coerced to
 `NaN`), JavaScript assumes the following:
 
-1.  If the input `string` begins with "`0x`" or "`0X`"
+1. If the input `string` begins with "`0x`" or "`0X`"
     (a zero, followed by lowercase or uppercase X), `radix` is
     assumed to be `16` and the rest of the string is parsed as a hexadecimal
     number.
-2.  If the input `string` begins with any other value, the radix is
+2. If the input `string` begins with any other value, the radix is
     `10` (decimal).
 
 Else if the radix value (coerced if necessary) is not in range \[2, 36] (inclusive)
@@ -169,7 +169,7 @@ parseInt('0xF', 16)
 parseInt('F', 16)
 parseInt('17', 8)
 parseInt(021, 8)
-parseInt('015', 10)    // but `parseInt(015, 8)` will return 13
+parseInt('015', 10)    // but `parseInt('015', 8)` will return 13
 parseInt(15.99, 10)
 parseInt('15,123', 10)
 parseInt('FXX123', 16)
@@ -234,8 +234,7 @@ parseInt('900719925474099267n')
 // 900719925474099300
 ```
 
-`parseInt` doesn't work with [numeric
-separators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_separators):
+`parseInt` doesn't work with [numeric separators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_separators):
 
 ```js
 parseInt('123_456')

@@ -38,7 +38,7 @@ In the following code block, you can see a new channel being created using the
 IFrame has loaded, we pass `port2` to the IFrame using
 {{domxref("MessagePort.postMessage")}} along with a message. The
 `handleMessage` handler then responds to a message being sent back from the
-IFrame (using {{domxref("MessagePort.onmessage")}}), putting it into a paragraph.
+IFrame (using {{domxref("MessagePort.message_event", "onmessage")}}), putting it into a paragraph.
 {{domxref("MessageChannel.port1")}} is listened to, to check when the message arrives.
 
 ```js
@@ -61,7 +61,7 @@ function handleMessage(e) {
 ```
 
 For a full working example, see our [channel
-messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on Github ([run it live
+messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on GitHub ([run it live
 too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
 
 ## Specifications

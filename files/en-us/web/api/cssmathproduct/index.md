@@ -12,13 +12,15 @@ tags:
   - Reference
 browser-compat: api.CSSMathProduct
 ---
-{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-The **`CSSMathProduct`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the result obtained by calling {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}.  It inherits properties and methods from its parent {{domxref('CSSNumericValue')}}.
+The **`CSSMathProduct`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the result obtained by calling {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}.  It inherits properties and methods from its parent {{domxref('CSSNumericValue')}}.
+
+{{InheritanceDiagram}}
 
 ## Constructor
 
-- {{domxref("CSSMathProduct.CSSMathProduct()")}}
+- {{domxref("CSSMathProduct.CSSMathProduct", "CSSMathProduct()")}}
   - : Creates a new `CSSMathProduct` object.
 
 ## Properties

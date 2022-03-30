@@ -3,7 +3,6 @@ title: SpeechSynthesisEvent.name
 slug: Web/API/SpeechSynthesisEvent/name
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechSynthesisEvent
@@ -13,22 +12,12 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisEvent.name
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
-The **`name`** read-only property of the
-{{domxref("SpeechSynthesisUtterance")}} interface returns the name associated with
-certain types of events occurring as the {{domxref("SpeechSynthesisUtterance.text")}}
-is being spoken: the name of the [SSML](https://www.w3.org/TR/speech-synthesis/#S3.3.2) marker reached in
-the case of a {{event("mark")}} event, or the type of boundary reached in the case of
-a {{event("boundary")}} event.
+The **`name`** read-only property of the {{domxref("SpeechSynthesisUtterance")}} interface returns the name associated with certain types of events occurring as the {{domxref("SpeechSynthesisUtterance.text")}} is being spoken:
+the name of the [SSML](https://www.w3.org/TR/speech-synthesis/#S3.3.2) marker reached in the case of a {{event("mark")}} event, or the type of boundary reached in the case of a {{event("boundary")}} event.
 
-## Syntax
-
-```js
-event.name;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}.
 

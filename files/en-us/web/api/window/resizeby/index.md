@@ -41,7 +41,7 @@ absolute terms, use {{domxref("window.resizeTo()")}}.
 ### Creating and resizing an external window
 
 For security reasons, it's no longer possible in Firefox for a website to change the
-default size of a window in a browser if the window wasn’t created by
+default size of a window in a browser if the window wasn't created by
 `window.open()`, or contains more than one tab. See the compatibility table
 for details on the change.
 
@@ -61,7 +61,7 @@ myExternalWindow.resizeBy(-100, -100);
 ```
 
 The window you create must respect the Same Origin Policy. If the window you open is
-not in the same orgin as the current window, you will not be able to resize, or access
+not in the same origin as the current window, you will not be able to resize, or access
 any information on, that window/tab.
 
 ## Specifications

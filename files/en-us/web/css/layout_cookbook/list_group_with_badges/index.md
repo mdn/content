@@ -40,11 +40,11 @@ To align the content horizontally, I use the {{cssxref("align-items")}} property
 
 The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
 
-#### justify-content
+### justify-content
 
 {{Compat("css.properties.justify-content")}}
 
-#### align-items
+### align-items
 
 {{Compat("css.properties.align-items")}}
 

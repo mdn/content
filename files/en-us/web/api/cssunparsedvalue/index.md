@@ -18,9 +18,11 @@ The **`CSSUnparsedValue`** interface of the {{domxref('CSS_Object_Model#css_type
 
 Custom properties are represented by `CSSUnparsedValue` and {{cssxref('var()')}} references are represented using {{domxref('CSSVariableReferenceValue')}}.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
-- {{domxref("CSSUnparsedValue.CSSUnparsedValue()")}}
+- {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}}
   - : Creates a new `CSSUnparsedValue` object.
 
 ## Properties

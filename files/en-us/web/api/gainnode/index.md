@@ -17,6 +17,8 @@ The gain is a unitless value, changing with time, that is multiplied to each cor
 
 ![The GainNode is increasing the gain of the output.](webaudiogainnode.png)
 
+{{InheritanceDiagram}}
+
 <table class="properties">
   <tbody>
     <tr>

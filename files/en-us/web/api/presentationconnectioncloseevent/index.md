@@ -13,12 +13,14 @@ browser-compat: api.PresentationConnectionCloseEvent
 ---
 {{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("Presentation API")}}
 
-The **`PresentationConnectionCloseEvent`** interface of the [Presentation API](/en-US/docs/Web/API/Presentation_API) is fired on a {{domxref("PresentationConnection")}} when it is closed.
+The **`PresentationConnectionCloseEvent`** interface of the [Presentation API](/en-US/docs/Web/API/Presentation_API) is fired on a {{domxref("PresentationConnection")}} when it is closed.
+
+{{InheritanceDiagram}}
 
 ## Constructor
 
-- {{DOMxRef("PresentationConnectionCloseEvent.PresentationConnectionCloseEvent()")}}
-  - : Creates a new PresentationConnectionCloseEvent.
+- {{domxref("PresentationConnectionCloseEvent.PresentationConnectionCloseEvent", "PresentationConnectionCloseEvent()")}}
+  - : Creates a new PresentationConnectionCloseEvent.
 
 ## Properties
 

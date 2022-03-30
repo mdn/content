@@ -14,6 +14,8 @@ The **`MIDIPort`** interface of the {{domxref('Web MIDI API','','',' ')}} repres
 
 A `MIDIPort` instance is created when a new MIDI device is connected. Therefore it has no constructor.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 - {{domxref("MIDIPort.id")}}{{ReadOnlyInline}}
@@ -53,11 +55,6 @@ A `MIDIPort` instance is created when a new MIDI device is connected. Therefore 
     - `"pending"`
       - : The device that this `MIDIPort` represents has been opened but has subsequently disconnected .
 
-### Event handlers
-
-- {{domxref("MIDIPort.onstatechange")}}
-  - : Called when an existing port changes its state or connection.
-
 ## Methods
 
 _This interface also inherits methods from {{domxref("EventTarget")}}._
@@ -66,6 +63,11 @@ _This interface also inherits methods from {{domxref("EventTarget")}}._
   - : Makes the MIDI device connected to this `MIDIPort` explicitly available, and returns a {{jsxref("Promise")}} which resolves once access to the port has been successful.
 - {{domxref("MIDIPort.close()")}}
   - : Makes the MIDI device connected to this `MIDIPort` unavailable, changing the {{domxref("MIDIPort.state","state")}} from `"open"` to `"closed"`. This returns a {{jsxref("Promise")}} which resolves once the port has been closed.
+
+## Events
+
+- {{domxref("MIDIPort.statechange_event")}}
+  - : Called when an existing port changes its state or connection.
 
 ## Examples
 

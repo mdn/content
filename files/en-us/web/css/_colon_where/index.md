@@ -42,7 +42,7 @@ The difference between `:where()` and {{CSSxRef(":is", ":is()")}} is that `:wher
 
 The specification defines `:is()` and `:where()` as accepting a [forgiving selector list](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list).
 
-In CSS when using a selector list, if any of the selectors are invalid then the whole list is deemed invalid. When using `:is()` or `:where() `instead of the whole list of selectors being deemed invalid if one fails to parse, the incorrect or unsupported selector will be ignored and the others used.
+In CSS when using a selector list, if any of the selectors are invalid then the whole list is deemed invalid. When using `:is()` or `:where()` instead of the whole list of selectors being deemed invalid if one fails to parse, the incorrect or unsupported selector will be ignored and the others used.
 
 ```css
 :where(:valid, :unsupported) {
@@ -131,7 +131,7 @@ This won't work for the red links, because the selectors inside `:is()` count to
 
 However, selectors inside `:where()` have specificity 0, so the orange footer link will be overridden by our simple selector.
 
-**Note**: You can also find this example on GitHub; see [is-where](https://mdn.github.io/css-examples/is-where/).
+> **Note:** You can also find this example on GitHub; see [is-where](https://mdn.github.io/css-examples/is-where/).
 
 {{EmbedLiveSample('Examples', '100%', 600)}}
 

@@ -17,19 +17,11 @@ The `positionY` read-only property of the {{ domxref("AudioListener") }} interfa
 
 > **Note:** The parameter is _a-rate_ when used with a {{domxref("PannerNode")}} whose {{domxref("PannerNode.panningModel", "PannerNode")}} is set to equalpower, or _k-rate_ otherwise.
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var myListener = audioCtx.listener;
-myListener.positionY.value = 1;
-```
-
-### Value
+## Value
 
 An {{domxref("AudioParam")}}. Its default value is 0, and it can range between positive and negative infinity.
 
-## Example
+## Examples
 
 See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
 

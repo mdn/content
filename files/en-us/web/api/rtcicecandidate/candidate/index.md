@@ -24,13 +24,7 @@ Most of the other properties of `RTCIceCandidate` are actually extracted from th
 
 This property can be configured using the `candidate` property of the object passed into the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate() constructor")}} or {{domxref("RTCPeerConnection.addIceCandidate()")}}.
 
-## Syntax
-
-```js
-var candidate = RTCIceCandidate.candidate;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} describing the properties of the candidate, taken directly from the {{Glossary("SDP")}} attribute `"candidate"`.
 The candidate string specifies the network connectivity information for the candidate.
@@ -38,7 +32,9 @@ If the `candidate` is an empty string (`""`), the end of the candidate list has 
 
 The syntax of the candidate string is described in {{RFC(5245, "", 15.1)}}. For an a-line (attribute line) that looks like this:
 
-    a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```
+a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```
 
 the corresponding `candidate` string's value will be: `"candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host"`.
 

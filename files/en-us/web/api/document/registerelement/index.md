@@ -15,8 +15,6 @@ browser-compat: api.Document.registerElement
 > **Warning:** `document.registerElement()` is deprecated in
 > favor of {{DOMxRef("CustomElementRegistry.define()","customElements.define()")}}.
 
-{{draft}}
-
 The **`document.registerElement()`** method registers a new [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements) in the
 browser and returns a constructor for the new element.
 
@@ -47,7 +45,7 @@ Here is a very simple example:
 var Mytag = document.registerElement('my-tag');
 ```
 
-Now the new tag is registered in the browser. The `Mytag` variable holds a
+Now the new tag is registered in the browser. The `Mytag` variable holds a
 constructor that you can use to create a `my-tag` element in the document as
 follows:
 

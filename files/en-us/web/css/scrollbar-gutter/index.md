@@ -8,6 +8,7 @@ tags:
   - scrollbar-gutter
 browser-compat: css.properties.scrollbar-gutter
 ---
+
 {{CSSRef}}
 
 The **`scrollbar-gutter`** [CSS](/en-US/docs/Web/CSS) property allows authors to reserve space for the scrollbar, preventing unwanted layout changes as the content grows while also avoiding unnecessary visuals when scrolling isn't needed.
@@ -55,40 +56,57 @@ scrollbar-gutter: unset;
 
 ## Examples
 
+The examples below show how the different values for the `scrollbar-gutter` property would affect a scrollable `div` element (`.container`) with one or more paragraphs contained within.
+
+> **Note:** In the images for the examples, the user's system settings are set to classic scrollbars (always shown).
+
 ### Example 1
 
-Prevent unneeded layout changes as the content growing or shrinking causes the scrollbar to appear/disappear:
+Prevent unneeded layout changes as the content growing or shrinking causes the scrollbar to appear/disappear, a space is reserved for it.
 
 ```css
 .container {
-    scrollbar-gutter: stable;
+  scrollbar-gutter: stable;
 }
 ```
 
-### Example 3
+![A containing div element with a paragraph of text inside and a space to the right where the scrollbar is](stable-no-scroll.png)
+
+### Example 2
 
 Add symmetric spacing to both sides of the box so the content is centered:
 
 ```css
 .container {
-    scrollbar-gutter: stable both-edges;
+  scrollbar-gutter: stable both-edges;
 }
 ```
 
-### Example 4
+![A containing div element with a paragraph of text inside, a space to the right where the scrollbar is and a matching empty space to the left](stable-both-edges.png)
+
+### Example 3
 
 Align the contents of a non-scrolling element and a scrolling one adjacent to it:
+This example shows two divs side by side. The one on the left has no scroll, but the one on the right does. Both have `scrollbar-gutter` applied, which also reserves space for the div on the left which doesn't have scrollable content. This is a good technique to use to keep the width of content consistent.
 
 ```css
-.header {
-    overflow: hidden;
-    scrollbar-gutter: stable;
+.container1 {
+  overflow: hidden;
+  scrollbar-gutter: stable;
 }
 
-.container {
-    scrollbar-gutter: stable;
+.container2 {
+  scrollbar-gutter: stable;
 }
 ```
+
+![Two adjacent divs containing text, both with space for a scrollbar](side-by-side.png)
+
+### Overlay scrollbars
+
+For reference, this image shows the same div as above, but with the user's system settings set to overlay scrollbars. Note here the scrollbar will only show when the user is scrolling and on top of the content, so no space is reserved for it and the `scrollbar-gutter` property has no effect.
+
+![One div with text, no visible scrollbar](for-ref-no-scroll.png)
 
 ## Specifications
 

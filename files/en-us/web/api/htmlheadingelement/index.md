@@ -13,14 +13,14 @@ browser-compat: api.HTMLHeadingElement
 
 The **`HTMLHeadingElement`** interface represents the different heading elements, [`<h1>` through `<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements). It inherits methods and properties from the {{domxref("HTMLElement")}} interface.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLHeadingElement.align")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}} representing an enumerated attribute indicating alignment of the heading with respect to the surrounding context. The possible values are `"left"`, `"right"`, `"justify"`, and `"center"`.
+  - : Is a {{domxref("DOMString")}} representing an enumerated attribute indicating alignment of the heading with respect to the surrounding context. The possible values are `"left"`, `"right"`, `"justify"`, and `"center"`.
 
 ## Methods
 

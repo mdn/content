@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Reference
   - margin-inline
   - margin-inline-start

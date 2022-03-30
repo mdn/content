@@ -101,7 +101,7 @@ argument for additional options was not present in the HTML5 version.
 ## Specifications
 
 - [MSDN page
-  for `showModalDialog`](<https://msdn.microsoft.com/en-us/library/ms536759(VS.85).aspx>)
+  for `showModalDialog`](<https://msdn.microsoft.com/library/ms536759(VS.85).aspx>)
 
 ## Browser compatibility
 

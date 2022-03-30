@@ -9,13 +9,15 @@ The {{domxref("HTMLElement")}} property **`inert`** is a boolean value that, whe
 
 ## Syntax
 
-    isInert = HTMLElement.inert;
+```js
+isInert = HTMLElement.inert;
 
-    HTMLElement.inert = true | false;
+HTMLElement.inert = true | false;
+```
 
 ### Value
 
-A Boolean which is `true` if the element is inert; otherwise, the value is `false`.
+A Boolean which is `true` if the element is inert; otherwise, the value is `false`.
 
 ## Example
 
@@ -42,7 +44,7 @@ A Boolean which is `true` if the element is inert; otherwise, the value is `f
 
 {{ EmbedLiveSample('Example', 560, 200) }}
 
-> **Note:** This attribute, by itself, will not cause any visual change to the content as displayed in the browser. In the example above, CSS has been applied so that any direct descendant of an element with the inert attribute is rendered semi-opaque.
+> **Note:** This attribute, by itself, will not cause any visual change to the content as displayed in the browser. In the example above, CSS has been applied so that any direct descendant of an element with the inert attribute is rendered semi-opaque.
 
 ## Specifications
 

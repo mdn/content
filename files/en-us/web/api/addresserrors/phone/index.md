@@ -13,22 +13,16 @@ tags:
   - Read-only
   - Reference
   - Telephone Number
-  - Téléphone
+  - Telephone
   - Validation
   - payment
 browser-compat: api.AddressErrors.phone
 ---
 {{APIRef("Payment Request API")}}
 
-An object based on {{domxref("AddressErrors")}} includes a **`phone`** property when the address's {{domxref("PaymentAddress.phone", "phone")}} property couldn't be validated. The returned string explains the error and should offer suggestions for how to correct it.
+An object based on {{domxref("AddressErrors")}} includes a **`phone`** property when the address's {{domxref("PaymentAddress.phone", "phone")}} property couldn't be validated. The returned string explains the error and should offer suggestions for how to correct it.
 
-## Syntax
-
-```js
-var phoneError = AddressErrors.phone;
-```
-
-### Value
+## Value
 
 If the value specified in the {{domxref("PaymentAddress")}} object's {{domxref("PaymentAddress.phone", "phone")}} property could not be validated, this property contains a {{domxref("DOMString")}} offering a human-readable explanation of the validation error and offers suggestions for correcting it.
 

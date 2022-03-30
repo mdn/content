@@ -15,7 +15,7 @@ browser-compat: api.IDBObjectStore.createIndex
 {{ APIRef("IndexedDB") }}
 
 The **`createIndex()`** method of the
-{{domxref("IDBObjectStore")}} interface creates and returns a new
+{{domxref("IDBObjectStore")}} interface creates and returns a new
 {{domxref("IDBIndex")}} object in the connected database. It creates a new
 field/column defining a new data point for each database record to contain.
 
@@ -24,7 +24,7 @@ IndexedDB uses the [structured
 clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) to serialize stored objects, which allows for storage of simple
 and complex objects.
 
-Note that this method must be called only from a `VersionChange` transaction
+Note that this method must be called only from a `VersionChange` transaction
 mode callback.
 
 {{AvailableInWorkers}}
@@ -105,81 +105,37 @@ var myIDBIndex = objectStore.createIndex(indexName, keyPath, objectParameters);
 
 ### Return value
 
-An {{domxref("IDBIndex")}} object: the newly created index.
+An {{domxref("IDBIndex")}} object: the newly created index.
 
 ### Exceptions
 
 This method may raise a {{domxref("DOMException")}} of one of the following types:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>ConstraintError</code></td>
-      <td>
-        Occurs if an index with the same name already exists in the database.
-        Index names are case-sensitive.
-      </td>
-    </tr>
-    <tr>
-      <td><code>InvalidAccessError</code></td>
-      <td>
-        Occurs if the provided key path is a sequence, and
-        <code>multiEntry</code> is set to <code>true</code> in the
-        <code>objectParameters</code> object.
-      </td>
-    </tr>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>
-        <p>Occurs if either:</p>
-        <ul>
-          <li>
-            The method was not called from
-            a <code>versionchange</code> transaction mode callback, i.e. from
-            inside a
-            {{domxref("IDBOpenDBRequest.onupgradeneeded")}}
-            handler.
-          </li>
-          <li>The object store has been deleted.</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td><code>SyntaxError</code></td>
-      <td>
-        Occurs if the provided <code>keyPath</code> is not a
-        <a href="https://www.w3.org/TR/IndexedDB/#dfn-valid-key-path"
-          >valid key path</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <td><code>TransactionInactiveError</code></td>
-      <td>
-        Occurs if the transaction this {{domxref("IDBObjectStore")}}
+- `ConstraintError` {{domxref("DOMException")}}
+  - : Thrown if an index with the same name already exists in the database. Index names are case-sensitive.
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : Thrown if the provided key path is a sequence, and `multiEntry` is set to `true` in the `objectParameters` object.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if:
+    - The method was not called from a `versionchange` transaction mode callback, i.e. from inside a {{domxref("IDBOpenDBRequest.upgradeneeded_event", "onupgradeneeded")}} handler.
+    - The object store has been deleted.
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if the provided `keyPath` is not a <a href="https://www.w3.org/TR/IndexedDB/#dfn-valid-key-path">valid key path</a>.
+- `TransactionInactiveError` {{domxref("DOMException")}}
+  - : Thrown if the transaction this {{domxref("IDBObjectStore")}}
         belongs to is not active (e.g. has been deleted or removed.) In Firefox
-        previous to version 41, an <code>InvalidStateError</code> was raised in
+        previous to version 41, an `InvalidStateError` was raised in
         this case as well, which was misleading; this has now been fixed (see
         {{Bug("1176165")}}.)
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Example
 
 In the following example you can see
-the {{domxref("IDBOpenDBRequest.onupgradeneeded")}} handler being used to update the
+the {{domxref("IDBOpenDBRequest.upgradeneeded_event", "onupgradeneeded")}} handler being used to update the
 database structure if a database with a higher version number is loaded.
-`createIndex()` is used to create new indexes on the object store.  For a
-full working example, see our [To-do
-Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app ([view example live](https://mdn.github.io/to-do-notifications/).)
+`createIndex()` is used to create new indexes on the object store. For a
+full working example, see our [To-do
+Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app ([view example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
 var db;
@@ -193,14 +149,14 @@ DBOpenRequest.onerror = function(event) {
 };
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+  note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable.
-  // This is used a lot below.
+  // This is used a lot below.
   db = request.result;
 
   // Run the displayData() function to populate the task list with
-  // all the to-do list data already in the IDB
+  // all the to-do list data already in the IDB
   displayData();
 };
 
@@ -220,12 +176,12 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
   // define what data items the objectStore will contain
 
-  objectStore.createIndex("hours", "hours", { unique: false });
-  objectStore.createIndex("minutes", "minutes", { unique: false });
-  objectStore.createIndex("day", "day", { unique: false });
-  objectStore.createIndex("month", "month", { unique: false });
-  objectStore.createIndex("year", "year", { unique: false });
-  objectStore.createIndex("notified", "notified", { unique: false });
+  objectStore.createIndex("hours", "hours", { unique: false });
+  objectStore.createIndex("minutes", "minutes", { unique: false });
+  objectStore.createIndex("day", "day", { unique: false });
+  objectStore.createIndex("month", "month", { unique: false });
+  objectStore.createIndex("year", "year", { unique: false });
+  objectStore.createIndex("notified", "notified", { unique: false });
 };
 ```
 

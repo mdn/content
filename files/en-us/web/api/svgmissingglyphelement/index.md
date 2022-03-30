@@ -15,7 +15,7 @@ The **`SVGMissingGlyphElement`** interface corresponds to the {{SVGElement("miss
 
 Object-oriented access to the attributes of the {{SVGElement("missing-glyph")}} element via the SVG DOM is not possible.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

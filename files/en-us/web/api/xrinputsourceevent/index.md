@@ -30,6 +30,8 @@ The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)'s **`XRInputSourceE
 
 To learn more about handling inputs in a WebXR project, see the article [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/Inputs).
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("XRInputSourceEvent.XRInputSourceEvent", "XRInputSourceEvent()")}}
@@ -40,7 +42,7 @@ To learn more about handling inputs in a WebXR project, see the article [Inputs 
 - {{domxref("XRInputSourceEvent.frame", "frame")}} {{ReadOnlyInline}}
   - : An {{domxref("XRFrame")}} object providing the needed information about the event frame during which the event occurred. This frame may have been rendered in the past rather than being a current frame. Because this is an _event_ frame, not an _animation_ frame, you cannot call the {{domxref("XRFrame")}} method {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} on it; instead, use {{domxref("XRFrame.getPose", "getPose()")}}.
 - {{domxref("XRInputSourceEvent.inputSource", "inputSource")}} {{ReadOnlyInline}}
-  - : An {{domxref("XRInputSource")}} object indicating which input source generated the input event.
+  - : An {{domxref("XRInputSource")}} object indicating which input source generated the input event.
 
 ## Methods
 

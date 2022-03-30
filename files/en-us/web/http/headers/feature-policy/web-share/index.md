@@ -1,5 +1,5 @@
 ---
-title: web-share
+title: 'Feature-Policy: web-share'
 slug: Web/HTTP/Headers/Feature-Policy/web-share
 tags:
   - Feature-Policy
@@ -33,7 +33,7 @@ The default value is `'self'`.
 
 {{Compat}}
 
-Browser implementation is being discussed in <https://github.com/w3c/web-share/issues/169>.
+Browser implementation is being discussed in <https://github.com/w3c/web-share/issues/169>.
 
 ## See also
 

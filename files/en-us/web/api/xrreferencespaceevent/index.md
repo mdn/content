@@ -22,7 +22,9 @@ browser-compat: api.XRReferenceSpaceEvent
 ---
 {{APIRef("WebXR Device API")}}{{SecureContext_header}}
 
-The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) interface **`XRReferenceSpaceEvent`** represents an event sent to an {{domxref("XRReferenceSpace")}}. Currently, the only event  that uses this type is the {{domxref("XRReferenceSpace.reset_event", "reset")}} event.
+The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) interface **`XRReferenceSpaceEvent`** represents an event sent to an {{domxref("XRReferenceSpace")}}. Currently, the only event  that uses this type is the {{domxref("XRReferenceSpace.reset_event", "reset")}} event.
+
+{{InheritanceDiagram}}
 
 ## Constructor
 

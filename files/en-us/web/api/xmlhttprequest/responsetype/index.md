@@ -25,17 +25,9 @@ It also lets the author change the
 response type. If an empty string is set as the value of `responseType`, the
 default value of `text` is used.
 
-## Syntax
+## Value
 
-```js
-var type = XMLHttpRequest.responseType;
-
-XMLHttpRequest.responseType = type;
-```
-
-### Value
-
-A {{jsxref("String")}} which specifies what type of data the response contains.
+A string which specifies what type of data the response contains.
 It can take the following values:
 
 - `""`
@@ -64,8 +56,8 @@ It can take the following values:
 - `InvalidAccessError`
   - : An attempt was made to change the value of `responseType` on
     an`XMLHttpRequest` which is in synchronous mode but not in a
-    {{domxref("Worker")}}. For additional details, see {{anch("Synchronous XHR
-    restrictions")}} below.
+    {{domxref("Worker")}}. For additional details, see [Synchronous XHR
+    restrictions](#synchronous_xhr_restrictions) below.
 
 ## Usage notes
 

@@ -11,11 +11,11 @@ browser-compat: api.IDBObjectStore.delete
 {{APIRef("IndexedDB")}}
 
 The **`delete()`** method of the
-{{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object,
+{{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object,
 and, in a separate thread, deletes the specified record or records.
 
-Either a key or an {{domxref("IDBKeyRange")}} can be passed, allowing one or multiple
-records to be deleted from a store. To delete all records in a store, use 
+Either a key or an {{domxref("IDBKeyRange")}} can be passed, allowing one or multiple
+records to be deleted from a store. To delete all records in a store, use
 {{domxref("IDBObjectStore.clear")}}.
 
 Bear in mind that if you are using a {{domxref("IDBCursor", "IDBCursor")}}, you can use
@@ -35,52 +35,32 @@ var request = objectStore.delete(KeyRange);
 ### Parameters
 
 - Key
-  - : The key of the record to be deleted, or an {{domxref("IDBKeyRange")}} to delete all
+  - : The key of the record to be deleted, or an {{domxref("IDBKeyRange")}} to delete all
     records with keys in range.
 
 ### Return value
 
-An {{domxref("IDBRequest")}} object on which subsequent events related to this
-operation are fired. The `request.result` attribute is set to undefined.
+An {{domxref("IDBRequest")}} object on which subsequent events related to this
+operation are fired. The `request.result` attribute is set to undefined.
 
 ### Exceptions
 
 This method may raise a {{domxref("DOMException")}} of the following types:
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>TransactionInactiveError</code></td>
-      <td>This object store's transaction is inactive.</td>
-    </tr>
-    <tr>
-      <td><code>ReadOnlyError</code></td>
-      <td>The object store's transaction mode is read-only.</td>
-    </tr>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>The object store has been deleted.</td>
-    </tr>
-    <tr>
-      <td><code>DataError</code></td>
-      <td>
-        The <var>key</var> is not a <a
+- `TransactionInactiveError` {{domxref("DOMException")}}
+  - : Thrown if this object store's transaction is inactive.
+- `ReadOnlyError` {{domxref("DOMException")}}
+  - : Thrown if the object store's transaction mode is read-only.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the object store has been deleted.
+- `DataError` {{domxref("DOMException")}}
+  - : Thrown if the <var>key</var> is not a <a
           href="https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#dfn-valid-key"
           >valid key</a
-        > or a <a
+        > or a <a
           href="https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#dfn-key-range"
           >key range</a
         >.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Examples
 

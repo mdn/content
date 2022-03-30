@@ -12,7 +12,7 @@ tags:
   - mul()
 browser-compat: api.CSSNumericValue.mul
 ---
-{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`mul()`** method of the
 {{domxref("CSSNumericValue")}} interface multiplies the `CSSNumericValue` by

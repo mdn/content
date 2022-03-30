@@ -12,7 +12,7 @@ browser-compat: api.HTMLHeadElement
 
 The **`HTMLHeadElement`** interface contains the descriptive information, or metadata, for a document. This object inherits all of the properties and methods described in the {{domxref("HTMLElement")}} interface.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

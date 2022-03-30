@@ -13,7 +13,7 @@ browser-compat: api.HTMLShadowElement
 
 The **`HTMLShadowElement`** interface represents a {{HTMLElement("shadow")}} HTML Element, which is used in [Shadow DOM](/en-US/docs/Web/Web_Components/Shadow_DOM).
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

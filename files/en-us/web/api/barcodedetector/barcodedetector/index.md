@@ -10,7 +10,7 @@ tags:
   - shape detection
 browser-compat: api.BarcodeDetector.BarcodeDetector
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}
+{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}
 
 The **`BarcodeDetector()`** constructor creates
 a new {{domxref("BarcodeDetector")}} object which detects linear and two-dimensional
@@ -19,7 +19,7 @@ barcodes in images.
 ## Syntax
 
 ```js
-var BarcodeDetector = new BarcodeDetector();
+new BarcodeDetector();
 ```
 
 ### Parameters

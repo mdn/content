@@ -14,7 +14,7 @@ browser-compat: api.HTMLMenuElement
 
 The **`HTMLMenuElement`** interface provides special properties (beyond those defined on the regular {{DOMxRef("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("menu")}} elements.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Constructor
 

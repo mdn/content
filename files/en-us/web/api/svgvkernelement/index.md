@@ -15,7 +15,7 @@ The **`SVGVKernElement`** interface corresponds to the {{SVGElement("vkern")}} e
 
 Object-oriented access to the attributes of the {{SVGElement("vkern")}} element via the SVG DOM is not possible.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

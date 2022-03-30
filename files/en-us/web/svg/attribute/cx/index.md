@@ -11,9 +11,9 @@ The **`cx`** attribute define the x-axis coordinate of a center point.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("circle")}}
-*   {{SVGElement("ellipse")}}
-*   {{SVGElement("radialGradient")}}
+- {{SVGElement("circle")}}
+- {{SVGElement("ellipse")}}
+- {{SVGElement("radialGradient")}}
 
 ## Example
 
@@ -28,7 +28,7 @@ html,body,svg { height:100% }
     <stop offset="100%" stop-color="black" />
   </radialGradient>
 
-  <circle cx="50" cy="50" r="45"/>
+  <circle cx="50" cy="50" r="45"/>
   <ellipse cx="150" cy="50" rx="45" ry="25" />
   <rect x="205" y="5" width="90" height="90" fill="url(#myGradient)" />
 </svg>
@@ -131,9 +131,9 @@ html,body,svg { height:100% }
     </radialGradient>
   </defs>
 
-  <rect x="1"  y="1" width="8" height="8" fill="url(#myGradient000)" stroke="black" />
-  <rect x="13" y="1" width="8" height="8" fill="url(#myGradient050)" stroke="black" />
-  <rect x="25" y="1" width="8" height="8" fill="url(#myGradient100)" stroke="black" />
+  <rect x="1"  y="1" width="8" height="8" fill="url(#myGradient000)" stroke="black" />
+  <rect x="13" y="1" width="8" height="8" fill="url(#myGradient050)" stroke="black" />
+  <rect x="25" y="1" width="8" height="8" fill="url(#myGradient100)" stroke="black" />
 </svg>
 ```
 
@@ -188,5 +188,5 @@ html,body,svg { height:100% }
 
 ## See also
 
-*   [cy](/en-US/docs/Web/SVG/Attribute/cy)
-*   [r](/en-US/docs/Web/SVG/Attribute/r)
+- [cy](/en-US/docs/Web/SVG/Attribute/cy)
+- [r](/en-US/docs/Web/SVG/Attribute/r)

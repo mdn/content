@@ -23,7 +23,9 @@ The **`changedTouches`** read-only property is a {{ domxref("TouchList") }} whos
 
 ## Syntax
 
-    var changes = touchEvent.changedTouches;
+```js
+var changes = touchEvent.changedTouches;
+```
 
 ### Return value
 

@@ -18,7 +18,7 @@ Firefox, which is the descendant of Netscape's browsers, removed support for `<s
 
 ## Attributes
 
-Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes "HTML/Global attributes").
+Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 - {{ htmlattrdef("type") }}
   - : This attribute determines type of spacer. Possible values are `horizontal`, `vertical` and `block`.

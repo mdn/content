@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Property
   - CSS Text
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.hanging-punctuation
@@ -42,7 +41,7 @@ hanging-punctuation: unset;
 
 ## Syntax
 
-The `hanging-punctuation` property may be specified with one, two, or three values.
+The `hanging-punctuation` property may be specified with one, two, or three space-separated values.
 
 - **One-value** syntax uses any one of the keyword values in the list below.
 - **Two-value** syntax uses one of the following:
@@ -83,7 +82,7 @@ The `hanging-punctuation` property may be specified with one, two, or three valu
 #### HTML
 
 ```html
-<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim nunc mauris, et sollicitudin est scelerisque sed. Praesent laoreet tortor massa, sit amet vulputate nulla pharetra ut.”</p>
+<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim nunc mauris, et sollicitudin est scelerisque sed. Praesent laoreet tortor massa, sit amet vulputate nulla pharetra ut."</p>
 ```
 
 #### CSS
@@ -107,4 +106,7 @@ p {
 
 {{Compat}}
 
+## See also
+
+- {{cssxref('text-indent')}}
 - [CSS Tricks: Hanging punctuation](https://css-tricks.com/almanac/properties/h/hanging-punctuation/)

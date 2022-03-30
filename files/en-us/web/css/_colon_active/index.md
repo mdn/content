@@ -21,9 +21,9 @@ a:active {
 }
 ```
 
-The `:active` pseudo-class is commonly used on {{HTMLElement("a")}} and {{HTMLElement("button")}} elements. Other common targets of this pseudo-class include elements that _contain_ an activated element, and form elements that are being activated through their associated {{HTMLElement("label")}}.
+The `:active` pseudo-class is commonly used on {{HTMLElement("a")}} and {{HTMLElement("button")}} elements. Other common targets of this pseudo-class include elements that are _contained in_ an activated element, and form elements that are being activated through their associated {{HTMLElement("label")}}.
 
-Styles defined by the `:active` pseudo-class will be overridden by any subsequent link-related pseudo-class ({{cssxref(":link")}}, {{cssxref(":hover")}}, or {{cssxref(":visited")}}) that has at least equal specificity. To style links appropriately, put the `:active` rule after all other link-related rules, as defined by the _LVHA-order_: `:link` — `:visited` — `:hover` — `:active`.
+Styles defined by the `:active` pseudo-class will be overridden by any subsequent link-related pseudo-class ({{cssxref(":link")}}, {{cssxref(":hover")}}, or {{cssxref(":visited")}}) that has at least equal specificity. To style links appropriately, put the `:active` rule after all other link-related rules, as defined by the _LVHA-order_: `:link` — `:visited` — `:hover` — `:active`.
 
 > **Note:** On systems with multi-button mice, CSS3 specifies that the `:active` pseudo-class must only apply to the primary button; on right-handed mice, this is typically the leftmost button.
 

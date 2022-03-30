@@ -51,7 +51,7 @@ This is a JavaScript library, that acts as an abstraction layer between browser 
 
 ## Snap.svg
 
-URL: [snapsvg.io](http://snapsvg.io/)
+URL: [snapsvg.io](http://snapsvg.io/)
 
 A newer JavaScript abstraction layer from the same author of Raphael JS. Snap.svg is designed for modern browsers and therefore supports the newest SVG features like masking, clipping, patterns, full gradients, groups. It does not support the older browsers that Raphael does.
 

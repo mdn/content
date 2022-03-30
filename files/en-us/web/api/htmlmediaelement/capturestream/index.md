@@ -35,7 +35,7 @@ None.
 
 ### Return value
 
-A {{domxref('MediaStream')}} object which can be used as a source for audio and/or
+A {{domxref('MediaStream')}} object which can be used as a source for audio and/or
 video data by other media processing code, or as a source for [WebRTC](/en-US/docs/Glossary/WebRTC).
 
 ## Example
@@ -50,7 +50,7 @@ during a video call.
 document.querySelector('.playAndRecord').addEventListener('click', function() {
   var playbackElement = document.getElementById("playback");
   var captureStream = playbackElement.captureStream();
-  playbackElement.play();
+  playbackElement.play();
 });
 ```
 

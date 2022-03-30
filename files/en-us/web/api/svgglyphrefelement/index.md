@@ -13,7 +13,7 @@ browser-compat: api.SVGGlyphRefElement
 
 The **`SVGGlyphRefElement`** interface corresponds to the {{SVGElement("glyphRef")}} elements.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

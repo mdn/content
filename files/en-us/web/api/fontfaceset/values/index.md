@@ -30,4 +30,3 @@ A new iterator object containing the values for each element in the given `FontF
 ## Browser compatibility
 
 {{Compat}}
-

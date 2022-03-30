@@ -36,7 +36,7 @@ The [WebXR Device API's](/en-US/docs/Web/API/WebXR_Device_API) **`XRInputSource`
 - {{domxref('XRInputSource.targetRayMode', 'targetRayMode')}}{{readonlyInline}}
   - : A `DOMString` indicating the methodology used to produce the target ray: `gaze`, `tracked-pointer`, or `screen`.
 - {{domxref('XRInputSource.targetRaySpace', 'targetRaySpace')}}{{readonlyInline}}
-  - : An {{domxref("XRSpace")}} object defining the origin of the target ray and the direciton in which it extends. This space is established using the method defined by `targetRayMode`.
+  - : An {{domxref("XRSpace")}} object defining the origin of the target ray and the direction in which it extends. This space is established using the method defined by `targetRayMode`.
 
 ## Methods
 
@@ -60,7 +60,7 @@ An action may be aborted either by the user in some device-specific fashion or i
 
 ### Local coordinate system
 
-Each input source has its own local coordinate system, which is described by the {{domxref("XRInputSource.gripSpace", "gripSpace")}} property, which is an {{domxref("XRSpace")}} used to map the input's coordinate system into the world coordinate system. The grip space's coordinate system can then be used to render objects so they appear to be held in the user's hand.
+Each input source has its own local coordinate system, which is described by the {{domxref("XRInputSource.gripSpace", "gripSpace")}} property, which is an {{domxref("XRSpace")}} used to map the input's coordinate system into the world coordinate system. The grip space's coordinate system can then be used to render objects so they appear to be held in the user's hand.
 
 ![A diagram showing the coordinate system defined by the gripSpace property](xr-hand-axes.svg)
 

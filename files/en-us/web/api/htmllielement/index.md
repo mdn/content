@@ -13,7 +13,7 @@ browser-compat: api.HTMLLIElement
 
 The **`HTMLLIElement`** interface exposes specific properties and methods (beyond those defined by regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating list elements.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

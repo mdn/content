@@ -16,31 +16,35 @@ The **`ShadowRoot`** interface of the Shadow DOM API is the root node of a DOM s
 
 You can retrieve a reference to an element's shadow root using its {{domxref("Element.shadowRoot")}} property, provided it was created using {{domxref("Element.attachShadow()")}} with the `mode` option set to `open`.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
-- {{domxref("ShadowRoot.activeElement")}} {{readonlyInline}}
+- {{domxref("ShadowRoot.activeElement")}} {{readonlyInline}}
   - : Returns the {{domxref('Element')}} within the shadow tree that has focus.
 - {{domxref("ShadowRoot.delegatesFocus")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}
-  - : Returns a boolean that indicates whether delegatesFocus was set when the shadow was attached (see {{domxref("Element.attachShadow()")}}).
+  - : Returns a boolean that indicates whether `delegatesFocus` was set when the shadow was attached (see {{domxref("Element.attachShadow()")}}).
 - {{DOMxRef("ShadowRoot.fullscreenElement")}} {{ReadOnlyInline}}
   - : The element that's currently in full screen mode for this shadow tree.
 - {{domxref("ShadowRoot.host")}} {{readonlyinline}}
-  - : Returns a reference to the DOM element the `ShadowRoot` is attached to.
+  - : Returns a reference to the DOM element the `ShadowRoot` is attached to.
 - {{domxref("ShadowRoot.innerHTML")}} {{non-standard_inline}}
   - : Sets or returns a reference to the DOM tree inside the `ShadowRoot`.
 - {{domxref("ShadowRoot.mode")}} {{readonlyinline}}
-  - : The mode of the `ShadowRoot` — either `open` or `closed`. This defines whether or not the shadow root's internal features are accessible from JavaScript.
+  - : The mode of the `ShadowRoot` — either `open` or `closed`.
+    This defines whether or not the shadow root's internal features are accessible from JavaScript.
 - {{DOMxRef("ShadowRoot.pictureInPictureElement")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef('Element')}} within the shadow tree that is currently being presented in picture-in-picture mode.
-- {{DOMxRef("ShadowRoot.pointerLockElement")}} {{ReadOnlyInline}}
-  - : Returns the {{DOMxRef('Element')}} set as the target for mouse events while the pointer is locked. `null` if lock is pending, pointer is unlocked, or if the target is in another tree.
-- {{domxref("ShadowRoot.styleSheets")}} {{readonlyInline}}
+- {{DOMxRef("ShadowRoot.pointerLockElement")}} {{ReadOnlyInline}}
+  - : Returns the {{DOMxRef('Element')}} set as the target for mouse events while the pointer is locked.
+    `null` if lock is pending, pointer is unlocked, or if the target is in another tree.
+- {{domxref("ShadowRoot.styleSheets")}} {{readonlyInline}}
   - : Returns a {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects for stylesheets explicitly linked into, or embedded in a shadow tree.
 
 ### Event handlers
 
 - {{domxref("ShadowRoot.onslotchange")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("slotchange")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}} event is raised.
 
 ## Methods
 
@@ -71,7 +75,8 @@ attributeChangedCallback(name, oldValue, newValue) {
 }
 ```
 
-In the `updateStyle()` function itself, we get a reference to the shadow DOM using {{domxref("Element.shadowRoot")}}. From here we use standard DOM traversal techniques to find the {{htmlelement("style")}} element inside the shadow DOM and then update the CSS found inside it:
+In the `updateStyle()` function itself, we get a reference to the shadow DOM using {{domxref("Element.shadowRoot")}}.
+From here we use standard DOM traversal techniques to find the {{htmlelement("style")}} element inside the shadow DOM and then update the CSS found inside it:
 
 ```js
 function updateStyle(elem) {

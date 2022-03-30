@@ -72,6 +72,41 @@ g.return(); // { value: undefined, done: true }
 g.return(1); // { value: 1, done: true }
 ```
 
+### Using return() with try...finally
+
+When the `return` method is called on a generator that is suspended within a `try` block, execution in the generator proceeds to the `finally` block — since the `finally` block of `try...finally` statements always executes.
+
+```js
+function* gen() {
+  yield 1;
+  try {
+    yield 2;
+    yield 3;
+  } finally {
+    yield 'cleanup';
+  }
+}
+
+const g1 = gen();
+g1.next(); // { value: 1, done: false }
+
+// Execution is suspended before the try...finally.
+g1.return('early return'); // { value: 'early return', done: true }
+
+const g2 = gen();
+g2.next(); // { value: 1, done: false }
+g2.next(); // { value: 2, done: false }
+
+// Execution is suspended within the try...finally.
+g2.return('early return'); // { value: 'cleanup', done: false }
+
+// The completion value is preserved
+g2.next(); // { value: 'early return', done: true }
+
+// Generator is in the completed state
+g2.return('not so early return'); // { value: 'not so early return', done: true }
+```
+
 ## Specifications
 
 {{Specifications}}

@@ -26,8 +26,8 @@ createEquirectLayer(init)
   - : An object to configure the {{domxref("XREquirectLayer")}}. It must have the `space`, `viewPixelHeight`, and `viewPixelWidth` properties. `init` has the following properties:
     - `centralHorizontalAngle`: Optional. A number indicating the central horizontal angle in radians of the sphere. Default value: `6.28318` (2π).
     - `colorFormat`: Optional. A {{domxref("GLenum")}} defining the data type of the color texture data. Possible values:
-        - `gl.RGB`
-        - `gl.RGBA`
+      - `gl.RGB`
+      - `gl.RGBA`
       Additionally, for contexts with the {{domxref("EXT_sRGB")}} extension enabled:
       - `ext.SRGB_EXT`
       - `ext.SRGB_ALPHA_EXT`
@@ -65,7 +65,7 @@ createEquirectLayer(init)
     - `lowerVerticalAngle`: Optional. A number indicating the lower vertical angle in radians of the sphere. Default value: `-1.570795` (-π/2).
     - `mipLevels`: Optional. A number specifying desired number of mip levels. The default value is `1`.
     - `radius`: Optional. A number indicating the radius of the sphere. Default value: `0` (infinite sphere).
-    - `space`: **Required**. An {{domxref("XRSpace")}} object defining the layer's spatial relationship with the user’s physical environment.
+    - `space`: **Required**. An {{domxref("XRSpace")}} object defining the layer's spatial relationship with the user's physical environment.
     - `textureType`: Optional. A string defining the type of texture the layer will have. Possible values:
       - `texture`: The textures of {{domxref("XRWebGLSubImage")}} will be of type `gl.TEXTURE_2D`.
       - `texture-array`: the textures of {{domxref("XRWebGLSubImage")}} will be of type `gl.TEXTURE_2D_ARRAY` (WebGL 2 contexts only).

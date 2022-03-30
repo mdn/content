@@ -47,8 +47,7 @@ When the `RTCRtpReceiver` is first created, the value of
 `RTCDtlsTransport` once the receiver's transport has been established.
 
 Note that when bundling is in effect—that is, when the {{domxref("RTCPeerConnection")}}
-was created with an {{domxref("RTCConfiguration")}} object whose
-{{domxref("RTCConfiguration.bundlePolicy", "bundlePolicy")}} is `max-compat`
+was created with a configuration object whose `bundlePolicy` is `max-compat`
 or `max-bundle`—multiple receivers may be sharing the same transport; in this
 case, all of them are using the same connection to transmit and/or receive
 {{Glossary("RTP")}} and {{Glossary("RTCP")}} packets.

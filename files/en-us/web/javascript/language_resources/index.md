@@ -49,7 +49,7 @@ tags:
           >,
           <a href="https://ecma-international.org/ecma-262/10.0/index.html"
             >HTML</a
-          >, <a href="https://tc39.github.io/ecma262/">Working draft</a>,
+          >, <a href="https://tc39.github.io/ecma262/">Working draft</a>,
           <a href="https://github.com/tc39/ecma262">repository</a>
         </p>
       </td>
@@ -66,7 +66,7 @@ tags:
           >,
           <a href="http://ecma-international.org/ecma-262/9.0/index.html#Title"
             >HTML</a
-          >, <br /><a href="https://tc39.github.io/ecma262/">Working draft</a>,
+          >, <br /><a href="https://tc39.github.io/ecma262/">Working draft</a>,
           <a href="https://github.com/tc39/ecma262">repository</a>
         </p>
       </td>
@@ -107,7 +107,7 @@ tags:
           >PDF</a
         >
       </td>
-      <td>August 1998</td>
+      <td>August 1998</td>
       <td>
         ECMAScript Language Specification. This is the second revision of the
         ECMAScript standard; also ISO standard 16262.
@@ -121,9 +121,9 @@ tags:
           >PDF</a
         >
       </td>
-      <td>December 1999</td>
+      <td>December 1999</td>
       <td>
-        ECMAScript Language Specification. This is the third revision of the
+        ECMAScript Language Specification. This is the third revision of the
         ECMAScript standard; corresponds to JavaScript 1.5.<br />See also the
         <a href="https://www.mozilla.org/js/language/E262-3-errata.html"
           >errata</a
@@ -138,9 +138,9 @@ tags:
           >PDF</a
         >
       </td>
-      <td>December 2009</td>
+      <td>December 2009</td>
       <td>
-        ECMAScript Language Specification. This is the fifth revision of the
+        ECMAScript Language Specification. This is the fifth revision of the
         ECMAScript standard.<br />See also the
         <a
           href="https://wiki.ecmascript.org/doku.php?id=es3.1:es3.1_proposal_working_draft"
@@ -152,25 +152,6 @@ tags:
           title="JavaScript/ECMAScript 5 support in Mozilla"
           >ECMAScript 5 support in Mozilla</a
         >
-      </td>
-    </tr>
-    <tr>
-      <td>ECMA-357</td>
-      <td>
-        <a
-          href="https://www.ecma-international.org/publications/files/ECMA-ST-WITHDRAWN/ECMA-357,%201st%20edition,%20June%202004.pdf"
-          >PDF</a
-        >
-      </td>
-      <td>June 2004</td>
-      <td>
-        <a href="/en-US/docs/E4X">ECMAScript for XML (E4X)</a>.<br />See also
-        the
-        <a
-          class="link-https"
-          href="https://bugzilla.mozilla.org/attachment.cgi?id=169406"
-          >E4X errata</a
-        >.
       </td>
     </tr>
     <tr>

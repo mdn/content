@@ -9,7 +9,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.resetTransform
 ---
-{{APIRef}} {{SeeCompatTable}}
+{{APIRef}}
 
 The
 **`CanvasRenderingContext2D.resetTransform()`**

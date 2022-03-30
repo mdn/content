@@ -17,7 +17,7 @@ browser-compat: api.ReadableStream
 ---
 {{APIRef("Streams")}}
 
-The `ReadableStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a readable stream of byte data. The [Fetch API](/en-US/docs/Web/API/Fetch_API) offers a concrete instance of a `ReadableStream` through the {{domxref("Response.body", "body")}} property of a {{domxref("Response")}} object.
+The `ReadableStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a readable stream of byte data. The [Fetch API](/en-US/docs/Web/API/Fetch_API) offers a concrete instance of a `ReadableStream` through the {{domxref("Response.body", "body")}} property of a {{domxref("Response")}} object.
 
 ## Constructor
 
@@ -27,20 +27,20 @@ The `ReadableStream` interface of the [Streams API](/en-US/docs/Web/API/Streams
 ## Properties
 
 - {{domxref("ReadableStream.locked")}} {{readonlyInline}}
-  - : The `locked` getter returns whether or not the readable stream is [locked to a reader](https://streams.spec.whatwg.org/#locked-to-a-reader).
+  - : The `locked` getter returns whether or not the readable stream is [locked to a reader](https://streams.spec.whatwg.org/#locked-to-a-reader).
 
 ## Methods
 
 - {{domxref("ReadableStream.cancel()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer. The supplied `reason` argument will be given to the underlying source, which may or may not use it.
+  - : Returns a {{jsxref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer. The supplied `reason` argument will be given to the underlying source, which may or may not use it.
 - {{domxref("ReadableStream.getReader()")}}
   - : Creates a reader and locks the stream to it. While the stream is locked, no other reader can be acquired until this one is released.
 - {{domxref("ReadableStream.pipeThrough()")}}
   - : Provides a chainable way of piping the current stream through a transform stream or any other writable/readable pair.
 - {{domxref("ReadableStream.pipeTo()")}}
-  - : Pipes the current ReadableStream to a given {{domxref("WritableStream")}} and returns a {{jsxref("Promise")}} that fulfills when the piping process completes successfully, or rejects if any errors were encountered.
+  - : Pipes the current ReadableStream to a given {{domxref("WritableStream")}} and returns a {{jsxref("Promise")}} that fulfills when the piping process completes successfully, or rejects if any errors were encountered.
 - {{domxref("ReadableStream.tee()")}}
-  - : The `tee` method [tees](https://streams.spec.whatwg.org/#tee-a-readable-stream) this readable stream, returning a two-element array containing the two resulting branches as new {{domxref("ReadableStream")}} instances. Each of those streams receives the same incoming data.
+  - : The `tee` method [tees](https://streams.spec.whatwg.org/#tee-a-readable-stream) this readable stream, returning a two-element array containing the two resulting branches as new {{domxref("ReadableStream")}} instances. Each of those streams receives the same incoming data.
 
 ## Examples
 
@@ -122,4 +122,4 @@ This works with both async and non-async iterators.
 
 ## See also
 
-- [WHATWG Stream Visualiser](https://whatwg-stream-visualizer.glitch.me/), for a basic visualisation of readable, writable, and transform streams.
+- [WHATWG Stream Visualizer](https://whatwg-stream-visualizer.glitch.me/), for a basic visualization of readable, writable, and transform streams.

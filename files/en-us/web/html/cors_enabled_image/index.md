@@ -113,8 +113,6 @@ The canvas's size is adjusted to match the received image, then the image is dra
 
 Now it's time to actually save the image locally. To do this, we use the Web Storage API's local storage mechanism, which is accessed through the {{domxref("Window.localStorage", "localStorage")}} global. The canvas method {{domxref("HTMLCanvasElement.toDataURL", "toDataURL()")}} is used to convert the image into a data:// URL representing a PNG image, which is then saved into local storage using {{domxref("Storage.setItem", "setItem()")}}.
 
-You can [try out](https://cors-image-example.glitch.me/) or [remix](https://glitch.com/edit/#!/remix/cors-image-example) this example on Glitch.
-
 ## See also
 
 - [Using Cross-domain images in WebGL and Chrome 13](http://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)

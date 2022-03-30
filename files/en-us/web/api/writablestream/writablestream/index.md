@@ -10,7 +10,7 @@ tags:
   - WritableStream
 browser-compat: api.WritableStream.WritableStream
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`WritableStream()`** constructor creates
 a new {{domxref("WritableStream")}} object instance.
@@ -18,7 +18,8 @@ a new {{domxref("WritableStream")}} object instance.
 ## Syntax
 
 ```js
-var writableStream = new WritableStream(underlyingSink[, queuingStrategy]);
+new WritableStream(underlyingSink)
+new WritableStream(underlyingSink, queuingStrategy)
 ```
 
 ### Parameters
@@ -88,7 +89,7 @@ An instance of the {{domxref("WritableStream")}} object.
 
 ## Examples
 
-The following example illustrates several features of this interface.  It shows the
+The following example illustrates several features of this interface.  It shows the
 creation of the `WritableStream` with a custom sink and an API-supplied
 queuing strategy. It then calls a function called `sendMessage()`, passing
 the newly created stream and a string. Inside this function it calls the stream's

@@ -66,7 +66,7 @@ The **`<head>`** [HTML](/en-US/docs/Web/HTML) element contains machine-readable 
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
-      <td>No <code>role</code> permitted</td>
+      <td>No <code>role</code> permitted</td>
     </tr>
     <tr>
       <th scope="row">DOM interface</th>

@@ -13,7 +13,7 @@ browser-compat: api.SVGFEFuncGElement
 
 The **`SVGFEFuncGElement`** interface corresponds to the {{SVGElement("feFuncG")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

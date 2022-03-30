@@ -14,10 +14,10 @@ browser-compat: javascript.builtins.Date.toDateString
 The **`toDateString()`** method returns the date portion of a
 {{jsxref("Date")}} object in English in the following format separated by spaces:
 
-1.  First three letters of the week day name
-2.  First three letters of the month name
-3.  Two digit day of the month, padded on the left a zero if necessary
-4.  Four digit year (at least), padded on the left with zeros if necessary
+1. First three letters of the week day name
+2. First three letters of the month name
+3. Two digit day of the month, padded on the left a zero if necessary
+4. Four digit year (at least), padded on the left with zeros if necessary
 
 E.g. "Thu Jan 01 1970".
 
@@ -38,9 +38,7 @@ readable form in English.
 
 {{jsxref("Date")}} instances refer to a specific point in time. Calling
 {{jsxref("Date.prototype.toString()", "toString()")}} will return the date formatted in
-a human readable form in English. In [SpiderMonkey](/en-US/docs/Mozilla/Projects/SpiderMonkey), this consists of
-the date portion (day, month, and year) followed by the time portion (hours, minutes,
-seconds, and time zone). Sometimes it is desirable to obtain a string of the time
+a human readable form in English. Sometimes it is desirable to obtain a string of the time
 portion; such a thing can be accomplished with the `toTimeString()` method.
 
 The `toDateString()` method is especially useful because compliant engines

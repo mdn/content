@@ -17,7 +17,9 @@ Specifies an event listener to receive {{event("complete")}} events. These event
 
 ## Syntax
 
-    instanceOfLockedFile.oncomplete = funcRef;
+```js
+instanceOfLockedFile.oncomplete = funcRef;
+```
 
 Where `funcRef` is a function to be called when the {{event("complete")}} event occurs.
 

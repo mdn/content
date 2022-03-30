@@ -11,7 +11,7 @@ browser-compat: css.types.basic-shape
 ---
 {{CSSRef}}
 
-The **`<basic-shape>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a shape used in the {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}, and {{cssxref("offset-path")}} properties.
+The **`<basic-shape>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a shape used in the {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}, and {{cssxref("offset-path")}} properties.
 
 {{EmbedInteractiveExample("pages/css/type-basic-shape.html")}}
 
@@ -29,7 +29,7 @@ The default reference box is the `margin-box`, as demonstrated in the below imag
 
 The following shapes are supported. All `<basic-shape>` values use functional notation and are defined here using the [value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax).
 
-- `{{cssxref("basic-shape/inset()","inset()")}}`
+- `{{cssxref("basic-shape/inset","inset()")}}`
 
   - : Defines an inset rectangle.
 
@@ -43,7 +43,7 @@ The following shapes are supported. All `<basic-shape>` values use functional no
 
     A pair of insets in either dimension that add up to more than the used dimension (such as left and right insets of 75% apiece) define a shape enclosing no area. For this specification, this results in an empty float area.
 
-- `{{cssxref("basic-shape/circle()","circle()")}}`
+- `{{cssxref("basic-shape/circle","circle()")}}`
 
   - : Defines a circle using a radius and a position.
 
@@ -55,7 +55,7 @@ The following shapes are supported. All `<basic-shape>` values use functional no
 
     The {{cssxref("&lt;position&gt;")}} argument defines the center of the circle. This defaults to center if omitted.
 
-- `{{cssxref("basic-shape/ellipse()","ellipse()")}}`
+- `{{cssxref("basic-shape/ellipse","ellipse()")}}`
 
   - : Defines an ellipse using two radii and a position.
 
@@ -67,7 +67,7 @@ The following shapes are supported. All `<basic-shape>` values use functional no
 
     The position argument defines the center of the ellipse. This defaults to center if omitted.
 
-- `{{cssxref("basic-shape/polygon()","polygon()")}}`
+- `{{cssxref("basic-shape/polygon","polygon()")}}`
 
   - : Defines a polygon using an SVG {{SVGAttr("fill-rule")}} and a set of vertices.
 
@@ -116,7 +116,7 @@ The values in a `<basic-shape>` function are computed as specified, with these e
 
 ### Interpolation of basic shapes
 
-When animating between one `<basic-shape>` and another, the rules below are applied. The values in the shape functions interpolate as a simple list. The list values interpolate as {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or {{cssxref("calc()")}} where possible. If list values are not one of those types but are identical, those values do interpolate.
+When animating between one `<basic-shape>` and another, the rules below are applied. The values in the shape functions interpolate as a simple list. The list values interpolate as {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or {{cssxref("calc", "calc()")}} where possible. If list values are not one of those types but are identical, those values do interpolate.
 
 - Both shapes must use the same reference box.
 - If both shapes are the same type, that type is `ellipse()` or `circle()`, and none of the radii use the `closest-side` or `farthest-side` keywords, interpolate between each value in the shape functions.

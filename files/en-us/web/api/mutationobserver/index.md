@@ -35,7 +35,7 @@ The {{domxref("MutationObserver")}} interface provides the ability to watch for 
 
 ## Mutation Observer & customize resize event listener & demo
 
-<https://codepen.io/webgeeker/full/YjrZgg/>
+<https://codepen.io/milofultz/pen/LYjPXPw>
 
 ## Example
 
@@ -50,7 +50,7 @@ const config = { attributes: true, childList: true, subtree: true };
 
 // Callback function to execute when mutations are observed
 const callback = function(mutationsList, observer) {
-    // Use traditional 'for loops' for IE 11
+    // Use traditional 'for loops' for IE 11
     for(const mutation of mutationsList) {
         if (mutation.type === 'childList') {
             console.log('A child node has been added or removed.');
@@ -84,6 +84,6 @@ observer.disconnect();
 - {{domxref('PerformanceObserver')}}
 - {{domxref('ResizeObserver')}}
 - {{domxref('IntersectionObserver')}}
-- [A brief overview](https://updates.html5rocks.com/2012/02/Detect-DOM-changes-with-Mutation-Observers)
+- [A brief overview](https://developers.google.com/web/updates/2012/02/Detect-DOM-changes-with-Mutation-Observers)
 - [A more in-depth discussion](https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/)
 - [A screencast by Chromium developer Rafael Weinstein](https://www.youtube.com/watch?v=eRZ4pO0gVWw)

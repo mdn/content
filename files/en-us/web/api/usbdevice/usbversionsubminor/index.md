@@ -15,19 +15,13 @@ browser-compat: api.USBDevice.usbVersionSubminor
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
 The **`usbVersionSubminor`** read only property of the
-{{domxref("USBDevice")}} interface is one of three properties that declare the USB
-protocol version supported by the device. The other two properties
-are USBDevice.usbVersionMajor and USBDevice.usbVersionMinor.
+{{domxref("USBDevice")}} interface is one of three properties that declare the USB
+protocol version supported by the device. The other two properties
+are USBDevice.usbVersionMajor and USBDevice.usbVersionMinor.
 
-## Syntax
+## Value
 
-```js
-var serialNumber = USBDevice.usbVersionSubminor
-```
-
-### Value
-
-The first of three properties that declare the USB protocol version supported by the
+The first of three properties that declare the USB protocol version supported by the
 device.
 
 ## Specifications

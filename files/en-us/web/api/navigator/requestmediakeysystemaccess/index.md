@@ -26,7 +26,7 @@ API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), which brings support f
 
 This method may have user-visible effects such as asking for permission to access one
 or more system resources. Consider that when deciding when to call
-` requestMediaKeySystemAccess``() `; you don't want those requests
+`requestMediaKeySystemAccess()`; you don't want those requests
 to happen at inconvenient times. As a general rule, this function should be called only
 when it's about time to create and use a {{domxref("MediaKeys")}} object by calling the
 returned {{domxref("MediaKeySystemAccess")}} object's
@@ -44,8 +44,7 @@ promise = navigator.requestMediaKeySystemAccess(keySystem, supportedConfiguratio
   - : A {{domxref('DOMString')}} identifying the key system. For example
     `com.example.somesystem` or `org.w3.clearkey`.
 - `supportedConfigurations`
-  - : A non-empty {{jsxref('Array')}} of {{domxref('MediaKeySystemConfiguration')}}
-    objects. The first element with a satisfiable configuration will be used.
+  - : A non-empty {{jsxref('Array')}} of objects conforming to the object returned by {{domxref("MediaKeySystemAccess.getConfiguration")}}. The first element with a satisfiable configuration will be used.
 
 ### Return value
 

@@ -67,23 +67,23 @@ The `text-decoration` property is specified as one or more space-separated value
 
 ```css
 .under {
-  text-decoration: underline red;
+  text-decoration: underline red;
 }
 
 .over {
-  text-decoration: wavy overline lime;
+  text-decoration: wavy overline lime;
 }
 
 .line {
-  text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 .plain {
-  text-decoration: none;
+  text-decoration: none;
 }
 
 .underover {
-  text-decoration: dashed underline overline;
+  text-decoration: dashed underline overline;
 }
 
 .thick {
@@ -121,5 +121,6 @@ The `text-decoration` property is specified as one or more space-separated value
 
 ## See also
 
-- The individual text-decoration properties are {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, and {{cssxref("text-decoration-style")}}.
+- The individual text-decoration properties are {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-style")}}, and {{cssxref("text-decoration-thickness")}}.
+- The {{cssxref("text-decoration-skip-ink")}}, {{cssxref("text-underline-offset")}}, and {{cssxref("text-underline-position")}} properties also affect text-decoration, but are not included in the shorthand.
 - The {{cssxref("list-style")}} attribute controls the appearance of items in HTML {{HTMLElement("ol")}} and {{HTMLElement("ul")}} lists.

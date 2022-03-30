@@ -26,7 +26,7 @@ More recently we have gained [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layo
 
 What grid and flexbox demonstrate, however, is that an element has both an **outer** and an **inner** display type. The outer display type describes whether the element is block-level or inline-level. The inner display type describes how the children of that box behave.
 
-As an example, when we use `display: flex` we create a block-level container, with flex children. The children are described as participating in a flex formatting context. You can see this if you take a `<span>` — normally an inline-level element — and apply `display: flex` to it. The `<span>` becomes a block-level element. It behaves as block-level things do in relationship to other boxes in the layout. It’s as if you had applied `display: block` to the span, however we also get the changed behavior of the children.
+As an example, when we use `display: flex` we create a block-level container, with flex children. The children are described as participating in a flex formatting context. You can see this if you take a `<span>` — normally an inline-level element — and apply `display: flex` to it. The `<span>` becomes a block-level element. It behaves as block-level things do in relationship to other boxes in the layout. It's as if you had applied `display: block` to the span, however we also get the changed behavior of the children.
 
 The live example below has a `<span>` with `display: flex` applied. It has become a block-level box taking up all available space in the inline direction. You can now use `justify-content: space-between;` to put this space between the two flex items.
 
@@ -83,13 +83,13 @@ The single values of `display` are described in the specification as legacy valu
 
 To deal with single values of `display` [the specification](https://www.w3.org/TR/css-display-3/#outer-role) explains what to do if only the outer value of `block` or `inline` is used:
 
-> "If a `<display-outside>` value is specified but `<display-inside>` is omitted, the element’s inner display type defaults to flow."
+> "If a `<display-outside>` value is specified but `<display-inside>` is omitted, the element's inner display type defaults to flow."
 
 This means that the behavior is exactly as it is in a single value world. If you specify `display: block` or `display: inline`, that changes the outer display value of the box but any children continue in normal flow.
 
 If only an inner value of `flex`, `grid`, or `flow-root` is specified then [the specification](https://www.w3.org/TR/css-display-3/#inner-model) explains that the outer value should be set to `block`:
 
-> "If a `<display-inside>` value is specified but `<display-outside>` is omitted, the element’s outer display type defaults to block—except for ruby, which defaults to inline."
+> "If a `<display-inside>` value is specified but `<display-outside>` is omitted, the element's outer display type defaults to block—except for ruby, which defaults to inline."
 
 Finally, we have some legacy [pre-composed inline-level values](https://www.w3.org/TR/css-display-3/#legacy-display) of:
 

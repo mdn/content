@@ -12,7 +12,7 @@ browser-compat: api.HTMLParagraphElement
 
 The **`HTMLParagraphElement`** interface provides special properties (beyond those of the regular {{domxref("HTMLElement")}} object interface it inherits) for manipulating {{HTMLElement("p")}} elements.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

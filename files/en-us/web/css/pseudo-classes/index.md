@@ -8,6 +8,10 @@ tags:
   - Pseudo-class
   - Reference
   - Selectors
+spec-urls:
+  - https://html.spec.whatwg.org/multipage/#pseudo-classes
+  - https://drafts.csswg.org/selectors/
+  - https://drafts.csswg.org/css-ui/
 ---
 {{CSSRef}}
 
@@ -38,7 +42,7 @@ These pseudo-classes reflect the document language, and enable the selection of 
 These pseudo-classes relate to links, and to targeted elements within the current document.
 
 - {{CSSxRef(":any-link")}}
-  - : Matches an element if the element would match either {{CSSxRef(":link")}} or {{CSSxRef(":visited")}}.
+  - : Matches an element if the element would match either {{CSSxRef(":link")}} or {{CSSxRef(":visited")}}.
 - {{CSSxRef(":link")}}
   - : Matches links that have not yet been visited.
 - {{CSSxRef(":visited")}}
@@ -65,7 +69,7 @@ These pseudo-classes require some interaction by the user in order for them to a
 - {{CSSxRef(":focus-visible")}}
   - : Matches when an element has focus and the user agent identifies that the element should be visibly focused.
 - {{CSSxRef(":focus-within")}}
-  - : Matches an element to which {{CSSxRef(":focus")}} applies, plus any element that has a descendant to which {{CSSxRef(":focus")}} applies.
+  - : Matches an element to which {{CSSxRef(":focus")}} applies, plus any element that has a descendant to which {{CSSxRef(":focus")}} applies.
 
 ## Time-dimensional pseudo-classes
 
@@ -76,7 +80,7 @@ These pseudo-classes apply when viewing something which has timing, such as a [W
 - {{CSSxRef(":past")}}
   - : Represents an element that occurs entirely before the {{CSSxRef(":current")}} element.
 - {{CSSxRef(":future")}}
-  - : Represents an element that occurs entirely after the {{CSSxRef(":current")}} element.
+  - : Represents an element that occurs entirely after the {{CSSxRef(":current")}} element.
 
 ## Resource state pseudo-classes
 
@@ -177,18 +181,18 @@ A
 
 B
 
-- {{CSSxRef(":blank")}} {{Experimental_Inline}}
+- {{CSSxRef(":blank")}} {{Experimental_Inline}}
 
 C
 
 - {{CSSxRef(":checked")}}
-- {{CSSxRef(":current")}} {{Experimental_Inline}}
+- {{CSSxRef(":current")}} {{Experimental_Inline}}
 
 D
 
 - {{CSSxRef(":default")}}
 - {{CSSxRef(":defined")}}
-- {{CSSxRef(":dir", ":dir()")}} {{Experimental_Inline}}
+- {{CSSxRef(":dir", ":dir()")}} {{Experimental_Inline}}
 - {{CSSxRef(":disabled")}}
 
 E
@@ -202,17 +206,17 @@ F
 - {{CSSxRef(":first-child")}}
 - {{CSSxRef(":first-of-type")}}
 - {{CSSxRef(":fullscreen")}}
-- {{CSSxRef(":future")}} {{Experimental_Inline}}
+- {{CSSxRef(":future")}} {{Experimental_Inline}}
 - {{CSSxRef(":focus")}}
 - {{CSSxRef(":focus-visible")}}
 - {{CSSxRef(":focus-within")}}
 
 H
 
-- {{CSSxRef(":has", ":has()")}} {{Experimental_Inline}}
+- {{CSSxRef(":has", ":has()")}} {{Experimental_Inline}}
 - {{CSSxRef(":host")}}
-- {{CSSxRef(":host()")}}
-- {{CSSxRef(":host-context()")}} {{Experimental_Inline}}
+- {{CSSxRef(":host", ":host()")}}
+- {{CSSxRef(":host-context", ":host-context()")}} {{Experimental_Inline}}
 - {{CSSxRef(":hover")}}
 
 I
@@ -229,15 +233,15 @@ L
 - {{CSSxRef(":last-of-type")}}
 - {{CSSxRef(":left")}}
 - {{CSSxRef(":link")}}
-- {{CSSxRef(":local-link")}} {{Experimental_Inline}}
+- {{CSSxRef(":local-link")}} {{Experimental_Inline}}
 
 N
 
 - {{CSSxRef(":not", ":not()")}}
 - {{CSSxRef(":nth-child", ":nth-child()")}}
-- {{CSSxRef(":nth-col", ":nth-col()")}} {{Experimental_Inline}}
+- {{CSSxRef(":nth-col", ":nth-col()")}} {{Experimental_Inline}}
 - {{CSSxRef(":nth-last-child", ":nth-last-child()")}}
-- {{CSSxRef(":nth-last-col", ":nth-last-col()")}} {{Experimental_Inline}}
+- {{CSSxRef(":nth-last-col", ":nth-last-col()")}} {{Experimental_Inline}}
 - {{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}}
 - {{CSSxRef(":nth-of-type", ":nth-of-type()")}}
 
@@ -250,7 +254,7 @@ O
 
 P
 
-- {{CSSxRef(":past")}} {{Experimental_Inline}}
+- {{CSSxRef(":past")}} {{Experimental_Inline}}
 - {{CSSxRef(":picture-in-picture")}}
 - {{CSSxRef(":placeholder-shown")}}
 - {{CSSxRef(":paused")}}
@@ -267,16 +271,16 @@ R
 S
 
 - {{CSSxRef(":scope")}}
-- {{CSSxRef(":state", ":state()")}} {{Experimental_Inline}}
+- {{CSSxRef(":state", ":state()")}} {{Experimental_Inline}}
 
 T
 
 - {{CSSxRef(":target")}}
-- {{CSSxRef(":target-within")}} {{Experimental_Inline}}
+- {{CSSxRef(":target-within")}} {{Experimental_Inline}}
 
 U
 
-- {{CSSxRef(":user-invalid")}} {{Experimental_Inline}}
+- {{CSSxRef(":user-invalid")}} {{Experimental_Inline}}
 
 V
 
@@ -289,16 +293,7 @@ W
 
 ## Specifications
 
-| Specification                                                | Status                               | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| ------------------------------------------------------------ | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("Fullscreen")}}                         | {{Spec2("Fullscreen")}}     | Defined `:fullscreen`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| {{SpecName("HTML WHATWG", "#pseudo-classes")}} | {{Spec2("HTML WHATWG")}}     | Defines when particular selectors match HTML elements.                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| {{SpecName("CSS4 Selectors")}}                     | {{Spec2("CSS4 Selectors")}} | Defined `:any-link`, `:blank`, `:local-link`, `:scope`, `:drop`, `:current`, `:past`, `:future`, `:placeholder-shown`, `:user-invalid`, `:nth-col()`, `:nth-last-col()`, `:is()` and `:where()`. Changed `:empty` to behave like {{CSSxRef(":-moz-only-whitespace")}} {{Non-standard_Inline}}. No significant change for other pseudo-classes defined in {{SpecName("CSS3 Selectors")}} and {{SpecName("HTML5 W3C")}} (though semantic meaning not taken over). |
-| {{SpecName("HTML5 W3C")}}                             | {{Spec2("HTML5 W3C")}}         | Copies the relevant section from the canonical (WHATWG) HTML spec.                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| {{SpecName("CSS3 Basic UI")}}                     | {{Spec2("CSS3 Basic UI")}} | Defined `:default`, `:valid`, `:invalid`, `:in-range`, `:out-of-range`, `:required`, `:optional`, `:read-only` and `:read-write`, but without the associated semantic meaning.                                                                                                                                                                                                                                                                                                                        |
-| {{SpecName("CSS3 Selectors")}}                     | {{Spec2("CSS3 Selectors")}} | Defined `:target`, `:root`, `:nth-child()`, `:nth-last-of-child()`, `:nth-of-type()`, `:nth-last-of-type()`, `:last-child`, `:first-of-type`, `:last-of-type`, `:only-child`, `:only-of-type`, `:empty` and `:not()`. Defined the syntax of `:enabled`, `:disabled`, `:checked`, and `:indeterminate`, but without the associated semantic meaning. No significant change for pseudo-classes defined in {{SpecName('CSS2.1')}}.                                                                 |
-| {{SpecName("CSS2.1")}}                                 | {{Spec2("CSS2.1")}}             | Defined `:lang()`, `:first-child`, `:hover`, and `:focus`. No significant change for pseudo-classes defined in {{SpecName('CSS1')}}.                                                                                                                                                                                                                                                                                                                                                          |
-| {{SpecName("CSS1")}}                                 | {{Spec2("CSS1")}}             | Defined `:link`, `:visited` and `:active`, but without the associated semantic meaning.                                                                                                                                                                                                                                                                                                                                                                                                               |
+{{Specifications}}
 
 ## See also
 

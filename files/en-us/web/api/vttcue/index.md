@@ -9,11 +9,13 @@ browser-compat: api.VTTCue
 ---
 {{APIRef("WebVTT")}}
 
-The `VTTCue` interface—part of the API for handling WebVTT (text tracks on media presentations)—describes and controls the text track associated with a particular {{HTMLElement("track")}} element.
+The `VTTCue` interface—part of the API for handling WebVTT (text tracks on media presentations)—describes and controls the text track associated with a particular {{HTMLElement("track")}} element.
+
+{{InheritanceDiagram}}
 
 ## Constructor
 
-- {{domxref("VTTCue.VTTCue()")}}
+- {{domxref("VTTCue.VTTCue", "VTTCue()")}}
   - : Returns a newly created `VTTCue` object that covers the given time range and has the given text.
 
 ## Properties
@@ -60,8 +62,8 @@ The following example adds a new {{domxref("TextTrack")}} to the video, then add
 
 ```css
 video {
-  width: 420px;
-  height: 300px;
+  width: 420px;
+  height: 300px;
 }
 ```
 

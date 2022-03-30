@@ -15,7 +15,9 @@ The **`getSubscriptions()`** method of the {{domxref("CookieStoreManager")}} int
 
 ## Syntax
 
-    let promise = registration.cookies.getSubscriptions();
+```js
+let promise = registration.cookies.getSubscriptions();
+```
 
 ### Return value
 

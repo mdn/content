@@ -13,8 +13,8 @@ The **`lighting-color`** attribute defines the color of the light source for lig
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feDiffuseLighting")}}
-*   {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feDiffuseLighting")}}
+- {{SVGElement("feSpecularLighting")}}
 
 ## Example
 
@@ -97,4 +97,4 @@ html, body, svg {
 
 ## See also
 
-*   [Description of Phong reflection model on Wikipedia](https://en.wikipedia.org/wiki/Phong_reflection_model)
+- [Description of Phong reflection model on Wikipedia](https://en.wikipedia.org/wiki/Phong_reflection_model)

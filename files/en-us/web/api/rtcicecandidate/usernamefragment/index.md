@@ -26,13 +26,7 @@ If you call the constructor with an m-line string instead of the options object,
 
 Note that 24 bits of the username fragment are required to be randomized by the browser. See [Randomization](#randomization) below for details.
 
-## Syntax
-
-```js
-var ufrag = RTCIceCandidate.usernameFragment;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} containing the username fragment (usually referred to in
 shorthand as "ufrag" or "ice-ufrag") that, along with the ICE password ("ice-pwd"),
@@ -69,7 +63,7 @@ of messages going back and forth.
 
 To do so, you can compare the value of `usernameFragment` to the current
 `usernameFragment` being used for the connection after receiving the
-candidate from the signaling server and before caling
+candidate from the signaling server and before calling
 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} to add it to the
 set of possible candidates.
 

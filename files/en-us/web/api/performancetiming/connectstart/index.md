@@ -23,7 +23,7 @@ The legacy
 read-only property returns an `unsigned long long` representing the moment,
 in milliseconds since the UNIX epoch, where the request to open a connection is sent to
 the network. If the transport layer reports an error and the connection establishment is
-started again, the last connection establisment start time is given. If a persistent
+started again, the last connection establishment start time is given. If a persistent
 connection is used, the value will be the same as
 {{domxref("PerformanceTiming.fetchStart")}}.
 

@@ -17,7 +17,9 @@ This proprietary method is specific to Internet Explorer, and Microsoft Edge ver
 
 ## Syntax
 
-    navigator.msLaunchUri(uri, successCallback, noHandlerCallback);
+```js
+navigator.msLaunchUri(uri, successCallback, noHandlerCallback);
+```
 
 ### Parameters
 

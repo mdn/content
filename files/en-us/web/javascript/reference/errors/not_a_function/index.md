@@ -39,7 +39,7 @@ provide a function in order to have these methods working properly:
 
   - {{jsxref("Array.prototype.every()")}}, {{jsxref("Array.prototype.some()")}},
     {{jsxref("Array.prototype.forEach()")}}, {{jsxref("Array.prototype.map()")}},
-    {{jsxref("Array.prototype.filter()")}},  {{jsxref("Array.prototype.reduce()")}},
+    {{jsxref("Array.prototype.filter()")}}, {{jsxref("Array.prototype.reduce()")}},
     {{jsxref("Array.prototype.reduceRight()")}}, {{jsxref("Array.prototype.find()")}}
 
 - When working with {{jsxref("Map")}} and {{jsxref("Set")}} objects:
@@ -100,7 +100,7 @@ name. Upon calling the function, the compiler thinks that the function ceases to
 var Dog = function () {
  this.age = 11;
  this.color = "black";
- this.name = "Ralph";
+ this.name = "Ralph";
  return this;
 }
 
@@ -119,7 +119,7 @@ Use a different property name instead:
 var Dog = function () {
  this.age = 11;
  this.color = "black";
- this.dogName = "Ralph"; //Using this.dogName instead of .name
+ this.dogName = "Ralph"; //Using this.dogName instead of .name
  return this;
 }
 
@@ -178,7 +178,9 @@ export default helpers;
 
 The correct import usage (`App.js`):
 
-    import helpers from './helpers'
+```js
+import helpers from './helpers'
+```
 
 ## See also
 

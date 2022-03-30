@@ -13,7 +13,7 @@ The **`slope`** attribute indicates the vertical stroke angle of a font.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("font-face")}}
+- {{SVGElement("font-face")}}
 
 ## Usage notes
 
@@ -40,8 +40,8 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `<number>`
-    *   : This value indicates the vertical stroke angle of the font.
+- `<number>`
+  - : This value indicates the vertical stroke angle of the font.
 
 ## Specifications
 

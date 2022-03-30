@@ -21,13 +21,7 @@ data, as specified in the `data` option of the
 The notification's data can be any arbitrary data that you want associated with the
 notification.
 
-## Syntax
-
-```js
-var data = Notification.data;
-```
-
-### Value
+## Value
 
 A structured clone.
 

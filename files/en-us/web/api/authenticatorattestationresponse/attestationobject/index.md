@@ -24,13 +24,7 @@ that corresponds to the private key that has created the attestation signature i
 known; however, there are various well known attestation public key chains for different
 ecosystems (for example, Android or TPM attestations).
 
-## Syntax
-
-```js
-attestObj = authenticatorAttestationResponse.attestationObject
-```
-
-## Properties
+## Value
 
 After decoding the [CBOR](https://datatracker.ietf.org/doc/html/rfc7049) encoded
 `ArrayBuffer`, the resulting JavaScript object will contain the following
@@ -66,7 +60,7 @@ properties:
     - `"none"`
 
 - `attStmt`
-  - : A an attestation statement that is of the format defined by `"fmt"`. For
+  - : An attestation statement that is of the format defined by `"fmt"`. For
     now, [see the
     WebAuthn specification for details on each format](https://www.w3.org/TR/webauthn/#defined-attestation-formats).
 

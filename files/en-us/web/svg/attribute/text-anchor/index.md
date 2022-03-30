@@ -8,7 +8,7 @@ browser-compat: svg.attributes.presentation.text-anchor
 ---
 {{SVGRef}}
 
-The **`text-anchor`** attribute is used to align (start-, middle- or end-alignment) a string of pre-formatted text or auto-wrapped text where the wrapping area is determined from the {{SVGAttr("inline-size")}} property relative to a given point.
+The **`text-anchor`** attribute is used to align (start-, middle- or end-alignment) a string of pre-formatted text or auto-wrapped text where the wrapping area is determined from the {{cssxref("inline-size")}} property relative to a given point.
 
 This attribute is not applicable to other types of auto-wrapped text. For those cases you should use {{cssxref("text-align")}}. For multi-line text, the alignment takes place for each line.
 
@@ -18,11 +18,11 @@ The `text-anchor` attribute is applied to each individual text chunk within a gi
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("altGlyph")}}
-*   {{SVGElement("text")}}
-*   {{SVGElement("textPath")}}
-*   {{SVGElement("tref")}}
-*   {{SVGElement("tspan")}}
+- {{SVGElement("altGlyph")}}
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
 
 ## Example
 
@@ -76,12 +76,12 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `start`
-    *   : The rendered characters are aligned such that the start of the text string is at the initial current text position. For an element with a {{cssxref("direction")}} property value of `ltr` (typical for most European languages), the left side of the text is rendered at the initial text position. For an element with a direction property value of `rtl` (typical for Arabic and Hebrew), the right side of the text is rendered at the initial text position. For an element with a vertical primary text direction (often typical for Asian text), the top side of the text is rendered at the initial text position.
-*   `middle`
-    *   : The rendered characters are aligned such that the middle of the text string is at the current text position. (For text on a path, conceptually the text string is first laid out in a straight line. The midpoint between the start of the text string and the end of the text string is determined. Then, the text string is mapped onto the path with this midpoint placed at the current text position.)
-*   `end`
-    *   : The rendered characters are shifted such that the end of the resulting rendered text (final current text position before applying the `text-anchor` property) is at the initial current text position. For an element with a `direction` property value of `ltr` (typical for most European languages), the right side of the text is rendered at the initial text position. For an element with a `direction` property value of `rtl` (typical for Arabic and Hebrew), the left side of the text is rendered at the initial text position. For an element with a vertical primary text direction (often typical for Asian text), the bottom of the text is rendered at the initial text position.
+- `start`
+  - : The rendered characters are aligned such that the start of the text string is at the initial current text position. For an element with a {{cssxref("direction")}} property value of `ltr` (typical for most European languages), the left side of the text is rendered at the initial text position. For an element with a direction property value of `rtl` (typical for Arabic and Hebrew), the right side of the text is rendered at the initial text position. For an element with a vertical primary text direction (often typical for Asian text), the top side of the text is rendered at the initial text position.
+- `middle`
+  - : The rendered characters are aligned such that the middle of the text string is at the current text position. (For text on a path, conceptually the text string is first laid out in a straight line. The midpoint between the start of the text string and the end of the text string is determined. Then, the text string is mapped onto the path with this midpoint placed at the current text position.)
+- `end`
+  - : The rendered characters are shifted such that the end of the resulting rendered text (final current text position before applying the `text-anchor` property) is at the initial current text position. For an element with a `direction` property value of `ltr` (typical for most European languages), the right side of the text is rendered at the initial text position. For an element with a `direction` property value of `rtl` (typical for Arabic and Hebrew), the left side of the text is rendered at the initial text position. For an element with a vertical primary text direction (often typical for Asian text), the bottom of the text is rendered at the initial text position.
 
 ## Specifications
 

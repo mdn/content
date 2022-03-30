@@ -11,7 +11,7 @@ tags:
   - handle
 browser-compat: api.FileSystemHandle.kind
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`kind`** read-only property of the
 {{domxref("FileSystemHandle")}} interface returns the type of entry. This is
@@ -19,13 +19,7 @@ The **`kind`** read-only property of the
 used to distinguish files from directories when iterating over the contents of a
 directory.
 
-## Syntax
-
-```js
-var FileSystemHandleKind = FileSystemHandle.kind;
-```
-
-### Value
+## Value
 
 - _FileSystemHandleKind_
 

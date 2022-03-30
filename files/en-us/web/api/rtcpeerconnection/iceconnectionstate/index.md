@@ -18,6 +18,7 @@ tags:
   - state
 browser-compat: api.RTCPeerConnection.iceConnectionState
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only property **`RTCPeerConnection.iceConnectionState`** returns
@@ -32,13 +33,7 @@ that is, the {{Glossary("STUN")}} or {{Glossary("TURN")}} server.
 You can detect when this value has changed by watching for the
 {{DOMxRef("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}} event.
 
-## Syntax
-
-```js
- var state = RTCPeerConnection.iceConnectionState;
-```
-
-### Value
+## Value
 
 The current state of the ICE agent and its connection. The value is one of the following strings:
 
@@ -83,8 +78,10 @@ The current state of the ICE agent and its connection. The value is one of the f
 
 ## Example
 
-    var pc = new RTCPeerConnection();
-    var state = pc.iceConnectionState;
+```js
+var pc = new RTCPeerConnection();
+var state = pc.iceConnectionState;
+```
 
 ## Specifications
 
@@ -96,6 +93,6 @@ The current state of the ICE agent and its connection. The value is one of the f
 
 ## See also
 
-- [WebRTC API](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - {{DOMxRef("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}
 - {{domxref("RTCPeerConnection")}}

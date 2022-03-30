@@ -32,19 +32,16 @@ None.
 
 ### Return value
 
-An array of {{domxref("RTCRtpSynchronizationSource")}} instances. Each instance
-describes one of the synchronization sources that provided data to the incoming stream
-in the past ten seconds.
+An array of object describing one of the synchronization sources that provided data to the incoming stream in the past ten seconds. These objects contain the following properties:
 
-As you'll see in the documentarion for `RTCRtpSynchronizationSource`, it
-inherits the properties of {{domxref("RTCRtpContributingSource")}},
-including {{domxref("RTCRtpContributingSource.timestamp",
-  "timestamp")}}, {{domxref("RTCRtpContributingSource.source", "source")}},
-and {{domxref("RTCRtpContributingSource.audioLevel", "audioLevel")}}.
-
-The synchronization source objects add a
-{{domxref("RTCRtpSynchronizationSource.voiceActivityFlag", "voiceActivityFlag")}}
-property, which indicates if the last RTP packet received contained voice activity.
+- {{domxref("RTCRtpContributingSource.audioLevel", "audioLevel")}} {{optional_inline}}
+  - : A double-precision floating-point value between 0.0 and 1.0 specifying the audio level (in dBov) contained in the last RTP packet played from this source.
+- {{domxref("RTCRtpContributingSource.rtpTimestamp", "rtpTimestamp")}} {{optional_inline}}
+  - : The RTP timestamp of the media played out at the time indicated by `timestamp`. This value is a source-generated time value which can be used to help with sequencing and synchronization.
+- {{domxref("RTCRtpContributingSource.source", "source")}} {{optional_inline}}
+  - : A 32-bit unsigned integer value specifying the CSRC identifier of the contributing source.
+- {{domxref("RTCRtpContributingSource.timestamp", "timestamp")}} {{optional_inline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} indicating the most recent time at which a frame originating from this source was delivered to the receiver's {{domxref("MediaStreamTrack")}}.
 
 ## Specifications
 

@@ -48,7 +48,7 @@ First you need to extract the public key information from your certificate or ke
 
 The following commands will help you extract the Base64 encoded information from a key file, a certificate signing request, or a certificate.
 
-```
+```bash
 openssl rsa -in my-rsa-key-file.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64
 
 openssl ec -in my-ecc-key-file.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64
@@ -60,7 +60,7 @@ openssl x509 -in my-certificate.crt -pubkey -noout | openssl pkey -pubin -outfor
 
 The following command will extract the Base64 encoded information for a website.
 
-```
+```bash
 openssl s_client -servername www.example.com -connect www.example.com:443 | openssl x509 -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
 ```
 
@@ -98,7 +98,7 @@ Header always set Public-Key-Pins "pin-sha256=\"base64+primary==\"; pin-sha256=\
 
 #### Nginx
 
-Adding the following line and inserting the appropriate `pin-sha256="..."` values will enable HPKP on your nginx. This requires the `ngx_http_headers_module.`
+Adding the following line and inserting the appropriate `pin-sha256="..."` values will enable HPKP on your Nginx. This requires the `ngx_http_headers_module.`
 
 ```
 add_header Public-Key-Pins 'pin-sha256="base64+primary=="; pin-sha256="base64+backup=="; max-age=5184000; includeSubDomains' always;
@@ -112,7 +112,7 @@ The following line with your relevant key information (pin-sha256="..." fields) 
 setenv.add-response-header  = ( "Public-Key-Pins" => "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains")
 ```
 
-**Note:** This requires the `mod_setenv` server.module loaded which can be included by the following if not already loaded.
+> **Note:** This requires the `mod_setenv` server.module loaded which can be included by the following if not already loaded.
 
 ```
 server.modules += ( "mod_setenv" )
@@ -122,7 +122,7 @@ server.modules += ( "mod_setenv" )
 
 Add the following line to the Web.config file to send the `Public-Key-Pins` header:
 
-```
+```xml
 <system.webServer>
   ...
 

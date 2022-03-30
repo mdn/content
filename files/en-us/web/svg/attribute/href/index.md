@@ -14,21 +14,21 @@ The **`href`** attribute defines a link to a resource as a reference [URL](/en-U
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("a")}}
-*   {{SVGElement("animate")}}
-*   {{SVGElement("animateMotion")}}
-*   {{SVGElement("animateTransform")}}
-*   {{SVGElement("discard")}}
-*   {{SVGElement("feImage")}}
-*   {{SVGElement("image")}}
-*   {{SVGElement("linearGradient")}}
-*   {{SVGElement("mpath")}}
-*   {{SVGElement("pattern")}}
-*   {{SVGElement("radialGradient")}}
-*   {{SVGElement("script")}}
-*   {{SVGElement("set")}}
-*   {{SVGElement("textPath")}}
-*   {{SVGElement("use")}}
+- {{SVGElement("a")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("animateMotion")}}
+- {{SVGElement("animateTransform")}}
+- {{SVGElement("discard")}}
+- {{SVGElement("feImage")}}
+- {{SVGElement("image")}}
+- {{SVGElement("linearGradient")}}
+- {{SVGElement("mpath")}}
+- {{SVGElement("pattern")}}
+- {{SVGElement("radialGradient")}}
+- {{SVGElement("script")}}
+- {{SVGElement("set")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("use")}}
 
 ## Example
 
@@ -40,7 +40,7 @@ html, body, svg {
 
 ```html
 <svg viewBox="0 0 160 40" xmlns="http://www.w3.org/2000/svg">
-  <a href="https://developer.mozilla.org/"><text x="10" y="25">MDN Web Docs</text></a>
+  <a href="https://developer.mozilla.org/"><text x="10" y="25">MDN Web Docs</text></a>
 </svg>
 ```
 
@@ -513,4 +513,4 @@ The `<use>` element can reference an entire SVG document by specifying an `href`
 
 ## See also
 
-*   {{SVGAttr("xlink:href")}}
+- {{SVGAttr("xlink:href")}}

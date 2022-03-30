@@ -33,13 +33,7 @@ sent or received to date on the video track corresponding to this
 In general, the higher this number is,
 the more heavily compressed the video data is.
 
-## Syntax
-
-```js
-var qpSum = RTCRtpStreamStats.qpSum;
-```
-
-### Value
+## Value
 
 An unsigned 64-bit integer value which indicates the sum of the quantization parameter
 (QP) value for every frame sent or received so far on the track described by the
@@ -62,8 +56,8 @@ frame—so it's difficult to know for certain how substantial the compression is
 you can do is make an estimate. You can, for example, use the value of
 {{domxref("RTCReceivedRtpStreamStats.framesDecoded")}} if receiving the media or
 {{domxref("RTCSentRtpStreamStats.framesEncoded")}} if sending it to get the number of
-frames handled so far, and compute an average from there. See {{anch("Calculating
-  average quantization")}} below for a function that does this.
+frames handled so far, and compute an average from there. See [Calculating
+  average quantization](#calculating_average_quantization) below for a function that does this.
 
 Also, the exact meaning of the QP value depends on the {{Glossary("codec")}} being
 used. For example, for the VP8 codec, the QP value can be anywhere from 1 to 127 and is

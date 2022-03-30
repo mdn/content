@@ -18,7 +18,7 @@ The **`handler.deleteProperty()`** method is a trap for the
 ## Syntax
 
 ```js
-const p = new Proxy(target, {
+new Proxy(target, {
   deleteProperty: function(target, property) {
   }
 });
@@ -32,7 +32,7 @@ The following parameters are passed to the `deleteProperty()` method.
 - `target`
   - : The target object.
 - `property`
-  - : The name or {{jsxref("Symbol")}} of the property to delete.
+  - : The name or {{jsxref("Symbol")}} of the property to delete.
 
 ### Return value
 

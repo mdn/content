@@ -12,7 +12,9 @@ browser-compat: api.PresentationConnection
 ---
 {{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("Presentation API")}}
 
-The **`PresentationConnection`** interface of the [Presentation API](/en-US/docs/Web/API/Presentation_API) provides methods and properties for managing a single presentation. Each [presentation connection](https://www.w3.org/TR/presentation-api/#dfn-presentation-connection) is represented by a `PresentationConnection` object. Both the [controlling user agent](https://www.w3.org/TR/presentation-api/#dfn-controlling-user-agent) and [receiving user agent](https://www.w3.org/TR/presentation-api/#dfn-receiving-user-agent) _MUST_ implement `PresentationConnection`.
+The **`PresentationConnection`** interface of the [Presentation API](/en-US/docs/Web/API/Presentation_API) provides methods and properties for managing a single presentation. Each [presentation connection](https://www.w3.org/TR/presentation-api/#dfn-presentation-connection) is represented by a `PresentationConnection` object. Both the [controlling user agent](https://www.w3.org/TR/presentation-api/#dfn-controlling-user-agent) and [receiving user agent](https://www.w3.org/TR/presentation-api/#dfn-receiving-user-agent) _MUST_ implement `PresentationConnection`.
+
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -32,18 +34,18 @@ The **`PresentationConnection`** interface of the [Presentation API](/en-US/doc
 - {{domxref("PresentationConnection.onconnect")}}
   - : Fired when a presentation connection is established.
 - {{domxref("PresentationConnection.onmessage")}}
-  - : Fired when there is a call to {{DOMxRef("PresentationConnection.send", "PresentationConnection.send()")}}.
+  - : Fired when there is a call to {{DOMxRef("PresentationConnection.send", "PresentationConnection.send()")}}.
 - {{domxref("PresentationConnection.onterminated")}}
-  - : Fired when there is a call to {{DOMxRef("PresentationConnection.terminate", "PresentationConnection.terminate()")}}.
+  - : Fired when there is a call to {{DOMxRef("PresentationConnection.terminate", "PresentationConnection.terminate()")}}.
 
 ## Methods
 
 - {{domxref("PresentationConnection.close()")}}
-  - : Closes the current connection and sends a {{domxref("PresentationConnectionCloseEvent")}} to {{DOMxRef("PresentationConnection.onclosed")}}.
+  - : Closes the current connection and sends a {{domxref("PresentationConnectionCloseEvent")}} to {{DOMxRef("PresentationConnection.onclosed")}}.
 - {{domxref("PresentationConnection.send()")}}
   - : Sends either binary or text data between a controlling browsing context and a presenting browsing context.
 - {{domxref("PresentationConnection.terminate()")}}
-  - : Terminates the current connection and fires {{DOMxRef("PresentationConnection.onterminated")}}.
+  - : Terminates the current connection and fires {{DOMxRef("PresentationConnection.onterminated")}}.
 
 ## Specifications
 

@@ -15,7 +15,9 @@ Returns the specified attribute of the specified element, as an `Attr` node.
 
 ## Syntax
 
-    var attrNode = element.getAttributeNode(attrName);
+```js
+var attrNode = element.getAttributeNode(attrName);
+```
 
 - `attrNode` is an `Attr` node for the attribute.
 - `attrName` is a string containing the name of the attribute.

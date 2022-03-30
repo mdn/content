@@ -11,31 +11,31 @@ The **`width`** attribute defines the horizontal length of an element in the use
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement('feBlend')}}
-*   {{SVGElement('feColorMatrix')}}
-*   {{SVGElement('feComponentTransfer')}}
-*   {{SVGElement('feComposite')}}
-*   {{SVGElement('feConvolveMatrix')}}
-*   {{SVGElement('feDiffuseLighting')}}
-*   {{SVGElement('feDisplacementMap')}}
-*   {{SVGElement('feDropShadow')}}
-*   {{SVGElement('feFlood')}}
-*   {{SVGElement('feGaussianBlur')}}
-*   {{SVGElement('feImage')}}
-*   {{SVGElement('feMerge')}}
-*   {{SVGElement('feMorphology')}}
-*   {{SVGElement('feOffset')}}
-*   {{SVGElement('feSpecularLighting')}}
-*   {{SVGElement('feTile')}}
-*   {{SVGElement('feTurbulence')}}
-*   {{SVGElement('filter')}}
-*   {{SVGElement('foreignObject')}}
-*   {{SVGElement('image')}}
-*   {{SVGElement('mask')}}
-*   {{SVGElement('pattern')}}
-*   {{SVGElement('rect')}}
-*   {{SVGElement('svg')}}
-*   {{SVGElement('use')}}
+- {{SVGElement('feBlend')}}
+- {{SVGElement('feColorMatrix')}}
+- {{SVGElement('feComponentTransfer')}}
+- {{SVGElement('feComposite')}}
+- {{SVGElement('feConvolveMatrix')}}
+- {{SVGElement('feDiffuseLighting')}}
+- {{SVGElement('feDisplacementMap')}}
+- {{SVGElement('feDropShadow')}}
+- {{SVGElement('feFlood')}}
+- {{SVGElement('feGaussianBlur')}}
+- {{SVGElement('feImage')}}
+- {{SVGElement('feMerge')}}
+- {{SVGElement('feMorphology')}}
+- {{SVGElement('feOffset')}}
+- {{SVGElement('feSpecularLighting')}}
+- {{SVGElement('feTile')}}
+- {{SVGElement('feTurbulence')}}
+- {{SVGElement('filter')}}
+- {{SVGElement('foreignObject')}}
+- {{SVGElement('image')}}
+- {{SVGElement('mask')}}
+- {{SVGElement('pattern')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('svg')}}
+- {{SVGElement('use')}}
 
 ## Example
 
@@ -46,9 +46,9 @@ html,body,svg { height:100% }
 ```html
 <svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">
   <!-- With a width of 0 or less, nothing will be rendered -->
-  <rect x="0" y="0" width="0" height="90"/>
-  <rect x="0" y="100" width="60" height="90"/>
-  <rect x="0" y="200" width="100%" height="90"/>
+  <rect x="0" y="0" width="0" height="90"/>
+  <rect x="0" y="100" width="60" height="90"/>
+  <rect x="0" y="200" width="100%" height="90"/>
 </svg>
 ```
 
@@ -888,7 +888,7 @@ For {{SVGElement('use')}}, `width` defines the horizontal length for the referen
   </tbody>
 </table>
 
-> **Note:**  `width`has no effect on `use` elements, unless the element referenced has a [viewbox](/en-US/docs/Web/SVG/Attribute/viewBox) - i.e. they only have an effect when `use` refers to a `svg` or `symbol` element.
+> **Note:** `width`has no effect on `use` elements, unless the element referenced has a [viewbox](/en-US/docs/Web/SVG/Attribute/viewBox) - i.e. they only have an effect when `use` refers to a `svg` or `symbol` element.
 
 > **Note:** Starting with SVG2, `width` is a *Geometry Property* meaning this attribute can also be used as a CSS property for used elements.
 

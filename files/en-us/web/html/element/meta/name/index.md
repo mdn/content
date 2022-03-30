@@ -126,7 +126,7 @@ The HTML specification defines the following set of standard metadata names:
 
 The CSS Device Adaptation specification defines the following metadata name:
 
-- `viewport`: gives hints about the size of the initial size of the {{glossary("viewport")}}. Used by mobile devices only.
+- `viewport`: gives hints about the size of the initial size of the {{glossary("viewport")}}.
 
   <table class="fullwidth-table">
     <caption>
@@ -195,7 +195,7 @@ The CSS Device Adaptation specification defines the following metadata name:
         <td><code>auto</code>, <code>contain</code> or <code>cover</code></td>
         <td>
           <p>
-            The <code>auto</code> value doesn’t affect the initial layout
+            The <code>auto</code> value doesn't affect the initial layout
             viewport, and the whole web page is viewable.
           </p>
           <p>
@@ -212,12 +212,6 @@ The CSS Device Adaptation specification defines the following metadata name:
       </tr>
     </tbody>
   </table>
-
-  > **Note:**
-  >
-  > - Though unstandardized, this declaration is respected by most mobile browsers due to de-facto dominance.
-  > - The default values may vary between devices and browsers.
-  > - To learn about this declaration in Firefox for Mobile, see [this article](/en-US/docs/Mobile/Viewport_meta_tag "Mobile/Viewport meta tag").
 
   ##### Accessibility concerns with viewport scaling
 

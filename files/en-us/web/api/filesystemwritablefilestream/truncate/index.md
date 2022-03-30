@@ -10,7 +10,7 @@ tags:
   - write
 browser-compat: api.FileSystemWritableFileStream.truncate
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`truncate()`** method of the
 {{domxref("FileSystemWritableFileStream")}} interface resizes the file associated with

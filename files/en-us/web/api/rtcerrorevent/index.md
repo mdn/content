@@ -18,6 +18,8 @@ browser-compat: api.RTCErrorEvent
 
 The WebRTC API's **`RTCErrorEvent`** interface represents an error sent to a WebRTC object. It's based on the standard {{domxref("Event")}} interface, but adds RTC-specific information describing the error, as shown below.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("RTCErrorEvent.RTCErrorEvent", "RTCErrorEvent()")}}

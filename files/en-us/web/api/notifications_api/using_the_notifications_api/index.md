@@ -18,7 +18,7 @@ Typically, system notifications refer to the operating system's standard notific
 
 ![](android-notification.png)
 
-The system notification system will vary of course by platform and browser, but this is ok, and the Notifications API is written to be general enough for compatibility with most system notification systems.
+The system notification system will vary of course by platform and browser, but this is OK, and the Notifications API is written to be general enough for compatibility with most system notification systems.
 
 ## Examples
 
@@ -170,7 +170,7 @@ There are four events that are triggered on the {{domxref("Notification")}} inst
 - `show`
   - : Triggered when the notification is displayed to the user.
 
-These events can be tracked using the {{domxref("Notification.onclick","onclick")}}, {{domxref("Notification.onclose","onclose")}}, {{domxref("Notification.onerror","onerror")}}, and {{domxref("Notification.onshow","onshow")}} handlers. Because {{domxref("Notification")}} also inherits from {{domxref("EventTarget")}}, it's possible to use the {{domxref("EventTarget.addEventListener","addEventListener()")}} method on it.
+These events can be tracked using the {{domxref("Notification.click_event","onclick")}}, {{domxref("Notification.close_event","onclose")}}, {{domxref("Notification.error_event","onerror")}}, and {{domxref("Notification.show_event","onshow")}} handlers. Because {{domxref("Notification")}} also inherits from {{domxref("EventTarget")}}, it's possible to use the {{domxref("EventTarget.addEventListener","addEventListener()")}} method on it.
 
 ## Replacing existing notifications
 
@@ -191,6 +191,15 @@ It's possible to handle multiple notifications this way:
 ```js
 window.addEventListener('load', function () {
   var button = document.getElementsByTagName('button')[0];
+
+  if (window.self !== window.top) {
+    // Ensure that if our document is in a frame, we get the user
+    // to first open it in its own tab or window. Otherwise, it
+    // won't be able to request permission to send notifications.
+    button.textContent = "View live result of the example code above";
+    button.addEventListener('click', () => window.open(location.href));
+    return;
+  }
 
   button.addEventListener('click', function () {
     // If the user agreed to get notified
@@ -241,7 +250,7 @@ window.addEventListener('load', function () {
 });
 ```
 
-See the live result below:
+### Result
 
 {{ EmbedLiveSample('Tag_example', '100%', 30) }}
 

@@ -73,7 +73,7 @@ The **alignment subject** is the thing that is being aligned. For `justify-self`
 
 ### The alignment container
 
-The **alignment container** is the box the subject is being aligned inside. This will typically be the alignment subject’s containing block. An alignment container may contain one or many alignment subjects.
+The **alignment container** is the box the subject is being aligned inside. This will typically be the alignment subject's containing block. An alignment container may contain one or many alignment subjects.
 
 The below image shows an alignment container with two alignment subjects inside.
 
@@ -146,7 +146,7 @@ There needs to be space available in the dimension you wish to align the items i
 
 ## Overflow alignment
 
-The `safe` and `unsafe` keywords help define behavior when an alignment subject is larger than the alignment container. The `safe` keyword will align to `start` in the case of a specified alignment causing an overflow, the aim being to avoid “data loss” where part of the item is outside of the boundaries of the alignment container and can’t be scrolled to.
+The `safe` and `unsafe` keywords help define behavior when an alignment subject is larger than the alignment container. The `safe` keyword will align to `start` in the case of a specified alignment causing an overflow, the aim being to avoid "data loss" where part of the item is outside of the boundaries of the alignment container and can't be scrolled to.
 
 If you specify `unsafe` then the alignment will be honoured even if it would cause such data loss.
 
@@ -164,7 +164,7 @@ In the below example, a grid layout uses the `gap` shorthand to set a `10px` gap
 
 {{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-gap.html", '100%', 700)}}
 
-> **Note:** The early grid implementation included `-gap` properties prefixed with `grid-`. All browsers now support the unprefixed properties, though you may see the following legacy properties in examples and tutorials: {{cssxref("row-gap")}}, {{cssxref("column-gap")}}, and {{cssxref("gap")}}. The prefixed versions will be maintained as an alias of the unprefixed ones.
+> **Note:** The early grid implementation included `-gap` properties prefixed with `grid-`. All browsers now support the unprefixed properties, though you may see the following legacy properties in examples and tutorials: {{cssxref("row-gap", "grid-row-gap")}}, {{cssxref("column-gap", "grid-column-gap")}}, and {{cssxref("gap", "grid-gap")}}. The prefixed versions will be maintained as an alias of the unprefixed ones.
 
 Be aware that other things may increase the visual gap displayed, for example using the space distribution keywords or adding margins to items.
 

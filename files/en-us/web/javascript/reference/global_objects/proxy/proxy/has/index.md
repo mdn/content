@@ -18,7 +18,7 @@ The **`handler.has()`** method is a trap for the
 ## Syntax
 
 ```js
-const p = new Proxy(target, {
+new Proxy(target, {
   has: function(target, prop) {
   }
 });
@@ -32,7 +32,7 @@ bound to the handler.
 - `target`
   - : The target object.
 - `prop`
-  - : The name or {{jsxref("Symbol")}} of the property to check for existence.
+  - : The name or {{jsxref("Symbol")}} of the property to check for existence.
 
 ### Return value
 

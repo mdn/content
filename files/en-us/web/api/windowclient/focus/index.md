@@ -16,7 +16,7 @@ browser-compat: api.WindowClient.focus
 
 The **`focus()`** method of the {{domxref("WindowClient")}}
 interface gives user input focus to the current client and returns a
-{{jsxref("Promise")}} that resolves to the existing
+{{jsxref("Promise")}} that resolves to the existing
 {{domxref("WindowClient")}}.
 
 ## Syntax

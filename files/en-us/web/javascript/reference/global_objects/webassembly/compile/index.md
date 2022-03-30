@@ -53,11 +53,11 @@ The following example compiles the loaded simple.wasm byte code using the
 var worker = new Worker("wasm_worker.js");
 
 fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
+  response.arrayBuffer()
 ).then(bytes =>
-  WebAssembly.compile(bytes)
+  WebAssembly.compile(bytes)
 ).then(mod =>
-  worker.postMessage(mod)
+  worker.postMessage(mod)
 );
 ```
 
@@ -77,5 +77,4 @@ fetch('simple.wasm').then(response =>
 
 - [WebAssembly](/en-US/docs/WebAssembly) overview page
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly
-  JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

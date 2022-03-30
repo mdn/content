@@ -15,16 +15,20 @@ browser-compat: api.PermissionStatus
 
 The **`PermissionStatus`** interface of the [Permissions API](Permissions_API) provides the state of an object and an event handler for monitoring changes to said state.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
+- {{domxref("PermissionStatus.name")}} {{readonlyinline}}
+  - : Returns the name of a requested permission, identical to the `name` passed to {{domxref("Permissions.query")}}.
 - {{domxref("PermissionStatus.state")}} {{readonlyinline}}
   - : Returns the state of a requested permission; one of `'granted'`, `'denied'`, or `'prompt'`.
 - `PermissionStatus.status`{{readonlyinline}} {{deprecated_inline}}
   - : Returns the state of a requested permission; one of `'granted'`, `'denied'`, or `'prompt'`. Later versions of the specification replace this with {{domxref("PermissionStatus.state")}}.
 
-### Event Handler
+### Events
 
-- {{domxref("PermissionStatus.onchange")}}
+- {{domxref("PermissionStatus.change_event", "change")}}
   - : An event called whenever `PermissionStatus.status` changes.
 
 ## Example

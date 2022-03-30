@@ -56,8 +56,6 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("close")}} event is raised.
 - {{domxref("GlobalEventHandlers.oncontextmenu")}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("contextmenu")}} event is raised.
-- {{domxref("GlobalEventHandlers.oncuechange")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("cuechange")}} event is raised.
 - {{domxref("GlobalEventHandlers.ondblclick")}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("dblclick")}} event is raised.
 - {{domxref("GlobalEventHandlers.ondrag")}}
@@ -199,7 +197,7 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
 - {{domxref("GlobalEventHandlers.ontransitionend")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when a {{event("transitionend")}} event is sent, indicating that a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) has finished playing.
 - {{domxref("GlobalEventHandlers.ontransitionrun")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when a {{event("transitionrun")}} event is sent, indicating that a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) is running, though not nessarilty started.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when a {{event("transitionrun")}} event is sent, indicating that a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) is running, though not necessarily started.
 - {{domxref("GlobalEventHandlers.ontransitionstart")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when a {{event("transitionstart")}} event is sent, indicating that a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) has started transitioning.
 - {{domxref("GlobalEventHandlers.onwaiting")}}

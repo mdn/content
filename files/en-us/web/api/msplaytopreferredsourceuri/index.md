@@ -49,7 +49,7 @@ a _PlayTo_ device. This is done to conform to URI standards.
 
 ## See also
 
-- [Microsoft PlayReady](https://docs.microsoft.com/en-us/playready/)
+- [Microsoft PlayReady](https://docs.microsoft.com/playready/)
   content access and protection technology is a set of technologies that can be used to
   distribute audio/video content more securely over a network, and help prevent the
   unauthorized use of this content.

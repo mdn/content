@@ -8,11 +8,12 @@ tags:
   - HTML
   - Input
   - Reference
+spec-urls: https://html.spec.whatwg.org/multipage/input.html#attr-input-accept
 ---
 
 {{HTMLSidebar}}
 
-The **`accept`** attribute takes as its value a comma-separated list of one or more file types, or {{anch("Unique file type specifiers", "unique file type specifiers")}}, describing which file types to allow.
+The **`accept`** attribute takes as its value a comma-separated list of one or more file types, or [unique file type specifiers](#unique_file_type_specifiers), describing which file types to allow.
 
 The accept property is an attribute of the {{HTMLElement("input/file", "file")}} {{htmlelement("input")}} type. It was supported on the {{htmlelement("form")}} element, but was removed in favor of {{HTMLElement("input/file", "file")}} in HTML5.
 
@@ -102,7 +103,7 @@ This produces the following output:
 
 {{EmbedLiveSample('A_basic_example', 650, 60)}}
 
-> **Note:** You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
+> **Note:** You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
 
 Regardless of the user's device or operating system, the file input provides a button that opens up a file picker dialog that allows the user to choose a file.
 
@@ -144,10 +145,7 @@ div {
 
 ## Specifications
 
-| Specification                                                                   | Status                   |
-| ------------------------------------------------------------------------------- | ------------------------ |
-| {{SpecName('HTML WHATWG', 'input.html#attr-input-accept', 'accept attribute')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5.1', 'sec-forms.html#attr-input-accept', 'accept attribute')}} | {{Spec2('HTML5.1')}}     |
+{{Specifications}}
 
 ## Browser compatibility
 

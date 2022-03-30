@@ -33,7 +33,7 @@ var type = RTCStats.type;
 ### Value
 
 A {{domxref("DOMString")}} which specifies which type of statistic is represented by
-the object. The string comes from the {{domxref("RTCStatsType")}} enum and corrsponds to
+the object. The string comes from the {{domxref("RTCStatsType")}} enum and corresponds to
 one of the {{domxref("RTCStats")}}-based statistic object types.
 
 ## Specifications

@@ -13,14 +13,9 @@ browser-compat: api.Element.ariaRowCount
 ---
 {{DefaultAPISidebar("DOM")}}
 
-The **`ariaRowCount`** property of the {{domxref("Element")}} interface reflects the value of the `aria-rowcount` attribute, which defines the total number of rows in a table, grid, or treegrid.
+The **`ariaRowCount`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount) attribute, which defines the total number of rows in a table, grid, or treegrid.
 
-## Syntax
-
-    var ariaRowCount = element.ariaRowCount;
-    element.ariaRowCount = ariaRowCount
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} which contains an integer.
 

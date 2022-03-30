@@ -12,7 +12,7 @@ tags:
   - Reference
 browser-compat: api.CSSMathSum.CSSMathSum
 ---
-{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSMathSum()`** constructor creates a
 new {{domxref("CSSMathSum")}} object which creates a new {{domxref('CSSKeywordValue')}}
@@ -23,7 +23,7 @@ or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue'
 ## Syntax
 
 ```js
-var CSSMathSum = new CSSMathSum(values)
+new CSSMathSum(values)
 ```
 
 ### Parameters

@@ -14,14 +14,7 @@ browser-compat: api.AnalyserNode.smoothingTimeConstant
 
 The **`smoothingTimeConstant`** property of the {{ domxref("AnalyserNode") }} interface is a double value representing the averaging constant with the last analysis frame. It's basically an average between the current buffer and the last buffer the `AnalyserNode` processed, and results in a much smoother set of value changes over time.
 
-## Syntax
-
-```js
-var smoothValue = analyserNode.smoothingTimeConstant;
-analyserNode.smoothingTimeConstant = newValue;
-```
-
-### Value
+## Value
 
 A double within the range `0` to `1` (`0` meaning no time averaging). The default value is `0.8`.
 
@@ -31,7 +24,7 @@ In technical terms, we apply a [Blackman window](https://webaudio.github.io/web-
 
 > **Note:** If a value outside the range 0–1 is set, an `INDEX_SIZE_ERR` exception is thrown.
 
-## Example
+## Examples
 
 The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect frequency data repeatedly and draw a "winamp bargraph style" output of the current audio input. For more complete applied examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo (see [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) for relevant code).
 
@@ -54,25 +47,25 @@ var dataArray = new Uint8Array(bufferLength);
 canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
 
 function draw() {
-  drawVisual = requestAnimationFrame(draw);
+  drawVisual = requestAnimationFrame(draw);
 
-  analyser.getByteFrequencyData(dataArray);
+  analyser.getByteFrequencyData(dataArray);
 
-  canvasCtx.fillStyle = 'rgb(0, 0, 0)';
-  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+  canvasCtx.fillStyle = 'rgb(0, 0, 0)';
+  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
-  var barWidth = (WIDTH / bufferLength) * 2.5;
-  var barHeight;
-  var x = 0;
+  var barWidth = (WIDTH / bufferLength) * 2.5;
+  var barHeight;
+  var x = 0;
 
-  for(var i = 0; i < bufferLength; i++) {
-    barHeight = dataArray[i];
+  for(var i = 0; i < bufferLength; i++) {
+    barHeight = dataArray[i];
 
-    canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
-    canvasCtx.fillRect(x,HEIGHT-barHeight/2,barWidth,barHeight/2);
+    canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
+    canvasCtx.fillRect(x,HEIGHT-barHeight/2,barWidth,barHeight/2);
 
-    x += barWidth + 1;
-  }
+    x += barWidth + 1;
+  }
 };
 
 draw();

@@ -15,7 +15,7 @@ The **`cap-height`** attribute defines the height of uppercase glyphs of the fon
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("font-face")}}
+- {{SVGElement("font-face")}}
 
 ## Usage notes
 
@@ -63,5 +63,5 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-*   {{SVGAttr("x-height")}}
-*   {{SVGAttr("accent-height")}}
+- {{SVGAttr("x-height")}}
+- {{SVGAttr("accent-height")}}

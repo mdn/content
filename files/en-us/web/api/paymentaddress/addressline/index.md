@@ -25,13 +25,7 @@ These
 lines may include the street name, house number, apartment number, rural delivery route,
 descriptive instructions, or post office box.
 
-## Syntax
-
-```js
-var paymentAddressLines = PaymentAddress.addressLine;
-```
-
-### Value
+## Value
 
 An array of {{domxref("DOMString")}} objects, each containing one line of the address.
 For example, the `addressLine` array for the Mozilla Space in London would

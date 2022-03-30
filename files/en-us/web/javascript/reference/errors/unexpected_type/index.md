@@ -61,8 +61,9 @@ Object.create(foo); // TypeError: "foo" is not an object or null
 
 ### Fixing the issue
 
-To fix null pointer to `undefined` values, you can use the [typeof](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) operator, for
-example.
+To fix null pointer to `undefined` values,
+you can use the [typeof](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) operator,
+for example.
 
 ```js
 if (foo !== undefined) {

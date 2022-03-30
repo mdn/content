@@ -29,7 +29,7 @@ The **`@page`** CSS at-rule is used to modify some CSS properties when printing 
 ### Descriptors
 
 - [`size`](/en-US/docs/Web/CSS/@page/size)
-  - : Specifies the target size and orientation of the page box’s containing block. In the general case, where one page box is rendered onto one page sheet, it also indicates the size of the destination page sheet.
+  - : Specifies the target size and orientation of the page box's containing block. In the general case, where one page box is rendered onto one page sheet, it also indicates the size of the destination page sheet.
 
 ## Description
 
@@ -47,7 +47,7 @@ The `@page` at-rule can be accessed via the CSS object model interface {{domxref
 
 ### @page pseudo-class examples
 
-Please refer to the various [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes "Pseudo-classes") of `@page` for examples.
+Please refer to the various [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) of `@page` for examples.
 
 - {{Cssxref(":blank")}}
 - {{Cssxref(":first")}}

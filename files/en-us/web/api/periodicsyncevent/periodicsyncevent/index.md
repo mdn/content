@@ -11,17 +11,17 @@ tags:
   - periodic sync
 browser-compat: api.PeriodicSyncEvent.PeriodicSyncEvent
 ---
-{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}
+{{DefaultAPISidebar("Periodic Background Sync")}}
 
 The **`PeriodicSyncEvent()`** constructor
 creates a new {{domxref("PeriodicSyncEvent")}} object. This constructor is not typically
 used. The browser creates these objects itself and provides them to
-{{domxref('ServiceWorkerGlobalScope.onperiodicsync')}} callback.
+{{domxref('ServiceWorkerGlobalScope.periodicsync_event', 'onperiodicsync')}} callback.
 
 ## Syntax
 
 ```js
-var PeriodicSyncEvent = new PeriodicSyncEvent();
+new PeriodicSyncEvent();
 ```
 
 ### Parameters
@@ -42,7 +42,7 @@ A {{domxref("PeriodicSyncEvent")}} object configured using the given inputs.
 
 ## Examples
 
-This example constructs a new {{domxref('PeriodicSyncEvent')}} with the relevant
+This example constructs a new {{domxref('PeriodicSyncEvent')}} with the relevant
 associated tag.
 
 ```js

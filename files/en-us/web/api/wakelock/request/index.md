@@ -9,7 +9,7 @@ tags:
   - WakeLock
 browser-compat: api.WakeLock.request
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
+{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
 
 The **`request()`** method of the
 {{domxref("WakeLock")}} interface returns a {{jsxref("Promise")}} that resolves with a

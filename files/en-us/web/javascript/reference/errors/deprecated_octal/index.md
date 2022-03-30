@@ -9,8 +9,7 @@ tags:
 ---
 {{jsSidebar("Errors")}}
 
-The JavaScript [strict
-mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception "0-prefixed octal literals and octal escape sequences are
+The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception "0-prefixed octal literals and octal escape sequences are
 deprecated; for octal literals use the "0o" prefix instead" occurs when deprecated octal
 literals and octal escape sequences are used.
 
@@ -32,7 +31,7 @@ for octal literals use the "0o" prefix instead
 Octal literals and octal escape sequences are deprecated and will throw a
 {{jsxref("SyntaxError")}} in strict mode. With ECMAScript 2015 and later, the
 standardized syntax uses a leading zero followed by a lowercase or uppercase Latin
-letter "O" (`0o` or `0O)`.
+letter "O" (`0o` or `0O`).
 
 ## Examples
 
@@ -74,7 +73,5 @@ For octal escape sequences, you can use hexadecimal escape sequences instead:
 
 ## See also
 
-- [Lexical
-  grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#octal)
-- [Warning: 08/09 is
-  not a legal ECMA-262 octal constant](/en-US/docs/Web/JavaScript/Reference/Errors/Bad_octal)
+- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#octal)
+- [Warning: 08/09 is not a legal ECMA-262 octal constant](/en-US/docs/Web/JavaScript/Reference/Errors/Bad_octal)

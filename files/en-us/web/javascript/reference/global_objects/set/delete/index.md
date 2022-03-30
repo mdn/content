@@ -26,12 +26,12 @@ delete(value)
 ### Parameters
 
 - `value`
-  - : The value to remove from `mySet`.
+  - : The value to remove from `Set`.
 
 ### Return value
 
 Returns `true` if `value` was already in
-`mySet`; otherwise `false`.
+`Set`; otherwise `false`.
 
 ## Examples
 
@@ -47,7 +47,7 @@ mySet.delete('foo'); // Returns true. Successfully removed.
 mySet.has('foo');    // Returns false. The "foo" element is no longer present.
 ```
 
-Let's checkout below how to delete an Object from a Set.
+Let's check out below how to delete an Object from a Set.
 
 ```js
 const setObj = new Set();   // Create a new set.

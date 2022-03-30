@@ -12,7 +12,7 @@ The **`fr`** attribute defines the radius of the focal point for the radial grad
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("radialGradient")}}
+- {{SVGElement("radialGradient")}}
 
 ## Example
 

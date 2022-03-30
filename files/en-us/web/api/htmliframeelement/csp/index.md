@@ -17,14 +17,7 @@ The **`csp`** property of the {{domxref("HTMLIFrameElement")}}
 interface specifies the [Content Security Policy](/en-US/docs/Web/HTTP/CSP) that an
 embedded document must agree to enforce upon itself.
 
-## Syntax
-
-```js
-var csp = HTMLIFrameElement.csp
-HTMLIFrameElement.csp = csp
-```
-
-### Value
+## Value
 
 A content security policy.
 

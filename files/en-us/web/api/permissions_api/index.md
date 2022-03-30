@@ -12,9 +12,9 @@ tags:
 ---
 {{DefaultAPISidebar("Permissions API")}}
 
-The **Permissions API** provides a consistent programmatic way to query the status of API permissions attributed to the current context. For example, the Permissions API can be used to determine if permission to access a particular API has been granted or denied.
+The **Permissions API** provides a consistent programmatic way to query the status of API permissions attributed to the current context. For example, the Permissions API can be used to determine if permission to access a particular API has been granted or denied.
 
-> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (although not current versions of Firefox, as [WorkerNavigator.permissions](/en-US/docs/Web/API/WorkerNavigator/permissions) is not implemented).
+> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (although not current versions of Firefox, as [WorkerNavigator.permissions](/en-US/docs/Web/API/WorkerNavigator/permissions) is not implemented).
 
 ## Concepts and usage
 
@@ -35,7 +35,7 @@ More APIs will gain Permissions API support over time.
 
 ## Examples
 
-We have made a simple example available called Location Finder. You can [run the example live](https://chrisdavidmills.github.io/location-finder-permissions-api/), or [view the source code on Github](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages).
+We have made a simple example available called Location Finder. You can [run the example live](https://chrisdavidmills.github.io/location-finder-permissions-api/), or [view the source code on GitHub](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages).
 
 Read more about how it works in our article [Using the Permissions API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API).
 

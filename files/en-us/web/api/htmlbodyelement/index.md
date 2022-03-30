@@ -13,7 +13,7 @@ browser-compat: api.HTMLBodyElement
 
 The **`HTMLBodyElement`** interface provides special properties (beyond those inherited from the regular {{ domxref("HTMLElement") }} interface) for manipulating {{HtmlElement("body")}} elements.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -50,10 +50,6 @@ _No specific event handlers; inherits event handlers from its parent, {{domxref(
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("hashchange")}} event is raised.
 - {{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("languagechange")}} event is raised.
-- {{domxref("WindowEventHandlers.onmessage")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) called whenever an object receives a {{event("message")}} event.
-- {{domxref("WindowEventHandlers.onmessageerror")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) called whenever an object receives a {{event("messageerror")}} event.
 - {{domxref("WindowEventHandlers.onoffline")}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("offline")}} event is raised.
 - {{domxref("WindowEventHandlers.ononline")}}

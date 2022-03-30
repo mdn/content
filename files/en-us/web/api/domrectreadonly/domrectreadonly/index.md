@@ -5,14 +5,12 @@ tags:
   - API
   - Constructor
   - DOM
-  - DOM Reference
   - DOMRectReadOnly
-  - Experimental
   - Geometry
   - Reference
 browser-compat: api.DOMRectReadOnly.DOMRectReadOnly
 ---
-{{APIRef("DOM")}}{{ SeeCompatTable }}
+{{APIRef("Geometry Interfaces")}}
 
 The **`DOMRectReadOnly()`** constructor creates a new
 {{domxref("DOMRectReadOnly")}} object.
@@ -20,7 +18,7 @@ The **`DOMRectReadOnly()`** constructor creates a new
 ## Syntax
 
 ```js
-const myDOMRectReadOnly = new DOMRectReadOnly(x, y, width, height)
+new DOMRectReadOnly(x, y, width, height)
 ```
 
 ### Parameters

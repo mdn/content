@@ -13,19 +13,18 @@ browser-compat: api.BarProp.visible
 
 The **`visible`** read-only property of the {{domxref("BarProp")}} interface returns `true` if the user interface element it represents is visible.
 
-## Syntax
+## Value
 
-```js
-let visible = BarProp.visible;
-```
+A {{jsxref("Boolean")}}, which is true if the top-level window is opened by
+{{domxref("window.open")}} with the {{domxref("window.open", "requesting a popup window", "popup_feature", 1)}}.
 
-### Value
-
-A {{jsxref("Boolean")}}, which is true if the bar represented by the used interface element is visible.
+> **Note:** Historically this represented whether the interface element used is visible
+> or not. But for privacy reasons, this no longer represents the actual visibility of each
+> interface element.
 
 ## Examples
 
-The following example prints `true` to the console if the location bar is visible, `false` if it is not.
+The following example prints `true` to the console if the window is not a popup.
 
 ```js
 console.log(window.locationbar.visible);

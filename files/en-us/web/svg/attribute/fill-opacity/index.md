@@ -14,17 +14,17 @@ The **`fill-opacity`** attribute is a presentation attribute defining the opacit
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement('altGlyph')}}
-*   {{SVGElement('circle')}}
-*   {{SVGElement('ellipse')}}
-*   {{SVGElement('path')}}
-*   {{SVGElement('polygon')}}
-*   {{SVGElement('polyline')}}
-*   {{SVGElement('rect')}}
-*   {{SVGElement('text')}}
-*   {{SVGElement('textPath')}}
-*   {{SVGElement('tref')}}
-*   {{SVGElement('tspan')}}
+- {{SVGElement('altGlyph')}}
+- {{SVGElement('circle')}}
+- {{SVGElement('ellipse')}}
+- {{SVGElement('path')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('text')}}
+- {{SVGElement('textPath')}}
+- {{SVGElement('tref')}}
+- {{SVGElement('tspan')}}
 
 ## Example
 
@@ -81,10 +81,6 @@ html,body,svg { height:100% }
 
 > **Note:** SVG2 introduces percentage values for `fill-opacity`, however, it is not widely supported yet (*See [Browser compatibility](#browser_compatibility) below*) as a consequence, it is best practices to set opacity with a value in the range `[0-1]`.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Specifications
 
 <table class="no-markdown">
@@ -112,3 +108,7 @@ html,body,svg { height:100% }
     </tr>
   </tbody>
 </table>
+
+## Browser compatibility
+
+{{Compat}}

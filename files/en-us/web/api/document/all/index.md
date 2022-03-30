@@ -12,20 +12,14 @@ tags:
   - all
 browser-compat: api.Document.all
 ---
-{{APIRef("DOM")}}{{Draft}}{{Deprecated_Header}}
+{{APIRef("DOM")}}{{Deprecated_Header}}
 
 The {{DOMxRef("Document")}} interface's read-only **`all`**
 property returns an {{DOMxRef("HTMLAllCollection")}} rooted at the document node. In
 other words, it returns all of the document's elements, accessible by order (like an
 array) and by ID (like a regular object).
 
-## Syntax
-
-```js
-var htmlAllCollection = document.all;
-```
-
-### Value
+## Value
 
 An {{DOMxRef("HTMLAllCollection")}} which contains every element in the document.
 

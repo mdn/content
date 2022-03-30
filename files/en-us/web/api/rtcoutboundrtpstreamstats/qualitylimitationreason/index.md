@@ -33,21 +33,13 @@ potential ways that can be done can be found in
 {{domxref("RTCOutboundRtpStreamStats.qualityLimitationDurations",
   "qualityLimitationDurations")}}.
 
-## Syntax
-
-```js
-var qualityLimitationReason = RTCOutboundRtpStreamStats.qualityLimitationReason;
-```
-
-### Value
+## Value
 
 A {{jsxref("Map")}} whose keys are {{domxref("DOMString")}}s whose values come from the
 {{domxref("RTCQualityLimitationReason")}} enumerated type, and whose values are the
 duration of the media, in seconds, whose quality was reduced for that reason.
 
 ## Examples
-
-
 
 ## Specifications
 

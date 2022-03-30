@@ -12,7 +12,7 @@ The **`maskUnits`** attribute indicates which coordinate system to use for the g
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement('mask')}}
+- {{SVGElement('mask')}}
 
 ## Example
 
@@ -22,17 +22,17 @@ html,body,svg { height:100% }
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <mask id="myMask1" maskUnits="userSpaceOnUse"
-        x="20%" y="20%" width="60%" height="60%">
-    <rect   fill="black" x="0" y="0" width="100%" height="100%" />
-    <circle fill="white" cx="50" cy="50" r="35" />
-  </mask>
+  <mask id="myMask1" maskUnits="userSpaceOnUse"
+        x="20%" y="20%" width="60%" height="60%">
+    <rect   fill="black" x="0" y="0" width="100%" height="100%" />
+    <circle fill="white" cx="50" cy="50" r="35" />
+  </mask>
 
-  <mask id="myMask2" maskUnits="objectBoundingBox"
-        x="20%" y="20%" width="60%" height="60%">
-    <rect   fill="black" x="0" y="0" width="100%" height="100%" />
-    <circle fill="white" cx="50" cy="50" r="35" />
-  </mask>
+  <mask id="myMask2" maskUnits="objectBoundingBox"
+        x="20%" y="20%" width="60%" height="60%">
+    <rect   fill="black" x="0" y="0" width="100%" height="100%" />
+    <circle fill="white" cx="50" cy="50" r="35" />
+  </mask>
 
   <!-- Some reference rect to materialized the mask -->
   <rect id="r1" x="0"  y="0"  width="45" height="45" />
@@ -73,10 +73,10 @@ For {{SVGElement('mask')}}, `maskUnits` defines the coordinate system in use for
   </tbody>
 </table>
 
-*   `userSpaceOnUse`
-    *   : This value indicates that all coordinates for the geometry attributes refer to the user coordinate system as defined when the mask was created.
-*   `objectBoundingBox`
-    *   : This value indicates that all coordinates for the geometry attributes represent fractions or percentages of the bounding box of the element to which the mask is applied. A bounding box could be considered the same as if the content of the {{ SVGElement("mask") }} were bound to a "`0 0 1 1`" {{ SVGAttr("viewbox") }}.
+- `userSpaceOnUse`
+  - : This value indicates that all coordinates for the geometry attributes refer to the user coordinate system as defined when the mask was created.
+- `objectBoundingBox`
+  - : This value indicates that all coordinates for the geometry attributes represent fractions or percentages of the bounding box of the element to which the mask is applied. A bounding box could be considered the same as if the content of the {{ SVGElement("mask") }} were bound to a "`0 0 1 1`" {{ SVGAttr("viewbox") }}.
 
 ## Specifications
 

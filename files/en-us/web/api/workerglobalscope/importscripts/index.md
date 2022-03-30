@@ -23,7 +23,7 @@ self.importScripts('foo.js', 'bar.js', ...);
 
 ### Parameters
 
-A comma-separated list of {{domxref("DOMString")}} objects representing the scripts to be imported. These paths are relative to _html document base URL_.
+A comma-separated list of {{domxref("DOMString")}} objects representing the scripts to be imported. These paths are relative to _html document base URL_.
 
 ### Return value
 
@@ -32,7 +32,7 @@ _None._
 ### Exceptions
 
 - `NetworkError`
-  - : Imported scripts were not served with a valid JavaScript MIME type (i.e. `text/javascript`).
+  - : Imported scripts were served without a `text/javascript` MIME type or without one of the permitted [legacy JavaScript MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#legacy_javascript_mime_types).
 
 ## Example
 

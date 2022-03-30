@@ -12,7 +12,7 @@ tags:
 ---
 {{DefaultAPISidebar("IndexedDB")}}
 
-IndexedDB is a low-level API for client-side storage of significant amounts of structured data, including files/blobs. This API uses indexes to enable high-performance searches of this data. While [Web Storage](/en-US/docs/Web/API/Web_Storage_API) is useful for storing smaller amounts of data, it is less useful for storing larger amounts of structured data. IndexedDB provides a solution. This is the main landing page for MDN's IndexedDB coverage — here we provide links to the full API reference and usage guides, browser support details, and some explanation of key concepts.
+IndexedDB is a low-level  API for client-side storage of significant amounts of structured data, including files/blobs. This API uses indexes to enable high-performance searches of this data. While [Web Storage](/en-US/docs/Web/API/Web_Storage_API) is useful for storing smaller amounts of data, it is less useful for storing larger amounts of structured data. IndexedDB provides a solution. This is the main landing page for MDN's IndexedDB coverage — here we provide links to the full API reference and usage guides, browser support details, and some explanation of key concepts.
 
 {{AvailableInWorkers}}
 
@@ -20,7 +20,7 @@ IndexedDB is a low-level API for client-side storage of significant amounts of 
 
 ## Key concepts and usage
 
-IndexedDB is a transactional database system, like an SQL-based RDBMS. However, unlike SQL-based RDBMSes, which use fixed-column tables, IndexedDB is a JavaScript-based object-oriented database. IndexedDB lets you store and retrieve objects that are indexed with a **key**; any objects supported by the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) can be stored. You need to specify the database schema, open a connection to your database, and then retrieve and update data within a series of **transactions**.
+IndexedDB is a transactional database system, like an SQL-based RDBMS. However, unlike SQL-based RDBMSes, which  use fixed-column tables, IndexedDB is a JavaScript-based object-oriented database. IndexedDB lets you store and retrieve objects that are indexed with a **key**; any objects supported by the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) can be stored. You need to specify the database schema, open a connection to your database, and then retrieve and update data within a series of **transactions**.
 
 - Read more about [IndexedDB key characteristics and basic terminology](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology).
 - Learn to use IndexedDB asynchronously from first principles with our [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB) guide.
@@ -30,11 +30,11 @@ IndexedDB is a transactional database system, like an SQL-based RDBMS. However, 
 
 ### Synchronous and asynchronous
 
-Operations performed using IndexedDB are done asynchronously, so as not to block applications. IndexedDB originally included both synchronous and asynchronous APIs. The synchronous API was intended for use only with [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) but was removed from the spec because it was unclear whether it was needed. However, the synchronous API may be reintroduced if there is enough demand from web developers.
+Operations performed using IndexedDB are done asynchronously, so as not to block applications.
 
 ### Storage limits and eviction criteria
 
-There are a number of web technologies that store data of one kind or another on the client side (i.e. on your local disk). IndexedDB is most commonly talked about. The process by which the browser works out how much space to allocate to web data storage and what to delete when that limit is reached is not simple, and differs between browsers. [Browser storage limits and eviction criteria](/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria) attempts to explain how this works, at least in the case of Firefox.
+There are a number of web technologies that store data of one kind or another on the client  side (i.e. on your local disk). IndexedDB is most commonly talked about. The process by which the browser works out how much space to allocate to web data storage and what to delete when that limit is reached is not simple, and differs between browsers. [Browser storage limits and eviction criteria](/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria) attempts to explain how this works, at least in the case of Firefox.
 
 ## Interfaces
 
@@ -43,7 +43,7 @@ To get access to a database, call [`open()`](/en-US/docs/Web/API/IDBFactory/open
 ### Connecting to a database
 
 - {{domxref("IDBFactory")}}
-  - : Provides access to a database. This is the interface implemented by the global object {{domxref("indexedDB")}} and is therefore the entry point for the API.
+  - : Provides access to a database. This is the interface implemented by the global object {{domxref("indexedDB")}}  and is therefore the entry point for the API.
 - {{domxref("IDBOpenDBRequest")}}
   - : Represents a request to open a database.
 - {{domxref("IDBDatabase")}}
@@ -66,41 +66,18 @@ To get access to a database, call [`open()`](/en-US/docs/Web/API/IDBFactory/open
 - {{domxref("IDBKeyRange")}}
   - : Defines a key range that can be used to retrieve data from a database in a certain range.
 - {{domxref("IDBLocaleAwareKeyRange")}} {{Non-standard_inline}}
-  - : Defines a key range that can be used to retrieve data from a database in a certain range, sorted according to the rules of the locale specified for a certain index (see [`createIndex()`'s optionalParameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters).). This interface isn't part of the 2.0 specification.
+  - : Defines a key range that can be used to retrieve data from a database in a certain range, sorted according to the rules of the locale specified for a certain index (see [`createIndex()`'s optionalParameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters).).  This interface isn't part of the 2.0 specification.
 
 ### Custom event interfaces
 
 This specification fires events with the following custom interface:
 
 - {{domxref("IDBVersionChangeEvent")}}
-  - : The `IDBVersionChangeEvent` interface indicates that the version of the database has changed, as the result of an {{domxref("IDBOpenDBRequest.onupgradeneeded")}} event handler function.
-
-### Obsolete interfaces
-
-An early version of the specification also defined the following, now removed, interfaces. They are still documented in case you need to update previously written code:
-
-- {{domxref("IDBDatabaseException")}}  {{deprecated_inline}}
-  - : Represents exception conditions that can be encountered while performing database operations.
-- {{domxref("IDBTransactionSync")}} {{deprecated_inline}}
-  - : Sync version of {{domxref("IDBTransaction")}}.
-- {{domxref("IDBObjectStoreSync")}} {{deprecated_inline}}
-  - : Sync version of {{domxref("IDBObjectStore")}}.
-- {{domxref("IDBIndexSync")}} {{deprecated_inline}}
-  - : Sync version of {{domxref("IDBIndex")}}.
-- {{domxref("IDBFactorySync")}} {{deprecated_inline}}
-  - : Sync version of {{domxref("IDBFactory")}}.
-- {{domxref("IDBEnvironmentSync")}} {{deprecated_inline}}
-  - : Sync version of {{domxref("IDBEnvironment")}}.
-- {{domxref("IDBDatabaseSync")}} {{deprecated_inline}}
-  - : Sync version of {{domxref("IDBDatabase")}}.
-- {{domxref("IDBCursorSync")}} {{deprecated_inline}}
-  - : Sync version of {{domxref("IDBCursor")}}.
+  - : The `IDBVersionChangeEvent` interface indicates that the version of the database has changed, as the result of an {{domxref("IDBOpenDBRequest.upgradeneeded_event", "IDBOpenDBRequest.onupgradeneeded")}} event handler function.
 
 ## Examples
 
-- [eLibri:](https://marco-c.github.io/eLibri/) A powerful library and eBook reader application, written by Marco Castelluccio, winner of the IndexedDB Mozilla DevDerby.
 - [To-do Notifications](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/)): The reference application for the examples in the reference docs.
-- [Storing images and files in IndexedDB](https://hacks.mozilla.org/2012/02/storing-images-and-files-in-indexeddb/)
 
 ## Specifications
 
@@ -116,8 +93,8 @@ An early version of the specification also defined the following, now removed, i
 - [JsStore](https://jsstore.net/): An IndexedDB wrapper with SQL like syntax.
 - [MiniMongo](https://github.com/mWater/minimongo): A client-side in-memory mongodb backed by localstorage with server sync over http. MiniMongo is used by MeteorJS.
 - [PouchDB](https://pouchdb.com): A client-side implementation of CouchDB in the browser using IndexedDB
-- [idb](https://www.npmjs.com/package/idb): A tiny (\~1.15k) library that mostly mirrors the IndexedDB API, but with small improvements that make a big difference to usability.
-- [idb-keyval](https://www.npmjs.com/package/idb-keyval): A super-simple-small (\~600B) promise-based keyval store implemented with IndexedDB
-- [sifrr-storage:](https://www.npmjs.com/package/@sifrr/storage) A small (\~2kB) promise based library for client side key-value storage. Works with IndexedDB, localStorage, WebSQL, Cookies. Can automatically use supported storage available based on priority.
+- [idb](https://www.npmjs.com/package/idb): A  tiny (\~1.15k) library that mostly mirrors the IndexedDB API, but with small improvements that make a big difference to usability.
+- [idb-keyval](https://www.npmjs.com/package/idb-keyval):  A super-simple-small (\~600B)  promise-based keyval store implemented with IndexedDB
+- [sifrr-storage:](https://www.npmjs.com/package/@sifrr/storage)  A small (\~2kB) promise based library for client side key-value storage. Works with IndexedDB, localStorage, WebSQL, Cookies. Can automatically use supported storage available based on priority.
 - [lovefield](https://github.com/google/lovefield): Lovefield is a relational database for web apps. Written in JavaScript, works cross-browser. Provides SQL-like APIs that are fast, safe, and easy to use.
 - [$mol_db](https://github.com/hyoo-ru/mam_mol/tree/master/db): Tiny (\~1.3kB) TypeScript facade with promise-based api and automatic migrations.

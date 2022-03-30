@@ -32,5 +32,3 @@ console.log(VideoFrame.codedRect);
 ## Browser compatibility
 
 {{Compat}}
-
-

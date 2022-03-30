@@ -21,35 +21,35 @@ When a child element is blended into a background, the value of the `color-inter
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("a")}}
-*   {{SVGElement("animate")}}
-*   {{SVGElement("animateColor")}}
-*   {{SVGElement("circle")}}
-*   {{SVGElement("clipPath")}}
-*   {{SVGElement("defs")}}
-*   {{SVGElement("ellipse")}}
-*   {{SVGElement("foreignObject")}}
-*   {{SVGElement("g")}}
-*   {{SVGElement("glyph")}}
-*   {{SVGElement("image")}}
-*   {{SVGElement("line")}}
-*   {{SVGElement("linearGradient")}}
-*   {{SVGElement("marker")}}
-*   {{SVGElement("mask")}}
-*   {{SVGElement("missing-glyph")}}
-*   {{SVGElement("path")}}
-*   {{SVGElement("pattern")}}
-*   {{SVGElement("polygon")}}
-*   {{SVGElement("polyline")}}
-*   {{SVGElement("radialGradient")}}
-*   {{SVGElement("rect")}}
-*   {{SVGElement("svg")}}
-*   {{SVGElement("switch")}}
-*   {{SVGElement("symbol")}}
-*   {{SVGElement("text")}}
-*   {{SVGElement("textPath")}}
-*   {{SVGElement("tspan")}}
-*   {{SVGElement("use")}}
+- {{SVGElement("a")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("animateColor")}}
+- {{SVGElement("circle")}}
+- {{SVGElement("clipPath")}}
+- {{SVGElement("defs")}}
+- {{SVGElement("ellipse")}}
+- {{SVGElement("foreignObject")}}
+- {{SVGElement("g")}}
+- {{SVGElement("glyph")}}
+- {{SVGElement("image")}}
+- {{SVGElement("line")}}
+- {{SVGElement("linearGradient")}}
+- {{SVGElement("marker")}}
+- {{SVGElement("mask")}}
+- {{SVGElement("missing-glyph")}}
+- {{SVGElement("path")}}
+- {{SVGElement("pattern")}}
+- {{SVGElement("polygon")}}
+- {{SVGElement("polyline")}}
+- {{SVGElement("radialGradient")}}
+- {{SVGElement("rect")}}
+- {{SVGElement("svg")}}
+- {{SVGElement("switch")}}
+- {{SVGElement("symbol")}}
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tspan")}}
+- {{SVGElement("use")}}
 
 ## Usage notes
 
@@ -70,12 +70,12 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `auto`
-    *   : Indicates that the user agent can choose either the `sRGB` or `linearRGB` spaces for color interpolation. This option indicates that the author doesn't require that color interpolation occur in a particular color space.
-*   `sRGB`
-    *   : Indicates that color interpolation should occur in the sRGB color space.
-*   `linearRGB`
-    *   : Indicates that color interpolation should occur in the linearized RGB color space as described in [the sRGB specification](https://webstore.iec.ch/publication/6169).
+- `auto`
+  - : Indicates that the user agent can choose either the `sRGB` or `linearRGB` spaces for color interpolation. This option indicates that the author doesn't require that color interpolation occur in a particular color space.
+- `sRGB`
+  - : Indicates that color interpolation should occur in the sRGB color space.
+- `linearRGB`
+  - : Indicates that color interpolation should occur in the linearized RGB color space as described in [the sRGB specification](https://webstore.iec.ch/publication/6169).
 
 ## Specifications
 
@@ -111,6 +111,6 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-*   [sRGB specification](https://webstore.iec.ch/publication/6169)
-*   {{SVGAttr("color-interpolation-filters")}}
-*   [Computer color is broken](https://www.youtube.com/watch?v=LKnqECcg6Gw) - popular demonstration of linearRGB
+- [sRGB specification](https://webstore.iec.ch/publication/6169)
+- {{SVGAttr("color-interpolation-filters")}}
+- [Computer color is broken](https://www.youtube.com/watch?v=LKnqECcg6Gw) - popular demonstration of linearRGB

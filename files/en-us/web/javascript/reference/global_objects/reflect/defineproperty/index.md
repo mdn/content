@@ -48,7 +48,7 @@ The `Reflect.defineProperty` method allows precise addition to or
 modification of a property on an object. For more details, see the
 {{jsxref("Object.defineProperty")}} which is similar.
 
-> **Note:** `Object.defineProperty` returns the
+> **Note:** `Object.defineProperty` returns the
 > object or throws a {{jsxref("TypeError")}} if the property has not been successfully
 > defined. `Reflect.defineProperty`, however, returns a {{jsxref("Boolean")}}
 > indicating whether or not the property was successfully defined.
@@ -93,6 +93,6 @@ if (Reflect.defineProperty(target, property, attributes)) {
 
 ## See also
 
-- A polyfill of `Reflect.defineProperty` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [Polyfill of `Reflect.defineProperty` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
 - {{jsxref("Object.defineProperty()")}}

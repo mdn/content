@@ -12,7 +12,7 @@ tags:
   - Overview
   - working with files
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The File System Access API allows read, write and file management capabilities.
 
@@ -26,7 +26,7 @@ These handles represent the file or directory on the user's system. You must fir
 
 The handle provides its own functionality and there are a few differences depending on whether a file or directory was selected (see the [interfaces](#interfaces) section for specific details). You then can access file data, or information (including children) of the directory selected.
 
-There is also “save” functionality, using the {{domxref('FilesystemWritableFileStream')}} interface. Once the data you'd like to save is in a format of {{domxref('Blob')}}, {{domxref('USVString')}} or {{jsxref('ArrayBuffer', 'buffer')}}, you can open a stream and save the data to a file. This can be the existing file or a new file.
+There is also "save" functionality, using the {{domxref('FilesystemWritableFileStream')}} interface. Once the data you'd like to save is in a format of {{domxref('Blob')}}, {{domxref('USVString')}} or {{jsxref('ArrayBuffer', 'buffer')}}, you can open a stream and save the data to a file. This can be the existing file or a new file.
 
 This API opens up potential functionality the web has been lacking. Still, security has been of utmost concern when designing the API, and access to file/directory data is disallowed unless the user specifically permits it.
 
@@ -106,7 +106,7 @@ The following asynchronous function uses `resolve()` to find the path to a chose
 async function returnPathDirectories(directoryHandle) {
 
   // Get a file handle by showing a file picker:
-  const handle = await self.showOpenFilePicker();
+  const [handle] = await self.showOpenFilePicker();
   if (!handle) {
     // User cancelled, or otherwise failed to open a file.
     return;
@@ -115,10 +115,10 @@ async function returnPathDirectories(directoryHandle) {
   // Check if handle exists inside directory our directory handle
   const relativePaths = await directoryHandle.resolve(handle);
 
-  if (relativePath === null) {
+  if (relativePaths === null) {
     // Not inside directory handle
   } else {
-    // relativePath is an array of names, giving the relative path
+    // relativePaths is an array of names, giving the relative path
 
     for (const name of relativePaths) {
       // log each entry
@@ -175,7 +175,10 @@ writableStream.write({ type: "truncate", size: size })
 
 ## Browser compatibility
 
-{{Compat("api.FileSystemAccess")}}
+{{Compat("api.FileSystemHandle")}}
+{{Compat("api.FileSystemFileHandle")}}
+{{Compat("api.FileSystemDirectoryHandle")}}
+{{Compat("api.FileSystemWritableFileStream")}}
 
 ## See also
 

@@ -11,6 +11,8 @@ browser-compat: api.WebGLTexture
 
 The **WebGLTexture** interface is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and represents an opaque texture object providing storage and state for texturing operations.
 
+{{InheritanceDiagram}}
+
 ## WebGL textures
 
 The `WebGLTexture` object does not define any methods or properties of its own and its content is not directly accessible. When working with `WebGLTexture` objects, the following methods of the {{domxref("WebGLRenderingContext")}} are useful:

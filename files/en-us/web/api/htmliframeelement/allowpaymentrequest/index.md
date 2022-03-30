@@ -20,13 +20,7 @@ The **`allowPaymentRequest`** property of the
 whether the [Payment Request
 API](/en-US/docs/Web/API/Payment_Request_API) may be invoked on a cross-origin iframe.
 
-## Syntax
-
-```js
-var allow = htmlIFrameElement.allowPaymentRequest
-```
-
-### Value
+## Value
 
 A boolean value.
 

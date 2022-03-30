@@ -32,4 +32,3 @@ console.log(document.fonts.size);
 ## Browser compatibility
 
 {{Compat}}
-

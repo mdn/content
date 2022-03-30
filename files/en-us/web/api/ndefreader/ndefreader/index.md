@@ -8,7 +8,7 @@ tags:
   - Constructor
 browser-compat: api.NDEFReader.NDEFReader
 ---
-{{draft}}{{securecontext_header}}{{APIRef()}}
+{{securecontext_header}}{{APIRef()}}
 
 The **`NDEFReader()`**
 constructor of the {{domxref("NDEFReader")}} interface returns a
@@ -19,7 +19,7 @@ field.
 ## Syntax
 
 ```js
-let reader = new NDEFReader();
+new NDEFReader();
 ```
 
 ### Parameters

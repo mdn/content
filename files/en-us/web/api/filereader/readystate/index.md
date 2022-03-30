@@ -26,7 +26,7 @@ The {{domxref("FileReader")}} **`readyState`** property provides the current sta
 - `DONE`
   - : The read operation is complete. This could mean that: the entire {{domxref("File")}} or {{domxref("Blob")}} has been read into memory, a file read error occurred, or {{domxref("FileReader.abort()", "abort()")}} was called and the read was cancelled.
 
-## Example
+## Examples
 
 ```js
 var reader = new FileReader();

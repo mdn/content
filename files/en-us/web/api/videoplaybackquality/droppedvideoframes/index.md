@@ -25,13 +25,7 @@ property of the {{domxref("VideoPlaybackQuality")}} interface returns the number
 video frames which have been dropped rather than being displayed since the last time
 the media was loaded into the {{domxref("HTMLVideoElement")}}.
 
-## Syntax
-
-```js
-value = videoPlaybackQuality.droppedVideoFrames;
-```
-
-### Value
+## Value
 
 An unsigned 64-bit value indicating the number of frames that have been dropped since
 the last time the media in the {{HTMLElement("video")}} element was loaded or reloaded.

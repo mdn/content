@@ -11,13 +11,13 @@ browser-compat: css.at-rules.media.grid
 ---
 {{CSSRef}}
 
-The **`grid`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) can be used to test whether the output device uses a grid-based screen.
+The **`grid`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) can be used to test whether the output device uses a grid-based screen.
 
 Most modern computers and smartphones have bitmap-based screens. Examples of grid-based devices include text-only terminals and basic phones with only one fixed font.
 
 ## Syntax
 
-The `grid` feature is specified as a {{cssxref("&lt;mq-boolean&gt;")}} value (`0` or `1`) representing whether or not the output device is grid-based.
+The `grid` feature is specified as a {{cssxref("&lt;mq-boolean&gt;")}} value (`0` or `1`) representing whether or not the output device is grid-based.
 
 ## Examples
 
@@ -33,29 +33,29 @@ The `grid` feature is specified as a {{cssxref("&lt;mq-boolean&gt;")}} value (`
 
 ```css
 :not(.unknown) {
-  color: lightgray;
+  color: lightgray;
 }
 
 @media (grid: 0) {
   .unknown {
-    color: lightgray;
-  }
+    color: lightgray;
+  }
 
-  .bitmap {
-    color: red;
+  .bitmap {
+    color: red;
     text-transform: uppercase;
   }
 }
 
 @media (grid: 1) {
-  .unknown {
-    color: lightgray;
-  }
+  .unknown {
+    color: lightgray;
+  }
 
-  .grid {
-    color: black;
+  .grid {
+    color: black;
     text-transform: uppercase;
-  }
+  }
 }
 ```
 
@@ -73,5 +73,5 @@ The `grid` feature is specified as a {{cssxref("&lt;mq-boolean&gt;")}} value (`
 
 ## See also
 
-- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 - [@media](/en-US/docs/Web/CSS/@media)

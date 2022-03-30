@@ -14,7 +14,7 @@ browser-compat: api.IDBVersionChangeEvent.oldVersion
 ---
 {{ APIRef("IndexedDB") }}
 
-The **`oldVersion`** read-only property of the
+The **`oldVersion`** read-only property of the
 {{domxref("IDBVersionChangeEvent")}} interface returns the old version number of the
 database.
 
@@ -23,18 +23,12 @@ When the opened database doesn't exist yet, the value of `oldVersion` is
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var oldVersion = IDBVersionChangeEvent.oldVersion
-```
-
-### Value
+## Value
 
 A [64-bit
 integer](</en-US/docs/NSPR_API_Reference/Long_Long_(64-bit)_Integers>).
 
-## Example
+## Examples
 
 ```js
 var dbName = "sampleDB";

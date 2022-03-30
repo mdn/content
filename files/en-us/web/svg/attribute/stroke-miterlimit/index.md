@@ -14,15 +14,15 @@ The **`stroke-miterlimit`** attribute is a presentation attribute defining a lim
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement('altGlyph')}}
-*   {{SVGElement('path')}}
-*   {{SVGElement('polygon')}}
-*   {{SVGElement('polyline')}}
-*   {{SVGElement('rect')}}
-*   {{SVGElement('text')}}
-*   {{SVGElement('textPath')}}
-*   {{SVGElement('tref')}}
-*   {{SVGElement('tspan')}}
+- {{SVGElement('altGlyph')}}
+- {{SVGElement('path')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('text')}}
+- {{SVGElement('textPath')}}
+- {{SVGElement('tref')}}
+- {{SVGElement('tspan')}}
 
 ## Example
 
@@ -103,10 +103,6 @@ For example, a miter limit of 1.414 converts miters to bevels for theta less tha
 
 The value of `stroke-miterlimit` must be greater than or equal to 1.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Specifications
 
 <table class="no-markdown">
@@ -134,3 +130,7 @@ The value of `stroke-miterlimit` must be greater than or equal to 1.
     </tr>
   </tbody>
 </table>
+
+## Browser compatibility
+
+{{Compat}}

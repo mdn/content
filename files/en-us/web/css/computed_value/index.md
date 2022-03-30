@@ -5,13 +5,14 @@ tags:
   - CSS
   - Guide
   - Reference
+spec-urls: https://www.w3.org/TR/CSS22/cascade.html#computed-value
 ---
 {{CSSRef}}
 
 The **computed value** of a [CSS](/en-US/docs/Web/CSS) property is the value that is transferred from parent to child during inheritance. It is calculated from the [specified value](/en-US/docs/Web/CSS/specified_value) by:
 
-1.  Handling the special values {{cssxref("inherit")}}, {{cssxref("initial")}}, {{cssxref("unset")}}, and {{cssxref("revert")}}.
-2.  Doing the computation needed to reach the value described in the "Computed value" line in the property's definition table.
+1. Handling the special values {{cssxref("inherit")}}, {{cssxref("initial")}}, {{cssxref("unset")}}, and {{cssxref("revert")}}.
+2. Doing the computation needed to reach the value described in the "Computed value" line in the property's definition table.
 
 The computation needed to reach a property's computed value typically involves converting relative values (such as those in `em` units or percentages) to absolute values. For example, if an element has specified values `font-size: 16px` and `padding-top: 2em`, then the computed value of `padding-top` is `32px` (double the font size).
 
@@ -21,31 +22,7 @@ However, for some properties (those where percentages are relative to something 
 
 ## Specifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("CSS2.2", "cascade.html#computed-value", "computed-value")}}
-      </td>
-      <td>{{Spec2("CSS2.2")}}</td>
-      <td><p>No change.</p></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("CSS2.1", "cascade.html#computed-value", "computed value")}}
-      </td>
-      <td>{{Spec2("CSS2.1")}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## See also
 

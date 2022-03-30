@@ -14,18 +14,12 @@ browser-compat: api.USBDevice.vendorId
 ---
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
-The **`vendorId`** read only property of the
+The **`vendorId`** read only property of the
 {{domxref("USBDevice")}} interface is the official usg.org-assigned vendor ID.
 
-## Syntax
+## Value
 
-```js
-var serialNumber = USBDevice.vendorId
-```
-
-### Value
-
-The official usg.org-assigned vendor ID.
+The official usb.org-assigned vendor ID.
 
 ## Specifications
 

@@ -61,7 +61,7 @@ Object.isSealed(hasProp); // === false
 // But make them all non-configurable
 // and the object becomes sealed.
 Object.defineProperty(hasProp, 'fee', {
-  configurable: false
+  configurable: false
 });
 Object.isSealed(hasProp); // === true
 

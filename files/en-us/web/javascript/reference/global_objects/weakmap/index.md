@@ -12,9 +12,11 @@ browser-compat: javascript.builtins.WeakMap
 ---
 {{JSRef}}
 
-The **`WeakMap`** object is a collection of key/value pairs in which the keys are weakly referenced. The keys must be objects and the values can be arbitrary values.
+A **`WeakMap`** is a collection of key/value pairs whose keys must be objects, with values of any arbitrary [JavaScript type](/en-US/docs/Web/JavaScript/Data_structures#javascript_types), and which does not create strong references to its keys. That is, an object's presence as a key in a `WeakMap` does not prevent the object from being garbage collected. Once an object used as a key has been collected, its corresponding values in any `WeakMap` become candidates for garbage collection as well — as long as they aren't strongly referred to elsewhere.
 
-You can learn more about `WeakMap`s in the [WeakMap object](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object) guide (under [Keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections)).
+`WeakMap` allows associating data to objects in a way that doesn't prevent the key objects from being collected, even if the values reference the keys. However, a `WeakMap` doesn't allow observing the liveness of its keys, which is why it doesn't allow enumeration; if a `WeakMap` exposed any method to obtain a list of its keys, the list would depend on the state of garbage collection, introducing non-determinism. If you want to have a list of keys, you should use a {{jsxref("Map")}} rather than a `WeakMap`.
+
+You can learn more about `WeakMap` in the [WeakMap object](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object) section of the [Keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections) guide.
 
 ## Description
 
@@ -26,12 +28,17 @@ A map API _could_ be implemented in JavaScript with two arrays (one for keys, on
 
 Such an implementation would have two main inconveniences:
 
-1.  The first one is an *O(*n*)* set and search (_n_ being the number of keys in the map) since both operations must iterate through the list of keys to find a matching value.
-2.  The second inconvenience is a memory leak because the arrays ensure that references to each key and each value are maintained indefinitely. These references prevent the keys from being garbage collected, even if there are no other references to the object. This would also prevent the corresponding values from being garbage collected.
+1. The first one is an *O(*n*)* set and search (_n_ being the number of keys in the map) since both operations must iterate through the list of keys to find a matching value.
+2. The second inconvenience is a memory leak because the arrays ensure that references to each key and each value are maintained indefinitely. These references prevent the keys from being garbage collected, even if there are no other references to the object. This would also prevent the corresponding values from being garbage collected.
 
-By contrast, native `WeakMap`s hold "weak" references to key objects. As such native `WeakMap`s do not prevent garbage collection, which eventually removes references to the key object. "Weak" references also avoid preventing garbage collection of values in the map. `WeakMap`s can be particularly useful constructs when mapping keys to information about the key that is valuable _only if_ the key has not been garbage collected.
+By contrast, in a `WeakMap`, a key object refers strongly to its contents as long as the key is not garbage collected, but weakly from then on. As such, a `WeakMap`:
 
-**Because the references are weak, `WeakMap` keys are not enumerable.** There is no method to obtain a list of the keys. If there was, the list would depend on the state of garbage collection, introducing non-determinism. If you want to have a list of keys, you should use a {{jsxref("Map")}}.
+- does not prevent garbage collection, which eventually removes references to the key object
+- allows garbage collection of any values if their key objects are not referenced from somewhere other than a `WeakMap`
+
+A `WeakMap` can be a particularly useful construct when mapping keys to information about the key that is valuable _only if_ the key has not been garbage collected.
+
+But because a `WeakMap` doesn't allow observing the liveness of its keys, its keys are not enumerable. There is no method to obtain a list of the keys. If there were, the list would depend on the state of garbage collection, introducing non-determinism. If you want to have a list of keys, you should use a {{jsxref("Map")}}.
 
 ## Constructor
 
@@ -119,9 +126,9 @@ class ClearableWeakMap {
 
 ## See also
 
-- A polyfill of `WeakMap` is available in [`core-js`](https://github.com/zloirock/core-js#weakmap)
-- [`WeakMap` in the JavaScript guide](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object)
-- [Hiding Implementation Details with ECMAScript 6 WeakMaps](http://fitzgeraldnick.com/weblog/53/)
+- [Polyfill of `WeakMap` in `core-js`](https://github.com/zloirock/core-js#weakmap)
+- [WeakMap object](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object) in the [Keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections) guide
+- [Hiding Implementation Details with ECMAScript 6 WeakMaps](https://fitzgeraldnick.com/weblog/53/)
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}
 - {{jsxref("WeakSet")}}

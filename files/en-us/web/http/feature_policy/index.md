@@ -78,7 +78,7 @@ The current set of policy-controlled features fall into two broad categories:
 
 There are several policy-controlled features to help enforce best practices for providing good performance and user experiences.
 
-In most cases, the policy-controlled features represent functionality that when used will negatively impact the user experience. To avoid breaking existing web content, the default for such policy-controlled features is to allow the functionality to be used by all origins. Best practices are then enforced by using policies that disable the policy-controlled features. For more details see "Enforcing best practices for good user experiences".
+In most cases, the policy-controlled features represent functionality that when used will negatively impact the user experience. To avoid breaking existing web content, the default for such policy-controlled features is to allow the functionality to be used by all origins. Best practices are then enforced by using policies that disable the policy-controlled features. For more details see [Enforcing best practices for good user experiences](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy#enforcing_best_practices_for_good_user_experiences)
 
 The features include:
 

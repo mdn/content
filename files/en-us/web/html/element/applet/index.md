@@ -81,7 +81,7 @@ Use of Java applets on the Web is deprecated; most browsers no longer support us
 - {{HTMLAttrDef("codebase")}}
   - : This attribute gives the absolute or relative URL of the directory where applets' .class files referenced by the code attribute are stored.
 - {{HTMLAttrDef("datafld")}}
-  - : This attribute, supported by Internet Explorer 4 and higher, specifies the column name from the data source object that supplies the bound data. This attribute might be used to specify the various {{HTMLElement("param")}} elements passed to the Java applet.
+  - : This attribute, supported by Internet Explorer 4 and higher, specifies the column name from the data source object that supplies the bound data. This attribute might be used to specify the various {{HTMLElement("param")}} elements passed to the Java applet.
 - {{HTMLAttrDef("datasrc")}}
   - : Like `datafld`, this attribute is used for data binding under Internet Explorer 4. It indicates the id of the data source object that supplies the data that is bound to the {{HTMLElement("param")}} elements associated with the applet.
 - {{HTMLAttrDef("height")}}
@@ -107,8 +107,8 @@ Use of Java applets on the Web is deprecated; most browsers no longer support us
 
 ```html
 <applet code="game.class" align="left" archive="game.zip" height="250" width="350">
-  <param name="difficulty" value="easy">
-  <b>Sorry, you need Java to play this game.</b>
+  <param name="difficulty" value="easy">
+  <b>Sorry, you need Java to play this game.</b>
 </applet>
 ```
 

@@ -16,22 +16,22 @@ tags:
 ---
 {{DefaultAPISidebar("Fullscreen API")}}
 
-This article demonstrates how to use the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) to place a given element into full-screen mode, as well as how to detect when the browser enters or exits full-screen mode.
+This article demonstrates how to use the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) to place a given element into fullscreen mode, as well as how to detect when the browser enters or exits fullscreen mode.
 
-## Activating full-screen mode
+## Activating fullscreen mode
 
-Given an element that you'd like to present in full-screen mode (such as a {{HTMLElement("video")}}, for example), you can present it in full-screen mode by calling its {{DOMxRef("Element.requestFullscreen", "requestFullscreen()")}} method.
+Given an element that you'd like to present in fullscreen mode (such as a {{HTMLElement("video")}}, for example), you can present it in fullscreen mode by calling its {{DOMxRef("Element.requestFullscreen", "requestFullscreen()")}} method.
 
 Let's consider this {{HTMLElement("video")}} element:
 
 ```html
 <video controls id="myvideo">
-  <source src="somevideo.webm"></source>
-  <source src="somevideo.mp4"></source>
+  <source src="somevideo.webm"></source>
+  <source src="somevideo.mp4"></source>
 </video>
 ```
 
-We can put that video into full-screen mode as follows:
+We can put that video into fullscreen mode as follows:
 
 ```js
 var elem = document.getElementById("myvideo");
@@ -48,8 +48,8 @@ It's worth noting a key difference here between the Gecko and WebKit implementat
 
 ```css
 #myvideo:-webkit-full-screen {
-  width: 100%;
-  height: 100%;
+  width: 100%;
+  height: 100%;
 }
 ```
 
@@ -57,7 +57,7 @@ On the other hand, if you're trying to emulate WebKit's behavior on Gecko, you n
 
 ### Notification
 
-When fullscreen mode is successfully engaged, the document which contains the element receives a {{Event("fullscreenchange")}} event. When fullscreen mode is exited, the document again receives a  {{Event("fullscreenchange")}} event. Note that the {{Event("fullscreenchange")}} event doesn't provide any information itself as to whether the document is entering or exiting fullscreen mode, but if the document has a non null {{DOMxRef("document.fullscreenElement", "fullscreenElement")}}, you know you're in fullscreen mode.
+When fullscreen mode is successfully engaged, the document which contains the element receives a {{Event("fullscreenchange")}} event. When fullscreen mode is exited, the document again receives a  {{Event("fullscreenchange")}} event. Note that the {{Event("fullscreenchange")}} event doesn't provide any information itself as to whether the document is entering or exiting fullscreen mode, but if the document has a non null {{DOMxRef("document.fullscreenElement", "fullscreenElement")}}, you know you're in fullscreen mode.
 
 ### When a fullscreen request fails
 
@@ -67,7 +67,7 @@ It's not guaranteed that you'll be able to switch into fullscreen mode. For exam
 
 ## Getting out of full screen mode
 
-The user always has the ability to exit fullscreen mode of their own accord; see {{Anch("Things your users want to know")}}. You can also do so programmatically by calling the {{DOMxRef("Document.exitFullscreen()")}} method.
+The user always has the ability to exit fullscreen mode of their own accord; see [Things your users want to know](#things_your_users_want_to_know). You can also do so programmatically by calling the {{DOMxRef("Document.exitFullscreen()")}} method.
 
 ## Other information
 
@@ -96,9 +96,9 @@ When the page is loaded, this code is run to set up an event listener to watch f
 
 ```js
 document.addEventListener("keydown", function(e) {
-  if (e.keyCode == 13) {
-    toggleFullScreen();
-  }
+  if (e.keyCode == 13) {
+    toggleFullScreen();
+  }
 }, false);
 ```
 
@@ -108,13 +108,13 @@ This code is called when the user hits the <kbd>Enter</kbd> key, as seen above.
 
 ```js
 function toggleFullScreen() {
-  if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen();
-  } else {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    }
-  }
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
 }
 ```
 
@@ -130,15 +130,15 @@ For the moment not all browsers are implementing the unprefixed version of the A
   <thead>
     <tr>
       <th scope="row">Standard</th>
-      <th scope="col">WebKit (Safari) / Blink (Chrome &#x26; Opera) / Edge</th>
+      <th scope="col">WebKit (Safari) / Blink (Chrome &#x26; Opera) / Edge</th>
       <th scope="col">Gecko (Firefox)</th>
-      <th scope="col">Internet Explorer</th>
+      <th scope="col">Internet Explorer</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">
-        {{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}
+        {{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}
       </th>
       <td><code>webkitIsFullScreen</code></td>
       <td><code>mozFullScreen</code></td>
@@ -159,22 +159,6 @@ For the moment not all browsers are implementing the unprefixed version of the A
       <td><code>webkitFullscreenElement</code></td>
       <td><code>mozFullScreenElement</code></td>
       <td><code>msFullscreenElement</code></td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{DOMxRef("Document.onfullscreenchange")}}
-      </th>
-      <td><code>onwebkitfullscreenchange</code></td>
-      <td><code>onmozfullscreenchange</code></td>
-      <td><code>onmsfullscreenchange</code></td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{DOMxRef("Document.onfullscreenerror")}}
-      </th>
-      <td><code>onwebkitfullscreenerror</code></td>
-      <td><code>onmozfullscreenerror</code></td>
-      <td><code>onmsfullscreenerror</code></td>
     </tr>
     <tr>
       <th scope="row">{{DOMxRef("Document.exitFullscreen()")}}</th>

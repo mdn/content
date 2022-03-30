@@ -16,8 +16,7 @@ browser-compat: javascript.builtins.TypedArray.some
 The **`some()`** method tests whether some element in the typed
 array passes the test implemented by the provided function. This method has the same
 algorithm as {{jsxref("Array.prototype.some()")}}_._ _TypedArray_ is one
-of the [typed
-array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
 
 {{EmbedInteractiveExample("pages/js/typedarray-some.html")}}
 
@@ -25,26 +24,28 @@ array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Type
 
 ```js
 // Arrow function
-some((element) => { ... } )
-some((element, index) => { ... } )
-some((element, index, array) => { ... } )
+some((element) => { /* ... */ } )
+some((element, index) => { /* ... */ } )
+some((element, index, array) => { /* ... */ } )
 
 // Callback function
 some(callbackFn)
 some(callbackFn, thisArg)
 
 // Inline callback function
-some(function callbackFn(element) { ... })
-some(function callbackFn(element, index) { ... })
-some(function callbackFn(element, index, array){ ... })
-some(function callbackFn(element, index, array) { ... }, thisArg)
+some(function(element) { /* ... */ })
+some(function(element, index) { /* ... */ })
+some(function(element, index, array){ /* ... */ })
+some(function(element, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
 
-  - : Function to test for each element, taking three arguments:
+  - : Function to test for each element.
+
+    The function is called with the following arguments:
 
     - `element`
       - : The current element being processed in the typed array.
@@ -74,9 +75,9 @@ index of the element, and the array object being traversed.
 If a `thisArg` parameter is provided to `some`, it will be passed
 to `callbackFn` when invoked, for use as its `this` value.
 Otherwise, the value `undefined` will be passed for use as its
-`this` value.  The `this` value ultimately observable by
-`callbackFn` is determined according to [the usual rules for
-determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
+`this` value.  The `this` value ultimately observable by
+`callbackFn` is determined according to
+[the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
 
 `some` does not mutate the typed array on which it is called.
 
@@ -115,8 +116,7 @@ new Uint8Array([12, 5, 8, 1, 4]).some(isBiggerThan10); // true
 
 ### Testing typed array elements using arrow functions
 
-[Arrow
-functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter syntax for the same test.
+[Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter syntax for the same test.
 
 ```js
 new Uint8Array([2, 5, 8, 1, 4]).some(elem => elem > 10); // false
@@ -133,6 +133,6 @@ new Uint8Array([12, 5, 8, 1, 4]).some(elem => elem > 10); // true
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.some` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.some` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray.prototype.every()")}}
 - {{jsxref("Array.prototype.some()")}}

@@ -23,13 +23,13 @@ This function does not automatically release all `AudioContext`-created objects,
 
 ```js
 var audioCtx = new AudioContext();
-audioCtx.close().then(function() { ... });
+audioCtx.close().then(function() { /* ... */ });
 await audioCtx.close();
 ```
 
 ### Returns
 
-A {{jsxref("Promise")}} that resolves with void.
+A {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}.
 
 ## Example
 

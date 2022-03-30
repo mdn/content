@@ -11,28 +11,24 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisUtterance.SpeechSynthesisUtterance
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
-The `SpeechSynthesisUtterance()` constructor of the
-{{domxref("SpeechSynthesisUtterance")}} interface returns a new
-`SpeechSynthesisUtterance` object instance.
+The `SpeechSynthesisUtterance()` constructor of the {{domxref("SpeechSynthesisUtterance")}} interface returns a new `SpeechSynthesisUtterance` object instance.
 
 ## Syntax
 
 ```js
-var utterThis = new SpeechSynthesisUtterance(text);
+new SpeechSynthesisUtterance(text);
 ```
 
 ### Parameters
 
-- text
-  - : A {{domxref("DOMString")}} containing the text that will be synthesized when the
-    utterance is spoken..
+- `text`
+  - : A {{domxref("DOMString")}} containing the text that will be synthesized when the utterance is spoken..
 
 ## Examples
 
-The following snippet is excerpted from our [Speech
-synthesizer demo](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis).
+The following snippet is excerpted from our [Speech synthesizer demo](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis).
 
 ```js
 var synth = window.speechSynthesis;

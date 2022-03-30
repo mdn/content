@@ -50,7 +50,6 @@ To learn more about what the DOM is and how it represents documents, see our art
 - {{DOMxRef("NodeIterator")}}
 - {{DOMxRef("NodeList")}}
 - {{DOMxRef("ProcessingInstruction")}}
-- {{DOMxRef("Selection")}} {{Experimental_Inline}}
 - {{DOMxRef("Range")}}
 - {{DOMxRef("Text")}}
 - {{DOMxRef("TextDecoder")}} {{Experimental_Inline}}
@@ -158,10 +157,6 @@ The HTML DOM API provides access to various browser features such as tabs and wi
 - {{DOMxRef("SVGLineElement")}}
 - {{DOMxRef("SVGMarkerElement")}} {{Experimental_Inline}}
 - {{DOMxRef("SVGMaskElement")}}
-- {{DOMxRef("SVGMeshElement")}} {{Experimental_Inline}}
-- {{DOMxRef("SVGMeshGradientElement")}} {{Experimental_Inline}}
-- {{DOMxRef("SVGMeshpatchElement")}} {{Experimental_Inline}}
-- {{DOMxRef("SVGMeshrowElement")}} {{Experimental_Inline}}
 - {{DOMxRef("SVGMetadataElement")}}
 - {{DOMxRef("SVGMissingGlyphElement")}} {{Deprecated_Inline}}
 - {{DOMxRef("SVGMPathElement")}}

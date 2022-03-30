@@ -27,7 +27,7 @@ browser-compat: html.elements.input.input-reset
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>A {{domxref("DOMString")}} used as the button's label</td>
     </tr>
     <tr>
@@ -44,6 +44,10 @@ browser-compat: html.elements.input.input-reset
     <tr>
       <td><strong>IDL attributes</strong></td>
       <td><code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
       <td><strong>Methods</strong></td>

@@ -42,13 +42,7 @@ In addition, when the value of this property changes, a
 {{DOMxRef("RTCPeerConnection/signalingstatechange_event", "signalingstatechange")}} event is sent to the {{domxref("RTCPeerConnection")}}
 instance.
 
-## Syntax
-
-```js
- var state = RTCPeerConnection.signalingState;
-```
-
-### Value
+## Value
 
 The allowed string values are:
 

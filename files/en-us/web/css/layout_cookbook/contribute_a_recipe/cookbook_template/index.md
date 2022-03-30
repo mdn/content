@@ -49,7 +49,7 @@ The various layout methods have different browser support. See the charts below 
 
 _Include the compat data for key properties you used, as in the example below which includes align-items._
 
-#### align-items
+### align-items
 
 {{Compat("css.properties.align-items")}}
 

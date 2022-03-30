@@ -3,7 +3,6 @@ title: Headers.get()
 slug: Web/API/Headers/get
 tags:
   - API
-  - Experimental
   - Fetch
   - Headers
   - Method
@@ -64,7 +63,7 @@ the values, in the order they were added to the Headers object:
 ```js
 myHeaders.append('Accept-Encoding', 'deflate');
 myHeaders.append('Accept-Encoding', 'gzip');
-myHeaders.get('Accept-Encoding'); // Returns "deflate,gzip"
+myHeaders.get('Accept-Encoding'); // Returns "deflate, gzip"
 myHeaders.get('Accept-Encoding').split(',').map(v => v.trimStart()); // Returns [ "deflate", "gzip" ]
 ```
 

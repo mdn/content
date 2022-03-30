@@ -17,7 +17,7 @@ The **`handler.apply()`** method is a trap for a function call.
 ## Syntax
 
 ```js
-const p = new Proxy(target, {
+new Proxy(target, {
   apply: function(target, thisArg, argumentsList) {
   }
 });
@@ -29,7 +29,7 @@ The following parameters are passed to the `apply()` method.
 `this` is bound to the handler.
 
 - `target`
-  - : The target object.
+  - : The target callable object.
 - `thisArg`
   - : The `this` argument for the call.
 - `argumentsList`
@@ -88,7 +88,7 @@ console.log(p(1, 2, 3)); // "called: 1, 2, 3"
 ## See also
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Function.prototype.apply()")}}
 - {{jsxref("Function.prototype.call()")}}
 - {{jsxref("Reflect.apply()")}}

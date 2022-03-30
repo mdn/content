@@ -3,7 +3,7 @@ title: Navigator.activeVRDisplays
 slug: Web/API/Navigator/activeVRDisplays
 tags:
   - API
-  - Experimental
+  - Deprecated
   - HTML DOM
   - Navigator
   - Property
@@ -26,7 +26,7 @@ The **`activeVRDisplays`** read-only property of the
 ## Syntax
 
 ```js
-var myActiveDisplays = navigator.activeVRDisplays;
+navigator.activeVRDisplays
 ```
 
 ### Value

@@ -14,24 +14,18 @@ browser-compat: api.Document.bgColor
 ---
 {{APIRef("DOM")}} {{Deprecated_Header}}
 
-The deprecated  `bgColor` property gets or sets the background color of the
+The deprecated  `bgColor` property gets or sets the background color of the
 current document.
 
-## Syntax
+## Value
+
+A string representing the color as a word (e.g., "red") or hexadecimal value (e.g., "`#ff0000`").
+
+## Examples
 
 ```js
-color = document.bgColor
-document.bgColor =color
+document.bgColor = "darkblue";
 ```
-
-### Parameters
-
-- `color` is a string representing the color as a word (e.g., "red") or
-  hexadecimal value (e.g., "`#ff0000`").
-
-## Example
-
-    document.bgColor = "darkblue";
 
 ## Notes
 

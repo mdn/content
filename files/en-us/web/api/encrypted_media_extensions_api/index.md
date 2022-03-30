@@ -22,13 +22,11 @@ The Encrypted Media Extensions API provides interfaces for controlling the playb
 - {{domxref('MediaKeys')}}
   - : Represents a set of keys that an associated {{domxref('HTMLMediaElement')}} can use for decryption of media data during playback.
 - {{domxref('MediaKeySession')}}
-  - : Represents a context for message exchange with a content decryption module (CDM).
+  - : Represents a context for message exchange with a content decryption module (CDM).
 - {{domxref('MediaKeyStatusMap')}}
-  - : Is a read-only map of media key statuses by key IDs.
+  - : Is a read-only map of media key statuses by key IDs.
 - {{domxref('MediaKeySystemAccess')}}
   - : Provides access to a Key System for decryption and/or a content protection provider.
-- {{domxref('MediaKeySystemConfiguration')}}
-  - : Provides configuration information about the media key system.
 
 ## Specifications
 

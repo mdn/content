@@ -12,7 +12,7 @@ tags:
   - Sales
   - Validation
   - Web
-  - events
+  - Event
   - merchantvalidation
   - payment
 browser-compat: api.PaymentRequest.merchantvalidation_event
@@ -23,38 +23,40 @@ browser-compat: api.PaymentRequest.merchantvalidation_event
 
 See {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant validation")}} for details on how the merchant validation process works.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("MerchantValidationEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("PaymentRequest.onmerchantvalidation", "onmerchantvalidation")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('merchantvalidation', event => { });
+
+onmerchantvalidation = event => { };
+```
+
+## Event type
+
+An {{domxref("MerchantValidationEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("MerchantValidationEvent")}}
+
+## Event properties
+
+- {{domxref("MerchantValidationEvent.methodName")}} {{securecontext_inline}}
+  - : A {{domxref("DOMString")}} providing a unique payment method identifier for the payment handler that's requiring validation. This may be either one of the standard payment method identifier strings or a URL that both identifies and handles requests for the payment handler, such as `https://apple.com/apple-pay`.
+- {{domxref("MerchantValidationEvent.validationURL")}} {{securecontext_inline}}
+  - : A {{domxref("USVString")}} specifying a URL from which the site or app can fetch payment handler specific validation information. Once this data is retrieved, the data (or a promise resolving to the validation data) should be passed into {{domxref("MerchantValidationEvent.complete", "complete()")}} to validate that the payment request is coming from an authorized merchant.
 
 ## Examples
 
-In this example, an event handler is established for the `merchantvalidation` event. It uses the {{domxref("fetch()")}} to send a request to its own server with an argument of the payment method's validation URL, obtained from the event's {{domxref("MerchantValidationEvent.validationURL", "validationURL")}} property. The merchant server should access the validation URL in accordance with the payment method documention. Typically, a client should not access the validation URL.
+In this example, an event handler is established for the `merchantvalidation` event. It uses the {{domxref("fetch()")}} to send a request to its own server with an argument of the payment method's validation URL, obtained from the event's {{domxref("MerchantValidationEvent.validationURL", "validationURL")}} property. The merchant server should access the validation URL in accordance with the payment method documentation. Typically, a client should not access the validation URL.
 
 ```js
 request.addEventListener("merchantvalidation", event => {
   event.complete(async () => {
-    const merchantServerUrl = window.location.origin +
-        '/validate?url=' + encodeURIComponent(event.validationURL);
+    const merchantServerUrl = window.location.origin +
+        '/validate?url=' + encodeURIComponent(event.validationURL);
     // get validation data, and complete validation;
     return await fetch(merchantServerUrl).then(response => response.text());
   }, false);
@@ -63,15 +65,15 @@ request.addEventListener("merchantvalidation", event => {
 const response = await request.show();
 ```
 
-How merchant server handles the validation depends on the server implementation and payment method documentation. The content delivered by the validation server is forwarded to the merchant server and is then returned from the `fetch()` call's fulfillment handler to the {{domxref("MerchantValidationEvent.complete", "complete()")}} method on the event. This response lets the payment handler know if the merchant is validated.
+How merchant server handles the validation depends on the server implementation and payment method documentation. The content delivered by the validation server is forwarded to the merchant server and is then returned from the `fetch()` call's fulfillment handler to the {{domxref("MerchantValidationEvent.complete", "complete()")}} method on the event. This response lets the payment handler know if the merchant is validated.
 
-You can also use the {{domxref("PaymentRequest.onmerchantvalidation", "onmerchantvalidation")}} event handler property to set up the handler for this event:
+You can also use the `onmerchantvalidation` event handler property to set up the handler for this event:
 
 ```js
 request.onmerchantvalidation = event => {
   event.complete(async () => {
-    const merchantServerUrl = window.location.origin +
-        '/validate?url=' + encodeURIComponent(event.validationURL);
+    const merchantServerUrl = window.location.origin +
+        '/validate?url=' + encodeURIComponent(event.validationURL);
     // get validation data, and complete validation;
     return await fetch(merchantServerUrl).then(response => response.text());
   });
@@ -82,10 +84,6 @@ const response = await request.show();
 
 For more information, see {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant Validation")}}.
 
-## Related events
-
-- {{event("payerdetailchange")}}, {{event("paymentmethodchange")}}, {{event("shippingaddresschange")}}, and {{event("shippingoptionchange")}}
-
 ## Browser compatibility
 
 {{Compat}}
@@ -94,6 +92,10 @@ For more information, see {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_A
 
 - [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
 - [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
-- {{domxref("PaymentRequest.onmerchantvalidation", "onmerchantvalidation")}} event handler property
+- `onmerchantvalidation` event handler property
 - {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant validation")}}
 - {{domxref("PaymentRequest")}}
+- {{domxref("PaymentRequest.payerdetailchange_event", "payerdetailchange")}} event
+- {{domxref("PaymentRequest.paymentmethodchange_event", "paymentmethodchange")}} event
+- {{domxref("PaymentRequest.shippingaddresschange_event", "shippingaddresschange")}} event
+- {{domxref("PaymentRequest.shippingoptionchange_event", "shippingoptionchange")}} event

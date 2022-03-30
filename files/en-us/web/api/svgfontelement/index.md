@@ -15,7 +15,7 @@ The **`SVGFontElement`** interface corresponds to the {{SVGElement("font")}} ele
 
 Object-oriented access to the attributes of the {{SVGElement("font")}} element via the SVG DOM is not possible.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

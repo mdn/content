@@ -19,6 +19,8 @@ browser-compat: api.RTCIceTransport
 The **`RTCIceTransport`** interface provides access to information about the {{Glossary("ICE")}} transport layer over which the data is being sent and received.
 This is particularly useful if you need to access state information about the connection.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _The `RTCIceTransport` interface inherits properties from its parent, {{domxref("EventTarget")}}. It also offers the following properties:_
@@ -26,11 +28,11 @@ _The `RTCIceTransport` interface inherits properties from its parent, {{domxref(
 - {{domxref("RTCIceTransport.component", "component")}} {{ReadOnlyInline}}
   - : The ICE component being used by the transport. The value is one of the strings from the {{domxref("RTCIceTransport")}} enumerated type: `{{Glossary("RTP", '"RTP"')}}` or `"RTSP"`.
 - {{domxref("RTCIceTransport.gatheringState", "gatheringState")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMString")}} indicating which current gathering state of the ICE agent: `"new"`, `"gathering"`, or `"complete"`.
+  - : A string indicating which current gathering state of the ICE agent: `"new"`, `"gathering"`, or `"complete"`.
 - {{domxref("RTCIceTransport.role", "role")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMString")}} whose value is one of the members of the {{domxref("RTCIceRole")}} enumerated type: `"controlling"` or `"controlled"`; this indicates whether the ICE agent is the one that makes the final decision as to the candidate pair to use or not.
+  - : Returns a string whose value is either `"controlling"` or `"controlled"`; this indicates whether the ICE agent is the one that makes the final decision as to the candidate pair to use or not.
 - {{domxref("RTCIceTransport.state", "state")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMString")}} indicating what the current state of the ICE agent is. The value of `state` can be used to determine whether the ICE agent has made an initial connection using a viable candidate pair (`"connected"`), made its final selection of candidate pairs (`"completed"`), or in an error state (`"failed"`), among other states. See the {{domxref("RTCIceTransportState")}} enumerated type for a complete list of states.
+  - : A string indicating what the current state of the ICE agent is. The value of `state` can be used to determine whether the ICE agent has made an initial connection using a viable candidate pair (`"connected"`), made its final selection of candidate pairs (`"completed"`), or in an error state (`"failed"`), among other states.
 
 ## Methods
 
@@ -53,13 +55,13 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
 
 - {{domxref("RTCIceTransport.gatheringstatechange_event", "gatheringstatechange")}}
   - : Sent to the {{domxref("RTCIceTransport")}} object to indicate that the value of the {{domxref("RTCIceTransport.gatheringState", "gatheringState")}} property has changed, indicating a change in this transport's ICE candidate negotiation process.
-    Also available through the {{domxref("RTCIceTransport.ongatheringstatechange", "ongatheringstatechange")}} event handler property.
+    Also available through the {{domxref("RTCIceTransport.gatheringstatechange_event", "ongatheringstatechange")}} event handler property.
 - {{domxref("RTCIceTransport.selectedcandidatepairchange_event", "selectedcandidatepairchange")}}
   - : Sent to the `RTCIceTransport` when a new, better pair of candidates has been selected to describe the connectivity between the two peers. This occurs during negotiation or renegotiation, including after an ICE restart, which reuses the existing `RTCIceTransport` objects. The current candidate pair can be obtained using {{domxref("RTCIceTransport.getSelectedCandidatePair", "getSelectedCandidatePair()")}}.
-    Also available using the {{domxref("RTCIceTransport.onselectedcandidatepairchange", "onselectedcandidatepairchange")}} event handler property.
+    Also available using the {{domxref("RTCIceTransport.selectedcandidatepairchange_event", "onselectedcandidatepairchange")}} event handler property.
 - {{domxref("RTCIceTransport.statechange_event", "statechange")}}
   - : Sent to the `RTCIceTransport` instance when the value of the {{domxref("RTCIceTransport.state", "state")}} property has changed, indicating that the ICE gathering process has changed state.
-    Also available through the {{domxref("RTCIceTransport.onstatechange", "onstatechange")}} event handler property.
+    Also available through the {{domxref("RTCIceTransport.statechange_event", "onstatechange")}} event handler property.
 
 ## Examples
 

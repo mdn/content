@@ -86,7 +86,7 @@ event.initKeyEvent (type, bubbles, cancelable, viewArg,
     which was depressed, otherwise `0`. See {{ domxref("KeyboardEvent.keyCode")
     }} for the list of key codes.
 - _`charCodeArg`_
-  - : Is a `unsigned long` representingthe Unicode character associated with
+  - : Is a `unsigned long` representing the Unicode character associated with
     the depressed key otherwise `0`.
 
 ## Example
@@ -118,10 +118,12 @@ The `initKeyEvent` is the current Gecko equivalent of the DOM Level 3 Events
 {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}
 {{domxref("Keyboard.initKeyboardEvent()")}} method with the following arguments:
 
-    typeArg of type DOMString
-    canBubbleArg of type boolean
-    cancelableArg of type boolean
-    viewArg of type views::AbstractView
-    keyIdentifierArg of type DOMString
-    keyLocationArg of type unsigned long
-    modifiersList of type DOMString);
+```
+typeArg of type DOMString
+canBubbleArg of type boolean
+cancelableArg of type boolean
+viewArg of type views::AbstractView
+keyIdentifierArg of type DOMString
+keyLocationArg of type unsigned long
+modifiersList of type DOMString);
+```

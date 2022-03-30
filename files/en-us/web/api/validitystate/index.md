@@ -32,7 +32,7 @@ For each of these Boolean properties, a value of `true` indicates that the speci
 - {{domxref("ValidityState.tooLong", "tooLong")}} {{ReadOnlyInline}}
   - : A boolean value that is `true` if the value exceeds the specified `maxlength` for {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} objects, or `false` if its length is less than or equal to the maximum length. _Note: This property is never `true` in Gecko, because elements' values are prevented from being longer than `maxlength`._ If `true`, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.
 - {{domxref("ValidityState.tooShort", "tooShort")}} {{ReadOnlyInline}}
-  - : A boolean value that is `true` if the value fails to meet the specified `minlength` for {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} objects, or `false` if its length is greater than or equal to the minimum length. If `true`, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.
+  - : A boolean value that is `true` if the value fails to meet the specified `minlength` for {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} objects, or `false` if its length is greater than or equal to the minimum length. If `true`, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.
 - {{domxref("ValidityState.typeMismatch", "typeMismatch")}} {{ReadOnlyInline}}
   - : A boolean value that is `true` if the value is not in the required syntax (when {{htmlattrxref("type", "input")}} is `email` or `url`), or `false` if the syntax is correct. If `true`, the element matches the {{cssxref(":invalid")}} CSS pseudo-class.
 - `valid` {{ReadOnlyInline}}

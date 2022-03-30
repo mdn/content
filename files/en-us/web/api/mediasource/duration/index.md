@@ -35,34 +35,15 @@ A double. A value in seconds is expected.
 
 The following exceptions may be thrown when setting a new value for this property.
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Explanation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>InvalidAccessError</code></td>
-      <td>
-        An attempt was made to set a duration value that was negative, or
-        <code>NaN</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>
-        {{domxref("MediaSource.readyState")}} is not equal to
-        <code>open</code>, or one or more of the
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : Thrown if an attempt was made to set a duration value that was negative or `NaN`.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if {{domxref("MediaSource.readyState")}} is not equal to
+        `open`, or one or more of the
         {{domxref("SourceBuffer")}} objects in
         {{domxref("MediaSource.sourceBuffers")}} are being updated
         (i.e. their {{domxref("SourceBuffer.updating")}} property is
-        <code>true</code>.)
-      </td>
-    </tr>
-  </tbody>
-</table>
+      `true`.)
 
 ## Example
 

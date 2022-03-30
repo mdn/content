@@ -2,31 +2,28 @@
 title: Event()
 slug: Web/API/Event/Event
 tags:
-  - API
   - Constructor
-  - DOM
-  - Event
   - Reference
 browser-compat: api.Event.Event
 ---
 {{APIRef("DOM")}}
 
-The **`Event()`** constructor creates
-a new {{domxref("Event")}}.
+The **`Event()`** constructor creates a new {{domxref("Event")}} object. An event created in this way is called a _synthetic event_, as opposed to an event fired by the browser, and can be [dispatched](/en-US/docs/Web/Events/Creating_and_triggering_events) by a script.
 
 ## Syntax
 
 ```js
-new Event(typeArg[, eventInit]);
+new Event(typeArg)
+new Event(typeArg, eventInit);
 ```
 
 ### Values
 
 - `typeArg`
-  - : This is a {{domxref("DOMString")}} representing the name of the event.
+  - : This is a string representing the name of the event.
 - `eventInit` {{optional_inline}}
 
-  - : This is an `EventInit` dictionary, having the following optional fields:
+  - : This is an object with the following optional fields:
 
     - `bubbles` {{optional_inline}}
       - : A boolean value indicating whether the event bubbles. The default is

@@ -20,13 +20,7 @@ The **`protocol`** property of the
 property is {{jsxref("null")}}, the protocol may be inferred from the
 {{domxref("FederatedCredential.provider")}} property.
 
-## Syntax
-
-```js
-var protocol = FederatedCredential.protocol
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} containing a credential's federated identity protocol (e.g.
 `openidconnect`).

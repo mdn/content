@@ -51,15 +51,17 @@ The snippet below includes a function which changes the contents of a block with
 "bufferSize" to a string indicating the number of bytes currently buffered on an
 {{domxref("RTCDataChannel")}}.
 
-    var dc = peerConnection.createDataChannel("File Transfer");
+```js
+var dc = peerConnection.createDataChannel("File Transfer");
 
-    /* ... */
+/* ... */
 
-    function showBufferedAmount(channel) {
-      let el = document.getElementById("bufferSize");
+function showBufferedAmount(channel) {
+  let el = document.getElementById("bufferSize");
 
-      el.innerHTML = channel.bufferedAmount + " bytes";
-    }
+  el.innerHTML = channel.bufferedAmount + " bytes";
+}
+```
 
 ## Specifications
 
@@ -77,4 +79,3 @@ The snippet below includes a function which changes the contents of a block with
 - {{domxref("RTCDataChannel")}}
 - {{domxref("RTCDataChannel.bufferedAmountLowThreshold")}}
 - {{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event
-- {{domxref("RTCDataChannel.onbufferedamountlow")}}

@@ -9,7 +9,7 @@ tags:
   - barcode detection
   - shape detection
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Barcode Detection API")}} {{AvailableInWorkers}}
+{{securecontext_header}}{{DefaultAPISidebar("Barcode Detection API")}} {{AvailableInWorkers}}
 
 The Barcode Detection API detects linear and two-dimensional barcodes in images.
 
@@ -183,7 +183,7 @@ The Barcode Detection API supports the following barcode formats:
         retail in the United States. Defined in iso15420, it represents digits
         by strips of bars and spaces, each digit being associated to a unique
         pattern of 2 bars and 2 spaces, both of variable width. UPC-A can encode
-        12 digits that are uniquely assigned to each trade item, and it’s
+        12 digits that are uniquely assigned to each trade item, and it's
         technically a subset of EAN-13 (UPC-A codes are represented in EAN-13
         with the first character set to 0).
       </td>
@@ -229,7 +229,7 @@ You can check for formats supported by the user agent via the {{domxref('Barcode
 
 ### Creating A Detector
 
-This example tests for browser compatibility and creates a new barcode detector object, with specified supported formats.
+This example tests for browser compatibility and creates a new barcode detector object, with specified supported formats.
 
 ```js
 // check compatibility

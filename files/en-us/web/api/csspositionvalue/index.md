@@ -18,13 +18,13 @@ The **`CSSPositionValue`** interface of the [CSS Typed Object Model API](/en-US/
 
 ## Constructor
 
-- {{domxref("CSSPositionValue.CSSPositionValue()")}}
+- {{domxref("CSSPositionValue.CSSPositionValue", "CSSPositionValue()")}}
   - : Creates a new `CSSPositionValue` object.
 
 ## Properties
 
 - {{domxref('CSSPositionValue.x')}}
-  - : Returns the item's position along the web page's horizontal axis.
+  - : Returns the item's position along the web page's horizontal axis.
 - {{domxref('CSSPositionValue.y')}}
   - : Returns the item's position along the vertical axis.
 
@@ -34,7 +34,7 @@ None.
 
 ## Examples
 
-The following example positions a container `<div>` 5 pixels from the top and 10 pixels from the left of the page.
+The following example positions a container `<div>` 5 pixels from the top and 10 pixels from the left of the page.
 
 ```js
 let replacedEl = document.getElementById( 'image' );
@@ -49,11 +49,11 @@ We set the {{cssxref('object-position')}} property, then check the values return
 
 ```css hidden
 #image {
-  width: 300px;
-  height: 300px;
-  border: 1px solid black;
-  background-color: #dededf;
-  object-fit: none;
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  background-color: #dededf;
+  object-fit: none;
 }
 ```
 

@@ -36,11 +36,8 @@ A newly-created {{domxref("XRWebGLBinding")}}.
 
 ### Exceptions
 
-- `InvalidStateError`
-
-  - : The new `XRWebGLBinding` could not be created due to one of a number of
-    possible state errors:
-
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the new `XRWebGLBinding` could not be created due to one of the following situations:
     - The {{domxref("XRSession")}} specified by `session` has already been
       stopped.
     - The specified WebGL context, `context`, [has

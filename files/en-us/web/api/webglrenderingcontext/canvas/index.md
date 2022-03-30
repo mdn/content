@@ -24,7 +24,7 @@ gl.canvas;
 
 ### Return value
 
-Either a {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}} object or
+Either a {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}} object or
 {{jsxref("null")}}.
 
 ## Examples

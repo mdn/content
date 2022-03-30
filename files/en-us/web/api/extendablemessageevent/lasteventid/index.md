@@ -13,17 +13,11 @@ browser-compat: api.ExtendableMessageEvent.lastEventId
 ---
 {{APIRef("Service Workers API")}}
 
-The **`lastEventID`** read-only property of the
-{{domxref("ExtendableMessageEvent")}} interface represents, in [server-sent
+The **`lastEventID`** read-only property of the
+{{domxref("ExtendableMessageEvent")}} interface represents, in [server-sent
 events](/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events), the last event ID of the event source. This is an empty string.
 
-## Syntax
-
-```js
-var myLastEventId = extendableMessageEvent.lastEventId;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}.
 

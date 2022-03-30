@@ -13,14 +13,9 @@ browser-compat: api.Element.ariaValueText
 ---
 {{DefaultAPISidebar("DOM")}}
 
-The **`ariaValueText`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute) attribute, which defines the human readable text alternative of aria-valuenow for a range widget.
+The **`ariaValueText`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) attribute, which defines the human readable text alternative of aria-valuenow for a range widget.
 
-## Syntax
-
-    var ariaValueText = element.ariaValueText;
-    element.ariaValueText = ariaValueText
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}.
 
@@ -31,7 +26,7 @@ In this example the `aria-valuetext` attribute on the element with an ID of `sli
 ```html
 <div role="slider" aria-valuenow="1"
   aria-valuemin="1" aria-valuemax="7"
-	aria-valuetext="Sunday">
+  aria-valuetext="Sunday">
 ```
 
 ```js

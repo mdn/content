@@ -11,19 +11,13 @@ tags:
   - Property
 browser-compat: api.CSSMathMax.values
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
+{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The CSSMathMax.values read-only property of the
 {{domxref("CSSMathMax")}} interface returns a {{domxref('CSSNumericArray')}} object
 which contains one or more {{domxref('CSSNumericValue')}} objects.
 
-## Syntax
-
-```js
-var cssNumericArray = CSSMathMax.values;
-```
-
-### Value
+## Value
 
 A {{domxref('CSSNumericArray')}}.
 

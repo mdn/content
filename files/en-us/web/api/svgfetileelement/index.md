@@ -13,7 +13,7 @@ browser-compat: api.SVGFETileElement
 
 The **`SVGFETileElement`** interface corresponds to the {{SVGElement("feTile")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

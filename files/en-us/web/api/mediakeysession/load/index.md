@@ -20,7 +20,7 @@ resolves to a boolean value after loading data for a specified session object.
 ## Syntax
 
 ```js
-mediaKeySession.load(sessionId).then(function(booleanValue) { ... });
+mediaKeySession.load(sessionId).then(function(booleanValue) { /* ... */ });
 ```
 
 ### Parameter

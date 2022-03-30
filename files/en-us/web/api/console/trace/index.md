@@ -53,9 +53,11 @@ foo();
 
 In the console, the following trace will be displayed:
 
-    bar
-    foo
-    <anonymous>
+```
+bar
+foo
+<anonymous>
+```
 
 ## Specifications
 

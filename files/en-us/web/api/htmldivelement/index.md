@@ -13,7 +13,7 @@ browser-compat: api.HTMLDivElement
 
 The **`HTMLDivElement`** interface provides special properties (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HtmlElement("div")}} elements.
 
-{{InheritanceDiagram(600,120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

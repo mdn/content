@@ -31,7 +31,7 @@ The possible values are:
     the Range.
 
 > **Warning:** This method [has been
-> removed](/en-US/docs/Mozilla/Firefox/Releases/3/Site_compatibility) from [Gecko 1.9](/en-US/docs/Mozilla/Firefox/Releases/3) and
+> removed](/en-US/docs/Mozilla/Firefox/Releases/3/Site_compatibility) from [Gecko 1.9](/en-US/docs/Mozilla/Firefox/Releases/3) and
 > will not exist in future versions of Firefox, which was the only browser implementing
 > it; you should switch to {{DOMxRef("Range.compareBoundaryPoints()")}} as soon as
 > possible.
@@ -50,7 +50,7 @@ function rangeCompareNode(range, node) {
   var nodeIsBefore = range.compareBoundaryPoints(Range.START_TO_START, nodeRange) == 1;
   var nodeIsAfter = range.compareBoundaryPoints(Range.END_TO_END, nodeRange) == -1;
 
-  if (nodeIsBefore && !nodeIsAfter)
+  if (nodeIsBefore && !nodeIsAfter)
     return 0;
   if (!nodeIsBefore && nodeIsAfter)
     return 1;
@@ -74,13 +74,15 @@ returnValue = range.compareNode( referenceNode );
 
 ## Example
 
-    range = document.createRange();
-    range.selectNode(document.getElementsByTagName("div").item(0));
-    returnValue = range.compareNode(document.getElementsByTagName("p").item(0));
+```js
+range = document.createRange();
+range.selectNode(document.getElementsByTagName("div").item(0));
+returnValue = range.compareNode(document.getElementsByTagName("p").item(0));
+```
 
 ## Notes
 
-This method is obsolete; you should use the W3C DOM
+This method is obsolete; you should use the W3C DOM
 {{DOMxRef("Range.compareBoundaryPoints()")}} method.
 
 ## Specifications

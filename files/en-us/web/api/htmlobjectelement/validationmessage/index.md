@@ -20,13 +20,7 @@ control does not satisfy (if any). This is the empty string if the control is no
 candidate for constraint validation (willValidate is false), or it satisfies its
 constraints.
 
-## Syntax
-
-```js
-var String = HTMLObjectElement.validationMessage;
-```
-
-### Value
+## Value
 
 A {{domxref('DOMString')}}.
 

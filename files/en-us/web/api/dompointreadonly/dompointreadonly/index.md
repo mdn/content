@@ -24,7 +24,7 @@ script code.
 ## Syntax
 
 ```js
-point = new DOMPointReadOnly(x, y, z, w);
+new DOMPointReadOnly(x, y, z, w);
 ```
 
 ### Parameters

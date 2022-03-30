@@ -19,7 +19,7 @@ The difference between **`Array.of()`** and the
 **`Array`** constructor is in the handling of integer arguments:
 **`Array.of(7)`** creates an array with a single element,
 `7`, whereas **`Array(7)`** creates an empty array
-with a `length` property of `7` (**Note:** this
+with a `length` property of `7` (**Note:** this
 implies an array of `7` empty slots, not slots with actual
 {{jsxref("undefined")}} values).
 
@@ -36,7 +36,7 @@ Array(1, 2, 3);    // [1, 2, 3]
 ```js
 Array.of(element0)
 Array.of(element0, element1)
-Array.of(element0, element1, ... , elementN)
+Array.of(element0, element1, /* ... ,*/ elementN)
 ```
 
 ### Parameters
@@ -55,10 +55,8 @@ This function is part of the ECMAScript 2015 standard.
 For more information, see:
 
 - [`Array.of()`](https://gist.github.com/rwaldron/1074126)
-- [`Array.from()`
-  proposal](https://gist.github.com/rwaldron/1074126)
-- [`Array.of()`
-  polyfill](https://gist.github.com/rwaldron/3186576)
+- [`Array.from()` proposal](https://gist.github.com/rwaldron/1074126)
+- [`Array.of()` polyfill](https://gist.github.com/rwaldron/3186576)
 
 ## Examples
 
@@ -80,9 +78,8 @@ Array.of(undefined); // [undefined]
 
 ## See also
 
-- A polyfill of `Array.of` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [A
-  polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
+- [Polyfill of `Array.of` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
 - {{jsxref("Array")}}
 - {{jsxref("Array.from()")}}
 - {{jsxref("TypedArray.of()")}}

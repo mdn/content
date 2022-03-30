@@ -10,7 +10,7 @@ browser-compat: css.properties.box-direction
 ---
 {{CSSRef}}{{Non-standard_header}}
 
-> **Warning:** This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. The `-moz-box-direction` will only be used for XUL while the previous standard `box-direction` has been replaced by `flex-direction`. See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) for information about the current standard.
+> **Warning:** This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. The `-moz-box-direction` will only be used for XUL while the previous standard `box-direction` has been replaced by `flex-direction`. See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for information about the current standard.
 
 The **`box-direction`** [CSS](/en-US/docs/Web/CSS) property specifies whether a box lays out its contents normally (from the top or left edge), or in reverse (from the bottom or right edge).
 

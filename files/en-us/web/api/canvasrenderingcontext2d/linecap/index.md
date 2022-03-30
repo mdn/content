@@ -17,16 +17,12 @@ property of the Canvas 2D API determines the shape used to draw the end points o
 
 > **Note:** Lines can be drawn with the
 > {{domxref("CanvasRenderingContext2D.stroke()",
-    "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
+    "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
 > and {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.
 
-## Syntax
+## Value
 
-```js
-ctx.lineCap = "butt" || "round" || "square";
-```
-
-### Options
+One of the followings:
 
 - `"butt"`
   - : The ends of lines are squared off at the endpoints. Default value.

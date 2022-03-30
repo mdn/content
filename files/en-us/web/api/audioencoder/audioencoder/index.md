@@ -53,4 +53,3 @@ const audioEncoder = new AudioEncoder({
 ## Browser compatibility
 
 {{Compat}}
-

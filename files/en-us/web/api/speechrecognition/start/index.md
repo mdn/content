@@ -3,7 +3,6 @@ title: SpeechRecognition.start()
 slug: Web/API/SpeechRecognition/start
 tags:
   - API
-  - Experimental
   - Method
   - Reference
   - SpeechRecognition
@@ -13,7 +12,7 @@ tags:
   - start
 browser-compat: api.SpeechRecognition.start
 ---
-{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
+{{APIRef("Web Speech API")}}
 
 The **`start()`** method of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) starts the speech
 recognition service listening to incoming audio with intent to recognize grammars
@@ -22,7 +21,7 @@ associated with the current {{domxref("SpeechRecognition")}}.
 ## Syntax
 
 ```js
-mySpeechRecognition.start();
+start()
 ```
 
 ### Parameters

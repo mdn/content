@@ -4,7 +4,6 @@ slug: Web/API/Headers/append
 tags:
   - API
   - Append
-  - Experimental
   - Fetch
   - Method
   - Reference
@@ -41,7 +40,7 @@ myHeaders.append(name, value);
 
 ### Returns
 
-Void.
+{{jsxref('undefined')}}.
 
 ## Example
 

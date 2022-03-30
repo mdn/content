@@ -101,7 +101,7 @@ for details.
 
 ## See also
 
-- A polyfill of `Math.asinh` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [Polyfill of `Math.asinh` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.atanh()")}}
 - {{jsxref("Math.cosh()")}}

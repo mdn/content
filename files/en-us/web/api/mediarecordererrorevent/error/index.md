@@ -22,15 +22,9 @@ by a {{domxref("MediaRecorder")}} instance.
 When a `MediaRecorderErrorEvent` occurs, you can determine to some extent
 what went wrong by examining the `error` property within the
 `MediaRecorderErrorEvent` received by the `MediaRecorder`'s
-{{event("error")}} event handler, {{domxref("MediaRecorder.onerror", "onerror")}}.
+{{event("error")}} event handler, {{domxref("MediaRecorder.error_event", "onerror")}}.
 
-## Syntax
-
-```js
-error = MediaRecorderErrorEvent.error;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMException")}} describing the error represented by the event. The
 error's {{domxref("DOMException.name", "name")}} property's value may be any exception
@@ -44,7 +38,7 @@ method references.
     been made on an object that's deleted or removed.
 - `NotSupportedError`
   - : A `MediaRecorder` couldn't be created because the specified options
-    weren't valid. The `message` atttribute should provide additional
+    weren't valid. The `message` attribute should provide additional
     information, if it exists.
 - `SecurityError`
   - : The {{domxref("MediaStream")}} is configured to disallow recording. This may be the

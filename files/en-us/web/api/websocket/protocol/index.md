@@ -19,12 +19,12 @@ object, or the empty string if no connection is established.
 ## Syntax
 
 ```js
-var protocol = aWebSocket.protocol;
+const protocol = aWebSocket.protocol;
 ```
 
 ## Value
 
-A [`DOMString`](/en-US/docs/Web/API/DOMString "DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String.").
+A [`DOMString`](/en-US/docs/Web/API/DOMString).
 
 ## Specifications
 

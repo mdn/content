@@ -25,20 +25,14 @@ the `GeolocationCoordinates` object is part of the
 {{domxref("GeolocationPosition")}} interface, which is the object type returned by
 Geolocation API functions that obtain and return a geographical position.
 
-## Syntax
-
-```js
-let longitude = geolocationCoordinatesInstance.longitude
-```
-
-### Value
+## Value
 
 The value in `longitude` is the geographical longitude of the location on
 Earth described by the `Coordinates` object, in decimal degrees. The value is
 defined by the World Geodetic System 1984 specification (WGS 84).
 
 > **Note:** The zero meridian (also known as the prime meridian or the
-> reference meridian) is not precisely the same as the Greenwhich meridian that most
+> reference meridian) is not precisely the same as the Greenwich meridian that most
 > people think of. It is, instead, the {{interwiki("wikipedia", "IERS Reference
     Meridian")}}, which is located 5.3 {{interwiki("wikipedia", "arcseconds")}} (102
 > meters / 335 feet) east of the {{interwiki("wikipedia", "Greenwich meridian")}}. This
@@ -72,12 +66,12 @@ button.addEventListener("click", function() {
 ```
 
 After setting up variables to more conveniently reference the button element and the
-two elements into which the latitude and logitude will be drawn, the event listener is
+two elements into which the latitude and longitude will be drawn, the event listener is
 established by calling {{domxref("EventTarget.addEventListener", "addEventListener()")}}
 on the {{HTMLElement("button")}} element. When the user clicks the button, we'll fetch
 and display the location information.
 
-Upon receiving a {{event("click")}} event, we call
+Upon receiving a {{domxref("Element/click_event", "click")}} event, we call
 {{domxref("Geolocation.getCurrentPosition", "getCurrentPosition()")}} to request the
 device's current position. This is an asynchronous request, so we provide a callback
 which receives as in put a {{domxref("GeolocationPosition")}} object describing the
@@ -95,11 +89,11 @@ The HTML used to present the results looks like this:
 
 ```html
 <p>
-  Your location is <span id="latitude">0.00</span>°
-  latitude by <span id="longitude">0.00</span>° longitude.
+  Your location is <span id="latitude">0.00</span>°
+  latitude by <span id="longitude">0.00</span>° longitude.
 </p>
 <button id="get-location">
-  Get My Location
+  Get My Location
 </button>
 ```
 

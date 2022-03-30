@@ -16,6 +16,8 @@ browser-compat: api.SpeechSynthesisErrorEvent
 
 The **`SpeechSynthesisErrorEvent`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) contains information about any errors that occur while processing {{domxref("SpeechSynthesisUtterance")}} objects in the speech service.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _`SpeechSynthesisErrorEvent` extends the {{domxref("SpeechSynthesisEvent")}} interface, which inherits properties from its parent interface, {{domxref("Event")}}._

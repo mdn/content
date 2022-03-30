@@ -13,7 +13,7 @@ browser-compat: css.selectors.read-only
 ---
 {{CSSRef}}
 
-The **`:read-only`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element (such as `input` or `textarea`) that is not editable by the user.
+The **`:read-only`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element (such as `input` or `textarea`) that is not editable by the user.
 
 ```css
 input:read-only, textarea:read-only {
@@ -52,7 +52,7 @@ textarea:read-write {
 }
 ```
 
-You can find the full source code at [readonly-confirmation.html](https://github.com/mdn/learning-area/blob/master/html/forms/pseudo-classes/readonly-confirmation.html); this renders like so:
+You can find the full source code at [readonly-confirmation.html](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/readonly-confirmation.html); this renders like so:
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/readonly-confirmation.html", '100%', 660)}}
 

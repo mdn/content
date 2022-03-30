@@ -13,13 +13,7 @@ browser-compat: api.MIDIPort.state
 
 The **`state`** read-only property of the {{domxref("MIDIPort")}} interface returns the state of the port.
 
-## Syntax
-
-```js
-let state = MIDIPort.state;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString","string")}} containing the state of the port, one of:
 

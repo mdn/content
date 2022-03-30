@@ -20,6 +20,8 @@ browser-compat: api.RTCError
 
 The **`RTCError`** interface describes an error which has occurred while handling [WebRTC](/en-US/docs/Web/API/WebRTC_API) operations. It's based upon the standard {{domxref("DOMException")}} interface that describes general DOM errors.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("RTCError.RTCError", "RTCError()")}}
@@ -30,7 +32,7 @@ The **`RTCError`** interface describes an error which has occurred while handlin
 _In addition to the properties defined by the parent interface, {{domxref("DOMException")}}, `RTCError` includes the following properties:_
 
 - {{domxref("RTCError.errorDetail", "errorDetail")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMString")}} specifying the WebRTC-specific error code identifying the type of error that occurred.
+  - : A {{domxref("DOMString")}} specifying the WebRTC-specific error code identifying the type of error that occurred.
 - {{domxref("RTCError.receivedAlert", "receivedAlert")}} {{ReadOnlyInline}}
   - : An unsigned long integer value indicating the fatal {{Glossary("DTLS")}} error which was received from the network. Only valid if the `errorDetail` string is `dtls-failure`. If `null`, no DTLS error was received.
 - {{domxref("RTCError.sctpCauseCode", "sctpCauseCode")}} {{ReadOnlyInline}}
@@ -75,7 +77,7 @@ function to be called.
 
 The above example uses {{domxref("EventTarget.addEventListener",
   "addEventListener()")}} to add the handler for `error` events. You can also
-use the `RTCDataChannel` object's {{domxref("RTCDataChannel.onerror",
+use the `RTCDataChannel` object's {{domxref("RTCDataChannel.error_event",
   "onerror")}} event handler property, like this:
 
 ```js

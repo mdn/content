@@ -3,7 +3,6 @@ title: Headers.keys()
 slug: Web/API/Headers/keys
 tags:
   - API
-  - Experimental
   - Fetch API
   - Headers
   - Method
@@ -44,8 +43,10 @@ for(var key of myHeaders.keys()) {
 
 The result is:
 
-    content-type
-    vary
+```
+content-type
+vary
+```
 
 ## Browser compatibility
 

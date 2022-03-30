@@ -6,6 +6,7 @@ tags:
   - Guide
   - Overview
   - css scrollbars
+spec-urls: https://drafts.csswg.org/css-scrollbars/
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
@@ -50,9 +51,7 @@ Dandelion cucumber earthnut pea peanut soko zucchini.
 
 ## Specifications
 
-| Specification                            | Status                               | Comment             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("CSS Scrollbars")}} | {{Spec2("CSS Scrollbars")}} | Initial definition. |
+{{Specifications}}
 
 ## Accessibility concerns
 

@@ -35,16 +35,10 @@ Because {{Glossary("RTP")}} doesn't include this information, tracks associated 
 [WebRTC](/en-US/docs/Web/API/WebRTC_API) {{domxref("RTCPeerConnection")}}
 will never include this property.
 
-## Syntax
-
-```js
-var facingMode = MediaTrackSettings.facingMode;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} whose value is one of the strings in
-`{{anch("VideoFacingModeEnum")}}`.
+[`VideoFacingModeEnum`](#videofacingmodeenum).
 
 ### VideoFacingModeEnum
 

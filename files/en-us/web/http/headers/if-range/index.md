@@ -2,7 +2,7 @@
 title: If-Range
 slug: Web/HTTP/Headers/If-Range
 tags:
-  - Condtional Requests
+  - Conditional Requests
   - HTTP
   - HTTP Header
   - Range Requests
@@ -48,9 +48,7 @@ If-Range: <etag>
 
 - \<etag>
   - : An entity tag uniquely representing the requested resource. It is a string of ASCII
-    characters placed between double quotes (Like `"675af34563dc-tr34"`). It
-    may be prefixed by `W/` to indicate that the weak comparison algorithm
-    should be used.
+    characters placed between double quotes (Like `"675af34563dc-tr34"`). A weak entity tag (one prefixed by `W/`) must not be used in this header.
 - \<day-name>
   - : One of "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", or "Sun" (case-sensitive).
 - \<day>

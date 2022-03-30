@@ -18,7 +18,7 @@ The **`InstallEvent()`** constructor creates a new {{domxref("InstallEvent")}} o
 ## Syntax
 
 ```js
-var myInstallEvent = new InstallEvent(type, init);
+new InstallEvent(type, init);
 ```
 
 ### Parameters

@@ -38,7 +38,7 @@ ruby-position: unset;
 - `inter-character`
   - : Is a keyword indicating that the ruby has to be placed between the different characters.
 - `alternate`
-  - : Is a keyword indicating that the ruby alternates between over and under, when there are multiple levels of annotaion.
+  - : Is a keyword indicating that the ruby alternates between over and under, when there are multiple levels of annotation.
 
 ## Formal definition
 
@@ -65,7 +65,7 @@ ruby-position: unset;
 
 ```css
 ruby {
-    ruby-position:over;
+    ruby-position:over;
 }
 ```
 
@@ -88,7 +88,7 @@ ruby {
 
 ```css
 ruby {
-    ruby-position:under;
+    ruby-position:under;
 }
 ```
 
@@ -112,7 +112,7 @@ ruby {
 
 ```css
 ruby {
-    ruby-position: alternate; /* this is also the initial value */
+    ruby-position: alternate; /* this is also the initial value */
 }
 ```
 

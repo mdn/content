@@ -32,7 +32,7 @@ The **`::-moz-range-progress`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-
 
 ```css
 input[type=range]::-moz-range-progress {
-  background-color: green;
+  background-color: green;
   height: 1em;
 }
 ```

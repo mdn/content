@@ -13,14 +13,14 @@ browser-compat: api.SVGAnimatedAngle
 
 ## SVG animated angle interface
 
-The `SVGAnimatedAngle` interface is used for attributes of basic type [\<angle>](/en-US/docs/SVG/Content_type#Angle) which can be animated.
+The `SVGAnimatedAngle` interface is used for attributes of basic type [\<angle>](/en-US/docs/Web/SVG/Content_type#Angle) which can be animated.
 
 ### Interface overview
 
 <table class="no-markdown">
   <tbody>
     <tr>
-      <th scope="row">Also implement</th>
+      <th scope="row">Also implement</th>
       <td><em>None</em></td>
     </tr>
     <tr>
@@ -41,7 +41,7 @@ The `SVGAnimatedAngle` interface is used for attributes of basic type [\<angle>]
       </td>
     </tr>
     <tr>
-      <th scope="row">Normative document</th>
+      <th scope="row">Normative document</th>
       <td>
         <a
           href="https://www.w3.org/TR/SVG11/types.html#InterfaceSVGAnimatedAngle"

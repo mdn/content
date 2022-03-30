@@ -21,14 +21,7 @@ the {{domxref("AudioBuffer")}} is reached.
 
 The `loop` property's default value is `false`.
 
-## Syntax
-
-```js
-var loopingEnabled = AudioBufferSourceNode.loop;
-AudioBufferSourceNode.loop = true | false;
-```
-
-### Value
+## Value
 
 A Boolean which is `true` if looping is enabled; otherwise, the value is
 `false`.
@@ -39,7 +32,7 @@ time specified by the {{domxref("AudioBufferSourceNode.loopEnd", "loopEnd")}} pr
 is reached, playback continues at the time specified by
 {{domxref("AudioBufferSourceNode.loopStart", "loopStart")}}
 
-## Example
+## Examples
 
 In this example, the {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} function is used to
 decode an audio track and put it into an {{domxref("AudioBufferSourceNode")}}. Buttons

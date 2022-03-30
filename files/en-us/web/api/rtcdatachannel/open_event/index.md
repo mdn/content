@@ -4,7 +4,7 @@ slug: Web/API/RTCDataChannel/open_event
 tags:
   - API
   - Connectivity
-  - Connetion
+  - Connection
   - Data Channel
   - Networking
   - RTCDataChannel
@@ -21,28 +21,32 @@ browser-compat: api.RTCDataChannel.open_event
 ---
 {{APIRef("WebRTC")}}
 
-The WebRTC **`open`** event is sent to an {{domxref("RTCDataChannel")}} object's {{domxref("RTCDataChannel.onopen", "onopen")}} event handler when the underlying transport used to send and receive the data channel's messages is opened or re-opened.
+The WebRTC **`open`** event is sent to an {{domxref("RTCDataChannel")}} object's `onopen` event handler when the underlying transport used to send and receive the data channel's messages is opened or reopened.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("RTCDataChannelEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("RTCDataChannel.onopen", "onopen")}}</td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('open', event => { });
+
+onopen = event => { };
+```
+
+## Event type
+
+An {{domxref("RTCDataChannelEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("RTCDataChannelEvent")}}
+
+## Event properties
+
+_Also inherits properties from its parent interface, {{DOMxRef("Event")}}._
+
+- {{DOMxRef("RTCDataChannelEvent.channel", "channel")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("RTCDataChannel")}} associated with the event.
 
 ## Examples
 
@@ -60,7 +64,7 @@ dc.addEventListener("open", ev => {
 }, false);
 ```
 
-This can also be done by directly setting the value of the channel's {{domxref("RTCDataChannel.onopen", "onopen")}} event handler property.
+This can also be done by directly setting the value of the channel's `onopen` event handler property.
 
 ```js
 dc.onopen = ev => {

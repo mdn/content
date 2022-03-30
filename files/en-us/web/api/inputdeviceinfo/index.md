@@ -15,6 +15,8 @@ The **`InputDeviceInfo`** interface of the {{domxref('Media Streams API','','','
 
 `InputDeviceInfo` objects are returned by {{domxref("MediaDevices.enumerateDevices()")}} if the returned device is an audio or video input device.
 
+{{InheritanceDiagram}}
+
 ## Methods
 
 - {{domxref("InputDeviceInfo.getCapabilities()")}}

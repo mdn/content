@@ -14,7 +14,7 @@ The **`EncodedAudioChunk`** interface of the {{domxref('WebCodecs API','','',' '
 
 ## Constructor
 
-- {{domxref("EncodedAudioChunk.EncodedAudioChunk()")}}
+- {{domxref("EncodedAudioChunk.EncodedAudioChunk", "EncodedAudioChunk()")}}
   - : Creates a new `EncodedAudioChunk` object.
 
 ## Properties
@@ -28,11 +28,11 @@ The **`EncodedAudioChunk`** interface of the {{domxref('WebCodecs API','','',' '
 - {{domxref("EncodedAudioChunk.byteLength")}}{{ReadOnlyInline}}
   - : Returns an integer representing the length of the audio in bytes.
 
-
 ## Methods
 
 - {{domxref("EncodedAudioChunk.copyTo()")}}
   - : Copies the encoded audio data.
+
 ## Specifications
 
 {{Specifications}}
@@ -40,4 +40,3 @@ The **`EncodedAudioChunk`** interface of the {{domxref('WebCodecs API','','',' '
 ## Browser compatibility
 
 {{Compat}}
-

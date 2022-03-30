@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Background
   - CSS Property
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.background-position-x
@@ -63,7 +62,7 @@ The `background-position-x` property is specified as one or more values, separat
 - {{cssxref("&lt;length&gt;")}}
   - : The offset of the given background image's left vertical edge from the background position layer's left vertical edge. (Some browsers allow assigning the right edge for offset).
 - {{cssxref("&lt;percentage&gt;")}}
-  - : The offset of the given background image's horizontal position relative to the container. A value of 0% means that the left edge of the background image is aligned with the left edge of the container, and a value of 100% means that the _right_ edge of the background image is aligned with the _right_ edge of the container, thus a value of 50% horizontally centers the background image.
+  - : The offset of the given background image's horizontal position relative to the container. A value of 0% means that the left edge of the background image is aligned with the left edge of the container, and a value of 100% means that the _right_ edge of the background image is aligned with the _right_ edge of the container, thus a value of 50% horizontally centers the background image.
 
 ## Formal definition
 
@@ -89,13 +88,13 @@ The following example shows a simple background image implementation, with backg
 
 ```css
 div {
-  width: 300px;
-  height: 300px;
-  background-color: skyblue;
-  background-image: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png);
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: bottom 10px;
+  width: 300px;
+  height: 300px;
+  background-color: skyblue;
+  background-image: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom 10px;
 }
 ```
 

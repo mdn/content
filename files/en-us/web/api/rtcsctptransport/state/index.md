@@ -16,7 +16,7 @@ tags:
   - state
 browser-compat: api.RTCSctpTransport.state
 ---
-{{APIRef("WebRTC")}}{{Draft}}{{SeeCompatTable}}
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The **`state`** read-only property of the
 {{DOMxRef("RTCSctpTransport")}} interface provides information which describes a Stream
@@ -34,7 +34,7 @@ A string whose value is taken from the `RTCSctpTransportState` enumerated
 type. Its value is one of the following:
 
 - `connecting`
-  - : The initial state when the connection is being estabilished.
+  - : The initial state when the connection is being established.
 - `connected`
   - : The connection is open for data transmission.
 - `closed`

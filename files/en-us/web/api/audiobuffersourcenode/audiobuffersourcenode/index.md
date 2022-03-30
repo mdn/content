@@ -19,7 +19,7 @@ constructor creates a new {{domxref("AudioBufferSourceNode")}} object instance.
 ## Syntax
 
 ```js
-var audioBufferSourceNode = new AudioBufferSourceNode(context, options)
+new AudioBufferSourceNode(context, options)
 ```
 
 ### Parameters
@@ -34,11 +34,11 @@ var audioBufferSourceNode = new AudioBufferSourceNode(context, options)
     - `detune`: A value in cents to modulate the speed of audio stream
       rendering. Its nominal range is (-∞ to +∞). The default is `0`.
     - `loop`: A boolean indicating whether the audio should play in a loop.
-      The default is `false`. If the loop is dynamically modified during
+      The default is `false`. If the loop is dynamically modified during
       playback, the new value will take effect on the next processing block of audio.
     - `loopEnd`: An optional value, in seconds, where looping should end if
       the loop attribute is `true`. The default is `0`. Its value
-      is exclusive to the content of the loop. The sample frames, comprising the loop,
+      is exclusive to the content of the loop. The sample frames, comprising the loop,
       run from the values `loopStart` to
       `loopEnd`-(1/`sampleRate`). It's sensible to set this to a
       value between 0 and the duration of the buffer. If `loopEnd` is less

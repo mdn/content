@@ -32,5 +32,3 @@ console.log(AudioDecoder.decodeQueueSize);
 ## Browser compatibility
 
 {{Compat}}
-
-

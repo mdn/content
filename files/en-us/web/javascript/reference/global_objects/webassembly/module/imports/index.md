@@ -41,16 +41,16 @@ If module is not a {{jsxref("WebAssembly.Module")}} object instance, a
 
 ### Using imports
 
-The following example (see imports.html [source
-code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/imports.html); [see it
-live also](https://mdn.github.io/webassembly-examples/js-api-examples/imports.html)) compiles the loaded simple.wasm module.  This module is then queried
-for its imports.
+The following example (see imports.html [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/imports.html);
+[see it live also](https://mdn.github.io/webassembly-examples/js-api-examples/imports.html))
+compiles the loaded simple.wasm module.
+This module is then queried for its imports.
 
 ```js
 WebAssembly.compileStreaming(fetch('simple.wasm'))
 .then(function(mod) {
-  var imports = WebAssembly.Module.imports(mod);
-  console.log(imports[0]);
+  var imports = WebAssembly.Module.imports(mod);
+  console.log(imports[0]);
 });
 ```
 
@@ -72,5 +72,4 @@ The output looks like this:
 
 - [WebAssembly](/en-US/docs/WebAssembly) overview page
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly
-  JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

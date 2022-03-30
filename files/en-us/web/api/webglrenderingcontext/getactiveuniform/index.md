@@ -90,8 +90,8 @@ These are possible values of the `name` attribute of return values of
 generates one or more entries in the list depending on the declared type of the uniform
 in the shader:
 
-- Single basic type: one entry with the name of the uniform. E.g. 
-  `uniform vec4 a;` will result in  `a`.
+- Single basic type: one entry with the name of the uniform. E.g.
+  `uniform vec4 a;` will result in  `a`.
 - Array of basic type: one entry with the name of the uniform suffixed with
   `[0]`. E.g. `uniform vec4 b[];` will result in
   `b[0]`.

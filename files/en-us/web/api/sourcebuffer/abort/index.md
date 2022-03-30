@@ -14,7 +14,7 @@ tags:
   - abort
 browser-compat: api.SourceBuffer.abort
 ---
-{{draft}}{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 The **`abort()`** method of the {{domxref("SourceBuffer")}}
 interface aborts the current segment and resets the segment parser.
@@ -35,25 +35,11 @@ None.
 
 ### Exceptions
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Explanation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>
-        The {{domxref("MediaSource.readyState")}} property of the
-        parent media source is not equal to <code>open</code>, or this
-        <code>SourceBuffer</code> has been removed from the
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the {{domxref("MediaSource.readyState")}} property of the
+        parent media source is not equal to `open`, or this
+        `SourceBuffer` has been removed from the
         {{domxref("MediaSource")}}.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Example
 
@@ -76,7 +62,7 @@ sourceBuffer.appendBuffer(buf);
 
 Let's say that after the call to `appendBuffer` BUT before the
 `updateend` event fires (i.e. a buffer is being appended but the operation
-has not yet completed) a user "scrubs" the video seeking to a new point in time.  In
+has not yet completed) a user "scrubs" the video seeking to a new point in time.  In
 this case you would want to manually call `abort()` on the source buffer to
 stop the decoding of the current buffer, then fetch and append the newly requested
 segment that relates to the current new position of the video.

@@ -48,15 +48,17 @@ The HTML standard doesn't list what image formats to support, so {{glossary("use
 
 The image file formats that are most commonly used on the web are:
 
-- [APNG (Animated Portable Network Graphics)](/en-US/docs/Web/Media/Formats/Image_types#apng) — Good choice for lossless animation sequences (GIF is less performant)
-- [AVIF (AV1 Image File Format)](/en-US/docs/Web/Media/Formats/Image_types#avif) — Good choice for both images and animated images due to high performance.
-- [GIF (Graphics Interchange Format)](/en-US/docs/Web/Media/Formats/Image_types#gif) — Good choice for _simple_ images and animations.
-- [JPEG (Joint Photographic Expert Group image)](/en-US/docs/Web/Media/Formats/Image_types#jpeg) — Good choice for lossy compression of still images (currently the most popular).
-- [PNG (Portable Network Graphics)](/en-US/docs/Web/Media/Formats/Image_types#png) — Good choice for lossy compression of still images (slightly better quality than JPEG).
-- [SVG (Scalable Vector Graphics)](/en-US/docs/Web/Media/Formats/Image_types#svg) — Vector image format. Use for images that must be drawn accurately at different sizes.
-- [WebP (Web Picture format)](/en-US/docs/Web/Media/Formats/Image_types#webp) — Excellent choice for both images and animated images
+- [APNG (Animated Portable Network Graphics)](/en-US/docs/Web/Media/Formats/Image_types#APNG_Animated_Portable_Network_Graphics) — Good choice for lossless animation sequences (GIF is less performant)
+- [AVIF (AV1 Image File Format)](/en-US/docs/Web/Media/Formats/Image_types#AVIF_image) — Good choice for both images and animated images due to high performance.
+- [GIF (Graphics Interchange Format)](/en-US/docs/Web/Media/Formats/Image_types#GIF_Graphics_Interchange_Format) — Good choice for _simple_ images and animations.
+- [JPEG (Joint Photographic Expert Group image)](/en-US/docs/Web/Media/Formats/Image_types#JPEG_Joint_Photographic_Experts_Group_image) — Good choice for lossy compression of still images (currently the most popular).
+- [PNG (Portable Network Graphics)](/en-US/docs/Web/Media/Formats/Image_types#PNG_Portable_Network_Graphics) — Good choice for lossy compression of still images (slightly better quality than JPEG).
+- [SVG (Scalable Vector Graphics)](/en-US/docs/Web/Media/Formats/Image_types#SVG_Scalable_Vector_Graphics) — Vector image format. Use for images that must be drawn accurately at different sizes.
+- [WebP (Web Picture format)](/en-US/docs/Web/Media/Formats/Image_types#WebP_image) — Excellent choice for both images and animated images
 
-Formats like [WebP](/en-US/docs/Web/Media/Formats/Image_types#webp) and [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif) are highly recommended as they are now broadly (and somewhat deeply) supported by web browsers, and perform much better than PNG, JPEG, GIF for both still and animated images. SVG remains the recommended format for images that must be drawn accurately at different sizes.
+Formats like [WebP](/en-US/docs/Web/Media/Formats/Image_types#WebP_image) and [AVIF](/en-US/docs/Web/Media/Formats/Image_types#AVIF_image) are recommended as they perform much better than PNG, JPEG, GIF for both still and animated images. WebP is widely supported while AVIF lacks support in Safari.
+
+SVG remains the recommended format for images that must be drawn accurately at different sizes.
 
 ## Image loading errors
 
@@ -84,7 +86,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     >
     > In these cases, the browser may replace the image with the text in the element's `alt` attribute. For these reasons and others, provide a useful value for `alt` whenever possible.
 
-    Omitting `alt` altogether indicates that the image is a key part of the content and no textual equivalent is available. Setting this attribute to an empty string (`alt=""`) indicates that this image is _not_ a key part of the content (it’s decoration or a tracking pixel), and that non-visual browsers may omit it from {{glossary("Rendering engine", "rendering")}}. Visual browsers will also hide the broken image icon if the `alt` is empty and the image failed to display.
+    Omitting `alt` altogether indicates that the image is a key part of the content and no textual equivalent is available. Setting this attribute to an empty string (`alt=""`) indicates that this image is _not_ a key part of the content (it's decoration or a tracking pixel), and that non-visual browsers may omit it from {{glossary("Rendering engine", "rendering")}}. Visual browsers will also hide the broken image icon if the `alt` is empty and the image failed to display.
 
     This attribute is also used when copying and pasting the image to text, or saving a linked image to a bookmark.
 
@@ -116,15 +118,26 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `auto`
       - : Default: no preference for the decoding mode. The browser decides what is best for the user.
 
+- {{htmlattrdef("fetchpriority")}}
+
+  - : Provides a hint of the relative priority to use when fetching the image. Allowed values:
+
+    - `high`
+      - : Signals a high-priority fetch relative to other images.
+    - `low`
+      - : Signals a low-priority fetch relative to other images.
+    - `auto`
+      - : Default: Signals automatic determination of fetch priority relative to other images.
+
 - {{htmlattrdef("height")}}
   - : The intrinsic height of the image, in pixels. Must be an integer without a unit.
 - {{htmlattrdef("intrinsicsize")}} {{deprecated_inline}}
-  - : This attribute tells the browser to ignore the actual {{glossary("intrinsic size")}} of the image and pretend it’s the size specified in the attribute. Specifically, the image would raster at these dimensions and `naturalWidth`/`naturalHeight` on images would return the values specified in this attribute. [Explainer](https://github.com/ojanvafai/intrinsicsize-attribute), [examples](https://googlechrome.github.io/samples/intrinsic-size/index.html)
+  - : This attribute tells the browser to ignore the actual {{glossary("intrinsic size")}} of the image and pretend it's the size specified in the attribute. Specifically, the image would raster at these dimensions and `naturalWidth`/`naturalHeight` on images would return the values specified in this attribute. [Explainer](https://github.com/ojanvafai/intrinsicsize-attribute), [examples](https://googlechrome.github.io/samples/intrinsic-size/index.html)
 - {{htmlattrdef("ismap")}}
 
   - : This Boolean attribute indicates that the image is part of a [server-side map](https://en.wikipedia.org/wiki/Image_map#Server-side). If so, the coordinates where the user clicked on the image are sent to the server.
 
-    > **Note:** **Note:** This attribute is allowed only if the `<img>` element is a descendant of an {{htmlelement("a")}} element with a valid {{htmlattrxref("href","a")}} attribute. This gives users without pointing devices a fallback destination.
+    > **Note:** This attribute is allowed only if the `<img>` element is a descendant of an {{htmlelement("a")}} element with a valid {{htmlattrxref("href","a")}} attribute. This gives users without pointing devices a fallback destination.
 
 - {{htmlattrdef("loading")}} {{experimental_inline}}
 
@@ -152,12 +165,12 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : One or more strings separated by commas, indicating a set of source sizes. Each source size consists of:
 
-    1.  A [media condition](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax). This must be omitted for the last item in the list.
-    2.  A source size value.
+    1. A [media condition](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax). This must be omitted for the last item in the list.
+    2. A source size value.
 
     Media Conditions describe properties of the _viewport_, not of the _image_. For example, `(max-height: 500px) 1000px` proposes to use a source of 1000px width, if the _viewport_ is not higher than 500px.
 
-    Source size values specify the intended display size of the image. {{glossary("User agent", "User agents")}} use the current source size to select one of the sources supplied by the `srcset` attribute, when those sources are described using width (`w`) descriptors. The selected source size affects the {{glossary("intrinsic size")}} of the image (the image’s display size if no {{glossary("CSS")}} styling is applied). If the `srcset` attribute is absent, or contains no values with a width descriptor, then the `sizes` attribute has no effect.
+    Source size values specify the intended display size of the image. {{glossary("User agent", "User agents")}} use the current source size to select one of the sources supplied by the `srcset` attribute, when those sources are described using width (`w`) descriptors. The selected source size affects the {{glossary("intrinsic size")}} of the image (the image's display size if no {{glossary("CSS")}} styling is applied). If the `srcset` attribute is absent, or contains no values with a width descriptor, then the `sizes` attribute has no effect.
 
 - {{htmlattrdef("src")}}
   - : The image {{glossary("URL")}}. Mandatory for the `<img>` element. On {{glossary("Browser", "browsers")}} supporting `srcset`, `src` is treated like a candidate image with a pixel density descriptor `1x`, unless an image with this pixel density descriptor is already defined in `srcset`, or unless `srcset` contains `w` descriptors.
@@ -165,8 +178,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : One or more strings separated by commas, indicating possible image sources for the {{glossary("user agent")}} to use. Each string is composed of:
 
-    1.  A {{glossary("URL")}} to an image
-    2.  Optionally, whitespace followed by one of:
+    1. A {{glossary("URL")}} to an image
+    2. Optionally, whitespace followed by one of:
 
         - A width descriptor (a positive integer directly followed by `w`). The width descriptor is divided by the source size given in the `sizes` attribute to calculate the effective pixel density.
         - A pixel density descriptor (a positive floating point number directly followed by `x`).
@@ -210,7 +223,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : A link to a more detailed description of the image. Possible values are a {{glossary("URL")}} or an element {{htmlattrxref("id")}}.
 
-    > **Note:** This attribute is mentioned in the latest {{glossary("W3C")}} version, [HTML 5.2](https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc), but has been removed from the {{glossary("WHATWG")}}’s [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element). It has an uncertain future; authors should use a {{glossary("WAI")}}-{{glossary("ARIA")}} alternative such as [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) or [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details).
+    > **Note:** This attribute is mentioned in the latest {{glossary("W3C")}} version, [HTML 5.2](https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc), but has been removed from the {{glossary("WHATWG")}}'s [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element). It has an uncertain future; authors should use a {{glossary("WAI")}}-{{glossary("ARIA")}} alternative such as [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) or [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details).
 
 - {{htmlattrdef("name")}} {{deprecated_inline}}
   - : A name for the element. Use the {{htmlattrxref("id")}} attribute instead.
@@ -367,15 +380,15 @@ The value of the `title` attribute is usually presented to the user as a tooltip
             with non-empty <code>alt</code> attribute or no
             <code>alt</code> attribute:
             <code
-              ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Role_Img"
-                >img</a
+              ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/img_role"
+                ><code>img</code></a
               ></code
             >
           </li>
           <li>
             with empty <code>alt</code> attribute:
-            <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-              >no corresponding role</a
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"
+              ><code>presentation</code></a
             >
           </li>
         </ul>

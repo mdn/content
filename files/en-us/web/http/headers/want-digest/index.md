@@ -10,7 +10,7 @@ browser-compat: http.headers.Want-Digest
 ---
 {{HTTPSidebar}}
 
-The **`Want-Digest`** HTTP header is primarily used in a HTTP request, to ask the server to provide a {{Glossary("digest")}} of the requested resource using the {{HTTPHeader("Digest")}} response header.
+The **`Want-Digest`** HTTP header is primarily used in a request, to ask the server to provide a {{Glossary("digest")}} of the requested resource using the {{HTTPHeader("Digest")}} response header.
 
 The header contains identifiers for one or more digest algorithms that the sender wishes the server to use to create the digest.
 The request may use {{Glossary("quality values")}} to indicate its preference/order for particular digest algorithms.
@@ -50,9 +50,9 @@ Want-Digest: <digest-algorithm><q-value>,<digest-algorithm><q-value>
 ## Directives
 
 - \<digest-algorithm>
-  - : Digest algorithms are defined in [Digest Headers](https://datatracker.ietf.org/doc/draft-ietf-httpbis-digest-headers/). 
+  - : Digest algorithms are defined in [Digest Headers](https://datatracker.ietf.org/doc/draft-ietf-httpbis-digest-headers/).
     - Permitted digest algorithms values include: `unixsum`, `unixcksum`, `crc32c`, `sha-256` and `sha-512`, `id-sha-256`, `id-sha-512`
-    - Deprecated algorithms values include: `md5`, `sha`, `adler32`.    
+    - Deprecated algorithms values include: `md5`, `sha`, `adler32`.
 - \<q-value>
   - : The [quality value](/en-US/docs/Glossary/Quality_values) to apply to that
     option.
@@ -121,7 +121,6 @@ Want-Digest: sha-256, sha-512
 ## Specifications
 
 {{Specifications("http.headers.Want-Digest")}}
-
 
 ## Browser compatibility
 

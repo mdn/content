@@ -21,9 +21,9 @@ The {{domxref("RTCRtpStreamStats")}} dictionary is returned by the {{domxref("RT
 
 While the dictionary has a base set of properties that are present in each of these cases, there are also additional properties added depending on which interface the method is called on.
 
-`RTCRtpStreamStats` is the base class for all RTP-related statistics reports. It's based on {{anch("RTCStats")}} and adds the following additional fields.
+`RTCRtpStreamStats` is the base class for all RTP-related statistics reports. It's based on [RTCStats](#rtcstats) and adds the following additional fields.
 
-> **Note:** This interface was called `RTCRTPStreamStats` until a specification update in the spring of 2017. Check the {{anch("Browser compatibility")}} table to know if and when the name change was implemented in specific browsers.
+> **Note:** This interface was called `RTCRTPStreamStats` until a specification update in the spring of 2017. Check the [Browser compatibility](#browser_compatibility) table to know if and when the name change was implemented in specific browsers.
 
 ## Properties
 
@@ -56,7 +56,7 @@ These properties are computed locally, and are only available to the device rece
 - {{domxref("RTCRtpStreamStats.nackCount", "nackCount")}}
   - : The number of times the receiver notified the sender that one or more RTP packets has been lost by sending a Negative ACKnowledgement (NACK, also called "Generic NACK") packet to the sender. This value is only available to the receiver.
 - {{domxref("RTCRtpStreamStats.pliCount", "pliCount")}}
-  - : The number of times the receiving end of the stream sent a Picture Loss Indiciation (PLI) packet to the sender, indicating that it has lost some amount of encoded video data for one or more frames. Only the receiver has this value, and it's only valid for video tracks.
+  - : The number of times the receiving end of the stream sent a Picture Loss Indication (PLI) packet to the sender, indicating that it has lost some amount of encoded video data for one or more frames. Only the receiver has this value, and it's only valid for video tracks.
 - {{domxref("RTCRtpStreamStats.qpSum", "qpSum")}}
   - : The sum of the Quantization Parameter (QP) values associated with every frame received to date on the video track described by this `RTCRtpStreamStats` object. In general, the higher this number is, the more heavily compressed the video track was. Combined with {{domxref("RTCReceivedRtpStreamStats.framesDecoded")}} or {{domxref("RTCSentRtpStreamStats.framesEncoded")}}, you can approximate the average QP over those frames, keeping in mind that codecs often vary the quantizer values even within frames. Also keep in mind that the values of QP can vary from codec to codec, so this value is only potentially useful when compared against the same codec.
 - {{domxref("RTCRtpStreamStats.sliCount", "sliCount")}}

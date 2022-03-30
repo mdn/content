@@ -43,7 +43,7 @@ Clear-Site-Data: "*"
 
 ## Directives
 
-> **Note:** All directives must comply with the [quoted-string grammar](https://tools.ietf.org/html/rfc7230#section-3.2.6). A directive that does not include the double quotes is invalid.
+> **Note:** All directives must comply with the [quoted-string grammar](https://datatracker.ietf.org/doc/html/rfc7230#section-3.2.6). A directive that does not include the double quotes is invalid.
 
 - `"cache"`
   - : Indicates that the server wishes to remove locally cached data (the browser cache, see [HTTP caching](/en-US/docs/Web/HTTP/Caching)) for the origin of the response URL. Depending on the browser, this might also clear out things like pre-rendered pages, script caches, WebGL shader caches, or address bar suggestions.
@@ -57,7 +57,6 @@ Clear-Site-Data: "*"
     - sessionStorage (executes `sessionStorage.clear`),
     - IndexedDB (for each database execute {{domxref("IDBFactory.deleteDatabase")}}),
     - Service worker registrations (for each service worker registration, execute {{domxref("ServiceWorkerRegistration.unregister")}}),
-    - [AppCache,](/en-US/docs/Web/HTML/Using_the_application_cache)
     - WebSQL databases,
     - [FileSystem API data](/en-US/docs/Web/API/File_and_Directory_Entries_API),
     - Plugin data (Flash via [`NPP_ClearSiteData`](https://wiki.mozilla.org/NPAPI:ClearSiteData)).

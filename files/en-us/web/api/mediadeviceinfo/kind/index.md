@@ -12,17 +12,11 @@ browser-compat: api.MediaDeviceInfo.kind
 ---
 {{SeeCompatTable}}{{APIRef("Media Capture")}}
 
-The **`kind`** readonly property of
+The **`kind`** readonly property of
 the {{domxref("MediaDeviceInfo")}} interface returns an enumerated value, that is
 either "videoinput", "audioinput" or "audiooutput".
 
-## Syntax
-
-```js
-var kind = MediaDeviceInfo.kind
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}.
 

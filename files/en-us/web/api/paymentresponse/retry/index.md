@@ -50,22 +50,22 @@ If a retry is needed, the loop calls `retry()`, then loops back to check the
 response when it comes in. The loop exits only when the user either cancels the payment
 request or the request is successful.
 
-See the {{anch("Examples", "example")}} below for a thorough example, but the basic
+See the [example](#examples) below for a thorough example, but the basic
 concept, in outline form, is:
 
-1.  Create a new {{domxref("PaymentRequest")}}
+1. Create a new {{domxref("PaymentRequest")}}
     (`new` {{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}})
-2.  Display the payment request ({{domxref("PaymentRequest.show()")}}
-3.  If `show()` resolves, the returned {{domxref("PaymentResponse")}}
+2. Display the payment request ({{domxref("PaymentRequest.show()")}}
+3. If `show()` resolves, the returned {{domxref("PaymentResponse")}}
     describes the requested payment and the options chosen by the user. Continue by...
 
-    1.  Validate the returned response; if there are any fields whose values are not
+    1. Validate the returned response; if there are any fields whose values are not
         acceptable, call the response's {{domxref("PaymentResponse.complete",
         "complete()")}} method with a value of `"fail"` to indicate failure.
-    2.  If the response's data is valid and acceptable, call
-        `complete("success")` to finalize the payment and proces it.
+    2. If the response's data is valid and acceptable, call
+        `complete("success")` to finalize the payment and process it.
 
-4.  If `show()` is rejected, the payment request failed, usually because
+4. If `show()` is rejected, the payment request failed, usually because
     either there's already one being processed, because the {{Glossary("user agent")}}
     doesn't support any of the specified payment methods, or because of a security issue.
     See the [list of
@@ -109,7 +109,7 @@ async function recursiveValidate(request, response) {
     return;
   }
   if (errors.shippingAddress) {
-    // "shippingaddresschange" fired at request object
+    // "shippingaddresschange" fired at request object
     const promise = fixField(request, "shippingaddresschange", shippingValidator);
     promisesToFixThings.push(promise);
   }

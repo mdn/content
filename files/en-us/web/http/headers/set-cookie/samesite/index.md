@@ -16,6 +16,7 @@ The **`SameSite`** attribute of the {{HTTPHeader("Set-Cookie")}} HTTP response h
 >
 > - The cookie-sending behavior if `SameSite` is not specified is `SameSite=Lax`. Previously the default was that cookies were sent for all requests.
 > - Cookies with `SameSite=None` must now also specify the `Secure` attribute (they require a secure context/HTTPS).
+> - Cookies from the same domain are no longer considered to be from the same site if sent using a different scheme (`http:` or `https:`).
 >
 > This article documents the new standard. See [Browser Compatibility](#browser_compatibility) below for information about specific versions where the behavior changed.
 
@@ -37,13 +38,13 @@ Cookies will only be sent in a first-party context and not be sent along with re
 
 ### `None`
 
-Cookies will be sent in all contexts, i.e. in responses to both first-party and cross-origin requests. If `SameSite=None` is set, the cookie [`Secure`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#secure) attribute must also be set (or the cookie will be blocked).
+Cookies will be sent in all contexts, i.e. in responses to both first-party and cross-origin requests. If `SameSite=None` is set, the cookie [`Secure`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#secure) attribute must also be set (or the cookie will be blocked).
 
 ## Fixing common warnings
 
 ### `SameSite=None` requires `Secure`
 
-Warnings like the ones below might appear in your console:
+Warnings like the ones below might appear in your console:
 
 ```
 Cookie "myCookie" rejected because it has the "SameSite=None" attribute but is missing the "secure" attribute.
@@ -85,7 +86,7 @@ The warning appears because the `SameSite` policy for a cookie was not explicitl
 Set-Cookie: flavor=choco
 ```
 
-You should explicitly communicate the intended `SameSite` policy for your cookie (rather than relying on browsers to apply `SameSite=Lax` automatically). This will also improve the experience across browsers as not all of them default to `Lax` yet.
+You should explicitly communicate the intended `SameSite` policy for your cookie (rather than relying on browsers to apply `SameSite=Lax` automatically). This will also improve the experience across browsers as not all of them default to `Lax` yet.
 
 ```example-good
 Set-Cookie: flavor=choco; SameSite=Lax
@@ -110,7 +111,7 @@ RewriteRule "^admin/(.*)\.html$" "admin/index.php?nav=$1 [NC,L,QSA,CO=RewriteRul
 | Specification                                                                                              | Title                                                         |
 | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("6265", "Set-Cookie", "4.1")}}                                                           | HTTP State Management Mechanism                               |
-| [draft-ietf-httpbis-rfc6265bis-05](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-rfc6265bis-05) | Cookie Prefixes, Same-Site Cookies, and Strict Secure Cookies |
+| [draft-ietf-httpbis-rfc6265bis-09](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-rfc6265bis-09) | Cookie Prefixes, Same-Site Cookies, and Strict Secure Cookies |
 
 ## Browser compatibility
 

@@ -23,7 +23,7 @@ the current service worker does not have an existing subscription.
 ## Syntax
 
 ```js
-PushManager.subscribe(options).then(function(pushSubscription) { ... } );
+PushManager.subscribe(options).then(function(pushSubscription) { /* ... */ } );
 ```
 
 ### Parameters
@@ -95,9 +95,9 @@ clicking a button, for example:
 ```js
 btn.addEventListener('click', function() {
   serviceWorkerRegistration.pushManager.subscribe(options)
-  .then(function(pushSubscription) {
-    // handle subscription
-  });
+  .then(function(pushSubscription) {
+    // handle subscription
+  });
 })
 ```
 

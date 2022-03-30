@@ -18,7 +18,7 @@ The **`error()`** method of the
 with the associated stream to error.
 
 This method is rarely used, since usually it suffices to return a rejected promise from
-one of the underlying sink’s methods. However, it can be useful for suddenly shutting
+one of the underlying sink's methods. However, it can be useful for suddenly shutting
 down a stream in response to an event outside the normal lifecycle of interactions with
 the underlying sink.
 

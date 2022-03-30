@@ -2,80 +2,63 @@
 title: Node.nextSibling
 slug: Web/API/Node/nextSibling
 tags:
-  - API
-  - DOM
-  - Node
   - Property
+  - Reference
+  - Read-only
 browser-compat: api.Node.nextSibling
 ---
 {{APIRef("DOM")}}
 
-The **`Node.nextSibling`** read-only
-property returns the node immediately following the specified one in their
+The read-only **`nextSibling`** property of the {{domxref("Node")}} interface
+returns the node immediately following the specified one in their
 parent's {{domxref("Node.childNodes","childNodes")}}, or returns `null`
 if the specified node is the last child in the parent element.
 
-## Syntax
+> **Note:** Browsers insert {{domxref("Text")}} nodes into a document to represent whitespace in the source markup.
+> Therefore a node obtained, for example, using [`Node.firstChild`](/en-US/docs/Web/API/Node/firstChild)
+> or [`Node.previousSibling`](/en-US/docs/Web/API/Node/previousSibling)
+> may refer to a whitespace text node rather than the actual element the author
+> intended to get.
+>
+> The article [Whitespace in the DOM](/en-US/docs/Web/API/Document_Object_Model/Whitespace)
+> contains more information about this behavior.
+>
+> You can use {{domxref("Element.nextElementSibling")}} to obtain the next element
+> skipping any whitespace nodes, other between-element text, or comments.
+>
+> To navigate the opposite way through the child nodes list use [Node.previousSibling](/en-US/docs/Web/API/Node/previousSibling).
 
-```js
-nextNode = node.nextSibling
-```
+## Value
 
-## Notes
-
-Gecko-based browsers insert text nodes into a document to represent whitespace in
-the source markup. Therefore a node obtained, for example, using [`Node.firstChild`](/en-US/docs/Web/API/Node/firstChild "The Node.firstChild read-only property returns the node's first child in the tree, or null if the node has no children.")
-or [`Node.previousSibling`](/en-US/docs/Web/API/Node/previousSibling "The Node.previousSibling read-only property returns the node immediately preceding the specified one in its parent's childNodes list, or null if the specified node is the first in that list.")
-may refer to a whitespace text node rather than the actual element the author
-intended to get.
-
-See [Whitespace in the
-DOM](/en-US/docs/Web/Guide/DOM/Whitespace_in_the_DOM) and [W3C DOM 3 FAQ:
-Why are some Text nodes empty?](https://www.w3.org/DOM/faq.html#emptytext) for more information.
-
-{{domxref("Element.nextElementSibling")}} may be used to obtain the next element
-skipping any whitespace nodes, other between-element text, or comments.
+A {{domxref("Node")}} representing the next sibling of the current node,
+or `null` if there are none.
 
 ## Example
 
 ```html
 <div id="div-1">Here is div-1</div>
 <div id="div-2">Here is div-2</div>
+<br/>
+<output><em>Not calculated.</em></output>
+```
 
-<script>
-var el = document.getElementById('div-1').nextSibling,
-    i = 1;
+```js
+let el = document.getElementById('div-1').nextSibling,
+i = 1;
 
-console.group('Siblings of div-1:');
+let result = "Siblings of div-1:<br/>";
 
 while (el) {
-  console.log(i, '. ', el.nodeName);
+  result += i + '. ' + el.nodeName+"<br/>";
   el = el.nextSibling;
   i++;
 }
 
-console.groupEnd();
-</script>
-
-/**************************************************
-  The console displays the following:
-
-     Siblings of div-1
-
-      1. #text
-      2. DIV
-      3. #text
-      4. SCRIPT
-
-**************************************************/
+const output = document.getElementsByTagName("output")[0];
+output.innerHTML = result;
 ```
 
-In the above example, `#text` nodes are inserted in the DOM where whitespace
-occurs between tags (i.e. after the closing tag of an element and before the opening
-tag of the next).
-
-The possible inclusion of text nodes must be allowed for when traversing the DOM using
-`nextSibling`. See the resources [in the Notes section](#notes).
+{{ EmbedLiveSample("Example", "100%", 500)}}
 
 ## Specifications
 
@@ -88,3 +71,4 @@ The possible inclusion of text nodes must be allowed for when traversing the DOM
 ## See also
 
 - {{domxref("Element.nextElementSibling")}}
+- {{domxref("Node.previousSibling")}}

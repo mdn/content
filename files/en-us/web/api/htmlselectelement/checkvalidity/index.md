@@ -14,7 +14,7 @@ browser-compat: api.HTMLSelectElement.checkValidity
 
 The **`HTMLSelectElement.checkValidity()`** method checks
 whether the element has any constraints and whether it satisfies them. If the element
-fails its constraints, the browser fires a cancelable {{event("invalid")}} event at the
+fails its constraints, the browser fires a cancelable {{domxref("HTMLSelectElement/invalid_event", "invalid")}} event at the
 element, and then returns `false`.
 
 ## Syntax
@@ -33,4 +33,4 @@ var result = selectElt.checkValidity();
 
 ## See also
 
-- [Form validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Form validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)

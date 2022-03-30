@@ -14,7 +14,7 @@ browser-compat: api.PasswordCredential.name
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}
 
 The **`name`** read-only property of
-the {{domxref("PasswordCredential")}} interface returns a {{domxref("USVSTring")}}
+the {{domxref("PasswordCredential")}} interface returns a {{domxref("USVString")}}
 containing a human-readable public name for display in a credential chooser.
 
 ## Syntax

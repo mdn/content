@@ -16,7 +16,7 @@ browser-compat: javascript.builtins.Intl.DisplayNames.of
 
 The **`Intl.DisplayNames.prototype.of()`** method receives a
 code and returns a string based on the locale and options provided when instantiating
-Intl.DisplayNames.
+`Intl.DisplayNames`.
 
 {{EmbedInteractiveExample("pages/js/intl-displaynames.html")}}
 
@@ -38,9 +38,9 @@ of(code)
     - If the type is "script", code should be an [ISO-15924 four letters script code](http://unicode.org/iso15924/iso15924-codes.html).
     - If the type is "language", code should be a _languageCode_ \["-"
       _scriptCode_] \["-" _regionCode_ ] \*("-" _variant_ )
-      subsequence of the unicode_language_id grammar in [UTS 35's Unicode Language and Locale Identifiers
-      grammar](http://unicode.org/reports/tr35/#Unicode_language_identifier). _languageCode_ is either a two letters ISO 639-1
-      language code or a three letters ISO 639-2 language code.
+      subsequence of the unicode_language_id grammar in
+      [UTS 35's Unicode Language and Locale Identifiers grammar](http://unicode.org/reports/tr35/#Unicode_language_identifier).
+      _languageCode_ is either a two letters ISO 639-1 language code or a three letters ISO 639-2 language code.
     - If the type is "currency", code should be a [3-letter ISO 4217 currency code](https://www.iso.org/iso-4217-currency-codes.html).
 
 ### Return value

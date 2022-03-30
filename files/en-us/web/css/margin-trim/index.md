@@ -15,7 +15,7 @@ browser-compat: css.properties.margin-trim
 ---
 {{CSSRef}}
 
-The `margin-trim` property allows the container to trim the margins of its children where they adjoin the container’s edges.
+The `margin-trim` property allows the container to trim the margins of its children where they adjoin the container's edges.
 
 ## Syntax
 

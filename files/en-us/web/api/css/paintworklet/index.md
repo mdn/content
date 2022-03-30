@@ -14,20 +14,14 @@ tags:
   - paintWorklet
 browser-compat: api.CSS.paintWorklet
 ---
-{{APIRef("CSSOM")}}{{Draft}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("CSSOM")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 **`paintWorklet`** is a static,
 read-only property of the {{DOMxRef("CSS")}} interface that provides access to the
-{{DOMxRef("PaintWorklet")}}, which programmatically generates an image where a CSS
+{{DOMxRef("PaintWorklet")}}, which programmatically generates an image where a CSS
 property expects a file.
 
-## Syntax
-
-```js
-var worklet = CSS.paintWorklet;
-```
-
-### Value
+## Value
 
 The {{DOMxRef('PaintWorklet')}} object.
 

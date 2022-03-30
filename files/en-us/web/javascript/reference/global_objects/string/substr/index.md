@@ -8,9 +8,10 @@ tags:
   - Prototype
   - Reference
   - String
+  - Polyfill
 browser-compat: javascript.builtins.String.substr
 ---
-{{JSRef}}
+{{JSRef}} {{deprecated_header}}
 
 The **`substr()`** method returns a portion
 of the string, starting at the specified index and extending for a given number of
@@ -41,8 +42,8 @@ A new string containing the specified part of the given string.
 `substr()` extracts `length` characters from a
 `str`, counting from the `start` index.
 
-- If `start` is a non-negative number, the index starts counting at
-  the start of the string. Its value is capped at `str.length`.
+- If `start` is a non-negative number, the index starts counting from
+  the start of the string. Its value is capped at `str.length - 1`.
 - If `start` is a negative number, the index starts counting
   from the end of the string. Its value is capped at
   `-str.length`.
@@ -75,7 +76,7 @@ if ('ab'.substr(-1) != 'b') {
     return function(start, length) {
       // call the original method
       return substr.call(this,
-      	// did we get a negative start, calculate how much it is from the beginning of the string
+        // did we get a negative start, calculate how much it is from the beginning of the string
         // adjust the start parameter for negative value
         start < 0 ? this.length + start : start,
         length)
@@ -111,5 +112,6 @@ console.log(aString.substr(20, 2));  // ''
 
 ## See also
 
+- [Polyfill of `String.prototype.substr` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.slice()")}}
 - {{jsxref("String.prototype.substring()")}}

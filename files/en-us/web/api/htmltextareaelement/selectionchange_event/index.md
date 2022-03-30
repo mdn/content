@@ -62,9 +62,9 @@ The example below shows how to get the text selected in an {{HTMLElement("textar
 const myinput = document.getElementById("mytext");
 
 myinput.addEventListener("selectionchange", () => {
-  document.getElementById("start").textContent = mytext.selectionStart;
-  document.getElementById("end").textContent = mytext.selectionEnd;
-  document.getElementById("direction").textContent = mytext.selectionDirection;
+  document.getElementById("start").textContent = myinput.selectionStart;
+  document.getElementById("end").textContent = myinput.selectionEnd;
+  document.getElementById("direction").textContent = myinput.selectionDirection;
 });
 ```
 

@@ -11,19 +11,13 @@ tags:
   - Property
 browser-compat: api.CSSNumericArray.length
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{Draft}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The read-only **`length`** property of the
 {{domxref("CSSNumericArray")}} interface returns the number of
 {{domxref("CSSNumericValue")}} objects in the list.
 
-## Syntax
-
-```js
-var length = CSSNumericArray.length;
-```
-
-### Return value
+## Value
 
 An integer representing the number of {{domxref("CSSNumericValue")}} objects in the
 list.

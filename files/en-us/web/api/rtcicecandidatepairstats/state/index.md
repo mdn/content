@@ -42,7 +42,7 @@ During ICE negotiation, the ICE layer builds up a **check list**, which is
 a list of potential pairings of ICE candidates. Each pair has a state, whose value is
 represented by `RTCStatsIceCandidatePairState`.
 
-![A diagram showing how ICE candidate pairs change state as the check list is analyed](ice-check-list-states.svg)
+![A diagram showing how ICE candidate pairs change state as the check list is analyzed](ice-check-list-states.svg)
 
 When a candidate pair is added to the check list, it begins in the `frozen`
 state. As soon as there are no checks ongoing which block the pair from being analyzed,

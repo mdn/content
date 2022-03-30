@@ -19,13 +19,7 @@ The **`angularVelocity`** read-only property of the {{domxref("GamepadPose")}} i
 
 In other words, the current velocity at which the sensor is rotating around the `x`, `y`, and `z` axes.
 
-## Syntax
-
-```js
-var myGamepadAngVel = gamepadPoseInstance.angularVelocity;
-```
-
-### Value
+## Value
 
 A {{jsxref("Float32Array")}}, or `null` if the gamepad is not able to provide angular velocity information.
 

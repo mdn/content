@@ -11,7 +11,7 @@ tags:
   - abort
 browser-compat: api.WritableStreamDefaultWriter.abort
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`abort()`** method of the
 {{domxref("WritableStreamDefaultWriter")}} interface aborts the stream, signaling that

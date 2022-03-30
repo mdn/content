@@ -15,7 +15,9 @@ The **`toString()`** method of the {{domxref("TrustedScriptURL")}} interface ret
 
 ## Syntax
 
-    var str = TrustedScriptURL.toString();
+```js
+var str = TrustedScriptURL.toString();
+```
 
 ### Return value
 

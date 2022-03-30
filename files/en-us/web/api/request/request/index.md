@@ -4,7 +4,6 @@ slug: Web/API/Request/Request
 tags:
   - API
   - Constructor
-  - Experimental
   - Fetch
   - Reference
   - request
@@ -18,7 +17,8 @@ The **`Request()`** constructor creates a new
 ## Syntax
 
 ```js
-var myRequest = new Request(input[, init]);
+new Request(input)
+new Request(input, init)
 ```
 
 ### Parameters
@@ -44,7 +44,7 @@ var myRequest = new Request(input[, init]);
     request. The possible options are:
 
     - `method`: The request method, e.g., `GET`,
-      `POST`. The default is `GET`.
+      `POST`. The default is `GET`.
     - `headers`: Any headers you want to add to your request, contained
       within a {{domxref("Headers")}} object or an object literal with
       {{jsxref("String")}} values.
@@ -69,6 +69,17 @@ var myRequest = new Request(input[, init]);
     - `integrity`: Contains the [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity)
       value of the request (e.g.,
       `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
+
+    If you construct a new `Request` from an existing `Request`, any options you set in the _init_ object for the new request replace any corresponding options set in the original `Request`. For example:
+
+       ```js
+       const oldRequest = new Request('https://github.com/mdn/content/issues/12959',
+         { headers: { 'From': 'webmaster@example.org'}});
+       oldRequest.headers.get("From"); // "webmaster@example.org"
+       const newRequest = new Request(oldRequest,
+         { headers: { 'From': 'developer@example.org'}});
+       newRequest.headers.get('From') // "developer@example.org"
+       ```
 
 ## Errors
 

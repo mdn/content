@@ -16,13 +16,7 @@ The
 property of the Canvas 2D API specifies the current text baseline used when drawing
 text.
 
-## Syntax
-
-```js
-ctx.textBaseline = "top" || "hanging" || "middle" || "alphabetic" || "ideographic" || "bottom";
-```
-
-### Options
+## Value
 
 Possible values:
 

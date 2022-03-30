@@ -16,35 +16,35 @@ The **`color-rendering`** attribute provides a hint to the SVG user agent about 
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("a")}}
-*   {{SVGElement("animate")}}
-*   {{SVGElement("animateColor")}}
-*   {{SVGElement("circle")}}
-*   {{SVGElement("clipPath")}}
-*   {{SVGElement("defs")}}
-*   {{SVGElement("ellipse")}}
-*   {{SVGElement("foreignObject")}}
-*   {{SVGElement("g")}}
-*   {{SVGElement("glyph")}}
-*   {{SVGElement("image")}}
-*   {{SVGElement("line")}}
-*   {{SVGElement("linearGradient")}}
-*   {{SVGElement("marker")}}
-*   {{SVGElement("mask")}}
-*   {{SVGElement("missing-glyph")}}
-*   {{SVGElement("path")}}
-*   {{SVGElement("pattern")}}
-*   {{SVGElement("polygon")}}
-*   {{SVGElement("polyline")}}
-*   {{SVGElement("radialGradient")}}
-*   {{SVGElement("rect")}}
-*   {{SVGElement("svg")}}
-*   {{SVGElement("switch")}}
-*   {{SVGElement("symbol")}}
-*   {{SVGElement("text")}}
-*   {{SVGElement("textPath")}}
-*   {{SVGElement("tspan")}}
-*   {{SVGElement("use")}}
+- {{SVGElement("a")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("animateColor")}}
+- {{SVGElement("circle")}}
+- {{SVGElement("clipPath")}}
+- {{SVGElement("defs")}}
+- {{SVGElement("ellipse")}}
+- {{SVGElement("foreignObject")}}
+- {{SVGElement("g")}}
+- {{SVGElement("glyph")}}
+- {{SVGElement("image")}}
+- {{SVGElement("line")}}
+- {{SVGElement("linearGradient")}}
+- {{SVGElement("marker")}}
+- {{SVGElement("mask")}}
+- {{SVGElement("missing-glyph")}}
+- {{SVGElement("path")}}
+- {{SVGElement("pattern")}}
+- {{SVGElement("polygon")}}
+- {{SVGElement("polyline")}}
+- {{SVGElement("radialGradient")}}
+- {{SVGElement("rect")}}
+- {{SVGElement("svg")}}
+- {{SVGElement("switch")}}
+- {{SVGElement("symbol")}}
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tspan")}}
+- {{SVGElement("use")}}
 
 ## Example
 
@@ -96,12 +96,12 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `auto`
-    *   : Indicates that the user agent shall make appropriate tradeoffs to balance speed and quality, but quality shall be given more importance than speed.
-*   `optimizeSpeed`
-    *   : Indicates that the user agent shall emphasize rendering speed over quality. For RGB display devices, this option will sometimes cause the user agent to perform color interpolation and compositing in the device RGB color space.
-*   `optimizeQuality`
-    *   : Indicates that the user agent shall emphasize quality over rendering speed.
+- `auto`
+  - : Indicates that the user agent shall make appropriate tradeoffs to balance speed and quality, but quality shall be given more importance than speed.
+- `optimizeSpeed`
+  - : Indicates that the user agent shall emphasize rendering speed over quality. For RGB display devices, this option will sometimes cause the user agent to perform color interpolation and compositing in the device RGB color space.
+- `optimizeQuality`
+  - : Indicates that the user agent shall emphasize quality over rendering speed.
 
 ## Browser compatibility
 

@@ -17,7 +17,7 @@ browser-compat: api.HTMLTableElement.rows
 {{APIRef("HTML DOM")}}
 
 The read-only {{domxref("HTMLTableElement")}}
-property **`rows`** returns a live
+property **`rows`** returns a live
 {{domxref("HTMLCollection")}} of all the rows in the table, including the rows
 contained within any {{HTMLElement("thead")}}, {{HTMLElement("tfoot")}}, and
 {{HTMLElement("tbody")}} elements.
@@ -25,20 +25,14 @@ contained within any {{HTMLElement("thead")}}, {{HTMLElement("tfoot")}}, and
 Although the property itself is read-only, the returned object is live and allows the
 modification of its content.
 
-## Syntax
-
-```js
-HTMLCollectionObject = table.rows;
-```
-
-### Value
+## Value
 
 An {{domxref("HTMLCollection")}} providing a live-updating list of the
 {{domxref("HTMLTableRowElement")}} objects representing all of the {{HTMLElement("tr")}}
 elements contained in the table. This provides quick access to all of the table rows,
 without having to manually search for them.
 
-## Example
+## Examples
 
 ```js
 myrows = mytable.rows;

@@ -3,7 +3,7 @@ title: VRDisplay.exitPresent()
 slug: Web/API/VRDisplay/exitPresent
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Method
   - Reference
   - VR

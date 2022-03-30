@@ -12,7 +12,7 @@ The **`side`** attribute determines the side of a path the text is placed on (re
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("textPath")}}
+- {{SVGElement("textPath")}}
 
 ## Example
 
@@ -61,10 +61,10 @@ text {
   </tbody>
 </table>
 
-*   `left`
-    *   : This value places the text on the left side of the path (relative to the path direction).
-*   `right`
-    *   : This value places the text on the right side of the path (relative to the path direction). This effectively reverses the path direction.
+- `left`
+  - : This value places the text on the left side of the path (relative to the path direction).
+- `right`
+  - : This value places the text on the right side of the path (relative to the path direction). This effectively reverses the path direction.
 
 ## Specifications
 

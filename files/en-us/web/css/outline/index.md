@@ -12,7 +12,7 @@ browser-compat: css.properties.outline
 ---
 {{CSSRef}}
 
-The **`outline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) set all the outline properties in a single declaration.
+The **`outline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets most of the outline properties in a single declaration.
 
 {{EmbedInteractiveExample("pages/css/outline.html")}}
 
@@ -46,14 +46,14 @@ outline: revert;
 outline: unset;
 ```
 
-The `outline` property may be specified using one, two, or three of the values listed below. The order of the values does not matter.
+The `outline` property may be specified using one, two, or three of the values listed below. The order of the values does not matter. As with all shorthand properties, any omitted sub-values will be set to their [initial value](/en-US/docs/Web/CSS/initial_value).
 
 > **Note:** The outline will be invisible for many elements if its style is not defined. This is because the style defaults to `none`. A notable exception is `input` elements, which are given default styling by browsers.
 
 ### Values
 
 - `<'outline-color'>`
-  - : Sets the color of the outline. Defaults to `currentcolor` if absent. See {{cssxref("outline-color")}}.
+  - : Sets the color of the outline. Defaults to `invert` for browsers supporting it, `currentcolor` for the others. See {{cssxref("outline-color")}}.
 - `<'outline-style'>`
   - : Sets the style of the outline. Defaults to `none` if absent. See {{cssxref("outline-style")}}.
 - `<'outline-width'>`
@@ -61,19 +61,18 @@ The `outline` property may be specified using one, two, or three of the values l
 
 ## Description
 
-[Borders](/en-US/docs/Web/CSS/border) and outlines are very similar. However, outlines differ from borders in the following ways:
+Outline is a line outside of the element's [border](/en-US/docs/Web/CSS/border). Unlike other areas of the box, outlines don't take up space, so they don't affect the layout of the document in any way.
 
-- Outlines never take up space, as they are drawn outside of an element's content.
-- According to the spec, outlines don't have to be rectangular, although they usually are.
+There are a few properties that affect an outline's appearance. It is possible to change the style, color, and width using the `outline` property, the distance from the border using the {{cssxref("outline-offset")}} property, and corner angles using the  {{cssxref("border-radius")}} property.
 
-As with all shorthand properties, any omitted sub-values will be set to their [initial value](/en-US/docs/Web/CSS/initial_value).
+An outline is not required to be rectangular: While dealing with multiline text, some browsers will draw an outline for each line box separately, while others will wrap the whole text with a single outline.
 
 ## Accessibility concerns
 
 Assigning `outline` a value of `0` or `none` will remove the browser's default focus style. If an element can be interacted with it must have a visible focus indicator. Provide obvious focus styling if the default focus style is removed.
 
 - [How to Design Useful and Usable Focus Indicators](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
-- WCAG 2.1: [Understanding Success Criterion 2.4.7: Focus Visible](https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html)
+- WCAG 2.1: [Understanding Success Criterion 2.4.7: Focus Visible](https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html)
 
 ## Formal definition
 
@@ -113,7 +112,7 @@ a:focus {
 
 #### Result
 
-{{EmbedLiveSample("Using_outline_to_set_a_focus_style", "100%", 60)}}
+{{EmbedLiveSample("Using_outline_to_set_a_focus_style", "100%", 85)}}
 
 ## Specifications
 

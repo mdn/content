@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.WebAssembly.Table.length
 {{JSRef}}
 
 The **`length`** prototype property of the
-{{jsxref("WebAssembly.Table")}} object returns the length of the table, i.e. the number
+{{jsxref("WebAssembly.Table")}} object returns the length of the table, i.e. the number
 of elements in the table.
 
 ## Examples
@@ -48,5 +48,4 @@ console.log(table.length);   // "3"
 
 - [WebAssembly](/en-US/docs/WebAssembly) overview page
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly
-  JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

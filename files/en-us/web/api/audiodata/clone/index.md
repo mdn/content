@@ -29,8 +29,8 @@ The cloned {{domxref("AudioData")}} object.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `InvalidStateError`
-  - : Thrown if the `AudioData` object has been {{domxref("Transferable","transfered")}}.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the `AudioData` object has been {{Glossary("Transferable Objects","transferred")}}.
 
 ## Examples
 
@@ -47,4 +47,3 @@ let audioData2 = AudioData.clone();
 ## Browser compatibility
 
 {{Compat}}
-

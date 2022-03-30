@@ -13,13 +13,7 @@ browser-compat: api.MediaStreamTrackProcessor.readable
 
 The **`readable`**  property of the {{domxref("MediaStreamTrackProcessor")}} interface returns a {{domxref("ReadableStream")}}.
 
-## Syntax
-
-```js
-let readable = MediaStreamTrackProcessor.readable;
-```
-
-### Value
+## Value
 
 A {{domxref("ReadableStream")}}.
 
@@ -43,5 +37,3 @@ trackProcessor.readable.pipeThrough(transformer).pipeTo(trackGenerator.writable)
 ## Browser compatibility
 
 {{Compat}}
-
-

@@ -15,7 +15,7 @@ tags:
   - WebRTC
   - WebRTC API
   - round-trip
-  - rount trip time
+  - round trip time
   - rtt
   - totalRoundTripTime
 browser-compat: api.RTCIceCandidatePairStats.totalRoundTripTime

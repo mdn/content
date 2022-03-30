@@ -34,18 +34,18 @@ A 204 response is cacheable by default (an {{HTTPHeader("ETag")}} header is incl
 
 {{Compat}}
 
-## Compatibility notes
+### Compatibility notes
 
-- Although this status code is intended to describe a response with no body, servers
-  may erroneously include data following the headers. The protocol allows user agents to
+- Although this status code is intended to describe a response with no body, servers
+  may erroneously include data following the headers. The protocol allows user agents to
   vary in how they process such responses ([discussion regarding this
   specification text can be found here](https://github.com/httpwg/http11bis/issues/26)). This is observable in persistent
-  connections, where the invalid body may include a distinct response to a subsequent
+  connections, where the invalid body may include a distinct response to a subsequent
   request.
 
   Apple Safari rejects any such data. Google Chrome and Microsoft Edge discard up to
-  four invalid bytes preceding a valid response. Firefox tolerates in excess of a
-  kilobyte of invalid data preceding a valid response.
+  four invalid bytes preceding a valid response. Firefox tolerates in excess of a
+  kilobyte of invalid data preceding a valid response.
 
 ## See also
 

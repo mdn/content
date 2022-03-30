@@ -20,19 +20,13 @@ The read-only **`length`** property of the
 {{domxref("DataTransferItemList")}} interface returns the number of items currently in
 the drag item list.
 
-## Syntax
-
-```js
-length = DataTransferItemList.length;
-```
-
-### Value
+## Value
 
 The number of drag data items in the list, or 0 if the list is empty or disabled. The
 drag item list is considered to be disabled if the item list's
 {{domxref("DataTransfer")}} object is not associated with a drag data store.
 
-## Example
+## Examples
 
 This example shows the use of the `length` property.
 

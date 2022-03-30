@@ -25,7 +25,7 @@ None.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NoModicationAllowedError`
+- {{domxref("DOMException")}} `NoModificationAllowedError`
   - : Thrown if the list is read-only.
 
 ## Examples

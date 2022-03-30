@@ -12,7 +12,7 @@ browser-compat: api.HTMLDataListElement
 
 The **`HTMLDataListElement`** interface provides special properties (beyond the {{domxref("HTMLElement")}} object interface it also has available to it by inheritance) to manipulate {{ HTMLElement("datalist") }} elements and their content.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

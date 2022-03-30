@@ -21,7 +21,7 @@ creates a new {{domxref("ImageCapture")}} object.
 ## Syntax
 
 ```js
-const imageCapture = new ImageCapture(videoTrack)
+new ImageCapture(videoTrack)
 ```
 
 ### Parameters
@@ -45,9 +45,9 @@ The following example shows how to use a call to
 ```js
  navigator.mediaDevices.getUserMedia({video: true})
   .then(mediaStream => {
-    document.querySelector('video').srcObject = mediaStream
-    const track = mediaStream.getVideoTracks()[0];
-    imageCapture = new ImageCapture(track);
+    document.querySelector('video').srcObject = mediaStream
+    const track = mediaStream.getVideoTracks()[0];
+    imageCapture = new ImageCapture(track);
   })
   .catch(error => console.log(error));
 ```

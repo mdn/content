@@ -13,13 +13,7 @@ browser-compat: api.LayoutShiftAttribution.currentRect
 
 The **`currentRect`** read-only property of the {{domxref("LayoutShiftAttribution")}} interface returns a {{domxref("DOMRectReadOnly")}} object representing the position of the element before the shift.
 
-## Syntax
-
-```js
-let currentRect = LayoutShiftAttribution.currentRect;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMRectReadOnly")}} object.
 

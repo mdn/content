@@ -3,14 +3,13 @@ title: Selection.removeRange()
 slug: Web/API/Selection/removeRange
 tags:
   - API
-  - Experimental
   - HTML Editing
   - Method
   - Reference
   - Selection
 browser-compat: api.Selection.removeRange
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ ApiRef("DOM") }}
 
 The **`Selection.removeRange()`** method removes a range from a
 selection.
@@ -33,7 +32,7 @@ sel.removeRange(range)
 ## Examples
 
 ```js
-/* Programmaticaly, more than one range can be selected.
+/* Programmatically, more than one range can be selected.
  * This will remove all ranges except the first. */
 s = window.getSelection();
 if(s.rangeCount > 1) {

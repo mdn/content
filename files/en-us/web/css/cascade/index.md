@@ -11,6 +11,7 @@ tags:
   - Style
   - Style sheet
   - Stylesheets
+spec-urls: https://drafts.csswg.org/css-cascade/
 ---
 {{CSSRef}}
 
@@ -26,7 +27,7 @@ Finally, note that {{cssxref("@import")}} and {{cssxref("@charset")}} obey speci
 
 ## Origin of CSS declarations
 
-The CSS cascade algorithm's job is to select CSS declarations in order to determine the correct values for CSS properties. CSS declarations originate from different origins: the **{{anch("User-agent stylesheets")}}**, the **{{anch("Author stylesheets")}}**, and the **{{anch("User stylesheets")}}**.
+The CSS cascade algorithm's job is to select CSS declarations in order to determine the correct values for CSS properties. CSS declarations originate from different origins: the **[User-agent stylesheets](#user-agent_stylesheets)**, the **[Author stylesheets](#author_stylesheets)**, and the **[User stylesheets](#user_stylesheets)**.
 
 Though style sheets come from these different origins, they overlap in scope; to make this work, the cascade algorithm defines how they interact.
 
@@ -48,8 +49,8 @@ The user (or reader) of the web site can choose to override styles in many brows
 
 The cascading algorithm determines how to find the value to apply for each property for each document element.
 
-1.  It first filters all the rules from the different sources to keep only the rules that apply to a given element. That means rules whose selector matches the given element and which are part of an appropriate `media` at-rule.
-2.  Then it sorts these rules according to their importance, that is, whether or not they are followed by `!important`, and by their origin. The cascade is in ascending order, which means that `!important` values from a user-defined style sheet have precedence over normal values originated from a user-agent style sheet:
+1. It first filters all the rules from the different sources to keep only the rules that apply to a given element. That means rules whose selector matches the given element and which are part of an appropriate `media` at-rule.
+2. Then it sorts these rules according to their importance, that is, whether or not they are followed by `!important`, and by their origin. The cascade is in ascending order, which means that `!important` values from a user-defined style sheet have precedence over normal values originated from a user-agent style sheet:
 
     |     | Origin      | Importance   |
     | --- | ----------- | ------------ |
@@ -62,7 +63,7 @@ The cascading algorithm determines how to find the value to apply for each prope
     | 7   | user agent  | `!important` |
     | 8   | transitions |              |
 
-3.  In case of equality, the [specificity](/en-US/docs/Web/CSS/Specificity) of a value is considered to choose one or the other.
+3. In case of equality, the [specificity](/en-US/docs/Web/CSS/Specificity) of a value is considered to choose one or the other.
 
 ## Resetting styles
 
@@ -145,12 +146,7 @@ Note that the declaration defined in the user CSS, though having a greater speci
 
 ## Specifications
 
-| Specification                                                            | Status                           | Comment                                                                                               |
-| ------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS4 Cascade")}}                                     | {{Spec2("CSS4 Cascade")}} | Added the {{CSSxRef("revert")}} keyword, which allows rolling a property back a cascade level. |
-| {{SpecName("CSS3 Cascade")}}                                     | {{Spec2("CSS3 Cascade")}} | Removed the override cascade origin, as it was never used in a W3C standard.                          |
-| {{SpecName("CSS2.1", "cascade.html", "the cascade")}} | {{Spec2("CSS2.1")}}         |                                                                                                       |
-| {{SpecName("CSS1", "#the-cascade", "the cascade")}}     | {{Spec2("CSS1")}}         | Initial definition.                                                                                   |
+{{Specifications}}
 
 ## See also
 

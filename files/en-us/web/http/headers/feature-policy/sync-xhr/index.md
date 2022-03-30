@@ -13,7 +13,7 @@ browser-compat: http.headers.Feature-Policy.sync-xhr
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-The HTTP {{HTTPHeader("Feature-Policy")}} header `sync-xhr` directive controls whether the current document is allowed to make synchronous {{domxref("XMLHttpRequest")}} requests.
+The HTTP {{HTTPHeader("Feature-Policy")}} header `sync-xhr` directive controls whether the current document is allowed to make synchronous {{domxref("XMLHttpRequest")}} requests.
 
 ## Syntax
 

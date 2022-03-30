@@ -22,7 +22,7 @@ Given a {{domxref("WebKitPoint")}} specified in the page's coordinate system, th
 returns a `Point` object specifying the same location in the coordinate
 system of the specified DOM {{domxref("Node")}}.
 
-> **Warning:** Please review the {{anch("Browser compatibility")}} section before using this method,
+> **Warning:** Please review the [Browser compatibility](#browser_compatibility) section before using this method,
 > as it's not widely supported (nor is the {{domxref("WebKitPoint")}} object it uses).
 
 ## Syntax
@@ -59,4 +59,4 @@ current CSS Transforms Module Level 1 Working Draft.
 - {{domxref("Window.webkitConvertPointFromNodeToPage")}}
 - Mozilla implementation bug: {{bug(850808)}}
 - [`webkitConvertPointFromPageToNode`
-  documentation at IE Dev Center](<https://msdn.microsoft.com/en-us/library/ie/dn760735(v=vs.85).aspx>)
+  documentation at IE Dev Center](<https://msdn.microsoft.com/library/ie/dn760735(v=vs.85).aspx>)

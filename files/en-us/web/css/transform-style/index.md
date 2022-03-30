@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Property
   - CSS Transforms
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.transform-style

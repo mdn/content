@@ -14,7 +14,7 @@ browser-compat: api.HTMLDataElement
 
 The **`HTMLDataElement`** interface provides special properties (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("data")}} elements.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

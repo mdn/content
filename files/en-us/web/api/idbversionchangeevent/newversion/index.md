@@ -14,24 +14,18 @@ browser-compat: api.IDBVersionChangeEvent.newVersion
 ---
 {{ APIRef("IndexedDB") }}
 
-The **`newVersion`** read-only property of the
+The **`newVersion`** read-only property of the
 {{domxref("IDBVersionChangeEvent")}} interface returns the new version number of the
 database.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var newVersion = IDBVersionChangeEvent.newVersion
-```
-
-### Value
+## Value
 
 A [64-bit
 integer](</en-US/docs/NSPR_API_Reference/Long_Long_(64-bit)_Integers>).
 
-## Example
+## Examples
 
 In the following code snippet, we make a request to open a database, and include
 handlers for the success and error cases. These events are fired via the custom
@@ -56,15 +50,15 @@ var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database being opened
 DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '<li>Error loading database.</li>';
+  note.innerHTML += '<li>Error loading database.</li>';
 };
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+  note.innerHTML += '<li>Database initialized.</li>';
 
-  // store the result of opening the database in the db variable.
-  // This is used a lot later on, for opening transactions and suchlike.
-  db = DBOpenRequest.result;
+  // store the result of opening the database in the db variable.
+  // This is used a lot later on, for opening transactions and suchlike.
+  db = DBOpenRequest.result;
 };
 ```
 

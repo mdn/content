@@ -12,7 +12,7 @@ browser-compat: api.URLSearchParams.append
 {{ApiRef("URL API")}}
 
 The **`append()`** method of the {{domxref("URLSearchParams")}}
-interface appends a specified key/value pair as a new search parameter.
+interface appends a specified key/value pair as a new search parameter.
 
 As shown in the example below, if the same key is appended multiple times it will
 appear in the parameter string multiple times for each value.
@@ -40,7 +40,7 @@ Void.
 
 ```js
 let url = new URL('https://example.com?foo=1&bar=2');
-let params = new URLSearchParams(url.search.slice(1));
+let params = new URLSearchParams(url.search);
 
 //Add a second foo parameter.
 params.append('foo', 4);
@@ -60,4 +60,4 @@ params.append('foo', 4);
 - Other URL-related interfaces: {{domxref("URL")}},
   {{domxref("HTMLHyperlinkElementUtils")}}.
 - [Google
-  Developers: Easy URL manipulation with URLSearchParams](https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en)
+  Developers: Easy URL manipulation with URLSearchParams](https://developer.chrome.com/blog/urlsearchparams/)

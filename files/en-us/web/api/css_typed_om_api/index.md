@@ -11,7 +11,7 @@ tags:
 
 The CSS Typed Object Model API simplifies CSS property manipulation by exposing CSS values as typed JavaScript objects rather than strings. This not only simplifies CSS manipulation, but also lessens the negative impact on performance as compared to {{domxref('HTMLElement.style')}}.
 
-Generally, CSS values can be read and written in JavaScript as strings, which can be slow and cumbersome. CSS Typed Object Model API provides interfaces to interact with underlying values, by representing them with specialized JS objects that can be manipulated and understood more easily and more reliably than string parsing and concatenation. This is easier for authors (for example, numeric values are reflected with actual JS numbers, and have unit-aware mathematical operations defined for them). It is also generally faster, as values can be directly manipulated and then cheaply translated back into underlying values without having to both build and parse strings of CSS.
+Generally, CSS values can be read and written in JavaScript as strings, which can be slow and cumbersome. CSS Typed Object Model API provides interfaces to interact with underlying values, by representing them with specialized JS objects that can be manipulated and understood more easily and more reliably than string parsing and concatenation. This is easier for authors (for example, numeric values are reflected with actual JS numbers, and have unit-aware mathematical operations defined for them). It is also generally faster, as values can be directly manipulated and then cheaply translated back into underlying values without having to both build and parse strings of CSS.
 
 CSS Typed OM both allows for the performant manipulation of values assigned to CSS properties while enabling maintainable code that is both more understandable and easier to write.
 
@@ -43,7 +43,7 @@ The {{domxref('StylePropertyMap')}} interface of the CSS Typed Object Model API 
 
 The {{domxref('CSSUnparsedValue')}} interface of the CSS Typed Object Model API represents property values that reference custom properties. It consists of a list of string fragments and variable references.
 
-- {{domxref('CSSUnparsedValue.CSSUnparsedValue()')}} constructor
+- {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}} constructor
   - : Creates a new CSSUnparsedValue object which represents property values that reference custom properties.
 - {{domxref('CSSUnparsedValue.entries()')}}
   - : Method returning an array of a given object's own enumerable property \[key, value] pairs in the same order as that provided by a for...in loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).
@@ -56,8 +56,8 @@ The {{domxref('CSSUnparsedValue')}} interface of the CSS Typed Object Model API 
 
 The {{domxref('CSSKeywordValue')}} interface of the CSS Typed Object Model API creates an object to represent CSS keywords and other identifiers.
 
-- {{domxref('CSSKeywordValue.CSSKeywordValue()')}} constructor
-  - : Constructor creates a new {{domxref('CSSKeywordValue.CSSKeywordValue()')}} object which represents CSS keywords and other identifiers.
+- {{domxref("CSSKeywordValue.CSSKeywordValue", "CSSKeywordValue()")}} constructor
+  - : Constructor creates a new {{domxref("CSSKeywordValue.CSSKeywordValue", "CSSKeywordValue()")}} object which represents CSS keywords and other identifiers.
 - {{domxref('CSSKeywordValue.value()')}}
   - : Property of the CSSKeywordValue interface returning or setting the value of the CSSKeywordValue.
 
@@ -73,9 +73,9 @@ CSSStyleValue is the base class through which all CSS values are expressed. Subc
 
   - : A tree of subclasses representing numeric values that are more complicated than a single value and unit, including:
 
-    - {{domxref('CSSMathInvert')}} - represents a CSS {{cssxref("calc()","calc()")}} value used as `calc(1 / <value>)`.
-    - {{domxref('CSSMathMax')}} - represents the CSS {{cssxref("max()","max()")}} function.
-    - {{domxref('CSSMathMin')}} - represents the CSS {{cssxref("min()","min()")}} function.
+    - {{domxref('CSSMathInvert')}} - represents a CSS {{cssxref("calc","calc()")}} value used as `calc(1 / <value>)`.
+    - {{domxref('CSSMathMax')}} - represents the CSS {{cssxref("max","max()")}} function.
+    - {{domxref('CSSMathMin')}} - represents the CSS {{cssxref("min","min()")}} function.
     - {{domxref('CSSMathNegate')}} - negates the value passed into it.
     - {{domxref('CSSMathProduct')}} - represents the result obtained by calling {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}.
     - {{domxref('CSSMathSum')}} - represents the result obtained by calling {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}.

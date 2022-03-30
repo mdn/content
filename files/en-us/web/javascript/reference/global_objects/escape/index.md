@@ -5,13 +5,15 @@ tags:
   - Deprecated
   - JavaScript
   - Method
+  - Polyfill
 browser-compat: javascript.builtins.escape
 ---
 {{jsSidebar("Objects")}}
 
 > **Warning:** Although `escape()` is not
-> strictly deprecated (as in "removed from the Web standards"), it is defined in [Annex
-> B](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers) of the ECMA-262 standard, whose introduction states:
+> strictly deprecated (as in "removed from the Web standards"), it is defined in
+> [Annex B](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers)
+> of the ECMA-262 standard, whose introduction states:
 >
 > > … All of the language features and behaviors specified in this annex have
 > > one or more undesirable characteristics and in the absence of legacy usage would be
@@ -81,6 +83,7 @@ escape('@*_+-./');    // "@*_+-./"
 
 ## See also
 
+- [Polyfill of `escape` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("encodeURI")}}
 - {{jsxref("encodeURIComponent")}}
 - {{jsxref("unescape")}}

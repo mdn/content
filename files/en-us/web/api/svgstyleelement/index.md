@@ -15,7 +15,7 @@ browser-compat: api.SVGStyleElement
 
 The **`SVGStyleElement`** interface corresponds to the SVG {{SVGElement("style")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

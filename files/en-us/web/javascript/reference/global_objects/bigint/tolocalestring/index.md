@@ -33,8 +33,8 @@ should be used. In implementations that ignore the `locales` and
 `options` arguments, the locale used and the form of the string returned are
 entirely implementation-dependent.
 
-See the [`Intl.NumberFormat()`
-constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) for details on these parameters and how to use them.
+See the [`Intl.NumberFormat()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat)
+for details on these parameters and how to use them.
 
 ### Return value
 
@@ -102,7 +102,7 @@ var bigint = 123456789123456789n;
 
 // request a currency format
 console.log(bigint.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
-// → 123.456.789.123.456.789,00 €
+// → 123.456.789.123.456.789,00 €
 
 // the Japanese yen doesn't use a minor unit
 console.log(bigint.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' }))

@@ -13,16 +13,27 @@ browser-compat: api.Element.removeAttributeNode
 {{ APIRef("DOM") }}
 
 The **`removeAttributeNode()`** method of the
-{{domxref("Element")}} object removes the specified attribute from the current element.
+{{domxref("Element")}} interface removes the specified attribute from the element.
 
 ## Syntax
 
 ```js
-removedAttr = element.removeAttributeNode(attributeNode)
+removeAttributeNode(attributeNode)
 ```
 
-- _attributeNode_ is the `Attr` node that needs to be removed.
-- _removedAttr_ is the removed `Attr` node.
+### Parameters
+
+- `attributeNode`
+  - : The attribute node to remove from the element.
+
+### Return value
+
+The attribute node that was removed.
+
+### Exceptions
+
+- `NotFoundError` {{DOMxRef("DOMException")}}
+  - : Thrown when the element's attribute list does not contain the attribute node.
 
 ## Example
 

@@ -17,12 +17,12 @@ The **`:defined`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS
 ```css
 /* Selects any defined element */
 :defined {
-  font-style: italic;
+  font-style: italic;
 }
 
 /* Selects any instance of a specific custom element */
 simple-custom:defined {
-  display: block;
+  display: block;
 }
 ```
 
@@ -64,7 +64,7 @@ Then insert a copy of this element into the document, along with a standard `<p>
 In the CSS we first include the following rules:
 
 ```css
-// Give the two elements distinctive backgrounds
+/* Give the two elements distinctive backgrounds */
 p {
   background: yellow;
 }
@@ -73,7 +73,7 @@ simple-custom {
   background: cyan;
 }
 
-// Both the custom and the built-in element are given italic text
+/* Both the custom and the built-in element are given italic text */
 :defined {
   font-style: italic;
 }

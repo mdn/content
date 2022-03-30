@@ -15,13 +15,7 @@ The **`lineNumber`** read-only property of the {{domxref("DeprecationReportBody"
 
 > **Note:** This property is most useful alongside {{domxref("DeprecationReportBody.sourceFile")}} as it enables the location of the line in that file where the error occurred.
 
-## Syntax
-
-```js
-let lineNumber = DeprecationReportBody.lineNumber;
-```
-
-### Value
+## Value
 
 An integer, or `null` if the line is not known.
 

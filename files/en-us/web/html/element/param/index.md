@@ -54,7 +54,7 @@ The **`<param>`** [HTML](/en-US/docs/Web/HTML) element defines parameters for an
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
-      <td>No <code>role</code> permitted</td>
+      <td>No <code>role</code> permitted</td>
     </tr>
     <tr>
       <th scope="row">DOM interface</th>

@@ -40,7 +40,7 @@ The value of `displaySurface` is a string that comes from the
 
 - `application`
   - : The stream's video track contains all of the windows belonging to the application
-    chosen by the user. The windows are aggragated into a single video track, with any
+    chosen by the user. The windows are aggregated into a single video track, with any
     empty space filled with a backdrop; that backdrop is selected by the {{Glossary("user
     agent")}}.
 - `browser`

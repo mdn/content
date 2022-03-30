@@ -3,7 +3,6 @@ title: SpeechSynthesisEvent.utterance
 slug: Web/API/SpeechSynthesisEvent/utterance
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechSynthesisEvent
@@ -13,19 +12,11 @@ tags:
   - utterance
 browser-compat: api.SpeechSynthesisEvent.utterance
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
-The **`utterance`** read-only property of the
-{{domxref("SpeechSynthesisUtterance")}} interface returns the
-{{domxref("SpeechSynthesisUtterance")}} instance that the event was triggered on.
+The **`utterance`** read-only property of the {{domxref("SpeechSynthesisUtterance")}} interface returns the {{domxref("SpeechSynthesisUtterance")}} instance that the event was triggered on.
 
-## Syntax
-
-```js
-event.utterance;
-```
-
-### Value
+## Value
 
 A {{domxref("SpeechSynthesisUtterance")}} object.
 
@@ -35,7 +26,7 @@ A {{domxref("SpeechSynthesisUtterance")}} object.
 utterThis.onpause = function(event) {
   var char = event.utterance.text.charAt(event.charIndex);
   console.log('Speech paused at character ' + event.charIndex + ' of "' +
-  event.utterance.text + '", which is "' + char + '".');
+  event.utterance.text + '", which is "' + char + '".');
 }
 ```
 

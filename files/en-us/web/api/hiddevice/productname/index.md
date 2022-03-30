@@ -13,19 +13,13 @@ browser-compat: api.HIDDevice.productName
 
 The **`productName`** read-only property of the {{domxref("HIDDevice")}} interface returns the product name of the connected HID device.
 
-## Syntax
-
-```js
-let productName = HIDDevice.productName;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString","string")}}.
 
 ## Examples
 
-The following example rerieves devices with {{domxref("HID.getDevices()")}} and logs the value of `productName` to the console.
+The following example retrieves devices with {{domxref("HID.getDevices()")}} and logs the value of `productName` to the console.
 
 ```js
 document.addEventListener('DOMContentLoaded', async () => {

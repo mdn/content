@@ -3,7 +3,6 @@ title: SpeechRecognition.continuous
 slug: Web/API/SpeechRecognition/continuous
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechRecognition
@@ -13,7 +12,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognition.continuous
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`continuous`** property of the
 {{domxref("SpeechRecognition")}} interface controls whether continuous results are
@@ -21,14 +20,7 @@ returned for each recognition, or only a single result.
 
 It defaults to single results (`false`.)
 
-## Syntax
-
-```js
-var myContinuous = mySpeechRecognition.continuous;
-mySpeechRecognition.continuous = true;
-```
-
-### Value
+## Value
 
 A boolean value representing the current `SpeechRecognition`'s
 continuous status. `true` means continuous, and `false` means not

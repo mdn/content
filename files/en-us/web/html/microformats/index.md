@@ -12,12 +12,14 @@ tags:
   - Search
 ---
 
-[_Microformats_](https://microformats.org/) (sometimes abbreviated **μF**) are standards used to embed semantics & structured data in HTML, and provide an API to be used by search engines, aggregators, and other tools. These minimal patterns of HTML are used for marking up entities that range from fundamental to domain-specific information, such as people, organizations, events, and locations. Microformats use supporting vocabularies to describe objects and name-value pairs to assign values to their properties. The properties are carried in class attributes that can be added to any HTML element, while the data values re-use HTML element content and semantic attributes. Microformats2 is an update to microformats that provides a simpler way of annotating HTML structured syntax & vocabularies than previous approaches of using RDFa and microdata which require learning new attributes.
-
-Microformats are supported by all major search engines. Search engines benefit greatly from direct access to this structured data because it allows them to understand the information on web pages and provide more relevant results to users. In addition to being machine-readable, their format is designed to be easily read by humans.
+[_Microformats_](https://microformats.org/)are standards used to embed semantics and structured data in HTML, and provide an API to be used by social web applications, search engines, aggregators, and other tools. These minimal patterns of HTML are used for marking up entities that range from fundamental to domain-specific information, such as people, organizations, events, and locations.
 
 - To create a microformats object, h-\* class names are used in the class attribute.
 - To add a property to an object, the p-\*, u-\*, dt-\*, e-\* class names are used on one of the object's descendants.
+
+Microformats use supporting vocabularies to describe objects and name-value pairs to assign values to their properties. The properties are carried in class attributes that can be added to any HTML element, while the data values re-use HTML element content and semantic attributes.
+
+Microformats2 (sometimes referred to as mf2) is an update to microformats that provides a simpler way of annotating HTML structured syntax and vocabularies than previous approaches of using RDFa and microdata. These previous approaches require learning new attributes.
 
 There are [open source parsing libraries for most languages](https://microformats.org/wiki/microformats2#Parsers) for microformats2.
 
@@ -31,9 +33,19 @@ An author of a webpage can add microformats to their HTML. For example if they w
 <a class="h-card" href="https://alice.example.com">Alice Blogger</a>
 ```
 
-When a parser encounters this data, it will know that this page contains a "card" which describes a person or organization named `Alice Blogger` with a URL of `https://alice.example.com/`. The parser makes this data available via APIs that can be used for different applications.
+When a parser encounters this data, it will know that this page contains a "card" which describes a person or organization named `Alice Blogger` with a URL of `https://alice.example.com/`. The parser makes this data available via APIs that can be used for different applications. For example, an application could scan a page for a h-card to use as profile information for someone who has signed up to a service.
 
 As in this example, some markup patterns require only a single microformat root class name, which parsers use to find a few generic properties such as `name`, `url`, `photo`.
+
+## Microformats Use Cases
+
+Microformats have numerous use cases. First, the [Webmention standard](https://www.w3.org/TR/webmention/) uses microformats to provide a way in which messages and comments can be sent from one site to another. The Webmention specification defines specific attributes that sites may publish and consume to create a rich, interoperable way of publishing messages and comments. Microformats can also be used with Webmentions to enable sending social reactions such as likes, reposts, and bookmarks from one site to another.
+
+Microformats also enable easy syndication across sites. An aggregator could parse a page with published microformats to look for information such as a post title, a post body, and the author of a post. This aggregator could then use the semantic information gathered to render a result on their site. For instance, news aggregators and community posting boards could facilitate submissions and use microformats to exact relevant content from a page. Further, a website could use microformats to send crafted requests to third-parties to publish content, such as social networks.
+
+All major search engines support reading and interpreting microformats. Search engines benefit greatly from direct access to this structured data because it allows them to understand the information on web pages. With this information, search engines can provide more relevant results to users. Some search engines may render special snippets such as star ratings on a search result page based on the data provided in microformats.
+
+In addition to being machine-readable, microformats are designed to be easily read by humans. This approach makes it easy for people to understand and maintain microformats data.
 
 ## Microformats Prefixes
 
@@ -129,11 +141,13 @@ Parsed JSON:
 }
 ```
 
+In this example, a h-card is specified for both a person and the organization they represent. The person's affiliation with the linked organization is specified using the p-org property.
+
 Note: the nested h-card has implied 'name' and 'url' properties, just like any other root-class-name-only h-card on an `<a href>` would.
 
 ### h-entry
 
-The [h-entry](https://microformats.org/wiki/h-entry) microformat represents episodic or datestamped content on the web. h-entry is often used with content intended to be syndicated, e.g. blog posts.
+The [h-entry](https://microformats.org/wiki/h-entry) microformat represents episodic or datestamped content on the web. h-entry is often used with content intended to be syndicated, e.g. blog posts and short notes.
 
 Example h-entry as a blog post:
 
@@ -214,7 +228,7 @@ Example h-entry as a blog post:
 
 ### h-feed
 
-The [h-feed](https://microformats.org/wiki/h-feed) is a stream or feed of [h-entry](https://microformats.org/wiki/h-entry "h-entry") posts, like complete posts on a home page or archive pages, or summaries or other brief lists of posts
+The [h-feed](https://microformats.org/wiki/h-feed) is a stream or feed of [h-entry](https://microformats.org/wiki/h-entry "h-entry") posts, like complete posts on a home page or archive pages, or summaries or other brief lists of posts.
 
 #### Example h-feed
 
@@ -256,7 +270,7 @@ The [h-feed](https://microformats.org/wiki/h-feed) is a stream or feed of [h-ent
 
 ### h-event
 
-The `h-event` is for events on the web. h-event is often used with both event listings and individual event pages
+The `h-event` is for events on the web. h-event is often used with both event listings and individual event pages.
 
 ```html
 <div class="h-event">
@@ -357,9 +371,31 @@ The `h-event` is for events on the web. h-event is often used with both event li
   ],
 ```
 
+## Microformats rel property examples
+
+There are some microformats that are applied to a page by using a special `rel=` property. These microformats describe a relation between a current document and a linked document. For a full list of these, see the [rel property](https://microformats.org/wiki/rel-values) on the microformats wiki.
+
+### rel=author
+
+This attribute states that the linked document represents the author of the current page.
+
+```<a rel="author" href="https://jamesg.blog">James Gallagher</a>```
+  
+### rel=license
+
+This attribute states that the linked document contains the license under which the current page is published.
+
+```<a rel="license" href="https://mit-license.org/">MIT License</a>```
+  
+### rel=nofollow
+
+This attribute states that the linked document should not be given any weight by search engine ranking algorithms that may derive from the current page. This is useful to prevent link graph algorithms from weighing a page higher than it otherwise would after seeing a link to a document.
+
+```<a rel="nofollow" href="https://jamesg.blog">James Gallagher</a>```
+
 ## Browser compatibility
 
-Supported in all browsers’s support for the class attribute and its DOM API.
+Supported in all browsers's support for the class attribute and its DOM API.
 
 ## See also
 
@@ -367,4 +403,4 @@ Supported in all browsers’s support for the class attribute and its DOM API.
 - {{Interwiki("wikipedia", "Microformat")}} on Wikipedia
 - [Microformats official website](https://microformats.org/)
 - [Search engines support](https://microformats.org/wiki/search_engines) on Microformats official website
-- [Microformats on IndieWebCamp](https://indiewebcamp.com/microformats)
+- [Microformats on IndieWebCamp](https://indieweb.org/microformats)

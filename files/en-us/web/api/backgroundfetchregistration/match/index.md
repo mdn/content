@@ -9,13 +9,15 @@ tags:
   - BackgroundFetchRegistration
 browser-compat: api.BackgroundFetchRegistration.match
 ---
-{{DefaultAPISidebar("Background Fetch API")}}
+{{APIRef("Background Fetch API")}}
 
 The **`match()`** method of the {{domxref("BackgroundFetchRegistration")}} interface returns the first matching {{domxref("BackgroundFetchRecord")}}.
 
 ## Syntax
 
-    let record = BackgroundFetchRegistration.match(request, options);
+```js
+let record = BackgroundFetchRegistration.match(request, options);
+```
 
 ### Parameters
 
@@ -53,8 +55,8 @@ the request or {{jsxref("undefined")}} if no match is found.
 
 ### Exceptions
 
-- `InvalidStateError`
-  - : A {{domxref("DOMException")}} indicating that you called `match()` when there are no fetches in progress. This state will be reflected by {{domxref("BackgroundFetchRegistration.recordsAvailable")}} being set to `false`
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Returned if you call `match()` when there are no fetches in progress. This state will be reflected by {{domxref("BackgroundFetchRegistration.recordsAvailable")}} being set to `false`.
 
 ## Examples
 

@@ -33,9 +33,11 @@ failure occurred.
 When a site calls this method, the behavior is the same as when Windows Internet
 Explorer downloads a file with the following in the header:
 
-    Content-Length: <blob.size>
-    Content-Type: <blob.type>
-    Content-Disposition: attachment;filename=<defaultName>
+```
+Content-Length: <blob.size>
+Content-Type: <blob.type>
+Content-Disposition: attachment;filename=<defaultName>
+```
 
 ## Specifications
 

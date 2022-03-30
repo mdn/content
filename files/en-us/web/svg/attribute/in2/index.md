@@ -14,9 +14,9 @@ The **`in2`** attribute identifies the second input for the given filter primiti
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feBlend")}}
-*   {{SVGElement("feComposite")}}
-*   {{SVGElement("feDisplacementMap")}}
+- {{SVGElement("feBlend")}}
+- {{SVGElement("feComposite")}}
+- {{SVGElement("feDisplacementMap")}}
 
 ## feBlend
 

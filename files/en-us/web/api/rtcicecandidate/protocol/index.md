@@ -24,13 +24,7 @@ You can't specify the value of `protocol` directly in the options object, but it
 
 `protocol` is `null` by default if not specified properly in the SDP, but this is an error condition and will result in a thrown exception when you call {{domxref("RTCPeerConnection.addIceCandidate()")}}.
 
-## Syntax
-
-```js
-var protocol = RTCIceCandidate.protocol;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} that indicates what network protocol the candidate uses:
 
@@ -46,7 +40,9 @@ A {{domxref("DOMString")}} that indicates what network protocol the candidate us
 
 Here's an example candidate a-line from an ICE transaction:
 
-    a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```
+a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```
 
 The third field, `"udp"`, is the protocol type, indicating that the
 candidate would use the UDP transport protocol.

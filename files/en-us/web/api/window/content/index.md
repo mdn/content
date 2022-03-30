@@ -14,13 +14,17 @@ In unprivileged content (webpages), `content` is normally equivalent to [top](/e
 
 ### Syntax
 
-    var windowObject = window.content;
+```js
+var windowObject = window.content;
+```
 
 ### Example
 
 Executing the following code in a chrome XUL window with a `<browser type="content-primary"/>` element in it draws a red border around the first div on the page currently displayed in the browser:
 
-    content.document.getElementsByTagName("div")[0].style.border = "solid red 1px";
+```js
+content.document.getElementsByTagName("div")[0].style.border = "solid red 1px";
+```
 
 ### Specifications
 

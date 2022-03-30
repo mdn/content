@@ -25,13 +25,7 @@ The `address` is `null` by default if not otherwise specified.
 The `address` field's value is set from the `candidateInfo` options object passed to the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor.
 You can't specify the value of `address` directly in the options object, but its value is automatically extracted from the object's `candidate` a-line, if it's formatted properly.
 
-## Syntax
-
-```js
-var address = RTCIceCandidate.address;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} providing the IP address from which the candidate comes.
 
@@ -56,8 +50,7 @@ address to the user. This can occur without the remote peer's consent.
 Applications being built with user privacy and security in mind can choose to limit the
 permitted candidates to relay candidates only. Doing so prevents the remote user's
 address from being exposed, but reduces the pool of available candidates to choose from.
-To do this, configure the ICE agent's ICE transport policy using
-{{domxref("RTCConfiguration")}}, like this:
+To do this, configure the ICE agent's ICE transport policy with an object confirming to the `configuration` property described in {{domxref("RTCPeerConnection.setConfiguration")}}, like this:
 
 ```js
 var rtcConfig = {
@@ -72,7 +65,7 @@ var rtcConfig = {
 }
 ```
 
-By setting {{domxref("RTCConfiguration.iceTransportPolicy")}} to `"relay"`,
+By setting `iceTransportPolicy` to `"relay"`,
 any host candidates (candidates where the IP address is the peer's own IP address) are
 left out of the pool of candidates, as are any other candidates which aren't relay candidates.
 
@@ -80,7 +73,9 @@ left out of the pool of candidates, as are any other candidates which aren't rel
 
 Consider this {{Glossary("SDP")}} attribute line (a-line) which describes an ICE candidate:
 
-    a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```
+a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```
 
 The fifth field, `"192.168.0.56"` is the IP address in this candidate's a-line string.
 

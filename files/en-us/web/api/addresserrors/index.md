@@ -22,7 +22,7 @@ The **`AddressErrors`** dictionary is used by the [Payment Request API](/en-US/d
 
 `AddressErrors` is the type of the object returned by `shippingAddressErrors` in the object passed into {{domxref("PaymentRequestUpdateEvent.updateWith()")}} by the {{event("shippingaddresschange")}} event handler if a change to the address resulted in a validation error occurring.
 
-See the {{anch("Examples", "examples below")}} to see how this works.
+See the [examples below](#examples) to see how this works.
 
 ## Properties
 
@@ -90,7 +90,7 @@ function handleAddressChange(ev) {
 }
 ```
 
-See {{anch("Handling address changes")}} for a description of how this code works.
+See [Handling address changes](#handling_address_changes) for a description of how this code works.
 
 ### Complete example
 
@@ -199,7 +199,7 @@ The `shippingaddresschange` event doesn't receive the {{domxref("PaymentRequest"
 
 That's done by removing all shipping options currently set on the request, then set up an object named `shippingAddressErrors` which contains a `country` property which is an error message describing why the stated country isn't being permitted as a value.
 
-Then an object is created with its `error` set to a generic message about address errors and with the reset of the object's values taken from `shippingAddressErrors`, and, using "`...defaultPaymentDetails`" as the final entry in the object, the remeainder of the properties' values are taken from `defaultPaymentDetails`.
+Then an object is created with its `error` set to a generic message about address errors and with the reset of the object's values taken from `shippingAddressErrors`, and, using "`...defaultPaymentDetails`" as the final entry in the object, the remainder of the properties' values are taken from `defaultPaymentDetails`.
 
 The final step is to call the event's {{domxref("PaymentRequestUpdateEvent.updateWith", "updateWith()")}} method, passing along the `updateDetails` object. This lets the Payment Request API know to present the specified error or errors but to allow the user to keep trying to edit the address.
 
@@ -213,7 +213,7 @@ window.addEventListener("load", function(ev) {
 }, false);
 ```
 
-See {{domxref("EventTarget.addEventListener", "addEventListener()")}}  for information about event handlers and how they work.
+See {{domxref("EventTarget.addEventListener", "addEventListener()")}}  for information about event handlers and how they work.
 
 #### HTML
 

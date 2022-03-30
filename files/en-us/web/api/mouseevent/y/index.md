@@ -4,12 +4,11 @@ slug: Web/API/MouseEvent/y
 tags:
   - API
   - DOM
-  - Experimental
   - Property
   - Reference
 browser-compat: api.MouseEvent.y
 ---
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}
 
 The **`MouseEvent.y`** property is an alias for the {{domxref("MouseEvent.clientY")}} property.
 

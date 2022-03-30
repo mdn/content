@@ -4,24 +4,17 @@ slug: Web/API/Animation/replaceState
 tags:
   - API
   - Animation
-  - Experimental
   - Property
   - Reference
   - replaceState
   - web animations api
 browser-compat: api.Animation.replaceState
 ---
-{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
+{{ APIRef("Web Animations") }}
 
 The read-only **`Animation.replaceState`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns the [replace state](https://drafts.csswg.org/web-animations-1/#animation-replace-state) of the animation. This will be `active` if the animation has been removed, or `persisted` if {{domxref("Animation.persist()")}} has been invoked on it.
 
-## Syntax
-
-```js
-let myReplaceState = Animation.replaceState;
-```
-
-### Value
+## Value
 
 A string that represents the replace state of the animation. The value can be one of:
 
@@ -46,9 +39,7 @@ document.body.addEventListener('mousemove', evt => {
 
   //anim.persist()
 
-  anim.onremove = function() {
-    console.log('Animation removed');
-  }
+  anim.onremove = event => {console.log('Animation removed');}
 
   console.log(anim.replaceState);
 });

@@ -29,8 +29,8 @@ The cloned {{domxref("VideoData")}} object.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `InvalidStateError`
-  - : Thrown if the `VideoFrame` object has been {{domxref("Transferable","transfered", "", "true")}}.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the `VideoFrame` object has been {{Glossary("Transferable Objects","transferred")}}.
 
 ## Examples
 
@@ -47,4 +47,3 @@ let videoFrame2 = VideoFrame.clone();
 ## Browser compatibility
 
 {{Compat}}
-

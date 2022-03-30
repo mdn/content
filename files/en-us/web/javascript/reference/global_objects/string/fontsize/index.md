@@ -53,7 +53,7 @@ var worldString = 'Hello, world';
 
 console.log(worldString.small());     // <small>Hello, world</small>
 console.log(worldString.big());       // <big>Hello, world</big>
-console.log(worldString.fontsize(7)); // <font size="7">Hello, world</fontsize>
+console.log(worldString.fontsize(7)); // <font size="7">Hello, world</font>
 ```
 
 With the {{domxref("HTMLElement/style", "element.style")}} object you can get
@@ -74,6 +74,6 @@ document.getElementById('yourElemId').style.fontSize = '0.7em';
 
 ## See also
 
-- A polyfill of `String.prototype.fontsize` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.fontsize` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.big()")}}
 - {{jsxref("String.prototype.small()")}}

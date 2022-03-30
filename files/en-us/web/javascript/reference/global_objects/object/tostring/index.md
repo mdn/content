@@ -28,68 +28,45 @@ A string representing the object.
 
 ## Description
 
-Every object has a `toString()` method that is automatically called when the
-object is to be represented as a text value or when an object is referred to in a manner
-in which a string is expected. By default, the `toString()` method is
-inherited by every object descended from `Object`. If this method is not
-overridden in a custom object, `toString()` returns
-"`[object type]`", where `type` is the
-object type. The following code illustrates this:
+An object's `toString()` method is most commonly invoked when that object undergoes...
+
+- explicit {{Glossary("type conversion")}} to a string (for example, `{{jsxref("String/String", "String")}}(myObject)`)
+- implicit {{Glossary("type coercion")}} into a string (for example, `myObject + "hello world"`)
+
+> **Note:** This assumes the object does not have a custom implementation of {{jsxref("Symbol.toPrimitive")}}. If it does, that method will take priority and be called instead of `toString()`.
+
+While not as common, the method can be invoked directly (for example, `myObject.toString()`).
+
+By default `toString()` returns `"[object Type]"`, where `Type` is the object type.
 
 ```js
-const o = new Object();
-o.toString(); // returns [object Object]
+const o = new Object().toString() // o is "[object Object]";
 ```
+
+This method is inherited by every object descended from `Object`, but can be overridden by either the author or built-in descendant objects (for example, `{{jsxref("Number.prototype.toString()")}}`).
 
 > **Note:** Starting in JavaScript 1.8.5, `toString()` called
 > on {{jsxref("null")}} returns `[object Null]`, and
 > {{jsxref("undefined")}} returns `[object Undefined]`, as defined
 > in the 5th Edition of ECMAScript and subsequent Errata.
 >
-> See [Using `toString()` to
-> detect object class](#using_tostring_to_detect_object_class).
+> See [Using `toString()` to detect object class](#using_tostring_to_detect_object_class).
 
 ## Parameters
 
-For Numbers and BigInts `toString()` takes an optional parameter
-`radix` the value of radix must be minimum 2 and maximum 36.
-
-By using `radix` you can also convert base 10 numbers (like
-1,2,3,4,5,.........) to another base numbers, in example below we are converting base 10
-number to a base 2 (binary) number.
-
-```js
-let baseTenInt = 10;
-console.log(baseTenInt.toString(2));
-// Expected output is "1010"
-```
-
-and same for big integers
-
-```js
-let bigNum = BigInt(20);
-console.log(bigNum.toString(2));
-// Expected output is "10100"
-```
-
-Some common radix are
-
-- 2 for [binary
-  numbers](https://en.wikipedia.org/wiki/Binary_number),
-- 8 for [octal
-  numbers](https://en.wikipedia.org/wiki/Octal),
-- 10 for [decimal
-  numbers](https://en.wikipedia.org/wiki/Decimal),
-- 16 for [hexadecimal numbers](https://en.wikipedia.org/wiki/Hexadecimal).
+By default `toString()` takes no parameters. However, objects that inherit from `Object` may override it with their own implementation that do take parameters. For example, the `toString()` methods implemented by {{jsxref("Number")}} and {{jsxref("BigInt")}} take an optional `radix` parameter.
 
 ## Examples
 
 ### Overriding the default toString method
 
 You can create a function to be called in place of the default `toString()`
-method. The `toString()` method takes no arguments and should return a
-string. The `toString()` method you create can be any value you want, but it
-will be most useful if it carries information about the object.
+method. The `toString()` function you create must return a primitive. If it
+returns an object and the method is called implicitly (i.e. during type
+conversion or coercion), then its result will be ignored and the value of a
+related method, `{{jsxref("Object/valueOf", "valueOf()")}}`, will be used
+instead, or a `TypeError` will be thrown if none of these methods return a
+primitive.
 
 The following code defines the `Dog` object type and creates
 `theDog`, an object of type `Dog`:
@@ -102,7 +79,7 @@ function Dog(name, breed, color, sex) {
   this.sex = sex;
 }
 
-theDog = new Dog('Gabby', 'Lab', 'chocolate', 'female');
+const theDog = new Dog('Gabby', 'Lab', 'chocolate', 'female');
 ```
 
 If you call the `toString()` method on this custom object, it returns the
@@ -119,8 +96,7 @@ object, in the form "`property = value;`".
 
 ```js
 Dog.prototype.toString = function dogToString() {
-  const ret = 'Dog ' + this.name + ' is a ' + this.sex + ' ' + this.color + ' ' + this.breed;
-  return ret;
+  return 'Dog ' + this.name + ' is a ' + this.sex + ' ' + this.color + ' ' + this.breed;
 }
 ```
 
@@ -145,7 +121,7 @@ returns the following string:
 `toString()` can be used with every object and (by default) allows you to
 get its class.
 
-To use the `Object.prototype.toString()` with every object, you need to call
+To use the base `Object.prototype.toString()` with an object that has had it overridden, you need to call
 {{jsxref("Function.prototype.call()")}} or {{jsxref("Function.prototype.apply()")}} on
 it, passing the object you want to inspect as the first parameter (called
 `thisArg`).
@@ -187,7 +163,7 @@ Object.prototype.toString.call(new Date()); // [object prototype polluted]
 
 ## See also
 
-- A polyfill of `Object.prototype.toString` with `Symbol.toStringTag` support is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Polyfill of `Object.prototype.toString` with `Symbol.toStringTag` support in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.prototype.toSource()")}}
 - {{jsxref("Object.prototype.valueOf()")}}
 - {{jsxref("Number.prototype.toString()")}}

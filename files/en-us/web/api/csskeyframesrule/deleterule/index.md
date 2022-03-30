@@ -16,7 +16,9 @@ The **`deleteRule()`** method of the {{domxref("CSSKeyframeRule")}} interface de
 
 ## Syntax
 
-    CSSKeyframesRule.deleteRule(select);
+```js
+CSSKeyframesRule.deleteRule(select);
+```
 
 ### Parameters
 

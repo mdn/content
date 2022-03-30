@@ -12,7 +12,7 @@ browser-compat: css.properties.box-flex
 ---
 {{CSSRef}}{{Non-standard_Header}}
 
-> **Warning:** This is a property for controlling parts of the XUL box model. It does not match either the old CSS Flexible Box Layout Module drafts for '`box-flex`' (which were based on this property) or the behavior of '`-webkit-box-flex`' (which is based on those drafts). See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) for information about the current standard.
+> **Warning:** This is a property for controlling parts of the XUL box model. It does not match either the old CSS Flexible Box Layout Module drafts for '`box-flex`' (which were based on this property) or the behavior of '`-webkit-box-flex`' (which is based on those drafts). See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for information about the current standard.
 
 The **`-moz-box-flex`** and **`-webkit-box-flex`** [CSS](/en-US/docs/Web/CSS) properties specify how a `-moz-box` or `-webkit-box` grows to fill the box that contains it, in the direction of the containing box's layout.
 

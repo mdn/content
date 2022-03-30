@@ -70,7 +70,7 @@ grid-auto-columns: unset;
   - : Is a non-negative {{cssxref("percentage", "&lt;percentage&gt;")}} value relative to the block size of the grid container. If the block size of the grid container is indefinite, the percentage value is treated like `auto`.
 - {{cssxref("&lt;flex&gt;")}}
 
-  - : Is a non-negative dimension with the unit `fr` specifying the track’s flex factor. Each `<flex>`-sized track takes a share of the remaining space in proportion to its flex factor.
+  - : Is a non-negative dimension with the unit `fr` specifying the track's flex factor. Each `<flex>`-sized track takes a share of the remaining space in proportion to its flex factor.
 
     When appearing outside a `minmax()` notation, it implies an automatic minimum (i.e. `minmax(auto, <flex>)`).
 
@@ -78,9 +78,9 @@ grid-auto-columns: unset;
   - : Is a keyword representing the largest maximal content contribution of the grid items occupying the grid track.
 - {{cssxref("min-content")}}
   - : Is a keyword representing the largest minimal content contribution of the grid items occupying the grid track.
-- {{cssxref("minmax()", "minmax(min, max)")}}
-  - : Is a functional notation that defines a size range greater than or equal to _min_ and less than or equal to _max_. If _max_ is smaller than _min_, then _max_ is ignored and the function is treated as _min_. As a maximum, a `<flex>` value sets the track’s flex factor. As a minimum, it is treated as zero (or minimal content, if the grid container is sized under a minimal content constraint).
-- {{cssxref("fit-content()", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}
+- {{cssxref("minmax", "minmax(min, max)")}}
+  - : Is a functional notation that defines a size range greater than or equal to _min_ and less than or equal to _max_. If _max_ is smaller than _min_, then _max_ is ignored and the function is treated as _min_. As a maximum, a `<flex>` value sets the track's flex factor. As a minimum, it is treated as zero (or minimal content, if the grid container is sized under a minimal content constraint).
+- {{cssxref("fit-content", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}
   - : Represents the formula `min(max-content, max(auto, argument))`, which is calculated similar to `auto` (i.e. `minmax(auto, max-content)`), except that the track size is clamped at _argument_ if it is greater than the `auto` minimum.
 - `auto`
 
@@ -104,9 +104,9 @@ grid-auto-columns: unset;
 
 ```html
 <div id="grid">
-  <div id="item1"></div>
-  <div id="item2"></div>
-  <div id="item3"></div>
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
 </div>
 ```
 

@@ -3,7 +3,6 @@ title: SpeechSynthesisVoice.name
 slug: Web/API/SpeechSynthesisVoice/name
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechSynthesisVoice
@@ -13,19 +12,13 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisVoice.name
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`name`** read-only property of the
 {{domxref("SpeechSynthesisVoice")}} interface returns a human-readable name that
 represents the voice.
 
-## Syntax
-
-```js
-var voiceName = speechSynthesisVoiceInstance.name;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} representing the name of the voice.
 

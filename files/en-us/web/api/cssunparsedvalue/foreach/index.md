@@ -14,7 +14,7 @@ tags:
   - forEach()
 browser-compat: api.CSSUnparsedValue.forEach
 ---
-{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSUnparsedValue.forEach()`** method
 executes a provided function once for each element of the
@@ -60,7 +60,7 @@ CSSUnparsedValue.forEach(function callback(currentValue[, index[, array]]) {
 
 ## See also
 
-- {{domxref("CSSUnparsedValue.CSSUnparsedValue()")}}
+- {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}}
 - {{domxref("CSSUnparsedValue.entries")}}
 - {{domxref("CSSUnparsedValue.keys")}}
 - {{domxref("CSSUnparsedValue.length")}}

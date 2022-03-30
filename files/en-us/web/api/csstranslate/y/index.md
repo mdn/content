@@ -12,19 +12,13 @@ tags:
   - Property
 browser-compat: api.CSSTranslate.y
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`y`** property of the
 {{domxref("CSSTranslate")}} interface gets and sets the ordinate or y-axis of the
 translating vector.
 
-## Syntax
-
-```js
-var translateY = CSSTranslate.y;
-```
-
-### Value
+## Value
 
 A {{cssxref('length-percentage')}}
 

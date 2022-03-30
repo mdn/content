@@ -23,13 +23,7 @@ The **`primitiveType`** read-only property of the
 > - the untyped [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model), widely supported, or
 > - the modern [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API), less supported and considered experimental.
 
-## Syntax
-
-```js
-type = cssPrimitiveValue.primitiveType;
-```
-
-### Value
+## Value
 
 An `unsigned short` representing the type of the value. Possible values are:
 
@@ -44,7 +38,7 @@ An `unsigned short` representing the type of the value. Possible values are:
     <tr>
       <td><code>CSS_ATTR</code></td>
       <td>
-        The value is an {{cssxref("attr()")}} function. The value can be
+        The value is an {{cssxref("attr", "attr()")}} function. The value can be
         obtained by using the <code>getStringValue()</code> method.
       </td>
     </tr>
@@ -60,7 +54,7 @@ An `unsigned short` representing the type of the value. Possible values are:
       <td><code>CSS_COUNTER</code></td>
       <td>
         The value is a
-        <a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters"
+        <a href="/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters"
           >counter or counters</a
         >
         function. The value can be obtained by using the
@@ -229,14 +223,14 @@ An `unsigned short` representing the type of the value. Possible values are:
     <tr>
       <td><code>CSS_URI</code></td>
       <td>
-        The value is a {{cssxref("url()")}}. The value can be obtained
+        The value is a {{cssxref("url", "url()")}}. The value can be obtained
         by using the <code>getStringValue()</code> method.
       </td>
     </tr>
   </tbody>
 </table>
 
-## Example
+## Examples
 
 ```js
 var cs = window.getComputedStyle(document.body);

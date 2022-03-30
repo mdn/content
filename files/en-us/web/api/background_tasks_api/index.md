@@ -10,7 +10,7 @@ tags:
   - cancelIdleCallback
   - requestIdleCallback
 ---
-{{DefaultAPISidebar("Background Tasks")}}{{draft}}
+{{DefaultAPISidebar("Background Tasks")}}
 
 The **Cooperative Scheduling of Background Tasks API** (also referred to as the Background Tasks API or the `requestIdleCallback()` API) provides the ability to queue tasks to be executed automatically by the user agent when it determines that there is free time to do so.
 
@@ -26,7 +26,7 @@ Because event handling and screen updates are two of the most obvious ways users
 
 Because idle callbacks are intended to give your code a way to cooperate with the event loop to ensure that the system is utilized to its full potential without over-tasking it, resulting in lag or other performance problems, you should be thoughtful about how you go about using them.
 
-- **Use idle callbacks for tasks which don't have high priority.** Because you don't know how many callbacks have been established, and you don't know how busy the user's system is, you don't know how often your callback will be run (unless you specify a `timeout`. There's no guarantee that every pass through the event loop (or even every screen update cycle) will include any idle callbacks being executed; if the event loop uses all available time, you're out of luck (again, unless you've used a `timeout`).
+- **Use idle callbacks for tasks which don't have high priority.** Because you don't know how many callbacks have been established, and you don't know how busy the user's system is, you don't know how often your callback will be run (unless you specify a `timeout`). There's no guarantee that every pass through the event loop (or even every screen update cycle) will include any idle callbacks being executed; if the event loop uses all available time, you're out of luck (again, unless you've used a `timeout`).
 - **Idle callbacks should do their best not to overrun the time allotted.** While the browser, your code, and the Web in general will continue to run normally if you go over the specified time limit (even if you go _way_ over it), the time restriction is intended to ensure that you leave the system enough time to finish the current pass through the event loop and get on to the next one without causing other code to stutter or animation effects to lag. Currently, {{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}} has an upper limit of 50 milliseconds, but in reality you will often have less time than that, since the event loop may already be eating into that time on complex sites, with browser extensions needing processor time, and so forth.
 - **Avoid making changes to the DOM within your idle callback.** By the time your callback is run, the current frame has already finished drawing, and all layout updates and computations have been completed. If you make changes that affect layout, you may force a situation in which the browser has to stop and do recalculations that would otherwise be unnecessary. If your callback needs to change the DOM, it should use {{domxref("Window.requestAnimationFrame()")}} to schedule that.
 - **Avoid tasks whose run time can't be predicted.** Your idle callback should avoid doing anything that could take an unpredictable amount of time. For example, anything which might affect layout should be avoided. You should also avoid resolving or rejecting {{jsxref("Promise")}}s, since that would invoke the handler for that promise's resolution or rejection as soon as your callback returns.
@@ -90,18 +90,17 @@ In order to be oriented about what we're trying to accomplish, let's have a look
 
 ```html
 <p>
-  Demonstration of using <a href="/en-US/docs/Web/API/Background_Tasks_API">
-  cooperatively scheduled background tasks</a> using the <code>requestIdleCallback()</code>
-  method.
+  Demonstration of using cooperatively scheduled background tasks using the
+  <code>requestIdleCallback()</code> method.
 </p>
 
 <div id="container">
   <div class="label">Decoding quantum filament tachyon emissions...</div>
-  
+
   <progress id="progress" value="0"></progress>
-  
+
   <button class="button" id="startButton">Start</button>
-  
+
   <div class="label counter">
     Task <span id="currentTaskNumber">0</span> of <span id="totalTaskCount">0</span>
   </div>
@@ -204,7 +203,7 @@ let taskHandle = null;
 These variables are used to manage the list of tasks that are waiting to be performed, as well as status information about the task queue and its execution:
 
 - `taskList` is an {{jsxref("Array")}} of objects, each representing one task waiting to be run.
-- `totalTaskCount` is a counter of the number of tasks that have been added to the queue; it will only go up, never down. We use this to do the math to present progress as a precentage of total work to do.
+- `totalTaskCount` is a counter of the number of tasks that have been added to the queue; it will only go up, never down. We use this to do the math to present progress as a percentage of total work to do.
 - `currentTaskNumber` is used to track how many tasks have been processed so far.
 - `taskHandle` is a reference to the task currently being processed.
 
@@ -313,10 +312,10 @@ function runTaskQueue(deadline) {
 
 For each task in the queue that we have time to execute, we do the following:
 
-1.  We [remove the task object from the queue](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift).
-2.  We increment `currentTaskNumber` to track how many tasks we've executed.
-3.  We call the task's handler, `task.handler`, passing into it the task's data object (`task.data`).
-4.  We call a function, `scheduleStatusRefresh()`, to handle scheduling a screen update to reflect changes to our progress.
+1. We [remove the task object from the queue](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift).
+2. We increment `currentTaskNumber` to track how many tasks we've executed.
+3. We call the task's handler, `task.handler`, passing into it the task's data object (`task.data`).
+4. We call a function, `scheduleStatusRefresh()`, to handle scheduling a screen update to reflect changes to our progress.
 
 When time runs out, if there are still tasks left in the list, we call {{domxref("Window.requestIdleCallback", "requestIdleCallback()")}} again so that we can continue to process the tasks the next time there's idle time available. If the queue is empty, we set taskHandle to 0 to indicate that we don't have a callback scheduled. That way, we'll know to request a callback next time `enqueueTask()` is called.
 
@@ -376,8 +375,8 @@ First, `scrolledToEnd` is set to `true` if the text in the log is scrolled to th
 
 Next, we update the progress and status information if any tasks have been enqueued.
 
-1.  If the current maximum value of the progress bar is different from the current total number of enqueued tasks (`totalTaskCount`), then we update the contents of the displayed total number of tasks (`totalTaskCountElem`) and the maximum value of the progress bar, so that it scales properly.
-2.  We do the same thing with the number of tasks processed so far; if `progressBarElem.value` is different from the task number currently being processed (`currentTaskNumber`), then we update the displayed value of the currently-being-processed task and the current value of the progress bar.
+1. If the current maximum value of the progress bar is different from the current total number of enqueued tasks (`totalTaskCount`), then we update the contents of the displayed total number of tasks (`totalTaskCountElem`) and the maximum value of the progress bar, so that it scales properly.
+2. We do the same thing with the number of tasks processed so far; if `progressBarElem.value` is different from the task number currently being processed (`currentTaskNumber`), then we update the displayed value of the currently-being-processed task and the current value of the progress bar.
 
 Then, if there's text waiting to be added to the log (that is, if `logFragment` isn't `null`), we append it to the log element using {{domxref("Node.appendChild", "Element.appendChild()")}} and set `logFragment` to `null` so we don't add it again.
 
@@ -385,7 +384,7 @@ If the log was scrolled to the end when we started, we make sure it still is. Th
 
 #### Adding text to the log
 
-The `log()` function adds the specified text to the log. Since we don't know at the time `log()` is called whether or not it's safe to immediately touch the DOM, we will cache the log text until it's safe to update. Above, in the code for ` updateDisplay``() `, you can find the code that actually adds the logged text to the log element when the animation frame is being updated.
+The `log()` function adds the specified text to the log. Since we don't know at the time `log()` is called whether or not it's safe to immediately touch the DOM, we will cache the log text until it's safe to update. Above, in the code for `updateDisplay()`, you can find the code that actually adds the logged text to the log element when the animation frame is being updated.
 
 ```js
 function log(text) {
@@ -413,7 +412,7 @@ The function we'll be using as our task handler—that is, the function that wil
 
 ```js
 function logTaskHandler(data) {
-  log("<strong>Running task #" + currentTaskNumber + "</strong>");
+  log("Running task #" + currentTaskNumber);
 
   for (i=0; i<data.count; i+=1) {
     log((i+1).toString() + ". " + data.text);
@@ -456,14 +455,14 @@ document.getElementById("startButton").addEventListener("click", decodeTechnoStu
 
 `decodeTechnoStuff()` starts by zeroing the values of totalTaskCount (the number of tasks added to the queue so far) and currentTaskNumber (the task currently being run), and then calls `updateDisplay()` to reset the display to its "nothing's happened yet" state.
 
-This example will create a random number of tasks (between 100 and 200 of them). To do so, we use the [`getRandomIntInclusive()` function](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random?document_saved=true#Getting_a_random_integer_between_two_values_inclusive) that's provided as an example in the documentation for {{jsxref("Math.random()")}} to get the number of tasks to create.
+This example will create a random number of tasks (between 100 and 200 of them). To do so, we use the [`getRandomIntInclusive()` function](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#getting_a_random_integer_between_two_values_inclusive) that's provided as an example in the documentation for {{jsxref("Math.random()")}} to get the number of tasks to create.
 
 Then we start a loop to create the actual tasks. For each task, we create an object, `taskData`, which includes two properties:
 
 - `count` is the number of strings to output into the log from the task.
 - `text` is the text to output to the log the number of times specified by `count`.
 
-Each task is then enqueued by calling `enqueueTask()`, passing in ` logTaskHandler``() ` as the handler function and the `taskData` object as the object to pass into the function when it's called.
+Each task is then enqueued by calling `enqueueTask()`, passing in `logTaskHandler()` as the handler function and the `taskData` object as the object to pass into the function when it's called.
 
 ### Result
 

@@ -6,6 +6,7 @@ tags:
   - Method
   - Number
   - Prototype
+  - Polyfill
 browser-compat: javascript.builtins.Number.toExponential
 ---
 {{JSRef}}
@@ -84,6 +85,7 @@ console.log(77 .toExponential());     // logs 7.7e+1
 
 ## See also
 
+- [A polyfill of `Number.prototype.toExponential`](https://github.com/zloirock/core-js#ecmascript-number) with many bug fixes is available in [`core-js`](https://github.com/zloirock/core-js)
 - {{jsxref("Number.prototype.toFixed()")}}
 - {{jsxref("Number.prototype.toPrecision()")}}
 - {{jsxref("Number.prototype.toString()")}}

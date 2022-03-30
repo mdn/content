@@ -14,7 +14,7 @@ browser-compat: api.IDBDatabase.createObjectStore
 {{ APIRef("IndexedDB") }}
 
 The **`createObjectStore()`** method of the
-{{domxref("IDBDatabase")}} interface creates and returns a new object store or index.
+{{domxref("IDBDatabase")}} interface creates and returns a new {{domxref("IDBObjectStore")}}.
 
 The method takes the name of the store as well as a parameter object that lets you
 define important optional properties. You can use the property to uniquely identify
@@ -90,56 +90,20 @@ A new {{domxref("IDBObjectStore")}}.
 This method may raise a {{domxref("DOMException")}} with a {{domxref("DOMError")}} of
 one of the following types:
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>
-        Occurs if the method was not called from a
-        <code>versionchange</code> transaction callback. For older WebKit
-        browsers, you must call
-        {{
-        APIRef("IDBVersionChangeRequest.setVersion")}}
-        first.
-      </td>
-    </tr>
-    <tr>
-      <td><code>TransactionInactiveError</code></td>
-      <td>
-        Occurs if a request is made on a source database that doesn't exist
-        (e.g. has been deleted or removed.) In Firefox previous to version 41,
-        an <code>InvalidStateError</code> was raised in this case as well, which
-        was misleading; this has now been fixed (see {{Bug("1176165")}}.)
-      </td>
-    </tr>
-    <tr>
-      <td><code>ConstraintError</code></td>
-      <td>
-        An object store with the given name (based on case-sensitive comparison)
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the method was not called from a
+        `versionchange` transaction callback.
+- `TransactionInactiveError` {{domxref("DOMException")}}
+  - : Thrown if a request is made on a source database that does not exist
+        (for example, when the database has been deleted or removed). In Firefox previous to version 41,
+        an `InvalidStateError` was raised in this case as well, which
+        was misleading; this has now been fixed (see {{Bug("1176165")}}).
+- `ConstraintError` {{domxref("DOMException")}}
+  - : Thrown if an object store with the given name (based on a case-sensitive comparison)
         already exists in the connected database.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/IDBDatabaseException#non_transient_err"
-            >InvalidAccessError</a
-          ></code
-        >
-      </td>
-      <td>
-        If <code>autoIncrement</code> is set to true and <code>keyPath</code> is
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : Thrown if `autoIncrement` is set to true and `keyPath` is
         either an empty string or an array containing an empty string.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Example
 
@@ -152,10 +116,10 @@ var request = window.indexedDB.open("toDoList", 4);
 // or when a new version number is submitted by calling
 // window.indexedDB.open().
 // This handler is only supported in recent browsers.
-request.onupgradeneeded = function(event) {
+request.onupgradeneeded = event => {
   var db = event.target.result;
 
-  db.onerror = function(event) {
+  db.onerror = event => {
     note.innerHTML += "<li>Error loading database.</li>";
   };
 
@@ -193,5 +157,4 @@ request.onupgradeneeded = function(event) {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

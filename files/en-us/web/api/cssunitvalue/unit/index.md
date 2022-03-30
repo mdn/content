@@ -12,19 +12,13 @@ tags:
   - unit
 browser-compat: api.CSSUnitValue.unit
 ---
-{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSUnitValue.unit`** read-only property
 of the {{domxref("CSSUnitValue")}} interface returns a {{jsxref('USVString')}}
 indicating the type of unit.
 
-## Syntax
-
-```js
-var aString = CSSUnitValue.unit;
-```
-
-### Value
+## Value
 
 A {{jsxref('USVString')}}.
 

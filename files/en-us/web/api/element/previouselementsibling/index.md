@@ -16,16 +16,11 @@ The **`Element.previousElementSibling`**
 read-only property returns the {{domxref("Element")}} immediately prior to the specified
 one in its parent's children list, or `null` if the specified element is the first one in the list.
 
-## Syntax
+## Value
 
-```js
-// Getter
-element = el.previousElementSibling;
+An {{domxref("Element")}} object, or `null`.
 
-// No setter; read-only property
-```
-
-## Example
+## Examples
 
 ```html
 <div id="div-01">Here is div-01</div>
@@ -47,12 +42,14 @@ element = el.previousElementSibling;
 
 This example outputs the following into the page when it loads:
 
-    Siblings of div-03
+```
+Siblings of div-03
 
-       1. LI
-       2. LI
-       3. DIV
-       4. DIV
+   1. LI
+   2. LI
+   3. DIV
+   4. DIV
+```
 
 ## Specifications
 

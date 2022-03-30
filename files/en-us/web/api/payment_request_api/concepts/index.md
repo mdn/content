@@ -20,7 +20,7 @@ The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) makes it easy
 
 ## Terminology
 
-Before getting into the details of how the API operates, there are tems you'll need to know.
+Before getting into the details of how the API operates, there are items you'll need to know.
 
 - payee (or merchant)
   - : The merchant—either a person or an organization—whose web site or app wishes to receive money through the Payment Request API.
@@ -41,7 +41,7 @@ Payment handlers are identified by **payment method identifiers**, which are str
 
 ### Standardized payment method identifiers
 
-There is currently only one registered [standardized payment method identifier](https://www.w3.org/TR/payment-method-id/#registry) (more may be added in the future):
+There is currently only one registered [standardized payment method identifier](https://www.w3.org/TR/payment-method-id/#registry) (more may be added in the future):
 
 - `basic-card`
   - : Payments are handled by the Basic Card Payment specification. See {{domxref("BasicCardRequest")}} for details. **_Should have an article about this specification and how to use it_.**
@@ -59,9 +59,9 @@ These may vary substantially depending on the specifics of the service, and a gi
 
 A {{Glossary("user agent")}} may provide built-in support for certain types of payments. In addition, the [Payment Handler API](https://w3c.github.io/payment-handler/) can be used to establish support for additional payment method providers, in browsers that support it. In either case, the payment handler is responsible for:
 
-1.  **Making sure a payment can be made.** The conditions that make payment possible vary depending on the payment method and the user's payment request; for example, if the user chooses to pay using a credit card that isn't accepted by the payee, the payment can't be made.
-2.  **If merchant validation is supported by the payment handler, respond to merchant validation requests from the user agent.** See {{anch("Merchant validation")}} for details.
-3.  **Verify that the information provided by the user results in a valid transaction.** This results in the creation and returning of a payment method-specific object that contains the information needed to handle the transaction.
+1. **Making sure a payment can be made.** The conditions that make payment possible vary depending on the payment method and the user's payment request; for example, if the user chooses to pay using a credit card that isn't accepted by the payee, the payment can't be made.
+2. **If merchant validation is supported by the payment handler, respond to merchant validation requests from the user agent.** See [Merchant validation](#merchant_validation) for details.
+3. **Verify that the information provided by the user results in a valid transaction.** This results in the creation and returning of a payment method-specific object that contains the information needed to handle the transaction.
 
 ## Merchant validation
 

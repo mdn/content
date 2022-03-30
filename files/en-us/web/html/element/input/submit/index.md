@@ -25,7 +25,7 @@ browser-compat: html.elements.input.input-submit
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>A {{domxref("DOMString")}} used as the button's label</td>
     </tr>
     <tr>
@@ -42,6 +42,10 @@ browser-compat: html.elements.input.input-submit
     <tr>
       <td><strong>IDL attributes</strong></td>
       <td><code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
       <td><strong>Methods</strong></td>
@@ -195,7 +199,7 @@ The problem with the above example is that the user will not know what the acces
 To disable a submit button, specify the {{htmlattrxref("disabled")}} global attribute on it, like so:
 
 ```html
-<input type="submit" value="Disabled" disabled>
+<input type="submit" value="Send" disabled>
 ```
 
 You can enable and disable buttons at run time by setting `disabled` to `true` or `false`; in JavaScript this looks like `btn.disabled = true` or `btn.disabled = false`.

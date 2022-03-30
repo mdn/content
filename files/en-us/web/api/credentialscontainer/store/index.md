@@ -23,7 +23,7 @@ The **`store()`** method of the
 ## Syntax
 
 ```js
-CredentialsContainer.store(Credential).then(function(Credential) { ... } )
+CredentialsContainer.store(Credential).then(function(Credential) { /* ... */ } )
 ```
 
 ### Parameters

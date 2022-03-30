@@ -115,7 +115,7 @@ var oscillator = audioCtx.createOscillator();
 var lfo = audioCtx.createOscillator();
 
 // set the frequency of the second oscillator to a low number
-lfo.frequency.value = 2.0; // 2Hz: two oscillations par second
+lfo.frequency.value = 2.0; // 2Hz: two oscillations per second
 
 // create a gain whose gain AudioParam will be controlled by the LFO
 var gain = audioCtx.createGain();

@@ -16,19 +16,13 @@ The read-only {{domxref("DataTransfer")}} property `items` property is a
   transfer items")}} in a drag operation. The list includes one item for each item in the
 operation and if the operation had no items, the list is empty.
 
-## Syntax
-
-```js
-itemList = dataTransfer.items;
-```
-
-### Return value
+## Value
 
 A {{domxref("DataTransferItemList")}} object containing {{domxref("DataTransferItem")}}
 objects representing the items being dragged in a drag operation, one list item for each
 object being dragged. If the drag operation had no data, the list is empty.
 
-## Example
+## Examples
 
 This example shows the use of the `items` and
 {{domxref("DataTransfer.types","types")}} properties.

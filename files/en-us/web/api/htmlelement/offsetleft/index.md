@@ -20,7 +20,9 @@ However, for inline-level elements (such as **span**) that can wrap from one lin
 
 ## Syntax
 
-    left = element.offsetLeft;
+```js
+left = element.offsetLeft;
+```
 
 `left` is an integer representing the offset to the left in pixels _from the closest relatively positioned_ parent element.
 

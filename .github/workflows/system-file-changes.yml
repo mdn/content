@@ -6,7 +6,6 @@ on:
       - '.github/workflows/**'
       - '.github/CODEOWNERS'
       - '.github/dependabot.yml'
-      - 'pr-lint/**'
       - 'scripts/**'
       - package.json
       - yarn.lock

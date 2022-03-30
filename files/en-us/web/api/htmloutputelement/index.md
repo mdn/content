@@ -12,7 +12,7 @@ browser-compat: api.HTMLOutputElement
 
 The **`HTMLOutputElement`** interface provides properties and methods (beyond those inherited from {{domxref("HTMLElement")}}) for manipulating the layout and presentation of {{HTMLElement("output")}} elements.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

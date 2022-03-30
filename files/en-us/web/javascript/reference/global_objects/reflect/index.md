@@ -15,18 +15,18 @@ browser-compat: javascript.builtins.Reflect
 
 ## Description
 
-Unlike most global objects, `Reflect` is not a constructor. You cannot use it with a [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) or invoke the `Reflect` object as a function. All properties and methods of `Reflect` are static (just like the {{jsxref("Math")}} object).
+Unlike most global objects, `Reflect` is not a constructor. You cannot use it with a [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) or invoke the `Reflect` object as a function. All properties and methods of `Reflect` are static (just like the {{jsxref("Math")}} object).
 
 The `Reflect` object provides the following static functions which have the same names as the [proxy handler methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy).
 
-Some of these methods are also the same as corresponding methods on {{jsxref("Object")}}, although they do have [some subtle differences](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods) between them.
+Some of these methods are also the same as corresponding methods on {{jsxref("Object")}}, although they do have [some subtle differences](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods) between them.
 
 ## Static methods
 
 - {{jsxref("Reflect.apply()", "Reflect.apply(<var>target</var>, <var>thisArgument</var>, <var>argumentsList</var>)")}}
   - : Calls a `target` function with arguments as specified by the `argumentsList` parameter. See also {{jsxref("Function.prototype.apply()")}}.
 - {{jsxref("Reflect.construct()", "Reflect.construct(<var>target</var>, <var>argumentsList</var>[, <var>newTarget</var>])")}}
-  - : The [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) as a function. Equivalent to calling `new target(...argumentsList)`. Also provides the option to specify a different prototype.
+  - : The [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) as a function. Equivalent to calling `new target(...argumentsList)`. Also provides the option to specify a different prototype.
 - {{jsxref("Reflect.defineProperty()", "Reflect.defineProperty(<var>target</var>, <var>propertyKey</var>, <var>attributes</var>)")}}
   - : Similar to {{jsxref("Object.defineProperty()")}}. Returns a boolean that is `true` if the property was successfully defined.
 - {{jsxref("Reflect.deleteProperty()", "Reflect.deleteProperty(<var>target</var>, <var>propertyKey</var>)")}}
@@ -34,7 +34,7 @@ Some of these methods are also the same as corresponding methods on {{jsxref("Ob
 - {{jsxref("Reflect.get()", "Reflect.get(<var>target</var>, <var>propertyKey</var>[, <var>receiver</var>])")}}
   - : Returns the value of the property. Works like getting a property from an object (`target[propertyKey]`) as a function.
 - {{jsxref("Reflect.getOwnPropertyDescriptor()", "Reflect.getOwnPropertyDescriptor(<var>target</var>, <var>propertyKey</var>)")}}
-  - : Similar to {{jsxref("Object.getOwnPropertyDescriptor()")}}. Returns a property descriptor of the given property if it exists on the object,  {{jsxref("undefined")}} otherwise.
+  - : Similar to {{jsxref("Object.getOwnPropertyDescriptor()")}}. Returns a property descriptor of the given property if it exists on the object,  {{jsxref("undefined")}} otherwise.
 - {{jsxref("Reflect.getPrototypeOf()", "Reflect.getPrototypeOf(<var>target</var>)")}}
   - : Same as {{jsxref("Object.getPrototypeOf()")}}.
 - {{jsxref("Reflect.has()", "Reflect.has(<var>target, propertyKey</var>)")}}

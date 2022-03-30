@@ -16,6 +16,7 @@ to be transmitted to the server over the WebSocket connection, increasing the va
 `bufferedAmount` by the number of bytes needed to contain the data. If the
 data can't be sent (for example, because it needs to be buffered but the buffer is
 full), the socket is closed automatically.
+The browser will throw an exception if you call `send()` when the connection is in the `CONNECTING` state. If you call `send()` when the connection is in the `CLOSING` or `CLOSED` states, the browser will silently discard the data.
 
 ## Syntax
 
@@ -47,21 +48,10 @@ WebSocket.send("Hello server!");
         the buffer, increasing the value of `bufferedAmount` by the requisite
         number of bytes.
 
-### Exceptions thrown
+### Exceptions
 
-- `INVALID_STATE_ERR`
-  - : The connection is not currently `OPEN`.
-- `SYNTAX_ERR`
-  - : The data is a string that has unpaired surrogates.
-
-> **Note:** Gecko's implementation of the `send()` method
-> differs somewhat from the specification in {{Gecko("6.0")}}; Gecko returns a
-> `boolean` indicating whether or not the connection is still open (and, by
-> extension, that the data was successfully queued or transmitted); this is corrected in
-> {{Gecko("8.0")}}.
->
-> As of {{Gecko("11.0")}}, support for {{jsxref("ArrayBuffer")}} is implemented but not
-> {{domxref("Blob")}} data types.
+- `InvalidStateError`
+  - : Thrown if {{domxref("WebSocket/readyState", "WebSocket.readyState")}} is `CONNECTING`.
 
 ## Specifications
 

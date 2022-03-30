@@ -15,20 +15,14 @@ property returns a {{domxref('CSSRule')}} that is the parent of this style
 block, e.g. a {{domxref('CSSStyleRule')}} representing the style for a CSS
 selector.
 
-## Syntax
+## Value
 
-```js
-var rule = styles.parentRule;
-```
+The CSS rule that contains this declaration block or `null` if this
+{{domxref('CSSStyleDeclaration')}} is not attached to a {{domxref('CSSRule')}}.
 
-### Value
+## Examples
 
-The CSS rule that contains this declaration block or `null` if this
-{{domxref('CSSStyleDeclaration')}} is not attached to a {{domxref('CSSRule')}}.
-
-## Example
-
-The following JavaScript code gets the parent CSS style rule from a
+The following JavaScript code gets the parent CSS style rule from a
 {{domxref('CSSStyleDeclaration')}}:
 
 ```js

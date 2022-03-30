@@ -18,14 +18,16 @@ The _`value`_ attribute _MUST_ return the last value it was set to. The value is
 
 The _`onchange`_ attribute is an [event handler](https://www.w3.org/TR/presentation-api/#dfn-event-handler) whose corresponding [event handler event type](https://www.w3.org/TR/presentation-api/#dfn-event-handler-event-type) is _`change`_.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 - {{domxref("PresentationAvailability.value")}} {{readonlyinline}}
   - : A boolean value indicating whether the given presentation display is available. The _`value`_ attribute _MUST_ return the last value it was set to.
 
-### Event handlers
+### Event
 
-- {{domxref("PresentationAvailability.onchange")}}
+- {{domxref("PresentationAvailability.change_event", "change")}}
   - : Indicates that the availability of the presentation display has changed.
 
 ## Methods

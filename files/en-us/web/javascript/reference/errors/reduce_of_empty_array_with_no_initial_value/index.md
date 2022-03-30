@@ -28,7 +28,7 @@ In JavaScript, there are several reduce functions:
 
 - {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}}
   and
-- {{jsxref("TypedArray.prototype.reduce()")}}, 
+- {{jsxref("TypedArray.prototype.reduce()")}},
   {{jsxref("TypedArray.prototype.reduceRight()")}}).
 
 These functions optionally take an `initialValue` (which will be used as the
@@ -64,7 +64,7 @@ var name_list = Array.prototype.reduce.call(names, (acc, name) => acc + ", " + n
 
 These problems can be solved in two different ways.
 
-One way is to actually provide an `initialValue`  as the neutral element of
+One way is to actually provide an `initialValue`  as the neutral element of
 the operator, such as 0 for the addition, 1 for a multiplication, or an empty string for
 a concatenation.
 

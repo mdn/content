@@ -50,8 +50,6 @@ You can find a complete guide in [Using the Payment Request API](/en-US/docs/Web
 
 - {{domxref("AddressErrors")}}
   - : A dictionary containing strings providing descriptive explanations of any errors in any {{domxref("PaymentAddress")}} entries which have errors.
-- {{domxref("PayerErrors")}}
-  - : A dictionary containing strings providing descriptive explanations of any errors in related to {{domxref("PaymentResponse")}}'s email, phone, and name attributes.
 - {{domxref("PaymentRequestUpdateEvent.updateWith#parameters", "PaymentDetailsUpdate")}}
   - : An object describing changes that need to be made to the payment details in the event that the server needs to update information following the instantiation of the payment interface but before the user begins to interact with it.
 

@@ -45,14 +45,6 @@ If the `radix` is smaller than `2` or bigger than
 `36`, or the first non-whitespace character cannot be converted to a number,
 {{jsxref("NaN")}} is returned.
 
-## Polyfill
-
-```js
-if (Number.parseInt === undefined) {
-    Number.parseInt = window.parseInt
-}
-```
-
 ## Examples
 
 ### Number.parseInt vs parseInt
@@ -77,6 +69,6 @@ and is part of ECMAScript 2015 (its purpose is modularization of globals). Pleas
 
 ## See also
 
-- A polyfill of `Number.parseInt` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [Polyfill of `Number.parseInt` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
 - The {{jsxref("Number")}} object it belongs to.
 - The global {{jsxref("parseInt", "parseInt()")}} method.

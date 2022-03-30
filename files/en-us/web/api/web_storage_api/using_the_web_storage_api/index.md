@@ -46,7 +46,7 @@ To be able to use localStorage, we should first verify that it is supported and 
 
 Browsers that support localStorage have a property on the window object named `localStorage`. However, just asserting that the property exists may throw exceptions. If the `localStorage` object does exist, there is still no guarantee that the localStorage API is actually available, as various browsers offer settings that disable localStorage. So a browser may _support_ localStorage, but not make it _available_ to the scripts on the page.
 
-For example, for a document viewed in a browser’s private browsing mode, some browsers might give us an empty `localStorage` object with a quota of zero, effectively making it unusable. Conversely, we might get a legitimate `QuotaExceededError`, which means that we've used up all available storage space, but storage _is_ actually _available_. Our feature detection should take these scenarios into account.
+For example, for a document viewed in a browser's private browsing mode, some browsers might give us an empty `localStorage` object with a quota of zero, effectively making it unusable. Conversely, we might get a legitimate `QuotaExceededError`, which means that we've used up all available storage space, but storage _is_ actually _available_. Our feature detection should take these scenarios into account.
 
 Here is a function that detects whether localStorage is both supported and available:
 
@@ -118,11 +118,14 @@ if(!localStorage.getItem('bgcolor')) {
 
 The {{domxref("Storage.getItem()")}} method is used to get a data item from storage; in this case, we are testing to see whether the `bgcolor` item exists; if not, we run `populateStorage()` to add the existing customization values to the storage. If there are already values there, we run `setStyles()` to update the page styling with the stored values.
 
-**Note:** You could also use {{domxref("Storage.length")}} to test whether the storage object is empty or not.
+> **Note:** You could also use {{domxref("Storage.length")}} to test whether the storage object is empty or not.
 
 ### Getting values from storage
 
-**Note:** As noted above, values can be retrieved from storage using {{domxref("Storage.getItem()")}}. This takes the key of the data item as an argument, and returns the data value. For example:
+As noted above, values can be retrieved from storage using {{domxref("Storage.getItem()")}}.
+This takes the key of the data item as an argument, and returns the data value.
+
+For example:
 
 ```js
 function setStyles() {
@@ -140,7 +143,9 @@ function setStyles() {
 }
 ```
 
-Here, the first three lines grab the values from local storage. Next, we set the values displayed in the form elements to those values, so that they keep in sync when you reload the page. Finally, we update the styles/decorative image on the page, so your customization options come up again on reload.
+Here, the first three lines grab the values from local storage.
+Next, we set the values displayed in the form elements to those values, so that they keep in sync when you reload the page.
+Finally, we update the styles/decorative image on the page, so your customization options come up again on reload.
 
 ### Setting values in storage
 

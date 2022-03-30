@@ -12,9 +12,9 @@ tags:
   - forEach
 browser-compat: api.CSSTransformValue.forEach
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{Draft}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
-The **`CSSTransformValue.forEach()`** method executes a provided function once for each element of the `CSSTransformValue`.
+The **`CSSTransformValue.forEach()`** method executes a provided function once for each element of the `CSSTransformValue`.
 
 ## Syntax
 

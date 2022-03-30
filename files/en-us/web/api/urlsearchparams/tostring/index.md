@@ -12,7 +12,7 @@ browser-compat: api.URLSearchParams.toString
 {{ApiRef("URL API")}}
 
 The **`toString()`** method of the
-{{domxref("URLSearchParams")}} interface returns a query string suitable for use in a
+{{domxref("URLSearchParams")}} interface returns a query string suitable for use in a
 URL.
 
 > **Note:** This method returns the query string without the question
@@ -40,7 +40,7 @@ search parameters have been set.)
 
 ```js
 let url = new URL('https://example.com?foo=1&bar=2');
-let params = new URLSearchParams(url.search.slice(1));
+let params = new URLSearchParams(url.search);
 
 //Add a second foo parameter.
 params.append('foo', 4);

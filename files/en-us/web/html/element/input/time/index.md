@@ -20,7 +20,7 @@ browser-compat: html.elements.input.input-time
 
 {{htmlelement("input")}} elements of type **`time`** create input fields designed to let the user easily enter a time (hours and minutes, and optionally seconds).
 
-The control's user interface varies from browser to browser; see {{anch("Browser compatibility")}} for further details. In unsupported browsers, the control degrades gracefully to [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text).
+The control's user interface varies from browser to browser; see [Browser compatibility](#browser_compatibility) for further details. In unsupported browsers, the control degrades gracefully to [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text).
 
 {{EmbedInteractiveExample("pages/tabbed/input-time.html", "tabbed-standard")}}
 
@@ -53,7 +53,7 @@ The Edge `time` control is somewhat more elaborate, opening up an hour and minut
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>A {{domxref("DOMString")}} representing a time, or empty.</td>
     </tr>
     <tr>
@@ -80,6 +80,10 @@ The Edge `time` control is somewhat more elaborate, opening up an hour and minut
       </td>
     </tr>
     <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>Methods</strong></td>
       <td>
         {{domxref("HTMLInputElement.select", "select()")}},
@@ -93,7 +97,7 @@ The Edge `time` control is somewhat more elaborate, opening up an hour and minut
 
 ## Value
 
-A {{jsxref("String")}} containing the value of the time entered into the input.
+A string containing the value of the time entered into the input.
 
 ### Setting the value attribute
 
@@ -117,7 +121,7 @@ timeControl.value = '15:30';
 
 ### Time value format
 
-The `value` of the `time` input is always in 24-hour format that includes leading zeros: `hh:mm`, regardless of the input format, which is likely to be selected based on the user's locale (or by the user agent). If the time includes seconds (see {{anch("Using the step attribute")}}), the format is always `hh:mm:ss`. You can learn more about the format of the time value used by this input type in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Time strings")}}.
+The `value` of the `time` input is always in 24-hour format that includes leading zeros: `hh:mm`, regardless of the input format, which is likely to be selected based on the user's locale (or by the user agent). If the time includes seconds (see [Using the step attribute](#using_the_step_attribute)), the format is always `hh:mm:ss`. You can learn more about the format of the time value used by this input type in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Time strings")}}.
 
 In this example, you can see the time input's value by entering a time and seeing how it changes afterward.
 
@@ -147,7 +151,7 @@ startTime.addEventListener("input", function() {
 
 {{EmbedLiveSample("Time_value_format", 600, 80)}}
 
-When a form including a `time` input is submitted, the value is encoded before being included in the form's data. The form's data entry for a time input will always be in the form `name=hh%3Amm`, or `name=hh%3Amm%3Ass` if seconds are included (see {{anch("Using the step attribute")}}).
+When a form including a `time` input is submitted, the value is encoded before being included in the form's data. The form's data entry for a time input will always be in the form `name=hh%3Amm`, or `name=hh%3Amm%3Ass` if seconds are included (see [Using the step attribute](#using_the_step_attribute)).
 
 ## Additional attributes
 
@@ -161,11 +165,11 @@ The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{H
 
 ### max
 
-A string indicating the latest time to accept, specified in the same {{anch("Time value format", "time value format")}} as described above. If the specified string isn't a valid time, no maximum value is set.
+A string indicating the latest time to accept, specified in the same [time value format](#time_value_format) as described above. If the specified string isn't a valid time, no maximum value is set.
 
 ### min
 
-A string specifying the earliest time to accept, given in the {{anch("Time value format", "time value format")}} described previously. If the value specified isn't a valid time string, no minimum value is set.
+A string specifying the earliest time to accept, given in the [time value format](#time_value_format) described previously. If the value specified isn't a valid time string, no minimum value is set.
 
 ### readonly
 
@@ -175,9 +179,9 @@ A Boolean attribute which, if present, means this field cannot be edited by the 
 
 ### step
 
-The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping (`{{anch("min")}}` if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.
+The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping ([`min`](#min) if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.
 
-A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as `{{anch("min")}}` and `{{anch("max")}}`).
+A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
 
 > **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
 

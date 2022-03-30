@@ -17,12 +17,6 @@ video display.
 
 This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
-## Syntax
-
-```js
-HTMLVideoElement.msZoom;
-```
-
 ## Value
 
 Boolean value set to _true_ trims the video frame to the display space. Set to
@@ -44,7 +38,7 @@ stream coming in is in 16:9 aspect ratio, the `msZoom` option can be used to
 render the 16:9 video in 4:3 aspect ratio. The rendered video will then take up the full
 space of the video object.
 
-## Example
+## Examples
 
 This examples gets a Video object and sets the `msZoom` property to true.
 

@@ -44,12 +44,12 @@ The following example (see [memory.html](https://github.com/mdn/webassembly-exam
 ```js
 WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
 .then(obj => {
-  var i32 = new Uint32Array(memory.buffer);
-  for (var i = 0; i < 10; i++) {
-    i32[i] = i;
-  }
-  var sum = obj.instance.exports.accumulate(0, 10);
-  console.log(sum);
+  var i32 = new Uint32Array(memory.buffer);
+  for (var i = 0; i < 10; i++) {
+    i32[i] = i;
+  }
+  var sum = obj.instance.exports.accumulate(0, 10);
+  console.log(sum);
 });
 ```
 
@@ -58,8 +58,8 @@ The second way to get a WebAssembly.Memory object is to have it exported by a We
 ```js
 WebAssembly.instantiateStreaming(fetch('memory.wasm'))
 .then(obj => {
-   var i32 = new Uint32Array(obj.instance.exports.memory.buffer);
-   console.log(i32[0]);
+   var i32 = new Uint32Array(obj.instance.exports.memory.buffer);
+   console.log(i32[0]);
  });
 ```
 

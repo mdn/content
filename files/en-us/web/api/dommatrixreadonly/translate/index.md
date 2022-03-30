@@ -2,46 +2,36 @@
 title: DOMMatrixReadOnly.translate()
 slug: Web/API/DOMMatrixReadOnly/translate
 tags:
-  - API
-  - DOMMatrix
-  - DOMMatrixReadOnly
-  - Experimental
-  - Geometry
-  - Geometry Interfaces
-  - Interface
   - Method
   - Reference
-  - Translate
-  - matrix
 browser-compat: api.DOMMatrixReadOnly.translate
 ---
-{{APIRef("Geometry Interfaces")}}{{SeeCompatTable}}
+{{APIRef("Geometry Interfaces")}}
 
 The `translate()` method of the {{domxref("DOMMatrixReadOnly")}} interface
 creates a new matrix being the result of the original matrix with a translation applied.
 
 ## Syntax
 
-The `translate()` method accepts two or three values.
-
 ```js
-DOMMatrix.translate(translateX, translateY[, translateZ])
+DOMMatrix.translate(translateX, translateY);
+DOMMatrix.translate(translateX, translateY, translateZ);
 ```
 
 ### Parameters
 
-- translateX
+- `translateX`
   - : A number representing the abscissa (x-coordinate) of the translating vector.
-- translateY
+- `translateY`
   - : A number representing the ordinate (y-coordinate) of the translating vector.
-- translateZ {{optional_inline}}
-  - : A number representing the z component of the translating vector.  If not supplied,
-    this defaults to 0.  If this is anything other than 0, the resulting matrix will be
+- `translateZ` {{optional_inline}}
+  - : A number representing the z component of the translating vector. If not supplied,
+    this defaults to 0. If this is anything other than 0, the resulting matrix will be
     3D.
 
 ### Return value
 
-Returns a [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix "The DOMMatrix interface represents 4x4 matrices, suitable for 2D and 3D operations.")
+Returns a [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix)
 containing a new matrix being the result of the matrix being translated by the given
 vector. The original matrix is not modified.
 

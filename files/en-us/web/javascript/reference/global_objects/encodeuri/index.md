@@ -93,7 +93,7 @@ An {{jsxref("URIError")}} will be thrown if one attempts to encode a surrogate w
 not part of a high-low pair, e.g.,
 
 ```js
-// high-low pair ok
+// high-low pair OK
 console.log(encodeURI('\uD800\uDFFF'));
 
 // lone high surrogate throws "URIError: malformed URI sequence"

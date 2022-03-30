@@ -64,15 +64,15 @@ Depending on the content of your card there may be things you could, or should d
 
 The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
 
-#### grid-template-columns
+### grid-template-columns
 
 {{Compat("css.properties.grid-template-columns")}}
 
-#### grid-template-rows
+### grid-template-rows
 
 {{Compat("css.properties.grid-template-rows")}}
 
 ## See also
 
-- {{Cssxref("grid-template-columns")}}, {{Cssxref("grid-template-rows")}}, {{Cssxref("gap")}}
+- {{Cssxref("grid-template-columns")}}, {{Cssxref("grid-template-rows")}}, {{Cssxref("gap")}}
 - [Inclusive Components: Card](https://inclusive-components.design/cards/)

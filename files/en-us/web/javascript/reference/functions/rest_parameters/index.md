@@ -76,8 +76,8 @@ There are three main differences between rest parameters and the
 - The `...restParam` bundles all the extra parameters into a single array,
   therefore it does not contain any named argument defined **before** the
   `...restParam`. Whereas the `arguments` object contains all of
-  the parameters -- including all of the stuff in the `...restParam` --
-  **un**bundled.
+  the parameters — including the parameters in the `...restParam` array —
+  bundled into one array-like object.
 
 ### From arguments to an array
 
@@ -231,7 +231,7 @@ console.log(sortArguments(5, 3, 7, 1))  // 1, 3, 5, 7
 
 ## See also
 
-- [Spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) (also ‘`...`’)
+- [Spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) (also '`...`')
 - [Destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 - [`arguments` object](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
 - {{jsxref("Array")}}

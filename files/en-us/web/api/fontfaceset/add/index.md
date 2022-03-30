@@ -49,4 +49,3 @@ document.fonts.add(font);
 ## Browser compatibility
 
 {{Compat}}
-

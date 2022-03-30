@@ -1,5 +1,5 @@
 ---
-title: CSSNumericValue.type
+title: CSSNumericValue.type()
 slug: Web/API/CSSNumericValue/type
 tags:
   - API
@@ -7,12 +7,12 @@ tags:
   - CSSNumericValue
   - Experimental
   - Houdini
-  - Property
+  - Method
   - Reference
   - Type
 browser-compat: api.CSSNumericValue.type
 ---
-{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`type()`** method of the
 {{domxref("CSSNumericValue")}} interface returns the type of

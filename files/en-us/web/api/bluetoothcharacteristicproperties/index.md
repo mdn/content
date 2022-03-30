@@ -11,9 +11,9 @@ tags:
   - Web Bluetooth API
 browser-compat: api.BluetoothCharacteristicProperties
 ---
-{{APIRef("Bluetooth API")}}{{Draft}}{{securecontext_header}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{securecontext_header}}{{SeeCompatTable}}
 
-The **`BluetoothCharacteristicProperties`** interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) provides the operations that are valid on the given {{domxref('BluetoothRemoteGATTCharacteristic')}}.
+The **`BluetoothCharacteristicProperties`** interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) provides the operations that are valid on the given {{domxref('BluetoothRemoteGATTCharacteristic')}}.
 
 This interface is returned by calling {{DOMxRef("BluetoothRemoteGATTCharacteristic.properties")}}.
 

@@ -19,15 +19,15 @@ browser-compat: api.XRSession.requestAnimationFrame
 {{APIRef("WebXR Device API")}}
 
 The {{domxref("XRSession")}}
-method **`requestAnimationFrame()`**, much like the
+method **`requestAnimationFrame()`**, much like the
 {{domxref("Window")}} method of the same name, schedules a callback to be executed the
 next time the browser is ready to paint the session's virtual environment to the XR
-display. The specified callback is executed once before the next repaint; if
+display. The specified callback is executed once before the next repaint; if
 you wish for it to be executed for the following repaint, you must
-call `requestAnimationFrame()` again. This can be done from within the
+call `requestAnimationFrame()` again. This can be done from within the
 callback itself.
 
-The callback takes two parameters as inputs: an {{DOMxRef("XRFrame")}} describing the
+The callback takes two parameters as inputs: an {{DOMxRef("XRFrame")}} describing the
 state of all tracked objects for the session, and a time stamp you can use to compute
 any animation updates needed.
 
@@ -36,8 +36,8 @@ You can cancel a previously scheduled animation by calling
 
 > **Note:** Despite the obvious similarities between these methods and the
 > global {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} function
-> provided by the `Window` interface, you *must not* treat these as
-> interchangeable. There is *no* guarantee that the latter will work at all while
+> provided by the `Window` interface, you *must not* treat these as
+> interchangeable. There is *no* guarantee that the latter will work at all while
 > an immersive XR session is underway.
 
 ## Syntax
@@ -71,11 +71,11 @@ remove the pending animation frame request.
 
 ## Example
 
-The following example requests `XRSession` with "inline" mode so that it can
+The following example requests `XRSession` with "inline" mode so that it can
 be displayed in an HTML element (without the need for a separate AR or VR device).
 
 > **Note:** A real application should check that the device and the User
-> Agent support WebXR API at all and then that they both support the desired session
+> Agent support WebXR API at all and then that they both support the desired session
 > type via {{DOMxRef("XRSystem.isSessionSupported()")}}.
 
 ```js
@@ -134,7 +134,7 @@ function startXRSession() {
     xrSession = session
     xrSession.addEventListener('end', onXRSessionEnded)
     // Do necessary session setup here.
-    // Begin the session’s animation loop.
+    // Begin the session's animation loop.
     xrSession.requestAnimationFrame(onXRAnimationFrame)
   })
 }

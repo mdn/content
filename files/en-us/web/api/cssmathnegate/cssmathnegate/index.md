@@ -11,7 +11,7 @@ tags:
   - Houdini
 browser-compat: api.CSSMathNegate.CSSMathNegate
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
+{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSMathNegate()`** constructor creates a
 new {{domxref("CSSMathNegate")}} object which negates the value passed into it.
@@ -19,7 +19,7 @@ new {{domxref("CSSMathNegate")}} object which negates the value passed into it.
 ## Syntax
 
 ```js
-var CSSMathNegate = new CSSMathNegate(arg);
+new CSSMathNegate(arg);
 ```
 
 ### Parameters

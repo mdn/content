@@ -17,16 +17,9 @@ The **`document.title`** property gets
 or sets the current [title](/en-US/docs/Web/HTML/Element/title) of the
 document.
 
-## Syntax
+## Value
 
-```js
-var docTitle = document.title;
-```
-
-_docTitle_ is a string containing the _document_'s title. If the
-title was overridden by setting `document.title`, it contains that value.
-Otherwise, it contains the title specified in the markup (see the {{Anch("Notes")}}
-below).
+A string containing the _document_'s title. If the title was overridden by setting `document.title`, it contains that value. Otherwise, it contains the title specified in the markup (see the [Notes](#notes) below).
 
 ```js
 document.title = newTitle;
@@ -38,7 +31,7 @@ document (e.g. in the titlebar of the window or tab), and it also affects the DO
 document (e.g. the content of the `<title>` element in an HTML
 document).
 
-## Example
+## Examples
 
 ```js
 <!DOCTYPE html>

@@ -16,7 +16,7 @@ tags:
   - WebGL
   - WebGL API
 ---
-{{WebGLSidebar}}{{draft}}
+{{WebGLSidebar}}
 
 Shader programs have access to three kinds of data storage, each of which has a specific use case. Each kind of variable is accessible by one or both types of shader program (depending on the data store type) and possibly by the site's JavaScript code, depending on the specific type of variable.
 
@@ -26,7 +26,7 @@ Shader programs have access to three kinds of data storage, each of which has a 
 
 ## GLSL variables
 
-There are three kinds of "variable" or data storage available in GLSL, each of which with its own purpose and use cases: **{{anch("Attributes", "attributes")}}**, **{{anch("Varyings", "varyings")}}**, and **{{anch("Uniforms", "uniforms")}}**.
+There are three kinds of "variable" or data storage available in GLSL, each of which with its own purpose and use cases: **[attributes](#attributes)**, **[varyings](#varyings)**, and **[uniforms](#uniforms)**.
 
 ### Attributes
 

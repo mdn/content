@@ -17,10 +17,10 @@ The **`Array()`** constructor is used to create
 
 ```js
 // literal constructor
-[element0, element1, ..., elementN]
+[element0, element1, /* ... ,*/ elementN]
 
 // construct from elements
-new Array(element0, element1, ..., elementN)
+new Array(element0, element1, /* ... ,*/ elementN)
 
 // construct from array length
 new Array(arrayLength)
@@ -37,7 +37,7 @@ new Array(arrayLength)
 - `arrayLength`
   - : If the only argument passed to the `Array` constructor is an integer
     between 0 and 2^32 - 1 (inclusive), this returns a new JavaScript array with
-    its `length` property set to that number (**Note:** this
+    its `length` property set to that number (**Note:** this
     implies an array of `arrayLength` empty slots, not slots with actual
     `undefined` values). If the argument is any other number, a
     {{jsxref("RangeError")}} exception is thrown.

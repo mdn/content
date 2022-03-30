@@ -16,22 +16,16 @@ browser-compat: api.AnimationTimeline.currentTime
 ---
 {{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
-The **`currentTime`** read-only property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("AnimationTimeline")}} interface returns the timeline's current time in milliseconds, or `null` if the timeline is inactive.
+The **`currentTime`** read-only property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("AnimationTimeline")}} interface returns the timeline's current time in milliseconds, or `null` if the timeline is inactive.
 
-## Syntax
-
-```js
-var currentTime = AnimationTimeline.currentTime;
-```
-
-### Value
+## Value
 
 A number representing the timeline's current time in milliseconds, or `null` if the timeline is inactive.
 
 ## Reduced time precision
 
 To offer protection against timing attacks and fingerprinting, the precision of `animationTimeline.currentTime` might get rounded depending on browser settings.
-In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
+In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
 
 ```js
 // reduced time precision (2ms) in Firefox 60

@@ -15,7 +15,7 @@ The **`HTMLEmbedElement`** interface provides special properties (beyond the reg
 
 > **Note:** This topic describes the `HTMLEmbedElement` interface as defined in the standard. It does not address earlier, non-standardized version of the interface.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

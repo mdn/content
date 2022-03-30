@@ -12,23 +12,23 @@ The **`result`** attribute defines the assigned name for this filter primitive. 
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feBlend")}}
-*   {{SVGElement("feColorMatrix")}}
-*   {{SVGElement("feComponentTransfer")}}
-*   {{SVGElement("feComposite")}}
-*   {{SVGElement("feConvolveMatrix")}}
-*   {{SVGElement("feDiffuseLighting")}}
-*   {{SVGElement("feDisplacementMap")}}
-*   {{SVGElement("feDropShadow")}}
-*   {{SVGElement("feFlood")}}
-*   {{SVGElement("feGaussianBlur")}}
-*   {{SVGElement("feImage")}}
-*   {{SVGElement("feMerge")}}
-*   {{SVGElement("feMorphology")}}
-*   {{SVGElement("feOffset")}}
-*   {{SVGElement("feSpecularLighting")}}
-*   {{SVGElement("feTile")}}
-*   {{SVGElement("feTurbulence")}}
+- {{SVGElement("feBlend")}}
+- {{SVGElement("feColorMatrix")}}
+- {{SVGElement("feComponentTransfer")}}
+- {{SVGElement("feComposite")}}
+- {{SVGElement("feConvolveMatrix")}}
+- {{SVGElement("feDiffuseLighting")}}
+- {{SVGElement("feDisplacementMap")}}
+- {{SVGElement("feDropShadow")}}
+- {{SVGElement("feFlood")}}
+- {{SVGElement("feGaussianBlur")}}
+- {{SVGElement("feImage")}}
+- {{SVGElement("feMerge")}}
+- {{SVGElement("feMorphology")}}
+- {{SVGElement("feOffset")}}
+- {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feTile")}}
+- {{SVGElement("feTurbulence")}}
 
 ## Example
 
@@ -73,8 +73,8 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `<filter-primitive-reference>`
-    *   : This value is a {{cssxref("custom-ident")}} and defines the name for the filter primitive. It is only meaningful within a given {{SVGElement("filter")}} element and thus has only local scope. It is legal for the same `<filter-primitive-reference>` to appear multiple times within the same `<filter>` element. When referenced, this value will use the closest preceding filter primitive with the given result.
+- `<filter-primitive-reference>`
+  - : This value is a {{cssxref("custom-ident")}} and defines the name for the filter primitive. It is only meaningful within a given {{SVGElement("filter")}} element and thus has only local scope. It is legal for the same `<filter-primitive-reference>` to appear multiple times within the same `<filter>` element. When referenced, this value will use the closest preceding filter primitive with the given result.
 
 ## Specifications
 

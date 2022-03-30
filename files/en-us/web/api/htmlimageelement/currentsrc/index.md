@@ -18,13 +18,7 @@ The read-only {{domxref("HTMLImageElement")}} property
 **`currentSrc`** indicates the URL of the image which is
 currently presented in the {{HTMLElement("img")}} element it represents.
 
-## Syntax
-
-```js
-let currentSource = htmlImageElement.currentSrc;
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}} indicating the full URL of the image currently visible in
 the {{HTMLElement("img")}} element represented by the `HTMLImageElement`.
@@ -33,7 +27,7 @@ This is useful when you provide multiple image options using the
 {{domxref("HTMLImageElement.srcset")}} properties. `currentSrc` lets you
 determine which image from the set of provided images was selected by the browser.
 
-## Example
+## Examples
 
 In this example, two different sizes are provided for an image of a clock. One is 200px
 wide and the other is 400px wide. The {{htmlattrxref("sizes", "img")}} attribute is
@@ -44,10 +38,10 @@ document.
 ### HTML
 
 ```html
- <img src="/files/16797/clock-demo-400px.png"
-      alt="Clock"
-      srcset="/files/16864/clock-demo-200px.png 200w, /files/16797/clock-demo-400px.png 400w"
-      sizes="(max-width: 400px) 50%, 90%">
+ <img src="/files/16797/clock-demo-400px.png"
+      alt="Clock"
+      srcset="/files/16864/clock-demo-200px.png 200w, /files/16797/clock-demo-400px.png 400w"
+      sizes="(max-width: 400px) 50%, 90%">
 ```
 
 ### JavaScript

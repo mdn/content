@@ -12,19 +12,13 @@ tags:
   - Property
 browser-compat: api.CSSRotate.x
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`x`** property of the
 {{domxref("CSSRotate")}} interface gets and sets the abscissa or x-axis of the
 translating vector.
 
-## Syntax
-
-```js
-var rotateX = CSSRotate.x;
-```
-
-### Value
+## Value
 
 A double integer or a {{domxref("CSSNumericValue")}}
 

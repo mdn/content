@@ -16,7 +16,7 @@ browser-compat: api.OfflineAudioContext.suspend
 The **`suspend()`** method of the {{
   domxref("OfflineAudioContext") }} interface schedules a suspension of the time
 progression in the audio context at the specified time and returns a promise. This is
-generally useful at the time of manipulating the audio graph synchronously on
+generally useful at the time of manipulating the audio graph synchronously on
 OfflineAudioContext.
 
 Note that the maximum precision of suspension is the size of the render quantum and the
@@ -28,7 +28,7 @@ precise suspension.
 ## Syntax
 
 ```js
-OfflineAudioContext.suspend(suspendTime).then(function() { ... });
+OfflineAudioContext.suspend(suspendTime).then(function() { /* ... */ });
 ```
 
 ### Parameters
@@ -38,19 +38,18 @@ OfflineAudioContext.suspend(suspendTime).then(function() { ... });
 
 ### Returns
 
-A {{jsxref("Promise")}} resolving to void.
+A {{jsxref("Promise")}} resolving to {{jsxref('undefined')}}.
 
 ### Exceptions
 
-The promise is rejected when any exception is encountered.
+The promise is rejected when any exception is encountered.
 
-{{exception("InvalidStateError")}} if the quantized frame number is one of the
-following:
-
-- a negative number
-- is less than or equal to the current time
-- is greater than or equal to the total render duration
-- is scheduled by another suspend for the same time
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Returned if the quantized frame number is one of the following:
+    - a negative number
+    - less than or equal to the current time
+    - greater than or equal to the total render duration
+    - scheduled by another suspend for the same time
 
 ## Specifications
 

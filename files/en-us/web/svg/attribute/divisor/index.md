@@ -15,7 +15,7 @@ A divisor that is the sum of all the matrix values tends to have an evening effe
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feConvolveMatrix")}}
+- {{SVGElement("feConvolveMatrix")}}
 
 ## Example
 
@@ -65,8 +65,8 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `<number>`
-    *   : This value defines the divisor. If the specified divisor is `0` then the default value will be used instead.
+- `<number>`
+  - : This value defines the divisor. If the specified divisor is `0` then the default value will be used instead.
 
 ## Specifications
 

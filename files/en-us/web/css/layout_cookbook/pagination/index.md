@@ -17,7 +17,7 @@ This cookbook pattern demonstrates the navigation pattern used to display pagina
 
 ## Requirements
 
-The pagination pattern typically displays items in a row. To ensure that the pagination is understandable by people using a screenreader, we mark the items up as a list inside a {{htmlelement("nav")}} element, and then use CSS to display the layout visually as a row.
+The pagination pattern typically displays items in a row. To ensure that the pagination is understandable by people using a screenreader, we mark the items up as a list inside a {{htmlelement("nav")}} element, and then use CSS to display the layout visually as a row.
 
 Typically, the pagination component will be centered horizontally underneath the content.
 
@@ -41,19 +41,19 @@ Once the {{cssxref("column-gap")}} property has implementation in browsers this 
 
 ```css
 .pagination {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  column-gap: 2px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  column-gap: 2px;
 }
 ```
 
 ## Accessibility concerns
 
-We want to ensure that a person using a screenreader understands what this navigation does, and where they will go when clicking a link. To help with this we have added `aria-label="pagination"` on the `<nav>` element.
+We want to ensure that a person using a screenreader understands what this navigation does, and where they will go when clicking a link. To help with this we have added [`aria-label="pagination"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) on the `<nav>` element.
 
-We have also added some additional content that would be read by a screenreader but is hidden visually, and set the `aria-hidden` attribute on the paging arrows.
+We have also added some additional content that would be read by a screenreader but is hidden visually, and set the [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) attribute on the paging arrows.
 
 The "See Also" section at the end of this document has links to related accessibility topics.
 
@@ -63,17 +63,17 @@ The various layout methods have different browser support. See the charts below 
 
 _Include the compat data for key properties you used, as in the example below which includes align-items._
 
-#### justify-content
+### justify-content
 
 {{Compat("css.properties.justify-content")}}
 
-#### column-gap in Flex layout
+### column-gap in Flex layout
 
 {{Compat("css.properties.column-gap.flex_context")}}
 
 ## See also
 
-- {{Cssxref("justify-content")}}, {{Cssxref("column-gap")}}
+- {{Cssxref("justify-content")}}, {{Cssxref("column-gap")}}
 - [Know your ARIA: 'Hidden' vs 'None'](https://www.scottohara.me/blog/2018/05/05/hidden-vs-none.html)
 - [Invisible content just for screen reader users](https://webaim.org/techniques/css/invisiblecontent/#techniques)
 - [Writing CSS With Accessibility in mind](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939)

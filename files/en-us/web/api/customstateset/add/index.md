@@ -51,4 +51,3 @@ set checked(flag) {
 ## Browser compatibility
 
 {{Compat}}
-

@@ -23,7 +23,7 @@ occurred on a list of tracks ({{domxref("AudioTrackList")}},
 ## Syntax
 
 ```js
-trackEvent = new TrackEvent(type, eventInfo);
+new TrackEvent(type, eventInfo);
 ```
 
 ### Parameters

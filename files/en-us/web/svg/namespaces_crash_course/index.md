@@ -5,7 +5,7 @@ tags:
   - SVG
   - XML
 ---
-As an [XML](/en-US/docs/Glossary/XML) dialect, [SVG](/en-US/docs/Web/SVG) is namespaced. It is important to understand the concept of namespaces and how they are used if you plan to author SVG content. Versions of SVG viewers prior to the release of Firefox 1.5 unfortunately paid scant attention to namespaces, but they are essential to multi-XML dialect supporting user agents such as [Gecko](/en-US/docs/Mozilla/Gecko)-based browsers which must be very strict. Take some time to understand namespaces now and it will save you all sorts of headaches in the future.
+As an [XML](/en-US/docs/Glossary/XML) dialect, [SVG](/en-US/docs/Web/SVG) is namespaced. It is important to understand the concept of namespaces and how they are used if you plan to author SVG content. Versions of SVG viewers prior to the release of Firefox 1.5 unfortunately paid scant attention to namespaces, but they are essential to multi-XML dialect supporting user agents such as [Gecko](/en-US/docs/Glossary/Gecko)-based browsers which must be very strict. Take some time to understand namespaces now and it will save you all sorts of headaches in the future.
 
 ### Background
 
@@ -21,9 +21,11 @@ The real answer to the question is that XML content tells the user agent which d
 
 So what do these namespace declarations look like, and where do they go? Here is a short example.
 
-    <svg xmlns="http://www.w3.org/2000/svg">
-      <!-- more tags here -->
-    </svg>
+```html
+<svg xmlns="http://www.w3.org/2000/svg">
+  <!-- more tags here -->
+</svg>
+```
 
 The namespace declaration is provided by the `xmlns` parameter. This parameter says that the `<svg>` element and its child elements belong to whichever XML dialect has the namespace name `http://www.w3.org/2000/svg` which is, of course, SVG. Note that the namespace declaration only needs to be provided once on a root element. The declaration defines the *default* namespace, so the user agent knows that all the `<svg>` element's descendants also belong to the same namespace. User agents check to see if they recognize the namespace name to determine if they know how to handle the markup.
 
@@ -33,15 +35,17 @@ Note that namespace names are just strings, so the fact that the SVG namespace n
 
 So if all the descendants of the root element are also defined to be in the default namespace, how do you mix in content from another namespace? Easy. You just redefine the default namespace. Here's a short example.
 
-    <html xmlns="http://www.w3.org/1999/xhtml">
-      <body>
-        <!-- some XHTML tags here -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="300px" height="200px">
-          <!-- some SVG tags here -->
-        </svg>
-        <!-- some XHTML tags here -->
-      </body>
-    </html>
+```html
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <body>
+    <!-- some XHTML tags here -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="300px" height="200px">
+      <!-- some SVG tags here -->
+    </svg>
+    <!-- some XHTML tags here -->
+  </body>
+</html>
+```
 
 In this example the `xmlns` parameter on the root `<html>` element declares the default namespace to be XHTML. As a result, it and all its child elements are interpreted by the user agent as belonging to XHTML, except for the `<svg>` element. The `<svg>` element has its own `xmlns` parameter, and by redeclaring the default namespace, this tells the user agent that the `<svg>` element and its descendants (unless they also redeclare the default namespace) belong to SVG.
 
@@ -51,10 +55,12 @@ See, namespaces really aren't that hard.
 
 XML dialects not only define their own elements, but also their own parameters. By default, parameters don't have a namespace at all, and are only known to be unique because they appear on an element that itself has a unique name. However, sometimes it is necessary to define parameters so that they can be reused on many different elements and still be considered to be the same parameter, independently of the element with which they are used. A very good example of this is the `href` parameter defined by the XLink specification. This parameter is commonly used by other XML dialects as a means to link to external resources. But how do you tell the user agent which dialect the parameter belongs to, in this case XLink? Consider the following example.
 
-    <svg xmlns="http://www.w3.org/2000/svg"
-         xmlns:xlink="http://www.w3.org/1999/xlink">
-      <script xlink:href="cool-script.js" type="text/ecmascript"/>
-    </svg>
+```html
+<svg xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+  <script xlink:href="cool-script.js" type="text/ecmascript"/>
+</svg>
+```
 
 This example has the rather unusual looking parameter `xmlns:xlink`. As you may guess from the first 'xmlns' part, this is another namespace declaration. However, instead of setting the default namespace, this namespace declaration sets the namespace for something called a "namespace prefix". In this case, we have chosen to use the prefix `xlink` (the second part) since the prefix will be used to tell the user agent about attributes that belong to XLink.
 
@@ -64,15 +70,17 @@ Note that it is an XML error to use a prefix that hasn't been bound to a namespa
 
 As an aside, it's useful to know that namespace prefixes can also be used for element names. This tells the user agent that the particular element (but not its children this time!) belongs to the namespace assigned to the prefix. Knowing this will save you some confusion if you come across markup like in the following example:
 
-    <html xmlns="http://www.w3.org/1999/xhtml"
-          xmlns:svg="http://www.w3.org/2000/svg">
-      <body>
-        <h1>SVG embedded inline in XHTML</h1>
-        <svg:svg width="300px" height="200px">
-          <svg:circle cx="150" cy="100" r="50" fill="#ff0000"/>
-        </svg:svg>
-      </body>
-    </html>
+```html
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:svg="http://www.w3.org/2000/svg">
+  <body>
+    <h1>SVG embedded inline in XHTML</h1>
+    <svg:svg width="300px" height="200px">
+      <svg:circle cx="150" cy="100" r="50" fill="#ff0000"/>
+    </svg:svg>
+  </body>
+</html>
+```
 
 Note that because a namespace prefix is used for the `<svg:svg>` element and its child `<svg:circle>`, it wasn't necessary to redeclare the default namespace. In general though it is better to redeclare the default namespace rather than prefix lots of elements in this way.
 
@@ -298,9 +306,11 @@ image.setAttributeNS(XLink_NS, 'xlink:href', 'flower.png');
 
 Make sure you always declare the namespaces you use in your XML files. If you don't, user agents such as Firefox won't recognize your content and will show the XML markup or inform the user that there's an error in the XML. It's a good idea to use a template that includes all the commonly used namespace declarations when creating new SVG files. If you don't already have one, make one up starting with the following code:
 
-    <svg xmlns="http://www.w3.org/2000/svg"
-         xmlns:xlink="http://www.w3.org/1999/xlink">
-    </svg>
+```html
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+</svg>
+```
 
 Even if you don't use all those namespaces in a particular document, there's no harm in including the namespace declarations. It may save you from some annoying errors if you end up adding content from one of the unused namespaces at a later date.
 

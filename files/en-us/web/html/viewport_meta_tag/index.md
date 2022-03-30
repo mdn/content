@@ -6,6 +6,7 @@ tags:
   - Responsiveness
   - Mobile
   - viewport
+spec-urls: https://drafts.csswg.org/css-device-adapt/#viewport-meta
 ---
 
 This article describes how to use the "viewport" `<meta>` tag to control the viewport's size and shape.
@@ -30,7 +31,9 @@ Learn more about viewports in different mobile browsers in [A Tale of Two Viewpo
 
 A typical mobile-optimized site contains something like the following:
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1">
+```
 
 The `width` property controls the size of the viewport. It can be set to a specific number of pixels like `width=600` or to the special value `device-width`, which is the width of the screen in CSS pixels at a scale of 100%. (There are corresponding `height` and `device-height` values, which may be useful for pages with elements that change size or position based on the viewport height.)
 
@@ -56,17 +59,23 @@ Sites can set their viewport to a specific size. For example, the definition `"w
 
 For pages that set an initial or maximum scale, this means the `width` property actually translates into a _minimum_ viewport width. For example, if your layout needs at least 500 pixels of width then you can use the following markup. When the screen is more than 500 pixels wide, the browser will expand the viewport (rather than zoom in) to fit the screen:
 
-    <meta name="viewport" content="width=500, initial-scale=1">
+```html
+<meta name="viewport" content="width=500, initial-scale=1">
+```
 
 Other [attributes](/en-US/docs/Web/HTML/Element/meta#Attributes) that are available are `minimum-scale`, `maximum-scale`, and `user-scalable`. These properties affect the initial scale and width, as well as limiting changes in zoom level.
 
 Not all mobile browsers handle orientation changes in the same way. For example, Mobile Safari often just zooms the page when changing from portrait to landscape, instead of laying out the page as it would if originally loaded in landscape. If web developers want their scale settings to remain consistent when switching orientations on the iPhone, they must add a `maximum-scale` value to prevent this zooming, which has the sometimes-unwanted side effect of preventing users from zooming in:
 
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+```html
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+```
 
 Suppress the small zoom applied by many smartphones by setting the initial scale and minimum-scale values to 0.86. The result is horizontal scroll is suppressed in any orientation and the user can zoom in if they want to.
 
-    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
+```html
+<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
+```
 
 ## Common viewport sizes for mobile and tablet devices
 
@@ -74,25 +83,6 @@ If you want to know what mobile and tablet devices have which viewport widths, t
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('CSS3 Device', '#viewport-meta', '&lt;meta name="viewport"&gt;')}}
-      </td>
-      <td>{{Spec2('CSS3 Device')}}</td>
-      <td>Non-normatively describes the Viewport META element</td>
-    </tr>
-  </tbody>
-</table>
-
-There is clearly demand for the viewport meta tag, since it is supported by most popular mobile browsers and used by thousands of web sites. It would be good to have a true standard for web pages to control viewport properties. As the standardization process proceeds, we at Mozilla will work to keep up to date with any changes.
+{{Specifications}}
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/HTML")}}

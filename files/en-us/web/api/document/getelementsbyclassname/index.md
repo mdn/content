@@ -130,15 +130,15 @@ elements with ALL of the classNames specified are selected.
 // getElementsByClassName only selects elements that have both given classes
 var allOrangeJuiceByClass = document.getElementsByClassName('orange juice');
 var result = "document.getElementsByClassName('orange juice')";
-for (var i=0, len=allOrangeJuiceByClass.length|0; i<len; i=i+1|0) {
+for (var i=0; i < allOrangeJuiceByClass.length; i++) {
     result += "\n  " + allOrangeJuiceByClass[i].textContent;
 }
 
 // querySelector only selects full complete matches
 var allOrangeJuiceQuery = document.querySelectorAll('.orange.juice');
 result += "\n\ndocument.querySelectorAll('.orange.juice')";
-for (var i=0, len=allOrangeJuiceQuery.length|0; i<len; i=i+1|0) {
-    result += "\n  " + allOrangeJuiceQuery[i].textContent;
+for (var i=0; i < allOrangeJuiceQuery.length; i++) {
+    result += "\n  " + allOrangeJuiceQuery[i].textContent;
 }
 
 document.getElementById("resultArea").value = result;

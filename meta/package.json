@@ -1,0 +1,18 @@
+{
+  "name": "@mdn/meta",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "prebuild": "yarn submodule:get",
+    "build": "hugo",
+    "prestart": "yarn submodule:get",
+    "start": "hugo server --baseURL http://127.0.0.1",
+    "submodule:get": "git submodule update --init --recursive --depth 1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "hugo-extended": "^0.89.4",
+    "postcss": "^8.4.4",
+    "postcss-cli": "^9.0.2"
+  }
+}

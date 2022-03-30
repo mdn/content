@@ -13,11 +13,7 @@ browser-compat: api.PerformanceElementTiming.intersectionRect
 
 The **`intersectionRect`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the rectangle of the element within the viewport.
 
-## Syntax
-
-    var rect = PerformanceElementTiming.intersectionRect;
-
-### Value
+## Value
 
 A {{domxref("DOMRectReadOnly")}} which is the rectangle of the element within the viewport.
 

@@ -7,7 +7,7 @@ browser-compat: api.TransformStream
 ---
 {{APIRef("Streams")}}
 
-The `TransformStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a set of transformable data.
+The `TransformStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a set of transformable data.
 
 ## Constructor
 
@@ -57,6 +57,7 @@ const transformContent = {
       default:
         controller.enqueue(this.textencoder.encode(String(chunk)))
         break
+    }
   },
   flush() { /* do any destructor work here */ }
 }
@@ -144,5 +145,5 @@ Note that this is not resilient to other influences.
 
 ## See also
 
-- [WHATWG Stream Visualiser](https://whatwg-stream-visualizer.glitch.me/), for a basic visualisation of readable, writable, and transform streams.
+- [WHATWG Stream Visualizer](https://whatwg-stream-visualizer.glitch.me/), for a basic visualization of readable, writable, and transform streams.
 - [Streams—The Definitive Guide](https://web.dev/streams/)

@@ -18,25 +18,25 @@ Depending on the value of attribute {{SVGAttr("pointer-events")}}, graphics elem
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("a")}}
-*   {{SVGElement("altGlyph")}}
-*   {{SVGElement("audio")}}
-*   {{SVGElement("canvas")}}
-*   {{SVGElement("circle")}}
-*   {{SVGElement("ellipse")}}
-*   {{SVGElement("foreignObject")}}
-*   {{SVGElement("iframe")}}
-*   {{SVGElement("image")}}
-*   {{SVGElement("line")}}
-*   {{SVGElement("path")}}
-*   {{SVGElement("polygon")}}
-*   {{SVGElement("polyline")}}
-*   {{SVGElement("rect")}}
-*   {{SVGElement("text")}}
-*   {{SVGElement("textPath")}}
-*   {{SVGElement("tref")}}
-*   {{SVGElement("tspan")}}
-*   {{SVGElement("video")}}
+- {{SVGElement("a")}}
+- {{SVGElement("altGlyph")}}
+- {{SVGElement("audio")}}
+- {{SVGElement("canvas")}}
+- {{SVGElement("circle")}}
+- {{SVGElement("ellipse")}}
+- {{SVGElement("foreignObject")}}
+- {{SVGElement("iframe")}}
+- {{SVGElement("image")}}
+- {{SVGElement("line")}}
+- {{SVGElement("path")}}
+- {{SVGElement("polygon")}}
+- {{SVGElement("polyline")}}
+- {{SVGElement("rect")}}
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
+- {{SVGElement("video")}}
 
 ## Example
 
@@ -48,12 +48,12 @@ html, body, svg {
 
 ```html
 <svg viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="10" width="200" height="100" stroke="black"
+  <rect x="10" y="10" width="200" height="100" stroke="black"
       stroke-width="5" fill="transparent" />
-  <g stroke="seagreen" stroke-width="5" fill="skyblue">
-    <rect x="20" y="20" width="80" height="80" visibility="visible" />
-    <rect x="120" y="20" width="80" height="80" visibility="hidden"/>
-  </g>
+  <g stroke="seagreen" stroke-width="5" fill="skyblue">
+    <rect x="20" y="20" width="80" height="80" visibility="visible" />
+    <rect x="120" y="20" width="80" height="80" visibility="hidden"/>
+  </g>
 </svg>
 ```
 
@@ -80,12 +80,12 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `visible`
-    *   : This value indicates that the element will be painted.
-*   `hidden`
-    *   : This value indicates that the element will not be painted. Though it is still part of the rendering tree, i.e. it may receive pointer events depending on the {{SVGAttr("pointer-events")}} attribute, may receive focus depending on the {{SVGAttr("tabindex")}} attribute, contributes to bounding box calculations and clipping paths, and does affect text layout.
-*   `collapse`
-    *   : This value is equal to `hidden`.
+- `visible`
+  - : This value indicates that the element will be painted.
+- `hidden`
+  - : This value indicates that the element will not be painted. Though it is still part of the rendering tree, i.e. it may receive pointer events depending on the {{SVGAttr("pointer-events")}} attribute, may receive focus depending on the {{SVGAttr("tabindex")}} attribute, contributes to bounding box calculations and clipping paths, and does affect text layout.
+- `collapse`
+  - : This value is equal to `hidden`.
 
 ## Example
 
@@ -175,5 +175,5 @@ document.querySelector("button").addEventListener("click", function (evt) {
 
 ## See also
 
-*   {{SVGAttr("display")}} attribute
-*   {{cssxref("visibility", "CSS visibility")}}
+- {{SVGAttr("display")}} attribute
+- {{cssxref("visibility", "CSS visibility")}}

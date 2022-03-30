@@ -9,7 +9,7 @@ tags:
   - barcode detector
 browser-compat: api.BarcodeDetector
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}
+{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}
 
 The **`BarcodeDetector`** interface of the {{domxref('Barcode Detection API')}} allows detection of linear and two dimensional barcodes in images.
 
@@ -57,7 +57,7 @@ The following example calls the `getSupportFormat()` static method and logs the 
 ```js
 // check supported types
 BarcodeDetector.getSupportedFormats()
-  .then(formats => {
+  .then(supportedFormats => {
     supportedFormats.forEach(format => console.log(format));
   });
 ```

@@ -18,11 +18,9 @@ browser-compat: api.DeviceMotionEvent.interval
 Returns the interval, in milliseconds, at which data is obtained from the underlying
 hardware. You can use this to determine the granularity of motion events.
 
-## Syntax
+## Value
 
-```js
-var interval = deviceMotionEvent.interval;
-```
+A number representing the interval of time, in milliseconds.
 
 ## Specifications
 
@@ -35,11 +33,10 @@ var interval = deviceMotionEvent.interval;
 ## See also
 
 - {{DOMxRef("DeviceMotionEvent")}}
-- {{Event("devicemotion")}}
-- {{DOMxRef("window.ondevicemotion")}}
-- {{Event("deviceorientation")}}
+- {{DOMxRef("window.devicemotion_event", "devicemotion") }} event
+- {{DOMxRef("window.deviceorientation_event", "deviceorientation") }} event
 - {{DOMxRef("DeviceOrientationEvent")}}
 - [Detecting device
   orientation](/en-US/docs/Web/API/Detecting_device_orientation)
 - [Orientation and motion data
-  explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained "Orientation and motion data explained")
+  explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained)

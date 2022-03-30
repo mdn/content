@@ -16,30 +16,24 @@ tags:
   - shadow dom
 browser-compat: api.Element.openOrClosedShadowRoot
 ---
-{{APIRef("Shadow DOM")}}{{Draft}}{{non-standard_header}}
+{{APIRef("Shadow DOM")}}{{non-standard_header}}
 
 > **Note:** This API is available only to [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).
 
-The `Element.openOrCloseShadowRoot` read-only
+The `Element.openOrClosedShadowRoot` read-only
 property represents the shadow root hosted by the element, regardless if its
 {{DOMxRef("ShadowRoot.mode", "mode")}} is `open` or
 `closed`.
 
-Use {{DOMxRef("Element.attachShadow()")}} to add a shadow
+Use {{DOMxRef("Element.attachShadow()")}} to add a shadow
 root to an existing element.
 
-## Syntax
-
-```js
-var shadowroot = element.openOrCloseShadowRoot;
-```
-
-### Value
+## Value
 
 A {{DOMxRef("ShadowRoot")}} object instance, regardless if its
 {{DOMxRef("ShadowRoot.mode", "mode")}} is set to `open` or
-`closed`, or `null` if no shadow root is present.
-(See {{DOMxRef("Element.attachShadow()")}} for further details).
+`closed`, or `null` if no shadow root is present.
+(See {{DOMxRef("Element.attachShadow()")}} for further details).
 
 ## Specifications
 

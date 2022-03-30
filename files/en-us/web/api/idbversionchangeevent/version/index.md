@@ -19,13 +19,7 @@ browser-compat: api.IDBVersionChangeEvent.version
 
 The **`version`** property of the
 {{domxref("IDBVersionChangeEvent")}} interface returns The new version of the database
-in a [versionchange](/en-US/docs/Web/API/IDBTransaction#version_change) transaction.
-
-## Syntax
-
-```js
-const version = iDBVersionChangeEvent.version;
-```
+in a [versionchange](/en-US/docs/Web/API/IDBTransaction#version_change) transaction.
 
 ## Value
 

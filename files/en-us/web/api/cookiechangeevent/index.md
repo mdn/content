@@ -20,9 +20,11 @@ Cookie changes that will cause the `CookieChangeEvent` to be dispatched are:
 
 > **Note:** A cookie that is replaced due to the insertion of another cookie with the same name, domain, and path, is ignored and does not trigger a change event.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
-- {{domxref("CookieChangeEvent.CookieChangeEvent()")}}
+- {{domxref("CookieChangeEvent.CookieChangeEvent", "CookieChangeEvent()")}}
   - : Creates a new `CookieChangeEvent`.
 
 ## Properties

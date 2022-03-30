@@ -13,9 +13,9 @@ The **`horiz-adv-x`** attribute indicates the horizontal advance after rendering
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("font")}}
-*   {{SVGElement("glyph")}}
-*   {{SVGElement("missing-glyph")}}
+- {{SVGElement("font")}}
+- {{SVGElement("glyph")}}
+- {{SVGElement("missing-glyph")}}
 
 ## font
 
@@ -44,8 +44,8 @@ For {{SVGElement("font")}} elements, `horiz-adv-x` specifies the default horizon
   </tbody>
 </table>
 
-*   `<number>`
-    *   : This value indicates the horizontal advance of the glyph.
+- `<number>`
+  - : This value indicates the horizontal advance of the glyph.
 
 ## glyph, missing-glyph
 
@@ -76,8 +76,8 @@ For {{SVGElement("glyph")}} and {{SVGElement("missing-glyph")}} elements, `horiz
   </tbody>
 </table>
 
-*   `<number>`
-    *   : This value indicates the horizontal advance of the glyph.
+- `<number>`
+  - : This value indicates the horizontal advance of the glyph.
 
 ## Specifications
 
@@ -116,4 +116,4 @@ For {{SVGElement("glyph")}} and {{SVGElement("missing-glyph")}} elements, `horiz
 
 ## See also
 
-*   {{SVGAttr("vert-adv-y")}}
+- {{SVGAttr("vert-adv-y")}}

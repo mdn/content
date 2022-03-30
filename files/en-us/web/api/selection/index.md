@@ -3,13 +3,12 @@ title: Selection
 slug: Web/API/Selection
 tags:
   - API
-  - Experimental
   - Interface
   - Reference
   - Selection
 browser-compat: api.Selection
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ ApiRef("Selection API") }}
 
 A **`Selection`** object represents the range of text selected by the user or the current position of the caret. To obtain a `Selection` object for examination or manipulation, call {{DOMxRef("window.getSelection()")}}.
 
@@ -104,9 +103,9 @@ The Selection API has a common behavior (i.e., shared between browsers) that gov
 
 The behavior is as follows:
 
-1.  An editing host gains focus if the previous selection was outside of it.
-2.  A Selection API method is called, causing a new selection to be made with the selection range inside the editing host.
-3.  Focus then moves to the editing host.
+1. An editing host gains focus if the previous selection was outside of it.
+2. A Selection API method is called, causing a new selection to be made with the selection range inside the editing host.
+3. Focus then moves to the editing host.
 
 > **Note:** The Selection API methods may only move focus to an editing host, not to other focusable elements (e.g., {{HTMLElement("a")}}).
 

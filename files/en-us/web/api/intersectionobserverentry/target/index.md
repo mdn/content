@@ -20,20 +20,14 @@ read-only **`target`** property indicates which targeted
 {{domxref("Element")}} has changed its amount of intersection with the intersection
 root.
 
-## Syntax
-
-```js
-var target = IntersectionObserverEntry.target;
-```
-
-### Value
+## Value
 
 The `IntersectionObserverEntry`'s `target` property specifies
 which {{domxref("Element")}} previously targeted by calling
 {{domxref("IntersectionObserver.observe()")}} experienced a change in intersection with
 the root.
 
-## Example
+## Examples
 
 In this simple example, each targeted element's {{cssxref("opacity")}} is set to its
 {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}}.

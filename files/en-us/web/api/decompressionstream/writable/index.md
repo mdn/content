@@ -13,11 +13,7 @@ browser-compat: api.DecompressionStream.writable
 
 The **`writable`** read-only property of the {{domxref("DecompressionStream")}} interface returns a {{domxref("WritableStream")}}.
 
-## Syntax
-
-    let writableStream = DecompressionStream.writable;
-
-### Value
+## Value
 
 A {{domxref("WritableStream")}}.
 

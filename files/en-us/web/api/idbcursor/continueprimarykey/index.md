@@ -14,7 +14,7 @@ browser-compat: api.IDBCursor.continuePrimaryKey
 {{APIRef("IndexedDB")}}
 
 The **`continuePrimaryKey()`** method of the
-{{domxref("IDBCursor")}} interface advances the cursor to the to the item whose key
+{{domxref("IDBCursor")}} interface advances the cursor to the item whose key
 matches the key parameter as well as whose primary key matches the primary key
 parameter.
 
@@ -24,7 +24,7 @@ without having to compare the keys one by one.
 Calling this method more than once before new cursor data has been loaded - for
 example, calling `continuePrimaryKey()` twice from the same onsuccess handler
 \- results in an `InvalidStateError` being thrown on the second call because
-the cursor’s got value flag has been unset.
+the cursor's got value flag has been unset.
 
 This method is only valid for cursors coming from an index. Using it for cursors coming
 from an object store will throw an error.
@@ -48,53 +48,21 @@ cursor.continuePrimaryKey(key, primaryKey);
 
 This method may raise a {{domxref("DOMException")}} of one of the following types:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>TransactionInactiveError</code></td>
-      <td>This IDBCursor's transaction is inactive.</td>
-    </tr>
-    <tr>
-      <td><code>DataError</code></td>
-      <td>
-        <p>The key parameter may have any of the following conditions:</p>
-        <ul>
-          <li>The key is not a valid key.</li>
-          <li>
-            The key is less than or equal to this cursor's position and the
-            cursor's direction is <code>next</code> or <code>nextunique</code>.
-          </li>
-          <li>
-            The key is greater than or equal to this cursor's position and this
-            cursor's direction is <code>prev</code> or <code>prevunique</code>.
-          </li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>
-        The cursor is currently being iterated or has iterated past its end.
-      </td>
-    </tr>
-    <tr>
-      <td><code>InvalidAccessError</code></td>
-      <td>
-        The cursor's direction is not <code>prev</code> or <code>next</code>.
-      </td>
-    </tr>
-  </tbody>
-</table>
+- `TransactionInactiveError` {{domxref("DOMException")}}
+  - : Thrown if this IDBCursor's transaction is inactive.
+- `DataError` {{domxref("DOMException")}}
+  - : Thrown if the key parameter has any of the following conditions:
+    - The key is not a valid key.
+    - The key is less than or equal to this cursor's position and the cursor's direction is `next` or `nextunique`.
+    - The key is greater than or equal to this cursor's position and this cursor's direction is `prev` or `prevunique`.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the cursor is currently being iterated or has iterated past its end.
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : Thrown if the The cursor's direction is not `prev` or `next`.
 
 ## Example
 
-here’s how you can resume an iteration of all articles tagged with
+here's how you can resume an iteration of all articles tagged with
 `"javascript"` since your last visit:
 
 ```js

@@ -15,7 +15,7 @@ browser-compat: css.properties.content-visibility
 ---
 {{CSSRef}}
 
-The **`content-visibility`** [CSS](/en-US/docs/Web/CSS) property controls whether or not an element renders its contents at all, along with forcing a strong set of containments, allowing user agents to potentially omit large swathes of layout and rendering work until it becomes needed. Basically it enables the user agent to skip an element's rendering work (including layout and painting) until it is needed — which makes the initial page load much faster.
+The **`content-visibility`** [CSS](/en-US/docs/Web/CSS) property controls whether or not an element renders its contents at all, along with forcing a strong set of containments, allowing user agents to potentially omit large swathes of layout and rendering work until it becomes needed. Basically it enables the user agent to skip an element's rendering work (including layout and painting) until it is needed — which makes the initial page load much faster.
 
 ## Syntax
 
@@ -35,7 +35,7 @@ content-visibility: unset;
 ### Values
 
 - `visible`
-  - : No effect. The element’s contents are laid out and rendered as normal.
+  - : No effect. The element's contents are laid out and rendered as normal.
 - `hidden`
   - : The element skips its contents. The skipped contents must not be accessible to user-agent features, such as find-in-page, tab-order navigation, etc., nor be selectable or focusable. This is similar to giving the contents `display: none`.
 - `auto`
@@ -45,11 +45,11 @@ content-visibility: unset;
 
 {{cssinfo}}
 
-## Accessibility concerns
+## Accessibility
 
-Headings and other content will be suppressed by `content-visibility` if they are considered off-screen. This means that screen reader users may lose the benefit of having a complete page outline read out loud.
+Prior to Chromium 90, offscreen headers and landmark roles within `content-visibility: auto` were not exposed to a11y tools. As of Chromium 90, this has been corrected, and off-screen content within a `content-visibility: auto` element remains in the document object model and the accessability tree. This allows improving page performance with `content-visibility: auto` without negatively impacting accessability.
 
-For more information read [Content-visibility and Accessible Semantics](https://marcysutton.com/content-visibility-accessible-semantics).
+However, one caveat to keep in mind is that, since styles for off-screen content are not rendered, elements intentionally hidden with `display: none` or `visibility: hidden` *will still appear in the accessability tree*. If you don't want an element to appear in the accessability tree, use `aria-hidden="true"`.
 
 ## Examples
 

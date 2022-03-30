@@ -15,16 +15,9 @@ browser-compat: api.Document.selectedStyleSheetSet
 
 The **`selectedStyleSheetSet`** property indicates the name of the style sheet set that's currently in use.
 
-## Syntax
+## Value
 
-```js
-currentStyleSheetSet = document.selectedStyleSheetSet;
-
-document.selectedStyleSheet = newStyleSheetSet;
-```
-
-On return, `currentStyleSheetSet` indicates the name of the style sheet set
-currently in use. You can also set the current style sheet set using this property.
+The name of the style sheet set currently in use. You can also set the current style sheet set using this property.
 
 Setting the value of this property is equivalent to calling
 {{domxref("document.enableStyleSheetsForSet()")}} with the value of
@@ -35,7 +28,7 @@ Setting the value of this property is equivalent to calling
 > the `disabled` attribute on style sheets will affect the value of this
 > attribute.
 
-## Example
+## Examples
 
 ```js
 console.log('Current style sheet set: ' + document.selectedStyleSheetSet);

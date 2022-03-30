@@ -17,6 +17,8 @@ A `PannerNode` always has exactly one input and one output: the input can be _mo
 
 ![The PannerNode brings a spatial position and velocity and a directionality for a given signal.](webaudiopannernode.png)
 
+{{InheritanceDiagram}}
+
 <table class="properties">
   <tbody>
     <tr>
@@ -51,7 +53,7 @@ A `PannerNode` always has exactly one input and one output: the input can be _mo
 
 _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
-> **Note:** The orientation and position value are set and retrieved using different syntaxes, since they're stored as {{domxref("AudioParam")}} values. Retrieval is done by accessing, for example, `PannerNode.positionX`. While setting the same property is done with `PannerNode.positionX.value`. This is why these values are not marked read only, which is how they appear in the WebIDL.
+> **Note:** The orientation and position value are set and retrieved using different syntaxes, since they're stored as {{domxref("AudioParam")}} values. Retrieval is done by accessing, for example, `PannerNode.positionX`. While setting the same property is done with `PannerNode.positionX.value`. This is why these values are not marked read only, which is how they appear in the WebIDL.
 
 - {{domxref("PannerNode.coneInnerAngle")}}
   - : Is a double value describing the angle, in degrees, of a cone inside of which there will be no volume reduction.
@@ -64,19 +66,19 @@ _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 - {{domxref("PannerNode.maxDistance")}}
   - : A double value representing the maximum distance between the audio source and the listener, after which the volume is not reduced any further.
 - {{domxref("PannerNode.orientationX")}}
-  - : Represents the horizontal position of the audio source's vector in a right-hand cartesian coordinate system. While this {{domxref("AudioParam")}} cannot be directly changed, its value can be altered using its {{domxref("AudioParam.value", "value")}} property. The default is value is 1.
+  - : Represents the horizontal position of the audio source's vector in a right-hand cartesian coordinate system. While this {{domxref("AudioParam")}} cannot be directly changed, its value can be altered using its {{domxref("AudioParam.value", "value")}} property. The default is value is 1.
 - {{domxref("PannerNode.orientationY")}}
-  - : Represents the vertical position of the audio source's vector in a right-hand cartesian coordinate system. The default is 0. While this {{domxref("AudioParam")}} cannot be directly changed, its value can be altered using its {{domxref("AudioParam.value", "value")}} property. The default is value is 0.
+  - : Represents the vertical position of the audio source's vector in a right-hand cartesian coordinate system. The default is 0. While this {{domxref("AudioParam")}} cannot be directly changed, its value can be altered using its {{domxref("AudioParam.value", "value")}} property. The default is value is 0.
 - {{domxref("PannerNode.orientationZ")}}
-  - : Represents the longitudinal (back and forth) position of the audio source's vector in a right-hand cartesian coordinate system. The default is 0. While this {{domxref("AudioParam")}} cannot be directly changed, its value can be altered using its {{domxref("AudioParam.value", "value")}} property. The default is value is 0.
+  - : Represents the longitudinal (back and forth) position of the audio source's vector in a right-hand cartesian coordinate system. The default is 0. While this {{domxref("AudioParam")}} cannot be directly changed, its value can be altered using its {{domxref("AudioParam.value", "value")}} property. The default is value is 0.
 - {{domxref("PannerNode.panningModel")}}
   - : An enumerated value determining which spatialisation algorithm to use to position the audio in 3D space.
 - {{domxref("PannerNode.positionX")}}
-  - : Represents the horizontal position of the audio in a right-hand cartesian coordinate system. The default is 0. While this {{domxref("AudioParam")}} cannot be directly changed, its value can be altered using its {{domxref("AudioParam.value", "value")}} property. The default is value is 0.
+  - : Represents the horizontal position of the audio in a right-hand cartesian coordinate system. The default is 0. While this {{domxref("AudioParam")}} cannot be directly changed, its value can be altered using its {{domxref("AudioParam.value", "value")}} property. The default is value is 0.
 - {{domxref("PannerNode.positionY")}}
-  - : Represents the vertical position of the audio in a right-hand cartesian coordinate system. The default is 0. While this {{domxref("AudioParam")}} cannot be directly changed, its value can be altered using its {{domxref("AudioParam.value", "value")}} property. The default is value is 0.
+  - : Represents the vertical position of the audio in a right-hand cartesian coordinate system. The default is 0. While this {{domxref("AudioParam")}} cannot be directly changed, its value can be altered using its {{domxref("AudioParam.value", "value")}} property. The default is value is 0.
 - {{domxref("PannerNode.positionZ")}}
-  - : Represents the longitudinal (back and forth) position of the audio in a right-hand cartesian coordinate system. The default is 0. While this {{domxref("AudioParam")}} cannot be directly changed, its value can be altered using its {{domxref("AudioParam.value", "value")}} property. The default is value is 0.
+  - : Represents the longitudinal (back and forth) position of the audio in a right-hand cartesian coordinate system. The default is 0. While this {{domxref("AudioParam")}} cannot be directly changed, its value can be altered using its {{domxref("AudioParam.value", "value")}} property. The default is value is 0.
 - {{domxref("PannerNode.refDistance")}}
   - : A double value representing the reference distance for reducing volume as the audio source moves further from the listener. For distances greater than this the volume will be reduced based on `rolloffFactor` and `distanceModel`.
 - {{domxref("PannerNode.rolloffFactor")}}

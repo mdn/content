@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.Date.getUTCMilliseconds
 {{JSRef}}
 
 The **`getUTCMilliseconds()`** method returns the milliseconds
-portion of the time object's value.
+portion of the time object's value according to universal time.
 
 {{EmbedInteractiveExample("pages/js/date-getutcmilliseconds.html","shorter")}}
 
@@ -24,12 +24,14 @@ getUTCMilliseconds()
 
 ### Return value
 
-An integer number, between 0 and 999, representing the milliseconds portion of the
-given date object.  This method is a companion to the other UTC based methods that give
-hour portion, minute portion, etc.; this method gives milliseconds portion.
+A `number`.
+If the `Date` object represents a valid date, an integer between 0 and 999, representing
+the milliseconds portion of the given `Date` object according to universal time.
+Otherwise, [`NaN`](/en-us/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN)
+if the `Date` object doesn't represent a valid date.
 
-Not to be confused with Unix epoch time.  To get total milliseconds since 1970/01/01,
-use the method ".getTime()".
+Not to be confused with Unix epoch time. To get the total milliseconds since 1970/01/01,
+use the [`Date.getTime()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime) method.
 
 ## Examples
 

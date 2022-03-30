@@ -27,7 +27,7 @@ var debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
 var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
 ```
 
-The [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial "WebGL tutorial") has more information, examples, and resources on how to get started with WebGL.
+The [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) has more information, examples, and resources on how to get started with WebGL.
 
 ## Table of contents
 
@@ -850,7 +850,7 @@ Constants passed to {{domxref("WebGLRenderingContext.cullFace()")}}.
       <td><code>FRONT_AND_BACK</code></td>
       <td>0x0408</td>
       <td>
-        Passed to <code>cullFace</code> to specify that front and back faces
+        Passed to <code>cullFace</code> to specify that front and back faces
         should be culled.
       </td>
     </tr>
@@ -1911,8 +1911,8 @@ Constants passed to {{domxref("WebGLRenderingContext.texParameter", "WebGLRender
 
 | Constant name                               | Value  | Description                                         |
 | ------------------------------------------- | ------ | --------------------------------------------------- |
-| `RGBA32F_EXT`                               | 0x8814 | RGBA 32-bit floating-point color-renderable format. |
-| `RGB32F_EXT`                                | 0x8815 | RGB 32-bit floating-point color-renderable format.  |
+| `RGBA32F_EXT`                               | 0x8814 | RGBA 32-bit floating-point color-renderable format. |
+| `RGB32F_EXT`                                | 0x8815 | RGB 32-bit floating-point color-renderable format.  |
 | `FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT` | 0x8211 |                                                     |
 | `UNSIGNED_NORMALIZED_EXT`                   | 0x8C17 |                                                     |
 

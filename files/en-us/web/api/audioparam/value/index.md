@@ -18,19 +18,12 @@ The [Web Audio API's](/en-US/docs/Web/API/Web_Audio_API)
 {{domxref("AudioParam")}} interface property **`value`** gets
 or sets the value of this {{domxref("AudioParam")}} at the current time. Initially, the value is set to {{domxref("AudioParam.defaultValue")}}.
 
-Setting `value` has the same effect as
-calling {{domxref("AudioParam.setValueAtTime")}} with the time returned by the
+Setting `value` has the same effect as
+calling {{domxref("AudioParam.setValueAtTime")}} with the time returned by the
 `AudioContext`'s {{domxref("BaseAudioContext/currentTime", "currentTime")}}
-property..
+property.
 
-## Syntax
-
-```js
-var curValue = audioParam.value;
-audioParam.value = newValue;
-```
-
-### Value
+## Value
 
 A floating-point {{jsxref("Number")}} indicating the parameter's value as of the
 current time. This value will be between the values specified by the
@@ -51,22 +44,24 @@ Consider this example:
 ```js
 const source = new AudioBufferSourceNode(...);
 const rate = 5.3;
-source.playbackRate.value = rate;
-console.log(source.playbackRate.value === rate);
+source.playbackRate.value = rate;
+console.log(source.playbackRate.value === rate);
 ```
 
-The log output will be `false`, because the playback rate parameter,
+The log output will be `false`, because the playback rate parameter,
 `rate`, was converted to the 32-bit floating-point number closest to 5.3,
-which yields 5.300000190734863. One solution is to use the {{jsxref("Math.fround()")}}
+which yields 5.300000190734863. One solution is to use the {{jsxref("Math.fround()")}}
 method, which returns the single-precision value equivalent to the 64-bit JavaScript
 value specified—when setting `value`, like this:
 
-    const source = new AudioBufferSourceNode(...);
-    const rate = Math.fround(5.3);
-    source.playbackRate.value = rate;
-    console.log(source.playbackRate.value === rate);
+```js
+const source = new AudioBufferSourceNode(...);
+const rate = Math.fround(5.3);
+source.playbackRate.value = rate;
+console.log(source.playbackRate.value === rate);
+```
 
-In this case, the log output will be `true`.
+In this case, the log output will be `true`.
 
 ### Value of a property which is changing over time
 
@@ -78,7 +73,7 @@ addition to processing audio buffers, each render quantum updates the `value`
 of each `AudioParam` as needed given the current time and any established
 time-based parameter value changes.
 
-Upon first creating the parameter, its value is set to its default value, given by 
+Upon first creating the parameter, its value is set to its default value, given by
 {{domxref("AudioParam.defaultValue")}}. This is the parameter's value at a time of 0.0
 seconds, and will remain the parameter's value until the first render quantum in which
 the value is altered.
@@ -91,9 +86,9 @@ the value of a parameter:
 - If the current time equals or exceeds the time specified by a previous call to
   {{domxref("AudioParam.setValueAtTime", "setValueAtTime()")}}, the `value`
   is changed to the value passed into `setValueAtTime()`.
-- If any gradiated or ramped value changing methods have been called and the current
+- If any graduated or ramped value changing methods have been called and the current
   time is within the time range over which the graduated change should occur, the value
-  is updated based on the appropriate algorithm. These ramped or gradiated
+  is updated based on the appropriate algorithm. These ramped or graduated
   value-changing methods include {{domxref("AudioParam.linearRampToValueAtTime",
     "linearRampToValueAtTime()")}}, {{domxref("AudioParam.setTargetAtTime",
     "setTargetAtTime()")}}, and {{domxref("AudioParam.setValueCurveAtTime",
@@ -102,7 +97,7 @@ the value of a parameter:
 Thus, the `value` of a parameter is maintained to accurately reflect the
 state of the parameter over time.
 
-## Example
+## Examples
 
 This example instantly changes the volume of a {{domxref("GainNode")}} to 40%.
 
@@ -110,7 +105,7 @@ This example instantly changes the volume of a {{domxref("GainNode")}} to 40%.
 const audioCtx = new AudioContext();
 const gainNode = audioCtx.createGain();
 gainNode.gain.value = 0.4;
-//which is identical to:
+// which is identical to:
 gainNode.gain.setValueAtTime(0.4, audioCtx.currentTime);
 ```
 

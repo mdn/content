@@ -18,8 +18,8 @@ An `SVGAngle` object can be associated with a particular element. The associated
 
 Every `SVGAngle` object operates in one of two modes:
 
-1.  **_Reflect the base value_** of a reflected animatable attribute (being exposed through the {{SVGAttr("baseVal")}} member of an {{domxref("SVGAnimatedAngle")}}),
-2.  **_Be detached_,** which is the case for `SVGAngle` objects created with {{domxref("SVGSVGElement.createSVGAngle()")}}.
+1. **_Reflect the base value_** of a reflected animatable attribute (being exposed through the {{SVGAttr("baseVal")}} member of an {{domxref("SVGAnimatedAngle")}}),
+2. **_Be detached_,** which is the case for `SVGAngle` objects created with {{domxref("SVGSVGElement.createSVGAngle()")}}.
 
 ## Constants
 
@@ -48,7 +48,7 @@ Every `SVGAngle` object operates in one of two modes:
 
   - : The value as a floating point value, in the units expressed by `unitType`. Setting this attribute will cause `value` and `valueAsString` to be updated automatically to reflect this setting.
 
-    **Exceptions on setting:** A {{domxref("DOMException")}} with code `NO_MODIFICATION_ALLOWED_ERR` is raised when the length corresponds to a read-only attribute, or when the object itself is read-only.
+    **Exceptions on setting:** A {{domxref("DOMException")}} with code `NO_MODIFICATION_ALLOWED_ERR` is raised when the length corresponds to a read-only attribute, or when the object itself is read-only.
 
 - `valueAsString`
 

@@ -14,7 +14,7 @@ browser-compat: http.headers.Link
 ---
 {{HTTPSidebar}}
 
-The HTTP **`Link`** entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML {{HTMLElement("link")}} element.
+The HTTP **`Link`** entity-header field provides a means for serializing one or more links in HTTP headers. It is semantically equivalent to the HTML {{HTMLElement("link")}} element.
 
 ## Syntax
 
@@ -51,7 +51,9 @@ Link: <https://one.example.com>; rel="preconnect", <https://two.example.com>; re
 
 ## Specifications
 
-{{Specifications}}
+| Specification                                            | Title       |
+| -------------------------------------------------------- | ----------- |
+| {{RFC(8288, "Link Serialization in HTTP Headers", "3")}} | Web Linking |
 
 ## Browser compatibility
 
@@ -60,3 +62,4 @@ Link: <https://one.example.com>; rel="preconnect", <https://two.example.com>; re
 ## See also
 
 - {{HTTPStatus(103, "103 Early Hints")}}
+- {{HTMLElement("link")}}

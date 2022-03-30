@@ -51,7 +51,7 @@ can call `toSource` while debugging to examine the contents of an array.
 To examine the source code of an array:
 
 ```js
-var alpha = new Array('a', 'b', 'c');
+const alpha = new Array('a', 'b', 'c');
 
 alpha.toSource();
 //returns ['a', 'b', 'c']

@@ -23,7 +23,7 @@ not currently suspended or the rendering has not started, the promise is rejecte
 ## Syntax
 
 ```js
-OfflineAudioContext.resume().then(function() { ... });
+OfflineAudioContext.resume().then(function() { /* ... */ });
 ```
 
 ### Parameters
@@ -32,14 +32,14 @@ None.
 
 ### Returns
 
-A {{jsxref("Promise")}} resolving to void.
+A {{jsxref("Promise")}} resolving to {{jsxref('undefined')}}.
 
 ### Exceptions
 
-The promise is rejected when the following exception is encountered.
+The promise is rejected when an exception is encountered.
 
-- {{exception("InvalidStateError")}}  if the context is not currently suspended or the
-  rendering has not started.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Returned if the context is not currently suspended or the rendering has not started.
 
 ## Specifications
 

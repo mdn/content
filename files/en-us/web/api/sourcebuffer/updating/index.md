@@ -14,11 +14,11 @@ tags:
   - Video
 browser-compat: api.SourceBuffer.updating
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{draft}}
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 The **`updating`** read-only property of the
 {{domxref("SourceBuffer")}} interface indicates whether the `SourceBuffer` is
-currently being updated — i.e. whether an {{domxref("SourceBuffer.appendBuffer()")}}, 
+currently being updated — i.e. whether an {{domxref("SourceBuffer.appendBuffer()")}},
 {{domxref("SourceBuffer.appendStream()")}}, or {{domxref("SourceBuffer.remove()")}}
 operation is currently in progress.
 

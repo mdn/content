@@ -87,10 +87,10 @@ single cookie at a time using this method. Consider also that:
     with cookies from http domains.
   - `;samesite` [SameSite](/en-US/docs/Web/HTTP/Cookies#samesite_cookies)
     prevents the browser from sending this cookie along with cross-site
-    requests. Possible values are `lax`,
-    `strict` or `none`.
+    requests. Possible values are `lax`,
+    `strict` or `none`.
 
-    - The `lax` value will send the cookie for all same-site
+    - The `lax` value will send the cookie for all same-site
       requests and top-level navigation GET requests. This is sufficient
       for user tracking, but it will prevent many [Cross-Site Request Forgery](/en-US/docs/Glossary/CSRF) (CSRF) attacks. This is
       the default value in modern browsers.
@@ -102,7 +102,7 @@ single cookie at a time using this method. Consider also that:
       cross-site and same-site.
 
 - The cookie value string can use {{jsxref("Global_Objects/encodeURIComponent",
-		"encodeURIComponent()")}} to ensure that the string does not contain any commas,
+  "encodeURIComponent()")}} to ensure that the string does not contain any commas,
   semicolons, or whitespace (which are disallowed in cookie values).
 - Some user agent implementations support the following cookie prefixes:
 

@@ -44,7 +44,7 @@ for (const [index, element] of a.entries())
 // 2 'c'
 ```
 
-### Using a `for…of` loop
+### Using a for...of loop
 
 ```js
 var a = ['a', 'b', 'c'];
@@ -68,13 +68,12 @@ for (let e of iterator) {
 
 ## See also
 
-- A polyfill of `Array.prototype.entries` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.entries` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.keys()")}}
 - {{jsxref("Array.prototype.values()")}}
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.every()")}}
 - {{jsxref("Array.prototype.some()")}}
 - [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
-- [Iteration
-  protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)

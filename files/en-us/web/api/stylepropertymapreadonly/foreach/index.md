@@ -60,7 +60,7 @@ const allComputedStyles = buttonEl.computedStyleMap();
 
 // forEach will allow us to run code over each prop/val pair
 allComputedStyles.forEach((elem, index, arr) => {
-  // oode to run for each pair
+  // code to run for each pair
 })
 ```
 

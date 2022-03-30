@@ -18,7 +18,7 @@ The **`MediaMetadata`** interface of the [Media Session API](/en-US/docs/Web/API
 
 ## Constructor
 
-- {{domxref("MediaMetadata.MediaMetadata()")}}
+- {{domxref("MediaMetadata.MediaMetadata", "MediaMetadata()")}}
   - : Creates a new `MediaMetaData` object.
 
 ## Properties

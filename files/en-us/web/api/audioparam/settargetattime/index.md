@@ -38,7 +38,7 @@ var paramRef = param.setTargetAtTime(target, startTime, timeConstant);
 ### Returns
 
 A reference to this `AudioParam` object. Some older browser implementations
-of this interface return void.
+of this interface return {{jsxref('undefined')}}.
 
 ## Description
 
@@ -47,7 +47,7 @@ moves towards the value given by the `target` parameter. The decay rate as
 defined by the `timeConstant` parameter is exponential; therefore the value
 will never reach `target` completely, but after each timestep of length
 `timeConstant`, the value will have approached `target` by
-another <math>
+another <math>
 <semantics><mrow><mn>1</mn>
 <mo>-</mo>
 <msup><mi>e</mi>
@@ -62,7 +62,7 @@ time-invariant system), check the [Web
 Audio specification](https://webaudio.github.io/web-audio-api/#dom-audioparam-settargetattime).
 
 If you absolutely need to reach the target value by a specific time, you can use
-{{domxref("AudioParam.exponentialRampToValueAtTime()")}}. However, for mathematical
+{{domxref("AudioParam.exponentialRampToValueAtTime()")}}. However, for mathematical
 reasons, that method does not work if the current value or the target value is
 `0`.
 
@@ -70,7 +70,7 @@ reasons, that method does not work if the current value or the target value is
 
 As mentioned above, the value changes exponentially, with each
 `timeConstant` bringing you another 63.2% toward the target value. You don't
-have to worry about reaching the target value; once you are close enough, any further
+have to worry about reaching the target value; once you are close enough, any further
 changes will be imperceptible to a human listener.
 
 Depending on your use case, getting 95% toward the target value may already be enough;
@@ -91,11 +91,12 @@ the time progresses.
 | `5 * timeConstant`     | 99.3%                             |
 | `n * timeConstant`     | <math><semantics><mrow><mn>1</mn> |
 
+<math><semantics><mrow><mn>1</mn>
 <mo>-</mo>
 <msup><mi>e</mi>
 <mrow><mo>-</mo>
 <mi>n</mi>
-</mrow></msup></mrow><annotation encoding="TeX">1 - e^{-n}</annotation></semantics></math> |
+</mrow></msup></mrow><annotation encoding="TeX">1 - e^{-n}</annotation></semantics></math>
 
 ## Examples
 

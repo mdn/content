@@ -42,4 +42,3 @@ AudioData.close();
 ## Browser compatibility
 
 {{Compat}}
-

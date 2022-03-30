@@ -8,7 +8,7 @@ tags:
   - Reference
   - Web MIDI API
 ---
-{{DefaultAPISidebar("Web MIDI API")}}
+{{DefaultAPISidebar("Web MIDI API")}}{{SecureContext_Header}}
 
 The Web MIDI API connects to and interacts with with Musical Instrument Digital Interface (MIDI) Devices.
 
@@ -29,15 +29,16 @@ The interfaces deal with the practical aspects of sending and receiving MIDI mes
 - {{domxref("MIDIOutput")}}
   - : Queues messages to the linked MIDI port. Messages can be sent immediately or after a specified delay.
 - {{domxref("MIDIMessageEvent")}}
-  - : The event passed to {{domxref("MIDIInput.onmidimessage")}}.
+  - : The event passed to {{domxref("MIDIInput.midimessage_event")}}.
 - {{domxref("MIDIConnectionEvent")}}
-  - : The event passed to the {{domxref("MIDIAccess.onstatechange")}} and {{domxref("MIDIPort.onstatechange")}} event handlers, when a port becomes available or unavailable.
+  - : The event passed to the {{domxref("MIDIAccess.statechange_event")}} and {{domxref("MIDIPort.statechange_event")}} events, when a port becomes available or unavailable.
 
 ## Examples
 
 ### Gaining access to the MIDI port
 
-In the following example the {{domxref("MIDIAccess")}} interface is used to gain access to a MIDI device.
+The {{domxref("navigator.requestMIDIAccess()")}} method returns a promise that resolves to a {{domxref("MIDIAccess")}}, which can then be used to access a MIDI device.
+The method must be called in a secure context.
 
 ```js
 var midi = null;  // global MIDIAccess object
@@ -81,7 +82,7 @@ This example prints incoming MIDI messages on a single port to the console.
 
 ```js
 function onMIDIMessage( event ) {
-  var str = "MIDI message received at timestamp " + event.timestamp + "[" + event.data.length + " bytes]: ";
+  var str = "MIDI message received at timestamp " + event.timeStamp + "[" + event.data.length + " bytes]: ";
   for (var i=0; i<event.data.length; i++) {
     str += "0x" + event.data[i].toString(16) + " ";
   }

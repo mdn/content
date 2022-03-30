@@ -19,7 +19,7 @@ A related attribute, {{htmlattrxref("itemtype")}}, is used to specify the valid 
 
 Every HTML element may have an `itemscope` attribute specified. An `itemscope` element that does not have an associated `itemtype` must have an associated `itemref`.
 
-> **Note:** Find more about `itemtype` attributes at <http://schema.org/Thing>
+> **Note:** Find more about `itemtype` attributes at <https://schema.org/Thing>
 
 ### Simple example
 
@@ -85,43 +85,43 @@ There are four `itemscope` attributes in the following example. Each `itemscope`
 
 ```html
 <div itemscope itemtype="http://schema.org/Recipe">
-  <h2 itemprop="name">Grandma's Holiday Apple Pie</h2>
-  <img itemprop="image" src="https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg" width="50" height="50" />
-  <p>
-    By <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <span itemprop="name">Carol Smith</span>
-    </span>
-  </p>
-  <p>
-    Published: <time datetime="2009-11-05" itemprop="datePublished">November 5, 2009</time>
-  </p>
-  <span itemprop="description">This is my grandmother's apple pie recipe. I like to add a dash of nutmeg.</span>
-  <br>
-  <span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-    <span itemprop="ratingValue">4.0</span> stars based on <span itemprop="reviewCount">35</span> reviews
-  </span>
-  <br>
-  Prep time: <time datetime="PT30M" itemprop="prepTime">30 min</time><br>
-  Cook time: <time datetime="PT1H" itemprop="cookTime">1 hou</time>r<br>
-  Total time: <time datetime="PT1H30M" itemprop="totalTime">1 hour 30 min</time><br>
-  Yield: <span itemprop="recipeYield">1 9" pie (8 servings)</span><br>
-  <span itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation">
-    Serving size: <span itemprop="servingSize">1 medium slice</span><br>
-    Calories per serving: <span itemprop="calories">250 cal</span><br>
-    Fat per serving: <span itemprop="fatContent">12 g</span><br>
-  </span>
-  <p>
-    Ingredients:<br>
-    <span itemprop="recipeIngredient">Thinly-sliced apples: 6 cups<br></span>
-    <span itemprop="recipeIngredient">White sugar: 3/4 cup<br></span>
-    ...
-  </p>
-  Directions: <br>
-  <div itemprop="recipeInstructions">
-    1. Cut and peel apples<br>
-    2. Mix sugar and cinnamon. Use additional sugar for tart apples. <br>
-    ...
-  </div>
+  <h2 itemprop="name">Grandma's Holiday Apple Pie</h2>
+  <img itemprop="image" src="https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg" width="50" height="50" />
+  <p>
+    By <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <span itemprop="name">Carol Smith</span>
+    </span>
+  </p>
+  <p>
+    Published: <time datetime="2009-11-05" itemprop="datePublished">November 5, 2009</time>
+  </p>
+  <span itemprop="description">This is my grandmother's apple pie recipe. I like to add a dash of nutmeg.</span>
+  <br>
+  <span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+    <span itemprop="ratingValue">4.0</span> stars based on <span itemprop="reviewCount">35</span> reviews
+  </span>
+  <br>
+  Prep time: <time datetime="PT30M" itemprop="prepTime">30 min</time><br>
+  Cook time: <time datetime="PT1H" itemprop="cookTime">1 hou</time>r<br>
+  Total time: <time datetime="PT1H30M" itemprop="totalTime">1 hour 30 min</time><br>
+  Yield: <span itemprop="recipeYield">1 9" pie (8 servings)</span><br>
+  <span itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation">
+    Serving size: <span itemprop="servingSize">1 medium slice</span><br>
+    Calories per serving: <span itemprop="calories">250 cal</span><br>
+    Fat per serving: <span itemprop="fatContent">12 g</span><br>
+  </span>
+  <p>
+    Ingredients:<br>
+    <span itemprop="recipeIngredient">Thinly-sliced apples: 6 cups<br></span>
+    <span itemprop="recipeIngredient">White sugar: 3/4 cup<br></span>
+    ...
+  </p>
+  Directions: <br>
+  <div itemprop="recipeInstructions">
+    1. Cut and peel apples<br>
+    2. Mix sugar and cinnamon. Use additional sugar for tart apples. <br>
+    ...
+  </div>
 </div>
 ```
 

@@ -12,19 +12,13 @@ tags:
   - Read-only
 browser-compat: api.CSSMathMin.values
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
+{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The CSSMathMin.values read-only property of the
 {{domxref("CSSMathMin")}} interface returns a {{domxref('CSSNumericArray')}} object
 which contains one or more {{domxref('CSSNumericValue')}} objects.
 
-## Syntax
-
-```js
-var cssNumericArray = CSSMathMin.values;
-```
-
-### Value
+## Value
 
 A {{domxref('CSSNumericArray')}}.
 

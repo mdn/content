@@ -26,7 +26,7 @@ panner.setPosition(0,0,0);
 
 ### Returns
 
-Void.
+{{jsxref('undefined')}}.
 
 ## Example
 

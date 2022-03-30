@@ -18,21 +18,13 @@ The `threshold` property's default value is `-24` and it can be set between `-10
 
 ![The threshold attribute has no effect on signals lowers than its value, but induce volume reduction on signal stronger than its value.](webaudiothreshold.png)
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var compressor = audioCtx.createDynamicsCompressor();
-compressor.threshold.value = -50;
-```
-
-### Value
+## Value
 
 An {{domxref("AudioParam")}}.
 
 > **Note:** Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.
 
-## Example
+## Examples
 
 ```js
 var audioCtx = new AudioContext();

@@ -2,24 +2,19 @@
 title: Event.preventDefault()
 slug: Web/API/Event/preventDefault
 tags:
-  - API
-  - DOM
-  - Event
   - Method
   - Reference
 browser-compat: api.Event.preventDefault
 ---
 {{apiref("DOM")}}
 
-The {{domxref("Event")}} interface's
-**`preventDefault()`** method tells the {{Glossary("user
-    agent")}} that if the event does not get explicitly handled, its default action should
-not be taken as it normally would be.
+The **`preventDefault()`** method of the {{domxref("Event")}} interface tells the {{Glossary("user agent")}} that if the event does not get explicitly handled, its default action should not be taken as it normally would be.
 
-The event continues to propagate as
-usual, unless one of its event listeners calls {{domxref("Event.stopPropagation",
-  "stopPropagation()")}} or {{domxref("Event.stopImmediatePropagation",
-  "stopImmediatePropagation()")}}, either of which terminates propagation at once.
+The event continues to propagate as usual,
+unless one of its event listeners calls
+{{domxref("Event.stopPropagation", "stopPropagation()")}}
+or {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}},
+either of which terminates propagation at once.
 
 As noted below, calling **`preventDefault()`** for a
 non-cancelable event, such as one dispatched via

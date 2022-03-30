@@ -52,7 +52,7 @@ Below is a table with the available collation types, taken from the [Unicode col
         <div class="notecard warning">
           <p>
             <strong>Warning:</strong> The <code>direct</code> collation type has
-            been deprected. Do not use.
+            been deprecated. Do not use.
           </p>
         </div>
         <p>direct</p>

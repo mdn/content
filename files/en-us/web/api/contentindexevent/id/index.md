@@ -11,19 +11,13 @@ tags:
   - events
 browser-compat: api.ContentIndexEvent.id
 ---
-{{draft}}{{DefaultAPISidebar("Content Index API")}}
+{{DefaultAPISidebar("Content Index API")}}
 
 The read-only **`id`** property of the
 {{domxref("ContentIndexEvent")}} interface is a {{jsxref('String')}} which identifies
-the deleted content index via it's `id`.
+the deleted content index via its `id`.
 
-## Syntax
-
-```js
-var id = ContentIndexEvent.id;
-```
-
-### Value
+## Value
 
 A {{jsxref("String")}} representation of the deleted content index id.
 

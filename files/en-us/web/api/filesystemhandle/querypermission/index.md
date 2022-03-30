@@ -9,7 +9,7 @@ tags:
   - Method
 browser-compat: api.FileSystemHandle.queryPermission
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`queryPermission()`** method of the
 {{domxref("FileSystemHandle")}} interface queries the current permission state of the
@@ -32,7 +32,7 @@ var PermissionState = FileSystemHandle.queryPermission(FileSystemHandlePermissio
 
 ### Return value
 
-{{domxref('PermissionStatus.state')}} which is one of `'granted'`,
+{{domxref('PermissionStatus.state')}} which is one of `'granted'`,
 `'denied'` or `'prompt'`.
 
 If this returns "prompt" the website will have to call requestPermission() before any

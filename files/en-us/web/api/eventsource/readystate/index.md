@@ -16,13 +16,7 @@ The **`readyState`** read-only property of the
 {{domxref("EventSource")}} interface returns a number representing the state of the
 connection.
 
-## Syntax
-
-```js
-var myReadyState = eventSource.readyState;
-```
-
-### Value
+## Value
 
 A number representing the state of the connection. Possible values are:
 

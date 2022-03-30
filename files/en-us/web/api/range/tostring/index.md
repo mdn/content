@@ -11,7 +11,7 @@ browser-compat: api.Range.toString
 ---
 {{ApiRef("DOM")}}
 
-The **`Range.toString()`** method is a stringifier returning
+The **`Range.toString()`** method is a {{Glossary("stringifier")}} returning
 the text of the {{domxref("Range")}}.
 
 Alerting the contents of a {{domxref("Range")}} makes an implicit

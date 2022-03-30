@@ -4,7 +4,6 @@ slug: Web/API/Response/Response
 tags:
   - API
   - Constructor
-  - Experimental
   - Fetch
   - Reference
   - Response
@@ -12,18 +11,17 @@ browser-compat: api.Response.Response
 ---
 {{APIRef("Fetch")}}
 
-The **`Response()`** constructor creates a new
-{{domxref("Response")}} object.
+The **`Response()`** constructor creates a new {{domxref("Response")}} object.
 
 ## Syntax
 
 ```js
-var myResponse = new Response(body, init);
+new Response(body, init)
 ```
 
 ### Parameters
 
-- _body_ {{optional_inline}}
+- `body` {{optional_inline}}
 
   - : An object defining a body for the response. This can be `null` (which is
     the default value), or one of:
@@ -35,7 +33,7 @@ var myResponse = new Response(body, init);
     - {{domxref("URLSearchParams")}}
     - {{domxref("USVString")}}
 
-- _init_ {{optional_inline}}
+- `init` {{optional_inline}}
 
   - : An options object containing any custom settings that you want to apply to the
     response, or an empty object (which is the default value). The possible options are:
@@ -49,11 +47,8 @@ var myResponse = new Response(body, init);
 
 ## Examples
 
-In our [Fetch
-Response example](https://github.com/mdn/fetch-examples/tree/master/fetch-response) (see [Fetch Response live](https://mdn.github.io/fetch-examples/fetch-response/))
-we create a new `Response` object using the constructor, passing it a new
-{{domxref("Blob")}} as a body, and an init object containing a custom
-`status` and `statusText`:
+In our [Fetch Response example](https://github.com/mdn/fetch-examples/tree/master/fetch-response) (see [Fetch Response live](https://mdn.github.io/fetch-examples/fetch-response/))
+we create a new `Response` object using the constructor, passing it a new {{domxref("Blob")}} as a body, and an init object containing a custom `status` and `statusText`:
 
 ```js
 var myBlob = new Blob();

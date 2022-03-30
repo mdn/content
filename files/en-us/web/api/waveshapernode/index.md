@@ -17,6 +17,8 @@ It is an {{domxref("AudioNode")}} that uses a curve to apply a wave shaping dist
 
 A `WaveShaperNode` always has exactly one input and one output.
 
+{{InheritanceDiagram}}
+
 <table class="properties">
   <tbody>
     <tr>

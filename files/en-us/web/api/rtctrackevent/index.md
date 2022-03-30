@@ -22,10 +22,12 @@ The target is the `RTCPeerConnection` object to which the track is being added.
 
 This event is sent by the WebRTC layer to the web site or application, so you will not typically need to instantiate an `RTCTrackEvent` yourself.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("RTCTrackEvent.RTCTrackEvent", "RTCTrackEvent()")}}
-  - : Creates and returns a new `RTCTrackEvent` object, initialized with properties taken from the specified {{domxref("RTCTrackEventInit")}} dictionary. You will probably not need to create new track events yourself, since they're typically created by the WebRTC infrastructure and sent to the connection's {{domxref("RTCPeerConnection.ontrack", "ontrack")}} event handler.
+  - : Creates and returns a new `RTCTrackEvent` object, initialized with properties taken from the specified {{domxref("RTCTrackEventInit")}} dictionary. You will probably not need to create new track events yourself, since they're typically created by the WebRTC infrastructure and sent to the connection's {{domxref("RTCPeerConnection.track_event", "ontrack")}} event handler.
 
 ## Properties
 
@@ -46,7 +48,7 @@ There is only one type of track event.
 
 ### `track`
 
-The {{domxref("RTCPeerConnection.track_event", "track")}} event is sent to the {{domxref("RTCPeerConnection")}} when a new track has been added to the connection. By the time the `track` event is delivered to the `RTCPeerConnection`'s {{domxref("RTCPeerConnection.ontrack", "ontrack")}} handler, the new media has completed its negotiation for a specific {{domxref("RTCRtpReceiver")}} (which is specified by the event's {{domxref("RTCTrackEvent.receiver", "receiver")}} property).
+The {{domxref("RTCPeerConnection.track_event", "track")}} event is sent to the {{domxref("RTCPeerConnection")}} when a new track has been added to the connection. By the time the `track` event is delivered to the `RTCPeerConnection`'s {{domxref("RTCPeerConnection.track_event", "ontrack")}} handler, the new media has completed its negotiation for a specific {{domxref("RTCRtpReceiver")}} (which is specified by the event's {{domxref("RTCTrackEvent.receiver", "receiver")}} property).
 
 In addition, the {{domxref("MediaStreamTrack")}} specified by the receiver's {{domxref("RTCRtpReceiver.track", "track")}} is the same one specified by the event's {{domxref("RTCTrackEvent.track", "track")}}, and the track has been added to any associated remote {{domxref("MediaStream")}} objects.
 

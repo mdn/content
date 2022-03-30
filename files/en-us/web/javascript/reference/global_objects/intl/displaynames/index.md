@@ -32,7 +32,7 @@ The **`Intl.DisplayNames`** object enables the consistent translation of languag
 ## Instance methods
 
 - {{jsxref("Intl/DisplayNames/of", "Intl.DisplayNames.prototype.of()")}}
-  - : This method receives a `code` and returns a string based on the locale and options provided when instantiating `Intl.DisplayNames`.
+  - : This method receives a `code` and returns a string based on the locale and options provided when instantiating `Intl.DisplayNames`.
 - {{jsxref("Intl/DisplayNames/resolvedOptions", "Intl.DisplayNames.prototype.resolvedOptions()")}}
   - : Returns a new object with properties reflecting the locale and formatting options computed during initialization of the object.
 
@@ -53,11 +53,11 @@ regionNames.of('MM');  // "Myanmar (Burma)"
 
 // Get display names of region in Traditional Chinese
 regionNames = new Intl.DisplayNames(['zh-Hant'], {type: 'region'});
-regionNames.of('419'; // "拉丁美洲"
-regionNames.of('BZ'); // "貝里斯"
-regionNames.of('US'); // "美國"
-regionNames.of('BA'); // "波士尼亞與赫塞哥維納"
-regionNames.of('MM'); // "緬甸"
+regionNames.of('419'); // "拉丁美洲"
+regionNames.of('BZ');  // "貝里斯"
+regionNames.of('US');  // "美國"
+regionNames.of('BA');  // "波士尼亞與赫塞哥維納"
+regionNames.of('MM');  // "緬甸"
 ```
 
 ### Language Display Names

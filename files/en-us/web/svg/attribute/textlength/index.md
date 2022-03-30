@@ -22,10 +22,10 @@ By using `textLength`, you can ensure that your SVG text displays at the same wi
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("text")}}
-*   {{SVGElement("textPath")}}
-*   {{SVGElement("tref")}}
-*   {{SVGElement("tspan")}}
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
 
 ## Example
 
@@ -37,8 +37,8 @@ html, body, svg {
 
 ```html
 <svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
-  <text y="20" textLength="6em">Small text length</text>
-  <text y="40" textLength="120%">Big text length</text>
+  <text y="20" textLength="6em">Small text length</text>
+  <text y="40" textLength="120%">Big text length</text>
 </svg>
 ```
 
@@ -66,10 +66,10 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `<length-percentage>`
-    *   : This value specifies the width of the space the text will be adjusted to occupy as absolute length or percentage.
-*   `<number>`
-    *   : A numeric value outlines a length referring to the units of the current coordinate system.
+- `<length-percentage>`
+  - : This value specifies the width of the space the text will be adjusted to occupy as absolute length or percentage.
+- `<number>`
+  - : A numeric value outlines a length referring to the units of the current coordinate system.
 
 ## Interactive example
 
@@ -129,9 +129,9 @@ const baseLength = Math.floor(textElement.textLength.baseVal.value);
 widthSlider.value = baseLength;
 
 widthSlider.addEventListener("input", function(event) {
-  textElement.textLength.baseVal.newValueSpecifiedUnits(
-      SVGLength.SVG_LENGTHTYPE_PX, widthSlider.valueAsNumber);
-  widthDisplay.innerText = widthSlider.value;
+  textElement.textLength.baseVal.newValueSpecifiedUnits(
+      SVGLength.SVG_LENGTHTYPE_PX, widthSlider.valueAsNumber);
+  widthDisplay.innerText = widthSlider.value;
 }, false);
 
 widthSlider.dispatchEvent(new Event("input"));
@@ -183,6 +183,6 @@ Here's what the example looks like. Try dragging the slider around to get a feel
 
 ## See also
 
-*   SVG Tutorial: [Texts](/en-US/docs/Web/SVG/Tutorial/Texts)
-*   {{domxref("SVGAnimatedLength")}} and {{domxref("SVGLength")}}
-*   {{SVGElement("text")}}
+- SVG Tutorial: [Texts](/en-US/docs/Web/SVG/Tutorial/Texts)
+- {{domxref("SVGAnimatedLength")}} and {{domxref("SVGLength")}}
+- {{SVGElement("text")}}

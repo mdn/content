@@ -53,11 +53,11 @@ property described by a getter-setter pair of functions. A descriptor must be on
 these two flavors; it cannot be both.
 
 Both data and accessor descriptors are objects. They share the following optional keys
-(please note: the **defaults** mentioned here are in the case of defining
+(please note: the **defaults** mentioned here are in the case of defining
 properties using `Object.defineProperty()`):
 
 - `configurable`
-  - : `true` if the type of this property descriptor may be changed and if the
+  - : `true` if the type of this property descriptor may be changed and if the
     property may be deleted from the corresponding object.
     **Defaults to `false`.**
 - `enumerable`
@@ -72,7 +72,7 @@ A **data descriptor** also has the following optional keys:
     object, function, etc).
     **Defaults to {{jsxref("undefined")}}.**
 - `writable`
-  - : `true` if the value associated with the property may be changed with an
+  - : `true` if the value associated with the property may be changed with an
     {{jsxref("Operators#assignment_operators", "assignment operator", "", 1)}}.
     **Defaults to `false`.**
 
@@ -94,8 +94,7 @@ An **accessor descriptor** also has the following optional keys:
 
 If a descriptor has neither of `value`, `writable`,
 `get` and `set` keys, it is treated as a data descriptor. If a
-descriptor has both \[`value` or `writable`] and \[`get`
-or `set`] keys, an exception is thrown.
+descriptor has both \[`value` or `writable`] and \[`get` or `set`] keys, an exception is thrown.
 
 Bear in mind that these attributes are not necessarily the descriptor's own properties.
 Inherited properties will be considered as well. In order to ensure these defaults are
@@ -132,7 +131,7 @@ function withValue(value) {
   );
 
   // avoiding duplicate operation for assigning value
-  if (d.value !== value) d.value = value;
+  if (d.value !== value) d.value = value;
 
   return d;
 }
@@ -199,7 +198,7 @@ Object.defineProperty(o, 'conflict', {
 When the property already exists, `Object.defineProperty()` attempts to
 modify the property according to the values in the descriptor and the object's current
 configuration. If the old descriptor had its `configurable` attribute set to
-`false` the property is said to be “non-configurable”. It is not possible to
+`false` the property is said to be "non-configurable". It is not possible to
 change any attribute of a non-configurable accessor property. For data properties which are configurable, it is
 possible to modify the value if the property is writable, and it is possible to change the
 `writable` attribute from `true` to `false`. It is not
@@ -213,7 +212,7 @@ unless the current and new values are the same.
 #### Writable attribute
 
 When the `writable` property attribute is set to `false`, the
-property is said to be “non-writable”. It cannot be reassigned.
+property is said to be "non-writable". It cannot be reassigned.
 
 ```js
 var o = {}; // Creates a new object
@@ -248,8 +247,8 @@ it but doesn't throw an error either.
 #### Enumerable attribute
 
 The `enumerable` property attribute defines whether the property is picked
-by {{jsxref("Object.assign()")}} or [spread
-](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)operator. For non-{{jsxref("Global_Objects/Symbol", "Symbol")}} properties it also defines whether it shows
+by {{jsxref("Object.assign()")}} or [spread](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)operator.
+For non-{{jsxref("Global_Objects/Symbol", "Symbol")}} properties it also defines whether it shows
 up in a {{jsxref("Statements/for...in", "for...in")}} loop and
 {{jsxref("Object.keys()")}} or not.
 
@@ -269,12 +268,12 @@ Object.defineProperty(o, 'c', {
 o.d = 4; // enumerable defaults to true
          // when creating a property by setting it
 Object.defineProperty(o, Symbol.for('e'), {
-  value: 5,
-  enumerable: true
+  value: 5,
+  enumerable: true
 });
 Object.defineProperty(o, Symbol.for('f'), {
-  value: 6,
-  enumerable: false
+  value: 6,
+  enumerable: false
 });
 
 for (var i in o) {
@@ -508,8 +507,7 @@ console.log(myclass.prototype.y); // 1
 
 ## See also
 
-- [Enumerability and
-  ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}

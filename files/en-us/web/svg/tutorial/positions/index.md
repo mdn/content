@@ -27,7 +27,9 @@ Note that this is slightly different than the way you're taught to graph as a ki
 
 The element
 
-    <rect x="0" y="0" width="100" height="100" />
+```html
+<rect x="0" y="0" width="100" height="100" />
+```
 
 defines a rectangle from the upper left corner, that spans from there 100px to the right and to the bottom.
 
@@ -37,11 +39,15 @@ In the most basic case one pixel in an SVG document maps to one pixel on the out
 
 Without further specification, one user unit equals one screen unit. To explicitly change this behavior, there are several possibilities in SVG. We start with the `svg` root element:
 
-    <svg width="100" height="100">
+```html
+<svg width="100" height="100">
+```
 
 The above element defines a simple SVG canvas with 100x100px. One user unit equals one screen unit.
 
-    <svg width="200" height="200" viewBox="0 0 100 100">
+```html
+<svg width="200" height="200" viewBox="0 0 100 100">
+```
 
 The whole SVG canvas here is 200px by 200px in size. However, the `viewBox` attribute defines the portion of that canvas to display. These 200x200 pixels display an area that starts at user unit (0,0) and spans 100x100 user units to the right and to the bottom. This effectively zooms in on the 100x100 unit area and enlarges the image to double size.
 

@@ -106,7 +106,7 @@ Math.log2(1024); // 10
 
 ## See also
 
-- A polyfill of `Math.log2` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [Polyfill of `Math.log2` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math.exp()")}}
 - {{jsxref("Math.log()")}}
 - {{jsxref("Math.log10()")}}

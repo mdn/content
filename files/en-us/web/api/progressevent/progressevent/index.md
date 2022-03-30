@@ -16,7 +16,7 @@ The **`ProgressEvent()`** constructor returns a newly created
 ## Syntax
 
 ```js
-progressEvent = new ProgressEvent(type, {lengthComputable: aBooleanValue, loaded: aNumber, total: aNumber});
+new ProgressEvent(type, {lengthComputable: aBooleanValue, loaded: aNumber, total: aNumber});
 ```
 
 ### Arguments

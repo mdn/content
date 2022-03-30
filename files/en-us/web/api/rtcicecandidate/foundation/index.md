@@ -25,13 +25,7 @@ which uniquely identifies the candidate across multiple transports.
 The `foundation` can therefore be used to correlate candidates that are present on
 multiple {{domxref("RTCIceTransport")}} objects
 
-## Syntax
-
-```js
-var foundation = RTCIceCandidate.foundation;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} which uniquely identifies the candidate across all
 `RTCIceTransport`s on which it is available.
@@ -43,10 +37,12 @@ A {{domxref("DOMString")}} which uniquely identifies the candidate across all
 
 ## Usage notes
 
-Consider this {{Glossary("SDP")}} attribute line (a-line) which  describes an ICE
+Consider this {{Glossary("SDP")}} attribute line (a-line) which describes an ICE
 candidate:
 
-    a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```
+a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```
 
 The field `"4234997325"` is the foundation.
 

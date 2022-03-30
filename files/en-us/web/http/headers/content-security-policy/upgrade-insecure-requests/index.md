@@ -48,7 +48,7 @@ Content-Security-Policy: upgrade-insecure-requests;
 Content-Security-Policy: upgrade-insecure-requests;
 ```
 
-### Usting the HTML meta element
+### Using the HTML meta element
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">

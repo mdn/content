@@ -13,19 +13,13 @@ tags:
   - values
 browser-compat: api.CSSMathSum.values
 ---
-{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSMathSum.values`** read-only property
 of the {{domxref("CSSMathSum")}} interface returns a {{domxref('CSSNumericArray')}}
 object which contains one or more {{domxref('CSSNumericValue')}} objects.
 
-## Syntax
-
-```js
-var cssNumericArray = CSSMathSum.values;
-```
-
-### Value
+## Value
 
 A {{domxref('CSSNumericArray')}}.
 

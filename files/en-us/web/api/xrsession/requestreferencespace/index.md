@@ -24,7 +24,7 @@ browser-compat: api.XRSession.requestReferenceSpace
 The **`requestReferenceSpace()`** method of the
 {{DOMxRef("XRSession")}} interface returns a {{JSxRef("promise")}} that resolves with
 an instance of either {{DOMxRef("XRReferenceSpace")}}
-or {{DOMxRef("XRBoundedReferenceSpace")}} as appropriate given the type of reference
+or {{DOMxRef("XRBoundedReferenceSpace")}} as appropriate given the type of reference
 space requested.
 
 ## Syntax
@@ -60,7 +60,7 @@ A {{JSxRef("Promise")}} that resolves with an {{DOMxRef("XRReferenceSpace")}} ob
 
 ### Exceptions
 
-Rather than throwing true exceptions, `requestReferenceSpace()` rejects the
+Rather than throwing true exceptions, `requestReferenceSpace()` rejects the
 returned promise with a {{domxref("DOMException")}} whose name is found in the list
 below:
 

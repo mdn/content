@@ -51,7 +51,7 @@ None.
 ## Example
 
 In the following example you can see
-the {{domxref("IDBOpenDBRequest.onupgradeneeded")}} handler being used to update the
+the {{domxref("IDBOpenDBRequest.upgradeneeded_event", "onupgradeneeded")}} handler being used to update the
 database structure if a database with a higher version number is loaded.
 {{domxref("IDBObjectStore.createIndex")}} is used to create new indexes on the object
 store, after which we delete the unneeded old indexes with `deleteIndex()`.
@@ -70,7 +70,7 @@ DBOpenRequest.onerror = function(event) {
 };
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+  note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable. This is used a lot below
   db = this.result;

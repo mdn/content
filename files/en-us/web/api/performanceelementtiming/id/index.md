@@ -13,11 +13,7 @@ browser-compat: api.PerformanceElementTiming.id
 
 The **`id`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the {{htmlattrxref("id")}} of the associated element.
 
-## Syntax
-
-    var id = PerformanceElementTiming.id;
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}.
 

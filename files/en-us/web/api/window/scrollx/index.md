@@ -20,13 +20,7 @@ meaning that it isn't necessarily a whole number. You can get the number of pixe
 document is scrolled vertically from the {{domxref("Window.scrollY", "scrollY")}}
 property.
 
-## Syntax
-
-```js
-var x = window.scrollX;
-```
-
-### Value
+## Value
 
 In practice, the returned value is a double-precision floating-point value indicating
 the number of pixels the document is currently scrolled horizontally from the origin,
@@ -54,9 +48,11 @@ if (window.scrollX > 400) {
 
 ## Notes
 
-The `pageXOffset` property is an alias for the `scrollX` property:
+The `pageXOffset` property is an alias for the `scrollX` property:
 
-    window.pageXOffset == window.scrollX; // always true
+```js
+window.pageXOffset == window.scrollX; // always true
+```
 
 For cross-browser compatibility, use `window.pageXOffset` instead of
 `window.scrollX`. _Additionally_, older versions of Internet Explorer

@@ -16,7 +16,9 @@ The **`ChannelMergerNode()`** constructor creates a new {{domxref("ChannelMerger
 
 ## Syntax
 
-    var myNode = new ChannelMergerNode(context, options);
+```js
+new ChannelMergerNode(context, options);
+```
 
 ### Parameters
 
@@ -47,18 +49,20 @@ A new {{domxref("ChannelMergerNode")}} object instance.
 
 ### Exceptions
 
-- `InvalidStateError`
-  - : An option such as `channelCount` or `channelCountMode` has been given an invalid value.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if an option such as `channelCount` or `channelCountMode` has been given an invalid value.
 
 ## Example
 
-    var ac = new AudioContext();
+```js
+var ac = new AudioContext();
 
-    var options = {
-      numberOfInputs : 2
-    }
+var options = {
+  numberOfInputs : 2
+}
 
-    var myMerger = new ChannelMergerNode(ac, options);
+var myMerger = new ChannelMergerNode(ac, options);
+```
 
 ## Specifications
 

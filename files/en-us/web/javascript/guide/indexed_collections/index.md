@@ -14,7 +14,7 @@ This chapter introduces collections of data which are ordered by an index value.
 
 An **array** is an ordered list of values that you refer to with a name and an index.
 
-For example, consider an array called `emp`, which contains employees' names indexed by their numerical employee number. So `emp[0]` would be employee number zero, `emp[1]` employee number one, and so on.
+For example, consider an array called `emp`, which contains employees' names indexed by their numerical employee number. So `emp[0]` would be employee number zero, `emp[1]` employee number one, and so on.
 
 JavaScript does not have an explicit array data type. However, you can use the predefined `Array` object and its methods to work with arrays in your applications. The `Array` object has methods for manipulating arrays in various ways, such as joining, reversing, and sorting them. It has a property for determining the array length and other properties for use with regular expressions.
 
@@ -242,7 +242,7 @@ Since JavaScript elements are saved as standard object properties, it is not adv
 
 ### Array methods
 
-The {{jsxref("Array")}} object has the following methods:
+The {{jsxref("Array")}} object has the following methods:
 
 {{jsxref("Array.concat", "concat()")}} joins two or more arrays and returns a new array.
 
@@ -290,7 +290,7 @@ myArray.unshift('4', '5')
 // myArray becomes ["4", "5", "1", "2", "3"]
 ```
 
-{{jsxref("Array.slice", "slice(start_index, upto_index)")}} extracts a section of an array and returns a new array.
+{{jsxref("Array.slice", "slice(start_index, up_to_index)")}} extracts a section of an array and returns a new array.
 
 ```js
 let myArray = new Array('a', 'b', 'c', 'd', 'e')
@@ -327,7 +327,7 @@ myArray.sort()
 
 `sort()` can also take a callback function to determine how array elements are compared.
 
-The `sort` method (and others below) that take a callback are known as _iterative methods_, because they iterate over the entire array in some fashion. Each one takes an optional second argument called `thisObject`. If provided, `thisObject` becomes the value of the `this` keyword inside the body of the callback function. If not provided, as with other cases where a function is invoked outside of an explicit object context, `this` will refer to the global object ([`window`](/en-US/docs/Web/API/Window "The Window interface represents a window containing a DOM document; the document property points to the DOM document loaded in that window.")) when using arrow function as callback, or `undefined` when using normal function as callback.
+The `sort` method (and others below) that take a callback are known as _iterative methods_, because they iterate over the entire array in some fashion. Each one takes an optional second argument called `thisObject`. If provided, `thisObject` becomes the value of the `this` keyword inside the body of the callback function. If not provided, as with other cases where a function is invoked outside of an explicit object context, `this` will refer to the global object ([`window`](/en-US/docs/Web/API/Window)) when using arrow function as callback, or `undefined` when using normal function as callback.
 
 The callback function is called with two arguments, that are array's elements.
 
@@ -421,13 +421,13 @@ let a3 = ['1', '2', '3']
 console.log(a3.some(isNumber))  // logs false
 ```
 
-{{jsxref("Array.reduce", "reduce(callback[, initialValue])")}} applies `callback(accumulator, currentValue[, currentIndex[, array]])` for each value in the array for the purpose of reducing the list of items down to a single value.  The `reduce` function returns the final value returned by `callback` function.
+{{jsxref("Array.reduce", "reduce(callback[, initialValue])")}} applies `callback(accumulator, currentValue[, currentIndex[, array]])` for each value in the array for the purpose of reducing the list of items down to a single value. The `reduce` function returns the final value returned by `callback` function.
 
-If `initialValue` is specified, then `callback` is called with `initialValue` as the first parameter value and the value of the first item in the array as the second parameter value.
+If `initialValue` is specified, then `callback` is called with `initialValue` as the first parameter value and the value of the first item in the array as the second parameter value.
 
-If `initialValue` is _not_ specified, then `callback`'s first two parameter values will be the first and second elements of the array.  On _every_ subsequent call, the first parameter's value will be whatever `callback` returned on the previous call, and the second parameter's value will be the next value in the array.
+If `initialValue` is _not_ specified, then `callback`'s first two parameter values will be the first and second elements of the array. On _every_ subsequent call, the first parameter's value will be whatever `callback` returned on the previous call, and the second parameter's value will be the next value in the array.
 
-If `callback` needs access to the index of the item being processed, on access to the entire array, they are available as optional parameters.
+If `callback` needs access to the index of the item being processed, or access to the entire array, they are available as optional parameters.
 
 ```js
 let a = [10, 20, 30]
@@ -457,10 +457,12 @@ for (let i = 0; i < 4; i++) {
 
 This example creates an array with the following rows:
 
-    Row 0: [0, 0] [0, 1] [0, 2] [0, 3]
-    Row 1: [1, 0] [1, 1] [1, 2] [1, 3]
-    Row 2: [2, 0] [2, 1] [2, 2] [2, 3]
-    Row 3: [3, 0] [3, 1] [3, 2] [3, 3]
+```
+Row 0: [0, 0] [0, 1] [0, 2] [0, 3]
+Row 1: [1, 0] [1, 1] [1, 2] [1, 3]
+Row 2: [2, 0] [2, 1] [2, 2] [2, 3]
+Row 3: [3, 0] [3, 1] [3, 2] [3, 3]
+```
 
 ### Using arrays to store other properties
 
@@ -478,7 +480,7 @@ When an array is the result of a match between a regular expression and a string
 
 ### Working with array-like objects
 
-Some JavaScript objects, such as the [`NodeList`](/en-US/docs/Web/API/NodeList "NodeList objects are collections of nodes, usually returned by properties such as Node.childNodes and methods such as document.querySelectorAll().") returned by [`document.getElementsByTagName()`](/en-US/docs/Web/API/Document/getElementsByTagName "returns an HTMLCollection of elements with the given tag name.") or the {{jsxref("Functions/arguments","arguments")}} object made available within the body of a function, look and behave like arrays on the surface but do not share all of their methods. The `arguments` object provides a {{jsxref("Global_Objects/Function/length","length")}} attribute but does not implement the {{jsxref("Array.forEach", "forEach()")}} method, for example.
+Some JavaScript objects, such as the [`NodeList`](/en-US/docs/Web/API/NodeList) returned by [`document.getElementsByTagName()`](/en-US/docs/Web/API/Document/getElementsByTagName ) or the {{jsxref("Functions/arguments","arguments")}} object made available within the body of a function, look and behave like arrays on the surface but do not share all of their methods. The `arguments` object provides a {{jsxref("Global_Objects/Function/length","length")}} attribute but does not implement the {{jsxref("Array.forEach", "forEach()")}} method, for example.
 
 Array methods cannot be called directly on array-like objects.
 
@@ -535,10 +537,10 @@ Typed array views have self descriptive names and provide views for all the usua
 | {{jsxref("Uint16Array")}}         | `0` to `65535`                | 2             | 16-bit unsigned integer                                                      | `unsigned short`      | `uint16_t`                      |
 | {{jsxref("Int32Array")}}         | `-2147483648` to `2147483647` | 4             | 32-bit two's complement signed integer                                       | `long`                | `int32_t`                       |
 | {{jsxref("Uint32Array")}}         | `0` to `4294967295`           | 4             | 32-bit unsigned integer                                                      | `unsigned long`       | `uint32_t`                      |
-| {{jsxref("Float32Array")}}     | `1.2E-38` to `3.4E38`         | 4             | 32-bit IEEE floating point number (7 significant digits e.g., `1.1234567`)   | `unrestricted float`  | `float`                         |
-| {{jsxref("Float64Array")}}     | `5E-324` to `1.8E308`         | 8             | 64-bit IEEE floating point number (16 significant digits e.g., `1.123...15`) | `unrestricted double` | `double`                        |
-| {{jsxref("BigInt64Array")}}     | `-2^63` to `2^63 - 1`         | 8             | 64-bit two's complement signed integer                                       | `bigint`              | `int64_t (signed long long)`    |
-| {{jsxref("BigUint64Array")}}     | `0` to `2^64 - 1`             | 8             | 64-bit unsigned integer                                                      | `bigint`              | `uint64_t (unsigned long long)` |
+| {{jsxref("Float32Array")}}     | `1.2E-38` to `3.4E38`         | 4             | 32-bit IEEE floating point number (7 significant digits e.g., `1.1234567`)   | `unrestricted float`  | `float`                         |
+| {{jsxref("Float64Array")}}     | `5E-324` to `1.8E308`         | 8             | 64-bit IEEE floating point number (16 significant digits e.g., `1.123...15`) | `unrestricted double` | `double`                        |
+| {{jsxref("BigInt64Array")}}     | `-2^63` to `2^63 - 1`         | 8             | 64-bit two's complement signed integer                                       | `bigint`              | `int64_t (signed long long)`    |
+| {{jsxref("BigUint64Array")}}     | `0` to `2^64 - 1`             | 8             | 64-bit unsigned integer                                                      | `bigint`              | `uint64_t (unsigned long long)` |
 
 For more information, see [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) and the reference documentation for the different {{jsxref("TypedArray")}} objects.
 

@@ -17,7 +17,9 @@ Specifies an event listener to receive {{event("abort")}} events. These events o
 
 ## Syntax
 
-    instanceOfLockedFile.onabort = funcRef;
+```js
+instanceOfLockedFile.onabort = funcRef;
+```
 
 Where `funcRef` is a function to be called when the {{event("abort")}} event occurs.
 

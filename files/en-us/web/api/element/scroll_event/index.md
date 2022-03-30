@@ -11,7 +11,7 @@ browser-compat: api.Element.scroll_event
 ---
 {{APIRef}}
 
-The **`scroll`** event fires an element has been scrolled.
+The **`scroll`** event fires when an element has been scrolled.
 
 <table class="properties">
   <tbody>
@@ -70,7 +70,7 @@ window.addEventListener('scroll', function(e) {
 });
 ```
 
-> **Note:** You can find more examples on the {{domxref("Document/resize_event", "resize")}} event page.
+> **Note:** You can find more examples on the {{domxref("Window/resize_event", "resize")}} event page.
 
 ## Specifications
 

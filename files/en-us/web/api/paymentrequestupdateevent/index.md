@@ -18,10 +18,10 @@ The **`PaymentRequestUpdateEvent`** interface is used for events sent to a {{dom
 
 - {{domxref("PaymentRequest.shippingaddresschange_event", "shippingaddresschange")}} {{securecontext_inline}}
   - : Dispatched whenever the user changes their shipping address.
-    Also available using the {{domxref("PaymentRequest.onshippingaddresschange", "onshippingaddresschange")}} event handler property.
 - {{domxref("PaymentRequest.shippingoptionchange_event", "shippingoptionchange")}} {{securecontext_inline}}
   - : Dispatched whenever the user changes a shipping option.
-    Also available using the {{domxref("PaymentRequest.onshippingoptionchange", "onshippingoptionchange")}} event handler property.
+
+{{InheritanceDiagram}}
 
 ## Constructor
 

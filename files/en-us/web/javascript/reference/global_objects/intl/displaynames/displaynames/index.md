@@ -33,8 +33,7 @@ new Intl.DisplayNames(locales, options)
 
   - : A string with a BCP 47 language tag, or an array of such strings. For the
     general form and interpretation of the `locales`
-    argument, see the {{jsxref("Global_Objects/Intl", "Intl",
-			"#Locale_identification_and_negotiation", 1)}} page. The following Unicode
+    argument, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} page. The following Unicode
     extension key is allowed:
 
     - `nu`
@@ -69,10 +68,17 @@ new Intl.DisplayNames(locales, options)
 
       - : The type to use.
 
+        - "`calendar`"
+        - "`currency`"
+        - "`dateTimeField`"
         - "`language`"
         - "`region`"
         - "`script`"
-        - "`currency`"
+
+    - `languageDisplay`
+      - : The `languageDisplay` it's only usable along with type `language`, defaults to `dialect`.
+        - "`dialect`"
+        - "`standard`"
 
     - `fallback`
 
@@ -91,6 +97,50 @@ with default options is returned.
 ```js
 console.log((new Intl.DisplayNames([], {type: 'language'})).of('US'));
 // Expected output: 'us'
+```
+
+### Using type `dateTimeField`
+
+Example using `dateTimeField` as a type option, will return the localized date time names strings.
+
+```js
+const dn = new Intl.DisplayNames('pt', {type: 'dateTimeField'});
+console.log(dn.of('era')); // logs 'era'
+console.log(dn.of('year')); // logs 'ano'
+console.log(dn.of('month')); // logs 'mês'
+console.log(dn.of('quarter')); // logs 'trimestre'
+console.log(dn.of('weekOfYear')); // logs 'semana'
+console.log(dn.of('weekday')); // logs 'dia da semana'
+console.log(dn.of('dayPeriod')); // logs 'AM/PM'
+console.log(dn.of('day')); // logs 'dia'
+console.log(dn.of('hour')); // logs 'hora'
+console.log(dn.of('minute')); // logs 'minuto'
+console.log(dn.of('second')); // logs 'segundo'
+```
+
+### Using type `calendar`
+
+Example using `calendar` as a type option, will return the localized calendar names strings.
+
+```js
+const dn = new Intl.DisplayNames('en', {type: 'calendar'});
+console.log(dn.of('roc')); // logs 'Minguo Calendar'
+console.log(dn.of('gregory')); // logs 'Gregorian Calendar'
+console.log(dn.of('chinese')); // logs 'Chinese Calendar'
+```
+
+### Using type `language` with `languageDisplay`
+
+Example using  `language` as a type with `languageDisplay` options.
+
+```js
+// Using `dialect` option
+const dnDialect = new Intl.DisplayNames('en', {type: 'language', languageDisplay: 'dialect'});
+console.log(dnDialect.of('en-GB')); // logs 'British English'
+
+// Using `standard` option
+const dnStd = new Intl.DisplayNames('en', {type: 'language', languageDisplay: 'standard'});
+console.log(dnStd.of('en-GB')); // logs 'English (United Kingdom)'
 ```
 
 ## Specifications

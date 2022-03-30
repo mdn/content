@@ -8,6 +8,7 @@ tags:
   - NeedsContent
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-counter-styles/
 ---
 {{CSSRef}}
 
@@ -19,6 +20,10 @@ tags:
 
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-reset")}}
+
+### Functions
+
+- {{cssxref("symbols", "symbols()")}}
 
 ### At-rules
 
@@ -36,14 +41,12 @@ tags:
 
 ## Guides
 
-- [Using CSS counters](/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+- [Using CSS counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)
   - : Describes how to use counters to number any HTML element or to perform complex counting.
 
 ## Specifications
 
-| Specification                                    | Status                                       | Comment             |
-| ------------------------------------------------ | -------------------------------------------- | ------------------- |
-| {{SpecName('CSS3 Counter Styles')}} | {{Spec2('CSS3 Counter Styles')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

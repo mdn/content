@@ -18,14 +18,7 @@ The **`height`** property of the
 reflects the {{htmlattrxref("height", "object")}} HTML attribute, specifying the
 displayed height of the resource in CSS pixels.
 
-## Syntax
-
-```js
-var String = HTMLObjectElement.height;
-HTMLObjectElement.height = String;
-```
-
-### Value
+## Value
 
 A {{domxref('DOMString')}}.
 

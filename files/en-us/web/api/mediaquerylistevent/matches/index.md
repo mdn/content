@@ -18,13 +18,7 @@ The **`matches`** read-only property of the
 `true` if the {{DOMxRef("document")}} currently matches the media query list,
 or `false` if not.
 
-## Syntax
-
-```js
-var matches = MediaQueryListEvent.matches;
-```
-
-### Value
+## Value
 
 A boolean value; returns `true` if the {{DOMxRef("document")}}
 currently matches the media query list, `false` if not.

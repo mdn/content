@@ -10,7 +10,7 @@ tags:
   - Web Locks API
   - lock
 ---
-{{SeeCompatTable}}{{APIRef("Web Locks")}}{{DefaultAPISidebar}}
+{{SeeCompatTable}}{{APIRef("Web Locks")}}{{DefaultAPISidebar}}{{securecontext_header}}
 
 The Web Locks API allows scripts running in one tab or worker to asynchronously acquire a lock, hold it while work is performed, then release it. While held, no other script executing in the same origin can acquire the same lock, which allows a web app running in multiple tabs or workers to coordinate work and the use of resources.
 
@@ -20,9 +20,9 @@ A lock is an abstract concept representing some potentially shared resource, ide
 
 The API is used as follows:
 
-1.  The lock is requested.
-2.  Work is done while holding the lock in an asynchronous task.
-3.  The lock is automatically released when the task completes.
+1. The lock is requested.
+2. Work is done while holding the lock in an asynchronous task.
+3. The lock is automatically released when the task completes.
 
 ```js
 navigator.locks.request('my_resource', async lock => {
@@ -43,11 +43,13 @@ The API provides optional functionality that may be used as needed, including:
 - diagnostics to query the state of locks in an origin
 - an escape hatch to protect against deadlocks
 
-Locks are scoped to origins; the locks acquired by a tab from https\://example.com have no effect on the locks acquired by a tab from https\://example.org:8080 as they are separate origins.
+Locks are scoped to origins; the locks acquired by a tab from `https://example.com` have no effect on the locks acquired by a tab from `https://example.org:8080` as they are separate origins.
 
 The main entry point is `navigator.locks.request()` which requests a lock. It takes a lock name, an optional set of options, and a callback. The callback is invoked when the lock is granted. The lock is automatically released when the callback returns, so usually the callback is an _async function_, which causes the lock to be released only when the async function has completely finished.
 
-The `request()` method itself returns a promise which resolves once the lock has been released; within an async function, a script can `await` the call to make the asynchronous code flow linear. For example:
+The `request()` method itself returns a promise which resolves once the lock has been released;
+within an async function, a script can `await` the call to make the asynchronous code flow linearly.
+For example:
 
 ```js
 await do_something_without_lock();
@@ -87,7 +89,7 @@ const p = new Promise((res, rej) => { resolve = res; reject = rej; });
 
 // Request the lock:
 navigator.locks.request('my_resource', lock => {
-  // Lock is acquired.
+  // Lock is acquired.
 
   return p;
   // Now lock will be held until either resolve() or reject() is called.
@@ -96,7 +98,7 @@ navigator.locks.request('my_resource', lock => {
 
 ### Deadlocks
 
-A deadlock occurs when a process can no longer make progress because each part is waiting on a request that cannot be satisfied. This can occur with this API in complex use-cases, for example, if multiple locks are requested out-of-order. If tab 1 holds lock A and tab 2 holds lock B, then tab 1 attempts to also acquire lock B and tab 2 attempts to also acquire lock A, neither request can be granted. Web applications can avoid this through several strategies, such as ensuring lock requests are not nested, or are always well ordered, or have timeouts. Note that such deadlocks only affect the locks themselves and code depending on them; the browser, other tabs, and other script in the page is not affected.
+A deadlock occurs when a process can no longer make progress because each part is waiting on a request that cannot be satisfied. This can occur with this API in complex use-cases, for example, if multiple locks are requested out-of-order. If tab 1 holds lock A and tab 2 holds lock B, then tab 1 attempts to also acquire lock B and tab 2 attempts to also acquire lock A, neither request can be granted. Web applications can avoid this through several strategies, such as ensuring lock requests are not nested, or are always well ordered, or have timeouts. Note that such deadlocks only affect the locks themselves and code depending on them; the browser, other tabs, and other script in the page is not affected.
 
 ## Interfaces
 

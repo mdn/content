@@ -12,7 +12,7 @@ browser-compat: api.IDBIndex.getAllKeys
 {{ APIRef("IndexedDB") }}
 
 The **`getAllKeys()`** method of the {{domxref("IDBIndex")}}
-interface instantly retrieves the primary keys of all objects inside the index,
+interface asynchronously retrieves the primary keys of all objects inside the index,
 setting them as the `result` of the request object.
 
 ## Syntax
@@ -25,7 +25,7 @@ var allKeysRequest = IDBIndex.getAllKeys(query, count);
 
 ### Parameters
 
-- *query* {{optional_inline}}
+- *query* {{optional_inline}}
   - : A key or an {{domxref("IDBKeyRange")}} identifying the keys to retrieve. If this
     value is null or missing, the browser will use an unbound key range.
 - _count_ {{optional_inline}}
@@ -43,10 +43,10 @@ operation are fired.
 
 This method may raise a {{domxref("DOMException")}} of the following types:
 
-| Exception                  | Description                                                         |
-| -------------------------- | ------------------------------------------------------------------- |
-| `TransactionInactiveError` | This {{domxref("IDBIndex")}}'s transaction is inactive.    |
-| `InvalidStateError`        | The {{domxref("IDBIndex")}} has been deleted or removed.   |
+- `TransactionInactiveError` {{domxref("DOMException")}}
+  - : Thrown if this {{domxref("IDBIndex")}}'s transaction is inactive.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the {{domxref("IDBIndex")}} has been deleted or removed.
 
 A {{jsxref("TypeError")}} exception is thrown if the `count` parameter is
 not between `0` and `2^32 - 1` included.

@@ -28,8 +28,7 @@ new Set(iterable)
 
 - `iterable` {{optional_inline}}
 
-  - : If an [iterable
-    object](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) is passed, all of its elements will be added to the new
+  - : If an [iterable object](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) is passed, all of its elements will be added to the new
     `Set`.
 
     If you don't specify this parameter, or its value is `null`, the new
@@ -64,5 +63,5 @@ mySet.add(o)
 
 ## See also
 
-- A polyfill of `Set` is available in [`core-js`](https://github.com/zloirock/core-js#set)
+- [Polyfill of `Set` in `core-js`](https://github.com/zloirock/core-js#set)
 - {{jsxref("Set")}}

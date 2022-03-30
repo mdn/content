@@ -16,7 +16,7 @@ tags:
 In 1989, while working at CERN, Tim Berners-Lee wrote a proposal to build a hypertext system over the internet. Initially called the _Mesh_, it was later renamed the _World Wide Web_ during its implementation in 1990. Built over the existing TCP and IP protocols, it consisted of 4 building blocks:
 
 - A textual format to represent hypertext documents, the _[HyperText Markup Language](/en-US/docs/Web/HTML)_ (HTML).
-- A simple protocol to exchange these documents, the _HypertText Transfer Protocol_ (HTTP).
+- A simple protocol to exchange these documents, the _HyperText Transfer Protocol_ (HTTP).
 - A client to display (and edit) these documents, the first web browser called the _WorldWideWeb_.
 - A server to give access to the document, an early version of _httpd_.
 
@@ -47,7 +47,7 @@ Unlike subsequent evolutions, there were no HTTP headers. This meant that only H
 HTTP/0.9 was very limited, but browsers and servers quickly made it more versatile:
 
 - Versioning information was sent within each request (`HTTP/1.0` was appended to the `GET` line).
-- A status code line was also sent at the beginning of a response. This allowed the browser itself recognize the success or failure of a request and adapt its behavior accordingly. For example, updating or using its local cache in a specific way.
+- A status code line was also sent at the beginning of a response. This allowed the browser itself to recognize the success or failure of a request and adapt its behavior accordingly. For example, updating or using its local cache in a specific way.
 - The concept of HTTP headers was introduced for both requests and responses. Metadata could be transmitted and the protocol became extremely flexible and extensible.
 - Documents other than plain HTML files could be transmitted thanks to the {{HTTPHeader("Content-Type")}} header.
 
@@ -155,7 +155,7 @@ During the same time period, it became clear that an encrypted transport layer w
 
 ### Using HTTP for complex applications
 
-Tim Berners-Lee's didn't originally envision HTTP as a read-only medium. He wanted to create a web where people could add and move documents remotely—a kind of distributed file system. Around 1996, HTTP was extended to allow authoring, and a standard called WebDAV was created. It grew to include specific applications like CardDAV for handling address book entries and CalDAV for dealing with calendars. But all these \*DAV extensions had a flaw: they were only usable when implemented by the servers.
+Tim Berners-Lee didn't originally envision HTTP as a read-only medium. He wanted to create a web where people could add and move documents remotely—a kind of distributed file system. Around 1996, HTTP was extended to allow authoring, and a standard called WebDAV was created. It grew to include specific applications like CardDAV for handling address book entries and CalDAV for dealing with calendars. But all these \*DAV extensions had a flaw: they were only usable when implemented by the servers.
 
 In 2000, a new pattern for using HTTP was designed: {{glossary("REST", "representational state transfer")}} (or REST). The API wasn't based on the new HTTP methods, but instead relied on access to specific URIs with basic HTTP/1.1 methods. This allowed any web application to let an API retrieve and modify its data without having to update the browsers or the servers. All necessary information was embedded in the files that the websites served through standard HTTP/1.1. The drawback of the REST model was that each website defined its own nonstandard RESTful API and had total control of it. This differed from the \*DAV extensions where clients and servers were interoperable. RESTful APIs became very common in the 2010s.
 
@@ -193,11 +193,11 @@ HTTP hasn't stopped evolving since the release of HTTP/2. Like with HTTP/1.x, HT
 - The introduction of {{HTTPHeader("Client-Hints")}} allowed the browser or client to proactively communicate information about its requirements and hardware constraints to the server.
 - The introduction of security-related prefixes in the {{HTTPHeader("Cookie")}} header helped guarantee that secure cookies couldn't be altered.
 
-This evolution of HTTP has lead to the creation of many applications and has driven the adoption of the protocol. The environment in which HTTP is used today is quite different from that of the early 1990s. HTTP's original design proved to scalable, allowing the web to evolve over a quarter of a century. By fixing flaws and retaining the flexibility and extensibility that made HTTP such a success, the adoption of HTTP/2 points to a bright future for the protocol.
+This evolution of HTTP has lead to the creation of many applications and has driven the adoption of the protocol. The environment in which HTTP is used today is quite different from that of the early 1990s. HTTP's original design proved to be scalable, allowing the web to evolve over a quarter of a century. By fixing flaws and retaining the flexibility and extensibility that made HTTP such a success, the adoption of HTTP/2 points to a bright future for the protocol.
 
 ## HTTP/3 - HTTP over QUIC
 
-{{Draft}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The next major version of HTTP, HTTP/3, will use {{Glossary("QUIC")}} instead {{Glossary("TCP")}}/{{Glossary("TLS")}} for the transport layer portion.
 

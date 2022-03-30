@@ -6,7 +6,6 @@ tags:
   - Broadcast Channel API
   - BroadcastChannel
   - Constructor
-  - Experimental
   - HTML API
   - Reference
 browser-compat: api.BroadcastChannel.BroadcastChannel
@@ -21,7 +20,7 @@ The **`BroadcastChannel()`** constructor creates a new
 ## Syntax
 
 ```js
- channel = new BroadcastChannel(channelName);
+new BroadcastChannel(channelName);
 ```
 
 ### Values

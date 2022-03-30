@@ -13,7 +13,7 @@ browser-compat: api.EncodedAudioChunk.timestamp
 
 The **`timestamp`** read-only property of the {{domxref("EncodedAudioChunk")}} interface returns an integer indicating the timestamp of the audio in microseconds.
 
-### Value
+## Value
 
 An integer.
 
@@ -40,5 +40,3 @@ console.log(chunk.timestamp); //23000000
 ## Browser compatibility
 
 {{Compat}}
-
-

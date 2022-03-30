@@ -13,7 +13,7 @@ browser-compat: api.SVGPatternElement
 
 The **`SVGPatternElement`** interface corresponds to the {{SVGElement("pattern")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

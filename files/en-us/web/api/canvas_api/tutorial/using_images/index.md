@@ -10,12 +10,12 @@ tags:
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}
 
-Until now we have created our own [shapes](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) and [applied styles](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) to them. One of the more exciting features of {{HTMLElement("canvas")}} is the ability to use images.  These can be used to do dynamic photo compositing or as backdrops of graphs, for sprites in games, and so forth. External images can be used in any format supported by the browser, such as PNG, GIF, or JPEG. You can even use the image produced by other canvas elements on the same page as the source!
+Until now we have created our own [shapes](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) and [applied styles](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) to them. One of the more exciting features of {{HTMLElement("canvas")}} is the ability to use images. These can be used to do dynamic photo compositing or as backdrops of graphs, for sprites in games, and so forth. External images can be used in any format supported by the browser, such as PNG, GIF, or JPEG. You can even use the image produced by other canvas elements on the same page as the source!
 
 Importing images into a canvas is basically a two step process:
 
-1.  Get a reference to an {{domxref("HTMLImageElement")}} object or to another canvas element as a source. It is also possible to use images by providing a URL.
-2.  Draw the image on the canvas using the `drawImage()` function.
+1. Get a reference to an {{domxref("HTMLImageElement")}} object or to another canvas element as a source. It is also possible to use images by providing a URL.
+2. Draw the image on the canvas using the `drawImage()` function.
 
 Let's take a look at how to do this.
 
@@ -122,26 +122,26 @@ In the following example, we will use an external image as the backdrop for a sm
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="180" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="180" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var img = new Image();
-  img.onload = function() {
-    ctx.drawImage(img, 0, 0);
-    ctx.beginPath();
-    ctx.moveTo(30, 96);
-    ctx.lineTo(70, 66);
-    ctx.lineTo(103, 76);
-    ctx.lineTo(170, 15);
-    ctx.stroke();
-  };
-  img.src = 'backdrop.png';
+  var ctx = document.getElementById('canvas').getContext('2d');
+  var img = new Image();
+  img.onload = function() {
+    ctx.drawImage(img, 0, 0);
+    ctx.beginPath();
+    ctx.moveTo(30, 96);
+    ctx.lineTo(70, 66);
+    ctx.lineTo(103, 76);
+    ctx.lineTo(170, 15);
+    ctx.stroke();
+  };
+  img.src = 'backdrop.png';
 }
 ```
 
@@ -164,24 +164,24 @@ In this example, we'll use an image as a wallpaper and repeat it several times o
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var img = new Image();
-  img.onload = function() {
-    for (var i = 0; i < 4; i++) {
-      for (var j = 0; j < 3; j++) {
-        ctx.drawImage(img, j * 50, i * 38, 50, 38);
-      }
-    }
-  };
-  img.src = 'rhino.jpg';
+  var ctx = document.getElementById('canvas').getContext('2d');
+  var img = new Image();
+  img.onload = function() {
+    for (var i = 0; i < 4; i++) {
+      for (var j = 0; j < 3; j++) {
+        ctx.drawImage(img, j * 50, i * 38, 50, 38);
+      }
+    }
+  };
+  img.src = 'rhino.jpg';
 }
 ```
 
@@ -210,13 +210,13 @@ In this example, we'll use the same rhino as in the previous example, but we'll 
 
 ```html
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
-   <div style="display:none;">
-     <img id="source" src="rhino.jpg" width="300" height="227">
-     <img id="frame" src="canvas_picture_frame.png" width="132" height="150">
-   </div>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+    <div style="display:none;">
+      <img id="source" src="rhino.jpg" width="300" height="227">
+      <img id="frame" src="canvas_picture_frame.png" width="132" height="150">
+    </div>
+  </body>
 </html>
 ```
 
@@ -242,7 +242,7 @@ The script itself is very simple. Each {{HTMLElement("img")}} is assigned an ID 
 
 ## Art gallery example
 
-In the final example of this chapter, we'll build a little art gallery. The gallery consists of a table containing several images. When the page is loaded, a {{HTMLElement("canvas")}}  element is inserted for each image and a frame is drawn around it.
+In the final example of this chapter, we'll build a little art gallery. The gallery consists of a table containing several images. When the page is loaded, a {{HTMLElement("canvas")}} element is inserted for each image and a frame is drawn around it.
 
 In this case, every image has a fixed width and height, as does the frame that's drawn around them. You could enhance the script so that it uses the image's width and height to make the frame fit perfectly around it.
 
@@ -250,23 +250,23 @@ The code below should be self-explanatory. We loop through the {{domxref("docume
 
 ```html
 <html>
- <body onload="draw();">
-     <table>
-      <tr>
-        <td><img src="gallery_1.jpg"></td>
-        <td><img src="gallery_2.jpg"></td>
-        <td><img src="gallery_3.jpg"></td>
-        <td><img src="gallery_4.jpg"></td>
-      </tr>
-      <tr>
-        <td><img src="gallery_5.jpg"></td>
-        <td><img src="gallery_6.jpg"></td>
-        <td><img src="gallery_7.jpg"></td>
-        <td><img src="gallery_8.jpg"></td>
-      </tr>
-     </table>
+  <body onload="draw();">
+    <table>
+      <tr>
+        <td><img src="gallery_1.jpg"></td>
+        <td><img src="gallery_2.jpg"></td>
+        <td><img src="gallery_3.jpg"></td>
+        <td><img src="gallery_4.jpg"></td>
+      </tr>
+      <tr>
+        <td><img src="gallery_5.jpg"></td>
+        <td><img src="gallery_6.jpg"></td>
+        <td><img src="gallery_7.jpg"></td>
+        <td><img src="gallery_8.jpg"></td>
+      </tr>
+     </table>
      <img id="frame" src="canvas_picture_frame.png" width="132" height="150">
- </body>
+  </body>
 </html>
 ```
 

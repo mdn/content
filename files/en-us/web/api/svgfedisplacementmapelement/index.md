@@ -13,7 +13,7 @@ browser-compat: api.SVGFEDisplacementMapElement
 
 The **`SVGFEDisplacementMapElement`** interface corresponds to the {{SVGElement("feDisplacementMap")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Constants
 

@@ -24,13 +24,7 @@ modified if the metadata or the contents of the referenced file (or directory, o
 whatever other kind of file system entry might exist on the platform in use) has
 changed.
 
-## Syntax
-
-```js
-var modificationTime = Metadata.modificationTime;
-```
-
-### Value
+## Value
 
 A {{jsxref("Date")}} timestamp indicating when the file system entry was last changed.
 

@@ -13,7 +13,7 @@ browser-compat: api.SVGFEDropShadowElement
 
 The **`SVGFEDropShadowElement`** interface corresponds to the {{SVGElement("feDropShadow")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

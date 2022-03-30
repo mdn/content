@@ -55,7 +55,7 @@ border-image-source: unset;
 
 ```css
 .box {
-  border-image-source: url('image.png');
+  border-image-source: url('image.png');
 }
 ```
 
@@ -73,4 +73,4 @@ border-image-source: unset;
 - {{cssxref("outline")}}
 - {{cssxref("box-shadow")}}
 - {{cssxref("background-image")}}
-- {{cssxref("url()", "url()")}} function
+- {{cssxref("url", "url()")}} function

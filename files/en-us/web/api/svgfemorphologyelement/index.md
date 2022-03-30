@@ -13,7 +13,7 @@ browser-compat: api.SVGFEMorphologyElement
 
 The **`SVGFEMorphologyElement`** interface corresponds to the {{SVGElement("feMorphology")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Constants
 

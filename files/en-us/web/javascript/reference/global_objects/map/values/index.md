@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Map.values
 {{JSRef}}
 
 The **`values()`** method returns a new
-**[Iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)** object
+_[iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)_ object
 that contains the values for each element in the `Map` object in insertion
 order.
 

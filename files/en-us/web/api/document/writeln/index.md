@@ -14,7 +14,9 @@ Writes a string of text followed by a newline character to a document.
 
 ## Syntax
 
-    document.writeln(line);
+```js
+document.writeln(line);
+```
 
 ### Parameters
 
@@ -22,7 +24,9 @@ Writes a string of text followed by a newline character to a document.
 
 ## Example
 
-    document.writeln("<p>enter password:</p>");
+```js
+document.writeln("<p>enter password:</p>");
+```
 
 ## Notes
 

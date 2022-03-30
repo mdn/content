@@ -16,19 +16,11 @@ browser-compat: api.Document.fgColor
 **`fgColor`** gets/sets the foreground color, or text color, of
 the current document.
 
-## Syntax
+## Value
 
-```js
-var color = document.fgColor;
-document.fgColor = color;
-```
+A string representing the color as a word (e.g., "red") or hexadecimal value (e.g., "`#ff0000`").
 
-### Parameters
-
-- _color_ is a string representing the color as a word (e.g., "red") or
-  hexadecimal value (e.g., "`#ff0000`").
-
-## Example
+## Examples
 
 ```js
 document.fgColor = "white";

@@ -13,22 +13,19 @@ browser-compat: api.Element.insertAdjacentText
 ---
 {{APIRef("DOM")}}
 
-The **`insertAdjacentText()`** method of the
-{{domxref("Element")}} interface inserts a given text node at a given position relative
-to the element it is invoked upon.
+The **`insertAdjacentText()`** method of the {{domxref("Element")}} interface, given a relative position and a string, inserts a new text node at the given position relative to the element it is called from.
 
 ## Syntax
 
 ```js
-element.insertAdjacentText(position, element);
+element.insertAdjacentText(where, data);
 ```
 
 ### Parameters
 
-- `position`
+- `where`
 
-  - : A {{domxref("DOMString")}} representing the position relative to the
-    `element`; must be one of the following strings:
+  - : A string representing the position relative to the element the method is called from; must be one of the following strings:
 
     - `'beforebegin'`: Before the `element`
       itself.
@@ -39,8 +36,8 @@ element.insertAdjacentText(position, element);
     - `'afterend'`: After the `element`
       itself.
 
-- `element`
-  - : A {{domxref("DOMString")}} representing the text to be inserted into the tree.
+- `data`
+  - : A string from which to create a new text node to insert at the given position `where` relative to the element the method is called from.
 
 ### Return value
 
@@ -54,13 +51,15 @@ Void.
 
 ### Visualization of position names
 
-    <!-- beforebegin -->
-    <p>
-      <!-- afterbegin -->
-      foo
-      <!-- beforeend -->
-    </p>
-    <!-- afterend -->
+```html
+<!-- beforebegin -->
+<p>
+  <!-- afterbegin -->
+  foo
+  <!-- beforeend -->
+</p>
+<!-- afterend -->
+```
 
 > **Note:** The `beforebegin` and
 > `afterend` positions work only if the node is in a tree and has an element
@@ -85,21 +84,6 @@ element, then press the _Insert before_ and _Insert after_ buttons to
 insert it before or after the existing paragraph text using
 `insertAdjacentText()`. Note that the existing text node is not added to —
 further text nodes are created containing the new additions.
-
-## Polyfill
-
-You can polyfill the insertAdjacentText`() method` in Internet Explorer 5.5
-(maybe earlier) and higher with the following code:
-
-    if (!Element.prototype.insertAdjacentText)
-      Element.prototype.insertAdjacentText = function(type, txt){
-        this.insertAdjacentHTML(
-          type,
-          (txt+'') // convert to string
-            .replace(/&/g, '&amp;') // embed ampersand symbols
-            .replace(/</g, '&lt;') // embed less-than symbols
-        )
-      }
 
 ## Specifications
 

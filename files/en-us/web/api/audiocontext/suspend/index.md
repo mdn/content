@@ -21,12 +21,12 @@ This method will cause an `INVALID_STATE_ERR` exception to be thrown if called o
 
 ```js
 var audioCtx = new AudioContext();
-audioCtx.suspend().then(function() { ... });
+audioCtx.suspend().then(function() { /* ... */ });
 ```
 
 ### Returns
 
-A {{jsxref("Promise")}} that resolves with void. The promise is rejected if the context has already been closed.
+A {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}. The promise is rejected if the context has already been closed.
 
 ## Example
 
@@ -34,15 +34,15 @@ The following snippet is taken from our [AudioContext states demo](https://githu
 
 ```js
 susresBtn.onclick = function() {
-  if(audioCtx.state === 'running') {
-    audioCtx.suspend().then(function() {
-      susresBtn.textContent = 'Resume context';
-    });
-  } else if(audioCtx.state === 'suspended') {
-    audioCtx.resume().then(function() {
-      susresBtn.textContent = 'Suspend context';
-    });
-  }
+  if(audioCtx.state === 'running') {
+    audioCtx.suspend().then(function() {
+      susresBtn.textContent = 'Resume context';
+    });
+  } else if(audioCtx.state === 'suspended') {
+    audioCtx.resume().then(function() {
+      susresBtn.textContent = 'Suspend context';
+    });
+  }
 }
 ```
 

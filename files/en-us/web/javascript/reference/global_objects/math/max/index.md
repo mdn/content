@@ -15,9 +15,7 @@ browser-compat: javascript.builtins.Math.max
 ---
 {{JSRef}}
 
-The **`Math.max()`** function returns
-the largest of the zero or more numbers given as input parameters, or {{jsxref("NaN")}} if any parameter
-isn't a number and can't be converted into one.
+The **`Math.max()`** function returns the largest of the zero or more numbers given as input parameters, or {{jsxref("NaN")}} if any parameter isn't a number and can't be converted into one.
 
 {{EmbedInteractiveExample("pages/js/math-max.html")}}
 
@@ -27,12 +25,12 @@ isn't a number and can't be converted into one.
 Math.max()
 Math.max(value0)
 Math.max(value0, value1)
-Math.max(value0, value1, ... , valueN)
+Math.max(value0, value1, /* ... ,*/ valueN)
 ```
 
 ### Parameters
 
-- `value1, value2, ...`
+- `value1`, `value2`, ... , `valueN`
   - : Zero or more numbers among which the largest value will be selected and returned.
 
 ### Return value
@@ -71,7 +69,7 @@ element in a numeric array, by comparing each value:
 var arr = [1,2,3];
 var max = arr.reduce(function(a, b) {
     return Math.max(a, b);
-}, 0);
+}, -Infinity);
 ```
 
 The following function uses {{jsxref("Function.prototype.apply()")}} to get the maximum
@@ -86,8 +84,8 @@ function getMaxOfArray(numArray) {
 }
 ```
 
-The new [spread
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) is a shorter way of writing the `apply` solution to get the
+The new [spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+is a shorter way of writing the `apply` solution to get the
 maximum of an array:
 
 ```js
@@ -97,9 +95,9 @@ var max = Math.max(...arr);
 
 However, both spread (`...`) and `apply` will either fail or
 return the wrong result if the array has too many elements, because they try to pass the
-array elements as function parameters. See [Using
-apply and built-in functions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#using_apply_and_built-in_functions) for more details. The `reduce` solution
-does not have this problem.
+array elements as function parameters.
+See [Using apply and built-in functions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#using_apply_and_built-in_functions)
+for more details. The `reduce` solution does not have this problem.
 
 ## Specifications
 

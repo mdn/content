@@ -14,21 +14,15 @@ browser-compat: api.IDBCursor.direction
 ---
 {{ APIRef("IndexedDB") }}
 
-The **`direction`** read-only property of the
-{{domxref("IDBCursor")}} interface is a {{domxref("DOMString")}} that returns the
+The **`direction`** read-only property of the
+{{domxref("IDBCursor")}} interface is a {{domxref("DOMString")}} that returns the
 direction of traversal of the cursor (set using
-{{domxref("IDBObjectStore.openCursor")}} for example). See the {{anch("Values")}}
+{{domxref("IDBObjectStore.openCursor")}} for example). See the [Values](#values)
 section below for possible values.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var direction = cursor.direction;
-```
-
-### Value
+## Value
 
 A string (defined by the [`IDBCursorDirection`
 enum](https://w3c.github.io/IndexedDB/#enumdef-idbcursordirection)) indicating the direction in which the cursor is traversing the data.
@@ -46,41 +40,43 @@ Possible values are:
       <td><code>next</code></td>
       <td>
         This direction causes the cursor to be opened at the start of
-        the source.
+        the source.
       </td>
     </tr>
     <tr>
       <td><code>nextunique</code></td>
       <td>
         This direction causes the cursor to be opened at the start of
-        the source. For every key with duplicate values, only the first record
+        the source. For every key with duplicate values, only the first record
         is yielded.
       </td>
     </tr>
     <tr>
       <td><code>prev</code></td>
       <td>
-        This direction causes the cursor to be opened at the end of the source.
+        This direction causes the cursor to be opened at the end of the source.
       </td>
     </tr>
     <tr>
       <td><code>prevunique</code></td>
       <td>
-        This direction causes the cursor to be opened at the end of the source.
+        This direction causes the cursor to be opened at the end of the source.
         For every key with duplicate values, only the first record is
-        yielded.<br /> 
+        yielded.<br />
       </td>
     </tr>
   </tbody>
 </table>
 
-## Example
+## Examples
 
 In this simple fragment we create a transaction, retrieve an object store, then use a
 cursor to iterate through all the records in the object store. Within each iteration we
 log the direction of the cursor, something like this:
 
-      prev
+```
+prev
+```
 
 > **Note:** we can't change the direction of travel of the cursor using
 > the `direction` property, as it is read-only. We specify the direction of

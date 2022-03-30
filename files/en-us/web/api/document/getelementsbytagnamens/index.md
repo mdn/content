@@ -30,17 +30,12 @@ elements = document.getElementsByTagNameNS(namespace, name)
   value `*`, which matches all elements (see {{domxref("Element.localName",
     "element.localName")}}).
 
-**Note:** While the W3C specification says
-`elements` is a `NodeList`, this method returns a
-{{DOMxRef("HTMLCollection")}} both in Gecko and Internet Explorer. Opera returns a
-`NodeList`, but with a `namedItem` method implemented, which makes
-it similar to a `HTMLCollection`. As of January 2012, only in WebKit browsers
-is the returned value a pure `NodeList`. See [bug 14869](https://bugzilla.mozilla.org/show_bug.cgi?id=14869) for details.
+> **Note:** While the W3C specification says `elements` is a `NodeList`, this method returns a {{DOMxRef("HTMLCollection")}} both in Gecko and Internet Explorer.
+> Opera returns a `NodeList`, but with a `namedItem` method implemented, which makes it similar to a `HTMLCollection`. As of January 2012, only in WebKit browsers is the returned value a pure `NodeList`.
+> See [bug 14869](https://bugzilla.mozilla.org/show_bug.cgi?id=14869) for details.
 
-**Note:** Currently parameters in this method are
-case-sensitive, but they were case-insensitive in Firefox 3.5 and before. See the [developer release note for Firefox
-3.6](/en-US/docs/Mozilla/Firefox/Releases/3.6#dom) and a note in Browser compatibility section in
-{{domxref("Element.getElementsByTagNameNS")}} for details.
+> **Note:** Currently parameters in this method are case-sensitive, but they were case-insensitive in Firefox 3.5 and before.
+> See the [developer release note for Firefox 3.6](/en-US/docs/Mozilla/Firefox/Releases/3.6#dom) and a note in Browser compatibility section in {{domxref("Element.getElementsByTagNameNS")}} for details.
 
 ## Example
 

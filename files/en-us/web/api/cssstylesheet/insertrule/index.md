@@ -12,7 +12,7 @@ browser-compat: api.CSSStyleSheet.insertRule
 {{APIRef("CSSOM")}}
 
 The **`CSSStyleSheet.insertRule()`**
-method inserts a new [CSS rule](/en-US/docs/Web/API/CSSRule) into the [current style sheet](/en-US/docs/Web/API/CSSStyleSheet), with some [restrictions](#restrictions).
+method inserts a new [CSS rule](/en-US/docs/Web/API/CSSRule) into the [current style sheet](/en-US/docs/Web/API/CSSStyleSheet).
 
 > **Note:** Although `insertRule()` is exclusively a method of
 > {{domxref("CSSStyleSheet")}}, it actually inserts the rule into
@@ -50,21 +50,16 @@ The newly inserted rule's index within the stylesheet's rule-list.
 
 ### Exceptions
 
-CSS has some intuitive and not-so-intuitive restrictions affecting where rules can be
-inserted. Violating them will raise an exception.
-
-- If `index` >
-  `{{domxref("CSSRuleList", "", "", "1")}}.length`, the method aborts with an
-  `IndexSizeError` {{domxref("DOMException")}}.
-- If `rule` cannot be inserted at `index` `0` due to
-  some CSS constraint, the method aborts with a `HierarchyRequestError` {{domxref("DOMException")}}.
-- If more than one rule is given in the `rule` parameter, the method aborts
-  with a `SyntaxError`{{domxref("DOMException")}}.
-- If trying to insert an {{cssxref("@import")}} at-rule after a style rule, the method
-  aborts with a `HierarchyRequestError`  {{domxref("DOMException")}}.
-- If `rule` is {{cssxref("@namespace")}} and the rule-list has more than
-  just `@import` at-rules and/or `@namespace` at-rules, the method
-  aborts with an `InvalidStateError` {{domxref("DOMException")}}.
+- `IndexSizeError` {{domxref("DOMException")}}
+  - : Thrown if `index` > `{{domxref("CSSRuleList", "", "", "1")}}.length`.
+- `HierarchyRequestError` {{domxref("DOMException")}}
+  - : Thrown if `rule` cannot be inserted at `index` `0` due to some CSS constraint.
+- `SyntaxError`{{domxref("DOMException")}}
+  - : Thrown if more than one rule is given in the `rule` parameter.
+- `HierarchyRequestError` {{domxref("DOMException")}}
+  - : Thrown if trying to insert an {{cssxref("@import")}} at-rule after a style rule.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if `rule` is {{cssxref("@namespace")}} and the rule-list has more than just `@import` at-rules and/or `@namespace` at-rules.
 
 ## Examples
 
@@ -193,9 +188,9 @@ To support Internet Explorer 8 and below, use:
 `addRule('pre', 'font: 14px verdana'); // add rule at end`
 
 Also note the non-standard
-[`removeRule()`](http://www.quirksmode.org/dom/w3c_css.html#change)
+[`removeRule()`](https://www.quirksmode.org/dom/w3c_css.html#change)
 and
-[`.rules`](http://www.quirksmode.org/dom/w3c_css.html#access)
+[`.rules`](https://www.quirksmode.org/dom/w3c_css.html#access)
 instead of {{domxref("CSSStyleSheet.deleteRule","deleteRule()")}} and
 {{domxref("CSSStyleSheet",".cssRules")}}, respectively.
 
@@ -203,6 +198,6 @@ instead of {{domxref("CSSStyleSheet.deleteRule","deleteRule()")}} and
 
 - {{domxref("CSSStyleSheet.deleteRule")}}
 - [Cross-Browser
-  CSS-rules ordering (CSS1)](http://www-archive.mozilla.org/docs/web-developer/css1technote/css1tojs.html#priority)
+  CSS-rules ordering (CSS1)](https://www-archive.mozilla.org/docs/web-developer/css1technote/css1tojs.html#priority)
 - [Quirksmode -
-  CSS](http://www.quirksmode.org/dom/w3c_css.html)
+  CSS](https://www.quirksmode.org/dom/w3c_css.html)

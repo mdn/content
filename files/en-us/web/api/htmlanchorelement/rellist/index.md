@@ -19,7 +19,7 @@ indicating the relationship between the resource represented by the {{HTMLElemen
 element and the current document.
 
 The property itself is read-only, meaning you can't substitute the
-{{domxref("DOMTokenList")}} with another one, but its contents can still be changed.
+{{domxref("DOMTokenList")}} with another one, but its contents can still be changed.
 
 ## Syntax
 

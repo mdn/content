@@ -14,7 +14,7 @@ The **`MediaStreamTrackProcessor`** interface of the {{domxref('Insertable Strea
 
 ## Constructor
 
-- {{domxref("MediaStreamTrackProcessor.MediaStreamTrackProcessor()")}}
+- {{domxref("MediaStreamTrackProcessor.MediaStreamTrackProcessor", "MediaStreamTrackProcessor()")}}
   - : Creates a new `MediaStreamTrackProcessor` object.
 
 ## Properties
@@ -52,4 +52,3 @@ trackProcessor.readable.pipeThrough(transformer).pipeTo(trackGenerator.writable)
 ## Browser compatibility
 
 {{Compat}}
-

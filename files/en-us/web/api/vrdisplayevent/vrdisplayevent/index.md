@@ -4,7 +4,7 @@ slug: Web/API/VRDisplayEvent/VRDisplayEvent
 tags:
   - API
   - Constructor
-  - Experimental
+  - Deprecated
   - Reference
   - VR
   - VRDisplayEvent
@@ -21,7 +21,7 @@ The **`VRDisplayEvent()`** constructor creates a {{domxref("VRDisplayEvent")}} o
 ## Syntax
 
 ```js
-var myEventObject = new VRDisplayEvent(type, eventInitDict);
+new VRDisplayEvent(type, eventInitDict);
 ```
 
 ### Parameters

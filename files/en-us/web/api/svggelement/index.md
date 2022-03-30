@@ -13,7 +13,7 @@ browser-compat: api.SVGGElement
 
 The **`SVGGElement`** interface corresponds to the {{SVGElement("g")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

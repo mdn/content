@@ -15,7 +15,7 @@ browser-compat: api.XPathEvaluator
 ---
 {{APIRef("DOM XPath")}}
 
-The `XPathEvaluator` interface allows to compile and evaluate {{Glossary("XPath")}} expressions.
+The `XPathEvaluator` interface allows to compile and evaluate {{Glossary("XPath")}} expressions.
 
 It is implemented by the {{domxref("Document")}} interface.
 
@@ -44,7 +44,7 @@ The following example shows the use of the `XPathEvaluator` interface.
 ```js
 var xpath = "//div";
 var evaluator = new XPathEvaluator();
-var expression = evaluator.createExpression("//div");
+var expression = evaluator.createExpression(xpath);
 var result = expression.evaluate(document, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
 document.querySelector("output").textContent = result.snapshotLength;
 ```

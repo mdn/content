@@ -82,7 +82,7 @@ let columns = 120;
 #### Scoping
 
 Check if you are in the correct scope. Should this constant appear in this scope or was
-it meant to appear in a function, for example?
+it meant to appear in a function, for example?
 
 ```js example-good
 const COLUMNS = 80;
@@ -95,7 +95,7 @@ function setupBigScreenEnvironment() {
 ### `const` and immutability
 
 The `const` declaration creates a read-only reference to a value. It does
-**not** mean the value it holds is immutable, just that the variable
+**not** mean the value it holds is immutable, just that the variable
 identifier cannot be reassigned. For instance, in case the content is an object, this
 means the object itself can still be altered. This means that you can't mutate the value
 stored in a variable:

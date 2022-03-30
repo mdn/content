@@ -16,12 +16,20 @@ The **`domain`** property of the {{domxref("Document")}}
 interface gets/sets the domain portion of the {{glossary("origin")}} of the current
 document, as used by the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
 
-## Syntax
+## Value
 
-### Getter
+A string.
+
+## Examples
+
+### Getting the domain
+
+For code running at the URL `https://developer.mozilla.org/en-US/docs/Web`,
+this example would set `currentDomain` to the string
+"`developer.mozilla.org`".
 
 ```js
-const domainString = document.domain
+const currentDomain = document.domain;
 ```
 
 The getter for this property returns the domain portion of the current document's
@@ -33,9 +41,21 @@ there are some exceptions:
 - If the `document.domain` [setter](#setter) has been used, then
   it will return the value that was set.
 
-Usually it is better to use the {{domxref("Location.hostname")}} property instead.
+Although the getter is not dangerous in the same way that the setter is, it is likely
+simpler and more useful to use the {{domxref("Location.hostname")}} property instead.
+Then you can avoid `document.domain` entirely:
 
-### Setter
+```js
+const currentHostname = location.hostname;
+```
+
+For the URL `https://developer.mozilla.org/en-US/docs/Web`,
+`currentHostname` is also the string "`developer.mozilla.org`".
+Other alternatives that provide slightly different information are
+{{domxref("Location.host")}}, which includes the port, and
+{{domxref("origin")}}, which provides the full origin.
+
+### Setting the domain
 
 ```js
 document.domain = domainString
@@ -72,7 +92,7 @@ origin policy](/en-US/docs/Web/Security/Same-origin_policy), and complicates the
 interoperability problems and security bugs.
 
 Attempting to set `document.domain` is dangerous. It opens up full access to
-a page's DOM from _all_ subdomains, which is likely not be what is intended. It
+a page's DOM from _all_ subdomains, which is likely not what is intended. It
 also removes the port component from the origin, so now your page can be accessed by
 other pages with the same IP address or same host component, even on a different port.
 
@@ -118,35 +138,9 @@ modern isolation features:
   {{httpheader("Origin-Isolation")}} HTTP header
 
 Finally, setting `document.domain` does not change the origin used for
-origin-checks by some Web APIs, preventing sub-domain access via this mechanism.
-Affected APIs include (but are not limited to):
-{{domxref("Window.localStorage")}}, {{domxref("IndexedDB_API")}}, {{domxref("BroadcastChannel")}}, {{domxref("SharedWorker")}} .
-
-## Examples
-
-### Getting the domain
-
-For code running at the URL `https://developer.mozilla.org/en-US/docs/Web`,
-this example would set `currentDomain` to the string
-"`developer.mozilla.org`".
-
-```js
-const currentDomain = document.domain;
-```
-
-Although the getter is not dangerous in the same way that the setter is, it is likely
-simpler and more useful to use the {{domxref("Location.hostname")}} property instead.
-Then you can avoid `document.domain` entirely:
-
-```js
-const currentHostname = location.hostname;
-```
-
-For the URL `https://developer.mozilla.org/en-US/docs/Web`,
-`currentHostname` is also the string "`developer.mozilla.org`".
-Other alternatives that provide slightly different information are
-{{domxref("Location.host")}}, which includes the port, and
-{{domxref("origin")}}, which provides the full origin.
+origin-checks by some Web APIs, preventing sub-domain access via this mechanism.
+Affected APIs include (but are not limited to):
+{{domxref("Window.localStorage")}}, {{domxref("IndexedDB_API")}}, {{domxref("BroadcastChannel")}}, {{domxref("SharedWorker")}} .
 
 ## Specifications
 

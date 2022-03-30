@@ -18,7 +18,7 @@ The **`handler.defineProperty()`** method is a trap for
 ## Syntax
 
 ```js
-const p = new Proxy(target, {
+new Proxy(target, {
   defineProperty: function(target, property, descriptor) {
   }
 });
@@ -51,6 +51,8 @@ The **`handler.defineProperty()`** method is a trap for
 
 This trap can intercept these operations:
 
+- {{jsxref("Object.prototype.__defineGetter__()")}}
+- {{jsxref("Object.prototype.__defineSetter__()")}}
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Reflect.defineProperty()")}}
 

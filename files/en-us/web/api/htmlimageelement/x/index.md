@@ -20,7 +20,7 @@ browser-compat: api.HTMLImageElement.x
 {{APIRef("HTML DOM")}}
 
 The read-only {{domxref("HTMLImageElement")}} property
-**`x`** indicates the x-coordinate of the 
+**`x`** indicates the x-coordinate of the
 {{HTMLElement("img")}} element's left border edge relative to the root element's
 origin.
 

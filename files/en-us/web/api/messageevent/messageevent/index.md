@@ -10,27 +10,28 @@ tags:
   - messaging
 browser-compat: api.MessageEvent.MessageEvent
 ---
-{{APIRef("HTML DOM")}}{{draft}}
+{{APIRef("HTML DOM")}}
 
-The **`MessageEvent()`** constructor creates a new
-{{domxref("MessageEvent")}} object instance.
+The **`MessageEvent()`** constructor creates a new {{domxref("MessageEvent")}} object instance.
 
 ## Syntax
 
 ```js
-var messageEvent = new MessageEvent(type, init);
+new MessageEvent(type)
+new MessageEvent(type, init)
 ```
 
 ### Parameters
 
 - **`type`**
-  - : The type of `MessageEvent` that will be created. This can be one of XXX
+  - : A string indicating the type of `MessageEvent` that will be created.
+    Some of the more common types are: `message`, `messageerror`, `connect`.
 - **`init`** {{optional_inline}}
 
   - : A dictionary object that can contain the following properties:
 
-    - `data`: The data you want contained in the MessageEvent. This can be
-      of any data type, and will default to `null` if not specified.
+    - `data`: The data you want contained in the MessageEvent.
+      This can be of any data type, and will default to `null` if not specified.
     - `origin`: A {{domxref("USVString")}} representing the origin of the
       message emitter. This defaults to an empty string ("") if not specified.
     - `lastEventId`: A {{domxref("DOMString")}} representing a unique ID
@@ -47,8 +48,8 @@ var messageEvent = new MessageEvent(type, init);
 ## Example
 
 ```js
-var myMessage = new MessageEvent('worker', {
-  data : 'hello'
+var myMessage = new MessageEvent('message', {
+  data : 'hello'
 });
 ```
 
@@ -62,5 +63,4 @@ var myMessage = new MessageEvent('worker', {
 
 ## See also
 
-- {{domxref("ExtendableMessageEvent")}} — similar to this interface but used in
-  interfaces that needs to give more flexibility to authors.
+- {{domxref("ExtendableMessageEvent")}} — similar to this interface but used in interfaces that needs to give more flexibility to authors.

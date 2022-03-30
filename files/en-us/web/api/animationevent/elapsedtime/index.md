@@ -5,13 +5,12 @@ tags:
   - API
   - AnimationEvent
   - CSSOM
-  - Experimental
   - Property
   - Reference
   - Web Animations
 browser-compat: api.AnimationEvent.elapsedTime
 ---
-{{SeeCompatTable}}{{ apiref("Web Animations API") }}
+{{APIRef("Web Animations API")}}
 
 The **`AnimationEvent.elapsedTime`** read-only property is a
 `float` giving the amount of time the animation has been running, in seconds,
@@ -21,11 +20,9 @@ when this event fired, excluding any time the animation was paused. For an
 {{cssxref("animation-delay")}}, in which case the event will be fired with
 `elapsedTime` containing `(-1 * delay)`.
 
-## Syntax
+## Value
 
-```js
-time = AnimationEvent.elapsedTime
-```
+A `float` giving the amount of time in seconds.
 
 ## Specifications
 

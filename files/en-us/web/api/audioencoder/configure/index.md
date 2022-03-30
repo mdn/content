@@ -11,12 +11,12 @@ browser-compat: api.AudioEncoder.configure
 ---
 {{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
 
-The **`configure()`** method of the {{domxref("AudioEncoder")}} interface enqueues a control message to configure the audio decoder for decoding chunks.
+The **`configure()`** method of the {{domxref("AudioEncoder")}} interface enqueues a control message to configure the audio encoder for encoding chunks.
 
 ## Syntax
 
 ```js
-AudioDecoder.configure(config)
+AudioEncoder.configure(config)
 ```
 
 ### Parameters
@@ -32,18 +32,17 @@ AudioDecoder.configure(config)
     - `bitrate`{{Optional_Inline}}
       - : An integer representing the bitrate.
 
-
 ### Return Value
 
-{{jsxref("Undefined")}}.
+None.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `TypeError`
+- `TypeError` {{domxref("DOMException")}}
   - : Thrown if the provided `config` is invalid.
-- {{domxref("DOMException")}} `InvalidStateError`
+- `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("AudioEncoder.state","state")}} is `"closed"`.
-- {{domxref("DOMException")}} `NotSupportedError`
+- `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the provided `config` is valid but the user agent cannot provide a codec that can decode this profile.
 
 ## Examples
@@ -74,4 +73,3 @@ encoder.configure(config);
 ## Browser compatibility
 
 {{Compat}}
-

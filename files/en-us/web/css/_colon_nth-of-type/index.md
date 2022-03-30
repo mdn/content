@@ -12,7 +12,7 @@ browser-compat: css.selectors.nth-of-type
 ---
 {{CSSRef}}
 
-The **`:nth-of-type()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements of a given type (tag name), based on their position among a group of siblings.
+The **`:nth-of-type()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on their position among siblings of the same type (tag name).
 
 ```css
 /* Selects every fourth <p> element

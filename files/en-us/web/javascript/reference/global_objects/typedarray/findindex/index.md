@@ -27,26 +27,28 @@ See also the {{jsxref("TypedArray.find", "find()")}} method, which returns the
 
 ```js
 // Arrow function
-findIndex((element) => { ... } )
-findIndex((element, index) => { ... } )
-findIndex((element, index, array) => { ... } )
+findIndex((element) => { /* ... */ } )
+findIndex((element, index) => { /* ... */ } )
+findIndex((element, index, array) => { /* ... */ } )
 
 // Callback function
 findIndex(callbackFn)
 findIndex(callbackFn, thisArg)
 
 // Inline callback function
-findIndex(function callbackFn(element) { ... })
-findIndex(function callbackFn(element, index) { ... })
-findIndex(function callbackFn(element, index, array){ ... })
-findIndex(function callbackFn(element, index, array) { ... }, thisArg)
+findIndex(function(element) { /* ... */ })
+findIndex(function(element, index) { /* ... */ })
+findIndex(function(element, index, array){ /* ... */ })
+findIndex(function(element, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
 
-  - : Function to execute on each value in the typed array, taking three arguments:
+  - : Function to execute on each value in the typed array.
+
+    The function is called with the following arguments:
 
     - `element`
       - : The current element being processed in the typed array.
@@ -164,6 +166,6 @@ TypedArray.prototype.findIndex = Array.prototype.findIndex = Array.prototype.fin
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.findIndex` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.findIndex` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray.prototype.find()")}}
 - {{jsxref("TypedArray.prototype.indexOf()")}}

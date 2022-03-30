@@ -11,10 +11,11 @@ tags:
   - Example
   - Reference
   - color
+spec-urls: https://drafts.csswg.org/css-color/#type-def-alpha-value
 ---
 {{CSSRef}}
 
-The **`<alpha-value>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a value that can be either a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}, specifying the **{{Glossary("alpha", "alpha channel")}}** or **transparency** of a color.
+The **`<alpha-value>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a value that can be either a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}, specifying the **{{Glossary("alpha", "alpha channel")}}** or **transparency** of a color.
 
 ## Syntax
 
@@ -52,10 +53,7 @@ shape-image-threshold: 0.7;
 
 ## Specifications
 
-| Specification                                                                                        | Status                           | Comment                                                                           |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Colors', '#type-def-alpha-value', '&lt;alpha-value&gt;')}} | {{Spec2('CSS4 Colors')}} | No significant change.                                                            |
-| {{SpecName('CSS3 Colors', '#alphavaluedt', '&lt;alpha-value&gt;')}}             | {{Spec2('CSS3 Colors')}} | Introduces `<alpha-value>` along with `rgba()` and `hsla()` functional notations. |
+{{Specifications}}
 
 ## See also
 

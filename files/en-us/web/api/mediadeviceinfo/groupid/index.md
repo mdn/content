@@ -14,7 +14,7 @@ browser-compat: api.MediaDeviceInfo.groupId
 ---
 {{APIRef("Media Capture")}}
 
-The **`groupId`** readonly property of
+The **`groupId`** readonly property of
 the {{domxref("MediaDeviceInfo")}} interface returns a {{domxref("DOMString")}} that
 is a group identifier.
 

@@ -11,18 +11,12 @@ tags:
   - Property
 browser-compat: api.CSSMathInvert.value
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
+{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The CSSMathInvert.value read-only property of the
 {{domxref("CSSMathInvert")}} interface returns a {{domxref('CSSNumericValue')}} object.
 
-## Syntax
-
-```js
-var cssNumericValue = CSSMathInvert.value;
-```
-
-### Value
+## Value
 
 A {{domxref('CSSNumericValue')}}.
 

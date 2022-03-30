@@ -17,11 +17,9 @@ browser-compat: api.BlobEvent.data
 The **`BlobEvent.data`** read-only property represents a
 {{domxref("Blob")}} associated with the event.
 
-## Syntax
+## Value
 
-```js
-associatedBlob = BlobEvent.data
-```
+A {{domxref("Blob")}} object.
 
 ## Specifications
 

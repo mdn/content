@@ -20,7 +20,7 @@ It defines a standard way for co-operating user agents to inform the document th
 is controlled by [WebDriver](/en-US/docs/Web/WebDriver), for example, so that
 alternate code paths can be triggered during automation.
 
-The ` navigator.``webdriver ` property is true when in:
+The `navigator.webdriver` property is true when in:
 
 - Chrome
   - : The `--enable-automation` or the `--headless` flag or the

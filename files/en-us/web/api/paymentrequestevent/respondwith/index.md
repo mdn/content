@@ -33,7 +33,7 @@ paymentRequestEvent.respondWith(
 
 ### Return value
 
-A {{domxref("PaymentResponse")}} object.
+A {{domxref("PaymentResponse")}} object.
 
 ## Specifications
 

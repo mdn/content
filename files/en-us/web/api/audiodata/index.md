@@ -16,7 +16,7 @@ The **`AudioData`** interface of the {{domxref('WebCodecs API')}} represents an 
 
 An audio track consists of a stream of audio samples, each sample representing a captured moment of sound. An `AudioData` object is a representation of such a sample. Working alongside the interfaces of the [Insertable Streams API](/en-US/docs/Web/API/Insertable_Streams_for_MediaStreamTrack_API), you can break a stream into individual `AudioData` objects with {{domxref("MediaStreamTrackProcessor")}}, or construct an audio track from a stream of frames with {{domxref("MediaStreamTrackGenerator")}}.
 
-> **Note**: Find out more about audio on the web in [Digital audio concepts](/en-US/docs/Web/Media/Formats/Audio_concepts).
+> **Note:** Find out more about audio on the web in [Digital audio concepts](/en-US/docs/Web/Media/Formats/Audio_concepts).
 
 ### The media resource
 
@@ -30,7 +30,7 @@ In planar format, the number of planes is equal to {{domxref("AudioData.numberOf
 
 ## Constructor
 
-- {{domxref("AudioData.AudioData()")}}
+- {{domxref("AudioData.AudioData", "AudioData()")}}
   - : Creates a new `AudioData` object.
 
 ## Properties
@@ -39,9 +39,9 @@ In planar format, the number of planes is equal to {{domxref("AudioData.numberOf
   - : Returns the sample format of the audio.
 - {{domxref("AudioData.sampleRate")}}{{ReadOnlyInline}}
   - : Returns the sample rate of the audio in Hz.
-- {{domxref("AudioData.numberofFrames")}}{{ReadOnlyInline}}
+- {{domxref("AudioData.numberOfFrames")}}{{ReadOnlyInline}}
   - : Returns the number of frames.
-- {{domxref("AudioData.numberofChannels")}}{{ReadOnlyInline}}
+- {{domxref("AudioData.numberOfChannels")}}{{ReadOnlyInline}}
   - : Returns the number of audio channels.
 - {{domxref("AudioData.duration")}}{{ReadOnlyInline}}
   - : Returns the duration of the audio in microseconds.
@@ -66,4 +66,3 @@ In planar format, the number of planes is equal to {{domxref("AudioData.numberOf
 ## Browser compatibility
 
 {{Compat}}
-

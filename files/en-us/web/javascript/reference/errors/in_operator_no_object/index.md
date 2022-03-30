@@ -28,17 +28,16 @@ TypeError: cannot use 'in' operator to search for 'x' in 'y' (Firefox, Chrome)
 
 ## What went wrong?
 
-The [`in`
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/in) can only be used to check if a property is in an object. You can't search
-in strings, or in numbers, or other primitive types.
+The [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in) can only be used
+to check if a property is in an object.
+You can't search in strings, or in numbers, or other primitive types.
 
 ## Examples
 
 ### Searching in strings
 
 Unlike in other programming languages (e.g. Python), you can't search in strings using
-the [`in`
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/in).
+the [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in).
 
 ```js example-bad
 "Hello" in "Hello World";
@@ -54,7 +53,7 @@ Instead you will need to use {{jsxref("String.prototype.indexOf()")}}, for examp
 
 ### The operand can't be null or undefined
 
-Make sure the object you are inspecting isn't actually {{jsxref("null")}} or
+Make sure the object you are inspecting isn't actually {{jsxref("null")}} or
 {{jsxref("undefined")}}.
 
 ```js example-bad
@@ -88,5 +87,4 @@ var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 
 ## See also
 
-- [`in`
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/in)
+- [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in)

@@ -28,6 +28,8 @@ which, when expanded into a 3x3 matrix for the purposes of matrix arithmetic, be
 
 An **`SVGMatrix`** object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
+**`SVGMatrix`** does not have a public constructor. You can create an **`SVGMatrix`** using the `createSVGMatrix()` method of [`SVGSVGElement`](/en-US/docs/Web/API/SVGSVGElement#methods).
+
 > **Warning:** SVG 2 replaced the `SVGMatrix` interface by the more general {{domxref("DOMMatrix")}} and {{domxref("DOMMatrixReadOnly")}} interfaces.
 
 ## Properties
@@ -60,11 +62,11 @@ An **`SVGMatrix`** object can be designated as read only, which means that attem
 - {{domxref("SVGMatrix.rotate()")}}
   - : Post-multiplies a rotation transformation on the current matrix and returns the resulting matrix as `SVGMatrix`.
 - {{domxref("SVGMatrix.rotateFromVector()")}}
-  - : Post-multiplies a rotation transformation on the current matrix and returns the resulting matrix as `SVGMatrix`. The rotation angle is determined by taking (+/-) atan(y/x). The direction of the vector (x, y) determines whether the positive or negative angle value is used.
+  - : Post-multiplies a rotation transformation on the current matrix and returns the resulting matrix as `SVGMatrix`. The rotation angle is determined by taking (+/-) atan(y/x). The direction of the vector (x, y) determines whether the positive or negative angle value is used.
 - {{domxref("SVGMatrix.flipX()")}}
-  - : Post-multiplies the transformation \[-1 0 0 1 0 0] and returns the resulting matrix as `SVGMatrix`.
+  - : Post-multiplies the transformation \[-1 0 0 1 0 0] and returns the resulting matrix as `SVGMatrix`.
 - {{domxref("SVGMatrix.flipY()")}}
-  - : Post-multiplies the transformation \[1 0 0 -1 0 0] and returns the resulting matrix as `SVGMatrix`.
+  - : Post-multiplies the transformation \[1 0 0 -1 0 0] and returns the resulting matrix as `SVGMatrix`.
 - {{domxref("SVGMatrix.skewX()")}}
   - : Post-multiplies a skewX transformation on the current matrix and returns the resulting matrix as `SVGMatrix`.
 - {{domxref("SVGMatrix.skewY()")}}

@@ -12,7 +12,7 @@ tags:
   - keyboard
 browser-compat: api.Keyboard.getLayoutMap
 ---
-{{APIRef("Keyboard API")}}{{SeeCompatTable}}
+{{APIRef("Keyboard API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`getLayoutMap()`** method of the
 {{domxref("Keyboard")}} interface returns a {{jsxref('Promise')}} that resolves with
@@ -22,7 +22,7 @@ functions for retrieving the strings associated with specific physical keys.
 ## Syntax
 
 ```js
-var promise = Keyboard.getLayoutMap()
+navigator.keyboard.getLayoutMap()
 ```
 
 ### Parameters

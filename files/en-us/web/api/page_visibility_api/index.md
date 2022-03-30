@@ -54,7 +54,7 @@ Separately from the Page Visibility API, user agents typically have a number of 
 
 Some processes are exempt from this throttling behavior. In these cases, you can use the Page Visibility API to reduce the tabs' performance impact while they're hidden.
 
-- Tabs which are playing audio are considered foreground and aren’t throttled.
+- Tabs which are playing audio are considered foreground and aren't throttled.
 - Tabs running code that's using real-time network connections ([WebSockets](/en-US/docs/Web/API/WebSockets_API) and [WebRTC](/en-US/docs/Web/API/WebRTC_API)) go unthrottled in order to avoid closing these connections timing out and getting unexpectedly closed.
 - [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) processes are also left unthrottled in order to avoid timeouts.
 
@@ -137,8 +137,12 @@ The Page Visibility API adds the following properties to the {{domxref("Document
 
         > **Note:** Not all browsers support the `unloaded` value.
 
-- {{domxref("Document.onvisibilitychange")}}
-  - : An {{domxref("EventListener")}} providing the code to be called when the {{event("visibilitychange")}} event is fired.
+## Events added to the Document interface
+
+The Page Visibility API adds the following events to the {{domxref("Document")}} interface:
+
+- {{domxref("Document.visibilitychange_event", "visibilitychange")}}
+  - : Fired when the content of a tab has become visible or has been hidden.
 
 ```js
 // startSimulation and pauseSimulation defined elsewhere
@@ -164,8 +168,3 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 ### `Document.visibilityState`
 
 {{Compat("api.Document.visibilityState")}}
-
-## See also
-
-- Description of the [Page Visibility API](https://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx "Page Visibility on IEBlog") on the IEBlog.
-- Description of the [Page Visibility API](https://code.google.com/chrome/whitepapers/pagevisibility.html "Page Visibility API by Google") by Google

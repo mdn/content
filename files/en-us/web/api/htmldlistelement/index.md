@@ -13,7 +13,7 @@ browser-compat: api.HTMLDListElement
 
 The **`HTMLDListElement`** interface provides special properties (beyond those of the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating definition list ({{HtmlElement("dl")}}) elements.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

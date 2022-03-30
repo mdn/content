@@ -16,7 +16,7 @@ The **`color-profile`** attribute is used to define which color profile a raster
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("image")}}
+- {{SVGElement("image")}}
 
 ## Usage notes
 
@@ -42,14 +42,14 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `auto`
-    *   : All colors are presumed to be defined in the sRGB color space unless a more precise embedded profile is specified within content data. For images that do have a profile built into their data, that profile is used. For images that do not have a profile, the sRGB profile is used.
-*   `sRGB`
-    *   : The source profile is assumed to be sRGB. This differs from auto in that it overrides an embedded profile inside an image.
-*   `<name>`
-    *   : A name corresponding to a defined color profile that is in the browser's color profile description database. The browser searches the color profile description database for a color profile description entry whose name descriptor matches `<name>` and uses the last matching entry that is found. If a match is found, the corresponding profile overrides an embedded profile inside an image. If no match is found, then the embedded profile inside the image is used.
-*   `<iri>`
-    *   : An IRI reference to the source color profile. The referenced color profile overrides an embedded profile inside the image.
+- `auto`
+  - : All colors are presumed to be defined in the sRGB color space unless a more precise embedded profile is specified within content data. For images that do have a profile built into their data, that profile is used. For images that do not have a profile, the sRGB profile is used.
+- `sRGB`
+  - : The source profile is assumed to be sRGB. This differs from auto in that it overrides an embedded profile inside an image.
+- `<name>`
+  - : A name corresponding to a defined color profile that is in the browser's color profile description database. The browser searches the color profile description database for a color profile description entry whose name descriptor matches `<name>` and uses the last matching entry that is found. If a match is found, the corresponding profile overrides an embedded profile inside an image. If no match is found, then the embedded profile inside the image is used.
+- `<iri>`
+  - : An IRI reference to the source color profile. The referenced color profile overrides an embedded profile inside the image.
 
 ## Specifications
 

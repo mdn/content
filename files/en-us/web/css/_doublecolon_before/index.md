@@ -155,7 +155,7 @@ Here is the above code example running live. Note that there are no icons used, 
 
 ### Special characters
 
-As this is CSS; not HTML, you can **not** use markup entities in content values. If you need to use a special character, and can not enter it literally into your CSS content string, use a unicode escape sequence, consisting of a backslash followed by the hexadecimal unicode value.
+As this is CSS; not HTML, you can **not** use markup entities in content values. If you need to use a special character, and can not enter it literally into your CSS content string, use a unicode escape sequence, consisting of a backslash followed by the hexadecimal unicode value.
 
 #### HTML
 
@@ -192,6 +192,10 @@ li[aria-current='step']::after {
 #### Result
 
 {{EmbedLiveSample('Special_characters', 400, 200)}}
+
+## Accessibility concerns
+
+Using a `::before` pseudo-element to add content is discouraged, as it is not reliably accessible to screen readers.
 
 ## Specifications
 

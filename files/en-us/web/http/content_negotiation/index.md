@@ -22,13 +22,13 @@ A specific document is called a _resource_. When a client wants to obtain a reso
 The best-suited representation is identified through one of two mechanisms:
 
 - Specific [HTTP headers](/en-US/docs/Web/HTTP/Headers) by the client (_server-driven negotiation_ or _proactive negotiation_), which is the standard way of negotiating a specific kind of resource.
-- The {{HTTPStatus("300")}} (Multiple Choices) or {{HTTPStatus("406")}} (Not Acceptable), {{HTTPStatus("415")}} (Unsupported Media Type) [HTTP response codes](/en-US/docs/Web/HTTP/Status) by the server (_agent-driven negotiation_ or _reactive negotiation_), that are used as fallback mechanisms.
+- The {{HTTPStatus("300")}} (Multiple Choices) or {{HTTPStatus("406")}} (Not Acceptable), {{HTTPStatus("415")}} (Unsupported Media Type) [HTTP response codes](/en-US/docs/Web/HTTP/Status) by the server (_agent-driven negotiation_ or _reactive negotiation_), that are used as fallback mechanisms.
 
 Over the years, other content negotiation proposals, like [transparent content negotiation](https://datatracker.ietf.org/doc/html/rfc2295) and the `Alternates` header, have been proposed. They failed to get traction and were abandoned.
 
 ## Server-driven content negotiation
 
-In _server-driven content negotiation_, or proactive content negotiation, the browser (or any other kind of user agent) sends several HTTP headers along with the URL. These headers describe the user's preferred choice. The server uses them as hints and an internal algorithm chooses the best content to serve to the client. If it can't provide a suitable resource, it might respond with {{HTTPStatus("406")}} (Not Acceptable) or {{HTTPStatus("415")}} (Unsupported Media Type) and set headers for the types of media that it does support (e.g., using the {{HTTPHeader("Accept-Post")}} or {{HTTPHeader("Accept-Patch")}} for POST and PATCH requests, respectively). The algorithm is server-specific and not defined in the standard. See the [Apache negotiation algorithm](https://httpd.apache.org/docs/current/en/content-negotiation.html#algorithm).
+In _server-driven content negotiation_, or proactive content negotiation, the browser (or any other kind of user agent) sends several HTTP headers along with the URL. These headers describe the user's preferred choice. The server uses them as hints and an internal algorithm chooses the best content to serve to the client. If it can't provide a suitable resource, it might respond with {{HTTPStatus("406")}} (Not Acceptable) or {{HTTPStatus("415")}} (Unsupported Media Type) and set headers for the types of media that it does support (e.g., using the {{HTTPHeader("Accept-Post")}} or {{HTTPHeader("Accept-Patch")}} for POST and PATCH requests, respectively). The algorithm is server-specific and not defined in the standard. See the [Apache negotiation algorithm](https://httpd.apache.org/docs/current/en/content-negotiation.html#algorithm).
 
 ![](httpnegoserver.png)
 
@@ -95,7 +95,7 @@ In contrast to the previous `Accept-*` headers, which are sent by the client, th
 
 The special value '`*`' means that the server-driven content negotiation also uses information not conveyed in a header to choose the appropriate content.
 
-The `Vary` header was added in version 1.1 of HTTP and allows caches to work appropriately. To work with server-driven content negotiation, a cache needs to know which criteria was the server used to select the transmitted content. That way, the cache can replay the algorithm and will be able to serve acceptable content directly, without more requests to the server. Obviously, the wildcard '`*`' prevents caching from occurring, as the cache can't know what element is behind it. For more information, see [HTTP caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses).
+The `Vary` header was added in version 1.1 of HTTP and allows caches to work appropriately. To work with server-driven content negotiation, a cache needs to know which criteria the server used to select the transmitted content. That way, the cache can replay the algorithm and will be able to serve acceptable content directly, without more requests to the server. Obviously, the wildcard '`*`' prevents caching from occurring, as the cache can't know what element is behind it. For more information, see [HTTP caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses).
 
 ## Agent-driven negotiation
 
@@ -105,4 +105,4 @@ HTTP allows another negotiation type: _agent-driven negotiation_ or _reactive ne
 
 ![](httpnego3.png)
 
-Unfortunately, the HTTP standard doesn't specify the format of the page for choosing between the available resources, which prevents the process from being automated. Besides falling back to the _server-driven negotiation_, this method is almost always used with scripting, especially with JavaScript redirection: after having checked for the negotiation criteria, the script performs the redirection. A second problem is that one more request is needed to fetch the real resource, slowing the availability of the resource to the user.
+Unfortunately, the HTTP standard doesn't specify the format of the page for choosing between the available resources, which prevents the process from being automated. Besides falling back to the _server-driven negotiation_, this method is almost always used with scripting, especially with JavaScript redirection: after having checked for the negotiation criteria, the script performs the redirection. A second problem is that one more request is needed to fetch the real resource, slowing the availability of the resource to the user.

@@ -16,7 +16,7 @@ In [CSS](/en-US/docs/Web/CSS), a **replaced element** is an element whose repres
 
 Put in simpler terms, they're elements whose contents are not affected by the current document's styles. The position of the replaced element can be affected using CSS, but not the contents of the replaced element itself. Some replaced elements, such as {{HTMLElement("iframe")}} elements, may have stylesheets of their own, but they don't inherit the styles of the parent document.
 
-The only other impact CSS can have on a replaced element is that there are properties which support controlling the positioning of the element's content within its box. See {{anch("Controlling object position within the content box")}} for further information.
+The only other impact CSS can have on a replaced element is that there are properties which support controlling the positioning of the element's content within its box. See [Controlling object position within the content box](#controlling_object_position_within_the_content_box) for further information.
 
 ## Replaced elements
 
@@ -35,7 +35,7 @@ Some elements are treated as replaced elements only in specific cases:
 - {{HTMLElement("object")}}
 - {{HTMLElement("applet")}}
 
-HTML spec also says that an {{HTMLElement("input")}} element can be replaced, because {{HTMLElement("input")}} elements of the `"image"` type are replaced elements similar to {{HTMLElement("img")}}. However, other form controls, including other types of {{HTMLElement("input")}} elements, are explicitly listed as non-replaced elements (the spec describes their default platform-specific rendering with the term "Widgets").
+HTML spec also says that an {{HTMLElement("input")}} element can be replaced, because {{HTMLElement("input")}} elements of the `"image"` type are replaced elements similar to {{HTMLElement("img")}}. However, other form controls, including other types of {{HTMLElement("input")}} elements, are explicitly listed as non-replaced elements (the spec describes their default platform-specific rendering with the term "Widgets").
 
 Objects inserted using the CSS {{cssxref("content")}} property are _anonymous replaced elements_. They are "anonymous" because they don't exist in the HTML markup.
 

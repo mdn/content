@@ -13,7 +13,7 @@ browser-compat: api.SVGFEPointLightElement
 
 The **`SVGFEPointLightElement`** interface corresponds to the {{SVGElement("fePointLight")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

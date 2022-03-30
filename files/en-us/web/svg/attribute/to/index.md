@@ -8,17 +8,17 @@ tags:
 ---
 {{SVGRef}}
 
-The **`to`** attribute indicates the final value of the attribute that will be modified during the animation.
+The **`to`** attribute indicates the final value of the attribute that will be modified during the animation.
 
 The value of the attribute will change between the {{SVGAttr("from")}} attribute value and this value.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("animate")}}
-*   {{SVGElement("animateColor")}}
-*   {{SVGElement("animateMotion")}}
-*   {{SVGElement("animateTransform")}}
-*   {{SVGElement("set")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("animateColor")}}
+- {{SVGElement("animateMotion")}}
+- {{SVGElement("animateTransform")}}
+- {{SVGElement("set")}}
 
 ## Example
 
@@ -30,10 +30,10 @@ html, body, svg {
 
 ```html
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="10" width="100" height="100">
-    <animate attributeType="XML" attributeName="width" fill="freeze"
-        from="100" to="150" dur="3s"/>
-  </rect>
+  <rect x="10" y="10" width="100" height="100">
+    <animate attributeType="XML" attributeName="width" fill="freeze"
+        from="100" to="150" dur="3s"/>
+  </rect>
 </svg>
 ```
 

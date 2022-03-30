@@ -13,20 +13,14 @@ tags:
   - notify
 browser-compat: api.BluetoothCharacteristicProperties.notify
 ---
-{{draft}}{{securecontext_header}}{{APIRef("")}}
+{{securecontext_header}}{{APIRef("")}}
 
 The **`notify`** read-only property of the
 {{domxref("BluetoothCharacteristicProperties")}} interface returns a
 `boolean` that is `true` if notifications of the characteristic
 value without acknowledgement is permitted.
 
-## Syntax
-
-```js
-var aBoolean = BluetoothCharacteristicProperties.notify;
-```
-
-### Value
+## Value
 
 A boolean value.
 

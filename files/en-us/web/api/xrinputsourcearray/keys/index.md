@@ -26,7 +26,7 @@ browser-compat: api.XRInputSourceArray.keys
 ---
 {{APIRef("WebXR Device API")}}
 
-The **`keys()`** method in the
+The **`keys()`** method in the
 {{domxref("XRInputSourceArray")}} interface returns a {{Glossary("JavaScript")}}
 [`iterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)
 which can then be used to iterate over the keys used to reference each item in the array
@@ -45,7 +45,7 @@ None.
 ### Return value
 
 A
-JavaScript [`iterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that
+JavaScript [`iterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that
 can be used to walk through the keys for each entry in the list of input sources. The
 values returned by the iterator are the indexes of each entry in the list; that is, the
 numbers 0, 1, 2, and so forth through the index of the last item in the list.
@@ -57,8 +57,8 @@ type of input device it supports using.
 
 ```js
 for (const inputIdx of xrSession.inputSources.keys()) {
-  /* the keys are the indexes into the list of inputs */
-  checkInput(xrSession.inputSources[inputIdx]);
+  /* the keys are the indexes into the list of inputs */
+  checkInput(xrSession.inputSources[inputIdx]);
 }
 ```
 
@@ -81,5 +81,5 @@ index with array notation: `xrSession.inputSources[inputIdx]`.
 - The {{domxref("XRInputSourceArray")}} method {{domxref("XRInputSourceArray.values",
     "values()")}}
 - The
-  [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) method `keys()`
+  [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) method `keys()`
 - {{domxref("XRInputSource")}}

@@ -24,13 +24,12 @@ new WeakSet(iterable)
 ### Parameters
 
 - _iterable_
-  - : If an [iterable
-    object](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) is passed, all of its elements will be added to the new
+  - : If an [iterable object](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) is passed, all of its elements will be added to the new
     `WeakSet`. null is treated as undefined.
 
 ## Examples
 
-### Using the WeakSet object
+### Using the WeakSet object
 
 ```js
 var ws = new WeakSet();
@@ -61,5 +60,5 @@ Note that `foo !== bar`. While they are similar objects, _they are not
 
 ## See also
 
-- A polyfill of `WeakSet` is available in [`core-js`](https://github.com/zloirock/core-js#weakset)
+- [Polyfill of `WeakSet` in `core-js`](https://github.com/zloirock/core-js#weakset)
 - {{jsxref("WeakSet")}}

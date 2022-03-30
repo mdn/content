@@ -12,7 +12,7 @@ The **`AudioEncoder`** interface of the {{domxref('WebCodecs API','','','true')}
 
 ## Constructor
 
-- {{domxref("AudioEncoder.AudioEncoder()")}}
+- {{domxref("AudioEncoder.AudioEncoder", "AudioEncoder()")}}
   - : Creates a new `AudioEncoder` object.
 
 ## Properties
@@ -20,7 +20,7 @@ The **`AudioEncoder`** interface of the {{domxref('WebCodecs API','','','true')}
 - {{domxref("AudioEncoder.encodeQueueSize")}}{{ReadOnlyInline}}
   - : An integer representing the number of encode queue requests.
 - {{domxref("AudioEncoder.state")}}{{ReadOnlyInline}}
-  - : Represents the state of the underlying codec and whether it is configured for decoding.
+  - : Represents the state of the underlying codec and whether it is configured for encoding.
 
 ## Methods
 

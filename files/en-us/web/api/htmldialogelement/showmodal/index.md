@@ -35,8 +35,8 @@ Void.
 
 ### Exceptions
 
-If the dialog is already open (i.e. if the `open` attribute is already set
-on the {{htmlelement("dialog")}} element), an `InvalidStateError` is thrown.
+- `InvalidStateError`  {{domxref("DOMException")}}
+  - : Thrown if the dialog is already open (i.e. if the `open` attribute is already set on the {{htmlelement("dialog")}} element).
 
 ## Examples
 
@@ -101,7 +101,7 @@ button.
   </script>
 ```
 
-> **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html)
+> **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html)
 > ([see it live
 > also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 

@@ -19,17 +19,11 @@ specifying the entry's name; this is the entry within its parent directory (the 
 component of the path as indicated by the {{domxref("FileSystemEntry.fullPath",
     "fullPath")}} property).
 
-## Syntax
-
-```js
-var name = FileSystemEntry.name;
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}} indicating the entry's name.
 
-## Example
+## Examples
 
 This example shows a function called `isFileWithExtension()` which returns
 true if the specified {{domxref("FileSystemEntry")}} is both a file and the file's name

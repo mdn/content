@@ -3,7 +3,7 @@ title: VRDisplayCapabilities
 slug: Web/API/VRDisplayCapabilities
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Interface
   - Reference
   - VR
@@ -22,15 +22,15 @@ This interface is accessible through the {{domxref("VRDisplay.capabilities")}} p
 
 ## Properties
 
-- {{domxref("VRDisplayCapabilities.canPresent")}} {{readonlyInline}}
+- {{domxref("VRDisplayCapabilities.canPresent")}} {{deprecated_inline}}{{readonlyInline}}
   - : Returns a boolean value stating whether the VR display is capable of presenting content (e.g. through an HMD).
-- {{domxref("VRDisplayCapabilities.hasExternalDisplay")}} {{readonlyInline}}
+- {{domxref("VRDisplayCapabilities.hasExternalDisplay")}} {{deprecated_inline}}{{readonlyInline}}
   - : Returns a boolean value stating whether the VR display is separate from the device's primary display.
-- {{domxref("VRDisplayCapabilities.hasOrientation")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRDisplayCapabilities.hasOrientation")}} {{deprecated_inline}}{{readonlyInline}}
   - : Returns a boolean value stating whether the VR display can track and return orientation information.
-- {{domxref("VRDisplayCapabilities.hasPosition")}} {{readonlyInline}}
+- {{domxref("VRDisplayCapabilities.hasPosition")}} {{deprecated_inline}}{{readonlyInline}}
   - : Returns a boolean value stating whether the VR display can track and return position information.
-- {{domxref("VRDisplayCapabilities.maxLayers")}} {{readonlyInline}}
+- {{domxref("VRDisplayCapabilities.maxLayers")}} {{deprecated_inline}}{{readonlyInline}}
   - : Returns a number indicating the maximum number of {{domxref("VRLayerInit")}}s that the VR display can present at once (e.g. the maximum length of the array that {{domxref("VRDisplay.requestPresent()")}} can accept.)
 
 ## Examples

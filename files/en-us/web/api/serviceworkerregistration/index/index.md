@@ -13,19 +13,13 @@ tags:
   - content indexing
 browser-compat: api.ServiceWorkerRegistration.index
 ---
-{{draft}}{{DefaultAPISidebar("Service Worker API")}}
+{{DefaultAPISidebar("Service Worker API")}}
 
 The **`index`** read-only property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a reference to the
 {{domxref('ContentIndex')}} interface, which allows for indexing of offline content.
 
-## Syntax
-
-```js
-var contentIndexObject = ServiceWorkerRegistration.index;
-```
-
-### Value
+## Value
 
 A ContentIndex {{jsxref('Object')}}
 

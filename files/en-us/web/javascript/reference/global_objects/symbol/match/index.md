@@ -53,7 +53,7 @@ re[Symbol.match] = false;
 
 ## See also
 
-- A polyfill of `Symbol.match` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- [Polyfill of `Symbol.match` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
 - {{jsxref("Symbol.replace")}}
 - {{jsxref("Symbol.search")}}
 - {{jsxref("Symbol.split")}}

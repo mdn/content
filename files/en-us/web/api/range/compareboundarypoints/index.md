@@ -42,11 +42,13 @@ compare = range.compareBoundaryPoints(how, sourceRange);
     - `Range.START_TO_START` compares the start boundary-point of
       _sourceRange_ to the start boundary-point of `Range`.
 
-    If the value of the parameter is invalid, a {{domxref("DOMException")}} with a
-    `NotSupportedError` code is thrown.
-
 - `sourceRange`
   - : A {{domxref("Range")}} to compare boundary points with the range.
+
+### Exceptions
+
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if the value of the `how` parameter is invalid.
 
 ## Example
 

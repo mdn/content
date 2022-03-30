@@ -29,13 +29,7 @@ fit without a need for vertical scrollbar, its `scrollHeight` is equal to
 > **Note:** This property will round the value to an integer. If you need a fractional value, use
 > {{domxref("Element.getBoundingClientRect()")}}.
 
-## Syntax
-
-```js
-elemScrollHeight = element.scrollHeight;
-```
-
-### Value
+## Value
 
 An integer corresponding to the scrollHeight pixel value of the element.
 
@@ -43,12 +37,19 @@ An integer corresponding to the scrollHeight pixel value of the element.
 
 ### Determine if an element has been totally scrolled
 
-The following equivalence returns `true` if an element is at the end of its
-scroll, `false` if it isn't.
+`scrollTop` is a non-rounded number, while `scrollHeight` and `clientHeight` are rounded — so the only way to determine if the scroll area is scrolled to the bottom is by seeing if the scroll amount is close enough to some threshold (in this example `1`):
+
+```js
+Math.abs(element.scrollHeight - element.clientHeight - element.scrollTop) < 1
+```
+
+The following will _not_ work all the time because `scrollTop` can contain decimals:
 
 ```js
 element.scrollHeight - Math.abs(element.scrollTop) === element.clientHeight
 ```
+
+### Determine if an element is scrollable
 
 When the container does not scroll, but has overflowing children, these checks
 determine if the container can scroll:
@@ -166,7 +167,7 @@ onload = function () {
 
 - [MSDN:
   Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer
-  9](<https://docs.microsoft.com/en-us/previous-versions/hh781509(v=vs.85)>)
+  9](<https://docs.microsoft.com/previous-versions/hh781509(v=vs.85)>)
 - {{domxref("Element.clientHeight")}}
 - {{domxref("HTMLElement.offsetHeight")}}
 - [Determining

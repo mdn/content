@@ -9,21 +9,17 @@ tags:
   - BackgroundFetchRegistration
 browser-compat: api.BackgroundFetchRegistration.id
 ---
-{{DefaultAPISidebar("Background Fetch API")}}
+{{APIRef("Background Fetch API")}}
 
 The **`id`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns a copy of the background fetch's `ID`.
 
-## Syntax
-
-    let id = BackgroundFetchRegistration.id;
-
-### Value
+## Value
 
 A {{domxref("DOMString","string")}}.
 
 ## Examples
 
-Logging the {{domxref("BackgroundFetchRegistration.id")}} to the console returns the `ID` set when registering the fetch. In this case, `"my-fetch"`.
+Logging the this part to the console returns the identifier set when registering the fetch. In this case, `"my-fetch"`.
 
 ```js
 console.log(bgFetch.id); // "my-fetch"

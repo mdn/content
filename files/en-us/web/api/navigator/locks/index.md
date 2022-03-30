@@ -15,7 +15,7 @@ browser-compat: api.Navigator.locks
 
 The **`locks`** read-only property of
 the {{domxref("Navigator")}} interface returns a {{domxref("LockManager")}} object
-which provides methods for requesting a new {{domxref('Lock')}} object and querying
+which provides methods for requesting a new {{domxref('Lock')}} object and querying
 for an existing `Lock` object.
 
 ## Syntax

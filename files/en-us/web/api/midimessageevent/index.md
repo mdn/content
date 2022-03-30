@@ -12,11 +12,13 @@ browser-compat: api.MIDIMessageEvent
 ---
 {{securecontext_header}}{{APIRef("Web MIDI API")}}
 
-The **`MIDIMessageEvent`** interface of the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) represents the event passed to the {{domxref("MIDIInput.onmidimessage","onmidimessage")}} event handler of the {{domxref("MIDIInput")}} interface. A `midimessage` event is fired every time a MIDI message is sent from a device represented by a {{domxref("MIDIInput")}}, for example when a MIDI keyboard key is pressed, a knob is tweaked, or a slider is moved.
+The **`MIDIMessageEvent`** interface of the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) represents the event passed to the {{domxref("MIDIInput.midimessage_event","midimessage")}} event of the {{domxref("MIDIInput")}} interface. A `midimessage` event is fired every time a MIDI message is sent from a device represented by a {{domxref("MIDIInput")}}, for example when a MIDI keyboard key is pressed, a knob is tweaked, or a slider is moved.
+
+{{InheritanceDiagram}}
 
 ## Constructor
 
-- {{domxref("MIDIMessageEvent.MIDIMessageEvent")}}
+- {{domxref("MIDIMessageEvent.MIDIMessageEvent", "MIDIMessageEvent()")}}
   - : Creates a new `MIDIMessageEvent` object instance.
 
 ## Properties
@@ -37,8 +39,8 @@ The following example prints all MIDI messages to the console.
 ```js
 navigator.requestMIDIAccess().then(midiAccess => {
   Array.from(midiAccess.inputs).forEach(input => {
-    input[1].onmidimessage = (msg) => { console.log(msg); }
-  })
+    input[1].onmidimessage = (msg) => { console.log(msg); }
+  })
 });
 ```
 

@@ -13,20 +13,16 @@ browser-compat: api.HTMLMediaElement.defaultPlaybackRate
 
 The **`HTMLMediaElement.defaultPlaybackRate`** property indicates the default playback rate for the media.
 
-## Syntax
+## Value
 
-```js
-var dSpeed = video.defaultPlaybackRate;
-audio.defaultPlaybackRate = 1.0;
-```
+A double. `1.0` is "normal speed," values lower than `1.0` make the media play slower than normal, higher values make it play faster.
 
-### Value
+### Exceptions
 
-A double. 1.0 is "normal speed," values lower than 1.0 make the media play slower than normal, higher values make it play faster.
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if the specified value is not supported.
 
-The user agent will throw a `NotSupportedError` exception if the specified value is not supported.
-
-## Example
+## Examples
 
 ```js
 var obj = document.createElement('video');

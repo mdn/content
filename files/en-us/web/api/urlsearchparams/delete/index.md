@@ -12,7 +12,7 @@ browser-compat: api.URLSearchParams.delete
 {{ApiRef("URL API")}}
 
 The **`delete()`** method of the {{domxref("URLSearchParams")}}
-interface deletes the given search parameter and all its associated values, from the
+interface deletes the given search parameter and all its associated values, from the
 list of all search parameters.
 
 {{availableinworkers}}

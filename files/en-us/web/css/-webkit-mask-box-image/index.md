@@ -22,12 +22,14 @@ browser-compat: css.properties.-webkit-mask-box-image
 
 ## Syntax
 
-    -webkit-mask-box-image: <mask-box-image> [<top> <right> <bottom> <left> <x-repeat> <y-repeat>]
+```
+-webkit-mask-box-image: <mask-box-image> [<top> <right> <bottom> <left> <x-repeat> <y-repeat>]
+```
 
 Where:
 
 - \<mask-box-image>
-  - : `{{cssxref("&lt;uri&gt;")}} | <gradient> | none`
+  - : `{{cssxref("url", "&lt;uri&gt;")}} | <gradient> | none`
 - \<top> \<right> \<bottom> \<left>
   - : `<length> | <percentage>`
 - \<x-repeat> \<y-repeat>
@@ -52,7 +54,7 @@ Where:
 - round
   - : The mask image is stretched somewhat and repeated such that there is no partial mask image at the end of the border box.
 - space
-  - : The mask image is repeated as many times as possible without stretching. There is no partial mask image at the end of the border box.
+  - : The mask image is repeated as many times as possible without stretching. There is no partial mask image at the end of the border box.
 
 ## Formal definition
 
@@ -90,4 +92,4 @@ Not part of any standard.
 
 ## See also
 
-{{ cssxref("-webkit-mask") }}, {{ cssxref("-webkit-mask-origin") }}, {{ cssxref("-webkit-mask-attachment") }},{{ cssxref("-webkit-mask-clip") }},{{ cssxref("-webkit-mask-image") }},{{ cssxref("-webkit-mask-composite") }},{{ cssxref("-webkit-mask-repeat") }}
+{{ cssxref("mask") }}, {{ cssxref("mask-origin") }}, {{ cssxref("-webkit-mask-attachment") }},{{ cssxref("mask-clip") }},{{ cssxref("mask-image") }},{{ cssxref("-webkit-mask-composite") }},{{ cssxref("mask-repeat") }}

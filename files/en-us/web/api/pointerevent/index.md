@@ -19,6 +19,8 @@ A _pointer_ is a hardware agnostic representation of input devices (such as a mo
 
 A pointer's _hit test_ is the process a browser uses to determine the target element for a pointer event. Typically, this is determined by considering the pointer's location and also the visual layout of elements in a document on screen media.
 
+{{InheritanceDiagram}}
+
 ## Constructors
 
 - {{domxref("PointerEvent.PointerEvent", "PointerEvent()")}}
@@ -35,7 +37,7 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 - {{ domxref('PointerEvent.height')}} {{readonlyInline}}
   - : The height (magnitude on the Y axis), in CSS pixels, of the contact geometry of the pointer.
 - {{ domxref('PointerEvent.pressure')}} {{readonlyInline}}
-  - : The normalized pressure of the pointer input in the range `0` to `1`, where `0` and `1` represent the minimum and maximum pressure the hardware is capable of detecting, respectively.
+  - : The normalized pressure of the pointer input in the range `0` to `1`, where `0` and `1` represent the minimum and maximum pressure the hardware is capable of detecting, respectively.
 - {{ domxref('PointerEvent.tangentialPressure')}} {{readonlyInline}}
   - : The normalized tangential pressure of the pointer input (also known as barrel pressure or [cylinder stress](https://en.wikipedia.org/wiki/Cylinder_stress)) in the range `-1` to `1`, where `0` is the neutral position of the control.
 - {{ domxref('PointerEvent.tiltX')}} {{readonlyInline}}

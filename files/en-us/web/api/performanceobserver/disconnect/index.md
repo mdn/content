@@ -1,5 +1,5 @@
 ---
-title: PeformanceObserver.disconnect()
+title: PerformanceObserver.disconnect()
 slug: Web/API/PerformanceObserver/disconnect
 tags:
   - API

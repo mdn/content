@@ -33,8 +33,8 @@ Request API (or even provide instructions for paying by mail or by phone).
 
 ```js
 paymentRequest.canMakePayment()
-    .then( canPay => { ... })
-    .catch( error => { ... })
+    .then( canPay => { /* ... */ })
+    .catch( error => { /* ... */ })
 
 canPay = await paymentRequest.canMakePayment();
 ```
@@ -63,7 +63,7 @@ feature detection, and calls an appropriate callback depending on the resolution
 `Promise`.
 
 ```js
-async function initPaymentRquest() {
+async function initPaymentRequest() {
   const details = {
     total: {
       label: "Total",

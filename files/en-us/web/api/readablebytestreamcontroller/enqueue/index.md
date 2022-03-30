@@ -11,7 +11,7 @@ tags:
   - enqueue
 browser-compat: api.ReadableByteStreamController.enqueue
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`enqueue()`** method of the
 {{domxref("ReadableByteStreamController")}} interface enqueues a given chunk in the

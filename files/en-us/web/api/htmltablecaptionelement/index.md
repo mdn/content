@@ -10,9 +10,9 @@ browser-compat: api.HTMLTableCaptionElement
 ---
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLTableCaptionElement`** interface special properties (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating table caption elements.
+The **`HTMLTableCaptionElement`** interface provides special properties (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating table caption elements.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

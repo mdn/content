@@ -13,7 +13,7 @@ browser-compat: api.HTMLTextAreaElement
 
 The **`HTMLTextAreaElement`** interface provides special properties and methods for manipulating the layout and presentation of {{HTMLElement("textarea")}} elements.
 
-{{InheritanceDiagram(600,120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -187,7 +187,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       <td><code>textLength</code> {{readonlyInline}}</td>
       <td>
         <code><em>long</em>:</code> Returns the codepoint length of the
-        control's <code>value</code>. Same as reading <code>value.length</code>
+        control's <code>value</code>. Same as reading <code>value.length</code>
       </td>
     </tr>
     <tr>

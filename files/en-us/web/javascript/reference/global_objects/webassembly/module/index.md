@@ -21,7 +21,7 @@ A **`WebAssembly.Module`** object contains stateless WebAssembly code that has a
 ## Static properties
 
 - {{jsxref("Global_Objects/WebAssembly/Module/customSections", "WebAssembly.Module.customSections()")}}
-  - : Given a `Module` and string, returns a copy of the contents of all custom sections in the module with the given string name.
+  - : Given a `Module` and string, returns a copy of the contents of all custom sections in the module with the given string name.
 - {{jsxref("Global_Objects/WebAssembly/Module/exports", "WebAssembly.Module.exports()")}}
   - : Given a `Module`, returns an array containing descriptions of all the declared exports.
 - {{jsxref("Global_Objects/WebAssembly/Module/imports", "WebAssembly.Module.imports()")}}
@@ -38,7 +38,7 @@ var worker = new Worker("wasm_worker.js");
 
 WebAssembly.compileStreaming(fetch('simple.wasm'))
 .then(mod =>
-  worker.postMessage(mod)
+  worker.postMessage(mod)
 );
 ```
 

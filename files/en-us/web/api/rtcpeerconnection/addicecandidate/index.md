@@ -53,7 +53,9 @@ addIceCandidate(candidate, successCallback, failureCallback) // deprecated
         The syntax of the candidate string is described in {{RFC(5245, "", 15.1)}}.
         For an a-line (attribute line) that looks like this:
 
-            a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+        ```
+        a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+        ```
 
         the corresponding `candidate` string's value will be
         `"candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host"`.
@@ -103,7 +105,9 @@ addIceCandidate(candidate, successCallback, failureCallback) // deprecated
 
     If no `candidate` object is specified, or its value is `null`, an end-of-candidates signal is sent to the remote peer using the `end-of-candidates` a-line, formatted like this:
 
-        a=end-of-candidates
+    ```
+    a=end-of-candidates
+    ```
 
 ### Deprecated parameters
 
@@ -122,7 +126,7 @@ should update any existing code to use the {{jsxref("Promise")}}-based version o
 
 ### Return value
 
-A {{jsxref("Promise")}} which is fulfilled when the candidate has been successfully
+A {{jsxref("Promise")}} that is fulfilled when the candidate has been successfully
 added to the remote peer's description by the ICE agent. The promise does not receive any input parameters.
 
 ### Exceptions
@@ -132,28 +136,24 @@ When an error occurs while attempting to add the ICE candidate, the
 below as the {{domxref("DOMException.name", "name")}} attribute in the specified
 {{domxref("DOMException")}} object passed to the rejection handler.
 
-- `TypeError`
-  - : The specified candidate's {{domxref("RTCIceCandidate.sdpMid", "sdpMid")}} and
+- `TypeError` {{domxref("DOMException")}}
+  - : Returned if the specified candidate's {{domxref("RTCIceCandidate.sdpMid", "sdpMid")}} and
     {{domxref("RTCIceCandidate.sdpMLineIndex", "sdpMLineIndex")}} are both `null`.
-- `InvalidStateError`
-  - : The `RTCPeerConnection` currently has no remote peer established
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Returned if the `RTCPeerConnection` currently has no remote peer established
     ({{domxref("RTCPeerConnection.remoteDescription", "remoteDescription")}} is `null`).
-- `OperationError`
-
-  - : This can happen for a number of reasons:
-
+- `OperationError` {{domxref("DOMException")}}
+  - : Returned in one of the following situations:
     - The value specified for {{domxref("RTCIceCandidate.sdpMid", "sdpMid")}} is
       non-`null` and doesn't match the media description ID of any
       media description included within the
       {{domxref("RTCPeerConnection.remoteDescription", "remoteDescription")}}.
-    - The specified value of {{domxref("RTCIceCandidate.sdpMLineIndex",
-				"sdpMLineIndex")}} is greater than or equal to the number of media
+    - The specified value of {{domxref("RTCIceCandidate.sdpMLineIndex", "sdpMLineIndex")}} is greater than or equal to the number of media
       descriptions included in the remote description.
     - The specified {{domxref("RTCIceCandidate.usernameFragment", "ufrag")}}
       doesn't match the `ufrag` field in any of the remote
       descriptions being considered.
-    - One or more of the values in the {{domxref("RTCIceCandidate",
-				"candidate")}} string are invalid or could not be parsed.
+    - One or more of the values in the {{domxref("RTCIceCandidate", "candidate")}} string are invalid or could not be parsed.
     - Attempting to add the candidate fails for any reason.
 
 ## Examples

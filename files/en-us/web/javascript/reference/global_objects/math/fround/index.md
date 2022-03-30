@@ -137,5 +137,5 @@ if (!Math.fround) Math.fround = function(arg) {
 
 ## See also
 
-- A polyfill of `Math.fround` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [Polyfill of `Math.fround` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math.round()")}}

@@ -12,7 +12,7 @@ browser-compat: api.SVGRadialGradientElement
 
 The **`SVGRadialGradientElement`** interface corresponds to the {{SVGElement("RadialGradient")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

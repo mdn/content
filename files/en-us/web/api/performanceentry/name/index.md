@@ -26,7 +26,7 @@ var name = entry.name;
 ### Return value
 
 The return value depends on the subtype of the `PerformanceEntry` object and
-the value of {{domxref("PerformanceEntry.entryType")}}, as shown by the table below.
+the value of {{domxref("PerformanceEntry.entryType")}}, as shown by the table below.
 
 <table class="no-markdown">
   <thead>
@@ -41,7 +41,6 @@ the value of {{domxref("PerformanceEntry.entryType")}}, as shown by the table b
     <tr>
       <td>{{domxref("URL")}}</td>
       <td>
-        {{domxref('PerformanceFrameTiming')}},
         {{domxref('PerformanceNavigationTiming')}}
       </td>
       <td><code>frame</code>, <code>navigation</code></td>
@@ -61,7 +60,7 @@ the value of {{domxref("PerformanceEntry.entryType")}}, as shown by the table b
       <td>{{domxref('PerformanceMark')}}</td>
       <td><code>mark</code></td>
       <td>
-        The name used when the mark was created by calling
+        The name used when the mark was created by calling
         {{domxref("Performance.mark","performance.mark()")}}.
       </td>
     </tr>

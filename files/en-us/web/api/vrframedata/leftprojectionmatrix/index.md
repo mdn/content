@@ -3,7 +3,7 @@ title: VRFrameData.leftProjectionMatrix
 slug: Web/API/VRFrameData/leftProjectionMatrix
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -15,21 +15,17 @@ browser-compat: api.VRFrameData.leftProjectionMatrix
 ---
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-The **`leftProjectionMatrix`** read-only property of the {{domxref("VRFrameData")}} interface returns a {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the projection to be used for the left eye’s rendering.
+The **`leftProjectionMatrix`** read-only property of the {{domxref("VRFrameData")}} interface returns a {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the projection to be used for the left eye's rendering.
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-This value may be passed directly to WebGL’s {{domxref("WebGLRenderingContext.uniformMatrix", "uniformMatrix4fv")}} function.
+This value may be passed directly to WebGL's {{domxref("WebGLRenderingContext.uniformMatrix", "uniformMatrix4fv")}} function.
 
 > **Warning:** It is highly recommended that applications use this matrix without modification. Failure to use this projection matrix when rendering may cause the presented frame to be distorted or badly aligned, resulting in varying degrees of user discomfort.
 
 ## Syntax
 
-```js
-var myLPM = vrFrameDataInstance.leftProjectionMatrix;
-```
-
-### Value
+## Value
 
 A {{jsxref("Float32Array")}} object.
 

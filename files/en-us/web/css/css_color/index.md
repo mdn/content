@@ -11,17 +11,19 @@ tags:
   - Styles
   - Styling HTML
   - colors
+spec-urls: https://drafts.csswg.org/css-color/
 ---
 {{CSSRef}}
 
-**CSS Color** is a CSS module that deals with colors, color types, color blending, opacity, and how you can apply these colors and effects to HTML content. Not all CSS properties that take a {{cssxref("&lt;color&gt;")}} as a value are part of this module, but they do depend upon it.
+**CSS Color** is a CSS module that deals with colors, color types, color blending, opacity, and how you can apply these colors and effects to HTML content.
+Not all CSS properties that take a {{cssxref("&lt;color&gt;")}} as a value are part of this module, but they do depend upon it.
 
 ## Reference
 
 ### Properties
 
 - {{cssxref("color")}}
-- {{cssxref("color-adjust")}}
+- {{cssxref("print-color-adjust")}}
 - {{cssxref("opacity")}}
 
 ### Data types
@@ -40,12 +42,7 @@ tags:
 
 ## Specifications
 
-| Specification                                    | Status                           | Comment            |
-| ------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSS4 Colors')}}             | {{Spec2('CSS4 Colors')}} |                    |
-| {{SpecName('CSS3 Colors')}}             | {{Spec2('CSS3 Colors')}} |                    |
-| {{SpecName('CSS2.1', 'colors.html')}} | {{Spec2('CSS2.1')}}         |                    |
-| {{SpecName('CSS1')}}                     | {{Spec2('CSS1')}}         | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -53,9 +50,9 @@ tags:
 
 {{Compat("css.properties.color")}}
 
-### `color-adjust` property
+### `print-color-adjust` property
 
-{{Compat("css.properties.color-adjust")}}
+{{Compat("css.properties.print-color-adjust")}}
 
 ### `opacity` property
 

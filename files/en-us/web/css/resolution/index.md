@@ -43,9 +43,11 @@ The `<resolution>` data type consists of a strictly positive {{cssxref("&lt;numb
 
 ### Valid resolutions
 
-    96dpi
-    50.82dpcm
-    3dppx
+```plain example-good
+96dpi
+50.82dpcm
+3dppx
+```
 
 ### Invalid resolutions
 

@@ -10,20 +10,18 @@ browser-compat: http.headers.If-Unmodified-Since
 ---
 {{HTTPSidebar}}
 
-The **`If-Unmodified-Since`** request HTTP header makes the
-request conditional: the server will send back the requested resource, or accept it in
-the case of a {{HTTPMethod("POST")}} or another non-{{Glossary("Safe/HTTP", "safe")}} method, only if
-it has not been last modified after the given date. If the resource has been modified
-after the given date, the response will be a {{HTTPStatus("412")}} (Precondition Failed)
-error.
+The HyperText Transfer Protocol (HTTP) **`If-Unmodified-Since`** request header makes the
+request for the resource conditional: the server will send the requested resource or accept it in
+the case of a {{HTTPMethod("POST")}} or another non-{{Glossary("Safe/HTTP", "safe")}} method only if the resource has not been modified after the date specified by this HTTP header. If the resource has been modified
+after the specified date, the response will be a {{HTTPStatus("412 Precondition Failed")}} error.
 
-There are two common use cases:
+The **`If-Unmodified-Since`** HTTP header is commonly used in the following situations:
 
 - In conjunction with non-{{Glossary("Safe/HTTP", "safe")}} methods, like {{HTTPMethod("POST")}},
-  it can be used to implement an [optimistic
-  concurrency control](https://en.wikipedia.org/wiki/Optimistic_concurrency_control), like done by some wikis: editions are rejected if the
-  stored document has been modified since the original has been retrieved.
-- In conjunction with a range request with a {{HTTPHeader("If-Range")}} header, it can
+  this header can be used to implement an [optimistic
+  concurrency control](https://en.wikipedia.org/wiki/Optimistic_concurrency_control), as is done by some wikis: editions are rejected if the
+  stored document has been modified since the original was retrieved.
+- In conjunction with a range request using the {{HTTPHeader("If-Range")}} header, this header can
   be used to ensure that the new fragment requested comes from an unmodified document.
 
 <table class="properties">
@@ -48,20 +46,19 @@ If-Unmodified-Since: <day-name>, <day> <month> <year> <hour>:<minute>:<second> G
 ## Directives
 
 - \<day-name>
-  - : One of "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", or "Sun" (case-sensitive).
+  - : A 3-letter description of the day of the week. One of "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", or "Sun" (case-sensitive).
 - \<day>
-  - : 2 digit day number, e.g. "04" or "23".
+  - : A 2-digit day number of the month. Examples: "04", "23".
 - \<month>
-  - : One of "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov",
-    "Dec" (case sensitive).
+  - : A 3-letter description of the month. One of "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" (case sensitive).
 - \<year>
-  - : 4 digit year number, e.g. "1990" or "2016".
+  - : A 4-digit year number. Examples: "1990", "2016".
 - \<hour>
-  - : 2 digit hour number, e.g. "09" or "23".
+  - : A 2-digit hour number based on a 24-hour system. Examples: "09", "23".
 - \<minute>
-  - : 2 digit minute number, e.g. "04" or "59".
+  - : A 2-digit minute number. Examples: "04", "59".
 - \<second>
-  - : 2 digit second number, e.g. "04" or "59".
+  - : A 2-digit second number. Examples: "04", "59".
 - `GMT`
   - : Greenwich Mean Time. HTTP dates are always expressed in GMT, never in local time.
 

@@ -17,7 +17,9 @@ For more information on readable streams and chunks see [Using Readable Streams]
 
 ## Syntax
 
-    TransformStreamDefaultController.enqueue(chunk);
+```js
+TransformStreamDefaultController.enqueue(chunk);
+```
 
 ### Parameters
 

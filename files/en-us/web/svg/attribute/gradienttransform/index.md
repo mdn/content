@@ -12,8 +12,8 @@ The `gradientTransform` attribute contains the definition of an optional additio
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("linearGradient")}}
-*   {{SVGElement("radialGradient")}}
+- {{SVGElement("linearGradient")}}
+- {{SVGElement("radialGradient")}}
 
 ## Example
 
@@ -65,8 +65,8 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `<transform-list>`
-    *   : A list of [transformation functions](/en-US/docs/Web/CSS/transform-function) specifying some additional transformation from the gradient coordinate system onto the target coordinate system.
+- `<transform-list>`
+  - : A list of [transformation functions](/en-US/docs/Web/CSS/transform-function) specifying some additional transformation from the gradient coordinate system onto the target coordinate system.
 
 ## Specifications
 
@@ -123,4 +123,4 @@ html, body, svg {
 
 ## See also
 
-*   {{cssxref("transform-function")}}
+- {{cssxref("transform-function")}}

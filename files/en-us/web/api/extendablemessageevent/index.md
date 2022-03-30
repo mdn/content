@@ -16,6 +16,8 @@ The **`ExtendableMessageEvent`** interface of the [Service Worker API](/en-US/do
 
 This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("ExtendableMessageEvent.ExtendableMessageEvent","ExtendableMessageEvent()")}}

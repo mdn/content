@@ -35,6 +35,10 @@ The **`Intl.NumberFormat`** object enables language-sensitive number formatting.
   - : Getter function that formats a number according to the locale and formatting options of this {{jsxref("Intl.NumberFormat")}} object.
 - {{jsxref("Intl/NumberFormat/formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}}
   - : Returns an {{jsxref("Array")}} of objects representing the number string in parts that can be used for custom locale-aware formatting.
+- {{jsxref("Intl/NumberFormat/formatRange", "Intl.NumberFormat.prototype.formatRange()")}}
+  - : Getter function that formats a range of numbers according to the locale and formatting options of the {{jsxref("Intl.NumberFormat")}} object from which the method is called.
+- {{jsxref("Intl/NumberFormat/formatRangeToParts", "Intl.NumberFormat.prototype.formatRangeToParts()")}}
+  - : Returns an {{jsxref("Array")}} of objects representing the range of number strings in parts that can be used for custom locale-aware formatting.
 - {{jsxref("Intl/NumberFormat/resolvedOptions", "Intl.NumberFormat.prototype.resolvedOptions()")}}
   - : Returns a new object with properties reflecting the locale and collation options computed during initialization of the object.
 
@@ -103,23 +107,19 @@ console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).form
 ### Using style and unit
 
 ```js
-console.log(new Intl.NumberFormat('pt-PT',  {
-    style: 'unit',
-    unit: 'kilometer-per-hour'
+console.log(new Intl.NumberFormat('pt-PT',  {
+    style: 'unit',
+    unit: 'kilometer-per-hour'
 }).format(50));
 // → 50 km/h
 
 console.log((16).toLocaleString('en-GB', {
-    style: 'unit',
-    unit: 'liter',
-    unitDisplay: 'long'
+    style: 'unit',
+    unit: 'liter',
+    unitDisplay: 'long'
 }));
 // → 16 litres
 ```
-
-## Polyfill
-
-[formatjs Intl.NumberFormat polyfill](https://formatjs.io/docs/polyfills/intl-numberformat)
 
 ## Specifications
 
@@ -132,3 +132,4 @@ console.log((16).toLocaleString('en-GB', {
 ## See also
 
 - {{jsxref("Intl")}}
+- [A polyfill of `Intl.NumberFormat` in FormatJS](https://formatjs.io/docs/polyfills/intl-numberformat)

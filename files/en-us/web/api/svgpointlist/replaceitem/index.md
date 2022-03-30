@@ -11,7 +11,7 @@ browser-compat: api.SVGPointList.replaceItem
 ---
 {{APIRef("SVG")}}
 
-The **`replaceItem()`** method of the {{domxref("SVGPointList")}} interface replaces an {{domxref("SVGPoint","point")}} in the list.
+The **`replaceItem()`** method of the {{domxref("SVGPointList")}} interface replaces a {{domxref("SVGPoint","point")}} in the list.
 
 ## Syntax
 
@@ -30,7 +30,7 @@ The new {{domxref("SVGPoint")}} object.
 
 ### Exceptions
 
-- `NoModicationAllowedError` {{domxref("DOMException")}}
+- `NoModificationAllowedError` {{domxref("DOMException")}}
   - : Thrown if the list is read-only.
 - `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown if the index passed in is greater than the number of items in the list.

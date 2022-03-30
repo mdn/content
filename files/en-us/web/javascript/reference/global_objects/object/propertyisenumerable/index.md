@@ -42,7 +42,7 @@ inherited through the prototype chain. If the object does not have the specified
 property, this method returns `false`.
 
 > **Note:** Bear in mind that enumerable properties are looped over by
-> {{jsxref("Statements/for...in", "for...in")}} loops, with the exception of
+> {{jsxref("Statements/for...in", "for...in")}} loops, with the exception of
 > {{jsxref("Global_Objects/Symbol", "Symbol")}}s.
 
 ## Examples
@@ -109,7 +109,7 @@ o.propertyIsEnumerable('property');            // returns true
 
 // These return false as they are on the prototype which
 // propertyIsEnumerable does not consider (even though the last two
-// are iteratable with for-in)
+// are iterable with for-in)
 o.propertyIsEnumerable('prototype');   // returns false (as of JS 1.8.1/FF3.6)
 o.propertyIsEnumerable('constructor'); // returns false
 o.propertyIsEnumerable('firstMethod'); // returns false
@@ -125,8 +125,7 @@ o.propertyIsEnumerable('firstMethod'); // returns false
 
 ## See also
 
-- [Enumerability
-  and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.defineProperty()")}}

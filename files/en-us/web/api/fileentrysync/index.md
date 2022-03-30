@@ -59,8 +59,10 @@ To write content to file, create a FileWriter object by calling [`createWriter()
 
 Creates a new `FileWriter` associated with the file that the `FileEntry` represents.
 
-    void createWriter (
-    ) raises (FileException);
+```
+void createWriter (
+) raises (FileException);
+```
 
 #### Parameter
 
@@ -83,8 +85,10 @@ This method can raise a [FileException](/en-US/docs/Web/API/FileException) with 
 
 Returns a File that represents the current state of the file that this `FileEntry` represents.
 
-    void file (
-    ) raises (FileException);
+```
+void file (
+) raises (FileException);
+```
 
 ##### Parameter
 
@@ -113,4 +117,4 @@ Specification:{{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", 
 
 Reference: [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 
-Introduction: [Basic Concepts About the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+Introduction: [Basic Concepts About the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
