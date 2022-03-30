@@ -23,7 +23,7 @@ information regarding that attribute.
 
 A {{domxref("NamedNodeMap")}} object.
 
-## Example
+## Examples
 
 ### Basic examples
 

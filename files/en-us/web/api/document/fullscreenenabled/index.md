@@ -35,7 +35,7 @@ elements within can be placed into fullscreen mode by calling
 {{domxref("Element.requestFullscreen()")}}. If fullscreen mode isn't available, this
 value is `false`.
 
-## Example
+## Examples
 
 In this example, before attempting to request fullscreen mode for a
 {{htmlElement("video")}} element, the value of `fullscreenEnabled` is

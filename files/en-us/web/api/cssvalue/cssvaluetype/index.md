@@ -70,7 +70,7 @@ Possible values are:
   </tbody>
 </table>
 
-## Example
+## Examples
 
 ```js
 var styleDeclaration = document.styleSheets[0].cssRules[0].style;

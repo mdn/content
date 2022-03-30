@@ -155,7 +155,7 @@ For that reason, it is recommended that instead of `innerHTML` you use:
 > the extension to [addons.mozilla.org](https://addons.mozilla.org/), it may be rejected in the review process.
 > Please see [Safely inserting external content into a page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page) for alternative methods.
 
-## Example
+## Examples
 
 This example uses `innerHTML` to create a mechanism for logging messages into a box on a web page.
 
