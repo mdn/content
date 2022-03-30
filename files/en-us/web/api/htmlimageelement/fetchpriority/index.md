@@ -16,7 +16,7 @@ The **`fetchpriority`** property of the
 {{domxref("HTMLImageElement")}} interface represents a hint given to the browser on how
 it should prioritize the fetch of the image relative to other images.
 
-## Values
+## Value
 
 A {{domxref("DOMString")}} representing the priority hint. Possible values are:
 

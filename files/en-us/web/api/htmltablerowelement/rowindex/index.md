@@ -24,7 +24,7 @@ table in the right order. Therefore the rows count from `<thead>` to
 
 Returns the index of the row, or `-1` if the row is not part of a table.
 
-## Example
+## Examples
 
 This example uses JavaScript to label all the row numbers in a table.
 

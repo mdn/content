@@ -24,7 +24,7 @@ resides.
 A {{domxref("FileSystem")}} representing the file system on which the file or directory
 described by the `FileSystemEntry` is located..
 
-## Example
+## Examples
 
 This example obtains a {{domxref("FileSystemDirectoryEntry")}} for the root directory
 of the file system containing a file.

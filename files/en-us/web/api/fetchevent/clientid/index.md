@@ -24,7 +24,7 @@ associated client.
 
 A {{domxref("DOMString")}} that represents the client ID.
 
-## Example
+## Examples
 
 ```js
 self.addEventListener('fetch', function(event) {

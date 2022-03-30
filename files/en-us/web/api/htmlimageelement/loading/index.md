@@ -83,7 +83,7 @@ in this manner, you prevent elements from shifting around while the document loa
 which can be disconcerting or offputting at best and can cause users to click the wrong
 thing at worst, depending on the exact timing of the deferred loads and reflows.
 
-## Example
+## Examples
 
 The `addImageToList()` function shown below adds a photo thumbnail to a list
 of items, using lazy-loading to avoid loading the image from the network until it's

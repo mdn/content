@@ -27,7 +27,7 @@ This is useful when you provide multiple image options using the
 {{domxref("HTMLImageElement.srcset")}} properties. `currentSrc` lets you
 determine which image from the set of provided images was selected by the browser.
 
-## Example
+## Examples
 
 In this example, two different sizes are provided for an image of a clock. One is 200px
 wide and the other is 400px wide. The {{htmlattrxref("sizes", "img")}} attribute is

@@ -17,7 +17,7 @@ The **`fetchpriority`** property of the
 browser on how it should prioritize the fetch of the iframe document relative
 to other iframe documents.
 
-## Values
+## Value
 
 A {{domxref("DOMString")}} representing the priority hint. Possible values are:
 

@@ -98,7 +98,7 @@ in all other cases. Notice that the candidates may use different image types.
 For more information on what image formats are available for use in the
 {{HTMLElement("img")}} element, see [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types).
 
-## Example
+## Examples
 
 ### HTML
 

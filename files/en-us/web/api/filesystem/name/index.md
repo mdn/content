@@ -23,7 +23,7 @@ API](/en-US/docs/Web/API/File_and_Directory_Entries_API).
 
 A {{domxref("USVString")}} representing the file system's name.
 
-## Example
+## Examples
 
 ```js
 // tbd

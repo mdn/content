@@ -25,7 +25,7 @@ A service worker can wait on this promise in its fetch event handler in order to
 
 A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} or otherwise to `undefined`.
 
-## Example
+## Examples
 
 This code snippet is from [Speed up Service Worker with Navigation Preloads](https://developers.google.com/web/updates/2017/02/navigation-preload#the-solution).
 

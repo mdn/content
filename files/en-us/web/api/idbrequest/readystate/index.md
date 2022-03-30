@@ -23,13 +23,7 @@ occurs.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var currentReadyState = request.readyState;
-```
-
-### Value
+## Value
 
 The {{domxref("IDBRequestReadyState")}} of the request, which takes one of the
 following two values:
@@ -39,7 +33,7 @@ following two values:
 | `pending` | The request is pending. |
 | `done`    | The request is done.    |
 
-## Example
+## Examples
 
 The following example requests a given record title, `onsuccess` gets the
 associated record from the {{domxref("IDBObjectStore")}} (made available

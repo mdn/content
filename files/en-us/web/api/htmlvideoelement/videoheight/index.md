@@ -61,7 +61,7 @@ be sent to the `<video>` element. This can happen when the element
 switches from displaying the poster frame to displaying video content, or when the
 displayed video track changes.
 
-## Example
+## Examples
 
 This example creates a handler for the {{domxref("HTMLVideoElement.resize", "resize")}}
 event that resizes the {{HTMLElement("video")}} element to match the intrinsic size of

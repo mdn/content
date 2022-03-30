@@ -24,7 +24,7 @@ name of the connected database.
 
 A {{ domxref("DOMString")}} containing the name of the connected database.
 
-## Example
+## Examples
 
 This example shows a database connection being opened, the resulting
 {{domxref("IDBDatabase")}} object being stored in a db variable, and the name property

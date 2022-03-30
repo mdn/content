@@ -23,7 +23,7 @@ component of the path as indicated by the {{domxref("FileSystemEntry.fullPath",
 
 A {{domxref("USVString")}} indicating the entry's name.
 
-## Example
+## Examples
 
 This example shows a function called `isFileWithExtension()` which returns
 true if the specified {{domxref("FileSystemEntry")}} is both a file and the file's name

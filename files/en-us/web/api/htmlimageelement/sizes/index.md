@@ -57,7 +57,7 @@ unit, which lets you specify the width as a percentage of the viewport width
 > `100%` are not allowed, as there would be uncertainty as to what the
 > specified value is a percentage of.
 
-## Example
+## Examples
 
 In this example, a blog-like layout is created, displaying some text and an image which
 for which three size points are specified, depending on the width of the window. Three

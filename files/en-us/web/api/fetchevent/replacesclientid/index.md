@@ -31,7 +31,7 @@ imminently be replaced, right before a navigation.
 
 A {{domxref("DOMString")}}.
 
-## Example
+## Examples
 
 ```js
 self.addEventListener('fetch', function(event) {

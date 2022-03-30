@@ -19,17 +19,11 @@ with which this transaction is associated.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var myDatabase = transaction.db;
-```
-
-### Value
+## Value
 
 An {{domxref("IDBDatabase")}} object.
 
-## Example
+## Examples
 
 In the following code snippet, we open a read/write transaction on our database and add
 some data to an object store. Note also the functions attached to transaction event

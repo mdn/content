@@ -24,7 +24,7 @@ API](/en-US/docs/Web/API/File_and_Directory_Entries_API).
 A {{domxref("FileSystemDirectoryEntry")}} representing the file system's root
 directory.
 
-## Example
+## Examples
 
 ```js
 // tbd

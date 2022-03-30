@@ -33,7 +33,7 @@ defined depends on whether the image is being rendered to a visual medium or not
   adjusted for the display density as indicated by
   {{domxref("HTMLImageElement.naturalHeight", "naturalHeight")}}.
 
-## Example
+## Examples
 
 In this example, two different sizes are provided for an image of a clock using the
 {{htmlattrxref("srcset", "img")}} attribute. One is 200px wide and the other is 400px

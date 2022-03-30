@@ -31,7 +31,7 @@ This rectangle is computed by taking the intersection of
 with the exception of the intersection {{domxref("IntersectionObserver.root", "root")}}
 itself.
 
-## Example
+## Examples
 
 In this simple example, an intersection callback stores the intersection rectangle for
 later use by the code that draws the target elements' contents, so that only the visible

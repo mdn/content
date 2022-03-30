@@ -59,7 +59,7 @@ For additional examples (including interactive ones), see the articles about the
 {{HTMLElement("map")}} and {{HTMLElement("area")}} elements, as well as the [guide to using
 image maps](/en-US/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image).
 
-## Example
+## Examples
 
 {{EmbedInteractiveExample("pages/tabbed/area.html", "tabbed-taller")}}
 

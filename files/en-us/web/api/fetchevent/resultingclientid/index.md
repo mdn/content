@@ -30,7 +30,7 @@ If the fetch request is a subresource request or the request's
 
 A {{domxref("DOMString")}}.
 
-## Example
+## Examples
 
 ```js
 self.addEventListener('fetch', function(event) {

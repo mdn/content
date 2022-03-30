@@ -27,7 +27,7 @@ which {{domxref("Element")}} previously targeted by calling
 {{domxref("IntersectionObserver.observe()")}} experienced a change in intersection with
 the root.
 
-## Example
+## Examples
 
 In this simple example, each targeted element's {{cssxref("opacity")}} is set to its
 {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}}.

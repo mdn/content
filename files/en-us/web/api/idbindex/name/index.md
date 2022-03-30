@@ -37,7 +37,7 @@ name.
 - `ConstraintError` {{domxref("DOMException")}}
   - : Thrown if an index is already using the specified `name`.
 
-## Example
+## Examples
 
 In the following example we open a transaction and an object store, then get the
 index `lName` from a simple contacts database. We then open a basic cursor on

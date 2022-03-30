@@ -37,7 +37,7 @@ which is selected in the {{HTMLElement("input")}} element. More specifically, fi
 represented by {{domxref("FileSystemFileEntry")}} objects, and, if they're allowed,
 directories are represented by {{domxref("FileSystemDirectoryEntry")}} objects.
 
-## Example
+## Examples
 
 This example shows how to create a file selection `<input>` element
 and process the selected files.

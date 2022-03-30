@@ -60,7 +60,7 @@ data in the current object stores:
   </tbody>
 </table>
 
-## Example
+## Examples
 
 In the following code snippet, we open a read/write transaction on our database and add
 some data to an object store. Note also the functions attached to transaction event

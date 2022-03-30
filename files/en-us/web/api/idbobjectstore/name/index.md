@@ -38,7 +38,7 @@ store's name.
 - `ConstraintError` {{domxref("DOMException")}}
   - : Thrown if an object store is already using the specified `name`.
 
-## Example
+## Examples
 
 In the following code snippet, we open a read/write transaction on our database and add
 some data to an object store using `add()`. After the object store has been

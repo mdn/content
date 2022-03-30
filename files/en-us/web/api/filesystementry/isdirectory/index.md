@@ -31,7 +31,7 @@ entry is a file.
 
 A Boolean indicating whether or not the {{domxref("FileSystemEntry")}} is a directory.
 
-## Example
+## Examples
 
 This example shows how this property might be used to determine whether to process the
 entry as a directory or file. If the entry is neither, an error handler is called with

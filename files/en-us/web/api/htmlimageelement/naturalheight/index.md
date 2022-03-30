@@ -42,7 +42,7 @@ If the intrinsic height is not available—either because the image does not spe
 intrinsic height or because the image data is not available in order to obtain this
 information, `naturalHeight` returns 0.
 
-## Example
+## Examples
 
 This example displays both the natural, density-adjusted size of an image as well as
 its rendered size as altered by the page's CSS and other factors.
