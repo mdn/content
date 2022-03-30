@@ -31,6 +31,8 @@ This article provides information about the changes in Firefox 100 that will aff
 
 #### Removals
 
+- The non-standard {{httpheader("Large-Allocation")}} HTTP header has been removed ({{bug(1598759)}}).
+
 ### Security
 
 #### Removals

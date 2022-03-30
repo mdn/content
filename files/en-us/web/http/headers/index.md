@@ -376,7 +376,7 @@ _Learn more about CORS [here](CORS)._
   - : Contains the date and time at which the message was originated.
 - {{HTTPHeader("Early-Data")}} {{experimental_inline}}
   - : Indicates that the request has been conveyed in TLS early data.
-- {{HTTPHeader("Large-Allocation")}}
+- {{HTTPHeader("Large-Allocation")}} {{deprecated_inline}}
   - : Tells the browser that the page being loaded is going to want to perform a large allocation.
 - {{HTTPHeader("Link")}}
   - : The [`Link`](https://datatracker.ietf.org/doc/html/rfc5988#section-5) entity-header field provides a means for serializing one or more links in HTTP headers. It is semantically equivalent to the HTML {{HTMLElement("link")}} element.
