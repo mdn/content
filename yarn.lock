@@ -62,20 +62,20 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@4.1.13":
-  version "4.1.13"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.13.tgz#40303f692fff93abe7a0f5782432ec717af9b280"
-  integrity sha512-OFTriJmUcXnA1RjfKDJOfEmhHO44OV7Gxpqnh7eOM+3qep64Yt+uNF4jEeIFHnwTFH5tMcnBQxEI91dXDGiGYQ==
+"@mdn/browser-compat-data@4.1.14":
+  version "4.1.14"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.14.tgz#45b45f2fcd8fe766950e5abc40efde94b4348efd"
+  integrity sha512-pndsgd4jXIGcgWKPXkN5AL1rdwhgQpLXWyK25jb42SUaeujs/GhRK8+Q4W97RTiCirf/DoaahcTI/3Op6+/gfw==
 
-"@mdn/yari@0.9.69":
-  version "0.9.69"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.9.69.tgz#d7536300577b5873baeb6d8dc54387dd28a4f42a"
-  integrity sha512-qlir4lTUy74t0VZigLU0ElrsOAmDfDIXO5PW86VOAr1ibInkJiav6qdasBHB2sX+GpYihRU9RyaUVSIDbDZ++A==
+"@mdn/yari@0.9.71":
+  version "0.9.71"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.9.71.tgz#2b4dee49924f2dc337ee79d86d56342a7c29578a"
+  integrity sha512-gnV+agc61WAZV5w76Y6bJ3U/3EPgWi/RwPBisZ5OM8iS7XECJlyKdTApuNaqPWopyWuixrVJcHHtvzG5bN32Xg==
   dependencies:
     "@babel/helper-builder-react-jsx" "^7.16.7"
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
-    "@mdn/browser-compat-data" "4.1.13"
+    "@mdn/browser-compat-data" "4.1.14"
     "@use-it/interval" "^1.0.0"
     accept-language-parser "1.5.0"
     browser-specs "^3.5.0"
@@ -100,7 +100,7 @@
     hast-util-is-element "^1.1.0"
     hast-util-to-html "^7.1.3"
     hast-util-to-text "^2.0.1"
-    html-react-parser "^1.4.9"
+    html-react-parser "^1.4.10"
     http-proxy-middleware "2.0.4"
     image-size "1.0.1"
     image-type "4.1.0"
@@ -114,7 +114,7 @@
     js-yaml "4.1.0"
     klaw-sync "^6.0.0"
     loglevel "^1.8.0"
-    lru-cache "^7.7.1"
+    lru-cache "^7.7.2"
     md5-file "5.0.0"
     mdast-util-from-markdown "^0.8.5"
     mdast-util-phrasing "^2.0.0"
@@ -2263,10 +2263,10 @@ html-dom-parser@1.1.1:
     domhandler "4.3.1"
     htmlparser2 "7.2.0"
 
-html-react-parser@^1.4.9:
-  version "1.4.9"
-  resolved "https://registry.yarnpkg.com/html-react-parser/-/html-react-parser-1.4.9.tgz#fd0416728a5819292f5f718a76daa2659c46891f"
-  integrity sha512-V45RVd7GEGtk5bmL9iBV/AkaTE6jj9uhvUrJ/cWlq06DrcMzvz2kqMeZfWEV2pIWkRDzLAqrotCfmFSvdTjpHA==
+html-react-parser@^1.4.10:
+  version "1.4.10"
+  resolved "https://registry.yarnpkg.com/html-react-parser/-/html-react-parser-1.4.10.tgz#36862197876ccb9a32736f462555ba561350b715"
+  integrity sha512-GiG7mEwI0enY7hz0F0Zx1B4D0MCQWx2xH0KdVNV9fjqOXwwnPYM79meJ2dsIJf9QR4qQTTPEdSq7wlJfq/i6Tw==
   dependencies:
     domhandler "4.3.1"
     html-dom-parser "1.1.1"
@@ -2974,10 +2974,10 @@ lru-cache@^4.0.1:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
-lru-cache@^7.7.1:
-  version "7.7.1"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.7.1.tgz#03d2846b1ad2dcc7931a9340b8711d9798fcb0c6"
-  integrity sha512-cRffBiTW8s73eH4aTXqBcTLU0xQnwGV3/imttRHGWCrbergmnK4D6JXQd8qin5z43HnDwRI+o7mVW0LEB+tpAw==
+lru-cache@^7.7.2:
+  version "7.7.2"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.7.2.tgz#9a31f924b96e0e238c1f981bf3fcc2563aafb5f0"
+  integrity sha512-WkdIOIF7HkfVHXxKLjhH6lyAxSFoSO5NZpZS9cH8Oe5rAI2ZDrVmIweDAZUHqIhl0zasQUprVVR8uv2yggYYvw==
 
 make-dir@^1.0.0, make-dir@^1.2.0:
   version "1.3.0"
