@@ -32,7 +32,7 @@ If the area of the target's bounds rectangle is zero, the returned value is 1 if
 {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} is
 `true` or 0 if not.
 
-## Example
+## Examples
 
 In this simple example, an intersection callback sets each target element's
 {{cssxref("opacity")}} to the intersection ratio of that element with the root.

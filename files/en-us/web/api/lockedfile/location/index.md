@@ -22,12 +22,6 @@ value `null` means end-of-file.
 
 This property can be changed at will.
 
-## Syntax
-
-```js
-var location = instanceOfLockedFile.location
-```
-
 ## Value
 
 A number.

@@ -16,12 +16,6 @@ tags:
 The `fileHandle` property gives access to the {{domxref("IDBMutableFile")}}
 object that produced the {{domxref("LockedFile")}} object.
 
-## Syntax
-
-```js
-var handler = instanceOfLockedFile.fileHandle
-```
-
 ## Value
 
 A {{domxref("IDBMutableFile")}} object.

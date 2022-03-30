@@ -13,7 +13,7 @@ browser-compat: api.ImageTrack.selected
 
 The **`selected`** property of the {{domxref("ImageTrack")}} interface returns `true` if the track is selected for decoding.
 
-### Value
+## Value
 
 A {{jsxref("boolean")}}, if `true` the track is selected for decoding.
 

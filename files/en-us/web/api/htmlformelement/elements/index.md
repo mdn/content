@@ -44,7 +44,7 @@ in the form by following a preorder, depth-first traversal of the tree. This is 
 
 {{page("/en-US/docs/Web/API/HTMLFormElement", "Elements that are considered form controls")}}
 
-## Example
+## Examples
 
 ### Quick syntax example
 

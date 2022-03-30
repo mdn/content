@@ -28,7 +28,7 @@ When the opened database doesn't exist yet, the value of `oldVersion` is
 A [64-bit
 integer](</en-US/docs/NSPR_API_Reference/Long_Long_(64-bit)_Integers>).
 
-## Example
+## Examples
 
 ```js
 var dbName = "sampleDB";

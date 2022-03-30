@@ -39,7 +39,7 @@ A Boolean which is `true` if the callback is running due to the callback's
 timeout period elapsing or `false` if the callback is running because the
 user agent is idle and is offering time to the callback.
 
-## Example
+## Examples
 
 See our [complete example](/en-US/docs/Web/API/Background_Tasks_API#example)
 in the article [Cooperative Scheduling

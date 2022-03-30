@@ -26,7 +26,7 @@ This can also be thought of as a path which is relative to the root directory, w
 
 A {{domxref("USVString")}} indicating the entry's full path.
 
-## Example
+## Examples
 
 This example shows a function which is called with a file system; it then gets a
 {{domxref("FileSystemFileEntry")}} for a file named `data.json` and returns

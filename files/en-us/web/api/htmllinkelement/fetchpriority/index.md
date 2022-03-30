@@ -19,7 +19,7 @@ The **`fetchpriority`** property of the
 on how it should prioritize the preload of the given resource relative to other
 resources of the same type.
 
-## Values
+## Value
 
 A {{domxref("DOMString")}} representing the priority hint. Possible values are:
 

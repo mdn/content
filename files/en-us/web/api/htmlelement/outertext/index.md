@@ -24,7 +24,7 @@ If the element itself is not [being rendered](https://html.spec.whatwg.org/multi
 
 When used as a setter it replaces the current node with the given text, converting any line breaks into {{HTMLElement("br")}} elements.
 
-## Example
+## Examples
 
 This example highlights the fundamental difference between `outerText` and `innerText` when used as setters (they are the same when used by getters).
 

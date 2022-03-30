@@ -27,7 +27,7 @@ contain a request (see {{domxref("FetchEvent.FetchEvent", "FetchEvent()")}}.)
 
 A {{domxref("Request")}} object.
 
-## Example
+## Examples
 
 This code snippet is from the [service
 worker fetch sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js) ([run the fetch

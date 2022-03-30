@@ -44,7 +44,7 @@ Permitted values are:
 If `crossOrigin` is an empty string (`""`),
 the `anonymous` mode is selected.
 
-## Example
+## Examples
 
 In this example, a new {{HTMLElement("img")}} element is created and added to the
 document, loading the image with the Anonymous state; the image will be loaded using

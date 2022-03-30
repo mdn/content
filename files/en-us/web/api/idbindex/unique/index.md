@@ -33,7 +33,7 @@ A boolean value:
 | `true`  | The current index does not allow duplicate values for a key. |
 | `false` | The current index allows duplicate key values.               |
 
-## Example
+## Examples
 
 In the following example we open a transaction and an object store, then get the
 index `lName` from a simple contacts database. We then open a basic cursor on
