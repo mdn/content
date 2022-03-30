@@ -12,7 +12,7 @@ Browsers sometimes need to distinguish precisely between different sites. For ex
 
 For this more precise definition a site is determined by the _registrable domain_ portion of the domain name. The registrable domain consists of an entry in the [Public Suffix List](https://publicsuffix.org/list/) plus the portion of the domain name just before it. This means that, for example, `theguardian.co.uk`, `sussex.ac.uk`, and `bookshop.org` are all registrable domains.
 
-According to this definition, "support.mozilla.org" and "developer.mozilla.org" are part of the same site, because "mozilla.org" is a registrable domain.
+According to this definition, `support.mozilla.org` and `developer.mozilla.org` are part of the same site, because `mozilla.org` is a registrable domain.
 
 In some contexts the scheme is also considered when differentiating sites. This would make "http://vpl.ca" and "https://vpl.ca" different sites. Including the scheme prevents an insecure (http) site from being treated as the same site as a secure (https) site. A definition that considers the scheme is sometimes called a "schemeful same-site". This stricter definition is applied in the rules for handling [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) cookies.
 
