@@ -75,8 +75,8 @@ Possible types are the following:
     "`2019`".
 - second
   - : The string used for the second, for example "`07`" or "`42`".
-- timeZoneName
-  - : The string used for the name of the time zone, for example "`UTC`".
+- timeZone
+  - : The string used for the name of the time zone, for example "`UTC`". Default is the timezone of the current environment.
 - weekday
   - : The string used for the weekday, for example "`M`",
     "`Monday`", or "`Montag`".
