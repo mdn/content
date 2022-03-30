@@ -112,8 +112,8 @@ In the future, service workers will be able to do a number of other useful thing
   - : Provides an object representing the service worker as an overall unit in the network ecosystem, including facilities to register, unregister, and update service workers, and access the state of service workers and their registrations.
 - {{DOMxRef("ServiceWorkerGlobalScope")}}
   - : Represents the global execution context of a service worker.
-- {{DOMxRef("ServiceWorkerMessageEvent")}} {{Deprecated_Inline}}
-  - : Represents a message sent to a {{DOMxRef("ServiceWorkerGlobalScope")}}. **Note that this interface is deprecated in modern browsers. Service worker messages will now use the {{DOMxRef("MessageEvent")}} interface, for consistency with other web messaging features.**
+- {{DOMxRef("MessageEvent")}}
+  - : Represents a message sent to a {{DOMxRef("ServiceWorkerGlobalScope")}}.
 - {{DOMxRef("ServiceWorkerRegistration")}} {{Experimental_Inline}}
   - : Represents a service worker registration.
 - {{DOMxRef("SyncEvent")}} {{Non-standard_Inline}}
