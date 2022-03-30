@@ -13,7 +13,7 @@ browser-compat: api.AudioData.format
 
 The **`format`** read-only property of the {{domxref("AudioData")}} interface returns the sample format of the `AudioData` object.
 
-### Value
+## Value
 
 A string. One of:
 

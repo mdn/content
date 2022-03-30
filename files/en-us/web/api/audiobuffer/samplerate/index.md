@@ -21,7 +21,7 @@ samples per second, of the PCM data stored in the buffer.
 A floating-point value indicating the current sample rate of the buffers data, in
 samples per second.
 
-## Example
+## Examples
 
 ```js
 // Stereo

@@ -21,7 +21,7 @@ the `AudioParam`.
 
 A floating-point {{jsxref("Number")}}.
 
-## Example
+## Examples
 
 ```js
 const audioCtx = new AudioContext();

@@ -13,7 +13,7 @@ browser-compat: api.AudioData.sampleRate
 
 The **`sampleRate`** read-only property of the {{domxref("AudioData")}} interface returns the sample rate in Hz.
 
-### Value
+## Value
 
 A decimal value.
 

@@ -29,7 +29,7 @@ animation.ready.then(function() {
 });
 ```
 
-## Example
+## Examples
 
 In the following example, the state of the animation will be `running` when the **current ready Promise** is resolved because the animation does not leave the `pending` play state in between the calls to `pause` and `play` and hence the **current ready Promise** does not change.
 

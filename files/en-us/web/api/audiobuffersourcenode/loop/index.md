@@ -32,7 +32,7 @@ time specified by the {{domxref("AudioBufferSourceNode.loopEnd", "loopEnd")}} pr
 is reached, playback continues at the time specified by
 {{domxref("AudioBufferSourceNode.loopStart", "loopStart")}}
 
-## Example
+## Examples
 
 In this example, the {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} function is used to
 decode an audio track and put it into an {{domxref("AudioBufferSourceNode")}}. Buttons

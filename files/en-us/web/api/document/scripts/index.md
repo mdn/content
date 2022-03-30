@@ -21,7 +21,7 @@ elements in the document. The returned object is an
 An {{domxref("HTMLCollection")}}. You can use this just like an array to get all the
 elements in the list.
 
-## Example
+## Examples
 
 This example looks to see if the page has any {{HTMLElement("script")}} elements.
 

@@ -32,7 +32,7 @@ only used if the {{domxref("AudioBufferSourceNode.loop", "loop")}} property is
 
 The default value is 0.
 
-## Example
+## Examples
 
 In this example, the {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} function is used to
 decode an audio track and put it into an {{domxref("AudioBufferSourceNode")}}. Buttons
