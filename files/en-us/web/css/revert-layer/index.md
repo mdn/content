@@ -28,24 +28,62 @@ The `revert-layer` keyword is ideally meant for applying on properties inside a 
 
 ## Examples
 
-### Revert to value in a previous cascade layer
+### Cascade layer behaviour
+
+This is the default behaviour
 
 In the example below, two cascade layers are defined in the CSS, `base` and `special`. By default, rules in the `special` layer will override competing rules in the `base` layer because `special` is listed after `base` in the `@layer` declaration statement.
+
 #### HTML
 
 ```html
-<p>This example contains two lists.</p>
+<p>This example contains a list.</p>
 
-<ul class="list">List One
-  <li class="item">Item one</li>
+<ul>
+  <li class="item feature">Item one</li>
   <li class="item">Item two</li>
   <li class="item">Item three</li>
 </ul>
+```
 
-<ul class="list">List Two
-  <li class="item feature">Point one</li>
-  <li class="item feature">Point two</li>
-  <li class="item feature">Point three</li>
+#### CSS
+
+```css
+@layer base, special;
+
+@layer special {
+  .item {
+    color: red;
+  }
+}
+
+@layer base {
+  .item {
+    color: blue;
+  }
+  .feature {
+    color: green;
+  }
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Cascade_layer_behaviour')}}
+
+### Revert to value in a previous cascade layer with revert-layer
+
+This is example of revert layer
+
+#### HTML
+
+```html
+<p>This example contains a list.</p>
+
+<ul>
+  <li class="item feature">Item one</li>
+  <li class="item">Item two</li>
+  <li class="item">Item three</li>
 </ul>
 ```
 
@@ -59,109 +97,39 @@ In the example below, two cascade layers are defined in the CSS, `base` and `spe
     color: red;
   }
   .feature {
+    color: revert-layer;
+  }
+}
+
+@layer base {
+  .item {
+    color: blue;
+  }
+  .feature {
     color: green;
   }
 }
-
-@layer base {
-  .feature {
-    color: blue;
-  }
-  .list {
-    color: rebeccapurple;
-  }
-}
 ```
 
-### Results
+#### Result
 
-
-#### A. Default cascade layer behavior
-
-```html hidden
-<p>This example contains two lists. </p>
-<ul class="list">List One
-  <li class="item">Item one</li><li class="item">Item two</li><li class="item">Item three</li>
-</ul>
-
-<ul class="list">List Two
-  <li class="item feature">Point one</li><li class="item feature">Point two</li><li class="item feature">Point three</li>
-</ul>
-```
-
-```css hidden
-@layer base, special;
-@layer special {
-  .item {color: red;}
-  .feature {color: green;}}
-@layer base {
-  .feature {color: blue;}
-  .list {color: rebeccapurple;}}
-```
-
-{{EmbedLiveSample('Default_cascade_layer_behavior', 0, 280)}}
+{{EmbedLiveSample('Revert to value in a previous cascade layer with revert-layer')}}
 
 The color of items in both lists is derived from the `color` property values in the matching rules in the `special` layer. Specifically, items in 'List One' match the `item` rule and are red, and items in 'List Two' match the more specific `feature` rule and are green. The `feature` rule in the `base` layer is ignored.
 
 Now let's examine how the `revert-layer` keyword changes this default behavior.
 
 
-#### B. Revert to matching rule in previous layer
-
 Consider the case where `color` is set to `revert-layer` in the `feature` rule in the `special` layer.
 
-```html hidden
-<p>This example contains two lists.</p>
-<ul class="list">List One
-  <li class="item">Item one</li><li class="item">Item two</li><li class="item">Item three</li>
-</ul>
-
-<ul class="list">List Two
-  <li class="item feature">Point one</li><li class="item feature">Point two</li><li class="item feature">Point three</li>
-</ul>
-```
-
-```css hidden
-@layer base, special;
-@layer special {
-  .item {color: red;}
-  .feature {color: green; color:revert-layer;}}
-@layer base {
-  .feature {color: blue;}
-  .list {color: rebeccapurple;}}
-```
-
-{{EmbedLiveSample('revert_to_matching_rule_in_previous_layer', 0, 280)}}
 
 The `feature` rule applies to items in 'List Two', which also match the `item` and `list` rules, in that order. Of the three rules, only `feature` and `list` rules are defined in the previous cascade layer `base`.
 
 With `color` set to `revert-layer`, the `color` property value rolls back to the value in the more specific matching `feature` rule in the previous layer `base`, and so the items in 'List Two' are now blue.
 
-#### C. Revert to other matching rule in previous layer
 
 Now consider if instead of the `feature` rule, `color` is set to `revert-layer` in the `item` rule in `special` layer.
 
-```html hidden
-<p>This example contains two lists.</p>
-<ul class="list">List One
-  <li class="item">Item one</li><li class="item">Item two</li><li class="item">Item three</li>
-</ul>
-<ul class="list">List Two
-  <li class="item feature">Point one</li><li class="item feature">Point two</li><li class="item feature">Point three</li>
-</ul>
-```
-
-```css hidden
-@layer base, special;
-@layer special {
-  .item {color: red; color:revert-layer;}
-  .feature {color: green; }}
-@layer base {
-  .feature {color: blue;}
-  .list {color: rebeccapurple;}}
-```
-
-{{EmbedLiveSample('revert_to_other_matching_rule_in_previous_layer', 0, 280)}}
 
 The `item` rule impacts items in 'List One' most specifically. Items in 'List One' also match the `list` rule. There is no `item` rule in the previous layer `base`, but there is a matching `list` rule.
 
@@ -171,41 +139,6 @@ With `color` set to `revert-layer`, the `color` property value rolls back to the
 
 The example below shows what happens if there is no cascade layer with a matching CSS rule for the target element to revert to. The CSS file in the previous example has been modified slightly to demonstrate this scenario.
 
-```html hidden
-<p>This example contains two lists.</p>
-<ul class="list">List One
-  <li class="item">Item one</li><li class="item">Item two</li><li class="item">Item three</li>
-</ul>
-<ul class="list">List Two
-  <li class="item feature">Point one</li><li class="item feature">Point two</li><li class="item feature">Point three</li>
-</ul>
-```
-
-#### CSS
-
-```css
-@layer base, special;
-
-@layer special {
-  .list {
-    color: rebeccapurple;
-  }
-  .item {
-    color: revert-layer;
-  }
-  .feature {
-    color: green;
-  }
-}
-
-@layer base {
-  .feature {
-    color: blue;
-  }
-}
-```
-
-{{EmbedLiveSample('Revert_to_inherited_value_in_current_cascade_layer', 0, 280)}}
 
 The `color` property is set to `revert-layer` in the `item` rule in `special` layer. This rule most specifically impacts items in 'List One'. Items in 'List One' also match `list` rule. However, neither of these matching CSS rules exist in the previous `base` layer, and so there is no cascade layer to roll back to.
 
@@ -213,39 +146,33 @@ Therefore, items in 'List One' fall back to inheriting the `color` property valu
 
 ### Revert to style in previous origin
 
+If there's no style in a previous cascade layer it goes to origin
+
 This example shows the `revert-layer` keyword behavior when there is no cascade layer to revert to _and_ there is no matching CSS rule in the current layer to inherit the property value.
 
-```html hidden
-<p>This example contains two lists.</p>
-<ul class="list">List One
-  <li class="item">Item one</li><li class="item">Item two</li><li class="item">Item three</li>
-</ul>
-<ul class="list">List Two
-  <li class="item feature">Point one</li><li class="item feature">Point two</li><li class="item feature">Point three</li>
+#### HTML
+
+```html
+<p>This example contains a list.</p>
+
+<ul>
+  <li class="item feature">Item one</li>
+  <li class="item">Item two</li>
+  <li class="item">Item three</li>
 </ul>
 ```
 
 #### CSS
 
 ```css
-@layer base, special;
+@layer base;
 
-@layer special {
+@layer base {
   .item {
     color: revert-layer;
   }
-  .feature {
-    color: green;
-  }
-}
-
-@layer base {
-  .feature {
-    color: blue;
-  }
 }
 ```
-
 
 {{EmbedLiveSample('Revert_to_style_in_previous_origin', 0, 280)}}
 
