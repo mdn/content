@@ -146,13 +146,13 @@ Now we have three tasks ahead of us:
 
 3. Finally the code needs to be pushed to your GitHub hosted repository. Let's do that now.
 
-    Over at github, visit <https://github.com/new> and create your own repository to host this code.
+    Over at GitHub, visit <https://github.com/new> and create your own repository to host this code.
 
 4. Give your repository a short, memorable name, without spaces in it (use hyphens to separate words), and a description, then click _Create repository_ at the bottom of the page.
 
     You should now have a "remote" URL that points to your new GitHub repo.
 
-    ![github screenshot showing remote URLs you can use to deploy code to a GitHub repo](github-quick-setup.png)
+    ![GitHub screenshot showing remote URLs you can use to deploy code to a GitHub repo](github-quick-setup.png)
 
 5. This remote location needs to be added to our local git repository before we can push it up there, otherwise it won't be able to find it. You'll need to run a command with the following structure (use the provided HTTPS option for now — especially if you are new to GitHub — not the SSH option):
 

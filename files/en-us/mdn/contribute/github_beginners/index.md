@@ -84,7 +84,7 @@ Now you've forked the repo, it is time to clone your fork locally. To do this:
 1. Go to your fork's page on github.com (e.g. `https://github.com/<your-user-name>/content`).
 2. Press the green "Code" button at the top of the files list. Something similar to the following popup should appear as a result:
 
-    ![Popup window showing a clone URL along with options to open with github desktop and download zip](code-popup.png)
+    ![Popup window showing a clone URL along with options to open with GitHub Desktop and download zip](code-popup.png)
 
 3. If you set up SSH authentication as instructed above, click the "SSH" tab and copy the `git@github.com:<your-user-name>/content.git` URL from the text field in the box. If you didn't set up SSH authentication, copy the URL from the text field on the "HTTPS" tab instead, which should look like this: `https://github.com/<your-user-name>/content.git`.
 4. Now open up the command line on your computer, and navigate into the directory you set up earlier to store your local git repo clones in using the cd command, e.g.
