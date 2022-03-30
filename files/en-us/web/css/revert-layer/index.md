@@ -13,9 +13,7 @@ browser-compat: css.types.global_keywords.revert-layer
 
 The **`revert-layer`** CSS keyword rolls back the value of a property in a {{cssxref("@layer", "cascade layer")}} to the value of the property in a CSS rule matching the element in a previous cascade layer. The value of the property with this keyword is recalculated as if no rules were specified on the target element in the current cascade layer.
 
-If there is no other cascade layer to revert to for the matching CSS rule, the property value rolls back to the {{cssxref("computed_value", "computed value")}} derived from the current layer. (See this [example](/en-US/docs/Web/CSS/revert-layer#revert_to_inherited_value_in_current_cascade_layer).)
-
-Furthermore, if there is no matching CSS rule in the current layer, the property value for the element rolls back to the style defined in a previous [style origin](/en-US/docs/Glossary/Style_origin).
+If there is no other cascade layer to revert to for the matching CSS rule, the property value rolls back to the {{cssxref("computed_value", "computed value")}} derived from the current layer. Furthermore, if there is no matching CSS rule in the current layer, the property value for the element rolls back to the style defined in a previous [style origin](/en-US/docs/Glossary/Style_origin).
 
 
 This keyword can be applied to any CSS property, including the CSS shorthand property {{cssxref("all")}}.
@@ -28,9 +26,7 @@ The `revert-layer` keyword is ideally meant for applying on properties inside a 
 
 ## Examples
 
-### Cascade layer behaviour
-
-This is the default behaviour
+### Default cascade layer behavior
 
 In the example below, two cascade layers are defined in the CSS, `base` and `special`. By default, rules in the `special` layer will override competing rules in the `base` layer because `special` is listed after `base` in the `@layer` declaration statement.
 
@@ -69,11 +65,13 @@ In the example below, two cascade layers are defined in the CSS, `base` and `spe
 
 #### Result
 
-{{EmbedLiveSample('Cascade_layer_behaviour')}}
+{{EmbedLiveSample('Default_cascade_layer_behavior')}}
 
-### Revert to value in a previous cascade layer with revert-layer
+All the `<li>` elements match the `item` rule in the `special` layer and are red. This is the default cascade layer behavior, where rules in the `special` layer take precedence over rules in the `base` layer.
 
-This is example of revert layer
+### Revert to style in previous cascade layer
+
+Let's examine how the `revert-layer` keyword changes the default cascade layer behavior. For this example, the `special` layer contains an additional `feature` rule targeting the first `<li>` element. The `color` property in this rule is set to `revert-layer`.
 
 #### HTML
 
@@ -113,40 +111,11 @@ This is example of revert layer
 
 #### Result
 
-{{EmbedLiveSample('Revert to value in a previous cascade layer with revert-layer')}}
+{{EmbedLiveSample('Revert_to_style_in_previous_cascade_layer')}}
 
-The color of items in both lists is derived from the `color` property values in the matching rules in the `special` layer. Specifically, items in 'List One' match the `item` rule and are red, and items in 'List Two' match the more specific `feature` rule and are green. The `feature` rule in the `base` layer is ignored.
-
-Now let's examine how the `revert-layer` keyword changes this default behavior.
-
-
-Consider the case where `color` is set to `revert-layer` in the `feature` rule in the `special` layer.
-
-
-The `feature` rule applies to items in 'List Two', which also match the `item` and `list` rules, in that order. Of the three rules, only `feature` and `list` rules are defined in the previous cascade layer `base`.
-
-With `color` set to `revert-layer`, the `color` property value rolls back to the value in the more specific matching `feature` rule in the previous layer `base`, and so the items in 'List Two' are now blue.
-
-
-Now consider if instead of the `feature` rule, `color` is set to `revert-layer` in the `item` rule in `special` layer.
-
-
-The `item` rule impacts items in 'List One' most specifically. Items in 'List One' also match the `list` rule. There is no `item` rule in the previous layer `base`, but there is a matching `list` rule.
-
-With `color` set to `revert-layer`, the `color` property value rolls back to the value in the matching `list` rule in the previous layer `base`, and so the items in 'List One' are now rebeccapurple.
-
-### Revert to inherited value in current cascade layer
-
-The example below shows what happens if there is no cascade layer with a matching CSS rule for the target element to revert to. The CSS file in the previous example has been modified slightly to demonstrate this scenario.
-
-
-The `color` property is set to `revert-layer` in the `item` rule in `special` layer. This rule most specifically impacts items in 'List One'. Items in 'List One' also match `list` rule. However, neither of these matching CSS rules exist in the previous `base` layer, and so there is no cascade layer to roll back to.
-
-Therefore, items in 'List One' fall back to inheriting the `color` property value from the matching `list` rule in the current `special` layer.
+With `color` set to `revert-layer`, the `color` property value rolls back to the value in the matching `feature` rule in the previous layer `base`, and so 'Item one' is now green.
 
 ### Revert to style in previous origin
-
-If there's no style in a previous cascade layer it goes to origin
 
 This example shows the `revert-layer` keyword behavior when there is no cascade layer to revert to _and_ there is no matching CSS rule in the current layer to inherit the property value.
 
@@ -165,8 +134,6 @@ This example shows the `revert-layer` keyword behavior when there is no cascade 
 #### CSS
 
 ```css
-@layer base;
-
 @layer base {
   .item {
     color: revert-layer;
@@ -174,9 +141,9 @@ This example shows the `revert-layer` keyword behavior when there is no cascade 
 }
 ```
 
-{{EmbedLiveSample('Revert_to_style_in_previous_origin', 0, 280)}}
+{{EmbedLiveSample('Revert_to_style_in_previous_origin')}}
 
-The style for items in 'List One' in this example rolls back to the defaults in the user-agent origin.
+The style for all `<li>` elements rolls back to the defaults in the user-agent origin.
 
 ## Specifications
 
