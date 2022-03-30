@@ -271,7 +271,7 @@ The final steps are to copy your application into this local project directory a
 5. When you're satisfied, `commit` the files to your local repository. This is essentially equivalent to signing off on the changes and making them an official part of the local repository.
 
     ```bash
-    git commit -m "First version of application moved into github"
+    git commit -m "First version of application moved into GitHub"
     ```
 
 6. At this point, the remote repository has not been changed. Synchronize (`push`) your local repository to the remote GitHub repository using the following command:

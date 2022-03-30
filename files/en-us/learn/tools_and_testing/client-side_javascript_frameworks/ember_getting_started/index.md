@@ -97,7 +97,7 @@ The templating language is used to make build and runtime optimizations that oth
 
 This language also enables lighter asset payloads due to _compiling_ the templates into a "byte code" that can be parsed faster than JavaScript. The **Glimmer VM** enables extremely fast DOM change tracking without the need to manage and diff a cached virtual representation (which is a common approach to mitigating the slow I/O of DOM changes).
 
-For more information on the technical aspects of The Glimmer VM, the github repository has some [documentation](https://github.com/glimmerjs/glimmer-vm/tree/master/guides) — specifically, [References](https://github.com/glimmerjs/glimmer-vm/blob/master/guides/04-references.md) and [Validators](https://github.com/glimmerjs/glimmer-vm/blob/master/guides/05-validators.md) may be of interest.
+For more information on the technical aspects of The Glimmer VM, the GitHub repository has some [documentation](https://github.com/glimmerjs/glimmer-vm/tree/master/guides) — specifically, [References](https://github.com/glimmerjs/glimmer-vm/blob/master/guides/04-references.md) and [Validators](https://github.com/glimmerjs/glimmer-vm/blob/master/guides/05-validators.md) may be of interest.
 
 Everything else in Ember is _just_ JavaScript. In particular, JavaScript classes. This is where most of the "framework" parts come into play, as there are [superclasses](<https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)#Subclasses_and_superclasses>), where each type of _thing_ has a different purpose and different expected location within your project.
 
