@@ -20,7 +20,7 @@ stored in the buffer.
 
 An integer.
 
-## Example
+## Examples
 
 ```js
 // Stereo

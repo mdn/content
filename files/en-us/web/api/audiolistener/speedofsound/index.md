@@ -29,7 +29,7 @@ shift](https://en.wikipedia.org/wiki/Doppler_effect) appropriate for the speed t
 
 A double.
 
-## Example
+## Examples
 
 See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
 

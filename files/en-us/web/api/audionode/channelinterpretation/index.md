@@ -27,7 +27,7 @@ In summary:
 - `discrete`
   - : Input channels are mapped to output channels in order. If there are more inputs that outputs the additional inputs are dropped; if there are fewer then the unused outputs are silent.
 
-## Example
+## Examples
 
 ```js
 var AudioContext = window.AudioContext || window.webkitAudioContext;

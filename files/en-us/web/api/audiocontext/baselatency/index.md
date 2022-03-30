@@ -27,7 +27,7 @@ into the host system's audio subsystem ready for playing.
 
 A double representing the base latency in seconds.
 
-## Example
+## Examples
 
 ```js
 // default latency ("interactive")

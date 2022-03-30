@@ -28,7 +28,7 @@ whose value indicates the detuning of oscillation in [cents](https://en.wikipedi
 > **Note:** Though the `AudioParam` returned is read-only, the
 > value it represents is not.
 
-## Example
+## Examples
 
 ```js
 const audioCtx = new AudioContext();
