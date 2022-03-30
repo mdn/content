@@ -18,7 +18,7 @@ In some contexts, the scheme is also considered when differentiating sites. This
 
 ## Examples
 
-These are the same site because the registrable domain of _mozilla.org_ is the same:
+These are the same site because the registrable domain of `mozilla.org` is the same:
 
 - `https://developer.mozilla.org/en-US/docs/`
 - `https://support.mozilla.org/en-US/`
