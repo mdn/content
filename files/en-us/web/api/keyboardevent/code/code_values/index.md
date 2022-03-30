@@ -2523,12 +2523,12 @@ In the cells, "(❌ Missing)" means that this code value cannot be detected on t
     <tr>
       <th scope="row"><code>0x00BB</code></th>
       <td><code>"Unidentified"</code> (❌ Missing)</td>
-      <td><code>"NumpadParenLeft"</code> (⚠️ Not the same on Chromium)</td>
+      <td><code>"NumpadParenLeft"</code> (⚠️ Not the same on Gecko)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x00BC</code></th>
       <td><code>"Unidentified"</code> (❌ Missing)</td>
-      <td><code>"NumpadParenRight"</code> (⚠️ Not the same on Chromium)</td>
+      <td><code>"NumpadParenRight"</code> (⚠️ Not the same on Gecko)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x00BD</code>, <code>0x00BE</code></th>
