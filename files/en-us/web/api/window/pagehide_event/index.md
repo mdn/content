@@ -54,7 +54,7 @@ The best event to use to signal the end of a user's session is the [`visibilityc
 
 If you're specifically trying to detect page unload events, the `pagehide` event is the best option.
 
-See the [Page Lifecycle API](https://developers.google.com/web/updates/2018/07/page-lifecycle-api) guide for more information about how this event relates to other events in the page lifecycle.
+See the [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/) guide for more information about how this event relates to other events in the page lifecycle.
 
 ## Examples
 
