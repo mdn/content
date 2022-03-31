@@ -9,7 +9,7 @@ tags:
 ---
 {{WebAssemblySidebar}}
 
-The **`local.tee`** instruction, sets the value of local variable and keep the value on the stack.
+The **`local.tee`** instruction sets the value of a local variable and loads the value onto the stack.
 
 The instruction is named after the T-splitter used in plumbing.
 
@@ -18,10 +18,13 @@ The instruction is named after the T-splitter used in plumbing.
 ## Syntax
 
 ```wasm
-;; load the value of a local variable onto the stack
-local.get $val
+;; load the number 2 onto the stack
+i32.const 2
+
+;; store the number 2 in the variable $val and load it on the stack
+local.tee $val
 ```
 
 | Instruction | Binary opcode |
 | ----------- | ------------- |
-| `local.get` | `0x20`        |
+| `local.tee` | `0x22`        |
