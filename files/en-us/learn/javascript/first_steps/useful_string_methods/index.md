@@ -149,7 +149,7 @@ console.log(firstOccurrence); // 20
 console.log(secondOccurrence); // 35
 ```
 
-Here we're telling the method to search for the substring `"developers"` starting at index `21` (`firstOccurence + 1`), and it returns the index `35`.
+Here we're telling the method to search for the substring `"developers"` starting at index `21` (`firstOccurrence + 1`), and it returns the index `35`.
 
 ## Extracting a substring from a string
 

@@ -40,7 +40,7 @@ While the `aria-valuenow` is always required, the [`aria-valuemin`](/en-US/docs/
 
 A `scrollbar` represents the current value and range of possible values via the size of the scrollbar and position of the thumb with respect to the visible range of the orientation (horizontal or vertical) it controls. In other words, the `scrollbar` length (height or width) represents all the content within a viewport. The `aria-valuemin` value represents the beginning of the content and the scrollbar, the `aria-valuemax` value represents the end of the content and the end of the scrollbar. The `aria-valuenow` represents the content that is currently visible in the viewport and the current position, or value, of the movable thumb.   The `aria-valuenow` value will generally be exposed as a percentage between `aria-valuemin` and `aria-valuemax` calculated by assistive technologies.
 
-> **Note:** Assistive technologies generally render the value of `aria-valuenow` as a percent of a range between the value of `aria-valuemin` and `aria-valuemax`, unless [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) is set. It is recommended to set the values for `aria-valuemin`, `aria-valuema`x, and `aria-valuenow` in a manner that is appropriate for this calculation.
+> **Note:** Assistive technologies generally render the value of `aria-valuenow` as a percent of a range between the value of `aria-valuemin` and `aria-valuemax`, unless [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) is set. It is recommended to set the values for `aria-valuemin`, `aria-valuemax`, and `aria-valuenow` in a manner that is appropriate for this calculation.
 
 Like a native scroll bar, users interact with `scrollbar` elements directly or indirectly using mouse, touchpad, keyboard, and voice input. `scrollbar` role implementations must also accommodate all these interaction methods.
 
@@ -74,7 +74,7 @@ Because descendants of `scrollbar` are presentational, the following code is equ
 <div role="scrollbar"><h3 role="presentation">Title of my scrollbar</h3></div>
 ````
 
-From the assitive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
+From the assistive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
 
 ```html
 <div role="scrollbar">Title of my scrollbar</div>
@@ -152,7 +152,7 @@ CSS could have been used to ensure the overflowing value of PI had a native scro
 }
 ```
 
-The above CSS means a native scroll bar will appear when the user interacts with the paragraph's viewport if the lenght of the longest word in the paragraph is wider than the paragraphs containing box. The `tabindex` attribute was added to allow people using a keyboard to navigate to, and scroll around the overflowed content.
+The above CSS means a native scroll bar will appear when the user interacts with the paragraph's viewport if the length of the longest word in the paragraph is wider than the paragraphs containing box. The `tabindex` attribute was added to allow people using a keyboard to navigate to, and scroll around the overflowed content.
 
 ## Specifications
 
