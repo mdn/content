@@ -21,38 +21,16 @@ The `crossorigin` content attribute on media elements is a CORS settings attribu
 
 These attributes are enumerated, and have the following possible values:
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <td class="header">Keyword</td>
-      <td class="header">Description</td>
-    </tr>
-    <tr>
-      <td><code>anonymous</code></td>
-      <td>
-        Request uses CORS headers and credentials flag is set to <code>same-origin</code>. There is no exchange of <strong>user credentials</strong> via cookies, client-side SSL certificates or HTTP authentication, unless destination is the same origin.
-      </td>
-    </tr>
-    <tr>
-      <td><code>use-credentials</code></td>
-      <td>
-        Request uses CORS headers, credentials flag is set to <code>include</code> and <strong>user credentials</strong> are always included.
-      </td>
-    </tr>
-    <tr>
-      <td><code>""</code></td>
-      <td>
-        Setting the attribute name to an empty value, like
-        <code>crossorigin</code> or <code>crossorigin=""</code>, is the same as
-        <code>anonymous</code>.
-      </td>
-    </tr>
-  </tbody>
-</table>
+- `anonymous`
+  - : Request uses CORS headers and credentials flag is set to `same-origin`. There is no exchange of **user credentials** via cookies, client-side SSL certificates or HTTP authentication, unless destination is the same origin.
+- `use-credentials`
+  - : Request uses CORS headers, credentials flag is set to `include` and **user credentials** are always included.
+- `""`
+  - : Setting the attribute name to an empty value, like `crossorigin` or `crossorigin=""`, is the same as `anonymous`.
 
 An invalid keyword and an empty string will be handled as the `anonymous` keyword.
 
-By default (that is, when the attribute is not specified), CORS is not used at all. The user agent will not ask for permission for full access to the resource and in the case of a cross-origin request, the usage of CORS will be limited in the following ways:
+By default (that is, when the attribute is not specified), CORS is not used at all. The user agent will not ask for permission for full access to the resource and in the case of a cross-origin request, certain limitations will be applied based on the type of element concerned:
 
 <table class="no-markdown">
   <tbody>
