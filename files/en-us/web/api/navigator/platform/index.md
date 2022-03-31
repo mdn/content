@@ -25,7 +25,7 @@ A {{domxref("DOMString")}} identifying the platform on which the browser is runn
 
 For example: "`MacIntel`", "`Win32`", "`FreeBSD i386`", "`WebTV OS`"
 
-## Example
+## Examples
 
 ```js
 console.log(navigator.platform);

@@ -24,13 +24,7 @@ encoded](/en-US/docs/Glossary/Base64) version of {{domxref("PublicKeyCredential.
 > **Note:** This property may only be used in top-level contexts and will
 > not be available in an {{HTMLElement("iframe")}} for example.
 
-## Syntax
-
-```js
-id = publicKeyCredential.id
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} being the [base64url
 encoded](/en-US/docs/Glossary/Base64) version of {{domxref("PublicKeyCredential.rawId")}}.

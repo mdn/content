@@ -16,13 +16,7 @@ The **`locked`** read-only property of the
 {{domxref("ReadableStream")}} interface returns whether or not the readable stream is [locked
 to a reader](https://streams.spec.whatwg.org/#lock).
 
-## Syntax
-
-```js
-var locked = readableStream.locked;
-```
-
-### Value
+## Value
 
 A boolean value indicating whether or not the readable stream is locked.
 

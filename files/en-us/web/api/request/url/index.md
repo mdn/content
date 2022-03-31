@@ -15,17 +15,11 @@ browser-compat: api.Request.url
 The **`url`** read-only property of the {{domxref("Request")}}
 interface contains the URL of the request.
 
-## Syntax
-
-```js
-var myURL = request.url;
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}} indicating the url of the request.
 
-## Example
+## Examples
 
 In the following snippet, we create a new request using the
 {{domxref("Request.Request", "Request()")}} constructor (for an image file in the same directory as

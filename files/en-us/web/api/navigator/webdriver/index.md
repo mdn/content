@@ -29,13 +29,7 @@ The `navigator.webdriver` property is true when in:
   - : The `marionette.enabled` preference or `--marionette` flag is
     passed.
 
-## Syntax
-
-```js
-var isAutomated = navigator.webdriver
-```
-
-### Value
+## Value
 
 A {{JSxRef("Boolean")}}
 

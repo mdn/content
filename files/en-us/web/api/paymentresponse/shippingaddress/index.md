@@ -24,7 +24,7 @@ containing the shipping address provided by the user.
 A {{domxref("PaymentAddress")}} object providing details comprising the shipping
 address provided by the user.
 
-## Example
+## Examples
 
 Generally, the user agent will fill the `shippingAddress` property for you.
 You can trigger this by

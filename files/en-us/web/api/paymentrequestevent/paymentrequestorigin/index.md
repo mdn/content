@@ -17,13 +17,7 @@ The **`paymentRequestOrigin`** read-only property of the
 {{domxref("PaymentRequestEvent")}} interface returns the origin where the
 {{domxref("PaymentRequest")}} object was initialized.
 
-## Syntax
-
-```js
-var aUsvString = paymentRequestEvent.paymentRequestOrigin
-```
-
-### Value
+## Value
 
 A USVString.
 
