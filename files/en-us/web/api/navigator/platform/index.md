@@ -13,7 +13,7 @@ browser-compat: api.Navigator.platform
 ---
 {{ APIRef("HTML DOM") }}
 
-Returns a string identify the platform on which the user’s browser is running.
+Returns a string identifying the platform on which the user’s browser is running.
 
 > **Note:** In general, you should whenever possible avoid writing code that uses methods or properties like this one to try to find out information about the user’s environment, and instead write code that does [feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection).
 
