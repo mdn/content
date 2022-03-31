@@ -139,6 +139,13 @@ _This interface also inherits methods from its parent, {{domxref("SVGGraphicsEle
 - {{domxref("SVGSVGElement.getElementById()")}}
   - : Searches this SVG document fragment (i.e., the search is restricted to a subset of the document tree) for an Element whose `id` is given by `elementId`. If an Element is found, that Element is returned. If no such element exists, returns `null`. Behavior is not defined if more than one element has this id.
 
+## Events
+
+The following events are available via `WindowEventHandlers`.
+
+- {{domxref("window.hashchange_event", "hashchange")}}
+  - : Fired when the fragment identifier of the URL has changed (the part of the URL beginning with and following the `#` symbol).
+
 ## Specifications
 
 {{Specifications}}

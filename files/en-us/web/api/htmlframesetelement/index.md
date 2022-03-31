@@ -29,6 +29,13 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}} and from {{domx
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}} and from {{domxref("WindowEventHandlers")}}._
 
+## Events
+
+The following events are available via `WindowEventHandlers`.
+
+- {{domxref("window.hashchange_event", "hashchange")}}
+  - : Fired when the fragment identifier of the URL has changed (the part of the URL beginning with and following the `#` symbol).
+
 ## Event handlers
 
 _No specific event handler; inherits event handlers from its parent, {{domxref("HTMLElement")}} and from {{domxref("WindowEventHandlers")}}._
@@ -39,8 +46,6 @@ _No specific event handler; inherits event handlers from its parent, {{domxref("
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("beforeprint")}} event is raised.
 - {{domxref("WindowEventHandlers.onbeforeunload")}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("beforeunload")}} event is raised.
-- {{domxref("WindowEventHandlers.onhashchange")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("hashchange")}} event is raised.
 - {{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("languagechange")}} event is raised.
 - {{domxref("WindowEventHandlers.onoffline")}}
