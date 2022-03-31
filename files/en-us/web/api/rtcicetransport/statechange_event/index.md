@@ -77,13 +77,13 @@ iceTransport.onstatechange = ev => {
 
 ### Related RTCIceTransport events
 
-- {{event("gatheringstatechange")}}
-- {{event("selectedcandidatepairchange")}}
+- {{domxref("RTCIceTransport.gatheringstatechange_event", "gatheringstatechange")}}
+- {{domxref("RTCIceTransport.selectedcandidatepairchange_event", "selectedcandidatepairchange")}}
 
 ### Related RTCPeerConnection events
 
-- {{event("negotiationneeded")}}
-- {{event("signalingstatechange")}}
-- {{event("iceconnectionstatechange")}}
+- {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}
+- {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}
+- {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}
 - {{event("icegatheringstatechange")}}
-- {{event("connectionstatechange")}}
+- {{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}}

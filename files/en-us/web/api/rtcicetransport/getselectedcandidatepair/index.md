@@ -49,7 +49,7 @@ The return value is `null` if no pair of candidates has been selected yet.
 As the ICE agent performs negotiation of a {{domxref("RTCPeerConnection")}}, it gathers
 and analyzes candidate configurations from each the two peers. As soon as it finds an
 acceptable matching pair of candidates, meeting the requirements for the connection, a
-{{event("selectedcandidatepairchange")}} event is fired at the
+{{domxref("RTCIceTransport.selectedcandidatepairchange_event", "selectedcandidatepairchange")}} event is fired at the
 {{domxref("RTCIceTransport")}}. From that time forward, the best matching pair of
 candidates will always be available by calling
 `getSelectedCandidatePair()`.
