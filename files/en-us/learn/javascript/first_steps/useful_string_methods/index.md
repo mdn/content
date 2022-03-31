@@ -124,7 +124,7 @@ if (browserType.endsWith('zilla')) {
 
 You can find the position of a substring inside a larger string using the {{jsxref("String.prototype.indexOf()", "indexOf()")}} method. This method takes two {{glossary("parameter", "parameters")}} – the substring that you want to search for, and an optional parameter that specifies the starting point of the search.
 
-If the string contains the substring, it returns the index of the first occurrence of the substring, and `-1` otherwise.
+If the string contains the substring, `indexOf()` returns the index of the first occurrence of the substring. If the string does not contain the substring, `indexOf()` returns `-1`.
 
 ```js
 const tagline = 'MDN - Resources for developers, by developers';
