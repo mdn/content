@@ -11,7 +11,7 @@ browser-compat: api.DOMTokenList.entries
 The **`entries()`** method of the {{domxref("DOMTokenList")}} interface
 returns an {{jsxref("Iteration_protocols",'iterator')}} allowing you
 to go through all key/value pairs contained in this object. The values are
-{{jsxref("String")}} objects, each representing a single token.
+{{jsxref("Array")}}s which have [key, value] pairs, each representing a single token.
 
 ## Syntax
 
