@@ -27,15 +27,7 @@ the value of {{domxref("MediaTrackSupportedConstraints.sampleRate")}} as returne
 call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
 is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
-
-```js
-var constraintsObject = { sampleRate: constraint };
-
-constraintsObject.sampleRate = constraint;
-```
-
-### Value
+## Value
 
 If this value is a number, the user agent will attempt to obtain media whose sample
 rate is as close as possible to this number given the capabilities of the hardware and
@@ -45,7 +37,7 @@ exact match to the required sample rate (if `exact` is specified or both
 `min` and `max` are provided and have the same value) or to a
 best-possible value.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.

@@ -31,13 +31,7 @@ about container and codec support across browsers.
 > historical; these strings are now officially known as **media types**.
 > MDN Web Docs content uses the terms interchangeably.
 
-## Syntax
-
-```js
-var mimeType = mediaRecorder.mimeType
-```
-
-### Value
+## Value
 
 The MIME media type which describes the format of the recorded media, as a
 {{domxref("DOMString")}}. This string _may_ include the [`codecs`
@@ -49,7 +43,7 @@ The media type strings are standardized by the Internet Assigned Numbers Authori
 on the IANA site. See also [media types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) to learn more
 about media types and how they're used in web content and by web browsers.
 
-## Example
+## Examples
 
 ```js
 ...

@@ -37,15 +37,7 @@ the value of {{domxref("MediaTrackSupportedConstraints.displaySurface")}} as ret
 a call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
 is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
-
-```js
-var constraintsObject = { displaySurface: constraint };
-
-constraintsObject.displaySurface = constraint;
-```
-
-### Value
+## Value
 
 A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) which specifies the type of display surface that's
 being captured. This value _does not_ affect the list of display sources in the

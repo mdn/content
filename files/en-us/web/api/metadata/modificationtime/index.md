@@ -28,7 +28,7 @@ changed.
 
 A {{jsxref("Date")}} timestamp indicating when the file system entry was last changed.
 
-## Example
+## Examples
 
 This example tries to get a particular working file at `tmp/workfile.json`.
 Once that file has been found, its metadata is obtained and the file's modification

@@ -15,7 +15,7 @@ browser-compat: api.MediaRecorder.state
 The **`MediaRecorder.state`** read-only property returns the
 current state of the current `MediaRecorder` object.
 
-## Values
+## Value
 
 A string containing one of the following values:
 
@@ -27,7 +27,7 @@ A string containing one of the following values:
 - `paused`
   - : Recording has been started, then paused, but not yet stopped or resumed.
 
-## Example
+## Examples
 
 ```js
 ...

@@ -57,7 +57,7 @@ group (or that they don't use devices from the same group). There is no situatio
 which the groupId is useful when calling `applyConstraints()`, since the
 value can't be changed.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.

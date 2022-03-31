@@ -39,7 +39,7 @@ this is unnecessary since browsers will ignore any constraints they're unfamilia
 A Boolean value which is `true` if the track has automatic gain control
 enabled or `false` if AGC is disabled.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.

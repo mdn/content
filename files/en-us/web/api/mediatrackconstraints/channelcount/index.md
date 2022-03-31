@@ -26,15 +26,7 @@ the value of {{domxref("MediaTrackSupportedConstraints.channelCount")}} as retur
 call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
 is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
-
-```js
-var constraintsObject = { channelCount: constraint };
-
-constraintsObject.channelCount = constraint;
-```
-
-### Value
+## Value
 
 If this value is a number, the user agent will attempt to obtain media whose channel
 count is as close as possible to this number given the capabilities of the hardware and
@@ -46,7 +38,7 @@ best-possible value.
 
 The channel count is 1 for monaural sound, 2 for stereo, and so forth.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.

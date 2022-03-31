@@ -21,13 +21,7 @@ diagnostic details related to the error described by the `MediaError` object,
 or an empty string (`""`) if no diagnostic information can be determined or
 provided.
 
-## Syntax
-
-```js
-var errorMessage = mediaError.message;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} providing a detailed, specific explanation of what went
 wrong and possibly how it might be fixed. This is _not_ a generic description of
@@ -35,7 +29,7 @@ the {{domxref("MediaError.code")}} property's value, but instead goes deeper int
 specifics of this particular error and its circumstances. If no specific details are
 available, this string is empty.
 
-## Example
+## Examples
 
 This example creates a {{HTMLElement("audio")}} element, establishes an error handler
 for it, then lets the user click buttons to choose whether to assign a valid audio file

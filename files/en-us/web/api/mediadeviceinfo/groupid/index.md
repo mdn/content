@@ -22,13 +22,7 @@ Two devices have the same group identifier if they
 belong to the same physical device; for example, a monitor with both a built-in camera
 and microphone.
 
-## Syntax
-
-```js
-var groupID = mediaDeviceInfo.groupId;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} which uniquely identifies the group of related devices to
 which this device belongs.
