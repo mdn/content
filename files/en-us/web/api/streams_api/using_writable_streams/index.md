@@ -75,8 +75,8 @@ const writableStream = new WritableStream({
   // Implement the sink
   write(chunk) {
     return new Promise((resolve, reject) => {
-      var buffer = new ArrayBuffer(2);
-      var view = new Uint16Array(buffer);
+      var buffer = new ArrayBuffer(1);
+      var view = new Uint8Array(buffer);
       view[0] = chunk;
       var decoded = decoder.decode(view, { stream: true });
       var listItem = document.createElement('li');
