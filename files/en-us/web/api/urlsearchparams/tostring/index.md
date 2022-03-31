@@ -67,4 +67,4 @@ let params = new URLSearchParams('foo=1&bar=2');
 
 - The {{domxref("URL")}} interface.
 - [Google
-  Developers: Easy URL manipulation with URLSearchParams](https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en)
+  Developers: Easy URL manipulation with URLSearchParams](https://developer.chrome.com/blog/urlsearchparams/)
