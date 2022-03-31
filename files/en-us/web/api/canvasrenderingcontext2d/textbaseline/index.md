@@ -76,14 +76,14 @@ baselines.forEach(function (baseline, index) {
 
 {{ EmbedLiveSample('Comparison_of_property_values', 700, 550) }}
 
-### Comparison of property values on one line
+### Comparison of property values on the same line
 
-This example demonstrates the various `textBaseline` property values.
+As with the previous example, this example demonstrates the various `textBaseline` property values, but in this case with all of them lined up horizontally along the same line — to make it easier to see how they differ from each other.
 
 #### HTML
 
 ```html
-<canvas id="canvas" width="840" height="160"></canvas>
+<canvas id="canvas" width="724" height="160"></canvas>
 ```
 
 #### JavaScript
@@ -93,29 +93,28 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 const baselines = ['top', 'hanging', 'middle', 'alphabetic', 'ideographic', 'bottom'];
-ctx.font = '16px serif';
+ctx.font = '20px serif';
 ctx.strokeStyle = 'red';
 
 ctx.beginPath();
 ctx.moveTo(0, 100);
 ctx.lineTo(840, 100);
 ctx.moveTo(0, 55);
-ctx.lineTo(840, 55);
 ctx.stroke();
 
 baselines.forEach((baseline, index) => {
   ctx.save();
   ctx.textBaseline = baseline;
-  let x = index * 140 + 10;
-  ctx.fillText('Abcdefghijklmnop', x, 100);
+  let x = index * 120 + 10;
+  ctx.fillText('Abcdefghijk', x, 100);
   ctx.restore();
-  ctx.fillText(baseline, x + 30, 50);
+  ctx.fillText(baseline, x + 5, 50);
 });
 ```
 
 #### Result
 
-{{ EmbedLiveSample('Comparison_of_property_values_on_one_line', 900, 200) }}
+{{ EmbedLiveSample('', 900, 200) }}
 
 ## Specifications
 
