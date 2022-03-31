@@ -32,15 +32,7 @@ the value of {{domxref("MediaTrackSupportedConstraints.cursor")}} as returned by
 to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is
 unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
-
-```js
-var constraintsObject = { cursor: constraint };
-
-constraintsObject.cursor = constraint;
-```
-
-### Value
+## Value
 
 A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) which specifies whether or not the mouse cursor
 should be rendered into the video track in the {{domxref("MediaStream")}} returned by

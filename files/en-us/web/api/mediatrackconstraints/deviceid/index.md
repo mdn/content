@@ -31,15 +31,7 @@ Because {{Glossary("RTP")}} doesn't include this information, tracks associated 
 [WebRTC](/en-US/docs/Web/API/WebRTC_API) {{domxref("RTCPeerConnection")}}
 will never include this property.
 
-## Syntax
-
-```js
-var constraintsObject = { deviceId: constraint };
-
-constraintsObject.deviceId = constraint;
-```
-
-### Value
+## Value
 
 An object based on [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) specifying one or more acceptable,
 ideal, and/or exact (mandatory) device IDs which are acceptable as the source of media
@@ -62,7 +54,7 @@ the same source for multiple calls to {{domxref("MediaDevices.getUserMedia",
 > private browsing mode will use a different ID, and will change it each browsing
 > session.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.

@@ -26,15 +26,7 @@ the value of {{domxref("MediaTrackSupportedConstraints.sampleSize")}} as returne
 call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
 is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
-
-```js
-var constraintsObject = { sampleSize: constraint };
-
-constraintsObject.sampleSize = constraint;
-```
-
-### Value
+## Value
 
 If this value is a number, the user agent will attempt to obtain media whose sample
 size (in bits per linear sample) is as close as possible to this number given the
@@ -47,7 +39,7 @@ best-possible value.
 > **Note:** Since this property can only represent linear sample sizes, this constraint can only
 > be met by devices that can produce audio with linear samples.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.

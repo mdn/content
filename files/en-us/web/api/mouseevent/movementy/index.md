@@ -23,7 +23,7 @@ In other words, the value of the property is computed like this: `currentEvent.m
 
 A number.
 
-## Example
+## Examples
 
 This example logs the amount of mouse movement using {{domxref("MouseEvent.movementX", "movementX")}} and `movementY`.
 

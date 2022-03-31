@@ -54,7 +54,7 @@ constraints when calling {{domxref("MediaStreamTrack.applyConstraints()")}}.
 > private browsing mode will use a different ID, and will change it each browsing
 > session.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.

@@ -35,7 +35,7 @@ unnecessary since browsers will ignore any constraints they're unfamiliar with.
 A double-precision floating-point number indicating the volume, from 0.0 to 1.0, of the
 audio track as currently configured.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.

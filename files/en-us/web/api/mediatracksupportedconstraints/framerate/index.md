@@ -34,13 +34,7 @@ property lets you determine if the user agent allows constraining the video trac
 configuration by frame rate. See the [example](#example) to see how this can
 be used.
 
-## Syntax
-
-```js
-frameRateConstraintSupported = supportedConstraintsDictionary.frameRate;
-```
-
-### Value
+## Value
 
 This property is present in the dictionary if the user agent supports the
 `frameRate` constraint. If the property isn't present, the user agent doesn't
@@ -48,7 +42,7 @@ allow specifying limits on the frame rate for video tracks.
 
 > **Note:** If this property is present, its value is always `true`.
 
-## Example
+## Examples
 
 This simple example looks to see if your browser supports constraining the frame rate
 when requesting video tracks.

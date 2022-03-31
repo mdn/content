@@ -43,7 +43,7 @@ will never include this property.
 A double-precision floating-point number indicating the estimated latency, in seconds,
 of the audio track as currently configured.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.

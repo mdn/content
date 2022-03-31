@@ -23,13 +23,7 @@ The **`activeVRDisplays`** read-only property of the
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Syntax
-
-```js
-navigator.activeVRDisplays
-```
-
-### Value
+## Value
 
 An array of {{domxref("VRDisplay")}} objects.
 

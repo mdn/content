@@ -28,15 +28,7 @@ the value of {{domxref("MediaTrackSupportedConstraints.volume")}} as returned by
 to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is
 unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
-
-```js
-var constraintsObject = { volume: constraint };
-
-constraintsObject.volume = constraint;
-```
-
-### Value
+## Value
 
 A [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble) describing the acceptable or required value(s) for an
 audio track's volume, on a linear scale where 0.0 means silence and 1.0 is the highest
@@ -52,7 +44,7 @@ provided and have the same value) or to a best-possible value.
 Any constraint set which only permits values outside the range 0.0 to 1.0 cannot be
 satisfied and will result in failure.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.
