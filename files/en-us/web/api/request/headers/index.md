@@ -16,17 +16,11 @@ The **`headers`** read-only property of the
 {{domxref("Request")}} interface contains the {{domxref("Headers")}} object associated
 with the request.
 
-## Syntax
-
-```js
-var myHeaders = request.headers;
-```
-
-### Value
+## Value
 
 A {{domxref("Headers")}} object.
 
-## Example
+## Examples
 
 In the following snippet, we create a new request using the
 {{domxref("Request.Request", "Request()")}} constructor (for an image file in the same directory as

@@ -23,13 +23,7 @@ payment handler may be a payment technology, such as Apple Pay or Android Pay, a
 payment handler may support multiple payment methods; changes to the payment method
 within the payment handler are described by the `PaymentMethodChangeEvent`.
 
-## Syntax
-
-```js
-var methodName = paymentMethodChangeEvent.methodName;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} which uniquely identifies the currently-selected payment
 handler. This may be a string chosen from the list of standardized payment method
@@ -39,7 +33,7 @@ identifiers, or a URL used by the payment processing service. See
 
 The default value is the empty string, `""`.
 
-## Example
+## Examples
 
 This example uses the {{event("paymentmethodchange")}} event to watch for changes to
 the payment method selected for Apple Pay, in order to compute a discount if the user

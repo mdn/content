@@ -28,7 +28,7 @@ Possible values are:
 - **`auto`**: Default mode, which indicates no preference for
   the fetch priority. The browser decides what is best for the user.
 
-## Example
+## Examples
 
 In the following snippet, we create a new request using the
 {{domxref("Request.Request", "Request()")}} constructor (for an API endpoint)

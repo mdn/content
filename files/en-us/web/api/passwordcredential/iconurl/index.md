@@ -18,13 +18,7 @@ of the {{domxref("PasswordCredential")}} interface returns a {{domxref("USVStrin
 containing a URL pointing to an image for an icon. This image is intended for display
 in a credential chooser. The URL must be accessible without authentication.
 
-## Syntax
-
-```js
-url = passwordCredential.iconURL
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}} containing a URL.
 

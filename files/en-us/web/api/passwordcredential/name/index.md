@@ -17,13 +17,7 @@ The **`name`** read-only property of
 the {{domxref("PasswordCredential")}} interface returns a {{domxref("USVString")}}
 containing a human-readable public name for display in a credential chooser.
 
-## Syntax
-
-```js
-name = passwordCredential.name
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}} containing a name.
 

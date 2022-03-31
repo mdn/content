@@ -42,13 +42,7 @@ any of the {{domxref("Worklet")}}-based destinations
 {{domxref("Worker")}}-based destinations, including {{domxref("ServiceWorker")}}
 and {{domxref("SharedWorker")}}.
 
-## Syntax
-
-```js
-var destination = request.destination;
-```
-
-### Value
+## Value
 
 A string which indicates the type of content the request is asking for. This type is much broader than the usual document type values (such as `"document"` or `"manifest"`), and may include contextual cues such as `"image"` or `"worker"` or `"audioworklet"`.
 
@@ -93,7 +87,7 @@ Possible values are:
 - `"xslt"`
   - : The target is an XLST transform.
 
-## Example
+## Examples
 
 In the following snippet, we create a new request using the
 {{domxref("Request.Request", "Request()")}} constructor (for an image file in the same

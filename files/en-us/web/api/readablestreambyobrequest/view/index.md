@@ -16,13 +16,7 @@ browser-compat: api.ReadableStreamBYOBRequest.view
 The **`view`** getter property of the
 {{domxref("ReadableStreamBYOBRequest")}} interface returns the current view.
 
-## Syntax
-
-```js
-var view = readableStreamBYOBRequestInstance.view;
-```
-
-### Value
+## Value
 
 A [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) representing the
 destination region to which the controller can write generated data.
