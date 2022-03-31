@@ -42,7 +42,7 @@ object that contains the data. This occurs in four situations:
   produce multiple same-length blobs plus other shorter blobs as well.
 
 > **Note:** The {{domxref("Blob")}} containing the media data is available in the
-> {{event("dataavailable")}} event's `data` property.
+> {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event's `data` property.
 
 ## Syntax
 

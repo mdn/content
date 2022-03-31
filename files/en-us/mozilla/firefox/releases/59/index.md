@@ -66,7 +66,7 @@ _No changes._
 
 #### Media and WebRTC
 
-- The {{domxref("MediaStreamTrack")}} property {{domxref("MediaStreamTrack.muted")}}, along with the events {{event("mute")}} and {{event("unmute")}} and the corresponding event handlers, {{domxref("MediaStreamTrack.mute_event", "onmute")}} and {{domxref("MediaStreamTrack.unmute_event", "onunmute")}}, have been implemented. A track's `muted` state indicates that the track is not currently able to provide media data.
+- The {{domxref("MediaStreamTrack")}} property {{domxref("MediaStreamTrack.muted")}}, along with the events {{domxref("MediaStreamTrack.mute_event", "mute")}} and {{domxref("MediaStreamTrack.unmute_event", "unmute")}} and the corresponding event handlers, {{domxref("MediaStreamTrack.mute_event", "onmute")}} and {{domxref("MediaStreamTrack.unmute_event", "onunmute")}}, have been implemented. A track's `muted` state indicates that the track is not currently able to provide media data.
 
   > **Note:** The `muted` state of a track isn't useful for what's typically thought of as muting and unmuting a track. Instead, use the {{domxref("MediaStreamTrack.enabled", "enabled")}} property; setting `enabled` to `false` causes the track to output only empty frames.
 
