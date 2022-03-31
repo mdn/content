@@ -32,7 +32,7 @@ if (navigator.platform.indexOf("Mac") === 0 || navigator.platform === "iPhone") 
 }
 ```
 
-That is, check `navigator.platform` for a match on the substring `"Mac"`, or an exact match for the string `"iPhone"`, and then based on whether or not there’s a match, choose the modifier key that your web application’s UI will advise users to press in keyboard shortcuts.
+That is, check if `navigator.platform` starts with `"Mac"` or else is an exact match for `"iPhone"`, and then based on whether either of those is true, choose the modifier key your web application’s UI will advise users to press in keyboard shortcuts.
 
 ## Usage notes
 
