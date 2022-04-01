@@ -91,12 +91,6 @@ Every `combobox` must have an accessible name.
 </div>
 ```
 
-## Accessibility Concerns
-
-## Best Practices
-
-### Prefer HTML
-
 ## Specifications
 
 | Specification                                                                                                                    | Status                                           |
