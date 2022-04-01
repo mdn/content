@@ -35,9 +35,9 @@ A {{domxref("HashChangeEvent")}}. Inherits from {{domxref("Event")}}.
 - {{domxref("HashChangeEvent.oldURL")}} {{readonlyInline}}
   - : The previous URL from which the window was navigated.
 
-## Event targets
+## Event handler aliases
 
-In addition to the `Window` interface, this event is also available on the following targets:
+In addition to the `Window` interface, the event handler property `onhashchange` is also available on the following targets:
 
 - {{domxref("HTMLBodyElement")}}
 - {{domxref("HTMLFrameSetElement")}}

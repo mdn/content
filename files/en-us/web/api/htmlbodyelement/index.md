@@ -36,11 +36,11 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}} and from {{domx
 
 _No specific methods; inherits methods from its parent, {{domxref("HTMLElement")}}, and from {{domxref("WindowEventHandlers")}}._
 
-## Events
+## Event handlers
 
-The following events are available via `WindowEventHandlers`.
+The {{domxref("HTMLElement")}} events are inherited and the following {{domxref("Window")}} event handler properties are also available on `HTMLBodyElement` as aliases.
 
-- {{domxref("window.hashchange_event", "hashchange")}}
+- {{domxref("window.hashchange_event", "HTMLBodyElement.onhashchange")}}
   - : Fired when the fragment identifier of the URL has changed (the part of the URL beginning with and following the `#` symbol).
 
 
