@@ -399,7 +399,7 @@ Quit the server with CONTROL-C.
 
 Once the server is running you can view the site by navigating to the following URL on your local web browser: `http://127.0.0.1:8000/`. You should see a site that looks like this:
 
-![The home page of the skeleton Django app](django_skeleton_app_homepage.png)
+![The home page of the skeleton Django app](django_skeleton_app_homepage_django_4_0.png)
 
 ## Summary
 
