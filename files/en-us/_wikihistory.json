@@ -72597,19 +72597,6 @@
       "ExE-Boss"
     ]
   },
-  "Web/API/ServiceWorkerRegistration/onupdatefound": {
-    "modified": "2020-10-15T21:32:15.773Z",
-    "contributors": [
-      "Wind1808",
-      "sideshowbarker",
-      "jpmedley",
-      "ExE-Boss",
-      "abbycar",
-      "chrisdavidmills",
-      "fscholz",
-      "kscarfone"
-    ]
-  },
   "Web/API/ServiceWorkerRegistration/periodicSync": {
     "modified": "2020-10-15T21:37:09.343Z",
     "contributors": [
@@ -72705,6 +72692,19 @@
       "rolfedh",
       "mattto",
       "pubatee",
+      "fscholz",
+      "kscarfone"
+    ]
+  },
+  "Web/API/ServiceWorkerRegistration/updatefound_event": {
+    "modified": "2020-10-15T21:32:15.773Z",
+    "contributors": [
+      "Wind1808",
+      "sideshowbarker",
+      "jpmedley",
+      "ExE-Boss",
+      "abbycar",
+      "chrisdavidmills",
       "fscholz",
       "kscarfone"
     ]
