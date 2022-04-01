@@ -18,14 +18,7 @@ The **`pitch`** property of the {{domxref("SpeechSynthesisUtterance")}} interfac
 
 If unset, a default value of 1 will be used.
 
-## Syntax
-
-```js
-// default 1
-speechSynthesisUtteranceInstance.pitch = 1.5;
-```
-
-### Value
+## Value
 
 A float representing the pitch value.
 It can range between 0 (lowest) and 2 (highest), with 1 being the default pitch for the current platform or voice. Some speech synthesis engines or voices may constrain the minimum and maximum rates further.

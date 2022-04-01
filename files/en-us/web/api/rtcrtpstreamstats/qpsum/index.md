@@ -67,7 +67,7 @@ index used to derive a scaling matrix used during the quantization process.
 Additionally, QP is not likely to be the only parameter the codec uses to adjust the
 compression. See the individual codec specifications for details.
 
-## Example
+## Examples
 
 ### Calculating average quantization
 

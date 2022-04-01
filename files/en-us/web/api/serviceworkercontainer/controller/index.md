@@ -22,17 +22,11 @@ property of the {{domxref("ServiceWorkerContainer")}} interface returns a
 `null` if the request is a force refresh (_Shift_ + refresh) or if
 there is no active worker.
 
-## Syntax
-
-```js
-var myController = navigator.serviceWorker.controller;
-```
-
-### Value
+## Value
 
 A {{domxref("ServiceWorker")}} object.
 
-## Example
+## Examples
 
 ```js
 if ('serviceWorker' in navigator) {

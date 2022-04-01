@@ -26,7 +26,7 @@ Returns one of the following values:
 - `all`, meaning the HTTP cache is consulted in both cases
 - `none`, meaning the HTTP cache is never consulted.
 
-## Example
+## Examples
 
 The following example shows the use of updateViaCache.
 

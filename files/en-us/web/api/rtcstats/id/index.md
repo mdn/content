@@ -26,13 +26,7 @@ order to monitor statistics over time for a given WebRTC object, such as an
 {{Glossary("RTP")}} stream, an {{domxref("RTCPeerConnection")}}, or an
 {{domxref("RTCDataChannel")}}.
 
-## Syntax
-
-```js
-var id = RTCStats.id;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} which uniquely identifies the object for which this
 `RTCStats`-based object provides statistics.

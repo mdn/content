@@ -18,14 +18,7 @@ The **`rate`** property of the {{domxref("SpeechSynthesisUtterance")}} interface
 
 If unset, a default value of 1 will be used.
 
-## Syntax
-
-```js
-var myRate = speechSynthesisUtteranceInstance.rate;
-speechSynthesisUtteranceInstance.rate = 1.5;
-```
-
-### Value
+## Value
 
 A float representing the rate value.
 It can range between 0.1 (lowest) and 10 (highest), with 1 being the default pitch for the current platform or voice, which should correspond to a normal speaking rate.

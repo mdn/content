@@ -27,13 +27,7 @@ interim result or by a final result — they may even be removed, if they are at
 of the "results" array and the array length decreases. Final results on the other hand
 will not be overwritten or removed.
 
-## Syntax
-
-```js
-var myResults = event.results;
-```
-
-### Value
+## Value
 
 A {{domxref("SpeechRecognitionResultList")}} object.
 
