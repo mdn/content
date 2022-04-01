@@ -11,75 +11,71 @@ tags:
   - combobox
 ---
 
-The `combobox` identifies an element as an `input` that controls another element, such as a `listbox` or `grid`, that can dynamically pop up to help the user set the value of the `input`.
+The `combobox` role identifies an element as an `input` that controls another element, such as a `listbox` or `grid`, that can dynamically pop up to help the user set the value of that `input`.
 
 ## Description
 
 A `combobox` is a composite widget that combines a named input field with a popup providing possible values for that input field. The purpose of a this widget is to improve user experience by helping the user select a value without having to type in the complete value and, optionally depending whether supported values are limited, preventing the user from entering invalid or otherwise unsupported values. 
 
-The `combobox` role is the role of the input that controls another element, such as a listbox or grid, that can dynamically pop up to help the user set the value of the input. The popup can be a [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role), or [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role).
+The `combobox` role is set on input that controls another element, such as a listbox or grid, that can dynamically pop up to help the user set the value of the input. 
 
-The combobox `input` can either be a single-line text field that supports editing and typing, similar to a HTML {{HTMLElement('input')}} with a {{HTMLElement('datalist')}}, or an element that only displays the current value of the combobox. 
+The `combobox` input field can either be a single-line text field that supports editing and typing, similar to a HTML {{HTMLElement('input')}} with a {{HTMLElement('datalist')}}, or an element that only displays the current value of the combobox. 
 
-Typically, the initial state of a combobox is collapsed, with `aria-expanded="false"` set. In the collapsed state, only the combobox element and a separate, optional, popup control button are visible. The [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded), with the value set to `false`, is required when collapsed, because it indicates to assistive technologies that the widget is expandable.
+A combobox only has one required attribute: [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded). Generally, it also has several other attributes including [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup),  [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls), [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant), and [`aria-autocomplete`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete).
+
+Typically, the initial state of a combobox is collapsed, with `aria-expanded="false"` set. In the collapsed state, only the combobox element and, optionally, a separate, optional, popup control button are visible. The [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded), with the value set to `false`, is required when collapsed, because it indicates to assistive technologies that the widget is expandable.
 
 The combobox is said to be expanded when both the combobox element showing its current value and its associated popup element are visible. When expanded, `aria-expanded="true"` must be set.
 
-The popup element associated with a combobox can be either a [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role), [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), or [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) element, with `listbox` being the default type. Comboboxes actually have an implicit [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) value of `listbox`. If the combobox popup element is a `tree`, `grid`, or `dialog` (anything other than a `listbox`), the `aria-haspopup` attribute is required. The value of `aria-haspopup` must be either the `tree`, `grid`, `dialog`, or `listbox` role. Note that for this property, `true` means `menu`, so make sure that the value corresponds to the role of the popup, not a Boolean value. 
+The popup element associated with a `combobox` can be either a [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role), [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), or [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) element, with `listbox` being the default type. 
 
-When the popup is displayed, the [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls) attribute on the combobox element is set to the {{HTMLattrXRef('id')}} of the `listbox`, `tree`, `grid`, or `dialog` popup element of the combobox.
+Comboboxes have an implicit [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) value of `listbox`, so including this attribute is optional if the popup is a `listbox`. If the combobox popup element is a `tree`, `grid`, or `dialog` (anything other than a `listbox`), the `aria-haspopup` attribute is required. The value of `aria-haspopup` must be either the `tree`, `grid`, `dialog`, or `listbox` role. Note that for this property, `true` means `menu`, so make sure that the value corresponds to the role of the popup, not a Boolean value. 
+
+When the popup is displayed, the [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls) attribute on the combobox element is set to the {{HTMLattrXRef('id')}} of the `listbox`, `tree`, `grid`, or `dialog` popup element of the combobox. This is how the relationship between the element with the `combobox` role and the popup it controls is indicated. (Note: In older ARIA specs, this was `aria-owns` rather than `aria-controls`, so you may see `aria-owns` in older combobox implementations.)
 
 If the UI includes an visible control, such as an icon, that allows the visibility of the popup to be controlled via pointer and touch events, that control should be a {{HTMLElement('button')}}, {{HTMLElement('input')}} of type `button`, or a [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role) role element with a {{HTMLattrXRef('tabindex')}} of `-1`. The button should be focusable but not included in keyboard tab sequence. It should also not be a descendant of the element with role `combobox`. 
 
-To be keyboard accessible, keyboard support for moving focus between the combobox element and elements contained in the popup must be programmed in.  One common convention is that <kbd>Down Arrow</kbd> moves focus from the input to the first focusable descendant of the popup element. 
+To be keyboard accessible, keyboard support for moving focus between the `combobox` input field element and elements contained in the popup `listbox`, `tree`, `grid`, or `dialog`, must be programmed in.  One common convention is that <kbd>Down Arrow</kbd> moves focus from the input to the first focusable descendant of the popup element. 
 
-If the popup element supports `aria-activedescendant`, according to WAI-ARIA specification it is OK to program updated values of the combobox element's `aria-activedescendant` property when a descendant of the popup element is active while focus remains on the combobox element instead of moving focus, but this is not recommended.
+The [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) property can be used to identify the currently active element when DOM focus is on a combobox. If the popup element supports `aria-activedescendant`, according to WAI-ARIA specification, it is OK to program updated values of the combobox element's `aria-activedescendant` property when a descendant of the popup element is active while focus remains on the combobox element instead of moving focus. 
 
 If the combobox element is an {{HTMLElement('input')}} element, the value of the combobox is the input's value. Otherwise, the value of the combobox comes from its descendant elements.
 
-A combobox only has one required attribute: [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded). Generally, it also has several other attributes including `aria-autocomplete`, `aria-haspopup`, `aria-controls` and `aria-activedescendant`.
+If the `combobox` supports text input and provides autocompletion behavior, set [`aria-autocomplete`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete) on the combobox element to the value that corresponds to the provided behavior: `inline`, `list`, or `both`. The `aria-autocomplete` attribute indicates that inputting text will trigger display of one or more predictions of the user's intended value for the combobox and specifies how the predictions will be presented when made.
 
-If the `combobox` supports text input and provides autocompletion behavior, set `aria-autocomplete` on the combobox element to the value that corresponds to the provided behavior: `inline`, `list`, or `both`. The `aria-autocomplete` attribute indicates that inputting text will trigger display of one or more predictions of the user's intended value for the combobox and specifies how the predictions will be presented when made.
-
-[`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) is used to identify the currently active element when DOM focus is on a combobox.
-
-Every `combobox` must have an accessible name.
+Every `combobox` must have an accessible name. If using an {{HTMLElement('input')}} element, the accessible name should come from the associated {{HTMLElement('label')}}. If not, if an appropriate label is visible in the content, provide the name via [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby). In other words, if there is an element in the user interface that serves as a label for the `combobox` input field, include `aria-labelledby` as an attribute on the element with the role of `combobox`, and set the value of the attribute to the `id` of the labelling element or elements. If no visible label is present, use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) instead. Not both.
 
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
   - : Required. Identifies whether the combobox is open (`true`) or closed (`false`).
+- [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-)
+  - : Implied. If omitted, defaults to `listbox`. Also supports `tree`, `grid`, or `dialog`. Identifies the combobox has having a popout, and indicates the type. 
 
 ### Keyboard interactions
 
 - <kbd>Down Arrow</kbd>
-
   - : Moves focus to the next option, or to the first option if none was selected.
 
 - <kbd>Alt</kbd> + <kbd>Down Arrow</kbd> (Optional)
-
   - : If the popup is available but not displayed, displays the popup without moving focus.
 
 - <kbd>Up Arrow</kbd>
-
   - : Moves focus to the previous option. Moving focus to the first option if focus was originally on the last option.
 
 - <kbd>Alt</kbd> + <kbd>Up Arrow</kbd> (Optional)
-
   - : If the popup has focus, returns focus to the combobox, otherwise it closes the popup.
 
 - <kbd>Enter</kbd>
-
   - : If the combobox is editable and an autocomplete suggestion is selected in the popup, accepts the suggestion either by placing the input cursor at the end of the accepted value in the combobox or by performing a default action on the value. For example, in a messaging application, the default action may be to add the accepted value to a list of message recipients and then clear the combobox so the user can add another recipient.
 
-### Required JavaScript features
 
 ## Examples
 
 ```html
 <label for="jokes">Pick what type of jokes you like</label>
 <div class="combo-wrap">
-  <input type="text" id="jokes" role="combobox" aria-owns="joketypes" aria-autocomplete="list" aria-expanded="false" data-active-option="item1" aria-activedescendant="item1">
+  <input type="text" id="jokes" role="combobox" aria-controls="joketypes" aria-autocomplete="list" aria-expanded="false" data-active-option="item1" aria-activedescendant="item1">
   <span aria-hidden="true" data-trigger="multiselect"></span>
   <ul id="joketypes" role="listbox">
     <li class="active" role="option" id="item1">Puns</li>
