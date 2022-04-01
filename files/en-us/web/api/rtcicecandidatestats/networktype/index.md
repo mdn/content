@@ -29,13 +29,7 @@ a local candidate to communicate with a remote peer.
 > generated locally and included in an {{Glossary("SDP")}} offer or answer that has been
 > sent to the remote peer).
 
-## Syntax
-
-```js
-networkType = rtcIceCandidateStats.networkType;
-```
-
-### Value
+## Value
 
 A string which indicates the type of network connection that the described candidate would use to communicate with the other peer.
 
@@ -58,7 +52,7 @@ The permitted values are:
 
 > **Note:** Keep in mind that the specified value only reflects the initial connection between the local peer and the next hop along the network toward reaching the remote peer. For example, if the `networkType` is `wifi` but the user is connected using a cellular hotspot, the connection will be bottlenecked by the underlying cellular network (and any other networks between the two peers).
 
-## Example
+## Examples
 
 This example sets up a periodic function using
 {{domxref("setInterval()")}} that outputs

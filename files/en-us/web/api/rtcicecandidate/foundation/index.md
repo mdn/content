@@ -46,7 +46,7 @@ a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
 
 The field `"4234997325"` is the foundation.
 
-## Example
+## Examples
 
 This code snippet uses the `foundation` of two candidates to determine if
 they're actually the same candidate.

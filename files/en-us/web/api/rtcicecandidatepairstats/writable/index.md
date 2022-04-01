@@ -22,13 +22,7 @@ The _obsolete_ {{domxref("RTCIceCandidatePairStats")}}
 property **`writable`** reports whether or not the connection
 described by the candidate pair is writable.
 
-## Syntax
-
-```js
-isWritable = rtcIceCandidatePairStats.writable;
-```
-
-### Value
+## Value
 
 A Boolean value which is `true` if the connection described by this
 candidate pair has received acknowledgement of receipt (ACK) for at least one ICE

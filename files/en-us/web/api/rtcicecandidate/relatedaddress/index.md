@@ -55,7 +55,7 @@ a=candidate:4234997325 1 udp 2043278322 192.168.0.56 6502 typ srflx raddr 192.16
 The remote address, `relatedAddress`, is the dotted quad (for IPv4) or
 colon-delineated 64-bit address (for IPv6) immediately following the text `"raddr"`, or `"192.168.2.77"`.
 
-## Example
+## Examples
 
 In this example, the candidate's {{domxref("RTCIceCandidate.type", "type")}} is
 checked, and then debugging output is presented, based on the candidate type, including

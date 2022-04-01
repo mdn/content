@@ -27,13 +27,7 @@ The {{domxref("RTCIceCandidateStats")}} dictionary's
 {{Glossary("ICE")}} server from which the described candidate was obtained. This
 property is _only_ available for local candidates.
 
-## Syntax
-
-```js
-url = rtcIceCandidateStats.url;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} specifying the URL of the ICE server from which the
 candidate described by the `RTCIceCandidateStats` was obtained. This is the
