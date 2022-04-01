@@ -28,13 +28,7 @@ sent or received to date on the video track corresponding to this
 In general, the higher this
 number is, the more heavily compressed the video data is.
 
-## Syntax
-
-```js
-var qpSum = rtcInboundRtpStreamStats.qpSum;
-```
-
-### Value
+## Value
 
 An unsigned 64-bit integer value which indicates the sum of the quantization parameter
 (QP) value for every frame sent or received so far on the track described by the
@@ -68,7 +62,7 @@ index used to derive a scaling matrix used during the quantization process.
 Additionally, QP is not likely to be the only parameter the codec uses to adjust the
 compression. See the individual codec specifications for details.
 
-## Example
+## Examples
 
 ### Calculating average quantization
 

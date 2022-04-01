@@ -52,7 +52,7 @@ attributes for this example candidate is:
 - {{domxref("RTCIceCandidate.port", "port")}} = 44323
 - {{domxref("RTCIceCandidate.type", "type")}} = `"host"`
 
-## Example
+## Examples
 
 In this example, we see a function which receives as input an SDP string containing an
 ICE candidate received from the remote peer during the signaling process.

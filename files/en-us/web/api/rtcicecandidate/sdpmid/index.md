@@ -34,7 +34,7 @@ which the candidate draws data, or `null` if no such association exists for the 
 > **Note:** Attempting to add a candidate (using {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}) that has a
 > value of `null` for both `sdpMid` and `sdpMLineIndex` will throw a `TypeError` exception.
 
-## Example
+## Examples
 
 ...
 

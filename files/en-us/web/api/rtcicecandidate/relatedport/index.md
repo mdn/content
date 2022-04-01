@@ -53,7 +53,7 @@ a=candidate:4234997325 1 udp 2043278322 192.168.0.56 6502 typ srflx raddr 192.16
 
 The remote port, `relatedPort`, is the number immediately following the `"rport"` label on the a-line, or 32768.
 
-## Example
+## Examples
 
 In this example, the candidate's {{domxref("RTCIceCandidate.type", "type")}} is
 checked, and then debugging output is presented, based on the candidate type, including

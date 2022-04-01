@@ -47,7 +47,7 @@ a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
 The third field, `"udp"`, is the protocol type, indicating that the
 candidate would use the UDP transport protocol.
 
-## Example
+## Examples
 
 This code snippet examines the value of `protocol` to decide if it should
 look at the value of {{domxref("RTCIceCandidate.tcpType", "tcpType")}} to see if it's a
