@@ -38,7 +38,7 @@ This is a live collection; if form controls are added to or removed from the for
 The form controls in the returned collection are in the same order in which they appear in the form by following a preorder, depth-first traversal of the tree.
 This is called **tree order**.
 
-Only the following elements returned:
+Only the following elements are returned:
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("fieldset")}}
