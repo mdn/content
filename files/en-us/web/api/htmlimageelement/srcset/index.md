@@ -38,7 +38,7 @@ situation.
 A {{domxref("USVString")}} containing a comma-separated list of one or more image
 candidate strings to be used when determining which image resource to present inside the
 {{HTMLElement("img")}} element represented by the
-`HTMLImageElement`_._
+`HTMLImageElement`.
 
 Each image candidate string must begin with a valid URL referencing a non-interactive
 graphic resource. This is followed by whitespace and then a condition descriptor that

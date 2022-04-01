@@ -51,7 +51,7 @@ its rendered size as altered by the page's CSS and other factors.
 
 ```html
 <div class="box">
-  <img src="/files/16797/clock-demo-400px.png" class="image">
+  <img src="/en-US/docs/Web/HTML/Element/img/clock-demo-400px.png" class="image">
 </div>
 <div class="output">
 </div>
