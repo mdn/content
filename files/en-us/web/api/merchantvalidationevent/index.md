@@ -25,7 +25,7 @@ To learn more about merchant validation, see {{SectionOnPage("/en-US/docs/Web/AP
 ## Constructor
 
 - {{domxref("MerchantValidationEvent.MerchantValidationEvent()","MerchantValidationEvent()")}} {{securecontext_inline}}
-  - : Creates a new `MerchantValidationEvent` object describing a {{event("merchantvalidation")}} event that will be sent to the payment handler to request that it validate the merchant.
+  - : Creates a new `MerchantValidationEvent` object describing a {{domxref("PaymentRequest.merchantvalidation_event", "merchantvalidation")}} event that will be sent to the payment handler to request that it validate the merchant.
 
 ## Properties
 

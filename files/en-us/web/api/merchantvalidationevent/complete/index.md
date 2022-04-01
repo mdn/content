@@ -19,7 +19,7 @@ browser-compat: api.MerchantValidationEvent.complete
 
 The {{domxref("MerchantValidationEvent")}} method **`complete()`** takes merchant-specific information previously received from the {{domxref("MerchantValidationEvent.validationURL", "validationURL")}} and uses it to validate the merchant.
 
-All you have to do is call `complete()` from your handler for the {{event("merchantvalidation")}} event, passing in the data fetched from the `validationURL`.
+All you have to do is call `complete()` from your handler for the {{domxref("PaymentRequest.merchantvalidation_event", "merchantvalidation")}} event, passing in the data fetched from the `validationURL`.
 
 ## Syntax
 
@@ -59,7 +59,7 @@ function getValidationData(url) {
 }
 ```
 
-This code sets up a handler for the {{event("merchantvalidation")}} event. The event handler calls a function, `getValidationData()`, which retrieves the data from the validation URL, then passes that data (or a promise to deliver the data) into `complete()`.
+This code sets up a handler for the {{domxref("PaymentRequest.merchantvalidation_event", "merchantvalidation")}} event. The event handler calls a function, `getValidationData()`, which retrieves the data from the validation URL, then passes that data (or a promise to deliver the data) into `complete()`.
 
 ## Browser compatibility
 
