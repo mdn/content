@@ -39,6 +39,8 @@ This article provides information about the changes in Firefox 100 that will aff
 
 ### APIs
 
+- [`WritableStream`](/en-US/docs/Web/API/WritableStream), [`WritableStreamDefaultWriter`](/en-US/docs/Web/API/WritableStreamDefaultWriter), [`WritableStreamDefaultController`](/en-US/docs/Web/API/WritableStreamDefaultController), and [`ReadableStream.pipeTo()`](/en-US/docs/Web/API/ReadableStream/pipeTo) are now supported ({{bug(1759597)}}).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
