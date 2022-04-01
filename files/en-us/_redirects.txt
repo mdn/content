@@ -9313,12 +9313,13 @@
 /en-US/docs/Web/API/ServiceWorkerMessageEvent/source	/en-US/docs/Web/API/MessageEvent/source
 /en-US/docs/Web/API/ServiceWorkerRegistration.active	/en-US/docs/Web/API/ServiceWorkerRegistration/active
 /en-US/docs/Web/API/ServiceWorkerRegistration.installing	/en-US/docs/Web/API/ServiceWorkerRegistration/installing
-/en-US/docs/Web/API/ServiceWorkerRegistration.onupdatefound	/en-US/docs/Web/API/ServiceWorkerRegistration/onupdatefound
+/en-US/docs/Web/API/ServiceWorkerRegistration.onupdatefound	/en-US/docs/Web/API/ServiceWorkerRegistration/updatefound_event
 /en-US/docs/Web/API/ServiceWorkerRegistration.scope	/en-US/docs/Web/API/ServiceWorkerRegistration/scope
 /en-US/docs/Web/API/ServiceWorkerRegistration.unregister	/en-US/docs/Web/API/ServiceWorkerRegistration/unregister
 /en-US/docs/Web/API/ServiceWorkerRegistration.unregister()	/en-US/docs/Web/API/ServiceWorkerRegistration/unregister
 /en-US/docs/Web/API/ServiceWorkerRegistration.update	/en-US/docs/Web/API/ServiceWorkerRegistration/update
 /en-US/docs/Web/API/ServiceWorkerRegistration.waiting	/en-US/docs/Web/API/ServiceWorkerRegistration/waiting
+/en-US/docs/Web/API/ServiceWorkerRegistration/onupdatefound	/en-US/docs/Web/API/ServiceWorkerRegistration/updatefound_event
 /en-US/docs/Web/API/ServiceWorkerRegistration/unregister()	/en-US/docs/Web/API/ServiceWorkerRegistration/unregister
 /en-US/docs/Web/API/ServiceWorkerState	/en-US/docs/Web/API/ServiceWorker/state
 /en-US/docs/Web/API/ServiceWorker_API	/en-US/docs/Web/API/Service_Worker_API

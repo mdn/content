@@ -45,11 +45,6 @@ _Also implements properties from its parent interface,_ {{domxref("EventTarget")
 - {{domxref("ServiceWorkerRegistration.updateViaCache")}} {{readonlyinline}}
   - : Returns a string indicating what is the cache strategy to use when updating the service worker scripts. It can be one of the following: `imports`, `all`, or `none`.
 
-### Event handlers
-
-- {{domxref("ServiceWorkerRegistration.onupdatefound")}} {{readonlyinline}}
-  - : An [`EventListener`](/en-US/docs/Web/API/EventListener) property called whenever an event of type `updatefound` is fired; it is fired any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new service worker.
-
 ## Methods
 
 _Also implements methods from its parent interface,_ {{domxref("EventTarget")}}.
@@ -62,6 +57,11 @@ _Also implements methods from its parent interface,_ {{domxref("EventTarget")}}.
   - : Unregisters the service worker registration and returns a {{jsxref("Promise")}}. The service worker will finish any ongoing operations before it is unregistered.
 - {{domxref("ServiceWorkerRegistration.update()")}}
   - : Checks the server for an updated version of the service worker without consulting caches.
+
+## Events
+
+- {{domxref("ServiceWorkerRegistration.updatefound_event", "updatefound")}}
+  - : Fired any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new service worker.
 
 ## Examples
 
