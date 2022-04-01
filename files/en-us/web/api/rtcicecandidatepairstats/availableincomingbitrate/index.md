@@ -29,7 +29,7 @@ the available inbound capacity of the network connection represented by the cand
 pair. The higher the value, the more bandwidth you can assume is available for
 incoming data.
 
-You can get the incoming outgoing bitrate from
+You can get the outgoing available bitrate from
 {{domxref("RTCIceCandidatePairStats.availableoutgoingBitrate",
   "availableoutgoingBitrate")}}.
 
