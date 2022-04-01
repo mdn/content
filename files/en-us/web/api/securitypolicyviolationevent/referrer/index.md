@@ -20,18 +20,12 @@ The **`referrer`** read-only property of the
 representing the referrer of the resources whose policy was violated. This will be a URL
 or `null`.
 
-## Syntax
-
-```js
-let referrer = violationEventInstance.referrer;
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}} representing the URL of the referrer of the violating
 resources.
 
-## Example
+## Examples
 
 ```js
 document.addEventListener("securitypolicyviolation", (e) => {

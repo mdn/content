@@ -24,19 +24,7 @@ The {{domxref("RTCRtpEncodingParameters")}} dictionary's
 **`maxBitrate`** property specifies the maximum number of bits
 per second to allow a track encoded with this encoding to use.
 
-## Syntax
-
-```js
-rtpEncodingParameters.maxBitrate = maxBitsPerSecond;
-
-rtpEncodingParameters = {
-  maxBitrate: maxBitsPerSecond
-};
-
-maxBitsPerSecond = rtpEncodingParameters.maxBitrate;
-```
-
-### Value
+## Value
 
 An unsigned long integer value specifying the maximum bandwidth this encoding is
 permitted to use for a track of media it encodes in terms of bits per second. Other

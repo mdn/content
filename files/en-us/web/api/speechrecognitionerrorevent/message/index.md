@@ -19,13 +19,7 @@ The **`message`** read-only property of the
 {{domxref("SpeechRecognitionErrorEvent")}} interface returns a message describing the
 error in more detail.
 
-## Syntax
-
-```js
-var myErrorMsg = event.message;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} containing more details about the error that was raised.
 Note that the spec does not define the exact wording of these messages — this is up to

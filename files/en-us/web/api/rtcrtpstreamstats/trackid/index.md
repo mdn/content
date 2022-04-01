@@ -25,13 +25,7 @@ the {{domxref("RTCMediaStreamTrackStats")}} object which contains the track stat
 for the {{domxref("MediaStreamTrack")}} for which statistics are provided in this
 object.
 
-## Syntax
-
-```js
-var trackID = RTCRtpStreamStats.trackId;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} which uniquely identifies the
 {{domxref("RTCMediaStreamTrackStats")}} object that provides statistics for the track

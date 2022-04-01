@@ -19,18 +19,12 @@ The **`violatedDirective`** read-only property of the
 {{domxref("SecurityPolicyViolationEvent")}} interface is a {{domxref("DOMString")}}
 representing the directive whose enforcement uncovered the violation.
 
-## Syntax
-
-```js
-let violatedDir = violationEventInstance.violatedDirective;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} representing the directive whose enforcement uncovered the
 violation.
 
-## Example
+## Examples
 
 ```js
 document.addEventListener("securitypolicyviolation", (e) => {
