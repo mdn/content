@@ -38,7 +38,7 @@ VideoDecoder.configure(config)
     - `colorSpace`
       - : An object. representing a {{domxref("VideoColorSpace")}}, containing the following members:
         - `primaries`
-          - : A string representing the color gamut of the video sample. One of:
+          - : A string representing the color {{glossary("gamut")}} of the video sample. One of:
             - `"bt709"`
             - `"bt470bg"`
             - `"smpte170m"`
