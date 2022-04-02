@@ -329,7 +329,7 @@ Since the various methods involved in negotiating the connection return {{jsxref
 
 #### Tracking other state changes
 
-We can also watch for changes to the signaling state (by accepting {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}} events) and the ICE gathering state (by accepting {{event("icegatheringstatechange")}} events). We aren't using these for anything, so all we do is log them. We could have not set up these event listeners at all.
+We can also watch for changes to the signaling state (by accepting {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}} events) and the ICE gathering state (by accepting {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} events). We aren't using these for anything, so all we do is log them. We could have not set up these event listeners at all.
 
 ```js
 function handleCallerSignalingStateChangeEvent() {

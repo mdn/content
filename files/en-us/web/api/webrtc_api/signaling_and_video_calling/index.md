@@ -361,7 +361,7 @@ The first three of these event handlers are required; you have to handle them to
 - {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "oniceconnectionstatechange")}}
   - : The {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}} event is sent by the ICE layer to let you know about changes to the state of the ICE connection. This can help you know when the connection has failed, or been lost. We'll look at the code for this example in [ICE connection state](#ice_connection_state) below.
 - {{domxref("RTCPeerConnection.icegatheringstatechange_event", "onicegatheringstatechange")}}
-  - : The ICE layer sends you the {{event("icegatheringstatechange")}} event, when the ICE agent's process of collecting candidates shifts, from one state to another (such as starting to gather candidates or completing negotiation). See [ICE gathering state](#ice_gathering_state) below.
+  - : The ICE layer sends you the {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} event, when the ICE agent's process of collecting candidates shifts, from one state to another (such as starting to gather candidates or completing negotiation). See [ICE gathering state](#ice_gathering_state) below.
 - {{domxref("RTCPeerConnection.signalingstatechange_event", "onsignalingstatechange")}}
   - : The WebRTC infrastructure sends you the {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}} message when the state of the signaling process changes (or if the connection to the signaling server changes). See [Signaling state](#signaling_state) to see our code.
 
@@ -626,7 +626,7 @@ Finally, we set the {{domxref("HTMLElement.disabled", "disabled")}} property to 
 
 #### Dealing with state changes
 
-There are a number of additional events you can set listeners for which notifying your code of a variety of state changes. We use three of them: {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}, {{event("icegatheringstatechange")}}, and {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}.
+There are a number of additional events you can set listeners for which notifying your code of a variety of state changes. We use three of them: {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}, {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}, and {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}.
 
 ##### ICE connection state
 
@@ -665,7 +665,7 @@ function handleSignalingStateChangeEvent(event) {
 
 ##### ICE gathering state
 
-{{event("icegatheringstatechange")}} events are used to let you know when the ICE candidate gathering process state changes. Our example doesn't use this for anything, but it can be useful to watch these events for debugging purposes, as well as to detect when candidate collection has finished.
+{{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} events are used to let you know when the ICE candidate gathering process state changes. Our example doesn't use this for anything, but it can be useful to watch these events for debugging purposes, as well as to detect when candidate collection has finished.
 
 ```js
 function handleICEGatheringStateChangeEvent(event) {

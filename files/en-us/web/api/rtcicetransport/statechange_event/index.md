@@ -85,5 +85,5 @@ iceTransport.onstatechange = ev => {
 - {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}
 - {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}
 - {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}
-- {{event("icegatheringstatechange")}}
+- {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}
 - {{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}}
