@@ -1,12 +1,12 @@
 ---
 title: 'Window: devicemotion event'
-slug: Web/API/Window/devicemotion_event
+slug: Web/API/Window.devicemotion_event_event
 tags:
   - API
   - Device Orientation API
   - Sensors
   - events
-browser-compat: api.Window.devicemotion_event
+browser-compat: api.Window.devicemotion_event_event
 ---
 {{APIRef}}
 
@@ -66,5 +66,5 @@ window.addEventListener("devicemotion", handleMotionEvent, true);
 
 ## See also
 
-- {{domxref("Window/deviceorientation_event", "deviceorientation")}}
+- {{domxref("Window.deviceorientation_event_event", "deviceorientation")}}
 - [DeviceOrientation Event](https://www.w3.org/TR/orientation-event/#devicemotion)

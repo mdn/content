@@ -128,7 +128,7 @@ The last thing to do here is set the `initialRun` variable to `false`, as the in
 
 ### Gamepad events
 
-To finish off this section, we'll look at the gamepad-associated events. There are two we need concern ourselves with — {{event("gamepadconnected")}} and {{event("gamepaddisconnected")}} — and it is fairly obvious what they do.
+To finish off this section, we'll look at the gamepad-associated events. There are two we need concern ourselves with — {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} and {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} — and it is fairly obvious what they do.
 
 At the end of our example we first include the `removeGamepads()` function:
 

@@ -1,12 +1,12 @@
 ---
 title: 'Window: deviceorientation event'
-slug: Web/API/Window/deviceorientation_event
+slug: Web/API/Window.deviceorientation_event_event
 tags:
   - Device Orientation API
   - Sensors
   - Window Event
   - events
-browser-compat: api.Window.deviceorientation_event
+browser-compat: api.Window.deviceorientation_event_event
 ---
 {{APIRef}}
 
@@ -78,6 +78,6 @@ var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
 
 ## See also
 
-- [`devicemotion`](/en-US/docs/Web/API/Window/devicemotion_event)
+- [`devicemotion`](/en-US/docs/Web/API/Window.devicemotion_event_event)
 - [Detecting device orientation](/en-US/docs/Web/Events/Detecting_device_orientation)
 - [Orientation and motion data explained](/en-US/docs/Web/Events/Orientation_and_motion_data_explained)
