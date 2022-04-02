@@ -57,7 +57,7 @@ You can use the following pseudo-elements to customize various parts of the scro
 
 /* Add a thumb */
 .mostly-customized-scrollbar::-webkit-scrollbar-thumb {
-    background: #000;
+  background: #000;
 }
 ```
 
