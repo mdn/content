@@ -34,7 +34,7 @@ _Inherits methods from its parent, {{DOMxRef("FileSystemHandle")}}._
 - {{domxref('FileSystemDirectoryHandle.keys()')}}
   - : Returns a new _async iterator_ containing the keys for each item in `FileSystemDirectoryHandle`.
 - {{domxref('FileSystemDirectoryHandle.removeEntry()')}}
-  - : Attempts to asynchromously remove an entry if the directory handle contains a file or directory called the name specified.
+  - : Attempts to asynchronously remove an entry if the directory handle contains a file or directory called the name specified.
 - {{domxref('FileSystemDirectoryHandle.resolve()')}}
   - : Returns a {{jsxref('Promise')}} fulfilled with an {{jsxref('Array')}} of directory names from the parent handle to the specified child entry, with the name of the child entry as the last array item.
 - {{domxref('FileSystemDirectoryHandle.values()')}}
