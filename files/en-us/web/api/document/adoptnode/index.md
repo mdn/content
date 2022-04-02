@@ -16,7 +16,7 @@ browser-compat: api.Document.adoptNode
 
 **`Document.adoptNode()`** transfers a {{Glossary("node/dom",
   "node")}} from another {{domxref("Document", "document", "", "1")}} into the method's
-document. The adopted node and its subtree is removed from its original document (if
+document. The adopted node and its subtree are removed from its original document (if
 any), and its {{domxref("Node.ownerDocument", "ownerDocument")}} is changed to the
 current document. The node can then be inserted into the current document.
 
