@@ -15,7 +15,6 @@ The **`revert-layer`** CSS keyword rolls back the value of a property in a {{css
 
 If there is no other cascade layer to revert to for the matching CSS rule, the property value rolls back to the {{cssxref("computed_value", "computed value")}} derived from the current layer. Furthermore, if there is no matching CSS rule in the current layer, the property value for the element rolls back to the style defined in a previous [style origin](/en-US/docs/Glossary/Style_origin).
 
-
 This keyword can be applied to any CSS property, including the CSS shorthand property {{cssxref("all")}}.
 
 ## Revert-layer vs revert

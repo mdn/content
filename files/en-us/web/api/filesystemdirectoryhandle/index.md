@@ -42,7 +42,6 @@ _Inherits methods from its parent, {{DOMxRef("FileSystemHandle")}}._
 - [`FileSystemDirectoryHandle[@@asyncIterator]()`](/en-US/docs/Web/API/FileSystemDirectoryHandle/entries)
   - : Returns the `entries` function by default.
 
-
 ## Examples
 
 The following example returns a directory handle with the specified name, if the directory does not exist it is created.

@@ -33,15 +33,14 @@ If you have either Firefox for Android or Chrome for Android available, use it t
 ![URL bar menu](url_bar_menu.png)
 
 Open the menu next to the URL bar.
-Depending on whether you're using Chrome or Android you'll see a menu option "Install" or "Install App". 
+Depending on whether you're using Chrome or Android you'll see a menu option "Install" or "Install App".
 This is the "Add to Home screen" option displayed for any site that has the necessary features in place.
 
 ![Menu with install app option](menu_install_app.png)
 
-
 > **Note:** On older browser versions you may see a "home" icon with a plus (+) icon inside it.
 > This does the same thing!
-> 
+>
 > ![Add to home screen icon (used on older browsers)](add-to-home-screen-icon.png)
 
 Selecting the option will start the process of adding the application to the home screen.

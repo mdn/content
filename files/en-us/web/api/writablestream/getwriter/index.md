@@ -12,7 +12,7 @@ browser-compat: api.WritableStream.getWriter
 ---
 {{APIRef("Streams")}}
 
-The **`getWriter()`** method of the {{domxref("WritableStream")}} interface returns a new instance of {{domxref("WritableStreamDefaultWriter")}} and locks the stream to that instance. 
+The **`getWriter()`** method of the {{domxref("WritableStream")}} interface returns a new instance of {{domxref("WritableStreamDefaultWriter")}} and locks the stream to that instance.
 While the stream is locked, no other writer can be acquired until this one is released.
 
 ## Syntax

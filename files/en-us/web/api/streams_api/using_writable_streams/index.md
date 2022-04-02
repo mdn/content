@@ -19,7 +19,6 @@ As a JavaScript developer, programmatically writing data to a stream is very use
 
 > **Note:** If you are looking for information about readable streams, try [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams) instead.
 
-
 ## Introducing an example
 
 In our [dom-examples/streams](https://github.com/mdn/dom-examples/tree/master/streams) repo you'll find a [Simple writer example](https://github.com/mdn/dom-examples/blob/master/streams/simple-writer/index.html) ([see it live also](https://mdn.github.io/dom-examples/streams/simple-writer/)). This takes a given message and writes it into a writable stream, displaying each chunk on the UI as it is written to the stream and also displaying the whole message on the UI when writing has finished.
