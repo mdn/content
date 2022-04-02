@@ -1,6 +1,6 @@
 ---
 title: 'Window: devicemotion event'
-slug: Web/API/Window.devicemotiont_event
+slug: Web/API/Window.devicemotion_event
 tags:
   - API
   - Device Orientation API
