@@ -262,7 +262,7 @@ You can quickly get started sending and receiving messages with this NodeJS code
     };
 
     const processData = () => {
-        // Create one big buffer with all all the chunks
+        // Create one big buffer with all the chunks
         const stringData = Buffer.concat(chunks);
 
         // The browser will emit the size as a header of the payload,

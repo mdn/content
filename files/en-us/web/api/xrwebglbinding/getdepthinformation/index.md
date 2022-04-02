@@ -36,7 +36,7 @@ An {{domxref("XRWebGLDepthInformation")}} object.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the `XRFrame` is not active nor animated. Obtaining depth information is only valid within the {{domxref("XRSession.requestAnimationFrame()", "requestAnimationFrame()")}} callback.
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the the session's {{domxref("XRSession.depthUsage", "depthUsage")}} is not `"gpu-optimized"`.
+  - : Thrown if the session's {{domxref("XRSession.depthUsage", "depthUsage")}} is not `"gpu-optimized"`.
 
 ## Examples
 

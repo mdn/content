@@ -111,7 +111,7 @@ Generally you will need to check the relevant specifications for these (keys for
   - : String indicating which username/password to use.
     Minimally should include the host name, but might indicate the users or group that have access.
 - **`domain`** {{optional_inline}}
-  - : A quoted, space-separated list of URI prefixes that define all the locations where the authentication information may be be used.
+  - : A quoted, space-separated list of URI prefixes that define all the locations where the authentication information may be used.
     If this key is not is not specified then the authentication information may be used anywhere on the web root.
 - **`nonce`**
   - : A server-specified quoted string that the server can use to control the lifetime in which particular credentials will be considered valid.

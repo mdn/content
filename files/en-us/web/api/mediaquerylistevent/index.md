@@ -45,7 +45,7 @@ function screenTest(e) {
     para.textContent = 'This is a narrow screen — less than 600px wide.';
     document.body.style.backgroundColor = 'red';
   } else {
-    /* the viewport is more than than 600 pixels wide */
+    /* the viewport is more than 600 pixels wide */
     para.textContent = 'This is a wide screen — more than 600px wide.';
     document.body.style.backgroundColor = 'blue';
   }
