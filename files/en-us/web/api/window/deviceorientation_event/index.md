@@ -1,12 +1,12 @@
 ---
 title: 'Window: deviceorientation event'
-slug: Web/API/Window.deviceorientation_event_event
+slug: Web/API/Window.deviceorientation_event
 tags:
   - Device Orientation API
   - Sensors
   - Window Event
   - events
-browser-compat: api.Window.deviceorientation_event_event
+browser-compat: api.Window.deviceorientation_event
 ---
 {{APIRef}}
 
