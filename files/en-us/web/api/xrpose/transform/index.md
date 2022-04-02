@@ -33,7 +33,7 @@ An {{domxref("XRRigidTransform")}} which provides the position and orientation o
 `XRPose` is aligned. This is the same pose that's returned by the frame's
 {{domxref("XRFrame.getPose", "getPose()")}} method.
 
-## Example
+## Examples
 
 This handler for the {{domxref("XRSession")}} event {{domxref("XRSession.select_event",
   "select")}} handles events for tracked pointers. It determines the targeted object by

@@ -20,19 +20,12 @@ The **`SVGAltGlyphElement.glyphRef`** property is a
 'glyphRef' property on the {{domxref("SVGGlyphRefElement")}} interface of the
 {{SVGElement("glyphRef")}} element.
 
-## Syntax
-
-```js
-string = myGlyph.glyphRef;
-myGlyph.glyphRef = string;
-```
-
-### Value
+## Value
 
 The return value is a Glyph Identifier, the value of which depends on the
 format of the given font.
 
-## Example
+## Examples
 
 ```js
 myGlyph.glypRef = "#glyphID";

@@ -41,7 +41,7 @@ You know the entire content has been received when the value of
     string or `"text"`. Since the `responseText` property is
     only valid for text content, any other value is an error condition.
 
-## Example
+## Examples
 
 ```js
 var xhr = new XMLHttpRequest();
