@@ -35,7 +35,7 @@ indexOf(searchString, position)
 
     - `'hello world hello'.indexOf('o', -5)` returns `4` — because it causes the method to behave as if the second argument were `0`, and the first occurrence of `hello` at a position greater or equal to `0` is at position `4`.
 
-    - `'hello world hello'.lastIndexOf('world', 12)` returns `-1` — because, while it's true the substring `world` occurs at index `6`, that position is not greater than or equal to `12`.
+    - `'hello world hello'.indexOf('world', 12)` returns `-1` — because, while it's true the substring `world` occurs at index `6`, that position is not greater than or equal to `12`.
 
     - `'hello world hello'.indexOf('o', 99)` returns `-1`— because `99` is greater than the length of `hello world hello`, which causes the method to not search the string at all.
 

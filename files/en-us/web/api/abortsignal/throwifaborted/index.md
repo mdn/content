@@ -60,7 +60,7 @@ If the signal is aborted, this will cause the `waitForCondition()` promise to be
 
 An API that needs to support aborting can accept an `AbortSignal` object, and use its state to trigger abort signal handling when needed.
 
-A {{domxref("Promise")}}-based API should should respond to the abort signal by rejecting any unsettled promise with the `AbortSignal` abort {{domxref("AbortSignal.reason", "reason")}}.
+A {{domxref("Promise")}}-based API should respond to the abort signal by rejecting any unsettled promise with the `AbortSignal` abort {{domxref("AbortSignal.reason", "reason")}}.
 For example, consider the following `myCoolPromiseAPI`, which takes a signal and returns a promise.
 The promise is rejected immediately if the signal is already aborted, or if the abort event is detected.
 Otherwise it completes normally and then resolves the promise.

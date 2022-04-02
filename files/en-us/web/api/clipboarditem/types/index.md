@@ -22,13 +22,7 @@ The read-only
 interface returns an {{jsxref("Array")}} of {{Glossary("MIME type", 'MIME types')}}
 available within the {{domxref("ClipboardItem")}}
 
-## Syntax
-
-```js
-var types = clipboardItem.types;
-```
-
-### Value
+## Value
 
 An {{jsxref("Array")}} of available {{Glossary("MIME type", 'MIME types')}}.
 

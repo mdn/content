@@ -23,7 +23,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var clearing = browser.storage.<storageType>.clear()
+let clearing = browser.storage.<storageType>.clear()
 ```
 
 `<storageType>` will be one of the writable storage types — {{WebExtAPIRef("storage.sync")}} or {{WebExtAPIRef("storage.local")}}.
@@ -51,7 +51,7 @@ function onError(e) {
   console.log(e);
 }
 
-var clearStorage = browser.storage.local.clear();
+let clearStorage = browser.storage.local.clear();
 clearStorage.then(onCleared, onError);
 ```
 

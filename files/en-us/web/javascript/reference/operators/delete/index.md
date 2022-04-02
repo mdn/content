@@ -53,11 +53,11 @@ Throws {{jsxref("TypeError")}} in [strict mode](/en-US/docs/Web/JavaScript/Refer
 
 ## Description
 
-Unlike what common belief suggests (perhaps due to other programming languages like [delete
-in C++](https://docs.microsoft.com/cpp/cpp/delete-operator-cpp?view=vs-2019)), the `delete` operator has **nothing** to do
-with directly freeing memory. Memory management is done indirectly via breaking
-references. See the [memory
-management](/en-US/docs/Web/JavaScript/Memory_Management) page for more details.
+Unlike what common belief suggests (perhaps due to other programming languages like
+[delete in C++](https://docs.microsoft.com/cpp/cpp/delete-operator-cpp?view=vs-2019)),
+the `delete` operator has **nothing** to do with directly freeing memory.
+Memory management is done indirectly via breaking references.
+See the [memory management](/en-US/docs/Web/JavaScript/Memory_Management) page for more details.
 
 The **`delete`** operator removes a given property from an
 object. On successful deletion, it will return `true`, else
@@ -319,7 +319,6 @@ console.log(trees); // ["redwood", "bay", "cedar", "maple"]
 
 ## See also
 
-- [In depth analysis on
-  delete](http://perfectionkills.com/understanding-delete/)
+- [In depth analysis on delete](http://perfectionkills.com/understanding-delete/)
 - {{jsxref("Reflect.deleteProperty()")}}
 - {{jsxref("Map.prototype.delete()")}}

@@ -19,7 +19,7 @@ constructor creates a new {{domxref("ExtendableMessageEvent")}} object instance.
 ## Syntax
 
 ```js
-var extendableMessageEvent = new ExtendableMessageEvent(type, init);
+new ExtendableMessageEvent(type, init);
 ```
 
 ### Parameters

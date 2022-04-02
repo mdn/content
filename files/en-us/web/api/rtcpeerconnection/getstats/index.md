@@ -63,7 +63,7 @@ This version of `getStats()` is obsolete; in addition, the data it returns
 is entirely different from the current specification, and the form of that data was
 never documented. This form of `getStats()` has been or will soon be removed
 from most browsers; you _should not use it, and should update existing code to use
-the new promise-based version_. Check the {{anch("Browser compatibility")}} table
+the new promise-based version_. Check the [Browser compatibility](#browser_compatibility) table
 to verify the state of this method.
 
 ```js

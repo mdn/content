@@ -18,13 +18,7 @@ browser-compat: api.AddressErrors.country
 
 An object based on {{domxref("AddressErrors")}} includes a **`country`** property if during validation of the address the specified value of {{domxref("PaymentAddress.country", "country")}} was determined to be invalid. The value is a string describing the error and should offer suggestions for how to correct it.
 
-## Syntax
-
-```js
-var countryError = AddressErrors.country;
-```
-
-### Value
+## Value
 
 If an error occurred during validation of the address due to the {{domxref("PaymentAddress.country", "country")}} property having an invalid value, this property is set to a {{domxref("DOMString")}} providing a human-readable error message explaining the validation error.
 

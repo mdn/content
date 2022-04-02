@@ -25,7 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var sending = browser.tabs.sendRequest(
+let sending = browser.tabs.sendRequest(
   tabId,                   // integer
   request                  // any
 )

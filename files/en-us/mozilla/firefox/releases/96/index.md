@@ -68,6 +68,8 @@ No notable changes.
 
 ## Changes for add-on developers
 
+- Added {{WebExtAPIRef("runtime.getFrameId")}} that gets the frame ID of any window global or frame element from a content script ({{bug(1733104)}}).
+
 ## Older versions
 
 {{Firefox_for_developers(95)}}

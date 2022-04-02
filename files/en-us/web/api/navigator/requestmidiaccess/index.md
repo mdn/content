@@ -74,5 +74,5 @@ navigator.requestMIDIAccess().then(function (access) {
 
 ## See also
 
-- [Web MIDI API](https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API)
+- [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API)
 - [Introduction to Web MIDI](https://code.tutsplus.com/tutorials/introduction-to-web-midi--cms-25220)

@@ -27,20 +27,14 @@ constraint isn't supported, it's not included in the list, so this value will ne
 You can access the supported constraints dictionary by calling
 `navigator.mediaDevices.getSupportedConstraints()`.
 
-## Syntax
-
-```js
-sampleSizeConstraintSupported = supportedConstraintsDictionary.sampleSize;
-```
-
-### Value
+## Value
 
 This property is present in the dictionary (and its value is always `true`)
 if the user agent supports the `sampleSize` constraint. If the property isn't
 present, this property is missing from the supported constraints dictionary, and you'll
 get {{jsxref("undefined")}} if you try to look at its value.
 
-## Example
+## Examples
 
 ```html hidden
 <div id="result">

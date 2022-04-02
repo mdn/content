@@ -133,14 +133,14 @@ log("de-DE");
 - Introduction: [The ECMAScript Internationalization API](https://norbertlindenberg.com/2012/12/ecmascript-internationalization-api/index.html)
 - Constructors
 
-  - {{jsxref("Intl/Collator", "Intl.Collator")}}
-  - {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
-  - {{jsxref("Intl/ListFormat", "Intl.ListFormat")}}
-  - {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
-  - {{jsxref("Intl/PluralRules", "Intl.PluralRules")}}
-  - {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
-  - {{jsxref("Intl/Locale", "Intl.Locale")}}
-  - {{jsxref("Intl/Segmenter", "Intl.Segmenter")}}
+  - {{jsxref("Intl/Collator", "Intl.Collator()")}}
+  - {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat()")}}
+  - {{jsxref("Intl/ListFormat", "Intl.ListFormat()")}}
+  - {{jsxref("Intl/NumberFormat", "Intl.NumberFormat()")}}
+  - {{jsxref("Intl/PluralRules", "Intl.PluralRules()")}}
+  - {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat()")}}
+  - {{jsxref("Intl/Locale", "Intl.Locale()")}}
+  - {{jsxref("Intl/Segmenter", "Intl.Segmenter()")}}
 
 - Methods
 

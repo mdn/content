@@ -23,14 +23,7 @@ The **`useMap`** property on the
 {{Glossary("HTML")}} {{htmlattrxref("usemap", "img")}} attribute, which is a string
 providing the name of the client-side image map to apply to the image.
 
-## Syntax
-
-```js
-htmlImageElement.useMap = imageMapAnchor;
-let imageMapAnchor = htmlImageElement.useMap;
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}} providing the page-local URL (that is, a URL that begins
 with the hash or pound symbol, "`#`") of the {{HTMLElement("map")}} element
@@ -66,7 +59,7 @@ For additional examples (including interactive ones), see the articles about the
 {{HTMLElement("map")}} and {{HTMLElement("area")}} elements, as well as the [guide to using
 image maps](/en-US/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image).
 
-## Example
+## Examples
 
 {{EmbedInteractiveExample("pages/tabbed/area.html", "tabbed-taller")}}
 

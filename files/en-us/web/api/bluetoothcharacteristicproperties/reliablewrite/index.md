@@ -21,13 +21,7 @@ the {{domxref("BluetoothCharacteristicProperties")}} interface returns a
 `boolean` that is `true` if reliable writes to the characteristic
 is permitted.
 
-## Syntax
-
-```js
-var aBoolean = BluetoothCharacteristicProperties.reliableWrite;
-```
-
-### Value
+## Value
 
 A boolean value
 

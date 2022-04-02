@@ -13,14 +13,7 @@ browser-compat: api.VTTCue.text
 
 The **`text`** property of the {{domxref("VTTCue")}} interface represents the text contents of the cue.
 
-## Syntax
-
-```js
-let text = VTTCue.text;
-VTTCue.text = a;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} containing the raw text of the cue.
 

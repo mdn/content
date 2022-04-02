@@ -34,7 +34,7 @@ For this article, we have put together a simple demo called Location Finder. It 
 
 ![Screenshot showing a map of Greenfield, UK.](location-finder-with-permissions-api.png)
 
-You can [run the example live](https://chrisdavidmills.github.io/location-finder-permissions-api/), or [view the source code on Github](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages). Most of the code is simple and unremarkable — below we'll just be walking through the Permissions API-related code, so check the code yourself if you want to study any of the other parts.
+You can [run the example live](https://chrisdavidmills.github.io/location-finder-permissions-api/), or [view the source code on GitHub](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages). Most of the code is simple and unremarkable — below we'll just be walking through the Permissions API-related code, so check the code yourself if you want to study any of the other parts.
 
 ### Accessing the Permissions API
 
@@ -65,9 +65,9 @@ function handlePermission() {
       report(result.state);
       geoBtn.style.display = 'inline';
     }
-    result.onchange = function() {
+    result.addEventListener('change', function() {
       report(result.state);
-    }
+    });
   });
 }
 
@@ -108,7 +108,7 @@ function revokePermission() {
 
 ### Responding to permission state changes
 
-You'll notice that there is an `onchange` event handler in the code above, attached to the {{domxref("PermissionStatus")}} object — this allows us to respond to any changes in the permission status for the API we are interested in. At the moment we are just reporting the change in state.
+You'll notice that we're listening to the {{domxref("PermissionStatus.change_event", "change")}} event in the code above, attached to the {{domxref("PermissionStatus")}} object — this allows us to respond to any changes in the permission status for the API we are interested in. At the moment we are just reporting the change in state.
 
 ## Conclusion and future work
 

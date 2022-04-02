@@ -16,19 +16,11 @@ The `coneInnerAngle` property of the {{ domxref("PannerNode") }} interface is a 
 
 The `coneInnerAngle` property's default value is `360`, suitable for a non-directional source.
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var panner = audioCtx.createPanner();
-panner.coneInnerAngle = 360;
-```
-
-### Value
+## Value
 
 A double.
 
-## Example
+## Examples
 
 See [`PannerNode.orientationX`](/en-US/docs/Web/API/PannerNode/orientationX#example) for example code that demonstrates the effect on volume of changing the {{domxref("PannerNode")}} orientation parameters in combination with {{domxref("PannerNode.coneInnerAngle", "coneInnerAngle")}} and {{domxref("PannerNode.coneOuterAngle", "coneOuterAngle")}}.
 

@@ -16,7 +16,8 @@ The **`UIEvent()`** constructor creates a new
 ## Syntax
 
 ```js
-event = new UIEvent(typeArg [, UIEventInit])
+new UIEvent(typeArg);
+new UIEvent(typeArg, UIEventInit);
 ```
 
 ### Values

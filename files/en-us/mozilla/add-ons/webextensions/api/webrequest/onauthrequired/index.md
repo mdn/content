@@ -247,7 +247,7 @@ const pendingRequests = [];
 // We can stop worrying about it.
 function completed(requestDetails) {
   console.log(`completed: ${requestDetails.requestId}`);
-  var index = pendingRequests.indexOf(requestDetails.requestId);
+  let index = pendingRequests.indexOf(requestDetails.requestId);
   if (index > -1) {
     pendingRequests.splice(index, 1);
   }
@@ -294,7 +294,7 @@ const pendingRequests = [];
 */
 function completed(requestDetails) {
   console.log(`completed: ${requestDetails.requestId}`);
-  var index = pendingRequests.indexOf(requestDetails.requestId);
+  let index = pendingRequests.indexOf(requestDetails.requestId);
   if (index > -1) {
     pendingRequests.splice(index, 1);
   }

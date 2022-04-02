@@ -15,7 +15,7 @@ This guide demonstrates how to use [pointer events](/en-US/docs/Web/API/Pointer_
 
 This application will only work on a browser that supports pointer events.
 
-A live version of this application is available on [GitHub](https://mdn.github.io/dom-examples/pointerevents/Using_Pointer_Events.html). The [source code is available on Github](https://github.com/mdn/dom-examples/blob/master/pointerevents/Using_Pointer_Events.html) and pull requests and bug reports are welcome.
+A live version of this application is available on [GitHub](https://mdn.github.io/dom-examples/pointerevents/Using_Pointer_Events.html). The [source code is available on GitHub](https://github.com/mdn/dom-examples/blob/master/pointerevents/Using_Pointer_Events.html) and pull requests and bug reports are welcome.
 
 ## Definitions
 

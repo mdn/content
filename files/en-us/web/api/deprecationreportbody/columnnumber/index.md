@@ -15,13 +15,7 @@ The **`columnNumber`** read-only property of the {{domxref("DeprecationReportBod
 
 > **Note:** This property is most useful alongside {{domxref("DeprecationReportBody.sourceFile")}} and {{domxref("DeprecationReportBody.lineNumber")}} as it enables the location of the column in that file and line where the error occurred.
 
-## Syntax
-
-```js
-let columnNumber = DeprecationReportBody.columnNumber;
-```
-
-### Value
+## Value
 
 An integer, or `null` if the column is not known.
 

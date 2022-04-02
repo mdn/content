@@ -5,7 +5,6 @@ tags:
   - API
   - Device Orientation
   - DeviceMotionEvent
-  - Experimental
   - Interface
   - Mobile
   - Motion
@@ -23,7 +22,7 @@ The `DeviceMotionEvent` provides web developers with information about the speed
 
 ## Constructor
 
-- {{DOMxRef("DeviceMotionEvent.DeviceMotionEvent()")}} {{Non-standard_Inline}}
+- {{domxref("DeviceMotionEvent.DeviceMotionEvent", "DeviceMotionEvent()")}}
   - : Creates a new `DeviceMotionEvent`.
 
 ## Properties

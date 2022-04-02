@@ -23,12 +23,6 @@ second.
 > **Note:** If the hardware isn't capable of providing this
 > information, this property returns `null`.
 
-## Syntax
-
-```js
-var rotationRate = deviceMotionEvent.rotationRate;
-```
-
 ## Value
 
 The `rotationRate` property is a read only object describing the rotation
@@ -53,9 +47,8 @@ rates of the device around each of its axes:
 ## See also
 
 - {{DOMxRef("DeviceMotionEvent") }}
-- {{Event("devicemotion") }}
-- {{DOMxRef("window.ondevicemotion") }}
-- {{Event("deviceorientation") }}
+- {{DOMxRef("window.devicemotion_event", "devicemotion") }} event
+- {{DOMxRef("window.deviceorientation_event", "deviceorientation") }} event
 - {{DOMxRef("DeviceOrientationEvent") }}
 - [Detecting device
   orientation](/en-US/docs/Web/API/Detecting_device_orientation)

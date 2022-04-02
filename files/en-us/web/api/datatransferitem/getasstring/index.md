@@ -29,7 +29,7 @@ dataTransferItem.getAsString(callback);
 
 - `callback`
   - : A callback function that has access to the {{domxref("DataTransferItem","data
-    transfer item's")}} string data. See {{anch("Callback")}} below for details.
+    transfer item's")}} string data. See [Callback](#callback) below for details.
 
 ### Return value
 

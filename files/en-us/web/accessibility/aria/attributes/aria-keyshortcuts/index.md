@@ -42,7 +42,7 @@ Non-modifier keys are keys that have impact when used alone, be that printing a 
 
 Since the plus sign is used in writing key combinations, it is written as `plus` if used as the non-modifier. Other written-out non-modifiers include white space characters `Space`, `Tab`, and `Enter`, and all characters that result in actions, like `ArrowUp`, `PageUp`, and `Escape`.
 
-If you want to use a character that might cause problems, like a a double quote character within double quotes, escape the character: `Control+&#39;`.
+If you want to use a character that might cause problems, like a double quote character within double quotes, escape the character: `Control+&#39;`.
 
 Modifier keys must be listed first in each key combination. Possible key combinations include `Control+P` or `Shift+Space` and `Q`. If the full shortcut requires all three of these combinations in order, it would be written as `aria-keyshortcuts="Control+P Shift+Space Q"`.  When a key combination includes more than one modifier key, the order of the modifiers doesn't matter, but they all must come first, before the non-modifier.
 

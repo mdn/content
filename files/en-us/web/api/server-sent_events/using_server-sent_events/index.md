@@ -29,7 +29,7 @@ If the event generator script is hosted on a different origin, a new `EventSourc
 const evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );
 ```
 
-Once you've instantiated your event source, you can begin listening for messages from the server by attaching a handler for the {{event("message")}} event:
+Once you've instantiated your event source, you can begin listening for messages from the server by attaching a handler for the {{domxref("EventSource.message_event", "message")}} event:
 
 ```js
 evtSource.onmessage = function(event) {
@@ -61,7 +61,7 @@ This code is similar, except that it will be called automatically whenever the s
 
 ## Sending events from the server
 
-The server-side script that sends events needs to respond using the MIME type `text/event-stream`. Each notification is sent as a block of text terminated by a pair of newlines. For details on the format of the event stream, see {{ anch("Event stream format") }}.
+The server-side script that sends events needs to respond using the MIME type `text/event-stream`. Each notification is sent as a block of text terminated by a pair of newlines. For details on the format of the event stream, see [Event stream format](#event_stream_format).
 
 The {{Glossary("PHP")}} code for the example we're using here follows:
 

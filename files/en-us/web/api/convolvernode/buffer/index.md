@@ -18,19 +18,11 @@ This is normally a simple recording of as-close-to-an-impulse as can be found in
 
 This _{{domxref("AudioBuffer")}}_ must have the same sample-rate as the `AudioContext` or an exception will be thrown. At the time when this attribute is set, the buffer and the state of the attribute will be used to configure the `ConvolverNode` with this impulse response having the given normalization. The initial value of this attribute is `null`.
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var convolver = audioCtx.createConvolver();
-convolver.buffer = myAudioBuffer;
-```
-
-### Value
+## Value
 
 An {{domxref("AudioBuffer")}}.
 
-## Example
+## Examples
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();

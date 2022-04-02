@@ -26,7 +26,7 @@ The function allows enabling/disabling of theme addons, but will return an error
 ## Syntax
 
 ```js
-var settingEnabled = browser.management.setEnabled(
+let settingEnabled = browser.management.setEnabled(
   id,              // string
   enabled         // boolean
 )
@@ -52,10 +52,10 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 Toggle enable/disable for the add-on whose ID is "my-add-on":
 
 ```js
-var id = "my-add-on";
+let id = "my-add-on";
 
 function toggleEnabled(id) {
-  var getting = browser.management.get(id);
+  let getting = browser.management.get(id);
   getting.then((info) => {
     browser.management.setEnabled(id, !info.enabled);
   });

@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var uninstallingSelf = browser.management.uninstallSelf(
+let uninstallingSelf = browser.management.uninstallSelf(
   options              // object
 )
 ```
@@ -57,7 +57,7 @@ function onCanceled(error) {
   console.log(`Canceled: ${error}`);
 }
 
-var uninstalling = browser.management.uninstallSelf({
+let uninstalling = browser.management.uninstallSelf({
   showConfirmDialog: true
 });
 
@@ -71,7 +71,7 @@ function onCanceled(error) {
   console.log(`Canceled: ${error}`);
 }
 
-var uninstalling = browser.management.uninstallSelf({
+let uninstalling = browser.management.uninstallSelf({
   showConfirmDialog: true,
   dialogMessage: "Testing self-uninstall"
 });

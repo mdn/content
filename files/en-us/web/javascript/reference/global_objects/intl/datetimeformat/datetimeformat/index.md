@@ -172,9 +172,9 @@ new Intl.DateTimeFormat(locales, options)
     Implementations may support other subsets, and requests will be negotiated
     against all available subset-representation combinations to find the best
     match. Two algorithms are available for this negotiation and selected by the
-    `formatMatcher` property: A [fully
-    specified "`basic`" algorithm](https://www.ecma-international.org/ecma-402/1.0/#BasicFormatMatcher) and an
-    implementation-dependent "`best fit`" algorithm.
+    `formatMatcher` property:
+    A [fully specified "`basic`" algorithm](https://www.ecma-international.org/ecma-402/1.0/#BasicFormatMatcher)
+    and an implementation-dependent "`best fit`" algorithm.
 
     - `weekday`
 

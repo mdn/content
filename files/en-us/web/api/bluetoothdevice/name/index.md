@@ -22,13 +22,7 @@ The **`BluetoothDevice.name`** read-only property returns a
 > {{DOMxRef("BluetoothDevice_%28Firefox_OS%29/name", "BluetoothDevice.name
     (Firefox OS)")}}.
 
-## Syntax
-
-```js
-var name = instanceOfBluetoothDevice.name
-```
-
-### Returns
+## Value
 
 A {{DOMxRef("DOMString")}}.
 

@@ -18,13 +18,7 @@ The read-only {{domxref("XMLHttpRequest")}} property
 **`responseText`** returns the text received from a server
 following a request being sent.
 
-## Syntax
-
-```js
-var resultText = XMLHttpRequest.responseText;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} which contains either the textual data received using the
 `XMLHttpRequest` or `null` if the request failed or
@@ -47,7 +41,7 @@ You know the entire content has been received when the value of
     string or `"text"`. Since the `responseText` property is
     only valid for text content, any other value is an error condition.
 
-## Example
+## Examples
 
 ```js
 var xhr = new XMLHttpRequest();

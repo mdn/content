@@ -23,13 +23,7 @@ browser-compat: api.AddressErrors.postalCode
 
 An object based on {{domxref("AddressErrors")}} includes a **`postalCode`** property when the address's {{domxref("PaymentAddress.postalCode", "postalCode")}} property couldn't be validated. The returned string explains the error and should offer suggestions for how to correct it.
 
-## Syntax
-
-```js
-var postcodeError = AddressErrors.postCode;
-```
-
-### Value
+## Value
 
 If the value specified in the {{domxref("PaymentAddress")}} object's {{domxref("PaymentAddress.postalCode", "postalCode")}} property could not be validated, this property contains a {{domxref("DOMString")}} offering a human-readable explanation of the validation error and offers suggestions for correcting it.
 

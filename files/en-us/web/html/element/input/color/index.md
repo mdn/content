@@ -28,7 +28,7 @@ The element's presentation may vary substantially from one browser and/or platfo
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
         A 7-character {{domxref("DOMString")}} specifying a
         {{cssxref("&lt;color&gt;")}} in lower-case hexadecimal notation
@@ -51,6 +51,10 @@ The element's presentation may vary substantially from one browser and/or platfo
     <tr>
       <td><strong>IDL attributes</strong></td>
       <td><code>list</code> and <code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
       <td><strong>Methods</strong></td>

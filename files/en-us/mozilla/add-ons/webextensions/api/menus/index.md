@@ -100,7 +100,7 @@ browser.menus.create({
   contexts: ["all"]
 }, onCreated);
 
-var checkedState = true;
+let checkedState = true;
 
 browser.menus.create({
   id: "check-uncheck",

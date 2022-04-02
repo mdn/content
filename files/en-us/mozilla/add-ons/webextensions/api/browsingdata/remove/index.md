@@ -25,7 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var removing = browser.browsingData.remove(
+let removing = browser.browsingData.remove(
   removalOptions,            // RemovalOptions object
   dataTypes                  // DataTypeSet object
 )
@@ -59,7 +59,7 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-var oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+let oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
 
 browser.browsingData.remove(
   {since: oneWeekAgo},

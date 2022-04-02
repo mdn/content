@@ -66,7 +66,7 @@ Specifically, `console.log` gives special treatment to DOM elements, whereas
 representation of the DOM JS object.
 
 There's more information in the [Chrome
-Console API reference](https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject) about this and other functions.
+Console API reference](https://developer.chrome.com/docs/devtools/console/api/#consoledirobject) about this and other functions.
 
 ## Logging objects
 

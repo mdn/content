@@ -19,18 +19,12 @@ The **`effectiveDirective`** read-only property of the
 {{domxref("SecurityPolicyViolationEvent")}} interface is a {{domxref("DOMString")}}
 representing the directive whose enforcement uncovered the violation.
 
-## Syntax
-
-```js
-let effDir = violationEventInstance.effectiveDirective;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} representing the directive whose enforcement uncovered the
 violation.
 
-## Example
+## Examples
 
 ```js
 document.addEventListener("securitypolicyviolation", (e) => {

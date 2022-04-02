@@ -57,7 +57,7 @@ audio track.
 
 > **Note:** Browser support for audio tracks varies, both in terms of
 > whether or not they're supported at all by the media recorder and in terms of the
-> audio sources supported. Check the {{anch("Browser compatibility", "compatibility table")}} for details for each browser.
+> audio sources supported. Check the [compatibility table](#browser_compatibility) for details for each browser.
 
 ### Exceptions
 

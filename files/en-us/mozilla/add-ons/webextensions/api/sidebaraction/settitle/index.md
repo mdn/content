@@ -71,7 +71,7 @@ browser.sidebarAction.setTitle(
 This code changes the title for the sidebar when the user clicks a browser action, but only for the current tab:
 
 ```js
-var title = "A different title";
+let title = "A different title";
 
 function setTitleForTab(tab) {
   browser.sidebarAction.setTitle({title, tabId: tab.id});

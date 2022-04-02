@@ -42,7 +42,7 @@ tags:
 
 ## A simple list example
 
-To begin with, let's look at a simple list example. Throughout this article, we'll look at unordered, ordered, and description lists — all have styling features that are similar, as well as some that are particular to themselves. The unstyled example is [available on Github](https://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html) (check out the [source code](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/unstyled-list.html) too.)
+To begin with, let's look at a simple list example. Throughout this article, we'll look at unordered, ordered, and description lists — all have styling features that are similar, as well as some that are particular to themselves. The unstyled example is [available on GitHub](https://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html) (check out the [source code](https://github.com/mdn/learning-area/blob/main/css/styling-text/styling-lists/unstyled-list.html) too.)
 
 The HTML for our list example looks like so:
 
@@ -98,7 +98,7 @@ If you go to the live example now and investigate the list elements using [brows
 
 ## Handling list spacing
 
-When styling lists, you need to adjust their styles so they keep the same vertical spacing as their surrounding elements (such as paragraphs and images; sometimes called vertical rhythm), and the same horizontal spacing as each other (you can see the [finished styled example](https://mdn.github.io/learning-area/css/styling-text/styling-lists/) on Github, and [find the source code](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/index.html) too.)
+When styling lists, you need to adjust their styles so they keep the same vertical spacing as their surrounding elements (such as paragraphs and images; sometimes called vertical rhythm), and the same horizontal spacing as each other (you can see the [finished styled example](https://mdn.github.io/learning-area/css/styling-text/styling-lists/) on GitHub, and [find the source code](https://github.com/mdn/learning-area/blob/main/css/styling-text/styling-lists/index.html) too.)
 
 The CSS used for the text styling and spacing is as follows:
 

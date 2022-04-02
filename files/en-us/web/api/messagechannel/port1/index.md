@@ -19,25 +19,19 @@ the port attached to the context that originated the channel.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-channel.port1;
-```
-
-### Value
+## Value
 
 A {{domxref("MessagePort")}} object, the first port of the channel, that is the port
 attached to the context that originated the channel.
 
-## Example
+## Examples
 
 In the following code block, you can see a new channel being created using the
 {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} constructor. When the
 {{HTMLElement("iframe")}} has loaded, we pass {{domxref("MessageChannel.port2")}} to the
 {{HTMLElement("iframe")}} using {{domxref("MessagePort.postMessage")}} along with a
 message. The `handleMessage` handler then responds to a message being sent
-back from the `<iframe>` (using {{domxref("MessagePort.onmessage")}}),
+back from the `<iframe>` (using {{domxref("MessagePort.message_event", "onmessage")}}),
 putting it into a paragraph. The `handleMessage` method is associated to the
 `port1` to listen when the message arrives.
 

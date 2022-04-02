@@ -36,20 +36,12 @@ The {{domxref("AudioParam")}} contained by this property is read only; however, 
 can still change the value of the parameter by assigning a new value to its
 {{domxref("AudioParam.value")}} property.
 
-## Syntax
-
-```js
-var positionX = PannerNode.positionX;
-
-PannerNode.positionX.value = newPositionX;
-```
-
-### Value
+## Value
 
 An {{domxref("AudioParam")}} whose `value` is the X coordinate of the audio
 source's position, in 3D Cartesian coordinates. The default value is 0.
 
-## Example
+## Examples
 
 The following example starts an oscillator, and pans it to the left after 1 second, to
 the right after 2 seconds, and back to the center after 3 seconds.

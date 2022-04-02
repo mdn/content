@@ -24,7 +24,7 @@ An `SVGNumberList` object can be designated as read only, which means that attem
   <tbody>
     <tr>
       <th scope="row">Also implement</th>
-      <td><var>None</var></td>
+      <td>None</td>
     </tr>
     <tr>
       <th scope="row">Methods</th>

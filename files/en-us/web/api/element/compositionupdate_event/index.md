@@ -20,7 +20,7 @@ For example, this event could be fired while a user enters a Chinese character u
     </tr>
     <tr>
       <th>Cancelable</th>
-      <td>Yes</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>Interface</th>

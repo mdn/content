@@ -19,13 +19,7 @@ The **`localStorage`** read-only property of the {{domxref("window")}} interface
 
 `localStorage` is similar to {{DOMxRef("Window.sessionStorage", "sessionStorage")}}, except that while `localStorage` data has no expiration time, `sessionStorage` data gets cleared when the page session ends — that is, when the page is closed. (`localStorage` data for a document loaded in a "private browsing" or "incognito" session is cleared when the last "private" tab is closed.)
 
-## Syntax
-
-```js
-myStorage = window.localStorage;
-```
-
-### Value
+## Value
 
 A {{DOMxRef("Storage")}} object which can be used to access the current origin's local storage space.
 
@@ -44,7 +38,7 @@ For documents loaded from `file:` URLs (that is, files opened in the browser dir
 
 In all current browsers, `localStorage` seems to return a different object for each `file:` URL. In other words, each `file:` URL seems to have its own unique local-storage area. But there are no guarantees about that behavior, so you shouldn't rely on it because, as mentioned above, the requirements for `file:` URLs remains undefined. So it's possible that browsers may change their `file:` URL handling for `localStorage` at any time. In fact some browsers _have_ changed their handling for it over time.
 
-## Example
+## Examples
 
 The following snippet accesses the current domain's local {{DOMxRef("Storage")}} object and adds a data item to it using {{DOMxRef("Storage.setItem()")}}.
 

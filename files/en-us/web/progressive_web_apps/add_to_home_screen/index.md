@@ -28,21 +28,30 @@ See [caniuse.com](https://caniuse.com/#feat=web-app-manifest) for exact details.
 
 We've written a very simple example web site ([see our demo live](https://mdn.github.io/pwa-examples/a2hs/), and also [see the source code](https://github.com/mdn/pwa-examples/tree/master/a2hs)) that doesn't do much, but was developed with the necessary code to allow it to be added to a Home screen, as well as a service worker to enable it to be used offline. The example displays a series of fox pictures.
 
-If you have Firefox for Android available, use it to navigate to our demo at `https://mdn.github.io/pwa-examples/a2hs/`. You'll see fox pictures, but more important, you'll see a "home" icon with a plus (+) icon inside it — this is the "Add to Home screen" icon displayed for any site that has the necessary features in place.
+If you have either Firefox for Android or Chrome for Android available, use it to navigate to our demo at https://mdn.github.io/pwa-examples/a2hs/ (the URL bar appears on the top in Chrome and at the bottom in Firefox).
 
-![](add-to-home-screen-icon.png)
+![URL bar menu](url_bar_menu.png)
 
-Tapping this will show a confirmation banner — pressing the big + _ADD TO HOME SCREEN_ button completes the action, adding the app to the Home screen. (Note: In Android 8 and higher, a system-level "Add to Home screen" permission dialog will be shown first.)
+Open the menu next to the URL bar.
+Depending on whether you're using Chrome or Android you'll see a menu option "Install" or "Install App". 
+This is the "Add to Home screen" option displayed for any site that has the necessary features in place.
 
-![](fx-a2hs-banner.png)
+![Menu with install app option](menu_install_app.png)
 
-If you have Mobile Chrome available, the experience is slightly different; upon loading our site, you'll see an install banner pop up asking whether you want to add this app to your Home screen.
 
-![](chrome-a2hs-banner.png)
+> **Note:** On older browser versions you may see a "home" icon with a plus (+) icon inside it.
+> This does the same thing!
+> 
+> ![Add to home screen icon (used on older browsers)](add-to-home-screen-icon.png)
+
+Selecting the option will start the process of adding the application to the home screen.
+
+This process may differ slightly depending on the browser, mobile device operating system, and even the device.
+For example, Firefox on Android on a Google Pixel 3 will display the Pixel launcher.
+
+![App installation via Pixel Launcher](pixel_launcher_add_app.png)
 
 > **Note:** You can find out a lot more about Chrome install banners from the article [How to provide your own in-app install experience](https://web.dev/customize-install/).
-
-If you choose not to add it to your Home screen at this point, you can do so later using the _Add to Home screen_ icon in the main Chrome menu.
 
 Regardless of which browser you are using, when you choose to add the app to your Home screen, you'll see it appear along with a short title, in the same way that native apps do.
 

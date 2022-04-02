@@ -29,10 +29,10 @@ In this assessment you'll update a page to play a series of animations in a sequ
 
 Make a local copy of the files at <https://github.com/mdn/learning-area/tree/main/javascript/asynchronous/sequencing-animations/start>. It contains four files:
 
-* alice.svg
-* index.html
-* main.js
-* style.css
+- alice.svg
+- index.html
+- main.js
+- style.css
 
 The only file you'll need to edit is "main.js".
 
@@ -93,7 +93,7 @@ We'd like you to try a few different ways to implement this, to reinforce differ
 
 3. Finally, implement it using [`async` and `await`](/en-US/docs/Learn/JavaScript/Asynchronous/Promises#async_and_await).
 
-Remember that `element.animate()` does _not_ return a `Promise`: it returns an `Animation` object which a `finished` property that is a `Promise`.
+Remember that `element.animate()` does _not_ return a `Promise`: it returns an `Animation` object with a `finished` property that is a `Promise`.
 
 ## Assessment or further help
 

@@ -18,18 +18,9 @@ Canvas 2D API sets the miter limit ratio.
 > styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas
 > tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
-## Syntax
+## Value
 
-```js
-ctx.miterLimit = value;
-```
-
-### Options
-
-- `value`
-  - : A number specifying the miter limit ratio, in coordinate space units. Zero,
-    negative, {{jsxref("Infinity")}}, and {{jsxref("NaN")}} values are ignored. The
-    default value is `10.0`.
+A number specifying the miter limit ratio, in coordinate space units. Zero, negative, {{jsxref("Infinity")}}, and {{jsxref("NaN")}} values are ignored. The default value is `10.0`.
 
 ## Examples
 

@@ -12,9 +12,7 @@ browser-compat: javascript.operators.yield
 ---
 {{jsSidebar("Operators")}}
 
-The `yield` keyword is used to pause and resume a generator function
-({{jsxref("Statements/function*", "function*")}} or [legacy
-generator function](/en-US/docs/Archive/Web/JavaScript/Legacy_generator_function_statement)).
+The `yield` keyword is used to pause and resume a [generator function](/en-US/docs/Web/JavaScript/Reference/Statements/function*).
 
 {{EmbedInteractiveExample("pages/js/expressions-yield.html", "taller")}}
 
@@ -25,8 +23,9 @@ generator function](/en-US/docs/Archive/Web/JavaScript/Legacy_generator_function
 ```
 
 - `expression` {{optional_inline}}
-  - : Defines the value to return from the generator function via [the
-    iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol). If omitted, `undefined` is returned instead.
+  - : Defines the value to return from the generator function via
+    [the iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol).
+    If omitted, `undefined` is returned instead.
 - `rv` {{optional_inline}}
   - : Retrieves the optional value passed to the generator's `next()` method
     to resume its execution.
@@ -141,8 +140,7 @@ console.log(generatorFunc.next(10).value); // 26
 
 ## See also
 
-- [The Iterator
-  protocol](/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [The Iterator protocol](/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol)
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("Operators/yield*", "yield*")}}

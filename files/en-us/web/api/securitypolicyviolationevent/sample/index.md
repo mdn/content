@@ -19,20 +19,14 @@ The **`sample`** read-only property of the
 {{domxref("SecurityPolicyViolationEvent")}} interface is a {{domxref("DOMString")}}
 representing a sample of the resource that caused the violation.
 
-## Syntax
-
-```js
-let sample = violationEventInstance.sample;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} containing a sample of the resource that caused the
 violation, usually the first 40 characters. This will only be populated if the resource
 is an inline script, event handler, or style — external resources causing a violation
 will not generate a sample.
 
-## Example
+## Examples
 
 ```js
 document.addEventListener("securitypolicyviolation", (e) => {

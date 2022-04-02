@@ -134,7 +134,7 @@ Other types of features work in the same way, but with different object names:
 - HTML data works in basically the same way, except that the top-level object structure is `html.elements`. See [article.json](https://github.com/mdn/browser-compat-data/blob/main/html/elements/article.json) for an example.
 - The top level object structure for JS built-in objects is `javascript.builtins`; see [Array.json](https://github.com/mdn/browser-compat-data/blob/main/javascript/builtins/Array.json) for an example.
 
-In HTML, CSS, and JS pages, you'll normally only need one feature. API interfaces work slightly differently — they always have multiple sub-features (see {{anch("Sub-features")}}, below).
+In HTML, CSS, and JS pages, you'll normally only need one feature. API interfaces work slightly differently — they always have multiple sub-features (see [Sub-features](#sub-features), below).
 
 ### Basic structure inside a feature
 
@@ -147,7 +147,7 @@ Inside a feature `__compat` member, you need to include the following members:
 
 The names of the browser members are defined in the schema (see [Browser identifiers](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#browser-identifiers)). You should use the full list of currently defined identifiers. If you wish to add another browser, talk to us first, as this could have a wide-ranging impact and should not be done without careful thought.
 
-In a basic browser compat data file, you'll only need to include "version_added" inside the browser identifier members (we'll cover {{anch("Adding_data_Advanced_cases", "Adding data: Advanced cases")}} later on). The different values you might want to include are as follows:
+In a basic browser compat data file, you'll only need to include "version_added" inside the browser identifier members (we'll cover [Adding data: Advanced cases](#adding_data_advanced_cases) later on). The different values you might want to include are as follows:
 
 - A version number: If you know the exact version in which a browser started to support your feature, use a string representing the number, e.g. `"47"`.
 - `true`: If a browser supports a feature but you don't know the exact version number, use the value `true`.

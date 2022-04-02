@@ -67,7 +67,7 @@ async function fileHash(file) {
   // The resulting hash is stored in an array buffer
   const hashAsArrayBuffer = await crypto.subtle.digest('SHA-256', arrayBuffer);
 
-  // To display it as as a string we will get the hexadecimal value of each byte of the array buffer
+  // To display it as a string we will get the hexadecimal value of each byte of the array buffer
   // This gets us an array where each byte of the array buffer becomes one item in the array
   const uint8ViewOfHash = new Uint8Array(hashAsArrayBuffer);
   // We then convert it to a regular array so we can convert each item to hexadecimal strings

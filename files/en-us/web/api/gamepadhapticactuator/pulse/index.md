@@ -41,7 +41,7 @@ A promise that resolves with a value of `true` when the pulse has successfully c
 const gamepad = navigator.getGamepads()[0];
 
 gamepad.hapticActuators[0].pulse(1.0, 200);
-````
+```
 
 ## Specifications
 

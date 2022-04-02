@@ -46,7 +46,7 @@ In terms of prerequisite knowledge, you don't need to know anything about web de
 
 It is also preferable that you have some basic terminal knowledge, so for example moving between directories, creating files, and modifying the system `PATH`.
 
-> **Note:** Github is not the only site/toolset you can use with Git. There are other alternatives such as [GitLab](https://about.gitlab.com/) that you could try, and you could also try setting your own Git server up and using it instead of GitHub. We've only stuck with GitHub in this course to provide a single way that works.
+> **Note:** GitHub is not the only site/toolset you can use with Git. There are other alternatives such as [GitLab](https://about.gitlab.com/) that you could try, and you could also try setting your own Git server up and using it instead of GitHub. We've only stuck with GitHub in this course to provide a single way that works.
 
 ## Guides
 

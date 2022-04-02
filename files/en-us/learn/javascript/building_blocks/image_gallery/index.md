@@ -38,11 +38,11 @@ Now that we've looked at the fundamental building blocks of JavaScript, we'll te
 
 ## Starting point
 
-To get this assessment started, you should go and [grab the ZIP](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/gallery/gallery-start.zip?raw=true) file for the example, unzip it somewhere on your computer, and do the exercise locally to begin with.
+To get this assessment started, you should go and [grab the ZIP](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/gallery/gallery-start.zip?raw=true) file for the example, unzip it somewhere on your computer, and do the exercise locally to begin with.
 
 Alternatively, you could use a site like [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/) to do your assessment. You could paste the HTML, CSS and JavaScript into one of these online editors. If the online editor you are using doesn't have separate JavaScript/CSS panels, feel free to put them inline `<script>`/`<style>` elements inside the HTML page.
 
-> **Note:** If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
+> **Note:** If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
 
 ## Project brief
 

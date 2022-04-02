@@ -45,15 +45,11 @@ var intervalID = setInterval(code, [delay]);
     security risk.
 - `delay`{{optional_inline}}
   - : The time, in milliseconds (thousandths of a second), the timer should delay in
-    between executions of the specified function or code. Defaults to 0 if not specified. See {{anch("Delay restrictions")}}
+    between executions of the specified function or code. Defaults to 0 if not specified. See [Delay restrictions](#delay_restrictions)
     below for details on the permitted range of `delay` values.
 - `arg1, ..., argN` {{optional_inline}}
   - : Additional arguments which are passed through to the function specified by
     _func_ once the timer expires.
-
-> **Note:** Passing additional arguments to `setInterval()` in
-> the first syntax does not work in Internet Explorer 9 and earlier. If you want to
-> enable this functionality on that browser, you must use a polyfill (see the [Callback arguments](#callback_arguments) section).
 
 ### Return value
 
@@ -154,72 +150,6 @@ document.getElementById("stop").addEventListener("click", stopTextColor);
 
 See also: [`clearInterval()`](/en-US/docs/Web/API/clearInterval).
 
-## Callback arguments
-
-As previously discussed, Internet Explorer versions 9 and below do not support the
-passing of arguments to the callback function in either `setTimeout()` or
-`setInterval()`. The following **IE-specific** code demonstrates
-a method for overcoming this limitation.  To use, add the following code to the top of
-your script.
-
-```js
-/*\
-|*|
-|*|  IE-specific polyfill that enables the passage of arbitrary arguments to the
-|*|  callback functions of javascript timers (HTML5 standard syntax).
-|*|
-|*|  https://developer.mozilla.org/en-US/docs/Web/API/window.setInterval
-|*|
-|*|  Syntax:
-|*|  var timeoutID = window.setTimeout(func, delay[, arg1, arg2, ...]);
-|*|  var timeoutID = window.setTimeout(code, delay);
-|*|  var intervalID = window.setInterval(func, delay[, arg1, arg2, ...]);
-|*|  var intervalID = window.setInterval(code, delay);
-|*|
-\*/
-
-if (document.all && !window.setTimeout.isPolyfill) {
-  var __nativeST__ = window.setTimeout;
-  window.setTimeout = function (vCallback, nDelay /*, argumentToPass1, argumentToPass2, etc. */) {
-    var aArgs = Array.prototype.slice.call(arguments, 2);
-    return __nativeST__(vCallback instanceof Function ? function () {
-      vCallback.apply(null, aArgs);
-    } : vCallback, nDelay);
-  };
-  window.setTimeout.isPolyfill = true;
-}
-
-if (document.all && !window.setInterval.isPolyfill) {
-  var __nativeSI__ = window.setInterval;
-  window.setInterval = function (vCallback, nDelay /*, argumentToPass1, argumentToPass2, etc. */) {
-    var aArgs = Array.prototype.slice.call(arguments, 2);
-    return __nativeSI__(vCallback instanceof Function ? function () {
-      vCallback.apply(null, aArgs);
-    } : vCallback, nDelay);
-  };
-  window.setInterval.isPolyfill = true;
-}
-```
-
-Another possibility is to use an anonymous function to call your callback, although
-this solution is a bit more expensive. Example:
-
-```js
-var intervalID = setInterval(function() { myFunc('one', 'two', 'three'); }, 1000);
-```
-
-Another possibility is to use [function's
-bind](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind). Example:
-
-```js
-var intervalID = setInterval(function(arg1) {}.bind(undefined, 10), 1000);
-```
-
-{{h3_gecko_minversion("Inactive tabs", "5.0")}}
-
-Starting in Gecko 5.0 {{geckoRelease("5.0")}}, intervals are clamped to fire no more
-often than once per second in inactive tabs.
-
 ## The "this" problem
 
 When you pass a method to `setInterval()` or any other function, it is
@@ -261,58 +191,9 @@ function in the legacy JavaScript.
 
 ### A possible solution
 
-A possible way to solve the "`this`" problem is to replace the two native
-`setTimeout()` or `setInterval()` global functions with two
-_non-native_ ones that enable their invocation through the [`Function.prototype.call`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
-method. The following example shows a possible replacement:
+All modern JavaScript runtimes (in browsers and elsewhere) support [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical `this` — allowing us to write `setInterval( () => this.myMethod)` if we're inside the `myArray` method.
 
-```js
-// Enable the passage of the 'this' object through the JavaScript timers
-
-var __nativeST__ = window.setTimeout, __nativeSI__ = window.setInterval;
-
-window.setTimeout = function (vCallback, nDelay /*, argumentToPass1, argumentToPass2, etc. */) {
-  var oThis = this, aArgs = Array.prototype.slice.call(arguments, 2);
-  return __nativeST__(vCallback instanceof Function ? function () {
-    vCallback.apply(oThis, aArgs);
-  } : vCallback, nDelay);
-};
-
-window.setInterval = function (vCallback, nDelay /*, argumentToPass1, argumentToPass2, etc. */) {
-  var oThis = this, aArgs = Array.prototype.slice.call(arguments, 2);
-  return __nativeSI__(vCallback instanceof Function ? function () {
-    vCallback.apply(oThis, aArgs);
-  } : vCallback, nDelay);
-};
-```
-
-> **Note:** These two replacements also enable the HTML5 standard passage of
-> arbitrary arguments to the callback functions of timers in IE. So they can be used as
-> _non-standard-compliant_ polyfills also. See the [callback arguments paragraph](#callback_arguments) for a
-> _standard-compliant_ polyfill.
-
-New feature test:
-
-```js
-myArray = ['zero', 'one', 'two'];
-
-myArray.myMethod = function (sProperty) {
-    alert(arguments.length > 0 ? this[sProperty] : this);
-};
-
-setTimeout(alert, 1500, 'Hello world!'); // the standard use of setTimeout and setInterval is preserved, but...
-setTimeout.call(myArray, myArray.myMethod, 2000); // prints "zero,one,two" after 2 seconds
-setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 seconds
-```
-
-> **Note:** JavaScript 1.8.5 introduces the
-> [`Function.prototype.bind()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
-> method, which lets you specify the value that should be used as `this` for
-> all calls to a given function. This lets you easily bypass problems where it's unclear
-> what this will be, depending on the context from which your function was called. Also,
-> ES2015 supports [arrow
-> functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical this allowing us to write setInterval( () =>
-> this.myMethod) if we're inside myArray method.
+If you need to support IE, use the [`Function.prototype.bind()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. That lets you easily bypass problems where it's unclear what `this` will be, depending on the context from which your function was called.
 
 ## Usage notes
 

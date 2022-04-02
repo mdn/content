@@ -13,7 +13,7 @@ browser-compat: api.ImageTrack.frameCount
 
 The **`frameCount`** property of the {{domxref("ImageTrack")}} interface returns the number of frames in the track.
 
-### Value
+## Value
 
 An integer.
 

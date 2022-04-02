@@ -19,17 +19,11 @@ The **`upper`** read-only property of the
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var upper = myKeyRange.upper
-```
-
-### Value
+## Value
 
 The upper bound of the key range (can be any type.)
 
-## Example
+## Examples
 
 The following example illustrates how you'd use a key range. Here we
 declare `keyRangeValue = IDBKeyRange.upperBound("F", "W", true, true);` — a

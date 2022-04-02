@@ -253,7 +253,7 @@ function startup() {
 }
 ```
 
-First, a reference to the content wrapping {{HTMLElement("main")}} element is obtained, so we can insert our content into it. Then we set up an event listener for the {{event("visibilitychange")}} event. This event is sent when the document becomes hidden or visible, such as when the user switches tabs in their browser. The Intersection Observer API doesn't take this into account when detecting intersection, since intersection isn't affected by page visibility. Therefore, we need to pause our timers while the page is tabbed out; hence this event listener.
+First, a reference to the content wrapping {{HTMLElement("main")}} element is obtained, so we can insert our content into it. Then we set up an event listener for the {{domxref("document.visibilitychange_event", "visibilitychange")}} event. This event is sent when the document becomes hidden or visible, such as when the user switches tabs in their browser. The Intersection Observer API doesn't take this into account when detecting intersection, since intersection isn't affected by page visibility. Therefore, we need to pause our timers while the page is tabbed out; hence this event listener.
 
 Next we set up the options for the {{domxref("IntersectionObserver")}} which will monitor target elements (ads, in our case) for intersection changes relative to the document. The options are configured to watch for intersections with the document's viewport (by setting `root` to `null`). We have no margins to extend or contract the intersection root's rectangle; we want to match the boundaries of the document's viewport exactly for intersection purposes. And the `threshold` is set to an array containing the values 0.0 and 0.75; this will cause our callback to execute whenever a targeted element becomes completely obscured or first starts to become unobscured (intersection ratio 0.0) or passes through 75% visible in either direction (intersection ratio 0.75).
 
@@ -265,7 +265,7 @@ Finally, we set up an interval which triggers once a second to handle any necess
 
 #### Handling document visibility changes
 
-Let's take a look at the handler for the {{event("visibilitychange")}} event. Our script receives this event when the document itself becomes visible or invisible. The most important scenario here is when the user switches tabs. Since Intersection Observer only cares about the intersection between the targeted elements and the intersection root, and not the tab's visibility (which is a different issue entirely), we need to use the [Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API) to detect these tab switches and disable our timers for the duration.
+Let's take a look at the handler for the {{domxref("document.visibilitychange_event", "visibilitychange")}} event. Our script receives this event when the document itself becomes visible or invisible. The most important scenario here is when the user switches tabs. Since Intersection Observer only cares about the intersection between the targeted elements and the intersection root, and not the tab's visibility (which is a different issue entirely), we need to use the [Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API) to detect these tab switches and disable our timers for the duration.
 
 ```js
 function handleVisibilityChange() {
@@ -324,7 +324,7 @@ If the ad has transitioned to the not-intersecting state, we remove the ad from 
 
 #### Handling periodic actions
 
-Our interval handler, `handleRefreshInterval()`, is called about once per second courtesy of the call to {{domxref("setInterval()")}} made in the `startup()` function {{anch("Setting up", "described above")}}. Its main job is to update the timers every second and schedule a redraw to update the timers we'll be drawing within each ad.
+Our interval handler, `handleRefreshInterval()`, is called about once per second courtesy of the call to {{domxref("setInterval()")}} made in the `startup()` function [described above](#setting_up). Its main job is to update the timers every second and schedule a redraw to update the timers we'll be drawing within each ad.
 
 ```js
 function handleRefreshInterval() {
@@ -357,7 +357,7 @@ Finally, if there's at least one element to redraw, we use {{domxref("window.req
 
 #### Updating an ad's visibility timer
 
-Previously (see {{anch("Handling document visibility changes")}} and {{anch("Handling periodic actions")}}), we've seen that when we need to update an ad's "total visible time" counter, we call a function named `updateAdTimer()` to do so. This function takes as an input an ad's {{domxref("HTMLDivElement")}} object. Here it is:
+Previously (see [Handling document visibility changes](#handling_document_visibility_changes) and [Handling periodic actions](#handling_periodic_actions)), we've seen that when we need to update an ad's "total visible time" counter, we call a function named `updateAdTimer()` to do so. This function takes as an input an ad's {{domxref("HTMLDivElement")}} object. Here it is:
 
 ```js
 function updateAdTimer(adBox) {
@@ -408,7 +408,7 @@ This code finds the ad's timer using its ID, `"timer"`, and computes the number 
 
 #### Building the page contents
 
-The `buildContents()` function is called by the {{anch("Setting up", "startup code")}} to select and insert into the document the articles and ads to be presented:
+The `buildContents()` function is called by the [startup code](#setting_up) to select and insert into the document the articles and ads to be presented:
 
 ```js
 let loremIpsum = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing" +
@@ -554,11 +554,11 @@ Next, it's time to set up the custom data properties to track the ad's visibilit
 
 Finally, we set the ID of the `<div>` which will show the timer we'll present in the ad to show how long it's been visible, giving it the class `"timer"`. The initial text is set to "0:00", to represent the starting time of 0 minutes and 0 seconds, and it's appended to the ad.
 
-If we're not replacing an existing ad, we need to append the element to the content area of the page using {{domxref("Node.appendChild", "Document.appendChild()")}}. If we're replacing an ad, it's already there, with its contents replaced with the new ad's. Then we call the {{domxref("IntersectionObserver.observe", "observe()")}} method on our Intersection Observer, `adObserver`, to start watching the ad for changes to its intersection with the viewport. From now on, any time the ad becomes 100% obscured or even a single pixel becomes visible, or the ad passes through 75% visible in one way or another, the {{anch("Handling intersection changes", "observer's callback")}} is executed.
+If we're not replacing an existing ad, we need to append the element to the content area of the page using {{domxref("Node.appendChild", "Document.appendChild()")}}. If we're replacing an ad, it's already there, with its contents replaced with the new ad's. Then we call the {{domxref("IntersectionObserver.observe", "observe()")}} method on our Intersection Observer, `adObserver`, to start watching the ad for changes to its intersection with the viewport. From now on, any time the ad becomes 100% obscured or even a single pixel becomes visible, or the ad passes through 75% visible in one way or another, the [observer's callback](#handling_intersection_changes) is executed.
 
 #### Replacing an existing ad
 
-Our {{anch("Handling intersection changes", "observer's callback")}} keeps an eye out for ads which become 100% obscured and have a total visible time of at least one minute. When that happens, the `replaceAd()` function is called with that ad's element as an input, so that the old ad can be replaced with a new one.
+Our [observer's callback](#handling_intersection_changes) keeps an eye out for ads which become 100% obscured and have a total visible time of at least one minute. When that happens, the `replaceAd()` function is called with that ad's element as an input, so that the old ad can be replaced with a new one.
 
 ```js
 function replaceAd(adBox) {
@@ -575,7 +575,7 @@ function replaceAd(adBox) {
 
 `replaceAd()` begins by calling `updateAdTimer()` on the existing ad, to ensure that its timer is up-to-date. This ensures that when we read its `totalViewTime`, we see the exact final value for how long the ad was visible to the user. We then report that data; in this case, by logging it to console, but in the real world, you'd submit the information to an ad service's API or save it into a database.
 
-Then we load a new ad by calling `{{anch("Creating an ad", "loadRandomAd()")}}`, specifying the ad to be replaced as an input parameter. As we saw previously, `loadRandomAd()` will replace an existing ad with content and data corresponding to a new ad, if you specify an existing ad's element as an input parameter.
+Then we load a new ad by calling [`loadRandomAd()`](#creating_an_ad), specifying the ad to be replaced as an input parameter. As we saw previously, `loadRandomAd()` will replace an existing ad with content and data corresponding to a new ad, if you specify an existing ad's element as an input parameter.
 
 The new ad's element object is returned to the caller in case it's needed.
 

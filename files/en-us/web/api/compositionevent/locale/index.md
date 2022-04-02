@@ -20,13 +20,7 @@ The **`locale`** read-only property of the
 > Even if technically it is accessible, the way to set it up when creating a {{domxref("CompositionEvent")}}
 > is not guaranteed to be coherent.
 
-## Syntax
-
-```js
-myLocale = CompositionEvent.locale
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} representing the locale of current input method.
 

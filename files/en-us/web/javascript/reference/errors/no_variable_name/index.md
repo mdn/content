@@ -46,8 +46,8 @@ var description = "foo";
 
 ### Reserved keywords can't be variable names
 
-There are a few variable names that are [reserved
-keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords). You can't use these. Sorry :(
+There are a few variable names that are [reserved keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords).
+You can't use these. Sorry :(
 
 ```js example-bad
 var debugger = "whoop";
@@ -99,5 +99,4 @@ var arr = [1,2,3,4,5];
 
 - [Good variable names](http://wiki.c2.com/?GoodVariableNames)
 - {{jsxref("Statements/var", "var")}}
-- [Variable
-  declarations in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)
+- [Variable declarations in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)

@@ -16,13 +16,7 @@ The **`name`** read-only property of the
 {{domxref("FileSystemHandle")}} interface returns the name of the entry represented by
 handle.
 
-## Syntax
-
-```js
-var String = FileSystemHandle.name;
-```
-
-### Value
+## Value
 
 {{domxref('USVString')}}
 

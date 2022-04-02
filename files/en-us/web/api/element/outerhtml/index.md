@@ -26,15 +26,7 @@ To only obtain the HTML representation of the contents of an element, or to repl
 contents of an element, use the {{domxref("Element.innerHTML", "innerHTML")}} property
 instead.
 
-## Syntax
-
-```js
-var content = element.outerHTML;
-
-element.outerHTML = htmlString;
-```
-
-### Value
+## Value
 
 Reading the value of `outerHTML` returns a {{domxref("DOMString")}}
 containing an HTML serialization of the `element` and its descendants.

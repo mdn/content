@@ -21,13 +21,7 @@ The **`error`** read-only property of the
 > **Note:** This `SpeechRecognitionError` interface was renamed to
 > {{domxref("SpeechRecognitionErrorEvent")}} in the Web Speech API specification.
 
-## Syntax
-
-```js
-var myError = event.error;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} naming the type of error. The possible error types are:
 

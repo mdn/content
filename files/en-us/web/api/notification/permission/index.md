@@ -16,13 +16,7 @@ The `permission` read-only property of the {{domxref("Notification")}}
 interface indicates the current permission granted by the user for the current origin to
 display web notifications.
 
-## Syntax
-
-```js
-var permission = Notification.permission;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} representing the current permission. The value can be:
 

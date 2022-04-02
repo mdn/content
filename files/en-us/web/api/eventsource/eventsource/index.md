@@ -18,7 +18,7 @@ remote resource.
 ## Syntax
 
 ```js
-eventSource = new EventSource(url, configuration);
+new EventSource(url, configuration);
 ```
 
 ### Parameters

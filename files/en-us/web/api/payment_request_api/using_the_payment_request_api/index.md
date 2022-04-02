@@ -325,6 +325,3 @@ This payment handler would need to live in a service worker at `https://example.
 ## See also
 
 - [Google PaymentRequest Samples](https://googlechrome.github.io/samples/paymentrequest/)
-- [Google PaymentRequest codelab](https://g.co/PaymentRequestCodeLab)
-- Ecommerce website demo and source code [VeggieShop](https://github.com/pjbazin/wpwg-demo)
-- Web Payment App demo and source code [WhiteCollar](https://github.com/pjbazin/wpwg-demo/tree/master/WhiteCollar)

@@ -20,7 +20,7 @@ The **`VRFrameData`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API
 
 ## Constructor
 
-- {{domxref("VRFrameData.VRFrameData()")}} {{deprecated_inline}}
+- {{domxref("VRFrameData.VRFrameData", "VRFrameData()")}} {{deprecated_inline}}
   - : Creates a `VRFrameData` object instance.
 
 ## Properties

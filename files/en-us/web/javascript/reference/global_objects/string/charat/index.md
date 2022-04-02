@@ -251,5 +251,4 @@ function fixedCharAt(str, idx) {
 - {{jsxref("String.prototype.codePointAt()")}}
 - {{jsxref("String.prototype.split()")}}
 - {{jsxref("String.fromCodePoint()")}}
-- [JavaScript has a Unicode
-  problem – Mathias Bynens](https://mathiasbynens.be/notes/javascript-unicode)
+- [JavaScript has a Unicode problem – Mathias Bynens](https://mathiasbynens.be/notes/javascript-unicode)

@@ -50,7 +50,6 @@ To learn more about what the DOM is and how it represents documents, see our art
 - {{DOMxRef("NodeIterator")}}
 - {{DOMxRef("NodeList")}}
 - {{DOMxRef("ProcessingInstruction")}}
-- {{DOMxRef("Selection")}} {{Experimental_Inline}}
 - {{DOMxRef("Range")}}
 - {{DOMxRef("Text")}}
 - {{DOMxRef("TextDecoder")}} {{Experimental_Inline}}

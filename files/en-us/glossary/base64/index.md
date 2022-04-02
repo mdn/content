@@ -61,6 +61,9 @@ b64_to_utf8('4pyTIMOgIGxhIG1vZGU='); // "✓ à la mode"
 This solution has been proposed by [Johan Sundström](https://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html).
 
 Another possible solution without utilizing the now deprecated 'unescape' and 'escape' functions.
+This alternative, though, does not perform base64 encoding of the input string.
+Note the differences in the outputs of `utf8_to_b64` and `b64EncodeUnicode`.
+Adopting this alternative may lead to interoperability issues with other applications.
 
 ```js
 function b64EncodeUnicode(str) {

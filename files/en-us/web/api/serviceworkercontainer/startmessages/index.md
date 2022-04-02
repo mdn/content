@@ -30,7 +30,7 @@ example if you've invoked a message handler using
 want to start processing the messages right away.
 
 > **Note:** The messages start being sent automatically when setting the
-> handler directly using {{domxref("ServiceWorkerContainer.onmessage")}}. In this you
+> handler directly using {{domxref("ServiceWorkerContainer.message_event", "onmessage")}}. In this you
 > don't need `startMessages()`.
 
 ## Syntax

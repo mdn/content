@@ -12,26 +12,21 @@ browser-compat: api.IDBRequest.error_event
 
 The `error` handler is executed when an error caused a request to fail.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{DOMxRef("IDBRequest.onerror", "onerror")}}</td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('error', event => { });
+
+onerror = event => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -120,4 +115,3 @@ DBOpenRequest.onsuccess = event => {
 ## See also
 
 - [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- {{DOMxRef("IDBRequest.onerror", "onerror")}} event handler property

@@ -64,7 +64,7 @@ Events have three functions:
     When the user clicks the page action, hide it, and navigate the active tab to "<https://giphy.com/explore/cat>":
 
     ```js
-    var CATGIFS = "https://giphy.com/explore/cat";
+    let CATGIFS = "https://giphy.com/explore/cat";
 
     browser.pageAction.onClicked.addListener((tab) => {
       browser.pageAction.hide(tab.id);

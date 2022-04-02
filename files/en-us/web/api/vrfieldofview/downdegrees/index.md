@@ -19,13 +19,7 @@ The **`downDegrees`** read-only property of the {{domxref("VRFieldOfView")}} int
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-## Syntax
-
-```js
-var myDownDegrees = VRFieldOfView.downDegrees;
-```
-
-### Value
+## Value
 
 A double.
 

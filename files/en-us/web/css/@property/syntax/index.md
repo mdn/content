@@ -44,7 +44,7 @@ A string with a supported syntax as defined by the specification. Supported synt
 - `"<image>"`
   - : Any valid {{cssxref("&lt;image&gt;")}} values.
 - `"<url>"`
-  - : Any valid {{cssxref("url()","url()")}} values.
+  - : Any valid {{cssxref("url","url()")}} values.
 - `"<integer>"`
   - : Any valid {{cssxref("&lt;integer&gt;")}} values.
 - `"<angle>"`

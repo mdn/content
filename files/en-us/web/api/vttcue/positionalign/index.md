@@ -13,14 +13,7 @@ browser-compat: api.VTTCue.positionAlign
 
 The **`positionAlign`** property of the {{domxref("VTTCue")}} interface is used to determine what {{domxref("VTTCue.position")}} is anchored to.
 
-## Syntax
-
-```js
-let positionAlign = VTTCue.position;
-VTTCue.position = a;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString","string")}} containing one of the following values:
 

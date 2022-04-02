@@ -13,13 +13,7 @@ browser-compat: api.NDEFReadingEvent.serialNumber
 
 The **`serialNumber`** property of the {{domxref("NDEFReadingEvent")}} interface returns the serial number of the device, which is used for anti-collision and identification, or an empty string if no serial number is available.
 
-## Syntax
-
-```js
-let aserialNumber = NDEFReadingEvent.serialNumber;
-```
-
-### Value
+## Value
 
 A string containing the device's serial number.
 

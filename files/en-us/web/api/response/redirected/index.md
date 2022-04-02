@@ -17,7 +17,7 @@ The read-only **`redirected`** property of the {{domxref("Response")}} interface
 
 > **Note:** Relying on redirected to filter out redirects makes it easy for a forged redirect to prevent your content from working as expected.
 > Instead, you should actually instead do the filtering when you call {{domxref("fetch()")}}.
-> See the example {{anch("Disallowing redirects")}}, which shows this being done.
+> See the example [Disallowing redirects](#disallowing_redirects), which shows this being done.
 
 ## Value
 
@@ -29,7 +29,7 @@ A boolean value which is `true` if the response indicates that your request was 
 
 Checking to see if the response comes from a redirected request is as simple as checking this flag on the {{domxref("Response")}} object.
 In the code below, a textual message is inserted into an element when a redirect occurred during the fetch operation.
-Note, however, that this isn't as safe as outright rejecting redirects if they're unexpected, as described under {{anch("Disallowing redirects")}} below.
+Note, however, that this isn't as safe as outright rejecting redirects if they're unexpected, as described under [Disallowing redirects](#disallowing_redirects) below.
 
 ```js
 fetch("awesome-picture.jpg").then(function(response) {

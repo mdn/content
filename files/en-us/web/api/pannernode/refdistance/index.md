@@ -16,15 +16,7 @@ The `refDistance` property of the {{ domxref("PannerNode") }} interface is a dou
 
 The `refDistance` property's default value is `1`.
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var panner = audioCtx.createPanner();
-panner.refDistance = 1;
-```
-
-### Value
+## Value
 
 A non-negative number. If the value is set to less than 0, a `RangeError` is thrown.
 
@@ -33,7 +25,7 @@ A non-negative number. If the value is set to less than 0, a `RangeError` is thr
 - `RangeError`
   - : The property has been given a value that is outside the accepted range.
 
-## Example
+## Examples
 
 This example demonstrates how different values of {{ domxref("PannerNode.refDistance", "refDistance") }} affect how the volume of a sound decays as it moves away from the listener. Unlike {{ domxref("PannerNode.rolloffFactor", "rolloffFactor") }}, changing this value also _delays_ the volume decay until the sound moves past the reference point.
 

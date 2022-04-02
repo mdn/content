@@ -22,18 +22,12 @@ containing a subset of the {{domxref("SourceBuffer")}} objects contained within
 {{domxref("MediaSource.sourceBuffers", "sourceBuffers")}} — the list of objects
 providing the selected video track, enabled audio tracks, and shown/hidden text tracks.
 
-## Syntax
-
-```js
-var myActiveSourceBuffers = mediaSource.activeSourceBuffers;
-```
-
-### Value
+## Value
 
 A {{domxref("SourceBufferList")}} containing the {{domxref("SourceBuffer")}} objects
 for each of the active tracks.
 
-## Example
+## Examples
 
 The following snippet is based on a simple example written by Nick Desaulniers ([view the full demo
 live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download

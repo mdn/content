@@ -13,13 +13,7 @@ browser-compat: api.SVGMarkerElement.viewBox
 
 The **`viewBox`** read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedRect")}} object which contains the values set by the {{SVGattr("viewBox")}} attribute on the {{SVGElement("marker")}}.
 
-## Syntax
-
-```js
-let viewBox = SVGMarkerElement.viewBox;
-```
-
-### Value
+## Value
 
 An {{domxref("SVGAnimatedRect")}} object. The `baseVal` property of this object returns an {{domxref("SVGRect")}} object, from which can be returned the `x` and `y` co-ordinates, plus the `width` and `height` of the {{SVGElement("marker")}} {{SVGattr("viewBox")}} attribute.
 

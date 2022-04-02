@@ -22,13 +22,7 @@ read-only, or do you want to write to the object stores?) The default value is
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var myCurrentMode = IDBTransaction.mode;
-```
-
-### Value
+## Value
 
 An {{domxref("IDBTransactionMode")}} object defining the mode for isolating access to
 data in the current object stores:
@@ -66,7 +60,7 @@ data in the current object stores:
   </tbody>
 </table>
 
-## Example
+## Examples
 
 In the following code snippet, we open a read/write transaction on our database and add
 some data to an object store. Note also the functions attached to transaction event

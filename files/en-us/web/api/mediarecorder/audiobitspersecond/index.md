@@ -19,13 +19,7 @@ rate in use.
 This may differ from the bit rate specified in the constructor (if
 it was provided).
 
-## Syntax
-
-```js
-var audioBitsPerSecond = MediaRecorder.audioBitsPerSecond
-```
-
-### Value
+## Value
 
 A {{jsxref("Number")}} (unsigned long).
 

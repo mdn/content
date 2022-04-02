@@ -18,13 +18,7 @@ The **`type`** read-only property of the
 type, one of "portrait-primary", "portrait-secondary", "landscape-primary", or
 "landscape-secondary".
 
-## Syntax
-
-```js
-type = screen.orientation.type
-```
-
-### Value
+## Value
 
 A {{jsxref("String")}}.
 

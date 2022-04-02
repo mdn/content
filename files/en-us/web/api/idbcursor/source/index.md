@@ -22,18 +22,12 @@ iterated past its end, or its transaction is not active.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var source = cursor.source;
-```
-
-### Value
+## Value
 
 The {{domxref("IDBObjectStore")}} or {{domxref("IDBIndex")}} that the cursor is
 iterating over.
 
-## Example
+## Examples
 
 In this simple fragment we create a transaction, retrieve an object store, then use a
 cursor to iterate through all the records in the object store. Within each iteration we

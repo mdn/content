@@ -15,13 +15,9 @@ browser-compat: javascript.grammar.template_literals
 ---
 {{JsSidebar("More")}}
 
-Template literals are literals delimited with backticks (<code>`</code>), allowing embedded expressions called *substitutions*.
+Template literals are literals delimited with backtick (\`) characters, allowing for [multi-line strings](#multi-line_strings), for [string interpolation](#string_interpolation) with embedded expressions, and for special constructs called [tagged templates](#tagged_templates).
 
-- *Untagged* template literals result in strings, which makes them useful for string interpolation (and multiline strings, since unescaped newlines are allowed).
-
-- *Tagged* template literals call a function (the *tag function*) with an array of any text segments from the literal followed by arguments with the values of any substitutions, which is useful for [DSLs](https://en.wikipedia.org/wiki/Domain-specific_language).
-
-Template literals are sometimes informally called *template strings*, but they aren't string literals and can't be used everywhere a string literal can be used. Also, a tagged template literal may not result in a string; it's up to the tag function what it creates (if anything).
+Template literals are sometimes informally called _template strings_, because they are used most commonly for [string interpolation](#string_interpolation) (to create strings by doing substitution of placeholders). However, a tagged template literal may not result in a string; it can be used with a custom [tag function](#tagged_templates) to perform whatever operations you want on the different parts of the template literal.
 
 ## Syntax
 
@@ -44,18 +40,12 @@ example`string text ${expression} string text`
 
 ## Description
 
-Template literals are enclosed by the backtick (\` \`) ([grave accent](https://en.wikipedia.org/wiki/Grave_accent)) character instead
+Template literals are enclosed by backtick (\`) characters instead
 of double or single quotes.
 
-Template literals can contain placeholders. These are indicated by the dollar sign and
-curly braces (`${expression}`). The expressions in the
-placeholders and the text between the backticks (\` \`) get passed to a function.
+Along with having normal strings, template literals can also contain other parts called _placeholders_, which are embedded expressions delimited by a dollar sign and curly braces: `${expression}`. The strings and placeholders get passed to a function — either a default function, or a function you supply. The default function (when you don’t supply your own) just performs [string interpolation](#string_interpolation) to do substitution of the placeholders and then concatenate the parts into a single string.
 
-The default function just concatenates the parts into a single string. If there is an
-expression preceding the template literal, this is
-called a **tagged template**. In that case, the tag expression (usually
-a function) gets called with the template literal, which you can then manipulate before
-outputting.
+To supply a function of your own, precede the template literal with a function name; the result is called a [**tagged template**](#tagged_templates). In that case, the template literal is passed to your tag function, where you can then perform whatever operations you want on the different parts of the template literal.
 
 To escape a backtick in a template literal, put a backslash (`\`) before the
 backtick.
@@ -78,7 +68,7 @@ console.log('string text line 1\n' +
 // string text line 2"
 ```
 
-Using template literals, you can do the same like this:
+Using template literals, you can do the same with this:
 
 ```js
 console.log(`string text line 1
@@ -87,10 +77,9 @@ string text line 2`);
 // string text line 2"
 ```
 
-### Expression interpolation
+### String interpolation
 
-In order to embed expressions within normal strings, you would use the following
-syntax:
+Without template literals, when you want to combine output from expressions with strings, you’d [concatenate them](/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenation_using_) using the "`+`" (plus sign) ([addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)):
 
 ```js
 let a = 5;
@@ -100,8 +89,9 @@ console.log('Fifteen is ' + (a + b) + ' and\nnot ' + (2 * a + b) + '.');
 // not 20."
 ```
 
-Now, with template literals, you are able to make use of the syntactic sugar, making
-substitutions like this more readable:
+That can be hard to read – especially when you have multiple expressions.
+
+With template literals, you can avoid the concatenation operator — and improve the readability of your code — by using placeholders of the form "`${expression}`" to perform substitutions for embedded expressions:
 
 ```js
 let a = 5;
@@ -115,31 +105,28 @@ not ${2 * a + b}.`);
 ### Nesting templates
 
 In certain cases, nesting a template is the easiest (and perhaps more readable) way to
-have configurable strings. Within a backticked template, it is simple to allow inner
-backticks by using them inside a placeholder `${ }` within the template.
+have configurable strings. Within a backtick-delimited template, it is simple to allow inner
+backticks by using them inside an `${expression}` placeholder within the template.
 
-For instance, if condition a is `true`, then `return` this
-templated literal.
+For example, without template literals, if you wanted to return a certain value based on a particular condition, you could do something like the following:
 
-In ES5:
-
-```js
+```js example-bad
 let classes = 'header';
 classes += (isLargeScreen() ?
   '' : item.isCollapsed ?
     ' icon-expander' : ' icon-collapser');
 ```
 
-In ES2015 with template literals and without nesting:
+With a template literal but without nesting, you could do this:
 
-```js
+```js example-bad
 const classes = `header ${ isLargeScreen() ? '' :
   (item.isCollapsed ? 'icon-expander' : 'icon-collapser') }`;
 ```
 
-In ES2015 with nested template literals:
+With nesting of template literals, you can do this:
 
-```js
+```js example-good
 const classes = `header ${ isLargeScreen() ? '' :
   `icon-${item.isCollapsed ? 'expander' : 'collapser'}` }`;
 ```
@@ -217,8 +204,7 @@ t3Closure({name: 'MDN', age: 30}); //"I'm MDN. I'm almost 30 years old."
 
 The special `raw` property, available on the first argument to the tag
 function, allows you to access the raw strings as they were entered, without processing
-[escape
-sequences](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#using_special_characters_in_strings).
+[escape sequences](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#using_special_characters_in_strings).
 
 ```js
 function tag(strings) {
@@ -271,8 +257,9 @@ latex`\unicode`
 #### ES2018 revision of illegal escape sequences
 
 Tagged templates should allow the embedding of languages (for example [DSLs](https://en.wikipedia.org/wiki/Domain-specific_language), or [LaTeX](https://en.wikipedia.org/wiki/LaTeX)), where other escapes sequences
-are common. The ECMAScript proposal [Template Literal
-Revision](https://tc39.github.io/proposal-template-literal-revision/) (integrated in the ECMAScript 2018 standard) removed the
+are common.
+The ECMAScript proposal [Template Literal Revision](https://tc39.github.io/proposal-template-literal-revision/)
+(integrated in the ECMAScript 2018 standard) removed the
 syntax restriction of ECMAScript escape sequences from tagged templates.
 
 However, illegal escape sequences must still be represented in the "cooked"
@@ -309,7 +296,5 @@ let bad = `bad escape sequence: \unicode`;
 - {{jsxref("String")}}
 - {{jsxref("String.raw()")}}
 - [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [Template-like
-  strings in ES3 compatible syntax](https://gist.github.com/WebReflection/8f227532143e63649804)
-- ["ES6 in
-  Depth: Template strings" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/)
+- [Template-like strings in ES3 compatible syntax](https://gist.github.com/WebReflection/8f227532143e63649804)
+- ["ES6 in Depth: Template strings" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/)

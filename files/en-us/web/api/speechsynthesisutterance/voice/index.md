@@ -19,14 +19,7 @@ The **`voice`** property of the {{domxref("SpeechSynthesisUtterance")}} interfac
 This should be set to one of the {{domxref("SpeechSynthesisVoice")}} objects returned by {{domxref("SpeechSynthesis.getVoices()")}}.
 If not set by the time the utterance is spoken, the voice used will be the most suitable default voice available for the utterance's {{domxref("SpeechSynthesisUtterance.lang","lang")}} setting.
 
-## Syntax
-
-```js
-var myVoice = speechSynthesisUtteranceInstance.voice;
-speechSynthesisUtteranceInstance.voice = speechSynthesisVoiceInstance;
-```
-
-### Value
+## Value
 
 A {{domxref("SpeechSynthesisVoice")}} object.
 

@@ -138,8 +138,8 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 
 ### P
 
-- {{CSSxRef("padding-inline-end","-moz-padding-end")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("padding-inline-start")}}]
-- {{CSSxRef("padding-inline-start","-moz-padding-start")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("padding-inline-end")}}]
+- {{CSSxRef("padding-inline-end","-moz-padding-end")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("padding-inline-end")}}]
+- {{CSSxRef("padding-inline-start","-moz-padding-start")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("padding-inline-start")}}]
 - {{CSSxRef("perspective", "-moz-perspective")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("perspective-origin","-moz-perspective-origin")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("pointer-events")}} {{Experimental_Inline}} \[Applying to more than SVG]

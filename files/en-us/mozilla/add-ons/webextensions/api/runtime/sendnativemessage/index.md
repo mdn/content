@@ -28,7 +28,7 @@ For more information, see [Native messaging](/en-US/docs/Mozilla/Add-ons/WebExte
 ## Syntax
 
 ```js
-var sending = browser.runtime.sendNativeMessage(
+let sending = browser.runtime.sendNativeMessage(
   application,             // string
   message                  // object
 )
@@ -67,7 +67,7 @@ On a click on the browser action, send the app a message.
 */
 browser.browserAction.onClicked.addListener(() => {
   console.log("Sending:  ping");
-  var sending = browser.runtime.sendNativeMessage("ping_pong", "ping");
+  let sending = browser.runtime.sendNativeMessage("ping_pong", "ping");
   sending.then(onResponse, onError);
 });
 ```

@@ -73,7 +73,7 @@ pass it into the {{domxref("XRFrame")}} method {{domxref("XRFrame.getPose",
   "getPose()")}} method, then use the returned {{domxref("XRPose")}} object's
 {{domxref("XRPose.transform", "transform")}} to gather the spatial information you need.
 
-## Example
+## Examples
 
 This fragment of code shows part of a function to be called once every frame. It looks for inputs which have a non-`null` {{domxref("XRInputSource.targetRaySpace", "targetRaySpace")}}. Inputs which have a value for this property represent inputs that project a target ray outward from the user.
 

@@ -40,13 +40,7 @@ If the server doesn't specify the {{HTTPHeader("Content-Type")}} as
 
 This property isn't available to workers.
 
-## Syntax
-
-```js
-var data = XMLHttpRequest.responseXML;
-```
-
-### Value
+## Value
 
 A {{domxref("Document")}} from parsing the XML or HTML received using
 {{domxref("XMLHttpRequest")}}, or `null` if no data was received or if the
@@ -58,7 +52,7 @@ data is not XML/HTML.
   - : Thrown if the {{domxref("XMLHttpRequest.responseType", "responseType")}} isn't either
     `document` or an empty string.
 
-## Example
+## Examples
 
 ```js
 var xhr = new XMLHttpRequest;

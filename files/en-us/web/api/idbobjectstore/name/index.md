@@ -19,14 +19,7 @@ interface indicates the name of this object store.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-IDBObjectStore.name = myNewName;
-var myObjectStoreName = IDBObjectStore.name;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} containing the object
 store's name.
@@ -45,7 +38,7 @@ store's name.
 - `ConstraintError` {{domxref("DOMException")}}
   - : Thrown if an object store is already using the specified `name`.
 
-## Example
+## Examples
 
 In the following code snippet, we open a read/write transaction on our database and add
 some data to an object store using `add()`. After the object store has been

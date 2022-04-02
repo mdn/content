@@ -62,7 +62,7 @@ Each {{domxref("RTCPeerConnection")}} has methods which provide access to the li
 
 ### Leveraging RTP to implement a "hold" feature
 
-Because the streams for an `RTCPeerConnection` are implemented using RTP and the interfaces {{anch("RTCPeerConnection and RTP", "above")}}, you can take advantage of the access this gives you to the internals of streams to make adjustments. Among the simplest things you can do is to implement a "hold" feature, wherein a participant in a call can click a button and turn off their microphone, begin sending music to the other peer instead, and stop accepting incoming audio.
+Because the streams for an `RTCPeerConnection` are implemented using RTP and the interfaces [above](#rtcpeerconnection_and_rtp), you can take advantage of the access this gives you to the internals of streams to make adjustments. Among the simplest things you can do is to implement a "hold" feature, wherein a participant in a call can click a button and turn off their microphone, begin sending music to the other peer instead, and stop accepting incoming audio.
 
 > **Note:** This example makes use of modern JavaScript features including [async functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) and the [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) expression. This enormously simplifies and makes far more readable the code dealing with the promises returned by WebRTC methods.
 

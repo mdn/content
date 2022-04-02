@@ -14,17 +14,11 @@ browser-compat: api.CSSKeyframesRule.cssRules
 
 The read-only **`cssRules`** property of the {{domxref("CSSKeyframeRule")}} interface returns a {{domxref("CSSRuleList")}} containing the rules in the keyframes {{cssxref("at-rule")}}.
 
-## Syntax
-
-```js
-var cssRules = CSSKeyframesRule.cssRules;
-```
-
-### Value
+## Value
 
 A {{domxref('CSSRuleList')}}.
 
-## Example
+## Examples
 
 The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
 `myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object. The `cssRules` property returns a {{domxref("CSSRuleList")}} containing two rules.

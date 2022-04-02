@@ -26,7 +26,7 @@ The [Internet Assigned Numbers Authority (IANA)](https://www.iana.org/) is respo
 
 ## Structure of a MIME type
 
-A simplest MIME type consists of a _type_ and a _subtype_. A MIME type comprises these strings concatenated with a slash (`/`). No whitespace is allowed in a MIME type:
+A MIME type most-commonly consists of just two parts: a _type_ and a _subtype_, separated by a slash (`/`) — with no whitespace between:
 
 ```
 type/subtype
@@ -107,7 +107,7 @@ pieces, often with different MIME types; they can also be used — especially in
 scenarios — to represent multiple, separate files which are all part of the same
 transaction. They represent a **composite document**.
 
-With the exception of `multipart/form-data`, used in the {{HTTPMethod("POST")}} method of [HTML Forms](/en-US/docs/Learn/Forms), and `multipart/byteranges`, used with {{HTTPStatus("206")}} `Partial Content` to send part of a document, HTTP doesn't handle multipart documents in a special way: the message is transmitted to the browser (which will likely
+Except for `multipart/form-data`, used in the {{HTTPMethod("POST")}} method of [HTML Forms](/en-US/docs/Learn/Forms), and `multipart/byteranges`, used with {{HTTPStatus("206")}} `Partial Content` to send part of a document, HTTP doesn't handle multipart documents in a special way: the message is transmitted to the browser (which will likely
 show a "Save As" window if it doesn't know how to display the document).
 
 There are two multipart types:
@@ -118,7 +118,7 @@ There are two multipart types:
     Examples include `message/rfc822` (for forwarded or replied-to message quoting) and `message/partial` to allow breaking a large message into smaller ones automatically to be reassembled by the recipient.
     [(Registration at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#message)
 - `multipart`
-  - : Data that is comprised of multiple components which may individually have different MIME types.
+  - : Data that consists of multiple components which may individually have different MIME types.
     Examples include `multipart/form-data` (for data produced using the {{domxref("FormData")}} API) and `multipart/byteranges` (defined in {{RFC(7233, "5.4.1")}} and used with {{Glossary("HTTP")}}'s {{HTTPStatus(206)}}
     "Partial Content" response returned when the fetched data is only part of the content, such as is delivered using the {{HTTPHeader("Range")}} header).
     [(Registration at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#multipart)
@@ -152,19 +152,23 @@ All HTML content should be served with this type. Alternative MIME types for XHT
 
 ### text/javascript
 
-Per the HTML specification, JavaScript files should always be served using the MIME type `text/javascript`.
-No other values are considered valid, and using any of those may result in scripts that do not load or run.
+Per the current relevant standards, JavaScript content should always be served using the MIME type `text/javascript`.
+No other MIME types are considered valid for JavaScript, and using any MIME type other than`text/javascript` may result in scripts that do not load or run.
 
-For historical reasons, the [MIME Sniffing Standard](https://mimesniff.spec.whatwg.org/)
-(the definition of how browsers should interpret media types and figure
-out what to do with content that doesn't have a valid one) allows JavaScript to be served using any MIME type that essentially matches any of the following:
+You may find some JavaScript content incorrectly served with a `charset` parameter as part of the MIME type — as an attempt to specify the character set for the script content.
+That `charset` parameter isn’t valid for JavaScript content, and in most cases will result in a script failing to load.
 
-- `application/javascript`
-- `application/ecmascript`
+#### Legacy JavaScript MIME types
+
+In addition to the `text/javascript` MIME type, for historical reasons, the [MIME Sniffing Standard](https://mimesniff.spec.whatwg.org/)
+(the definition of how browsers should interpret MIME types and figure
+out what to do with content that doesn't have a valid one) also allows JavaScript to be served using any of the following legacy JavaScript MIME types:
+
+- `application/javascript` {{deprecated_inline}}
+- `application/ecmascript` {{deprecated_inline}}
 - `application/x-ecmascript` {{Non-standard_Inline}}
 - `application/x-javascript` {{Non-standard_Inline}}
-- `text/javascript`
-- `text/ecmascript`
+- `text/ecmascript` {{deprecated_inline}}
 - `text/javascript1.0` {{Non-standard_Inline}}
 - `text/javascript1.1` {{Non-standard_Inline}}
 - `text/javascript1.2` {{Non-standard_Inline}}
@@ -178,9 +182,6 @@ out what to do with content that doesn't have a valid one) allows JavaScript to 
 
 > **Note:** Even though any given {{Glossary("user agent")}} may support any or all of these, you should only use `text/javascript`.
 > It's the only MIME type guaranteed to work now and into the future.
-
-Some content you find may have a `charset` parameter at the end of the `text/javascript` media type, to specify the character set used to represent the code's content.
-This is not valid, and in most cases will result in a script not being loaded.
 
 ### Image types
 
@@ -353,7 +354,7 @@ Servers can prevent MIME sniffing by sending the {{HTTPHeader("X-Content-Type-Op
 MIME types are not the only way to convey document type information:
 
 - Filename suffixes are sometimes used, especially on Microsoft Windows.
-  Not all operating systems consider these suffixes meaningful (such as Linux and MacOS), and there is no guarantee they are correct.
+  Not all operating systems consider these suffixes meaningful (such as Linux and macOS), and there is no guarantee they are correct.
 - Magic numbers. The syntax of different formats allows file-type inference by looking at their byte structure.
   For example, GIF files start with the `47 49 46 38 39` hexadecimal value (`GIF89`), and PNG files with `89 50 4E 47` (`.PNG`).
   Not all file types have magic numbers, so this is not 100% reliable either.

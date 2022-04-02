@@ -19,13 +19,7 @@ containing one or more {{domxref("HTMLEmbedElement")}}s representing the
 > **Note:** For a list of installed plugins, use [Navigator.plugins](/en-US/docs/Web/API/Navigator/plugins)
 > instead.
 
-## Syntax
-
-```js
-embedArrayObj = document.plugins
-```
-
-### Value
+## Value
 
 An {{domxref("HTMLCollection")}}.
 

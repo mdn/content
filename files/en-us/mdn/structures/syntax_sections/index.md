@@ -64,7 +64,7 @@ hasStorageAccess();
 
 ##### Multiple lines/Optional parameters
 
-Methods that can be used in many different different ways should be expanded out into multiple lines, showing all possible variations.
+Methods that can be used in many different ways should be expanded out into multiple lines, showing all possible variations.
 
 Each option should be on its own line, omitting both per-option comments and assignment. For example, {{jsxref("Array.prototype.slice()")}} has two optional parameters, and would be documented as shown below:
 

@@ -18,7 +18,7 @@ The **`bodyUsed`** read-only property of the {{domxref("Response")}} interface i
 
 A boolean value.
 
-## Example
+## Examples
 
 In our [fetch request example](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (run [fetch request live](https://mdn.github.io/fetch-examples/fetch-request/)),
 we create a new request using the {{domxref("Request.Request","Request()")}} constructor,

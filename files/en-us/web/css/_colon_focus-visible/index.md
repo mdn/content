@@ -78,6 +78,7 @@ custom-button:focus {
   custom-button:focus {
     /* Remove the focus indicator on mouse-focus for browsers
        that do support :focus-visible */
+    outline: none;
     background: transparent;
   }
 }

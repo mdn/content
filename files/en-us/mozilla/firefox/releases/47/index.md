@@ -72,7 +72,7 @@ _No change._
 
 #### Service Worker and related APIs
 
-- The {{domxref("Request.Request()")}} constructor can now accept a referrer option in its init object ({{bug(1251448)}}).
+- The {{domxref("Request.Request", "Request()")}} constructor can now accept a referrer option in its init object ({{bug(1251448)}}).
 - The {{domxref("Request.referrerPolicy")}} property is now supported ({{bug(1251872)}}).
 - [Service workers](/en-US/docs/Web/API/Service_Worker_API) and [Push](/en-US/docs/Web/API/Push_API) have been disabled in the [Firefox 45 Extended Support Release](https://www.mozilla.org/en-US/firefox/organizations/) (ESR) ({{bug(1232029)}}).
 

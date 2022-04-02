@@ -20,14 +20,7 @@ property, it silently fails.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-const passwordString = url.password
-url.password = newPassword
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}}.
 

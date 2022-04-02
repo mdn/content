@@ -45,7 +45,7 @@ inside the {{domxref("CacheStorage")}} object.
 
 ## Examples
 
-In this code snippet we wait for an {{domxref("ServiceWorkerGlobalScope.onactivate",
+In this code snippet we wait for an {{domxref("ServiceWorkerGlobalScope.activate_event",
   "activate")}} event, and then run a
 {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} block that clears up any old,
 unused caches before a new service worker is activated. Here we have an allowlist

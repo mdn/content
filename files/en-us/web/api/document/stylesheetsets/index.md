@@ -15,15 +15,11 @@ browser-compat: api.Document.styleSheetSets
 
 The **`styleSheetSets`** read-only property returns a live list of all of the currently-available style sheet sets.
 
-## Syntax
+## Value
 
-```js
-var sets = document.styleSheetSets;
-```
+A list of style sheet sets that are available.
 
-On return, `sets` is a list of style sheet sets that are available.
-
-## Example
+## Examples
 
 Given an {{HTMLElement("ul")}} (list) element with the ID "sheetList", you can populate
 it with the names of all the available style sheet sets with code like this:

@@ -23,13 +23,7 @@ interface, but, if defined, it is called internally by the
 
 Defining the getter is optional.
 
-## Syntax
-
-```js
-AudioWorkletProcessorSubclass.parameterDescriptors;
-```
-
-### Value
+## Value
 
 An iterable of {{domxref("AudioParamDescriptor")}}-based objects. The properties of
 these objects are as follows:

@@ -45,8 +45,8 @@ The last index of the element in the array; **-1** if not found.
 ## Description
 
 `lastIndexOf` compares `searchElement` to elements of the Array
-using [strict
-equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) (the same method used by the `===`, or triple-equals, operator).
+using [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+(the same method used by the `===`, or triple-equals, operator).
 
 ## Examples
 

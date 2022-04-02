@@ -73,8 +73,8 @@ eval(expression.toString());            // returns 4
 ```
 
 If you use the `eval` function _indirectly,_ by invoking it via a
-reference other than `eval`, [as of ECMAScript
-5](https://www.ecma-international.org/ecma-262/5.1/#sec-10.4.2) it works in the global scope rather than the local scope. This means, for
+reference other than `eval`, [as of ECMAScript 5](https://www.ecma-international.org/ecma-262/5.1/#sec-10.4.2)
+it works in the global scope rather than the local scope. This means, for
 instance, that function declarations create global functions, and that the code being
 evaluated doesn't have access to local variables within the scope where it's being
 called.
@@ -221,8 +221,9 @@ eval( 'var result = obj.' + propName );
 ```
 
 However, `eval()` is not necessary here. In fact, its use here is
-discouraged. Instead, use the [property
-accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors), which are much faster and safer:
+discouraged. Instead, use the
+[property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors),
+which are much faster and safer:
 
 ```js
 var obj = { a: 20, b: 30 };
@@ -387,7 +388,5 @@ var fct2 = eval(fctStr2)  // return a function
 ## See also
 
 - {{jsxref("Global_Objects/uneval", "uneval()")}}
-- [Property
-  accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
-- [WebExtensions:
-  Using eval in content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#using_eval_in_content_scripts)
+- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [WebExtensions: Using eval in content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#using_eval_in_content_scripts)

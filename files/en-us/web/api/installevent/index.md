@@ -15,7 +15,7 @@ browser-compat: api.InstallEvent
 ---
 {{non-standard_header}}{{deprecated_header}}
 
-The parameter passed into the {{domxref("ServiceWorkerGlobalScope.oninstall", "oninstall")}} handler, the `InstallEvent` interface represents an install action that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a {{domxref("ServiceWorker")}}. As a child of {{domxref("ExtendableEvent")}}, it ensures that functional events such as {{domxref("FetchEvent")}} are not dispatched during installation.
+The parameter passed into the {{domxref("ServiceWorkerGlobalScope.install_event", "oninstall")}} handler, the `InstallEvent` interface represents an install action that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a {{domxref("ServiceWorker")}}. As a child of {{domxref("ExtendableEvent")}}, it ensures that functional events such as {{domxref("FetchEvent")}} are not dispatched during installation.
 
 This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
@@ -23,7 +23,7 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
 ## Constructor
 
-- {{domxref("InstallEvent.InstallEvent()")}}
+- {{domxref("InstallEvent.InstallEvent", "InstallEvent()")}}
   - : Creates a new `InstallEvent` object.
 
 ## Properties
@@ -39,7 +39,7 @@ _Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
 
 ## Examples
 
-This code snippet is from the [service worker prefetch sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js) (see [prefetch running live](https://googlechrome.github.io/samples/service-worker/prefetch/).) The code calls {{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}} in {{domxref("ServiceWorkerGlobalScope.oninstall")}} and delays treating the {{domxref("ServiceWorkerRegistration.installing")}} worker as installed until the passed promise resolves successfully. The promise resolves when all resources have been fetched and cached, or when any exception occurs.
+This code snippet is from the [service worker prefetch sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js) (see [prefetch running live](https://googlechrome.github.io/samples/service-worker/prefetch/).) The code calls {{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}} in {{domxref("ServiceWorkerGlobalScope.install_event", "ServiceWorkerGlobalScope.oninstall")}} and delays treating the {{domxref("ServiceWorkerRegistration.installing")}} worker as installed until the passed promise resolves successfully. The promise resolves when all resources have been fetched and cached, or when any exception occurs.
 
 The code snippet also shows a best practice for versioning caches used by the service worker. Although this example has only one cache, you can use this approach for multiple caches. The code maps a shorthand identifier for a cache to a specific, versioned cache name.
 

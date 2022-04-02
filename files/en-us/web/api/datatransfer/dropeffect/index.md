@@ -36,13 +36,7 @@ had after the last {{event("dragenter")}} or {{event("dragover")}} event. In a
 {{event("dragend")}} event, for instance, if the desired dropEffect is "move", then the
 data being dragged should be removed from the source.
 
-## Syntax
-
-```js
-dataTransfer.dropEffect;
-```
-
-### Values
+## Value
 
 A {{domxref("DOMString")}} representing the drag operation effect. The possible values
 are:
@@ -59,7 +53,7 @@ are:
 Assigning any other value to `dropEffect` has no effect and the old value is
 retained.
 
-## Example
+## Examples
 
 This example shows the use of the `dropEffect` and
 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} properties.

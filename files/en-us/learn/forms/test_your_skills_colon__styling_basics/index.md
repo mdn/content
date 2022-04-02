@@ -16,7 +16,7 @@ This aim of this skill test is to assess whether you've understood our [Styling 
 
 > **Note:** You can try out solutions by editing the starting point file locally, however it may be helpful to put your code in an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >
-> If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
+> If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
 
 ## Styling basics 1
 
@@ -28,7 +28,7 @@ Our basic form styling assessment is fairly free-form, and you have a lot of fle
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/styling-basics/styling-basics1-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/styling-basics/styling-basics1-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

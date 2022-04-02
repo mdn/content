@@ -124,7 +124,7 @@ With this, you are ready to move on.
 Let's look at setting up Gulp and using it to automate some testing tools.
 
 1. To begin with, create a test npm project using the procedure detailed at the bottom of the previous section.
-2. Next, you'll need some sample HTML, CSS and JavaScript content to test your system on — make copies of our sample [index.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/automation/index.html), [main.js](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/automation/main.js), and [style.css](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/automation/style.css) files in a subfolder with the name `src` inside your project folder. You can try your own test content if you like, but bear in mind that such tools won't work on internal JS/CSS — you need external files.
+2. Next, you'll need some sample HTML, CSS and JavaScript content to test your system on — make copies of our sample [index.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/automation/index.html), [main.js](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/automation/main.js), and [style.css](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/automation/style.css) files in a subfolder with the name `src` inside your project folder. You can try your own test content if you like, but bear in mind that such tools won't work on internal JS/CSS — you need external files.
 3. First, install gulp globally (meaning, it will be available across all projects) using the following command:
 
     ```bash
@@ -425,7 +425,7 @@ It has several clients available to allow you to make calls to the API using you
 
 Let's have a brief look at how we'd access the API using Node.js and [node-saucelabs](https://github.com/danjenkins/node-saucelabs).
 
-1. First, set up a new npm project to test this out, as detailed in {{anch("Setting up Node and npm")}}. Use a different directory name than before, like `sauce-test` for example.
+1. First, set up a new npm project to test this out, as detailed in [Setting up Node and npm](#setting_up_node_and_npm). Use a different directory name than before, like `sauce-test` for example.
 2. Install the Node Sauce Labs wrapper using the following command:
 
     ```
@@ -536,7 +536,7 @@ It has several clients available to allow you to make calls to the API using you
 
 Let's have a brief look at how we'd access the API using Node.js.
 
-1. First, set up a new npm project to test this out, as detailed in {{anch("Setting up Node and npm")}}. Use a different directory name than before, like `bstack-test` for example.
+1. First, set up a new npm project to test this out, as detailed in [Setting up Node and npm](#setting_up_node_and_npm). Use a different directory name than before, like `bstack-test` for example.
 2. Create a new file inside your project root called `call_bstack.js`. give it the following contents:
 
     ```js
@@ -730,7 +730,7 @@ TestingBot has several API clients you can use to interact with the API, includi
 
 Below is an example on how to interact with the TestingBot API with the NodeJS client [testingbot-api](https://www.npmjs.com/package/testingbot-api).
 
-1. First, set up a new npm project to test this out, as detailed in {{anch("Setting up Node and npm")}}. Use a different directory name than before, like `tb-test` for example.
+1. First, set up a new npm project to test this out, as detailed in [Setting up Node and npm](#setting_up_node_and_npm). Use a different directory name than before, like `tb-test` for example.
 2. Install the Node TestingBot wrapper using the following command:
 
     ```

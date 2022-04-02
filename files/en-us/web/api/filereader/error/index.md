@@ -14,12 +14,6 @@ browser-compat: api.FileReader.error
 The {{domxref("FileReader")}} **`error`** property returns the
 error that occurred while reading the file.
 
-## Syntax
-
-```js
-var error = instanceOfFileReader.error
-```
-
 ## Value
 
 A {{domxref("DOMError")}} containing the relevant error. In Chrome 48+/Firefox 58+ this

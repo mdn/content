@@ -26,13 +26,7 @@ merchant.
 This data should be passed into the {{domxref("MerchantValidationEvent.complete",
   "complete()")}} method to let the user agent complete the transaction.
 
-## Syntax
-
-```js
-validationURL = merchantValidationEvent.validationURL;
-```
-
-### Value
+## Value
 
 A read-only {{domxref("USVString")}} giving the URL from which to load payment handler
 specific data needed to complete the merchant verification process. Once this has been

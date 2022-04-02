@@ -13,13 +13,7 @@ browser-compat: api.TextDecoderStream.encoding
 
 The **`encoding`** read-only property of the {{domxref("TextDecoderStream")}} interface returns a {{DOMxRef("DOMString")}} containing the name of the encoding algorithm used by the specific encoder.
 
-## Syntax
-
-```js
-var encoding = TextDecoderStream.encoding;
-```
-
-### Value
+## Value
 
 A {{DOMxRef("DOMString")}}, ASCII lowercased.
 

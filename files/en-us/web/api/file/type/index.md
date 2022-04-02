@@ -14,17 +14,11 @@ browser-compat: api.File.type
 
 Returns the media type ([MIME](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)) of the file represented by a {{domxref("File")}} object.
 
-## Syntax
-
-```js
-var name = file.type;
-```
-
 ## Value
 
 A string, containing the media type(MIME) indicating the type of the file, for example "image/png" for PNG images
 
-## Example
+## Examples
 
 ```html
 <input type="file" multiple onchange="showType(this)">

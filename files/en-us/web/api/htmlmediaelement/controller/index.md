@@ -14,17 +14,11 @@ browser-compat: api.HTMLMediaElement.controller
 
 The **`HTMLMediaElement.controller`** property represents the media controller assigned to the element.
 
-## Syntax
-
-```js
-...
-```
-
-### Value
+## Value
 
 A `MediaController` object or `null` if no media controller is assigned to the element. The default is `null`.
 
-## Example
+## Examples
 
 ```js
 ...

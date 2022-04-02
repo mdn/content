@@ -19,13 +19,7 @@ The read-only {{domxref("HTMLImageElement")}} interface's
 **`complete`** attribute is a Boolean value which indicates
 whether or not the image has completely loaded.
 
-## Syntax
-
-```js
-let doneLoading = htmlImageElement.complete;
-```
-
-### Value
+## Value
 
 A Boolean value which is `true` if the image has completely loaded;
 otherwise, the value is `false`.

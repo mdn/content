@@ -15,13 +15,7 @@ browser-compat: api.Animation.pending
 
 The read-only **`Animation.pending`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) indicates whether the animation is currently waiting for an asynchronous operation such as initiating playback or pausing a running animation.
 
-## Syntax
-
-```js
-var pending = Animation.pending;
-```
-
-### Value
+## Value
 
 **`true`** if the animation is pending, **`false`** otherwise.
 

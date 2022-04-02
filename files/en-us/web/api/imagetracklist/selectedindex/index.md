@@ -13,7 +13,7 @@ browser-compat: api.ImageTrackList.selectedIndex
 
 The **`selectedIndex`** property of the {{domxref("ImageTrackList")}} interface returns the `index` of the selected track.
 
-### Value
+## Value
 
 An integer.
 

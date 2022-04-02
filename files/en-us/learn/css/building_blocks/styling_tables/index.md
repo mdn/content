@@ -92,7 +92,7 @@ With only the default browser styling it looks cramped, hard to read, and boring
 
 Let's work through styling our table example together.
 
-1. To start with, make a local copy of the [sample markup](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-unstyled.html), download both images ([noise](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/noise.png) and [leopardskin](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/leopardskin.jpg)), and put the three resulting files in a working directory somewhere on your local computer.
+1. To start with, make a local copy of the [sample markup](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/punk-bands-unstyled.html), download both images ([noise](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/noise.png) and [leopardskin](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/leopardskin.jpg)), and put the three resulting files in a working directory somewhere on your local computer.
 2. Next, create a new file called `style.css` and save it in the same directory as your other files.
 3. Link the CSS to the HTML by placing the following line of HTML inside your {{htmlelement("head")}}:
 

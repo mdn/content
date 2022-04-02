@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingCurrent = browser.windows.getCurrent(
+let gettingCurrent = browser.windows.getCurrent(
   getInfo               // optional object
 )
 ```
@@ -66,7 +66,7 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  var getting = browser.windows.getCurrent({populate: true});
+  let getting = browser.windows.getCurrent({populate: true});
   getting.then(logTabs, onError);
 });
 ```

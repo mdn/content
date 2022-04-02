@@ -27,7 +27,7 @@ Note that you can't use this function to connect an extension to its content scr
 ## Syntax
 
 ```js
-var port = browser.runtime.connect(
+let port = browser.runtime.connect(
   extensionId, // optional string
   connectInfo  // optional object
 )
@@ -65,7 +65,7 @@ This content script:
 ```js
 // content-script.js
 
-var myPort = browser.runtime.connect({name:"port-from-cs"});
+let myPort = browser.runtime.connect({name:"port-from-cs"});
 myPort.postMessage({greeting: "hello from content script"});
 
 myPort.onMessage.addListener(function(m) {
@@ -92,7 +92,7 @@ The corresponding background script:
 ```js
 // background-script.js
 
-var portFromCS;
+let portFromCS;
 
 function connected(p) {
   portFromCS = p;

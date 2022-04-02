@@ -135,7 +135,7 @@ Git can be [downloaded and installed via the git-scm website](https://git-scm.co
 
 You can interact with git in a number of different ways, from using the command line to issue commands, to using a [git GUI app](https://git-scm.com/downloads/guis) to issue the same commands by pushing buttons, or even from directly inside your code editor, as seen in the Visual Studio Code example below:
 
-![github integration shown in VS Code](vscode-git.png)
+![GitHub integration shown in VS Code](vscode-git.png)
 
 Anyway, installing git is all we need to do for now. Let's move on.
 
@@ -259,7 +259,7 @@ At this point, we'll get hold of the project's code files (HTML, CSS, JavaScript
 
 1. To get hold of the code files, visit <https://github.com/remy/mdn-will-it-miss> and download and unzip the contents of this repo onto your local drive somewhere. You can download the entire project as a zip file by selecting _Clone or download_ > _Download ZIP_.
 
-    ![The github will it miss repo](github-will-it-miss.png)
+    ![The GitHub will it miss repo](github-will-it-miss.png)
 
 2. Now copy the contents of the project's `src` directory to your currently empty `src` directory.
 

@@ -19,14 +19,7 @@ The **`variant`** property of the
 values. It is equivalent to the {{cssxref("@font-face/font-variant", "font-variant")}}
 descriptor.
 
-## Syntax
-
-```js
-var variantSubProperty = FontFace.variant;
-FontFace.variant = variantSubProperty;
-```
-
-### Value
+## Value
 
 A {{domxref('CSSOMString')}} containing a descriptor as it would be defined in a style
 sheet's `@font-face` rule.

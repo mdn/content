@@ -13,13 +13,7 @@ browser-compat: api.NavigatorUAData.brands
 
 The **`brands`** read-only property of the {{domxref("NavigatorUAData")}} interface returns an array of brand information.
 
-## Syntax
-
-```js
-let brands = NavigatorUAData.brands;
-```
-
-### Value
+## Value
 
 An array containing the following information for each brand:
 

@@ -47,8 +47,6 @@ If your main axis is `column` or `column-reverse` then the cross axis runs along
 
 ![If flex-direction is set to column then the cross axis runs in the inline direction.](basics4.png)
 
-Understanding which axis is which is important when we start to look at aligning and justifying flex items; flexbox features properties that align and justify content along one axis or the other.
-
 ## Start and end lines
 
 Another vital area of understanding is how flexbox makes no assumption about the writing mode of the document. In the past, CSS was heavily weighted towards horizontal and left-to-right writing modes. Modern layout methods encompass the range of writing modes and so we no longer assume that a line of text will start at the top left of a document and run towards the right hand side, with new lines appearing one under the other.

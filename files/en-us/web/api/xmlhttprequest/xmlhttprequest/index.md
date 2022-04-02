@@ -25,7 +25,7 @@ XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest).
 ## Syntax
 
 ```js
-const request = new XMLHttpRequest();
+new XMLHttpRequest();
 ```
 
 ### Parameters

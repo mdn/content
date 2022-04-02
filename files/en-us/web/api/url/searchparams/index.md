@@ -18,13 +18,7 @@ access to the {{httpmethod("GET")}} decoded query arguments contained in the URL
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-const urlSearchParams = url.searchParams
-```
-
-### Value
+## Value
 
 A {{domxref("URLSearchParams")}} object.
 

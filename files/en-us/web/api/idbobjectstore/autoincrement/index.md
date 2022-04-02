@@ -22,13 +22,7 @@ Note that every object store has its own separate auto increment counter.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var myAutoIncrement = objectStore.autoIncrement;
-```
-
-### Value
+## Value
 
 A boolean value:
 
@@ -37,7 +31,7 @@ A boolean value:
 | `true`  | The object store auto increments.           |
 | `false` | The object store does not auto increment.   |
 
-## Example
+## Examples
 
 In the following code snippet, we open a read/write transaction on our database and add
 some data to an object store using `add()`. After the object store has been

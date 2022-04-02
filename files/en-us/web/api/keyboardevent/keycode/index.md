@@ -23,7 +23,7 @@ You should avoid using this if possible; it's been deprecated for some time. Ins
 
 > **Note:** Web developers shouldn't use the `keyCode` attribute for printable characters when handling `keydown` and `keyup` events. As described above, the `keyCode` attribute is not useful for printable characters, especially those input with the <kbd>Shift</kbd> or <kbd>Alt</kbd> key pressed. When implementing a shortcut key handler, the {{event("keypress")}} event is usually better (at least when Gecko is the runtime in use). See [Gecko Keypress Event](/en-US/docs/Gecko_Keypress_Event) for details.
 
-## Example
+## Examples
 
 ```js
 window.addEventListener("keydown", function (event) {

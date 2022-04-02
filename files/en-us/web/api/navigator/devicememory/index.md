@@ -22,18 +22,12 @@ rounding down to the nearest power of 2, then dividing that number by 1024. It i
 clamped within lower and upper bounds to protect the privacy of owners of very low- or
 high-memory devices.
 
-## Syntax
-
-```js
-memoryAmount = navigator.deviceMemory
-```
-
-### Value
+## Value
 
 A floating point number; one of `0.25`, `0.5`, `1`,
 `2`, `4`, `8`.
 
-## Example
+## Examples
 
 ```js
 const memory = navigator.deviceMemory

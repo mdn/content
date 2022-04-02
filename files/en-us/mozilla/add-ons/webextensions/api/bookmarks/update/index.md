@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var updating = browser.bookmarks.update(
+let updating = browser.bookmarks.update(
   id,                    // string
   changes                // object
 )
@@ -64,7 +64,7 @@ function updateFolders(items) {
   for (item of items) {
     // only folders, so skip items with a `url`
     if (!item.url) {
-      var updating = browser.bookmarks.update(item.id, {
+      let updating = browser.bookmarks.update(item.id, {
         title: "Mozilla Developer Network (MDN)"
       });
       updating.then(onFulfilled, onRejected);
@@ -72,7 +72,7 @@ function updateFolders(items) {
   }
 }
 
-var searching = browser.bookmarks.search({ title: "MDN" });
+let searching = browser.bookmarks.search({ title: "MDN" });
 searching.then(updateFolders, onRejected);
 ```
 

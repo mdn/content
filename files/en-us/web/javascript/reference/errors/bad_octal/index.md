@@ -61,7 +61,5 @@ Use a leading zero followed by the letter "o";
 
 ## See also
 
-- [Lexical
-  grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#octal)
-- [SyntaxError:
-  "0"-prefixed octal literals and octal escape seq. are deprecated](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal)
+- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#octal)
+- [SyntaxError: "0"-prefixed octal literals and octal escape seq. are deprecated](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal)

@@ -128,13 +128,13 @@ Highlights:
 
 #### Service Workers
 
-- The {{domxref("ServiceWorkerMessageEvent")}} and {{domxref("ExtendableMessageEvent")}} interfaces have been implemented ({{bug(1143717)}} and {{bug(1207068)}}).
+- The `ServiceWorkerMessageEvent` and {{domxref("ExtendableMessageEvent")}} interfaces have been implemented ({{bug(1143717)}} and {{bug(1207068)}}).
 - {{domxref("Headers")}} objects now support a pair iterator, meaning that the methods {{domxref("Headers.entries()")}}, {{domxref("Headers.keys()")}}, and {{domxref("Headers.values()")}} are now available; {{jsxref("Symbol.iterator")}} now also returns the default iterator for them ({{bug(1108181)}}).
 - The {{domxref('XMLHttpRequest')}} API has been disabled on Service Workers ({{bug(931243)}}).
 - The interface {{domxref("FetchEvent")}} now extends {{domxref("ExtendableEvent")}}, giving it access to the {{domxref("ExtendableEvent.waitUntil()")}} method. ({{bug(1214772)}}).
 - Following a recent change in the specification, `FetchEvent.client` has been removed ({{bug(1218135)}}).
 - To match the latest specification, the {{domxref("ServiceWorkerContainer.onreloadpage")}} has been removed ({{bug(1218139)}}).
-- The event handlers {{domxref("ServiceWorkerGlobalScope.onbeforeevicted")}} and {{domxref("ServiceWorkerGlobalScope.onevicted")}} have been removed as they weren't following the spec. They will be reintroduced in the future, but their removal will allow feature detection to work as expected ({{bug(1218142)}}).
+- The event handlers {{domxref("ServiceWorkerGlobalScope.beforeevicted_event", "onbeforeevicted")}} and {{domxref("ServiceWorkerGlobalScope.evicted_event", "onevicted")}} have been removed as they weren't following the spec. They will be reintroduced in the future, but their removal will allow feature detection to work as expected ({{bug(1218142)}}).
 - In the {{domxref("FetchEvent.FetchEvent", "FetchEvent()")}} constructor, if the `isReload` member is not present in the options dictionary, it now defaults to `false` ({{bug(1216401)}}).
 - The {{domxref("Client.frameType")}} property is now implemented on the right interface; it was on {{domxref("WindowClient")}} before ({{bug(1218146)}}).
 - When AppCache is used to provide offline support for a page, a warning message is now displayed in the console advising developers to use [Service workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers) instead ({{bug("1204581")}}.)
@@ -148,7 +148,7 @@ Highlights:
   - `mozRTCIceCandidate` is now {{domxref("RTCIceCandidate")}}.
   - `mozRTCSessionDescription` is now {{domxref("RTCSessionDescription")}}.
 
-- The {{domxref("RTCDataChannel.bufferedAmountLowThreshold")}} and {{domxref("RTCDataChannel.onbufferedamountlow")}} properties, as well as the {{event("bufferedamountlow")}} event, have been implemented ({{bug(1178091)}}).
+- The {{domxref("RTCDataChannel.bufferedAmountLowThreshold")}} property, as well as the {{event("bufferedamountlow")}} event and its event handler, have been implemented ({{bug(1178091)}}).
 - The attribute {{domxref("RTCPeerConnection.canTrickleIceCandidates")}} has been added, the non-standard method {{domxref("RTCPeerConnection.updateIce()")}} removed ({{bug(1209744)}}).
 - The {{domxref("MediaStream")}} interface now supports the {{domxref("MediaStream.addTrack()")}} and {{domxref("MediaStream.removeTrack()")}} methods ({{bug(1103188)}}).
 - The constructor {{domxref("MediaStream.MediaStream", "MediaStream()")}} has been implemented ({{bug(1070216)}}).

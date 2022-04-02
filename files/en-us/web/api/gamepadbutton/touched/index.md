@@ -21,7 +21,7 @@ If the button is not capable of detecting touch but can return an analog value, 
 
 A {{jsxref("Boolean")}}. True if touched.
 
-## Example
+## Examples
 
 ```js
 let gp = navigator.getGamepads()[0]; // Get the first gamepad object

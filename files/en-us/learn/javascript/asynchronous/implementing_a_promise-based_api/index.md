@@ -88,9 +88,9 @@ function alarm(person, delay) {
 
 This function creates and returns a new `Promise`. Inside the executor for the promise, we:
 
-* check that `delay` is not negative, and throw an error if it is.
+- check that `delay` is not negative, and throw an error if it is.
 
-* call `window.setTimeout()`, passing a callback and `delay`. The callback will be called when the timer expires, and in the callback we call `resolve`, passing in our `"Wake up!"` message.
+- call `window.setTimeout()`, passing a callback and `delay`. The callback will be called when the timer expires, and in the callback we call `resolve`, passing in our `"Wake up!"` message.
 
 ## Using the alarm() API
 
@@ -152,7 +152,6 @@ Try setting different values for "Name" and "Delay". Try setting a negative valu
 ## Using async and await with the alarm() API
 
 Since `alarm()` returns a `Promise`, we can do everything with it that we could do with any other promise: promise chaining, `Promise.all()`, and `async` / `await`:
-
 
 ```html hidden
 <div>

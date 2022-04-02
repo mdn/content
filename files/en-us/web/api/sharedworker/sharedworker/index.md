@@ -24,8 +24,8 @@ policy](/en-US/docs/Web/Security/Same-origin_policy).
 ## Syntax
 
 ```js
-var myWorker = new SharedWorker(aURL, name);
-var myWorker = new SharedWorker(aURL, options);
+new SharedWorker(aURL, name);
+new SharedWorker(aURL, options);
 ```
 
 ### Parameters

@@ -20,7 +20,7 @@ new {{domxref("CSSMathMax")}} object which represents the CSS {{CSSXref('max()',
 ## Syntax
 
 ```js
-var CSSMathMax = new CSSMathMax(args);
+new CSSMathMax(args);
 ```
 
 ### Parameters

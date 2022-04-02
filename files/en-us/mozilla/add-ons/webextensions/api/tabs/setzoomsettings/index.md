@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var settingZoomSettings = browser.tabs.setZoomSettings(
+let settingZoomSettings = browser.tabs.setZoomSettings(
   tabId,           // optional integer
   zoomSettings     // ZoomSettings
 )
@@ -52,7 +52,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var setting = browser.tabs.setZoomSettings({mode:"disabled"});
+let setting = browser.tabs.setZoomSettings({mode:"disabled"});
 setting.then(onSet, onError);
 ```
 

@@ -17,12 +17,6 @@ which indicates whether the video can be rendered more efficiently.
 
 This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
-## Syntax
-
-```js
-HTMLVideoElement.msIsLayoutOptimalForPlayback: {{DOMxRef("DOMString")}};
-```
-
 ## Value
 
 Boolean value set to _true_ indicates that video is being rendered optimally

@@ -42,7 +42,7 @@ function preload() {
 
 ### Adding the paddle graphic
 
-Just so we don't forget, at this point you should grab the [paddle graphic](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/paddle.png) from Github, and save it in your `/img` folder.
+Just so we don't forget, at this point you should grab the [paddle graphic](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/paddle.png) from GitHub, and save it in your `/img` folder.
 
 ### Rendering the paddle, with physics
 

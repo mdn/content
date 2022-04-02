@@ -638,7 +638,7 @@ This gives us the following result:
 
 {{ EmbedLiveSample('Table_layout', '100%', '170') }}
 
-You can also see this example live at [css-tables-example.html](https://mdn.github.io/learning-area/css/styling-boxes/box-model-recap/css-tables-example.html) (see the [source code](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/box-model-recap/css-tables-example.html) too.)
+You can also see this example live at [css-tables-example.html](https://mdn.github.io/learning-area/css/styling-boxes/box-model-recap/css-tables-example.html) (see the [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/box-model-recap/css-tables-example.html) too.)
 
 > **Note:** Table layout, unlike the other topics of this page, won't be further covered in this module due to its legacy application.
 

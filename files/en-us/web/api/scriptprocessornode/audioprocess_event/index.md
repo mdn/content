@@ -27,15 +27,15 @@ An {{domxref("AudioProcessingEvent")}}. Inherits from {{domxref("Event")}}.
 _Also implements the properties inherited from its parent, {{domxref("Event")}}._
 
 - `playbackTime` {{ReadOnlyInline}}</td>
- - : A double representing the time when the audio will be played, 
+- : A double representing the time when the audio will be played,
    as defined by the time of {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}.
 - `inputBuffer` {{ReadOnlyInline}}
-  - : An {{domxref("AudioBuffer")}} that is the buffer containing the input audio data to be processed. 
+  - : An {{domxref("AudioBuffer")}} that is the buffer containing the input audio data to be processed.
     The number of channels is defined as a parameter `numberOfInputChannels`,
     of the factory method {{domxref("BaseAudioContext/createScriptProcessor", "AudioContext.createScriptProcessor()")}}.
     Note that the returned <code>AudioBuffer</code> is only valid in the scope of the event handler.
 - `outputBuffer` {{ReadOnlyInline}}
-  - : An {{domxref("AudioBuffer")}} that is the buffer where the output audio data should be written. 
+  - : An {{domxref("AudioBuffer")}} that is the buffer where the output audio data should be written.
     The number of channels is defined as a parameter, <code>numberOfOutputChannels</code>,
     of the factory method {{domxref("BaseAudioContext/createScriptProcessor", "AudioContext.createScriptProcessor()")}}.
     Note that the returned <code>AudioBuffer</code> is only valid in the scope of the event handler.

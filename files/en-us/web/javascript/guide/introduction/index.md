@@ -81,7 +81,7 @@ The JavaScript documentation describes aspects of the language that are appropri
 
 Getting started with JavaScript is easy: all you need is a modern Web browser. This guide includes some JavaScript features which are only currently available in the latest versions of Firefox, so using the most recent version of Firefox is recommended.
 
-The _Web Console_ tool built into Firefox is useful for experimenting with JavaScript; you can use it into two modes: single-line input mode, and multi-line input mode.
+The _Web Console_ tool built into Firefox is useful for experimenting with JavaScript; you can use it in two modes: single-line input mode, and multi-line input mode.
 
 ### Single-line input in the Web Console
 
@@ -101,7 +101,7 @@ console.log(eval('3 + 5'))
 
 ### Multi-line input in the Web Console
 
-The single-line input mode of the Web Console is great for quick testing of JavaScript expressions, but although you can execute multiple lines, it's not very convenient for that. For more complex JavaScript, you can use the [multi-line line input mode](/en-US/docs/Tools/Web_Console/The_command_line_interpreter#multi-line_mode).
+The single-line input mode of the Web Console is great for quick testing of JavaScript expressions, but although you can execute multiple lines, it's not very convenient for that. For more complex JavaScript, you can use the [multi-line input mode](/en-US/docs/Tools/Web_Console/The_command_line_interpreter#multi-line_mode).
 
 ### Hello world
 

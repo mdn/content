@@ -78,7 +78,7 @@ exports.bookinstance_create_post = [
                 .exec(function (err, books) {
                     if (err) { return next(err); }
                     // Successful, so render.
-                    res.render('bookinstance_form', { title: 'Create BookInstance', book_list: books, selected_book: bookinstance.book._id , errors: errors.array(), bookinstance: bookinstance });
+                    res.render('bookinstance_form', { title: 'Create BookInstance', book_list: books, selected_book: bookinstance.book._id, errors: errors.array(), bookinstance: bookinstance });
             });
             return;
         }
@@ -112,10 +112,7 @@ block content
       select#book.form-control(type='select' placeholder='Select book' name='book' required='true')
         - book_list.sort(function(a, b) {let textA = a.title.toUpperCase(); let textB = b.title.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
         for book in book_list
-          if bookinstance
-            option(value=book._id selected=(bookinstance.book.toString()==book._id.toString() ? 'selected' : false)) #{book.title}
-          else
-            option(value=book._id) #{book.title}
+          option(value=book._id, selected=(selected_book==book._id.toString() ? 'selected' : false) ) #{book.title}
 
     div.form-group
       label(for='imprint') Imprint:

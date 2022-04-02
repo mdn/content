@@ -20,7 +20,7 @@ A message channel is created using the {{domxref("MessageChannel.MessageChannel"
 
 When these transferable objects are transferred, they are no longer usable on the context they previously belonged to. A port, after it is sent, can no longer be used by the original context.
 
-The other browsing context can listen for the message using {{domxref("MessagePort.onmessage")}}, and grab the contents of the message using the event's `data` attribute. You could then respond by sending a message back to the original document using {{domxref("MessagePort.postMessage")}}.
+The other browsing context can listen for the message using {{domxref("MessagePort.message_event", "onmessage")}}, and grab the contents of the message using the event's `data` attribute. You could then respond by sending a message back to the original document using {{domxref("MessagePort.postMessage")}}.
 
 When you want to stop sending messages down the channel, you can invoke {{domxref("MessagePort.close")}} to close the ports.
 
@@ -37,7 +37,7 @@ Find out more about how to use this API in [Using channel messaging](/en-US/docs
 
 ## Examples
 
-- We have published a [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on Github ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)), which shows a really simple single message transfer between a page and an embedded {{htmlelement("iframe")}}.
+- We have published a [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on GitHub ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)), which shows a really simple single message transfer between a page and an embedded {{htmlelement("iframe")}}.
 - You can also see a [multimessaging demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-multimessage) ([run this live](https://mdn.github.io/dom-examples/channel-messaging-multimessage/)), which shows a slightly more complex setup that can send multiple messages between main page and IFrame.
 
 ## Specifications

@@ -31,7 +31,7 @@ If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor
 
 ## Constructor
 
-- {{domxref("URL.URL", "new URL()")}}
+- {{domxref("URL.URL", "URL()")}}
   - : Creates and returns a `URL` object referencing the URL specified using an absolute URL string, or a relative URL string and a base URL string.
 
 ## Properties

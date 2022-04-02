@@ -16,12 +16,6 @@ The **`style`** read-only property returns the _inline_ style of an element in t
 
 > **Note:** See the [CSS Properties Reference](/en-US/docs/Web/CSS/CSS_Properties_Reference) for a list of the CSS properties accessible via `style`. The `style` property has the same (and highest) priority in the CSS cascade as an inline style declaration set via the `style` attribute.
 
-## Syntax
-
-```js
-style = element.style
-```
-
 ## Value
 
 A {{domxref("CSSStyleDeclaration")}} object, with the following properties:

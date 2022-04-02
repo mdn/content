@@ -48,7 +48,6 @@ No notable changes
 - Web extensions using {{WebExtAPIRef("webRequest")}} were started early during Firefox startup. This has changed to only trigger early start-up for extensions using {{WebExtAPIRef("webRequest")}} blocking calls. Non-blocking calls no longer cause the early startup of an extension. ({{bug(1749871)}})
 - `cookieStoreId` added to {{WebExtAPIRef("userScripts.register")}}. This enables extensions to register container-specific user scripts ({{bug(1738567)}}).
 
-
 ## Older versions
 
 {{Firefox_for_developers(97)}}

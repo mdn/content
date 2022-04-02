@@ -18,13 +18,7 @@ property of the {{domxref("Element")}} interface returns an
 {{domxref("HTMLSlotElement")}} representing the {{htmlelement("slot")}} element the
 node is inserted in.
 
-## Syntax
-
-```js
-var slotElement = elementInstance.assignedSlot
-```
-
-### Value
+## Value
 
 An {{domxref('HTMLSlotElement')}} instance, or `null` if the element is not
 assigned to a slot, or if the associated shadow root was attached with its

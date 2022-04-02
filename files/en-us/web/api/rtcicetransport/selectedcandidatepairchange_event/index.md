@@ -24,28 +24,21 @@ The pair of candidates is in turn described by an {{domxref("RTCIceCandidatePair
 
 Together, the candidates can be used to establish a connection to be used by the {{domxref("RTCIceTransport")}}, and, by extension, by an {{domxref("RTCPeerConnection")}}.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{DOMxRef("RTCIceTransport.onselectedcandidatepairchange", "onselectedcandidatepairchange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('selectedcandidatepairchange', event => { });
+
+onselectedcandidatepairchange = event => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -63,7 +56,7 @@ iceTransport.addEventListener("selectedcandidatepairchange", ev => {
 }, false)
 ```
 
-This can also be done by setting the {{domxref("RTCIceTransport.onselectedcandidatepairchange", "onselectedcandidatepairchange")}} event handler property directly.
+This can also be done by setting the `onselectedcandidatepairchange` event handler property directly.
 
 ```js
 let iceTransport = pc.getSenders[0].transport.iceTransport;
@@ -89,7 +82,6 @@ iceTransport.onselectedcandidatepairchange = ev => {
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - [WebRTC connectivity](/en-US/docs/Web/API/WebRTC_API/Connectivity)
-- {{domxref("RTCIceTransport.onselectedcandidatepairchange")}}
 
 ### Related RTCIceTransport events
 

@@ -1054,7 +1054,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
         {{ HTMLElement("dialog") }}
       </td>
       <td>
-        Indicates whether the the contents are currently visible (in the case of
+        Indicates whether the contents are currently visible (in the case of
         a <code>&#x3C;details></code> element) or whether the dialog is active
         and can be interacted with (in the case of a
         <code>&#x3C;dialog></code> element).

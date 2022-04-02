@@ -18,13 +18,7 @@ The **`y`** property of the
 {{domxref("CSSScale")}} interface gets and sets the ordinate or y-axis of the
 translating vector.
 
-## Syntax
-
-```js
-var scaleY = CSSScale.y;
-```
-
-### Value
+## Value
 
 A double integer or a {{domxref("CSSNumericValue")}}
 

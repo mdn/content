@@ -31,13 +31,7 @@ varies depending on the type of URL:
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-const originString = url.origin
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}}.
 

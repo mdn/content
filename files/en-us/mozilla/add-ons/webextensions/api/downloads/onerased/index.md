@@ -62,7 +62,7 @@ function handleErased(item) {
 
 browser.downloads.onErased.addListener(handleErased);
 
-var erasing = browser.downloads.erase({
+let erasing = browser.downloads.erase({
   limit: 1,
   orderBy: ["-startTime"]
 });

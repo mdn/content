@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var settingUrl = browser.runtime.setUninstallURL(
+let settingUrl = browser.runtime.setUninstallURL(
   url             // string
 )
 ```
@@ -51,7 +51,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var settingUrl = browser.runtime.setUninstallURL("https://example.org");
+let settingUrl = browser.runtime.setUninstallURL("https://example.org");
 settingUrl.then(onSetURL, onError);
 ```
 

@@ -25,8 +25,8 @@ property console. It's exposed as {{domxref("Window.console")}}, and can be refe
 console.log("Failed to open the specified link")
 ```
 
-This page documents the {{anch("Methods")}} available on the `console` object and
-gives a few {{anch("Usage")}} examples.
+This page documents the [Methods](#methods) available on the `console` object and
+gives a few [Usage](#usage) examples.
 
 {{AvailableInWorkers}}
 

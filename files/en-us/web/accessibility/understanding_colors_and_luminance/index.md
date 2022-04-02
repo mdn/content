@@ -40,7 +40,7 @@ While understanding these concepts are important for design and readability for 
 
 The [W3.org's](/en-US/docs/Glossary/W3C) [WAI](/en-US/docs/Glossary/WAI) publishes freely available guidelines, maintained by the AGWG (Accessibility Guidelines Working Group). Currently these are known as the [WCAG 2.1 accessibility guidelines](/en-US/docs/Glossary/WCAG). The next generation, [WCAG 3.0](https://www.w3.org/TR/wcag-3.0/), is presently published as a public working draft, pending further development and approvals.
 
-The WCAG 2.x guidelines attempt to define adequate[luminance contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) for sighted users with deficient color vision (inaccurately called "color blindness") or reduced vision, and further WCAG 2.x guidelines are intended to [prevent seizures and other physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders) in people with vestibular or neurological disorders.
+The WCAG 2.x guidelines attempt to define adequate [luminance contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) for sighted users with deficient color vision (inaccurately called "color blindness") or reduced vision, and further WCAG 2.x guidelines are intended to [prevent seizures and other physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders) in people with vestibular or neurological disorders.
 
 ## Color basics
 
@@ -157,7 +157,7 @@ In some of the previous examples, you'll notice that some have a fourth value wh
 
 ### sRGB: the accessible colorspace
 
-For accessibility guidelines the **sRGB** colorspace is most commonly used. This is not only because sRGB is the current default standard for the the web, but also the sRGB color primaries are well suited for accessibility concerns. For instance, the "red" sRGB primary is actually a red-orange, with a dominant wavelength of 611nm which overlaps into the M cone (green) sensitivity.
+For accessibility guidelines the **sRGB** colorspace is most commonly used. This is not only because sRGB is the current default standard for the web, but also the sRGB color primaries are well suited for accessibility concerns. For instance, the "red" sRGB primary is actually a red-orange, with a dominant wavelength of 611nm which overlaps into the M cone (green) sensitivity.
 
 This is helpful for some impairments related to color vision deficiency (CVD). One form of CVD called protanopia means the eye has no red cones. But protanopia will still be able to perceive the sRGB red primary because the remaining green cones perceive it, though about 35% darker than normal vision. Nevertheless, both a protan (red deficient) and deutan (green deficient) type of CVD have difficulty distinguishing _between_ red and green.
 

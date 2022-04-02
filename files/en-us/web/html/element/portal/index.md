@@ -60,7 +60,7 @@ The following example will embed the contents of `https://example.com` as a prev
 
 The preview displayed by a `<portal>` is not interactive, therefore does not receive input events or focus. Therefore the embedded contents of the portal are not exposed as elements in the {{Glossary("accessibility tree")}}. The portal can be navigated to and activated like a button, the default behavior when clicking on the portal is to activate it.
 
-Portals are given a default label which is the title of the embedded page. If no title is present the visible text in the preview is concatenated to create a label. The {{htmlattrxref("aria-label")}} attribute can be used to override this.
+Portals are given a default label which is the title of the embedded page. If no title is present the visible text in the preview is concatenated to create a label. The [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute can be used to override this.
 
 Portals used for prerendering only should be hidden with the hidden HTML attribute or the CSS {{cssxref("display")}} property with a value of `none`.
 

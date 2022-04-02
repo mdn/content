@@ -98,7 +98,7 @@ The assessments in each module are designed to test your knowledge of the subjec
 
 - [CSS first steps](/en-US/docs/Learn/CSS/First_steps) (10–15 hour read/exercises)
 - [CSS building blocks](/en-US/docs/Learn/CSS/Building_blocks) (35–45 hour read/exercises)
-- [Styling text](/en-US/docs/Learn/CSS/Styling_text) (15–20 hour read/exercises)
+- [CSS styling text](/en-US/docs/Learn/CSS/Styling_text) (15–20 hour read/exercises)
 - [CSS layout](/en-US/docs/Learn/CSS/CSS_layout) (30–40 hour read/exercises)
 
 #### Additional resources

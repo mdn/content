@@ -72,8 +72,7 @@ const obj = {
 
 ### Generator methods
 
-[Generator
-methods](/en-US/docs/Web/JavaScript/Reference/Statements/function*) can be defined using the shorthand syntax as well.
+[Generator methods](/en-US/docs/Web/JavaScript/Reference/Statements/function*) can be defined using the shorthand syntax as well.
 
 When doing so:
 
@@ -81,10 +80,9 @@ When doing so:
   generator property name. (That is, `* g(){}` will work,
   but `g *(){}` will not.)
 - Non-generator method definitions cannot contain the `yield` keyword.
-  This means that [legacy
-  generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function) won't work either, and will throw a
-  {{jsxref("SyntaxError")}}. Always use `yield` in conjunction with the
-  asterisk (`*`).
+  This means that [legacy generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)
+  won't work either, and will throw a {{jsxref("SyntaxError")}}.
+  Always use `yield` in conjunction with the asterisk (`*`).
 
 ```js
 // Using a named property
@@ -135,8 +133,7 @@ const obj3 = {
 
 ### Async generator methods
 
-[Generator
-methods](/en-US/docs/Web/JavaScript/Reference/Statements/function*) can also be {{jsxref("Statements/async_function", "async", "", 1)}}.
+[Generator methods](/en-US/docs/Web/JavaScript/Reference/Statements/function*) can also be {{jsxref("Statements/async_function", "async", "", 1)}}.
 
 ```js
 const obj4 = {

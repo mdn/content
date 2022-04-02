@@ -103,4 +103,4 @@ rtf.format(1, "day");
 
 - {{jsxref("Intl.RelativeTimeFormat")}}
 - {{jsxref("Global_Objects/Intl", "Intl")}}
-- [The Intl.RelativeTimeFormat API](https://developers.google.com/web/updates/2018/10/intl-relativetimeformat)
+- [The Intl.RelativeTimeFormat API](https://v8.dev/features/intl-relativetimeformat)

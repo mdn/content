@@ -13,14 +13,7 @@ browser-compat: api.CSSCounterStyleRule.system
 
 The **`system`** property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the value of the {{cssxref("@counter-style/system", "system")}} descriptor. If the descriptor does not have a value set, this attribute returns an empty string.
 
-## Syntax
-
-```js
-let system = CSSCounterStyleRule.system;
-CSSCounterStyleRule.system = a;
-```
-
-### Value
+## Value
 
 A {{domxref("CSSOMString")}}
 

@@ -54,11 +54,10 @@ split(separator, limit)
 
     > **Warning:** When the empty string (`""`) is used as a
     > separator, the string is **not** split by _user-perceived
-    > characters_ ([grapheme
-    > clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) or unicode characters (codepoints), but by UTF-16 codeunits. This
-    > destroys [surrogate
-    > pairs](https://unicode.org/faq/utf_bom.html#utf16-2). See ["How do you get a
-    > string to a character array in JavaScript?" on StackOverflow](https://stackoverflow.com/a/34717402).
+    > characters_ ([grapheme clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries))
+    > or unicode characters (codepoints), but by UTF-16 codeunits.
+    > This destroys [surrogate pairs](https://unicode.org/faq/utf_bom.html#utf16-2).
+    > See ["How do you get a string to a character array in JavaScript?" on StackOverflow](https://stackoverflow.com/a/34717402).
 
 - `limit` {{optional_inline}}
 
@@ -213,8 +212,7 @@ This script displays the following:
 [ "Hello ", "1", " word. Sentence number ", "2", "." ]
 ```
 
-> **Note:** `\d` matches the [character
-> class](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes) for digits between 0 and 9.
+> **Note:** `\d` matches the [character class](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes) for digits between 0 and 9.
 
 ### Reversing a String using `split()`
 
@@ -255,5 +253,4 @@ This script displays the following:
 - {{jsxref("String.prototype.indexOf()")}}
 - {{jsxref("String.prototype.lastIndexOf()")}}
 - {{jsxref("Array.prototype.join()")}}
-- [Using regular
-  expressions in JavaScript](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Using regular expressions in JavaScript](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)

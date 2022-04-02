@@ -13,13 +13,7 @@ browser-compat: api.MIDIPort.connection
 
 The **`connection`** property of the {{domxref("MIDIPort")}} interface returns the connection state of the port.
 
-## Syntax
-
-```js
-let connection = MIDIPort.connection;
-```
-
-### Value
+## Value
 
 Returns a {{domxref("DOMString","string")}} containing the connection state of the port, one of:
 

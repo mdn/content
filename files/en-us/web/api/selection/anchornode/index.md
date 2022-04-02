@@ -3,7 +3,6 @@ title: Selection.anchorNode
 slug: Web/API/Selection/anchorNode
 tags:
   - API
-  - Experimental
   - HTML Editing
   - Property
   - Read-only
@@ -11,7 +10,7 @@ tags:
   - Selection
 browser-compat: api.Selection.anchorNode
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ ApiRef("DOM") }}
 
 The **`Selection.anchorNode`** read-only property returns the
 {{domxref("Node")}} in which the selection begins.

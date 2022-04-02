@@ -53,7 +53,7 @@ Next, create a file called "page-eater.js" inside the "modify-page" directory, a
 ```js
 document.body.textContent = "";
 
-var header = document.createElement('h1');
+let header = document.createElement('h1');
 header.textContent = "This page has been eaten";
 document.body.appendChild(header);
 ```

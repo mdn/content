@@ -25,13 +25,7 @@ You can be notified when the value of `matches` changes by watching for the
 {{domxref("MediaQueryList.change_event", "change")}} event to be fired at the
 `MediaQueryList`.
 
-## Syntax
-
-```js
-var matches = <varm>MediaQueryList.matches;
-```
-
-### Value
+## Value
 
 A boolean value that is `true` if the {{DOMxRef("document")}}
 currently matches the media query list; otherwise, it's `false`.

@@ -18,7 +18,7 @@ The **`FontFace`** interface represents a single usable font face. It allows con
 ## Constructor
 
 - {{domxref("FontFace.FontFace", "FontFace()")}}
-  - : Constructs and returns a new `FontFace` object, built from an external resource described by an URL or from an {{jsxref("ArrayBuffer")}}.
+  - : Constructs and returns a new `FontFace` object, built from an external resource described by a URL or from an {{jsxref("ArrayBuffer")}}.
 
 ## Properties
 

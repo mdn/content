@@ -13,13 +13,7 @@ browser-compat: api.LargestContentfulPaint.url
 
 The **`url`** read-only property of the {{domxref("LargestContentfulPaint")}} interface returns the request url of the element, if the element is an image.
 
-## Syntax
-
-```js
-let url = LargestContentfulPaint.url;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString","string")}} containing a URL.
 

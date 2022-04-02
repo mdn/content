@@ -19,8 +19,7 @@ with a given name using prototype-based inheritance.
 {{EmbedInteractiveExample("pages/js/statement-class.html")}}
 
 You can also define a class using a {{jsxref("Operators/class", "class expression",
-    "", 1)}}. But unlike a class expression, a class declaration doesn't allow an existing
-class to be declared again and will throw a {{jsxref("SyntaxError")}} if attempted.
+    "", 1)}}, which allows redeclarations and omitting class names. Attempting to place **class declaration** in the same scope, under the same name, will throw a {{jsxref("SyntaxError")}}.
 
 ## Syntax
 
@@ -35,8 +34,8 @@ class name [extends otherName] {
 The class body of a class declaration is executed in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). The
 `constructor` method is optional.
 
-Class declarations are not {{Glossary("Hoisting", "hoisted")}} (unlike [function
-declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function)).
+Class declarations are not {{Glossary("Hoisting", "hoisted")}}
+(unlike [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function)).
 
 ## Examples
 
@@ -94,8 +93,6 @@ class Foo {}; // Uncaught SyntaxError: Identifier 'Foo' has already been declare
 
 ## See also
 
-- [`function`
-  declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
-- [`class`
-  expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
+- [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
+- [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)

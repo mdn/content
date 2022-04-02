@@ -43,10 +43,10 @@ Array.isArray(value)
 If the value is an {{jsxref("Array")}}, `true` is returned; otherwise,
 `false` is.
 
-See the article ["Determining with
-absolute accuracy whether or not a JavaScript object is an array"](http://web.mit.edu/jwalden/www/isArray.html) for more
-details. Given a {{jsxref("TypedArray")}} instance, `false` is always
-returned.
+See the article
+["Determining with absolute accuracy whether or not a JavaScript object is an array"](http://web.mit.edu/jwalden/www/isArray.html)
+for more details.
+Given a {{jsxref("TypedArray")}} instance, `false` is always returned.
 
 ## Examples
 
@@ -103,6 +103,5 @@ arr instanceof Array; // false
 ## See also
 
 - [Polyfill of `Array.isArray` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [A
-  polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
+- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
 - {{jsxref("Array")}}

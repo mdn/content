@@ -70,7 +70,7 @@ function toggleTitle(title) {
 }
 
 browser.browserAction.onClicked.addListener(() => {
-  var gettingTitle = browser.browserAction.getTitle({});
+  let gettingTitle = browser.browserAction.getTitle({});
   gettingTitle.then(toggleTitle);
 });
 ```

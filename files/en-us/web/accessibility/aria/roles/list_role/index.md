@@ -27,7 +27,7 @@ Any content that consists of an outer container with a list of elements inside i
 
 There are no hard and fast rules about which elements you should use to mark up the list and list items, but you should make sure that the list items make sense in the context of a list, e.g. a shopping list, recipe steps, driving directions.
 
-> **Note:** Best practices dictate using the appropriate semantic HTML elements over ARIA roles to mark up lists and listitems — {{HTMLElement("ul")}}, {{HTMLElement("ol")}} and {{HTMLElement("li")}}. See {{anch("Best practices")}} for a full example.
+> **Note:** Best practices dictate using the appropriate semantic HTML elements over ARIA roles to mark up lists and listitems — {{HTMLElement("ul")}}, {{HTMLElement("ol")}} and {{HTMLElement("li")}}. See [Best practices](#best_practices) for a full example.
 
 ### Associated WAI-ARIA Roles, States, and Properties
 

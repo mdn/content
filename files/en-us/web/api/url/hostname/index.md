@@ -16,14 +16,7 @@ is a {{domxref("USVString")}} containing the {{glossary("domain name")}} of the 
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-const domain = url.hostname
-url.hostname = domain
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}}.
 

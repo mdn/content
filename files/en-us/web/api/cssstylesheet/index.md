@@ -32,7 +32,7 @@ h1, h2 {
 
 Another rule might be an _at-rule_ such as {{cssxref("@import")}} or {{cssxref("@media")}}, and so forth.
 
-See the {{anch("Obtaining a StyleSheet")}} section for the various ways a `CSSStyleSheet` object can be obtained. A `CSSStyleSheet` object can also be directly constructed. The constructor, and the {{domxref("CSSStyleSheet.replace()")}}, and {{domxref("CSSStyleSheet.replaceSync()")}} methods are newer additions to the specification, enabling _Constructable Stylesheets_.
+See the [Obtaining a StyleSheet](#obtaining_a_stylesheet) section for the various ways a `CSSStyleSheet` object can be obtained. A `CSSStyleSheet` object can also be directly constructed. The constructor, and the {{domxref("CSSStyleSheet.replace()")}}, and {{domxref("CSSStyleSheet.replaceSync()")}} methods are newer additions to the specification, enabling _Constructable Stylesheets_.
 
 ## Constructor
 

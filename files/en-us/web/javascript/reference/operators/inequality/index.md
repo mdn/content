@@ -11,9 +11,9 @@ browser-compat: javascript.operators.inequality
 {{jsSidebar("Operators")}}
 
 The inequality operator (`!=`) checks whether its two operands are not
-equal, returning a Boolean result. Unlike the [strict
-inequality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality) operator, it attempts to convert and compare operands that are of
-different types.
+equal, returning a Boolean result.
+Unlike the [strict inequality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality) operator,
+it attempts to convert and compare operands that are of different types.
 
 {{EmbedInteractiveExample("pages/js/expressions-inequality.html")}}
 
@@ -45,8 +45,7 @@ operands of different types:
 ```
 
 To prevent this, and require that different types are considered to be different, use
-the [strict
-inequality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality) operator instead:
+the [strict inequality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality) operator instead:
 
 ```js
 3 !== "3"; // true
@@ -102,9 +101,6 @@ object2 != object2 // false
 
 ## See also
 
-- [Equality
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Equality)
-- [Strict
-  equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
-- [Strict
-  inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
+- [Equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Equality)
+- [Strict equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+- [Strict inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality)

@@ -183,8 +183,8 @@ Evaluating the right side
   </tbody>
 </table>
 
-Looking at the code snippets above, `6 / 3 / 2` is the same as
-`(6 / 3) / 2` because division is left-associative. Exponentiation, on the
+Looking at the code snippets above, `6 / 2 / 3` is the same as
+`(6 / 2) / 3` because division is left-associative. Exponentiation, on the
 other hand, is right-associative, so `2 ** 3 ** 2` is the same as
 `2 ** (3 ** 2)`. Thus, doing `(2 ** 3) ** 2` changes the order
 and results in the 64 seen in the table above.
@@ -204,9 +204,9 @@ short-circuiting.
 Short-circuiting is jargon for conditional evaluation. For example, in the expression
 `a && (b + c)`, if `a` is {{Glossary("falsy")}}, then
 the sub-expression `(b + c)` will not even get evaluated, even if it is in
-parentheses. We could say that the logical disjunction operator ("OR") is
-"short-circuited". Along with logical disjunction, other short-circuited operators
-include logical conjunction ("AND"), nullish-coalescing, optional chaining, and the
+parentheses. We could say that the logical conjunction operator ("&&") is
+"short-circuited". Along with logical conjunction, other short-circuited operators
+include logical disjunction ("OR"), nullish-coalescing, optional chaining, and the
 conditional operator. Some more examples follow.
 
 ```js
@@ -278,7 +278,7 @@ Note that [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_
       </td>
       <td>left-to-right</td>
       <td>
-        <code>… ( <var>… </var>)</code>
+        <code>… ( … )</code>
       </td>
     </tr>
     <tr>

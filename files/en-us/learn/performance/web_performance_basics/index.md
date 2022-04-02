@@ -61,7 +61,7 @@ If possible avoid icon web fonts and use compressed SVGs. To further optimize in
 ## Tools
 
 - Learn to use the [Firefox Dev Tools](/en-US/docs/Tools/Performance) to profile your site.
-- [PageSpeed Insights](https://developers.google.com/speed/docs/insights/v5/about) can analyze your page and give some general hints to improve performance.
+- [PageSpeed Insights](https://pagespeed.web.dev/) can analyze your page and give some general hints to improve performance.
 - [Lighthouse](https://developers.google.com/web/tools/lighthouse/) can give you a detailed breakdown of many aspects of your site including performance, SEO and accessibility.
 - Test your page's speed using [WebPageTest.org](https://webpagetest.org/), where you can use different real device types and locations.
 - Try the [Chrome User Experience Report](https://developers.google.com/web/tools/chrome-user-experience-report) which quantifies real user metrics.

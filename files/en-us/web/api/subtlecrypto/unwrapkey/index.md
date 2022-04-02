@@ -148,7 +148,7 @@ method.
 ## Examples
 
 > **Note:** You can [try the
-> working examples](https://mdn.github.io/dom-examples/web-crypto/unwrap-key/index.html) on Github.
+> working examples](https://mdn.github.io/dom-examples/web-crypto/unwrap-key/index.html) on GitHub.
 
 ### Unwrapping a "raw" key
 

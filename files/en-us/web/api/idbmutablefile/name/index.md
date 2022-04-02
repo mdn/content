@@ -15,12 +15,6 @@ tags:
 
 Provides the name of the file.
 
-## Syntax
-
-```js
-var name = instanceOfFileHandle.name
-```
-
 ## Value
 
 A string.

@@ -149,11 +149,11 @@ This code logs all cookies that will be sent in making requests to the target [m
 
 ```js
 // The target match pattern
-var targetPage = "*://*.google.ca/*";
+let targetPage = "*://*.google.ca/*";
 
 // Log cookies sent with this request
 function logCookies(e) {
-  for (var header of e.requestHeaders) {
+  for (let header of e.requestHeaders) {
     if (header.name == "Cookie") {
       console.log(header.value);
     }

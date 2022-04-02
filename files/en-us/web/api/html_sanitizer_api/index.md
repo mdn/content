@@ -3,6 +3,7 @@ title: HTML Sanitizer API
 slug: Web/API/HTML_Sanitizer_API
 tags:
   - HTML Sanitizer API
+  - Experimental
   - Landing
   - Web API
   - sanitize
@@ -20,16 +21,13 @@ To access the API you would use the {{domxref('Sanitizer.Sanitizer()','Sanitizer
 The configuration options parameter allows you to specify the allowed and dis-allowed elements and attributes, and to enable custom elements and comments.
 
 The most common use-case - preventing XSS - is handled by the default configuration.
-Creating a {{domxref('Sanitizer.Sanitizer')}} with a custom configuration is necessary only to handle additional, application-specific use cases.
+Creating a {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} with a custom configuration is necessary only to handle additional, application-specific use cases.
 
 The API has three main methods for sanitizing data:
 
-1. {{domxref('Element.setHTML()')}} parses and sanitizes a string of HTML and immediately inserts it into the DOM as a child of the current element.
-  This is essentially "safe" version of {{domxref('Element.innerHTML')}}, and should be used instead of `innerHTML` when inserting untrusted data.
-2. {{domxref('Sanitizer.sanitizeFor()')}} parses and sanitizes a string of HTML for later insertion into the DOM.
-  This might be used when the target element for the string is not always ready/available for update.
-3. {{domxref('Sanitizer.sanitize()')}} sanitizes data that is in a {{domxref('Document')}} or {{domxref('DocumentFragment')}}.
-  It might be used, for example, to sanitize a {{domxref('Document')}} instance in a frame.
+1. {{domxref('Element.setHTML()')}} parses and sanitizes a string of HTML and immediately inserts it into the DOM as a child of the current element. This is essentially a "safe" version of {{domxref('Element.innerHTML')}}, and should be used instead of `innerHTML` when inserting untrusted data.
+2. {{domxref('Sanitizer.sanitizeFor()')}} parses and sanitizes a string of HTML for later insertion into the DOM. This might be used when the target element for the string is not always ready/available for update.
+3. {{domxref('Sanitizer.sanitize()')}} sanitizes data that is in a {{domxref('Document')}} or {{domxref('DocumentFragment')}}. It might be used, for example, to sanitize a {{domxref('Document')}} instance in a frame.
 
 ### Parsing and sanitizing strings
 

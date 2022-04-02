@@ -11,9 +11,9 @@ browser-compat: javascript.operators.equality
 {{jsSidebar("Operators")}}
 
 The equality operator (`==`) checks whether its two operands are equal,
-returning a Boolean result. Unlike the [strict
-equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) operator, it attempts to convert and compare operands that are of
-different types.
+returning a Boolean result.
+Unlike the [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) operator,
+it attempts to convert and compare operands that are of different types.
 
 {{EmbedInteractiveExample("pages/js/expressions-equality.html")}}
 
@@ -25,9 +25,10 @@ x == y
 
 ## Description
 
-The equality operators (`==` and `!=`) use the [Abstract Equality
-Comparison Algorithm](https://www.ecma-international.org/ecma-262/5.1/#sec-11.9.3) to compare two operands. This can be roughly summarized as
-follows:
+The equality operators (`==` and `!=`) use
+the [Abstract Equality Comparison Algorithm](https://www.ecma-international.org/ecma-262/5.1/#sec-11.9.3)
+to compare two operands.
+This can be roughly summarized as follows:
 
 - If the operands are both objects, return `true` only if both operands
   reference the same object.
@@ -54,9 +55,10 @@ follows:
   - Boolean: return `true` only if operands are both
     `true` or both `false`.
 
-The most notable difference between this operator and the [strict
-equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) (`===`) operator is that the strict equality operator does not
-attempt type conversion. Instead, the strict equality operator always considers operands
+The most notable difference between this operator and
+the [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) (`===`) operator is
+that the strict equality operator does not attempt type conversion.
+Instead, the strict equality operator always considers operands
 of different types to be different.
 
 ## Examples
@@ -135,9 +137,6 @@ console.log(d == s);    //true
 
 ## See also
 
-- [Inequality
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
-- [Strict
-  equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
-- [Strict
-  inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
+- [Inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [Strict equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+- [Strict inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality)

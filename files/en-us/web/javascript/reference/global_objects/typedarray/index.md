@@ -12,8 +12,8 @@ browser-compat: javascript.builtins.TypedArray
 {{JSRef}}
 
 A **_TypedArray_** object describes an array-like view of an
-underlying [binary data
-buffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). There is no global property named `TypedArray`, nor is there a
+underlying [binary data buffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
+There is no global property named `TypedArray`, nor is there a
 directly visible `TypedArray` constructor. Instead, there are a number of
 different global properties, whose values are typed array constructors for specific
 element types, listed below. On the following pages you will find common properties and

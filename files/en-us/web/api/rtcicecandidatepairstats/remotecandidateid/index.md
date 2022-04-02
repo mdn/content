@@ -26,13 +26,7 @@ the remote {{Glossary("ICE")}} candidate which was analyzed to generate the
 {{domxref("RTCIceCandidateStats")}} used to compute the statistics for this pair of
 candidates.
 
-## Syntax
-
-```js
-remoteCandidateId = rtcIceCandidatePairStats.remoteCandidateId;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} uniquely identifies the remote {{Glossary("ICE")}}
 candidate—that is, the candidate describing a configuration for the remote peer—which is

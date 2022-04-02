@@ -15,13 +15,7 @@ browser-compat: api.GeolocationPositionError.message
 The **`GeolocationPositionError.message`** read-only property
 returns a human-readable {{domxref("DOMString")}} describing the details of the error.
 
-## Syntax
-
-```js
-let msg = geolocationPositionErrorInstance.message
-```
-
-### Value
+## Value
 
 A human-readable {{domxref("DOMString")}} describing the details of the error.
 

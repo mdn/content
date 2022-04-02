@@ -18,7 +18,7 @@ Returns the portal state as one of `unknown`, `not_captive`, `unlocked_portal`, 
 ## Syntax
 
 ```js
-var state = browser.captivePortal.getState()
+let state = browser.captivePortal.getState()
 ```
 
 ### Return value

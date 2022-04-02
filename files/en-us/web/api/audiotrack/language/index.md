@@ -27,13 +27,7 @@ For tracks that include multiple languages
 (such as a movie in English in which a few lines are spoken in other languages), this
 should be the video's primary language.
 
-## Syntax
-
-```js
-var audioTrackLanguage = AudioTrack.language;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} specifying the BCP 47 ({{RFC(5646)}}) format language tag of
 the primary language used in the audio track, or an empty string (`""`) if
@@ -43,7 +37,7 @@ For example, if the primary language used in the track is United States English,
 value would be `"en-US"`. For Brazilian Portuguese, the value would be
 `"pt-BR"`.
 
-## Example
+## Examples
 
 This example locates all of a media element's primary language and translated audio
 tracks and returns a list of objects containing each of those tracks'

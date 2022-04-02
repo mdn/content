@@ -16,17 +16,11 @@ last modified date of the file as the number of milliseconds since the Unix
 epoch (January 1, 1970 at midnight). Files without a known last modified date return the
 current date.
 
-## Syntax
-
-```js
-const time = instanceOfFile.lastModified;
-```
-
-### Value
+## Value
 
 A number that represents the number of milliseconds since the Unix epoch.
 
-## Example
+## Examples
 
 ### Reading from file input
 

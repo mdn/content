@@ -26,12 +26,6 @@ the gravity force, in contrast to
 > {{DOMxRef("DeviceMotionEvent")}}. In this situation, you'll need to use
 > {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}} instead.
 
-## Syntax
-
-```js
-var acceleration = deviceMotionEvent.acceleration;
-```
-
 ## Value
 
 The `acceleration` property is an object providing information about
@@ -55,9 +49,8 @@ acceleration on three axis. Each axis is represented with its own property:
 ## See also
 
 - {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}}
-- {{Event("devicemotion")}}
-- {{DOMxRef("window.ondevicemotion")}}
-- {{Event("deviceorientation")}}
+- {{DOMxRef("window.devicemotion_event", "devicemotion") }} event
+- {{DOMxRef("window.deviceorientation_event", "deviceorientation") }} event
 - {{DOMxRef("DeviceOrientationEvent")}}
 - {{DOMxRef("LinearAccelerationSensor")}}
 - [Detecting device

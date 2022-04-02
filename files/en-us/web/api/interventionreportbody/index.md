@@ -78,4 +78,4 @@ let observer = new ReportingObserver(function(reports, observer) {
 ## See also
 
 - [Reporting API](/en-US/docs/Web/API/Reporting_API)
-- [The Reporting API](https://developers.google.com/web/updates/2018/09/reportingapi)
+- [The Reporting API](https://web.dev/reporting-api/)

@@ -21,7 +21,7 @@ The **`InputEvent()`** constructor creates a new
 ## Syntax
 
 ```js
- event = new InputEvent(typeArg, inputEventInit);
+new InputEvent(typeArg, inputEventInit);
 ```
 
 ### Values

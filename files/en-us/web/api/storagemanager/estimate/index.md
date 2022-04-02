@@ -38,7 +38,7 @@ A {{jsxref('Promise')}} that resolves to an object with the following properties
   - : A numeric value in bytes which provides a conservative approximation of the total storage the user's device or computer has available for the site origin or Web app. It's possible that there's more than this amount of space available though you can't rely on that being the case.
 - `usage`
   - : A numeric value in bytes approximating the amount of storage space currently being used by the site or Web app, out of the available space as indicated by `quota`. Unit is byte.
-- `usageDetails`
+- `usageDetails` {{Non-standard_Inline}}
   - : An object containing a breakdown of `usage` by storage system. All included properties will have a `usage` greater than 0 and any storage system with 0 `usage` will be excluded from the object.
 
 > **Note:** The returned values are not exact: between compression, deduplication, and obfuscation for security reasons, they will be imprecise.

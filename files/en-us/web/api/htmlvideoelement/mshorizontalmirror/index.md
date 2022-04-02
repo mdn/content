@@ -17,12 +17,6 @@ horizontally in the display.
 
 This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
-## Syntax
-
-```js
-HTMLVideoElement.msHorizontalMirror: {{JSxRef("Boolean", "boolean")}};
-```
-
 ## Value
 
 Boolean value set to _true_ flips the video playback horizontally.
@@ -31,7 +25,7 @@ Video perspective is flipped on a horizontal axis - this may be useful for playb
 a webcam video, providing the user with better mirroring of their real behaviors (ie.
 when user moves left, their representation on-screen would move left as well).
 
-## Example
+## Examples
 
 ```js
        var myVideo = document.getElementById("videoTag1");

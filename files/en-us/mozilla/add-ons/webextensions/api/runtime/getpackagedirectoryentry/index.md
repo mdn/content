@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingEntry = browser.runtime.getPackageDirectoryEntry()
+let gettingEntry = browser.runtime.getPackageDirectoryEntry()
 ```
 
 ### Parameters
@@ -44,7 +44,7 @@ function gotDirectoryEntry(directoryEntry) {
   console.log(directoryEntry);
 }
 
-var gettingEntry = browser.runtime.getPackageDirectoryEntry();
+let gettingEntry = browser.runtime.getPackageDirectoryEntry();
 gettingEntry.then(gotDirectoryEntry);
 ```
 

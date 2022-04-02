@@ -19,7 +19,7 @@ creates a new {{domxref("RTCDataChannelEvent")}}.
 ## Syntax
 
 ```js
- var event = new RTCDataChannelEvent(type, rtcDataChannelEventInit);
+ new RTCDataChannelEvent(type, rtcDataChannelEventInit);
 ```
 
 ### Parameters

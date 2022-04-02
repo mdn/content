@@ -22,7 +22,7 @@ The **`MediaSource()`** constructor of the
 ## Syntax
 
 ```js
-var mediaSource = new MediaSource();
+new MediaSource();
 ```
 
 ### Parameters

@@ -18,15 +18,7 @@ The **`Animation.startTime`** property of the {{domxref("Animation")}} interface
 
 An animation's **start time** is the time value of its {{domxref("timeline", "DocumentTimeline")}} when its target {{domxref("KeyframeEffect")}} is scheduled to begin playback. An animation's **start time** is initially unresolved (meaning that it's `null` because it has no value).
 
-## Syntax
-
-```js
-var animationStartedWhen = Animation.startTime;
-
-Animation.startTime = newStartTime;
-```
-
-### Value
+## Value
 
 A floating-point number representing the current time in milliseconds, or `null` if no time is set. You can read this value to determine what the start time is currently set at, and you can change this value to make the animation start at a different time.
 

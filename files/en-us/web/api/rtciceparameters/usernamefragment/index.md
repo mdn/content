@@ -26,13 +26,7 @@ The **{{domxref("RTCIceParameters")}}** dictionary's
 ("ufrag") that uniquely identifies the corresponding ICE session for the duration of the
 current ICE session.
 
-## Syntax
-
-```js
-ufrag = RTCIceParameters.usernameFragment;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} containing the username fragment that, in tandem with the
 {{domxref("RTCIceParameters.password", "password")}}, uniquely identify the ICE session

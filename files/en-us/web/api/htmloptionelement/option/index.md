@@ -20,7 +20,7 @@ The **`Option()`** constructor creates a new
 ## Syntax
 
 ```js
-var optionElementReference = new Option(text, value, defaultSelected, selected);
+new Option(text, value, defaultSelected, selected);
 ```
 
 ### Parameters

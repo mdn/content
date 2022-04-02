@@ -23,8 +23,8 @@ You manage notifications programmatically, using the {{WebExtAPIRef("notificatio
 You then use {{WebExtAPIRef("notifications.create")}} to create your notifications, as in this example from [notify-link-clicks-i18n:](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n)
 
 ```js
-var title = browser.i18n.getMessage("notificationTitle");
-var content = browser.i18n.getMessage("notificationContent", message.url);
+let title = browser.i18n.getMessage("notificationTitle");
+let content = browser.i18n.getMessage("notificationContent", message.url);
 browser.notifications.create({
   "type": "basic",
   "iconUrl": browser.extension.getURL("icons/link-48.png"),

@@ -28,7 +28,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var removing = browser.downloads.removeFile(
+let removing = browser.downloads.removeFile(
   downloadId      // integer
 )
 ```
@@ -61,12 +61,12 @@ function onError(error) {
 
 function remove(downloadItems) {
   if (downloadItems.length > 0) {
-    var removing = browser.downloads.removeFile(downloadItems[0].id);
+    let removing = browser.downloads.removeFile(downloadItems[0].id);
     removing.then(onRemoved, onError);
   }
 }
 
-var searching = browser.downloads.search({
+let searching = browser.downloads.search({
   limit: 1,
   orderBy: ["-startTime"]
 });

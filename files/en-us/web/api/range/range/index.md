@@ -20,7 +20,7 @@ object.
 ## Syntax
 
 ```js
-range = new Range()
+new Range();
 ```
 
 ## Example

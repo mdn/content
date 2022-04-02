@@ -15,13 +15,7 @@ browser-compat: api.TextTrackCueList.length
 
 The **`length`** read-only property of the {{domxref("TextTrackCueList")}} interface returns the number of cues in the list.
 
-## Syntax
-
-```js
-var length = TextTrackCueList.length;
-```
-
-### Value
+## Value
 
 An `unsigned long` which is the number of cues in the list.
 

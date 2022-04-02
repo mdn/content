@@ -170,7 +170,7 @@ There are four events that are triggered on the {{domxref("Notification")}} inst
 - `show`
   - : Triggered when the notification is displayed to the user.
 
-These events can be tracked using the {{domxref("Notification.onclick","onclick")}}, {{domxref("Notification.onclose","onclose")}}, {{domxref("Notification.onerror","onerror")}}, and {{domxref("Notification.onshow","onshow")}} handlers. Because {{domxref("Notification")}} also inherits from {{domxref("EventTarget")}}, it's possible to use the {{domxref("EventTarget.addEventListener","addEventListener()")}} method on it.
+These events can be tracked using the {{domxref("Notification.click_event","onclick")}}, {{domxref("Notification.close_event","onclose")}}, {{domxref("Notification.error_event","onerror")}}, and {{domxref("Notification.show_event","onshow")}} handlers. Because {{domxref("Notification")}} also inherits from {{domxref("EventTarget")}}, it's possible to use the {{domxref("EventTarget.addEventListener","addEventListener()")}} method on it.
 
 ## Replacing existing notifications
 

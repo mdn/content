@@ -14,18 +14,11 @@ browser-compat: api.CSSKeyframesRule.name
 
 The **`name`** property of the {{domxref("CSSKeyframeRule")}} interface gets and sets the name of the animation as used by the {{cssxref("animation-name")}} property.
 
-## Syntax
-
-```js
-var name = CSSKeyframesRule.name;
-CSSKeyframesRule.name = name;
-```
-
-### Value
+## Value
 
 A {{domxref('CSSOMString')}}.
 
-## Example
+## Examples
 
 The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
 `myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object, with the `name` set to "slidein".

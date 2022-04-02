@@ -13,13 +13,7 @@ browser-compat: api.TrustedTypePolicy.name
 
 The **`name`** read-only property of the {{domxref("TrustedTypePolicy")}} interface returns the name of the policy.
 
-## Syntax
-
-```js
-var name = TrustedTypePolicy.name;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} containing the name of the policy.
 

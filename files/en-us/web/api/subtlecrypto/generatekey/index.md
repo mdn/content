@@ -91,7 +91,7 @@ This code generates an RSA-OAEP encryption key pair. [See
 the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/rsa-oaep.js)
 
 ```js
-let keyPair = window.crypto.subtle.generateKey(
+let keyPair = await window.crypto.subtle.generateKey(
   {
     name: "RSA-OAEP",
     modulusLength: 4096,
@@ -109,7 +109,7 @@ This code generates an ECDSA signing key pair. [See
 the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/ecdsa.js)
 
 ```js
-let keyPair = window.crypto.subtle.generateKey(
+let keyPair = await window.crypto.subtle.generateKey(
   {
     name: "ECDSA",
     namedCurve: "P-384"
@@ -125,7 +125,7 @@ This code generates an HMAC signing key. [See
 the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/hmac.js)
 
 ```js
-let key = window.crypto.subtle.generateKey(
+let key = await window.crypto.subtle.generateKey(
   {
     name: "HMAC",
     hash: {name: "SHA-512"}
@@ -141,7 +141,7 @@ This code generates an AES-GCM encryption key. [See
 the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-gcm.js)
 
 ```js
-let key = window.crypto.subtle.generateKey(
+let key = await window.crypto.subtle.generateKey(
   {
     name: "AES-GCM",
     length: 256

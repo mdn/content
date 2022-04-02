@@ -21,7 +21,7 @@ individual transform objects.
 ## Syntax
 
 ```js
-var CSSTransformValue = new CSSTransformValue(transforms);
+new CSSTransformValue(transforms);
 ```
 
 ### Parameters

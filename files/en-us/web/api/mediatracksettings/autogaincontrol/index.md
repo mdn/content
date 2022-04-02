@@ -34,18 +34,12 @@ the value of {{domxref("MediaTrackSupportedConstraints.autoGainControl")}} as re
 by a call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically
 this is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
-
-```js
-var autoGainControl = MediaTrackSettings.autoGainControl;
-```
-
-### Value
+## Value
 
 A Boolean value which is `true` if the track has automatic gain control
 enabled or `false` if AGC is disabled.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.

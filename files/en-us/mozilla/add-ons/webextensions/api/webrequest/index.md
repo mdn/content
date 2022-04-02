@@ -69,6 +69,10 @@ In the listener, you can then return a {{WebExtAPIRef("webRequest.BlockingRespon
 
 When a listener is registered with the `"blocking"` option and is registered during the extension startup, if a request is made during the browser startup that matches the listener the extension starts early. This enables the extension to observe the request at browser startup. If you don't take these steps, requests made at startup could be missed.
 
+## Speculative requests
+
+The browser can make speculative connections, where it determines that a request to a URI may be coming soon. This type of connection does not provide valid tab information, so request details such as `tabId`, `frameId`, `parentFrameId`, etc. are inaccurate. These connections have a {{WebExtAPIRef("webRequest.ResourceType")}} of `speculative`.
+
 ## Accessing security information
 
 In the {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}} listener you can access the [TLS](/en-US/docs/Glossary/TLS) properties of a request by calling {{WebExtAPIRef("webRequest.getSecurityInfo()", "getSecurityInfo()")}}. To do this you must also pass "blocking" in the `extraInfoSpec` argument to the event's `addListener()`.

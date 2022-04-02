@@ -16,21 +16,13 @@ The `Q` property of the {{ domxref("BiquadFilterNode") }} interface is an [a-rat
 
 It is a dimensionless value with a default value of `1` and a nominal range of `0.0001` to `1000`.
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var biquadFilter = audioCtx.createBiquadFilter();
-biquadfilter.Q.value = 100;
-```
-
-> **Note:** Though the `AudioParam` returned is read-only, the value it represents is not.
-
-### Value
+## Value
 
 An {{domxref("AudioParam")}}.
 
-## Example
+> **Note:** Though the `AudioParam` returned is read-only, the value it represents is not.
+
+## Examples
 
 The following example shows basic usage of an AudioContext to create a Biquad filter node. For a complete working example, check out our [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) demo (look at the [source code](https://github.com/mdn/voice-change-o-matic) too).
 

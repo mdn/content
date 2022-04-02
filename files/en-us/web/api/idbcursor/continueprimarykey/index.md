@@ -58,7 +58,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the cursor is currently being iterated or has iterated past its end.
 - `InvalidAccessError` {{domxref("DOMException")}}
-  - : Thrown if the The cursor's direction is not `prev` or `next`.
+  - : Thrown if the cursor's direction is not `prev` or `next`.
 
 ## Example
 

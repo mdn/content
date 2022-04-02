@@ -13,13 +13,7 @@ browser-compat: api.PerformanceElementTiming.identifier
 
 The **`identifier`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the value of the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute on the element.
 
-## Syntax
-
-```js
-var identifier = PerformanceElementTiming.identifier;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}.
 

@@ -66,11 +66,11 @@ A caption is placed directly beneath the `<table>` tag.
 
 Let's try this out, revisiting an example we first met in the previous article.
 
-1. Open up your language teacher's school timetable from the end of [HTML Table Basics](/en-US/docs/Learn/HTML/Tables/Basics#active_learning_colgroup_and_col), or make a local copy of our [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) file.
+1. Open up your language teacher's school timetable from the end of [HTML Table Basics](/en-US/docs/Learn/HTML/Tables/Basics#active_learning_colgroup_and_col), or make a local copy of our [timetable-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/timetable-fixed.html) file.
 2. Add a suitable caption for the table.
 3. Save your code and open it in a browser to see what it looks like.
 
-> **Note:** You can find our version on GitHub — see [timetable-caption.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)).
+> **Note:** You can find our version on GitHub — see [timetable-caption.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/timetable-caption.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)).
 
 ## Adding structure with \<thead>, \<tfoot>, and \<tbody>
 
@@ -90,7 +90,7 @@ To use them:
 
 Let's put these new elements into action.
 
-1. First of all, make a local copy of [spending-record.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) in a new folder.
+1. First of all, make a local copy of [spending-record.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/minimal-table.css) in a new folder.
 2. Try opening it in a browser — You'll see that it looks OK, but it could stand to be improved. The "SUM" row that contains a summation of the spent amounts seems to be in the wrong place, and there are some details missing from the code.
 3. Put the obvious headers row inside a `<thead>` element, the "SUM" row inside a `<tfoot>` element, and the rest of the content inside a `<tbody>` element.
 4. Save and refresh, and you'll see that adding the `<tfoot>` element has caused the "SUM" row to go down to the bottom of the table.
@@ -224,7 +224,7 @@ Your finished table should look something like the following:
 
 {{ EmbedLiveSample('Active_learning_Adding_table_structure', '100%', 300, "", "", "hide-codepen-jsfiddle") }}
 
-> **Note:** You can also find it on Github as [spending-record-finished.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
+> **Note:** You can also find it on GitHub as [spending-record-finished.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record-finished.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
 
 ## Nesting Tables
 
@@ -426,11 +426,11 @@ Returning to our spending costs example, the previous two snippets could be rewr
 
 ### Active learning: playing with scope and headers
 
-1. For this final exercise, we'd like you to first make local copies of [items-sold.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css), in a new directory.
+1. For this final exercise, we'd like you to first make local copies of [items-sold.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/minimal-table.css), in a new directory.
 2. Now try adding in the appropriate `scope` attributes to make this table more appropriate.
 3. Finally, try making another copy of the starter files, and this time make the table more accessible using `id` and `headers` attributes.
 
-> **Note:** You can check your work against our finished examples — see [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html) ([also see this live](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)) and [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html) ([see this live too](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
+> **Note:** You can check your work against our finished examples — see [items-sold-scope.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-scope.html) ([also see this live](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)) and [items-sold-headers.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-headers.html) ([see this live too](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
 
 ## Summary
 

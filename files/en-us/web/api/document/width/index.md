@@ -23,13 +23,11 @@ pixels.
 
 Not supported by Internet Explorer.
 
-## Syntax
+## Value
 
-```js
-pixels = document.width;
-```
+A number that represents the width of the document in pixels.
 
-## Example
+## Examples
 
 ```js
 function init() {

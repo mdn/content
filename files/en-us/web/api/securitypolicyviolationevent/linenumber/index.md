@@ -19,17 +19,11 @@ The **`lineNumber`** read-only property of the
 {{domxref("SecurityPolicyViolationEvent")}} interface is the line number in the document
 or worker at which the violation occurred.
 
-## Syntax
-
-```js
-let lineNumber = violationEventInstance.lineNumber;
-```
-
-### Value
+## Value
 
 A number representing the line number at which the violation occurred.
 
-## Example
+## Examples
 
 ```js
 document.addEventListener("securitypolicyviolation", (e) => {

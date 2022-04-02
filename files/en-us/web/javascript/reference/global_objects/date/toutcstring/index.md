@@ -14,9 +14,10 @@ browser-compat: javascript.builtins.Date.toUTCString
 The **`toUTCString()`** method converts a date to a string,
 using the UTC time zone.
 
-Based on [rfc7231](https://datatracker.ietf.org/doc/html/rfc7231#section-7.1.1.1) and
-modified according to [ecma-262
-toUTCString](https://www.ecma-international.org/ecma-262/10.0/index.html#sec-date.prototype.toutcstring), it can have negative values in the [2021 version](https://tc39.es/ecma262/#sec-date.prototype.toutcstring)
+Based on [rfc7231](https://datatracker.ietf.org/doc/html/rfc7231#section-7.1.1.1)
+and modified according to
+[ecma-262 toUTCString](https://www.ecma-international.org/ecma-262/10.0/index.html#sec-date.prototype.toutcstring),
+it can have negative values in the [2021 version](https://tc39.es/ecma262/#sec-date.prototype.toutcstring)
 
 {{EmbedInteractiveExample("pages/js/date-toutcstring.html","shorter")}}
 

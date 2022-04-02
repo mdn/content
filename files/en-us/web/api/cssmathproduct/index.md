@@ -20,7 +20,7 @@ The **`CSSMathProduct`** interface of the {{domxref('CSS_Object_Model#css_typed_
 
 ## Constructor
 
-- {{domxref("CSSMathProduct.CSSMathProduct()")}}
+- {{domxref("CSSMathProduct.CSSMathProduct", "CSSMathProduct()")}}
   - : Creates a new `CSSMathProduct` object.
 
 ## Properties

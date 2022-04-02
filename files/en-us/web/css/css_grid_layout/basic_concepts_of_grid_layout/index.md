@@ -351,7 +351,7 @@ In the below example we use `grid-auto-rows` to ensure that tracks created in th
 
 When setting up an explicit grid or defining the sizing for automatically created rows or columns we may want to give tracks a minimum size, but also ensure they expand to fit any content that is added. For example, I may want my rows to never collapse smaller than 100 pixels, but if my content stretches to 300 pixels in height, then I would like the row to stretch to that height.
 
-Grid has a solution for this with the {{cssxref("minmax()", "minmax()")}} function. In this next example I am using `minmax()` in the value of {{cssxref("grid-auto-rows")}}. This means automatically created rows will be a minimum of 100 pixels tall, and a maximum of `auto`. Using `auto` means that the size will look at the content size and will stretch to give space for the tallest item in a cell, in this row.
+Grid has a solution for this with the {{cssxref("minmax", "minmax()")}} function. In this next example I am using `minmax()` in the value of {{cssxref("grid-auto-rows")}}. This means automatically created rows will be a minimum of 100 pixels tall, and a maximum of `auto`. Using `auto` means that the size will look at the content size and will stretch to give space for the tallest item in a cell, in this row.
 
 ```css
 .wrapper {

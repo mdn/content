@@ -54,7 +54,7 @@ Values of this type are strings. Possible values are:
 - `script`
   - : Code that is loaded to be executed by a {{HTMLElement("script")}} element or running in a [Worker](/en-US/docs/Web/API/Web_Workers_API).
 - `speculative`
-  - : In a speculative connection the browser has determined that a request to a URI may be coming soon, so it starts a TCP and/or TLS handshake immediately, so it is ready more quickly when the resource is actually requested.
+  - : In a speculative connection, the browser has determined that a request to a URI may be coming soon, so it starts a TCP and/or TLS handshake immediately, so it is ready more quickly when the resource is actually requested. Note that this type of connection does not provide valid tab information, so request details such as `tabId`, `frameId`, `parentFrameId`, etc. are inaccurate.
 - `stylesheet`
   - : [CSS](/en-US/docs/Web/CSS) stylesheets loaded to describe the representation of a document.
 - `sub_frame`

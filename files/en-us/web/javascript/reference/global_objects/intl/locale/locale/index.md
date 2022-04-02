@@ -70,6 +70,5 @@ console.log(locale.hourCycle); // Prints "h12"
 ## See also
 
 - {{jsxref("Intl.Collator")}}
-- [Unicode
-  locale identifiers spec](https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers)
+- [Unicode locale identifiers spec](https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers)
 - [A polyfill of `Intl.Locale` in FormatJS](https://formatjs.io/docs/polyfills/intl-locale)

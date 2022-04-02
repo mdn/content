@@ -28,7 +28,7 @@ If the user's browser doesn't support type `range`, it will fall back and treat 
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
         A {{domxref("DOMString")}} containing the string representation
         of the selected numeric value; use
@@ -58,6 +58,10 @@ If the user's browser doesn't support type `range`, it will fall back and treat 
       <td>
         <code>list</code>, <code>value</code>, and <code>valueAsNumber</code>
       </td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
       <td><strong>Methods</strong></td>
@@ -113,9 +117,9 @@ This value must be less than or equal to the value of the [`max`](/en-US/docs/We
 
 ### step
 
-The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping (`{{anch("min")}}` if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.
+The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping ([`min`](#min) if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.
 
-A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as `{{anch("min")}}` and `{{anch("max")}}`).
+A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
 
 > **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
 

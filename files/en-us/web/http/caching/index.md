@@ -75,13 +75,17 @@ Cache-Control: public
 
 #### Expiration
 
-The most important directive here is `max-age=<seconds>`, which is the maximum amount of time in which a resource will be considered [fresh](#freshness). This directive is relative to the time of the request, and overrides the {{HTTPHeader("Expires")}} header (if set). For the files in the application that will not change, you can normally use aggressive caching. This includes static files such as images, CSS files, and JavaScript files.
-
-For more details, see also the [Freshness](#freshness) section.
+The most important directive here is `max-age=<seconds>`, which is the maximum amount of time in which a resource will be considered [fresh](#freshness).
+This directive is relative to the time that the response was sent by the server, and overrides the {{HTTPHeader("Expires")}} header (if set).
 
 ```
 Cache-Control: max-age=31536000
 ```
+
+You can use a large `max-age` value for files that rarely or never change.
+This might include images, HTML, CSS files, and JavaScript files.
+
+For more details, see also the [Freshness](#freshness) section.
 
 #### Validation
 
@@ -144,7 +148,7 @@ Web developers invented a technique that Steve Souders called [revving](https://
 
 This technique has an additional benefit: updating two cached resources at the same time will not lead to the situation where the outdated version of one resource is used in combination with the new version of the other one. This is very important when websites have CSS stylesheets or JS scripts that have mutual dependencies, meaning that they depend on each other because they refer to the same HTML elements.
 
-![How the revved cache mechanism works. With minor typo fix to grammar issue: https://github.com/mdn/sprints/issues/2618](http_revved_fix_typo.png)
+![How the revved cache mechanism works](http_revved_fix_typo.png)
 
 The revision version added to revved resources doesn't need to be a classical revision string like 1.1.3, or even a monotonously growing suite of numbers. It can be anything that prevents collisions, like a hash or a date.
 

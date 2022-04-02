@@ -27,15 +27,7 @@ the value of {{domxref("MediaTrackSupportedConstraints.aspectRatio")}} as return
 call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
 is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
-
-```js
-var constraintsObject = { aspectRatio: constraint };
-
-constraintsObject.aspectRatio = constraint;
-```
-
-### Value
+## Value
 
 A [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble) describing the acceptable or required value(s) for a
 video track's aspect ratio. The value is the width divided by the height and is rounded
@@ -50,7 +42,7 @@ exact match to the required aspect ratio (if `exact` is specified or both
 `min` and `max` are provided and have the same value) or to a
 best-possible value.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.

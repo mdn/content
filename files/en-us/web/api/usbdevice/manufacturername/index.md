@@ -18,13 +18,7 @@ The **`manufacturerName`** read only property of the
 {{domxref("USBDevice")}} interface the of the organization that manufactured the USB
 device.
 
-## Syntax
-
-```js
-var serialNumber = USBDevice.manufacturerName
-```
-
-### Value
+## Value
 
 A {{jsxref("DOMString")}}.
 

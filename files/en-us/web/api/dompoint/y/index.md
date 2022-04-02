@@ -23,13 +23,7 @@ for a point in space.
 Unless transforms have been applied to alter the
 orientation, the value of `y` increases downward and decreases upward.
 
-## Syntax
-
-```js
-var yPos = DOMPoint.y;
-```
-
-### Value
+## Value
 
 A double-precision floating-point value indicating the _y_ coordinate's value
 for the point. This value is **unrestricted**, meaning that it is allowed

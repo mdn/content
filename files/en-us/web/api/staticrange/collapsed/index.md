@@ -20,13 +20,7 @@ The **`collapsed`** read-only property
 of the {{domxref("StaticRange")}} interface returns `true` if the range's
 start position and end position are the same.
 
-## Syntax
-
-```js
-var isCollapsed = staticRange.collapsed
-```
-
-### Value
+## Value
 
 A boolean value which is `true` if the range
 is **collapsed**. A collapsed range is one in which the start and end

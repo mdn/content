@@ -16,11 +16,9 @@ The **`lastModified`** property of the {{domxref("Document")}}
 interface returns a string containing the date and time on which the current document
 was last modified.
 
-## Syntax
+## Value
 
-```js
-var string = document.lastModified;
-```
+A string.
 
 ## Examples
 

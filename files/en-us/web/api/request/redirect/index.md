@@ -3,7 +3,6 @@ title: Request.redirect
 slug: Web/API/Request/redirect
 tags:
   - API
-  - Experimental
   - Fetch
   - Property
   - Redirect
@@ -15,13 +14,7 @@ browser-compat: api.Request.redirect
 
 The **`redirect`** read-only property of the {{domxref("Request")}} interface contains the mode for how redirects are handled.
 
-## Syntax
-
-```js
-var myRedirect = request.redirect;
-```
-
-### Value
+## Value
 
 A `RequestRedirect` enum value, which can be one the following strings:
 
@@ -31,9 +24,9 @@ A `RequestRedirect` enum value, which can be one the following strings:
 
 If not specified when the request is created, it takes the default value of `follow`.
 
-## Example
+## Examples
 
-In the following snippet, we create a new request using the {{domxref("Request.Request()")}} constructor (for an image file in the same directory as the script), then save the request `redirect` value in a variable:
+In the following snippet, we create a new request using the {{domxref("Request.Request", "Request()")}} constructor (for an image file in the same directory as the script), then save the request `redirect` value in a variable:
 
 ```js
 var myRequest = new Request('flowers.jpg');

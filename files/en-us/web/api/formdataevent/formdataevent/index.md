@@ -18,8 +18,8 @@ The **`FormDataEvent()`** constructor creates a new
 ## Syntax
 
 ```js
-new FormDataEvent(type[, formEventInit]);
-```
+new FormDataEvent(type);
+new FormDataEvent(type, formEventInit);
 
 ### Values
 

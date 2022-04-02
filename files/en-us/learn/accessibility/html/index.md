@@ -274,9 +274,9 @@ Another consideration when creating layouts is using HTML5 semantic elements as 
 
 By UI controls, we mean the main parts of web documents that users interact with — most commonly buttons, links, and form controls. In this section, we'll look at the basic accessibility concerns to be aware of when creating such controls. Later articles on WAI-ARIA and multimedia will look at other aspects of UI accessibility.
 
-One key aspect of the accessibility of UI controls is that by default, browsers allow them to be manipulated by the keyboard. You can try this out using our [native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) example (see the [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)). Open this in a new tab, and try pressing the tab key; after a few presses, you should see the tab focus start to move through the different focusable elements. The focused elements are given a highlighted default style in every browser (it differs slightly between different browsers) so that you can tell what element is focused.
+One key aspect of the accessibility of UI controls is that by default, browsers allow them to be manipulated by the keyboard. You can try this out using our [native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) example (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)). Open this in a new tab, and try pressing the tab key; after a few presses, you should see the tab focus start to move through the different focusable elements. The focused elements are given a highlighted default style in every browser (it differs slightly between different browsers) so that you can tell what element is focused.
 
-![](button-focused-unfocused.png)
+![Three buttons with the text "Click me!", "Click me too!", and "And me!" inside them respectively. The third button has a blue outline around it to indicate current tab focus.](button-focused-unfocused.png)
 
 > **Note:** From Firefox 84 you can also enable an overlay that shows the page tabbing order. For more information see: [Accessibility Inspector > Show web page tabbing order](/en-US/docs/Tools/Accessibility_inspector#show_web_page_tabbing_order).
 
@@ -338,7 +338,7 @@ But using such code is not advised — you immediately lose the native keyboard 
 
 #### Building keyboard accessibility back in
 
-Adding such advantages back in takes a bit of work (you can see an example in our [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) example — also see the [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)). Here we've given our fake `<div>` buttons the ability to be focused (including via tab) by giving each one the attribute `tabindex="0"`:
+Adding such advantages back in takes a bit of work (you can see an example in our [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) example — also see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)). Here we've given our fake `<div>` buttons the ability to be focused (including via tab) by giving each one the attribute `tabindex="0"`:
 
 ```html
 <div data-message="This is from the first button" tabindex="0">Click me!</div>
@@ -447,7 +447,7 @@ A basic data table can be written with very simple markup, for example:
 
 But this has problems — there is no way for a screen reader user to associate rows or columns together as groupings of data. To do this, you need to know what the header rows are and if they are heading up rows, columns, etc. This can only be done visually for the above table (see [bad-table.html](https://mdn.github.io/learning-area/accessibility/html/bad-table.html) and try the example out yourself).
 
-Now have a look at our [punk bands table example](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-complete.html) — you can see a few accessibility aids at work here:
+Now have a look at our [punk bands table example](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/punk-bands-complete.html) — you can see a few accessibility aids at work here:
 
 - Table headers are defined using {{htmlelement("th")}} elements — you can also specify if they are headers for rows or columns using the `scope` attribute. This gives you complete groups of data that can be consumed by screen readers as single units.
 - The {{htmlelement("caption")}} element and `<table>` `summary` attribute both do similar jobs — they act as alt text for a table, giving a screen reader user a useful quick summary of the table's contents. The `<caption>` element is generally preferred as it makes it's content accessible to sighted users too, who might also find it useful. You don't really need both.
@@ -489,7 +489,7 @@ One thing to consider is whether your images have meaning inside your content, o
 
 If you do want to provide extra contextual information, you should put it in the text surrounding the image, or inside a `title` attribute, as shown above. In this case, most screen readers will read out the alt text, the title attribute, and the filename. In addition, browsers display title text as tooltips when moused over.
 
-![](title-attribute.png)
+![Screenshot of a red Tyrannosaurus Rex with the text "The mozilla red dinosaur" displayed as tooltip on mouseover.](title-attribute.png)
 
 Let's have another quick look at the fourth method:
 
