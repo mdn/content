@@ -8,7 +8,7 @@ tags:
   - Reference
 ---
 
-The `banner` role is for defining a global site header, which usually includes a logo, company name, search feature, and possibly a slogan, generally at the top of the page.
+The `banner` role is for defining a global site header, which usually includes a logo, company name, search feature, and possibly the global navigation or a slogan. It is generally located at the top of the page.
 
 By default, the HTML's {{htmlelement("header")}} element has an identical meaning to the `banner` landmark, unless it is a descendant of {{htmlelement("aside")}}, {{htmlelement("article")}}, {{htmlelement("main")}}, {{htmlelement("nav")}}, or {{htmlelement("section")}}, at which point {{htmlelement("header")}} exposes a [`generic`](/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role) role, and not the equivalent of the site-wide banner.
 
@@ -40,10 +40,11 @@ Here's a fake simple banner with a skip to navigation link, a logo, a title and 
 
 ```html
 <div role="banner">
-  <a href="#nav" id="skipToMenu" class="skiptocontent">Skip To Keyboard Navigation</a>
+  <a href="#main" id="skipToMain" class="skiptocontent">Skip To main content</a>
   <img src="images/w3c.png" alt="W3C Logo">
   <h1>ARIA Landmarks</h1>
   <p>Identifying page subsections for easy navigation</p>
+  <nav>...</nav>
 </div>
 ```
 
@@ -51,10 +52,11 @@ We could also have written the above with the HTML `header` element:
 
 ```html
 <header>
-  <a href="#nav" id="skipToMenu" class="skiptocontent">Skip To Keyboard Navigation</a>
+  <a href="#main" id="skipToMain" class="skiptocontent">Skip To main content</a>
   <img src="images/w3c.png" alt="W3C Logo">
   <h1>ARIA Landmarks</h1>
   <p>Identifying page subsections for easy navigation</p>
+  <nav>...</nav>
 </header>
 ```
 
