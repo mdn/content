@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var deletingAll = browser.history.deleteAll()
+let deletingAll = browser.history.deleteAll()
 ```
 
 ### Parameters
@@ -49,7 +49,7 @@ function onDeleteAll() {
 }
 
 function deleteAllHistory() {
-  var deletingAll = browser.history.deleteAll();
+  let deletingAll = browser.history.deleteAll();
   deletingAll.then(onDeleteAll);
 }
 

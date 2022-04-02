@@ -60,7 +60,7 @@ This content script:
 ```js
 // content-script.js
 
-var myPort = browser.runtime.connect({name:"port-from-cs"});
+let myPort = browser.runtime.connect({name:"port-from-cs"});
 myPort.postMessage({greeting: "hello from content script"});
 
 myPort.onMessage.addListener(function(m) {
@@ -87,7 +87,7 @@ The corresponding background script:
 ```js
 // background-script.js
 
-var portFromCS;
+let portFromCS;
 
 function connected(p) {
   portFromCS = p;

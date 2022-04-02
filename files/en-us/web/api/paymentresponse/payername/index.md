@@ -20,13 +20,7 @@ option is only present when the `requestPayerName` option is set to
 `true` in the options parameter of the
 {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor.
 
-## Syntax
-
-```js
-var payerName = PaymentResponse.payerName;
-```
-
-### Value
+## Value
 
 A string containing the payer name.
 

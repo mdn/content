@@ -18,7 +18,7 @@ The **`AnalyserNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API/
 ## Syntax
 
 ```js
-var analyserNode = new AnalyserNode(context, options);
+new AnalyserNode(context, options);
 ```
 
 ### Parameters

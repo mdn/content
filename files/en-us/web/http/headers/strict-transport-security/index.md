@@ -43,7 +43,7 @@ Strict-Transport-Security: max-age=<expire-time>; preload
 - `includeSubDomains` {{optional_inline}}
   - : If this optional parameter is specified, this rule applies to all of the site's subdomains as well.
 - `preload` {{optional_inline}} {{non-standard_inline}}
-  - : See {{anch("Preloading Strict Transport Security")}} for details.
+  - : See [Preloading Strict Transport Security](#preloading_strict_transport_security) for details.
     Not part of the specification.
 
 ## Description

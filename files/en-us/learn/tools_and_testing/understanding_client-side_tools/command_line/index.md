@@ -61,7 +61,7 @@ Anyway, the terminal is not going away anytime soon.
 
 ### What does the terminal look like?
 
-Below you can see some of the different flavours of programs that are available that can get you to a terminal.
+Below you can see some of the different flavors of programs that are available that can get you to a terminal.
 
 The next images show the command prompts available in Windows — there's a good range of options from the "cmd" program to "powershell" — which can be run from the start menu by typing the program name.
 
@@ -484,7 +484,7 @@ With Prettier there's a number of ways automation can be achieved and though the
 
 - Before you commit your code into a git repository using [Husky](https://github.com/typicode/husky).
 - Whenever you hit "save" in your code editor, be it [VS Code](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), [Atom](https://atom.io/packages/prettier-atom), or [Sublime Text](https://packagecontrol.io/packages/JsPrettier).
-- As part of continuous integration checks using tools like [Github Actions](https://github.com/features/actions).
+- As part of continuous integration checks using tools like [GitHub Actions](https://github.com/features/actions).
 
 Our personal preference is the second one — while using say VS Code, Prettier kicks in and cleans up any formatting it needs to do every time we hit save. You can find a lot more information about using Prettier in different ways in the [Prettier docs](https://prettier.io/docs/en/).
 

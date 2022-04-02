@@ -19,14 +19,7 @@ The **`featureSettings`** property of the
 are not available from a font's variant properties. It is equivalent to the
 {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}} descriptor.
 
-## Syntax
-
-```js
-let featureSettingDescriptor = FontFace.featureSettings;
-FontFace.featureSettings = featureSettingDescriptor;
-```
-
-### Value
+## Value
 
 A {{domxref('CSSOMString')}} containing a descriptor.
 

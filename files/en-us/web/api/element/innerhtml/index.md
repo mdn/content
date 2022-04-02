@@ -21,15 +21,7 @@ within the element.
 To insert the HTML into the document rather than replace the contents of an element,
 use the method {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.
 
-## Syntax
-
-```js
-const content = element.innerHTML;
-
-element.innerHTML = content;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} containing the HTML serialization of the element's
 descendants. Setting the value of `innerHTML` removes all of the element's
@@ -163,7 +155,7 @@ For that reason, it is recommended that instead of `innerHTML` you use:
 > the extension to [addons.mozilla.org](https://addons.mozilla.org/), it may be rejected in the review process.
 > Please see [Safely inserting external content into a page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page) for alternative methods.
 
-## Example
+## Examples
 
 This example uses `innerHTML` to create a mechanism for logging messages into a box on a web page.
 

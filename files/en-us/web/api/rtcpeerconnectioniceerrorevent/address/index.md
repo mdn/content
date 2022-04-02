@@ -23,13 +23,7 @@ The {{domxref("RTCPeerConnectionIceErrorEvent")}} property
 being used to communicate with the {{Glossary("STUN")}} or {{Glossary("TURN")}} server
 during negotiations. The error which occurred involved this address.
 
-## Syntax
-
-```js
-let address = rtcPeerConnectionIceErrorEvent.address;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} which specifies the local IP address of the network
 connection to the ICE server with which negotiations were occurring when the error

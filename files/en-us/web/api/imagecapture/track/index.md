@@ -20,13 +20,7 @@ The **`track`** read-only property of the
 {{domxref("MediaStreamTrack")}} passed to the
 {{domxref("ImageCapture.ImageCapture","ImageCapture()")}} constructor.
 
-## Syntax
-
-```js
-const mediaStreamTrack = imageCaptureObj.track
-```
-
-### Value
+## Value
 
 A {{domxref("MediaStreamTrack")}} object.
 

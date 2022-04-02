@@ -20,26 +20,21 @@ browser-compat: api.RTCIceTransport.statechange_event
 
 A **`statechange`** event occurs when the {{domxref("RTCIceTransport")}} changes state. The {{domxref("RTCIceTransport.state", "state")}} can be used to determine how far through the process of examining, verifying, and selecting a valid candidate pair is prior to successfully connecting the two peers for WebRTC communications.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{DOMxRef("RTCIceTransport.onstatechange")}}</td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('statechange', event => { });
+
+onstatechange = event => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -55,7 +50,7 @@ iceTransport.addEventListener("statechange", ev => {
 }, false);
 ```
 
-The same code, using the {{domxref("RTCIceTransport.onstatechange", "onstatechange")}} event handler property, looks like this:
+The same code, using the `onstatechange` event handler property, looks like this:
 
 ```js
 let iceTransport = pc.getSenders()[0].transport.iceTransport;
@@ -79,7 +74,6 @@ iceTransport.onstatechange = ev => {
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - [WebRTC connectivity](/en-US/docs/Web/API/WebRTC_API/Connectivity)
-- {{domxref("RTCIceTransport.onstatechange")}} event handler
 
 ### Related RTCIceTransport events
 

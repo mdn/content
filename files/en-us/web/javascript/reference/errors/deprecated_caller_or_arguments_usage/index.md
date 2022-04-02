@@ -10,8 +10,8 @@ tags:
 ---
 {{jsSidebar("Errors")}}
 
-The JavaScript [strict
-mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception "deprecated caller or arguments usage" occurs when the
+The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception
+"deprecated caller or arguments usage" occurs when the
 deprecated {{jsxref("Function.caller")}} or {{jsxref("Function.arguments")}} properties
 are used.
 
@@ -84,8 +84,7 @@ console.log('returned: ' + g.arguments);
 
 ## See also
 
-- [Deprecated
-  and obsolete features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
+- [Deprecated and obsolete features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
 - [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
 - {{jsxref("Function.arguments")}}
 - {{jsxref("Function.caller")}} and

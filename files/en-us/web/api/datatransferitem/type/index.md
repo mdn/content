@@ -21,17 +21,11 @@ a MIME type is not required.
 
 Some example types are: `text/plain` and `text/html`.
 
-## Syntax
-
-```js
-dataItem.type;
-```
-
-### Return value
+## Value
 
 A {{domxref("DOMString")}} representing the drag data item's type.
 
-## Example
+## Examples
 
 This example shows the use of the `type` property.
 

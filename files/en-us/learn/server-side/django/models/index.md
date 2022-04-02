@@ -432,7 +432,7 @@ Some things to consider:
 - Should "language" be associated with a `Book`, `BookInstance`, or some other object?
 - Should the different languages be represented using model, a free text field, or a hard-coded selection list?
 
-After you've decided, add the field. You can see what we decided on Github [here](https://github.com/mdn/django-locallibrary-tutorial/blob/master/catalog/models.py).
+After you've decided, add the field. You can see what we decided on GitHub [here](https://github.com/mdn/django-locallibrary-tutorial/blob/master/catalog/models.py).
 
 Don't forget that after a change to your model, you should again re-run your database migrations to add the changes.
 

@@ -21,13 +21,7 @@ underlying {{domxref("AudioWorkletProcessor")}} according to its
 {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} static
 getter.
 
-## Syntax
-
-```js
-audioWorkletNodeInstance.parameters
-```
-
-### Value
+## Value
 
 The {{domxref("AudioParamMap")}} object containing {{domxref("AudioParam")}} instances.
 They can be automated in the same way as with default `AudioNode`s, and their

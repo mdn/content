@@ -21,13 +21,7 @@ performed by either the browser or extensions.
 > **Note:** This property is unaffected by {{HTMLElement("meta")}}
 > elements.
 
-## Syntax
-
-```js
-contentType = document.contentType;
-```
-
-### Value
+## Value
 
 `contentType` is a read-only property.
 

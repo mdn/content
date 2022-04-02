@@ -12,11 +12,13 @@ In this article we will discuss the main essential components of responsive desi
 
 For Web developers, it is now fairly common to be called upon to create a Web site or app that changes its user interface depending on the browser or device accessing the site to provide an optimized experience. One approach to this is to create different versions of your site/app for different platforms or browsers and serve them appropriately after detecting which browser or platform is looking at your site. But this is increasingly inefficient: browser sniffing is inherently error prone, and maintaining multiple copies of your code can turn out to be a nightmare.
 
-It is usually much better to create a single version of your code which doesn't care about what browser or platform is accessing the site, but instead uses feature tests to find out what code features the browser supports or what the values of certain browser features are, and then adjusts the code appropriately. This tends to be termed **responsive design** or **adaptive design**, two related but different approaches. For a discussion on the differences between the two, read [Responsive design versus adaptive design](/en-US/docs/Web/Apps/app_layout/Responsive_design_versus_adaptive_design).
+It is usually much better to create a single version of your code which doesn't care about what browser or platform is accessing the site, but instead uses feature tests to find out what code features the browser supports or what the values of certain browser features are, and then adjusts the code appropriately.
 
-This is much more reliable, more maintainable, and more future proof. You don't get caught in the situation of having to bring out more new site versions as more new browsers and platforms come out, and adjust code as feature support in existing browsers changes.
+**Responsive design** is the term commonly used for describing that approach.
 
-There are disadvantages to this approach as well. If the content, layout, and functionality need to change greatly for different devices, it may not be such a good approach. Also, taking an existing site and adding responsiveness to it, to make it mobile/tablet friendly, can be a lot more effort than just creating a separate mobile site or app, especially if it is a sprawling enterprise site. Read more about [responsive design advantages and disadvantages](/en-US/docs/Web/Progressive_web_apps).
+Responsive design is much more reliable, more maintainable, and more future proof than maintaining multiple copies of your code for different browsers and platforms. With responsive design, you don't get caught in the situation of having to bring out more new site versions as more new browsers and platforms come out, and adjust code as feature support in existing browsers changes.
+
+There are disadvantages to responsive-design approach, however. If the content, layout, and functionality need to change greatly for different devices, it may not be such a good approach. Also, taking an existing site and adding responsiveness to it, to make it mobile/tablet friendly, can be a lot more effort than just creating a separate mobile site or app, especially if it is a sprawling enterprise site. Read more about [responsive design advantages and disadvantages](/en-US/docs/Web/Progressive_web_apps).
 
 > **Note:** You can also read our discussion on the basics of [responsive design](/en-US/docs/Web/Progressive_web_apps), if you need some more background information and basics.
 
@@ -26,11 +28,11 @@ The best place to start is with fluid measurements for our application layout �
 
 We've written a simple-but-fun prototype for an application called Snapshot, which takes a video stream from your webcam (using {{domxref("navigator.getUserMedia", "getUserMedia()")}}) then allows you to capture stills from that video stream (using HTML5 {{HTMLElement("canvas")}}), and save them to a gallery. You can then view previously-captured images and delete them. Other articles will discuss the functionality in more detail, but here we're interested in the layout.
 
-> **Note:** You can find the [Snapshot app on Github](https://github.com/chrisdavidmills/snapshot); check out the code and help improve it. You can also see [Snapshot running live](https://chrisdavidmills.github.io/snapshot/). Note that `getUserMedia()` is an experimental technology, which currently only works in Google Chrome and Firefox desktop. More functionality and a clean up of the styling of Snapshot are planned for a future date.
+> **Note:** You can find the [Snapshot app on GitHub](https://github.com/chrisdavidmills/snapshot); check out the code and help improve it. You can also see [Snapshot running live](https://chrisdavidmills.github.io/snapshot/). Note that `getUserMedia()` is an experimental technology, which currently only works in Google Chrome and Firefox desktop. More functionality and a clean up of the styling of Snapshot are planned for a future date.
 
 Our desktop layout for Snapshot is three columns, containing the camera viewer, image capture view, and gallery, respectively.
 
-![](desktop-layout.png)
+![Desktop layout for Snapshot](desktop-layout.png)
 
 The markup is as follows:
 
@@ -92,7 +94,7 @@ This basically means that {{cssxref("width")}} and {{cssxref("height")}} will no
 
 Things are working fairly well now, but there are still some issues just waiting to present themselves. For a start, let's have a look at what happens when we include the {{HTMLElement("video")}} and {{HTMLElement("img")}} elements inside our first two columns, naked and unstyled.
 
-![](broken-images.png)
+![Images making a mess of layout](broken-images.png)
 
 Because the size of replaced elements is dictated by the size of the media inserted into them, and the media is a fixed size, they explode out of their containing elements and make a mess of the layout. This is pretty horrible, but generally this kind of problem is easily fixed with some simple CSS:
 
@@ -113,7 +115,7 @@ x-card:nth-child(1) video, x-card:nth-child(2) img {
 
 This is because in our case, we do in fact want the video and image to stretch to always fill their containers no matter what — a subtle but important difference from {{cssxref("max-width")}} — and therefore always be the same size. The video always resizes dynamically, but the screen captures taken from it do not, so upon resizing the screen it was possible to end up with a messy layout with different sized elements when using `max-width: 100%`, such as:
 
-![](broken-max-width-layout.png)
+![Broken max-width example](broken-max-width-layout.png)
 
 ## Media queries
 
@@ -125,7 +127,7 @@ Fluid grids are a great start, but you'll notice that at certain points (known a
 
 In our example, we have a desktop layout, as we've already seen. This is created using the CSS rules included at the top of the stylesheet, before any media queries are encountered.
 
-![](desktop-layout.png)
+![Typical desktop layout](desktop-layout.png)
 
 ### Mid-width layout
 
@@ -150,7 +152,7 @@ We also have a mid-width layout, which is aimed at working well on tablets and n
 
 So here we're altering the widths of the columns and removing the float of the third column (and adding clearing to guard against any float funny business). We've also altered the width of the images inside the third container (no longer a column — this is the gallery) so that now you get five per line (it was previously three per line).
 
-![](middle-layout.png)
+![Five-per-line layout](middle-layout.png)
 
 ### Narrow screen/mobile layout
 
@@ -328,7 +330,7 @@ This does the following:
 
 This results in the following layout:
 
-![](viewport-fail-fixed.png)
+![Viewport layout fixed](viewport-fail-fixed.png)
 
 > **Note:** Another solution with respect to orientation might be to just lock the orientation of your app, to portrait or landscape. If you are working on an installed app, you can easily do this with the [orientation manifest field](/en-US/docs/Web/Apps/Build/Manifest#orientation). If you want a solution that works across general web apps, you could use the [Screen orientation API](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation#locking_the_screen_orientation), and/or provide a message asking the user to rotate their screen if they are using the wrong orientation (for example, if `window.innerWidth` is larger than `window.innerHeight`, assume the
 > game is landscape mode and show a "please rotate" message.)
@@ -337,7 +339,7 @@ This results in the following layout:
 
 One last problem to mention for our example app is concerned with mobile browsers and media queries. If we viewed my example in a mobile browser in its current state, we wouldn't see our nice mobile layout. Instead, we'd see the below image.
 
-![](viewport-fail.png)I'm sure you'll agree that this really isn't what we wanted — why is this happening? In short, mobile browsers lie. They don't render web pages at their true viewport width. Instead, they render pages at a higher assumed viewport width (something approaching a laptop screen), and then shrink the result down to fit inside the mobile screen. This is a sensible defensive mechanism — most old school sites that don't have media queries would look terrible when rendered at say, 320px or 480px wide. But this doesn't help us responsible web developers, who have written small screen layouts into our CSS using media queries and want mobile devices to display those!
+![Broken layout on mobile](viewport-fail.png)I'm sure you'll agree that this really isn't what we wanted — why is this happening? In short, mobile browsers lie. They don't render web pages at their true viewport width. Instead, they render pages at a higher assumed viewport width (something approaching a laptop screen), and then shrink the result down to fit inside the mobile screen. This is a sensible defensive mechanism — most old school sites that don't have media queries would look terrible when rendered at say, 320px or 480px wide. But this doesn't help us responsible web developers, who have written small screen layouts into our CSS using media queries and want mobile devices to display those!
 
 There is a way to override this mobile rendering behavior — viewport, which is inserted into our HTML pages in the form of a {{HTMLElement("meta")}} tag. In my example, let's add the following into our HTML {{HTMLElement("head")}}:
 

@@ -17,13 +17,7 @@ The **`badge`** property of the {{domxref("Notification")}}
 interface returns the URL of the image used to represent the notification when there is
 not enough space to display the notification itself.
 
-## Syntax
-
-```js
-var url = Notification.badge
-```
-
-### Value
+## Value
 
 A {{domxref('USVString')}} containing a URL.
 

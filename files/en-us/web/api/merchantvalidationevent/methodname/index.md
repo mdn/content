@@ -26,13 +26,7 @@ The {{domxref("MerchantValidationEvent")}} property
 indicating the payment method identifier which represents the payment handler that
 requires merchant validation.
 
-## Syntax
-
-```js
-methodID = merchantValidationEvent.methodName;
-```
-
-### Value
+## Value
 
 A read-only {{domxref("DOMString")}} which uniquely identifies the payment handler
 which is requesting merchant validation. See

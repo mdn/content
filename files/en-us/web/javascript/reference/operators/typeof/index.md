@@ -129,8 +129,9 @@ represented as the NULL pointer (`0x00` in most platforms). Consequently,
 `null` had `0` as type tag, hence the `typeof` return
 value `"object"`. ([reference](http://www.2ality.com/2013/10/typeof-null.html))
 
-A fix was proposed for ECMAScript (via an opt-in), but [was
-rejected](https://web.archive.org/web/20160331031419/http://wiki.ecmascript.org:80/doku.php?id=harmony:typeof_null). It would have resulted in `typeof null === 'null'`.
+A fix was proposed for ECMAScript (via an opt-in), but
+[was rejected](https://web.archive.org/web/20160331031419/http://wiki.ecmascript.org:80/doku.php?id=harmony:typeof_null).
+It would have resulted in `typeof null === 'null'`.
 
 ### Using `new` operator
 
@@ -176,10 +177,11 @@ could never generate an error.
 However, with the addition of block-scoped {{JSxRef("Statements/let", "let")}} and
 {{JSxRef("Statements/const", "const")}}, using `typeof` on `let` and
 `const` variables (or using `typeof` on a `class`) in a
-block before they are declared will throw a {{JSxRef("ReferenceError")}}. Block scoped
-variables are in a "[temporal
-dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)" from the start of the block until the initialization is processed,
-during which, it will throw an error if accessed.
+block before they are declared will throw a {{JSxRef("ReferenceError")}}.
+Block scoped variables are in a
+"[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)"
+from the start of the block until the initialization is processed,
+during which it will throw an error if accessed.
 
 ```js
 typeof undeclaredVariable === 'undefined';
@@ -256,8 +258,8 @@ On IE 6, 7, and 8 a lot of host objects are objects and not functions. For examp
 typeof alert === 'object'
 ```
 
-Some non-standard IE properties return other values ([tc39/ecma262#1440
-(comment)](https://github.com/tc39/ecma262/issues/1440#issuecomment-461963872)):
+Some non-standard IE properties return other values
+([tc39/ecma262#1440 (comment)](https://github.com/tc39/ecma262/issues/1440#issuecomment-461963872)):
 
 ```js
 typeof window.external.AddSearchProvider === "unknown";
@@ -267,5 +269,4 @@ typeof window.external.IsSearchProviderInstalled === "unknown";
 ## See also
 
 - {{JSxRef("Operators/instanceof", "instanceof")}}
-- [`document.all`
-  willful violation of the standard](https://github.com/tc39/ecma262/issues/668)
+- [`document.all` willful violation of the standard](https://github.com/tc39/ecma262/issues/668)

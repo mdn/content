@@ -23,7 +23,7 @@ If a feature policy blocks use of a feature it is because your code is inconsist
 
 A {{jsxref('Number')}} indicating the current light level in lux.
 
-## Example
+## Examples
 
 ```js
 if ( 'AmbientLightSensor' in window ) {

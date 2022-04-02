@@ -15,14 +15,7 @@ browser-compat: api.Element.ariaModal
 
 The **`ariaModal`** property of the {{domxref("Element")}} interface reflects the value of the `aria-modal` attribute, which indicates whether an element is modal when displayed. Applying the `aria-modal` property to an element with `role="dialog"` replaces the technique of using aria-hidden on the background for informing assistive technologies that content outside a dialog is inert.
 
-## Syntax
-
-```js
-var ariaModal = element.ariaModal;
-element.ariaModal = ariaModal
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} with one of the following values:
 

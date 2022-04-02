@@ -25,7 +25,7 @@ For an app to receive push messages, it has to have an active [service worker](/
 
 The resulting {{domxref("PushSubscription")}} includes all the information that the application needs to send a push message: an endpoint and the encryption key needed for sending data.
 
-The service worker will be started as necessary to handle incoming push messages, which are delivered to the {{domxref("ServiceWorkerGlobalScope.onpush")}} event handler. This allows apps to react to push messages being received, for example, by displaying a notification (using {{domxref("ServiceWorkerRegistration.showNotification()")}}.)
+The service worker will be started as necessary to handle incoming push messages, which are delivered to the {{domxref("ServiceWorkerGlobalScope.push_event", "onpush")}} event handler. This allows apps to react to push messages being received, for example, by displaying a notification (using {{domxref("ServiceWorkerRegistration.showNotification()")}}.)
 
 Each subscription is unique to a service worker. The endpoint for the subscription is a unique [capability URL](https://www.w3.org/TR/capability-urls/): knowledge of the endpoint is all that is necessary to send a message to your application. The endpoint URL therefore needs to be kept secret, or other applications might be able to send push messages to your application.
 
@@ -50,9 +50,9 @@ The following additions to the [Service Worker API](/en-US/docs/Web/API/Service_
 
 - {{domxref("ServiceWorkerRegistration.pushManager")}} {{readonlyinline}}
   - : Returns a reference to the {{domxref("PushManager")}} interface for managing push subscriptions including subscribing, getting an active subscription, and accessing push permission status. This is the entry point into using Push messaging.
-- {{domxref("ServiceWorkerGlobalScope.onpush")}}
+- {{domxref("ServiceWorkerGlobalScope.push_event", "onpush")}}
   - : An event handler fired whenever a {{Event("push")}} event occurs; that is, whenever a server push message is received.
-- {{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange")}}
+- {{domxref("ServiceWorkerGlobalScope.pushsubscriptionchange_event", "onpushsubscriptionchange")}}
   - : An event handler fired whenever a {{Event("pushsubscriptionchange")}} event occurs; for example, when a push subscription has been invalidated, or is about to be invalidated (e.g. when a push service sets an expiration time.)
 
 ## Examples

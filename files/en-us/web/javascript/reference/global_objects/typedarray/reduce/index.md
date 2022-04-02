@@ -16,8 +16,8 @@ browser-compat: javascript.builtins.TypedArray.reduce
 The **`reduce()`** method applies a function against an
 accumulator and each value of the typed array (from left-to-right) has to reduce it to a
 single value. This method has the same algorithm as
-{{jsxref("Array.prototype.reduce()")}}. _TypedArray_ is one of the [typed
-array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+{{jsxref("Array.prototype.reduce()")}}. _TypedArray_ is one of the
+[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
 
 {{EmbedInteractiveExample("pages/js/typedarray-reduce.html")}}
 
@@ -45,7 +45,9 @@ reduce(function(accumulator, currentValue, index, array) { /* ... */ }, initialV
 
 - `callbackFn`
 
-  - : Function to execute on each value in the typed array, taking four arguments:
+  - : Function to execute on each value in the typed array.
+
+    The function is called with the following arguments:
 
     - `accumulator`
       - : The value previously returned in the last invocation of the callback, or

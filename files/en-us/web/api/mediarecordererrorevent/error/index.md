@@ -22,15 +22,9 @@ by a {{domxref("MediaRecorder")}} instance.
 When a `MediaRecorderErrorEvent` occurs, you can determine to some extent
 what went wrong by examining the `error` property within the
 `MediaRecorderErrorEvent` received by the `MediaRecorder`'s
-{{event("error")}} event handler, {{domxref("MediaRecorder.onerror", "onerror")}}.
+{{event("error")}} event handler, {{domxref("MediaRecorder.error_event", "onerror")}}.
 
-## Syntax
-
-```js
-error = MediaRecorderErrorEvent.error;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMException")}} describing the error represented by the event. The
 error's {{domxref("DOMException.name", "name")}} property's value may be any exception
@@ -56,7 +50,7 @@ method references.
 - `UnknownError`
   - : A non-security related error occurred that cannot otherwise be categorized.
     Recording stops, the `MediaRecorder`'s {{domxref("MediaRecorder.state",
-    "state")}} becomes `inactive`, one last {{event("dataavailable")}} event is
+    "state")}} becomes `inactive`, one last {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event is
     sent to the `MediaRecorder` with the remaining received data, and finally a
     {{event("stop")}} event is sent.
 

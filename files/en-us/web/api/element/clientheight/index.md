@@ -27,17 +27,11 @@ is a special case of `clientHeight`](https://www.w3.org/TR/2016/WD-cssom-view-1-
 > **Note:** This property will round the value to an integer. If you need
 > a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.
 
-## Syntax
+## Value
 
-```js
-var intElemClientHeight = element.clientHeight;
-```
+A number.
 
-`intElemClientHeight` is an integer corresponding to the
-`clientHeight` of `element` in pixels. The
-`clientHeight` property is read–only.
-
-## Example
+## Examples
 
 ![](dimensions-client.png)
 

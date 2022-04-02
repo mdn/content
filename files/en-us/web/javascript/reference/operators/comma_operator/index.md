@@ -59,9 +59,8 @@ for (var i = 0, j = 9; i <= 9; i++, j--)
 Note that the comma operators in assignments may appear not to have the normal effect
 of comma operators because they don't exist within an expression. In the following
 example, `a` is set to the value of `b = 3` (which is 3), but the
-`c = 4` expression still evaluates and its result returned to console (i.e.,
-4\). This is due to [operator
-precedence and associativity](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
+`c = 4` expression still evaluates and its result returned to console (i.e., 4\).
+This is due to [operator precedence and associativity](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
 
 ```js
 var a, b, c;
@@ -99,5 +98,4 @@ function myFunc() {
 
 ## See also
 
-- [`for`
-  loop](/en-US/docs/Web/JavaScript/Reference/Statements/for)
+- [`for` loop](/en-US/docs/Web/JavaScript/Reference/Statements/for)

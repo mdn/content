@@ -31,8 +31,7 @@ maximize()
 ### Return value
 
 A {{jsxref("Intl/Locale", "Locale")}} instance whose `baseName` property returns
-the result of the [Add
-Likely Subtags](https://www.unicode.org/reports/tr35/#Likely_Subtags) algorithm executed against _{{jsxref("Intl/Locale/baseName", "locale.baseName")}}_.
+the result of the [Add Likely Subtags](https://www.unicode.org/reports/tr35/#Likely_Subtags) algorithm executed against _{{jsxref("Intl/Locale/baseName", "locale.baseName")}}_.
 
 ## Description
 
@@ -81,5 +80,4 @@ console.log(myLocMaximized.toString());
 
 - {{jsxref("Intl.Locale")}}
 - {{jsxref("Intl/Locale/baseName", "Intl.Locale.baseName")}}
-- [Unicode's Likely
-  Subtags spec](https://www.unicode.org/reports/tr35/#Likely_Subtags)
+- [Unicode's Likely Subtags spec](https://www.unicode.org/reports/tr35/#Likely_Subtags)

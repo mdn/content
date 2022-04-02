@@ -40,7 +40,7 @@ An `object` representing the manifest.
 Get the manifest and log the "name" property:
 
 ```js
-var manifest = browser.runtime.getManifest();
+let manifest = browser.runtime.getManifest();
 console.log(manifest.name);
 ```
 

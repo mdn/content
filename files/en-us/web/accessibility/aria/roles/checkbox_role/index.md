@@ -8,6 +8,7 @@ tags:
   - Role
   - ARIA widget
   - Reference
+  - checkbox 
 ---
 The `checkbox` role is for checkable interactive controls. Elements containing `role="checkbox"` must also include the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute to expose the checkbox's state to assistive technology.
 
@@ -25,7 +26,7 @@ The `checkbox` role is for checkable interactive controls. Elements containing `
 
 ## Description
 
-The native HTML checkbox ([`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox))  form control had two states ("checked" or "not checked"), with an [`indeterminate`](/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes) state settable via JavaScript. Similarly, an element with `role="checkbox"`  can expose three states through the `aria-checked` attribute: `true`, `false`, or `mixed`.
+The native HTML checkbox ([`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)) form control had two states ("checked" or "not checked"), with an [`indeterminate`](/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes) state settable via JavaScript. Similarly, an element with `role="checkbox"` can expose three states through the `aria-checked` attribute: `true`, `false`, or `mixed`.
 
 Since a checkbox is an interactive control, it must be focusable and keyboard accessible. If the role is applied to a non-focusable element, use the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute to change this. The expected keyboard shortcut for activating a checkbox is the <kbd>Space</kbd> key.
 
@@ -45,7 +46,7 @@ Because descendants of `checkbox` are presentational, the following code is equi
 
 ```html
 <div role="checkbox"><h6 role="presentation">Name of my checkbox</h6></li>
-````
+```
 
 From the assistive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
 

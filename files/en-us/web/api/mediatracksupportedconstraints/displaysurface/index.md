@@ -31,19 +31,13 @@ The supported constraints list is obtained by calling
 {{domxref("MediaDevices.getSupportedConstraints",
   "navigator.mediaDevices.getSupportedConstraints()")}}.
 
-## Syntax
-
-```js
-isDisplaySurfaceSupported = supportedConstraints.displaySurface;
-```
-
-### Value
+## Value
 
 A Boolean value which is `true` if the
 {{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}} constraint is
 supported by the device and user agent.
 
-## Example
+## Examples
 
 This method sets up the constraints object specifying the options for the call to
 {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}. It adds the

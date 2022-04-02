@@ -57,7 +57,7 @@ offset-path: unset;
 
   - : Specifies a [CSS shape](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes) including `circle()`, `ellipse()`, `inset()`, `polygon()`, or `path()`.
 
-    - {{cssxref("path()","path()")}}
+    - {{cssxref("path","path()")}}
       - : A path string defined with SVG coordinate syntax.
 
 - `none`
@@ -163,7 +163,7 @@ The top and bottom halves of the scissors would appear in the top left of the ca
 - {{cssxref("offset-distance")}}
 - {{cssxref("offset-rotate")}}
 - [SVG \<path>](/en-US/docs/Web/SVG/Tutorial/Paths)
-- {{cssxref("path()","path()")}}
+- {{cssxref("path","path()")}}
 
 Other demos:
 

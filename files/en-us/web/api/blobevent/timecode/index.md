@@ -21,13 +21,7 @@ produced by this recorder.
 Note that the timecode in the first produced
 BlobEvent does not need to be zero.
 
-## Syntax
-
-```js
-var timecode = blobEvent.timecode
-```
-
-### Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}}.
 

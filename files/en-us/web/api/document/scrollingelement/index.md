@@ -20,13 +20,11 @@ When in quirks mode, the `scrollingElement` attribute returns the HTML
 `body` element if it exists and is [potentially
 scrollable](https://drafts.csswg.org/cssom-view/#potentially-scrollable), otherwise it returns null.
 
-## Syntax
+## Value
 
-```js
-var element = document.scrollingElement;
-```
+The {{domxref("Element")}} that scrolls the document, usually the root element (unless not in standard mode).
 
-## Example
+## Examples
 
 ```js
 var scrollElm = document.scrollingElement;

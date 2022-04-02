@@ -13,28 +13,30 @@ browser-compat: api.ServiceWorkerGlobalScope.periodicsync_event
 
 The **`periodicsync`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired at timed intervals, specified when registering a {{domxref('PeriodicSyncManager')}}.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("PeriodicSyncEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref('ServiceWorkerGlobalScope.onperiodicsync')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('periodicsync', event => { });
+
+onperiodicsync = event => { };
+```
+
+## Event type
+
+An {{domxref("PeriodicSyncEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("PeriodicSyncEvent")}}
+
+## Event properties
+
+_Inherits properties from its ancestor, {{domxref("Event")}}_.
+
+- {{domxref('PeriodicSyncEvent.tag')}} {{readonlyInline}}
+  - : Returns the developer-defined identifier for this `PeriodicSyncEvent`. Multiple tags can be used by the web app to run different periodic tasks at different frequencies.
 
 ## Examples
 
@@ -48,7 +50,7 @@ self.addEventListener('periodicsync', event => {
 });
 ```
 
-You can also set up the event handler using the {{domxref('ServiceWorkerGlobalScope.onperiodicsync')}} property:
+You can also set up the event handler using the `onperiodicsync` property:
 
 ```js
 self.onperiodicsync = (event) => {

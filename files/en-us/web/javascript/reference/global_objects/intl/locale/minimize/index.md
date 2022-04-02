@@ -30,8 +30,8 @@ minimize()
 ### Return value
 
 A {{jsxref("Intl/Locale", "Locale")}} instance whose `baseName` property returns
-the result of the [Remove Likely
-Subtags](https://www.unicode.org/reports/tr35/#Likely_Subtags) algorithm executed against _{{jsxref("Intl/Locale/baseName", "locale.baseName")}}_.
+the result of the [Remove Likely Subtags](https://www.unicode.org/reports/tr35/#Likely_Subtags) algorithm
+executed against _{{jsxref("Intl/Locale/baseName", "locale.baseName")}}_.
 
 ## Description
 
@@ -40,8 +40,9 @@ removing any language, script, or region subtags from the locale language identi
 (essentially the contents of `baseName`). This is useful when there are
 superfluous subtags in the language identifier; for instance, "en-Latn" can be
 simplified to "en", since "Latn" is the only script used to write English.
-`minimize()` only affects the main subtags that comprise the [language
-identifier](https://www.unicode.org/reports/tr35/#Language_Locale_Field_Definitions): language, script, and region subtags. Other subtags after the "-u"
+`minimize()` only affects the main subtags that comprise
+the [language identifier](https://www.unicode.org/reports/tr35/#Language_Locale_Field_Definitions):
+language, script, and region subtags. Other subtags after the "-u"
 in the locale identifier are called extension subtags and are not affected by the
 `minimize()` method. Examples of these subtags include
 {{jsxref("Intl/Locale/hourCycle", "Locale.hourCycle")}}, {{jsxref("Intl/Locale/calendar", "Locale.calendar")}}, and {{jsxref("Intl/Locale/numeric", "Locale.numeric")}}.

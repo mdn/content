@@ -1,5 +1,5 @@
 ---
-title: HTML Tables
+title: HTML tables
 slug: Learn/HTML/Tables
 tags:
   - <td>

@@ -36,7 +36,7 @@ device's frame buffer.
 This information can be used when creating a new `XRWebGLLayer` to configure
 the `framebufferScaleFactor` in the `layerInit` configuration object
 specified when calling the `XRWebGLLayer()` constructor. See the
-{{anch("Usage notes")}} and {{anch("Examples")}} for details.
+[Usage notes](#usage_notes) and [Examples](#examples) for details.
 
 If the scaling factor is 1.0, then the frame buffer pixels and the native display
 pixels are the same size. If the scaling factor is greater than zero, then the frame

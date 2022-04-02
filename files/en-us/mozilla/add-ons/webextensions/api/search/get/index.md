@@ -23,7 +23,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingEngines = browser.search.get()
+let gettingEngines = browser.search.get()
 ```
 
 ### Parameters

@@ -42,17 +42,16 @@ map(function(element, index, array) { /* ... */ }, thisArg)
 
 - `callbackFn`
 
-  - : Function that is called for every element of `arr`. Each time
-    `callbackFn` executes, the returned value is added to
-    `newArray`.
+  - : Function that is called for every element of `arr`.
+    Each time `callbackFn` executes, the returned value is added to `newArray`.
 
-    The `callbackFn` function accepts the following arguments:
+    The function is called with the following arguments:
 
     - `element`
       - : The current element being processed in the array.
-    - `index`{{optional_inline}}
+    - `index`
       - : The index of the current element being processed in the array.
-    - `array`{{optional_inline}}
+    - `array`
       - : The array `map` was called upon.
 
 - `thisArg`{{optional_inline}}
@@ -93,8 +92,8 @@ element, the index of the element, and the array object being mapped.
 If a `thisArg` parameter is provided, it will be used as callback's
 `this` value. Otherwise, the value {{jsxref("undefined")}} will be used as
 its `this` value. The `this` value ultimately observable by
-`callbackFn` is determined according to [the usual rules for
-determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
+`callbackFn` is determined according to
+[the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
 
 `map` does not mutate the array on which it is called (although
 `callbackFn`, if invoked, may do so).

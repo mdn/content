@@ -17,7 +17,7 @@ The **`MediaStreamEvent()`** constructor creates a new
 ## Syntax
 
 ```js
- var event = new MediaStreamEvent(type, mediaStreamEventInit);
+ new MediaStreamEvent(type, mediaStreamEventInit);
 ```
 
 ### Values

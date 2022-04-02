@@ -50,7 +50,7 @@ If a retry is needed, the loop calls `retry()`, then loops back to check the
 response when it comes in. The loop exits only when the user either cancels the payment
 request or the request is successful.
 
-See the {{anch("Examples", "example")}} below for a thorough example, but the basic
+See the [example](#examples) below for a thorough example, but the basic
 concept, in outline form, is:
 
 1. Create a new {{domxref("PaymentRequest")}}

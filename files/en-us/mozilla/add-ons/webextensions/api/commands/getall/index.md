@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var getCommands = browser.commands.getAll();
+let getCommands = browser.commands.getAll();
 ```
 
 ### Parameters
@@ -48,7 +48,7 @@ function logCommands(commands) {
   });
 }
 
-var getCommands = browser.commands.getAll();
+let getCommands = browser.commands.getAll();
 getCommands.then(logCommands);
 ```
 

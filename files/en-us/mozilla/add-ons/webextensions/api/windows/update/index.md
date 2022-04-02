@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var updating = browser.windows.update(
+let updating = browser.windows.update(
   windowId,              // integer
   updateInfo             // object
 )
@@ -76,7 +76,7 @@ function onError(error) {
 
 browser.browserAction.onClicked.addListener((tab) => {
 
-  var updating = browser.windows.update(tab.windowId, {
+  let updating = browser.windows.update(tab.windowId, {
     left: 0,
     top: 0
   });

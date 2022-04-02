@@ -231,7 +231,7 @@ Where `callOnActiveTab()` finds the active tab object by looping through the {{W
 document.addEventListener("click", function(e) {
   function callOnActiveTab(callback) {
     getCurrentWindowTabs().then((tabs) => {
-      for (var tab of tabs) {
+      for (let tab of tabs) {
         if (tab.active) {
           callback(tab, tabs);
         }
@@ -300,7 +300,7 @@ But first, here is a demonstration of the feature in action:
       function callOnActiveTab(callback) {
 
         getCurrentWindowTabs().then((tabs) => {
-          for (var tab of tabs) {
+          for (let tab of tabs) {
             if (tab.active) {
               callback(tab, tabs);
             }
@@ -317,7 +317,7 @@ But first, here is a demonstration of the feature in action:
     ```js
     if (e.target.id === "tabs-move-beginning") {
       callOnActiveTab((tab, tabs) => {
-        var index = 0;
+        let index = 0;
         if (!tab.pinned) {
           index = firstUnpinnedTab(tabs);
         }
@@ -336,7 +336,7 @@ But first, here is a demonstration of the feature in action:
     ```js
     function callOnActiveTab(callback) {
       getCurrentWindowTabs().then((tabs) => {
-        for (var tab of tabs) {
+        for (let tab of tabs) {
           if (tab.active) {
             callback(tab, tabs);
           }
@@ -410,13 +410,13 @@ Let's take a look at how the zoom in is implemented.
     ```js
       else if (e.target.id === "tabs-add-zoom") {
         callOnActiveTab((tab) => {
-          var gettingZoom = browser.tabs.getZoom(tab.id);
+          let gettingZoom = browser.tabs.getZoom(tab.id);
           gettingZoom.then((zoomFactor) => {
             //the maximum zoomFactor is 5, it can't go higher
             if (zoomFactor >= MAX_ZOOM) {
               alert("Tab zoom factor is already at max!");
             } else {
-              var newZoomFactor = zoomFactor + ZOOM_INCREMENT;
+              let newZoomFactor = zoomFactor + ZOOM_INCREMENT;
               //if the newZoomFactor is set to higher than the max accepted
               //it won't change, and will never alert that it's at maximum
               newZoomFactor = newZoomFactor > MAX_ZOOM ? MAX_ZOOM : newZoomFactor;
@@ -503,7 +503,7 @@ Let's walk through how it's set up.
     When first loaded, the extension uses {{WebExtAPIRef("tabs.query()")}} to get a list of all the tabs in the current browser window. It then loops through the tabs calling `initializePageAction()`.
 
     ```js
-    var gettingAllTabs = browser.tabs.query({});
+    let gettingAllTabs = browser.tabs.query({});
 
         gettingAllTabs.then((tabs) => {
           for (let tab of tabs) {
@@ -517,7 +517,7 @@ Let's walk through how it's set up.
 
     ```js
     function protocolIsApplicable(url) {
-      var anchor =  document.createElement('a');
+      let anchor =  document.createElement('a');
       anchor.href = url;
       return APPLICABLE_PROTOCOLS.includes(anchor.protocol);
     }
@@ -568,7 +568,7 @@ Let's walk through how it's set up.
         }
       }
 
-      var gettingTitle = browser.pageAction.getTitle({tabId: tab.id});
+      let gettingTitle = browser.pageAction.getTitle({tabId: tab.id});
 
       gettingTitle.then(gotTitle);
     }

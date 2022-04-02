@@ -17,14 +17,7 @@ The **`ariaPressed`** property of the {{domxref("Element")}} interface reflects 
 
 > **Note:** Where possible use an HTML {{htmlelement("input")}} element with `type="button"` or the {{htmlelement("button")}} element as these have built in semantics and do not require ARIA attributes.
 
-## Syntax
-
-```js
-var ariaPressed = element.ariaPressed;
-element.ariaPressed = ariaPressed
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} with one of the following values:
 

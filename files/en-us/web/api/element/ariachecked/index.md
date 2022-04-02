@@ -17,14 +17,7 @@ The **`ariaChecked`** property of the {{domxref("Element")}} interface reflects 
 
 > **Note:** Where possible use an HTML {{htmlelement("input")}} element with `type="checkbox"` as this element has built in semantics and does not require ARIA attributes.
 
-## Syntax
-
-```js
-var ariaChecked = element.ariaChecked;
-element.ariaChecked = ariaChecked
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} with one of the following values:
 

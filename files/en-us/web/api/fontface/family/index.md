@@ -19,18 +19,11 @@ allows the author to get or set the font family of a {{domxref("FontFace")}} obj
 This is equivalent to the {{cssxref("@font-face/font-family", "font-family")}}
 descriptor of {{cssxref("@font-face")}}.
 
-## Syntax
-
-```js
-instanceOfFontFace.family = 'font family name';
-let fontFace = instanceOfFontFace.family; // "font family name"
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}.
 
-## Example
+## Examples
 
 ```js
 let fontFace = new FontFace('Roboto', 'url(https://fonts.example.com/roboto.woff2)');

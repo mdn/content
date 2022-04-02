@@ -25,27 +25,16 @@ _Inherits methods from its parent, {{domxref("EventTarget")}}_
 - {{domxref("MessagePort.postMessage","postMessage()")}}
   - : Sends a message from the port, and optionally, transfers ownership of objects to other browsing contexts.
 - {{domxref("MessagePort.start","start()")}}
-  - : Starts the sending of messages queued on the port (only needed when using {{domxref("EventTarget.addEventListener")}}; it is implied when using {{domxref("MessagePort.onmessage")}}.)
+  - : Starts the sending of messages queued on the port (only needed when using {{domxref("EventTarget.addEventListener")}}; it is implied when using {{domxref("MessagePort.message_event", "onmessage")}}.)
 - {{domxref("MessagePort.close","close()")}}
   - : Disconnects the port, so it is no longer active.
-
-## Event handlers
-
-_Inherits event handlers from its parent, {{domxref("EventTarget")}}_
-
-- {{domxref("MessagePort.onmessage","onmessage")}}
-  - : An {{domxref("EventListener")}} called when {{domxref("MessageEvent")}} of type `message` is fired on the port—that is, when the port receives a message.
-- {{domxref("MessagePort.onmessageerror","onmessageerror")}}
-  - : An {{domxref("EventListener")}} called when a {{domxref("MessageEvent")}} of type {{domxref("MessageError")}} is fired—that is, when it receives a message that cannot be deserialized.
 
 ## Events
 
 - {{domxref("MessagePort.message_event","message")}}
   - : Fired when a `MessagePort` object receives a message.
-    Also available via the {{domxref("MessagePort.onmessage","onmessage")}} property.
 - {{domxref("MessagePort.messageerror_event","messageerror")}}
   - : Fired when a `MessagePort` object receives a message that can't be deserialized.
-    Also available via the {{domxref("MessagePort.onmessageerror","onmessageerror")}} property.
 
 ## Example
 
@@ -77,7 +66,7 @@ function onMessage(e) {
 }
 ```
 
-For a full working example, see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on Github ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
+For a full working example, see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on GitHub ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
 
 ## Specifications
 

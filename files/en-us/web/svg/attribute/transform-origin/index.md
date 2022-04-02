@@ -62,7 +62,7 @@ This example shows the code for one PNG image and three SVG images:
 3. An SVG image that uses `transform-origin` to do a transformation, with the expected result being an image identical to the reference image.
 4. An SVG image that does not use `transform-origin` but does the same transformation using just [`transform`](/en-US/docs/Web/SVG/Attribute/transform), with the expected result being an image identical to the reference image.
 
-The fourth image image shows how to do the transformation in browsers that don't support `transform-origin` — because the code for the fourth image does the same transformation as the third image's `transform-origin`-based code, but by only using `transform`, without `transform-origin`.
+The fourth image shows how to do the transformation in browsers that don't support `transform-origin` — because the code for the fourth image does the same transformation as the third image's `transform-origin`-based code, but by only using `transform`, without `transform-origin`.
 
 > **Note:** These examples use a modified version of a code snippet in a Stack Overflow [question](https://stackoverflow.com/q/67057190) from [Maxim Kulikov](https://stackoverflow.com/users/1033939/maxim-kulikov), as well as a modified version of a code snippet in an [answer](https://stackoverflow.com/a/67057754) from [Michael Mullany](https://stackoverflow.com/users/271353/michael-mullany) that accompanies the question. Both code snippets are used under the terms of the [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/) license.)
 

@@ -59,9 +59,10 @@ switch (expression) {
 
 A `switch` statement first evaluates its expression. It then looks for the
 first `case` clause whose expression evaluates to the same value as the
-result of the input expression (using the [strict
-comparison](/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators), `===`) and transfers control to that clause, executing the
-associated statements. (If multiple `case`s match the provided value, the
+result of the input expression
+(using the [strict comparison](/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators), `===`)
+and transfers control to that clause, executing the associated statements.
+(If multiple `case`s match the provided value, the
 first `case` that matches is selected, even if the `case`s are not
 equal to each other.)
 
@@ -177,8 +178,8 @@ This technique is also commonly called fall-through.
 
 This method takes advantage of the fact that if there is no break below a
 `case` clause it will continue to execute the next `case` clause
-regardless if the `case` meets the criteria. (See the section [What happens if I forgot a
-`break`?](#what_happens_if_i_forgot_a_break))
+regardless if the `case` meets the criteria.
+(See the section [What happens if I forgot a `break`?](#what_happens_if_i_forgot_a_break))
 
 This is an example of a single operation sequential `case` statement, where
 four different values perform exactly the same.
@@ -265,7 +266,6 @@ switch (action) {
     break;
   default:
     console.log('Empty action received.');
-    break;
 }
 ```
 
@@ -296,7 +296,6 @@ switch (action) {
   } // added brackets
   default: { // added brackets
     console.log('Empty action received.');
-    break;
   } // added brackets
 }
 ```

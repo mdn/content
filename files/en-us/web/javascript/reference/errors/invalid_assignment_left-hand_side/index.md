@@ -25,10 +25,10 @@ ReferenceError: invalid assignment left-hand side
 
 ## What went wrong?
 
-There was an unexpected assignment somewhere. This might be due to a mismatch of a [assignment
-operator](/en-US/docs/Web/JavaScript/Reference/Operators#assignment_operators) and an [equality
-operator](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators), for example. While a single "`=`" sign assigns a value to a
-variable, the "`==`" or "`===`" operators compare a value.
+There was an unexpected assignment somewhere. This might be due to a mismatch of an
+[assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators#assignment_operators)
+and an [equality operator](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators), for example.
+While a single "`=`" sign assigns a value to a variable, the "`==`" or "`===`" operators compare a value.
 
 ## Examples
 
@@ -61,7 +61,5 @@ var str = 'Hello, '
 
 ## See also
 
-- [Assignment
-  operators](/en-US/docs/Web/JavaScript/Reference/Operators#assignment_operators)
-- [Equality
-  operators](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators)
+- [Assignment operators](/en-US/docs/Web/JavaScript/Reference/Operators#assignment_operators)
+- [Equality operators](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators)

@@ -154,7 +154,7 @@ Events have three functions:
 ## Examples
 
 ```js
-var target = "https://developer.mozilla.org/*";
+let target = "https://developer.mozilla.org/*";
 
 /*
 e.g.

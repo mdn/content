@@ -17,13 +17,7 @@ The **`code`** read-only property of the
 {{domxref("XPathException")}} interface returns a `short` that contains one
 of the [error code constants](/en-US/docs/Web/API/XPathException#Constants).
 
-## Syntax
-
-```js
-var exceptionCode = exception.code;
-```
-
-### Value
+## Value
 
 A `short` number representing the error code.
 

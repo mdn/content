@@ -13,13 +13,7 @@ browser-compat: api.BackgroundFetchEvent.registration
 
 The **`registration`** read-only property of the {{domxref("BackgroundFetchEvent")}} interface returns a {{domxref("BackgroundFetchRegistration")}} object.
 
-## Syntax
-
-```js
-let registration = BackgroundFetchEvent.registration;
-```
-
-### Value
+## Value
 
 A {{domxref("BackgroundFetchRegistration")}}.
 

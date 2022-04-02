@@ -25,13 +25,7 @@ The value of `innerHeight` is taken from the height of the window's
 {{Glossary("layout viewport")}}. The width can be obtained using the
 {{domxref("Window.innerWidth", "innerWidth")}} property.
 
-## Syntax
-
-```js
-let intViewportHeight = window.innerHeight;
-```
-
-### Value
+## Value
 
 An integer value indicating the window's layout viewport height in pixels. The property
 is read only and has no default value.
@@ -49,7 +43,7 @@ the root {{HTMLElement("html")}} element's {{domxref("Element.clientHeight",
 Both `innerHeight` and `innerWidth` are available on any window
 or any object that behaves like a window, such as a tab or frame.
 
-## Example
+## Examples
 
 ### Assuming a frameset
 

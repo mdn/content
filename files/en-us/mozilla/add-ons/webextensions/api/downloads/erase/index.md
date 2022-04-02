@@ -26,7 +26,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var erasing = browser.downloads.erase(
+let erasing = browser.downloads.erase(
   query                    // DownloadQuery
 )
 ```
@@ -57,7 +57,7 @@ function onError(error) {
   console.log(`Error erasing item: ${error}`);
 }
 
-var erasing = browser.downloads.erase({
+let erasing = browser.downloads.erase({
   limit: 1,
   orderBy: ["-startTime"]
 });
@@ -76,7 +76,7 @@ function onError(error) {
   console.log(`Error erasing item: ${error}`);
 }
 
-var erasing = browser.downloads.erase({});
+let erasing = browser.downloads.erase({});
 erasing.then(onErased, onError);
 ```
 

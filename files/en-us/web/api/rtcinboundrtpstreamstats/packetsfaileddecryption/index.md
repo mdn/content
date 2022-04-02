@@ -24,13 +24,7 @@ property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the
 number of {{Glossary("RTP")}} packets which failed to be decrypted successfully after
 being received by the local end of the connection during this session.
 
-## Syntax
-
-```js
-var packetsFailedDecryption = rtcInboundRtpStreamStats.packetsFailedDecryption;
-```
-
-### Value
+## Value
 
 An integer value which indicates how many packets the local end of the RTP connection
 could not be successfully decrypted.

@@ -24,13 +24,13 @@ represents an error that occurred during the recording of media by the [MediaStr
 API](/en-US/docs/Web/API/MediaStream_Recording_API).
 
 > **Note:** In general, you won't create these yourself; they are delivered to your
-> implementation of {{domxref("MediaRecorder.onerror")}} when errors occur while
+> implementation of {{domxref("MediaRecorder.error_event", "onerror")}} when errors occur while
 > recording media.
 
 ## Syntax
 
 ```js
-var errorEvent = new MediaRecorderErrorEvent(errorInfo)
+new MediaRecorderErrorEvent(errorInfo)
 ```
 
 ### Parameters

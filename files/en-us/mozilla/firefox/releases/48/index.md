@@ -35,10 +35,10 @@ tags:
 
 ### CSS
 
-- The {{cssxref("calc()")}} has been improved to be closer to the specification:
+- The {{cssxref("calc", "calc()")}} has been improved to be closer to the specification:
 
-  - {{cssxref("calc()")}} is now supported on the {{cssxref("line-height")}} property ({{bug(594933)}}).
-  - Added support for nested CSS {{cssxref("calc()")}} ({{bug(968761)}}).
+  - {{cssxref("calc", "calc()")}} is now supported on the {{cssxref("line-height")}} property ({{bug(594933)}}).
+  - Added support for nested CSS {{cssxref("calc", "calc()")}} ({{bug(968761)}}).
 
 - Our experimental implementation of CSS grids has been updated:
 

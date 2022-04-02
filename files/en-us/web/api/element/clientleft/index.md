@@ -25,13 +25,11 @@ is an overflow causing a left vertical scrollbar to be rendered.
 > `display: inline`, `clientLeft` returns `0`
 > regardless of the element's border.
 
-## Syntax
+## Value
 
-```js
-var left = element.clientLeft;
-```
+A number.
 
-## Example
+## Examples
 
 In the following example, the client area has a white background and a 24px black `border-left`. The `clientLeft` value is the distance from where the margin (yellow) area ends and the padding and content areas (white) begin: that is, 24px.
 

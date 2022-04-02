@@ -49,7 +49,7 @@ In addition, the Notifications API spec specifies a number of additions to the [
 - {{domxref("ServiceWorkerRegistration")}}
   - : Includes the {{domxref("ServiceWorkerRegistration.showNotification()")}} and {{domxref("ServiceWorkerRegistration.getNotifications()")}} method, for controlling the display of notifications.
 - {{domxref("ServiceWorkerGlobalScope")}}
-  - : Includes the {{domxref("ServiceWorkerGlobalScope.onnotificationclick")}} handler, for firing custom functions when a notification is clicked.
+  - : Includes the {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "onnotificationclick")}} handler, for firing custom functions when a notification is clicked.
 - {{domxref("NotificationEvent")}}
   - : A specific type of event object, based on {{domxref("ExtendableEvent")}}, which represents a notification that has fired.
 

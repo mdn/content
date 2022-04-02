@@ -268,9 +268,7 @@ console.log(Derived.publicStaticMethod2());
 ## See also
 
 - [Working with private class features](/en-US/docs/Web/JavaScript/Guide/Working_With_Private_Class_Features)
-- [Public
-  class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
-- [The
-  Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
+- [Public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
+- [The Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
 - [Public and private class fields](https://v8.dev/features/class-fields)
   article at the v8.dev site

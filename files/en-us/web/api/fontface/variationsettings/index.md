@@ -19,14 +19,7 @@ The **`variationSettings`** property of the
 It is equivalent to the
 {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}} descriptor.
 
-## Syntax
-
-```js
-let variationSettingDescriptor = FontFace.variationSettings;
-FontFace.variationSettings = variationSettingDescriptor;
-```
-
-### Value
+## Value
 
 A {{domxref('CSSOMString')}} containing a descriptor.
 

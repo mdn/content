@@ -51,8 +51,7 @@ representing the compiled module.
 ### Compile streaming
 
 The following example (see our [compile-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/compile-streaming.html)
-demo on GitHub, and [view
-it live](https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html) also) directly streams a .wasm module from an underlying source then
+demo on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html) also) directly streams a .wasm module from an underlying source then
 compiles it to a {{jsxref("WebAssembly.Module")}} object. Because the
 `compileStreaming()` function accepts a promise for a [`Response`](/en-US/docs/Web/API/Response)
 object, you can directly pass it a [`fetch()`](/en-US/docs/Web/API/fetch)
@@ -81,5 +80,4 @@ The resulting module instance is then instantiated using
 
 - [WebAssembly](/en-US/docs/WebAssembly) overview page
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly
-  JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

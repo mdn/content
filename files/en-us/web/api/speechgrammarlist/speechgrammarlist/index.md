@@ -20,7 +20,7 @@ The **`SpeechGrammarList()`** constructor creates a new
 ## Syntax
 
 ```js
-var myGrammarList = new SpeechGrammarList();
+new SpeechGrammarList();
 ```
 
 ### Parameters

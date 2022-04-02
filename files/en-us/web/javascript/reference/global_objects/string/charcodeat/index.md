@@ -47,8 +47,7 @@ A number representing the UTF-16 code unit value of the character at the given
 
 Unicode code points range from `0` to `1114111`
 (`0x10FFFF`). The first 128 Unicode code points are a direct match of the
-ASCII character encoding. (For information on Unicode, see the [JavaScript
-Guide](/en-US/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode).)
+ASCII character encoding. (For information on Unicode, see the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode).)
 
 > **Note:** `charCodeAt()` will always return a value that is
 > less than `65536`. This is because the higher code points are represented

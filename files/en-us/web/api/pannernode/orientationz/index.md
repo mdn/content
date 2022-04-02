@@ -33,15 +33,7 @@ The {{domxref("AudioParam")}} contained by this property is read only; however, 
 can still change the value of the parameter by assigning a new value to its
 {{domxref("AudioParam.value")}} property.
 
-## Syntax
-
-```js
-var orientationZ = PannerNode.orientationZ;
-
-PannerNode.orientationZ.value = newOrientationZ;
-```
-
-### Value
+## Value
 
 An {{domxref("AudioParam")}} whose `value` is the Z component of the
 direction the audio source is facing, in 3D Cartesian coordinate space.

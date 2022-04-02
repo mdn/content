@@ -17,18 +17,12 @@ The read-only `context` property of the
 {{domxref("BaseAudioContext")}}, that is the object representing the processing graph
 the node is participating in.
 
-## Syntax
-
-```js
-var aContext = anAudioNode.context;
-```
-
-### Value
+## Value
 
 The {{domxref("AudioContext")}} or {{domxref("OfflineAudioContext")}} object that was
 used to construct this `AudioNode`.
 
-## Example
+## Examples
 
 ```js
 const AudioContext = window.AudioContext || window.webkitAudioContext;

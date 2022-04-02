@@ -13,13 +13,7 @@ browser-compat: api.Element.childElementCount
 The **`Element.childElementCount`** read-only property
 returns the number of child elements of this element.
 
-## Syntax
-
-```js
-element.childElementCount;
-```
-
-## Example
+## Examples
 
 ```js
 let sidebar = document.getElementById('sidebar');

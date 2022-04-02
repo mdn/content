@@ -15,13 +15,7 @@ The **`sourceFile`** read-only property of the {{domxref("DeprecationReportBody"
 
 > **Note:** This property can be used with {{domxref("DeprecationReportBody.lineNumber")}} and {{domxref("DeprecationReportBody.columnNumber")}} to locate the column and line in the file where the error occurred.
 
-## Syntax
-
-```js
-let sourceFile = DeprecationReportBody.sourceFile;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString","string")}}, or `null` if the path is not known.
 

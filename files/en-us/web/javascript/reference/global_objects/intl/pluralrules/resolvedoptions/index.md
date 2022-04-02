@@ -59,7 +59,7 @@ Only one of the following two groups of properties is included:
 
 ## Examples
 
-### Using the `resolvedOptions` method
+### Using the resolvedOptions() method
 
 ```js
 var de = new Intl.PluralRules('de-DE');

@@ -13,7 +13,7 @@ tags:
 
 The **kitchensink** is a page that _attempts_ to incorporate every possible content element and Yari macro.
 
-This page attempts to be the complete intersection of every other page. No in terms of the text but in terms of the styles and macros.
+This page attempts to be the complete intersection of every other page. Not in terms of the text but in terms of the styles and macros.
 Let's start with some notes...
 
 Text that uses the `<kbd>` tag: <kbd>Shift</kbd>

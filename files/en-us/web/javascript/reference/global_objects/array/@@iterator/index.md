@@ -15,9 +15,9 @@ browser-compat: javascript.builtins.Array.@@iterator
 ---
 {{JSRef}}
 
-The **`@@iterator`** method is part of [The
-iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol), that defines how to synchronously iterate over a sequence of
-values.
+The **`@@iterator`** method is part of
+[The iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol),
+that defines how to synchronously iterate over a sequence of values.
 
 The initial value of the **`@@iterator`** property is the same
 function object as the initial value of the {{jsxref("Array.prototype.values()",

@@ -19,13 +19,7 @@ all the {{HTMLElement("form")}} elements contained in the document.
 > **Note:** Similarly, you can access a list of a form's component user
 > input elements using the {{domxref("HTMLFormElement.elements")}} property.
 
-## Syntax
-
-```js
-collection = document.forms;
-```
-
-### Value
+## Value
 
 An {{domxref("HTMLCollection")}} object listing all of the document's forms. Each item
 in the collection is a {{domxref("HTMLFormElement")}} representing a single

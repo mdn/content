@@ -17,17 +17,9 @@ browser-compat: api.Document.vlinkColor
 The **`Document.vlinkColor`** property gets/sets the color of
 links that the user has visited in the document.
 
-## Syntax
+## Value
 
-```js
-color = document.vlinkColor
-document.vlinkColor = color
-```
-
-### Parameters
-
-- `color` is a string representing the color as a word (e.g.,
-  `"red"`) or hexadecimal value (e.g., `"#ff0000"`).
+A string representing the color as a word (e.g., `"red"`) or hexadecimal value (e.g., `"#ff0000"`).
 
 ## Notes
 

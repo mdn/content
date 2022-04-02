@@ -28,13 +28,7 @@ for which this object provides statistics.
 A PLI packet indicates that some
 amount of encoded video data has been lost for one or more frames.
 
-## Syntax
-
-```js
-var pliCount = RTCOutboundRtpStreamStats.pliCount;
-```
-
-### Value
+## Value
 
 An integer value indicating the number of times a PLI packet was sent to this sender by
 the remote peer's {{domxref("RTCRtpReceiver")}}. These are sent by the receiver's

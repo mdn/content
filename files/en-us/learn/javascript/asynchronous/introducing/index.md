@@ -287,8 +287,6 @@ doOperation();
 
 Here we have a single operation that's split into three steps, where each step depends on the last step. In our example the first step adds 1 to the input, the second adds 2, and the third adds 3. Starting with an input of 0, the end result is 6 (0 + 1 + 2 + 3). As synchronous code this is very straightforward. But what if we implemented the steps using callbacks?
 
-
-
 ```js
 function doStep1(init, callback) {
   const result = init + 1;

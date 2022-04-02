@@ -53,7 +53,7 @@ The `container-type` property can have the following values:
 - `inline-size`
   - : Establishes a query container for dimensional queries on the inline axis of the container. Applies layout, style, and inline-size containment to the element.
 - `block-size`
-  - : Establishes a query container for dimensional queries on the the block axis of the container. Applies layout, style, and block-size containment to the element.
+  - : Establishes a query container for dimensional queries on the block axis of the container. Applies layout, style, and block-size containment to the element.
 - `style`
   - : Establishes a query container for style queries.
 - `state`
@@ -114,13 +114,16 @@ You can then target just that query container by adding the name to the containe
 }
 ```
 
-There are many things to be worked out, however this is the basic concept. The basic features as shown here can already be tested out in Chrome. Go to `chrome://flags`, search for Container Queries and enable that flag.
+There are many things to be worked out, however this is the basic concept. The basic features as shown here can already be tested out in Chrome and Safari Technology Preview.
+
+- Chrome: Go to `chrome://flags`, search for Container Queries and enable that flag.
+- Safari Technology Preview: Enabled by default.
 
 You can then take a look at [my demo](https://codepen.io/rachelandrew/pen/NWdaxde) showing a simple `inline-size` scenario, or [this growing collection of container queries demos](https://codepen.io/collection/XQrgJo).
 
 ## Share your feedback
 
-This early stage of development is the perfect time to share your feedback on the specification as it develops. Specification author Miriam Suzanne is keeping [a list of open questions](https://css.oddbird.net/rwd/query/explainer/). Issues raised against the feature can be found in [a project](https://github.com/w3c/csswg-drafts/projects/18) on the CSS Working Group Github. If you have thoughts on any of these questions, or want to raise something new, please do!
+This early stage of development is the perfect time to share your feedback on the specification as it develops. Specification author Miriam Suzanne is keeping [a list of open questions](https://css.oddbird.net/rwd/query/explainer/). Issues raised against the feature can be found in [a project](https://github.com/w3c/csswg-drafts/projects/18) on the CSS Working Group GitHub. If you have thoughts on any of these questions, or want to raise something new, please do!
 
 It is always helpful to see use cases, particularly those that might not be solved by the current proposal. Any feedback will be very welcome and will help make the feature even better once in lands in release versions of browsers.
 

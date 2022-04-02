@@ -95,8 +95,8 @@ let formattedDate = Intl.DateTimeFormat(undefined, {
 // false in IE and Edge
 ```
 
-> **Note:** See also this [StackOverflow
-> thread](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results) for more details and examples.
+> **Note:** See also this [StackOverflow thread](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results)
+> for more details and examples.
 
 ## Specifications
 

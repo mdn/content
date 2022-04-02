@@ -56,9 +56,9 @@ class Square extends Polygon {
 
 ### Using extends with built-in objects
 
-This example extends the built-in {{jsxref("Date")}} object. This example is extracted
-from this [live
-demo](https://googlechrome.github.io/samples/classes-es6/index.html) [(source)](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html).
+This example extends the built-in {{jsxref("Date")}} object.
+This example is extracted from this [live demo](https://googlechrome.github.io/samples/classes-es6/index.html)
+[(source)](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html).
 
 ```js
 class myDate extends Date {
@@ -83,5 +83,4 @@ class myDate extends Date {
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 - [constructor](/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
 - [super](/en-US/docs/Web/JavaScript/Reference/Operators/super)
-- [Anurag
-  Majumdar - Super & Extends in JavaScript](https://medium.com/beginners-guide-to-mobile-web-development/super-and-extends-in-javascript-es6-understanding-the-tough-parts-6120372d3420)
+- [Anurag Majumdar - Super & Extends in JavaScript](https://medium.com/beginners-guide-to-mobile-web-development/super-and-extends-in-javascript-es6-understanding-the-tough-parts-6120372d3420)

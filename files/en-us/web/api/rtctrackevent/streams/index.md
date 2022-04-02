@@ -23,13 +23,7 @@ interface {{domxref("RTCTrackEvent")}}'s read-only
 {{domxref("MediaStream")}} objects, one for each of the streams that comprise the
 track being added to the {{domxref("RTCPeerConnection")}}.
 
-## Syntax
-
-```js
-var streams = trackEvent.streams;
-```
-
-### Value
+## Value
 
 An {{jsxref("Array")}} of {{domxref("MediaStream")}} objects, one for each stream that
 make up the new track.

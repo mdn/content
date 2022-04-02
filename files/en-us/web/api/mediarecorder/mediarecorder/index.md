@@ -26,7 +26,8 @@ and codec configuration(s) to use by specifying [the `codecs` parameter](/en-US/
 ## Syntax
 
 ```js
-var mediaRecorder = new MediaRecorder(stream[, options]);
+new MediaRecorder(stream)
+new MediaRecorder(stream, options)
 ```
 
 ### Parameters
@@ -108,6 +109,6 @@ if (navigator.mediaDevices.getUserMedia) {
 
 - [Using the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder +
-  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
+  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/web-dictaphone/).)
 - [simpl.info MediaStream Recording demo](http://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("MediaDevices.getUserMedia")}}

@@ -23,7 +23,8 @@ If the given base URL or the resulting URL are not valid URLs, the JavaScript
 ## Syntax
 
 ```js
-const url = new URL(url [, base])
+new URL(url)
+new URL(url, base)
 ```
 
 ### Parameters

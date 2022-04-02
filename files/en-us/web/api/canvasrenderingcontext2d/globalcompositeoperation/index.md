@@ -22,16 +22,11 @@ See also [Compositing and
 clipping](/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing) in the [Canvas
 Tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
-## Syntax
+## Value
 
-```js
-ctx.globalCompositeOperation = type;
-```
+A string identifying which of the compositing or blending mode operations to use.
 
-`type` is a {{jsxref("String")}} identifying which of the compositing or
-blending mode operations to use.
-
-### Types
+### Operations
 
 {{EmbedLiveSample("Compositing_example", 750, 6900, ""
   ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}

@@ -20,18 +20,12 @@ database.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var newVersion = IDBVersionChangeEvent.newVersion
-```
-
-### Value
+## Value
 
 A [64-bit
 integer](</en-US/docs/NSPR_API_Reference/Long_Long_(64-bit)_Integers>).
 
-## Example
+## Examples
 
 In the following code snippet, we make a request to open a database, and include
 handlers for the success and error cases. These events are fired via the custom

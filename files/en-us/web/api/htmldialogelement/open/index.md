@@ -20,14 +20,7 @@ The **`open`** property of the
 {{htmlattrxref("open", "dialog")}} HTML attribute, indicating whether the dialog is
 available for interaction.
 
-## Syntax
-
-```js
-dialogInstance.open = true;
-var myOpenValue = dialogInstance.open;
-```
-
-### Value
+## Value
 
 A boolean value representing the state of the {{htmlattrxref("open",
   "dialog")}} HTML attribute. `true` means it is set, and therefore the dialog

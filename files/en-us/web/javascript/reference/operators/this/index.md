@@ -21,8 +21,9 @@ In most cases, the value of `this` is determined by how a function is called
 different each time the function is called. ES5 introduced the
 {{jsxref("Function.prototype.bind()", "bind()")}} method to {{jsxref('Operators/this',
   "set the value of a function's <code>this</code> regardless of how it's called",
-  'The_bind_method', 1)}}, and ES2015 introduced [arrow
-functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) which don't provide their own `this` binding (it retains the
+  'The_bind_method', 1)}}, and ES2015 introduced
+[arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+which don't provide their own `this` binding (it retains the
 `this` value of the enclosing lexical context).
 
 {{EmbedInteractiveExample("pages/js/expressions-this.html")}}
@@ -248,9 +249,9 @@ console.log(o.a, o.f(), o.g(), o.h()); // 37,37, azerty, azerty
 
 ### Arrow functions
 
-In [arrow
-functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), `this` retains the value of the enclosing lexical context's
-`this`. In global code, it will be set to the global object:
+In [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions),
+`this` retains the value of the enclosing lexical context's `this`.
+In global code, it will be set to the global object:
 
 ```js
 var globalObject = this;
@@ -581,6 +582,5 @@ bird.sayBye();  // Bye from Ferrari
 ## See also
 
 - [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
-- [Gentle
-  explanation of 'this' keyword in JavaScript](https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/)
+- [Gentle explanation of 'this' keyword in JavaScript](https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/)
 - Getting the global context: {{jsxref("globalThis")}}

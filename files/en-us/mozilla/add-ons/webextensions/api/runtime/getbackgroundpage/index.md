@@ -36,7 +36,7 @@ This is an asynchronous function that returns a {{JSxRef("Promise")}}.
 ## Syntax
 
 ```js
-var gettingPage = browser.runtime.getBackgroundPage()
+let gettingPage = browser.runtime.getBackgroundPage()
 ```
 
 ### Parameters
@@ -76,7 +76,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var getting = browser.runtime.getBackgroundPage();
+let getting = browser.runtime.getBackgroundPage();
 getting.then(onGot, onError);
 ```
 

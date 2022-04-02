@@ -21,13 +21,7 @@ durability when committing the transaction.
 
 The value of this property is defined in the `options` parameter when creating a transaction using {{domxref("IDBDatabase.transaction()")}}.
 
-## Syntax
-
-```js
-var transactionDurability = idbTransaction.durability;
-```
-
-### Value
+## Value
 
 Any of the following literal {{jsxref('String', 'strings')}}:
 

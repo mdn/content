@@ -19,13 +19,7 @@ The **`kind`** read-only property of the
 used to distinguish files from directories when iterating over the contents of a
 directory.
 
-## Syntax
-
-```js
-var FileSystemHandleKind = FileSystemHandle.kind;
-```
-
-### Value
+## Value
 
 - _FileSystemHandleKind_
 

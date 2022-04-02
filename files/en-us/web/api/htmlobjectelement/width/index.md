@@ -18,14 +18,7 @@ The **`width`** property of the
 reflects the {{htmlattrxref("width", "object")}} HTML attribute, specifying the
 displayed width of the resource in CSS pixels.
 
-## Syntax
-
-```js
-var String = HTMLObjectElement.width;
-HTMLObjectElement.width = String;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}.
 

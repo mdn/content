@@ -19,26 +19,30 @@ browser-compat: api.RTCPeerConnection.icecandidate_event
 
 An **`icecandidate`** event is sent to an {{domxref("RTCPeerConnection")}} when an {{domxref("RTCIceCandidate")}} has been identified and added to the local peer by a call to {{domxref("RTCPeerConnection.setLocalDescription()")}}. The event handler should transmit the candidate to the remote peer over the signaling channel so the remote peer can add it to its set of remote candidates.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("RTCPeerConnectionIceEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{DOMxRef("RTCPeerConnection.onicecandidate")}}</td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('icecandidate', event => { });
+
+onicecandidate = event => { };
+```
+
+## Event type
+
+An {{domxref("RTCPeerConnectionIceEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("RTCPeerConnectionIceEvent")}}
+
+## Event properties
+
+_A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this event also implements these properties_.
+
+- {{domxref("RTCPeerConnectionIceEvent.candidate")}} {{readOnlyInline}}
+  - : Contains the {{domxref("RTCIceCandidate")}} containing the candidate associated with the event, or `null` if this event indicates that there are no further candidates to come.
 
 ## Description
 
@@ -64,7 +68,7 @@ The remote peer, upon receiving the candidate, will add the candidate to its can
 
 When an ICE negotiation session runs out of candidates to propose for a given {{domxref("RTCIceTransport")}}, it has completed gathering for a **generation** of candidates. That this has occurred is indicated by an `icecandidate` event whose {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} string is empty (`""`).
 
-You should deliver this to the remote peer just like any standard candidate, as described under {{anch("Sharing a new candidate")}} above. This ensures that the remote peer is given the end-of-candidates notification as well. As you see in the code in the previous section, every candidate is sent to the other peer, including any that might have an empty candidate string. Only candidates for which the event's {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} property is `null` are not forwarded across the signaling connection.
+You should deliver this to the remote peer just like any standard candidate, as described under [Sharing a new candidate](#sharing_a_new_candidate) above. This ensures that the remote peer is given the end-of-candidates notification as well. As you see in the code in the previous section, every candidate is sent to the other peer, including any that might have an empty candidate string. Only candidates for which the event's {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} property is `null` are not forwarded across the signaling connection.
 
 The end-of-candidates indication is described in [section 9.3 of the Trickle ICE draft specification](https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-trickle-ice-02#section-9.3) (note that the section number is subject to change as the specification goes through repeated drafts).
 
@@ -113,7 +117,7 @@ pc.addEventListener("icecandidate", ev => {
 }, false);
 ```
 
-You can also set the {{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}} event handler property directly:
+You can also set the `onicecandidate` event handler property directly:
 
 ```js
 pc.onicecandidate = ev => {

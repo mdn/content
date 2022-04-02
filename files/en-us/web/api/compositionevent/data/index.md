@@ -16,13 +16,7 @@ The **`data`** read-only property of the
 method that raised the event; its exact nature varies depending on the type of event
 that generated the `CompositionEvent` object.
 
-## Syntax
-
-```js
- myData = compositionEvent.data
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} representing the event data:
 

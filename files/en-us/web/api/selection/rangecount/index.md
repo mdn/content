@@ -3,7 +3,6 @@ title: Selection.rangeCount
 slug: Web/API/Selection/rangeCount
 tags:
   - API
-  - Experimental
   - HTML Editing
   - Property
   - Read-only
@@ -11,7 +10,7 @@ tags:
   - Selection
 browser-compat: api.Selection.rangeCount
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ ApiRef("DOM") }}
 
 The **`Selection.rangeCount`** read-only property returns the
 number of ranges in the selection.

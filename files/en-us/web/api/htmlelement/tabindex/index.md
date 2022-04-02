@@ -28,18 +28,11 @@ Elements that are disabled do not participate in the tabbing order.
 Values don't need to be sequential, nor must they begin with any particular value. They
 may even be negative, though each browser trims very large values.
 
-## Syntax
-
-```js
-element.tabIndex = index;
-var index = element.tabIndex;
-```
-
-### Value
+## Value
 
 `index` is an integer
 
-## Example
+## Examples
 
 ```js
 const b1 = document.getElementById('button1');

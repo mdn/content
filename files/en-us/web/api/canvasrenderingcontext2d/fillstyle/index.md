@@ -21,23 +21,13 @@ color, gradient, or pattern to use inside shapes. The default style is `#000`
 > styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas
 > tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
-## Syntax
+## Value
 
-```js
-ctx.fillStyle = color;
-ctx.fillStyle = gradient;
-ctx.fillStyle = pattern;
-```
+One of the followings:
 
-### Options
-
-- `color`
-  - : A {{domxref("DOMString")}} parsed as [CSS](/en-US/docs/Web/CSS)
-    {{cssxref("&lt;color&gt;")}} value.
-- `gradient`
-  - : A {{domxref("CanvasGradient")}} object (a linear or radial gradient).
-- `pattern`
-  - : A {{domxref("CanvasPattern")}} object (a repeating image).
+- A {{domxref("DOMString")}} parsed as CSS {{cssxref("&lt;color&gt;")}} value.
+- A {{domxref("CanvasGradient")}} object (a linear or radial gradient).
+- A {{domxref("CanvasPattern")}} object (a repeating image).
 
 ## Examples
 

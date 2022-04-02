@@ -34,9 +34,10 @@ But there's a price to pay for this. With multithreaded code, you never know whe
 To avoid these problems in the web, your main code and your worker code never get direct access to each others' variables. Workers and the main code run in completely separate worlds, and only interact by sending each other messages. In particular, this means that workers can't access the DOM (the window, document, page elements, and so on).
 
 There are three different sorts of workers:
-* dedicated workers
-* shared workers
-* service workers
+
+- dedicated workers
+- shared workers
+- service workers
 
 In this article we'll walk through an example of the first sort of worker, then briefly discuss the other two.
 
@@ -91,10 +92,10 @@ In this program, after we call `generatePrimes()`, the program becomes totally u
 
 For this example, start by making a local copy of the files at <https://github.com/mdn/learning-area/blob/main/javascript/asynchronous/workers/start>. There are four files in this directory:
 
-* index.html
-* style.css
-* main.js
-* generate.js
+- index.html
+- style.css
+- main.js
+- generate.js
 
 The "index.html" file and the "style.css" files are already complete:
 
@@ -104,7 +105,7 @@ The "index.html" file and the "style.css" files are already complete:
   <head>
     <meta charset="UTF-8">
     <script type="text/javascript" src="main.js" defer></script>
-    <link href="style.css"rel="stylesheet"></link>
+    <link href="style.css"rel="stylesheet">
   </head>
 
   <body>
@@ -112,7 +113,7 @@ The "index.html" file and the "style.css" files are already complete:
     <label for="quota">Number of primes:</label>
     <input type="text" id="quota" name="quota" value="1000000">
 
-    <button id="generate-primes">Generate primes</button>
+    <button id="generate">Generate primes</button>
     <button id="reload">Reload</button>
 
     <textarea id="user-input" rows="5" cols="62">Try typing in here immediately after pressing "Generate primes"</textarea>
@@ -145,7 +146,7 @@ const worker = new Worker('./generate.js');
 // When the user clicks "Generate primes", send a message to the worker.
 // The message command is "generate", and the message also contains "quota",
 // which is the number of primes to generate.
-document.querySelector('#generate-primes').addEventListener('click', () => {
+document.querySelector('#generate').addEventListener('click', () => {
   const quota = document.querySelector('#quota').value;
   worker.postMessage({
     command: 'generate',
@@ -166,16 +167,16 @@ document.querySelector('#reload').addEventListener('click', () => {
 });
 ```
 
-* First, we're creating the worker using the {{domxref("Worker/Worker", "Worker()")}} constructor. We pass it a URL pointing to the worker script. As soon as the worker is created, the worker script is executed.
+- First, we're creating the worker using the {{domxref("Worker/Worker", "Worker()")}} constructor. We pass it a URL pointing to the worker script. As soon as the worker is created, the worker script is executed.
 
-* Next, as in the synchronous version, we add a `click` event handler to the "Generate primes" button. But now, rather than calling a `generatePrimes()` function, we send a message to the worker using {{domxref("Worker/postMessage", "worker.postMessage()")}}. This message can take an argument, and in this case we're passing a JSON object containing two properties:
+- Next, as in the synchronous version, we add a `click` event handler to the "Generate primes" button. But now, rather than calling a `generatePrimes()` function, we send a message to the worker using {{domxref("Worker/postMessage", "worker.postMessage()")}}. This message can take an argument, and in this case we're passing a JSON object containing two properties:
 
-    * `command`: a string identifying the thing we want the worker to do (in case our worker could do more than one thing)
-    * `quota`: the number of primes to generate.
+  - `command`: a string identifying the thing we want the worker to do (in case our worker could do more than one thing)
+  - `quota`: the number of primes to generate.
 
-* Next, we add a `message` event handler to the worker. This is so the worker can tell us when it has finished, and pass us any resulting data. Our handler takes the data from the `data` property of the message, and writes it to the output element (the data is exactly the same as `quota`, so this is a bit pointless, but it shows the principle).
+- Next, we add a `message` event handler to the worker. This is so the worker can tell us when it has finished, and pass us any resulting data. Our handler takes the data from the `data` property of the message, and writes it to the output element (the data is exactly the same as `quota`, so this is a bit pointless, but it shows the principle).
 
-* Finally, we implement the `click` event handler for the "Reload" button. This is exactly the same as in the synchronous version.
+- Finally, we implement the `click` event handler for the "Reload" button. This is exactly the same as in the synchronous version.
 
 Now for the worker code. Copy the following code into "generate.js":
 
@@ -232,8 +233,8 @@ The worker we just created was what's called a _dedicated worker_. This means it
 
 There are other types of worker, though:
 
-* [_Shared workers_](/en-US/docs/Web/API/SharedWorker) can be shared by several different scripts running in different windows.
-* [_Service workers_](/en-US/docs/Web/API/Service_Worker_API) act like proxy servers, caching resources so that web applications can work when the user is offline. They're a key component of [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps).
+- [_Shared workers_](/en-US/docs/Web/API/SharedWorker) can be shared by several different scripts running in different windows.
+- [_Service workers_](/en-US/docs/Web/API/Service_Worker_API) act like proxy servers, caching resources so that web applications can work when the user is offline. They're a key component of [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps).
 
 ## Conclusion
 

@@ -30,20 +30,14 @@ let the user choose directories.
 > **Note:** This property is called `webkitEntries` in the specification due to its
 > origins as a Google Chrome-specific API. It's likely to be renamed someday.
 
-## Syntax
-
-```js
-var entries = HTMLInputElement.webkitEntries;
-```
-
-### Value
+## Value
 
 An array of objects based on {{domxref("FileSystemEntry")}}, each representing one file
 which is selected in the {{HTMLElement("input")}} element. More specifically, files are
 represented by {{domxref("FileSystemFileEntry")}} objects, and, if they're allowed,
 directories are represented by {{domxref("FileSystemDirectoryEntry")}} objects.
 
-## Example
+## Examples
 
 This example shows how to create a file selection `<input>` element
 and process the selected files.

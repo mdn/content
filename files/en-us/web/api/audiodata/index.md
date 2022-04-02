@@ -30,7 +30,7 @@ In planar format, the number of planes is equal to {{domxref("AudioData.numberOf
 
 ## Constructor
 
-- {{domxref("AudioData.AudioData()")}}
+- {{domxref("AudioData.AudioData", "AudioData()")}}
   - : Creates a new `AudioData` object.
 
 ## Properties

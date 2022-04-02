@@ -30,7 +30,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var creating = browser.windows.create(
+let creating = browser.windows.create(
   createData            // optional object
 )
 ```
@@ -91,7 +91,7 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  var creating = browser.windows.create({
+  let creating = browser.windows.create({
     url: ["https://developer.mozilla.org",
           "https://addons.mozilla.org"]
   });
@@ -111,7 +111,7 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  var creating = browser.windows.create({
+  let creating = browser.windows.create({
     tabId: tab.id
   });
   creating.then(onCreated, onError);
@@ -131,9 +131,9 @@ function onError(error) {
 
 browser.browserAction.onClicked.addListener((tab) => {
 
-  var popupURL = browser.extension.getURL("popup/popup.html");
+  let popupURL = browser.extension.getURL("popup/popup.html");
 
-  var creating = browser.windows.create({
+  let creating = browser.windows.create({
     url: popupURL,
     type: "popup",
     height: 200,

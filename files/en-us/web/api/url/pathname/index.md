@@ -18,14 +18,7 @@ is no path).
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-const path = url.pathname
-url.pathname = newPath
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}}.
 

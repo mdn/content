@@ -16,13 +16,7 @@ The **`url`** read-only property of the
 {{domxref("EventSource")}} interface returns a {{domxref("DOMString")}} representing the
 URL of the source.
 
-## Syntax
-
-```js
-var myUrl = eventSource.url;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} representing the URL of the source.
 

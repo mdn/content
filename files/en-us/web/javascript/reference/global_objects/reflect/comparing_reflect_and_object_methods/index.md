@@ -29,7 +29,7 @@ The table below details the differences between the methods available on the `Ob
       <td><code>defineProperty()</code></td>
       <td>
         {{jsxref("Object.defineProperty()")}} returns the object that
-        was passed to the function. Returns a <code>TypeError</code> if the
+        was passed to the function. Throws a <code>TypeError</code> if the
         property was not successfully defined on the object.
       </td>
       <td>
@@ -42,10 +42,32 @@ The table below details the differences between the methods available on the `Ob
       <td><code>defineProperties()</code></td>
       <td>
         {{jsxref("Object.defineProperties()")}} returns the objects
-        that were passed to the function. Returns a <code>TypeError</code> if
+        that were passed to the function. Throws a <code>TypeError</code> if
         any properties were not successfully defined on the object.
       </td>
       <td>N/A</td>
+    </tr>
+    <tr>
+      <td><code>has()</code></td>
+      <td>N/A</td>
+      <td>
+        {{jsxref("Reflect.has()")}} returns <code>true</code> if the
+        property exists on the object or on its prototype chain or
+        <code>false</code> otherwise, similar to the
+        [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in).
+        Throws a <code>TypeError</code> if the target was not
+        an <code>Object</code>.
+      </td>
+    </tr>
+    <tr>
+    <tr>
+      <td><code>get()</code></td>
+      <td>N/A</td>
+      <td>
+        {{jsxref("Reflect.get()")}} returns the value of the property.
+        Throws a <code>TypeError</code> if the target was not
+        an <code>Object</code>.
+      </td>
     </tr>
     <tr>
       <td><code>set()</code></td>
@@ -54,15 +76,6 @@ The table below details the differences between the methods available on the `Ob
         {{jsxref("Reflect.set()")}} returns <code>true</code> if the
         property was set successfully on the object and <code>false</code> if it
         was not. Throws a <code>TypeError</code> if the target was not
-        an <code>Object</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><code>get()</code></td>
-      <td>N/A</td>
-      <td>
-        {{jsxref("Reflect.get()")}} returns the value of the property.
-        Throws a <code>TypeError</code> if the target was not
         an <code>Object</code>.
       </td>
     </tr>

@@ -19,18 +19,12 @@ The **`sourceFile`** read-only property of the
 {{domxref("SecurityPolicyViolationEvent")}} interface is a {{domxref("USVString")}}
 representing the URI of the document or worker in which the violation was found.
 
-## Syntax
-
-```js
-let source = violationEventInstance.sourceFile;
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}} representing the URI of the document or worker in which the
 violation was found.
 
-## Example
+## Examples
 
 ```js
 document.addEventListener("securitypolicyviolation", (e) => {

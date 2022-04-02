@@ -21,20 +21,12 @@ Index or an object store. If no source exists (such as when calling
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var IDBIndex = request.source;
-var IDBCursor = request.source;
-var IDBObjectStore = request.source;
-```
-
 ## Value
 
 An object representing the source of the request, such as an {{domxref("IDBIndex")}},
 {{domxref("IDBObjectStore")}} or {{domxref("IDBCursor")}}.
 
-## Example
+## Examples
 
 The following example requests a given record title, `onsuccess` gets the
 associated record from the {{domxref("IDBObjectStore")}} (made available

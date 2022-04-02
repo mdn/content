@@ -97,4 +97,4 @@ This code used together produces the following result:
 
 {{ EmbedLiveSample('An_example', '100%', 520) }}
 
-> **Note:** You can check out the [original code on Github](https://github.com/belen-albeza/retro-canvas) ([and a live example](https://belen-albeza.github.io/retro-canvas/).)
+> **Note:** You can check out the [original code on GitHub](https://github.com/belen-albeza/retro-canvas) ([and a live example](https://belen-albeza.github.io/retro-canvas/).)

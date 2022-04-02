@@ -175,7 +175,7 @@ Here's an example background script that establishes a connection with the `"pin
 /*
 On startup, connect to the "ping_pong" app.
 */
-var port = browser.runtime.connectNative("ping_pong");
+let port = browser.runtime.connectNative("ping_pong");
 
 /*
 Listen for messages from the app.
@@ -224,7 +224,7 @@ On a click on the browser action, send the app a message.
 */
 browser.browserAction.onClicked.addListener(() => {
   console.log("Sending:  ping");
-  var sending = browser.runtime.sendNativeMessage(
+  let sending = browser.runtime.sendNativeMessage(
     "ping_pong",
     "ping");
   sending.then(onResponse, onError);
@@ -262,7 +262,7 @@ You can quickly get started sending and receiving messages with this NodeJS code
     };
 
     const processData = () => {
-        // Create one big buffer with all all the chunks
+        // Create one big buffer with all the chunks
         const stringData = Buffer.concat(chunks);
 
         // The browser will emit the size as a header of the payload,

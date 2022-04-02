@@ -17,17 +17,11 @@ The **`provider`** property of the
 {{domxref("FederatedCredential")}} interface returns a {{domxref("USVString")}}
 containing a credential's federated identity provider.
 
-## Syntax
-
-```js
-var provider = FederatedCredential.provider
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}} containing a credential's federated identity provider.
 
-## Example
+## Examples
 
 ```js
 // TBD

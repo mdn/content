@@ -16,8 +16,8 @@ browser-compat: javascript.builtins.TypedArray.map
 The **`map()`** method creates a new typed array with the
 results of calling a provided function on every element in this typed array. This method
 has the same algorithm as {{jsxref("Array.prototype.map()")}}_._
-_TypedArray_ is one of the [typed
-array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+_TypedArray_ is one of the
+[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
 
 {{EmbedInteractiveExample("pages/js/typedarray-map.html")}}
 
@@ -44,14 +44,15 @@ map(function(currentValue, index, array) { /* ... */ }, thisArg)
 
 - `callbackFn`
 
-  - : A callback function that produces an element of the new typed array, taking three
-    arguments:
+  - : A callback function that produces an element of the new typed array.
+
+    The function is called with the following arguments:
 
     - `currentValue`
       - : The current element being processed in the typed array.
-    - `index` {{optional_inline}}
+    - `index`
       - : The index of the current element being processed in the typed array.
-    - `array` {{optional_inline}}
+    - `array`
       - : The typed array `map()` was called upon.
 
 - `thisArg` {{optional_inline}}
@@ -78,8 +79,8 @@ If a `thisArg` parameter is provided to `map()`, it
 will be passed to `callbackFn` when invoked, for use as its
 `this` value. Otherwise, the value {{jsxref("undefined")}} will be passed for
 use as its `this` value. The `this` value ultimately observable by
-`callbackFn` is determined according to [the usual rules for
-determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
+`callbackFn` is determined according to
+[the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
 
 `map()` does not mutate the typed array on which it is called (although
 `callbackFn`, if invoked, may do so).

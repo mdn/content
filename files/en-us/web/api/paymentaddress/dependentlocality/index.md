@@ -19,13 +19,7 @@ sublocality designation within a city, such as a  neighborhood, borough, distric
 in the United Kingdom, a dependent locality. Also known as a _post
 town_.
 
-## Syntax
-
-```js
-var paymentDependentLocality = PaymentAddress.dependentLocality;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} indicating the sublocality portion of the address. This may
 be an empty string if no sublocality is available or required. It's used to provide

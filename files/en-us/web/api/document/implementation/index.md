@@ -15,13 +15,11 @@ browser-compat: api.Document.implementation
 The **`Document.implementation`** property returns a
 {{domxref("DOMImplementation")}} object associated with the current document.
 
-## Syntax
+## Value
 
-```js
-DOMImpObj = document.implementation;
-```
+A {{domxref("DOMImplementation")}} object.
 
-## Example
+## Examples
 
 ```js
 var modName = "HTML";

@@ -36,7 +36,7 @@ leftmost bit, the sign bit (the leftmost bit) does not change. Hence the name
 For example, `9 >> 2` yields 2:
 
 ```js
-.    9 (base 10): 00000000000000000000000000001001 (base 2)
+     9 (base 10): 00000000000000000000000000001001 (base 2)
                   --------------------------------
 9 >> 2 (base 10): 00000000000000000000000000000010 (base 2) = 2 (base 10)
 ```
@@ -45,7 +45,7 @@ Likewise, `-9 >> 2` yields `-3`, because the sign is
 preserved:
 
 ```js
-.    -9 (base 10): 11111111111111111111111111110111 (base 2)
+     -9 (base 10): 11111111111111111111111111110111 (base 2)
                    --------------------------------
 -9 >> 2 (base 10): 11111111111111111111111111111101 (base 2) = -3 (base 10)
 ```
@@ -69,7 +69,5 @@ preserved:
 
 ## See also
 
-- [Bitwise
-  operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators)
-- [Right
-  shift assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)
+- [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators)
+- [Right shift assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)

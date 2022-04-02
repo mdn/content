@@ -17,6 +17,6 @@ Brotli is compatible with most modern browsers, but you may want to consider a f
 ## See also
 
 - [brotli.org](https://brotli.org/)
-- [Brotli Github repository](https://github.com/google/brotli)
+- [Brotli GitHub repository](https://github.com/google/brotli)
 - {{interwiki("wikipedia", "Brotli")}} on Wikipedia
 - [Brotli on Caniuse](https://caniuse.com/#feat=brotli)

@@ -26,16 +26,7 @@ by the source when asked for the next sample.
 > myConstantSourceNode.offset.value = newValue;
 > ```
 
-## Syntax
-
-```js
-let offsetParameter = ConstantAudioNode.offset;
-
-let offset = ConstantSourceNode.offset.value;
-ConstantSourceNode.offset.value = newValue;
-```
-
-### Value
+## Value
 
 An {{ domxref("AudioParam") }} object indicating the [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) value returned for every
 sample by this node. The default value is 1.0.
@@ -43,7 +34,7 @@ sample by this node. The default value is 1.0.
 To access the `offset` parameter's current value, access the parameter's
 `value` property, as shown in the syntax box above.
 
-## Example
+## Examples
 
 This example shows how to set up a `ConstantSourceNode` so its
 `offset` is used as the input to a pair of {{domxref("GainNode")}}s; this

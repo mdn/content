@@ -31,16 +31,10 @@ The `frameRate` constraint can be used to establish acceptable upper and
 lower bounds on the video frame rate for a new video track, or to specify an exact frame
 rate that must be provided for the request to succeed. Checking the value of this
 property lets you determine if the user agent allows constraining the video track
-configuration by frame rate. See the {{anch("Example", "example")}} to see how this can
+configuration by frame rate. See the [example](#example) to see how this can
 be used.
 
-## Syntax
-
-```js
-frameRateConstraintSupported = supportedConstraintsDictionary.frameRate;
-```
-
-### Value
+## Value
 
 This property is present in the dictionary if the user agent supports the
 `frameRate` constraint. If the property isn't present, the user agent doesn't
@@ -48,7 +42,7 @@ allow specifying limits on the frame rate for video tracks.
 
 > **Note:** If this property is present, its value is always `true`.
 
-## Example
+## Examples
 
 This simple example looks to see if your browser supports constraining the frame rate
 when requesting video tracks.

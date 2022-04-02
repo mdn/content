@@ -14,13 +14,7 @@ browser-compat: api.CSSNamespaceRule.namespaceURI
 
 The read-only **`namespaceURI`** property of the {{domxref("CSSNamespaceRule")}} returns a {{domxref("DOMString")}} containing the text of the URI of the given namespace.
 
-## Syntax
-
-```js
-var namespaceURI = CSSNamespaceRule.namespaceURI
-```
-
-### Returns
+## Value
 
 A {{domxref("DOMString")}} containing a URI.
 

@@ -74,17 +74,6 @@ These properties are available only on instances of the `Notification` object.
 - {{domxref("Notification.vibrate")}} {{readonlyinline}}
   - : Specifies a vibration pattern for devices with vibration hardware to emit.
 
-#### Event handlers
-
-- {{domxref("Notification.onclick")}}
-  - : A handler for the {{domxref("Element/click_event", "click")}} event. It is triggered each time the user clicks on the notification.
-- {{domxref("Notification.onclose")}}
-  - : A handler for the {{domxref("HTMLDialogElement/close_event", "close")}} event. It is triggered when the user closes the notification.
-- {{domxref("Notification.onerror")}}
-  - : A handler for the {{domxref("Element/error_event", "error")}} event. It is triggered each time the notification encounters an error.
-- {{domxref("Notification.onshow")}}
-  - : A handler for the {{domxref("Element/show_event", "show")}} event. It is triggered when the notification is displayed.
-
 ## Methods
 
 ### Static methods
@@ -100,6 +89,17 @@ These properties are available only on an instance of the `Notification` object 
 
 - {{domxref("Notification.close()")}}
   - : Programmatically closes a notification instance.
+
+## Events
+
+- {{domxref("Notification.click_event", "click")}}
+  - : Fires when the user clicks the notification.
+- {{domxref("Notification.close_event", "close")}}
+  - : Fires when the user closes the notification.
+- {{domxref("Notification.error_event", "error")}}
+  - : Fires when the notification encounters an error.
+- {{domxref("Notification.show_event", "show")}}
+  - : Fires when the notification is displayed.
 
 ## Examples
 

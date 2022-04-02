@@ -22,7 +22,7 @@ If the value for _utfLabel_ is unknown, or is one of the two values leading to a
 ## Syntax
 
 ```js
-decoder = new TextDecoder(utfLabel, options);
+new TextDecoder(utfLabel, options);
 ```
 
 ### Parameters

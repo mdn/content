@@ -16,12 +16,12 @@ browser-compat: api.PeriodicSyncEvent.PeriodicSyncEvent
 The **`PeriodicSyncEvent()`** constructor
 creates a new {{domxref("PeriodicSyncEvent")}} object. This constructor is not typically
 used. The browser creates these objects itself and provides them to
-{{domxref('ServiceWorkerGlobalScope.onperiodicsync')}} callback.
+{{domxref('ServiceWorkerGlobalScope.periodicsync_event', 'onperiodicsync')}} callback.
 
 ## Syntax
 
 ```js
-var PeriodicSyncEvent = new PeriodicSyncEvent();
+new PeriodicSyncEvent();
 ```
 
 ### Parameters

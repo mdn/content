@@ -16,7 +16,7 @@ functions**, such as `CSS.em()` and
 `CSS.turn()` are methods that return [CSSUnitValues](/en-US/docs/Web/API/CSSUnitValue) with the value being
 the numeric argument and the unit being the name of the method used. These
 functions create new numeric values less verbosely than using the
-{{domxref('CSSUnitValue.CSSUnitValue()')}} constructor.
+{{domxref("CSSUnitValue.CSSUnitValue", "CSSUnitValue()")}} constructor.
 
 ## Syntax
 
@@ -101,4 +101,4 @@ console.log(currentMargin.value, currentMargin.unit); // 40, 'px'
 
 ## See also
 
-- {{domxref('CSSUnitValue.CSSUnitValue()')}}
+- {{domxref("CSSUnitValue.CSSUnitValue", "CSSUnitValue()")}}

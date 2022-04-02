@@ -15,14 +15,7 @@ browser-compat: api.Element.ariaValueMin
 
 The **`ariaValueMin`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) attribute, which defines the minimum allowed value for a range widget.
 
-## Syntax
-
-```js
-var ariaValueMin = element.ariaValueMin;
-element.ariaValueMin = ariaValueMin
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} which contains a number.
 

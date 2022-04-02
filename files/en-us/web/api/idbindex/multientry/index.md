@@ -24,13 +24,7 @@ This is decided when the index is created, using the
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var isMultiEntry = myIndex.multiEntry;
-```
-
-### Value
+## Value
 
 A boolean value:
 
@@ -39,7 +33,7 @@ A boolean value:
 | true  | There is one record in the index for each item in an array of keys. |
 | false | There is one record for each key that is an array.                  |
 
-## Example
+## Examples
 
 In the following example we open a transaction and an object store, then get the
 index `lName` from a simple contacts database. We then open a basic cursor on

@@ -19,18 +19,12 @@ The **`originalPolicy`** read-only property of the
 {{domxref("SecurityPolicyViolationEvent")}} interface is a {{domxref("DOMString")}}
 containing the policy whose enforcement uncovered the violation.
 
-## Syntax
-
-```js
-let origPolicy = violationEventInstance.originalPolicy;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} representing the policy whose enforcement uncovered the
 violation.
 
-## Example
+## Examples
 
 ```js
 document.addEventListener("securitypolicyviolation", (e) => {

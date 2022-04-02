@@ -48,8 +48,7 @@ fields:
   compiled WebAssembly module. This `Module` can be instantiated again or
   shared via [postMessage()](/en-US/docs/Web/API/Worker/postMessage).
 - `instance`: A {{jsxref("WebAssembly.Instance")}} object that contains all
-  the [Exported WebAssembly
-  functions](/en-US/docs/WebAssembly/Exported_functions).
+  the [Exported WebAssembly functions](/en-US/docs/WebAssembly/Exported_functions).
 
 ### Exceptions
 
@@ -64,8 +63,8 @@ fields:
 ### Instantiating streaming
 
 The following example (see our [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html)
-demo on GitHub, and [view
-it live](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html) also) directly streams a .wasm module from an underlying source then
+demo on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html) also)
+directly streams a .wasm module from an underlying source then
 compiles and instantiates it, the promise fulfilling with a `ResultObject`.
 Because the `instantiateStreaming()` function accepts a promise for a [`Response`](/en-US/docs/Web/API/Response)
 object, you can directly pass it a [`fetch()`](/en-US/docs/Web/API/fetch)
@@ -96,5 +95,4 @@ exported function invoked.
 
 - [WebAssembly](/en-US/docs/WebAssembly) overview page
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly
-  JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

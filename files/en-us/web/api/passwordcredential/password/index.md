@@ -17,13 +17,7 @@ The **`password`** read-only property
 of the {{domxref("PasswordCredential")}} interface returns a {{domxref("USVString")}}
 containing the password of the credential.
 
-## Syntax
-
-```js
-password = passwordCredential.password
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}} containing a password.
 

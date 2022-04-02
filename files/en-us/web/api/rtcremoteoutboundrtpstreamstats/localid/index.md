@@ -30,13 +30,7 @@ used to identify the {{domxref("RTCInboundRtpStreamStats")}} object whose
 Together, these two objects provide statistics about the inbound and outbound
 sides of the same synchronization source (SSRC).
 
-## Syntax
-
-```js
-let localId = rtcRemoteOutboundRtpStreamStats.localId;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} which can be compared to the value of an
 {{domxref("RTCInboundRtpStreamStats")}} object's
@@ -56,10 +50,10 @@ that `remote-outbound-rtp` describes statistics about the transmission(s)
 from the perspective of the remote peer, while `inbound-rtp` offers
 statistics about the incoming data from the local peer's perspective.
 
-You can {{anch("Try it and fork it", "examine, try out, and experiment")}} with this
+You can [examine, try out, and experiment](#try_it_and_fork_it) with this
 example on Glitch.
 
-## Example
+## Examples
 
 In this example, we have a pair of functions: the first,
 `networkTestStart()`, captures an initial report, and the second,

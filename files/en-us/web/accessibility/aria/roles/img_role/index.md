@@ -103,7 +103,7 @@ Because descendants of `img` are presentational, the following code is equivalen
 
 ```html
 <div role="img"><h3 role="presentation">Title of my image</h3></div>
-````
+```
 
 From the assistive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree).:
 

@@ -24,8 +24,8 @@ functions can be called. In brief, they are
 [`Function`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
 objects.
 
-For more examples and explanations, see also the [JavaScript guide about
-functions](/en-US/docs/Web/JavaScript/Guide/Functions).
+For more examples and explanations,
+see the [JavaScript guide about functions](/en-US/docs/Web/JavaScript/Guide/Functions).
 
 ## Description
 
@@ -43,8 +43,8 @@ keyword, the default value is the value of its `this` parameter. For all
 other functions, the default return value is {{jsxref("undefined")}}.
 
 The parameters of a function call are the function's _arguments_. Arguments may be passed _by value_
-(in the case of [primitive values](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#primitive_values))
-or _by reference_ (in the case of [objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#objects)).
+(in the case of [primitive values](/en-US/docs/Web/JavaScript/Data_structures#primitive_values))
+or _by reference_ (in the case of [objects](/en-US/docs/Web/JavaScript/Data_structures#objects)).
 This means that if a function reassigns a primitive type parameter, the value won't change outside the function. In the case of
 an object type parameter, if its properties are mutated, the change will impact outside of the function.
 See the following example:
@@ -79,8 +79,8 @@ myFunc(mycar);
 console.log(mycar.brand);
 ```
 
-The [`this`
-keyword](/en-US/docs/Web/JavaScript/Reference/Operators/this) does not refer to the currently executing function, so you must refer to
+The [`this` keyword](/en-US/docs/Web/JavaScript/Reference/Operators/this)
+does not refer to the currently executing function, so you must refer to
 `Function` objects by name, even within the function body.
 
 ## Defining functions
@@ -89,8 +89,8 @@ There are several ways to define functions:
 
 ### The function declaration (`function` statement)
 
-There is a special syntax for declaring functions (see [function
-statement](/en-US/docs/Web/JavaScript/Reference/Statements/function) for details):
+There is a special syntax for declaring functions
+(see [function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function) for details):
 
 ```js
 function name([param[, param[, ... param]]]) {
@@ -108,9 +108,9 @@ function name([param[, param[, ... param]]]) {
 ### The function expression (`function` expression)
 
 A function expression is similar to and has the same syntax as a function declaration
-(see [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function) for details). A function expression may be a part of a larger
-expression. One can define "named" function expressions (where the name of the
+(see [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function) for details).
+A function expression may be a part of a larger expression.
+One can define "named" function expressions (where the name of the
 expression might be used in the call stack for example) or "anonymous" function
 expressions. Function expressions are not _hoisted_ onto the beginning of the
 scope, therefore they cannot be used before they appear in the code.
@@ -205,9 +205,8 @@ function* [name]([param[, param[, ... param]]]) {
 
 ### The arrow function expression (=>)
 
-An arrow function expression has a shorter syntax and lexically binds its
-`this` value (see [arrow
-functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) for details):
+An arrow function expression has a shorter syntax and lexically binds its `this` value
+(see [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) for details):
 
 ```js
 ([param[, param]]) => {
@@ -280,14 +279,13 @@ the `new` operator) has the same effect as invoking it as a constructor.
 ### Default parameters
 
 Default function parameters allow formal parameters to be initialized with default
-values if no value or `undefined` is passed. For more details, see [default
-parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters).
+values if no value or `undefined` is passed. For more details,
+see [default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters).
 
 ### Rest parameters
 
-The rest parameter syntax allows representing an indefinite number of arguments as an
-array. For more details, see [rest
-parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters).
+The rest parameter syntax allows representing an indefinite number of arguments as an array.
+For more details, see [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters).
 
 ## The `arguments` object
 
@@ -322,8 +320,8 @@ The syntax for defining getters and setters uses the object literal syntax.
 ### Method definition syntax
 
 Starting with ECMAScript 2015, you are able to define own methods in a shorter syntax,
-similar to the getters and setters. See [method
-definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) for more information.
+similar to the getters and setters.
+See [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) for more information.
 
 ```js
 var obj = {
@@ -385,8 +383,8 @@ var y = function x() {};
 alert(x); // throws an error
 ```
 
-The function name also appears when the function is serialized via [`Function`'s
-toString method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString).
+The function name also appears when the function is serialized via
+[`Function`'s toString method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString).
 
 On the other hand, the variable the function is assigned to is limited only by its
 scope, which is guaranteed to include the scope in which the function is declared.
@@ -665,5 +663,4 @@ are no brackets "()" after the function name so the actual function is not calle
 - {{jsxref("Functions/get", "getter")}}
 - {{jsxref("Functions/set", "setter")}}
 - {{jsxref("Functions/Method_definitions", "Method definitions")}}
-- [Functions
-  and function scope](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Functions and function scope](/en-US/docs/Web/JavaScript/Reference/Functions)

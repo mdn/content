@@ -8,7 +8,7 @@ tags:
 ---
 {{MDNSidebar}}
 
-Problems with MDN docs are reported as [content repo issues](https://github.com/mdn/content/issues) (and there are still some open issues in the legacy [sprints repo](https://github.com/mdn/sprints/issues)). This article helps you find the _best_ issues to work on, based on your expertise and how much time you have available, and outlines the main steps to fixing them.
+Problems with MDN docs are reported as [content repo issues](https://github.com/mdn/content/issues). This article helps you find the _best_ issues to work on, based on your expertise and how much time you have available, and outlines the main steps to fixing them.
 
 > **Note:** We get a lot of content bugs — any help you can give in fixing them is very much appreciated!
 
@@ -23,23 +23,8 @@ The labels below help you find tasks based on how much time you have available.
 | [Less-than-30-minute tasks on the content repo](https://github.com/mdn/content/issues?q=is%3Aissue+is%3Aopen+label%3A%22time%3A+-30mins%22) | A task that will probably take less than 30 minutes.              |
 | [Less-than-3-hour tasks on the content repo](https://github.com/mdn/content/issues?q=is%3Aissue+is%3Aopen+label%3A%22time%3A+-3hr%22)       | A task that will probably take less than 3 hours.                 |
 | [Less-than-2-day tasks on the content repo](https://github.com/mdn/content/issues?q=is%3Aissue+is%3Aopen+label%3A%22time%3A+-2days%22)      | A task that will probably take less than 2 days.                  |
-| [10-minute tasks on the sprints repo](https://github.com/mdn/sprints/issues?q=is%3Aissue+is%3Aopen+label%3A%2210+minute+task%22)            | A really quick task, which will probably take 10 minutes or less. |
-| [30-minute tasks on the sprints repo](https://github.com/mdn/sprints/issues?q=is%3Aissue+is%3Aopen+label%3A%2230+minute+task%22)            | A slightly more involved task — might take around 30 minutes.     |
-| [1-hour tasks on the sprints repo](https://github.com/mdn/sprints/issues?q=is%3Aissue+is%3Aopen+label%3A%221+hour+task%22)                  | A long task — will take an hour, or maybe even two.               |
-| [multiple hour tasks on the sprints repo](https://github.com/mdn/sprints/issues?q=is%3Aissue+is%3Aopen+label%3A%22multiple+hour+task%22)    | A very in-depth task taking multiple hours to complete.           |
 
-If you'd prefer to browse your tasks and choose by technology category instead, you can also find the same issues organized into project boards:
-
-| Project board                                                                                                                                                                    | Description                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| [Learn docs MDN project board](https://github.com/mdn/sprints/projects/12)                                                                                                       | Issues concerning [Learn Web Development](/en-US/docs/Learn).                      |
-| [Content architecture MDN](https://github.com/mdn/sprints/projects/11) [project](https://github.com/mdn/sprints/projects/12) [board](https://github.com/mdn/sprints/projects/11) | Issues concerning general content, page architecture, and other misc tasks on MDN. |
-| [HTTP docs MDN](https://github.com/mdn/sprints/projects/10) [project](https://github.com/mdn/sprints/projects/12) [board](https://github.com/mdn/sprints/projects/10)            | Issues concerning [HTTP](/en-US/docs/Web/HTTP) docs                                |
-| [HTML docs MDN](https://github.com/mdn/sprints/projects/9) [project](https://github.com/mdn/sprints/projects/12) [board](https://github.com/mdn/sprints/projects/9)              | Issues concerning [HTML](/en-US/docs/Web/HTML) docs                                |
-| [DevTools docs MDN](https://github.com/mdn/sprints/projects/8) [project](https://github.com/mdn/sprints/projects/12) [board](https://github.com/mdn/sprints/projects/8)          | Issues concerning Firefox [DevTools](/en-US/docs/Tools) docs                       |
-| [WebExtensions docs MDN](https://github.com/mdn/sprints/projects/7) [project](https://github.com/mdn/sprints/projects/12) [board](https://github.com/mdn/sprints/projects/7)     | Issues concerning [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) docs  |
-| [CSS docs MDN](https://github.com/mdn/sprints/projects/6) [project](https://github.com/mdn/sprints/projects/12) [board](https://github.com/mdn/sprints/projects/6)               | Issues concerning [CSS](/en-US/docs/Web/CSS/Reference) docs                        |
-| [JavaScript docs MDN](https://github.com/mdn/sprints/projects/5) [project](https://github.com/mdn/sprints/projects/12) [board](https://github.com/mdn/sprints/projects/5)        | Issues concerning [JavaScript](/en-US/docs/Web/JavaScript) docs                    |
+If you'd prefer to browse your tasks and choose by technology category instead, you can also find content type labels on [issues in the content repository](https://github.com/mdn/content/issues).
 
 ## How can you benefit?
 

@@ -49,6 +49,8 @@ prevent the user from accessing the rest of the program's interface until the di
 is closed. For this reason, you should not overuse any function that creates a dialog
 box (or modal window).
 
+Alternatively {{HTMLElement("dialog")}} element can be used to display alerts.
+
 ## Specifications
 
 {{Specifications}}
@@ -59,6 +61,7 @@ box (or modal window).
 
 ## See also
 
+- {{HTMLElement("dialog")}} element
 - {{domxref("window.confirm","confirm")}}
 - {{domxref("window.prompt","prompt")}}
 - For [Mozilla Chrome](/en-US/docs/Glossary/Chrome) see

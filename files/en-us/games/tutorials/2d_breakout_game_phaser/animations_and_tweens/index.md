@@ -24,7 +24,7 @@ To make the game look more juicy and alive we can use animations and tweens. Thi
 
 In Phaser, animations, involve taking a spritesheet from an external source and displaying the sprites sequentially. As an example, we will make the ball wobble when it hits something.
 
-First of all, [grab the spritesheet from Github](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/wobble.png) and save it in your `/img` directory.
+First of all, [grab the spritesheet from GitHub](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/wobble.png) and save it in your `/img` directory.
 
 Next, we will load the spritesheet — put the following line at the bottom of your `preload()` function:
 

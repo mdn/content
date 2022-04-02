@@ -55,7 +55,7 @@ To actually implement responsive/adaptive designs, you will need to enlist a cer
 
 ## A simple example
 
-To demonstrate the concepts, I wanted to cover in this article, I created a very simple app containing a nav menu, heading and single column of text. You can see my [mobile first example running live](https://chrisdavidmills.github.io/good-read/www/), or grab the code to [play with it on Github](https://github.com/chrisdavidmills/good-read). To make my simple example I created a sample app structure from a [Mozilla Mortar](https://github.com/mozilla/mortar) template. I installed the Volo automation tool by running the following on the command line
+To demonstrate the concepts, I wanted to cover in this article, I created a very simple app containing a nav menu, heading and single column of text. You can see my [mobile first example running live](https://chrisdavidmills.github.io/good-read/www/), or grab the code to [play with it on GitHub](https://github.com/chrisdavidmills/good-read). To make my simple example I created a sample app structure from a [Mozilla Mortar](https://github.com/mozilla/mortar) template. I installed the Volo automation tool by running the following on the command line
 
 ```bash
 sudo npm install -g volo

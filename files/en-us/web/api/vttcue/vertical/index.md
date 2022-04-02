@@ -13,14 +13,7 @@ browser-compat: api.VTTCue.vertical
 
 The **`vertical`** property of the {{domxref("VTTCue")}} interface is a {{domxref("DOMString","string")}} representing the cue's writing direction.
 
-## Syntax
-
-```js
-let vertical = VTTCue.vertical;
-VTTCue.vertical = "lr";
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString","string")}} containing one of the following values:
 

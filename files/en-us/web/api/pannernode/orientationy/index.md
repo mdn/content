@@ -35,20 +35,12 @@ The {{domxref("AudioParam")}} contained by this property is read only; however, 
 can still change the value of the parameter by assigning a new value to its
 {{domxref("AudioParam.value")}} property.
 
-## Syntax
-
-```js
-var orientationY = PannerNode.orientationY;
-
-PannerNode.orientationY.value = newOrientationY;
-```
-
-### Value
+## Value
 
 An {{domxref("AudioParam")}} whose `value` is the Y component of the
 direction the audio source is facing, in 3D Cartesian coordinate space.
 
-## Example
+## Examples
 
 See [`PannerNode.orientationX`](/en-US/docs/Web/API/PannerNode/orientationX#example) for example code that demonstrates the effect on volume of changing the {{domxref("PannerNode")}} orientation parameters in combination with {{domxref("PannerNode.coneInnerAngle", "coneInnerAngle")}} and {{domxref("PannerNode.coneOuterAngle", "coneOuterAngle")}}.
 

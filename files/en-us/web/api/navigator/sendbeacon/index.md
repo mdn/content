@@ -113,7 +113,7 @@ Like `beforeunload` and `unload`, this event is not reliably fired, especially o
 
 ## Examples
 
-The following example specifies a handler for the {{event("visibilitychange")}} event. The handler calls `sendBeacon()` to send analytics.
+The following example specifies a handler for the {{domxref("document.visibilitychange_event", "visibilitychange")}} event. The handler calls `sendBeacon()` to send analytics.
 
 ```js
 document.addEventListener('visibilitychange', function logData() {

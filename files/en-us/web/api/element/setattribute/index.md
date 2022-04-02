@@ -40,7 +40,7 @@ Element.setAttribute(name, value);
 
 Boolean attributes are considered to be `true` if they're present on the
 element at all. You should set `value` to the empty string (`""`)
-or the attribute's name, with no leading or trailing whitespace. See the {{anch("Example", "example")}} below for a practical demonstration.
+or the attribute's name, with no leading or trailing whitespace. See the [example](#example) below for a practical demonstration.
 
 Since the specified `value` gets converted into a string, specifying
 `null` doesn't necessarily do what you expect. Instead of removing the

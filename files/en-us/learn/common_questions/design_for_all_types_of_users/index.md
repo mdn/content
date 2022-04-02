@@ -56,7 +56,7 @@ Let's download and install the Paciello Group's [Color Contrast Analyser](https:
 
 For instance, let's test the colors on this page and see how we fare in the color Contrast Analyser:
 
-![Color contrast on this page: excellent!](colour-contrast.png)
+![Color contrast on this page: excellent!](color-contrast.png)
 
 The luminosity contrast ratio between text and background is 8.30:1, which exceeds the minimum standard (4.5:1) and should enable many visually-impaired people to read this page.
 

@@ -18,13 +18,7 @@ The **`HTMLTrackElement.src`** property reflects the value of
 the {{HTMLElement("track")}} element's {{htmlattrxref("src", "track")}} attribute, which
 indicates the URL of the text track's data.
 
-## Syntax
-
-```js
-var textTrackURL = HTMLTrackElement.src;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} object containing the URL of the text track data.
 

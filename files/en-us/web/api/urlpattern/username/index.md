@@ -20,7 +20,7 @@ normalization.
 
 {{AvailableInWorkers}}
 
-### Value
+## Value
 
 A {{domxref("USVString")}}.
 

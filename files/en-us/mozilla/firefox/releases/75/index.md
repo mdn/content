@@ -28,7 +28,7 @@ This article provides information about the changes in Firefox 75 that will affe
 
 ### CSS
 
-- Support for the {{cssxref("min()")}}, {{cssxref("max()")}}, and {{cssxref("clamp()")}} functions has been implemented ({{bug(1519519)}}).
+- Support for the {{cssxref("min", "min()")}}, {{cssxref("max", "max()")}}, and {{cssxref("clamp", "clamp()")}} functions has been implemented ({{bug(1519519)}}).
 - The `all` value of the {{cssxref("text-decoration-skip-ink")}} property has been added ({{bug(1611965)}})
 
 ### Accessibility

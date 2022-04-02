@@ -21,7 +21,8 @@ individual {{CSSXref('transform')}} property in CSS.
 ## Syntax
 
 ```js
-var CSSScale = new CSSScale(x,y[,z]);
+new CSSScale(x, y);
+new CSSScale(x, y, z);
 ```
 
 ### Parameters

@@ -81,9 +81,9 @@ _Inherits methods from its parent, {{domxref("HTMLMediaElement")}}, and from its
 _Inherits events from its parent, {{domxref("HTMLMediaElement")}}, and from its ancestor {{domxref("HTMLElement")}}._ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
 
 - {{DOMxRef("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}}
-  - : Sent to a {{DOMxRef("HTMLVideoElement")}} when it enters Picture-in-Picture mode. The associated event handler is {{DOMxRef("HTMLVideoElement.onenterpictureinpicture")}}
+  - : Sent to a {{DOMxRef("HTMLVideoElement")}} when it enters Picture-in-Picture mode.
 - {{DOMxRef("HTMLVideoElement.leavepictureinpicture_event", "leavepictureinpicture")}}
-  - : Sent to a {{DOMxRef("HTMLVideoElement")}} when it leaves Picture-in-Picture mode. The associated event handler is {{DOMxRef("HTMLVideoElement.onleavepictureinpicture")}}
+  - : Sent to a {{DOMxRef("HTMLVideoElement")}} when it leaves Picture-in-Picture mode.
 
 ## Specifications
 

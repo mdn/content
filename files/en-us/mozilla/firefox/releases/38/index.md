@@ -132,7 +132,7 @@ _No change._
 
 #### Details
 
-- [Github commits made between Firefox 37 and Firefox 38](https://github.com/mozilla/addon-sdk/compare/firefox36...firefox38).
+- [GitHub commits made between Firefox 37 and Firefox 38](https://github.com/mozilla/addon-sdk/compare/firefox36...firefox38).
 
 ### XUL
 

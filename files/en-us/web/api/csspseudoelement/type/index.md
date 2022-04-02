@@ -16,13 +16,7 @@ The **`type`** read-only property of the
 {{DOMxRef('CSSPseudoElement')}} interface returns the type of the pseudo-element as a
 string, represented in the form of a [CSS selector](/en-US/docs/Web/CSS/CSS_Selectors#pseudo-elements).
 
-## Syntax
-
-```js
-var typeOfPseudoElement = cssPseudoElement.type;
-```
-
-### Value
+## Value
 
 A {{DOMxRef('CSSOMString')}} containing one of the following values:
 

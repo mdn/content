@@ -44,7 +44,7 @@ The `font-weight` property is described using any one of the values listed below
 
 In earlier versions of the `font-weight` specification, the property accepts only keyword values and the numeric values 100, 200, 300, 400, 500, 600, 700, 800, and 900; non-variable fonts can only really make use of these set values, although fine-grained values (e.g. 451) will be translated to one of these values for non-variable fonts.
 
-CSS Fonts Level 4 extends the syntax to accept any number between 1 and 1000, inclusive, and introduces {{anch("Variable fonts")}}, which can make use of this much finer-grained range of font weights.
+CSS Fonts Level 4 extends the syntax to accept any number between 1 and 1000, inclusive, and introduces [Variable fonts](#variable_fonts), which can make use of this much finer-grained range of font weights.
 
 ### Common weight name mapping
 

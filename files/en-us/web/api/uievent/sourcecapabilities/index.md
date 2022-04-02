@@ -30,13 +30,7 @@ window to be resized with a mouse or a keyboard, but this detail is not exposed 
 web platform in any way, and so the sourceCapabilities of a resize event will typically
 be null.
 
-## Syntax
-
-```js
-var iDC = event.sourceCapabilities
-```
-
-### Value
+## Value
 
 An instance of {{domxref('InputDeviceCapabilities')}}.
 

@@ -138,7 +138,7 @@ IMSC does not have native support in browsers at this current moment, but it can
 - [Timed Text Working Group](https://www.w3.org/AudioVideo/TT/)
   - : The IMSC standard is developed by the W3C Timed Text Group, which you are encouraged to join if you wish to contribute directly to the standard.
 - [IMSC standards repository](https://github.com/w3c/imsc)
-  - : At the IMSC github repository you can provide feedback on the specifications and file issues
+  - : At the IMSC GitHub repository you can provide feedback on the specifications and file issues
 - [Web Video Text Tracks Format (WebVTT)](/en-US/docs/Web/API/WebVTT_API)
   - : WebVTT is another mechanism for implementing captions and subtitles on the web, which has some native support in browsers and some useful features.
 

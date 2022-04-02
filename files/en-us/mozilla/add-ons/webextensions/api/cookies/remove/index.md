@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var removing = browser.cookies.remove(
+let removing = browser.cookies.remove(
   details               // object
 )
 ```
@@ -73,14 +73,14 @@ function onError(error) {
 }
 
 function removeCookie(tabs) {
-  var removing = browser.cookies.remove({
+  let removing = browser.cookies.remove({
     url: tabs[0].url,
     name: "favorite-color"
   });
   removing.then(onRemoved, onError);
 }
 
-var getActive = browser.tabs.query({active: true, currentWindow: true});
+let getActive = browser.tabs.query({active: true, currentWindow: true});
 getActive.then(removeCookie);
 ```
 

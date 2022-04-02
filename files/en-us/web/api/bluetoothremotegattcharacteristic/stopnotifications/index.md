@@ -6,7 +6,7 @@ tags:
   - Bluetooth
   - BluetoothRemoteGATTCharacteristic
   - Experimental
-  - Property
+  - Method
   - Reference
   - Web Bluetooth API
   - stopNotifications

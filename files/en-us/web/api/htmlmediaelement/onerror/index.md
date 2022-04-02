@@ -24,13 +24,7 @@ processing {{event("error")}} events.
 The `error` event fires when some form of error occurs while attempting to
 load or perform the media.
 
-## Syntax
-
-```js
-HTMLMediaElement.onerror = EventListener;
-```
-
-### Value
+## Value
 
 A {{jsxref("function")}} which serves as the event handler for the {{event("error")}}
 event. When an error occurs, the specified function will be called. If

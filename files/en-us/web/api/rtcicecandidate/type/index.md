@@ -23,13 +23,7 @@ The **{{domxref("RTCIceCandidate")}}** interface's read-only **`type`** specifie
 The `type` field's value is set from the `candidateInfo` options object passed to the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor.
 You can't specify the value of `type` directly in the options object, but its value is automatically extracted from the object's `candidate` a-line (the `cand-type` field), if it's formatted properly.
 
-## Syntax
-
-```js
-var type = RTCIceCandidate.type;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} whose value is one of those defined below. These candidate types are listed in order of priority; the higher in the list they are, the more efficient they are.
 
@@ -47,7 +41,7 @@ If `type` is `null`, that information was missing from the
 {{domxref("RTCPeerConnection.addIceCandidate()")}} to throw an
 `OperationError` exception.
 
-## Example
+## Examples
 
 In this example, the candidate's {{domxref("RTCIceCandidate.type", "type")}} is used to
 present a modified user interface for host candidates (those where the

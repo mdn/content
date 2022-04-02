@@ -25,7 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingSelected = browser.tabs.getSelected(
+let gettingSelected = browser.tabs.getSelected(
   windowId           // optional integer
 )
 ```

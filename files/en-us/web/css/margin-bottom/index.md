@@ -43,7 +43,7 @@ The `margin-bottom` property is specified as the keyword `auto`, or a `<length>`
 - {{cssxref("&lt;length&gt;")}}
   - : The size of the margin as a fixed value.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : The size of the margin as a percentage, relative to the _width_ of the containing block.
+  - : The size of the margin as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Containing_block).
 - `auto`
   - : The browser selects a suitable value to use. See {{cssxref("margin")}}.
 

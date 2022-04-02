@@ -15,13 +15,7 @@ The **`sourceFile`** read-only property of the {{domxref("InterventionReportBody
 
 > **Note:** This property can be used with {{domxref("InterventionReportBody.lineNumber")}} and {{domxref("InterventionReportBody.columnNumber")}} to locate the column and line in the file where the feature is used.
 
-## Syntax
-
-```js
-let sourceFile = InterventionReportBody.sourceFile;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString","string")}}, or `null` if the path is not known.
 

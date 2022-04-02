@@ -35,7 +35,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var flushingCache = browser.webRequest.handlerBehaviorChanged()
+let flushingCache = browser.webRequest.handlerBehaviorChanged()
 ```
 
 ### Parameters
@@ -63,7 +63,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var flushingCache = browser.webRequest.handlerBehaviorChanged();
+let flushingCache = browser.webRequest.handlerBehaviorChanged();
 flushingCache.then(onFlushed, onError);
 ```
 

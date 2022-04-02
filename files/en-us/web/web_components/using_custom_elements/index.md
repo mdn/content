@@ -49,7 +49,7 @@ class WordCount extends HTMLParagraphElement {
 
 This is just a simple example, but there is more you can do here. It is possible to define specific lifecycle callbacks inside the class, which run at specific points in the element's lifecycle. For example, `connectedCallback` is invoked each time the custom element is appended into a document-connected element, while `attributeChangedCallback` is invoked when one of the custom element's attributes is added, removed, or changed.
 
-You'll learn more about these in the {{anch("Using the lifecycle callbacks")}} section below.
+You'll learn more about these in the [Using the lifecycle callbacks](#using_the_lifecycle_callbacks) section below.
 
 There are two types of custom elements:
 

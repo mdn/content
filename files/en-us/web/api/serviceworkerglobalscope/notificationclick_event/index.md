@@ -14,28 +14,32 @@ browser-compat: api.ServiceWorkerGlobalScope.notificationclick_event
 
 The **`notificationclick`** event is fired to indicate that a system notification spawned by {{domxref("ServiceWorkerRegistration.showNotification()")}} has been clicked.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("NotificationEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler</th>
-      <td>
-        {{domxref("ServiceWorkerGlobalScope/onnotificationclick", "onnotificationclick")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('notificationclick', event => { });
+
+onnotificationclick = event => { };
+```
+
+## Event type
+
+An {{domxref("NotificationEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("NotificationEvent")}}
+
+## Event properties
+
+_Inherits properties from its ancestor, {{domxref("Event")}}_.
+
+- {{domxref("NotificationEvent.notification")}} {{readonlyInline}}
+  - : Returns a {{domxref("Notification")}} object representing the notification that was clicked to fire the event.
+- {{domxref("NotificationEvent.action")}} {{readonlyinline}}
+  - : Returns the string ID of the notification button the user clicked. This value returns an empty string if the user clicked the notification somewhere other than an action button, or the notification does not have a button.
 
 ## Examples
 

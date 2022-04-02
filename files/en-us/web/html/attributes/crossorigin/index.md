@@ -31,15 +31,13 @@ These attributes are enumerated, and have the following possible values:
     <tr>
       <td><code>anonymous</code></td>
       <td>
-        CORS requests for this element will have the credentials flag set to
-        'same-origin'.
+        Request uses CORS headers and credentials flag is set to 'same-origin'. There is no exchange of **user credentials** via cookies, client-side SSL certificates or HTTP authentication, unless destination is the same origin.
       </td>
     </tr>
     <tr>
       <td><code>use-credentials</code></td>
       <td>
-        CORS requests for this element will have the credentials flag set to
-        'include'.
+        Request uses CORS headers, credentials flag is set to 'include' and **user credentials** are always included.
       </td>
     </tr>
     <tr>
@@ -53,9 +51,36 @@ These attributes are enumerated, and have the following possible values:
   </tbody>
 </table>
 
-By default (that is, when the attribute is not specified), CORS is not used at all. The "anonymous" keyword means that there will be no exchange of **user credentials** via cookies, client-side SSL certificates or HTTP authentication as described in the [Terminology section of the CORS specification](https://www.w3.org/TR/cors/#user-credentials), unless it is in the same origin.
-
 An invalid keyword and an empty string will be handled as the `anonymous` keyword.
+
+By default (that is, when the attribute is not specified), CORS is not used at all. User-agent will not ask for permission for full access to the resource and in case of cross-origin request, its usage will be limited in following ways:
+
+<table class="no-markdown">
+  <tbody>
+    <tr>
+      <td class="header">Element</td>
+      <td class="header">Restrictions</td>
+    </tr>
+    <tr>
+      <td><code>img</code>, <code>audio</code>, <code>video</code></td>
+      <td>
+        When resource is placed in {{HTMLElement("canvas")}}, element is marked as "[tainted](/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_tainted_canvas)".
+      </td>
+    </tr>
+    <tr>
+      <td><code>script</code></td>
+      <td>
+        Access to error logging via {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} will be limited.
+      </td>
+    </tr>
+    <tr>
+      <td><code>link</code></td>
+      <td>
+        Request with no appropriate `crossorigin` header may be discarded.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 > **Note:** Prior to Firefox 83 the `crossorigin` attribute was not supported for `rel="icon"` there is also [an open issue for Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645).
 

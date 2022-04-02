@@ -15,13 +15,7 @@ browser-compat: api.Notification.dir
 
 The `dir` read-only property of the {{domxref("Notification")}} interface indicates the text direction of the notification, as specified in the `dir` option of the {{domxref("Notification.Notification","Notification()")}} constructor.
 
-## Syntax
-
-```js
-var direction = Notification.dir;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} specifying the text direction. Possible values are:
 

@@ -12,7 +12,7 @@ The **`removeEventListener()`** method of the {{domxref("EventTarget")}} interfa
 removes an event listener previously registered with {{domxref("EventTarget.addEventListener()")}} from the target.
 The event listener to be removed is identified using a combination of the event type,
 the event listener function itself, and various optional options that may affect the matching process;
-see {{anch("Matching event listeners for removal")}}.
+see [Matching event listeners for removal](#matching_event_listeners_for_removal).
 
 Calling `removeEventListener()` with arguments that do not identify any
 currently registered {{domxref("EventListener")}} on the `EventTarget` has no

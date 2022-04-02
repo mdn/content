@@ -17,13 +17,7 @@ The **`containerName`** readonly property of the
 attribute. A container is the iframe, embed or object etc. that is being implicated, on
 the whole, for a long task.
 
-## Syntax
-
-```js
-var containerName = TaskAttributionTiming.containerName;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} containing the container's `name` attribute.
 

@@ -24,13 +24,7 @@ Most of the other properties of `RTCIceCandidate` are actually extracted from th
 
 This property can be configured using the `candidate` property of the object passed into the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate() constructor")}} or {{domxref("RTCPeerConnection.addIceCandidate()")}}.
 
-## Syntax
-
-```js
-var candidate = RTCIceCandidate.candidate;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} describing the properties of the candidate, taken directly from the {{Glossary("SDP")}} attribute `"candidate"`.
 The candidate string specifies the network connectivity information for the candidate.
@@ -58,7 +52,7 @@ attributes for this example candidate is:
 - {{domxref("RTCIceCandidate.port", "port")}} = 44323
 - {{domxref("RTCIceCandidate.type", "type")}} = `"host"`
 
-## Example
+## Examples
 
 In this example, we see a function which receives as input an SDP string containing an
 ICE candidate received from the remote peer during the signaling process.

@@ -44,7 +44,7 @@ The script gets access to a number of objects that help the injected script inte
 ## Syntax
 
 ```js
-var evaluating = browser.devtools.inspectedWindow.eval(
+let evaluating = browser.devtools.inspectedWindow.eval(
   expression,       // string
   options           // object
 )

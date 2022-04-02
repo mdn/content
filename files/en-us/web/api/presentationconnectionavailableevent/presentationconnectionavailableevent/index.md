@@ -16,7 +16,7 @@ The **`PresentationConnectionAvailableInit()`** constructor creates a new {{domx
 ## Syntax
 
 ```js
-var pcaEvent = new PresentationConnectionAvailableInit(typeArg, eventInit)
+new PresentationConnectionAvailableInit(typeArg, eventInit)
 ```
 
 ### Parameters

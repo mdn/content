@@ -16,12 +16,6 @@ tags:
 The `mode` property provides the read/write status of the
 {{domxref("LockedFile")}} file.
 
-## Syntax
-
-```js
-var mode = instanceOfLockedFile.mode
-```
-
 ## Value
 
 A string, one of `readonly` or `readwrite`.

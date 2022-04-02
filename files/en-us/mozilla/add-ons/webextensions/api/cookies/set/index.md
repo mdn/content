@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var setting = browser.cookies.set(
+let setting = browser.cookies.set(
   details               // object
 )
 ```
@@ -78,7 +78,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 This example sets a cookie for the document hosted by the currently active tab:
 
 ```js
-var getActive = browser.tabs.query({active: true, currentWindow: true});
+let getActive = browser.tabs.query({active: true, currentWindow: true});
 getActive.then(setCookie);
 
 function setCookie(tabs) {

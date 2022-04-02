@@ -51,30 +51,38 @@ This example tracks multiple touchpoints at a time, allowing the user to draw in
 Log: <pre id="log" style="border: 1px solid #ccc;"></pre>
 ```
 
+```css
+#log {
+  height: 200px;
+  width: 600px;
+  overflow: scroll;
+}
+```
+
 ### Setting up the event handlers
 
 When the page loads, the `startup()` function shown below will be called.
+This sets up all the event listeners for our {{HTMLElement("canvas")}} element so we can handle the touch events as they occur.
 
 ```js
 function startup() {
-  var el = document.getElementById("canvas");
-  el.addEventListener("touchstart", handleStart, false);
-  el.addEventListener("touchend", handleEnd, false);
-  el.addEventListener("touchcancel", handleCancel, false);
-  el.addEventListener("touchmove", handleMove, false);
+  const el = document.getElementById('canvas');
+  el.addEventListener('touchstart', handleStart);
+  el.addEventListener('touchend', handleEnd);
+  el.addEventListener('touchcancel', handleCancel);
+  el.addEventListener('touchmove', handleMove);
+  log('Initialized.');
 }
 
 document.addEventListener("DOMContentLoaded", startup);
 ```
-
-This sets up all the event listeners for our {{HTMLElement("canvas")}} element so we can handle the touch events as they occur.
 
 #### Tracking new touches
 
 We'll keep track of the touches in-progress.
 
 ```js
-var ongoingTouches = [];
+const ongoingTouches = [];
 ```
 
 When a {{domxref("Element/touchstart_event", "touchstart")}} event occurs, indicating that a new touch on the surface has occurred, the `handleStart()` function below is called.
@@ -82,20 +90,20 @@ When a {{domxref("Element/touchstart_event", "touchstart")}} event occurs, indic
 ```js
 function handleStart(evt) {
   evt.preventDefault();
-  console.log("touchstart.");
-  var el = document.getElementById("canvas");
-  var ctx = el.getContext("2d");
-  var touches = evt.changedTouches;
+  log('touchstart.');
+  const el = document.getElementById('canvas');
+  const ctx = el.getContext('2d');
+  const touches = evt.changedTouches;
 
-  for (var i = 0; i < touches.length; i++) {
-    console.log("touchstart:" + i + "...");
+  for (let i = 0; i < touches.length; i++) {
+    log(`touchstart: ${i}.`);
     ongoingTouches.push(copyTouch(touches[i]));
-    var color = colorForTouch(touches[i]);
+    const color = colorForTouch(touches[i]);
+    log(`color of touch with id ${ touches[i].identifier } = ${ color }`);
     ctx.beginPath();
     ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false);  // a circle at the start
     ctx.fillStyle = color;
     ctx.fill();
-    console.log("touchstart:" + i + ".");
   }
 }
 ```
@@ -111,29 +119,28 @@ Each time one or more fingers move, a {{domxref("Element/touchmove_event", "touc
 ```js
 function handleMove(evt) {
   evt.preventDefault();
-  var el = document.getElementById("canvas");
-  var ctx = el.getContext("2d");
-  var touches = evt.changedTouches;
+  const el = document.getElementById('canvas');
+  const ctx = el.getContext('2d');
+  const touches = evt.changedTouches;
 
-  for (var i = 0; i < touches.length; i++) {
-    var color = colorForTouch(touches[i]);
-    var idx = ongoingTouchIndexById(touches[i].identifier);
+  for (let i = 0; i < touches.length; i++) {
+    const color = colorForTouch(touches[i]);
+    const idx = ongoingTouchIndexById(touches[i].identifier);
 
     if (idx >= 0) {
-      console.log("continuing touch "+idx);
+      log(`continuing touch ${ idx }`);
       ctx.beginPath();
-      console.log("ctx.moveTo(" + ongoingTouches[idx].pageX + ", " + ongoingTouches[idx].pageY + ");");
+      log(`ctx.moveTo( ${ ongoingTouches[idx].pageX }, ${ ongoingTouches[idx].pageY } );`);
       ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
-      console.log("ctx.lineTo(" + touches[i].pageX + ", " + touches[i].pageY + ");");
+      log(`ctx.lineTo( ${ touches[i].pageX }, ${ touches[i].pageY } );`);
       ctx.lineTo(touches[i].pageX, touches[i].pageY);
       ctx.lineWidth = 4;
       ctx.strokeStyle = color;
       ctx.stroke();
 
       ongoingTouches.splice(idx, 1, copyTouch(touches[i]));  // swap in the new touch record
-      console.log(".");
     } else {
-      console.log("can't figure out which touch to continue");
+      log('can\'t figure out which touch to continue');
     }
   }
 }
@@ -153,13 +160,13 @@ When the user lifts a finger off the surface, a {{domxref("Element/touchend_even
 function handleEnd(evt) {
   evt.preventDefault();
   log("touchend");
-  var el = document.getElementById("canvas");
-  var ctx = el.getContext("2d");
-  var touches = evt.changedTouches;
+  const el = document.getElementById('canvas');
+  const ctx = el.getContext('2d');
+  const touches = evt.changedTouches;
 
-  for (var i = 0; i < touches.length; i++) {
-    var color = colorForTouch(touches[i]);
-    var idx = ongoingTouchIndexById(touches[i].identifier);
+  for (let i = 0; i < touches.length; i++) {
+    const color = colorForTouch(touches[i]);
+    let idx = ongoingTouchIndexById(touches[i].identifier);
 
     if (idx >= 0) {
       ctx.lineWidth = 4;
@@ -170,7 +177,7 @@ function handleEnd(evt) {
       ctx.fillRect(touches[i].pageX - 4, touches[i].pageY - 4, 8, 8);  // and a square at the end
       ongoingTouches.splice(idx, 1);  // remove it; we're done
     } else {
-      console.log("can't figure out which touch to end");
+      log('can\'t figure out which touch to end');
     }
   }
 }
@@ -185,11 +192,11 @@ If the user's finger wanders into browser UI, or the touch otherwise needs to be
 ```js
 function handleCancel(evt) {
   evt.preventDefault();
-  console.log("touchcancel.");
-  var touches = evt.changedTouches;
+  log('touchcancel.');
+  const touches = evt.changedTouches;
 
-  for (var i = 0; i < touches.length; i++) {
-    var idx = ongoingTouchIndexById(touches[i].identifier);
+  for (let i = 0; i < touches.length; i++) {
+    let idx = ongoingTouchIndexById(touches[i].identifier);
     ongoingTouches.splice(idx, 1);  // remove it; we're done
   }
 }
@@ -203,23 +210,24 @@ This example uses two convenience functions that should be looked at briefly to 
 
 #### Selecting a color for each touch
 
-To make each touch's drawing look different, the `colorForTouch()` function is used to pick a color based on the touch's unique identifier. This identifier is an opaque number, but we can at least rely on it differing between the currently-active touches.
+To make each touch's drawing look different, the `colorForTouch()` function is used to pick a color based on the touch's unique identifier.
+This identifier is an opaque number, but we can at least rely on it differing between the currently-active touches.
 
 ```js
 function colorForTouch(touch) {
-  var r = touch.identifier % 16;
-  var g = Math.floor(touch.identifier / 3) % 16;
-  var b = Math.floor(touch.identifier / 7) % 16;
+  let r = touch.identifier % 16;
+  let g = Math.floor(touch.identifier / 3) % 16;
+  let b = Math.floor(touch.identifier / 7) % 16;
   r = r.toString(16); // make it a hex digit
   g = g.toString(16); // make it a hex digit
   b = b.toString(16); // make it a hex digit
-  var color = "#" + r + g + b;
-  console.log("color for touch with identifier " + touch.identifier + " = " + color);
+  const color = "#" + r + g + b;
   return color;
 }
 ```
 
-The result from this function is a string that can be used when calling {{HTMLElement("canvas")}} functions to set drawing colors. For example, for a {{domxref("Touch.identifier")}} value of 10, the resulting string is "#a31".
+The result from this function is a string that can be used when calling {{HTMLElement("canvas")}} functions to set drawing colors.
+For example, for a {{domxref("Touch.identifier")}} value of 10, the resulting string is "#a31".
 
 #### Copying a touch object
 
@@ -237,8 +245,8 @@ The `ongoingTouchIndexById()` function below scans through the `ongoingTouches` 
 
 ```js
 function ongoingTouchIndexById(idToFind) {
-  for (var i = 0; i < ongoingTouches.length; i++) {
-    var id = ongoingTouches[i].identifier;
+  for (let i = 0; i < ongoingTouches.length; i++) {
+    const id = ongoingTouches[i].identifier;
 
     if (id == idToFind) {
       return i;
@@ -252,16 +260,24 @@ function ongoingTouchIndexById(idToFind) {
 
 ```js
 function log(msg) {
-  var p = document.getElementById('log');
-  p.innerHTML = msg + "\n" + p.innerHTML;
+  const container = document.getElementById('log');
+  container.textContent = `${ msg } \n${ container.textContent }`;
 }
+
+
 ```
 
-#### Result
+### Result
 
-{{EmbedLiveSample('Demo')}}
+You can test this example on mobile devices by touching the box below.
 
-You can also {{LiveSampleLink('Demo', 'view the results of the demo code in a separate page')}} (or try it out on [jsFiddle here](https://jsfiddle.net/Darbicus/z3Xdx/10/)).
+{{EmbedLiveSample('Example','100%', 900)}}
+
+> **Note:** More generally, the example will work on platforms that provide touch events.
+> You can test this on desktop platforms that can simulate such events:
+>
+> - On Firefox enable "touch simulation" in [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode#toggling_responsive_design_mode) (you may need to reload the page).
+> - On Chrome use [Device mode](https://developer.chrome.com/docs/devtools/device-mode/) and set the [Device type](https://developer.chrome.com/docs/devtools/device-mode/#type) to one that sends touch events.
 
 ## Additional tips
 
@@ -277,9 +293,9 @@ function onTouch(evt) {
   if (evt.touches.length > 1 || (evt.type == "touchend" && evt.touches.length > 0))
     return;
 
-  var newEvt = document.createEvent("MouseEvents");
-  var type = null;
-  var touch = null;
+  const newEvt = document.createEvent("MouseEvents");
+  let type = null;
+  let touch = null;
 
   switch (evt.type) {
     case "touchstart":
@@ -310,7 +326,6 @@ One technique for preventing things like `pinchZoom` on a page is to call `preve
 ## Specifications
 
 {{Specifications}}
-
 
 ## Browser compatibility
 

@@ -16,13 +16,7 @@ browser-compat: api.HTMLMediaElement.ended
 The **`HTMLMediaElement.ended`** indicates whether the media
 element has ended playback.
 
-## Syntax
-
-```js
-var isEnded = HTMLMediaElement.ended
-```
-
-### Value
+## Value
 
 A boolean value which is `true` if the media contained in the
 element has finished playing.
@@ -31,7 +25,7 @@ If the source of the media is a {{domxref("MediaStream")}}, this value is
 `true` if the value of the stream's {{domxref("MediaStream.active",
   "active")}} property is `false`.
 
-## Example
+## Examples
 
 ```js
 var obj = document.createElement('video');

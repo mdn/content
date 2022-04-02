@@ -22,18 +22,12 @@ using an {{domxref("AudioBuffer")}} as the source of the sound data.
 If the `buffer` property is set to the value `null`, the node
 generates a single channel containing silence (that is, every sample is 0).
 
-## Syntax
-
-```js
-AudioBufferSourceNode.buffer = soundBuffer;
-```
-
-### Value
+## Value
 
 An {{domxref("AudioBuffer")}} which contains the data representing the sound which the
 node will play.
 
-## Example
+## Examples
 
 > **Note:** For a full working example, see [this code running
 > live](https://mdn.github.io/webaudio-examples/audio-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html).

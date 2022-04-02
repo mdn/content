@@ -1,5 +1,5 @@
 ---
-title: 'HTMLTableElement: createTBody()'
+title: HTMLTableElement.createTBody()
 slug: Web/API/HTMLTableElement/createTBody
 tags:
   - API

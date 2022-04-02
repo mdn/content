@@ -23,7 +23,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var getting = browser.pkcs11.getModuleSlots(
+let getting = browser.pkcs11.getModuleSlots(
   name              // string
 )
 ```

@@ -26,7 +26,7 @@ browser-compat: html.elements.input.input-image
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>None — the <code>value</code> attribute should not be specified.</td>
     </tr>
     <tr>
@@ -50,6 +50,10 @@ browser-compat: html.elements.input.input-image
     <tr>
       <td><strong>IDL attributes</strong></td>
       <td>None.</td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
       <td><strong>Methods</strong></td>

@@ -92,8 +92,8 @@ For example, using `<sub>` to style the name of a company which uses altered bas
 
 Appropriate use cases for `<sub>` include (but aren't necessarily limited to):
 
-- Marking up footnote numbers. See {{anch("Footnote numbers")}} for an example.
-- Marking up the subscript in mathematical variable numbers (although you may also consider using a [MathML](/en-US/docs/Web/MathML) formula for this). See {{anch("Variable subscripts")}}.
+- Marking up footnote numbers. See [Footnote numbers](#footnote_numbers) for an example.
+- Marking up the subscript in mathematical variable numbers (although you may also consider using a [MathML](/en-US/docs/Web/MathML) formula for this). See [Variable subscripts](#variable_subscripts).
 - Denoting the number of atoms of a given element within a chemical formula (such as every developer's best friend, C
 
   <sub>8</sub>
@@ -110,7 +110,7 @@ Appropriate use cases for `<sub>` include (but aren't necessarily limited to):
 
   <sub>2</sub>
 
-  , otherwise known as "caffeine"). See {{anch("Chemical formulas")}}.
+  , otherwise known as "caffeine"). See [Chemical formulas](#chemical_formulas).
 
 ## Examples
 

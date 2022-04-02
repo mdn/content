@@ -18,7 +18,7 @@ The **`MediaQueryListEvent()`** constructor creates a new
 ## Syntax
 
 ```js
-var myMqlEvent = new MediaQueryListEvent(typeArg, init);
+new MediaQueryListEvent(typeArg, init);
 ```
 
 ### Parameters

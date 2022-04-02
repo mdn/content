@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingWarnings = browser.management.getPermissionWarningsByManifest(
+let gettingWarnings = browser.management.getPermissionWarningsByManifest(
   manifestString      // string
 )
 ```
@@ -45,14 +45,14 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 Log the permission warnings for the given manifest file:
 
 ```js
-var manifest = {
+let manifest = {
   "manifest_version": 2,
   "name": "test",
   "version": "1.0",
   "permissions": ["management", "<all_urls>"]
 }
 
-var manifestString = JSON.stringify(manifest);
+let manifestString = JSON.stringify(manifest);
 
 function gotWarnings(warnings) {
   console.log(warnings);
@@ -62,7 +62,7 @@ function gotError(error) {
   console.log(`Error: ${error}`);
 }
 
-var gettingWarnings = browser.management.getPermissionWarningsByManifest(manifestString);
+let gettingWarnings = browser.management.getPermissionWarningsByManifest(manifestString);
 gettingWarnings.then(gotWarnings, gotError);
 ```
 

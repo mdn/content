@@ -14,7 +14,7 @@ The **`AudioDecoder`** interface of the {{domxref('WebCodecs API','','',' ')}} d
 
 ## Constructor
 
-- {{domxref("AudioDecoder.AudioDecoder()")}}
+- {{domxref("AudioDecoder.AudioDecoder", "AudioDecoder()")}}
   - : Creates a new `AudioDecoder` object.
 
 ## Properties

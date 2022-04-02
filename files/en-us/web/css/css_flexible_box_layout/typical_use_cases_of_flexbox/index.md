@@ -17,7 +17,7 @@ In this guide we will take a look at some of the common use cases for flexbox �
 
 In a perfect world of browser support, the reason you'd choose to use flexbox is because you want to lay a collection of items out in one direction or another. As you lay out your items you want to control the dimensions of the items in that one dimension, or control the spacing between items. These are the uses that flexbox was designed for. You can read more about the difference between flexbox and CSS Grid Layout in [Relationship of Flexbox to other layout methods](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods), where we discuss how flexbox fits into the overall picture of CSS Layout.
 
-In reality we also often use Flexbox for jobs that might be better done by Grid Layout, as a fallback for Grid, and also in order to get alignment capabilities. This is something that may well change once Box Alignment is implemented in Block Layout. In this guide I look at some of the typical things you might use flexbox for today.
+In reality we also often use Flexbox for jobs that might be better done by Grid Layout, as a fallback for Grid, and also in order to get alignment capabilities. This is something that may well change once Box Alignment is implemented in Block Layout. In this guide we'll look at some of the typical things you might use flexbox for today.
 
 ## Navigation
 
@@ -37,7 +37,7 @@ In the below live example we display the items at their natural size and by usin
 
 A different pattern for navigation would be to distribute the available space within the items themselves, rather than create space between them. In this case we would use the {{cssxref("flex")}} properties to allow items to grow and shrink in proportion to one another as described in [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax).
 
-If I wanted to respect the size property of my navigation items but have the available space shared out equally among them, then I might use `flex: auto`, which is the shorthand for `flex: 1 1 auto` — all items grow and shrink from a flex-basis of auto. This would mean that the longer item would have more space because it started from a larger size, even though the same amount of available space is assigned to it as the others.
+If you wanted to respect the size property of my navigation items but have the available space shared out equally among them, then you might use `flex: auto`, which is the shorthand for `flex: 1 1 auto` — all items grow and shrink from a flex-basis of auto. This would mean that the longer item would have more space because it started from a larger size, even though the same amount of available space is assigned to it as the others.
 
 In the live example below try changing `flex: auto` to `flex: 1`. This is the shorthand for `flex: 1 1 0` and causes all of the items to become the same width, as they are working from a flex-basis of 0 allowing all of the space to be distributed evenly.
 
@@ -61,7 +61,7 @@ You can play with the alignment, aligning the item to the start with `flex-start
 
 {{EmbedGHLiveSample("css-examples/flexbox/use-cases/center.html", '100%', 700)}}
 
-In the future we may not need to make a container a flex container just to centre a single item, as the Box Alignment properties will ultimately be implemented in Block layout. For now however, if you need to properly centre one thing inside another, flexbox is the way to do it. As in the above example, make a container into a flex container, and then use either `align-items` on the parent element or target the flex item itself with `align-self`.
+In the future we may not need to make a container a flex container just to centre a single item, as the Box Alignment properties will ultimately be implemented in Block layout. For now however, if you need to properly centre one thing inside another, flexbox is the way to do it. As in the example above, make a container into a flex container, and then use either `align-items` on the parent element or target the flex item itself with `align-self`.
 
 ## Card layout pushing footer down
 

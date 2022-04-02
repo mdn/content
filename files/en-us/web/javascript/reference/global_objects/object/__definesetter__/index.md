@@ -12,8 +12,9 @@ browser-compat: javascript.builtins.Object.defineSetter
 ---
 {{JSRef}}
 
-> **Warning:** This feature is deprecated in favor of defining setters using the [object
-> initializer syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) or the {{jsxref("Object.defineProperty()")}} API.
+> **Warning:** This feature is deprecated in favor of defining setters using the
+> [object initializer syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+> or the {{jsxref("Object.defineProperty()")}} API.
 >
 > However, as it is widely implemented and used on the Web, it is very unlikely that
 > browsers will stop implementing it.
@@ -102,8 +103,6 @@ console.log(o.anotherValue); // 5
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.prototype.__lookupGetter__()")}}
 - {{jsxref("Object.prototype.__lookupSetter__()")}}
-- [JS
-  Guide: Defining Getters and Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)
-- [\[Blog
-  Post\] Deprecation of \_\_defineGetter\_\_ and \_\_defineSetter\_\_](http://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/)
+- [JS Guide: Defining Getters and Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)
+- [\[Blog Post\] Deprecation of \_\_defineGetter\_\_ and \_\_defineSetter\_\_](http://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/)
 - {{bug(647423)}}

@@ -15,13 +15,7 @@ The **`inlineSize`** read-only property of the {{domxref("ResizeObserverSize")}}
 
 > **Note:** For more explanation of writing modes and block and inline dimensions, read [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
 
-## Syntax
-
-```js
-var inlineSize = ResizeObserverSize.inlineSize;
-```
-
-### Value
+## Value
 
 A decimal representing the inline size in pixels.
 

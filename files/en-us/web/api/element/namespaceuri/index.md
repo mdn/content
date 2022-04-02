@@ -15,13 +15,11 @@ browser-compat: api.Element.namespaceURI
 The **`Element.namespaceURI`** read-only property returns the
 namespace URI of the element, or `null` if the element is not in a namespace.
 
-## Syntax
+## Value
 
-```js
-namespace = element.namespaceURI
-```
+A string, or `null`.
 
-## Example
+## Examples
 
 In this snippet, an element is being examined for its {{domxref("Element.localName", "localName")}} and its
 `namespaceURI`. If the `namespaceURI` returns the XUL namespace

@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingStores = browser.cookies.getAllCookieStores()
+let gettingStores = browser.cookies.getAllCookieStores()
 ```
 
 ### Parameters
@@ -48,7 +48,7 @@ function logStores(cookieStores) {
   }
 }
 
-var getting = browser.cookies.getAllCookieStores();
+let getting = browser.cookies.getAllCookieStores();
 getting.then(logStores);
 ```
 

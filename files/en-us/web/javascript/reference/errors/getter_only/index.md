@@ -10,8 +10,7 @@ tags:
 ---
 {{jsSidebar("Errors")}}
 
-The JavaScript [strict
-mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception "setting getter-only property" occurs when there is an attempt
+The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception "setting getter-only property" occurs when there is an attempt
 to set a new value to a property for which only a [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) is specified.
 
 ## Message
@@ -36,7 +35,8 @@ While this will be silently ignored in non-strict mode, it will throw a
 
 ### Property with no setter
 
-The example below shows how to set a getter for a property. It doesn't specify a [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set), so a
+The example below shows how to set a getter for a property.
+It doesn't specify a [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set), so a
 `TypeError` will be thrown upon trying to set the `temperature`
 property to `30`. For more details see also the
 {{jsxref("Object.defineProperty()")}} page.

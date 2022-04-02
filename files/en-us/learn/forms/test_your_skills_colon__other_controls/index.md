@@ -17,7 +17,7 @@ This aim of this skill test is to assess whether you've understood our [Other fo
 
 > **Note:** You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >
-> If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
+> If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
 
 ## Other controls 1
 
@@ -34,7 +34,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/other-controls/other-controls1-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/other-controls/other-controls1-download.html) to work in your own editor or in an online editor.
 
 ## Other controls 2
 
@@ -50,7 +50,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/other-controls/other-controls2-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/other-controls/other-controls2-download.html) to work in your own editor or in an online editor.
 
 ## Other controls 3
 
@@ -66,7 +66,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/other-controls/other-controls3-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/other-controls/other-controls3-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

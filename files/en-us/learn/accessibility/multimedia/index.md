@@ -68,7 +68,7 @@ Implementing controls for web-based audio/video shouldn't be a problem, right? L
 
 ### The problem with native HTML5 controls
 
-HTML5 video and audio instances even come with a set of inbuilt controls that allow you to control the media straight out of the box. For example (see `native-controls.html` [source code](https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/native-controls.html) and [live](https://mdn.github.io/learning-area/accessibility/multimedia/native-controls.html)):
+HTML5 video and audio instances even come with a set of inbuilt controls that allow you to control the media straight out of the box. For example (see `native-controls.html` [source code](https://github.com/mdn/learning-area/blob/main/accessibility/multimedia/native-controls.html) and [live](https://mdn.github.io/learning-area/accessibility/multimedia/native-controls.html)):
 
 ```html
 <audio controls>
@@ -107,7 +107,7 @@ Let's take the video example from above and add custom controls to them.
 
 #### Basic setup
 
-First, grab a copy of our [custom-controls-start.html](https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/custom-controls-start.html), [custom-controls.css](https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/custom-controls.css), [rabbit320.mp4](https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.mp4), and [rabbit320.webm](https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.webm) files and save them in a new directory on your hard drive.
+First, grab a copy of our [custom-controls-start.html](https://github.com/mdn/learning-area/blob/main/accessibility/multimedia/custom-controls-start.html), [custom-controls.css](https://github.com/mdn/learning-area/blob/main/accessibility/multimedia/custom-controls.css), [rabbit320.mp4](https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.mp4), and [rabbit320.webm](https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.webm) files and save them in a new directory on your hard drive.
 
 Create a new file called main.js and save it in the same directory.
 
@@ -338,7 +338,7 @@ This will result in a video that has subtitles displayed, kind of like this:
 
 ![Video player with standard controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
-For more details, please read [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). You can find [the example](https://iandevlin.github.io/mdn/video-player-with-captions/) that goes along with this article on Github, written by Ian Devlin (see the [source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) too.) This example uses JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.
+For more details, please read [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). You can find [the example](https://iandevlin.github.io/mdn/video-player-with-captions/) that goes along with this article on GitHub, written by Ian Devlin (see the [source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) too.) This example uses JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.
 
 > **Note:** Text tracks and transcriptions also help you with {{glossary("SEO")}}, since search engines especially thrive on text. Text tracks even allow search engines to link directly to a spot partway through the video.
 

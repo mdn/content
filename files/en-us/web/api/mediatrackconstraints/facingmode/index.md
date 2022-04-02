@@ -32,15 +32,7 @@ Because {{Glossary("RTP")}} doesn't include this information, tracks associated 
 [WebRTC](/en-US/docs/Web/API/WebRTC_API) {{domxref("RTCPeerConnection")}}
 will never include this property.
 
-## Syntax
-
-```js
-var constraintsObject = { facingMode: constraint };
-
-constraintsObject.facingMode = constraint;
-```
-
-### Value
+## Value
 
 An object based on [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) specifying one or more acceptable,
 ideal, and/or exact (mandatory) facing modes are acceptable for a video track.
@@ -59,7 +51,7 @@ camera, or the user declines permission to use that camera, the media request wi
 
 {{page("/en-US/docs/Web/API/MediaTrackSettings/facingMode", "VideoFacingModeEnum")}}
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.

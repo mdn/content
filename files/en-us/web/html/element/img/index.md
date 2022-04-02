@@ -118,6 +118,17 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `auto`
       - : Default: no preference for the decoding mode. The browser decides what is best for the user.
 
+- {{htmlattrdef("fetchpriority")}}
+
+  - : Provides a hint of the relative priority to use when fetching the image. Allowed values:
+
+    - `high`
+      - : Signals a high-priority fetch relative to other images.
+    - `low`
+      - : Signals a low-priority fetch relative to other images.
+    - `auto`
+      - : Default: Signals automatic determination of fetch priority relative to other images.
+
 - {{htmlattrdef("height")}}
   - : The intrinsic height of the image, in pixels. Must be an integer without a unit.
 - {{htmlattrdef("intrinsicsize")}} {{deprecated_inline}}
@@ -369,15 +380,15 @@ The value of the `title` attribute is usually presented to the user as a tooltip
             with non-empty <code>alt</code> attribute or no
             <code>alt</code> attribute:
             <code
-              ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Role_Img"
-                >img</a
+              ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/img_role"
+                ><code>img</code></a
               ></code
             >
           </li>
           <li>
             with empty <code>alt</code> attribute:
-            <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-              >no corresponding role</a
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"
+              ><code>presentation</code></a
             >
           </li>
         </ul>

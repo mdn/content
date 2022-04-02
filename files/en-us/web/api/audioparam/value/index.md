@@ -23,14 +23,7 @@ calling {{domxref("AudioParam.setValueAtTime")}} with the time returned by the
 `AudioContext`'s {{domxref("BaseAudioContext/currentTime", "currentTime")}}
 property.
 
-## Syntax
-
-```js
-var curValue = audioParam.value;
-audioParam.value = newValue;
-```
-
-### Value
+## Value
 
 A floating-point {{jsxref("Number")}} indicating the parameter's value as of the
 current time. This value will be between the values specified by the
@@ -104,7 +97,7 @@ the value of a parameter:
 Thus, the `value` of a parameter is maintained to accurately reflect the
 state of the parameter over time.
 
-## Example
+## Examples
 
 This example instantly changes the volume of a {{domxref("GainNode")}} to 40%.
 

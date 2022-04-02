@@ -14,14 +14,7 @@ browser-compat: api.AnalyserNode.maxDecibels
 
 The **`maxDecibels`** property of the {{domxref("AnalyserNode")}} interface is a double value representing the maximum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte values — basically, this specifies the maximum value for the range of results when using `getByteFrequencyData()`.
 
-## Syntax
-
-```js
-var curValue = analyserNode.maxDecibels;
-analyserNode.maxDecibels = newValue;
-```
-
-### Value
+## Value
 
 A double, representing the maximum [decibel](https://en.wikipedia.org/wiki/Decibel) value for scaling the FFT analysis data, where `0` dB is the loudest possible sound, `-10` dB is a 10th of that, etc. The default value is `-30` dB.
 
@@ -32,7 +25,7 @@ When getting data from `getByteFrequencyData()`, any frequencies with an amplitu
 - `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown if a value less than or equal to `AnalyserNode.minDecibels` is set.
 
-## Example
+## Examples
 
 The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect frequency data repeatedly and draw a "winamp bargraph style" output of the current audio input. For more complete applied examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo (see [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) for relevant code).
 

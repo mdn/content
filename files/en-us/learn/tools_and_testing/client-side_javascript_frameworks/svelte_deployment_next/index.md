@@ -52,7 +52,7 @@ In the previous article we learned about Svelte's TypeScript support, and how to
 
 ### Git
 
-Clone the github repo (if you haven't already done it) with:
+Clone the GitHub repo (if you haven't already done it) with:
 
 ```bash
 git clone https://github.com/opensas/mdn-svelte-tutorial.git

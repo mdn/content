@@ -17,18 +17,12 @@ browser-compat: api.IDBCursor.direction
 The **`direction`** read-only property of the
 {{domxref("IDBCursor")}} interface is a {{domxref("DOMString")}} that returns the
 direction of traversal of the cursor (set using
-{{domxref("IDBObjectStore.openCursor")}} for example). See the {{anch("Values")}}
+{{domxref("IDBObjectStore.openCursor")}} for example). See the [Values](#values)
 section below for possible values.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var direction = cursor.direction;
-```
-
-### Value
+## Value
 
 A string (defined by the [`IDBCursorDirection`
 enum](https://w3c.github.io/IndexedDB/#enumdef-idbcursordirection)) indicating the direction in which the cursor is traversing the data.
@@ -74,7 +68,7 @@ Possible values are:
   </tbody>
 </table>
 
-## Example
+## Examples
 
 In this simple fragment we create a transaction, retrieve an object store, then use a
 cursor to iterate through all the records in the object store. Within each iteration we

@@ -29,13 +29,7 @@ A NACK
 (Negative ACKnowledgement, also called "Generic NACK") packet tells the sender that one
 or more of the {{Glossary("RTP")}} packets it sent were lost in transport.
 
-## Syntax
-
-```js
-var nackCount = RTCRtpStreamStats.nackCount;
-```
-
-### Value
+## Value
 
 An integer value indicating how many times the receiver sent a NACK packet to the
 sender after detecting that one or more packets were lost during transport.

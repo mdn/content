@@ -84,7 +84,7 @@ For this example, we'll request data out of a few different text files and use t
 
 This series of files will act as our fake database; in a real application, we'd be more likely to use a server-side language like PHP, Python, or Node to request our data from a database. Here, however, we want to keep it simple and concentrate on the client-side part of this.
 
-To begin this example, make a local copy of [fetch-start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/fetch-start.html) and the four text files — [verse1.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt), [verse2.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt), [verse3.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt), and [verse4.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt) — in a new directory on your computer. In this example, we will fetch a different verse of the poem (which you may well recognize) when it's selected in the drop-down menu.
+To begin this example, make a local copy of [fetch-start.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/fetch-start.html) and the four text files — [verse1.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse1.txt), [verse2.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse2.txt), [verse3.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse3.txt), and [verse4.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse4.txt) — in a new directory on your computer. In this example, we will fetch a different verse of the poem (which you may well recognize) when it's selected in the drop-down menu.
 
 Just inside the {{htmlelement("script")}} element, add the following code. This stores references to the {{htmlelement("select")}} and {{htmlelement("pre")}} elements and adds a listener to the `<select>` element, so that when the user selects a new value, the new value is passed to function named `updateDisplay()` as a parameter.
 
@@ -144,7 +144,7 @@ There's quite a lot to unpack in here.
 
 First, the entry point to the Fetch API is a global function called {{domxref("fetch", "fetch()")}}, that takes the URL as a parameter (it takes another optional parameter for custom settings, but we're not using that here).
 
-Next, `fetch()` is an asynchronous API which returns a {{jsxref("Promise")}}. If you don't know what that is, read the module on [asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous), and in particular the article on [promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises), then come back here. You'll find that that article also talks about the `fetch()` API!
+Next, `fetch()` is an asynchronous API which returns a {{jsxref("Promise")}}. If you don't know what that is, read the module on [asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous), and in particular the article on [promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises), then come back here. You'll find that article also talks about the `fetch()` API!
 
 So because `fetch()` returns a promise, we pass a function into the {{jsxref("Promise/then", "then()")}} function of the returned promise. This function will be called when the HTTP request has received a response from the server. In the handler, we check that the request succeeded, and throw an error if it didn't. Otherwise, we call {{domxref("Response/text", "response.text()")}}, to get the response body as text.
 
@@ -173,7 +173,7 @@ In this example we have created a sample site called The Can Store — it's a fi
 
 By default, the site displays all the products, but you can use the form controls in the left hand column to filter them by category, or search term, or both.
 
-There is quite a lot of complex code that deals with filtering the products by category and search terms, manipulating strings so the data displays correctly in the UI, etc. We won't discuss all of it in the article, but you can find extensive comments in the code (see [can-script.js](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-script.js)).
+There is quite a lot of complex code that deals with filtering the products by category and search terms, manipulating strings so the data displays correctly in the UI, etc. We won't discuss all of it in the article, but you can find extensive comments in the code (see [can-script.js](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/can-store/can-script.js)).
 
 We will, however, explain the Fetch code.
 
@@ -194,6 +194,7 @@ fetch('products.json')
 The `fetch()` function returns a promise. If this completes successfully, the function inside the first `.then()` block contains the `response` returned from the network.
 
 Inside this function we:
+
 - check that the server didn't return an error (such as [`404 Not Found`](/en-US/docs/Web/HTTP/Status/404)). If it did, we throw the error.
 - call {{domxref("Response.json","json()")}} on the response. This will retrieve the data as a [JSON object](/en-US/docs/Learn/JavaScript/Objects/JSON). We return the promise returned by `response.json()`.
 
@@ -206,7 +207,7 @@ However, a complete website would handle this error more gracefully by displayin
 You can test the failure case yourself:
 
 1. Make a local copy of the example files.
-2. Run the code through a web server (as described above, in {{anch("Serving your example from a server")}}).
+2. Run the code through a web server (as described above, in [Serving your example from a server](#serving_your_example_from_a_server)).
 3. Modify the path to the file being fetched, to something like 'produc.json' (make sure it is misspelled).
 4. Now load the index file in your browser (via `localhost:8000`) and look in your browser developer console. You'll see a message similar to "Fetch problem: HTTP error: 404".
 
@@ -251,6 +252,7 @@ try {
 ```
 
 There are five stages to this:
+
 1. Create a new `XMLHttpRequest` object.
 2. Call its [`open()`](/en-US/docs/Web/API/XMLHttpRequest/open) method to initialize it.
 3. Add an event listener to its [`load`](/en-US/docs/Web/API/XMLHttpRequest/load_event) event, which fires when the response has completed successfully. In the listener we call `initialize()` with the data.

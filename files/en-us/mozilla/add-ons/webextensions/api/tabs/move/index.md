@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var moving = browser.tabs.move(
+let moving = browser.tabs.move(
   tabIds,              // integer or integer array
   moveProperties       // object
 )
@@ -69,12 +69,12 @@ function firstToLast(windowInfo) {
   if (windowInfo.tabs.length == 0) {
     return;
   }
-  var moving = browser.tabs.move(windowInfo.tabs[0].id, {index: -1});
+  let moving = browser.tabs.move(windowInfo.tabs[0].id, {index: -1});
   moving.then(onMoved, onError);
 }
 
 browser.browserAction.onClicked.addListener(function() {
-  var gettingCurrent = browser.windows.getCurrent({populate: true});
+  let gettingCurrent = browser.windows.getCurrent({populate: true});
   gettingCurrent.then(firstToLast, onError);
 });
 ```
@@ -91,13 +91,13 @@ function onError(error) {
 }
 
 function moveMoz(tabs) {
-  var mozTabIds = tabs.map(tabInfo => tabInfo.id);
-  var moving = browser.tabs.move(mozTabIds, {index: -1});
+  let mozTabIds = tabs.map(tabInfo => tabInfo.id);
+  let moving = browser.tabs.move(mozTabIds, {index: -1});
   moving.then(onMoved, onError);
 }
 
 browser.browserAction.onClicked.addListener(function() {
-  var gettingMozTabs = browser.tabs.query({url:"*://*.mozilla.org/*"});
+  let gettingMozTabs = browser.tabs.query({url:"*://*.mozilla.org/*"});
   gettingMozTabs.then(moveMoz, onError);
 });
 ```
@@ -114,14 +114,14 @@ function onError(error) {
 }
 
 function moveMoz(tabs) {
-  var mozTabIds = tabs.map(tabInfo => tabInfo.id);
-  var targetWindow = tabs[0].windowId;
-  var moving = browser.tabs.move(mozTabIds, {windowId: targetWindow, index: 0});
+  let mozTabIds = tabs.map(tabInfo => tabInfo.id);
+  let targetWindow = tabs[0].windowId;
+  let moving = browser.tabs.move(mozTabIds, {windowId: targetWindow, index: 0});
   moving.then(onMoved, onError);
 }
 
 browser.browserAction.onClicked.addListener(function() {
-  var gettingMozTabs = browser.tabs.query({url:"*://*.mozilla.org/*"});
+  let gettingMozTabs = browser.tabs.query({url:"*://*.mozilla.org/*"});
   gettingMozTabs.then(moveMoz, onError);
 });
 ```

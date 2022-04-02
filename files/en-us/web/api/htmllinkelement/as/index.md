@@ -20,14 +20,7 @@ loaded by the HTML link, one of `"script"`, `"style"`,
 `"image"`, `"video"`, `"audio"`, `"track"`,
 `"font"`, `"fetch"`.
 
-## Syntax
-
-```js
-var as = HTMLLinkElement.as
-HTMLLinkElement.as = as
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}}.
 

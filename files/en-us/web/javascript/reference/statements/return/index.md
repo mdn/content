@@ -53,9 +53,9 @@ return x + y / 3;
 
 ### Automatic Semicolon Insertion
 
-The `return` statement is affected by [automatic
-semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion). No line terminator is allowed between the
-`return` keyword and the expression.
+The `return` statement is affected by
+[automatic semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion).
+No line terminator is allowed between the `return` keyword and the expression.
 
 ```js
 return

@@ -26,7 +26,7 @@ This article provides information about the changes in Firefox 90 that will affe
 
 ### CSS
 
-- `-webkit-image-set()` has been implemented as an alias of the standard {{cssxref("image/image-set()")}} function ({{bug(1709415)}}).
+- `-webkit-image-set()` has been implemented as an alias of the standard {{cssxref("image/image-set", "image/image-set()")}} function ({{bug(1709415)}}).
 
 ### JavaScript
 

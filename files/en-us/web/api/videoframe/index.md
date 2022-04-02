@@ -24,7 +24,7 @@ Created frames may then turned into a media track, for example with the {{domxre
 
 ## Constructor
 
-- {{domxref("VideoFrame.VideoFrame()")}}
+- {{domxref("VideoFrame.VideoFrame", "VideoFrame()")}}
   - : Creates a new `VideoFrame` object.
 
 ## Properties

@@ -15,13 +15,7 @@ The **`defaultPolicy`** read-only property of the {{domxref("TrustedTypePolicyFa
 
 > **Note:** Information about the creation and use of default policies can be found in the [`createPolicy()`](/en-US/docs/Web/API/TrustedTypePolicyFactory/createPolicy#default_policy) documentation.
 
-## Syntax
-
-```js
-var defaultPolicy = TrustedTypePolicyFactory.defaultPolicy;
-```
-
-### Value
+## Value
 
 A {{domxref("TrustedTypePolicy")}} or null.
 

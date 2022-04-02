@@ -21,18 +21,12 @@ The **`HTMLMediaElement.error`** is the
 there has not been an error. When an {{event("error")}} event is received by the
 element, you can determine details about what happened by examining this object.
 
-## Syntax
-
-```js
-var myError = HTMLMediaElement.error;
-```
-
-### Value
+## Value
 
 A {{domxref("MediaError")}} object describing the most recent error to occur on the
 media element or `null` if no errors have occurred.
 
-## Example
+## Examples
 
 This example establishes a video element and adds an error handler to it; the error
 handler logs the details to console.

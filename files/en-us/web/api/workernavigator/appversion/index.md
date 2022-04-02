@@ -17,18 +17,12 @@ the browser.
 
 > **Note:** Do not rely on this property to return the correct browser version.
 
-## Syntax
-
-```js
-window.navigator.appVersion
-```
-
-### Value
+## Value
 
 Either "`4.0`" or a string representing version information about the
 browser.
 
-## Example
+## Examples
 
 ```js
 alert('Your browser version is reported as ' + navigator.appVersion);

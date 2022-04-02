@@ -15,7 +15,7 @@ The aim of this task is to get you working with the CSS {{CSSxRef("float")}} and
 
 > **Note:** You can try out solutions in the interactive editors below. However, it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >
-> If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
+> If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
 
 ## Float one
 
@@ -70,5 +70,5 @@ If you would like your work assessed, or are stuck and want to ask for help:
 
     - A descriptive title such as "Assessment wanted for Float skill test".
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
-    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in {{anch("Learn Sidebar", "step 1")}} above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
+    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in [step 1](#learn_sidebar) above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
     - A link to the actual task or assessment page, so we can find the question you want help with.

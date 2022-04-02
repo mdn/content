@@ -19,13 +19,7 @@ set to `null`.
 
 > **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
-## Syntax
-
-```js
-var serviceWorker = serviceWorkerRegistration.waiting;
-```
-
-### Value
+## Value
 
 A {{domxref("ServiceWorker")}} object, if it is currently in an `installed`
 state.

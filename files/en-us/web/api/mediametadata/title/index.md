@@ -19,14 +19,7 @@ The **`title`** property of the
 {{domxref("MediaMetaData")}} interface returns or sets the title of the media to be
 played.
 
-## Syntax
-
-```js
-var title = mediaMetaData.title
-mediaMetaData.title = title
-```
-
-### Value
+## Value
 
 A {{jsxref("String")}} containing the title of the media.
 

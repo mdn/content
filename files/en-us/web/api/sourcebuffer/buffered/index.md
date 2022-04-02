@@ -21,17 +21,11 @@ The **`buffered`** read-only property of the
 buffered in the `SourceBuffer` as a normalized {{domxref("TimeRanges")}}
 object.
 
-## Syntax
-
-```js
-var myBufferedRange = sourceBuffer.buffered;
-```
-
-### Value
+## Value
 
 A {{domxref("TimeRanges")}} object.
 
-## Example
+## Examples
 
 TBD
 

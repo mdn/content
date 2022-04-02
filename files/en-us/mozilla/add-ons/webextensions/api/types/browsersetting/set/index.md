@@ -34,7 +34,7 @@ The [`BrowserSetting.set()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types
 ## Syntax
 
 ```js
-var setting = setting.set(
+let setting = setting.set(
   details     // object
 )
 ```
@@ -71,7 +71,7 @@ function onSet(result) {
 
 browser.browserAction.onClicked.addListener(() => {
 
-    var setting = browser.privacy.websites.hyperlinkAuditingEnabled.set({
+    let setting = browser.privacy.websites.hyperlinkAuditingEnabled.set({
       value: false
     });
     setting.then(onSet);

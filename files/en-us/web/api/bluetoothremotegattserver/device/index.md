@@ -15,11 +15,9 @@ browser-compat: api.BluetoothRemoteGATTServer.device
 The **`BluetoothRemoteGATTServer.device`** read-only property
 returns a reference to the {{domxref("BluetoothDevice")}} running the server.
 
-## Syntax
+## Value
 
-```js
-var device = BluetoothRemoteGATTServer.device
-```
+A reference to the {{domxref("BluetoothDevice")}}.
 
 ## Specifications
 

@@ -20,17 +20,11 @@ The read-only **`size`** property of
 the {{domxref("Metadata")}} interface specifies the size, in bytes, of the referenced
 file or other file system object on disk.
 
-## Syntax
-
-```js
-var size = Metadata.size;
-```
-
-### Value
+## Value
 
 A number indicating the size of the file in bytes.
 
-## Example
+## Examples
 
 This example checks the size of a log file and removes it if it's larger than a
 megabyte.

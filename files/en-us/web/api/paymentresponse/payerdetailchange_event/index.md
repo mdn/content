@@ -40,7 +40,7 @@ A {{domxref("PaymentRequestUpdateEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-Although this event type is {{domxref("PaymentRequestUpdateEvent")}}, it doesn't implement any property that is not already on {{domxref("Event")}}. 
+Although this event type is {{domxref("PaymentRequestUpdateEvent")}}, it doesn't implement any property that is not already on {{domxref("Event")}}.
 
 ## Examples
 

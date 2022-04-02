@@ -10,7 +10,7 @@ tags:
 ---
 {{DefaultAPISidebar("Web MIDI API")}}{{SecureContext_Header}}
 
-The Web MIDI API connects to and interacts with with Musical Instrument Digital Interface (MIDI) Devices.
+The Web MIDI API connects to and interacts with Musical Instrument Digital Interface (MIDI) Devices.
 
 The interfaces deal with the practical aspects of sending and receiving MIDI messages. Therefore, the API can be used for musical and non-musical uses, with any MIDI device connected to your computer.
 
@@ -31,7 +31,7 @@ The interfaces deal with the practical aspects of sending and receiving MIDI mes
 - {{domxref("MIDIMessageEvent")}}
   - : The event passed to {{domxref("MIDIInput.midimessage_event")}}.
 - {{domxref("MIDIConnectionEvent")}}
-  - : The event passed to the {{domxref("MIDIAccess.onstatechange")}} and {{domxref("MIDIPort.onstatechange")}} event handlers, when a port becomes available or unavailable.
+  - : The event passed to the {{domxref("MIDIAccess.statechange_event")}} and {{domxref("MIDIPort.statechange_event")}} events, when a port becomes available or unavailable.
 
 ## Examples
 

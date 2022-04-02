@@ -19,13 +19,7 @@ of the {{domxref("ReadableStreamBYOBReader")}} interface returns a
 stream throws an error or the reader's lock is released. This property enables you
 to write code that responds to an end to the streaming process.
 
-## Syntax
-
-```js
-var closed = readableStreamBYOBReader.closed;
-```
-
-### Value
+## Value
 
 A {{jsxref("Promise")}}.
 

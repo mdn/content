@@ -19,7 +19,7 @@ The request object does not initially contain any information about the result o
 
 All asynchronous operations immediately return an {{domxref("IDBRequest")}} instance. Each request has a `readyState` that is set to the `'pending'` state; this changes to `'done'` when the request is completed or fails. When the state is set to `done`, every request returns a `result` and an `error`, and an event is fired on the request. When the state is still `pending`, any attempt to access the `result` or `error` raises an `InvalidStateError` exception.
 
-In plain words, all asynchronous methods return a request object. If the request has been completed successfully, the result is made available through the `result` property and an event indicating success is fired at the request ({{domxref("IDBRequest.onsuccess")}}). If an error occurs while performing the operation, the exception is made available through the `result` property and an error event is fired ({{domxref("IDBRequest.onerror")}}).
+In plain words, all asynchronous methods return a request object. If the request has been completed successfully, the result is made available through the `result` property and an event indicating success is fired at the request ({{domxref("IDBRequest.success_event", "success")}}). If an error occurs while performing the operation, the exception is made available through the `result` property and an error event is fired ({{domxref("IDBRequest.error_event", "error")}}).
 
 The interface {{domxref("IDBOpenDBRequest")}} is derived from `IDBRequest`.
 
@@ -52,10 +52,8 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - [`error`](/en-US/docs/Web/API/IDBRequest/error_event)
   - : Fired when an error caused a request to fail.
-    Also available via the [`onerror`](/en-US/docs/Web/API/IDBRequest/onerror) property.
 - [`success`](/en-US/docs/Web/API/IDBRequest/success_event)
   - : Fired when an `IDBRequest` succeeds.
-    Also available via the [`onsuccess`](/en-US/docs/Web/API/IDBRequest/onsuccess) property.
 
 ## Example
 

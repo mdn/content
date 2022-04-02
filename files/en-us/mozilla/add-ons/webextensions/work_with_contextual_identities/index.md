@@ -84,13 +84,13 @@ All the features of the extension are implemented through [context.js](https://g
 
 The script first gets the 'identity-list' div from context.html.
 
-```json
-var div = document.getElementById('identity-list');
+```js
+let div = document.getElementById('identity-list');
 ```
 
 It then checks whether the contextual identities feature is turned on in the browser. If it's not on, information on how to activate it is added to the popup.
 
-```json
+```js
 if (browser.contextualIdentities === undefined) {
   div.innerText = 'browser.contextualIdentities not available. Check that the privacy.userContext.enabled pref is set to true, and reload the add-on.';
 } else {
@@ -100,7 +100,7 @@ Firefox installs with the contextual identity feature turned off, it's turned on
 
 The script now uses contextualIdentities.query to determine whether there are any contextual identities defined in the browser. If there are none, a message is added to the popup and the script stops.
 
-```json
+```js
   browser.contextualIdentities.query({})
     .then((identities) => {
       if (!identities.length) {
@@ -111,7 +111,7 @@ The script now uses contextualIdentities.query to determine whether there are an
 
 If there are contextual identities present—Firefox comes with four default identities—the script loops through each one adding its name, styled in its chosen color, to the \<div> element. The function `createOptions()` then adds the options to "create" or "close all" to the \<div> before it's added to the popup.
 
-```json
+```js
      for (let identity of identities) {
        let row = document.createElement('div');
        let span = document.createElement('span');
@@ -147,7 +147,7 @@ function eventHandler(event) {
 
 If the user clicks the option to create a tab for an identity, one is opened using tabs.create by passing the identity's cookie store ID.
 
-```json
+```js
   if (event.target.dataset.action == 'create') {
     browser.tabs.create({
       url: 'about:blank',
@@ -158,7 +158,7 @@ If the user clicks the option to create a tab for an identity, one is opened usi
 
 If the user selects the option to close all tabs for the identity, the script performs a tabs.query for all tabs that are using the identity's cookie store. The script then passes this list of tabs to `tabs.remove`.
 
-```json
+```js
   if (event.target.dataset.action == 'close-all') {
     browser.tabs.query({
       cookieStoreId: event.target.dataset.identity

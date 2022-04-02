@@ -6,7 +6,7 @@ tags:
   - Bluetooth
   - BluetoothRemoteGATTService
   - Experimental
-  - Property
+  - Method
   - Reference
   - Web Bluetooth API
   - getCharacteristic()

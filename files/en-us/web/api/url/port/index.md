@@ -18,14 +18,7 @@ contain an explicit port number, it will be set to `''`.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-const portNumber = url.port
-url.port = newPortNumber
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}}.
 

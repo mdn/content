@@ -21,13 +21,7 @@ The language itself is specified using a {{domxref("DOMString")}} representing a
 See the Sitepoint [ISO 2
 letter language codes](http://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/) page for a simple reference.
 
-## Syntax
-
-```js
-var language = Notification.lang;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} specifying the language tag.
 

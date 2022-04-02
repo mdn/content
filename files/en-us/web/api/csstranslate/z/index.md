@@ -22,13 +22,7 @@ farther away.
 If this value is present then the transform is a 3D transform and the `is2D`
 property will be set to false.
 
-## Syntax
-
-```js
-var translateZ = CSSTranslate.z;
-```
-
-### Value
+## Value
 
 A {{cssxref('length')}}.
 

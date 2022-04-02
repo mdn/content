@@ -74,7 +74,7 @@ if (!String.prototype.includes) {
 
 ## Examples
 
-### Using `includes()`
+### Using includes()
 
 ```js
 const str = 'To be, or not to be, that is the question.'

@@ -16,8 +16,8 @@ browser-compat: javascript.builtins.TypedArray.reduceRight
 The **`reduceRight()`** method applies a function against an
 accumulator and each value of the typed array (from right-to-left) has to reduce it to a
 single value. This method has the same algorithm as
-{{jsxref("Array.prototype.reduceRight()")}}. _TypedArray_ is one of the [typed
-array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+{{jsxref("Array.prototype.reduceRight()")}}. _TypedArray_ is one of the
+[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
 
 ## Syntax
 
@@ -43,11 +43,12 @@ reduceRight(function(accumulator, currentValue, index, array) { /* ... */ }, ini
 
 - `callbackFn`
 
-  - : Function to execute on each value in the typed array, taking four arguments:
+  - : Function to execute on each value in the typed array.
+
+    The function is called with the following arguments:
 
     - `accumulator`
-      - : The value previously returned in the last invocation of the callback, or
-        `initialValue`, if supplied (see below).
+      - : The value previously returned in the last invocation of the callback, or `initialValue`, if supplied (see below).
     - `currentValue`
       - : The current element being processed in the typed array.
     - `index`
@@ -56,8 +57,7 @@ reduceRight(function(accumulator, currentValue, index, array) { /* ... */ }, ini
       - : The typed array `reduceRight()` was called upon.
 
 - `initialValue`
-  - : Optional. Object to use as the first argument to the first call of the
-    `callbackFn`.
+  - : Optional. Object to use as the first argument to the first call of the `callbackFn`.
 
 ### Return value
 

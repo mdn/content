@@ -182,9 +182,9 @@ withoutDefaults.call({value: '=^_^='});
 
 ### Scope Effects
 
-If default parameters are defined for one or more parameter, then a [second
-scope](https://tc39.es/ecma262/#sec-functiondeclarationinstantiation) (Environment Record) is created, specifically for the identifiers within the
-parameter list. This scope is a parent of the scope created for the function body.
+If default parameters are defined for one or more parameter,
+then a [second scope](https://tc39.es/ecma262/#sec-functiondeclarationinstantiation) (Environment Record) is created, specifically for the identifiers within the parameter list.
+This scope is a parent of the scope created for the function body.
 
 This means that functions and variables declared in the function body cannot be
 referred to from default value parameter initializers; attempting to do so throws a

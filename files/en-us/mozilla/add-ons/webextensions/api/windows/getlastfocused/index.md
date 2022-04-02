@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingWindow = browser.windows.getLastFocused(
+let gettingWindow = browser.windows.getLastFocused(
   getInfo               // optional object
 )
 ```
@@ -64,7 +64,7 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  var getting = browser.windows.getLastFocused({populate: true});
+  let getting = browser.windows.getLastFocused({populate: true});
   getting.then(logTabs, onError);
 });
 ```

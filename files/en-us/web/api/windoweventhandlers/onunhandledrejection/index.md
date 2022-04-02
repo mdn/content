@@ -20,17 +20,9 @@ The **`onunhandledrejection`** property of the
 processing {{event("unhandledrejection")}} events. These events are raised for unhandled
 {{jsxref("Promise")}} rejections.
 
-## Syntax
+## Value
 
-```js
-window.onunhandledrejection = function;
-```
-
-### Value
-
-`function` is an [event handler](/en-US/docs/Web/Events/Event_handlers) or function to call when
-`unhandledrejection` events are received by the window. The event handler
-receives as an input parameter as a {{domxref("PromiseRejectionEvent")}}.
+An [event handler](/en-US/docs/Web/Events/Event_handlers) or function to call when `unhandledrejection` events are received by the window. The event handler receives as an input parameter as a {{domxref("PromiseRejectionEvent")}}.
 
 ## Examples
 

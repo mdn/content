@@ -27,7 +27,7 @@ The `ReadableStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_
 ## Properties
 
 - {{domxref("ReadableStream.locked")}} {{readonlyInline}}
-  - : The `locked` getter returns whether or not the readable stream is [locked to a reader](https://streams.spec.whatwg.org/#locked-to-a-reader).
+  - : The `locked` getter returns whether or not the readable stream is locked to a reader.
 
 ## Methods
 

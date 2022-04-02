@@ -15,13 +15,7 @@ browser-compat: api.HTMLMediaElement.readyState
 The **`HTMLMediaElement.readyState`** property indicates the
 readiness state of the media.
 
-## Syntax
-
-```js
-var readyState = audioOrVideo.readyState;
-```
-
-### Value
+## Value
 
 An `unsigned short`. Possible values are:
 

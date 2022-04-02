@@ -25,14 +25,12 @@ var promise = SerialPort.setSignals(options);
 
   - : An object with any of the following values:
 
-    - `clearToSend`
-      - : A boolean indicating to the other end of a serial connection that is is clear to send data.
-    - `dataCarrierDetect`
-      - : A boolean that toggles the control signal needed to communicate over a serial connection.
-    - `dataSetReady`
-      - : A boolean indicating whether the device is ready to send and receive data.
-    - `ringIndicator`
-      - : A boolean indicating whether a ring signal should be sent down the serial connection.
+    - `dataTerminalReady`
+      - : A boolean indicating whether to invoke the operating system to either assert (if true) or de-assert (if false) the "data terminal ready" or "DTR" signal on the serial port.
+    - `requestToSend`
+      - : A boolean indicating whether to invoke the operating system to either assert (if true) or de-assert (if false) the "request to send" or "RTS" signal on the serial port.
+    - `break`
+      - : A boolean indicating whether to invoke the operating system to either assert (if true) or de-assert (if false) the "break" signal on the serial port.
 
 ### Return value
 
