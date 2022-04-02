@@ -40,7 +40,7 @@ new ImageDecoder(init);
     - `desiredHeight`{{Optional_Inline}}
       - : An integer indicating the desired height for the decoded output.
     - `preferAnimation`{{Optional_Inline}}
-      - : A {{jsxref("Boolean")}} indicating whether the the initial track selection should prefer an animated track.
+      - : A {{jsxref("Boolean")}} indicating whether the initial track selection should prefer an animated track.
 
 ## Examples
 

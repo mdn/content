@@ -59,7 +59,7 @@ If the treegrid provides sort functions, the [`aria-sort`](/en-US/docs/Web/Acces
 
 ### Treegrid menus
 
-If the `treegrid` has an attached [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role/) that opens when right clicked, include [`aria-haspopup="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) on the the `treegrid` element. This informs assistive technologies that the `treegrid` has an associated popup. The ability for both keyboard and pointer device users to open and set focus in the menu must be added with JavaScript.
+If the `treegrid` has an attached [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role/) that opens when right clicked, include [`aria-haspopup="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) on the `treegrid` element. This informs assistive technologies that the `treegrid` has an associated popup. The ability for both keyboard and pointer device users to open and set focus in the menu must be added with JavaScript.
 
 ### Read-only treegrids
 
@@ -74,7 +74,7 @@ Like all ARIA attributes, adding `aria-readonly` only informs assistive technolo
 - [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role) role
   - : A group of [rows](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) within a tabular structure. 
 - [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role) role
-  - : Intended to mimic the functionality of the HTML {{HTMLElement('td')}} element, is is found in `grid` and `treegrid` roles and must be the direct child of a `row`.
+  - : Intended to mimic the functionality of the HTML {{HTMLElement('td')}} element, is found in `grid` and `treegrid` roles and must be the direct child of a `row`.
 - [columnheader](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) role
   - : A cell in a row containing header information for a column, similar to the native {{HTMLElement('th')}} element with column scope
 - [rowheader](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role) role

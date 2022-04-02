@@ -39,7 +39,7 @@ browser-compat: css.properties.NameOfTheProperty
 >     For example, the [`background-color`](/en-US/docs/Web/CSS/background-color) property has a title of _background-color_.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/CSS/NameOfTheProperty`.
->     For example, the the [`background-color`](/en-US/docs/Web/CSS/background-color) property slug is `Web/CSS/background-color`.
+>     For example, the [`background-color`](/en-US/docs/Web/CSS/background-color) property slug is `Web/CSS/background-color`.
 > - **tags**
 >   - : Always include the following tags: **CSS**, **Reference**, **CSS Property**, _NameOfTheProperty_ (e.g. **background-color**).
 >

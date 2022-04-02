@@ -53,7 +53,7 @@ The `container-type` property can have the following values:
 - `inline-size`
   - : Establishes a query container for dimensional queries on the inline axis of the container. Applies layout, style, and inline-size containment to the element.
 - `block-size`
-  - : Establishes a query container for dimensional queries on the the block axis of the container. Applies layout, style, and block-size containment to the element.
+  - : Establishes a query container for dimensional queries on the block axis of the container. Applies layout, style, and block-size containment to the element.
 - `style`
   - : Establishes a query container for style queries.
 - `state`
