@@ -72,7 +72,7 @@ Traditionally, and according to ECMAScript, all primitives and objects are loose
 Loose equality comparisons among other combinations of operand types are performed as shown in the tables below. The following notations are used in the tables:
 
 - `ToNumber(A)` attempts to convert its argument to a number before comparison. Its behavior is equivalent to `+A` (the unary + operator).
-- `ToPrimitive(A)` attempts to convert its object argument to a primitive value, by invoking varying sequences of `A.toString()` and `A.valueOf()` methods on `A`.
+- `ToPrimitive(A)` attempts to convert its object argument to a primitive value, by invoking varying sequences of `A[Symbol.toPrimitive]()`, `A.valueOf()` and `A.toString()` methods on `A`.
 - `ℝ(A)` attempts to convert its argument to an ECMAScript [mathematical value](https://tc39.es/ecma262/#mathematical-value).
 - `StringToBigInt(A)` attempts to convert its argument to a `BigInt` by applying the ECMAScript [`StringToBigInt`](https://tc39.es/ecma262/#sec-stringtobigint) algorithm.
 
