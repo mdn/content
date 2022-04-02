@@ -451,8 +451,8 @@ You should note that we've used a conditional expression to detect whether the l
 The WebVR spec features a number of events that are fired, allowing our app code to react to changes in the state of the VR display (see [Window events](/en-US/docs/Web/API/WebVR_API#window_events)). For example:
 
 - {{event("vrdisplaypresentchange")}} — Fires when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa.
-- {{event("vrdisplayconnect")}} — Fires when a compatible VR display has been connected to the computer.
-- {{event("vrdisplaydisconnect")}} — Fires when a compatible VR display has been disconnected from the computer.
+- {{domxref("Window.vrdisplayconnect_event", "vrdisplayconnect")}} — Fires when a compatible VR display has been connected to the computer.
+- {{domxref("Window.vrdisplaydisconnect_event", "vrdisplaydisconnect")}} — Fires when a compatible VR display has been disconnected from the computer.
 
 To demonstrate how they work, our simple demo includes the following example:
 

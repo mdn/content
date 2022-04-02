@@ -62,7 +62,7 @@ New ECMAScript 2015 features implemented:
 - The {{domxref("CanvasRenderingContext2D.isPointInPath()")}}, {{domxref("CanvasRenderingContext2D.isPointInStroke()")}}, {{domxref("CanvasRenderingContext2D.clip()")}}, {{domxref("CanvasRenderingContext2D.fill()")}} and {{domxref("CanvasRenderingContext2D.stroke()")}} methods have been updated to optionally accept a {{domxref("Path2D")}} object.
 - Implemented {{domxref("HTMLMediaElement.fastSeek()")}}.
 - The `Connection` interface has been renamed to {{domxref("NetworkInformation")}} and has been modified to match the new specification ({{bug(960426)}}).
-- The {{domxref("Navigator.sendBeacon()")}} has been implemented; this allows asynchronous transmission of analytics or other data in a manner that doesn't rely on the transmitting page remaining loaded, so that it can be used in an {{event("unload")}} or {{event("beforeunload")}} handler.
+- The {{domxref("Navigator.sendBeacon()")}} has been implemented; this allows asynchronous transmission of analytics or other data in a manner that doesn't rely on the transmitting page remaining loaded, so that it can be used in an {{event("unload")}} or {{domxref("Window.beforeunload_event", "beforeunload")}} handler.
 
 ### MathML
 

@@ -13,7 +13,7 @@ browser-compat: api.GamepadEvent.gamepad
 The **`GamepadEvent.gamepad`** property of the
 **{{domxref("GamepadEvent")}} interface** returns a {{domxref("Gamepad")}}
 object, providing access to the associated gamepad data for fired
-{{event("gamepadconnected")}} and {{event("gamepaddisconnected")}} events.
+{{domxref("Window.gamepadconnected_event", "gamepadconnected")}} and {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} events.
 
 ## Value
 
@@ -22,7 +22,7 @@ A {{domxref("Gamepad")}} object.
 ## Examples
 
 The `gamepad` property being called on a fired
-{{event("gamepadconnected")}} event.
+{{domxref("Window.gamepadconnected_event", "gamepadconnected")}} event.
 
 ```js
 window.addEventListener("gamepadconnected", function(e) {

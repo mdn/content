@@ -319,9 +319,9 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("GlobalEventHandlers.onabort")}}
   - : Called when the loading of a resource has been aborted, such as by a user canceling the load while it is still in progress
 - {{domxref("WindowEventHandlers.onafterprint")}}
-  - : Called when the print dialog box is closed. See {{event("afterprint")}} event.
+  - : Called when the print dialog box is closed. See {{domxref("Window.afterprint_event", "afterprint")}} event.
 - {{domxref("WindowEventHandlers.onbeforeprint")}}
-  - : Called when the print dialog box is opened. See {{event("beforeprint")}} event.
+  - : Called when the print dialog box is opened. See {{domxref("Window.beforeprint_event", "beforeprint")}} event.
 - {{domxref("WindowEventHandlers.onbeforeunload")}}
   - : An event handler property for before-unload events on the window.
 - {{domxref("GlobalEventHandlers.onblur")}}
@@ -407,9 +407,9 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
     Also available via the {{domxref("WindowEventHandlers/onlanguagechange", "onlanguagechange")}} property.
 - {{domxref("Window/orientationchange_event", "orientationchange")}} {{deprecated_inline}}
   - : Fired when the orientation of the device has changed.
-- {{domxref("Window/devicemotion_event", "devicemotion")}}
+- {{domxref("Window.devicemotion_event", "devicemotion")}}
   - : Fired at a regular interval, indicating the amount of physical force of acceleration the device is receiving and the rate of rotation, if available.
-- {{domxref("Window/deviceorientation_event", "deviceorientation")}}
+- {{domxref("Window.deviceorientation_event", "deviceorientation")}}
   - : Fired when fresh data is available from the magnetometer orientation sensor about the current orientation of the device as compared to the Earth coordinate frame.
 - {{domxref("Window/resize_event", "resize")}}
   - : Fired when the window has been resized.

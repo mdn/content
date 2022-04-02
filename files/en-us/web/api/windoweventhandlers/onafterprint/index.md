@@ -15,10 +15,10 @@ browser-compat: api.WindowEventHandlers.onafterprint
 
 The **`onafterprint`** property of the
 {{domxref("WindowEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
-processing {{event("afterprint")}} events for the current window. These events are
+processing {{domxref("Window.afterprint_event", "afterprint")}} events for the current window. These events are
 raised after the user prints, or if they abort the print dialog.
 
-The {{event("beforeprint")}} and `afterprint` events allow pages to change
+The {{domxref("Window.beforeprint_event", "beforeprint")}} and `afterprint` events allow pages to change
 their content before printing starts (perhaps to remove a banner, for example) and then
 revert those changes after printing has completed. In general, you should prefer the use
 of

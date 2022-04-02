@@ -38,4 +38,4 @@ explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained) f
 - [Orientation and motion data
   explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained)
 - {{DOMxRef("window.deviceorientation_event", "deviceorientation") }} event
-- {{ event("deviceorientation") }}
+- {{domxref("Window.deviceorientation_event", "deviceorientation")}}
