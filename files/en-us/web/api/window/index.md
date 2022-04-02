@@ -351,7 +351,7 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("GlobalEventHandlers.onkeyup")}}
   - : Called when you finish releasing ANY key. See {{event("keyup")}} event.
 - {{domxref("WindowEventHandlers.onlanguagechange")}}
-  - : An event handler property for {{event("languagechange")}} events on the window.
+  - : An event handler property for {{domxref("Window.languagechange_event", "languagechange")}} events on the window.
 - {{domxref("GlobalEventHandlers.onload")}}
   - : Called after all resources and the DOM are fully loaded. WILL NOT get called when the page is loaded from cache, such as with back button.
 - {{domxref("GlobalEventHandlers.onmousedown")}}
@@ -365,9 +365,9 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("GlobalEventHandlers.onmouseup")}}
   - : Called when ANY mouse button is released
 - {{domxref("WindowEventHandlers.onoffline")}}
-  - : Called when network connection is lost. See {{event("offline")}} event.
+  - : Called when network connection is lost. See {{domxref("Window.offline_event", "offline")}} event.
 - {{domxref("WindowEventHandlers.ononline")}}
-  - : Called when network connection is established. See {{event("online")}} event.
+  - : Called when network connection is established. See {{domxref("Window.online_event", "online")}} event.
 - {{domxref("WindowEventHandlers.onpagehide")}}
   - : Called when the user navigates away from the page, before the onunload event. See {{event("pagehide")}} event.
 - {{domxref("WindowEventHandlers.onpageshow")}}
@@ -387,7 +387,7 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("GlobalEventHandlers.onselectionchange")}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("selectionchange")}} event is raised.
 - {{domxref("WindowEventHandlers.onstorage")}}
-  - : Called when there is a change in session storage or local storage. See {{event("storage")}} event
+  - : Called when there is a change in session storage or local storage. See {{domxref("Window.storage_event", "storage")}} event
 - {{domxref("GlobalEventHandlers.onsubmit")}}
   - : Called when a form is submitted
 - {{domxref("WindowEventHandlers.onunhandledrejection")}} {{experimental_inline}}
