@@ -407,9 +407,9 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
     Also available via the {{domxref("WindowEventHandlers/onlanguagechange", "onlanguagechange")}} property.
 - {{domxref("Window/orientationchange_event", "orientationchange")}} {{deprecated_inline}}
   - : Fired when the orientation of the device has changed.
-- {{domxref("Window.devicemotion_event_event", "devicemotion")}}
+- {{domxref("Window.devicemotion_event", "devicemotion")}}
   - : Fired at a regular interval, indicating the amount of physical force of acceleration the device is receiving and the rate of rotation, if available.
-- {{domxref("Window.deviceorientation_event_event", "deviceorientation")}}
+- {{domxref("Window.deviceorientation_event", "deviceorientation")}}
   - : Fired when fresh data is available from the magnetometer orientation sensor about the current orientation of the device as compared to the Earth coordinate frame.
 - {{domxref("Window/resize_event", "resize")}}
   - : Fired when the window has been resized.
