@@ -1,13 +1,13 @@
 ---
 title: 'Window: deviceorientationabsolute event'
-slug: Web/API/Window.deviceorientation_event
+slug: Web/API/Window/deviceorientationabsolute_event
 tags:
   - API
   - Device Orientation
   - Mobile
   - Orientation
   - Event
-browser-compat: api.Window.deviceorientation_event
+browser-compat: api.Window.deviceorientationabsolute_event
 ---
 {{ ApiRef() }}{{Non-standard_header}}
 
