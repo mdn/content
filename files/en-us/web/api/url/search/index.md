@@ -21,14 +21,7 @@ parse out the parameters from the query string.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-const searchParams = object.search
-url.search = newSearchParams
-```
-
-### Value
+## Value
 
 A {{domxref("USVString")}}.
 

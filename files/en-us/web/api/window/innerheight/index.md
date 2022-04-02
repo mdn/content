@@ -43,7 +43,7 @@ the root {{HTMLElement("html")}} element's {{domxref("Element.clientHeight",
 Both `innerHeight` and `innerWidth` are available on any window
 or any object that behaves like a window, such as a tab or frame.
 
-## Example
+## Examples
 
 ### Assuming a frameset
 

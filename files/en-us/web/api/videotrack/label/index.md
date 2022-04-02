@@ -33,7 +33,7 @@ For example, a track whose {{domxref("VideoTrack.kind", "kind")}} is
 `"sign"` might have a `label` such as
 `"A sign-language interpretation."`.
 
-## Example
+## Examples
 
 This example returns an array of track kinds and labels for potential use in a user
 interface to select video tracks for a specified media element. The list is filtered to

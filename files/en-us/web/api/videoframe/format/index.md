@@ -13,7 +13,7 @@ browser-compat: api.VideoFrame.format
 
 The **`format`** property of the {{domxref("VideoFrame")}} interface returns the pixel format of the `VideoFrame`.
 
-### Value
+## Value
 
 A {{domxref("DOMString","string")}} containing a video pixel format, one of:
 

@@ -20,19 +20,11 @@ events.
 The `storage` event fires when a storage area has been changed in the
 context of another document.
 
-## Syntax
+## Value
 
-```js
- window.onstorage = functionRef;
-```
+A function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). This function receives a {{domxref("StorageEvent")}} as its sole argument.
 
-### Value
-
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). This function receives a {{domxref("StorageEvent")}} as its sole
-argument.
-
-## Example
+## Examples
 
 This example logs the value for a storage key whenever it changes in another document.
 

@@ -16,13 +16,7 @@ The **`containerType`** readonly property of the
 {{domxref("TaskAttributionTiming")}} interface returns the type of frame container, one
 of `iframe`, `embed`, or `object`.
 
-## Syntax
-
-```js
-var containerType = TaskAttributionTiming.containerType;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} containing the container's type, one of `iframe`,
 `embed`, or `object`.

@@ -17,13 +17,7 @@ The **`containerSrc`** readonly property of the
 attribute. A container is the iframe, embed or object etc. that is being implicated, on
 the whole, for a long task.
 
-## Syntax
-
-```js
-var containerSrc = TaskAttributionTiming.containerSrc;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} containing the container's `src` attribute.
 
