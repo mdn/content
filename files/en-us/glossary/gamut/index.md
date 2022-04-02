@@ -14,3 +14,7 @@ Traditionally, in web development, the only gamut used was _[sRGB](https://en.wi
 Since 2021, browsers have started to provide functionality for other gamuts, like _[P3](https://en.wikipedia.org/wiki/DCI-P3)_, widely used in the movie industry, and _[rec2020](https://en.wikipedia.org/wiki/Rec._2020)_.
 
 Developpers can define different set of colors for devices supporting larger gamuts using the [`color-gamut`](/en-US/docs/Web/CSS/@media/color-gamut) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries). They can describe colors outside the RGB gamut using specific CSS function like [`lch()`](/en-US/docs/Web/CSS/color_value/lch) for the LCH cylindrical coordinate system, or [`lab()`](/en-US/docs/Web/CSS/color_value/lab) for the Lab coordinate system.
+
+## See also
+
+- [_Gamut_](https://en.wikipedia.org/wiki/Gamut) on _Wikipedia_.
