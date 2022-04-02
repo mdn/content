@@ -84,7 +84,7 @@ Once the user is subscribed, they can receive push notifications from the server
 
 From the server-side, the whole process has to be encrypted with public and private keys for security reasons — allowing everyone to send push messages unsecured using your app would be a terrible idea. See the [Web Push data encryption test page](https://jrconlin.github.io/WebPushDataTestPage/) for detailed information about securing the server. The server stores all the information received when the user subscribed, so the messages can be sent later on when needed.
 
-To receive push messages, we can listen to the {{event("push")}} event in the Service Worker file:
+To receive push messages, we can listen to the {{domxref("ServiceWorkerGlobalScope.push_event", "push")}} event in the Service Worker file:
 
 ```js
 self.addEventListener('push', (e) => { /* ... */ });
@@ -264,7 +264,7 @@ self.addEventListener('push', function(event) {
 });
 ```
 
-All it does is add a listener for the {{event("push")}} event, create the payload variable consisting of the text taken from the data (or create a string to use if data is empty), and then wait until the notification is shown to the user.
+All it does is add a listener for the {{domxref("ServiceWorkerGlobalScope.push_event", "push")}} event, create the payload variable consisting of the text taken from the data (or create a string to use if data is empty), and then wait until the notification is shown to the user.
 
 Feel free to explore the rest of the examples in the [Service Worker Cookbook](https://github.com/mozilla/serviceworker-cookbook) if you want to know how they are handled.
 There's a big collection of working examples showing general use, but also web push, caching strategies, performance, working offline, and more.
