@@ -81,7 +81,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{htmlattrdef("open")}}
   - : Indicates that the dialog is active and can be interacted with. When the `open` attribute is not set, the dialog _shouldn't_ be shown to the user.
-  - : It is recommended to use the `.show()` or `.showModal()` methods to render dialogs, rather than the `open` attribute.
+      It is recommended to use the `.show()` or `.showModal()` methods to render dialogs, rather than the `open` attribute.
 
 ## Accessibility considerations
 
