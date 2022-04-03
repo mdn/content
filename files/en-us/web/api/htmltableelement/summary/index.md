@@ -17,14 +17,11 @@ browser-compat: api.HTMLTableElement.summary
 The **`HTMLTableElement.summary`** property represents the
 table description.
 
-## Syntax
+## Value
 
-```js
-HTMLTableElement.summary = string;
-varstring = HTMLTableElement.summary;
-```
+A string.
 
-## Example
+## Examples
 
 ```js
 HTMLTableElement.summary = "Usage statistics";

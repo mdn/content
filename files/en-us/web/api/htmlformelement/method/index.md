@@ -17,14 +17,11 @@ The **`HTMLFormElement.method`** property represents the
 
 Unless explicitly specified, the default method is 'get'.
 
-## Syntax
+## Value
 
-```js
-var string = form.method;
-form.method = string;
-```
+A string.
 
-## Example
+## Examples
 
 ```js
 document.forms['myform'].method = 'post';

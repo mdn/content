@@ -15,18 +15,12 @@ The **`HTMLProgressElement.labels`** read-only property returns
 a {{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with the
 {{HTMLElement("progress")}} element.
 
-## Syntax
-
-```js
-var labelElements = progress.labels;
-```
-
-### Return value
+## Value
 
 A {{domxref("NodeList")}} containing the `<label>` elements associated
 with the `<progress>` element.
 
-## Example
+## Examples
 
 ### HTML
 
