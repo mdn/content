@@ -1,5 +1,5 @@
 ---
-title: 'Location: username'
+title: Location.username
 slug: Web/API/Location/username
 tags:
   - API

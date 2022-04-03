@@ -1,5 +1,5 @@
 ---
-title: 'Location: ancestorOrigins'
+title: Location.ancestorOrigins
 slug: Web/API/Location/ancestorOrigins
 tags:
   - API

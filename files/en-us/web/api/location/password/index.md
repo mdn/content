@@ -1,5 +1,5 @@
 ---
-title: 'Location: password'
+title: Location.password
 slug: Web/API/Location/password
 tags:
   - API

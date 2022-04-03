@@ -1,5 +1,5 @@
 ---
-title: 'Location: hostname'
+title: Location.hostname
 slug: Web/API/Location/hostname
 tags:
   - API
