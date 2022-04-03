@@ -172,7 +172,7 @@ Before audio worklets were defined, the Web Audio API used the `ScriptProcessorN
 
 - {{domxref("ScriptProcessorNode")}} {{deprecated_inline}}
   - : The **`ScriptProcessorNode`** interface allows the generation, processing, or analyzing of audio using JavaScript. It is an {{domxref("AudioNode")}} audio-processing module that is linked to two buffers, one containing the current input, one containing the output. An event, implementing the {{domxref("AudioProcessingEvent")}} interface, is sent to the object each time the input buffer contains new data, and the event handler terminates when it has filled the output buffer with data.
-- {{event("audioprocess")}} (event) {{deprecated_inline}}
+- {{domxref("ScriptProcessorNode.audioprocess_event", "audioprocess")}} (event) {{deprecated_inline}}
   - : The `audioprocess` event is fired when an input buffer of a Web Audio API {{domxref("ScriptProcessorNode")}} is ready to be processed.
 - {{domxref("AudioProcessingEvent")}} {{deprecated_inline}}
   - : The `AudioProcessingEvent` represents events that occur when a {{domxref("ScriptProcessorNode")}} input buffer is ready to be processed.

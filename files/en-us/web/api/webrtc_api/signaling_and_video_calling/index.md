@@ -353,7 +353,7 @@ The first three of these event handlers are required; you have to handle them to
 - {{domxref("RTCPeerConnection.icecandidate_event", "onicecandidate")}}
   - : The local ICE layer calls your {{event("icecandidate")}} event handler, when it needs you to transmit an ICE candidate to the other peer, through your signaling server. See [Sending ICE candidates](#sending_ice_candidates) for more information and to see the code for this example.
 - {{domxref("RTCPeerConnection.track_event", "ontrack")}}
-  - : This handler for the {{event("track")}} event is called by the local WebRTC layer when a track is added to the connection. This lets you connect the incoming media to an element to display it, for example. See [Receiving new streams](#receiving_new_streams) for details.
+  - : This handler for the {{domxref("RTCPeerConnection.track_event", "track")}} event is called by the local WebRTC layer when a track is added to the connection. This lets you connect the incoming media to an element to display it, for example. See [Receiving new streams](#receiving_new_streams) for details.
 - {{domxref("RTCPeerConnection.negotiationneeded_event", "onnegotiationneeded")}}
   - : This function is called whenever the WebRTC infrastructure needs you to start the session negotiation process anew. Its job is to create and send an offer, to the callee, asking it to connect with us. See [Starting negotiation](#starting_negotiation) to see how we handle this.
 - {{domxref("RTCPeerConnection.removetrack_event", "onremovetrack")}}
@@ -519,7 +519,7 @@ In addition, if something happens to cause a change in the streaming scenario, n
 
 ##### Receiving new streams
 
-When new tracks are added to the `RTCPeerConnection`— either by calling its {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} method or because of renegotiation of the stream's format—a {{event("track")}} event is set to the `RTCPeerConnection` for each track added to the connection. Making use of newly added media requires implementing a handler for the `track` event. A common need is to attach the incoming media to an appropriate HTML element. In our example, we add the track's stream to the {{HTMLElement("video")}} element that displays the incoming video:
+When new tracks are added to the `RTCPeerConnection`— either by calling its {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} method or because of renegotiation of the stream's format—a {{domxref("RTCPeerConnection.track_event", "track")}} event is set to the `RTCPeerConnection` for each track added to the connection. Making use of newly added media requires implementing a handler for the `track` event. A common need is to attach the incoming media to an appropriate HTML element. In our example, we add the track's stream to the {{HTMLElement("video")}} element that displays the incoming video:
 
 ```js
 function handleTrackEvent(event) {
