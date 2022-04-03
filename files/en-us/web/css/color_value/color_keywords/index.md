@@ -30,7 +30,7 @@ There are a few caveats to consider when using color keywords:
 
 - Though many keywords have been adapted from [X11](https://en.wikipedia.org/wiki/X_Window_System), their RGB values may differ from the corresponding color on X11 systems since manufacturers sometimes tailor X11 colors to their specific hardware.
 
-- In addition to the color keywords, the {{cssxref("color_value", "\<color\>")}} data type supports other keywords: [`transparent`](/en-US/docs/Web/CSS/color_value#transparent_keyword) to create a wholly transparent color, [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) that represents the value of an element's {{Cssxref("color")}} property  lets you use the `color` value on properties that do not receive it by default, as well as _[system color keywords](/en-US/docs/Web/CSS/color_value#system_colors) that reprensents colors that matches those of the OS.
+- In addition to the color keywords, the [`<color>`](/en-US/docs/Web/CSS/color_value) data type supports other keywords: [`transparent`](/en-US/docs/Web/CSS/color_value#transparent_keyword) to create a wholly transparent color, [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) that represents the value of an element's {{Cssxref("color")}} property  lets you use the `color` value on properties that do not receive it by default, as well as _[system color keywords](/en-US/docs/Web/CSS/color_value#system_colors) that reprensents colors that matches those of the OS.
 
 > **Note:** The list of accepted keywords has undergone many changes during the evolution of CSS:
 >
@@ -806,4 +806,4 @@ There are a few caveats to consider when using color keywords:
 
 ## See also
 
-- [`<color>`] the data type these keywords belong to.
+- [`<color>`](/en-US/docs/Web/CSS/color_value) the data type these keywords belong to.
