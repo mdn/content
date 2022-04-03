@@ -146,7 +146,7 @@ Function.prototype.construct = function(aArgs) {
 Example usage:
 
 ```js
-function MyConstructor() {
+function MyConstructor(arguments) {
   for (let nProp = 0; nProp < arguments.length; nProp++) {
     this['property' + nProp] = arguments[nProp];
   }
