@@ -32,7 +32,7 @@ ancestor `td`, `th`, `table` will be returned, or the
 
 ## Value
 
-A {{domxref("HTMLElement)}} or `null`.
+An object reference to the element in which the current element is offset.
 
 ## Specifications
 
