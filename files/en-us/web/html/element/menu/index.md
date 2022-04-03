@@ -13,7 +13,7 @@ browser-compat: html.elements.menu
 
 {{HTMLRef}}{{SeeCompatTable}}
 
-The **`<menu>`** [HTML](/en-US/docs/Web/HTML) element is a semantic alternative to {{HTMLElement("ul")}}. It represents an unordered list of items (represented by {{HTMLElement("li")}} elements), each of these represent a link or other command that the user can activate.
+The **`<menu>`** [HTML](/en-US/docs/Web/HTML) element is a semantic alternative to {{HTMLElement("ul")}}. It represents an unordered list of items (represented by {{HTMLElement("li")}} elements), each of which represents a link or other command that the user can activate.
 
 ## Attributes
 
@@ -21,9 +21,9 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## Usage notes
 
-The `<menu>` and {{HTMLElement("ul")}} elements both represent an unordered list of items. The key difference is that {{HTMLElement("ul")}} primarily contains items for display, whilst `<menu>` is intended for interactive items, to act on.
+The `<menu>` and {{HTMLElement("ul")}} elements both represent an unordered list of items. The key difference is that {{HTMLElement("ul")}} primarily contains items for display, while `<menu>` is intended for interactive items.
 
-> **Note:** In previous version of the HTML specification, the `<menu>` element had an additional use case as a context menu. This functionality is now considered obsolete, and has been removed from the specification.
+> **Note:** In previous versions of the HTML specification, the `<menu>` element had an additional use case as a context menu. This functionality is now considered obsolete and has been removed from the specification.
 
 ## Examples
 
