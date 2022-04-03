@@ -15,16 +15,11 @@ browser-compat: api.HTMLTableElement.border
 The **`HTMLTableElement.border`** property represents the
 border width of the {{HtmlElement("table")}} element.
 
-## Syntax
+## Value
 
-```js
-HTMLTableElement.border = border;
-var border = HTMLTableElement.border;
-```
+A string representing the width of the border in pixels.
 
-- `border` is a string representing the width of the border in pixels.
-
-## Example
+## Examples
 
 ```js
 // Set the width of a table border to 2 pixels

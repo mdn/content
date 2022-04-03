@@ -15,13 +15,11 @@ The **`InputEvent.isComposing`** read-only property returns a
 boolean value indicating if the event is fired after
 {{event("compositionstart")}} and before {{event("compositionend")}}.
 
-## Syntax
+## Value
 
-```js
-var bool = event.isComposing;
-```
+A boolean.
 
-## Example
+## Examples
 
 ```js
 var inputEvent = new InputEvent('syntheticInput', false);
