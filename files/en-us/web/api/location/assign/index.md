@@ -1,5 +1,5 @@
 ---
-title: Location.assign()
+title: location.assign()
 slug: Web/API/Location/assign
 tags:
   - API

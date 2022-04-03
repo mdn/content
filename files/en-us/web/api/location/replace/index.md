@@ -1,5 +1,5 @@
 ---
-title: Location.replace()
+title: location.replace()
 slug: Web/API/Location/replace
 tags:
   - API
