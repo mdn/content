@@ -14,20 +14,14 @@ browser-compat: api.HTMLElement.offsetTop
 
 The **`HTMLElement.offsetTop`** read-only property returns the
 distance of the outer border of the current element relative to the inner border of
-the top of the {{domxref("HTMLelement.offsetParent","offsetParent")}} node.
-
-## Syntax
-
-```js
-topPos = element.offsetTop;
-```
-
-### Parameters
-
-- `topPos` is the number of pixels from the top of the *closest
+the top of the {{domxref("HTMLelement.offsetParent","offsetParent")}}, *closest
   relatively positioned* parent element.
 
-## Example
+## Value
+
+A number.
+
+## Examples
 
 ```js
 var d = document.getElementById("div1");

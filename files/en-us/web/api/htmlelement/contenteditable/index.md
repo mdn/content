@@ -25,12 +25,9 @@ This enumerated attribute can have the following values:
 You can use the {{domxref("HTMLElement.isContentEditable")}} property to test the
 computed boolean value of this property.
 
-## Syntax
+## Value
 
-```js
-editable = element.contentEditable
-element.contentEditable = 'true'
-```
+A string.
 
 ## Specifications
 
