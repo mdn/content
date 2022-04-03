@@ -119,7 +119,7 @@ Content-Type: image/jpeg
 ## See also
 
 - [Help Your Users `Save-Data` - CSS Tricks](https://css-tricks.com/help-users-save-data/)
-- [Delivering Fast and Light Applications with Save-Data - Google Developers](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/save-data/)
+- [Delivering Fast and Light Applications with Save-Data - web.dev](https://web.dev/optimizing-content-efficiency-save-data/)
 - {{HTTPHeader("Vary")}} header which indicates that the content served varies depending on the value of `Save-Data` (see [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses))
 - CSS @media feature [`prefers-reduced-data`](/en-US/docs/Web/CSS/@media/prefers-reduced-data) {{experimental_inline}}
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (web.dev)

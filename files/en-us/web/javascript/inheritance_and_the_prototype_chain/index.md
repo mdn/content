@@ -108,7 +108,7 @@ console.log(p.m()); // 5
 
 Let's look at what happens behind the scenes in a bit more detail.
 
-In JavaScript, as mentioned above, functions are able to have properties. All functions have a special property named `prototype`. Please note that the code below is free-standing (it is safe to assume there is no other JavaScript on the webpage other than the below code). For the best learning experience, it is highly recommended that you open a console, navigate to the "console" tab, copy-and-paste in the below JavaScript code, and run it by pressing the Enter/Return key. (The console is included in most web browser's Developer Tools. More information is available for [Firefox Developer Tools](/en-US/docs/Tools), [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/), and [Edge DevTools](https://docs.microsoft.com/microsoft-edge/devtools-guide).)
+In JavaScript, as mentioned above, functions are able to have properties. All functions have a special property named `prototype`. Please note that the code below is free-standing (it is safe to assume there is no other JavaScript on the webpage other than the below code). For the best learning experience, it is highly recommended that you open a console, navigate to the "console" tab, copy-and-paste in the below JavaScript code, and run it by pressing the Enter/Return key. (The console is included in most web browser's Developer Tools. More information is available for [Firefox Developer Tools](/en-US/docs/Tools), [Chrome DevTools](https://developer.chrome.com/docs/devtools/), and [Edge DevTools](https://docs.microsoft.com/microsoft-edge/devtools-guide).)
 
 ```js
 function doSomething() {}
