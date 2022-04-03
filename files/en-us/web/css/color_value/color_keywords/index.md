@@ -32,13 +32,6 @@ There are a few caveats to consider when using color keywords:
 
 - In addition to the color keywords, the [`<color>`](/en-US/docs/Web/CSS/color_value) data type supports other keywords: [`transparent`](/en-US/docs/Web/CSS/color_value#transparent_keyword) to create a wholly transparent color, [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) that represents the value of an element's {{Cssxref("color")}} property  lets you use the `color` value on properties that do not receive it by default, as well as _[system color keywords](/en-US/docs/Web/CSS/color_value#system_colors)_ that reprensents colors that matches those of the OS.
 
-> **Note:** The list of accepted keywords has undergone many changes during the evolution of CSS:
->
-> - CSS Level 1 only included 16 basic colors, called the _VGA colors_ as they were taken from the set of displayable colors on [VGA](https://en.wikipedia.org/wiki/VGA) graphics cards.
-> - CSS Level 2 added the `orange` keyword.
-> - Although various colors not in the specification (mostly adapted from the X11 colors list) were supported by early browsers, it wasn't until SVG 1.0 and CSS Colors Level 3 that they were formally defined. They are called the _extended color keywords_, the _X11 colors_, or the _SVG colors_.
-> - CSS Colors Level 4 added the `rebeccapurple` keyword [to honor web pioneer Eric Meyer](https://codepen.io/trezy/post/honoring-a-great-man).
-
 <table>
   <thead>
     <tr>
@@ -803,6 +796,13 @@ There are a few caveats to consider when using color keywords:
     </tr>
   </tbody>
 </table>
+
+> **Note:** The list of accepted keywords has undergone many changes during the evolution of CSS:
+>
+> - CSS Level 1 only included 16 basic colors, called the _VGA colors_ as they were taken from the set of displayable colors on [VGA](https://en.wikipedia.org/wiki/VGA) graphics cards.
+> - CSS Level 2 added the `orange` keyword.
+> - Although various colors not in the specification (mostly adapted from the X11 colors list) were supported by early browsers, it wasn't until SVG 1.0 and CSS Colors Level 3 that they were formally defined. They are called the _extended color keywords_, the _X11 colors_, or the _SVG colors_.
+> - CSS Colors Level 4 added the `rebeccapurple` keyword [to honor web pioneer Eric Meyer](https://codepen.io/trezy/post/honoring-a-great-man).
 
 ## See also
 
