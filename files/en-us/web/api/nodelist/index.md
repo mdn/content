@@ -14,7 +14,7 @@ browser-compat: api.NodeList
 
 > **Note:** Although `NodeList` is not an `Array`, it is possible to iterate over it with `forEach()`. It can also be converted to a real `Array` using {{jsxref("Array.from()")}}.
 >
-> However, some older browsers have not implemented `NodeList.forEach()` nor `Array.from()`. This can be circumvented by using {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} — see this document's [Example](#example).
+> However, some older browsers have not implemented `NodeList.prototype.forEach()` nor `Array.from()`. This can be circumvented by using {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} — see this document's [Example](#example).
 
 ## Live vs. Static NodeLists
 
