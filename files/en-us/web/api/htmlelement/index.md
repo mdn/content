@@ -71,7 +71,7 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}, and implements tho
 - {{DOMxRef("HTMLElement.offsetLeft")}} {{ReadOnlyInline}}
   - : Returns a `double`, the distance from this element's left border to its `offsetParent`'s left border.
 - {{DOMxRef("HTMLElement.offsetParent")}} {{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("Element")}} that is the element from which all offset calculations are currently computed.
+  - : An {{DOMxRef("Element")}} that is the element from which all offset calculations are currently computed.
 - {{DOMxRef("HTMLElement.offsetTop")}} {{ReadOnlyInline}}
   - : Returns a `double`, the distance from this element's top border to its `offsetParent`'s top border.
 - {{DOMxRef("HTMLElement.offsetWidth")}} {{ReadOnlyInline}}
