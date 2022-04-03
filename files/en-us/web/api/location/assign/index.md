@@ -1,9 +1,9 @@
 ---
-title: 'Location: assign()'
+title: location.assign()
 slug: Web/API/Location/assign
 tags:
   - API
-  - HTML-DOM
+  - HTML DOM
   - Location
   - Method
   - Reference
