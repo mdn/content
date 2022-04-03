@@ -18,14 +18,9 @@ identifier of the URL.
 The fragment is not [percent-decoded](/en-US/docs/Glossary/percent-encoding). If the URL does not
 have a fragment identifier, this property contains an empty string, `""`.
 
-## Syntax
+## Value
 
-```js
-// Getter
-string = anchor.hash;
-// Setter
-anchor.hash = string;
-```
+A string.
 
 ## Examples
 

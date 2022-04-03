@@ -15,14 +15,9 @@ The **`HTMLAreaElement.href`** property is a
 {{Glossary("stringifier")}} that returns a {{domxref("USVString")}} containing the whole URL, and allows
 the href to be updated.
 
-## Syntax
+## Value
 
-```js
-// Getter
-string = area.href;
-// Setter
-area.href = string;
-```
+A string.
 
 ## Examples
 
