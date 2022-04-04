@@ -27,7 +27,7 @@ Typically, the initial state of a combobox is collapsed, with `aria-expanded="fa
 
 The combobox is said to be expanded when both the combobox element showing its current value and its associated popup element are visible. When expanded, `aria-expanded="true"` must be set.
 
-The popup element associated with a `combobox` can be either a [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role), [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), or [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) element, with `listbox` being the default type. 
+The popup element associated with a `combobox` can be either a [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role), [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), or [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) element. 
 
 Comboboxes have an implicit [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) value of `listbox`, so including this attribute is optional if the popup is a `listbox`. If the combobox popup element is a `tree`, `grid`, or `dialog` (anything other than a `listbox`), the `aria-haspopup` attribute is required. The value of `aria-haspopup` must be either the `tree`, `grid`, `dialog`, or `listbox` role. Note that for this property, `true` means `menu`, so make sure that the value corresponds to the role of the popup, not a Boolean value. 
 
