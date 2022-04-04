@@ -23,13 +23,7 @@ the properties of the underlying connection technology.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-rtt = NetworkInformation.rtt
-```
-
-### Return value
+## Value
 
 A number.
 

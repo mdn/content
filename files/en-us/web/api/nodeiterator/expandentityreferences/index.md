@@ -19,13 +19,11 @@ If this value is `false`, the children of entity reference nodes (as well as
 all of their descendants) are rejected. This takes precedence over the value of the
 {{domxref("NodeIterator.whatToShow")}} method and the associated filter.
 
-## Syntax
+## Value
 
-```js
-expand = nodeIterator.expandEntityReferences;
-```
+A boolean.
 
-## Example
+## Examples
 
 ```js
 var nodeIterator = document.createNodeIterator(
