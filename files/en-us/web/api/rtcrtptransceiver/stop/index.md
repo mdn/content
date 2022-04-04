@@ -62,7 +62,7 @@ The negotiation process causes {{domxref("RTCRtpTransceiver.currentDirection",
 transceiver has been fully stopped.
 
 > **Note:** Stopping the transceiver causes a
-> {{event("negotiationneeded")}} event to be sent to the transceiver's
+> {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} event to be sent to the transceiver's
 > {{domxref("RTCPeerConnection")}}, so the connection can adapt to the change.
 
 ## Specifications

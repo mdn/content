@@ -34,7 +34,7 @@ available.
 
 ## Examples
 
-This example uses the {{event("paymentmethodchange")}} event to watch for changes to
+This example uses the {{domxref("PaymentRequest.paymentmethodchange_event", "paymentmethodchange")}} event to watch for changes to
 the payment method selected for Apple Pay, in order to compute a discount if the user
 chooses to use a Visa card as their payment method.
 

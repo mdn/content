@@ -248,7 +248,7 @@ Then, finally, each `RTCPeerConnection` is closed by calling its {{domxref("RTCP
 
 #### Adding candidates to the caller
 
-When the caller's `RTCPeerConnection` ICE layer comes up with a new candidate to propose, it issues an {{event("icecandidate")}} event to `callerPC`. The `icecandidate` event handler's job is to transmit the candidate to the receiver. In our example, we are directly controlling both the caller and the receiver, so we can just directly add the candidate to the receiver by calling its {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} method. That's handled by `handleCallerIceEvent()`:
+When the caller's `RTCPeerConnection` ICE layer comes up with a new candidate to propose, it issues an {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event to `callerPC`. The `icecandidate` event handler's job is to transmit the candidate to the receiver. In our example, we are directly controlling both the caller and the receiver, so we can just directly add the candidate to the receiver by calling its {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} method. That's handled by `handleCallerIceEvent()`:
 
 ```js
 function handleCallerIceEvent(event) {
@@ -263,13 +263,13 @@ function handleCallerIceEvent(event) {
 }
 ```
 
-If the {{event("icecandidate")}} event has a non-`null` `candidate` property, we create a new {{domxref("RTCIceCandidate")}} object from the `event.candidate` string and "transmit" it to the receiver by calling `receiverPC.addIceCandidate()`, providing the new `RTCIceCandidate` as its input. If `addIceCandidate()` fails, the `catch()` clause outputs the error to our log box.
+If the {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event has a non-`null` `candidate` property, we create a new {{domxref("RTCIceCandidate")}} object from the `event.candidate` string and "transmit" it to the receiver by calling `receiverPC.addIceCandidate()`, providing the new `RTCIceCandidate` as its input. If `addIceCandidate()` fails, the `catch()` clause outputs the error to our log box.
 
 If `event.candidate` is `null`, that indicates that there are no more candidates available, and we log that information.
 
 #### Dialing once the connection is open
 
-Our design requires that when the connection is established, we immediately send the DTMF string. To accomplish that, we watch for the caller to receive an {{event("iceconnectionstatechange")}} event. This event is sent when one of a number of changes occurs to the state of the ICE connection process, including the successful establishment of a connection.
+Our design requires that when the connection is established, we immediately send the DTMF string. To accomplish that, we watch for the caller to receive an {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}} event. This event is sent when one of a number of changes occurs to the state of the ICE connection process, including the successful establishment of a connection.
 
 ```js
 function handleCallerIceConnectionStateChange() {
@@ -287,7 +287,7 @@ Our call to `insertDTMF()` specifies not only the DTMF to send (`dialString`), b
 
 #### Negotiating the connection
 
-When the calling {{domxref("RTCPeerConnection")}} begins to receive media (after the microphone's stream is added to it), a {{event("negotiationneeded")}} event is delivered to the caller, letting it know that it's time to start negotiating the connection with the receiver. As previously mentioned, our example is simplified somewhat because we control both the caller and the receiver, so `handleCallerNegotiationNeeded()` is able to quickly construct the connection by chaining the required calls together for both the caller and receiver, as shown below.
+When the calling {{domxref("RTCPeerConnection")}} begins to receive media (after the microphone's stream is added to it), a {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} event is delivered to the caller, letting it know that it's time to start negotiating the connection with the receiver. As previously mentioned, our example is simplified somewhat because we control both the caller and the receiver, so `handleCallerNegotiationNeeded()` is able to quickly construct the connection by chaining the required calls together for both the caller and receiver, as shown below.
 
 ```js
 function handleCallerNegotiationNeeded() {
@@ -329,7 +329,7 @@ Since the various methods involved in negotiating the connection return {{jsxref
 
 #### Tracking other state changes
 
-We can also watch for changes to the signaling state (by accepting {{event("signalingstatechange")}} events) and the ICE gathering state (by accepting {{event("icegatheringstatechange")}} events). We aren't using these for anything, so all we do is log them. We could have not set up these event listeners at all.
+We can also watch for changes to the signaling state (by accepting {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}} events) and the ICE gathering state (by accepting {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} events). We aren't using these for anything, so all we do is log them. We could have not set up these event listeners at all.
 
 ```js
 function handleCallerSignalingStateChangeEvent() {
@@ -343,7 +343,7 @@ function handleCallerGatheringStateChangeEvent() {
 
 #### Adding candidates to the receiver
 
-When the receiver's `RTCPeerConnection` ICE layer comes up with a new candidate to propose, it issues an {{event("icecandidate")}} event to `receiverPC`. The `icecandidate` event handler's job is to transmit the candidate to the caller. In our example, we are directly controlling both the caller and the receiver, so we can just directly add the candidate to the caller by calling its {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} method. That's handled by `handleReceiverIceEvent()`.
+When the receiver's `RTCPeerConnection` ICE layer comes up with a new candidate to propose, it issues an {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event to `receiverPC`. The `icecandidate` event handler's job is to transmit the candidate to the caller. In our example, we are directly controlling both the caller and the receiver, so we can just directly add the candidate to the caller by calling its {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} method. That's handled by `handleReceiverIceEvent()`.
 
 This code is analogous to the `icecandidate` event handler for the caller, seen in [Adding candidates to the caller](#adding_candidates_to_the_caller) above.
 
@@ -360,7 +360,7 @@ function handleReceiverIceEvent(event) {
 }
 ```
 
-If the {{event("icecandidate")}} event has a non-`null` `candidate` property, we create a new {{domxref("RTCIceCandidate")}} object from the `event.candidate` string and deliver it to the caller by passing that into `callerPC.addIceCandidate()`. If `addIceCandidate()` fails, the `catch()` clause outputs the error to our log box.
+If the {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event has a non-`null` `candidate` property, we create a new {{domxref("RTCIceCandidate")}} object from the `event.candidate` string and deliver it to the caller by passing that into `callerPC.addIceCandidate()`. If `addIceCandidate()` fails, the `catch()` clause outputs the error to our log box.
 
 If `event.candidate` is `null`, that indicates that there are no more candidates available, and we log that information.
 

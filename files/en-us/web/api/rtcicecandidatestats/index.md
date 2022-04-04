@@ -43,7 +43,7 @@ The WebRTC API's **`RTCIceCandidateStats`** dictionary provides statistics relat
 - {{domxref("RTCIceCandidateStats.transportId", "transportId")}} {{optional_inline}}
   - : A string uniquely identifying the transport object that was inspected in order to obtain the {{domxref("RTCTransportStats")}} associated with the candidate corresponding to these statistics.
 - {{domxref("RTCIceCandidateStats.url", "url")}} {{optional_inline}}
-  - : For local candidates, the `url` property is the {{Glossary("URL")}} of the {{Glossary("ICE")}} server from which the candidate was received. This URL matches the one included in the {{domxref("RTCPeerConnectionIceEvent")}} object representing the {{event("icecandidate")}} event that delivered the candidate to the local peer.
+  - : For local candidates, the `url` property is the {{Glossary("URL")}} of the {{Glossary("ICE")}} server from which the candidate was received. This URL matches the one included in the {{domxref("RTCPeerConnectionIceEvent")}} object representing the {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event that delivered the candidate to the local peer.
 
 ## Example
 
