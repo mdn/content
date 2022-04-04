@@ -13,6 +13,8 @@ The keywords in the following list are defined by the CSS Color Module Level 4 s
 
 > **Note:** Note that these keywords are _case insensitive_, but are listed here with mixed case for readability.
 
+## Syntax
+
 - `ActiveText`
   - : Text of active links
 - `ButtonBorder`
@@ -44,7 +46,7 @@ The keywords in the following list are defined by the CSS Color Module Level 4 s
 - `VisitedText`
   - : Text of visited links
 
-### Deprecated system color keywords
+## Deprecated system color keywords
 
 The following keywords were defined in earlier versions of the CSS Color Module. They are now deprecated for use on public web pages.
 
