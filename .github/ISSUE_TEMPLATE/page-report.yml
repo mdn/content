@@ -18,6 +18,13 @@ body:
 
         ---
   - type: input
+    id: mdn-url
+    attributes:
+      label: MDN URL
+      description: Set automatically. Do not modify.
+    validations:
+      required: true
+  - type: input
     id: section
     attributes:
       label: What specific section or headline is this issue about?
@@ -52,4 +59,4 @@ body:
     id: metadata-json
     attributes:
       label: MDN metadata
-      description: Added automatically. Do not modify.
+      description: Set automatically. Do not modify.
