@@ -72,7 +72,7 @@ Some requests don't trigger a {{Glossary("Preflight_request","CORS preflight")}}
   - {{HTTPHeader("Accept-Language")}}
   - {{HTTPHeader("Content-Language")}}
   - {{HTTPHeader("Content-Type")}} (please note the additional requirements below)
-  - {{HTTPHeader("Range")}} (only with a [simple range header value](https://fetch.spec.whatwg.org/#simple-range-header-value), e.g. `bytes=256-` or `bytes=127-255`)
+  - {{HTTPHeader("Range")}} (only with a [simple range header value](https://fetch.spec.whatwg.org/#simple-range-header-value); e.g., `bytes=256-` or `bytes=127-255`)
 
 > **Note:** Firefox has not implemented `Range` as a safelisted request-header yet. See [bug 1733981](https://bugzilla.mozilla.org/show_bug.cgi?id=1733981).
 
