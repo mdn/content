@@ -14,7 +14,7 @@ browser-compat: http.headers.If-Match
 The **`If-Match`** HTTP request header makes a request conditional.
 
 A server will only return requested resources for {{HTTPMethod("GET")}} and {{HTTPMethod("HEAD")}} methods, or upload resource for {{HTTPMethod("PUT")}} and other non-safe methods, if the resource matches one of the listed {{HTTPHeader("ETag")}} values.
-If the conditional does not match then the  {{HTTPStatus("412")}} (Precondition Failed) response is returned.
+If the conditional does not match then the {{HTTPStatus("412")}} (Precondition Failed) response is returned.
 
 The comparison with the stored {{HTTPHeader("ETag")}} uses the _strong comparison algorithm_, meaning two files are considered identical byte by byte only.
 If a listed `ETag` has the `W/` prefix indicating a weak entity tag, this comparison algorithm will never match it.
