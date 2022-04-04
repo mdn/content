@@ -7,7 +7,7 @@ tags:
 ---
 {{CSSRef}}
 
-**Color keywords** are case-insensitive identifiers representing a specific color, such as `red`, `blue`, `black`, or `lightseagreen`. Although the names more or less describe their respective colors, they are essentially artificial, without a strict rationale behind the terms used.
+**Color keywords** are case-insensitive identifiers representing a specific [`<color>`](/en-US/docs/Web/CSS/color_value), such as `red`, `blue`, `black`, or `lightseagreen`. Although the names more or less describe their respective colors, they are essentially artificial, without a strict rationale behind the terms used.
 
 All keywords specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB).
 
