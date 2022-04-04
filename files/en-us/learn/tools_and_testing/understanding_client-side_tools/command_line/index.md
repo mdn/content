@@ -21,15 +21,13 @@ In your development process you'll undoubtedly be required to run some command i
       <th scope="row">Prerequisites:</th>
       <td>
         Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, and
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages.
+        <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To understand what the terminal/command line is, what basic commands you
-        should learn, and how to install new command line tools.
+        To understand what the terminal/command line is, what basic commands you should learn, and how to install new command line tools.
       </td>
     </tr>
   </tbody>
@@ -356,21 +354,20 @@ There's pros and cons each way — and this list of pros and cons for globally i
     <tr>
       <td>Only install once</td>
       <td>
-        Other developers in your team won't have access to these tools, for
-        example if you are sharing the codebase over a tool like git.
+        Other developers in your team won't have access to these tools, for example if you are sharing the codebase over a tool like git.
       </td>
     </tr>
     <tr>
       <td>Uses less disk space</td>
       <td>
-        Related to the previous point, it makes project code harder to replicate
-        (if you install your tools locally, they can be set up as dependencies
-        and installed with <code>npm install</code>).
+        Related to the previous point, it makes project code harder to replicate (if you install your tools locally, they can be set up as dependencies and installed with <code>npm install</code>).
       </td>
     </tr>
     <tr>
       <td>Always the same version</td>
-      <td></td>
+      <td>
+        Global installation can fail with "permission denied" errors, particularly on Linux which is protective about process and user access to the file system.
+        Resolving these errors usually requires Linux expertise, or granting more permission than you might want to the global process (for example, using <code>sudo</code>).</td>
     </tr>
     <tr>
       <td>Feels like any other unix command</td>
@@ -398,6 +395,12 @@ Once you've installed node, open up the terminal and run the following command t
 ```bash
 npm install --global prettier
 ```
+
+> **Note:** If you get "permission denied" errors on Linux when running the above command, you can try installing with `sudo`:
+> ```bash
+> sudo -H npm install --global prettier
+> ```
+
 
 Once the command has finished running, the Prettier tool is now available in your terminal, at any location in your file system.
 
