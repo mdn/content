@@ -34,6 +34,7 @@ animation-fill-mode: both, forwards, none;
 animation-fill-mode: inherit;
 animation-fill-mode: initial;
 animation-fill-mode: revert;
+animation-fill-mode: revert-layer;
 animation-fill-mode: unset;
 ```
 

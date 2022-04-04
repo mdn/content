@@ -22,6 +22,7 @@ aspect-ratio: 1;
 aspect-ratio: inherit;
 aspect-ratio: initial;
 aspect-ratio: revert;
+aspect-ratio: revert-layer;
 aspect-ratio: unset;
 ```
 

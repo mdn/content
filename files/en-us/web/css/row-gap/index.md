@@ -33,6 +33,7 @@ row-gap: 10%;
 row-gap: inherit;
 row-gap: initial;
 row-gap: revert;
+row-gap: revert-layer;
 row-gap: unset;
 ```
 

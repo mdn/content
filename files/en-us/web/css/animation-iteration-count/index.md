@@ -36,6 +36,7 @@ animation-iteration-count: 2, 0, infinite;
 animation-iteration-count: inherit;
 animation-iteration-count: initial;
 animation-iteration-count: revert;
+animation-iteration-count: revert-layer;
 animation-iteration-count: unset;
 ```
 

@@ -32,6 +32,7 @@ animation-delay: 2.1s, 480ms;
 animation-delay: inherit;
 animation-delay: initial;
 animation-delay: revert;
+animation-delay: revert-layer;
 animation-delay: unset;
 ```
 
