@@ -15,19 +15,13 @@ The **`domInteractive`** read-only property returns a
 time immediately before the user agent sets the current document readiness of the
 current document to [interactive](https://html.spec.whatwg.org/multipage/syntax.html#the-end).
 
-## Syntax
-
-```js
-perfEntry.domInteractive;
-```
-
-### Return Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to
 the time immediately before the user agent sets the current document readiness of the
 current document to [interactive](https://html.spec.whatwg.org/multipage/syntax.html#the-end).
 
-## Example
+## Examples
 
 The following example illustrates this property's usage.
 

@@ -17,19 +17,13 @@ whichever comes first.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-resource.responseEnd;
-```
-
-### Return value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}} immediately after the browser receives the last
 byte of the resource or immediately before the transport connection is closed, whichever
 comes first.
 
-## Example
+## Examples
 
 In the following example, the value of the `*Start` and `*End`
 properties of all "`resource`"
