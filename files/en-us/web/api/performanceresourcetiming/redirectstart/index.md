@@ -21,18 +21,12 @@ fetch that initiates the redirect; otherwise, zero is returned.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-resource.redirectStart;
-```
-
-### Return value
+## Value
 
 A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the start time of the
 fetch which initiates the redirect.
 
-## Example
+## Examples
 
 In the following example, the value of the `*Start` and `*End`
 properties of all "`resource`"
