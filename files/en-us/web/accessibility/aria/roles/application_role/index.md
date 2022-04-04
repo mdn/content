@@ -12,10 +12,10 @@ tags:
 The `application` role indicates to assistive technologies that an element _and all of its children_ should be treated similar to a desktop application, and no traditional HTML interpretation techniques should be used. This role should only be used to define very dynamic and desktop-like web applications. Most mobile and desktop web apps _are not_ considered applications for this purpose.
 
 ```html
-<div role="application">...</div>
+<div role="application" aria-label="...">...</div>
 ```
 
-This defines this `div` element and all of its descendants to be treated like they are part of a desktop application.
+By specifying the `application` role, it indicates this `div` element and all of its descendants are to be treated like they are part of a desktop application.
 
 ## Description
 
@@ -23,7 +23,7 @@ The `application` [document structure role](/en-US/docs/Web/Accessibility/ARIA/R
 
 In this mode, the web author is completely responsible for handling any and all keyboard input, focus management, and other interactions and cannot assume assistive technologies would do any processing on their end.
 
-If the web application encompassed by the application role contains parts that _should_ be treated like normal web content, a role of [`document`](/en-US/docs/Web/Accessibility/ARIA/Roles/document_role) or [`article`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role) should be used.
+If the web application encompassed by the application role contains parts that _should_ be treated like normal web content, a role of [`document`](/en-US/docs/Web/Accessibility/ARIA/Roles/document_role) or [`article`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role) should be used to contain such content.
 
 ### Background
 
@@ -31,7 +31,7 @@ For historic reasons, especially on Windows, screen readers and some other assis
 
 In addition, a set of so-called _quick navigation keys_ has been established over the years that allows blind users to skim through a page via a certain element type. Such elements usually include headings, form fields, lists, tables, links, graphics, or landmark regions.
 
-For all of this to work, ATs intercept almost all keyboard input and consume it themselves, letting nothing through to the browser or other user agent. To be able to interact with a web page, a standard set of widgets is recognized that, when pressing a certain key (usually the <kbd>Enter</kbd> key) this mode is switched off. The screen reader mode, often called _forms mode_ or _focus mode_, lets all keyboard input go through to the browser again. <kbd>Escape</kbd> is the most common way of switching back to _browse_ mode.
+For all of this to work, ATs intercept almost all keyboard input and consume it themselves, letting nothing through to the browser or other user agent. To be able to interact with a web page, a standard set of widgets is recognized that, when pressing a certain key (usually the <kbd>Enter</kbd> key) this mode is switched off. The screen reader mode, often called _forms mode_ or _focus mode_, lets all keyboard input go through to the browser again. <kbd>Escape</kbd> is the most common way of switching back to _browse_ mode, but when within a specific `application` section, some screen readers may require other keys to purposefully exit this mode. For instance <kbd>NUMPAD PLUS</kbd> with JAWS.
 
 The `application` role is designed to provide a means for widgets that are not part of the standard set to be accessible for direct interaction in ATs that use both _browse_ and _focus_ modes for interacting with web content. Most common widgets have expected keyboard interaction behaviors. Because of this, a custom keyboard experience created by a web author would create a confusing experience.
 
@@ -60,7 +60,7 @@ The `application` role is designed to provide a means for widgets that are not p
 
 Keyboard interaction is completely under the web author's control and can be anything associated with the particular widget being implemented. In a slides application, for example, a widget could be created that uses the arrow keys to position elements on the slide, and uses audio feedback via an ARIA live region to communicate the position and overlap status with other objects. Focus is being managed via _aria-activedescendant_.
 
-The <kbd>tab</kbd> , <kbd>Space</kbd> and <kbd>Enter</kbd> keys, as well as <kbd>Escape</kbd> , must be handled by the application. The one exception is if focus is set to a standard widget inside the application that supports keyboard navigation from the browser, for example an [input](/en-US/docs/Web/HTML/Element/input) element.
+The <kbd>Tab</kbd>, <kbd>Space</kbd> and <kbd>Enter</kbd> keys, as well as <kbd>Escape</kbd>, must be handled by the application. The one exception is if focus is set to a standard widget inside the application that supports keyboard navigation from the browser, for example an [input](/en-US/docs/Web/HTML/Element/input) element.
 
 ### Required JavaScript features
 
@@ -75,7 +75,7 @@ The <kbd>tab</kbd> , <kbd>Space</kbd> and <kbd>Enter</kbd> keys, as well as <kbd
 
 ## Examples
 
-Some prominent web applications that use the application role properly are:
+Some prominent web applications that use or have used the application role properly are:
 
 - Google Docs, Sheets and Slides
 - CKEditor and TinyMCE WYSIWYG web editors, like the one used on the Mozilla Developer Network
@@ -83,7 +83,7 @@ Some prominent web applications that use the application role properly are:
 
 ## Accessibility concerns
 
-Improperly using the `application` role can unintentionally take away access from information on a web page, so be very mindful of using it. Think hard on if you actually need it and cannot just use a set of other, known, widgets to accomplish the same task.
+Improperly using the `application` role can unintentionally take away access from information on a web page, so be very mindful of using it. Think hard on if you actually need it and cannot just use a set of other known widgets to accomplish the same task.
 
 If used, the application role should be added to the lowest common container possible, not on the `<body>` element, for example. Also be sure to test what you have written with assistive technology, to verify it works as intended.
 
