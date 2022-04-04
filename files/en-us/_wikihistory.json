@@ -85495,36 +85495,6 @@
       "Robg1"
     ]
   },
-  "Web/API/WindowEventHandlers/onhashchange": {
-    "modified": "2020-10-15T21:06:48.290Z",
-    "contributors": [
-      "fscholz",
-      "smoore4usa",
-      "mfluehr",
-      "sideshowbarker",
-      "carolinekabat",
-      "jcamenisch",
-      "xgqfrms",
-      "douira",
-      "jpmedley",
-      "tobias74",
-      "erikadoyle",
-      "fuweichin",
-      "teoli",
-      "Taken",
-      "libreGeekingKid",
-      "leon_gilyadov",
-      "Sheppy",
-      "ethertank",
-      "ziyunfei",
-      "McGurk",
-      "Jürgen Jeka",
-      "Crash",
-      "Nickolay",
-      "jlebar",
-      "Sephr"
-    ]
-  },
   "Web/API/WindowEventHandlers/onlanguagechange": {
     "modified": "2020-10-15T21:29:30.939Z",
     "contributors": [

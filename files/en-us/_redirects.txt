@@ -2192,7 +2192,7 @@
 /en-US/docs/DOM/window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
 /en-US/docs/DOM/window.onerror	/en-US/docs/Web/API/GlobalEventHandlers/onerror
 /en-US/docs/DOM/window.onfocus	/en-US/docs/Web/API/GlobalEventHandlers/onfocus
-/en-US/docs/DOM/window.onhashchange	/en-US/docs/Web/API/WindowEventHandlers/onhashchange
+/en-US/docs/DOM/window.onhashchange	/en-US/docs/Web/API/Window/hashchange_event
 /en-US/docs/DOM/window.oninput	/en-US/docs/Web/API/GlobalEventHandlers/oninput
 /en-US/docs/DOM/window.onkeydown	/en-US/docs/Web/API/GlobalEventHandlers/onkeydown
 /en-US/docs/DOM/window.onkeypress	/en-US/docs/Web/API/GlobalEventHandlers/onkeypress
@@ -3353,7 +3353,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
 /en-US/docs/Document_Object_Model_(DOM)/window.onerror	/en-US/docs/Web/API/GlobalEventHandlers/onerror
 /en-US/docs/Document_Object_Model_(DOM)/window.onfocus	/en-US/docs/Web/API/GlobalEventHandlers/onfocus
-/en-US/docs/Document_Object_Model_(DOM)/window.onhashchange	/en-US/docs/Web/API/WindowEventHandlers/onhashchange
+/en-US/docs/Document_Object_Model_(DOM)/window.onhashchange	/en-US/docs/Web/API/Window/hashchange_event
 /en-US/docs/Document_Object_Model_(DOM)/window.oninput	/en-US/docs/Web/API/GlobalEventHandlers/oninput
 /en-US/docs/Document_Object_Model_(DOM)/window.onkeydown	/en-US/docs/Web/API/GlobalEventHandlers/onkeydown
 /en-US/docs/Document_Object_Model_(DOM)/window.onkeypress	/en-US/docs/Web/API/GlobalEventHandlers/onkeypress
@@ -8144,7 +8144,7 @@
 /en-US/docs/Web/API/HTMLAreaElement/referrer	/en-US/docs/Web/API/HTMLAreaElement/referrerPolicy
 /en-US/docs/Web/API/HTMLBodyElement/onafterprint	/en-US/docs/Web/API/WindowEventHandlers/onafterprint
 /en-US/docs/Web/API/HTMLBodyElement/onbeforeunload	/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload
-/en-US/docs/Web/API/HTMLBodyElement/onhashchange	/en-US/docs/Web/API/WindowEventHandlers/onhashchange
+/en-US/docs/Web/API/HTMLBodyElement/onhashchange	/en-US/docs/Web/API/Window/hashchange_event
 /en-US/docs/Web/API/HTMLBodyElement/onlanguagechange	/en-US/docs/Web/API/WindowEventHandlers/onlanguagechange
 /en-US/docs/Web/API/HTMLBodyElement/onpopstate	/en-US/docs/Web/API/WindowEventHandlers/onpopstate
 /en-US/docs/Web/API/HTMLBodyElement/onunload	/en-US/docs/Web/API/WindowEventHandlers/onunload
@@ -8231,7 +8231,7 @@
 /en-US/docs/Web/API/HTMLFormElement/submit/submit_event	/en-US/docs/Web/API/HTMLFormElement/submit_event
 /en-US/docs/Web/API/HTMLFrameSetElement/onafterprint	/en-US/docs/Web/API/GlobalEventHandlers/onreset
 /en-US/docs/Web/API/HTMLFrameSetElement/onbeforeunload	/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload
-/en-US/docs/Web/API/HTMLFrameSetElement/onhashchange	/en-US/docs/Web/API/WindowEventHandlers/onhashchange
+/en-US/docs/Web/API/HTMLFrameSetElement/onhashchange	/en-US/docs/Web/API/Window/hashchange_event
 /en-US/docs/Web/API/HTMLFrameSetElement/onlanguagechange	/en-US/docs/Web/API/WindowEventHandlers/onlanguagechange
 /en-US/docs/Web/API/HTMLFrameSetElement/onpopstate	/en-US/docs/Web/API/WindowEventHandlers/onpopstate
 /en-US/docs/Web/API/HTMLFrameSetElement/onunload	/en-US/docs/Web/API/WindowEventHandlers/onunload
@@ -9721,7 +9721,7 @@
 /en-US/docs/Web/API/Window/onfocus	/en-US/docs/Web/API/GlobalEventHandlers/onfocus
 /en-US/docs/Web/API/Window/ongamepadconnected	/en-US/docs/Web/API/Window/gamepadconnected_event
 /en-US/docs/Web/API/Window/ongamepaddisconnected	/en-US/docs/Web/API/Window/gamepaddisconnected_event
-/en-US/docs/Web/API/Window/onhashchange	/en-US/docs/Web/API/WindowEventHandlers/onhashchange
+/en-US/docs/Web/API/Window/onhashchange	/en-US/docs/Web/API/Window/hashchange_event
 /en-US/docs/Web/API/Window/oninput	/en-US/docs/Web/API/GlobalEventHandlers/onkeydown
 /en-US/docs/Web/API/Window/oninstall	/en-US/docs/Web/API/Window/appinstalled_event
 /en-US/docs/Web/API/Window/onkeydown	/en-US/docs/Web/API/GlobalEventHandlers/onkeydown
@@ -9769,9 +9769,10 @@
 /en-US/docs/Web/API/WindowBase64/btoa	/en-US/docs/Web/API/btoa
 /en-US/docs/Web/API/WindowEventHandlers.onbeforeprint	/en-US/docs/Web/API/WindowEventHandlers/onbeforeprint
 /en-US/docs/Web/API/WindowEventHandlers.onbeforeunload	/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload
-/en-US/docs/Web/API/WindowEventHandlers.onhashchange	/en-US/docs/Web/API/WindowEventHandlers/onhashchange
+/en-US/docs/Web/API/WindowEventHandlers.onhashchange	/en-US/docs/Web/API/Window/hashchange_event
 /en-US/docs/Web/API/WindowEventHandlers.onlanguagechange	/en-US/docs/Web/API/WindowEventHandlers/onlanguagechange
 /en-US/docs/Web/API/WindowEventHandlers.onunload	/en-US/docs/Web/API/WindowEventHandlers/onunload
+/en-US/docs/Web/API/WindowEventHandlers/onhashchange	/en-US/docs/Web/API/Window/hashchange_event
 /en-US/docs/Web/API/WindowEventHandlers/onmessage	/en-US/docs/Web/API/Window/message_event
 /en-US/docs/Web/API/WindowEventHandlers/onmessageerror	/en-US/docs/Web/API/Window/messageerror_event
 /en-US/docs/Web/API/WindowEventHandlers/rejectionhandled_event	/en-US/docs/Web/API/Window/rejectionhandled_event
@@ -10355,7 +10356,7 @@
 /en-US/docs/Web/API/window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
 /en-US/docs/Web/API/window.onerror	/en-US/docs/Web/API/GlobalEventHandlers/onerror
 /en-US/docs/Web/API/window.onfocus	/en-US/docs/Web/API/GlobalEventHandlers/onfocus
-/en-US/docs/Web/API/window.onhashchange	/en-US/docs/Web/API/WindowEventHandlers/onhashchange
+/en-US/docs/Web/API/window.onhashchange	/en-US/docs/Web/API/Window/hashchange_event
 /en-US/docs/Web/API/window.oninput	/en-US/docs/Web/API/GlobalEventHandlers/oninput
 /en-US/docs/Web/API/window.onkeydown	/en-US/docs/Web/API/GlobalEventHandlers/onkeydown
 /en-US/docs/Web/API/window.onkeypress	/en-US/docs/Web/API/GlobalEventHandlers/onkeypress
@@ -12337,7 +12338,7 @@
 /en-US/docs/Whitespace_in_the_DOM	/en-US/docs/Web/API/Document_Object_Model/Whitespace
 /en-US/docs/WindowEventHandlers.onbeforeprint	/en-US/docs/Web/API/WindowEventHandlers/onbeforeprint
 /en-US/docs/WindowEventHandlers.onbeforeunload	/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload
-/en-US/docs/WindowEventHandlers.onhashchange	/en-US/docs/Web/API/WindowEventHandlers/onhashchange
+/en-US/docs/WindowEventHandlers.onhashchange	/en-US/docs/Web/API/Window/hashchange_event
 /en-US/docs/WindowEventHandlers.onpopstate	/en-US/docs/Web/API/WindowEventHandlers/onpopstate
 /en-US/docs/WindowEventHandlers.onunload	/en-US/docs/Web/API/WindowEventHandlers/onunload
 /en-US/docs/Writing_Forward_Compatible_Websites	/en-US/docs/Web/Guide/Writing_forward-compatible_websites
