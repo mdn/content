@@ -155,6 +155,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       Unlike classic scripts, module scripts require the use of the CORS protocol for cross-origin fetching.
     - **Any other value:** The embedded content is treated as a data block which won't be processed by the browser. Developers must use a valid MIME type that is not a JavaScript MIME type to denote data blocks. The `src` attribute will be ignored.
 
+- {{htmlattrdef("blocking")}}
+  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of the script. The operations that are to be blocked must be a space-separated list of blocking attributes listed below.
+    - `render`: The rendering of content on the screen is blocked.
+
 ### Deprecated attributes
 
 - {{htmlattrdef("charset")}} {{Deprecated_inline}}
@@ -208,6 +212,15 @@ You can also use the `<script>` element to embed data in HTML with server-side r
   const userInfo = JSON.parse(document.getElementById("data").text);
   console.log("User information: %o", userInfo);
 </script>
+```
+
+### Blocking rendering till a script is fetched and executed
+
+You can include `render` token inside a `blocking` attribute;
+the rendering of the page will be blocked till the script is fetched and executed. In the example below, we block rendering on an async script, 
+so that the script doesn’t block parsing but is guaranteed to be evaluated before rendering starts.
+```html
+<script blocking="render" async src="async-script.js"></script>
 ```
 
 ## Specifications
