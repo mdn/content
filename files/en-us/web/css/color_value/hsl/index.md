@@ -30,7 +30,7 @@ hsl(hue saturation lightness / alpha)
 ### Values
 
 - `hue`
-  - : An {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in {{SpecName("CSS4 Colors","#the-hsl-notation")}}. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees. By definition, _red_ is `0deg`, with the other colors spread around the circle, so _green_ is `120deg`, _blue_ is `240deg`, etc. As an `<angle>` is periodic, it implicitly wraps around such that `-120deg` = `240deg`, `480deg` = `120deg`, `-1turn` = `1turn?, etc.
+  - : An {{cssxref("&lt;angle&gt;")}} of the color circle given in one of the following units: `deg`, `rad`, `grad`, or `turn`. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees. By definition, _red_ is `0deg`, with the other colors spread around the circle, so _green_ is `120deg`, _blue_ is `240deg`, etc. As an `<angle>` is periodic, it implicitly wraps around such that `-120deg` = `240deg`, `480deg` = `120deg`, `-1turn` = `1turn?, etc.
 
 - `saturation`
   - : A {{cssref("&lt;percentage&gt;")}} where `100%` is completely saturated, while `0%` is completely unsaturated (gray).
