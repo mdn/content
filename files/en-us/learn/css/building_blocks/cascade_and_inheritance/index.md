@@ -15,7 +15,7 @@ tags:
 
 The aim of this lesson is to develop your understanding of some of the most fundamental concepts of CSS — the cascade, specificity, and inheritance — which control how CSS is applied to HTML and how conflicts are resolved.
 
-While working through this lesson may seem less immediately relevant and a little more academic than some other parts of the course, an understanding of these things will save you much pain later on! We encourage you to work through this section carefully and check that you understand the concepts before moving on.
+While working through this lesson may seem less immediately relevant and a little more academic than some other parts of the course, an understanding of these concepts will save you much pain later on! We encourage you to work through this section carefully and check that you understand the concepts before moving on.
 
 <table>
   <tbody>
