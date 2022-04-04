@@ -7,15 +7,16 @@ tags:
 ---
 {{CSSRef}}
 
-**Color keywords** are case-insensitive identifiers that represent a specific color, such as `red`, `blue`, `black`, or `lightseagreen`. Although the names more or less describes their respective colors, they are essentially artificial, without a strict rationale behind the names used.
+**Color keywords** are case-insensitive identifiers representing a specific color, such as `red`, `blue`, `black`, or `lightseagreen`. Although the names more or less describe their respective colors, they are essentially artificial, without a strict rationale behind the terms used.
 
 All keywords specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB).
 
 There are a few caveats to consider when using color keywords:
 
-- [HTML](/en-US/docs/Web/HTML) only recognizes the 16 basic color keywords found in CSS Level 1, using a specific algorithm to convert unrecognized values (often to completely different colors). The other color keywords should only be used in CSS and [SVG](/en-US/docs/Web/SVG).
-- Unlike HTML, CSS will completely ignore unknown keywords.
-- The color keywords all represent plain, solid colors, without transparency.
+- [HTML](/en-US/docs/Web/HTML) only recognizes the 16 basic color keywords (`black`, `silver`, `gray`, `white`, `maroon`, `red`, `purple`, `fuchsia`, `green`, `lime`, `olive`, `yellow`, `navy`, `blue`, `teal`, and `aqua`).
+- An algorithm converts all other values (a CSS color keyword or a random string) to a color (leading most of the time to completely different colors than the CSS color associated in the table below). Therefore, color keywords beside these 16 values should only be used in CSS and [SVG](/en-US/docs/Web/SVG), but not in HTML.
+- Unlike HTML, CSS completely ignores unknown keywords.
+- The color keywords all represent plain, solid colors without transparency.
 - Several keywords are aliases for each other:
 
   - `aqua` / `cyan`
@@ -31,6 +32,8 @@ There are a few caveats to consider when using color keywords:
 - Though many keywords have been adapted from [X11](https://en.wikipedia.org/wiki/X_Window_System), their RGB values may differ from the corresponding color on X11 systems since manufacturers sometimes tailor X11 colors to their specific hardware.
 
 - In addition to the color keywords, the [`<color>`](/en-US/docs/Web/CSS/color_value) data type supports other keywords: [`transparent`](/en-US/docs/Web/CSS/color_value#transparent_keyword) to create a wholly transparent color, [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) that represents the value of an element's {{Cssxref("color")}} property  lets you use the `color` value on properties that do not receive it by default, as well as _[system color keywords](/en-US/docs/Web/CSS/color_value#system_colors)_ that reprensents colors that matches those of the OS.
+
+## List of all color keywords
 
 <table>
   <thead>
