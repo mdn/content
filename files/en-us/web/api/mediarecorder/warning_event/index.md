@@ -17,21 +17,11 @@ browser-compat: api.MediaRecorder.onwarning
 
 The `warning` event fires on non-fatal errors during media recording via a `MediaRecorder`. Non-fatal errors are one's that don't halt recording.
 
-## Syntax
+## Value
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+A function reference.
 
-```js
-addEventListener('warning', event => { });
-
-onwarning = event => { };
-```
-
-## Event type
-
-A generic {{domxref("Event")}}.
-
-## Example
+## Examples
 
 ```js
 ...

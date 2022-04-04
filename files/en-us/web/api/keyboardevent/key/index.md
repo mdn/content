@@ -15,6 +15,10 @@ browser-compat: api.KeyboardEvent.key
 
 The {{domxref("KeyboardEvent")}} interface's **`key`** read-only property returns the value of the key pressed by the user, taking into consideration the state of modifier keys such as <kbd>Shift</kbd> as well as the keyboard locale and layout.
 
+## Value
+
+A string.
+
 Its value is determined as follows:
 
 - If the pressed key has a printed representation, the returned value is a non-empty Unicode character string containing the printable representation of the key.
@@ -186,7 +190,7 @@ As we release the `shift` key, a {{domxref("Element/keyup_event", "keyup")}} eve
 
 As we finally release the `key 2`, a {{domxref("Element/keyup_event", "keyup")}} event is fired but the `key` property will be set to the string value `2` for both keyboard layouts because the modifier `shift` key is no longer active.
 
-## Example
+## Examples
 
 This example uses {{domxref("EventTarget.addEventListener()")}} to listen for {{domxref("Element/keydown_event", "keydown")}} events. When they occur, the key's value is checked to see if it's one of the keys the code is interested in, and if it is, it gets processed in some way (possibly by steering a spacecraft, perhaps by changing the selected cell in a spreadsheet).
 
