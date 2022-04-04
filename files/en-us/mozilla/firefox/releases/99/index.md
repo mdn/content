@@ -27,7 +27,7 @@ No notable changes.
 
 ### APIs
 
-- {{domxref("navigator.pdfViewerEnabled")}} is now enabled, and is the recommend way to determine whether a browser supports inline display of PDF files when navigating to them.
+- {{domxref("navigator.pdfViewerEnabled")}} is now enabled, and is the recommended way to determine whether a browser supports inline display of PDF files when navigating to them.
   Sites that use the deprecated properties {{domxref("navigator.plugins")}} and {{domxref("navigator.mimeTypes")}} to infer PDF viewer support should now use the new property, even though these now return hard-coded mock values that match the signal provided by `pdfViewerEnabled` ({{bug(1720353)}}).
 
 #### Media, WebRTC, and Web Audio
