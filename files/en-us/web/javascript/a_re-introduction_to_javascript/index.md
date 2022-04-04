@@ -581,9 +581,9 @@ Arrays come with a number of methods. See also the [full documentation for array
 | Method name                                          | Description                                                                       |
 | ---------------------------------------------------- | --------------------------------------------------------------------------------- |
 | `a.toString()`                                       | Returns a string with the `toString()` of each element separated by commas.       |
-| `a.toLocaleString()`                                 | Returns a string with the `toLocaleString()` of each element separated by commas. |
+| `a.toLocaleString()`                                 | Returns a date object as a string using locale settings.                          |
 | `a.concat(item1[, item2[, ...[, itemN]]])`           | Returns a new array with the items added on to it.                                |
-| `a.join(sep)`                                        | Converts the array to a string — with values delimited by the `sep` param         |
+| `a.join(sep)`                                        | Converts the array to a string — with values delimited by the `sep` parameter.    |
 | `a.pop()`                                            | Removes and returns the last item.                                                |
 | `a.push(item1, ..., itemN)`                          | Appends items to the end of the array.                                            |
 | `a.shift()`                                          | Removes and returns the first item.                                               |
