@@ -13,11 +13,6 @@ browser-compat: api.RTCIceServer.url
 ---
 {{APIRef("WebRTC")}}{{deprecated_header}}
 
-{{draft("I'm experimenting with structure for pages documenting members of
-  dictionaries. Please contact ~~sheppy with any feedback.")}}
-
-{{SeeCompatTable}}
-
 The **obsolete** {{domxref("RTCIceServer")}} dictionary's
 **`url`** property specifies the URL of a single ICE server to
 be used while negotiating connections. It was removed from the specification in June

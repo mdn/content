@@ -8,9 +8,6 @@ tags:
   - XUL
 ---
 {{FirefoxSidebar}}
-
-{{ draft() }}
-
 This article covers security-related changes in Firefox 3.5.
 
 ## Changes to chrome registration
