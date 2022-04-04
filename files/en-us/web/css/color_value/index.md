@@ -51,7 +51,7 @@ The `<color>` data type is specified using one of the options listed below.
 
 Color keywords are case-insensitive identifiers that represent a specific color, such as `red`, `blue`, `black`, or `lightseagreen`. Although the names more or less describes their respective colors, they are essentially artificial, without a strict rationale behind the names used.
 
-The complete list of such keywords is available [here](color_keywords).
+The complete list of such keywords is available [here](/en-US/docs/Web/CSS/color_value/color_keywords).
 
 ### transparent keyword
 
