@@ -31,8 +31,8 @@ receiving window is then free to [handle this event](/en-US/docs/Web/Events/Even
 ## Syntax
 
 ```js
-postMessage(message, targetOrigin)
-postMessage(message, targetOrigin, [transfer])
+targetWindow.postMessage(message, targetOrigin)
+targetWindow.postMessage(message, targetOrigin, [transfer])
 ```
 
 - `targetWindow`
