@@ -21,12 +21,9 @@ is not a valid file name in the underlying OS, the browser will adjust it.
 > **Note:** This value might not be used for download. This value cannot
 > be used to determine whether the download will occur.
 
-## Syntax
+## Value
 
-```js
-var dnload = anchorElt.download;
-anchorElt.download = dnload;
-```
+A string.
 
 ## Specifications
 

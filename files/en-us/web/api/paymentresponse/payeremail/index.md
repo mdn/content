@@ -21,11 +21,9 @@ when the `requestPayerEmail` option is set to `true` in the
 {{domxref('PaymentOptions')}} object passed to the
 {{domxref('PaymentRequest.PaymentRequest','PaymentRequest')}} constructor.
 
-## Syntax
+## Value
 
-```js
-var payerEmail = PaymentResponse.payerEmail;
-```
+A string.
 
 ## Browser compatibility
 

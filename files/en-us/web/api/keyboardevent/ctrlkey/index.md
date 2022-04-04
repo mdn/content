@@ -16,17 +16,11 @@ The **`KeyboardEvent.ctrlKey`** read-only property returns a
 boolean value that indicates if the <kbd>control</kbd> key was pressed
 (`true`) or not (`false`) when the event occurred.
 
-## Syntax
-
-```js
-var ctrlKeyPressed = instanceOfKeyboardEvent.ctrlKey
-```
-
-### Return value
+## Value
 
 A boolean value
 
-## Example
+## Examples
 
 ```js
 <html>

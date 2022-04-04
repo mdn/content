@@ -1,5 +1,5 @@
 ---
-title: 'Location: pathname'
+title: location.pathname
 slug: Web/API/Location/pathname
 tags:
   - API

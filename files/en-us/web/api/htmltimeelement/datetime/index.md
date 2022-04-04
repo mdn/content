@@ -152,14 +152,11 @@ The format of the string must follow one of the following HTML microsyntaxes:
   </tbody>
 </table>
 
-## Syntax
+## Value
 
-```js
-dateTimeString = timeElt.dateTime;
-timeElt.dateTime = dateTimeString
-```
+A string.
 
-## Example
+## Examples
 
 ```js
 // Assumes there is <time id="t"> element in the HTML

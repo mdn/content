@@ -25,15 +25,17 @@ equivalent to {{DOMxRef("Document.createElement()",
 ## Syntax
 
 ```js
+new Image();
+new Image(width);
 new Image(width, height);
 ```
 
 ### Parameters
 
-- `width`
+- `width` {{optional_inline}}
   - : The width of the image (i.e., the value for the {{HTMLAttrxRef("width", "img")}}
     attribute).
-- `height`
+- `height` {{optional_inline}}
   - : The height of the image (i.e., the value for the {{HTMLAttrxRef("height", "img")}}
     attribute).
 

@@ -25,11 +25,9 @@ in milliseconds since the UNIX epoch, when the parser started its work, that is 
 {{domxref("Document.readyState")}} changes to `'loading'` and the
 corresponding {{event("readystatechange")}} event is thrown.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.domLoading;
-```
+An `unsigned long long`.
 
 ## Specifications
 

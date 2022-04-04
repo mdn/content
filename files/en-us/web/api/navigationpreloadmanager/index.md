@@ -49,7 +49,7 @@ This might be used, for example, to reduce the data sent to just part of the ori
 
 ## Examples
 
-The examples here are from [Speed up Service Worker with Navigation Preloads](https://developers.google.com/web/updates/2017/02/navigation-preload#the-solution) (developers.google.com).
+The examples here are from [Speed up Service Worker with Navigation Preloads](https://developer.chrome.com/blog/navigation-preload/) (developer.chrome.com).
 
 ### Feature detection and enabling navigation preloading
 
@@ -121,7 +121,7 @@ navigator.serviceWorker.ready
   });
 ```
 
-[Speed up Service Worker with Navigation Preloads > Custom responses for preloads](https://developers.google.com/web/updates/2017/02/navigation-preload) provides a more complete example of a site where the response for an article web page is constructed from a cached header and footer, so that only the article content is returned for a prefetch.
+[Speed up Service Worker with Navigation Preloads > Custom responses for preloads](https://developer.chrome.com/blog/navigation-preload/) provides a more complete example of a site where the response for an article web page is constructed from a cached header and footer, so that only the article content is returned for a prefetch.
 
 ### Getting the state
 
@@ -151,4 +151,4 @@ navigator.serviceWorker.ready
 
 ## See also
 
-- [Speed up Service Worker with Navigation Preloads](https://developers.google.com/web/updates/2017/02/navigation-preload) (developers.google.com)
+- [Speed up Service Worker with Navigation Preloads](https://developer.chrome.com/blog/navigation-preload/) (developer.chrome.com)

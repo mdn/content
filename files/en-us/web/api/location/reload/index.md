@@ -1,5 +1,5 @@
 ---
-title: 'Location: reload()'
+title: location.reload()
 slug: Web/API/Location/reload
 tags:
   - API

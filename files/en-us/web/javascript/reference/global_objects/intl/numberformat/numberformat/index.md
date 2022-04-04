@@ -198,6 +198,7 @@ new Intl.NumberFormat(locales, options)
         - It cannot be mixed with significant-digits rounding or any setting of `roundingPriority` other than `auto`.
         >
         > For example, if `maximumFractionDigits` is 2 and `roundingIncrement` is 5, then the number is rounded to the nearest 0.05 ("nickel rounding").
+        >
         > ```js
         >
         > const nf = new Intl.NumberFormat("en-US", {
@@ -211,9 +212,9 @@ new Intl.NumberFormat(locales, options)
         > console.log(nf.format(11.25));  // > output: "$11.25"
         > console.log(nf.format(11.22));  // > output: "$11.20"  
         > ```
+        >
         > If you set `minimumFractionDigits` and `maximumFractionDigits`, they must set them to the same value; otherwise a `RangeError` is thrown.
         >
-     
 
     - `trailingZeroDisplay`
       - : A string expressing the strategy for displaying trailing zeros on whole numbers. The default is "`auto`".

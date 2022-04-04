@@ -30,14 +30,9 @@ ancestor `td`, `th`, `table` will be returned, or the
 {{domxref("HTMLElement.offsetTop","offsetTop")}} and
 {{domxref("HTMLElement.offsetLeft","offsetLeft")}} are relative to its padding edge.
 
-## Syntax
+## Value
 
-```js
-parentObj = element.offsetParent;
-```
-
-- _parentObj_ is an object reference to the element in which the current
-  element is offset.
+An object reference to the element in which the current element is offset.
 
 ## Specifications
 

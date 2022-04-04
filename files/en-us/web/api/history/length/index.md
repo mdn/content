@@ -17,14 +17,11 @@ The **`History.length`** read-only
 property returns an integer representing the number of elements in the session
 history, including the currently loaded page.
 
-For example, for a page loaded in
-a new tab this property returns `1`.
+For example, for a page loaded in a new tab this property returns `1`.
 
-## Syntax
+## Value
 
-```js
-const length = history.length
-```
+A number.
 
 ## Specifications
 

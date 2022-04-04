@@ -98,7 +98,7 @@ _No changes._
 
 #### Removals
 
-- The {{event("userproximity")}} and {{event("deviceproximity")}} events (see also {{domxref("UserProximityEvent")}} and {{domxref("DeviceProximityEvent")}}) have been disabled by default behind the `device.sensors.proximity.enabled` preference ({{bug(1462308)}}).
+- The `userproximity` and `deviceproximity` events, as well as the `UserProximityEvent` and `DeviceProximityEvent`interfaces, have been disabled by default behind the `device.sensors.proximity.enabled` preference ({{bug(1462308)}}).
 - The `devicelight` event of type `DeviceLightEvent` has been disabled by default behind the `device.sensors.ambientLight.enabled` preference ({{bug(1462308)}}).
 - The {{event("DOMSubtreeModified")}} and {{event("DOMAttrModified")}} [mutation events](/en-US/docs/Web/API/MutationEvent) are no longer thrown when the {{htmlattrxref("style")}} attribute is changed via the CSSOM ({{bug(1460295)}}.
 - Support for {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} has been removed ({{bug(1408301)}}).

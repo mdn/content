@@ -20,14 +20,9 @@ and
 [`URL.searchParams`](/en-US/docs/Web/API/URL/searchParams#examples)
 to make it easy to parse out the parameters from the querystring.
 
-## Syntax
+## Value
 
-```js
-// Getter
-string = area.search;
-// Setter
-area.search = string;
-```
+A string.
 
 ## Examples
 

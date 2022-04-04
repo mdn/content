@@ -22,7 +22,7 @@ recognition results for the current session.
 
 Specifically this object will contain all final results that have been returned,
 followed by the current best hypothesis for all interim results. When subsequent
-{{event("result")}} events are fired, interim results may be overwritten by a newer
+{{domxref("SpeechRecognition.result_event", "result")}} events are fired, interim results may be overwritten by a newer
 interim result or by a final result — they may even be removed, if they are at the end
 of the "results" array and the array length decreases. Final results on the other hand
 will not be overwritten or removed.

@@ -81,10 +81,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{htmlattrdef("open")}}
   - : Indicates that the dialog is active and can be interacted with. When the `open` attribute is not set, the dialog _shouldn't_ be shown to the user.
+      It is recommended to use the `.show()` or `.showModal()` methods to render dialogs, rather than the `open` attribute.
 
 ## Accessibility considerations
 
-The `dialog` element still has [compatibility issues with some forms of assistive technology](https://www.scottohara.me/blog/2019/03/05/open-dialog.html#incoming-dialog), which may prevent people from reading or using `dialog` element content. Because of this, it is advised to use an interim solution such as [a11y-dialog](https://a11y-dialog.netlify.app/) until support improves.
+The `dialog` element still has [usability issues with some forms of assistive technology](https://www.scottohara.me/blog/2019/03/05/open-dialog.html). Because of this, it is advised to use an interim solution such as [a11y-dialog](https://a11y-dialog.netlify.app/) as support continues to improve.
 
 ## Usage notes
 
@@ -95,59 +96,71 @@ The `dialog` element still has [compatibility issues with some forms of assistiv
 
 ### Simple example
 
+The following will render a modeless (non-modal) dialog. The "OK" button allows the dialog to be closed when activated. It is important to provide a mechanism to close a dialog within the `dialog` element. For instance, the <kbd>Esc</kbd> key does not close modeless dialogs by default, nor can one assume that a user will even have access to a physical keyboard (e.g., someone using a touch screen device without access to a keyboard).
+  
 ```html
 <dialog open>
   <p>Greetings, one and all!</p>
+  <form method="dialog">
+    <button>OK</button>
+  </form>
 </dialog>
 ```
 
 ### Advanced example
 
-This example opens a pop-up dialog box that contains a form, when the "Update details" button is clicked.
+This example opens a modal dialog that contains a form, when the "Update details" button is activated.
 
 #### HTML
 
 ```html
-<!-- Simple pop-up dialog box containing a form -->
+<!-- Simple modal dialog containing a form -->
 <dialog id="favDialog">
   <form method="dialog">
     <p><label>Favorite animal:
       <select>
-        <option></option>
+        <option value="default">Choose...</option>
         <option>Brine shrimp</option>
         <option>Red panda</option>
         <option>Spider monkey</option>
       </select>
     </label></p>
-    <menu>
+    <div>
       <button value="cancel">Cancel</button>
       <button id="confirmBtn" value="default">Confirm</button>
-    </menu>
+    </div>
   </form>
 </dialog>
-
-<menu>
+<p>
   <button id="updateDetails">Update details</button>
-</menu>
-
-<output aria-live="polite"></output>
+</p>
+<output></output>
 ```
 
 #### JavaScript
 
 ```js
-var updateButton = document.getElementById('updateDetails');
-var favDialog = document.getElementById('favDialog');
-var outputBox = document.querySelector('output');
-var selectEl = document.querySelector('select');
-var confirmBtn = document.getElementById('confirmBtn');
+const updateButton = document.getElementById('updateDetails');
+const favDialog = document.getElementById('favDialog');
+const outputBox = document.querySelector('output');
+const selectEl = favDialog.querySelector('select');
+const confirmBtn = favDialog.querySelector('#confirmBtn');
 
+// If a browser doesn't support the dialog, then hide the
+// dialog contents by default.
+if ( typeof favDialog.showModal !== 'function' ) {
+	favDialog.hidden = true;
+	/* a fallback script to allow this dialog/form to function
+	   for legacy browsers that do not support <dialog>
+				could be provided here.
+	*/
+}
 // "Update details" button opens the <dialog> modally
 updateButton.addEventListener('click', function onOpen() {
   if (typeof favDialog.showModal === "function") {
     favDialog.showModal();
   } else {
-    alert("The <dialog> API is not supported by this browser");
+    outputBox.value = "Sorry, the <dialog> API is not supported by this browser.";
   }
 });
 // "Favorite animal" input sets the value of the submit button

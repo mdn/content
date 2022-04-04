@@ -17,7 +17,11 @@ discharging, its value is
 > browsers round them to a higher interval
 > (typically to the closest 15 minutes) for privacy reasons.
 
-## Example
+## Value
+
+A number.
+
+## Examples
 
 ### HTML Content
 

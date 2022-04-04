@@ -41,11 +41,11 @@ _No specific methods; inherits methods from its parent, {{domxref("HTMLElement")
 _No specific event handlers; inherits event handlers from its parent, {{domxref("HTMLElement")}} and from {{domxref("WindowEventHandlers")}}._
 
 - {{domxref("WindowEventHandlers.onafterprint")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("afterprint")}} event is raised.
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Window.afterprint_event", "afterprint")}} event is raised.
 - {{domxref("WindowEventHandlers.onbeforeprint")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("beforeprint")}} event is raised.
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Window.beforeprint_event", "beforeprint")}} event is raised.
 - {{domxref("WindowEventHandlers.onbeforeunload")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("beforeunload")}} event is raised.
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Window.beforeunload_event", "beforeunload")}} event is raised.
 - {{domxref("WindowEventHandlers.onhashchange")}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("hashchange")}} event is raised.
 - {{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}

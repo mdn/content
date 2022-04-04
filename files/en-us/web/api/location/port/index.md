@@ -1,5 +1,5 @@
 ---
-title: 'Location: port'
+title: location.port
 slug: Web/API/Location/port
 tags:
   - API

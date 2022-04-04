@@ -21,11 +21,9 @@ location.
 > information, the user is notified and asked to grant permission. Be aware that each
 > browser has its own policies and methods for requesting this permission.
 
-## Syntax
+## Value
 
-```js
-geo = navigator.geolocation
-```
+A {{domxref("Geolocation")}} object.
 
 ## Specifications
 

@@ -15,18 +15,12 @@ The **`HTMLTextAreaElement.labels`** read-only property returns
 a {{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with the
 {{HTMLElement("textArea")}} element.
 
-## Syntax
-
-```js
-var labelElements = textArea.labels;
-```
-
-### Return value
+## Value
 
 A {{domxref("NodeList")}} containing the `<label>` elements associated
 with the `<textArea>` element.
 
-## Example
+## Examples
 
 ### HTML
 
