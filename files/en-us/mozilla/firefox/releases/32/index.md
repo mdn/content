@@ -45,7 +45,7 @@ Highlights:
 
 ### Interfaces/APIs/DOM
 
-- The {{domxref("NavigatorLanguage.languages", "navigator.languages")}} property and {{event("languagechange")}} event have been implemented ({{Bug(889335)}}).
+- The {{domxref("NavigatorLanguage.languages", "navigator.languages")}} property and {{domxref("Window.languagechange_event", "languagechange")}} event have been implemented ({{Bug(889335)}}).
 - The {{domxref("Navigator.vibrate()")}} method behavior has been adapted to the latest specification: too long vibrations are now truncated ({{bug(1014581)}}).
 - The {{domxref("KeyboardEvent.getModifierState()")}} and {{domxref("MouseEvent.getModifierState()")}} methods have been extended to support the `Accel` virtual modifier ({{Bug(1009388)}}).
 - The {{domxref("KeyboardEvent.code")}} property have been experimentally implemented: it is disabled on release build ({{Bug(865649)}}).

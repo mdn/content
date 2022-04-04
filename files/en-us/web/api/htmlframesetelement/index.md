@@ -42,11 +42,11 @@ _No specific event handler; inherits event handlers from its parent, {{domxref("
 - {{domxref("WindowEventHandlers.onhashchange")}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("hashchange")}} event is raised.
 - {{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("languagechange")}} event is raised.
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Window.languagechange_event", "languagechange")}} event is raised.
 - {{domxref("WindowEventHandlers.onoffline")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("offline")}} event is raised.
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Window.offline_event", "offline")}} event is raised.
 - {{domxref("WindowEventHandlers.ononline")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("online")}} event is raised.
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Window.online_event", "online")}} event is raised.
 - {{domxref("WindowEventHandlers.onpagehide")}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("pagehide")}} event is raised.
 - {{domxref("WindowEventHandlers.onpageshow")}}
@@ -56,7 +56,7 @@ _No specific event handler; inherits event handlers from its parent, {{domxref("
 - {{domxref("WindowEventHandlers.onresize")}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("resize")}} event is raised.
 - {{domxref("WindowEventHandlers.onstorage")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("storage")}} event is raised.
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Window.storage_event", "storage")}} event is raised.
 - {{domxref("WindowEventHandlers.onunload")}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("unload")}} event is raised.
 

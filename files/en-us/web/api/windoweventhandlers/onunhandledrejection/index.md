@@ -17,7 +17,7 @@ browser-compat: api.WindowEventHandlers.onunhandledrejection
 
 The **`onunhandledrejection`** property of the
 {{domxref("WindowEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
-processing {{event("unhandledrejection")}} events. These events are raised for unhandled
+processing {{domxref("Window.unhandledrejection_event", "unhandledrejection")}} events. These events are raised for unhandled
 {{jsxref("Promise")}} rejections.
 
 ## Value
