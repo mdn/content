@@ -7,8 +7,6 @@ tags:
   - Web Development
   - Website Security
 ---
-{{ draft() }}
-
 There are a number of things you can do to help secure your site. This article offers an assortment of suggestions, as well as links to other articles providing more useful information.
 
 > **Note:** This article is a work in progress, and is neither complete nor does following its suggestions guarantee your site will be fully secure.
