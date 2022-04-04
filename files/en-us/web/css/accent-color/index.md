@@ -42,6 +42,7 @@ accent-color: hsl(228, 4%, 24%);
 accent-color: inherit;
 accent-color: initial;
 accent-color: revert;
+accent-color: revert-layer;
 accent-color: unset;
 ```
 

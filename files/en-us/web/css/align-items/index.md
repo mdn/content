@@ -41,6 +41,7 @@ align-items: unsafe center;
 align-items: inherit;
 align-items: initial;
 align-items: revert;
+align-items: revert-layer;
 align-items: unset;
 ```
 

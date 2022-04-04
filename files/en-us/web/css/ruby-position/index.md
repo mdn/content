@@ -26,6 +26,7 @@ ruby-position: alternate;
 ruby-position: inherit;
 ruby-position: initial;
 ruby-position: revert;
+ruby-position: revert-layer;
 ruby-position: unset;
 ```
 
