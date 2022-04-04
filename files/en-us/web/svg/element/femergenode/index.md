@@ -47,7 +47,7 @@ The `feMergeNode` takes the result of another filter to be processed by its pare
 
 ### Global attributes
 
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core)
+- [Core attributes](/en-US/docs/Web/SVG/Attribute/Core)
 
 ### Specific attributes
 
