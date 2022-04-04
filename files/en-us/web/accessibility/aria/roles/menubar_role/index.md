@@ -16,15 +16,15 @@ A `menubar` is a presentation of `menu` that usually remains visible and is usua
 
 ## Description
 
-A menu is a widget that offers a list of choices to the user, such as a set of actions or functions. The menubar type of menu is usually presented as a horizontal menu bar that remains visible. Menubars behave like native operating system menubars, such as the menubars, contining pull down menus, commonly found at the top of many desktop application windows. 
+A menu is a widget that offers a list of choices to the user, such as a set of actions or functions. The menubar type of menu is usually presented as a persistently visible horizontal bar of commands. Menubars behave like native operating system menubars, such as the menubars containing pull down menus, commonly found at the top of many desktop application windows. 
 
 The `menubar` role is used to create a menu bar similar to those found near the top of the window in many desktop applications, visually persistent, typically horizontal, bar of menu items offering the user quick access to a consistent set of commands. 
 
 A `menubar` contains three types of menu items, including [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role) and  [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role). These menu items may optionally be nested in one or more  [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) containers. Groups or items may optionally by separated with [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) elements. While every menu item must be able to receive focus, even if disabled, the `group` and `separator` elements are not focusable.
 
-An example of a native menubar is the bar at the top of the screen if you are reading this in a desktop browser. An example of a web-based menubar is the usually visible horizontal menu bar that reads "File Edit View Insert Format", etc, under the document name in a Google doc. 
+An example of a native menubar is the bar which may be present at the top of the screen if you are reading this in a desktop browser. An example of a web-based menubar is the horizontal menu bar that reads "File Edit View Insert Format", etc., which is usually visible under the document name in a Google doc. 
 
-Menubar interactions should be similar to the typical menu bar interaction in a desktop graphical user interface. In Google Docs,each of those menu items is a `menuitem` with a popup submenu, so each has an `aria-haspopup` attribute set to `true`. The `menubar` element does not. 
+Menubar interactions should be similar to the typical menu bar interaction in a desktop graphical user interface. In Google Docs, each of those menu items is a `menuitem` with a popup submenu, so each has an `aria-haspopup` attribute set to `true`. The `menubar` element does not. 
 
 The menubar and all the menu items are focusable and have a {{htmlattrdef('tabindex')}} attribute set. When the menubar receives focus thru tabbing, keyboard focus is placed on the first menuitem. Each item in the menu has `tabindex` set to `-1`, except the first item has which has it's `tabindex` set to `0`.
 
@@ -52,7 +52,7 @@ A `menuitem` element in the `menubar` can contain a child submenu of menu items.
 
 ### Keyboard interactions
 
-When focus is in a `menubar` it is always on a menu item within the menubar. When focus is on a top level `menuitem` in a menubar, the following keyboard interactions must be supported:
+When focus is in a `menubar` it is always on a menu item within the menu bar. When focus is on a top level `menuitem` in a menu bar, the following keyboard interactions must be supported:
 
 - <kbd>Down Arrow</kbd> 
   - : If the currently focused `menuitem` has a submenu, opens the submenu and places focus on the first item in the submenu.
