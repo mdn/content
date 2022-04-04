@@ -118,7 +118,7 @@ The features include (see [Features list](/en-US/docs/Web/HTTP/Headers/Feature-P
 ## Examples
 
 - [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
-- See [Feature Policy Demos](http://feature-policy-demos.appspot.com/) for example usage of many policies.
+- See [Feature Policy Demos](https://feature-policy-demos.appspot.com/) for example usage of many policies.
 
 ## Specifications
 
