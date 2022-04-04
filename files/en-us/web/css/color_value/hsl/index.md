@@ -51,5 +51,5 @@ hsl(hue saturation lightness / alpha)
 
 ## See also
 
-- The function {{cssxref("hsla()")}}, an historical alias for this method.
+- The function [`hsla()`](/en-US/docs/Web/CSS/color_value/hsla), an historical alias for this function.
 - The {{cssxref("&lt;color&gt;")}} type that represents any color.
