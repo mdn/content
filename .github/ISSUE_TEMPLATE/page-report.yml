@@ -56,7 +56,7 @@ body:
         ---
         You're finished! The following fields are prefilled. Please click **Submit new issue**.
   - type: textarea
-    id: metadata-json
+    id: metadata
     attributes:
       label: MDN metadata
       description: Set automatically. Do not modify.
