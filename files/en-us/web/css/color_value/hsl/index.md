@@ -9,45 +9,47 @@ tags:
   - Web
   - color
   - hsl
+browser-compat: css.types.color.hsl
 ---
 {{CSSRef}}
 
-The **`hsl()`** functional notation expresses a given color according to its hue, saturation, and lightness components. An optional alpha component represents the color's transparency.
-
-> **Note:** CSS Colors Level 4 made some changes to `hsl()`. In browsers that support the standard {{cssxref("color_value/hsla","hsla()")}} is an alias for `hsl()`, they accept the same parameters and behave the same way.
->
-> The Level 4 specification also allows for space-separated in addition to comma-separated values.
+The **`hsl()`** functional notation expresses an [sRGB](https://en.wikipedia.org/wiki/SRGB) color according to its _hue_, _saturation_, and _lightness_ components. An optional _alpha_ component represents the color's transparency.
 
 ## Syntax
 
 ```css
-hsl(100, 100%, 50%) /* #5f0 */
-hsl(235, 100%, 50%, .5) /* #0015ff with 50% opacity */
-hsl(235 100% 50%) /* CSS Colors 4 space-separated values */
-hsl(235 100% 50% / .5); /* #0015ff with 50% opacity, using CSS Colors 4 space-separated values */
+/* Syntax with comma-separated values */
+hsl(hue, saturation, lightness)
+hsl(hue, saturation, lightness, alpha)
+
+/* Syntax with space-separated values */
+hsl(hue saturation lightness)
+hsl(hue saturation lightness / alpha)
 ```
 
 ### Values
 
-- Functional notation: `hsl(H, S, L[, A])`
+- `hue`
+  - : An {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in {{SpecName("CSS4 Colors","#the-hsl-notation")}}. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees. By definition, _red_ is `0deg`, with the other colors spread around the circle, so _green_ is `120deg`, _blue_ is `240deg`, etc. As an `<angle>` is periodic, it implicitly wraps around such that `-120deg` = `240deg`, `480deg` = `120deg`, `-1turn` = `1turn?, etc.
 
-  - : `H` (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in {{SpecName("CSS4 Colors","#the-hsl-notation")}}. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in {{SpecName("CSS3 Colors", "#hsl-color")}}. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
+- `saturation`
+  - : A {{cssref("&lt;percentage&gt;")}} where `100%` is completely saturated, while `0%` is completely unsaturated (gray).
+  
+- `lightness`  
+  - : A {{cssref("&lt;percentage&gt;")}} where `100%` is white, `0%` lightness is black, and `50%` lightness is "normal".
 
-    `S` (saturation) and `L` (lightness) are percentages. `100%` **saturation** is completely saturated, while `0%` is completely unsaturated (gray). `100%` **lightness** is white, `0%` lightness is black, and `50%` lightness is "normal."
+- `alpha` {{optional_inline}}
+  - : A {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` and means full opacity, while `0`, corresponding to `0%` means fully transparent.
 
-    `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
+## Specifications
 
-- Functional notation: `hsl(H S L[ / A])`
-  - : CSS Colors Level 4 adds support for space-separated values in the functional notation.
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("css.types.color.hsl")}}
+{{Compat}}
 
-### Space-separated values
+## See also
 
-{{Compat("css.types.color.space_separated_functional_notation")}}
-
-### Accepts alpha value
-
-{{Compat("css.types.color.hsl_function_accepts_alpha")}}
+- The function {{cssxref("hsla()")}}, an historical alias for this method.
+- The {{cssxref("&lt;color&gt;")}} type that represents any color.
