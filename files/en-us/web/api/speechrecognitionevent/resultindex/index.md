@@ -22,13 +22,7 @@ the {{domxref("SpeechRecognitionResultList")}} "array" that has actually changed
 The {{domxref("SpeechRecognitionResultList")}} object is not an array, but it has a
 getter that allows it to be accessed by array syntax.
 
-## Syntax
-
-```js
-var myResultIndex = event.resultIndex;
-```
-
-### Value
+## Value
 
 A number.
 

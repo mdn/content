@@ -108,7 +108,7 @@ onNameOfTheEvent = event => { };
 
 ## Event type
 
-If the event has a special type, mention it along with its inheritance. If not, indicate that it it a generic event:
+If the event has a special type, mention it along with its inheritance. If not, indicate that it is a generic event:
 
 _A generic {{domxref("Event")}}._
 

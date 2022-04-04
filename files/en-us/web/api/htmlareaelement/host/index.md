@@ -15,14 +15,9 @@ The **`HTMLAreaElement.host`** property is a
 if the _port_ of the URL is nonempty, a `':'`, and the _port_
 of the URL.
 
-## Syntax
+## Value
 
-```js
-// Getter
-string = area.host;
-// Setter
-area.host = string;
-```
+A string.
 
 ## Examples
 

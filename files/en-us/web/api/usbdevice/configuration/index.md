@@ -22,7 +22,7 @@ the currently selected interface for a paired USB device.
 
 A {{domxref("USBConfiguration")}} object.
 
-## Example
+## Examples
 
 The following example uses this property to test for the existence of a
 USBConfiguration property to select a configuration before claiming an interface.

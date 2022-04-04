@@ -149,7 +149,7 @@ tags:
 - To match the spec, the {{domxref("VTTCue.positionAlign")}} property now returns a `PositionAlign` enum instead of an `Align` enum ({{bug(1276129)}}).
 - The speech synthesis part of [Web Speech API](/en-US/docs/Web/API/Web_Speech_API#speech_synthesis) is now activated by default ({{bug(1268633)}}).
 - The [Performance Timeline API](/en-US/docs/Web/API/Performance_Timeline) is now available by default in Nightly (though not in Aurora, Beta or Release).
-- The {{event("install")}} event, and the {{domxref("Window.appinstalled_event", "Window.oninstall")}} event handler, are now supported for [Web Manifests](/en-US/docs/Web/Manifest) ({{bug(1265279)}}).
+- The {{domxref("ServiceWorkerGlobalScope.install_event", "install")}} event, and the {{domxref("Window.appinstalled_event", "Window.oninstall")}} event handler, are now supported for [Web Manifests](/en-US/docs/Web/Manifest) ({{bug(1265279)}}).
 - When using the {{domxref("BaseAudioContext/createPeriodicWave", "AudioContext.createPeriodicWave()")}} method of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), you can now specify whether the resulting periodic wave should be normalized by including a dictionary object as the third parameter, which includes a single parameter — `{disableNormalization: true}` ({{bug(1265405)}}).
 - In the WebVTT API, {{domxref("VTTCue.positionAlign")}} now correctly returns a `PositionAlignSetting` enum as per spec; previously it returned an `AlignSetting` enum ({{bug(1276129)}}).
 - The Speech Synthesis part of the Web Speech API is now enabled by default across all desktop browsers ({{bug(1268633)}}).

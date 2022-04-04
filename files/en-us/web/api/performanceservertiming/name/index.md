@@ -13,11 +13,9 @@ browser-compat: api.PerformanceServerTiming.name
 The **`name`** read-only property returns a
 {{domxref("DOMString")}} value of the server-specified metric name.
 
-## Syntax
+## Value
 
-```js
-serverTiming.name;
-```
+A string.
 
 ## Specifications
 

@@ -21,13 +21,11 @@ The property itself is read-only, meaning you can't substitute the
 {{domxref("DOMTokenList")}} by another one, but the content of the returned list can be
 changed.
 
-## Syntax
+## Value
 
-```js
-var relstr = areaElt.relList;
-```
+A string.
 
-## Example
+## Examples
 
 ```js
 var areas = document.getElementsByTagName("area");

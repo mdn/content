@@ -19,13 +19,7 @@ The optional **`weight`** property of the
 {{domxref("SpeechGrammar")}} interface sets and returns the weight of the
 `SpeechGrammar` object.
 
-## Syntax
-
-```js
-var myGrammarWeight = speechGrammarInstance.weight;
-```
-
-### Value
+## Value
 
 A float representing the weight of the grammar, in the range 0.0–1.0.
 

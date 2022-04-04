@@ -24,7 +24,7 @@ Selecting a different `tab` changes the currently visible tab panel. The content
 
 Tabs do not act as anchor links to individual panels. While semantic HTML may be coded with the tabs being anchor links navigating to the tab's associated tabpanel, when JavaScript is used to progressively enhance the content to a tabbed interface, the link's default behavior should be prevented.  
 
-In a tab interface, selecting a `tab` makes the associated `tabpanel` visible but does not not move user focus. Tab selection only reveals the content of the associated panel visually and unhides them from assistive technologies. The <kbd>Tab</kbd> key should be programmed to move from the focused tab to the tab's associated tabpanel.
+In a tab interface, selecting a `tab` makes the associated `tabpanel` visible but does not move user focus. Tab selection only reveals the content of the associated panel visually and unhides them from assistive technologies. The <kbd>Tab</kbd> key should be programmed to move from the focused tab to the tab's associated tabpanel.
 
 Each `tab` in a `tablist` serves as the label for one of the tab panels and can be activated to display that panel. Include the `id` of each `tab` as the value of each `tabpanel`'s [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute.
 

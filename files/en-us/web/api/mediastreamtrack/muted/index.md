@@ -29,7 +29,7 @@ A {{jsxref('Boolean')}} which is `true` if the track is currently muted, or
 `false` if the track is currently unmuted.
 
 > **Note:** When possible, avoid polling `muted` to monitor the track's muting status.
-> Instead, add event listeners for the {{event("mute")}} and {{event("unmute")}} events.
+> Instead, add event listeners for the {{domxref("MediaStreamTrack.mute_event", "mute")}} and {{domxref("MediaStreamTrack.unmute_event", "unmute")}} events.
 
 ## Examples
 

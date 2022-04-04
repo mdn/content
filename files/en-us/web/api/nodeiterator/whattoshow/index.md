@@ -14,11 +14,9 @@ The **`NodeIterator.whatToShow`** read-only property represents
 an `unsigned integer` representing a bitmask signifying what types of nodes
 should be returned by the {{domxref("NodeIterator")}}.
 
-## Syntax
+## Value
 
-```js
-var nodeTypes = nodeIterator.whatToShow;
-```
+An `unsigned integer`.
 
 The values that can be combined to form the bitmask are:
 
@@ -118,7 +116,7 @@ The values that can be combined to form the bitmask are:
   </tbody>
 </table>
 
-## Example
+## Examples
 
 ```js
 var nodeIterator = document.createNodeIterator(

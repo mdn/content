@@ -157,7 +157,7 @@ In some of the previous examples, you'll notice that some have a fourth value wh
 
 ### sRGB: the accessible colorspace
 
-For accessibility guidelines the **sRGB** colorspace is most commonly used. This is not only because sRGB is the current default standard for the the web, but also the sRGB color primaries are well suited for accessibility concerns. For instance, the "red" sRGB primary is actually a red-orange, with a dominant wavelength of 611nm which overlaps into the M cone (green) sensitivity.
+For accessibility guidelines the **sRGB** colorspace is most commonly used. This is not only because sRGB is the current default standard for the web, but also the sRGB color primaries are well suited for accessibility concerns. For instance, the "red" sRGB primary is actually a red-orange, with a dominant wavelength of 611nm which overlaps into the M cone (green) sensitivity.
 
 This is helpful for some impairments related to color vision deficiency (CVD). One form of CVD called protanopia means the eye has no red cones. But protanopia will still be able to perceive the sRGB red primary because the remaining green cones perceive it, though about 35% darker than normal vision. Nevertheless, both a protan (red deficient) and deutan (green deficient) type of CVD have difficulty distinguishing _between_ red and green.
 

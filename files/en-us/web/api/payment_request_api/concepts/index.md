@@ -79,7 +79,7 @@ In this example, `fetchValidationData()` is a function which loads the payment h
 
 By then delivering this data (or a {{jsxref("Promise")}} which resolves to the loaded data) to the payment handler by passing it into `complete()`, the payment handler can use the retrieved data and whatever algorithm and other data to support in order to verify that the merchant can use the payment handler.
 
-Thus, it's important to note that the {{Glossary("user agent")}} never sends a {{event("merchantvalidation")}} event, unless the user agent itself implements a payment handler. For instance, Safari has integrated support for Apple Pay, so the Apple Pay payment handler uses this to ensure that Apple Pay can be used to pay the merchant by sending `merchantvalidation` to the client, instructing it to fetch the server's validation data and deliver it to the payment handler by calling `complete()`.
+Thus, it's important to note that the {{Glossary("user agent")}} never sends a {{domxref("PaymentRequest.merchantvalidation_event", "merchantvalidation")}} event, unless the user agent itself implements a payment handler. For instance, Safari has integrated support for Apple Pay, so the Apple Pay payment handler uses this to ensure that Apple Pay can be used to pay the merchant by sending `merchantvalidation` to the client, instructing it to fetch the server's validation data and deliver it to the payment handler by calling `complete()`.
 
 ## Specifications
 

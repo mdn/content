@@ -20,13 +20,7 @@ The read-only **`submitter`** property found on
 the {{domxref("SubmitEvent")}} interface specifies the submit button or other element
 that was invoked to cause the form to be submitted.
 
-## Syntax
-
-```js
-let submitter = submitEvent.submitter;
-```
-
-### Value
+## Value
 
 An element, indicating the element that sent
 the {{domxref("HTMLFormElement.submit_event", "submit")}} event to the form. While this

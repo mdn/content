@@ -1,5 +1,5 @@
 ---
-title: 'Location: protocol'
+title: location.protocol
 slug: Web/API/Location/protocol
 tags:
   - API

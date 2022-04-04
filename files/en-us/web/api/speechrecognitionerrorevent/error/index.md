@@ -18,13 +18,7 @@ browser-compat: api.SpeechRecognitionErrorEvent.error
 The **`error`** read-only property of the
 {{domxref("SpeechRecognitionErrorEvent")}} interface returns the type of error raised.
 
-## Syntax
-
-```js
-var myError = event.error;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} naming the type of error. The possible error types are:
 

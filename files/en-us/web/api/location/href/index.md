@@ -1,5 +1,5 @@
 ---
-title: 'Location: href'
+title: location.href
 slug: Web/API/Location/href
 tags:
   - API

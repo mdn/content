@@ -47,7 +47,7 @@ The {{HTMLElement('main')}} element has a role of `main`. Developers should use 
   <!-- primary navigation -->
 
   <div role="main">
-    <h1>The The First Indochina War</h1>
+    <h1>The First Indochina War</h1>
     <!-- article content -->
   </div>
 

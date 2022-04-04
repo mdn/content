@@ -17,13 +17,11 @@ a boolean value indicating if the event is fired within a composition
 session, i.e. after {{domxref("Element/compositionstart_event", "compositionstart")}}
 and before {{domxref("Element/compositionend_event", "compositionend")}}.
 
-## Syntax
+## Value
 
-```js
-var bool = event.isComposing;
-```
+A boolean.
 
-## Example
+## Examples
 
 ```js
 var kbdEvent = new KeyboardEvent("syntheticKey", false);

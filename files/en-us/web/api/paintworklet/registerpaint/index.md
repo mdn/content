@@ -21,20 +21,14 @@ The
 {{domxref("PaintWorklet")}} interface registers a class programmatically generate an
 image where a CSS property expects a file.
 
-## Syntax
-
-```js
-registerPaint(name, class);
-```
-
-### Parameters
+## Value
 
 - name
   - : The name of the worklet class to register.
 - class
   - : A reference to the class that implements the worklet.
 
-### Return value
+## Value
 
 {{jsxref('undefined')}}
 

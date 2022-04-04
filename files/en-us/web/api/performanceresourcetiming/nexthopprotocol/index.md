@@ -21,18 +21,12 @@ Protocol ID of the first hop to the proxy.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-resource.nextHopProtocol;
-```
-
-### Return value
+## Value
 
 A {{domxref("DOMString","string")}} representing the _network protocol_ used to
 fetch the resource, as identified by the [ALPN Protocol ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301).
 
-## Example
+## Examples
 
 The following example uses the `nextHopProtocol` property.
 

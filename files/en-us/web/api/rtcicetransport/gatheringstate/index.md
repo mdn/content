@@ -18,13 +18,7 @@ browser-compat: api.RTCIceTransport.gatheringState
 
 The read-only **{{domxref("RTCIceTransport")}}** property **`gatheringState`** returns a {{domxref("DOMString")}} that indicates the current gathering state of the ICE agent: `"new"`, `"gathering"`, or `"complete"`.
 
-## Syntax
-
-```js
-gatherState = RTCIceTransport.gatheringState;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} that indicates the current state of the ICE agent's candidate gathering process:
 

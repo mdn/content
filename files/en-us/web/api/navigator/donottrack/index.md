@@ -16,7 +16,11 @@ The **`Navigator.doNotTrack`** property returns the user's Do Not Track setting,
 
 The value of the property reflects that of the {{httpheader("DNT")}} HTTP header, i.e. values of `"1"`, `"0"`, or `"unspecified"`.
 
-## Example
+## Value
+
+A number.
+
+## Examples
 
 ```js
 console.log(navigator.doNotTrack);

@@ -14,14 +14,9 @@ The
 property is a {{domxref("USVString")}} representing the protocol scheme of the URL,
 including the final `':'`.
 
-## Syntax
+## Value
 
-```js
-// Getter
-string = anchor.protocol;
-// Setter
-anchor.protocol = string;
-```
+A string.
 
 ## Examples
 

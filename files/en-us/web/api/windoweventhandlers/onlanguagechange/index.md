@@ -14,7 +14,7 @@ browser-compat: api.WindowEventHandlers.onlanguagechange
 
 The **`onlanguagechange`** property of the
 {{domxref("WindowEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
-processing {{event("languagechange")}} events.
+processing {{domxref("Window.languagechange_event", "languagechange")}} events.
 
 These events are received by the object implementing this interface, usually a
 {{domxref("Window")}}, an {{domxref("HTMLBodyElement")}}, or an
@@ -22,20 +22,11 @@ These events are received by the object implementing this interface, usually a
 the preferred languages list has been updated. The list is accessible via
 {{domxref("Navigator.languages")}}.
 
-## Syntax
+## Value
 
-```js
-object.onlanguagechange = function;
-```
+A user-defined function, without the `()` suffix or any parameters, or an anonymous function declaration, such as `function(event) {...}`. An event handler always has one single parameter, containing the event, here of type {{domxref("Event")}}.
 
-### Value
-
-- `function` is the name of a user-defined function, without the
-  `()` suffix or any parameters, or an anonymous function declaration, such
-  as `function(event) {...}`. An event handler always has one single
-  parameter, containing the event, here of type {{domxref("Event")}}.
-
-## Example
+## Examples
 
 ```js
 window.onlanguagechange = function(event) {
@@ -53,4 +44,4 @@ window.onlanguagechange = function(event) {
 
 ## See also
 
-- The {{event("languagechange")}} event and its type, {{domxref("Event")}}
+- The {{domxref("Window.languagechange_event", "languagechange")}} event and its type, {{domxref("Event")}}

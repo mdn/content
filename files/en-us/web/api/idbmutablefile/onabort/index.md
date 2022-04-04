@@ -15,13 +15,9 @@ tags:
 
 Specifies an event listener to receive {{event("abort")}} events. These events occur when the associated locked file has been aborted with the {{domxref("LockedFile.abort()")}} method.
 
-## Syntax
+## Value
 
-```js
-instanceOfFileHandle.onabort = funcRef;
-```
-
-Where `funcRef` is a function to be called when the {{event("abort")}} event occurs.
+A function to be called when the {{event("abort")}} event occurs.
 
 ## Specifications
 

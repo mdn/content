@@ -3,7 +3,6 @@ title: ReadableStream.pipeThrough()
 slug: Web/API/ReadableStream/pipeThrough
 tags:
   - API
-  - Experimental
   - Method
   - ReadableStream
   - Reference
@@ -11,25 +10,23 @@ tags:
   - pipeThrough
 browser-compat: api.ReadableStream.pipeThrough
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
-The **`pipeThrough()`** method of the
-{{domxref("ReadableStream")}} interface provides a chainable way of piping the current
+The **`pipeThrough()`** method of the {{domxref("ReadableStream")}} interface provides a chainable way of piping the current
 stream through a transform stream or any other writable/readable pair.
 
-Piping a stream will generally lock it for the duration of the pipe, preventing other
-readers from locking it.
+Piping a stream will generally lock it for the duration of the pipe, preventing other readers from locking it.
 
 ## Syntax
 
 ```js
-pipeThrough(transformStream);
-pipeThrough(transformStream, options);
+pipeThrough(transformStream)
+pipeThrough(transformStream, options)
 ```
 
 ### Parameters
 
-- transformStream
+- `transformStream`
   - : A {{domxref("TransformStream")}} (or an object with the structure
     `{writable, readable}`) consisting of a readable stream and a writable
     stream working together to transform some data from one form to another. Data written
@@ -37,7 +34,7 @@ pipeThrough(transformStream, options);
     `readable` stream. For example, a {{domxref("TextDecoder")}}, has bytes
     written to it and strings read from it, while a video decoder has encoded bytes
     written to it and uncompressed video frames read from it.
-- options {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : The options that should be used when piping to the `writable` stream.
     Available options are:
@@ -70,9 +67,8 @@ The `readable` side of the `transformStream`.
 
 ### Exceptions
 
-- TypeError
-  - : The `writable` and/or `readable` property of
-    `transformStream` are undefined.
+- `TypeError`
+  - : The `writable` and/or `readable` property of `transformStream` are undefined.
 
 ## Examples
 

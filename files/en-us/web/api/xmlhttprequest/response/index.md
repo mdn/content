@@ -39,7 +39,7 @@ with the exception that when reading text data using a `responseType` of
 response so far while the request is still in the `LOADING`
 {{domxref("XMLHttpRequest.readyState", "readyState")}} (3).
 
-## Example
+## Examples
 
 This example presents a function, `load()`, which loads and processes a page
 from the server. It works by creating an {{domxref("XMLHttpRequest")}} object and

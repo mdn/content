@@ -26,7 +26,7 @@ The [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role) r
 
 The [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role) role, similar to HTML's {{HTMLElement('meter')}} element, is a read-only gauge indicating the amount of something within a known range, such as a computer's battery indicator or a car's gas gauge.
 
-The `slider` role, similar to HTML's `input` of type `range`, [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range), is a read-write input range. Sliders allow users to select a value between between set minimum and maximum values. The user selects a value by moving a slider thumb along a horizontal or vertical slider to select a value.
+The `slider` role, similar to HTML's `input` of type `range`, [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range), is a read-write input range. Sliders allow users to select a value between set minimum and maximum values. The user selects a value by moving a slider thumb along a horizontal or vertical slider to select a value.
 
 While all three of these ranges have the same ARIA states and properties, the `slider` role is the only read-write range: it is the only one whose value changes via user interaction. As such, it must be able to receive focus. In addition, keyboard interaction, mouse clicks, and touch interaction must be supported.
 

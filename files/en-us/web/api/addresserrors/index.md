@@ -20,7 +20,7 @@ browser-compat: api.AddressErrors
 
 The **`AddressErrors`** dictionary is used by the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) to report validation errors in a physical address (typically a billing address or a shipping address). Any members which are present indicate that a validation error occurred for the member of the same name in an address described using {{domxref("PaymentAddress")}}.
 
-`AddressErrors` is the type of the object returned by `shippingAddressErrors` in the object passed into {{domxref("PaymentRequestUpdateEvent.updateWith()")}} by the {{event("shippingaddresschange")}} event handler if a change to the address resulted in a validation error occurring.
+`AddressErrors` is the type of the object returned by `shippingAddressErrors` in the object passed into {{domxref("PaymentRequestUpdateEvent.updateWith()")}} by the {{domxref("PaymentRequest.shippingaddresschange_event", "shippingaddresschange")}} event handler if a change to the address resulted in a validation error occurring.
 
 See the [examples below](#examples) to see how this works.
 
@@ -62,7 +62,7 @@ Keep in mind that some violation errors may be outside the ability of the user t
 
 ### Snippet: Limiting destination countries
 
-This first example is just a snippet showing an implementation of the event handler for the {{event("shippingaddresschange")}} event which checks to be sure the chosen address is located within one of a limited number of countries.
+This first example is just a snippet showing an implementation of the event handler for the {{domxref("PaymentRequest.shippingaddresschange_event", "shippingaddresschange")}} event which checks to be sure the chosen address is located within one of a limited number of countries.
 
 ```js
 function handleAddressChange(ev) {
@@ -163,7 +163,7 @@ function process() {
 
 This code creates a new {{domxref("PaymentRequest")}}, providing the supported handlers and payment options we set up above, as well as additional options (in this case, that we want to ask for shipping information).
 
-After that, we set up the handler for the {{event("shippingaddresschange")}} event so we can validate address information and call the request's {{domxref("PaymentRequest.show", "show()")}} method to start running the payment UI.
+After that, we set up the handler for the {{domxref("PaymentRequest.shippingaddresschange_event", "shippingaddresschange")}} event so we can validate address information and call the request's {{domxref("PaymentRequest.show", "show()")}} method to start running the payment UI.
 
 ##### Handling address changes
 

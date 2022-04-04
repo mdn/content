@@ -29,7 +29,7 @@ runs the following steps:
 1. If {{domxref("MediaRecorder.state")}} is "inactive", raise a DOM
     `InvalidState` error and terminate these steps. If
     {{domxref("MediaRecorder.state")}} is not "inactive", continue to the next step.
-2. Raise a {{event("dataavailable")}} event containing a {{domxref("Blob")}} of the
+2. Raise a {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event containing a {{domxref("Blob")}} of the
     currently captured data (the Blob is available under the event's `data`
     attribute.)
 3. Create a new Blob and place subsequently captured data into it.

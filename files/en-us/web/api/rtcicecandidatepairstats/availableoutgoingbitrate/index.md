@@ -32,13 +32,7 @@ You can get the incoming available bitrate from
 {{domxref("RTCIceCandidatePairStats.availableIncomingBitrate",
   "availableIncomingBitrate")}}.
 
-## Syntax
-
-```js
-availableOutgoingBitrate = rtcIceCandidatePairStats.availableOutgoingBitrate;
-```
-
-### Value
+## Value
 
 A floating-point value which approximates the amount of available bandwidth for
 outgoing data on the network connection described by the

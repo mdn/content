@@ -24,11 +24,9 @@ read-only property returns an `unsigned long long` representing the moment,
 in milliseconds since the UNIX epoch, when the {{event("load")}} event was sent for the
 current document. If this event has not yet been sent, it returns `0.`
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.loadEventStart;
-```
+An `unsigned long long`.
 
 ## Specifications
 

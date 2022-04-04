@@ -26,11 +26,9 @@ in milliseconds since the UNIX epoch, when the {{event("load")}} event handler
 terminated, that is when the load event is completed. If this event has not yet been
 sent, or is not yet completed, it returns `0.`
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.loadEventEnd;
-```
+An `unsigned long long`.
 
 ## Specifications
 

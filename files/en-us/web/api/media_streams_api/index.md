@@ -56,7 +56,7 @@ Early versions of the Media Capture and Streams API specification included separ
 - {{event("addtrack")}}
 - {{event("ended")}}
 - {{event("muted")}}
-- {{event("overconstrained")}}
+- {{domxref("MediaStreamTrack.overconstrained_event", "overconstrained")}}
 - {{event("removetrack")}}
 - {{event("started")}}
 - {{event("unmuted")}}

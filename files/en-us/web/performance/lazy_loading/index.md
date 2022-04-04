@@ -47,7 +47,7 @@ By default, CSS is treated as a [render blocking](/en-US/docs/Web/Performance/Cr
 
 ```html
 <link href="style.css"    rel="stylesheet" media="all">
-<link href="portrait.css" rel="stylesheet" media="orientation:portrait">
+<link href="portrait.css" rel="stylesheet" media="(orientation:portrait)">
 <link href="print.css"    rel="stylesheet" media="print">
 ```
 

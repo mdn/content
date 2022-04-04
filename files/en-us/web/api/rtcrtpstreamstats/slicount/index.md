@@ -31,13 +31,7 @@ sender.
 An SLI packet is used by a decoder to let the encoder know that it's
 detected corruption of one or more consecutive macroblocks in the received media.
 
-## Syntax
-
-```js
-var sliCount = RTCRtpStreamStats.sliCount;
-```
-
-### Value
+## Value
 
 An unsigned long integer indicating the number of SLI packets the sender received from
 the receiver due to lost runs of macroblocks. A high value of `sliCount` may

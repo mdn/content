@@ -16,7 +16,7 @@ The **Media Capabilities API** allows developers to determine decoding and encod
 
 ### Detect audio file support and expected performance
 
-This example defines a audio configuration then checks to see if the user agent supports decoding that media configuration, and whether it will perform well in terms of smoothness and power efficiency.
+This example defines an audio configuration then checks to see if the user agent supports decoding that media configuration, and whether it will perform well in terms of smoothness and power efficiency.
 
 ```js
 if ('mediaCapabilities' in navigator) {

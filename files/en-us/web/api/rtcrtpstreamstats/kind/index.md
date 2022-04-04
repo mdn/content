@@ -31,13 +31,7 @@ This property was previously called `mediaType`. The name was changed in the
 specification in February, 2018. See [Browser compatibility](#browser_compatibility) below to
 determine how this affects the browsers you're targeting.
 
-## Syntax
-
-```js
-mediaKind = RTCRtpStreamStats.kind;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} whose value is `"audio"` if the track whose
 statistics are given by the `RTCRtpStreamStats` object contains audio, or

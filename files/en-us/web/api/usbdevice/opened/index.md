@@ -22,7 +22,7 @@ paired USB device. A device must be opened before it can be controlled by a web 
 
 A {{jsxref("boolean")}}.
 
-## Example
+## Examples
 
 This example is for a hypothetical USB device with a multi-colored LED. It shows how to
 test that a device is open before calling {{domxref("USBDevice.controlTransferOut")}} to

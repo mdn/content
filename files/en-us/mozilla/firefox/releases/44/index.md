@@ -102,7 +102,7 @@ Highlights:
 - To fight unwanted pop-ups, prompts requested in {{domxref("WindowEventHandlers/onbeforeunload", "Window.onbeforeunload")}} of pages that have not been interacted with are no more displayed ({{bug(636905)}}).
 - The deprecated method {{domxref("MessageEvent.initMessageEvent()")}} has been reimplemented for backward compatibility ({{bug(949376)}}).
 - The obsolete property `DocumentType.internalSubset` has been removed ({{bug(801545)}}).
-- For compatibility with existing sites, the properties {{domxref("Window.orientation")}} and {{domxref("Window.onorientationchange")}}, as well as the {{event("orientationchange")}} event have been implemented ({{bug(920734)}}).
+- For compatibility with existing sites, the properties {{domxref("Window.orientation")}} and {{domxref("Window.onorientationchange")}}, as well as the {{domxref("Window.orientationchange_event", "orientationchange")}} event have been implemented ({{bug(920734)}}).
 - An {{HTMLElement("iframe")}} with explicit fullscreen request should not exit fullscreen implicitly ({{bug(1187801)}}).
 - The events {{event("mouseover")}}, {{event("mouseout")}}, {{event("mouseenter")}}, {{event("mouseleave")}}, {{event("pointermove")}}, {{event("pointerover")}}, {{event("pointerout")}}, {{event("pointerenter")}} and {{event("pointerleave")}} are now triggered for disabled form elements ({{bug(218093)}}).
 - The method {{domxref("Element.webkitMatchesSelector()")}} has been added ({{bug(1216193)}}) to improve interoperability.
@@ -148,7 +148,7 @@ Highlights:
   - `mozRTCIceCandidate` is now {{domxref("RTCIceCandidate")}}.
   - `mozRTCSessionDescription` is now {{domxref("RTCSessionDescription")}}.
 
-- The {{domxref("RTCDataChannel.bufferedAmountLowThreshold")}} property, as well as the {{event("bufferedamountlow")}} event and its event handler, have been implemented ({{bug(1178091)}}).
+- The {{domxref("RTCDataChannel.bufferedAmountLowThreshold")}} property, as well as the {{domxref("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event and its event handler, have been implemented ({{bug(1178091)}}).
 - The attribute {{domxref("RTCPeerConnection.canTrickleIceCandidates")}} has been added, the non-standard method {{domxref("RTCPeerConnection.updateIce()")}} removed ({{bug(1209744)}}).
 - The {{domxref("MediaStream")}} interface now supports the {{domxref("MediaStream.addTrack()")}} and {{domxref("MediaStream.removeTrack()")}} methods ({{bug(1103188)}}).
 - The constructor {{domxref("MediaStream.MediaStream", "MediaStream()")}} has been implemented ({{bug(1070216)}}).

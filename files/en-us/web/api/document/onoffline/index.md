@@ -10,4 +10,4 @@ tags:
 ---
 {{APIRef("DOM")}}
 
-The **`Document.onoffline`** event handler is called when an {{event("offline")}} is fired on the {{HtmlElement("body")}} element and bubbles up, when {{domxref("Navigator.onLine")}} property changes and becomes `false`.
+The **`Document.onoffline`** event handler is called when an {{domxref("Window.offline_event", "offline")}} is fired on the {{HtmlElement("body")}} element and bubbles up, when {{domxref("Navigator.onLine")}} property changes and becomes `false`.

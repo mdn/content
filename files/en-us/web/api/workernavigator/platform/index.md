@@ -17,13 +17,7 @@ Returns a string representing the platform of the browser. The specification all
 browsers to always return the empty string, so don't rely on this property to get a
 reliable answer.
 
-## Syntax
-
-```js
-platform = navigator.platform
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} identifying the platform on which the browser is running, or
 an empty string if the browser declines to (or is unable to) identify the platform.
@@ -32,7 +26,7 @@ the platform on which the browser is executing.
 
 For example: "`MacIntel`", "`Win32`", "`FreeBSD i386`", "`WebTV OS`"
 
-## Example
+## Examples
 
 ```js
 console.log(navigator.platform);
