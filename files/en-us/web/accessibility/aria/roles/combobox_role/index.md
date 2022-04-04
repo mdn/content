@@ -25,7 +25,7 @@ A WAI-ARIA combobox only has one attribute that is required that authors specify
 
 Typically, the initial state of a combobox is collapsed, with `aria-expanded="false"` set. In the collapsed state, only the combobox element and, optionally a sibling button to invoke the popup, are visible. The [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded), with the value set to `false`, is required when collapsed, because it indicates to assistive technologies that the widget is expandable.
 
-The combobox is said to be expanded when both the combobox element showing its current value and its associated popup element are visible. When expanded, `aria-expanded="true"` must be set.
+The combobox is in the expanded state when both the combobox element showing its current value and its associated popup element are visible. When expanded, `aria-expanded="true"` must be set.
 
 The popup element associated with a `combobox` can be either a [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role), [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), or [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) element. 
 
