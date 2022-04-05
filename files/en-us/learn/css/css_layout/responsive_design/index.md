@@ -114,11 +114,11 @@ In the early days of responsive design, our only option for performing layout wa
 target / context = result
 ```
 
-For example, if our target column size is 60 pixels, and the context (or container) it is in is 960 pixels, we divide 60 by 960 to get a value we can use in our CSS, after moving the decimal point two places to the right.
+For example, if our target column size is 60 pixels, and the context (or container) it is in is 980 pixels, we divide 60 by 980 to get a value we can use in our CSS, after moving the decimal point two places to the right.
 
 ```css
 .col {
-  width: 6.25%; /* 60 / 960 = 0.0625 */
+  width: 6.12%; /* 60 / 980 = 0.0612 */
 }
 ```
 
@@ -277,9 +277,9 @@ This meta tag tells mobile browsers that they should set the width of the viewpo
 
 Why is this needed? Because mobile browsers tend to lie about their viewport width.
 
-This meta tag exists because when the original iPhone launched and people started to view websites on a small phone screen, most sites were not mobile optimized. The mobile browser would, therefore, set the viewport width to 960 pixels, render the page at that width, and show the result as a zoomed-out version of the desktop layout. Other mobile browsers (e.g. on Google Android) did the same thing. Users could zoom in and pan around the website to view the bits they were interested in, but it looked bad. You will still see this today if you have the misfortune to come across a site that does not have a responsive design.
+This meta tag exists because when the original iPhone launched and people started to view websites on a small phone screen, most sites were not mobile optimized. The mobile browser would, therefore, set the viewport width to 980 pixels, render the page at that width, and show the result as a zoomed-out version of the desktop layout. Other mobile browsers (e.g. on Google Android) did the same thing. Users could zoom in and pan around the website to view the bits they were interested in, but it looked bad. You will still see this today if you have the misfortune to come across a site that does not have a responsive design.
 
-The trouble is that your responsive design with breakpoints and media queries won't work as intended on mobile browsers. If you've got a narrow screen layout that kicks in at 480px viewport width or less, and the viewport is set at 960px, you'll never see your narrow screen layout on mobile. By setting `width=device-width` you are overriding Apple's default `width=960px` with the actual width of the device, so your media queries will work as intended.
+The trouble is that your responsive design with breakpoints and media queries won't work as intended on mobile browsers. If you've got a narrow screen layout that kicks in at 480px viewport width or less, and the viewport is set at 980px, you'll never see your narrow screen layout on mobile. By setting `width=device-width` you are overriding Apple's default `width=980px` with the actual width of the device, so your media queries will work as intended.
 
 **So you should _always_ include the above line of HTML in the head of your documents.**
 
