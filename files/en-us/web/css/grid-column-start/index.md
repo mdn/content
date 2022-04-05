@@ -37,6 +37,7 @@ grid-column-start: span somegridarea 5;
 grid-column-start: inherit;
 grid-column-start: initial;
 grid-column-start: revert;
+grid-column-start: revert-layer;
 grid-column-start: unset;
 ```
 

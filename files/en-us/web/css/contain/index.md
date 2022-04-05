@@ -46,6 +46,7 @@ contain: size layout paint;
 contain: inherit;
 contain: initial;
 contain: revert;
+contain: revert-layer;
 contain: unset;
 ```
 

@@ -37,6 +37,7 @@ grid-row-end: 5 somegridarea span;
 grid-row-end: inherit;
 grid-row-end: initial;
 grid-row-end: revert;
+grid-row-end: revert-layer;
 grid-row-end: unset;
 ```
 

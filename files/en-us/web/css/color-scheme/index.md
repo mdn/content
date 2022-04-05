@@ -34,6 +34,7 @@ color-scheme: light dark;
 color-scheme: inherit;
 color-scheme: initial;
 color-scheme: revert;
+color-scheme: revert-layer;
 color-scheme: unset;
 ```
 

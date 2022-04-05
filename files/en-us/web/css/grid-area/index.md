@@ -60,6 +60,7 @@ grid-area: 2 span / another-grid-area span;
 grid-area: inherit;
 grid-area: initial;
 grid-area: revert;
+grid-area: revert-layer;
 grid-area: unset;
 ```
 

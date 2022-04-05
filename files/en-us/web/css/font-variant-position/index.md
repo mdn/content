@@ -25,6 +25,7 @@ font-variant-position: super;
 font-variant-position: inherit;
 font-variant-position: initial;
 font-variant-position: revert;
+font-variant-position: revert-layer;
 font-variant-position: unset;
 ```
 
