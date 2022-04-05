@@ -12,8 +12,8 @@ spec-urls: https://webidl.spec.whatwg.org/#common-DOMTimeStamp
 
 The **`DOMTimeStamp`** type represents an absolute or relative number of milliseconds, depending on the specification in which it appears.
 
-> **Note:** `DOMTimeStamp` has been removed from the IDL in the linked specification, but is referenced in other specifications.
-> In the High Resolution Time specification `DOMTimeStamp` has been redefined as [`EpochTimeStamp`](/en-US/docs/Web/API/EpochTimeStamp).
+> **Note:** `DOMTimeStamp` has been removed from the WebIDL specification, but is referenced in other specifications.
+> In the High Resolution Time specification, `DOMTimeStamp` has been redefined as [`EpochTimeStamp`](/en-US/docs/Web/API/EpochTimeStamp).
 
 
 
