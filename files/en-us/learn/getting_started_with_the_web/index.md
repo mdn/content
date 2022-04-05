@@ -43,7 +43,7 @@ By working through the articles listed below,  you will go from nothing to getti
   - : JavaScript is the programming language that you use to add interactive features to your website. Some examples could be games, things that happen when buttons are pressed or data is entered in forms, dynamic styling effects, animation, and much more. In this article, we'll give you an idea of what is possible with this exciting language, and how to get started.
 
 - [Publishing your sample code](/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-  - : Once you have finished writing the code and organizing the files that make up your website, you need to put it all online so people can find it. This article here, describes how to get your simple sample code online with minimum effort.
+  - : Once you have finished writing the code and organizing the files that make up your website, you need to put it all online so people can find it. This article describes how to get your simple sample code online with minimum effort.
 
 - [How the web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
   - : When you access your favorite website, a lot of complicated things happen in the background that you may not know about. Here we will outline what happens when you view a webpage on your computer.
