@@ -1,0 +1,137 @@
+---
+title: scripting.insertCSS()
+slug: Mozilla/Add-ons/WebExtensions/API/scripting/insertCSS
+tags:
+  - API
+  - Add-ons
+  - Extensions
+  - Method
+  - Non-standard
+  - Reference
+  - WebExtensions
+  - insertCSS
+  - tabs
+browser-compat: webextensions.api.scripting.insertCSS
+---
+{{AddonSidebar()}}
+
+Injects CSS into a page.
+
+To use this API you must have the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and permission for the page's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
+
+You can only inject CSS into pages whose URL can be expressed using a [match pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns): meaning, its scheme must be one of "http", "https", or "file". This means that you can't inject CSS into any of the browser's built-in pages, such as about:debugging, about:addons, or the page that opens when you open a new empty tab.
+
+> **Note:** Firefox resolves URLs in injected CSS files relative to the CSS file itself, rather than to the page it's injected into.
+
+The inserted CSS can be removed by calling {{WebExtAPIRef("scripting.removeCSS()")}}.
+
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+
+## Syntax
+
+```js
+let inserting = browser.scripting.insertCSS(
+  injection,     // object
+  callback       // function
+)
+```
+
+### Parameters
+
+- `injection`
+  - : An object describing the CSS to insert. It contains these properties:
+    - `css`{{optional_inline}} 
+      - : `string`. A string containing the CSS to inject. Either `css` or `files` must be specified. 
+    - `file`{{optional_inline}}
+      - : `string`. The path of a CSS files to inject, relative to the extension's root directory. Either <code>files</code> or <code>css</code> must be specified. 
+    - `origin`{{optional_inline}} 
+      - : `string`. The style origin for the injection, either `USER` or `AUTHOR`. Defaults to `AUTHOR`. 
+    - `target` 
+      - : `object`. Details specifying the target into which to inject the CSS. 
+- `callback`{{optional_inline}} 
+  - : `function`. Invoked upon completion of the injection.
+
+### Additional objects
+
+### target 
+- `allFrames`
+  - : `boolean`. Whether the CSS is inject into all frames within the tab. Defaults to `false`. This must not be `true` if `frameIds` is specified.
+- `frameIds`
+  - : `string`. Array of the IDs of the frames to inject into. 
+- `tabId`
+  - : `number`. The ID of the tab into which to inject. 
+
+### Return value
+
+Returns a Promise when the callback parameter is not specified.  The [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) is fulfilled with no arguments when all the CSS has been inserted. If any error occurs, the promise is rejected with an error message.
+
+## Examples
+
+This example inserts CSS taken from a string into the active tab.
+
+```js
+let css = "body { border: 20px dotted pink; }";
+
+browser.browserAction.onClicked.addListener(() => {
+
+  function onError(error) {
+    console.log(`Error: ${error}`);
+  }
+
+  let insertingCSS = browser.scripting.insertCSS({css: css});
+  insertingCSS.then(null, onError);
+});
+```
+
+This example inserts CSS loaded from a file packaged with the extension. The CSS is inserted into the tab whose ID is 2:
+
+```js
+browser.browserAction.onClicked.addListener(() => {
+
+  function onError(error) {
+    console.log(`Error: ${error}`);
+  }
+
+  let insertingCSS = browser.scripting.insertCSS(2, {file: "content-style.css"});
+  insertingCSS.then(null, onError);
+});
+```
+
+{{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
+
+> **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/scripting/#method-insertCSS) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/scripting.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are
+// met:
+//
+//    * Redistributions of source code must retain the above copyright
+// notice, this list of conditions and the following disclaimer.
+//    * Redistributions in binary form must reproduce the above
+// copyright notice, this list of conditions and the following disclaimer
+// in the documentation and/or other materials provided with the
+// distribution.
+//    * Neither the name of Google Inc. nor the names of its
+// contributors may be used to endorse or promote products derived from
+// this software without specific prior written permission.
+//
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</pre></div>
