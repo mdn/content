@@ -53,6 +53,7 @@ mask: url(masks.svg#star) exclude;         /* Element within SVG graphic used as
 mask: inherit;
 mask: initial;
 mask: revert;
+mask: revert-layer;
 mask: unset;
 
 /* Multiple masks */

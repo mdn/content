@@ -28,6 +28,7 @@ margin-inline: auto;
 margin-inline: inherit;
 margin-inline: initial;
 margin-inline: revert;
+margin-inline: revert-layer;
 margin-inline: unset;
 ```
 

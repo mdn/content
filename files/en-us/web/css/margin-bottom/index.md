@@ -33,6 +33,7 @@ margin-bottom: auto;
 margin-bottom: inherit;
 margin-bottom: initial;
 margin-bottom: revert;
+margin-bottom: revert-layer;
 margin-bottom: unset;
 ```
 

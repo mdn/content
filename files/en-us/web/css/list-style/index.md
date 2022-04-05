@@ -50,6 +50,7 @@ list-style: none;
 list-style: inherit;
 list-style: initial;
 list-style: revert;
+list-style: revert-layer;
 list-style: unset;
 ```
 

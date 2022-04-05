@@ -42,6 +42,7 @@ mask-size: 6px, auto, contain;
 mask-size: inherit;
 mask-size: initial;
 mask-size: revert;
+mask-size: revert-layer;
 mask-size: unset;
 ```
 

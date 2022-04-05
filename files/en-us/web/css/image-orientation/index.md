@@ -19,6 +19,7 @@ image-orientation: from-image; /* Use EXIF data from the image */
 image-orientation: inherit;
 image-orientation: initial;
 image-orientation: revert;
+image-orientation: revert-layer;
 image-orientation: unset;
 ```
 
