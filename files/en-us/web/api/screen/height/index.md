@@ -15,13 +15,11 @@ browser-compat: api.Screen.height
 The **`Screen.height`** read-only property returns the height
 of the screen in pixels.
 
-## Syntax
+## Value
 
-```js
-var height = window.screen.height
-```
+A number.
 
-## Example
+## Examples
 
 ```js
 if (window.screen.availHeight !== window.screen.height) {
