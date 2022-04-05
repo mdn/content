@@ -30,6 +30,7 @@ transform-style: preserve-3d;
 transform-style: inherit;
 transform-style: initial;
 transform-style: revert;
+transform-style: revert-layer;
 transform-style: unset;
 ```
 

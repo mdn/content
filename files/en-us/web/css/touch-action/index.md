@@ -30,6 +30,7 @@ touch-action: manipulation;
 touch-action: inherit;
 touch-action: initial;
 touch-action: revert;
+touch-action: revert-layer;
 touch-action: unset;
 ```
 

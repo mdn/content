@@ -40,6 +40,7 @@ text-decoration-color: transparent;
 text-decoration-color: inherit;
 text-decoration-color: initial;
 text-decoration-color: revert;
+text-decoration-color: revert-layer;
 text-decoration-color: unset;
 ```
 

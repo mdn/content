@@ -40,6 +40,7 @@ text-align: -webkit-center;
 text-align: inherit;
 text-align: initial;
 text-align: revert;
+text-align: revert-layer;
 text-align: unset;
 ```
 

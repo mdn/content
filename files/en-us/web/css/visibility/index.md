@@ -31,6 +31,7 @@ visibility: collapse;
 visibility: inherit;
 visibility: initial;
 visibility: revert;
+visibility: revert-layer;
 visibility: unset;
 ```
 

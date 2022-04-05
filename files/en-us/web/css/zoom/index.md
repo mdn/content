@@ -29,6 +29,8 @@ zoom: 0.7;
 /* Global values */
 zoom: inherit;
 zoom: initial;
+zoom: revert;
+zoom: revert-layer;
 zoom: unset;
 ```
 

@@ -32,6 +32,7 @@ text-decoration-skip-ink: all;
 text-decoration-skip-ink: inherit;
 text-decoration-skip-ink: initial;
 text-decoration-skip-ink: revert;
+text-decoration-skip-ink: revert-layer;
 text-decoration-skip-ink: unset;
 ```
 

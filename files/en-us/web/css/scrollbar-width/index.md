@@ -28,6 +28,7 @@ scrollbar-width: none;
 scrollbar-width: inherit;
 scrollbar-width: initial;
 scrollbar-width: revert;
+scrollbar-width: revert-layer;
 scrollbar-width: unset;
 ```
 

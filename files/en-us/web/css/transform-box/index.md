@@ -26,6 +26,7 @@ transform-box: view-box;
 transform-box: inherit;
 transform-box: initial;
 transform-box: revert;
+transform-box: revert-layer;
 transform-box: unset;
 ```
 
