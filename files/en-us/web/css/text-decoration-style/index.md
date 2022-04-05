@@ -34,6 +34,7 @@ text-decoration-style: wavy;
 text-decoration-style: inherit;
 text-decoration-style: initial;
 text-decoration-style: revert;
+text-decoration-style: revert-layer;
 text-decoration-style: unset;
 ```
 

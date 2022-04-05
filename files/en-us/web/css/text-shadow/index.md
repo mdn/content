@@ -44,6 +44,7 @@ text-shadow: 5px 10px;
 text-shadow: inherit;
 text-shadow: initial;
 text-shadow: revert;
+text-shadow: revert-layer;
 text-shadow: unset;
 ```
 

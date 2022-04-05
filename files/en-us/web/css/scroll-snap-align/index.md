@@ -26,6 +26,7 @@ scroll-snap-align: center;
 scroll-snap-align: inherit;
 scroll-snap-align: initial;
 scroll-snap-align: revert;
+scroll-snap-align: revert-layer;
 scroll-snap-align: unset;
 ```
 

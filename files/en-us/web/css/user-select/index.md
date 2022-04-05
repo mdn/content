@@ -27,6 +27,7 @@ user-select: all;
 user-select: inherit;
 user-select: initial;
 user-select: revert;
+user-select: revert-layer;
 user-select: unset;
 
 /* Mozilla-specific values */

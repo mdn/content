@@ -31,6 +31,7 @@ scroll-margin-block: 1em .5em ;
 scroll-margin-block: inherit;
 scroll-margin-block: initial;
 scroll-margin-block: revert;
+scroll-margin-block: revert-layer;
 scroll-margin-block: unset;
 ```
 

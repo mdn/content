@@ -30,6 +30,7 @@ will-change: left, top;        /* Example of two <animatable-feature> */
 will-change: inherit;
 will-change: initial;
 will-change: revert;
+will-change: revert-layer;
 will-change: unset;
 ```
 

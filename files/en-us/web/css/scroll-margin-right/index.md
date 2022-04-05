@@ -28,6 +28,7 @@ scroll-margin-right: 1em;
 scroll-margin-right: inherit;
 scroll-margin-right: initial;
 scroll-margin-right: revert;
+scroll-margin-right: revert-layer;
 scroll-margin-right: unset;
 ```
 

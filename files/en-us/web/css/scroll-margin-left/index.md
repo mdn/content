@@ -29,6 +29,7 @@ scroll-margin-left: 1em;
 scroll-margin-left: inherit;
 scroll-margin-left: initial;
 scroll-margin-left: revert;
+scroll-margin-left: revert-layer;
 scroll-margin-left: unset;
 ```
 
