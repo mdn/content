@@ -9,7 +9,7 @@ A color **gamut** is a subset of colors, usually representing the colors that a 
 
 No display or printer can represent the whole range of colors that a human eye can perceive. The device _gamut_ represents the set that it supports.
 
-Traditionally, in web development, the only gamut used was _[sRGB](https://en.wikipedia.org/wiki/SRGB)_ (Standard Red-Green-Blue), where each color is described using three bytes, one for each primary color. Professional printers support a wider range of colors, making it difficult to use a web application to develop for the print industry. More, "wide-color" monitors started to reach the mass market.
+Traditionally, in web development, the only gamut used was _[sRGB](https://en.wikipedia.org/wiki/SRGB)_ (Standard Red-Green-Blue), where each color is described using three bytes, one for each primary color. However, "wide-color" monitors and professional printers support a wider range of colors, that can't be represented using this gamut.
 
 Since 2021, browsers have started to provide functionality for other gamuts, like _[P3](https://en.wikipedia.org/wiki/DCI-P3)_, widely used in the movie industry, and _[rec2020](https://en.wikipedia.org/wiki/Rec._2020)_.
 
