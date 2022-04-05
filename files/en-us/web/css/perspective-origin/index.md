@@ -40,6 +40,7 @@ perspective-origin: y-position x-position;
 perspective-origin: inherit;
 perspective-origin: initial;
 perspective-origin: revert;
+perspective-origin: revert-layer;
 perspective-origin: unset;
 ```
 

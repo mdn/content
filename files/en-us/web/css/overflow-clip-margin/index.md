@@ -23,6 +23,7 @@ overflow-clip-margin: 1em;
 overflow-clip-margin: inherit;
 overflow-clip-margin: initial;
 overflow-clip-margin: revert;
+overflow-clip-margin: revert-layer;
 overflow-clip-margin: unset;
 ```
 
