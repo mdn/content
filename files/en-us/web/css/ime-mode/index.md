@@ -24,6 +24,7 @@ ime-mode: disabled;
 ime-mode: inherit;
 ime-mode: initial;
 ime-mode: revert;
+ime-mode: revert-layer;
 ime-mode: unset;
 ```
 

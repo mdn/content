@@ -32,6 +32,7 @@ list-style-position: outside;
 list-style-position: inherit;
 list-style-position: initial;
 list-style-position: revert;
+list-style-position: revert-layer;
 list-style-position: unset;
 ```
 

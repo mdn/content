@@ -37,6 +37,7 @@ mask-border-slice: 10% fill 7 12;
 mask-border-slice: inherit;
 mask-border-slice: initial;
 mask-border-slice: revert;
+mask-border-slice: revert-layer;
 mask-border-slice: unset;
 ```
 

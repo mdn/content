@@ -59,6 +59,7 @@ justify-items: legacy center;
 justify-items: inherit;
 justify-items: initial;
 justify-items: revert;
+justify-items: revert-layer;
 justify-items: unset;
 ```
 

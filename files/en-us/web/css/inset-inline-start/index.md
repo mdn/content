@@ -28,6 +28,7 @@ inset-inline-start: auto;
 inset-inline-start: inherit;
 inset-inline-start: initial;
 inset-inline-start: revert;
+inset-inline-start: revert-layer;
 inset-inline-start: unset;
 ```
 

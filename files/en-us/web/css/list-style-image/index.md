@@ -35,6 +35,7 @@ list-style-image: linear-gradient(to left bottom, red, blue);
 list-style-image: inherit;
 list-style-image: initial;
 list-style-image: revert;
+list-style-image: revert-layer;
 list-style-image: unset;
 ```
 

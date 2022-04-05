@@ -32,6 +32,7 @@ margin-inline-start: auto;
 margin-inline-start: inherit;
 margin-inline-start: initial;
 margin-inline-start: revert;
+margin-inline-start: revert-layer;
 margin-inline-start: unset;
 ```
 
