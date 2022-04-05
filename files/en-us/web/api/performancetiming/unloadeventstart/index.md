@@ -24,11 +24,9 @@ in milliseconds since the UNIX epoch, the {{event("unload")}} event has been thr
 there is no previous document, or if the previous document, or one of the needed
 redirects, is not of the same origin, the value returned is `0`.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.unloadEventStart;
-```
+An `unsigned long long`.
 
 ## Specifications
 

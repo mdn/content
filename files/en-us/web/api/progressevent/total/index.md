@@ -20,11 +20,9 @@ overhead.
 If the event's {{domxref("ProgressEvent.lengthComputable", "lengthComputable")}}
 property is `false`, this value is meaningless and should be ignored.
 
-## Syntax
+## Value
 
-```js
-let value = progressEvent.total;
-```
+An integer.
 
 ## Specifications
 

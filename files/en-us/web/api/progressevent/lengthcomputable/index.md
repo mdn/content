@@ -16,11 +16,9 @@ boolean flag indicating if the resource concerned by the
 {{domxref("ProgressEvent")}} has a length that can be calculated. If not, the
 {{domxref("ProgressEvent.total")}} property has no significant value.
 
-## Syntax
+## Value
 
-```js
-flag = ProgressEvent.lengthComputable
-```
+A boolean.
 
 ## Specifications
 

@@ -17,13 +17,7 @@ The **`body`** read-only property of the {{domxref("Report")}}
 interface returns the body of the report, which is a `ReportBody` object
 containing the detailed report information.
 
-## Syntax
-
-```js
-let reportBody = reportInstance.body
-```
-
-### Returns
+## Value
 
 A `ReportBody` object containing the detailed report information. Depending
 on what `type` the {{domxref("Report")}} is, the object returned will

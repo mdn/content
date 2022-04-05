@@ -16,11 +16,9 @@ of work done can be calculated with the property and `ProgressEvent.total`.
 When downloading a resource using HTTP, this value is specified in bytes (not bits), and only represents the part of the content
 itself, not headers and other overhead.  
 
-## Syntax
+## Value
 
-```js
-value = ProgressEvent.loaded
-```
+A number.
 
 ## Specifications
 

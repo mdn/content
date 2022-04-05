@@ -20,13 +20,16 @@ The **`state`** read-only property of the
 This property returns one of `'granted'`, `'denied'`, or
 `'prompt'`.
 
-## Syntax
+## Value
 
-```js
-var permission = PermissionStatus.state;
-```
+One of the followings:
 
-## Example
+- `'granted'`
+- `'denied'`
+- `'prompt'`
+
+
+## Examples
 
 ```js
 navigator.permissions.query({name:'geolocation'}).then(function(permissionStatus) {
