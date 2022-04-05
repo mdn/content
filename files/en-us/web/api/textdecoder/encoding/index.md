@@ -70,11 +70,9 @@ It can be one of the following values:
   between the client and server. It can happen with `ISO-2022-CN` and
   `ISO-2022-CN-ext`.
 
-## Syntax
+## Value
 
-```js
-var b = decoder.decoding;
-```
+A string.
 
 ## Specifications
 

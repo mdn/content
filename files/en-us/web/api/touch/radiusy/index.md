@@ -20,18 +20,11 @@ This value, in combination with {{ domxref("Touch.radiusX") }} and {{ domxref("T
 
 > **Note:** This attribute has _not_ been formally standardized. It is specified in the {{SpecName('Touch Events 2')}} {{Spec2('Touch Events 2')}} specification and not in {{SpecName('Touch Events')}} {{Spec2('Touch Events')}}. This attribute is not widely implemented.
 
-## Syntax
+## Value
 
-```js
-var yRadius = touchItem.radiusY;
-```
+A number.
 
-### Return value
-
-- `yRadius`
-  - : The Y radius of the ellipse that most closely circumscribes the area of contact with the screen.
-
-## Example
+## Examples
 
 The [Touch.radiusX example](/en-US/docs/Web/API/Touch/radiusX#example) includes an example of this property's usage.
 

@@ -19,11 +19,9 @@ document that registers the {{domxref("ServiceWorker")}}.
 
 > **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
-## Syntax
+## Value
 
-```js
-var swScope = serviceWorkerRegistration.scope;
-```
+A unique identifier.
 
 ## Specifications
 

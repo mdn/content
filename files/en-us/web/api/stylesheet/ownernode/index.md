@@ -21,13 +21,11 @@ This is usually an HTML
 can also return a [processing
 instruction node](/en-US/docs/Web/API/ProcessingInstruction) in the case of `<?xml-stylesheet ?>`.
 
-## Syntax
+## Value
 
-```js
-nodeRef = stylesheet.ownerNode
-```
+A {{domxref("Node")}} object.
 
-## Example
+## Examples
 
 ```html
 <html lang="en">
