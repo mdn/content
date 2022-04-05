@@ -22,7 +22,7 @@ This property is {{readonlyInline}}.
 
 ## Value
 
-A boolean.
+A boolean value that is `true` if the <kbd>Meta</kbd> key is enabled for this event; and `false` if the <kbd>Meta</kbd> is not enabled.
 
 ## Examples
 
