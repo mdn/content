@@ -20,18 +20,11 @@ This value, in combination with {{ domxref("Touch.radiusY") }} and {{ domxref("T
 
 > **Note:** This attribute has _not_ been formally standardized. It is specified in the {{SpecName('Touch Events 2')}} {{Spec2('Touch Events 2')}} specification and not in {{SpecName('Touch Events')}} {{Spec2('Touch Events')}}. This attribute is not widely implemented.
 
-## Syntax
+## Value
 
-```js
-var xRadius = touchItem.radiusX;
-```
+A number.
 
-### Return value
-
-- `xRadius`
-  - : The X radius of the ellipse that most closely circumscribes the area of contact with the touch surface.
-
-## Example
+## Examples
 
 This example illustrates using the {{domxref("Touch")}} interface's {{domxref("Touch.radiusX")}}, {{domxref("Touch.radiusX")}} and {{domxref("Touch.rotationAngle")}} properties. The {{domxref("Touch.radiusX")}} property is the radius of the ellipse which most closely circumscribes the touching area (e.g. finger, stylus) along the axis **indicated** by the touch point's {{domxref("Touch.rotationAngle")}}. Likewise, the {{domxref("Touch.radiusY")}} property is the radius of the ellipse which most closely circumscribes the touching area (e.g. finger, stylus) along the axis **perpendicular** to that indicated by {{domxref("Touch.rotationAngle")}}. The {{domxref("Touch.rotationAngle")}} is the angle (in degrees) that the ellipse described by `radiusX` and `radiusY` is rotated clockwise about its center.
 

@@ -22,13 +22,7 @@ confident the speech recognition system is that the recognition is correct.
 > **Note:** Mozilla's implementation of `confidence` is still
 > being worked on — at the moment, it always seems to return 1.
 
-## Syntax
-
-```js
-var myConfidence = speechRecognitionAlternativeInstance.confidence;
-```
-
-### Returns
+## Value
 
 A number between 0 and 1.
 
