@@ -42,6 +42,10 @@ No notable changes.
   ({{bug(1720353)}}).
 
 
+### WebDriver conformance (Marionette)
+
+- Fixed a bug where the Shift key was not handled properly when part of a key sequence of the `WebDriver:ElementSendKeys` command ({{bug(1757636)}}).
+
 ## Changes for add-on developers
 
 
