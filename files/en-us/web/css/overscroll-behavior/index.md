@@ -35,6 +35,7 @@ overscroll-behavior: auto contain;
 overscroll-behavior: inherit;
 overscroll-behavior: initial;
 overscroll-behavior: revert;
+overscroll-behavior: revert-layer;
 overscroll-behavior: unset;
 ```
 

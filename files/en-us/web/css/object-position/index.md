@@ -33,6 +33,7 @@ object-position: 100px 50px;
 object-position: inherit;
 object-position: initial;
 object-position: revert;
+object-position: revert-layer;
 object-position: unset;
 ```
 

@@ -26,6 +26,7 @@ overscroll-behavior-x: none;
 overscroll-behavior-x: inherit;
 overscroll-behavior-x: initial;
 overscroll-behavior-x: revert;
+overscroll-behavior-x: revert-layer;
 overscroll-behavior-x: unset;
 ```
 

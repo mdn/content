@@ -31,6 +31,7 @@ print-color-adjust: exact;
 print-color-adjust: inherit;
 print-color-adjust: initial;
 print-color-adjust: revert;
+print-color-adjust: revert-layer;
 print-color-adjust: unset;
 ```
 

@@ -51,6 +51,7 @@ place-items: stretch legacy;
 place-items: inherit;
 place-items: initial;
 place-items: revert;
+place-items: revert-layer;
 place-items: unset;
 ```
 
