@@ -236,7 +236,7 @@ Let's draw an equilateral triangle on the canvas.
     ```js
     function degToRad(degrees) {
       return degrees * Math.PI / 180;
-    };
+    }
     ```
 
 2. Next, start off your path by adding the following below your previous addition; here we set a color for our triangle, start drawing a path, and then move the pen to (50, 50) without drawing anything. That's where we'll start drawing our triangle.
@@ -416,7 +416,7 @@ Let's build a simple example.
     ```js
     function degToRad(degrees) {
       return degrees * Math.PI / 180;
-    };
+    }
 
     function rand(min, max) {
       return Math.floor(Math.random() * (max-min+1)) + (min);
@@ -554,7 +554,7 @@ Now let's create our own simple animation — we'll get a character from a certa
     ```js
     function draw() {
 
-    };
+    }
     ```
 
 6. The rest of the code in this section goes inside `draw()`. First, add the following line, which clears the canvas to prepare for drawing each frame. Notice that we have to specify the top-left corner of the rectangle as `-(width/2), -(height/2)` because we specified the origin position as `width/2, height/2` earlier on.
