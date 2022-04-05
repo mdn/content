@@ -30,9 +30,9 @@ This API lets you measure data that was previously difficult to obtain, such as 
   - : The {{domxref("window.performance")}} property returns a `Performance` object. While this interface is defined by the High Resolution Time API, the Navigation Timing API adds two properties: {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}}, of the types below.
 - {{domxref("PerformanceNavigationTiming")}}
   - : Provides methods and properties to store and retrieve metrics regarding the browser's document navigation events. For example, this interface can be used to determine how much time it takes to load or unload a document.
-- {{deprecated_inline}} {{domxref("PerformanceTiming")}}
+- {{domxref("PerformanceTiming")}} {{deprecated_inline}}
   - : Used as the type for the value of {{domxref("Performance.timing", "timing")}}, objects of this type contain timing information that can provide insight into web page performance.
-- {{deprecated_inline}}  {{domxref("PerformanceNavigation")}}
+- {{domxref("PerformanceNavigation")}} {{deprecated_inline}}
   - : The type used to return the value of {{domxref("Performance.navigation", "navigation")}}, which contains information explaining the context of the load operation described by this `Performance` instance.
 
 The Navigation Timing API can be used to gather performance data on the client side to be sent to a server via XHR as well as measure data that was very difficult to measure by other means such as time to unload a previous page, domain look up time, `window.onload` total time, etc.

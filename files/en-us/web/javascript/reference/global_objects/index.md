@@ -45,9 +45,9 @@ These global functions—functions which are called globally, rather than on an 
 - {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
 - **Deprecated**
 
-  - {{Deprecated_Inline}} {{JSxRef("Global_Objects/escape", "escape()")}}
-  - {{Deprecated_Inline}} {{JSxRef("Global_Objects/unescape", "unescape()")}}
-  - {{Deprecated_Inline}} {{JSxRef("Global_Objects/uneval", "uneval()")}}
+  - {{JSxRef("Global_Objects/escape", "escape()")}} {{Deprecated_Inline}}
+  - {{JSxRef("Global_Objects/unescape", "unescape()")}} {{Deprecated_Inline}}
+  - {{JSxRef("Global_Objects/uneval", "uneval()")}} {{Deprecated_Inline}}
 
 ### Fundamental objects
 

@@ -103,7 +103,7 @@ Form-associated content is a subset of flow content comprising elements that hav
 - {{HTMLElement("button")}}
 - {{HTMLElement("fieldset")}}
 - {{HTMLElement("input")}}
-- {{deprecated_inline}}{{HTMLElement("keygen")}}
+- {{HTMLElement("keygen")}} {{deprecated_inline}}
 - {{HTMLElement("label")}}
 - {{HTMLElement("meter")}}
 - {{HTMLElement("object")}}
