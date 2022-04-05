@@ -92,6 +92,6 @@ function dragOverHandler(ev) {
 
 ## See also
 
-- [HTML Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
-- [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [HTML Drag and Drop API](/files/en-us/web/api/html_drag_and_drop_api)
+- [Drag Operations](/files/en-us/web/api/html_drag_and_drop_api/drag_operations)
 - [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
