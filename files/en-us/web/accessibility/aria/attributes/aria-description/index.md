@@ -52,10 +52,10 @@ Used in **ALL** roles.
 
 | Specification | Status |
 | ------------- | ------  |
-| {{SpecName("ARIA","#aria-description","ARIA: aria-description Attribute")}}  | {{Spec2('ARIA')}} |
+| {{SpecName("ARIA 1.2","#aria-description","ARIA: aria-description Attribute")}}  | {{Spec2('ARIA')}} |
 
 ## See Also
 
 - [HTML `title` attribute](/en-US/docs/Web/HTML/Global_attributes/title)
-- [`aria-describedby`](../aria-describedby)
+- [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
 - [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details)
