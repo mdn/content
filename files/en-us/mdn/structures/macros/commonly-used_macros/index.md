@@ -48,7 +48,7 @@ Most macros will also take a second argument allowing you to change the display 
   <tbody>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/master/kumascript/macros/cssxref.ejs">CSSxRef</a>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/cssxref.ejs">CSSxRef</a>
       </td>
       <td>
         <a href="/en-US/docs/Web/CSS/Reference">CSS Reference</a> (/Web/CSS/Reference)
@@ -59,7 +59,7 @@ Most macros will also take a second argument allowing you to change the display 
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/master/kumascript/macros/DOMxRef.ejs">DOMxRef</a>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/DOMxRef.ejs">DOMxRef</a>
       </td>
       <td><a href="/en-US/docs/Web/API">DOM Reference</a> (/Web/API)</td>
       <td>
@@ -71,7 +71,7 @@ Most macros will also take a second argument allowing you to change the display 
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/master/kumascript/macros/HTMLElement.ejs">HTMLElement</a>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTMLElement.ejs">HTMLElement</a>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTML/Element">HTML Elements reference</a> (/Web/HTML/Element)
@@ -82,7 +82,7 @@ Most macros will also take a second argument allowing you to change the display 
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/master/kumascript/macros/htmlattrxref.ejs"
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/htmlattrxref.ejs"
           >HTMLAttrxRef</a>
       </td>
       <td>
@@ -96,7 +96,7 @@ Most macros will also take a second argument allowing you to change the display 
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/master/kumascript/macros/jsxref.ejs">JSxRef</a>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/jsxref.ejs">JSxRef</a>
       </td>
       <td>
         <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript reference</a> (/Web/JavaScript/Reference).
@@ -107,7 +107,7 @@ Most macros will also take a second argument allowing you to change the display 
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/master/kumascript/macros/SVGAttr.ejs">SVGAttr</a>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/SVGAttr.ejs">SVGAttr</a>
       </td>
       <td>
         <a href="/en-US/docs/Web/SVG/Attribute">SVG attribute reference</a> (/Web/SVG/Attribute).
@@ -119,7 +119,7 @@ Most macros will also take a second argument allowing you to change the display 
     <tr>
       <td>
         <a
-          href="https://github.com/mdn/yari/tree/master/kumascript/macros/SVGElement.ejs">SVGElement</a>
+          href="https://github.com/mdn/yari/tree/main/kumascript/macros/SVGElement.ejs">SVGElement</a>
       </td>
       <td>
         <a href="/en-US/docs/Web/SVG/Attribute">SVG Element reference</a> (/Web/SVG/Element).
@@ -130,7 +130,7 @@ Most macros will also take a second argument allowing you to change the display 
     </tr>
     <tr>
       <td>
-        <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/HTTPHeader.ejs">HTTPHeader</a></code>
+        <code><a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPHeader.ejs">HTTPHeader</a></code>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> (/Web/HTTP/Headers).
@@ -141,7 +141,7 @@ Most macros will also take a second argument allowing you to change the display 
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/master/kumascript/macros/HTTPMethod.ejs">HTTPMethod</a>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPMethod.ejs">HTTPMethod</a>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTTP/Methods">HTTP request methods</a> (/Web/HTTP/Methods).
@@ -152,7 +152,7 @@ Most macros will also take a second argument allowing you to change the display 
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/master/kumascript/macros/HTTPStatus.ejs">HTTPStatus</a>
+        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPStatus.ejs">HTTPStatus</a>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTTP/Status">HTTP response status codes</a> (/Web/HTTP/Status)
@@ -192,7 +192,7 @@ Most macros will also take a second argument allowing you to change the display 
 
 ### Navigation aids for multi-page guides
 
-[`Previous`](https://github.com/mdn/yari/tree/main/kumascript/macros/Previous.ejs), [`Next`](https://github.com/mdn/yari/tree/master/kumascript/macros/Next.ejs), and [`PreviousNext`](https://github.com/mdn/yari/tree/master/kumascript/macros/PreviousNext.ejs) provide navigation controls for articles which are part of sequences.
+[`Previous`](https://github.com/mdn/yari/tree/main/kumascript/macros/Previous.ejs), [`Next`](https://github.com/mdn/yari/tree/main/kumascript/macros/Next.ejs), and [`PreviousNext`](https://github.com/mdn/yari/tree/main/kumascript/macros/PreviousNext.ejs) provide navigation controls for articles which are part of sequences.
 For the single-way templates, the only parameter needed is the wiki location of the previous or next article in the sequence.
 For [`PreviousNext`](https://github.com/mdn/yari/tree/main/kumascript/macros/PreviousNext.ejs), the two parameters needed are the wiki locations of the appropriate articles.
 The first parameter is for the previous article and the second is for the next article.
@@ -219,7 +219,7 @@ They typically link back to the main page of the reference/guide/tutorial (this 
 
 ### Inline indicators for API documentation
 
-[`optional_inline`](https://github.com/mdn/yari/tree/main/kumascript/macros/optional_inline.ejs) and [`ReadOnlyInline`](https://github.com/mdn/yari/tree/master/kumascript/macros/ReadOnlyInline.ejs) are used in API documentation, usually when describing the list of properties of an object or parameters of a function.
+[`optional_inline`](https://github.com/mdn/yari/tree/main/kumascript/macros/optional_inline.ejs) and [`ReadOnlyInline`](https://github.com/mdn/yari/tree/main/kumascript/macros/ReadOnlyInline.ejs) are used in API documentation, usually when describing the list of properties of an object or parameters of a function.
 
 Usage: `\{{Optional_Inline}}` or `\{{ReadOnlyInline}}`.
 Example:
@@ -247,7 +247,7 @@ Example:
 
 #### Experimental
 
-[`experimental_inline`](https://github.com/mdn/yari/tree/master/kumascript/macros/experimental_inline.ejs) inserts an in-line mark indicating the API is not widely implemented and may change in the future.
+[`experimental_inline`](https://github.com/mdn/yari/tree/main/kumascript/macros/experimental_inline.ejs) inserts an in-line mark indicating the API is not widely implemented and may change in the future.
 
 ##### Syntax
 
