@@ -39,6 +39,7 @@ border-image-outset: 7px 12px 14px 5px;
 border-image-outset: inherit;
 border-image-outset: initial;
 border-image-outset: revert;
+border-image-outset: revert-layer;
 border-image-outset: unset;
 ```
 

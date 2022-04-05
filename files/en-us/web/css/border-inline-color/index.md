@@ -27,6 +27,7 @@ border-inline-color: #F5F6F7;
 border-inline-color: inherit;
 border-inline-color: initial;
 border-inline-color: revert;
+border-inline-color: revert-layer;
 border-inline-color: unset;
 ```
 

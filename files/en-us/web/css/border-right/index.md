@@ -50,6 +50,7 @@ border-right: medium dashed green;
 border-right: inherit;
 border-right: initial;
 border-right: revert;
+border-right: revert-layer;
 border-right: unset;
 ```
 
