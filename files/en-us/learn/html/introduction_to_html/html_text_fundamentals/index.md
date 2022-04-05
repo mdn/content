@@ -771,9 +771,9 @@ In human language, we often emphasize certain words to alter the meaning of a se
 
 When we want to add emphasis in spoken language, we _stress_ certain words, subtly altering the meaning of what we are saying. Similarly, in written language we tend to stress words by putting them in italics. For example, the following two sentences have different meanings.
 
-I am glad you weren't late.
-
-I am _glad_ you weren't _late_.
+> I am glad you weren't late.
+>
+> I am _glad_ you weren't _late_.
 
 The first sentence sounds genuinely relieved that the person wasn't late. In contrast, the second one, with both the words "glad" and "late" in italics, sounds sarcastic or passive-aggressive, expressing annoyance that the person arrived a bit late.
 
@@ -787,9 +787,9 @@ In HTML we use the {{htmlelement("em")}} (emphasis) element to mark up such inst
 
 To emphasize important words, we tend to stress them in spoken language and **bold** them in written language. For example:
 
-This liquid is **highly toxic**.
-
-I am counting on you. **Do not** be late!
+> This liquid is **highly toxic**.
+>
+> I am counting on you. **Do not** be late!
 
 In HTML we use the {{htmlelement("strong")}} (strong importance) element to mark up such instances. As well as making the document more useful, again these are recognized by screen readers and spoken in a different tone of voice. Browsers style this as bold text by default, but you shouldn't use this tag purely to get bold styling. To do that, you'd use a {{htmlelement("span")}} element and some CSS, or perhaps a {{htmlelement("b")}} element (see below).
 
