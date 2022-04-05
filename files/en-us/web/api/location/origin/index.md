@@ -1,5 +1,5 @@
 ---
-title: 'Location: origin'
+title: location.origin
 slug: Web/API/Location/origin
 tags:
   - API

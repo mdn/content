@@ -41,8 +41,7 @@ slice(beginIndex, endIndex)
 
 - `endIndex` {{optional_inline}}
 
-  - : The zero-based index _before_ which to end extraction. The character at this
-    index will not be included.
+  - : The index of the first character to exclude from the returned substring.
 
     If `endIndex` is omitted, undefined, or cannot be converted to a number (using
     {{jsxref('Number', 'Number(endIndex)')}}) `slice()` extracts to the end of the

@@ -37,5 +37,5 @@ pc.onaddstream = function( ev ) {
 
 ## See also
 
-- {{event("addstream")}}, {{event("removestream")}}
+- {{domxref("RTCPeerConnection.addstream_event", "addstream")}}, {{domxref("RTCPeerConnection.removestream_event", "removestream")}}
 - {{domxref("RTCPeerConnection")}}

@@ -15,13 +15,9 @@ tags:
 
 Specifies an event listener to receive {{event("error")}} events. These events occur when something goes wrong.
 
-## Syntax
+## Value
 
-```js
-instanceOfLockedFile.onerror = funcRef;
-```
-
-Where `funcRef` is a function to be called when the {{event("error")}} event occurs.
+A function to be called when the {{event("error")}} event occurs.
 
 ## Specifications
 

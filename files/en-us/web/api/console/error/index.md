@@ -51,4 +51,4 @@ details.
 - [MSDN: Using the F12 Tools
   Console to View Errors and Status](https://msdn.microsoft.com/library/gg589530)
 - [Chrome
-  Developer Tools: Using the Console](https://developers.google.com/web/tools/chrome-devtools/console/api#error)
+  Developer Tools: Using the Console](https://developer.chrome.com/docs/devtools/console/api/#error)

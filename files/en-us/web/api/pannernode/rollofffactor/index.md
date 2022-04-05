@@ -14,15 +14,7 @@ browser-compat: api.PannerNode.rolloffFactor
 
 The `rolloffFactor` property of the {{ domxref("PannerNode") }} interface is a double value describing how quickly the volume is reduced as the source moves away from the listener. This value is used by all distance models.The `rolloffFactor` property's default value is `1`.
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var panner = audioCtx.createPanner();
-panner.rolloffFactor = 1;
-```
-
-### Value
+## Value
 
 A number whose range depends on the {{ domxref("PannerNode.distanceModel", "distanceModel") }} of the panner as follows (negative values are not allowed):
 
@@ -38,7 +30,7 @@ A number whose range depends on the {{ domxref("PannerNode.distanceModel", "dist
 - `RangeError`
   - : The property has been given a value that is outside the accepted range.
 
-## Example
+## Examples
 
 This example demonstrates how different {{ domxref("PannerNode.rolloffFactor", "rolloffFactor") }} values affect how the volume of the test tone decreases with increasing distance from the listener:
 

@@ -28,6 +28,7 @@ border-block-width: thick;
 border-block-width: inherit;
 border-block-width: initial;
 border-block-width: revert;
+border-block-width: revert-layer;
 border-block-width: unset;
 ```
 

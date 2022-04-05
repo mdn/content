@@ -118,5 +118,5 @@ The most common usage is to disable all gestures on an element (and its non-scro
 - {{cssxref("pointer-events","pointer-events")}}
 - {{domxref("Pointer_events","Pointer Events")}}
 - WebKit Blog [More Responsive Tapping on iOS](https://webkit.org/blog/5610/more-responsive-tapping-on-ios/ "Permanent Link: More Responsive Tapping on iOS")
-- Google Developers Blog [Making touch scrolling fast by default](https://developers.google.com/web/updates/2017/01/scrolling-intervention)
+- Google Developers Blog [Making touch scrolling fast by default](https://developer.chrome.com/blog/scrolling-intervention/)
 - [Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)

@@ -41,6 +41,7 @@ height: auto;
 height: inherit;
 height: initial;
 height: revert;
+height: revert-layer;
 height: unset;
 ```
 

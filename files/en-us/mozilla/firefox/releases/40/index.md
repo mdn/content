@@ -89,7 +89,7 @@ Improvement in our experimental Web Animations implementation, mostly to match l
 
 #### WebRTC
 
-- WebRTC: the {{event("negotiationneeded")}} event is now also sent for initial negotiations, not only for re-negotiations ({{bug(1149838)}}).
+- WebRTC: the {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} event is now also sent for initial negotiations, not only for re-negotiations ({{bug(1149838)}}).
 
 #### DOM & HTML DOM
 

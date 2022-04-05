@@ -32,6 +32,7 @@ grid-template-areas: "a b b"
 grid-template-areas: inherit;
 grid-template-areas: initial;
 grid-template-areas: revert;
+grid-template-areas: revert-layer;
 grid-template-areas: unset;
 ```
 

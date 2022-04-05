@@ -14,16 +14,11 @@ browser-compat: api.HTMLCollection.length
 The **`HTMLCollection.length`** property returns the number of
 items in a {{domxref("HTMLCollection")}}.
 
-## Syntax
+## Value
 
-```js
-numItems = htmlCollection.length
-```
+An integer value representing the number of items in a `HTMLCollection`.
 
-- `numItems` is an integer value representing the number of items in a
-  `HTMLCollection`.
-
-## Example
+## Examples
 
 The `length` property is often useful in DOM programming. It's often used to
 test the length of a list, to see if it exists at all. It's also commonly used as the

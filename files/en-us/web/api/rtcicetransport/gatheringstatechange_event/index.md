@@ -88,12 +88,12 @@ pc.getSenders().forEach(sender => {
 ### Related RTCIceTransport events
 
 - {{event("statechange")}}
-- {{event("selectedcandidatepairchange")}}
+- {{domxref("RTCIceTransport.selectedcandidatepairchange_event", "selectedcandidatepairchange")}}
 
 ### Related RTCPeerConnection events
 
-- {{event("negotiationneeded")}}
-- {{event("signalingstatechange")}}
-- {{event("iceconnectionstatechange")}}
-- {{event("icegatheringstatechange")}}
-- {{event("connectionstatechange")}}
+- {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}
+- {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}
+- {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}
+- {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}
+- {{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}}

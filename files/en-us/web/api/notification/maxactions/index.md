@@ -18,13 +18,7 @@ The **`maxActions`** attribute of the
 the device and the User Agent. Effectively, this is the maximum number of elements in
 {{domxref("Notification.actions")}} array which will be respected by the User Agent.
 
-## Syntax
-
-```js
-Notification.maxActions
-```
-
-### Value
+## Value
 
 An integer {{JSxRef("Number")}} which indicates the largest number of notification
 actions that can be presented to the user by the User Agent and the device.

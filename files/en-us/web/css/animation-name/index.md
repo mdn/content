@@ -31,9 +31,10 @@ animation-name: test1, animation4;
 animation-name: none, -moz-specific, sliding;
 
 /* Global values */
-animation-name: initial;
 animation-name: inherit;
+animation-name: initial;
 animation-name: revert;
+animation-name: revert-layer;
 animation-name: unset;
 ```
 

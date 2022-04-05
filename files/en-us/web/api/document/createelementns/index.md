@@ -18,7 +18,8 @@ To create an element without specifying a namespace URI, use the
 ## Syntax
 
 ```js
-var element = document.createElementNS(namespaceURI, qualifiedName[, options]);
+document.createElementNS(namespaceURI, qualifiedName);
+document.createElementNS(namespaceURI, qualifiedName, options);
 ```
 
 ### Parameters

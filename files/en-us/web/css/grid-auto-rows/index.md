@@ -54,6 +54,7 @@ grid-auto-rows: 100px minmax(100px, auto) 10% 0.5fr fit-content(400px);
 grid-auto-rows: inherit;
 grid-auto-rows: initial;
 grid-auto-rows: revert;
+grid-auto-rows: revert-layer;
 grid-auto-rows: unset;
 ```
 

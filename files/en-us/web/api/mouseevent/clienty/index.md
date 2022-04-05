@@ -21,7 +21,7 @@ For example, clicking on the top edge of the viewport will always result in a mo
 
 A `double` floating point value.
 
-## Example
+## Examples
 
 This example displays your mouse's coordinates whenever you trigger the {{Event("mousemove")}} event.
 

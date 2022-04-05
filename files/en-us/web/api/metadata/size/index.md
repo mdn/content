@@ -24,7 +24,7 @@ file or other file system object on disk.
 
 A number indicating the size of the file in bytes.
 
-## Example
+## Examples
 
 This example checks the size of a log file and removes it if it's larger than a
 megabyte.

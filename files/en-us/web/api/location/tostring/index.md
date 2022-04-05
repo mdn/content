@@ -1,5 +1,5 @@
 ---
-title: 'Location: toString()'
+title: location.toString()
 slug: Web/API/Location/toString
 tags:
   - API

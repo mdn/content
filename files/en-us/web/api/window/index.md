@@ -318,10 +318,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 
 - {{domxref("GlobalEventHandlers.onabort")}}
   - : Called when the loading of a resource has been aborted, such as by a user canceling the load while it is still in progress
-- {{domxref("WindowEventHandlers.onafterprint")}}
-  - : Called when the print dialog box is closed. See {{event("afterprint")}} event.
-- {{domxref("WindowEventHandlers.onbeforeprint")}}
-  - : Called when the print dialog box is opened. See {{event("beforeprint")}} event.
 - {{domxref("WindowEventHandlers.onbeforeunload")}}
   - : An event handler property for before-unload events on the window.
 - {{domxref("GlobalEventHandlers.onblur")}}
@@ -351,7 +347,7 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("GlobalEventHandlers.onkeyup")}}
   - : Called when you finish releasing ANY key. See {{event("keyup")}} event.
 - {{domxref("WindowEventHandlers.onlanguagechange")}}
-  - : An event handler property for {{event("languagechange")}} events on the window.
+  - : An event handler property for {{domxref("Window.languagechange_event", "languagechange")}} events on the window.
 - {{domxref("GlobalEventHandlers.onload")}}
   - : Called after all resources and the DOM are fully loaded. WILL NOT get called when the page is loaded from cache, such as with back button.
 - {{domxref("GlobalEventHandlers.onmousedown")}}
@@ -365,9 +361,9 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("GlobalEventHandlers.onmouseup")}}
   - : Called when ANY mouse button is released
 - {{domxref("WindowEventHandlers.onoffline")}}
-  - : Called when network connection is lost. See {{event("offline")}} event.
+  - : Called when network connection is lost. See {{domxref("Window.offline_event", "offline")}} event.
 - {{domxref("WindowEventHandlers.ononline")}}
-  - : Called when network connection is established. See {{event("online")}} event.
+  - : Called when network connection is established. See {{domxref("Window.online_event", "online")}} event.
 - {{domxref("WindowEventHandlers.onpagehide")}}
   - : Called when the user navigates away from the page, before the onunload event. See {{event("pagehide")}} event.
 - {{domxref("WindowEventHandlers.onpageshow")}}
@@ -387,7 +383,7 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("GlobalEventHandlers.onselectionchange")}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("selectionchange")}} event is raised.
 - {{domxref("WindowEventHandlers.onstorage")}}
-  - : Called when there is a change in session storage or local storage. See {{event("storage")}} event
+  - : Called when there is a change in session storage or local storage. See {{domxref("Window.storage_event", "storage")}} event
 - {{domxref("GlobalEventHandlers.onsubmit")}}
   - : Called when a form is submitted
 - {{domxref("WindowEventHandlers.onunhandledrejection")}} {{experimental_inline}}
@@ -407,9 +403,9 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
     Also available via the {{domxref("WindowEventHandlers/onlanguagechange", "onlanguagechange")}} property.
 - {{domxref("Window/orientationchange_event", "orientationchange")}} {{deprecated_inline}}
   - : Fired when the orientation of the device has changed.
-- {{domxref("Window/devicemotion_event", "devicemotion")}}
+- {{domxref("Window.devicemotion_event", "devicemotion")}}
   - : Fired at a regular interval, indicating the amount of physical force of acceleration the device is receiving and the rate of rotation, if available.
-- {{domxref("Window/deviceorientation_event", "deviceorientation")}}
+- {{domxref("Window.deviceorientation_event", "deviceorientation")}}
   - : Fired when fresh data is available from the magnetometer orientation sensor about the current orientation of the device as compared to the Earth coordinate frame.
 - {{domxref("Window/resize_event", "resize")}}
   - : Fired when the window has been resized.
@@ -531,10 +527,8 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - {{domxref("Window/afterprint_event", "afterprint")}}
   - : Fired after the associated document has started printing or the print preview has been closed.
-    Also available via the {{domxref("WindowEventHandlers/onafterprint", "onafterprint")}} property.
 - {{domxref("Window/beforeprint_event", "beforeprint")}}
   - : Fired when the associated document is about to be printed or previewed for printing.
-    Also available via the {{domxref("WindowEventHandlers/onbeforeprint", "onbeforeprint")}} property.
 
 ### Promise rejection events
 

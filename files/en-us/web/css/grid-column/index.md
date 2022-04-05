@@ -40,6 +40,7 @@ grid-column: main-start / main-end;
 grid-column: inherit;
 grid-column: initial;
 grid-column: revert;
+grid-column: revert-layer;
 grid-column: unset;
 ```
 

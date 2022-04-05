@@ -14,13 +14,10 @@ tags:
 
 As a JavaScript developer, programmatically writing data to a stream is very useful! This article explains the [Streams API](/en-US/docs/Web/API/Streams_API)'s writable stream functionality.
 
-> **Note:** This article assumes that you understand the use cases of writable streams, and are aware of the high-level concepts. If not, we suggest that you first read the [Streams concepts and usage overview](/en-US/docs/Web/API/Streams_API#Concepts_and_usage) and dedicated [Streams API concepts](/en-US/docs/Web/API/Streams_API/Concepts) article, then come back.
+> **Note:** This article assumes that you understand the use cases of writable streams, and are aware of the high-level concepts.
+> If not, we suggest that you first read the [Streams concepts and usage overview](/en-US/docs/Web/API/Streams_API#Concepts_and_usage) and dedicated [Streams API concepts](/en-US/docs/Web/API/Streams_API/Concepts) article, then come back.
 
 > **Note:** If you are looking for information about readable streams, try [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams) instead.
-
-## Browser support
-
-The Streams API is experimental, and support is at an early stage right now. Only Chrome currently has basic writable streams implemented.
 
 ## Introducing an example
 
@@ -75,8 +72,8 @@ const writableStream = new WritableStream({
   // Implement the sink
   write(chunk) {
     return new Promise((resolve, reject) => {
-      var buffer = new ArrayBuffer(2);
-      var view = new Uint16Array(buffer);
+      var buffer = new ArrayBuffer(1);
+      var view = new Uint8Array(buffer);
       view[0] = chunk;
       var decoded = decoder.decode(view, { stream: true });
       var listItem = document.createElement('li');

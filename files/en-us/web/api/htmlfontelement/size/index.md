@@ -51,12 +51,9 @@ The format of the string must follow one of the following HTML microsyntaxes:
   </tbody>
 </table>
 
-## Syntax
+## Value
 
-```js
-sizeString = fontObj.size;
-fontObj.size = sizeString;
-```
+A string.
 
 ## Examples
 

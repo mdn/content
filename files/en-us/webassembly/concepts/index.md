@@ -77,7 +77,7 @@ Above we talked about the raw primitives that WebAssembly adds to the Web platfo
 
 The WebAssembly ecosystem is at a nascent stage; more tools will undoubtedly emerge going forward. Right now, there are four main entry points:
 
-- Porting a C/C++ application with [Emscripten](/en-US/docs/Mozilla/Projects/Emscripten).
+- Porting a C/C++ application with [Emscripten](https://emscripten.org/).
 - Writing or generating WebAssembly directly at the assembly level.
 - Writing a Rust application and targeting WebAssembly as its output.
 - Using [AssemblyScript](https://assemblyscript.org/) which looks similar to TypeScript and compiles to WebAssembly binary.
@@ -86,7 +86,7 @@ Let's talk about these options:
 
 ### Porting from C/C++
 
-Two of the many options for creating WASM code are an online wasm assembler or [Emscripten](/en-US/docs/Mozilla/Projects/Emscripten). There are a number of online WASM assembler choices, such as:
+Two of the many options for creating WASM code are an online wasm assembler or [Emscripten](https://emscripten.org/). There are a number of online WASM assembler choices, such as:
 
 - [WasmFiddle](https://wasdk.github.io/WasmFiddle/)
 - [WasmFiddle++](https://anonyco.github.io/WasmFiddlePlusPlus/)

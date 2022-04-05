@@ -72517,75 +72517,6 @@
       "kscarfone"
     ]
   },
-  "Web/API/ServiceWorkerMessageEvent": {
-    "modified": "2020-10-15T21:37:32.679Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "abbycar",
-      "chrisdavidmills",
-      "narohcp",
-      "jpmedley"
-    ]
-  },
-  "Web/API/ServiceWorkerMessageEvent/ServiceWorkerMessageEvent": {
-    "modified": "2020-10-15T21:41:26.275Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/ServiceWorkerMessageEvent/data": {
-    "modified": "2020-10-15T21:41:09.046Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "abbycar",
-      "chrisdavidmills",
-      "narohcp"
-    ]
-  },
-  "Web/API/ServiceWorkerMessageEvent/lastEventId": {
-    "modified": "2020-10-15T21:41:09.331Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "abbycar",
-      "chrisdavidmills",
-      "narohcp"
-    ]
-  },
-  "Web/API/ServiceWorkerMessageEvent/origin": {
-    "modified": "2020-10-15T21:41:09.290Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "abbycar",
-      "chrisdavidmills",
-      "narohcp"
-    ]
-  },
-  "Web/API/ServiceWorkerMessageEvent/ports": {
-    "modified": "2020-10-15T21:41:10.278Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "abbycar",
-      "chrisdavidmills",
-      "narohcp"
-    ]
-  },
-  "Web/API/ServiceWorkerMessageEvent/source": {
-    "modified": "2020-10-15T21:41:09.238Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "abbycar",
-      "chrisdavidmills",
-      "narohcp"
-    ]
-  },
   "Web/API/ServiceWorkerRegistration": {
     "modified": "2020-10-15T21:31:20.495Z",
     "contributors": [
@@ -72664,19 +72595,6 @@
       "Wind1808",
       "jpmedley",
       "ExE-Boss"
-    ]
-  },
-  "Web/API/ServiceWorkerRegistration/onupdatefound": {
-    "modified": "2020-10-15T21:32:15.773Z",
-    "contributors": [
-      "Wind1808",
-      "sideshowbarker",
-      "jpmedley",
-      "ExE-Boss",
-      "abbycar",
-      "chrisdavidmills",
-      "fscholz",
-      "kscarfone"
     ]
   },
   "Web/API/ServiceWorkerRegistration/periodicSync": {
@@ -72774,6 +72692,19 @@
       "rolfedh",
       "mattto",
       "pubatee",
+      "fscholz",
+      "kscarfone"
+    ]
+  },
+  "Web/API/ServiceWorkerRegistration/updatefound_event": {
+    "modified": "2020-10-15T21:32:15.773Z",
+    "contributors": [
+      "Wind1808",
+      "sideshowbarker",
+      "jpmedley",
+      "ExE-Boss",
+      "abbycar",
+      "chrisdavidmills",
       "fscholz",
       "kscarfone"
     ]
@@ -85436,72 +85367,6 @@
       "Ehsan"
     ]
   },
-  "Web/API/WindowEventHandlers/onafterprint": {
-    "modified": "2020-10-15T21:06:49.096Z",
-    "contributors": [
-      "mathieu.savy",
-      "mfuji09",
-      "Wind1808",
-      "mfluehr",
-      "Jonathan_Watt",
-      "sideshowbarker",
-      "Khich",
-      "fscholz",
-      "chrisdavidmills",
-      "kishanio",
-      "jmanos",
-      "hartman",
-      "jpmedley",
-      "harbichidian",
-      "erikadoyle",
-      "hbloomer",
-      "irvinfly",
-      "teoli",
-      "cpigat",
-      "jsx",
-      "kscarfone",
-      "libreGeekingKid",
-      "deepakyadav",
-      "Sheppy",
-      "ethertank",
-      "trevorh",
-      "fusionchess"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onbeforeprint": {
-    "modified": "2020-10-15T21:06:52.867Z",
-    "contributors": [
-      "mfuji09",
-      "Wind1808",
-      "mfluehr",
-      "Jonathan_Watt",
-      "sideshowbarker",
-      "greypants",
-      "fscholz",
-      "chrisdavidmills",
-      "tylerbrazier",
-      "jmanos",
-      "hartman",
-      "jpmedley",
-      "harbichidian",
-      "rianby64",
-      "erikadoyle",
-      "strebl",
-      "hbloomer",
-      "irvinfly",
-      "Nickolay",
-      "teoli",
-      "cpigat",
-      "MHasan",
-      "kscarfone",
-      "libreGeekingKid",
-      "ethertank",
-      "Sheppy",
-      "trevorh",
-      "xram",
-      "fusionchess"
-    ]
-  },
   "Web/API/WindowEventHandlers/onbeforeunload": {
     "modified": "2020-10-26T06:25:53.638Z",
     "contributors": [
@@ -85562,36 +85427,6 @@
       "alex.w.y",
       "cd0",
       "Robg1"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onhashchange": {
-    "modified": "2020-10-15T21:06:48.290Z",
-    "contributors": [
-      "fscholz",
-      "smoore4usa",
-      "mfluehr",
-      "sideshowbarker",
-      "carolinekabat",
-      "jcamenisch",
-      "xgqfrms",
-      "douira",
-      "jpmedley",
-      "tobias74",
-      "erikadoyle",
-      "fuweichin",
-      "teoli",
-      "Taken",
-      "libreGeekingKid",
-      "leon_gilyadov",
-      "Sheppy",
-      "ethertank",
-      "ziyunfei",
-      "McGurk",
-      "Jürgen Jeka",
-      "Crash",
-      "Nickolay",
-      "jlebar",
-      "Sephr"
     ]
   },
   "Web/API/WindowEventHandlers/onlanguagechange": {

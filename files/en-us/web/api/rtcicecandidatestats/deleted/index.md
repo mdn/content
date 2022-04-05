@@ -18,13 +18,7 @@ The {{domxref("RTCIceCandidateStats")}} dictionary's
 **`deleted`** property indicates whether or not the candidate
 has been deleted or released.
 
-## Syntax
-
-```js
-isDeleted = rtcIceCandidateStats.deleted;
-```
-
-### Value
+## Value
 
 A Boolean value indicating whether or not the candidate has been deleted or released.
 If this value is `true`, the candidate described by the
@@ -45,7 +39,7 @@ meaning varies depending on the type of candidate:
 The net result is the same; the candidate is no longer under consideration if this
 value is `true`.
 
-## Example
+## Examples
 
 In this example, {{domxref("setInterval()")}}
 is used to set up a function that runs periodically to display the latest statistics for

@@ -21,13 +21,7 @@ The read-only property **`MediaError.code`** returns a numeric
 value which represents the kind of error that occurred on a media element. To get a text
 string with specific diagnostic information, see {{domxref("MediaError.message")}}.
 
-## Syntax
-
-```js
-var myError = mediaError.code;
-```
-
-### Value
+## Value
 
 A numeric value indicating the general type of error which occurred. The possible
 values are described below, in [Media error code constants](#media_error_code_constants).
@@ -79,7 +73,7 @@ values are described below, in [Media error code constants](#media_error_code_co
   </tbody>
 </table>
 
-## Example
+## Examples
 
 This example creates a {{HTMLElement("video")}} element, establishes an error handler
 for it, and then sets the element's {{htmlattrxref("src", "video")}} attribute to the

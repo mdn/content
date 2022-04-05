@@ -79,5 +79,5 @@ You can find a demo application which implements Background Fetch [here](https:/
 
 ## See also
 
-- [Introducing Background Fetch](https://developers.google.com/web/updates/2018/12/background-fetch)
+- [Introducing Background Fetch](https://developer.chrome.com/blog/background-fetch/)
 - [Background Fetch - HTTP 203](https://www.youtube.com/watch?v=cElAoxhQz6w)

@@ -34,13 +34,7 @@ received media.In general, what's usually of interest is that the higher this nu
 the more the stream data is becoming corrupted between the sender and the receiver,
 causing the receiver to request retransmits or to drop frames entirely.
 
-## Syntax
-
-```js
-var sliCount = RTCOutboundRtpStreamStats.sliCount;
-```
-
-### Value
+## Value
 
 An unsigned integer indicating the number of SLI packets the sender received from the
 receiver due to lost runs of macroblocks. A high value of `sliCount` may be

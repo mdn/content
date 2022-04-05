@@ -11,7 +11,7 @@ tags:
 ---
 {{MDNSidebar}}
 
-On the [Yari](/en-US/docs/MDN/Yari) platform that powers MDN, we still have a legacy template/macro system available called [KumaScript](https://github.com/mdn/yari/tree/master/kumascript) for automating certain aspects of content. We are hoping to stop using it some day, but until then MDN will still rely on it. This article provides basic information about using KumaScript
+On the [Yari](/en-US/docs/MDN/Yari) platform that powers MDN, we still have a legacy template/macro system available called [KumaScript](https://github.com/mdn/yari/tree/main/kumascript) for automating certain aspects of content. We are hoping to stop using it some day, but until then MDN will still rely on it. This article provides basic information about using KumaScript
 
 ### What is KumaScript?
 
@@ -32,7 +32,7 @@ KumaScript does not
 
 KumaScript is used on MDN via [embedded JavaScript templates](https://github.com/mde/ejs). These templates can be invoked in document content by any MDN author, through the use of macros.
 
-A script in KumaScript is a _template_, and each template is a file in [the macros directory](https://github.com/mdn/yari/tree/master/kumascript/macros) of the yari/kumascript repository on GitHub. A sample template might look like this:
+A script in KumaScript is a _template_, and each template is a file in [the macros directory](https://github.com/mdn/yari/tree/main/kumascript/macros) of the yari/kumascript repository on GitHub. A sample template might look like this:
 
 ```js
 <% for (let i = 0; i < $0; i++) { %>

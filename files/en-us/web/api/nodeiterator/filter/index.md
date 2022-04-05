@@ -21,13 +21,11 @@ should return the constant `NodeFilter.FILTER_ACCEPT` for cases when the
 node should be accepted and `NodeFilter.FILTER_REJECT` for cases when the
 node should be rejected.
 
-## Syntax
+## Value
 
-```js
-nodeFilter = nodeIterator.filter;
-```
+A {{domxref("NodeFilter")}} object.
 
-## Example
+## Examples
 
 ```js
 const nodeIterator = document.createNodeIterator(

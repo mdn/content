@@ -37,7 +37,7 @@ An {{domxref("XRInputSource")}} object identifying the source of the user input 
 This event indicates an action the user has taken using a WebXR input controller, such
 as a hand controller, motion sensing device, or other input apparatus.
 
-## Example
+## Examples
 
 The snippet below shows a handler for the {{domxref("XRSession.select_event",
   "select")}} event which looks specifically for events which happen on `gaze`

@@ -14,17 +14,11 @@ browser-compat: api.WorkerGlobalScope.self
 
 The **`self`** read-only property of the {{domxref("WorkerGlobalScope")}} interface returns a reference to the `WorkerGlobalScope` itself. Most of the time it is a specific scope like {{domxref("DedicatedWorkerGlobalScope")}},  {{domxref("SharedWorkerGlobalScope")}}, or {{domxref("ServiceWorkerGlobalScope")}}.
 
-## Syntax
-
-```js
-var selfRef = self;
-```
-
-### Value
+## Value
 
 A global scope object (differs depending on the type of worker you are dealing with, as indicated above).
 
-## Example
+## Examples
 
 If you called
 

@@ -15,19 +15,13 @@ The **`domComplete`** read-only property returns a
 time immediately before the user agent sets the current document readiness of the
 current document to _[complete](https://html.spec.whatwg.org/multipage/syntax.html#the-end)_.
 
-## Syntax
-
-```js
-perfEntry.domComplete;
-```
-
-### Return Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp","timestamp")}} representing a time value equal to the
 time immediately before the user agent sets the current document readiness of the
 current document to _[complete](https://html.spec.whatwg.org/multipage/syntax.html#the-end)_.
 
-## Example
+## Examples
 
 The following example illustrates this property's usage.
 

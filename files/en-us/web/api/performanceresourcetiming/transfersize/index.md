@@ -19,19 +19,13 @@ the response payload body (as defined by [RFC7230](https://httpwg.github.io/spec
 If the resource is fetched from a local cache, or if it is a cross-origin resource,
 this property returns zero.
 
-## Syntax
-
-```js
-resource.transferSize;
-```
-
-### Return value
+## Value
 
 A `number` representing the size (in octets) of the fetched resource. The
 size includes the response header fields plus the [response payload
 body](https://httpwg.github.io/specs/rfc7230.html#message.body) (RFC7230).
 
-## Example
+## Examples
 
 The following example, the value of size properties of all "`resource`"
 {{domxref("PerformanceEntry.entryType","type")}} events are logged.

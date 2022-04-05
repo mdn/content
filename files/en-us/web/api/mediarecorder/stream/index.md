@@ -16,12 +16,12 @@ The **`MediaRecorder.stream`** read-only property returns the
 stream that was passed into the `MediaRecorder()` constructor when the
 `MediaRecorder` was created.
 
-## Values
+## Value
 
 The MediaStream passed into the `MediaRecorder()` constructor when the
 `MediaRecorder` was originally created.
 
-## Example
+## Examples
 
 ```js
 if (navigator.getUserMedia) {

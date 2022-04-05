@@ -12,9 +12,6 @@ browser-compat: api.RTCIceServer.username
 ---
 {{APIRef("WebRTC")}}
 
-{{draft("I'm experimenting with structure for pages documenting members of
-  dictionaries. Please contact ~~sheppy with any feedback.")}}
-
 {{SeeCompatTable}}
 
 The {{domxref("RTCIceServer")}} dictionary's **`username`**

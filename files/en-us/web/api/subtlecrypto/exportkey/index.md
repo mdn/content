@@ -122,7 +122,7 @@ is then PEM-encoded. [See the complete code on GitHub.](https://github.com/mdn/d
 ```js
 /*
 Convert  an ArrayBuffer into a string
-from https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
+from https://developer.chrome.com/blog/how-to-convert-arraybuffer-to-and-from-string/
 */
 function ab2str(buf) {
   return String.fromCharCode.apply(null, new Uint8Array(buf));
@@ -175,7 +175,7 @@ object. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/b
 ```js
 /*
 Convert  an ArrayBuffer into a string
-from https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
+from https://developer.chrome.com/blog/how-to-convert-arraybuffer-to-and-from-string/
 */
 function ab2str(buf) {
   return String.fromCharCode.apply(null, new Uint8Array(buf));

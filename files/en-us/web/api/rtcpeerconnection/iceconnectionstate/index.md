@@ -76,7 +76,7 @@ The current state of the ICE agent and its connection. The value is one of the f
   - : The ICE agent for this {{domxref("RTCPeerConnection")}} has shut down
     and is no longer handling requests.
 
-## Example
+## Examples
 
 ```js
 var pc = new RTCPeerConnection();

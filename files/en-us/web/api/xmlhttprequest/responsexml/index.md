@@ -52,7 +52,7 @@ data is not XML/HTML.
   - : Thrown if the {{domxref("XMLHttpRequest.responseType", "responseType")}} isn't either
     `document` or an empty string.
 
-## Example
+## Examples
 
 ```js
 var xhr = new XMLHttpRequest;

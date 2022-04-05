@@ -39,7 +39,7 @@ Even though numeric types both are represented by `Number` in JavaScript, they m
 
 See [Browser compatibility](#browser_compatibility) to learn which browsers have been updated to use the revised data type.
 
-## Example
+## Examples
 
 ### Showing the mouse position relative to page origin
 

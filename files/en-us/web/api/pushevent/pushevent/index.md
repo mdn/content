@@ -28,7 +28,7 @@ new PushEvent(type, eventInitDict);
 
 - _type_
   - : A {{domxref("DOMString")}} defining the type of `PushEvent`. This can
-    be {{event("push")}} or {{event("pushsubscriptionchange")}}.
+    be {{domxref("ServiceWorkerGlobalScope.push_event", "push")}} or {{domxref("ServiceWorkerGlobalScope.pushsubscriptionchange_event", "pushsubscriptionchange")}}.
 - _eventInitDict_ {{optional_inline}}
 
   - : An options object containing any initialization data you want to populate the

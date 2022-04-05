@@ -64,14 +64,14 @@ While this article does not dive into using these APIs, it is useful to know the
 
 There are a number of different tools available to help you improve performance. These can generally be classified into two categories:
 
-- Tools that indicate or measure performance, such as [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) or the Firefox [Network Monitor](/en-US/docs/Tools/Network_Monitor) and [Performance Monitor](/en-US/docs/Tools/Performance). These tools show you how fast or slow your web app or site load. They also indicate areas that can be improved to optimize your web app.
+- Tools that indicate or measure performance, such as [PageSpeed Insights](https://pagespeed.web.dev/) or the Firefox [Network Monitor](/en-US/docs/Tools/Network_Monitor) and [Performance Monitor](/en-US/docs/Tools/Performance). These tools show you how fast or slow your web app or site load. They also indicate areas that can be improved to optimize your web app.
 - Tools that update code so that your web app or site will perform better. For example, bundling tools pack your code into single files to reduce the number of HTTP requests or minifiers that remove all whitespace from your code to make the files smaller.
 
 We'll talk about both categories in this course. And as well as talking about performance metrics we will of course talk about the metrics that you'll use to measure whether your site's performance is improving.
 
 ### General performance reporting tools
 
-Tools like [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) can measure a website's performance. You can enter a URL and get a performance report in seconds. The report contains scores about how your website is performing, both for mobile and desktop. This is a good start for getting an idea about what you are already doing well and what could be improved.
+Tools like [PageSpeed Insights](https://pagespeed.web.dev/) can measure a website's performance. You can enter a URL and get a performance report in seconds. The report contains scores about how your website is performing, both for mobile and desktop. This is a good start for getting an idea about what you are already doing well and what could be improved.
 
 At the time of writing, MDN's performance report summary looks similar to the following:
 

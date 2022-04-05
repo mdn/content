@@ -48,6 +48,7 @@ clip-path: padding-box circle(50px at 0 100px);
 clip-path: inherit;
 clip-path: initial;
 clip-path: revert;
+clip-path: revert-layer;
 clip-path: unset;
 ```
 

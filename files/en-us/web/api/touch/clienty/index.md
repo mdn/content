@@ -16,18 +16,12 @@ The **`Touch.clientY`** read-only property returns the Y
 coordinate of the touch point relative to the browser's viewport, not including any
 scroll offset.
 
-## Syntax
-
-```js
-touchItem.clientY;
-```
-
-### Return value
+## Value
 
 A `long` value representing the Y coordinate of the touch point relative to
 the viewport, not including any scroll offset.
 
-## Example
+## Examples
 
 This example illustrates using the {{domxref("Touch")}} object's
 {{domxref("Touch.clientX")}} and {{domxref("Touch.clientY")}} properties. The

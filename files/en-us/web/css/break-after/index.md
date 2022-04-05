@@ -41,6 +41,7 @@ break-after: region;
 break-after: inherit;
 break-after: initial;
 break-after: revert;
+break-after: revert-layer;
 break-after: unset;
 ```
 

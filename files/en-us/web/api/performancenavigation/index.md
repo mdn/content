@@ -28,7 +28,7 @@ An object of this type can be obtained by calling the {{domxref("Performance.nav
 
 _The `PerformanceNavigation` interface doesn't inherit any properties._
 
-- {{deprecated_inline}} {{domxref("PerformanceNavigation.type")}} {{readonlyInline}}
+- {{domxref("PerformanceNavigation.type")}} {{readonlyInline}} {{deprecated_inline}}
 
   - : An `unsigned short` which indicates how the navigation to this page was done. Possible values are:
 
@@ -41,7 +41,7 @@ _The `PerformanceNavigation` interface doesn't inherit any properties._
     - `TYPE_RESERVED` (255)
       - : Any other way.
 
-- {{deprecated_inline}} {{domxref("PerformanceNavigation.redirectCount")}} {{readonlyInline}}
+- {{domxref("PerformanceNavigation.redirectCount")}} {{readonlyInline}} {{deprecated_inline}}
   - : An `unsigned short` representing the number of REDIRECTs done before reaching the page.
 
 ## Methods

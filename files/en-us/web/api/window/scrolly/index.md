@@ -37,7 +37,7 @@ In more technical terms, `scrollY` returns the Y coordinate of the top edge
 of the current {{Glossary("viewport")}}. If there is no viewport, the returned value is
 0\.
 
-## Example
+## Examples
 
 ```js
 // make sure and go down to the second page

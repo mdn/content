@@ -25,7 +25,7 @@ On Windows, for example, this key may open the Start menu.
 
 A boolean value, where `true` indicates that the key is pressed, and `false` indicates that the key is _not_ pressed.
 
-## Example
+## Examples
 
 This example logs the `metaKey` property when you trigger a {{Event("click")}} event.
 

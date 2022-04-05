@@ -23,17 +23,11 @@ systems may intercept the key so it is never detected.
 > "Meta" key. `KeyboardEvent.metaKey` is `false` when the <kbd>⊞
 > Windows</kbd> key is pressed.
 
-## Syntax
-
-```js
-var metaKeyPressed = instanceOfKeyboardEvent.metaKey
-```
-
-### Return value
+## Value
 
 A boolean value
 
-## Example
+## Examples
 
 ```html
 <button onclick="ismetaKey(event)">Click me with the meta key</button>

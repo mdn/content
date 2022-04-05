@@ -43,6 +43,7 @@ font-size: 80%;
 font-size: inherit;
 font-size: initial;
 font-size: revert;
+font-size: revert-layer;
 font-size: unset;
 ```
 

@@ -16,14 +16,11 @@ The **`target`** property of the {{domxref("HTMLFormElement")}}
 interface represents the target of the form's action (i.e., the frame in which to render
 its output).
 
-## Syntax
+## Value
 
-```js
-string = HTMLFormElement.target
-HTMLFormElement.target = string
-```
+A string.
 
-## Example
+## Examples
 
 ```js
 myForm.target = document.frames[1].name;

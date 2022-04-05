@@ -15,11 +15,9 @@ browser-compat: api.PerformanceResourceTiming.serverTiming
 The **`serverTiming`** read-only property returns an array of
 {{domxref("PerformanceServerTiming")}} entries containing server timing metrics.
 
-## Syntax
+## Value
 
-```js
-resource.serverTiming;
-```
+An array of {{domxref("PerformanceServerTiming")}} entries.
 
 ## Specifications
 

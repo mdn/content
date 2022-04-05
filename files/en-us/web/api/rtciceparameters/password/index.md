@@ -23,13 +23,7 @@ password that, in tandem with the {{domxref("RTCIceParameters.usernameFragment",
     "usernameFragment")}}, uniquely identifies an ICE session for its entire
 duration.
 
-## Syntax
-
-```js
-password = RTCIceParameters.password;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} containing the password that corresponds to the transport's
 `usernameFragment` string

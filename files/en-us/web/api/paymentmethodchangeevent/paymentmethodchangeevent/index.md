@@ -16,7 +16,7 @@ browser-compat: api.PaymentMethodChangeEvent.PaymentMethodChangeEvent
 
 The **`PaymentMethodChangeEvent()`**
 constructor creates a new {{domxref("PaymentMethodChangeEvent")}} object providing
-details about a {{event("paymentmethodchange")}} event.
+details about a {{domxref("PaymentRequest.paymentmethodchange_event", "paymentmethodchange")}} event.
 
 ## Syntax
 

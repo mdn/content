@@ -15,13 +15,7 @@ browser-compat: api.PushEvent.data
 
 The `data` read-only property of the **`PushEvent`** interface returns a reference to a {{domxref("PushMessageData")}} object containing data sent to the {{domxref("PushSubscription")}}.
 
-## Syntax
-
-```js
-var myPushData = PushEvent.data;
-```
-
-### Value
+## Value
 
 A {{domxref("PushMessageData")}} object.
 

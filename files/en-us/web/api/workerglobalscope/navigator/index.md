@@ -14,17 +14,11 @@ browser-compat: api.WorkerGlobalScope.navigator
 
 The **`navigator`** read-only property of the {{domxref("WorkerGlobalScope")}} interface returns the {{domxref("WorkerNavigator")}} associated with the worker. It is a specific navigator object, mostly a subset of the {{domxref("Navigator")}} for browsing scopes, but adapted to workers.
 
-## Syntax
-
-```js
-var navigatorObj = self.navigator;
-```
-
-### Value
+## Value
 
 A {{domxref("WorkerNavigator")}} object.
 
-## Example
+## Examples
 
 If you call the following
 

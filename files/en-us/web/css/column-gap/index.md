@@ -37,6 +37,7 @@ column-gap: 3%;
 column-gap: inherit;
 column-gap: initial;
 column-gap: revert;
+column-gap: revert-layer;
 column-gap: unset;
 ```
 

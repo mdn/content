@@ -11,8 +11,6 @@ tags:
 
 **Web Workers** makes it possible to run a script operation in a background thread separate from the main execution thread of a web application. The advantage of this is that laborious processing can be performed in a separate thread, allowing the main (usually the UI) thread to run without being blocked/slowed down.
 
-> **Note:** Web Workers can also use the Web Worker API (i.e. workers can spawn workers, provided they are hosted within the same [origin](/en-US/docs/Glossary/Origin) as the parent page).
-
 ## Web Workers concepts and usage
 
 A worker is an object created using a constructor (e.g. {{DOMxRef("Worker.Worker", "Worker()")}}) that runs a named JavaScript file — this file contains the code that will run in the worker thread.

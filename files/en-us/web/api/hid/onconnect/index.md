@@ -13,14 +13,11 @@ browser-compat: api.HID.onconnect
 
 The **`onconnect`** [event handler](/en-US/docs/Web/Events/Event_handlers) of the {{domxref("HID")}} interface processes the events fired when the user agent connects to the HID device.
 
-## Syntax
+## Value
 
-```js
-HID.onconnect = function;
-HID.addEventListener('connect', function);
-```
+A function reference or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function).
 
-## Example
+## Examples
 
 In the following example an event listener is registered to listen for the connection of a device. The name of the device is then printed to the console using {{domxref("HIDDevice.productName")}}
 

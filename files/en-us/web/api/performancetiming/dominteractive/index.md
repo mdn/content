@@ -32,11 +32,9 @@ blocking rendering and not loaded asynchronously or with custom Web fonts. [Chec
 if you are in one of these cases](http://www.stevesouders.com/blog/2015/08/07/dominteractive-is-it-really/) before using this property as a proxy for the
 user experience of a Web site's speed of loading.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.domInteractive;
-```
+An `unsigned long long`.
 
 ## Specifications
 

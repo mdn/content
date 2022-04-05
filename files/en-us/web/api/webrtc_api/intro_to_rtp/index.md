@@ -92,7 +92,7 @@ The three lines of code within the [`try`](/en-US/docs/Web/JavaScript/Reference/
 2. Disable the incoming audio track.
 3. Switch the audio transceiver into send-only mode.
 
-This triggers renegotiation of the `RTCPeerConnection` by sending it a {{event("negotiationneeded")}} event, which your code responds to generating an SDP offer using {{domxref("RTCPeerConnection.createOffer")}} and sending it through the signaling server to the remote peer.
+This triggers renegotiation of the `RTCPeerConnection` by sending it a {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} event, which your code responds to generating an SDP offer using {{domxref("RTCPeerConnection.createOffer")}} and sending it through the signaling server to the remote peer.
 
 The `audioStream`, containing the audio to play instead of the local peer's microphone audio, can come from anywhere. One possibility is to have a hidden {{HTMLElement("audio")}} element and use {{domxref("HTMLMediaElement.captureStream", "HTMLAudioElement.captureStream()")}} to get its audio stream.
 

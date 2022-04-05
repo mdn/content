@@ -36,13 +36,7 @@ In Firefox and Internet Explorer, switching the browser to offline mode sends a
 `true` value; testing actual behavior on Nightly 68 on Windows shows that it
 only looks for LAN connection like Chrome and Safari giving false positives.
 
-## Syntax
-
-```js
-online = navigator.onLine;
-```
-
-### Value
+## Value
 
 `online` is a boolean `true` or `false`.
 

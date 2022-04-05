@@ -57,8 +57,10 @@ The **`<body>`** [HTML](/en-US/docs/Web/HTML) element represents the content of 
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Document_Role"
-          >document</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Generic_role"
+            >generic</a
+          ></code
         >
       </td>
     </tr>

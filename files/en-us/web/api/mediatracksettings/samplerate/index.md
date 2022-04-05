@@ -41,7 +41,7 @@ values are often used to reduce bandwidth requirements; 8,000 samples per second
 adequate for comprehensible albeit imperfect human speech, and both 11,025 FPS and
 22,050 FPS are often used for low-bandwidth, reduced quality sound and music.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.

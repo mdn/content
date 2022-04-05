@@ -20,7 +20,7 @@ A `double` floating point value.
 
 Early versions of the spec defined this as an integer referring to the number of pixels.
 
-## Example
+## Examples
 
 This example displays your mouse's coordinates whenever you trigger the {{Event("mousemove")}} event.
 

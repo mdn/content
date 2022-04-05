@@ -15,11 +15,9 @@ browser-compat: api.TransitionEvent.propertyName
 
 The **`propertyName`** read-only property of {{domxref("TransitionEvent")}} objects is a {{domxref("DOMString")}} containing the name of the CSS property associated with the transition.
 
-## Syntax
+## Value
 
-```js
-name = TransitionEvent.propertyName
-```
+A string.
 
 ## Specifications
 

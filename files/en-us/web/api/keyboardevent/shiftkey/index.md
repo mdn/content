@@ -16,17 +16,11 @@ The **`KeyboardEvent.shiftKey`** read-only property is a
 boolean value that indicates if the <kbd>shift</kbd> key was pressed
 (`true`) or not (`false`) when the event occurred.
 
-## Syntax
-
-```js
-var shiftKeyPressed = instanceOfKeyboardEvent.shiftKey
-```
-
-### Return value
+## Value
 
 A boolean value
 
-## Example
+## Examples
 
 ```js
 <html>

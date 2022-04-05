@@ -19,13 +19,7 @@ The **`pushManager`** property of the
 support for subscribing, getting an active subscription, and accessing push permission
 status.
 
-## Syntax
-
-```js
-var pushManager = serviceWorkerRegistration.pushManager;
-```
-
-### Value
+## Value
 
 A {{domxref("PushManager")}} object.
 

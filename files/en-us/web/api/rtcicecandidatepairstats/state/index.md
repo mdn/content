@@ -25,13 +25,7 @@ The **`state`** property in an
 {{domxref("RTCIceCandidatePairStats")}} object indicates the state of the check list
 of which the candidate pair is a member.
 
-## Syntax
-
-```js
-state = rtcIceCandidatePairStats.state;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} whose value is one of those found in the
 {{domxref("RTCStatsIceCandidatePairState")}} enumerated type.

@@ -23,7 +23,7 @@ The value of {{domxref("WorkerNavigator.language","navigator.language")}} is the
 first element of the returned array.
 
 When its value changes, as the user's preferred languages are changed a
-{{event("languagechange")}} event is fired on the {{domxref("WorkerGlobalScope")}} object.
+{{domxref("Window.languagechange_event", "languagechange")}} event is fired on the {{domxref("WorkerGlobalScope")}} object.
 
 The `Accept-Language` HTTP header in every HTTP request from the user's
 browser uses the same value for the `navigator.languages` property except for

@@ -40,7 +40,7 @@ can still change the value of the parameter by assigning a new value to its
 An {{domxref("AudioParam")}} whose `value` is the Z coordinate of the audio
 source's position, in 3D Cartesian coordinates.
 
-## Example
+## Examples
 
 The following example starts an oscillator and moves it in front of the listener after
 1 second, behind the listener after 2 seconds, and back to the listener's position after

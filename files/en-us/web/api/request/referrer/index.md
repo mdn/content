@@ -19,17 +19,11 @@ Request. (e.g., `client`, `no-referrer`, or a URL.)
 > **Note:** If `referrer`'s value is `no-referrer`,
 > it returns an empty string.
 
-## Syntax
-
-```js
-var myReferrer = request.referrer;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} representing the request's referrer.
 
-## Example
+## Examples
 
 In the following snippet, we create a new request using the
 {{domxref("Request.Request", "Request()")}} constructor (for an image file in the same directory as

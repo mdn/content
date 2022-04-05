@@ -22,7 +22,7 @@ containing the size of the `StylePropertyMapReadOnly` object.
 
 An unsigned long integer.
 
-## Example
+## Examples
 
 Here we use the size property to return the total entries within the button elements
 {{domxref('Element.computedStyleMap()','computedStyleMap')}}.

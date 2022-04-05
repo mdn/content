@@ -27,18 +27,12 @@ The value of this string is as follows:
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-resource.initiatorType;
-```
-
-### Return value
+## Value
 
 A {{domxref("DOMString","string")}} representing the _type_ of resource that
 initiated the performance event, as specified above.
 
-## Example
+## Examples
 
 ```js
 function print_PerformanceEntries() {

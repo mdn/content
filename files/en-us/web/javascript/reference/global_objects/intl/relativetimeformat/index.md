@@ -90,5 +90,5 @@ rtf.formatToParts(100, "day");
 ## See also
 
 - {{jsxref("Intl")}}
-- [The Intl.RelativeTimeFormat API](https://developers.google.com/web/updates/2018/10/intl-relativetimeformat)
+- [The Intl.RelativeTimeFormat API](https://v8.dev/features/intl-relativetimeformat)
 - [A polyfill of `Intl.RelativeTimeFormat` in FormatJS](https://formatjs.io/docs/polyfills/intl-relativetimeformat)

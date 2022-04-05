@@ -25,13 +25,7 @@ The **`remoteId`** property of the
 object representing the remote peer's {{domxref("RTCRtpReceiver")}} which is sending
 the media to the local peer for this SSRC.
 
-## Syntax
-
-```js
-var remoteStatsId = RTCOutboundRtpStreamStats.remoteId;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} containing the ID of the
 {{domxref("RTCRemoteInboundRtpStreamStats")}} object that represents the remote peer's

@@ -20,14 +20,11 @@ that element overrides the `form.name` property, so that you can't access it.
 Internet Explorer (IE) does not allow the name attribute of an element created using
 `createElement()` to be set or modified using the `name` property.
 
-## Syntax
+## Value
 
-```js
-var string = form.name;
-form.name = string;
-```
+A string.
 
-## Example
+## Examples
 
 ```js
 var form1name = document.getElementById('form1').name;

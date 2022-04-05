@@ -104,7 +104,7 @@ remoteConnection = new RTCPeerConnection();
 remoteConnection.ondatachannel = receiveChannelCallback;
 ```
 
-The remote end is set up similarly, except that we don't need to explicitly create an {{domxref("RTCDataChannel")}} ourselves, since we're going to be connected through the channel established above. Instead, we set up a {{event("datachannel")}} event handler; this will be called when the data channel is opened; this handler will receive an `RTCDataChannel` object; you'll see this below.
+The remote end is set up similarly, except that we don't need to explicitly create an {{domxref("RTCDataChannel")}} ourselves, since we're going to be connected through the channel established above. Instead, we set up a {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}} event handler; this will be called when the data channel is opened; this handler will receive an `RTCDataChannel` object; you'll see this below.
 
 #### Set up the ICE candidates
 
@@ -122,7 +122,7 @@ The next step is to set up each connection with ICE candidate listeners; these w
         .catch(handleAddCandidateError);
 ```
 
-We configure each {{domxref("RTCPeerConnection")}} to have an event handler for the {{event("icecandidate")}} event.
+We configure each {{domxref("RTCPeerConnection")}} to have an event handler for the {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event.
 
 #### Start the connection attempt
 
@@ -152,7 +152,7 @@ Let's go through this line by line and decipher what it means.
 
 #### Handling successful peer connection
 
-As each side of the peer-to-peer connection is successfully linked up, the corresponding {{domxref("RTCPeerConnection")}}'s {{event("icecandidate")}} event is fired. These handlers can do whatever's needed, but in this example, all we need to do is update the user interface:
+As each side of the peer-to-peer connection is successfully linked up, the corresponding {{domxref("RTCPeerConnection")}}'s {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event is fired. These handlers can do whatever's needed, but in this example, all we need to do is update the user interface:
 
 ```js
   function handleLocalAddCandidateSuccess() {
@@ -168,7 +168,7 @@ The only thing we do here is disable the "Connect" button when the local peer is
 
 #### Connecting the data channel
 
-Once the {{domxref("RTCPeerConnection")}} is open, the {{event("datachannel")}} event is sent to the remote to complete the process of opening the data channel; this invokes our `receiveChannelCallback()` method, which looks like this:
+Once the {{domxref("RTCPeerConnection")}} is open, the {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}} event is sent to the remote to complete the process of opening the data channel; this invokes our `receiveChannelCallback()` method, which looks like this:
 
 ```js
   function receiveChannelCallback(event) {
@@ -179,7 +179,7 @@ Once the {{domxref("RTCPeerConnection")}} is open, the {{event("datachannel")}} 
   }
 ```
 
-The {{event("datachannel")}} event includes, in its channel property, a reference to a {{domxref("RTCDataChannel")}} representing the remote peer's end of the channel. This is saved, and we set up, on the channel, event listeners for the events we want to handle. Once this is done, our `handleReceiveMessage()` method will be called each time data is received by the remote peer, and the `handleReceiveChannelStatusChange()` method will be called any time the channel's connection state changes, so we can react when the channel is fully opened and when it's closed.
+The {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}} event includes, in its channel property, a reference to a {{domxref("RTCDataChannel")}} representing the remote peer's end of the channel. This is saved, and we set up, on the channel, event listeners for the events we want to handle. Once this is done, our `handleReceiveMessage()` method will be called each time data is received by the remote peer, and the `handleReceiveChannelStatusChange()` method will be called any time the channel's connection state changes, so we can react when the channel is fully opened and when it's closed.
 
 ### Handling channel status changes
 

@@ -17,17 +17,11 @@ The **`lastEventId`** read-only property of the
 {{domxref("MessageEvent")}} interface is a {{domxref("DOMString")}} representing a
 unique ID for the event.
 
-## Syntax
-
-```js
-var myId = messageEvent.lastEventId;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} representing the ID.
 
-## Example
+## Examples
 
 ```js
 myWorker.onmessage = function(e) {
