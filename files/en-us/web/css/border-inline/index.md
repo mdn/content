@@ -38,6 +38,7 @@ border-inline: medium dashed blue;
 border-inline: inherit;
 border-inline: initial;
 border-inline: revert;
+border-inline: revert-layer;
 border-inline: unset;
 ```
 

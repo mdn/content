@@ -28,6 +28,7 @@ backface-visibility: hidden;
 backface-visibility: inherit;
 backface-visibility: initial;
 backface-visibility: revert;
+backface-visibility: revert-layer;
 backface-visibility: unset;
 ```
 

@@ -44,6 +44,7 @@ box-sizing: content-box;
 box-sizing: inherit;
 box-sizing: initial;
 box-sizing: revert;
+box-sizing: revert-layer;
 box-sizing: unset;
 ```
 

@@ -30,6 +30,7 @@ border-block-start-width: thick;
 border-block-start-width: inherit;
 border-block-start-width: initial;
 border-block-start-width: revert;
+border-block-start-width: revert-layer;
 border-block-start-width: unset;
 ```
 

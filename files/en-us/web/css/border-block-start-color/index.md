@@ -29,6 +29,7 @@ border-block-start-color: #4c5d21;
 border-block-start-color: inherit;
 border-block-start-color: initial;
 border-block-start-color: revert;
+border-block-start-color: revert-layer;
 border-block-start-color: unset;
 ```
 
