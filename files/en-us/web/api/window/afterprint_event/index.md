@@ -10,28 +10,20 @@ browser-compat: api.Window.afterprint_event
 
 The **`afterprint`** event is fired after the associated document has started printing or the print preview has been closed.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("WindowEventHandlers/onafterprint", "onafterprint")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+The {{domxref("Window.beforeprint_event", "beforeprint")}} and `afterprint` events allow pages to change their content before printing starts (perhaps to remove a banner, for example) and then revert those changes after printing has completed. In general, you should prefer the use of a [`@media print`](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_types) CSS at-rule, but it may be necessary to use these events in some cases.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('afterprint', event => { });
+onafterprint = event => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 

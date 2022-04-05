@@ -318,10 +318,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 
 - {{domxref("GlobalEventHandlers.onabort")}}
   - : Called when the loading of a resource has been aborted, such as by a user canceling the load while it is still in progress
-- {{domxref("WindowEventHandlers.onafterprint")}}
-  - : Called when the print dialog box is closed. See {{domxref("Window.afterprint_event", "afterprint")}} event.
-- {{domxref("WindowEventHandlers.onbeforeprint")}}
-  - : Called when the print dialog box is opened. See {{domxref("Window.beforeprint_event", "beforeprint")}} event.
 - {{domxref("WindowEventHandlers.onbeforeunload")}}
   - : An event handler property for before-unload events on the window.
 - {{domxref("GlobalEventHandlers.onblur")}}
@@ -531,10 +527,8 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - {{domxref("Window/afterprint_event", "afterprint")}}
   - : Fired after the associated document has started printing or the print preview has been closed.
-    Also available via the {{domxref("WindowEventHandlers/onafterprint", "onafterprint")}} property.
 - {{domxref("Window/beforeprint_event", "beforeprint")}}
   - : Fired when the associated document is about to be printed or previewed for printing.
-    Also available via the {{domxref("WindowEventHandlers/onbeforeprint", "onbeforeprint")}} property.
 
 ### Promise rejection events
 
