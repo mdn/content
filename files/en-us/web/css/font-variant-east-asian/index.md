@@ -31,6 +31,7 @@ font-variant-east-asian: ruby full-width jis83;
 font-variant-east-asian: inherit;
 font-variant-east-asian: initial;
 font-variant-east-asian: revert;
+font-variant-east-asian: revert-layer;
 font-variant-east-asian: unset;
 ```
 

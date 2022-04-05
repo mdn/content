@@ -37,6 +37,7 @@ counter-increment: none;
 counter-increment: inherit;
 counter-increment: initial;
 counter-increment: revert;
+counter-increment: revert-layer;
 counter-increment: unset;
 ```
 

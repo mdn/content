@@ -53,6 +53,7 @@ flex: 2 2 10%;
 flex: inherit;
 flex: initial;
 flex: revert;
+flex: revert-layer;
 flex: unset;
 ```
 

@@ -33,6 +33,7 @@ column-rule-color: hsla(0, 100%, 50%, 0.6);
 column-rule-color: inherit;
 column-rule-color: initial;
 column-rule-color: revert;
+column-rule-color: revert-layer;
 column-rule-color: unset;
 ```
 

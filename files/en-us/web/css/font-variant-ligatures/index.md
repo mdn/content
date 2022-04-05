@@ -34,6 +34,7 @@ font-variant-ligatures: no-contextual;              /* <contextual-alt-values> *
 font-variant-ligatures: inherit;
 font-variant-ligatures: initial;
 font-variant-ligatures: revert;
+font-variant-ligatures: revert-layer;
 font-variant-ligatures: unset;
 ```
 

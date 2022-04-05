@@ -29,6 +29,7 @@ content-visibility: auto;
 content-visibility: inherit;
 content-visibility: initial;
 content-visibility: revert;
+content-visibility: revert-layer;
 content-visibility: unset;
 ```
 

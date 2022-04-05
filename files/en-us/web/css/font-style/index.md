@@ -31,6 +31,7 @@ font-style: oblique 10deg;
 font-style: inherit;
 font-style: initial;
 font-style: revert;
+font-style: revert-layer;
 font-style: unset;
 ```
 

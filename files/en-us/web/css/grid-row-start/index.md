@@ -37,6 +37,7 @@ grid-row-start: 5 somegridarea span;
 grid-row-start: inherit;
 grid-row-start: initial;
 grid-row-start: revert;
+grid-row-start: revert-layer;
 grid-row-start: unset;
 ```
 

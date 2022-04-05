@@ -59,6 +59,7 @@ grid-auto-columns: 100px minmax(100px, auto) 10% 0.5fr fit-content(400px);
 grid-auto-columns: inherit;
 grid-auto-columns: initial;
 grid-auto-columns: revert;
+grid-auto-columns: revert-layer;
 grid-auto-columns: unset;
 ```
 

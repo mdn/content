@@ -46,6 +46,7 @@ filter: none;
 filter: inherit;
 filter: initial;
 filter: revert;
+filter: revert-layer;
 filter: unset;
 ```
 
