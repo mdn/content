@@ -76,7 +76,7 @@ When items in a `menubar` are arranged vertically and items in menu containers a
 ```html
 <div>
   <button id="menubutton" aria-haspopup="true" aria-controls="menu">
-    <img src="hamburger.svg" alt="Menu: Page Sections">
+    <img src="hamburger.svg" alt="Page Sections">
   </button>
   <ul id="menu" role="menu" aria-labelledby="menubutton">
     <li role="presentation">
