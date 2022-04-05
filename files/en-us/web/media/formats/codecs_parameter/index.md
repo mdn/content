@@ -899,7 +899,7 @@ The first four components are required; everything from `CC` (chroma subsampling
               <td><code>09</code></td>
               <td>
                 BT.2020; BT.2100. Used for ultra-high definition (4K) High
-                Dynamic Range (HDR) video, these have a very wide color gamut
+                Dynamic Range (HDR) video, these have a very wide color {{glossary("gamut")}}
                 and support 10-bit and 12-bit color component depths.
               </td>
             </tr>
