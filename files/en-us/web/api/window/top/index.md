@@ -17,7 +17,7 @@ Returns a reference to the topmost window in the window hierarchy.
 
 ## Value
 
-Referenct to the topmost window.
+The reference to the topmost window.
 
 ## Notes
 

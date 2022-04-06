@@ -22,7 +22,7 @@ window.
 
 ## Value
 
-The `window.mozPaintCount` property value. The `window.mozPaintCount` value is a `long long`, and starts at zero when the document is first created, incrementing by one each time the document is painted.
+A `long long` value that starts at zero when the document is first created and is incremented by one each time the document is painted.
 
 ## Specifications
 

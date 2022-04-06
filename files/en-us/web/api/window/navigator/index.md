@@ -18,7 +18,7 @@ the application running the script.
 
 ## Value
 
-A {{domxref("Navigator")}} object
+The {{domxref("navigator")}} object.
 
 ## Examples
 

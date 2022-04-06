@@ -23,7 +23,7 @@ this property in Internet Explorer from breaking.
 
 ## Value
 
-A boolean.
+A boolean value with `true` meaning that the window is in full-screen mode and `false` meaning it isn't.
 
 ## Notes
 
