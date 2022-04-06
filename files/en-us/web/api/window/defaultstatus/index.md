@@ -21,18 +21,11 @@ tags:
 
 Gets/sets the status bar text for the given window.
 
-## Syntax
+## Value
 
-```js
-var sMsg = window.defaultStatus;
-window.defaultStatus = sMsg;
-```
+A string containing the text to be displayed by default in the statusbar.
 
-### Parameters
-
-- `sMsg` is a string containing the text to be displayed by default in the statusbar.
-
-## Example
+## Examples
 
 ```html
 <html>

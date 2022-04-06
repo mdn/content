@@ -19,11 +19,9 @@ The window controls overlay is not be visible if:
 - The Web App Manifest's [`display_override`](/en-US/docs/Web/Manifest/display_override) member is not set to `window-controls-overlay`.
 - Or, if the user has opted-out of the feature.
 
-## Syntax
+## Value
 
-```js
-const isOverlayVisible = navigator.windowControlsOverlay.visible;
-```
+A boolean.
 
 ## Examples
 

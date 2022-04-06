@@ -17,13 +17,9 @@ browser-compat: api.Window.frames
 Returns the window itself, which is an array-like object, listing the direct sub-frames
 of the current window.
 
-## Syntax
+## Value
 
-```js
-frameList = window.frames;
-```
-
-- `frameList` is a list of frame objects. It is similar to an
+A list of frame objects. It is similar to an
   array in that it has a `length` property and its items can be accessed
   using the `[i]` notation.
 - `frameList === window` evaluates to true.
@@ -35,7 +31,7 @@ frameList = window.frames;
 - For more details about the returned value, refer to this [thread
   on mozilla.dev.platform](http://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/5628c6f346859d4f/169aa7004565066?hl=en&ie=UTF-8&oe=utf-8&q=window.frames&pli=1).
 
-## Example
+## Examples
 
 ```js
 var frames = window.frames; // or // var frames = window.parent.frames;

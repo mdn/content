@@ -15,13 +15,11 @@ browser-compat: api.Window.scrollbars
 The **`Window.scrollbars`** property returns the
 `scrollbars` object, whose visibility can be checked.
 
-## Syntax
+## Value
 
-```js
-objRef = window.scrollbars
-```
+A `scrollbars` object.
 
-## Example
+## Examples
 
 The following complete HTML example shows how the `visible` property of the
 scrollbars object is used.

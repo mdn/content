@@ -21,13 +21,11 @@ creation of the associated {{domxref("HTMLVideoElement")}}. The frame delay is t
 difference between a frame's theoretical presentation time and its effective display
 time.
 
-## Syntax
+## Value
 
-```js
-value = videoPlaybackQuality.totalFrameDelay;
-```
+A number.
 
-## Example
+## Examples
 
 ```js
 var videoElt = document.getElementById('my_vid');
