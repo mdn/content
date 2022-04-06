@@ -64,10 +64,11 @@ div {
     hsl(45, 100%, 50%),
     hsl(0, 100%, 50%)
   );
+  clip-path: circle(closest-side);
 }
 ```
 
-{{EmbedLiveSample('Examples', '100%', '120px')}}
+{{EmbedLiveSample('Examples', '100%', '140px')}}
 
 ## Specifications
 
