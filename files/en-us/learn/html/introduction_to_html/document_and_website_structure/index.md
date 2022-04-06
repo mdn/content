@@ -241,7 +241,7 @@ and his markup didn't read very well.</p>
 
 Without the `<br>` elements, the paragraph would just be rendered in one long line (as we said earlier in the course, [HTML ignores most whitespace](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#whitespace_in_html)); with `<br>` elements in the code, the markup renders like this:
 
-{{EmbedLiveSample('br_the_line_break_element', '100%', '125px')}}
+{{EmbedLiveSample('br_the_line_break_element', '100%', 150)}}
 
 #### \<hr>: the thematic break element
 

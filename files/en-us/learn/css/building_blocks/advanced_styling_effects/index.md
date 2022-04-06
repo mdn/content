@@ -178,7 +178,7 @@ In the example below we have used two different values for filter. The `first` i
 
 The second is `grayscale()`; by using a percentage we are setting how much color we want to be removed.
 
-{{EmbedGHLiveSample("css-examples/learn/images/filter.html", '100%', 700)}}
+{{EmbedGHLiveSample("css-examples/learn/images/filter.html", '100%', 900)}}
 
 **Play with the percentage and pixel parameters in the live example to see how the images change. You could also swap the values for some others. Try `contrast(200%)`, `invert(100%)` or `hue-rotate(20deg)` on the live example above. Take a look at the MDN page for [`filter`](/en-US/docs/Web/CSS/filter) for many other options you could try.**
 
@@ -186,7 +186,7 @@ You can apply filters to any element and not just images. Some of the filter opt
 
 In this next example we are applying our filter to a box, and comparing it to a box shadow. As you can see, the drop-shadow filter follows the exact shape of the text and border dashes. The box shadow just follows the square of the box.
 
-{{EmbedGHLiveSample("css-examples/learn/images/filter-text.html", '100%', 600)}}
+{{EmbedGHLiveSample("css-examples/learn/images/filter-text.html", '100%', 700)}}
 
 ## Blend modes
 
@@ -232,7 +232,7 @@ div {
 
 The result we get is this — you can see the original on the left, and the multiply blend mode on the right:
 
-{{ EmbedLiveSample('background-blend-mode', '100%', 200) }}
+{{ EmbedLiveSample('background-blend-mode', '100%', 300) }}
 
 ### mix-blend-mode
 
@@ -299,7 +299,7 @@ article div:last-child {
 
 This gives us the following results:
 
-{{ EmbedLiveSample('mix-blend-mode', '100%', 200) }}
+{{ EmbedLiveSample('mix-blend-mode', '100%', 300) }}
 
 You can see here that the multiply mix blend has blended together not only the two background images, but also the color from the `<div>` below it too.
 

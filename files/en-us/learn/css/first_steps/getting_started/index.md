@@ -245,7 +245,7 @@ a:hover {
 
 In the live example below, you can play with different values for the various states of a link. I have added the rules above to it, and now realize that the pink color is quite light and hard to read — why not change that to a better color? Can you make the links bold?
 
-{{EmbedGHLiveSample("css-examples/learn/getting-started/started3.html", '100%', 900)}}
+{{EmbedGHLiveSample("css-examples/learn/getting-started/started3.html", '100%', 1000)}}
 
 We have removed the underline on our link on hover. You could remove the underline from all states of a link. It is worth remembering however that in a real site, you want to ensure that visitors know that a link is a link. Leaving the underline in place can be an important clue for people to realize that some text inside a paragraph can be clicked on — this is the behavior they are used to. As with everything in CSS, there is the potential to make the document less accessible with your changes — we will aim to highlight potential pitfalls in appropriate places.
 

@@ -70,7 +70,7 @@ In this final task arrange these items into rows as in the image.
 
 Try updating the live code below to recreate the finished example:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/flexbox/flexbox4.html", '100%', 800)}}
+{{EmbedGHLiveSample("css-examples/learn/tasks/flexbox/flexbox4.html", '100%', 1100)}}
 
 > **Callout:**
 >

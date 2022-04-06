@@ -85,7 +85,7 @@ h1,
 
 In the live example below try combining the two selectors which have identical declarations. The visual display should be the same after combining them.
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/selector-list.html", '100%', 1000)}}
+{{EmbedGHLiveSample("css-examples/learn/selectors/selector-list.html", '100%', 1100)}}
 
 When you group selectors in this way, if any selector is invalid the whole rule will be ignored.
 

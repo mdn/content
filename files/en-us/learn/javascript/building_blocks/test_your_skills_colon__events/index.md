@@ -48,7 +48,7 @@ Now we'll look at keyboard events. To pass this assessment you need to build an 
 
 Try updating the live code below to recreate the finished example:
 
-{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/events/events2.html", '100%', 400)}}
+{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/events/events2.html", '100%', 650)}}
 
 > **Callout:**
 >
@@ -62,7 +62,7 @@ We want you to solve this without looping through all the buttons and giving eac
 
 Try updating the live code below to recreate the finished example:
 
-{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/events/events3.html", '100%', 400)}}
+{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/events/events3.html", '100%', 600)}}
 
 > **Callout:**
 >

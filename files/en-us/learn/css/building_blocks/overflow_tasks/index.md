@@ -21,7 +21,7 @@ The content is overflowing the box because it has a fixed height. Keep the heigh
 
 Try updating the live code below to recreate the finished example:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/overflow/overflow-scroll.html", '100%', 800)}}
+{{EmbedGHLiveSample("css-examples/learn/tasks/overflow/overflow-scroll.html", '100%', 1000)}}
 
 > **Callout:**
 >
@@ -35,7 +35,7 @@ In this task an image is in the box, it is bigger than the dimensions of the box
 
 Try updating the live code below to recreate the example as displayed in the image:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/overflow/overflow-hidden.html", '100%', 1100)}}
+{{EmbedGHLiveSample("css-examples/learn/tasks/overflow/overflow-hidden.html", '100%', 1200)}}
 
 > **Callout:**
 >
