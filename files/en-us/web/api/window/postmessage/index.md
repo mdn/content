@@ -62,16 +62,7 @@ targetWindow.postMessage(message, targetOrigin, transfer)
 
 ### Return value
 
-- `targetWindow`
-
-  - : A reference to the window that will receive the message. Methods for obtaining such
-    a reference include:
-
-    - {{domxref("window.open")}} (to spawn a new window and then reference it),
-    - {{domxref("window.opener")}} (to reference the window that spawned this one),
-    - {{domxref("HTMLIFrameElement.contentWindow")}} (to reference an embedded {{HTMLElement("iframe")}} from its parent window),
-    - {{domxref("window.parent")}} (to reference the parent window from within an embedded {{HTMLElement("iframe")}}), or
-    - {{domxref("window.frames")}} + an index value (named or numeric).
+`undefined`
 
 ## The dispatched event
 
