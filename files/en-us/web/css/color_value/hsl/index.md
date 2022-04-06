@@ -43,7 +43,7 @@ hsl(hue saturation lightness / alpha)
 
 ## Examples
 
-The `hsl()` function is handy with [`conic-gradient()`](/en-US/docs/Web/CSS/gradient/conic-gradient) as both deals with angles.
+The `hsl()` function works well with [`conic-gradient()`](/en-US/docs/Web/CSS/gradient/conic-gradient) as both deal with angles.
 
 ```html hidden
 <div></div>
