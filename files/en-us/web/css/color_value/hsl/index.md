@@ -20,13 +20,13 @@ Defining _complementary colors_ with `hsl()` can be done with a single formula, 
 ## Syntax
 
 ```css
-/* Syntax with comma-separated values */
-hsl(hue, saturation, lightness)
-hsl(hue, saturation, lightness, alpha)
-
 /* Syntax with space-separated values */
 hsl(hue saturation lightness)
 hsl(hue saturation lightness / alpha)
+
+/* Syntax with comma-separated values */
+hsl(hue, saturation, lightness)
+hsl(hue, saturation, lightness, alpha)
 ```
 
 ### Values
