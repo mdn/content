@@ -72,7 +72,7 @@ A table showing how _whiteness_ and _blackness_ interact with a fixed _hue_.
   .c64 { color: hbw(60deg, 100%, 60%); } .c65 { color: hbw(60deg, 100%, 80%); } .c66 { color: hbw(60deg, 100%, 100%); }
 ```
 
-{{EmbedLiveSample()}}
+{{EmbedLiveSample("Examples", "100%", "150px")}}
 
 ## Specifications
 
