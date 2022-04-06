@@ -149,7 +149,7 @@ If you are interested in words _and_ code, you could try your hand at the follow
 - [Write a new article on a topic you are familiar with](https://github.com/mdn/content#adding-a-new-document) (1 hour or more)
 - [Add or update browser compatibility data on a reference page](/en-US/docs/MDN/Structures/Compatibility_tables) (30 minutes to 1 hour)
 
-> **Note:** If you have found something that is incorrect on MDN but you're not sure how to fix it, you can report problems by [filing a documentation issue](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fissues%2Fnew%2Fchoose). Please give the issue a descriptive title. (It's not helpful to say "Dead link" without saying where you found the link).
+> **Note:** If you have found something that is incorrect on MDN but you're not sure how to fix it, you can report problems by [filing a documentation issue](https://github.com/mdn/content/issues/new/choose). Please give the issue a descriptive title. (It's not helpful to say "Dead link" without saying where you found the link).
 
 ## Other useful pages
 
