@@ -262,7 +262,7 @@ So there we have it, the basics of figuring out errors in simple JavaScript prog
 ## See also
 
 - There are many other types of errors that aren't listed here; we are compiling a reference that explains what they mean in detail — see the [JavaScript error reference](/en-US/docs/Web/JavaScript/Reference/Errors).
-- If you come across any errors in your code that you aren't sure how to fix after reading this article, you can get help! Ask for help on the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn), or in the [MDN Web Docs room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix). Tell us what your error is, and we'll try to help you. A listing of your code would be useful as well.
+- If you come across any errors in your code that you aren't sure how to fix after reading this article, you can get help! Ask for help on the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250), or in the [MDN Web Docs room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix). Tell us what your error is, and we'll try to help you. A listing of your code would be useful as well.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
 

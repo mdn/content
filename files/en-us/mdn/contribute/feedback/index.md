@@ -38,13 +38,13 @@ This room is for general discussion of MDN: using the site, reading content on t
 
 ### (Asynchronous) Discussions
 
-Longer-term discussions happen on our [MDN discussion forum](https://discourse.mozilla-community.org/c/mdn). You can post to the forum via email to [mdn@mozilla-community.org](mailto://mdn@mozilla-community.org). If you join the forum, you can choose to have notifications about discussions sent to you via email as well.
+Longer-term discussions happen on our [MDN discussion forum](https://discourse.mozilla.org/c/mdn/236). You can post to the forum via email to [mdn@mozilla-community.org](mailto://mdn@mozilla-community.org). If you join the forum, you can choose to have notifications about discussions sent to you via email as well.
 
 ## Report an issue
 
 ### Documentation issues
 
-If you see a problem in the documentation and can't fix it yourself for any reason, you can [report the issue](https://github.com/mdn/content/issues/new/choose)! For some problems of translation, you can [report to translated content](https://github.com/mdn/translated-content/issues/new/choose "Report a translation problem."). You can use this form for any documentation issue at all, for example:
+If you see a problem in the documentation and can't fix it yourself for any reason, you can [report the issue](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fissues%2Fnew%2Fchoose)! For some problems of translation, you can [report to translated content](https://github.com/mdn/translated-content/issues/new/choose "Report a translation problem."). You can use this form for any documentation issue at all, for example:
 
 - a simple correction
 - a request for an entirely new piece of content

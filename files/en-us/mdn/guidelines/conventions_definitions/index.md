@@ -60,7 +60,7 @@ A good example is the [B2G (Firefox OS) project](/en-US/docs/Archive/B2G_OS).
 
 A page should be archived if it fits the above description.
 To archive a page, you should use the "Move page feature" (_Advanced > Move this article_) to move the page into the Archive page tree (/en-US/docs/Archive).
-You might not have the permissions to use this feature, and before you start archiving pages you should discuss it with the MDN community first — talk to us on our [Discourse forum](https://discourse.mozilla.org/c/mdn).
+You might not have the permissions to use this feature, and before you start archiving pages you should discuss it with the MDN community first — talk to us on our [Discourse forum](https://discourse.mozilla.org/c/mdn/236/236).
 
 ### Deleted pages
 

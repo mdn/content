@@ -236,7 +236,7 @@ Use the **"Formatting Styles"** drop-down list to apply predefined styles to sel
 > **Warning:** Similarly, the **"Warning Box"** style creates warning boxes like this.
 
 Unless specifically instructed, _do not_ use the HTML `style` attribute to manually apply a style.
-If you can't do it using a predefined class, ask for help in the [MDN discussion forum](https://discourse.mozilla.org/c/mdn).
+If you can't do it using a predefined class, ask for help in the [MDN discussion forum](https://discourse.mozilla.org/c/mdn/236).
 
 ### Code sample style and formatting
 

@@ -144,10 +144,10 @@ So, to add your remote:
 Your remote should now be set up. You can verify it by running the command `git remote -v` in your terminal, which outputs a list of your remote names and where they point to. You should see something a bit like this:
 
 ```plain
-mozilla    git@github.com:mdn/content.git (fetch)
-mozilla    git@github.com:mdn/content.git (push)
-origin    git@github.com:chrisdavidmills/content.git (fetch)
-origin    git@github.com:chrisdavidmills/content.git (push)
+mozilla git@github.com:mdn/content.git (fetch)
+mozilla git@github.com:mdn/content.git (push)
+origin git@github.com:chrisdavidmills/content.git (fetch)
+origin git@github.com:chrisdavidmills/content.git (push)
 ```
 
 ## Preparing to make a change to the repo
@@ -339,7 +339,7 @@ Writing objects: 100% (3/3), 292 bytes | 292.00 KiB/s, done.
 Total 3 (delta 2), reused 0 (delta 0)
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To github.com:chrisdavidmills/content.git
-    77215e31e..44b207ef6  test-branch -> test-branch
+    77215e31e..44b207ef6 test-branch -> test-branch
 ```
 
 ## Creating a pull request
@@ -422,7 +422,7 @@ If you look at your remote fork's github.com page again, you'll see the commit t
 
 ### Want to see more?
 
-If you think this troubleshooting guide should contain more information, please [create an issue](https://github.com/mdn/content/issues/new) to suggest what you think we should include.
+If you think this troubleshooting guide should contain more information, please [create an issue](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fissues%2Fnew) to suggest what you think we should include.
 
 ## See also
 

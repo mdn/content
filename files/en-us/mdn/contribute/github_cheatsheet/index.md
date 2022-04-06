@@ -100,4 +100,4 @@ git push
 
 ## Want to see more?
 
-If you think this cheatsheet should contain more commands, please [create an issue](https://github.com/mdn/content/issues/new) to suggest what you think we should include.
+If you think this cheatsheet should contain more commands, please [create an issue](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fissues%2Fnew) to suggest what you think we should include.
