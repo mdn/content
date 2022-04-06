@@ -93,7 +93,7 @@ Used in roles:
 ## See Also
 
 - [Sortable table example](https://www.w3.org/TR/wai-aria-practices-1.2/examples/table/sortable-table.html) -W3C
-- [`aria-pressed`](en-US/docs/Web/Accessibility/aria/Attributes/aria-pressed)
+- [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
 - The {{HTMLElement('th')}} element
 
 <section id="Quick_links">
