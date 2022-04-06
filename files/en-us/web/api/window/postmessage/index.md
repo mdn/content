@@ -31,20 +31,11 @@ receiving window is then free to [handle this event](/en-US/docs/Web/Events/Even
 ## Syntax
 
 ```js
-postMessage(message, targetOrigin)
-postMessage(message, targetOrigin, [transfer])
+targetWindow.postMessage(message, targetOrigin)
+targetWindow.postMessage(message, targetOrigin, transfer)
 ```
 
-- `targetWindow`
-
-  - : A reference to the window that will receive the message. Methods for obtaining such
-    a reference include:
-
-    - {{domxref("window.open")}} (to spawn a new window and then reference it),
-    - {{domxref("window.opener")}} (to reference the window that spawned this one),
-    - {{domxref("HTMLIFrameElement.contentWindow")}} (to reference an embedded {{HTMLElement("iframe")}} from its parent window),
-    - {{domxref("window.parent")}} (to reference the parent window from within an embedded {{HTMLElement("iframe")}}), or
-    - {{domxref("window.frames")}} + an index value (named or numeric).
+### Parameters
 
 - `message`
   - : Data to be sent to the other window. The data is serialized using
@@ -68,6 +59,10 @@ postMessage(message, targetOrigin, [transfer])
 - `transfer` {{optional_Inline}}
   - : Is a sequence of {{Glossary("transferable objects")}} that are transferred with the message.
     The ownership of these objects is given to the destination side and they are no longer usable on the sending side.
+
+### Return value
+
+`undefined`
 
 ## The dispatched event
 
