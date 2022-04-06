@@ -29,11 +29,9 @@ The `Accept-Language` HTTP header in every HTTP request from the user's
 browser uses the same value for the `navigator.languages` property except for
 the extra `qvalues` (quality values) field (e.g. `en-US;q=0.8`).
 
-## Syntax
+## Value
 
-```js
-preferredLanguages = globalObj.navigator.languages
-```
+An array or strings.
 
 ## Examples
 

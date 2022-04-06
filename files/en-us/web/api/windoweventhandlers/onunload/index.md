@@ -34,12 +34,9 @@ its content and resources. The resource removal is processed _after_ the
 > See discussion comments in the blog post [Beacon API is
 > broken](https://volument.com/blog/sendbeacon-is-broken#comments).
 
-## Syntax
+## Value
 
-```js
-window.addEventListener("unload", function(event) { /* ... */ });
-window.onunload = function(event) { /* ... */ };
-```
+An [event handler](/en-US/docs/Web/Events/Event_handlers).
 
 Typically, it is better to use {{domxref("EventTarget.addEventListener",
   "window.addEventListener()")}} and the {{event("unload")}} event, instead of

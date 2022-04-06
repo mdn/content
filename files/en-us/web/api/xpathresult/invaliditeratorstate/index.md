@@ -20,17 +20,11 @@ the document has been modified since this result was returned.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var iteratorState = result.invalidIteratorState;
-```
-
-### Return value
+## Value
 
 A boolean value indicating whether the iterator has become invalid.
 
-## Example
+## Examples
 
 The following example shows the use of the `invalidIteratorState` property.
 

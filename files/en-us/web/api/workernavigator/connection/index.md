@@ -18,11 +18,9 @@ connection, such as the current bandwidth of the user's device or whether the co
 is metered. This could be used to select high definition content or low definition
 content based on the user's connection.
 
-## Syntax
+## Value
 
-```js
-connectionInfo = navigator.connection
-```
+A {{domxref("NetworkInformation")}} object.
 
 ## Specifications
 
