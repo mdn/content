@@ -72,7 +72,7 @@ Specificity is how the browser decides which rule applies if multiple rules have
 - An element selector is less specific — it will select all elements of that type that appear on a page — so will get a lower score.
 - A class selector is more specific — it will select only the elements on a page that have a specific `class` attribute value — so will get a higher score.
 
-Example time! Below, we again have two rules that could apply to the `<h1>`. The `<h1>` below ends up being colored red — the class selector `main-heading` gives its rule a higher specificity, and so it will be applied even though the rule with the `h1` element selector appears further down in the source order.
+Example time! Below, we again have two rules that could apply to the `<h1>`. The `<h1>` below ends up being colored red — the class selector `main-heading` gives its rule a higher specificity, and so it will be applied even though the rule with the `<h1>` element selector appears further down in the source order.
 
 {{EmbedGHLiveSample("css-examples/learn/cascade/specificity-simple.html", '100%', 600)}}
 
@@ -92,7 +92,7 @@ Some properties do not inherit — for example, if you set a {{cssxref("width")}
 
 ## Understanding how the concepts work together
 
-These three concepts (cascade, specificity, and inheritance) together control which CSS applies to what element, In the sections below, we'll see how they work together. It can sometimes seem a little bit complicated, but you will start to remember them as you get more experienced with CSS, and you can always look up the details if you forget! Even experienced developers don't remember all the details.
+These three concepts (cascade, specificity, and inheritance) together control which CSS applies to what element. In the sections below, we'll see how they work together. It can sometimes seem a little bit complicated, but you will start to remember them as you get more experienced with CSS, and you can always look up the details if you forget! Even experienced developers don't remember all the details.
 
 The following video shows how you can use the Firefox DevTools to inspect a page's cascade, specificity, and more:
 
@@ -100,7 +100,7 @@ The following video shows how you can use the Firefox DevTools to inspect a page
 
 ## Understanding inheritance
 
-We'll start with inheritance. In the example below, we have a {{HTMLElement("ul")}} element, with two levels of unordered lists nested inside it. We have given the outer `<ul>` a border, padding, and font color.
+We'll start with inheritance. In the example below, we have a {{HTMLElement("ul")}} element with two levels of unordered lists nested inside it. We have given the outer `<ul>` a border, padding, and font color.
 
 The color has applied to the direct children, but also to the indirect children — the immediate child `<li>`s and those inside the first nested list. We have then added the class `special` to the second nested list and applied a different color to it. This then inherits down through its children.
 
