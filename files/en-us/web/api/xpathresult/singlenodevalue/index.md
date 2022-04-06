@@ -18,13 +18,7 @@ The read-only **`singleNodeValue`** property of the
 {{domxref("XPathResult.resultType")}} being `ANY_UNORDERED_NODE_TYPE` or
 `FIRST_ORDERED_NODE_TYPE`.
 
-## Syntax
-
-```js
-var value = result.singleNodeValue;
-```
-
-### Return value
+## Value
 
 The return value is the {{domxref("Node")}} value of the `XPathResult`
 returned by {{domxref("Document.evaluate()")}}.
@@ -37,7 +31,7 @@ In case {{domxref("XPathResult.resultType")}} is not
 `ANY_UNORDERED_NODE_TYPE` or `FIRST_ORDERED_NODE_TYPE`, an
 {{domxref("XPathException")}} of type `TYPE_ERR` is thrown.
 
-## Example
+## Examples
 
 The following example shows the use of the `singleNodeValue` property.
 

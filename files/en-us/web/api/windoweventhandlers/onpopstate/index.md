@@ -31,13 +31,9 @@ by a call to `history.replaceState()`, the `popstate` event's
 > clicking on the back button (or calling `history.back()` in JavaScript),
 > when navigating between two history entries for the same document.
 
-## Syntax
+## Value
 
-```js
-window.onpopstate = funcRef;
-```
-
-- `funcRef` is a handler function.
+An [event handler](/en-US/docs/Web/Events/Event_handlers).
 
 ## Examples
 
