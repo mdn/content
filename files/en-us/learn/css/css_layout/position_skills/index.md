@@ -38,7 +38,7 @@ In the below example if you scroll the box the sidebar scrolls with the content.
 
 Try updating the live code below to recreate the finished example:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/position/position2.html", '100%', 1000)}}
+{{EmbedGHLiveSample("css-examples/learn/tasks/position/position2.html", '100%', 1300)}}
 
 > **Callout:**
 >

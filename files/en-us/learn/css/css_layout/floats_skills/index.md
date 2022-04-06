@@ -25,7 +25,7 @@ In this task, you need to float the two elements with a class of `float1` and `f
 
 Try updating the live code below to recreate the finished example:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/float/float1.html", '100%', 700)}}
+{{EmbedGHLiveSample("css-examples/learn/tasks/float/float1.html", '100%', 900)}}
 
 > **Callout:**
 >

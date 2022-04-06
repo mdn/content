@@ -39,7 +39,7 @@ In this task you already have a full-featured image, but we'd like you to add a 
 
 Try updating the live code below to recreate the finished example:
 
-{{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/images/images2.html", '100%', 700)}}
+{{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/images/images2.html", '100%', 1000)}}
 
 > **Callout:**
 >
@@ -51,7 +51,7 @@ In this final task you are provided with both a full-featured image and some cap
 
 Try updating the live code below to recreate the finished example:
 
-{{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/images/images3.html", '100%', 700)}}
+{{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/images/images3.html", '100%', 1000)}}
 
 > **Callout:**
 >

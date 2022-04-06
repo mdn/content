@@ -63,7 +63,7 @@ In the example below, we have used various color values to add a background colo
 
 **Play around with these, using any available [\<color>](/en-US/docs/Web/CSS/color_value) value.**
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/color.html", '100%', 600)}}
+{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/color.html", '100%', 700)}}
 
 ### Background images
 
@@ -71,7 +71,7 @@ The {{cssxref("background-image")}} property enables the display of an image in 
 
 This example demonstrates two things about background images. By default, the large image is not scaled down to fit the box, so we only see a small corner of it, whereas the small image is tiled to fill the box.
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background-image.html", '100%', 600)}}
+{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background-image.html", '100%', 700)}}
 
 **If you specify a background color in addition to a background image then the image displays on top of the color. Try adding a `background-color` property to the example above to see that in action.**
 
@@ -169,7 +169,7 @@ You can read more about the different types of gradients and things you can do w
 
 Try some different gradients in the example below. In the two boxes respectively, we have a linear gradient that is stretched over the whole box, and a radial gradient with a set size, which therefore repeats.
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/gradients.html", '100%', 600)}}
+{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/gradients.html", '100%', 700)}}
 
 ### Multiple background images
 
@@ -216,7 +216,7 @@ There are a few rules that need to be followed when writing background image sho
 
 Take a look at the MDN page for {{cssxref("background")}} to see all of the considerations.
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background.html", '100%', 600)}}
+{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background.html", '100%', 900)}}
 
 ### Accessibility considerations with backgrounds
 

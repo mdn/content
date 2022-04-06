@@ -626,7 +626,7 @@ You will occasionally need to use superscript and subscript when marking up item
 
 The output of this code looks like so:
 
-{{ EmbedLiveSample('Superscript_and_subscript', '100%', '141px') }}
+{{ EmbedLiveSample('Superscript_and_subscript', '100%', 160) }}
 
 ## Representing computer code
 
@@ -660,7 +660,7 @@ para.onclick = function() {
 
 The above code will look like so:
 
-{{ EmbedLiveSample('Representing_computer_code','100%',300) }}
+{{ EmbedLiveSample('Representing_computer_code','100%',350) }}
 
 ## Marking up times and dates
 

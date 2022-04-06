@@ -37,7 +37,7 @@ In this example we already have a grid defined. By editing the CSS rules for the
 
 Try updating the live code below to recreate the finished example:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid2.html", '100%', 800)}}
+{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid2.html", '100%', 900)}}
 
 Additional questions:
 
@@ -69,7 +69,7 @@ You will need to use both Grid Layout and Flexbox to recreate the example as see
 
 Try updating the code below to create your example:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid4.html", '100%', 1200)}}
+{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid4.html", '100%', 2000)}}
 
 > **Callout:**
 >

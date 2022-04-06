@@ -59,7 +59,7 @@ Try updating the live code below to recreate the finished example, following the
 
 In the final task for this article, we want you to write some tests. You've got three groups, each consisting of a statement and two variables. For each one, write a test that proves or disproves the statement made. Store the results of those tests in variables called `weightComparison`, `heightComparison`, and `pwdMatch`, respectively.
 
-{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math3.html", '100%', 400)}}
+{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math3.html", '100%', 550)}}
 
 > **Callout:**
 >

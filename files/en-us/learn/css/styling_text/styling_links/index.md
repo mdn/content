@@ -78,7 +78,7 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('Default_styles', '100%', 120) }}
+{{ EmbedLiveSample('Default_styles', '100%', 130) }}
 
 > **Note:** All the links in the examples on this page are fake links — a `#` (hash/pound sign) is put in place of the real URL. This is because if the real links were included, clicking on them would break the examples (you'd end up with an error or a page loaded in the embedded example that you couldn't get back from.) `#` just links to the current page.
 
@@ -209,7 +209,7 @@ Firefox</a>, <a href="#">Google Chrome</a>, and
 
 Putting the two together gives us this result:
 
-{{ EmbedLiveSample('Styling_some_links', '100%', 150) }}
+{{ EmbedLiveSample('Styling_some_links', '100%', 200) }}
 
 So what did we do here? This certainly looks different to the default styling, but it still provides a familiar enough experience for users to know what's going on:
 
@@ -439,7 +439,7 @@ a:active {
 
 This gives us the following result:
 
-{{ EmbedLiveSample('Styling_links_as_buttons', '100%', 100) }}
+{{ EmbedLiveSample('Styling_links_as_buttons', '100%', 120) }}
 
 Let's explain what's going on here, focusing on the most interesting parts:
 

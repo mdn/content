@@ -284,7 +284,7 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('The_implicit_and_explicit_grid', '100%', 400) }}
+{{ EmbedLiveSample('The_implicit_and_explicit_grid', '100%', 500) }}
 
 ### The minmax() function
 
@@ -598,7 +598,7 @@ aside {
 </div>
 ```
 
-{{ EmbedLiveSample('A_CSS_Grid_grid_framework', '100%', 600) }}
+{{ EmbedLiveSample('Grid frameworks in CSS Grid', '100%', 600) }}
 
 If you use the [Firefox Grid Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) to overlay the grid lines on your design, you can see how our 12-column grid works.
 
