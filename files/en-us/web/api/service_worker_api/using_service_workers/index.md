@@ -16,11 +16,11 @@ This article provides information on getting started with service workers, inclu
 
 One overriding problem that web users have suffered with for years is loss of connectivity. The best web app in the world will provide a terrible user experience if you can't download it. There have been various attempts to create technologies to solve this problem, and some of the issues have been solved. But the overriding problem is that there still isn't a good overall control mechanism for asset caching and custom network requests.
 
-The previous attempt, _AppCache_, seemed to be a good idea because it allowed you to specify assets to cache really easily. However, it made many assumptions about what you were trying to do and then broke horribly when your app didn't follow those assumptions exactly. Read Jake Archibald's (unfortunately-titled but well-written) [Application Cache is a Douchebag](https://alistapart.com/article/application-cache-is-a-douchebag) for more details.
+The previous attempt, _AppCache_, seemed to be a good idea because it allowed you to specify assets to cache really easily. However, it made many assumptions about what you were trying to do and then broke horribly when your app didn't follow those assumptions exactly. Read Jake Archibald's (unfortunately-titled but well-written) [Application Cache is a Douchebag](https://alistapart.com/article/application-cache-is-a-douchebag){:target="_blank"} for more details.
 
 > **Note:** From Firefox 84, AppCache has been removed ({{bug("1619673")}}). It is also planned for removal in Chromium 90, and is deprecated in Safari.
 
-Service workers should finally fix these issues. Service worker syntax is more complex than that of AppCache, but the trade off is that you can use JavaScript to control your AppCache-implied behaviors with a fine degree of granularity, allowing you to handle this problem and many more. Using a Service worker you can easily set an app up to use cached assets first, thus providing a default experience even when offline, before then getting more data from the network (commonly known as [Offline First](http://offlinefirst.org/)). This is already available with native apps, which is one of the main reasons native apps are often chosen over web apps.
+Service workers should finally fix these issues. Service worker syntax is more complex than that of AppCache, but the trade off is that you can use JavaScript to control your AppCache-implied behaviors with a fine degree of granularity, allowing you to handle this problem and many more. Using a Service worker you can easily set an app up to use cached assets first, thus providing a default experience even when offline, before then getting more data from the network (commonly known as [Offline First](http://offlinefirst.org/){:target="_blank"}). This is already available with native apps, which is one of the main reasons native apps are often chosen over web apps.
 
 ## Setting up to play with service workers
 
@@ -46,11 +46,11 @@ The below graphic shows a summary of the available service worker events:
 
 ## Service workers demo
 
-To demonstrate just the very basics of registering and installing a service worker, we have created a simple demo called [sw-test](https://github.com/mdn/sw-test), which is a simple Star wars Lego image gallery. It uses a promise-powered function to read image data from a JSON object and load the images using Ajax, before displaying the images in a line down the page. We've kept things static and simple for now. It also registers, installs, and activates a service worker, and when more of the spec is supported by browsers it will cache all the files required so it will work offline!
+To demonstrate just the very basics of registering and installing a service worker, we have created a simple demo called [sw-test](https://github.com/mdn/sw-test){:target="_blank"}, which is a simple Star wars Lego image gallery. It uses a promise-powered function to read image data from a JSON object and load the images using Ajax, before displaying the images in a line down the page. We've kept things static and simple for now. It also registers, installs, and activates a service worker, and when more of the spec is supported by browsers it will cache all the files required so it will work offline!
 
 ![](demo-screenshot.png)
 
-You can see the [source code on GitHub](https://github.com/mdn/sw-test/), and [view the example live](https://mdn.github.io/sw-test/).
+You can see the [source code on GitHub](https://github.com/mdn/sw-test/){:target="_blank"}, and [view the example live](https://mdn.github.io/sw-test/){:target="_blank"}.
 
 ### Registering your worker
 
@@ -111,7 +111,7 @@ Also note:
 - The service worker will only catch requests from clients under the service worker's scope.
 - The max scope for a service worker is the location of the worker.
 - If your service worker is active on a client being served with the `Service-Worker-Allowed` header, you can specify a list of max scopes for that worker.
-- In Firefox, Service Worker APIs are hidden and cannot be used when the user is in [private browsing mode](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history).
+- In Firefox, Service Worker APIs are hidden and cannot be used when the user is in [private browsing mode](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history){:target="_blank"}.
 
 ### Install and activate: populating your cache
 
@@ -511,13 +511,13 @@ Firefox has also started to implement some useful tools related to service worke
 - When testing you can get around the HTTPS restriction by checking the "Enable Service Workers over HTTP (when toolbox is open)" option in the [Firefox Developer Tools settings](/en-US/docs/Tools/Settings).
 - The "Forget" button, available in Firefox's customization options, can be used to clear service workers and their caches ({{bug(1252998)}}).
 
-> **Note:** You may serve your app from `http://localhost` (e.g. using `me@localhost:/my/app$ python -m SimpleHTTPServer`) for local development. See [Security considerations](https://www.w3.org/TR/service-workers/#security-considerations)
+> **Note:** You may serve your app from `http://localhost` (e.g. using `me@localhost:/my/app$ python -m SimpleHTTPServer`) for local development. See [Security considerations](https://www.w3.org/TR/service-workers/#security-considerations){:target="_blank"}
 
 ## See also
 
-- [Understanding Service Workers](http://blog.88mph.io/2017/07/28/understanding-service-workers/)
-- [The Service Worker Cookbook](https://github.com/mozilla/serviceworker-cookbook)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Understanding Service Workers](http://blog.88mph.io/2017/07/28/understanding-service-workers/){:target="_blank"}
+- [The Service Worker Cookbook](https://github.com/mozilla/serviceworker-cookbook){:target="_blank"}
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/){:target="_blank"}
 - Download the [Service Workers 101 cheatsheet](sw101.png).
 - [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
