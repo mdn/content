@@ -1,6 +1,6 @@
 ---
-title: scripting.removeCSS()
-slug: Mozilla/Add-ons/WebExtensions/API/scripting/removeCSS
+title: scripting.getRegisteredContentScripts()
+slug: Mozilla/Add-ons/WebExtensions/API/scripting/
 tags:
   - API
   - Add-ons
@@ -9,13 +9,13 @@ tags:
   - Non-standard
   - Reference
   - WebExtensions
-  - removeCSS
+  - getRegisteredContentScripts
   - scripting
-browser-compat: webextensions.api.scripting.removeCSS
+browser-compat: webextensions.api.scripting.getRegisteredContentScripts
 ---
 {{AddonSidebar()}}
 
-Removes a CSS stylesheet injected by a call to {{WebExtAPIRef("scripting.insertCSS()")}}.
+Returns all the content scripts registered by the extension with {{WebExtAPIRef("scripting.registerContentScripts()")} that match a filter.
 
 > **Note:** This method is available in Manifest V3 or higher.
 
@@ -24,45 +24,38 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-let removing = browser.scripting.removeCSS(
-  injection,       // object
+let removing = browser.tabs.removeCSS(
+  filter,          // object
   callback         // function
 )
 ```
 
 ### Parameters
 
-- `injection`
-  - : {{WebExtAPIRef("scripting.CSSInjection")}}. An object describing the CSS styles to remove. The `css`, `files`, and `origin` properties must match the stylesheet inserted through {{WebExtAPIRef("scripting.insertCSS()")}}. Attempts to remove non-existent stylesheets are ignored. 
+
+- `filter`
+  - : {{WebExtAPIRef("scripting.ContentScriptFilter")}}
 - `callback`{{optional_inline}} 
   - : `function`. Invoked upon completion of the removal.
 
 ### Return value
 
-Returns a Promise when the callback parameter is not specified. The [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with no arguments when all the CSS is removed. If any error occurs, the promise is rejected with an error message.
+Returned an array of {{WebExtAPIRef("scripting.RegisteredContentScript")}}
+
+Returns a Promise when the callback parameter is not specified. The [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when all the CSS has been removed. If any error occurs, the promise will be rejected with an error message.
 
 ## Examples
 
-This example adds some CSS using {{WebExtAPIRef("scripting.insertCSS")}}, then removes it again when the user clicks a browser action:
+This example returns all the registered scripts for an extension:
 
 ```js
-function onError(error) {
-  console.log(`Error: ${error}`);
-}
+const aScript = {
+  id: "a-script",
+  js: ["script.js"],
+  matches: ["<all_urls>"],
+  };
 
-let insertingCSS = browser.scripting.insertCSS({
-        target: { tabId: tabs[0].id },
-        css: `* { background: ${cssColor} !important }`,
-      });
-insertingCSS.then(null, onError);
-
-browser.browserAction.onClicked.addListener(() => {
-  let removing = browser.scripting.removeCSS({
-        target: { tabId: tabs[0].id },
-        css: `* { background: ${cssColor} !important }`,
-      });
-  removing.then(null, onError);
-});
+await browser.scripting.registerContentScripts([aScript]);
 ```
 
 {{WebExtExamples}}
@@ -71,7 +64,7 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/scripting/#method-removeCSS) API. This documentation is derived from [`scripting.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/scripting.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/extensions/scripting/#method-getRegisteredContentScripts) API. This documentation is derived from [`scripting.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/scripting.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

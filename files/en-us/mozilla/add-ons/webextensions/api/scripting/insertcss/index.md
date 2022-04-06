@@ -10,7 +10,7 @@ tags:
   - Reference
   - WebExtensions
   - insertCSS
-  - tabs
+  - scripting
 browser-compat: webextensions.api.scripting.insertCSS
 ---
 {{AddonSidebar()}}
@@ -41,27 +41,9 @@ let inserting = browser.scripting.insertCSS(
 ### Parameters
 
 - `injection`
-  - : An object describing the CSS to insert. It contains these properties:
-    - `css`{{optional_inline}} 
-      - : `string`. A string containing the CSS to inject. Either `css` or `files` must be specified. 
-    - `file`{{optional_inline}}
-      - : `string`. The path of a CSS files to inject, relative to the extension's root directory. Either <code>files</code> or <code>css</code> must be specified. 
-    - `origin`{{optional_inline}} 
-      - : `string`. The style origin for the injection, either `USER` or `AUTHOR`. Defaults to `AUTHOR`. 
-    - `target` 
-      - : `object`. Details specifying the target into which to inject the CSS. 
+  - : {{WebExtAPIRef("scripting.CSSInjection")}} The CSS to inject.  
 - `callback`{{optional_inline}} 
   - : `function`. Invoked upon completion of the injection.
-
-### Additional objects
-
-### target 
-- `allFrames`
-  - : `boolean`. Whether the CSS is inject into all frames within the tab. Defaults to `false`. This must not be `true` if `frameIds` is specified.
-- `frameIds`
-  - : `string`. Array of the IDs of the frames to inject into. 
-- `tabId`
-  - : `number`. The ID of the tab into which to inject. 
 
 ### Return value
 
