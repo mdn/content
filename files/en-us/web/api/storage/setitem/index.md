@@ -35,10 +35,7 @@ storage.setItem(keyName, keyValue);
 
 ### Exceptions
 
-`setItem()` may throw an exception if the storage is full. Particularly, in
-Mobile Safari (since iOS 5) it always throws when the user enters private mode. (Safari
-sets the quota to 0 bytes in private mode, unlike other browsers, which allow storage in
-private mode using separate data containers.) Hence developers should make sure to
+`setItem()` may throw an exception if the storage is full. Developers should make sure to
 **always catch possible exceptions from `setItem()`**.
 
 ## Example
