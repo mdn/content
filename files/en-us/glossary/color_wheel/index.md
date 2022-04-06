@@ -14,7 +14,7 @@ In such cases, _complementary colors_ are often found opposite on the same diame
 Color wheels are used in real life when we want to choose between different taints. For example, when selecting some paint or the color of some furniture.
 
 In the digital world, they are used in _color pickers_, like the default one on macOS:
-![The default color picker on macOS Monterey](/en-us/Glossary/Color_wheel/color_wheel_macos.png)
+[![The default color picker on macOS Monterey](color_wheel_macos.png)](/en-us/Glossary/Color_wheel/color_wheel_macos.png)
 
 ## See also
 
