@@ -15,15 +15,11 @@ browser-compat: api.Window.scrollMaxX
 The **`Window.scrollMaxX`** read-only property returns the
 maximum number of pixels that the document can be scrolled horizontally.
 
-## Syntax
+## Value
 
-```js
-xMax = window.scrollMaxX
-```
+A number.
 
-- `xMax` is the number of pixels.
-
-## Example
+## Examples
 
 ```js
 // Scroll to right edge of the page

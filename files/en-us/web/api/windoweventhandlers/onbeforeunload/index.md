@@ -28,18 +28,15 @@ event is still cancelable.
 > [`Navigator.sendBeacon()`](/en-US/docs/Web/API/Navigator/sendBeacon)
 > page for more details and best practices.
 
-## Syntax
-
-```js
-window.addEventListener("beforeunload", function(event) { /* ... */ });
-window.onbeforeunload = function(event) { /* ... */ };
-```
-
 Typically, it is better to use {{domxref("EventTarget.addEventListener",
   "window.addEventListener()")}} and the {{domxref("Window.beforeunload_event", "beforeunload")}} event, instead of
 `onbeforeunload`.
 
-## Example
+## Value
+
+An [event handler](/en-US/docs/Web/Events/Event_handlers).
+
+## Examples
 
 This example prompts the user before unloading.
 

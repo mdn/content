@@ -13,12 +13,9 @@ browser-compat: api.Window.name
 The `Window.name` property
 gets/sets the name of the window's browsing context.
 
-## Syntax
+## Value
 
-```js
-string = window.name;
-window.name = string;
-```
+A string.
 
 ## Description
 

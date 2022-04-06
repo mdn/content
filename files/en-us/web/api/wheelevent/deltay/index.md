@@ -16,13 +16,11 @@ The **`WheelEvent.deltaY`** read-only property is a
 `double` representing the vertical scroll amount in the
 {{domxref("WheelEvent.deltaMode")}} unit.
 
-## Syntax
+## Value
 
-```js
-var dY = event.deltaY;
-```
+A number.
 
-## Example
+## Examples
 
 ```js
 var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaY": 4, "deltaMode": 0});

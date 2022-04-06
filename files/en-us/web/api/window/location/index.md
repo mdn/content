@@ -24,12 +24,9 @@ work with `location` as if it were a string in most cases:
 
 See {{domxref("Location")}} for all available properties.
 
-## Syntax
+## Value
 
-```js
-var oldLocation = location;
-location = newLocation;
-```
+A {{domxref("Location")}} object.
 
 ## Examples
 

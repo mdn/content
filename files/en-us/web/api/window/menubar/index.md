@@ -14,13 +14,11 @@ browser-compat: api.Window.menubar
 The **`Window.menubar`** property returns the
 `menubar` object, whose visibility can be checked.
 
-## Syntax
+## Value
 
-```js
-objRef = window.menubar
-```
+A `menubar` object.
 
-## Example
+## Examples
 
 The following complete HTML example demonstrates how the `visible` property
 of the `menubar` object is used.

@@ -19,13 +19,9 @@ This property takes scrolling of the page into account and returns a value relat
 the whole of the document unless the event occurs inside a positioned element, where the
 returned value is relative to the top left of the positioned element.
 
-## Syntax
+## Value
 
-```js
-var xpos = event.layerX
-```
-
-- `xpos` is an integer value in pixels for the x-coordinate of the mouse
+An integer value in pixels for the x-coordinate of the mouse
   pointer, when the mouse event fired.
 
 ## Examples

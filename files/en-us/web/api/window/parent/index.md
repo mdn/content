@@ -22,13 +22,12 @@ When a window is loaded in an {{htmlelement("iframe")}}, {{htmlelement("object")
 {{htmlelement("frame")}}, its parent is the window with the element embedding the
 window.
 
-## Syntax
+## Value
 
-```js
-var parentWindow = window.parent;
-```
+A `Window` or {{htmlelement("iframe")}} object. 
+ 
 
-## Example
+## Examples
 
 ```js
 if (window.parent != window.top) {

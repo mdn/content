@@ -21,13 +21,7 @@ the top side of the screen.
 > {{domxref("Window.screenY")}} property. `screenTop` was originally
 > supported only in IE but was introduced everywhere due to popularity.
 
-## Syntax
-
-```js
-topWindowPos = window.screenTop
-```
-
-### Returns
+## Value
 
 A number equal to the number of CSS pixels from the top edge of the browser viewport to
 the  top edge of the screen.
