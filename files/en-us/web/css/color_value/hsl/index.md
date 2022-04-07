@@ -84,3 +84,4 @@ div {
 
 - The function [`hsla()`](/en-US/docs/Web/CSS/color_value/hsla), an historical alias for this function.
 - The {{cssxref("&lt;color&gt;")}} type that represents any color.
+- [HSL Color Picker](https://hslpicker.com/)
