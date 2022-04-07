@@ -139,7 +139,7 @@ For example:
 
 ### Resetting all property values
 
-The CSS shorthand property [`all`](en-US/docs/Web/CSS/all) can be used to apply one of these inheritance values to (almost) all properties at once. Its value can be any one of the inheritance values (`inherit`, `initial`, `revert`, `revert-layer`, or `unset`). It's a convenient way to undo changes made to styles so that you can get back to a known starting point before beginning new changes.
+The CSS shorthand property [`all`](/en-US/docs/Web/CSS/all) can be used to apply one of these inheritance values to (almost) all properties at once. Its value can be any one of the inheritance values (`inherit`, `initial`, `revert`, `revert-layer`, or `unset`). It's a convenient way to undo changes made to styles so that you can get back to a known starting point before beginning new changes.
 
 In the below example, we have two blockquotes. The first has styling applied to the blockquote element itself. The second has a class applied to the blockquote, which sets the value of `all` to `unset`.
 
