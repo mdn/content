@@ -39,7 +39,7 @@ new TextDecoder(utfLabel, options);
         flag indicating if the {{DOMxRef("TextDecoder.decode()")}} method must throw a
         {{jsxref("TypeError")}} when an coding error is found. It defaults to `false`.
 
-## Example
+## Examples
 
 ```js
 var textDecoder1 = new TextDecoder("iso-8859-2");

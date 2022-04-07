@@ -38,7 +38,7 @@ new PerformanceObserver(callback);
 A new {{domxref("PerformanceObserver")}} object which will call the specified
 `callback` when observed performance events occur.
 
-## Example
+## Examples
 
 ```js
 var observer = new PerformanceObserver(function(list, obj) {

@@ -53,7 +53,7 @@ new PointerEvent(type, PointerEventInit);
     > accepts fields from the {{domxref("MouseEvent.MouseEvent","MouseEvent")}},
     > {{domxref("UIEvent.UIEvent", "UIEventInit")}} and {{domxref("Event.Event", "EventInit")}} dictionaries.
 
-## Example
+## Examples
 
 ```js
 var moveEvent = new PointerEvent("pointermove");

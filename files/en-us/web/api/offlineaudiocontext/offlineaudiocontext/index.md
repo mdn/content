@@ -65,7 +65,7 @@ Like a regular `AudioContext`, an
 `OfflineAudioContext` can be the target of events, therefore it implements
 the {{domxref("EventTarget")}} interface.
 
-## Example
+## Examples
 
 ```js
 const offlineCtx = new OfflineAudioContext({

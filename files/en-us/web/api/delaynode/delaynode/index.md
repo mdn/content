@@ -56,7 +56,7 @@ new DelayNode(context, options);
 
 A new {{domxref("DelayNode")}} object instance.
 
-## Example
+## Examples
 
 ```js
 const audioCtx = new AudioContext();

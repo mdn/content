@@ -74,7 +74,7 @@ new Notification(title, options);
       notification is silent (no sounds or vibrations issued), regardless of the device
       settings. The default is `false`, which means it won't be silent.
 
-## Example
+## Examples
 
 In our
 [`Emogotchi demo`](https://chrisdavidmills.github.io/emogotchi/)
