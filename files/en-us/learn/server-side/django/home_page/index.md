@@ -21,19 +21,13 @@ We're now ready to add the code that displays our first complete page — a home
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Read the <a href="/en-US/docs/Learn/Server-side/Django/Introduction"
-          >Django Introduction</a
-        >. Complete previous tutorial topics (including <a
-          href="/en-US/docs/Learn/Server-side/Django/Admin_site"
-          >Django Tutorial Part 4: Django admin site</a
-        >).
+        Read the <a href="/en-US/docs/Learn/Server-side/Django/Introduction">Django Introduction</a>. Complete previous tutorial topics (including <a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django Tutorial Part 4: Django admin site</a>).
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        Learn to create simple url maps and views (where no data is encoded in
-        the URL), get data from models, and create templates.
+        Learn to create simple url maps and views (where no data is encoded in the URL), get data from models, and create templates.
       </td>
     </tr>
   </tbody>
@@ -92,7 +86,7 @@ urlpatterns += [
 ]
 ```
 
-> **Note:** Whenever Django encounters the import function [`django.urls.include()`](https://docs.djangoproject.com/en/3.1/ref/urls/#django.urls.include "django.conf.urls.include"), it splits the URL string at the designated end character and sends the remaining substring to the included *URLconf* module for further processing.
+> **Note:** Whenever Django encounters the import function [`django.urls.include()`](https://docs.djangoproject.com/en/4.0/ref/urls/#django.urls.include "django.conf.urls.include"), it splits the URL string at the designated end character and sends the remaining substring to the included *URLconf* module for further processing.
 
 We also created a placeholder file for the *URLConf* module, named **/catalog/urls.py**.
 Add the following lines to that file:
@@ -121,7 +115,7 @@ For example, we can use the name parameter to link to our home page from any oth
 
 A view is a function that processes an HTTP request, fetches the required data from the database, renders the data in an HTML page using an HTML template, and then returns the generated HTML in an HTTP response to display the page to the user. The index view follows this model — it fetches information about the number of `Book`, `BookInstance`, available `BookInstance` and `Author` records that we have in the database, and passes that information to a template for display.
 
-Open **catalog/views.py** and note that the file already imports the [render()](https://docs.djangoproject.com/en/3.1/topics/http/shortcuts/#django.shortcuts.render) shortcut function to generate an HTML file using a template and data:
+Open **catalog/views.py** and note that the file already imports the [render()](https://docs.djangoproject.com/en/4.0/topics/http/shortcuts/#django.shortcuts.render) shortcut function to generate an HTML file using a template and data:
 
 ```python
 from django.shortcuts import render
@@ -178,7 +172,7 @@ A Django application created using **startapp** (like the skeleton of this examp
 
 You can check this by saving the previous changes and accessing `127.0.0.1:8000` in your browser - it will display a fairly intuitive error message: "`TemplateDoesNotExist at /catalog/`", and other details.
 
-> **Note:** Based on your project's settings file, Django will look for templates in a number of places, searching in your installed applications by default. You can find out more about how Django finds templates and what template formats it supports in [the Templates section of the Django documentation](https://docs.djangoproject.com/en/3.1/topics/templates/).
+> **Note:** Based on your project's settings file, Django will look for templates in a number of places, searching in your installed applications by default. You can find out more about how Django finds templates and what template formats it supports in [the Templates section of the Django documentation](https://docs.djangoproject.com/en/4.0/topics/templates/).
 
 #### Extending templates
 
@@ -191,7 +185,7 @@ We'll be creating the template for LocalLibrary shortly.
 The sample below includes common HTML with sections for a title, a sidebar, and main contents marked with the named `block` and `endblock` template tags.
 You can leave the blocks empty, or include default content to use when rendering pages derived from the template.
 
-> **Note:** Template _tags_ are functions that you can use in a template to loop through lists, perform conditional operations based on the value of a variable, and so on. In addition to template tags, the template syntax allows you to reference variables that are passed into the template from the view, and use *template filters to* format variables (for example, to convert a string to lower case).
+> **Note:** Template _tags_ are functions that you can use in a template to loop through lists, perform conditional operations based on the value of a variable, and so on. In addition to template tags, the template syntax allows you to reference variables that are passed into the template from the view, and use _template filters_ to format variables (for example, to convert a string to lower case).
 
 ```html
 <!DOCTYPE html>
@@ -234,7 +228,7 @@ Create a new file **base_generic.html** in **/locallibrary/catalog/templates/** 
   {% block title %}<title>Local Library</title>{% endblock %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <!-- Add additional CSS in static file -->
   {% load static %}
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
@@ -332,7 +326,7 @@ You can add an image into the page in a similar way, for example:
 
 > **Note:** The samples above specify where the files are located, but Django does not serve them by default. We configured the development web server to serve files by modifying the global URL mapper (**/locallibrary/locallibrary/urls.py**) when we [created the website skeleton](/en-US/docs/Learn/Server-side/Django/skeleton_website), but still need to enable file serving in production. We'll look at this later.
 
-For more information on working with static files see [Managing static files](https://docs.djangoproject.com/en/3.1/howto/static-files/) in the Django documentation.
+For more information on working with static files see [Managing static files](https://docs.djangoproject.com/en/4.0/howto/static-files/) in the Django documentation.
 
 #### Linking to URLs
 
@@ -371,7 +365,7 @@ The setting of `'APP_DIRS': True`, is the most important, as it tells Django to 
 
 We can also specify specific locations for Django to search for directories using `'DIRS': []` (but that isn't needed yet).
 
-> **Note:** You can find out more about how Django finds templates and what template formats it supports in [the Templates section of the Django documentation](https://docs.djangoproject.com/en/3.1/topics/templates/).
+> **Note:** You can find out more about how Django finds templates and what template formats it supports in [the Templates section of the Django documentation](https://docs.djangoproject.com/en/4.0/topics/templates/).
 
 ## What does it look like?
 
@@ -399,12 +393,12 @@ In the next article we'll build upon this knowledge to create the remaining four
 
 ## See also
 
-- [Writing your first Django app, part 3: Views and Templates](https://docs.djangoproject.com/en/3.1/intro/tutorial03/) (Django docs)
-- [URL dispatcher](https://docs.djangoproject.com/en/3.1/topics/http/urls/) (Django docs)
-- [View functions](https://docs.djangoproject.com/en/3.1/topics/http/views/) (DJango docs)
-- [Templates](https://docs.djangoproject.com/en/3.1/topics/templates/) (Django docs)
-- [Managing static files](https://docs.djangoproject.com/en/3.1/howto/static-files/) (Django docs)
-- [Django shortcut functions](https://docs.djangoproject.com/en/3.1/topics/http/shortcuts/#django.shortcuts.render) (Django docs)
+- [Writing your first Django app, part 3: Views and Templates](https://docs.djangoproject.com/en/4.0/intro/tutorial03/) (Django docs)
+- [URL dispatcher](https://docs.djangoproject.com/en/4.0/topics/http/urls/) (Django docs)
+- [View functions](https://docs.djangoproject.com/en/4.0/topics/http/views/) (DJango docs)
+- [Templates](https://docs.djangoproject.com/en/4.0/topics/templates/) (Django docs)
+- [Managing static files](https://docs.djangoproject.com/en/4.0/howto/static-files/) (Django docs)
+- [Django shortcut functions](https://docs.djangoproject.com/en/4.0/topics/http/shortcuts/#django.shortcuts.render) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
 

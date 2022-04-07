@@ -21,21 +21,14 @@ We'll outline the main features, including some of the advanced functionality th
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy. A general understanding of <a
-          href="/en-US/docs/Learn/Server-side/First_steps"
-          >server-side website programming</a
-        >, and in particular the mechanics of
-        <a
-          href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview"
-          >client-server interactions in websites</a
-        >.
+        Basic computer literacy.
+        A general understanding of <a href="/en-US/docs/Learn/Server-side/First_steps">server-side website programming</a>, and in particular the mechanics of <a href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview">client-server interactions in websites</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To gain familiarity with what Django is, what functionality it provides,
-        and the main building blocks of a Django application.
+        To gain familiarity with what Django is, what functionality it provides, and the main building blocks of a Django application.
       </td>
     </tr>
   </tbody>
@@ -51,7 +44,7 @@ Django helps you write software that is:
   - : Django follows the "Batteries included" philosophy and provides almost everything developers might want to do "out of the box". Because everything you need is part of the one "product", it all works seamlessly together, follows consistent design principles, and has extensive and [up-to-date documentation](https://docs.djangoproject.com/en/stable/).
 - Versatile
 
-  - : Django can be (and has been) used to build almost any type of website — from content management systems and wikis, through to social networks and news sites. It can work with any client-side framework, and can deliver content in almost any format (including HTML, RSS feeds, JSON, XML, etc). The site you are currently reading is built with Django!
+  - : Django can be (and has been) used to build almost any type of website — from content management systems and wikis, through to social networks and news sites. It can work with any client-side framework, and can deliver content in almost any format (including HTML, RSS feeds, JSON, XML, etc).
 
     Internally, while it provides choices for almost any functionality you might want (e.g. several popular databases, templating engines, etc.), it can also be extended to use other components if needed.
 
@@ -74,7 +67,7 @@ Django helps you write software that is:
 
 Django was initially developed between 2003 and 2005 by a web team who were responsible for creating and maintaining newspaper websites. After creating a number of sites, the team began to factor out and reuse lots of common code and design patterns. This common code evolved into a generic web development framework, which was open-sourced as the "Django" project in July 2005.
 
-Django has continued to grow and improve, from its first milestone release (1.0) in September 2008 through to the recently-released version 3.1 (2020). Each release has added new functionality and bug fixes, ranging from support for new types of databases, template engines, and caching, through to the addition of "generic" view functions and classes (which reduce the amount of code that developers have to write for a number of programming tasks).
+Django has continued to grow and improve, from its first milestone release (1.0) in September 2008 through to the recently-released version 4.0 (2022). Each release has added new functionality and bug fixes, ranging from support for new types of databases, template engines, and caching, through to the addition of "generic" view functions and classes (which reduce the amount of code that developers have to write for a number of programming tasks).
 
 > **Note:** Check out the [release notes](https://docs.djangoproject.com/en/stable/releases/) on the Django website to see what has changed in recent versions, and how much work is going into making Django better.
 
@@ -165,7 +158,7 @@ Views are usually stored in a file called **views.py**.
 
 Django web applications manage and query data through Python objects referred to as models. Models define the structure of stored data, including the field *types* and possibly also their maximum size, default values, selection list options, help text for documentation, label text for forms, etc. The definition of the model is independent of the underlying database — you can choose one of several as part of your project settings. Once you've chosen what database you want to use, you don't need to talk to it directly at all — you just write your model structure and other code, and Django handles all the "dirty work" of communicating with the database for you.
 
-The code snippet below shows a very simple Django model for a `Team` object. The `Team` class is derived from the django class `models.Model`. It defines the team name and team level as character fields and specifies a maximum number of characters to be stored for each record. The `team_level` can be one of several values, so we define it as a choice field and provide a mapping between choices to be displayed and data to be stored, along with a default value.
+The code snippet below shows a very simple Django model for a `Team` object. The `Team` class is derived from the Django class `models.Model`. It defines the team name and team level as character fields and specifies a maximum number of characters to be stored for each record. The `team_level` can be one of several values, so we define it as a choice field and provide a mapping between choices to be displayed and data to be stored, along with a default value.
 
 ```python
 # filename: models.py
@@ -186,9 +179,9 @@ class Team(models.Model):
 
 > **Note:** A little bit of Python:
 >
-> - Python supports "object-oriented programming", a style of programming where we organize our code into objects, which include related data and functions for operating on that data. Objects can also inherit/extend/derive from other objects, allowing common behavior between related objects to be shared. In Python we use the keyword `class` to define the "blueprint" for an object. We can create multiple specific *instances* of the type of object based on the model in the class.
+> Python supports "object-oriented programming", a style of programming where we organize our code into objects, which include related data and functions for operating on that data. Objects can also inherit/extend/derive from other objects, allowing common behavior between related objects to be shared. In Python we use the keyword `class` to define the "blueprint" for an object. We can create multiple specific *instances* of the type of object based on the model in the class.
 >
->   So for example, here we have a `Team` class, which derives from the `Model` class. This means it is a model, and will contain all the methods of a model, but we can also give it specialized features of its own too. In our model we define the fields our database will need to store our data, giving them specific names. Django uses these definitions, including the field names, to create the underlying database.
+> So for example, here we have a `Team` class, which derives from the `Model` class. This means it is a model, and will contain all the methods of a model, but we can also give it specialized features of its own too. In our model we define the fields our database will need to store our data, giving them specific names. Django uses these definitions, including the field names, to create the underlying database.
 
 ### Querying data (views.py)
 

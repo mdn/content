@@ -20,15 +20,13 @@ In this assessment you'll use the Django knowledge you've picked up in the [Djan
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Before attempting this assessment you should have already worked through
-        all the articles in this module.
+        Before attempting this assessment you should have already worked through all the articles in this module.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To test comprehension of Django fundamentals, including URL
-        configurations, models, views, forms, and templates.
+        To test comprehension of Django fundamentals, including URL configurations, models, views, forms, and templates.
       </td>
     </tr>
   </tbody>
@@ -76,8 +74,7 @@ The pages that need to be displayed, their URLs, and other requirements, are lis
       </td>
       <td>
         <p>
-          Information for a specified author (by id) and list of their blog
-          posts:
+          Information for a specified author (by id) and list of their blog posts:
         </p>
         <ul>
           <li>Accessible to all users from author links in blog posts etc.</li>
@@ -106,13 +103,11 @@ The pages that need to be displayed, their URLs, and other requirements, are lis
           <li>Comments for the blog post should be displayed at bottom.</li>
           <li>Comments should be sorted in order: oldest to most recent.</li>
           <li>
-            Contains link to add comments at end for logged in users (see
-            Comment form page)
+            Contains link to add comments at end for logged in users (see Comment form page)
           </li>
           <li>
-            Blog posts and comments need only display plain text. There is no
-            need to support any sort of HTML markup (e.g. links, images,
-            bold/italic, etc).
+            Blog posts and comments need only display plain text.
+            There is no need to support any sort of HTML markup (e.g. links, images, bold/italic, etc).
           </li>
         </ul>
       </td>
@@ -135,16 +130,13 @@ The pages that need to be displayed, their URLs, and other requirements, are lis
         <p>Create comment for blog post:</p>
         <ul>
           <li>
-            Accessible to logged-in users (only) from link at bottom of blog
-            post detail pages.
+            Accessible to logged-in users (only) from link at bottom of blog post detail pages.
           </li>
           <li>
-            Displays form with description for entering comments (post date and
-            blog is not editable).
+            Displays form with description for entering comments (post date and blog is not editable).
           </li>
           <li>
-            After a comment has been posted, the page will redirect back to the
-            associated blog post page.
+            After a comment has been posted, the page will redirect back to the associated blog post page.
           </li>
           <li>Users cannot edit or delete their posts.</li>
           <li>
@@ -153,8 +145,7 @@ The pages that need to be displayed, their URLs, and other requirements, are lis
             redirected back to the blog page they wanted to comment on.
           </li>
           <li>
-            Comment pages should include the name/link to the blog post being
-            commented on.
+            Comment pages should include the name/link to the blog post being commented on.
           </li>
         </ul>
       </td>
@@ -166,8 +157,7 @@ The pages that need to be displayed, their URLs, and other requirements, are lis
       </td>
       <td>
         <p>
-          Standard Django authentication pages for logging in, out and setting
-          the password:
+          Standard Django authentication pages for logging in, out and setting the password:
         </p>
         <ul>
           <li>Login/out should be accessible via sidebar links.</li>
@@ -187,12 +177,10 @@ The pages that need to be displayed, their URLs, and other requirements, are lis
         </p>
         <ul>
           <li>
-            Admin site blog posts records should display the list of associated
-            comments inline (below each blog post).
+            Admin site blog posts records should display the list of associated comments inline (below each blog post).
           </li>
           <li>
-            Comment names in the Admin site are created by truncating the
-            comment description to 75 characters.
+            Comment names in the Admin site are created by truncating the comment description to 75 characters.
           </li>
           <li>Other types of records can use basic registration.</li>
         </ul>
@@ -292,7 +280,7 @@ Some general hints:
 4. The _add comment_ form can be created using a function-based view (and associated model and form) or using a generic `CreateView`. If you use a `CreateView` (recommended) then:
 
     - You will also need to pass the name of the blog post to the comment page in the context (implement `get_context_data()` as discussed below).
-    - The form should only display the comment "description" for user entry (date and associated blog post should not be editable). Since they won't be in the form itself, your code will need to set the comment's author in the `form_valid()` function so it can be saved into the model ([as described here](https://docs.djangoproject.com/en/3.1/topics/class-based-views/generic-editing/#models-and-request-user) — Django docs). In that same function we set the associated blog. A possible implementation is shown below (`pk` is a blog id passed in from the URL/URL configuration).
+    - The form should only display the comment "description" for user entry (date and associated blog post should not be editable). Since they won't be in the form itself, your code will need to set the comment's author in the `form_valid()` function so it can be saved into the model ([as described here](https://docs.djangoproject.com/en/4.0/topics/class-based-views/generic-editing/#models-and-request-user) — Django docs). In that same function we set the associated blog. A possible implementation is shown below (`pk` is a blog id passed in from the URL/URL configuration).
 
       ```python
           def form_valid(self, form):
@@ -325,7 +313,8 @@ class SomeView(generic.ListView):
 
 ## Assessment
 
-The assessment for this task is [available on GitHub here](https://github.com/mdn/django-diy-blog/blob/master/MarkingGuide.md). This assessment is primarily based on how well your application meets the requirements we listed above, though there are some parts of the assessment that check your code uses appropriate models, and that you have written at least some test code. When you're done, you can check out our [the finished example](https://github.com/mdn/django-diy-blog) which reflects a "full marks" project.
+The assessment for this task is [available on Github here](https://github.com/mdn/django-diy-blog/blob/master/MarkingGuide.md). This assessment is primarily based on how well your application meets the requirements we listed above, though there are some parts of the assessment that check your code uses appropriate models, and that you have written at least some test code.
+When you're done, you can check out [the finished example](https://github.com/mdn/django-diy-blog) which reflects a "full marks" project.
 
 Once you've completed this module you've also finished all the MDN content for learning basic Django server-side website programming! We hope you enjoyed this module and feel you have a good grasp of the basics!
 

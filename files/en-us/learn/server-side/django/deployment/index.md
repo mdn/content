@@ -142,7 +142,7 @@ You can set the environment variable to False by issuing the following command:
 export DJANGO_DEBUG=False
 ```
 
-A full checklist of settings you might want to change is provided in [Deployment checklist](https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/) (Django docs). You can also list a number of these using the terminal command below:
+A full checklist of settings you might want to change is provided in [Deployment checklist](https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/) (Django docs). You can also list a number of these using the terminal command below:
 
 ```python
 python3 manage.py check --deploy
@@ -385,7 +385,7 @@ Open **/locallibrary/settings.py** and copy the following configuration into the
 
 ```python
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.1/howto/static-files/
+# https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 # The absolute path to the directory where collectstatic will collect static files for deployment.
 STATIC_ROOT = BASE_DIR / 'staticfiles'
@@ -452,20 +452,23 @@ Please delete any other dependencies not listed below, unless you've explicitly 
 
 ```plain
 dj-database-url==0.5.0
-Django==3.1.2
-gunicorn==20.0.4
-psycopg2-binary==2.8.6
-whitenoise==5.2.0
+Django==4.0.2
+gunicorn==20.1.0
+psycopg2-binary==2.9.3
+wheel==0.37.1
+whitenoise==6.0.0
 ```
 
-> **Note:** Make sure that a **psycopg2** line like the one above is present! Even if you didn't install this locally then you should still add it to **requirements.txt**.
+> **Note:** Make sure that a **psycopg2** line like the one above is present!
+> Even if you didn't install this locally then you should still add it to **requirements.txt**.
 
 #### Runtime
 
-The **runtime.txt** file, if defined, tells Heroku which programming language to use. Create the file in the root of the repo and add the following text:
+The **runtime.txt** file, if defined, tells Heroku which version of Python to use.
+Create the file in the root of the repo and add the following text:
 
 ```plain
-python-3.8.6
+python-3.10.2
 ```
 
 > **Note:** Heroku only supports a small number of [Python runtimes](https://devcenter.heroku.com/articles/python-support#supported-python-runtimes) (at time of writing, this includes the one above). Heroku will use a supported runtime irrespective of the value specified in this file.
@@ -494,19 +497,25 @@ To start using Heroku you will first need to create an account:
 
 - Go to [www.heroku.com](https://www.heroku.com/) and click the **SIGN UP FOR FREE** button.
 - Enter your details and then press **CREATE FREE ACCOUNT**. You'll be asked to check your account for a sign-up email.
-- Click the account activation link in the signup email. You'll be taken back to your account on the web browser.
+- Click the account activation link in the signup email.
+  You'll be taken back to your account on the web browser.
 - Enter your password and click **SET PASSWORD AND LOGIN**.
+- You may also need to set up an alternative authentication method, for example an authentication application.
 - You'll then be logged in and taken to the Heroku dashboard: <https://dashboard.heroku.com/apps>.
 
 ### Install the client
 
 Download and install the Heroku client by following the [instructions on Heroku here](https://devcenter.heroku.com/articles/getting-started-with-python#set-up).
 
-After the client is installed you will be able run commands. For example to get help on the client:
+After the client is installed you will be able run commands.
+For example to get help on the client:
 
 ```bash
 heroku help
 ```
+
+> **Note:** Some commands may not run if you haven't recently logged into your Heroku account on your browser.
+> In this case, the client will direct you to the website to log in, after which you will be able to run the command.
 
 ### Create and upload the website
 
@@ -518,10 +527,11 @@ heroku create
 
 > **Note:** You can name the remote if you like by specifying a value after "create". If you don't then you'll get a random name. The name is used in the default URL.
 
-We can then push our app to the Heroku repository as shown below. This will upload the app, package it in a dyno, run _collectstatic_, and start the site.
+We can then push our app to the Heroku repository as shown below.
+This will upload the app, package it in a dyno, run _collectstatic_, and start the site.
 
 ```bash
-git push heroku main
+git push heroku master
 ```
 
 If we're lucky, the app is now "running" on the site, but it won't be working properly because we haven't set up the database tables for use by our application. To do this we need to use the `heroku run` command and start a "[one off dyno](https://devcenter.heroku.com/articles/deploying-python#one-off-dynos)" to perform a migrate operation. Enter the following command in your terminal:
@@ -598,7 +608,7 @@ Setting DJANGO_DEBUG and restarting locallibrary... done, v8
 DJANGO_DEBUG: False
 ```
 
-If you visit the site now you'll get a "Bad request" error, because the [ALLOWED_HOSTS](https://docs.djangoproject.com/en/3.1/ref/settings/#allowed-hosts) setting is _required_ if you have `DEBUG=False` (as a security measure). Open **/locallibrary/settings.py** and change the `ALLOWED_HOSTS` setting to include your base app url (e.g. 'locallibrary1234.herokuapp.com') and the URL you normally use on your local development server.
+If you visit the site now you'll get a "Bad request" error, because the [ALLOWED_HOSTS](https://docs.djangoproject.com/en/4.0/ref/settings/#allowed-hosts) setting is _required_ if you have `DEBUG=False` (as a security measure). Open **/locallibrary/settings.py** and change the `ALLOWED_HOSTS` setting to include your base app url (e.g. 'locallibrary1234.herokuapp.com') and the URL you normally use on your local development server.
 
 ```python
 ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127.0.0.1']
@@ -635,7 +645,7 @@ heroku config:set DEBUG_COLLECTSTATIC=1
 heroku ps
 ```
 
-If you need more information than these can provide you will need to start looking into [Django Logging](https://docs.djangoproject.com/en/3.1/topics/logging/).
+If you need more information than these can provide you will need to start looking into [Django Logging](https://docs.djangoproject.com/en/4.0/topics/logging/).
 
 ## Summary
 
@@ -645,13 +655,13 @@ The next step is to read our last few articles, and then complete the assessment
 
 ## See also
 
-- [Deploying Django](https://docs.djangoproject.com/en/3.1/howto/deployment/) (Django docs)
+- [Deploying Django](https://docs.djangoproject.com/en/4.0/howto/deployment/) (Django docs)
 
-  - [Deployment checklist](https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/) (Django docs)
-  - [Deploying static files](https://docs.djangoproject.com/en/3.1/howto/static-files/deployment/) (Django docs)
-  - [How to deploy with WSGI](https://docs.djangoproject.com/en/3.1/howto/deployment/wsgi/) (Django docs)
-  - [How to use Django with Apache and mod_wsgi](https://docs.djangoproject.com/en/3.1/howto/deployment/wsgi/modwsgi/) (Django docs)
-  - [How to use Django with Gunicorn](https://docs.djangoproject.com/en/3.1/howto/deployment/wsgi/gunicorn/) (Django docs)
+  - [Deployment checklist](https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/) (Django docs)
+  - [Deploying static files](https://docs.djangoproject.com/en/4.0/howto/static-files/deployment/) (Django docs)
+  - [How to deploy with WSGI](https://docs.djangoproject.com/en/4.0/howto/deployment/wsgi/) (Django docs)
+  - [How to use Django with Apache and mod_wsgi](https://docs.djangoproject.com/en/4.0/howto/deployment/wsgi/modwsgi/) (Django docs)
+  - [How to use Django with Gunicorn](https://docs.djangoproject.com/en/4.0/howto/deployment/wsgi/gunicorn/) (Django docs)
 
 - Heroku
 
