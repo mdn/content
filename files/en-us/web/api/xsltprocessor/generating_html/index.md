@@ -82,7 +82,7 @@ A template matching the root node of the XML document is created and used to cre
 ...
 ```
 
-Three more `xsl:template`'s are needed to complete the example. The first `xsl:template` is used for the author nodes, while the second one processes the body node. The third template has a general matching rule which will match any node and any attribute. It is needed in order to preserve the html elements in the XML document, since it matches all of them and copies them out into the HTML document the transformation creates.
+Three more `xsl:template`'s are needed to complete the example. The first `xsl:template` is used for the author nodes, while the second one processes the body node. The third template has a general matching rule which will match any node and any attribute. It is needed in order to preserve the HTML elements in the XML document, since it matches all of them and copies them out into the HTML document the transformation creates.
 
 **Figure 5: Final 3 Templates**
 

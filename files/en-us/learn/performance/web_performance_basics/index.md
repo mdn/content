@@ -46,7 +46,7 @@ The downside with this approach is the flash of unstyled text (FOUT.) The simple
 
 ### Javascript
 
-Avoid Javascript blocking by using the [async](/en-US/docs/Web/HTML/Element/script) or [defer](/en-US/docs/Web/HTML/Element/script) attributes, or link javascript assets after the page's DOM elements. Javascript only block rendering for elements that appear after the script tag in the DOM tree.
+Avoid Javascript blocking by using the [async](/en-US/docs/Web/HTML/Element/script) or [defer](/en-US/docs/Web/HTML/Element/script) attributes, or link JavaScript assets after the page's DOM elements. Javascript only block rendering for elements that appear after the script tag in the DOM tree.
 
 ### Web Fonts
 

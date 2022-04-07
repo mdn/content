@@ -71,7 +71,7 @@ Using your favorite image editor, create 400px wide and 120px wide versions of:
 
 Call them something sensible, e.g. `firefoxlogo400.png` and `firefoxlogo120.png`.
 
-Along with `mdn.svg`, these images will be your icons to link to further resources, inside the `further-info` area. You'll also link to the firefox logo in the site header. Save copies of all these inside the same directory as `index.html`.
+Along with `mdn.svg`, these images will be your icons to link to further resources, inside the `further-info` area. You'll also link to the Firefox logo in the site header. Save copies of all these inside the same directory as `index.html`.
 
 Next, create a 1200px wide landscape version of `red-panda.jpg`, and a 600px wide portrait version that shows the panda in more of a close up shot. Again, call them something sensible so you can easily identify them. Save a copy of both of these inside the same directory as `index.html`.
 

@@ -66,7 +66,7 @@ To make files talk to one another, you have to provide a file path between them 
 4. Insert the file path into your HTML code between the double quote marks of the `src=""` code.
 5. Save your HTML file, then load it in your web browser (double-click the file). You should see your new webpage displaying your image!
 
-![A screenshot of our basic website showing just the firefox logo - a flaming fox wrapping the world](website-screenshot.png)
+![A screenshot of our basic website showing just the Firefox logo - a flaming fox wrapping the world](website-screenshot.png)
 
 Some general rules for file paths:
 

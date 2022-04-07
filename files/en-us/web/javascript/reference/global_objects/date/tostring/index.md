@@ -77,7 +77,7 @@ is used in a string concatenation, such as
 
 `toString()` is a generic method, it does not require that its
 `this` is a {{jsxref("Date")}} instance. However, it must have an internal
-`[[TimeValue]]` property that can't be constructed using native javascript,
+`[[TimeValue]]` property that can't be constructed using native JavaScript,
 so it's effectively limited to use with {{jsxref("Date")}} instances. If called on a
 non–Date instance, a {{jsxref("TypeError")}} is thrown.
 

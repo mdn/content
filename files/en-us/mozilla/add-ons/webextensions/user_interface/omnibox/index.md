@@ -25,7 +25,7 @@ In the extension's background JavaScript file, using {{WebExtAPIRef("omnibox.set
 
 ```js
 browser.omnibox.setDefaultSuggestion({
-  description: `Search the firefox codebase
+  description: `Search the Firefox codebase
     (e.g. "hello world" | "path:omnibox.js onInputChanged")`
 });
 ```
