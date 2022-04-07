@@ -62,23 +62,23 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@4.1.14":
-  version "4.1.14"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.14.tgz#45b45f2fcd8fe766950e5abc40efde94b4348efd"
-  integrity sha512-pndsgd4jXIGcgWKPXkN5AL1rdwhgQpLXWyK25jb42SUaeujs/GhRK8+Q4W97RTiCirf/DoaahcTI/3Op6+/gfw==
+"@mdn/browser-compat-data@4.1.15":
+  version "4.1.15"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.15.tgz#79ea28eecbf4e32a9e7ffdbfe8ea68de539b022f"
+  integrity sha512-OZx2PxHtJDc9NOHGR3T0ZtX1WYl5qH/xmiH3sKSmcd3o+vPMG1kVUYbZrMxH3fVKpkkkrQpwETCIDRXcMXAWTw==
 
-"@mdn/yari@0.10.8":
-  version "0.10.8"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.10.8.tgz#32d282feb2e869be003197d3829d231ae19f6d26"
-  integrity sha512-ouN8wktwfABYe64hCCrzr5cPUXGlQ4+t8S/71xaJWNxoyEMQG2vtXlRVA+Puv6atF6jf7xvGG+am/A2qLfyveA==
+"@mdn/yari@0.10.13":
+  version "0.10.13"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.10.13.tgz#560d77b692521fe400bde2c0eb8fdcc7212b96df"
+  integrity sha512-t5qpG2iKN2pgLSQaRpEFnckr8FZDEbGyb4G0dJw7VYU4SlvSYkwCxNdYFUH3RKqM6rG92LDeIzYjijVAGh7lNw==
   dependencies:
     "@babel/helper-builder-react-jsx" "^7.16.7"
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
-    "@mdn/browser-compat-data" "4.1.14"
+    "@mdn/browser-compat-data" "4.1.15"
     "@use-it/interval" "^1.0.0"
     accept-language-parser "1.5.0"
-    browser-specs "^3.5.1"
+    browser-specs "^3.6.0"
     chalk "4.1.2"
     cheerio "1.0.0-rc.10"
     cli-progress "^3.10.0"
@@ -593,10 +593,10 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^3.5.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.5.1.tgz#868a6afc27ca766c94602fa13e0b04e77bb76126"
-  integrity sha512-pnXMSiMeSBzYWbEXeVyYiM9i8GlKXrZnWtjynPVOzsnpHxFE66KIMZyN17mU5YzFD18mMVg6xYMpzvilb+O3oA==
+browser-specs@^3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.6.0.tgz#a72279f5497d93e5bffe2e2e8889d12ea2014618"
+  integrity sha512-ix97gDB6qt7U/QNTJZh0nuqsPSVeHr0VYn5I+dqk/VAr3b3aAg0ski5m68mIcJAYc5/xZI32TPKsdq7wDk+Hfw==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
