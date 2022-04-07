@@ -15,7 +15,7 @@ tags:
 
 The aim of this lesson is to develop your understanding of some of the most fundamental concepts of CSS — the cascade, specificity, and inheritance — which control how CSS is applied to HTML and how conflicts are resolved.
 
-While working through this lesson may seem less immediately relevant and a little more academic than some other parts of the course, an understanding of these things will save you much pain later on! We encourage you to work through this section carefully and check that you understand the concepts before moving on.
+While working through this lesson may seem less immediately relevant and a little more academic than some other parts of the course, an understanding of these concepts will save you much pain later on! We encourage you to work through this section carefully and check that you understand the concepts before moving on.
 
 <table>
   <tbody>
@@ -61,7 +61,7 @@ Let's start by taking a quick look at the key things we are dealing with, then w
 
 Stylesheets **cascade** — at a very simple level, this means that the order of CSS rules matters; when two rules apply that have equal specificity, the one that comes last in the CSS is the one that will be used.
 
-In the below example, we have two rules that could apply to the `h1`. The `h1` ends up being colored blue — these rules have an identical selector and therefore carry the same specificity, so the last one in the source order wins.
+In the below example, we have two rules that could apply to the `<h1>` element. The `<h1>` ends up being colored blue. This is because both the rules have an identical element selector, and therefore, carry the same specificity, but the last one in the source order wins.
 
 {{EmbedGHLiveSample("css-examples/learn/cascade/cascade-simple.html", '100%', 500)}}
 
@@ -72,7 +72,7 @@ Specificity is how the browser decides which rule applies if multiple rules have
 - An element selector is less specific — it will select all elements of that type that appear on a page — so will get a lower score.
 - A class selector is more specific — it will select only the elements on a page that have a specific `class` attribute value — so will get a higher score.
 
-Example time! Below we again have two rules that could apply to the `h1`. The below `h1` ends up being colored red — the class selector gives its rule a higher specificity, and so it will be applied even though the rule with the element selector appears further down in the source order.
+Example time! Below, we again have two rules that could apply to the `<h1>`. The `<h1>` below ends up being colored red — the class selector `main-heading` gives its rule a higher specificity, and so it will be applied even though the rule with the `<h1>` element selector appears further down in the source order.
 
 {{EmbedGHLiveSample("css-examples/learn/cascade/specificity-simple.html", '100%', 600)}}
 
@@ -88,25 +88,25 @@ For example, if you set a `color` and `font-family` on an element, every element
 
 Some properties do not inherit — for example, if you set a {{cssxref("width")}} of 50% on an element, all of its descendants do not get a width of 50% of their parent's width. If this was the case, CSS would be very frustrating to use!
 
-> **Note:** On MDN CSS property reference pages you can find a technical information box called Formal definition, which lists a number of data points about that property, including whether it is inherited or not. See the [color property Formal definition section](/en-US/docs/Web/CSS/color#formal_definition), for example.
+> **Note:** On MDN CSS property reference pages, you can find a technical information box called Formal definition, which lists a number of data points about that property, including whether it is inherited or not. See the [color property Formal definition section](/en-US/docs/Web/CSS/color#formal_definition), for example.
 
 ## Understanding how the concepts work together
 
-These three concepts (cascade, specificity, and inheritance) together control which CSS applies to what element; in the below sections we'll see how they work together. It can sometimes seem a little bit complicated, but you will start to remember them as you get more experienced with CSS, and you can always look up the details if you forget! Even experienced developers don't remember all the details.
+These three concepts (cascade, specificity, and inheritance) together control which CSS applies to what element. In the sections below, we'll see how they work together. It can sometimes seem a little bit complicated, but you will start to remember them as you get more experienced with CSS, and you can always look up the details if you forget! Even experienced developers don't remember all the details.
 
-The below video shows how you can use the Firefox DevTools to inspect a page's cascade, specificity, and more:
+The following video shows how you can use the Firefox DevTools to inspect a page's cascade, specificity, and more:
 
 {{EmbedYouTube("Sp9ZfSvpf7A")}}
 
 ## Understanding inheritance
 
-We'll start with inheritance. In the example below we have a {{HTMLElement("ul")}}, with two levels of unordered lists nested inside it. We have given the outer `<ul>` a border, padding, and font color.
+We'll start with inheritance. In the example below, we have a {{HTMLElement("ul")}} element with two levels of unordered lists nested inside it. We have given the outer `<ul>` a border, padding, and font color.
 
-The color has applied to the direct children, but also the indirect children — the immediate child `<li>`s, and those inside the first nested list. We have then added a class- `special` to the second nested list and applied a different color to it. This then inherits down through its children.
+The color has applied to the direct children, but also to the indirect children — the immediate child `<li>`s and those inside the first nested list. We have then added the class `special` to the second nested list and applied a different color to it. This then inherits down through its children.
 
 {{EmbedGHLiveSample("css-examples/learn/cascade/inheritance.html", '100%', 1100)}}
 
-Things like widths (as mentioned above), margins, padding, and borders do not inherit. If a border were to be inherited by the children of our list, every single list and list item would gain a border — probably not an effect we would ever want!
+Properties like widths (as mentioned earlier), margins, padding, and borders do not inherit. If a border were to be inherited by the children in this list example, every single list and list item would gain a border — probably not an effect we would ever want!
 
 Which properties are inherited by default and which aren't is largely down to common sense.
 
@@ -118,10 +118,12 @@ CSS provides four special universal property values for controlling inheritance.
   - : Sets the property value applied to a selected element to be the same as that of its parent element. Effectively, this "turns on inheritance".
 - {{cssxref("initial")}}
   - : Sets the property value applied to a selected element to the [initial value](/en-US/docs/Web/CSS/initial_value) of that property.
+- {{cssxref("revert")}}
+  - : Resets the property value applied to a selected element to the browser's default styling rather than the defaults applied to that property. This value acts like {{cssxref("unset")}} in many cases.
+- {{cssxref("revert-layer")}}
+  - : Resets the property value applied to a selected element to the value established in a previous [cascade layer](en-US/docs/Web/CSS/@layer).
 - {{cssxref("unset")}}
   - : Resets the property to its natural value, which means that if the property is naturally inherited it acts like `inherit`, otherwise it acts like `initial`.
-- {{cssxref("revert")}}
-  - : Acts like {{cssxref("unset")}} in many cases, however will revert the property to the browser's default styling rather than the defaults applied to that property.
 
 > **Note:** See {{SectionOnPage("/en-US/docs/Web/CSS/Cascade", "Origin of CSS declarations")}} for more information on each of these and how they work.
 
@@ -137,9 +139,9 @@ For example:
 
 ### Resetting all property values
 
-The CSS shorthand property `all` can be used to apply one of these inheritance values to (almost) all properties at once. Its value can be any one of the inheritance values (`inherit`, `initial`, `unset`or `revert`). It's a convenient way to undo changes made to styles so that you can get back to a known starting point before beginning new changes.
+The CSS shorthand property [`all`](/en-US/docs/Web/CSS/all) can be used to apply one of these inheritance values to (almost) all properties at once. Its value can be any one of the inheritance values (`inherit`, `initial`, `revert`, `revert-layer`, or `unset`). It's a convenient way to undo changes made to styles so that you can get back to a known starting point before beginning new changes.
 
-In the below example we have two blockquotes. The first has styling applied to the blockquote element itself, the second has a class applied to the blockquote which sets the value of `all` to `unset`.
+In the below example, we have two blockquotes. The first has styling applied to the blockquote element itself. The second has a class applied to the blockquote, which sets the value of `all` to `unset`.
 
 {{EmbedGHLiveSample("css-examples/learn/cascade/all.html", '100%', 800)}}
 
@@ -147,7 +149,7 @@ Try setting the value of `all` to some of the other available values and observe
 
 ## Understanding the cascade
 
-We now understand why a paragraph nested deep in the structure of your HTML is the same color as the CSS applied to the body, and from the introductory lessons, we have an understanding of how to change the CSS applied to something at any point in the document — whether by assigning CSS to an element or creating a class. We will now take a proper look at how the cascade defines which CSS rules apply when more than one thing could style an element.
+We now understand why a paragraph nested deep in the structure of your HTML is the same color as the CSS applied to the body. From the introductory lessons, we have an understanding of how to change the CSS applied to something at any point in the document — whether by assigning CSS to an element or by creating a class. We will now take a proper look at how the cascade defines which CSS rules apply when more than one rule could style an element.
 
 There are three factors to consider, listed here in increasing order of importance. Later ones overrule earlier ones:
 
@@ -159,17 +161,17 @@ We will look at these to see how browsers figure out exactly what CSS should be 
 
 ### Source order
 
-We have already seen how source order matters to the cascade. If you have more than one rule, which has exactly the same weight, then the one that comes last in the CSS will win. You can think of this as rules which are nearer the element itself overwriting early ones until the last one wins and gets to style the element.
+We have already seen how source order matters to the cascade. If you have more than one rule, all of which have exactly the same weight, then the one that comes last in the CSS will win. You can think of this as: the rule that is nearer the element itself overwrites the earlier ones until the last one wins and gets to style the element.
 
 ### Specificity
 
-Once you understand the fact that source order matters, at some point you will run into a situation where you know that a rule comes later in the stylesheet, but an earlier, conflicting, rule is applied. This is because that earlier rule has a **higher specificity** — it is more specific, and therefore is being chosen by the browser as the one that should style the element.
+Once you understand the fact that source order matters, at some point you will run into a situation where you know that a rule comes later in the stylesheet, but an earlier, conflicting rule is applied. This happens because the earlier rule has a **higher specificity** — it is more specific, and therefore is being chosen by the browser as the one that should style the element.
 
 As we saw earlier in this lesson, a class selector has more weight than an element selector, so the properties defined on the class will override those applied directly to the element.
 
-Something to note here is that although we are thinking about selectors and the rules that are applied to the thing they select, it isn't the entire rule which is overwritten, only the properties which are the same.
+Something to note here is that although we are thinking about selectors and the rules that are applied to the text or component they select, it isn't the entire rule that is overwritten, only the properties that are the same.
 
-This behavior helps avoid repetition in your CSS. A common practice is to define generic styles for the basic elements, and then create classes for those which are different. For example, in the stylesheet below we have defined generic styles for level 2 headings, and then created some classes which change only some of the properties and values. The values defined initially are applied to all headings, then the more specific values are applied to the headings with the classes.
+This behavior helps avoid repetition in your CSS. A common practice is to define generic styles for the basic elements, and then create classes for those that are different. For example, in the stylesheet below, we have defined generic styles for level 2 headings, and then created some classes that change only some of the properties and values. The values defined initially are applied to all headings, then the more specific values are applied to the headings with the classes.
 
 {{EmbedGHLiveSample("css-examples/learn/cascade/mixing-rules.html", '100%', 1000)}}
 
@@ -210,7 +212,9 @@ So what's going on here? First of all, we are only interested in the first seven
 
 ### !important
 
-There is a special piece of CSS that you can use to overrule all of the above calculations. However, you should be very careful with using it — `!important`. This is used to make a particular property and value the most specific thing, thus overriding the normal rules of the cascade.
+There is a special piece of CSS that you can use to overrule all of the above calculations. However, you should be very careful while using it — `!important`. This is used to make a particular property and value the most specific rule, thus overriding the normal rules of the cascade.
+
+> **Note:** It is useful to know that `!important` exists so that you know what it is when you come across it in other people's code. **However, we strongly recommend that you never use it unless you absolutely have to.** `!important` changes the way the cascade normally works, so it can make debugging CSS problems really hard to work out, especially in a large stylesheet.
 
 Take a look at this example where we have two paragraphs, one of which has an ID.
 
@@ -218,16 +222,14 @@ Take a look at this example where we have two paragraphs, one of which has an ID
 
 Let's walk through this to see what's happening — try removing some of the properties to see what happens if you are finding it hard to understand:
 
-1. You'll see that the third rule's {{cssxref("color")}} and {{cssxref("padding")}} values have been applied, but the {{cssxref("background-color")}} hasn't. Why? Really all three should surely apply, because rules later in the source order generally override earlier rules.
-2. However, the rules above it win, because class selectors have higher specificity than element selectors.
+1. You'll see that the third rule's {{cssxref("color")}} and {{cssxref("padding")}} values have been applied, but the {{cssxref("background-color")}} hasn't. Why? Really, all three should surely apply because rules later in the source order generally override earlier rules.
+2. However, the rules above it win because class selectors have higher specificity than element selectors.
 3. Both elements have a {{htmlattrxref("class")}} of `better`, but the 2nd one has an {{htmlattrxref("id")}} of `winning` too. Since IDs have an _even higher_ specificity than classes (you can only have one element with each unique ID on a page, but many elements with the same class — ID selectors are _very specific_ in what they target), the red background color and the 1px black border should both be applied to the 2nd element, with the first element getting the gray background color, and no border, as specified by the class.
 4. The 2nd element _does_ get the red background color, but no border. Why? Because of the `!important` declaration in the second rule — including this after `border: none` means that this declaration will win over the border value in the previous rule, even though the ID has higher specificity.
 
 > **Note:** The only way to override this `!important` declaration would be to include another `!important` declaration on a declaration with the _same specificity_ later in the source order, or one with higher specificity.
 
-It is useful to know that `!important` exists so that you know what it is when you come across it in other people's code. **However, we strongly recommend that you never use it unless you absolutely have to.** `!important` changes the way the cascade normally works, so it can make debugging CSS problems really hard to work out, especially in a large stylesheet.
-
-One situation in which you may have to use it is when you are working on a CMS where you can't edit the core CSS modules, and you really want to override a style that can't be overridden in any other way. But really, don't use it if you can avoid it.
+One situation in which you may have to use `!important` is when you are working on a CMS where you can't edit the core CSS modules, and you really want to override a style that can't be overridden in any other way. But really, don't use it if you can avoid it.
 
 ## The effect of CSS location
 
