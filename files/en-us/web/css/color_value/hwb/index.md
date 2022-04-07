@@ -63,7 +63,7 @@ A table showing how _whiteness_ and _blackness_ interact with a fixed _hue_.
 ```
 
 ```css
-  td { border: 1px solid black; }
+  td { border: 1px solid black; width: 20px; border-collapse: collapse}
   .c11 { background-color: hbw(60deg,   0%,  0%); } .c12 { color: hbw(60deg,   0%,  20%); } 
   .c13 { background-color: hbw(60deg,   0%, 40%); } .c14 { background-color: hbw(60deg,   0%,  60%); } 
   .c15 { background-color: hbw(60deg,   0%, 80%); } .c16 { background-color: hbw(60deg,   0%, 100%); }
