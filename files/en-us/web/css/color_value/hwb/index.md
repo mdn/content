@@ -63,25 +63,26 @@ A table showing how _whiteness_ and _blackness_ interact with a fixed _hue_.
 ```
 
 ```css
-  td { border: 1px solid black; width: 20px; border-collapse: collapse}
-  .c11 { background-color: hbw(60deg,   0%,  0%); } .c12 { color: hbw(60deg,   0%,  20%); } 
-  .c13 { background-color: hbw(60deg,   0%, 40%); } .c14 { background-color: hbw(60deg,   0%,  60%); } 
-  .c15 { background-color: hbw(60deg,   0%, 80%); } .c16 { background-color: hbw(60deg,   0%, 100%); }
-  .c21 { background-color: hbw(60deg,  20%,  0%); } .c22 { background-color: hbw(60deg,  20%,  20%); } 
-  .c23 { background-color: hbw(60deg,  20%, 40%); } .c24 { background-color: hbw(60deg,  20%,  60%); } 
-  .c25 { background-color: hbw(60deg,  20%, 80%); } .c26 { background-color: hbw(60deg,  20%, 100%); }
-  .c31 { background-color: hbw(60deg,  40%,  0%); } .c32 { background-color: hbw(60deg,  40%,  20%); } 
-  .c33 { background-color: hbw(60deg,  40%, 40%); } .c34 { background-color: hbw(60deg,  40%,  60%); } 
-  .c35 { background-color: hbw(60deg,  40%, 80%); } .c36 { background-color: hbw(60deg,  40%, 100%); }
-  .c41 { background-color: hbw(60deg,  60%,  0%); } .c42 { background-color: hbw(60deg,  60%,  20%); } 
-  .c43 { background-color: hbw(60deg,  60%, 40%); } .c44 { background-color: hbw(60deg,  60%,  60%); } 
-  .c45 { background-color: hbw(60deg,  60%, 80%); } .c46 { background-color: hbw(60deg,  60%, 100%); }
-  .c51 { background-color: hbw(60deg,  80%,  0%); } .c52 { background-color: hbw(60deg,  80%,  20%); } 
-  .c53 { background-color: hbw(60deg,  80%, 40%); } .c54 { background-color: hbw(60deg,  80%,  60%); } 
-  .c55 { background-color: hbw(60deg,  80%, 80%); } .c56 { background-color: hbw(60deg,  80%, 100%); }
-  .c61 { background-color: hbw(60deg, 100%,  0%); } .c62 { background-color: hbw(60deg, 100%,  20%); } 
-  .c63 { background-color: hbw(60deg, 100%, 40%); } .c64 { background-color: hbw(60deg, 100%,  60%); } 
-  .c65 { background-color: hbw(60deg, 100%, 80%); } .c66 { background-color: hbw(60deg, 100%, 100%); }
+  table { border-collapse: collapse;}
+  td { border: 1px solid black; width: 20px; height: 10px;}
+  .c11 { background: hbw(60deg,   0%,  0%); } .c12 { background: hbw(60deg,   0%,  20%); } 
+  .c13 { background: hbw(60deg,   0%, 40%); } .c14 { background: hbw(60deg,   0%,  60%); } 
+  .c15 { background: hbw(60deg,   0%, 80%); } .c16 { background: hbw(60deg,   0%, 100%); }
+  .c21 { background: hbw(60deg,  20%,  0%); } .c22 { background: hbw(60deg,  20%,  20%); } 
+  .c23 { background: hbw(60deg,  20%, 40%); } .c24 { background: hbw(60deg,  20%,  60%); } 
+  .c25 { background: hbw(60deg,  20%, 80%); } .c26 { background: hbw(60deg,  20%, 100%); }
+  .c31 { background: hbw(60deg,  40%,  0%); } .c32 { background: hbw(60deg,  40%,  20%); } 
+  .c33 { background: hbw(60deg,  40%, 40%); } .c34 { background: hbw(60deg,  40%,  60%); } 
+  .c35 { background: hbw(60deg,  40%, 80%); } .c36 { background: hbw(60deg,  40%, 100%); }
+  .c41 { background: hbw(60deg,  60%,  0%); } .c42 { background: hbw(60deg,  60%,  20%); } 
+  .c43 { background: hbw(60deg,  60%, 40%); } .c44 { background: hbw(60deg,  60%,  60%); } 
+  .c45 { background: hbw(60deg,  60%, 80%); } .c46 { background: hbw(60deg,  60%, 100%); }
+  .c51 { background: hbw(60deg,  80%,  0%); } .c52 { background: hbw(60deg,  80%,  20%); } 
+  .c53 { background: hbw(60deg,  80%, 40%); } .c54 { background: hbw(60deg,  80%,  60%); } 
+  .c55 { background: hbw(60deg,  80%, 80%); } .c56 { background: hbw(60deg,  80%, 100%); }
+  .c61 { background: hbw(60deg, 100%,  0%); } .c62 { background: hbw(60deg, 100%,  20%); } 
+  .c63 { background: hbw(60deg, 100%, 40%); } .c64 { background: hbw(60deg, 100%,  60%); } 
+  .c65 { background: hbw(60deg, 100%, 80%); } .c66 { background: hbw(60deg, 100%, 100%); }
 ```
 
 {{EmbedLiveSample("Examples", "100%", "150px")}}
