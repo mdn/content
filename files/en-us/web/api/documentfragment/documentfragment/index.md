@@ -20,7 +20,7 @@ The **`DocumentFragment()`** constructor returns a new, empty
 new DocumentFragment()
 ```
 
-## Example
+## Examples
 
 ```js
 let fragment = new DocumentFragment();

@@ -47,7 +47,7 @@ new Blob(array, options);
 
 A new {{domxref("Blob")}} object containing the specified data.
 
-## Example
+## Examples
 
 ```js
 const array = ['<a id="a"><b id="b">hey!</b></a>']; // an array consisting of a single DOMString

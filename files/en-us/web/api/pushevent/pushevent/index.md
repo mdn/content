@@ -40,7 +40,7 @@ new PushEvent(type, eventInitDict);
       to a new {{domxref("PushMessageData")}} object containing bytes extracted
       from the `eventInitDict data` member.
 
-## Example
+## Examples
 
 ```js
 var dataInit = {

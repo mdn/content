@@ -22,7 +22,7 @@ new FileReader();
 
 None.
 
-## Example
+## Examples
 
 The following code snippet shows creation of a [`FileReader`](/en-US/docs/Web/API/FileReader) object using the `FileReader()` constructor and subsequent usage of the object:
 

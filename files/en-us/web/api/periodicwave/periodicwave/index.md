@@ -58,7 +58,7 @@ new PeriodicWave(context, options);
 
 A new {{domxref("PeriodicWave")}} object instance.
 
-## Example
+## Examples
 
 ```js
 var real = new Float32Array(2);

@@ -43,7 +43,7 @@ A `TypeError` is thrown,
 - if `direction`'s `w` coordinate is not 0.0.
 - if `origin`'s `w` coordinate is not 1.0.
 
-## Example
+## Examples
 
 ### Creating `XRRay` objects
 

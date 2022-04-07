@@ -53,7 +53,7 @@ new MutationObserver(callback)
 A new {{domxref("MutationObserver")}} object, configured to call the specified
 `callback` when DOM mutations occur.
 
-## Example
+## Examples
 
 This example creates a new `MutationObserver` configured to watch a node and
 all of its children for additions and removals of elements to the tree, as well as any

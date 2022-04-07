@@ -27,7 +27,7 @@ new FormData(form)
 - `form` {{optional_inline}}
   - : An HTML {{HTMLElement("form")}} element — when specified, the {{domxref("FormData")}} object will be populated with the form's current keys/values using the name property of each element for the keys and their submitted value for the values. It will also encode file input content.
 
-## Example
+## Examples
 
 The following line creates an empty {{domxref("FormData")}} object:
 

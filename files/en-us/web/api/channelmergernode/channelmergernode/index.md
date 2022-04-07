@@ -52,7 +52,7 @@ A new {{domxref("ChannelMergerNode")}} object instance.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if an option such as `channelCount` or `channelCountMode` has been given an invalid value.
 
-## Example
+## Examples
 
 ```js
 var ac = new AudioContext();
