@@ -14,9 +14,9 @@ Before you author or develop this site, you need:
 
 To get started:
 
-1. Switch to the `meta` directory. Run `cd meta`.
-2. Install the dependencies. Run `yarn`.
-3. Start the development server. Run `yarn run start`.
+1. Switch to the `meta` directory: Run `cd meta`.
+2. Install the dependencies: Run `yarn`.
+3. Start the development server: Run `yarn run start`.
 4. Open the URL provided by the development server's `Web Server is available at` message.
 
 Edit the Markdown files in the `content/en` subdirectory.
