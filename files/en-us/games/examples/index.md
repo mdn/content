@@ -13,8 +13,6 @@ This page lists a number of impressive web technology demos for you to get inspi
 
 ## Free/demo games
 
-- [Beloola](https://www.youtube.com/watch?v=pVXr3luEJLc)
-  - : WebVR platform to connect passionate people. Experience both available on 2D screens and on VR HMDs (_Settings / Switch to VR mode_).
 - [Tanx](https://tanx.io/)
   - : A multiplayer tank battle game, created with [PlayCanvas](https://playcanvas.com/).
 - [Hyper Vanguard Force](https://robertsspaceindustries.com/comm-link/transmission/14704-Hyper-Vanguard-Force)
@@ -27,10 +25,8 @@ This page lists a number of impressive web technology demos for you to get inspi
   - : A shipwreck 'n survive game. Explore the island and defeat the monsters.
 - [HexGL](https://hexgl.bkcore.com/)
   - : A fast-paced, futuristic racing game.
-- [Dead Trigger 2](https://beta.unity3d.com/jonas/DT2/)
-  - : Classic zombie splatter action, made with [Unity3D](https://unity.com/).
 - [Angry Bots](https://beta.unity3d.com/jonas/AngryBots/)
-  - : A futuristic Aliens-esque isometric 3rd person shooter demo, made with [Unity3D](https://unity.com/).
+  - : A futuristic Aliens-esque isometric 3rd person shooter demo, made with [Unity](https://unity.com/).
 - [Nutmeg](http://sandbox.photonstorm.com/html5/nutmeg/)
   - : Cute retro scrolling platforming action.
 - [Back to Candyland](http://www.zibbo.com/game/match-3-games-top/back-to-candyland-episode-1)
@@ -68,8 +64,6 @@ This page lists a number of impressive web technology demos for you to get inspi
 
 ## Commercial games
 
-- [Oort Online](https://playboundless.com/)
-  - : A MMO exploration, building, and battle game (currently in development.)
 - [A Wizard's Lizard](http://www.wizardslizard.com/)
   - : Top down Zelda-esque exploration/RPG.
 - [QbQbQb](http://qbqbqb.rezoner.net/)
@@ -82,7 +76,7 @@ This page lists a number of impressive web technology demos for you to get inspi
   - : 8-bit graphic retro adventure game.
 - [RPG MO](https://data.mo.ee/index2.html)
   - : Isometric MMORPG with similarities to RuneScape Classic and Ultima.
-- [Katan.io](https://colonist.io/)
+- [colonist.io](https://colonist.io/)
   - : HTML5 and canvas implementation of Settlers of Catan.
 - [Pyramid Solitaire Ancient Egypt](https://www.solitaireparadise.com/games_list/pyramid_solitaire_ancient_egypt.html)
   - : Pyramid solitaire app ported to WebAssembly with Emscripten
