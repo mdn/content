@@ -36,7 +36,7 @@ _Also inherits properties from: {{DOMxRef("DocumentAndElementEventHandlers")}}, 
 - {{DOMxRef("SVGElement.tabIndex")}}
   - : The position of the element in the tabbing order.
 - {{DOMxRef("SVGElement.viewportElement")}}{{ReadOnlyInline}}
-  - : The {{DOMxRef("SVGElement")}}, which established the current viewport. Often, the nearest ancestor {{SVGElement("svg")}} element. `null` if the given element is the outermost `<svg>` element.
+  - : The {{DOMxRef("SVGElement")}} which established the current viewport. Often the nearest ancestor {{SVGElement("svg")}} element. `null` if the given element is the outermost `<svg>` element.
 
 ## Methods
 
