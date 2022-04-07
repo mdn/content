@@ -15,8 +15,6 @@ browser-compat: api.AudioContext.close
 
 The `close()` method of the {{ domxref("AudioContext") }} Interface closes the audio context, releasing any system audio resources that it uses.
 
-Closed contexts cannot have new nodes created, but can decode audio data, create buffers, etc.
-
 This function does not automatically release all `AudioContext`-created objects, unless other references have been released as well; however, it will forcibly release any system audio resources that might prevent additional `AudioContexts` from being created and used, suspend the progression of audio time in the audio context, and stop processing audio data. The returned {{jsxref("Promise")}} resolves when all `AudioContext`-creation-blocking resources have been released. This method throws an `INVALID_STATE_ERR` exception if called on an {{domxref("OfflineAudioContext")}}.
 
 ## Syntax
