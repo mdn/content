@@ -61,7 +61,7 @@ then you can invoke the `play()` method on the element
 audioElement.play();
 ```
 
-> **Note:** A common gotcha is trying to play an audio element immediately on page load. Modern browser's default autoplay policy will block that from happening. Refer to [firefox](https://hacks.mozilla.org/2019/02/firefox-66-to-block-automatically-playing-audible-video-and-audio/) and [chrome](https://developer.chrome.com/blog/autoplay/) for best practices and work arounds.
+> **Note:** A common gotcha is trying to play an audio element immediately on page load. Modern browser's default autoplay policy will block that from happening. Refer to [Firefox](https://hacks.mozilla.org/2019/02/firefox-66-to-block-automatically-playing-audible-video-and-audio/) and [chrome](https://developer.chrome.com/blog/autoplay/) for best practices and work arounds.
 
 Some of the more commonly used properties of the audio element include {{domxref("HTMLMediaElement.src", "src")}}, {{domxref("HTMLMediaElement.currentTime", "currentTime")}}, {{domxref("HTMLMediaElement.duration", "duration")}}, {{domxref("HTMLMediaElement.paused", "paused")}}, {{domxref("HTMLMediaElement.muted", "muted")}}, and {{domxref("HTMLMediaElement.volume", "volume")}}. This snippet copies the audio file's duration to a variable:
 

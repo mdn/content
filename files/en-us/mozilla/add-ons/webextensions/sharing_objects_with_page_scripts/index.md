@@ -196,12 +196,12 @@ window.messenger.notify("Message from the page script!");
 
 ### Constructors from the page context
 
-On the xrayed window object pristine constructors for some built-in javascript objects such as `Object`, `Function` or `Proxy` and various DOM classes are available. `XMLHttpRequest` does not behave in this way, see the [XHR and fetch](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#xhr_and_fetch) section for details. They will create instances belonging to the page global's object hierarchy and then return an xray wrapper.
+On the xrayed window object pristine constructors for some built-in JavaScript objects such as `Object`, `Function` or `Proxy` and various DOM classes are available. `XMLHttpRequest` does not behave in this way, see the [XHR and fetch](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#xhr_and_fetch) section for details. They will create instances belonging to the page global's object hierarchy and then return an xray wrapper.
 
 Since objects created this way already belong to the page and not the content script passing them back to the page will not require additional cloning or exporting.
 
 ```js
-/* javascript built-ins */
+/* JavaScript built-ins */
 
 const objA = new Object();
 const objB = new window.Object();
@@ -215,7 +215,7 @@ console.log(
 );
 
 objA.foo = "foo";
-objB.foo = "foo";                                // xray wrappers for plain javascript objects pass through property assignments
+objB.foo = "foo";                                // xray wrappers for plain JavaScript objects pass through property assignments
 objB.wrappedJSObject.bar = "bar";                // unwrapping before assignment does not rely on this special behavior
 
 window.wrappedJSObject.objA = objA;

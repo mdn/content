@@ -280,7 +280,7 @@ upload one or more files**, where you use the {{domxref("FileReader")}} API.
 
 #### A brief introduction to the submit methods
 
-An html {{ HTMLElement("form") }} can be sent in four ways:
+An HTML {{ HTMLElement("form") }} can be sent in four ways:
 
 - using the `POST` method and setting the `enctype` attribute to
   `application/x-www-form-urlencoded` (default);

@@ -154,7 +154,7 @@ function openFFPromotionPopup() {
 The above code solves a few usability problems related to links opening secondary
 window. The purpose of the `return false` in the code is to cancel default
 action of the link: if the onclick event handler is executed, then there is no need to
-execute the default action of the link. But if javascript support is disabled or
+execute the default action of the link. But if JavaScript support is disabled or
 non-existent on the user's browser, then the onclick event handler is ignored and the
 browser loads the referenced resource in the target frame or window that has the name
 "PromoteFirefoxWindowName". If no frame nor window has the name
@@ -239,7 +239,7 @@ function openRequestedSinglePopup(url) {
 - How can I prevent the confirmation message asking the user whether they want to
   close the window?
 
-  - : You cannot. **New windows not opened by javascript cannot as a rule be closed
+  - : You cannot. **New windows not opened by JavaScript cannot as a rule be closed
     by JavaScript.** The JavaScript Console in Mozilla-based browsers will report
     the warning message:
     `"Scripts may not close windows that were not opened by script."` Otherwise
@@ -298,7 +298,7 @@ function openRequestedSinglePopup(url) {
     window; the [opener](/en-US/docs/Web/API/Window/opener) property gives a
     secondary window a reference to its main window.
 - I cannot access the properties of the new secondary window. I always get an error in
-  the javascript console saying "Error: uncaught
+  the JavaScript console saying "Error: uncaught
   exception: Permission denied to get property
   \<property_name or method_name>. Why is that?
 
@@ -348,11 +348,11 @@ recommendable usability and accessibility guidelines:
 
 "javascript:" links break accessibility and usability of webpages in every browser.
 
-- "javascript:" pseudo-links become dysfunctional when javascript support is disabled
+- "javascript:" pseudo-links become dysfunctional when JavaScript support is disabled
   or inexistent. Several corporations allow their employees to surf on the web but under
-  strict security policies: no javascript enabled, no java, no activeX, no Flash. For
+  strict security policies: no JavaScript enabled, no java, no activeX, no Flash. For
   various reasons (security, public access, text browsers, etc..), about 5% to 10% of
-  users on the web surf with javascript disabled.
+  users on the web surf with JavaScript disabled.
 - "javascript:" links will interfere with advanced features in tab-capable browsers:
   eg. middle-click on links, Ctrl+click on links, tab-browsing features in extensions,
   etc.
@@ -377,7 +377,7 @@ recommendable usability and accessibility guidelines:
 #### Never use `<a href="#" onclick="window.open(...);">`
 
 Such pseudo-link also breaks accessibility of links. **Always use a real URL for
-the href attribute value** so that if javascript support is disabled or
+the href attribute value** so that if JavasSript support is disabled or
 inexistent or if the user agent does not support opening of secondary window (like
 MS-Web TV, text browsers, etc), then such user agents will still be able to load the
 referenced resource according to its default mode of opening/handling a referenced
@@ -422,7 +422,7 @@ new tab or not, in "background" or not).
 
 #### Always use the target attribute
 
-If javascript support is disabled or non-existent, then the user agent will create a
+If JavaScript support is disabled or non-existent, then the user agent will create a
 secondary window accordingly or will render the referenced resource according to its
 handling of the target attribute: e.g. some user agents that cannot create new windows,
 like MS Web TV, will fetch the referenced resource and append it at the end of the

@@ -183,7 +183,7 @@ This example has a placeholder set. Notice how it disappears when you start typi
 
 This example shows two `<textarea>`s — one of which is `disabled`, and one of which is `readonly`. Have a play with both and you'll see the difference in behavior — the `disabled` element is not selectable in any way (and its value is not submitted), whereas the `readonly` element is selectable and its contents copyable (and its value is submitted); you just can't edit the contents.
 
-> **Note:** In browsers other than firefox, such as chrome, the `disabled` textarea content may be selectable and copyable.
+> **Note:** In browsers other than Firefox, such as chrome, the `disabled` textarea content may be selectable and copyable.
 
 ```html
 <textarea name="textarea"

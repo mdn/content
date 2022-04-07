@@ -34,7 +34,7 @@ where
 ## Examples
 
 ```js
-<!-- example div in an html DOC -->
+<!-- example div in an HTML DOC -->
 <div id="div1">Hi Champ!</div>
 
 // in a console

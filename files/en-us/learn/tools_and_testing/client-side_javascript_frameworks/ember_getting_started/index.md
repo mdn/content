@@ -104,7 +104,7 @@ Everything else in Ember is _just_ JavaScript. In particular, JavaScript classes
 Here is a demonstration the impact Ember has on the JavaScript that is in typical projects:
 [Gavin Demonstrates how < 20% of the JS written is specific to Ember](https://twitter.com/gavinjoyce/status/1174726713101705216).
 
-![a set of code files with the ember-specific javascript highlighted, showing that only 20% of the Ember code is Ember-specific](20percent-js-specific-ember.png)
+![a set of code files with the ember-specific JavaScript highlighted, showing that only 20% of the Ember code is Ember-specific](20percent-js-specific-ember.png)
 
 ## Getting started
 
