@@ -82,7 +82,7 @@ never-equal-to-itself characteristic of `NaN`):
 ```js
 const isNaN = function(value) {
     const n = Number(value);
-    return n !== n;
+    return n !== value;
 };
 ```
 
