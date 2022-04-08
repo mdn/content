@@ -8,7 +8,7 @@ browser-compat: css.types.color.rgb_hexadecimal_notation
 ---
 {{CSSRef}}
 
-The **hexadecimal color syntax** is a notation allowing to describe a [sRGB] color using its primary color components (red, green, blue) written as hexadecimal numbers, as well as its transparency. It can be used everywhere where a [`<color>`] type is allowed.
+The **hexadecimal color syntax** is a notation allowing to describe a [sRGB](/en-US/docs/Glossary/RGB) color using its primary color components (red, green, blue) written as hexadecimal numbers, as well as its transparency. It can be used everywhere where a [`<color>`](/en-US/docs/Web/CSS/color_value) type is allowed.
 
 ## Syntax
 
@@ -18,8 +18,6 @@ The **hexadecimal color syntax** is a notation allowing to describe a [sRGB] col
 #RRGGBB     // The six-value syntax
 #RRGGBBAA   // The eight-value syntax
 ```
-
-> **Note:** The syntax is case-insensitive `#00ff00` is the same as `#00FF00`.
 
 ## Value
 
@@ -32,6 +30,8 @@ The **hexadecimal color syntax** is a notation allowing to describe a [sRGB] col
 `A` or `AA` {{optional_inline}}
   - : The _alpha_ component of the color, indicating its transparency, in case-insensitive hexadecimal number betwen `0` and `ff` (255)). If there is only one number, it is duplicated: `e` means `ee`. `0` represents a fully transparent color, and `ff`a fully opaque one.
 
+> **Note:** The syntax is case-insensitive `#00ff00` is the same as `#00FF00`.
+
 ## Examples
 
 ```html hidden
@@ -43,7 +43,7 @@ The **hexadecimal color syntax** is a notation allowing to describe a [sRGB] col
 ```
 
 ```css hidden
-div {width: 200px; height: 100px;}
+div {width: 40px; height: 40px;}
 .c1 { background: #f09}
 .c2 { background: #F09}
 .c3 { background: #ff0099}
