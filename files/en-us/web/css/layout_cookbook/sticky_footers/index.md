@@ -29,7 +29,7 @@ The Sticky footer pattern needs to meet the following requirements:
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/sticky-footer--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/sticky-footer--download.html)
 
 > **Note:** In this example and the following one we are using a wrapper set to `min-height: 100%` in order that our live example works. You could also achieve this for a full page by setting a {{cssxref("min-height")}} of `100vh` on the {{htmlelement("body")}} and then using it as your grid container.
 

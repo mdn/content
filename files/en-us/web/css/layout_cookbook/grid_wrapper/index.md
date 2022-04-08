@@ -22,7 +22,7 @@ Items placed on the grid should be able to align to a horizontally-centered max-
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/grid-wrapper--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/grid-wrapper--download.html)
 
 ## Choices made
 

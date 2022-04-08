@@ -38,7 +38,7 @@ handler outputs a message to a box onscreen describing the error, including both
 `code` and the `message`.
 
 Only the relevant parts of the code are displayed; you can [see the
-complete source code here](https://github.com/mdn/dom-examples/blob/master/media/mediaerror/).
+complete source code here](https://github.com/mdn/dom-examples/tree/master/media/mediaerror).
 
 The example creates an {{HTMLElement("audio")}} element and lets the user assign either
 a valid music file to it, or a link to a file which doesn't exist. This lets us see the
