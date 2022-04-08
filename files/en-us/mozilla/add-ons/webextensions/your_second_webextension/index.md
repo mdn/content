@@ -101,7 +101,7 @@ Note that all paths given are relative to manifest.json itself.
 
 The extension should have an icon. This will be shown next to the extension's listing in the Add-ons Manager (you can open this by visiting the URL "about:addons"). Our manifest.json promised that we would have an icon for the toolbar at "icons/beasts-48.png".
 
-Create the "icons" directory and save an icon there named "beasts-48.png". You could use [the one from our example](https://github.com/mdn/webextensions-examples/raw/master/beastify/icons/beasts-48.png), which is taken from the [Aha-Soft's Free Retina iconset](https://www.iconfinder.com/iconsets/free-retina-icon-set), and used under the terms of its [license](https://www.aha-soft.com/free-icons/free-retina-icon-set/).
+Create the "icons" directory and save an icon there named "beasts-48.png". You could use [the one from our example](https://raw.githubusercontent.com/mdn/webextensions-examples/master/beastify/icons/beasts-48.png), which is taken from the [Aha-Soft's Free Retina iconset](https://www.iconfinder.com/iconsets/free-retina-icon-set), and used under the terms of its [license](https://www.aha-soft.com/free-icons/free-retina-icon-set/).
 
 If you choose to supply your own icon, It should be 48x48 pixels. You could also supply a 96x96 pixel icon, for high-resolution displays, and if you do this it will be specified as the `96` property of the `icons` object in manifest.json:
 
@@ -116,7 +116,7 @@ If you choose to supply your own icon, It should be 48x48 pixels. You could also
 
 The toolbar button also needs an icon, and our manifest.json promised that we would have an icon for the toolbar at "icons/beasts-32.png".
 
-Save an icon named "beasts-32.png" in the "icons" directory. You could use [the one from our example](https://github.com/mdn/webextensions-examples/raw/master/beastify/icons/beasts-32.png), which is taken from the [IconBeast Lite icon set](http://www.iconbeast.com/free) and used under the terms of its [license](http://www.iconbeast.com/faq/).
+Save an icon named "beasts-32.png" in the "icons" directory. You could use [the one from our example](https://raw.githubusercontent.com/mdn/webextensions-examples/master/beastify/icons/beasts-32.png), which is taken from the [IconBeast Lite icon set](http://www.iconbeast.com/free) and used under the terms of its [license](http://www.iconbeast.com/faq/).
 
 If you don't supply a popup, then a click event is dispatched to your extension when the user clicks the button. If you do supply a popup, the click event is not dispatched, but instead, the popup is opened. We want a popup, so let's create that next.
 

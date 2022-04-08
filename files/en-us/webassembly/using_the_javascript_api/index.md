@@ -25,7 +25,7 @@ Let's run through some examples that explain how to use the WebAssembly JavaScri
 
 ### Preparing the example
 
-1. First we need a wasm module! Grab our [simple.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm) file and save a copy in a new directory on your local machine.
+1. First we need a wasm module! Grab our [simple.wasm](https://raw.githubusercontent.com/mdn/webassembly-examples/master/js-api-examples/simple.wasm) file and save a copy in a new directory on your local machine.
 2. Next, let's create a simple HTML file called `index.html` in the same directory as your wasm file (can use our [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) if you haven't got one easily available).
 3. Now, to help us understand what is going on here, let's look at the text representation of our wasm module (which we also meet in [Converting WebAssembly format to wasm](/en-US/docs/WebAssembly/Text_format_to_wasm#a_first_look_at_the_text_format)):
 
@@ -137,7 +137,7 @@ Just like functions, linear memories can be defined inside a module or imported.
 
 ### More involved memory example
 
-Let's make the above assertions clearer by looking at a more involved memory example — a WebAssembly module that imports the memory instance we defined earlier, populates it with an array of integers, then sums them. You can find this at [memory.wasm.](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/memory.wasm)
+Let's make the above assertions clearer by looking at a more involved memory example — a WebAssembly module that imports the memory instance we defined earlier, populates it with an array of integers, then sums them. You can find this at [memory.wasm.](https://raw.githubusercontent.com/mdn/webassembly-examples/master/js-api-examples/memory.wasm)
 
 1. make a local copy of `memory.wasm` in the same directory as before.
 
@@ -188,7 +188,7 @@ Tables can be mutated via [`Table.prototype.set()`](/en-US/docs/Web/JavaScript/R
 
 ### A table example
 
-Let's look at a simple table example — a WebAssembly module that creates and exports a table with two elements: element 0 returns 13 and element 1 returns 42. You can find this at [table.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/table.wasm).
+Let's look at a simple table example — a WebAssembly module that creates and exports a table with two elements: element 0 returns 13 and element 1 returns 42. You can find this at [table.wasm](https://raw.githubusercontent.com/mdn/webassembly-examples/master/js-api-examples/table.wasm).
 
 1. Make a local copy of `table.wasm` in a new directory.
 

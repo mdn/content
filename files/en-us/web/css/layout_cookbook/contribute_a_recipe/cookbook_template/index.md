@@ -29,7 +29,7 @@ _Change the path to the example below to point to your merged example. The last 
 
 _Change the link to point to your merged download version._
 
-[Download the example](https://github.com/mdn/css-examples/blob/master/css-cookbook/center--download.html)
+[Download the example](https://github.com/mdn/css-examples/blob/main/css-cookbook/center--download.html)
 
 ## Choices made
 
