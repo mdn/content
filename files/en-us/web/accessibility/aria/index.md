@@ -92,6 +92,6 @@ It is also important to test your authored ARIA with actual assistive technology
 
 ## Videos
 
-Following talks are a great way to understand ARIA:
+The following talks are a great way to understand ARIA:
 
 [ARIA, Accessibility APIs and coding like you give a damn! – Léonie Watson](https://www.youtube.com/watch?v=qdB8SRhqvFc)
